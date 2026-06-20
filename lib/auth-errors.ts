@@ -87,6 +87,10 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
     return "Rejestracja jest wyłączona w Supabase. Włącz ją w Authentication → Providers → Email.";
   }
 
+  if (message.includes("Database error saving new user")) {
+    return "Błąd bazy przy rejestracji — w Supabase uruchom plik supabase/profiles.sql (SQL Editor), potem spróbuj ponownie.";
+  }
+
   if (message.includes("Email not confirmed")) {
     return "Potwierdź e-mail (link z wiadomości), a potem się zaloguj.";
   }
