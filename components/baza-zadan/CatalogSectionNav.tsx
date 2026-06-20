@@ -45,7 +45,7 @@ export function CatalogSectionNav({
             }}
             className={`rounded-xl px-4 py-2.5 text-left text-sm font-bold transition-colors ${
               isActive
-                ? "bg-gradient-to-r from-cyan-500/90 to-emerald-500/90 text-zinc-950"
+                ? "bg-gradient-to-r from-orange-500/90 to-emerald-500/90 text-zinc-950"
                 : "text-zinc-400 hover:bg-white/5 hover:text-white"
             }`}
           >

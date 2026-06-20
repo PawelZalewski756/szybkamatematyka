@@ -4,6 +4,7 @@ import {
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
 import type { Task } from "@/lib/baza-zadan/types";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 type TaskCardProps = {
@@ -11,9 +12,9 @@ type TaskCardProps = {
 };
 
 const DIFFICULTY_STYLES = {
-  latwy: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-  sredni: "bg-amber-500/20 text-amber-300 border-amber-500/30",
-  trudny: "bg-red-500/20 text-red-300 border-red-500/30",
+  latwy: "text-emerald-400/90",
+  sredni: "text-amber-400/90",
+  trudny: "text-rose-400/90",
 } as const;
 
 export function TaskCard({ task }: TaskCardProps) {
@@ -23,47 +24,37 @@ export function TaskCard({ task }: TaskCardProps) {
   return (
     <Link
       href={`/baza-zadan/${task.id}`}
-      className={`group relative flex flex-col rounded-2xl border p-5 transition-all ${
+      className={`flex h-full flex-col rounded-2xl border p-4 transition ${
         solved
-          ? "border-emerald-500/30 bg-emerald-500/5 hover:border-emerald-500/50"
-          : "border-white/10 bg-zinc-900/80 hover:border-cyan-500/40 hover:bg-zinc-800/90 hover:shadow-lg hover:shadow-cyan-500/10"
+          ? "border-emerald-500/25 bg-emerald-500/[0.04] hover:border-emerald-500/40"
+          : "border-white/[0.08] bg-[#111820]/60 hover:border-teal-500/25 hover:bg-[#141c2b]"
       }`}
     >
-      {solved && (
-        <span
-          className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full border border-emerald-500/50 bg-emerald-500/20 text-sm text-emerald-300"
-          aria-label="Rozwiązane"
-          title="Rozwiązane"
-        >
-          ✓
-        </span>
-      )}
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-md border border-violet-500/30 bg-violet-500/10 px-2 py-0.5 text-xs font-bold text-violet-300">
-          {CATEGORY_LABELS[task.category]}
-        </span>
-        <span
-          className={`rounded-md border px-2 py-0.5 text-xs font-bold ${DIFFICULTY_STYLES[task.difficulty]}`}
-        >
-          {DIFFICULTY_LABELS[task.difficulty]}
-        </span>
-        {task.solutionSteps && task.solutionSteps.length > 0 && (
-          <span className="rounded-md border border-indigo-500/30 bg-indigo-500/10 px-2 py-0.5 text-xs font-bold text-indigo-300">
-            Krok po kroku
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex flex-wrap gap-1.5 text-[11px] font-semibold">
+          <span className="rounded-md bg-white/[0.06] px-2 py-0.5 text-slate-400">
+            {CATEGORY_LABELS[task.category]}
+          </span>
+          <span className={DIFFICULTY_STYLES[task.difficulty]}>
+            {DIFFICULTY_LABELS[task.difficulty]}
+          </span>
+        </div>
+        {solved && (
+          <span
+            className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-400"
+            aria-label="Rozwiązane"
+          >
+            <Check className="h-3.5 w-3.5" strokeWidth={3} />
           </span>
         )}
       </div>
-      <h3 className="mt-3 break-words text-lg font-black text-white group-hover:text-cyan-200 line-clamp-2">
+
+      <h3 className="mt-3 line-clamp-2 text-base font-bold leading-snug text-white">
         {task.title}
       </h3>
-      <p className="mt-2 line-clamp-2 flex-1 text-sm text-zinc-400">
+      <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-500">
         {task.prompt}
       </p>
-      <span
-        className={`mt-4 text-sm font-bold ${solved ? "text-emerald-400" : "text-cyan-400"}`}
-      >
-        {solved ? "Rozwiązane ✓" : "Rozwiąż →"}
-      </span>
     </Link>
   );
 }

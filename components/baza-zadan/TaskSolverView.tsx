@@ -41,7 +41,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
         <p className="text-xl font-black text-white">Nie znaleziono zadania</p>
-        <Link href="/baza-zadan" className="mt-4 inline-block text-cyan-400">
+        <Link href="/baza-zadan" className="mt-4 inline-block text-orange-400">
           ← Baza zadań
         </Link>
       </div>
@@ -58,20 +58,19 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/baza-zadan"
-        className="text-sm font-semibold text-zinc-500 hover:text-cyan-400"
-      >
+        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
         ← Baza zadań
       </Link>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <span className="rounded-md border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-xs font-bold text-violet-300">
+        <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs font-bold text-orange-300">
           {CATEGORY_LABELS[task.category]}
         </span>
         <span className="rounded-md border border-white/10 bg-zinc-800 px-2 py-1 text-xs font-bold text-zinc-300">
           {DIFFICULTY_LABELS[task.difficulty]}
         </span>
         {task.examSource && (
-          <span className="rounded-md border border-cyan-500/30 bg-cyan-500/10 px-2 py-1 text-xs font-bold text-cyan-300">
+          <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs font-bold text-amber-400">
             {task.examSource.sessionLabel ?? task.examSource.year}
             {task.examSource.taskNumber
               ? ` · zad. ${task.examSource.taskNumber}`
@@ -89,7 +88,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         )}
       </div>
 
-      <div className="mt-8 rounded-3xl border border-cyan-500/20 bg-zinc-900/90 p-6 sm:p-8">
+      <div className="mt-8 rounded-3xl border border-orange-500/20 bg-zinc-900/90 p-6 sm:p-8">
         <p className="text-lg font-semibold text-zinc-300">{task.prompt}</p>
         {task.hint && !answered && (
           <p className="mt-3 text-sm text-zinc-500">💡 {task.hint}</p>
@@ -98,7 +97,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {task.choices.map((choice, index) => {
             let style =
-              "border-white/10 bg-zinc-950 hover:border-cyan-500/40 hover:bg-cyan-500/10";
+              "border-white/10 bg-zinc-950 hover:border-orange-500/40 hover:bg-orange-500/10";
             if (answered) {
               if (index === task.correctIndex) {
                 style =
@@ -175,7 +174,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                   className={`flex items-center justify-between gap-2 rounded-xl border px-4 py-3 text-sm font-semibold transition-colors ${
                     isSolved(r.id)
                       ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-200"
-                      : "border-white/10 bg-zinc-900/60 text-zinc-300 hover:border-cyan-500/30"
+                      : "border-white/10 bg-zinc-900/60 text-zinc-300 hover:border-orange-500/30"
                   }`}
                 >
                   <span>{r.title}</span>

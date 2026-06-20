@@ -8,7 +8,7 @@
 
 **`/admin`** → wybierz miesiąc i rok (np. Arkusz — maj 2024) → wpisz treść i rozwiązanie → Zapisz.
 
-Nie linkujemy uczniów na zewnątrz — to ma być w pełni Szybka Matma.
+Nie linkujemy uczniów na zewnątrz — to ma być w pełni Szybka Matematyka.
 
 ## Migracja bazy
 

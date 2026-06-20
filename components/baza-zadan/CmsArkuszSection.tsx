@@ -15,7 +15,7 @@ type CmsArkuszSectionProps = {
   title: string;
   subtitle: string;
   groups: CmsArkuszGroup[];
-  accent?: "emerald" | "violet" | "cyan";
+  accent?: "emerald" | "amber" | "cyan";
   /** Nagłówki lat — arkusze CKE po roku sesji. */
   groupByYear?: boolean;
 };
@@ -96,8 +96,8 @@ export function CmsArkuszSection({
     accent === "emerald"
       ? "border-emerald-500/30 bg-emerald-500/5"
       : accent === "cyan"
-        ? "border-cyan-500/30 bg-cyan-500/5"
-        : "border-violet-500/30 bg-violet-500/5";
+        ? "border-orange-500/30 bg-orange-500/5"
+        : "border-orange-500/30 bg-orange-500/5";
 
   const toggle = (id: string) => {
     setOpenIds((prev) => {

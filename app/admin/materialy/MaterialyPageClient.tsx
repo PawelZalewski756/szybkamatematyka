@@ -181,14 +181,13 @@ function MaterialyAdminContent() {
     <div className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/admin"
-        className="text-sm font-semibold text-zinc-500 hover:text-cyan-400"
-      >
+        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
         ← Panel administratora
       </Link>
 
       <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
         Materiały{" "}
-        <span className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent">
           teoretyczne
         </span>
       </h1>
@@ -222,7 +221,7 @@ function MaterialyAdminContent() {
             <h2 className="text-lg font-black text-white">Lista ({rows.length})</h2>
             <Link
               href="/admin/materialy"
-              className="shrink-0 rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-3 py-1.5 text-xs font-bold text-cyan-300 hover:bg-cyan-500/20"
+              className="shrink-0 rounded-xl border border-orange-500/40 bg-orange-500/10 px-3 py-1.5 text-xs font-bold text-amber-400 hover:bg-orange-500/20"
             >
               + Nowy
             </Link>
@@ -253,7 +252,7 @@ function MaterialyAdminContent() {
                       <tr
                         key={row.id}
                         className={`border-b border-white/5 transition hover:bg-white/[0.03] ${
-                          active ? "bg-cyan-500/10" : ""
+                          active ? "bg-orange-500/10" : ""
                         }`}
                       >
                         <td className="py-2.5 pr-3 text-zinc-400">
@@ -268,7 +267,7 @@ function MaterialyAdminContent() {
                         <td className="py-2.5">
                           <Link
                             href={`/admin/materialy?id=${row.id}`}
-                            className="font-semibold text-white hover:text-cyan-300"
+                            className="font-semibold text-white hover:text-orange-200"
                           >
                             {row.title}
                           </Link>
@@ -300,7 +299,7 @@ function MaterialyAdminContent() {
                   exam_type: e.target.value as ExamType,
                 }))
               }
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
             >
               {EXAM_TYPES.map((opt) => (
                 <option key={opt.value} value={opt.value}>
@@ -321,7 +320,7 @@ function MaterialyAdminContent() {
               }
               required
               placeholder="np. algebra"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-violet-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
             />
           </div>
 
@@ -336,7 +335,7 @@ function MaterialyAdminContent() {
               }
               required
               placeholder="np. rownania_kwadratowe"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-violet-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
             />
           </div>
 
@@ -348,7 +347,7 @@ function MaterialyAdminContent() {
                 setForm((f) => ({ ...f, title: e.target.value }))
               }
               required
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-fuchsia-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
             />
           </div>
 
@@ -376,8 +375,7 @@ function MaterialyAdminContent() {
                     onClick={() => setEditorTab(tab.id)}
                     className={`rounded-lg px-3 py-1 text-[11px] font-bold transition ${
                       editorTab === tab.id
-                        ? "bg-cyan-500/20 text-cyan-200"
-                        : "text-zinc-500 hover:text-zinc-300"
+                        ? "bg-orange-500/20 text-orange-400"                         : "text-zinc-500 hover:text-zinc-300"
                     }`}
                   >
                     {tab.label}
@@ -423,14 +421,14 @@ function MaterialyAdminContent() {
                 setForm((f) => ({ ...f, video_url: e.target.value }))
               }
               placeholder="https://…"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
             />
           </div>
 
           <button
             type="submit"
             disabled={saving}
-            className="w-full rounded-2xl bg-gradient-to-r from-cyan-600 via-violet-600 to-fuchsia-600 py-3.5 text-sm font-black text-white shadow-lg shadow-violet-500/25 disabled:opacity-60"
+            className="w-full rounded-2xl bg-gradient-to-r from-orange-500 via-amber-600 to-orange-600 py-3.5 text-sm font-black text-white shadow-lg shadow-amber-500/25 disabled:opacity-60"
           >
             {saving ? "Zapisywanie…" : editId ? "Zapisz zmiany" : "Dodaj materiał"}
           </button>

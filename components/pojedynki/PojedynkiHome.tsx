@@ -36,7 +36,7 @@ function NameEditor() {
               setEditing(false);
             }
           }}
-          className="w-40 rounded-lg border border-fuchsia-500/40 bg-zinc-900 px-3 py-1.5 text-sm font-bold text-white focus:outline-none"
+          className="w-40 rounded-lg border border-orange-500/40 bg-zinc-900 px-3 py-1.5 text-sm font-bold text-white focus:outline-none"
         />
         <button
           type="button"
@@ -44,7 +44,7 @@ function NameEditor() {
             setPlayerName(draft);
             setEditing(false);
           }}
-          className="rounded-lg bg-fuchsia-500/20 px-3 py-1.5 text-sm font-bold text-fuchsia-300"
+          className="rounded-lg bg-orange-500/20 px-3 py-1.5 text-sm font-bold text-orange-300"
         >
           OK
         </button>
@@ -59,7 +59,7 @@ function NameEditor() {
         setDraft(playerName);
         setEditing(true);
       }}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-zinc-900/70 px-3 py-1.5 text-sm font-bold text-white transition-colors hover:border-fuchsia-500/40"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-zinc-900/70 px-3 py-1.5 text-sm font-bold text-white transition-colors hover:border-orange-500/40"
     >
       {playerName}
       <Pencil className="h-3.5 w-3.5 text-zinc-500" />
@@ -105,12 +105,12 @@ export function PojedynkiHome() {
     <div className="flex w-full flex-1 flex-col py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3">
-          <span className="rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-500 p-2.5 shadow-lg shadow-fuchsia-500/30">
+          <span className="rounded-2xl bg-gradient-to-br bg-brand-gradient p-2.5 shadow-lg shadow-orange-500/30">
             <Swords className="h-6 w-6 text-white" />
           </span>
           <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
             Pojedynki{" "}
-            <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-gradient-brand">
               1v1
             </span>
           </h1>
@@ -125,7 +125,7 @@ export function PojedynkiHome() {
         <span className="text-sm text-zinc-500">Grasz jako:</span>
         <NameEditor />
         <span className="text-sm text-zinc-500">
-          Ścieżka: <span className="font-semibold text-cyan-300">{pathLabel}</span>
+          Ścieżka: <span className="font-semibold text-amber-400">{pathLabel}</span>
         </span>
       </div>
 
@@ -142,7 +142,7 @@ export function PojedynkiHome() {
                 onClick={() => setSlug(game.id)}
                 className={`group relative flex min-h-[96px] flex-col justify-between overflow-hidden rounded-2xl border p-4 text-left transition ${
                   selected
-                    ? "border-fuchsia-500/60 bg-fuchsia-500/10 shadow-lg shadow-fuchsia-500/20"
+                    ? "border-orange-500/60 bg-orange-500/10 shadow-lg shadow-orange-500/20"
                     : "border-white/10 bg-white/[0.04] hover:border-white/20 hover:bg-white/[0.08]"
                 }`}
               >
@@ -167,8 +167,7 @@ export function PojedynkiHome() {
               onClick={() => setLength(opt as DuelLength)}
               className={`flex-1 rounded-2xl border py-4 text-xl font-black transition sm:flex-none sm:px-10 ${
                 length === opt
-                  ? "border-cyan-500/60 bg-cyan-500/10 text-cyan-300"
-                  : "border-white/10 bg-white/[0.04] text-white hover:border-white/20"
+                  ? "border-orange-500/60 bg-orange-500/10 text-amber-400"                   : "border-white/10 bg-white/[0.04] text-white hover:border-white/20"
               }`}
             >
               {opt}
@@ -189,7 +188,7 @@ export function PojedynkiHome() {
                 ? "Pokój z kodem, podgląd rywala w czasie rzeczywistym."
                 : "Wymaga Supabase — u Ciebie obecnie niedostępne."
             }
-            accent="from-emerald-600 via-teal-500 to-cyan-600"
+            accent="from-emerald-600 via-amber-500 to-orange-500"
             onClick={() => setDelivery("online")}
             badge={supabaseOn ? "Realtime" : "Offline"}
             dim={!supabaseOn}
@@ -198,7 +197,7 @@ export function PojedynkiHome() {
             icon={<Share2 className="h-6 w-6" />}
             title="Na kod"
             description="Zagraj i wyślij kod. Async/ghost — działa też offline."
-            accent="from-violet-600 via-fuchsia-500 to-pink-500"
+            accent="bg-brand-gradient"
             onClick={() => setDelivery("challenge")}
             badge="Async"
           />

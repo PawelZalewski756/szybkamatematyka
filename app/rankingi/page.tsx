@@ -97,7 +97,7 @@ export default function RankingiPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
         >
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-fuchsia-500/20 ring-1 ring-amber-400/30">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 ring-1 ring-amber-400/30">
             <Trophy className="h-6 w-6 text-amber-300" aria-hidden />
           </div>
           <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
@@ -129,7 +129,7 @@ export default function RankingiPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 rounded-xl py-2 text-xs font-bold transition ${
                     isActive
-                      ? "bg-gradient-to-r from-amber-500/25 to-fuchsia-500/20 text-white shadow-sm"
+                      ? "bg-gradient-to-r from-amber-500/25 to-orange-500/20 text-white shadow-sm"
                       : "text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
@@ -148,7 +148,7 @@ export default function RankingiPage() {
                 );
               }}
               disabled={loading || refreshing}
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold text-zinc-300 transition hover:border-cyan-500/30 hover:bg-cyan-500/10 hover:text-cyan-200 disabled:opacity-50"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold text-zinc-300 transition hover:border-orange-500/30 hover:bg-orange-500/10 hover:text-orange-400 disabled:opacity-50"
             >
               <RefreshCw
                 className={`h-3.5 w-3.5 ${refreshing ? "animate-spin" : ""}`}
@@ -161,7 +161,7 @@ export default function RankingiPage() {
 
         {loading ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 py-20">
-            <Loader2 className="h-10 w-10 animate-spin text-cyan-400" />
+            <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
             <p className="text-sm font-semibold text-zinc-400">
               Ładowanie rankingu…
             </p>
@@ -171,7 +171,7 @@ export default function RankingiPage() {
             <p className="text-lg font-bold text-zinc-300">
               Brak połączenia z Supabase
             </p>
-            <Link href="/" className="text-sm font-semibold text-cyan-400">
+            <Link href="/" className="text-sm font-semibold text-orange-400">
               ← Strona główna
             </Link>
           </div>
@@ -225,7 +225,7 @@ export default function RankingiPage() {
 
         {!loading && !myRank && !configError && (
           <p className="mt-6 text-center text-xs text-zinc-500">
-            <Link href="/login" className="font-semibold text-cyan-400 hover:text-cyan-300">
+            <Link href="/login" className="font-semibold text-orange-400 hover:text-orange-200">
               Zaloguj się
             </Link>
             , aby zobaczyć swoją pozycję na dole ekranu.

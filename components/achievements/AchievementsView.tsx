@@ -72,7 +72,7 @@ export function AchievementsView() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] flex-1 px-4 py-8 sm:py-12">
         <header className="flex flex-col items-center text-center">
-          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-fuchsia-400/90">
+          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400/90">
             <Trophy className="h-3.5 w-3.5" aria-hidden />
             Osiągnięcia
           </div>
@@ -86,13 +86,13 @@ export function AchievementsView() {
           <div className="mt-5 w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
             <div className="flex items-center justify-between text-sm font-bold">
               <span className="text-zinc-300">Zdobyte odznaki</span>
-              <span className="tabular-nums text-cyan-300">
+              <span className="tabular-nums text-amber-400">
                 {unlockedCount} / {total}
               </span>
             </div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-800">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-violet-500 transition-[width] duration-700"
+                className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-700"
                 style={{ width: `${percent}%` }}
               />
             </div>
@@ -105,9 +105,9 @@ export function AchievementsView() {
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
-              className="mx-auto mt-6 flex max-w-xl flex-col gap-2 rounded-2xl border border-fuchsia-400/40 bg-gradient-to-b from-fuchsia-500/10 to-zinc-900/70 p-4 backdrop-blur-xl"
+              className="mx-auto mt-6 flex max-w-xl flex-col gap-2 rounded-2xl border border-orange-400/40 bg-gradient-to-b from-orange-500/10 to-zinc-900/70 p-4 backdrop-blur-xl"
             >
-              <div className="flex items-center gap-2 text-sm font-black text-fuchsia-200">
+              <div className="flex items-center gap-2 text-sm font-black text-orange-200">
                 <Sparkles className="h-4 w-4" aria-hidden />
                 Nowe odznaki odblokowane!
               </div>
@@ -125,8 +125,7 @@ export function AchievementsView() {
               <button
                 type="button"
                 onClick={() => markSeen()}
-                className="mt-1 self-start text-xs font-bold text-cyan-300 transition hover:text-cyan-200"
-              >
+                className="mt-1 self-start text-xs font-bold text-amber-400 transition hover:text-orange-400"               >
                 Super, dzięki!
               </button>
             </motion.div>
@@ -195,8 +194,8 @@ function FilterChip({
       onClick={onClick}
       className={`rounded-full px-3.5 py-1.5 text-xs font-bold transition-all duration-200 ${
         active
-          ? "bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-md shadow-fuchsia-500/25"
-          : "border border-white/15 bg-white/5 text-zinc-300 hover:bg-white/10 hover:text-cyan-300"
+          ? "bg-brand-gradient text-white shadow-md shadow-orange-500/25"
+          : "border border-white/15 bg-white/5 text-zinc-300 hover:bg-white/10 hover:text-orange-200"
       }`}
     >
       {label}

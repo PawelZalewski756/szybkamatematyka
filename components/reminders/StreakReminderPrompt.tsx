@@ -168,7 +168,7 @@ export function StreakReminderPrompt({
             </button>
             <Link
               href="/profil"
-              className="text-xs font-semibold text-cyan-400 hover:text-cyan-300"
+              className="text-xs font-semibold text-orange-400 hover:text-orange-200"
             >
               Ustawienia →
             </Link>

@@ -97,7 +97,7 @@ export function MinigameShell({
       <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-12">
         <Link
           href={`/minigry/modes/${modeConfig.slug}`}
-          className="text-sm font-semibold text-zinc-500 transition-colors hover:text-fuchsia-400"
+          className="text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-400"
         >
           ← {modeConfig.title}
         </Link>
@@ -154,7 +154,7 @@ export function MinigameShell({
         <AnimatePresence>
           {showLevelUpOverlay && (
             <motion.div
-              className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-violet-950/80 backdrop-blur-sm"
+              className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-orange-950/80 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -166,7 +166,7 @@ export function MinigameShell({
                 className="px-6 text-center"
               >
                 <p className="text-6xl">🎉</p>
-                <h2 className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-3xl font-black text-transparent sm:text-4xl">
+                <h2 className="mt-4 bg-gradient-to-r from-emerald-400 via-amber-500 to-orange-400 bg-clip-text text-3xl font-black text-transparent sm:text-4xl">
                   NOWY POZIOM KONTA!
                 </h2>
                 <p className="mt-3 text-2xl font-black text-white">
@@ -188,7 +188,7 @@ export function MinigameShell({
           <span className="font-black text-amber-400">🏆 {score}</span>
         </p>
         {mode === "marathon" && (
-          <p className="mt-2 text-lg text-cyan-300">
+          <p className="mt-2 text-lg text-amber-400">
             Czas: {formatElapsed(elapsedTime)}
           </p>
         )}
@@ -233,7 +233,7 @@ export function MinigameShell({
           </button>
           <Link
             href="/minigry"
-            className="flex-1 rounded-2xl border border-white/20 px-8 py-4 text-lg font-black text-white transition-colors hover:border-fuchsia-500/50 hover:bg-fuchsia-500/10"
+            className="flex-1 rounded-2xl border border-white/20 px-8 py-4 text-lg font-black text-white transition-colors hover:border-orange-500/50 hover:bg-orange-500/10"
           >
             Inne minigry
           </Link>
@@ -276,7 +276,7 @@ export function MinigameShell({
         <div className="mb-3 flex items-center justify-between gap-2">
           <Link
             href={`/minigry/modes/${modeConfig.slug}`}
-            className="shrink-0 text-sm font-semibold text-zinc-500 transition-colors hover:text-fuchsia-400"
+            className="shrink-0 text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-400"
           >
             ← {modeConfig.title}
           </Link>
@@ -300,7 +300,7 @@ export function MinigameShell({
               </p>
             )}
             {mode === "marathon" && (
-              <p className="text-[10px] font-bold uppercase tracking-wider text-cyan-400">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-orange-400">
                 Pytanie {Math.min(questionsAnswered + 1, marathonTotal)}/
                 {marathonTotal}
               </p>
@@ -312,8 +312,7 @@ export function MinigameShell({
               isLowTime
                 ? "animate-pulse text-red-500 drop-shadow-[0_0_12px_rgba(239,68,68,0.8)]"
                 : mode === "marathon"
-                  ? "text-cyan-300"
-                  : mode === "survival"
+                  ? "text-amber-400"                   : mode === "survival"
                     ? "text-zinc-600"
                     : "text-white"
             }`}

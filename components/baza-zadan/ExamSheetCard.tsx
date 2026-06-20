@@ -1,4 +1,5 @@
 import type { ExamSheet } from "@/lib/baza-zadan/types";
+import { Clock } from "lucide-react";
 import Link from "next/link";
 
 type ExamSheetCardProps = {
@@ -9,16 +10,21 @@ export function ExamSheetCard({ sheet }: ExamSheetCardProps) {
   return (
     <Link
       href={`/baza-zadan/arkusz/${sheet.id}`}
-      className={`group relative flex min-h-[180px] flex-col justify-between overflow-hidden rounded-3xl bg-gradient-to-br ${sheet.gradient} p-6 shadow-lg transition-transform hover:scale-[1.02]`}
+      className="group flex h-full flex-col rounded-2xl border border-white/[0.08] bg-[#111820]/80 p-5 transition hover:border-teal-500/25 hover:bg-[#141c2b]"
     >
-      <span className="text-4xl">{sheet.emoji}</span>
-      <div>
-        <h3 className="text-xl font-black text-white">{sheet.title}</h3>
-        <p className="mt-2 text-sm text-white/80">{sheet.description}</p>
-        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-white/70">
-          {sheet.taskIds.length} zadań · {sheet.timeMinutes} min
-        </p>
-      </div>
+      <span className="text-2xl" aria-hidden>
+        {sheet.emoji}
+      </span>
+      <h3 className="mt-3 text-base font-bold text-white group-hover:text-teal-200">
+        {sheet.title}
+      </h3>
+      <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-500">
+        {sheet.description}
+      </p>
+      <p className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+        <Clock className="h-3.5 w-3.5" aria-hidden />
+        {sheet.taskIds.length} zadań · {sheet.timeMinutes} min
+      </p>
     </Link>
   );
 }

@@ -34,7 +34,7 @@ export function NavbarProfileStats({
   const totalXpLabel = formatCompactXp(profile.xp);
 
   const levelBadge = (
-    <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br from-violet-600 to-fuchsia-500 px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
+    <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br bg-brand-gradient px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
       LVL {level}
     </span>
   );
@@ -64,7 +64,7 @@ export function NavbarProfileStats({
         className={`min-w-[2.5rem] flex-1 overflow-hidden rounded-full bg-zinc-800 ${barClass}`}
       >
         <div
-          className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-violet-500 transition-[width] duration-500"
+          className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-500"
           style={{ width: `${xpPercent}%` }}
         />
       </div>
@@ -118,7 +118,7 @@ export function NavbarProfileStats({
         <span className="min-w-0 truncate text-sm font-black text-white sm:text-base">
           {nick}
         </span>
-        <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br from-violet-600 to-fuchsia-500 px-2 py-0.5 text-xs font-black text-white">
+        <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br bg-brand-gradient px-2 py-0.5 text-xs font-black text-white">
           LVL {level}
         </span>
         <span

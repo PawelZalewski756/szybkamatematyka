@@ -52,7 +52,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
     >
       <Link
         href="/minigry"
-        className="text-sm font-semibold text-zinc-500 transition-colors hover:text-fuchsia-400"
+        className="text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-400"
       >
         ← Minigry
       </Link>
@@ -82,7 +82,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
       <section className="mt-10">
         <h2 className="text-lg font-black text-white">
           Wybierz grę dla{" "}
-          <span className="text-cyan-300">{pathLabel}</span>
+          <span className="text-amber-400">{pathLabel}</span>
         </h2>
         {games.length > 0 ? (
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

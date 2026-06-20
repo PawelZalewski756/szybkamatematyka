@@ -84,7 +84,7 @@ export function DuelArena({
     finished: match.phase === "finished",
   };
 
-  const answerClass = def?.answerClass ?? "border-fuchsia-500/30";
+  const answerClass = def?.answerClass ?? "border-orange-500/30";
 
   return (
     <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-4 sm:px-6 sm:py-6">
@@ -116,12 +116,12 @@ export function DuelArena({
         me={{
           name: `${playerName} (Ty)`,
           progress: meProgress,
-          accent: "from-cyan-500 to-blue-500",
+          accent: "from-orange-500 to-blue-500",
         }}
         opponent={{
           name: opponent.name,
           progress: opponentProgress,
-          accent: "from-fuchsia-500 to-pink-500",
+          accent: "from-orange-500 to-pink-500",
           pending: opponentPending,
         }}
       />
@@ -144,7 +144,7 @@ export function DuelArena({
               </motion.span>
             )}
           </AnimatePresence>
-          <span className="text-sm font-black tabular-nums text-cyan-300">
+          <span className="text-sm font-black tabular-nums text-amber-400">
             {formatDuration(elapsed * 1000)}
           </span>
         </div>
@@ -170,7 +170,7 @@ export function DuelArena({
               </>
             ) : (
               <>
-                <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+                <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
                   {def?.title ?? "Pojedynek"}
                 </p>
                 <motion.p

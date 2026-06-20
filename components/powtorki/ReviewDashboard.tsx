@@ -25,7 +25,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
   if (!ready) {
     return (
       <div className="flex flex-1 items-center justify-center py-24">
-        <Loader2 className="h-8 w-8 animate-spin text-cyan-400" />
+        <Loader2 className="h-8 w-8 animate-spin text-orange-400" />
       </div>
     );
   }
@@ -35,7 +35,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
           Po
-          <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
             wtórki
           </span>
         </h1>
@@ -50,11 +50,11 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
-        className="mt-8 overflow-hidden rounded-3xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-zinc-900/80 to-fuchsia-500/10 p-6 sm:p-8"
+        className="mt-8 overflow-hidden rounded-3xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 via-zinc-900/80 to-orange-500/10 p-6 sm:p-8"
       >
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-200">
+            <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-xs font-bold text-orange-400">
               <Brain className="h-3.5 w-3.5" />
               Do powtórki dziś
             </div>
@@ -74,7 +74,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
             type="button"
             onClick={onStart}
             disabled={dueCount === 0}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-cyan-400/30 bg-gradient-to-r from-cyan-600 to-fuchsia-600 px-7 py-4 text-base font-black text-white shadow-[0_0_32px_rgba(34,211,238,0.25)] transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500 to-orange-600 px-7 py-4 text-base font-black text-white shadow-[0_0_32px_rgba(232,112,42,0.25)] transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
           >
             <Play className="h-5 w-5" />
             Rozpocznij sesję
@@ -125,7 +125,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
                           <CalendarClock className="h-3.5 w-3.5" />
                           <span
                             className={
-                              due ? "text-cyan-300" : "text-zinc-500"
+                              due ? "text-amber-400" : "text-zinc-500"
                             }
                           >
                             {due

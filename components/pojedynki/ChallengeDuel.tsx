@@ -165,7 +165,7 @@ export function ChallengeDuel({
   if (stage === "menu") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
           {title} · Wyzwanie
         </p>
         <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
@@ -179,14 +179,14 @@ export function ChallengeDuel({
           <button
             type="button"
             onClick={() => setStage("createPlay")}
-            className="rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 px-6 py-5 text-lg font-black text-white shadow-lg shadow-cyan-500/30"
+            className="rounded-2xl bg-gradient-to-r from-emerald-600 via-amber-500 to-orange-500 px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
           >
             🎯 Stwórz wyzwanie
           </button>
           <button
             type="button"
             onClick={() => setStage("acceptInput")}
-            className="rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 px-6 py-5 text-lg font-black text-white shadow-lg shadow-fuchsia-500/30"
+            className="rounded-2xl bg-brand-gradient px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
           >
             📥 Mam kod
           </button>
@@ -194,7 +194,7 @@ export function ChallengeDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
         >
           ← Zmień tryb
         </button>
@@ -235,8 +235,8 @@ export function ChallengeDuel({
         </p>
 
         {shortCode && (
-          <div className="mt-6 w-full rounded-2xl border border-cyan-500/30 bg-cyan-500/10 p-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-cyan-300">
+          <div className="mt-6 w-full rounded-2xl border border-orange-500/30 bg-orange-500/10 p-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
               Krótki kod pokoju
             </p>
             <p className="mt-1 text-4xl font-black tracking-[0.3em] text-white">
@@ -264,7 +264,7 @@ export function ChallengeDuel({
           <button
             type="button"
             onClick={() => void copyToClipboard(portableCode)}
-            className="flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-cyan-600 px-6 py-4 text-lg font-black text-white shadow-lg"
+            className="flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-orange-500 px-6 py-4 text-lg font-black text-white shadow-lg"
           >
             {copied ? "Skopiowano ✓" : "Kopiuj kod"}
           </button>
@@ -279,7 +279,7 @@ export function ChallengeDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-orange-400"
         >
           ← Zmień tryb
         </button>
@@ -290,7 +290,7 @@ export function ChallengeDuel({
   if (stage === "acceptInput") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
           Dołącz do wyzwania
         </p>
         <h1 className="mt-2 text-3xl font-black text-white">Wklej kod</h1>
@@ -301,21 +301,21 @@ export function ChallengeDuel({
           value={inputCode}
           onChange={(e) => setInputCode(e.target.value)}
           placeholder="SMD1.… lub np. K7M2P"
-          className="mt-6 h-28 w-full resize-none rounded-xl border border-white/10 bg-zinc-900 p-3 text-sm text-white placeholder:text-zinc-600 focus:border-fuchsia-500/50 focus:outline-none"
+          className="mt-6 h-28 w-full resize-none rounded-xl border border-white/10 bg-zinc-900 p-3 text-sm text-white placeholder:text-zinc-600 focus:border-orange-500/50 focus:outline-none"
         />
         {error && <p className="mt-3 text-sm text-red-400">{error}</p>}
         <button
           type="button"
           onClick={() => void resolveCode()}
           disabled={loading}
-          className="mt-5 w-full rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 py-5 text-xl font-black text-white shadow-xl shadow-fuchsia-500/40 disabled:opacity-60"
+          className="mt-5 w-full rounded-2xl bg-brand-gradient py-5 text-xl font-black text-white shadow-xl shadow-orange-500/40 disabled:opacity-60"
         >
           {loading ? "Szukam…" : "Zagraj wyzwanie"}
         </button>
         <button
           type="button"
           onClick={onExit}
-          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-orange-400"
         >
           ← Zmień tryb
         </button>

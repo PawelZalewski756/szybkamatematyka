@@ -1,21 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
+import { BRAND_NAME } from "@/lib/brand/constants";
 import { SITE_NAME, SITE_URL } from "@/lib/seo/site";
 import "katex/dist/katex.min.css";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const DEFAULT_TITLE =
-  "Szybka Matma — matura i egzamin ósmoklasisty w tempie gry";
+  "Szybka Matematyka — matura i egzamin ósmoklasisty online";
 const DEFAULT_DESCRIPTION =
-  "Zgamifikowana platforma do nauki matematyki pod maturę i egzamin ósmoklasisty (CKE). Minigry, baza zadań z rozwiązaniami, arkusze, treningi tematyczne, pojedynki 1v1, rankingi i system EXP.";
+  "Platforma do nauki matematyki: arkusze CKE, baza zadań z rozwiązaniami, trening tematyczny, minigry i rankingi — matura i egzamin 8-klasisty.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -27,6 +29,7 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   keywords: [
     "matematyka",
+    "szybka matematyka",
     "matura z matematyki",
     "egzamin ósmoklasisty",
     "egzamin 8-klasisty",
@@ -34,10 +37,7 @@ export const metadata: Metadata = {
     "arkusze maturalne",
     "zadania z matematyki",
     "nauka matematyki online",
-    "korepetycje matematyka",
-    "matura podstawowa",
-    "powtórka do matury",
-    "Szybka Matma",
+    BRAND_NAME,
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
@@ -46,9 +46,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  // Brak `title`/`description` w openGraph/twitter jest celowy — Next.js
-  // automatycznie uzupełnia je z rozwiązanego tytułu i opisu danej trasy,
-  // dzięki czemu każda podstrona ma własne OG/Twitter bez powielania kodu.
   openGraph: {
     type: "website",
     locale: "pl_PL",
@@ -75,7 +72,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#0a0f14",
   colorScheme: "dark",
 };
 
@@ -100,8 +97,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={`${outfit.variable} dark h-full`}>
-      <body className="flex min-h-full flex-col bg-zinc-950 font-sans text-zinc-100 antialiased">
+    <html lang="pl" className={`${jakarta.variable} dark h-full`}>
+      <body className="flex min-h-full flex-col bg-[#0a0f14] font-sans text-slate-100 antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -116,12 +113,13 @@ export default function RootLayout({
               "radial-gradient(ellipse 100% 70% at 50% 0%, #000 10%, transparent 75%)",
           }}
         >
-          <div className="absolute -left-[15%] top-0 h-[min(560px,60vw)] w-[min(560px,60vw)] rounded-full bg-fuchsia-600/15 blur-[140px]" />
-          <div className="absolute -right-[12%] top-1/4 h-[min(480px,52vw)] w-[min(480px,52vw)] rounded-full bg-cyan-600/12 blur-[130px]" />
+          <div className="absolute -left-[12%] top-0 h-[min(520px,58vw)] w-[min(520px,58vw)] rounded-full bg-teal-700/10 blur-[140px]" />
+          <div className="absolute -right-[10%] top-1/4 h-[min(440px,50vw)] w-[min(440px,50vw)] rounded-full bg-sky-800/8 blur-[130px]" />
+          <div className="absolute bottom-0 left-1/3 h-[min(360px,42vw)] w-[min(360px,42vw)] rounded-full bg-teal-600/8 blur-[120px]" />
         </div>
         <Providers>
           <Navbar />
-          <main className="mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col px-4 sm:px-6 lg:px-8">
+          <main className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
             {children}
           </main>
           <Footer />

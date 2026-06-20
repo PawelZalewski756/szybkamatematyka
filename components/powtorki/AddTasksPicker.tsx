@@ -81,7 +81,7 @@ export function AddTasksPicker() {
                   className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${
                     inReview
                       ? "border-emerald-500/40 bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25"
-                      : "border-cyan-400/40 bg-cyan-500/10 text-cyan-200 hover:bg-cyan-500/20"
+                      : "border-orange-500/40 bg-orange-500/10 text-orange-400 hover:bg-orange-500/20"
                   }`}
                 >
                   {inReview ? (

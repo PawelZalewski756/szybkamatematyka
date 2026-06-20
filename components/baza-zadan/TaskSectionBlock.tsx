@@ -51,7 +51,7 @@ export function TaskSectionBlock({
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-3">
-          <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-bold text-cyan-300">
+          <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-xs font-bold text-amber-400">
             {section.tasks.length} zadań
           </span>
           {solvedInSection > 0 && (

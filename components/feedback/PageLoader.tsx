@@ -25,10 +25,10 @@ export function PageLoader({
     >
       <span className="relative flex h-12 w-12 items-center justify-center">
         <span
-          className="absolute inset-0 rounded-full bg-cyan-500/20 blur-xl"
+          className="absolute inset-0 rounded-full bg-orange-500/20 blur-xl"
           aria-hidden
         />
-        <Loader2 className="h-10 w-10 animate-spin text-cyan-400" aria-hidden />
+        <Loader2 className="h-10 w-10 animate-spin text-orange-400" aria-hidden />
       </span>
       <p className="text-sm font-semibold text-zinc-400">{label}</p>
     </div>

@@ -175,14 +175,13 @@ export function AdminPageClient() {
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/baza-zadan"
-        className="text-sm font-semibold text-zinc-500 hover:text-cyan-400"
-      >
+        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
         ← Baza zadań
       </Link>
 
       <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
         Panel{" "}
-        <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+        <span className="text-gradient-brand">
           Administratora
         </span>
       </h1>
@@ -199,13 +198,13 @@ export function AdminPageClient() {
       <div className="mt-6 flex flex-wrap gap-3">
         <Link
           href="/admin/materialy"
-          className="inline-flex rounded-2xl border border-cyan-500/35 bg-cyan-500/10 px-5 py-2.5 text-sm font-bold text-cyan-200 transition hover:bg-cyan-500/20"
+          className="inline-flex rounded-2xl border border-orange-500/35 bg-orange-500/10 px-5 py-2.5 text-sm font-bold text-orange-400 transition hover:bg-orange-500/20"
         >
           Materiały teoretyczne →
         </Link>
         <Link
           href="/admin/analityka"
-          className="inline-flex rounded-2xl border border-fuchsia-500/35 bg-fuchsia-500/10 px-5 py-2.5 text-sm font-bold text-fuchsia-200 transition hover:bg-fuchsia-500/20"
+          className="inline-flex rounded-2xl border border-orange-500/35 bg-orange-500/10 px-5 py-2.5 text-sm font-bold text-orange-200 transition hover:bg-orange-500/20"
         >
           Analityka platformy →
         </Link>
@@ -240,7 +239,7 @@ export function AdminPageClient() {
             value={arkuszMode}
             onChange={(e) => setArkuszMode(e.target.value)}
             disabled={loadingArkusze}
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-fuchsia-500/50"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
           >
             <option value={NEW_ARKUSZ}>➕ Dodaj nowy arkusz…</option>
             {arkusze.map((a) => (
@@ -270,8 +269,8 @@ export function AdminPageClient() {
                 className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-colors ${
                   typ === t
                     ? t === "matura"
-                      ? "bg-fuchsia-600 text-white"
-                      : "bg-cyan-600 text-white"
+                      ? "bg-orange-600 text-white"
+                      : "bg-orange-500 text-white"
                     : "text-zinc-400 hover:text-white"
                 }`}
               >
@@ -290,7 +289,7 @@ export function AdminPageClient() {
               <select
                 value={miesiac}
                 onChange={(e) => setMiesiac(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50"
+                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
               >
                 {MIESIACE_PL.map((label, i) => (
                   <option key={label} value={i + 1}>
@@ -309,7 +308,7 @@ export function AdminPageClient() {
               value={rok}
               onChange={(e) => setRok(Number(e.target.value))}
               disabled={arkuszMode !== NEW_ARKUSZ}
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50 disabled:opacity-50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50 disabled:opacity-50"
             />
           </div>
           <div>
@@ -319,7 +318,7 @@ export function AdminPageClient() {
               min={1}
               value={numerZadania}
               onChange={(e) => setNumerZadania(Number(e.target.value))}
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
             />
           </div>
         </div>
@@ -329,7 +328,7 @@ export function AdminPageClient() {
           <select
             value={dzial}
             onChange={(e) => setDzial(e.target.value)}
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-violet-500/50"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
           >
             {DZIALY_MATEMATYKI.map((d) => (
               <option key={d} value={d}>
@@ -347,7 +346,7 @@ export function AdminPageClient() {
             required
             rows={5}
             placeholder="Wpisz pełną treść zadania…"
-            className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-cyan-500/50"
+            className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
           />
         </div>
 
@@ -361,7 +360,7 @@ export function AdminPageClient() {
             disabled={generatingAi || saving}
             whileHover={generatingAi ? undefined : { scale: 1.02 }}
             whileTap={generatingAi ? undefined : { scale: 0.97 }}
-            className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-violet-400/40 bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-500 px-4 py-3.5 text-sm font-black text-white shadow-lg shadow-fuchsia-500/25 transition disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
+            className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-orange-400/40 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-500 px-4 py-3.5 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
           >
             {generatingAi
               ? "Mielenie danych... 🧠"
@@ -381,7 +380,7 @@ export function AdminPageClient() {
           <button
             type="submit"
             disabled={saving}
-            className="flex-1 rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 py-4 text-base font-black text-white shadow-lg shadow-fuchsia-500/30 transition active:scale-[0.98] disabled:opacity-60"
+            className="flex-1 rounded-2xl bg-brand-gradient py-4 text-base font-black text-white shadow-lg shadow-orange-500/30 transition active:scale-[0.98] disabled:opacity-60"
           >
             {saving ? "Zapisywanie…" : "Zapisz zadanie"}
           </button>

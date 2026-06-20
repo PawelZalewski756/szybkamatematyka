@@ -47,7 +47,7 @@ const OUTCOME_COPY: Record<
   win: {
     title: "Wygrana!",
     emoji: "🏆",
-    accent: "from-emerald-400 via-cyan-400 to-fuchsia-400",
+    accent: "from-emerald-400 via-amber-500 to-orange-400",
   },
   draw: {
     title: "Remis!",
@@ -57,7 +57,7 @@ const OUTCOME_COPY: Record<
   loss: {
     title: "Porażka",
     emoji: "💪",
-    accent: "from-sky-400 via-indigo-400 to-violet-400",
+    accent: "from-sky-400 via-indigo-400 to-amber-400",
   },
 };
 
@@ -83,7 +83,7 @@ function ScoreCard({
       <p className="mt-1 text-sm text-zinc-400">
         {result.correct}/{result.total} · {accuracyPercent(result)}%
       </p>
-      <p className="mt-0.5 text-xs text-cyan-300">
+      <p className="mt-0.5 text-xs text-amber-400">
         {formatDuration(result.durationMs)}
       </p>
     </div>
@@ -231,13 +231,13 @@ export function DuelResultScreen({
         <button
           type="button"
           onClick={onRematch}
-          className="flex-1 rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 px-8 py-4 text-lg font-black text-white shadow-lg shadow-fuchsia-500/40 transition-transform hover:scale-105 active:scale-95"
+          className="flex-1 rounded-2xl bg-brand-gradient px-8 py-4 text-lg font-black text-white shadow-lg shadow-orange-500/40 transition-transform hover:scale-105 active:scale-95"
         >
           Jeszcze raz
         </button>
         <Link
           href="/minigry"
-          className="flex-1 rounded-2xl border border-white/20 px-8 py-4 text-lg font-black text-white transition-colors hover:border-fuchsia-500/50 hover:bg-fuchsia-500/10"
+          className="flex-1 rounded-2xl border border-white/20 px-8 py-4 text-lg font-black text-white transition-colors hover:border-orange-500/50 hover:bg-orange-500/10"
         >
           Minigry
         </Link>

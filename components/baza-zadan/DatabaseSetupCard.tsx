@@ -4,13 +4,13 @@ const SQL_PATH = "supabase/migrations/init_baza_zadan.sql";
 
 export function DatabaseSetupCard() {
   return (
-    <div className="rounded-3xl border border-cyan-500/30 bg-cyan-500/10 px-6 py-8 backdrop-blur-xl sm:px-8">
-      <h2 className="text-lg font-black text-cyan-100">
+    <div className="rounded-3xl border border-orange-500/30 bg-orange-500/10 px-6 py-8 backdrop-blur-xl sm:px-8">
+      <h2 className="text-lg font-black text-orange-400">
         Baza Supabase wymaga jednorazowej konfiguracji
       </h2>
       <p className="mt-2 text-sm leading-relaxed text-zinc-300">
-        Tabele <code className="text-cyan-200">arkusze</code> i{" "}
-        <code className="text-cyan-200">zadania</code> nie istnieją w Twoim
+        Tabele <code className="text-orange-400">arkusze</code> i{" "}
+        <code className="text-orange-400">zadania</code> nie istnieją w Twoim
         projekcie. To nie błąd strony — migracja SQL nie została jeszcze
         uruchomiona.
       </p>
@@ -21,7 +21,7 @@ export function DatabaseSetupCard() {
             href="https://supabase.com/dashboard"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-cyan-300 underline"
+            className="font-semibold text-amber-400 underline"
           >
             panel Supabase
           </a>{" "}
@@ -29,14 +29,14 @@ export function DatabaseSetupCard() {
         </li>
         <li>
           Skopiuj całą zawartość pliku{" "}
-          <code className="text-cyan-200">{SQL_PATH}</code> z repozytorium.
+          <code className="text-orange-400">{SQL_PATH}</code> z repozytorium.
         </li>
         <li>
           Wklej do edytora i kliknij <strong>Run</strong>.
         </li>
         <li>
           Odśwież tę stronę i dodaj zadania w{" "}
-          <Link href="/admin" className="font-semibold text-cyan-300 underline">
+          <Link href="/admin" className="font-semibold text-amber-400 underline">
             /admin
           </Link>
           .

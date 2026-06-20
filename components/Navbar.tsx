@@ -1,7 +1,10 @@
 "use client";
 
+import { BrandLogo } from "@/components/BrandLogo";
 import { NavbarPathSelect } from "@/components/NavbarPathSelect";
-import { NavbarProfileStats } from "@/components/NavbarProfileStats";
+import { NavbarProfileChip } from "@/components/NavbarProfileChip";
+import { NavbarSheet } from "@/components/NavbarSheet";
+import { useDesktopNav } from "@/components/useDesktopNav";
 import { getSupabase } from "@/lib/supabase";
 import {
   ensureUserProfile,
@@ -13,66 +16,47 @@ import {
   PROFILE_UPDATED_EVENT,
   type ProfileUpdatedDetail,
 } from "@/lib/profile-sync";
+import { NAV_PRIMARY_LINKS } from "@/lib/layout/nav-links";
 import type { User } from "@supabase/supabase-js";
+import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useState, Fragment } from "react";
-import { NAV_GROUPS } from "@/lib/layout/nav-links";
+import { useCallback, useEffect, useState } from "react";
 
 function isNavActive(pathname: string, href: string): boolean {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function NavLinks({
-  className = "",
-  linkClassName = "",
-  showGroupLabels = false,
-}: {
-  className?: string;
-  linkClassName?: string;
-  showGroupLabels?: boolean;
-}) {
+function PrimaryNavLinks() {
   const pathname = usePathname();
 
   return (
-    <ul className={className}>
-      {NAV_GROUPS.map((group, groupIndex) => (
-        <Fragment key={group.label ?? "start"}>
-          {showGroupLabels && group.label ? (
-            <li
-              className="hidden shrink-0 list-none self-center px-1 text-[10px] font-bold uppercase tracking-wider text-zinc-600 xl:block"
-              aria-hidden
+    <ul className="flex h-full items-stretch gap-1">
+      {NAV_PRIMARY_LINKS.map(({ href, label }) => {
+        const active = isNavActive(pathname, href);
+        return (
+          <li key={href} className="flex">
+            <Link
+              href={href}
+              aria-current={active ? "page" : undefined}
+              className={`relative flex items-center px-3 text-sm font-medium transition-colors ${
+                active
+                  ? "text-white"
+                  : "text-slate-400 hover:text-slate-200"
+              }`}
             >
-              {group.label}
-            </li>
-          ) : null}
-          {group.links.map(({ href, label }) => {
-            const active = isNavActive(pathname, href);
-            return (
-              <li key={href} className="shrink-0">
-                <Link
-                  href={href}
-                  aria-current={active ? "page" : undefined}
-                  className={`block shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${linkClassName} ${
-                    active
-                      ? "bg-gradient-to-r from-violet-600/30 to-fuchsia-600/20 text-white shadow-[0_0_14px_rgba(192,38,211,0.2)] ring-1 ring-fuchsia-500/30"
-                      : "text-zinc-300 hover:bg-white/10 hover:text-cyan-300 hover:shadow-[0_0_12px_rgba(34,211,238,0.15)]"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-          {groupIndex < NAV_GROUPS.length - 1 ? (
-            <li
-              className="mx-0.5 hidden h-5 w-px shrink-0 self-center bg-white/10 lg:block"
-              aria-hidden
-            />
-          ) : null}
-        </Fragment>
-      ))}
+              {label}
+              {active && (
+                <span
+                  className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-teal-400"
+                  aria-hidden
+                />
+              )}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }
@@ -80,6 +64,7 @@ function NavLinks({
 export function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
+  const isDesktopNav = useDesktopNav();
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [authReady, setAuthReady] = useState(false);
@@ -118,7 +103,6 @@ export function Navbar() {
     try {
       supabase = getSupabase();
     } catch {
-      // No Supabase configured — mark auth resolved so UI can render.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setAuthReady(true);
       return;
@@ -191,124 +175,65 @@ export function Navbar() {
     }
   };
 
-  const showStats = authReady && user && profile;
-
-  const authControl = !authReady ? (
-    <span className="h-9 w-16 shrink-0 animate-pulse rounded-full bg-zinc-800 sm:w-20" />
-  ) : user ? (
-    <button
-      type="button"
-      onClick={() => void handleLogout()}
-      disabled={loggingOut}
-      className="shrink-0 rounded-full border border-white/15 bg-zinc-900 px-2.5 py-2 text-[11px] font-bold text-zinc-200 transition-colors hover:border-red-500/40 hover:bg-red-500/10 hover:text-red-300 disabled:opacity-50 sm:px-4 sm:text-sm"
-    >
-      {loggingOut ? "…" : "Wyloguj"}
-    </button>
-  ) : (
-    <Link
-      href="/login"
-      className="inline-flex shrink-0 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-3 py-2 text-xs font-black text-white shadow-md shadow-fuchsia-500/25 sm:px-4 sm:text-sm"
-    >
-      Zaloguj
-    </Link>
-  );
-
-  const profileStatsSkeleton = (
-    <div
-      className="h-9 w-[8.5rem] shrink-0 animate-pulse rounded-lg bg-zinc-800/80 md:h-10 md:w-[9rem]"
-      aria-hidden
-    />
-  );
+  const showProfile = authReady && user && profile;
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-white/10 bg-zinc-950/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-xl">
-      <nav className="mx-auto flex w-full max-w-[1920px] flex-col gap-1.5 px-4 py-2 sm:gap-2 md:px-8">
-        {/* Mobile */}
-        <div className="flex min-h-11 items-center gap-2 sm:min-h-12 sm:gap-3 md:hidden">
-          <Link
-            href="/"
-            className="shrink-0 text-sm font-extrabold tracking-tight sm:text-lg"
-          >
-            <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              <span className="sm:hidden">Matma</span>
-              <span className="hidden sm:inline">Szybka Matma</span>
-            </span>
-          </Link>
+    <header className="sticky top-0 z-[100] w-full border-b border-white/[0.06] bg-[#0a0f14]/90 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md">
+      <nav
+        className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-4 lg:px-10 xl:px-12 2xl:px-16"
+        aria-label="Główna nawigacja"
+      >
+        <BrandLogo compact={!isDesktopNav} className="min-w-0 shrink-0" />
 
-          {user && profileLoading && (
-            <div className="h-9 min-w-0 flex-1 animate-pulse rounded-lg bg-zinc-800/80" />
-          )}
-          {showStats && (
-            <div className="min-w-0 flex-1">
-              <NavbarProfileStats profile={profile} compact />
-            </div>
-          )}
-          {!user && <NavbarPathSelect className="min-w-0 flex-1" />}
+        {isDesktopNav && (
+          <>
+            <div className="hidden h-6 w-px shrink-0 bg-white/10 sm:block" aria-hidden />
+            <NavbarPathSelect className="hidden w-[9.5rem] shrink-0 sm:block lg:w-[10.5rem]" />
+          </>
+        )}
 
-          <div className="flex shrink-0 items-center">{authControl}</div>
-        </div>
-
-        {user && (
-          <div className="md:hidden">
-            <NavbarPathSelect className="w-full" />
+        {isDesktopNav && (
+          <div className="flex min-w-0 flex-1 justify-center">
+            <PrimaryNavLinks />
           </div>
         )}
 
-        <div className="md:hidden">
-          <NavLinks
-            className="flex gap-1 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            linkClassName="whitespace-nowrap px-3 py-1.5 text-xs"
-          />
-        </div>
+        {!isDesktopNav && <div className="min-w-0 flex-1" aria-hidden />}
 
-        {/* Desktop (lg+): lewa | środek (scroll) | prawa kolumna */}
-        <div className="hidden min-h-12 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 lg:grid lg:gap-3">
-          <div className="flex shrink-0 items-center gap-2 lg:gap-3">
+        <div className="flex shrink-0 items-center gap-2">
+          {!authReady && (
+            <span className="h-8 w-8 animate-pulse rounded-full bg-white/5" aria-hidden />
+          )}
+
+          {user && profileLoading && (
+            <span className="h-8 w-8 animate-pulse rounded-lg bg-white/5" aria-hidden />
+          )}
+
+          {showProfile && <NavbarProfileChip profile={profile} />}
+
+          {authReady && !user && (
             <Link
-              href="/"
-              className="shrink-0 text-lg font-extrabold tracking-tight"
+              href="/login"
+              className="rounded-lg bg-brand-gradient px-3.5 py-2 text-xs font-semibold text-white transition hover:brightness-110 sm:text-sm"
             >
-              <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-                Szybka Matma
-              </span>
+              Zaloguj
             </Link>
-            <NavbarPathSelect className="w-[10.5rem] shrink-0 xl:w-[13.5rem]" />
-          </div>
+          )}
 
-          <div className="flex min-w-0 justify-center overflow-x-auto px-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <NavLinks className="flex w-max items-center gap-1 xl:gap-1.5" showGroupLabels />
-          </div>
+          {authReady && user && (
+            <button
+              type="button"
+              onClick={() => void handleLogout()}
+              disabled={loggingOut}
+              aria-label="Wyloguj"
+              title="Wyloguj"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-white/20 hover:text-white disabled:opacity-50"
+            >
+              <LogOut className="h-4 w-4" aria-hidden />
+            </button>
+          )}
 
-          <div className="flex shrink-0 items-center gap-2 border-l border-white/10 pl-2.5 lg:gap-2.5 lg:pl-3">
-            {user && profileLoading && profileStatsSkeleton}
-            {showStats && <NavbarProfileStats profile={profile} dense />}
-            {authControl}
-          </div>
-        </div>
-
-        {/* Tablet (md–lg): kompakt z przewijaniem linków */}
-        <div className="hidden min-h-12 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 md:grid lg:hidden">
-          <Link
-            href="/"
-            className="shrink-0 text-base font-extrabold tracking-tight"
-          >
-            <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              Matma
-            </span>
-          </Link>
-
-          <div className="flex min-w-0 justify-center overflow-x-auto px-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <NavLinks
-              className="flex w-max items-center gap-0.5"
-              linkClassName="px-2.5 py-1.5 text-xs"
-            />
-          </div>
-
-          <div className="flex shrink-0 items-center gap-1.5 border-l border-white/10 pl-2">
-            {user && profileLoading && profileStatsSkeleton}
-            {showStats && <NavbarProfileStats profile={profile} dense />}
-            {authControl}
-          </div>
+          <NavbarSheet showPrimaryLinks={!isDesktopNav} />
         </div>
       </nav>
     </header>

@@ -77,23 +77,22 @@ function StatCard({
   value: string;
   sub?: string;
   icon: ComponentType<{ className?: string }>;
-  accent: "violet" | "cyan" | "orange" | "emerald";
+  accent: "amber" | "cyan" | "orange" | "emerald";
 }) {
   const ring =
-    accent === "violet"
+    accent === "amber"
       ? "shadow-[0_0_24px_rgba(139,92,246,0.2)]"
       : accent === "cyan"
-        ? "shadow-[0_0_24px_rgba(34,211,238,0.18)]"
+        ? "shadow-[0_0_24px_rgba(232,112,42,0.18)]"
         : accent === "orange"
           ? "shadow-[0_0_24px_rgba(251,146,60,0.15)]"
           : "shadow-[0_0_24px_rgba(52,211,153,0.12)]";
 
   const iconColor =
-    accent === "violet"
-      ? "text-violet-400"
+    accent === "amber"
+      ? "text-orange-400"
       : accent === "cyan"
-        ? "text-cyan-400"
-        : accent === "orange"
+        ? "text-orange-400"         : accent === "orange"
           ? "text-orange-400"
           : "text-emerald-400";
 
@@ -131,7 +130,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
       <div
         className={`relative overflow-hidden rounded-3xl border p-5 backdrop-blur-xl sm:p-6 ${
           pro
-            ? "border-fuchsia-400/40 bg-gradient-to-b from-fuchsia-500/10 to-zinc-900/80"
+            ? "border-orange-400/40 bg-gradient-to-b from-orange-500/10 to-zinc-900/80"
             : "border-white/10 bg-white/5"
         }`}
       >
@@ -139,7 +138,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400">
               <Crown
-                className={`h-4 w-4 ${pro ? "text-fuchsia-300" : "text-zinc-500"}`}
+                className={`h-4 w-4 ${pro ? "text-orange-300" : "text-zinc-500"}`}
                 aria-hidden
               />
               Twój plan
@@ -159,13 +158,13 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             )}
           </div>
           {pro ? (
-            <span className="shrink-0 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-3 py-1 text-xs font-black text-white">
+            <span className="shrink-0 rounded-full bg-brand-gradient px-3 py-1 text-xs font-black text-white">
               PRO
             </span>
           ) : (
             <Link
               href="/cennik"
-              className="shrink-0 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-4 py-2 text-sm font-black text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110"
+              className="shrink-0 rounded-2xl bg-brand-gradient px-4 py-2 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110"
             >
               Przejdź na Pro
             </Link>
@@ -360,7 +359,7 @@ export default function ProfilPage() {
       <div className="relative z-10 mx-auto flex w-full max-w-[1920px] flex-1 flex-col py-8 sm:py-12">
         {loading ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <div className="h-12 w-12 animate-spin rounded-full border-2 border-fuchsia-500/30 border-t-cyan-400" />
+            <div className="h-12 w-12 animate-spin rounded-full border-2 border-orange-500/30 border-t-cyan-400" />
             <p className="text-sm font-semibold text-zinc-400">
               Ładowanie dashboardu gracza…
             </p>
@@ -375,7 +374,7 @@ export default function ProfilPage() {
             </p>
             <Link
               href="/"
-              className="text-sm font-semibold text-cyan-400 hover:text-cyan-300"
+              className="text-sm font-semibold text-orange-400 hover:text-orange-200"
             >
               ← Strona główna
             </Link>
@@ -387,7 +386,7 @@ export default function ProfilPage() {
             className="flex flex-1 flex-col"
           >
             <header className="flex flex-col items-center text-center">
-              <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-fuchsia-400/90">
+              <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400/90">
                 <Swords className="h-3.5 w-3.5" aria-hidden />
                 Dashboard gracza
               </div>
@@ -418,14 +417,14 @@ export default function ProfilPage() {
                   onChange={(e) => setNickDraft(e.target.value)}
                   maxLength={24}
                   disabled={nickChangeBlocked}
-                  className="min-w-0 flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-zinc-600 focus:border-fuchsia-500/50 focus:ring-2 focus:ring-fuchsia-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="min-w-0 flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 disabled:cursor-not-allowed disabled:opacity-50"
                   placeholder="Twój nick na tablicy wyników"
                 />
                 <button
                   type="button"
                   disabled={nickSaving || nickChangeBlocked}
                   onClick={() => void handleSaveNick()}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-4 py-3 text-sm font-black text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110 disabled:opacity-60"
+                  className="inline-flex shrink-0 items-center gap-1.5 rounded-2xl bg-brand-gradient px-4 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 disabled:opacity-60"
                 >
                   {nickSaving ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -460,14 +459,14 @@ export default function ProfilPage() {
                 label="Poziom"
                 value={`Lvl ${calculateLevel(profile.xp)}`}
                 icon={Trophy}
-                accent="violet"
+                accent="amber"
               />
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(34,211,238,0.18)]">
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
                 <div className="flex items-start justify-between gap-2">
                   <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 sm:text-xs">
                     Punkty XP
                   </p>
-                  <Sparkles className="h-4 w-4 shrink-0 text-cyan-400" aria-hidden />
+                  <Sparkles className="h-4 w-4 shrink-0 text-orange-400" aria-hidden />
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <p className="text-xl font-black text-white sm:text-2xl">
@@ -521,14 +520,14 @@ export default function ProfilPage() {
             <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-center">
               <Link
                 href="/trening"
-                className="inline-flex items-center gap-2 text-sm font-bold text-fuchsia-400 transition hover:text-fuchsia-300"
+                className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-300"
               >
                 <Swords className="h-4 w-4" />
                 Kontynuuj trening →
               </Link>
               <Link
                 href="/rankingi"
-                className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+                className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-200"
               >
                 <Trophy className="h-4 w-4" />
                 Tablica wyników →

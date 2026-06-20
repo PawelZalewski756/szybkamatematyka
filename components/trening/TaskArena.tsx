@@ -269,7 +269,7 @@ export function TaskArena({
     return (
       <div className="relative flex min-h-[50vh] flex-1 flex-col items-center justify-center">
         {!compactChrome && <GamingBackground />}
-        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-cyan-400" />
+        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-orange-400" />
         <p className="relative z-10 mt-3 text-sm font-semibold text-zinc-400">
           Ładowanie areny…
         </p>
@@ -285,8 +285,7 @@ export function TaskArena({
         {!compactChrome && (
           <Link
             href={backHref}
-            className="relative z-10 mt-4 text-sm font-bold text-cyan-400"
-          >
+            className="relative z-10 mt-4 text-sm font-bold text-orange-400"           >
             ← Wróć do treningu
           </Link>
         )}
@@ -322,8 +321,7 @@ export function TaskArena({
           {!compactChrome && (
             <Link
               href={backHref}
-              className="relative z-10 mt-6 text-sm font-bold text-cyan-400"
-            >
+              className="relative z-10 mt-6 text-sm font-bold text-orange-400"             >
               ← Wróć do treningu
             </Link>
           )}
@@ -363,7 +361,7 @@ export function TaskArena({
             <div className="mb-4 flex items-center justify-between gap-3">
               <Link
                 href={backHref}
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-400 transition hover:text-orange-200"
               >
                 <ArrowLeft className="h-4 w-4" />
                 Trening
@@ -373,7 +371,7 @@ export function TaskArena({
               </span>
             </div>
 
-            <p className="mb-4 text-center text-sm font-semibold text-fuchsia-300/90">
+            <p className="mb-4 text-center text-sm font-semibold text-orange-300/90">
               {topicLabel}
             </p>
           </>
@@ -426,8 +424,7 @@ export function TaskArena({
                   onClick={() => setDifficultyFilter(opt.id)}
                   className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
                     active
-                      ? "border-cyan-400/50 bg-cyan-500/20 text-cyan-100"
-                      : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                      ? "border-orange-500/50 bg-orange-500/20 text-orange-400"                       : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
                   {opt.label}
@@ -440,7 +437,7 @@ export function TaskArena({
               type="checkbox"
               checked={shuffleOrder}
               onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-cyan-500 focus:ring-cyan-500/40"
+              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-orange-400 focus:ring-orange-500/40"
             />
             <Shuffle className="h-3.5 w-3.5" aria-hidden />
             Losuj kolejność
@@ -497,7 +494,7 @@ export function TaskArena({
                     "border-red-500/60 bg-red-500/25 text-red-50 shadow-[0_0_28px_rgba(248,113,113,0.35)]";
                 } else {
                   cardClass +=
-                    "border-white/20 bg-white/[0.06] text-zinc-100 hover:scale-[1.02] hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:shadow-[0_0_24px_rgba(34,211,238,0.2)] disabled:pointer-events-none disabled:opacity-50";
+                    "border-white/20 bg-white/[0.06] text-zinc-100 hover:scale-[1.02] hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_24px_rgba(232,112,42,0.2)] disabled:pointer-events-none disabled:opacity-50";
                 }
 
                 return (
@@ -508,7 +505,7 @@ export function TaskArena({
                     onClick={() => void handleAnswer(option)}
                     className={cardClass}
                   >
-                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-black text-cyan-300 ring-1 ring-white/20 group-hover:bg-cyan-500/20 group-hover:text-cyan-100">
+                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-black text-amber-400 ring-1 ring-white/20 group-hover:bg-orange-500/20 group-hover:text-orange-400">
                       {label}
                     </span>
                     <span className="text-sm font-bold leading-snug sm:text-base">

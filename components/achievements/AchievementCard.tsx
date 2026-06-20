@@ -41,10 +41,10 @@ const TIER_STYLES: Record<AchievementTier, TierStyle> = {
     bar: "from-yellow-400 to-amber-400",
   },
   platyna: {
-    iconBg: "from-cyan-300 via-violet-400 to-fuchsia-400",
-    cardRing: "border-cyan-300/50 shadow-[0_0_30px_rgba(34,211,238,0.25)]",
-    tierText: "text-cyan-300",
-    bar: "from-cyan-300 via-violet-400 to-fuchsia-400",
+    iconBg: "from-orange-500 via-amber-400 to-orange-400",
+    cardRing: "border-orange-500/50 shadow-[0_0_30px_rgba(232,112,42,0.25)]",
+    tierText: "text-amber-400",
+    bar: "from-orange-500 via-amber-400 to-orange-400",
   },
 };
 
@@ -73,7 +73,7 @@ export function AchievementCard({
       }`}
     >
       {isNew && (
-        <span className="absolute right-3 top-3 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-400 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-white shadow-md">
+        <span className="absolute right-3 top-3 rounded-full bg-gradient-to-r from-orange-500 to-orange-500 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-white shadow-md">
           Nowe!
         </span>
       )}

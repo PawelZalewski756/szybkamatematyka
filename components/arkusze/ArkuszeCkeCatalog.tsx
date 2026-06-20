@@ -40,7 +40,7 @@ function ArkuszCard({
   const ring =
     accent === "emerald"
       ? "hover:ring-emerald-400/40 hover:shadow-emerald-500/10"
-      : "hover:ring-cyan-400/40 hover:shadow-cyan-500/10";
+      : "hover:ring-orange-500/40 hover:shadow-orange-500/10";
 
   return (
     <Link
@@ -52,8 +52,7 @@ function ArkuszCard({
           className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border ${
             accent === "emerald"
               ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-300"
-              : "border-cyan-500/30 bg-cyan-500/15 text-cyan-300"
-          }`}
+              : "border-orange-500/30 bg-orange-500/15 text-amber-400"           }`}
         >
           <FileText className="h-5 w-5" aria-hidden />
         </div>
@@ -62,13 +61,13 @@ function ArkuszCard({
         </span>
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-black text-white group-hover:text-cyan-100">
+        <h3 className="text-lg font-black text-white group-hover:text-orange-400">
           {label}
         </h3>
         <p className="mt-2 text-sm text-zinc-400">
           {group.tasks.length} zadań · rozwiązania krok po kroku
         </p>
-        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-fuchsia-300/90 opacity-0 transition-opacity group-hover:opacity-100">
+        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-orange-300/90 opacity-0 transition-opacity group-hover:opacity-100">
           Otwórz arkusz →
         </p>
       </div>
@@ -100,7 +99,7 @@ function YearSection({
   return (
     <section className="mt-10">
       <div className="flex items-center gap-2">
-        <Icon className={`h-5 w-5 ${accent === "emerald" ? "text-emerald-400" : "text-cyan-400"}`} aria-hidden />
+        <Icon className={`h-5 w-5 ${accent === "emerald" ? "text-emerald-400" : "text-orange-400"}`} aria-hidden />
         <h2 className="text-lg font-black text-white sm:text-xl">{title}</h2>
       </div>
 
@@ -185,18 +184,18 @@ export function ArkuszeCkeCatalog({
   );
 
   return (
-    <div className="relative z-10 w-full py-8 sm:py-12">
+    <div className="page-container relative z-10 w-full py-8 sm:py-12">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <h1 className="text-2xl font-black text-white sm:text-3xl">
           Arkusze{" "}
-          <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">CKE</span>
+          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">CKE</span>
         </h1>
         <p className="mt-2 text-sm text-zinc-400">
           Oficjalne sesje maturalne i egzamin ósmoklasisty.{" "}
-          <Link href="/baza-zadan" className="font-semibold text-cyan-400 hover:text-cyan-300">
+          <Link href="/baza-zadan" className="font-semibold text-orange-400 hover:text-orange-200">
             Pełny katalog →
           </Link>
         </p>
@@ -247,7 +246,7 @@ export function ArkuszeCkeCatalog({
               onClick={() => setMaturaFilter("rozszerzona")}
               className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${
                 maturaFilter === "rozszerzona"
-                  ? "border-violet-400/50 bg-violet-500/20 text-violet-100"
+                  ? "border-orange-400/50 bg-orange-500/20 text-orange-100"
                   : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
               }`}
             >
@@ -266,7 +265,7 @@ export function ArkuszeCkeCatalog({
               const v = e.target.value;
               setYearFilter(v === "all" ? "all" : Number(v));
             }}
-            className="rounded-lg border border-white/15 bg-zinc-900/80 px-3 py-1.5 text-sm font-semibold text-zinc-200 outline-none focus:border-cyan-500/40"
+            className="rounded-lg border border-white/15 bg-zinc-900/80 px-3 py-1.5 text-sm font-semibold text-zinc-200 outline-none focus:border-orange-500/40"
           >
             <option value="all">Wszystkie</option>
             {availableYears.map((year) => (
@@ -280,7 +279,7 @@ export function ArkuszeCkeCatalog({
         <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center backdrop-blur-xl">
           <p className="text-lg font-black text-white">Brak arkuszy w bazie</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
-            Uruchom import CKE (<code className="text-cyan-300">npm run seed:cke-matura</code>)
+            Uruchom import CKE (<code className="text-amber-400">npm run seed:cke-matura</code>)
             lub dodaj arkusze w panelu admin.
           </p>
         </div>

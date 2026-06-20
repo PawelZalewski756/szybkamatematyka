@@ -37,7 +37,7 @@ function Chip({
       aria-pressed={active}
       className={`min-w-0 break-words rounded-full px-3 py-2 text-left text-xs font-bold transition-colors sm:text-sm ${
         active
-          ? "bg-gradient-to-r from-cyan-500 to-emerald-500 text-zinc-950"
+          ? "bg-gradient-to-r from-orange-500 to-emerald-500 text-zinc-950"
           : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
       }`}
     >
@@ -75,7 +75,7 @@ export function CatalogFilters({
             value={filters.search}
             onChange={(e) => onChange({ ...filters, search: e.target.value })}
             placeholder="Tytuł lub treść…"
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-2.5 text-sm text-white outline-none focus:border-cyan-500/50"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-2.5 text-sm text-white outline-none focus:border-orange-500/50"
           />
         </div>
 

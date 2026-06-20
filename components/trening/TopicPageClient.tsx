@@ -58,7 +58,7 @@ function TabSwitcher({
             {isActive && (
               <motion.span
                 layoutId="topic-tab-pill"
-                className="absolute inset-0 rounded-xl border border-cyan-400/30 bg-gradient-to-r from-cyan-500/25 via-fuchsia-500/20 to-violet-500/25 shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+                className="absolute inset-0 rounded-xl border border-orange-500/30 bg-gradient-to-r from-orange-500/25 via-orange-500/20 to-amber-500/25 shadow-[0_0_20px_rgba(232,112,42,0.2)]"
                 transition={{ type: "spring", stiffness: 380, damping: 32 }}
               />
             )}
@@ -75,7 +75,7 @@ function LessonVideoSection({ videoUrl }: { videoUrl: string }) {
 
   return (
     <section className="mt-8 rounded-xl border border-white/15 bg-white/[0.04] p-4 sm:p-6">
-      <h3 className="text-sm font-bold uppercase tracking-wider text-fuchsia-300/90">
+      <h3 className="text-sm font-bold uppercase tracking-wider text-orange-300/90">
         Wideo do lekcji
       </h3>
       {youtubeId ? (
@@ -95,7 +95,7 @@ function LessonVideoSection({ videoUrl }: { videoUrl: string }) {
           href={videoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/15 px-5 py-2.5 text-sm font-bold text-cyan-200 transition hover:bg-cyan-500/25"
+          className="mt-4 inline-flex items-center gap-2 rounded-xl border border-orange-500/40 bg-orange-500/15 px-5 py-2.5 text-sm font-bold text-orange-400 transition hover:bg-orange-500/25"
         >
           <ExternalLink className="h-4 w-4" aria-hidden />
           Otwórz wideo w nowej karcie
@@ -121,7 +121,7 @@ function TheoryTab({
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <Loader2 className="h-9 w-9 animate-spin text-cyan-400" />
+        <Loader2 className="h-9 w-9 animate-spin text-orange-400" />
         <p className="mt-3 text-sm font-semibold text-zinc-400">
           Ładowanie materiału…
         </p>
@@ -155,7 +155,7 @@ function TheoryTab({
         <button
           type="button"
           onClick={onGoToArena}
-          className="mt-6 inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/15 px-5 py-2.5 text-sm font-bold text-cyan-200 transition hover:bg-cyan-500/25"
+          className="mt-6 inline-flex items-center gap-2 rounded-xl border border-orange-500/40 bg-orange-500/15 px-5 py-2.5 text-sm font-bold text-orange-400 transition hover:bg-orange-500/25"
         >
           Przejdź do rozwiązywania ➡️
         </button>
@@ -180,7 +180,7 @@ function TheoryTab({
         <button
           type="button"
           onClick={onGoToArena}
-          className="inline-flex items-center gap-2 rounded-xl border border-fuchsia-400/40 bg-fuchsia-500/15 px-6 py-3 text-sm font-bold text-fuchsia-100 shadow-[0_0_24px_rgba(217,70,239,0.15)] transition hover:bg-fuchsia-500/25"
+          className="inline-flex items-center gap-2 rounded-xl border border-orange-400/40 bg-orange-500/15 px-6 py-3 text-sm font-bold text-orange-100 shadow-[0_0_24px_rgba(217,70,239,0.15)] transition hover:bg-orange-500/25"
         >
           Przejdź do rozwiązywania ➡️
         </button>
@@ -228,14 +228,14 @@ export function TopicPageClient({
         <div className="mb-4">
           <Link
             href={backHref}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-400 transition hover:text-orange-200"
           >
             <ArrowLeft className="h-4 w-4" />
             Trening
           </Link>
         </div>
 
-        <p className="mb-4 text-center text-sm font-semibold text-fuchsia-300/90">
+        <p className="mb-4 text-center text-sm font-semibold text-orange-300/90">
           {topicLabel}
         </p>
 

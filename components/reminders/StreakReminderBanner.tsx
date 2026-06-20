@@ -31,7 +31,7 @@ export function StreakReminderBanner({
           <p className="mt-0.5 text-xs text-zinc-400">{body}</p>
           <Link
             href="/minigry"
-            className="mt-2 inline-flex text-xs font-bold text-cyan-400 transition hover:text-cyan-300"
+            className="mt-2 inline-flex text-xs font-bold text-orange-400 transition hover:text-orange-200"
           >
             Zagraj teraz →
           </Link>

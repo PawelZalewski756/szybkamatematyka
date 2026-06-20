@@ -32,7 +32,7 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
           <span className="w-8 shrink-0 text-center text-sm font-black tabular-nums text-zinc-400 sm:w-10 sm:text-base">
             {entry.rank}
           </span>
-          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 ring-2 ring-white/10 sm:h-11 sm:w-11">
+          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gradient-to-br bg-brand-gradient ring-2 ring-white/10 sm:h-11 sm:w-11">
             {entry.avatarUrl ? (
               <Image
                 src={entry.avatarUrl}
@@ -62,7 +62,7 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
             </div>
           </div>
           <div className="flex shrink-0 flex-col items-end gap-0.5">
-            <span className="text-sm font-black tabular-nums text-cyan-400 sm:text-base">
+            <span className="text-sm font-black tabular-nums text-orange-400 sm:text-base">
               {formatCompactXp(entry.xp)}
             </span>
           </div>

@@ -34,10 +34,10 @@ function DefaultPaywall({
 }) {
   const needsLogin = reason === "not_logged_in";
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-fuchsia-400/30 bg-gradient-to-b from-fuchsia-500/10 to-zinc-900/80 p-8 text-center backdrop-blur-xl">
-      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-3xl" />
+    <div className="relative overflow-hidden rounded-3xl border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-zinc-900/80 p-8 text-center backdrop-blur-xl">
+      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
       <div className="relative">
-        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-fuchsia-300">
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-orange-300">
           <Lock className="h-6 w-6" />
         </span>
         <h3 className="mt-4 text-xl font-black text-white">
@@ -59,7 +59,7 @@ function DefaultPaywall({
           )}
           <Link
             href="/cennik"
-            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110"
+            className="inline-flex items-center gap-2 rounded-2xl bg-brand-gradient px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110"
           >
             <Sparkles className="h-4 w-4" />
             Zobacz plany Pro

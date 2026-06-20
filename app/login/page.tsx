@@ -199,16 +199,14 @@ export default function LoginPage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 24 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl border border-violet-500/20 bg-zinc-900/90 p-6 shadow-2xl shadow-violet-500/10 backdrop-blur-sm sm:p-8"
+            className="rounded-3xl border border-orange-500/20 bg-[#141c2b]/95 p-6 shadow-2xl shadow-orange-950/20 backdrop-blur-sm sm:p-8"
           >
-            <p className="text-center text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+            <p className="text-center text-sm font-bold uppercase tracking-widest text-orange-400">
               Logowanie
             </p>
             <h1 className="mt-2 text-center text-3xl font-black text-white sm:text-4xl">
-              Wejdź do{" "}
-              <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-                gry
-              </span>
+              Zaloguj się do{" "}
+              <span className="text-gradient-brand">Szybkiej Matematyki</span>
             </h1>
             <p className="mt-3 text-center text-sm text-zinc-400">
               Masz już konto? Wpisz e-mail i hasło.
@@ -233,7 +231,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="twoj@email.pl"
-                  className={`${inputClassName} focus:border-violet-500/50 focus:ring-violet-500/20`}
+                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />
               </label>
 
@@ -248,7 +246,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="twoje hasło"
-                  className={`${inputClassName} focus:border-violet-500/50 focus:ring-violet-500/20`}
+                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />
               </label>
 
@@ -259,7 +257,7 @@ export default function LoginPage() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex min-h-[52px] items-center justify-center rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 text-lg font-black text-white shadow-lg shadow-fuchsia-500/30 disabled:opacity-60"
+                className="mt-2 flex min-h-[52px] items-center justify-center rounded-2xl bg-brand-gradient text-lg font-black text-white shadow-lg shadow-orange-500/30 disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -270,7 +268,7 @@ export default function LoginPage() {
                 type="button"
                 disabled={loading}
                 onClick={switchToSignup}
-                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-lg font-black text-white transition-colors hover:border-fuchsia-500/40 hover:bg-fuchsia-500/10 disabled:opacity-60"
+                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-lg font-black text-white transition-colors hover:border-orange-500/40 hover:bg-orange-500/10 disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -285,14 +283,14 @@ export default function LoginPage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -24 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden rounded-3xl border border-cyan-500/25 bg-gradient-to-b from-zinc-900 via-zinc-900 to-emerald-950/40 p-6 shadow-2xl shadow-cyan-500/15 backdrop-blur-sm sm:p-8"
+            className="relative overflow-hidden rounded-3xl border border-amber-500/25 bg-gradient-to-b from-[#141c2b] via-[#121a28] to-[#0f1810] p-6 shadow-2xl shadow-orange-950/20 backdrop-blur-sm sm:p-8"
           >
             <div
-              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-cyan-500/20 blur-3xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-500/15 blur-3xl"
               aria-hidden
             />
             <div
-              className="pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 rounded-full bg-emerald-500/15 blur-3xl"
+              className="pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 rounded-full bg-amber-500/12 blur-3xl"
               aria-hidden
             />
 
@@ -300,14 +298,12 @@ export default function LoginPage() {
               <span className="text-4xl" aria-hidden>
                 🎮
               </span>
-              <p className="mt-2 text-sm font-bold uppercase tracking-widest text-cyan-400">
+              <p className="mt-2 text-sm font-bold uppercase tracking-widest text-amber-400/90">
                 Nowe konto
               </p>
               <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
                 Dołącz do{" "}
-                <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                  ekipy
-                </span>
+                <span className="text-gradient-brand">Szybkiej Matematyki</span>
               </h1>
             </div>
 
@@ -320,7 +316,7 @@ export default function LoginPage() {
               }}
             >
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-cyan-500/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
                   Nick
                 </span>
                 <input
@@ -332,12 +328,12 @@ export default function LoginPage() {
                   onChange={(e) => setNick(e.target.value)}
                   placeholder="np. MatmaMaster"
                   maxLength={20}
-                  className={`${inputClassName} focus:border-cyan-500/50 focus:ring-cyan-500/20`}
+                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-cyan-500/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
                   Email
                 </span>
                 <input
@@ -347,12 +343,12 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="twoj@email.pl"
-                  className={`${inputClassName} focus:border-cyan-500/50 focus:ring-cyan-500/20`}
+                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-cyan-500/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
                   Hasło
                 </span>
                 <input
@@ -362,12 +358,12 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="minimum 6 znaków"
-                  className={`${inputClassName} focus:border-cyan-500/50 focus:ring-cyan-500/20`}
+                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-emerald-500/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-amber-500/80">
                   Powtórz hasło
                 </span>
                 <input
@@ -377,7 +373,7 @@ export default function LoginPage() {
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   placeholder="wpisz hasło jeszcze raz"
-                  className={`${inputClassName} focus:border-emerald-500/50 focus:ring-emerald-500/20`}
+                  className={`${inputClassName} focus:border-amber-500/50 focus:ring-amber-500/20`}
                 />
               </label>
 
@@ -388,7 +384,7 @@ export default function LoginPage() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 via-cyan-500 to-teal-500 text-lg font-black text-white shadow-lg shadow-cyan-500/30 disabled:opacity-60"
+                className="mt-2 flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-gradient text-lg font-black text-white shadow-lg shadow-orange-950/30 disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -399,10 +395,10 @@ export default function LoginPage() {
                 type="button"
                 disabled={loading}
                 onClick={switchToLogin}
-                className="text-center text-sm font-semibold text-zinc-500 transition-colors hover:text-cyan-400 disabled:opacity-50"
+                className="text-center text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-300 disabled:opacity-50"
               >
                 Masz już konto?{" "}
-                <span className="text-cyan-400">Zaloguj się</span>
+                <span className="text-orange-400">Zaloguj się</span>
               </button>
             </form>
           </motion.div>
@@ -412,7 +408,7 @@ export default function LoginPage() {
       <p className="mt-6 text-center text-sm text-zinc-500">
         <Link
           href="/"
-          className="font-semibold text-zinc-400 transition-colors hover:text-fuchsia-400"
+          className="font-semibold text-zinc-400 transition-colors hover:text-orange-400"
         >
           ← Wróć na stronę główną
         </Link>

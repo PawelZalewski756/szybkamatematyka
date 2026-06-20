@@ -36,8 +36,8 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
   const typLabel = TYP_EGZAMINU_LABELS[arkusz.typ];
   const typStyle =
     arkusz.typ === "matura"
-      ? "border-fuchsia-500/40 bg-fuchsia-500/15 text-fuchsia-200"
-      : "border-cyan-500/40 bg-cyan-500/15 text-cyan-200";
+      ? "border-orange-500/40 bg-orange-500/15 text-orange-200"
+      : "border-orange-500/40 bg-orange-500/15 text-orange-400";
 
   return (
     <motion.article
@@ -48,7 +48,7 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
     >
       <div className="border-b border-white/5 px-4 py-3 sm:px-5">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-violet-600/90 px-2.5 py-1 text-sm font-black text-white">
+          <span className="rounded-lg bg-orange-600/90 px-2.5 py-1 text-sm font-black text-white">
             Zad. {zadanie.numer_zadania}
           </span>
           {!isArkuszView ? (

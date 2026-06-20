@@ -4,13 +4,13 @@ test.describe("Smoke", () => {
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Zhakuj Matematykę",
+      "Matma pod maturę",
     );
   });
 
   test("/login ma formularz logowania", async ({ page }) => {
     await page.goto("/login");
-    await expect(page.getByRole("heading", { name: /Wejdź do/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Zaloguj się do/i })).toBeVisible();
     await expect(page.locator('input[name="email"]')).toBeVisible();
     await expect(page.locator('input[name="password"]')).toBeVisible();
     await expect(page.getByRole("button", { name: "Zaloguj się" })).toBeVisible();
@@ -30,10 +30,11 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
-  test("nawigacja ma link Wyzwania", async ({ page }) => {
+  test("nawigacja ma link Trening", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");
     await expect(
-      page.getByRole("navigation").getByRole("link", { name: "Wyzwania" }),
+      page.getByRole("navigation").getByRole("link", { name: "Trening" }),
     ).toBeVisible();
   });
 });

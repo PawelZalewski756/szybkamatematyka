@@ -35,8 +35,8 @@ export function EmptyState({
       className={`mx-auto flex max-w-md flex-col items-center justify-center px-4 py-12 text-center ${className}`}
     >
       {Icon && (
-        <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-fuchsia-500/15 to-cyan-500/15 ring-1 ring-white/10">
-          <Icon className="h-7 w-7 text-fuchsia-300" />
+        <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/15 to-orange-600/15 ring-1 ring-white/10">
+          <Icon className="h-7 w-7 text-orange-300" />
         </span>
       )}
       <p className="text-lg font-black text-white">{title}</p>
@@ -48,7 +48,7 @@ export function EmptyState({
       {action && (
         <Link
           href={action.href}
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-2.5 text-sm font-black text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
         >
           {action.label}
         </Link>

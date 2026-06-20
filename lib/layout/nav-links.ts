@@ -4,32 +4,30 @@ export type NavLink = {
 };
 
 export type NavGroup = {
-  /** Etykieta sekcji (null = bez nagłówka, np. Start) */
   label: string | null;
   links: readonly NavLink[];
 };
 
-export const NAV_GROUPS: readonly NavGroup[] = [
-  {
-    label: null,
-    links: [{ href: "/", label: "Start" }],
-  },
+/** Główne linki widoczne w pasku nawigacji (reszta w menu „Więcej”). */
+export const NAV_PRIMARY_LINKS: readonly NavLink[] = [
+  { href: "/trening", label: "Trening" },
+  { href: "/arkusze", label: "Arkusze" },
+  { href: "/baza-zadan", label: "Baza zadań" },
+  { href: "/minigry", label: "Minigry" },
+] as const;
+
+/** Linki w rozwijanym menu — pogrupowane dla czytelności. */
+export const NAV_MORE_GROUPS: readonly NavGroup[] = [
   {
     label: "Graj",
     links: [
-      { href: "/minigry", label: "Minigry" },
       { href: "/wyzwania", label: "Wyzwania" },
       { href: "/pojedynki", label: "Pojedynki" },
     ],
   },
   {
-    label: "Ucz się",
-    links: [
-      { href: "/trening", label: "Trening" },
-      { href: "/arkusze", label: "Arkusze CKE" },
-      { href: "/baza-zadan", label: "Baza zadań" },
-      { href: "/powtorki", label: "Powtórki" },
-    ],
+    label: "Nauka",
+    links: [{ href: "/powtorki", label: "Powtórki" }],
   },
   {
     label: "Społeczność",
@@ -39,13 +37,18 @@ export const NAV_GROUPS: readonly NavGroup[] = [
     ],
   },
   {
-    label: "Konto",
-    links: [
-      { href: "/profil", label: "Profil" },
-      { href: "/cennik", label: "Cennik" },
-    ],
+    label: null,
+    links: [{ href: "/cennik", label: "Cennik" }],
   },
 ] as const;
 
-/** Spłaszczona lista (kompatybilność wsteczna). */
-export const NAV_LINKS: readonly NavLink[] = NAV_GROUPS.flatMap((g) => g.links);
+/** @deprecated Użyj NAV_PRIMARY_LINKS + NAV_MORE_GROUPS */
+export const NAV_GROUPS: readonly NavGroup[] = [
+  { label: null, links: NAV_PRIMARY_LINKS },
+  ...NAV_MORE_GROUPS,
+];
+
+export const NAV_LINKS: readonly NavLink[] = [
+  ...NAV_PRIMARY_LINKS,
+  ...NAV_MORE_GROUPS.flatMap((g) => g.links),
+];

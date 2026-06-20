@@ -1,4 +1,4 @@
-# Wdrożenie Szybka Matma
+# Wdrożenie Szybka Matematyka
 
 Checklist przed uruchomieniem produkcyjnym (Vercel + Supabase).
 
@@ -10,7 +10,7 @@ Skopiuj z `.env.example` i uzupełnij:
 |---------|----------|------|
 | `NEXT_PUBLIC_SUPABASE_URL` | tak | URL projektu Supabase |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | tak | Klucz anon |
-| `NEXT_PUBLIC_SITE_URL` | produkcja | np. `https://szybka-matma.pl` |
+| `NEXT_PUBLIC_SITE_URL` | produkcja | np. `https://szybkamatematyka.pl` |
 | `ADMIN_EMAILS` | tak | E-maile adminów (serwer) |
 | `NEXT_PUBLIC_ADMIN_EMAILS` | tak | To samo (gate UI `/admin`) |
 | `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań CKE / API |

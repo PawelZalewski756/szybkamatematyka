@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Szybka Matematyka  rwno[">
+  <rect width="512" height="512" rx="112" fill="#0a0f14"/>
+  <rect x="96" y="144" width="320" height="36" rx="18" fill="#64748b" fill-opacity="0.45"/>
+  <rect x="96" y="332" width="320" height="36" rx="18" fill="#64748b" fill-opacity="0.45"/>
+  <rect x="128" y="228" width="288" height="44" rx="22" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="128" y1="250" x2="416" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+</svg>

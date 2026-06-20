@@ -44,7 +44,7 @@ export function ProfileAchievements() {
           </div>
           <Link
             href="/osiagniecia"
-            className="text-xs font-bold text-cyan-400 transition hover:text-cyan-300"
+            className="text-xs font-bold text-orange-400 transition hover:text-orange-200"
           >
             Zobacz wszystkie →
           </Link>
@@ -54,11 +54,11 @@ export function ProfileAchievements() {
           <span className="text-white">
             {ready ? `${unlockedCount} / ${total} zdobytych` : "Ładowanie…"}
           </span>
-          <span className="tabular-nums text-cyan-300">{percent}%</span>
+          <span className="tabular-nums text-amber-400">{percent}%</span>
         </div>
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-800">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-violet-500 transition-[width] duration-700"
+            className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-700"
             style={{ width: `${percent}%` }}
           />
         </div>
@@ -72,7 +72,7 @@ export function ProfileAchievements() {
                 title={`${a.title} — ${unlocked ? "zdobyte" : a.description}`}
                 className={`flex h-10 w-10 items-center justify-center rounded-xl ${
                   unlocked
-                    ? "bg-gradient-to-br from-violet-600 to-fuchsia-500 text-white shadow-md"
+                    ? "bg-gradient-to-br bg-brand-gradient text-white shadow-md"
                     : "bg-zinc-800 text-zinc-600"
                 }`}
               >

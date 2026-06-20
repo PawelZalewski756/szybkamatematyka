@@ -65,7 +65,7 @@ export function ConfiguredMinigame({
     return (
       <div className="mx-auto flex max-w-lg flex-1 flex-col items-center justify-center px-4 py-20 text-center">
         <p className="text-xl font-black text-white">Nie ma takiej minigry</p>
-        <Link href="/minigry" className="mt-6 text-fuchsia-400 hover:underline">
+        <Link href="/minigry" className="mt-6 text-orange-400 hover:underline">
           ← Wróć do listy
         </Link>
       </div>

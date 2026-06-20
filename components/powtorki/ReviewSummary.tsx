@@ -82,8 +82,8 @@ export function ReviewSummary({
           </p>
           <p className="mt-1 text-xs font-semibold text-zinc-400">Dobrze</p>
         </div>
-        <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-4">
-          <p className="text-2xl font-black text-cyan-300 tabular-nums">
+        <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
+          <p className="text-2xl font-black text-amber-400 tabular-nums">
             {accuracy}%
           </p>
           <p className="mt-1 text-xs font-semibold text-zinc-400">Skuteczność</p>
@@ -94,7 +94,7 @@ export function ReviewSummary({
         <button
           type="button"
           onClick={onRestart}
-          className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-cyan-400/30 bg-gradient-to-r from-cyan-600/90 to-fuchsia-600/90 px-7 py-3.5 text-sm font-black text-white shadow-[0_0_32px_rgba(34,211,238,0.25)] transition hover:scale-[1.02]"
+          className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500/90 to-orange-600/90 px-7 py-3.5 text-sm font-black text-white shadow-[0_0_32px_rgba(232,112,42,0.25)] transition hover:scale-[1.02]"
         >
           <RotateCcw className="h-4 w-4" />
           Powtarzaj dalej ({remainingDue})

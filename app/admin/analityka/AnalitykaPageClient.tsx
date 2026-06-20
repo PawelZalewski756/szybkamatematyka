@@ -48,7 +48,7 @@ function Section({
   return (
     <section className="mt-8 rounded-3xl border border-white/10 bg-zinc-900/80 p-6 sm:p-7">
       <h2 className="flex items-center gap-2 text-lg font-black text-white">
-        <Icon size={18} className="text-fuchsia-300" />
+        <Icon size={18} className="text-orange-300" />
         {title}
       </h2>
       <div className="mt-5">{children}</div>
@@ -96,14 +96,13 @@ export function AnalitykaPageClient() {
     <div className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/admin"
-        className="text-sm font-semibold text-zinc-500 hover:text-cyan-400"
-      >
+        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
         ← Panel administratora
       </Link>
 
       <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
         Analityka{" "}
-        <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+        <span className="text-gradient-brand">
           platformy
         </span>
       </h1>
@@ -121,8 +120,7 @@ export function AnalitykaPageClient() {
               label="Gracze"
               value={PL_NUMBER.format(players.totalPlayers)}
               sub="profili łącznie"
-              accent="text-cyan-400"
-            />
+              accent="text-orange-400"             />
             <MetricCard
               icon={Activity}
               label="Aktywni 7 dni"
@@ -142,14 +140,14 @@ export function AnalitykaPageClient() {
               label="Nowi 30 dni"
               value={PL_NUMBER.format(players.new30d)}
               sub={`w tym ${PL_NUMBER.format(players.new7d)} w 7 dni`}
-              accent="text-fuchsia-400"
+              accent="text-orange-400"
             />
             <MetricCard
               icon={TrendingUp}
               label="Suma XP"
               value={formatCompactXp(players.totalXp)}
               sub={`średnio ${PL_NUMBER.format(players.avgXp)} / gracza`}
-              accent="text-violet-400"
+              accent="text-orange-400"
             />
             <MetricCard
               icon={Sparkles}
@@ -190,7 +188,7 @@ export function AnalitykaPageClient() {
               label: `Poziom ${bucket.level}`,
               count: bucket.count,
             }))}
-            gradient="from-violet-500 to-fuchsia-500"
+            gradient="from-orange-500 to-orange-500"
             emptyLabel="Brak danych o poziomach"
           />
           <p className="mt-3 text-xs text-zinc-500">
@@ -208,21 +206,20 @@ export function AnalitykaPageClient() {
             label="Arkusze"
             value={content.arkusze != null ? PL_NUMBER.format(content.arkusze) : "—"}
             sub="arkuszy egzaminacyjnych"
-            accent="text-cyan-400"
-          />
+            accent="text-orange-400"           />
           <MetricCard
             icon={Layers}
             label="Zadania (arkusze)"
             value={content.zadania != null ? PL_NUMBER.format(content.zadania) : "—"}
             sub="zadań z rozwiązaniami"
-            accent="text-fuchsia-400"
+            accent="text-orange-400"
           />
           <MetricCard
             icon={Gamepad2}
             label="Zadania treningowe"
             value={content.tasks != null ? PL_NUMBER.format(content.tasks) : "—"}
             sub="w arenie treningowej"
-            accent="text-violet-400"
+            accent="text-orange-400"
           />
           <MetricCard
             icon={BookOpen}
@@ -245,7 +242,7 @@ export function AnalitykaPageClient() {
             <div className="mt-3">
               <BarList
                 items={content.zadaniaByDzial}
-                gradient="from-fuchsia-500 to-pink-500"
+                gradient="from-orange-500 to-pink-500"
                 emptyLabel="Brak zadań w bazie arkuszy"
               />
             </div>
@@ -258,7 +255,7 @@ export function AnalitykaPageClient() {
               <div className="mt-3">
                 <BarList
                   items={content.tasksByExam}
-                  gradient="from-violet-500 to-cyan-500"
+                  gradient="from-orange-500 to-orange-600"
                   emptyLabel="Brak zadań treningowych"
                 />
               </div>
@@ -270,7 +267,7 @@ export function AnalitykaPageClient() {
               <div className="mt-3">
                 <BarList
                   items={content.materialsByExam}
-                  gradient="from-emerald-500 to-cyan-500"
+                  gradient="from-emerald-500 to-orange-500"
                   emptyLabel="Brak materiałów"
                 />
               </div>

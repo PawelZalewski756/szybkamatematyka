@@ -3,14 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { SITE_NAME } from "@/lib/seo/site";
+
 export function Footer() {
   const pathname = usePathname();
   if (pathname === "/") return null;
 
   return (
-    <footer className="mt-auto w-full border-t border-white/5 py-6">
-      <div className="mx-auto flex w-full max-w-[1920px] flex-wrap items-center justify-between gap-3 px-4 text-xs text-zinc-500 md:px-8">
-        <p>© {new Date().getFullYear()} Szybka Matma</p>
+    <footer className="mt-auto w-full border-t border-white/[0.06] py-6">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-wrap items-center justify-between gap-3 px-4 text-xs text-slate-500 md:px-8">
+        <p>© {new Date().getFullYear()} {SITE_NAME}</p>
         <nav
           aria-label="Stopka"
           className="flex flex-wrap items-center gap-4"

@@ -96,7 +96,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-8 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-8 py-4 text-lg font-black text-white"
+          className="mt-8 rounded-2xl bg-brand-gradient px-8 py-4 text-lg font-black text-white"
         >
           ← Wybierz inny tryb
         </button>
@@ -107,7 +107,7 @@ export function OnlineDuel({
   if (view === "choose") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
           {title} · Online
         </p>
         <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
@@ -120,7 +120,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={handleHost}
-          className="mt-8 w-full rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 px-6 py-5 text-lg font-black text-white shadow-lg shadow-cyan-500/30"
+          className="mt-8 w-full rounded-2xl bg-gradient-to-r from-emerald-600 via-amber-500 to-orange-500 px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
         >
           🎮 Stwórz pokój
         </button>
@@ -135,12 +135,12 @@ export function OnlineDuel({
               onChange={(e) => setJoinInput(e.target.value.toUpperCase())}
               placeholder="np. K7M2P"
               maxLength={8}
-              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-zinc-950 px-3 py-3 text-center text-xl font-black tracking-[0.3em] text-white placeholder:tracking-normal placeholder:text-zinc-600 focus:border-fuchsia-500/50 focus:outline-none"
+              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-zinc-950 px-3 py-3 text-center text-xl font-black tracking-[0.3em] text-white placeholder:tracking-normal placeholder:text-zinc-600 focus:border-orange-500/50 focus:outline-none"
             />
             <button
               type="button"
               onClick={handleJoin}
-              className="shrink-0 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-3 text-base font-black text-white"
+              className="shrink-0 rounded-xl bg-brand-gradient px-5 py-3 text-base font-black text-white"
             >
               Dołącz
             </button>
@@ -150,7 +150,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
         >
           ← Zmień tryb
         </button>
@@ -163,14 +163,14 @@ export function OnlineDuel({
     const canStart = isHost && rt.opponentPresent && rt.status === "ready";
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
           {title}
         </p>
         <h1 className="mt-2 text-3xl font-black text-white">Poczekalnia</h1>
 
         {isHost && rt.code && (
-          <div className="mt-6 w-full rounded-2xl border border-cyan-500/30 bg-cyan-500/10 p-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-cyan-300">
+          <div className="mt-6 w-full rounded-2xl border border-orange-500/30 bg-orange-500/10 p-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
               Kod pokoju
             </p>
             <p className="mt-1 text-5xl font-black tracking-[0.3em] text-white">
@@ -202,7 +202,7 @@ export function OnlineDuel({
             type="button"
             onClick={rt.startMatch}
             disabled={!canStart}
-            className="mt-8 w-full rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 py-5 text-xl font-black text-white shadow-xl shadow-fuchsia-500/40 disabled:opacity-50"
+            className="mt-8 w-full rounded-2xl bg-brand-gradient py-5 text-xl font-black text-white shadow-xl shadow-orange-500/40 disabled:opacity-50"
           >
             {canStart ? "Start pojedynku!" : "Czekam na rywala…"}
           </button>
@@ -221,7 +221,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={leaveAll}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
         >
           ← Opuść pokój
         </button>

@@ -8,7 +8,7 @@ const FAQ_ITEMS = [
   {
     question: "Ile to kosztuje?",
     answer:
-      "Plan Start jest darmowy (podgląd). Pełny dostęp masz w subskrypcji Pro (29 zł/mies.) lub Rocznej (249 zł/rok). Płatność obsługuje Stripe — płacisz kartą, a subskrypcję anulujesz kiedy chcesz.",
+      "Start jest darmowy — możesz korzystać bez karty. Pro (29 zł/mies.) i Roczny (249 zł/rok) dają pełny dostęp do arkuszy i minigier; płatność przez Stripe, anulujesz kiedy chcesz.",
   },
   {
     question: "Co dostanę w subskrypcji Pro?",

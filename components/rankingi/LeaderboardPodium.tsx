@@ -17,7 +17,7 @@ function PodiumAvatar({
   const initial = entry.nick.charAt(0).toUpperCase();
   return (
     <div
-      className={`relative overflow-hidden rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 ring-4 ${sizeClass}`}
+      className={`relative overflow-hidden rounded-full bg-gradient-to-br bg-brand-gradient ring-4 ${sizeClass}`}
     >
       {entry.avatarUrl ? (
         <Image
@@ -106,7 +106,7 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
             <div className="mt-1 flex justify-center">
               <LevelBadge level={entry.level} size="sm" />
             </div>
-            <p className="mt-0.5 text-[10px] font-bold tabular-nums text-cyan-400 sm:text-xs">
+            <p className="mt-0.5 text-[10px] font-bold tabular-nums text-orange-400 sm:text-xs">
               {formatCompactXp(entry.xp)}
             </p>
             <div

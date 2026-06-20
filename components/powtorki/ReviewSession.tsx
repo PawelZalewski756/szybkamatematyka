@@ -106,7 +106,7 @@ export function ReviewSession({
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-bold text-cyan-400 hover:text-cyan-300"
+          className="mt-6 text-sm font-bold text-orange-400 hover:text-orange-200"
         >
           ← Wróć do panelu
         </button>
@@ -125,7 +125,7 @@ export function ReviewSession({
         <button
           type="button"
           onClick={onExit}
-          className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+          className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-400 transition hover:text-orange-200"
         >
           <ArrowLeft className="h-4 w-4" />
           Przerwij
@@ -137,7 +137,7 @@ export function ReviewSession({
 
       <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-white/10">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500"
+          className="h-full rounded-full bg-gradient-to-r from-orange-500 to-orange-500"
           animate={{ width: `${progressPct}%` }}
           transition={{ duration: 0.3 }}
         />
@@ -153,7 +153,7 @@ export function ReviewSession({
           className="flex flex-1 flex-col"
         >
           <div className="flex flex-wrap gap-2">
-            <span className="rounded-md border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-xs font-bold text-violet-300">
+            <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs font-bold text-orange-300">
               {CATEGORY_LABELS[task.category]}
             </span>
             <span className="rounded-md border border-white/10 bg-zinc-800 px-2 py-1 text-xs font-bold text-zinc-300">
@@ -161,7 +161,7 @@ export function ReviewSession({
             </span>
           </div>
 
-          <div className="mt-4 rounded-3xl border border-cyan-500/20 bg-zinc-900/90 p-6 sm:p-8">
+          <div className="mt-4 rounded-3xl border border-orange-500/20 bg-zinc-900/90 p-6 sm:p-8">
             <h2 className="text-xl font-black text-white">{task.title}</h2>
             <div className="mt-3">
               <TheoryMarkdown content={task.prompt} />
@@ -173,7 +173,7 @@ export function ReviewSession({
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {task.choices.map((choice, choiceIndex) => {
                 let style =
-                  "border-white/10 bg-zinc-950 hover:border-cyan-500/40 hover:bg-cyan-500/10";
+                  "border-white/10 bg-zinc-950 hover:border-orange-500/40 hover:bg-orange-500/10";
                 if (answered) {
                   if (choiceIndex === task.correctIndex) {
                     style =
@@ -236,7 +236,7 @@ export function ReviewSession({
             <button
               type="button"
               onClick={handleNext}
-              className="mt-6 inline-flex items-center justify-center gap-2 self-end rounded-2xl border border-cyan-400/30 bg-gradient-to-r from-cyan-600/90 to-fuchsia-600/90 px-6 py-3 text-sm font-black text-white shadow-[0_0_24px_rgba(34,211,238,0.2)] transition hover:scale-[1.02]"
+              className="mt-6 inline-flex items-center justify-center gap-2 self-end rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500/90 to-orange-600/90 px-6 py-3 text-sm font-black text-white shadow-[0_0_24px_rgba(232,112,42,0.2)] transition hover:scale-[1.02]"
             >
               {index + 1 >= queue.length ? "Zakończ" : "Następne"}
               <ArrowRight className="h-4 w-4" />

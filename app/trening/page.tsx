@@ -189,7 +189,7 @@ function ExamSwitcher({
             {isActive && (
               <motion.span
                 layoutId="trening-exam-pill"
-                className="absolute inset-0 rounded-xl border border-fuchsia-400/30 bg-gradient-to-r from-violet-500/25 via-fuchsia-500/20 to-cyan-500/25 shadow-[0_0_20px_rgba(192,38,211,0.2)]"
+                className="absolute inset-0 rounded-xl border border-orange-400/30 bg-gradient-to-r from-orange-500/25 via-orange-500/20 to-orange-600/25 shadow-[0_0_20px_rgba(192,38,211,0.2)]"
                 transition={{ type: "spring", stiffness: 380, damping: 32 }}
               />
             )}
@@ -213,8 +213,7 @@ function TopicStatusIcon({ status }: { status: TopicStatus }) {
   if (status === "available") {
     return (
       <Play
-        className="h-6 w-6 shrink-0 fill-cyan-400/20 text-cyan-400"
-        aria-label="Dostępne"
+        className="h-6 w-6 shrink-0 fill-orange-400/20 text-orange-400400"         aria-label="Dostępne"
       />
     );
   }
@@ -234,8 +233,8 @@ function topicStatusEmoji(status: TopicStatus): string {
 
 function progressBarColor(percent: number): string {
   if (percent >= 100) return "from-emerald-500 to-emerald-400";
-  if (percent >= 50) return "from-emerald-500 to-cyan-400";
-  if (percent >= 25) return "from-violet-500 to-fuchsia-500";
+  if (percent >= 50) return "from-emerald-500 to-orange-500";
+  if (percent >= 25) return "from-orange-500 to-orange-500";
   return "from-zinc-600 to-zinc-500";
 }
 
@@ -294,7 +293,7 @@ function TopicCard({
         </span>
       )}
       {canPlay && (
-        <p className="mt-3 text-xs font-semibold text-cyan-400/90">
+        <p className="mt-3 text-xs font-semibold text-orange-/90">
           {isCompleted ? "Powtórz teorię i arenę" : "Teoria · Arena"}
         </p>
       )}
@@ -329,13 +328,13 @@ function TopicCard({
       animate={{ opacity: 1, y: 0 }}
       whileHover={{
         scale: 1.02,
-        boxShadow: "0 0 40px rgba(34,211,238,0.18)",
+        boxShadow: "0 0 40px rgba(232,112,42,0.18)",
       }}
       transition={{ type: "spring", stiffness: 380, damping: 22 }}
     >
       <Link
         href={href}
-        className={`${cardClass} block hover:border-cyan-500/35 hover:bg-white/10`}
+        className={`${cardClass} block hover:border-orange-500/35 hover:bg-white/10`}
       >
         {cardInner}
       </Link>
@@ -363,7 +362,7 @@ function CategorySection({
     >
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-fuchsia-300/80">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-300/80">
             Dział
           </p>
           <h2 className="mt-1 text-xl font-black text-white sm:text-2xl">
@@ -558,18 +557,18 @@ export default function TreningPage() {
     <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
       <GamingBackground />
 
-      <div className="relative z-10 flex w-full flex-1 flex-col py-8 sm:py-12">
+      <div className="page-container relative z-10 flex w-full flex-1 flex-col py-8 sm:py-12">
         <motion.header
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
         >
-          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-fuchsia-300/90 backdrop-blur-md sm:text-xs">
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-orange-300/90 backdrop-blur-md sm:text-xs">
             <Sparkles className="h-3.5 w-3.5" aria-hidden />
             Z bazy zadań
           </div>
           <h1 className="text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
-            <span className="bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-violet-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
               Ścieżka treningowa
             </span>
           </h1>
@@ -607,13 +606,13 @@ export default function TreningPage() {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Szukaj działu lub tematu…"
-              className="w-full rounded-2xl border border-white/15 bg-white/[0.06] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none backdrop-blur-xl focus:border-cyan-500/40 focus:ring-1 focus:ring-cyan-500/30"
+              className="w-full rounded-2xl border border-white/15 bg-white/[0.06] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none backdrop-blur-xl focus:border-orange-500/40 focus:ring-1 focus:ring-orange-500/30"
             />
           </div>
           {debouncedQuery.trim() && !loading && (
             <p className="mt-2 text-center text-xs font-semibold text-zinc-400">
               Znaleziono{" "}
-              <span className="text-cyan-300">{matchedTopicCount}</span>{" "}
+              <span className="text-amber-400">{matchedTopicCount}</span>{" "}
               {matchedTopicCount === 1
                 ? "temat"
                 : matchedTopicCount >= 2 && matchedTopicCount <= 4
@@ -627,7 +626,7 @@ export default function TreningPage() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.045 }}
-          className="mx-auto mt-4 flex w-full max-w-2xl flex-col gap-3 px-1"
+          className="mx-auto mt-4 flex w-full max-w-2xl flex-col gap-3 px-1 xl:max-w-4xl"
         >
           <div
             role="group"
@@ -649,7 +648,7 @@ export default function TreningPage() {
                   onClick={() => setTopicFilter(opt.id)}
                   className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
                     active
-                      ? "border-fuchsia-400/50 bg-fuchsia-500/20 text-fuchsia-100"
+                      ? "border-orange-400/50 bg-orange-500/20 text-orange-100"
                       : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
@@ -677,8 +676,7 @@ export default function TreningPage() {
                   onClick={() => setTopicSort(opt.id)}
                   className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
                     active
-                      ? "border-cyan-400/50 bg-cyan-500/20 text-cyan-100"
-                      : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                      ? "border-orange-500/50 bg-orange-500/20 text-orange-400"                       : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
                   {opt.label}
@@ -701,7 +699,7 @@ export default function TreningPage() {
                 Zacznij od teorii, potem arena{" "}
                 <Link
                   href={pathBannerHref}
-                  className="font-bold text-cyan-300 underline-offset-2 hover:underline"
+                  className="font-bold text-amber-400 underline-offset-2 hover:underline"
                 >
                   ➡️ pierwszy temat
                 </Link>
@@ -722,11 +720,11 @@ export default function TreningPage() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
-          className="mx-auto mt-8 flex max-w-lg items-center gap-3 rounded-2xl border border-fuchsia-500/30 bg-gradient-to-br from-violet-600/25 to-fuchsia-600/15 px-5 py-4 shadow-[0_0_32px_rgba(192,38,211,0.15)] backdrop-blur-xl"
+          className="mx-auto mt-8 flex max-w-lg items-center gap-3 rounded-2xl border border-orange-500/30 bg-gradient-to-br from-orange-600/25 to-orange-600/15 px-5 py-4 shadow-[0_0_32px_rgba(192,38,211,0.15)] backdrop-blur-xl"
         >
-          <GraduationCap className="h-9 w-9 shrink-0 text-fuchsia-300" />
+          <GraduationCap className="h-9 w-9 shrink-0 text-orange-300" />
           <div className="min-w-0 flex-1">
-            <p className="text-xs font-bold uppercase tracking-wider text-fuchsia-300/90">
+            <p className="text-xs font-bold uppercase tracking-wider text-orange-300/90">
               {exam.shortLabel}
             </p>
             <p className="truncate text-lg font-black text-white">{exam.label}</p>
@@ -745,7 +743,7 @@ export default function TreningPage() {
               )}
             </p>
           </div>
-          <BookOpen className="h-8 w-8 shrink-0 text-cyan-400/80" aria-hidden />
+          <BookOpen className="h-8 w-8 shrink-0 text-orange-/80" aria-hidden />
         </motion.div>
 
         <AnimatePresence mode="wait">
@@ -757,7 +755,7 @@ export default function TreningPage() {
               exit={{ opacity: 0 }}
               className="mt-16 flex justify-center"
             >
-              <Loader2 className="h-10 w-10 animate-spin text-fuchsia-400" />
+              <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
             </motion.div>
           ) : (
             <motion.div

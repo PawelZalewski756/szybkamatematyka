@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Cennik i plany",
-  description:
-    "Plany subskrypcji Szybkiej Matmy — pełny dostęp do bazy zadań, arkuszy, treningów i minigier. Wybierz plan dopasowany do przygotowań do egzaminu.",
+    description:
+      "Start jest darmowy. Pro i Roczny — pełny dostęp do bazy zadań, arkuszy i minigier. Porównaj plany bez zobowiązań.",
   alternates: { canonical: "/cennik" },
 };
 

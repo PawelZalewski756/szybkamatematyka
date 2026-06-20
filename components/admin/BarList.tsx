@@ -5,7 +5,7 @@ type BarItem = {
 
 type BarListProps = {
   items: BarItem[];
-  /** Klasa gradientu paska, np. "from-fuchsia-500 to-cyan-500". */
+  /** Klasa gradientu paska, np. "from-orange-500 to-orange-". */
   gradient?: string;
   /** Maksymalna liczba pozycji (reszta zwijana do „pozostałe”). */
   maxItems?: number;
@@ -21,7 +21,7 @@ const PL_NUMBER = new Intl.NumberFormat("pl-PL");
  */
 export function BarList({
   items,
-  gradient = "from-fuchsia-500 to-cyan-500",
+  gradient = "from-orange-500 to-orange-600",
   maxItems = 12,
   emptyLabel = "Brak danych",
 }: BarListProps) {

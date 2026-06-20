@@ -2,7 +2,6 @@
 
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
-  learningPathShortLabel,
   PATH_OPTIONS,
   type LearningPath,
 } from "@/lib/learning-path";
@@ -23,14 +22,11 @@ export function NavbarPathSelect({ className = "" }: NavbarPathSelectProps) {
       className={`flex min-w-0 flex-col gap-0.5 ${className}`}
       aria-label="Szkoła podstawowa lub średnia"
     >
-      <span className="hidden text-[10px] font-bold uppercase tracking-widest text-zinc-500 sm:block">
-        Twoja ścieżka
-      </span>
       <select
         value={path}
         onChange={handleChange}
         disabled={!ready}
-        className="w-full min-w-0 cursor-pointer truncate rounded-xl border border-violet-500/30 bg-zinc-900/90 py-2 pl-2.5 pr-7 text-xs font-bold text-white shadow-inner shadow-violet-500/5 outline-none transition-colors hover:border-fuchsia-500/40 focus:border-fuchsia-500/60 focus:ring-2 focus:ring-fuchsia-500/25 disabled:opacity-50 sm:max-w-[13.5rem] sm:py-2.5 sm:pl-3 sm:text-sm"
+        className="w-full min-w-0 cursor-pointer truncate rounded-lg border border-white/10 bg-[#111820] py-1.5 pl-2.5 pr-7 text-xs font-medium text-slate-200 outline-none transition-colors hover:border-white/20 focus:border-teal-500/40 disabled:opacity-50 lg:text-sm lg:py-2"
         title={ready ? undefined : "Ładowanie…"}
       >
         {PATH_OPTIONS.map((option) => (
@@ -39,9 +35,6 @@ export function NavbarPathSelect({ className = "" }: NavbarPathSelectProps) {
           </option>
         ))}
       </select>
-      <span className="truncate text-[10px] font-semibold text-fuchsia-400/90 sm:hidden">
-        {ready ? learningPathShortLabel(path) : "…"}
-      </span>
     </label>
   );
 }

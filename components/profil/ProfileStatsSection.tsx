@@ -34,20 +34,18 @@ function KpiTile({
   value: string;
   sub?: string;
   icon: ComponentType<{ className?: string }>;
-  accent: "violet" | "cyan" | "orange" | "emerald" | "fuchsia" | "yellow";
+  accent: "amber" | "cyan" | "orange" | "emerald" | "yellow";
 }) {
   const iconColor =
-    accent === "violet"
-      ? "text-violet-400"
+    accent === "amber"
+      ? "text-amber-400"
       : accent === "cyan"
-        ? "text-cyan-400"
+        ? "text-orange-400"
         : accent === "orange"
           ? "text-orange-400"
           : accent === "emerald"
             ? "text-emerald-400"
-            : accent === "fuchsia"
-              ? "text-fuchsia-400"
-              : "text-yellow-400";
+            : "text-yellow-400";
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:p-4">
@@ -85,7 +83,7 @@ function ActivityBarChart({ points }: { points: ActivityPoint[] }) {
           >
             <div className="flex h-20 w-full items-end justify-center">
               {point.active ? (
-                <div className="w-full max-w-[2rem] rounded-t-md bg-gradient-to-t from-cyan-600 via-fuchsia-500 to-violet-400 shadow-[0_0_12px_rgba(192,132,252,0.35)] transition-[height] duration-500 sm:max-w-none" style={{ height: "100%" }} />
+                <div className="w-full max-w-[2rem] rounded-t-md bg-gradient-to-t from-orange-500 via-orange-500 to-amber-400 shadow-[0_0_12px_rgba(192,132,252,0.35)] transition-[height] duration-500 sm:max-w-none" style={{ height: "100%" }} />
               ) : (
                 <div className="h-2 w-full max-w-[2rem] rounded-full bg-zinc-800 sm:max-w-none" />
               )}
@@ -134,7 +132,7 @@ export function ProfileStatsSection({
       <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400">
-            <BarChart3 className="h-4 w-4 text-cyan-400" aria-hidden />
+            <BarChart3 className="h-4 w-4 text-orange-400" aria-hidden />
             <span id="profile-stats-heading">Twój postęp</span>
           </div>
           {!ready && (
@@ -147,7 +145,7 @@ export function ProfileStatsSection({
 
         {!ready ? (
           <div className="mt-6 flex flex-col items-center gap-3 py-8 text-center">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-fuchsia-500/30 border-t-cyan-400" />
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-orange-500/30 border-t-cyan-400" />
             <p className="text-sm font-semibold text-zinc-500">
               Ładowanie statystyk…
             </p>
@@ -174,7 +172,7 @@ export function ProfileStatsSection({
                 value={`Lvl ${stats.level}`}
                 sub="konto gracza"
                 icon={Trophy}
-                accent="violet"
+                accent="amber"
               />
               <KpiTile
                 label="Seria"
@@ -190,7 +188,7 @@ export function ProfileStatsSection({
                 value={String(stats.challengesCompleted)}
                 sub="ukończone dziennie"
                 icon={CalendarCheck}
-                accent="fuchsia"
+                accent="orange"
               />
               <KpiTile
                 label="Pojedynki"
@@ -223,11 +221,11 @@ export function ProfileStatsSection({
                 <span className="text-zinc-400">
                   {stats.currentLevelXp} / {stats.xpForNextLevel} XP
                 </span>
-                <span className="text-cyan-300">{xpPercent}%</span>
+                <span className="text-amber-400">{xpPercent}%</span>
               </div>
               <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-zinc-800">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-violet-600 via-fuchsia-500 to-cyan-400 transition-[width] duration-700"
+                  className="h-full rounded-full bg-gradient-to-r from-orange-600 via-orange-500 to-orange-500 transition-[width] duration-700"
                   style={{ width: `${xpPercent}%` }}
                 />
               </div>
@@ -244,7 +242,7 @@ export function ProfileStatsSection({
                     onClick={() => setRange(7)}
                     className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
                       range === 7
-                        ? "bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white"
+                        ? "bg-brand-gradient text-white"
                         : "text-zinc-500 hover:text-zinc-300"
                     }`}
                   >
@@ -255,7 +253,7 @@ export function ProfileStatsSection({
                     onClick={() => setRange(14)}
                     className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
                       range === 14
-                        ? "bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white"
+                        ? "bg-brand-gradient text-white"
                         : "text-zinc-500 hover:text-zinc-300"
                     }`}
                   >

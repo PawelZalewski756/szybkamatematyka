@@ -74,7 +74,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
     kind: "matura",
     forPaths: ["liceum-3", "liceum-4", "technikum", "zawodowa"],
     timeMinutes: 60,
-    gradient: "from-violet-600 via-fuchsia-500 to-pink-600",
+    gradient: "from-orange-600 via-orange-500 to-pink-600",
     taskIds: [
       "st-012",
       "st-013",
@@ -138,7 +138,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
     kind: "matura",
     forPaths: ["matura"],
     timeMinutes: 60,
-    gradient: "from-indigo-600 via-purple-500 to-fuchsia-600",
+    gradient: "from-indigo-600 via-purple-500 to-orange-600",
     taskIds: [
       "st-013",
       "st-015",

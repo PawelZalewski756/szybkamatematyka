@@ -20,10 +20,10 @@ export function AccountLevelBar({
       : 100;
 
   return (
-    <div className="rounded-2xl border border-violet-500/30 bg-zinc-900/80 p-4 shadow-lg shadow-violet-500/10 backdrop-blur-sm">
+    <div className="rounded-2xl border border-orange-500/30 bg-zinc-900/80 p-4 shadow-lg shadow-amber-500/10 backdrop-blur-sm">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <span className="rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-500 px-2.5 py-1 text-sm font-black text-white shadow-md shadow-fuchsia-500/30">
+          <span className="rounded-lg bg-gradient-to-br bg-brand-gradient px-2.5 py-1 text-sm font-black text-white shadow-md shadow-orange-500/30">
             LVL {level}
           </span>
           <span className="text-sm font-semibold text-zinc-400">{subtitle}</span>
@@ -34,7 +34,7 @@ export function AccountLevelBar({
       </div>
       <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-zinc-800">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-violet-500 transition-[width] duration-500"
+          className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-500"
           style={{ width: `${percent}%` }}
         />
       </div>

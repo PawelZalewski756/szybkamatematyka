@@ -72,10 +72,10 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="w-full max-w-md rounded-3xl border border-fuchsia-500/30 bg-gradient-to-b from-zinc-900/95 to-zinc-950/95 p-6 shadow-[0_0_60px_rgba(192,38,211,0.25)] backdrop-blur-2xl sm:p-8"
+        className="w-full max-w-md rounded-3xl border border-orange-500/30 bg-gradient-to-b from-zinc-900/95 to-zinc-950/95 p-6 shadow-[0_0_60px_rgba(192,38,211,0.25)] backdrop-blur-2xl sm:p-8"
       >
         <div className="mb-4 flex justify-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-500 shadow-lg shadow-fuchsia-500/30">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br bg-brand-gradient shadow-lg shadow-orange-500/30">
             <Gamepad2 className="h-7 w-7 text-white" aria-hidden />
           </div>
         </div>
@@ -106,7 +106,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             autoFocus
             autoComplete="username"
             placeholder="np. MatmaMaster"
-            className="mt-2 w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-base font-bold text-white outline-none placeholder:text-zinc-600 focus:border-fuchsia-500/50 focus:ring-2 focus:ring-fuchsia-500/25"
+            className="mt-2 w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-base font-bold text-white outline-none placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/25"
           />
 
           {error && (
@@ -116,7 +116,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
           <button
             type="submit"
             disabled={saving}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 py-3.5 text-base font-black text-white shadow-lg shadow-fuchsia-500/30 transition hover:brightness-110 disabled:opacity-60"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gradient py-3.5 text-base font-black text-white shadow-lg shadow-orange-500/30 transition hover:brightness-110 disabled:opacity-60"
           >
             {saving ? (
               <Loader2 className="h-5 w-5 animate-spin" aria-hidden />

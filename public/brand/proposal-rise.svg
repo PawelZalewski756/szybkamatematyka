@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Szybka Matematyka  wzrost">
+  <rect width="512" height="512" rx="112" fill="#0a0f14"/>
+  <path d="M128 384V192" stroke="#64748b" stroke-opacity="0.35" stroke-width="32" stroke-linecap="round"/>
+  <path d="M128 384H384" stroke="#64748b" stroke-opacity="0.35" stroke-width="32" stroke-linecap="round"/>
+  <path d="M160 320 L256 224 L320 272 L416 128" stroke="url(#r)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="416" cy="128" r="36" fill="#5eead4"/>
+  <defs>
+    <linearGradient id="r" x1="160" y1="320" x2="416" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14b8a6"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+</svg>

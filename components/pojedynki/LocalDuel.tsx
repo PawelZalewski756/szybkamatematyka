@@ -48,7 +48,7 @@ function ReadyCard({
 }) {
   return (
     <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-      <p className="text-sm font-bold uppercase tracking-widest text-fuchsia-400">
+      <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
         {title}
       </p>
       <motion.h1
@@ -62,14 +62,14 @@ function ReadyCard({
       <button
         type="button"
         onClick={onStart}
-        className="mt-10 w-full rounded-2xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 py-5 text-xl font-black text-white shadow-xl shadow-fuchsia-500/40"
+        className="mt-10 w-full rounded-2xl bg-brand-gradient py-5 text-xl font-black text-white shadow-xl shadow-orange-500/40"
       >
         {buttonLabel}
       </button>
       <button
         type="button"
         onClick={onExit}
-        className="mt-4 text-sm font-semibold text-zinc-500 hover:text-fuchsia-400"
+        className="mt-4 text-sm font-semibold text-zinc-500 hover:text-orange-400"
       >
         ← Zmień tryb
       </button>

@@ -55,7 +55,7 @@ function StreakBanner({
       <div
         className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
           active
-            ? "bg-gradient-to-br from-orange-500 to-fuchsia-600 shadow-[0_0_18px_rgba(251,146,60,0.4)]"
+            ? "bg-gradient-to-br from-orange-500 to-orange-600 shadow-[0_0_18px_rgba(251,146,60,0.4)]"
             : "bg-zinc-800"
         }`}
       >
@@ -111,7 +111,7 @@ function RewardScreen({
       animate={{ opacity: 1, scale: 1, y: 0 }}
       className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 text-center backdrop-blur-xl sm:p-8"
     >
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-500 shadow-[0_0_28px_rgba(52,211,153,0.4)]">
+      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-orange-500 shadow-[0_0_28px_rgba(232,112,42,0.35)]">
         <CheckCircle2 className="h-9 w-9 text-white" aria-hidden />
       </div>
       <h2 className="mt-4 text-2xl font-black text-white sm:text-3xl">
@@ -125,8 +125,8 @@ function RewardScreen({
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
-        <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-4">
-          <div className="flex items-center justify-center gap-1.5 text-cyan-400">
+        <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
+          <div className="flex items-center justify-center gap-1.5 text-orange-400">
             <Sparkles className="h-4 w-4" aria-hidden />
             <span className="text-[10px] font-bold uppercase tracking-wide">
               Nagroda XP
@@ -158,7 +158,7 @@ function RewardScreen({
 
       {!isLoggedIn && (
         <p className="mt-5 text-xs font-semibold text-zinc-500">
-          <Link href="/login" className="font-bold text-fuchsia-400">
+          <Link href="/login" className="font-bold text-orange-400">
             Zaloguj się
           </Link>{" "}
           — by zapisać XP na koncie i synchronizować serię między urządzeniami.
@@ -166,21 +166,21 @@ function RewardScreen({
       )}
 
       <div className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-zinc-300">
-        <CalendarCheck className="h-4 w-4 text-cyan-400" aria-hidden />
+        <CalendarCheck className="h-4 w-4 text-orange-400" aria-hidden />
         Następne wyzwanie jutro
       </div>
 
       <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Link
           href="/minigry"
-          className="inline-flex items-center gap-2 text-sm font-bold text-fuchsia-400 transition hover:text-fuchsia-300"
+          className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-300"
         >
           <Swords className="h-4 w-4" />
           Zagraj w minigry →
         </Link>
         <Link
           href="/trening"
-          className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+          className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-200"
         >
           <Trophy className="h-4 w-4" />
           Trening →
@@ -277,7 +277,7 @@ export function DailyChallengeView() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-fuchsia-400/90">
+          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400/90">
             <Flame className="h-3.5 w-3.5" aria-hidden />
             Dzienne wyzwanie
           </div>
@@ -292,7 +292,7 @@ export function DailyChallengeView() {
 
         {loading ? (
           <div className="mt-10 flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-cyan-400" />
+            <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
             <p className="text-sm font-semibold text-zinc-400">
               Ładowanie wyzwania…
             </p>
@@ -314,7 +314,7 @@ export function DailyChallengeView() {
                   exit={{ opacity: 0, y: -12 }}
                   className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-8"
                 >
-                  <div className="flex items-center gap-2 text-cyan-400">
+                  <div className="flex items-center gap-2 text-orange-400">
                     <Sparkles className="h-5 w-5" aria-hidden />
                     <span className="text-sm font-bold uppercase tracking-wide">
                       Oceń: prawda czy fałsz?
@@ -328,7 +328,7 @@ export function DailyChallengeView() {
                   <button
                     type="button"
                     onClick={startChallenge}
-                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-6 py-4 text-base font-black text-white shadow-lg shadow-fuchsia-500/25 transition hover:brightness-110 active:scale-[0.98]"
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gradient px-6 py-4 text-base font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 active:scale-[0.98]"
                   >
                     <Flame className="h-5 w-5" />
                     Rozpocznij wyzwanie
@@ -336,7 +336,7 @@ export function DailyChallengeView() {
                   {!isLoggedIn && (
                     <p className="mt-3 text-center text-xs font-semibold text-zinc-500">
                       Grasz jako gość — seria zapisze się lokalnie.{" "}
-                      <Link href="/login" className="text-fuchsia-400">
+                      <Link href="/login" className="text-orange-400">
                         Zaloguj się
                       </Link>{" "}
                       po XP na koncie.
@@ -364,7 +364,7 @@ export function DailyChallengeView() {
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-800">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-cyan-400 to-violet-500 transition-[width] duration-300"
+                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-300"
                         style={{ width: `${progressPercent}%` }}
                       />
                     </div>
@@ -422,7 +422,7 @@ export function DailyChallengeView() {
                 >
                   {saving ? (
                     <div className="flex min-h-[200px] items-center justify-center">
-                      <Loader2 className="h-8 w-8 animate-spin text-cyan-400" />
+                      <Loader2 className="h-8 w-8 animate-spin text-orange-400" />
                     </div>
                   ) : (
                     <RewardScreen

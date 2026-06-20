@@ -26,7 +26,7 @@ export default function ExamSheetPage({ params }: PageProps) {
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
         <p className="text-xl font-black text-white">Brak arkusza</p>
-        <Link href="/baza-zadan" className="mt-4 text-cyan-400">
+        <Link href="/baza-zadan" className="mt-4 text-orange-400">
           ← Baza zadań
         </Link>
       </div>
@@ -78,7 +78,7 @@ export default function ExamSheetPage({ params }: PageProps) {
               setScore(0);
               setFinished(false);
             }}
-            className="rounded-2xl bg-gradient-to-r from-cyan-600 to-emerald-600 py-4 font-black text-white"
+            className="rounded-2xl bg-gradient-to-r from-orange-500 to-emerald-600 py-4 font-black text-white"
           >
             Powtórz arkusz
           </button>
@@ -105,21 +105,20 @@ export default function ExamSheetPage({ params }: PageProps) {
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
       <Link
         href="/baza-zadan"
-        className="text-sm font-semibold text-zinc-500 hover:text-cyan-400"
-      >
+        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
         ← Baza zadań
       </Link>
 
       <div className="mt-4 flex items-center justify-between gap-2">
         <h1 className="text-2xl font-black text-white">{sheet.title}</h1>
-        <span className="text-sm font-bold text-cyan-400">
+        <span className="text-sm font-bold text-orange-400">
           {currentIndex + 1}/{total}
         </span>
       </div>
 
       <div className="mt-3 h-2 overflow-hidden rounded-full bg-zinc-800">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 transition-all"
+          className="h-full rounded-full bg-gradient-to-r from-orange-500 to-emerald-500 transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -142,7 +141,7 @@ export default function ExamSheetPage({ params }: PageProps) {
               onClick={() => handlePick(index)}
               className={`rounded-2xl border px-4 py-3 text-left font-bold transition-colors ${
                 picked === null
-                  ? "border-white/10 bg-zinc-950 hover:border-cyan-500/40"
+                  ? "border-white/10 bg-zinc-950 hover:border-orange-500/40"
                   : index === task.correctIndex
                     ? "border-emerald-500/50 bg-emerald-500/20"
                     : index === picked
@@ -167,7 +166,7 @@ export default function ExamSheetPage({ params }: PageProps) {
             <button
               type="button"
               onClick={goNext}
-              className="mt-4 w-full rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-500 py-3 font-black text-white"
+              className="mt-4 w-full rounded-2xl bg-brand-gradient py-3 font-black text-white"
             >
               {currentIndex + 1 >= total ? "Zakończ arkusz" : "Następne zadanie"}
             </button>

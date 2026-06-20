@@ -46,7 +46,7 @@ export function PlayerAvatarUpload({
         type="button"
         disabled={uploading}
         onClick={() => inputRef.current?.click()}
-        className="group relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-violet-600 via-fuchsia-500 to-cyan-400 shadow-[0_0_40px_rgba(192,38,211,0.35)] ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32"
+        className="group relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)] ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32"
         aria-label="Zmień awatar"
       >
         {avatarUrl ? (

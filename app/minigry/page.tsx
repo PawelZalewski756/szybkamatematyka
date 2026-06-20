@@ -79,11 +79,11 @@ export default function MinigryPage() {
   const pathLabel = learningPathLabel(path);
 
   return (
-    <div className="flex w-full flex-1 flex-col py-8 sm:py-12">
+    <div className="page-container flex w-full flex-1 flex-col py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
           Minigry dla{" "}
-          <span className="bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="text-gradient-brand">
             {pathLabel}
           </span>
         </h1>
@@ -108,7 +108,7 @@ export default function MinigryPage() {
           />
           {!account?.isLoggedIn && (
             <p className="mt-2 text-sm text-zinc-500">
-              <Link href="/login" className="font-semibold text-fuchsia-400">
+              <Link href="/login" className="font-semibold text-orange-400">
                 Zaloguj się
               </Link>{" "}
               — progres w chmurze na każdym urządzeniu.
