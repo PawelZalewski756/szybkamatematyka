@@ -1,0 +1,58 @@
+name: CI
+
+# Pipeline jakości: lint + typecheck + build.
+# Uruchamiany na push (dowolna gałąź) oraz dla pull requestów do main.
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+# Anuluj starsze przebiegi dla tej samej gałęzi/PR, aby nie marnować runnerów.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint, typecheck & build
+    runs-on: ubuntu-latest
+
+    # ENV W CI — świadomie BEZ sekretów.
+    # Aplikacja czyta zmienne (Supabase/Stripe/Gemini) wyłącznie leniwie, wewnątrz
+    # funkcji, z bezpiecznymi strażnikami (np. isSupabaseConfigured / isStripeConfigured),
+    # więc żaden moduł nie rzuca wyjątku na etapie importu/buildu. Sprawdzono empirycznie:
+    # `next build` przechodzi czysto przy KOMPLETNYM braku zmiennych (brak .env*), a strony
+    # SSG (generateStaticParams) korzystają z lokalnych danych, nie z Supabase.
+    # Dlatego NIE ustawiamy tutaj żadnych zaślepek env — build jest deterministyczny bez nich.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Wersja Node spójna z lokalnym środowiskiem (v22) i polem "engines"
+          # w package.json. Node 22 to aktualne LTS i spełnia wymagania Next.js 16.
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # E2E (Playwright) — uruchamiaj lokalnie: npm run test:e2e

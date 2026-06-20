@@ -1,0 +1,189 @@
+{
+  "sessionId": "m23-przykladowa",
+  "nazwa": "Matura — przykładowa 2023 — poziom podstawowy",
+  "rok": 2023,
+  "miesiac": 3,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 6 100 + 6 100 + 6 100 + 6 100 + 6 100 + 6 100 jest równa A) 6 600 B) 6 101 C) 36 100 D) 36 600 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Potęgi",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia log 7 98 − log 7 2 jest równa A) 7 B) 2 C) 1 D) (−1) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Kombinatoryka",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych trzycyfrowych, w których zapisie dziesiętnym nie występuje cyfra 2, jest A) 900 B) 729 C) 648 D) 512 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wartość wyrażenia (3 + 4a) 2 − (3 − 4a) 2 jest równa A) 32a 2 B) 0 C) 48a D) 8a 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt – wybranie dwóch poprawnych odpowiedzi. 1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 𝑘𝑥 2 − 12𝑥 − 7𝑘 + 12 gdzie 𝑘 jest pewną liczbą rzeczywistą. Wiadomo, że liczba (−2) jest pierwiastkiem tego wielomianu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑘 jest równa A) 2 B) 4 C) 6 D) 8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-przykladowa/z07-1.png) ma w zbiorze liczb rzeczywistych A) dokładnie jedno rozwiązanie: 𝑥 = 2. B) dokładnie dwa rozwiązania: 𝑥 = 1,5, 𝑥 = 2. C) dokładnie trzy rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 2. D) dokładnie cztery rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 1,5, 𝑥 = 2. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Spośród rysunków A–D wybierz ten, na którym prawidłowo zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających nierówność: |x+1| ≤ 2 A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-1.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-2.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby całkowitej nieparzystej n liczba n 2 + 2023 jest podzielna przez 8.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Dana jest funkcja kwadratowa 𝑓, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji 𝑓, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja 𝑔 jest określona za pomocą funkcji 𝑓 następująco: 𝑔(𝑥) = 𝑓(𝑥−2). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji 𝑔 przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: 𝒇(𝒙) ≤ 𝟎 ......................... 1 pkt – rozwiązanie poprawne. 0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Dana jest funkcja liniowa 𝑓 określona wzorem 𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są liczbami rzeczywistymi. Wykres funkcji 𝑓 przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku obok. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynniki 𝑎 i 𝑏 we wzorze funkcji 𝑓 spełniają warunki A) 𝑎 > 0 i 𝑏 > 0. B) 𝑎 > 0 i 𝑏 C) 𝑎 0. D) 𝑎 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Firma przeprowadziła badania rynkowe dotyczące wpływu zmiany ceny 𝑃 swojego produktu na liczbę 𝑄 kupujących ten produkt. Z badań wynika, że każdorazowe zwiększenie ceny o 1 jednostkę powoduje spadek liczby kupujących o 3 jednostki. Ponadto przy cenie równej 5 jednostek liczba kupujących jest równa 12 jednostek. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja, która opisuje zależność liczby kupujących ten produkt od jego ceny, ma wzór A) 𝑄= −0,9𝑃 2 + 6,9 B) 𝑄= −3𝑃+27 C) 𝑃= −0,9𝑄 2 + 6,9 D) 𝑃= −3𝑄+27 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Czas 𝑇 półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę – po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa 𝑚 leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: 𝑚 0 – masa przyjętej dawki leku, 𝑇 – czas półtrwania leku, 𝑡 – czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę 𝑚 0 = 100 mg leku L. Czas półtrwania tego leku w organizmie jest równy 𝑇 = 4 doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy 𝑀 leku L w organizmie tego pacjenta od czasu 𝑡, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 𝟎,𝟏 mg.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Algebra",
+      "tresc": "Klient wpłacił do banku 20 000 zł na lokatę dwuletnią. Po każdym rocznym okresie oszczędzania bank dolicza odsetki w wysokości 3% od kwoty bieżącego kapitału znajdującego się na lokacie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Po 2 latach oszczędzania w tym banku kwota na lokacie (bez uwzględniania podatków) jest równa A) 20 000∙(1,12) 2 B) 20 000∙2⋅1,03 C) 20 000∙1,06 D) 20 000∙(1,03) 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = −3𝑛 + 5 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, (−1), (−4) są trzema kolejnymi początkowymi wyrazami ciągu (𝑎 𝑛 ). A) prawda B) fałsz (𝑎 𝑛 ) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Trygonometria",
+      "tresc": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 6, |𝐵𝐶| = 5, |𝐴𝐶| = 10. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta 𝐴𝐵𝐶 jest równy (−0,65). A) prawda B) fałsz Trójkąt 𝐴𝐵𝐶 jest rozwartokątny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Funkcje",
+      "tresc": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dany jest okrąg o środku 𝑆 = (2,−5 ) i promieniu 𝑟 = 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie tego okręgu ma postać A) (𝑥−2) 2 + (𝑦+5) 2 = 9 B) (𝑥+2) 2 + (𝑦−5) 2 = 3 C) (𝑥−2) 2 + (𝑦+5) 2 = 3 D) (𝑥+2) 2 + (𝑦−3) 2 = 9 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Odcinki 𝐴𝐷 i 𝐵𝐶 przecinają się w punkcie 𝑂. W trójkątach 𝐴𝐵𝑂 i 𝑂𝐷𝐶 zachodzą związki: |𝐴𝑂| = 5, |𝐵𝑂| = 3, |𝑂𝐶| = 10, |∡𝑂𝐴𝐵| = |∡𝑂𝐶𝐷| (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z18-1.png) Oblicz długość boku 𝑶𝑫 trójkąta 𝑶𝑫𝑪.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Funkcje",
+      "tresc": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dana jest prosta 𝑘 o równaniu 𝑦 = −3𝑥 + 1. Dokończ zdania. Wybierz odpowiedź spośród A–D oraz odpowiedź spośród E–H. Zadanie 19.1. Jedną z prostych równoległych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 3𝑥 + 2 B) 𝑦 = −3𝑥 + 2 C) 𝑦 = 1 &frasl; 3 𝑥 + 1 D) 𝑦 = − 1 &frasl; 3 𝑥 + 1 Zadanie 19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 1 &frasl; 3 𝑥 + 2 B) 𝑦 = − 1 &frasl; 3 𝑥 + 2 C) 𝑦 = 3𝑥 + 1 D) 𝑦 = −3𝑥 + 1 2 pkt – poprawne dokończenia dwóch zdań. 1 pkt – poprawne dokończenie jednego zdania. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest kwadrat 𝐴𝐵𝐶𝐷. Wierzchołki 𝐴 = (−2,1) i 𝐶 = (4,5) są końcami przekątnej tego kwadratu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej kwadratu 𝐴𝐵𝐶𝐷 jest równa A) 10 B) 2√ 13 C) 2√ 10 D) 8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Algebra",
+      "tresc": "Odcinek 𝐴𝐵 jest średnicą okręgu o środku w punkcie 𝑂 i promieniu 𝑟 = 8 (zobacz rysunek). Cięciwa 𝐴𝐶 ma długość 8√ 3 . ![Rysunek do zadania](/cke-matura/m23-przykladowa/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta 𝐵𝐴𝐶 jest równa A) 30° B) 45° C) 15° D) 60° 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt 𝛼 jest ostry oraz 4tg𝛼 = 3sin 2 𝛼 + 3cos 2 𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy A) 3 &frasl; 4 B) 4 &frasl; 3 C) 14 D) 4 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Geometria",
+      "tresc": "Dane są dwa trójkąty podobne 𝐴𝐵𝐶 i 𝐾𝐿𝑀 o polach równych – odpowiednio – 𝑃 oraz 2𝑃. Obwód trójkąta 𝐴𝐵𝐶 jest równy 𝑥. Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3. Obwód trójkąta KLM jest równy: A) √ 2 ⋅ x B) 2x ponieważ stosunek obwodów trójkątów podobnych jest równy A) 1. kwadratowi stosunku pól tych trójkątów. B) 2. pierwiastkowi kwadratowemu ze stosunku pól tych trójkątów. C) 3. stosunkowi pól tych trójkątów. 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Algebra",
+      "tresc": "Punkty 𝐴 oraz 𝐵 leżą na okręgu o środku 𝑂. Proste 𝑘 i 𝑙 są styczne do tego okręgu w punktach – odpowiednio – 𝐴 i 𝐵. Te proste przecinają się w punkcie 𝑆 i tworzą kąt o mierze 76° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z24-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta 𝑂𝐵𝐴 jest równa A) 52° B) 26° C) 14° D) 38° 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano w ten sposób prostokąt 𝐴𝐵𝐶𝐷, w którym bok 𝐵𝐶 odpowiada krawędzi rozcięcia (wysokości graniastosłupa). Przekątna 𝐴𝐶 tego prostokąta ma długość 16 i tworzy z bokiem 𝐵𝐶 kąt o mierze 30° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z25-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość krawędzi podstawy tego graniastosłupa jest równa A) 8 B) 8√ 3 C) 2√ 3 D) 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Geometria",
+      "tresc": "Dany jest ostrosłup prawidłowy trójkątny 𝐴𝐵𝐶𝑆 o podstawie 𝐴𝐵𝐶. Punkty 𝐷, 𝐸 i 𝐹 są środkami – odpowiednio – krawędzi bocznych 𝐴𝑆, 𝐵𝑆 i 𝐶𝑆 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Stosunek objętości ostrosłupa 𝐷𝐸𝐹𝑆 do objętości ostrosłupa 𝐴𝐵𝐶𝑆 jest równy A) 3∶4 B) 1∶4 C) 1∶8 D) 3∶8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Geometria",
+      "tresc": "Dany jest graniastosłup prawidłowy trójkątny 𝐴𝐵𝐶𝐷𝐸𝐹 (zobacz rysunek obok). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-1.png) Na którym z rysunków prawidłowo narysowano, oznaczono i podpisano kąt 𝜶 pomiędzy ścianą boczną 𝑨𝑪𝑭𝑫 i przekątną 𝑨𝑬 ściany bocznej 𝑨𝑩𝑬𝑫 tego graniastosłupa? Wybierz właściwą odpowiedź spośród podanych. A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "W pojemniku znajdują się losy loterii fantowej ponumerowane kolejnymi liczbami naturalnymi od 1000 do 9999. Każdy los, którego numer jest liczbą o sumie cyfr równej 3, jest wygrywający. Uczestnicy loterii losują z pojemnika po jednym losie. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że pierwszy los wyciągnięty z pojemnika był wygrywający. Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Funkcje",
+      "tresc": "Rozważamy wszystkie równoległoboki o obwodzie równym 200 i kącie ostrym o mierze 30°. Podaj wzór i dziedzinę funkcji opisującej zależność pola takiego równoległoboku od długości 𝒙 boku równoległoboku. Oblicz wymiary tego z rozważanych równoległoboków, który ma największe pole, i oblicz to największe pole.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Statystyka",
+      "tresc": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:43.008Z"
+}

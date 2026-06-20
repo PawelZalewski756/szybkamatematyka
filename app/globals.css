@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Wysokość paska nawigacji (mobile z drugim rzędem linków) */
+:root {
+  --nav-height-mobile: 9.5rem;
+  --nav-height-desktop: 4.5rem;
+}
+
+/* Bazowy, spójny z motywem focus-visible dla nawigacji klawiaturą.
+   Leży w warstwie `base`, więc komponenty z własnym focus:ring nadpisują go. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid rgba(34, 211, 238, 0.8);
+    outline-offset: 2px;
+  }
+}
+
+/* Uszanuj systemowe ustawienie ograniczenia ruchu: skracamy animacje/przejścia
+   niemal do zera (framer-motion obsługujemy dodatkowo przez MotionConfig,
+   a confetti przez `disableForReducedMotion`). Spinnery zostawiamy jako ruch
+   funkcjonalny, ale spowolniony. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-spin {
+    animation-duration: 1.4s !important;
+    animation-iteration-count: infinite !important;
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "sessionId": "m17-maj",
+  "nazwa": "Matura — maj 2017 — poziom podstawowy",
+  "rok": 2017,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Liczba 5 8 · 16 −2 jest równa. A) ( 5 &frasl; 2 ) 8 B) 5 &frasl; 2 C) 10 8 D) 10",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Liczba &#8731; 54 – &#8731; 2 jest równa A) &#8731; 52 B) 3 C) 2&#8731; 2 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Potęgi",
+      "tresc": "Liczba 2log 2 3 - 2log 2 5 jest równa. A) log 2 9 &frasl; 25 B) log 2 3 &frasl; 5 C) log 2 9 &frasl; 5 D) log 2 6 &frasl; 25",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Liczba osobników pewnego zagrożonego wyginięciem gatunku zwierząt wzrosła w stosunku do liczby tych zwierząt z 31 grudnia 2011 r. o 120% i obecnie jest równa 8910. Ile zwierząt liczyła populacja tego gatunku w ostatnim dniu 2011 roku? A) 4050 B) 1782 C) 7425 D) 7128",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Równość (x&#8730; 2 – 2) 2 = (2 + &#8730; 2 ) 2 jest A) prawdziwa dla x = –√ 2 B) prawdziwa dla x = √ 2 C) prawdziwa dla x = –1 D) fałszywa dla każdej liczby x",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Do zbioru rozwiązań nierówności (x 4 + 1)(2 − x) > 0 nie należy liczba A) –3 B) –1 C) 1 D) 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich rozwiązań nierówności 2 – 3x ≥ 4 . A) ![Rysunek do zadania](/cke-matura/m17-maj/z07-1.jpg) B) ![Rysunek do zadania](/cke-matura/m17-maj/z07-2.jpg) C) ![Rysunek do zadania](/cke-matura/m17-maj/z07-3.jpg) D) ![Rysunek do zadania](/cke-matura/m17-maj/z07-4.jpg)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Równanie x(x 2 – 4)(x 2 + 4) = 0 z niewiadomą x A) nie ma rozwiązań w zbiorze liczb rzeczywistych. B) ma dokładnie dwa rozwiązania w zbiorze liczb rzeczywistych. C) ma dokładnie trzy rozwiązania w zbiorze liczb rzeczywistych. D) ma dokładnie pięć rozwiązań w zbiorze liczb rzeczywistych.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Miejscem zerowym funkcji liniowej ƒ(x)=&#8730; 3 (x + 1) – 12 jest liczba A) √ 3 – 4 B) –2√ 3 + 1 C) 4√ 3 – 1 D) –√ 3 + 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej ƒ(x)= ax 2 +bx+c , której miejsca zerowe to: –3 i 1 . ![Rysunek do zadania](/cke-matura/m17-maj/z10-1.jpg) Współczynnik c we wzorze funkcji ƒ jest równy A) 1 B) 2 C) 3 D) 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono fragment wykresu funkcji wykładniczej ƒ określonej wzorem ƒ(x) = a x . Punkt A = (1,2) należy do tego wykresu funkcji. ![Rysunek do zadania](/cke-matura/m17-maj/z11-1.jpg) Podstawa a potęgi jest równa A) – ½ B) ½ C) – 2 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym (a n ), określonym dla n &ge; 1 , dane są: a 1 = 5 , a 2 = 11 . Wedy A) a 14 = 71 B) a 12 = 71 C) a 11 = 71 D) a 10 = 71",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest trzywyrazowy ciąg geometryczny (24, 6, a-1) . Stąd wynika, że A) a = 5 ⁄ 2 B) a = 2 ⁄ 5 C) a = 3 ⁄ 2 D) a = 2 ⁄ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Trygonometria",
+      "tresc": "Jeśli m = sin50°, to A) m = sin40° B) m = cos40° C) m = cos50° D) m = tg50°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Algebra",
+      "tresc": "Na okręgu o środku w punkcie O leży punkt C (zobacz rysunek). Odcinek AB jest średnicą tego okręgu. Zaznaczony na rysunku kąt środkowy α ma miarę ![Rysunek do zadania](/cke-matura/m17-maj/z15-1.jpg) A) 116° B) 114° C) 112° D) 110°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Algebra",
+      "tresc": "W trójkącie ABC punkt D leży na boku BC , a punkt E leży na boku AB . Odcinek DE jest równoległy do boku AC , a ponadto | BD | = 10, | BC | = 12 i | AC | = 24 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m17-maj/z16-1.jpg) Długość odcinka DE jest równa A) 22 B) 20 C) 12 D) 11",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Geometria",
+      "tresc": "Obwód trójkąta ABC, przedstawionego na rysunku, jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z17-1.jpg) A) (3 + √ 3 &frasl; 2 ) a B) (2 + √ 2 &frasl; 2 ) a C) (3 + √ 3 ) a D) (2 + √ 2 ) a",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Trygonometria",
+      "tresc": "Na rysunku przedstawiona jest prosta k, przechodząca przez punkt A = (2,–3) i przez początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox. ![Rysunek do zadania](/cke-matura/m17-maj/z18-1.jpg) Zatem A) tgα = – 2 &frasl; 3 B) tgα = – 3 &frasl; 2 C) tgα = 2 &frasl; 3 D) tgα = 3 &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Funkcje",
+      "tresc": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = (–2,4) . Prosta k jest określona równaniem y = – 1 &frasl; 4 x + 7 &frasl; 2 . Zatem prostą l opisuje równanie A) y = 1 &frasl; 4 x + 7 &frasl; 2 B) y = – 1 &frasl; 4 x – 7 &frasl; 2 C) y = 4x – 12 D) y = 4x + 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "Dany jest okrąg o środku S = (2,3) i promieniu r = 5 . Który z podanych punktów leży na tym okręgu? A) A = (–1,7) B) B = (2,–3) C) C = (3,2) D) D = (5,3)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Geometria",
+      "tresc": "Pole powierzchni całkowitej graniastosłupa prawidłowego czworokątnego, w którym wysokość jest 3 razy dłuższa od krawędzi podstawy, jest równe 140. Zatem krawędź podstawy tego graniastosłupa jest równa A) √ 10 B) 3√ 10 C) √ 42 D) 3√ 42",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Trygonometria",
+      "tresc": "Promień AS podstawy walca jest równy wysokości OS tego walca. Sinus kąta OAS (zobacz rysunek) jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z22-1.jpg) A) √ 3 &frasl; 2 B) √ 2 &frasl; 2 C) ½ D) 1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Algebra",
+      "tresc": "Dany jest stożek o wysokości 4 i średnicy podstawy 12. Objętość tego stożka jest równa A) 576π B) 192π C) 144π D) 48π",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna ośmiu liczb: 3, 5, 7, 9, x, 15, 17, 19 jest równa 11. Wtedy A) x=1 B) x=2 C) x=11 D) x=13",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od 1 do 24 losujemy jedną liczbę. Niech A oznacza zdarzenie, że wylosowana liczba będzie dzielnikiem liczby 24. Wtedy prawdopodobieństwo zdarzenia A jest równe A) 1 &frasl; 4 B) 1 &frasl; 3 C) 1 &frasl; 8 D) 1 &frasl; 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 8x 2 − 72x ≤ 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że liczba 4 2017 + 4 2018 + 4 2019 + 4 2020 jest podzielna przez 17.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz |&#8738;APC| = α i |&#8738;ABC| = β (zobacz rysunek). Wykaż, że α = 180° − 2β . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa ƒ jest określona dla wszystkich liczb rzeczywistych x wzorem ƒ(x) = ax 2 + bx + c . Największa wartość funkcji ƒ jest równa 6 oraz ![Rysunek do zadania](/cke-matura/m17-maj/z29-1.png) Oblicz wartość współczynnika a .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Geometria",
+      "tresc": "Przeciwprostokątna trójkąta prostokątnego ma długość 26 cm, a jedna z przyprostokątnych jest o 14 cm dłuższa od drugiej. Oblicz obwód tego trójkąta.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , dane są: wyraz a 1 = 8 i suma trzech początkowych wyrazów tego ciągu S 3 = 33 . Oblicz różnicę a 16 − a 13 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Funkcje",
+      "tresc": "Dane są punkty A = (−4,0) i M = (2,9) oraz prosta k o równaniu y = −2x + 10 . Wierzchołek B trójkąta ABC to punkt przecięcia prostej k z osią Ox układu współrzędnych, a wierzchołek C jest punktem przecięcia prostej k z prostą AM. Oblicz pole trójkąta ABC.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia, że wylosujemy liczbę, która jest równocześnie mniejsza od 40 i podzielna przez 3. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Geometria",
+      "tresc": "W ostrosłupie prawidłowym trójkątnym wysokość ściany bocznej prostopadła do krawędzi podstawy ostrosłupa jest równa ![Rysunek do zadania](/cke-matura/m17-maj/z34-1.png) a pole powierzchni bocznej tego ostrosłupa jest równe ![Rysunek do zadania](/cke-matura/m17-maj/z34-2.png) Oblicz objętość tego ostrosłupa. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:08.756Z"
+}

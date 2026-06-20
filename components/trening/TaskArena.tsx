@@ -1,0 +1,547 @@
+"use client";
+
+import { GamingBackground } from "@/components/gaming/GamingBackground";
+import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { TopicVictoryScreen } from "@/components/trening/TopicVictoryScreen";
+import {
+  awardArenaXp,
+  ensureUserProfile,
+  type Profile,
+} from "@/lib/supabase/profiles";
+import {
+  fetchSolvedTaskIds,
+  markTaskSolved,
+} from "@/lib/supabase/solved-tasks";
+import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
+import type { ExamType, Task } from "@/types/database";
+import { AnimatePresence, motion } from "framer-motion";
+import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  Loader2,
+  Shuffle,
+  Sparkles,
+  XCircle,
+} from "lucide-react";
+import Link from "next/link";
+import { useCallback, useEffect, useMemo, useState } from "react";
+
+type DifficultyFilter = "all" | 1 | 2 | 3;
+
+function shuffleTasks<T>(items: T[]): T[] {
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+const OPTION_LABELS = ["A", "B", "C", "D"] as const;
+const CORRECT_DELAY_MS = 1500;
+const WRONG_UNLOCK_MS = 700;
+
+type TaskWithOptions = Task & { options: string[] };
+
+type TaskArenaProps = {
+  examType: ExamType;
+  category: string;
+  topic: string;
+  topicLabel: string;
+  backHref: string;
+  /** Ukrywa nagłówek (powrót + etykieta) — np. w zakładce areny na stronie tematu. */
+  compactChrome?: boolean;
+};
+
+function fireConfetti() {
+  void import("canvas-confetti").then((mod) => {
+    const confetti = mod.default;
+    confetti({
+      particleCount: 80,
+      spread: 70,
+      origin: { y: 0.65 },
+      colors: ["#22d3ee", "#d946ef", "#a78bfa", "#34d399"],
+      disableForReducedMotion: true,
+    });
+  });
+}
+
+export function TaskArena({
+  examType,
+  category,
+  topic,
+  topicLabel,
+  backHref,
+  compactChrome = false,
+}: TaskArenaProps) {
+  const [loading, setLoading] = useState(true);
+  const [taskPool, setTaskPool] = useState<TaskWithOptions[]>([]);
+  const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>("all");
+  const [shuffleOrder, setShuffleOrder] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [index, setIndex] = useState(0);
+  const [attempts, setAttempts] = useState<Record<string, number>>({});
+  const [selected, setSelected] = useState<string | null>(null);
+  const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
+  const [xpFlash, setXpFlash] = useState<number | null>(null);
+  const [finished, setFinished] = useState(false);
+  const [awarding, setAwarding] = useState(false);
+  const [answerLocked, setAnswerLocked] = useState(false);
+  const [shakeKey, setShakeKey] = useState(0);
+  const [guestHint, setGuestHint] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [topicHasTasks, setTopicHasTasks] = useState(false);
+  const { recordResult } = useSolvedTasks();
+
+  const loadTasks = useCallback(async () => {
+    setLoading(true);
+    setLoadError(null);
+    setActionError(null);
+
+    try {
+      const rows = await fetchTasksByTopic(examType, category, topic);
+
+      let solvedIds = new Set<string>();
+      const { getSupabase } = await import("@/lib/supabase");
+      const supabase = getSupabase();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (user) {
+        setUserId(user.id);
+        solvedIds = await fetchSolvedTaskIds(user.id);
+        try {
+          const p = await ensureUserProfile(user);
+          if (p.nick) setProfile(p);
+        } catch (err) {
+          console.error("[szybka-matma] TaskArena profile:", err);
+        }
+      } else {
+        setUserId(null);
+        setProfile(null);
+      }
+
+      const unsolved = user
+        ? rows.filter((t) => !solvedIds.has(t.id))
+        : rows;
+
+      setTopicHasTasks(rows.length > 0);
+      setTaskPool(unsolved);
+      setDifficultyFilter("all");
+      setShuffleOrder(false);
+      setIndex(0);
+      setFinished(false);
+      setAttempts({});
+      setSelected(null);
+      setFeedback(null);
+      setAnswerLocked(false);
+    } catch {
+      setLoadError("Nie udało się załadować zadań.");
+      setTaskPool([]);
+    } finally {
+      setLoading(false);
+    }
+  }, [examType, category, topic]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    void loadTasks();
+  }, [loadTasks]);
+
+  const tasks = useMemo(() => {
+    let list =
+      difficultyFilter === "all"
+        ? taskPool
+        : taskPool.filter((t) => t.difficulty === difficultyFilter);
+    if (shuffleOrder && list.length > 1) {
+      list = shuffleTasks(list);
+    }
+    return list;
+  }, [taskPool, difficultyFilter, shuffleOrder]);
+
+  useEffect(() => {
+    // Reset the run when filters change (intentional state reset).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIndex(0);
+    setFinished(false);
+    setAttempts({});
+    setSelected(null);
+    setFeedback(null);
+    setAnswerLocked(false);
+  }, [difficultyFilter, shuffleOrder]);
+
+  const current = tasks[index];
+  const total = tasks.length;
+
+  const progressLabel = useMemo(() => {
+    if (finished) return "Ukończono";
+    if (!current) return "";
+    return `Zadanie ${index + 1} z ${total}`;
+  }, [finished, current, index, total]);
+
+  const advanceOrFinish = useCallback(() => {
+    if (index + 1 >= total) {
+      setFinished(true);
+    } else {
+      setIndex((i) => i + 1);
+      setSelected(null);
+      setFeedback(null);
+      setAnswerLocked(false);
+    }
+  }, [index, total]);
+
+  const handleAnswer = async (option: string) => {
+    if (!current || answerLocked || awarding || feedback === "correct") return;
+
+    setAnswerLocked(true);
+    setActionError(null);
+
+    const isCorrect = checkAnswerMatch(option, current.correct_answer);
+
+    setSelected(option);
+    setFeedback(isCorrect ? "correct" : "wrong");
+
+    // Zapisz wynik podejścia. Harmonogram powtórek (/powtorki) renderuje
+    // wyłącznie zadania z katalogu `lib/baza-zadan`, a arena czerpie zadania
+    // z bazy Supabase (UUID), więc flagujemy do powtórki tylko te, które
+    // katalog potrafi wyświetlić — inaczej kolejka powtórek dostałaby wpisy
+    // niemożliwe do odtworzenia. Spójne dla gościa i zalogowanego.
+    if (getTaskById(current.id)) {
+      recordResult(current.id, isCorrect);
+    }
+
+    if (!isCorrect) {
+      setShakeKey((k) => k + 1);
+      window.setTimeout(() => {
+        setSelected(null);
+        setFeedback(null);
+        setAnswerLocked(false);
+      }, WRONG_UNLOCK_MS);
+      return;
+    }
+
+    const taskAttempts = (attempts[current.id] ?? 0) + 1;
+    setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
+
+    let xpGain = 0;
+    let awarded = false;
+
+    if (userId) {
+      setAwarding(true);
+      try {
+        const firstSolve = await markTaskSolved(userId, current.id);
+        if (firstSolve && profile?.nick) {
+          const halfXp = taskAttempts > 1;
+          xpGain = halfXp
+            ? Math.max(1, Math.floor(current.xp_reward / 2))
+            : current.xp_reward;
+          const updated = await awardArenaXp(profile, xpGain);
+          setProfile(updated);
+          setXpFlash(xpGain);
+          setTimeout(() => setXpFlash(null), 1800);
+          awarded = true;
+        }
+      } catch (err) {
+        console.error("[szybka-matma] TaskArena award:", err);
+        setActionError("Nie udało się zapisać postępu. XP może nie zostać naliczone.");
+      } finally {
+        setAwarding(false);
+      }
+    } else {
+      setGuestHint(true);
+    }
+
+    if (awarded || !userId) {
+      fireConfetti();
+    }
+
+    window.setTimeout(() => {
+      advanceOrFinish();
+    }, CORRECT_DELAY_MS);
+  };
+
+  if (loading) {
+    return (
+      <div className="relative flex min-h-[50vh] flex-1 flex-col items-center justify-center">
+        {!compactChrome && <GamingBackground />}
+        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-cyan-400" />
+        <p className="relative z-10 mt-3 text-sm font-semibold text-zinc-400">
+          Ładowanie areny…
+        </p>
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
+        {!compactChrome && <GamingBackground />}
+        <p className="relative z-10 text-red-400">{loadError}</p>
+        {!compactChrome && (
+          <Link
+            href={backHref}
+            className="relative z-10 mt-4 text-sm font-bold text-cyan-400"
+          >
+            ← Wróć do treningu
+          </Link>
+        )}
+      </div>
+    );
+  }
+
+  if (!finished && tasks.length === 0) {
+    if (topicHasTasks && taskPool.length > 0) {
+      return (
+        <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
+          {!compactChrome && <GamingBackground />}
+          <p className="relative z-10 text-lg font-bold text-zinc-200">
+            Brak zadań dla wybranego filtra
+          </p>
+          <p className="relative z-10 mt-2 max-w-sm text-sm text-zinc-400">
+            Wybierz inną trudność lub „Wszystkie”, aby kontynuować sesję.
+          </p>
+        </div>
+      );
+    }
+    if (!topicHasTasks) {
+      return (
+        <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
+          {!compactChrome && <GamingBackground />}
+          <p className="relative z-10 text-lg font-bold text-zinc-200">
+            Brak zadań w tym temacie
+          </p>
+          <p className="relative z-10 mt-2 max-w-sm text-sm text-zinc-400">
+            Zadania pojawią się po imporcie do bazy. Sprawdź zakładkę Teoria lub
+            wróć później.
+          </p>
+          {!compactChrome && (
+            <Link
+              href={backHref}
+              className="relative z-10 mt-6 text-sm font-bold text-cyan-400"
+            >
+              ← Wróć do treningu
+            </Link>
+          )}
+        </div>
+      );
+    }
+    return <TopicVictoryScreen backHref={backHref} />;
+  }
+
+  if (finished) {
+    return <TopicVictoryScreen backHref={backHref} />;
+  }
+
+  const options =
+    current.options.length > 0
+      ? current.options
+      : [current.correct_answer];
+
+  const showHalfXpHint =
+    (attempts[current.id] ?? 0) >= 1 && feedback !== "correct";
+
+  return (
+    <div className="relative flex min-h-0 flex-1 flex-col">
+      {!compactChrome && <GamingBackground />}
+
+      <div
+        className={`relative z-10 flex flex-1 flex-col ${compactChrome ? "" : "py-6 sm:py-10"}`}
+      >
+        {compactChrome ? (
+          <div className="mb-4 flex justify-end">
+            <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+              {progressLabel}
+            </span>
+          </div>
+        ) : (
+          <>
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <Link
+                href={backHref}
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-cyan-400 transition hover:text-cyan-300"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Trening
+              </Link>
+              <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+                {progressLabel}
+              </span>
+            </div>
+
+            <p className="mb-4 text-center text-sm font-semibold text-fuchsia-300/90">
+              {topicLabel}
+            </p>
+          </>
+        )}
+
+        {actionError && (
+          <p
+            role="alert"
+            className="mb-3 rounded-xl border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-center text-xs font-semibold text-amber-200"
+          >
+            {actionError}
+          </p>
+        )}
+
+        {xpFlash !== null && (
+          <motion.p
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-2 text-center text-sm font-black text-emerald-400"
+          >
+            +{xpFlash} XP
+          </motion.p>
+        )}
+
+        {guestHint && !userId && (
+          <p className="mb-2 text-center text-xs font-semibold text-amber-300/90">
+            Zaloguj się, aby zapisać postęp i zdobywać XP.
+          </p>
+        )}
+
+        <div className="mb-4 flex flex-col gap-3">
+          <div
+            role="group"
+            aria-label="Filtr trudności"
+            className="flex flex-wrap justify-center gap-2"
+          >
+            {(
+              [
+                { id: "all" as const, label: "Wszystkie" },
+                { id: 1 as const, label: "Łatwe (1)" },
+                { id: 2 as const, label: "Średnie (2)" },
+                { id: 3 as const, label: "Trudne (3)" },
+              ] as const
+            ).map((opt) => {
+              const active = difficultyFilter === opt.id;
+              return (
+                <button
+                  key={String(opt.id)}
+                  type="button"
+                  onClick={() => setDifficultyFilter(opt.id)}
+                  className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                    active
+                      ? "border-cyan-400/50 bg-cyan-500/20 text-cyan-100"
+                      : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              );
+            })}
+          </div>
+          <label className="mx-auto flex cursor-pointer items-center gap-2 text-xs font-semibold text-zinc-400">
+            <input
+              type="checkbox"
+              checked={shuffleOrder}
+              onChange={(e) => setShuffleOrder(e.target.checked)}
+              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-cyan-500 focus:ring-cyan-500/40"
+            />
+            <Shuffle className="h-3.5 w-3.5" aria-hidden />
+            Losuj kolejność
+          </label>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current.id}
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -24 }}
+            transition={{ duration: 0.25 }}
+            className="mx-auto flex w-full max-w-2xl flex-1 flex-col"
+          >
+            <div className="rounded-3xl border border-white/15 bg-white/[0.07] p-6 shadow-[0_0_40px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8">
+              <div className="mb-3 flex justify-end">
+                <DifficultyBadge difficulty={current.difficulty} />
+              </div>
+              <p className="whitespace-pre-wrap text-base font-semibold leading-relaxed text-zinc-100 sm:text-lg">
+                {current.content}
+              </p>
+            </div>
+
+            <motion.div
+              key={shakeKey}
+              animate={
+                feedback === "wrong"
+                  ? { x: [0, -10, 10, -8, 8, -4, 4, 0] }
+                  : { x: 0 }
+              }
+              transition={{ duration: 0.45 }}
+              className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
+            >
+              {options.map((option, i) => {
+                const label = OPTION_LABELS[i] ?? String(i + 1);
+                const isSelected = selected === option;
+                const isCorrectOption = checkAnswerMatch(
+                  option,
+                  current.correct_answer,
+                );
+                const showCorrect =
+                  feedback === "correct" && isCorrectOption;
+                const showWrong = isSelected && feedback === "wrong";
+
+                let cardClass =
+                  "group relative flex min-h-[4.5rem] w-full flex-col items-stretch rounded-2xl border px-4 py-4 text-left transition-all duration-200 backdrop-blur-md ";
+
+                if (showCorrect) {
+                  cardClass +=
+                    "border-emerald-500/60 bg-emerald-500/25 text-emerald-50 shadow-[0_0_28px_rgba(52,211,153,0.35)] scale-[1.02]";
+                } else if (showWrong) {
+                  cardClass +=
+                    "border-red-500/60 bg-red-500/25 text-red-50 shadow-[0_0_28px_rgba(248,113,113,0.35)]";
+                } else {
+                  cardClass +=
+                    "border-white/20 bg-white/[0.06] text-zinc-100 hover:scale-[1.02] hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:shadow-[0_0_24px_rgba(34,211,238,0.2)] disabled:pointer-events-none disabled:opacity-50";
+                }
+
+                return (
+                  <button
+                    key={option}
+                    type="button"
+                    disabled={answerLocked || feedback === "correct" || awarding}
+                    onClick={() => void handleAnswer(option)}
+                    className={cardClass}
+                  >
+                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-black text-cyan-300 ring-1 ring-white/20 group-hover:bg-cyan-500/20 group-hover:text-cyan-100">
+                      {label}
+                    </span>
+                    <span className="text-sm font-bold leading-snug sm:text-base">
+                      {option}
+                    </span>
+                    {showCorrect && (
+                      <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-emerald-400" />
+                    )}
+                    {showWrong && (
+                      <XCircle className="absolute right-3 top-3 h-5 w-5 text-red-400" />
+                    )}
+                  </button>
+                );
+              })}
+            </motion.div>
+
+            {feedback === "wrong" && (
+              <p className="mt-4 text-center text-sm font-semibold text-red-400">
+                {showHalfXpHint
+                  ? "Spróbuj jeszcze raz — po poprawnej odpowiedzi dostaniesz połowę XP."
+                  : "Spróbuj jeszcze raz!"}
+              </p>
+            )}
+
+            {feedback === "correct" && (
+              <p className="mt-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
+                <Sparkles className="h-4 w-4" />
+                Dobra odpowiedź!
+              </p>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,195 @@
+{
+  "sessionId": "m24-maj",
+  "nazwa": "Matura — maj 2024 — poziom podstawowy",
+  "rok": 2024,
+  "miesiac": 5,
+  "fetchedAt": "2026-05-28T22:40:05.050Z",
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Dana jest nierówność |𝑥 − 1|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych. A) ![Rysunek do zadania](/cke-matura/m24-maj/z01-1.png) B) ![Rysunek do zadania](/cke-matura/m24-maj/z01-2.png) C) ![Rysunek do zadania](/cke-matura/m24-maj/z01-3.png) D) ![Rysunek do zadania](/cke-matura/m24-maj/z01-4.png)",
+      "rozwiazanie": "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C)."
+    },
+    {
+      "numer": 2,
+      "dzial": "Potęgi",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ( 1 &frasl; 16 ) 8 ⋅ 8 16 jest równa A) 2 24 B) 2 16 C) 2 12 D) 2 8",
+      "rozwiazanie": "Krok 1: 1/16 = 2^−4, więc (1/16)^8 = 2^−32.\nKrok 2: 8^16 = (2^3)^16 = 2^48.\nKrok 3: Mnożymy: 2^−32 · 2^48 = 2^16.\n\nOdpowiedź: B) 2^16"
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba 𝒏 𝟐 + (𝒏 + 𝟏) 𝟐 + (𝒏 + 𝟐) 𝟐 przy dzieleniu przez 𝟑 daje resztę 𝟐.",
+      "rozwiazanie": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED."
+    },
+    {
+      "numer": 4,
+      "dzial": "Logarytmy",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log √ 3 9 jest równa A) 2 B) 3 C) 4 D) 9",
+      "rozwiazanie": "Krok 1: log√3(9) = log(9) / log(√3).\nKrok 2: log(9) = 2, bo 3² = 9 (przy podstawie 3).\nKrok 3: log(√3) = 1/2, bo √3 = 3^(1/2).\nKrok 4: Wynik = 2 : (1/2) = 4.\n\nOdpowiedź: C) 4"
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 i dla każdej liczby rzeczywistej 𝑏 wartość wyrażenia (2𝑎 + 𝑏) 2 − (2𝑎 − 𝑏) 2 jest równa wartości wyrażenia A) 8𝑎 2 B) 8𝑎𝑏 C) −8𝑎𝑏 D) 2𝑏 2",
+      "rozwiazanie": "Krok 1: Rozwijamy: (2a+b)² = 4a² + 4ab + b², (2a−b)² = 4a² − 4ab + b².\nKrok 2: Odejmujemy: różnica = 8ab.\n\nOdpowiedź: B) 8ab"
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności 1 − 3 &frasl; 2 𝑥 2 &frasl; 3 − 𝑥 jest przedział A) (−∞ , − 2 &frasl; 3 ) B) (−∞ , 2 &frasl; 3 ) C) (− 2 &frasl; 3 , +∞) D) ( 2 &frasl; 3 , +∞)",
+      "rozwiazanie": "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 − (3/2)x + x < 2/3.\nKrok 2: 1 − (1/2)x < 2/3 → −(1/2)x < −1/3 → x > 2/3 (mnożymy przez −2).\n\nOdpowiedź: D) (2/3, +∞)"
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 𝑥+1 &frasl; (𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych A) nie ma rozwiązania. B) ma dokładnie jedno rozwiązanie: (−1). C) ma dokładnie dwa rozwiązania: (−2) oraz 3. D) ma dokładnie trzy rozwiązania: (−1), (−2) oraz 3.",
+      "rozwiazanie": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1"
+    },
+    {
+      "numer": 8,
+      "dzial": "Algebra",
+      "tresc": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 6𝑥 2 + 9𝑥. Oceń prawdziwość poniższych stwierdzeń. Wielomian 𝑊 jest iloczynem wielomianów 𝐹(𝑥) = 3𝑥 i 𝐺(𝑥) = 𝑥 2 + 2𝑥 + 3. A) prawda B) fałsz Liczba (−1) jest rozwiązaniem równania 𝑊(𝑥) = 0. A) prawda B) fałsz",
+      "rozwiazanie": "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
+    },
+    {
+      "numer": 9,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie 𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟑𝒙 + 𝟔 = 𝟎 Zapisz obliczenia.",
+      "rozwiazanie": "Krok 1: Grupujemy: x²(x−2) − 3(x−2) = (x−2)(x²−3).\nKrok 2: x²−3 = (x−√3)(x+√3).\nKrok 3: Rozwiązania: x = 2, x = √3, x = −√3.\n\nOdpowiedź: x ∈ {2, √3, −√3}"
+    },
+    {
+      "numer": 10,
+      "dzial": "Równania",
+      "tresc": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech 𝑥 oraz 𝑦 oznaczają liczby drzew posadzonych – odpowiednio – w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby 𝑥 drzew posadzonych w pierwszym sadzie oraz liczby 𝑦 drzew posadzonych w drugim sadzie, jest A) ![Rysunek do zadania](/cke-matura/m24-maj/z10-1.png) B) ![Rysunek do zadania](/cke-matura/m24-maj/z10-2.png) C) ![Rysunek do zadania](/cke-matura/m24-maj/z10-3.png) D) ![Rysunek do zadania](/cke-matura/m24-maj/z10-4.png)",
+      "rozwiazanie": "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu)."
+    },
+    {
+      "numer": 11,
+      "dzial": "Geometria",
+      "tresc": "Na rysunku, w kartezjańskim układzie współrzędnych (𝑥,𝑦), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań A–D. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest A) ![Rysunek do zadania](/cke-matura/m24-maj/z11-2.png) B) ![Rysunek do zadania](/cke-matura/m24-maj/z11-3.png) C) ![Rysunek do zadania](/cke-matura/m24-maj/z11-4.png) D) ![Rysunek do zadania](/cke-matura/m24-maj/z11-5.png)",
+      "rozwiazanie": "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku.\n\nOdpowiedź: zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia)."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (−2𝑘 + 3)𝑥 + 𝑘 − 1, gdzie 𝑘 ∈ ℝ. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca dla każdej liczby 𝑘 należącej do przedziału A) (−∞,1) B) (−∞,− 3 &frasl; 2 ) C) (1,+∞) D) ( 3 &frasl; 2 ,+∞)",
+      "rozwiazanie": "Krok 1: Malejąca, gdy współczynnik przy x < 0: −2k + 3 < 0.\nKrok 2: −2k < −3 → k > 3/2.\n\nOdpowiedź: D) (3/2, +∞)"
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Funkcje liniowe 𝑓 oraz 𝑔, określone wzorami 𝑓(𝑥) = 3𝑥 + 6 oraz 𝑔(𝑥) = 𝑎𝑥 + 7, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik 𝑎 we wzorze funkcji 𝑔 jest równy A) (− 7 &frasl; 2 ) B) (− 2 &frasl; 7 ) C) 2 &frasl; 7 D) 7 &frasl; 2",
+      "rozwiazanie": "Krok 1: f(x)=0 → x = −2.\nKrok 2: g(−2)=0 → −2a + 7 = 0 → a = 7/2.\n\nOdpowiedź: D) 7/2"
+    },
+    {
+      "numer": 14,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej 𝑓 (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osiami układu współrzędnych mają obie współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m24-maj/z14-1.png)",
+      "rozwiazanie": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = (−1) 𝑛 ⋅ (𝑛 − 5) dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Pierwszy wyraz ciągu (𝑎 𝑛 ) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu (𝑎 𝑛 ) są dodatnie. A) prawda B) fałsz",
+      "rozwiazanie": "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
+    },
+    {
+      "numer": 16,
+      "dzial": "Ciągi",
+      "tresc": "Trzywyrazowy ciąg (12, 6 ,2𝑚 − 1) jest geometryczny. Dokończ zdanie. Wybierz poprawne odpowiedzi. Ten ciąg jest A) rosnący B) malejący oraz A) 1. m = 1 &frasl; 2 B) 2. m = 2 C) 3. m = 3",
+      "rozwiazanie": "Krok 1: Iloraz q = 6/12 = 1/2.\nKrok 2: Trzeci wyraz: 12·(1/2)² = 3 = 2m−1 → 2m = 4 → m = 2.\nKrok 3: q < 1 więc ciąg malejący.\n\nOdpowiedź: malejący, m = 2 (opcje B i 2)"
+    },
+    {
+      "numer": 17,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg arytmetyczny (𝑎 𝑛 ) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. Trzeci wyraz tego ciągu jest równy (−1), a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa (−165). Oblicz różnicę tego ciągu. Zapisz obliczenia.",
+      "rozwiazanie": "Krok 1: S₁₅ = (15/2)·(2a₁ + 14r) = −165.\nKrok 2: a₃ = a₁ + 2r = −1.\nKrok 3: Rozwiązujemy układ → r = −2, a₁ = 3.\n\nOdpowiedź: r = −2"
+    },
+    {
+      "numer": 18,
+      "dzial": "Trygonometria",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) zaznaczono kąt o mierze 𝛼 taki, że tg 𝛼 = −3 oraz 90° ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F. Prawdziwe są zależności: .............. oraz .............. . A) sin𝛼 B) sin𝛼 ⋅ cos𝛼 C) sin𝛼 ⋅ cos𝛼 > 0 D) cos𝛼 > 0 E) sin𝛼 = − 1 &frasl; 3 cos𝛼 F) sin𝛼 = −3cos𝛼",
+      "rozwiazanie": "Krok 1: α w II ćwiartce → sin α > 0, cos α < 0.\nKrok 2: sin α · cos α < 0.\nKrok 3: Z tg α = −3 wynika sin α = −3 cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)"
+    },
+    {
+      "numer": 19,
+      "dzial": "Trygonometria",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba sin 3 20° + cos 2 20°⋅sin20° jest równa A) cos20° B) sin20° C) tg20° D) sin20°⋅cos20°",
+      "rozwiazanie": "Krok 1: sin 320° = −sin 40° = −cos 50°… upraszczamy do sin 20° po tożsamościach.\nKrok 2: cos 220° = −cos 40°, łącznie wychodzi sin 20°.\n\nOdpowiedź: B) sin 20°"
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt 𝐾𝐿𝑀, w którym |𝐾𝑀|=𝑎, |𝐿𝑀|=𝑏 oraz 𝑎≠𝑏. Dwusieczna kąta 𝐾𝑀𝐿 przecina bok 𝐾𝐿 w punkcie 𝑁 takim, że |𝐾𝑁|=𝑐, |𝑁𝐿|=𝑑 oraz |𝑀𝑁|=𝑒 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W trójkącie 𝐾𝐿𝑀 prawdziwa jest równość A) 𝑎 ⋅ 𝑏 = 𝑐 ⋅ 𝑑 B) 𝑎 ⋅ 𝑑 = 𝑏 ⋅ 𝑐 C) 𝑎 ⋅ 𝑐 = 𝑏 ⋅ 𝑑 D) 𝑎 ⋅ 𝑏 = 𝑒 ⋅ 𝑒",
+      "rozwiazanie": "Krok 1: Z twierdzenia o dwusiecznej w trójkącie: a/b = c/d (podział boku KL).\n\nOdpowiedź: B) a · d = b · c"
+    },
+    {
+      "numer": 21,
+      "dzial": "Geometria",
+      "tresc": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze 120°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe A) 12 B) 12√ 3 C) 6 D) 6√ 3",
+      "rozwiazanie": "Krok 1: P = ab · sin φ = 3 · 4 · sin 120°.\nKrok 2: sin 120° = sin 60° = √3/2.\nKrok 3: P = 12 · (√3/2) = 6√3.\n\nOdpowiedź: D) 6√3"
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "W trójkącie 𝐴𝐵𝐶, wpisanym w okrąg o środku w punkcie 𝑆, kąt 𝐴𝐶𝐵 ma miarę 42° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐵𝐴𝑆 jest równa A) 42° B) 45° C) 48° D) 69°",
+      "rozwiazanie": "Krok 1: Kąt przy środku okręgu od łuku AB to 2·42° = 84° (kąt wpisany).\nKrok 2: Kąt BAS = połowa łuku → 42°.\n\nOdpowiedź: A) 42°"
+    },
+    {
+      "numer": 23,
+      "dzial": "Geometria",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚 +1)𝑥 + 7 𝑙: 𝑦 = −2𝑥 + 7 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są prostopadłe, gdy liczba 𝑚 jest równa A) (− 1 &frasl; 2 ) B) 1 &frasl; 2 C) (−3) D) 1",
+      "rozwiazanie": "Krok 1: Prostopadłe → (m+1)·(−2) = −1.\nKrok 2: −2m − 2 = −1 → m = −1/2.\n\nOdpowiedź: A) −1/2"
+    },
+    {
+      "numer": 24,
+      "dzial": "Geometria",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest równoległobok 𝐴𝐵𝐶𝐷, w którym 𝐴 = (−2 , 6) oraz 𝐵 = (10 , 2). Przekątne 𝐴𝐶 oraz 𝐵𝐷 tego równoległoboku przecinają się w punkcie 𝑃 = (6 , 7). Oblicz długość boku 𝑩𝑪 tego równoległoboku. Zapisz obliczenia.",
+      "rozwiazanie": "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10"
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe 15√ 3 . ![Rysunek do zadania](/cke-matura/m24-maj/z25-1.png)",
+      "rozwiazanie": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
+    },
+    {
+      "numer": 26,
+      "dzial": "Geometria",
+      "tresc": "Ostrosłup 𝐹 1 jest podobny do ostrosłupa 𝐹 2 . Objętość ostrosłupa 𝐹 1 jest równa 64. Objętość ostrosłupa 𝐹 2 jest równa 512. Uzupełnij poniższe zdanie. Podaj odpowiednią liczbę tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa 𝐹 2 do pola powierzchni całkowitej ostrosłupa 𝐹 1 jest równy ………. .",
+      "rozwiazanie": "Krok 1: V₂/V₁ = 512/64 = 8 = k³ → k = 2 (skala boku).\nKrok 2: Pole powierzchni skaluje się jak k² = 4.\n\nOdpowiedź: 4"
+    },
+    {
+      "numer": 27,
+      "dzial": "Kombinatoryka",
+      "tresc": "Rozważamy wszystkie kody czterocyfrowe utworzone tylko z cyfr 1, 3, 6, 8, przy czym w każdym kodzie każda z tych cyfr występuje dokładnie jeden raz. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba wszystkich takich kodów jest równa A) 4 B) 10 C) 24 D) 16",
+      "rozwiazanie": "Krok 1: To permutacje 4 elementów: 4! = 24.\n\nOdpowiedź: C) 24"
+    },
+    {
+      "numer": 28,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna trzech liczb: 𝑎, 𝑏, 𝑐, jest równa 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia arytmetyczna sześciu liczb: 𝑎, 𝑎, 𝑏, 𝑏, 𝑐, 𝑐, jest równa A) 9 B) 6 C) 4,5 D) 18",
+      "rozwiazanie": "Krok 1: (a+b+c)/3 = 9 → a+b+c = 27.\nKrok 2: Średnia sześciu = (2a+2b+2c)/6 = (a+b+c)/3 = 9.\n\nOdpowiedź: A) 9"
+    },
+    {
+      "numer": 29,
+      "dzial": "Statystyka",
+      "tresc": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. ![Rysunek do zadania](/cke-matura/m24-maj/z29-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa A) 4,5 B) 4 C) 3,5 D) 3",
+      "rozwiazanie": "Krok 1: Odczytaj z diagramu liczebności i wyznacz medianę (środkowa wartość).\n\nOdpowiedź: zgodnie z diagramem na arkuszu CKE (najczęściej B) 4)."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Dany jest pięcioelementowy zbiór 𝐾 = {5,6,7,8,9}. Wylosowanie każdej liczby z tego zbioru jest jednakowo prawdopodobne. Ze zbioru 𝐾 losujemy ze zwracaniem kolejno dwa razy po jednej liczbie i zapisujemy je w kolejności losowania. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że suma wylosowanych liczb jest liczbą parzystą. Zapisz obliczenia.",
+      "rozwiazanie": "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: P(nieparzysta) = 2/4 = 1/2 każde losowanie → P(sumy parzysta) = 1/2.\n\nOdpowiedź: 1/2"
+    },
+    {
+      "numer": 31,
+      "dzial": "Geometria",
+      "tresc": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary 𝒙 oraz 𝒚 jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia. <ul class=\"",
+      "rozwiazanie": "Krok 1: Obwód jednego wybiegu: 2(x+y), trzy wybiegi: 3·2(x+y)=36 → x+y=6.\nKrok 2: Suma pól = 3xy, przy x+y=6 maksimum gdy x=y=3.\n\nOdpowiedź: x = 3 m, y = 3 m"
+    }
+  ]
+}

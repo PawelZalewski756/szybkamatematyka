@@ -1,0 +1,207 @@
+{
+  "sessionId": "m15-przykladowa",
+  "nazwa": "Matura — przykładowa 2015 — poziom podstawowy",
+  "rok": 2015,
+  "miesiac": 12,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Liczba 15 jest przybliżeniem z niedomiarem liczby x . Błąd bezwzględny tego przybliżenia jest równy 0,24. Liczba x to A) 14,76 B) 14,80 C) 15,20 D) 15,24",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Punkty E = (7,1) i F = (9,7 ) to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość A) 4√ 5 B) 10 C) 4√ 10 D) 20",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja wykładnicza określona wzorem &fnof;( x ) = 3 x przyjmuje wartość 6 dla argumentu A) x = 2 B) x = log 3 2 C) x = log 3 6 D) x = log 6 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Wyrażenie 16 – (3 x + 1) 2 jest równe A) (3 – 3 x ) ⋅ (5 + 3 x ) B) (15 – 3 x ) 2 C) (5 – 3 x ) ⋅ (5 + 3 x ) D) 15 – 9 x 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Wskaż równość prawdziwą. A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-1.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-2.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-3.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-1.png) jest przedział A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Statystyka",
+      "tresc": "W klasie jest cztery razy więcej chłopców niż dziewcząt. Ile procent wszystkich uczniów tej klasy stanowią dziewczęta? A) 4% B) 5% C) 20% D) 25%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Algebra",
+      "tresc": "Reszta z dzielenia liczby 55 przez 8 jest równa A) 4 B) 5 C) 6 D) 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja &fnof; przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: &fnof;(42), &fnof;(44), &fnof;(45), &fnof;(48) największa to A) &fnof;(42) B) &fnof;(44) C) &fnof;(45) D) &fnof;(48)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Geometria",
+      "tresc": "Rysunek przedstawia ostrosłup prawidłowy czworokątny ABCDS . ![Rysunek do zadania](/cke-matura/m15-przykladowa/z12-1.png) Kątem między krawędzią CS a płaszczyzną podstawy tego ostrosłupa jest kąt A) DCS B) ACS C) OSC D) SCB",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Wykresem funkcji kwadratowej &fnof; jest parabola o wierzchołku W = (5,7) . Wówczas prawdziwa jest równość A) &fnof;(1) = &fnof;(9) B) &fnof;(1) = &fnof;(11) C) &fnof;(1) = &fnof;(13) D) &fnof;(1) = &fnof;(15)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Algebra",
+      "tresc": "Jeżeli kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m15-przykladowa/z14-1.png) równa się A) – 1 B) – 1 &frasl; 3 C) 3 &frasl; 7 D) 84 &frasl; 25",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Równania",
+      "tresc": "Równanie (2 x – 1)⋅( x – 2) = (1 – 2 x )⋅( x + 2) ma dwa rozwiązania. Są to liczby A) –2 oraz 1 &frasl; 2 B) 0 oraz 1 &frasl; 2 C) 1 &frasl; 2 oraz 2 D) –2 oraz 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Równania",
+      "tresc": "Dane jest równanie 3 x + 4 y – 5 = 0 . Z którym z poniższych równań tworzy ono układ sprzeczny? A) 6 x + 8 y –10 = 0 B) 4 x – 3 y + 5 = 0 C) 9 x +12 y – 10 = 0 D) 5 x + 4 y – 3 = 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Trygonometria",
+      "tresc": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego &alpha; jest równy ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-1.png) A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Algebra",
+      "tresc": "Tworząca stożka ma długość l , a promień jego podstawy jest równy r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-1.png) Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Geometria",
+      "tresc": "Dane są dwa okręgi o promieniach 10 i 15. Mniejszy okrąg przechodzi przez środek większego okręgu. Odległość między środkami tych okręgów jest równa A) 2,5 B) 5 C) 10 D) 12,5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Algebra",
+      "tresc": "Każdy uczestnik spotkania dwunastoosobowej grupy przyjaciół uścisnął dłoń każdemu z pozostałych członków tej grupy. Liczba wszystkich uścisków dłoni była równa A) 66 B) 72 C) 132 D) 144",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Ciągi",
+      "tresc": "W dziewięciowyrazowym ciągu geometrycznym o wyrazach dodatnich pierwszy wyraz jest równy 3, a ostatni wyraz jest równy 12. Piąty wyraz tego ciągu jest równy A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-1.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-2.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-3.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( a n ) jest określony wzorem a n = ( n + 3)( n – 5) dla n ≥ 1 . Liczba ujemnych wyrazów tego ciągu jest równa A) 3 B) 4 C) 7 D) 9",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez i . Wtedy A) 2 p 4 = p 2 B) 2 p 6 = p 3 C) 2 p 3 = p 6 D) 2 p 2 = p 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem rozwiązań nierówności ax + 4 ≥ 0 z niewiadomą x jest przedział (–∞, 2&rang; . Wyznacz a .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m15-przykladowa/z25-1.png) dla x ≠ 1.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Geometria",
+      "tresc": "Kwadrat K 1 ma bok długości a . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , … takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Algebra",
+      "tresc": "W pierścieniu kołowym cięciwa zewnętrznego okręgu ma długość 10 i jest styczna do wewnętrznego okręgu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z27-1.png) Wykaż, że pole tego pierścienia można wyrazić wzorem, w którym nie występują promienie wyznaczających go okręgów.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Procenty",
+      "tresc": "Uzasadnij, że liczba 4 12 + 4 13 + 4 14 jest podzielna przez 42.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Geometria",
+      "tresc": "Na trójkącie o bokach długości √ 7 , √ 8 , √ 15 opisano okrąg. Oblicz promień tego okręgu.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Funkcje",
+      "tresc": "Proste l i k przecinają się w punkcie A = (0, 4) . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k – trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Ciągi",
+      "tresc": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała 10 minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Geometria",
+      "tresc": "Dane są wierzchołki trójkąta ABC : A = (2, 2) , B = (9, 5) i C = (3, 9) . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Geometria",
+      "tresc": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę – graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:21.603Z"
+}

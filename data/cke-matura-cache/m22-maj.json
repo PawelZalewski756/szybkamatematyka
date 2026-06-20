@@ -1,0 +1,219 @@
+{
+  "sessionId": "m22-maj",
+  "nazwa": "Matura — maj 2022 — poziom podstawowy",
+  "rok": 2022,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z01-1.png) jest równa A) 2 B) 1 C) 26 D) 14",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Dodatnie liczby x i y spełniają warunek 2x = 3y. Wynika stąd, że wartość wyrażenia ![Rysunek do zadania](/cke-matura/m22-maj/z02-1.png) jest równa A) 2 &frasl; 3 B) 13 &frasl; 6 C) 6 &frasl; 13 D) 3 &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Potęgi",
+      "tresc": "Liczba 4 log 4 2 + 2 log 4 8 jest równa A) 6 log 4 10 B) 16 C) 5 D) 6 log 4 16",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Geometria",
+      "tresc": "Cena działki po kolejnych dwóch obniżkach, za każdym razem o 10% w odniesieniu do ceny obowiązującej w danym momencie, jest równa 78 732 zł. Cena tej działki przed obiema obniżkami była, w zaokrągleniu do 1 zł, równa A) 98 732 zł B) 97 200 zł C) 95 266 zł D) 94 478 zł",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z05-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m22-maj/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m22-maj/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m22-maj/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m22-maj/z05-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m22-maj/z06-1.png) jest para liczb: x = x 0 , y = y 0 . Wtedy A) x 0 > 0 i y 0 > 0 B) x 0 > 0 i y 0 C) x 0 0 > 0 D) x 0 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m22-maj/z07-1.png) jest przedział A) (−∞, 0) B) (0, +∞) C) (−∞, 3 &frasl; 4 ) D) ( 3 &frasl; 4 ,+∞)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Iloczyn wszystkich rozwiązań równania 2x(x 2 − 9)(x + 1) = 0 jest równy A) (−3) B) 3 C) 0 D) 9",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono wykres funkcji &fnof;. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn ƒ(−3) ⋅ ƒ(0) ⋅ ƒ(4) jest równy A) (−12) B) (−8) C) 0 D) 16",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku 1. przedstawiono wykres funkcji &fnof; określonej na zbiorze 〈−4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji ƒ. Wykres funkcji g przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że A) g (x) = &fnof;(x) − 2 B) g (x) = &fnof;(x − 2) C) g (x) = &fnof;(x) + 2 D) g (x) = &fnof;(x + 2)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Miejscem zerowym funkcji liniowej ƒ określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba A) (−3) B) 9 &frasl; 2 C) 5 D) 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Wykresem funkcji kwadratowej &fnof;(x) = 3x 2 + bx + c jest parabola o wierzchołku w punkcie W = (−3, 2). Wzór tej funkcji w postaci kanonicznej to A) &fnof;(x) = 3(x − 3) 2 + 2 B) &fnof;(x) = 3(x + 3) 2 + 2 C) &fnof;(x) = (x − 3) 2 + 2 D) &fnof;(x) = (x + 3) 2 + 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z13-1.png) dla każdej liczby naturalnej n ≥ 1. Wtedy a 7 jest równy A) (−196) B) (−32) C) (−26) D) (−16)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym ( a n ), określonym dla każdej liczby naturalnej n ≥ 1, a 5 = −31 oraz a 10 = −66. Różnica tego ciągu jest równa A) (−7) B) (−19,4) C) 7 D) 19,4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Wszystkie wyrazy nieskończonego ciągu geometrycznego (a n ), określonego dla każdej liczby naturalnej n ≥ 1, są dodatnie i 9a 5 = 4a 3 . Wtedy iloraz tego ciągu jest równy A) 2 &frasl; 3 B) 3 &frasl; 2 C) 2 &frasl; 9 D) 9 &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Trygonometria",
+      "tresc": "Liczba cos 12° ⋅ sin 78° + sin 12° ⋅ cos 78° jest równa A) ½ B) √ 2 &frasl; 2 C) √ 3 &frasl; 2 D) 1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Trygonometria",
+      "tresc": "Punkty A, B, C leżą na okręgu o środku S. Punkt D jest punktem przecięcia cięciwy AC i średnicy okręgu poprowadzonej z punktu B. Miara kąta BSC jest równa α, a miara kąta ADB jest równa γ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z17-1.png) Wtedy kąt ABD ma miarę A) &alpha; &frasl; 2 + γ − 180° B) 180° − &alpha; &frasl; 2 − γ C) 180° − α − γ D) α + γ − 180°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Punkty A, B, P leżą na okręgu o środku S i promieniu 6. Czworokąt ASBP jest rombem, w którym kąt ostry PAS ma miarę 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z18-1.png) Pole zakreskowanej na rysunku figury jest równe A) 6π B) 9π C) 10π D) 12π",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Geometria",
+      "tresc": "Wysokość trójkąta równobocznego jest równa 6√ 3 . Pole tego trójkąta jest równe A) 3√ 3 B) 4√ 3 C) 27√ 3 D) 36√ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "Boki równoległoboku mają długości 6 i 10, a kąt rozwarty między tymi bokami ma miarę 120°. Pole tego równoległoboku jest równe A) 30√ 3 B) 30 C) 60√ 3 D) 60",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Funkcje",
+      "tresc": "Punkty A = (−2,6) oraz B = (3,b) leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy b jest równe A) 9 B) (−9) C) (−4) D) 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Równania",
+      "tresc": "Dane są cztery proste k,l,m,n o równaniach: k : y = −x + 1 l : y = 2 &frasl; 3 x + 1 m : y = − 3 &frasl; 2 x + 4 n : y = − 2 &frasl; 3 x – 1 Wśród tych prostych prostopadłe są A) proste k oraz l. B) proste k oraz n. C) proste l oraz m. D) proste m oraz n.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Funkcje",
+      "tresc": "Punkty K = (4,−10) i L = (b,2) są końcami odcinka KL. Pierwsza współrzędna środka odcinka KL jest równa (−12). Wynika stąd, że A) b = −28 B) b = −14 C) b = −24 D) b = −10",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Algebra",
+      "tresc": "Punkty A = (−4,4) i B = (4,0) są sąsiednimi wierzchołkami kwadratu ABCD. Przekątna tego kwadratu ma długość A) 4√ 10 B) 4√ 2 C) 4√ 5 D) 4√ 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Podstawą graniastosłupa prostego jest romb o przekątnych długości 7 cm i 10 cm. Wysokość tego graniastosłupa jest krótsza od dłuższej przekątnej rombu o 2 cm. Wtedy objętość graniastosłupa jest równa A) 560 cm 3 B) 280 cm 3 C) 280 &frasl; 3 cm 3 D) 560 &frasl; 3 cm 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Geometria",
+      "tresc": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe A) ![Rysunek do zadania](/cke-matura/m22-maj/z26-2.png) B) ![Rysunek do zadania](/cke-matura/m22-maj/z26-3.png) C) ![Rysunek do zadania](/cke-matura/m22-maj/z26-4.png) D) ![Rysunek do zadania](/cke-matura/m22-maj/z26-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Kombinatoryka",
+      "tresc": "Wszystkich różnych liczb naturalnych czterocyfrowych nieparzystych podzielnych przez 5 jest A) 9 ⋅ 8 ⋅ 7 ⋅ 2 B) 9 ⋅ 10 ⋅ 10 ⋅ 1 C) 9 ⋅ 10 ⋅ 10 ⋅ 2 D) 9 ⋅ 9 ⋅ 8 ⋅ 1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna zestawu sześciu liczb: 2x,4,6,8,11,13, jest równa 5. Wynika stąd, że A) x = −1 B) x = 7 C) x = −6 D) x = 6 Uwagi ogólne do zadań otwartych 1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki zadania. 2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną liczbę punktów. 3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może otrzymać co najwyżej x − 1) punktów (gdzie x jest maksymalną możliwą do uzyskania liczbą punktów za dane zadanie).",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność: 3x 2 − 2x − 9 ≥ 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym (a n ), określonym dla każdej liczby naturalnej n ≥ 1, a 1 = −1 i a 4 = 8. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby rzeczywistej a i każdej liczby rzeczywistej b takich, że b ≠ a, spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m22-maj/z31-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt α jest ostry i tg α = 2. Oblicz wartość wyrażenia sin 2 α.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt równoramienny ABC, w którym |AC| = |BC|. Dwusieczna kąta BAC przecina bok BC w takim punkcie D, że trójkąty ABC i BDA są podobne (zobacz rysunek). Oblicz miarę kąta BAC. ![Rysunek do zadania](/cke-matura/m22-maj/z33-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru dziewięcioelementowego M = {1,2,3,4,5,6,7,8,9} losujemy kolejno ze zwracaniem dwa razy po jednej liczbie. Zdarzenie A polega na wylosowaniu dwóch liczb ze zbioru M, których iloczyn jest równy 24. Oblicz prawdopodobieństwo zdarzenia A.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 35,
+      "dzial": "Funkcje",
+      "tresc": "Wykres funkcji kwadratowej &fnof; określonej wzorem &fnof;(x) = ax 2 + bx + c ma z prostą o równaniu y = 6 dokładnie jeden punkt wspólny. Punkty A = (−5,0) i B = (3,0) należą do wykresu funkcji &fnof;. Oblicz wartości współczynników a, b oraz c. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:46.005Z"
+}

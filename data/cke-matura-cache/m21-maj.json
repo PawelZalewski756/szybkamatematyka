@@ -1,0 +1,219 @@
+{
+  "sessionId": "m21-maj",
+  "nazwa": "Matura — maj 2021 — poziom podstawowy",
+  "rok": 2021,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Liczba 100 5 ⋅ (0,1) –6 jest równa A) 10 13 B) 10 16 C) 10 –1 D) 10 –30 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Liczba 78 stanowi 150% liczby c. Wtedy liczba c jest równa A) 60 B) 52 C) 48 D) 39",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Rozważamy przedziały liczbowe (−∞, 5) i ⟨−1, +∞). Ile jest wszystkich liczb całkowitych, które należą jednocześnie do obu rozważanych przedziałów? A) 6 B) 5 C) 4 D) 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Potęgi",
+      "tresc": "Suma 2 log √ 10 + log 10 3 jest równa A) 2 B) 3 C) 4 D) 5 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Różnica 0,(3) – 23 &frasl; 33 jest równa A) − 0,(39) B) – 39 &frasl; 100 C) − 0,36 D) – 4 &frasl; 11",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-maj/z06-1.png) jest przedział A) ⟨0, +∞) B) (−∞, 0⟩ C) (−∞, 5⟩ D) (−∞, 1 1 &frasl; 3 &rang;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Funkcje",
+      "tresc": "Na poniższym rysunku przedstawiono wykres funkcji &fnof; określonej w zbiorze ⟨−6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja g jest określona wzorem g (x) = &fnof;(x) − 2 dla x ∈ ⟨−6, 5⟩ . Wskaż zdanie prawdziwe. A) Liczba &fnof;(2) + g (2) jest równa (−2) . B) Zbiory wartości funkcji &fnof; i g są równe. C) Funkcje &fnof; i g mają te same miejsca zerowe. D) Punkt P = (0, −2) należy do wykresów funkcji &fnof; i g . pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Ciągi",
+      "tresc": "Na rysunku przedstawiono geometryczną interpretację jednego z niżej zapisanych układów równań. Wskaż ten układ, którego geometryczną interpretację przedstawiono na rysunku. ![Rysunek do zadania](/cke-matura/m21-maj/z08-1.gif) A) ![Rysunek do zadania](/cke-matura/m21-maj/z08-2.png) B) ![Rysunek do zadania](/cke-matura/m21-maj/z08-3.png) C) ![Rysunek do zadania](/cke-matura/m21-maj/z08-4.png) D) ![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png) pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach y = 3x − 5 oraz ![Rysunek do zadania](/cke-matura/m21-maj/z09-1.png) są równoległe, gdy A) m = 1 B) m = 3 C) m = 6 D) m = 9 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja ƒ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = √ 3 − 1 wartość funkcji ƒ jest równa A) ![Rysunek do zadania](/cke-matura/m21-maj/z10-2.png) B) –1 C) 1 D) ![Rysunek do zadania](/cke-matura/m21-maj/z10-3.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Do wykresu funkcji &fnof; określonej dla każdej liczby rzeczywistej x wzorem &fnof;(x) = 3 x − 2 należy punkt o współrzędnych A) (−1, −5) B) (0, −2) C) (0, −1) D) (2, 4) pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa &fnof; określona wzorem &fnof;(x) = −2(x + 1)(x − 3) jest malejąca w przedziale A) ⟨1, +∞) B) (−∞, 1⟩ C) (−∞, −8⟩ D) ⟨−8, +∞)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Ciągi",
+      "tresc": "Trzywyrazowy ciąg (15, 3x, 5 &frasl; 3 ) jest geometryczny i wszystkie jego wyrazy są dodatnie. Stąd wynika, że A) x = 3 &frasl; 5 B) x = 4 &frasl; 5 C) x = 1 D) x = 5 &frasl; 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg (b n ) jest określony wzorem b n = 3n 2 − 25n dla każdej liczby naturalnej n ≥ 1. Liczba niedodatnich wyrazów ciągu (b n ) jest równa A) 14 B) 13 C) 9 D) 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg arytmetyczny (a n ) jest określony dla każdej liczby naturalnej n ≥ 1. Trzeci i piąty wyraz ciągu spełniają warunek a 3 + a 5 = 58 . Wtedy czwarty wyraz tego ciągu jest równy A) 28 B) 29 C) 33 D) 40 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Trygonometria",
+      "tresc": "Dla każdego kąta ostrego α iloczyn ![Rysunek do zadania](/cke-matura/m21-maj/z16-1.png) jest równy A) sin α B) tg α C) cos α D) sin 2 α pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Algebra",
+      "tresc": "Prosta k jest styczna w punkcie A do okręgu o środku O . Punkt B leży na tym okręgu i miara kąta AOB jest równa 80°. Przez punkty O i B poprowadzono prostą, która przecina prostą k w punkcie C (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z17-1.gif) Miara kąta BAC jest równa A) 10° B) 30° C) 40° D) 50° pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Trygonometria",
+      "tresc": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg α = 2 &frasl; 5 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe A) 12 B) 37 &frasl; 3 C) 62 &frasl; 5 D) 64 &frasl; 5 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Geometria",
+      "tresc": "Pole pewnego trójkąta równobocznego jest równe ![Rysunek do zadania](/cke-matura/m21-maj/z19-1.png) Obwód tego trójkąta jest równy A) 4 B) 2 C) 4 &frasl; 3 D) 2 &frasl; 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach |AD| = 3 i |BD| = 12 (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png) A) √ 34 B) 13 &frasl; 4 C) 2√ 14 D) 3√ 45 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Algebra",
+      "tresc": "Punkty A, B, C i D leżą na okręgu o środku S. Miary kątów SBC, BCD, CDA są równe odpowiednio: |∡SBC| = 60° , |∡BCD| = 110° , |∡CDA| = 90° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z21-1.png) Wynika stąd, że miara α kąta DAS jest równa A) 25° B) 30° C) 35° D) 40°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "W równoległoboku ABCD, przedstawionym na rysunku, kąt α ma miarę 70°. ![Rysunek do zadania](/cke-matura/m21-maj/z22-1.png) Wtedy kąt β ma miarę A) 80° B) 70° C) 60° D) 50°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Algebra",
+      "tresc": "W każdym n–kącie wypukłym (n ≥ 3) liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest A) siedmiokąt. B) dziesięciokąt. C) dwunastokąt. D) piętnastokąt.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Geometria",
+      "tresc": "Pole figury F 1 złożonej z dwóch stycznych zewnętrznie kół o promieniach 1 i 3 jest równe polu figury F 2 złożonej z dwóch stycznych zewnętrznie kół o promieniach długości r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z24-1.png) ![Rysunek do zadania](/cke-matura/m21-maj/z24-2.png) Długość r promienia jest równa A) √ 3 B) 2 C) √ 5 D) 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Punkt A = (3, −5) jest wierzchołkiem kwadratu ABCD, a punkt M = (1, 3) jest punktem przecięcia się przekątnych tego kwadratu. Wynika stąd, że pole kwadratu ABCD jest równe A) 68 B) 136 C) 2√ 34 D) 8√ 34 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Z wierzchołków sześcianu ABCDEFGH losujemy jednocześnie dwa różne wierzchołki. Prawdopodobieństwo tego, że wierzchołki te będą końcami przekątnej sześcianu ABCDEFGH, jest równe A) 1 &frasl; 7 B) 4 &frasl; 7 C) 1 &frasl; 14 D) 3 &frasl; 7 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Kombinatoryka",
+      "tresc": "Wszystkich liczb naturalnych trzycyfrowych, większych od 700, w których każda cyfra należy do zbioru {1,2,3,7,8,9} i żadna cyfra się nie powtarza, jest A) 108 B) 60 C) 40 D) 299",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Statystyka",
+      "tresc": "Sześciowyrazowy ciąg liczbowy (1, 2, 2x, x + 2, 5, 6) jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że A) x = 1 B) x = 3 &frasl; 2 C) x = 2 D) x = 8 &frasl; 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność: x 2 − 5x ≤ 14",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdych trzech dodatnich liczb a, b i c takich, że a , spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m21-maj/z30-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa &fnof; przyjmuje wartość 2 dla argumentu 0, a ponadto &fnof;(4) − &fnof;(2) = 6 . Wyznacz wzór funkcji &fnof;.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-maj/z32-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Geometria",
+      "tresc": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC – odpowiednio – w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy 3 &frasl; 2 . Oblicz długość boku trójkąta AKL.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Gracz rzuca dwukrotnie symetryczną sześcienną kostką do gry i oblicza sumę liczb wyrzuconych oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że suma liczb wyrzuconych oczek jest równa 4 lub 5, lub 6.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 35,
+      "dzial": "Funkcje",
+      "tresc": "Punkty A = (−20, 12) i B = (7, 3) są wierzchołkami trójkąta równoramiennego ABC, w którym |AC| = |BC|. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:49.292Z"
+}

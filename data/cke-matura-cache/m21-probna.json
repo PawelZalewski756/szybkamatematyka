@@ -1,0 +1,219 @@
+{
+  "sessionId": "m21-probna",
+  "nazwa": "Matura — próbna 2021 — poziom podstawowy",
+  "rok": 2021,
+  "miesiac": 3,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Liczba (√ 6 − √ 2 ) 2 − 2√ 3 jest równa A) 8 – 6√ 3 B) 8 – 2√ 3 C) 4 – 2√ 3 D) 8 – 4√ 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Potęgi",
+      "tresc": "Liczba 2 log 5 4 − 3 log 5 1 &frasl; 2 jest równa A) –log 5 7 &frasl; 2 B) 7 log 5 2 C) –log 5 2 D) log 5 2 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Medyczna maseczka ochronna wielokrotnego użytku z wymiennymi filtrami wskutek podwyżki zdrożała o 40% i kosztuje obecnie 106,40 zł . Cena maseczki przed podwyżką była równa A) 63,84 zł B) 65,40 zł C) 76,00 zł D) 66,40 zł",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Dla każdej dodatniej liczby b wyrażenie ![Rysunek do zadania](/cke-matura/m21-probna/z04-1.png) jest równe A) b 2 B) b 0,25 C) b 8 &frasl; 3 D) b 4 &frasl; 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Para liczb x = 1 , y = –3 spełnia układ równań ![Rysunek do zadania](/cke-matura/m21-probna/z05-1.png) Wtedy a jest równe A) 2 B) –2 C) √ 2 D) –√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Iloczyn wszystkich rozwiązań równania 2( x − 4)( x 2 − 1) = 0 jest równy A) –8 B) –4 C) 4 D) 8 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-probna/z07-1.png) jest A) (−∞, 2 &frasl; 7 ) B) ( 2 &frasl; 7 ,+∞) C) (−∞, 3 &frasl; 8 ) D) ( 3 &frasl; 8 ,+∞)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa &fnof;( x ) = ( a − 1) x + 3 osiąga wartość najmniejszą równą 3. Wtedy A) a = –1 B) a = 0 C) a = 1 D) a = 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Na wykresie przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m21-probna/z09-1.png) Wskaż zdanie prawdziwe. A) Dziedziną funkcji &fnof; jest przedział (−4,5). B) Funkcja &fnof; ma dwa miejsca zerowe. C) Funkcja &fnof; dla argumentu 1 przyjmuje wartość (−1). D) Zbiorem wartości funkcji &fnof; jest przedział (−4,5⟩.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja ƒ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-probna/z10-1.png) dla każdej liczby rzeczywistej x . Wartość funkcji ƒ dla argumentu 1 jest równa A) 1 &frasl; 5 B) 1 &frasl; 3 C) 1 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( x , y , z ) jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy 64. Stąd wynika, że y jest równe A) 3 ⋅ 64 B) 64 &frasl; 3 C) 4 D) 3 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( a n ), określony dla każdej liczby naturalnej n ≥ 1, jest arytmetyczny. Różnica tego ciągu jest równa 5, a pierwszy wyraz tego ciągu jest równy (−3). Wtedy iloraz ![Rysunek do zadania](/cke-matura/m21-probna/z12-1.png) jest równy A) 5 &frasl; 3 B) 2 C) 6 D) 25 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Geometria",
+      "tresc": "Trójkąt ABC jest wpisany w okrąg o środku O . Miara kąta CAO jest równa 70° (zobacz rysunek). Wtedy miara kąta ABC jest równa ![Rysunek do zadania](/cke-matura/m21-probna/z13-1.png) A) 20° B) 25° C) 30° D) 35° pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "Ciągi ( a n ), ( b n ) oraz ( c n ) są określone dla każdej liczby naturalnej n ≥ 1 następująco: • a n = 6 n 2 − n 3 • b n = 2 n + 13 • c n = 2 n Wskaż zdanie prawdziwe. A) Ciąg ( a n ) jest arytmetyczny. B) Ciąg ( b n ) jest arytmetyczny. C) Ciąg ( c n ) jest arytmetyczny. D) Wśród ciągów ( a n ), ( b n ), ( c n ) nie ma ciągu arytmetycznego.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( a n ) jest określony wzorem a n = (−2) n ⋅ n + 1 dla każdej liczby naturalnej n ≥ 1 . Wtedy trzeci wyraz tego ciągu jest równy A) –24 B) –17 C) –32 D) –23",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "W romb o boku 2√ 3 i kącie 60° wpisano okrąg. Promień tego okręgu jest równy A) 3 B) 1 &frasl; 2 C) 3 &frasl; 4 D) 3 &frasl; 2 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Geometria",
+      "tresc": "Przez punkt przecięcia wysokości trójkąta równobocznego ABC poprowadzono prostą DE równoległą do podstawy AB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z17-1.png) Stosunek pola trójkąta ABC do pola trójkąta CDE jest równy A) 9 ∶ 4 B) 4 ∶ 1 C) 4 ∶ 9 D) 3 ∶ 2 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Algebra",
+      "tresc": "Końcami odcinka PR są punkty P = (4,7) i R = (−2,−3) . Odległość punktu T = (3,−1) od środka odcinka PR jest równa A) √ 3 B) √ 13 C) √ 17 D) 6√ 2 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt &alpha; jest ostry oraz sin &alpha; = 4 &frasl; 5 . Wtedy A) cos &alpha; = 1 &frasl; 5 B) cos &alpha; = – 1 &frasl; 5 C) cos &alpha; = – 3 &frasl; 5 D) cos &alpha; = 3 &frasl; 5 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Algebra",
+      "tresc": "Dane są punkty M = (6,0) , N = (6,8) oraz O = (0,0) . Tangens kąta ostrego MON jest równy A) 4 &frasl; 3 B) 6 &frasl; 10 C) 3 &frasl; 4 D) 8 &frasl; 10 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach y = 3 ax − 2 i y = 2 x + 3 a są prostopadłe. Wtedy a jest równe A) 2 &frasl; 3 B) – 1 &frasl; 6 C) 3 &frasl; 2 D) –5 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Równania",
+      "tresc": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz C = (3,5) . Wierzchołki A i B tego trapezu leżą na prostej o równaniu y = 5 x + 3 . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu A) y = 3 x + 5 B) y = – 1 &frasl; 5 x + 3 C) y = 5 x – 10 D) y = – 1 &frasl; 5 x + 28 &frasl; 5 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Algebra",
+      "tresc": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości równe odpowiednio a i b (przy czym a > b ). Miara kąta ostrego trapezu jest równa 30°. Wtedy wysokość tego trapezu jest równa A) ![Rysunek do zadania](/cke-matura/m21-probna/z23-1.png) B) ![Rysunek do zadania](/cke-matura/m21-probna/z23-2.png) C) ![Rysunek do zadania](/cke-matura/m21-probna/z23-3.png) D) ![Rysunek do zadania](/cke-matura/m21-probna/z23-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Algebra",
+      "tresc": "Przekątna sześcianu ma długość 5√ 3 . Wtedy objętość tego sześcianu jest równa A) 125 B) 75 C) 375√ 3 D) 125√ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Ostrosłupy prawidłowe trójkątne O 1 i O 2 mają takie same wysokości. Długość krawędzi podstawy ostrosłupa O 1 jest trzy razy dłuższa od długości krawędzi podstawy ostrosłupa O 2 . Stosunek objętości ostrosłupa O 1 do objętości ostrosłupa O 2 jest równy A) 3 ∶ 1 B) 1 ∶ 3 C) 9 ∶ 1 D) 1 ∶ 9 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Kombinatoryka",
+      "tresc": "Wszystkich liczb naturalnych trzycyfrowych parzystych, w których cyfra 7 występuje dokładnie jeden raz, jest A) 85 B) 90 C) 100 D) 150",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru liczb naturalnych dwucyfrowych losujemy jedną liczbę. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowana liczba jest podzielna przez 5, jest równe A) 2 &frasl; 5 B) 5 &frasl; 100 C) 5 &frasl; 90 D) 18 &frasl; 90",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Statystyka",
+      "tresc": "Liczba x jest dodatnia. Mediana zestawu czterech liczb: 1 + x , 1 + 2 x , 4 + 3 x , 1 , jest równa 10. Wtedy A) x = 6 B) x = 5,5 C) x = 2,5 D) x = 1 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność: 3 x ( x + 1) > x 2 + x + 24",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-probna/z30-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Algebra",
+      "tresc": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości a i b . Punkt O leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z31-1.png) Wykaż, że promień r tego okręgu jest równy ![Rysunek do zadania](/cke-matura/m21-probna/z31-2.png) .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt &alpha; jest ostry i sin &alpha; + cos &alpha; = 7 &frasl; 5 . Oblicz wartość wyrażenia 2 sin &alpha; cos &alpha; .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Geometria",
+      "tresc": "Dany jest czworokąt ABCD , w którym | BC | = | CD | =| AD | = 13 (zobacz rysunek). Przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD . Oblicz pole czworokąta ABCD . ![Rysunek do zadania](/cke-matura/m21-probna/z33-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Algebra",
+      "tresc": "Funkcja kwadratowa &fnof;( x ) = x 2 + bx + c nie ma miejsc zerowych. Wykaż, że 1 + c > b .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 35,
+      "dzial": "Ciągi",
+      "tresc": "Rosnący ciąg arytmetyczny ( a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy a 3 , a 5 , a 13 tworzą – w podanej kolejności – ciąg geometryczny. Wyznacz wzór na n -ty wyraz ciągu arytmetycznego ( a n ). <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:52.593Z"
+}

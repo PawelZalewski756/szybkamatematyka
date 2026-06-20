@@ -1,0 +1,213 @@
+{
+  "sessionId": "m18-maj",
+  "nazwa": "Matura — maj 2018 — poziom podstawowy",
+  "rok": 2018,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Potęgi",
+      "tresc": "Liczba 2log 3 6 − log 3 4 jest równa A) 4 B) 2 C) 2log 3 2 D) log 3 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m18-maj/z02-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m18-maj/z02-2.gif) B) ![Rysunek do zadania](/cke-matura/m18-maj/z02-3.gif) C) ![Rysunek do zadania](/cke-matura/m18-maj/z02-4.gif) D) ![Rysunek do zadania](/cke-matura/m18-maj/z02-5.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Dane są liczby a = 3,6·10 –12 oraz b = 2,4·10 –20 . Wtedy iloraz a &frasl; b jest równy A) 8,64·10 –32 B) 1,5·10 –8 C) 1,5·10 8 D) 8,64·10 32",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Cena roweru po obniżce o 15% była równa 850 zł. Przed obniżką ten rower kosztował A) 865,00 zł B) 850,15 zł C) 1000,00 zł D) 977,50 zł",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem wszystkich rozwiązań podanej nierówności ![Rysunek do zadania](/cke-matura/m18-maj/z05-1.png) jest przedział A) ![Rysunek do zadania](/cke-matura/m18-maj/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m18-maj/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m18-maj/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m18-maj/z05-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa jest określona wzorem ƒ(x)= –2(x+3)(x–5) . Liczby x 1 ,x 2 są różnymi miejscami zerowymi funkcji ƒ. Zatem A) x 1 +x 2 = –8 B) x 1 +x 2 = –2 C) x 1 +x 2 = 2 D) x 1 +x 2 = 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Równanie ![Rysunek do zadania](/cke-matura/m18-maj/z07-1.png) A) ma trzy rozwiązania: x = − 2 , x = 0 , x = 2 B) ma dwa rozwiązania: x = 0 , x = − 2 C) ma dwa rozwiązania: x = − 2 , x = 2 D) ma jedno rozwiązanie: x = 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa ƒ określona jest wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z08-1.png) , dla wszystkich liczb rzeczywistych x. Wskaż zdanie prawdziwe. A) Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, 1 &frasl; 3 ) B) Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, -1) C) Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, 1 &frasl; 3 ) D) Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Wykresem funkcji kwadratowej ƒ(x) = x 2 – 6x – 3 jest parabola, której wierzchołkiem jest punkt o współrzędnych A) (-6,-3) B) (-6,69) C) (3,-12) D) (6,-3)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Liczba 1 jest miejscem zerowym funkcji liniowej ƒ(x) = ax + b , a punkt M = (3,–2) należy do wykresu tej funkcji. Współczynnik a we wzorze tej funkcji jest równy A) 1 B) 3 &frasl; 2 C) – 3 &frasl; 2 D) –1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg ( a n ) określony wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z11-1.png) dla n ≥ 1 . Ciąg ten jest A) arytmetyczny i jego różnica jest równa r = – 1 &frasl; 3 B) arytmetyczny i jego różnica jest równa r = –2 C) geometryczny i jego iloraz jest równy q = – 1 &frasl; 3 D) geometryczny i jego iloraz jest równy q = 5 &frasl; 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Ciągi",
+      "tresc": "Dla ciągu arytmetycznego (a n ), określonego dla n ≥ 1 , jest spełniony warunek a 4 + a 5 + a 6 = 12 . Wtedy A) a 5 = 4 B) a 5 = 3 C) a 5 = 6 D) a 5 = 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg geometryczny (a n ), określony dla n ≥ 1 , w którym a 1 = √ 2 , a 2 = 2√ 2 , a 3 = 4√ 2 . Wzór na n-ty wyraz tego ciągu ma postać A) ![Rysunek do zadania](/cke-matura/m18-maj/z13-1.png) B) ![Rysunek do zadania](/cke-matura/m18-maj/z13-2.png) C) ![Rysunek do zadania](/cke-matura/m18-maj/z13-3.png) D) ![Rysunek do zadania](/cke-matura/m18-maj/z13-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Geometria",
+      "tresc": "Przyprostokątna LM trójkąta prostokątnego KLM ma długość 3, a przeciwprostokątna KL ma długość 8 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z14-1.gif) Wtedy miara α kąta ostrego LKM tego trójkąta spełnia warunek A) 27° B) 24° C) 21° D) 18°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt o bokach długości: 2&#8730; 5 , 3&#8730; 5 , 4&#8730; 5 . Trójkątem podobnym do tego trójkąta jest trójkąt, którego boki mają długości A) 10, 15, 20 B) 20, 45, 80 C) √ 2 , √ 3 , √ 4 D) √ 5 , 2√ 5 , 3√ 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "Dany jest okrąg o środku S. Punkty K, L i M leżą na tym okręgu. Na łuku KL tego okręgu są oparte kąty KSL i KML (zobacz rysunek), których miary α i β spełniają warunek α + β = 111° . Wynika stąd, że ![Rysunek do zadania](/cke-matura/m18-maj/z16-1.gif) A) α=74° B) α=76° C) α=70° D) α=72°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Trygonometria",
+      "tresc": "Dany jest trapez prostokątny KLMN, którego podstawy mają długości |KL| = a , |MN| = b , a > b . Kąt KLM ma miarę 60° . Długość ramienia LM tego trapezu jest równa ![Rysunek do zadania](/cke-matura/m18-maj/z17-1.gif) A) a − b B) 2(a − b) C) a + 1 &frasl; 2 b D) a+b &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Punkt K = (2,2) jest wierzchołkiem trójkąta równoramiennego KLM, w którym |KM| = |LM| . Odcinek MN jest wysokością trójkąta i N = (4,3) . Zatem A) L = (5,3) B) L = (6,4) C) L = (3,5) D) L = (4,6)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach y = (m + 2)x + 3 oraz y = (2m – 1)x – 3 są równoległe, gdy A) m=2 B) m=3 C) m=0 D) m=1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "Podstawą ostrosłupa jest kwadrat KLMN o boku długości 4. Wysokością tego ostrosłupa jest krawędź NS, a jej długość też jest równa 4 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z20-1.gif) Kąt α, jaki tworzą krawędzie KS i MS, spełnia warunek A) α=45° B) 45° C) α>60° D) α=60°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Geometria",
+      "tresc": "Podstawą graniastosłupa prostego jest prostokąt o bokach długości 3 i 4. Kąt α , jaki przekątna tego graniastosłupa tworzy z jego podstawą, jest równy 45° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z21-1.gif) Wysokość graniastosłupa jest równa A) 5 B) 3√ 2 C) 5√ 2 D) 5√ 3 &frasl; 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Algebra",
+      "tresc": "Na rysunku przedstawiono bryłę zbudowaną z walca i półkuli. Wysokość walca jest równa r i jest taka sama jak promień półkuli oraz taka sama jak promień podstawy walca. ![Rysunek do zadania](/cke-matura/m18-maj/z22-1.gif) Objętość tej bryły jest równa A) 5 &frasl; 3 πr 3 B) 4 &frasl; 3 πr 3 C) 2 &frasl; 3 πr 3 D) 1 &frasl; 3 πr 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Algebra",
+      "tresc": "W zestawie ![Rysunek do zadania](/cke-matura/m18-maj/z23-1.png) jest 2 m liczb ( m ≥ 1) , w tym m liczb 2 i m liczb 4. Odchylenie standardowe tego zestawu liczb jest równe A) 2 B) 1 C) 1 &frasl; √ 2 D) √ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Kombinatoryka",
+      "tresc": "Ile jest wszystkich liczb naturalnych czterocyfrowych mniejszych od 2018 i podzielnych przez 5? A) 402 B) 403 C) 203 D) 204",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "W pudełku jest 50 kuponów, wśród których jest 15 kuponów przegrywających, a pozostałe kupony są wygrywające. Z tego pudełka w sposób losowy wyciągamy jeden kupon. Prawdopodobieństwo zdarzenia polegającego na tym, że wyciągniemy kupon wygrywający, jest równe A) 15 &frasl; 35 B) 1 &frasl; 50 C) 15 &frasl; 50 D) 35 &frasl; 50",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 2x 2 − 3x > 5 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie (x 3 + 125)(x 2 − 64) = 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Równania",
+      "tresc": "Udowodnij, że dla dowolnych liczb dodatnich a, b prawdziwa jest nierówność ![Rysunek do zadania](/cke-matura/m18-maj/z28-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Procenty",
+      "tresc": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od √ 2 –1.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Funkcje",
+      "tresc": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem ƒ(x)=a x (gdzie a>0 i a≠1), należy punkt P=(2,9) . Oblicz a i zapisz zbiór wartości funkcji g , określonej wzorem g (x)=ƒ(x)−2 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Ciągi",
+      "tresc": "Dwunasty wyraz ciągu arytmetycznego (a n ), określonego dla n≥1, jest równy 30, a suma jego dwunastu początkowych wyrazów jest równa 162. Oblicz pierwszy wyraz tego ciągu.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Funkcje",
+      "tresc": "W układzie współrzędnych punkty A=(4,3) i B=(10,5) są wierzchołkami trójkąta ABC. Wierzchołek C leży na prostej o równaniu y = 2x + 3 . Oblicz współrzędne punktu C, dla którego kąt ABC jest prosty.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Dane są dwa zbiory: A = {100, 200, 300, 400, 500, 600, 700} i B = {10,11, 12, 13,14,15, 16}. Z każdego z nich losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie podzielna przez 3. Obliczone prawdopodobieństwo zapisz w postaci nieskracalnego ułamka zwykłego.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Geometria",
+      "tresc": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe 45√ 3 . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif) <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:05.469Z"
+}

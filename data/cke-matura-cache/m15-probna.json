@@ -1,0 +1,207 @@
+{
+  "sessionId": "m15-probna",
+  "nazwa": "Matura — próbna 2015 — poziom podstawowy",
+  "rok": 2015,
+  "miesiac": 12,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Statystyka",
+      "tresc": "Liczba 0,6 jest jednym z przybliżeń liczby 5 &frasl; 8 . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy A) 0,025% B) 2,5% C) 0,04% D) 4%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Geometria",
+      "tresc": "Dany jest okrąg o środku S = (–6, –8) i promieniu 2014. Obrazem tego okręgu w symetrii osiowej względem osi Oy jest okrąg o środku w punkcie S 1 . Odległość między punktami S i S 1 jest równa A) 12 B) 16 C) 2014 D) 4028",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Równania",
+      "tresc": "Rozwiązaniami równania ( x 3 – 8)( x – 5)(2 x + 1) = 0 są liczby A) – 8; – 5; 1 B) – 1; 5; 8 C) – 1 ⁄ 2 ; 2; 5 D) – 1 ⁄ 2 ; 5; 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Cena towaru została podwyższona o 30%, a po pewnym czasie nową, wyższą cenę ponownie podwyższono, tym razem o 10%. W rezultacie obu podwyżek wyjściowa cena towaru zwiększyła się o A) 15% B) 20% C) 40% D) 43%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Funkcje",
+      "tresc": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami &fnof;( x ) = – 5 x + 1 oraz g ( x ) = 5 x . Liczba punktów wspólnych wykresów tych funkcji jest równa A) 3 B) 2 C) 1 D) 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Wyrażenie (3 x + 1 + y ) 2 jest równe A) 3 x 2 + y 2 + 1 B) 9 x 2 + 6 x + y 2 + 1 C) 3 x 2 + y 2 + 6 xy + 6 x + 1 D) 9 x 2 + y 2 + 6 xy + 6 x + 2 y + 1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Połowa sumy 4 28 + 4 28 + 4 28 + 4 28 jest równa A) 2 30 B) 2 57 C) 2 63 D) 2 112",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Równania y = – 3 &frasl; 4 x + 5 &frasl; 4 oraz y = – 4 &frasl; 3 opisują dwie proste A) przecinające się pod kątem o mierze 90°. B) pokrywające się. C) przecinające się pod kątem różnym od 90°. D) równoległe i różne.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Algebra",
+      "tresc": "Na płaszczyźnie dane są punkty: ![Rysunek do zadania](/cke-matura/m15-probna/z09-1.png) Kąt BAC jest równy A) 30° B) 45° C) 60° D) 75°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja &fnof;, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji &fnof; zawiera dokładnie A) 5 elementów B) 6 elementów C) 9 elementów D) 10 elementów",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Ciągi",
+      "tresc": "Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o A) 14 osób więcej B) 17 osób więcej C) 25 osób więcej D) 39 osób więcej",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Geometria",
+      "tresc": "Z sześcianu ABCDEFGH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu? A) 2 razy B) 3 razy C) 4 razy D) 5 razy",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej &fnof;. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja &fnof; może być opisana wzorem A) ƒ( x ) = ( x – 2) 2 + 4 B) ƒ( x ) = ( x + 2) 2 + 4 C) ƒ( x ) = – ( x – 2) 2 + 4 D) ƒ( x ) = – ( x + 2) 2 + 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Geometria",
+      "tresc": "Punkty ![Rysunek do zadania](/cke-matura/m15-probna/z14-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-2.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-3.png) są kolejnymi wierzchołkami równoległoboku ABCD . Przekątne tego równoległoboku przecinają się w punkcie A) ![Rysunek do zadania](/cke-matura/m15-probna/z14-4.png) B) ![Rysunek do zadania](/cke-matura/m15-probna/z14-5.png) C) ![Rysunek do zadania](/cke-matura/m15-probna/z14-6.png) D) ![Rysunek do zadania](/cke-matura/m15-probna/z14-7.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Trygonometria",
+      "tresc": "Liczba sin 150° jest równa liczbie A) cos 60° B) cos 120° C) tg 120° D) tg 60°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości 1 m , a bok każdego z następnych trójkątów jest o 10 cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości 5,9 m . Ile trójkątów przedstawia mural? A) 49 B) 50 C) 59 D) 60",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,5°. Pole tego trójkąta jest równe A) 100 √ 3 B) 100 √ 2 C) 200 √ 3 D) 200 √ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi a jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi b . Ile razy objętość ostrosłupa o krawędzi a jest większa od objętości ostrosłupa o krawędzi b ? A) √ 2 B) 2 C) 2√ 2 D) 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Algebra",
+      "tresc": "Na okręgu o środku S leżą punkty A , B , C i D . Odcinek AB jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą AC jest równy 21° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z19-1.png) Kąt α między cięciwami AD i CD jest równy A) 21° B) 42° C) 48° D) 69°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna zestawu danych: 3, 8, 3, 11, 3, 10, 3, x jest równa 6. Mediana tego zestawu jest równa A) 5 B) 6 C) 7 D) 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg geometryczny ( a n ), w którym a 1 = – √ 2 , a 2 = 2, a 3 = – 2√ 2 . Dziesiąty wyraz tego ciągu, czyli a 10 , jest równy A) 32 B) – 32 C) 16√ 2 D) – 16√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m15-probna/z22-1.png) dla n ≥ 1. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa A) 7 B) 6 C) 5 D) 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia i oczek w i -tym rzucie. Wtedy A) p 6 = 1 B) p 6 = 1 ⁄ 6 C) p 3 = 0 D) p 3 = 1 ⁄ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Algebra",
+      "tresc": "Wskaż liczbę, która spełnia równanie 4 x = 9 . A) log 9 – log 4 B) log2 ⁄ log3 C) 2log 9 2 D) 2log 4 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność: – x 2 – 4 x + 21 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Uzasadnij, że żadna liczba całkowita nie jest rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m15-probna/z26-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Algebra",
+      "tresc": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem y = ( 1 &frasl; 2 ) x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Uzasadnij, że jeżeli liczba całkowita nie dzieli się przez 3, to jej kwadrat przy dzieleniu przez 3 daje resztę 1.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Algebra",
+      "tresc": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 km / h , a na trasie z B do C – 60 km / h . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Zakupiono 16 biletów do teatru, w tym 10 biletów na miejsca od 1. do 10. w pierwszym rzędzie i 6 biletów na miejsca od 11. do 16. w szesnastym rzędzie. Jakie jest prawdopodobieństwo zdarzenia polegającego na tym, że 2 wylosowane bilety, spośród szesnastu, będą biletami na sąsiadujące miejsca?",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Geometria",
+      "tresc": "W trapezie ABCD ( AB ∥ CD ) przekątne AC i BD przecinają się w punkcie O takim, że | AO |:| OC | = 5:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Funkcje",
+      "tresc": "Punkty A = (3,3) i B = (9,1) są wierzchołkami trójkąta ABC , a punkt M = (1,6) jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Geometria",
+      "tresc": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy o 22. Oblicz pole powierzchni całkowitej i objętość tego stożka. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:18.454Z"
+}

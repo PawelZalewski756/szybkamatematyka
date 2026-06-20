@@ -1,0 +1,213 @@
+{
+  "sessionId": "m20-probna",
+  "nazwa": "Matura — próbna 2020 — poziom podstawowy",
+  "rok": 2020,
+  "miesiac": 4,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Niech a = −2 , b = 3. Wartość wyrażenia a b − b a jest równa A) 73 ⁄ 9 B) 71 &frasl; 9 C) − 73 &frasl; 9 D) − 71 &frasl; 9",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Liczba 9 9 ∙ 81 2 jest równa A) 81 4 B) 81 C) 9 13 D) 9 36",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Potęgi",
+      "tresc": "Wartość wyrażenia log 4 8 + 5log 4 2 jest równa A) 2 B) 4 C) 2 + log 4 5 D) 1 + log 4 10",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Geometria",
+      "tresc": "Dane są dwa koła. Promień pierwszego koła jest większy od promienia drugiego koła o 30%. Wynika stąd, że pole pierwszego koła jest większe od pola drugiego koła A) o mniej niż 50%, ale więcej niż 40% B) o mniej niż 60% , ale więcej niż 50% C) dokładnie o 60% D) o więcej niż 60%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Liczba (2√ 7 − 5) 2 · (2√ 7 + 5) 2 jest równa A) 9 B) 3 C) 2809 D) 28 − 20√ 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich liczb x spełniających warunek: 11 ≤ 2x−7 ≤ 15 . A) ![Rysunek do zadania](/cke-matura/m20-probna/z06-1.png) B) ![Rysunek do zadania](/cke-matura/m20-probna/z06-2.png) C) ![Rysunek do zadania](/cke-matura/m20-probna/z06-3.png) D) ![Rysunek do zadania](/cke-matura/m20-probna/z06-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Algebra",
+      "tresc": "Rozważmy treść następującego zadania: Obwód prostokąta o bokach długości a i b jest równy 60. Jeden z boków tego prostokąta jest o 10 dłuższy od drugiego. Oblicz długości boków tego prostokąta. Który układ równań opisuje zależności między długościami boków tego prostokąta? A) ![Rysunek do zadania](/cke-matura/m20-probna/z07-1.png) B) ![Rysunek do zadania](/cke-matura/m20-probna/z07-2.png) C) ![Rysunek do zadania](/cke-matura/m20-probna/z07-3.png) D) ![Rysunek do zadania](/cke-matura/m20-probna/z07-4.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m20-probna/z08-1.png) , gdzie x ≠ – 2 , jest liczba należąca do przedziału A) (–2,1) B) &lang;1,+∞) C) (–∞,–5) D) &lang;–5,–2)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Algebra",
+      "tresc": "Linę o długości 100 metrów rozcięto na trzy części, których długości pozostają w stosunku 3 : 4 : 5 . Stąd wynika, że najdłuższa z tych części ma długość A) 41 2 &frasl; 3 metra B) 33 1 &frasl; 3 metra C) 60 metrów D) 25 metrów",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej &fnof; określonej wzorem &fnof;(x) = x 2 + bx + c . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i c – we wzorze funkcji &fnof; – spełniają warunki: A) b c > 0 B) b c C) b > 0 i c > 0 D) b > 0 i c",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg arytmetyczny (a n ) , określony dla n ≥ 1, w którym są dane: a 1 = 2 i a 2 = 9 . Wtedy a n = 79 dla A) n = 10 B) n = 11 C) n = 12 D) n = 13",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest trzywyrazowy ciąg geometryczny o wyrazach dodatnich: (81, 3x, 4) . Stąd wynika, że A) x = 18 B) x = 6 C) x = 85 &frasl; 6 D) x = 6 &frasl; 85",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt α jest ostry i spełniona jest równość ![Rysunek do zadania](/cke-matura/m20-probna/z13-1.png) . Stąd wynika, że A) cos&alpha; = 24 &frasl; 49 B) cos&alpha; = 5 &frasl; 7 C) cos&alpha; = 25 &frasl; 49 D) cos&alpha; = 5√ 6 &frasl; 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Trygonometria",
+      "tresc": "Na okręgu o środku w punkcie O leżą punkty A, B i C (zobacz rysunek). Kąt ABC ma miarę 121° , a kąt BOC ma miarę 40°. ![Rysunek do zadania](/cke-matura/m20-probna/z14-1.png) Kąt AOB ma miarę A) 59° B) 50° C) 81° D) 78°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Algebra",
+      "tresc": "W trójkącie ABC punkt D leży na boku BC, a punkt E leży na boku AC. Odcinek DE jest równoległy do boku AB, a ponadto |AE| = |DE| = 4 , |AB| = 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z15-1.png) Odcinek CE ma długość A) 16 &frasl; 3 B) 8 &frasl; 3 C) 8 D) 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt równoboczny, którego pole powierzchni jest równe 6√ 3 . Bok tego trójkąta ma długość A) 3√ 2 B) 2√ 3 C) 2√ 6 D) 6√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Geometria",
+      "tresc": "Punkty B = (–2,4) i C = (5,1) są sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe A) 29 B) 40 C) 58 D) 74",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD. ![Rysunek do zadania](/cke-matura/m20-probna/z18-1.png) Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to A) &#8738;SAO B) &#8738;SAB C) &#8738;SOA D) &#8738;ASB",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Geometria",
+      "tresc": "Graniastosłup ma 14 wierzchołków. Liczba wszystkich krawędzi tego graniastosłupa jest równa A) 14 B) 21 C) 28 D) 26",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Równania",
+      "tresc": "Prosta k przechodzi przez punkt A = (4,–4) i jest prostopadła do osi Ox . Prosta k ma równanie A) x – 4 = 0 B) x – y = 0 C) y + 4 = 0 D) x + y = 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Równania",
+      "tresc": "Prosta l jest nachylona do osi Ox pod kątem 30° i przecina oś Oy w punkcie (0,– √ 3 ) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie A) y = √ 3 &frasl; 3 x – √ 3 B) y = √ 3 &frasl; 3 x + √ 3 C) y = 1 &frasl; 2 x – √ 3 D) y = 1 &frasl; 2 x + √ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Algebra",
+      "tresc": "Dany jest stożek o wysokości 6 i tworzącej 3√ 5 . Objętość tego stożka jest równa A) 36π B) 18π C) 108π D) 54π",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna zestawu ośmiu danych: x , 2, 4, 6, 8, 10, 12, 14 jest równa 9. Wtedy mediana tego zestawu danych jest równa A) 8 B) 9 C) 10 D) 16",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Kombinatoryka",
+      "tresc": "Ile jest wszystkich czterocyfrowych liczb naturalnych mniejszych niż 2017? A) 2016 B) 2017 C) 1016 D) 1017",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe 1 &frasl; 3 . Liczba kul czarnych jest równa A) n = 9 B) n = 2 C) n = 18 D) n = 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 2x 2 + x – 6 ≤ 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie (x 2 – 6)(3x + 2) = 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla dowolnej dodatniej liczby rzeczywistej x prawdziwa jest nierówność ![Rysunek do zadania](/cke-matura/m20-probna/z28-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Algebra",
+      "tresc": "Dany jest trójkąt prostokątny ABC, w którym |&#8738;ACB| = 90° i |&#8738;ABC| = 60° . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że |AD| : |DB| = 3 :1 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru liczb {1,2,4,5,10} losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloraz pierwszej wylosowanej liczby przez drugą wylosowaną liczbę jest liczbą całkowitą.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg arytmetyczny ( a n ) , określony dla n ≥ 1 , w którym spełniona jest równość a 21 + a 24 + a 27 + a 30 = 100 . Oblicz sumę a 25 + a 26 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa &fnof; określona wzorem &fnof;(x) = ax 2 + bx + c ma dwa miejsca zerowe: x 1 = –2 i x 2 = 6 . Wykres funkcji &fnof; przechodzi przez punkt A =(1,–5). Oblicz najmniejszą wartość funkcji &fnof;.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Funkcje",
+      "tresc": "Punkt C =(0,0) jest wierzchołkiem trójkąta prostokątnego ABC , którego wierzchołek A leży na osi Ox , a wierzchołek B na osi Oy układu współrzędnych. Prosta zawierająca wysokość tego trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie D =(3,4). ![Rysunek do zadania](/cke-matura/m20-probna/z33-1.png) Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Geometria",
+      "tresc": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym |&#8738;ACB| = 90° (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png) <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:58.977Z"
+}

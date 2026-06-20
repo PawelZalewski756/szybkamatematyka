@@ -1,0 +1,213 @@
+{
+  "sessionId": "m19-maj",
+  "nazwa": "Matura — maj 2019 — poziom podstawowy",
+  "rok": 2019,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Potęgi",
+      "tresc": "Liczba log √ 2 2 jest równa A) 2 B) 4 C) √ 2 D) ½",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Kombinatoryka",
+      "tresc": "Liczba naturalna n = 2 14 ⋅ 5 15 w zapisie dziesiętnym ma A) 14 cyfr B) 15 cyfr C) 16 cyfr D) 30 cyfr",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Statystyka",
+      "tresc": "W pewnym banku prowizja od udzielanych kredytów hipotecznych przez cały styczeń była równa 4%. Na początku lutego ten bank obniżył wysokość prowizji od wszystkich kredytów o 1 punkt procentowy. Oznacza to, że prowizja od kredytów hipotecznych w tym banku zmniejszyła się o A) 1% B) 25% C) 33% D) 75%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Równość ![Rysunek do zadania](/cke-matura/m19-maj/z04-1.gif) jest prawdziwa dla A) ![Rysunek do zadania](/cke-matura/m19-maj/z04-2.gif) B) ![Rysunek do zadania](/cke-matura/m19-maj/z04-3.gif) C) ![Rysunek do zadania](/cke-matura/m19-maj/z04-4.gif) D) ![Rysunek do zadania](/cke-matura/m19-maj/z04-5.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Para liczb x = 2 i y = 2 jest rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m19-maj/z05-1.gif) A) a = − 1 B) a = 1 C) a = − 2 D) a = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Równanie ![Rysunek do zadania](/cke-matura/m19-maj/z06-1.gif) A) ma trzy różne rozwiązania: x = 1, x = 3, x = − 2. B) ma trzy różne rozwiązania: x = − 1, x = − 3, x = 2. C) ma dwa różne rozwiązania: x = 1, x = − 2. D) ma dwa różne rozwiązania: x = − 1, x = 2.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Funkcje",
+      "tresc": "Miejscem zerowym funkcji liniowej &fnof; określonej wzorem ![Rysunek do zadania](/cke-matura/m19-maj/z07-1.gif) A) 3 − 6√ 3 B) 1 − 6√ 3 C) 2√ 3 – 1 D) 2√ 3 – 1 &frasl; 3 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z07-2.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Funkcje",
+      "tresc": "Zbiorem wartości funkcji &fnof; jest przedział A) (− ∞,0&rang; B) &lang;0, 4&rang; C) &lang;− 4, + ∞) D) &lang;4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Największa wartość funkcji &fnof; w przedziale &lang;1,4&rang; jest równa A) − 3 B) − 4 C) 4 D) 0 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Osią symetrii wykresu funkcji &fnof; jest prosta o równaniu A) y = − 4 B) x = − 4 C) y = 2 D) x = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym ( a n ), określonym dla n ≥ 1 , dane są dwa wyrazy: a 1 = 7 i a 8 = − 49. Suma ośmiu początkowych wyrazów tego ciągu jest równa A) –168 B) –189 C) –21 D) –42 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg geometryczny ( a n ), określony dla n ≥ 1 . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy A) 1 &frasl; 3 B) 1 &frasl; √ 3 C) 3 D) √ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Trygonometria",
+      "tresc": "Sinus kąta ostrego α jest równy 4 &frasl; 5 . Wtedy A) cos α = 4 &frasl; 5 B) cos α = 1 &frasl; 5 C) cos α = 9 &frasl; 25 D) cos α = 3 &frasl; 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Algebra",
+      "tresc": "Punkty D i E leżą na okręgu opisanym na trójkącie równobocznym ABC (zobacz rysunek). Odcinek CD jest średnicą tego okręgu. Kąt wpisany DEB ma miarę α . ![Rysunek do zadania](/cke-matura/m19-maj/z14-1.gif) Zatem A) α = 30 ° B) α C) α > 45 ° D) α = 45 °",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Geometria",
+      "tresc": "Dane są dwa okręgi: okrąg o środku w punkcie O i promieniu 5 oraz okrąg o środku w punkcie P i promieniu 3. Odcinek OP ma długość 16. Prosta AB jest styczna do tych okręgów w punktach A i B . Ponadto prosta AB przecina odcinek OP w punkcie K (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z15-1.gif) Wtedy A) |OK| = 6 B) |OK| = 8 C) |OK| = 10 D) |OK| = 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "Dany jest romb o boku długości 4 i kącie rozwartym 150° . Pole tego rombu jest równe A) 8 B) 12 C) 8√ 3 D) 16",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach y = (2m + 2)x − 2019 oraz y = (3m − 3)x + 2019 są równoległe, gdy A) m = − 1 B) m = 0 C) m = 1 D) m = 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Równania",
+      "tresc": "Prosta o równaniu y = ax + b jest prostopadła do prostej o równaniu y = −4x + 1 i przechodzi przez punkt P = (½,0), gdy A) a = − 4 i b = − 2 B) a = 1 &frasl; 4 i b = − 1 &frasl; 8 C) a = − 4 i b = 2 D) a = 1 &frasl; 4 i b = 1 &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiony jest fragment wykresu funkcji liniowej &fnof; . Na wykresie tej funkcji leżą punkty A = (0, 4) i B = (2, 2) . ![Rysunek do zadania](/cke-matura/m19-maj/z19-1.gif) Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres funkcji g określonej wzorem A) g(x) = x + 4 B) g(x) = x − 4 C) g(x) = −x − 4 D) g(x) = −x + 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Funkcje",
+      "tresc": "Dane są punkty o współrzędnych A = (− 2, 5) oraz B = (4, − 1) . Średnica okręgu wpisanego w kwadrat o boku AB jest równa A) 12 B) 6 C) 6√ 2 D) 2√ 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Algebra",
+      "tresc": "Pudełko w kształcie prostopadłościanu ma wymiary 5 dm × 3 dm × 2 dm (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z21-1.gif) Przekątna KL tego prostopadłościanu jest – z dokładnością do 0,01 dm – równa A) 5,83 dm B) 6,16 dm C) 3,61 dm D) 5,39 dm",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "Promień kuli i promień podstawy stożka są równe 4. Pole powierzchni kuli jest równe polu powierzchni całkowitej stożka. Długość tworzącej stożka jest równa A) 8 B) 4 C) 16 D) 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Statystyka",
+      "tresc": "Mediana zestawu sześciu danych liczb: 4, 8, 21, a , 16, 25, jest równa 14. Zatem A) a = 7 B) a = 12 C) a = 14 D) a = 20 pokaż wskazówkę &raquo;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Kombinatoryka",
+      "tresc": "Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry 0, 2, 5, jest A) 12 B) 36 C) 162 D) 243",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "W pudełku jest 40 kul. Wśród nich jest 35 kul białych, a pozostałe to kule czerwone. Prawdopodobieństwo wylosowania każdej kuli jest takie samo. Z pudełka losujemy jedną kulę. Prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy kulę czerwoną, jest równe A) 1 &frasl; 8 B) 1 &frasl; 5 C) 1 &frasl; 40 D) 1 &frasl; 35",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie (x 3 − 8)(x 2 − 4x − 5) = 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 3x 2 − 16x + 16 > 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność 3a 2 − 2ab + 3b 2 ≥ 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Algebra",
+      "tresc": "Dany jest okrąg o środku w punkcie S i promieniu r. Na przedłużeniu cięciwy AB poza punkt B odłożono odcinek BC równy promieniowi danego okręgu. Przez punkty C i S poprowadzono prostą. Prosta CS przecina dany okrąg w punktach D i E (zobacz rysunek). Wykaż, że jeżeli miara kąta ACS jest równa α, to miara kąta ASD jest równa 3α. ![Rysunek do zadania](/cke-matura/m19-maj/z29-1.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru liczb {1,2,3,4,5} losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz prawdopodobieństwo zdarzenia A polegającego na wylosowaniu liczb, których iloczyn jest liczbą nieparzystą.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Algebra",
+      "tresc": "W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu ma długość 4 i tworzy z krótszą podstawą trapezu kąt o mierze 30° (zobacz rysunek). Oblicz długość przekątnej BD tego trapezu. ![Rysunek do zadania](/cke-matura/m19-maj/z31-1.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Statystyka",
+      "tresc": "Ciąg arytmetyczny (a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Różnicą tego ciągu jest liczba r = − 4 , a średnia arytmetyczna początkowych sześciu wyrazów tego ciągu: a 1 ,a 2 ,a 3 ,a 4 ,a 5 ,a 6 , jest równa 16. a) Oblicz pierwszy wyraz tego ciągu. b) Oblicz liczbę k, dla której a k = − 78 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Funkcje",
+      "tresc": "Dany jest punkt A = (−18,10). Prosta o równaniu y = 3x jest symetralną odcinka AB. Wyznacz współrzędne punktu B.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Trygonometria",
+      "tresc": "Długość krawędzi podstawy ostrosłupa prawidłowego czworokątnego jest równa 6. Pole powierzchni całkowitej tego ostrosłupa jest cztery razy większe od pola jego podstawy. Kąt α jest kątem nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy (zobacz rysunek). Oblicz cosinus kąta α. ![Rysunek do zadania](/cke-matura/m19-maj/z34-1.gif) <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:02.194Z"
+}

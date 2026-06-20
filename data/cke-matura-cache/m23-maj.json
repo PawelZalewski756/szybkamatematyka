@@ -1,0 +1,195 @@
+{
+  "sessionId": "m23-maj",
+  "nazwa": "Matura — maj 2023 — poziom podstawowy",
+  "rok": 2023,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Na osi liczbowej zaznaczono sumę przedziałów. ![Rysunek do zadania](/cke-matura/m23-maj/z01-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności A) |𝑥 − 3,5| ≥ 1,5 B) |𝑥 − 1,5| ≥ 3,5 C) |𝑥 − 3,5| ≤ 1,5 D) |𝑥 − 1,5| ≤ 3,5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Statystyka",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-maj/z02-1.png) jest równa A) (- 3 &frasl; 2 ) B) 3 &frasl; 2 C) 2 &frasl; 3 D) ( - 2 &frasl; 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba (𝟐𝒏 + 𝟏) 𝟐 − 𝟏 jest podzielna przez 𝟖.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Potęgi",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 27 + log 9 3 jest równa A) 81 B) 9 C) 4 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 wyrażenie (2𝑎 − 3) 2 − (2𝑎 + 3) 2 jest równe A) −24𝑎 B) 0 C) 18 D) 16𝑎 2 − 24𝑎",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m23-maj/z06-1.png) jest przedział A) (−∞ , −4] B) (−∞ , 4] C) [−4 , ∞) D) [4 , ∞)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania √ 3 (𝑥 2 − 2)(𝑥 + 3) = 0 jest liczba A) 3 B) 2 C) √ 3 D) √ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-maj/z08-1.png) w zbiorze liczb rzeczywistych A) nie ma rozwiązania. B) ma dokładnie jedno rozwiązanie: −1. C) ma dokładnie jedno rozwiązanie: 1. D) ma dokładnie dwa rozwiązania: −1 oraz 1.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie 𝟑𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟏𝟐𝒙 + 𝟖 = 𝟎",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Ciągi",
+      "tresc": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (𝑥 , 𝑦) jednego z niżej zapisanych układów równań A – D. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest A) ![Rysunek do zadania](/cke-matura/m23-maj/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Algebra",
+      "tresc": "Dany jest prostokąt o bokach długości 𝑎 i 𝑏, gdzie 𝑎 > 𝑏. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ……… oraz ……… . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji 𝑓 jest zbiór A) [−6 , 5] B) (−6 , 5) C) (−3 , 5] D) [−3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji 𝑓 w przedziale [−4 , 1] jest równa A) 0 B) 1 C) 2 D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca w zbiorze A) [−6 , −3) B) [−3 , 1] C) (1 , 2] D) [2 , 5]",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji 𝑓 w kartezjańskim układzie współrzędnych (𝑥 , 𝑦). ![Rysunek do zadania](/cke-matura/m23-maj/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 oraz liczba 𝑏 we wzorze funkcji 𝑓 spełniają warunki: A) 𝑎 > 0 i 𝑏 > 0. B) 𝑎 > 0 i 𝑏 C) 𝑎 0. D) 𝑎",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Funkcje",
+      "tresc": "Jednym z miejsc zerowych funkcji kwadratowej 𝑓 jest liczba (−5). Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji 𝑓, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji 𝑓 jest liczba A) 11 B) 1 C) (−1) D) (−13)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = 2 𝑛 ⋅ (𝑛 + 1) dla każdej liczby naturalnej 𝑛 ≥ 1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyraz 𝑎 4 jest równy A) 64 B) 40 C) 48 D) 80",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Ciągi",
+      "tresc": "Trzywyrazowy ciąg (27 , 9 , 𝑎 − 1) jest geometryczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 jest równa A) 3 B) 0 C) 4 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Algebra",
+      "tresc": "Pan Stanisław spłacił pożyczkę w wysokości 8910 zł w osiemnastu ratach. Każda kolejna rata była mniejsza od poprzedniej o 30 zł. Oblicz kwotę pierwszej raty.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) zaznaczono kąt 𝛼 o wierzchołku w punkcie 𝑂 = (0 , 0). Jedno z ramion tego kąta pokrywa się z dodatnią półosią 𝑂𝑥, a drugie przechodzi przez punkt 𝑃 = (−3 , 1) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy A) 1 &frasl; √ 10 B) (− 3 &frasl; √ 10 ) C) ( − 3 &frasl; 1 ) D) ( − 1 &frasl; 3 )",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Trygonometria",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego 𝛼 wyrażenie sin 4 𝛼 + sin 2 𝛼 ⋅cos 2 𝛼 jest równe A) sin 2 𝛼 B) sin 6 𝛼 ⋅ cos 2 𝛼 C) sin 4 𝛼 + 1 D) sin 2 𝛼 ⋅ (sin𝛼 + cos𝛼) ⋅ (sin𝛼 − cos𝛼)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Trygonometria",
+      "tresc": "W rombie o boku długości 6√ 2 kąt rozwarty ma miarę 150°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy A) 24 B) 72 C) 36 D) 36√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Algebra",
+      "tresc": "Punkty 𝐴, 𝐵, 𝐶 leżą na okręgu o środku w punkcie 𝑂. Kąt 𝐴𝐶𝑂 ma miarę 70° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐴𝐵𝐶 jest równa A) 10° B) 20° C) 35° D) 40°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "Trójkąty prostokątne 𝑇 1 i 𝑇 2 są podobne. Przyprostokątne trójkąta 𝑇 1 mają długości 5 i 12. Przeciwprostokątna trójkąta 𝑇 2 ma długość 26. Oblicz pole trójkąta 𝑻 𝟐 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dane są proste 𝑘 oraz 𝑙 o równaniach 𝑘: 𝑦 = 2 ⁄ 3 𝑥 𝑙: 𝑦 = − 3 ⁄ 2 𝑥 + 13 Dokończ zdanie tak aby było prawdziwe. Proste 𝑘 oraz 𝑙 A) są prostopadłe B) nie są prostopadłe i przecinają się w punkcie 𝑃 o współrzędnych A) (−6 , −4) B) (6 , 4) C) (−6 , 4)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dana jest prosta 𝑘 o równaniu 𝑦 = − 1 ⁄ 3 𝑥 + 2 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu 𝑦 = 𝑎𝑥 + 𝑏 jest równoległa do prostej 𝑘 i przechodzi przez punkt 𝑃 = (3 , 5), gdy A) 𝑎 = 3 i 𝑏 = 4. B) 𝑎 = − 1 &frasl; 3 i 𝑏 = 4. C) 𝑎 = 3 i 𝑏 = −4. D) 𝑎 = − 1 &frasl; 3 i 𝑏 = 6.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Trygonometria",
+      "tresc": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 𝛼 takim, że cos𝛼 = √ 2 &frasl; 3 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa A) 15√ 2 B) 45 C) 5√ 2 D) 10",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Geometria",
+      "tresc": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem 30° i ma długość równą 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Geometria",
+      "tresc": "W pewnym ostrosłupie prawidłowym stosunek liczby 𝑊 wszystkich wierzchołków do liczby 𝐾 wszystkich krawędzi jest równy W &frasl; K = 3 &frasl; 5 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest A) kwadrat. B) pięciokąt foremny. C) sześciokąt foremny. D) siedmiokąt foremny.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Kombinatoryka",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych pięciocyfrowych, w których zapisie dziesiętnym występują tylko cyfry 0, 5, 7 (np. 57 075, 55 555), jest A) 5 3 B) 2 ⋅ 4 3 C) 2 ⋅ 3 4 D) 3 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Statystyka",
+      "tresc": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami A–E. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 𝟏𝟓.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Funkcje",
+      "tresc": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:33.581Z"
+}

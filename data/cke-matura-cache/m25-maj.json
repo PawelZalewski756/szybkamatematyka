@@ -1,0 +1,195 @@
+{
+  "sessionId": "m25-maj",
+  "nazwa": "Matura — maj 2025 — poziom podstawowy",
+  "rok": 2025,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba (√ 32 − √ 2 ) 2 jest równa A) 16 B) 18 C) 30 D) 34",
+      "rozwiazanie": "**Krok 1.** Zastosuj wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = \\sqrt{32}$ i $b = \\sqrt{2}$. Otrzymujemy $(\\sqrt{32})^2 - 2 \\cdot \\sqrt{32} \\cdot \\sqrt{2} + (\\sqrt{2})^2$.\n**Krok 2.** Uprość wyrażenie: $32 - 2 \\cdot \\sqrt{32 \\cdot 2} + 2 = 32 - 2 \\cdot \\sqrt{64} + 2$.\n**Krok 3.** Oblicz wartość pierwiastka i dokończ obliczenia: $32 - 2 \\cdot 8 + 2 = 32 - 16 + 2 = 16 + 2 = 18$.\n\n**Odpowiedź:** B, czyli 18"
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m25-maj/z02-1.png) jest równa A) 30 B) 31 C) 5 12 D) 5 27",
+      "rozwiazanie": "**Krok 1.** Zamień liczby mieszane na ułamki niewłaściwe, pamiętając o kolejności działań: najpierw mnożenie, potem odejmowanie. Zapiszemy $5 \\frac{1}{6}$ jako $\\frac{5 \\cdot 6 + 1}{6} = \\frac{31}{6}$, a $2 \\frac{1}{3}$ jako $\\frac{2 \\cdot 3 + 1}{3} = \\frac{7}{3}$.\n**Krok 2.** Wykonaj mnożenie ułamków: $\\frac{31}{6} \\cdot \\frac{3}{7} = \\frac{31 \\cdot 3}{6 \\cdot 7}$. Skróć 3 i 6, co da $\\frac{31 \\cdot 1}{2 \\cdot 7} = \\frac{31}{14}$.\n**Krok 3.** Odejmij od wyniku mnożenia liczbę $\\frac{1}{7}$: $\\frac{31}{14} - \\frac{1}{7}$. Aby odjąć ułamki, sprowadź je do wspólnego mianownika, czyli 14. Zapiszemy $\\frac{1}{7}$ jako $\\frac{2}{14}$. Obliczenie to $\\frac{31}{14} - \\frac{2}{14} = \\frac{31-2}{14} = \\frac{29}{14}$.\n\n**Odpowiedź:** $\\frac{29}{14}$"
+    },
+    {
+      "numer": 3,
+      "dzial": "Potęgi",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 3 108 − 2log 3 2 jest równa A) 3 B) 9 C) log 3 104 D) 2log 3 54",
+      "rozwiazanie": "**Krok 1.** Skorzystaj z własności logarytmów: $a \\log_b c = \\log_b (c^a)$ oraz $\\log_b x - \\log_b y = \\log_b (\\frac{x}{y})$. Wyrażenie przyjmuje postać: $\\log_3 108 - \\log_3 (2^2) = \\log_3 108 - \\log_3 4$.\n**Krok 2.** Zastosuj własność różnicy logarytmów: $\\log_3 \\frac{108}{4} = \\log_3 27$.\n**Krok 3.** Oblicz wartość logarytmu: $\\log_3 27 = 3$, ponieważ $3^3 = 27$.\n\n**Odpowiedź:** A, czyli 3"
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑥 wartość wyrażenia (3𝑥 + 2) 2 − (2𝑥 − 3) 2 jest równa wartości wyrażenia A) 5𝑥 2 − 5 B) 5𝑥 2 + 13 C) 5𝑥 2 + 24𝑥 − 5 D) 5𝑥 2 + 24𝑥 − 13",
+      "rozwiazanie": "**Krok 1.** Rozwiń oba kwadraty, stosując wzory skróconego mnożenia $(a+b)^2 = a^2+2ab+b^2$ i $(a-b)^2 = a^2-2ab+b^2$. Otrzymasz $(9x^2 + 12x + 4) - (4x^2 - 12x + 9)$.\n\n**Krok 2.** Odejmij drugie wyrażenie od pierwszego, pamiętając o zmianie znaków przy opuszczaniu nawiasu: $9x^2 + 12x + 4 - 4x^2 + 12x - 9$.\n\n**Krok 3.** Zredukuj podobne wyrazy, grupując $x^2$, $x$ i wyrazy wolne: $(9x^2 - 4x^2) + (12x + 12x) + (4 - 9)$, co daje $5x^2 + 24x - 5$.\n\n**Odpowiedź:** C, czyli $5x^2 + 24x - 5$"
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej nieparzystej liczby naturalnej 𝒏 liczba 𝟑𝒏 𝟐 + 𝟐𝒏 + 𝟕 jest podzielna przez 𝟒.",
+      "rozwiazanie": "**Krok 1.** Przedstaw nieparzystą liczbę naturalną $n$ w postaci ogólnej. Ponieważ $n$ jest nieparzyste, możemy zapisać $n = 2k + 1$, gdzie $k$ jest liczbą całkowitą nieujemną.\n**Krok 2.** Podstaw $n = 2k + 1$ do wyrażenia $3n^2 + 2n + 7$ i uprość. Otrzymamy $3(2k + 1)^2 + 2(2k + 1) + 7 = 3(4k^2 + 4k + 1) + 4k + 2 + 7 = 12k^2 + 12k + 3 + 4k + 9 = 12k^2 + 16k + 12$.\n**Krok 3.** Wyłącz wspólny czynnik z otrzymanego wyrażenia. $12k^2 + 16k + 12 = 4(3k^2 + 4k + 3)$. Ponieważ $3k^2 + 4k + 3$ jest liczbą całkowitą dla każdego całkowitego $k$, wyrażenie $4(3k^2 + 4k + 3)$ jest podzielne przez 4.\n\n**Odpowiedź:** Wykazano, że $3n^2 + 2n + 7$ jest podzielne przez 4."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Dana jest nierówność 3 − 2(1 − 2𝑥) ≥ 2𝑥 − 17 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych. A) ![Rysunek do zadania](/cke-matura/m25-maj/z06-1.png) B) ![Rysunek do zadania](/cke-matura/m25-maj/z06-2.png) C) ![Rysunek do zadania](/cke-matura/m25-maj/z06-3.png) D) ![Rysunek do zadania](/cke-matura/m25-maj/z06-4.png)",
+      "rozwiazanie": "**Krok 1.** Uprość nierówność, najpierw mnożąc nawias: $3 - 2 + 4x \\geq 2x - 17$.\n**Krok 2.** Przenieś wyrazy z $x$ na lewą stronę, a stałe na prawą: $4x - 2x \\geq -17 - 1$, co daje $2x \\geq -18$.\n**Krok 3.** Podziel obie strony przez 2, aby wyznaczyć $x$: $x \\geq -9$. Zbiór liczb spełniających nierówność to $[-9, \\infty)$.\n\n**Odpowiedź:** D"
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 2𝑥(𝑥 + 3)(𝑥 2 + 25) = 0 w zbiorze liczb rzeczywistych ma dokładnie A) dwa rozwiązania: (−3) oraz 0. B) dwa rozwiązania: (−3) oraz 2. C) trzy rozwiązania: (−5), (−3) oraz 0. D) cztery rozwiązania: (−5), (−3), 0 oraz 5.",
+      "rozwiazanie": "**Krok 1.** Aby równanie $2x(x+3)(x^2+25)=0$ było spełnione, przynajmniej jeden z czynników musi być równy zero. Rozpatrujemy każdy czynnik osobno.\n**Krok 2.** Czynniki $2x=0$ i $x+3=0$ dają rozwiązania $x=0$ i $x=-3$. Równanie $x^2+25=0$ nie ma rozwiązań w zbiorze liczb rzeczywistych, ponieważ $x^2 = -25$ nie jest możliwe dla $x \\in \\mathbb{R}$.\n**Krok 3.** Zatem jedynymi rozwiązaniami równania w zbiorze liczb rzeczywistych są $x=0$ i $x=-3$.\n\n**Odpowiedź:** A, czyli dwa rozwiązania: (−3) oraz 0."
+    },
+    {
+      "numer": 8,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑥 różnej od (−2) oraz różnej od 0 wartość wyrażenia ![Rysunek do zadania](/cke-matura/m25-maj/z08-1.png) jest równa wartości wyrażenia A) ![Rysunek do zadania](/cke-matura/m25-maj/z08-2.png) B) ![Rysunek do zadania](/cke-matura/m25-maj/z08-3.png) C) ![Rysunek do zadania](/cke-matura/m25-maj/z08-4.png) D) ![Rysunek do zadania](/cke-matura/m25-maj/z08-5.png)",
+      "rozwiazanie": "**Krok 1.** Uprość licznik wyrażenia, stosując wzór skróconego mnożenia na różnicę kwadratów: $x^2 - 4 = (x-2)(x+2)$.\n**Krok 2.** Skróć wspólny czynnik $(x+2)$ w liczniku i mianowniku, pamiętając o założeniach $x \\ne -2$ i $x \\ne 0$: $\\frac{(x-2)(x+2)}{x(x+2)} = \\frac{x-2}{x}$.\n**Krok 3.** Dzielenie przez ułamek zastąp mnożeniem przez jego odwrotność i uprość wyrażenie: $\\frac{x-2}{x} : \\frac{x^2-4}{x^2} = \\frac{x-2}{x} \\cdot \\frac{x^2}{x^2-4} = \\frac{x-2}{x} \\cdot \\frac{x^2}{(x-2)(x+2)} = \\frac{x}{x+2}$.\n\n**Odpowiedź:** D, czyli $\\frac{x}{x+2}$"
+    },
+    {
+      "numer": 9,
+      "dzial": "Algebra",
+      "tresc": "Zarząd firmy wydzielił z budżetu kwotę 1 200 000 złotych łącznie na projekty badawcze dla dwóch zespołów: A i B. W pierwszym półroczu realizacji tych projektów oba zespoły wykorzystały łącznie 146 700 złotych – zespół A wykorzystał 13% przyznanych mu środków, a zespół B wykorzystał 11% przyznanych mu środków. Oblicz kwotę przyznaną zespołowi A na realizację projektu badawczego. Zapisz obliczenia.",
+      "rozwiazanie": "**Krok 1.** Oznaczmy przez $A$ kwotę przyznaną zespołowi A, a przez $B$ kwotę przyznaną zespołowi B. Z treści zadania wiemy, że $A + B = 1\\,200\\,000$ zł. Wiemy również, że zespół A wykorzystał $0,13A$, a zespół B wykorzystał $0,11B$.\n\n**Krok 2.** Kwoty wykorzystane przez zespoły sumują się do 146 700 zł, zatem tworzymy równanie: $0,13A + 0,11B = 146\\,700$.\n\n**Krok 3.** Z pierwszego równania wyznaczamy $B = 1\\,200\\,000 - A$ i podstawiamy do drugiego równania: $0,13A + 0,11(1\\,200\\,000 - A) = 146\\,700$.\n\n**Krok 4.** Rozwiązujemy otrzymane równanie: $0,13A + 132\\,000 - 0,11A = 146\\,700 \\implies 0,02A = 14\\,700 \\implies A = \\frac{14\\,700}{0,02} = 735\\,000$.\n\n**Odpowiedź:** 735 000 zł"
+    },
+    {
+      "numer": 10,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 𝟑(𝟐𝒙 𝟐 + 𝟏) Zapisz obliczenia.",
+      "rozwiazanie": "**Krok 1.** Rozpisz nierówność i przenieś wszystkie wyrazy na jedną stronę.\n$6x^2 + 3 \\ge 7x^2 - 1$\n$0 \\ge 7x^2 - 6x^2 - 3 - 1$\n$0 \\ge x^2 - 4$\n\n**Krok 2.** Znajdź pierwiastki równania $x^2 - 4 = 0$.\n$x^2 = 4$\n$x = -2$ lub $x = 2$\n\n**Krok 3.** Określ przedziały, w których nierówność $x^2 - 4 \\le 0$ jest spełniona. Parabola $y = x^2 - 4$ ma ramiona skierowane do góry, więc wartości niedodatnie przyjmuje między pierwiastkami.\n$x \\in [-2, 2]$\n\n**Odpowiedź:** $x \\in [-2, 2]$"
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja 𝑓 jest określona następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z11-1.jpg) Wykres funkcji 𝑦=𝑓(𝑥) przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku poniżej. ![Rysunek do zadania](/cke-matura/m25-maj/z11-2.jpg) 1. Dziedziną funkcji 𝑓 jest przedział ......................... 2. Zbiorem wartości funkcji 𝑓 jest przedział ......................... 3. Zbiorem wszystkich argumentów, dla których funkcja 𝑓 przyjmuje wartości dodatnie, jest przedział ......................... 4. Zbiorem wszystkich rozwiązań równania 𝑓(𝑥) = 3 jest przedział .........................",
+      "rozwiazanie": "**Krok 1.** Odczytaj dziedzinę z osi X — to wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi Y — to wszystkie możliwe wartości funkcji $f(x)$.\n**Krok 2.** Znajdź argumenty $x$, dla których $f(x) > 0$. Na wykresie to fragmenty, gdzie funkcja jest nad osią X.\n**Krok 3.** Znajdź argumenty $x$, dla których $f(x) = 3$. Na wykresie znajdź punkty, gdzie wykres przecina się z prostą $y=3$.\n\n**Odpowiedź:** 1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$"
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej 𝑓 (zobacz rysunek). Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś 𝑂𝑦 w punkcie o współrzędnych (0,3). ![Rysunek do zadania](/cke-matura/m25-maj/z12-1.png)",
+      "rozwiazanie": "**Krok 1.** Wykorzystaj wierzchołek paraboli $(p, q) = (3,6)$ do zapisania wzoru funkcji w postaci kanonicznej: $f(x) = a(x-p)^2 + q$, czyli $f(x) = a(x-3)^2 + 6$.\n**Krok 2.** Użyj punktu $(0,3)$, przez który przechodzi parabola, aby obliczyć współczynnik $a$: $3 = a(0-3)^2 + 6 \\implies 3 = 9a + 6 \\implies -3 = 9a \\implies a = -\\frac{1}{3}$.\n**Krok 3.** Zapisz pełny wzór funkcji kwadratowej w postaci kanonicznej: $f(x) = -\\frac{1}{3}(x-3)^2 + 6$. Aby uzyskać postać ogólną, rozwiń wzór: $f(x) = -\\frac{1}{3}(x^2 - 6x + 9) + 6 = -\\frac{1}{3}x^2 + 2x - 3 + 6 = -\\frac{1}{3}x^2 + 2x + 3$.\n\n**Odpowiedź:** $f(x) = -\\frac{1}{3}x^2 + 2x + 3$"
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (3 − 𝑚)𝑥 − 4. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 nie ma miejsca zerowego dla 𝑚 równego A) (−3) B) 0 C) 3 D) 4",
+      "rozwiazanie": "**Krok 1.** Funkcja liniowa nie ma miejsca zerowego, gdy jest stała i różna od zera. Dzieje się tak, gdy współczynnik przy $x$ jest równy zero. Wzór funkcji to $f(x) = (3-m)x - 4$.\n**Krok 2.** Aby funkcja nie miała miejsca zerowego, współczynnik przy $x$, czyli $(3-m)$, musi być równy 0. Rozwiązujemy równanie $3-m=0$.\n**Krok 3.** Rozwiązaniem równania $3-m=0$ jest $m=3$. Wtedy funkcja przyjmuje postać $f(x) = (3-3)x - 4 = 0x - 4 = -4$, która nie ma miejsc zerowych.\n**Odpowiedź:** C, czyli 3"
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg (𝑎𝑛) jest określony następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z14-1.png) dla każdej liczby naturalnej 𝑛 ≥ 1",
+      "rozwiazanie": "**Krok 1.** Obliczamy pierwszy wyraz ciągu, podstawiając $n=1$ do wzoru $a_n = \\frac{2n-3}{n+1}$. Otrzymujemy $a_1 = \\frac{2 \\cdot 1 - 3}{1+1} = \\frac{2-3}{2} = -\\frac{1}{2}$.\n**Krok 2.** Obliczamy drugi wyraz ciągu, podstawiając $n=2$ do wzoru $a_n = \\frac{2n-3}{n+1}$. Otrzymujemy $a_2 = \\frac{2 \\cdot 2 - 3}{2+1} = \\frac{4-3}{3} = \\frac{1}{3}$.\n**Krok 3.** Obliczamy trzeci wyraz ciągu, podstawiając $n=3$ do wzoru $a_n = \\frac{2n-3}{n+1}$. Otrzymujemy $a_3 = \\frac{2 \\cdot 3 - 3}{3+1} = \\frac{6-3}{4} = \\frac{3}{4}$.\n\n**Odpowiedź:** $-\\frac{1}{2}, \\frac{1}{3}, \\frac{3}{4}$"
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "Wyznacz wartość 𝒎 , dla której trzywyrazowy ciąg (𝟐𝒎 + 𝟏𝟏, 𝒎 𝟐 + 𝟑, 𝟓 − 𝒎) jest arytmetyczny i malejący. Zapisz obliczenia.",
+      "rozwiazanie": "**Krok 1.** Zapisz warunek na ciąg arytmetyczny: środkowy wyraz jest średnią arytmetyczną skrajnych wyrazów, czyli $2(m^2+3) = (2m+11) + (5-m)$.\n**Krok 2.** Rozwiąż równanie: $2m^2+6 = m+16$, co daje równanie kwadratowe $2m^2 - m - 10 = 0$. Po obliczeniu wyróżnika $\\Delta = (-1)^2 - 4(2)(-10) = 1+80=81$, pierwiastki to $m_1 = \\frac{1-9}{4} = -2$ oraz $m_2 = \\frac{1+9}{4} = \\frac{10}{4} = 2.5$.\n**Krok 3.** Sprawdź, dla której wartości $m$ ciąg jest malejący (różnica $r = a_{n+1}-a_n < 0$). Dla $m=-2$ mamy ciąg $(2(-2)+11, (-2)^2+3, 5-(-2)) = (7, 7, 7)$, różnica $r=0$ (nie jest malejący). Dla $m=2.5$ mamy ciąg $(2(2.5)+11, (2.5)^2+3, 5-2.5) = (16, 9.25, 2.5)$, różnica $r = 9.25 - 16 = -6.75 < 0$.\n\n**Odpowiedź:** $m=2.5$"
+    },
+    {
+      "numer": 16,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg geometryczny (𝑎 𝑛 ) określony dla każdej liczby naturalnej 𝑛 ≥ 1, w którym 𝑎 1 = 27 oraz 𝑎 2 = 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Czwarty wyraz ciągu (𝑎𝑛) jest równy A) 1/3 B) 1 C) 3 D) 729",
+      "rozwiazanie": "**Krok 1.** Obliczamy iloraz $q$ ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{9}{27} = \\frac{1}{3}$.\n**Krok 2.** Obliczamy czwarty wyraz ciągu $a_4$ korzystając ze wzoru $a_n = a_1 \\cdot q^{n-1}$: $a_4 = a_1 \\cdot q^{4-1} = 27 \\cdot (\\frac{1}{3})^3$.\n**Krok 3.** Obliczamy wartość $a_4$: $a_4 = 27 \\cdot \\frac{1}{27} = 1$.\n\n**Odpowiedź:** B, czyli $1$"
+    },
+    {
+      "numer": 17,
+      "dzial": "Trygonometria",
+      "tresc": "Kąt 𝛼 jest ostry i spełnia warunek √ 3 tg𝛼 = 2 sin𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cosinus kąta 𝛼 jest równy A) 1/2 B) √ 2 /2 C) √ 3 /2 D) √ 3 /3",
+      "rozwiazanie": "**Krok 1.** Zamień tangens na iloraz sinusa i cosinusa: $\\sqrt{3} \\cdot \\frac{\\sin\\alpha}{\\cos\\alpha} = 2\\sin\\alpha$. Ponieważ kąt $\\alpha$ jest ostry, $\\sin\\alpha \\ne 0$, więc możemy podzielić obie strony przez $\\sin\\alpha$. Otrzymujemy: $\\frac{\\sqrt{3}}{\\cos\\alpha} = 2$.\n\n**Krok 2.** Przekształć równanie, aby wyznaczyć $\\cos\\alpha$: $\\cos\\alpha = \\frac{\\sqrt{3}}{2}$.\n\n**Krok 3.** Sprawdź, który z podanych kątów ostrych ma cosinus równy $\\frac{\\sqrt{3}}{2}$. Jest to kąt $\\alpha = 30^\\circ$. Wartość $\\frac{\\sqrt{3}}{2}$ jest jedną z opcji.\n\n**Odpowiedź:** C, czyli $\\frac{\\sqrt{3}}{2}$"
+    },
+    {
+      "numer": 18,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt prostokątny 𝐴𝐵𝐶, w którym bok 𝐵𝐶 jest przeciwprostokątną, przyprostokątna 𝐴𝐵 ma długość 6, a środkowa 𝐶𝐷 ma długość 5. Oznaczmy kąt 𝐴𝐷𝐶 przez 𝛼, natomiast kąt 𝐴𝐵𝐶 – przez 𝛽 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
+      "rozwiazanie": "**Krok 1.** W trójkącie prostokątnym 𝐴𝐵𝐶, środkowa 𝐶𝐷 poprowadzona z wierzchołka kąta prostego do przeciwprostokątnej 𝐵𝐶 jest równa połowie tej przeciwprostokątnej. Mamy więc $CD = \\frac{1}{2} BC$. Ponieważ $CD = 5$, to $BC = 2 \\cdot 5 = 10$.\n**Krok 2.** Z twierdzenia Pitagorasa dla trójkąta 𝐴𝐵𝐶 mamy $AB^2 + AC^2 = BC^2$. Podstawiając znane wartości: $6^2 + AC^2 = 10^2$, czyli $36 + AC^2 = 100$. Stąd $AC^2 = 100 - 36 = 64$, a $AC = \\sqrt{64} = 8$.\n**Krok 3.** W trójkącie 𝐴𝐵𝐶, $\\cos(\\beta) = \\frac{AB}{BC} = \\frac{6}{10} = \\frac{3}{5}$. W trójkącie prostokątnym $ADC$, $AD = \\frac{1}{2} BC = 5$. Z twierdzenia cosinusów dla trójkąta $ADC$: $AC^2 = AD^2 + CD^2 - 2 \\cdot AD \\cdot CD \\cdot \\cos(\\alpha)$. Mamy $8^2 = 5^2 + 5^2 - 2 \\cdot 5 \\cdot 5 \\cdot \\cos(\\alpha)$, czyli $64 = 25 + 25 - 50 \\cos(\\alpha)$. Stąd $64 = 50 - 50 \\cos(\\alpha)$, co daje $14 = -50 \\cos(\\alpha)$, a $\\cos(\\alpha) = -\\frac{14}{50} = -\\frac{7}{25}$. Ponieważ $\\alpha$ jest kątem w trójkącie, $0 < \\alpha < 180^{\\circ}$. Z zależności między funkcjami trygonometrycznymi mamy $\\sin^2(\\alpha) = 1 - \\cos^2(\\alpha) = 1 - (-\\frac{7}{25})^2 = 1 - \\frac{49}{625} = \\frac{576}{625}$. Stąd $\\sin(\\alpha) = \\sqrt{\\frac{576}{625}} = \\frac{24}{25}$ (sinus kąta w trójkącie jest dodatni).\n\n**Odpowiedź:** $\\sin(\\alpha) = \\frac{24}{25}$"
+    },
+    {
+      "numer": 19,
+      "dzial": "Algebra",
+      "tresc": "Punkty 𝐴, 𝐵 oraz 𝐶 leżą na okręgu o środku w punkcie 𝑂. Miara kąta 𝐵𝐶𝐴 jest równa 50° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐴𝐵𝑂 jest równa A) 20° B) 35° C) 40° D) 50°",
+      "rozwiazanie": "**Krok 1.** Kąt wpisany 𝐴𝐵𝐶 opiera się na tym samym łuku co kąt środkowy 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 ma miarę dwa razy większą niż kąt 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 = 180° - 90° - 50° = 40°.\n**Krok 2.** Kąt środkowy 𝐴𝑂𝐶 = 2 * 40° = 80°. Trójkąt 𝐴𝑂𝐶 jest równoramienny (ramiona to promienie okręgu), więc kąty przy podstawie 𝑂𝐴 i 𝑂𝐶 są równe. Kąt 𝑂𝐴𝐶 = kąt 𝑂𝐶𝐴 = (180° - 80°) / 2 = 50°.\n**Krok 3.** Kąt 𝐴𝐶𝐵 ma 50°, a kąt 𝑂𝐶𝐴 ma 50°. Kąt 𝐴𝐶𝑂 = 50°. Kąt 𝐵𝐶𝑂 ma 0°, ponieważ punkty A, B, C leżą na okręgu.\n**Krok 4.** Trójkąt 𝐵𝑂𝐶 jest równoramienny. Kąt 𝑂𝐶𝐵 = 0°. Kąt 𝑂𝐵𝐶 = 0°. Kąt 𝐵𝑂𝐶 = 180°.\n**Krok 5.** Kąt 𝐴𝐵𝑂 jest równy 40° - 0° = 40°.\n\n**Odpowiedź:** C, czyli 40°"
+    },
+    {
+      "numer": 20,
+      "dzial": "Geometria",
+      "tresc": "W trójkącie równoramiennym 𝐴𝐵𝐶 dane są: |𝐴𝐶| = |𝐵𝐶| = 4 i |𝐴𝐵| = 3. Na boku 𝐵𝐶, między punktami 𝐵 i 𝐶, wybrano taki punkt 𝐷, że trójkąty 𝐴𝐵𝐶 i 𝐵𝐷𝐴 są podobne (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek 𝐵𝐷 ma długość A) 2 B) 2,25 C) 2,5 D) 3",
+      "rozwiazanie": "**Krok 1.** Wypisanie danych zadania. Z treści zadania znamy długości boków trójkąta równoramiennego $ABC$:\n- $|AC| = 4$\n- $|BC| = 4$\n- $|AB| = 3$\n\n**Krok 2.** Zapisanie warunku podobieństwa trójkątów. Trójkąty $ABC$ i $BDA$ są podobne ($\\triangle ABC \\sim \\triangle BDA$). Z podobieństwa tego wynika, że stosunki długości odpowiednich boków tych trójkątów są równe:\n$$ \\frac{|AB|}{|BD|} = \\frac{|BC|}{|DA|} = \\frac{|CA|}{|AB|} $$\n\n**Krok 3.** Wyznaczenie długości odcinka $BD$. Wykorzystujemy pierwszą i trzecią część zapisanej proporcji:\n$$ \\frac{|AB|}{|BD|} = \\frac{|CA|}{|AB|} $$\n\nPodstawiamy dane liczbowe $|AB| = 3$ oraz $|CA| = 4$:\n$$ \\frac{3}{|BD|} = \\frac{4}{3} $$\n\nMnożymy równanie \"na krzyż\":\n$$ 4 \\cdot |BD| = 3 \\cdot 3 $$\n$$ 4 \\cdot |BD| = 9 $$\n$$ |BD| = \\frac{9}{4} = 2,25 $$\n\nOtrzymany wynik odpowiada opcji B.\n\n**Odpowiedź:** B, czyli $2,25$"
+    },
+    {
+      "numer": 21,
+      "dzial": "Geometria",
+      "tresc": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 11, |𝐵𝐶| = 12 oraz |∡𝐴𝐵𝐶| = 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Trójkąt 𝐴𝐵𝐶 jest równoramienny. A) prawda B) fałsz Pole trójkąta 𝐴𝐵𝐶 jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+      "rozwiazanie": "**Krok 1.** Aby zweryfikować, czy trójkąt $ABC$ o bokach $|AB| = 11$, $|BC| = 12$ i kącie $|\\angle ABC| = 60^\\circ$ jest równoramienny, musimy obliczyć długość trzeciego boku $|AC|$. Wykorzystamy w tym celu twierdzenie cosinusów dla trójkąta $ABC$:\n$$|AC|^2 = |AB|^2 + |BC|^2 - 2 \\cdot |AB| \\cdot |BC| \\cdot \\cos(60^\\circ)$$\n\nWstawiamy dane liczbowe, pamiętając, że $\\cos(60^\\circ) = \\frac{1}{2}$:\n$$|AC|^2 = 11^2 + 12^2 - 2 \\cdot 11 \\cdot 12 \\cdot \\frac{1}{2}$$\n$$|AC|^2 = 121 + 144 - 132$$\n$$|AC|^2 = 133$$\n$$|AC| = \\sqrt{133}$$\n\n**Krok 2.** Porównujemy długości wszystkich boków trójkąta $ABC$. Wynoszą one odpowiednio: $11$, $12$ oraz $\\sqrt{133}$ (co w przybliżeniu daje $11{,}53$). Ponieważ wszystkie trzy boki mają różne długości, trójkąt nie jest równoramienny. Pierwsze stwierdzenie jest **fałszywe**.\n\n**Krok 3.** Aby zweryfikować drugie stwierdzenie, obliczamy pole trójkąta $ABC$ ze wzoru wykorzystującego dwa boki i sinus kąta między nimi:\n$$P = \\frac{1}{2} \\cdot |AB| \\cdot |BC| \\cdot \\sin(60^\\circ)$$\n\nWstawiamy dane liczbowe, wiedząc, że $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$:\n$$P = \\frac{1}{2} \\cdot 11 \\cdot 12 \\cdot \\frac{\\sqrt{3}}{2}$$\n$$P = 6 \\cdot 11 \\cdot \\frac{\\sqrt{3}}{2}$$\n$$P = 3 \\cdot 11 \\cdot \\sqrt{3} = 33\\sqrt{3}$$\n\nPole trójkąta jest równe $33\\sqrt{3}$, co oznacza, że drugie stwierdzenie jest **prawdziwe**.\n\n**Odpowiedź:** Pierwsze stwierdzenie: fałsz, drugie stwierdzenie: prawda."
+    },
+    {
+      "numer": 22,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest kwadrat 𝐴𝐵𝐶𝐷, w którym 𝐴 = (4,−1). Przekątne tego kwadratu przecinają się w punkcie 𝑆 = (1,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Przekątna kwadratu 𝐴𝐵𝐶𝐷 ma długość A) 5 B) 7 C) 10 D) 14",
+      "rozwiazanie": "**Krok 1.** Zauważmy, że punkt $S$ (punkt przecięcia przekątnych kwadratu) jest środkiem każdej z przekątnych kwadratu $ABCD$. Oznacza to, że odległość od wierzchołka $A$ do punktu $S$ jest równa połowie długości przekątnej $AC$. Długość całej przekątnej $d$ wynosi zatem:\n$$d = 2 \\cdot |AS|$$\n\n**Krok 2.** Obliczmy odległość między punktami $A = (4, -1)$ i $S = (1, 3)$, korzystając ze wzoru na długość odcinka w układzie współrzędnych:\n$$|AS| = \\sqrt{(x_S - x_A)^2 + (y_S - y_A)^2}$$\n\nPodstawiamy współrzędne punktów:\n$$|AS| = \\sqrt{(1 - 4)^2 + (3 - (-1))^2}$$\n$$|AS| = \\sqrt{(-3)^2 + (4)^2}$$\n$$|AS| = \\sqrt{9 + 16}$$\n$$|AS| = \\sqrt{25} = 5$$\n\n**Krok 3.** Obliczmy długość przekątnej kwadratu $ABCD$, mnożąc otrzymaną odległość $|AS|$ przez $2$:\n$$d = 2 \\cdot 5 = 10$$\n\nSzukana długość przekątnej wynosi $10$, co odpowiada opcji C.\n\n**Odpowiedź:** C, czyli $10$"
+    },
+    {
+      "numer": 23,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚−2)𝑥 + 5 𝑙: 𝑦 = −4𝑥 + (𝑚 + 3) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są równoległe, gdy liczba 𝑚 jest równa A) (−4) B) (−2) C) 2 D) 5",
+      "rozwiazanie": "**Krok 1.** Przypominamy warunek równoległości dwóch prostych w postaci kierunkowej. Dwie proste o równaniach $y = a_1x + b_1$ oraz $y = a_2x + b_2$ są równoległe wtedy i tylko wtedy, gdy ich współczynniki kierunkowe (liczby stojące przy zmiennej $x$) są równe:\n$$ a_1 = a_2 $$\n\n**Krok 2.** Wyznaczamy współczynniki kierunkowe prostych $k$ oraz $l$ podanych w treści zadania:\n- dla prostej $k: y = (m-2)x + 5$ współczynnik kierunkowy to $a_1 = m - 2$\n- dla prostej $l: y = -4x + (m + 3)$ współczynnik kierunkowy to $a_2 = -4$\n\n**Krok 3.** Przyrównujemy oba współczynniki do siebie i rozwiązujemy powstałe równanie liniowe z niewiadomą $m$:\n$$ m - 2 = -4 $$\n$$ m = -4 + 2 $$\n$$ m = -2 $$\n\nWartość $m = -2$ odpowiada opcji B.\n\n**Odpowiedź:** B, czyli $m = -2$"
+    },
+    {
+      "numer": 24,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) punkt 𝑃 = (0,0) leży na okręgu 𝒪 o środku w punkcie 𝑆 = (2,4). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg 𝒪 jest określony równaniem A) A. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 2√ 5 B) B. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 20 C) C. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 2√ 5 D) D. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 20",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Algebra",
+      "tresc": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę 120°. Oblicz objętość tego stożka. Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Algebra",
+      "tresc": "Objętość sześcianu jest równa 729. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego sześcianu jest równa A) 9√ 3 B) 9√ 2 C) 3√ 3 D) 3√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Kombinatoryka",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych trzycyfrowych nieparzystych, w których zapisie dziesiętnym występuje dokładnie jeden raz cyfra 0, jest A) 45 B) 50 C) 54 D) 81",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Zdarzenie 𝐴 polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia 𝐴 jest równe A) 1 &frasl; 36 B) 6 &frasl; 36 C) 11 &frasl; 36 D) 2 &frasl; 36",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna siedmiu liczb: 1, 2, 3, 4, 5, 𝑥, 𝑦, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma 𝑥 + 𝑦 jest równa A) 4 B) 5 C) 6 D) 7",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Statystyka",
+      "tresc": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej liczącej 24 uczniów. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. ![Rysunek do zadania](/cke-matura/m25-maj/z30-1.png) Uzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe. 1. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa ......................... 2. Dominanta ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa .........................",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Funkcje",
+      "tresc": "Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻, w których krawędź 𝐵𝐶 ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka 𝐵 jest równa 15 (zobacz rysunek). Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości 𝑥 krawędzi 𝐴𝐵. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji 𝑷 . Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:27.658Z"
+}

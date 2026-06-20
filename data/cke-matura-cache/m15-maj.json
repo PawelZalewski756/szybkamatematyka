@@ -1,0 +1,213 @@
+{
+  "sessionId": "m15-maj",
+  "nazwa": "Matura — maj 2015 — poziom podstawowy",
+  "rok": 2015,
+  "miesiac": 5,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności – 4 ≤ x – 1 ≤ 4. A) ![Rysunek do zadania](/cke-matura/m15-maj/z01-1.jpg) B) ![Rysunek do zadania](/cke-matura/m15-maj/z01-2.jpg) C) ![Rysunek do zadania](/cke-matura/m15-maj/z01-3.jpg) D) ![Rysunek do zadania](/cke-matura/m15-maj/z01-4.jpg)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Dane są liczby ![Rysunek do zadania](/cke-matura/m15-maj/z02-1.png) . Iloczyn abc jest równy A) – 9 B) – ⅓ C) ⅓ D) 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Statystyka",
+      "tresc": "Kwotę 1000 zł ulokowano w banku na roczną lokatę oprocentowaną w wysokości 4% w stosunku rocznym. Po zakończeniu lokaty od naliczonych odsetek odprowadzany jest podatek w wysokości 19%. Maksymalna kwota, jaką po upływie roku będzie można wypłacić z banku, jest równa A) ![Rysunek do zadania](/cke-matura/m15-maj/z03-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z03-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z03-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z03-4.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Równość ![Rysunek do zadania](/cke-matura/m15-maj/z04-1.png) zachodzi dla A) m = 5 B) m = 4 C) m = 1 D) m = – 5",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Funkcje",
+      "tresc": "Układ równań ![Rysunek do zadania](/cke-matura/m15-maj/z05-1.png) opisuje w układzie współrzędnych na płaszczyźnie A) zbiór pusty B) dokładnie jeden punkt C) dokładnie dwa różne punkty D) zbiór nieskończony",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Suma wszystkich pierwiastków równania ( x + 3)( x + 7)( x – 11) = 0 jest równa A) – 1 B) 21 C) 1 D) – 21",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Równanie ![Rysunek do zadania](/cke-matura/m15-maj/z07-1.png) A) ma dokładnie jedno rozwiązanie: x = 1 B) ma dokładnie jedno rozwiązanie: x = 0 C) ma dokładnie jedno rozwiązanie: x = − 1 D) ma dokładnie dwa rozwiązania: x = 0 , x = 1",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m15-maj/z08-1.png) Zbiorem wartości funkcji ƒ jest A) (–2,2) B) &lang;–2,2) C) &lang;–2,2&rang; D) (–2,2&rang;",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Na wykresie funkcji liniowej określonej wzorem &fnof;( x ) = ( m − 1) x + 3 leży punkt S = (5, −2) . Zatem A) m = − 1 B) m = 0 C) m = 1 D) m = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja liniowa &fnof; określona wzorem &fnof;( x ) = 2 x + b ma takie samo miejsce zerowe, jakie ma funkcja liniowa g ( x ) = −3 x + 4. Stąd wynika, że A) b = 4 B) b = – 3 &frasl; 2 C) b = – 8 &frasl; 3 D) b = 4 &frasl; 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa określona jest wzorem &fnof;( x ) = x 2 + x + c . Jeżeli &fnof;(3) = 4, to A) &fnof;(1) = − 6 B) &fnof;(1) = 0 C) &fnof;(1) = 6 D) &fnof;(1) = 18",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Równania",
+      "tresc": "Ile liczb całkowitych x spełnia nierówność ![Rysunek do zadania](/cke-matura/m15-maj/z12-1.png) ? A) 14 B) 15 C) 16 D) 17",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Ciągi",
+      "tresc": "W rosnącym ciągu geometrycznym ( a n ) , określonym dla n ≥ 1, spełniony jest warunek a 4 = 3 a 1 . Iloraz q tego ciągu jest równy A) ![Rysunek do zadania](/cke-matura/m15-maj/z13-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z13-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z13-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z13-4.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Algebra",
+      "tresc": "Tangens kąta α zaznaczonego na rysunku jest równy ![Rysunek do zadania](/cke-matura/m15-maj/z14-1.png) A) ![Rysunek do zadania](/cke-matura/m15-maj/z14-2.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z14-3.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z14-4.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z14-5.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Trygonometria",
+      "tresc": "Jeżeli 0° oraz tg α = 2sin α, to A) ![Rysunek do zadania](/cke-matura/m15-maj/z15-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z15-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z15-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z15-4.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Geometria",
+      "tresc": "Miara kąta wpisanego w okrąg jest o 20° mniejsza od miary kąta środkowego opartego na tym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa A) 5° B) 10° C) 20° D) 30°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Geometria",
+      "tresc": "Pole rombu o obwodzie 8 jest równe 1. Kąt ostry tego rombu ma miarę α. Wtedy A) 14° B) 29° C) 60° D) 75°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Równania",
+      "tresc": "Prosta l o równaniu y = m 2 x + 3 jest równoległa do prostej k o równaniu y = (4 m − 4) x − 3. Zatem A) m = 2 B) m = − 2 C) m = − 2 − 2√ 2 D) m = 2 + 2√ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach: y = 2 mx − m 2 − 1 oraz y = 4 m 2 x + m 2 + 1 są prostopadłe dla A) m = − 1 &frasl; 2 B) m = 1 &frasl; 2 C) m = 1 D) m = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Funkcje",
+      "tresc": "Dane są punkty M = (− 2,1) i N = (− 1,3) . Punkt K jest środkiem odcinka MN . Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt A) ![Rysunek do zadania](/cke-matura/m15-maj/z20-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z20-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z20-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z20-4.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Geometria",
+      "tresc": "W graniastosłupie prawidłowym czworokątnym EFGHIJKL wierzchołki E , G , L połączono odcinkami (tak jak na rysunku). ![Rysunek do zadania](/cke-matura/m15-maj/z21-1.gif) Wskaż kąt między wysokością OL trójkąta EGL i płaszczyzną podstawy tego graniastosłupa. A) ∢ HOL B) ∢ OGL C) ∢ HLO D) ∢ OHL",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "Przekrojem osiowym stożka jest trójkąt równoboczny o boku długości 6. Objętość tego stożka jest równa A) 27π√ 3 B) 9π√ 3 C) 18π D) 6π",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Geometria",
+      "tresc": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe A) ![Rysunek do zadania](/cke-matura/m15-maj/z23-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z23-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z23-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z23-4.gif)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Statystyka",
+      "tresc": "Średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9 jest taka sama jak średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9, x . Wynika stąd, że A) x = 0 B) x = 3 C) x = 5 D) x = 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga – niebieska. Z każdego pojemnika losujemy jedną kulę. Niech p oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy A) p = 1 &frasl; 4 B) p = 3 &frasl; 8 C) p = 1 &frasl; 2 D) p = 2 &frasl; 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 2 x 2 − 4 x > ( x + 3)( x − 2) .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y prawdziwa jest nierówność 4 x 2 −8 xy + 5 y 2 ≥ 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków – odpowiednio – AE i EC . Punkty L i N leżą na przekątnej BD tak, że | BL | = 1 &frasl; 3 | BE | i | DN | = 1 &frasl; 3 | DE | (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Funkcje",
+      "tresc": "Oblicz najmniejszą i największą wartość funkcji kwadratowej &fnof;( x ) = x 2 − 6 x + 3 w przedziale &lang;0,4&rang;.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Funkcje",
+      "tresc": "W układzie współrzędnych są dane punkty A = (−43,−12) , B = (50,19) . Prosta AB przecina oś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Algebra",
+      "tresc": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy 4 &frasl; 7 , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy 1 &frasl; 2 . Wyznacz ten ułamek.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Trygonometria",
+      "tresc": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3 &frasl; 5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Wśród 115 osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Statystyka",
+      "tresc": "W nieskończonym ciągu arytmetycznym ( a n ) , określonym dla n ≥ 1 , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy a 1 , a 3 , a k ciągu ( a n ), w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny ( b n ). Oblicz k . <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:02:15.326Z"
+}

@@ -1,0 +1,213 @@
+{
+  "sessionId": "m20-czerwiec",
+  "nazwa": "Matura — czerwiec 2020 — poziom podstawowy",
+  "rok": 2020,
+  "miesiac": 6,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Wartość wyrażenia x 2 − 6x + 9 dla x = √ 3 + 3 jest równa A) 1 B) 3 C) 1 + 2√ 3 D) 1 – 2√ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m20-czerwiec/z02-1.png) jest równa A) 6 70 B) 6 45 C) 2 30 · 3 20 D) 2 10 · 3 20",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Potęgi",
+      "tresc": "Liczba log 5 √ 125 jest równa A) 2 &frasl; 3 B) 2 C) 3 D) 3 &frasl; 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Cenę x pewnego towaru obniżono o 20% i otrzymano cenę y. Aby przywrócić cenę x, nową cenę y należy podnieść o A) 25% B) 20% C) 15% D) 12%",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Zbiorem wszystkich rozwiązań nierówności 3(1 − x) > 2(3x − 1) − 12x jest przedział A) (– 5 &frasl; 3 , + ∞) B) ( – ∞, 5 &frasl; 3 ) C) ( 5 &frasl; 3 , + ∞) D) ( – ∞, – 5 &frasl; 3 )",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Funkcje",
+      "tresc": "Suma wszystkich rozwiązań równania x(x − 3)(x + 2) = 0 jest równa A) 0 B) 1 C) 2 D) 3 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Funkcje",
+      "tresc": "Współczynnik a we wzorze funkcji &fnof; jest równy A) 1 B) 2 C) − 2 D) − 1 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Funkcje",
+      "tresc": "Największa wartość funkcji &fnof; w przedziale &lang;1,4&rang; jest równa A) − 3 B) 0 C) 1 D) 2 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Funkcje",
+      "tresc": "Osią symetrii paraboli będącej wykresem funkcji &fnof; jest prosta o równaniu A) x = 1 B) x = 2 C) y = 1 D) y = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Równania",
+      "tresc": "Równanie x(x − 2) = (x − 2) 2 w zbiorze liczb rzeczywistych A) nie ma rozwiązań B) ma dokładnie jedno rozwiązanie: x = 2 C) ma dokładnie jedno rozwiązanie: x = 0 D) ma dwa różne rozwiązania: x = 1 i x = 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku przedstawiono fragment wykresu funkcji liniowej &fnof; określonej wzorem &fnof;(x) = ax + b . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z11-1.png) Współczynniki a oraz b we wzorze funkcji &fnof; spełniają zależność A) a + b > 0 B) a + b = 0 C) a ⋅ b > 0 D) a ⋅ b",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja &fnof; jest określona wzorem &fnof;(x) = 4 –x + 1 dla każdej liczby rzeczywistej x. Liczba &fnof;(½) jest równa A) ½ B) 3 &frasl; 2 C) 3 D) 17",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Równania",
+      "tresc": "Proste o równaniach y = (m − 2)x oraz y = 3 &frasl; 4 x + 7 są równoległe. Wtedy A) m = − 5 &frasl; 4 B) m = 2 &frasl; 3 C) m = 11 &frasl; 4 D) m = 10 &frasl; 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "Ciąg (a n ) jest określony wzorem a n = 2n 2 dla n ≥ 1 . Różnica a 5 − a 4 jest równa A) 4 B) 20 C) 36 D) 18",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Ciągi",
+      "tresc": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , czwarty wyraz jest równy 3, a różnica tego ciągu jest równa 5. Suma a 1 + a 2 + a 3 + a 4 jest równa A) − 42 B) − 36 C) − 18 D) 6",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Funkcje",
+      "tresc": "Punkt A = ( 1 &frasl; 3 , − 1) należy do wykresu funkcji liniowej &fnof; określonej wzorem &fnof;(x) = 3x + b . Wynika stąd, że A) b = 2 B) b = 1 C) b = − 1 D) b = − 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Algebra",
+      "tresc": "Punkty A, B, C, D leżą na okręgu o środku w punkcie O. Kąt środkowy DOC ma miarę 118° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z17-1.png) Miara kąta ABC jest równa A) 59° B) 48° C) 62° D) 31°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Równania",
+      "tresc": "Prosta przechodząca przez punkty A = (3, −2) i B = (−1, 6) jest określona równaniem A) y = − 2x + 4 B) y = − 2x − 8 C) y = 2x + 8 D) y = 2x − 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Trygonometria",
+      "tresc": "Dany jest trójkąt prostokątny o kątach ostrych α i β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z19-1.png) Wyrażenie 2cos α − sin β jest równe A) 2sin β B) cos α C) 0 D) 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Funkcje",
+      "tresc": "Punkt B jest obrazem punktu A = (− 3, 5) w symetrii względem początku układu współrzędnych. Długość odcinka AB jest równa A) 2√ 34 B) 8 C) √ 34 D) 12",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Kombinatoryka",
+      "tresc": "Ile jest wszystkich dwucyfrowych liczb naturalnych utworzonych z cyfr: 1, 3, 5, 7, 9, w których cyfry się nie powtarzają? A) 10 B) 15 C) 20 D) 25",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Geometria",
+      "tresc": "Pole prostokąta ABCD jest równe 90. Na bokach AB i CD wybrano – odpowiednio – punkty P i R, takie, że ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-2.png) Pole czworokąta APCR jest równe A) 36 B) 40 C) 54 D) 60",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Statystyka",
+      "tresc": "Cztery liczby: 2, 3, a, 8, tworzące zestaw danych, są uporządkowane rosnąco. Mediana tego zestawu czterech danych jest równa medianie zestawu pięciu danych: 5, 3, 6, 8, 2. Zatem A) a = 7 B) a = 6 C) a = 5 D) a = 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Geometria",
+      "tresc": "Przekątna sześcianu ma długość 4√ 3 . Pole powierzchni tego sześcianu jest równe A) 96 B) 24√ 3 C) 192 D) 16√ 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Algebra",
+      "tresc": "Dwa stożki o takich samych podstawach połączono podstawami w taki sposób jak na rysunku. Stosunek wysokości tych stożków jest równy 3:2. Objętość stożka o krótszej wysokości jest równa 12 cm 3 . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z25-1.png) Objętość bryły utworzonej z połączonych stożków jest równa A) 20 cm 3 B) 30 cm 3 C) 39 cm 3 D) 52,5 cm 3",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż nierówność 2(x − 1)(x + 3) > x − 1 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 27,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie (x 2 − 1)(x 2 − 2x) = 0.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 28,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdych dwóch różnych liczb rzeczywistych a i b prawdziwa jest nierówność a(a − 2b) + 2b 2 > 0 .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 29,
+      "dzial": "Algebra",
+      "tresc": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz |CE| = 3 &frasl; 4 |CD| . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że |CF| = 9 &frasl; 16 |CB|.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 30,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "Rzucamy dwa razy symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że co najmniej jeden raz wypadnie ścianka z pięcioma oczkami.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 31,
+      "dzial": "Algebra",
+      "tresc": "Kąt α jest ostry i spełnia warunek ![Rysunek do zadania](/cke-matura/m20-czerwiec/z31-1.png) Oblicz tangens kąta α .",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 32,
+      "dzial": "Funkcje",
+      "tresc": "Dany jest kwadrat ABCD, w którym A = (5, − 5 &frasl; 3 ). Przekątna BD tego kwadratu jest zawarta w prostej o równaniu y = 4 &frasl; 3 x. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 33,
+      "dzial": "Ciągi",
+      "tresc": "Wszystkie wyrazy ciągu geometrycznego (a n ), określonego dla n ≥ 1 , są dodatnie. Wyrazy tego ciągu spełniają warunek 6a 1 − 5a 2 + a 3 = 0 . Oblicz iloraz q tego ciągu należący do przedziału &lang;2√ 2 ,3√ 2 &rang;.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 34,
+      "dzial": "Geometria",
+      "tresc": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy √ 7 . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png) <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:55.819Z"
+}

@@ -1,0 +1,165 @@
+{
+  "sessionId": "m23-probna-ix",
+  "nazwa": "Matura — próbna wrzesień 2023 — poziom podstawowy",
+  "rok": 2023,
+  "miesiac": 9,
+  "tasks": [
+    {
+      "numer": 1,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia (1 + 3 ⋅ 2 −1 ) −2 jest równa A) 25 ⁄ 4 B) 4 ⁄ 25 C) 36 ⁄ 49 D) 40 ⁄ 9",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 2,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia ![Rysunek do zadania](/cke-matura/m23-probna-ix/z02-1.jpg) jest równa A) 1 B) 5 C) 10 D) 25",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 3,
+      "dzial": "Kombinatoryka",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich różnych liczb naturalnych czterocyfrowych, które są nieparzyste i podzielne przez 25, jest A) 9 ⋅ 9 ⋅ 2 B) 9 ⋅ 10 ⋅ 2 C) 9 ⋅ 9 ⋅ 4 D) 9 ⋅ 10 ⋅ 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 4,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x ≠ 1 wyrażenie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-1.jpg) jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-2.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-3.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-4.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-5.jpg)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 5,
+      "dzial": "Algebra",
+      "tresc": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych. Dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y wyrażenie 9 − ( x 2 − 2 xy + y 2 ) jest równe A) [3 − (x − 2y)] 2 B) [3 + (x − 2y)] 2 C) [3 − (x + 2y)] 2 D) [3 − (x − y)] ⋅ [3 + (x − y)] E) [3 − (x + 2y)] ⋅ [3 + (x + 2y)] F) −[(x − y) − 3] ⋅ [(x − y) + 3]",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 6,
+      "dzial": "Równania",
+      "tresc": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z06-1.jpg) Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 7,
+      "dzial": "Równania",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z07-1.jpg) ma w zbiorze liczb rzeczywistych dokładnie A) jedno rozwiązanie: x = −3. B) dwa rozwiązania: x = −3, x = 0. C) trzy rozwiązania: x = −3, x = −1, x = 0. D) cztery rozwiązania: x = −3, x = −1, x = 0, x = 1.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 8,
+      "dzial": "Algebra",
+      "tresc": "Spośród nierówności A–D wybierz tę, której zbiór wszystkich rozwiązań zaznaczono na osi liczbowej. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z08-1.jpg) A) |x + 2| ≤ 2 B) |x − 2| ≤ 2 C) |x + 2| ≥ 2 D) |x − 2| ≥ 2",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 9,
+      "dzial": "Algebra",
+      "tresc": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów 100-złotowych było dwa razy więcej niż 50-złotowych , a banknotów 20-złotowych było o 2 mniej niż 50-złotowych . Niech x oznacza liczbę banknotów 50-złotowych , a y – liczbę banknotów 20-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-1.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-2.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-3.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-4.jpg)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 10,
+      "dzial": "Funkcje",
+      "tresc": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji &fnof; określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji &fnof;. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja &fnof; przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja &fnof; ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji &fnof; w przedziale [−4,0] jest równa A) (−4) B) (−3) C) (−2) D) 0",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 11,
+      "dzial": "Funkcje",
+      "tresc": "W kartezjańskim układzie współrzędnych ( x , y ) dane są: punkt A = (8,11) oraz okrąg o równaniu ( x − 3) 2 + ( y + 1) 2 = 25. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa A) 25 B) 13 C) √ 125 D) √ 265",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 12,
+      "dzial": "Funkcje",
+      "tresc": "Basen ma długość 25 m. W najpłytszym miejscu jego głębokość jest równa 1,2 m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku. Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją: ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-1.jpg) Odległość x jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości x i y są wyrażone w metrach. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-2.jpg) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa głębokość basenu jest równa A) 5,4 m B) 3,6 m C) 2,2 m D) 1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 13,
+      "dzial": "Funkcje",
+      "tresc": "Funkcja kwadratowa &fnof; jest określona wzorem &fnof;( x ) = −( x − 1) 2 + 2. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji &fnof; jest parabola, której wierzchołek ma współrzędne A) (1,2) B) (−1,2) C) (1,−2) D) (−1,−2) Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji &fnof; jest przedział A) (−∞,2] B) (−∞,2) C) (2,+∞) D) [2,+∞)",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 14,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-1.jpg) określony wzorem ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-2.jpg) dla każdej liczby naturalnej ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-3.jpg) . Zadanie 14.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pięćdziesiątym wyrazem ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-4.jpg) jest A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-5.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-6.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-7.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-8.jpg) Zadanie 14.2. Oceń prawdziwość poniższych stwierdzeń. Ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-9.jpg) jest geometryczny. A) prawda B) fałsz Suma trzech początkowych wyrazów ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-10.jpg) jest równa 20. A) prawda B) fałsz",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 15,
+      "dzial": "Funkcje",
+      "tresc": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych ( x , y ) , dana jest prosta k o równaniu y = 3 x + b , przechodząca przez punkt A = (−1,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik b w równaniu tej prostej jest równy A) 0 B) 6 C) (−10) D) 8",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 16,
+      "dzial": "Ciągi",
+      "tresc": "Dany jest ciąg ( a n ) określony wzorem a n = 3 n − 1 dla każdej liczby naturalnej n ≥ 1. Zadanie 16.1. Dokończ zdanie tak, aby było prawdziwe. Ciąg ( a n ) jest A) rosnący, B) malejący, C) stały, ponieważ dla każdej liczby naturalnej n ≥ 1 A) a n+1 − a n = −1 B) a n+1 − a n = 0 C) a n+1 − a n = 3 Zadanie 16.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejszą wartością n , dla której wyraz a n jest większy od 25, jest A) 8 B) 9 C) 7 D) 26 Zadanie 16.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma n początkowych wyrazów ciągu ( a n ) jest równa 57 dla n równego A) 6 B) 23 C) 5 D) 11",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 17,
+      "dzial": "Funkcje",
+      "tresc": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych ( x , y ), dane są: prosta k o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-1.jpg) prosta l o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-2.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k i l A) się pokrywają. B) nie mają punktów wspólnych. C) są prostopadłe. D) przecinają się pod kątem 30°.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 18,
+      "dzial": "Trygonometria",
+      "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia (1 − cos20°) ⋅ (1 + cos20°) − sin 2 20° jest równa A) (−1) B) 0 C) 1 D) 20",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 19,
+      "dzial": "Prawdopodobieństwo",
+      "tresc": "W pojemniku są wyłącznie kule białe i czerwone. Stosunek liczby kul białych do liczby kul czerwonych jest równy 4∶5 . Z pojemnika losujemy jedną kulę. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo wylosowania kuli białej jest równe A) 4 ⁄ 9 B) 4 ⁄ 5 C) 1 ⁄ 9 D) 1 ⁄ 4",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 20,
+      "dzial": "Trygonometria",
+      "tresc": "Punkty A , B oraz C leżą na okręgu o środku w punkcie O . Kąt ABO ma miarę 40°, a kąt OBC ma miarę 10° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z20-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ACO jest równa A) 30° B) 40° C) 50° D) 60°",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 21,
+      "dzial": "Trygonometria",
+      "tresc": "Dany jest trójkąt ABC o bokach długości 6, 7 oraz 8. Oblicz cosinus największego kąta tego trójkąta. Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 22,
+      "dzial": "Algebra",
+      "tresc": "W trójkącie ABC bok AB ma długość 4, a bok BC ma długość 4,6. Dwusieczna kąta ABC przecina bok AC w punkcie D takim, że | AD | = 3,2 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z22-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek CD ma długość A) 64 ⁄ 23 B) 16 ⁄ 5 C) 23 ⁄ 4 D) 92 ⁄ 25",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 23,
+      "dzial": "Ciągi",
+      "tresc": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że: przychód P (w złotych) z tygodniowej sprzedaży x wiatraków można opisać funkcją P ( x ) = 251 x koszt K (w złotych) produkcji x wiatraków w ciągu jednego tygodnia można określić funkcją K ( x ) = x 2 + 21 x + 170. Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków. Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 24,
+      "dzial": "Statystyka",
+      "tresc": "Firma ℱ zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano – wyrażoną w złotych – miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy ℱ, którzy otrzymują płacę miesięczną w danej wysokości. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z24-1.jpg) Zadanie 24.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia miesięczna płaca brutto w firmie ℱ jest równa A) 4 593,75 zł B) 4 800,00 zł C) 5 360,00 zł D) 2 399,33 zł Zadanie 24.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana miesięcznej płacy pracowników firmy ℱ jest równa A) 4 000 zł B) 4 800 zł C) 5 000 zł D) 5 500 zł Zadanie 24.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba pracowników firmy ℱ, których miesięczna płaca brutto nie przewyższa 5 000 zł, stanowi (w zaokrągleniu do 1%) A) 91% liczby wszystkich pracowników tej firmy. B) 78% liczby wszystkich pracowników tej firmy. C) 53% liczby wszystkich pracowników tej firmy. D) 22% liczby wszystkich pracowników tej firmy.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 25,
+      "dzial": "Geometria",
+      "tresc": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość 10√ 3 , a każda jego krawędź boczna ma długość 15. Oblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    },
+    {
+      "numer": 26,
+      "dzial": "Algebra",
+      "tresc": "Wykaż, że dla każdej liczby naturalnej n liczba 10 n 2 + 30 n + 8 przy dzieleniu przez 5 daje resztę 3. <ul class=\"",
+      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+    }
+  ],
+  "fetchedAt": "2026-05-24T14:01:40.355Z"
+}

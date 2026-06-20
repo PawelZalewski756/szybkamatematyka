@@ -1,0 +1,187 @@
+================================================================================
+  SZYBKA MATMA — instrukcja uruchomienia (Windows)
+  Projekt: Next.js 16 + Supabase + Gemini (opcjonalnie)
+================================================================================
+
+1. WYMAGANIA
+--------------------------------------------------------------------------------
+  - Node.js 20.9 lub nowszy  →  https://nodejs.org/
+  - npm (instaluje się z Node)
+  - Konto Supabase (darmowe)  →  https://supabase.com/dashboard
+  - Opcjonalnie: klucz Gemini API (Google AI Studio) — tylko admin / import CKE
+
+  Sprawdzenie wersji (cmd lub PowerShell):
+
+    node -v
+    npm -v
+
+
+2. PIERWSZE URUCHOMIENIE (jednorazowo)
+--------------------------------------------------------------------------------
+
+  a) Wejdź do folderu projektu:
+
+    cd C:\Users\Pawel\szybka-matma
+
+  b) Zainstaluj zależności:
+
+    npm install
+
+  c) Skonfiguruj zmienne środowiskowe:
+
+    - Skopiuj plik .env.example jako .env.local (w głównym folderze projektu)
+    - Uzupełnij co najmniej:
+
+        NEXT_PUBLIC_SUPABASE_URL=https://TWOJ-PROJEKT.supabase.co
+        NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+
+      Klucze: Supabase Dashboard → Project Settings → API
+
+    - Opcjonalnie (generowanie rozwiązań w panelu admin / import CKE):
+
+        GEMINI_API_KEY=...
+        GEMINI_MODEL=gemini-2.5-flash-lite
+
+    - Admin (panel /admin):
+
+        ADMIN_EMAILS=twoj@email.pl
+        NEXT_PUBLIC_ADMIN_EMAILS=twoj@email.pl
+
+  d) Baza danych Supabase (jednorazowo):
+
+    - Dashboard → SQL Editor
+    - Uruchom migracje z folderu supabase/migrations/ (kolejność w docs/DEPLOY.md)
+    - Minimum na start: supabase/migrations/init_baza_zadan.sql
+    - Szczegóły: supabase/README.md
+
+  e) Jeśli projekt Supabase był „Paused” — w dashboardzie kliknij Resume Project,
+     poczekaj ~2 minuty, potem dopiero uruchamiaj aplikację.
+
+
+3. URUCHOMIENIE LOKALNE (codzienna praca)
+--------------------------------------------------------------------------------
+
+  a) Serwer deweloperski:
+
+    cd C:\Users\Pawel\szybka-matma
+    npm run dev
+
+  b) Otwórz w przeglądarce:
+
+    http://localhost:3000
+
+  c) Jeśli port 3000 jest zajęty, Next.js wybierze inny (np. 3001).
+     Adres zobaczysz w terminalu po linii „Local:”.
+
+  d) Czysty start (gdy dziwne błędy JS / „Unexpected token ~”):
+
+    npm run dev:clean
+
+    Potem w przeglądarce: Ctrl+Shift+R (twarde odświeżenie)
+    Lub: DevTools → Application → Clear site data
+
+
+4. GŁÓWNE ADRESY W APLIKACJI
+--------------------------------------------------------------------------------
+
+  Strona główna .............. http://localhost:3000/
+  Arkusze CKE ................ http://localhost:3000/arkusze
+  Baza zadań ................. http://localhost:3000/baza-zadan
+  Trening .................... http://localhost:3000/trening
+  Minigry .................... http://localhost:3000/minigry
+  Logowanie .................. http://localhost:3000/login
+  Profil ..................... http://localhost:3000/profil
+  Panel admina ............... http://localhost:3000/admin
+
+
+5. WERSJA PRODUKCYJNA (lokalnie, test przed wdrożeniem)
+--------------------------------------------------------------------------------
+
+    npm run build
+    npm start
+
+  Aplikacja: http://localhost:3000
+
+
+6. PRZYDATNE KOMENDY
+--------------------------------------------------------------------------------
+
+  Testy jednostkowe:
+    npm test
+
+  Lint:
+    npm lint
+
+  Audyt jakości pytań (katalog lokalny):
+    npm run audit:questions
+
+  Audyt rozwiązań CKE (cache + Supabase):
+    npm run audit:cke
+
+  Uzupełnianie rozwiązań CKE (Gemini → cache + Supabase):
+    npm run seed:cke-solutions
+
+    (Wznawia od miejsca przerwania; na free tier Gemini ~20 żądań/dzień —
+     resztę dokończ kolejnego dnia tą samą komendą.)
+
+  Import wszystkich arkuszy CKE:
+    npm run seed:cke-matura
+
+  Seed testowy (3 zadania):
+    npm run seed:cke
+
+
+7. TYPOWE PROBLEMY
+--------------------------------------------------------------------------------
+
+  „Could not find the table public.zadania”
+    → Uruchom migracje SQL w Supabase (supabase/README.md).
+
+  Błędy logowania / ENOTFOUND / sieć
+    → Supabase projekt może być wstrzymany — Resume w dashboardzie.
+
+  „Zaloguj się” mimo że jesteś zalogowany
+    → Odśwież stronę (Ctrl+Shift+R) lub wyloguj i zaloguj ponownie.
+
+  Błędy chunków JS w dev (Unexpected token, ChunkLoadError)
+    → Zatrzymaj wszystkie npm run dev (Ctrl+C).
+    → npm run dev:clean
+    → Twarde odświeżenie przeglądarki.
+
+  Dwa serwery dev naraz (port 3000 i 3001)
+    → Zostaw tylko jeden terminal z npm run dev.
+
+  Brak rozwiązań przy zadaniu („Wkrótce”)
+    → Rozwiązania uzupełnia batch seed:cke-solutions, nie użytkownik w UI.
+
+
+8. STRUKTURA PLIKÓW (skrót)
+--------------------------------------------------------------------------------
+
+  .env.local          — klucze API (NIE commituj do git)
+  app/                — strony Next.js
+  components/         — komponenty React
+  lib/                — logika (Supabase, Gemini, zadania)
+  data/cke-matura-cache/ — cache arkuszy CKE (import Gemini)
+  supabase/migrations/ — SQL do bazy
+  instrukcje/         — ten folder z dokumentacją
+
+
+9. WDROŻENIE NA PRODUKCJĘ
+--------------------------------------------------------------------------------
+
+  Szczegółowa checklista: docs/DEPLOY.md
+
+  Skrót: Vercel + te same zmienne co w .env.local + migracje Supabase.
+
+
+10. KONTAKT / NOTATKI
+--------------------------------------------------------------------------------
+
+  Stripe (płatności) — na końcu; bez STRIPE_* aplikacja działa normalnie.
+
+  Generowanie AI dla uczniów — wyłączone; tylko admin + skrypty seed.
+
+================================================================================
+  Ostatnia aktualizacja: czerwiec 2026
+================================================================================
