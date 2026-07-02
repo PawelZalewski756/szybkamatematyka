@@ -19,7 +19,6 @@ export type MaterialRow = {
   title: string;
   content: string;
   video_url: string | null;
-  created_at: string | null;
 };
 
 function mapMaterial(row: MaterialRow): Material {
@@ -31,12 +30,11 @@ function mapMaterial(row: MaterialRow): Material {
     title: row.title,
     content: row.content,
     video_url: row.video_url,
-    created_at: row.created_at ?? undefined,
   };
 }
 
 const MATERIAL_SELECT =
-  "id, exam_type, category, topic, title, content, video_url, created_at";
+  "id, exam_type, category, topic, title, content, video_url";
 
 export async function fetchMaterialByTopic(
   examType: ExamType,
@@ -45,14 +43,14 @@ export async function fetchMaterialByTopic(
 ): Promise<Material | null> {
   const supabase = getSupabase();
 
-  // maybeSingle() rzuca PGRST116 przy duplikatach slugów — bierzemy najnowszy wiersz.
+  // limit(1): przy duplikatach slugów bierzemy jeden wiersz (najwyższy id).
   const { data, error } = await supabase
     .from("materials")
     .select(MATERIAL_SELECT)
     .eq("exam_type", examType)
     .eq("category", category)
     .eq("topic", topic)
-    .order("created_at", { ascending: false })
+    .order("id", { ascending: false })
     .limit(1);
 
   if (error) throw error;
