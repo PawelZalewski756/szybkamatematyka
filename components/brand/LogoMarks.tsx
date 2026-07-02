@@ -20,7 +20,7 @@ const SLATE = "#94a3b8";
 const WHITE = "#f8fafc";
 const BG = "#0a0f14";
 
-/** Znak marki — stoper z „=” zamiast tarczy (szybki licznik + matma). */
+/** Znak marki — stoper z „=” (szybki licznik + matma). Wyraźny na ciemnym tle. */
 export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
   const gid = useId().replace(/:/g, "");
   return (
@@ -33,27 +33,28 @@ export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps)
       aria-hidden
       {...props}
     >
-      <rect x="14" y="2" width="4" height="3" rx="1.5" fill={SLATE} fillOpacity="0.55" />
+      <rect x="13.5" y="1.5" width="5" height="3.5" rx="1.75" fill={TEAL} fillOpacity="0.9" />
       <path
-        d="M16 5.5V7.5"
-        stroke={SLATE}
-        strokeOpacity="0.35"
-        strokeWidth="1.25"
+        d="M16 5.25V7.75"
+        stroke={TEAL_LIGHT}
+        strokeOpacity="0.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
       />
       <circle
         cx="16"
-        cy="18"
-        r="12"
-        fill={BG}
-        stroke="rgba(20,184,166,0.45)"
-        strokeWidth="1.5"
+        cy="18.5"
+        r="11.5"
+        fill="#121a24"
+        stroke={TEAL}
+        strokeOpacity="0.75"
+        strokeWidth="2"
       />
-      <circle cx="16" cy="7.75" r="0.9" fill={SLATE} fillOpacity="0.35" />
-      <rect x="10" y="14.5" width="12" height="2" rx="1" fill={SLATE} fillOpacity="0.4" />
-      <rect x="10" y="19.5" width="12" height="2.5" rx="1.25" fill={`url(#${gid})`} />
+      <circle cx="16" cy="8.25" r="1" fill={TEAL_LIGHT} fillOpacity="0.85" />
+      <rect x="9.5" y="14.25" width="13" height="2.5" rx="1.25" fill={WHITE} fillOpacity="0.55" />
+      <rect x="9.5" y="19.25" width="13" height="3" rx="1.5" fill={`url(#${gid})`} />
       <defs>
-        <linearGradient id={gid} x1="10" y1="20.75" x2="22" y2="20.75">
+        <linearGradient id={gid} x1="9.5" y1="20.75" x2="22.5" y2="20.75">
           <stop stopColor={TEAL} />
           <stop offset="1" stopColor={TEAL_LIGHT} />
         </linearGradient>

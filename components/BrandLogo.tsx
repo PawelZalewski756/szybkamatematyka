@@ -24,7 +24,7 @@ export function BrandLogo({
   className = "",
   asLink = true,
   mark = DEFAULT_LOGO_MARK,
-  markSize = 28,
+  markSize = 32,
 }: BrandLogoProps) {
   const inner = (
     <span
