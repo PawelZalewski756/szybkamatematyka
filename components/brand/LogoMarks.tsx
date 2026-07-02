@@ -20,7 +20,7 @@ const SLATE = "#94a3b8";
 const WHITE = "#f8fafc";
 const BG = "#0a0f14";
 
-/** Znak marki — wykres w kwadracie (navbar, favicon, PWA). */
+/** Znak marki — stoper z „=” zamiast tarczy (szybki licznik + matma). */
 export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
   const gid = useId().replace(/:/g, "");
   return (
@@ -33,38 +33,27 @@ export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps)
       aria-hidden
       {...props}
     >
-      <rect
-        width="32"
-        height="32"
-        rx="8"
+      <rect x="14" y="2" width="4" height="3" rx="1.5" fill={SLATE} fillOpacity="0.55" />
+      <path
+        d="M16 5.5V7.5"
+        stroke={SLATE}
+        strokeOpacity="0.35"
+        strokeWidth="1.25"
+        strokeLinecap="round"
+      />
+      <circle
+        cx="16"
+        cy="18"
+        r="12"
         fill={BG}
-        stroke="rgba(20,184,166,0.35)"
-        strokeWidth="1"
-      />
-      <path
-        d="M9 23V14"
-        stroke={SLATE}
-        strokeOpacity="0.35"
+        stroke="rgba(20,184,166,0.45)"
         strokeWidth="1.5"
-        strokeLinecap="round"
       />
-      <path
-        d="M9 23H23"
-        stroke={SLATE}
-        strokeOpacity="0.35"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M11 20 L15 16 L18 18 L25 11"
-        stroke={`url(#${gid})`}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="25" cy="11" r="2" fill={TEAL_LIGHT} />
+      <circle cx="16" cy="7.75" r="0.9" fill={SLATE} fillOpacity="0.35" />
+      <rect x="10" y="14.5" width="12" height="2" rx="1" fill={SLATE} fillOpacity="0.4" />
+      <rect x="10" y="19.5" width="12" height="2.5" rx="1.25" fill={`url(#${gid})`} />
       <defs>
-        <linearGradient id={gid} x1="11" y1="20" x2="25" y2="11">
+        <linearGradient id={gid} x1="10" y1="20.75" x2="22" y2="20.75">
           <stop stopColor={TEAL} />
           <stop offset="1" stopColor={TEAL_LIGHT} />
         </linearGradient>

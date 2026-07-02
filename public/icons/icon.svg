@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Szybka Matematyka">
   <rect width="512" height="512" rx="112" fill="#0a0f14"/>
-  <rect x="48" y="48" width="416" height="416" rx="96" fill="none" stroke="#14b8a6" stroke-opacity="0.35" stroke-width="8"/>
-  <path d="M144 368V224" stroke="#64748b" stroke-opacity="0.35" stroke-width="24" stroke-linecap="round"/>
-  <path d="M144 368H368" stroke="#64748b" stroke-opacity="0.35" stroke-width="24" stroke-linecap="round"/>
-  <path d="M176 320 L240 256 L288 288 L400 176" stroke="url(#rise)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <circle cx="400" cy="176" r="28" fill="#5eead4"/>
+  <rect x="224" y="96" width="64" height="48" rx="24" fill="#94a3b8" fill-opacity="0.55"/>
+  <path d="M256 144V176" stroke="#94a3b8" stroke-opacity="0.35" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="256" cy="296" r="192" fill="#0a0f14" stroke="#14b8a6" stroke-opacity="0.45" stroke-width="24"/>
+  <circle cx="256" cy="152" r="14" fill="#94a3b8" fill-opacity="0.35"/>
+  <rect x="160" y="248" width="192" height="32" rx="16" fill="#94a3b8" fill-opacity="0.4"/>
+  <rect x="160" y="328" width="192" height="40" rx="20" fill="url(#eq)"/>
   <defs>
-    <linearGradient id="rise" x1="176" y1="320" x2="400" y2="176" gradientUnits="userSpaceOnUse">
+    <linearGradient id="eq" x1="160" y1="348" x2="352" y2="348" gradientUnits="userSpaceOnUse">
       <stop stop-color="#14b8a6"/>
       <stop offset="1" stop-color="#5eead4"/>
     </linearGradient>

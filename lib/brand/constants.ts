@@ -7,5 +7,5 @@ export const BRAND_NAME_SHORT = "Szybka Matma";
 /** Domyślna domena produkcyjna. */
 export const BRAND_DOMAIN = "szybkamatematyka.pl";
 
-/** Domyślny znak w logo i faviconie. */
+/** Domyślny znak w logo i faviconie (stoper z =). */
 export const DEFAULT_LOGO_MARK = "brand" as const;
