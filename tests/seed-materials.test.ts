@@ -19,12 +19,13 @@ describe("SEED_MATERIALS coverage", () => {
     }
   });
 
-  it("has full lessons for all seed topics", () => {
+  it("has full or comprehensive lessons for all seed topics", () => {
     for (const material of SEED_MATERIALS) {
+      const tier = classifyTheoryContent(material.content);
       expect(
-        classifyTheoryContent(material.content),
-        `${material.exam_type}/${material.category}/${material.topic}`,
-      ).toBe("full");
+        tier === "full" || tier === "comprehensive",
+        `${material.exam_type}/${material.category}/${material.topic} → ${tier}`,
+      ).toBe(true);
     }
   });
 });

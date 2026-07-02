@@ -1,4 +1,6 @@
 import type { ExamType } from "@/types/database";
+import { enrichTheoryLesson } from "@/lib/trening/seed/enrich-theory";
+import { EXPANDED_THEORY } from "@/lib/trening/seed/theory-expanded";
 
 export type MaterialDraft = {
   exam_type: ExamType;
@@ -9,7 +11,7 @@ export type MaterialDraft = {
   video_url: string | null;
 };
 
-export const SEED_MATERIALS: MaterialDraft[] = [
+const BASE_SEED_MATERIALS: MaterialDraft[] = [
   {
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",
@@ -1363,3 +1365,15 @@ export function materialKey(
 ): string {
   return `${m.exam_type}:${m.category}:${m.topic}`;
 }
+
+function applyTheoryEnhancements(m: MaterialDraft): MaterialDraft {
+  const key = materialKey(m);
+  const expanded = EXPANDED_THEORY[key];
+  const base = expanded
+    ? { ...m, title: expanded.title, content: expanded.content }
+    : m;
+  return { ...base, content: enrichTheoryLesson(base.content) };
+}
+
+export const SEED_MATERIALS: MaterialDraft[] =
+  BASE_SEED_MATERIALS.map(applyTheoryEnhancements);

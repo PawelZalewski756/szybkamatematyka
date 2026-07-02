@@ -242,6 +242,13 @@ function progressBarColor(percent: number): string {
 }
 
 function TheoryBadge({ tier }: { tier: TheoryTier }) {
+  if (tier === "comprehensive") {
+    return (
+      <span className="inline-flex rounded-full border border-teal-500/35 bg-teal-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-200">
+        Teoria · pełny kurs
+      </span>
+    );
+  }
   if (tier === "full") {
     return (
       <span className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">

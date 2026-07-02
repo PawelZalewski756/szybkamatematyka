@@ -1,4 +1,9 @@
-export type TheoryTier = "none" | "basic" | "full";
+import type { TheorySectionKind } from "@/lib/trening/theory-sections";
+import { SECTION_KIND_LABEL } from "@/lib/trening/theory-sections";
+
+export const COMPREHENSIVE_THEORY_MIN_LENGTH = 2500;
+
+export type TheoryTier = "none" | "basic" | "full" | "comprehensive";
 
 /** Pełna lekcja wg szablonu — ok. 500+ znaków lub sekcja „Na egzaminie”. */
 export const RICH_THEORY_MIN_LENGTH = 500;
@@ -9,6 +14,8 @@ export type MarkdownHeading = {
   level: 2 | 3;
   text: string;
   id: string;
+  /** Typ sekcji (moduł lekcji) — ustawiany przez parseTheorySections. */
+  kind?: TheorySectionKind;
 };
 
 export function slugifyHeading(text: string): string {
@@ -27,11 +34,25 @@ export function classifyTheoryContent(content: string | null | undefined): Theor
   if (!content?.trim()) return "none";
 
   const trimmed = content.trim();
+  if (trimmed.length >= COMPREHENSIVE_THEORY_MIN_LENGTH) return "comprehensive";
   if (trimmed.length >= RICH_THEORY_MIN_LENGTH) return "full";
   if (FULL_SECTION_MARKERS.some((marker) => trimmed.includes(marker))) {
     return "full";
   }
   return "basic";
+}
+
+export function theoryTierLabel(tier: TheoryTier): string {
+  switch (tier) {
+    case "comprehensive":
+      return "Teoria · pełny kurs";
+    case "full":
+      return "Teoria ✓";
+    case "basic":
+      return "Teoria · skrót";
+    default:
+      return "Teoria wkrótce";
+  }
 }
 
 export function extractMarkdownHeadings(content: string): MarkdownHeading[] {
@@ -61,3 +82,5 @@ export function extractMarkdownHeadings(content: string): MarkdownHeading[] {
 
   return headings;
 }
+
+export { SECTION_KIND_LABEL };

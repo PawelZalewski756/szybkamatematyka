@@ -2,10 +2,13 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { TaskArena } from "@/components/trening/TaskArena";
-import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { TheorySectionView } from "@/components/trening/TheorySectionView";
 import { TheoryTableOfContents } from "@/components/trening/TheoryTableOfContents";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
-import { extractMarkdownHeadings } from "@/lib/trening/theory-content";
+import {
+  parseTheorySections,
+  sectionsToHeadings,
+} from "@/lib/trening/theory-sections";
 import {
   parseYouTubeVideoId,
   youTubeEmbedUrl,
@@ -122,10 +125,11 @@ function TheoryTab({
   onRetry: () => void;
   onGoToArena: () => void;
 }) {
-  const headings = useMemo(
-    () => (material ? extractMarkdownHeadings(material.content) : []),
+  const sections = useMemo(
+    () => (material ? parseTheorySections(material.content) : []),
     [material],
   );
+  const headings = useMemo(() => sectionsToHeadings(sections), [sections]);
 
   if (loading) {
     return (
@@ -183,13 +187,18 @@ function TheoryTab({
           <h2 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
             {material.title}
           </h2>
+          {sections.length >= 2 && (
+            <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              {sections.length} modułów · kliknij sekcję w spisie treści
+            </p>
+          )}
           {headings.length >= 2 && (
             <div className="mt-4 lg:hidden">
               <TheoryTableOfContents headings={headings} />
             </div>
           )}
           <div className="mt-4">
-            <TheoryMarkdown content={material.content} />
+            <TheorySectionView content={material.content} />
           </div>
           {material.video_url && (
             <LessonVideoSection videoUrl={material.video_url} />

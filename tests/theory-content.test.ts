@@ -48,4 +48,8 @@ describe("classifyTheoryContent", () => {
     ).toBe("full");
     expect(classifyTheoryContent("x".repeat(500))).toBe("full");
   });
+
+  it("returns comprehensive for long lessons", () => {
+    expect(classifyTheoryContent("x".repeat(2500))).toBe("comprehensive");
+  });
 });
