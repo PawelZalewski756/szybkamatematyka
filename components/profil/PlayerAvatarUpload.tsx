@@ -87,6 +87,9 @@ export function PlayerAvatarUpload({
         className="sr-only"
         onChange={(e) => void handleFile(e.target.files?.[0])}
       />
+      <p className="mt-2 text-center text-xs font-semibold text-zinc-500">
+        Kliknij awatar, aby zmienić zdjęcie
+      </p>
     </div>
   );
 }
