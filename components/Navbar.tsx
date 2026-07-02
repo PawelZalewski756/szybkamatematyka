@@ -183,7 +183,7 @@ export function Navbar() {
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-4 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
       >
-        <BrandLogo compact={!isDesktopNav} className="min-w-0 shrink-0" />
+        <BrandLogo className="min-w-0 shrink-0" />
 
         {isDesktopNav ? (
           <>
@@ -193,7 +193,7 @@ export function Navbar() {
         ) : (
           <>
             <div className="min-w-0 flex-1" aria-hidden />
-            <NavbarPathSelect className="w-[min(100%,10.5rem)] shrink-0" />
+            <NavbarPathSelect className="w-[min(100%,9.5rem)] shrink-0 sm:w-[10.5rem]" />
           </>
         )}
 

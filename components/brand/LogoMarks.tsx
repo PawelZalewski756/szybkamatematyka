@@ -3,6 +3,7 @@
 import { useId, type SVGProps } from "react";
 
 export type LogoMarkVariant =
+  | "brand"
   | "bar"
   | "monogram"
   | "equal"
@@ -18,6 +19,59 @@ const TEAL_LIGHT = "#5eead4";
 const SLATE = "#94a3b8";
 const WHITE = "#f8fafc";
 const BG = "#0a0f14";
+
+/** Znak marki — wykres w kwadracie (navbar, favicon, PWA). */
+export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
+  const gid = useId().replace(/:/g, "");
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      className={className}
+      aria-hidden
+      {...props}
+    >
+      <rect
+        width="32"
+        height="32"
+        rx="8"
+        fill={BG}
+        stroke="rgba(20,184,166,0.35)"
+        strokeWidth="1"
+      />
+      <path
+        d="M9 23V14"
+        stroke={SLATE}
+        strokeOpacity="0.35"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M9 23H23"
+        stroke={SLATE}
+        strokeOpacity="0.35"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M11 20 L15 16 L18 18 L25 11"
+        stroke={`url(#${gid})`}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="25" cy="11" r="2" fill={TEAL_LIGHT} />
+      <defs>
+        <linearGradient id={gid} x1="11" y1="20" x2="25" y2="11">
+          <stop stopColor={TEAL} />
+          <stop offset="1" stopColor={TEAL_LIGHT} />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
 
 export function LogoMarkBar({ size = 24, className, ...props }: LogoMarkProps) {
   const w = Math.round(size * (4 / 24));
@@ -168,10 +222,12 @@ export function LogoMarkDelta({ size = 24, className, ...props }: LogoMarkProps)
 }
 
 export function LogoMark({
-  variant = "bar",
+  variant = "brand",
   ...props
 }: LogoMarkProps & { variant?: LogoMarkVariant }) {
   switch (variant) {
+    case "bar":
+      return <LogoMarkBar {...props} />;
     case "monogram":
       return <LogoMarkMonogram {...props} />;
     case "equal":
@@ -181,6 +237,6 @@ export function LogoMark({
     case "delta":
       return <LogoMarkDelta {...props} />;
     default:
-      return <LogoMarkBar {...props} />;
+      return <LogoMarkBrand {...props} />;
   }
 }

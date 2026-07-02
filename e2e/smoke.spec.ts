@@ -14,6 +14,17 @@ test.describe("Smoke", () => {
     await expect(page.locator('input[name="email"]')).toBeVisible();
     await expect(page.locator('input[name="password"]')).toBeVisible();
     await expect(page.getByRole("button", { name: "Zaloguj się" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Zapomniałeś hasła?" })).toBeVisible();
+  });
+
+  test("/login/zapomniane-haslo ma formularz resetu", async ({ page }) => {
+    await page.goto("/login/zapomniane-haslo");
+    await expect(
+      page.getByRole("heading", { name: "Zapomniałeś hasła?" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Wyślij link resetujący" }),
+    ).toBeVisible();
   });
 
   test("/rankingi ładuje tablicę wyników", async ({ page }) => {

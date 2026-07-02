@@ -2,6 +2,21 @@ import type { AuthError } from "@supabase/supabase-js";
 import { formatSupabaseErrorForUser } from "@/lib/supabase/errors";
 
 export function validateAuthInput(email: string, password: string): string | null {
+  const emailError = validateEmailInput(email);
+  if (emailError) return emailError;
+
+  if (!password) {
+    return "Podaj hasło.";
+  }
+
+  if (password.length < 6) {
+    return "Hasło musi mieć co najmniej 6 znaków.";
+  }
+
+  return null;
+}
+
+export function validateEmailInput(email: string): string | null {
   const trimmedEmail = email.trim();
 
   if (!trimmedEmail) {
@@ -12,12 +27,27 @@ export function validateAuthInput(email: string, password: string): string | nul
     return "Podaj poprawny adres e-mail (np. jan.kowalski@gmail.com).";
   }
 
+  return null;
+}
+
+export function validatePasswordResetInput(
+  password: string,
+  passwordConfirm: string,
+): string | null {
   if (!password) {
-    return "Podaj hasło.";
+    return "Podaj nowe hasło.";
   }
 
   if (password.length < 6) {
     return "Hasło musi mieć co najmniej 6 znaków.";
+  }
+
+  if (!passwordConfirm) {
+    return "Powtórz hasło w drugim polu.";
+  }
+
+  if (password !== passwordConfirm) {
+    return "Hasła nie są takie same — wpisz je ponownie.";
   }
 
   return null;
@@ -93,6 +123,14 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
 
   if (message.includes("Email not confirmed")) {
     return "Potwierdź e-mail (link z wiadomości), a potem się zaloguj.";
+  }
+
+  if (
+    message.includes("For security purposes") ||
+    message.includes("rate limit") ||
+    message.includes("only request this after")
+  ) {
+    return "Poczekaj chwilę przed kolejną próbą wysłania linku.";
   }
 
   if (message.includes("Password should be at least")) {

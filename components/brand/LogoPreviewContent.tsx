@@ -84,7 +84,7 @@ export function LogoPreviewContent() {
 
             <div className="mt-6 flex flex-wrap items-center gap-6 border-t border-white/[0.06] pt-6">
               <BrandLogo asLink={false} mark={proposal.id} />
-              <BrandLogo asLink={false} mark={proposal.id} compact />
+              <BrandLogo asLink={false} mark={proposal.id} markSize={24} />
             </div>
           </article>
         ))}

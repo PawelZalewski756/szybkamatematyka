@@ -1,29 +1,18 @@
 import { LogoMark, type LogoMarkVariant } from "@/components/brand/LogoMarks";
-import { BRAND_NAME } from "@/lib/brand/constants";
+import { BRAND_NAME, DEFAULT_LOGO_MARK } from "@/lib/brand/constants";
 import Link from "next/link";
 
 type BrandLogoProps = {
   className?: string;
-  /** Krótszy układ w navbarze na mobile. */
-  compact?: boolean;
   asLink?: boolean;
-  /** Wariant znaku graficznego — domyślnie „bar” (obecny). */
   mark?: LogoMarkVariant;
+  /** Rozmiar znaku w px. */
+  markSize?: number;
 };
 
-function Wordmark({ compact = false }: { compact?: boolean }) {
-  if (compact) {
-    return (
-      <span className="truncate text-[15px] font-bold tracking-tight">
-        <span className="text-white">szybka</span>
-        <span className="text-slate-600">·</span>
-        <span className="text-slate-300">mat</span>
-      </span>
-    );
-  }
-
+function Wordmark() {
   return (
-    <span className="whitespace-nowrap text-base font-bold tracking-tight lg:text-[17px]">
+    <span className="whitespace-nowrap text-[13px] font-bold tracking-tight sm:text-[15px] lg:text-[17px]">
       <span className="text-white">szybka</span>
       <span className="font-normal text-slate-600">·</span>
       <span className="font-semibold text-slate-300">matematyka</span>
@@ -33,9 +22,9 @@ function Wordmark({ compact = false }: { compact?: boolean }) {
 
 export function BrandLogo({
   className = "",
-  compact = false,
   asLink = true,
-  mark = "bar",
+  mark = DEFAULT_LOGO_MARK,
+  markSize = 28,
 }: BrandLogoProps) {
   const inner = (
     <span
@@ -44,10 +33,10 @@ export function BrandLogo({
     >
       <LogoMark
         variant={mark}
-        size={24}
+        size={markSize}
         className="shrink-0 transition-opacity group-hover:opacity-90"
       />
-      <Wordmark compact={compact} />
+      <Wordmark />
     </span>
   );
 
@@ -64,5 +53,4 @@ export function BrandLogo({
   );
 }
 
-/** Eksport wariantów do podglądu / faviconów. */
 export { LogoMark, type LogoMarkVariant } from "@/components/brand/LogoMarks";
