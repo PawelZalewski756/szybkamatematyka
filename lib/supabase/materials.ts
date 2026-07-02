@@ -1,5 +1,15 @@
 import { getSupabase } from "@/lib/supabase";
+import {
+  classifyTheoryContent,
+  type TheoryTier,
+} from "@/lib/trening/theory-content";
 import type { ExamType, Material } from "@/types/database";
+
+export type MaterialTopicSummary = {
+  category: string;
+  topic: string;
+  tier: TheoryTier;
+};
 
 export type MaterialRow = {
   id: string;
@@ -46,6 +56,25 @@ export async function fetchMaterialByTopic(
   if (error) throw error;
   if (!data) return null;
   return mapMaterial(data as MaterialRow);
+}
+
+export async function fetchMaterialSummariesForExam(
+  examType: ExamType,
+): Promise<MaterialTopicSummary[]> {
+  const supabase = getSupabase();
+
+  const { data, error } = await supabase
+    .from("materials")
+    .select("category, topic, content")
+    .eq("exam_type", examType);
+
+  if (error) throw error;
+
+  return (data ?? []).map((row) => ({
+    category: String(row.category),
+    topic: String(row.topic),
+    tier: classifyTheoryContent(String(row.content ?? "")),
+  }));
 }
 
 export async function fetchAllMaterials(): Promise<Material[]> {

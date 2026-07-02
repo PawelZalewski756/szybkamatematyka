@@ -6,12 +6,16 @@ import {
   fetchMaterialById,
   upsertMaterial,
 } from "@/lib/supabase/materials";
+import {
+  findCkeTopicLabel,
+  getCkeCategoriesForExam,
+} from "@/lib/trening/cke-curriculum";
 import type { ExamType, Material } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 
 type EditorTab = "edit" | "preview";
 
@@ -125,6 +129,46 @@ function MaterialyAdminContent() {
       cancelled = true;
     };
   }, [editId]);
+
+  const ckeCategories = useMemo(
+    () => getCkeCategoriesForExam(form.exam_type),
+    [form.exam_type],
+  );
+
+  const selectedCategory = useMemo(
+    () => ckeCategories?.find((category) => category.slug === form.category),
+    [ckeCategories, form.category],
+  );
+
+  const handleExamTypeChange = (examType: ExamType) => {
+    setForm((current) => ({
+      ...current,
+      exam_type: examType,
+      category: "",
+      topic: "",
+    }));
+  };
+
+  const handleCategoryChange = (categorySlug: string) => {
+    setForm((current) => ({
+      ...current,
+      category: categorySlug,
+      topic: "",
+    }));
+  };
+
+  const handleTopicChange = (topicSlug: string) => {
+    setForm((current) => {
+      const topicLabel =
+        findCkeTopicLabel(current.exam_type, current.category, topicSlug) ??
+        topicSlug;
+      return {
+        ...current,
+        topic: topicSlug,
+        title: current.title || topicLabel,
+      };
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -294,10 +338,7 @@ function MaterialyAdminContent() {
             <select
               value={form.exam_type}
               onChange={(e) =>
-                setForm((f) => ({
-                  ...f,
-                  exam_type: e.target.value as ExamType,
-                }))
+                handleExamTypeChange(e.target.value as ExamType)
               }
               className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
             >
@@ -310,33 +351,61 @@ function MaterialyAdminContent() {
           </div>
 
           <div>
-            <label className="text-sm font-bold text-zinc-300">
-              category (slug)
-            </label>
-            <input
-              value={form.category}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, category: e.target.value }))
-              }
-              required
-              placeholder="np. algebra"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
-            />
+            <label className="text-sm font-bold text-zinc-300">Dział</label>
+            {ckeCategories ? (
+              <select
+                value={form.category}
+                onChange={(e) => handleCategoryChange(e.target.value)}
+                required
+                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+              >
+                <option value="">Wybierz dział…</option>
+                {ckeCategories.map((category) => (
+                  <option key={category.slug} value={category.slug}>
+                    {category.name} ({category.slug})
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                value={form.category}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, category: e.target.value }))
+                }
+                required
+                placeholder="np. algebra"
+                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
+              />
+            )}
           </div>
 
           <div>
-            <label className="text-sm font-bold text-zinc-300">
-              topic (slug)
-            </label>
-            <input
-              value={form.topic}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, topic: e.target.value }))
-              }
-              required
-              placeholder="np. rownania_kwadratowe"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
-            />
+            <label className="text-sm font-bold text-zinc-300">Temat</label>
+            {selectedCategory ? (
+              <select
+                value={form.topic}
+                onChange={(e) => handleTopicChange(e.target.value)}
+                required
+                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+              >
+                <option value="">Wybierz temat…</option>
+                {selectedCategory.topics.map((topic) => (
+                  <option key={topic.slug} value={topic.slug}>
+                    {topic.name} ({topic.slug})
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                value={form.topic}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, topic: e.target.value }))
+                }
+                required
+                placeholder="np. rownania_liniowe"
+                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 font-mono text-sm text-white outline-none focus:border-orange-500/50"
+              />
+            )}
           </div>
 
           <div>

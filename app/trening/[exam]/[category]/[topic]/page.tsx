@@ -1,7 +1,9 @@
 import { TopicPageClient } from "@/components/trening/TopicPageClient";
 import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
 import { decodeSlug, examTypeFromParam } from "@/lib/trening/slugs";
-import type { ExamType } from "@/types/database";
+import { fetchMaterialByTopic } from "@/lib/supabase/materials";
+import { isSupabaseConfigured } from "@/lib/supabase";
+import type { ExamType, Material } from "@/types/database";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -59,6 +61,21 @@ export default async function TreningTopicPage({ params }: PageProps) {
 
   const backHref = "/trening";
 
+  let initialMaterial: Material | null = null;
+  let initialMaterialError: string | null = null;
+
+  if (isSupabaseConfigured()) {
+    try {
+      initialMaterial = await fetchMaterialByTopic(
+        examType,
+        categorySlug,
+        topicSlug,
+      );
+    } catch {
+      initialMaterialError = "Nie udało się załadować materiału.";
+    }
+  }
+
   return (
     <TopicPageClient
       examType={examType}
@@ -66,6 +83,8 @@ export default async function TreningTopicPage({ params }: PageProps) {
       topic={topicSlug}
       topicLabel={label}
       backHref={backHref}
+      initialMaterial={initialMaterial}
+      initialMaterialError={initialMaterialError}
     />
   );
 }

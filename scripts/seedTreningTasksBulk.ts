@@ -5,6 +5,7 @@
  *   npm run seed:trening-tasks -- --count=5000
  *   npm run seed:trening-tasks -- --dry-run
  *   npm run seed:trening-tasks -- --materials-only
+ *   npm run seed:trening-tasks -- --materials-only --refresh-materials
  *
  * Wymaga: .env.local (Supabase URL + klucz). Zalecane: migracja
  *   supabase/migrations/add_tasks_materials_insert.sql (INSERT przez anon).
@@ -36,6 +37,7 @@ type CliOptions = {
   materialsOnly: boolean;
   tasksOnly: boolean;
   skipMaterials: boolean;
+  refreshMaterials: boolean;
 };
 
 type TaskRow = {
@@ -51,12 +53,14 @@ function parseArgs(): CliOptions {
   let materialsOnly = false;
   let tasksOnly = false;
   let skipMaterials = false;
+  let refreshMaterials = false;
 
   for (const arg of process.argv.slice(2)) {
     if (arg === "--dry-run") dryRun = true;
     else if (arg === "--materials-only") materialsOnly = true;
     else if (arg === "--tasks-only") tasksOnly = true;
     else if (arg === "--skip-materials") skipMaterials = true;
+    else if (arg === "--refresh-materials") refreshMaterials = true;
     else if (arg.startsWith("--count=")) {
       target = Math.max(1, Number(arg.split("=")[1]));
     }
@@ -64,7 +68,7 @@ function parseArgs(): CliOptions {
 
   if (materialsOnly) tasksOnly = false;
 
-  return { target, dryRun, materialsOnly, tasksOnly, skipMaterials };
+  return { target, dryRun, materialsOnly, tasksOnly, skipMaterials, refreshMaterials };
 }
 
 function createSupabase(): SupabaseClient {
@@ -257,14 +261,22 @@ async function loadExistingMaterialKeys(
 async function seedMaterials(
   supabase: SupabaseClient,
   dryRun: boolean,
-): Promise<{ inserted: number; skipped: number }> {
+  refreshExisting: boolean,
+): Promise<{ inserted: number; updated: number; skipped: number }> {
   const existing = await loadExistingMaterialKeys(supabase);
   const pending = SEED_MATERIALS.filter((m) => !existing.has(materialKey(m)));
+  const refresh = refreshExisting
+    ? SEED_MATERIALS.filter((m) => existing.has(materialKey(m)))
+    : [];
   let inserted = 0;
+  let updated = 0;
 
   console.log(
     `\nMateriały: ${pending.length} nowych / ${SEED_MATERIALS.length} w szablonie (${existing.size} już w bazie)`,
   );
+  if (refreshExisting) {
+    console.log(`Odświeżanie treści: ${refresh.length} istniejących wpisów`);
+  }
 
   for (const m of pending) {
     if (dryRun) {
@@ -288,9 +300,42 @@ async function seedMaterials(
     inserted += 1;
   }
 
+  for (const m of refresh) {
+    if (dryRun) {
+      updated += 1;
+      continue;
+    }
+    const { data, error } = await supabase
+      .from("materials")
+      .update({
+        title: m.title,
+        content: m.content,
+        video_url: m.video_url,
+      })
+      .eq("exam_type", m.exam_type)
+      .eq("category", m.category)
+      .eq("topic", m.topic)
+      .select("id");
+    if (error) {
+      throw new Error(`Material refresh ${materialKey(m)}: ${error.message}`);
+    }
+    if (!data?.length) {
+      console.warn(`  ⚠ Brak wiersza do aktualizacji: ${materialKey(m)}`);
+      continue;
+    }
+    updated += data.length;
+  }
+
+  if (refreshExisting && !dryRun && refresh.length > 0 && updated === 0) {
+    console.warn(
+      "\n⚠ Żaden materiał nie został zaktualizowany. Na produkcji z RLS admin-only ustaw SUPABASE_SERVICE_ROLE_KEY w .env.local albo edytuj w /admin/materialy.",
+    );
+  }
+
   return {
     inserted,
-    skipped: SEED_MATERIALS.length - pending.length,
+    updated,
+    skipped: SEED_MATERIALS.length - pending.length - refresh.length,
   };
 }
 
@@ -353,9 +398,15 @@ async function main(): Promise<void> {
   }
 
   let materialsInserted = 0;
+  let materialsUpdated = 0;
   if (!opts.tasksOnly && !opts.skipMaterials) {
-    const mat = await seedMaterials(supabase, opts.dryRun);
+    const mat = await seedMaterials(
+      supabase,
+      opts.dryRun,
+      opts.refreshMaterials,
+    );
     materialsInserted = mat.inserted;
+    materialsUpdated = mat.updated;
   }
 
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
@@ -368,6 +419,7 @@ async function main(): Promise<void> {
   console.log(`Wygenerowane / pominięte (dupl.): ${tasksGenerated} / ${tasksSkipped}`);
   console.log(`Tematy objęte seedem: ${topicCount}`);
   console.log(`Materiały wstawione: ${materialsInserted}`);
+  console.log(`Materiały zaktualizowane: ${materialsUpdated}`);
   console.log(`Czas: ${elapsed}s`);
   console.log("\nPonowne uruchomienie: npm run seed:trening-tasks");
   console.log(

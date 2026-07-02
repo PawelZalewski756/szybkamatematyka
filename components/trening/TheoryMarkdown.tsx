@@ -1,10 +1,12 @@
 ﻿"use client";
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
+import { slugifyHeading } from "@/lib/trening/theory-content";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import { isValidElement, type ReactNode } from "react";
 
 type TheoryMarkdownProps = {
   content: string;
@@ -16,7 +18,7 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
     default:
       "prose prose-invert prose-zinc max-w-none break-words text-base sm:text-lg " +
       "prose-headings:font-black prose-headings:tracking-tight prose-headings:text-white " +
-      "prose-p:leading-relaxed prose-p:text-zinc-200 " +
+      "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-zinc-200 " +
       "prose-strong:text-white prose-a:text-orange-400 prose-a:no-underline hover:prose-a:text-amber-400 " +
       "prose-code:rounded prose-code:bg-white/10 prose-code:px-1 prose-code:py-0.5 prose-code:text-orange-400 " +
       "prose-pre:border prose-pre:border-white/10 prose-pre:bg-zinc-950/80 " +
@@ -35,12 +37,43 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
       "[&_.katex]:text-zinc-100",
   };
 
-function markdownComponents(): Components {
+function flattenText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+  if (Array.isArray(node)) {
+    return node.map(flattenText).join("");
+  }
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return flattenText(node.props.children);
+  }
+  return "";
+}
+
+function markdownComponents(withAnchors: boolean): Components {
+  const heading =
+    (Tag: "h2" | "h3") =>
+    ({ children }: { children?: ReactNode }) => {
+      const text = flattenText(children);
+      const id = withAnchors ? slugifyHeading(text) : undefined;
+      return (
+        <Tag id={id} className={withAnchors ? "scroll-mt-24" : undefined}>
+          {children}
+        </Tag>
+      );
+    };
+
   return {
     img: ({ src, alt }) => {
       if (!src || typeof src !== "string") return null;
       return <ContentImage src={src} alt={alt ?? ""} />;
     },
+    ...(withAnchors
+      ? {
+          h2: heading("h2"),
+          h3: heading("h3"),
+        }
+      : {}),
   };
 }
 
@@ -48,12 +81,14 @@ export function TheoryMarkdown({
   content,
   variant = "default",
 }: TheoryMarkdownProps) {
+  const withAnchors = variant === "default";
+
   return (
     <div className={VARIANT_CLASS[variant]}>
       <ReactMarkdown
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeKatex]}
-        components={markdownComponents()}
+        components={markdownComponents(withAnchors)}
       >
         {content}
       </ReactMarkdown>

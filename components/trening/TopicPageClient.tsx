@@ -3,16 +3,18 @@
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { TaskArena } from "@/components/trening/TaskArena";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { TheoryTableOfContents } from "@/components/trening/TheoryTableOfContents";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
+import { extractMarkdownHeadings } from "@/lib/trening/theory-content";
 import {
   parseYouTubeVideoId,
   youTubeEmbedUrl,
 } from "@/lib/video/youtube";
 import type { ExamType, Material } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Loader2, RefreshCw } from "lucide-react";
+import { ArrowLeft, BookOpen, ExternalLink, Loader2, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 type TabId = "teoria" | "arena";
 
@@ -22,6 +24,8 @@ type TopicPageClientProps = {
   topic: string;
   topicLabel: string;
   backHref: string;
+  initialMaterial?: Material | null;
+  initialMaterialError?: string | null;
 };
 
 function TabSwitcher({
@@ -118,6 +122,11 @@ function TheoryTab({
   onRetry: () => void;
   onGoToArena: () => void;
 }) {
+  const headings = useMemo(
+    () => (material ? extractMarkdownHeadings(material.content) : []),
+    [material],
+  );
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
@@ -148,16 +157,20 @@ function TheoryTab({
   if (!material) {
     return (
       <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-md">
-        <p className="text-lg font-bold text-zinc-200">Teoria wkrótce…</p>
+        <BookOpen className="mx-auto h-10 w-10 text-zinc-500" aria-hidden />
+        <p className="mt-4 text-lg font-bold text-zinc-200">
+          Teoria w przygotowaniu
+        </p>
         <p className="mt-2 text-sm text-zinc-400">
-          Pracujemy nad teorią do tego tematu. Możesz już ćwiczyć zadania.
+          Pracujemy nad lekcją do tego tematu. Możesz już ćwiczyć zadania w
+          arenie — teoria pojawi się wkrótce.
         </p>
         <button
           type="button"
           onClick={onGoToArena}
           className="mt-6 inline-flex items-center gap-2 rounded-xl border border-orange-500/40 bg-orange-500/15 px-5 py-2.5 text-sm font-bold text-orange-400 transition hover:bg-orange-500/25"
         >
-          Przejdź do rozwiązywania ➡️
+          Przejdź do zadań
         </button>
       </div>
     );
@@ -165,15 +178,27 @@ function TheoryTab({
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl bg-white/5 p-6 backdrop-blur-md">
-        <h2 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
-          {material.title}
-        </h2>
-        <div className="mt-4">
-          <TheoryMarkdown content={material.content} />
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),14rem] lg:items-start lg:gap-8">
+        <div className="min-w-0 rounded-xl bg-white/5 p-6 backdrop-blur-md">
+          <h2 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
+            {material.title}
+          </h2>
+          {headings.length >= 2 && (
+            <div className="mt-4 lg:hidden">
+              <TheoryTableOfContents headings={headings} />
+            </div>
+          )}
+          <div className="mt-4">
+            <TheoryMarkdown content={material.content} />
+          </div>
+          {material.video_url && (
+            <LessonVideoSection videoUrl={material.video_url} />
+          )}
         </div>
-        {material.video_url && (
-          <LessonVideoSection videoUrl={material.video_url} />
+        {headings.length >= 2 && (
+          <div className="hidden lg:block">
+            <TheoryTableOfContents headings={headings} />
+          </div>
         )}
       </div>
       <div className="flex justify-center">
@@ -182,7 +207,7 @@ function TheoryTab({
           onClick={onGoToArena}
           className="inline-flex items-center gap-2 rounded-xl border border-orange-400/40 bg-orange-500/15 px-6 py-3 text-sm font-bold text-orange-100 shadow-[0_0_24px_rgba(217,70,239,0.15)] transition hover:bg-orange-500/25"
         >
-          Przejdź do rozwiązywania ➡️
+          Przejdź do rozwiązywania
         </button>
       </div>
     </div>
@@ -195,11 +220,20 @@ export function TopicPageClient({
   topic,
   topicLabel,
   backHref,
+  initialMaterial,
+  initialMaterialError = null,
 }: TopicPageClientProps) {
+  const hasInitialMaterial = initialMaterial !== undefined;
   const [activeTab, setActiveTab] = useState<TabId>("teoria");
-  const [material, setMaterial] = useState<Material | null>(null);
-  const [materialLoading, setMaterialLoading] = useState(true);
-  const [materialError, setMaterialError] = useState<string | null>(null);
+  const [material, setMaterial] = useState<Material | null>(
+    initialMaterial ?? null,
+  );
+  const [materialLoading, setMaterialLoading] = useState(
+    !hasInitialMaterial && !initialMaterialError,
+  );
+  const [materialError, setMaterialError] = useState<string | null>(
+    initialMaterialError,
+  );
 
   const loadMaterial = useCallback(async () => {
     setMaterialLoading(true);
@@ -216,9 +250,10 @@ export function TopicPageClient({
   }, [examType, category, topic]);
 
   useEffect(() => {
+    if (hasInitialMaterial || initialMaterialError) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadMaterial();
-  }, [loadMaterial]);
+  }, [hasInitialMaterial, initialMaterialError, loadMaterial]);
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
@@ -252,7 +287,7 @@ export function TopicPageClient({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="mx-auto w-full max-w-2xl flex-1"
+              className="mx-auto w-full max-w-4xl flex-1 px-1"
             >
               <TheoryTab
                 material={material}

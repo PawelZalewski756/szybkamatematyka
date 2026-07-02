@@ -17,6 +17,8 @@ import { EmptyState } from "@/components/feedback/EmptyState";
 import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import { fetchTasksForTree } from "@/lib/supabase/tasks";
+import { fetchMaterialSummariesForExam } from "@/lib/supabase/materials";
+import type { TheoryTier } from "@/lib/trening/theory-content";
 import type { TopicStatus } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -213,7 +215,8 @@ function TopicStatusIcon({ status }: { status: TopicStatus }) {
   if (status === "available") {
     return (
       <Play
-        className="h-6 w-6 shrink-0 fill-orange-400/20 text-orange-400400"         aria-label="Dostępne"
+        className="h-6 w-6 shrink-0 fill-orange-400/20 text-orange-400"
+        aria-label="Dostępne"
       />
     );
   }
@@ -238,16 +241,40 @@ function progressBarColor(percent: number): string {
   return "from-zinc-600 to-zinc-500";
 }
 
+function TheoryBadge({ tier }: { tier: TheoryTier }) {
+  if (tier === "full") {
+    return (
+      <span className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+        Teoria ✓
+      </span>
+    );
+  }
+  if (tier === "basic") {
+    return (
+      <span className="inline-flex rounded-full border border-amber-500/25 bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-200/90">
+        Teoria · skrót
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex rounded-full border border-white/10 bg-zinc-900/60 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      Teoria wkrótce
+    </span>
+  );
+}
+
 function TopicCard({
   examKey,
   category,
   topic,
   highlighted,
+  theoryTier,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
   topic: TrainingTopicWithProgress;
   highlighted?: boolean;
+  theoryTier: TheoryTier;
 }) {
   const isComingSoon = topic.status === "coming_soon";
   const isCompleted = topic.status === "completed";
@@ -259,9 +286,12 @@ function TopicCard({
     <>
       <div className="flex items-start justify-between gap-2">
         <TopicStatusIcon status={topic.status} />
-        <span className="text-lg" aria-hidden>
-          {topicStatusEmoji(topic.status)}
-        </span>
+        <div className="flex flex-col items-end gap-1.5">
+          {canPlay && <TheoryBadge tier={theoryTier} />}
+          <span className="text-lg" aria-hidden>
+            {topicStatusEmoji(topic.status)}
+          </span>
+        </div>
       </div>
       <h3
         className={`mt-3 text-base font-black leading-snug sm:text-lg ${
@@ -293,7 +323,7 @@ function TopicCard({
         </span>
       )}
       {canPlay && (
-        <p className="mt-3 text-xs font-semibold text-orange-/90">
+        <p className="mt-3 text-xs font-semibold text-orange-400/90">
           {isCompleted ? "Powtórz teorię i zadania" : "Teoria · Zadania"}
         </p>
       )}
@@ -347,11 +377,13 @@ function CategorySection({
   category,
   index,
   highlightTopicHref,
+  theoryByTopic,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
   index: number;
   highlightTopicHref?: string | null;
+  theoryByTopic: Map<string, TheoryTier>;
 }) {
   return (
     <motion.section
@@ -395,6 +427,7 @@ function CategorySection({
               highlighted={
                 !!highlightTopicHref && highlightTopicHref === href
               }
+              theoryTier={theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"}
             />
           );
         })}
@@ -420,12 +453,18 @@ export default function TreningPage() {
   const [topicSort, setTopicSort] = useState<TopicSort>("az");
   const [showPathBanner, setShowPathBanner] = useState(false);
   const [pathBannerHref, setPathBannerHref] = useState<string | null>(null);
+  const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
+    new Map(),
+  );
 
   const loadProgress = useCallback(async (examKey: SelectedExam) => {
     setLoading(true);
     try {
       const examType = examTypeForKey(examKey);
-      const tasks = await fetchTasksForTree(examType);
+      const [tasks, materialSummaries] = await Promise.all([
+        fetchTasksForTree(examType),
+        fetchMaterialSummariesForExam(examType).catch(() => []),
+      ]);
       let solvedIds = new Set<string>();
 
       const { getSupabase } = await import("@/lib/supabase");
@@ -441,8 +480,15 @@ export default function TreningPage() {
       setExam(
         buildTreningTreeFromTasks(tasks, solvedIds, TRAINING_CURRICULUM[examKey]),
       );
+
+      const theoryMap = new Map<string, TheoryTier>();
+      for (const summary of materialSummaries) {
+        theoryMap.set(`${summary.category}:${summary.topic}`, summary.tier);
+      }
+      setTheoryByTopic(theoryMap);
     } catch {
       setExam(emptyExamFor(examKey));
+      setTheoryByTopic(new Map());
     } finally {
       setLoading(false);
     }
@@ -507,6 +553,7 @@ export default function TreningPage() {
   const handleExamChange = (key: SelectedExam) => {
     setSelectedExam(key);
     setExam(emptyExamFor(key));
+    setTheoryByTopic(new Map());
     setSearchInput("");
     setDebouncedQuery("");
     setTopicFilter("all");
@@ -743,7 +790,7 @@ export default function TreningPage() {
               )}
             </p>
           </div>
-          <BookOpen className="h-8 w-8 shrink-0 text-orange-/80" aria-hidden />
+          <BookOpen className="h-8 w-8 shrink-0 text-orange-400/80" aria-hidden />
         </motion.div>
 
         <AnimatePresence mode="wait">
@@ -804,6 +851,7 @@ export default function TreningPage() {
                     highlightTopicHref={
                       showPathBanner ? pathBannerHref : null
                     }
+                    theoryByTopic={theoryByTopic}
                   />
                 ))
               )}
@@ -812,8 +860,8 @@ export default function TreningPage() {
         </AnimatePresence>
 
         <p className="mt-12 pb-2 text-center text-xs text-zinc-500">
-          ⏳ brak zadań w bazie · ▶️ w trakcie · ✅ ukończone — slugi zgodne z
-          Supabase (category / topic)
+          ⏳ brak zadań · Teoria ✓ pełna lekcja · Teoria · skrót — ściąga · ▶️ w
+          trakcie · ✅ ukończone
         </p>
       </div>
     </div>
