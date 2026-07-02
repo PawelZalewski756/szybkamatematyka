@@ -9,6 +9,6 @@
   <rect x="424" y="292" width="52" height="64" rx="20" fill="#14b8a6"/>
   <path d="M256 168V192" stroke="#94a3b8" stroke-opacity="0.5" stroke-width="20" stroke-linecap="round"/>
   <path d="M256 448V472" stroke="#94a3b8" stroke-opacity="0.5" stroke-width="20" stroke-linecap="round"/>
-  <rect x="164" y="274" width="184" height="38" rx="19" fill="#14b8a6"/>
-  <rect x="164" y="338" width="184" height="38" rx="19" fill="#14b8a6"/>
+  <rect x="164" y="274" width="184" height="38" rx="19" fill="#94a3b8"/>
+  <rect x="164" y="338" width="184" height="38" rx="19" fill="#94a3b8"/>
 </svg>

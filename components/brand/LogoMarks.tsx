@@ -63,9 +63,9 @@ export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps)
       <path d="M16 10.5V12" stroke={SLATE} strokeOpacity="0.5" strokeWidth="1.25" strokeLinecap="round" />
       <path d="M16 28V29.5" stroke={SLATE} strokeOpacity="0.5" strokeWidth="1.25" strokeLinecap="round" />
 
-      {/* środek: = w jednym kolorze */}
-      <rect x="10.25" y="17.1" width="11.5" height="2.35" rx="1.175" fill={TEAL} />
-      <rect x="10.25" y="21.15" width="11.5" height="2.35" rx="1.175" fill={TEAL} />
+      {/* środek: = w szarym */}
+      <rect x="10.25" y="17.1" width="11.5" height="2.35" rx="1.175" fill={SLATE} />
+      <rect x="10.25" y="21.15" width="11.5" height="2.35" rx="1.175" fill={SLATE} />
     </svg>
   );
 }
