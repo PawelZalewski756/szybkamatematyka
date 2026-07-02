@@ -1,3 +1,4 @@
+import { compressAvatarFile } from "@/lib/image/compress-avatar";
 import { getSupabase } from "@/lib/supabase";
 import { formatSupabaseErrorForUser } from "@/lib/supabase/errors";
 import { updateProfileAvatarUrl } from "@/lib/supabase/profiles";
@@ -6,19 +7,6 @@ export const AVATAR_BUCKET = "avatary";
 
 export const AVATAR_BUCKET_NOT_FOUND_MESSAGE =
   "Bucket „avatary” nie istnieje — uruchom init_profiles_avatars.sql w Supabase Dashboard → SQL Editor.";
-
-const MAX_AVATAR_BYTES = 2 * 1024 * 1024;
-const ALLOWED_TYPES = new Set(["image/png", "image/jpeg", "image/jpg"]);
-
-export function validateAvatarFile(file: File): string | null {
-  if (!ALLOWED_TYPES.has(file.type)) {
-    return "Dozwolone formaty: PNG lub JPG.";
-  }
-  if (file.size > MAX_AVATAR_BYTES) {
-    return "Plik jest za duży (maks. 2 MB).";
-  }
-  return null;
-}
 
 function errorMessage(error: unknown): string {
   if (error instanceof Error) return error.message;
@@ -48,18 +36,15 @@ export async function uploadUserAvatar(
   userId: string,
   file: File,
 ): Promise<string> {
-  const validationError = validateAvatarFile(file);
-  if (validationError) throw new Error(validationError);
-
-  const ext = file.type === "image/png" ? "png" : "jpg";
-  const path = `${userId}/avatar.${ext}`;
+  const compressed = await compressAvatarFile(file);
+  const path = `${userId}/avatar.jpg`;
   const supabase = getSupabase();
 
   const { error: uploadError } = await supabase.storage
     .from(AVATAR_BUCKET)
-    .upload(path, file, {
+    .upload(path, compressed, {
       upsert: true,
-      contentType: file.type,
+      contentType: "image/jpeg",
       cacheControl: "3600",
     });
 

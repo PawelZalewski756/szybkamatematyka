@@ -46,11 +46,12 @@ export function PlayerAvatarUpload({
         type="button"
         disabled={uploading}
         onClick={() => inputRef.current?.click()}
-        className="group relative flex h-28 w-28 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)] ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32"
+        className="group relative h-28 w-28 overflow-hidden rounded-full bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)] ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32"
         aria-label="Zmień awatar"
       >
         {avatarUrl ? (
           <Image
+            key={avatarUrl}
             src={avatarUrl}
             alt=""
             fill
@@ -59,11 +60,11 @@ export function PlayerAvatarUpload({
             unoptimized
           />
         ) : (
-          <span className="text-4xl font-black text-white sm:text-5xl">
+          <span className="flex h-full w-full items-center justify-center text-4xl font-black text-white sm:text-5xl">
             {fallbackInitial}
           </span>
         )}
-        <span className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
+        <span className="absolute inset-0 z-10 flex items-center justify-center bg-black/50 opacity-0 transition-opacity group-hover:opacity-100">
           {uploading ? (
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           ) : (
@@ -74,12 +75,12 @@ export function PlayerAvatarUpload({
       <input
         ref={inputRef}
         type="file"
-        accept="image/png,image/jpeg"
+        accept="image/*"
         className="sr-only"
         onChange={(e) => void handleFile(e.target.files?.[0])}
       />
-      <p className="mt-2 text-xs font-semibold text-zinc-500">
-        Kliknij awatar · PNG lub JPG
+      <p className="mt-2 text-center text-xs font-semibold text-zinc-500">
+        Kliknij awatar · duże zdjęcia są automatycznie kompresowane
       </p>
     </div>
   );

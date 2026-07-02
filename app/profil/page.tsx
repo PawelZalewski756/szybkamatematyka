@@ -26,7 +26,11 @@ import {
   type SubscriptionSnapshot,
 } from "@/lib/subscription/status";
 import { getPlanById } from "@/lib/subscription/plans";
-import { notifyProfileUpdated } from "@/lib/profile-sync";
+import {
+  notifyProfileUpdated,
+  PROFILE_UPDATED_EVENT,
+  type ProfileUpdatedDetail,
+} from "@/lib/profile-sync";
 import {
   examTypeForKey,
   TRAINING_CURRICULUM,
@@ -284,6 +288,22 @@ export default function ProfilPage() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadPlayerData();
   }, [loadPlayerData]);
+
+  useEffect(() => {
+    const onProfileUpdated = (event: Event) => {
+      const detail = (event as CustomEvent<ProfileUpdatedDetail>).detail;
+      const nextUrl = detail?.profile?.avatarUrl;
+      if (!nextUrl || !detail.profile) return;
+      setProfile((current) =>
+        current?.id === detail.profile.id
+          ? { ...current, avatarUrl: nextUrl }
+          : current,
+      );
+    };
+    window.addEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
+    return () =>
+      window.removeEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
+  }, []);
 
   const handleSaveNick = async () => {
     if (!user || !profile || nickChangeBlocked) return;
