@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Szybka Matematyka">
   <rect width="512" height="512" rx="112" fill="#0a0f14"/>
-  <rect x="216" y="88" width="80" height="56" rx="28" fill="#14b8a6" fill-opacity="0.9"/>
-  <path d="M256 144V184" stroke="#5eead4" stroke-opacity="0.7" stroke-width="24" stroke-linecap="round"/>
-  <circle cx="256" cy="304" r="184" fill="#121a24" stroke="#14b8a6" stroke-opacity="0.75" stroke-width="32"/>
-  <circle cx="256" cy="144" r="16" fill="#5eead4" fill-opacity="0.85"/>
-  <rect x="152" y="240" width="208" height="40" rx="20" fill="#f8fafc" fill-opacity="0.55"/>
-  <rect x="152" y="320" width="208" height="48" rx="24" fill="url(#eq)"/>
-  <defs>
-    <linearGradient id="eq" x1="152" y1="344" x2="360" y2="344" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#14b8a6"/>
-      <stop offset="1" stop-color="#5eead4"/>
-    </linearGradient>
-  </defs>
+  <path d="M192 120C192 67 320 67 320 120" stroke="#14b8a6" stroke-width="32" stroke-linecap="round" fill="none"/>
+  <rect x="220" y="108" width="72" height="44" rx="22" fill="#14b8a6"/>
+  <path d="M256 152V180" stroke="#14b8a6" stroke-width="32" stroke-linecap="round"/>
+  <circle cx="256" cy="320" r="188" fill="#121a24" stroke="#14b8a6" stroke-width="36"/>
+  <circle cx="256" cy="320" r="148" fill="none" stroke="#94a3b8" stroke-opacity="0.22" stroke-width="12"/>
+  <rect x="36" y="292" width="52" height="64" rx="20" fill="#14b8a6"/>
+  <rect x="424" y="292" width="52" height="64" rx="20" fill="#14b8a6"/>
+  <path d="M256 168V192" stroke="#94a3b8" stroke-opacity="0.5" stroke-width="20" stroke-linecap="round"/>
+  <path d="M256 448V472" stroke="#94a3b8" stroke-opacity="0.5" stroke-width="20" stroke-linecap="round"/>
+  <rect x="164" y="274" width="184" height="38" rx="19" fill="#14b8a6"/>
+  <rect x="164" y="338" width="184" height="38" rx="19" fill="#14b8a6"/>
 </svg>
