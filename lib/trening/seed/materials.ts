@@ -1358,6 +1358,8 @@ Rzucamy symetryczną kostką. Prawdopodobieństwo wyrzucenia liczby większej ni
   },
 ];
 
-export function materialKey(m: MaterialDraft): string {
+export function materialKey(
+  m: Pick<MaterialDraft, "exam_type" | "category" | "topic">,
+): string {
   return `${m.exam_type}:${m.category}:${m.topic}`;
 }

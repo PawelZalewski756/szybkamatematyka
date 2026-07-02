@@ -11,7 +11,6 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
-import { materialKey } from "../lib/trening/seed/materials";
 import type { ExamType } from "../types/database";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
@@ -55,7 +54,7 @@ async function main() {
     const entry = JSON.parse(
       fs.readFileSync(path.join(CACHE_DIR, file), "utf8"),
     ) as CachedTheory;
-    const keyStr = materialKey(entry);
+    const keyStr = `${entry.exam_type}:${entry.category}:${entry.topic}`;
 
     if (dryRun) {
       console.log(`  [dry-run] ${keyStr} — ${entry.title}`);

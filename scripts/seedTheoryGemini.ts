@@ -17,15 +17,11 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { isDailyQuotaError } from "../lib/gemini/generate-solution";
-import {
-  generateTheoryLessonWithRetry,
-  sleep,
-} from "../lib/gemini/generate-theory";
+import { isDailyQuotaError, sleep } from "../lib/gemini/generate-solution";
+import { generateTheoryLessonWithRetry } from "../lib/gemini/generate-theory";
 import { listCkeTopicsForExam } from "../lib/trening/cke-curriculum";
 import { CKE_EGZAMIN_8 } from "../lib/trening/cke-egzamin-8";
 import { CKE_MATURA_PODSTAWOWA } from "../lib/trening/cke-matura-podstawowa";
-import { materialKey } from "../lib/trening/seed/materials";
 import type { ExamType } from "../types/database";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
@@ -57,6 +53,10 @@ type TheorySlot = {
   categoryName: string;
   topicName: string;
 };
+
+function slotKey(slot: TheorySlot): string {
+  return `${slot.exam_type}:${slot.category}:${slot.topic}`;
+}
 
 type CliOptions = {
   limit: number;
@@ -253,7 +253,7 @@ async function main() {
   for (const slot of slots) {
     if (generated >= opts.limit) break;
 
-    const key = materialKey(slot);
+    const key = slotKey(slot);
     const cached = readCache(slot);
 
     if (cached && !opts.regenerate) {

@@ -229,10 +229,10 @@ export function TopicPageClient({
     initialMaterial ?? null,
   );
   const [materialLoading, setMaterialLoading] = useState(
-    !hasInitialMaterial && !initialMaterialError,
+    !hasInitialMaterial,
   );
   const [materialError, setMaterialError] = useState<string | null>(
-    initialMaterialError,
+    initialMaterialError ?? null,
   );
 
   const loadMaterial = useCallback(async () => {
@@ -250,10 +250,10 @@ export function TopicPageClient({
   }, [examType, category, topic]);
 
   useEffect(() => {
-    if (hasInitialMaterial || initialMaterialError) return;
+    if (hasInitialMaterial) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadMaterial();
-  }, [hasInitialMaterial, initialMaterialError, loadMaterial]);
+  }, [hasInitialMaterial, loadMaterial]);
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">

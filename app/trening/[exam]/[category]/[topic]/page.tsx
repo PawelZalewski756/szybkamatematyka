@@ -61,17 +61,21 @@ export default async function TreningTopicPage({ params }: PageProps) {
 
   const backHref = "/trening";
 
-  let initialMaterial: Material | null = null;
+  let initialMaterial: Material | null | undefined;
   let initialMaterialError: string | null = null;
 
-  if (isSupabaseConfigured()) {
+  if (!isSupabaseConfigured()) {
+    initialMaterial = undefined;
+  } else {
     try {
       initialMaterial = await fetchMaterialByTopic(
         examType,
         categorySlug,
         topicSlug,
       );
-    } catch {
+    } catch (err) {
+      console.error("[trening/topic] fetchMaterialByTopic failed:", err);
+      initialMaterial = undefined;
       initialMaterialError = "Nie udało się załadować materiału.";
     }
   }

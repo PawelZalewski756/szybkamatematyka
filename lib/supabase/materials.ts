@@ -45,17 +45,20 @@ export async function fetchMaterialByTopic(
 ): Promise<Material | null> {
   const supabase = getSupabase();
 
+  // maybeSingle() rzuca PGRST116 przy duplikatach slugów — bierzemy najnowszy wiersz.
   const { data, error } = await supabase
     .from("materials")
     .select(MATERIAL_SELECT)
     .eq("exam_type", examType)
     .eq("category", category)
     .eq("topic", topic)
-    .maybeSingle();
+    .order("created_at", { ascending: false })
+    .limit(1);
 
   if (error) throw error;
-  if (!data) return null;
-  return mapMaterial(data as MaterialRow);
+  const row = data?.[0];
+  if (!row) return null;
+  return mapMaterial(row as MaterialRow);
 }
 
 export async function fetchMaterialSummariesForExam(
