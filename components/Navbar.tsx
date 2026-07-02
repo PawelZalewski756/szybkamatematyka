@@ -185,10 +185,15 @@ export function Navbar() {
       >
         <BrandLogo compact={!isDesktopNav} className="min-w-0 shrink-0" />
 
-        {isDesktopNav && (
+        {isDesktopNav ? (
           <>
             <div className="hidden h-6 w-px shrink-0 bg-white/10 sm:block" aria-hidden />
             <NavbarPathSelect className="hidden w-[9.5rem] shrink-0 sm:block lg:w-[10.5rem]" />
+          </>
+        ) : (
+          <>
+            <div className="min-w-0 flex-1" aria-hidden />
+            <NavbarPathSelect className="w-[min(100%,10.5rem)] shrink-0" />
           </>
         )}
 
@@ -198,9 +203,8 @@ export function Navbar() {
           </div>
         )}
 
-        {!isDesktopNav && <div className="min-w-0 flex-1" aria-hidden />}
-
-        <div className="flex shrink-0 items-center gap-2">
+        {isDesktopNav && (
+          <div className="flex shrink-0 items-center gap-2">
           {!authReady && (
             <span className="h-8 w-8 animate-pulse rounded-full bg-white/5" aria-hidden />
           )}
@@ -233,8 +237,9 @@ export function Navbar() {
             </button>
           )}
 
-          <NavbarSheet showPrimaryLinks={!isDesktopNav} />
-        </div>
+          <NavbarSheet showPrimaryLinks={false} />
+          </div>
+        )}
       </nav>
     </header>
   );

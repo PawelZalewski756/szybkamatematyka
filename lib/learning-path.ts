@@ -28,6 +28,7 @@ export const PATH_OPTIONS: readonly PathOption[] = [
 const STORAGE_KEY = "szybka-matma-learning-path";
 const LEGACY_STORAGE_KEY = "szybka-matma-school-class";
 const DEFAULT_PATH: LearningPath = "sp";
+const PATH_CHANGE_EVENT = "szybka-matma-learning-path-change";
 
 const PATH_LABELS: Record<LearningPath, string> = {
   sp: "Szkoła podstawowa",
@@ -114,9 +115,32 @@ export function loadLearningPath(): LearningPath {
   return DEFAULT_PATH;
 }
 
+/** Snapshot dla SSR — stała wartość domyślna (bez localStorage). */
+export function getLearningPathServerSnapshot(): LearningPath {
+  return DEFAULT_PATH;
+}
+
+export function subscribeLearningPath(onChange: () => void): () => void {
+  if (typeof window === "undefined") return () => {};
+
+  const handler = () => onChange();
+  window.addEventListener(PATH_CHANGE_EVENT, handler);
+  window.addEventListener("storage", handler);
+  return () => {
+    window.removeEventListener(PATH_CHANGE_EVENT, handler);
+    window.removeEventListener("storage", handler);
+  };
+}
+
+function notifyLearningPathChange(): void {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(new Event(PATH_CHANGE_EVENT));
+}
+
 export function saveLearningPath(path: LearningPath): void {
   if (typeof window === "undefined") return;
   localStorage.setItem(STORAGE_KEY, path);
+  notifyLearningPathChange();
 }
 
 /** Skrót dopasowania po torze pytań (egzamin 8-kl. / matura). */

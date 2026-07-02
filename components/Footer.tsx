@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { useDesktopNav } from "@/components/useDesktopNav";
 import { SITE_NAME } from "@/lib/seo/site";
 
 export function Footer() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  const isDesktopNav = useDesktopNav();
+
+  if (pathname === "/" || !isDesktopNav) return null;
 
   return (
     <footer className="mt-auto w-full border-t border-white/[0.06] py-6">

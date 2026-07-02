@@ -1,23 +1,25 @@
 ﻿"use client";
 
 import {
+  getLearningPathServerSnapshot,
   loadLearningPath,
   saveLearningPath,
+  subscribeLearningPath,
   type LearningPath,
 } from "@/lib/learning-path";
 import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 
 type LearningPathContextValue = {
   path: LearningPath;
   setPath: (path: LearningPath) => void;
+  /** Zawsze true — ścieżka synchronizowana przez useSyncExternalStore (bez mismatchu SSR). */
   ready: boolean;
 };
 
@@ -26,24 +28,19 @@ const LearningPathContext = createContext<LearningPathContextValue | null>(
 );
 
 export function LearningPathProvider({ children }: { children: ReactNode }) {
-  const [path, setPathState] = useState<LearningPath>("sp");
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    // Hydrate from localStorage once on mount (intentional client-only sync).
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setPathState(loadLearningPath());
-    setReady(true);
-  }, []);
+  const path = useSyncExternalStore(
+    subscribeLearningPath,
+    loadLearningPath,
+    getLearningPathServerSnapshot,
+  );
 
   const setPath = useCallback((next: LearningPath) => {
     saveLearningPath(next);
-    setPathState(next);
   }, []);
 
   const value = useMemo(
-    () => ({ path, setPath, ready }),
-    [path, setPath, ready],
+    () => ({ path, setPath, ready: true }),
+    [path, setPath],
   );
 
   return (
@@ -60,4 +57,3 @@ export function useLearningPath(): LearningPathContextValue {
   }
   return ctx;
 }
-

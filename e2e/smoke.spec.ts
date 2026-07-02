@@ -30,6 +30,22 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
+  test("nawigacja mobilna ma dolny pasek", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/arkusze");
+    await expect(
+      page.getByRole("navigation", { name: "Nawigacja mobilna" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("navigation", { name: "Nawigacja mobilna" }).getByRole("link", {
+        name: "Arkusze",
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("navigation", { name: "Nawigacja mobilna" }).getByLabel("Graj"),
+    ).toBeVisible();
+  });
+
   test("nawigacja ma link Trening", async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");

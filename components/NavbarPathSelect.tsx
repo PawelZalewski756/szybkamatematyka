@@ -11,7 +11,7 @@ type NavbarPathSelectProps = {
 };
 
 export function NavbarPathSelect({ className = "" }: NavbarPathSelectProps) {
-  const { path, setPath, ready } = useLearningPath();
+  const { path, setPath } = useLearningPath();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setPath(e.target.value as LearningPath);
@@ -25,9 +25,7 @@ export function NavbarPathSelect({ className = "" }: NavbarPathSelectProps) {
       <select
         value={path}
         onChange={handleChange}
-        disabled={!ready}
-        className="w-full min-w-0 cursor-pointer truncate rounded-lg border border-white/10 bg-[#111820] py-1.5 pl-2.5 pr-7 text-xs font-medium text-slate-200 outline-none transition-colors hover:border-white/20 focus:border-teal-500/40 disabled:opacity-50 lg:text-sm lg:py-2"
-        title={ready ? undefined : "Ładowanie…"}
+        className="w-full min-w-0 cursor-pointer truncate rounded-lg border border-white/10 bg-[#111820] py-1.5 pl-2.5 pr-7 text-xs font-medium text-slate-200 outline-none transition-colors hover:border-white/20 focus:border-teal-500/40 lg:text-sm lg:py-2"
       >
         {PATH_OPTIONS.map((option) => (
           <option key={option.value} value={option.value}>
