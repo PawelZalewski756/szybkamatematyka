@@ -141,7 +141,7 @@ export function BazaZadanArkuszePanel({
           Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej stronie.
         </p>
         <Link
-          href="/arkusze"
+          href="/trening/arkusze"
           className="text-sm font-semibold text-teal-400 hover:text-teal-300"
         >
           Widok pełnoekranowy →

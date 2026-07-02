@@ -11,7 +11,6 @@ export type NavGroup = {
 /** Główne linki widoczne w pasku nawigacji (reszta w menu „Więcej”). */
 export const NAV_PRIMARY_LINKS: readonly NavLink[] = [
   { href: "/trening", label: "Trening" },
-  { href: "/arkusze", label: "Arkusze" },
   { href: "/baza-zadan", label: "Baza zadań" },
   { href: "/minigry", label: "Minigry" },
 ] as const;

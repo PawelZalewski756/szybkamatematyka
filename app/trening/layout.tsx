@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { TreningSubNav } from "@/components/trening/TreningSubNav";
 
 export const metadata: Metadata = {
   title: "Trening tematyczny",
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function TreningLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <TreningSubNav />
+      {children}
+    </>
+  );
 }

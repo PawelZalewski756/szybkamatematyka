@@ -22,7 +22,7 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
       <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
         <p className="text-xl font-black text-white">Nie znaleziono arkusza</p>
         <Link
-          href="/arkusze"
+          href="/trening/arkusze"
           className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-400"         >
           <ArrowLeft className="h-4 w-4" aria-hidden />
           Wróć do arkuszy CKE
@@ -37,7 +37,7 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
   return (
     <div className="relative z-10 w-full py-6 sm:py-8">
       <Link
-        href="/arkusze"
+        href="/trening/arkusze"
         className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-400"       >
         <ArrowLeft className="h-4 w-4" aria-hidden />
         Wszystkie arkusze

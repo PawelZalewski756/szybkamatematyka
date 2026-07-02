@@ -21,7 +21,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/minigry", changeFrequency: "weekly", priority: 0.9 },
   { path: "/trening", changeFrequency: "weekly", priority: 0.9 },
   { path: "/baza-zadan", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/arkusze", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/trening/arkusze", changeFrequency: "weekly", priority: 0.85 },
   { path: "/wyzwania", changeFrequency: "daily", priority: 0.8 },
   { path: "/pojedynki", changeFrequency: "weekly", priority: 0.7 },
   { path: "/powtorki", changeFrequency: "weekly", priority: 0.7 },

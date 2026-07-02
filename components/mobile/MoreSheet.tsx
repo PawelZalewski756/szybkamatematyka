@@ -24,10 +24,7 @@ const MOBILE_MORE_GROUPS: readonly NavGroup[] = [
   },
   {
     label: null,
-    links: [
-      { href: "/cennik", label: "Cennik" },
-      { href: "/", label: "Strona główna" },
-    ],
+    links: [{ href: "/cennik", label: "Cennik" }],
   },
 ];
 

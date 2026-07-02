@@ -4,7 +4,7 @@ test.describe("Smoke", () => {
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matma pod maturę",
+      "Co dziś ćwiczymy?",
     );
   });
 
@@ -32,18 +32,25 @@ test.describe("Smoke", () => {
 
   test("nawigacja mobilna ma dolny pasek", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/arkusze");
+    await page.goto("/");
     await expect(
       page.getByRole("navigation", { name: "Nawigacja mobilna" }),
     ).toBeVisible();
     await expect(
       page.getByRole("navigation", { name: "Nawigacja mobilna" }).getByRole("link", {
-        name: "Arkusze",
+        name: "Start",
       }),
     ).toBeVisible();
     await expect(
       page.getByRole("navigation", { name: "Nawigacja mobilna" }).getByLabel("Graj"),
     ).toBeVisible();
+  });
+
+  test("strona główna ma panel startowy", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(
+      "Co dziś ćwiczymy?",
+    );
   });
 
   test("nawigacja ma link Trening", async ({ page }) => {

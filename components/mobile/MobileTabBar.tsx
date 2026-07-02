@@ -11,8 +11,8 @@ import {
 import { getSupabase } from "@/lib/supabase";
 import type { User } from "@supabase/supabase-js";
 import {
-  FileText,
   GraduationCap,
+  Home,
   LayoutGrid,
   Play,
   UserRound,
@@ -24,7 +24,7 @@ import { useCallback, useEffect, useState } from "react";
 type TabLinkProps = {
   href: string;
   label: string;
-  icon: typeof FileText;
+  icon: typeof Home;
   active: boolean;
 };
 
@@ -148,10 +148,10 @@ export function MobileTabBar() {
       >
         <div className="mx-auto flex h-16 max-w-lg items-end px-1">
           <TabLink
-            href="/arkusze"
-            label="Arkusze"
-            icon={FileText}
-            active={activeTab === "arkusze"}
+            href="/"
+            label="Start"
+            icon={Home}
+            active={activeTab === "start"}
           />
           <TabLink
             href="/trening"

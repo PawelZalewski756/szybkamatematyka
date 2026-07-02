@@ -4,7 +4,7 @@ export function isNavActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export type MobileTabId = "arkusze" | "trening" | "graj" | "profil" | "wiecej";
+export type MobileTabId = "start" | "trening" | "graj" | "profil" | "wiecej";
 
 export const MOBILE_TAB_BAR_HEIGHT_PX = 64;
 
@@ -25,16 +25,19 @@ export const MOBILE_WIECEJ_PREFIXES = [
   "/admin",
 ] as const;
 
+function isTreningRoute(pathname: string): boolean {
+  return (
+    isNavActive(pathname, "/trening") || isNavActive(pathname, "/arkusze")
+  );
+}
+
 export function getMobileActiveTab(pathname: string): MobileTabId | null {
-  if (isNavActive(pathname, "/arkusze")) return "arkusze";
-  if (isNavActive(pathname, "/trening")) return "trening";
+  if (pathname === "/") return "start";
+  if (isTreningRoute(pathname)) return "trening";
   if (MOBILE_GRAJ_PREFIXES.some((p) => isNavActive(pathname, p))) return "graj";
   if (isNavActive(pathname, "/profil") || isNavActive(pathname, "/login"))
     return "profil";
-  if (
-    pathname === "/" ||
-    MOBILE_WIECEJ_PREFIXES.some((p) => isNavActive(pathname, p))
-  ) {
+  if (MOBILE_WIECEJ_PREFIXES.some((p) => isNavActive(pathname, p))) {
     return "wiecej";
   }
   return null;
