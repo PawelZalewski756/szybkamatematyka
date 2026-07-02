@@ -5,7 +5,7 @@ import { TreningSubNav } from "@/components/trening/TreningSubNav";
 export const metadata: Metadata = {
   title: "Trening tematyczny",
   description:
-    "Arena treningu: tysiące zadań pogrupowanych po działach i tematach, ze ścieżką pod maturę lub egzamin ósmoklasisty. Ćwicz wybrany temat i zbieraj EXP.",
+    "Trening tematyczny: zadania pogrupowane po działach i tematach, ze ścieżką pod maturę lub egzamin ósmoklasisty. Ćwicz wybrany temat krok po kroku.",
   alternates: { canonical: "/trening" },
 };
 

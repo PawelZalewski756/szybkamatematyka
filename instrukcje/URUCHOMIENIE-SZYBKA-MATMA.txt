@@ -1,5 +1,5 @@
 ================================================================================
-  SZYBKA MATMA — instrukcja uruchomienia (Windows)
+  SZYBKA MATEMATYKA — instrukcja uruchomienia (Windows)
   Projekt: Next.js 16 + Supabase + Gemini (opcjonalnie)
 ================================================================================
 

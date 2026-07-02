@@ -5,8 +5,7 @@ import {
   uploadUserAvatar,
 } from "@/lib/supabase/avatar";
 import { Camera, Loader2 } from "lucide-react";
-import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type PlayerAvatarUploadProps = {
   userId: string;
@@ -23,6 +22,13 @@ export function PlayerAvatarUpload({
 }: PlayerAvatarUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
+  const [imageBroken, setImageBroken] = useState(false);
+
+  useEffect(() => {
+    setImageBroken(false);
+  }, [avatarUrl]);
+
+  const showImage = Boolean(avatarUrl) && !imageBroken;
 
   const handleFile = async (file: File | undefined) => {
     if (!file) return;
@@ -46,18 +52,20 @@ export function PlayerAvatarUpload({
         type="button"
         disabled={uploading}
         onClick={() => inputRef.current?.click()}
-        className="group relative h-28 w-28 overflow-hidden rounded-full bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)] ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32"
-        aria-label="Zmień awatar"
+        className={`group relative h-28 w-28 overflow-hidden rounded-full ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32 ${
+          showImage
+            ? "bg-zinc-900"
+            : "bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)]"
+        }`}
+        aria-label="Zmień zdjęcie profilowe"
       >
-        {avatarUrl ? (
-          <Image
-            key={avatarUrl}
-            src={avatarUrl}
+        {showImage ? (
+          // eslint-disable-next-line @next/next/no-img-element -- awatar z Supabase Storage
+          <img
+            src={avatarUrl!}
             alt=""
-            fill
-            className="object-cover"
-            sizes="128px"
-            unoptimized
+            className="absolute inset-0 h-full w-full object-cover"
+            onError={() => setImageBroken(true)}
           />
         ) : (
           <span className="flex h-full w-full items-center justify-center text-4xl font-black text-white sm:text-5xl">
@@ -79,9 +87,6 @@ export function PlayerAvatarUpload({
         className="sr-only"
         onChange={(e) => void handleFile(e.target.files?.[0])}
       />
-      <p className="mt-2 text-center text-xs font-semibold text-zinc-500">
-        Kliknij awatar · duże zdjęcia są automatycznie kompresowane
-      </p>
     </div>
   );
 }

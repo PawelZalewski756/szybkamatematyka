@@ -24,7 +24,7 @@ export function AccountLevelBar({
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <span className="rounded-lg bg-gradient-to-br bg-brand-gradient px-2.5 py-1 text-sm font-black text-white shadow-md shadow-orange-500/30">
-            LVL {level}
+            Poz. {level}
           </span>
           <span className="text-sm font-semibold text-zinc-400">{subtitle}</span>
         </div>

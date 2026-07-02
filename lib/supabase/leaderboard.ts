@@ -42,7 +42,7 @@ const LEADERBOARD_SELECT_DUEL =
   "id, nick, nickname, xp, level, avatar_url, duel_rating, duel_wins, duel_played";
 
 function readNick(row: LeaderboardRow): string {
-  return (row.nick ?? row.nickname ?? "").trim() || "Gracz";
+  return (row.nick ?? row.nickname ?? "").trim() || "Użytkownik";
 }
 
 function scoreForTab(row: LeaderboardRow, tab: LeaderboardTab): number {

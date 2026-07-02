@@ -53,7 +53,7 @@ export function streakReminderMessage(streak: number): {
     streak === 1 ? "1 dnia" : streak >= 2 && streak <= 4 ? `${streak} dni` : `${streak} dni`;
   return {
     title: "Nie strać serii!",
-    body: `Nie strać serii ${daysLabel}! Zagraj dziś, żeby utrzymać passę.`,
+    body: `Nie strać serii ${daysLabel}! Ćwicz dziś, żeby utrzymać passę.`,
   };
 }
 

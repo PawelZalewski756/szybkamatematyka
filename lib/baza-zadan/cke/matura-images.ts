@@ -70,7 +70,7 @@ export async function localizeMaturaImagesInTresc(
     if (!fs.existsSync(dest)) {
       fs.mkdirSync(path.dirname(dest), { recursive: true });
       const res = await fetch(url, {
-        headers: { "User-Agent": "SzybkaMatma-CKE-Import/1.0" },
+        headers: { "User-Agent": "SzybkaMatematyka-CKE-Import/1.0" },
       });
       if (!res.ok) {
         console.warn(`  ⚠ Nie pobrano obrazka: ${url} (${res.status})`);

@@ -294,7 +294,7 @@ function TopicCard({
       )}
       {canPlay && (
         <p className="mt-3 text-xs font-semibold text-orange-/90">
-          {isCompleted ? "Powtórz teorię i arenę" : "Teoria · Arena"}
+          {isCompleted ? "Powtórz teorię i zadania" : "Teoria · Zadania"}
         </p>
       )}
     </>
@@ -696,7 +696,7 @@ export default function TreningPage() {
             >
               <p className="min-w-0 flex-1 text-sm text-amber-100/95">
                 <span className="font-black text-amber-200">Nowa ścieżka?</span>{" "}
-                Zacznij od teorii, potem arena{" "}
+                Zacznij od teorii, potem zadania{" "}
                 <Link
                   href={pathBannerHref}
                   className="font-bold text-amber-400 underline-offset-2 hover:underline"

@@ -40,7 +40,7 @@ function TabSwitcher({
       {(
         [
           { id: "teoria" as const, label: "Teoria" },
-          { id: "arena" as const, label: "Arena" },
+          { id: "arena" as const, label: "Zadania" },
         ] as const
       ).map((tab) => {
         const isActive = activeTab === tab.id;
@@ -150,7 +150,7 @@ function TheoryTab({
       <div className="rounded-xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-md">
         <p className="text-lg font-bold text-zinc-200">Teoria wkrótce…</p>
         <p className="mt-2 text-sm text-zinc-400">
-          Pracujemy nad teorią do tego tematu. Możesz już ćwiczyć w arenie zadań.
+          Pracujemy nad teorią do tego tematu. Możesz już ćwiczyć zadania.
         </p>
         <button
           type="button"

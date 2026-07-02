@@ -19,7 +19,7 @@ const QUICK_ACTIONS = [
   {
     href: "/trening",
     label: "Tematy",
-    hint: "Teoria i arena po działach",
+    hint: "Teoria i zadania po działach",
     icon: GraduationCap,
     accent: "teal",
   },
@@ -99,7 +99,7 @@ export function HomeDashboard() {
                 Wyzwanie dnia
               </h2>
               <p className="mt-1 flex-1 text-sm text-slate-400">
-                Jedno zadanie na timer — buduj serię i zbieraj EXP.
+                Jedno zadanie na timer — buduj serię i zdobywaj punkty.
               </p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-300 group-hover:gap-2 transition-all">
                 Gram

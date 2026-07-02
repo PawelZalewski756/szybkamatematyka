@@ -101,10 +101,10 @@ export default function RankingiPage() {
             <Trophy className="h-6 w-6 text-amber-300" aria-hidden />
           </div>
           <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
-            Tablica wyników
+            Rankingi
           </h1>
           <p className="mt-1 text-sm text-zinc-400">
-            Top {TOP_LIMIT} graczy · sortowanie po {sortLabel}
+            Top {TOP_LIMIT} osób · sortowanie po {sortLabel}
           </p>
 
           <div
@@ -191,15 +191,15 @@ export default function RankingiPage() {
             }
             description={
               activeTab === "minigry"
-                ? "Zagraj w minigry, aby zdobyć XP i jako pierwszy wskoczyć na listę!"
+                ? "Ćwicz w minigrach, aby zdobyć XP i jako pierwszy trafić na listę!"
                 : activeTab === "pojedynki"
                   ? "Rozegraj pojedynek 1v1, aby zdobyć rating i wejść na listę!"
-                  : "Zagraj w minigrach lub arenie treningowej, aby zdobyć XP i wejść do rankingu!"
+                  : "Ćwicz w minigrach lub treningu, aby zdobyć XP i wejść do rankingu!"
             }
             action={
               activeTab === "pojedynki"
-                ? { href: "/pojedynki", label: "Zagraj w pojedynki" }
-                : { href: "/minigry", label: "Zagraj w minigry" }
+                ? { href: "/pojedynki", label: "Przejdź do pojedynków" }
+                : { href: "/minigry", label: "Przejdź do minigier" }
             }
           />
         ) : (

@@ -18,7 +18,7 @@ export function LevelBadge({
     <span
       className={`inline-flex shrink-0 items-center rounded-md bg-gradient-to-br from-amber-500 via-orange-500 to-orange-600 font-black tabular-nums text-white shadow-[0_0_12px_rgba(251,146,60,0.35)] ring-1 ring-amber-300/40 ${sizeClass} ${className}`}
     >
-      Lvl {level}
+      Poz. {level}
     </span>
   );
 }

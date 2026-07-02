@@ -15,7 +15,7 @@ type NavbarProfileStatsProps = {
 
 function displayNick(profile: Profile): string {
   const nick = profile.nick.trim();
-  return nick || "Gracz";
+  return nick || "Profil";
 }
 
 export function NavbarProfileStats({
@@ -35,7 +35,7 @@ export function NavbarProfileStats({
 
   const levelBadge = (
     <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br bg-brand-gradient px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
-      LVL {level}
+      Poz. {level}
     </span>
   );
 
@@ -43,7 +43,7 @@ export function NavbarProfileStats({
     profile.streak >= 2 ? (
       <span
         className="whitespace-nowrap flex-shrink-0 text-[10px] font-black text-orange-300"
-        title="Seria dni z grą"
+        title="Seria dni nauki"
       >
         🔥{profile.streak}
       </span>
@@ -119,7 +119,7 @@ export function NavbarProfileStats({
           {nick}
         </span>
         <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-gradient-to-br bg-brand-gradient px-2 py-0.5 text-xs font-black text-white">
-          LVL {level}
+          Poz. {level}
         </span>
         <span
           className="whitespace-nowrap flex-shrink-0 text-xs font-bold tabular-nums text-emerald-400"
@@ -130,7 +130,7 @@ export function NavbarProfileStats({
         {profile.streak >= 2 && (
           <span
             className="whitespace-nowrap flex-shrink-0 rounded-md border border-orange-500/40 bg-orange-500/15 px-2 py-0.5 text-xs font-black text-orange-300"
-            title="Seria dni z grą"
+            title="Seria dni nauki"
           >
             🔥 {profile.streak}
           </span>

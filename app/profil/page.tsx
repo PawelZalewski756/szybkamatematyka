@@ -381,7 +381,7 @@ export default function ProfilPage() {
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
             <div className="h-12 w-12 animate-spin rounded-full border-2 border-orange-500/30 border-t-cyan-400" />
             <p className="text-sm font-semibold text-zinc-400">
-              Ładowanie dashboardu gracza…
+              Ładowanie profilu…
             </p>
           </div>
         ) : configError ? (
@@ -406,10 +406,9 @@ export default function ProfilPage() {
             className="flex flex-1 flex-col"
           >
             <header className="flex flex-col items-center text-center">
-              <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400/90">
-                <Swords className="h-3.5 w-3.5" aria-hidden />
-                Dashboard gracza
-              </div>
+              <h1 className="text-2xl font-black text-white sm:text-3xl">
+                Twój profil
+              </h1>
               <PlayerAvatarUpload
                 userId={user.id}
                 avatarUrl={profile.avatarUrl}
@@ -424,21 +423,21 @@ export default function ProfilPage() {
 
             <section className="mt-8">
               <label
-                htmlFor="gaming-nick"
+                htmlFor="profile-nick"
                 className="text-xs font-bold uppercase tracking-wider text-zinc-400"
               >
-                Gamingowy nick
+                Nick
               </label>
               <div className="mt-2 flex gap-2">
                 <input
-                  id="gaming-nick"
+                  id="profile-nick"
                   type="text"
                   value={nickDraft}
                   onChange={(e) => setNickDraft(e.target.value)}
                   maxLength={24}
                   disabled={nickChangeBlocked}
                   className="min-w-0 flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 disabled:cursor-not-allowed disabled:opacity-50"
-                  placeholder="Twój nick na tablicy wyników"
+                  placeholder="np. KasiaM"
                 />
                 <button
                   type="button"
@@ -477,7 +476,7 @@ export default function ProfilPage() {
             <section className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
               <StatCard
                 label="Poziom"
-                value={`Lvl ${calculateLevel(profile.xp)}`}
+                value={`Poziom ${calculateLevel(profile.xp)}`}
                 icon={Trophy}
                 accent="amber"
               />
@@ -499,20 +498,20 @@ export default function ProfilPage() {
                 </p>
               </div>
               <StatCard
-                label="Streak"
+                label="Seria dni"
                 value={streakLabel(profile.streak)}
                 sub={
                   profile.streak >= 2
-                    ? "🔥 Seria nauki"
-                    : "Zagraj dziś, aby podbić"
+                    ? "🔥 Utrzymujesz passę"
+                    : "Ćwicz dziś, aby podtrzymać serię"
                 }
                 icon={Flame}
                 accent="orange"
               />
               <StatCard
-                label="Arena — zadania"
+                label="Zadania rozwiązane"
                 value={String(arenaSolvedCount)}
-                sub="rozwiązane w treningu"
+                sub="w treningu"
                 icon={Swords}
                 accent="emerald"
               />
@@ -550,7 +549,7 @@ export default function ProfilPage() {
                 className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-200"
               >
                 <Trophy className="h-4 w-4" />
-                Tablica wyników →
+                Rankingi →
               </Link>
             </div>
 

@@ -105,7 +105,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             maxLength={24}
             autoFocus
             autoComplete="username"
-            placeholder="np. MatmaMaster"
+            placeholder="np. KasiaM"
             className="mt-2 w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-base font-bold text-white outline-none placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/25"
           />
 

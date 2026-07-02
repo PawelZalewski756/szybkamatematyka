@@ -1,3 +1,4 @@
+import { findAvatarUrlInStorage } from "@/lib/supabase/avatar";
 import { getSupabase } from "@/lib/supabase";
 import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
 import { calculateLevel } from "@/lib/levelSystem";
@@ -83,8 +84,8 @@ const PROFILE_SELECT_FALLBACK_CHAIN = [
   SUBSCRIPTION_SELECT,
   NICK_UPDATE_SELECT,
   FULL_SELECT,
-  STREAK_SELECT,
   AVATAR_SELECT,
+  STREAK_SELECT,
   CORE_SELECT,
 ] as const;
 
@@ -196,14 +197,45 @@ async function resolveUserForMetadata(
   return data.user?.id === userId ? data.user : null;
 }
 
+async function fetchAvatarUrlFromDb(userId: string): Promise<string | null> {
+  const supabase = getSupabase();
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("avatar_url")
+    .eq("id", userId)
+    .maybeSingle();
+
+  if (error) {
+    if (isPostgrestUndefinedColumnError(error as PostgrestError, "avatar_url")) {
+      return null;
+    }
+    console.warn("[szybka-matma] fetchAvatarUrlFromDb:", error);
+    return null;
+  }
+
+  const url = data?.avatar_url;
+  if (typeof url === "string" && url.trim()) return url.trim();
+  return null;
+}
+
 async function enrichProfileAvatar(
   profile: Profile,
   userId: string,
   user?: User | null,
 ): Promise<Profile> {
   if (profile.avatarUrl) return profile;
+
   const resolved = await resolveUserForMetadata(userId, user);
-  return mergeProfileAvatarFromMetadata(profile, resolved);
+  const fromMetadata = mergeProfileAvatarFromMetadata(profile, resolved);
+  if (fromMetadata.avatarUrl) return fromMetadata;
+
+  const fromDb = await fetchAvatarUrlFromDb(userId);
+  if (fromDb) return { ...profile, avatarUrl: fromDb };
+
+  const fromStorage = await findAvatarUrlInStorage(userId);
+  if (fromStorage) return { ...profile, avatarUrl: fromStorage };
+
+  return profile;
 }
 
 export async function persistAvatarUrlToUserMetadata(

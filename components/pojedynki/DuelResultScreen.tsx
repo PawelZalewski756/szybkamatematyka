@@ -202,7 +202,7 @@ export function DuelResultScreen({
           <p className="mb-3 text-lg font-bold text-emerald-400">
             {xpEarned !== null
               ? `+${xpEarned} XP na koncie${
-                  savedLevel ? ` · LVL ${savedLevel}` : ""
+                  savedLevel ? ` · Poz. ${savedLevel}` : ""
                 }`
               : "Zapisywanie XP…"}
           </p>

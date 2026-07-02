@@ -6,7 +6,7 @@ export default function Loading() {
     <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
       <GamingBackground />
       <div className="relative z-10 flex flex-1 flex-col">
-        <PageLoader label="Ładowanie profilu gracza…" />
+        <PageLoader label="Ładowanie profilu…" />
       </div>
     </div>
   );

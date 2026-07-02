@@ -45,7 +45,7 @@ export function renderOgImage() {
             maxWidth: 920,
           }}
         >
-          Matma pod maturę i egzamin ósmoklasisty
+          Matematyka pod maturę i egzamin ósmoklasisty
         </div>
         <div
           style={{

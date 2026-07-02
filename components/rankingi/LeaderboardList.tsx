@@ -14,7 +14,7 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
   if (entries.length === 0) {
     return (
       <p className="py-8 text-center text-sm text-zinc-500">
-        Brak graczy na liście.
+        Brak uczestników na liście.
       </p>
     );
   }

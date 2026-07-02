@@ -27,10 +27,10 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
-  test("/rankingi ładuje tablicę wyników", async ({ page }) => {
+  test("/rankingi ładuje ranking", async ({ page }) => {
     await page.goto("/rankingi");
     await expect(
-      page.getByRole("heading", { name: "Tablica wyników" }),
+      page.getByRole("heading", { name: "Rankingi" }),
     ).toBeVisible();
   });
 

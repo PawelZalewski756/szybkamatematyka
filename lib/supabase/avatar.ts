@@ -8,6 +8,33 @@ export const AVATAR_BUCKET = "avatary";
 export const AVATAR_BUCKET_NOT_FOUND_MESSAGE =
   "Bucket „avatary” nie istnieje — uruchom init_profiles_avatars.sql w Supabase Dashboard → SQL Editor.";
 
+export function getAvatarStoragePublicUrl(userId: string): string {
+  const supabase = getSupabase();
+  const {
+    data: { publicUrl },
+  } = supabase.storage.from(AVATAR_BUCKET).getPublicUrl(`${userId}/avatar.jpg`);
+  return publicUrl;
+}
+
+/** Gdy plik jest w Storage, ale brak wpisu w profiles.avatar_url. */
+export async function findAvatarUrlInStorage(
+  userId: string,
+): Promise<string | null> {
+  const supabase = getSupabase();
+  const { data, error } = await supabase.storage
+    .from(AVATAR_BUCKET)
+    .list(userId, { limit: 8 });
+
+  if (error || !data?.length) return null;
+
+  const hasAvatar = data.some(
+    (file) => file.name === "avatar.jpg" || file.name === "avatar.png",
+  );
+  if (!hasAvatar) return null;
+
+  return `${getAvatarStoragePublicUrl(userId)}?v=${Date.now()}`;
+}
+
 function errorMessage(error: unknown): string {
   if (error instanceof Error) return error.message;
   if (

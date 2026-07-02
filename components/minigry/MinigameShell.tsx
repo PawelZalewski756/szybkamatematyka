@@ -117,7 +117,7 @@ export function MinigameShell({
               level={displayProgress.level}
               xp={displayProgress.xp}
               subtitle={
-                account.profile?.nick ?? "Zaloguj się, by zapisywać XP"
+                account.profile?.nick ?? "Zaloguj się, by zapisywać postęp"
               }
             />
             <p className="mt-3 text-sm text-zinc-500">
@@ -141,7 +141,7 @@ export function MinigameShell({
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
-            Graj!
+            Rozpocznij
           </motion.button>
         </div>
       </div>
@@ -170,7 +170,7 @@ export function MinigameShell({
                   NOWY POZIOM KONTA!
                 </h2>
                 <p className="mt-3 text-2xl font-black text-white">
-                  LVL {cloudProfile?.level ?? displayProgress.level}
+                  Poz. {cloudProfile?.level ?? displayProgress.level}
                 </p>
               </motion.div>
             </motion.div>
@@ -200,7 +200,7 @@ export function MinigameShell({
         {account.isLoggedIn && cloudProfile ? (
           <p className="mt-2 text-lg text-emerald-400">
             {savedToCloud
-              ? `+${xpEarned} XP na koncie (wynik rundy: ${score} pkt) · LVL ${cloudProfile.level}`
+              ? `+${xpEarned} XP na koncie (wynik rundy: ${score} pkt) · Poz. ${cloudProfile.level}`
               : saveError ?? "Zapisywanie XP…"}
           </p>
         ) : (
@@ -216,7 +216,7 @@ export function MinigameShell({
           <AccountLevelBar
             level={cloudProfile?.level ?? displayProgress.level}
             xp={cloudProfile?.xp ?? displayProgress.xp}
-            subtitle={cloudProfile?.nick ?? "Gość"}
+            subtitle={cloudProfile?.nick ?? "Niezalogowany"}
           />
         </div>
 
@@ -333,7 +333,7 @@ export function MinigameShell({
                     exit={{ scale: 0, opacity: 0 }}
                     className="whitespace-nowrap flex-shrink-0 rounded-full border border-orange-500/50 bg-orange-500/20 px-2 py-0.5 text-xs font-black text-orange-300"
                   >
-                    🔥 Combo x{combo}
+                    🔥 Seria ×{combo}
                   </motion.span>
                 )}
               </AnimatePresence>

@@ -169,8 +169,8 @@ export function ProfileStatsSection({
               />
               <KpiTile
                 label="Poziom"
-                value={`Lvl ${stats.level}`}
-                sub="konto gracza"
+                value={`Poziom ${stats.level}`}
+                sub="na koncie"
                 icon={Trophy}
                 accent="amber"
               />
@@ -178,7 +178,7 @@ export function ProfileStatsSection({
                 label="Seria"
                 value={streakLabel(stats.streak)}
                 sub={
-                  stats.streak >= 2 ? "🔥 seria nauki" : "zagraj dziś, aby podbić"
+                  stats.streak >= 2 ? "🔥 seria nauki" : "ćwicz dziś, aby podtrzymać serię"
                 }
                 icon={Flame}
                 accent="orange"
@@ -213,7 +213,7 @@ export function ProfileStatsSection({
             <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">
-                  Postęp do Lvl {stats.level + 1}
+                  Postęp do poziomu {stats.level + 1}
                 </p>
                 <LevelBadge level={stats.level} />
               </div>

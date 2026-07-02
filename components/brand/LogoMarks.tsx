@@ -20,7 +20,7 @@ const SLATE = "#94a3b8";
 const WHITE = "#f8fafc";
 const BG = "#0a0f14";
 
-/** Znak marki — stoper z „=” (szybki licznik + matma). Wyraźny na ciemnym tle. */
+/** Znak marki — stoper z „=” (szybki licznik). Wyraźny na ciemnym tle. */
 export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
   return (
     <svg

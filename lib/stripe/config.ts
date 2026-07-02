@@ -28,7 +28,7 @@ export function getStripeOrNull(): Stripe | null {
       // apiVersion celowo pominięty — używamy wersji przypiętej przez SDK,
       // co eliminuje rozjazd typów przy aktualizacjach pakietu.
       typescript: true,
-      appInfo: { name: "szybka-matma" },
+      appInfo: { name: "Szybka Matematyka" },
     });
   }
   return stripeClient;

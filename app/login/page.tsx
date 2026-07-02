@@ -335,7 +335,7 @@ export default function LoginPage() {
                   required
                   value={nick}
                   onChange={(e) => setNick(e.target.value)}
-                  placeholder="np. MatmaMaster"
+                  placeholder="np. KasiaM"
                   maxLength={20}
                   className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
                 />

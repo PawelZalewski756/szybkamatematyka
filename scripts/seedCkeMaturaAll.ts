@@ -185,7 +185,7 @@ function writeCache(sheet: CachedSheet): void {
 async function fetchHtml(url: string): Promise<string> {
   const res = await fetch(url, {
     headers: {
-      "User-Agent": "SzybkaMatma-CKE-Import/1.0 (edukacja; kontakt: admin)",
+      "User-Agent": "SzybkaMatematyka-CKE-Import/1.0 (edukacja; kontakt: admin)",
       Accept: "text/html",
     },
   });
