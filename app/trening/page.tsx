@@ -1,6 +1,5 @@
 "use client";
 
-import { GamingBackground } from "@/components/gaming/GamingBackground";
 import {
   examTypeForKey,
   TRAINING_CURRICULUM,
@@ -20,7 +19,6 @@ import { fetchTasksForTree } from "@/lib/supabase/tasks";
 import { fetchMaterialSummariesForExam } from "@/lib/supabase/materials";
 import type { TheoryTier } from "@/lib/trening/theory-content";
 import type { TopicStatus } from "@/types/database";
-import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import {
   BookOpen,
@@ -29,7 +27,6 @@ import {
   Loader2,
   Play,
   Search,
-  Sparkles,
   X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -173,7 +170,7 @@ function ExamSwitcher({
     <div
       role="tablist"
       aria-label="Wybór egzaminu"
-      className="mx-auto flex w-full max-w-lg rounded-2xl border border-white/15 bg-white/[0.06] p-1 shadow-[0_0_32px_rgba(0,0,0,0.25)] backdrop-blur-xl"
+      className="mx-auto flex w-full max-w-lg rounded-xl border border-white/[0.08] bg-white/[0.03] p-1"
     >
       {EXAM_OPTIONS.map((opt) => {
         const isActive = selected === opt.key;
@@ -184,18 +181,13 @@ function ExamSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(opt.key)}
-            className={`relative flex-1 rounded-xl px-3 py-2.5 text-center text-xs font-bold transition-colors duration-200 sm:text-sm ${
-              isActive ? "text-white" : "text-zinc-400 hover:text-zinc-200"
+            className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-semibold transition sm:text-sm ${
+              isActive
+                ? "bg-teal-500/15 text-teal-200"
+                : "text-slate-500 hover:text-slate-300"
             }`}
           >
-            {isActive && (
-              <motion.span
-                layoutId="trening-exam-pill"
-                className="absolute inset-0 rounded-xl border border-orange-400/30 bg-gradient-to-r from-orange-500/25 via-orange-500/20 to-orange-600/25 shadow-[0_0_20px_rgba(192,38,211,0.2)]"
-                transition={{ type: "spring", stiffness: 380, damping: 32 }}
-              />
-            )}
-            <span className="relative z-10">{opt.label}</span>
+            {opt.label}
           </button>
         );
       })}
@@ -207,7 +199,7 @@ function TopicStatusIcon({ status }: { status: TopicStatus }) {
   if (status === "completed") {
     return (
       <CheckCircle2
-        className="h-6 w-6 shrink-0 text-emerald-400"
+        className="h-5 w-5 shrink-0 text-emerald-400"
         aria-label="Ukończone"
       />
     );
@@ -215,59 +207,22 @@ function TopicStatusIcon({ status }: { status: TopicStatus }) {
   if (status === "available") {
     return (
       <Play
-        className="h-6 w-6 shrink-0 fill-orange-400/20 text-orange-400"
+        className="h-5 w-5 shrink-0 text-teal-400"
         aria-label="Dostępne"
       />
     );
   }
   return (
-    <span className="shrink-0 text-xl" aria-label="Wkrótce">
-      ⏳
+    <span className="text-xs font-medium text-slate-600" aria-label="Wkrótce">
+      Wkrótce
     </span>
   );
 }
 
-function topicStatusEmoji(status: TopicStatus): string {
-  if (status === "completed") return "✅";
-  if (status === "available") return "▶️";
-  if (status === "coming_soon") return "⏳";
-  return "🔒";
-}
-
-function progressBarColor(percent: number): string {
-  if (percent >= 100) return "from-emerald-500 to-emerald-400";
-  if (percent >= 50) return "from-emerald-500 to-orange-500";
-  if (percent >= 25) return "from-orange-500 to-orange-500";
-  return "from-zinc-600 to-zinc-500";
-}
-
-function TheoryBadge({ tier }: { tier: TheoryTier }) {
-  if (tier === "comprehensive") {
-    return (
-      <span className="inline-flex rounded-full border border-teal-500/35 bg-teal-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal-200">
-        Teoria · pełny kurs
-      </span>
-    );
-  }
-  if (tier === "full") {
-    return (
-      <span className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-        Teoria ✓
-      </span>
-    );
-  }
-  if (tier === "basic") {
-    return (
-      <span className="inline-flex rounded-full border border-amber-500/25 bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-200/90">
-        Teoria · skrót
-      </span>
-    );
-  }
-  return (
-    <span className="inline-flex rounded-full border border-white/10 bg-zinc-900/60 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
-      Teoria wkrótce
-    </span>
-  );
+function theoryLabel(tier: TheoryTier): string | null {
+  if (tier === "none") return null;
+  if (tier === "comprehensive" || tier === "full") return "Teoria";
+  return "Teoria (skrót)";
 }
 
 function TopicCard({
@@ -288,24 +243,22 @@ function TopicCard({
   const canPlay = topic.total > 0;
   const href = buildTopicHref(examKey, category.id, topic.id);
   const progressLabel = `${topic.solved}/${topic.total}`;
+  const theory = theoryLabel(theoryTier);
 
   const cardInner = (
     <>
       <div className="flex items-start justify-between gap-2">
         <TopicStatusIcon status={topic.status} />
-        <div className="flex flex-col items-end gap-1.5">
-          {canPlay && <TheoryBadge tier={theoryTier} />}
-          <span className="text-lg" aria-hidden>
-            {topicStatusEmoji(topic.status)}
-          </span>
-        </div>
+        {theory && (
+          <span className="text-xs text-slate-500">{theory}</span>
+        )}
       </div>
       <h3
-        className={`mt-3 text-base font-black leading-snug sm:text-lg ${
+        className={`mt-3 text-base font-semibold leading-snug sm:text-lg ${
           isCompleted
             ? "text-emerald-200"
             : isComingSoon
-              ? "text-zinc-500"
+              ? "text-slate-600"
               : "text-white"
         }`}
       >
@@ -313,109 +266,71 @@ function TopicCard({
       </h3>
       {canPlay ? (
         <div className="mt-4">
-          <div className="mb-1.5 flex justify-between text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+          <div className="mb-1.5 flex justify-between text-xs text-slate-500">
             <span>Postęp</span>
-            <span className="text-zinc-300">{progressLabel}</span>
+            <span>{progressLabel}</span>
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-zinc-800/80">
+          <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
             <div
-              className={`h-full rounded-full bg-gradient-to-r ${progressBarColor(topic.percent)} transition-all duration-500`}
+              className="h-full rounded-full bg-teal-500 transition-all duration-300"
               style={{ width: `${topic.percent}%` }}
             />
           </div>
         </div>
       ) : (
-        <span className="mt-4 inline-flex rounded-full border border-white/10 bg-zinc-900/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
-          Wkrótce ⏳
-        </span>
-      )}
-      {canPlay && (
-        <p className="mt-3 text-xs font-semibold text-orange-400/90">
-          {isCompleted ? "Powtórz teorię i zadania" : "Teoria · Zadania"}
-        </p>
+        <span className="mt-4 text-xs text-slate-600">Brak zadań</span>
       )}
     </>
   );
 
   const cardClass =
-    "flex h-full flex-col rounded-2xl border p-5 backdrop-blur-xl transition " +
+    "flex h-full flex-col rounded-xl border p-5 transition " +
     (highlighted
-      ? "border-amber-400/50 bg-amber-500/10 shadow-[0_0_32px_rgba(251,191,36,0.2)] ring-2 ring-amber-400/40"
+      ? "border-teal-500/30 bg-teal-500/5"
       : isComingSoon
-        ? "cursor-default border-white/5 bg-zinc-900/40 text-zinc-500"
+        ? "cursor-default border-white/[0.05] bg-white/[0.02] text-slate-600"
         : isCompleted
-          ? "border-emerald-500/25 bg-emerald-500/5 shadow-[0_0_24px_rgba(16,185,129,0.08)]"
-          : "border-white/15 bg-white/[0.07] shadow-[0_0_32px_rgba(0,0,0,0.25)]");
+          ? "border-emerald-500/20 bg-emerald-500/[0.03]"
+          : "surface-card hover:border-teal-500/20");
 
   if (!canPlay) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        className={cardClass}
-      >
-        {cardInner}
-      </motion.div>
-    );
+    return <div className={cardClass}>{cardInner}</div>;
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{
-        scale: 1.02,
-        boxShadow: "0 0 40px rgba(232,112,42,0.18)",
-      }}
-      transition={{ type: "spring", stiffness: 380, damping: 22 }}
-    >
-      <Link
-        href={href}
-        className={`${cardClass} block hover:border-orange-500/35 hover:bg-white/10`}
-      >
-        {cardInner}
-      </Link>
-    </motion.div>
+    <Link href={href} className={`${cardClass} block`}>
+      {cardInner}
+    </Link>
   );
 }
 
 function CategorySection({
   examKey,
   category,
-  index,
   highlightTopicHref,
   theoryByTopic,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
-  index: number;
   highlightTopicHref?: string | null;
   theoryByTopic: Map<string, TheoryTier>;
 }) {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.06 * index }}
-      className="mt-12 first:mt-10"
-    >
+    <section className="mt-12 first:mt-10">
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-300/80">
-            Dział
-          </p>
-          <h2 className="mt-1 text-xl font-black text-white sm:text-2xl">
+          <h2 className="text-xl font-semibold text-white sm:text-2xl">
             {category.name}
           </h2>
         </div>
         <div className="w-full max-w-xs sm:max-w-[14rem]">
-          <div className="mb-1 flex justify-between text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+          <div className="mb-1 flex justify-between text-xs text-slate-500">
             <span>Postęp działu</span>
-            <span className="text-zinc-300">{category.progressPercent}%</span>
+            <span>{category.progressPercent}%</span>
           </div>
-          <div className="h-2.5 overflow-hidden rounded-full bg-zinc-800/80">
+          <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
             <div
-              className={`h-full rounded-full bg-gradient-to-r ${progressBarColor(category.progressPercent)}`}
+              className="h-full rounded-full bg-teal-500"
               style={{ width: `${category.progressPercent}%` }}
             />
           </div>
@@ -439,7 +354,7 @@ function CategorySection({
           );
         })}
       </div>
-    </motion.section>
+    </section>
   );
 }
 
@@ -608,44 +523,22 @@ export default function TreningPage() {
   );
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
-      <GamingBackground />
-
+    <div className="relative flex min-h-0 flex-1 flex-col">
       <div className="page-container relative z-10 flex w-full flex-1 flex-col py-8 sm:py-12">
-        <motion.header
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center"
-        >
-          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-orange-300/90 backdrop-blur-md sm:text-xs">
-            <Sparkles className="h-3.5 w-3.5" aria-hidden />
-            Z bazy zadań
-          </div>
-          <h1 className="text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
-            <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
-              Ścieżka treningowa
-            </span>
+        <header className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Trening
           </h1>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-zinc-400 sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-500 sm:text-base">
             {examSubtitle}
           </p>
-        </motion.header>
+        </header>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.03 }}
-          className="mx-auto mt-6 w-full max-w-lg px-1"
-        >
+        <div className="mx-auto mt-6 w-full max-w-lg px-1">
           <ExamSwitcher selected={selectedExam} onChange={handleExamChange} />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.04 }}
-          className="mx-auto mt-6 w-full max-w-lg px-1"
-        >
+        <div className="mx-auto mt-6 w-full max-w-lg px-1">
           <label className="sr-only" htmlFor="trening-search">
             Szukaj tematu
           </label>
@@ -660,13 +553,12 @@ export default function TreningPage() {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Szukaj działu lub tematu…"
-              className="w-full rounded-2xl border border-white/15 bg-white/[0.06] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none backdrop-blur-xl focus:border-orange-500/40 focus:ring-1 focus:ring-orange-500/30"
+              className="w-full rounded-xl border border-white/[0.08] bg-white/[0.03] py-3 pl-11 pr-4 text-sm text-white placeholder:text-slate-600 outline-none focus:border-teal-500/40 focus:ring-1 focus:ring-teal-500/25"
             />
           </div>
           {debouncedQuery.trim() && !loading && (
-            <p className="mt-2 text-center text-xs font-semibold text-zinc-400">
-              Znaleziono{" "}
-              <span className="text-amber-400">{matchedTopicCount}</span>{" "}
+            <p className="mt-2 text-center text-xs text-slate-500">
+              Znaleziono {matchedTopicCount}{" "}
               {matchedTopicCount === 1
                 ? "temat"
                 : matchedTopicCount >= 2 && matchedTopicCount <= 4
@@ -674,14 +566,9 @@ export default function TreningPage() {
                   : "tematów"}
             </p>
           )}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.045 }}
-          className="mx-auto mt-4 flex w-full max-w-2xl flex-col gap-3 px-1 xl:max-w-4xl"
-        >
+        <div className="mx-auto mt-4 flex w-full max-w-2xl flex-col gap-3 px-1 xl:max-w-4xl">
           <div
             role="group"
             aria-label="Filtr tematów"
@@ -700,10 +587,10 @@ export default function TreningPage() {
                   key={opt.id}
                   type="button"
                   onClick={() => setTopicFilter(opt.id)}
-                  className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
                     active
-                      ? "border-orange-400/50 bg-orange-500/20 text-orange-100"
-                      : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                      ? "border-teal-500/30 bg-teal-500/10 text-teal-200"
+                      : "border-white/[0.08] bg-white/[0.02] text-slate-500 hover:text-slate-300"
                   }`}
                 >
                   {opt.label}
@@ -728,9 +615,10 @@ export default function TreningPage() {
                   key={opt.id}
                   type="button"
                   onClick={() => setTopicSort(opt.id)}
-                  className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
                     active
-                      ? "border-orange-500/50 bg-orange-500/20 text-orange-400"                       : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                      ? "border-teal-500/30 bg-teal-500/10 text-teal-200"
+                      : "border-white/[0.08] bg-white/[0.02] text-slate-500 hover:text-slate-300"
                   }`}
                 >
                   {opt.label}
@@ -738,85 +626,54 @@ export default function TreningPage() {
               );
             })}
           </div>
-        </motion.div>
+        </div>
 
-        <AnimatePresence>
-          {showPathBanner && pathBannerHref && !loading && (
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              className="mx-auto mt-6 flex max-w-lg items-start gap-3 rounded-2xl border border-amber-400/35 bg-amber-500/10 px-4 py-3.5 shadow-[0_0_24px_rgba(251,191,36,0.12)] backdrop-blur-xl"
-            >
-              <p className="min-w-0 flex-1 text-sm text-amber-100/95">
-                <span className="font-black text-amber-200">Nowa ścieżka?</span>{" "}
-                Zacznij od teorii, potem zadania{" "}
-                <Link
-                  href={pathBannerHref}
-                  className="font-bold text-amber-400 underline-offset-2 hover:underline"
-                >
-                  ➡️ pierwszy temat
-                </Link>
-              </p>
-              <button
-                type="button"
-                onClick={dismissPathBanner}
-                className="shrink-0 rounded-lg p-1 text-amber-200/80 transition hover:bg-white/10 hover:text-white"
-                aria-label="Zamknij podpowiedź"
+        {showPathBanner && pathBannerHref && !loading && (
+          <div className="mx-auto mt-6 flex max-w-lg items-start gap-3 surface-card px-4 py-3.5">
+            <p className="min-w-0 flex-1 text-sm text-slate-300">
+              Zacznij od pierwszego tematu —{" "}
+              <Link
+                href={pathBannerHref}
+                className="font-medium text-teal-400 hover:text-teal-300"
               >
-                <X className="h-4 w-4" />
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.05 }}
-          className="mx-auto mt-8 flex max-w-lg items-center gap-3 rounded-2xl border border-orange-500/30 bg-gradient-to-br from-orange-600/25 to-orange-600/15 px-5 py-4 shadow-[0_0_32px_rgba(192,38,211,0.15)] backdrop-blur-xl"
-        >
-          <GraduationCap className="h-9 w-9 shrink-0 text-orange-300" />
-          <div className="min-w-0 flex-1">
-            <p className="text-xs font-bold uppercase tracking-wider text-orange-300/90">
-              {exam.shortLabel}
+                przejdź do lekcji
+              </Link>
             </p>
-            <p className="truncate text-lg font-black text-white">{exam.label}</p>
-            <p className="mt-1 text-xs text-zinc-400">
+            <button
+              type="button"
+              onClick={dismissPathBanner}
+              className="shrink-0 rounded-lg p-1 text-slate-500 transition hover:bg-white/[0.05] hover:text-slate-300"
+              aria-label="Zamknij podpowiedź"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        )}
+
+        <div className="mx-auto mt-8 flex max-w-lg items-center gap-3 surface-card px-5 py-4">
+          <GraduationCap className="h-8 w-8 shrink-0 text-teal-400" />
+          <div className="min-w-0 flex-1">
+            <p className="text-xs text-slate-500">{exam.shortLabel}</p>
+            <p className="truncate text-base font-semibold text-white">{exam.label}</p>
+            <p className="mt-1 text-xs text-slate-500">
               {loading ? (
                 <Loader2 className="inline h-3 w-3 animate-spin" />
               ) : (
                 <>
-                  Postęp{" "}
-                  <span className="font-bold text-zinc-200">
-                    {overallProgress}%
-                  </span>
-                  {" · "}
-                  {availableTopics} aktywnych tematów
+                  Postęp {overallProgress}% · {availableTopics} tematów
                 </>
               )}
             </p>
           </div>
-          <BookOpen className="h-8 w-8 shrink-0 text-orange-400/80" aria-hidden />
-        </motion.div>
+          <BookOpen className="h-7 w-7 shrink-0 text-slate-600" aria-hidden />
+        </div>
 
-        <AnimatePresence mode="wait">
-          {loading ? (
-            <motion.div
-              key={`loading-${selectedExam}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="mt-16 flex justify-center"
-            >
-              <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key={`tree-${selectedExam}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
+        {loading ? (
+          <div className="mt-16 flex justify-center">
+            <Loader2 className="h-8 w-8 animate-spin text-teal-400" />
+          </div>
+        ) : (
+          <div>
               {exam.categories.length === 0 ? (
                 <p className="mt-16 text-center text-sm text-zinc-500">
                   Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
@@ -849,12 +706,11 @@ export default function TreningPage() {
                   }
                 />
               ) : (
-                filteredExam.categories.map((category, index) => (
+                filteredExam.categories.map((category) => (
                   <CategorySection
                     key={category.id}
                     examKey={selectedExam}
                     category={category}
-                    index={index}
                     highlightTopicHref={
                       showPathBanner ? pathBannerHref : null
                     }
@@ -862,14 +718,8 @@ export default function TreningPage() {
                   />
                 ))
               )}
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        <p className="mt-12 pb-2 text-center text-xs text-zinc-500">
-          ⏳ brak zadań · Teoria ✓ pełna lekcja · Teoria · skrót — ściąga · ▶️ w
-          trakcie · ✅ ukończone
-        </p>
+          </div>
+        )}
       </div>
     </div>
   );

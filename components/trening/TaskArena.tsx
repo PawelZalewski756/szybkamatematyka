@@ -269,7 +269,7 @@ export function TaskArena({
     return (
       <div className="relative flex min-h-[50vh] flex-1 flex-col items-center justify-center">
         {!compactChrome && <GamingBackground />}
-        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-orange-400" />
+        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-teal-400" />
         <p className="relative z-10 mt-3 text-sm font-semibold text-zinc-400">
           Ładowanie areny…
         </p>
@@ -285,7 +285,7 @@ export function TaskArena({
         {!compactChrome && (
           <Link
             href={backHref}
-            className="relative z-10 mt-4 text-sm font-bold text-orange-400"           >
+            className="relative z-10 mt-4 text-sm font-bold text-teal-400"           >
             ← Wróć do treningu
           </Link>
         )}
@@ -321,7 +321,7 @@ export function TaskArena({
           {!compactChrome && (
             <Link
               href={backHref}
-              className="relative z-10 mt-6 text-sm font-bold text-orange-400"             >
+              className="relative z-10 mt-6 text-sm font-bold text-teal-400"             >
               ← Wróć do treningu
             </Link>
           )}
@@ -361,7 +361,7 @@ export function TaskArena({
             <div className="mb-4 flex items-center justify-between gap-3">
               <Link
                 href={backHref}
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-400 transition hover:text-orange-200"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-400 transition hover:text-teal-300"
               >
                 <ArrowLeft className="h-4 w-4" />
                 Trening
@@ -371,7 +371,7 @@ export function TaskArena({
               </span>
             </div>
 
-            <p className="mb-4 text-center text-sm font-semibold text-orange-300/90">
+            <p className="mb-4 text-center text-sm font-semibold text-teal-300/90">
               {topicLabel}
             </p>
           </>
@@ -422,9 +422,10 @@ export function TaskArena({
                   key={String(opt.id)}
                   type="button"
                   onClick={() => setDifficultyFilter(opt.id)}
-                  className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
                     active
-                      ? "border-orange-500/50 bg-orange-500/20 text-orange-400"                       : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
+                      ? "border-teal-500/30 bg-teal-500/10 text-teal-200"
+                      : "border-white/[0.08] bg-white/[0.02] text-slate-500 hover:text-slate-300"
                   }`}
                 >
                   {opt.label}
@@ -437,7 +438,7 @@ export function TaskArena({
               type="checkbox"
               checked={shuffleOrder}
               onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-orange-400 focus:ring-orange-500/40"
+              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-teal-400 focus:ring-teal-500/40"
             />
             <Shuffle className="h-3.5 w-3.5" aria-hidden />
             Losuj kolejność
@@ -453,7 +454,7 @@ export function TaskArena({
             transition={{ duration: 0.25 }}
             className="mx-auto flex w-full max-w-2xl flex-1 flex-col"
           >
-            <div className="rounded-3xl border border-white/15 bg-white/[0.07] p-6 shadow-[0_0_40px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-8">
+            <div className="surface-card p-6 sm:p-8">
               <div className="mb-3 flex justify-end">
                 <DifficultyBadge difficulty={current.difficulty} />
               </div>
@@ -484,17 +485,17 @@ export function TaskArena({
                 const showWrong = isSelected && feedback === "wrong";
 
                 let cardClass =
-                  "group relative flex min-h-[4.5rem] w-full flex-col items-stretch rounded-2xl border px-4 py-4 text-left transition-all duration-200 backdrop-blur-md ";
+                  "group relative flex min-h-[4.5rem] w-full flex-col items-stretch rounded-xl border px-4 py-4 text-left transition-colors ";
 
                 if (showCorrect) {
                   cardClass +=
-                    "border-emerald-500/60 bg-emerald-500/25 text-emerald-50 shadow-[0_0_28px_rgba(52,211,153,0.35)] scale-[1.02]";
+                    "border-emerald-500/40 bg-emerald-500/15 text-emerald-50";
                 } else if (showWrong) {
                   cardClass +=
-                    "border-red-500/60 bg-red-500/25 text-red-50 shadow-[0_0_28px_rgba(248,113,113,0.35)]";
+                    "border-red-500/40 bg-red-500/15 text-red-50";
                 } else {
                   cardClass +=
-                    "border-white/20 bg-white/[0.06] text-zinc-100 hover:scale-[1.02] hover:border-orange-500/50 hover:bg-orange-500/10 hover:shadow-[0_0_24px_rgba(232,112,42,0.2)] disabled:pointer-events-none disabled:opacity-50";
+                    "border-white/[0.1] bg-white/[0.03] text-zinc-100 hover:border-teal-500/30 hover:bg-teal-500/5 disabled:pointer-events-none disabled:opacity-50";
                 }
 
                 return (
@@ -505,10 +506,10 @@ export function TaskArena({
                     onClick={() => void handleAnswer(option)}
                     className={cardClass}
                   >
-                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-black text-amber-400 ring-1 ring-white/20 group-hover:bg-orange-500/20 group-hover:text-orange-400">
+                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-xs font-semibold text-slate-400">
                       {label}
                     </span>
-                    <span className="text-sm font-bold leading-snug sm:text-base">
+                    <span className="text-sm font-medium leading-snug sm:text-base">
                       {option}
                     </span>
                     {showCorrect && (
