@@ -12,10 +12,10 @@ type BrandLogoProps = {
 
 function Wordmark() {
   return (
-    <span className="whitespace-nowrap text-[13px] font-bold tracking-tight sm:text-[15px] lg:text-[17px]">
-      <span className="text-white">szybka</span>
-      <span className="font-normal text-slate-600">·</span>
-      <span className="font-semibold text-slate-300">matematyka</span>
+    <span className="whitespace-nowrap text-[13px] font-bold tracking-tight text-foreground sm:text-[15px] lg:text-[17px]">
+      szybka
+      <span className="font-normal text-muted"> · </span>
+      <span className="font-semibold text-muted">matematyka</span>
     </span>
   );
 }
@@ -45,7 +45,7 @@ export function BrandLogo({
   return (
     <Link
       href="/"
-      className="shrink-0 rounded-lg outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-teal-500/50"
+      className="shrink-0 rounded-lg outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-brand"
       aria-label={BRAND_NAME}
     >
       {inner}

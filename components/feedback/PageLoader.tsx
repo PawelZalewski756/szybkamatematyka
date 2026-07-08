@@ -23,14 +23,8 @@ export function PageLoader({
         compact ? "py-12" : "min-h-[55vh] py-20"
       }`}
     >
-      <span className="relative flex h-12 w-12 items-center justify-center">
-        <span
-          className="absolute inset-0 rounded-full bg-orange-500/20 blur-xl"
-          aria-hidden
-        />
-        <Loader2 className="h-10 w-10 animate-spin text-orange-400" aria-hidden />
-      </span>
-      <p className="text-sm font-semibold text-zinc-400">{label}</p>
+      <Loader2 className="h-10 w-10 animate-spin text-brand" aria-hidden />
+      <p className="text-sm font-medium text-muted">{label}</p>
     </div>
   );
 }

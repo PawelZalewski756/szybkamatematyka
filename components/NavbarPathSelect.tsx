@@ -25,7 +25,7 @@ export function NavbarPathSelect({ className = "" }: NavbarPathSelectProps) {
       <select
         value={path}
         onChange={handleChange}
-        className="w-full min-w-0 cursor-pointer truncate rounded-lg border border-white/10 bg-[#111820] py-1.5 pl-2.5 pr-7 text-xs font-medium text-slate-200 outline-none transition-colors hover:border-white/20 focus:border-teal-500/40 lg:text-sm lg:py-2"
+        className="input-field w-full cursor-pointer truncate py-1.5 pl-2.5 pr-7 text-xs font-medium lg:py-2 lg:text-sm"
       >
         {PATH_OPTIONS.map((option) => (
           <option key={option.value} value={option.value}>

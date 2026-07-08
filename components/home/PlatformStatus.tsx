@@ -84,8 +84,8 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
             transition={{ delay: index * 0.06 }}
             className="flex items-baseline gap-2"
           >
-            <span className="font-bold tabular-nums text-white">{item.value}</span>
-            <span className="text-slate-500">{item.label}</span>
+            <span className="font-bold tabular-nums text-foreground">{item.value}</span>
+            <span className="text-muted">{item.label}</span>
           </motion.div>
         ))}
       </div>
@@ -106,11 +106,11 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
           transition={{ delay: index * 0.08 }}
           className="home-tile-muted p-5"
         >
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+          <p className="text-xs font-semibold uppercase tracking-wide text-muted">
             {item.label}
           </p>
-          <p className="mt-1 text-2xl font-bold tabular-nums text-white">{item.value}</p>
-          <p className="mt-0.5 text-xs text-slate-600">{item.sub}</p>
+          <p className="mt-1 text-2xl font-bold tabular-nums text-foreground">{item.value}</p>
+          <p className="mt-0.5 text-xs text-muted">{item.sub}</p>
         </motion.div>
       ))}
     </div>

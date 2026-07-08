@@ -16,14 +16,14 @@ type TheoryMarkdownProps = {
 const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string> =
   {
     default:
-      "prose prose-neutral max-w-none break-words text-base sm:text-lg " +
+      "prose prose-invert max-w-none break-words text-base sm:text-lg " +
       "prose-headings:font-semibold prose-headings:text-foreground " +
-      "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-foreground/90 " +
+      "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-foreground/95 " +
       "prose-strong:text-foreground prose-a:text-brand prose-a:underline hover:prose-a:text-brand-light " +
-      "prose-code:rounded prose-code:bg-background prose-code:px-1 prose-code:text-brand " +
-      "prose-pre:border prose-pre:border-surface-border prose-pre:bg-background " +
-      "prose-li:text-foreground/90 prose-blockquote:border-brand/30 prose-blockquote:text-muted " +
-      "[&_.katex-display]:my-4",
+      "prose-code:rounded prose-code:bg-surface prose-code:px-1 prose-code:text-brand-light " +
+      "prose-pre:border prose-pre:border-surface-border prose-pre:bg-surface " +
+      "prose-li:text-foreground/95 prose-blockquote:border-surface-border prose-blockquote:text-muted " +
+      "[&_.katex-display]:my-4 [&_.katex]:text-foreground",
     compact:
       "prose prose-sm prose-invert prose-zinc max-w-none break-words " +
       "prose-p:leading-relaxed prose-p:text-zinc-300 prose-strong:text-zinc-100 " +

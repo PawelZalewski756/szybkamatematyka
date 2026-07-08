@@ -24,17 +24,17 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
     <Link
       href="/profil"
       title={`${nick} · poziom ${level}`}
-      className={`inline-flex shrink-0 items-center rounded-lg border border-white/10 bg-white/[0.03] p-0.5 transition-colors hover:border-teal-500/25 hover:bg-teal-500/5 ${className}`}
+      className={`inline-flex shrink-0 items-center gap-1 rounded-lg border border-surface-border bg-surface p-0.5 transition-colors hover:bg-surface-hover ${className}`}
     >
-      <span className="flex h-7 w-7 items-center justify-center rounded-md bg-teal-600/90 text-xs font-bold text-white">
+      <span className="flex h-7 w-7 items-center justify-center rounded-md bg-brand-dark text-xs font-bold text-white">
         {initial}
       </span>
-      <span className="hidden text-xs font-bold tabular-nums text-slate-300 sm:inline">
+      <span className="hidden text-xs font-semibold tabular-nums text-foreground sm:inline">
         {level}
       </span>
       {profile.streak >= 2 ? (
-        <span className="text-[10px] font-bold text-amber-400/90" title="Seria dni">
-          🔥{profile.streak}
+        <span className="pr-1 text-[10px] font-medium text-muted" title="Seria dni">
+          {profile.streak} d.
         </span>
       ) : null}
     </Link>

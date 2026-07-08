@@ -29,8 +29,8 @@ function SheetLink({
       aria-current={active ? "page" : undefined}
       className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
         active
-          ? "bg-teal-500/12 text-teal-200"
-          : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+          ? "bg-brand/15 text-brand-light"
+          : "text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
       {label}
@@ -89,8 +89,8 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
         onClick={() => setOpen(true)}
         className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border transition-colors ${
           open || menuActive
-            ? "border-teal-500/30 bg-teal-500/10 text-teal-200"
-            : "border-white/10 text-slate-400 hover:border-white/20 hover:text-white"
+            ? "border-brand/40 bg-brand/10 text-brand-light"
+            : "border-surface-border text-muted hover:bg-surface-hover hover:text-foreground"
         }`}
       >
         <Menu className="h-[18px] w-[18px]" aria-hidden />
@@ -110,23 +110,23 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
             role="dialog"
             aria-modal="true"
             aria-label="Menu nawigacji"
-            className="absolute right-0 top-0 flex h-full w-[min(100vw-2.5rem,17.5rem)] flex-col border-l border-white/[0.08] bg-[#0c1219]"
+            className="absolute right-0 top-0 flex h-full w-[min(100vw-2.5rem,17.5rem)] flex-col border-l border-surface-border bg-surface"
           >
-            <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
-              <span className="text-sm font-semibold text-white">Menu</span>
+            <div className="flex items-center justify-between border-b border-surface-border px-4 py-3">
+              <span className="text-sm font-semibold text-foreground">Menu</span>
               <button
                 type="button"
                 onClick={close}
                 aria-label="Zamknij"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-white/5 hover:text-white"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:bg-surface-hover hover:text-foreground"
               >
                 <X className="h-4 w-4" />
               </button>
             </div>
 
             {showPrimaryLinks && (
-              <div className="border-b border-white/[0.06] px-4 py-3">
-                <p className="mb-1.5 text-[11px] font-medium text-slate-500">
+              <div className="border-b border-surface-border px-4 py-3">
+                <p className="mb-1.5 text-[11px] font-medium text-muted">
                   Twoja ścieżka
                 </p>
                 <NavbarPathSelect />
@@ -152,12 +152,12 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
                   key={group.label ?? "misc"}
                   className={
                     index > 0 || showPrimaryLinks
-                      ? "mt-3 border-t border-white/[0.06] pt-3"
+                      ? "mt-3 border-t border-surface-border pt-3"
                       : ""
                   }
                 >
                   {group.label ? (
-                    <p className="mb-1 px-3 text-[10px] font-semibold uppercase tracking-wider text-slate-600">
+                    <p className="mb-1 px-3 text-[10px] font-semibold uppercase tracking-wider text-muted">
                       {group.label}
                     </p>
                   ) : null}

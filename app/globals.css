@@ -2,17 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #f4f0e8;
-  --foreground: #2c2825;
-  --muted: #6f6760;
-  --brand: #1e4a7a;
-  --brand-light: #2a5f99;
-  --brand-dark: #163a61;
-  --surface: #fffcf7;
-  --surface-hover: #f0ebe3;
-  --surface-border: #ddd5c8;
-  --success: #166534;
-  --danger: #b91c1c;
+  --background: #111111;
+  --foreground: #f5f5f5;
+  --muted: #a3a3a3;
+  --brand: #60a5fa;
+  --brand-light: #93c5fd;
+  --brand-dark: #3b82f6;
+  --surface: #1a1a1a;
+  --surface-hover: #242424;
+  --surface-border: #333333;
+  --success: #4ade80;
+  --danger: #f87171;
 }
 
 @theme inline {
@@ -47,7 +47,7 @@ body {
   }
 
   .bg-brand-gradient {
-    background-color: var(--brand);
+    background-color: var(--brand-dark);
   }
 
   .surface-card {
@@ -64,19 +64,19 @@ body {
   }
 
   .home-tile:hover {
-    border-color: color-mix(in srgb, var(--brand) 35%, var(--surface-border));
+    border-color: #444;
     background: var(--surface-hover);
   }
 
   .home-tile-muted {
     border-radius: 0.75rem;
     border: 1px solid var(--surface-border);
-    background: color-mix(in srgb, var(--surface) 80%, var(--background));
+    background: var(--surface);
   }
 
   .nav-link-active {
-    color: var(--brand);
-    background: color-mix(in srgb, var(--brand) 8%, transparent);
+    color: var(--brand-light);
+    background: color-mix(in srgb, var(--brand) 12%, transparent);
   }
 
   .page-container {
@@ -117,14 +117,14 @@ body {
 
   .btn-primary {
     border-radius: 0.5rem;
-    background-color: var(--brand);
+    background-color: var(--brand-dark);
     color: #fff;
     font-weight: 600;
     transition: background-color 0.15s;
   }
 
   .btn-primary:hover {
-    background-color: var(--brand-light);
+    background-color: var(--brand);
   }
 
   .input-field {
@@ -139,7 +139,7 @@ body {
   }
 
   .input-field:focus {
-    outline: 2px solid color-mix(in srgb, var(--brand) 40%, transparent);
+    outline: 2px solid var(--brand);
     outline-offset: 0;
     border-color: var(--brand);
   }
@@ -147,7 +147,7 @@ body {
 
 @layer base {
   :focus-visible {
-    outline: 2px solid color-mix(in srgb, var(--brand) 55%, transparent);
+    outline: 2px solid var(--brand);
     outline-offset: 2px;
   }
 }
