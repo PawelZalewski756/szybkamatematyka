@@ -13,8 +13,8 @@ export function Footer() {
   if (pathname === "/" || !isDesktopNav) return null;
 
   return (
-    <footer className="mt-auto w-full border-t border-white/[0.06] py-6">
-      <div className="mx-auto flex w-full max-w-[1920px] flex-wrap items-center justify-between gap-3 px-4 text-xs text-slate-500 md:px-8">
+    <footer className="mt-auto w-full border-t border-surface-border py-6">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-wrap items-center justify-between gap-3 px-4 text-xs text-muted md:px-8">
         <p>© {new Date().getFullYear()} {SITE_NAME}</p>
         <nav
           aria-label="Stopka"
@@ -22,19 +22,19 @@ export function Footer() {
         >
           <Link
             href="/baza-zadan"
-            className="text-zinc-500 transition-colors hover:text-zinc-300"
+            className="text-muted transition-colors hover:text-foreground"
           >
             Baza zadań
           </Link>
           <Link
             href="/admin"
-            className="text-zinc-500 transition-colors hover:text-zinc-300"
+            className="text-muted transition-colors hover:text-foreground"
           >
             Panel Admina
           </Link>
           <Link
             href="/admin/materialy"
-            className="text-zinc-500 transition-colors hover:text-zinc-300"
+            className="text-muted transition-colors hover:text-foreground"
           >
             Materiały
           </Link>

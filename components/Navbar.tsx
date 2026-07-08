@@ -42,14 +42,14 @@ function PrimaryNavLinks() {
               aria-current={active ? "page" : undefined}
               className={`relative flex items-center px-3 text-sm font-medium transition-colors ${
                 active
-                  ? "text-white"
-                  : "text-slate-400 hover:text-slate-200"
+                  ? "text-brand"
+                  : "text-muted hover:text-foreground"
               }`}
             >
               {label}
               {active && (
                 <span
-                  className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-teal-400"
+                  className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-brand"
                   aria-hidden
                 />
               )}
@@ -178,7 +178,7 @@ export function Navbar() {
   const showProfile = authReady && user && profile;
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-white/[0.06] bg-[#0a0f14]/90 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md">
+    <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-sm">
       <nav
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-4 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
@@ -187,7 +187,7 @@ export function Navbar() {
 
         {isDesktopNav ? (
           <>
-            <div className="hidden h-6 w-px shrink-0 bg-white/10 sm:block" aria-hidden />
+            <div className="hidden h-6 w-px shrink-0 bg-surface-border sm:block" aria-hidden />
             <NavbarPathSelect className="hidden w-[9.5rem] shrink-0 sm:block lg:w-[10.5rem]" />
           </>
         ) : (
@@ -206,7 +206,7 @@ export function Navbar() {
         {isDesktopNav && (
           <div className="flex shrink-0 items-center gap-2">
           {!authReady && (
-            <span className="h-8 w-8 animate-pulse rounded-full bg-white/5" aria-hidden />
+            <span className="h-8 w-8 animate-pulse rounded-full bg-surface-hover" aria-hidden />
           )}
 
           {user && profileLoading && (
@@ -218,7 +218,7 @@ export function Navbar() {
           {authReady && !user && (
             <Link
               href="/login"
-              className="rounded-lg bg-brand-gradient px-3.5 py-2 text-xs font-semibold text-white transition hover:brightness-110 sm:text-sm"
+              className="rounded-lg bg-brand-gradient px-3.5 py-2 text-xs font-semibold text-white transition hover:opacity-90 sm:text-sm"
             >
               Zaloguj
             </Link>
@@ -231,7 +231,7 @@ export function Navbar() {
               disabled={loggingOut}
               aria-label="Wyloguj"
               title="Wyloguj"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-white/20 hover:text-white disabled:opacity-50"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border text-muted transition hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
             >
               <LogOut className="h-4 w-4" aria-hidden />
             </button>

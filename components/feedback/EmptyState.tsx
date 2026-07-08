@@ -7,21 +7,14 @@ type EmptyStateAction = {
 };
 
 type EmptyStateProps = {
-  /** Ikona (np. z lucide-react) renderowana w okrągłym chipie. */
   icon?: ComponentType<{ className?: string }>;
   title: string;
   description?: ReactNode;
-  /** Główne CTA renderowane jako link. */
   action?: EmptyStateAction;
-  /** Dodatkowa treść pod opisem (np. własny przycisk). */
   children?: ReactNode;
   className?: string;
 };
 
-/**
- * Spójny, zachęcający pusty stan: ikona w chipie, tytuł, opis i opcjonalne CTA.
- * Używany w listach bez wyników (ranking, osiągnięcia, powtórki, filtry).
- */
 export function EmptyState({
   icon: Icon,
   title,
@@ -35,21 +28,16 @@ export function EmptyState({
       className={`mx-auto flex max-w-md flex-col items-center justify-center px-4 py-12 text-center ${className}`}
     >
       {Icon && (
-        <span className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/15 to-orange-600/15 ring-1 ring-white/10">
-          <Icon className="h-7 w-7 text-orange-300" />
+        <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg border border-surface-border bg-surface text-brand">
+          <Icon className="h-6 w-6" />
         </span>
       )}
-      <p className="text-lg font-black text-white">{title}</p>
+      <p className="text-lg font-semibold text-foreground">{title}</p>
       {description && (
-        <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-          {description}
-        </p>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{description}</p>
       )}
       {action && (
-        <Link
-          href={action.href}
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-        >
+        <Link href={action.href} className="btn-primary mt-5 px-5 py-2.5 text-sm">
           {action.label}
         </Link>
       )}

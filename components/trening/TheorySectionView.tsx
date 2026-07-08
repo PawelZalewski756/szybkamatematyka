@@ -8,16 +8,16 @@ function TheorySectionBlock({ section }: { section: TheorySection }) {
   const isAnswers = section.kind === "answers";
 
   return (
-    <section id={section.id} className="scroll-mt-24 border-t border-white/[0.08] pt-8 first:border-t-0 first:pt-0">
-      <h3 className="text-lg font-semibold text-white sm:text-xl">{section.title}</h3>
+    <section id={section.id} className="scroll-mt-24 border-t border-surface-border pt-8 first:border-t-0 first:pt-0">
+      <h3 className="text-lg font-semibold text-foreground">{section.title}</h3>
       <div className="mt-3">
         {isAnswers ? (
-          <details className="group rounded-lg border border-white/[0.08] bg-white/[0.02]">
-            <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium text-slate-400 marker:content-none">
+          <details className="group rounded-lg border border-surface-border bg-background">
+            <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium text-muted marker:content-none">
               <span className="group-open:hidden">Pokaż odpowiedzi</span>
               <span className="hidden group-open:inline">Ukryj odpowiedzi</span>
             </summary>
-            <div className="border-t border-white/[0.08] px-4 pb-4 pt-2">
+            <div className="border-t border-surface-border px-4 pb-4 pt-2">
               <TheoryMarkdown content={section.body} />
             </div>
           </details>
@@ -37,7 +37,7 @@ export function TheorySectionView({ content }: TheorySectionViewProps) {
   const sections = useMemo(() => parseTheorySections(content), [content]);
 
   return (
-    <div className="space-y-0">
+    <div>
       {sections.map((section) => (
         <TheorySectionBlock key={section.id} section={section} />
       ))}

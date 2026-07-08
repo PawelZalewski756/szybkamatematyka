@@ -37,7 +37,7 @@ export function TreningSubNav() {
     <div className="page-container relative z-20 pt-4 sm:pt-6">
       <nav
         aria-label="Sekcje treningu"
-        className="mx-auto flex w-full max-w-lg rounded-xl border border-white/[0.08] bg-white/[0.03] p-1"
+        className="mx-auto flex w-full max-w-lg rounded-lg border border-surface-border bg-surface p-1"
       >
         {TABS.map(({ href, label }) => {
           const active = isTabActive(pathname, href);
@@ -46,10 +46,10 @@ export function TreningSubNav() {
               key={href}
               href={href}
               aria-current={active ? "page" : undefined}
-              className={`flex-1 rounded-lg px-3 py-2 text-center text-xs font-semibold transition sm:text-sm ${
+              className={`flex-1 rounded-md px-3 py-2 text-center text-xs font-semibold transition sm:text-sm ${
                 active
-                  ? "bg-teal-500/15 text-teal-200"
-                  : "text-slate-500 hover:text-slate-300"
+                  ? "bg-background text-brand"
+                  : "text-muted hover:text-foreground"
               }`}
             >
               {label}

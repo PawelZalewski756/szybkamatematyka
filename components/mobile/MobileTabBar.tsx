@@ -34,7 +34,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
-        active ? "text-teal-400" : "text-slate-500 active:text-slate-300"
+        active ? "text-brand" : "text-muted active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
@@ -69,7 +69,7 @@ function TabButton({
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
       className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
-        active ? "text-teal-400" : "text-slate-500 active:text-slate-300"
+        active ? "text-brand" : "text-muted active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
@@ -143,7 +143,7 @@ export function MobileTabBar() {
   return (
     <>
       <nav
-        className="fixed inset-x-0 bottom-0 z-[90] border-t border-white/[0.08] bg-[#0a0f14]/95 pb-[max(env(safe-area-inset-bottom,0px),0px)] backdrop-blur-md lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-[90] border-t border-surface-border bg-surface/95 pb-[max(env(safe-area-inset-bottom,0px),0px)] backdrop-blur-sm lg:hidden"
         aria-label="Nawigacja mobilna"
       >
         <div className="mx-auto flex h-16 max-w-lg items-end px-1">
@@ -169,8 +169,8 @@ export function MobileTabBar() {
               }}
               aria-expanded={grajOpen}
               aria-label="Graj"
-              className={`-mt-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand-gradient shadow-lg shadow-teal-950/40 ring-4 ring-[#0a0f14] transition hover:brightness-110 active:scale-95 ${
-                isMobileGrajActive(pathname) || grajOpen ? "ring-teal-500/20" : ""
+              className={`-mt-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white ring-4 ring-background transition hover:opacity-90 active:scale-95 ${
+                isMobileGrajActive(pathname) || grajOpen ? "ring-brand/20" : ""
               }`}
             >
               <Play className="ml-0.5 h-6 w-6 fill-white text-white" aria-hidden />
@@ -178,8 +178,8 @@ export function MobileTabBar() {
             <span
               className={`mt-1 text-[10px] font-semibold leading-tight ${
                 isMobileGrajActive(pathname) || grajOpen
-                  ? "text-teal-400"
-                  : "text-slate-500"
+                  ? "text-brand"
+                  : "text-muted"
               }`}
             >
               Graj

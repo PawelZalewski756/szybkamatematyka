@@ -269,7 +269,7 @@ export function TaskArena({
     return (
       <div className="relative flex min-h-[50vh] flex-1 flex-col items-center justify-center">
         {!compactChrome && <GamingBackground />}
-        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-teal-400" />
+        <Loader2 className="relative z-10 h-10 w-10 animate-spin text-brand" />
         <p className="relative z-10 mt-3 text-sm font-semibold text-zinc-400">
           Ładowanie areny…
         </p>
@@ -285,7 +285,7 @@ export function TaskArena({
         {!compactChrome && (
           <Link
             href={backHref}
-            className="relative z-10 mt-4 text-sm font-bold text-teal-400"           >
+            className="relative z-10 mt-4 text-sm font-bold text-brand"           >
             ← Wróć do treningu
           </Link>
         )}
@@ -321,7 +321,7 @@ export function TaskArena({
           {!compactChrome && (
             <Link
               href={backHref}
-              className="relative z-10 mt-6 text-sm font-bold text-teal-400"             >
+              className="relative z-10 mt-6 text-sm font-bold text-brand"             >
               ← Wróć do treningu
             </Link>
           )}
@@ -361,7 +361,7 @@ export function TaskArena({
             <div className="mb-4 flex items-center justify-between gap-3">
               <Link
                 href={backHref}
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-400 transition hover:text-teal-300"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand transition hover:underline"
               >
                 <ArrowLeft className="h-4 w-4" />
                 Trening
@@ -371,7 +371,7 @@ export function TaskArena({
               </span>
             </div>
 
-            <p className="mb-4 text-center text-sm font-semibold text-teal-300/90">
+            <p className="mb-4 text-center text-sm font-semibold text-brand">
               {topicLabel}
             </p>
           </>
@@ -424,8 +424,8 @@ export function TaskArena({
                   onClick={() => setDifficultyFilter(opt.id)}
                   className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
                     active
-                      ? "border-teal-500/30 bg-teal-500/10 text-teal-200"
-                      : "border-white/[0.08] bg-white/[0.02] text-slate-500 hover:text-slate-300"
+                      ? "border-brand/30 bg-brand/10 text-brand"
+                      : "border-surface-border bg-surface text-muted hover:text-foreground"
                   }`}
                 >
                   {opt.label}
@@ -438,7 +438,7 @@ export function TaskArena({
               type="checkbox"
               checked={shuffleOrder}
               onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-teal-400 focus:ring-teal-500/40"
+              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-brand focus:ring-teal-500/40"
             />
             <Shuffle className="h-3.5 w-3.5" aria-hidden />
             Losuj kolejność
@@ -458,7 +458,7 @@ export function TaskArena({
               <div className="mb-3 flex justify-end">
                 <DifficultyBadge difficulty={current.difficulty} />
               </div>
-              <p className="whitespace-pre-wrap text-base font-semibold leading-relaxed text-zinc-100 sm:text-lg">
+              <p className="whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground sm:text-lg">
                 {current.content}
               </p>
             </div>
@@ -495,7 +495,7 @@ export function TaskArena({
                     "border-red-500/40 bg-red-500/15 text-red-50";
                 } else {
                   cardClass +=
-                    "border-white/[0.1] bg-white/[0.03] text-zinc-100 hover:border-teal-500/30 hover:bg-teal-500/5 disabled:pointer-events-none disabled:opacity-50";
+                    "border-surface-border bg-surface text-foreground hover:border-brand/30 hover:bg-surface-hover disabled:pointer-events-none disabled:opacity-50";
                 }
 
                 return (
@@ -506,7 +506,7 @@ export function TaskArena({
                     onClick={() => void handleAnswer(option)}
                     className={cardClass}
                   >
-                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/[0.06] text-xs font-semibold text-slate-400">
+                    <span className="mb-2 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-background text-xs font-semibold text-muted">
                       {label}
                     </span>
                     <span className="text-sm font-medium leading-snug sm:text-base">

@@ -40,7 +40,7 @@ function TabSwitcher({
     <div
       role="tablist"
       aria-label="Sekcje tematu"
-      className="mx-auto flex w-full max-w-md rounded-xl border border-white/[0.08] bg-white/[0.03] p-1"
+      className="flex w-full max-w-sm rounded-lg border border-surface-border bg-surface p-1"
     >
       {(
         [
@@ -56,10 +56,10 @@ function TabSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
-            className={`flex-1 rounded-lg px-3 py-2 text-center text-sm font-semibold transition ${
+            className={`flex-1 rounded-md px-3 py-2 text-center text-sm font-semibold transition ${
               isActive
-                ? "bg-teal-500/15 text-teal-200"
-                : "text-slate-500 hover:text-slate-300"
+                ? "bg-background text-brand"
+                : "text-muted hover:text-foreground"
             }`}
           >
             {tab.label}
@@ -74,10 +74,10 @@ function LessonVideoSection({ videoUrl }: { videoUrl: string }) {
   const youtubeId = parseYouTubeVideoId(videoUrl);
 
   return (
-    <section className="mt-8 border-t border-white/[0.08] pt-8">
-      <h3 className="text-sm font-medium text-slate-400">Wideo do lekcji</h3>
+    <section className="mt-8 border-t border-surface-border pt-8">
+      <h3 className="text-sm font-medium text-muted">Wideo do lekcji</h3>
       {youtubeId ? (
-        <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg border border-white/10 bg-black">
+        <div className="mt-4 aspect-video w-full overflow-hidden rounded-lg border border-surface-border bg-black">
           <iframe
             src={youTubeEmbedUrl(youtubeId)}
             title="Wideo do lekcji"
@@ -93,7 +93,7 @@ function LessonVideoSection({ videoUrl }: { videoUrl: string }) {
           href={videoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-teal-400 hover:text-teal-300"
+          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
         >
           <ExternalLink className="h-4 w-4" aria-hidden />
           Otwórz wideo w nowej karcie
@@ -125,8 +125,8 @@ function TheoryTab({
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <Loader2 className="h-8 w-8 animate-spin text-teal-400" />
-        <p className="mt-3 text-sm text-slate-500">Ładowanie materiału…</p>
+        <Loader2 className="h-8 w-8 animate-spin text-brand" />
+        <p className="mt-3 text-sm text-muted">Ładowanie materiału…</p>
       </div>
     );
   }
@@ -134,11 +134,11 @@ function TheoryTab({
   if (loadError) {
     return (
       <div className="surface-card px-4 py-6 text-center">
-        <p className="text-sm text-red-300">{loadError}</p>
+        <p className="text-sm text-danger">{loadError}</p>
         <button
           type="button"
           onClick={onRetry}
-          className="mt-4 inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/[0.05]"
+          className="mt-4 inline-flex items-center gap-2 rounded-md border border-surface-border px-4 py-2 text-sm font-medium text-foreground transition hover:bg-surface-hover"
         >
           <RefreshCw className="h-4 w-4" aria-hidden />
           Spróbuj ponownie
@@ -150,18 +150,14 @@ function TheoryTab({
   if (!material) {
     return (
       <div className="surface-card p-8 text-center">
-        <BookOpen className="mx-auto h-9 w-9 text-slate-600" aria-hidden />
-        <p className="mt-4 text-lg font-semibold text-slate-200">
+        <BookOpen className="mx-auto h-9 w-9 text-muted" aria-hidden />
+        <p className="mt-4 text-lg font-semibold text-foreground">
           Teoria w przygotowaniu
         </p>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-muted">
           Możesz już ćwiczyć zadania — lekcja pojawi się wkrótce.
         </p>
-        <button
-          type="button"
-          onClick={onGoToArena}
-          className="mt-6 rounded-lg bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-        >
+        <button type="button" onClick={onGoToArena} className="btn-primary mt-6 px-5 py-2.5 text-sm">
           Przejdź do zadań
         </button>
       </div>
@@ -170,11 +166,9 @@ function TheoryTab({
 
   return (
     <div className="space-y-6">
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),12rem] lg:items-start lg:gap-8">
-        <div className="min-w-0 surface-card p-6 sm:p-8">
-          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            {material.title}
-          </h2>
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),11rem] lg:items-start lg:gap-8">
+        <article className="min-w-0 surface-card p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-foreground">{material.title}</h2>
           {headings.length >= 2 && (
             <div className="mt-6 lg:hidden">
               <TheoryTableOfContents headings={headings} />
@@ -186,19 +180,15 @@ function TheoryTab({
           {material.video_url && (
             <LessonVideoSection videoUrl={material.video_url} />
           )}
-        </div>
+        </article>
         {headings.length >= 2 && (
           <div className="hidden lg:block">
             <TheoryTableOfContents headings={headings} />
           </div>
         )}
       </div>
-      <div className="flex justify-center">
-        <button
-          type="button"
-          onClick={onGoToArena}
-          className="rounded-lg bg-brand-gradient px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-        >
+      <div>
+        <button type="button" onClick={onGoToArena} className="btn-primary px-6 py-3 text-sm">
           Przejdź do zadań
         </button>
       </div>
@@ -249,19 +239,15 @@ export function TopicPageClient({
 
   return (
     <div className="page-container flex min-h-0 flex-1 flex-col py-6 sm:py-10">
-      <div className="mb-4">
-        <Link
-          href={backHref}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-400 transition hover:text-teal-300"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Trening
-        </Link>
-      </div>
+      <Link
+        href={backHref}
+        className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:underline"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Trening
+      </Link>
 
-      <h1 className="mb-4 text-center text-lg font-semibold text-slate-200">
-        {topicLabel}
-      </h1>
+      <h1 className="mb-4 text-xl font-semibold text-foreground">{topicLabel}</h1>
 
       <div className="mb-6">
         <TabSwitcher activeTab={activeTab} onChange={setActiveTab} />

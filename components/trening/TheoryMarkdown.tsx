@@ -16,14 +16,14 @@ type TheoryMarkdownProps = {
 const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string> =
   {
     default:
-      "prose prose-invert prose-zinc max-w-none break-words text-base sm:text-lg " +
-      "prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-white " +
-      "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-zinc-200 " +
-      "prose-strong:text-white prose-a:text-teal-400 prose-a:no-underline hover:prose-a:text-teal-300 " +
-      "prose-code:rounded prose-code:bg-white/10 prose-code:px-1 prose-code:py-0.5 prose-code:text-teal-300 " +
-      "prose-pre:border prose-pre:border-white/10 prose-pre:bg-zinc-950/80 " +
-      "prose-li:text-zinc-200 prose-blockquote:border-teal-500/25 prose-blockquote:text-zinc-300 " +
-      "[&_.katex-display]:my-4 [&_.katex]:text-zinc-100",
+      "prose prose-neutral max-w-none break-words text-base sm:text-lg " +
+      "prose-headings:font-semibold prose-headings:text-foreground " +
+      "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-foreground/90 " +
+      "prose-strong:text-foreground prose-a:text-brand prose-a:underline hover:prose-a:text-brand-light " +
+      "prose-code:rounded prose-code:bg-background prose-code:px-1 prose-code:text-brand " +
+      "prose-pre:border prose-pre:border-surface-border prose-pre:bg-background " +
+      "prose-li:text-foreground/90 prose-blockquote:border-brand/30 prose-blockquote:text-muted " +
+      "[&_.katex-display]:my-4",
     compact:
       "prose prose-sm prose-invert prose-zinc max-w-none break-words " +
       "prose-p:leading-relaxed prose-p:text-zinc-300 prose-strong:text-zinc-100 " +
