@@ -29,7 +29,7 @@ function SheetLink({
       aria-current={active ? "page" : undefined}
       className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
         active
-          ? "bg-brand/15 text-brand-light"
+          ? "bg-surface-hover text-foreground"
           : "text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
@@ -89,7 +89,7 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
         onClick={() => setOpen(true)}
         className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border transition-colors ${
           open || menuActive
-            ? "border-brand/40 bg-brand/10 text-brand-light"
+            ? "border-foreground bg-surface-hover text-foreground"
             : "border-surface-border text-muted hover:bg-surface-hover hover:text-foreground"
         }`}
       >

@@ -21,8 +21,8 @@ import type { TheoryTier } from "@/lib/trening/theory-content";
 import Link from "next/link";
 import {
   CheckCircle2,
+  ChevronRight,
   Loader2,
-  Play,
   Search,
   X,
 } from "lucide-react";
@@ -167,7 +167,7 @@ function ExamSwitcher({
     <div
       role="tablist"
       aria-label="Wybór egzaminu"
-      className="mx-auto flex w-full max-w-lg rounded-lg border border-surface-border bg-surface p-1"
+      className="flex w-full max-w-md gap-4 border-b border-surface-border text-sm"
     >
       {EXAM_OPTIONS.map((opt) => {
         const isActive = selected === opt.key;
@@ -178,10 +178,10 @@ function ExamSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(opt.key)}
-            className={`flex-1 rounded-md px-3 py-2 text-center text-xs font-semibold transition sm:text-sm ${
+            className={`border-b-2 pb-2 transition ${
               isActive
-                ? "bg-background text-brand"
-                : "text-muted hover:text-foreground"
+                ? "border-foreground text-foreground"
+                : "border-transparent text-muted hover:text-foreground"
             }`}
           >
             {opt.label}
@@ -212,35 +212,30 @@ function TopicRow({
   const theory = theoryLabel(theoryTier);
 
   const rowClass =
-    "flex items-center gap-3 px-4 py-3.5 text-sm transition " +
+    "flex items-center gap-3 px-1 py-3 text-sm transition " +
     (highlighted
-      ? "bg-brand/5"
+      ? "bg-surface-hover"
       : canPlay
         ? "hover:bg-surface-hover"
-        : "opacity-60");
+        : "opacity-50");
 
   const inner = (
     <>
-      <span className="flex w-5 shrink-0 justify-center">
+      <span className="flex w-4 shrink-0 justify-center">
         {isCompleted ? (
           <CheckCircle2 className="h-4 w-4 text-success" aria-label="Ukończone" />
-        ) : canPlay ? (
-          <Play className="h-4 w-4 text-brand" aria-label="Dostępne" />
         ) : null}
       </span>
-      <span
-        className={`min-w-0 flex-1 font-medium ${
-          isCompleted ? "text-success" : "text-foreground"
-        }`}
-      >
-        {topic.name}
-      </span>
+      <span className="min-w-0 flex-1 font-normal text-foreground">{topic.name}</span>
       {theory && (
         <span className="hidden shrink-0 text-xs text-muted sm:inline">{theory}</span>
       )}
       <span className="shrink-0 tabular-nums text-xs text-muted">
         {canPlay ? `${topic.solved}/${topic.total}` : isComingSoon ? "Wkrótce" : "—"}
       </span>
+      {canPlay && (
+        <ChevronRight className="h-4 w-4 shrink-0 text-muted" aria-hidden />
+      )}
     </>
   );
 
@@ -279,7 +274,7 @@ function CategorySection({
         <span className="text-xs text-muted">{category.progressPercent}%</span>
       </div>
 
-      <div className="surface-card divide-y divide-surface-border overflow-hidden">
+      <div className="divide-y divide-surface-border border-y border-surface-border">
         {category.topics.map((topic) => {
           const href = buildTopicHref(examKey, category.id, topic.id);
           return (
@@ -479,11 +474,11 @@ export default function TreningPage() {
           )}
         </header>
 
-        <div className="mx-auto mt-6 w-full max-w-lg px-1">
+        <div className="mt-8 max-w-2xl">
           <ExamSwitcher selected={selectedExam} onChange={handleExamChange} />
         </div>
 
-        <div className="mx-auto mt-6 w-full max-w-lg px-1">
+        <div className="mt-6 max-w-md">
           <label className="sr-only" htmlFor="trening-search">
             Szukaj tematu
           </label>
@@ -502,7 +497,7 @@ export default function TreningPage() {
             />
           </div>
           {debouncedQuery.trim() && !loading && (
-            <p className="mt-2 text-center text-xs text-slate-500">
+            <p className="mt-2 text-xs text-muted">
               Znaleziono {matchedTopicCount}{" "}
               {matchedTopicCount === 1
                 ? "temat"
@@ -513,12 +508,8 @@ export default function TreningPage() {
           )}
         </div>
 
-        <div className="mx-auto mt-4 flex w-full max-w-2xl flex-col gap-3 px-1 xl:max-w-4xl">
-          <div
-            role="group"
-            aria-label="Filtr tematów"
-            className="flex flex-wrap justify-center gap-2"
-          >
+        <div className="mt-4 flex max-w-2xl flex-col gap-3">
+          <div role="group" aria-label="Filtr tematów" className="flex flex-wrap gap-4 text-sm">
             {(
               [
                 { id: "all" as const, label: "Wszystkie" },
@@ -532,10 +523,10 @@ export default function TreningPage() {
                   key={opt.id}
                   type="button"
                   onClick={() => setTopicFilter(opt.id)}
-                  className={`rounded-md border px-3 py-1.5 text-xs font-medium transition ${
+                  className={`transition ${
                     active
-                      ? "border-brand/30 bg-brand/10 text-brand"
-                      : "border-surface-border bg-surface text-muted hover:text-foreground"
+                      ? "text-foreground underline underline-offset-4"
+                      : "text-muted hover:text-foreground"
                   }`}
                 >
                   {opt.label}
@@ -543,15 +534,11 @@ export default function TreningPage() {
               );
             })}
           </div>
-          <div
-            role="group"
-            aria-label="Sortowanie tematów"
-            className="flex flex-wrap justify-center gap-2"
-          >
+          <div role="group" aria-label="Sortowanie tematów" className="flex flex-wrap gap-4 text-sm">
             {(
               [
-                { id: "az" as const, label: "A-Z" },
-                { id: "progress" as const, label: "Postęp ↓" },
+                { id: "az" as const, label: "A–Z" },
+                { id: "progress" as const, label: "Postęp" },
               ] as const
             ).map((opt) => {
               const active = topicSort === opt.id;
@@ -560,10 +547,10 @@ export default function TreningPage() {
                   key={opt.id}
                   type="button"
                   onClick={() => setTopicSort(opt.id)}
-                  className={`rounded-md border px-3 py-1.5 text-xs font-medium transition ${
+                  className={`transition ${
                     active
-                      ? "border-brand/30 bg-brand/10 text-brand"
-                      : "border-surface-border bg-surface text-muted hover:text-foreground"
+                      ? "text-foreground underline underline-offset-4"
+                      : "text-muted hover:text-foreground"
                   }`}
                 >
                   {opt.label}
@@ -574,30 +561,28 @@ export default function TreningPage() {
         </div>
 
         {showPathBanner && pathBannerHref && !loading && (
-          <div className="mt-6 flex max-w-lg items-start gap-3 surface-card px-4 py-3">
-            <p className="min-w-0 flex-1 text-sm text-muted">
-              Zacznij od pierwszego tematu —{" "}
-              <Link href={pathBannerHref} className="font-medium text-brand hover:underline">
-                przejdź do lekcji
-              </Link>
-            </p>
+          <div className="mt-6 max-w-md border border-surface-border bg-surface px-4 py-3 text-sm text-muted">
+            Zacznij od pierwszego tematu —{" "}
+            <Link href={pathBannerHref} className="link-plain">
+              przejdź do lekcji
+            </Link>
             <button
               type="button"
               onClick={dismissPathBanner}
-              className="shrink-0 rounded-md p-1 text-muted transition hover:bg-surface-hover"
-              aria-label="Zamknij podpowiedź"
+              className="ml-3 text-muted hover:text-foreground"
+              aria-label="Zamknij"
             >
-              <X className="h-4 w-4" />
+              <X className="inline h-4 w-4" />
             </button>
           </div>
         )}
 
         {loading ? (
-          <div className="mt-16 flex justify-center">
-            <Loader2 className="h-8 w-8 animate-spin text-brand" />
+          <div className="mt-16">
+            <Loader2 className="h-7 w-7 animate-spin text-muted" />
           </div>
         ) : (
-          <div className="mt-8">
+          <div className="mt-10 max-w-2xl">
               {exam.categories.length === 0 ? (
                 <p className="mt-16 text-center text-sm text-muted">
                   Brak zadań w bazie dla tego egzaminu. Uruchom{" "}

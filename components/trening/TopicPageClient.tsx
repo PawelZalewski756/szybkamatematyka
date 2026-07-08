@@ -40,7 +40,7 @@ function TabSwitcher({
     <div
       role="tablist"
       aria-label="Sekcje tematu"
-      className="flex w-full max-w-sm rounded-lg border border-surface-border bg-surface p-1"
+      className="flex gap-6 border-b border-surface-border text-sm"
     >
       {(
         [
@@ -56,10 +56,10 @@ function TabSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
-            className={`flex-1 rounded-md px-3 py-2 text-center text-sm font-semibold transition ${
+            className={`border-b-2 pb-2 transition ${
               isActive
-                ? "bg-background text-brand"
-                : "text-muted hover:text-foreground"
+                ? "border-foreground text-foreground"
+                : "border-transparent text-muted hover:text-foreground"
             }`}
           >
             {tab.label}
@@ -93,7 +93,7 @@ function LessonVideoSection({ videoUrl }: { videoUrl: string }) {
           href={videoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline"
+          className="mt-4 inline-flex items-center gap-2 text-sm link-plain"
         >
           <ExternalLink className="h-4 w-4" aria-hidden />
           Otwórz wideo w nowej karcie
@@ -125,7 +125,7 @@ function TheoryTab({
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <Loader2 className="h-8 w-8 animate-spin text-brand" />
+        <Loader2 className="h-8 w-8 animate-spin text-muted" />
         <p className="mt-3 text-sm text-muted">Ładowanie materiału…</p>
       </div>
     );
@@ -241,7 +241,7 @@ export function TopicPageClient({
     <div className="page-container flex min-h-0 flex-1 flex-col py-6 sm:py-10">
       <Link
         href={backHref}
-        className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:underline"
+        className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted hover:text-foreground"
       >
         <ArrowLeft className="h-4 w-4" />
         Trening

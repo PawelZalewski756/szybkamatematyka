@@ -3,7 +3,6 @@
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
 import { learningPathLabel } from "@/lib/learning-path";
-import { ChevronRight, GraduationCap, Trophy } from "lucide-react";
 import Link from "next/link";
 
 export function HomeDashboard() {
@@ -13,66 +12,65 @@ export function HomeDashboard() {
   return (
     <div className="relative flex flex-1 flex-col">
       <section className="page-container py-8 sm:py-12">
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           <p className="text-sm text-muted">{pathLabel}</p>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
             Co dziś ćwiczymy?
           </h1>
-          <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-            Wyzwanie na dziś albo trening po tematach — wybierz, od czego zacząć.
+          <p className="mt-3 text-base text-muted">
+            Wybierz wyzwanie albo przejdź do treningu po tematach.
           </p>
         </div>
 
-        <div className="mt-8 space-y-3">
-          <Link
-            href="/wyzwania"
-            className="group flex items-center gap-4 surface-card p-4 transition hover:bg-surface-hover sm:p-5"
-          >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-background text-brand">
-              <Trophy className="h-5 w-5" aria-hidden />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block font-semibold text-foreground">Wyzwanie dnia</span>
-              <span className="mt-0.5 block text-sm text-muted">
-                Jedno zadanie na timer.
+        <ul className="mt-8 max-w-xl divide-y divide-surface-border border-y border-surface-border">
+          <li>
+            <Link
+              href="/wyzwania"
+              className="flex items-baseline justify-between gap-4 py-4 transition hover:bg-surface-hover"
+            >
+              <span>
+                <span className="block font-medium text-foreground">Wyzwanie dnia</span>
+                <span className="mt-0.5 block text-sm text-muted">Jedno zadanie na timer</span>
               </span>
-            </span>
-            <ChevronRight className="h-5 w-5 shrink-0 text-muted group-hover:text-brand" aria-hidden />
-          </Link>
-
-          <Link
-            href="/trening"
-            className="group flex items-center gap-4 surface-card p-4 transition hover:bg-surface-hover sm:p-5"
-          >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-background text-brand">
-              <GraduationCap className="h-5 w-5" aria-hidden />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block font-semibold text-foreground">Trening po tematach</span>
-              <span className="mt-0.5 block text-sm text-muted">
-                Teoria i zadania pod maturę lub egzamin 8-kl.
+              <span className="text-sm text-muted" aria-hidden>
+                →
               </span>
-            </span>
-            <ChevronRight className="h-5 w-5 shrink-0 text-muted group-hover:text-brand" aria-hidden />
-          </Link>
-        </div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/trening"
+              className="flex items-baseline justify-between gap-4 py-4 transition hover:bg-surface-hover"
+            >
+              <span>
+                <span className="block font-medium text-foreground">Trening po tematach</span>
+                <span className="mt-0.5 block text-sm text-muted">
+                  Teoria i zadania — matura lub egzamin 8-kl.
+                </span>
+              </span>
+              <span className="text-sm text-muted" aria-hidden>
+                →
+              </span>
+            </Link>
+          </li>
+        </ul>
 
-        <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-          <Link href="/baza-zadan" className="text-brand hover:underline">
+        <nav className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Na skróty">
+          <Link href="/baza-zadan" className="link-plain">
             Baza zadań
           </Link>
-          <Link href="/trening/arkusze" className="text-brand hover:underline">
+          <Link href="/trening/arkusze" className="link-plain">
             Arkusze CKE
           </Link>
-          <Link href="/minigry" className="text-brand hover:underline">
+          <Link href="/minigry" className="link-plain">
             Minigry
           </Link>
-          <Link href="/powtorki" className="text-brand hover:underline">
+          <Link href="/powtorki" className="link-plain">
             Powtórki
           </Link>
-        </div>
+        </nav>
 
-        <div className="mt-8 surface-card px-4 py-3">
+        <div className="mt-8 max-w-xl border-t border-surface-border pt-4">
           <PlatformStatus variant="inline" />
         </div>
       </section>

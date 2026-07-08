@@ -19,8 +19,8 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
       "prose prose-invert max-w-none break-words text-base sm:text-lg " +
       "prose-headings:font-semibold prose-headings:text-foreground " +
       "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-foreground/95 " +
-      "prose-strong:text-foreground prose-a:text-brand prose-a:underline hover:prose-a:text-brand-light " +
-      "prose-code:rounded prose-code:bg-surface prose-code:px-1 prose-code:text-brand-light " +
+      "prose-strong:text-foreground prose-a:text-foreground prose-a:underline hover:prose-a:text-brand-light " +
+      "prose-code:rounded prose-code:bg-surface prose-code:px-1 prose-code:text-foreground " +
       "prose-pre:border prose-pre:border-surface-border prose-pre:bg-surface " +
       "prose-li:text-foreground/95 prose-blockquote:border-surface-border prose-blockquote:text-muted " +
       "[&_.katex-display]:my-4 [&_.katex]:text-foreground",

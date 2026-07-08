@@ -34,7 +34,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
-        active ? "text-brand" : "text-muted active:text-foreground"
+        active ? "text-foreground" : "text-muted active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
@@ -69,7 +69,7 @@ function TabButton({
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
       className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
-        active ? "text-brand" : "text-muted active:text-foreground"
+        active ? "text-foreground" : "text-muted active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
@@ -143,7 +143,7 @@ export function MobileTabBar() {
   return (
     <>
       <nav
-        className="fixed inset-x-0 bottom-0 z-[90] border-t border-surface-border bg-surface/95 pb-[max(env(safe-area-inset-bottom,0px),0px)] backdrop-blur-sm lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-[90] border-t border-surface-border bg-surface pb-[max(env(safe-area-inset-bottom,0px),0px)] lg:hidden"
         aria-label="Nawigacja mobilna"
       >
         <div className="mx-auto flex h-16 max-w-lg items-end px-1">
@@ -169,16 +169,14 @@ export function MobileTabBar() {
               }}
               aria-expanded={grajOpen}
               aria-label="Graj"
-              className={`-mt-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white ring-4 ring-background transition hover:opacity-90 active:scale-95 ${
-                isMobileGrajActive(pathname) || grajOpen ? "ring-brand/20" : ""
-              }`}
+              className={`-mt-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-surface-border bg-surface-hover text-foreground transition hover:bg-surface active:scale-95`}
             >
-              <Play className="ml-0.5 h-6 w-6 fill-white text-white" aria-hidden />
+              <Play className="ml-0.5 h-6 w-6" aria-hidden />
             </button>
             <span
               className={`mt-1 text-[10px] font-semibold leading-tight ${
                 isMobileGrajActive(pathname) || grajOpen
-                  ? "text-brand"
+                  ? "text-foreground"
                   : "text-muted"
               }`}
             >

@@ -20,7 +20,7 @@ export function TheoryTableOfContents({ headings }: TheoryTableOfContentsProps) 
           <li key={heading.id} className={heading.level === 3 ? "pl-3" : undefined}>
             <a
               href={`#${heading.id}`}
-              className={`block rounded-md px-2 py-1 text-sm transition hover:bg-surface-hover hover:text-brand ${
+              className={`block rounded-md px-2 py-1 text-sm transition hover:bg-surface-hover hover:text-foreground ${
                 heading.level === 2 ? "font-medium text-foreground" : "text-muted"
               }`}
             >

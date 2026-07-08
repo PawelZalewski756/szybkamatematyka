@@ -42,14 +42,14 @@ function PrimaryNavLinks() {
               aria-current={active ? "page" : undefined}
               className={`relative flex items-center px-3 text-sm font-medium transition-colors ${
                 active
-                  ? "text-brand"
+                  ? "text-foreground"
                   : "text-muted hover:text-foreground"
               }`}
             >
               {label}
               {active && (
                 <span
-                  className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-brand"
+                  className="absolute inset-x-2 bottom-0 h-px bg-foreground"
                   aria-hidden
                 />
               )}
@@ -178,7 +178,7 @@ export function Navbar() {
   const showProfile = authReady && user && profile;
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-sm">
+    <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface pt-[max(env(safe-area-inset-top,0px),0px)]">
       <nav
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-4 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
@@ -218,7 +218,7 @@ export function Navbar() {
           {authReady && !user && (
             <Link
               href="/login"
-              className="rounded-lg bg-brand-gradient px-3.5 py-2 text-xs font-semibold text-white transition hover:opacity-90 sm:text-sm"
+              className="btn-primary px-3.5 py-2 text-xs sm:text-sm"
             >
               Zaloguj
             </Link>

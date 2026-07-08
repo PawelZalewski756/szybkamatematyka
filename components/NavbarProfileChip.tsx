@@ -26,7 +26,7 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
       title={`${nick} · poziom ${level}`}
       className={`inline-flex shrink-0 items-center gap-1 rounded-lg border border-surface-border bg-surface p-0.5 transition-colors hover:bg-surface-hover ${className}`}
     >
-      <span className="flex h-7 w-7 items-center justify-center rounded-md bg-brand-dark text-xs font-bold text-white">
+      <span className="flex h-7 w-7 items-center justify-center rounded-md border border-surface-border bg-surface-hover text-xs font-semibold text-foreground">
         {initial}
       </span>
       <span className="hidden text-xs font-semibold tabular-nums text-foreground sm:inline">
