@@ -1,15 +1,22 @@
 "use client";
 
+import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import {
+  completeProfileOnboarding,
   createProfile,
   isNickTaken,
   NickTakenError,
   normalizeNick,
-  updateProfileNick,
+  updateProfileSchoolClass,
   type Profile,
 } from "@/lib/supabase/profiles";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import { AUTH_INPUT_CLASS } from "@/components/auth/AuthFormParts";
+import {
+  loadSchoolClass,
+  saveSchoolClass,
+  type SchoolClassPath,
+} from "@/lib/learning-path";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
 import { Gamepad2, Loader2, Sparkles } from "lucide-react";
@@ -22,6 +29,9 @@ type OnboardingModalProps = {
 
 export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
   const [nick, setNick] = useState("");
+  const [schoolClass, setSchoolClass] = useState<SchoolClassPath>(() =>
+    loadSchoolClass(),
+  );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -45,11 +55,17 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
 
       let saved: Profile;
       try {
-        saved = await updateProfileNick(user.id, next);
+        saved = await completeProfileOnboarding(user.id, next, schoolClass);
       } catch {
-        saved = await createProfile(user.id, next);
+        try {
+          saved = await createProfile(user.id, next);
+          saved = await updateProfileSchoolClass(user.id, schoolClass);
+        } catch {
+          saved = await createProfile(user.id, next);
+        }
       }
 
+      saveSchoolClass(schoolClass);
       notifyProfileUpdated(saved);
       onComplete(saved);
     } catch (err) {
@@ -57,7 +73,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         setError("Ten nick jest już zajęty!");
         return;
       }
-      setError("Nie udało się zapisać nicku. Spróbuj ponownie.");
+      setError("Nie udało się zapisać profilu. Spróbuj ponownie.");
     } finally {
       setSaving(false);
     }
@@ -88,7 +104,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
           Witaj w grze!
         </h2>
         <p className="mt-2 text-center text-sm leading-relaxed text-muted">
-          Wybierz swój unikalny nick, aby dołączyć do rankingu.
+          Wybierz nick i klasę — dopasujemy zadania do Twojego poziomu.
         </p>
 
         <form onSubmit={(e) => void handleSubmit(e)} className="mt-6">
@@ -105,6 +121,14 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             autoComplete="username"
             placeholder="np. KasiaM"
             className={`${AUTH_INPUT_CLASS} mt-2 w-full text-base font-bold`}
+          />
+
+          <p className="text-overline mt-4">Twoja klasa</p>
+          <SchoolClassPicker
+            id="onboarding-class"
+            value={schoolClass}
+            onChange={setSchoolClass}
+            className="mt-2"
           />
 
           {error && (

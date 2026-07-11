@@ -1,7 +1,7 @@
 "use client";
 
 import { BrandLogo } from "@/components/BrandLogo";
-import { NavbarPathSelect } from "@/components/NavbarPathSelect";
+import { NavbarClassBadge } from "@/components/NavbarClassBadge";
 import { NavbarProfileChip } from "@/components/NavbarProfileChip";
 import { NavbarSheet } from "@/components/NavbarSheet";
 import { useDesktopNav } from "@/components/useDesktopNav";
@@ -188,12 +188,18 @@ export function Navbar() {
         {isDesktopNav ? (
           <>
             <div className="hidden h-6 w-px shrink-0 bg-surface-border sm:block" aria-hidden />
-            <NavbarPathSelect className="hidden w-[9.5rem] shrink-0 sm:block lg:w-[10.5rem]" />
+            <NavbarClassBadge
+              linkToProfile={Boolean(user)}
+              className="hidden shrink-0 sm:inline-flex lg:max-w-[10.5rem]"
+            />
           </>
         ) : (
           <>
             <div className="min-w-0 flex-1" aria-hidden />
-            <NavbarPathSelect className="w-[min(100%,9.5rem)] shrink-0 sm:w-[10.5rem]" />
+            <NavbarClassBadge
+              linkToProfile={Boolean(user)}
+              className="max-w-[min(100%,9.5rem)] shrink-0 sm:max-w-[10.5rem]"
+            />
           </>
         )}
 

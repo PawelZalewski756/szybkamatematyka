@@ -5,7 +5,9 @@ import {
   NAV_PRIMARY_LINKS,
   type NavLink,
 } from "@/lib/layout/nav-links";
-import { NavbarPathSelect } from "@/components/NavbarPathSelect";
+import { NavbarClassBadge } from "@/components/NavbarClassBadge";
+import { SchoolClassPicker } from "@/components/SchoolClassPicker";
+import { useLearningPath } from "@/components/LearningPathProvider";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -47,6 +49,7 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const sheetId = useId();
+  const { schoolClass, setSchoolClass } = useLearningPath();
 
   const menuActive =
     NAV_MORE_GROUPS.some((g) =>
@@ -127,9 +130,14 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
             {showPrimaryLinks && (
               <div className="border-b border-surface-border px-4 py-3">
                 <p className="mb-1.5 text-[11px] font-medium text-muted">
-                  Twoja ścieżka
+                  Twoja klasa
                 </p>
-                <NavbarPathSelect />
+                <NavbarClassBadge className="mb-2" />
+                <SchoolClassPicker
+                  id="navbar-sheet-class"
+                  value={schoolClass}
+                  onChange={setSchoolClass}
+                />
               </div>
             )}
 

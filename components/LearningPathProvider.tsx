@@ -1,11 +1,13 @@
 ﻿"use client";
 
 import {
-  getLearningPathServerSnapshot,
-  loadLearningPath,
-  saveLearningPath,
+  getSchoolClassServerSnapshot,
+  learningPathFromSchoolClass,
+  loadSchoolClass,
+  saveSchoolClass,
   subscribeLearningPath,
   type LearningPath,
+  type SchoolClassPath,
 } from "@/lib/learning-path";
 import {
   createContext,
@@ -18,8 +20,10 @@ import {
 
 type LearningPathContextValue = {
   path: LearningPath;
+  schoolClass: SchoolClassPath;
+  setSchoolClass: (schoolClass: SchoolClassPath) => void;
+  /** @deprecated Użyj setSchoolClass */
   setPath: (path: LearningPath) => void;
-  /** Zawsze true — ścieżka synchronizowana przez useSyncExternalStore (bez mismatchu SSR). */
   ready: boolean;
 };
 
@@ -28,19 +32,29 @@ const LearningPathContext = createContext<LearningPathContextValue | null>(
 );
 
 export function LearningPathProvider({ children }: { children: ReactNode }) {
-  const path = useSyncExternalStore(
+  const schoolClass = useSyncExternalStore(
     subscribeLearningPath,
-    loadLearningPath,
-    getLearningPathServerSnapshot,
+    loadSchoolClass,
+    getSchoolClassServerSnapshot,
   );
 
+  const setSchoolClass = useCallback((next: SchoolClassPath) => {
+    saveSchoolClass(next);
+  }, []);
+
   const setPath = useCallback((next: LearningPath) => {
-    saveLearningPath(next);
+    saveSchoolClass(next === "sp" ? "klasa-8" : "liceum-3");
   }, []);
 
   const value = useMemo(
-    () => ({ path, setPath, ready: true }),
-    [path, setPath],
+    () => ({
+      path: learningPathFromSchoolClass(schoolClass),
+      schoolClass,
+      setSchoolClass,
+      setPath,
+      ready: true,
+    }),
+    [schoolClass, setSchoolClass, setPath],
   );
 
   return (

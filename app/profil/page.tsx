@@ -7,6 +7,14 @@ import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPromp
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
 import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
+import { SchoolClassPicker } from "@/components/SchoolClassPicker";
+import { useLearningPath } from "@/components/LearningPathProvider";
+import {
+  DEFAULT_SCHOOL_CLASS,
+  saveSchoolClass,
+  schoolClassLabel,
+  type SchoolClassPath,
+} from "@/lib/learning-path";
 import {
   ensureUserProfile,
   fetchProfile,
@@ -18,6 +26,7 @@ import {
   profileFromUserFallback,
   subscriptionSnapshotFromProfile,
   updateProfileNick,
+  updateProfileSchoolClass,
   type Profile,
 } from "@/lib/supabase/profiles";
 import {
@@ -169,6 +178,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
 
 export default function ProfilPage() {
   const router = useRouter();
+  const { setSchoolClass: setLocalSchoolClass } = useLearningPath();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -182,6 +192,12 @@ export default function ProfilPage() {
     text: string;
     ok: boolean;
     variant?: "taken";
+  } | null>(null);
+  const [classDraft, setClassDraft] = useState<SchoolClassPath>(DEFAULT_SCHOOL_CLASS);
+  const [classSaving, setClassSaving] = useState(false);
+  const [classMessage, setClassMessage] = useState<{
+    text: string;
+    ok: boolean;
   } | null>(null);
 
   const nickCooldownText = profile
@@ -229,6 +245,7 @@ export default function ProfilPage() {
 
       setProfile(playerProfile);
       setNickDraft(playerProfile.nick);
+      setClassDraft(playerProfile.schoolClass ?? DEFAULT_SCHOOL_CLASS);
 
       const solvedIds = await fetchSolvedTaskIds(authUser.id);
       setArenaSolvedCount(solvedIds.size);
@@ -346,6 +363,29 @@ export default function ProfilPage() {
     }
   };
 
+  const handleSaveClass = async () => {
+    if (!user || !profile) return;
+    if (classDraft === (profile.schoolClass ?? DEFAULT_SCHOOL_CLASS)) {
+      setClassMessage({ text: "Bez zmian.", ok: true });
+      return;
+    }
+
+    setClassSaving(true);
+    setClassMessage(null);
+    try {
+      const updated = await updateProfileSchoolClass(user.id, classDraft);
+      setProfile(updated);
+      saveSchoolClass(classDraft);
+      setLocalSchoolClass(classDraft);
+      notifyProfileUpdated(updated);
+      setClassMessage({ text: "Klasa zapisana!", ok: true });
+    } catch {
+      setClassMessage({ text: "Nie udało się zapisać klasy.", ok: false });
+    } finally {
+      setClassSaving(false);
+    }
+  };
+
   const handleLogout = async () => {
     setLoggingOut(true);
     try {
@@ -457,6 +497,48 @@ export default function ProfilPage() {
                   }`}
                 >
                   {nickMessage.text}
+                </p>
+              )}
+            </section>
+
+            <section id="klasa" className="mt-8 scroll-mt-24">
+              <p className="text-xs font-bold uppercase tracking-wider text-muted">
+                Klasa
+              </p>
+              <p className="mt-1 text-sm text-muted">
+                Aktualnie:{" "}
+                <span className="font-semibold text-white">
+                  {schoolClassLabel(classDraft)}
+                </span>
+              </p>
+              <div className="mt-2 flex gap-2">
+                <SchoolClassPicker
+                  id="profile-class"
+                  value={classDraft}
+                  onChange={setClassDraft}
+                  className="min-w-0 flex-1"
+                />
+                <button
+                  type="button"
+                  disabled={classSaving}
+                  onClick={() => void handleSaveClass()}
+                  className="btn-chunky inline-flex shrink-0 items-center gap-1.5 px-4 py-3 text-sm disabled:opacity-60"
+                >
+                  {classSaving ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <Save className="h-4 w-4" />
+                  )}
+                  <span className="hidden sm:inline">Zapisz</span>
+                </button>
+              </div>
+              {classMessage && (
+                <p
+                  className={`mt-2 text-xs font-semibold ${
+                    classMessage.ok ? "text-success" : "text-muted"
+                  }`}
+                >
+                  {classMessage.text}
                 </p>
               )}
             </section>

@@ -1,34 +1,92 @@
-﻿/** Aktualna ścieżka nauki — wybór w pasku nawigacji (SP lub szkoła średnia). */
+﻿/** Uproszczona ścieżka (SP vs szkoła średnia) — pochodna z klasy ucznia. */
 export type LearningPath = "sp" | "srednia";
 
 export type PathGroup = "sp" | "liceum" | "technikum" | "zawodowa";
 
-/** Konkretne klasy w danych zadań / minigier (nie wybierane w UI). */
-export type LegacyClassPath =
+/** Konkretna klasa ucznia — wybór w onboardingu i profilu. */
+export type SchoolClassPath =
   | `klasa-${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8}`
   | `liceum-${1 | 2 | 3 | 4}`
   | `technikum-${1 | 2 | 3 | 4 | 5}`
   | `zawodowa-${1 | 2 | 3 | 4 | 5}`;
 
+/** @deprecated Użyj SchoolClassPath */
+export type LegacyClassPath = SchoolClassPath;
+
 /** Ścieżka pytań w generatorze. */
 export type QuestionTrack = "podstawowa" | "egzamin-8-klasisty" | "matura";
 
-export type PathOption = {
-  value: LearningPath;
+export type SchoolClassOption = {
+  value: SchoolClassPath;
   label: string;
 };
 
+export type SchoolClassGroup = {
+  id: PathGroup;
+  label: string;
+  options: readonly SchoolClassOption[];
+};
+
+const SP_CLASSES = [1, 2, 3, 4, 5, 6, 7, 8] as const;
+const HS_YEARS = [1, 2, 3, 4] as const;
+const TECH_YEARS = [1, 2, 3, 4, 5] as const;
+
+export const SCHOOL_CLASS_GROUPS: readonly SchoolClassGroup[] = [
+  {
+    id: "sp",
+    label: "Szkoła podstawowa",
+    options: SP_CLASSES.map((n) => ({
+      value: `klasa-${n}` as SchoolClassPath,
+      label: `Klasa ${n}`,
+    })),
+  },
+  {
+    id: "liceum",
+    label: "Liceum",
+    options: HS_YEARS.map((n) => ({
+      value: `liceum-${n}` as SchoolClassPath,
+      label: `Liceum — klasa ${n}`,
+    })),
+  },
+  {
+    id: "technikum",
+    label: "Technikum",
+    options: TECH_YEARS.map((n) => ({
+      value: `technikum-${n}` as SchoolClassPath,
+      label: `Technikum — klasa ${n}`,
+    })),
+  },
+  {
+    id: "zawodowa",
+    label: "Szkoła branżowa I stopnia",
+    options: TECH_YEARS.map((n) => ({
+      value: `zawodowa-${n}` as SchoolClassPath,
+      label: `Branżówka — klasa ${n}`,
+    })),
+  },
+] as const;
+
+export const ALL_SCHOOL_CLASS_OPTIONS: readonly SchoolClassOption[] =
+  SCHOOL_CLASS_GROUPS.flatMap((g) => g.options);
+
+/** @deprecated Użyj SCHOOL_CLASS_GROUPS */
+export type PathOption = { value: LearningPath; label: string };
+
+/** @deprecated Użyj learningPathFromSchoolClass */
 export const LEARNING_PATHS: readonly LearningPath[] = ["sp", "srednia"] as const;
 
+/** @deprecated Użyj ALL_SCHOOL_CLASS_OPTIONS */
 export const PATH_OPTIONS: readonly PathOption[] = [
   { value: "sp", label: "Szkoła podstawowa" },
   { value: "srednia", label: "Szkoła średnia" },
 ] as const;
 
-const STORAGE_KEY = "szybka-matma-learning-path";
-const LEGACY_STORAGE_KEY = "szybka-matma-school-class";
-const DEFAULT_PATH: LearningPath = "sp";
+const SCHOOL_CLASS_STORAGE_KEY = "szybka-matma-school-class";
+const LEGACY_PATH_STORAGE_KEY = "szybka-matma-learning-path";
 const PATH_CHANGE_EVENT = "szybka-matma-learning-path-change";
+
+export const DEFAULT_SCHOOL_CLASS: SchoolClassPath = "klasa-8";
+const DEFAULT_PATH: LearningPath = "sp";
 
 const PATH_LABELS: Record<LearningPath, string> = {
   sp: "Szkoła podstawowa",
@@ -44,7 +102,11 @@ export function isLearningPath(value: string): value is LearningPath {
   return value === "sp" || value === "srednia";
 }
 
-/** Mapuje starą wartość (klasa / liceum / technikum) na SP lub średnią. */
+export function isSchoolClassPath(value: string): value is SchoolClassPath {
+  return ALL_SCHOOL_CLASS_OPTIONS.some((o) => o.value === value);
+}
+
+/** Mapuje starą wartość (klasa / liceum / sp / srednia) na SP lub średnią. */
 export function normalizeLearningPath(raw: string): LearningPath | null {
   if (isLearningPath(raw)) return raw;
   if (raw === "matura") return "srednia";
@@ -59,14 +121,73 @@ export function normalizeLearningPath(raw: string): LearningPath | null {
   return null;
 }
 
-/** Poziom klasy SP do trudności minigier (null = szkoła średnia / matura). */
-export function spClassLevel(path: LearningPath): number | null {
-  if (path === "sp") return 8;
+export function normalizeSchoolClass(raw: string): SchoolClassPath | null {
+  if (isSchoolClassPath(raw)) return raw;
+  if (raw === "sp") return DEFAULT_SCHOOL_CLASS;
+  if (raw === "srednia" || raw === "matura") return "liceum-3";
+  const fromLegacy = normalizeLearningPath(raw);
+  if (fromLegacy === "sp") return DEFAULT_SCHOOL_CLASS;
+  if (fromLegacy === "srednia") return "liceum-3";
   return null;
+}
+
+export function learningPathFromSchoolClass(
+  schoolClass: SchoolClassPath,
+): LearningPath {
+  return normalizeLearningPath(schoolClass) ?? DEFAULT_PATH;
+}
+
+export function pathGroupFromSchoolClass(
+  schoolClass: SchoolClassPath,
+): PathGroup {
+  if (schoolClass.startsWith("klasa-")) return "sp";
+  if (schoolClass.startsWith("liceum-")) return "liceum";
+  if (schoolClass.startsWith("technikum-")) return "technikum";
+  return "zawodowa";
 }
 
 export function pathGroup(path: LearningPath): PathGroup {
   return path === "sp" ? "sp" : "liceum";
+}
+
+export function schoolClassLabel(schoolClass: SchoolClassPath): string {
+  return (
+    ALL_SCHOOL_CLASS_OPTIONS.find((o) => o.value === schoolClass)?.label ??
+    schoolClass
+  );
+}
+
+export function schoolClassShortLabel(schoolClass: SchoolClassPath): string {
+  if (schoolClass.startsWith("klasa-")) {
+    return `Kl. ${schoolClass.slice("klasa-".length)}`;
+  }
+  if (schoolClass.startsWith("liceum-")) {
+    return `Liceum ${schoolClass.slice("liceum-".length)}`;
+  }
+  if (schoolClass.startsWith("technikum-")) {
+    return `Techn. ${schoolClass.slice("technikum-".length)}`;
+  }
+  if (schoolClass.startsWith("zawodowa-")) {
+    return `Br. ${schoolClass.slice("zawodowa-".length)}`;
+  }
+  return schoolClass;
+}
+
+/** Poziom klasy SP do trudności minigier (null = szkoła średnia / matura). */
+export function spClassLevel(
+  path: LearningPath,
+  schoolClass?: SchoolClassPath | null,
+): number | null {
+  const resolved =
+    schoolClass ??
+    (typeof window !== "undefined" ? loadSchoolClass() : null);
+
+  if (resolved?.startsWith("klasa-")) {
+    const n = Number(resolved.slice("klasa-".length));
+    if (n >= 1 && n <= 8) return n;
+  }
+  if (path === "sp") return 8;
+  return null;
 }
 
 export function learningPathLabel(path: LearningPath): string {
@@ -75,6 +196,11 @@ export function learningPathLabel(path: LearningPath): string {
 
 export function learningPathShortLabel(path: LearningPath): string {
   return PATH_SHORT_LABELS[path];
+}
+
+/** Etykieta do UI — preferuje konkretną klasę. */
+export function displayPathLabel(schoolClass: SchoolClassPath): string {
+  return schoolClassLabel(schoolClass);
 }
 
 export function questionTrackForPath(path: LearningPath): QuestionTrack {
@@ -87,37 +213,69 @@ export function questionTrackLabel(track: QuestionTrack): string {
   return "Szkoła podstawowa";
 }
 
-export function loadLearningPath(): LearningPath {
-  if (typeof window === "undefined") return DEFAULT_PATH;
+function migrateLegacyStorage(): SchoolClassPath | null {
+  try {
+    const legacyClass = localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY);
+    if (legacyClass) {
+      const normalized = normalizeSchoolClass(legacyClass);
+      if (normalized) return normalized;
+    }
+
+    const legacyPath = localStorage.getItem(LEGACY_PATH_STORAGE_KEY);
+    if (legacyPath) {
+      const normalized = normalizeSchoolClass(legacyPath);
+      if (normalized) return normalized;
+    }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+export function hasStoredSchoolClass(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY) !== null;
+  } catch {
+    return false;
+  }
+}
+
+export function loadSchoolClass(): SchoolClassPath {
+  if (typeof window === "undefined") return DEFAULT_SCHOOL_CLASS;
 
   try {
-    const current = localStorage.getItem(STORAGE_KEY);
+    const current = localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY);
     if (current) {
-      const migrated = normalizeLearningPath(current);
-      if (migrated) {
-        if (migrated !== current) saveLearningPath(migrated);
-        return migrated;
+      const normalized = normalizeSchoolClass(current);
+      if (normalized) {
+        if (normalized !== current) saveSchoolClass(normalized);
+        return normalized;
       }
     }
 
-    const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
-    if (legacy) {
-      const migrated = normalizeLearningPath(legacy);
-      if (migrated) {
-        saveLearningPath(migrated);
-        return migrated;
-      }
+    const migrated = migrateLegacyStorage();
+    if (migrated) {
+      saveSchoolClass(migrated);
+      return migrated;
     }
   } catch {
     /* ignore */
   }
 
-  return DEFAULT_PATH;
+  return DEFAULT_SCHOOL_CLASS;
 }
 
-/** Snapshot dla SSR — stała wartość domyślna (bez localStorage). */
+export function getSchoolClassServerSnapshot(): SchoolClassPath {
+  return DEFAULT_SCHOOL_CLASS;
+}
+
+export function loadLearningPath(): LearningPath {
+  return learningPathFromSchoolClass(loadSchoolClass());
+}
+
 export function getLearningPathServerSnapshot(): LearningPath {
-  return DEFAULT_PATH;
+  return learningPathFromSchoolClass(getSchoolClassServerSnapshot());
 }
 
 export function subscribeLearningPath(onChange: () => void): () => void {
@@ -137,10 +295,19 @@ function notifyLearningPathChange(): void {
   window.dispatchEvent(new Event(PATH_CHANGE_EVENT));
 }
 
-export function saveLearningPath(path: LearningPath): void {
+export function saveSchoolClass(schoolClass: SchoolClassPath): void {
   if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, path);
+  localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, schoolClass);
+  localStorage.setItem(
+    LEGACY_PATH_STORAGE_KEY,
+    learningPathFromSchoolClass(schoolClass),
+  );
   notifyLearningPathChange();
+}
+
+/** @deprecated Zapisuj schoolClass — path jest pochodną. */
+export function saveLearningPath(path: LearningPath): void {
+  saveSchoolClass(path === "sp" ? DEFAULT_SCHOOL_CLASS : "liceum-3");
 }
 
 /** Skrót dopasowania po torze pytań (egzamin 8-kl. / matura). */
@@ -151,7 +318,7 @@ export type PathMatcher =
   | LearningPath
   | PathGroup
   | QuestionTrackMatcher
-  | LegacyClassPath;
+  | SchoolClassPath;
 
 function matcherMatchesPath(path: LearningPath, item: PathMatcher): boolean {
   if (item === path) return true;

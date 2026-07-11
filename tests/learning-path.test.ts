@@ -1,7 +1,9 @@
 ﻿import { describe, expect, it } from "vitest";
 import {
+  learningPathFromSchoolClass,
   matchesLearningPath,
   normalizeLearningPath,
+  normalizeSchoolClass,
   questionTrackForPath,
   spClassLevel,
 } from "@/lib/learning-path";
@@ -26,6 +28,21 @@ describe("normalizeLearningPath", () => {
 
   it("zwraca null dla nieznanych wartości", () => {
     expect(normalizeLearningPath("gimnazjum")).toBeNull();
+  });
+});
+
+describe("normalizeSchoolClass", () => {
+  it("mapuje legacy sp/srednia na konkretne klasy", () => {
+    expect(normalizeSchoolClass("sp")).toBe("klasa-8");
+    expect(normalizeSchoolClass("srednia")).toBe("liceum-3");
+    expect(normalizeSchoolClass("klasa-5")).toBe("klasa-5");
+  });
+});
+
+describe("learningPathFromSchoolClass", () => {
+  it("wyprowadza sp lub srednia z klasy", () => {
+    expect(learningPathFromSchoolClass("klasa-4")).toBe("sp");
+    expect(learningPathFromSchoolClass("liceum-1")).toBe("srednia");
   });
 });
 
@@ -57,8 +74,13 @@ describe("questionTrackForPath", () => {
 });
 
 describe("spClassLevel", () => {
-  it("używa klasy 8 dla SP i null dla średniej", () => {
+  it("używa klasy 8 dla SP bez podanej klasy", () => {
     expect(spClassLevel("sp")).toBe(8);
     expect(spClassLevel("srednia")).toBeNull();
+  });
+
+  it("używa konkretnej klasy SP gdy podana", () => {
+    expect(spClassLevel("sp", "klasa-3")).toBe(3);
+    expect(spClassLevel("srednia", "liceum-2")).toBeNull();
   });
 });

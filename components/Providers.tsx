@@ -2,6 +2,7 @@
 
 import { OnboardingGate } from "@/components/onboarding/OnboardingGate";
 import { LearningPathProvider } from "@/components/LearningPathProvider";
+import { SchoolClassSync } from "@/components/SchoolClassSync";
 import { StreakReminderHost } from "@/components/reminders/StreakReminderHost";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { SolvedTasksProvider } from "@/components/SolvedTasksProvider";
@@ -15,6 +16,7 @@ export function Providers({ children }: { children: ReactNode }) {
     <MotionConfig reducedMotion="user">
       <ServiceWorkerRegister />
       <LearningPathProvider>
+        <SchoolClassSync />
         <SolvedTasksProvider>
           <OnboardingGate>
             <StreakReminderHost />

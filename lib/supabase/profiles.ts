@@ -12,6 +12,11 @@ import {
   type SubscriptionStatus,
 } from "@/lib/subscription/status";
 import { getPlanById, type SubscriptionPlanId } from "@/lib/subscription/plans";
+import {
+  isSchoolClassPath,
+  normalizeSchoolClass,
+  type SchoolClassPath,
+} from "@/lib/learning-path";
 import type { PostgrestError } from "@supabase/supabase-js";
 import type { User } from "@supabase/supabase-js";
 
@@ -25,6 +30,8 @@ export type Profile = {
   lastPlayedDate: string | null;
   avatarUrl: string | null;
   lastNickUpdate: string | null;
+  /** Klasa ucznia (migracja add_profile_school_class). */
+  schoolClass?: SchoolClassPath | null;
   /**
    * Subskrypcja (dodane w migracji *_add_subscription_columns). Pola opcjonalne,
    * aby aplikacja działała także zanim migracja zostanie uruchomiona — brak
@@ -68,6 +75,7 @@ type ProfileRow = {
   subscription_plan?: string | null;
   subscription_current_period_end?: string | null;
   subscription_cancel_at_period_end?: boolean | null;
+  school_class?: string | null;
 };
 
 const CORE_SELECT = "id, nick, nickname, xp, level";
@@ -79,8 +87,10 @@ const NICK_UPDATE_SELECT = `${FULL_SELECT}, last_nick_update`;
 const SUBSCRIPTION_COLUMNS =
   "subscription_status, subscription_plan, subscription_current_period_end, subscription_cancel_at_period_end";
 const SUBSCRIPTION_SELECT = `${NICK_UPDATE_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
+const SCHOOL_CLASS_SELECT = `${SUBSCRIPTION_SELECT}, school_class`;
 
 const PROFILE_SELECT_FALLBACK_CHAIN = [
+  SCHOOL_CLASS_SELECT,
   SUBSCRIPTION_SELECT,
   NICK_UPDATE_SELECT,
   FULL_SELECT,
@@ -100,9 +110,16 @@ function readSubscriptionPlan(row: ProfileRow): SubscriptionPlanId | null {
   return plan ? plan.id : null;
 }
 
+function readSchoolClass(row: ProfileRow): SchoolClassPath | null {
+  const raw = row.school_class?.trim();
+  if (!raw) return null;
+  return isSchoolClassPath(raw) ? raw : normalizeSchoolClass(raw);
+}
+
 function mapRow(row: ProfileRow): Profile {
   const xp = Number(row.xp) || 0;
   const hasSubscription = row.subscription_status !== undefined;
+  const hasSchoolClass = row.school_class !== undefined;
   return {
     id: row.id,
     nick: readNick(row),
@@ -113,6 +130,7 @@ function mapRow(row: ProfileRow): Profile {
     lastPlayedDate: row.last_played_date ?? null,
     avatarUrl: row.avatar_url?.trim() || null,
     lastNickUpdate: row.last_nick_update ?? null,
+    ...(hasSchoolClass ? { schoolClass: readSchoolClass(row) } : {}),
     ...(hasSubscription
       ? {
           subscriptionStatus: normalizeSubscriptionStatus(
@@ -294,7 +312,10 @@ export function normalizeNick(raw: string): string {
 }
 
 export function profileNeedsOnboarding(profile: Profile | null): boolean {
-  return !profile?.nick?.trim();
+  if (!profile?.nick?.trim()) return true;
+  if (profile.schoolClass === undefined) return false;
+  if (!profile.schoolClass) return true;
+  return false;
 }
 
 export function nickFromUserMetadata(user: User): string | null {
@@ -539,6 +560,88 @@ export async function updateProfileNick(
 
   if (!row) {
     throw new Error("updateProfileNick: brak wiersza po aktualizacji");
+  }
+
+  return mapRow(row);
+}
+
+export async function updateProfileSchoolClass(
+  userId: string,
+  schoolClass: SchoolClassPath,
+): Promise<Profile> {
+  const patch: Record<string, unknown> = { school_class: schoolClass };
+
+  let { row, error } = await updateAndSelectProfile(userId, patch);
+
+  if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
+    console.warn(
+      "[szybka-matma] Kolumna profiles.school_class niedostępna — uruchom migrację add_profile_school_class.sql",
+    );
+    const { row: current } = await selectProfileWithFallback(userId);
+    if (!current) throw new Error("updateProfileSchoolClass: brak profilu");
+    return mapRow(current);
+  }
+
+  if (error) {
+    console.error("[szybka-matma] updateProfileSchoolClass failed:", error);
+    throw error;
+  }
+
+  if (!row) {
+    throw new Error("updateProfileSchoolClass: brak wiersza po aktualizacji");
+  }
+
+  return mapRow(row);
+}
+
+export async function completeProfileOnboarding(
+  userId: string,
+  nick: string,
+  schoolClass: SchoolClassPath,
+  options?: { lastNickUpdate?: string | null },
+): Promise<Profile> {
+  if (options?.lastNickUpdate !== undefined) {
+    const cooldownMsg = nickChangeCooldownMessage(options.lastNickUpdate);
+    if (cooldownMsg) throw new NickCooldownError(cooldownMsg);
+  }
+
+  const patch: Record<string, unknown> = {
+    ...profileWritePayload(nick),
+    school_class: schoolClass,
+    last_nick_update: new Date().toISOString(),
+  };
+
+  let { row, error } = await updateAndSelectProfile(userId, patch);
+
+  if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
+    ({ row, error } = await updateAndSelectProfile(userId, {
+      ...profileWritePayload(nick),
+      last_nick_update: new Date().toISOString(),
+    }));
+  }
+
+  if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
+    ({ row, error } = await updateAndSelectProfile(userId, {
+      ...profileWritePayload(nick),
+      school_class: schoolClass,
+    }));
+  }
+
+  if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
+    ({ row, error } = await updateAndSelectProfile(
+      userId,
+      profileWritePayload(nick),
+    ));
+  }
+
+  if (error) {
+    if (isUniqueViolation(error)) throw new NickTakenError();
+    console.error("[szybka-matma] completeProfileOnboarding failed:", error);
+    throw error;
+  }
+
+  if (!row) {
+    throw new Error("completeProfileOnboarding: brak wiersza po aktualizacji");
   }
 
   return mapRow(row);

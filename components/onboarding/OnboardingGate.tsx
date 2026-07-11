@@ -1,5 +1,6 @@
 "use client";
 
+import { GuestClassModal } from "@/components/onboarding/GuestClassModal";
 import { OnboardingModal } from "@/components/onboarding/OnboardingModal";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
@@ -7,6 +8,7 @@ import {
   profileNeedsOnboarding,
   type Profile,
 } from "@/lib/supabase/profiles";
+import { hasStoredSchoolClass } from "@/lib/learning-path";
 import {
   PROFILE_UPDATED_EVENT,
   type ProfileUpdatedDetail,
@@ -22,6 +24,8 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [ready, setReady] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+  const [guestClassDone, setGuestClassDone] = useState(false);
 
   const load = useCallback(async (sessionUser: User | null) => {
     setUser(sessionUser);
@@ -43,8 +47,11 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
   }, []);
 
   useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
     if (!isSupabaseConfigured()) {
-      // No Supabase configured — skip onboarding gating entirely.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setReady(true);
       return;
@@ -83,7 +90,14 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
       window.removeEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
   }, [user]);
 
-  const blocked = ready && user !== null && profileNeedsOnboarding(profile);
+  const userBlocked = ready && user !== null && profileNeedsOnboarding(profile);
+  const guestBlocked =
+    hydrated &&
+    ready &&
+    !user &&
+    !guestClassDone &&
+    !hasStoredSchoolClass();
+  const blocked = userBlocked || guestBlocked;
 
   return (
     <>
@@ -98,8 +112,11 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
       >
         {children}
       </div>
-      {blocked && user && (
+      {userBlocked && user && (
         <OnboardingModal user={user} onComplete={(p) => setProfile(p)} />
+      )}
+      {guestBlocked && (
+        <GuestClassModal onComplete={() => setGuestClassDone(true)} />
       )}
     </>
   );

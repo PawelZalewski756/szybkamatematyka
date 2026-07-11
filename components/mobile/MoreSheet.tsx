@@ -1,6 +1,8 @@
 "use client";
 
-import { NavbarPathSelect } from "@/components/NavbarPathSelect";
+import { NavbarClassBadge } from "@/components/NavbarClassBadge";
+import { SchoolClassPicker } from "@/components/SchoolClassPicker";
+import { useLearningPath } from "@/components/LearningPathProvider";
 import { isNavActive } from "@/lib/layout/mobile-nav";
 import type { NavGroup, NavLink } from "@/lib/layout/nav-links";
 import { LogOut, X } from "lucide-react";
@@ -68,6 +70,7 @@ export function MoreSheet({
   loggingOut = false,
 }: MoreSheetProps) {
   const sheetId = useId();
+  const { schoolClass, setSchoolClass } = useLearningPath();
 
   useEffect(() => {
     if (!open) return;
@@ -117,8 +120,26 @@ export function MoreSheet({
         </div>
 
         <div className="border-b border-surface-border px-4 py-3">
-          <p className="mb-1.5 text-caption">Twoja ścieżka</p>
-          <NavbarPathSelect />
+          <p className="mb-1.5 text-caption">Twoja klasa</p>
+          <NavbarClassBadge
+            linkToProfile={isLoggedIn}
+            className="mb-2"
+          />
+          {!isLoggedIn && (
+            <SchoolClassPicker
+              id="more-sheet-class"
+              value={schoolClass}
+              onChange={setSchoolClass}
+            />
+          )}
+          {isLoggedIn && (
+            <p className="mt-2 text-caption text-muted">
+              Zmiana klasy w{" "}
+              <Link href="/profil#klasa" className="font-semibold text-accent">
+                profilu
+              </Link>
+            </p>
+          )}
         </div>
 
         <nav className="overflow-y-auto px-2 py-3">
