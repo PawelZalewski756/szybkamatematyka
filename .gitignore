@@ -40,6 +40,7 @@ tmp-*.html
 
 # generator logs (cache JSON jest commitowany)
 data/overnight-gemini.log
+data/overnight-gemini.lock
 data/theory-cache/overnight.log
 data/theory-gemini*.log
 data/cke-matura-cache/overnight.log

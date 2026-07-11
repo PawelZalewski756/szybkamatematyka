@@ -16,6 +16,39 @@ import {
 import { gitCheckpoint } from "./gitCheckpoint";
 
 const LOG = path.resolve(process.cwd(), "data/overnight-gemini.log");
+const LOCK = path.resolve(process.cwd(), "data/overnight-gemini.lock");
+
+function acquireLock(): void {
+  if (fs.existsSync(LOCK)) {
+    const otherPid = Number(fs.readFileSync(LOCK, "utf8").trim());
+    if (Number.isFinite(otherPid) && otherPid > 0) {
+      try {
+        process.kill(otherPid, 0);
+        throw new Error(
+          `Nocna sesja już działa (PID ${otherPid}). Zatrzymaj duplikat przed restartem.`,
+        );
+      } catch (err) {
+        if (err instanceof Error && err.message.includes("Nocna sesja")) throw err;
+      }
+    }
+  }
+  fs.mkdirSync(path.dirname(LOCK), { recursive: true });
+  fs.writeFileSync(LOCK, String(process.pid), "utf8");
+  const release = () => {
+    try {
+      if (fs.readFileSync(LOCK, "utf8").trim() === String(process.pid)) {
+        fs.unlinkSync(LOCK);
+      }
+    } catch {
+      /* ignore */
+    }
+  };
+  process.on("exit", release);
+  process.on("SIGINT", () => {
+    release();
+    process.exit(130);
+  });
+}
 
 function log(line: string): void {
   const ts = new Date().toISOString();
@@ -75,6 +108,7 @@ function logTheorySnapshot(label: string): void {
 }
 
 async function main() {
+  acquireLock();
   log("🌙 Start nocnej sesji Gemini (teoria → testy → DB → CKE → audyty)");
 
   logTheorySnapshot("Stan początkowy");
