@@ -42,22 +42,22 @@ function fireConfetti() {
 
 const OUTCOME_COPY: Record<
   DuelOutcome,
-  { title: string; emoji: string; accent: string }
+  { title: string; emoji: string; titleClass: string }
 > = {
   win: {
     title: "Wygrana!",
     emoji: "🏆",
-    accent: "from-emerald-400 via-amber-500 to-orange-400",
+    titleClass: "text-success",
   },
   draw: {
     title: "Remis!",
     emoji: "🤝",
-    accent: "from-amber-400 via-orange-400 to-rose-400",
+    titleClass: "text-accent",
   },
   loss: {
     title: "Porażka",
     emoji: "💪",
-    accent: "from-sky-400 via-indigo-400 to-amber-400",
+    titleClass: "text-muted",
   },
 };
 
@@ -74,16 +74,16 @@ function ScoreCard({
     <div
       className={`flex-1 rounded-2xl border p-4 text-center ${
         highlight
-          ? "border-emerald-500/40 bg-emerald-500/10"
-          : "border-white/10 bg-zinc-900/80"
+          ? "border-success/40 bg-success/10"
+          : "border-surface-border bg-surface/80"
       }`}
     >
-      <p className="truncate text-sm font-bold text-zinc-300">{name}</p>
-      <p className="mt-2 text-3xl font-black text-amber-400">🏆 {result.score}</p>
-      <p className="mt-1 text-sm text-zinc-400">
+      <p className="truncate text-sm font-bold text-foreground">{name}</p>
+      <p className="mt-2 text-3xl font-black text-accent">🏆 {result.score}</p>
+      <p className="mt-1 text-sm text-muted">
         {result.correct}/{result.total} · {accuracyPercent(result)}%
       </p>
-      <p className="mt-0.5 text-xs text-amber-400">
+      <p className="mt-0.5 text-xs text-accent">
         {formatDuration(result.durationMs)}
       </p>
     </div>
@@ -176,7 +176,7 @@ export function DuelResultScreen({
         {copy.emoji}
       </motion.p>
       <h1
-        className={`mt-3 bg-gradient-to-r ${copy.accent} bg-clip-text text-4xl font-black text-transparent sm:text-5xl`}
+        className={`mt-3 text-4xl font-black sm:text-5xl ${copy.titleClass}`}
       >
         {copy.title}
       </h1>
@@ -187,7 +187,7 @@ export function DuelResultScreen({
           result={myResult}
           highlight={iAmHighlighted}
         />
-        <div className="flex items-center text-xl font-black text-zinc-600">
+        <div className="flex items-center text-xl font-black text-muted">
           VS
         </div>
         <ScoreCard
@@ -199,7 +199,7 @@ export function DuelResultScreen({
 
       {awardXp && account?.isLoggedIn && account.profile ? (
         <div className="mt-6 w-full">
-          <p className="mb-3 text-lg font-bold text-emerald-400">
+          <p className="mb-3 text-lg font-bold text-success">
             {xpEarned !== null
               ? `+${xpEarned} XP na koncie${
                   savedLevel ? ` · Poz. ${savedLevel}` : ""
@@ -213,7 +213,7 @@ export function DuelResultScreen({
           />
         </div>
       ) : (
-        <p className="mt-6 text-sm text-amber-400">
+        <p className="mt-6 text-sm text-accent">
           {awardXp ? (
             <>
               <Link href="/login" className="font-bold underline">
@@ -231,13 +231,13 @@ export function DuelResultScreen({
         <button
           type="button"
           onClick={onRematch}
-          className="flex-1 rounded-2xl bg-brand-gradient px-8 py-4 text-lg font-black text-white shadow-lg shadow-orange-500/40 transition-transform hover:scale-105 active:scale-95"
+          className="flex-1 rounded-2xl btn-primary px-8 py-4 text-lg font-black text-foreground shadow-lg shadow-accent/40 transition-transform hover:scale-105 active:scale-95"
         >
           Jeszcze raz
         </button>
         <Link
           href="/minigry"
-          className="flex-1 rounded-2xl border border-white/20 px-8 py-4 text-lg font-black text-white transition-colors hover:border-orange-500/50 hover:bg-orange-500/10"
+          className="flex-1 rounded-2xl border border-surface-border px-8 py-4 text-lg font-black text-foreground transition-colors hover:border-accent/50 hover:bg-accent/10"
         >
           Minigry
         </Link>

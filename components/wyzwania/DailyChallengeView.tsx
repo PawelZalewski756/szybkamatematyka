@@ -29,7 +29,7 @@ function fireConfetti() {
       particleCount: 110,
       spread: 80,
       origin: { y: 0.6 },
-      colors: ["#22d3ee", "#d946ef", "#a78bfa", "#34d399", "#fb923c"],
+      colors: ["#f4b740", "#e8a830", "#34d399", "#f6f1e7", "#a79d8a"],
       disableForReducedMotion: true,
     });
   });
@@ -51,27 +51,27 @@ function StreakBanner({
 }) {
   const active = streak > 0;
   return (
-    <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-orange-500/25 bg-orange-500/5 p-4 backdrop-blur-md shadow-[0_0_24px_rgba(251,146,60,0.12)]">
+    <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-accent/25 bg-accent/5 p-4 backdrop-blur-md shadow-[0_0_24px_rgba(251,146,60,0.12)]">
       <div
         className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
           active
-            ? "bg-gradient-to-br from-orange-500 to-orange-600 shadow-[0_0_18px_rgba(251,146,60,0.4)]"
-            : "bg-zinc-800"
+            ? "bg-accent shadow-[0_0_18px_rgba(244,183,64,0.35)]"
+            : "bg-surface-hover"
         }`}
       >
         <Flame
-          className={`h-6 w-6 ${active ? "text-white" : "text-zinc-500"}`}
+          className={`h-6 w-6 ${active ? "text-foreground" : "text-muted"}`}
           aria-hidden
         />
       </div>
       <div className="min-w-0">
-        <p className="text-2xl font-black text-white tabular-nums">
+        <p className="text-2xl font-black text-foreground tabular-nums">
           {streak}{" "}
-          <span className="text-sm font-bold text-zinc-400">
+          <span className="text-sm font-bold text-muted">
             {streakNoun(streak)}
           </span>
         </p>
-        <p className="text-xs font-semibold text-zinc-400">
+        <p className="text-xs font-semibold text-muted">
           {completed
             ? "Seria podtrzymana — wróć jutro!"
             : active
@@ -80,11 +80,11 @@ function StreakBanner({
         </p>
       </div>
       {bestStreak > 0 && bestStreak > streak && (
-        <div className="ml-auto rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-zinc-500">
+        <div className="ml-auto rounded-xl border border-surface-border bg-white/5 px-3 py-1.5 text-center">
+          <p className="text-[10px] font-bold uppercase tracking-wide text-muted">
             Rekord
           </p>
-          <p className="text-sm font-black text-amber-400 tabular-nums">
+          <p className="text-sm font-black text-accent tabular-nums">
             {bestStreak}
           </p>
         </div>
@@ -111,39 +111,39 @@ function RewardScreen({
       animate={{ opacity: 1, scale: 1, y: 0 }}
       className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 text-center backdrop-blur-xl sm:p-8"
     >
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-orange-500 shadow-[0_0_28px_rgba(232,112,42,0.35)]">
-        <CheckCircle2 className="h-9 w-9 text-white" aria-hidden />
+      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-accent shadow-[0_0_28px_rgba(244,183,64,0.35)]">
+        <CheckCircle2 className="h-9 w-9 text-on-accent" aria-hidden />
       </div>
-      <h2 className="mt-4 text-2xl font-black text-white sm:text-3xl">
+      <h2 className="mt-4 text-2xl font-black text-foreground sm:text-3xl">
         Wyzwanie ukończone!
       </h2>
-      <p className="mt-1 text-sm font-semibold text-zinc-400">
+      <p className="mt-1 text-sm font-semibold text-muted">
         Poprawne odpowiedzi:{" "}
-        <span className="text-emerald-400">
+        <span className="text-success">
           {correct}/{total}
         </span>
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
-        <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
-          <div className="flex items-center justify-center gap-1.5 text-orange-400">
+        <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
+          <div className="flex items-center justify-center gap-1.5 text-accent">
             <Sparkles className="h-4 w-4" aria-hidden />
             <span className="text-[10px] font-bold uppercase tracking-wide">
               Nagroda XP
             </span>
           </div>
-          <p className="mt-1 text-2xl font-black text-white tabular-nums sm:text-3xl">
+          <p className="mt-1 text-2xl font-black text-foreground tabular-nums sm:text-3xl">
             +{reward?.xp ?? 0}
           </p>
         </div>
-        <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
-          <div className="flex items-center justify-center gap-1.5 text-orange-400">
+        <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
+          <div className="flex items-center justify-center gap-1.5 text-accent">
             <Flame className="h-4 w-4" aria-hidden />
             <span className="text-[10px] font-bold uppercase tracking-wide">
               Seria
             </span>
           </div>
-          <p className="mt-1 text-2xl font-black text-white tabular-nums sm:text-3xl">
+          <p className="mt-1 text-2xl font-black text-foreground tabular-nums sm:text-3xl">
             {streak}
           </p>
         </div>
@@ -157,30 +157,30 @@ function RewardScreen({
       )}
 
       {!isLoggedIn && (
-        <p className="mt-5 text-xs font-semibold text-zinc-500">
-          <Link href="/login" className="font-bold text-orange-400">
+        <p className="mt-5 text-xs font-semibold text-muted">
+          <Link href="/login" className="font-bold text-accent">
             Zaloguj się
           </Link>{" "}
           — by zapisać XP na koncie i synchronizować serię między urządzeniami.
         </p>
       )}
 
-      <div className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-zinc-300">
-        <CalendarCheck className="h-4 w-4 text-orange-400" aria-hidden />
+      <div className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-surface-border bg-white/5 px-4 py-3 text-sm font-semibold text-foreground">
+        <CalendarCheck className="h-4 w-4 text-accent" aria-hidden />
         Następne wyzwanie jutro
       </div>
 
       <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <Link
           href="/minigry"
-          className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-300"
+          className="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-accent"
         >
           <Swords className="h-4 w-4" />
           Zagraj w minigry →
         </Link>
         <Link
           href="/trening"
-          className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-200"
+          className="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-accent-strong"
         >
           <Trophy className="h-4 w-4" />
           Trening →
@@ -277,14 +277,14 @@ export function DailyChallengeView() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-400/90">
+          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent/90">
             <Flame className="h-3.5 w-3.5" aria-hidden />
             Dzienne wyzwanie
           </div>
-          <h1 className="text-3xl font-black text-white sm:text-4xl">
+          <h1 className="text-3xl font-black text-foreground sm:text-4xl">
             Wyzwanie na dziś
           </h1>
-          <p className="mt-2 text-sm text-zinc-400">
+          <p className="mt-2 text-sm text-muted">
             {pathLabel} · {trackLabel} · {total || DAILY_CHALLENGE_QUESTION_COUNT}{" "}
             pytań · ten sam zestaw dla wszystkich danego dnia
           </p>
@@ -292,8 +292,8 @@ export function DailyChallengeView() {
 
         {loading ? (
           <div className="mt-10 flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
-            <p className="text-sm font-semibold text-zinc-400">
+            <Loader2 className="h-10 w-10 animate-spin text-accent" />
+            <p className="text-sm font-semibold text-muted">
               Ładowanie wyzwania…
             </p>
           </div>
@@ -314,13 +314,13 @@ export function DailyChallengeView() {
                   exit={{ opacity: 0, y: -12 }}
                   className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-8"
                 >
-                  <div className="flex items-center gap-2 text-orange-400">
+                  <div className="flex items-center gap-2 text-accent">
                     <Sparkles className="h-5 w-5" aria-hidden />
                     <span className="text-sm font-bold uppercase tracking-wide">
                       Oceń: prawda czy fałsz?
                     </span>
                   </div>
-                  <p className="mt-3 text-base text-zinc-300">
+                  <p className="mt-3 text-base text-foreground">
                     Czeka na Ciebie {total} szybkich pytań. Za ukończenie
                     zdobędziesz XP i podbijesz swoją serię nauki. Wpadaj
                     codziennie, by jej nie stracić!
@@ -328,15 +328,15 @@ export function DailyChallengeView() {
                   <button
                     type="button"
                     onClick={startChallenge}
-                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gradient px-6 py-4 text-base font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 active:scale-[0.98]"
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-2xl btn-primary px-6 py-4 text-base font-black text-foreground shadow-lg shadow-accent/25 transition hover:brightness-110 active:scale-[0.98]"
                   >
                     <Flame className="h-5 w-5" />
                     Rozpocznij wyzwanie
                   </button>
                   {!isLoggedIn && (
-                    <p className="mt-3 text-center text-xs font-semibold text-zinc-500">
+                    <p className="mt-3 text-center text-xs font-semibold text-muted">
                       Grasz jako gość — seria zapisze się lokalnie.{" "}
-                      <Link href="/login" className="text-orange-400">
+                      <Link href="/login" className="text-accent">
                         Zaloguj się
                       </Link>{" "}
                       po XP na koncie.
@@ -354,17 +354,17 @@ export function DailyChallengeView() {
                   className="flex flex-col gap-5"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs font-bold text-zinc-400">
+                    <div className="flex items-center justify-between text-xs font-bold text-muted">
                       <span>
                         Pytanie {index + 1} / {total}
                       </span>
-                      <span className="tabular-nums text-emerald-400">
+                      <span className="tabular-nums text-success">
                         {correctCount} poprawnych
                       </span>
                     </div>
-                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-800">
+                    <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-300"
+                        className="progress-accent"
                         style={{ width: `${progressPercent}%` }}
                       />
                     </div>
@@ -379,13 +379,13 @@ export function DailyChallengeView() {
                     transition={{ duration: 0.4 }}
                     className={`flex min-h-[160px] items-center justify-center rounded-3xl border p-6 text-center backdrop-blur-xl transition-colors sm:min-h-[200px] ${
                       feedback === "correct"
-                        ? "border-emerald-500/50 bg-emerald-500/10"
+                        ? "border-success/50 bg-success/10"
                         : feedback === "wrong"
                           ? "border-red-500/50 bg-red-500/10"
                           : "border-white/15 bg-white/[0.06]"
                     }`}
                   >
-                    <p className="text-3xl font-black text-white sm:text-4xl">
+                    <p className="text-3xl font-black text-foreground sm:text-4xl">
                       {current.claim}
                     </p>
                   </motion.div>
@@ -395,7 +395,7 @@ export function DailyChallengeView() {
                       type="button"
                       disabled={locked}
                       onClick={() => handleAnswer(true)}
-                      className="inline-flex items-center justify-center gap-2 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 py-5 text-lg font-black text-emerald-300 transition hover:bg-emerald-500/20 active:scale-[0.97] disabled:opacity-60"
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl border border-success/40 bg-success/10 py-5 text-lg font-black text-success transition hover:bg-success/20 active:scale-[0.97] disabled:opacity-60"
                     >
                       <CheckCircle2 className="h-5 w-5" />
                       Prawda
@@ -422,7 +422,7 @@ export function DailyChallengeView() {
                 >
                   {saving ? (
                     <div className="flex min-h-[200px] items-center justify-center">
-                      <Loader2 className="h-8 w-8 animate-spin text-orange-400" />
+                      <Loader2 className="h-8 w-8 animate-spin text-accent" />
                     </div>
                   ) : (
                     <RewardScreen

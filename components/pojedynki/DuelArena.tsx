@@ -84,7 +84,7 @@ export function DuelArena({
     finished: match.phase === "finished",
   };
 
-  const answerClass = def?.answerClass ?? "border-orange-500/30";
+  const answerClass = def?.answerClass ?? "border-accent/30";
 
   return (
     <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-4 sm:px-6 sm:py-6">
@@ -92,7 +92,7 @@ export function DuelArena({
         {match.flash === "correct" && (
           <motion.div
             key="flash-correct"
-            className="pointer-events-none fixed inset-0 z-50 bg-emerald-400"
+            className="pointer-events-none fixed inset-0 z-50 bg-success"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.25 }}
             exit={{ opacity: 0 }}
@@ -116,18 +116,18 @@ export function DuelArena({
         me={{
           name: `${playerName} (Ty)`,
           progress: meProgress,
-          accent: "from-orange-500 to-blue-500",
+          variant: "me",
         }}
         opponent={{
           name: opponent.name,
           progress: opponentProgress,
-          accent: "from-orange-500 to-pink-500",
+          variant: "opponent",
           pending: opponentPending,
         }}
       />
 
-      <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-zinc-900/90 px-4 py-3 shadow-lg">
-        <p className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+      <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-surface-border bg-surface/90 px-4 py-3 shadow-lg">
+        <p className="text-[11px] font-bold uppercase tracking-wider text-muted">
           Pytanie {Math.min(match.index + 1, match.total)}/{match.total}
         </p>
         <div className="flex items-center gap-3">
@@ -138,13 +138,13 @@ export function DuelArena({
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="rounded-full border border-orange-500/50 bg-orange-500/20 px-2 py-0.5 text-xs font-black text-orange-300"
+                className="rounded-full border border-accent/50 bg-accent/20 px-2 py-0.5 text-xs font-black text-accent"
               >
                 🔥 x{match.combo}
               </motion.span>
             )}
           </AnimatePresence>
-          <span className="text-sm font-black tabular-nums text-amber-400">
+          <span className="text-sm font-black tabular-nums text-accent">
             {formatDuration(elapsed * 1000)}
           </span>
         </div>
@@ -157,31 +157,31 @@ export function DuelArena({
         onAnimationComplete={() => match.setShake(false)}
       >
         {counting || match.phase !== "playing" ? (
-          <div className="flex flex-col items-center justify-center rounded-3xl border border-white/10 bg-zinc-900/95 px-4 py-16 text-center">
+          <div className="flex flex-col items-center justify-center rounded-3xl border border-surface-border bg-surface/95 px-4 py-16 text-center">
             {match.phase === "finished" ? (
               <>
                 <p className="text-5xl">🏁</p>
-                <p className="mt-4 text-xl font-black text-white">
+                <p className="mt-4 text-xl font-black text-foreground">
                   Twój wynik gotowy!
                 </p>
-                <p className="mt-1 text-sm text-zinc-400">
+                <p className="mt-1 text-sm text-muted">
                   Czekamy na rozstrzygnięcie…
                 </p>
               </>
             ) : (
               <>
-                <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
+                <p className="text-sm font-bold uppercase tracking-widest text-accent">
                   {def?.title ?? "Pojedynek"}
                 </p>
                 <motion.p
                   key={count}
                   initial={{ scale: 0.4, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="mt-4 text-7xl font-black text-white"
+                  className="mt-4 text-7xl font-black text-foreground"
                 >
                   {count > 0 ? count : "START!"}
                 </motion.p>
-                <p className="mt-3 text-sm text-zinc-500">
+                <p className="mt-3 text-sm text-muted">
                   Rywal: {opponent.name}
                 </p>
               </>
@@ -191,7 +191,7 @@ export function DuelArena({
           <AnimatePresence mode="wait">
             <motion.div
               key={match.index}
-              className="rounded-3xl border border-white/10 bg-zinc-900/95 px-4 py-10 text-center shadow-xl sm:px-6 sm:py-12"
+              className="rounded-3xl border border-surface-border bg-surface/95 px-4 py-10 text-center shadow-xl sm:px-6 sm:py-12"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

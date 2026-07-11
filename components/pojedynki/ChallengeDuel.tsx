@@ -165,13 +165,13 @@ export function ChallengeDuel({
   if (stage === "menu") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-accent">
           {title} · Wyzwanie
         </p>
-        <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-black text-foreground sm:text-4xl">
           Pojedynek na kod
         </h1>
-        <p className="mt-3 max-w-md text-zinc-400">
+        <p className="mt-3 max-w-md text-muted">
           Zagraj i wyślij znajomemu kod, albo wklej kod, który dostałeś. Ten sam
           zestaw pytań, porównanie wyników — działa nawet offline.
         </p>
@@ -179,14 +179,14 @@ export function ChallengeDuel({
           <button
             type="button"
             onClick={() => setStage("createPlay")}
-            className="rounded-2xl bg-gradient-to-r from-emerald-600 via-amber-500 to-orange-500 px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
+            className="rounded-2xl btn-primary px-6 py-5 text-lg font-black text-foreground shadow-lg shadow-accent/30"
           >
             🎯 Stwórz wyzwanie
           </button>
           <button
             type="button"
             onClick={() => setStage("acceptInput")}
-            className="rounded-2xl bg-brand-gradient px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
+            className="rounded-2xl btn-primary px-6 py-5 text-lg font-black text-foreground shadow-lg shadow-accent/30"
           >
             📥 Mam kod
           </button>
@@ -194,12 +194,12 @@ export function ChallengeDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
+          className="mt-6 text-sm font-semibold text-muted hover:text-accent"
         >
           ← Zmień tryb
         </button>
         {!supabaseOn && (
-          <p className="mt-4 text-xs text-zinc-600">
+          <p className="mt-4 text-xs text-muted">
             Tryb offline: kody przenośne działają bez konta i internetu.
           </p>
         )}
@@ -223,40 +223,40 @@ export function ChallengeDuel({
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
         <p className="text-6xl">📨</p>
-        <h1 className="mt-3 text-3xl font-black text-white">
+        <h1 className="mt-3 text-3xl font-black text-foreground">
           Wyzwanie gotowe!
         </h1>
-        <p className="mt-2 text-zinc-400">
+        <p className="mt-2 text-muted">
           Twój wynik:{" "}
-          <span className="font-black text-amber-400">
+          <span className="font-black text-accent">
             🏆 {hostResult?.score ?? 0}
           </span>{" "}
           ({hostResult?.correct ?? 0}/{hostResult?.total ?? 0})
         </p>
 
         {shortCode && (
-          <div className="mt-6 w-full rounded-2xl border border-orange-500/30 bg-orange-500/10 p-4">
-            <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
+          <div className="mt-6 w-full rounded-2xl border border-accent/30 bg-accent/10 p-4">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">
               Krótki kod pokoju
             </p>
-            <p className="mt-1 text-4xl font-black tracking-[0.3em] text-white">
+            <p className="mt-1 text-4xl font-black tracking-[0.3em] text-foreground">
               {shortCode}
             </p>
-            <p className="mt-1 text-xs text-zinc-400">
+            <p className="mt-1 text-xs text-muted">
               Znajomy wpisuje ten kod w „Mam kod”.
             </p>
           </div>
         )}
 
         <div className="mt-5 w-full">
-          <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted">
             Kod przenośny (offline)
           </p>
           <textarea
             readOnly
             value={portableCode}
             onFocus={(e) => e.currentTarget.select()}
-            className="mt-2 h-24 w-full resize-none rounded-xl border border-white/10 bg-zinc-900 p-3 text-xs text-zinc-300"
+            className="mt-2 h-24 w-full resize-none rounded-xl border border-surface-border bg-surface p-3 text-xs text-foreground"
           />
         </div>
 
@@ -264,14 +264,14 @@ export function ChallengeDuel({
           <button
             type="button"
             onClick={() => void copyToClipboard(portableCode)}
-            className="flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-orange-500 px-6 py-4 text-lg font-black text-white shadow-lg"
+            className="flex-1 rounded-2xl btn-primary px-6 py-4 text-lg font-black text-foreground shadow-lg"
           >
             {copied ? "Skopiowano ✓" : "Kopiuj kod"}
           </button>
           <button
             type="button"
             onClick={restartCreate}
-            className="flex-1 rounded-2xl border border-white/20 px-6 py-4 text-lg font-black text-white hover:bg-white/5"
+            className="flex-1 rounded-2xl border border-surface-border px-6 py-4 text-lg font-black text-foreground hover:bg-white/5"
           >
             Zagraj jeszcze raz
           </button>
@@ -279,7 +279,7 @@ export function ChallengeDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-orange-400"
+          className="mt-4 text-sm font-semibold text-muted hover:text-accent"
         >
           ← Zmień tryb
         </button>
@@ -290,32 +290,32 @@ export function ChallengeDuel({
   if (stage === "acceptInput") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-accent">
           Dołącz do wyzwania
         </p>
-        <h1 className="mt-2 text-3xl font-black text-white">Wklej kod</h1>
-        <p className="mt-3 max-w-md text-zinc-400">
+        <h1 className="mt-2 text-3xl font-black text-foreground">Wklej kod</h1>
+        <p className="mt-3 max-w-md text-muted">
           Wklej długi kod przenośny albo wpisz krótki kod pokoju.
         </p>
         <textarea
           value={inputCode}
           onChange={(e) => setInputCode(e.target.value)}
           placeholder="SMD1.… lub np. K7M2P"
-          className="mt-6 h-28 w-full resize-none rounded-xl border border-white/10 bg-zinc-900 p-3 text-sm text-white placeholder:text-zinc-600 focus:border-orange-500/50 focus:outline-none"
+          className="mt-6 h-28 w-full resize-none rounded-xl border border-surface-border bg-surface p-3 text-sm text-foreground placeholder:text-muted focus:border-accent/50 focus:outline-none"
         />
         {error && <p className="mt-3 text-sm text-red-400">{error}</p>}
         <button
           type="button"
           onClick={() => void resolveCode()}
           disabled={loading}
-          className="mt-5 w-full rounded-2xl bg-brand-gradient py-5 text-xl font-black text-white shadow-xl shadow-orange-500/40 disabled:opacity-60"
+          className="mt-5 w-full rounded-2xl btn-primary py-5 text-xl font-black text-foreground shadow-xl shadow-accent/40 disabled:opacity-60"
         >
           {loading ? "Szukam…" : "Zagraj wyzwanie"}
         </button>
         <button
           type="button"
           onClick={onExit}
-          className="mt-4 text-sm font-semibold text-zinc-500 hover:text-orange-400"
+          className="mt-4 text-sm font-semibold text-muted hover:text-accent"
         >
           ← Zmień tryb
         </button>

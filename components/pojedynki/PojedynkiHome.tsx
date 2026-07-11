@@ -36,7 +36,7 @@ function NameEditor() {
               setEditing(false);
             }
           }}
-          className="w-40 rounded-lg border border-orange-500/40 bg-zinc-900 px-3 py-1.5 text-sm font-bold text-white focus:outline-none"
+          className="input-field w-40 px-3 py-1.5 text-sm font-bold"
         />
         <button
           type="button"
@@ -44,7 +44,7 @@ function NameEditor() {
             setPlayerName(draft);
             setEditing(false);
           }}
-          className="rounded-lg bg-orange-500/20 px-3 py-1.5 text-sm font-bold text-orange-300"
+          className="btn-primary rounded-lg px-3 py-1.5 text-sm"
         >
           OK
         </button>
@@ -59,10 +59,10 @@ function NameEditor() {
         setDraft(playerName);
         setEditing(true);
       }}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-zinc-900/70 px-3 py-1.5 text-sm font-bold text-white transition-colors hover:border-orange-500/40"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-surface-border bg-surface px-3 py-1.5 text-sm font-bold text-foreground transition-colors hover:border-accent/40"
     >
       {playerName}
-      <Pencil className="h-3.5 w-3.5 text-zinc-500" />
+      <Pencil className="h-3.5 w-3.5 text-muted" />
     </button>
   );
 }
@@ -80,7 +80,7 @@ export function PojedynkiHome() {
 
   if (!ready) {
     return (
-      <div className="flex flex-1 items-center justify-center py-20 text-zinc-500">
+      <div className="flex flex-1 items-center justify-center py-20 text-muted">
         Ładowanie pojedynków…
       </div>
     );
@@ -105,33 +105,31 @@ export function PojedynkiHome() {
     <div className="flex w-full flex-1 flex-col py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3">
-          <span className="rounded-2xl bg-gradient-to-br bg-brand-gradient p-2.5 shadow-lg shadow-orange-500/30">
-            <Swords className="h-6 w-6 text-white" />
+          <span className="icon-chip h-11 w-11 rounded-2xl">
+            <Swords className="h-6 w-6" aria-hidden />
           </span>
-          <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
+          <h1 className="text-3xl font-black text-foreground sm:text-4xl md:text-5xl">
             Pojedynki{" "}
-            <span className="text-gradient-brand">
-              1v1
-            </span>
+            <span className="text-gradient-brand">1v1</span>
           </h1>
         </div>
-        <p className="mt-3 max-w-3xl text-lg text-zinc-400">
+        <p className="mt-3 max-w-3xl text-lg text-muted">
           Dwóch graczy, ten sam zestaw pytań, jeden zwycięzca. Graj na żywo,
           wyślij wyzwanie znajomemu albo zmierz się z botem.
         </p>
       </motion.div>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
-        <span className="text-sm text-zinc-500">Grasz jako:</span>
+        <span className="text-sm text-muted">Grasz jako:</span>
         <NameEditor />
-        <span className="text-sm text-zinc-500">
-          Ścieżka: <span className="font-semibold text-amber-400">{pathLabel}</span>
+        <span className="text-sm text-muted">
+          Ścieżka: <span className="font-semibold text-accent">{pathLabel}</span>
         </span>
       </div>
 
       {/* Wybór minigry */}
       <section className="mt-8">
-        <h2 className="text-lg font-black text-white">1. Wybierz minigrę</h2>
+        <h2 className="text-lg font-black text-foreground">1. Wybierz minigrę</h2>
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {games.map((game) => {
             const selected = game.id === slug;
@@ -142,12 +140,12 @@ export function PojedynkiHome() {
                 onClick={() => setSlug(game.id)}
                 className={`group relative flex min-h-[96px] flex-col justify-between overflow-hidden rounded-2xl border p-4 text-left transition ${
                   selected
-                    ? "border-orange-500/60 bg-orange-500/10 shadow-lg shadow-orange-500/20"
-                    : "border-white/10 bg-white/[0.04] hover:border-white/20 hover:bg-white/[0.08]"
+                    ? "border-accent/60 bg-accent/10 shadow-lg"
+                    : "border-surface-border bg-surface hover:border-accent/30 hover:bg-surface-hover"
                 }`}
               >
                 <span className="text-3xl">{game.emoji}</span>
-                <span className="mt-2 text-sm font-black text-white">
+                <span className="mt-2 text-sm font-black text-foreground">
                   {game.title}
                 </span>
               </button>
@@ -158,7 +156,7 @@ export function PojedynkiHome() {
 
       {/* Długość pojedynku */}
       <section className="mt-8">
-        <h2 className="text-lg font-black text-white">2. Liczba pytań</h2>
+        <h2 className="text-lg font-black text-foreground">2. Liczba pytań</h2>
         <div className="mt-4 flex gap-3">
           {DUEL_LENGTH_OPTIONS.map((opt) => (
             <button
@@ -167,7 +165,8 @@ export function PojedynkiHome() {
               onClick={() => setLength(opt as DuelLength)}
               className={`flex-1 rounded-2xl border py-4 text-xl font-black transition sm:flex-none sm:px-10 ${
                 length === opt
-                  ? "border-orange-500/60 bg-orange-500/10 text-amber-400"                   : "border-white/10 bg-white/[0.04] text-white hover:border-white/20"
+                  ? "border-accent/60 bg-accent/10 text-accent"
+                  : "border-surface-border bg-surface text-foreground hover:border-accent/30 hover:bg-surface-hover"
               }`}
             >
               {opt}
@@ -178,7 +177,7 @@ export function PojedynkiHome() {
 
       {/* Tryb pojedynku */}
       <section className="mt-8">
-        <h2 className="text-lg font-black text-white">3. Wybierz tryb</h2>
+        <h2 className="text-lg font-black text-foreground">3. Wybierz tryb</h2>
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <ModeCard
             icon={<Radio className="h-6 w-6" />}
@@ -188,7 +187,6 @@ export function PojedynkiHome() {
                 ? "Pokój z kodem, podgląd rywala w czasie rzeczywistym."
                 : "Wymaga Supabase — u Ciebie obecnie niedostępne."
             }
-            accent="from-emerald-600 via-amber-500 to-orange-500"
             onClick={() => setDelivery("online")}
             badge={supabaseOn ? "Realtime" : "Offline"}
             dim={!supabaseOn}
@@ -197,7 +195,6 @@ export function PojedynkiHome() {
             icon={<Share2 className="h-6 w-6" />}
             title="Na kod"
             description="Zagraj i wyślij kod. Async/ghost — działa też offline."
-            accent="bg-brand-gradient"
             onClick={() => setDelivery("challenge")}
             badge="Async"
           />
@@ -205,7 +202,6 @@ export function PojedynkiHome() {
             icon={<Users className="h-6 w-6" />}
             title="Lokalnie (hot-seat)"
             description="Dwóch graczy na jednym urządzeniu, po kolei."
-            accent="from-amber-500 via-orange-500 to-red-500"
             onClick={() => setDelivery("local")}
             badge="1 urządzenie"
           />
@@ -213,7 +209,6 @@ export function PojedynkiHome() {
             icon={<Bot className="h-6 w-6" />}
             title="Z botem"
             description="Trening z przeciwnikiem AI o wybranym poziomie."
-            accent="from-sky-600 via-blue-500 to-indigo-600"
             onClick={() => setDelivery("bot")}
             badge="Trening"
           >
@@ -228,8 +223,8 @@ export function PojedynkiHome() {
                   }}
                   className={`flex-1 rounded-lg border px-2 py-1 text-xs font-bold transition ${
                     botLevel === lvl
-                      ? "border-white/50 bg-white/15 text-white"
-                      : "border-white/15 bg-black/20 text-white/70"
+                      ? "border-accent/50 bg-accent/15 text-accent"
+                      : "border-surface-border bg-surface text-muted"
                   }`}
                 >
                   {BOT_PRESETS[lvl].label}
@@ -247,7 +242,6 @@ function ModeCard({
   icon,
   title,
   description,
-  accent,
   badge,
   dim = false,
   onClick,
@@ -256,7 +250,6 @@ function ModeCard({
   icon: React.ReactNode;
   title: string;
   description: string;
-  accent: string;
   badge?: string;
   dim?: boolean;
   onClick: () => void;
@@ -273,22 +266,18 @@ function ModeCard({
           onClick();
         }
       }}
-      className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-3xl bg-gradient-to-br ${accent} p-6 text-left shadow-lg transition hover:scale-[1.01] active:scale-[0.99] ${
+      className={`card-raised group relative flex cursor-pointer flex-col p-6 text-left transition hover:scale-[1.01] active:scale-[0.99] ${
         dim ? "opacity-70" : ""
       }`}
     >
       {badge && (
-        <span className="absolute right-4 top-4 rounded-full bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+        <span className="absolute right-4 top-4 rounded-full border border-surface-border bg-surface-hover px-3 py-1 text-xs font-bold uppercase tracking-wide text-muted">
           {badge}
         </span>
       )}
-      <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-white">
-        {icon}
-      </span>
-      <span className="mt-4 text-xl font-black text-white">{title}</span>
-      <span className="mt-1 text-sm font-medium text-white/85">
-        {description}
-      </span>
+      <span className="icon-chip h-11 w-11 rounded-2xl">{icon}</span>
+      <span className="mt-4 text-xl font-black text-foreground">{title}</span>
+      <span className="mt-1 text-sm font-medium text-muted">{description}</span>
       {children}
     </div>
   );

@@ -64,8 +64,8 @@ export function ConfiguredMinigame({
   if (!def) {
     return (
       <div className="mx-auto flex max-w-lg flex-1 flex-col items-center justify-center px-4 py-20 text-center">
-        <p className="text-xl font-black text-white">Nie ma takiej minigry</p>
-        <Link href="/minigry" className="mt-6 text-orange-400 hover:underline">
+        <p className="text-xl font-black text-foreground">Nie ma takiej minigry</p>
+        <Link href="/minigry" className="mt-6 text-accent hover:underline">
           ← Wróć do listy
         </Link>
       </div>
@@ -74,13 +74,13 @@ export function ConfiguredMinigame({
 
   if (!question) {
     return (
-      <div className="flex flex-1 items-center justify-center py-20 text-zinc-500">
+      <div className="flex flex-1 items-center justify-center py-20 text-muted">
         Ładowanie…
       </div>
     );
   }
 
-  const answerBtn = `min-h-[72px] rounded-2xl border bg-zinc-900 font-black text-white shadow-lg transition-colors hover:bg-white/5 sm:min-h-[80px] ${def.answerClass}`;
+  const answerBtn = `min-h-[72px] rounded-2xl border bg-surface font-black text-foreground transition-colors hover:bg-surface-hover sm:min-h-[80px] ${def.answerClass}`;
 
   const handleChoice = (value: number) => {
     if (question.mode !== "choice") return;
@@ -110,7 +110,7 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = q.prompt;
     questionContent = (
-      <p className="mt-4 break-words text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">
+      <p className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl">
         {q.headline}
       </p>
     );
@@ -137,7 +137,7 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
     questionContent = (
-      <p className="mt-4 break-words text-2xl font-black leading-tight text-white sm:text-3xl md:text-4xl">
+      <p className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl">
         {q.equation}
       </p>
     );
@@ -146,7 +146,7 @@ export function ConfiguredMinigame({
         <motion.button
           type="button"
           onClick={() => handleTf(false)}
-          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-red-600 text-lg font-black text-white shadow-lg shadow-red-600/50 sm:min-h-[80px] sm:text-xl"
+          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-danger text-lg font-black text-foreground sm:min-h-[80px] sm:text-xl"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -155,7 +155,7 @@ export function ConfiguredMinigame({
         <motion.button
           type="button"
           onClick={() => handleTf(true)}
-          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-emerald-600 text-lg font-black text-white shadow-lg shadow-emerald-600/50 sm:min-h-[80px] sm:text-xl"
+          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-success text-lg font-black text-background sm:min-h-[80px] sm:text-xl"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -171,11 +171,11 @@ export function ConfiguredMinigame({
     questionPrompt = "Która strona jest większa?";
     questionContent = (
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-8">
-        <span className="text-4xl font-black text-white sm:text-5xl">
+        <span className="text-4xl font-black text-foreground sm:text-5xl">
           {q.left}
         </span>
-        <span className="text-2xl font-black text-zinc-500">vs</span>
-        <span className="text-4xl font-black text-white sm:text-5xl">
+        <span className="text-2xl font-black text-muted">vs</span>
+        <span className="text-4xl font-black text-foreground sm:text-5xl">
           {q.right}
         </span>
       </div>
@@ -198,7 +198,7 @@ export function ConfiguredMinigame({
             whileTap={{ scale: 0.97 }}
           >
             <span className="block">{label}</span>
-            <span className="mt-1 block text-xs font-semibold text-zinc-500">
+            <span className="mt-1 block text-xs font-semibold text-muted">
               {sub}
             </span>
           </motion.button>

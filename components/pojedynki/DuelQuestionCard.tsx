@@ -21,16 +21,16 @@ export function DuelQuestionCard({
   disabled = false,
   onAnswer,
 }: DuelQuestionCardProps) {
-  const answerBtn = `min-h-[68px] rounded-2xl border bg-zinc-900 font-black text-white shadow-lg transition-colors hover:bg-white/5 disabled:opacity-60 sm:min-h-[76px] ${answerClass}`;
+  const answerBtn = `min-h-[68px] rounded-2xl border bg-surface font-black text-foreground shadow-lg transition-colors hover:bg-white/5 disabled:opacity-60 sm:min-h-[76px] ${answerClass}`;
 
   if (question.kind === "choice") {
     const q = question.q;
     return (
       <>
-        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+        <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           {q.prompt}
         </p>
-        <p className="mt-4 break-words text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">
+        <p className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl">
           {q.headline}
         </p>
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
@@ -56,10 +56,10 @@ export function DuelQuestionCard({
     const q = question.q;
     return (
       <>
-        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+        <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           Czy to prawda?
         </p>
-        <p className="mt-4 break-words text-2xl font-black leading-tight text-white sm:text-3xl md:text-4xl">
+        <p className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl">
           {q.equation}
         </p>
         <div className="mt-8 grid grid-cols-2 gap-4">
@@ -67,7 +67,7 @@ export function DuelQuestionCard({
             type="button"
             disabled={disabled}
             onClick={() => onAnswer(false)}
-            className="flex min-h-[68px] items-center justify-center gap-2 rounded-2xl bg-red-600 text-lg font-black text-white shadow-lg shadow-red-600/50 disabled:opacity-60 sm:min-h-[76px] sm:text-xl"
+            className="flex min-h-[68px] items-center justify-center gap-2 rounded-2xl bg-red-600 text-lg font-black text-foreground shadow-lg shadow-red-600/50 disabled:opacity-60 sm:min-h-[76px] sm:text-xl"
             whileHover={disabled ? undefined : { scale: 1.05 }}
             whileTap={disabled ? undefined : { scale: 0.95 }}
           >
@@ -77,7 +77,7 @@ export function DuelQuestionCard({
             type="button"
             disabled={disabled}
             onClick={() => onAnswer(true)}
-            className="flex min-h-[68px] items-center justify-center gap-2 rounded-2xl bg-emerald-600 text-lg font-black text-white shadow-lg shadow-emerald-600/50 disabled:opacity-60 sm:min-h-[76px] sm:text-xl"
+            className="flex min-h-[68px] items-center justify-center gap-2 rounded-2xl bg-success text-lg font-black text-on-accent shadow-lg shadow-success/40 disabled:opacity-60 sm:min-h-[76px] sm:text-xl"
             whileHover={disabled ? undefined : { scale: 1.05 }}
             whileTap={disabled ? undefined : { scale: 0.95 }}
           >
@@ -96,15 +96,15 @@ export function DuelQuestionCard({
   ];
   return (
     <>
-      <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+      <p className="text-sm font-semibold uppercase tracking-wide text-muted">
         Która strona jest większa?
       </p>
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-8">
-        <span className="text-4xl font-black text-white sm:text-5xl">
+        <span className="text-4xl font-black text-foreground sm:text-5xl">
           {q.left}
         </span>
-        <span className="text-2xl font-black text-zinc-500">vs</span>
-        <span className="text-4xl font-black text-white sm:text-5xl">
+        <span className="text-2xl font-black text-muted">vs</span>
+        <span className="text-4xl font-black text-foreground sm:text-5xl">
           {q.right}
         </span>
       </div>
@@ -120,7 +120,7 @@ export function DuelQuestionCard({
             whileTap={disabled ? undefined : { scale: 0.97 }}
           >
             <span className="block">{label}</span>
-            <span className="mt-1 block text-xs font-semibold text-zinc-500">
+            <span className="mt-1 block text-xs font-semibold text-muted">
               {sub}
             </span>
           </motion.button>

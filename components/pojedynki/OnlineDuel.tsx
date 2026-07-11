@@ -86,17 +86,17 @@ export function OnlineDuel({
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
         <p className="text-6xl">📡</p>
-        <h1 className="mt-3 text-3xl font-black text-white">
+        <h1 className="mt-3 text-3xl font-black text-foreground">
           Tryb online niedostępny
         </h1>
-        <p className="mt-3 max-w-md text-zinc-400">
+        <p className="mt-3 max-w-md text-muted">
           Pojedynki w czasie rzeczywistym wymagają skonfigurowanego Supabase.
           Bez problemu zagrasz w trybie „Na kod”, lokalnym lub z botem.
         </p>
         <button
           type="button"
           onClick={onExit}
-          className="mt-8 rounded-2xl bg-brand-gradient px-8 py-4 text-lg font-black text-white"
+          className="mt-8 rounded-2xl btn-primary px-8 py-4 text-lg font-black text-foreground"
         >
           ← Wybierz inny tryb
         </button>
@@ -107,26 +107,26 @@ export function OnlineDuel({
   if (view === "choose") {
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-accent">
           {title} · Online
         </p>
-        <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-black text-foreground sm:text-4xl">
           Pojedynek na żywo
         </h1>
-        <p className="mt-3 max-w-md text-zinc-400">
+        <p className="mt-3 max-w-md text-muted">
           Stwórz pokój i podaj kod znajomemu, albo dołącz do istniejącego pokoju.
         </p>
 
         <button
           type="button"
           onClick={handleHost}
-          className="mt-8 w-full rounded-2xl bg-gradient-to-r from-emerald-600 via-amber-500 to-orange-500 px-6 py-5 text-lg font-black text-white shadow-lg shadow-orange-500/30"
+          className="mt-8 w-full rounded-2xl btn-primary px-6 py-5 text-lg font-black text-foreground shadow-lg shadow-accent/30"
         >
           🎮 Stwórz pokój
         </button>
 
-        <div className="mt-6 w-full rounded-2xl border border-white/10 bg-zinc-900/70 p-4">
-          <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">
+        <div className="mt-6 w-full rounded-2xl border border-surface-border bg-surface/70 p-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted">
             Dołącz po kodzie
           </p>
           <div className="mt-2 flex gap-2">
@@ -135,12 +135,12 @@ export function OnlineDuel({
               onChange={(e) => setJoinInput(e.target.value.toUpperCase())}
               placeholder="np. K7M2P"
               maxLength={8}
-              className="min-w-0 flex-1 rounded-xl border border-white/10 bg-zinc-950 px-3 py-3 text-center text-xl font-black tracking-[0.3em] text-white placeholder:tracking-normal placeholder:text-zinc-600 focus:border-orange-500/50 focus:outline-none"
+              className="min-w-0 flex-1 rounded-xl border border-surface-border bg-surface px-3 py-3 text-center text-xl font-black tracking-[0.3em] text-foreground placeholder:tracking-normal placeholder:text-muted focus:border-accent/50 focus:outline-none"
             />
             <button
               type="button"
               onClick={handleJoin}
-              className="shrink-0 rounded-xl bg-brand-gradient px-5 py-3 text-base font-black text-white"
+              className="shrink-0 rounded-xl btn-primary px-5 py-3 text-base font-black text-foreground"
             >
               Dołącz
             </button>
@@ -150,7 +150,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
+          className="mt-6 text-sm font-semibold text-muted hover:text-accent"
         >
           ← Zmień tryb
         </button>
@@ -163,20 +163,20 @@ export function OnlineDuel({
     const canStart = isHost && rt.opponentPresent && rt.status === "ready";
     return (
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-orange-400">
+        <p className="text-sm font-bold uppercase tracking-widest text-accent">
           {title}
         </p>
-        <h1 className="mt-2 text-3xl font-black text-white">Poczekalnia</h1>
+        <h1 className="mt-2 text-3xl font-black text-foreground">Poczekalnia</h1>
 
         {isHost && rt.code && (
-          <div className="mt-6 w-full rounded-2xl border border-orange-500/30 bg-orange-500/10 p-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-amber-400">
+          <div className="mt-6 w-full rounded-2xl border border-accent/30 bg-accent/10 p-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">
               Kod pokoju
             </p>
-            <p className="mt-1 text-5xl font-black tracking-[0.3em] text-white">
+            <p className="mt-1 text-5xl font-black tracking-[0.3em] text-foreground">
               {rt.code}
             </p>
-            <p className="mt-2 text-sm text-zinc-400">
+            <p className="mt-2 text-sm text-muted">
               Podaj ten kod rywalowi.
             </p>
           </div>
@@ -185,10 +185,10 @@ export function OnlineDuel({
         <div className="mt-6 flex items-center gap-3 text-sm">
           <span
             className={`h-3 w-3 rounded-full ${
-              rt.opponentPresent ? "bg-emerald-400" : "animate-pulse bg-amber-400"
+              rt.opponentPresent ? "bg-success" : "animate-pulse bg-amber-400"
             }`}
           />
-          <span className="font-semibold text-zinc-300">
+          <span className="font-semibold text-foreground">
             {rt.opponentPresent
               ? `${rt.opponentName ?? "Rywal"} w pokoju`
               : "Czekam na rywala…"}
@@ -202,7 +202,7 @@ export function OnlineDuel({
             type="button"
             onClick={rt.startMatch}
             disabled={!canStart}
-            className="mt-8 w-full rounded-2xl bg-brand-gradient py-5 text-xl font-black text-white shadow-xl shadow-orange-500/40 disabled:opacity-50"
+            className="mt-8 w-full rounded-2xl btn-primary py-5 text-xl font-black text-foreground shadow-xl shadow-accent/40 disabled:opacity-50"
           >
             {canStart ? "Start pojedynku!" : "Czekam na rywala…"}
           </button>
@@ -210,7 +210,7 @@ export function OnlineDuel({
           <motion.p
             animate={{ opacity: [0.4, 1, 0.4] }}
             transition={{ repeat: Infinity, duration: 1.6 }}
-            className="mt-8 text-lg font-bold text-zinc-300"
+            className="mt-8 text-lg font-bold text-foreground"
           >
             {rt.config
               ? "Czekam, aż gospodarz wystartuje…"
@@ -221,7 +221,7 @@ export function OnlineDuel({
         <button
           type="button"
           onClick={leaveAll}
-          className="mt-6 text-sm font-semibold text-zinc-500 hover:text-orange-400"
+          className="mt-6 text-sm font-semibold text-muted hover:text-accent"
         >
           ← Opuść pokój
         </button>

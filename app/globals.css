@@ -268,6 +268,22 @@ body {
     }
   }
 
+  .text-gradient-brand {
+    color: var(--accent);
+  }
+
+  .game-surface {
+    border-radius: 1rem;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+  }
+
+  .game-hud {
+    border-radius: 1rem;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+  }
+
   .btn-ghost {
     border-radius: 0.375rem;
     border: 1px solid var(--surface-border);

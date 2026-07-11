@@ -1,42 +1,28 @@
 "use client";
 
-import { calculateLevel, calculateXpProgress } from "@/lib/levelSystem";
-
 type AccountLevelBarProps = {
   level: number;
   xp: number;
   subtitle?: string;
 };
 
-export function AccountLevelBar({
-  xp,
-  subtitle = "Konto",
-}: AccountLevelBarProps) {
-  const level = calculateLevel(xp);
-  const { currentLevelXp, xpForNextLevel } = calculateXpProgress(xp);
-  const percent =
-    xpForNextLevel > 0
-      ? Math.min(100, (currentLevelXp / xpForNextLevel) * 100)
-      : 100;
+export function AccountLevelBar({ level, xp, subtitle }: AccountLevelBarProps) {
+  const xpInLevel = xp % 100;
+  const pct = Math.min(100, Math.max(0, xpInLevel));
 
   return (
-    <div className="rounded-2xl border border-orange-500/30 bg-zinc-900/80 p-4 shadow-lg shadow-amber-500/10 backdrop-blur-sm">
+    <div className="game-surface p-4">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <span className="rounded-lg bg-gradient-to-br bg-brand-gradient px-2.5 py-1 text-sm font-black text-white shadow-md shadow-orange-500/30">
-            Poz. {level}
+          <span className="rounded-lg bg-accent px-2.5 py-1 text-sm font-black text-on-accent">
+            Lv.{level}
           </span>
-          <span className="text-sm font-semibold text-zinc-400">{subtitle}</span>
+          <span className="text-sm font-semibold text-muted">{subtitle}</span>
         </div>
-        <span className="text-sm font-bold tabular-nums text-emerald-400">
-          {currentLevelXp} / {xpForNextLevel} XP
-        </span>
+        <span className="text-sm font-bold tabular-nums text-accent">{xp} XP</span>
       </div>
-      <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-zinc-800">
-        <div
-          className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-500"
-          style={{ width: `${percent}%` }}
-        />
+      <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-surface-hover">
+        <div className="progress-accent" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );

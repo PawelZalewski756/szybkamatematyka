@@ -7,6 +7,10 @@ import {
   type MinigameEntry,
 } from "@/lib/minigry/minigames-catalog";
 import { MINIGAME_MODES } from "@/lib/minigry/game-modes";
+import {
+  MINIGAME_MODE_GLOW,
+  MINIGAME_MODE_HEADER_CLASS,
+} from "@/lib/minigry/minigame-themes";
 import { learningPathLabel } from "@/lib/learning-path";
 import { useGameAccount } from "@/lib/minigry/use-game-account";
 import { motion } from "framer-motion";
@@ -20,23 +24,23 @@ function ModeHubCard({
   return (
     <Link
       href={`/minigry/modes/${mode.slug}`}
-      className={`group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br ${mode.gradient} p-6 shadow-lg backdrop-blur-md transition duration-300 hover:scale-[1.02] hover:border-white/20 active:scale-[0.98] sm:min-h-[260px] sm:p-8`}
+      className="card-raised group relative flex min-h-[220px] flex-col justify-between p-6 sm:min-h-[260px] sm:p-8"
     >
       <span
-        className={`pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full blur-3xl opacity-60 ${mode.glow}`}
+        className={`pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full blur-3xl opacity-60 ${MINIGAME_MODE_GLOW}`}
         aria-hidden
       />
-      <span className="absolute right-4 top-4 z-10 rounded-full bg-black/40 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white backdrop-blur-sm">
+      <span className="absolute right-4 top-4 z-10 rounded-full border border-surface-border bg-surface-hover px-3 py-1 text-xs font-bold uppercase tracking-wide text-muted">
         {mode.badge}
       </span>
-      <span className="text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110">
+      <span className="text-5xl transition-transform duration-300 group-hover:scale-110">
         {mode.emoji}
       </span>
       <div>
-        <h2 className="text-2xl font-black text-white sm:text-3xl">
+        <h2 className="text-2xl font-black text-foreground sm:text-3xl">
           {mode.title}
         </h2>
-        <p className="mt-2 text-sm font-medium text-white/85 sm:text-base">
+        <p className="mt-2 text-sm font-medium text-muted sm:text-base">
           {mode.description}
         </p>
       </div>
@@ -54,10 +58,10 @@ function MinigameCard({
   return (
     <Link
       href={game.href}
-      className={`group relative flex min-h-[160px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-xl transition hover:border-white/20 hover:bg-white/10 sm:min-h-[180px]`}
+      className="card-raised group flex min-h-[160px] flex-col justify-between p-5 sm:min-h-[180px]"
     >
       {badge && (
-        <span className="absolute right-3 top-3 rounded-full bg-black/40 px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+        <span className="absolute right-3 top-3 rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-xs font-bold text-accent">
           {badge}
         </span>
       )}
@@ -65,8 +69,8 @@ function MinigameCard({
         {game.emoji}
       </span>
       <div>
-        <h3 className="text-lg font-black text-white">{game.title}</h3>
-        <p className="mt-1 text-sm text-zinc-400">{game.description}</p>
+        <h3 className="text-lg font-black text-foreground">{game.title}</h3>
+        <p className="mt-1 text-sm text-muted">{game.description}</p>
       </div>
     </Link>
   );
@@ -81,20 +85,18 @@ export default function MinigryPage() {
   return (
     <div className="page-container flex w-full flex-1 flex-col py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
+        <h1 className="text-3xl font-black text-foreground sm:text-4xl md:text-5xl">
           Minigry dla{" "}
-          <span className="text-gradient-brand">
-            {pathLabel}
-          </span>
+          <span className="text-gradient-brand">{pathLabel}</span>
         </h1>
-        <p className="mt-3 max-w-3xl text-lg text-zinc-400">
+        <p className="mt-3 max-w-3xl text-lg text-muted">
           Wybierz tryb gry — Time Attack, Survival lub Marathon — a potem
           minigrę dopasowaną do Twojej ścieżki.
         </p>
       </motion.div>
 
       {loading ? (
-        <div className="mt-8 h-24 animate-pulse rounded-2xl bg-zinc-900" />
+        <div className="mt-8 h-24 animate-pulse rounded-2xl bg-surface" />
       ) : (
         <div className="mt-8 max-w-xl">
           <AccountLevelBar
@@ -107,8 +109,8 @@ export default function MinigryPage() {
             }
           />
           {!account?.isLoggedIn && (
-            <p className="mt-2 text-sm text-zinc-500">
-              <Link href="/login" className="font-semibold text-orange-400">
+            <p className="mt-2 text-sm text-muted">
+              <Link href="/login" className="font-semibold text-accent">
                 Zaloguj się
               </Link>{" "}
               — progres w chmurze na każdym urządzeniu.
@@ -118,7 +120,7 @@ export default function MinigryPage() {
       )}
 
       <section className="mt-10">
-        <h2 className="text-lg font-black text-white sm:text-xl">Tryby gry</h2>
+        <h2 className="text-lg font-black text-foreground sm:text-xl">Tryby gry</h2>
         <div className="mt-4 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6">
           {MINIGAME_MODES.map((mode, index) => (
             <motion.div
@@ -134,7 +136,7 @@ export default function MinigryPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-lg font-black text-white sm:text-xl">
+        <h2 className="text-lg font-black text-foreground sm:text-xl">
           Polecane dla {pathLabel}
         </h2>
         {recommended.length > 0 ? (
@@ -144,7 +146,7 @@ export default function MinigryPage() {
             ))}
           </div>
         ) : (
-          <p className="mt-4 text-zinc-500">
+          <p className="mt-4 text-muted">
             Brak minigier — wybierz inną ścieżkę w pasku u góry.
           </p>
         )}
@@ -152,7 +154,7 @@ export default function MinigryPage() {
 
       {other.length > 0 && (
         <section className="mt-12">
-          <h2 className="text-lg font-black text-zinc-400 sm:text-xl">
+          <h2 className="text-lg font-black text-muted sm:text-xl">
             Inne minigry
           </h2>
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

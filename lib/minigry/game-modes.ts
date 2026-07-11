@@ -9,8 +9,6 @@ export type MinigameModeConfig = {
   title: string;
   description: string;
   emoji: string;
-  gradient: string;
-  glow: string;
   badge: string;
 };
 
@@ -21,8 +19,6 @@ export const MINIGAME_MODES: MinigameModeConfig[] = [
     title: "Time Attack",
     description: "60 sekund na maksymalny wynik — każda dobra odpowiedź buduje combo.",
     emoji: "⏱️",
-    gradient: "bg-brand-gradient",
-    glow: "bg-orange-400",
     badge: "Klasyczny",
   },
   {
@@ -31,8 +27,6 @@ export const MINIGAME_MODES: MinigameModeConfig[] = [
     title: "Survival",
     description: "Bez limitu czasu — gra kończy się przy pierwszym błędzie.",
     emoji: "💀",
-    gradient: "from-red-600 via-orange-500 to-amber-500",
-    glow: "bg-orange-400",
     badge: "Hardcore",
   },
   {
@@ -41,8 +35,6 @@ export const MINIGAME_MODES: MinigameModeConfig[] = [
     title: "Marathon",
     description: "Dokładnie 15 pytań — wygrywa ten, kto zrobi to najszybciej.",
     emoji: "🏃",
-    gradient: "from-amber-600 via-orange-500 to-orange-600",
-    glow: "bg-amber-400",
     badge: "15 pytań",
   },
 ];
