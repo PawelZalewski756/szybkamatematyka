@@ -80,7 +80,11 @@ export function isRateLimitError(message: string): boolean {
 }
 
 export function isDailyQuotaError(message: string): boolean {
-  return /PerDay|per day|FreeTier|GenerateRequestsPerDay/i.test(message);
+  return (
+    /PerDay|per day|FreeTier|GenerateRequestsPerDay|ResourceExhausted|429|quota/i.test(
+      message,
+    ) || /retry in \d+/i.test(message)
+  );
 }
 
 /** Czytelny komunikat zamiast surowego logu GoogleGenerativeAI. */

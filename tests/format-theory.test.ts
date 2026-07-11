@@ -7,7 +7,7 @@ import {
 } from "@/lib/gemini/format-theory";
 
 describe("normalizeTheoryLesson", () => {
-  it("parses TYTUŁ line and keeps sections", () => {
+  it("parses TYTUŁ line and validates legacy sections", () => {
     const raw = `TYTUŁ: Równania liniowe
 
 ## Na egzaminie
@@ -28,6 +28,34 @@ Częsty temat.
     const lesson = normalizeTheoryLesson(raw);
     expect(lesson.title).toBe("Równania liniowe");
     expect(validateTheorySections(lesson.content)).toEqual([]);
+  });
+
+  it("validates Phase 3a sections", () => {
+    const content = `## Na egzaminie
+Tekst.
+
+## Mapa tematu
+1. Punkt
+
+## Definicje i wzory
+- wzór
+
+## Przykład 1 — podstawowy
+**Krok 1.** Liczymy.
+
+## Pułapki
+- błąd
+
+## Ćwiczenia do samodzielnego rozwiązania
+1. Zadanie
+
+## Odpowiedzi
+1. Wynik
+
+## Szybka powtórka
+1. Pytanie?`;
+
+    expect(validateTheorySections(content)).toEqual([]);
   });
 
   it("converts \\( \\) delimiters to dollars", () => {

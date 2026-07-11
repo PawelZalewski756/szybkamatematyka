@@ -22,6 +22,11 @@ import { generateTheoryLessonWithRetry } from "../lib/gemini/generate-theory";
 import { listCkeTopicsForExam } from "../lib/trening/cke-curriculum";
 import { CKE_EGZAMIN_8 } from "../lib/trening/cke-egzamin-8";
 import { CKE_MATURA_PODSTAWOWA } from "../lib/trening/cke-matura-podstawowa";
+import {
+  isCompleteTheoryCache,
+  readTheoryCache,
+  theoryCachePath,
+} from "../lib/trening/seed/theory-cache-utils";
 import type { ExamType } from "../types/database";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
@@ -148,20 +153,11 @@ function pushDbNeedsWarning(serviceKey: string | undefined): boolean {
 }
 
 function cachePath(slot: TheorySlot): string {
-  return path.join(
-    CACHE_DIR,
-    `${slot.exam_type}__${slot.category}__${slot.topic}.json`,
-  );
+  return theoryCachePath(slot);
 }
 
 function readCache(slot: TheorySlot): CachedTheory | null {
-  const file = cachePath(slot);
-  if (!fs.existsSync(file)) return null;
-  try {
-    return JSON.parse(fs.readFileSync(file, "utf8")) as CachedTheory;
-  } catch {
-    return null;
-  }
+  return readTheoryCache(slot) as CachedTheory | null;
 }
 
 function writeCache(entry: CachedTheory, slot: TheorySlot): void {
@@ -229,7 +225,11 @@ async function pushToDb(
 
 async function main() {
   const opts = parseArgs();
-  const slots = listSlots(opts);
+  const slots = listSlots(opts).sort((a, b) => {
+    const aDone = isCompleteTheoryCache(readCache(a)) ? 1 : 0;
+    const bDone = isCompleteTheoryCache(readCache(b)) ? 1 : 0;
+    return aDone - bDone;
+  });
 
   if (slots.length === 0) {
     throw new Error("Brak tematów do przetworzenia (sprawdź --exam / --only).");
@@ -256,8 +256,8 @@ async function main() {
     const key = slotKey(slot);
     const cached = readCache(slot);
 
-    if (cached && !opts.regenerate) {
-      console.log(`  ○ pominięto (cache): ${key}`);
+    if (cached && !opts.regenerate && isCompleteTheoryCache(cached)) {
+      console.log(`  ○ pominięto (cache OK): ${key}`);
       skipped += 1;
       if (opts.pushDb && supabase && !opts.dryRun) {
         const ok = await pushToDb(
@@ -326,7 +326,7 @@ async function main() {
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       if (isDailyQuotaError(message)) {
-        console.error("\n⛔ Dzienny limit Gemini — przerwij i wznów jutro.");
+        console.error("\n⛔ Limit Gemini — wznawianie przez seed:theory-overnight");
         throw new DailyQuotaReached();
       }
       console.error(`    ✗ ${message}`);

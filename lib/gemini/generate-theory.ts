@@ -1,6 +1,9 @@
 import {
+  isPhase3aTheoryLesson,
   isTheoryLessonValid,
   normalizeTheoryLesson,
+  THEORY_MIN_PHASE3A_CHARS,
+  validateTheorySections,
   type ParsedTheoryLesson,
 } from "@/lib/gemini/format-theory";
 import {
@@ -54,8 +57,14 @@ export async function generateTheoryLesson(
     throw new Error("Lekcja nie ma treści po normalizacji.");
   }
   if (!isTheoryLessonValid(lesson.content)) {
+    const missing = validateTheorySections(lesson.content);
     throw new Error(
-      `Lekcja nie ma wymaganych sekcji: ${lesson.content.slice(0, 120)}…`,
+      `Lekcja nie ma wymaganych sekcji (${missing.join(", ")}): ${lesson.content.slice(0, 120)}…`,
+    );
+  }
+  if (!isPhase3aTheoryLesson(lesson.content)) {
+    throw new Error(
+      `Lekcja Phase 3a za krótka (< ${THEORY_MIN_PHASE3A_CHARS} znaków) lub brak pełnej struktury: ${lesson.content.length} znaków`,
     );
   }
   if (!lesson.title || lesson.title === "Lekcja") {
@@ -77,11 +86,20 @@ export async function generateTheoryLessonWithRetry(
       const message = err instanceof Error ? err.message : String(err);
       lastError = err instanceof Error ? err : new Error(message);
 
-      if (isRetryableGeminiError(message) && attempt < maxAttempts) {
+      const validationRetry =
+        /wymaganych sekcji|Phase 3a za krótka/i.test(message) &&
+        attempt < maxAttempts;
+
+      if (
+        (isRetryableGeminiError(message) || validationRetry) &&
+        attempt < maxAttempts
+      ) {
         const retryMatch = message.match(/retry in (\d+(?:\.\d+)?)\s*s/i);
         const waitMs = retryMatch
           ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 3000
-          : 15 * attempt * 1000;
+          : validationRetry
+            ? 2000
+            : 15 * attempt * 1000;
         console.warn(
           `  ⏳ Gemini — czekam ${Math.round(waitMs / 1000)} s (próba ${attempt}/${maxAttempts})…`,
         );

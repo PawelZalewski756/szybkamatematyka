@@ -10,9 +10,10 @@ export type SeedTopicSlot = {
   weight: number;
 };
 
-/** Wszystkie tematy z drzewa CKE matury podstawowej. */
-function maturaSlots(): SeedTopicSlot[] {
+/** Tematy z drzewa CKE (matura + egzamin 8-kl.). */
+export function buildSeedTopicSlots(): SeedTopicSlot[] {
   const slots: SeedTopicSlot[] = [];
+
   for (const cat of CKE_MATURA_PODSTAWOWA.categories) {
     for (const topic of cat.topics) {
       slots.push({
@@ -23,12 +24,7 @@ function maturaSlots(): SeedTopicSlot[] {
       });
     }
   }
-  return slots;
-}
 
-/** Tematy egzaminu 8-klasisty (rozszerzone o działy CKE poza minimalnym drzewem UI). */
-function osmoklasistaSlots(): SeedTopicSlot[] {
-  const slots: SeedTopicSlot[] = [];
   for (const cat of CKE_EGZAMIN_8.categories) {
     for (const topic of cat.topics) {
       slots.push({
@@ -39,32 +35,11 @@ function osmoklasistaSlots(): SeedTopicSlot[] {
       });
     }
   }
-  const extra: Omit<SeedTopicSlot, "exam_type">[] = [
-    { category: "liczby", topic: "potegi", weight: 2 },
-    { category: "liczby", topic: "procenty", weight: 2 },
-    { category: "algebra", topic: "wyrazenia_algebraiczne", weight: 2 },
-    { category: "algebra", topic: "rownania", weight: 2 },
-    { category: "geometria", topic: "obwody", weight: 2 },
-    { category: "geometria", topic: "katy", weight: 2 },
-    { category: "funkcje", topic: "wykresy", weight: 2 },
-    { category: "statystyka", topic: "srednia", weight: 2 },
-    { category: "statystyka", topic: "diagramy", weight: 2 },
-    { category: "kombinatoryka", topic: "prawdopodobienstwo", weight: 2 },
-  ];
-  const seen = new Set(slots.map((s) => `${s.category}:${s.topic}`));
-  for (const e of extra) {
-    const key = `${e.category}:${e.topic}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    slots.push({ exam_type: "8_klasa", ...e });
-  }
+
   return slots;
 }
 
-export const SEED_TOPIC_SLOTS: SeedTopicSlot[] = [
-  ...maturaSlots(),
-  ...osmoklasistaSlots(),
-];
+export const SEED_TOPIC_SLOTS: SeedTopicSlot[] = buildSeedTopicSlots();
 
 export function allocateCounts(
   slots: SeedTopicSlot[],

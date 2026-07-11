@@ -5,13 +5,34 @@
 const GREETING_RE =
   /^\s*(siema(nko)?|siemka|hej(ka)?|cze(ść|sc)|witaj(cie)?|jasne|oczywi(ś|s)cie|spoko|no\s+dobra|dobra)[\s!,.…-]+/i;
 
-const REQUIRED_SECTIONS = [
-  "## Na egzaminie",
-  "## Najważniejsze",
-  "## Przykład krok po kroku",
-  "## Pułapki",
-  "## Szybka powtórka",
-] as const;
+/** Pełny kurs Phase 3a (Gemini). */
+const PHASE3A_SECTION_CHECKS: readonly { label: string; pattern: RegExp }[] = [
+  { label: "Na egzaminie", pattern: /##\s*Na egzaminie/i },
+  { label: "Mapa tematu", pattern: /##\s*Mapa tematu/i },
+  { label: "Definicje i wzory", pattern: /##\s*Definicje/i },
+  { label: "Przykład 1", pattern: /##\s*Przykład\s*1/i },
+  { label: "Pułapki", pattern: /##\s*Pułapki/i },
+  {
+    label: "Ćwiczenia",
+    pattern: /##\s*Ćwiczenia/i,
+  },
+  { label: "Odpowiedzi", pattern: /##\s*Odpowiedzi/i },
+  { label: "Szybka powtórka", pattern: /##\s*Szybka powtórka/i },
+];
+
+/** Starszy format 5-sekcji (cache sprzed Phase 3a). */
+const LEGACY_SECTION_CHECKS: readonly { label: string; pattern: RegExp }[] = [
+  { label: "Na egzaminie", pattern: /^##\s*Na egzaminie\s*$/im },
+  { label: "Najważniejsze", pattern: /^##\s*Najważniejsze\s*$/im },
+  {
+    label: "Przykład krok po kroku",
+    pattern: /^##\s*Przykład krok po kroku\s*$/im,
+  },
+  { label: "Pułapki", pattern: /^##\s*Pułapki\s*$/im },
+  { label: "Szybka powtórka", pattern: /^##\s*Szybka powtórka\s*$/im },
+];
+
+export const THEORY_MIN_PHASE3A_CHARS = 2500;
 
 function stripCodeFenceWrapper(text: string): string {
   const fence = text.match(/^```[a-zA-Z]*\s*\n([\s\S]*?)\n?```$/);
@@ -41,12 +62,30 @@ function demoteH1ToH2(text: string): string {
 function normalizeSectionHeadings(text: string): string {
   const replacements: [RegExp, string][] = [
     [/^##\s*na\s+egzaminie\s*$/gim, "## Na egzaminie"],
+    [/^##\s*mapa\s+tematu\s*$/gim, "## Mapa tematu"],
+    [
+      /^##\s*definicje(\s+i\s+wzory)?\s*$/gim,
+      "## Definicje i wzory",
+    ],
     [/^##\s*najwa[żz]niejsze\s*$/gim, "## Najważniejsze"],
+    [
+      /^##\s*przyk[łl]ad\s*1(\s*[—-]\s*.+)?\s*$/gim,
+      "## Przykład 1 — podstawowy",
+    ],
+    [
+      /^##\s*przyk[łl]ad\s*2(\s*[—-]\s*.+)?\s*$/gim,
+      "## Przykład 2 — maturalny",
+    ],
     [
       /^##\s*przyk[łl]ad(\s+krok\s+po\s+kroku)?\s*$/gim,
       "## Przykład krok po kroku",
     ],
     [/^##\s*pu[łl]apki\s*$/gim, "## Pułapki"],
+    [
+      /^##\s*ćwiczenia(\s+do\s+samodzielnego\s+rozwiązania)?\s*$/gim,
+      "## Ćwiczenia do samodzielnego rozwiązania",
+    ],
+    [/^##\s*odpowiedzi\s*$/gim, "## Odpowiedzi"],
     [/^##\s*szybka\s+powt[óo]rka\s*$/gim, "## Szybka powtórka"],
     [/^##\s*diagram\s*$/gim, "## Diagram"],
   ];
@@ -83,6 +122,8 @@ export type ParsedTheoryLesson = {
   title: string;
   content: string;
 };
+
+export type TheoryFormatTier = "phase3a" | "legacy" | "invalid";
 
 export function parseTheoryTitleAndBody(raw: string): ParsedTheoryLesson {
   const lines = raw.split("\n");
@@ -133,16 +174,52 @@ export function normalizeTheoryLesson(raw: string): ParsedTheoryLesson {
   };
 }
 
-export function validateTheorySections(content: string): string[] {
+function sectionPresent(content: string, pattern: RegExp): boolean {
+  return pattern.test(content);
+}
+
+function missingSections(
+  content: string,
+  checks: readonly { label: string; pattern: RegExp }[],
+): string[] {
   const missing: string[] = [];
-  for (const section of REQUIRED_SECTIONS) {
-    if (!content.includes(section)) {
-      missing.push(section.replace("## ", ""));
+  for (const check of checks) {
+    if (!sectionPresent(content, check.pattern)) {
+      missing.push(check.label);
     }
   }
   return missing;
 }
 
+export function detectTheoryFormatTier(content: string): TheoryFormatTier {
+  if (missingSections(content, PHASE3A_SECTION_CHECKS).length === 0) {
+    return "phase3a";
+  }
+  if (missingSections(content, LEGACY_SECTION_CHECKS).length === 0) {
+    return "legacy";
+  }
+  return "invalid";
+}
+
+export function validateTheorySections(content: string): string[] {
+  const tier = detectTheoryFormatTier(content);
+  if (tier === "phase3a") {
+    return missingSections(content, PHASE3A_SECTION_CHECKS);
+  }
+  if (tier === "legacy") {
+    return missingSections(content, LEGACY_SECTION_CHECKS);
+  }
+  const phase3Missing = missingSections(content, PHASE3A_SECTION_CHECKS);
+  return phase3Missing.length > 0 ? phase3Missing : ["format"];
+}
+
 export function isTheoryLessonValid(content: string): boolean {
-  return validateTheorySections(content).length === 0;
+  return detectTheoryFormatTier(content) !== "invalid";
+}
+
+export function isPhase3aTheoryLesson(content: string): boolean {
+  return (
+    detectTheoryFormatTier(content) === "phase3a" &&
+    content.length >= THEORY_MIN_PHASE3A_CHARS
+  );
 }

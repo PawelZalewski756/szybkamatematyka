@@ -26,6 +26,9 @@
     "seed:auto": "tsx scripts/autoSeedWithGemini.ts",
     "seed:trening-tasks": "tsx scripts/seedTreningTasksBulk.ts",
     "seed:theory-gemini": "tsx scripts/seedTheoryGemini.ts",
+    "seed:theory-gemini:resume": "tsx scripts/seedTheoryGemini.ts --cache-only --no-db --delay=8000",
+    "seed:theory-ensure-materials": "tsx scripts/ensureMaterialsFromCke.ts",
+    "seed:theory-overnight": "tsx scripts/overnightTheoryGemini.ts",
     "seed:theory-cache": "tsx scripts/pushTheoryCache.ts",
     "seed:theory-sync": "tsx scripts/syncTheoryCacheToSeed.ts",
     "seed:theory-sql": "tsx scripts/exportTheorySql.ts"

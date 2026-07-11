@@ -20,7 +20,7 @@ export type CkeMaturaPodstawowaTree = {
   categories: CkeCategoryDef[];
 };
 
-/** Oficjalne drzewo CKE — matura podstawowa (statyczna struktura UI). */
+/** Drzewo CKE — matura podstawowa (wymagania egzaminacyjne + typowe działy arkuszy). */
 export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
   examType: "matura_podstawowa",
   label: "Matura podstawowa",
@@ -28,11 +28,14 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
   categories: [
     {
       slug: "liczby_rzeczywiste",
-      name: "Liczby rzeczywiste i zbiory",
+      name: "Liczby rzeczywiste",
       topics: [
         { slug: "potegi", name: "Potęgi i pierwiastki" },
         { slug: "logarytmy", name: "Logarytmy" },
         { slug: "procenty", name: "Procenty i proporcje" },
+        { slug: "notacja_wykladnicza", name: "Notacja wykładnicza" },
+        { slug: "wartosc_bezwzgledna", name: "Wartość bezwzględna" },
+        { slug: "kolejnosc_dzialan", name: "Kolejność wykonywania działań" },
       ],
     },
     {
@@ -40,7 +43,10 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       name: "Algebra i równania",
       topics: [
         { slug: "wyrazenia_algebraiczne", name: "Wyrażenia algebraiczne" },
+        { slug: "wzory_skroconego_mnozenia", name: "Wzory skróconego mnożenia" },
         { slug: "rownania_liniowe", name: "Równania liniowe" },
+        { slug: "rownania_kwadratowe", name: "Równania kwadratowe" },
+        { slug: "nierownosci", name: "Nierówności" },
         { slug: "uklady_rownan", name: "Układy równań" },
       ],
     },
@@ -50,6 +56,27 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       topics: [
         { slug: "funkcja_liniowa", name: "Funkcja liniowa" },
         { slug: "funkcja_kwadratowa", name: "Funkcja kwadratowa" },
+        { slug: "wlasnosci_funkcji", name: "Własności funkcji i wykres" },
+        { slug: "odczyt_wykresu", name: "Odczyt wykresu funkcji" },
+      ],
+    },
+    {
+      slug: "ciagi",
+      name: "Ciągi",
+      topics: [
+        { slug: "ciag_arytmetyczny", name: "Ciąg arytmetyczny" },
+        { slug: "ciag_geometryczny", name: "Ciąg geometryczny" },
+      ],
+    },
+    {
+      slug: "trygonometria",
+      name: "Trygonometria",
+      topics: [
+        { slug: "sin_cos_tg", name: "Sinus, cosinus, tangens" },
+        {
+          slug: "zastosowania_trygonometrii",
+          name: "Zastosowania trygonometrii",
+        },
       ],
     },
     {
@@ -57,14 +84,17 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       name: "Geometria",
       topics: [
         { slug: "planimetria", name: "Planimetria" },
+        { slug: "pitagoras_i_podobienstwo", name: "Tw. Pitagorasa i podobieństwo" },
+        { slug: "okrag_i_kolo", name: "Okrąg i koło" },
         { slug: "stereometria", name: "Stereometria" },
         { slug: "geometria_analityczna", name: "Geometria analityczna" },
       ],
     },
     {
       slug: "kombinatoryka",
-      name: "Kombinatoryka i Statystyka",
+      name: "Kombinatoryka i statystyka",
       topics: [
+        { slug: "kombinatoryka", name: "Kombinatoryka" },
         { slug: "prawdopodobienstwo", name: "Prawdopodobieństwo" },
         { slug: "statystyka", name: "Statystyka" },
       ],

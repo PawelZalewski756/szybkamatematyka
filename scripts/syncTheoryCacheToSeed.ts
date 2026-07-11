@@ -1,13 +1,17 @@
 /**
  * Kopiuje lekcje z data/theory-cache do lib/trening/seed/materials.ts
- * (nadpisuje title + content dla pasujących kluczy).
+ * (nadpisuje title + content w BASE_SEED_MATERIALS; zachowuje enrich + expanded).
  *
- *   npx tsx scripts/syncTheoryCacheToSeed.ts
+ *   npm run seed:theory-sync
  */
 
 import fs from "fs";
 import path from "path";
-import { materialKey, SEED_MATERIALS } from "../lib/trening/seed/materials";
+import {
+  BASE_SEED_MATERIALS,
+  materialKey,
+  type MaterialDraft,
+} from "../lib/trening/seed/materials";
 import type { ExamType } from "../types/database";
 
 const CACHE_DIR = path.resolve(process.cwd(), "data/theory-cache");
@@ -22,7 +26,22 @@ type CachedTheory = {
 };
 
 function escapeTemplateLiteral(value: string): string {
-  return value.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+  return value
+    .replace(/\\/g, "\\\\")
+    .replace(/`/g, "\\`")
+    .replace(/\$\{/g, "\\${");
+}
+
+function formatMaterialBlock(m: MaterialDraft): string {
+  const content = escapeTemplateLiteral(m.content);
+  return `  {
+    exam_type: "${m.exam_type}",
+    category: "${m.category}",
+    topic: "${m.topic}",
+    title: ${JSON.stringify(m.title)},
+    content: \`${content}\`,
+    video_url: null,
+  }`;
 }
 
 function main() {
@@ -32,7 +51,9 @@ function main() {
   }
 
   const cacheByKey = new Map<string, CachedTheory>();
-  for (const file of fs.readdirSync(CACHE_DIR).filter((f) => f.endsWith(".json"))) {
+  for (const file of fs
+    .readdirSync(CACHE_DIR)
+    .filter((f) => f.endsWith(".json"))) {
     const entry = JSON.parse(
       fs.readFileSync(path.join(CACHE_DIR, file), "utf8"),
     ) as CachedTheory;
@@ -40,7 +61,7 @@ function main() {
   }
 
   let merged = 0;
-  const mergedMaterials = SEED_MATERIALS.map((m) => {
+  const mergedBase = BASE_SEED_MATERIALS.map((m) => {
     const cached = cacheByKey.get(materialKey(m));
     if (!cached) return m;
     merged += 1;
@@ -51,19 +72,9 @@ function main() {
     };
   });
 
-  const blocks = mergedMaterials.map((m) => {
-    const content = escapeTemplateLiteral(m.content);
-    return `  {
-    exam_type: "${m.exam_type}",
-    category: "${m.category}",
-    topic: "${m.topic}",
-    title: ${JSON.stringify(m.title)},
-    content: \`${content}\`,
-    video_url: null,
-  }`;
-  });
-
   const fileBody = `import type { ExamType } from "@/types/database";
+import { enrichTheoryLesson } from "@/lib/trening/seed/enrich-theory";
+import { EXPANDED_THEORY } from "@/lib/trening/seed/theory-expanded";
 
 export type MaterialDraft = {
   exam_type: ExamType;
@@ -74,18 +85,34 @@ export type MaterialDraft = {
   video_url: string | null;
 };
 
-export const SEED_MATERIALS: MaterialDraft[] = [
-${blocks.join(",\n")},
+export const BASE_SEED_MATERIALS: MaterialDraft[] = [
+${mergedBase.map(formatMaterialBlock).join(",\n")},
 ];
 
-export function materialKey(m: MaterialDraft): string {
+export function materialKey(
+  m: Pick<MaterialDraft, "exam_type" | "category" | "topic">,
+): string {
   return \`\${m.exam_type}:\${m.category}:\${m.topic}\`;
 }
+
+function applyTheoryEnhancements(m: MaterialDraft): MaterialDraft {
+  const key = materialKey(m);
+  const expanded = EXPANDED_THEORY[key];
+  const base = expanded
+    ? { ...m, title: expanded.title, content: expanded.content }
+    : m;
+  return { ...base, content: enrichTheoryLesson(base.content) };
+}
+
+export const SEED_MATERIALS: MaterialDraft[] =
+  BASE_SEED_MATERIALS.map(applyTheoryEnhancements);
 `;
 
   fs.writeFileSync(SEED_PATH, fileBody, "utf8");
   console.log(`\n✓ Zaktualizowano ${merged} lekcji w ${SEED_PATH}`);
-  console.log(`  Cache: ${cacheByKey.size} plików, seed: ${mergedMaterials.length} tematów\n`);
+  console.log(
+    `  Cache: ${cacheByKey.size} plików, seed: ${mergedBase.length} tematów\n`,
+  );
 }
 
 main();
