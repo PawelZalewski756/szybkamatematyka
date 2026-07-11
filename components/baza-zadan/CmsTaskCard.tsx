@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { SolutionDisplay } from "@/components/baza-zadan/SolutionDisplay";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";

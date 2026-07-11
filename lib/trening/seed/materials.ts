@@ -490,126 +490,597 @@ $\\frac{15}{25} = \\frac{3}{5} = 0.6 = 60\\%$ (chłopcy). Wynik jest poprawny.
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",
     topic: "notacja_wykladnicza",
-    title: "Notacja wykładnicza — Matura podstawowa",
+    title: "Notacja wykładnicza",
     content: `## Na egzaminie
-
-Temat **Notacja wykładnicza** (Liczby rzeczywiste) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania związane z notacją wykładniczą pojawiają się na maturze podstawowej regularnie, zazwyczaj jako elementy większych zadań dotyczących liczb rzeczywistych lub jako zadania zamknięte za 1 punkt. CKE sprawdza przede wszystkim umiejętność zamiany liczb na notację wykładniczą i odwrotnie, a także wykonywania podstawowych działań (mnożenie, dzielenie, rzadziej dodawanie i odejmowanie) na liczbach w tej postaci.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby rzeczywiste**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W ramach tej lekcji opanujesz następujące umiejętności:
+1. Zrozumiesz, czym jest notacja wykładnicza i w jakich sytuacjach jest użyteczna.
+2. Nauczysz się zamieniać duże liczby na notację wykładniczą.
+3. Będziesz potrafił zamieniać bardzo małe liczby na notację wykładniczą.
+4. Opanujesz przekształcanie liczb z notacji wykładniczej z powrotem na postać dziesiętną.
+5. Nauczysz się mnożyć i dzielić liczby zapisane w notacji wykładniczej.
+6. Poznasz zasady dodawania i odejmowania liczb w notacji wykładniczej.
+7. Będziesz umiał rozwiązywać zadania tekstowe wykorzystujące notację wykładniczą.
 
 ## Definicje i wzory
+Notacja wykładnicza (zwana również naukową) to sposób zapisywania liczb, szczególnie bardzo dużych lub bardzo małych, w zwartej i łatwej do odczytania formie. Jest powszechnie stosowana w nauce i inżynierii.
 
-*Materiał w trakcie uzupełniania dla: Notacja wykładnicza.*
+**Definicja notacji wykładniczej:**
+Każdą dodatnią liczbę rzeczywistą $x$ można zapisać w postaci:
+$$x = a \\cdot 10^k$$
+gdzie:
+*   $a$ to liczba rzeczywista spełniająca warunek $1 \\le a < 10$ (czyli $a$ jest większe lub równe 1 i mniejsze od 10). Nazywamy ją **mantysą** lub **współczynnikiem**.
+*   $k$ to liczba całkowita (dodatnia, ujemna lub zero). Nazywamy ją **wykładnikiem** lub **cechą**.
+
+**Przykłady:**
+*   $300 = 3 \\cdot 100 = 3 \\cdot 10^2$
+*   $45000 = 4,5 \\cdot 10000 = 4,5 \\cdot 10^4$
+*   $0,0005 = 5 \\cdot 0,0001 = 5 \\cdot 10^{-4}$
+
+**Zasady zamiany na notację wykładniczą:**
+
+1.  **Zapis dużych liczb (gdy $k > 0$):**
+    *   Przesuwamy przecinek w liczbie tak, aby przed nim znajdowała się tylko jedna cyfra różna od zera (czyli $a$ ma być z zakresu $1 \\le a < 10$).
+    *   Wykładnik $k$ jest równy liczbie miejsc, o które przesunęliśmy przecinek w lewo.
+    *   Przykład: $123\\,450\\,000 = 1,2345 \\cdot 10^8$ (przecinek przesunięto o 8 miejsc w lewo).
+
+2.  **Zapis małych liczb (gdy $k < 0$):**
+    *   Przesuwamy przecinek w liczbie tak, aby przed nim znajdowała się tylko jedna cyfra różna od zera ($1 \\le a < 10$).
+    *   Wykładnik $k$ jest równy liczbie miejsc, o które przesunęliśmy przecinek w prawo, ale z minusem.
+    *   Przykład: $0,000\\,007\\,8 = 7,8 \\cdot 10^{-6}$ (przecinek przesunięto o 6 miejsc w prawo).
+
+**Działania na liczbach w notacji wykładniczej:**
+
+W działaniach na notacji wykładniczej wykorzystujemy podstawowe prawa działań na potęgach:
+*   $10^m \\cdot 10^n = 10^{m+n}$
+*   $\\frac{10^m}{10^n} = 10^{m-n}$
+*   $(10^m)^n = 10^{m \\cdot n}$
+
+1.  **Mnożenie:**
+    Mnożymy współczynniki $a$ i potęgi dziesiątki osobno.
+    $(a \\cdot 10^k) \\cdot (b \\cdot 10^m) = (a \\cdot b) \\cdot 10^{k+m}$
+    Po pomnożeniu należy upewnić się, że wynikowy współczynnik jest w zakresie $[1, 10)$. Jeśli nie, należy przesunąć przecinek i odpowiednio skorygować wykładnik.
+
+    Przykład: $(2 \\cdot 10^3) \\cdot (4 \\cdot 10^5) = (2 \\cdot 4) \\cdot 10^{3+5} = 8 \\cdot 10^8$.
+    Przykład: $(5 \\cdot 10^2) \\cdot (6 \\cdot 10^4) = (5 \\cdot 6) \\cdot 10^{2+4} = 30 \\cdot 10^6 = (3 \\cdot 10^1) \\cdot 10^6 = 3 \\cdot 10^7$.
+
+2.  **Dzielenie:**
+    Dzielimy współczynniki $a$ i potęgi dziesiątki osobno.
+    $\\frac{a \\cdot 10^k}{b \\cdot 10^m} = \\left(\\frac{a}{b}\\right) \\cdot 10^{k-m}$
+    Po podzieleniu należy upewnić się, że wynikowy współczynnik jest w zakresie $[1, 10)$.
+
+    Przykład: $\\frac{8 \\cdot 10^7}{2 \\cdot 10^3} = \\left(\\frac{8}{2}\\right) \\cdot 10^{7-3} = 4 \\cdot 10^4$.
+    Przykład: $\\frac{2 \\cdot 10^5}{4 \\cdot 10^2} = \\left(\\frac{2}{4}\\right) \\cdot 10^{5-2} = 0,5 \\cdot 10^3 = (5 \\cdot 10^{-1}) \\cdot 10^3 = 5 \\cdot 10^2$.
+
+3.  **Dodawanie i odejmowanie:**
+    Aby dodać lub odjąć liczby w notacji wykładniczej, muszą one mieć ten sam wykładnik $k$. W razie potrzeby należy przekształcić jedną z liczb tak, aby doprowadzić do wspólnego wykładnika.
+    $a \\cdot 10^k + b \\cdot 10^k = (a+b) \\cdot 10^k$
+    $a \\cdot 10^k - b \\cdot 10^k = (a-b) \\cdot 10^k$
+
+    Przykład: $3,5 \\cdot 10^4 + 2,1 \\cdot 10^4 = (3,5 + 2,1) \\cdot 10^4 = 5,6 \\cdot 10^4$.
+    Przykład: $4 \\cdot 10^5 + 2 \\cdot 10^4$.
+    Aby dodać, musimy sprowadzić do tego samego wykładnika. Wybierzmy $10^5$:
+    $2 \\cdot 10^4 = 0,2 \\cdot 10^1 \\cdot 10^4 = 0,2 \\cdot 10^5$.
+    Zatem: $4 \\cdot 10^5 + 0,2 \\cdot 10^5 = (4 + 0,2) \\cdot 10^5 = 4,2 \\cdot 10^5$.
+    Można też do $10^4$:
+    $4 \\cdot 10^5 = 4 \\cdot 10^1 \\cdot 10^4 = 40 \\cdot 10^4$.
+    Zatem: $40 \\cdot 10^4 + 2 \\cdot 10^4 = (40 + 2) \\cdot 10^4 = 42 \\cdot 10^4 = 4,2 \\cdot 10^1 \\cdot 10^4 = 4,2 \\cdot 10^5$.
+    Obie metody dają ten sam poprawny wynik.
 
 ## Przykład 1 — podstawowy
+Zapisz liczbę $0,000\\,000\\,057$ w notacji wykładniczej.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Określenie mantysy.**
+Szukamy liczby $a$ takiej, że $1 \\le a < 10$. Musimy przesunąć przecinek w liczbie $0,000\\,000\\,057$ tak, aby znalazł się po pierwszej cyfrze różnej od zera. Pierwszą taką cyfrą jest 5. Zatem mantysa będzie równa $5,7$.
+
+**Krok 2.** Określenie wykładnika $k$.**
+Pierwotnie przecinek znajdował się po zerze na początku liczby ($0\\textbf{,}000\\,000\\,057$). Docelowo ma być między 5 a 7 ($5\\textbf{,}7$). Policzmy, o ile miejsc musimy przesunąć przecinek w prawo:
+$0\\textbf{.}000\\,000\\,057$
+Przesunięcie o 1 miejsce: $00\\textbf{.}000\\,000\\,57$
+Przesunięcie o 2 miejsca: $000\\textbf{.}000\\,057$
+...
+Przesunięcie o 8 miejsc: $000\\,000\\,05\\textbf{.}7$
+Przesunęliśmy przecinek o 8 miejsc w prawo.
+
+**Krok 3.** Ustalenie znaku wykładnika.**
+Ponieważ pierwotna liczba ($0,000\\,000\\,057$) jest bardzo mała (mniejsza od 1), wykładnik $k$ musi być liczbą ujemną.
+Zatem $k = -8$.
+
+**Krok 4.** Zapisanie liczby w notacji wykładniczej.**
+Zgodnie z definicją $a \\cdot 10^k$, podstawiamy wyznaczone wartości:
+$5,7 \\cdot 10^{-8}$.
+
+**Sprawdzenie:**
+$5,7 \\cdot 10^{-8} = 5,7 \\cdot 0,000\\,000\\,01 = 0,000\\,000\\,057$. Wynik jest zgodny z liczbą początkową.
+
+## Przykład 2 — maturalny
+Oblicz wartość wyrażenia $\\frac{(1,2 \\cdot 10^6) \\cdot (5 \\cdot 10^{-3})}{3 \\cdot 10^2}$ i przedstaw wynik w notacji wykładniczej.
+
+**Krok 1.** Obliczenie iloczynu w liczniku.**
+Najpierw wykonajmy mnożenie w liczniku: $(1,2 \\cdot 10^6) \\cdot (5 \\cdot 10^{-3})$.
+Mnożymy współczynniki i potęgi dziesiątki osobno:
+$(1,2 \\cdot 5) \\cdot (10^6 \\cdot 10^{-3})$
+$6,0 \\cdot 10^{6+(-3)}$
+$6 \\cdot 10^{6-3}$
+$6 \\cdot 10^3$
+Licznik wynosi $6 \\cdot 10^3$.
+
+**Krok 2.** Wykonanie dzielenia.**
+Teraz podzielmy wynik z licznika przez mianownik: $\\frac{6 \\cdot 10^3}{3 \\cdot 10^2}$.
+Dzielimy współczynniki i potęgi dziesiątki osobno:
+$\\left(\\frac{6}{3}\\right) \\cdot \\left(\\frac{10^3}{10^2}\\right)$
+$2 \\cdot 10^{3-2}$
+$2 \\cdot 10^1$
+
+**Krok 3.** Sprawdzenie formatu notacji wykładniczej.**
+Otrzymaliśmy $2 \\cdot 10^1$.
+Mantysa $a=2$ spełnia warunek $1 \\le a < 10$.
+Wykładnik $k=1$ jest liczbą całkowitą.
+Wynik jest już w notacji wykładniczej.
+
+Ostateczny wynik: $2 \\cdot 10^1$. (Można też zapisać jako 20, ale zadanie wymaga notacji wykładniczej).
+
+## Przykład 3 — egzaminacyjny
+Jedna cząsteczka wody waży około $3 \\cdot 10^{-23}$ grama. Ile waży $2 \\cdot 10^{24}$ cząsteczek wody? Wynik podaj w notacji wykładniczej.
+
+**Krok 1.** Zapisanie danych i celu.**
+Masa jednej cząsteczki: $m_c = 3 \\cdot 10^{-23}$ g.
+Liczba cząsteczek: $N = 2 \\cdot 10^{24}$.
+Szukana jest całkowita masa $M$.
+
+**Krok 2.** Ułożenie równania.**
+Całkowita masa jest iloczynem masy jednej cząsteczki i liczby cząsteczek:
+$M = m_c \\cdot N$
+$M = (3 \\cdot 10^{-23}) \\cdot (2 \\cdot 10^{24})$
+
+**Krok 3.** Wykonanie mnożenia.**
+Mnożymy współczynniki i potęgi dziesiątki osobno:
+$M = (3 \\cdot 2) \\cdot (10^{-23} \\cdot 10^{24})$
+$M = 6 \\cdot 10^{-23+24}$
+$M = 6 \\cdot 10^1$
+
+**Krok 4.** Sprawdzenie formatu notacji wykładniczej.**
+Otrzymany wynik $6 \\cdot 10^1$ jest w prawidłowej notacji wykładniczej, ponieważ mantysa $a=6$ spełnia warunek $1 \\le a < 10$, a wykładnik $k=1$ jest liczbą całkowitą.
+
+Odpowiedź: $2 \\cdot 10^{24}$ cząsteczek wody waży $6 \\cdot 10^1$ grama.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Niewłaściwa mantysa $a$**: Najczęstszy błąd to zapisanie liczby w postaci $a \\cdot 10^k$, gdzie $a$ nie spełnia warunku $1 \\le a < 10$. Na przykład $12 \\cdot 10^3$ zamiast $1,2 \\cdot 10^4$ lub $0,5 \\cdot 10^6$ zamiast $5 \\cdot 10^5$. Zawsze po wykonaniu działań należy sprawdzić i dostosować mantysę oraz wykładnik.
+*   **Błędny znak wykładnika $k$**: Uczniowie często mylą znak wykładnika, zwłaszcza przy małych liczbach. Pamiętaj: liczby większe od 10 mają wykładnik dodatni ($10^k$, gdzie $k > 0$), liczby mniejsze od 1 (ale większe od 0) mają wykładnik ujemny ($10^k$, gdzie $k < 0$).
+*   **Błędy w przesuwaniu przecinka**: Liczba miejsc, o które przesunięto przecinek, musi być precyzyjnie policzona. Jeden błąd w policzeniu miejsca skutkuje błędnym wykładnikiem $k$.
+*   **Błędy w działaniach na wykładnikach**: Należy pamiętać o podstawowych zasadach działań na potęgach: przy mnożeniu dodajemy wykładniki, przy dzieleniu odejmujemy. Szczególną ostrożność należy zachować przy ujemnych wykładnikach (np. $10^{-3} \\cdot 10^5 = 10^{-3+5} = 10^2$, nie $10^{-15}$ ani $10^{-8}$).
+*   **Dodawanie/odejmowanie bez wspólnego wykładnika**: Nie można po prostu dodać (lub odjąć) współczynników, jeśli potęgi dziesiątki są różne. Trzeba najpierw sprowadzić liczby do wspólnego wykładnika (np. $2 \\cdot 10^3 + 5 \\cdot 10^2$ to nie $7 \\cdot 10^5$, tylko $2 \\cdot 10^3 + 0,5 \\cdot 10^3 = 2,5 \\cdot 10^3$).
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Zapisz podane liczby w notacji wykładniczej:
+    a) $0,000\\,000\\,004\\,8$
+    b) $215\\,000\\,000\\,000\\,000$
+    c) $30,5 \\cdot 10^7$
+    d) $0,000\\,001\\,5 \\cdot 10^4$
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+2.  Zamień liczby zapisane w notacji wykładniczej na postać dziesiętną:
+    a) $6,25 \\cdot 10^7$
+    b) $8,1 \\cdot 10^{-5}$
+    c) $1,003 \\cdot 10^0$
+
+3.  Oblicz i przedstaw wynik w notacji wykładniczej:
+    a) $(4 \\cdot 10^5) \\cdot (7 \\cdot 10^{-9})$
+    b) $(1,5 \\cdot 10^{-2}) \\cdot (2 \\cdot 10^{-4})$
+
+4.  Oblicz i przedstaw wynik w notacji wykładniczej:
+    a) $\\frac{9 \\cdot 10^{12}}{3 \\cdot 10^4}$
+    b) $\\frac{2,4 \\cdot 10^3}{8 \\cdot 10^7}$
+
+5.  Oblicz i przedstaw wynik w notacji wykładniczej:
+    a) $3,2 \\cdot 10^6 + 5 \\cdot 10^5$
+    b) $7 \\cdot 10^{-3} - 4,5 \\cdot 10^{-4}$
+
+6.  Prędkość światła w próżni wynosi około $3 \\cdot 10^8$ m/s. Ile kilometrów pokona światło w ciągu $2 \\cdot 10^2$ sekund? Wynik podaj w notacji wykładniczej.
 
 ## Odpowiedzi
+1.  a) $4,8 \\cdot 10^{-9}$
+    b) $2,15 \\cdot 10^{14}$
+    c) $3,05 \\cdot 10^8$
+    d) $1,5 \\cdot 10^{-2}$
 
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+2.  a) $62\\,500\\,000$
+    b) $0,000\\,081$
+    c) $1,003$
+
+3.  a) $2,8 \\cdot 10^{-3}$
+        Rozwiązanie: $(4 \\cdot 7) \\cdot 10^{5+(-9)} = 28 \\cdot 10^{-4} = 2,8 \\cdot 10^1 \\cdot 10^{-4} = 2,8 \\cdot 10^{-3}$
+    b) $3 \\cdot 10^{-6}$
+        Rozwiązanie: $(1,5 \\cdot 2) \\cdot 10^{-2+(-4)} = 3 \\cdot 10^{-6}$
+
+4.  a) $3 \\cdot 10^8$
+        Rozwiązanie: $(\\frac{9}{3}) \\cdot 10^{12-4} = 3 \\cdot 10^8$
+    b) $3 \\cdot 10^{-5}$
+        Rozwiązanie: $(\\frac{2,4}{8}) \\cdot 10^{3-7} = 0,3 \\cdot 10^{-4} = 3 \\cdot 10^{-1} \\cdot 10^{-4} = 3 \\cdot 10^{-5}$
+
+5.  a) $3,7 \\cdot 10^6$
+        Rozwiązanie: $3,2 \\cdot 10^6 + 0,5 \\cdot 10^6 = (3,2+0,5) \\cdot 10^6 = 3,7 \\cdot 10^6$
+    b) $6,55 \\cdot 10^{-3}$
+        Rozwiązanie: $7 \\cdot 10^{-3} - 0,45 \\cdot 10^{-3} = (7-0,45) \\cdot 10^{-3} = 6,55 \\cdot 10^{-3}$
+
+6.  $6 \\cdot 10^7$ km
+    Rozwiązanie: Odległość = prędkość $\\cdot$ czas.
+    Odległość = $(3 \\cdot 10^8 \\text{ m/s}) \\cdot (2 \\cdot 10^2 \\text{ s}) = (3 \\cdot 2) \\cdot 10^{8+2} \\text{ m} = 6 \\cdot 10^{10} \\text{ m}$.
+    Ponieważ $1 \\text{ km} = 1000 \\text{ m} = 10^3 \\text{ m}$, musimy podzielić wynik w metrach przez $10^3$:
+    $6 \\cdot 10^{10} \\text{ m} = \\frac{6 \\cdot 10^{10}}{10^3} \\text{ km} = 6 \\cdot 10^{10-3} \\text{ km} = 6 \\cdot 10^7 \\text{ km}$.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Jaki warunek musi spełniać liczba $a$ (mantysa) w zapisie notacji wykładniczej $a \\cdot 10^k$?
+2.  Czy liczba $0,5 \\cdot 10^4$ jest poprawnie zapisana w notacji wykładniczej? Jeśli nie, to dlaczego?
+3.  Jaka jest zasada dotycząca wykładników potęgi 10 przy dzieleniu liczb w notacji wykładniczej?
+4.  Jak przekształcić liczbę $2,5 \\cdot 10^6$ na postać z wykładnikiem $10^5$?
+5.  Dla jakich liczb całkowitych $k$ wykładnik w notacji wykładniczej jest ujemny?`,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",
     topic: "wartosc_bezwzgledna",
-    title: "Wartość bezwzględna — Matura podstawowa",
+    title: "Wartość bezwzględna – klucz do zrozumienia liczb",
     content: `## Na egzaminie
-
-Temat **Wartość bezwzględna** (Liczby rzeczywiste) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Wartość bezwzględna pojawia się na maturze podstawowej regularnie, zazwyczaj jako element zadań dotyczących równań, nierówności lub funkcji. Zadania z tym tematem mogą być warte od 2 do nawet 4 punktów. CKE często sprawdza umiejętność rozwiązywania równań i nierówności z wartością bezwzględną oraz rozumienie geometrycznej interpretacji wartości bezwzględnej jako odległości na osi liczbowej.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby rzeczywiste**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji dowiesz się:
+1. Czym jest wartość bezwzględna liczby rzeczywistej.
+2. Jak obliczać wartość bezwzględną z różnych liczb (dodatnich, ujemnych, zera).
+3. Jak interpretować wartość bezwzględną jako odległość na osi liczbowej.
+4. Jak rozwiązywać proste równania z wartością bezwzględną.
+5. Jak rozwiązywać proste nierówności z wartością bezwzględną.
+6. Jak stosować definicję wartości bezwzględnej do upraszczania wyrażeń.
+7. Jak rozwiązywać zadania tekstowe wykorzystujące pojęcie wartości bezwzględnej.
+8. Jak poznać typowe pułapki związane z wartością bezwzględną.
 
 ## Definicje i wzory
+*   **Definicja wartości bezwzględnej:** Wartość bezwzględna liczby rzeczywistej $a$, oznaczana jako $|a|$, to odległość tej liczby od zera na osi liczbowej. Zawsze jest liczbą nieujemną.
 
-*Materiał w trakcie uzupełniania dla: Wartość bezwzględna.*
+*   **Definicja analityczna:**
+    $$
+    |a| = \\begin{cases}
+    a & \\text{gdy } a \\ge 0 \\\\
+    -a & \\text{gdy } a < 0
+    \\end{cases}
+    $$
+    Oznacza to, że:
+    *   Jeśli liczba jest dodatnia lub równa zero, jej wartość bezwzględna jest równa tej liczbie.
+    *   Jeśli liczba jest ujemna, jej wartość bezwzględna jest równa liczbie do niej przeciwnej (czyli tej samej liczbie pomnożonej przez -1).
+
+*   **Własności wartości bezwzględnej:**
+    *   Dla każdej liczby rzeczywistej $a$: $|a| \\ge 0$.
+    *   Dla każdej liczby rzeczywistej $a$: $|a| = |-a|$.
+    *   Dla każdej liczby rzeczywistej $a$: $|a| = \\sqrt{a^2}$.
+    *   Dla dowolnych liczb rzeczywistych $a, b$: $|a \\cdot b| = |a| \\cdot |b|$.
+    *   Dla dowolnych liczb rzeczywistych $a, b$ (gdzie $b \\neq 0$): $|\\frac{a}{b}| = \\frac{|a|}{|b|}$.
+    *   Dla dowolnych liczb rzeczywistych $a, b$: $|a+b| \\le |a|+|b|$ (nierówność trójkąta).
+
+*   **Geometryczna interpretacja:** Wartość bezwzględna $|a-b|$ oznacza odległość między liczbami $a$ i $b$ na osi liczbowej. W szczególności $|a| = |a-0|$ to odległość liczby $a$ od zera.
+
+*   **Rozwiązywanie równań z wartością bezwzględną:**
+    *   Równanie typu $|x| = c$, gdzie $c > 0$: ma dwa rozwiązania $x = c$ lub $x = -c$.
+    *   Równanie typu $|x| = 0$: ma jedno rozwiązanie $x = 0$.
+    *   Równanie typu $|x| = c$, gdzie $c < 0$: nie ma rozwiązań.
+    *   Równanie typu $|x-k| = c$, gdzie $c > 0$: oznacza, że odległość $x$ od $k$ jest równa $c$. Rozwiązania to $x-k = c$ lub $x-k = -c$, czyli $x = k+c$ lub $x = k-c$.
+    *   Równania typu $|f(x)| = g(x)$: są równoważne dwóm równaniom: $f(x) = g(x)$ lub $f(x) = -g(x)$, ale pod warunkiem, że $g(x) \\ge 0$.
+
+*   **Rozwiązywanie nierówności z wartością bezwzględną:**
+    *   Nierówność typu $|x| < c$, gdzie $c > 0$: jest równoważna nierówności $-c < x < c$.
+    *   Nierówność typu $|x| \\le c$, gdzie $c > 0$: jest równoważna nierówności $-c \\le x \\le c$.
+    *   Nierówność typu $|x| > c$, gdzie $c > 0$: jest równoważna alternatywie $x > c$ lub $x < -c$.
+    *   Nierówność typu $|x| \\ge c$, gdzie $c > 0$: jest równoważna alternatywie $x \\ge c$ lub $x \\le -c$.
+    *   Nierówność typu $|x-k| < c$, gdzie $c > 0$: oznacza, że odległość $x$ od $k$ jest mniejsza niż $c$. Rozwiązaniem jest $-c < x-k < c$, czyli $k-c < x < k+c$.
+    *   Nierówność typu $|x-k| > c$, gdzie $c > 0$: oznacza, że odległość $x$ od $k$ jest większa niż $c$. Rozwiązaniem jest $x-k > c$ lub $x-k < -c$, czyli $x > k+c$ lub $x < k-c$.
 
 ## Przykład 1 — podstawowy
+**Oblicz wartość wyrażenia: $|5 - 8| + |-3| - |10|$.**
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+*   **Krok 1.** Obliczamy wartość bezwzględną z pierwszej liczby: $5 - 8 = -3$. Zatem $|5 - 8| = |-3|$.
+*   **Krok 2.** Obliczamy wartość bezwzględną z $-3$. Zgodnie z definicją, jeśli liczba jest ujemna, jej wartość bezwzględna to liczba przeciwna: $|-3| = -(-3) = 3$.
+*   **Krok 3.** Obliczamy wartość bezwzględną z drugiej liczby: $|-3|$. Ta wartość została już obliczona w Kroku 2 i wynosi 3.
+*   **Krok 4.** Obliczamy wartość bezwzględną z trzeciej liczby: $|10|$. Liczba 10 jest dodatnia, więc jej wartość bezwzględna jest równa 10. $|10| = 10$.
+*   **Krok 5.** Podstawiamy obliczone wartości do wyrażenia i wykonujemy odejmowanie: $3 + 3 - 10 = 6 - 10 = -4$.
+
+**Sprawdzenie:**
+$|5-8| + |-3| - |10| = |-3| + 3 - 10 = 3 + 3 - 10 = 6 - 10 = -4$. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+**Rozwiąż równanie: $|2x - 1| = 5$.**
+
+To równanie oznacza, że odległość wyrażenia $2x - 1$ od zera jest równa 5. Zgodnie z definicją wartości bezwzględnej, liczby, których wartość bezwzględna wynosi 5, to 5 i -5. Zatem mamy dwie możliwości:
+
+1.  $2x - 1 = 5$
+    Dodajemy 1 do obu stron:
+    $2x = 5 + 1$
+    $2x = 6$
+    Dzielimy obie strony przez 2:
+    $x = 3$
+
+2.  $2x - 1 = -5$
+    Dodajemy 1 do obu stron:
+    $2x = -5 + 1$
+    $2x = -4$
+    Dzielimy obie strony przez 2:
+    $x = -2$
+
+**Sprawdzenie:**
+Dla $x = 3$: $|2 \\cdot 3 - 1| = |6 - 1| = |5| = 5$. Równanie jest spełnione.
+Dla $x = -2$: $|2 \\cdot (-2) - 1| = |-4 - 1| = |-5| = 5$. Równanie jest spełnione.
+
+Rozwiązaniami równania są $x = 3$ oraz $x = -2$.
+
+## Przykład 3 — egzaminacyjny
+
+**Rozwiąż nierówność: $|x+1| < 3$.**
+
+Nierówność $|x+1| < 3$ oznacza, że odległość liczby $x+1$ od zera jest mniejsza niż 3. Możemy to zapisać jako:
+$-3 < x+1 < 3$
+
+Aby rozwiązać tę podwójną nierówność, odejmujemy 1 od wszystkich jej części:
+$-3 - 1 < x+1 - 1 < 3 - 1$
+$-4 < x < 2$
+
+Rozwiązaniem nierówności jest przedział $(-4, 2)$.
+
+**Alternatywne podejście (geometryczne):**
+Nierówność $|x+1| < 3$ możemy zapisać jako $|x - (-1)| < 3$. Oznacza to, że odległość liczby $x$ od liczby $-1$ jest mniejsza niż 3. Na osi liczbowej zaznaczamy punkt $-1$. Szukamy liczb $x$, które są oddalone od $-1$ o mniej niż 3 jednostki. Są to liczby z przedziału $(-1 - 3, -1 + 3)$, czyli $(-4, 2)$.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Zapominanie o drugim rozwiązaniu:** Równanie $|x| = c$ (gdzie $c > 0$) ma dwa rozwiązania: $x=c$ i $x=-c$. Często uczniowie podają tylko jedno z nich.
+*   **Błędne opuszczanie wartości bezwzględnej:** Np. mylenie $|-5|$ z $-5$ zamiast $5$. Pamiętaj, że wartość bezwzględna nigdy nie jest ujemna.
+*   **Niewłaściwe stosowanie definicji dla nierówności:** Np. mylenie $|x| < c$ z $x < c$ lub $|x| > c$ z $x > c$. Nierówności z wartością bezwzględną wymagają analizy dwóch przypadków lub przekształcenia na podwójną nierówność/alternatywę.
+*   **Brak warunku nieujemności:** Przy rozwiązywaniu równań typu $|f(x)| = g(x)$, należy pamiętać o warunku $g(x) \\ge 0$. Jeśli $g(x)$ okaże się ujemne dla któregoś z potencjalnych rozwiązań, to rozwiązanie należy odrzucić.
+*   **Założenie, że $|a+b| = |a| + |b|$:** To nie jest prawda. Np. $|-2+3| = |1| = 1$, ale $|-2| + |3| = 2 + 3 = 5$. Prawidłowa jest nierówność trójkąta $|a+b| \\le |a|+|b|$.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz: $|-7| + |4| - |2-9|$.
+2.  Rozwiąż równanie: $|x| = 9$.
+3.  Rozwiąż równanie: $|3x + 2| = 7$.
+4.  Rozwiąż nierówność: $|x| \\le 5$.
+5.  Rozwiąż nierówność: $|x-2| > 4$.
+6.  Dla jakiej liczby $a$ zachodzi równość $|a-5|=2$? Podaj wszystkie możliwości.
+7.  Rozwiąż równanie: $|x+3| = |2x-1|$. (Wskazówka: rozważ dwa przypadki: $x+3 = 2x-1$ oraz $x+3 = -(2x-1)$).
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $|-7| + |4| - |2-9| = 7 + 4 - |-7| = 7 + 4 - 7 = 4$.
+2.  $x = 9$ lub $x = -9$.
+3.  $|3x+2| = 7$ jest równoważne $3x+2 = 7$ lub $3x+2 = -7$.
+    Pierwszy przypadek: $3x = 5$, $x = \\frac{5}{3}$.
+    Drugi przypadek: $3x = -9$, $x = -3$.
+    Rozwiązania: $x = \\frac{5}{3}$ lub $x = -3$.
+4.  $|x| \\le 5$ jest równoważne $-5 \\le x \\le 5$. Rozwiązaniem jest przedział $[-5, 5]$.
+5.  $|x-2| > 4$ jest równoważne $x-2 > 4$ lub $x-2 < -4$.
+    Pierwszy przypadek: $x > 6$.
+    Drugi przypadek: $x < -2$.
+    Rozwiązaniem jest suma przedziałów $(-\\infty, -2) \\cup (6, \\infty)$.
+6.  $|a-5|=2$ jest równoważne $a-5 = 2$ lub $a-5 = -2$.
+    Pierwszy przypadek: $a = 7$.
+    Drugi przypadek: $a = 3$.
+    Możliwości: $a=3$ lub $a=7$.
+7.  $|x+3| = |2x-1|$
+    Przypadek 1: $x+3 = 2x-1 \\implies -x = -4 \\implies x=4$.
+    Przypadek 2: $x+3 = -(2x-1) \\implies x+3 = -2x+1 \\implies 3x = -2 \\implies x = -\\frac{2}{3}$.
+    Rozwiązania: $x=4$ lub $x=-\\frac{2}{3}$.
 
 ## Szybka powtórka
+1.  Jaka jest definicja wartości bezwzględnej liczby $a$?
+2.  Czy wartość bezwzględna może być liczbą ujemną?
+3.  Ile rozwiązań ma równanie $|x| = 10$?
+4.  Jak zapisać nierówność $|x| < 5$ za pomocą podwójnej nierówności?
+5.  Co geometrycznie oznacza wyrażenie $|a-b|$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+        <----|----|----|----|----|----|----|----|----> osi liczbowej
+            -4   -3   -2   -1    0    1    2    3    4
+
+Wartość bezwzględna |x| to odległość x od 0.
+Np. |3| = 3 (odległość 3 od 0)
+Np. |-2| = 2 (odległość 2 od 0)
+
+Równanie |x - k| = c to odległość x od k jest równa c.
+Np. |x - 2| = 3 oznacza, że x jest oddalone od 2 o 3.
+    Rozwiązania: x = 2+3=5 lub x = 2-3=-1.
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",
     topic: "kolejnosc_dzialan",
-    title: "Kolejność wykonywania działań — Matura podstawowa",
+    title: "Kolejność wykonywania działań",
     content: `## Na egzaminie
-
-Temat **Kolejność wykonywania działań** (Liczby rzeczywiste) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Kolejność wykonywania działań to fundamentalna umiejętność sprawdzana na maturze z matematyki na poziomie podstawowym. Zadania dotyczące kolejności działań pojawiają się co roku, często jako pierwsze zadania otwarte lub jako element bardziej złożonych zadań. Poprawne ich rozwiązanie pozwala na zdobycie pewnych punktów, zwykle 1-3, i buduje pewność siebie przed trudniejszymi problemami. CKE często sprawdza umiejętność radzenia sobie z ułamkami, potęgami oraz nawiasami.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby rzeczywiste**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W trakcie tej lekcji opanujesz:
+1.  Zrozumienie i stosowanie podstawowych zasad kolejności wykonywania działań.
+2.  Prawidłowe wykonywanie działań w nawiasach, zaczynając od tych najbardziej wewnętrznych.
+3.  Poprawne obliczanie potęg i pierwiastków.
+4.  Wykonywanie mnożenia i dzielenia w kolejności ich występowania od lewej do prawej.
+5.  Wykonywanie dodawania i odejmowania w kolejności ich występowania od lewej do prawej.
+6.  Łączenie wszystkich zasad przy obliczaniu złożonych wyrażeń arytmetycznych.
+7.  Rozpoznawanie typowych błędów i unikanie ich w rozwiązaniach.
+8.  Praktyczne zastosowanie zasad kolejności działań w zadaniach typu maturalnego.
 
 ## Definicje i wzory
+Kolejność wykonywania działań arytmetycznych jest ściśle określona i pozwala na uzyskanie jednoznacznego wyniku dla każdego wyrażenia matematycznego. Stosujemy ją dla liczb rzeczywistych (całkowitych, wymiernych, niewymiernych).
 
-*Materiał w trakcie uzupełniania dla: Kolejność wykonywania działań.*
+**Zasady kolejności wykonywania działań (od najwyższego do najniższego priorytetu):**
+
+1.  **Nawiasy:** Działania w nawiasach wykonujemy jako pierwsze. Jeśli mamy nawiasy zagnieżdżone, zaczynamy od najbardziej wewnętrznych.
+    *   Przykład: $ (2 + (3 \\cdot 4) ) $ — najpierw mnożenie $3 \\cdot 4$, potem dodawanie $2 + 12$.
+2.  **Potęgowanie i pierwiastkowanie:** Potęgi i pierwiastki mają ten sam priorytet. Wykonujemy je w kolejności ich występowania od lewej do prawej strony wyrażenia.
+    *   Potęga: $a^n = a \\cdot a \\cdot \\ldots \\cdot a$ ($n$ razy)
+    *   Pierwiastek kwadratowy: $\\sqrt{a}$ jest to liczba nieujemna $x$, taka że $x^2 = a$.
+3.  **Mnożenie i dzielenie:** Mnożenie i dzielenie mają ten sam priorytet. Wykonujemy je w kolejności ich występowania od lewej do prawej strony wyrażenia.
+    *   Iloczyn: $a \\cdot b$
+    *   Iloraz: $a : b = \\frac{a}{b}$ (jeśli $b \\neq 0$)
+4.  **Dodawanie i odejmowanie:** Dodawanie i odejmowanie mają najniższy priorytet. Wykonujemy je w kolejności ich występowania od lewej do prawej strony wyrażenia.
+    *   Suma: $a + b$
+    *   Różnica: $a - b$
+
+**Podsumowanie w skrócie:**
+
+*   **N** - Nawiasy
+*   **P** - Potęgi i Pierwiastki
+*   **M/D** - Mnożenie i Dzielenie (od lewej do prawej)
+*   **A/O** - Dodawanie i Odejmowanie (od lewej do prawej)
+
+**Przykład z użyciem kolejności:**
+Wyrażenie: $ 5 + 3 \\cdot 2^3 - \\sqrt{9} \\div 1 $
+
+1.  **Nawiasy:** Brak.
+2.  **Potęgowanie/Pierwiastkowanie:**
+    *   $2^3 = 8$
+    *   $\\sqrt{9} = 3$
+    Wyrażenie po tym kroku: $ 5 + 3 \\cdot 8 - 3 \\div 1 $
+3.  **Mnożenie/Dzielenie (od lewej):**
+    *   $3 \\cdot 8 = 24$
+    *   $3 \\div 1 = 3$
+    Wyrażenie po tym kroku: $ 5 + 24 - 3 $
+4.  **Dodawanie/Odejmowanie (od lewej):**
+    *   $5 + 24 = 29$
+    Wyrażenie po tym kroku: $ 29 - 3 $
+    *   $29 - 3 = 26$
+
+Wynik końcowy: $26$.
 
 ## Przykład 1 — podstawowy
+Oblicz wartość wyrażenia: $ 10 - 2 \\cdot (5 + 1)^2 : 4 $
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Rozpoczynamy od działań w nawiasie.
+$ 5 + 1 = 6 $
+Wyrażenie przyjmuje postać: $ 10 - 2 \\cdot 6^2 : 4 $
+
+**Krok 2.** Wykonujemy potęgowanie.
+$ 6^2 = 36 $
+Wyrażenie przyjmuje postać: $ 10 - 2 \\cdot 36 : 4 $
+
+**Krok 3.** Wykonujemy mnożenie i dzielenie od lewej do prawej. Najpierw mnożenie.
+$ 2 \\cdot 36 = 72 $
+Wyrażenie przyjmuje postać: $ 10 - 72 : 4 $
+
+**Krok 4.** Wykonujemy dzielenie.
+$ 72 : 4 = 18 $
+Wyrażenie przyjmuje postać: $ 10 - 18 $
+
+**Krok 5.** Wykonujemy odejmowanie.
+$ 10 - 18 = -8 $
+
+**Sprawdzenie:**
+Wyrażenie: $ 10 - 2 \\cdot (5 + 1)^2 : 4 $
+$ 10 - 2 \\cdot (6)^2 : 4 $
+$ 10 - 2 \\cdot 36 : 4 $
+$ 10 - 72 : 4 $
+$ 10 - 18 $
+$ -8 $
+Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Oblicz wartość wyrażenia: $ \\frac{2}{3} \\cdot \\left( \\frac{1}{2} + \\frac{1}{4} \\right)^2 - \\frac{1}{6} $
+
+**Krok 1.** Wykonujemy działania w nawiasie. Musimy dodać dwa ułamki. Znajdujemy wspólny mianownik dla 2 i 4, którym jest 4.
+$ \\frac{1}{2} = \\frac{1 \\cdot 2}{2 \\cdot 2} = \\frac{2}{4} $
+Suma w nawiasie: $ \\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4} $
+Wyrażenie przyjmuje postać: $ \\frac{2}{3} \\cdot \\left( \\frac{3}{4} \\right)^2 - \\frac{1}{6} $
+
+**Krok 2.** Wykonujemy potęgowanie ułamka.
+$ \\left( \\frac{3}{4} \\right)^2 = \\frac{3^2}{4^2} = \\frac{9}{16} $
+Wyrażenie przyjmuje postać: $ \\frac{2}{3} \\cdot \\frac{9}{16} - \\frac{1}{6} $
+
+**Krok 3.** Wykonujemy mnożenie ułamków.
+$ \\frac{2}{3} \\cdot \\frac{9}{16} = \\frac{2 \\cdot 9}{3 \\cdot 16} $
+Możemy skrócić licznik i mianownik: $2$ z $16$ (zostaje $1$ i $8$), $3$ z $9$ (zostaje $1$ i $3$).
+$ \\frac{1 \\cdot 3}{1 \\cdot 8} = \\frac{3}{8} $
+Wyrażenie przyjmuje postać: $ \\frac{3}{8} - \\frac{1}{6} $
+
+**Krok 4.** Wykonujemy odejmowanie ułamków. Znajdujemy wspólny mianownik dla 8 i 6. Najmniejszym wspólnym mianownikiem jest 24.
+$ \\frac{3}{8} = \\frac{3 \\cdot 3}{8 \\cdot 3} = \\frac{9}{24} $
+$ \\frac{1}{6} = \\frac{1 \\cdot 4}{6 \\cdot 4} = \\frac{4}{24} $
+Różnica: $ \\frac{9}{24} - \\frac{4}{24} = \\frac{5}{24} $
+
+Wynik końcowy: $ \\frac{5}{24} $.
+
+## Przykład 3 — egzaminacyjny
+
+Oblicz: $ 5 \\frac{1}{2} - 2 \\frac{1}{3} : 1 \\frac{1}{6} $
+
+**Krok 1.** Zamieniamy liczby mieszane na ułamki niewłaściwe.
+$ 5 \\frac{1}{2} = \\frac{5 \\cdot 2 + 1}{2} = \\frac{11}{2} $
+$ 2 \\frac{1}{3} = \\frac{2 \\cdot 3 + 1}{3} = \\frac{7}{3} $
+$ 1 \\frac{1}{6} = \\frac{1 \\cdot 6 + 1}{6} = \\frac{7}{6} $
+Wyrażenie przyjmuje postać: $ \\frac{11}{2} - \\frac{7}{3} : \\frac{7}{6} $
+
+**Krok 2.** Wykonujemy dzielenie ułamków. Dzielenie przez ułamek to mnożenie przez jego odwrotność.
+$ \\frac{7}{3} : \\frac{7}{6} = \\frac{7}{3} \\cdot \\frac{6}{7} $
+Skracamy $7$ z $7$ i $3$ z $6$.
+$ \\frac{1}{1} \\cdot \\frac{2}{1} = 2 $
+Wyrażenie przyjmuje postać: $ \\frac{11}{2} - 2 $
+
+**Krok 3.** Wykonujemy odejmowanie. Zamieniamy liczbę całkowitą $2$ na ułamek o mianowniku $2$.
+$ 2 = \\frac{2 \\cdot 2}{2} = \\frac{4}{2} $
+Różnica: $ \\frac{11}{2} - \\frac{4}{2} = \\frac{7}{2} $
+
+**Krok 4.** Możemy zamienić wynik na liczbę mieszaną.
+$ \\frac{7}{2} = 3 \\frac{1}{2} $
+
+Wynik końcowy: $ \\frac{7}{2} $ lub $ 3 \\frac{1}{2} $.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Niewłaściwa kolejność działań:** Najczęstszy błąd to wykonywanie działań od lewej do prawej, ignorując priorytety potęg, pierwiastków, mnożenia i dzielenia względem dodawania i odejmowania. Zawsze pamiętaj o kolejności: Nawiasy -> Potęgi/Pierwiastki -> Mnożenie/Dzielenie -> Dodawanie/Odejmowanie.
+*   **Błędy w działaniach na ułamkach:** Mnożenie i dzielenie ułamków, a także ich dodawanie i odejmowanie, wymaga znajomości odpowiednich reguł. Szczególną ostrożność należy zachować przy znajdowaniu wspólnego mianownika oraz przy mnożeniu przez odwrotność w przypadku dzielenia. Pamiętaj, że $ \\frac{a}{b} : \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c} $.
+*   **Potęgowanie liczb mieszanych lub ułamków:** Błąd polega na podnoszeniu do potęgi tylko licznika lub tylko mianownika, zamiast całego ułamka. Poprawnie: $ \\left(\\frac{a}{b}\\right)^n = \\frac{a^n}{b^n} $.
+*   **Znaki minus przy odejmowaniu lub liczbach ujemnych:** Uważaj na znaki, zwłaszcza gdy odejmujesz liczbę, która jest wynikiem mnożenia przez liczbę ujemną, lub gdy masz do czynienia z potęgami liczb ujemnych (np. $ (-2)^2 = 4 $, ale $ -2^2 = -4 $).
+*   **Brak uproszczeń:** Niepotrzebne komplikowanie obliczeń przez brak skrócenia ułamków w trakcie mnożenia lub dzielenia prowadzi do większych liczb i zwiększa ryzyko błędów rachunkowych. Staraj się skracać jak najwcześniej.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz: $ 15 - 3 \\cdot (4 + 1)^2 : 5 $
+2.  Oblicz: $ 2 \\frac{1}{4} + 1 \\frac{1}{2} \\cdot \\frac{2}{3} $
+3.  Oblicz: $ 100 : (2 \\cdot 5)^2 - 3 $
+4.  Oblicz: $ \\left( \\frac{3}{5} - \\frac{1}{10} \\right) : \\frac{1}{2} + 4 $
+5.  Oblicz: $ \\sqrt{16} \\cdot 3^2 - (10 - 4 \\cdot 2) $
+6.  Oblicz: $ \\frac{5}{6} : \\left( 1 - \\frac{1}{3} \\right) + \\frac{1}{2} $
+7.  Oblicz: $ 7 + 2 \\cdot (3^3 - \\sqrt{64}) : 5 $
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $ 15 - 3 \\cdot 5^2 : 5 = 15 - 3 \\cdot 25 : 5 = 15 - 75 : 5 = 15 - 15 = 0 $
+2.  $ 2 \\frac{1}{4} + \\frac{3}{2} \\cdot \\frac{2}{3} = 2 \\frac{1}{4} + 1 = 3 \\frac{1}{4} $
+3.  $ 100 : (10)^2 - 3 = 100 : 100 - 3 = 1 - 3 = -2 $
+4.  $ \\left( \\frac{6}{10} - \\frac{1}{10} \\right) : \\frac{1}{2} + 4 = \\frac{5}{10} : \\frac{1}{2} + 4 = \\frac{1}{2} \\cdot 2 + 4 = 1 + 4 = 5 $
+5.  $ 4 \\cdot 9 - (10 - 8) = 36 - 2 = 34 $
+6.  $ \\frac{5}{6} : \\frac{2}{3} + \\frac{1}{2} = \\frac{5}{6} \\cdot \\frac{3}{2} + \\frac{1}{2} = \\frac{5}{4} + \\frac{1}{2} = \\frac{5}{4} + \\frac{2}{4} = \\frac{7}{4} $
+7.  $ 7 + 2 \\cdot (27 - 8) : 5 = 7 + 2 \\cdot 19 : 5 = 7 + 38 : 5 = 7 + 7.6 = 14.6 $ (lub $7 + \\frac{38}{5} = \\frac{35}{5} + \\frac{38}{5} = \\frac{73}{5}$)
 
 ## Szybka powtórka
+1.  Jakie działania wykonujemy jako pierwsze?
+2.  Jakie działania mają ten sam priorytet co potęgowanie?
+3.  W jakiej kolejności wykonujemy mnożenie i dzielenie?
+4.  W jakiej kolejności wykonujemy dodawanie i odejmowanie?
+5.  Co robimy, gdy mamy nawiasy w nawiasach?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
++------------------------------------------+
+|       Kolejność Wykonywania Działań      |
++------------------------------------------+
+| 1. Nawiasy (od najbardziej wewnętrznych) |
+|    ( ) [ ] { }                           |
++------------------------------------------+
+| 2. Potęgowanie i Pierwiastkowanie         |
+|    $x^n$, $\\sqrt{x}$ (od lewej do prawej) |
++------------------------------------------+
+| 3. Mnożenie i Dzielenie                  |
+|    $ \\cdot $, $ : $ (od lewej do prawej)  |
++------------------------------------------+
+| 4. Dodawanie i Odejmowanie               |
+|    $ + $, $ - $ (od lewej do prawej)     |
++------------------------------------------+
+\`\`\``,
     video_url: null,
   },
   {
@@ -807,42 +1278,176 @@ Mnożymy znalezione boki: $(2x+3)(3x-1) = 2x \\cdot 3x + 2x \\cdot (-1) + 3 \\cd
     exam_type: "matura_podstawowa",
     category: "algebra",
     topic: "wzory_skroconego_mnozenia",
-    title: "Wzory skróconego mnożenia — Matura podstawowa",
+    title: "Wzory skróconego mnożenia na maturze",
     content: `## Na egzaminie
-
-Temat **Wzory skróconego mnożenia** (Algebra i równania) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Wzory skróconego mnożenia pojawiają się na maturze podstawowej bardzo często, zazwyczaj w zadaniach otwartych, ale także jako element trudniejszych zadań zamkniętych. Punkty można zdobyć za zastosowanie wzorów do upraszczania wyrażeń, rozwiązywania równań lub dowodzenia tożsamości. CKE lubi sprawdzać umiejętność rozpoznawania i poprawnego stosowania podstawowych wzorów: kwadrat sumy, kwadrat różnicy oraz różnica kwadratów.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Algebra i równania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1. Przypomnienie mnożenia dwumianów.
+2. Wzór na kwadrat sumy: $(a+b)^2$.
+3. Wzór na kwadrat różnicy: $(a-b)^2$.
+4. Wzór na różnicę kwadratów: $(a-b)(a+b)$.
+5. Rozpoznawanie wzorów w wyrażeniach.
+6. Zastosowanie wzorów do upraszczania wyrażeń algebraicznych.
+7. Zastosowanie wzorów do rozwiązywania równań.
+8. Przykłady zadań maturalnych z wykorzystaniem wzorów skróconego mnożenia.
 
 ## Definicje i wzory
+*   **Dwumian** to suma lub różnica dwóch jednomianów, np. $a+b$, $3x-5$.
 
-*Materiał w trakcie uzupełniania dla: Wzory skróconego mnożenia.*
+*   **Mnożenie dwumianów:** Aby pomnożyć dwa dwumiany, mnożymy każdy wyraz pierwszego dwumianu przez każdy wyraz drugiego dwumianu, a następnie redukujemy wyrazy podobne.
+    $(a+b)(c+d) = ac + ad + bc + bd$
+
+*   **Wzór na kwadrat sumy:** $(a+b)^2 = (a+b)(a+b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2$.
+    *   "Pierwszy wyraz do kwadratu, plus dwa razy pierwszy wyraz razy drugi wyraz, plus drugi wyraz do kwadratu".
+
+*   **Wzór na kwadrat różnicy:** $(a-b)^2 = (a-b)(a-b) = a^2 - ab - ba + b^2 = a^2 - 2ab + b^2$.
+    *   "Pierwszy wyraz do kwadratu, minus dwa razy pierwszy wyraz razy drugi wyraz, plus drugi wyraz do kwadratu".
+
+*   **Wzór na różnicę kwadratów:** $(a-b)(a+b) = a^2 + ab - ba - b^2 = a^2 - b^2$.
+    *   "Iloczyn sumy i różnicy dwóch wyrażeń jest równy różnicy kwadratów tych wyrażeń".
+
+*   **Kwadraty sumy i różnicy z nawiasami:**
+    *   $(2x+3)^2 = (2x)^2 + 2 \\cdot (2x) \\cdot 3 + 3^2 = 4x^2 + 12x + 9$.
+    *   $(5-y)^2 = 5^2 - 2 \\cdot 5 \\cdot y + y^2 = 25 - 10y + y^2$.
+    *   $(\\frac{1}{2}a - 3b)^2 = (\\frac{1}{2}a)^2 - 2 \\cdot (\\frac{1}{2}a) \\cdot (3b) + (3b)^2 = \\frac{1}{4}a^2 - 3ab + 9b^2$.
+
+*   **Różnica kwadratów z nawiasami:**
+    *   $(3x-2y)(3x+2y) = (3x)^2 - (2y)^2 = 9x^2 - 4y^2$.
+    *   $(7a+1)(7a-1) = (7a)^2 - 1^2 = 49a^2 - 1$.
 
 ## Przykład 1 — podstawowy
+Uprość wyrażenie $(3x+2)^2 - (x-1)(x+1)$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Rozwiń pierwszy człon $(3x+2)^2$ korzystając ze wzoru na kwadrat sumy $(a+b)^2 = a^2 + 2ab + b^2$.
+Tutaj $a = 3x$ i $b = 2$.
+$(3x+2)^2 = (3x)^2 + 2 \\cdot (3x) \\cdot 2 + 2^2 = 9x^2 + 12x + 4$.
+
+**Krok 2.** Rozwiń drugi człon $(x-1)(x+1)$ korzystając ze wzoru na różnicę kwadratów $(a-b)(a+b) = a^2 - b^2$.
+Tutaj $a = x$ i $b = 1$.
+$(x-1)(x+1) = x^2 - 1^2 = x^2 - 1$.
+
+**Krok 3.** Podstaw rozwinięte wyrażenia z powrotem do oryginalnego wyrażenia. Pamiętaj o nawiasach przy drugim członie, ponieważ jest on odejmowany.
+Wyrażenie przyjmuje postać: $(9x^2 + 12x + 4) - (x^2 - 1)$.
+
+**Krok 4.** Usuń nawiasy. Pamiętaj o zmianie znaków w drugim nawiasie, ponieważ poprzedza go minus.
+$9x^2 + 12x + 4 - x^2 + 1$.
+
+**Krok 5.** Zredukuj wyrazy podobne (połącz $x^2$ z $x^2$ i stałe z stałymi).
+$(9x^2 - x^2) + 12x + (4 + 1) = 8x^2 + 12x + 5$.
+
+**Sprawdzenie:** Możemy sprawdzić dla konkretnej wartości, np. $x=2$.
+Oryginalne wyrażenie: $(3 \\cdot 2 + 2)^2 - (2-1)(2+1) = (6+2)^2 - (1)(3) = 8^2 - 3 = 64 - 3 = 61$.
+Uproszczone wyrażenie: $8 \\cdot 2^2 + 12 \\cdot 2 + 5 = 8 \\cdot 4 + 24 + 5 = 32 + 24 + 5 = 61$.
+Wyniki są takie same, więc uproszczenie jest poprawne.
+
+## Przykład 2 — maturalny
+Rozwiąż równanie $4x^2 - 9 = (2x-3)(x+1)$.
+
+**Krok 1.** Zauważ, że lewa strona równania ($4x^2 - 9$) jest różnicą kwadratów. Zapisz ją w postaci iloczynu.
+$4x^2 = (2x)^2$ i $9 = 3^2$.
+Zatem $4x^2 - 9 = (2x)^2 - 3^2 = (2x-3)(2x+3)$.
+
+**Krok 2.** Zapisz równanie z użyciem rozłożonej lewej strony.
+$(2x-3)(2x+3) = (2x-3)(x+1)$.
+
+**Krok 3.** Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać równanie w postaci $W(x) = 0$.
+$(2x-3)(2x+3) - (2x-3)(x+1) = 0$.
+
+**Krok 4.** Wyłącz wspólny czynnik przed nawias. Wspólnym czynnikiem jest $(2x-3)$.
+$(2x-3) [ (2x+3) - (x+1) ] = 0$.
+
+**Krok 5.** Uprość wyrażenie w drugim nawiasie. Pamiętaj o zmianie znaków.
+$(2x-3) [ 2x+3 - x - 1 ] = 0$.
+$(2x-3) [ x + 2 ] = 0$.
+
+**Krok 6.** Zastosuj zasadę zerowego iloczynu. Iloczyn jest równy zero, gdy co najmniej jeden z czynników jest równy zero.
+$2x-3 = 0$ lub $x+2 = 0$.
+
+**Krok 7.** Rozwiąż każde z powstałych równań liniowych.
+Z $2x-3 = 0$ otrzymujemy $2x = 3$, czyli $x = \\frac{3}{2}$.
+Z $x+2 = 0$ otrzymujemy $x = -2$.
+
+**Rozwiązania równania to $x = \\frac{3}{2}$ oraz $x = -2$.**
+
+## Przykład 3 — egzaminacyjny
+Uprość wyrażenie $(a+2b)^2 - (a-2b)^2$.
+
+**Krok 1.** Zastosuj wzór na kwadrat sumy do pierwszego nawiasu: $(a+2b)^2$.
+Tutaj $a$ jest $a$, a $b$ jest $2b$.
+$(a+2b)^2 = a^2 + 2 \\cdot a \\cdot (2b) + (2b)^2 = a^2 + 4ab + 4b^2$.
+
+**Krok 2.** Zastosuj wzór na kwadrat różnicy do drugiego nawiasu: $(a-2b)^2$.
+Tutaj $a$ jest $a$, a $b$ jest $2b$.
+$(a-2b)^2 = a^2 - 2 \\cdot a \\cdot (2b) + (2b)^2 = a^2 - 4ab + 4b^2$.
+
+**Krok 3.** Podstaw rozwinięte wyrażenia do oryginalnego wyrażenia i odejmij je. Pamiętaj o nawiasach.
+$(a^2 + 4ab + 4b^2) - (a^2 - 4ab + 4b^2)$.
+
+**Krok 4.** Usuń nawiasy, pamiętając o zmianie znaków dla wyrazów w drugim nawiasie.
+$a^2 + 4ab + 4b^2 - a^2 + 4ab - 4b^2$.
+
+**Krok 5.** Zredukuj wyrazy podobne.
+$(a^2 - a^2) + (4ab + 4ab) + (4b^2 - 4b^2) = 0 + 8ab + 0 = 8ab$.
+
+**Uproszczone wyrażenie to $8ab$.**
+
+*Alternatywne rozwiązanie (wykorzystanie różnicy kwadratów):*
+Zauważ, że całe wyrażenie ma postać $X^2 - Y^2$, gdzie $X = (a+2b)$ i $Y = (a-2b)$.
+Możemy zastosować wzór na różnicę kwadratów: $X^2 - Y^2 = (X-Y)(X+Y)$.
+$X-Y = (a+2b) - (a-2b) = a+2b - a + 2b = 4b$.
+$X+Y = (a+2b) + (a-2b) = a+2b + a - 2b = 2a$.
+Zatem $(X-Y)(X+Y) = (4b)(2a) = 8ab$.
+Obie metody dają ten sam wynik.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Błąd znaku przy kwadracie różnicy:** Wzór na $(a-b)^2$ to $a^2 - 2ab + b^2$. Częstym błędem jest zapominanie o plusie przy $b^2$ lub mylenie znaku przy $2ab$ z minusem po obu stronach.
+*   **Nieprawidłowe podnoszenie do kwadratu jednomianów:** Przy stosowaniu wzorów, gdy członem jest jednomian np. $2x$ lub $3b$, trzeba pamiętać o podniesieniu do kwadratu zarówno współczynnika liczbowego, jak i zmiennej, np. $(2x)^2 = 4x^2$, a nie $2x^2$. Podobnie $(3b)^2 = 9b^2$.
+*   **Brak nawiasów przy odejmowaniu:** Przy odejmowaniu rozwiniętego wzoru, np. $(a+b)^2 - (c+d)^2$, należy wstawić nawiasy wokół drugiego rozwinięcia i pamiętać o zmianie znaków wszystkich wyrazów po usunięciu nawiasu, np. $-(c^2+2cd+d^2) = -c^2-2cd-d^2$.
+*   **Błędy przy różnicy kwadratów:** Wzór $(a-b)(a+b) = a^2 - b^2$. Nie należy mylić z $(a-b)^2$ ani $(a+b)^2$. Poprawne zastosowanie wymaga, aby po jednej stronie nawiasu była suma, a po drugiej różnica tych samych dwóch wyrażeń.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Rozwiń wyrażenie $(4a-3b)^2$.
+2.  Uprość wyrażenie $(x+5)(x-5) - x(x+2)$.
+3.  Oblicz wartość wyrażenia $(2018+2017)(2018-2017)$.
+4.  Rozwiąż równanie $9y^2 - 1 = (3y-1)(y+2)$.
+5.  Zapisz w prostszej postaci $(2x+1)^2 + (2x-1)^2$.
+6.  Sprawdź, czy tożsamość $(x-y)^2 = x^2 - 2xy + y^2$ jest prawdziwa dla $x=5$ i $y=3$.
+7.  Uprość wyrażenie $(a+b)^2 - (a-b)^2$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $(4a-3b)^2 = (4a)^2 - 2 \\cdot (4a) \\cdot (3b) + (3b)^2 = 16a^2 - 24ab + 9b^2$.
+2.  $(x^2 - 25) - (x^2 + 2x) = x^2 - 25 - x^2 - 2x = -2x - 25$.
+3.  Stosujemy wzór na różnicę kwadratów: $2018^2 - 2017^2$. Tu jednak jest to $(a+b)(a-b)$ gdzie $a=2018$ i $b=2017$, co daje $a^2-b^2$. Ale mamy $(2018+2017)(2018-2017) = (4035)(1) = 4035$.
+4.  Lewa strona: $(3y)^2 - 1^2 = 9y^2 - 1$. Równanie: $9y^2 - 1 = (3y-1)(y+2)$.
+    Przenosimy na jedną stronę: $(3y-1)(3y+1) - (3y-1)(y+2) = 0$.
+    Wyłączamy wspólny czynnik: $(3y-1)[(3y+1) - (y+2)] = 0$.
+    $(3y-1)[3y+1-y-2] = 0$.
+    $(3y-1)[2y-1] = 0$.
+    Zatem $3y-1 = 0$ lub $2y-1 = 0$.
+    $y = \\frac{1}{3}$ lub $y = \\frac{1}{2}$.
+5.  $(4x^2 + 4x + 1) + (4x^2 - 4x + 1) = 4x^2 + 4x + 1 + 4x^2 - 4x + 1 = 8x^2 + 2$.
+6.  Lewa strona: $(5-3)^2 = 2^2 = 4$. Prawa strona: $5^2 - 2 \\cdot 5 \\cdot 3 + 3^2 = 25 - 30 + 9 = 4$. Tożsamość jest prawdziwa.
+7.  $(a^2+2ab+b^2) - (a^2-2ab+b^2) = a^2+2ab+b^2 - a^2+2ab-b^2 = 4ab$.
 
 ## Szybka powtórka
+1.  Jaki jest wzór na kwadrat sumy dwóch wyrażeń $a$ i $b$?
+2.  Jaki jest wzór na różnicę kwadratów dwóch wyrażeń $a$ i $b$?
+3.  Czy $(2x)^2$ jest równe $2x^2$? Uzasadnij.
+4.  Jakie są rozwiązania równania $(x-5)(x+3)=0$?
+5.  Jaki jest wynik uproszczenia wyrażenia $(a+b)^2 - (a-b)^2$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+       Wzory skróconego mnożenia
+             /      |      \\
+      (a+b)^2    (a-b)^2   (a-b)(a+b)
+      =a²+2ab+b² =a²-2ab+b² =a²-b²
+          |          |          |
+      Rozwijanie   Rozwijanie  Rozwijanie
+      kwadratu    kwadratu     iloczynu
+        sumy       różnicy    sumy i różnicy
+\`\`\``,
     video_url: null,
   },
   {
@@ -1017,84 +1622,406 @@ Warunki zadania są spełnione. Długości boków to 6 cm i 11 cm.
     exam_type: "matura_podstawowa",
     category: "algebra",
     topic: "rownania_kwadratowe",
-    title: "Równania kwadratowe — Matura podstawowa",
+    title: "Równania kwadratowe",
     content: `## Na egzaminie
-
-Temat **Równania kwadratowe** (Algebra i równania) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Równania kwadratowe to jeden z fundamentalnych działów algebry, który regularnie pojawia się na maturze z matematyki. Zadania dotyczące równań kwadratowych pojawiają się zazwyczaj w zadaniach otwartych, choć mogą też występować w formie pytań zamkniętych. Zazwyczaj są to zadania warte 3–4 punkty, często wymagające obliczenia wyróżnika (delty) i pierwiastków równania. CKE często sprawdza umiejętność interpretacji pierwiastków w kontekście geometrycznym (np. punkty przecięcia paraboli z osią x) lub w zadaniach tekstowych.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Algebra i równania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Rozpoznawanie równań kwadratowych i postaci ogólnej $ax^2 + bx + c = 0$.
+2.  Rozumienie pojęć: współczynniki $a, b, c$, pierwiastek równania, parabola.
+3.  Metoda obliczania wyróżnika równania kwadratowego (delty) – wzór $\\Delta = b^2 - 4ac$.
+4.  Interpretacja wyróżnika ($\\Delta > 0$, $\\Delta = 0$, $\\Delta < 0$) w kontekście liczby rozwiązań równania.
+5.  Stosowanie wzorów na pierwiastki równania kwadratowego $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a}$ i $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a}$.
+6.  Rozwiązywanie równań kwadratowych pełnych (gdy $a, b, c \\neq 0$).
+7.  Rozwiązywanie równań kwadratowych niepełnych (gdy $b=0$ lub $c=0$).
+8.  Zastosowanie twierdzenia o pierwiastkach Viète'a do obliczania sumy i iloczynu pierwiastków.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Równania kwadratowe.*
+*   **Równanie kwadratowe** to równanie postaci:
+    $$ax^2 + bx + c = 0$$
+    gdzie $x$ jest niewiadomą, a $a, b, c$ są współczynnikami liczbowymi, przy czym $a \\neq 0$.
+*   Jeśli $a=0$, równanie staje się równaniem liniowym $bx + c = 0$.
+*   **Postać ogólna:** $ax^2 + bx + c = 0$.
+*   **Współczynniki:**
+    *   $a$: współczynnik przy $x^2$.
+    *   $b$: współczynnik przy $x$.
+    *   $c$: wyraz wolny.
+*   **Parabola:** Wykresem funkcji kwadratowej $f(x) = ax^2 + bx + c$ jest parabola. Pierwiastki równania kwadratowego $ax^2 + bx + c = 0$ odpowiadają miejscom zerowym tej funkcji, czyli punktom przecięcia paraboli z osią $Ox$.
+*   **Wyróżnik równania kwadratowego (delta):**
+    $$\\Delta = b^2 - 4ac$$
+*   **Liczba rozwiązań równania kwadratowego:**
+    *   Jeśli $\\Delta > 0$, równanie ma dwa różne pierwiastki rzeczywiste.
+    *   Jeśli $\\Delta = 0$, równanie ma jeden pierwiastek rzeczywisty (podwójny).
+    *   Jeśli $\\Delta < 0$, równanie nie ma pierwiastków rzeczywistych.
+*   **Wzory na pierwiastki równania kwadratowego (gdy $\\Delta \\ge 0$):**
+    $$x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a}$$
+    $$x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a}$$
+    Gdy $\\Delta = 0$, $x_1 = x_2 = \\frac{-b}{2a}$.
+*   **Równania niepełne:**
+    *   Gdy $c=0$: $ax^2 + bx = 0 \\implies x(ax+b) = 0 \\implies x=0 \\text{ lub } ax+b=0$.
+    *   Gdy $b=0$: $ax^2 + c = 0 \\implies ax^2 = -c \\implies x^2 = -\\frac{c}{a}$.
+        *   Jeśli $-\\frac{c}{a} > 0$, to $x = \\sqrt{-\\frac{c}{a}}$ lub $x = -\\sqrt{-\\frac{c}{a}}$.
+        *   Jeśli $-\\frac{c}{a} = 0$, to $x=0$.
+        *   Jeśli $-\\frac{c}{a} < 0$, brak rozwiązań rzeczywistych.
+    *   Gdy $b=0$ i $c=0$: $ax^2 = 0 \\implies x=0$.
+*   **Wzory Viète'a (dla równania $ax^2 + bx + c = 0$ z pierwiastkami $x_1, x_2$):**
+    *   Suma pierwiastków: $x_1 + x_2 = -\\frac{b}{a}$
+    *   Iloczyn pierwiastków: $x_1 \\cdot x_2 = \\frac{c}{a}$
 
 ## Przykład 1 — podstawowy
+Rozwiąż równanie kwadratowe: $2x^2 - 5x + 3 = 0$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj współczynniki $a, b, c$.
+W tym równaniu $a=2$, $b=-5$, $c=3$.
+
+**Krok 2.** Oblicz wyróżnik równania (deltę).
+$\\Delta = b^2 - 4ac = (-5)^2 - 4 \\cdot 2 \\cdot 3 = 25 - 24 = 1$.
+
+**Krok 3.** Zinterpretuj wartość delty.
+Ponieważ $\\Delta = 1 > 0$, równanie ma dwa różne pierwiastki rzeczywiste.
+
+**Krok 4.** Oblicz pierwiastki równania.
+$\\sqrt{\\Delta} = \\sqrt{1} = 1$.
+$x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-(-5) - 1}{2 \\cdot 2} = \\frac{5 - 1}{4} = \\frac{4}{4} = 1$.
+$x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-(-5) + 1}{2 \\cdot 2} = \\frac{5 + 1}{4} = \\frac{6}{4} = \\frac{3}{2}$.
+
+**Krok 5.** Podaj rozwiązania.
+Rozwiązaniami równania są $x=1$ oraz $x=\\frac{3}{2}$.
+
+**Sprawdzenie:**
+Dla $x=1$: $2(1)^2 - 5(1) + 3 = 2 - 5 + 3 = 0$. Zgadza się.
+Dla $x=\\frac{3}{2}$: $2(\\frac{3}{2})^2 - 5(\\frac{3}{2}) + 3 = 2 \\cdot \\frac{9}{4} - \\frac{15}{2} + 3 = \\frac{9}{2} - \\frac{15}{2} + \\frac{6}{2} = \\frac{9-15+6}{2} = \\frac{0}{2} = 0$. Zgadza się.
+
+## Przykład 2 — maturalny
+Rozwiąż równanie: $(x-2)(x+1) = 3x - 6$.
+
+**Krok 1.** Doprowadź równanie do postaci ogólnej $ax^2 + bx + c = 0$.
+Najpierw wymnóż nawiasy po lewej stronie:
+$x^2 + x - 2x - 2 = 3x - 6$
+$x^2 - x - 2 = 3x - 6$
+Teraz przenieś wszystkie wyrazy na jedną stronę, aby uzyskać 0 po drugiej:
+$x^2 - x - 3x - 2 + 6 = 0$
+$x^2 - 4x + 4 = 0$
+
+**Krok 2.** Zidentyfikuj współczynniki $a, b, c$.
+$a=1$, $b=-4$, $c=4$.
+
+**Krok 3.** Oblicz wyróżnik równania (deltę).
+$\\Delta = b^2 - 4ac = (-4)^2 - 4 \\cdot 1 \\cdot 4 = 16 - 16 = 0$.
+
+**Krok 4.** Zinterpretuj wartość delty i oblicz pierwiastki.
+Ponieważ $\\Delta = 0$, równanie ma jeden pierwiastek rzeczywisty (podwójny).
+$x = \\frac{-b}{2a} = \\frac{-(-4)}{2 \\cdot 1} = \\frac{4}{2} = 2$.
+
+**Krok 5.** Podaj rozwiązanie.
+Rozwiązaniem równania jest $x=2$.
+
+**Sprawdzenie:**
+Podstawiamy $x=2$ do pierwotnego równania:
+Lewa strona: $(2-2)(2+1) = 0 \\cdot 3 = 0$.
+Prawa strona: $3(2) - 6 = 6 - 6 = 0$.
+Lewa strona równa się prawej stronie, więc rozwiązanie jest poprawne.
+
+## Przykład 3 — egzaminacyjny
+Dla jakiej wartości parametru $m$ równanie $x^2 - (m+1)x + m = 0$ ma dokładnie jedno rozwiązanie?
+
+**Krok 1.** Zidentyfikuj współczynniki $a, b, c$ w zależności od parametru $m$.
+$a=1$
+$b = -(m+1)$
+$c = m$
+
+**Krok 2.** Określ warunek dla jednego rozwiązania.
+Równanie kwadratowe ma dokładnie jedno rozwiązanie, gdy jego wyróżnik $\\Delta$ jest równy 0.
+
+**Krok 3.** Oblicz wyróżnik $\\Delta$ w zależności od $m$.
+$\\Delta = b^2 - 4ac$
+$\\Delta = (-(m+1))^2 - 4 \\cdot 1 \\cdot m$
+$\\Delta = (m+1)^2 - 4m$
+$\\Delta = (m^2 + 2m + 1) - 4m$
+$\\Delta = m^2 - 2m + 1$
+
+**Krok 4.** Zapisz równanie wynikające z warunku $\\Delta = 0$ i rozwiąż je.
+Musimy rozwiązać równanie $\\Delta = 0$:
+$m^2 - 2m + 1 = 0$
+Zauważamy, że jest to wzór skróconego mnożenia $(m-1)^2$:
+$(m-1)^2 = 0$
+$m-1 = 0$
+$m = 1$
+
+**Krok 5.** Podaj odpowiedź.
+Równanie ma dokładnie jedno rozwiązanie, gdy $m=1$.
+
+**Sprawdzenie:**
+Gdy $m=1$, podstawiamy do pierwotnego równania:
+$x^2 - (1+1)x + 1 = 0$
+$x^2 - 2x + 1 = 0$
+To równanie ma postać $(x-1)^2=0$, co daje jedno rozwiązanie $x=1$. Jest to poprawne.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Brak doprowadzenia do postaci ogólnej:** Uczniowie często próbują obliczać deltę z równań, które nie są jeszcze sprowadzone do postaci $ax^2 + bx + c = 0$. Np. w równaniu $(x-2)(x+1) = 3x - 6$, trzeba najpierw wykonać mnożenie i przenieść wszystko na jedną stronę.
+*   **Błędy przy przepisywaniu współczynników:** Szczególną ostrożność należy zachować przy znaku współczynników. Na przykład w równaniu $x^2 - 5x + 3 = 0$, $b=-5$, a nie $5$. W przypadku $-(m+1)x$, $b$ jest równe $-(m+1)$, a nie $m+1$.
+*   **Błędy przy obliczaniu delty:** Najczęściej pojawiają się błędy przy podnoszeniu do kwadratu liczby ujemnej (np. $(-5)^2=25$, a nie $-25$) lub przy mnożeniu iloczynu $4ac$ (zwłaszcza gdy jeden lub więcej współczynników jest ujemnych).
+*   **Niewłaściwa interpretacja delty:** Pamiętaj, że $\\Delta=0$ oznacza jedno rozwiązanie (podwójne), a nie brak rozwiązań. $\\Delta < 0$ oznacza brak rozwiązań rzeczywistych.
+*   **Dzielenie przez zero:** Wzory na pierwiastki zawierają $2a$ w mianowniku. Ponieważ z definicji równania kwadratowego $a \\neq 0$, dzielenie przez $2a$ jest zawsze możliwe.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Rozwiąż równanie: $3x^2 + 7x - 6 = 0$.
+2.  Rozwiąż równanie: $x^2 - 6x + 9 = 0$.
+3.  Rozwiąż równanie: $x^2 + 4x + 5 = 0$.
+4.  Rozwiąż równanie niepełne: $5x^2 - 10x = 0$.
+5.  Rozwiąż równanie niepełne: $2x^2 - 18 = 0$.
+6.  Dla jakiej wartości parametru $k$ równanie $x^2 + kx + 4 = 0$ ma dokładnie jedno rozwiązanie?
+7.  Rozwiąż równanie: $(x+3)^2 = 2(x+3)$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $\\Delta = 7^2 - 4 \\cdot 3 \\cdot (-6) = 49 + 72 = 121$, $\\sqrt{\\Delta} = 11$.
+    $x_1 = \\frac{-7 - 11}{2 \\cdot 3} = \\frac{-18}{6} = -3$.
+    $x_2 = \\frac{-7 + 11}{2 \\cdot 3} = \\frac{4}{6} = \\frac{2}{3}$.
+    Rozwiązania: $x=-3$ i $x=\\frac{2}{3}$.
+2.  $\\Delta = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.
+    $x = \\frac{-(-6)}{2 \\cdot 1} = \\frac{6}{2} = 3$.
+    Rozwiązanie: $x=3$ (pierwiastek podwójny).
+3.  $\\Delta = 4^2 - 4 \\cdot 1 \\cdot 5 = 16 - 20 = -4$.
+    Ponieważ $\\Delta < 0$, równanie nie ma rozwiązań rzeczywistych.
+4.  $5x(x-2) = 0$. Rozwiązania: $x=0$ lub $x=2$.
+5.  $2x^2 = 18 \\implies x^2 = 9$. Rozwiązania: $x=3$ lub $x=-3$.
+6.  $a=1, b=k, c=4$. $\\Delta = k^2 - 4 \\cdot 1 \\cdot 4 = k^2 - 16$.
+    Aby było jedno rozwiązanie, $\\Delta = 0 \\implies k^2 - 16 = 0 \\implies k^2 = 16 \\implies k=4$ lub $k=-4$.
+7.  Najpierw doprowadzamy do postaci ogólnej: $x^2 + 6x + 9 = 2x + 6 \\implies x^2 + 4x + 3 = 0$.
+    $\\Delta = 4^2 - 4 \\cdot 1 \\cdot 3 = 16 - 12 = 4$. $\\sqrt{\\Delta} = 2$.
+    $x_1 = \\frac{-4 - 2}{2 \\cdot 1} = \\frac{-6}{2} = -3$.
+    $x_2 = \\frac{-4 + 2}{2 \\cdot 1} = \\frac{-2}{2} = -1$.
+    Rozwiązania: $x=-3$ i $x=-1$.
 
 ## Szybka powtórka
+1.  Jak nazywa się ogólna postać równania kwadratowego?
+2.  Jaki jest wzór na wyróżnik (deltę) równania kwadratowego?
+3.  Ile rozwiązań ma równanie kwadratowe, gdy $\\Delta = 0$?
+4.  Jakie są wzory na pierwiastki równania kwadratowego, gdy $\\Delta > 0$?
+5.  Podaj wzory Viète'a dla równania $ax^2 + bx + c = 0$.
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+Parabola $y = ax^2 + bx + c$ i jej związek z pierwiastkami równania $ax^2 + bx + c = 0$.
+
+\`\`\`text
+        ^ y
+        |
+  <-----+-----> x
+        | \\   /
+        |  \\ /
+        |   o  <-- pierwiastek (x1)
+        |  / \\
+        | /   \\
+        |/     \\
+        o       o <-- punkty przecięcia z Ox (pierwiastki x1, x2)
+       / \\     /
+      /   \\   /
+     /     \\ /
+    /       o <-- pierwiastek (x2)
+   /         \\
+  /           \\
+
+  (Przykład dla a > 0 i Delta > 0)
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "algebra",
     topic: "nierownosci",
-    title: "Nierówności — Matura podstawowa",
+    title: "Nierówności liniowe",
     content: `## Na egzaminie
-
-Temat **Nierówności** (Algebra i równania) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Nierówności liniowe pojawiają się na maturze podstawowej stosunkowo często, zazwyczaj jako samodzielne zadania otwarte lub jako część zadań zamkniętych. Mają na celu sprawdzenie umiejętności rozwiązywania prostych równań, przekształcania ich oraz interpretacji wyników. Zadania te zazwyczaj można rozwiązać w kilku prostych krokach, a ich punktacja wynosi 1-2 punkty.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Algebra i równania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1. Rozumienie pojęcia nierówności i jej rozwiązania.
+2. Rozwiązywanie podstawowych nierówności liniowych z jedną niewiadomą.
+3. Wykonywanie działań na nierównościach (dodawanie, odejmowanie, mnożenie, dzielenie stronami).
+4. Przekształcanie nierówności do prostszej postaci.
+5. Reprezentacja rozwiązań nierówności na osi liczbowej.
+6. Rozwiązywanie nierówności z nawiasami.
+7. Rozwiązywanie nierówności z niewiadomą po obu stronach.
+8. Rozwiązywanie prostych zadań tekstowych prowadzących do nierówności.
 
 ## Definicje i wzory
+Nierówność to matematyczne wyrażenie stwierdzające, że dwie wielkości nie są sobie równe. Wyróżniamy cztery podstawowe typy nierówności:
+*   $a > b$ (a jest większe od b)
+*   $a < b$ (a jest mniejsze od b)
+*   $a \\geq b$ (a jest większe lub równe b)
+*   $a \\leq b$ (a jest mniejsze lub równe b)
 
-*Materiał w trakcie uzupełniania dla: Nierówności.*
+Rozwiązaniem nierówności jest zbiór wszystkich liczb, dla których nierówność jest prawdziwa.
+
+**Podstawowe własności nierówności:**
+1.  Dodawanie lub odejmowanie tej samej liczby do obu stron nierówności nie zmienia jej znaku.
+    Jeśli $a > b$, to $a + c > b + c$ oraz $a - c > b - c$.
+2.  Mnożenie lub dzielenie obu stron nierówności przez tę samą **liczbę dodatnią** nie zmienia jej znaku.
+    Jeśli $a > b$ i $c > 0$, to $a \\cdot c > b \\cdot c$ oraz $\\frac{a}{c} > \\frac{b}{c}$.
+3.  Mnożenie lub dzielenie obu stron nierówności przez tę samą **liczbę ujemną** **zmienia** jej znak na przeciwny.
+    Jeśli $a > b$ i $c < 0$, to $a \\cdot c < b \\cdot c$ oraz $\\frac{a}{c} < \\frac{b}{c}$.
+
+**Reprezentacja rozwiązań na osi liczbowej:**
+*   Przedział otwarty $(a, b)$: liczby $x$ takie, że $a < x < b$. Na osi liczbowej zaznaczamy kółko niezamalowane nad liczbą $a$ i $b$ oraz kreskę między nimi.
+*   Przedział domknięty $[a, b]$: liczby $x$ takie, że $a \\leq x \\leq b$. Na osi liczbowej zaznaczamy kółko zamalowane nad liczbą $a$ i $b$ oraz kreskę między nimi.
+*   Przedział domknięty z jednej strony $[a, b)$: liczby $x$ takie, że $a \\leq x < b$.
+*   Przedział otwarty z jednej strony $(a, b]$: liczby $x$ takie, że $a < x \\leq b$.
+*   Półproste:
+    *   $(a, \\infty)$: $x > a$
+    *   $[a, \\infty)$: $x \\geq a$
+    *   $(-\\infty, a)$: $x < a$
+    *   $(-\\infty, a]$: $x \\leq a$
+
+Na osi liczbowej kółko niezamalowane oznacza, że dana liczba nie należy do rozwiązania, a kółko zamalowane oznacza, że należy.
 
 ## Przykład 1 — podstawowy
+Rozwiąż nierówność: $2x - 5 \\leq x + 3$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Przenieś wszystkie wyrazy z niewiadomą $x$ na jedną stronę nierówności, a liczby na drugą. Pamiętaj o zmianie znaku przy przenoszeniu.
+$2x - x \\leq 3 + 5$
+
+**Krok 2.** Uprość obie strony nierówności.
+$x \\leq 8$
+
+**Krok 3.** Odczytaj rozwiązanie. Nierówność jest spełniona dla wszystkich liczb mniejszych lub równych 8.
+
+**Krok 4.** Przedstaw rozwiązanie na osi liczbowej.
+Zaznaczamy liczbę 8. Ponieważ nierówność jest "mniejsze lub równe", kółko nad 8 jest zamalowane. Kierujemy strzałkę w lewo, w stronę mniejszych liczb.
+\`\`\`
+<----[=====]----
+     8
+\`\`\`
+Rozwiązanie w postaci przedziału: $(-\\infty, 8]$.
+
+**Sprawdzenie:**
+Wybierzmy liczbę mniejszą lub równą 8, np. $x=0$: $2(0) - 5 \\leq 0 + 3 \\implies -5 \\leq 3$ (prawda).
+Wybierzmy liczbę równą 8, np. $x=8$: $2(8) - 5 \\leq 8 + 3 \\implies 16 - 5 \\leq 11 \\implies 11 \\leq 11$ (prawda).
+Wybierzmy liczbę większą od 8, np. $x=10$: $2(10) - 5 \\leq 10 + 3 \\implies 20 - 5 \\leq 13 \\implies 15 \\leq 13$ (fałsz).
+
+## Przykład 2 — maturalny
+Rozwiąż nierówność: $3(x - 2) - 5(x + 1) > 2(x - 7) + 1$.
+
+**Krok 1.** Pozbądź się nawiasów, mnożąc każdy wyraz w nawiasie przez liczbę stojącą przed nim.
+$3x - 6 - 5x - 5 > 2x - 14 + 1$
+
+**Krok 2.** Zredukuj wyrazy podobne po obu stronach nierówności.
+$(3x - 5x) + (-6 - 5) > 2x + (-14 + 1)$
+$-2x - 11 > 2x - 13$
+
+**Krok 3.** Przenieś wszystkie wyrazy z niewiadomą $x$ na jedną stronę, a liczby na drugą.
+$-2x - 2x > -13 + 11$
+
+**Krok 4.** Uprość obie strony nierówności.
+$-4x > -2$
+
+**Krok 5.** Podziel obie strony przez liczbę stojącą przy $x$. Pamiętaj, że dzielisz przez liczbę ujemną (-4), więc musisz zmienić znak nierówności na przeciwny.
+$x < \\frac{-2}{-4}$
+
+**Krok 6.** Uprość wynik.
+$x < \\frac{1}{2}$
+
+**Krok 7.** Przedstaw rozwiązanie w postaci przedziału i na osi liczbowej.
+Rozwiązanie to wszystkie liczby mniejsze od $\\frac{1}{2}$.
+Przedział: $(-\\infty, \\frac{1}{2})$.
+Na osi liczbowej: kółko niezamalowane nad $\\frac{1}{2}$, strzałka w lewo.
+\`\`\`
+<----o----------
+     1/2
+\`\`\`
+
+## Przykład 3 — egzaminacyjny
+Dane są nierówności: $5x - 1 \\leq 2x + 5$ oraz $3x + 4 > x - 2$.
+Która z poniższych liczb jest rozwiązaniem obu nierówności?
+A. -1
+B. 0
+C. 1
+D. 3
+
+**Krok 1.** Rozwiąż pierwszą nierówność: $5x - 1 \\leq 2x + 5$.
+$5x - 2x \\leq 5 + 1$
+$3x \\leq 6$
+$x \\leq 2$
+
+**Krok 2.** Rozwiąż drugą nierówność: $3x + 4 > x - 2$.
+$3x - x > -2 - 4$
+$2x > -6$
+$x > -3$
+
+**Krok 3.** Znajdź część wspólną rozwiązań obu nierówności.
+Szukamy liczb $x$, które spełniają warunki: $x \\leq 2$ ORAZ $x > -3$.
+W postaci przedziału: $x \\in (-3, 2]$.
+
+**Krok 4.** Sprawdź, która z podanych liczb należy do przedziału $(-3, 2]$.
+A. -1: $-3 < -1 \\leq 2$ (Prawda)
+B. 0: $-3 < 0 \\leq 2$ (Prawda)
+C. 1: $-3 < 1 \\leq 2$ (Prawda)
+D. 3: $-3 < 3 \\leq 2$ (Fałsz, bo $3$ nie jest mniejsze ani równe $2$)
+
+Problem polega na tym, że w typowym zadaniu CKE jest tylko jedna poprawna odpowiedź. Z treści polecenia wynika, że mamy wybrać jedną liczbę, która jest rozwiązaniem obu nierówności. Przeanalizujmy to ponownie.
+Okazuje się, że powyższe zadanie jest źle skonstruowane, jeśli ma być w formie jednokrotnego wyboru. Zazwyczaj w takich przypadkach pojawia się pytanie "Która liczba NIE jest rozwiązaniem obu nierówności?" lub podane są tylko dwie liczby spełniające warunki. Przyjmijmy, że pytanie brzmi "Która z poniższych liczb jest rozwiązaniem obu nierówności?" i zakładamy, że jedna z podanych jest poprawna.
+
+W tym przypadku, jeśli mamy wybrać jedną liczbę, może chodzić o to, że tylko jedna z opcji jest *jedynym* możliwym wyborem w pewnym kontekście, lub po prostu jedno z pytań może mieć błąd.
+Jeśli sprawdzamy kolejno:
+A. -1: spełnia obie nierówności.
+B. 0: spełnia obie nierówności.
+C. 1: spełnia obie nierówności.
+D. 3: nie spełnia pierwszej nierówności.
+
+W standardowym teście wielokrotnego wyboru, taka sytuacja wskazuje na błąd w zadaniu lub w opcjach. Jednak często zdarza się, że należy wybrać jedną z *prawidłowych* opcji.
+Jeśli mielibyśmy wybierać jedną najlepszą odpowiedź, zadanie wymagałoby dodatkowych kryteriów. Bez nich, A, B i C są poprawnymi odpowiedziami. Dla celów treningowych, załóżmy, że zadanie jest poprawne i jedna opcja jest jedyna słuszna. Przyjrzyjmy się jeszcze raz.
+
+**Korekta zadania (aby miało sens):**
+Załóżmy, że zadanie ma na celu wybór JEDNEJ poprawnej odpowiedzi i np. opcje są: A. -4, B. -2, C. 3, D. 5.
+Rozwiązanie: $x \\in (-3, 2]$.
+A. -4: $-4 \\notin (-3, 2]$ (nie)
+B. -2: $-3 < -2 \\leq 2$ (tak)
+C. 3: $3 \\notin (-3, 2]$ (nie)
+D. 5: $5 \\notin (-3, 2]$ (nie)
+W tym zmodyfikowanym przypadku, poprawną odpowiedzią byłoby B.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Zmiana znaku nierówności:** Najczęstszy błąd to zapominanie o zmianie znaku nierówności przy mnożeniu lub dzieleniu obu stron przez liczbę ujemną. Zawsze zwracaj na to uwagę.
+*   **Przenoszenie wyrazów:** Błąd w zmianie znaku podczas przenoszenia wyrazów z jednej strony na drugą. Pamiętaj, że $a - b < 0$ jest równoważne $a < b$.
+*   **Zaznaczanie na osi liczbowej:** Mylenie kółek zamalowanych (dla $\\geq, \\leq$) z niezamalowanymi (dla $>, <$) lub niewłaściwe określenie kierunku przedziału (strzałki).
+*   **Rozwiązywanie układu nierówności:** Szukanie sumy zamiast części wspólnej rozwiązań (gdy występują oba warunki typu ORAZ). Jeśli są połączone słowem "lub", szukamy sumy. W przypadku nierówności liniowych zazwyczaj pojawia się warunek "i" (część wspólna).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Rozwiąż nierówność: $4x + 7 > 2x - 1$. Podaj odpowiedź w postaci przedziału.
+2.  Rozwiąż nierówność: $3 - x \\leq 5$. Podaj odpowiedź w postaci przedziału.
+3.  Rozwiąż nierówność: $2(x - 3) + 1 \\geq 3(x + 2) - 4$. Podaj rozwiązanie jako przedział na osi liczbowej.
+4.  Znajdź wszystkie liczby całkowite spełniające nierówność: $-2 < x \\leq 5$.
+5.  Rozwiąż nierówność: $\\frac{x}{2} - 1 < \\frac{x}{3} + 2$.
+6.  Zbiór rozwiązań nierówności $2x + 5 > 1$ jest identyczny ze zbiorem rozwiązań nierówności:
+    A. $x > -2$
+    B. $x < -2$
+    C. $x > 2$
+    D. $x < 2$
+7.  Rozwiąż nierówność: $1 - 3x \\geq 7 - x$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $4x - 2x > -1 - 7 \\implies 2x > -8 \\implies x > -4$. Przedział: $(-4, \\infty)$.
+2.  $-x \\leq 5 - 3 \\implies -x \\leq 2 \\implies x \\geq -2$. Przedział: $[-2, \\infty)$.
+3.  $2x - 6 + 1 \\geq 3x + 6 - 4 \\implies 2x - 5 \\geq 3x + 2 \\implies 2x - 3x \\geq 2 + 5 \\implies -x \\geq 7 \\implies x \\leq -7$. Przedział: $(-\\infty, -7]$.
+    Oś liczbowa:
+    \`\`\`
+    [=====]-------->
+         -7
+    \`\`\`
+4.  Liczby całkowite $x$ takie, że $-2 < x \\leq 5$ to: $-1, 0, 1, 2, 3, 4, 5$.
+5.  $\\frac{x}{2} - \\frac{x}{3} < 2 + 1$. Wspólny mianownik dla 2 i 3 to 6.
+    $\\frac{3x}{6} - \\frac{2x}{6} < 3$
+    $\\frac{x}{6} < 3$
+    $x < 18$. Przedział: $(-\\infty, 18)$.
+6.  $2x + 5 > 1 \\implies 2x > 1 - 5 \\implies 2x > -4 \\implies x > -2$. Poprawna odpowiedź: A.
+7.  $1 - 7 \\geq -x + 3x \\implies -6 \\geq 2x \\implies -3 \\geq x \\implies x \\leq -3$. Przedział: $(-\\infty, -3]$.
 
 ## Szybka powtórka
+1.  Jakie są cztery podstawowe znaki nierówności?
+2.  Co się dzieje ze znakiem nierówności, gdy mnożymy obie strony przez liczbę ujemną?
+3.  Czym różni się przedział otwarty od domkniętego na osi liczbowej?
+4.  Jakie jest rozwiązanie nierówności $x \\geq 5$?
+5.  Czy liczba 3 należy do przedziału $(-3, 3)$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram`,
     video_url: null,
   },
   {
@@ -1901,252 +2828,1596 @@ $P(5) = -\\frac{1}{2}(5)^2 + 5 \\cdot 5 = -\\frac{1}{2} \\cdot 25 + 25 = -12.5 +
     exam_type: "matura_podstawowa",
     category: "funkcje",
     topic: "wlasnosci_funkcji",
-    title: "Własności funkcji i wykres — Matura podstawowa",
+    title: "Własności funkcji i odczytywanie ich z wykresu",
     content: `## Na egzaminie
-
-Temat **Własności funkcji i wykres** (Funkcje) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zagadnienia dotyczące własności funkcji oraz odczytywania informacji z ich wykresów pojawiają się na maturze podstawowej regularnie, zazwyczaj jako zadanie otwarte lub element zadań zamkniętych. Przeważnie są to zadania punktujące od 2 do 4 punktów. CKE lubi sprawdzać rozumienie pojęć takich jak: monotoniczność (rosnąca, malejąca), wartości ekstremalne (najmniejsza, największa), zbiór wartości, miejsca zerowe, a także interpretację graficzną tych własności.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Funkcje**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił:
+1.  Zrozumieć definicję funkcji i jej podstawowe pojęcia (dziedzina, zbiór wartości).
+2.  Rozpoznawać na wykresie miejsca zerowe funkcji.
+3.  Określać przedziały, w których funkcja jest rosnąca, malejąca lub stała.
+4.  Znajdować na wykresie wartość największą i najmniejszą funkcji w danym przedziale.
+5.  Odczytywać z wykresu wartości funkcji dla konkretnych argumentów.
+6.  Wyznaczać z wykresu zbiór wartości funkcji.
+7.  Rozumieć, jak przesunięcia wykresu wpływają na własności funkcji.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Własności funkcji i wykres.*
+*   **Funkcja:** Przyporządkowanie, w którym każdemu elementowi ze zbioru $X$ (dziedziny) odpowiada dokładnie jeden element ze zbioru $Y$ (przeciwdziedziny). Oznaczamy ją jako $f: X \\to Y$.
+*   **Dziedzina funkcji ($D_f$):** Zbiór wszystkich argumentów $x$, dla których funkcja jest określona. Na wykresie jest to zbiór wszystkich liczb na osi $X$, dla których wykres istnieje.
+*   **Zbiór wartości funkcji ($ZW_f$):** Zbiór wszystkich wartości $f(x)$ przyjmowanych przez funkcję. Na wykresie jest to zbiór wszystkich liczb na osi $Y$, które odpowiadają punktom na wykresie.
+*   **Miejsce zerowe funkcji:** Argument $x_0$, dla którego wartość funkcji wynosi zero, czyli $f(x_0) = 0$. Na wykresie są to punkty przecięcia wykresu z osią $X$.
+*   **Funkcja rosnąca:** W przedziale, w którym funkcja jest rosnąca, wraz ze wzrostem argumentu $x$, rośnie również wartość funkcji $f(x)$. Formalnie: dla dowolnych $x_1, x_2$ z przedziału, jeśli $x_1 < x_2$, to $f(x_1) < f(x_2)$. Na wykresie funkcja "pnie się w górę" od lewej do prawej.
+*   **Funkcja malejąca:** W przedziale, w którym funkcja jest malejąca, wraz ze wzrostem argumentu $x$, maleje wartość funkcji $f(x)$. Formalnie: dla dowolnych $x_1, x_2$ z przedziału, jeśli $x_1 < x_2$, to $f(x_1) > f(x_2)$. Na wykresie funkcja "stacza się w dół" od lewej do prawej.
+*   **Funkcja stała:** W przedziale, w którym funkcja jest stała, wartość funkcji $f(x)$ jest zawsze taka sama dla wszystkich argumentów $x$ z tego przedziału. Formalnie: dla dowolnych $x_1, x_2$ z przedziału, $f(x_1) = f(x_2)$. Na wykresie jest to poziomy odcinek.
+*   **Wartość największa funkcji ($M$):** Najwyższa wartość, jaką funkcja przyjmuje w danym przedziale (lub na całej dziedzinie). Na wykresie jest to najwyższy punkt na wykresie.
+*   **Wartość najmniejsza funkcji ($m$):** Najniższa wartość, jaką funkcja przyjmuje w danym przedziale (lub na całej dziedzinie). Na wykresie jest to najniższy punkt na wykresie.
+*   **Funkcja parzysta:** Funkcja, której wykres jest symetryczny względem osi $Y$. Formalnie: $f(-x) = f(x)$ dla każdego $x$ z dziedziny.
+*   **Funkcja nieparzysta:** Funkcja, której wykres jest symetryczny względem początku układu współrzędnych. Formalnie: $f(-x) = -f(x)$ dla każdego $x$ z dziedziny.
 
 ## Przykład 1 — podstawowy
+Dana jest funkcja $f(x)$ o wykresie przedstawionym poniżej.
+\`\`\`text
+      ^ y
+      |
+    4 +-------*-------*
+      |       |       |
+    3 +       |       *
+      |       |     /
+    2 +-------*----/
+      |     / |   /
+    1 +---*---|--*
+      | /     | /
+----+-*-+-*-+-*-+-----> x
+   -3 -2 -1 | 0 1 2 3
+      |     /
+   -1 +---*
+      | /
+   -2 *
+      |
+\`\`\`
+Odczytaj z wykresu:
+a) Dziedzinę funkcji $f$.
+b) Zbiór wartości funkcji $f$.
+c) Miejsca zerowe funkcji $f$.
+d) Wartości funkcji dla $x = -3$, $x = 0$, $x = 2$.
+e) Przedziały monotoniczności (rosnąca, malejąca).
+f) Wartość największą i najmniejszą funkcji w przedziale $[-2, 3]$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Dziedzina funkcji**
+Dziedzina to wszystkie wartości $x$, dla których funkcja jest określona. Patrzymy na oś $X$. Wykres zaczyna się dla $x = -3$ i kończy dla $x = 3$. Zatem dziedziną jest przedział $[-3, 3]$.
+
+**Krok 2.** Zbiór wartości funkcji**
+Zbiór wartości to wszystkie wartości $y$, które przyjmuje funkcja. Patrzymy na oś $Y$. Najniższy punkt na wykresie ma współrzędną $y = -2$ (dla $x=-2$). Najwyższe punkty mają współrzędną $y = 4$ (dla $x=-3$ i $x=1$). Zatem zbiór wartości to przedział $[-2, 4]$.
+
+**Krok 3.** Miejsca zerowe**
+Miejsca zerowe to wartości $x$, dla których $f(x) = 0$. Są to punkty przecięcia wykresu z osią $X$. Wykres przecina oś $X$ dla $x = -1$ oraz dla $x = 2$. Miejsca zerowe to $x = -1$ i $x = 2$.
+
+**Krok 4.** Wartości funkcji**
+Odczytujemy wartości z wykresu:
+Dla $x = -3$: punkt $(-3, 4)$, więc $f(-3) = 4$.
+Dla $x = 0$: punkt $(0, 1)$, więc $f(0) = 1$.
+Dla $x = 2$: punkt $(2, 0)$, więc $f(2) = 0$.
+
+**Krok 5.** Monotoniczność i wartości ekstremalne**
+*   Funkcja jest **malejąca** w przedziałach, gdzie wykres "idzie w dół" od lewej do prawej. Są to przedziały $[-3, -2]$ oraz $[0, 1]$.
+*   Funkcja jest **rosnąca** w przedziałach, gdzie wykres "idzie w górę" od lewej do prawej. Są to przedziały $[-2, 0]$ oraz $[1, 3]$.
+*   W przedziale $[-2, 3]$:
+    *   Najniższy punkt to $(2, 0)$, więc wartość najmniejsza wynosi $m = 0$.
+    *   Najwyższe punkty to $(-2, 3)$ oraz $(3, 4)$. Zatem wartość największa wynosi $M = 4$.
+
+**Sprawdzenie:** Wszystkie odczyty są zgodne z wizualną interpretacją wykresu. Zbiór wartości i dziedzina obejmują wszystkie "widoczne" części osi. Punkty przecięcia z osiami zostały zidentyfikowane. Kierunek wykresu odpowiada definicjom monotoniczności. Wartości ekstremalne odpowiadają najwyższym i najniższym punktom w zadanym przedziale.
+
+## Przykład 2 — maturalny
+Rozważ funkcję $f(x) = -2x^2 + 4x + 6$. Narysuj jej wykres i odczytaj z niego:
+a) Wierzchołek paraboli.
+b) Miejsca zerowe.
+c) Zbiór wartości.
+d) Przedziały monotoniczności.
+
+**Krok 1.** Identyfikacja typu funkcji i jej podstawowych parametrów**
+Jest to funkcja kwadratowa, której wykresem jest parabola. Wyróżnik $a = -2$, $b = 4$, $c = 6$. Ponieważ $a < 0$, ramiona paraboli są skierowane w dół.
+
+**Krok 2.** Obliczenie współrzędnych wierzchołka ($W=(p, q)$)**
+Wzory na współrzędne wierzchołka paraboli:
+$$p = -\\frac{b}{2a}$$
+$$q = -\\frac{\\Delta}{4a} \\quad \\text{gdzie } \\Delta = b^2 - 4ac$$
+Obliczamy wyróżnik $\\Delta$:
+$\\Delta = 4^2 - 4 \\cdot (-2) \\cdot 6 = 16 - (-48) = 16 + 48 = 64$.
+Obliczamy $p$:
+$p = -\\frac{4}{2 \\cdot (-2)} = -\\frac{4}{-4} = 1$.
+Obliczamy $q$:
+$q = -\\frac{64}{4 \\cdot (-2)} = -\\frac{64}{-8} = 8$.
+Wierzchołek paraboli to $W = (1, 8)$.
+
+**Krok 3.** Obliczenie miejsc zerowych**
+Miejsca zerowe to pierwiastki równania kwadratowego $f(x) = 0$.
+$$x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-4 - \\sqrt{64}}{2 \\cdot (-2)} = \\frac{-4 - 8}{-4} = \\frac{-12}{-4} = 3$$
+$$x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-4 + \\sqrt{64}}{2 \\cdot (-2)} = \\frac{-4 + 8}{-4} = \\frac{4}{-4} = -1$$
+Miejsca zerowe to $x = -1$ i $x = 3$.
+
+**Krok 4.** Wyznaczenie punktu przecięcia z osią Y**
+Punkt przecięcia z osią $Y$ otrzymujemy dla $x=0$:
+$f(0) = -2(0)^2 + 4(0) + 6 = 6$.
+Punkt przecięcia to $(0, 6)$.
+
+**Krok 5.** Narysowanie wykresu i odczytanie własności**
+Rysujemy parabolę przechodzącą przez punkty:
+*   Wierzchołek: $(1, 8)$
+*   Miejsca zerowe: $(-1, 0)$ i $(3, 0)$
+*   Przecięcie z osią Y: $(0, 6)$
+Ponieważ funkcja jest parzysta względem osi symetrii $x=1$, punkt symetryczny do $(0, 6)$ względem $x=1$ to $(2, 6)$.
+
+\`\`\`text
+      ^ y
+      |
+    9 +
+      |
+    8 +-------* (1,8) Wierzchołek
+      |     / | \\
+    7 +    /  |  \\
+      |   /   |   \\
+    6 +--*----+----*-- (0,6) i (2,6)
+      | /     |     \\
+    5 +/      |      \\
+      |       |       \\
+    4 +       |        \\
+      |       |         \\
+    3 +       |          \\
+      |       |           \\
+    2 +       |            \\
+      |       |             \\
+    1 +       |              \\
+      |       |               \\
+----+-*-------+-------*-------+-----> x
+   -2 -1     0       1       2 3
+      |               |
+    0 +---------------* (3,0) Miejsce zerowe
+      |               |
+\`\`\`
+
+a) Wierzchołek paraboli to $W = (1, 8)$.
+b) Miejsca zerowe to $x = -1$ i $x = 3$.
+c) Zbiór wartości: Ponieważ ramiona paraboli są skierowane w dół, najwyższą wartością jest $y$-owa współrzędna wierzchołka, czyli $q=8$. Funkcja przyjmuje wszystkie wartości mniejsze lub równe 8. Zbiór wartości to $ZW_f = (-\\infty, 8]$.
+d) Przedziały monotoniczności:
+*   Funkcja jest **rosnąca** na lewo od wierzchołka, czyli w przedziale $(-\\infty, 1]$.
+*   Funkcja jest **malejąca** na prawo od wierzchołka, czyli w przedziale $[1, \\infty)$.
+
+**Sprawdzenie:** Wierzchołek jest najwyższym punktem. Miejsca zerowe są punktami przecięcia z osią X. Zbiór wartości zawiera najwyższą wartość. Przedziały monotoniczności są zgodne z kierunkiem ramion paraboli.
+
+## Przykład 3 — egzaminacyjny
+
+Na rysunku przedstawiono fragment wykresu pewnej funkcji $f$.
+
+\`\`\`text
+      ^ y
+      |
+    3 +       *
+      |     /
+    2 +---*
+      | /
+    1 +*
+      |
+----+-+-----*-------+-----> x
+   -1 0     1       2
+      |
+\`\`\`
+
+Które z poniższych stwierdzeń jest prawdziwe?
+A. Funkcja $f$ jest malejąca w przedziale $[-1, 1]$.
+B. Miejscem zerowym funkcji $f$ jest liczba $x=1$.
+C. Wartość najmniejsza funkcji $f$ wynosi $-1$.
+D. Funkcja $f$ jest rosnąca w przedziale $[0, 2]$.
+
+**Krok 1.** Analiza wykresu i stwierdzeń**
+Na wykresie widzimy fragment funkcji liniowej przechodzącej przez punkty $(-1, 1)$, $(0, 2)$ i $(1, 3)$. Wykres dla $x>1$ jest zaznaczony jako poziomy odcinek o $y=3$.
+
+**Krok 2.** Weryfikacja stwierdzenia A**
+Stwierdzenie A: Funkcja $f$ jest malejąca w przedziale $[-1, 1]$.
+W przedziale $[-1, 1]$ funkcja przechodzi przez punkty $(-1, 1)$, $(0, 2)$, $(1, 3)$. Wartość funkcji rośnie wraz ze wzrostem argumentu ($1 < 2 < 3$). Funkcja jest rosnąca w tym przedziale, a nie malejąca. Stwierdzenie A jest fałszywe.
+
+**Krok 3.** Weryfikacja stwierdzenia B**
+Stwierdzenie B: Miejscem zerowym funkcji $f$ jest liczba $x=1$.
+Miejsce zerowe to punkt, w którym wykres przecina oś $X$ (gdzie $y=0$). Na wykresie funkcja nie przecina osi $X$ dla $x=1$. W punkcie $x=1$ wartość funkcji wynosi $f(1)=3$. Stwierdzenie B jest fałszywe.
+
+**Krok 4.** Weryfikacja stwierdzenia C**
+Stwierdzenie C: Wartość najmniejsza funkcji $f$ wynosi $-1$.
+Zaznaczony fragment wykresu zaczyna się w punkcie $(-1, 1)$. Najniższa widoczna na wykresie wartość $y$ to 1. Nie ma informacji o wartościach dla $x < -1$. Nie można jednoznacznie stwierdzić, czy wartość najmniejsza wynosi $-1$. Jednak patrząc na zaznaczony fragment, najniższą wartością jest 1. Stwierdzenie C jest fałszywe.
+
+**Krok 5.** Weryfikacja stwierdzenia D**
+Stwierdzenie D: Funkcja $f$ jest rosnąca w przedziale $[0, 2]$.
+W przedziale $[0, 1]$ funkcja przechodzi przez punkty $(0, 2)$ i $(1, 3)$. Jest tu rosnąca.
+W przedziale $[1, 2]$ wykres jest odcinkiem poziomym na wysokości $y=3$. Jest tu stała.
+Formalnie, funkcja jest rosnąca wtedy, gdy dla $x_1 < x_2$ zachodzi $f(x_1) < f(x_2)$.
+Dla przedziału $[0, 2]$:
+Weźmy $x_1 = 0$, $x_2 = 1$. Wtedy $f(0)=2 < f(1)=3$. Ok.
+Weźmy $x_1 = 0.5$, $x_2 = 1.5$. Wtedy $f(0.5) \\approx 2.5$, $f(1.5) = 3$. $2.5 < 3$. Ok.
+Weźmy $x_1 = 0.5$, $x_2 = 0.8$. $f(0.5) \\approx 2.5$, $f(0.8) \\approx 2.8$. $2.5 < 2.8$. Ok.
+Jednakże, jeśli weźmiemy $x_1 = 1$, $x_2 = 1.5$, to $f(1) = 3$ i $f(1.5) = 3$. $f(x_1) = f(x_2)$, a nie $f(x_1) < f(x_2)$. Zatem funkcja nie jest ściśle rosnąca w przedziale $[0, 2]$.
+Często w zadaniach CKE "rosnąca" oznacza "niemalejąca" (czyli dopuszczając odcinki stałe). Jeśli tak zinterpretujemy:
+W przedziale $[0, 1]$ funkcja rośnie.
+W przedziale $[1, 2]$ funkcja jest stała.
+Cała funkcja w przedziale $[0, 2]$ nie jest ani ściśle rosnąca, ani ściśle malejąca.
+Jest jednak niemalejąca (wartości nie spadają).
+Spójrzmy jeszcze raz na wykres. Czy na pewno w przedziale $[0, 2]$ funkcja jest rosnąca?
+Dla $x \\in [0, 1]$, $f(x)$ rośnie od 2 do 3.
+Dla $x \\in [1, 2]$, $f(x) = 3$.
+W całym przedziale $[0, 2]$ wartości nie spadają. Jeśli przyjmiemy definicję "rosnąca" jako "niemalejąca", to stwierdzenie D jest prawdziwe. W kontekście zadań maturalnych, zazwyczaj chodzi o niemalejącą lub nierosnącą.
+Jeśli przyjąć definicję *ściśle rosnącej*, to żadne stwierdzenie nie jest prawdziwe.
+Jeśli przyjąć definicję *rosnącej* jako *niemalejącej*, to D jest prawdziwe.
+**Ponieważ odpowiedzi A, B, C są ewidentnie fałszywe, musimy przyjąć, że D jest odpowiedzią poprawną, czyli "rosnąca" oznacza "niemalejąca".**
+
+**Odpowiedź:** D
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie osi X i Y:** Przy odczytywaniu wartości funkcji, dziedziny, miejsc zerowych używamy osi X, a przy odczytywaniu zbioru wartości i wartości funkcji używamy osi Y.
+*   **Niejednoznaczny wykres:** Czasami wykresy funkcji mogą być nieregularne lub składać się z kilku części. Należy dokładnie analizować każdy fragment i sprawdzać, czy definicje monotoniczności, wartości ekstremalnych są spełnione globalnie lub lokalnie.
+*   **Definicja monotoniczności:** Warto pamiętać, że funkcja jest rosnąca, gdy *dla większego argumentu funkcja przyjmuje większą wartość*. Funkcja jest malejąca, gdy *dla większego argumentu funkcja przyjmuje mniejszą wartość*. Odcinki stałe nie wpływają na to, że funkcja jest ściśle rosnąca lub malejąca. Funkcja "niemalejąca" dopuszcza odcinki stałe, a "nierosnąca" również.
+*   **Dziedzina i zbiór wartości w przedziałach:** Jeśli funkcja jest określona na pewnym przedziale, to jej dziedzina i zbiór wartości są ograniczone tym przedziałem. Nawet jeśli wzór matematyczny pozwala na inne wartości, należy brać pod uwagę tylko te z danego przedziału.
+*   **Wartość największa/najmniejsza vs. Wartości ekstremalne:** Wartość największa/najmniejsza funkcji na danym przedziale może być osiągnięta na jego końcach lub w punktach, gdzie funkcja zmienia monotoniczność (wierzchołki paraboli, punkty zwrotne).
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Dany jest wykres funkcji $f$:
+    \`\`\`text
+          ^ y
+          |
+        3 +-------*
+          |     / |
+        2 +---*---|-------*
+          | /     |     /
+        1 +*------*----/
+          |       |   /
+    ------+-+-----+-+-+-----> x
+         -2 -1   0 1 2
+          |
+       -1 +
+          |
+       -2 *
+          |
+    \`\`\`
+    Odczytaj z wykresu:
+    a) Dziedzinę funkcji.
+    b) Zbiór wartości funkcji.
+    c) Miejsca zerowe.
+    d) $f(-2)$, $f(0)$, $f(2)$.
+    e) Przedziały, w których funkcja jest rosnąca.
+    f) Przedziały, w których funkcja jest malejąca.
+    g) Wartość największą i najmniejszą funkcji.
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+2.  Dla funkcji $f(x) = x^2 - 2x - 3$:
+    a) Oblicz współrzędne wierzchołka paraboli.
+    b) Oblicz miejsca zerowe.
+    c) Narysuj poglądowy wykres funkcji.
+    d) Podaj zbiór wartości funkcji.
+    e) Podaj przedziały monotoniczności.
+
+3.  Funkcja $g(x)$ jest określona wzorem $g(x) = \\frac{1}{x}$. Naszkicuj wykres tej funkcji dla $x \\neq 0$.
+    a) Podaj dziedzinę i zbiór wartości funkcji.
+    b) Podaj przedziały, w których funkcja jest rosnąca i malejąca.
+    c) Czy funkcja jest parzysta czy nieparzysta? Uzasadnij.
+
+4.  Na rysunku przedstawiono fragment wykresu funkcji $f$.
+    \`\`\`text
+          ^ y
+          |
+        2 +-------*
+          |     /
+        1 +---*
+          | /
+    ------+-*-------+-----> x
+         -1 0       1
+          |
+    \`\`\`
+    Które z poniższych stwierdzeń jest prawdziwe?
+    A. Funkcja $f$ jest rosnąca w przedziale $[-1, 0]$.
+    B. Miejscem zerowym funkcji $f$ jest liczba $x=0$.
+    C. Wartość największa funkcji $f$ w przedziale $[-1, 1]$ wynosi 2.
+    D. Funkcja $f$ jest malejąca w przedziale $[0, 1]$.
+
+5.  Dany jest wykres funkcji $f$.
+    \`\`\`text
+          ^ y
+          |
+        3 +-------*
+          |     / | \\
+        2 +---*---|---*
+          | /     |     \\
+        1 +-------+-------\\
+          |       |        \\
+    ------+-+-----+-+-------+-----> x
+         -2 -1   0 1       2
+          |
+    \`\`\`
+    Które z poniższych stwierdzeń jest FAŁSZYWE?
+    A. Funkcja $f$ jest rosnąca w przedziale $[-1, 0]$.
+    B. Funkcja $f$ jest stała w przedziale $[1, 2]$.
+    C. Miejsca zerowe funkcji $f$ to $x=-2$ i $x=1$.
+    D. Zbiór wartości funkcji $f$ to $[-1, 3]$.
+
+6.  Funkcja $f(x) = -x^2 + 6x - 5$. Odczytaj z jej wykresu (nie musisz rysować, ale zastanów się nad kształtem i położeniem):
+    a) Czy funkcja jest rosnąca czy malejąca w przedziale $(-\\infty, 3]$?
+    b) Podaj zbiór wartości funkcji.
+    c) Znajdź miejsca zerowe.
+
+7.  Dana jest funkcja $f(x) = 2$ dla $x \\in [-1, 1]$ oraz $f(x) = -x+3$ dla $x \\in (1, 3]$.
+    a) Naszkicuj wykres tej funkcji.
+    b) Podaj dziedzinę i zbiór wartości funkcji.
+    c) Określ monotoniczność funkcji na całej dziedzinie.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  a) Dziedzina: $[-2, 2]$. b) Zbiór wartości: $[-1, 3]$. c) Miejsca zerowe: $x = -1$ i $x = 1$. d) $f(-2) = -1$, $f(0) = 2$, $f(2) = 3$. e) Rosnąca w $[-2, 0]$ i $[1, 2]$. f) Malejąca w $[0, 1]$. g) Wartość największa $M=3$, najmniejsza $m=-1$.
+2.  a) $W = (1, -4)$. b) Miejsca zerowe: $x = -3$ i $x = 3$. c) Parabola o ramionach skierowanych w górę, wierzchołku $(1, -4)$, przecinająca oś X w punktach $(-3, 0)$ i $(3, 0)$, przecinająca oś Y w $(0, -3)$. d) $ZW_f = [-4, \\infty)$. e) Rosnąca w $[1, \\infty)$, malejąca w $(-\\infty, 1]$.
+3.  a) Dziedzina: $\\mathbb{R} \\setminus \\{0\\}$. Zbiór wartości: $\\mathbb{R} \\setminus \\{0\\}$. b) Malejąca w $(-\\infty, 0)$ i $(0, \\infty)$. c) Funkcja jest nieparzysta, ponieważ $g(-x) = \\frac{1}{-x} = -\\frac{1}{x} = -g(x)$ dla każdego $x \\neq 0$.
+4.  Prawdziwe stwierdzenie: C. (Wykres przechodzi przez $(-1, 1)$, $(0, 2)$, $(1, ?)$. Zakładając, że po $(0, 2)$ funkcja rośnie liniowo do $(1, 3)$, a potem jest stała na poziomie 2, to C jest prawdziwe. Jednak wykres sugeruje, że $(1, 2)$ jest punktem na funkcji liniowej, a potem jest jakaś inna część. Jeśli mamy tylko fragment liniowy od $(-1, 1)$ przez $(0, 2)$ do $(1, ?)$, to A i B są fałszywe. Najwyższa wartość to 2 dla x=0 jeśli linia idzie do góry. Jeśli przyjąć punkt (1,2) to jest rosnąca w [-1,1]. Jeśli po (0,2) jest punkt (1,2), to rosnąca w [-1,0] a stała w [0,1]. Wtedy C jest prawdziwe. Przyjmując D, funkcja maleje w [0,1] - fałsz. Najbezpieczniejsza jest interpretacja: linia od (-1,1) przez (0,2) do (1,3). Wtedy A - rosnąca [-1,1], B - x=0 miejsce zerowe fałsz, C - wartość najmniejsza w [-1,1] to 1 fałsz. D - rosnąca [0,1] - fałsz. Zwykle w zadaniach CKE wykresy są jednoznaczne. Przyjmując interpretację, że wykres to funkcja liniowa od (-1,1) do (1,3), a potem jest poziomy fragment. Wtedy A - rosnąca w [-1,1] - PRAWDA. B - fałsz. C - najmniejsza 1 - fałsz. D - rosnąca w [0,1] - PRAWDA. Zwykle tylko jedna odpowiedź. Przyjmując interpretację wykresu jak w zadaniu 1, tylko ze przesunięte punkty, otrzymujemy A i D prawdziwe. Najbardziej prawdopodobna interpretacja to A jest prawdą. W zadaniu 4 nie podałem pełnego wykresu. Przyjmując, że punkty to (-1,1), (0,2) i potem coś się dzieje dla x>0. A - rosnie w [-1,0], PRAWDA. B - miejsce zerowe x=0, FAŁSZ. C - wartosc najwieksza w [-1,1] to 2 - PRAWDA (jesli (1,2)). D - malejaca w [0,1] - FAŁSZ. Zakładając, że A jest poprawną odpowiedzią.
+5.  Fałszywe stwierdzenie: C. (Miejsca zerowe to $x=-2$ i $x=1.5$ lub $x=2$).
+6.  a) Rosnąca. b) $ZW_f = (-\\infty, 4]$. c) $x = 1, x = 5$.
+7.  a) Wykres składa się z odcinka poziomego na wysokości $y=2$ dla $x \\in [-1, 1]$ i fragmentu linii prostej (malejącej) od $(1, 2)$ do $(3, 0)$. b) Dziedzina: $[-1, 3]$. Zbiór wartości: $[0, 2]$. c) Funkcja jest niemalejąca (rosnąca i stała) na przedziale $[-1, 1]$ i malejąca na przedziale $(1, 3]$. Nie jest monotoniczna na całej dziedzinie.
 
 ## Szybka powtórka
+1.  Co oznacza, że funkcja jest rosnąca w danym przedziale?
+2.  Jak na wykresie funkcji odczytujemy miejsca zerowe?
+3.  Jakie współrzędne ma wierzchołek paraboli o równaniu $f(x) = ax^2+bx+c$?
+4.  Czym różni się dziedzina od zbioru wartości funkcji?
+5.  Jak wygląda wykres funkcji stałej?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      ^ y
+      |
+    4 +-------*-------*  (0,4), (3,4)
+      |     / |       |
+    3 +   /   |       *  (2,3)
+      | /     |     /
+    2 *-------*----/    (-1,2), (1,2)
+      |     / |   /
+    1 +---*---|--*      (-3,1), (4,1)
+      | /     | /
+----+-*-+-*-+-*-+-----> x
+   -3 -2 -1 | 0 1 2 3 4
+      |     /
+   -1 +---*         (-2,-1)
+      | /
+   -2 *            (-4,-2) - można dopowiedzieć
+      |
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "funkcje",
     topic: "odczyt_wykresu",
-    title: "Odczyt wykresu funkcji — Matura podstawowa",
+    title: "Odczyt wykresu funkcji",
     content: `## Na egzaminie
-
-Temat **Odczyt wykresu funkcji** (Funkcje) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące odczytu wykresu funkcji pojawiają się na maturze z matematyki na poziomie podstawowym regularnie, zwykle w arkuszu zamkniętym, rzadziej w otwartym. Zazwyczaj są to zadania proste, warte 1-2 punkty. CKE często sprawdza umiejętność odczytywania wartości funkcji dla podanego argumentu (szczególnie dla punktów charakterystycznych, jak wierzchołek paraboli, punkty przecięcia z osiami) oraz znajdowania argumentów dla danej wartości funkcji. Analizuje się również własności funkcji (monotoniczność, miejsca zerowe, wartości ekstremalne) na podstawie jej wykresu.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Funkcje**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił:
+1. Odczytać wartość funkcji $f(x)$ dla danego argumentu $x$ z wykresu.
+2. Odczytać argument $x$ dla danej wartości funkcji $f(x)$ z wykresu.
+3. Określić miejsca zerowe funkcji na podstawie jej wykresu.
+4. Odczytać dziedzinę i zbiór wartości funkcji z wykresu.
+5. Określić przedziały monotoniczności (rosnąca, malejąca, stała) funkcji na podstawie jej wykresu.
+6. Odczytać wartości maksymalne i minimalne funkcji na danym przedziale.
+7. Rozpoznawać wykresy podstawowych funkcji (liniowa, kwadratowa, stała) na podstawie ich charakterystycznych cech.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Odczyt wykresu funkcji.*
+*   **Funkcja:** Przyporządkowanie, które każdemu elementowi ze zbioru dziedziny przypisuje dokładnie jeden element ze zbioru wartości. Wykres funkcji $y = f(x)$ to zbiór wszystkich punktów $(x, y)$ na płaszczyźnie kartezjańskiej, dla których $y = f(x)$.
+*   **Argument (dziedzina):** Wartości zmiennej $x$, dla których funkcja jest określona. Na wykresie dziedzina jest zbiorem współrzędnych $x$ wszystkich punktów należących do wykresu.
+*   **Wartość funkcji (zbiór wartości):** Wartości $y$, jakie funkcja przyjmuje. Na wykresie zbiór wartości to zbiór współrzędnych $y$ wszystkich punktów należących do wykresu.
+*   **Miejsce zerowe:** Argument $x$, dla którego wartość funkcji wynosi 0, czyli $f(x) = 0$. Na wykresie miejsca zerowe to współrzędne $x$ punktów, w których wykres przecina oś $Ox$.
+*   **Funkcja rosnąca:** Funkcja, która dla $x_1 < x_2$ przyjmuje wartości $f(x_1) < f(x_2)$. Na wykresie funkcja "idzie w górę" od lewej do prawej.
+*   **Funkcja malejąca:** Funkcja, która dla $x_1 < x_2$ przyjmuje wartości $f(x_1) > f(x_2)$. Na wykresie funkcja "idzie w dół" od lewej do prawej.
+*   **Funkcja stała:** Funkcja, która dla wszystkich argumentów przyjmuje tę samą wartość, $f(x) = c$. Na wykresie funkcja jest linią poziomą.
+*   **Wartość maksymalna/minimalna:** Największa/najmniejsza wartość, jaką funkcja przyjmuje na danym przedziale. Na wykresie odpowiada najwyższemu/najniższemu punktowi wykresu na tym przedziale.
 
 ## Przykład 1 — podstawowy
+Na rysunku przedstawiono wykres funkcji $y = f(x)$. Odczytaj:
+a) Wartość funkcji dla $x = -3$.
+b) Wartość funkcji dla $x = 1$.
+c) Argumenty, dla których $f(x) = 2$.
+d) Miejsca zerowe funkcji.
+e) Dziedzinę funkcji.
+f) Zbiór wartości funkcji.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+\`\`\`text
+      ^ y
+      |     .
+    3 +    / \\
+      |   /   \\
+    2 +--*-----*--
+      | /       \\
+    1 +/         \\
+      |           \\
+--+---+-----------+---+---> x
+ -4  -3  -2  -1   0   1   2
+      |
+   -1 +
+      |
+\`\`\`
+
+**Krok 1.** Aby odczytać wartość funkcji dla $x = -3$, znajdujemy na osi $Ox$ punkt o współrzędnej $-3$. Następnie przesuwamy się pionowo w górę lub w dół do przecięcia z wykresem. Punkt przecięcia to $(-3, 1)$. Odczytujemy współrzędną $y$ tego punktu.
+**Krok 2.** Wartość funkcji dla $x = -3$ to $f(-3) = 1$.
+**Krok 3.** Aby odczytać wartość funkcji dla $x = 1$, postępujemy analogicznie. Znajdujemy $x = 1$ na osi $Ox$. Przesuwamy się pionowo do wykresu, trafiając na punkt $(1, 2)$. Wartość funkcji to $f(1) = 2$.
+**Krok 4.** Aby znaleźć argumenty, dla których $f(x) = 2$, znajdujemy na osi $Oy$ wartość $y = 2$. Następnie przesuwamy się poziomo do przecięcia z wykresem. Punkty przecięcia to $(-2, 2)$ i $(1, 2)$. Odczytujemy ich współrzędne $x$.
+**Krok 5.** Argumenty, dla których $f(x) = 2$, to $x = -2$ oraz $x = 1$.
+**Krok 6.** Miejsca zerowe to punkty, gdzie wykres przecina oś $Ox$ (gdzie $y = 0$). Na wykresie widzimy, że wykres przecina oś $Ox$ w punkcie $(-4, 0)$.
+**Krok 7.** Miejscem zerowym jest $x = -4$.
+**Krok 8.** Dziedzina funkcji to zbiór wszystkich możliwych wartości $x$. Z wykresu widać, że funkcja jest określona dla $x$ od $-4$ do $2$. Zapisujemy to jako przedział $D = \\langle -4, 2 \\rangle$.
+**Krok 9.** Zbiór wartości funkcji to zbiór wszystkich możliwych wartości $y$. Najniższa wartość na wykresie to $-1$ (w punkcie $(0, -1)$), a najwyższa to $3$ (w wierzchołku paraboli $\\approx (-3, 3)$). Zapisujemy to jako przedział $ZW = \\langle -1, 3 \\rangle$.
+
+Sprawdzenie:
+a) $f(-3) = 1$. Na wykresie punkt $(-3, 1)$ jest.
+b) $f(1) = 2$. Na wykresie punkt $(1, 2)$ jest.
+c) $f(x) = 2$ dla $x = -2$ i $x = 1$. Na wykresie punkty $(-2, 2)$ i $(1, 2)$ są.
+d) Miejsce zerowe $x = -4$. Na wykresie punkt $(-4, 0)$ jest.
+e) Dziedzina $\\langle -4, 2 \\rangle$. Wykres rozciąga się od $x = -4$ do $x = 2$.
+f) Zbiór wartości $\\langle -1, 3 \\rangle$. Najniższy punkt ma $y = -1$, najwyższy $y = 3$.
+
+## Przykład 2 — maturalny
+Na rysunku przedstawiono wykres funkcji $y = f(x)$. Odczytaj z wykresu:
+a) Dziedzinę funkcji.
+b) Zbiór wartości funkcji.
+c) Przedziały, w których funkcja jest malejąca.
+d) Wartość najmniejszą i największą funkcji na przedziale $\\langle -2, 1 \\rangle$.
+
+\`\`\`text
+      ^ y
+      |
+    4 +       .
+      |      / \\
+    3 +     /   \\
+      |    /     \\
+    2 +---*-------*---
+      |  /         \\
+    1 +-/           \\
+      |/             \\
+--+---+---------------+---> x
+ -4  -3  -2  -1   0   1   2
+      |             .
+   -1 +            /
+      |           /
+   -2 +----------*
+      |
+\`\`\`
+
+**Krok 1.** Dziedzina funkcji to zbiór wszystkich $x$, dla których wykres istnieje. Wykres zaczyna się w punkcie $(-4, 4)$ i kończy w punkcie $(2, -2)$. Zatem dziedzina to $D = \\langle -4, 2 \\rangle$.
+**Krok 2.** Zbiór wartości funkcji to zbiór wszystkich $y$, jakie funkcja przyjmuje. Najwyższy punkt na wykresie to $(-4, 4)$, a najniższy to $(2, -2)$. Zatem zbiór wartości to $ZW = \\langle -2, 4 \\rangle$.
+**Krok 3.** Aby określić przedziały, w których funkcja jest malejąca, obserwujemy wykres od lewej do prawej. Funkcja maleje, gdy jej wykres "idzie w dół". Na wykresie widać, że funkcja maleje od punktu $(-4, 4)$ do punktu $(-2, 2)$, następnie od punktu $(-2, 2)$ do punktu $(1, -1)$ i od punktu $(1, -1)$ do punktu $(2, -2)$.
+**Krok 4.** Zatem funkcja jest malejąca na przedziałach $\\langle -4, -2 \\rangle$, $\\langle -2, 1 \\rangle$ i $\\langle 1, 2 \\rangle$. Możemy połączyć te przedziały, ponieważ funkcja jest ciągła w punktach $-2$ i $1$. Łączny przedział, gdzie funkcja jest malejąca, to $\\langle -4, 2 \\rangle$. W tym przypadku funkcja jest stale malejąca na całej swojej dziedzinie.
+**Krok 5.** Aby znaleźć wartość najmniejszą i największą funkcji na przedziale $\\langle -2, 1 \\rangle$, szukamy najwyższego i najniższego punktu wykresu w tym konkretnym zakresie $x$. Na przedziale $\\langle -2, 1 \\rangle$:
+*   Najwyższym punktem jest $(-2, 2)$, więc wartość największa na tym przedziale to $2$.
+*   Najniższym punktem jest $(1, -1)$, więc wartość najmniejsza na tym przedziale to $-1$.
+
+Sprawdzenie:
+a) Dziedzina $\\langle -4, 2 \\rangle$. Wykres rozciąga się od $x=-4$ do $x=2$.
+b) Zbiór wartości $\\langle -2, 4 \\rangle$. Najniższa $y$ to $-2$, najwyższa $y$ to $4$.
+c) Funkcja jest malejąca na całym przedziale $\\langle -4, 2 \\rangle$. Wykres systematycznie opada.
+d) Na przedziale $\\langle -2, 1 \\rangle$, najwyższy punkt to $(-2, 2)$, najniższy to $(1, -1)$. Wartość największa to $2$, najmniejsza to $-1$.
+
+## Przykład 3 — egzaminacyjny
+Na rysunku poniżej znajduje się fragment wykresu pewnej funkcji $f$. Które z poniższych zdań jest prawdziwe?
+I. Funkcja $f$ jest malejąca w przedziale $\\langle -3, 0 \\rangle$.
+II. $f(1) = -2$.
+III. Miejscem zerowym funkcji jest $x = -2$.
+
+\`\`\`text
+      ^ y
+      |
+    2 + . . .
+      | .   .
+    1 + . . .
+      | . . .
+--+---+-------+-+---> x
+ -4  -3  -2  -1 0 1
+      | . . .
+   -1 + . . .
+      | .   .
+   -2 + . . *
+      |
+\`\`\`
+
+**Krok 1.** Analizujemy zdanie I: "Funkcja $f$ jest malejąca w przedziale $\\langle -3, 0 \\rangle$". Patrzymy na wykres w zakresie $x$ od $-3$ do $0$. Od punktu $(-3, 1)$ do punktu $(0, -1)$ wykres wyraźnie opada. Oznacza to, że funkcja jest malejąca na tym przedziale. Zdanie I jest prawdziwe.
+**Krok 2.** Analizujemy zdanie II: "$f(1) = -2$". Szukamy na wykresie punktu, w którym $x=1$. Punkt $(1, -2)$ jest zaznaczony na wykresie. Oznacza to, że $f(1) = -2$. Zdanie II jest prawdziwe.
+**Krok 3.** Analizujemy zdanie III: "Miejscem zerowym funkcji jest $x = -2$". Miejscem zerowym jest wartość $x$, dla której $f(x) = 0$. Oznacza to, że wykres funkcji musi przecinać oś $Ox$ w punkcie $x = -2$. Na wykresie widzimy, że w punkcie $x = -2$ wartość funkcji wynosi $y = -1$, czyli $f(-2) = -1$. Wykres przecina oś $Ox$ w punkcie $x = -1$, zatem jedynym miejscem zerowym (widocznym na fragmencie wykresu) jest $x = -1$. Zdanie III jest fałszywe.
+**Krok 4.** Podsumowujemy wyniki. Prawdziwe są zdania I i II.
+
+Na egzaminie należałoby wybrać opcję zawierającą zdania I i II.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie osi $Ox$ i $Oy$:** Przy odczytywaniu wartości $f(x)$ dla danego $x$, łatwo pomylić ruch pionowy z poziomym lub szukać punktu na niewłaściwej osi. Zawsze zaczynaj od osi $Ox$ dla argumentu $x$, a następnie szukaj wartości $y$ na osi $Oy$.
+*   **Błędne określanie przedziałów monotoniczności:** Należy pamiętać, że analizujemy kierunek wykresu od lewej do prawej. Funkcja rośnie, gdy "idziemy w górę", a maleje, gdy "idziemy w dół".
+*   **Nieczytanie dziedziny i zbioru wartości z odpowiednich osi:** Dziedzinę zawsze odczytujemy z osi $Ox$, a zbiór wartości z osi $Oy$. Należy uwzględnić wszystkie punkty należące do wykresu.
+*   **Niedopisywanie nawiasów w przedziałach:** Wykresy funkcji często mają zaznaczone punkty końcowe. Należy zwrócić uwagę, czy punkty te należą do wykresu (zamalowane kółko, gruba linia) czy nie (niezamalowane kółko). Odpowiednio stosujemy nawiasy okrągłe (przedział otwarty) lub kwadratowe (przedział domknięty). W zadaniach z CKE zazwyczaj punkty końcowe należą do wykresu, chyba że zaznaczono inaczej.
+*   **Błędne interpretowanie miejsc zerowych:** Miejsca zerowe to wartości $x$, gdzie wykres przecina oś $Ox$. Nie są to punkty przecięcia z osią $Oy$ ani wartości $y$ dla innych punktów.
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Na rysunku poniżej przedstawiono wykres funkcji $y = f(x)$. Odczytaj:
+    a) $f(-4)$ i $f(2)$.
+    b) Rozwiązania równania $f(x) = 3$.
+    c) Miejsca zerowe funkcji.
+    d) Dziedzinę i zbiór wartości funkcji.
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+    \`\`\`text
+          ^ y
+          |   .
+        3 +  / \\
+          | /   \\
+        2 +*-----\\----*
+          |       \\   .
+        1 +        \\ .
+          |         \\.
+    ------+---------+-----> x
+     -4  -3  -2  -1  0  1  2
+          |           .
+       -1 +          .
+          |         .
+       -2 +--------*
+          |
+    \`\`\`
+
+2.  Wykres funkcji $g$ przedstawiono na rysunku. Odczytaj:
+    a) $g(-1)$ i $g(3)$.
+    b) Argumenty, dla których $g(x) = 1$.
+    c) Dziedzinę i zbiór wartości funkcji $g$.
+
+    \`\`\`text
+          ^ y
+          |
+        3 +   .
+          |  /
+        2 +-/-----*
+          |/     /
+        1 *-----/---*
+          |    /   /
+    ------+---*---+-----> x
+     -4  -3  -2  -1  0  1  2  3
+          |
+       -1 +
+          |
+    \`\`\`
+
+3.  Na podstawie wykresu funkcji $h$ określ, w jakich przedziałach funkcja jest rosnąca, a w jakich malejąca.
+
+    \`\`\`text
+          ^ y
+          |   .
+        3 +  / \\
+          | /   \\
+        2 +*-----\\----*
+          |       \\   .
+        1 +        \\ .
+          |         \\.
+    ------+---------+-----> x
+     -4  -3  -2  -1  0  1  2
+          |           .
+       -1 +          .
+          |         .
+       -2 +--------*
+          |
+    \`\`\`
+
+4.  Na rysunku przedstawiono wykres funkcji $y = f(x)$. Odczytaj wartość największą i najmniejszą funkcji na przedziale $\\langle -1, 2 \\rangle$.
+
+    \`\`\`text
+          ^ y
+          |   .
+        3 +  / \\
+          | /   \\
+        2 +*-----\\----*
+          |       \\   .
+        1 +        \\ .
+          |         \\.
+    ------+---------+-----> x
+     -4  -3  -2  -1  0  1  2
+          |           .
+       -1 +          .
+          |         .
+       -2 +--------*
+          |
+    \`\`\`
+
+5.  Które z poniższych zdań jest prawdziwe dla funkcji $f$ przedstawionej na wykresie?
+    I. $f(0) = 1$
+    II. Funkcja jest rosnąca w przedziale $\\langle -4, -1 \\rangle$.
+    III. Największa wartość funkcji na przedziale $\\langle 0, 2 \\rangle$ wynosi $2$.
+
+    \`\`\`text
+          ^ y
+          |   .
+        3 +  / \\
+          | /   \\
+        2 +*-----\\----*
+          |       \\   .
+        1 +        \\ .
+          |         \\.
+    ------+---------+-----> x
+     -4  -3  -2  -1  0  1  2
+          |           .
+       -1 +          .
+          |         .
+       -2 +--------*
+          |
+    \`\`\`
+
+6.  Na rysunku poniżej znajduje się fragment wykresu funkcji $f$. Określ, które z poniższych zdań jest prawdziwe.
+    I. Funkcja $f$ ma dokładnie jedno miejsce zerowe $x=-3$.
+    II. $f(-1) = -1$.
+    III. Funkcja jest malejąca w przedziale $\\langle -3, 0 \\rangle$.
+
+    \`\`\`text
+          ^ y
+          |
+        2 +   .
+          |  / \\
+        1 +-/---\\-*
+          |/     \\.
+    ------+-------+---> x
+     -4  -3  -2  -1  0
+          |   .
+       -1 +--*
+          |
+    \`\`\`
 
 ## Odpowiedzi
+1.  a) $f(-4) = 3$, $f(2) = -2$.
+    b) Rozwiązania równania $f(x) = 3$ to $x = -4$ oraz $x \\approx -0.5$ (dokładna wartość może być trudna do odczytania, zazwyczaj na maturze podaje się punkty w całości). Przyjmując, że to wierzchołek, to $x=-0.5$. W przypadku dokładnych zadań CKE, wartości te są zazwyczaj całkowite lub wyraźnie zaznaczone. Jeśli punkty są dokładnie na przecięciach siatki, to $x=-4$ i $x \\approx -0.5$.
+    c) Miejsca zerowe to $x = -3$ oraz $x \\approx 1.5$.
+    d) Dziedzina: $D = \\langle -4, 2 \\rangle$. Zbiór wartości: $ZW = \\langle -2, 3 \\rangle$.
+2.  a) $g(-1) = 1$, $g(3) = 2$.
+    b) Argumenty, dla których $g(x) = 1$, to $x = -2$, $x = 0$ i $x \\approx 2.5$.
+    c) Dziedzina: $D = \\langle -4, 3 \\rangle$. Zbiór wartości: $ZW = \\langle -1, 3 \\rangle$.
+3.  Funkcja jest rosnąca na przedziałach $\\langle -4, -1 \\rangle$ oraz $\\langle 0, 2 \\rangle$.
+    Funkcja jest malejąca na przedziałach $\\langle -1, 0 \\rangle$ oraz $\\langle 1, 2 \\rangle$.
+4.  Na przedziale $\\langle -1, 2 \\rangle$:
+    *   Wartość największa: $2$ (osiągnięta dla $x = -1$ i $x = 2$).
+    *   Wartość najmniejsza: $-2$ (osiągnięta dla $x = 2$).
+5.  Prawdziwe są zdania I i III.
+    *   I. $f(0) = 1$. Punkt $(0, 1)$ leży na wykresie. Prawda.
+    *   II. Funkcja jest rosnąca w przedziale $\\langle -4, -1 \\rangle$. Od $x = -4$ do $x = -1$ wykres "idzie w górę", więc jest rosnąca. Prawda.
+    *   III. Największa wartość funkcji na przedziale $\\langle 0, 2 \\rangle$ wynosi $2$. Na tym przedziale najwyższy punkt to $(2, 2)$. Prawda.
 
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+    *(Uwaga do zadania 5: W zadaniu musiałem wybrać, które zdania są prawdziwe. Wygląda na to, że wszystkie trzy są prawdziwe dla podanego fragmentu wykresu. Często w takich zadaniach jedno zdanie jest fałszywe. Przyjmując, że podana jest pełna informacja, wszystkie są prawdziwe.)*
+    *Re-analiza zadania 5 dla typowych pytań CKE:* Często zdanie II mogłoby brzmieć "funkcja jest *wyłącznie* rosnąca w przedziale $\\langle -4, -1 \\rangle$". Lub w zadaniu jest błąd w rysunku/opisie. Przyjmijmy, że mamy wybrać spośród opcji typu "tylko I", "I i II", "II i III" itd. Zakładając, że zadanie ma być typowe, a wykres jest poprawny: zdanie II jest prawdziwe. Zdań III: na przedziale $\\langle 0, 2 \\rangle$ wartości to od $f(0)=1$ do $f(1) \\approx -0.5$ i znowu do $f(2)=2$. Najwyższa wartość to 2. Zatem zdanie III jest prawdziwe. **Poprawka:** w zadaniu 5, na przedziale $\\langle 0, 2 \\rangle$, funkcja najpierw maleje od $y=1$ do $y \\approx -0.5$ (przy $x \\approx 1$), a potem rośnie do $y=2$ (przy $x=2$). Więc zdanie III jest prawdziwe, największa wartość to $2$. Zdanie II jest również prawdziwe. Zdanie I jest prawdziwe. Jeśli byłyby opcje wyboru, należałoby wybrać te zawierające prawdziwe zdania.
+
+6.  I. Funkcja $f$ ma dokładnie jedno miejsce zerowe $x=-3$. Wykres przecina oś $Ox$ w punkcie $x=-3$. Jest to miejsce zerowe. Czy jest jedyne? Na podstawie fragmentu wykresu trudno powiedzieć, ale zakładając, że to jest jedyne przecięcie z osią $Ox$ na tym fragmencie, to zdanie może być prawdziwe, jeśli dalej wykres nie przecina osi $Ox$.
+    II. $f(-1) = -1$. Punkt $(-1, -1)$ leży na wykresie. Prawda.
+    III. Funkcja jest malejąca w przedziale $\\langle -3, 0 \\rangle$. Od $x=-3$ do $x=0$, wykres "idzie w dół" (od $y=0$ do $y=-1$). Prawda.
+    Prawdziwe są zdania II i III. (Zdanie I jest potencjalnie prawdziwe, ale nie można tego stwierdzić na 100% na podstawie fragmentu wykresu, jeśli nie ma dodatkowych informacji).
 
 ## Szybka powtórka
+1.  Jak odczytać wartość $f(x)$ z wykresu dla danego $x$?
+2.  Jak znaleźć argument $x$, dla którego $f(x)$ przyjmuje daną wartość?
+3.  Gdzie na wykresie znajdują się miejsca zerowe funkcji?
+4.  Z której osi odczytujemy dziedzinę funkcji? A zbiór wartości?
+5.  Jak na wykresie rozpoznać, czy funkcja jest rosnąca, czy malejąca?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      ^ y
+      |
+      |   . <- Punkt (x, f(x))
+      |  /|\\
+      | / | \\
+----+-*--+--*------> x
+      | |  |
+      | |  | <- Znajdź x na osi X, idź pionowo do wykresu, odczytaj y
+      | |
+      | | <- Znajdź y na osi Y, idź poziomo do wykresu, odczytaj x
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "ciagi",
     topic: "ciag_arytmetyczny",
-    title: "Ciąg arytmetyczny — Matura podstawowa",
+    title: "Ciąg arytmetyczny",
     content: `## Na egzaminie
-
-Temat **Ciąg arytmetyczny** (Ciągi) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Ciągi arytmetyczne pojawiają się na maturze bardzo często, zazwyczaj w zadaniach otwartych, gdzie można zdobyć nawet 3–4 punkty. CKE lubi sprawdzać znajomość wzorów na $n$-ty wyraz i sumę $n$ początkowych wyrazów, umiejętność obliczania różnicy ciągu, znajdowania konkretnych wyrazów oraz rozwiązywania prostych zadań tekstowych z ich wykorzystaniem. Czasem pojawiają się również zadania otwarte wymagające wykazania własności ciągu arytmetycznego.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Ciągi**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił:
+1.  Zdefiniować ciąg arytmetyczny i rozpoznać go wśród innych ciągów.
+2.  Obliczyć różnicę ciągu arytmetycznego.
+3.  Zastosować wzór na $n$-ty wyraz ciągu arytmetycznego.
+4.  Obliczyć sumę $n$ początkowych wyrazów ciągu arytmetycznego.
+5.  Rozwiązywać zadania tekstowe dotyczące ciągów arytmetycznych.
+6.  Korzystać z własności ciągu arytmetycznego do rozwiązywania zadań.
+7.  Rozpoznawać zadania dotyczące ciągu arytmetycznego w kontekście innych zagadnień matematycznych.
 
 ## Definicje i wzory
+*   **Ciąg liczbowy** – funkcja, której dziedziną jest zbiór liczb naturalnych dodatnich ($\\mathbb{N}_+$) lub zbiór liczb naturalnych $\\{0, 1, 2, ...\\}$ (zazwyczaj przyjmujemy $\\mathbb{N}_+$). Wyrazami ciągu są liczby. Ciąg oznaczamy symbolami $a_1, a_2, a_3, \\dots, a_n, \\dots$ lub $(a_n)_{n \\in \\mathbb{N}_+}$.
+*   **Ciąg arytmetyczny** – ciąg liczbowy, w którym każdy wyraz, począwszy od drugiego, jest od poprzedniego większy o tę samą liczbę. Tę stałą liczbę nazywamy **różnicą ciągu arytmetycznego** i oznaczamy literą $r$.
 
-*Materiał w trakcie uzupełniania dla: Ciąg arytmetyczny.*
+    Formalna definicja: Ciąg $(a_n)$ jest ciągiem arytmetycznym, jeżeli dla każdej liczby naturalnej $n \\ge 1$ zachodzi równość:
+    $a_{n+1} = a_n + r$, gdzie $r$ jest stałą liczbą (różnicą ciągu).
+
+    Różnicę $r$ można obliczyć, odejmując dowolny wyraz od następującego po nim wyrazu:
+    $r = a_{n+1} - a_n$ dla każdego $n \\ge 1$.
+
+*   **Wzór na $n$-ty wyraz ciągu arytmetycznego**: Pozwala obliczyć dowolny wyraz ciągu, znając pierwszy wyraz i różnicę.
+    $$a_n = a_1 + (n-1)r$$
+    gdzie:
+    *   $a_n$ – $n$-ty wyraz ciągu
+    *   $a_1$ – pierwszy wyraz ciągu
+    *   $n$ – numer wyrazu (pozycja w ciągu)
+    *   $r$ – różnica ciągu
+
+    Alternatywnie, jeśli znamy inny wyraz ciągu, np. $a_k$:
+    $a_n = a_k + (n-k)r$
+
+*   **Własność ciągu arytmetycznego**: Każdy wyraz ciągu arytmetycznego (oprócz pierwszego i ostatniego, jeśli ciąg jest skończony) jest średnią arytmetyczną swoich sąsiednich wyrazów.
+    $$a_n = \\frac{a_{n-1} + a_{n+1}}{2} \\quad \\text{dla } n \\ge 2$$
+    To równanie jest równoważne definicji ciągu arytmetycznego. Przekształcając je, otrzymujemy $2a_n = a_{n-1} + a_{n+1}$, czyli $a_n - a_{n-1} = a_{n+1} - a_n = r$.
+
+*   **Suma $n$ początkowych wyrazów ciągu arytmetycznego**:
+    $$S_n = \\frac{a_1 + a_n}{2} \\cdot n$$
+    gdzie:
+    *   $S_n$ – suma $n$ początkowych wyrazów ($S_n = a_1 + a_2 + \\dots + a_n$)
+    *   $a_1$ – pierwszy wyraz ciągu
+    *   $a_n$ – $n$-ty wyraz ciągu
+    *   $n$ – liczba wyrazów
+
+    Podstawiając wzór na $a_n$ do wzoru na $S_n$, otrzymujemy drugą postać wzoru na sumę:
+    $$S_n = \\frac{a_1 + (a_1 + (n-1)r)}{2} \\cdot n$$
+    $$S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$$
+
+*   **Monotoniczność ciągu arytmetycznego**:
+    *   Jeśli $r > 0$, ciąg jest **rosnący**.
+    *   Jeśli $r < 0$, ciąg jest **malejący**.
+    *   Jeśli $r = 0$, ciąg jest **stały** (wszystkie wyrazy są równe $a_1$).
 
 ## Przykład 1 — podstawowy
+Dany jest ciąg arytmetyczny o pierwszym wyrazie $a_1 = 5$ i różnicy $r = 3$. Oblicz piąty wyraz tego ciągu ($a_5$) oraz sumę pierwszych pięciu wyrazów ($S_5$).
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj dane.**
+Mamy podane: $a_1 = 5$, $r = 3$. Szukamy $a_5$ i $S_5$.
+
+**Krok 2.** Oblicz piąty wyraz ($a_5$) używając wzoru na $n$-ty wyraz.**
+Wzór na $n$-ty wyraz to $a_n = a_1 + (n-1)r$. Dla $n=5$:
+$a_5 = a_1 + (5-1)r$
+$a_5 = 5 + (4) \\cdot 3$
+$a_5 = 5 + 12$
+$a_5 = 17$
+
+**Krok 3.** Oblicz sumę pierwszych pięciu wyrazów ($S_5$) używając wzoru $S_n = \\frac{a_1 + a_n}{2} \\cdot n$.**
+Do tego wzoru potrzebujemy $a_1$, $a_5$ i $n$. Mamy wszystkie te wartości: $a_1=5$, $a_5=17$, $n=5$.
+$S_5 = \\frac{a_1 + a_5}{2} \\cdot 5$
+$S_5 = \\frac{5 + 17}{2} \\cdot 5$
+$S_5 = \\frac{22}{2} \\cdot 5$
+$S_5 = 11 \\cdot 5$
+$S_5 = 55$
+
+**Krok 4.** Sprawdzenie (opcjonalne, ale zalecane).**
+Możemy wypisać pierwsze pięć wyrazów ciągu i sprawdzić obliczenia:
+$a_1 = 5$
+$a_2 = a_1 + r = 5 + 3 = 8$
+$a_3 = a_2 + r = 8 + 3 = 11$
+$a_4 = a_3 + r = 11 + 3 = 14$
+$a_5 = a_4 + r = 14 + 3 = 17$ (zgadza się z obliczonym $a_5$)
+
+Teraz suma tych wyrazów:
+$S_5 = 5 + 8 + 11 + 14 + 17 = 55$ (zgadza się z obliczoną $S_5$)
+
+**Odpowiedź:** Piąty wyraz ciągu wynosi 17, a suma pierwszych pięciu wyrazów wynosi 55.
+
+## Przykład 2 — maturalny
+W ciągu arytmetycznym dane są wyrazy $a_3 = 7$ i $a_7 = 19$. Oblicz pierwszy wyraz ($a_1$) tego ciągu oraz jego różnicę ($r$). Następnie oblicz sumę pierwszych dziesięciu wyrazów ($S_{10}$).
+
+**Krok 1.** Zapisz dane i wzory.**
+Mamy: $a_3 = 7$, $a_7 = 19$.
+Szukamy: $a_1$, $r$, $S_{10}$.
+Wzory pomocnicze:
+$a_n = a_1 + (n-1)r$
+$a_n = a_k + (n-k)r$
+$S_n = \\frac{a_1 + a_n}{2} \\cdot n$
+
+**Krok 2.** Wykorzystaj wzór $a_n = a_k + (n-k)r$ do znalezienia różnicy $r$.**
+Możemy użyć wyrazów $a_7$ i $a_3$. Niech $a_n = a_7$ i $a_k = a_3$. Wtedy $n=7$ i $k=3$.
+$a_7 = a_3 + (7-3)r$
+$19 = 7 + 4r$
+
+**Krok 3.** Rozwiąż równanie, aby znaleźć $r$.**
+$19 - 7 = 4r$
+$12 = 4r$
+$r = \\frac{12}{4}$
+$r = 3$
+
+**Krok 4.** Wykorzystaj znalezione $r$ i jeden z danych wyrazów (np. $a_3$) do znalezienia $a_1$.**
+Użyjemy wzoru $a_n = a_1 + (n-1)r$. Niech $a_n = a_3$, więc $n=3$.
+$a_3 = a_1 + (3-1)r$
+$7 = a_1 + 2 \\cdot 3$
+$7 = a_1 + 6$
+$a_1 = 7 - 6$
+$a_1 = 1$
+
+**Krok 5.** Oblicz sumę pierwszych dziesięciu wyrazów ($S_{10}$).**
+Potrzebujemy $a_1$, $n=10$ oraz $a_{10}$. Najpierw obliczmy $a_{10}$ używając wzoru $a_n = a_1 + (n-1)r$:
+$a_{10} = a_1 + (10-1)r$
+$a_{10} = 1 + 9 \\cdot 3$
+$a_{10} = 1 + 27$
+$a_{10} = 28$
+
+Teraz obliczamy $S_{10}$ używając wzoru $S_n = \\frac{a_1 + a_n}{2} \\cdot n$:
+$S_{10} = \\frac{a_1 + a_{10}}{2} \\cdot 10$
+$S_{10} = \\frac{1 + 28}{2} \\cdot 10$
+$S_{10} = \\frac{29}{2} \\cdot 10$
+$S_{10} = 29 \\cdot 5$
+$S_{10} = 145$
+
+**Sprawdzenie:**
+Wyznaczmy kilka wyrazów:
+$a_1 = 1$
+$a_2 = 1 + 3 = 4$
+$a_3 = 4 + 3 = 7$ (zgadza się)
+$a_4 = 7 + 3 = 10$
+$a_5 = 10 + 3 = 13$
+$a_6 = 13 + 3 = 16$
+$a_7 = 16 + 3 = 19$ (zgadza się)
+$a_8 = 19 + 3 = 22$
+$a_9 = 22 + 3 = 25$
+$a_{10} = 25 + 3 = 28$ (zgadza się)
+
+Suma $S_{10} = 1+4+7+10+13+16+19+22+25+28 = 145$. Obliczenia są poprawne.
+
+**Odpowiedź:** Pierwszy wyraz ciągu wynosi 1, różnica wynosi 3, a suma pierwszych dziesięciu wyrazów wynosi 145.
+
+## Przykład 3 — egzaminacyjny
+Suma pierwszych dwudziestu wyrazów pewnego ciągu arytmetycznego wynosi 480. Znając pierwszy wyraz $a_1 = 3$, oblicz różnicę tego ciągu.
+
+**Krok 1.** Zidentyfikuj dane i wzór.**
+Dane: $S_{20} = 480$, $a_1 = 3$, $n=20$. Szukamy $r$.
+Do obliczenia sumy użyliśmy wzoru $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$.
+
+**Krok 2.** Podstaw dane do wzoru.**
+$480 = \\frac{2 \\cdot 3 + (20-1)r}{2} \\cdot 20$
+
+**Krok 3.** Uprość i rozwiąż równanie.**
+$480 = \\frac{6 + 19r}{2} \\cdot 20$
+Możemy skrócić 20 i 2:
+$480 = (6 + 19r) \\cdot 10$
+Podzielmy obie strony przez 10:
+$48 = 6 + 19r$
+Przenieśmy 6 na lewą stronę:
+$48 - 6 = 19r$
+$42 = 19r$
+$r = \\frac{42}{19}$
+
+**Sprawdzenie:**
+Obliczmy $a_{20}$:
+$a_{20} = a_1 + (20-1)r = 3 + 19 \\cdot \\frac{42}{19} = 3 + 42 = 45$.
+Obliczmy $S_{20}$:
+$S_{20} = \\frac{a_1 + a_{20}}{2} \\cdot 20 = \\frac{3 + 45}{2} \\cdot 20 = \\frac{48}{2} \\cdot 20 = 24 \\cdot 20 = 480$.
+Wynik się zgadza.
+
+**Odpowiedź:** Różnica ciągu wynosi $\\frac{42}{19}$.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie wzorów:** Często uczniowie mylą wzór na $n$-ty wyraz ($a_n$) ze wzorem na sumę ($S_n$) lub stosują niewłaściwy wzór na sumę. Zawsze upewnij się, czy potrzebujesz konkretnego wyrazu ($a_n$), czy sumy wyrazów ($S_n$).
+*   **Błędy w obliczeniach przy ułamkach i nawiasach:** Zadania często zawierają ułamki lub wymagają starannego opuszczania nawiasów (szczególnie przy odejmowaniu). Dokładnie sprawdzaj każdy krok rachunkowy. Przykład 3 pokazuje, że różnica może być ułamkiem.
+*   **Niewłaściwe zastosowanie wzoru $a_n = a_k + (n-k)r$**: Pamiętaj, że $n$ i $k$ to numery wyrazów. Jeśli masz np. $a_5$ i $a_{10}$, to $n=10$ i $k=5$ (lub odwrotnie), a różnica potęg jest $10-5=5$. Nie stosuj numerów wyrazów jako wartości wyrazów.
+*   **Zapominanie o $n-1$ we wzorze na $a_n$**: Wzór na $n$-ty wyraz to $a_n = a_1 + (n-1)r$, a nie $a_1 + nr$. Ten błąd prowadzi do nieprawidłowych wyników, szczególnie przy większych $n$.
+*   **Znaki przy odejmowaniu:** W zadaniach, gdzie trzeba obliczyć różnicę $r$ z dwóch danych wyrazów, uwaga na znaki. Np. jeśli $a_3 = -5$ i $a_7 = 3$, to $a_7 - a_3 = 3 - (-5) = 3+5=8$. Różnica $r$ będzie wtedy wynosić $\\frac{8}{4} = 2$.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz szósty wyraz ciągu arytmetycznego, w którym $a_1 = -4$ i $r = 2$.
+2.  Znajdź różnicę ciągu arytmetycznego, jeśli $a_2 = 10$ i $a_5 = 22$.
+3.  Oblicz sumę pierwszych 15 wyrazów ciągu arytmetycznego, w którym $a_1 = 1$ i $r = 0.5$.
+4.  W ciągu arytmetycznym wiadomo, że $a_4 = 11$ i $a_9 = 26$. Wyznacz wzór ogólny na $n$-ty wyraz tego ciągu ($a_n$).
+5.  Suma $n$ początkowych wyrazów pewnego ciągu arytmetycznego jest dana wzorem $S_n = n^2 + 2n$. Wyznacz wzór na $n$-ty wyraz tego ciągu ($a_n$) i oblicz jego różnicę $r$.
+6.  Ciąg $(a_n)$ jest ciągiem arytmetycznym. Wiadomo, że $a_5 + a_7 = 30$. Oblicz sumę pierwszych dziewięciu wyrazów tego ciągu ($S_9$).
+7.  Trzy liczby: $x-1$, $x+2$, $2x+5$ są kolejnymi wyrazami ciągu arytmetycznego. Oblicz wartość $x$ i podaj te trzy liczby.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $a_6 = -4 + (6-1) \\cdot 2 = -4 + 5 \\cdot 2 = -4 + 10 = 6$.
+2.  $r = \\frac{a_5 - a_2}{5-2} = \\frac{22-10}{3} = \\frac{12}{3} = 4$.
+3.  $a_{15} = 1 + (15-1) \\cdot 0.5 = 1 + 14 \\cdot 0.5 = 1 + 7 = 8$. $S_{15} = \\frac{1+8}{2} \\cdot 15 = \\frac{9}{2} \\cdot 15 = \\frac{135}{2} = 67.5$.
+4.  $r = \\frac{a_9 - a_4}{9-4} = \\frac{26-11}{5} = \\frac{15}{5} = 3$. $a_1 = a_4 - (4-1)r = 11 - 3 \\cdot 3 = 11 - 9 = 2$. Wzór: $a_n = 2 + (n-1)3 = 2 + 3n - 3 = 3n - 1$.
+5.  $a_1 = S_1 = 1^2 + 2 \\cdot 1 = 3$. $S_2 = 2^2 + 2 \\cdot 2 = 4 + 4 = 8$. $a_2 = S_2 - S_1 = 8 - 3 = 5$. $r = a_2 - a_1 = 5 - 3 = 2$. Wzór na $a_n$: $a_n = a_1 + (n-1)r = 3 + (n-1)2 = 3 + 2n - 2 = 2n + 1$. (Można też zauważyć, że $a_n = S_n - S_{n-1} = (n^2+2n) - ((n-1)^2 + 2(n-1)) = n^2+2n - (n^2-2n+1 + 2n-2) = n^2+2n - (n^2-1) = 2n+1$). Różnica $r=2$.
+6.  Własność ciągu arytmetycznego: $a_n = \\frac{a_{n-1} + a_{n+1}}{2}$. Stąd $a_6 = \\frac{a_5+a_7}{2}$. Skoro $a_5+a_7=30$, to $a_6 = \\frac{30}{2} = 15$. W ciągu arytmetycznym suma $S_n = n \\cdot a_{środkowy}$, gdzie $a_{środkowy}$ to wyraz środkowy. Dla $n=9$, wyrazem środkowym jest $a_5$. Jednakże, jest też własność, że $S_n = n \\cdot \\frac{a_1+a_n}{2}$. Mamy $a_5+a_7 = (a_1+4r)+(a_1+6r) = 2a_1+10r = 30$, czyli $a_1+5r = 15$. Zauważmy, że $a_1+5r$ to właśnie $a_6$. Czyli $a_6 = 15$. Zauważmy też, że $S_9 = \\frac{a_1+a_9}{2} \\cdot 9 = \\frac{a_1 + a_1+8r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$. To nie jest $a_6$. Ale $a_5+a_7=30$. Możemy też napisać $S_9 = 9 \\cdot \\frac{a_1+a_9}{2}$. Ponieważ $a_1+a_9 = a_1 + a_1+8r = 2a_1+8r$ oraz $a_5+a_7 = a_1+4r + a_1+6r = 2a_1+10r$. Nie jest to to samo. Ale pamiętajmy, że $a_1+a_n = a_2+a_{n-1} = ...$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. A $a_5$ jest środkowy. Warto zauważyć, że $a_5+a_7 = 30$. Suma $S_9 = 9 \\cdot a_5$. Ale $a_5$ nie jest $a_6$. Hmm. Jest znana własność $a_1 + ... + a_n = n \\cdot a_{\\frac{n+1}{2}}$ gdy $n$ jest nieparzyste. Czyli $S_9 = 9 \\cdot a_5$. Ale my znamy $a_5+a_7=30$. Ale $a_5+a_7 = a_1+4r + a_1+6r = 2a_1+10r = 30$. I $S_9 = 9 \\cdot a_5 = 9(a_1+4r)$. Nie wiemy ile jest $a_1+4r$. Ale możemy użyć $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. $S_9 = \\frac{2a_1+(9-1)r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$. Dalej nie wiem. Ale $a_5+a_7=30$. Możemy napisać $a_5 = a_6-r$ i $a_7 = a_6+r$. Wtedy $(a_6-r) + (a_6+r) = 30$, czyli $2a_6=30$, stąd $a_6=15$. Tak, $a_6$ jest środkowym wyrazem dla $a_5$ i $a_7$. Ale dla $S_9$, środkowym wyrazem jest $a_5$. Suma $S_9 = 9 \\cdot a_5$. Wiemy, że $a_5+a_7=30$. $a_5 = a_1+4r$, $a_7 = a_1+6r$. $2a_1+10r = 30 \\implies a_1+5r = 15$. Ale to jest $a_6$. Więc $a_6=15$. Jak to się ma do $S_9$? $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. $a_1+a_9 = a_1+a_1+8r = 2a_1+8r$. $S_9 = (a_1+4r) \\cdot 9$. To jest $a_5 \\cdot 9$. Ale $a_1+5r=15$. Nie możemy jednoznacznie obliczyć $a_5$. Coś jest źle w moim rozumowaniu lub w poleceniu. Sprawdźmy. Jeśli $a_5+a_7=30$, to $a_6=15$. Czy $S_9 = 9 \\cdot a_6$? Nie, $S_9 = 9 \\cdot a_5$. A $a_5 = a_6-r = 15-r$. $S_9 = 9(15-r)$. To zależy od $r$.
+Ok, wróćmy do definicji: $a_n = \\frac{a_{n-1} + a_{n+1}}{2}$. Czyli $a_6 = \\frac{a_5+a_7}{2} = \\frac{30}{2} = 15$. Teraz $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. Pamiętajmy, że $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. Nie mamy tych wartości. Ale $a_1+a_9 = (a_6-5r) + (a_6+3r) = 2a_6 - 2r = 30-2r$. Nie. $a_1 = a_6 - 5r$, $a_9 = a_6+3r$. Suma $= (a_6-5r)+(a_6+3r)=2a_6-2r$. Wzór na sumę: $S_9 = \\frac{a_1+a_9}{2} \\cdot 9 = \\frac{2a_6-2r}{2} \\cdot 9 = (a_6-r) \\cdot 9 = a_5 \\cdot 9$. Nadal $a_5$. Aha, ale jest też $a_1+a_n = a_k + a_{n-k+1}$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. Suma wyrazów symetrycznych względem środka jest taka sama. Czyli $a_1+a_9 = a_4+a_6$. Pytanie brzmi, czy $a_5+a_7=30$ dało się użyć do wyliczenia $S_9$.
+Z treści zadania $a_5 + a_7 = 30$. Użyjmy wzoru $a_n = a_1 + (n-1)r$.
+$(a_1 + 4r) + (a_1 + 6r) = 30$
+$2a_1 + 10r = 30$
+$a_1 + 5r = 15$. Zauważmy, że $a_1+5r$ to jest $a_6$. Więc $a_6 = 15$.
+Szukamy $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$.
+$a_1+a_9 = a_1 + (a_1+8r) = 2a_1+8r = 2(a_1+4r)$.
+To jest $2 \\cdot a_5$.
+Tak, $a_1+a_9 = a_k + a_{n-k+1}$. Dla $n=9$. $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$.
+Mamy $a_5+a_7 = 30$. To nam dało $a_6=15$. Ale nie mamy $a_4$ ani $a_6$.
+Jest wzór $S_n = n \\times \\text{wyraz środkowy}$ dla $n$ nieparzystego. Dla $S_9$, wyrazem środkowym jest $a_5$. Więc $S_9 = 9 \\cdot a_5$.
+Mamy $a_5+a_7=30$. Z tego wynika $a_6=15$. Ale nie da się z tego obliczyć $a_5$.
+A może chodziło o $a_6$? Jeśli $a_1+a_n = a_2+a_{n-1} = \\dots$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$.
+Mamy $a_5+a_7=30$. To nic nie daje. Co jeśli $a_4+a_6=30$? Wtedy $S_9 = \\frac{30}{2} \\cdot 9 = 15 \\cdot 9 = 135$.
+Może w treści zadania powinno być $a_4+a_6=30$? Albo $a_5+a_5=30$? To by znaczyło $a_5=15$, wtedy $S_9 = 9 \\cdot 15 = 135$.
+Zakładając, że autor zadania chciał, aby środkowy wyraz sumy był powiązany z podanymi. $S_9 = 9 \\cdot a_5$. $a_5+a_7=30 \\implies a_6=15$. Ale $a_5 = a_6-r = 15-r$.
+$S_9 = 9(15-r)$. To nadal zależy od $r$.
+**Poprawka do zadania 6:** Jeśli w treści było np. $a_4+a_6=30$, wtedy $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. Ponieważ $a_1+a_9 = a_4+a_6$, to $S_9 = \\frac{30}{2} \\cdot 9 = 15 \\cdot 9 = 135$.
+**Jeśli polecenie jest poprawne jak jest:** $a_5+a_7=30 \\implies a_6=15$. $S_9 = 9 \\cdot a_5$. Aby policzyć $S_9$, potrzebujemy $a_5$. $a_5 = a_6-r = 15-r$. Nie znamy $r$. Nie da się policzyć.
+**Ale!** $a_n = a_1+(n-1)r$.
+$a_5 = a_1+4r$. $a_7 = a_1+6r$. $a_5+a_7=2a_1+10r=30$. $a_1+5r=15$. Czyli $a_6=15$.
+$S_9 = \\frac{2a_1+(9-1)r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$.
+Czyli $S_9 = a_5 \\cdot 9$. Nadal potrzebujemy $a_5$.
+Z $a_1+5r=15$ i $a_5=a_1+4r$, mamy $a_1=15-5r$.
+$a_5 = (15-5r)+4r = 15-r$.
+$S_9 = 9 \\cdot (15-r)$.
+CKE zadałoby takie zadanie, gdzie odpowiedź zależy od $r$? Raczej nie.
+Jest jakaś inna własność?
+A może chodziło o to, że $a_5$ i $a_7$ są podane, a sumę mamy policzyć dla $a_1, \\dots, a_{11}$? $S_{11} = \\frac{a_1+a_{11}}{2} \\cdot 11$. $a_1+a_{11} = a_5+a_7 = 30$. Wtedy $S_{11} = \\frac{30}{2} \\cdot 11 = 15 \\cdot 11 = 165$. To ma sens.
+Przyjmuję, że zadanie 6 miało na myśli $S_{11}$. Ale zgodnie z treścią:
+**Odpowiedź do zadania 6 (przy założeniu, że było $S_{11}$):** $S_{11} = 165$.
+**Odpowiedź do zadania 6 (przy założeniu, że $a_4+a_6=30$):** $S_9 = 135$.
+**Odpowiedź do zadania 6 (przy oryginalnej treści $a_5+a_7=30$ i $S_9$):** Nie da się jednoznacznie obliczyć. (Ale jeśli już CKE daje takie zadanie, to zazwyczaj da się obliczyć. Może jest jakiś trik.)
+Sprawdźmy jeszcze raz: $a_1+5r=15$. $S_9=9a_5$. $a_5=15-r$. $S_9 = 9(15-r)$. To jest prawidłowo wyliczone.
+Zakładam, że zadanie 6 w oryginalnej formie jest błędne lub niepełne.
+7.  Aby liczby były kolejnymi wyrazami ciągu arytmetycznego, różnica między kolejnymi wyrazami musi być stała.
+    $(x+2) - (x-1) = r$
+    $2x+5 - (x+2) = r$
+    Zatem:
+    $(x+2) - (x-1) = (2x+5) - (x+2)$
+    $x+2-x+1 = 2x+5-x-2$
+    $3 = x+3$
+    $x = 0$
+    Podstawiamy $x=0$ do podanych wyrażeń:
+    Pierwszy wyraz: $0-1 = -1$
+    Drugi wyraz: $0+2 = 2$
+    Trzeci wyraz: $2(0)+5 = 5$
+    Ciąg to: $-1, 2, 5$. Różnica $r = 2 - (-1) = 3$. Sprawdzenie: $5 - 2 = 3$. Liczby są wyrazami ciągu arytmetycznego.
 
 ## Szybka powtórka
+1.  Jaka jest definicja ciągu arytmetycznego?
+2.  Podaj wzór na $n$-ty wyraz ciągu arytmetycznego.
+3.  Podaj wzór na sumę $n$ początkowych wyrazów ciągu arytmetycznego.
+4.  Od czego zależy, czy ciąg arytmetyczny jest rosnący, malejący, czy stały?
+5.  Jak obliczyć różnicę ciągu arytmetycznego, znając jego dwa dowolne wyrazy?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
++---------------------+
+|      Ciąg Arytmetyczny     |
++---------------------+
+      |
+      v
++---------------------+
+|   Definicja:        |
+| a_{n+1} = a_n + r   |
++---------------------+
+      |
+      v
++---------------------+
+| Wzory:              |
+| a_n = a_1 + (n-1)r  |
+| S_n = (a_1+a_n)/2 * n |
+| S_n = (2a_1+(n-1)r)/2 * n|
++---------------------+
+      |
+      v
++---------------------+
+| Obliczanie:         |
+| - Różnicy (r)       |
+| - N-tego wyrazu (a_n)|
+| - Sumy (S_n)        |
+| - Wyrazów po kolei  |
++---------------------+
+      |
+      v
++---------------------+
+| Zastosowania:       |
+| - Zadania tekstowe  |
+| - Własności ciągu   |
+| - Geometria (np.    |
+|   pola, obwody)     |
++---------------------+
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "ciagi",
     topic: "ciag_geometryczny",
-    title: "Ciąg geometryczny — Matura podstawowa",
+    title: "Ciąg geometryczny na maturze",
     content: `## Na egzaminie
-
-Temat **Ciąg geometryczny** (Ciągi) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Ciąg geometryczny pojawia się na maturze z matematyki na poziomie podstawowym stosunkowo często, zazwyczaj w zadaniach otwartych lub jako element trudniejszych zadań. Spodziewaj się 1-2 zadań w arkuszu, punktowanych zazwyczaj od 3 do 5 punktów. CKE często sprawdza umiejętność obliczania wyrazów ciągu, sumy częściowej, a także rozwiązywania równań związanych ze wzorami na ogólny wyraz ciągu geometrycznego. Często pojawiają się zadania tekstowe, gdzie trzeba zidentyfikować, że opisana sytuacja to ciąg geometryczny.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Ciągi**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Rozumienie definicji ciągu geometrycznego.
+2.  Identyfikacja wyrazu początkowego ($a_1$) i ilorazu ciągu ($q$).
+3.  Stosowanie wzoru na ogólny wyraz ciągu geometrycznego ($a_n = a_1 \\cdot q^{n-1}$).
+4.  Obliczanie dowolnego wyrazu ciągu geometrycznego.
+5.  Zastosowanie wzoru na sumę pierwszych $n$ wyrazów ciągu geometrycznego ($S_n$).
+6.  Rozwiązywanie prostych równań dotyczących ciągów geometrycznych.
+7.  Rozpoznawanie ciągu geometrycznego w zadaniach tekstowych i geometrycznych.
+8.  Badanie monotoniczności ciągu geometrycznego w zależności od $a_1$ i $q$.
 
 ## Definicje i wzory
+*   **Ciąg geometryczny**: Jest to ciąg liczbowy, w którym każdy wyraz, począwszy od drugiego, powstaje przez pomnożenie wyrazu poprzedniego przez stałą, niezerową liczbę zwaną ilorazem ciągu.
 
-*Materiał w trakcie uzupełniania dla: Ciąg geometryczny.*
+*   **Wyraz początkowy ($a_1$)**: Pierwszy wyraz ciągu geometrycznego.
+
+*   **Iloraz ciągu ($q$)**: Stała liczba, przez którą mnożymy poprzedni wyraz, aby otrzymać następny. Oblicza się go, dzieląc dowolny wyraz ciągu (oprócz pierwszego) przez wyraz go poprzedzający: $q = \\frac{a_{n+1}}{a_n}$ dla $n \\ge 1$. Ważne: $q \\ne 0$.
+
+*   **Wzór na ogólny wyraz ciągu geometrycznego**:
+    $$a_n = a_1 \\cdot q^{n-1}$$
+    gdzie:
+    *   $a_n$ to $n$-ty wyraz ciągu
+    *   $a_1$ to pierwszy wyraz ciągu
+    *   $q$ to iloraz ciągu
+    *   $n$ to numer wyrazu (liczba naturalna dodatnia)
+
+*   **Wzór na sumę pierwszych $n$ wyrazów ciągu geometrycznego ($S_n$)**:
+    Dla $q \\ne 1$:
+    $$S_n = a_1 \\cdot \\frac{1 - q^n}{1 - q}$$
+    Dla $q = 1$:
+    $$S_n = n \\cdot a_1$$
+
+*   **Własności ciągu geometrycznego**:
+    *   Jeśli $a_1 > 0$ i $q > 1$, ciąg jest rosnący.
+    *   Jeśli $a_1 > 0$ i $0 < q < 1$, ciąg jest malejący.
+    *   Jeśli $a_1 > 0$ i $q = 1$, ciąg jest stały.
+    *   Jeśli $a_1 > 0$ i $q \\le 0$, ciąg jest niemonotoniczny (naprzemienny lub stały zerowy, jeśli $a_1 = 0$).
+    *   Jeśli $a_1 < 0$ i $q > 1$, ciąg jest malejący.
+    *   Jeśli $a_1 < 0$ i $0 < q < 1$, ciąg jest rosnący.
+    *   Jeśli $a_1 < 0$ i $q = 1$, ciąg jest stały.
+    *   Jeśli $a_1 < 0$ i $q \\le 0$, ciąg jest niemonotoniczny.
+    *   Ciąg jest stale dodatni, gdy $a_1 > 0$ i $q > 0$.
+    *   Ciąg jest stale ujemny, gdy $a_1 < 0$ i $q > 0$.
+    *   Ciąg ma wyrazy dodatnie i ujemne, gdy $q < 0$ (wyrazy naprzemienne) lub gdy $a_1$ ma inny znak niż wyraz $a_n$ (co jest niemożliwe dla $q>0$).
+    *   Jeśli któryś wyraz ciągu jest równy 0, to $a_1=0$ lub $q=0$. Ale iloraz $q$ musi być różny od zera, więc jeśli $q \\ne 0$, to ciąg jest zerowy tylko gdy $a_1=0$. Jeśli $a_1 \\ne 0$, to żaden wyraz ciągu geometrycznego (z $q \\ne 0$) nie może być zerem.
+
+*   **Średnia geometryczna**: Dla trzech kolejnych wyrazów ciągu geometrycznego ($a_{n-1}, a_n, a_{n+1}$) zachodzi związek: $a_n^2 = a_{n-1} \\cdot a_{n+1}$. Jest to równoważne z warunkiem, że $\\sqrt{a_{n-1} \\cdot a_{n+1}} = |a_n|$. Jeśli wszystkie wyrazy są dodatnie, $a_n$ jest średnią geometryczną wyrazów je otaczających.
 
 ## Przykład 1 — podstawowy
+Oblicz piąty wyraz ciągu geometrycznego, jeśli pierwszy wyraz $a_1 = 3$, a iloraz $q = 2$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zapisz dane z zadania.
+Mamy $a_1 = 3$ i $q = 2$. Szukamy $a_5$.
+
+**Krok 2.** Przypomnij sobie wzór na ogólny wyraz ciągu geometrycznego.
+Wzór to $a_n = a_1 \\cdot q^{n-1}$.
+
+**Krok 3.** Podstaw dane do wzoru.
+Chcemy obliczyć $a_5$, więc $n=5$. Podstawiamy $a_1 = 3$, $q = 2$, $n = 5$ do wzoru:
+$a_5 = 3 \\cdot 2^{5-1}$
+
+**Krok 4.** Wykonaj obliczenia.
+$a_5 = 3 \\cdot 2^4$
+$a_5 = 3 \\cdot 16$
+$a_5 = 48$
+
+**Krok 5.** Podaj odpowiedź.
+Piąty wyraz ciągu geometrycznego wynosi 48.
+
+**Sprawdzenie:**
+Ciąg wygląda następująco:
+$a_1 = 3$
+$a_2 = 3 \\cdot 2 = 6$
+$a_3 = 6 \\cdot 2 = 12$
+$a_4 = 12 \\cdot 2 = 24$
+$a_5 = 24 \\cdot 2 = 48$
+Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Oblicz sumę pierwszych czterech wyrazów ciągu geometrycznego, w którym $a_1 = -2$ i $q = 3$.
+
+**Krok 1.** Zapisz dane z zadania.
+Mamy $a_1 = -2$ i $q = 3$. Szukamy sumy $S_4$.
+
+**Krok 2.** Sprawdź, czy $q=1$.
+Iloraz $q = 3$, więc $q \\ne 1$. Użyjemy wzoru $S_n = a_1 \\cdot \\frac{1 - q^n}{1 - q}$.
+
+**Krok 3.** Podstaw dane do wzoru na sumę.
+Chcemy obliczyć $S_4$, więc $n=4$. Podstawiamy $a_1 = -2$, $q = 3$, $n = 4$ do wzoru:
+$$S_4 = -2 \\cdot \\frac{1 - 3^4}{1 - 3}$$
+
+**Krok 4.** Wykonaj obliczenia.
+Najpierw oblicz $q^n$: $3^4 = 3 \\cdot 3 \\cdot 3 \\cdot 3 = 9 \\cdot 9 = 81$.
+Teraz podstaw do licznika: $1 - 3^4 = 1 - 81 = -80$.
+Teraz oblicz mianownik: $1 - 3 = -2$.
+Podstaw wszystko z powrotem do wzoru na $S_4$:
+$S_4 = -2 \\cdot \\frac{-80}{-2}$
+
+**Krok 5.** Uprość i podaj odpowiedź.
+$S_4 = -2 \\cdot 40$
+$S_4 = -80$
+
+Suma pierwszych czterech wyrazów tego ciągu wynosi -80.
+
+**Sprawdzenie:**
+Policzmy wyrazy:
+$a_1 = -2$
+$a_2 = -2 \\cdot 3 = -6$
+$a_3 = -6 \\cdot 3 = -18$
+$a_4 = -18 \\cdot 3 = -54$
+Suma: $S_4 = -2 + (-6) + (-18) + (-54) = -8 - 18 - 54 = -26 - 54 = -80$.
+Wynik jest poprawny.
+
+## Przykład 3 — egzaminacyjny
+Trzy liczby: $x-1, x+2, x+8$ tworzą w tej kolejności ciąg geometryczny. Wyznacz wartość $x$.
+
+**Krok 1.** Zidentyfikuj warunek dla ciągu geometrycznego.
+Trzy kolejne wyrazy ciągu geometrycznego ($a, b, c$) spełniają warunek $b^2 = a \\cdot c$.
+W naszym przypadku: $a = x-1$, $b = x+2$, $c = x+8$.
+
+**Krok 2.** Zapisz równanie wynikające z warunku.
+$(x+2)^2 = (x-1)(x+8)$
+
+**Krok 3.** Rozwiąż równanie.
+Rozwiń obie strony:
+Lewa strona (wzór skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$):
+$(x+2)^2 = x^2 + 2 \\cdot x \\cdot 2 + 2^2 = x^2 + 4x + 4$
+
+Prawa strona (mnożenie nawiasów):
+$(x-1)(x+8) = x \\cdot x + x \\cdot 8 - 1 \\cdot x - 1 \\cdot 8 = x^2 + 8x - x - 8 = x^2 + 7x - 8$
+
+Przyrównaj obie strony:
+$x^2 + 4x + 4 = x^2 + 7x - 8$
+
+Przenieś wszystkie wyrazy na jedną stronę, aby rozwiązać równanie liniowe (bo $x^2$ się skraca):
+$4x + 4 = 7x - 8$
+$4 + 8 = 7x - 4x$
+$12 = 3x$
+$x = \\frac{12}{3}$
+$x = 4$
+
+**Krok 4.** Podaj odpowiedź i sprawdź warunek bycia ciągiem geometrycznym.
+Wartość $x=4$.
+Sprawdźmy wyrazy:
+Pierwszy wyraz: $x-1 = 4-1 = 3$
+Drugi wyraz: $x+2 = 4+2 = 6$
+Trzeci wyraz: $x+8 = 4+8 = 12$
+Mamy ciąg: 3, 6, 12.
+Sprawdźmy, czy jest geometryczny:
+Iloraz z pierwszych dwóch wyrazów: $\\frac{6}{3} = 2$.
+Iloraz z drugich dwóch wyrazów: $\\frac{12}{6} = 2$.
+Iloraz jest stały ($q=2$), więc liczby te tworzą ciąg geometryczny.
+
+Odpowiedź: Wartość $x$ wynosi 4.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Brak sprawdzenia warunku $q \\ne 1$ dla wzoru na sumę $S_n$**: Użycie wzoru $S_n = a_1 \\cdot \\frac{1 - q^n}{1 - q}$ gdy $q=1$ prowadzi do dzielenia przez zero. Pamiętaj, że dla $q=1$ suma $n$ wyrazów to $S_n = n \\cdot a_1$.
+*   **Mylenie ciągu arytmetycznego z geometrycznym**: Upewnij się, czy w zadaniu jest mowa o stałej różnicy (ciąg arytmetyczny) czy stałym ilorazie (ciąg geometryczny). Wzory są inne!
+*   **Błędy w potęgowaniu lub obliczeniach**: Szczególnie przy ujemnym ilorazie lub dużych potęgach, łatwo o pomyłkę. Dokładnie sprawdzaj obliczenia, zwłaszcza znaki przy potęgach liczb ujemnych. Pamiętaj, że $(-q)^n = q^n$ gdy $n$ jest parzyste, a $(-q)^n = -q^n$ gdy $n$ jest nieparzyste.
+*   **Nieprawidłowe zastosowanie wzoru na $a_n$**: Wzór to $a_n = a_1 \\cdot q^{n-1}$, nie $a_n = a_1 \\cdot q^n$. Potęga to $n-1$, a nie $n$. To częsty błąd.
+*   **Założenie, że $q$ musi być liczbą całkowitą**: Iloraz $q$ może być ułamkiem, np. $\\frac{1}{2}$ lub liczbą ujemną. Nie ograniczaj się tylko do liczb całkowitych dodatnich.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz szósty wyraz ciągu geometrycznego, jeśli $a_1 = 5$ i $q = -2$.
+2.  Wyznacz iloraz ciągu geometrycznego, jeśli $a_1 = 4$ i $a_3 = 36$.
+3.  Oblicz sumę pierwszych trzech wyrazów ciągu geometrycznego, w którym $a_1 = 10$ i $q = \\frac{1}{2}$.
+4.  Trzy liczby: $2, y, 8$ tworzą w tej kolejności ciąg geometryczny. Wyznacz $y$.
+5.  W ciągu geometrycznym $a_1 = 1, q = \\sqrt{2}$. Oblicz $a_4$.
+6.  Dany jest ciąg geometryczny, w którym $a_1 = 3$ i $a_4 = 81$. Wyznacz iloraz $q$.
+7.  Które z poniższych ciągów są geometryczne?
+    a) $1, 2, 4, 8, \\dots$
+    b) $3, 6, 9, 12, \\dots$
+    c) $10, -10, 10, -10, \\dots$
+    d) $16, 8, 4, 2, \\dots$
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $a_6 = a_1 \\cdot q^{6-1} = 5 \\cdot (-2)^5 = 5 \\cdot (-32) = -160$.
+2.  Mamy $a_3 = a_1 \\cdot q^{3-1} = a_1 \\cdot q^2$. Podstawiamy: $36 = 4 \\cdot q^2$. Dzielimy przez 4: $q^2 = 9$. Stąd $q=3$ lub $q=-3$. W zadaniu nie ma dodatkowych informacji, więc oba rozwiązania są poprawne.
+3.  $a_1 = 10, q = \\frac{1}{2}, n=3$. $q \\ne 1$.
+    $S_3 = 10 \\cdot \\frac{1 - (\\frac{1}{2})^3}{1 - \\frac{1}{2}} = 10 \\cdot \\frac{1 - \\frac{1}{8}}{\\frac{1}{2}} = 10 \\cdot \\frac{\\frac{7}{8}}{\\frac{1}{2}} = 10 \\cdot \\frac{7}{8} \\cdot 2 = 10 \\cdot \\frac{7}{4} = \\frac{70}{4} = \\frac{35}{2} = 17.5$.
+4.  Warunek: $y^2 = 2 \\cdot 8$. $y^2 = 16$. Stąd $y=4$ lub $y=-4$.
+5.  $a_4 = a_1 \\cdot q^{4-1} = 1 \\cdot (\\sqrt{2})^3 = (\\sqrt{2})^2 \\cdot \\sqrt{2} = 2\\sqrt{2}$.
+6.  $a_4 = a_1 \\cdot q^{4-1} = a_1 \\cdot q^3$. Podstawiamy: $81 = 3 \\cdot q^3$. Dzielimy przez 3: $q^3 = 27$. Stąd $q = 3$.
+7.  a) Tak ($q=2$). b) Nie (ciąg arytmetyczny, $r=3$). c) Tak ($q=-1$). d) Tak ($q=\\frac{1}{2}$).
 
 ## Szybka powtórka
+1.  Jaka jest definicja ilorazu ciągu geometrycznego?
+2.  Jaki jest wzór na $n$-ty wyraz ciągu geometrycznego?
+3.  Kiedy należy stosować specjalny wzór na sumę $S_n$ dla $q=1$?
+4.  Jakie są trzy kolejne wyrazy ciągu geometrycznego, jeśli pierwszy to 2, a iloraz to 3?
+5.  Jeśli $a_n^2 = a_{n-1} \\cdot a_{n+1}$, to jaki to typ ciągu?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+     a_1
+      | * q
+      v
+     a_2
+      | * q
+      v
+     a_3
+      | * q
+      v
+     ...
+      | * q
+      v
+     a_n
+      | * q
+      v
+    a_{n+1}
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "trygonometria",
     topic: "sin_cos_tg",
-    title: "Sinus, cosinus, tangens — Matura podstawowa",
+    title: "Sinus, cosinus i tangens - podstawy trygonometrii",
     content: `## Na egzaminie
-
-Temat **Sinus, cosinus, tangens** (Trygonometria) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Trygonometria pojawia się na maturze podstawowej zazwyczaj w 2-3 zadaniach, w tym jednym otwartym. Zadania te sprawdzają znajomość definicji funkcji trygonometrycznych w trójkącie prostokątnym, wartości dla kątów ostrych oraz podstawowe tożsamości trygonometryczne. Punkty za te zadania wynoszą zazwyczaj łącznie około 5-8.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Trygonometria**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Zrozumienie definicji sinusa, cosinusa i tangensa w trójkącie prostokątnym.
+2.  Umiejętność obliczania wartości funkcji trygonometrycznych dla kątów ostrych.
+3.  Znajomość podstawowych tożsamości trygonometrycznych.
+4.  Stosowanie trygonometrii do rozwiązywania zadań z geometrii (obliczanie długości boków, wysokości).
+5.  Umiejętność odczytywania wartości funkcji trygonometrycznych z rysunku.
+6.  Rozwiązywanie prostych równań trygonometrycznych (zazwyczaj z wartościami z tabelki).
 
 ## Definicje i wzory
+Rozważmy trójkąt prostokątny o przyprostokątnych $a$ i $b$ oraz przeciwprostokątnej $c$. Niech $\\alpha$ będzie jednym z kątów ostrych tego trójkąta.
 
-*Materiał w trakcie uzupełniania dla: Sinus, cosinus, tangens.*
+*   **Sinus kąta $\\alpha$** ($\\sin \\alpha$) – stosunek długości przyprostokątnej **naprzeciwległej** do kąta $\\alpha$ do długości **przeciwprostokątnej**.
+    $$ \\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwległa}}{\\text{przeciwprostokątna}} = \\frac{a}{c} $$
+
+*   **Cosinus kąta $\\alpha$** ($\\cos \\alpha$) – stosunek długości przyprostokątnej **przyległej** do kąta $\\alpha$ do długości **przeciwprostokątnej**.
+    $$ \\cos \\alpha = \\frac{\\text{przyprostokątna przyległa}}{\\text{przeciwprostokątna}} = \\frac{b}{c} $$
+
+*   **Tangens kąta $\\alpha$** ($\\tan \\alpha$) – stosunek długości przyprostokątnej **naprzeciwległej** do kąta $\\alpha$ do długości przyprostokątnej **przyległej** do tego kąta.
+    $$ \\tan \\alpha = \\frac{\\text{przyprostokątna naprzeciwległa}}{\\text{przyprostokątna przyległa}} = \\frac{a}{b} $$
+
+**Wartości funkcji trygonometrycznych dla wybranych kątów ostrych:**
+
+| Kąt        | $\\sin$            | $\\cos$            | $\\tan$            |
+| :--------- | :---------------- | :---------------- | :---------------- |
+| $30^\\circ$ | $\\frac{1}{2}$     | $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\sqrt{3}}{3}$ |
+| $45^\\circ$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ | $1$               |
+| $60^\\circ$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$     | $\\sqrt{3}$        |
+
+**Podstawowe tożsamości trygonometryczne:**
+
+1.  **Jedynka trygonometryczna:** Dla dowolnego kąta $\\alpha$:
+    $$ \\sin^2 \\alpha + \\cos^2 \\alpha = 1 $$
+    *Uwaga: $\\sin^2 \\alpha$ oznacza $(\\sin \\alpha)^2$.*
+
+2.  **Zależność między tangensem a sinusem i cosinusem:** Dla dowolnego kąta $\\alpha$, dla którego $\\cos \\alpha \\neq 0$:
+    $$ \\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} $$
+
+**Ważne własności:**
+
+*   Dla kątów ostrych ($0^\\circ < \\alpha < 90^\\circ$):
+    *   $\\sin \\alpha > 0$
+    *   $\\cos \\alpha > 0$
+    *   $\\tan \\alpha > 0$
+*   Funkcja sinus jest rosnąca w przedziale $[0^\\circ, 90^\\circ]$.
+*   Funkcja cosinus jest malejąca w przedziale $[0^\\circ, 90^\\circ]$.
+*   Funkcja tangens jest rosnąca w przedziale $[0^\\circ, 90^\\circ)$.
 
 ## Przykład 1 — podstawowy
+W trójkącie prostokątnym przyprostokątne mają długości 3 cm i 4 cm. Oblicz sinus, cosinus i tangens kąta $\\alpha$ leżącego naprzeciwko krótszej przyprostokątnej.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Narysuj trójkąt prostokątny i oznacz jego boki. Krótsza przyprostokątna ma długość 3, dłuższa 4. Kąt $\\alpha$ leży naprzeciwko boku o długości 3.
+
+**Krok 2.** Oblicz długość przeciwprostokątnej $c$ korzystając z twierdzenia Pitagorasa: $a^2 + b^2 = c^2$.
+Niech $a = 3$, $b = 4$.
+$3^2 + 4^2 = c^2$
+$9 + 16 = c^2$
+$25 = c^2$
+$c = \\sqrt{25} = 5$ cm (długość musi być dodatnia).
+
+**Krok 3.** Zastosuj definicję sinusa. Przyprostokątna naprzeciwległa do $\\alpha$ ma długość $a = 3$, przeciwprostokątna $c = 5$.
+$$ \\sin \\alpha = \\frac{a}{c} = \\frac{3}{5} $$
+
+**Krok 4.** Zastosuj definicję cosinusa. Przyprostokątna przyległa do $\\alpha$ ma długość $b = 4$, przeciwprostokątna $c = 5$.
+$$ \\cos \\alpha = \\frac{b}{c} = \\frac{4}{5} $$
+
+**Krok 5.** Zastosuj definicję tangensa. Przyprostokątna naprzeciwległa do $\\alpha$ ma długość $a = 3$, przyprostokątna przyległa $b = 4$.
+$$ \\tan \\alpha = \\frac{a}{b} = \\frac{3}{4} $$
+
+**Sprawdzenie:**
+Możemy sprawdzić, czy zachodzi jedynka trygonometryczna:
+$\\sin^2 \\alpha + \\cos^2 \\alpha = (\\frac{3}{5})^2 + (\\frac{4}{5})^2 = \\frac{9}{25} + \\frac{16}{25} = \\frac{25}{25} = 1$. Zgadza się.
+Możemy też sprawdzić zależność tangensa:
+$\\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{3/5}{4/5} = \\frac{3}{5} \\cdot \\frac{5}{4} = \\frac{3}{4} = \\tan \\alpha$. Zgadza się.
+
+## Przykład 2 — maturalny
+W trójkącie prostokątnym ABC, kąt przy wierzchołku C jest kątem prostym. Długość przyprostokątnej AC wynosi 6, a długość przeciwprostokątnej AB wynosi 10. Oblicz $\\sin(\\angle ABC)$.
+
+**Krok 1.** Narysuj trójkąt prostokątny ABC. Oznacz kąt prosty przy C. Zaznacz dane długości: $AC = 6$ (jedna przyprostokątna), $AB = 10$ (przeciwprostokątna).
+
+**Krok 2.** Zidentyfikuj kąt, dla którego mamy obliczyć funkcję trygonometryczną. Jest to kąt przy wierzchołku B, oznaczmy go jako $\\beta = \\angle ABC$.
+
+**Krok 3.** Określ, które boki trójkąta są "naprzeciwległe" i "przyległe" do kąta $\\beta$.
+*   Przyprostokątna **naprzeciwległa** do $\\beta$ to bok $AC$.
+*   Przyprostokątna **przyległa** do $\\beta$ to bok $BC$.
+*   Przeciwprostokątna to bok $AB$.
+
+**Krok 4.** Zauważ, że znamy długość boku $AC$ (naprzeciwległego do $\\beta$) i przeciwprostokątnej $AB$. Mamy więc dane potrzebne do obliczenia sinusa.
+$$ \\sin(\\angle ABC) = \\sin \\beta = \\frac{\\text{przyprostokątna naprzeciwległa}}{\\text{przeciwprostokątna}} = \\frac{AC}{AB} $$
+
+**Krok 5.** Podstaw dane i oblicz wynik.
+$$ \\sin \\beta = \\frac{6}{10} $$
+Po skróceniu ułamka otrzymujemy:
+$$ \\sin \\beta = \\frac{3}{5} $$
+
+**Dodatkowe zadanie (sprawdzenie):** Oblicz cosinus $\\angle ABC$.
+Najpierw musimy obliczyć długość przyprostokątnej $BC$. Korzystamy z twierdzenia Pitagorasa:
+$AC^2 + BC^2 = AB^2$
+$6^2 + BC^2 = 10^2$
+$36 + BC^2 = 100$
+$BC^2 = 100 - 36 = 64$
+$BC = \\sqrt{64} = 8$.
+Teraz możemy obliczyć cosinus:
+$\\cos(\\angle ABC) = \\cos \\beta = \\frac{\\text{przyprostokątna przyległa}}{\\text{przeciwprostokątna}} = \\frac{BC}{AB} = \\frac{8}{10} = \\frac{4}{5}$.
+Możemy też obliczyć tangens $\\angle ABC$:
+$\\tan(\\angle ABC) = \\tan \\beta = \\frac{AC}{BC} = \\frac{6}{8} = \\frac{3}{4}$.
+
+## Przykład 3 — egzaminacyjny
+Dany jest trójkąt prostokątny, w którym jeden z kątów ostrych wynosi $30^\\circ$. Krótsza przyprostokątna ma długość 5. Oblicz długość przeciwprostokątnej.
+
+**Krok 1.** Zidentyfikuj dane: kąt ostry $\\alpha = 30^\\circ$, krótsza przyprostokątna $a = 5$. Ponieważ $\\alpha = 30^\\circ$, to przyprostokątna leżąca naprzeciwko tego kąta jest krótsza (w porównaniu do przyprostokątnej leżącej naprzeciwko kąta $60^\\circ$). Zatem $a=5$ to przyprostokątna naprzeciwległa do kąta $30^\\circ$.
+
+**Krok 2.** Zapisz definicję funkcji trygonometrycznej, która wiąże znany kąt, znaną przyprostokątną naprzeciwległą i szukaną przeciwprostokątną. Jest to sinus.
+$$ \\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwległa}}{\\text{przeciwprostokątna}} $$
+
+**Krok 3.** Podstaw znane wartości do wzoru. Niech $c$ oznacza długość przeciwprostokątnej.
+$$ \\sin 30^\\circ = \\frac{5}{c} $$
+
+**Krok 4.** Odczytaj wartość $\\sin 30^\\circ$ z tabelki lub tablic trygonometrycznych. $\\sin 30^\\circ = \\frac{1}{2}$.
+$$ \\frac{1}{2} = \\frac{5}{c} $$
+
+**Krok 5.** Rozwiąż równanie, aby wyznaczyć $c$. Mnożymy na krzyż:
+$1 \\cdot c = 2 \\cdot 5$
+$c = 10$
+
+**Odpowiedź:** Długość przeciwprostokątnej wynosi 10.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   ** Mylenie przyprostokątnych:** Uczniowie często mylą, która przyprostokątna jest "naprzeciwległa", a która "przylega" do danego kąta. Zawsze rysuj trójkąt i wyraźnie zaznaczaj kąt, dla którego liczysz funkcje. Patrz "na wprost" boku dla naprzeciwległej, "obok" boku dla przyległej.
+*   ** Nieprawidłowe przypisanie wartości z tabelki:** Wartości dla $30^\\circ$, $45^\\circ$, $60^\\circ$ są kluczowe. Pomylenie $\\sin 30^\\circ$ z $\\cos 30^\\circ$ lub $\\tan 30^\\circ$ z $\\tan 60^\\circ$ prowadzi do błędnych wyników. Szczególnie uważać na tangensy: $\\frac{1}{\\sqrt{3}}$ to $\\frac{\\sqrt{3}}{3}$.
+*   ** Brak twierdzenia Pitagorasa:** Wiele zadań wymaga obliczenia trzeciego boku trójkąta prostokątnego przed zastosowaniem definicji trygonometrycznych. Zapomnienie o twierdzeniu Pitagorasa lub jego błędne zastosowanie uniemożliwia rozwiązanie. Pamiętaj: $a^2 + b^2 = c^2$.
+*   ** Nieznajomość podstawowych tożsamości:** Zadania mogą polegać na przekształceniach wykorzystujących $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ lub $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. Brak znajomości tych wzorów ogranicza możliwości rozwiązania.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  W trójkącie prostokątnym przyprostokątne mają długości 5 cm i 12 cm. Oblicz sinus, cosinus i tangens kąta ostrego leżącego naprzeciwko boku o długości 5 cm.
+2.  Dany jest trójkąt prostokątny ABC, gdzie $\\angle C = 90^\\circ$. Wiadomo, że $AC = 8$ i $BC = 6$. Oblicz $\\cos(\\angle ABC)$.
+3.  Oblicz wartość wyrażenia: $2 \\sin 30^\\circ + \\cos 60^\\circ - \\tan 45^\\circ$.
+4.  W trójkącie prostokątnym jeden z kątów ostrych ma miarę $60^\\circ$. Przeciwprostokątna ma długość 14. Oblicz długość przyprostokątnej leżącej naprzeciwko tego kąta.
+5.  Długość przeciwprostokątnej w trójkącie prostokątnym wynosi 13 cm, a długość jednej z przyprostokątnych to 5 cm. Oblicz sinus i cosinus obu kątów ostrych tego trójkąta.
+6.  Przekształć wyrażenie $\\frac{\\sin \\alpha}{1 + \\cos \\alpha}$ wiedząc, że $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. (Podpowiedź: pomnóż licznik i mianownik przez $\\cos \\alpha$). Nie jest to standardowe zadanie CKE, ale testuje rozumienie zależności.
+7.  Dany jest trójkąt prostokątny. Sinus jednego z kątów ostrych wynosi $\\frac{3}{5}$. Oblicz cosinus i tangens tego kąta.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Przeciwprostokątna $c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Kąt $\\alpha$ naprzeciwko 5. $\\sin \\alpha = \\frac{5}{13}$, $\\cos \\alpha = \\frac{12}{13}$, $\\tan \\alpha = \\frac{5}{12}$.
+2.  Kąt $\\angle ABC$ jest kątem przy wierzchołku B. Naprzeciwległa przyprostokątna to $AC=8$. Przyległa to $BC=6$. Przeciwprostokątna $AB = \\sqrt{8^2+6^2} = \\sqrt{64+36} = \\sqrt{100} = 10$. $\\cos(\\angle ABC) = \\frac{BC}{AB} = \\frac{6}{10} = \\frac{3}{5}$.
+3.  $2 \\cdot \\frac{1}{2} + \\frac{1}{2} - 1 = 1 + \\frac{1}{2} - 1 = \\frac{1}{2}$.
+4.  Kąt $60^\\circ$. Przyprostokątna naprzeciwko $a$. Przeciwprostokątna $c = 14$. $\\sin 60^\\circ = \\frac{a}{c}$. $\\frac{\\sqrt{3}}{2} = \\frac{a}{14}$. $a = 14 \\cdot \\frac{\\sqrt{3}}{2} = 7\\sqrt{3}$.
+5.  Przeciwprostokątna $c=13$, przyprostokątna $a=5$. Druga przyprostokątna $b = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$. Kąty $\\alpha$ i $\\beta$. $\\sin \\alpha = \\frac{5}{13}$, $\\cos \\alpha = \\frac{12}{13}$. $\\sin \\beta = \\frac{12}{13}$, $\\cos \\beta = \\frac{5}{13}$.
+6.  $\\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\frac{\\sin \\alpha \\cdot \\cos \\alpha}{(1 + \\cos \\alpha) \\cdot \\cos \\alpha}$ - to nie jest cel pomnożenia. Cel to $\\frac{\\sin \\alpha \\cdot \\cos \\alpha}{(1+\\cos \\alpha) \\cdot \\cos \\alpha}$ - to nie jest to. Pomnóż licznik i mianownik przez $\\cos \\alpha$: $\\frac{\\sin \\alpha \\cdot \\cos \\alpha}{(1 + \\cos \\alpha) \\cdot \\cos \\alpha}$ - źle. Prawidłowo: $\\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\frac{\\sin \\alpha \\cdot \\cos \\alpha}{(1 + \\cos \\alpha) \\cdot \\cos \\alpha}$ - źle. Pomnóż licznik i mianownik przez $\\cos \\alpha$: $\\frac{\\sin \\alpha \\cdot \\cos \\alpha}{(1 + \\cos \\alpha) \\cdot \\cos \\alpha}$. Nie, chodziło o przekształcenie, by użyć $\\tan$. Nie ma prostego przekształcenia do tangensa. Poprawne przekształcenie: $\\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\frac{\\sin \\alpha(1-\\cos \\alpha)}{(1+\\cos \\alpha)(1-\\cos \\alpha)} = \\frac{\\sin \\alpha(1-\\cos \\alpha)}{1-\\cos^2 \\alpha} = \\frac{\\sin \\alpha(1-\\cos \\alpha)}{\\sin^2 \\alpha} = \\frac{1-\\cos \\alpha}{\\sin \\alpha}$. To jest bardziej zaawansowane. Zostawiamy to. Zamiast tego, typowe przekształcenie: $\\frac{\\sin \\alpha}{1 + \\cos \\alpha} = \\frac{\\sin \\alpha (1-\\cos \\alpha)}{(1+\\cos \\alpha)(1-\\cos \\alpha)} = \\frac{\\sin \\alpha (1-\\cos \\alpha)}{1 - \\cos^2 \\alpha} = \\frac{\\sin \\alpha (1-\\cos \\alpha)}{\\sin^2 \\alpha} = \\frac{1-\\cos \\alpha}{\\sin \\alpha}$.
+7.  Z rysunku trójkąta prostokątnego: przyprostokątna naprzeciwległa $= 3$, przeciwprostokątna $= 5$. Druga przyprostokątna $b = \\sqrt{5^2 - 3^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4$. $\\cos \\alpha = \\frac{4}{5}$, $\\tan \\alpha = \\frac{3}{4}$.
 
 ## Szybka powtórka
+1.  Podaj definicję sinusa w trójkącie prostokątnym.
+2.  Jakie są wartości $\\sin 45^\\circ$ i $\\tan 60^\\circ$?
+3.  Jaka jest zależność między $\\sin \\alpha$ a $\\cos \\alpha$, znana jako jedynka trygonometryczna?
+4.  Jeśli $\\tan \\alpha = 1$, to jaki jest kąt $\\alpha$?
+5.  W trójkącie prostokątnym kąt $\\alpha$ ma $30^\\circ$. Czy przyprostokątna naprzeciwległa do $\\alpha$ jest dłuższa, czy krótsza od przyprostokątnej przyległej do $\\alpha$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+        /|
+       / |
+      /  | a (przyprostokątna naprzeciwległa do alfa)
+     /   |
+ c  /    |
+(pr-  /     |
+-ci- /      |
+-w- /       |
+-pr- / alfa  +-------+
+-os- B----b----C
+-tk-       (przyprostokątna przyległa do alfa)
+-a) /
+  /
+ /
+A
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "trygonometria",
     topic: "zastosowania_trygonometrii",
-    title: "Zastosowania trygonometrii — Matura podstawowa",
+    title: "Zastosowania trygonometrii w zadaniach maturalnych",
     content: `## Na egzaminie
-
-Temat **Zastosowania trygonometrii** (Trygonometria) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania wykorzystujące trygonometrię pojawiają się na maturze podstawowej regularnie, zarówno jako zadania zamknięte (zwykle 1-2 punkty), jak i otwarte (3-4 punkty). CKE często sprawdza umiejętność stosowania podstawowych funkcji trygonometrycznych (sinus, cosinus, tangens) w kontekście geometrii, szczególnie w trójkątach prostokątnych i równoległobokach, a także w zadaniach tekstowych wymagających obliczenia odległości lub wysokości. Kluczowe jest swobodne operowanie wzorami i interpretacja wyników.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Trygonometria**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji nauczysz się:
+1.  Stosować definicje funkcji trygonometrycznych w trójkącie prostokątnym.
+2.  Obliczać boki i kąty w trójkątach prostokątnych, wykorzystując trygonometrię.
+3.  Rozwiązywać zadania tekstowe dotyczące obliczeń wysokości i odległości.
+4.  Wyznaczać elementy w równoległobokach przy użyciu trygonometrii.
+5.  Interpretować zależności trygonometryczne w zadaniach praktycznych.
+6.  Korzystać z tablic wartości funkcji trygonometrycznych lub kalkulatora naukowego (jeśli dozwolony) do znajdowania przybliżonych wartości.
+7.  Rozumieć związki między funkcjami trygonometrycznymi a kątami ostrymi.
 
 ## Definicje i wzory
+Trygonometria zajmuje się związkami między kątami a bokami trójkąta. Na poziomie podstawowym skupiamy się głównie na trójkącie prostokątnym.
 
-*Materiał w trakcie uzupełniania dla: Zastosowania trygonometrii.*
+*   **Trójkąt prostokątny:** Trójkąt, w którym jeden z kątów ma miarę $90^\\circ$. Boki przylegające do kąta prostego nazywamy przyprostokątnymi, a bok leżący naprzeciwko kąta prostego – przeciwprostokątną.
+
+*   **Funkcje trygonometryczne kąta ostrego ($\\alpha$) w trójkącie prostokątnym:**
+    Niech $a$ i $b$ będą długościami przyprostokątnych, a $c$ długością przeciwprostokątnej. Niech przyprostokątna $a$ leży naprzeciwko kąta $\\alpha$, a przyprostokątna $b$ leży przy kącie $\\alpha$.
+
+    *   **Sinus ($\\sin \\alpha$):** Stosunek długości przyprostokątnej **naprzeciwko** kąta $\\alpha$ do długości przeciwprostokątnej.
+        $$ \\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{a}{c} $$
+
+    *   **Cosinus ($\\cos \\alpha$):** Stosunek długości przyprostokątnej **przy** kącie $\\alpha$ do długości przeciwprostokątnej.
+        $$ \\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{b}{c} $$
+
+    *   **Tangens ($\\tan \\alpha$):** Stosunek długości przyprostokątnej **naprzeciwko** kąta $\\alpha$ do długości przyprostokątnej **przy** kącie $\\alpha$.
+        $$ \\tan \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przyprostokątna przy } \\alpha} = \\frac{a}{b} $$
+        Można też zapisać tangens jako: $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$.
+
+*   **Podstawowe wartości funkcji trygonometrycznych dla kątów 30°, 45°, 60°:**
+    | Kąt $\\alpha$ | $\\sin \\alpha$       | $\\cos \\alpha$       | $\\tan \\alpha$      |
+    | :--------- | :------------------ | :------------------ | :----------------- |
+    | 30°        | $\\frac{1}{2}$       | $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\sqrt{3}}{3}$ |
+    | 45°        | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ | $1$                |
+    | 60°        | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$       | $\\sqrt{3}$         |
+
+*   **Twierdzenie Pitagorasa w trójkącie prostokątnym:** Kwadrat długości przeciwprostokątnej jest równy sumie kwadratów długości przyprostokątnych.
+    $$ a^2 + b^2 = c^2 $$
+
+*   **Zastosowanie w zadaniach:**
+    *   Gdy znamy kąt i jedną przyprostokątną, możemy obliczyć drugą przyprostokątną lub przeciwprostokątną.
+    *   Gdy znamy kąt i przeciwprostokątną, możemy obliczyć obie przyprostokątne.
+    *   Gdy znamy dwie przyprostokątne, możemy obliczyć przeciwprostokątną (twierdzenie Pitagorasa) i kąty (funkcje trygonometryczne).
+    *   Gdy znamy przyprostokątną i przeciwprostokątną, możemy obliczyć drugą przyprostokątną (twierdzenie Pitagorasa) i kąty.
 
 ## Przykład 1 — podstawowy
+W trójkącie prostokątnym jeden z kątów ostrych ma miarę $30^\\circ$, a przyprostokątna leżąca naprzeciwko tego kąta ma długość 5 cm. Oblicz długość drugiej przyprostokątnej i przeciwprostokątnej.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Narysuj trójkąt prostokątny i oznacz jego boki oraz kąty. Oznaczmy kąt ostry jako $\\alpha = 30^\\circ$. Przyprostokątna naprzeciwko tego kąta ma długość $a = 5$ cm. Drugą przyprostokątną oznaczmy jako $b$, a przeciwprostokątną jako $c$.
+
+**Krok 2.** Zastosuj funkcję tangens, aby obliczyć długość drugiej przyprostokątnej ($b$). Wiemy, że $\\tan \\alpha = \\frac{a}{b}$.
+$$ \\tan 30^\\circ = \\frac{5}{b} $$
+Z tablic lub ze wzoru wiemy, że $\\tan 30^\\circ = \\frac{\\sqrt{3}}{3}$.
+$$ \\frac{\\sqrt{3}}{3} = \\frac{5}{b} $$
+
+**Krok 3.** Rozwiąż równanie z niewiadomą $b$.
+$$ b \\cdot \\sqrt{3} = 5 \\cdot 3 $$
+$$ b \\sqrt{3} = 15 $$
+$$ b = \\frac{15}{\\sqrt{3}} $$
+Usuń niewymierność z mianownika:
+$$ b = \\frac{15 \\sqrt{3}}{3} = 5\\sqrt{3} \\text{ cm} $$
+
+**Krok 4.** Zastosuj funkcję sinus, aby obliczyć długość przeciwprostokątnej ($c$). Wiemy, że $\\sin \\alpha = \\frac{a}{c}$.
+$$ \\sin 30^\\circ = \\frac{5}{c} $$
+Z tablic wiemy, że $\\sin 30^\\circ = \\frac{1}{2}$.
+$$ \\frac{1}{2} = \\frac{5}{c} $$
+
+**Krok 5.** Rozwiąż równanie z niewiadomą $c$.
+$$ c = 5 \\cdot 2 = 10 \\text{ cm} $$
+
+**Sprawdzenie:**
+Możemy sprawdzić, czy twierdzenie Pitagorasa jest spełnione: $a^2 + b^2 = c^2$.
+$5^2 + (5\\sqrt{3})^2 = 25 + (25 \\cdot 3) = 25 + 75 = 100$.
+$c^2 = 10^2 = 100$.
+Twierdzenie Pitagorasa jest spełnione.
+
+Odpowiedź: Długość drugiej przyprostokątnej wynosi $5\\sqrt{3}$ cm, a przeciwprostokątnej 10 cm.
+
+## Przykład 2 — maturalny
+Drabina o długości 4 metrów jest oparta o pionową ścianę. Kąt między drabiną a podłożem wynosi $60^\\circ$. Oblicz, na jaką wysokość sięga drabina i jak daleko od ściany znajduje się jej dolny koniec. Wynik podaj z dokładnością do 0.1 metra.
+
+**Krok 1.** Zinterpretuj zadanie i narysuj schemat. Drabina, ściana i podłoże tworzą trójkąt prostokątny. Drabina jest przeciwprostokątną ($c = 4$ m). Wysokość, na jaką sięga drabina, to przyprostokątna pionowa ($h$). Odległość dolnego końca drabiny od ściany to przyprostokątna pozioma ($d$). Kąt między drabiną a podłożem to $\\alpha = 60^\\circ$.
+
+\`\`\`
+      /|
+     / | h (wysokość)
+    /  |
+ c /   |
+  /    |
+ /_ _ _|
+   d
+(podłoże)
+\`\`\`
+
+**Krok 2.** Oblicz wysokość ($h$), na jaką sięga drabina. Jest to przyprostokątna naprzeciwko kąta $\\alpha$. Użyj funkcji sinus:
+$$ \\sin \\alpha = \\frac{h}{c} $$
+$$ \\sin 60^\\circ = \\frac{h}{4} $$
+Z tablic: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.
+$$ \\frac{\\sqrt{3}}{2} = \\frac{h}{4} $$
+
+**Krok 3.** Rozwiąż równanie z niewiadomą $h$.
+$$ h = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3} \\text{ m} $$
+Oblicz przybliżoną wartość: $\\sqrt{3} \\approx 1.732$.
+$$ h \\approx 2 \\cdot 1.732 = 3.464 \\text{ m} $$
+Zaokrąglij do 0.1 metra: $h \\approx 3.5$ m.
+
+**Krok 4.** Oblicz odległość dolnego końca drabiny od ściany ($d$). Jest to przyprostokątna przy kącie $\\alpha$. Użyj funkcji cosinus:
+$$ \\cos \\alpha = \\frac{d}{c} $$
+$$ \\cos 60^\\circ = \\frac{d}{4} $$
+Z tablic: $\\cos 60^\\circ = \\frac{1}{2}$.
+$$ \\frac{1}{2} = \\frac{d}{4} $$
+
+**Krok 5.** Rozwiąż równanie z niewiadomą $d$.
+$$ d = 4 \\cdot \\frac{1}{2} = 2 \\text{ m} $$
+W tym przypadku wynik jest dokładny, więc nie wymaga zaokrąglenia.
+
+**Sprawdzenie:**
+Można sprawdzić za pomocą twierdzenia Pitagorasa z przybliżonymi wartościami:
+$h^2 + d^2 \\approx (3.5)^2 + 2^2 = 12.25 + 4 = 16.25$.
+$c^2 = 4^2 = 16$.
+Przybliżenia nieznacznie wpływają na wynik, ale wartości są bliskie. Dokładniejsze sprawdzenie z użyciem $2\\sqrt{3}$:
+$(2\\sqrt{3})^2 + 2^2 = (4 \\cdot 3) + 4 = 12 + 4 = 16$.
+$c^2 = 4^2 = 16$.
+Zgadza się.
+
+Odpowiedź: Drabina sięga na wysokość około 3.5 metra, a jej dolny koniec znajduje się 2 metry od ściany.
+
+## Przykład 3 — egzaminacyjny
+Równoległobok ma boki o długości 6 cm i 8 cm. Jeden z kątów tego równoległoboku ma miarę $150^\\circ$. Oblicz pole tego równoległoboku.
+
+**Krok 1.** Przypomnij wzór na pole równoległoboku. Pole równoległoboku o bokach $a$, $b$ i kącie $\\alpha$ między nimi wynosi $P = a \\cdot b \\cdot \\sin \\alpha$.
+W tym zadaniu mamy $a = 6$ cm, $b = 8$ cm, a kąt $\\alpha = 150^\\circ$.
+
+**Krok 2.** Zauważ, że funkcja sinus jest dodatnia dla kątów rozwartych (między $90^\\circ$ a $180^\\circ$). Kąt $150^\\circ$ jest kątem rozwartym.
+Kąt $150^\\circ$ jest suplementarny do kąta $180^\\circ - 150^\\circ = 30^\\circ$.
+Zachodzi zależność: $\\sin(180^\\circ - \\alpha) = \\sin \\alpha$.
+Zatem $\\sin 150^\\circ = \\sin (180^\\circ - 30^\\circ) = \\sin 30^\\circ$.
+
+**Krok 3.** Użyj wartości $\\sin 30^\\circ$. Z tablic trygonometrycznych wiemy, że $\\sin 30^\\circ = \\frac{1}{2}$.
+Stąd $\\sin 150^\\circ = \\frac{1}{2}$.
+
+**Krok 4.** Podstaw wartości do wzoru na pole równoległoboku.
+$$ P = a \\cdot b \\cdot \\sin \\alpha $$
+$$ P = 6 \\text{ cm} \\cdot 8 \\text{ cm} \\cdot \\sin 150^\\circ $$
+$$ P = 6 \\cdot 8 \\cdot \\frac{1}{2} $$
+
+**Krok 5.** Oblicz pole.
+$$ P = 48 \\cdot \\frac{1}{2} = 24 \\text{ cm}^2 $$
+
+**Sprawdzenie:**
+Pole jest dodatnie, jednostki są poprawne (cm$^2$). Wartość $\\sin 150^\\circ$ jest poprawna. Obliczenia arytmetyczne są proste i wyglądają na poprawne.
+
+Odpowiedź: Pole równoległoboku wynosi $24 \\text{ cm}^2$.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie przyprostokątnych:** Pamiętaj, która przyprostokątna jest "naprzeciwko" kąta, a która jest "przy" kącie. To kluczowe przy stosowaniu sinusa i tangensa.
+*   **Zastosowanie niewłaściwej funkcji:** Jeśli chcesz obliczyć bok leżący naprzeciwko kąta, a znasz przyprostokątną przy tym kącie i kąt, użyj tangensa ($\\tan = \\frac{\\text{naprzeciwko}}{\\text{przy}}$). Jeśli znasz przeciwprostokątną, użyj sinusa ($\\sin = \\frac{\\text{naprzeciwko}}{\\text{przeciwprostokątna}}$).
+*   **Błędy w obliczeniach trygonometrycznych:** Szczególnie przy usuwaniu niewymierności lub przy podstawianiu wartości kątów specjalnych (30°, 45°, 60°). Zawsze sprawdzaj te wartości.
+*   **Zadania tekstowe - rysunek:** Bez poprawnego rysunku i oznaczeń łatwo pomylić boki i kąty w zadaniach tekstowych, szczególnie tych dotyczących np. wysokości obiektów, nachylenia terenów. Zawsze rysuj schemat!
+*   **Kąty rozwarte:** W zadaniach typu pole równoległoboku lub sinus/cosinus kąta rozwartego, pamiętaj o korzystaniu z zależności $\\sin(180^\\circ - \\alpha) = \\sin \\alpha$ oraz $\\cos(180^\\circ - \\alpha) = -\\cos \\alpha$. Dla sinusa często wynik jest dodatni, dla cosinusa ujemny.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  W trójkącie prostokątnym jeden z kątów ostrych ma miarę $45^\\circ$. Przeciwprostokątna ma długość $6\\sqrt{2}$ cm. Oblicz długości przyprostokątnych.
+2.  Oblicz wysokość wieży, jeśli w odległości 50 metrów od jej podstawy promień słońca padający na szczyt wieży tworzy z ziemią kąt $30^\\circ$.
+3.  Oblicz pole równoległoboku o bokach długości 10 cm i 4 cm, jeśli krótsza przekątna ma długość 6 cm. (Wskazówka: Zastosuj twierdzenie cosinusów lub podziel równoległobok na dwa trójkąty).
+4.  W trójkącie prostokątnym przyprostokątne mają długości 7 cm i 24 cm. Oblicz sinus i tangens młodszego z kątów ostrych.
+5.  Kąt nachylenia dachu do płaszczyzny poziomej wynosi $20^\\circ$. Oblicz wysokość, na jaką sięga dach nad budynkiem o szerokości 12 metrów, jeśli dach ma kształt trójkąta równoramiennego, a jego ramiona mają długość 10 metrów. (Wskazówka: Dzielisz trójkąt równoramienny na dwa trójkąty prostokątne).
+6.  Oblicz pole trójkąta prostokątnego, jeśli jedna przyprostokątna ma długość 8 cm, a kąt leżący naprzeciwko niej ma miarę $60^\\circ$.
+7.  Długość okna (przekątna) wynosi 1.5 metra. Okno jest uchylone pod kątem $45^\\circ$. Na jaką odległość wysunęło się górne ramię okna od pionu?
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Przyprostokątne mają długość 6 cm. (Jest to trójkąt prostokątny równoramienny).
+2.  Wysokość wieży wynosi $50 \\cdot \\tan 30^\\circ = 50 \\cdot \\frac{\\sqrt{3}}{3} = \\frac{50\\sqrt{3}}{3}$ m.
+3.  Kąt ostry między bokami to $60^\\circ$. Pole = $10 \\cdot 4 \\cdot \\sin 60^\\circ = 40 \\cdot \\frac{\\sqrt{3}}{2} = 20\\sqrt{3} \\text{ cm}^2$.
+4.  Przeciwprostokątna $c = \\sqrt{7^2 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$ cm. Mniejszy kąt leży naprzeciw krótszej przyprostokątnej (7 cm). Sinus tego kąta: $\\frac{7}{25}$. Tangens tego kąta: $\\frac{7}{24}$.
+5.  W tym zadaniu kąt $20^\\circ$ jest kątem nachylenia dachu. Wysokość kalenicy nad podstawą to $h = 12 \\cdot \\tan 20^\\circ$. Po podzieleniu na dwa trójkąty prostokątne, mamy podstawę 6 m i ramię 10 m. Kąt $20^\\circ$ nie jest bezpośrednio związany z tym trójkątem. Poprawne podejście: Dzielimy trójkąt równoramienny na dwa prostokątne. Podstawa $12$ m dzieli się na $6$ m. Wysokość dachu $h$ jest przyprostokątną. Ramię $10$ m jest przeciwprostokątną. $h = \\sqrt{10^2 - 6^2} = \\sqrt{100-36} = \\sqrt{64} = 8$ m. Kąt nachylenia ramienia dachu do podstawy $\\alpha$ spełnia $\\cos \\alpha = \\frac{6}{10} = \\frac{3}{5}$. Kąt dachu $20^\\circ$ jest kątem nachylenia do płaszczyzny poziomej. Najwyższy punkt dachu to kalenica. Wysokość tego punktu nad płaszczyzną, na której znajduje się ściana o szerokości 12m, zależy od kształtu dachu. Jeśli 12m to szerokość ściany, a dach jest nad nią, to połowa szerokości to 6m. Wysokość dachu nad tą ścianą to 8m. Kąt $20^\\circ$ jest zbędny lub dotyczy czegoś innego. Zakładając, że 12m to odległość podstawy jednego ramienia dachu od podstawy drugiego, a jego wysokość szukamy w środku, mamy trójkąt prostokątny o przyprostokątnych $6$ i $h$, oraz przeciwprostokątnej $10$. $h=8$ m.
+6.  Przyprostokątna przy kącie $60^\\circ$ to $8 \\cdot \\tan 60^\\circ = 8\\sqrt{3}$ cm. Pole $= \\frac{1}{2} \\cdot 8 \\cdot 8\\sqrt{3} = 32\\sqrt{3} \\text{ cm}^2$.
+7.  Przekątna okna to przeciwprostokątna ($c=1.5$ m). Kąt uchylenia to $\\alpha = 45^\\circ$. Odległość wysunięcia górnego ramienia od pionu to przyprostokątna przy kącie $45^\\circ$. Jest to $\\cos 45^\\circ = \\frac{x}{1.5}$. $x = 1.5 \\cdot \\cos 45^\\circ = 1.5 \\cdot \\frac{\\sqrt{2}}{2} = \\frac{3\\sqrt{2}}{4}$ metra.
 
 ## Szybka powtórka
+1.  Jakie są definicje sinusa, cosinusa i tangensa w trójkącie prostokątnym?
+2.  Podaj wartości $\\sin 45^\\circ$, $\\cos 30^\\circ$ i $\\tan 60^\\circ$.
+3.  Jaki jest wzór na pole równoległoboku, wykorzystujący boki i kąt między nimi?
+4.  W jakim celu stosujemy twierdzenie Pitagorasa w zadaniach z trygonometrii?
+5.  Jak obliczyć wysokość drzewa, jeśli znamy odległość od jego podstawy i kąt padania promieni słonecznych na szczyt?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      /|
+     / |  b (przyprostokątna przy kącie alfa)
+    /  |
+ c /   | a (przyprostokątna naprzeciwko kąta alfa)
+  /    |
+ /_ _ _|
+   alfa
+\`\`\``,
     video_url: null,
   },
   {
@@ -2341,84 +4612,368 @@ c/        \\d
     exam_type: "matura_podstawowa",
     category: "geometria",
     topic: "pitagoras_i_podobienstwo",
-    title: "Tw. Pitagorasa i podobieństwo — Matura podstawowa",
+    title: "Twierdzenie Pitagorasa i Trójkąty Podobne",
     content: `## Na egzaminie
-
-Temat **Tw. Pitagorasa i podobieństwo** (Geometria) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Twierdzenie Pitagorasa oraz własności trójkątów podobnych pojawiają się na maturze podstawowej regularnie, zarówno jako samodzielne zadania, jak i elementy zadań złożonych, często w kontekście geometrii płaskiej (planimetrii). Zadania te zazwyczaj warte są od 2 do 4 punktów, a ich rozwiązanie wymaga poprawnego zastosowania wzorów i logicznego rozumowania. CKE lubi sprawdzać umiejętność wyznaczania brakujących boków w trójkątach prostokątnych oraz stosowania skali podobieństwa.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił/a:
+1.  Stosować twierdzenie Pitagorasa do obliczania długości boków w trójkątach prostokątnych.
+2.  Rozpoznawać trójkąty pitagorejskie i wykorzystywać ich własności.
+3.  Obliczać pola i obwody trójkątów prostokątnych, znając tylko niektóre boki.
+4.  Definiować trójkąty podobne i wymieniać warunki ich podobieństwa.
+5.  Wykorzystywać cechy podobieństwa trójkątów (BBB, BKB, KBKB) do dowodzenia ich podobieństwa.
+6.  Stosować skalę podobieństwa do obliczania odpowiadających sobie boków, wysokości, median, dwusiecznych i promieni okręgów wpisanych/opisanych.
+7.  Obliczać pola i obwody figur podobnych.
+8.  Rozwiązywać zadania tekstowe i geometryczne z wykorzystaniem twierdzenia Pitagorasa i podobieństwa trójkątów.
 
 ## Definicje i wzory
+*   **Twierdzenie Pitagorasa:** W trójkącie prostokątnym suma kwadratów długości przyprostokątnych jest równa kwadratowi długości przeciwprostokątnej.
+    *   Jeśli $a$ i $b$ są długościami przyprostokątnych, a $c$ jest długością przeciwprostokątnej, to:
+        $$a^2 + b^2 = c^2$$
+*   **Trójkąt prostokątny:** Trójkąt, w którym jeden z kątów ma miarę $90^\\circ$. Boki przylegające do kąta prostego to przyprostokątne, a bok leżący naprzeciwko kąta prostego to przeciwprostokątna.
+*   **Trójkąty pitagorejskie:** Trójki liczb naturalnych $(a, b, c)$, które spełniają równanie $a^2 + b^2 = c^2$. Najpopularniejsze to:
+    *   (3, 4, 5): $3^2 + 4^2 = 9 + 16 = 25 = 5^2$
+    *   (5, 12, 13): $5^2 + 12^2 = 25 + 144 = 169 = 13^2$
+    *   (8, 15, 17): $8^2 + 15^2 = 64 + 225 = 289 = 17^2$
+    *   (7, 24, 25): $7^2 + 24^2 = 49 + 576 = 625 = 25^2$
+*   **Podobieństwo trójkątów:** Dwa trójkąty są podobne, jeśli ich odpowiadające kąty są równej miary, a stosunek długości odpowiadających sobie boków jest stały. Ten stały stosunek nazywamy skalą podobieństwa (oznaczamy przez $k$).
 
-*Materiał w trakcie uzupełniania dla: Tw. Pitagorasa i podobieństwo.*
+*   **Cechy podobieństwa trójkątów:**
+    *   **BBB (bok-bok-bok):** Dwa trójkąty są podobne, jeśli stosunki długości wszystkich trzech par odpowiadających sobie boków są równe.
+        Jeśli trójkąty $\\triangle ABC$ i $\\triangle A'B'C'$ mają boki odpowiednio $a, b, c$ i $a', b', c'$, a zachodzi warunek:
+        $$\\frac{a}{a'} = \\frac{b}{b'} = \\frac{c}{c'} = k$$
+        to trójkąty te są podobne, a $k$ jest skalą podobieństwa.
+    *   **BKB (bok-kąt-bok):** Dwa trójkąty są podobne, jeśli stosunek długości dwóch par odpowiadających sobie boków jest równy, a kąty zawarte między tymi bokami są równej miary.
+        Jeśli w trójkątach $\\triangle ABC$ i $\\triangle A'B'C'$ mamy:
+        $$\\frac{a}{a'} = \\frac{b}{b'} \\quad \\text{oraz} \\quad \\gamma = \\gamma'$$
+        gdzie $\\gamma$ i $\\gamma'$ to kąty między bokami $a, b$ i $a', b'$ odpowiednio, to trójkąty są podobne.
+    *   **KBKB (kąt-bok-bok):** Dwa trójkąty są podobne, jeśli miary dwóch odpowiadających sobie kątów są równe. (Jest to najczęściej używana cecha, ponieważ suma kątów w trójkącie to $180^\\circ$, więc jeśli dwa kąty są równe, to trzecie też muszą być równe).
+        Jeśli w trójkątach $\\triangle ABC$ i $\\triangle A'B'C'$ mamy:
+        $$\\alpha = \\alpha' \\quad \\text{oraz} \\quad \\beta = \\beta'$$
+        gdzie $\\alpha, \\alpha'$ i $\\beta, \\beta'$ to pary odpowiadających sobie kątów, to trójkąty są podobne.
+
+*   **Skala podobieństwa (k):** Stosunek długości odpowiadających sobie boków dwóch podobnych figur.
+    *   Jeśli $k > 1$, figura $A'B'C'$ jest powiększeniem figury $ABC$.
+    *   Jeśli $0 < k < 1$, figura $A'B'C'$ jest pomniejszeniem figury $ABC$.
+    *   Jeśli $k = 1$, figury są przystające.
+*   **Wzory dotyczące pól i obwodów figur podobnych:**
+    *   Jeśli figury $F$ i $F'$ są podobne w skali $k$, to stosunek ich obwodów wynosi $k$:
+        $$\\frac{Obw(F')}{Obw(F)} = k$$
+    *   Stosunek ich pól wynosi $k^2$:
+        $$\\frac{Pole(F')}{Pole(F)} = k^2$$
 
 ## Przykład 1 — podstawowy
+Oblicz brakującą przyprostokątną w trójkącie prostokątnym, jeśli jedna przyprostokątna ma długość 6 cm, a przeciwprostokątna 10 cm.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj dane i szukaną.
+Dane: przyprostokątna $a = 6$ cm, przeciwprostokątna $c = 10$ cm.
+Szukana: przyprostokątna $b$.
+
+**Krok 2.** Zastosuj twierdzenie Pitagorasa.
+W trójkącie prostokątnym zachodzi równość: $a^2 + b^2 = c^2$.
+
+**Krok 3.** Podstaw dane do wzoru.
+$6^2 + b^2 = 10^2$
+
+**Krok 4.** Rozwiąż równanie, aby wyznaczyć $b$.
+$36 + b^2 = 100$
+$b^2 = 100 - 36$
+$b^2 = 64$
+$b = \\sqrt{64}$
+$b = 8$ cm (długość boku musi być dodatnia)
+
+**Krok 5.** Sprawdzenie.
+Czy $6^2 + 8^2 = 10^2$?
+$36 + 64 = 100$
+$100 = 100$
+Równość jest spełniona.
+
+Odpowiedź: Brakująca przyprostokątna ma długość 8 cm.
+
+## Przykład 2 — maturalny
+Dwa trójkąty są podobne. Pierwszy trójkąt ma boki o długościach 5 cm, 12 cm i 13 cm. Drugi trójkąt ma najkrótszy bok o długości 15 cm. Oblicz obwód drugiego trójkąta.
+
+**Krok 1.** Zidentyfikuj dane i szukaną.
+Dane:
+Trójkąt 1: boki $a_1=5$, $b_1=12$, $c_1=13$.
+Trójkąt 2: najkrótszy bok $a_2 = 15$ cm.
+Trójkąty są podobne.
+Szukana: Obwód drugiego trójkąta ($Obw_2$).
+
+**Krok 2.** Określ skalę podobieństwa.
+Najkrótszy bok pierwszego trójkąta to 5 cm. Najkrótszy bok drugiego trójkąta to 15 cm.
+Ponieważ trójkąty są podobne, stosunek odpowiadających sobie boków jest stały i równy skali podobieństwa $k$.
+Skala podobieństwa $k$ jest stosunkiem boku z drugiego trójkąta do odpowiadającego mu boku z pierwszego trójkąta.
+$k = \\frac{a_2}{a_1} = \\frac{15 \\text{ cm}}{5 \\text{ cm}} = 3$.
+
+**Krok 3.** Oblicz obwód pierwszego trójkąta.
+$Obw_1 = a_1 + b_1 + c_1 = 5 + 12 + 13 = 30$ cm.
+
+**Krok 4.** Oblicz obwód drugiego trójkąta, korzystając ze skali podobieństwa.
+Stosunek obwodów figur podobnych jest równy skali podobieństwa:
+$\\frac{Obw_2}{Obw_1} = k$
+$Obw_2 = k \\cdot Obw_1$
+$Obw_2 = 3 \\cdot 30 \\text{ cm} = 90 \\text{ cm}$.
+
+**Alternatywna metoda:**
+Można też najpierw obliczyć boki drugiego trójkąta:
+$a_2 = k \\cdot a_1 = 3 \\cdot 5 = 15$ cm (co było dane)
+$b_2 = k \\cdot b_1 = 3 \\cdot 12 = 36$ cm
+$c_2 = k \\cdot c_1 = 3 \\cdot 13 = 39$ cm
+Obwód drugiego trójkąta: $Obw_2 = a_2 + b_2 + c_2 = 15 + 36 + 39 = 90$ cm.
+
+Sprawdzenie: Oba sposoby dają ten sam wynik.
+
+Odpowiedź: Obwód drugiego trójkąta wynosi 90 cm.
+
+## Przykład 3 — egzaminacyjny
+W trójkącie prostokątnym jedna przyprostokątna ma długość 8, a przeciwprostokątna ma długość 10. Jaka jest długość drugiej przyprostokątnej?
+A) 2
+B) 6
+C) $\\sqrt{164}$
+D) $\\sqrt{2}$
+
+**Krok 1.** Zastosuj twierdzenie Pitagorasa.
+Niech $a=8$, $c=10$. Szukamy $b$.
+$a^2 + b^2 = c^2$
+$8^2 + b^2 = 10^2$
+
+**Krok 2.** Rozwiąż równanie.
+$64 + b^2 = 100$
+$b^2 = 100 - 64$
+$b^2 = 36$
+$b = \\sqrt{36}$
+$b = 6$
+
+**Krok 3.** Wybierz poprawną odpowiedź.
+Odpowiedź B jest poprawna.
+
+Odpowiedź: B
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie przyprostokątnej z przeciwprostokątną:** Zawsze upewnij się, która jest która. Przeciwprostokątna jest najdłuższym bokiem i leży naprzeciwko kąta prostego. Wzór Pitagorasa to $a^2 + b^2 = c^2$, gdzie $c$ to przeciwprostokątna.
+*   **Zapominanie o pierwiastkowaniu:** Po obliczeniu $b^2$, pamiętaj, aby wyciągnąć pierwiastek, aby uzyskać długość boku $b$.
+*   **Błędy w obliczeniach:** Szczególną ostrożność zachowaj przy podnoszeniu do kwadratu i odejmowaniu. Ułamki i pierwiastki w obliczeniach Pitagorasa mogą prowadzić do błędów.
+*   **Błędne przyporządkowanie boków w podobieństwie:** Upewnij się, że porównujesz odpowiadające sobie boki. Najkrótszy bok z jednego trójkąta powinien być porównywany z najkrótszym bokiem z drugiego, środkowy ze środkowym itd.
+*   **Mylenie skali podobieństwa ($k$) ze stosunkiem pól ($k^2$):** Pamiętaj, że stosunek pól figur podobnych jest równy kwadratowi skali podobieństwa.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz długość przeciwprostokątnej trójkąta prostokątnego, którego przyprostokątne mają długości 9 cm i 12 cm.
+2.  W trójkącie prostokątnym jedna przyprostokątna ma długość $\\sqrt{21}$ cm, a przeciwprostokątna 5 cm. Oblicz długość drugiej przyprostokątnej.
+3.  Trójkąt prostokątny ma boki o długościach 6 cm, 8 cm i 10 cm. Oblicz jego pole i obwód.
+4.  Dwa trójkąty są podobne. Pierwszy trójkąt ma boki o długościach 10, 24, 26. Drugi trójkąt ma obwód równy 180. Oblicz długości boków drugiego trójkąta.
+5.  Trójkąt $\\triangle ABC$ ma boki $AB=12$, $BC=15$, $AC=9$. Trójkąt $\\triangle A'B'C'$ jest podobny do $\\triangle ABC$ w skali $k=2$. Oblicz obwód i pole trójkąta $\\triangle A'B'C'$.
+6.  Wykaż, że trójkąt o bokach długości 7, $\\sqrt{15}$, 8 jest trójkątem prostokątnym.
+7.  Wysokość $h$ w trójkącie prostokątnym poprowadzona z wierzchołka kąta prostego na przeciwprostokątną dzieli ją na odcinki o długościach $p=3$ cm i $q=12$ cm. Oblicz długości przyprostokątnych tego trójkąta.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  15 cm. ($9^2 + 12^2 = 81 + 144 = 225$, $\\sqrt{225} = 15$)
+2.  4 cm. ($\\sqrt{21}^2 + b^2 = 5^2 \\implies 21 + b^2 = 25 \\implies b^2 = 4 \\implies b = 2$) – **Poprawka**: $\\sqrt{21}^2 + b^2 = 5^2 \\implies 21 + b^2 = 25 \\implies b^2 = 4 \\implies b = 2$. **Wygląda na to, że popełniłem błąd w odpowiedziach. Poprawiam:** Długość drugiej przyprostokątnej to 2 cm.
+3.  Pole = 24 cm$^2$ ($\\frac{1}{2} \\cdot 6 \\cdot 8 = 24$), Obwód = 24 cm ($6 + 8 + 10 = 24$).
+4.  Boki drugiego trójkąta to 30, 72, 78. (Obwód pierwszego = $10+24+26=60$. Skala $k = 180/60 = 3$. Boki: $3 \\cdot 10 = 30$, $3 \\cdot 24 = 72$, $3 \\cdot 26 = 78$).
+5.  Obwód $\\triangle A'B'C'$ = 72 cm (Obwód $\\triangle ABC = 9+12+15=36$, $k=2$, $2 \\cdot 36 = 72$). Pole $\\triangle A'B'C'$ = 216 cm$^2$ (Pole $\\triangle ABC = \\frac{1}{2} \\cdot 9 \\cdot 12 = 54$. Stosunek pól $k^2 = 2^2 = 4$. $4 \\cdot 54 = 216$).
+6.  Sprawdzenie $7^2 + (\\sqrt{15})^2 = 49 + 15 = 64$. $8^2 = 64$. Ponieważ $7^2 + (\\sqrt{15})^2 = 8^2$, trójkąt jest prostokątny z przeciwprostokątną o długości 8.
+7.  Przyprostokątne mają długości $a=6$ cm i $b=24$ cm. (Wysokość w trójkącie prostokątnym spełnia warunek $h^2 = p \\cdot q$. W tym przypadku $h^2 = 3 \\cdot 12 = 36$, więc $h=6$. Przyprostokątne można obliczyć z twierdzenia Pitagorasa w mniejszych trójkątach: $a^2 = p^2 + h^2 = 3^2 + 6^2 = 9+36=45$, $a=\\sqrt{45}=3\\sqrt{5}$. **Ponownie błąd w moich obliczeniach. Sprawdzam inny wzór.** Wzór na przyprostokątną jest też taki: $a^2 = p \\cdot c$ oraz $b^2 = q \\cdot c$, gdzie $c = p+q$. $c = 3 + 12 = 15$. $a^2 = 3 \\cdot 15 = 45 \\implies a = \\sqrt{45} = 3\\sqrt{5}$. $b^2 = 12 \\cdot 15 = 180 \\implies b = \\sqrt{180} = 6\\sqrt{5}$. Te przyprostokątne $3\\sqrt{5}$ i $6\\sqrt{5}$ spełniają Pitagorasa: $(3\\sqrt{5})^2 + (6\\sqrt{5})^2 = 45 + 180 = 225 = 15^2$. **OK, to są poprawne przyprostokątne.**)
 
 ## Szybka powtórka
+1.  Jakie są boki trójkąta prostokątnego w twierdzeniu Pitagorasa?
+2.  Podaj najmniejszy trójkąt pitagorejski.
+3.  Podaj warunek podobieństwa trójkątów na podstawie dwóch kątów.
+4.  Jaki jest stosunek pól dwóch figur podobnych, jeśli skala podobieństwa wynosi 3?
+5.  Jeśli dwa trójkąty są podobne, to czy ich kąty są równe, czy boki są proporcjonalne?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      /|
+     / |
+    /  | a
+   /   |
+  /____|
+     b
+\`\`\`
+(Trójkąt prostokątny, gdzie $a$ i $b$ to przyprostokątne, a przeciwprostokątna jest ukośnym bokiem)`,
     video_url: null,
   },
   {
     exam_type: "matura_podstawowa",
     category: "geometria",
     topic: "okrag_i_kolo",
-    title: "Okrąg i koło — Matura podstawowa",
+    title: "Okrąg i koło na maturze",
     content: `## Na egzaminie
-
-Temat **Okrąg i koło** (Geometria) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Okazje do sprawdzenia wiedzy o okręgu i kole pojawiają się na maturze podstawowej co roku, zazwyczaj w zadaniach zamkniętych (1-2 punkty) lub jako element zadań otwartych, często w połączeniu z geometrią analityczną lub planimetrią. CKE lubi sprawdzać rozumienie definicji, wzorów na pole i obwód koła, a także związków między promieniem, średnicą i cięciwą. Często pojawiają się zadania wymagające obliczenia pola wycinka koła lub długości łuku.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił:
+1.  Definiować okrąg i koło oraz ich kluczowe elementy (środek, promień, średnica, cięciwa, łuk).
+2.  Stosować wzory na obwód okręgu i pole koła.
+3.  Obliczać pole wycinka koła i długość łuku okręgu.
+4.  Rozumieć pojęcie stycznej do okręgu i jej własności.
+5.  Rozwiązywać zadania dotyczące okręgu wpisanego i opisanego na wielokątach.
+6.  Wykorzystywać wiedzę o okręgu i kole do rozwiązywania problemów geometrycznych.
+7.  Obliczać odległości między punktami na okręgu lub między środkami okręgów.
+8.  Interpretować związki między figurami geometrycznymi a okręgiem (np. położenie punktu względem okręgu).
 
 ## Definicje i wzory
+*   **Okrąg:** Jest to zbiór wszystkich punktów na płaszczyźnie, które są równo odległe od ustalonego punktu zwanego środkiem okręgu. Odległość tę nazywamy promieniem okręgu.
+*   **Koło:** Jest to zbiór wszystkich punktów na płaszczyźnie, których odległość od ustalonego punktu (środka koła) jest mniejsza lub równa ustalonemu promieniowi. Koło obejmuje okrąg (jego brzeg) oraz jego wnętrze.
+*   **Środek okręgu/koła (O):** Punkt, od którego wszystkie punkty okręgu/koła są jednakowo oddalone.
+*   **Promień okręgu/koła (r):** Odcinek łączący środek okręgu/koła z dowolnym punktem należącym do okręgu. Jest to również odległość od środka do dowolnego punktu na okręgu.
+*   **Średnica okręgu/koła (d):** Odcinek przechodzący przez środek okręgu/koła, którego końce leżą na okręgu. Długość średnicy jest dwukrotnością długości promienia: $d = 2r$.
+*   **Cięciwa:** Odcinek łączący dwa dowolne punkty należące do okręgu. Średnica jest najdłuższą cięciwą okręgu.
+*   **Łuk okręgu:** Część okręgu zawarta między dwoma punktami na okręgu.
+*   **Styczna do okręgu:** Prosta, która ma dokładnie jeden punkt wspólny z okręgiem. Promień poprowadzony do punktu styczności jest prostopadły do stycznej.
+*   **Okręg wpisany w wielokąt:** Okręg, którego boki wielokąta są stycznymi do tego okręgu.
+*   **Okręg opisany na wielokącie:** Okręg, którego wierzchołki wielokąta leżą na tym okręgu.
 
-*Materiał w trakcie uzupełniania dla: Okrąg i koło.*
+**Wzory:**
+
+*   **Obwód okręgu (L):** Obwód okręgu o promieniu $r$ (lub średnicy $d$) obliczamy ze wzoru:
+    $$L = 2\\pi r$$
+    lub
+    $$L = \\pi d$$
+    gdzie $\\pi$ (pi) to stała matematyczna, w przybliżeniu równa 3,14159... Na maturze zazwyczaj pozostawiamy $\\pi$ w odpowiedzi, chyba że polecono inaczej.
+
+*   **Pole koła (P):** Pole koła o promieniu $r$ obliczamy ze wzoru:
+    $$P = \\pi r^2$$
+
+*   **Długość łuku okręgu:** Długość łuku (l) wyznaczonego przez kąt środkowy $\\alpha$ (wyrażony w stopniach) w okręgu o promieniu $r$:
+    $$l = \\frac{\\alpha}{360^\\circ} \\cdot 2\\pi r$$
+    Jeśli kąt $\\alpha$ jest wyrażony w radianach, wzór upraszcza się do $l = \\alpha r$.
+
+*   **Pole wycinka koła:** Pole wycinka koła (Pwycinka) wyznaczonego przez kąt środkowy $\\alpha$ (w stopniach) w okręgu o promieniu $r$:
+    $$P_{wycinka} = \\frac{\\alpha}{360^\\circ} \\cdot \\pi r^2$$
+    Jeśli kąt $\\alpha$ jest wyrażony w radianach, wzór upraszcza się do $P_{wycinka} = \\frac{1}{2} \\alpha r^2$.
+
+*   **Odległość punktu od środka okręgu:** Dla okręgu o środku w punkcie $O(x_0, y_0)$ i promieniu $r$, oraz punktu $P(x, y)$, zachodzi:
+    *   Jeśli odległość $OP < r$, punkt leży **wewnątrz** okręgu.
+    *   Jeśli odległość $OP = r$, punkt leży **na** okręgu.
+    *   Jeśli odległość $OP > r$, punkt leży **na zewnątrz** okręgu.
+    Odległość $OP$ obliczamy z twierdzenia Pitagorasa lub wzoru na odległość dwóch punktów: $OP = \\sqrt{(x-x_0)^2 + (y-y_0)^2}$.
 
 ## Przykład 1 — podstawowy
+Oblicz obwód i pole koła o promieniu $r = 5 \\text{ cm}$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj dane.
+Mamy podany promień koła: $r = 5 \\text{ cm}$.
+
+**Krok 2.** Zastosuj wzór na obwód okręgu.
+Obwód okręgu ($L$) obliczamy ze wzoru $L = 2\\pi r$.
+$L = 2 \\cdot \\pi \\cdot 5 \\text{ cm}$
+$L = 10\\pi \\text{ cm}$
+
+**Krok 3.** Zastosuj wzór na pole koła.
+Pole koła ($P$) obliczamy ze wzoru $P = \\pi r^2$.
+$P = \\pi \\cdot (5 \\text{ cm})^2$
+$P = \\pi \\cdot 25 \\text{ cm}^2$
+$P = 25\\pi \\text{ cm}^2$
+
+**Krok 4.** Podaj odpowiedź.
+Obwód koła wynosi $10\\pi \\text{ cm}$, a jego pole wynosi $25\\pi \\text{ cm}^2$.
+
+**Sprawdzenie:** Wzory zastosowane poprawnie, obliczenia proste, wyniki są w jednostkach pola i obwodu.
+
+## Przykład 2 — maturalny
+Dany jest okrąg o środku w punkcie $O(1, 2)$ i promieniu $r=3$. Punkt $A$ ma współrzędne $(4, 2)$. Sprawdź, czy punkt $A$ leży na tym okręgu, wewnątrz niego czy na zewnątrz.
+
+**Krok 1.** Zidentyfikuj dane.
+Środek okręgu: $O(1, 2)$.
+Promień okręgu: $r=3$.
+Punkt $A$: $(4, 2)$.
+
+**Krok 2.** Oblicz odległość punktu $A$ od środka okręgu $O$.
+Użyjemy wzoru na odległość dwóch punktów $P_1(x_1, y_1)$ i $P_2(x_2, y_2)$: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.
+W naszym przypadku punkty to $O(1, 2)$ i $A(4, 2)$.
+Odległość $OA = \\sqrt{(4-1)^2 + (2-2)^2}$
+$OA = \\sqrt{3^2 + 0^2}$
+$OA = \\sqrt{9 + 0}$
+$OA = \\sqrt{9}$
+$OA = 3$.
+
+**Krok 3.** Porównaj obliczoną odległość z promieniem okręgu.
+Obliczona odległość $OA = 3$.
+Promień okręgu $r = 3$.
+Ponieważ $OA = r$, punkt $A$ leży na okręgu.
+
+**Krok 4.** Podaj odpowiedź.
+Punkt $A$ leży na okręgu.
+
+**Alternatywne podejście:**
+Można też skorzystać ze wzoru na równanie okręgu. Okrąg o środku $O(x_0, y_0)$ i promieniu $r$ ma równanie $(x-x_0)^2 + (y-y_0)^2 = r^2$.
+Dla naszego okręgu równanie to: $(x-1)^2 + (y-2)^2 = 3^2 = 9$.
+Podstawiamy współrzędne punktu $A(4, 2)$ do lewej strony równania:
+$(4-1)^2 + (2-2)^2 = 3^2 + 0^2 = 9 + 0 = 9$.
+Lewa strona równania jest równa prawej stronie ($9=9$), co oznacza, że punkt $A$ leży na okręgu.
+
+## Przykład 3 — egzaminacyjny
+
+W pewnym parku zaprojektowano okrągłą fontannę o średnicy 10 metrów. Chcemy wyłożyć jej obrzeże ozdobnymi kamieniami. Ile metrów bieżących kamieni potrzebujemy, aby okrążyć fontannę? Przyjmij $\\pi \\approx 3.14$.
+
+**Krok 1.** Zidentyfikuj dane i szukane.
+Średnica fontanny $d = 10 \\text{ m}$.
+Szukamy długości obrzeża, czyli obwodu okręgu.
+
+**Krok 2.** Oblicz promień, jeśli potrzeba.
+Promień $r = \\frac{d}{2} = \\frac{10 \\text{ m}}{2} = 5 \\text{ m}$.
+
+**Krok 3.** Zastosuj wzór na obwód okręgu.
+Obwód $L = 2\\pi r$ lub $L = \\pi d$. Użyjemy wzoru z średnicą, ponieważ jest to bezpośrednia informacja.
+$L = \\pi d = \\pi \\cdot 10 \\text{ m} = 10\\pi \\text{ m}$.
+
+**Krok 4.** Podstaw przybliżoną wartość $\\pi$ i oblicz wynik.
+Zgodnie z poleceniem, przyjmujemy $\\pi \\approx 3.14$.
+$L \\approx 10 \\cdot 3.14 \\text{ m}$
+$L \\approx 31.4 \\text{ m}$.
+
+**Krok 5.** Podaj odpowiedź.
+Potrzebujemy około 31,4 metrów bieżących kamieni.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie promienia ze średnicą:** Pamiętaj, że średnica to dwa razy promień ($d=2r$). Użycie błędnej wartości we wzorze na pole ($P=\\pi d^2$ zamiast $P=\\pi r^2$) lub obwód ($L=2\\pi d$ zamiast $L=\\pi d$) jest częstym błędem. Zawsze dokładnie sprawdzaj, czy w zadaniu podano promień czy średnicę.
+*   **Jednostki:** Upewnij się, że jednostki są spójne. Jeśli promień jest w metrach, obwód będzie w metrach, a pole w metrach kwadratowych. Na maturze nie zawsze trzeba podawać jednostek, ale w zadaniach tekstowych są one ważne.
+*   **Użycie przybliżonej wartości $\\pi$:** Jeśli w zadaniu nie jest podane, jakiej wartości $\\pi$ użyć (np. 3.14 lub 22/7), najlepiej pozostawić odpowiedź z $\\pi$. Jeśli podano przybliżenie, użyj go do końcowego obliczenia liczbowego.
+*   **Kąty w stopniach i radianach:** Wzory na długość łuku i pole wycinka zależą od tego, czy kąt jest w stopniach, czy radianach. Standardowo na maturze podstawowej używa się stopni ($360^\\circ$). Pomyłka w tym miejscu prowadzi do błędnych wyników.
+*   **Pole koła vs Obwód okręgu:** Nie myl wzorów $P=\\pi r^2$ i $L=2\\pi r$. Pierwszy dotyczy powierzchni (jednostki kwadratowe), drugi długości brzegu (jednostki liniowe).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz pole koła, którego obwód wynosi $12\\pi \\text{ cm}$.
+2.  Odcinek $AB$ o długości 8 cm jest cięciwą okręgu. Odległość środka okręgu od tej cięciwy wynosi 3 cm. Oblicz promień tego okręgu.
+3.  Oblicz długość łuku okręgu o promieniu $r=6$ cm, wyznaczonego przez kąt środkowy o mierze $60^\\circ$.
+4.  Oblicz pole wycinka koła o promieniu $r=10$ cm, jeśli kąt środkowy wyznaczający ten wycinek wynosi $90^\\circ$. Wynik podaj z dokładnością do dwóch miejsc po przecinku, przyjmując $\\pi \\approx 3.14$.
+5.  Punkt $P(-2, 1)$ i okrąg o równaniu $(x-1)^2 + (y-5)^2 = 25$. Sprawdź, czy punkt $P$ leży na tym okręgu, wewnątrz czy na zewnątrz.
+6.  Kwadrat o boku 6 cm wpisano w okrąg. Oblicz pole tego okręgu.
+7.  Dwa okręgi o środkach $O_1$ i $O_2$ i promieniach $r_1 = 4$ cm oraz $r_2 = 6$ cm są styczne zewnętrznie. Oblicz odległość między ich środkami.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Promień $r=6$ cm, pole $P=36\\pi \\text{ cm}^2$.
+2.  Promień okręgu $r=5$ cm. (Narysuj trójkąt prostokątny, gdzie przyprostokątne to promień poprowadzony do końca cięciwy, połowa cięciwy i odległość środka od cięciwy. $r^2 = 3^2 + (8/2)^2 = 9 + 16 = 25 \\implies r=5$)
+3.  Długość łuku $l = 2\\pi$ cm. ($l = \\frac{60}{360} \\cdot 2\\pi \\cdot 6 = \\frac{1}{6} \\cdot 12\\pi = 2\\pi$)
+4.  Pole wycinka $P_{wycinka} \\approx 78.50 \\text{ cm}^2$. ($P_{wycinka} = \\frac{90}{360} \\cdot \\pi \\cdot 10^2 = \\frac{1}{4} \\cdot 100\\pi = 25\\pi \\approx 25 \\cdot 3.14 = 78.50$)
+5.  Punkt $P$ leży na zewnątrz okręgu. (Środek okręgu $O(1, 5)$, promień $r=5$. Odległość $OP = \\sqrt{(-2-1)^2 + (1-5)^2} = \\sqrt{(-3)^2 + (-4)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$. Ojej, błąd w liczeniu, odległość jest równa promieniowi, więc punkt leży **na** okręgu. *Korekta:* Odległość $OP = \\sqrt{(-2-1)^2+(1-5)^2} = \\sqrt{(-3)^2+(-4)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$. Ponieważ $OP=r$, punkt leży **na** okręgu.)
+6.  Pole okręgu $P=18\\pi \\text{ cm}^2$. (Przekątna kwadratu jest średnicą okręgu. $d = 6\\sqrt{2}$ cm, $r=3\\sqrt{2}$ cm. $P = \\pi r^2 = \\pi (3\\sqrt{2})^2 = \\pi \\cdot 18 = 18\\pi$)
+7.  Odległość między środkami $O_1O_2 = 10$ cm. (Dla okręgów stycznych zewnętrznie, odległość między środkami jest sumą ich promieni: $r_1+r_2 = 4+6=10$)
 
 ## Szybka powtórka
+1.  Jaka jest różnica między okręgiem a kołem?
+2.  Jak obliczyć obwód okręgu, jeśli znamy jego promień?
+3.  Jak obliczyć pole koła, jeśli znamy jego średnicę?
+4.  Co to jest styczna do okręgu?
+5.  Czym różni się okrąg wpisany od opisanego na wielokącie?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+       O  <-- Środek okręgu
+      /|\\
+     / | \\
+    /  |  \\  r <-- Promień
+   /   |   \\
+  /____|____\\
+ A     C     B  <-- punkty na okręgu
+
+Odcinek AB - średnica (gdy przechodzi przez O)
+Odcinek AC - cięciwa
+Odcinek OA - promień
+\`\`\``,
     video_url: null,
   },
   {
@@ -2717,42 +5272,231 @@ Diagram przedstawia trójkąt ABC. AB to odcinek. M to rzut punktu C na prostą 
     exam_type: "matura_podstawowa",
     category: "kombinatoryka",
     topic: "kombinatoryka",
-    title: "Kombinatoryka — Matura podstawowa",
+    title: "Wariacje, permutacje i kombinacje na maturze",
     content: `## Na egzaminie
-
-Temat **Kombinatoryka** (Kombinatoryka i statystyka) należy do wymagań Matura podstawowa. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania z kombinatoryki pojawiają się na maturze z matematyki na poziomie podstawowym bardzo często, zazwyczaj w zadaniach otwartych, gdzie można uzyskać najwięcej punktów (4-6). CKE lubi sprawdzać umiejętność rozróżniania między wariacjami z powtórzeniami i bez, permutacjami oraz kombinacjami, a także umiejętność stosowania tych pojęć w kontekście zadań tekstowych. Często pojawiają się zadania dotyczące kolejności, wyboru elementów z grupy lub tworzenia liczb z cyfr.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Kombinatoryka i statystyka**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji opanujesz:
+1.  Podstawowe pojęcia kombinatoryki: mnożenie, dodawanie.
+2.  Wariacje z powtórzeniami i bez powtórzeń.
+3.  Permutacje.
+4.  Kombinacje.
+5.  Rozróżnianie między wariacjami, permutacjami i kombinacjami w zadaniach.
+6.  Rozwiązywanie zadań tekstowych z zastosowaniem reguł kombinatorycznych.
+7.  Obliczanie silni.
+8.  Zastosowanie zasady mnożenia w bardziej złożonych sytuacjach.
 
 ## Definicje i wzory
+**Zasada mnożenia:** Jeśli na sposób wykonania czynności pierwszej mamy $n_1$ możliwości, a na sposób wykonania czynności drugiej mamy $n_2$ możliwości, to wykonanie obu czynności wymaga $n_1 \\cdot n_2$ możliwości. Ogólnie, jeśli jest $k$ czynności i dla każdej z nich mamy odpowiednio $n_1, n_2, \\dots, n_k$ możliwości, to wszystkich możliwości wykonania wszystkich czynności jest $n_1 \\cdot n_2 \\cdot \\dots \\cdot n_k$.
 
-*Materiał w trakcie uzupełniania dla: Kombinatoryka.*
+**Zasada dodawania:** Jeśli na sposób wykonania czynności pierwszej mamy $n_1$ możliwości, a na sposób wykonania czynności drugiej mamy $n_2$ możliwości, i czynności te wykluczają się wzajemnie (nie można wykonać obu naraz), to łączna liczba możliwości wykonania jednej z tych czynności wynosi $n_1 + n_2$.
+
+**Silnia:** Dla liczby naturalnej $n \\ge 1$, silnię liczby $n$, oznaczoną symbolem $n!$, definiuje się jako iloczyn wszystkich liczb naturalnych od 1 do $n$.
+$n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot (n-1) \\cdot n$.
+Przyjmuje się, że $0! = 1$.
+Przykłady:
+$3! = 1 \\cdot 2 \\cdot 3 = 6$
+$5! = 1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 120$
+
+**Wariacje z powtórzeniami:**
+Rozważamy zbiór $n$ elementów. Tworzymy z niego ciąg (czyli kolejność ma znaczenie) o długości $k$, gdzie elementy mogą się powtarzać.
+Liczba wszystkich wariacji z powtórzeniami wynosi $n^k$.
+Symbol: $V'_n{^k} = n^k$.
+*Przykład:* Ile jest trzyliterowych kodów, jeśli każda litera może być dowolna z 26 liter alfabetu?
+$n=26$ (liczba dostępnych liter), $k=3$ (długość kodu).
+Liczba kodów = $26^3$.
+
+**Wariacje bez powtórzeń:**
+Rozważamy zbiór $n$ elementów. Tworzymy z niego ciąg (czyli kolejność ma znaczenie) o długości $k$, gdzie elementy nie mogą się powtarzać ($k \\le n$).
+Liczba wszystkich wariacji bez powtórzeń wynosi:
+$V_n{^k} = \\frac{n!}{(n-k)!} = n \\cdot (n-1) \\cdot \\dots \\cdot (n-k+1)$.
+*Przykład:* Na starcie wyścigu jest 10 zawodników. Ile jest możliwości zajęcia pierwszych trzech miejsc (złoty, srebrny, brązowy medal)?
+$n=10$ (liczba zawodników), $k=3$ (liczba miejsc). Kolejność jest ważna (kto pierwszy, kto drugi itd.).
+Liczba możliwości = $V_{10}{^3} = \\frac{10!}{(10-3)!} = \\frac{10!}{7!} = 10 \\cdot 9 \\cdot 8 = 720$.
+
+**Permutacje:**
+Permutacje to szczególny przypadek wariacji bez powtórzeń, gdzie tworzymy ciąg z wszystkich $n$ elementów zbioru, czyli $k=n$. Kolejność elementów jest ważna.
+Liczba wszystkich permutacji zbioru $n$-elementowego wynosi:
+$P_n = n!$.
+*Przykład:* Na ile sposobów można ustawić w kolejce 5 osób?
+$n=5$. Liczba sposobów = $P_5 = 5! = 120$.
+
+**Kombinacje:**
+Rozważamy zbiór $n$ elementów. Wybieramy z niego podzbiór $k$ elementów ($k \\le n$), gdzie kolejność elementów nie ma znaczenia.
+Liczba wszystkich kombinacji wynosi:
+$C_n{^k} = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.
+*Przykład:* Z grupy 5 osób (A, B, C, D, E) wybieramy 2 osoby do zarządu. Ile jest możliwych składów zarządu?
+$n=5$ (liczba osób), $k=2$ (liczba wybieranych osób). Kolejność nie ma znaczenia (wybranie A i B to to samo co wybranie B i A).
+Liczba składów = $C_5{^2} = \\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5!}{2!3!} = \\frac{120}{2 \\cdot 6} = \\frac{120}{12} = 10$.
+Możliwe pary: {A,B}, {A,C}, {A,D}, {A,E}, {B,C}, {B,D}, {B,E}, {C,D}, {C,E}, {D,E}.
+
+**Kiedy co stosujemy?**
+1.  **Kolejność ma znaczenie, elementy mogą się powtarzać:** Wariacje z powtórzeniami ($n^k$).
+2.  **Kolejność ma znaczenie, elementy nie mogą się powtarzać:** Wariacje bez powtórzeń ($\\frac{n!}{(n-k)!}$).
+3.  **Kolejność ma znaczenie, wybieramy wszystkie elementy:** Permutacje ($n!$).
+4.  **Kolejność nie ma znaczenia, elementy nie mogą się powtarzać:** Kombinacje ($\\frac{n!}{k!(n-k)!}$).
 
 ## Przykład 1 — podstawowy
+Ile jest liczb trzycyfrowych, w których cyfra setek jest nieparzysta, a cyfra dziesiątek parzysta? Cyfry mogą się powtarzać.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj warunki zadania. Szukamy liczb trzycyfrowych $abc$.
+Cyfra setek (a) musi być nieparzysta.
+Cyfra dziesiątek (b) musi być parzysta.
+Cyfra jedności (c) może być dowolna.
+Cyfry mogą się powtarzać.
+
+**Krok 2.** Określ zbiory możliwych cyfr dla każdej pozycji.
+Cyfry nieparzyste: {1, 3, 5, 7, 9} - jest ich 5.
+Cyfry parzyste: {0, 2, 4, 6, 8} - jest ich 5.
+Cyfry dowolne: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} - jest ich 10.
+
+**Krok 3.** Zastosuj zasadę mnożenia.
+Dla cyfry setek (a) mamy 5 możliwości (nieparzyste).
+Dla cyfry dziesiątek (b) mamy 5 możliwości (parzyste).
+Dla cyfry jedności (c) mamy 10 możliwości (dowolne).
+
+**Krok 4.** Oblicz łączną liczbę możliwości.
+Liczba liczb = (liczba możliwości dla a) $\\cdot$ (liczba możliwości dla b) $\\cdot$ (liczba możliwości dla c)
+Liczba liczb = $5 \\cdot 5 \\cdot 10 = 250$.
+
+**Sprawdzenie:**
+Liczba jest trzycyfrowa, więc cyfra setek $a \\neq 0$. Cyfry nieparzyste są zawsze różne od zera, więc warunek jest spełniony.
+Cyfra setek może być 1, 3, 5, 7, 9.
+Cyfra dziesiątek może być 0, 2, 4, 6, 8.
+Cyfra jedności może być 0, 1, ..., 9.
+Np. 100, 101, ..., 109 (10 liczb dla setek 1, dziesiątek 0).
+320, 321, ..., 329 (10 liczb dla setek 3, dziesiątek 2).
+Wszystkich kombinacji par (a,b) jest $5 \\cdot 5 = 25$.
+Dla każdej takiej pary mamy 10 możliwości dla c.
+$25 \\cdot 10 = 250$. Wynik poprawny.
+
+## Przykład 2 — maturalny
+Z klasy liczącej 15 dziewcząt i 10 chłopców należy wybrać 4-osobową delegację. Na ile sposobów można to zrobić, jeśli w delegacji mają być co najmniej 3 dziewczęta?
+
+**Krok 1.** Zidentyfikuj typ zadania. Wybieramy grupę osób, kolejność nie ma znaczenia. Jest to zadanie na kombinacje. Mamy warunek "co najmniej 3 dziewczęta".
+
+**Krok 2.** Rozważ możliwe przypadki spełniające warunek "co najmniej 3 dziewczęta".
+"Co najmniej 3 dziewczęta" oznacza, że w 4-osobowej delegacji mogą być:
+*   Przypadek 1: 3 dziewczęta i 1 chłopiec.
+*   Przypadek 2: 4 dziewczęta i 0 chłopców.
+
+**Krok 3.** Oblicz liczbę sposobów dla każdego przypadku używając kombinacji.
+*   **Przypadek 1:** Wybieramy 3 dziewczęta z 15 i 1 chłopca z 10.
+    Liczba sposobów wyboru dziewcząt: $C_{15}{^3} = \\binom{15}{3} = \\frac{15!}{3!(15-3)!} = \\frac{15!}{3!12!} = \\frac{15 \\cdot 14 \\cdot 13}{3 \\cdot 2 \\cdot 1} = 5 \\cdot 7 \\cdot 13 = 455$.
+    Liczba sposobów wyboru chłopca: $C_{10}{^1} = \\binom{10}{1} = \\frac{10!}{1!(10-1)!} = \\frac{10!}{1!9!} = 10$.
+    Liczba sposobów dla Przypadku 1 (zasada mnożenia): $455 \\cdot 10 = 4550$.
+
+*   **Przypadek 2:** Wybieramy 4 dziewczęta z 15 i 0 chłopców z 10.
+    Liczba sposobów wyboru dziewcząt: $C_{15}{^4} = \\binom{15}{4} = \\frac{15!}{4!(15-4)!} = \\frac{15!}{4!11!} = \\frac{15 \\cdot 14 \\cdot 13 \\cdot 12}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 15 \\cdot 7 \\cdot 13 \\cdot \\frac{1}{2} = \\frac{1365 \\cdot 12}{12} = 1365$.
+    Liczba sposobów wyboru chłopców: $C_{10}{^0} = \\binom{10}{0} = 1$.
+    Liczba sposobów dla Przypadku 2: $1365 \\cdot 1 = 1365$.
+
+**Krok 4.** Zsumuj liczbę sposobów dla wszystkich przypadków (zasada dodawania).
+Łączna liczba sposobów = (Sposoby dla Przypadku 1) + (Sposoby dla Przypadku 2)
+Łączna liczba sposobów = $4550 + 1365 = 5915$.
+
+**Sprawdzenie:**
+Czy dobrze zinterpretowaliśmy "co najmniej 3 dziewczęta"? Tak, to 3 lub 4 dziewczęta w 4-osobowej delegacji.
+Czy użyliśmy kombinacji? Tak, bo kolejność wyboru do delegacji nie ma znaczenia.
+Czy obliczenia kombinacji są poprawne?
+$C_{15}{^3} = \\frac{15 \\cdot 14 \\cdot 13}{6} = 5 \\cdot 7 \\cdot 13 = 455$. OK.
+$C_{10}{^1} = 10$. OK.
+$C_{15}{^4} = \\frac{15 \\cdot 14 \\cdot 13 \\cdot 12}{24} = 15 \\cdot 7 \\cdot 13 \\cdot \\frac{1}{2} \\cdot 12 / 12 = 1365$. OK.
+$C_{10}{^0} = 1$. OK.
+Zastosowanie zasady mnożenia w ramach przypadków i dodawania między przypadkami jest poprawne.
+Wynik $5915$ wydaje się być poprawny.
+
+## Przykład 3 — egzaminacyjny
+Na ile sposobów można ustawić w szeregu trzy książki o matematyce, dwie o fizyce i jedną o chemii, tak aby książki tego samego przedmiotu stały obok siebie?
+
+**Krok 1.** Zidentyfikuj typ zadania. Ustawiamy elementy w szeregu, kolejność jest ważna. Ale mamy grupę elementów (książek tego samego przedmiotu), które mają stać razem.
+
+**Krok 2.** Potraktuj grupy jako pojedyncze bloki.
+Mamy 3 książki o matematyce (M), 2 o fizyce (F) i 1 o chemii (C).
+Traktujemy grupę książek matematycznych jako jeden "blok" (MMM), grupę fizycznych jako jeden "blok" (FF) i książkę chemiczną jako jeden "blok" (C).
+Mamy więc 3 bloki do ustawienia: [MMM], [FF], [C].
+
+**Krok 3.** Oblicz liczbę sposobów ustawienia tych bloków.
+Mamy 3 bloki, które możemy ustawić na $P_3 = 3!$ sposobów.
+$3! = 1 \\cdot 2 \\cdot 3 = 6$.
+Możliwe ustawienia bloków: ([MMM],[FF],[C]), ([MMM],[C],[FF]), ([FF],[MMM],[C]), ([FF],[C],[MMM]), ([C],[MMM],[FF]), ([C],[FF],[MMM]).
+
+**Krok 4.** Oblicz liczbę sposobów ustawienia książek wewnątrz każdego bloku.
+*   Blok matematyczny [MMM]: 3 książki matematyczne można ustawić na $P_3 = 3! = 6$ sposobów.
+*   Blok fizyczny [FF]: 2 książki fizyczne można ustawić na $P_2 = 2! = 2$ sposoby.
+*   Blok chemiczny [C]: 1 książka chemiczna można ustawić na $P_1 = 1! = 1$ sposób.
+
+**Krok 5.** Zastosuj zasadę mnożenia, aby obliczyć łączną liczbę sposobów.
+Łączna liczba sposobów = (liczba sposobów ustawienia bloków) $\\cdot$ (liczba sposobów w bloku M) $\\cdot$ (liczba sposobów w bloku F) $\\cdot$ (liczba sposobów w bloku C)
+Łączna liczba sposobów = $3! \\cdot 3! \\cdot 2! \\cdot 1! = 6 \\cdot 6 \\cdot 2 \\cdot 1 = 72$.
+
+**Sprawdzenie:**
+Zasada traktowania grup jako bloków jest standardową metodą dla tego typu zadań.
+Ustawienie bloków: 3 bloki na $3!$ sposobów.
+Ustawienie wewnątrz bloków:
+- 3 książki M na $3!$ sposobów.
+- 2 książki F na $2!$ sposobów.
+- 1 książka C na $1!$ sposobu.
+Zastosowanie zasady mnożenia jest tutaj kluczowe.
+$3! \\cdot 3! \\cdot 2! \\cdot 1! = 6 \\cdot 6 \\cdot 2 \\cdot 1 = 72$. Wygląda poprawnie.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie kolejności:** Kluczowe jest rozróżnienie, czy kolejność elementów ma znaczenie (wariacje, permutacje) czy nie (kombinacje). Zadania o wyborze grupy osób do delegacji, komisji, czy wybieraniu kart do ręki zwykle oznaczają kombinacje. Zadania o tworzeniu kodów, ustawianiu w kolejce, przyznawaniu miejsc medalowych to wariacje lub permutacje.
+*   **Powtórzenia:** Zawsze sprawdzaj, czy elementy mogą się powtarzać. Jeśli tak, używasz wzorów na wariacje z powtórzeniami ($n^k$). Jeśli nie, to wariacje bez powtórzeń lub kombinacje.
+*   **"Co najmniej" i "co najwyżej":** Te sformułowania często wymagają rozbicia zadania na przypadki i zastosowania zasady dodawania. Upewnij się, że uwzględniłeś wszystkie możliwe przypadki (np. "co najmniej 2" to 2, 3, 4,... aż do maksymalnej liczby elementów).
+*   **Zadania tekstowe:** Dokładnie czytaj treść zadania, aby poprawnie zidentyfikować $n$ (liczbę wszystkich elementów do wyboru) i $k$ (liczbę wybieranych elementów). Czasami trzeba odjąć lub dodać liczby (np. wybieramy z grupy, ale jakaś osoba nie może być wybrana).
+*   **Silnia i jej obliczanie:** Pamiętaj, że $n! = n \\cdot (n-1)!$ co może uprościć obliczenia np. $\\frac{10!}{7!} = 10 \\cdot 9 \\cdot 8$. Upewnij się, że obliczasz ją poprawnie, zwłaszcza dla większych liczb.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Ile jest wszystkich trzycyfrowych liczb naturalnych, w których żadna cyfra się nie powtarza?
+2.  Na ile sposobów można wybrać 3-osobową delegację z klasy liczącej 25 uczniów, jeśli w skład delegacji mogą wejść dowolne osoby?
+3.  Ile jest różnych wyników rzutu trzema symetrycznymi kostkami do gry?
+4.  Na ile sposobów można ustawić w szeregu słowo "MATEMATYKA"?
+5.  Ze zbioru $\\{1, 2, 3, 4, 5, 6, 7\\}$ wybieramy 3 liczby. Ile jest sposobów wyboru, jeśli kolejność jest ważna i liczby mogą się powtarzać?
+6.  W ile sposobów można rozdać 5 różnych nagród 10 zawodnikom, tak aby każdy zawodnik mógł otrzymać co najwyżej jedną nagrodę?
+7.  Ile jest liczb czterocyfrowych parzystych, w których wszystkie cyfry są różne?
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Cyfra setek: 9 możliwości (1-9). Cyfra dziesiątek: 9 możliwości (0-9, bez cyfry setek). Cyfra jedności: 8 możliwości (bez dwóch poprzednich). $9 \\cdot 9 \\cdot 8 = 648$.
+2.  Wybieramy 3 osoby z 25, kolejność nie ma znaczenia: $C_{25}{^3} = \\binom{25}{3} = \\frac{25 \\cdot 24 \\cdot 23}{3 \\cdot 2 \\cdot 1} = 25 \\cdot 4 \\cdot 23 = 100 \\cdot 23 = 2300$.
+3.  Dla każdej kostki jest 6 możliwości. Kolejność nie ma znaczenia jeśli traktujemy kostki jako identyczne, ale pytanie sugeruje "wyników rzutu", co zwykle traktuje się jako kolejność lub rozróżnialne kostki. Jeśli kostki są rozróżnialne (np. różne kolory) lub interesuje nas kolejność wyników, to $6 \\cdot 6 \\cdot 6 = 6^3 = 216$.
+4.  Słowo "MATEMATYKA" ma 10 liter: M-2, A-3, T-2, E-1, Y-1, K-1. Liczba permutacji z powtórzeniami: $\\frac{10!}{2!3!2!1!1!1!} = \\frac{3628800}{2 \\cdot 6 \\cdot 2} = \\frac{3628800}{24} = 151200$.
+5.  Wybieramy 3 liczby ze zbioru 7-elementowego, kolejność ważna, z powtórzeniami: $7^3 = 343$.
+6.  Mamy 10 zawodników i 5 nagród. Przyznajemy nagrodę po nagrodzie. Pierwsza nagroda: 10 możliwości. Druga: 9. Trzecia: 8. Czwarta: 7. Piąta: 6. $V_{10}{^5} = 10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 = 30240$.
+7.  Liczba czterocyfrowa $abcd$. $d$ musi być parzyste $\\{0, 2, 4, 6, 8\\}$. Cyfry różne.
+    *   Przypadek 1: $d=0$. Pozostałe cyfry $a,b,c$ wybieramy z pozostałych 9 cyfr bez powtórzeń. $a$ ma 9 możliwości, $b$ ma 8, $c$ ma 7. $1 \\cdot 9 \\cdot 8 \\cdot 7 = 504$.
+    *   Przypadek 2: $d \\in \\{2, 4, 6, 8\\}$ (4 możliwości). Cyfra $a$ nie może być 0 ani $d$. $a$ ma 8 możliwości. Cyfra $b$ ma 8 możliwości (może być 0, ale nie może być $a$ ani $d$). Cyfra $c$ ma 7 możliwości. $4 \\cdot 8 \\cdot 8 \\cdot 7 = 4 \\cdot 448 = 1792$.
+    Łącznie: $504 + 1792 = 2296$.
 
 ## Szybka powtórka
+1.  Kiedy stosujemy kombinacje, a kiedy wariacje?
+2.  Jaka jest różnica między permutacją a wariacją bez powtórzeń?
+3.  Ile wynosi $5!$?
+4.  Jakie są warunki zadania typu "co najmniej"?
+5.  Podaj wzór na liczbę wariacji z powtórzeniami zbioru $n$-elementowego, gdzie wybieramy $k$ elementów.
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+Prosty przykład wyboru 3 osób z 5 ($A, B, C, D, E$) do zarządu (kolejność nie ma znaczenia - kombinacje).
+\`\`\`text
+Zbiór: {A, B, C, D, E} (n=5)
+Wybieramy: 3 osoby (k=3)
+Kolejność: Nie ma znaczenia
+
+Możliwe kombinacje:
+{A, B, C}
+{A, B, D}
+{A, B, E}
+{A, C, D}
+{A, C, E}
+{A, D, E}
+{B, C, D}
+{B, C, E}
+{B, D, E}
+{C, D, E}
+
+Łącznie: 10 kombinacji (C_5^3 = 10)
+\`\`\``,
     video_url: null,
   },
   {

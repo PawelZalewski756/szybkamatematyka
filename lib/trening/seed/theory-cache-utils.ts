@@ -64,6 +64,47 @@ export function isCompleteTheoryCache(entry: CachedTheoryFile | null): boolean {
   return isPhase3aTheoryLesson(entry.content);
 }
 
+export function listTheorySlotsForExam(exam_type: ExamType): TheorySlot[] {
+  return listCkeTopicsForExam(exam_type).map((t) => ({
+    exam_type,
+    category: t.category,
+    topic: t.topic,
+    categoryName: t.categoryName,
+    topicName: t.topicName,
+  }));
+}
+
+export function listIncompleteTheorySlotsForExam(exam_type: ExamType): TheorySlot[] {
+  return listTheorySlotsForExam(exam_type).filter(
+    (slot) => !isCompleteTheoryCache(readTheoryCache(slot)),
+  );
+}
+
+export function countTheoryCacheProgressByExam(exam_type: ExamType): {
+  total: number;
+  complete: number;
+  missing: number;
+} {
+  const slots = listTheorySlotsForExam(exam_type);
+  const complete = slots.filter((slot) =>
+    isCompleteTheoryCache(readTheoryCache(slot)),
+  ).length;
+  return {
+    total: slots.length,
+    complete,
+    missing: slots.length - complete,
+  };
+}
+
+export function isExamTheoryComplete(exam_type: ExamType): boolean {
+  return countTheoryCacheProgressByExam(exam_type).missing === 0;
+}
+
+export function formatExamTheoryProgress(exam_type: ExamType): string {
+  const p = countTheoryCacheProgressByExam(exam_type);
+  return `${p.complete}/${p.total}`;
+}
+
 export function listIncompleteTheorySlots(): TheorySlot[] {
   return listAllTheorySlots().filter((slot) => !isCompleteTheoryCache(readTheoryCache(slot)));
 }

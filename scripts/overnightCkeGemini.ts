@@ -51,7 +51,7 @@ async function main() {
     log("✓ Sync treści OK");
   }
 
-  const geminiCode = await runNpm(["--fill-solutions", "--delay=7000"]);
+  const geminiCode = await runNpm(["--fill-solutions", "--delay=2500"]);
   if (geminiCode === 0) {
     log("✅ Wszystkie rozwiązania uzupełnione");
   } else {

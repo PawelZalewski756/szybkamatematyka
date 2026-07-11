@@ -12,9 +12,12 @@ import {
   THEORY_FORMAT_REMINDER,
 } from "@/lib/gemini/prompts-theory";
 import {
+  isDailyQuotaExhausted,
   isRetryableGeminiError,
   sleep,
-} from "@/lib/gemini/generate-solution";
+  waitForGeminiRetry,
+} from "@/lib/gemini/gemini-retry";
+import { getTheoryModelChain, parseQuotaModelFromError } from "@/lib/gemini/gemini-model-chain";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export type GenerateTheoryInput = {
@@ -25,22 +28,29 @@ export type GenerateTheoryInput = {
   topicSlug: string;
 };
 
-function getModelId(): string {
-  return process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash-lite";
+export type GenerateTheoryResult = ParsedTheoryLesson & { model: string };
+
+function getModelId(modelOverride?: string): string {
+  return (
+    modelOverride ??
+    (process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash-lite")
+  );
 }
 
 export async function generateTheoryLesson(
   input: GenerateTheoryInput,
-): Promise<ParsedTheoryLesson> {
+  modelId?: string,
+): Promise<GenerateTheoryResult> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error("Brak GEMINI_API_KEY w zmiennych środowiskowych.");
   }
 
+  const resolvedModel = getModelId(modelId);
   const userPrompt = buildTheoryUserPrompt(input);
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({
-    model: getModelId(),
+    model: resolvedModel,
     systemInstruction: THEORY_LESSON_SYSTEM_PROMPT,
   });
 
@@ -70,45 +80,66 @@ export async function generateTheoryLesson(
   if (!lesson.title || lesson.title === "Lekcja") {
     lesson.title = input.topicName;
   }
-  return lesson;
+  return { ...lesson, model: resolvedModel };
 }
 
 export async function generateTheoryLessonWithRetry(
   input: GenerateTheoryInput,
-  maxAttempts = 6,
-): Promise<ParsedTheoryLesson> {
+  maxValidationAttempts = 6,
+): Promise<GenerateTheoryResult> {
+  const modelChain = getTheoryModelChain();
+  const exhaustedModels = new Set<string>();
+  let modelIndex = 0;
   let lastError: Error | null = null;
+  let validationAttempts = 0;
+  let apiAttempts = 0;
 
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+  while (true) {
+    const modelId = modelChain[modelIndex] ?? modelChain[modelChain.length - 1]!;
+
     try {
-      return await generateTheoryLesson(input);
+      return await generateTheoryLesson(input, modelId);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       lastError = err instanceof Error ? err : new Error(message);
 
       const validationRetry =
         /wymaganych sekcji|Phase 3a za krótka/i.test(message) &&
-        attempt < maxAttempts;
+        validationAttempts < maxValidationAttempts;
 
-      if (
-        (isRetryableGeminiError(message) || validationRetry) &&
-        attempt < maxAttempts
-      ) {
-        const retryMatch = message.match(/retry in (\d+(?:\.\d+)?)\s*s/i);
-        const waitMs = retryMatch
-          ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 3000
-          : validationRetry
-            ? 2000
-            : 15 * attempt * 1000;
+      if (validationRetry) {
+        validationAttempts += 1;
         console.warn(
-          `  ⏳ Gemini — czekam ${Math.round(waitMs / 1000)} s (próba ${attempt}/${maxAttempts})…`,
+          `  ⏳ Walidacja lekcji — ponawiam (${validationAttempts}/${maxValidationAttempts})…`,
         );
-        await sleep(waitMs);
+        await sleep(2000);
         continue;
       }
+
+      if (isDailyQuotaExhausted(message)) {
+        const quotaModel = parseQuotaModelFromError(message) ?? modelId;
+        exhaustedModels.add(quotaModel);
+
+        const nextIndex = modelChain.findIndex(
+          (m, i) => i > modelIndex && !exhaustedModels.has(m),
+        );
+        if (nextIndex !== -1) {
+          console.warn(
+            `  ↪ Limit dzienny ${quotaModel} — przełączam na ${modelChain[nextIndex]} (osobny limit RPD)`,
+          );
+          modelIndex = nextIndex;
+          apiAttempts = 0;
+          continue;
+        }
+      }
+
+      if (isRetryableGeminiError(message)) {
+        apiAttempts += 1;
+        await waitForGeminiRetry(message, apiAttempts);
+        continue;
+      }
+
       throw lastError;
     }
   }
-
-  throw lastError ?? new Error("Nie udało się wygenerować lekcji.");
 }

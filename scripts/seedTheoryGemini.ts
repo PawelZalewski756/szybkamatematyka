@@ -17,13 +17,16 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
-import { isDailyQuotaError, sleep } from "../lib/gemini/generate-solution";
+import { sleep } from "../lib/gemini/generate-solution";
 import { generateTheoryLessonWithRetry } from "../lib/gemini/generate-theory";
 import { listCkeTopicsForExam } from "../lib/trening/cke-curriculum";
 import { CKE_EGZAMIN_8 } from "../lib/trening/cke-egzamin-8";
 import { CKE_MATURA_PODSTAWOWA } from "../lib/trening/cke-matura-podstawowa";
 import {
+  countTheoryCacheProgressByExam,
   isCompleteTheoryCache,
+  isExamTheoryComplete,
+  listTheorySlotsForExam,
   readTheoryCache,
   theoryCachePath,
 } from "../lib/trening/seed/theory-cache-utils";
@@ -73,13 +76,6 @@ type CliOptions = {
   exam: ExamType | null;
   only: TheorySlot | null;
 };
-
-class DailyQuotaReached extends Error {
-  constructor() {
-    super("daily_quota");
-    this.name = "DailyQuotaReached";
-  }
-}
 
 function parseArgs(): CliOptions {
   let limit = Infinity;
@@ -168,16 +164,29 @@ function writeCache(entry: CachedTheory, slot: TheorySlot): void {
 function listSlots(opts: CliOptions): TheorySlot[] {
   if (opts.only) return [opts.only];
 
-  const exams = opts.exam ? [opts.exam] : EXAMS;
-  return exams.flatMap((examType) =>
-    listCkeTopicsForExam(examType).map((t) => ({
-      exam_type: examType,
+  if (opts.exam) {
+    return listTheorySlotsForExam(opts.exam).map((t) => ({
+      exam_type: t.exam_type,
       category: t.category,
       topic: t.topic,
       categoryName: t.categoryName,
       topicName: t.topicName,
-    })),
-  );
+    }));
+  }
+
+  // Faza 1: pełna matura (28/28), dopiero potem egzamin 8-klasisty
+  if (!isExamTheoryComplete("matura_podstawowa")) {
+    return listTheorySlotsForExam("matura_podstawowa");
+  }
+
+  return [
+    ...listTheorySlotsForExam("matura_podstawowa"),
+    ...listTheorySlotsForExam("8_klasa"),
+  ];
+}
+
+function examOrder(slot: TheorySlot): number {
+  return EXAMS.indexOf(slot.exam_type);
 }
 
 async function pushToDb(
@@ -228,14 +237,27 @@ async function main() {
   const slots = listSlots(opts).sort((a, b) => {
     const aDone = isCompleteTheoryCache(readCache(a)) ? 1 : 0;
     const bDone = isCompleteTheoryCache(readCache(b)) ? 1 : 0;
-    return aDone - bDone;
+    if (aDone !== bDone) return aDone - bDone;
+    return examOrder(a) - examOrder(b);
   });
 
   if (slots.length === 0) {
     throw new Error("Brak tematów do przetworzenia (sprawdź --exam / --only).");
   }
 
+  const maturaProgress = countTheoryCacheProgressByExam("matura_podstawowa");
+  const eightProgress = countTheoryCacheProgressByExam("8_klasa");
+
   console.log("\n=== Gemini: lekcje teoretyczne ===\n");
+  console.log(`Matura: ${maturaProgress.complete}/${maturaProgress.total}`);
+  console.log(`8 klasa: ${eightProgress.complete}/${eightProgress.total}`);
+  if (!opts.exam && !isExamTheoryComplete("matura_podstawowa")) {
+    console.log("Faza: matura (8-klasa po 28/28)\n");
+  } else if (!opts.exam && isExamTheoryComplete("matura_podstawowa")) {
+    console.log("Faza: 8-klasa (matura kompletna ✓)\n");
+  } else {
+    console.log("");
+  }
   console.log(`Tematy w kolejce: ${slots.length}`);
   console.log(`Limit: ${Number.isFinite(opts.limit) ? opts.limit : "brak"}`);
   console.log(`Opóźnienie: ${opts.delayMs} ms`);
@@ -290,7 +312,7 @@ async function main() {
         title: lesson.title,
         content: lesson.content,
         generatedAt: new Date().toISOString(),
-        model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash-lite",
+        model: lesson.model,
         source: "gemini",
       };
 
@@ -325,10 +347,6 @@ async function main() {
       }
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
-      if (isDailyQuotaError(message)) {
-        console.error("\n⛔ Limit Gemini — wznawianie przez seed:theory-overnight");
-        throw new DailyQuotaReached();
-      }
       console.error(`    ✗ ${message}`);
       errors += 1;
     }
@@ -346,9 +364,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  if (err instanceof DailyQuotaReached) {
-    process.exit(0);
-  }
   console.error(err instanceof Error ? err.message : err);
   process.exit(1);
 });

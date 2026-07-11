@@ -1,5 +1,14 @@
 import { normalizeSolution } from "@/lib/gemini/format-solution";
 import {
+  formatGeminiWaitLabel,
+  getGeminiRetryWaitMs,
+  isRateLimitError,
+  isRetryableGeminiError,
+  parseGeminiRetryDelayMs,
+  sleep,
+  waitForGeminiRetry,
+} from "@/lib/gemini/gemini-retry";
+import {
   GEN_Z_MATH_TUTOR_PROMPT,
   SOLUTION_FORMAT_REMINDER,
 } from "@/lib/gemini/prompts";
@@ -66,26 +75,16 @@ export async function generateMathSolution(
 }
 
 /** Błędy API, po których warto ponowić żądanie (429, 503, przeciążenie). */
-export function isRetryableGeminiError(message: string): boolean {
-  return (
-    /429|503|quota|rate limit|too many requests|high demand|unavailable|overloaded/i.test(
-      message,
-    )
-  );
-}
-
-/** @deprecated Użyj isRetryableGeminiError */
-export function isRateLimitError(message: string): boolean {
-  return isRetryableGeminiError(message);
-}
-
-export function isDailyQuotaError(message: string): boolean {
-  return (
-    /PerDay|per day|FreeTier|GenerateRequestsPerDay|ResourceExhausted|429|quota/i.test(
-      message,
-    ) || /retry in \d+/i.test(message)
-  );
-}
+export {
+  formatGeminiWaitLabel,
+  getGeminiRetryWaitMs,
+  isDailyQuotaError,
+  isRateLimitError,
+  isRetryableGeminiError,
+  parseGeminiRetryDelayMs,
+  sleep,
+  waitForGeminiRetry,
+} from "@/lib/gemini/gemini-retry";
 
 /** Czytelny komunikat zamiast surowego logu GoogleGenerativeAI. */
 export function formatGeminiErrorForUser(message: string): {
@@ -104,12 +103,11 @@ export function formatGeminiErrorForUser(message: string): {
         error: `Wyczerpany dzienny limit API Gemini dla modelu „${modelHint}”. Spróbuj jutro lub zmień model.${liteHint}`,
       };
     }
-    const retryMatch = message.match(/retry in (\d+(?:\.\d+)?)\s*s/i);
-    if (retryMatch) {
-      const sec = Math.ceil(parseFloat(retryMatch[1]));
+    const parsed = parseGeminiRetryDelayMs(message);
+    if (parsed !== null) {
       return {
         status: 429,
-        error: `Model AI jest chwilowo przeciążony. Spróbuj ponownie za ok. ${sec} s.`,
+        error: `Model AI jest chwilowo przeciążony. Spróbuj ponownie za ok. ${formatGeminiWaitLabel(parsed)}.`,
       };
     }
     return {
@@ -141,15 +139,12 @@ export function formatGeminiErrorForUser(message: string): {
   };
 }
 
-export async function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export async function generateMathSolutionWithRetry(
   input: GenerateSolutionInput,
   maxAttempts = 8,
 ): Promise<string> {
   let lastError: Error | null = null;
+  let apiAttempts = 0;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
@@ -159,24 +154,8 @@ export async function generateMathSolutionWithRetry(
       lastError = err instanceof Error ? err : new Error(message);
 
       if (isRetryableGeminiError(message) && attempt < maxAttempts) {
-        const retryMatch = message.match(/retry in (\d+(?:\.\d+)?)\s*s/i);
-        const isDailyQuota = /PerDay|per day|FreeTier/i.test(message);
-        const isOverload = /503|high demand|unavailable|overloaded/i.test(message);
-        const waitMs = retryMatch
-          ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 3000
-          : isDailyQuota
-            ? 70 * 60 * 1000
-            : isOverload
-              ? Math.min(120_000, 20 * attempt * 1000)
-              : 15 * attempt * 1000;
-        const label =
-          waitMs >= 60_000
-            ? `${Math.round(waitMs / 60_000)} min`
-            : `${Math.round(waitMs / 1000)} s`;
-        console.warn(
-          `  ⏳ Limit API — czekam ${label} (próba ${attempt}/${maxAttempts})…`,
-        );
-        await sleep(waitMs);
+        apiAttempts += 1;
+        await waitForGeminiRetry(message, apiAttempts);
         continue;
       }
       throw lastError;

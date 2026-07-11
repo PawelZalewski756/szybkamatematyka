@@ -1,6 +1,6 @@
 /**
  * Nocny generator teorii — Gemini w pętli aż 100% tematów CKE.
- * Przy limicie API czeka i wznawia (nie kończy procesu).
+ * Przy limicie API czeka responsywnie (czas z komunikatu Gemini) i wznawia.
  *
  * Log: data/theory-cache/overnight.log
  *
@@ -12,12 +12,14 @@ import path from "path";
 import { spawn } from "child_process";
 import {
   countTheoryCacheProgress,
+  countTheoryCacheProgressByExam,
+  isExamTheoryComplete,
   listIncompleteTheorySlots,
+  listIncompleteTheorySlotsForExam,
 } from "../lib/trening/seed/theory-cache-utils";
 
 const LOG = path.resolve(process.cwd(), "data/theory-cache/overnight.log");
-const MIN_QUOTA_WAIT_MS = 3 * 60 * 1000;
-const MAX_QUOTA_WAIT_MS = 20 * 60 * 1000;
+const STALL_WAIT_MS = 30_000;
 
 function log(line: string): void {
   const ts = new Date().toISOString();
@@ -54,16 +56,37 @@ function runCommand(command: string, args: string[]): Promise<number> {
 }
 
 function runNpm(script: string, extraArgs: string[] = []): Promise<number> {
-  return runCommand("npm", ["run", script, ...(extraArgs.length ? ["--", ...extraArgs] : [])]);
+  return runCommand("npm", [
+    "run",
+    script,
+    ...(extraArgs.length ? ["--", ...extraArgs] : []),
+  ]);
 }
 
-async function waitForQuotaReset(attempt: number): Promise<void> {
-  const waitMs = Math.min(
-    MAX_QUOTA_WAIT_MS,
-    MIN_QUOTA_WAIT_MS + attempt * 60_000,
-  );
-  log(`⏸ Limit Gemini — czekam ${Math.round(waitMs / 60_000)} min i wznawiam…`);
-  await sleep(waitMs);
+function logExamPhase(): void {
+  const matura = countTheoryCacheProgressByExam("matura_podstawowa");
+  const eight = countTheoryCacheProgressByExam("8_klasa");
+  log(`Matura: ${matura.complete}/${matura.total}, 8 klasa: ${eight.complete}/${eight.total}`);
+
+  if (!isExamTheoryComplete("matura_podstawowa")) {
+    const missing = listIncompleteTheorySlotsForExam("matura_podstawowa");
+    log(
+      `  → faza matura — brakuje ${missing.length}: ${missing
+        .map((s) => `${s.category}:${s.topic}`)
+        .join(", ")}`,
+    );
+    return;
+  }
+
+  log("  ✅ Matura kompletna (28/28) — lecę z egzaminem 8-klasisty");
+  const missingEight = listIncompleteTheorySlotsForExam("8_klasa");
+  if (missingEight.length > 0) {
+    log(
+      `  → brakuje ${missingEight.length} tematów 8 klasy: ${missingEight
+        .map((s) => `${s.category}:${s.topic}`)
+        .join(", ")}`,
+    );
+  }
 }
 
 async function main() {
@@ -74,7 +97,6 @@ async function main() {
     log(`⚠ ensure-materials kod ${ensureCode} — kontynuuję`);
   }
 
-  let quotaWaits = 0;
   let round = 0;
 
   while (true) {
@@ -83,6 +105,7 @@ async function main() {
     log(
       `--- Runda ${round}: ${before.complete}/${before.total} pełnych lekcji w cache ---`,
     );
+    logExamPhase();
 
     if (before.missing === 0) {
       log("✅ Wszystkie tematy mają pełne lekcje Phase 3a w cache");
@@ -100,7 +123,7 @@ async function main() {
     const geminiCode = await runNpm("seed:theory-gemini", [
       "--cache-only",
       "--no-db",
-      "--delay=8000",
+      "--delay=2000",
     ]);
 
     const after = countTheoryCacheProgress();
@@ -114,12 +137,13 @@ async function main() {
     }
 
     if (after.complete === before.complete) {
-      quotaWaits += 1;
-      await waitForQuotaReset(quotaWaits);
+      log(
+        `⏸ Brak postępu w rundzie (kod ${geminiCode}) — ponawiam za ${STALL_WAIT_MS / 1000} s…`,
+      );
+      await sleep(STALL_WAIT_MS);
       continue;
     }
 
-    quotaWaits = 0;
     await sleep(5000);
   }
 
