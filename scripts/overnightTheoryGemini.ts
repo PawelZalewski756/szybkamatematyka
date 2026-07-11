@@ -17,6 +17,7 @@ import {
   listIncompleteTheorySlots,
   listIncompleteTheorySlotsForExam,
 } from "../lib/trening/seed/theory-cache-utils";
+import { gitCheckpoint } from "./gitCheckpoint";
 
 const LOG = path.resolve(process.cwd(), "data/theory-cache/overnight.log");
 const STALL_WAIT_MS = 30_000;
@@ -143,6 +144,11 @@ async function main() {
       await sleep(STALL_WAIT_MS);
       continue;
     }
+
+    await gitCheckpoint(
+      `Faza 3a: teoria ${after.complete}/${after.total} (matura ${countTheoryCacheProgressByExam("matura_podstawowa").complete}/28, 8 klasa ${countTheoryCacheProgressByExam("8_klasa").complete}/27).`,
+      log,
+    );
 
     await sleep(5000);
   }
