@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const SQL_PATH = "supabase/migrations/init_baza_zadan.sql";
 
 export function DatabaseSetupCard() {
@@ -35,11 +33,9 @@ export function DatabaseSetupCard() {
           Wklej do edytora i kliknij <strong>Run</strong>.
         </li>
         <li>
-          Odśwież tę stronę i dodaj zadania w{" "}
-          <Link href="/admin" className="font-semibold text-accent underline">
-            /admin
-          </Link>
-          .
+          Odśwież tę stronę — zadania możesz dodać skryptem{" "}
+          <code className="text-accent">npm run seed:trening-tasks</code> lub
+          bezpośrednio w Supabase.
         </li>
       </ol>
       <p className="mt-4 text-xs text-muted">

@@ -21,7 +21,7 @@ import { useEffect, useState } from "react";
 type AuthView = "login" | "signup";
 
 const inputClassName =
-  "rounded-2xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-white outline-none transition-shadow placeholder:text-zinc-600 focus:ring-4";
+  "rounded-2xl border border-surface-border bg-background px-4 py-3.5 text-white outline-none transition-shadow placeholder:text-muted focus:ring-4";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -199,16 +199,16 @@ export default function LoginPage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 24 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl border border-orange-500/20 bg-[#141c2b]/95 p-6 shadow-2xl shadow-orange-950/20 backdrop-blur-sm sm:p-8"
+            className="rounded-3xl border border-accent/20 bg-surface/95 p-6 shadow-2xl shadow-accent/20 backdrop-blur-sm sm:p-8"
           >
-            <p className="text-center text-sm font-bold uppercase tracking-widest text-orange-400">
+            <p className="text-center text-sm font-bold uppercase tracking-widest text-accent">
               Logowanie
             </p>
             <h1 className="mt-2 text-center text-3xl font-black text-white sm:text-4xl">
               Zaloguj się do{" "}
               <span className="text-gradient-brand">Szybkiej Matematyki</span>
             </h1>
-            <p className="mt-3 text-center text-sm text-zinc-400">
+            <p className="mt-3 text-center text-sm text-muted">
               Masz już konto? Wpisz e-mail i hasło.
             </p>
 
@@ -221,7 +221,7 @@ export default function LoginPage() {
               }}
             >
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+                <span className="text-xs font-bold uppercase tracking-wide text-muted">
                   Email
                 </span>
                 <input
@@ -231,12 +231,12 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="twoj@email.pl"
-                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+                <span className="text-xs font-bold uppercase tracking-wide text-muted">
                   Hasło
                 </span>
                 <input
@@ -246,7 +246,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="twoje hasło"
-                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
 
@@ -266,7 +266,7 @@ export default function LoginPage() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex min-h-[52px] items-center justify-center rounded-2xl bg-brand-gradient text-lg font-black text-white shadow-lg shadow-orange-500/30 disabled:opacity-60"
+                className="btn-chunky mt-2 flex min-h-[52px] w-full items-center justify-center text-lg disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -277,7 +277,7 @@ export default function LoginPage() {
                 type="button"
                 disabled={loading}
                 onClick={switchToSignup}
-                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-lg font-black text-white transition-colors hover:border-orange-500/40 hover:bg-orange-500/10 disabled:opacity-60"
+                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-lg font-black text-white transition-colors hover:border-accent/40 hover:bg-accent/10 disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -292,10 +292,10 @@ export default function LoginPage() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -24 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden rounded-3xl border border-amber-500/25 bg-gradient-to-b from-[#141c2b] via-[#121a28] to-[#0f1810] p-6 shadow-2xl shadow-orange-950/20 backdrop-blur-sm sm:p-8"
+            className="relative overflow-hidden rounded-3xl border border-accent/25 bg-gradient-to-b from-surface via-surface to-background p-6 shadow-2xl shadow-accent/20 backdrop-blur-sm sm:p-8"
           >
             <div
-              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-500/15 blur-3xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/15 blur-3xl"
               aria-hidden
             />
             <div
@@ -307,7 +307,7 @@ export default function LoginPage() {
               <span className="text-4xl" aria-hidden>
                 🎮
               </span>
-              <p className="mt-2 text-sm font-bold uppercase tracking-widest text-amber-400/90">
+              <p className="mt-2 text-sm font-bold uppercase tracking-widest text-accent/90">
                 Nowe konto
               </p>
               <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
@@ -325,7 +325,7 @@ export default function LoginPage() {
               }}
             >
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-accent/80">
                   Nick
                 </span>
                 <input
@@ -337,12 +337,12 @@ export default function LoginPage() {
                   onChange={(e) => setNick(e.target.value)}
                   placeholder="np. KasiaM"
                   maxLength={20}
-                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-accent/80">
                   Email
                 </span>
                 <input
@@ -352,12 +352,12 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="twoj@email.pl"
-                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-wide text-orange-400/80">
+                <span className="text-xs font-bold uppercase tracking-wide text-accent/80">
                   Hasło
                 </span>
                 <input
@@ -367,7 +367,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="minimum 6 znaków"
-                  className={`${inputClassName} focus:border-orange-500/50 focus:ring-orange-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
 
@@ -382,7 +382,7 @@ export default function LoginPage() {
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   placeholder="wpisz hasło jeszcze raz"
-                  className={`${inputClassName} focus:border-amber-500/50 focus:ring-amber-500/20`}
+                  className={`${inputClassName} focus:border-accent/50 focus:ring-amber-500/20`}
                 />
               </label>
 
@@ -393,7 +393,7 @@ export default function LoginPage() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex min-h-[52px] items-center justify-center gap-2 rounded-2xl bg-brand-gradient text-lg font-black text-white shadow-lg shadow-orange-950/30 disabled:opacity-60"
+                className="btn-chunky mt-2 flex min-h-[52px] w-full items-center justify-center gap-2 text-lg disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -404,20 +404,20 @@ export default function LoginPage() {
                 type="button"
                 disabled={loading}
                 onClick={switchToLogin}
-                className="text-center text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-300 disabled:opacity-50"
+                className="text-center text-sm font-semibold text-muted transition-colors hover:text-accent disabled:opacity-50"
               >
                 Masz już konto?{" "}
-                <span className="text-orange-400">Zaloguj się</span>
+                <span className="text-accent">Zaloguj się</span>
               </button>
             </form>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <p className="mt-6 text-center text-sm text-zinc-500">
+      <p className="mt-6 text-center text-sm text-muted">
         <Link
           href="/"
-          className="font-semibold text-zinc-400 transition-colors hover:text-orange-400"
+          className="font-semibold text-muted transition-colors hover:text-accent"
         >
           ← Wróć na stronę główną
         </Link>
@@ -438,7 +438,7 @@ function Alert({
       className={`rounded-xl px-4 py-3 text-sm font-medium ${
         isError
           ? "border border-red-500/30 bg-red-500/10 text-red-300"
-          : "border border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+          : "border border-success/30 bg-success/10 text-success"
       }`}
       role="alert"
     >

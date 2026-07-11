@@ -151,7 +151,7 @@ export function BazaZadanArkuszePanel({
       <EmptyState
         icon={FileQuestion}
         title="Brak arkuszy w bazie"
-        description="Arkusze CKE dodajesz w panelu admina albo przez skrypt seed. Na razie korzystaj z zakładki Zadania i Arkusze treningowe."
+        description="Arkusze CKE dodajesz skryptem seed. Na razie korzystaj z zakładki Zadania i Arkusze treningowe."
       />
     );
   }

@@ -46,9 +46,9 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mt-8 rounded-3xl border border-white/10 bg-zinc-900/80 p-6 sm:p-7">
+    <section className="mt-8 rounded-3xl border border-surface-border bg-surface/80 p-6 sm:p-7">
       <h2 className="flex items-center gap-2 text-lg font-black text-white">
-        <Icon size={18} className="text-orange-300" />
+        <Icon size={18} className="text-accent" />
         {title}
       </h2>
       <div className="mt-5">{children}</div>
@@ -96,7 +96,7 @@ export function AnalitykaPageClient() {
     <div className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/admin"
-        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
+        className="text-sm font-semibold text-muted hover:text-accent"       >
         ← Panel administratora
       </Link>
 
@@ -106,7 +106,7 @@ export function AnalitykaPageClient() {
           platformy
         </span>
       </h1>
-      <p className="mt-2 text-zinc-400">
+      <p className="mt-2 text-muted">
         Zagregowane statystyki graczy i zawartości bazy. Dane liczone na żywo z
         Supabase w granicach uprawnień odczytu (RLS).
       </p>
@@ -120,41 +120,41 @@ export function AnalitykaPageClient() {
               label="Gracze"
               value={PL_NUMBER.format(players.totalPlayers)}
               sub="profili łącznie"
-              accent="text-orange-400"             />
+              accent="text-accent"             />
             <MetricCard
               icon={Activity}
               label="Aktywni 7 dni"
               value={PL_NUMBER.format(players.active7d)}
               sub="po ostatniej grze"
-              accent="text-emerald-400"
+              accent="text-success"
             />
             <MetricCard
               icon={Activity}
               label="Aktywni 30 dni"
               value={PL_NUMBER.format(players.active30d)}
               sub="po ostatniej grze"
-              accent="text-emerald-400"
+              accent="text-success"
             />
             <MetricCard
               icon={UserPlus}
               label="Nowi 30 dni"
               value={PL_NUMBER.format(players.new30d)}
               sub={`w tym ${PL_NUMBER.format(players.new7d)} w 7 dni`}
-              accent="text-orange-400"
+              accent="text-accent"
             />
             <MetricCard
               icon={TrendingUp}
               label="Suma XP"
               value={formatCompactXp(players.totalXp)}
               sub={`średnio ${PL_NUMBER.format(players.avgXp)} / gracza`}
-              accent="text-orange-400"
+              accent="text-accent"
             />
             <MetricCard
               icon={Sparkles}
               label="Rekord XP"
               value={formatCompactXp(players.maxXp)}
               sub="najlepszy gracz"
-              accent="text-amber-400"
+              accent="text-accent"
             />
             <MetricCard
               icon={Gamepad2}
@@ -168,7 +168,7 @@ export function AnalitykaPageClient() {
               label="Najdłuższa seria"
               value={`${PL_NUMBER.format(players.maxStreak)} dni`}
               sub={`${PL_NUMBER.format(players.streak7Plus)} graczy ≥ 7 dni`}
-              accent="text-orange-400"
+              accent="text-accent"
             />
           </div>
         ) : (
@@ -188,10 +188,10 @@ export function AnalitykaPageClient() {
               label: `Poziom ${bucket.level}`,
               count: bucket.count,
             }))}
-            gradient="from-orange-500 to-orange-500"
+            gradient="from-accent to-accent"
             emptyLabel="Brak danych o poziomach"
           />
-          <p className="mt-3 text-xs text-zinc-500">
+          <p className="mt-3 text-xs text-muted">
             Poziom liczony z całkowitego XP (500 XP = 1 poziom). Średnia seria
             aktywności: {PL_NUMBER.format(players.avgStreak)} dni.
           </p>
@@ -206,20 +206,20 @@ export function AnalitykaPageClient() {
             label="Arkusze"
             value={content.arkusze != null ? PL_NUMBER.format(content.arkusze) : "—"}
             sub="arkuszy egzaminacyjnych"
-            accent="text-orange-400"           />
+            accent="text-accent"           />
           <MetricCard
             icon={Layers}
             label="Zadania (arkusze)"
             value={content.zadania != null ? PL_NUMBER.format(content.zadania) : "—"}
             sub="zadań z rozwiązaniami"
-            accent="text-orange-400"
+            accent="text-accent"
           />
           <MetricCard
             icon={Gamepad2}
             label="Zadania treningowe"
             value={content.tasks != null ? PL_NUMBER.format(content.tasks) : "—"}
             sub="w arenie treningowej"
-            accent="text-orange-400"
+            accent="text-accent"
           />
           <MetricCard
             icon={BookOpen}
@@ -230,44 +230,44 @@ export function AnalitykaPageClient() {
                 : "—"
             }
             sub="materiałów teoretycznych"
-            accent="text-emerald-400"
+            accent="text-success"
           />
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-2">
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wide text-zinc-400">
+            <h3 className="text-sm font-bold uppercase tracking-wide text-muted">
               Zadania wg działu
             </h3>
             <div className="mt-3">
               <BarList
                 items={content.zadaniaByDzial}
-                gradient="from-orange-500 to-pink-500"
+                gradient="from-accent to-accent-soft"
                 emptyLabel="Brak zadań w bazie arkuszy"
               />
             </div>
           </div>
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wide text-zinc-400">
+              <h3 className="text-sm font-bold uppercase tracking-wide text-muted">
                 Zadania treningowe wg egzaminu
               </h3>
               <div className="mt-3">
                 <BarList
                   items={content.tasksByExam}
-                  gradient="from-orange-500 to-orange-600"
+                  gradient="from-accent to-accent-strong"
                   emptyLabel="Brak zadań treningowych"
                 />
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wide text-zinc-400">
+              <h3 className="text-sm font-bold uppercase tracking-wide text-muted">
                 Materiały wg egzaminu
               </h3>
               <div className="mt-3">
                 <BarList
                   items={content.materialsByExam}
-                  gradient="from-emerald-500 to-orange-500"
+                  gradient="from-success to-accent"
                   emptyLabel="Brak materiałów"
                 />
               </div>
@@ -281,16 +281,16 @@ export function AnalitykaPageClient() {
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5"
+          className="mt-8 rounded-2xl border border-surface-border bg-white/5 p-5"
         >
-          <h2 className="flex items-center gap-2 text-sm font-bold text-zinc-300">
-            <Info size={16} className="text-zinc-400" />
+          <h2 className="flex items-center gap-2 text-sm font-bold text-foreground">
+            <Info size={16} className="text-muted" />
             Czego nie liczymy i dlaczego
           </h2>
-          <ul className="mt-3 space-y-2 text-xs leading-relaxed text-zinc-500">
+          <ul className="mt-3 space-y-2 text-xs leading-relaxed text-muted">
             {notes.map((note, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-zinc-600">•</span>
+                <span className="text-muted">•</span>
                 <span>{note}</span>
               </li>
             ))}
@@ -298,7 +298,7 @@ export function AnalitykaPageClient() {
         </motion.div>
       )}
 
-      <p className="mt-6 text-center text-xs text-zinc-600">
+      <p className="mt-6 text-center text-xs text-muted">
         Wygenerowano:{" "}
         {new Date(generatedAt).toLocaleString("pl-PL")}
       </p>

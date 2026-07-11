@@ -175,7 +175,7 @@ export function AdminPageClient() {
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <Link
         href="/baza-zadan"
-        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
+        className="text-sm font-semibold text-muted hover:text-accent"       >
         ← Baza zadań
       </Link>
 
@@ -185,12 +185,12 @@ export function AdminPageClient() {
           Administratora
         </span>
       </h1>
-      <p className="mt-2 text-zinc-400">
+      <p className="mt-2 text-muted">
         Dodawaj arkusze maturalne i zadania z rozwiązaniem krok po kroku. Treść
         trafia wyłącznie do naszej bazy — uczniowie nie są przekierowywani na
         zewnętrzne strony.
       </p>
-      <p className="mt-2 text-sm text-zinc-500">
+      <p className="mt-2 text-sm text-muted">
         Możesz oprzeć się na materiałach z innych serwisów przy pisaniu, ale
         publikujemy tylko własne opracowanie w Supabase.
       </p>
@@ -198,13 +198,13 @@ export function AdminPageClient() {
       <div className="mt-6 flex flex-wrap gap-3">
         <Link
           href="/admin/materialy"
-          className="inline-flex rounded-2xl border border-orange-500/35 bg-orange-500/10 px-5 py-2.5 text-sm font-bold text-orange-400 transition hover:bg-orange-500/20"
+          className="inline-flex rounded-2xl border border-accent/35 bg-accent/10 px-5 py-2.5 text-sm font-bold text-accent transition hover:bg-accent/20"
         >
           Materiały teoretyczne →
         </Link>
         <Link
           href="/admin/analityka"
-          className="inline-flex rounded-2xl border border-orange-500/35 bg-orange-500/10 px-5 py-2.5 text-sm font-bold text-orange-200 transition hover:bg-orange-500/20"
+          className="inline-flex rounded-2xl border border-accent/35 bg-accent/10 px-5 py-2.5 text-sm font-bold text-accent transition hover:bg-accent/20"
         >
           Analityka platformy →
         </Link>
@@ -216,7 +216,7 @@ export function AdminPageClient() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="mt-6 rounded-2xl border border-emerald-500/40 bg-emerald-500/15 px-4 py-3 text-center font-bold text-emerald-200"
+            className="mt-6 rounded-2xl border border-success/40 bg-success/15 px-4 py-3 text-center font-bold text-success"
           >
             ✓ {toast}
           </motion.div>
@@ -231,15 +231,15 @@ export function AdminPageClient() {
 
       <form
         onSubmit={(e) => void handleSubmit(e)}
-        className="mt-8 space-y-6 rounded-3xl border border-white/10 bg-zinc-900/80 p-6 sm:p-8"
+        className="mt-8 space-y-6 rounded-3xl border border-surface-border bg-surface/80 p-6 sm:p-8"
       >
         <div>
-          <label className="text-sm font-bold text-zinc-300">Arkusz</label>
+          <label className="text-sm font-bold text-foreground">Arkusz</label>
           <select
             value={arkuszMode}
             onChange={(e) => setArkuszMode(e.target.value)}
             disabled={loadingArkusze}
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
           >
             <option value={NEW_ARKUSZ}>➕ Dodaj nowy arkusz…</option>
             {arkusze.map((a) => (
@@ -249,9 +249,9 @@ export function AdminPageClient() {
             ))}
           </select>
           {arkuszMode === NEW_ARKUSZ && (
-            <p className="mt-2 text-sm text-zinc-500">
+            <p className="mt-2 text-sm text-muted">
               Nowy arkusz:{" "}
-              <span className="font-semibold text-zinc-300">
+              <span className="font-semibold text-foreground">
                 {formatArkuszLabel({ nazwa: "", miesiac, rok })}
               </span>
             </p>
@@ -259,8 +259,8 @@ export function AdminPageClient() {
         </div>
 
         <div>
-          <span className="text-sm font-bold text-zinc-300">Typ egzaminu</span>
-          <div className="mt-2 flex rounded-xl border border-white/10 bg-zinc-950 p-1">
+          <span className="text-sm font-bold text-foreground">Typ egzaminu</span>
+          <div className="mt-2 flex rounded-xl border border-surface-border bg-background p-1">
             {(Object.keys(TYP_EGZAMINU_LABELS) as TypEgzaminu[]).map((t) => (
               <button
                 key={t}
@@ -269,9 +269,9 @@ export function AdminPageClient() {
                 className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-colors ${
                   typ === t
                     ? t === "matura"
-                      ? "bg-orange-600 text-white"
-                      : "bg-orange-500 text-white"
-                    : "text-zinc-400 hover:text-white"
+                      ? "bg-accent-strong text-white"
+                      : "bg-accent text-white"
+                    : "text-muted hover:text-white"
                 }`}
               >
                 {TYP_EGZAMINU_LABELS[t]}
@@ -285,11 +285,11 @@ export function AdminPageClient() {
         >
           {arkuszMode === NEW_ARKUSZ && (
             <div>
-              <label className="text-sm font-bold text-zinc-300">Miesiąc</label>
+              <label className="text-sm font-bold text-foreground">Miesiąc</label>
               <select
                 value={miesiac}
                 onChange={(e) => setMiesiac(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
               >
                 {MIESIACE_PL.map((label, i) => (
                   <option key={label} value={i + 1}>
@@ -300,7 +300,7 @@ export function AdminPageClient() {
             </div>
           )}
           <div>
-            <label className="text-sm font-bold text-zinc-300">Rok</label>
+            <label className="text-sm font-bold text-foreground">Rok</label>
             <input
               type="number"
               min={2000}
@@ -308,27 +308,27 @@ export function AdminPageClient() {
               value={rok}
               onChange={(e) => setRok(Number(e.target.value))}
               disabled={arkuszMode !== NEW_ARKUSZ}
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50 disabled:opacity-50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50 disabled:opacity-50"
             />
           </div>
           <div>
-            <label className="text-sm font-bold text-zinc-300">Numer zadania</label>
+            <label className="text-sm font-bold text-foreground">Numer zadania</label>
             <input
               type="number"
               min={1}
               value={numerZadania}
               onChange={(e) => setNumerZadania(Number(e.target.value))}
-              className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
             />
           </div>
         </div>
 
         <div>
-          <label className="text-sm font-bold text-zinc-300">Dział</label>
+          <label className="text-sm font-bold text-foreground">Dział</label>
           <select
             value={dzial}
             onChange={(e) => setDzial(e.target.value)}
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
           >
             {DZIALY_MATEMATYKI.map((d) => (
               <option key={d} value={d}>
@@ -339,19 +339,19 @@ export function AdminPageClient() {
         </div>
 
         <div>
-          <label className="text-sm font-bold text-zinc-300">Treść zadania</label>
+          <label className="text-sm font-bold text-foreground">Treść zadania</label>
           <textarea
             value={tresc}
             onChange={(e) => setTresc(e.target.value)}
             required
             rows={5}
             placeholder="Wpisz pełną treść zadania…"
-            className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-orange-500/50"
+            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
           />
         </div>
 
         <div>
-          <label className="text-sm font-bold text-zinc-300">
+          <label className="text-sm font-bold text-foreground">
             Rozwiązanie krok po kroku
           </label>
           <motion.button
@@ -360,7 +360,7 @@ export function AdminPageClient() {
             disabled={generatingAi || saving}
             whileHover={generatingAi ? undefined : { scale: 1.02 }}
             whileTap={generatingAi ? undefined : { scale: 0.97 }}
-            className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-orange-400/40 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-500 px-4 py-3.5 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
+            className="btn-chunky mt-3 flex w-full items-center justify-center gap-2 px-4 py-3.5 text-sm disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
           >
             {generatingAi
               ? "Mielenie danych... 🧠"
@@ -372,7 +372,7 @@ export function AdminPageClient() {
             required
             rows={8}
             placeholder={"Krok 1: …\nKrok 2: …\nOdpowiedź: …"}
-            className="mt-2 w-full resize-y rounded-xl border border-white/10 bg-zinc-950 px-4 py-3 text-white outline-none focus:border-emerald-500/50"
+            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-success/50"
           />
         </div>
 
@@ -380,24 +380,24 @@ export function AdminPageClient() {
           <button
             type="submit"
             disabled={saving}
-            className="flex-1 rounded-2xl bg-brand-gradient py-4 text-base font-black text-white shadow-lg shadow-orange-500/30 transition active:scale-[0.98] disabled:opacity-60"
+            className="btn-chunky flex-1 py-4 text-base disabled:opacity-60"
           >
             {saving ? "Zapisywanie…" : "Zapisz zadanie"}
           </button>
           <button
             type="button"
             onClick={resetFormFields}
-            className="rounded-2xl border border-white/15 px-6 py-4 text-sm font-bold text-zinc-300 hover:bg-white/5"
+            className="rounded-2xl border border-surface-border px-6 py-4 text-sm font-bold text-foreground hover:bg-white/5"
           >
             Wyczyść pola
           </button>
         </div>
       </form>
 
-      <p className="mt-6 text-center text-xs text-zinc-600">
+      <p className="mt-6 text-center text-xs text-muted">
         Migracje:{" "}
-        <code className="text-zinc-500">init_baza_zadan.sql</code>,{" "}
-        <code className="text-zinc-500">add_arkusz_miesiac.sql</code>
+        <code className="text-muted">init_baza_zadan.sql</code>,{" "}
+        <code className="text-muted">add_arkusz_miesiac.sql</code>
       </p>
     </div>
   );

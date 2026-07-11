@@ -280,7 +280,7 @@ export function ArkuszeCkeCatalog({
           <p className="text-lg font-black text-white">Brak arkuszy w bazie</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
             Uruchom import CKE (<code className="text-amber-400">npm run seed:cke-matura</code>)
-            lub dodaj arkusze w panelu admin.
+            lub dodaj arkusze skryptem seed.
           </p>
         </div>
       )}
@@ -299,7 +299,7 @@ export function ArkuszeCkeCatalog({
       {showTreningSection && treningMaturaGroups.length > 0 && (
         <YearSection
           title="Matura — arkusze treningowe"
-          subtitle="Arkusze z aplikacji i panelu admin — oddzielnie od oficjalnych sesji CKE"
+          subtitle="Arkusze z aplikacji — oddzielnie od oficjalnych sesji CKE"
           groups={treningMaturaGroups}
           accent="cyan"
           icon={GraduationCap}

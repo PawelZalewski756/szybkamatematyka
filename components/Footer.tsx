@@ -26,18 +26,6 @@ export function Footer() {
           >
             Baza zadań
           </Link>
-          <Link
-            href="/admin"
-            className="text-muted transition-colors hover:text-foreground"
-          >
-            Panel Admina
-          </Link>
-          <Link
-            href="/admin/materialy"
-            className="text-muted transition-colors hover:text-foreground"
-          >
-            Materiały
-          </Link>
         </nav>
       </div>
     </footer>

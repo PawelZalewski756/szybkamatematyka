@@ -5,7 +5,7 @@ type MetricCardProps = {
   label: string;
   value: string;
   sub?: string;
-  /** Klasa koloru ikony, np. "text-orange-400". */
+  /** Klasa koloru ikony, np. "text-accent". */
   accent?: string;
 };
 
@@ -18,18 +18,18 @@ export function MetricCard({
   label,
   value,
   sub,
-  accent = "text-orange-400",
+  accent = "text-accent",
 }: MetricCardProps) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md">
-      <div className="flex items-center gap-2 text-zinc-400">
+    <div className="rounded-2xl border border-surface-border bg-white/5 p-5 backdrop-blur-md">
+      <div className="flex items-center gap-2 text-muted">
         <Icon size={16} className={accent} />
         <span className="text-xs font-bold uppercase tracking-wide">
           {label}
         </span>
       </div>
       <p className="mt-2 text-2xl font-black text-white">{value}</p>
-      {sub && <p className="mt-1 text-xs text-zinc-500">{sub}</p>}
+      {sub && <p className="mt-1 text-xs text-muted">{sub}</p>}
     </div>
   );
 }

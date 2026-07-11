@@ -22,7 +22,6 @@ export const MOBILE_WIECEJ_PREFIXES = [
   "/rankingi",
   "/osiagniecia",
   "/cennik",
-  "/admin",
 ] as const;
 
 function isTreningRoute(pathname: string): boolean {

@@ -18,9 +18,6 @@ export function HomeGamingFooter() {
           <Link href="/baza-zadan" className="link-plain text-xs">
             Baza zadań
           </Link>
-          <Link href="/admin" className="link-plain text-xs">
-            Panel Admina
-          </Link>
         </nav>
       </div>
     </footer>

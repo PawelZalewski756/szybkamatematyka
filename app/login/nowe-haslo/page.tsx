@@ -124,7 +124,7 @@ export default function NoweHasloPage() {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-white/[0.08] bg-[#141c2b]/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
+        className="rounded-3xl border border-surface-border bg-surface/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
       >
         <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
           Nowe hasło
@@ -132,12 +132,12 @@ export default function NoweHasloPage() {
         <h1 className="mt-2 text-center text-2xl font-black text-white sm:text-3xl">
           Ustaw nowe hasło
         </h1>
-        <p className="mt-3 text-center text-sm text-zinc-400">
+        <p className="mt-3 text-center text-sm text-muted">
           Wybierz hasło o długości co najmniej 6 znaków.
         </p>
 
         {checking ? (
-          <p className="mt-8 text-center text-sm text-zinc-500">Weryfikuję link…</p>
+          <p className="mt-8 text-center text-sm text-muted">Weryfikuję link…</p>
         ) : canReset ? (
           <form
             className="mt-8 flex flex-col gap-4"
@@ -148,7 +148,7 @@ export default function NoweHasloPage() {
             }}
           >
             <label className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+              <span className="text-xs font-bold uppercase tracking-wide text-muted">
                 Nowe hasło
               </span>
               <input
@@ -164,7 +164,7 @@ export default function NoweHasloPage() {
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+              <span className="text-xs font-bold uppercase tracking-wide text-muted">
                 Powtórz hasło
               </span>
               <input
@@ -196,14 +196,14 @@ export default function NoweHasloPage() {
             {message && <AuthAlert message={message} isError={isError} />}
             <Link
               href="/login/zapomniane-haslo"
-              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-sm font-bold text-white transition hover:border-accent/30"
+              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-sm font-bold text-white transition hover:border-accent/30"
             >
               Poproś o nowy link
             </Link>
           </div>
         )}
 
-        <p className="mt-6 text-center text-sm text-zinc-500">
+        <p className="mt-6 text-center text-sm text-muted">
           <Link
             href="/login"
             className="font-semibold text-accent transition-colors hover:text-accent-strong"

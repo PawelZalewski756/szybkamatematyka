@@ -5,7 +5,7 @@ type BarItem = {
 
 type BarListProps = {
   items: BarItem[];
-  /** Klasa gradientu paska, np. "from-orange-500 to-orange-". */
+  /** Klasa gradientu paska, np. "from-accent to-orange-". */
   gradient?: string;
   /** Maksymalna liczba pozycji (reszta zwijana do „pozostałe”). */
   maxItems?: number;
@@ -21,12 +21,12 @@ const PL_NUMBER = new Intl.NumberFormat("pl-PL");
  */
 export function BarList({
   items,
-  gradient = "from-orange-500 to-orange-600",
+  gradient = "from-accent to-accent-strong",
   maxItems = 12,
   emptyLabel = "Brak danych",
 }: BarListProps) {
   if (items.length === 0) {
-    return <p className="text-sm text-zinc-500">{emptyLabel}</p>;
+    return <p className="text-sm text-muted">{emptyLabel}</p>;
   }
 
   const visible = items.slice(0, maxItems);
@@ -49,10 +49,10 @@ export function BarList({
         return (
           <li key={item.label}>
             <div className="flex items-center justify-between gap-3 text-sm">
-              <span className="truncate font-semibold text-zinc-300">
+              <span className="truncate font-semibold text-foreground">
                 {item.label}
               </span>
-              <span className="shrink-0 tabular-nums font-bold text-zinc-400">
+              <span className="shrink-0 tabular-nums font-bold text-muted">
                 {PL_NUMBER.format(item.count)}
               </span>
             </div>

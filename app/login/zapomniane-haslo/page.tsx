@@ -69,7 +69,7 @@ export default function ZapomnianeHasloPage() {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-white/[0.08] bg-[#141c2b]/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
+        className="rounded-3xl border border-surface-border bg-surface/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
       >
         <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
           Odzyskiwanie hasła
@@ -77,7 +77,7 @@ export default function ZapomnianeHasloPage() {
         <h1 className="mt-2 text-center text-2xl font-black text-white sm:text-3xl">
           Zapomniałeś hasła?
         </h1>
-        <p className="mt-3 text-center text-sm text-zinc-400">
+        <p className="mt-3 text-center text-sm text-muted">
           Podaj e-mail konta — wyślemy link do ustawienia nowego hasła.
         </p>
 
@@ -90,7 +90,7 @@ export default function ZapomnianeHasloPage() {
           }}
         >
           <label className="flex flex-col gap-2">
-            <span className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+            <span className="text-xs font-bold uppercase tracking-wide text-muted">
               Email
             </span>
             <input
@@ -118,7 +118,7 @@ export default function ZapomnianeHasloPage() {
           </motion.button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-zinc-500">
+        <p className="mt-6 text-center text-sm text-muted">
           <Link
             href="/login"
             className="font-semibold text-accent transition-colors hover:text-accent-strong"
@@ -128,10 +128,10 @@ export default function ZapomnianeHasloPage() {
         </p>
       </motion.div>
 
-      <p className="mt-6 text-center text-sm text-zinc-500">
+      <p className="mt-6 text-center text-sm text-muted">
         <Link
           href="/"
-          className="font-semibold text-zinc-400 transition-colors hover:text-accent"
+          className="font-semibold text-muted transition-colors hover:text-accent"
         >
           Strona główna
         </Link>

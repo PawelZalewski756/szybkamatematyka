@@ -1,0 +1,88 @@
+"use client";
+
+import { GamingBackground } from "@/components/gaming/GamingBackground";
+import { getSupabaseOrNull, isSupabaseConfigured } from "@/lib/supabase";
+import { isAdminEmail, isAdminWhitelistConfigured } from "@/lib/supabase/admin";
+import Link from "next/link";
+import { useEffect, useState, type ReactNode } from "react";
+
+type GateState = "checking" | "allowed" | "denied";
+
+/**
+ * Gate panelu administratora — bez publicznych linków w UI.
+ * Nieuprawnieni widzą zwykły 404 (bez podpowiedzi, że istnieje /admin).
+ */
+export function AdminGate({ children }: { children: ReactNode }) {
+  const [state, setState] = useState<GateState>("checking");
+
+  useEffect(() => {
+    if (!isSupabaseConfigured()) {
+      setState("denied");
+      return;
+    }
+
+    const supabase = getSupabaseOrNull();
+    if (!supabase) {
+      setState("denied");
+      return;
+    }
+
+    let active = true;
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (!active) return;
+      const user = data.user;
+
+      if (!user) {
+        setState("denied");
+        return;
+      }
+
+      if (isAdminWhitelistConfigured() && !isAdminEmail(user.email)) {
+        setState("denied");
+        return;
+      }
+
+      setState("allowed");
+    });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  if (state === "checking") {
+    return (
+      <div className="flex flex-1 items-center justify-center px-4 py-24 text-center">
+        <p className="text-sm font-semibold text-muted">Ładowanie…</p>
+      </div>
+    );
+  }
+
+  if (state === "denied") {
+    return (
+      <div className="relative flex min-h-0 flex-1 flex-col bg-background">
+        <GamingBackground />
+        <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-20 text-center sm:py-28">
+          <p className="text-sm font-black uppercase tracking-[0.3em] text-accent/90">
+            Błąd 404
+          </p>
+          <h1 className="mt-3 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+            Tej strony nie ma na mapie
+          </h1>
+          <p className="mx-auto mt-4 max-w-md text-base text-muted">
+            Strona, której szukasz, nie istnieje lub została przeniesiona.
+          </p>
+          <Link
+            href="/"
+            className="mt-8 inline-flex items-center rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-bold text-foreground transition hover:border-accent/30 hover:bg-accent/10 hover:text-accent"
+          >
+            Strona główna
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+}
