@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Platforma do nauki matematyki: arkusze CKE, baza zadań, trening i minigry.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0a0f14",
-    theme_color: "#0a0f14",
+    background_color: "#0f0e0b",
+    theme_color: "#0f0e0b",
     lang: "pl",
     dir: "ltr",
     icons: [

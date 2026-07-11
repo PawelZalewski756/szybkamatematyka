@@ -53,7 +53,7 @@ export function BazaZadanTasksPanel() {
               setVisibleCount(PAGE_SIZE);
             }}
             placeholder="Tytuł lub treść zadania…"
-            className="mt-1.5 w-full rounded-xl border border-white/10 bg-[#111820] px-4 py-2.5 text-sm text-white outline-none placeholder:text-slate-600 focus:border-teal-500/40"
+            className="mt-1.5 w-full rounded-xl border border-white/10 bg-[#111820] px-4 py-2.5 text-sm text-white outline-none placeholder:text-slate-600 focus:border-accent/40"
           />
         </div>
 
@@ -69,7 +69,7 @@ export function BazaZadanTasksPanel() {
                 setCategory(e.target.value as TaskCategory | "all");
                 setVisibleCount(PAGE_SIZE);
               }}
-              className="mt-1.5 w-full min-w-[9rem] cursor-pointer rounded-xl border border-white/10 bg-[#111820] px-3 py-2.5 text-sm text-white outline-none focus:border-teal-500/40"
+              className="mt-1.5 w-full min-w-[9rem] cursor-pointer rounded-xl border border-white/10 bg-[#111820] px-3 py-2.5 text-sm text-white outline-none focus:border-accent/40"
             >
               <option value="all">Wszystkie działy</option>
               {ALL_CATEGORIES.map((c) => (
@@ -91,7 +91,7 @@ export function BazaZadanTasksPanel() {
                 setDifficulty(e.target.value as TaskDifficulty | "all");
                 setVisibleCount(PAGE_SIZE);
               }}
-              className="mt-1.5 w-full min-w-[8rem] cursor-pointer rounded-xl border border-white/10 bg-[#111820] px-3 py-2.5 text-sm text-white outline-none focus:border-teal-500/40"
+              className="mt-1.5 w-full min-w-[8rem] cursor-pointer rounded-xl border border-white/10 bg-[#111820] px-3 py-2.5 text-sm text-white outline-none focus:border-accent/40"
             >
               <option value="all">Dowolna</option>
               {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
@@ -131,7 +131,7 @@ export function BazaZadanTasksPanel() {
               <button
                 type="button"
                 onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
-                className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-slate-300 transition hover:border-teal-500/30 hover:bg-teal-500/10 hover:text-white"
+                className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-slate-300 transition hover:border-accent/30 hover:bg-accent/10 hover:text-white"
               >
                 Pokaż więcej ({tasks.length - visibleCount} pozostało)
               </button>

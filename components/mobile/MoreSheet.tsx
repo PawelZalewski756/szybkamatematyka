@@ -41,7 +41,7 @@ function SheetLink({
       aria-current={active ? "page" : undefined}
       className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
         active
-          ? "bg-teal-500/12 text-teal-200"
+          ? "bg-accent/12 text-accent"
           : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
       }`}
     >

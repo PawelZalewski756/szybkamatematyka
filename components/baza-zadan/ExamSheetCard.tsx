@@ -10,12 +10,12 @@ export function ExamSheetCard({ sheet }: ExamSheetCardProps) {
   return (
     <Link
       href={`/baza-zadan/arkusz/${sheet.id}`}
-      className="group flex h-full flex-col rounded-2xl border border-white/[0.08] bg-[#111820]/80 p-5 transition hover:border-teal-500/25 hover:bg-[#141c2b]"
+      className="group flex h-full flex-col rounded-2xl border border-white/[0.08] bg-[#111820]/80 p-5 transition hover:border-accent/25 hover:bg-[#141c2b]"
     >
       <span className="text-2xl" aria-hidden>
         {sheet.emoji}
       </span>
-      <h3 className="mt-3 text-base font-bold text-white group-hover:text-teal-200">
+      <h3 className="mt-3 text-base font-bold text-white group-hover:text-accent">
         {sheet.title}
       </h3>
       <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-500">

@@ -14,13 +14,14 @@ export type LogoMarkProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
-const TEAL = "#14b8a6";
-const TEAL_LIGHT = "#5eead4";
-const SLATE = "#94a3b8";
-const WHITE = "#f8fafc";
-const BG = "#0a0f14";
+const TEAL = "#f4b740";
+const TEAL_LIGHT = "#ffd479";
+const SLATE = "#a79d8a";
+const WHITE = "#f6f1e7";
+const BG = "#1a1712";
+const ON_ACCENT = "#1a1200";
 
-/** Znak marki — stoper z „=” (szybki licznik). Wyraźny na ciemnym tle. */
+/** Znak marki — bursztynowy kafelek z pierwiastkiem. Czytelny „matematyczny” symbol. */
 export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
   return (
     <svg
@@ -32,26 +33,25 @@ export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps)
       aria-hidden
       {...props}
     >
-      <rect x="13.5" y="1.5" width="5" height="3.5" rx="1.75" fill={TEAL} fillOpacity="0.9" />
-      <path
-        d="M16 5.25V7.75"
+      <rect x="1" y="1" width="30" height="30" rx="8" fill={TEAL} />
+      <rect
+        x="1"
+        y="1"
+        width="30"
+        height="30"
+        rx="8"
+        fill="none"
         stroke={TEAL_LIGHT}
-        strokeOpacity="0.7"
-        strokeWidth="1.5"
+        strokeOpacity="0.5"
+        strokeWidth="1"
+      />
+      <path
+        d="M6.5 16.5 L10 18 L13.5 24 L21 9 H26"
+        stroke={ON_ACCENT}
+        strokeWidth="2.6"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <circle
-        cx="16"
-        cy="18.5"
-        r="11.5"
-        fill="#121a24"
-        stroke={TEAL}
-        strokeOpacity="0.75"
-        strokeWidth="2"
-      />
-      <circle cx="16" cy="8.25" r="1" fill={TEAL_LIGHT} fillOpacity="0.85" />
-      <rect x="9.5" y="14.25" width="13" height="2.5" rx="1.25" fill={SLATE} />
-      <rect x="9.5" y="19.25" width="13" height="3" rx="1.5" fill={SLATE} />
     </svg>
   );
 }

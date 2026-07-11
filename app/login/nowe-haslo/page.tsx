@@ -126,7 +126,7 @@ export default function NoweHasloPage() {
         animate={{ opacity: 1, y: 0 }}
         className="rounded-3xl border border-white/[0.08] bg-[#141c2b]/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
       >
-        <p className="text-center text-sm font-bold uppercase tracking-widest text-teal-400/90">
+        <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
           Nowe hasło
         </p>
         <h1 className="mt-2 text-center text-2xl font-black text-white sm:text-3xl">
@@ -184,7 +184,7 @@ export default function NoweHasloPage() {
             <motion.button
               type="submit"
               disabled={loading || done}
-              className="mt-2 flex min-h-[52px] items-center justify-center rounded-2xl bg-brand-gradient text-lg font-black text-white shadow-lg shadow-teal-950/30 disabled:opacity-60"
+              className="mt-2 flex min-h-[52px] items-center justify-center rounded-2xl btn-primary text-lg disabled:opacity-60"
               whileHover={{ scale: loading || done ? 1 : 1.02 }}
               whileTap={{ scale: loading || done ? 1 : 0.98 }}
             >
@@ -196,7 +196,7 @@ export default function NoweHasloPage() {
             {message && <AuthAlert message={message} isError={isError} />}
             <Link
               href="/login/zapomniane-haslo"
-              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-sm font-bold text-white transition hover:border-teal-500/30"
+              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-white/15 bg-zinc-950 text-sm font-bold text-white transition hover:border-accent/30"
             >
               Poproś o nowy link
             </Link>
@@ -206,7 +206,7 @@ export default function NoweHasloPage() {
         <p className="mt-6 text-center text-sm text-zinc-500">
           <Link
             href="/login"
-            className="font-semibold text-teal-400 transition-colors hover:text-teal-300"
+            className="font-semibold text-accent transition-colors hover:text-accent-strong"
           >
             ← Wróć do logowania
           </Link>

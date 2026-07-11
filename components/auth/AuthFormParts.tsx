@@ -1,5 +1,5 @@
 export const AUTH_INPUT_CLASS =
-  "rounded-2xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-white outline-none transition-shadow placeholder:text-zinc-600 focus:ring-4 focus:border-teal-500/50 focus:ring-teal-500/20";
+  "rounded-2xl border border-white/10 bg-zinc-950 px-4 py-3.5 text-white outline-none transition-shadow placeholder:text-zinc-600 focus:ring-4 focus:border-accent/50 focus:ring-accent/20";
 
 export function AuthAlert({
   message,

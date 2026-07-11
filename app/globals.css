@@ -1,19 +1,26 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* Ciemny, neutralny motyw — wysoki kontrast, bez „AI teal/gradient”. */
+/* Ciepły, atramentowy dark z bursztynowym akcentem — taktylny, czytelny, nie „AI-flat”. */
 :root {
-  --background: #090909;
-  --foreground: #ededed;
-  --muted: #9a9a9a;
-  --brand: #ededed;
+  --background: #0f0e0b;
+  --foreground: #f6f1e7;
+  --muted: #a79d8a;
+  --brand: #f6f1e7;
   --brand-light: #ffffff;
   --brand-dark: #ffffff;
-  --surface: #121212;
-  --surface-hover: #1a1a1a;
-  --surface-border: #2a2a2a;
+  --surface: #1a1712;
+  --surface-hover: #241f18;
+  --surface-border: #342e24;
   --success: #7dcea0;
-  --danger: #e57373;
+  --danger: #e88a7d;
+
+  /* Akcent — ciepły bursztyn (jak lampka na biurku), nie teal/neon. */
+  --accent: #f4b740;
+  --accent-strong: #e0a022;
+  --accent-press: #b47c14;
+  --accent-soft: #2a2113;
+  --on-accent: #1a1200;
 }
 
 @theme inline {
@@ -28,6 +35,10 @@
   --color-surface-border: var(--surface-border);
   --color-success: var(--success);
   --color-danger: var(--danger);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
 }
 
@@ -105,15 +116,103 @@ body {
   }
 
   .btn-primary {
-    border-radius: 0.375rem;
-    background-color: var(--foreground);
-    color: var(--background);
-    font-weight: 600;
-    transition: opacity 0.15s;
+    border-radius: 0.5rem;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    transition: background-color 0.15s;
   }
 
   .btn-primary:hover {
-    opacity: 0.9;
+    background-color: var(--accent-strong);
+  }
+
+  /* Taktylny przycisk „do wciśnięcia” — czytelna klikalność, nie płaska. */
+  .btn-chunky {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.9rem;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    box-shadow: 0 4px 0 0 var(--accent-press);
+    transition:
+      transform 0.06s ease,
+      box-shadow 0.06s ease,
+      background-color 0.15s ease;
+  }
+
+  .btn-chunky:hover {
+    background-color: var(--accent-strong);
+  }
+
+  .btn-chunky:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 0 var(--accent-press);
+  }
+
+  /* Wariant neutralny (sekundarny) — ten sam kształt, spokojniejszy kolor. */
+  .btn-chunky-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.9rem;
+    background-color: var(--surface);
+    color: var(--foreground);
+    font-weight: 700;
+    border: 1px solid var(--surface-border);
+    box-shadow: 0 4px 0 0 var(--surface-border);
+    transition:
+      transform 0.06s ease,
+      box-shadow 0.06s ease,
+      background-color 0.15s ease;
+  }
+
+  .btn-chunky-soft:hover {
+    background-color: var(--surface-hover);
+  }
+
+  .btn-chunky-soft:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 0 var(--surface-border);
+  }
+
+  /* Karta „uniesiona” — czytelnie klikalna, z lekkim cieniem i podniesieniem. */
+  .card-raised {
+    border-radius: 1rem;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    box-shadow: 0 3px 0 0 var(--surface-border);
+    transition:
+      transform 0.1s ease,
+      box-shadow 0.1s ease,
+      background-color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .card-raised:hover {
+    background: var(--surface-hover);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--surface-border));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 0 var(--surface-border);
+  }
+
+  .card-raised:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 0 var(--surface-border);
+  }
+
+  /* Kolorowy „żeton” ikony w kartach. */
+  .icon-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background: var(--accent-soft);
+    color: var(--accent);
   }
 
   .btn-ghost {
@@ -156,9 +255,12 @@ body {
     color: var(--brand-light);
   }
 
-  .tab-active {
-    background: var(--surface-hover);
-    color: var(--foreground);
+  .home-grid-bg {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--surface-border) 50%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--surface-border) 50%, transparent) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 20%, transparent 75%);
   }
 }
 

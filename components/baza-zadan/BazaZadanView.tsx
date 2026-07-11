@@ -71,7 +71,7 @@ export function BazaZadanView({
         <p className="mt-2 text-base text-slate-400">
           Zadania treningowe, oficjalne arkusze CKE i arkusze w aplikacji — dla
           ścieżki{" "}
-          <span className="font-semibold text-teal-400/90">{pathLabel}</span>.
+          <span className="font-semibold text-accent/90">{pathLabel}</span>.
         </p>
       </header>
 
@@ -91,7 +91,7 @@ export function BazaZadanView({
               onClick={() => setTab(id)}
               className={`shrink-0 border-b-2 px-4 py-3 text-sm font-semibold transition ${
                 active
-                  ? "border-teal-400 text-white"
+                  ? "border-accent text-white"
                   : "border-transparent text-slate-500 hover:text-slate-300"
               }`}
             >

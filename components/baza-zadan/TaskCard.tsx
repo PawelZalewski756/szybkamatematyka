@@ -27,7 +27,7 @@ export function TaskCard({ task }: TaskCardProps) {
       className={`flex h-full flex-col rounded-2xl border p-4 transition ${
         solved
           ? "border-emerald-500/25 bg-emerald-500/[0.04] hover:border-emerald-500/40"
-          : "border-white/[0.08] bg-[#111820]/60 hover:border-teal-500/25 hover:bg-[#141c2b]"
+          : "border-white/[0.08] bg-[#111820]/60 hover:border-accent/25 hover:bg-[#141c2b]"
       }`}
     >
       <div className="flex items-start justify-between gap-2">

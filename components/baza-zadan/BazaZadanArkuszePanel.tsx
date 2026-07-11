@@ -142,7 +142,7 @@ export function BazaZadanArkuszePanel({
         </p>
         <Link
           href="/trening/arkusze"
-          className="text-sm font-semibold text-teal-400 hover:text-teal-300"
+          className="text-sm font-semibold text-accent hover:text-accent-strong"
         >
           Widok pełnoekranowy →
         </Link>
@@ -156,7 +156,7 @@ export function BazaZadanArkuszePanel({
             onClick={() => setScope(s.id)}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
               activeScope === s.id
-                ? "bg-teal-500/15 text-teal-200 ring-1 ring-teal-500/25"
+                ? "bg-accent/15 text-accent ring-1 ring-accent/25"
                 : "border border-white/10 text-slate-400 hover:border-white/20 hover:text-white"
             }`}
           >

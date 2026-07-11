@@ -178,9 +178,9 @@ function ExamSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(opt.key)}
-            className={`border-b-2 pb-2 transition ${
+            className={`border-b-2 pb-2 font-medium transition ${
               isActive
-                ? "border-foreground text-foreground"
+                ? "border-accent text-foreground"
                 : "border-transparent text-muted hover:text-foreground"
             }`}
           >
@@ -525,7 +525,7 @@ export default function TreningPage() {
                   onClick={() => setTopicFilter(opt.id)}
                   className={`transition ${
                     active
-                      ? "text-foreground underline underline-offset-4"
+                      ? "font-semibold text-accent underline underline-offset-4"
                       : "text-muted hover:text-foreground"
                   }`}
                 >
@@ -549,7 +549,7 @@ export default function TreningPage() {
                   onClick={() => setTopicSort(opt.id)}
                   className={`transition ${
                     active
-                      ? "text-foreground underline underline-offset-4"
+                      ? "font-semibold text-accent underline underline-offset-4"
                       : "text-muted hover:text-foreground"
                   }`}
                 >

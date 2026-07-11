@@ -438,7 +438,7 @@ export function TaskArena({
               type="checkbox"
               checked={shuffleOrder}
               onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-brand focus:ring-teal-500/40"
+              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-accent focus:ring-accent/40"
             />
             <Shuffle className="h-3.5 w-3.5" aria-hidden />
             Losuj kolejność

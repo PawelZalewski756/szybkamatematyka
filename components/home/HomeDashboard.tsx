@@ -1,79 +1,125 @@
 "use client";
 
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { PlatformStatus } from "@/components/home/PlatformStatus";
 import { learningPathLabel } from "@/lib/learning-path";
+import {
+  ArrowRight,
+  FileText,
+  Flame,
+  Gamepad2,
+  GraduationCap,
+  Library,
+  RotateCcw,
+  Swords,
+  Trophy,
+} from "lucide-react";
 import Link from "next/link";
+
+const CARDS = [
+  {
+    href: "/baza-zadan",
+    label: "Baza zadań",
+    hint: "Zadania z pełnymi rozwiązaniami",
+    icon: Library,
+  },
+  {
+    href: "/trening/arkusze",
+    label: "Arkusze CKE",
+    hint: "Całe arkusze egzaminacyjne",
+    icon: FileText,
+  },
+  {
+    href: "/minigry",
+    label: "Minigry",
+    hint: "Szybkie gry na czas",
+    icon: Gamepad2,
+  },
+  {
+    href: "/powtorki",
+    label: "Powtórki",
+    hint: "Wróć do słabszych tematów",
+    icon: RotateCcw,
+  },
+  {
+    href: "/pojedynki",
+    label: "Pojedynki",
+    hint: "Rywalizuj z innymi",
+    icon: Swords,
+  },
+  {
+    href: "/rankingi",
+    label: "Rankingi",
+    hint: "Sprawdź swoją pozycję",
+    icon: Trophy,
+  },
+] as const;
 
 export function HomeDashboard() {
   const { path } = useLearningPath();
   const pathLabel = learningPathLabel(path);
 
   return (
-    <div className="relative flex flex-1 flex-col">
-      <section className="page-container py-8 sm:py-12">
-        <div className="max-w-xl">
-          <p className="text-sm text-muted">{pathLabel}</p>
-          <h1 className="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
-            Co dziś ćwiczymy?
-          </h1>
-          <p className="mt-3 text-base text-muted">
-            Wybierz wyzwanie albo przejdź do treningu po tematach.
-          </p>
+    <section className="page-container py-8 sm:py-14">
+      <div className="mx-auto w-full max-w-3xl">
+        <span className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+          <GraduationCap className="h-3.5 w-3.5 text-accent" aria-hidden />
+          {pathLabel}
+        </span>
+
+        <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl">
+          Ogarnij matematykę
+          <br />
+          <span className="text-accent">krok po kroku.</span>
+        </h1>
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+          Teoria, zadania z rozwiązaniami i całe arkusze CKE — poukładane po
+          tematach. Uczysz się tego, co faktycznie będzie na egzaminie.
+        </p>
+
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <Link
+            href="/trening"
+            className="btn-chunky w-full px-7 py-4 text-base sm:w-auto"
+          >
+            Zacznij trening
+            <ArrowRight className="h-5 w-5" aria-hidden />
+          </Link>
+          <Link
+            href="/wyzwania"
+            className="btn-chunky-soft w-full px-7 py-4 text-base sm:w-auto"
+          >
+            <Flame className="h-5 w-5 text-accent" aria-hidden />
+            Wyzwanie dnia
+          </Link>
         </div>
 
-        <ul className="mt-8 max-w-xl divide-y divide-surface-border border-y border-surface-border">
-          <li>
+        <h2 className="mt-14 text-sm font-bold uppercase tracking-wide text-muted">
+          Odkryj resztę
+        </h2>
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {CARDS.map(({ href, label, hint, icon: Icon }) => (
             <Link
-              href="/wyzwania"
-              className="flex items-baseline justify-between gap-4 py-4 transition hover:bg-surface-hover"
+              key={href}
+              href={href}
+              className="card-raised group flex items-center gap-4 p-4 sm:p-5"
             >
-              <span>
-                <span className="block font-medium text-foreground">Wyzwanie dnia</span>
-                <span className="mt-0.5 block text-sm text-muted">Jedno zadanie na timer</span>
+              <span className="icon-chip h-11 w-11 shrink-0">
+                <Icon className="h-5 w-5" aria-hidden />
               </span>
-              <span className="text-sm text-muted" aria-hidden>
-                →
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/trening"
-              className="flex items-baseline justify-between gap-4 py-4 transition hover:bg-surface-hover"
-            >
-              <span>
-                <span className="block font-medium text-foreground">Trening po tematach</span>
-                <span className="mt-0.5 block text-sm text-muted">
-                  Teoria i zadania — matura lub egzamin 8-kl.
+              <span className="min-w-0 flex-1">
+                <span className="block text-base font-bold text-foreground">
+                  {label}
                 </span>
+                <span className="mt-0.5 block text-sm text-muted">{hint}</span>
               </span>
-              <span className="text-sm text-muted" aria-hidden>
-                →
-              </span>
+              <ArrowRight
+                className="h-5 w-5 shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent"
+                aria-hidden
+              />
             </Link>
-          </li>
-        </ul>
-
-        <nav className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Na skróty">
-          <Link href="/baza-zadan" className="link-plain">
-            Baza zadań
-          </Link>
-          <Link href="/trening/arkusze" className="link-plain">
-            Arkusze CKE
-          </Link>
-          <Link href="/minigry" className="link-plain">
-            Minigry
-          </Link>
-          <Link href="/powtorki" className="link-plain">
-            Powtórki
-          </Link>
-        </nav>
-
-        <div className="mt-8 max-w-xl border-t border-surface-border pt-4">
-          <PlatformStatus variant="inline" />
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

@@ -12,9 +12,9 @@ type BrandLogoProps = {
 
 function Wordmark() {
   return (
-    <span className="whitespace-nowrap text-[13px] font-bold tracking-tight text-foreground sm:text-[15px] lg:text-[17px]">
+    <span className="whitespace-nowrap text-[13px] font-extrabold tracking-tight text-foreground sm:text-[15px] lg:text-[17px]">
       szybka
-      <span className="font-normal text-muted"> · </span>
+      <span className="font-bold text-accent"> · </span>
       <span className="font-semibold text-muted">matematyka</span>
     </span>
   );

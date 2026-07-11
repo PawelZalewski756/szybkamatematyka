@@ -96,13 +96,13 @@ export function GrajHubSheet({ open, onClose, pathname }: GrajHubSheetProps) {
                 aria-current={active ? "page" : undefined}
                 className={`flex items-center gap-3 rounded-xl border px-4 py-3.5 transition-colors ${
                   active
-                    ? "border-teal-500/30 bg-teal-500/10"
+                    ? "border-accent/30 bg-accent/10"
                     : "border-white/[0.06] bg-white/[0.02] hover:border-white/12 hover:bg-white/[0.04]"
                 }`}
               >
                 <span
                   className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                    active ? "bg-teal-500/20 text-teal-300" : "bg-white/[0.05] text-slate-400"
+                    active ? "bg-accent/20 text-accent" : "bg-white/[0.05] text-slate-400"
                   }`}
                 >
                   <Icon className="h-5 w-5" aria-hidden />

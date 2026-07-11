@@ -71,22 +71,16 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
 
   if (variant === "inline") {
     return (
-      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm xl:justify-start">
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
         {[
           { label: "Minigry", value: String(status.minigry) },
           { label: "Zadania", value: zadaniaLabel },
           { label: "Arkusze", value: String(status.arkusze) },
-        ].map((item, index) => (
-          <motion.div
-            key={item.label}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.06 }}
-            className="flex items-baseline gap-2"
-          >
+        ].map((item) => (
+          <div key={item.label} className="flex items-baseline gap-2">
             <span className="font-bold tabular-nums text-foreground">{item.value}</span>
             <span className="text-muted">{item.label}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
     );

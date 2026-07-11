@@ -253,7 +253,7 @@ export default function LoginPage() {
               <p className="-mt-1 text-right">
                 <Link
                   href="/login/zapomniane-haslo"
-                  className="text-xs font-semibold text-teal-400/90 transition-colors hover:text-teal-300"
+                  className="text-xs font-semibold text-accent/90 transition-colors hover:text-accent"
                 >
                   Zapomniałeś hasła?
                 </Link>
