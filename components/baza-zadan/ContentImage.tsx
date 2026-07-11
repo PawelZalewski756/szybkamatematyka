@@ -10,7 +10,7 @@ export function ContentImage({ src, alt = "", className = "" }: ContentImageProp
 
   return (
     <figure
-      className={`my-3 flex flex-col items-center rounded-xl border border-white/10 bg-zinc-950/60 p-2 ${className}`}
+      className={`my-3 flex flex-col items-center rounded-xl border border-surface-border bg-surface p-2 ${className}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -21,7 +21,7 @@ export function ContentImage({ src, alt = "", className = "" }: ContentImageProp
         className="mx-auto max-h-[min(360px,55vh)] w-auto max-w-full object-contain"
       />
       {caption ? (
-        <figcaption className="mt-1.5 max-w-prose text-center text-xs text-zinc-500">
+        <figcaption className="mt-1.5 max-w-prose text-center text-xs text-muted">
           {caption}
         </figcaption>
       ) : null}

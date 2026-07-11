@@ -17,7 +17,7 @@ type CmsTaskCardProps = {
 
 function SolutionPendingNotice() {
   return (
-    <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+    <p className="mt-2 text-sm leading-relaxed text-muted">
       Rozwiązanie jest uzupełniane w bazie. Sprawdź ponownie wkrótce.
     </p>
   );
@@ -36,19 +36,19 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
   const typLabel = TYP_EGZAMINU_LABELS[arkusz.typ];
   const typStyle =
     arkusz.typ === "matura"
-      ? "border-orange-500/40 bg-orange-500/15 text-orange-200"
-      : "border-orange-500/40 bg-orange-500/15 text-orange-400";
+      ? "border-accent/40 bg-accent/15 text-accent"
+      : "border-surface-border bg-surface-hover text-muted";
 
   return (
     <motion.article
       layout
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/80 shadow-lg shadow-black/20"
+      className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
     >
-      <div className="border-b border-white/5 px-4 py-3 sm:px-5">
+      <div className="border-b border-surface-border px-4 py-3 sm:px-5">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded-lg bg-orange-600/90 px-2.5 py-1 text-sm font-black text-white">
+          <span className="rounded-lg bg-accent px-2.5 py-1 text-sm font-black text-on-accent">
             Zad. {zadanie.numer_zadania}
           </span>
           {!isArkuszView ? (
@@ -56,12 +56,12 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
               {typLabel}
             </span>
           ) : null}
-          <span className="rounded-lg border border-white/10 bg-zinc-800/80 px-2 py-0.5 text-xs font-semibold text-zinc-300">
+          <span className="rounded-lg border border-surface-border bg-surface-hover px-2 py-0.5 text-xs font-semibold text-muted">
             {zadanie.dzial}
           </span>
         </div>
         {!isArkuszView ? (
-          <p className="mt-1.5 text-sm text-zinc-400">{formatArkuszLabel(arkusz)}</p>
+          <p className="mt-1.5 text-sm text-muted">{formatArkuszLabel(arkusz)}</p>
         ) : null}
       </div>
 
@@ -73,8 +73,8 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
           onClick={() => setShowSolution((v) => !v)}
           className={`mt-5 rounded-xl px-4 py-2.5 text-sm font-bold transition-all active:scale-[0.98] ${
             showSolution
-              ? "border border-zinc-600 bg-zinc-800 text-zinc-300"
-              : "border border-emerald-500/30 bg-emerald-500/10 text-emerald-200 hover:bg-emerald-500/15"
+              ? "border border-surface-border bg-surface-hover text-muted"
+              : "border border-success/30 bg-success/10 text-success hover:bg-success/15"
           }`}
         >
           {showSolution ? "Ukryj rozwiązanie" : "Pokaż rozwiązanie"}
@@ -90,10 +90,10 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="overflow-hidden"
             >
-              <div className="mt-4 border-l-2 border-emerald-500/40 pl-4">
+              <div className="mt-4 border-l-2 border-success/40 pl-4">
                 {solutionPending ? (
                   <>
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-amber-300/90">
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-accent">
                       Wkrótce
                     </p>
                     <SolutionPendingNotice />

@@ -43,15 +43,15 @@ export function BazaZadanTreningPanel() {
 
   return (
     <div className="space-y-8">
-      <p className="text-sm text-slate-500">
+      <p className="text-sm text-muted">
         Kompletne arkusze w aplikacji — rozwiązujesz zadania po kolei, na końcu
         widzisz wynik. Dla ścieżki{" "}
-        <span className="font-semibold text-slate-300">{pathLabel}</span>.
+        <span className="font-semibold text-foreground">{pathLabel}</span>.
       </p>
 
       {grouped.map(({ kind, label, sheets: items }) => (
         <section key={kind}>
-          <h3 className="mb-3 text-sm font-bold text-white">{label}</h3>
+          <h3 className="mb-3 text-sm font-bold text-foreground">{label}</h3>
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((sheet) => (
               <li key={sheet.id}>

@@ -31,7 +31,7 @@ export function SolutionDisplay({ raw }: SolutionDisplayProps) {
         {steps.map((step, index) => (
           <li key={index} className="flex gap-3">
             <span
-              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-xs font-black text-emerald-300 ring-1 ring-emerald-500/25"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-success/15 text-xs font-black text-success ring-1 ring-success/25"
               aria-hidden
             >
               {index + 1}
@@ -43,8 +43,8 @@ export function SolutionDisplay({ raw }: SolutionDisplayProps) {
         ))}
       </ol>
       {answer ? (
-        <div className="rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-3 py-2.5 sm:px-4">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-emerald-300">
+        <div className="rounded-xl border border-success/25 bg-success/10 px-3 py-2.5 sm:px-4">
+          <p className="text-[11px] font-bold uppercase tracking-wide text-success">
             Odpowiedź
           </p>
           <div className="mt-1">

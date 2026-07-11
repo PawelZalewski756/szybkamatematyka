@@ -64,19 +64,19 @@ export function BazaZadanView({
 
   return (
     <div className="page-container w-full py-8 sm:py-10">
-      <header className="max-w-3xl">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+      <header>
+        <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
           Baza zadań
         </h1>
-        <p className="mt-2 text-base text-slate-400">
+        <p className="mt-2 max-w-2xl text-base text-muted">
           Zadania treningowe, oficjalne arkusze CKE i arkusze w aplikacji — dla
           ścieżki{" "}
-          <span className="font-semibold text-accent/90">{pathLabel}</span>.
+          <span className="font-semibold text-accent">{pathLabel}</span>.
         </p>
       </header>
 
       <div
-        className="mt-8 flex gap-1 overflow-x-auto border-b border-white/[0.08] pb-px [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mt-8 flex gap-1 overflow-x-auto border-b border-surface-border pb-px [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         role="tablist"
         aria-label="Sekcje bazy zadań"
       >
@@ -91,12 +91,12 @@ export function BazaZadanView({
               onClick={() => setTab(id)}
               className={`shrink-0 border-b-2 px-4 py-3 text-sm font-semibold transition ${
                 active
-                  ? "border-accent text-white"
-                  : "border-transparent text-slate-500 hover:text-slate-300"
+                  ? "border-accent text-foreground"
+                  : "border-transparent text-muted hover:text-foreground"
               }`}
             >
               {label}
-              <span className="ml-1.5 tabular-nums text-slate-600">
+              <span className="ml-1.5 tabular-nums text-muted">
                 {counts[id]}
               </span>
             </button>

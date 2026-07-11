@@ -36,7 +36,7 @@ export default async function BazaZadanPage() {
   return (
     <Suspense
       fallback={
-        <div className="mx-auto max-w-6xl px-4 py-16 text-sm text-slate-500 xl:max-w-7xl">
+        <div className="mx-auto max-w-6xl px-4 py-16 text-sm text-muted xl:max-w-7xl">
           Ładowanie bazy zadań…
         </div>
       }

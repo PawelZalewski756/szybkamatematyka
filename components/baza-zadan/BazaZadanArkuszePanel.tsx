@@ -12,6 +12,7 @@ import {
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
 import { FileQuestion } from "lucide-react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 
 type CmsScope = "matura" | "e8" | "inne";
@@ -21,6 +22,27 @@ type BazaZadanArkuszePanelProps = {
   schemaMissing?: boolean;
   cmsNote?: string | null;
 };
+
+function ScopeChip({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`filter-chip w-full text-left sm:w-auto ${active ? "filter-chip-active" : ""}`}
+    >
+      {children}
+    </button>
+  );
+}
 
 function filterGroups(
   groups: CmsArkuszGroup[],
@@ -118,7 +140,7 @@ export function BazaZadanArkuszePanel({
 
   if (cmsNote) {
     return (
-      <p className="rounded-xl border border-amber-500/25 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+      <p className="rounded-xl border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-foreground">
         {cmsNote}
       </p>
     );
@@ -134,95 +156,101 @@ export function BazaZadanArkuszePanel({
     );
   }
 
-  return (
-    <div className="space-y-5">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-slate-500">
-          Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej stronie.
+  const filtersSidebar = (
+    <aside className="page-sidebar space-y-5 rounded-2xl border border-surface-border bg-surface p-5">
+      <div>
+        <p className="text-xs font-bold uppercase tracking-wide text-muted">Arkusze</p>
+        <p className="mt-1 text-2xl font-black tabular-nums text-foreground">
+          {filtered.length}
         </p>
-        <Link
-          href="/trening/arkusze"
-          className="text-sm font-semibold text-accent hover:text-accent-strong"
-        >
-          Widok pełnoekranowy →
-        </Link>
+        <p className="text-xs text-muted">w wybranym filtrze</p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {scopes.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            onClick={() => setScope(s.id)}
-            className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-              activeScope === s.id
-                ? "bg-accent/15 text-accent ring-1 ring-accent/25"
-                : "border border-white/10 text-slate-400 hover:border-white/20 hover:text-white"
-            }`}
-          >
-            {s.label}
-            <span className="ml-1.5 tabular-nums text-slate-500">({s.count})</span>
-          </button>
-        ))}
+      <div>
+        <p className="mb-2 text-xs font-bold text-muted">Typ egzaminu</p>
+        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap lg:flex-col">
+          {scopes.map((s) => (
+            <ScopeChip
+              key={s.id}
+              active={activeScope === s.id}
+              onClick={() => setScope(s.id)}
+            >
+              {s.label}{" "}
+              <span className="tabular-nums opacity-70">({s.count})</span>
+            </ScopeChip>
+          ))}
+        </div>
       </div>
 
       {years.length > 1 && (
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs font-semibold text-slate-500">Rok:</span>
-          <button
-            type="button"
-            onClick={() => setYear("all")}
-            className={`rounded-full px-3 py-1 text-xs font-semibold ${
-              year === "all"
-                ? "bg-white/10 text-white"
-                : "text-slate-500 hover:text-slate-300"
-            }`}
-          >
-            Wszystkie
-          </button>
-          {years.map((y) => (
-            <button
-              key={y}
-              type="button"
-              onClick={() => setYear(y)}
-              className={`rounded-full px-3 py-1 text-xs font-semibold tabular-nums ${
-                year === y
-                  ? "bg-white/10 text-white"
-                  : "text-slate-500 hover:text-slate-300"
-              }`}
-            >
-              {y}
-            </button>
-          ))}
+        <div>
+          <p className="mb-2 text-xs font-bold text-muted">Rok</p>
+          <div className="flex flex-wrap gap-2">
+            <ScopeChip active={year === "all"} onClick={() => setYear("all")}>
+              Wszystkie
+            </ScopeChip>
+            {years.map((y) => (
+              <ScopeChip key={y} active={year === y} onClick={() => setYear(y)}>
+                {y}
+              </ScopeChip>
+            ))}
+          </div>
         </div>
       )}
 
-      {filtered.length === 0 ? (
-        <EmptyState
-          icon={FileQuestion}
-          title="Brak arkuszy w tym filtrze"
-          description="Wybierz inny rok lub typ egzaminu."
-        />
-      ) : (
-        <div className="space-y-8">
-          {yearSections.map(({ year: y, groups }) => (
-            <section key={y}>
-              {year === "all" && yearSections.length > 1 && (
-                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-slate-600">
-                  {y}
-                </h3>
-              )}
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {groups.map((group) => (
-                  <li key={group.arkuszId}>
-                    <BazaArkuszCard group={group} />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
+      <Link
+        href="/trening/arkusze"
+        className="block text-sm font-semibold text-accent hover:text-accent-strong"
+      >
+        Widok pełnoekranowy →
+      </Link>
+    </aside>
+  );
+
+  const cardsContent =
+    filtered.length === 0 ? (
+      <EmptyState
+        icon={FileQuestion}
+        title="Brak arkuszy w tym filtrze"
+        description="Wybierz inny rok lub typ egzaminu."
+      />
+    ) : (
+      <div className="space-y-8">
+        {yearSections.map(({ year: y, groups }) => (
+          <section key={y}>
+            {year === "all" && yearSections.length > 1 && (
+              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
+                {y}
+              </h3>
+            )}
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {groups.map((group) => (
+                <li key={group.arkuszId}>
+                  <BazaArkuszCard group={group} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    );
+
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-muted lg:hidden">
+        Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej stronie.
+      </p>
+
+      <div className="page-with-sidebar">
+        {filtersSidebar}
+        <div>
+          <p className="mb-5 hidden text-sm text-muted lg:block">
+            Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej
+            stronie.
+          </p>
+          {cardsContent}
         </div>
-      )}
+      </div>
     </div>
   );
 }

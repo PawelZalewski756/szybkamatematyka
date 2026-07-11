@@ -31,8 +31,8 @@ function FilterChip({
       onClick={onClick}
       className={`rounded-full px-3 py-1.5 text-xs font-bold transition-colors sm:text-sm ${
         active
-          ? "bg-gradient-to-r from-orange-500 to-emerald-500 text-zinc-950"
-          : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
+          ? "bg-accent text-on-accent"
+          : "bg-surface text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
       {children}
@@ -49,14 +49,14 @@ export function BazaZadanFilters({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-sm font-bold uppercase tracking-wide text-zinc-500">
+        <h2 className="text-sm font-bold uppercase tracking-wide text-muted">
           Filtry
         </h2>
-        <p className="mt-1 text-2xl font-black text-white">{taskCount} zadań</p>
+        <p className="mt-1 text-2xl font-black text-foreground">{taskCount} zadań</p>
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-zinc-400">Typ egzaminu</p>
+        <p className="mb-2 text-xs font-bold text-muted">Typ egzaminu</p>
         <div className="flex flex-wrap gap-2">
           <FilterChip
             active={filters.typ === "all"}
@@ -77,7 +77,7 @@ export function BazaZadanFilters({
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-zinc-400">Rok</p>
+        <p className="mb-2 text-xs font-bold text-muted">Rok</p>
         <div className="flex flex-wrap gap-2">
           <FilterChip
             active={filters.rok === "all"}
@@ -98,7 +98,7 @@ export function BazaZadanFilters({
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-zinc-400">Dział</p>
+        <p className="mb-2 text-xs font-bold text-muted">Dział</p>
         <div className="flex max-h-48 flex-wrap gap-2 overflow-y-auto pr-1">
           <FilterChip
             active={filters.dzial === "all"}

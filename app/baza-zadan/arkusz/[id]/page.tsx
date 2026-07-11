@@ -25,8 +25,8 @@ export default function ExamSheetPage({ params }: PageProps) {
   if (!sheet) {
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
-        <p className="text-xl font-black text-white">Brak arkusza</p>
-        <Link href="/baza-zadan" className="mt-4 text-orange-400">
+        <p className="text-xl font-black text-foreground">Brak arkusza</p>
+        <Link href="/baza-zadan" className="mt-4 text-accent">
           ← Baza zadań
         </Link>
       </div>
@@ -61,10 +61,10 @@ export default function ExamSheetPage({ params }: PageProps) {
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-12 text-center">
         <p className="text-6xl">📋</p>
-        <h1 className="mt-4 text-3xl font-black text-white">Koniec arkusza!</h1>
-        <p className="mt-4 text-xl text-zinc-300">
+        <h1 className="mt-4 text-3xl font-black text-foreground">Koniec arkusza!</h1>
+        <p className="mt-4 text-xl text-muted">
           Wynik:{" "}
-          <span className="font-black text-emerald-400">
+          <span className="font-black text-success">
             {score}/{total}
           </span>{" "}
           ({pct}%)
@@ -78,13 +78,13 @@ export default function ExamSheetPage({ params }: PageProps) {
               setScore(0);
               setFinished(false);
             }}
-            className="rounded-2xl bg-gradient-to-r from-orange-500 to-emerald-600 py-4 font-black text-white"
+            className="btn-primary rounded-2xl py-4 text-base"
           >
             Powtórz arkusz
           </button>
           <Link
             href="/baza-zadan"
-            className="rounded-2xl border border-white/20 py-4 font-black text-white"
+            className="rounded-2xl border border-surface-border py-4 font-black text-foreground"
           >
             Wróć do bazy
           </Link>
@@ -95,7 +95,7 @@ export default function ExamSheetPage({ params }: PageProps) {
 
   if (!task) {
     return (
-      <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center text-zinc-500">
+      <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center text-muted">
         Ładowanie zadania…
       </div>
     );
@@ -105,29 +105,29 @@ export default function ExamSheetPage({ params }: PageProps) {
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
       <Link
         href="/baza-zadan"
-        className="text-sm font-semibold text-zinc-500 hover:text-orange-400"       >
+        className="text-sm font-semibold text-muted hover:text-accent"       >
         ← Baza zadań
       </Link>
 
       <div className="mt-4 flex items-center justify-between gap-2">
-        <h1 className="text-2xl font-black text-white">{sheet.title}</h1>
-        <span className="text-sm font-bold text-orange-400">
+        <h1 className="text-2xl font-black text-foreground">{sheet.title}</h1>
+        <span className="text-sm font-bold text-accent">
           {currentIndex + 1}/{total}
         </span>
       </div>
 
-      <div className="mt-3 h-2 overflow-hidden rounded-full bg-zinc-800">
+      <div className="mt-3 h-2 overflow-hidden rounded-full bg-surface-hover">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-orange-500 to-emerald-500 transition-all"
+          className="h-full rounded-full bg-accent transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
 
-      <div className="mt-8 rounded-3xl border border-white/10 bg-zinc-900/90 p-6">
+      <div className="mt-8 rounded-3xl border border-surface-border bg-surface p-6">
         <div className="flex flex-wrap items-center gap-2">
-          <p className="text-lg font-semibold text-white">{task.prompt}</p>
+          <p className="text-lg font-semibold text-foreground">{task.prompt}</p>
           {isSolved(task.id) && (
-            <span className="rounded-full border border-emerald-500/40 bg-emerald-500/15 px-2 py-0.5 text-xs font-bold text-emerald-300">
+            <span className="rounded-full border border-success/40 bg-success/15 px-2 py-0.5 text-xs font-bold text-success">
               ✓ wcześniej rozwiązane
             </span>
           )}
@@ -139,14 +139,14 @@ export default function ExamSheetPage({ params }: PageProps) {
               type="button"
               disabled={picked !== null}
               onClick={() => handlePick(index)}
-              className={`rounded-2xl border px-4 py-3 text-left font-bold transition-colors ${
+              className={`rounded-2xl border px-4 py-3 text-left font-bold text-foreground transition-colors ${
                 picked === null
-                  ? "border-white/10 bg-zinc-950 hover:border-orange-500/40"
+                  ? "border-surface-border bg-surface hover:border-accent/40"
                   : index === task.correctIndex
-                    ? "border-emerald-500/50 bg-emerald-500/20"
+                    ? "border-success/50 bg-success/20"
                     : index === picked
-                      ? "border-red-500/50 bg-red-500/20"
-                      : "border-white/5 opacity-40"
+                      ? "border-danger/50 bg-danger/20"
+                      : "border-surface-border opacity-40"
               }`}
             >
               {choice}
@@ -156,7 +156,7 @@ export default function ExamSheetPage({ params }: PageProps) {
 
         {picked !== null && (
           <div className="mt-6">
-            <p className="text-sm text-zinc-400">{task.explanation}</p>
+            <p className="text-sm text-muted">{task.explanation}</p>
             {task.solutionSteps && task.solutionSteps.length > 0 && (
               <SolutionSteps
                 steps={task.solutionSteps}
@@ -166,7 +166,7 @@ export default function ExamSheetPage({ params }: PageProps) {
             <button
               type="button"
               onClick={goNext}
-              className="mt-4 w-full rounded-2xl bg-brand-gradient py-3 font-black text-white"
+              className="btn-primary mt-4 w-full rounded-2xl py-3 text-base"
             >
               {currentIndex + 1 >= total ? "Zakończ arkusz" : "Następne zadanie"}
             </button>

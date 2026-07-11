@@ -4,24 +4,24 @@ const SQL_PATH = "supabase/migrations/init_baza_zadan.sql";
 
 export function DatabaseSetupCard() {
   return (
-    <div className="rounded-3xl border border-orange-500/30 bg-orange-500/10 px-6 py-8 backdrop-blur-xl sm:px-8">
-      <h2 className="text-lg font-black text-orange-400">
+    <div className="rounded-3xl border border-accent/30 bg-accent/10 px-6 py-8 sm:px-8">
+      <h2 className="text-lg font-black text-accent">
         Baza Supabase wymaga jednorazowej konfiguracji
       </h2>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-300">
-        Tabele <code className="text-orange-400">arkusze</code> i{" "}
-        <code className="text-orange-400">zadania</code> nie istnieją w Twoim
+      <p className="mt-2 text-sm leading-relaxed text-muted">
+        Tabele <code className="text-accent">arkusze</code> i{" "}
+        <code className="text-accent">zadania</code> nie istnieją w Twoim
         projekcie. To nie błąd strony — migracja SQL nie została jeszcze
         uruchomiona.
       </p>
-      <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-zinc-300">
+      <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-muted">
         <li>
           Otwórz{" "}
           <a
             href="https://supabase.com/dashboard"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-amber-400 underline"
+            className="font-semibold text-accent underline"
           >
             panel Supabase
           </a>{" "}
@@ -29,20 +29,20 @@ export function DatabaseSetupCard() {
         </li>
         <li>
           Skopiuj całą zawartość pliku{" "}
-          <code className="text-orange-400">{SQL_PATH}</code> z repozytorium.
+          <code className="text-accent">{SQL_PATH}</code> z repozytorium.
         </li>
         <li>
           Wklej do edytora i kliknij <strong>Run</strong>.
         </li>
         <li>
           Odśwież tę stronę i dodaj zadania w{" "}
-          <Link href="/admin" className="font-semibold text-amber-400 underline">
+          <Link href="/admin" className="font-semibold text-accent underline">
             /admin
           </Link>
           .
         </li>
       </ol>
-      <p className="mt-4 text-xs text-zinc-500">
+      <p className="mt-4 text-xs text-muted">
         Upewnij się też, że w <code>.env.local</code> masz poprawne{" "}
         <code>NEXT_PUBLIC_SUPABASE_URL</code> i{" "}
         <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code> z tego samego projektu.

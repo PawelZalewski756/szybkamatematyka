@@ -28,7 +28,7 @@ export function CatalogSectionNav({
 
   return (
     <nav
-      className="flex flex-wrap gap-2 rounded-2xl border border-white/10 bg-zinc-900/50 p-2 backdrop-blur-sm"
+      className="flex flex-wrap gap-2 rounded-2xl border border-surface-border bg-surface p-2"
       aria-label="Sekcje katalogu"
     >
       {items.map((item) => {
@@ -45,14 +45,14 @@ export function CatalogSectionNav({
             }}
             className={`rounded-xl px-4 py-2.5 text-left text-sm font-bold transition-colors ${
               isActive
-                ? "bg-gradient-to-r from-orange-500/90 to-emerald-500/90 text-zinc-950"
-                : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                ? "bg-accent text-on-accent"
+                : "text-muted hover:bg-surface-hover hover:text-foreground"
             }`}
           >
             {item.label}
             {item.count != null && item.count > 0 && (
               <span
-                className={`ml-1.5 text-xs ${isActive ? "text-zinc-800" : "text-zinc-500"}`}
+                className={`ml-1.5 text-xs ${isActive ? "text-on-accent/70" : "text-muted"}`}
               >
                 ({item.count})
               </span>

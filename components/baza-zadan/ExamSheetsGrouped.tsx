@@ -34,7 +34,7 @@ export function ExamSheetsGrouped({
         return (
           <div
             key={group.kind}
-            className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40"
+            className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
           >
             <button
               type="button"
@@ -42,20 +42,20 @@ export function ExamSheetsGrouped({
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
             >
               <div>
-                <h3 className="text-base font-black text-white">{group.label}</h3>
-                <p className="text-sm text-zinc-500">
+                <h3 className="text-base font-black text-foreground">{group.label}</h3>
+                <p className="text-sm text-muted">
                   {group.sheets.length}{" "}
                   {group.sheets.length === 1 ? "arkusz" : "arkusze"}
                 </p>
               </div>
               <span
-                className={`shrink-0 text-zinc-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                className={`shrink-0 text-muted transition-transform ${isOpen ? "rotate-180" : ""}`}
               >
                 ▼
               </span>
             </button>
             {isOpen && (
-              <div className="grid grid-cols-1 gap-4 border-t border-white/5 px-4 pb-4 pt-2 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 border-t border-surface-border px-4 pb-4 pt-2 md:grid-cols-2">
                 {group.sheets.map((sheet) => (
                   <ExamSheetCard key={sheet.id} sheet={sheet} />
                 ))}

@@ -37,8 +37,8 @@ function Chip({
       aria-pressed={active}
       className={`min-w-0 break-words rounded-full px-3 py-2 text-left text-xs font-bold transition-colors sm:text-sm ${
         active
-          ? "bg-gradient-to-r from-orange-500 to-emerald-500 text-zinc-950"
-          : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white"
+          ? "bg-accent text-on-accent"
+          : "bg-surface text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
       {children}
@@ -55,17 +55,17 @@ export function CatalogFilters({
   return (
     <div className="flex w-full flex-col gap-6">
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-wide text-zinc-500">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-muted">
             Baza w aplikacji
           </h2>
-          <p className="mt-1 text-2xl font-black text-white">{taskCount} zadań</p>
-          <p className="mt-1 text-sm text-zinc-500">{sheetCount} arkuszy</p>
+          <p className="mt-1 text-2xl font-black text-foreground">{taskCount} zadań</p>
+          <p className="mt-1 text-sm text-muted">{sheetCount} arkuszy</p>
         </div>
 
         <div>
           <label
             htmlFor="catalog-search"
-            className="text-xs font-bold text-zinc-400"
+            className="text-xs font-bold text-muted"
           >
             Szukaj
           </label>
@@ -75,12 +75,12 @@ export function CatalogFilters({
             value={filters.search}
             onChange={(e) => onChange({ ...filters, search: e.target.value })}
             placeholder="Tytuł lub treść…"
-            className="mt-2 w-full rounded-xl border border-white/10 bg-zinc-950 px-4 py-2.5 text-sm text-white outline-none focus:border-orange-500/50"
+            className="input-field mt-2 w-full px-4 py-2.5 text-sm"
           />
         </div>
 
         <div>
-          <p className="mb-2 text-xs font-bold text-zinc-400">Trudność</p>
+          <p className="mb-2 text-xs font-bold text-muted">Trudność</p>
           <div className="flex flex-wrap gap-2">
             <Chip
               active={filters.difficulty === "all"}
@@ -101,7 +101,7 @@ export function CatalogFilters({
         </div>
 
         <div>
-          <p className="mb-2 text-xs font-bold text-zinc-400">Dział</p>
+          <p className="mb-2 text-xs font-bold text-muted">Dział</p>
           <div className="flex flex-wrap gap-2">
             <Chip
               active={filters.category === "all"}

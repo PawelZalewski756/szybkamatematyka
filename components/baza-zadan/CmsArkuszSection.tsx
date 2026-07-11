@@ -15,7 +15,6 @@ type CmsArkuszSectionProps = {
   title: string;
   subtitle: string;
   groups: CmsArkuszGroup[];
-  accent?: "emerald" | "amber" | "cyan";
   /** Nagłówki lat — arkusze CKE po roku sesji. */
   groupByYear?: boolean;
 };
@@ -43,11 +42,11 @@ function renderArkuszGroup(
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
         <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-emerald-300/90">
+          <p className="text-xs font-bold uppercase tracking-wide text-accent">
             {TYP_EGZAMINU_LABELS[group.typ]}
           </p>
-          <p className="mt-1 text-base font-black text-white">{label}</p>
-          <p className="mt-0.5 text-sm text-zinc-400">
+          <p className="mt-1 text-base font-black text-foreground">{label}</p>
+          <p className="mt-0.5 text-sm text-muted">
             {group.tasks.length} zadań
             {sample
               ? ` · ${arkuszMaturaBadge(sample) || "arkusz egzaminacyjny"}`
@@ -55,7 +54,7 @@ function renderArkuszGroup(
           </p>
         </div>
         <span
-          className={`shrink-0 text-zinc-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`shrink-0 text-muted transition-transform ${isOpen ? "rotate-180" : ""}`}
         >
           ▼
         </span>
@@ -65,7 +64,7 @@ function renderArkuszGroup(
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="space-y-4 border-t border-white/5 px-4 pb-4 pt-2"
+          className="space-y-4 border-t border-surface-border px-4 pb-4 pt-2"
         >
           {group.tasks.map((z) => (
             <CmsTaskCard key={z.id} zadanie={z} />
@@ -80,7 +79,6 @@ export function CmsArkuszSection({
   title,
   subtitle,
   groups,
-  accent = "emerald",
   groupByYear = false,
 }: CmsArkuszSectionProps) {
   const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
@@ -92,12 +90,7 @@ export function CmsArkuszSection({
 
   if (groups.length === 0) return null;
 
-  const borderAccent =
-    accent === "emerald"
-      ? "border-emerald-500/30 bg-emerald-500/5"
-      : accent === "cyan"
-        ? "border-orange-500/30 bg-orange-500/5"
-        : "border-orange-500/30 bg-orange-500/5";
+  const borderAccent = "border-accent/30 bg-accent/5";
 
   const toggle = (id: string) => {
     setOpenIds((prev) => {
@@ -114,8 +107,8 @@ export function CmsArkuszSection({
     <section>
       {showHeader && (
         <>
-          <h2 className="text-lg font-black text-white">{title}</h2>
-          <p className="mt-1 text-sm text-zinc-500">{subtitle}</p>
+          <h2 className="text-lg font-black text-foreground">{title}</h2>
+          <p className="mt-1 text-sm text-muted">{subtitle}</p>
         </>
       )}
 
@@ -123,7 +116,7 @@ export function CmsArkuszSection({
         {yearGroups
           ? yearGroups.map(({ year, groups: yearItems }) => (
               <motion.div key={year} className="space-y-4">
-                <h3 className="text-sm font-black uppercase tracking-wider text-zinc-400">
+                <h3 className="text-sm font-black uppercase tracking-wider text-muted">
                   Rok {year}
                 </h3>
                 {yearItems.map((group) =>
