@@ -64,19 +64,14 @@ export function AdminGate({ children }: { children: ReactNode }) {
       <div className="relative flex min-h-0 flex-1 flex-col bg-background">
         <GamingBackground />
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-20 text-center sm:py-28">
-          <p className="text-sm font-black uppercase tracking-[0.3em] text-accent/90">
-            Błąd 404
-          </p>
+          <p className="text-overline text-accent/90">Błąd 404</p>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
             Tej strony nie ma na mapie
           </h1>
           <p className="mx-auto mt-4 max-w-md text-base text-muted">
             Strona, której szukasz, nie istnieje lub została przeniesiona.
           </p>
-          <Link
-            href="/"
-            className="mt-8 inline-flex items-center rounded-full border border-surface-border bg-surface px-5 py-2.5 text-sm font-bold text-foreground transition hover:border-accent/30 hover:bg-accent/10 hover:text-accent"
-          >
+          <Link href="/" className="chip-link mt-8">
             Strona główna
           </Link>
         </div>

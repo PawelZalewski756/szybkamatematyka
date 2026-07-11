@@ -13,14 +13,14 @@ type DifficultyBadgeProps = {
 export function DifficultyBadge({ difficulty }: DifficultyBadgeProps) {
   const tone =
     difficulty === 1
-      ? "border-emerald-500/40 bg-emerald-500/15 text-emerald-200"
+      ? "border-success/40 bg-success/15 text-success"
       : difficulty === 2
-        ? "border-amber-500/40 bg-amber-500/15 text-amber-200"
-        : "border-red-500/40 bg-red-500/15 text-red-200";
+        ? "border-accent/40 bg-accent/15 text-accent"
+        : "border-danger/40 bg-danger/15 text-danger";
 
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${tone}`}
+      className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide ${tone}`}
       title={`Trudność ${difficulty}/3`}
     >
       <span aria-hidden>{"★".repeat(difficulty)}</span>

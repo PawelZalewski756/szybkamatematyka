@@ -79,21 +79,19 @@ export function StreakReminderPrompt({
   if (variant === "card") {
     return (
       <section
-        className={`rounded-3xl border border-orange-500/30 bg-gradient-to-b from-orange-500/10 to-zinc-900/80 p-5 backdrop-blur-xl sm:p-6 ${className}`}
+        className={`rounded-3xl border border-accent/25 bg-accent-soft p-5 sm:p-6 ${className}`}
       >
         <div className="flex items-start gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-orange-500/20">
+          <div className="icon-chip flex h-10 w-10 shrink-0 rounded-2xl">
             {enabled ? (
-              <Bell className="h-5 w-5 text-orange-300" aria-hidden />
+              <Bell className="h-5 w-5" aria-hidden />
             ) : (
-              <BellOff className="h-5 w-5 text-zinc-400" aria-hidden />
+              <BellOff className="h-5 w-5 text-muted" aria-hidden />
             )}
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="text-sm font-black uppercase tracking-wider text-orange-300">
-              Przypomnienia o serii
-            </h2>
-            <p className="mt-1 text-sm text-zinc-300">
+            <h2 className="text-overline text-accent">Przypomnienia o serii</h2>
+            <p className="mt-1 text-sm text-foreground">
               {permission === "unsupported"
                 ? "Twoja przeglądarka nie obsługuje powiadomień — przypomnimy Ci w aplikacji."
                 : enabled
@@ -108,7 +106,7 @@ export function StreakReminderPrompt({
                   type="button"
                   disabled={enabling}
                   onClick={() => void handleEnable()}
-                  className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 px-4 py-2 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 disabled:opacity-60"
+                  className="btn-chunky inline-flex items-center gap-2 px-4 py-2 text-sm disabled:opacity-60"
                 >
                   <Bell className="h-4 w-4" aria-hidden />
                   {enabling ? "Włączanie…" : "Włącz powiadomienia"}
@@ -118,13 +116,13 @@ export function StreakReminderPrompt({
                 <button
                   type="button"
                   onClick={handleDisable}
-                  className="rounded-2xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-zinc-300 transition hover:bg-white/10"
+                  className="btn-chunky-soft rounded-2xl px-4 py-2 text-sm"
                 >
                   Wyłącz powiadomienia
                 </button>
               )}
               {permission === "denied" && (
-                <p className="text-xs text-zinc-500">
+                <p className="text-caption">
                   Odblokuj powiadomienia w ustawieniach przeglądarki dla tej strony.
                 </p>
               )}
@@ -138,15 +136,15 @@ export function StreakReminderPrompt({
   return (
     <div
       role="status"
-      className={`pointer-events-auto fixed bottom-4 left-4 right-4 z-[90] mx-auto max-w-lg rounded-2xl border border-orange-500/40 bg-zinc-900/95 p-4 shadow-xl shadow-orange-900/30 backdrop-blur-xl sm:left-auto sm:right-6 ${className}`}
+      className={`pointer-events-auto fixed bottom-4 left-4 right-4 z-[90] mx-auto max-w-lg rounded-2xl border border-accent/35 bg-surface/95 p-4 shadow-xl backdrop-blur-xl sm:left-auto sm:right-6 ${className}`}
     >
       <div className="flex items-start gap-3">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-500/20">
-          <Bell className="h-4 w-4 text-orange-300" aria-hidden />
+        <div className="icon-chip flex h-9 w-9 shrink-0 rounded-xl">
+          <Bell className="h-4 w-4" aria-hidden />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-black text-white">Przypomnienia o serii</p>
-          <p className="mt-0.5 text-xs text-zinc-400">
+          <p className="text-sm font-black text-foreground">Przypomnienia o serii</p>
+          <p className="mt-0.5 text-xs text-muted">
             Włącz powiadomienia, żeby wieczorem przypomnieć o zachowaniu passy.
             Bez zgody zostanie tylko baner w aplikacji.
           </p>
@@ -155,20 +153,20 @@ export function StreakReminderPrompt({
               type="button"
               disabled={enabling}
               onClick={() => void handleEnable()}
-              className="rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-3 py-1.5 text-xs font-black text-white transition hover:brightness-110 disabled:opacity-60"
+              className="btn-chunky rounded-xl px-3 py-1.5 text-xs disabled:opacity-60"
             >
               {enabling ? "…" : "Włącz"}
             </button>
             <button
               type="button"
               onClick={handleDismiss}
-              className="rounded-xl px-3 py-1.5 text-xs font-bold text-zinc-400 transition hover:text-zinc-200"
+              className="rounded-xl px-3 py-1.5 text-xs font-bold text-muted transition hover:text-foreground"
             >
               Nie teraz
             </button>
             <Link
               href="/profil"
-              className="text-xs font-semibold text-orange-400 hover:text-orange-200"
+              className="text-xs font-semibold text-accent hover:text-accent-strong"
             >
               Ustawienia →
             </Link>
@@ -177,7 +175,7 @@ export function StreakReminderPrompt({
         <button
           type="button"
           onClick={handleDismiss}
-          className="shrink-0 rounded-lg p-1 text-zinc-500 transition hover:bg-white/10 hover:text-zinc-300"
+          className="shrink-0 rounded-lg p-1 text-muted transition hover:bg-surface-hover hover:text-foreground"
           aria-label="Zamknij"
         >
           <X className="h-4 w-4" />

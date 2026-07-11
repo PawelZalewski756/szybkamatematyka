@@ -17,7 +17,7 @@ export default function GlobalError({
 
   return (
     <html lang="pl" className="dark">
-      <body className="flex min-h-screen flex-col bg-zinc-950 font-sans text-zinc-100 antialiased">
+      <body className="flex min-h-screen flex-col bg-background font-sans text-foreground antialiased">
         <ErrorView
           title="Krytyczny błąd aplikacji"
           description="Aplikacja napotkała nieoczekiwany problem. Odśwież stronę, aby spróbować ponownie."

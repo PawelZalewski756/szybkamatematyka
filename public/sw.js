@@ -6,7 +6,7 @@
  * i handlera push w SW. Przypomnienia o serii działają przez Notification API
  * w otwartej karcie (lib/reminders/*); bez VAPID nie rejestrujemy push.
  */
-const CACHE_SHELL = "szybka-matma-shell-v14";
+const CACHE_SHELL = "szybka-matma-shell-v15";
 const SHELL_URLS = ["/", "/offline"];
 
 self.addEventListener("install", (event) => {

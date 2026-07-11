@@ -18,20 +18,20 @@ export function StreakReminderBanner({
   return (
     <div
       role="alert"
-      className="pointer-events-auto fixed bottom-4 left-4 right-4 z-[95] mx-auto max-w-lg rounded-2xl border border-orange-500/50 bg-gradient-to-r from-orange-950/95 to-zinc-900/95 p-4 shadow-xl shadow-orange-900/40 backdrop-blur-xl sm:left-auto sm:right-6"
+      className="pointer-events-auto fixed bottom-4 left-4 right-4 z-[95] mx-auto max-w-lg rounded-2xl border border-accent/40 bg-surface/95 p-4 shadow-xl shadow-accent/10 backdrop-blur-xl sm:left-auto sm:right-6"
     >
       <div className="flex items-start gap-3">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-500/25">
-          <Flame className="h-4 w-4 text-orange-300" aria-hidden />
+        <div className="icon-chip flex h-9 w-9 shrink-0 rounded-xl">
+          <Flame className="h-4 w-4" aria-hidden />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-black text-orange-200">
+          <p className="text-sm font-black text-accent">
             Nie strać serii {streak} {streak === 1 ? "dnia" : "dni"}!
           </p>
-          <p className="mt-0.5 text-xs text-zinc-400">{body}</p>
+          <p className="mt-0.5 text-xs text-muted">{body}</p>
           <Link
             href="/minigry"
-            className="mt-2 inline-flex text-xs font-bold text-orange-400 transition hover:text-orange-200"
+            className="mt-2 inline-flex text-xs font-bold text-accent transition hover:text-accent-strong"
           >
             Ćwicz teraz →
           </Link>
@@ -39,7 +39,7 @@ export function StreakReminderBanner({
         <button
           type="button"
           onClick={onDismiss}
-          className="shrink-0 rounded-lg p-1 text-zinc-500 transition hover:bg-white/10 hover:text-zinc-300"
+          className="shrink-0 rounded-lg p-1 text-muted transition hover:bg-surface-hover hover:text-foreground"
           aria-label="Zamknij przypomnienie"
         >
           <X className="h-4 w-4" />

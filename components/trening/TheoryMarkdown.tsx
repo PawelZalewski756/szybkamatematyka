@@ -25,16 +25,16 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
       "prose-li:text-foreground/95 prose-blockquote:border-surface-border prose-blockquote:text-muted " +
       "[&_.katex-display]:my-4 [&_.katex]:text-foreground",
     compact:
-      "prose prose-sm prose-invert prose-zinc max-w-none break-words " +
-      "prose-p:leading-relaxed prose-p:text-zinc-300 prose-strong:text-zinc-100 " +
-      "[&_.katex-display]:my-2 [&_.katex]:text-zinc-100",
+      "prose prose-sm prose-invert max-w-none break-words " +
+      "prose-p:leading-relaxed prose-p:text-foreground/90 prose-strong:text-foreground " +
+      "[&_.katex-display]:my-2 [&_.katex]:text-foreground",
     solution:
-      "prose prose-sm prose-invert prose-zinc max-w-none break-words " +
-      "prose-p:my-1.5 prose-p:leading-relaxed prose-p:text-zinc-200 " +
-      "prose-strong:text-emerald-100 prose-li:text-zinc-200 " +
-      "prose-headings:text-zinc-100 prose-headings:font-bold prose-headings:text-sm " +
+      "prose prose-sm prose-invert max-w-none break-words " +
+      "prose-p:my-1.5 prose-p:leading-relaxed prose-p:text-foreground/90 " +
+      "prose-strong:text-success prose-li:text-foreground/90 " +
+      "prose-headings:text-foreground prose-headings:font-bold prose-headings:text-sm " +
       "[&_.katex-display]:my-2 [&_.katex-display]:overflow-x-auto " +
-      "[&_.katex]:text-zinc-100",
+      "[&_.katex]:text-foreground",
   };
 
 function flattenText(node: ReactNode): string {

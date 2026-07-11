@@ -9,6 +9,7 @@ import {
   type Profile,
 } from "@/lib/supabase/profiles";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
+import { AUTH_INPUT_CLASS } from "@/components/auth/AuthFormParts";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
 import { Gamepad2, Loader2, Sparkles } from "lucide-react";
@@ -64,7 +65,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-zinc-950/80 p-4 backdrop-blur-xl"
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-background/80 p-4 backdrop-blur-xl"
       role="dialog"
       aria-modal="true"
       aria-labelledby="onboarding-title"
@@ -72,29 +73,26 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="w-full max-w-md rounded-3xl border border-orange-500/30 bg-gradient-to-b from-zinc-900/95 to-zinc-950/95 p-6 shadow-[0_0_60px_rgba(192,38,211,0.25)] backdrop-blur-2xl sm:p-8"
+        className="w-full max-w-md rounded-3xl border border-accent/25 bg-surface p-6 shadow-2xl sm:p-8"
       >
         <div className="mb-4 flex justify-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br bg-brand-gradient shadow-lg shadow-orange-500/30">
-            <Gamepad2 className="h-7 w-7 text-white" aria-hidden />
+          <div className="icon-chip flex h-14 w-14 rounded-2xl">
+            <Gamepad2 className="h-7 w-7" aria-hidden />
           </div>
         </div>
 
         <h2
           id="onboarding-title"
-          className="text-center text-xl font-black text-white sm:text-2xl"
+          className="text-center text-xl font-black text-foreground sm:text-2xl"
         >
           Witaj w grze!
         </h2>
-        <p className="mt-2 text-center text-sm leading-relaxed text-zinc-400">
+        <p className="mt-2 text-center text-sm leading-relaxed text-muted">
           Wybierz swój unikalny nick, aby dołączyć do rankingu.
         </p>
 
         <form onSubmit={(e) => void handleSubmit(e)} className="mt-6">
-          <label
-            htmlFor="onboarding-nick"
-            className="text-xs font-bold uppercase tracking-wider text-zinc-500"
-          >
+          <label htmlFor="onboarding-nick" className="text-overline">
             Twój nick
           </label>
           <input
@@ -106,17 +104,17 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             autoFocus
             autoComplete="username"
             placeholder="np. KasiaM"
-            className="mt-2 w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-base font-bold text-white outline-none placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/25"
+            className={`${AUTH_INPUT_CLASS} mt-2 w-full text-base font-bold`}
           />
 
           {error && (
-            <p className="mt-2 text-sm font-semibold text-red-400">{error}</p>
+            <p className="mt-2 text-sm font-semibold text-danger">{error}</p>
           )}
 
           <button
             type="submit"
             disabled={saving}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gradient py-3.5 text-base font-black text-white shadow-lg shadow-orange-500/30 transition hover:brightness-110 disabled:opacity-60"
+            className="btn-chunky mt-4 flex w-full py-3.5 text-base disabled:opacity-60"
           >
             {saving ? (
               <Loader2 className="h-5 w-5 animate-spin" aria-hidden />

@@ -50,16 +50,12 @@ function KpiTile({
   return (
     <div className="rounded-2xl border border-surface-border bg-white/5 p-3 backdrop-blur-md sm:p-4">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
-          {label}
-        </p>
+        <p className="text-overline">{label}</p>
         <Icon className={`h-3.5 w-3.5 shrink-0 ${iconColor}`} aria-hidden />
       </div>
       <p className="mt-1.5 text-lg font-black text-white sm:text-xl">{value}</p>
       {sub && (
-        <p className="mt-0.5 text-[10px] font-semibold text-muted sm:text-xs">
-          {sub}
-        </p>
+        <p className="mt-0.5 text-caption sm:text-xs">{sub}</p>
       )}
     </div>
   );
@@ -88,7 +84,7 @@ function ActivityBarChart({ points }: { points: ActivityPoint[] }) {
                 <div className="h-2 w-full max-w-[2rem] rounded-full bg-surface-hover sm:max-w-none" />
               )}
             </div>
-            <span className="w-full truncate text-center text-[8px] font-semibold text-muted sm:text-[9px]">
+            <span className="w-full truncate text-center text-caption">
               {point.label.split(" ")[0]}
             </span>
           </div>
@@ -240,7 +236,7 @@ export function ProfileStatsSection({
                   <button
                     type="button"
                     onClick={() => setRange(7)}
-                    className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
+                    className={`rounded-lg px-2.5 py-1 text-xs font-black uppercase tracking-wide transition ${
                       range === 7
                         ? "filter-chip-active"
                         : "filter-chip"
@@ -251,7 +247,7 @@ export function ProfileStatsSection({
                   <button
                     type="button"
                     onClick={() => setRange(14)}
-                    className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
+                    className={`rounded-lg px-2.5 py-1 text-xs font-black uppercase tracking-wide transition ${
                       range === 14
                         ? "filter-chip-active"
                         : "filter-chip"

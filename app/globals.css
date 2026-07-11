@@ -272,6 +272,51 @@ body {
     color: var(--accent);
   }
 
+  /* Etykiety UI — min. 12px (WCAG), bez mikroskopijnych 8–10px. */
+  .text-overline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .text-caption {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+
+  /* Link-chip na stronach statusu (404, offline). */
+  .chip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--surface-border);
+    background: var(--surface);
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--foreground);
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .chip-link:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--surface-border));
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .sheet-surface {
+    background: var(--surface);
+    border-color: var(--surface-border);
+  }
+
   .game-surface {
     border-radius: 1rem;
     border: 1px solid var(--surface-border);
@@ -341,8 +386,12 @@ body {
   }
 
   :focus-visible {
-    outline: 1px solid var(--muted);
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
   }
 }
 

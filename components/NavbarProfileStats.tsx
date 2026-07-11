@@ -1,5 +1,6 @@
 "use client";
 
+import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { formatCompactXp } from "@/lib/format/compact-number";
 import { calculateLevel, calculateXpProgress } from "@/lib/levelSystem";
 import type { Profile } from "@/lib/supabase/profiles";
@@ -33,16 +34,12 @@ export function NavbarProfileStats({
   const nick = displayNick(profile);
   const totalXpLabel = formatCompactXp(profile.xp);
 
-  const levelBadge = (
-    <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-brand-dark px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">
-      Poz. {level}
-    </span>
-  );
+  const levelBadge = <LevelBadge level={level} size="sm" />;
 
   const streakBadge =
     profile.streak >= 2 ? (
       <span
-        className="whitespace-nowrap flex-shrink-0 text-[10px] font-black text-orange-300"
+        className="whitespace-nowrap flex-shrink-0 text-xs font-black text-accent"
         title="Seria dni nauki"
       >
         🔥{profile.streak}
@@ -51,7 +48,7 @@ export function NavbarProfileStats({
 
   const xpTotalBadge = (
     <span
-      className="whitespace-nowrap flex-shrink-0 text-[10px] font-bold tabular-nums text-emerald-400"
+      className="whitespace-nowrap flex-shrink-0 text-xs font-bold tabular-nums text-success"
       title={`${profile.xp.toLocaleString("pl-PL")} XP łącznie`}
     >
       {totalXpLabel}
@@ -64,12 +61,12 @@ export function NavbarProfileStats({
         className={`min-w-[2.5rem] flex-1 overflow-hidden rounded-full bg-surface-border ${barClass}`}
       >
         <div
-          className="h-full rounded-full bg-brand transition-[width] duration-500"
+          className="progress-accent"
           style={{ width: `${xpPercent}%` }}
         />
       </div>
       {!compact && !dense && (
-        <span className="whitespace-nowrap flex-shrink-0 text-[10px] font-medium tabular-nums text-muted">
+        <span className="whitespace-nowrap flex-shrink-0 text-caption tabular-nums">
           {currentLevelXp} / {xpForNextLevel} XP
         </span>
       )}
@@ -118,18 +115,16 @@ export function NavbarProfileStats({
         <span className="min-w-0 truncate text-sm font-semibold text-foreground sm:text-base">
           {nick}
         </span>
-        <span className="whitespace-nowrap flex-shrink-0 rounded-md bg-brand-dark px-2 py-0.5 text-xs font-semibold text-white">
-          Poz. {level}
-        </span>
+        <LevelBadge level={level} />
         <span
-          className="whitespace-nowrap flex-shrink-0 text-xs font-bold tabular-nums text-emerald-400"
+          className="whitespace-nowrap flex-shrink-0 text-xs font-bold tabular-nums text-success"
           title={`${profile.xp.toLocaleString("pl-PL")} XP łącznie`}
         >
           {totalXpLabel}
         </span>
         {profile.streak >= 2 && (
           <span
-            className="whitespace-nowrap flex-shrink-0 rounded-md border border-orange-500/40 bg-orange-500/15 px-2 py-0.5 text-xs font-black text-orange-300"
+            className="whitespace-nowrap flex-shrink-0 rounded-md border border-accent/40 bg-accent/15 px-2 py-0.5 text-xs font-black text-accent"
             title="Seria dni nauki"
           >
             🔥 {profile.streak}

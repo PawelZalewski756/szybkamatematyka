@@ -53,7 +53,7 @@ export default async function ArkuszCkePage({ params }: PageProps) {
   }
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
+    <div className="relative flex min-h-0 flex-1 flex-col bg-background">
       <GamingBackground />
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
         <ArkuszCkeDetail tasks={tasks} />

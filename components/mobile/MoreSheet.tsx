@@ -42,7 +42,7 @@ function SheetLink({
       className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
         active
           ? "bg-accent/12 text-accent"
-          : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+          : "text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
       {label}
@@ -102,22 +102,22 @@ export function MoreSheet({
         role="dialog"
         aria-modal="true"
         aria-label="Więcej"
-        className="absolute inset-x-0 bottom-0 max-h-[min(85vh,32rem)] overflow-hidden rounded-t-2xl border-t border-white/[0.08] bg-[#0c1219] pb-[max(env(safe-area-inset-bottom,0px),0.75rem)]"
+        className="absolute inset-x-0 bottom-0 max-h-[min(85vh,32rem)] overflow-hidden rounded-t-2xl border-t border-surface-border sheet-surface pb-[max(env(safe-area-inset-bottom,0px),0.75rem)]"
       >
-        <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
-          <span className="text-sm font-semibold text-white">Więcej</span>
+        <div className="flex items-center justify-between border-b border-surface-border px-4 py-3">
+          <span className="text-sm font-semibold text-foreground">Więcej</span>
           <button
             type="button"
             onClick={onClose}
             aria-label="Zamknij"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-white/5 hover:text-white"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:bg-surface-hover hover:text-foreground"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
-        <div className="border-b border-white/[0.06] px-4 py-3">
-          <p className="mb-1.5 text-[11px] font-medium text-slate-500">Twoja ścieżka</p>
+        <div className="border-b border-surface-border px-4 py-3">
+          <p className="mb-1.5 text-caption">Twoja ścieżka</p>
           <NavbarPathSelect />
         </div>
 
@@ -125,12 +125,10 @@ export function MoreSheet({
           {MOBILE_MORE_GROUPS.map((group, index) => (
             <div
               key={group.label ?? "misc"}
-              className={index > 0 ? "mt-3 border-t border-white/[0.06] pt-3" : ""}
+              className={index > 0 ? "mt-3 border-t border-surface-border pt-3" : ""}
             >
               {group.label ? (
-                <p className="mb-1 px-3 text-[10px] font-semibold uppercase tracking-wider text-slate-600">
-                  {group.label}
-                </p>
+                <p className="mb-1 px-3 text-overline">{group.label}</p>
               ) : null}
               <div className="space-y-0.5">
                 {group.links.map((link) => (
@@ -146,7 +144,7 @@ export function MoreSheet({
           ))}
 
           {isLoggedIn && onLogout && (
-            <div className="mt-3 border-t border-white/[0.06] px-1 pt-3">
+            <div className="mt-3 border-t border-surface-border px-1 pt-3">
               <button
                 type="button"
                 onClick={() => {
@@ -154,7 +152,7 @@ export function MoreSheet({
                   onLogout();
                 }}
                 disabled={loggingOut}
-                className="flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-400 transition-colors hover:bg-white/[0.05] hover:text-white disabled:opacity-50"
+                className="flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium text-muted transition-colors hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
               >
                 <LogOut className="h-4 w-4" aria-hidden />
                 Wyloguj
