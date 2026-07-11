@@ -54,8 +54,8 @@ export function PlayerAvatarUpload({
         onClick={() => inputRef.current?.click()}
         className={`group relative h-28 w-28 overflow-hidden rounded-full ring-4 ring-white/10 transition-transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 sm:h-32 sm:w-32 ${
           showImage
-            ? "bg-zinc-900"
-            : "bg-gradient-to-br from-orange-600 via-orange-500 to-orange-500 shadow-[0_0_40px_rgba(192,38,211,0.35)]"
+            ? "bg-surface"
+            : "bg-accent text-on-accent shadow-[0_0_32px_rgba(244,183,64,0.25)]"
         }`}
         aria-label="Zmień zdjęcie profilowe"
       >
@@ -68,7 +68,7 @@ export function PlayerAvatarUpload({
             onError={() => setImageBroken(true)}
           />
         ) : (
-          <span className="flex h-full w-full items-center justify-center text-4xl font-black text-white sm:text-5xl">
+          <span className="flex h-full w-full items-center justify-center text-4xl font-black text-on-accent sm:text-5xl">
             {fallbackInitial}
           </span>
         )}
@@ -87,7 +87,7 @@ export function PlayerAvatarUpload({
         className="sr-only"
         onChange={(e) => void handleFile(e.target.files?.[0])}
       />
-      <p className="mt-2 text-center text-xs font-semibold text-zinc-500">
+      <p className="mt-2 text-center text-xs font-semibold text-muted">
         Kliknij awatar, aby zmienić zdjęcie
       </p>
     </div>

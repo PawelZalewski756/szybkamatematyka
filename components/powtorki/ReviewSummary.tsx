@@ -52,10 +52,10 @@ export function ReviewSummary({
         initial={{ rotate: -8, scale: 0.8 }}
         animate={{ rotate: 0, scale: 1 }}
         transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
-        className="rounded-full border border-amber-400/40 bg-gradient-to-br from-amber-500/25 via-yellow-500/10 to-amber-600/5 p-6 shadow-[0_0_48px_rgba(251,191,36,0.35)] backdrop-blur-xl"
+        className="rounded-full border border-accent/40 bg-accent-soft p-6 shadow-[0_0_32px_rgba(244,183,64,0.2)] backdrop-blur-xl"
       >
         <Trophy
-          className="h-16 w-16 fill-amber-300 text-amber-400 drop-shadow-[0_0_24px_rgba(251,191,36,0.6)]"
+          className="h-16 w-16 fill-amber-300 text-accent drop-shadow-[0_0_24px_rgba(251,191,36,0.6)]"
           aria-hidden
         />
       </motion.div>
@@ -63,30 +63,30 @@ export function ReviewSummary({
       <h2 className="mt-8 text-2xl font-black text-amber-200 sm:text-3xl">
         {perfect ? "Bezbłędna powtórka! 🎉" : "Powtórka ukończona!"}
       </h2>
-      <p className="mt-3 max-w-md text-sm font-semibold text-zinc-300 sm:text-base">
+      <p className="mt-3 max-w-md text-sm font-semibold text-foreground sm:text-base">
         {perfect
           ? "Wszystkie zadania za pierwszym razem — świetna robota."
           : "Materiał utrwalony. Trudniejsze zadania wrócą szybciej."}
       </p>
 
       <div className="mt-8 grid w-full grid-cols-3 gap-3">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-4">
+        <div className="rounded-2xl border border-surface-border bg-white/[0.05] p-4">
           <p className="text-2xl font-black text-white tabular-nums">
             {summary.total}
           </p>
-          <p className="mt-1 text-xs font-semibold text-zinc-400">Zadań</p>
+          <p className="mt-1 text-xs font-semibold text-muted">Zadań</p>
         </div>
-        <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-4">
-          <p className="text-2xl font-black text-emerald-300 tabular-nums">
+        <div className="rounded-2xl border border-success/20 bg-success/5 p-4">
+          <p className="text-2xl font-black text-success tabular-nums">
             {summary.correct}
           </p>
-          <p className="mt-1 text-xs font-semibold text-zinc-400">Dobrze</p>
+          <p className="mt-1 text-xs font-semibold text-muted">Dobrze</p>
         </div>
-        <div className="rounded-2xl border border-orange-500/20 bg-orange-500/5 p-4">
-          <p className="text-2xl font-black text-amber-400 tabular-nums">
+        <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
+          <p className="text-2xl font-black text-accent tabular-nums">
             {accuracy}%
           </p>
-          <p className="mt-1 text-xs font-semibold text-zinc-400">Skuteczność</p>
+          <p className="mt-1 text-xs font-semibold text-muted">Skuteczność</p>
         </div>
       </div>
 
@@ -94,13 +94,13 @@ export function ReviewSummary({
         <button
           type="button"
           onClick={onRestart}
-          className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500/90 to-orange-600/90 px-7 py-3.5 text-sm font-black text-white shadow-[0_0_32px_rgba(232,112,42,0.25)] transition hover:scale-[1.02]"
+          className="btn-chunky mt-8 inline-flex items-center gap-2 px-7 py-3.5 text-sm"
         >
           <RotateCcw className="h-4 w-4" />
           Powtarzaj dalej ({remainingDue})
         </button>
       ) : (
-        <p className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-5 py-3 text-sm font-bold text-emerald-200">
+        <p className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-success/30 bg-success/10 px-5 py-3 text-sm font-bold text-success">
           <Sparkles className="h-4 w-4" />
           Na dziś nic więcej do powtórki — wróć jutro!
         </p>
@@ -109,7 +109,7 @@ export function ReviewSummary({
       <button
         type="button"
         onClick={onClose}
-        className="mt-4 text-sm font-semibold text-zinc-400 transition hover:text-zinc-200"
+        className="mt-4 text-sm font-semibold text-muted transition hover:text-foreground"
       >
         Wróć do panelu powtórek
       </button>

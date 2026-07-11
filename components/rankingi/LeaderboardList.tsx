@@ -13,7 +13,7 @@ type LeaderboardListProps = {
 export function LeaderboardList({ entries }: LeaderboardListProps) {
   if (entries.length === 0) {
     return (
-      <p className="py-8 text-center text-sm text-zinc-500">
+      <p className="py-8 text-center text-sm text-muted">
         Brak uczestników na liście.
       </p>
     );
@@ -27,12 +27,12 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.05 * index, duration: 0.35 }}
-          className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 backdrop-blur-md sm:gap-4 sm:px-4 sm:py-3"
+          className="flex items-center gap-3 rounded-2xl border border-surface-border bg-white/5 px-3 py-2.5 backdrop-blur-md sm:gap-4 sm:px-4 sm:py-3"
         >
-          <span className="w-8 shrink-0 text-center text-sm font-black tabular-nums text-zinc-400 sm:w-10 sm:text-base">
+          <span className="w-8 shrink-0 text-center text-sm font-black tabular-nums text-muted sm:w-10 sm:text-base">
             {entry.rank}
           </span>
-          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gradient-to-br bg-brand-gradient ring-2 ring-white/10 sm:h-11 sm:w-11">
+          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-accent ring-2 ring-white/10 sm:h-11 sm:w-11">
             {entry.avatarUrl ? (
               <Image
                 src={entry.avatarUrl}
@@ -43,7 +43,7 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
                 unoptimized
               />
             ) : (
-              <span className="flex h-full w-full items-center justify-center text-sm font-black text-white">
+              <span className="flex h-full w-full items-center justify-center text-sm font-black text-on-accent">
                 {entry.nick.charAt(0).toUpperCase()}
               </span>
             )}
@@ -55,14 +55,14 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
             <div className="mt-0.5 flex items-center gap-1.5">
               <LevelBadge level={entry.level} size="sm" />
               {entry.subtitle && (
-                <span className="truncate text-xs font-semibold text-zinc-400">
+                <span className="truncate text-xs font-semibold text-muted">
                   {entry.subtitle}
                 </span>
               )}
             </div>
           </div>
           <div className="flex shrink-0 flex-col items-end gap-0.5">
-            <span className="text-sm font-black tabular-nums text-orange-400 sm:text-base">
+            <span className="text-sm font-black tabular-nums text-accent sm:text-base">
               {formatCompactXp(entry.xp)}
             </span>
           </div>

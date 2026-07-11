@@ -25,7 +25,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
   if (!ready) {
     return (
       <div className="flex flex-1 items-center justify-center py-24">
-        <Loader2 className="h-8 w-8 animate-spin text-orange-400" />
+        <Loader2 className="h-8 w-8 animate-spin text-accent" />
       </div>
     );
   }
@@ -35,11 +35,9 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
           Po
-          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
-            wtórki
-          </span>
+          <span className="text-gradient-brand">wtórki</span>
         </h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-400">
+        <p className="mt-3 max-w-2xl text-lg text-muted">
           Inteligentne powtórki w systemie spaced repetition. Utrwalaj zadania,
           z którymi miałeś problem — wracają dokładnie wtedy, gdy zaczynasz je
           zapominać.
@@ -50,18 +48,18 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
-        className="mt-8 overflow-hidden rounded-3xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 via-zinc-900/80 to-orange-500/10 p-6 sm:p-8"
+        className="mt-8 overflow-hidden rounded-3xl border border-accent/20 bg-accent-soft p-6 sm:p-8"
       >
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1 text-xs font-bold text-orange-400">
+            <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold text-accent">
               <Brain className="h-3.5 w-3.5" />
               Do powtórki dziś
             </div>
             <p className="mt-3 text-5xl font-black text-white tabular-nums">
               {dueCount}
             </p>
-            <p className="mt-1 text-sm font-semibold text-zinc-400">
+            <p className="mt-1 text-sm font-semibold text-muted">
               {dueCount === 0
                 ? "Brak zaległych powtórek — super!"
                 : dueCount === 1
@@ -74,19 +72,19 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
             type="button"
             onClick={onStart}
             disabled={dueCount === 0}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500 to-orange-600 px-7 py-4 text-base font-black text-white shadow-[0_0_32px_rgba(232,112,42,0.25)] transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+            className="btn-chunky inline-flex items-center justify-center gap-2 px-7 py-4 text-base disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
           >
             <Play className="h-5 w-5" />
             Rozpocznij sesję
           </button>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-6 sm:max-w-md">
+        <div className="mt-6 grid grid-cols-2 gap-3 border-t border-surface-border pt-6 sm:max-w-md">
           <div>
             <p className="text-2xl font-black text-white tabular-nums">
               {totalCount}
             </p>
-            <p className="text-xs font-semibold text-zinc-400">
+            <p className="text-xs font-semibold text-muted">
               wszystkich w powtórkach
             </p>
           </div>
@@ -94,7 +92,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
             <p className="text-2xl font-black text-white tabular-nums">
               {upcomingCount}
             </p>
-            <p className="text-xs font-semibold text-zinc-400">
+            <p className="text-xs font-semibold text-muted">
               zaplanowanych na później
             </p>
           </div>
@@ -105,7 +103,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
         <section>
           <h2 className="text-lg font-black text-white">Twoja talia powtórek</h2>
           {sortedItems.length === 0 ? (
-            <p className="mt-3 rounded-2xl border border-white/10 bg-zinc-900/60 px-4 py-6 text-sm text-zinc-400">
+            <p className="mt-3 rounded-2xl border border-surface-border bg-surface/60 px-4 py-6 text-sm text-muted">
               Nic tu jeszcze nie ma. Dodaj zadania po prawej, a my zajmiemy się
               harmonogramem powtórek.
             </p>
@@ -116,16 +114,16 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
                 const due = isDue(item);
                 return (
                   <li key={item.taskId}>
-                    <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-zinc-900/60 px-4 py-3">
+                    <div className="flex items-center justify-between gap-3 rounded-xl border border-surface-border bg-surface/60 px-4 py-3">
                       <div className="min-w-0">
-                        <p className="truncate text-sm font-bold text-zinc-100">
+                        <p className="truncate text-sm font-bold text-foreground">
                           {task?.title ?? "Zadanie niedostępne"}
                         </p>
-                        <p className="mt-0.5 flex items-center gap-1.5 text-xs font-semibold text-zinc-500">
+                        <p className="mt-0.5 flex items-center gap-1.5 text-xs font-semibold text-muted">
                           <CalendarClock className="h-3.5 w-3.5" />
                           <span
                             className={
-                              due ? "text-amber-400" : "text-zinc-500"
+                              due ? "text-accent" : "text-muted"
                             }
                           >
                             {due
@@ -133,7 +131,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
                               : `następna: ${describeNextReview(item)}`}
                           </span>
                           {task && (
-                            <span className="text-zinc-600">
+                            <span className="text-muted">
                               · {CATEGORY_LABELS[task.category]}
                             </span>
                           )}
@@ -143,7 +141,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
                         type="button"
                         onClick={() => removeFromReview(item.taskId)}
                         aria-label="Usuń z powtórek"
-                        className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/10 p-2 text-zinc-500 transition hover:border-red-500/40 hover:bg-red-500/10 hover:text-red-300"
+                        className="inline-flex shrink-0 items-center justify-center rounded-full border border-surface-border p-2 text-muted transition hover:border-red-500/40 hover:bg-red-500/10 hover:text-red-300"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>

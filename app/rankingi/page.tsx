@@ -86,7 +86,7 @@ export default function RankingiPage() {
         : "łączne XP";
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
+    <div className="relative flex min-h-0 flex-1 flex-col bg-background">
       <GamingBackground />
 
       <div
@@ -97,20 +97,20 @@ export default function RankingiPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
         >
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 ring-1 ring-amber-400/30">
-            <Trophy className="h-6 w-6 text-amber-300" aria-hidden />
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 ring-1 ring-accent/30">
+            <Trophy className="h-6 w-6 text-accent" aria-hidden />
           </div>
           <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
             Rankingi
           </h1>
-          <p className="mt-1 text-sm text-zinc-400">
+          <p className="mt-1 text-sm text-muted">
             Top {TOP_LIMIT} osób · sortowanie po {sortLabel}
           </p>
 
           <div
             role="tablist"
             aria-label="Filtr rankingu"
-            className="mx-auto mt-5 flex w-full max-w-xs rounded-2xl border border-white/15 bg-white/[0.06] p-1 backdrop-blur-xl"
+            className="mx-auto mt-5 flex w-full max-w-xs rounded-2xl border border-surface-border bg-white/[0.06] p-1 backdrop-blur-xl"
           >
             {(
               [
@@ -129,8 +129,8 @@ export default function RankingiPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 rounded-xl py-2 text-xs font-bold transition ${
                     isActive
-                      ? "bg-gradient-to-r from-amber-500/25 to-orange-500/20 text-white shadow-sm"
-                      : "text-zinc-400 hover:text-zinc-200"
+                      ? "bg-accent/20 text-foreground shadow-sm"
+                      : "text-muted hover:text-foreground"
                   }`}
                 >
                   {tab.label}
@@ -148,7 +148,7 @@ export default function RankingiPage() {
                 );
               }}
               disabled={loading || refreshing}
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold text-zinc-300 transition hover:border-orange-500/30 hover:bg-orange-500/10 hover:text-orange-400 disabled:opacity-50"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-surface-border bg-white/5 px-4 py-2 text-xs font-bold text-foreground transition hover:border-accent/30 hover:bg-accent/10 hover:text-accent disabled:opacity-50"
             >
               <RefreshCw
                 className={`h-3.5 w-3.5 ${refreshing ? "animate-spin" : ""}`}
@@ -161,17 +161,17 @@ export default function RankingiPage() {
 
         {loading ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 py-20">
-            <Loader2 className="h-10 w-10 animate-spin text-orange-400" />
-            <p className="text-sm font-semibold text-zinc-400">
+            <Loader2 className="h-10 w-10 animate-spin text-accent" />
+            <p className="text-sm font-semibold text-muted">
               Ładowanie rankingu…
             </p>
           </div>
         ) : configError ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 py-16 text-center">
-            <p className="text-lg font-bold text-zinc-300">
+            <p className="text-lg font-bold text-foreground">
               Brak połączenia z Supabase
             </p>
-            <Link href="/" className="text-sm font-semibold text-orange-400">
+            <Link href="/" className="text-sm font-semibold text-accent">
               ← Strona główna
             </Link>
           </div>
@@ -213,7 +213,7 @@ export default function RankingiPage() {
             </section>
 
             <section className="mt-8 flex min-h-0 flex-1 flex-col" aria-label="Miejsca 4–20">
-              <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-zinc-500">
+              <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
                 Miejsca 4–{TOP_LIMIT}
               </h2>
               <div className="max-h-[min(50vh,28rem)] overflow-y-auto overscroll-contain pr-1 scrollbar-thin">
@@ -224,8 +224,8 @@ export default function RankingiPage() {
         )}
 
         {!loading && !myRank && !configError && (
-          <p className="mt-6 text-center text-xs text-zinc-500">
-            <Link href="/login" className="font-semibold text-orange-400 hover:text-orange-200">
+          <p className="mt-6 text-center text-xs text-muted">
+            <Link href="/login" className="font-semibold text-accent hover:text-accent">
               Zaloguj się
             </Link>
             , aby zobaczyć swoją pozycję na dole ekranu.

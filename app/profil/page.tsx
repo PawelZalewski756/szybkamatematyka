@@ -83,36 +83,24 @@ function StatCard({
   icon: ComponentType<{ className?: string }>;
   accent: "amber" | "cyan" | "orange" | "emerald";
 }) {
-  const ring =
-    accent === "amber"
-      ? "shadow-[0_0_24px_rgba(139,92,246,0.2)]"
-      : accent === "cyan"
-        ? "shadow-[0_0_24px_rgba(232,112,42,0.18)]"
-        : accent === "orange"
-          ? "shadow-[0_0_24px_rgba(251,146,60,0.15)]"
-          : "shadow-[0_0_24px_rgba(52,211,153,0.12)]";
+  const ring = "shadow-[0_0_20px_rgba(244,183,64,0.12)]";
 
   const iconColor =
-    accent === "amber"
-      ? "text-orange-400"
-      : accent === "cyan"
-        ? "text-orange-400"         : accent === "orange"
-          ? "text-orange-400"
-          : "text-emerald-400";
+    accent === "emerald" ? "text-success" : "text-accent";
 
   return (
     <div
-      className={`rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md sm:p-5 ${ring}`}
+      className={`rounded-2xl border border-surface-border bg-white/10 p-4 backdrop-blur-md sm:p-5 ${ring}`}
     >
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 sm:text-xs">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
           {label}
         </p>
         <Icon className={`h-4 w-4 shrink-0 ${iconColor}`} aria-hidden />
       </div>
       <p className="mt-2 text-xl font-black text-white sm:text-2xl">{value}</p>
       {sub && (
-        <p className="mt-0.5 text-xs font-semibold text-zinc-500">{sub}</p>
+        <p className="mt-0.5 text-xs font-semibold text-muted">{sub}</p>
       )}
     </div>
   );
@@ -134,15 +122,15 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
       <div
         className={`relative overflow-hidden rounded-3xl border p-5 backdrop-blur-xl sm:p-6 ${
           pro
-            ? "border-orange-400/40 bg-gradient-to-b from-orange-500/10 to-zinc-900/80"
-            : "border-white/10 bg-white/5"
+            ? "border-accent/40 bg-accent-soft"
+            : "border-surface-border bg-white/5"
         }`}
       >
         <div className="flex items-start justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
               <Crown
-                className={`h-4 w-4 ${pro ? "text-orange-300" : "text-zinc-500"}`}
+                className={`h-4 w-4 ${pro ? "text-accent" : "text-muted"}`}
                 aria-hidden
               />
               Twój plan
@@ -150,11 +138,11 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             <p className="mt-2 text-xl font-black text-white">
               {pro ? (plan?.name ?? "Pro") : "Start (darmowy)"}
             </p>
-            <p className="mt-1 text-sm text-zinc-400">
+            <p className="mt-1 text-sm text-muted">
               Status: {subscriptionStatusLabel(snapshot.status)}
             </p>
             {pro && periodEnd && (
-              <p className="mt-0.5 text-xs font-semibold text-zinc-500">
+              <p className="mt-0.5 text-xs font-semibold text-muted">
                 {snapshot.cancelAtPeriodEnd
                   ? `Dostęp do ${periodEnd} (subskrypcja anulowana)`
                   : `Odnowienie: ${periodEnd}`}
@@ -162,13 +150,13 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             )}
           </div>
           {pro ? (
-            <span className="shrink-0 rounded-full bg-brand-gradient px-3 py-1 text-xs font-black text-white">
+            <span className="shrink-0 rounded-full bg-accent px-3 py-1 text-xs font-black text-on-accent">
               PRO
             </span>
           ) : (
             <Link
               href="/cennik"
-              className="shrink-0 rounded-2xl bg-brand-gradient px-4 py-2 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110"
+              className="btn-chunky shrink-0 px-4 py-2 text-sm"
             >
               Przejdź na Pro
             </Link>
@@ -373,28 +361,28 @@ export default function ProfilPage() {
   };
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col bg-zinc-950">
+    <div className="relative flex min-h-0 flex-1 flex-col bg-background">
       <GamingBackground />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1920px] flex-1 flex-col py-8 sm:py-12">
         {loading ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <div className="h-12 w-12 animate-spin rounded-full border-2 border-orange-500/30 border-t-cyan-400" />
-            <p className="text-sm font-semibold text-zinc-400">
+            <div className="h-12 w-12 animate-spin rounded-full border-2 border-accent/30 border-t-accent" />
+            <p className="text-sm font-semibold text-muted">
               Ładowanie profilu…
             </p>
           </div>
         ) : configError ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <p className="text-lg font-bold text-zinc-300">
+            <p className="text-lg font-bold text-foreground">
               Brak połączenia z Supabase
             </p>
-            <p className="max-w-sm text-sm text-zinc-500">
+            <p className="max-w-sm text-sm text-muted">
               Uzupełnij zmienne w pliku .env.local, aby wyświetlić profil.
             </p>
             <Link
               href="/"
-              className="text-sm font-semibold text-orange-400 hover:text-orange-200"
+              className="text-sm font-semibold text-accent hover:text-accent"
             >
               ← Strona główna
             </Link>
@@ -418,13 +406,13 @@ export default function ProfilPage() {
                   if (profile) notifyProfileUpdated({ ...profile, avatarUrl: url });
                 }}
               />
-              <p className="mt-3 break-all text-xs text-zinc-500">{user.email}</p>
+              <p className="mt-3 break-all text-xs text-muted">{user.email}</p>
             </header>
 
             <section className="mt-8">
               <label
                 htmlFor="profile-nick"
-                className="text-xs font-bold uppercase tracking-wider text-zinc-400"
+                className="text-xs font-bold uppercase tracking-wider text-muted"
               >
                 Nick
               </label>
@@ -436,14 +424,14 @@ export default function ProfilPage() {
                   onChange={(e) => setNickDraft(e.target.value)}
                   maxLength={24}
                   disabled={nickChangeBlocked}
-                  className="min-w-0 flex-1 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-zinc-600 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="min-w-0 flex-1 rounded-2xl border border-surface-border bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-muted focus:border-accent/50 focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-50"
                   placeholder="np. KasiaM"
                 />
                 <button
                   type="button"
                   disabled={nickSaving || nickChangeBlocked}
                   onClick={() => void handleSaveNick()}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-2xl bg-brand-gradient px-4 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 disabled:opacity-60"
+                  className="btn-chunky inline-flex shrink-0 items-center gap-1.5 px-4 py-3 text-sm disabled:opacity-60"
                 >
                   {nickSaving ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -454,7 +442,7 @@ export default function ProfilPage() {
                 </button>
               </div>
               {nickCooldownText && (
-                <p className="mt-2 text-xs font-semibold text-amber-400/90">
+                <p className="mt-2 text-xs font-semibold text-accent/90">
                   {nickCooldownText}
                 </p>
               )}
@@ -462,10 +450,10 @@ export default function ProfilPage() {
                 <p
                   className={`mt-2 text-xs font-semibold ${
                     nickMessage.ok
-                      ? "text-emerald-400"
+                      ? "text-success"
                       : nickMessage.variant === "taken"
                         ? "text-red-400"
-                        : "text-zinc-400"
+                        : "text-muted"
                   }`}
                 >
                   {nickMessage.text}
@@ -480,12 +468,12 @@ export default function ProfilPage() {
                 icon={Trophy}
                 accent="amber"
               />
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
+              <div className="rounded-2xl border border-surface-border bg-white/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
                 <div className="flex items-start justify-between gap-2">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 sm:text-xs">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
                     Punkty XP
                   </p>
-                  <Sparkles className="h-4 w-4 shrink-0 text-orange-400" aria-hidden />
+                  <Sparkles className="h-4 w-4 shrink-0 text-accent" aria-hidden />
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <p className="text-xl font-black text-white sm:text-2xl">
@@ -493,7 +481,7 @@ export default function ProfilPage() {
                   </p>
                   <LevelBadge level={calculateLevel(profile.xp)} />
                 </div>
-                <p className="mt-0.5 text-xs font-semibold text-zinc-500">
+                <p className="mt-0.5 text-xs font-semibold text-muted">
                   doświadczenie
                 </p>
               </div>
@@ -539,14 +527,14 @@ export default function ProfilPage() {
             <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-center">
               <Link
                 href="/trening"
-                className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-300"
+                className="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-accent"
               >
                 <Swords className="h-4 w-4" />
                 Kontynuuj trening →
               </Link>
               <Link
                 href="/rankingi"
-                className="inline-flex items-center gap-2 text-sm font-bold text-orange-400 transition hover:text-orange-200"
+                className="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-accent"
               >
                 <Trophy className="h-4 w-4" />
                 Rankingi →

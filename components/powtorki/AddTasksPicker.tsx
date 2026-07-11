@@ -31,9 +31,9 @@ export function AddTasksPicker() {
   }, [search, path, solvedIds]);
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-zinc-900/60 p-5 sm:p-6">
+    <div className="rounded-3xl border border-surface-border bg-surface/60 p-5 sm:p-6">
       <h2 className="text-lg font-black text-white">Dodaj zadania do powtórek</h2>
-      <p className="mt-1 text-sm text-zinc-400">
+      <p className="mt-1 text-sm text-muted">
         {search.trim()
           ? "Wyniki wyszukiwania w bazie zadań."
           : solvedIds.size > 0
@@ -41,20 +41,20 @@ export function AddTasksPicker() {
             : "Wyszukaj zadania, które chcesz powtarzać."}
       </p>
 
-      <div className="mt-4 flex items-center gap-2 rounded-2xl border border-white/10 bg-zinc-950 px-3 py-2">
-        <Search className="h-4 w-4 shrink-0 text-zinc-500" aria-hidden />
+      <div className="mt-4 flex items-center gap-2 rounded-2xl border border-surface-border bg-background px-3 py-2">
+        <Search className="h-4 w-4 shrink-0 text-muted" aria-hidden />
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Szukaj po treści, tytule lub dziale…"
-          className="w-full bg-transparent text-sm font-semibold text-zinc-100 placeholder:text-zinc-600 focus:outline-none"
+          className="w-full bg-transparent text-sm font-semibold text-foreground placeholder:text-muted focus:outline-none"
         />
       </div>
 
       <ul className="mt-4 max-h-80 space-y-2 overflow-y-auto pr-1">
         {results.length === 0 && (
-          <li className="rounded-xl border border-white/5 bg-zinc-900/50 px-4 py-3 text-sm text-zinc-500">
+          <li className="rounded-xl border border-surface-border bg-surface/50 px-4 py-3 text-sm text-muted">
             Brak zadań do wyświetlenia.
           </li>
         )}
@@ -62,12 +62,12 @@ export function AddTasksPicker() {
           const inReview = isInReview(task.id);
           return (
             <li key={task.id}>
-              <div className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-zinc-900/60 px-4 py-3">
+              <div className="flex items-center justify-between gap-3 rounded-xl border border-surface-border bg-surface/60 px-4 py-3">
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-bold text-zinc-100">
+                  <p className="truncate text-sm font-bold text-foreground">
                     {task.title}
                   </p>
-                  <p className="mt-0.5 text-xs font-semibold text-zinc-500">
+                  <p className="mt-0.5 text-xs font-semibold text-muted">
                     {CATEGORY_LABELS[task.category]}
                   </p>
                 </div>
@@ -80,8 +80,8 @@ export function AddTasksPicker() {
                   }
                   className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${
                     inReview
-                      ? "border-emerald-500/40 bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/25"
-                      : "border-orange-500/40 bg-orange-500/10 text-orange-400 hover:bg-orange-500/20"
+                      ? "border-success/40 bg-success/15 text-success hover:bg-success/25"
+                      : "border-accent/40 bg-accent/10 text-accent hover:bg-accent/20"
                   }`}
                 >
                   {inReview ? (

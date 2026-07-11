@@ -36,15 +36,15 @@ export function ProfileAchievements() {
 
   return (
     <section className="mt-8">
-      <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6">
+      <div className="rounded-3xl border border-surface-border bg-white/5 p-5 backdrop-blur-xl sm:p-6">
         <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
             <Trophy className="h-4 w-4 text-yellow-400" aria-hidden />
             Osiągnięcia
           </div>
           <Link
             href="/osiagniecia"
-            className="text-xs font-bold text-orange-400 transition hover:text-orange-200"
+            className="text-xs font-bold text-accent transition hover:text-accent"
           >
             Zobacz wszystkie →
           </Link>
@@ -54,11 +54,11 @@ export function ProfileAchievements() {
           <span className="text-white">
             {ready ? `${unlockedCount} / ${total} zdobytych` : "Ładowanie…"}
           </span>
-          <span className="tabular-nums text-amber-400">{percent}%</span>
+          <span className="tabular-nums text-accent">{percent}%</span>
         </div>
-        <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-800">
+        <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-500 to-amber-500 transition-[width] duration-700"
+            className="progress-accent"
             style={{ width: `${percent}%` }}
           />
         </div>
@@ -72,8 +72,8 @@ export function ProfileAchievements() {
                 title={`${a.title} — ${unlocked ? "zdobyte" : a.description}`}
                 className={`flex h-10 w-10 items-center justify-center rounded-xl ${
                   unlocked
-                    ? "bg-gradient-to-br bg-brand-gradient text-white shadow-md"
-                    : "bg-zinc-800 text-zinc-600"
+                    ? "bg-accent text-on-accent shadow-md"
+                    : "bg-surface-hover text-muted"
                 }`}
               >
                 <AchievementGlyph icon={a.icon} className="h-5 w-5" />

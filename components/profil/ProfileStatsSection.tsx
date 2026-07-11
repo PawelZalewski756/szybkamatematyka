@@ -38,26 +38,26 @@ function KpiTile({
 }) {
   const iconColor =
     accent === "amber"
-      ? "text-amber-400"
+      ? "text-accent"
       : accent === "cyan"
-        ? "text-orange-400"
+        ? "text-accent"
         : accent === "orange"
-          ? "text-orange-400"
+          ? "text-accent"
           : accent === "emerald"
-            ? "text-emerald-400"
+            ? "text-success"
             : "text-yellow-400";
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md sm:p-4">
+    <div className="rounded-2xl border border-surface-border bg-white/5 p-3 backdrop-blur-md sm:p-4">
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 sm:text-xs">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
           {label}
         </p>
         <Icon className={`h-3.5 w-3.5 shrink-0 ${iconColor}`} aria-hidden />
       </div>
       <p className="mt-1.5 text-lg font-black text-white sm:text-xl">{value}</p>
       {sub && (
-        <p className="mt-0.5 text-[10px] font-semibold text-zinc-500 sm:text-xs">
+        <p className="mt-0.5 text-[10px] font-semibold text-muted sm:text-xs">
           {sub}
         </p>
       )}
@@ -83,18 +83,18 @@ function ActivityBarChart({ points }: { points: ActivityPoint[] }) {
           >
             <div className="flex h-20 w-full items-end justify-center">
               {point.active ? (
-                <div className="w-full max-w-[2rem] rounded-t-md bg-gradient-to-t from-orange-500 via-orange-500 to-amber-400 shadow-[0_0_12px_rgba(192,132,252,0.35)] transition-[height] duration-500 sm:max-w-none" style={{ height: "100%" }} />
+                <div className="w-full max-w-[2rem] rounded-t-md bg-accent shadow-[0_0_12px_rgba(244,183,64,0.25)] transition-[height] duration-500 sm:max-w-none" style={{ height: "100%" }} />
               ) : (
-                <div className="h-2 w-full max-w-[2rem] rounded-full bg-zinc-800 sm:max-w-none" />
+                <div className="h-2 w-full max-w-[2rem] rounded-full bg-surface-hover sm:max-w-none" />
               )}
             </div>
-            <span className="w-full truncate text-center text-[8px] font-semibold text-zinc-500 sm:text-[9px]">
+            <span className="w-full truncate text-center text-[8px] font-semibold text-muted sm:text-[9px]">
               {point.label.split(" ")[0]}
             </span>
           </div>
         ))}
       </div>
-      <p className="mt-2 text-center text-xs font-semibold text-zinc-500">
+      <p className="mt-2 text-center text-xs font-semibold text-muted">
         {activeCount} / {points.length} dni aktywnych
       </p>
     </div>
@@ -129,15 +129,15 @@ export function ProfileStatsSection({
 
   return (
     <section className="mt-8" aria-labelledby="profile-stats-heading">
-      <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-6">
+      <div className="rounded-3xl border border-surface-border bg-white/5 p-5 backdrop-blur-xl sm:p-6">
         <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-400">
-            <BarChart3 className="h-4 w-4 text-orange-400" aria-hidden />
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
+            <BarChart3 className="h-4 w-4 text-accent" aria-hidden />
             <span id="profile-stats-heading">Twój postęp</span>
           </div>
           {!ready && (
             <Loader2
-              className="h-4 w-4 animate-spin text-zinc-500"
+              className="h-4 w-4 animate-spin text-muted"
               aria-label="Ładowanie statystyk"
             />
           )}
@@ -145,8 +145,8 @@ export function ProfileStatsSection({
 
         {!ready ? (
           <div className="mt-6 flex flex-col items-center gap-3 py-8 text-center">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-orange-500/30 border-t-cyan-400" />
-            <p className="text-sm font-semibold text-zinc-500">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-accent/30 border-t-accent" />
+            <p className="text-sm font-semibold text-muted">
               Ładowanie statystyk…
             </p>
           </div>
@@ -210,40 +210,40 @@ export function ProfileStatsSection({
               />
             </div>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="mt-5 rounded-2xl border border-surface-border bg-white/5 p-4">
               <div className="flex items-center justify-between gap-2">
-                <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">
+                <p className="text-xs font-bold uppercase tracking-wider text-muted">
                   Postęp do poziomu {stats.level + 1}
                 </p>
                 <LevelBadge level={stats.level} />
               </div>
               <div className="mt-2 flex items-center justify-between text-sm font-bold tabular-nums">
-                <span className="text-zinc-400">
+                <span className="text-muted">
                   {stats.currentLevelXp} / {stats.xpForNextLevel} XP
                 </span>
-                <span className="text-amber-400">{xpPercent}%</span>
+                <span className="text-accent">{xpPercent}%</span>
               </div>
-              <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-zinc-800">
+              <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-surface-hover">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-orange-600 via-orange-500 to-orange-500 transition-[width] duration-700"
+                  className="progress-accent"
                   style={{ width: `${xpPercent}%` }}
                 />
               </div>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="mt-5 rounded-2xl border border-surface-border bg-white/5 p-4">
               <div className="flex items-center justify-between gap-2">
-                <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">
+                <p className="text-xs font-bold uppercase tracking-wider text-muted">
                   Aktywność
                 </p>
-                <div className="flex gap-1 rounded-xl bg-zinc-900/80 p-0.5">
+                <div className="flex gap-1 rounded-xl bg-surface/80 p-0.5">
                   <button
                     type="button"
                     onClick={() => setRange(7)}
                     className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
                       range === 7
-                        ? "bg-brand-gradient text-white"
-                        : "text-zinc-500 hover:text-zinc-300"
+                        ? "filter-chip-active"
+                        : "filter-chip"
                     }`}
                   >
                     7 dni
@@ -253,8 +253,8 @@ export function ProfileStatsSection({
                     onClick={() => setRange(14)}
                     className={`rounded-lg px-2.5 py-1 text-[10px] font-black uppercase tracking-wide transition sm:text-xs ${
                       range === 14
-                        ? "bg-brand-gradient text-white"
-                        : "text-zinc-500 hover:text-zinc-300"
+                        ? "filter-chip-active"
+                        : "filter-chip"
                     }`}
                   >
                     14 dni
@@ -266,11 +266,11 @@ export function ProfileStatsSection({
                 stats.hasActivityHistory ? (
                   <ActivityBarChart points={activityPoints} />
                 ) : (
-                  <div className="mt-4 rounded-xl border border-dashed border-white/10 bg-zinc-900/40 px-4 py-6 text-center">
-                    <p className="text-sm font-semibold text-zinc-400">
+                  <div className="mt-4 rounded-xl border border-dashed border-surface-border bg-surface/40 px-4 py-6 text-center">
+                    <p className="text-sm font-semibold text-muted">
                       Historia aktywności buduje się od pierwszych wizyt
                     </p>
-                    <p className="mt-1 text-xs text-zinc-600">
+                    <p className="mt-1 text-xs text-muted">
                       XP, seria i rozwiązane zadania są już widoczne powyżej.
                       Wykres wypełni się, gdy zaczniesz regularnie grać.
                     </p>
@@ -280,8 +280,8 @@ export function ProfileStatsSection({
             </div>
           </>
         ) : (
-          <div className="mt-4 rounded-xl border border-dashed border-white/10 px-4 py-6 text-center">
-            <p className="text-sm font-semibold text-zinc-400">
+          <div className="mt-4 rounded-xl border border-dashed border-surface-border px-4 py-6 text-center">
+            <p className="text-sm font-semibold text-muted">
               Brak danych statystycznych
             </p>
           </div>

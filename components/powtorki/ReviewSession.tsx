@@ -100,13 +100,13 @@ export function ReviewSession({
     // Brak zadań do pokazania (np. wszystkie usunięte z katalogu).
     return (
       <div className="mx-auto flex w-full max-w-lg flex-1 flex-col items-center justify-center px-4 py-16 text-center">
-        <p className="text-lg font-bold text-zinc-200">
+        <p className="text-lg font-bold text-foreground">
           Brak zadań do powtórki
         </p>
         <button
           type="button"
           onClick={onExit}
-          className="mt-6 text-sm font-bold text-orange-400 hover:text-orange-200"
+          className="mt-6 text-sm font-bold text-accent hover:text-accent"
         >
           ← Wróć do panelu
         </button>
@@ -125,19 +125,19 @@ export function ReviewSession({
         <button
           type="button"
           onClick={onExit}
-          className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-400 transition hover:text-orange-200"
+          className="inline-flex items-center gap-1.5 text-sm font-bold text-accent transition hover:text-accent"
         >
           <ArrowLeft className="h-4 w-4" />
           Przerwij
         </button>
-        <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+        <span className="text-xs font-bold uppercase tracking-wider text-muted">
           {Math.min(answeredUnique + 1, totalUnique)} / {totalUnique}
         </span>
       </div>
 
       <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-white/10">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-orange-500 to-orange-500"
+          className="progress-accent"
           animate={{ width: `${progressPct}%` }}
           transition={{ duration: 0.3 }}
         />
@@ -153,35 +153,35 @@ export function ReviewSession({
           className="flex flex-1 flex-col"
         >
           <div className="flex flex-wrap gap-2">
-            <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs font-bold text-orange-300">
+            <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
               {CATEGORY_LABELS[task.category]}
             </span>
-            <span className="rounded-md border border-white/10 bg-zinc-800 px-2 py-1 text-xs font-bold text-zinc-300">
+            <span className="rounded-md border border-surface-border bg-surface-hover px-2 py-1 text-xs font-bold text-foreground">
               {DIFFICULTY_LABELS[task.difficulty]}
             </span>
           </div>
 
-          <div className="mt-4 rounded-3xl border border-orange-500/20 bg-zinc-900/90 p-6 sm:p-8">
+          <div className="mt-4 rounded-3xl border border-accent/20 bg-surface/90 p-6 sm:p-8">
             <h2 className="text-xl font-black text-white">{task.title}</h2>
             <div className="mt-3">
               <TheoryMarkdown content={task.prompt} />
             </div>
             {task.hint && !answered && (
-              <p className="mt-3 text-sm text-zinc-500">💡 {task.hint}</p>
+              <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
             )}
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {task.choices.map((choice, choiceIndex) => {
                 let style =
-                  "border-white/10 bg-zinc-950 hover:border-orange-500/40 hover:bg-orange-500/10";
+                  "border-surface-border bg-background hover:border-accent/40 hover:bg-accent/10";
                 if (answered) {
                   if (choiceIndex === task.correctIndex) {
                     style =
-                      "border-emerald-500/60 bg-emerald-500/20 text-emerald-100";
+                      "border-success/60 bg-success/20 text-success";
                   } else if (choiceIndex === picked) {
                     style = "border-red-500/60 bg-red-500/20 text-red-100";
                   } else {
-                    style = "border-white/5 bg-zinc-900/50 opacity-50";
+                    style = "border-surface-border bg-surface/50 opacity-50";
                   }
                 }
 
@@ -196,7 +196,7 @@ export function ReviewSession({
                   >
                     {choice}
                     {answered && choiceIndex === task.correctIndex && (
-                      <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-emerald-400" />
+                      <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-success" />
                     )}
                     {answered &&
                       choiceIndex === picked &&
@@ -214,14 +214,14 @@ export function ReviewSession({
                 animate={{ opacity: 1, y: 0 }}
                 className={`mt-6 rounded-2xl border p-4 ${
                   isCorrect
-                    ? "border-emerald-500/40 bg-emerald-500/10"
+                    ? "border-success/40 bg-success/10"
                     : "border-red-500/40 bg-red-500/10"
                 }`}
               >
                 <p className="font-black text-white">
                   {isCorrect ? "Dobrze! 🎉" : "Wróci do powtórki wkrótce"}
                 </p>
-                <p className="mt-2 text-sm text-zinc-300">{task.explanation}</p>
+                <p className="mt-2 text-sm text-foreground">{task.explanation}</p>
                 {task.solutionSteps && task.solutionSteps.length > 0 && (
                   <SolutionSteps
                     steps={task.solutionSteps}
@@ -236,7 +236,7 @@ export function ReviewSession({
             <button
               type="button"
               onClick={handleNext}
-              className="mt-6 inline-flex items-center justify-center gap-2 self-end rounded-2xl border border-orange-500/30 bg-gradient-to-r from-orange-500/90 to-orange-600/90 px-6 py-3 text-sm font-black text-white shadow-[0_0_24px_rgba(232,112,42,0.2)] transition hover:scale-[1.02]"
+              className="btn-chunky mt-6 inline-flex items-center justify-center gap-2 self-end px-6 py-3 text-sm"
             >
               {index + 1 >= queue.length ? "Zakończ" : "Następne"}
               <ArrowRight className="h-4 w-4" />
