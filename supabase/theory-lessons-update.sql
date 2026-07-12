@@ -1,10 +1,17 @@
 -- Wygenerowano: npm run seed:theory-sql
 -- Uruchom w Supabase SQL Editor (Dashboard → SQL).
--- Aktualizuje title + content dla 25 tematów CKE.
+-- UPSERT 55 tematów CKE (INSERT + UPDATE przy istniejącym slugu).
 
-UPDATE public.materials SET
-  title = 'Potęgowanie i pierwiastkowanie - klucz do sukcesu na maturze',
-  content = '## Na egzaminie
+CREATE UNIQUE INDEX IF NOT EXISTS materials_exam_category_topic_uidx
+  ON public.materials (exam_type, category, topic);
+
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'potegi',
+  'Potęgowanie i pierwiastkowanie - klucz do sukcesu na maturze',
+  '## Na egzaminie
 Potęgi i pierwiastki pojawiają się na maturze podstawowej dość często, zazwyczaj w zadaniach otwartych (gdzie liczą się punkty za obliczenia) i zamkniętych (kilka pytań sprawdzających znajomość wzorów). CKE lubi sprawdzać umiejętność stosowania wzorów skróconego mnożenia w połączeniu z potęgami, a także sprowadzanie wyrażeń do prostszej postaci, co jest niezbędne w dalszych etapach rozwiązywania zadań. Typowo zadania te są warte 1-3 punkty, zależnie od stopnia skomplikowania.
 
 ## Mapa tematu
@@ -190,14 +197,21 @@ Wyrażenie wynosi $2 \cdot \frac{1}{3} + 4 \cdot \frac{1}{3} = \frac{2}{3} + \fr
 
        Upraszczanie:
        sqrt[n]{k^n * l} = k * sqrt[n]{l}
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'potegi';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Logarytmy – definicje, własności i zadania maturalne',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'logarytmy',
+  'Logarytmy – definicje, własności i zadania maturalne',
+  '## Na egzaminie
 Logarytmy pojawiają się na maturze z matematyki na poziomie podstawowym dość regularnie, choć nie w każdym arkuszu. Najczęściej występują w zadaniach zamkniętych, a ich rozwiązanie opiera się na znajomości definicji oraz podstawowych własności logarytmów. Zadania te zazwyczaj są punktowane po 1 punkcie, a ich trudność nie jest wysoka, jeśli opanuje się kluczowe wzory i zasady. CKE lubi sprawdzać umiejętność stosowania definicji logarytmu, zamiany postaci logarytmicznej na wykładniczą i odwrotnie, a także wykorzystanie podstawowych własności do upraszczania wyrażeń.
 
 ## Mapa tematu
@@ -327,14 +341,21 @@ $a > 0$
 $a \neq 1$
 $b > 0$
 
-Przykład: $\log_2 8 = 3 \iff 2^3 = 8$.'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'logarytmy';
+Przykład: $\log_2 8 = 3 \iff 2^3 = 8$.',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Procenty i proporcje',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'procenty',
+  'Procenty i proporcje',
+  '## Na egzaminie
 Zadania z procentów i proporcji pojawiają się na maturze podstawowej praktycznie co roku. Mogą występować w formie zadań zamkniętych (testowych) lub otwartych. Zazwyczaj są to zadania o prostej lub średniej trudności, a ich prawidłowe rozwiązanie może przynieść od 1 do nawet 4 punktów. Egzaminatorzy często sprawdzają umiejętność stosowania procentu składanego, obliczania podwyżek i obniżek cen, a także rozwiązywania problemów z wykorzystaniem proporcji prostych i odwrotnie proporcjonalnych.
 
 ## Mapa tematu
@@ -468,14 +489,21 @@ $\frac{15}{25} = \frac{3}{5} = 0.6 = 60\%$ (chłopcy). Wynik jest poprawny.
 2.  Jak obliczyć $10\%$ danej liczby?
 3.  Czym różni się obniżka o $10\%$ od zwiększenia o $10\%$?
 4.  Jeśli cena $X$ została podwyższona o $20\%$ i wynosi teraz $120$ zł, to ile wynosiła cena $X$?
-5.  Jeśli na trasę $100$ km potrzeba $2$ godzin przy stałej prędkości, ile czasu zajmie pokonanie tej trasy, jeśli prędkość zostanie zmniejszona dwukrotnie?'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'procenty';
+5.  Jeśli na trasę $100$ km potrzeba $2$ godzin przy stałej prędkości, ile czasu zajmie pokonanie tej trasy, jeśli prędkość zostanie zmniejszona dwukrotnie?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Notacja wykładnicza',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'notacja_wykladnicza',
+  'Notacja wykładnicza',
+  '## Na egzaminie
 Zadania związane z notacją wykładniczą pojawiają się na maturze podstawowej regularnie, zazwyczaj jako elementy większych zadań dotyczących liczb rzeczywistych lub jako zadania zamknięte za 1 punkt. CKE sprawdza przede wszystkim umiejętność zamiany liczb na notację wykładniczą i odwrotnie, a także wykonywania podstawowych działań (mnożenie, dzielenie, rzadziej dodawanie i odejmowanie) na liczbach w tej postaci.
 
 ## Mapa tematu
@@ -699,14 +727,21 @@ Odpowiedź: $2 \cdot 10^{24}$ cząsteczek wody waży $6 \cdot 10^1$ grama.
 2.  Czy liczba $0,5 \cdot 10^4$ jest poprawnie zapisana w notacji wykładniczej? Jeśli nie, to dlaczego?
 3.  Jaka jest zasada dotycząca wykładników potęgi 10 przy dzieleniu liczb w notacji wykładniczej?
 4.  Jak przekształcić liczbę $2,5 \cdot 10^6$ na postać z wykładnikiem $10^5$?
-5.  Dla jakich liczb całkowitych $k$ wykładnik w notacji wykładniczej jest ujemny?'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'notacja_wykladnicza';
+5.  Dla jakich liczb całkowitych $k$ wykładnik w notacji wykładniczej jest ujemny?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wartość bezwzględna – klucz do zrozumienia liczb',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'wartosc_bezwzgledna',
+  'Wartość bezwzględna – klucz do zrozumienia liczb',
+  '## Na egzaminie
 Wartość bezwzględna pojawia się na maturze podstawowej regularnie, zazwyczaj jako element zadań dotyczących równań, nierówności lub funkcji. Zadania z tym tematem mogą być warte od 2 do nawet 4 punktów. CKE często sprawdza umiejętność rozwiązywania równań i nierówności z wartością bezwzględną oraz rozumienie geometrycznej interpretacji wartości bezwzględnej jako odległości na osi liczbowej.
 
 ## Mapa tematu
@@ -868,14 +903,21 @@ Np. |-2| = 2 (odległość 2 od 0)
 Równanie |x - k| = c to odległość x od k jest równa c.
 Np. |x - 2| = 3 oznacza, że x jest oddalone od 2 o 3.
     Rozwiązania: x = 2+3=5 lub x = 2-3=-1.
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'wartosc_bezwzgledna';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Kolejność wykonywania działań',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'liczby_rzeczywiste',
+  'kolejnosc_dzialan',
+  'Kolejność wykonywania działań',
+  '## Na egzaminie
 Kolejność wykonywania działań to fundamentalna umiejętność sprawdzana na maturze z matematyki na poziomie podstawowym. Zadania dotyczące kolejności działań pojawiają się co roku, często jako pierwsze zadania otwarte lub jako element bardziej złożonych zadań. Poprawne ich rozwiązanie pozwala na zdobycie pewnych punktów, zwykle 1-3, i buduje pewność siebie przed trudniejszymi problemami. CKE często sprawdza umiejętność radzenia sobie z ułamkami, potęgami oraz nawiasami.
 
 ## Mapa tematu
@@ -1062,14 +1104,21 @@ Wynik końcowy: $ \frac{7}{2} $ lub $ 3 \frac{1}{2} $.
 | 4. Dodawanie i Odejmowanie               |
 |    $ + $, $ - $ (od lewej do prawej)     |
 +------------------------------------------+
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'liczby_rzeczywiste'
-  AND topic = 'kolejnosc_dzialan';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wyrażenia algebraiczne i ich przekształcanie',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'wyrazenia_algebraiczne',
+  'Wyrażenia algebraiczne i ich przekształcanie',
+  '## Na egzaminie
 Wyrażenia algebraiczne pojawiają się na maturze z matematyki na poziomie podstawowym bardzo często, zarówno w zadaniach zamkniętych, jak i otwartych. Zazwyczaj dotyczą one upraszczania wyrażeń, działań na nich (dodawanie, odejmowanie, mnożenie, dzielenie), lub wykorzystania ich w zadaniach tekstowych i geometrycznych. Poprawne opanowanie tego działu pozwoli zdobyć od kilku do kilkunastu punktów. CKE często sprawdza umiejętność sprowadzenia wyrażenia do najprostszej postaci, a także stosowanie wzorów skróconego mnożenia.
 
 ## Mapa tematu
@@ -1252,14 +1301,21 @@ Mnożymy znalezione boki: $(2x+3)(3x-1) = 2x \cdot 3x + 2x \cdot (-1) + 3 \cdot 
 | - (a-b)^2           |
 | - a^2 - b^2         |
 +---------------------+
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'wyrazenia_algebraiczne';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wzory skróconego mnożenia na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'wzory_skroconego_mnozenia',
+  'Wzory skróconego mnożenia na maturze',
+  '## Na egzaminie
 Wzory skróconego mnożenia pojawiają się na maturze podstawowej bardzo często, zazwyczaj w zadaniach otwartych, ale także jako element trudniejszych zadań zamkniętych. Punkty można zdobyć za zastosowanie wzorów do upraszczania wyrażeń, rozwiązywania równań lub dowodzenia tożsamości. CKE lubi sprawdzać umiejętność rozpoznawania i poprawnego stosowania podstawowych wzorów: kwadrat sumy, kwadrat różnicy oraz różnica kwadratów.
 
 ## Mapa tematu
@@ -1427,14 +1483,21 @@ Obie metody dają ten sam wynik.
       Rozwijanie   Rozwijanie  Rozwijanie
       kwadratu    kwadratu     iloczynu
         sumy       różnicy    sumy i różnicy
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'wzory_skroconego_mnozenia';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Równania liniowe — pełny kurs',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'rownania_liniowe',
+  'Równania liniowe — pełny kurs',
+  '## Na egzaminie
 
 Równania liniowe to **fundament matury podstawowej** — pojawiają się w prawie każdym arkuszu: jako samodzielne zadanie otwarte (2–3 pkt), element układu równań albo krok w zadaniu tekstowym. CKE sprawdza: przekształcanie, ułamki, nawiasy, interpretację wyniku (brak / jeden / nieskończenie wiele rozwiązań).
 
@@ -1559,14 +1622,21 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 2. Jak rozpoznać równanie sprzeczne?
 3. Dlaczego warto sprawdzać wynik podstawieniem?
 4. Co zrobić, gdy w równaniu są ułamki?
-5. Jaka jest postać ogólna równania liniowego?'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'rownania_liniowe';
+5. Jaka jest postać ogólna równania liniowego?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Równania kwadratowe',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'rownania_kwadratowe',
+  'Równania kwadratowe',
+  '## Na egzaminie
 Równania kwadratowe to jeden z fundamentalnych działów algebry, który regularnie pojawia się na maturze z matematyki. Zadania dotyczące równań kwadratowych pojawiają się zazwyczaj w zadaniach otwartych, choć mogą też występować w formie pytań zamkniętych. Zazwyczaj są to zadania warte 3–4 punkty, często wymagające obliczenia wyróżnika (delty) i pierwiastków równania. CKE często sprawdza umiejętność interpretacji pierwiastków w kontekście geometrycznym (np. punkty przecięcia paraboli z osią x) lub w zadaniach tekstowych.
 
 ## Mapa tematu
@@ -1765,14 +1835,21 @@ Parabola $y = ax^2 + bx + c$ i jej związek z pierwiastkami równania $ax^2 + bx
   /           \
 
   (Przykład dla a > 0 i Delta > 0)
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'rownania_kwadratowe';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Nierówności liniowe',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'nierownosci',
+  'Nierówności liniowe',
+  '## Na egzaminie
 Nierówności liniowe pojawiają się na maturze podstawowej stosunkowo często, zazwyczaj jako samodzielne zadania otwarte lub jako część zadań zamkniętych. Mają na celu sprawdzenie umiejętności rozwiązywania prostych równań, przekształcania ich oraz interpretacji wyników. Zadania te zazwyczaj można rozwiązać w kilku prostych krokach, a ich punktacja wynosi 1-2 punkty.
 
 ## Mapa tematu
@@ -1963,14 +2040,21 @@ W tym zmodyfikowanym przypadku, poprawną odpowiedzią byłoby B.
 4.  Jakie jest rozwiązanie nierówności $x \geq 5$?
 5.  Czy liczba 3 należy do przedziału $(-3, 3)$?
 
-## Diagram'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'nierownosci';
+## Diagram',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Układy równań liniowych na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'algebra',
+  'uklady_rownan',
+  'Układy równań liniowych na maturze',
+  '## Na egzaminie
 Układy równań liniowych pojawiają się na maturze na poziomie podstawowym regularnie, zazwyczaj w zadaniach otwartych (gdzie można zdobyć 3-4 punkty) lub jako element innych zadań. CKE często sprawdza umiejętność tworzenia układu równań na podstawie treści zadania oraz jego rozwiązywania, stosując różne metody. Ważne jest, aby opanować zarówno metodę podstawiania, jak i przeciwnych współczynników.
 
 ## Mapa tematu
@@ -2244,14 +2328,21 @@ $\frac{300}{500} = \frac{3}{5} = 0.6 = 60\%$. Zgadza się.
     /  |
    /   |
   /    |
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'algebra'
-  AND topic = 'uklady_rownan';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Funkcja liniowa na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'funkcje',
+  'funkcja_liniowa',
+  'Funkcja liniowa na maturze',
+  '## Na egzaminie
 Funkcja liniowa pojawia się na maturze z matematyki na poziomie podstawowym dosyć często, zazwyczaj w zadaniach otwartych, gdzie można uzyskać od 2 do 4 punktów. CKE lubi sprawdzać rozumienie pojęć takich jak współczynnik kierunkowy i wyraz wolny, umiejętność rysowania wykresu funkcji, znajdowania miejsc zerowych, określania monotoniczności oraz rozwiązywania prostych zadań tekstowych i geometrycznych związanych z prostymi. Często zadania dotyczą interpretacji geometrycznej rozwiązań układów równań liniowych lub analizy położenia prostych na płaszczyźnie (równoległość, prostopadłość).
 
 ## Mapa tematu
@@ -2477,14 +2568,21 @@ Wynik $m < 1$ jest poprawny.
     /|
    / | (a<0, malejąca)
   /  |
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'funkcje'
-  AND topic = 'funkcja_liniowa';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Funkcja kwadratowa – od podstaw do matury',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'funkcje',
+  'funkcja_kwadratowa',
+  'Funkcja kwadratowa – od podstaw do matury',
+  '## Na egzaminie
 Funkcja kwadratowa pojawia się na maturze bardzo często, zazwyczaj w zadaniach otwartych (na 4 lub 6 punktów) lub jako element zadań zamkniętych. CKE lubi sprawdzać umiejętność badania własności funkcji (monotoniczność, miejsca zerowe, wierzchołek), szkicowanie wykresu, rozwiązywanie nierówności kwadratowych oraz zastosowania w zadaniach optymalizacyjnych lub geometrycznych.
 
 ## Mapa tematu
@@ -2760,14 +2858,21 @@ $P(5) = -\frac{1}{2}(5)^2 + 5 \cdot 5 = -\frac{1}{2} \cdot 25 + 25 = -12.5 + 25 
      x1   |     x2
           |
           |
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'funkcje'
-  AND topic = 'funkcja_kwadratowa';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Własności funkcji i odczytywanie ich z wykresu',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'funkcje',
+  'wlasnosci_funkcji',
+  'Własności funkcji i odczytywanie ich z wykresu',
+  '## Na egzaminie
 Zagadnienia dotyczące własności funkcji oraz odczytywania informacji z ich wykresów pojawiają się na maturze podstawowej regularnie, zazwyczaj jako zadanie otwarte lub element zadań zamkniętych. Przeważnie są to zadania punktujące od 2 do 4 punktów. CKE lubi sprawdzać rozumienie pojęć takich jak: monotoniczność (rosnąca, malejąca), wartości ekstremalne (najmniejsza, największa), zbiór wartości, miejsca zerowe, a także interpretację graficzną tych własności.
 
 ## Mapa tematu
@@ -3117,14 +3222,21 @@ Jeśli przyjąć definicję *rosnącej* jako *niemalejącej*, to D jest prawdziw
       | /
    -2 *            (-4,-2) - można dopowiedzieć
       |
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'funkcje'
-  AND topic = 'wlasnosci_funkcji';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Odczyt wykresu funkcji',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'funkcje',
+  'odczyt_wykresu',
+  'Odczyt wykresu funkcji',
+  '## Na egzaminie
 Zadania dotyczące odczytu wykresu funkcji pojawiają się na maturze z matematyki na poziomie podstawowym regularnie, zwykle w arkuszu zamkniętym, rzadziej w otwartym. Zazwyczaj są to zadania proste, warte 1-2 punkty. CKE często sprawdza umiejętność odczytywania wartości funkcji dla podanego argumentu (szczególnie dla punktów charakterystycznych, jak wierzchołek paraboli, punkty przecięcia z osiami) oraz znajdowania argumentów dla danej wartości funkcji. Analizuje się również własności funkcji (monotoniczność, miejsca zerowe, wartości ekstremalne) na podstawie jej wykresu.
 
 ## Mapa tematu
@@ -3440,14 +3552,21 @@ Na egzaminie należałoby wybrać opcję zawierającą zdania I i II.
       | |  | <- Znajdź x na osi X, idź pionowo do wykresu, odczytaj y
       | |
       | | <- Znajdź y na osi Y, idź poziomo do wykresu, odczytaj x
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'funkcje'
-  AND topic = 'odczyt_wykresu';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Ciąg arytmetyczny',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'ciagi',
+  'ciag_arytmetyczny',
+  'Ciąg arytmetyczny',
+  '## Na egzaminie
 Ciągi arytmetyczne pojawiają się na maturze bardzo często, zazwyczaj w zadaniach otwartych, gdzie można zdobyć nawet 3–4 punkty. CKE lubi sprawdzać znajomość wzorów na $n$-ty wyraz i sumę $n$ początkowych wyrazów, umiejętność obliczania różnicy ciągu, znajdowania konkretnych wyrazów oraz rozwiązywania prostych zadań tekstowych z ich wykorzystaniem. Czasem pojawiają się również zadania otwarte wymagające wykazania własności ciągu arytmetycznego.
 
 ## Mapa tematu
@@ -3743,14 +3862,21 @@ Zakładam, że zadanie 6 w oryginalnej formie jest błędne lub niepełne.
 | - Geometria (np.    |
 |   pola, obwody)     |
 +---------------------+
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'ciagi'
-  AND topic = 'ciag_arytmetyczny';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Ciąg geometryczny na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'ciagi',
+  'ciag_geometryczny',
+  'Ciąg geometryczny na maturze',
+  '## Na egzaminie
 Ciąg geometryczny pojawia się na maturze z matematyki na poziomie podstawowym stosunkowo często, zazwyczaj w zadaniach otwartych lub jako element trudniejszych zadań. Spodziewaj się 1-2 zadań w arkuszu, punktowanych zazwyczaj od 3 do 5 punktów. CKE często sprawdza umiejętność obliczania wyrazów ciągu, sumy częściowej, a także rozwiązywania równań związanych ze wzorami na ogólny wyraz ciągu geometrycznego. Często pojawiają się zadania tekstowe, gdzie trzeba zidentyfikować, że opisana sytuacja to ciąg geometryczny.
 
 ## Mapa tematu
@@ -3962,14 +4088,21 @@ Odpowiedź: Wartość $x$ wynosi 4.
       | * q
       v
     a_{n+1}
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'ciagi'
-  AND topic = 'ciag_geometryczny';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Sinus, cosinus i tangens - podstawy trygonometrii',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'trygonometria',
+  'sin_cos_tg',
+  'Sinus, cosinus i tangens - podstawy trygonometrii',
+  '## Na egzaminie
 Trygonometria pojawia się na maturze podstawowej zazwyczaj w 2-3 zadaniach, w tym jednym otwartym. Zadania te sprawdzają znajomość definicji funkcji trygonometrycznych w trójkącie prostokątnym, wartości dla kątów ostrych oraz podstawowe tożsamości trygonometryczne. Punkty za te zadania wynoszą zazwyczaj łącznie około 5-8.
 
 ## Mapa tematu
@@ -4146,14 +4279,21 @@ $c = 10$
   /
  /
 A
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'trygonometria'
-  AND topic = 'sin_cos_tg';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Zastosowania trygonometrii w zadaniach maturalnych',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'trygonometria',
+  'zastosowania_trygonometrii',
+  'Zastosowania trygonometrii w zadaniach maturalnych',
+  '## Na egzaminie
 Zadania wykorzystujące trygonometrię pojawiają się na maturze podstawowej regularnie, zarówno jako zadania zamknięte (zwykle 1-2 punkty), jak i otwarte (3-4 punkty). CKE często sprawdza umiejętność stosowania podstawowych funkcji trygonometrycznych (sinus, cosinus, tangens) w kontekście geometrii, szczególnie w trójkątach prostokątnych i równoległobokach, a także w zadaniach tekstowych wymagających obliczenia odległości lub wysokości. Kluczowe jest swobodne operowanie wzorami i interpretacja wyników.
 
 ## Mapa tematu
@@ -4350,14 +4490,21 @@ Odpowiedź: Pole równoległoboku wynosi $24 \text{ cm}^2$.
   /    |
  /_ _ _|
    alfa
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'trygonometria'
-  AND topic = 'zastosowania_trygonometrii';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Planimetria - podstawowe figury i twierdzenia',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'geometria',
+  'planimetria',
+  'Planimetria - podstawowe figury i twierdzenia',
+  '## Na egzaminie
 Zadania z planimetrii pojawiają się regularnie na maturze z matematyki na poziomie podstawowym, zarówno w zadaniach otwartych, jak i zamkniętych. Zazwyczaj można zdobyć od 3 do nawet 7 punktów za jedno zadanie z tego działu. Kluczowe jest opanowanie podstawowych figur geometrycznych, ich własności oraz kluczowych twierdzeń, takich jak twierdzenie Pitagorasa czy twierdzenia dotyczące podobieństwa trójkątów.
 
 ## Mapa tematu
@@ -4537,14 +4684,21 @@ c/        \d
 /          \
 +------------+
       a
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'geometria'
-  AND topic = 'planimetria';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Twierdzenie Pitagorasa i Trójkąty Podobne',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'geometria',
+  'pitagoras_i_podobienstwo',
+  'Twierdzenie Pitagorasa i Trójkąty Podobne',
+  '## Na egzaminie
 Twierdzenie Pitagorasa oraz własności trójkątów podobnych pojawiają się na maturze podstawowej regularnie, zarówno jako samodzielne zadania, jak i elementy zadań złożonych, często w kontekście geometrii płaskiej (planimetrii). Zadania te zazwyczaj warte są od 2 do 4 punktów, a ich rozwiązanie wymaga poprawnego zastosowania wzorów i logicznego rozumowania. CKE lubi sprawdzać umiejętność wyznaczania brakujących boków w trójkątach prostokątnych oraz stosowania skali podobieństwa.
 
 ## Mapa tematu
@@ -4723,14 +4877,21 @@ Odpowiedź: B
   /____|
      b
 ```
-(Trójkąt prostokątny, gdzie $a$ i $b$ to przyprostokątne, a przeciwprostokątna jest ukośnym bokiem)'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'geometria'
-  AND topic = 'pitagoras_i_podobienstwo';
+(Trójkąt prostokątny, gdzie $a$ i $b$ to przyprostokątne, a przeciwprostokątna jest ukośnym bokiem)',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Okrąg i koło na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'geometria',
+  'okrag_i_kolo',
+  'Okrąg i koło na maturze',
+  '## Na egzaminie
 Okazje do sprawdzenia wiedzy o okręgu i kole pojawiają się na maturze podstawowej co roku, zazwyczaj w zadaniach zamkniętych (1-2 punkty) lub jako element zadań otwartych, często w połączeniu z geometrią analityczną lub planimetrią. CKE lubi sprawdzać rozumienie definicji, wzorów na pole i obwód koła, a także związków między promieniem, średnicą i cięciwą. Często pojawiają się zadania wymagające obliczenia pola wycinka koła lub długości łuku.
 
 ## Mapa tematu
@@ -4903,14 +5064,21 @@ Potrzebujemy około 31,4 metrów bieżących kamieni.
 Odcinek AB - średnica (gdy przechodzi przez O)
 Odcinek AC - cięciwa
 Odcinek OA - promień
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'geometria'
-  AND topic = 'okrag_i_kolo';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Bryły i ich objętości – klucz do zadań z geometrii przestrzennej',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'geometria',
+  'stereometria',
+  'Bryły i ich objętości – klucz do zadań z geometrii przestrzennej',
+  '## Na egzaminie
 Zadania ze stereometrii pojawiają się na maturze podstawowej dość regularnie, zazwyczaj jako jedno z zadań zamkniętych lub otwartych. Przeważnie dotyczą obliczania objętości lub pól powierzchni prostych brył, takich jak graniastosłupy, ostrosłupy, walce, stożki czy kule. Zwykle można za nie uzyskać 3–5 punktów, a kluczem do sukcesu jest poprawne zidentyfikowanie bryły, przypomnienie sobie lub wyprowadzenie odpowiednich wzorów oraz staranne przeprowadzenie obliczeń.
 
 ## Mapa tematu
@@ -5048,14 +5216,21 @@ Można zmieścić 14 opakowań soku.
    `---------''
 
      O         <-- Kula (centrym)
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'geometria'
-  AND topic = 'stereometria';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Geometria analityczna na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'geometria',
+  'geometria_analityczna',
+  'Geometria analityczna na maturze',
+  '## Na egzaminie
 Geometria analityczna pojawia się na maturze podstawowej regularnie, zazwyczaj jako zadanie otwarte warte 3-5 punktów lub jako część zadań zamkniętych. CKE najczęściej sprawdza umiejętność obliczania odległości między punktami, środka odcinka, równania prostej oraz jej położenia względem innych prostych (równoległość, prostopadłość). Często pojawiają się też zadania dotyczące pól figur na płaszczyźnie kartezjańskiej.
 
 ## Mapa tematu
@@ -5193,14 +5368,21 @@ Pole: $\frac{1}{2}|11| = 5.5$.
        A=(xA, yA) B=(xB, yB)
          |
 ```
-Diagram przedstawia trójkąt ABC. AB to odcinek. M to rzut punktu C na prostą przechodzącą przez AB. ''h'' to wysokość trójkąta opuszczona na podstawę AB. W geometrii analitycznej można obliczyć długość podstawy i wysokość, lub użyć bezpośredniego wzoru na pole.'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'geometria'
-  AND topic = 'geometria_analityczna';
+Diagram przedstawia trójkąt ABC. AB to odcinek. M to rzut punktu C na prostą przechodzącą przez AB. ''h'' to wysokość trójkąta opuszczona na podstawę AB. W geometrii analitycznej można obliczyć długość podstawy i wysokość, lub użyć bezpośredniego wzoru na pole.',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wariacje, permutacje i kombinacje na maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'kombinatoryka',
+  'kombinatoryka',
+  'Wariacje, permutacje i kombinacje na maturze',
+  '## Na egzaminie
 Zadania z kombinatoryki pojawiają się na maturze z matematyki na poziomie podstawowym bardzo często, zazwyczaj w zadaniach otwartych, gdzie można uzyskać najwięcej punktów (4-6). CKE lubi sprawdzać umiejętność rozróżniania między wariacjami z powtórzeniami i bez, permutacjami oraz kombinacjami, a także umiejętność stosowania tych pojęć w kontekście zadań tekstowych. Często pojawiają się zadania dotyczące kolejności, wyboru elementów z grupy lub tworzenia liczb z cyfr.
 
 ## Mapa tematu
@@ -5423,14 +5605,21 @@ Możliwe kombinacje:
 {C, D, E}
 
 Łącznie: 10 kombinacji (C_5^3 = 10)
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'kombinatoryka'
-  AND topic = 'kombinatoryka';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Prawdopodobieństwo na Maturze',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'kombinatoryka',
+  'prawdopodobienstwo',
+  'Prawdopodobieństwo na Maturze',
+  '## Na egzaminie
 Zadania z prawdopodobieństwa pojawiają się na maturze co roku, zazwyczaj jako jedno lub dwa pytania otwarte lub zamknięte, warte od 1 do nawet 4 punktów. CKE często sprawdza umiejętność obliczania prawdopodobieństwa w klasycznych sytuacjach losowych (rzuty kostką, losowanie kul, przekształcenia wzorów), a także w zadaniach wymagających umiejętności kombinatorycznych do policzenia zdarzeń sprzyjających i wszystkich możliwych. Kluczowe jest zrozumienie definicji prawdopodobieństwa i poprawne zastosowanie wzorów.
 
 ## Mapa tematu
@@ -5644,14 +5833,21 @@ Odpowiedź: Prawdopodobieństwo, że wylosowana liczba będzie pierwsza lub podz
               | Obliczenie prawdopodobieństwa
               V
          P(A) = |A| / |Omega|
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'kombinatoryka'
-  AND topic = 'prawdopodobienstwo';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Podstawy Statystyki: Miary Tendencji Centralnej i Rozproszenia',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  'matura_podstawowa',
+  'kombinatoryka',
+  'statystyka',
+  'Podstawy Statystyki: Miary Tendencji Centralnej i Rozproszenia',
+  '## Na egzaminie
 Statystyka na maturze z matematyki na poziomie podstawowym pojawia się regularnie, zazwyczaj w zadaniach otwartych lub jako część szerszych zadań, gdzie wymaga od nas obliczenia średniej, mediany, dominanty lub odchylenia standardowego. Zadania te testują umiejętność interpretacji danych i stosowania podstawowych wzorów. Za poprawne obliczenia możemy zdobyć od 2 do 4 punktów.
 
 ## Mapa tematu
@@ -5881,14 +6077,21 @@ Rozstęp: 7
 Średnia (~5.29) i Mediana (5) są blisko środka skupienia danych.
 Moda (5) wskazuje najczęstszą wartość.
 Rozstęp (7) pokazuje zakres danych.
-```'
-WHERE exam_type = 'matura_podstawowa'
-  AND category = 'kombinatoryka'
-  AND topic = 'statystyka';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Ułamki zwykłe i dziesiętne – wszystko, co musisz wiedzieć na egzaminie ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'ulamki',
+  'Ułamki zwykłe i dziesiętne – wszystko, co musisz wiedzieć na egzaminie ósmoklasisty',
+  '## Na egzaminie
 Ułamki to podstawa wielu zadań na egzaminie ósmoklasisty. Pojawiają się zarówno w zadaniach zamkniętych (jedna poprawna odpowiedź), jak i otwartych, gdzie wymagane jest pełne rozwiązanie. Często stanowią kluczowy element zadań tekstowych, geometrycznych czy związanych z procentami. Umiejętność swobodnego operowania ułamkami, w tym zamiany między postaciami, dodawania, odejmowania, mnożenia i dzielenia, jest kluczowa do zdobycia punktów. Zazwyczaj zadania z ułamkami to pewne 3-5 punktów na egzaminie.
 
 ## Mapa tematu
@@ -6059,14 +6262,21 @@ $\frac{20}{20} - \frac{13}{20} = \frac{7}{20}$.
 2.  Jakie jest podstawowe działanie, które należy wykonać przed dodawaniem lub odejmowaniem ułamków o różnych mianownikach?
 3.  Jak mnożymy dwa ułamki zwykłe?
 4.  Przez co mnożymy, aby podzielić przez ułamek zwykły?
-5.  Jak ustalamy pozycję przecinka w wyniku mnożenia dwóch ułamków dziesiętnych?'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'ulamki';
+5.  Jak ustalamy pozycję przecinka w wyniku mnożenia dwóch ułamków dziesiętnych?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Potęgi - od podstaw do matury',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'potegi',
+  'Potęgi - od podstaw do matury',
+  '## Na egzaminie
 Potęgi pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach otwartych, gdzie liczą się nie tylko poprawne obliczenia, ale i sposób zapisu. Zadania mogą dotyczyć prostego obliczania wartości potęg, ich porównywania, a także wykorzystania własności potęg w działaniach na liczbach. Często pojawiają się w zadaniach tekstowych, gdzie trzeba zastosować potęgowanie do obliczenia np. powierzchni, objętości czy liczby ludności. Za poprawne rozwiązanie zadania z potęgami można uzyskać od 1 do 3 punktów.
 
 ## Mapa tematu
@@ -6259,14 +6469,21 @@ Szczególne przypadki:
 a^0 = 1 (dla a != 0)
 a^1 = a
 a^-n = 1/a^n (dla a != 0)
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'potegi';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Pierwiastki kwadratowe i ich własności',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'pierwiastki',
+  'Pierwiastki kwadratowe i ich własności',
+  '## Na egzaminie
 Pierwiastki kwadratowe pojawiają się na egzaminie ósmoklasisty dość często, zazwyczaj w zadaniach zamkniętych sprawdzających znajomość definicji i podstawowych własności, a także w zadaniach otwartych wymagających obliczeń z ich użyciem. CKE lubi sprawdzać umiejętność upraszczania wyrażeń z pierwiastkami, porównywania liczb z pierwiastkami oraz rozwiązywania prostych równań z pierwiastkami. Za poprawne rozwiązanie zadań z pierwiastkami można zdobyć od 1 do 3 punktów.
 
 ## Mapa tematu
@@ -6435,14 +6652,21 @@ $3.16 > 3$. Porównanie jest poprawne.
           |
           v
      Wynik: sqrt(a) = b
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'pierwiastki';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Procenty — klucz do zrozumienia danych',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'procenty',
+  'Procenty — klucz do zrozumienia danych',
+  '## Na egzaminie
 Procenty to wszechobecny temat na egzaminie ósmoklasisty, pojawiający się w zadaniach otwartych i zamkniętych. Można spodziewać się 2-3 zadań, których łączna punktacja wynosi zazwyczaj 4-6 punktów. CKE często sprawdza umiejętność obliczania procentu danej liczby, procentu z procentu, podwyżek i obniżek cen, a także odczytywania danych z tabel i wykresów przedstawionych za pomocą procentów.
 
 ## Mapa tematu
@@ -6611,14 +6835,21 @@ Liczba chłopców $= 30 \cdot 40\% = 30 \cdot \frac{40}{100} = 30 \cdot 0.4 = 12
 +---------------------+
 |    Wynik (30)       |
 +---------------------+
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'procenty';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Liczby całkowite – od zera do minus nieskończoności',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'liczby_calkowite',
+  'Liczby całkowite – od zera do minus nieskończoności',
+  '## Na egzaminie
 Liczby całkowite pojawiają się na egzaminie ósmoklasisty w zadaniach otwartych i zamkniętych. Często są elementem większych problemów, wymagających porównania temperatur, określenia głębokości czy położenia na osi liczbowej. Zazwyczaj zadania te są punktowane od 1 do 3 punktów i sprawdzają umiejętność wykonywania działań na liczbach całkowitych oraz rozumienia ich własności.
 
 ## Mapa tematu
@@ -6792,14 +7023,21 @@ Wynik całkowity: $100$.
 2.  Jaką liczbę otrzymamy, mnożąc liczbę ujemną przez liczbę ujemną?
 3.  Czy liczba $-5$ jest większa czy mniejsza od $-1$?
 4.  Jaka jest zasada przy odejmowaniu liczb ujemnych?
-5.  Ile wynosi $0$ podzielone przez dowolną liczbę całkowitą różną od zera?'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'liczby_calkowite';
+5.  Ile wynosi $0$ podzielone przez dowolną liczbę całkowitą różną od zera?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Kolejność Wykonywania Działań',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'liczby',
+  'kolejnosc_dzialan',
+  'Kolejność Wykonywania Działań',
+  '## Na egzaminie
 Zadania dotyczące kolejności wykonywania działań pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach zamkniętych. Zazwyczaj dotyczą obliczenia wartości wyrażenia arytmetycznego, gdzie można zdobyć 1 lub 2 punkty. CKE sprawdza tutaj umiejętność poprawnego stosowania priorytetów działań, w tym potęgowania, mnożenia i dzielenia, a także nawiasów.
 
 ## Mapa tematu
@@ -6967,14 +7205,21 @@ Każde wyrażenie zostało obliczone zgodnie z zasadami kolejności działań. P
 2.  Jakie działania wykonujemy po potęgowaniu?
 3.  Czy mnożenie i dzielenie mają ten sam priorytet?
 4.  W jakiej kolejności wykonujemy dodawanie i odejmowanie, gdy występują obok siebie?
-5.  Co trzeba zrobić przed dodaniem lub odjęciem ułamków o różnych mianownikach?'
-WHERE exam_type = '8_klasa'
-  AND category = 'liczby'
-  AND topic = 'kolejnosc_dzialan';
+5.  Co trzeba zrobić przed dodaniem lub odjęciem ułamków o różnych mianownikach?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wyrażenia Algebraiczne – Klucz do Sukcesu na Egzaminie Ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'algebra',
+  'wyrazenia_algebraiczne',
+  'Wyrażenia Algebraiczne – Klucz do Sukcesu na Egzaminie Ósmoklasisty',
+  '## Na egzaminie
 Wyrażenia algebraiczne pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach otwartych, gdzie liczy się poprawny zapis i wykonanie obliczeń. Możesz spodziewać się pytań dotyczących upraszczania wyrażeń, podstawiania wartości liczbowych, rozwiązywania prostych równań z jedną niewiadomą, a także zadań tekstowych, które wymagają ułożenia i przekształcenia wyrażenia algebraicznego. Opanowanie tego tematu to pewne punkty na egzaminie.
 
 ## Mapa tematu
@@ -7154,14 +7399,21 @@ Szukane liczby to $6$ i $9$.
 4.  Jakie są trzy główne pułapki, na które trzeba uważać przy upraszczaniu wyrażeń algebraicznych?
 5.  Dlaczego ważne jest upraszczanie wyrażeń algebraicznych przed podstawieniem wartości liczbowych?
 
-## Diagram'
-WHERE exam_type = '8_klasa'
-  AND category = 'algebra'
-  AND topic = 'wyrazenia_algebraiczne';
+## Diagram',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Wzory skróconego mnożenia dla ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'algebra',
+  'wzory_skroconego_mnozenia',
+  'Wzory skróconego mnożenia dla ósmoklasisty',
+  '## Na egzaminie
 Wzory skróconego mnożenia pojawiają się na egzaminie ósmoklasisty stosunkowo często, zwykle w zadaniach otwartych, ale także jako element zadań zamkniętych. Pozwalają na szybkie i sprawne przekształcanie wyrażeń algebraicznych, obliczanie wartości liczbowych oraz upraszczanie równań i nierówności. Zazwyczaj można za nie uzyskać od 2 do 4 punktów, w zależności od stopnia skomplikowania zadania. CKE lubi sprawdzać znajomość podstawowych wzorów: kwadratu sumy, kwadratu różnicy oraz różnicy kwadratów.
 
 ## Mapa tematu
@@ -7292,14 +7544,21 @@ Zauważmy, że to wyrażenie ma postać $a^2 - b^2$, gdzie $a=101$ i $b=99$. Jes
 2.  Jaki jest wzór na kwadrat różnicy $(a-b)^2$?
 3.  Jaki jest wzór na różnicę kwadratów $a^2 - b^2$?
 4.  W jaki sposób inaczej można zapisać wyrażenie $(5x+1)^2$?
-5.  Jakie są dwa główne zastosowania wzorów skróconego mnożenia w matematyce szkolnej?'
-WHERE exam_type = '8_klasa'
-  AND category = 'algebra'
-  AND topic = 'wzory_skroconego_mnozenia';
+5.  Jakie są dwa główne zastosowania wzorów skróconego mnożenia w matematyce szkolnej?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Rozwiązywanie równań liniowych z jedną niewiadomą',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'algebra',
+  'rownania',
+  'Rozwiązywanie równań liniowych z jedną niewiadomą',
+  '## Na egzaminie
 Równania liniowe z jedną niewiadomą pojawiają się na egzaminie ósmoklasisty regularnie, często w zadaniach otwartych typu "rozwiąż równanie" lub jako element trudniejszych zadań tekstowych i geometrycznych. Zazwyczaj są to proste równania, ale mogą zawierać ułamki lub nawiasy, co zwiększa ich trudność. Poprawne rozwiązanie równania może przynieść od 1 do 3 punktów.
 
 ## Mapa tematu
@@ -7434,14 +7693,21 @@ Lewa strona jest równa prawej, rozwiązanie jest poprawne.
 2.  Co należy zrobić, aby pozbyć się ułamków w równaniu?
 3.  Co oznacza sytuacja, gdy po uproszczeniu równania otrzymasz $0 = 5$?
 4.  Czy kolejność przenoszenia wyrazów z niewiadomą i wyrazów wolnych ma znaczenie?
-5.  Jak nazywamy wartość niewiadomej, dla której równanie jest prawdziwe?'
-WHERE exam_type = '8_klasa'
-  AND category = 'algebra'
-  AND topic = 'rownania';
+5.  Jak nazywamy wartość niewiadomej, dla której równanie jest prawdziwe?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Proporcje i skala – pewniaki na egzaminie',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'algebra',
+  'proporcje',
+  'Proporcje i skala – pewniaki na egzaminie',
+  '## Na egzaminie
 Zadania dotyczące proporcji i skali pojawiają się na egzaminie ósmoklasisty regularnie, często w formie zadań tekstowych lub jako elementy zadań bardziej złożonych, np. geometrycznych. Zazwyczaj można za nie zdobyć od 1 do 4 punktów. Egzaminatorzy lubią sprawdzać umiejętność wyciągania wniosków z treści zadań, zamiany jednostek i poprawnego stosowania definicji skali.
 
 ## Mapa tematu
@@ -7597,14 +7863,21 @@ $$ r_2 = 4 $$
   V               V
  ODLEGŁOŚĆ       ODLEGŁOŚĆ
 NA MAPIE     W RZECZYWISTOŚCI
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'algebra'
-  AND topic = 'proporcje';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Kąty i proste - solidne podstawy',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'katy',
+  'Kąty i proste - solidne podstawy',
+  '## Na egzaminie
 Zadania dotyczące kątów i prostych pojawiają się na egzaminie ósmoklasisty regularnie, często jako część większych zadań geometrycznych lub jako samodzielne problemy wymagające zastosowania podstawowych własności. Zwykle można zdobyć za nie od 2 do 5 punktów. Egzaminatorzy lubią sprawdzać umiejętność rozpoznawania i wykorzystywania kątów przyległych, wierzchołkowych, prostych, przyległych, a także wiedzę o sumie kątów w trójkącie i czworokącie.
 
 ## Mapa tematu
@@ -7809,14 +8082,21 @@ a, e - kąty wierzchołkowe (równe)
 a, b - kąty przyległe (suma 180)
 c, d - kąty wierzchołkowe (równe)
 c, b - kąty przyległe (suma 180)
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'katy';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Obwody figur płaskich na egzaminie ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'obwody',
+  'Obwody figur płaskich na egzaminie ósmoklasisty',
+  '## Na egzaminie
 Zadania dotyczące obwodów figur pojawiają się regularnie na egzaminie ósmoklasisty, zwykle w zadaniach otwartych, ale czasem też zamkniętych. Ich poziom trudności jest zróżnicowany – od prostych obliczeń, po zadania tekstowe wymagające analizy i kilku etapów rozwiązania. CKE lubi sprawdzać umiejętność zastosowania wzorów na obwody w kontekście praktycznym, np. przy obliczaniu długości ogrodzenia czy taśmy. Zazwyczaj jedno zadanie z obwodów to około 3-5 punktów.
 
 ## Mapa tematu
@@ -7936,14 +8216,21 @@ Prostokąt z zaznaczonymi bokami:
    +-------+
        b
 ```
-Obwód = a + b + a + b = 2a + 2b'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'obwody';
+Obwód = a + b + a + b = 2a + 2b',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Pola figur płaskich',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'pola_figur',
+  'Pola figur płaskich',
+  '## Na egzaminie
 Zadania dotyczące pól figur płaskich pojawiają się na egzaminie ósmoklasisty co roku, zazwyczaj w zadaniach otwartych lub jako część zadań zamkniętych. Mogą one dotyczyć obliczania pola jednej figury, lub złożonych figur składających się z kilku prostszych figur. Poprawne stosowanie wzorów i umiejętność dzielenia skomplikowanych kształtów na prostsze elementy są kluczowe. Zadania te są warte od 2 do nawet 4 punktów.
 
 ## Mapa tematu
@@ -8149,14 +8436,21 @@ Pole trapezu = 0.5 * (a + b) * h
     *       *
       *****
  Pole koła = pi * r^2
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'pola_figur';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Twierdzenie Pitagorasa – klucz do geometrii na egzaminie',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'pitagoras',
+  'Twierdzenie Pitagorasa – klucz do geometrii na egzaminie',
+  '## Na egzaminie
 Twierdzenie Pitagorasa pojawia się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach otwartych i zamkniętych. Zadania te mogą sprawdzać zarówno bezpośrednie zastosowanie twierdzenia do obliczenia długości boku trójkąta prostokątnego, jak i jego wykorzystanie w bardziej złożonych problemach geometrycznych, np. obliczanie przekątnych kwadratów, rombów czy odległości między punktami na płaszczyźnie. Oczekuje się od ucznia umiejętności rozpoznania trójkąta prostokątnego w różnych kontekstach i zastosowania odpowiednich wzorów.
 
 ## Mapa tematu
@@ -8306,14 +8600,21 @@ Odpowiedź: Długość barierki potrzebnej do ogrodzenia tarasu po przekątnej w
 prostokątna) a (przyprostokątna)
 
 Kąt prosty znajduje się między bokami a i b.
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'pitagoras';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Podobieństwo figur płaskich',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'podobienstwo',
+  'Podobieństwo figur płaskich',
+  '## Na egzaminie
 Podobieństwo figur płaskich pojawia się na egzaminie ósmoklasisty dość często, zazwyczaj w zadaniach otwartych, ale czasem również jako element zadań zamkniętych. Zazwyczaj można zdobyć za nie 2-4 punkty. Egzaminatorzy lubią sprawdzać umiejętność obliczania długości boków, wysokości lub obwodów figur podobnych, a także stosowania zależności między polami figur podobnych. Często pojawiają się zadania tekstowe lub związane z geometrii (np. trójkąty, czworokąty).
 
 ## Mapa tematu
@@ -8459,14 +8760,21 @@ $P_{rzecz} (\text{w m}^2) = 50000000000 / 10000 = 5000000 \text{ m}^2$. Zgadza s
 |   Figura B      | --------->|   Figura B''     |
 |   (większa)     |             |   (mniejsza)    |
 +-----------------+             +-----------------+
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'podobienstwo';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Symetrie w Geometrycznej - Lekcja Egzaminacyjna',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria',
+  'symetrie',
+  'Symetrie w Geometrycznej - Lekcja Egzaminacyjna',
+  '## Na egzaminie
 Zadania dotyczące symetrii pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj jako część większych zadań geometrycznych lub jako osobne pytanie wymagające wskazania środka, osi lub określenia typu symetrii figury. Rozwiązanie takich zadań zwykle nie wymaga skomplikowanych obliczeń, a raczej dobrego zrozumienia definicji i umiejętności wizualizacji. Poprawne rozwiązanie zadania z symetrii może przynieść od 1 do 3 punktów. CKE lubi sprawdzać, czy uczniowie potrafią rozpoznać symetrię osiową i środkową, narysować obraz figury względem punktu lub prostej, a także znaleźć oś lub środek symetrii danej figury.
 
 ## Mapa tematu
@@ -8628,14 +8936,21 @@ Współrzędne wierzchołka $A$ to $(3, -3\sqrt{3})$.
        |
        |
 ```
-*Powyższy diagram przedstawia punkt A, B, C w układzie współrzędnych. Symetria osiowa względem osi Ox przekształci te punkty na A''(1,-2), B''(3,-1), C''(2,-4) poniżej osi Ox.*'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria'
-  AND topic = 'symetrie';
+*Powyższy diagram przedstawia punkt A, B, C w układzie współrzędnych. Symetria osiowa względem osi Ox przekształci te punkty na A''(1,-2), B''(3,-1), C''(2,-4) poniżej osi Ox.*',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Bryły — rozpoznawanie ich własności i zastosowań',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria_przestrzenna',
+  'bryly',
+  'Bryły — rozpoznawanie ich własności i zastosowań',
+  '## Na egzaminie
 Zadania dotyczące rozpoznawania brył, ich własności (ściany, krawędzie, wierzchołki) oraz obliczania ich pól i objętości pojawiają się na egzaminie ósmoklasisty regularnie. Często są to zadania otwarte, wymagające obliczeń, ale również zamknięte, sprawdzające znajomość definicji i wzorów. Uczeń może zdobyć od 2 do nawet 4 punktów za zadania związane z tym tematem. CKE lubi sprawdzać umiejętność zastosowania poznanych wzorów w zadaniach tekstowych oraz umiejętność wizualizacji brył przestrzennych.
 
 ## Mapa tematu
@@ -8864,14 +9179,21 @@ Oblicz objętość stożka, którego promień podstawy ma długość 6 cm, a two
 |      |      |
 +------+------+  <-- podstawa (wielokąt)
 ^^^^^^^^^^^^^^^  <-- krawędzie boczne
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria_przestrzenna'
-  AND topic = 'bryly';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Objętość i pole powierzchni brył geometrycznych',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'geometria_przestrzenna',
+  'objetosc_i_pole',
+  'Objętość i pole powierzchni brył geometrycznych',
+  '## Na egzaminie
 Zadania dotyczące objętości i pola powierzchni brył pojawiają się na egzaminie ósmoklasisty regularnie, stanowiąc ważną część działu geometrii przestrzennej. Zwykle są to zadania otwarte, wymagające od ucznia zastosowania odpowiednich wzorów i przeprowadzenia obliczeń. Ich punktacja może wynosić od 2 do 4 punktów, w zależności od złożoności. Egzaminatorzy często sprawdzają umiejętność pracy z podstawowymi bryłami takimi jak prostopadłościan, sześcian, walec, stożek, kula, ostrosłup i graniastosłup.
 
 ## Mapa tematu
@@ -9038,14 +9360,21 @@ $V_{wody\_litry} = \frac{72000 \text{ cm}^3}{1000 \text{ cm}^3/\text{litr}} = 72
    Prostopadłościan:
    V = a * b * h
    Pc = 2*(ab + bc + ca)
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'geometria_przestrzenna'
-  AND topic = 'objetosc_i_pole';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Punkty na płaszczyźnie kartezjańskiej',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'uklad_wspolrzednych',
+  'punkty_na_plaszczyznie',
+  'Punkty na płaszczyźnie kartezjańskiej',
+  '## Na egzaminie
 Zadania dotyczące układu współrzędnych pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj jako zadania otwarte lub zamknięte, warte od 1 do 3 punktów. CKE często sprawdza umiejętność zaznaczania punktów, odczytywania ich współrzędnych, obliczania odległości między punktami oraz znajdowania współrzędnych środka odcinka. Kluczowe jest zrozumienie zależności między współrzędnymi a położeniem punktu.
 
 ## Mapa tematu
@@ -9225,14 +9554,21 @@ $S = (-2, 1)$
 2.  Która liczba jest odciętą, a która rzędną w punkcie $(x, y)$?
 3.  Jak obliczyć odległość między dwoma punktami, jeśli znamy ich współrzędne? Podaj wzór.
 4.  Jakie są wzory na współrzędne środka odcinka?
-5.  W której ćwiartce układu współrzędnych znajdują się punkty, których obie współrzędne są ujemne?'
-WHERE exam_type = '8_klasa'
-  AND category = 'uklad_wspolrzednych'
-  AND topic = 'punkty_na_plaszczyznie';
+5.  W której ćwiartce układu współrzędnych znajdują się punkty, których obie współrzędne są ujemne?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Długość odcinka na płaszczyźnie',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'uklad_wspolrzednych',
+  'dlugosc_odcinka',
+  'Długość odcinka na płaszczyźnie',
+  '## Na egzaminie
 Zadania dotyczące układu współrzędnych, w tym obliczanie długości odcinka, pojawiają się na egzaminie ósmoklasisty co roku, zazwyczaj jako jedno lub dwa zadania zamknięte lub jako część zadania otwartego. Punkty do zdobycia to zazwyczaj 1-3, w zależności od stopnia trudności i kontekstu zadania. CKE lubi sprawdzać umiejętność stosowania wzoru na odległość między dwoma punktami oraz umiejętność interpretacji graficznej tego zagadnienia.
 
 ## Mapa tematu
@@ -9382,14 +9718,21 @@ A(x1, y1)-----
        |  x2-x1
 -------+----------------> X
        |
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'uklad_wspolrzednych'
-  AND topic = 'dlugosc_odcinka';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Odczyt wykresu funkcji',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'funkcje',
+  'wykresy',
+  'Odczyt wykresu funkcji',
+  '## Na egzaminie
 Zadania polegające na odczycie wartości funkcji z wykresu lub interpretacji cech funkcji na podstawie jej wykresu pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zestawie zadań otwartych lub zamkniętych. Przeważnie są to zadania dające 1–2 punkty, ale ich prawidłowe rozwiązanie jest kluczowe dla osiągnięcia dobrego wyniku. CKE często sprawdza umiejętność rozumienia pojęć takich jak: dziedzina, zbiór wartości, miejsca zerowe, przedziały monotoniczności (rosnąca/malejąca), wartości maksymalne i minimalne.
 
 ## Mapa tematu
@@ -9756,14 +10099,21 @@ c) Brak punktów z $y=0$. Brak miejsc zerowych. Zgadza się.
 2.  Co na wykresie reprezentuje oś pionowa (OY)?
 3.  Gdzie na wykresie odczytujemy miejsca zerowe funkcji?
 4.  Jak na wykresie rozpoznać, czy funkcja jest rosnąca?
-5.  Czym różni się dziedzina od zbioru wartości w kontekście wykresu?'
-WHERE exam_type = '8_klasa'
-  AND category = 'funkcje'
-  AND topic = 'wykresy';
+5.  Czym różni się dziedzina od zbioru wartości w kontekście wykresu?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Proporcjonalność prosta – klucz do zadań CKE',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'funkcje',
+  'proporcjonalnosc',
+  'Proporcjonalność prosta – klucz do zadań CKE',
+  '## Na egzaminie
 Proporcjonalność prosta pojawia się na egzaminie ósmoklasisty regularnie, często w zadaniach otwartych, wymagających obliczeń i uzasadnienia. Można ją spotkać zarówno w zadaniach obliczeniowych, jak i tekstowych, często powiązanych z kontekstem praktycznym (np. ceny, prędkość, przepisy kulinarne). Rozumienie tej zależności i umiejętność operowania jej wzorem jest kluczowa do zdobycia nawet kilku punktów na egzaminie.
 
 ## Mapa tematu
@@ -9962,14 +10312,21 @@ $a = \frac{4}{2} = 2$
    /  | a < 0 (malejąca)
   /   |
  /    |
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'funkcje'
-  AND topic = 'proporcjonalnosc';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Średnia arytmetyczna - klucz do sukcesu na egzaminie',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'statystyka',
+  'srednia',
+  'Średnia arytmetyczna - klucz do sukcesu na egzaminie',
+  '## Na egzaminie
 Średnia arytmetyczna jest jednym z najczęściej pojawiających się zagadnień w dziale statystyki na egzaminie ósmoklasisty. Zazwyczaj pojawia się w zadaniach otwartych, oferując od 2 do 4 punktów, ale może również występować w zadaniach zamkniętych. CKE często sprawdza umiejętność obliczania średniej z większej liczby danych, rozwiązywania zadań tekstowych wymagających znajomości średniej lub analizy danych przedstawionych w tabelach i diagramach.
 
 ## Mapa tematu
@@ -10140,14 +10497,21 @@ $\frac{81}{25} = \frac{81 \cdot 4}{25 \cdot 4} = \frac{324}{100} = 3.24$.
 2.  Jak obliczyć średnią, gdy mamy liczby 3, 6, 9?
 3.  W jakim celu stosujemy średnią ważoną?
 4.  Podaj przykładowy zbiór danych, dla którego mediana i średnia arytmetyczna będą różne.
-5.  Jeśli średnia arytmetyczna z pięciu liczb wynosi 10, jaka jest ich suma?'
-WHERE exam_type = '8_klasa'
-  AND category = 'statystyka'
-  AND topic = 'srednia';
+5.  Jeśli średnia arytmetyczna z pięciu liczb wynosi 10, jaka jest ich suma?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Mediana i Dominanta - Klucz do Analizy Danych',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'statystyka',
+  'mediana_i_dominanta',
+  'Mediana i Dominanta - Klucz do Analizy Danych',
+  '## Na egzaminie
 Temat mediany i dominanty pojawia się na egzaminie ósmoklasisty dość często, zazwyczaj jako zadanie otwarte wymagające obliczenia lub zinterpretowania tych wartości. Zwykle jedno zadanie na ten temat można spodziewać się w arkuszu, a jego punktacja wynosi 2-3 punkty. CKE lubi sprawdzać umiejętność wyznaczenia mediany dla danych nieuporządkowanych oraz dominanty w różnych zbiorach liczb, w tym w tabelach częstości. Ważne jest również zrozumienie, czym te miary opowiadają o zbiorze danych.
 
 ## Mapa tematu
@@ -10336,14 +10700,21 @@ Mediana: $n=10$. 5. i 6. pozycja. Dane: 10, 10, 12, 12, **12**, **15**, 18, 18, 
 2.  W jaki sposób oblicza się medianę dla parzystej liczby danych?
 3.  Czym jest dominanta i jakie są jej możliwe przypadki (jedna, wiele, brak)?
 4.  Która miara jest bardziej wrażliwa na wartości odstające: średnia arytmetyczna czy mediana?
-5.  Czy mediana i dominanta zawsze muszą być takie same? Uzasadnij.'
-WHERE exam_type = '8_klasa'
-  AND category = 'statystyka'
-  AND topic = 'mediana_i_dominanta';
+5.  Czy mediana i dominanta zawsze muszą być takie same? Uzasadnij.',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Diagramy słupkowe i kołowe na egzaminie ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'statystyka',
+  'diagramy',
+  'Diagramy słupkowe i kołowe na egzaminie ósmoklasisty',
+  '## Na egzaminie
 Zadania dotyczące diagramów słupkowych i kołowych pojawiają się na egzaminie ósmoklasisty regularnie. Zwykle są to zadania otwarte, a ich punktacja mieści się w przedziale 2–4 punktów. CKE lubi sprawdzać umiejętność odczytywania danych z diagramów, dokonywania na ich podstawie obliczeń (np. procentowych, średniej, sumy) oraz porównywania przedstawionych informacji. Czasem wymagane jest też samodzielne stworzenie prostego diagramu na podstawie tabeli.
 
 ## Mapa tematu
@@ -10572,14 +10943,21 @@ Diagram kołowy (ogólny schemat):
 
 Wycinki reprezentują udziały procentowe lub liczbowe.
 Suma kątów wszystkich wycinków wynosi 360 stopni.
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'statystyka'
-  AND topic = 'diagramy';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Prawdopodobieństwo – klucz do sukcesu na egzaminie ósmoklasisty',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'kombinatoryka',
+  'prawdopodobienstwo',
+  'Prawdopodobieństwo – klucz do sukcesu na egzaminie ósmoklasisty',
+  '## Na egzaminie
 Prawdopodobieństwo pojawia się na egzaminie ósmoklasisty zazwyczaj jako jedno zadanie otwarte lub zamknięte, które można rozwiązać stosunkowo szybko, ale wymaga precyzyjnego zrozumienia definicji i umiejętności liczenia. Za poprawne rozwiązanie można zdobyć od 1 do 3 punktów. CKE często sprawdza umiejętność obliczania prawdopodobieństwa w sytuacjach związanych z rzutami kostką, monetą, losowaniem liczb z przedziału lub elementów ze zbioru. Ważne jest również interpretowanie wyników.
 
 ## Mapa tematu
@@ -10761,14 +11139,21 @@ Rzut kostką:
 Omega = {1, 2, 3, 4, 5, 6}, |Omega|=6
 Zdarzenie A = {2, 4, 6}, |A|=3
 P(A) = |A| / |Omega| = 3/6 = 1/2
-```'
-WHERE exam_type = '8_klasa'
-  AND category = 'kombinatoryka'
-  AND topic = 'prawdopodobienstwo';
+```',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;
 
-UPDATE public.materials SET
-  title = 'Reguła mnożenia – pierwszy krok do kombinatoryki',
-  content = '## Na egzaminie
+INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)
+VALUES (
+  '8_klasa',
+  'kombinatoryka',
+  'regula_mnozenia',
+  'Reguła mnożenia – pierwszy krok do kombinatoryki',
+  '## Na egzaminie
 Reguła mnożenia pojawia się na egzaminie ósmoklasisty stosunkowo często, zazwyczaj w zadaniach otwartych punktowanych od 3 do 5 punktów. CKE lubi sprawdzać umiejętność zastosowania tej reguły w prostych sytuacjach życia codziennego, takich jak wybór stroju, układanie przedmiotów czy tworzenie kodów. Często jest też pierwszym krokiem w bardziej złożonych zadaniach kombinatorycznych.
 
 ## Mapa tematu
@@ -10926,7 +11311,10 @@ Można utworzyć 64 takie trzyliterowe kody.
 2.  Co oznacza, że czynności w regule mnożenia są "niezależne"?
 3.  Ile jest możliwości wyboru cyfry jedności w liczbie parzystej?
 4.  Dlaczego pierwsza cyfra liczby dwucyfrowej nie może być zerem?
-5.  W zadaniu o wyborze stroju (koszule i spodnie) – czy kolejność wyboru ma znaczenie dla ostatecznego wyniku liczby kombinacji?'
-WHERE exam_type = '8_klasa'
-  AND category = 'kombinatoryka'
-  AND topic = 'regula_mnozenia';
+5.  W zadaniu o wyborze stroju (koszule i spodnie) – czy kolejność wyboru ma znaczenie dla ostatecznego wyniku liczby kombinacji?',
+  NULL
+)
+ON CONFLICT (exam_type, category, topic) DO UPDATE SET
+  title = EXCLUDED.title,
+  content = EXCLUDED.content,
+  video_url = EXCLUDED.video_url;

@@ -1,5 +1,5 @@
 /**
- * Eksport lekcji z SEED_MATERIALS → plik SQL (UPDATE po slugach CKE).
+ * Eksport lekcji z SEED_MATERIALS → plik SQL (UPSERT po slugach CKE).
  * Uruchom w Supabase SQL Editor (omija RLS po stronie klienta).
  *
  *   npm run seed:theory-sql
@@ -17,27 +17,38 @@ function sqlString(value: string): string {
 }
 
 function main() {
+  const n = SEED_MATERIALS.length;
   const lines: string[] = [
     "-- Wygenerowano: npm run seed:theory-sql",
     "-- Uruchom w Supabase SQL Editor (Dashboard → SQL).",
-    "-- Aktualizuje title + content dla 25 tematów CKE.",
+    `-- UPSERT ${n} tematów CKE (INSERT + UPDATE przy istniejącym slugu).`,
+    "",
+    "CREATE UNIQUE INDEX IF NOT EXISTS materials_exam_category_topic_uidx",
+    "  ON public.materials (exam_type, category, topic);",
     "",
   ];
 
   for (const m of SEED_MATERIALS) {
     lines.push(
-      `UPDATE public.materials SET`,
-      `  title = ${sqlString(m.title)},`,
-      `  content = ${sqlString(m.content)}`,
-      `WHERE exam_type = ${sqlString(m.exam_type)}`,
-      `  AND category = ${sqlString(m.category)}`,
-      `  AND topic = ${sqlString(m.topic)};`,
+      `INSERT INTO public.materials (exam_type, category, topic, title, content, video_url)`,
+      `VALUES (`,
+      `  ${sqlString(m.exam_type)},`,
+      `  ${sqlString(m.category)},`,
+      `  ${sqlString(m.topic)},`,
+      `  ${sqlString(m.title)},`,
+      `  ${sqlString(m.content)},`,
+      `  NULL`,
+      `)`,
+      `ON CONFLICT (exam_type, category, topic) DO UPDATE SET`,
+      `  title = EXCLUDED.title,`,
+      `  content = EXCLUDED.content,`,
+      `  video_url = EXCLUDED.video_url;`,
       "",
     );
   }
 
   fs.writeFileSync(OUT, lines.join("\n"), "utf8");
-  console.log(`\n✓ Zapisano ${SEED_MATERIALS.length} UPDATE → ${OUT}`);
+  console.log(`\n✓ Zapisano ${n} UPSERT → ${OUT}`);
   console.log("  Wklej plik w Supabase SQL Editor i uruchom.\n");
 }
 

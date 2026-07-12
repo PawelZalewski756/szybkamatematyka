@@ -71,9 +71,11 @@ async function main() {
         continue;
       }
 
-      if (row.tier === "full") {
+      if (row.tier === "full" || row.tier === "comprehensive") {
         full += 1;
-        console.log(`  ✓ ${topic.category}/${topic.topic} — pełna lekcja (${row.title})`);
+        const label =
+          row.tier === "comprehensive" ? "pełna lekcja Phase 3a" : "pełna lekcja";
+        console.log(`  ✓ ${topic.category}/${topic.topic} — ${label} (${row.title})`);
       } else {
         basic += 1;
         console.log(`  ~ ${topic.category}/${topic.topic} — skrót (${row.title})`);
