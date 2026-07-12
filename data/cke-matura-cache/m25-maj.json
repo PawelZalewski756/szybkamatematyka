@@ -146,49 +146,49 @@
       "numer": 24,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) punkt 𝑃 = (0,0) leży na okręgu 𝒪 o środku w punkcie 𝑆 = (2,4). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg 𝒪 jest określony równaniem A) A. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 2√ 5 B) B. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 20 C) C. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 2√ 5 D) D. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 20",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Równanie okręgu o środku $(a, b)$ i promieniu $r$ to $(x-a)^2 + (y-b)^2 = r^2$. W naszym przypadku środek $S=(2,4)$, więc szukamy równania $(x-2)^2 + (y-4)^2 = r^2$.\n\n**Krok 2.** Promień $r$ jest odległością między środkiem $S=(2,4)$ a punktem $P=(0,0)$ leżącym na okręgu. Skorzystamy ze wzoru na odległość między dwoma punktami: $r = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\n\n**Krok 3.** Obliczamy promień: $r = \\sqrt{(0-2)^2 + (0-4)^2} = \\sqrt{(-2)^2 + (-4)^2} = \\sqrt{4+16} = \\sqrt{20}$.\n\n**Krok 4.** Obliczamy $r^2$: $(\\sqrt{20})^2 = 20$. Podstawiamy do równania okręgu: $(x-2)^2 + (y-4)^2 = 20$.\n\n**Odpowiedź:** B, czyli $(x − 2)^2 + (y − 4)^2 = 20$"
     },
     {
       "numer": 25,
       "dzial": "Algebra",
       "tresc": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę 120°. Oblicz objętość tego stożka. Zapisz obliczenia.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Narysuj przekrój stożka, który jest trójkątem równoramiennym. Wysokość stożka $H$, promień podstawy $r$ i tworząca $l=8$ tworzą trójkąt prostokątny. Kąt między tworzącą a podstawą to połowa kąta rozwarcia, czyli $120^\\circ / 2 = 60^\\circ$.\n**Krok 2.** Wykorzystaj trygonometrię do obliczenia $r$ i $H$: $r = l \\cdot \\sin(60^\\circ) = 8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$ oraz $H = l \\cdot \\cos(60^\\circ) = 8 \\cdot \\frac{1}{2} = 4$.\n**Krok 3.** Oblicz objętość stożka ze wzoru $V = \\frac{1}{3} \\pi r^2 H$: $V = \\frac{1}{3} \\pi (4\\sqrt{3})^2 \\cdot 4 = \\frac{1}{3} \\pi (16 \\cdot 3) \\cdot 4 = \\frac{1}{3} \\pi \\cdot 48 \\cdot 4 = 64\\pi$.\n\n**Odpowiedź:** $64\\pi$"
     },
     {
       "numer": 26,
       "dzial": "Algebra",
       "tresc": "Objętość sześcianu jest równa 729. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego sześcianu jest równa A) 9√ 3 B) 9√ 2 C) 3√ 3 D) 3√ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz długość krawędzi sześcianu, wiedząc, że jego objętość $V = a^3$, gdzie $a$ to długość krawędzi. Mamy $a^3 = 729$, więc $a = \\sqrt[3]{729} = 9$.\n\n**Krok 2.** Oblicz długość przekątnej sześcianu, korzystając ze wzoru $d = a\\sqrt{3}$, gdzie $a$ to długość krawędzi. Podstawiając obliczoną wartość $a=9$, otrzymujemy $d = 9\\sqrt{3}$.\n\n**Odpowiedź:** A) $9\\sqrt{3}$"
     },
     {
       "numer": 27,
       "dzial": "Kombinatoryka",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych trzycyfrowych nieparzystych, w których zapisie dziesiętnym występuje dokładnie jeden raz cyfra 0, jest A) 45 B) 50 C) 54 D) 81",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozważ trzy przypadki ze względu na pozycję cyfry 0. Liczby trzycyfrowe mają postać $abc$, gdzie $a \\in \\{1, ..., 9\\}$ i $b, c \\in \\{0, ..., 9\\}$. Liczba musi być nieparzysta, czyli $c \\in \\{1, 3, 5, 7, 9\\}$.\n**Krok 2.** Przypadek 1: $a=0$ (niemożliwe, bo liczba musi być trzycyfrowa). Przypadek 2: $b=0$. Wtedy $a \\in \\{1, ..., 9\\}$ (9 możliwości) i $c \\in \\{1, 3, 5, 7, 9\\}$ (5 możliwości). Mamy $9 \\cdot 1 \\cdot 5 = 45$ takich liczb.\n**Krok 3.** Przypadek 3: $c=0$ (niemożliwe, bo liczba musi być nieparzysta). Przypadek 4: $a \\ne 0$, $b \\ne 0$, $c \\ne 0$ i tylko jedna z cyfr $a$ lub $b$ jest 0. Ale już wykluczyliśmy $c=0$. Więc przypadek 3: $a \\ne 0$, $b=0$, $c \\ne 0$ (rozpatrzono w kroku 2). Został przypadek 5: $a=0$ (niemożliwe) lub $b=0$ (rozpatrzono) lub $c=0$ (niemożliwe). **Poprawka:** Rozważmy pozycję zera.\n    - Zera na pozycji setek: niemożliwe.\n    - Zera na pozycji dziesiątek: $a \\in \\{1..9\\}$ (9 możliwości), $b=0$ (1 możliwość), $c \\in \\{1,3,5,7,9\\}$ (5 możliwości). $9 \\cdot 1 \\cdot 5 = 45$ liczb.\n    - Zera na pozycji jedności: niemożliwe, bo liczba ma być nieparzysta.\n**Krok 4.** Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc 9 możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$).\n**Odpowiedź:** C, czyli 45"
     },
     {
       "numer": 28,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Zdarzenie 𝐴 polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia 𝐴 jest równe A) 1 &frasl; 36 B) 6 &frasl; 36 C) 11 &frasl; 36 D) 2 &frasl; 36",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Określ przestrzeń zdarzeń elementarnych. Rzucamy kostką dwa razy, więc mamy $6 \\times 6 = 36$ możliwych kombinacji wyników (np. (1,1), (1,2), ..., (6,6)).\n**Krok 2.** Znajdź zdarzenia sprzyjające zdarzeniu A (suma oczek równa 11). Jedynymi parami dającymi sumę 11 są (5,6) i (6,5). Są to 2 zdarzenia.\n**Krok 3.** Oblicz prawdopodobieństwo zdarzenia A, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich możliwych zdarzeń elementarnych: $P(A) = \\frac{2}{36}$.\n\n**Odpowiedź:** D, czyli $\\frac{2}{36}$"
     },
     {
       "numer": 29,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna siedmiu liczb: 1, 2, 3, 4, 5, 𝑥, 𝑦, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma 𝑥 + 𝑦 jest równa A) 4 B) 5 C) 6 D) 7",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na średnią arytmetyczną: suma liczb podzielona przez ich ilość. W tym przypadku mamy $\\frac{1+2+3+4+5+x+y}{7} = 3$.\n**Krok 2.** Pomnóż obie strony równania przez 7 i zsumuj znane liczby: $15 + x + y = 3 \\cdot 7$, czyli $15 + x + y = 21$.\n**Krok 3.** Odejmij 15 od obu stron równania, aby obliczyć sumę $x+y$: $x+y = 21 - 15$.\n\n**Odpowiedź:** C, czyli $x+y=6$."
     },
     {
       "numer": 30,
       "dzial": "Statystyka",
       "tresc": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej liczącej 24 uczniów. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. ![Rysunek do zadania](/cke-matura/m25-maj/z30-1.png) Uzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe. 1. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa ......................... 2. Dominanta ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa .........................",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wypisz wszystkie oceny z sprawdzianu w kolejności niemalejącej: 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5. Jest 24 uczniów.\n**Krok 2.** Oblicz medianę: ponieważ jest parzysta liczba uczniów (24), mediana to średnia arytmetyczna 12. i 13. oceny. Są to 4 i 4, więc mediana to $\\frac{4+4}{2} = 4$.\n**Krok 3.** Określ dominantę: jest to ocena najczęściej występująca. Najwięcej uczniów (8) otrzymało ocenę 5.\n\n**Odpowiedź:** 1. Mediana jest równa 4. 2. Dominanta jest równa 5."
     },
     {
       "numer": 31,
       "dzial": "Funkcje",
       "tresc": "Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻, w których krawędź 𝐵𝐶 ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka 𝐵 jest równa 15 (zobacz rysunek). Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości 𝑥 krawędzi 𝐴𝐵. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji 𝑷 . Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia. <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy długości krawędzi prostopadłościanu wychodzących z wierzchołka B jako $|BC| = 4$, $|AB| = x$ oraz $|BF| = y$. Z treści zadania wiemy, że $|BC| = 4$ i $|AB| + |BC| + |BF| = 15$, co po podstawieniu daje $x + 4 + y = 15$, czyli $y = 11 - x$.\n**Krok 2.** Pole powierzchni całkowitej prostopadłościanu $P(x)$ jest sumą pól jego sześciu ścian. Dwie ściany mają pole $x \\cdot 4$, dwie $x \\cdot y$, a dwie $4 \\cdot y$. Podstawiając $y = 11 - x$, otrzymujemy $P(x) = 2(4x) + 2(x(11-x)) + 2(4(11-x)) = 8x + 22x - 2x^2 + 88 - 8x = -2x^2 + 22x + 88$.\n**Krok 3.** Dziedziną funkcji $P(x)$ są długości krawędzi, które muszą być dodatnie, czyli $x > 0$ i $y = 11 - x > 0$, co daje $0 < x < 11$. Funkcja $P(x) = -2x^2 + 22x + 88$ jest parabolą skierowaną ramionami w dół, więc jej maksimum występuje w wierzchołku. Współrzędna $x$ wierzchołka to $x_w = -\\frac{b}{2a} = -\\frac{22}{2(-2)} = \\frac{22}{4} = 5.5$. Ponieważ $x_w = 5.5$ należy do dziedziny $(0, 11)$, maksymalne pole powierzchni całkowitej występuje dla $x = 5.5$.\n\n**Odpowiedź:** Wzór funkcji $P(x) = -2x^2 + 22x + 88$, dziedzina to $(0, 11)$. Maksymalne pole powierzchni występuje dla $x = 5.5$."
     }
   ],
   "fetchedAt": "2026-05-24T14:01:27.658Z"

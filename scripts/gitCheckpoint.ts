@@ -1,5 +1,6 @@
 import { spawn } from "child_process";
 import fs from "fs";
+import os from "os";
 import path from "path";
 
 const STAGE_PATHS = [
@@ -72,7 +73,17 @@ export async function gitCheckpoint(
     return;
   }
 
-  const commitCode = await runGit(["commit", "-m", message]);
+  const msgFile = path.join(
+    os.tmpdir(),
+    `szybka-matma-commit-${process.pid}.txt`,
+  );
+  fs.writeFileSync(msgFile, message, "utf8");
+  const commitCode = await runGit(["commit", "-F", msgFile]);
+  try {
+    fs.unlinkSync(msgFile);
+  } catch {
+    /* ignore */
+  }
   if (commitCode !== 0) {
     say(`  ⚠ commit kod ${commitCode}`);
     return;

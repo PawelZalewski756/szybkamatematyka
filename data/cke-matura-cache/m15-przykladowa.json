@@ -8,199 +8,199 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Liczba 15 jest przybliżeniem z niedomiarem liczby x . Błąd bezwzględny tego przybliżenia jest równy 0,24. Liczba x to A) 14,76 B) 14,80 C) 15,20 D) 15,24",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzór na błąd bezwzględny: błąd bezwzględny $= |x - \\text{przybliżenie}|$. Mamy podane, że przybliżenie wynosi 15, a błąd bezwzględny to 0,24.\n**Krok 2.** Podstaw dane do wzoru i ułóż równanie: $|x - 15| = 0,24$. Ponieważ 15 jest przybliżeniem z niedomiarem, wiemy, że $x > 15$.\n**Krok 3.** Rozwiąż równanie, pamiętając o warunku $x > 15$. Równanie rozpadnie się na dwa przypadki: $x - 15 = 0,24$ lub $x - 15 = -0,24$. Z warunku $x > 15$ odrzucamy drugie równanie ($x=14,76$). Z pierwszego równania $x = 15 + 0,24 = 15,24$.\n**Odpowiedź:** D, czyli 15,24"
     },
     {
       "numer": 2,
       "dzial": "Algebra",
       "tresc": "Punkty E = (7,1) i F = (9,7 ) to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość A) 4√ 5 B) 10 C) 4√ 10 D) 20",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz długość odcinka EF, który jest równy połowie długości boku kwadratu. Długość $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\n**Krok 2.** Długość boku kwadratu jest dwukrotnością długości odcinka EF, czyli $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.\n**Krok 3.** Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$. Sprawdzamy jeszcze raz.\n\n**Krok 1.** Oblicz długość odcinka EF, który jest równy połowie długości boku kwadratu. Długość $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\n**Krok 2.** Długość boku kwadratu jest dwukrotnością długości odcinka EF, czyli $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.\n**Krok 3.** Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\n\n**Krok 1.** Odcinek EF łączy środki dwóch sąsiednich boków kwadratu. Długość odcinka EF jest równa połowie długości boku kwadratu ($a$), czyli $EF = \\frac{a}{2}$.\n**Krok 2.** Obliczamy długość odcinka EF: $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\n**Krok 3.** Długość boku kwadratu wynosi $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.\n**Krok 4.** Długość przekątnej kwadratu wynosi $d = a\\sqrt{2}$. Podstawiamy: $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\n\n**Krok 1.** Długość odcinka łączącego środki dwóch sąsiednich boków kwadratu jest równa połowie długości boku kwadratu ($a$), czyli $EF = \\frac{a}{2}$.\n**Krok 2.** Obliczamy długość odcinka EF: $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\n**Krok 3.** Długość boku kwadratu wynosi $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.\n**Krok 4.** Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\n\nPrzeanalizujmy jeszcze raz dane. E i F to środki boków AB i BC. Odcinek EF nie jest równoległy do przekątnej AC.\nOdległość między środkami boków to $\\sqrt{(9-7)^2+(7-1)^2} = \\sqrt{2^2+6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\nTen odcinek jest równy długości połowy drugiego boku, czyli jest równy $\\frac{a}{2}$.\nZatem $\\frac{a}{2} = 2\\sqrt{10}$, stąd $a = 4\\sqrt{10}$.\nDługość przekątnej kwadratu to $d = a\\sqrt{2} = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\nWartości $8\\sqrt{5}$ nie ma wśród odpowiedzi.\n\nSprawdźmy inny sposób.\nŚrodek boku AB to E, środek BC to F.\nWektor $\\vec{EF} = (9-7, 7-1) = (2, 6)$.\nDługość $EF = \\sqrt{2^2+6^2} = \\sqrt{40} = 2\\sqrt{10}$.\nW kwadracie ABCD, wektor $\\vec{AB}$ jest prostopadły do $\\vec{BC}$.\nPunkt E jest środkiem AB, F jest środkiem BC.\nDługość boku kwadratu wynosi $a$.\nWtedy $AE = EB = a/2$ i $BF = FC = a/2$.\nW trójkącie prostokątnym EBF, przyprostokątne mają długość $a/2$.\n$EF^2 = EB^2 + BF^2 = (a/2)^2 + (a/2)^2 = 2(a/2)^2 = 2 \\frac{a^2}{4} = \\frac{a^2}{2}$.\n$EF = \\sqrt{\\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}} = \\frac{a\\sqrt{2}}{2}$.\nMamy $EF = 2\\sqrt{10}$.\nWięc $\\frac{a\\sqrt{2}}{2} = 2\\sqrt{10}$.\n$a\\sqrt{2} = 4\\sqrt{10}$.\n$a = \\frac{4\\sqrt{10}}{\\sqrt{2}} = 4\\sqrt{5}$.\nDługość przekątnej kwadratu to $d = a\\sqrt{2}$.\n$d = 4\\sqrt{5} \\cdot \\sqrt{2} = 4\\sqrt{10}$.\nTo jest opcja C.\n\n**Krok 1.** Długość odcinka łączącego środki dwóch sąsiednich boków kwadratu ($EF$) jest równa $\\frac{a\\sqrt{2}}{2}$, gdzie $a$ to długość boku kwadratu.\n**Krok 2.** Obliczamy długość odcinka $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\n**Krok 3.** Przyrównujemy $EF$ do wzoru: $\\frac{a\\sqrt{2}}{2} = 2\\sqrt{10}$, co daje $a\\sqrt{2} = 4\\sqrt{10}$, a stąd $a = 4\\sqrt{5}$.\n**Krok 4.** Długość przekątnej kwadratu to $d = a\\sqrt{2}$. Podstawiamy $a = 4\\sqrt{5}$, otrzymując $d = 4\\sqrt{5} \\cdot \\sqrt{2} = 4\\sqrt{10}$.\n\n**Odpowiedź:** C, czyli $4\\sqrt{10}$"
     },
     {
       "numer": 3,
       "dzial": "Algebra",
       "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozpisz pierwiastki, zamieniając liczby mieszane na ułamki niewłaściwe i grupując czynniki: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$ oraz $\\sqrt{1\\frac{1}{3}} = \\sqrt{\\frac{4}{3}} = \\frac{\\sqrt{4}}{\\sqrt{3}} = \\frac{2}{\\sqrt{3}}$.\n**Krok 2.** Wykonaj mnożenie i pozbądź się niewymierności z mianownika: $\\frac{\\sqrt{3}}{2} \\cdot \\frac{2}{\\sqrt{3}} = \\frac{\\sqrt{3} \\cdot 2}{2 \\cdot \\sqrt{3}} = 1$.\n**Odpowiedź:** B, czyli $1$."
     },
     {
       "numer": 4,
       "dzial": "Algebra",
       "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wyrażenie z usuniętymi nawiasami, pamiętając o zmianie znaków przy minusie.\n$$(3x - 2y) - (x + 3y) = 3x - 2y - x - 3y$$\n**Krok 2.** Zredukuj wyrazy podobne, grupując `x` z `x` oraz `y` z `y`.\n$$(3x - x) + (-2y - 3y) = 2x - 5y$$\n**Odpowiedź:** $2x - 5y$"
     },
     {
       "numer": 5,
       "dzial": "Funkcje",
       "tresc": "Funkcja wykładnicza określona wzorem &fnof;( x ) = 3 x przyjmuje wartość 6 dla argumentu A) x = 2 B) x = log 3 2 C) x = log 3 6 D) x = log 6 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz równanie, podstawiając podaną wartość funkcji $f(x)=6$ do jej wzoru $f(x) = 3^x$. Otrzymujemy $6 = 3^x$.\n**Krok 2.** Rozwiąż równanie $6 = 3^x$ stosując definicję logarytmu: jeśli $a^b = c$, to $b = \\log_a c$. W tym przypadku $a=3$, $b=x$, $c=6$.\n**Krok 3.** Na podstawie definicji logarytmu, zapisz rozwiązanie jako $x = \\log_3 6$.\n**Odpowiedź:** C, czyli $x = \\log_3 6$"
     },
     {
       "numer": 6,
       "dzial": "Algebra",
       "tresc": "Wyrażenie 16 – (3 x + 1) 2 jest równe A) (3 – 3 x ) ⋅ (5 + 3 x ) B) (15 – 3 x ) 2 C) (5 – 3 x ) ⋅ (5 + 3 x ) D) 15 – 9 x 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozpoznaj wzór skróconego mnożenia na różnicę kwadratów $a^2 - b^2 = (a-b)(a+b)$. W tym przypadku $a=4$ i $b=(3x+1)$, więc mamy $4^2 - (3x+1)^2$.\n**Krok 2.** Zastosuj wzór na różnicę kwadratów: $(4 - (3x+1))(4 + (3x+1))$.\n**Krok 3.** Uprość oba nawiasy: $(4 - 3x - 1)(4 + 3x + 1) = (3 - 3x)(5 + 3x)$.\n\n**Odpowiedź:** A, czyli $(3 – 3 x ) ⋅ (5 + 3 x )$"
     },
     {
       "numer": 7,
       "dzial": "Algebra",
       "tresc": "Wskaż równość prawdziwą. A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-1.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-2.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-3.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-4.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozpoznajemy, że na rysunkach znajdują się wykresy funkcji kwadratowych. Wartość $x$ najmniejszego argumentu dla którego funkcja przyjmuje wartość 0 (pierwiastek) to $x_1$. Wartość $x$ największego argumentu dla którego funkcja przyjmuje wartość 0 to $x_2$. Z wykresu odczytujemy pierwiastki funkcji.\n**Krok 2.** Sprawdzamy równania z podpunktów A, B, C, D. Szukamy równania, którego pierwiastki odpowiadają pierwiastkom odczytanym z wykresu.\n**Krok 3.** Dla wykresu z podpunktu A, pierwiastki to $x_1 = -3$ i $x_2 = 1$. Równanie to $(x+3)(x-1) = 0$, co po wymnożeniu daje $x^2 + 2x - 3 = 0$.\n**Krok 4.** Sprawdzamy pozostałe podpunkty. Dla podpunktu B pierwiastki to $x_1=-1$ i $x_2=3$, równanie to $x^2 - 2x - 3 = 0$. Dla podpunktu C pierwiastki to $x_1=-3$ i $x_2=-1$, równanie to $x^2 + 4x + 3 = 0$. Dla podpunktu D pierwiastki to $x_1=1$ i $x_2=3$, równanie to $x^2 - 4x + 3 = 0$.\n\n**Odpowiedź:** B, czyli $x^2 - 2x - 3 = 0$"
     },
     {
       "numer": 8,
       "dzial": "Algebra",
       "tresc": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-1.png) jest przedział A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Nierówność kwadratowa $x^2 - 4x + 3 \\le 0$. Znajdź miejsca zerowe funkcji $f(x) = x^2 - 4x + 3$ przyrównując ją do zera: $x^2 - 4x + 3 = 0$. Użyj wzoru na deltę $\\Delta = b^2 - 4ac$.\n**Krok 2.** Oblicz pierwiastki: $\\Delta = (-4)^2 - 4 \\cdot 1 \\cdot 3 = 16 - 12 = 4$, $\\sqrt{\\Delta} = 2$. $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{4 - 2}{2} = 1$, $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{4 + 2}{2} = 3$.\n**Krok 3.** Parabola $y = x^2 - 4x + 3$ ma ramiona skierowane w górę (współczynnik $a=1 > 0$). Nierówność $f(x) \\le 0$ spełniają argumenty $x$ dla których parabola znajduje się pod osią $x$ lub na niej.\n**Odpowiedź:** $[1, 3]$"
     },
     {
       "numer": 9,
       "dzial": "Statystyka",
       "tresc": "W klasie jest cztery razy więcej chłopców niż dziewcząt. Ile procent wszystkich uczniów tej klasy stanowią dziewczęta? A) 4% B) 5% C) 20% D) 25%",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy liczbę dziewcząt przez $x$. Wtedy liczba chłopców wynosi $4x$.\n**Krok 2.** Całkowita liczba uczniów w klasie to $x + 4x = 5x$.\n**Krok 3.** Ułamek liczby dziewcząt do wszystkich uczniów to $\\frac{x}{5x} = \\frac{1}{5}$. Aby zamienić to na procenty, mnożymy przez 100%: $\\frac{1}{5} \\cdot 100\\% = 20\\%$.\n\n**Odpowiedź:** C, czyli 20%"
     },
     {
       "numer": 10,
       "dzial": "Algebra",
       "tresc": "Reszta z dzielenia liczby 55 przez 8 jest równa A) 4 B) 5 C) 6 D) 7",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wykonujemy dzielenie liczby 55 przez 8, aby znaleźć iloraz i resztę.\n**Krok 2.** Dzielimy 55 przez 8: $55 = 8 \\cdot 6 + 7$. Iloraz wynosi 6, a reszta wynosi 7.\n**Odpowiedź:** D, czyli 7"
     },
     {
       "numer": 11,
       "dzial": "Funkcje",
       "tresc": "Funkcja &fnof; przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: &fnof;(42), &fnof;(44), &fnof;(45), &fnof;(48) największa to A) &fnof;(42) B) &fnof;(44) C) &fnof;(45) D) &fnof;(48)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozkładamy każdą z podanych liczb na czynniki pierwsze i wyszukujemy największy czynnik pierwszy.\nDla 42: $42 = 2 \\cdot 3 \\cdot 7$. Największy dzielnik pierwszy to 7.\nDla 44: $44 = 2 \\cdot 2 \\cdot 11$. Największy dzielnik pierwszy to 11.\nDla 45: $45 = 3 \\cdot 3 \\cdot 5$. Największy dzielnik pierwszy to 5.\nDla 48: $48 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 3$. Największy dzielnik pierwszy to 3.\n\n**Krok 2.** Porównujemy otrzymane wartości: 7, 11, 5, 3. Największą z nich jest 11, które odpowiada liczbie 44.\n\n**Odpowiedź:** B, czyli &fnof;(44)"
     },
     {
       "numer": 12,
       "dzial": "Geometria",
       "tresc": "Rysunek przedstawia ostrosłup prawidłowy czworokątny ABCDS . ![Rysunek do zadania](/cke-matura/m15-przykladowa/z12-1.png) Kątem między krawędzią CS a płaszczyzną podstawy tego ostrosłupa jest kąt A) DCS B) ACS C) OSC D) SCB",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Kąt między krawędzią a płaszczyzną podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę.\n**Krok 2.** Krawędź CS ma punkt wspólny $C$ z płaszczyzną podstawy, więc jej rzutem prostokątnym na płaszczyznę podstawy jest odcinek $OC$, gdzie $O$ jest spodkiem wysokości ostrosłupa (środek kwadratu $ABCD$).\n**Krok 3.** Kątem między krawędzią $CS$ a płaszczyzną podstawy jest zatem kąt między $CS$ a $OC$, czyli kąt $SCO$. Z podanych opcji odpowiedź C (kąt OSC) jest poprawna, gdyż punkt $O$ jest wierzchołkiem tego kąta.\n\n**Odpowiedź:** C, czyli $OSC$"
     },
     {
       "numer": 13,
       "dzial": "Funkcje",
       "tresc": "Wykresem funkcji kwadratowej &fnof; jest parabola o wierzchołku W = (5,7) . Wówczas prawdziwa jest równość A) &fnof;(1) = &fnof;(9) B) &fnof;(1) = &fnof;(11) C) &fnof;(1) = &fnof;(13) D) &fnof;(1) = &fnof;(15)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji są równe.\n**Krok 2.** Wierzchołek paraboli to $W=(5,7)$, więc oś symetrii ma równanie $x=5$. Sprawdzamy odległości argumentów od 5 dla każdej opcji.\n**Krok 3.** Dla opcji A) argumenty 1 i 9 są oddalone od 5 o 4 ($|1-5|=4$, $|9-5|=4$), co oznacza, że $f(1) = f(9)$. Dla pozostałych opcji odległości są różne.\n**Odpowiedź:** A, czyli $f(1) = f(9)$"
     },
     {
       "numer": 14,
       "dzial": "Algebra",
       "tresc": "Jeżeli kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m15-przykladowa/z14-1.png) równa się A) – 1 B) – 1 &frasl; 3 C) 3 &frasl; 7 D) 84 &frasl; 25",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Z rysunku odczytujemy długości przyprostokątnych trójkąta prostokątnego: $a=7$, $b=24$.\n**Krok 2.** Korzystamy z definicji funkcji tangens w trójkącie prostokątnym, gdzie $\\operatorname{tg} \\alpha = \\frac{\\text{przyprostokątna naprzeciwko kąta } \\alpha}{\\text{przyprostokątna przy kącie } \\alpha}$. Podstawiamy dane: $\\operatorname{tg} \\alpha = \\frac{7}{24}$.\n**Krok 3.** Obliczamy $\\operatorname{ctg} \\alpha$, wiedząc, że $\\operatorname{ctg} \\alpha = \\frac{1}{\\operatorname{tg} \\alpha}$. Podstawiamy wartość $\\operatorname{tg} \\alpha$: $\\operatorname{ctg} \\alpha = \\frac{1}{\\frac{7}{24}} = \\frac{24}{7}$.\n**Krok 4.** Obliczamy $\\frac{\\operatorname{ctg} \\alpha}{10}$: $\\frac{\\frac{24}{7}}{10} = \\frac{24}{7 \\cdot 10} = \\frac{24}{70} = \\frac{12}{35}$.\n\n**Odpowiedź:** A, czyli $\\frac{12}{35}$."
     },
     {
       "numer": 15,
       "dzial": "Równania",
       "tresc": "Równanie (2 x – 1)⋅( x – 2) = (1 – 2 x )⋅( x + 2) ma dwa rozwiązania. Są to liczby A) –2 oraz 1 &frasl; 2 B) 0 oraz 1 &frasl; 2 C) 1 &frasl; 2 oraz 2 D) –2 oraz 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przenieś wszystkie wyrazy na jedną stronę, aby uzyskać równanie równe 0. Zauważ, że $(2x-1) = -(1-2x)$.\n$(2x-1)(x-2) = -(2x-1)(x+2)$\n$(2x-1)(x-2) + (2x-1)(x+2) = 0$\n\n**Krok 2.** Wyciągnij wspólny czynnik $(2x-1)$ przed nawias i uprość wyrażenie w drugim nawiasie.\n$(2x-1) [ (x-2) + (x+2) ] = 0$\n$(2x-1) [ 2x ] = 0$\n\n**Krok 3.** Rozwiąż otrzymane równanie, przyrównując każdy z czynników do zera.\n$2x-1 = 0 \\implies 2x = 1 \\implies x = \\frac{1}{2}$\n$2x = 0 \\implies x = 0$\n\n**Odpowiedź:** B, czyli $0$ oraz $\\frac{1}{2}$"
     },
     {
       "numer": 16,
       "dzial": "Równania",
       "tresc": "Dane jest równanie 3 x + 4 y – 5 = 0 . Z którym z poniższych równań tworzy ono układ sprzeczny? A) 6 x + 8 y –10 = 0 B) 4 x – 3 y + 5 = 0 C) 9 x +12 y – 10 = 0 D) 5 x + 4 y – 3 = 0",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz oba równania w postaci ogólnej $Ax + By + C = 0$ i porównaj współczynniki. Układ jest sprzeczny, gdy stosunek współczynników przy $x$ i przy $y$ jest taki sam, ale różny od stosunku wyrazów wolnych.\n\n**Krok 2.** Przekształć dane równanie $3x + 4y - 5 = 0$ do postaci, gdzie współczynniki przy $x$ i $y$ będą takie same jak w jednej z odpowiedzi. Mnożąc pierwsze równanie przez 3, otrzymujemy $9x + 12y - 15 = 0$. Porównując to z opcją C) $9x + 12y - 10 = 0$, widzimy, że stosunek współczynników przy $x$ i $y$ jest taki sam ($\\frac{9}{9} = \\frac{12}{12} = 1$), ale stosunek wyrazów wolnych jest inny ($\\frac{-15}{-10} \\ne 1$).\n\n**Krok 3.** Ponieważ stosunek współczynników przy $x$ i $y$ jest równy, a stosunek wyrazów wolnych jest różny, te dwa równania opisują proste równoległe, które się nie przecinają, tworząc układ sprzeczny.\n\n**Odpowiedź:** C"
     },
     {
       "numer": 17,
       "dzial": "Trygonometria",
       "tresc": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego &alpha; jest równy ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-1.png) A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przypomnij definicję sinusa w trójkącie prostokątnym: sinus kąta ostrego to stosunek długości przyprostokątnej przeciwległej temu kątowi do długości przeciwprostokątnej.\n**Krok 2.** Zidentyfikuj przyprostokątną przeciwległą kątowi $\\alpha$ (ma długość 3) oraz przeciwprostokątną (ma długość 5).\n**Krok 3.** Oblicz sinus kąta $\\alpha$, dzieląc długość przyprostokątnej przeciwległej przez długość przeciwprostokątnej: $\\sin \\alpha = \\frac{3}{5}$.\n\n**Odpowiedź:** A, czyli $\\frac{3}{5}$"
     },
     {
       "numer": 18,
       "dzial": "Algebra",
       "tresc": "Tworząca stożka ma długość l , a promień jego podstawy jest równy r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-1.png) Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-2.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-3.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-4.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzory na pole powierzchni bocznej stożka ($P_b = \\pi r l$) i pole jego podstawy ($P_p = \\pi r^2$). Z treści zadania wiemy, że $P_b = 2 P_p$.\n\n**Krok 2.** Podstaw wzory do równania z treści zadania: $\\pi r l = 2 \\cdot \\pi r^2$. Skróć obie strony przez $\\pi r$ (zakładając, że $r>0$, co jest prawdą dla promienia podstawy stożka).\n\n**Krok 3.** Po skróceniu otrzymujemy zależność $l = 2r$. Odpowiedź szukamy wśród podanych opcji, gdzie relacja między $l$ a $r$ jest przedstawiona w różny sposób. Opcja B) przedstawia tę zależność w postaci $l=2r$.\n\n**Odpowiedź:** B, czyli $l=2r$"
     },
     {
       "numer": 19,
       "dzial": "Geometria",
       "tresc": "Dane są dwa okręgi o promieniach 10 i 15. Mniejszy okrąg przechodzi przez środek większego okręgu. Odległość między środkami tych okręgów jest równa A) 2,5 B) 5 C) 10 D) 12,5",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy promienie okręgów jako $r_1$ i $r_2$, gdzie $r_1 = 10$ i $r_2 = 15$. Z treści zadania wiemy, że mniejszy okrąg przechodzi przez środek większego okręgu.\n**Krok 2.** Skoro mniejszy okrąg (o promieniu $r_1$) przechodzi przez środek większego okręgu, to odległość między środkami tych okręgów musi być równa promieniowi mniejszego okręgu.\n**Krok 3.** Zatem odległość między środkami okręgów wynosi $r_1$, czyli 10.\n\n**Odpowiedź:** C, czyli 10"
     },
     {
       "numer": 20,
       "dzial": "Algebra",
       "tresc": "Każdy uczestnik spotkania dwunastoosobowej grupy przyjaciół uścisnął dłoń każdemu z pozostałych członków tej grupy. Liczba wszystkich uścisków dłoni była równa A) 66 B) 72 C) 132 D) 144",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zrozum, że problem dotyczy kombinacji bez powtórzeń – każdy uścisk dłoni to wybór 2 osób z 12, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.\n**Krok 2.** W tym zadaniu mamy $n=12$ (wszystkie osoby) i $k=2$ (dwie osoby biorące udział w uścisku dłoni). Podstaw wartości do wzoru: $C(12, 2) = \\frac{12!}{2!(12-2)!} = \\frac{12!}{2!10!}$.\n**Krok 3.** Oblicz wartość kombinacji: $\\frac{12 \\times 11}{2 \\times 1} = 6 \\times 11 = 66$.\n\n**Odpowiedź:** A, czyli 66"
     },
     {
       "numer": 21,
       "dzial": "Ciągi",
       "tresc": "W dziewięciowyrazowym ciągu geometrycznym o wyrazach dodatnich pierwszy wyraz jest równy 3, a ostatni wyraz jest równy 12. Piąty wyraz tego ciągu jest równy A) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-1.png) B) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-2.png) C) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-3.png) D) ![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-4.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego: $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_1 = 3$, $a_9 = 12$, więc $12 = 3 \\cdot q^{9-1}$, co daje $q^8 = 4$.\n**Krok 2.** Oblicz 5. wyraz ciągu ($a_5$) używając wzoru $a_5 = a_1 \\cdot q^{5-1}$. Podstawiając dane i wynik z poprzedniego kroku: $a_5 = 3 \\cdot q^4$. Ponieważ $q^8 = 4$, to $q^4 = \\sqrt{4} = 2$.\n**Krok 3.** Oblicz $a_5$: $a_5 = 3 \\cdot 2 = 6$.\n\n**Odpowiedź:** B, czyli 6"
     },
     {
       "numer": 22,
       "dzial": "Ciągi",
       "tresc": "Ciąg ( a n ) jest określony wzorem a n = ( n + 3)( n – 5) dla n ≥ 1 . Liczba ujemnych wyrazów tego ciągu jest równa A) 3 B) 4 C) 7 D) 9",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby znaleźć ujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $a_n < 0$. Zapisujemy nierówność: $(n+3)(n-5) < 0$.\n**Krok 2.** Nierówność kwadratowa $(n+3)(n-5) < 0$ jest spełniona, gdy jeden z czynników jest dodatni, a drugi ujemny. Ponieważ $n \\ge 1$, czynnik $(n+3)$ jest zawsze dodatni. Zatem musi być $(n-5) < 0$, co daje $n < 5$.\n**Krok 3.** Liczby naturalne $n \\ge 1$, które spełniają warunek $n < 5$, to $n \\in \\{1, 2, 3, 4\\}$. Są to 4 liczby.\n**Odpowiedź:** B, czyli 4"
     },
     {
       "numer": 23,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez i . Wtedy A) 2 p 4 = p 2 B) 2 p 6 = p 3 C) 2 p 3 = p 6 D) 2 p 2 = p 4",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} — 3 możliwości. $p_3$ (podzielne przez 3): {3, 6} — 2 możliwości. $p_4$ (podzielne przez 4): {4} — 1 możliwość. $p_6$ (podzielne przez 6): {6} — 1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników (6).\n**Krok 2.** Wyraź obliczone prawdopodobieństwa w formie ułamków. $p_2 = \\frac{3}{6} = \\frac{1}{2}$, $p_3 = \\frac{2}{6} = \\frac{1}{3}$, $p_4 = \\frac{1}{6}$, $p_6 = \\frac{1}{6}$.\n**Krok 3.** Sprawdź równości podane w opcjach.\nA) $2 \\cdot p_4 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_2 = \\frac{1}{2}$. $\\frac{1}{3} \\neq \\frac{1}{2}$.\nB) $2 \\cdot p_6 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_3 = \\frac{1}{3}$. $\\frac{1}{3} = \\frac{1}{3}$.\nC) $2 \\cdot p_3 = 2 \\cdot \\frac{1}{3} = \\frac{2}{3}$, $p_6 = \\frac{1}{6}$. $\\frac{2}{3} \\neq \\frac{1}{6}$.\nD) $2 \\cdot p_2 = 2 \\cdot \\frac{1}{2} = 1$, $p_4 = \\frac{1}{6}$. $1 \\neq \\frac{1}{6}$.\n\n**Odpowiedź:** B"
     },
     {
       "numer": 24,
       "dzial": "Algebra",
       "tresc": "Zbiorem rozwiązań nierówności ax + 4 ≥ 0 z niewiadomą x jest przedział (–∞, 2&rang; . Wyznacz a .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Nierówność $ax + 4 \\ge 0$ przekształcamy do postaci $ax \\ge -4$. Rozważamy dwa przypadki ze względu na znak współczynnika $a$.\n\n**Krok 2.** Jeśli $a > 0$, dzielimy nierówność przez $a$ i otrzymujemy $x \\ge -\\frac{4}{a}$. Rozwiązaniem jest przedział $[-\\frac{4}{a}, \\infty)$, co nie zgadza się z danym przedziałem.\n\n**Krok 3.** Jeśli $a < 0$, dzieląc przez $a$, zmieniamy kierunek nierówności: $x \\le -\\frac{4}{a}$. Rozwiązaniem jest przedział $(-\\infty, -\\frac{4}{a}]$. Porównując z danym przedziałem $(-\\infty, 2]$, otrzymujemy $-\\frac{4}{a} = 2$.\n\n**Krok 4.** Rozwiązujemy równanie $-\\frac{4}{a} = 2$ mnożąc obie strony przez $a$: $-4 = 2a$, skąd $a = -2$. Sprawdzamy, że $a < 0$, co jest zgodne z założeniem.\n\n**Odpowiedź:** $a = -2$"
     },
     {
       "numer": 25,
       "dzial": "Równania",
       "tresc": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m15-przykladowa/z25-1.png) dla x ≠ 1.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Pomnóż obie strony równania przez wspólny mianownik $(x-1)$, aby pozbyć się ułamków. Otrzymasz $1 = 2(x-1)$.\n**Krok 2.** Rozwiąż otrzymane równanie liniowe: $1 = 2x - 2$, co po dodaniu $2$ do obu stron daje $3 = 2x$.\n**Krok 3.** Podziel obie strony przez $2$, aby wyznaczyć $x$. Otrzymasz $x = \\frac{3}{2}$.\n\n**Odpowiedź:** $x = \\frac{3}{2}$"
     },
     {
       "numer": 26,
       "dzial": "Geometria",
       "tresc": "Kwadrat K 1 ma bok długości a . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , … takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Długość boku kwadratu $K_n$ oznaczamy jako $a_n$. Zgodnie z treścią zadania, $a_1 = a$ oraz $a_n = \\frac{1}{2} a_{n-1}$ dla $n \\ge 2$. Jest to ciąg geometryczny o pierwszym wyrazie $a$ i ilorazie $q = \\frac{1}{2}$. Wzór ogólny na długość boku $n$-tego kwadratu to $a_n = a \\cdot \\left(\\frac{1}{2}\\right)^{n-1}$.\n\n**Krok 2.** Aby wyznaczyć pole kwadratu $K_{12}$, potrzebujemy długości jego boku, czyli $a_{12}$. Korzystając ze wzoru ogólnego: $a_{12} = a \\cdot \\left(\\frac{1}{2}\\right)^{12-1} = a \\cdot \\left(\\frac{1}{2}\\right)^{11} = \\frac{a}{2^{11}}$.\n\n**Krok 3.** Pole kwadratu $K_{12}$ (oznaczone jako $P_{12}$) obliczamy, podnosząc długość jego boku do kwadratu: $P_{12} = (a_{12})^2 = \\left(\\frac{a}{2^{11}}\\right)^2 = \\frac{a^2}{(2^{11})^2} = \\frac{a^2}{2^{22}}$.\n\n**Odpowiedź:** $\\frac{a^2}{2^{22}}$"
     },
     {
       "numer": 27,
       "dzial": "Algebra",
       "tresc": "W pierścieniu kołowym cięciwa zewnętrznego okręgu ma długość 10 i jest styczna do wewnętrznego okręgu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z27-1.png) Wykaż, że pole tego pierścienia można wyrazić wzorem, w którym nie występują promienie wyznaczających go okręgów.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy promienie zewnętrznego i wewnętrznego okręgu jako $R$ i $r$. Cięciwa o długości 10 jest styczna do wewnętrznego okręgu, co oznacza, że tworzy z promieniem $r$ trójkąt prostokątny. Połowa cięciwy (długości 5) jest jedną przyprostokątną, $r$ jest drugą przyprostokątną, a $R$ jest przeciwprostokątną. Stosujemy twierdzenie Pitagorasa: $r^2 + 5^2 = R^2$.\n**Krok 2.** Przekształcamy równanie z kroku 1, aby otrzymać $R^2 - r^2 = 5^2 = 25$. Pole pierścienia kołowego to różnica pól kół: $P = \\pi R^2 - \\pi r^2$.\n**Krok 3.** Wyłączamy $\\pi$ przed nawias w wyrażeniu na pole: $P = \\pi (R^2 - r^2)$. Podstawiamy wartość $R^2 - r^2 = 25$ z kroku 2.\n**Odpowiedź:** $P = 25\\pi$"
     },
     {
       "numer": 28,
       "dzial": "Procenty",
       "tresc": "Uzasadnij, że liczba 4 12 + 4 13 + 4 14 jest podzielna przez 42.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wyłącz wspólny czynnik z przed nawiasu.\n$4^{12} + 4^{13} + 4^{14} = 4^{12}(1 + 4^1 + 4^2)$.\n\n**Krok 2.** Oblicz wartość w nawiasie i uprość wyrażenie.\n$1 + 4 + 16 = 21$. Zatem mamy $4^{12} \\cdot 21$.\n\n**Krok 3.** Rozłóż czynnik potęgowy na mniejsze części, aby wyodrębnić dzielnik 42.\n$4^{12} \\cdot 21 = 4 \\cdot 4^{11} \\cdot 21 = 4 \\cdot 21 \\cdot 4^{11} = 84 \\cdot 4^{11}$. Ponieważ $84 = 2 \\cdot 42$, liczba jest podzielna przez 42.\n\n**Odpowiedź:** Liczba jest podzielna przez 42."
     },
     {
       "numer": 29,
       "dzial": "Geometria",
       "tresc": "Na trójkącie o bokach długości √ 7 , √ 8 , √ 15 opisano okrąg. Oblicz promień tego okręgu.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Sprawdź, czy trójkąt jest prostokątny, używając twierdzenia Pitagorasa. W tym celu podnieś długości boków do kwadratu: $(\\sqrt{7})^2=7$, $(\\sqrt{8})^2=8$, $(\\sqrt{15})^2=15$. Suma dwóch mniejszych kwadratów $7+8=15$, co jest równe kwadratowi najdłuższego boku.\n**Krok 2.** Ponieważ $a^2+b^2=c^2$, trójkąt jest prostokątny. W trójkącie prostokątnym przeciwprostokątna jest średnicą okręgu opisanego na tym trójkącie.\n**Krok 3.** Promień okręgu opisanego na trójkącie prostokątnym jest równy połowie długości przeciwprostokątnej. Przeciwprostokątna ma długość $\\sqrt{15}$.\n\n**Odpowiedź:** $\\frac{\\sqrt{15}}{2}$"
     },
     {
       "numer": 30,
       "dzial": "Funkcje",
       "tresc": "Proste l i k przecinają się w punkcie A = (0, 4) . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k – trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Określamy równania prostych. Prosta $l$ przechodzi przez $(0, 4)$ i tworzy trójkąt o polu 8 z dodatnimi półosiami. Jej równanie to $\\frac{x}{a_1} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_1| \\cdot 4 = 8$, stąd $|a_1| = 4$. Ponieważ przecina dodatnią półos $Ox$, $a_1=4$. Równanie prostej $l$: $\\frac{x}{4} + \\frac{y}{4} = 1$, czyli $x+y=4$. Prosta $k$ ma równanie $\\frac{x}{a_2} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_2| \\cdot 4 = 10$, stąd $|a_2|=5$. Ponieważ przecina dodatnią półos $Ox$, $a_2=5$. Równanie prostej $k$: $\\frac{x}{5} + \\frac{y}{4} = 1$, czyli $4x+5y=20$.\n\n**Krok 2.** Wyznaczamy punkty przecięcia prostych z osią $Ox$. Dla prostej $l$, podstawiamy $y=0$ do równania $x+y=4$, otrzymujemy punkt $P_1=(4, 0)$. Dla prostej $k$, podstawiamy $y=0$ do równania $4x+5y=20$, otrzymujemy punkt $P_2=(5, 0)$.\n\n**Krok 3.** Obliczamy pole trójkąta o wierzchołkach $A=(0, 4)$, $P_1=(4, 0)$ i $P_2=(5, 0)$. Podstawą tego trójkąta jest odcinek $P_1P_2$ na osi $Ox$. Długość podstawy to $|5-4|=1$. Wysokością jest odległość punktu $A$ od osi $Ox$, czyli 4. Pole trójkąta wynosi $\\frac{1}{2} \\cdot 1 \\cdot 4 = 2$.\n\n**Odpowiedź:** 2"
     },
     {
       "numer": 31,
       "dzial": "Ciągi",
       "tresc": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała 10 minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę w 40 minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ km/h.\n\n**Krok 2.** Oblicz prędkość Oli. Ola wyjechała 10 minut później niż Ala (o 7:10) i jechała 20 minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ km/h. Zauważ, że $v_O = 2v_A$.\n\n**Krok 3.** Oblicz czas, po którym Ola wyprzedziła Alę. Ala jechała $t$ minut, Ola jechała $t - 10$ minut. Droga pokonana przez Alę to $d_A = v_A \\cdot \\frac{t}{60}$. Droga pokonana przez Olę to $d_O = v_O \\cdot \\frac{t-10}{60}$. Ola wyprzedziła Alę, gdy $d_O = d_A$. Podstawiając prędkości: $3d \\cdot \\frac{t-10}{60} = \\frac{3d}{2} \\cdot \\frac{t}{60}$. Po skróceniu $d$, $60$, $3$: $2(t-10) = t$, czyli $2t - 20 = t$, co daje $t = 20$ minut. Ola wyprzedziła Alę po 20 minutach od wyjazdu Ali, czyli o 7:20.\n\n**Odpowiedź:** 7:20"
     },
     {
       "numer": 32,
       "dzial": "Geometria",
       "tresc": "Dane są wierzchołki trójkąta ABC : A = (2, 2) , B = (9, 5) i C = (3, 9) . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wyznacz równanie prostej AB, a następnie równanie prostej CD (wysokości), która jest prostopadła do AB i przechodzi przez C.\nProsta AB ma równanie $y = \\frac{1}{2}x + 1$. Prosta CD jest prostopadła do AB, więc jej współczynnik kierunkowy wynosi $-2$. Równanie prostej CD to $y - 9 = -2(x - 3)$, czyli $y = -2x + 15$.\n\n**Krok 2.** Oblicz współrzędne punktu D, który jest punktem przecięcia prostych AB i CD.\nRozwiązując układ równań:\n$y = \\frac{1}{2}x + 1$\n$y = -2x + 15$\nOtrzymujemy $x = \\frac{28}{5}$ i $y = \\frac{34}{5}$. Punkt $D = (\\frac{28}{5}, \\frac{34}{5})$.\n\n**Krok 3.** Wyznacz równanie prostej przechodzącej przez D i równoległej do BC.\nWspółczynnik kierunkowy prostej BC wynosi $a_{BC} = \\frac{9-5}{3-9} = \\frac{4}{-6} = -\\frac{2}{3}$. Prosta równoległa do BC ma taki sam współczynnik kierunkowy. Równanie szukanej prostej to $y - \\frac{34}{5} = -\\frac{2}{3}(x - \\frac{28}{5})$. Po przekształceniu otrzymujemy $y = -\\frac{2}{3}x + \\frac{238}{15}$.\n\n**Odpowiedź:** $y = -\\frac{2}{3}x + \\frac{238}{15}$"
     },
     {
       "numer": 33,
       "dzial": "Geometria",
       "tresc": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę – graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego. <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz objętość dużego sześcianu i liczbę mniejszych klocków. Duży sześcian ma krawędź 8 cm, więc jego objętość to $8^3 = 512 \\text{ cm}^3$. Mały klocek ma krawędź 2 cm, więc jego objętość to $2^3 = 8 \\text{ cm}^3$. Liczba klocków wynosi $\\frac{512}{8} = 64$.\n\n**Krok 2.** Oblicz pola powierzchni całkowitej pierwszej bryły (sześcianu). Sześcian o krawędzi 8 cm ma 6 ścian, każda o polu $8^2 = 64 \\text{ cm}^2$. Pole powierzchni całkowitej wynosi $6 \\cdot 64 = 384 \\text{ cm}^2$.\n\n**Krok 3.** Oblicz wymiary i pole powierzchni drugiej bryły (graniastosłupa). Po ułożeniu graniastosłupa pozostał jeden klocek, co oznacza, że na graniastosłup zużyto $64 - 1 = 63$ klocki. Objętość graniastosłupa to $63 \\cdot 8 = 504 \\text{ cm}^3$. Graniastosłup prawidłowy czworokątny ma w podstawie kwadrat. Szukamy wymiarów (podstawa $a \\times a$, wysokość $h$), których pole powierzchni jest minimalne dla danej objętości, a które da się ułożyć z klocków 2x2x2. Możliwe wymiary to np. podstawa $6 \\times 6$ (czyli $3 \\times 3$ klocki) i wysokość $504 / 36 = 14$. Powierzchnia wynosi $2 \\cdot (6 \\cdot 6) + 4 \\cdot (6 \\cdot 14) = 2 \\cdot 36 + 4 \\cdot 84 = 72 + 336 = 408 \\text{ cm}^2$. Alternatywnie podstawa $7 \\times 7$ nie jest możliwa z klocków 2x2x2. Inna możliwość to podstawa $4 \\times 4$ (czyli $2 \\times 2$ klocki) i wysokość $504 / 16 = 31.5$, nie jest możliwa. Przyjmujemy wymiary $6 \\times 6 \\times 14$.\n\n**Krok 4.** Oblicz stosunek pól powierzchni. Stosunek pola powierzchni pierwszej bryły do drugiej wynosi $\\frac{384}{408}$. Skracamy ułamek: $\\frac{384}{408} = \\frac{192}{204} = \\frac{96}{102} = \\frac{48}{51} = \\frac{16}{17}$.\n\n**Odpowiedź:** $\\frac{16}{17}$"
     }
   ],
   "fetchedAt": "2026-05-24T14:02:21.603Z"

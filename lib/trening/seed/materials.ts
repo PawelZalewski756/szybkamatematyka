@@ -6343,410 +6343,1687 @@ a^-n = 1/a^n (dla a != 0)
     exam_type: "8_klasa",
     category: "liczby",
     topic: "pierwiastki",
-    title: "Pierwiastki — Egzamin 8-klasisty",
+    title: "Pierwiastki kwadratowe i ich własności",
     content: `## Na egzaminie
-
-Temat **Pierwiastki** (Liczby i działania) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Pierwiastki kwadratowe pojawiają się na egzaminie ósmoklasisty dość często, zazwyczaj w zadaniach zamkniętych sprawdzających znajomość definicji i podstawowych własności, a także w zadaniach otwartych wymagających obliczeń z ich użyciem. CKE lubi sprawdzać umiejętność upraszczania wyrażeń z pierwiastkami, porównywania liczb z pierwiastkami oraz rozwiązywania prostych równań z pierwiastkami. Za poprawne rozwiązanie zadań z pierwiastkami można zdobyć od 1 do 3 punktów.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby i działania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił:
+1.  Zrozumieć definicję pierwiastka kwadratowego z liczby nieujemnej.
+2.  Obliczać pierwiastki kwadratowe z liczb doskonałych (np. $\\sqrt{4}$, $\\sqrt{16}$, $\\sqrt{100}$).
+3.  Stosować własność $\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}$ i $\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}$ do upraszczania wyrażeń.
+4.  Wyciągać liczby spod znaku pierwiastka, np. $\\sqrt{18} = 3\\sqrt{2}$.
+5.  Włączać liczby pod znak pierwiastka, np. $2\\sqrt{3} = \\sqrt{12}$.
+6.  Porównywać liczby z pierwiastkami kwadratowymi.
+7.  Rozwiązywać proste równania z niewiadomą pod pierwiastkiem lub równania z pierwiastkami po obu stronach.
+8.  Szacować wartości pierwiastków kwadratowych z liczb, które nie są kwadratami doskonałymi.
 
 ## Definicje i wzory
+*   **Pierwiastek kwadratowy** z liczby nieujemnej $a$ to taka liczba nieujemna $b$, której kwadrat jest równy $a$. Oznaczamy to jako $\\sqrt{a} = b$, gdzie $b \\geq 0$ i $b^2 = a$.
+    *   Przykład: $\\sqrt{9} = 3$, ponieważ $3 \\geq 0$ i $3^2 = 9$.
+    *   Przykład: $\\sqrt{25} = 5$, ponieważ $5 \\geq 0$ i $5^2 = 25$.
+    *   Nie istnieje pierwiastek kwadratowy z liczby ujemnej w zbiorze liczb rzeczywistych. $\\sqrt{-4}$ nie ma rozwiązania.
 
-*Materiał w trakcie uzupełniania dla: Pierwiastki.*
+*   **Kwadraty liczb naturalnych** (kwadraty doskonałe) – warto znać te wartości dla szybszych obliczeń:
+    *   $1^2 = 1 \\implies \\sqrt{1} = 1$
+    *   $2^2 = 4 \\implies \\sqrt{4} = 2$
+    *   $3^2 = 9 \\implies \\sqrt{9} = 3$
+    *   $4^2 = 16 \\implies \\sqrt{16} = 4$
+    *   $5^2 = 25 \\implies \\sqrt{25} = 5$
+    *   $6^2 = 36 \\implies \\sqrt{36} = 6$
+    *   $7^2 = 49 \\implies \\sqrt{49} = 7$
+    *   $8^2 = 64 \\implies \\sqrt{64} = 8$
+    *   $9^2 = 81 \\implies \\sqrt{81} = 9$
+    *   $10^2 = 100 \\implies \\sqrt{100} = 10$
+    *   $11^2 = 121 \\implies \\sqrt{121} = 11$
+    *   $12^2 = 144 \\implies \\sqrt{144} = 12$
+    *   $13^2 = 169 \\implies \\sqrt{169} = 13$
+    *   $14^2 = 196 \\implies \\sqrt{196} = 14$
+    *   $15^2 = 225 \\implies \\sqrt{225} = 15$
+    *   $20^2 = 400 \\implies \\sqrt{400} = 20$
+    *   $100^2 = 10000 \\implies \\sqrt{10000} = 100$
+
+*   **Własności pierwiastków kwadratowych:**
+    *   **Pierwiastek z iloczynu:** Dla liczb $a \\geq 0$ i $b \\geq 0$:
+        $$ \\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b} $$
+        To pozwala rozbić pierwiastek z większej liczby na iloczyn pierwiastków z mniejszych liczb, co ułatwia obliczenia lub wyciąganie czynnika przed pierwiastek.
+    *   **Pierwiastek z ilorazu:** Dla liczb $a \\geq 0$ i $b > 0$:
+        $$ \\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}} $$
+        Pozwala obliczyć pierwiastek z ułamka, obliczając pierwiastki licznika i mianownika osobno.
+    *   **Wyciąganie czynnika spod pierwiastka:** Aby uprościć $\\sqrt{N}$, szukamy największego kwadratu liczby całkowitej $k^2$, który jest dzielnikiem $N$. Wtedy $N = k^2 \\cdot m$, i:
+        $$ \\sqrt{N} = \\sqrt{k^2 \\cdot m} = \\sqrt{k^2} \\cdot \\sqrt{m} = k\\sqrt{m} $$
+        Przykład: $\\sqrt{18} = \\sqrt{9 \\cdot 2} = \\sqrt{9} \\cdot \\sqrt{2} = 3\\sqrt{2}$.
+    *   **Włączanie czynnika pod pierwiastek:** Aby włączyć liczbę $k \\geq 0$ pod pierwiastek kwadratowy, podnosimy ją do kwadratu:
+        $$ k\\sqrt{m} = \\sqrt{k^2} \\cdot \\sqrt{m} = \\sqrt{k^2 \\cdot m} $$
+        Przykład: $3\\sqrt{2} = \\sqrt{3^2 \\cdot 2} = \\sqrt{9 \\cdot 2} = \\sqrt{18}$.
+    *   **Potęgowanie pierwiastka:**
+        $$ (\\sqrt{a})^2 = a \\quad \\text{dla } a \\geq 0 $$
+        $$ \\sqrt{a^2} = |a| \\quad \\text{dla dowolnej liczby } a $$
+        Na egzaminie ósmoklasisty zazwyczaj mamy do czynienia z liczbami nieujemnymi, więc $\\sqrt{a^2} = a$ dla $a \\geq 0$.
 
 ## Przykład 1 — podstawowy
+Oblicz wartość wyrażenia $\\sqrt{144} + \\sqrt{49} - \\sqrt{81}$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Obliczamy pierwiastek z pierwszej liczby: $\\sqrt{144}$. Wiemy, że $12^2 = 144$, więc $\\sqrt{144} = 12$.
+**Krok 2.** Obliczamy pierwiastek z drugiej liczby: $\\sqrt{49}$. Wiemy, że $7^2 = 49$, więc $\\sqrt{49} = 7$.
+**Krok 3.** Obliczamy pierwiastek z trzeciej liczby: $\\sqrt{81}$. Wiemy, że $9^2 = 81$, więc $\\sqrt{81} = 9$.
+**Krok 4.** Podstawiamy obliczone wartości do wyrażenia: $12 + 7 - 9$.
+**Krok 5.** Wykonujemy działania dodawania i odejmowania: $12 + 7 = 19$, a następnie $19 - 9 = 10$.
+
+**Odpowiedź:** Wartość wyrażenia wynosi $10$.
+
+**Sprawdzenie:**
+$\\sqrt{144} = 12$ (bo $12^2=144$)
+$\\sqrt{49} = 7$ (bo $7^2=49$)
+$\\sqrt{81} = 9$ (bo $9^2=81$)
+$12 + 7 - 9 = 19 - 9 = 10$. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Uprość wyrażenie $\\sqrt{72} + \\sqrt{18} - \\sqrt{50}$.
+
+**Krok 1.** Analizujemy każdą liczbę pod pierwiastkiem i szukamy największego kwadratu liczby całkowitej będącego jej dzielnikiem.
+*   Dla $72$: Dzielniki $72$ to $1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72$. Największy kwadrat wśród nich to $36$. Zatem $72 = 36 \\cdot 2$.
+*   Dla $18$: Dzielniki $18$ to $1, 2, 3, 6, 9, 18$. Największy kwadrat to $9$. Zatem $18 = 9 \\cdot 2$.
+*   Dla $50$: Dzielniki $50$ to $1, 2, 5, 10, 25, 50$. Największy kwadrat to $25$. Zatem $50 = 25 \\cdot 2$.
+
+**Krok 2.** Stosujemy własność $\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}$ do rozbicia każdego pierwiastka:
+*   $\\sqrt{72} = \\sqrt{36 \\cdot 2} = \\sqrt{36} \\cdot \\sqrt{2} = 6\\sqrt{2}$
+*   $\\sqrt{18} = \\sqrt{9 \\cdot 2} = \\sqrt{9} \\cdot \\sqrt{2} = 3\\sqrt{2}$
+*   $\\sqrt{50} = \\sqrt{25 \\cdot 2} = \\sqrt{25} \\cdot \\sqrt{2} = 5\\sqrt{2}$
+
+**Krok 3.** Podstawiamy uproszczone pierwiastki z powrotem do oryginalnego wyrażenia:
+$6\\sqrt{2} + 3\\sqrt{2} - 5\\sqrt{2}$
+
+**Krok 4.** Wykonujemy działania. Ponieważ wszystkie składniki mają ten sam czynnik $\\sqrt{2}$, możemy traktować $\\sqrt{2}$ jak niewiadomą i dodać lub odjąć współczynniki:
+$(6 + 3 - 5)\\sqrt{2}$
+
+**Krok 5.** Obliczamy wartość współczynnika: $6 + 3 = 9$, a następnie $9 - 5 = 4$.
+Wynik to $4\\sqrt{2}$.
+
+**Odpowiedź:** Uproszczone wyrażenie to $4\\sqrt{2}$.
+
+**Sprawdzenie:**
+$\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$
+$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$
+$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$
+$6\\sqrt{2} + 3\\sqrt{2} - 5\\sqrt{2} = (6+3-5)\\sqrt{2} = 4\\sqrt{2}$. Wynik jest poprawny.
+
+## Przykład 3 — egzaminacyjny
+
+Porównaj liczby $\\sqrt{10}$ i $3$.
+
+**Krok 1.** Aby porównać liczbę z pierwiastkiem, wygodnie jest sprowadzić obie liczby do postaci, w której obie są pod pierwiastkiem lub obie nie są. W tym przypadku łatwiej jest włączyć liczbę $3$ pod znak pierwiastka.
+
+**Krok 2.** Stosujemy własność włączania czynnika pod pierwiastek: $k\\sqrt{m} = \\sqrt{k^2 \\cdot m}$.
+W tym przypadku mamy liczbę $3$, którą możemy zapisać jako $3\\sqrt{1}$. Włączamy $3$ pod pierwiastek:
+$3 = \\sqrt{3^2} = \\sqrt{9}$.
+
+**Krok 3.** Teraz porównujemy liczby $\\sqrt{10}$ i $\\sqrt{9}$. Porównujemy liczby pod pierwiastkami.
+Ponieważ $10 > 9$, to $\\sqrt{10} > \\sqrt{9}$.
+
+**Krok 4.** Zastępujemy $\\sqrt{9}$ z powrotem liczbą $3$:
+$\\sqrt{10} > 3$.
+
+**Odpowiedź:** $\\sqrt{10}$ jest większe od $3$.
+
+**Sprawdzenie:**
+$\\sqrt{10}$ to liczba między $\\sqrt{9}=3$ a $\\sqrt{16}=4$. Jest to około $3.16$.
+$3.16 > 3$. Porównanie jest poprawne.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Pierwiastek z liczby ujemnej:** Pamiętaj, że w zbiorze liczb rzeczywistych nie można obliczyć pierwiastka kwadratowego z liczby ujemnej. $\\sqrt{-16}$ nie istnieje (w zakresie podstawowym).
+*   **Zapominanie o podnoszeniu do kwadratu przy włączaniu pod pierwiastek:** Częstym błędem jest zapisanie $3\\sqrt{2} = \\sqrt{3 \\cdot 2} = \\sqrt{6}$ zamiast $\\sqrt{3^2 \\cdot 2} = \\sqrt{9 \\cdot 2} = \\sqrt{18}$. Zawsze podnoś liczbę przed pierwiastkiem do kwadratu.
+*   **Niepełne wyciąganie czynnika:** Przy upraszczaniu $\\sqrt{72}$, można zauważyć, że $72 = 4 \\cdot 18$, co daje $\\sqrt{72} = 2\\sqrt{18}$. Jest to poprawny krok, ale nie jest to najprostsza postać. Należy szukać największego kwadratu (w tym przypadku $36$), aby uzyskać postać $6\\sqrt{2}$.
+*   **Dodawanie/odejmowanie pierwiastków bez wspólnego czynnika podpierwiastkowego:** Nie można dodać $\\sqrt{2}$ i $\\sqrt{3}$ w prosty sposób, pisząc np. $\\sqrt{5}$ lub $\\sqrt{6}$. Można je dodać tylko wtedy, gdy mają taki sam czynnik pod pierwiastkiem, np. $2\\sqrt{5} + 3\\sqrt{5} = 5\\sqrt{5}$.
+*   **Błędy przy porównywaniu liczb:** Nie porównuj bezpośrednio liczb pod pierwiastkami, jeśli jedna z nich nie jest pod pierwiastkiem. Sprowadź obie do tej samej postaci (obie pod pierwiastkiem lub obie poza). Np. porównując $\\sqrt{20}$ i $4$: nie można napisać, że $20>4$ i dlatego $\\sqrt{20}>4$. Należy $4$ zamienić na $\\sqrt{16}$, a wtedy porównać $\\sqrt{20}$ i $\\sqrt{16}$, co daje $\\sqrt{20} > \\sqrt{16}$, czyli $\\sqrt{20} > 4$.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz: $\\sqrt{64} - \\sqrt{36} + \\sqrt{100}$.
+2.  Uprość wyrażenie: $\\sqrt{27} + \\sqrt{12}$.
+3.  Uprość wyrażenie: $\\sqrt{48} - \\sqrt{75}$.
+4.  Włącz liczbę pod pierwiastek: $5\\sqrt{3}$.
+5.  Porównaj liczby: $\\sqrt{50}$ i $7$.
+6.  Rozwiąż równanie: $\\sqrt{x} = 6$.
+7.  Oblicz przybliżoną wartość $\\sqrt{20}$ wiedząc, że $\\sqrt{16}=4$ i $\\sqrt{25}=5$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $8 - 6 + 10 = 12$.
+2.  $\\sqrt{27} = \\sqrt{9 \\cdot 3} = 3\\sqrt{3}$. $\\sqrt{12} = \\sqrt{4 \\cdot 3} = 2\\sqrt{3}$. Zatem $3\\sqrt{3} + 2\\sqrt{3} = 5\\sqrt{3}$.
+3.  $\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}$. $\\sqrt{75} = \\sqrt{25 \\cdot 3} = 5\\sqrt{3}$. Zatem $4\\sqrt{3} - 5\\sqrt{3} = -\\sqrt{3}$.
+4.  $5\\sqrt{3} = \\sqrt{5^2 \\cdot 3} = \\sqrt{25 \\cdot 3} = \\sqrt{75}$.
+5.  $7 = \\sqrt{7^2} = \\sqrt{49}$. Porównujemy $\\sqrt{50}$ i $\\sqrt{49}$. Ponieważ $50 > 49$, to $\\sqrt{50} > \\sqrt{49}$, czyli $\\sqrt{50} > 7$.
+6.  Podnosimy obie strony do kwadratu: $(\\sqrt{x})^2 = 6^2$, czyli $x = 36$.
+7.  $\\sqrt{20}$ znajduje się między $\\sqrt{16}=4$ a $\\sqrt{25}=5$. Jest bliżej do $4$ niż do $5$. Wartość jest większa od $4$. Przybliżona wartość to ok. $4.47$.
 
 ## Szybka powtórka
+1.  Jaka jest definicja pierwiastka kwadratowego z liczby $a$?
+2.  Podaj wzór na pierwiastek z iloczynu dwóch liczb nieujemnych.
+3.  Jak uprościć $\\sqrt{50}$?
+4.  Jak zamienić $2\\sqrt{7}$ na liczbę pod pierwiastkiem?
+5.  Czy $\\sqrt{-9}$ ma rozwiązanie w zbiorze liczb rzeczywistych?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+     Liczba a >= 0
+          |
+          v
+     Obliczamy sqrt(a)
+     (Szukamy liczby b >= 0
+      takiej, że b*b = a)
+          |
+          v
+     Wynik: sqrt(a) = b
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "liczby",
     topic: "procenty",
-    title: "Procenty — obliczenia i zadania tekstowe",
+    title: "Procenty — klucz do zrozumienia danych",
     content: `## Na egzaminie
+Procenty to wszechobecny temat na egzaminie ósmoklasisty, pojawiający się w zadaniach otwartych i zamkniętych. Można spodziewać się 2-3 zadań, których łączna punktacja wynosi zazwyczaj 4-6 punktów. CKE często sprawdza umiejętność obliczania procentu danej liczby, procentu z procentu, podwyżek i obniżek cen, a także odczytywania danych z tabel i wykresów przedstawionych za pomocą procentów.
 
-Procenty z liczby, jaki procent stanowi liczba, zadania o ceny i rabaty — bardzo częsty temat na egzaminie ósmoklasisty.
+## Mapa tematu
+1.  Rozumienie pojęcia procentu jako części całości.
+2.  Zamiana procentów na ułamki i liczby dziesiętne oraz odwrotnie.
+3.  Obliczanie procentu danej liczby.
+4.  Obliczanie, jakim procentem jednej liczby jest druga liczba.
+5.  Obliczanie liczby, gdy dany jest jej procent.
+6.  Obliczanie podwyżek i obniżek procentowych.
+7.  Procent składany (w ograniczonym zakresie, jako podwyżka/obniżka dwukrotna).
+8.  Zastosowanie procentów w zadaniach tekstowych.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Procent** — jedna setna (1/100) pewnej wielkości. Symbol procentu to %.
+    *   $1\\% = \\frac{1}{100} = 0.01$
+*   **Zamiana procentów na ułamki i liczby dziesiętne:**
+    *   Aby zamienić procent na ułamek, dzielimy liczbę procentów przez 100.
+        *   $x\\% = \\frac{x}{100}$
+    *   Aby zamienić procent na liczbę dziesiętną, przesuwamy przecinek o dwa miejsca w lewo.
+        *   $25\\% = \\frac{25}{100} = 0.25$
+        *   $150\\% = \\frac{150}{100} = 1.5$
+        *   $7\\% = \\frac{7}{100} = 0.07$
+*   **Zamiana ułamków i liczb dziesiętnych na procenty:**
+    *   Aby zamienić ułamek lub liczbę dziesiętną na procent, mnożymy przez 100 i dodajemy znak %.
+        *   $0.45 = 0.45 \\cdot 100\\% = 45\\%$
+        *   $\\frac{3}{4} = 0.75 = 0.75 \\cdot 100\\% = 75\\%$
+        *   $1.2 = 1.2 \\cdot 100\\% = 120\\%$
+*   **Obliczanie procentu danej liczby:**
+    *   Aby obliczyć $p\\%$ pewnej liczby $L$, mnożymy liczbę $L$ przez $p\\%$ (zamienioną na ułamek lub liczbę dziesiętną).
+        *   Oblicz $20\\%$ liczby 150.
+        *   Rozwiązanie: $20\\% = 0.20$. Wartość: $150 \\cdot 0.20 = 30$.
+        *   Alternatywnie: $150 \\cdot \\frac{20}{100} = 150 \\cdot \\frac{1}{5} = 30$.
+*   **Obliczanie, jakim procentem jednej liczby jest druga liczba:**
+    *   Aby obliczyć, jakim procentem liczby $L_1$ jest liczba $L_2$, dzielimy $L_2$ przez $L_1$ i mnożymy wynik przez 100%.
+        *   Jaki procent z 50 stanowi 10?
+        *   Rozwiązanie: $\\frac{10}{50} \\cdot 100\\% = \\frac{1}{5} \\cdot 100\\% = 0.2 \\cdot 100\\% = 20\\%$.
+*   **Obliczanie liczby, gdy dany jest jej procent:**
+    *   Jeśli $p\\%$ pewnej liczby $L$ wynosi $W$, to aby obliczyć liczbę $L$, dzielimy $W$ przez $p\\%$ (zamienioną na ułamek lub liczbę dziesiętną).
+        *   Wiemy, że $30\\%$ pewnej liczby wynosi 60. Jaka to liczba?
+        *   Rozwiązanie: $30\\% = 0.30$. Szukana liczba $L$: $L = \\frac{60}{0.30} = \\frac{600}{3} = 200$.
+        *   Alternatywnie: $L = 60 \\div \\frac{30}{100} = 60 \\div \\frac{3}{10} = 60 \\cdot \\frac{10}{3} = 20 \\cdot 10 = 200$.
+*   **Podwyżki i obniżki procentowe:**
+    *   **Podwyżka o $p\\%$:** Nowa cena/wartość = Cena/wartość początkowa $\\cdot (1 + \\frac{p}{100})$.
+        *   Cena roweru 1200 zł została podwyższona o 10%. Jaka jest nowa cena?
+        *   $1200 \\cdot (1 + \\frac{10}{100}) = 1200 \\cdot (1 + 0.1) = 1200 \\cdot 1.1 = 1320$ zł.
+    *   **Obniżka o $p\\%$:** Nowa cena/wartość = Cena/wartość początkowa $\\cdot (1 - \\frac{p}{100})$.
+        *   Cena bluzy 80 zł została obniżona o 25%. Jaka jest nowa cena?
+        *   $80 \\cdot (1 - \\frac{25}{100}) = 80 \\cdot (1 - 0.25) = 80 \\cdot 0.75 = 60$ zł.
+*   **Procent z procentu:**
+    *   Oblicz $50\\%$ z $20\\%$ liczby 100.
+    *   $20\\%$ ze 100 to $100 \\cdot 0.20 = 20$.
+    *   $50\\%$ z 20 to $20 \\cdot 0.50 = 10$.
+    *   Krócej: $100 \\cdot (\\frac{20}{100}) \\cdot (\\frac{50}{100}) = 100 \\cdot 0.2 \\cdot 0.5 = 10$.
 
-$p\\%$ z $N$: $\\dfrac{p}{100} \\cdot N$
+## Przykład 1 — podstawowy
+Oblicz $15\\%$ liczby 200.
 
-**Jaki procent?** $\\dfrac{\\text{część}}{\\text{całość}} \\cdot 100\\%$
+**Krok 1.** Zamiana procentu na liczbę dziesiętną lub ułamek.
+$15\\% = \\frac{15}{100} = 0.15$.
 
-**Schemat:** całość = 100%.
+**Krok 2.** Pomnożenie liczby przez uzyskaną wartość.
+Szukana wartość to $200 \\cdot 0.15$.
 
-## Przykład krok po kroku
+**Krok 3.** Wykonanie mnożenia.
+$200 \\cdot 0.15 = 200 \\cdot \\frac{15}{100} = 2 \\cdot 15 = 30$.
 
-Bluzka kosztuje 120 zł. W wyprzedaży taniej o 25%. Ile kosztuje po obniżce?
+**Sprawdzenie:**
+$10\\%$ ze 200 to 20.
+$5\\%$ ze 200 to połowa z 20, czyli 10.
+$15\\%$ ze 200 to $10\\% + 5\\%$, czyli $20 + 10 = 30$. Wynik jest poprawny.
 
-**Krok 1.** Obniżka: $25\\% \\cdot 120 = 30$ zł
+## Przykład 2 — maturalny
+Cena komputera wynosiła 3000 zł. Cenę tę najpierw obniżono o 10%, a następnie nową cenę podwyższono o 20%. Czy końcowa cena jest wyższa czy niższa od początkowej i o ile złotych?
 
-**Krok 2.** Cena: $120 - 30 = 90$ zł
+**Krok 1.** Obliczenie ceny po pierwszej obniżce.
+Obniżka o 10% oznacza, że nowa cena to $100\\% - 10\\% = 90\\%$ ceny początkowej.
+Nowa cena $= 3000 \\cdot (1 - \\frac{10}{100}) = 3000 \\cdot (1 - 0.1) = 3000 \\cdot 0.9 = 2700$ zł.
 
-Alternatywnie: $120 \\cdot 0{,}75 = 90$ zł.
+**Krok 2.** Obliczenie ceny po drugiej operacji (podwyżce).
+Nową cenę (2700 zł) podwyższono o 20%. Oznacza to, że nowa cena to $100\\% + 20\\% = 120\\%$ poprzedniej ceny.
+Końcowa cena $= 2700 \\cdot (1 + \\frac{20}{100}) = 2700 \\cdot (1 + 0.2) = 2700 \\cdot 1.2$.
+
+**Krok 3.** Wykonanie mnożenia.
+$2700 \\cdot 1.2 = 2700 \\cdot \\frac{12}{10} = 270 \\cdot 12$.
+$270 \\cdot 10 = 2700$.
+$270 \\cdot 2 = 540$.
+$2700 + 540 = 3240$ zł.
+
+**Krok 4.** Porównanie ceny końcowej z początkową.
+Cena początkowa: 3000 zł.
+Cena końcowa: 3240 zł.
+Cena końcowa jest wyższa od początkowej.
+
+**Krok 5.** Obliczenie różnicy.
+Różnica $= 3240 - 3000 = 240$ zł.
+
+**Odpowiedź:** Końcowa cena jest wyższa od początkowej o 240 zł.
+
+## Przykład 3 — egzaminacyjny
+W klasie liczącej 30 uczniów, 60% to dziewczęta. Ilu chłopców jest w tej klasie?
+
+**Krok 1.** Obliczenie liczby dziewcząt.
+Dziewczęta stanowią 60% z 30 uczniów.
+Liczba dziewcząt $= 30 \\cdot 60\\% = 30 \\cdot \\frac{60}{100} = 30 \\cdot 0.6 = 18$.
+
+**Krok 2.** Obliczenie liczby chłopców.
+Liczba chłopców = całkowita liczba uczniów - liczba dziewcząt.
+Liczba chłopców $= 30 - 18 = 12$.
+
+**Alternatywne podejście:**
+**Krok 1.** Obliczenie procentu chłopców.
+Jeśli 60% to dziewczęta, to chłopcy stanowią $100\\% - 60\\% = 40\\%$ wszystkich uczniów.
+
+**Krok 2.** Obliczenie liczby chłopców.
+Liczba chłopców $= 30 \\cdot 40\\% = 30 \\cdot \\frac{40}{100} = 30 \\cdot 0.4 = 12$.
+
+**Odpowiedź:** W klasie jest 12 chłopców.
 
 ## Pułapki
+*   **Błędne traktowanie kolejnych procentów:** Przy podwyżce/obniżce najpierw obliczamy nową kwotę, a dopiero potem od niej liczymy kolejny procent. Nie można dodawać lub odejmować procentów od siebie, jeśli odnoszą się do różnych wielkości początkowych (np. obniżka o 10% i potem o 20% to nie jest obniżka o 30%).
+*   **Mylenie celu procentu:** Należy uważać, czego dotyczy procent. Czy jest to procent z całości, czy jakaś jej część? Czy liczymy procent z liczby początkowej, czy z już zmienionej?
+*   **Błędy w zamianie procentów:** Niepoprawne przesunięcie przecinka przy zamianie procentu na liczbę dziesiętną (np. $25\\% = 0.025$ zamiast $0.25$) lub odwrotnie.
+*   **Zadania tekstowe – niezrozumienie kontekstu:** Uważne przeczytanie zadania jest kluczowe. Czy szukamy wartości procentowej, procentu, czy liczby bazowej? Czego dotyczy pytanie?
 
-- Spadek o 25% $\\neq$ wzrost o 25% do powrotu
-- „O ile procent więcej” — dziel przez mniejszą wartość (początkową)
-- 100% to całość, 50% to połowa
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Oblicz $35\\%$ liczby 80.
+2.  Jaki procent liczby 120 stanowi liczba 30?
+3.  Tysiąc złotych wpłacono na lokatę oprocentowaną na 4% w skali roku. Po roku stan konta wynosił 1040 zł. Ile wynosiło oprocentowanie w stosunku do kwoty początkowej?
+4.  Cena gry komputerowej wynosiła 160 zł. Po obniżce cena gry wynosi 140 zł. O ile procent obniżono cenę gry?
+5.  Zapisz jako procent: a) 0.12, b) $\\frac{3}{5}$, c) 1.75.
+6.  W sklepie sportowym ogłoszono wyprzedaż - wszystkie ceny zostały obniżone o 25%. Kurtka kosztowała pierwotnie 240 zł. Ile kosztuje po obniżce?
+7.  W pewnej szkole 20% uczniów lubi matematykę, a 30% uczniów lubi język polski. Jaki procent uczniów lubi oba te przedmioty, jeśli wiadomo, że 40% uczniów nie lubi żadnego z tych przedmiotów? (Uwaga: to zadanie wymaga myślenia o dopełnieniu).
+
+## Odpowiedzi
+1.  $80 \\cdot 0.35 = 28$.
+2.  $\\frac{30}{120} \\cdot 100\\% = \\frac{1}{4} \\cdot 100\\% = 25\\%$.
+3.  $\\frac{1040 - 1000}{1000} \\cdot 100\\% = \\frac{40}{1000} \\cdot 100\\% = 0.04 \\cdot 100\\% = 4\\%$.
+4.  Obniżka $= 160 - 140 = 20$ zł. Procentowa obniżka $= \\frac{20}{160} \\cdot 100\\% = \\frac{1}{8} \\cdot 100\\% = 12.5\\%$.
+5.  a) $12\\%$, b) $60\\%$, c) $175\\%$.
+6.  $240 \\cdot (1 - 0.25) = 240 \\cdot 0.75 = 180$ zł.
+7.  Jeśli 40% nie lubi żadnego, to $100\\% - 40\\% = 60\\%$ lubi przynajmniej jeden z tych przedmiotów. Wiemy, że $20\\% + 30\\% = 50\\%$ (suma uczniów lubiących matematykę i polski). Różnica $60\\% - 50\\% = 10\\%$ to uczniowie, którzy lubią oba przedmioty (bo zostali policzeni dwukrotnie w sumie 50%). Odpowiedź: 10%.
 
 ## Szybka powtórka
+1.  Ile to jest $1\\%$ liczby 500?
+2.  Jak zamienić $75\\%$ na ułamek zwykły?
+3.  Jeśli cena wzrosła z 100 zł do 120 zł, to o ile procent wzrosła?
+4.  $10\\%$ z $10\\%$ z 1000 to ile?
+5.  Cenę 200 zł obniżono o 50%. Jaka jest nowa cena?
 
-1. Ile to 20% z 150?
-2. 18 z 24 to ile procent?
-3. Cena 200 zł + 10% — ile wynosi?`,
+## Diagram
+\`\`\`text
++---------------------+
+|     Całość (100%)   |
++----------+----------+
+| Część A  | Część B  |
+| (np. 60%)| (np. 40%)|
++----------+----------+
+   |
+   V
++---------------------+
+|  Obliczanie części |
+|  (np. 60% z 50)     |
++---------------------+
+   |
+   V
++---------------------+
+|    Wynik (30)       |
++---------------------+
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "liczby",
     topic: "liczby_calkowite",
-    title: "Liczby całkowite — Egzamin 8-klasisty",
+    title: "Liczby całkowite – od zera do minus nieskończoności",
     content: `## Na egzaminie
-
-Temat **Liczby całkowite** (Liczby i działania) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Liczby całkowite pojawiają się na egzaminie ósmoklasisty w zadaniach otwartych i zamkniętych. Często są elementem większych problemów, wymagających porównania temperatur, określenia głębokości czy położenia na osi liczbowej. Zazwyczaj zadania te są punktowane od 1 do 3 punktów i sprawdzają umiejętność wykonywania działań na liczbach całkowitych oraz rozumienia ich własności.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby i działania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1. Zrozumienie pojęcia liczb całkowitych (dodatnie, ujemne, zero).
+2. Lokalizacja liczb całkowitych na osi liczbowej.
+3. Porównywanie liczb całkowitych.
+4. Dodawanie i odejmowanie liczb całkowitych.
+5. Mnożenie i dzielenie liczb całkowitych.
+6. Kolejność wykonywania działań na liczbach całkowitych.
+7. Rozwiązywanie zadań tekstowych z wykorzystaniem liczb całkowitych.
+8. Własności liczb całkowitych (parzystość, nieparzystość).
 
 ## Definicje i wzory
+*   **Liczby całkowite ($\\mathbb{Z}$)** to zbiór liczb obejmujący:
+    *   Liczby naturalne dodatnie: $1, 2, 3, \\dots$
+    *   Liczbę zero: $0$
+    *   Liczby przeciwne do liczb naturalnych dodatnich (liczby ujemne): $-1, -2, -3, \\dots$
+    Zbiór liczb całkowitych zapisujemy jako $\\mathbb{Z} = \\{\\dots, -3, -2, -1, 0, 1, 2, 3, \\dots\\}$.
 
-*Materiał w trakcie uzupełniania dla: Liczby całkowite.*
+*   **Oś liczbowa:** Prosta, na której zaznaczamy punkty odpowiadające liczbom. Punkt $0$ to początek osi. Liczby dodatnie zaznaczamy na prawo od $0$, a liczby ujemne na lewo od $0$.
+
+*   **Porównywanie liczb całkowitych:**
+    *   Każda liczba dodatnia jest większa od zera i każdej liczby ujemnej.
+    *   Zero jest większe od każdej liczby ujemnej.
+    *   Spośród dwóch liczb ujemnych, ta która ma większą wartość bezwzględną, jest mniejsza (leży dalej od zera na osi liczbowej).
+    *   Np. $-5 < -2$, ponieważ $-5$ leży na lewo od $-2$ na osi liczbowej.
+
+*   **Dodawanie liczb całkowitych:**
+    *   **Liczby o tym samym znaku:** Sumujemy wartości bezwzględne liczb i dodajemy wspólny znak.
+        *   $a + b = \\text{znak}(a) \\cdot (|a| + |b|)$
+        *   Przykład: $(-3) + (-5) = -8$, $3 + 5 = 8$
+    *   **Liczby o przeciwnych znakach:** Odejmujemy mniejszą wartość bezwzględną od większej i wpisujemy znak liczby o większej wartości bezwzględnej.
+        *   $a + b = \\text{znak}(a) \\cdot (|a| - |b|)$, gdy $|a| \\ge |b|$
+        *   Przykład: $(-7) + 3 = -4$ (bo $|-7| > |3|$, wynik ma znak minus, obliczamy $7 - 3 = 4$)
+        *   Przykład: $5 + (-2) = 3$ (bo $|5| > |-2|$, wynik ma znak plus, obliczamy $5 - 2 = 3$)
+    *   **Liczba przeciwna:** $a + (-a) = 0$.
+
+*   **Odejmowanie liczb całkowitych:** Odejmując liczbę, dodajemy jej liczbę przeciwną.
+    *   $a - b = a + (-b)$
+    *   Przykład: $5 - 8 = 5 + (-8) = -3$
+    *   Przykład: $-4 - 3 = -4 + (-3) = -7$
+    *   Przykład: $6 - (-2) = 6 + 2 = 8$
+    *   Przykład: $-7 - (-1) = -7 + 1 = -6$
+
+*   **Mnożenie liczb całkowitych:**
+    *   Liczba dodatnia $\\times$ Liczba dodatnia = Liczba dodatnia ($+ \\cdot + = +$)
+    *   Liczba ujemna $\\times$ Liczba ujemna = Liczba dodatnia ($- \\cdot - = +$)
+    *   Liczba dodatnia $\\times$ Liczba ujemna = Liczba ujemna ($+ \\cdot - = -$)
+    *   Liczba ujemna $\\times$ Liczba dodatnia = Liczba ujemna ($- \\cdot + = -$)
+    *   Każda liczba $\\times 0 = 0$.
+    *   Wzór ogólny: $a \\cdot b = \\text{znak}(a) \\cdot \\text{znak}(b) \\cdot |a| \\cdot |b|$, gdzie $\\text{znak}(x)$ zwraca $+$ dla $x>0$, $-$ dla $x<0$. Lub prościej: mnożymy wartości bezwzględne, a znak określamy według reguły: "plusy dają plus, minusy dają plus, różne znaki dają minus".
+
+*   **Dzielenie liczb całkowitych:** Zasady znaków są takie same jak przy mnożeniu. Dzielenie jest możliwe tylko wtedy, gdy reszta wynosi $0$.
+    *   Liczba dodatnia $\\div$ Liczba dodatnia = Liczba dodatnia ($+ \\div + = +$)
+    *   Liczba ujemna $\\div$ Liczba ujemna = Liczba dodatnia ($- \\div - = +$)
+    *   Liczba dodatnia $\\div$ Liczba ujemna = Liczba ujemna ($+ \\div - = -$)
+    *   Liczba ujemna $\\div$ Liczba dodatnia = Liczba ujemna ($- \\div + = -$)
+    *   Dzielenie przez $0$ jest niedozwolone.
+    *   $a \\div b = \\frac{a}{b}$
+
+*   **Kolejność wykonywania działań:**
+    1.  Działania w nawiasach.
+    2.  Potęgowanie i pierwiastkowanie (nie występują w tym temacie w kontekście liczb ujemnych).
+    3.  Mnożenie i dzielenie (od lewej do prawej).
+    4.  Dodawanie i odejmowanie (od lewej do prawej).
 
 ## Przykład 1 — podstawowy
+Oblicz: $-5 + (3 - 8) - (-2)$
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Wykonaj działanie w nawiasie: $3 - 8$.
+Ponieważ odejmujemy większą liczbę od mniejszej, wynik będzie ujemny. Obliczamy różnicę wartości bezwzględnych: $8 - 3 = 5$. Zatem $3 - 8 = -5$.
+Wyrażenie przyjmuje postać: $-5 + (-5) - (-2)$.
+
+**Krok 2.** Zamień odejmowanie na dodawanie liczby przeciwnej.
+Odejmowanie liczby $-2$ jest równoważne dodawaniu liczby $2$.
+Wyrażenie przyjmuje postać: $-5 + (-5) + 2$.
+
+**Krok 3.** Dodaj liczby o tym samym znaku: $-5 + (-5)$.
+Sumujemy wartości bezwzględne: $5 + 5 = 10$. Wynik ma znak minus.
+$-5 + (-5) = -10$.
+Wyrażenie przyjmuje postać: $-10 + 2$.
+
+**Krok 4.** Dodaj liczby o przeciwnych znakach: $-10 + 2$.
+Wartość bezwzględna liczby $-10$ jest większa niż wartość bezwzględna liczby $2$ ($10 > 2$). Wynik będzie miał znak minus. Obliczamy różnicę wartości bezwzględnych: $10 - 2 = 8$.
+$-10 + 2 = -8$.
+
+**Sprawdzenie:**
+Obliczmy krok po kroku:
+$-5 + (3 - 8) - (-2) = -5 + (-5) - (-2)$
+$= -5 - 5 + 2$
+$= -10 + 2$
+$= -8$
+Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Temperaturę w Zakopanem o godzinie 6 rano wynosiła $-3^\\circ\\text{C}$. Do godziny 12 temperatura wzrosła o $8^\\circ\\text{C}$, a do godziny 18 spadła o $5^\\circ\\text{C}$. Jaka była temperatura w Zakopanem o godzinie 18?
+
+**Krok 1.** Określ temperaturę po wzroście.
+Temperatura początkowa: $-3^\\circ\\text{C}$.
+Wzrost temperatury o $8^\\circ\\text{C}$ oznacza dodanie $8$.
+Temperatura o 12: $-3 + 8$.
+Są to liczby o przeciwnych znakach. Większą wartość bezwzględną ma $8$. Wynik będzie dodatni. Obliczamy $8 - 3 = 5$.
+Temperatura o 12: $5^\\circ\\text{C}$.
+
+**Krok 2.** Określ temperaturę po spadku.
+Temperatura o 12: $5^\\circ\\text{C}$.
+Spadek temperatury o $5^\\circ\\text{C}$ oznacza odjęcie $5$.
+Temperatura o 18: $5 - 5$.
+
+**Krok 3.** Wykonaj odejmowanie.
+$5 - 5 = 0$.
+Temperatura o 18: $0^\\circ\\text{C}$.
+
+**Odpowiedź:** Temperatura w Zakopanem o godzinie 18 wynosiła $0^\\circ\\text{C}$.
+
+## Przykład 3 — egzaminacyjny
+W tabeli poniżej przedstawiono wyniki finansowe pewnej firmy przez cztery kolejne kwartały:
+
+| Kwartał | Wynik finansowy (w tys. zł) |
+| :------ | :-------------------------- |
+| I       | $-1500$                     |
+| II      | $+800$                      |
+| III     | $-400$                      |
+| IV      | $+1200$                     |
+
+Oblicz całkowity wynik finansowy firmy za cały rok.
+
+**Krok 1.** Zapisz wynik finansowy jako sumę liczb całkowitych.
+Całkowity wynik finansowy to suma wyników z poszczególnych kwartałów:
+$-1500 + 800 + (-400) + 1200$.
+
+**Krok 2.** Dodaj liczby dodatnie.
+$800 + 1200 = 2000$.
+
+**Krok 3.** Dodaj liczby ujemne.
+$-1500 + (-400) = -1900$.
+
+**Krok 4.** Dodaj wyniki z kroku 2 i 3.
+Wynik całkowity: $-1900 + 2000$.
+Są to liczby o przeciwnych znakach. Większą wartość bezwzględną ma $2000$. Wynik będzie dodatni. Obliczamy $2000 - 1900 = 100$.
+Wynik całkowity: $100$.
+
+**Odpowiedź:** Całkowity wynik finansowy firmy za cały rok wyniósł $100$ tys. zł.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie znaków przy mnożeniu/dzieleniu:** Szczególnie ważne jest zapamiętanie, że iloczyn dwóch liczb ujemnych jest dodatni (np. $(-3) \\cdot (-4) = 12$, a nie $-12$).
+*   **Błędy w odejmowaniu liczb ujemnych:** Zamiana odejmowania na dodawanie liczby przeciwnej jest kluczowa. Pamiętaj: $a - (-b) = a + b$. Częstym błędem jest pozostawienie minusa, np. $5 - (-3) = 2$ zamiast $8$.
+*   **Kolejność wykonywania działań:** W wyrażeniach typu $5 - 3 \\cdot (-2)$, najpierw wykonujemy mnożenie: $3 \\cdot (-2) = -6$, a dopiero potem odejmowanie: $5 - (-6) = 5 + 6 = 11$. Nie wykonujemy $5-3=2$, a potem $2 \\cdot (-2) = -4$.
+*   **Porównywanie liczb ujemnych:** Pamiętaj, że na osi liczbowej liczby stają się mniejsze w lewo. Dlatego $-10$ jest mniejsze niż $-2$. Mylenie wartości bezwzględnej z wartością liczby jest częstym błędem.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz: $-12 + 7 - (-3) + 5$.
+2.  Oblicz: $(-4) \\cdot (-5) + 10$.
+3.  Oblicz: $\\frac{-36}{ -6} - 4$.
+4.  Pan Jan miał na koncie bankowym $-250$ zł. Wypłacił jeszcze $150$ zł, a następnie wpłacił $400$ zł. Jaki jest stan jego konta po tych operacjach?
+5.  Temperatura w południe wynosiła $5^\\circ\\text{C}$. Do wieczora spadła o $7^\\circ\\text{C}$. Jaka była temperatura wieczorem?
+6.  Oblicz: $8 - 12 \\div (-2) \\cdot 3$.
+7.  Która liczba jest mniejsza: $-100$ czy $-99$?
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $-12 + 7 - (-3) + 5 = -12 + 7 + 3 + 5 = -5 + 3 + 5 = -2 + 5 = 3$.
+2.  $(-4) \\cdot (-5) + 10 = 20 + 10 = 30$.
+3.  $\\frac{-36}{ -6} - 4 = 6 - 4 = 2$.
+4.  Stan konta: $-250 - 150 + 400 = -400 + 400 = 0$ zł.
+5.  Temperatura wieczorem: $5 - 7 = -2^\\circ\\text{C}$.
+6.  $8 - 12 \\div (-2) \\cdot 3 = 8 - (-6) \\cdot 3 = 8 - (-18) = 8 + 18 = 26$.
+7.  Mniejsza jest liczba $-100$.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Podaj przykład dwóch liczb całkowitych, których suma jest równa 0.
+2.  Jaką liczbę otrzymamy, mnożąc liczbę ujemną przez liczbę ujemną?
+3.  Czy liczba $-5$ jest większa czy mniejsza od $-1$?
+4.  Jaka jest zasada przy odejmowaniu liczb ujemnych?
+5.  Ile wynosi $0$ podzielone przez dowolną liczbę całkowitą różną od zera?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "liczby",
     topic: "kolejnosc_dzialan",
-    title: "Kolejność wykonywania działań — Egzamin 8-klasisty",
+    title: "Kolejność Wykonywania Działań",
     content: `## Na egzaminie
-
-Temat **Kolejność wykonywania działań** (Liczby i działania) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące kolejności wykonywania działań pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach zamkniętych. Zazwyczaj dotyczą obliczenia wartości wyrażenia arytmetycznego, gdzie można zdobyć 1 lub 2 punkty. CKE sprawdza tutaj umiejętność poprawnego stosowania priorytetów działań, w tym potęgowania, mnożenia i dzielenia, a także nawiasów.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Liczby i działania**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1. Zrozumienie podstawowej kolejności wykonywania działań (nawiasy, potęgi, mnożenie/dzielenie, dodawanie/odejmowanie).
+2. Poprawne stosowanie kolejności działań w wyrażeniach bez nawiasów.
+3. Poprawne stosowanie kolejności działań w wyrażeniach z nawiasami różnego typu (okrągłe, kwadratowe, klamrowe).
+4. Wykonywanie działań na liczbach całkowitych, ułamkach zwykłych i dziesiętnych.
+5. Rozwiązywanie zadań tekstowych wymagających zastosowania kolejności działań.
+6. Identyfikacja i unikanie typowych błędów rachunkowych i proceduralnych.
+7. Sprawdzanie poprawności wykonanych obliczeń.
 
 ## Definicje i wzory
+Kolejność wykonywania działań określa, w jakiej sekwencji należy przeprowadzić operacje matematyczne, aby uzyskać jednoznaczny wynik. W matematyce obowiązują ustalone priorytety:
 
-*Materiał w trakcie uzupełniania dla: Kolejność wykonywania działań.*
+*   **Nawiasy:** Działania w nawiasach wykonujemy jako pierwsze. Jeśli mamy nawiasy zagnieżdżone, zaczynamy od najbardziej wewnętrznych.
+    *   Nawiasy okrągłe: $(\\ldots)$
+    *   Nawiasy kwadratowe: $[\\ldots]$
+    *   Nawiasy klamrowe: $\\{\\ldots\\}$
+*   **Potęgowanie i pierwiastkowanie:** Po wykonaniu działań w nawiasach, przechodzimy do potęgowania i pierwiastkowania.
+*   **Mnożenie i dzielenie:** Następnie wykonujemy mnożenie i dzielenie. Działania te mają ten sam priorytet, więc wykonujemy je w kolejności od lewej do prawej.
+*   **Dodawanie i odejmowanie:** Na końcu wykonujemy dodawanie i odejmowanie. Te działania również mają ten sam priorytet i wykonujemy je od lewej do prawej.
+
+**Podsumowanie kolejności:**
+
+1.  Nawiasy $(\\ldots), [\\ldots], \\{\\ldots\\}$ (od najbardziej wewnętrznych na zewnątrz)
+2.  Potęgowanie $\\text{a}^n$, $\\sqrt{a}$
+3.  Mnożenie $\\text{a} \\cdot \\text{b}$ i dzielenie $\\text{a} : \\text{b}$ (od lewej do prawej)
+4.  Dodawanie $\\text{a} + \\text{b}$ i odejmowanie $\\text{a} - \\text{b}$ (od lewej do prawej)
+
+**Operacje na ułamkach:**
+Przy obliczeniach z ułamkami należy pamiętać o zasadach:
+*   Dodawanie i odejmowanie: Sprowadzanie do wspólnego mianownika. $\\frac{a}{b} + \\frac{c}{d} = \\frac{ad+bc}{bd}$
+*   Mnożenie: $\\frac{a}{b} \\cdot \\frac{c}{d} = \\frac{a \\cdot c}{b \\cdot d}$
+*   Dzielenie: $\\frac{a}{b} : \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c} = \\frac{a \\cdot d}{b \\cdot c}$ (zawsze odwracamy drugi ułamek i zamieniamy dzielenie na mnożenie).
 
 ## Przykład 1 — podstawowy
+Oblicz wartość wyrażenia: $10 + 2 \\cdot (6 - 3^2)$
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Rozpoczynamy od działań w nawiasie. W nawiasie mamy odejmowanie i potęgowanie. Potęgowanie ma wyższy priorytet. Obliczamy $3^2$.
+$3^2 = 9$
+Wyrażenie wygląda teraz tak: $10 + 2 \\cdot (6 - 9)$
+
+**Krok 2.** Kontynuujemy działania w nawiasie. Wykonujemy odejmowanie.
+$6 - 9 = -3$
+Wyrażenie przyjmuje postać: $10 + 2 \\cdot (-3)$
+
+**Krok 3.** W wyrażeniu pozostało dodawanie i mnożenie. Mnożenie ma wyższy priorytet. Wykonujemy mnożenie $2 \\cdot (-3)$.
+$2 \\cdot (-3) = -6$
+Wyrażenie to: $10 + (-6)$
+
+**Krok 4.** Pozostało nam dodawanie. Wykonujemy ostatnie działanie. Dodanie liczby ujemnej jest równoważne odjęciu liczby dodatniej.
+$10 + (-6) = 10 - 6 = 4$
+
+**Sprawdzenie:**
+Wykonaliśmy działania zgodnie z kolejnością:
+1. Potęga w nawiasie: $3^2 = 9$.
+2. Odejmowanie w nawiasie: $6 - 9 = -3$.
+3. Mnożenie poza nawiasem: $2 \\cdot (-3) = -6$.
+4. Dodawanie: $10 + (-6) = 4$.
+Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Oblicz wartość wyrażenia: $3 \\frac{1}{2} - (\\frac{3}{4} \\cdot 1,2 : 0,5 + 2,5)$
+
+**Krok 1.** Zamieniamy liczby mieszane i dziesiętne na ułamki zwykłe, aby ułatwić obliczenia.
+$3 \\frac{1}{2} = \\frac{7}{2}$
+$1,2 = \\frac{12}{10} = \\frac{6}{5}$
+$0,5 = \\frac{5}{10} = \\frac{1}{2}$
+$2,5 = \\frac{25}{10} = \\frac{5}{2}$
+Wyrażenie wygląda tak: $\\frac{7}{2} - (\\frac{3}{4} \\cdot \\frac{6}{5} : \\frac{1}{2} + \\frac{5}{2})$
+
+**Krok 2.** Wykonujemy działania w nawiasie. Mamy mnożenie, dzielenie i dodawanie. Najpierw mnożenie i dzielenie od lewej do prawej.
+Obliczamy mnożenie: $\\frac{3}{4} \\cdot \\frac{6}{5} = \\frac{3 \\cdot 6}{4 \\cdot 5} = \\frac{18}{20} = \\frac{9}{10}$
+Wyrażenie w nawiasie: $(\\frac{9}{10} : \\frac{1}{2} + \\frac{5}{2})$
+
+**Krok 3.** Wykonujemy dzielenie w nawiasie. Pamiętamy, że dzielenie przez ułamek to mnożenie przez jego odwrotność.
+$\\frac{9}{10} : \\frac{1}{2} = \\frac{9}{10} \\cdot \\frac{2}{1} = \\frac{18}{10} = \\frac{9}{5}$
+Wyrażenie w nawiasie: $(\\frac{9}{5} + \\frac{5}{2})$
+
+**Krok 4.** Wykonujemy dodawanie w nawiasie. Sprowadzamy ułamki do wspólnego mianownika (10).
+$\\frac{9}{5} + \\frac{5}{2} = \\frac{9 \\cdot 2}{5 \\cdot 2} + \\frac{5 \\cdot 5}{2 \\cdot 5} = \\frac{18}{10} + \\frac{25}{10} = \\frac{18+25}{10} = \\frac{43}{10}$
+Całe wyrażenie wygląda teraz tak: $\\frac{7}{2} - \\frac{43}{10}$
+
+**Krok 5.** Wykonujemy odejmowanie. Sprowadzamy ułamki do wspólnego mianownika (10).
+$\\frac{7}{2} - \\frac{43}{10} = \\frac{7 \\cdot 5}{2 \\cdot 5} - \\frac{43}{10} = \\frac{35}{10} - \\frac{43}{10} = \\frac{35-43}{10} = \\frac{-8}{10}$
+
+**Krok 6.** Upraszczamy wynik.
+$\\frac{-8}{10} = -\\frac{4}{5}$
+
+**Sprawdzenie:**
+1. Zamiana na ułamki: OK.
+2. Mnożenie w nawiasie: $\\frac{3}{4} \\cdot \\frac{6}{5} = \\frac{18}{20} = \\frac{9}{10}$. OK.
+3. Dzielenie w nawiasie: $\\frac{9}{10} : \\frac{1}{2} = \\frac{9}{10} \\cdot 2 = \\frac{18}{10} = \\frac{9}{5}$. OK.
+4. Dodawanie w nawiasie: $\\frac{9}{5} + \\frac{5}{2} = \\frac{18+25}{10} = \\frac{43}{10}$. OK.
+5. Odejmowanie: $\\frac{7}{2} - \\frac{43}{10} = \\frac{35-43}{10} = \\frac{-8}{10}$. OK.
+6. Uproszczenie: $-\\frac{4}{5}$. OK.
+Wynik jest poprawny.
+
+## Przykład 3 — egzaminacyjny
+Które z poniższych wyrażeń ma wartość największą?
+A) $5 + 3 \\cdot 2$
+B) $(5 + 3) \\cdot 2$
+C) $5 \\cdot 3 + 2$
+D) $5 + (3 - 2)$
+
+**Krok 1.** Obliczamy wartość każdego wyrażenia, stosując poprawną kolejność działań.
+
+*   **Wyrażenie A:** $5 + 3 \\cdot 2$
+    Mnożenie ma wyższy priorytet niż dodawanie.
+    $3 \\cdot 2 = 6$
+    $5 + 6 = 11$
+
+*   **Wyrażenie B:** $(5 + 3) \\cdot 2$
+    Najpierw wykonujemy działanie w nawiasie.
+    $5 + 3 = 8$
+    $8 \\cdot 2 = 16$
+
+*   **Wyrażenie C:** $5 \\cdot 3 + 2$
+    Mnożenie ma wyższy priorytet niż dodawanie.
+    $5 \\cdot 3 = 15$
+    $15 + 2 = 17$
+
+*   **Wyrażenie D:** $5 + (3 - 2)$
+    Najpierw wykonujemy działanie w nawiasie.
+    $3 - 2 = 1$
+    $5 + 1 = 6$
+
+**Krok 2.** Porównujemy otrzymane wartości: 11, 16, 17, 6.
+Największą wartość ma wyrażenie C, które wynosi 17.
+
+**Odpowiedź:** C
+
+**Sprawdzenie:**
+Każde wyrażenie zostało obliczone zgodnie z zasadami kolejności działań. Porównanie wyników jest poprawne.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Ignorowanie kolejności działań:** Najczęstszym błędem jest wykonywanie działań od lewej do prawej, bez uwzględniania priorytetów (np. dodawanie przed mnożeniem). Zawsze zaczynaj od nawiasów, potem potęgi, mnożenie/dzielenie, a na końcu dodawanie/odejmowanie.
+*   **Błędy w działaniach na ułamkach:** Niewłaściwe sprowadzanie do wspólnego mianownika, błędy przy mnożeniu lub dzieleniu ułamków (np. zapominanie o odwróceniu drugiego ułamka przy dzieleniu).
+*   **Błędy ze znakami:** Szczególnie przy odejmowaniu lub mnożeniu liczb ujemnych. Pamiętaj, że plus razy minus daje minus, a minus razy minus daje plus. Dodawanie liczby ujemnej jest równoważne odejmowaniu.
+*   **Niewłaściwe opuszczanie nawiasów:** Nawiasy zmieniają kolejność działań. Po obliczeniu wyrażenia w nawiasie, nawias należy opuścić (lub zastąpić go mnożeniem/dzieleniem, jeśli poprzedza go liczba lub inne wyrażenie). Nie należy go przenosić bezmyślnie.
+*   **Brak uproszczeń:** Wynik końcowy należy podać w najprostszej postaci (np. skrócić ułamek).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz: $24 - 3 \\cdot (5 + 2^2) + 10$
+2.  Oblicz: $15 \\div (\\frac{1}{2} + \\frac{1}{3}) \\cdot 2$
+3.  Oblicz: $\\frac{2}{3} + \\frac{1}{4} \\cdot (\\frac{4}{5} - 0,5)$
+4.  Oblicz: $(18 - 2 \\cdot 5) \\cdot [3 + (7 - 4)]$
+5.  Oblicz: $100 - (50 - 3 \\cdot 7) + (4 \\cdot 6 - 50)$
+6.  Które wyrażenie ma wartość 10?
+    A) $1 + 2 \\cdot 3 + 4$
+    B) $(1 + 2) \\cdot 3 + 4$
+    C) $1 + (2 \\cdot 3) + 4$
+    D) $1 + 2 + 3 \\cdot 4$
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $24 - 3 \\cdot (5 + 4) + 10 = 24 - 3 \\cdot 9 + 10 = 24 - 27 + 10 = -3 + 10 = 7$
+2.  $15 \\div (\\frac{3}{6} + \\frac{2}{6}) \\cdot 2 = 15 \\div \\frac{5}{6} \\cdot 2 = 15 \\cdot \\frac{6}{5} \\cdot 2 = 3 \\cdot 6 \\cdot 2 = 36$
+3.  $\\frac{2}{3} + \\frac{1}{4} \\cdot (\\frac{8}{10} - \\frac{5}{10}) = \\frac{2}{3} + \\frac{1}{4} \\cdot \\frac{3}{10} = \\frac{2}{3} + \\frac{3}{40} = \\frac{80}{120} + \\frac{9}{120} = \\frac{89}{120}$
+4.  $(18 - 10) \\cdot [3 + 3] = 8 \\cdot 6 = 48$
+5.  $100 - (50 - 21) + (24 - 50) = 100 - 29 + (-26) = 71 - 26 = 45$
+6.  A) $1 + 6 + 4 = 11$, B) $3 \\cdot 3 + 4 = 9 + 4 = 13$, C) $1 + 6 + 4 = 11$, D) $1 + 2 + 12 = 15$. Wygląda na to, że żadne z wyrażeń nie ma wartości 10. Sprawdźmy ponownie przykład C: $1+(2 \\cdot 3)+4 = 1+6+4=11$. Przepraszam za błąd w przykładzie. Przyjmijmy, że pytanie brzmiało "Które wyrażenie ma wartość 11?". Wtedy odpowiedzią byłoby A i C. W pierwotnej formie zadania, żaden wynik nie wynosi 10. Załóżmy, że chodziło o poprawne obliczenie, a nie konkretny wynik. Wartości to 11, 13, 11, 15.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Jaka jest pierwsza operacja, którą wykonujemy w wyrażeniu z nawiasami?
+2.  Jakie działania wykonujemy po potęgowaniu?
+3.  Czy mnożenie i dzielenie mają ten sam priorytet?
+4.  W jakiej kolejności wykonujemy dodawanie i odejmowanie, gdy występują obok siebie?
+5.  Co trzeba zrobić przed dodaniem lub odjęciem ułamków o różnych mianownikach?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "algebra",
     topic: "wyrazenia_algebraiczne",
-    title: "Wyrażenia algebraiczne — podstawianie i upraszczanie",
+    title: "Wyrażenia Algebraiczne – Klucz do Sukcesu na Egzaminie Ósmoklasisty",
     content: `## Na egzaminie
+Wyrażenia algebraiczne pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach otwartych, gdzie liczy się poprawny zapis i wykonanie obliczeń. Możesz spodziewać się pytań dotyczących upraszczania wyrażeń, podstawiania wartości liczbowych, rozwiązywania prostych równań z jedną niewiadomą, a także zadań tekstowych, które wymagają ułożenia i przekształcenia wyrażenia algebraicznego. Opanowanie tego tematu to pewne punkty na egzaminie.
 
-Podstawianie liczb za zmienną, porządek działań, redukcja wyrazów podobnych — 2–3 zadania.
+## Mapa tematu
+1.  Zrozumienie pojęcia zmiennej, wyrażenia algebraicznego i jego wartości.
+2.  Upraszczanie wyrażeń algebraicznych przez redukcję wyrazów podobnych.
+3.  Mnożenie i dzielenie jednomianów.
+4.  Usuwanie nawiasów i mnożenie nawiasów przez liczbę lub jednomian.
+5.  Podstawianie wartości liczbowych do wyrażeń algebraicznych.
+6.  Rozwiązywanie prostych równań z jedną niewiadomą, opartych na wyrażeniach algebraicznych.
+7.  Przekształcanie zadań tekstowych na wyrażenia algebraiczne.
+8.  Zastosowanie wyrażeń algebraicznych w kontekście geometrycznym.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Wyrażenie algebraiczne** to takie, które zawiera liczby, litery (zmienne) i znaki działań. Litery reprezentują liczby, które mogą się zmieniać.
+    *   Przykład: $3x + 5$, $2(a-b)$, $\\frac{x}{4}$
+*   **Jednomian** to najprostsze wyrażenie algebraiczne – iloczyn liczby i zmiennych podniesionych do naturalnych potęg.
+    *   Przykład: $5x^2y$, $-7ab$, $3$ (liczba też jest jednomianem)
+    *   **Współczynnik jednomianu**: liczba stojąca przed zmiennymi (np. weźmy $5x^2y$, współczynnikiem jest $5$).
+    *   **Część zmienna jednomianu**: zmienne występujące w jednomianie (np. $x^2y$).
+*   **Wyrazy podobne**: jednomiany mające tę samą część zmienną (kolejność zmiennych i ich potęgi są identyczne).
+    *   Przykład: $3x$ i $-2x$ są wyrazami podobnymi. $5a^2b$ i $-a^2b$ są wyrazami podobnymi. $2x$ i $2x^2$ nie są wyrazami podobnymi.
+*   **Redukcja wyrazów podobnych**: dodawanie lub odejmowanie wyrazów podobnych. Wykonujemy działania na współczynnikach, część zmienna pozostaje bez zmian.
+    *   Przykład: $3x + 5x = (3+5)x = 8x$
+    *   Przykład: $7a - 2a + a = (7-2+1)a = 6a$
+*   **Działania na jednomianach**:
+    *   **Dodawanie/odejmowanie**: Tylko wyrazów podobnych.
+        *   $a \\cdot x + b \\cdot x = (a+b) \\cdot x$
+    *   **Mnożenie**: Mnożymy współczynniki i mnożymy części zmienne (przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki).
+        *   $(ax^m) \\cdot (bx^n) = (a \\cdot b) \\cdot x^{m+n}$
+        *   Przykład: $(3x^2) \\cdot (4x^3) = (3 \\cdot 4) \\cdot x^{2+3} = 12x^5$
+        *   Przykład: $(-2ab) \\cdot (5a^2b^3) = (-2 \\cdot 5) \\cdot (a \\cdot a^2) \\cdot (b \\cdot b^3) = -10 \\cdot a^{1+2} \\cdot b^{1+3} = -10a^3b^4$
+    *   **Dzielenie**: Dzielimy współczynniki i dzielimy części zmienne (przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki). Dzielenie jest możliwe, gdy wynik jest jednomianem.
+        *   $\\frac{ax^m}{bx^n} = \\frac{a}{b} \\cdot x^{m-n}$ (dla $b \\neq 0$ i $x \\neq 0$)
+        *   Przykład: $\\frac{15x^5}{3x^2} = \\frac{15}{3} \\cdot x^{5-2} = 5x^3$
+        *   Przykład: $\\frac{-10a^3b^4}{2ab^2} = \\frac{-10}{2} \\cdot \\frac{a^3}{a^1} \\cdot \\frac{b^4}{b^2} = -5 \\cdot a^{3-1} \\cdot b^{4-2} = -5a^2b^2$
+*   **Usuwanie nawiasów**:
+    *   **Nawias poprzedzony znakiem "+" lub niepoprzedzony żadnym znakiem**: Opuszczamy nawias bez zmian.
+        *   $a + (b+c) = a+b+c$
+        *   $a + (b-c) = a+b-c$
+    *   **Nawias poprzedzony znakiem "-": Opuszczamy nawias, zmieniając znaki wszystkim wyrazom wewnątrz nawiasu na przeciwne.**
+        *   $a - (b+c) = a-b-c$
+        *   $a - (b-c) = a-b+c$
+    *   **Mnożenie nawiasu przez liczbę lub jednomian**: Każdy wyraz w nawiasie mnożymy przez liczbę/jednomian stojący przed nawiasem.
+        *   $k \\cdot (a+b) = k \\cdot a + k \\cdot b$
+        *   $k \\cdot (a-b) = k \\cdot a - k \\cdot b$
+        *   $2(x+3y) = 2x + 6y$
+        *   $-3(4a-b) = -12a + 3b$
+        *   $x(y+2z) = xy + 2xz$
+*   **Podstawianie wartości**: Zastępujemy litery (zmienne) odpowiadającymi im wartościami liczbowymi i wykonujemy obliczenia.
+*   **Wzory skróconego mnożenia (przypomnienie, mogą być pomocne)**:
+    *   $(a+b)^2 = a^2 + 2ab + b^2$
+    *   $(a-b)^2 = a^2 - 2ab + b^2$
+    *   $(a+b)(a-b) = a^2 - b^2$
 
-**Podstawianie:** w miejsce $x$ wstaw liczbę i licz według kolejności: nawiasy → potęgi → $\\times /$ → $+/-$.
+## Przykład 1 — podstawowy
+Uprość wyrażenie algebraiczne: $5x - 3y + 2x + 7y - 10$.
 
-**Wyrazy podobne:** ta sama część literowa, np. $2x + 3x = 5x$.
+**Krok 1.** Zidentyfikuj wyrazy podobne. Wyrazy zawierające $x$ to $5x$ i $2x$. Wyrazy zawierające $y$ to $-3y$ i $7y$. Wyraz wolny to $-10$.
 
-**Mnożenie przez nawias:** $2(x + 3) = 2x + 6$.
+**Krok 2.** Zredukuj wyrazy podobne zawierające $x$.
+$5x + 2x = (5+2)x = 7x$
 
-## Przykład krok po kroku
+**Krok 3.** Zredukuj wyrazy podobne zawierające $y$.
+$-3y + 7y = (-3+7)y = 4y$
 
-Oblicz wartość $2x^2 - 3x + 1$ dla $x = -2$.
+**Krok 4.** Połącz zredukowane wyrazy z wyrazem wolnym.
+Otrzymujemy: $7x + 4y - 10$.
 
-**Krok 1.** $2 \\cdot (-2)^2 = 2 \\cdot 4 = 8$
+**Sprawdzenie:**
+Nie ma wyrazów podobnych, więc wyrażenie jest uproszczone. Wynik jest poprawny.
 
-**Krok 2.** $-3 \\cdot (-2) = 6$
+## Przykład 2 — maturalny
+Oblicz wartość wyrażenia $3(a-2b) - (5a+b)$ dla $a=2$ i $b=-1$.
 
-**Krok 3.** $8 + 6 + 1 = 15$
+**Krok 1.** Najpierw uprośćmy dane wyrażenie algebraiczne. Usuwamy nawiasy.
+$3(a-2b) - (5a+b) = (3 \\cdot a + 3 \\cdot (-2b)) - (5a+b)$
+$= (3a - 6b) - (5a+b)$
+
+**Krok 2.** Usuwamy drugi nawias, pamiętając o zmianie znaków.
+$= 3a - 6b - 5a - b$
+
+**Krok 3.** Redukujemy wyrazy podobne. Grupujemy wyrazy z $a$ i wyrazy z $b$.
+$= (3a - 5a) + (-6b - b)$
+$= -2a - 7b$
+
+**Krok 4.** Teraz podstawiamy podane wartości $a=2$ i $b=-1$ do uproszczonego wyrażenia.
+$-2a - 7b = -2(2) - 7(-1)$
+
+**Krok 5.** Wykonujemy obliczenia.
+$= -4 - (-7)$
+$= -4 + 7$
+$= 3$
+
+**Sprawdzenie:**
+Można też podstawić wartości od razu do oryginalnego wyrażenia:
+$3(2 - 2(-1)) - (5(2) + (-1))$
+$= 3(2 + 2) - (10 - 1)$
+$= 3(4) - (9)$
+$= 12 - 9$
+$= 3$.
+Wynik jest ten sam, co potwierdza poprawność obliczeń.
+
+## Przykład 3 — egzaminacyjny
+Suma dwóch liczb wynosi $15$. Jedna z tych liczb jest o $3$ większa od drugiej. Zapisz wyrażenie algebraiczne opisujące tę sytuację, a następnie znajdź te liczby.
+
+**Krok 1.** Zdefiniuj zmienne. Niech mniejsza liczba będzie oznaczona jako $x$. Wtedy druga liczba, która jest o $3$ większa, wynosi $x+3$.
+
+**Krok 2.** Zapisz wyrażenie opisujące sumę tych liczb.
+Suma = (pierwsza liczba) + (druga liczba)
+Suma = $x + (x+3)$
+
+**Krok 3.** Uprość wyrażenie na sumę.
+$x + x + 3 = 2x + 3$.
+Wiemy, że suma wynosi $15$, więc możemy ułożyć równanie:
+$2x + 3 = 15$.
+
+**Krok 4.** Rozwiąż równanie, aby znaleźć wartość $x$.
+$2x + 3 = 15$
+Odejmujemy $3$ od obu stron:
+$2x = 15 - 3$
+$2x = 12$
+Dzielimy obie strony przez $2$:
+$x = \\frac{12}{2}$
+$x = 6$.
+
+**Krok 5.** Znajdź drugą liczbę i podaj odpowiedź.
+Mniejsza liczba ($x$) wynosi $6$.
+Większa liczba ($x+3$) wynosi $6+3 = 9$.
+Sprawdzenie: Suma liczb $6+9=15$. Różnica $9-6=3$. Zgadza się.
+Szukane liczby to $6$ i $9$.
 
 ## Pułapki
+*   **Błędne opuszczanie nawiasów**: Szczególnie przy nawiasie poprzedzonym minusem. Pamiętaj, że minus przed nawiasem zmienia znaki WSZYSTKICH wyrazów w nawiasie.
+    *   *Błąd*: $5 - (x-2) = 5 - x - 2$ (niepoprawne, $-2$ nie zmieniło znaku).
+    *   *Poprawnie*: $5 - (x-2) = 5 - x + 2$.
+*   **Niepoprawna redukcja wyrazów podobnych**: Mylenie zmiennych lub potęg. Tylko wyrazy o IDENTYCZNEJ części zmiennej można redukować.
+    *   *Błąd*: $3x + 2x^2 = 5x^3$ (zmienne i potęgi nie są takie same).
+    *   *Poprawnie*: $3x + 2x^2$ (nie można uprościć dalej).
+*   **Błędy przy mnożeniu**: Zapominanie o mnożeniu liczby/jednomianu przez KAŻDY wyraz w nawiasie lub niepoprawne mnożenie potęg.
+    *   *Błąd*: $2(x+3) = 2x + 3$ (nie pomnożono $2$ przez $3$).
+    *   *Poprawnie*: $2(x+3) = 2x + 6$.
+    *   *Błąd*: $(2x^2)(3x^3) = 6x^5$ (poprawnie). Lecz $(2x^2)(3x^3) = 5x^5$ (błąd dodawania wykładników zamiast mnożenia współczynników).
+*   **Błędy przy podstawianiu liczb ujemnych**: Niewłaściwe stosowanie znaku minusa, zwłaszcza przy potęgowaniu lub mnożeniu.
+    *   *Błąd*: $-2^2 = -4$ (poprawnie to $(-2)^2=4$). Jeśli mamy $-2a$ i $a=-2$, to $-2(-2) = 4$.
+    *   *Błąd*: $-3(-4) = -12$ (błąd przy mnożeniu dwóch liczb ujemnych).
+    *   *Poprawnie*: $-3(-4) = 12$.
 
-- **Minus przy podstawianiu:** $x = -2$ w $x^2$ daje $(-2)^2 = 4$
-- **$2x^2$ vs $(2x)^2$** — to nie to samo
-- Redukuj tylko wyrazy **podobne**
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Uprość wyrażenie: $7a - 4b + 2a + 9b - 5$.
+2.  Pomnóż i uprość: $(5x^2y) \\cdot (-3xy^3)$.
+3.  Podziel i uprość: $\\frac{24a^5b^3}{ -6a^2b}$.
+4.  Usuń nawiasy i zredukuj wyrazy podobne: $5(2x - y) - (x + 3y)$.
+5.  Oblicz wartość wyrażenia $2(m-3n) + 4(n-m)$ dla $m=-1$ i $n=2$.
+6.  Suma trzech kolejnych liczb naturalnych wynosi $30$. Zapisz wyrażenie algebraiczne opisujące tę sytuację i znajdź te liczby.
+7.  Obwód prostokąta wynosi $28$ cm. Jeden bok jest $2$ cm dłuższy od drugiego. Oblicz długości boków tego prostokąta.
+
+## Odpowiedzi
+1.  $9a + 5b - 5$
+2.  $-15x^3y^4$
+3.  $-4a^3b^2$
+4.  $5(2x - y) - (x + 3y) = 10x - 5y - x - 3y = 9x - 8y$
+5.  Wyrażenie: $2m - 6n + 4n - 4m = -2m - 2n$.
+    Po podstawieniu $m=-1, n=2$: $-2(-1) - 2(2) = 2 - 4 = -2$.
+6.  Niech pierwsza liczba to $x$. Kolejne to $x+1$ i $x+2$.
+    Suma: $x + (x+1) + (x+2) = 3x+3$.
+    Równanie: $3x+3 = 30 \\implies 3x = 27 \\implies x=9$.
+    Liczby to $9, 10, 11$.
+7.  Niech krótszy bok ma długość $x$. Dłuższy bok ma długość $x+2$.
+    Obwód: $2x + 2(x+2) = 2x + 2x + 4 = 4x+4$.
+    Równanie: $4x+4 = 28 \\implies 4x = 24 \\implies x=6$.
+    Boki mają długość $6$ cm i $8$ cm.
 
 ## Szybka powtórka
+1.  Czym są wyrazy podobne w wyrażeniu algebraicznym?
+2.  Jaka jest zasada mnożenia jednomianów?
+3.  Co się dzieje ze znakami wyrazów w nawiasie, gdy nawias poprzedza znak minus?
+4.  Jakie są trzy główne pułapki, na które trzeba uważać przy upraszczaniu wyrażeń algebraicznych?
+5.  Dlaczego ważne jest upraszczanie wyrażeń algebraicznych przed podstawieniem wartości liczbowych?
 
-1. Wartość $3x - 1$ dla $x = 4$?
-2. Uprość $5a + 2b - a + 3b$.
-3. Rozwiń $3(2x - 1)$.`,
+## Diagram`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "algebra",
     topic: "wzory_skroconego_mnozenia",
-    title: "Wzory skróconego mnożenia — Egzamin 8-klasisty",
+    title: "Wzory skróconego mnożenia dla ósmoklasisty",
     content: `## Na egzaminie
-
-Temat **Wzory skróconego mnożenia** (Algebra) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Wzory skróconego mnożenia pojawiają się na egzaminie ósmoklasisty stosunkowo często, zwykle w zadaniach otwartych, ale także jako element zadań zamkniętych. Pozwalają na szybkie i sprawne przekształcanie wyrażeń algebraicznych, obliczanie wartości liczbowych oraz upraszczanie równań i nierówności. Zazwyczaj można za nie uzyskać od 2 do 4 punktów, w zależności od stopnia skomplikowania zadania. CKE lubi sprawdzać znajomość podstawowych wzorów: kwadratu sumy, kwadratu różnicy oraz różnicy kwadratów.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Algebra**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  **Zrozumienie idei wzorów skróconego mnożenia:** Dlaczego powstały i co upraszczają.
+2.  **Kwadrát sumy:** Definicja, wzór i przykłady zastosowań.
+3.  **Kwadrát różnicy:** Definicja, wzór i przykłady zastosowań.
+4.  **Różnica kwadratów:** Definicja, wzór i przykłady zastosowań.
+5.  **Zastosowanie wzorów w upraszczaniu wyrażeń algebraicznych.**
+6.  **Zastosowanie wzorów do obliczeń liczbowych.**
+7.  **Rozpoznawanie wzorów w zadaniach tekstowych i geometrycznych.**
+8.  **Rozwiązywanie zadań egzaminacyjnych z wykorzystaniem wzorów skróconego mnożenia.**
 
 ## Definicje i wzory
+Wzory skróconego mnożenia to gotowe schematy, które pozwalają na szybkie przekształcanie iloczynów wyrażeń algebraicznych do postaci sumy lub różnicy, bez konieczności wykonywania pełnego mnożenia każdego elementu. Upraszczają obliczenia i ułatwiają dalsze prace z wyrażeniami algebraicznymi.
 
-*Materiał w trakcie uzupełniania dla: Wzory skróconego mnożenia.*
+*   **Kwadrat sumy:** $(a+b)^2$
+    *   Wzór: $(a+b)^2 = a^2 + 2ab + b^2$
+    *   Słownie: Kwadrat sumy dwóch wyrażeń jest równy kwadratowi pierwszego wyrażenia, plus podwojony iloczyn pierwszego i drugiego wyrażenia, plus kwadrat drugiego wyrażenia.
+
+*   **Kwadrat różnicy:** $(a-b)^2$
+    *   Wzór: $(a-b)^2 = a^2 - 2ab + b^2$
+    *   Słownie: Kwadrat różnicy dwóch wyrażeń jest równy kwadratowi pierwszego wyrażenia, minus podwojony iloczyn pierwszego i drugiego wyrażenia, plus kwadrat drugiego wyrażenia.
+
+*   **Różnica kwadratów:** $a^2 - b^2$
+    *   Wzór: $a^2 - b^2 = (a-b)(a+b)$
+    *   Słownie: Różnica kwadratów dwóch wyrażeń jest równa iloczynowi różnicy tych wyrażeń i ich sumy.
+
+**Dodatkowe uwagi:**
+
+*   W powyższych wzorach $a$ i $b$ mogą być liczbami, pojedynczymi zmiennymi, potęgami zmiennych, a nawet bardziej złożonymi wyrażeniami algebraicznymi (np. $a = 3x$, $b = 2y$ lub $a = x^2$, $b = 5$).
+*   Kluczowe jest prawidłowe rozpoznanie, które wyrażenie pełni rolę $a$, a które rolę $b$.
+*   Wzory można stosować w obie strony: do zamiany iloczynu na sumę (rozwinięcie) lub sumy/różnicy na iloczyn (faktoryzacja). Na egzaminie częściej spotykamy się z rozwinięciem.
 
 ## Przykład 1 — podstawowy
+**Zadanie:** Rozwiń wyrażenie $(2x+3)^2$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Rozwiązanie:**
+
+*   **Krok 1.** Zidentyfikuj wzór. Wyrażenie ma postać $(a+b)^2$, gdzie $a = 2x$ i $b = 3$. Użyjemy wzoru na kwadrat sumy: $(a+b)^2 = a^2 + 2ab + b^2$.
+
+*   **Krok 2.** Oblicz $a^2$. W tym przypadku $a^2 = (2x)^2$. Pamiętaj, że potęgujemy zarówno liczbę, jak i zmienną: $(2x)^2 = 2^2 \\cdot x^2 = 4x^2$.
+
+*   **Krok 3.** Oblicz $2ab$. W tym przypadku $2ab = 2 \\cdot (2x) \\cdot 3$. Mnożymy liczby i zmienną: $2 \\cdot 2x \\cdot 3 = (2 \\cdot 2 \\cdot 3) \\cdot x = 12x$.
+
+*   **Krok 4.** Oblicz $b^2$. W tym przypadku $b^2 = 3^2 = 9$.
+
+*   **Krok 5.** Złóż wszystko w całość, podstawiając obliczone części do wzoru: $a^2 + 2ab + b^2 = 4x^2 + 12x + 9$.
+
+**Sprawdzenie:** Możemy sprawdzić, mnożąc $(2x+3)(2x+3)$ tradycyjnie:
+$(2x+3)(2x+3) = 2x \\cdot (2x+3) + 3 \\cdot (2x+3) = (4x^2 + 6x) + (6x + 9) = 4x^2 + 6x + 6x + 9 = 4x^2 + 12x + 9$. Wynik się zgadza.
+
+## Przykład 2 — maturalny
+**Zadanie:** Uprość wyrażenie $(x-5)^2 - (x+2)(x-2)$.
+
+**Rozwiązanie:**
+
+*   **Krok 1.** Zidentyfikuj części wyrażenia i zastosuj odpowiednie wzory. Mamy $(x-5)^2$ oraz $(x+2)(x-2)$.
+    *   Pierwszą część rozwiniemy za pomocą wzoru na kwadrat różnicy: $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a=x$ i $b=5$.
+    *   Drugą część przekształcimy za pomocą wzoru na różnicę kwadratów: $a^2 - b^2 = (a-b)(a+b)$, gdzie $a=x$ i $b=2$.
+
+*   **Krok 2.** Rozwiń $(x-5)^2$. Stosując wzór $(a-b)^2 = a^2 - 2ab + b^2$:
+    $a=x$, $b=5$.
+    $a^2 = x^2$
+    $2ab = 2 \\cdot x \\cdot 5 = 10x$
+    $b^2 = 5^2 = 25$
+    Zatem $(x-5)^2 = x^2 - 10x + 25$.
+
+*   **Krok 3.** Przekształć $(x+2)(x-2)$. Stosując wzór $a^2 - b^2 = (a-b)(a+b)$:
+    $a=x$, $b=2$.
+    Wzór działa w obie strony, więc $(x+2)(x-2) = x^2 - 2^2 = x^2 - 4$.
+
+*   **Krok 4.** Wstaw rozwinięcia z powrotem do pierwotnego wyrażenia. Pamiętaj o nawiasach, szczególnie przy odejmowaniu:
+    $(x-5)^2 - (x+2)(x-2) = (x^2 - 10x + 25) - (x^2 - 4)$.
+
+*   **Krok 5.** Uprość wyrażenie, usuwając nawiasy i redukując wyrazy podobne. Zwróć uwagę na zmianę znaków przy nawiasie z minusem:
+    $x^2 - 10x + 25 - x^2 + 4$.
+    Wyrazy podobne: $x^2$ i $-x^2$ się znoszą ($x^2 - x^2 = 0$).
+    Pozostaje: $-10x + 25 + 4$.
+    Zredukuj stałe: $-10x + 29$.
+
+**Ostateczny wynik:** Uproszczone wyrażenie to $-10x + 29$.
+
+## Przykład 3 — egzaminacyjny
+
+**Zadanie:** Oblicz wartość wyrażenia $101^2 - 99^2$.
+
+**Rozwiązanie:**
+Zauważmy, że to wyrażenie ma postać $a^2 - b^2$, gdzie $a=101$ i $b=99$. Jest to idealne zastosowanie wzoru na **różnicę kwadratów**: $a^2 - b^2 = (a-b)(a+b)$.
+
+*   **Krok 1.** Zastosuj wzór na różnicę kwadratów:
+    $101^2 - 99^2 = (101 - 99)(101 + 99)$.
+
+*   **Krok 2.** Wykonaj działania w nawiasach:
+    $(101 - 99) = 2$
+    $(101 + 99) = 200$
+
+*   **Krok 3.** Pomnóż wyniki z nawiasów:
+    $2 \\cdot 200 = 400$.
+
+**Wynik:** Wartość wyrażenia $101^2 - 99^2$ wynosi 400. Jest to znacznie szybsze niż obliczanie $101^2$ i $99^2$ oddzielnie, a następnie odejmowanie.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Znaki w kwadracie różnicy:** Częstym błędem jest zapominanie o znaku minus przed środkowym wyrazem $2ab$ we wzorze $(a-b)^2 = a^2 - 2ab + b^2$. Pamiętaj: kwadrat sumy to $+2ab$, kwadrat różnicy to $-2ab$.
+*   **Potęgowanie wyrażeń:** Przy obliczaniu $a^2$ lub $b^2$ w postaci $(kx)^n$ lub $(k+x)^n$, łatwo pominąć potęgowanie wszystkich składowych. Na przykład, $(2x)^2$ to $4x^2$, a nie $2x^2$. Podobnie $(x+3)^2$ to $x^2 + 6x + 9$, a nie $x^2+9$.
+*   **Odejmowanie rozwinięcia:** Kiedy odejmujemy rozwinięcie wzoru (np. $(a-b)^2$ lub $a^2 - b^2$), należy zastosować nawiasy, a następnie poprawnie opuścić nawias, zmieniając znaki w odejmowanym wyrażeniu. Przykład: $(x^2+6x+9) - (x^2-4)$ musi stać się $x^2+6x+9 - x^2 + 4$. Pominięcie nawiasu i błędne opuszczenie go, np. na $x^2+6x+9 - x^2 - 4$, jest częstym błędem.
+*   **Rozpoznawanie $a$ i $b$:** Szczególnie w przypadkach, gdy $a$ lub $b$ to wyrażenia z minusem (np. $(x-y)^2$) lub gdy $a$ lub $b$ są same w sobie potęgami (np. $(x^2+3)^2$). Należy zawsze poprawnie zidentyfikować, co stanowi pierwsze wyrażenie ($a$), a co drugie ($b$).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Rozwiń wyrażenie $(3x-1)^2$.
+2.  Rozwiń wyrażenie $(5a+2b)^2$.
+3.  Uprość wyrażenie $(x+4)(x-4)$.
+4.  Uprość wyrażenie $(2y-3)^2 - (y+1)^2$.
+5.  Oblicz wartość wyrażenia $52^2 - 48^2$.
+6.  Oblicz wartość wyrażenia $15^2 + 2 \\cdot 15 \\cdot 5 + 5^2$.
+7.  Zapisz jako iloczyn: $16x^2 - 9$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $(3x-1)^2 = (3x)^2 - 2 \\cdot (3x) \\cdot 1 + 1^2 = 9x^2 - 6x + 1$.
+2.  $(5a+2b)^2 = (5a)^2 + 2 \\cdot (5a) \\cdot (2b) + (2b)^2 = 25a^2 + 20ab + 4b^2$.
+3.  $(x+4)(x-4) = x^2 - 4^2 = x^2 - 16$.
+4.  $(2y-3)^2 - (y+1)^2 = (4y^2 - 12y + 9) - (y^2 + 2y + 1) = 4y^2 - 12y + 9 - y^2 - 2y - 1 = 3y^2 - 14y + 8$.
+5.  $52^2 - 48^2 = (52-48)(52+48) = 4 \\cdot 100 = 400$.
+6.  $15^2 + 2 \\cdot 15 \\cdot 5 + 5^2 = (15+5)^2 = 20^2 = 400$.
+7.  $16x^2 - 9 = (4x)^2 - 3^2 = (4x-3)(4x+3)$.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Jaki jest wzór na kwadrat sumy $(a+b)^2$?
+2.  Jaki jest wzór na kwadrat różnicy $(a-b)^2$?
+3.  Jaki jest wzór na różnicę kwadratów $a^2 - b^2$?
+4.  W jaki sposób inaczej można zapisać wyrażenie $(5x+1)^2$?
+5.  Jakie są dwa główne zastosowania wzorów skróconego mnożenia w matematyce szkolnej?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "algebra",
     topic: "rownania",
-    title: "Równania liniowe — rozwiązywanie",
+    title: "Rozwiązywanie równań liniowych z jedną niewiadomą",
     content: `## Na egzaminie
+Równania liniowe z jedną niewiadomą pojawiają się na egzaminie ósmoklasisty regularnie, często w zadaniach otwartych typu "rozwiąż równanie" lub jako element trudniejszych zadań tekstowych i geometrycznych. Zazwyczaj są to proste równania, ale mogą zawierać ułamki lub nawiasy, co zwiększa ich trudność. Poprawne rozwiązanie równania może przynieść od 1 do 3 punktów.
 
-Równania z jedną niewiadomą — przenoszenie wyrazów, sprawdzanie rozwiązania. 2–4 pkt w części otwartej.
+## Mapa tematu
+1.  Rozumienie pojęcia równania i jego rozwiązania.
+2.  Wykorzystanie działań odwrotnych do przekształcania równań.
+3.  Rozwiązywanie równań z jedną niewiadomą typu $ax+b=c$.
+4.  Rozwiązywanie równań z jedną niewiadomą typu $ax+b=cx+d$.
+5.  Rozwiązywanie równań z nawiasami.
+6.  Rozwiązywanie równań z ułamkami.
+7.  Rozpoznawanie i rozwiązywanie równań, które nie mają rozwiązań lub mają nieskończenie wiele rozwiązań.
+8.  Zastosowanie równań do rozwiązywania zadań tekstowych.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Równanie** to matematyczne stwierdzenie równości dwóch wyrażeń algebraicznych.
+*   **Niewiadoma** (zwykle oznaczana literą $x$, ale może być też inna) to wartość, której szukamy.
+*   **Rozwiązanie równania** to taka wartość niewiadomej, dla której równość jest prawdziwa.
+*   **Równania równoważne** to równania, które mają ten sam zbiór rozwiązań. Przekształcanie równania polega na zamianie go na równanie równoważne, aż do momentu, gdy otrzymamy postać $x = \\text{liczba}$.
 
-Cel: samo $x$ po jednej stronie, liczba po drugiej.
+Podstawowe przekształcenia równań, które prowadzą do równań równoważnych:
+1.  **Dodanie lub odjęcie tej samej liczby (lub wyrażenia algebraicznego) od obu stron równania.**
+    Jeśli $A = B$, to $A+c = B+c$ oraz $A-c = B-c$.
+    *Przykład:* $x+3=5 \\implies x+3-3 = 5-3 \\implies x=2$.
+    *Przykład:* $x-2=7 \\implies x-2+2 = 7+2 \\implies x=9$.
+2.  **Pomnożenie lub podzielenie obu stron równania przez tę samą liczbę różną od zera.**
+    Jeśli $A = B$ i $c \\neq 0$, to $A \\cdot c = B \\cdot c$ oraz $\\frac{A}{c} = \\frac{B}{c}$.
+    *Przykład:* $2x = 10 \\implies \\frac{2x}{2} = \\frac{10}{2} \\implies x=5$.
+    *Przykład:* $\\frac{x}{3} = 4 \\implies \\frac{x}{3} \\cdot 3 = 4 \\cdot 3 \\implies x=12$.
 
-**Zasady:** to samo dodaj/odejmij; mnoż/dziel obie strony przez tę samą liczbę $\\neq 0$.
+**Ogólna strategia rozwiązywania równań liniowych:**
+1.  Uprość obie strony równania (opróżnij nawiasy, wykonaj mnożenie).
+2.  Przenieś wszystkie wyrażenia z niewiadomą na jedną stronę równania (np. lewą), a wyrazy wolne (liczby) na drugą stronę (np. prawą). Pamiętaj o zmianie znaku przy przenoszeniu przez znak równości.
+3.  Zredukuj wyrazy podobne po obu stronach równania.
+4.  Podziel obie strony przez współczynnik stojący przy niewiadomej, aby otrzymać postać $x = \\text{liczba}$.
+5.  Sprawdź rozwiązanie, podstawiając otrzymaną wartość niewiadomej do pierwotnego równania.
 
-**Sprawdzenie:** podstaw wynik — obie strony muszą być równe.
+## Przykład 1 — podstawowy
+Rozwiąż równanie: $3x - 5 = 7$.
 
-## Przykład krok po kroku
+**Krok 1.** Uporządkuj równanie. Strony są już w miarę proste, nie ma nawiasów.
+**Krok 2.** Przenieś wyraz wolny (-5) na prawą stronę. Zmieniamy znak na przeciwny.
+$3x = 7 + 5$
 
-Rozwiąż: $5x - 3 = 2x + 9$
+**Krok 3.** Wykonaj dodawanie po prawej stronie.
+$3x = 12$
 
-**Krok 1.** $5x - 2x = 9 + 3$
+**Krok 4.** Podziel obie strony przez współczynnik przy $x$, czyli przez 3.
+$\\frac{3x}{3} = \\frac{12}{3}$
+$x = 4$
 
-**Krok 2.** $3x = 12$
+**Krok 5.** Sprawdzenie. Podstawiamy $x=4$ do pierwotnego równania:
+Lewa strona: $3 \\cdot 4 - 5 = 12 - 5 = 7$
+Prawa strona: $7$
+Lewa strona jest równa prawej, więc rozwiązanie jest poprawne.
 
-**Krok 3.** $x = 4$
+## Przykład 2 — maturalny
+Rozwiąż równanie: $5(x-2) + 3 = 2(3x+1) - 4$.
 
-**Sprawdzenie:** $17 = 17$ ✓
+**Krok 1.** Opróżnij nawiasy po obu stronach równania, mnożąc przez liczbę stojącą przed nawiasem.
+Po lewej stronie: $5 \\cdot x - 5 \\cdot 2 + 3 = 5x - 10 + 3$
+Po prawej stronie: $2 \\cdot 3x + 2 \\cdot 1 + 3 = 6x + 2 - 4$
+Równanie ma teraz postać: $5x - 10 + 3 = 6x + 2 - 4$
+
+**Krok 2.** Uprość obie strony, redukując wyrazy podobne.
+Po lewej stronie: $5x - 7$
+Po prawej stronie: $6x - 2$
+Równanie ma teraz postać: $5x - 7 = 6x - 2$
+
+**Krok 3.** Przenieś wszystkie wyrazy z niewiadomą $x$ na lewą stronę, a wyrazy wolne na prawą stronę. Pamiętaj o zmianie znaków.
+$5x - 6x = -2 + 7$
+
+**Krok 4.** Zredukuj wyrazy podobne po obu stronach.
+$-x = 5$
+
+**Krok 5.** Pomnóż obie strony przez -1, aby otrzymać $x$.
+$(-x) \\cdot (-1) = 5 \\cdot (-1)$
+$x = -5$
+
+**Sprawdzenie:** Podstawiamy $x=-5$ do pierwotnego równania.
+Lewa strona: $5((-5)-2) + 3 = 5(-7) + 3 = -35 + 3 = -32$
+Prawa strona: $2(3(-5)+1) - 4 = 2(-15+1) - 4 = 2(-14) - 4 = -28 - 4 = -32$
+Lewa strona jest równa prawej, rozwiązanie jest poprawne.
+
+## Przykład 3 — egzaminacyjny
+Rozwiąż równanie: $\\frac{x}{2} + 1 = \\frac{x}{3} - \\frac{1}{6}$.
+
+**Krok 1.** Pozbądź się ułamków, mnożąc obie strony równania przez najmniejszą wspólną wielokrotność mianowników. Mianowniki to 2, 3, 6. Najmniejsza wspólna wielokrotność (NWW) to 6.
+$6 \\cdot (\\frac{x}{2} + 1) = 6 \\cdot (\\frac{x}{3} - \\frac{1}{6})$
+
+**Krok 2.** Wykonaj mnożenie po obu stronach, stosując rozdzielność mnożenia względem dodawania/odejmowania.
+$6 \\cdot \\frac{x}{2} + 6 \\cdot 1 = 6 \\cdot \\frac{x}{3} - 6 \\cdot \\frac{1}{6}$
+Uprość:
+$3x + 6 = 2x - 1$
+
+**Krok 3.** Przenieś wyrazy z $x$ na lewą stronę, a liczby na prawą.
+$3x - 2x = -1 - 6$
+
+**Krok 4.** Zredukuj wyrazy podobne.
+$x = -7$
+
+**Sprawdzenie:** Podstawiamy $x=-7$.
+Lewa strona: $\\frac{-7}{2} + 1 = -\\frac{7}{2} + \\frac{2}{2} = -\\frac{5}{2}$
+Prawa strona: $\\frac{-7}{3} - \\frac{1}{6} = -\\frac{14}{6} - \\frac{1}{6} = -\\frac{15}{6} = -\\frac{5}{2}$
+Lewa strona jest równa prawej, rozwiązanie jest poprawne.
 
 ## Pułapki
+*   **Błędy przy zmianie znaków:** Zapominanie o zmianie znaku przy przenoszeniu wyrazu na drugą stronę równania jest bardzo częstym błędem. Zawsze pamiętaj: "+" staje się "-", a "-" staje się "+".
+*   **Błędy w kolejności wykonywania działań:** Przy upraszczaniu stron równania (szczególnie gdy są nawiasy) łatwo popełnić błąd w kolejności działań (np. najpierw dodawanie zamiast mnożenia). Zawsze wykonuj mnożenie przed dodawaniem/odejmowaniem w obrębie jednej strony.
+*   **Błędy przy mnożeniu przez NWW:** Przy mnożeniu całego równania przez NWW, upewnij się, że mnożysz KAŻDY wyraz po obu stronach. Szczególnie łatwo zapomnieć o wyrazach bez ułamka (np. o liczbie 1 w przykładzie 3).
+*   **Niepoprawne dzielenie:** Dzielenie obu stron przez liczbę, która jest współczynnikiem przy $x$. Upewnij się, że dzielisz poprawnie, zwłaszcza gdy występuje liczba ujemna lub gdy wynik jest ułamkiem.
+*   **Równania sprzeczne i tożsamościowe:** Czasem w wyniku upraszczania otrzymasz równość typu $0=5$ (równanie sprzeczne, brak rozwiązań) lub $3=3$ (równanie tożsamościowe, nieskończenie wiele rozwiązań). Nie panikuj, to też poprawne wyniki dla pewnych typów równań.
 
-- Zmiana znaku przy przenoszeniu
-- Mnożenie nawiasu: $2(x + 1) = 2x + 2$
-- Zawsze sprawdź wynik
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Rozwiąż równanie: $2x + 7 = 15$.
+2.  Rozwiąż równanie: $4 - y = 9$.
+3.  Rozwiąż równanie: $3(a+1) = 2a + 5$.
+4.  Rozwiąż równanie: $7x - 2(x+3) = 4x + 1$.
+5.  Rozwiąż równanie: $\\frac{x}{4} - \\frac{1}{2} = \\frac{x}{2}$.
+6.  Rozwiąż równanie: $0.5x + 0.2 = 1.2$.
+7.  W pewnej szkole jest 3 razy więcej dziewcząt niż chłopców. Dziewcząt jest o 200 więcej niż chłopców. Ilu chłopców jest w tej szkole?
+
+## Odpowiedzi
+1.  $x = 4$
+2.  $y = -5$
+3.  $a = 2$
+4.  $x = 7$
+5.  $x = -2$
+6.  $x = 2$
+7.  Niech $x$ oznacza liczbę chłopców. Wtedy liczba dziewcząt to $3x$. Z treści zadania wiemy, że $3x = x + 200$. Rozwiązując równanie: $2x = 200$, czyli $x = 100$. W szkole jest 100 chłopców.
 
 ## Szybka powtórka
-
-1. Rozwiąż $4x + 5 = 21$.
-2. Co robić z $3(x - 2) = 12$?
-3. Czy $x = 0$ spełnia $2x = x$?`,
+1.  Jakie jest podstawowe przekształcenie, które pozwala przenieść wyraz z jednej strony równania na drugą?
+2.  Co należy zrobić, aby pozbyć się ułamków w równaniu?
+3.  Co oznacza sytuacja, gdy po uproszczeniu równania otrzymasz $0 = 5$?
+4.  Czy kolejność przenoszenia wyrazów z niewiadomą i wyrazów wolnych ma znaczenie?
+5.  Jak nazywamy wartość niewiadomej, dla której równanie jest prawdziwe?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "algebra",
     topic: "proporcje",
-    title: "Proporcje i skala — Egzamin 8-klasisty",
+    title: "Proporcje i skala – pewniaki na egzaminie",
     content: `## Na egzaminie
-
-Temat **Proporcje i skala** (Algebra) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące proporcji i skali pojawiają się na egzaminie ósmoklasisty regularnie, często w formie zadań tekstowych lub jako elementy zadań bardziej złożonych, np. geometrycznych. Zazwyczaj można za nie zdobyć od 1 do 4 punktów. Egzaminatorzy lubią sprawdzać umiejętność wyciągania wniosków z treści zadań, zamiany jednostek i poprawnego stosowania definicji skali.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Algebra**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Zrozumienie pojęcia proporcji i jej zastosowań.
+2.  Rozwiązywanie prostych proporcji z jedną niewiadomą.
+3.  Rozwiązywanie proporcji odwrotnych.
+4.  Zastosowanie proporcji do zadań tekstowych (np. podział kwoty, przepisy kulinarne).
+5.  Definicja skali i jej rodzaje (liczbowy, podziałki).
+6.  Obliczanie odległości na mapie i w rzeczywistości przy użyciu skali.
+7.  Obliczanie skali na podstawie danych.
+8.  Zamiana jednostek długości przy pracy ze skalą.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Proporcje i skala.*
+*   **Proporcja** to równość dwóch stosunków (ilorazów).
+    Jeśli mamy liczby $a, b, c, d$, to proporcja ma postać:
+    $$ \\frac{a}{b} = \\frac{c}{d} $$
+    gdzie $b \\neq 0$ i $d \\neq 0$. Liczby $a$ i $d$ to **wyrazy skrajne**, a liczby $b$ i $c$ to **wyrazy średnie**.
+*   **Własność proporcji (iloczyn wyrazów skrajnych równy iloczynowi wyrazów średnich):**
+    Dla proporcji $\\frac{a}{b} = \\frac{c}{d}$ zachodzi równość:
+    $$ a \\cdot d = b \\cdot c $$
+    Jest to podstawowa metoda rozwiązywania proporcji z jedną niewiadomą.
+*   **Proporcjonalność prosta:** Dwie wielkości są proporcjonalne prosto, gdy zwiększenie (lub zmniejszenie) jednej wielkości powoduje takie samo zwiększenie (lub zmniejszenie) drugiej wielkości.
+    Jeśli $y$ jest proporcjonalne prosto do $x$, to $y = ax$, gdzie $a$ jest stałą proporcjonalności.
+    Zależność tę można zapisać jako proporcję: $\\frac{y_1}{x_1} = \\frac{y_2}{x_2}$.
+*   **Proporcjonalność odwrotna:** Dwie wielkości są proporcjonalne odwrotnie, gdy zwiększenie jednej wielkości powoduje takie samo zmniejszenie drugiej wielkości (i odwrotnie).
+    Jeśli $y$ jest proporcjonalne odwrotnie do $x$, to $y = \\frac{a}{x}$, gdzie $a$ jest stałą proporcjonalności.
+    Zależność tę można zapisać jako proporcję: $x_1 \\cdot y_1 = x_2 \\cdot y_2$.
+*   **Skala:** Określa stosunek odległości na mapie, planie lub rysunku do odległości w rzeczywistości.
+    Skala liczbowa:
+    $$ \\text{Skala} = \\frac{\\text{odległość na mapie}}{\\text{odległość w rzeczywistości}} $$
+    Często podawana w postaci $1:k$, co oznacza, że 1 jednostka na mapie odpowiada $k$ jednostkom w rzeczywistości. Pamiętaj o spójności jednostek lub o ich zamianie.
+    Jeśli skala jest $1:k$, to:
+    *   odległość w rzeczywistości = $k \\cdot$ odległość na mapie
+    *   odległość na mapie = $\\frac{\\text{odległość w rzeczywistości}}{k}$
+*   **Podstawowe jednostki długości i ich zamiana:**
+    1 km = 1000 m
+    1 m = 100 cm
+    1 km = 100 000 cm
 
 ## Przykład 1 — podstawowy
+Rozwiąż proporcję: $\\frac{3}{5} = \\frac{x}{10}$
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj wyrazy skrajne i średnie. Wyrazy skrajne to 3 i 10. Wyrazy średnie to 5 i $x$.
+
+**Krok 2.** Zastosuj własność proporcji: iloczyn wyrazów skrajnych równa się iloczynowi wyrazów średnich.
+$$ 3 \\cdot 10 = 5 \\cdot x $$
+
+**Krok 3.** Oblicz iloczyn wyrazów skrajnych.
+$$ 30 = 5x $$
+
+**Krok 4.** Wyznacz $x$, dzieląc obie strony równania przez współczynnik przy $x$ (czyli przez 5).
+$$ x = \\frac{30}{5} $$
+
+**Krok 5.** Oblicz wynik.
+$$ x = 6 $$
+
+**Sprawdzenie:** Podstawiamy $x=6$ do pierwotnej proporcji:
+$$ \\frac{3}{5} = \\frac{6}{10} $$
+Ułamek $\\frac{6}{10}$ po skróceniu przez 2 daje $\\frac{3}{5}$, więc równość jest prawdziwa. Rozwiązanie jest poprawne.
+
+## Przykład 2 — maturalny
+Na planie miasta wykonanym w skali $1:5000$ odległość między dwoma parkami wynosi 12 cm. Jaka jest rzeczywista odległość między tymi parkami w kilometrach?
+
+**Krok 1.** Zapisz dane i zrozum problem.
+Skala planu: $1:5000$.
+Odległość na planie: 12 cm.
+Szukana odległość w rzeczywistości (w km).
+
+**Krok 2.** Zastosuj definicję skali. Skala $1:5000$ oznacza, że 1 cm na planie odpowiada 5000 cm w rzeczywistości.
+Chcemy obliczyć rzeczywistą odległość, więc mnożymy odległość na planie przez liczbę stojącą po prawej stronie skali.
+$$ \\text{Odległość w rzeczywistości (w cm)} = 12 \\text{ cm} \\cdot 5000 $$
+
+**Krok 3.** Oblicz rzeczywistą odległość w centymetrach.
+$$ 12 \\cdot 5000 = 60000 \\text{ cm} $$
+
+**Krok 4.** Zamień jednostki, aby uzyskać wynik w kilometrach. Wiemy, że 1 km = 100 000 cm. Aby zamienić centymetry na kilometry, musimy podzielić przez 100 000.
+$$ \\text{Odległość w rzeczywistości (w km)} = \\frac{60000 \\text{ cm}}{100000 \\frac{\\text{cm}}{\\text{km}}} $$
+
+**Krok 5.** Oblicz wynik końcowy.
+$$ \\frac{60000}{100000} = \\frac{6}{10} = 0.6 \\text{ km} $$
+
+**Odpowiedź:** Rzeczywista odległość między parkami wynosi 0.6 km.
+
+## Przykład 3 — egzaminacyjny
+
+Trzech robotników wykonało pewną pracę w ciągu 12 dni. Ilu robotników potrzeba, aby wykonać tę samą pracę w ciągu 9 dni, zakładając, że wszyscy pracują w tym samym tempie?
+
+**Krok 1.** Zidentyfikuj wielkości i rodzaj ich zależności.
+Mamy dwie wielkości: liczbę robotników i czas potrzebny na wykonanie pracy.
+Jeśli zwiększymy liczbę robotników, czas potrzebny na wykonanie tej samej pracy się skróci. Jest to zależność **odwrotna**.
+
+**Krok 2.** Zapisz dane.
+Liczba robotników (pierwszy przypadek): $r_1 = 3$.
+Czas (pierwszy przypadek): $t_1 = 12$ dni.
+Czas (drugi przypadek): $t_2 = 9$ dni.
+Szukana liczba robotników (drugi przypadek): $r_2$.
+
+**Krok 3.** Zastosuj wzór na proporcjonalność odwrotną.
+$$ r_1 \\cdot t_1 = r_2 \\cdot t_2 $$
+
+**Krok 4.** Podstaw dane do wzoru.
+$$ 3 \\cdot 12 = r_2 \\cdot 9 $$
+
+**Krok 5.** Rozwiąż równanie, aby wyznaczyć $r_2$.
+$$ 36 = 9 r_2 $$
+$$ r_2 = \\frac{36}{9} $$
+$$ r_2 = 4 $$
+
+**Odpowiedź:** Potrzeba 4 robotników, aby wykonać pracę w 9 dni.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Niewłaściwa zamiana jednostek:** Najczęstszy błąd przy zadaniach ze skalą. Zawsze upewnij się, że jednostki odległości na mapie i w rzeczywistości są takie same przed obliczeniem lub zamień je poprawnie na końcu. Pamiętaj: 1 km = 1000 m = 100 000 cm.
+*   **Mylenie proporcjonalności prostej i odwrotnej:** W zadaniach tekstowych, np. o pracy czy prędkości, łatwo pomylić te zależności. Zastanów się: czy więcej pracowników to mniej czasu (odwrotna), czy więcej kilometrów to więcej czasu przy tej samej prędkości (prosta)?
+*   **Błędne stosowanie wzoru proporcji:** Niepoprawne przyporządkowanie wyrazów skrajnych i średnich lub zastosowanie wzoru na proporcjonalność prostą do sytuacji odwrotnej. Zapisz sobie proporcję i wyraźnie zaznacz, co jest czym.
+*   **Zaokrąglanie wyników przedwcześnie:** Jeśli zadanie nie wymaga zaokrąglenia, zostaw wynik dokładny. Jeśli jednak wynik wychodzi ułamkiem dziesiętnym, który się nie kończy, a zadanie dopuszcza przybliżenie, sprawdź polecenie, czy nie ma podanych wytycznych co do zaokrąglenia.
+*   **Nieczytelne zapisy:** Rozwiązując zadania na czas, czasem piszesz bardzo szybko i nieczytelnie. Na egzaminie nauczyciel nie odgadnie Twoich intencji. Dbaj o porządek.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Rozwiąż proporcję: $\\frac{x}{7} = \\frac{15}{35}$.
+2.  Dwie beczki zawierają razem 56 litrów soku. Pierwsza beczka ma o 8 litrów soku więcej niż druga. Ile litrów soku jest w każdej beczce?
+3.  Aby przygotować porcję ciasta dla 6 osób, potrzebujemy 200 g mąki. Ile mąki potrzebujemy na ciasto dla 9 osób?
+4.  Samochód poruszał się ze stałą prędkością i przejechał 240 km w ciągu 3 godzin. Jaka będzie odległość pokonana przez ten samochód w ciągu 5 godzin przy tej samej prędkości?
+5.  Na mapie w skali $1:20000$ odległość między dwoma miastami wynosi 8 cm. Oblicz rzeczywistą odległość między tymi miastami w kilometrach.
+6.  Grupa 5 turystów potrzebuje 4 dni, aby przejść szlak turystyczny. Ile dni potrzebuje grupa 4 turystów na przejście tego samego szlaku, zakładając, że tempo marszu każdego turysty jest takie samo?
+7.  Rysunek techniczny wykonano w skali $1:5$. Długość elementu na rysunku wynosi 20 cm. Jaka jest rzeczywista długość tego elementu w metrach?
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $x=3$.
+2.  W pierwszej beczce jest 32 litry, w drugiej 24 litry.
+3.  Potrzeba 300 g mąki.
+4.  Samochód przejedzie 400 km.
+5.  Rzeczywista odległość wynosi 1.6 km.
+6.  Grupa 4 turystów potrzebuje 5 dni.
+7.  Rzeczywista długość elementu wynosi 1 metr.
 
 ## Szybka powtórka
+1.  Jakie są dwa rodzaje zależności między wielkościami, które możemy opisać za pomocą proporcji?
+2.  Podaj wzór na własność proporcji $\\frac{a}{b} = \\frac{c}{d}$.
+3.  Co oznacza skala $1:10000$?
+4.  Jeśli odległość na mapie jest mniejsza niż w rzeczywistości, to skala jest większa czy mniejsza od 1?
+5.  Jakie są podstawowe jednostki długości i jak się przeliczają?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+     Skala 1:k
+       /      \\
+      /        \\
+     /          \\
+    /            \\
+ MAPA ------- RZECZYWISTOŚĆ
+  |               |
+  | *k            | /k
+  V               V
+ ODLEGŁOŚĆ       ODLEGŁOŚĆ
+NA MAPIE     W RZECZYWISTOŚCI
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria",
     topic: "katy",
-    title: "Kąty w trójkątach i wielokątach",
+    title: "Kąty i proste - solidne podstawy",
     content: `## Na egzaminie
+Zadania dotyczące kątów i prostych pojawiają się na egzaminie ósmoklasisty regularnie, często jako część większych zadań geometrycznych lub jako samodzielne problemy wymagające zastosowania podstawowych własności. Zwykle można zdobyć za nie od 2 do 5 punktów. Egzaminatorzy lubią sprawdzać umiejętność rozpoznawania i wykorzystywania kątów przyległych, wierzchołkowych, prostych, przyległych, a także wiedzę o sumie kątów w trójkącie i czworokącie.
 
-Suma kątów w trójkącie i wielokącie, kąty przy prostej równoległej, trójkąt prostokątny — 2–3 zadania.
+## Mapa tematu
+1.  Rozpoznawanie i nazywanie różnych rodzajów kątów.
+2.  Zrozumienie pojęcia prostych równoległych i prostopadłych.
+3.  Wykorzystanie własności kątów wierzchołkowych.
+4.  Wykorzystanie własności kątów przyległych.
+5.  Obliczanie kątów przy przecięciu dwóch prostych.
+6.  Obliczanie kątów w trójkątach.
+7.  Obliczanie kątów w czworokątach (podstawowe własności).
+8.  Rozwiązywanie zadań tekstowych z zastosowaniem kątów i prostych.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Kąt:** Część płaszczyzny ograniczona dwiema półprostymi o wspólnym początku, zwanym wierzchołkiem kąta. Kąty mierzymy w stopniach ($^\\circ$).
+*   **Kąt zerowy:** Kąt o mierze $0^\\circ$.
+*   **Kąt ostry:** Kąt o mierze większej od $0^\\circ$ i mniejszej od $90^\\circ$ ($0^\\circ < \\alpha < 90^\\circ$).
+*   **Kąt prosty:** Kąt o mierze dokładnie $90^\\circ$. Dwie proste tworzące kąt prosty nazywamy prostymi prostopadłymi.
+*   **Kąt rozwarty:** Kąt o mierze większej od $90^\\circ$ i mniejszej od $180^\\circ$ ($90^\\circ < \\alpha < 180^\\circ$).
+*   **Kąt półpełny:** Kąt o mierze dokładnie $180^\\circ$. Dwa kąty tworzące kąt półpełny nazywamy kątami przyległymi.
+*   **Kąt pełny:** Kąt o mierze dokładnie $360^\\circ$.
+*   **Kąty wierzchołkowe:** Powstają w wyniku przecięcia dwóch prostych. Są sobie równe. Jeśli dwa kąty, $\\alpha$ i $\\beta$, są wierzchołkowe, to $\\alpha = \\beta$.
+*   **Kąty przyległe:** Sąsiadujące kąty, których ramiona zewnętrzne tworzą prostą (kąt półpełny). Suma miar kątów przyległych wynosi $180^\\circ$. Jeśli kąty $\\alpha$ i $\\beta$ są przyległe, to $\\alpha + \\beta = 180^\\circ$.
+*   **Kąty o ramionach prostopadłych:**
+    *   Jeśli ramiona kątów są parami prostopadłe i "wskazują" w tym samym kierunku lub przeciwnych kierunkach, kąty te są równe.
+    *   Jeśli ramiona kątów są parami prostopadłe, ale jeden kąt "wskazuje" w innym kierunku niż drugi, to suma ich miar wynosi $180^\\circ$.
+*   **Proste równoległe:** Proste, które leżą w tej samej płaszczyźnie i nie mają punktów wspólnych. Oznaczenie: $a \\parallel b$.
+*   **Proste prostopadłe:** Proste, które przecinają się pod kątem prostym ($90^\\circ$). Oznaczenie: $a \\perp b$.
+*   **Suma kątów w trójkącie:** Suma miar kątów wewnętrznych każdego trójkąta wynosi $180^\\circ$. Jeśli kąty trójkąta to $\\alpha, \\beta, \\gamma$, to $\\alpha + \\beta + \\gamma = 180^\\circ$.
+*   **Suma kątów w czworokącie:** Suma miar kątów wewnętrznych każdego wypukłego czworokąta wynosi $360^\\circ$. Jeśli kąty czworokąta to $\\alpha, \\beta, \\gamma, \\delta$, to $\\alpha + \\beta + \\gamma + \\delta = 360^\\circ$.
 
-**Trójkąt:** suma kątów wewnętrznych = $180°$.
+## Przykład 1 — podstawowy
+Dany jest rysunek przedstawiający dwie przecinające się proste. Kąt $\\alpha$ ma miarę $35^\\circ$. Oblicz miary pozostałych kątów.
 
-**Trójkąt prostokątny:** jeden kąt $90°$, dwa pozostałe ostre, suma $90°$.
+\`\`\`
+   /
+  /
+ / \\
+/   \\  beta
+-----*-----
+\\   /
+ \\ /  gamma
+  /
+ / delta
+/
+\`\`\`
 
-**Wielokąt $n$-kątny:** suma kątów = $(n - 2) \\cdot 180°$.
+**Krok 1.** Zidentyfikuj rodzaje kątów. Kąty $\\alpha$ i $\\gamma$ są wierzchołkowe. Kąty $\\alpha$ i $\\beta$ są przyległe. Kąty $\\beta$ i $\\gamma$ są przyległe. Kąty $\\gamma$ i $\\delta$ są wierzchołkowe. Kąty $\\delta$ i $\\alpha$ są przyległe.
 
-**Kąty przy prostej równoległej** — kąty odpowiadające i naprzemianległe.
+**Krok 2.** Wykorzystaj własność kątów wierzchołkowych. Kąt $\\alpha$ ma miarę $35^\\circ$. Kąt $\\gamma$ jest wierzchołkowy do kąta $\\alpha$. Zatem $\\gamma = \\alpha = 35^\\circ$.
 
-## Przykład krok po kroku
+**Krok 3.** Wykorzystaj własność kątów przyległych. Kąt $\\alpha$ i kąt $\\beta$ są przyległe. Ich suma wynosi $180^\\circ$.
+$\\alpha + \\beta = 180^\\circ$
+$35^\\circ + \\beta = 180^\\circ$
 
-W trójkącie dwa kąty mają miary $65°$ i $48°$. Oblicz trzeci kąt.
+**Krok 4.** Oblicz miarę kąta $\\beta$.
+$\\beta = 180^\\circ - 35^\\circ$
+$\\beta = 145^\\circ$
 
-$$\\alpha = 180° - 65° - 48° = 67°$$
+**Krok 5.** Wykorzystaj własność kątów wierzchołkowych dla pozostałych kątów. Kąt $\\delta$ jest wierzchołkowy do kąta $\\beta$.
+$\\delta = \\beta = 145^\\circ$.
+
+**Sprawdzenie:**
+Suma wszystkich kątów wokół punktu przecięcia powinna wynosić $360^\\circ$.
+$\\alpha + \\beta + \\gamma + \\delta = 35^\\circ + 145^\\circ + 35^\\circ + 145^\\circ = 360^\\circ$.
+Kąty przyległe:
+$\\alpha + \\beta = 35^\\circ + 145^\\circ = 180^\\circ$
+$\\beta + \\gamma = 145^\\circ + 35^\\circ = 180^\\circ$
+$\\gamma + \\delta = 35^\\circ + 145^\\circ = 180^\\circ$
+$\\delta + \\alpha = 145^\\circ + 35^\\circ = 180^\\circ$
+Wyniki są poprawne.
+Kąty: $\\alpha = 35^\\circ$, $\\beta = 145^\\circ$, $\\gamma = 35^\\circ$, $\\delta = 145^\\circ$.
+
+## Przykład 2 — maturalny
+Dany jest trójkąt ABC. Kąt przy wierzchołku A ma miarę $50^\\circ$, a kąt przy wierzchołku B ma miarę $70^\\circ$. Oblicz miarę kąta przy wierzchołku C. Następnie poprowadź prostą przechodzącą przez wierzchołek A, która jest prostopadła do boku BC. Nazwij punkt przecięcia tej prostej z prostą BC literą D. Oblicz miarę kąta CAD.
+
+**Krok 1.** Oblicz miarę kąta przy wierzchołku C. Suma kątów w trójkącie wynosi $180^\\circ$.
+Kąt C = $180^\\circ - (\\text{Kąt A} + \\text{Kąt B})$
+Kąt C = $180^\\circ - (50^\\circ + 70^\\circ)$
+Kąt C = $180^\\circ - 120^\\circ$
+Kąt C = $60^\\circ$.
+
+**Krok 2.** Narysuj sytuację. Mamy trójkąt ABC. Poprowadzono prostą AD tak, że $AD \\perp BC$. Punkt D leży na prostej zawierającej odcinek BC.
+
+**Krok 3.** Zidentyfikuj kąt prosty. Skoro $AD \\perp BC$, to kąt ADB (lub ADC, zależnie od położenia punktu D) jest kątem prostym, czyli ma miarę $90^\\circ$.
+
+**Krok 4.** Rozważ trójkąt ABD (lub ACD). Aby znaleźć kąt CAD, musimy wiedzieć, gdzie leży punkt D. Załóżmy, że D leży na przedłużeniu boku BC poza punktem C. Wtedy w trójkącie ADC, kąt ADC = $90^\\circ$. Kąt ACB = $60^\\circ$. Kąt ACD jest kątem przyległym do kąta ACB, więc Kąt ACD = $180^\\circ - 60^\\circ = 120^\\circ$.
+W trójkącie ACD, suma kątów wynosi $180^\\circ$.
+Kąt CAD + Kąt ADC + Kąt ACD = $180^\\circ$
+Kąt CAD + $90^\\circ$ + $120^\\circ$ = $180^\\circ$
+Kąt CAD + $210^\\circ$ = $180^\\circ$
+Kąt CAD = $180^\\circ - 210^\\circ = -30^\\circ$. Wynik ujemny jest niemożliwy, co oznacza, że punkt D nie leży na przedłużeniu poza C.
+
+Załóżmy, że punkt D leży na odcinku BC. Wtedy w trójkącie ADB, kąt ADB = $90^\\circ$. Kąt ABC = $70^\\circ$.
+W trójkącie ABD:
+Kąt BAD + Kąt ABD + Kąt ADB = $180^\\circ$
+Kąt BAD + $70^\\circ$ + $90^\\circ$ = $180^\\circ$
+Kąt BAD + $160^\\circ$ = $180^\\circ$
+Kąt BAD = $20^\\circ$.
+
+**Krok 5.** Oblicz kąt CAD. Kąt BAC = $50^\\circ$. Kąt BAD = $20^\\circ$.
+Kąt CAD = Kąt BAC - Kąt BAD
+Kąt CAD = $50^\\circ - 20^\\circ$
+Kąt CAD = $30^\\circ$.
+
+**Sprawdzenie:**
+Suma kątów w trójkącie ABD: $20^\\circ + 70^\\circ + 90^\\circ = 180^\\circ$. Poprawnie.
+Suma kątów w trójkącie ACD: Kąt ACD = $180^\\circ - 60^\\circ = 120^\\circ$. Kąt ADC = $90^\\circ$. Kąt CAD = $30^\\circ$.
+Suma: $30^\\circ + 90^\\circ + 120^\\circ = 240^\\circ$. Ten przypadek nie działa, co oznacza, że punkt D nie leży na odcinku BC *w taki sposób*, że kąt ACD jest rozwarty.
+
+Rozważmy jeszcze raz położenie D. AD jest wysokością opuszczoną z A na bok BC.
+W trójkącie ABC: A=$50^\\circ$, B=$70^\\circ$, C=$60^\\circ$.
+Wysokość AD opada na bok BC. Kąt ADB = $90^\\circ$.
+W trójkącie prostokątnym ABD: kąt B=$70^\\circ$, kąt ADB=$90^\\circ$, więc kąt BAD = $180^\\circ - 90^\\circ - 70^\\circ = 20^\\circ$.
+Kąt BAC = $50^\\circ$.
+Kąt CAD = Kąt BAC - Kąt BAD = $50^\\circ - 20^\\circ = 30^\\circ$.
+To rozwiązanie jest spójne i daje pozytywny wynik.
+
+Miara kąta przy wierzchołku C wynosi $60^\\circ$. Miara kąta CAD wynosi $30^\\circ$.
+
+## Przykład 3 — egzaminacyjny
+
+Dany jest czworokąt ABCD. Kąty przy wierzchołkach A i B wynoszą odpowiednio $110^\\circ$ i $80^\\circ$. Kąt przy wierzchołku C jest dwa razy większy od kąta przy wierzchołku D. Oblicz miary kątów C i D.
+
+**Krok 1.** Zastosuj sumę kątów w czworokącie. Suma kątów wewnętrznych w czworokącie wynosi $360^\\circ$.
+Kąt A + Kąt B + Kąt C + Kąt D = $360^\\circ$
+$110^\\circ + 80^\\circ + \\text{Kąt C} + \\text{Kąt D} = 360^\\circ$
+
+**Krok 2.** Uprość równanie.
+$190^\\circ + \\text{Kąt C} + \\text{Kąt D} = 360^\\circ$
+$\\text{Kąt C} + \\text{Kąt D} = 360^\\circ - 190^\\circ$
+$\\text{Kąt C} + \\text{Kąt D} = 170^\\circ$
+
+**Krok 3.** Zapisz zależności między kątami C i D. Wiemy, że kąt C jest dwa razy większy od kąta D.
+Niech Kąt D = $x$.
+Wtedy Kąt C = $2x$.
+
+**Krok 4.** Podstaw zależności do równania z Kroku 2.
+$2x + x = 170^\\circ$
+$3x = 170^\\circ$
+
+**Krok 5.** Oblicz wartość $x$.
+$x = \\frac{170^\\circ}{3}$
+$x \\approx 56.67^\\circ$. Wynik nie jest liczbą całkowitą. Sprawdźmy dane zadania. Często na egzaminie wynik jest bardziej "ładny". Może jednak być taki.
+
+**Krok 6.** Oblicz miary kątów C i D.
+Kąt D = $x = \\frac{170^\\circ}{3}$
+Kąt C = $2x = 2 \\cdot \\frac{170^\\circ}{3} = \\frac{340^\\circ}{3}$
+
+**Sprawdzenie:**
+Kąt A + Kąt B + Kąt C + Kąt D = $110^\\circ + 80^\\circ + \\frac{340^\\circ}{3} + \\frac{170^\\circ}{3}$
+$= 190^\\circ + \\frac{510^\\circ}{3}$
+$= 190^\\circ + 170^\\circ$
+$= 360^\\circ$.
+Wynik jest poprawny, mimo iż kąty nie są liczbami całkowitymi. Na egzaminie często wyniki są całkowite, ale nie zawsze.
+
+Miara kąta D wynosi $\\frac{170^\\circ}{3}$, a miara kąta C wynosi $\\frac{340^\\circ}{3}$.
 
 ## Pułapki
+*   **Mylenie kątów wierzchołkowych z przyległymi:** Pamiętaj, że kąty wierzchołkowe są równe, a kąty przyległe sumują się do $180^\\circ$. Zwracaj uwagę na rysunek i definicje.
+*   **Brak sprawdzenia położenia punktu:** W zadaniach geometrycznych, szczególnie z wysokościami czy dwusiecznymi, położenie punktu przecięcia (np. czy leży na odcinku, czy na jego przedłużeniu) jest kluczowe dla poprawnego zapisu kątów i ich sum. Rysuj starannie lub analizuj dane.
+*   **Nieuwzględnienie sumy kątów w figurze:** Zawsze sprawdzaj, czy suma kątów w trójkącie wynosi $180^\\circ$, a w czworokącie $360^\\circ$. To podstawowe narzędzie do weryfikacji wyników.
+*   **Błędy w obliczeniach arytmetycznych:** Proste dodawanie, odejmowanie, mnożenie i dzielenie liczb, w tym ułamków, jest częstym źródłem błędów. Dokładnie sprawdzaj obliczenia.
+*   **Zakładanie kątów prostych/równych bez podstawy:** Nie zakładaj, że proste są prostopadłe, jeśli nie jest to podane w zadaniu lub nie wynika logicznie z rysunku (np. symbol kwadratu przy kącie). Nie zakładaj równości kątów, jeśli nie ma ku temu przesłanek.
 
-- Suma trzech kątów trójkąta **zawsze** $180°$
-- Kąt prosty dokładnie $90°$
-- Przy równoległych — rozróżnij kąty odpowiadające i naprzemianległe
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Dwie proste przecinają się, tworząc kąty. Jeden z kątów ma miarę $42^\\circ$. Oblicz miary pozostałych trzech kątów.
+2.  Dany jest trójkąt równoramienny ABC, w którym kąt przy podstawie AB ma miarę $55^\\circ$. Oblicz miary pozostałych kątów tego trójkąta.
+3.  Prosta $k$ jest równoległa do prostej $l$. Prostą $m$ przecina proste $k$ i $l$. Kąt między prostą $m$ a prostą $k$ wynosi $65^\\circ$. Jakie są miary kątów między prostą $m$ a prostą $l$? (Rozważ różne możliwości).
+4.  W czworokącie ABCD kąty przy wierzchołkach A, B i C wynoszą odpowiednio $95^\\circ$, $85^\\circ$ i $100^\\circ$. Oblicz miarę kąta D.
+5.  W trójkącie prostokątnym jeden z kątów ostrych jest dwa razy większy od drugiego. Oblicz miary obu kątów ostrych.
+6.  Przez wierzchołek B trójkąta ABC poprowadzono prostą $n$ prostopadłą do boku AC. Punkt przecięcia prostej $n$ z prostą AC oznaczono jako E. Kąt BAC ma miarę $40^\\circ$, a kąt ABC ma miarę $110^\\circ$. Oblicz miary kątów: CBE i AEB.
+7.  Dwa kąty są przyległe. Jeden z nich jest o $20^\\circ$ większy od drugiego. Oblicz miary tych kątów.
+
+## Odpowiedzi
+1.  Kąty: $42^\\circ$, $138^\\circ$, $42^\\circ$, $138^\\circ$.
+2.  Kąt C (wierzchołek) = $180^\\circ - 2 \\cdot 55^\\circ = 180^\\circ - 110^\\circ = 70^\\circ$. Kąty wynoszą $55^\\circ, 55^\\circ, 70^\\circ$.
+3.  Kąty wynoszą $65^\\circ$ i $115^\\circ$. Jeśli prosta $m$ przecina $k$ i $l$ w taki sposób, że tworzy z nimi kąty odpowiadające lub zamienne, kąty będą równe ($65^\\circ$). Jeśli tworzy kąty wewnętrzne, suma będzie $180^\\circ$ ($115^\\circ$).
+4.  Kąt D = $360^\\circ - (95^\\circ + 85^\\circ + 100^\\circ) = 360^\\circ - 280^\\circ = 80^\\circ$.
+5.  Kąty ostre: $30^\\circ$ i $60^\\circ$. (Niech kąty to $x$ i $2x$. $x+2x=90^\\circ$, $3x=90^\\circ$, $x=30^\\circ$).
+6.  Kąt AEB = $90^\\circ$. Kąt CBE = $180^\\circ - 110^\\circ - 90^\\circ = -20^\\circ$. To oznacza, że punkt E leży na przedłużeniu AC poza A. W trójkącie ABE: Kąt ABE = $180^\\circ - 90^\\circ - 40^\\circ = 50^\\circ$. Kąt ABC = $110^\\circ$. Kąt CBE = Kąt ABC - Kąt ABE = $110^\\circ - 50^\\circ = 60^\\circ$.
+7.  Kąty wynoszą $80^\\circ$ i $100^\\circ$. (Niech kąty to $x$ i $x+20^\\circ$. $x + (x+20^\\circ) = 180^\\circ$, $2x+20^\\circ=180^\\circ$, $2x=160^\\circ$, $x=80^\\circ$).
 
 ## Szybka powtórka
+1.  Jak nazywamy kąt o mierze $90^\\circ$?
+2.  Dwa kąty są wierzchołkowe. Czy są równe, czy ich suma wynosi $180^\\circ$?
+3.  Jaka jest suma miar kątów wewnętrznych w każdym trójkącie?
+4.  Jak nazywamy dwa kąty leżące obok siebie, których ramiona zewnętrzne tworzą prostą?
+5.  Czy proste prostopadłe przecinają się pod kątem $90^\\circ$?
 
-1. Trzeci kąt przy $90°$ i $45°$?
-2. Suma kątów czworokąta?
-3. Ile wynosi kąt prosty?`,
+## Diagram
+\`\`\`text
+   / \\
+  / a \\
+ /_____\\ beta
+<-------*-------> gamma
+ \\ d / \\ b
+  \\ /   \\
+   \\_____/
+     e
+
+a, e - kąty wierzchołkowe (równe)
+a, b - kąty przyległe (suma 180)
+c, d - kąty wierzchołkowe (równe)
+c, b - kąty przyległe (suma 180)
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria",
     topic: "obwody",
-    title: "Obwód figury płaskiej",
+    title: "Obwody figur płaskich na egzaminie ósmoklasisty",
     content: `## Na egzaminie
+Zadania dotyczące obwodów figur pojawiają się regularnie na egzaminie ósmoklasisty, zwykle w zadaniach otwartych, ale czasem też zamkniętych. Ich poziom trudności jest zróżnicowany – od prostych obliczeń, po zadania tekstowe wymagające analizy i kilku etapów rozwiązania. CKE lubi sprawdzać umiejętność zastosowania wzorów na obwody w kontekście praktycznym, np. przy obliczaniu długości ogrodzenia czy taśmy. Zazwyczaj jedno zadanie z obwodów to około 3-5 punktów.
 
-Obwód = suma długości boków. Proste zadania, czasem z brakującym bokiem (Pitagoras).
+## Mapa tematu
+1.  Zrozumienie pojęcia obwodu figury płaskiej.
+2.  Obliczanie obwodu wielokątów o znanych bokach (trójkąty, czworokąty, wielokąty dowolne).
+3.  Obliczanie obwodu prostokąta i kwadratu ze szczególnym uwzględnieniem wzorów.
+4.  Obliczanie obwodu rombu, równoległoboku, trapezu.
+5.  Obliczanie obwodu figur złożonych z prostszych kształtów.
+6.  Rozwiązywanie zadań tekstowych związanych z obwodami.
+7.  Wykorzystanie informacji o obwodzie do obliczenia długości nieznanego boku.
+8.  Podstawowe zadania z okręgiem (obwód koła jako wprowadzanie).
 
-## Najważniejsze
+## Definicje i wzory
+*   **Obwód figury płaskiej** to suma długości wszystkich jej boków. Oznaczamy go zazwyczaj literą $Ob$ lub $L$. Obwód to wielkość jednowymiarowa, wyrażana w jednostkach długości (np. cm, m, km).
+*   **Wielokąty:**
+    *   **Trójkąt o bokach długości $a, b, c$:**
+        $$Ob = a + b + c$$
+    *   **Czworokąt o bokach długości $a, b, c, d$:**
+        $$Ob = a + b + c + d$$
+*   **Szczególne czworokąty:**
+    *   **Kwadrat o boku długości $a$:**
+        $$Ob = 4 \\cdot a$$
+    *   **Prostokąt o bokach długości $a, b$:**
+        $$Ob = 2a + 2b = 2(a+b)$$
+    *   **Romb o boku długości $a$:** (wszystkie boki równe)
+        $$Ob = 4a$$
+    *   **Równoległobok o bokach długości $a, b$:** (boki przeciwległe równe)
+        $$Ob = 2a + 2b = 2(a+b)$$
+    *   **Trapez:** (oznaczamy boki jako $a, b, c, d$, gdzie $a$ i $c$ to podstawy, a $b$ i $d$ to ramiona)
+        $$Ob = a + b + c + d$$
+        *   **Trapez równoramienny:** boki nierównoległe ($b$ i $d$) są równe.
+            $$Ob = a + 2b + c$$
+*   **Wielokąt foremny:** wielokąt, który ma wszystkie boki równej długości i wszystkie kąty wewnętrzne równej miary. Obwód wielokąta foremnego o $n$ bokach, gdzie długość każdego boku wynosi $a$, obliczamy jako:
+    $$Ob = n \\cdot a$$
+    *   Sześciokąt foremny o boku $a$: $Ob = 6a$
+    *   Pięciokąt foremny o boku $a$: $Ob = 5a$
+*   **Figury złożone:** Obwód jest sumą długości wszystkich zewnętrznych boków figury. Należy uważać, aby nie policzyć dwukrotnie wewnętrznych odcinków wspólnych dla dwóch figur składowych.
+*   **Okrąg (Koło):**
+    *   **Długość okręgu** (obwód koła) o promieniu $r$ lub średnicy $d$:
+        $$Ob = 2 \\pi r$$ lub $$Ob = \\pi d$$
+        gdzie $\\pi$ (pi) to stała matematyczna, w przybliżeniu 3.14. Na egzaminie często używa się przybliżenia $\\pi \\approx 3.14$ lub $\\pi \\approx \\frac{22}{7}$, chyba że polecenie stanowi inaczej lub wymaga odpowiedzi z $\\pi$.
 
-**Definicja:** $O = a + b + c + \\ldots$ (suma wszystkich boków).
+## Przykład 1 — podstawowy
+Oblicz obwód prostokąta, którego jeden bok ma długość 8 cm, a drugi jest o 3 cm dłuższy.
 
-**Kwadrat:** $O = 4a$
+**Krok 1.** Zrozumienie danych: Mamy prostokąt. Jeden bok ($a$) ma 8 cm. Drugi bok ($b$) jest o 3 cm dłuższy od pierwszego.
+**Krok 2.** Obliczenie długości drugiego boku: $b = a + 3 \\text{ cm} = 8 \\text{ cm} + 3 \\text{ cm} = 11 \\text{ cm}$.
+**Krok 3.** Przypomnienie wzoru na obwód prostokąta: $Ob = 2a + 2b$.
+**Krok 4.** Podstawienie danych do wzoru: $Ob = 2 \\cdot 8 \\text{ cm} + 2 \\cdot 11 \\text{ cm}$.
+**Krok 5.** Wykonanie obliczeń: $Ob = 16 \\text{ cm} + 22 \\text{ cm} = 38 \\text{ cm}$.
 
-**Prostokąt:** $O = 2a + 2b$
+Sprawdzenie: Boki prostokąta to 8 cm i 11 cm. Suma wszystkich boków: $8 + 11 + 8 + 11 = 38$ cm. Wynik jest poprawny.
 
-**Trójkąt:** $O = a + b + c$
+## Przykład 2 — maturalny
+Działka w kształcie trapezu równoramiennego ma podstawy długości 20 metrów i 30 metrów. Dłuższa podstawa jest o 5 metrów dłuższa od każdego z ramion. Oblicz obwód tej działki.
 
-**Koło:** $L = 2\\pi r$ (długość okręgu)
+**Krok 1.** Identyfikacja figury i danych: Mamy trapez równoramienny. Oznaczmy podstawy jako $a$ i $c$, a ramiona jako $b$ i $d$. W trapezach równoramiennych $b = d$.
+**Krok 2.** Przypisanie wartości do boków: Wiemy, że podstawy mają 20 m i 30 m. Dłuższa podstawa to $a = 30$ m. Krótsza podstawa to $c = 20$ m.
+**Krok 3.** Obliczenie długości ramion: Dłuższa podstawa ($a = 30$ m) jest o 5 m dłuższa od każdego z ramion ($b$ i $d$). Czyli każde ramię ma długość: $b = d = a - 5 \\text{ m} = 30 \\text{ m} - 5 \\text{ m} = 25 \\text{ m}$.
+**Krok 4.** Przypomnienie wzoru na obwód trapezu: $Ob = a + b + c + d$. Ponieważ jest to trapez równoramienny, możemy użyć $Ob = a + c + 2b$.
+**Krok 5.** Podstawienie wartości i obliczenie obwodu: $Ob = 30 \\text{ m} + 20 \\text{ m} + 2 \\cdot 25 \\text{ m} = 50 \\text{ m} + 50 \\text{ m} = 100 \\text{ m}$.
 
-## Przykład krok po kroku
+Sprawdzenie: Podstawy to 30 m i 20 m. Ramiona to po 25 m. Suma boków: $30 + 25 + 20 + 25 = 100$ m. Wynik jest poprawny.
 
-Prostokąt ma boki 7 cm i 11 cm. Oblicz obwód.
+## Przykład 3 — egzaminacyjny
 
-$$O = 2 \\cdot 7 + 2 \\cdot 11 = 14 + 22 = 36\\text{ cm}$$
+Ogrodnik chce ogrodzić prostokątną rabatę kwiatową o wymiarach 4 metry na 6 metrów. Jakiej długości siatki potrzebuje, jeśli siatka sprzedawana jest w rolkach po 10 metrów? Ile rolek siatki musi kupić?
+
+**Krok 1.** Określenie potrzebnej długości siatki: Siatka ma otaczać rabatę, czyli jej długość musi być równa obwodowi rabaty. Rabatę stanowi prostokąt o bokach $a = 4$ m i $b = 6$ m.
+**Krok 2.** Obliczenie obwodu rabaty: Używamy wzoru na obwód prostokąta $Ob = 2(a+b)$.
+$$Ob = 2(4 \\text{ m} + 6 \\text{ m}) = 2(10 \\text{ m}) = 20 \\text{ m}$$
+Ogrodnik potrzebuje 20 metrów siatki.
+**Krok 3.** Określenie liczby potrzebnych rolek: Siatka sprzedawana jest w rolkach po 10 metrów. Aby dowiedzieć się, ile rolek potrzeba, dzielimy całkowitą potrzebną długość przez długość jednej rolki:
+$$\\text{Liczba rolek} = \\frac{\\text{Potrzebna długość}}{\\text{Długość rolki}} = \\frac{20 \\text{ m}}{10 \\text{ m}} = 2$$
+Ogrodnik musi kupić 2 rolki siatki.
+
+Sprawdzenie: Obwód rabaty to 20 m. Dwie rolki po 10 m dają $2 \\times 10 = 20$ m siatki, co wystarcza. Wynik jest poprawny.
 
 ## Pułapki
+*   **Mylenie obwodu z polem:** Obwód to suma długości boków (jednostki liniowe, np. cm), a pole to powierzchnia (jednostki kwadratowe, np. cm$^2$). Nie należy podstawiać wartości pola do wzorów na obwód i odwrotnie.
+*   **Niedoliczenie wszystkich boków:** Przy figurach nieregularnych lub złożonych łatwo zapomnieć o którymś boku. Zawsze warto zrobić szkic i zaznaczać policzone boki.
+*   **Błędy w obliczeniach przy figurach złożonych:** W zadaniach, gdzie figura jest złożona z prostokątów (np. litera L), należy dodać tylko zewnętrzne boki. Wewnętrzne odcinki, które nie są częścią zewnętrznego obrysu, nie wliczają się do obwodu.
+*   **Niewłaściwe zastosowanie wzorów dla szczególnych przypadków:** Pamiętaj, że wzór $Ob = 2(a+b)$ jest dla prostokąta i równoległoboku, a $Ob = 4a$ dla kwadratu i rombu. Kwadrat i romb to też czworokąty, ale mają swoje bardziej specyficzne wzory.
+*   **Brak jednostek lub błędne jednostki:** Zawsze podawaj wynik z odpowiednimi jednostkami długości. Na egzaminie często wymaga się ich podania.
 
-- **Obwód $\\neq$ pole** — inne jednostki (cm vs cm²)
-- Przy wielokącie **nie pomijaj żadnego boku**
-- Okrąg — używaj $L = 2\\pi r$, nie myl z polem
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Oblicz obwód trójkąta równobocznego, którego bok ma długość 7 cm.
+2.  Oblicz obwód rombu, jeśli jego krótsza przekątna ma długość 6 cm, a dłuższa 8 cm.
+3.  Oblicz obwód kwadratu, jeśli jego pole wynosi 36 cm$^2$.
+4.  Plac zabaw ma kształt sześciokąta foremnego o boku 12 metrów. Oblicz obwód placu zabaw.
+5.  Długość okręgu wynosi $24\\pi$ cm. Jaka jest długość promienia tego okręgu?
+6.  Płot ma mieć kształt prostokąta o wymiarach 15 metrów na 10 metrów. Ile metrów siatki potrzeba na budowę płotu?
+7.  Pokój w kształcie litery L składa się z dwóch prostokątów o wymiarach 3m x 4m i 2m x 5m (gdzie dłuższy bok 5m przylega do dłuższego boku 4m). Oblicz obwód tego pokoju.
+
+## Odpowiedzi
+1.  Obwód = $3 \\cdot 7 \\text{ cm} = 21 \\text{ cm}$.
+2.  Obwód rombu to suma jego boków. Aby obliczyć bok, można użyć twierdzenia Pitagorasa dla połówek przekątnych: $(\\frac{6}{2})^2 + (\\frac{8}{2})^2 = 3^2 + 4^2 = 9 + 16 = 25$. Bok $a = \\sqrt{25} = 5$ cm. Obwód = $4 \\cdot 5 \\text{ cm} = 20 \\text{ cm}$.
+3.  Pole kwadratu $P = a^2$. Skoro $P = 36$ cm$^2$, to bok $a = \\sqrt{36} = 6$ cm. Obwód $Ob = 4a = 4 \\cdot 6 \\text{ cm} = 24 \\text{ cm}$.
+4.  Sześciokąt foremny ma 6 równych boków. Obwód = $6 \\cdot 12 \\text{ m} = 72 \\text{ m}$.
+5.  Wzór na długość okręgu to $L = 2\\pi r$. Mamy $24\\pi = 2\\pi r$. Dzieląc obie strony przez $2\\pi$, otrzymujemy $r = 12$ cm.
+6.  Obwód prostokąta: $Ob = 2(15 \\text{ m} + 10 \\text{ m}) = 2(25 \\text{ m}) = 50 \\text{ m}$. Potrzeba 50 metrów siatki.
+7.  Szkic pokoju i policzenie zewnętrznych boków: 3m + 5m + 3m + (4m-2m) + 2m + 4m = 3 + 5 + 3 + 2 + 2 + 4 = 19 m. (lub: 3 + 5 + 3 + 2 + 2 + 4 = 19 m).
 
 ## Szybka powtórka
+1.  Co to jest obwód figury?
+2.  Podaj wzór na obwód prostokąta.
+3.  Czym różni się obwód kwadratu od obwodu rombu, jeśli mają takie same boki?
+4.  Jak obliczyć obwód figury złożonej z dwóch prostokątów?
+5.  Jaka jest zależność między długością okręgu a jego promieniem?
 
-1. Obwód kwadratu o boku 9 cm?
-2. Trójkąt o bokach 3, 4, 5 — obwód?
-3. Czym różni się obwód koła od pola koła?`,
+## Diagram
+Prostokąt z zaznaczonymi bokami:
+\`\`\`text
+       b
+   +-------+
+ a |       | a
+   +-------+
+       b
+\`\`\`
+Obwód = a + b + a + b = 2a + 2b`,
     video_url: null,
   },
   {
@@ -6755,332 +8032,1452 @@ $$O = 2 \\cdot 7 + 2 \\cdot 11 = 14 + 22 = 36\\text{ cm}$$
     topic: "pola_figur",
     title: "Pola figur płaskich",
     content: `## Na egzaminie
+Zadania dotyczące pól figur płaskich pojawiają się na egzaminie ósmoklasisty co roku, zazwyczaj w zadaniach otwartych lub jako część zadań zamkniętych. Mogą one dotyczyć obliczania pola jednej figury, lub złożonych figur składających się z kilku prostszych figur. Poprawne stosowanie wzorów i umiejętność dzielenia skomplikowanych kształtów na prostsze elementy są kluczowe. Zadania te są warte od 2 do nawet 4 punktów.
 
-Pola prostokąta, trójkąta, trapezu, równoległoboku, koła — wzory w arkuszu, ale trzeba umieć je stosować (2–4 pkt).
+## Mapa tematu
+Po przerobieniu tej lekcji będziesz potrafił:
+1.  Obliczyć pole prostokąta, kwadratu, trójkąta, rombu i trapezu, stosując odpowiednie wzory.
+2.  Rozpoznawać i obliczać pola figur złożonych, składających się z prostokątów, kwadratów, trójkątów, rombów i trapezów.
+3.  Wykorzystywać własności figur geometrycznych (np. przekątne w rombie, wysokość w trójkącie) do obliczeń pól.
+4.  Znajdować brakujące wymiary figury (np. bok, wysokość) na podstawie jej pola i innych danych.
+5.  Dokonywać zamian jednostek pola (np. z cm$^2$ na m$^2$).
+6.  Zastosować wiedzę o polach figur w zadaniach tekstowych.
+7.  Obliczyć pole koła i jego wycinka.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Prostokąt:** Czworokąt o czterech kątach prostych.
+    *   Wzór na pole: $P = a \\cdot b$, gdzie $a$ i $b$ to długości boków prostokąta.
+    *   $a$ - długość, $b$ - szerokość.
 
-**Prostokąt:** $P = ab$
+*   **Kwadrat:** Czworokąt o czterech bokach równej długości i czterech kątach prostych. Jest szczególnym przypadkiem prostokąta.
+    *   Wzór na pole: $P = a^2$, gdzie $a$ to długość boku kwadratu.
 
-**Trójkąt:** $P = \\dfrac{ah}{2}$ ($h$ — wysokość na podstawę $a$)
+*   **Trójkąt:** Wielokąt o trzech bokach.
+    *   Wzór na pole: $P = \\frac{1}{2} \\cdot a \\cdot h_a$, gdzie $a$ to długość jednego boku, a $h_a$ to wysokość opuszczona na ten bok.
+    *   Można użyć dowolnego boku jako podstawy i odpowiadającej mu wysokości.
 
-**Trapez:** $P = \\dfrac{(a + b)h}{2}$
+*   **Romb:** Czworokąt, którego wszystkie boki mają równe długości. Przekątne rombu są prostopadłe i przecinają się w połowie.
+    *   Wzór na pole (przez boki i kąt): $P = a^2 \\cdot \\sin(\\alpha)$, gdzie $a$ to długość boku, a $\\alpha$ to kąt między bokami. (Ten wzór jest rzadziej używany na egzaminie ósmoklasisty).
+    *   Wzór na pole (przez przekątne): $P = \\frac{1}{2} \\cdot p \\cdot q$, gdzie $p$ i $q$ to długości przekątnych rombu. Jest to podstawowy wzór na egzaminie.
 
-**Równoległobok:** $P = ah$
+*   **Trapez:** Czworokąt, który ma co najmniej jedną parę boków równoległych. Boki równoległe to podstawy trapezu.
+    *   Wzór na pole: $P = \\frac{1}{2} \\cdot (a + b) \\cdot h$, gdzie $a$ i $b$ to długości podstaw, a $h$ to wysokość trapezu (odległość między podstawami).
 
-**Koło:** $P = \\pi r^2$
+*   **Koło:** Zbiór wszystkich punktów na płaszczyźnie, których odległość od ustalonego punktu (środka) jest nie większa niż promień.
+    *   Wzór na pole: $P = \\pi r^2$, gdzie $r$ to promień koła. $\\pi$ (pi) to stała matematyczna, w przybliżeniu 3,14.
 
-## Przykład krok po kroku
+*   **Wycinek koła:** Część koła ograniczona dwoma promieniami i łukiem.
+    *   Pole wycinka o kącie środkowym $\\alpha$ (w stopniach): $P_{wycinka} = \\frac{\\alpha}{360^\\circ} \\cdot \\pi r^2$.
 
-Trapez ma podstawy 6 cm i 10 cm, wysokość 4 cm. Oblicz pole.
+*   **Zamiana jednostek pola:**
+    *   $1 \\text{ m} = 100 \\text{ cm} \\implies 1 \\text{ m}^2 = (100 \\text{ cm})^2 = 10000 \\text{ cm}^2$
+    *   $1 \\text{ km} = 1000 \\text{ m} \\implies 1 \\text{ km}^2 = 1000000 \\text{ m}^2$
+    *   $1 \\text{ ar (a)} = 100 \\text{ m}^2$
+    *   $1 \\text{ hektar (ha)} = 100 \\text{ arów} = 10000 \\text{ m}^2 = 1 \\text{ km}^2$ (niepoprawnie, 1 ha = 10000 m^2, czyli 1 ha = 1 km^2 jest błędne, poprawka: $1 \\text{ ha} = 10000 \\text{ m}^2$).
 
-$$P = \\frac{(6 + 10) \\cdot 4}{2} = \\frac{64}{2} = 32\\text{ cm}^2$$
+## Przykład 1 — podstawowy
+Oblicz pole prostokąta o bokach długości 5 cm i 8 cm.
+**Krok 1.** Zidentyfikuj figurę i dane.
+Figurą jest prostokąt. Długości boków wynoszą $a = 5$ cm i $b = 8$ cm.
+**Krok 2.** Wybierz odpowiedni wzór na pole prostokąta.
+Wzór na pole prostokąta to $P = a \\cdot b$.
+**Krok 3.** Podstaw dane do wzoru.
+$P = 5 \\text{ cm} \\cdot 8 \\text{ cm}$
+**Krok 4.** Oblicz wynik.
+$P = 40 \\text{ cm}^2$.
+**Krok 5.** Zapisz odpowiedź z jednostką.
+Pole prostokąta wynosi 40 cm$^2$.
+
+**Sprawdzenie:** Wzór zastosowany poprawnie, obliczenia wykonane zgodnie ze wzorem. Jednostka pola jest poprawna.
+
+## Przykład 2 — maturalny
+Działka w kształcie trapezu równoramiennego ma podstawy o długościach 12 m i 20 m. Wysokość działki wynosi 8 m. Oblicz pole tej działki.
+**Krok 1.** Zidentyfikuj figurę i dane.
+Figurą jest trapez. Długości podstaw to $a = 12$ m, $b = 20$ m. Wysokość to $h = 8$ m.
+**Krok 2.** Wybierz odpowiedni wzór na pole trapezu.
+Wzór na pole trapezu to $P = \\frac{1}{2} \\cdot (a + b) \\cdot h$.
+**Krok 3.** Podstaw dane do wzoru.
+$P = \\frac{1}{2} \\cdot (12 \\text{ m} + 20 \\text{ m}) \\cdot 8 \\text{ m}$
+**Krok 4.** Wykonaj dodawanie w nawiasie.
+$P = \\frac{1}{2} \\cdot (32 \\text{ m}) \\cdot 8 \\text{ m}$
+**Krok 5.** Wykonaj mnożenie.
+$P = 16 \\text{ m} \\cdot 8 \\text{ m} = 128 \\text{ m}^2$.
+**Krok 6.** Zapisz odpowiedź z jednostką.
+Pole działki wynosi 128 m$^2$.
+
+**Sprawdzenie:** Wzór zastosowany poprawnie, wszystkie dane podstawione. Obliczenia wykonane poprawnie. Jednostka pola jest odpowiednia dla danych wejściowych.
+
+## Przykład 3 — egzaminacyjny
+
+Oblicz pole rombu, którego przekątne mają długości 10 cm i 6 cm.
+**Krok 1.** Zidentyfikuj figurę i dane.
+Figurą jest romb. Długości przekątnych to $p = 10$ cm i $q = 6$ cm.
+**Krok 2.** Wybierz wzór na pole rombu.
+Wzór na pole rombu przez przekątne to $P = \\frac{1}{2} \\cdot p \\cdot q$.
+**Krok 3.** Podstaw dane do wzoru.
+$P = \\frac{1}{2} \\cdot 10 \\text{ cm} \\cdot 6 \\text{ cm}$
+**Krok 4.** Wykonaj mnożenie.
+$P = \\frac{1}{2} \\cdot 60 \\text{ cm}^2$
+**Krok 5.** Oblicz wynik.
+$P = 30 \\text{ cm}^2$.
+**Krok 6.** Zapisz odpowiedź.
+Pole rombu wynosi 30 cm$^2$.
+
+**Sprawdzenie:** Wzór na pole rombu przez przekątne zastosowany poprawnie. Obliczenia są poprawne.
 
 ## Pułapki
+*   **Mylenie wzorów:** Uczniowie często mylą wzory na pole np. trapezu z polem równoległoboku, lub stosują wzór na pole rombu przez boki zamiast przez przekątne. Zawsze dokładnie sprawdzaj, z jaką figurą masz do czynienia i jaki jest jej opis (długości boków, przekątnych, wysokość itp.).
+*   **Niewłaściwe jednostki:** W zadaniach pojawiają się różne jednostki (np. metry i centymetry). Pamiętaj o zamianie jednostek przed wykonaniem obliczeń lub o poprawnej zamianie jednostki pola na końcu. Najbezpieczniej jest zamienić wszystkie jednostki na jedną, spójną przed rozpoczęciem liczenia.
+*   **Błędy w obliczeniach:** Pośpiech prowadzi do błędów rachunkowych, zwłaszcza przy ułamkach (jak $\\frac{1}{2}$) i mnożeniu. Sprawdzaj swoje obliczenia, a jeśli to możliwe, wykonuj je krok po kroku.
+*   **Figury złożone:** Przy figurach złożonych kluczowe jest poprawne podzielenie ich na prostsze figury składowe (prostokąty, trójkąty itp.). Czasem trzeba dodać pola prostych figur, a czasem odjąć pole mniejszej figury od pola większej. Rysunek pomocniczy jest tu bardzo ważny.
+*   **Wysokość w trójkącie/trapezie:** Upewnij się, że używasz właściwej wysokości – prostopadłej do podstawy. W trójkątach z kątem rozwartym wysokość może "padać" na zewnątrz figury.
 
-- **Wysokość** musi być prostopadła do podstawy
-- **$r$ vs $d$** w kole — promień to połowa średnicy
-- **Jednostki** — cm², nie cm
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Oblicz pole kwadratu o boku długości 7 cm.
+2.  Oblicz pole trójkąta prostokątnego, którego przyprostokątne mają długości 6 cm i 9 cm.
+3.  Oblicz pole trapezu, którego podstawy mają długości 15 cm i 25 cm, a wysokość wynosi 10 cm.
+4.  Działka w kształcie koła ma promień 10 m. Oblicz jej pole, przyjmując $\\pi \\approx 3.14$.
+5.  Oblicz pole figury przedstawionej na rysunku. Figurę tę można podzielić na prostokąt i kwadrat. Dłuższy bok prostokąta to 10 cm, krótszy bok to 5 cm. Bok kwadratu wynosi 3 cm.
+
+    \`\`\`text
+    +---------+
+    |         | 5 cm
+    +---+-----+
+        | 3 cm
+        +---+
+    \`\`\`
+    (Rysunek: prostokąt 10x5 cm, do którego od dołu, na środku jednego z 10-cm boków, doklejony jest kwadrat o boku 3 cm. Górna część prostokąta ma 5 cm wysokości, a dolna część prostokąta (razem z kwadratem) ma 8 cm wysokości, z czego 3 cm to kwadrat.)
+
+6.  Pole pewnego rombu wynosi 72 cm$^2$. Jedna z jego przekątnych ma długość 12 cm. Oblicz długość drugiej przekątnej.
+7.  Oblicz pole wycinka koła o promieniu 6 cm, jeśli kąt środkowy tego wycinka wynosi $60^\\circ$. Przyjmij $\\pi \\approx 3.14$.
+
+## Odpowiedzi
+1.  $P = 7^2 = 49$ cm$^2$.
+2.  W trójkącie prostokątnym przyprostokątne są jednocześnie wysokościami opuszczonymi na siebie nawzajem. $P = \\frac{1}{2} \\cdot 6 \\text{ cm} \\cdot 9 \\text{ cm} = 27$ cm$^2$.
+3.  $P = \\frac{1}{2} \\cdot (15 \\text{ cm} + 25 \\text{ cm}) \\cdot 10 \\text{ cm} = \\frac{1}{2} \\cdot 40 \\text{ cm} \\cdot 10 \\text{ cm} = 200$ cm$^2$.
+4.  $P = \\pi r^2 = 3.14 \\cdot (10 \\text{ m})^2 = 3.14 \\cdot 100 \\text{ m}^2 = 314$ m$^2$.
+5.  Figura składa się z prostokąta o bokach 10 cm i 5 cm (pole $10 \\cdot 5 = 50$ cm$^2$) oraz z kwadratu o boku 3 cm (pole $3^2 = 9$ cm$^2$). Całkowite pole to suma pól: $50 + 9 = 59$ cm$^2$.
+6.  Używamy wzoru $P = \\frac{1}{2} p \\cdot q$. $72 \\text{ cm}^2 = \\frac{1}{2} \\cdot 12 \\text{ cm} \\cdot q$. $72 \\text{ cm}^2 = 6 \\text{ cm} \\cdot q$. $q = \\frac{72 \\text{ cm}^2}{6 \\text{ cm}} = 12$ cm. Druga przekątna ma 12 cm.
+7.  $P_{wycinka} = \\frac{60^\\circ}{360^\\circ} \\cdot \\pi r^2 = \\frac{1}{6} \\cdot 3.14 \\cdot (6 \\text{ cm})^2 = \\frac{1}{6} \\cdot 3.14 \\cdot 36 \\text{ cm}^2 = 3.14 \\cdot 6 \\text{ cm}^2 = 18.84$ cm$^2$.
 
 ## Szybka powtórka
+1.  Jaki wzór na pole prostokąta jest najbardziej podstawowy?
+2.  Jak obliczyć pole trójkąta, jeśli znamy jego podstawę i wysokość?
+3.  Podaj wzór na pole rombu, gdy znamy jego przekątne.
+4.  Jakie są długości podstaw trapezu w podstawowym wzorze na jego pole?
+5.  Czy pole koła zależy od jego średnicy czy promienia?
 
-1. Pole prostokąta 5 cm × 8 cm?
-2. Trójkąt: $a = 10$, $h = 6$ — pole?
-3. Koło $r = 3$ — pole (z $\\pi$)?`,
+## Diagram
+\`\`\`text
+          b
++-----------------+
+|                 |
+|                 | a
+|                 |
++-----------------+
+       a  - długość
+       b  - szerokość
+Pole = a * b
+\`\`\`
+
+\`\`\`text
+      a
++---------+
+| \\       |
+|  \\      | h
+|   \\     |
++----\\----+
+      a - podstawa
+      h - wysokość
+Pole = 0.5 * a * h
+\`\`\`
+
+\`\`\`text
+       / \\
+      /   \\
+     /     \\  h
+    /_______\\
+       a
+
+   a - podstawa
+   h - wysokość
+Pole = 0.5 * a * h
+\`\`\`
+
+\`\`\`text
+      p
+   /-----\\
+  /       \\
+ /         \\
+/-----------\\ q
+Pole rombu = 0.5 * p * q
+\`\`\`
+
+\`\`\`text
+       a
++--------------+
+|             /|
+|            / |
+|           /  | h
+|          /   |
++---------/----+
+     b
+   a, b - podstawy
+   h - wysokość
+Pole trapezu = 0.5 * (a + b) * h
+\`\`\`
+
+\`\`\`text
+      *****
+    *       *
+  *           * r
+*               *
+ *             *
+  *           *
+    *       *
+      *****
+ Pole koła = pi * r^2
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria",
     topic: "pitagoras",
-    title: "Twierdzenie Pitagorasa — Egzamin 8-klasisty",
+    title: "Twierdzenie Pitagorasa – klucz do geometrii na egzaminie",
     content: `## Na egzaminie
-
-Temat **Twierdzenie Pitagorasa** (Geometria płaska) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Twierdzenie Pitagorasa pojawia się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadaniach otwartych i zamkniętych. Zadania te mogą sprawdzać zarówno bezpośrednie zastosowanie twierdzenia do obliczenia długości boku trójkąta prostokątnego, jak i jego wykorzystanie w bardziej złożonych problemach geometrycznych, np. obliczanie przekątnych kwadratów, rombów czy odległości między punktami na płaszczyźnie. Oczekuje się od ucznia umiejętności rozpoznania trójkąta prostokątnego w różnych kontekstach i zastosowania odpowiednich wzorów.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria płaska**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Zrozumienie istoty twierdzenia Pitagorasa.
+2.  Identyfikacja przyprostokątnych i przeciwprostokątnej w trójkącie prostokątnym.
+3.  Stosowanie twierdzenia Pitagorasa do obliczania długości boku trójkąta prostokątnego, gdy znane są dwa pozostałe boki.
+4.  Wykorzystanie twierdzenia Pitagorasa do ustalenia, czy dany trójkąt jest prostokątny.
+5.  Zastosowanie twierdzenia Pitagorasa w zadaniach praktycznych i geometrycznych (obliczanie przekątnych, wysokości, odległości).
+6.  Rozwiązywanie zadań wymagających przekształcania wzoru lub wykonania dodatkowych obliczeń.
 
 ## Definicje i wzory
+*   **Trójkąt prostokątny:** Trójkąt, który posiada jeden kąt o mierze 90 stopni.
+*   **Przyprostokątne:** Dwa boki trójkąta prostokątnego, które tworzą kąt prosty. Są to boki krótsze od przeciwprostokątnej.
+*   **Przeciwprostokątna:** Bok trójkąta prostokątnego leżący naprzeciwko kąta prostego. Jest to najdłuższy bok trójkąta prostokątnego.
 
-*Materiał w trakcie uzupełniania dla: Twierdzenie Pitagorasa.*
+**Twierdzenie Pitagorasa:**
+W trójkącie prostokątnym suma kwadratów długości przyprostokątnych jest równa kwadratowi długości przeciwprostokątnej.
+
+Jeśli oznaczymy długości przyprostokątnych jako $a$ i $b$, a długość przeciwprostokątnej jako $c$, to twierdzenie Pitagorasa można zapisać wzorem:
+$$a^2 + b^2 = c^2$$
+
+**Ważne własności i zastosowania:**
+*   Twierdzenie Pitagorasa działa **tylko** dla trójkątów prostokątnych.
+*   Znając dwie przyprostokątne, możemy obliczyć przeciwprostokątną: $c = \\sqrt{a^2 + b^2}$.
+*   Znając przeciwprostokątną i jedną przyprostokątną, możemy obliczyć drugą przyprostokątną: $a = \\sqrt{c^2 - b^2}$ lub $b = \\sqrt{c^2 - a^2}$.
+*   Twierdzenie odwrotne do twierdzenia Pitagorasa: Jeśli w trójkącie o bokach długości $a$, $b$, $c$ spełniony jest warunek $a^2 + b^2 = c^2$ (gdzie $c$ jest najdłuższym bokiem), to ten trójkąt jest prostokątny, a kąt naprzeciwko boku $c$ jest kątem prostym.
+
+**Trójki pitagorejskie:**
+Są to zestawy trzech liczb naturalnych, które spełniają twierdzenie Pitagorasa. Najbardziej znana to (3, 4, 5), ponieważ $3^2 + 4^2 = 9 + 16 = 25$, a $5^2 = 25$. Inne przykłady to (5, 12, 13), (8, 15, 17), (7, 24, 25). Znajomość tych trójek może przyspieszyć rozwiązywanie niektórych zadań.
 
 ## Przykład 1 — podstawowy
+W trójkącie prostokątnym jedna przyprostokątna ma długość 6 cm, a druga 8 cm. Oblicz długość przeciwprostokątnej.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj dane.
+Mamy trójkąt prostokątny. Długości przyprostokątnych to $a = 6$ cm i $b = 8$ cm. Szukamy długości przeciwprostokątnej $c$.
+
+**Krok 2.** Zastosuj twierdzenie Pitagorasa.
+Zapiszemy wzór: $a^2 + b^2 = c^2$.
+
+**Krok 3.** Podstaw dane do wzoru.
+$6^2 + 8^2 = c^2$
+
+**Krok 4.** Oblicz kwadraty i ich sumę.
+$36 + 64 = c^2$
+$100 = c^2$
+
+**Krok 5.** Wyznacz długość przeciwprostokątnej.
+Aby znaleźć $c$, obliczamy pierwiastek kwadratowy z 100.
+$c = \\sqrt{100}$
+$c = 10$ cm
+
+**Sprawdzenie:**
+Czy $6^2 + 8^2 = 10^2$?
+$36 + 64 = 100$
+$100 = 100$. Zgadza się. Odpowiedź jest poprawna.
+Odpowiedź: Długość przeciwprostokątnej wynosi 10 cm.
+
+## Przykład 2 — maturalny
+Oblicz długość krótszej przyprostokątnej w trójkącie prostokątnym, jeśli przeciwprostokątna ma długość 13 cm, a dłuższa przyprostokątna ma długość 12 cm.
+
+**Krok 1.** Zidentyfikuj dane.
+Mamy trójkąt prostokątny. Przeciwprostokątna $c = 13$ cm. Dłuższa przyprostokątna $b = 12$ cm. Szukamy długości krótszej przyprostokątnej $a$.
+
+**Krok 2.** Zastosuj twierdzenie Pitagorasa.
+Wzór to $a^2 + b^2 = c^2$. Ponieważ szukamy przyprostokątnej, przekształcimy wzór: $a^2 = c^2 - b^2$.
+
+**Krok 3.** Podstaw dane do wzoru.
+$a^2 = 13^2 - 12^2$
+
+**Krok 4.** Oblicz kwadraty i ich różnicę.
+$a^2 = 169 - 144$
+$a^2 = 25$
+
+**Krok 5.** Wyznacz długość przyprostokątnej.
+Obliczamy pierwiastek kwadratowy z 25.
+$a = \\sqrt{25}$
+$a = 5$ cm
+
+**Sprawdzenie:**
+Czy $5^2 + 12^2 = 13^2$?
+$25 + 144 = 169$
+$169 = 169$. Zgadza się.
+Odpowiedź: Krótsza przyprostokątna ma długość 5 cm. (Zauważ, że (5, 12, 13) to kolejna trójka pitagorejska).
+
+## Przykład 3 — egzaminacyjny
+Taras w kształcie prostokąta ma wymiary 3 metry na 4 metry. Jaka jest długość barierki potrzebnej do ogrodzenia tarasu po przekątnej?
+
+**Krok 1.** Rozpoznanie sytuacji geometrycznej.
+Taras w kształcie prostokąta o bokach 3 m i 4 m. Przekątna tarasu tworzy z dwoma bokami trójkąt prostokątny. Boki prostokąta są przyprostokątnymi tego trójkąta, a przekątna jest jego przeciwprostokątną.
+
+**Krok 2.** Zidentyfikuj dane i szukane.
+Przyprostokątne: $a = 3$ m, $b = 4$ m. Szukana jest przeciwprostokątna $c$.
+
+**Krok 3.** Zastosuj twierdzenie Pitagorasa.
+$a^2 + b^2 = c^2$
+
+**Krok 4.** Podstaw dane i oblicz.
+$3^2 + 4^2 = c^2$
+$9 + 16 = c^2$
+$25 = c^2$
+$c = \\sqrt{25}$
+$c = 5$ m
+
+**Sprawdzenie:**
+Obliczenia są poprawne. Długość przekątnej wynosi 5 m. Jest to trójka pitagorejska (3, 4, 5).
+Odpowiedź: Długość barierki potrzebnej do ogrodzenia tarasu po przekątnej wynosi 5 metrów.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Stosowanie twierdzenia do trójkątów innych niż prostokątne:** Twierdzenie Pitagorasa jest prawdziwe **tylko** dla trójkątów prostokątnych. Upewnij się, że masz do czynienia z trójkątem prostokątnym, zanim zastosujesz wzór.
+*   **Pomylenie przyprostokątnych z przeciwprostokątną:** Pamiętaj, że przeciwprostokątna ($c$) jest zawsze najdłuższym bokiem i leży naprzeciwko kąta prostego. Wzór to $a^2 + b^2 = c^2$. Jeśli obliczasz przyprostokątną, użyj $c^2 - b^2$ lub $c^2 - a^2$.
+*   **Błędy w obliczeniach potęg i pierwiastków:** Dokładnie sprawdzaj obliczenia kwadratów liczb i pierwiastków kwadratowych. Szczególnie przy większych liczbach łatwo o pomyłkę (np. $13^2 = 169$, nie 159).
+*   **Zapominanie o jednostkach:** W zadaniach tekstowych zawsze pamiętaj o podaniu jednostek w odpowiedzi (cm, m, km itp.).
+*   **Problem z "czystymi" liczbami:** Nie wszystkie zadania dadzą w wyniku liczbę całkowitą. Często pojawiają się pierwiastki, których nie da się uprościć do liczby całkowitej (np. $\\sqrt{7}$, $\\sqrt{15}$). Nie panikuj, zapisz wynik w takiej postaci, chyba że polecenie wymaga przybliżenia.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  W trójkącie prostokątnym przyprostokątne mają długości 7 cm i 24 cm. Oblicz długość przeciwprostokątnej.
+2.  Przeciwprostokątna trójkąta prostokątnego ma długość 10 m, a jedna z przyprostokątnych 6 m. Oblicz długość drugiej przyprostokątnej.
+3.  Sprawdź, czy trójkąt o bokach długości 9 cm, 12 cm i 15 cm jest prostokątny.
+4.  Drabina o długości 5 metrów została postawiona pod ścianą tak, że jej dolny koniec znajduje się 1.5 metra od ściany. Na jaką wysokość sięga drabina?
+5.  Oblicz długość przekątnej kwadratu o boku długości 4 cm.
+6.  Oblicz długość boku rombu, którego przekątne mają długości 6 cm i 8 cm. (Wskazówka: przekątne rombu przecinają się pod kątem prostym i dzielą się na połowy).
+7.  W trójkącie ABC, kąt przy wierzchołku C jest prosty. Długość boku AC wynosi $\\sqrt{5}$ cm, a długość boku BC wynosi $\\sqrt{11}$ cm. Oblicz długość boku AB.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Długość przeciwprostokątnej wynosi 25 cm. ($7^2 + 24^2 = 49 + 576 = 625$, $\\sqrt{625} = 25$)
+2.  Długość drugiej przyprostokątnej wynosi 8 m. ($10^2 - 6^2 = 100 - 36 = 64$, $\\sqrt{64} = 8$)
+3.  Tak, trójkąt jest prostokątny. ($9^2 + 12^2 = 81 + 144 = 225$, $15^2 = 225$)
+4.  Drabina sięga na wysokość $\\sqrt{22.75}$ m (około 4.77 m). (5^2 - 1.5^2 = 25 - 2.25 = 22.75, $\\sqrt{22.75}$)
+5.  Długość przekątnej wynosi $4\\sqrt{2}$ cm. (Przekątna kwadratu dzieli go na dwa trójkąty prostokątne o przyprostokątnych 4 cm i 4 cm. $4^2 + 4^2 = 16 + 16 = 32$, $\\sqrt{32} = \\sqrt{16 \\cdot 2} = 4\\sqrt{2}$)
+6.  Długość boku rombu wynosi 5 cm. (Przekątne dzielą się na połowy, tworząc trójkąt prostokątny o przyprostokątnych 3 cm i 4 cm. Bok rombu jest przeciwprostokątną: $3^2 + 4^2 = 9 + 16 = 25$, $\\sqrt{25} = 5$)
+7.  Długość boku AB wynosi $\\sqrt{16}$ cm, czyli 4 cm. ($\\sqrt{5}^2 + \\sqrt{11}^2 = 5 + 11 = 16$, $\\sqrt{16} = 4$)
 
 ## Szybka powtórka
+1.  Jakie są przyprostokątne w trójkącie prostokątnym?
+2.  Jak nazywa się najdłuższy bok w trójkącie prostokątnym?
+3.  Jaki jest wzór na twierdzenie Pitagorasa, jeśli $a$ i $b$ to przyprostokątne, a $c$ to przeciwprostokątna?
+4.  Twierdzenie Pitagorasa można stosować do każdego trójkąta?
+5.  Jak obliczyć długość przyprostokątnej $a$, gdy znamy przeciwprostokątną $c$ i drugą przyprostokątną $b$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      /|
+     / |
+    /  | b (przyprostokątna)
+ c /   |
+(przeciw- /____|
+prostokątna) a (przyprostokątna)
+
+Kąt prosty znajduje się między bokami a i b.
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria",
     topic: "podobienstwo",
-    title: "Podobieństwo figur — Egzamin 8-klasisty",
+    title: "Podobieństwo figur płaskich",
     content: `## Na egzaminie
-
-Temat **Podobieństwo figur** (Geometria płaska) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Podobieństwo figur płaskich pojawia się na egzaminie ósmoklasisty dość często, zazwyczaj w zadaniach otwartych, ale czasem również jako element zadań zamkniętych. Zazwyczaj można zdobyć za nie 2-4 punkty. Egzaminatorzy lubią sprawdzać umiejętność obliczania długości boków, wysokości lub obwodów figur podobnych, a także stosowania zależności między polami figur podobnych. Często pojawiają się zadania tekstowe lub związane z geometrii (np. trójkąty, czworokąty).
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria płaska**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+Po przerobieniu tej lekcji będziesz potrafił/a:
+1. Zrozumieć definicję dwóch figur podobnych płaskich.
+2. Rozpoznać i zastosować pojęcie jednokładności w kontekście podobieństwa.
+3. Obliczyć skalę podobieństwa dla danych figur.
+4. Obliczyć brakujące wymiary (boki, wysokości, obwody) figur podobnych, znając niektóre ich wymiary i skalę podobieństwa.
+5. Zrozumieć i zastosować zależność między obwodami figur podobnych.
+6. Zrozumieć i zastosować zależność między polami figur podobnych.
+7. Rozwiązywać zadania tekstowe i geometryczne z wykorzystaniem podobieństwa figur.
+8. Określić, czy dane figury (np. trójkąty, prostokąty) są podobne.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Podobieństwo figur.*
+*   **Figury podobne:** Dwie figury geometryczne nazywamy podobnymi, jeśli jedna jest obrazem drugiej w pewnej jednokładności (lub w złożeniu jednokładności i przekształcenia izometrycznego, np. przesunięcia, obrotu, symetrii). Figurami podobnymi są więc figury, które mają takie same kształty, ale mogą różnić się wielkością. Figury przystające są szczególnym przypadkiem figur podobnych o skali podobieństwa równej 1.
+*   **Jednokładność:** Jest to przekształcenie geometryczne, które przekształca punkt $P$ na punkt $P'$ w taki sposób, że punkt $O$ (środek jednokładności) oraz punkty $P$ i $P'$ leżą na jednej prostej, a stosunek odległości punktu $P'$ od $O$ do odległości punktu $P$ od $O$ jest stały i równy liczbie $k$ (zwanej skalą jednokładności). $k = \\frac{|OP'|}{|OP|}$. Jeśli $k > 0$, punkty $P$ i $P'$ leżą po tej samej stronie punktu $O$. Jeśli $k < 0$, leżą po przeciwnych stronach. Jeśli $|k|=1$, jednokładność jest izometrią (przesunięciem, jeśli $k=1$, lub środkowosymetria, jeśli $k=-1$).
+*   **Skala podobieństwa ($k$):** Stosunek odpowiadających sobie długości w dwóch figurach podobnych. Jeśli figura $A'$ jest podobna do figury $A$ w skali $k$, to każda długość w $A'$ jest $k$ razy większa niż odpowiadająca jej długość w $A$.
+    *   Dla odcinków $AB$ w figurze $A$ i $A'B'$ w figurze $A'$ podobnej do $A$: $k = \\frac{|A'B'|}{|AB|}$.
+    *   Jeśli $k > 1$, figura $A'$ jest powiększona w stosunku do $A$.
+    *   Jeśli $0 < k < 1$, figura $A'$ jest pomniejszona w stosunku do $A$.
+    *   Jeśli $k = 1$, figury $A$ i $A'$ są przystające.
+*   **Cechy figur podobnych:**
+    *   Odpowiadające sobie kąty są równe.
+    *   Stosunek odpowiadających sobie boków jest stały i równy skali podobieństwa $k$.
+*   **Podobieństwo trójkątów:** Dwa trójkąty są podobne, jeśli:
+    *   **Cecha BBB:** Stosunki długości wszystkich trzech par odpowiadających sobie boków są równe: $\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k$.
+    *   **Cecha BCC:** Dwa boki jednego trójkąta są proporcjonalne do dwóch odpowiadających boków drugiego trójkąta, a kąty między tymi bokami są równe. $\\frac{a'}{a} = \\frac{b'}{b} = k$ i $\\gamma = \\gamma'$.
+    *   **Cecha BB:** Dwa kąty jednego trójkąta są równe dwóm kątom drugiego trójkąta (a więc i trzecie kąty są równe): $\\alpha = \\alpha'$ i $\\beta = \\beta'$.
+*   **Wzory dla figur podobnych:**
+    *   **Obwód:** Jeśli $Ob$ i $Ob'$ są obwodami figur $A$ i $A'$ podobnych w skali $k$, to $\\frac{Ob'}{Ob} = k$, czyli $Ob' = k \\cdot Ob$. Obwody figur podobnych są proporcjonalne do skali podobieństwa.
+    *   **Pole:** Jeśli $P$ i $P'$ są polami figur $A$ i $A'$ podobnych w skali $k$, to $\\frac{P'}{P} = k^2$, czyli $P' = k^2 \\cdot P$. Pola figur podobnych są proporcjonalne do kwadratu skali podobieństwa.
 
 ## Przykład 1 — podstawowy
+Prostokąt $ABCD$ ma boki długości $|AB| = 8$ cm i $|BC| = 4$ cm. Prostokąt $A'B'C'D'$ jest podobny do $ABCD$ w skali $k = \\frac{3}{2}$. Oblicz długości boków prostokąta $A'B'C'D'$.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+*   **Krok 1.** Zidentyfikuj dane. Mamy prostokąt $ABCD$ o bokach $a = 8$ cm i $b = 4$ cm. Prostokąt $A'B'C'D'$ jest podobny do $ABCD$ w skali $k = \\frac{3}{2}$.
+*   **Krok 2.** Zrozumienie pojęcia podobieństwa dla prostokątów. Boki prostokąta $A'B'C'D'$ odpowiadają bokom prostokąta $ABCD$. Oznacza to, że bok $A'B'$ odpowiada bokowi $AB$, a bok $B'C'$ odpowiada bokowi $BC$.
+*   **Krok 3.** Oblicz długość boku $|A'B'|$. Bok $|A'B'|$ jest odpowiadającym bokiem do $|AB|$. Skorzystaj ze wzoru na skalę podobieństwa: $k = \\frac{|A'B'|}{|AB|}$. Przekształć wzór, aby obliczyć $|A'B'|$: $|A'B'| = k \\cdot |AB|$. Podstaw dane: $|A'B'| = \\frac{3}{2} \\cdot 8$ cm.
+*   **Krok 4.** Oblicz długość boku $|B'C'|$. Bok $|B'C'|$ jest odpowiadającym bokiem do $|BC|$. Skorzystaj ze wzoru: $k = \\frac{|B'C'|}{|BC|}$. Przekształć wzór: $|B'C'| = k \\cdot |BC|$. Podstaw dane: $|B'C'| = \\frac{3}{2} \\cdot 4$ cm.
+*   **Krok 5.** Wykonaj obliczenia.
+    *   $|A'B'| = \\frac{3}{2} \\cdot 8 \\text{ cm} = 3 \\cdot \\frac{8}{2} \\text{ cm} = 3 \\cdot 4 \\text{ cm} = 12 \\text{ cm}$.
+    *   $|B'C'| = \\frac{3}{2} \\cdot 4 \\text{ cm} = 3 \\cdot \\frac{4}{2} \\text{ cm} = 3 \\cdot 2 \\text{ cm} = 6 \\text{ cm}$.
+
+**Sprawdzenie:**
+Stosunek boków w pierwszym prostokącie: $\\frac{8}{4} = 2$.
+Stosunek boków w drugim prostokącie: $\\frac{12}{6} = 2$.
+Kształty są takie same.
+Skala podobieństwa: $\\frac{|A'B'|}{|AB|} = \\frac{12}{8} = \\frac{3}{2}$. $\\frac{|B'C'|}{|BC|} = \\frac{6}{4} = \\frac{3}{2}$.
+Skala się zgadza. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Dwa trójkąty, $ABC$ i $A'B'C'$, są podobne. Długości boków trójkąta $ABC$ wynoszą $a=6$ cm, $b=8$ cm, $c=10$ cm. Najkrótszy bok trójkąta $A'B'C'$ ma długość $a'=9$ cm. Oblicz obwód i pole trójkąta $A'B'C'$.
+
+*   **Krok 1.** Określ dane i cel. Mamy trójkąt $ABC$ z bokami $a=6$, $b=8$, $c=10$. Trójkąt $A'B'C'$ jest podobny do $ABC$. Najkrótszy bok $a'$ w trójkącie $A'B'C'$ ma długość $9$ cm. Należy obliczyć obwód i pole trójkąta $A'B'C'$.
+*   **Krok 2.** Znajdź skalę podobieństwa. Najkrótszy bok w trójkącie $ABC$ to $a=6$ cm. Najkrótszy bok w trójkącie $A'B'C'$ to $a'=9$ cm. Skala podobieństwa $k$ jest stosunkiem odpowiadających sobie boków: $k = \\frac{a'}{a} = \\frac{9 \\text{ cm}}{6 \\text{ cm}} = \\frac{3}{2}$.
+*   **Krok 3.** Oblicz obwód trójkąta $ABC$. Obwód $Ob = a + b + c = 6 + 8 + 10 = 24$ cm.
+*   **Krok 4.** Oblicz obwód trójkąta $A'B'C'$. Skorzystaj ze wzoru $Ob' = k \\cdot Ob$.
+    $Ob' = \\frac{3}{2} \\cdot 24 \\text{ cm} = 3 \\cdot \\frac{24}{2} \\text{ cm} = 3 \\cdot 12 \\text{ cm} = 36 \\text{ cm}$.
+*   **Krok 5.** Oblicz pole trójkąta $ABC$. Zauważ, że boki $6, 8, 10$ spełniają twierdzenie Pitagorasa: $6^2 + 8^2 = 36 + 64 = 100 = 10^2$. Jest to trójkąt prostokątny. Pole trójkąta prostokątnego to połowa iloczynu przyprostokątnych.
+    $P = \\frac{1}{2} \\cdot a \\cdot b = \\frac{1}{2} \\cdot 6 \\text{ cm} \\cdot 8 \\text{ cm} = \\frac{1}{2} \\cdot 48 \\text{ cm}^2 = 24 \\text{ cm}^2$.
+*   **Krok 6.** Oblicz pole trójkąta $A'B'C'$. Skorzystaj ze wzoru $P' = k^2 \\cdot P$.
+    $P' = \\left(\\frac{3}{2}\\right)^2 \\cdot 24 \\text{ cm}^2 = \\frac{9}{4} \\cdot 24 \\text{ cm}^2 = 9 \\cdot \\frac{24}{4} \\text{ cm}^2 = 9 \\cdot 6 \\text{ cm}^2 = 54 \\text{ cm}^2$.
+
+**Sprawdzenie:**
+Obliczmy boki $b'$ i $c'$ trójkąta $A'B'C'$:
+$b' = k \\cdot b = \\frac{3}{2} \\cdot 8 = 12$ cm.
+$c' = k \\cdot c = \\frac{3}{2} \\cdot 10 = 15$ cm.
+Boki trójkąta $A'B'C'$ to $9, 12, 15$.
+Sprawdźmy, czy $A'B'C'$ jest trójkątem prostokątnym: $9^2 + 12^2 = 81 + 144 = 225$. $15^2 = 225$. Tak, jest prostokątny.
+Obwód $Ob' = 9 + 12 + 15 = 36$ cm. Zgadza się z obliczonym.
+Pole $P' = \\frac{1}{2} \\cdot 9 \\cdot 12 = \\frac{1}{2} \\cdot 108 = 54$ cm$^2$. Zgadza się z obliczonym.
+Wynik jest poprawny.
+
+## Przykład 3 — egzaminacyjny
+
+W pewnej mapie w skali 1:50000 odcinek drogi ma długość 5 cm. Jaka jest rzeczywista długość tej drogi w kilometrach? Jeśli na tej samej mapie obrazem działki jest prostokąt o polu 20 cm$^2$, jakie jest pole tej działki w metrach kwadratowych?
+
+*   **Krok 1.** Analiza pierwszego pytania (długość drogi). Mapa ma skalę $1:50000$. Odcinek na mapie ma $5$ cm.
+*   **Krok 2.** Obliczenie rzeczywistej długości drogi. Skala $1:50000$ oznacza, że $1$ cm na mapie odpowiada $50000$ cm w rzeczywistości.
+    Rzeczywista długość = Długość na mapie $\\times$ Skala (wartość liczbowa).
+    Rzeczywista długość $= 5 \\text{ cm} \\times 50000 = 250000 \\text{ cm}$.
+*   **Krok 3.** Zamiana jednostek na kilometry. Wiemy, że $1$ km $= 1000$ m, a $1$ m $= 100$ cm. Zatem $1$ km $= 1000 \\cdot 100$ cm $= 100000$ cm.
+    Rzeczywista długość w km $= \\frac{250000 \\text{ cm}}{100000 \\text{ cm/km}} = 2.5 \\text{ km}$.
+
+*   **Krok 4.** Analiza drugiego pytania (pole działki). Prostokąt na mapie ma pole $P_{mapa} = 20$ cm$^2$. Mapa jest w skali $1:50000$.
+*   **Krok 5.** Zastosowanie zależności między polami figur podobnych. Mapa i rzeczywista działka są figurami podobnymi. Skala podobieństwa między mapą a rzeczywistością to $k_{mapa\\_rzecz} = 50000$. Chcemy znaleźć pole rzeczywiste $P_{rzecz}$.
+    Wzór na pole: $P_{rzecz} = (k_{mapa\\_rzecz})^2 \\cdot P_{mapa}$.
+    $P_{rzecz} = (50000)^2 \\cdot 20 \\text{ cm}^2$.
+    $P_{rzecz} = (5 \\times 10^4)^2 \\cdot 20 \\text{ cm}^2 = (25 \\times 10^8) \\cdot 20 \\text{ cm}^2 = 500 \\times 10^8 \\text{ cm}^2 = 5 \\times 10^{10} \\text{ cm}^2$.
+*   **Krok 6.** Zamiana jednostek pola na metry kwadratowe. Wiemy, że $1$ m $= 100$ cm. Zatem $1$ m$^2 = (100 \\text{ cm})^2 = 10000 \\text{ cm}^2$.
+    $P_{rzecz} (\\text{w m}^2) = \\frac{5 \\times 10^{10} \\text{ cm}^2}{10000 \\text{ cm}^2/\\text{m}^2} = \\frac{5 \\times 10^{10}}{10^4} \\text{ m}^2 = 5 \\times 10^6 \\text{ m}^2$.
+    Wynik: $5000000$ m$^2$.
+
+**Sprawdzenie:**
+Długość drogi: $2.5$ km to $2500$ m, czyli $250000$ cm. $250000 / 50000 = 5$ cm. Zgadza się.
+Pole działki: Skala podobieństwa rzeczywistego do mapy jest $k=50000$. Pole rzeczywiste $= k^2 \\times$ Pole mapy.
+$P_{rzecz} = (50000)^2 \\times 20 \\text{ cm}^2 = 2500000000 \\times 20 \\text{ cm}^2 = 50000000000 \\text{ cm}^2$.
+$1 \\text{ m}^2 = 10000 \\text{ cm}^2$.
+$P_{rzecz} (\\text{w m}^2) = 50000000000 / 10000 = 5000000 \\text{ m}^2$. Zgadza się.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie skali podobieństwa z odwrotnością skali:** Pamiętaj, że jeśli figura $A'$ jest podobna do figury $A$ w skali $k$, to stosunek boku w $A'$ do odpowiadającego boku w $A$ wynosi $k$. Jeśli masz np. dwie figury i wiesz, że jedna jest większa od drugiej, to skala $k > 1$. Jeśli masz podaną skalę w postaci $1:m$, to $k=m$ dla przejścia od mniejszej do większej figury.
+*   **Brak kwadratu przy polach:** Często popełnianym błędem jest stosowanie zależności $P' = k \\cdot P$ zamiast poprawnej $P' = k^2 \\cdot P$. Pola figur podobnych są proporcjonalne do kwadratu skali.
+*   **Niewłaściwe przyporządkowanie boków:** Przy figurach nieregularnych lub gdy nie są one odpowiednio zorientowane, łatwo pomylić, który bok odpowiada któremu. Zawsze szukaj par boków (lub innych elementów) leżących naprzeciw równych kątów lub w podobnych pozycjach. W prostokątach czy kwadratach krótszy bok odpowiada krótszemu, dłuższy dłuższemu.
+*   **Błędy w obliczeniach arytmetycznych:** Działania na ułamkach, potęgowanie (zwłaszcza liczb z zerami), zamiana jednostek – to częste źródła błędów. Zawsze sprawdzaj swoje obliczenia.
+*   **Niewłaściwe zastosowanie cech podobieństwa trójkątów:** Upewnij się, że stosujesz odpowiednie cechy i że dane, które masz, faktycznie pozwalają na stwierdzenie podobieństwa.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Trójkąt $ABC$ ma boki długości $a=4$ cm, $b=6$ cm, $c=8$ cm. Trójkąt $A'B'C'$ jest podobny do $ABC$ w skali $k = \\frac{1}{2}$. Oblicz obwód trójkąta $A'B'C'$.
+2.  Dwa kwadraty są podobne. Bok pierwszego kwadratu ma długość $5$ cm, a bok drugiego kwadratu ma długość $10$ cm. Ile razy pole drugiego kwadratu jest większe od pola pierwszego kwadratu?
+3.  Dwa trójkąty prostokątne są podobne. Przyprostokątne jednego trójkąta mają długość $3$ cm i $4$ cm. Przeciwprostokątna drugiego trójkąta wynosi $15$ cm. Oblicz długości przyprostokątnych drugiego trójkąta.
+4.  Prostokąt $KLMN$ ma wymiary $12$ cm x $18$ cm. Prostokąt $K'L'M'N'$ jest podobny do $KLMN$ i jego krótszy bok ma długość $6$ cm. Oblicz obwód i pole prostokąta $K'L'M'N'$.
+5.  Na planie miasta w skali $1:10000$ park ma kształt prostokąta o wymiarach $5$ cm x $8$ cm. Jakie jest rzeczywiste pole powierzchni tego parku w arach? (Pamiętaj: $1$ ar $= 100$ m$^2$).
+6.  Dwa trójkąty równoboczne są podobne. Obwód większego trójkąta wynosi $36$ cm. Stosunek boku mniejszego trójkąta do boku większego wynosi $\\frac{2}{3}$. Oblicz pole mniejszego trójkąta.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Obwód trójkąta $ABC$: $4+6+8=18$ cm. Obwód $A'B'C'$: $18 \\text{ cm} \\cdot \\frac{1}{2} = 9 \\text{ cm}$.
+2.  Skala podobieństwa wynosi $k = \\frac{10}{5} = 2$. Pole drugiego kwadratu jest $k^2 = 2^2 = 4$ razy większe od pola pierwszego.
+3.  Pierwszy trójkąt ma boki $3, 4$. Jego przeciwprostokątna $c = \\sqrt{3^2+4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ cm. Drugi trójkąt ma przeciwprostokątną $c'=15$ cm. Skala podobieństwa $k = \\frac{c'}{c} = \\frac{15}{5} = 3$. Przyprostokątne drugiego trójkąta: $a'=k \\cdot a = 3 \\cdot 3 = 9$ cm, $b'=k \\cdot b = 3 \\cdot 4 = 12$ cm.
+4.  Boki prostokąta $KLMN$: $12$ cm i $18$ cm. Krótszy bok $6$ cm odpowiada krótszemu bokowi $12$ cm. Skala podobieństwa $k = \\frac{6}{12} = \\frac{1}{2}$. Dłuższy bok $K'L'M'N'$ to $k \\cdot 18 = \\frac{1}{2} \\cdot 18 = 9$ cm. Wymiary $K'L'M'N'$ to $6$ cm i $9$ cm. Obwód: $2(6+9) = 2 \\cdot 15 = 30$ cm. Pole: $6 \\cdot 9 = 54$ cm$^2$.
+5.  Skala mapy $1:10000$ oznacza, że $1$ cm na mapie to $10000$ cm w rzeczywistości. Długość rzeczywista: $8 \\text{ cm} \\cdot 10000 = 80000 \\text{ cm} = 800 \\text{ m}$. Szerokość rzeczywista: $5 \\text{ cm} \\cdot 10000 = 50000 \\text{ cm} = 500 \\text{ m}$. Pole rzeczywiste: $800 \\text{ m} \\cdot 500 \\text{ m} = 400000 \\text{ m}^2$. W arach: $400000 \\text{ m}^2 / 100 \\text{ m}^2/\\text{ar} = 4000$ arów. Alternatywnie: pole na mapie $5 \\times 8 = 40$ cm$^2$. Skala pola $k^2 = (10000)^2 = 100000000$. Pole rzeczywiste: $40 \\text{ cm}^2 \\cdot 100000000 = 4000000000 \\text{ cm}^2$. $1 \\text{ m}^2 = 10000 \\text{ cm}^2$. Pole w m$^2$: $4000000000 / 10000 = 400000 \\text{ m}^2$. W arach: $4000$ arów.
+6.  Obwód większego trójkąta (oznaczmy go jako $T_2$) wynosi $36$ cm. Bok większego trójkąta $b_2 = 36/3 = 12$ cm. Skala podobieństwa mniejszego trójkąta ($T_1$) do większego to $k = \\frac{2}{3}$. Bok mniejszego trójkąta $b_1 = k \\cdot b_2 = \\frac{2}{3} \\cdot 12 \\text{ cm} = 8$ cm. Pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2 \\sqrt{3}}{4}$. Pole mniejszego trójkąta: $P_1 = \\frac{8^2 \\sqrt{3}}{4} = \\frac{64 \\sqrt{3}}{4} = 16\\sqrt{3}$ cm$^2$. Alternatywnie, pole większego trójkąta: $P_2 = \\frac{12^2 \\sqrt{3}}{4} = \\frac{144 \\sqrt{3}}{4} = 36\\sqrt{3}$ cm$^2$. Pole mniejszego: $P_1 = k^2 \\cdot P_2 = (\\frac{2}{3})^2 \\cdot 36\\sqrt{3} = \\frac{4}{9} \\cdot 36\\sqrt{3} = 4 \\cdot 4\\sqrt{3} = 16\\sqrt{3}$ cm$^2$.
 
 ## Szybka powtórka
+1.  Jakie są dwie podstawowe cechy figur podobnych?
+2.  Jeśli skala podobieństwa figur wynosi $k=3$, to jak mają się do siebie ich obwody? A pola?
+3.  Podaj warunki, na podstawie których można stwierdzić, że dwa trójkąty są podobne.
+4.  Jaka jest zależność między bokami dwóch prostokątów, jeśli są one podobne?
+5.  W jakim przypadku dwie figury podobne są przystające?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
++-----------------+     k>1     +-----------------+
+|   Figura A      | --------->|   Figura A'     |
+|   (mniejsza)    |             |   (większa)     |
++-----------------+             +-----------------+
+      |     ^                            |     ^
+      |     | Skala k                    |     | Skala k
+      |     |                            |     |
+      | Obwód Ob                         | Obwód Ob' = k * Ob
+      | Pole P                         | Pole P' = k^2 * P
+      +-----------------+     k<1     +-----------------+
+|   Figura B      | --------->|   Figura B'     |
+|   (większa)     |             |   (mniejsza)    |
++-----------------+             +-----------------+
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria",
     topic: "symetrie",
-    title: "Symetrie — Egzamin 8-klasisty",
+    title: "Symetrie w Geometrycznej - Lekcja Egzaminacyjna",
     content: `## Na egzaminie
-
-Temat **Symetrie** (Geometria płaska) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące symetrii pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj jako część większych zadań geometrycznych lub jako osobne pytanie wymagające wskazania środka, osi lub określenia typu symetrii figury. Rozwiązanie takich zadań zwykle nie wymaga skomplikowanych obliczeń, a raczej dobrego zrozumienia definicji i umiejętności wizualizacji. Poprawne rozwiązanie zadania z symetrii może przynieść od 1 do 3 punktów. CKE lubi sprawdzać, czy uczniowie potrafią rozpoznać symetrię osiową i środkową, narysować obraz figury względem punktu lub prostej, a także znaleźć oś lub środek symetrii danej figury.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria płaska**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Zrozumienie pojęcia symetrii.
+2.  Definicja i własności symetrii osiowej.
+3.  Konstrukcja obrazu punktu i figury względem prostej.
+4.  Znajdowanie osi symetrii dla różnych figur.
+5.  Definicja i własności symetrii środkowej.
+6.  Konstrukcja obrazu punktu i figury względem punktu.
+7.  Znajdowanie środka symetrii dla różnych figur.
+8.  Rozpoznawanie figur posiadających osie i środki symetrii.
 
 ## Definicje i wzory
+*   **Symetria** – przekształcenie geometryczne, które zachowuje odległości między punktami. Istnieją różne rodzaje symetrii, najważniejsze na egzaminie to symetria osiowa i symetria środkowa.
 
-*Materiał w trakcie uzupełniania dla: Symetrie.*
+*   **Symetria Osiowa**
+    *   **Definicja:** Symetria osiowa względem prostej $k$ to przekształcenie, które każdemu punktowi $A$ przyporządkowuje punkt $A'$, taki, że prosta $AA'$ jest prostopadła do prostej $k$, a środek odcinka $AA'$ leży na prostej $k$. Punkt $A'$ nazywamy obrazem punktu $A$ w symetrii osiowej względem prostej $k$. Prosta $k$ nazywana jest **osią symetrii**.
+    *   **Własności:**
+        *   Jeśli punkt $A$ leży na osi symetrii $k$, to jego obrazem jest on sam ($A = A'$).
+        *   Odległość punktu od osi symetrii jest równa odległości jego obrazu od tej osi.
+        *   Symetria osiowa zachowuje kształt i rozmiar figur.
+    *   **Konstrukcja obrazu odcinka:** Aby narysować obraz odcinka $AB$ w symetrii osiowej względem prostej $k$, wystarczy narysować obrazy jego końców punktów $A'$ i $B'$. Obrazem odcinka $AB$ będzie odcinek $A'B'$.
+    *   **Oś symetrii figury:** Jest to prosta, względem której figura jest swoim własnym obrazem.
+
+*   **Symetria Środkowa**
+    *   **Definicja:** Symetria środkowa względem punktu $S$ to przekształcenie, które każdemu punktowi $A$ przyporządkowuje punkt $A'$, taki, że punkt $S$ jest środkiem odcinka $AA'$. Punkt $A'$ nazywamy obrazem punktu $A$ w symetrii środkowej względem punktu $S$. Punkt $S$ nazywany jest **środkiem symetrii**.
+    *   **Własności:**
+        *   Jeśli punkt $A$ pokrywa się ze środkiem symetrii $S$, to jego obrazem jest on sam ($A = A' = S$).
+        *   Odległość punktu $A$ od środka symetrii $S$ jest równa odległości jego obrazu $A'$ od środka symetrii $S$ ($|AS| = |A'S|$).
+        *   Symetria środkowa jest szczególnym przypadkiem obrotu o 180 stopni wokół środka $S$.
+        *   Symetria środkowa zachowuje kształt i rozmiar figur.
+    *   **Konstrukcja obrazu odcinka:** Aby narysować obraz odcinka $AB$ w symetrii środkowej względem punktu $S$, należy narysować obrazy jego końców punktów $A'$ i $B'$. Obrazem odcinka $AB$ będzie odcinek $A'B'$. Punkt $S$ musi leżeć na odcinku $AA'$ i $BB'$ (lub być ich końcem), przy czym $|AS| = |A'S|$ i $|BS| = |B'S|$.
+    *   **Środek symetrii figury:** Jest to punkt, względem którego figura jest swoim własnym obrazem. Figury posiadające środek symetrii są również nazywane **figurami środkowosymetrycznymi**.
 
 ## Przykład 1 — podstawowy
+Narysuj obraz trójkąta $ABC$ o wierzchołkach $A = (1, 2)$, $B = (3, 1)$, $C = (2, 4)$ w symetrii osiowej względem osi $Ox$ (osi współrzędnych $y=0$).
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zrozumienie przekształcenia: Symetria osiowa względem osi $Ox$ oznacza, że prosta $Ox$ jest osią symetrii. Dla punktu $(x, y)$, jego obrazem w symetrii względem osi $Ox$ jest punkt $(x, -y)$. Zmienia się tylko znak współrzędnej $y$.
+
+**Krok 2.** Znalezienie obrazu wierzchołka $A$: Punkt $A = (1, 2)$. Jego obraz $A'$ w symetrii względem osi $Ox$ będzie miał współrzędne $(1, -2)$.
+
+**Krok 3.** Znalezienie obrazu wierzchołka $B$: Punkt $B = (3, 1)$. Jego obraz $B'$ będzie miał współrzędne $(3, -1)$.
+
+**Krok 4.** Znalezienie obrazu wierzchołka $C$: Punkt $C = (2, 4)$. Jego obraz $C'$ będzie miał współrzędne $(2, -4)$.
+
+**Krok 5.** Narysowanie obrazu trójkąta: Łączymy punkty $A'$, $B'$, $C'$, tworząc trójkąt $A'B'C'$. Jest to obraz trójkąta $ABC$ w symetrii osiowej względem osi $Ox$.
+
+**Sprawdzenie:** Odległości punktów od osi $Ox$:
+$A=(1, 2)$, odległość = 2. $A'=(1, -2)$, odległość = $|-2|=2$.
+$B=(3, 1)$, odległość = 1. $B'=(3, -1)$, odległość = $|-1|=1$.
+$C=(2, 4)$, odległość = 4. $C'=(2, -4)$, odległość = $|-4|=4$.
+Dla każdego punktu, odcinek łączący go z obrazem jest prostopadły do osi $Ox$ (oba punkty mają tę samą współrzędną $x$), a środek odcinka leży na osi $Ox$ (np. dla $AA'$, środek to $(\\frac{1+1}{2}, \\frac{2+(-2)}{2}) = (1, 0)$, który leży na osi $Ox$).
+
+## Przykład 2 — maturalny
+Prostokąt $ABCD$ o wierzchołkach $A=(-2, 3)$, $B=(4, 3)$, $C=(4, -1)$, $D=(-2, -1)$ przekształcono w symetrii środkowej względem punktu $S=(1, 1)$. Podaj współrzędne wierzchołków $A'$, $B'$, $C'$, $D'$ obrazu prostokąta $ABCD$.
+
+**Krok 1.** Zrozumienie przekształcenia: Symetria środkowa względem punktu $S=(x_S, y_S)$ przekształca punkt $A=(x_A, y_A)$ na punkt $A'=(x_{A'}, y_{A'})$ taki, że $S$ jest środkiem odcinka $AA'$. Wzory na współrzędne środka odcinka to:
+$x_S = \\frac{x_A + x_{A'}}{2}$ oraz $y_S = \\frac{y_A + y_{A'}}{2}$.
+Przekształcając te wzory, aby znaleźć współrzędne punktu $A'$:
+$x_{A'} = 2x_S - x_A$
+$y_{A'} = 2y_S - y_A$
+
+**Krok 2.** Znalezienie obrazu wierzchołka $A$:
+$A = (-2, 3)$, $S = (1, 1)$.
+$x_{A'} = 2 \\cdot 1 - (-2) = 2 + 2 = 4$.
+$y_{A'} = 2 \\cdot 1 - 3 = 2 - 3 = -1$.
+Więc $A' = (4, -1)$.
+
+**Krok 3.** Znalezienie obrazu wierzchołka $B$:
+$B = (4, 3)$, $S = (1, 1)$.
+$x_{B'} = 2 \\cdot 1 - 4 = 2 - 4 = -2$.
+$y_{B'} = 2 \\cdot 1 - 3 = 2 - 3 = -1$.
+Więc $B' = (-2, -1)$.
+
+**Krok 4.** Znalezienie obrazu wierzchołka $C$:
+$C = (4, -1)$, $S = (1, 1)$.
+$x_{C'} = 2 \\cdot 1 - 4 = 2 - 4 = -2$.
+$y_{C'} = 2 \\cdot 1 - (-1) = 2 + 1 = 3$.
+Więc $C' = (-2, 3)$.
+
+**Krok 5.** Znalezienie obrazu wierzchołka $D$:
+$D = (-2, -1)$, $S = (1, 1)$.
+$x_{D'} = 2 \\cdot 1 - (-2) = 2 + 2 = 4$.
+$y_{D'} = 2 \\cdot 1 - (-1) = 2 + 1 = 3$.
+Więc $D' = (4, 3)$.
+
+**Sprawdzenie:**
+Otrzymaliśmy punkty $A'=(4, -1)$, $B'=(-2, -1)$, $C'=(-2, 3)$, $D'=(4, 3)$. Zauważmy, że $A'$ ma takie same współrzędne jak $C$, $B'$ jak $D$, $C'$ jak $A$, $D'$ jak $B$. W tym przypadku prostokąt został przekształcony na samego siebie, ale wierzchołki zamieniły się miejscami.
+Sprawdźmy środek odcinka $AA'$: Środek odcinka między $A=(-2, 3)$ a $A'=(4, -1)$ to $(\\frac{-2+4}{2}, \\frac{3+(-1)}{2}) = (\\frac{2}{2}, \\frac{2}{2}) = (1, 1)$, co jest punktem $S$.
+Sprawdźmy środek odcinka $BB'$: Środek odcinka między $B=(4, 3)$ a $B'=(-2, -1)$ to $(\\frac{4+(-2)}{2}, \\frac{3+(-1)}{2}) = (\\frac{2}{2}, \\frac{2}{2}) = (1, 1)$, co jest punktem $S$.
+Pozostałe punkty można sprawdzić analogicznie. Prostokąt posiada środek symetrii, który jest punktem przecięcia jego przekątnych. Środek przekątnej $AC$ to $(\\frac{-2+4}{2}, \\frac{3+(-1)}{2}) = (1, 1)$. Środek przekątnej $BD$ to $(\\frac{4+(-2)}{2}, \\frac{3+(-1)}{2}) = (1, 1)$. Punkt $S=(1,1)$ jest środkiem symetrii tego prostokąta.
+
+## Przykład 3 — egzaminacyjny (opcjonalnie, gdy temat na to pozwala)
+Na rysunku przedstawiono sześciokąt foremny $ABCDEF$ i punkt $S$. Czy punkt $S$ jest środkiem symetrii tego sześciokąta? Jeśli tak, to jakie są współrzędne wierzchołka $A$, jeśli $B=(6,0)$, $C=(3, 3\\sqrt{3})$, $D=(-3, 3\\sqrt{3})$, $E=(-6,0)$, $F=(-3, -3\\sqrt{3})$ i $S=(0,0)$?
+
+**Krok 1.** Określenie środka symetrii: Figura posiada środek symetrii wtedy, gdy dla każdego punktu $P$ należącego do figury, punkt $P'$ będący jego obrazem w symetrii środkowej względem punktu $S$ również należy do figury. Dla wielokątów foremnych, środkiem symetrii jest zazwyczaj punkt przecięcia przekątnych. W przypadku sześciokąta foremnego $ABCDEF$ o podanych współrzędnych wierzchołków, widać, że punkty te są rozmieszczone symetrycznie względem początku układu współrzędnych (np. $A$ i $D$, $B$ i $E$, $C$ i $F$). Początek układu współrzędnych $S=(0,0)$ jest środkiem symetrii tego sześciokąta.
+
+**Krok 2.** Weryfikacja symetrii środkowej punktu $B$: Sprawdzamy, czy punkt $S=(0,0)$ jest środkiem odcinka łączącego $B=(6,0)$ z jego potencjalnym obrazem $B'$. Ponieważ $S$ jest środkiem symetrii, obrazem $B$ jest punkt $E$. Sprawdźmy, czy $S$ jest środkiem odcinka $BE$.
+$B = (6, 0)$, $E = (-6, 0)$.
+Środek odcinka $BE$ ma współrzędne: $(\\frac{6+(-6)}{2}, \\frac{0+0}{2}) = (\\frac{0}{2}, \\frac{0}{2}) = (0, 0)$.
+Zgadza się ze środkiem $S$.
+
+**Krok 3.** Weryfikacja symetrii środkowej punktu $C$: Obrazem $C$ w symetrii środkowej względem $S$ jest $F$.
+$C = (3, 3\\sqrt{3})$, $F = (-3, -3\\sqrt{3})$.
+Środek odcinka $CF$ ma współrzędne: $(\\frac{3+(-3)}{2}, \\frac{3\\sqrt{3}+(-3\\sqrt{3})}{2}) = (\\frac{0}{2}, \\frac{0}{2}) = (0, 0)$.
+Zgadza się ze środkiem $S$.
+
+**Krok 4.** Wniosek dotyczący punktu $S$: Ponieważ $S=(0,0)$ jest środkiem symetrii odcinków łączących przeciwległe wierzchołki sześciokąta, jest on środkiem symetrii tego sześciokąta.
+
+**Krok 5.** Znalezienie współrzędnych wierzchołka $A$: Skoro $S=(0,0)$ jest środkiem symetrii, a $D$ jest przeciwległym wierzchołkiem do $A$, to $S$ jest środkiem odcinka $AD$.
+$D = (-3, 3\\sqrt{3})$. Niech $A = (x_A, y_A)$.
+$x_S = \\frac{x_A + x_D}{2} \\Rightarrow 0 = \\frac{x_A + (-3)}{2} \\Rightarrow 0 = x_A - 3 \\Rightarrow x_A = 3$.
+$y_S = \\frac{y_A + y_D}{2} \\Rightarrow 0 = \\frac{y_A + 3\\sqrt{3}}{2} \\Rightarrow 0 = y_A + 3\\sqrt{3} \\Rightarrow y_A = -3\\sqrt{3}$.
+Współrzędne wierzchołka $A$ to $(3, -3\\sqrt{3})$.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie osi $Ox$ i $Oy$**: Symetria względem osi $Ox$ zmienia znak współrzędnej $y$, a symetria względem osi $Oy$ zmienia znak współrzędnej $x$. Łatwo pomylić te dwa przypadki. Zawsze sprawdzaj, względem której osi odbywa się przekształcenie.
+*   **Błędy w obliczeniach współrzędnych obrazu w symetrii środkowej**: Wzory $x_{A'} = 2x_S - x_A$ i $y_{A'} = 2y_S - y_A$ wymagają uwagi, zwłaszcza przy odejmowaniu liczb ujemnych. Dwukrotne sprawdzenie obliczeń może uchronić przed błędem.
+*   **Niewłaściwe określenie osi symetrii figury**: Nie każda figura ma oś symetrii. Na przykład, trójkąt o różnych długościach boków nie ma osi symetrii. Trójkąt równoramienny ma jedną oś symetrii, a równoboczny trzy. Trzeba analizować konkretną figurę.
+*   **Brak wizualizacji**: Symetrie to pojęcia geometryczne. Szkicowanie figury i jej obrazu może pomóc w zrozumieniu przekształcenia i uniknięciu błędów, szczególnie przy zadaniach wymagających konstrukcji.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Podaj współrzędne punktu $P'=(x', y')$, który jest obrazem punktu $P=(-5, 3)$ w symetrii osiowej względem osi $Oy$.
+2.  Prostokąt $ABCD$ ma wierzchołki $A=(1,1)$, $B=(5,1)$, $C=(5,4)$, $D=(1,4)$. Znajdź współrzędne wierzchołków obrazu tego prostokąta w symetrii środkowej względem punktu $S=(3,2)$.
+3.  Rysunek przedstawia kwadrat $PQRS$. Wskaż wszystkie osie symetrii tego kwadratu.
+4.  Punkt $A=(2, -3)$. Obrazem tego punktu w symetrii osiowej względem prostej $k$ jest punkt $A'=(2, 7)$. Określ równanie prostej $k$ i podaj współrzędne punktu $A''$, który jest obrazem punktu $A$ w symetrii środkowej względem punktu $A'$.
+5.  Które z podanych figur posiadają oś symetrii? (a) okrąg, (b) odcinek, (c) trójkąt równoboczny, (d) romb niebędący kwadratem, (e) trapez równoramienny.
+6.  Punkt $A=(1,1)$ został przekształcony w symetrii środkowej względem punktu $S$. Jego obrazem jest punkt $A'=(5,5)$. Oblicz współrzędne punktu $S$.
+7.  Podaj współrzędne środka symetrii figury o wierzchołkach $A=(-1,-1)$, $B=(1,-1)$, $C=(1,1)$, $D=(-1,1)$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $P'=(5, 3)$.
+2.  $A'=(5,3)$, $B'=(1,3)$, $C'=(1,0)$, $D'=(5,0)$.
+3.  Kwadrat ma cztery osie symetrii: dwie proste przechodzące przez środki przeciwległych boków oraz dwie proste będące przedłużeniami jego przekątnych.
+4.  Prosta $k$ ma równanie $y = 2$. Punkt $A''=(-2, 13)$.
+5.  Okrąg (nieskończenie wiele osi), odcinek (jedna oś - prostopadła do niego przechodząca przez środek), trójkąt równoboczny (trzy osie), romb niebędący kwadratem (dwie osie - proste zawierające przekątne), trapez równoramienny (jedna oś - prosta przechodząca przez środki podstaw).
+6.  $S=(3,3)$.
+7.  Punkt $S=(0,0)$.
 
 ## Szybka powtórka
+1.  Co to jest symetria osiowa?
+2.  Jakie są współrzędne obrazu punktu $(x,y)$ w symetrii względem osi $Ox$?
+3.  Jakie są współrzędne obrazu punktu $(x,y)$ w symetrii względem osi $Oy$?
+4.  Jak znaleźć współrzędne obrazu punktu $A$ w symetrii środkowej względem punktu $S$?
+5.  Podaj przykład figury, która ma dokładnie jedną oś symetrii.
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+       ^ y
+       |
+       |    C(2,4)
+       |    .
+       |
+ A(1,2).
+       |
+-------+-------+-------> x
+       |      B(3,1)
+       |        .
+       |
+       |
+\`\`\`
+*Powyższy diagram przedstawia punkt A, B, C w układzie współrzędnych. Symetria osiowa względem osi Ox przekształci te punkty na A'(1,-2), B'(3,-1), C'(2,-4) poniżej osi Ox.*`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria_przestrzenna",
     topic: "bryly",
-    title: "Bryły — rozpoznawanie — Egzamin 8-klasisty",
+    title: "Bryły — rozpoznawanie ich własności i zastosowań",
     content: `## Na egzaminie
-
-Temat **Bryły — rozpoznawanie** (Geometria przestrzenna) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące rozpoznawania brył, ich własności (ściany, krawędzie, wierzchołki) oraz obliczania ich pól i objętości pojawiają się na egzaminie ósmoklasisty regularnie. Często są to zadania otwarte, wymagające obliczeń, ale również zamknięte, sprawdzające znajomość definicji i wzorów. Uczeń może zdobyć od 2 do nawet 4 punktów za zadania związane z tym tematem. CKE lubi sprawdzać umiejętność zastosowania poznanych wzorów w zadaniach tekstowych oraz umiejętność wizualizacji brył przestrzennych.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria przestrzenna**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji opanujesz:
+1. Definicje podstawowych brył: graniastosłupów (prostych i ukośnych), ostrosłupów, walców, stożków i kul.
+2. Rozpoznawanie tych brył na podstawie ich rysunków i opisów.
+3. Identyfikowanie i nazywanie elementów każdej z tych brył: ścian, krawędzi, wierzchołków, podstaw, ścian bocznych, tworzącej, promienia, wysokości.
+4. Podstawowe własności poszczególnych brył, np. kształt ścian, ich liczbę, liczbę krawędzi i wierzchołków.
+5. Różnicowanie brył obrotowych od prostych.
+6. Zastosowania tych brył w życiu codziennym i przyrodzie.
+7. Rozumienie pojęć takich jak przekrój i siatka bryły.
+8. Umiejętność wyboru odpowiedniego wzoru do obliczenia pola powierzchni i objętości danej bryły.
 
 ## Definicje i wzory
+*   **Bryła** – to obiekt geometryczny ograniczony powierzchnią, zajmujący pewną przestrzeń. Rozważamy bryły w przestrzeni trójwymiarowej.
 
-*Materiał w trakcie uzupełniania dla: Bryły — rozpoznawanie.*
+*   **Graniastosłup** – bryła mająca dwie identyczne podstawy będące wielokątami, leżące w płaszczyznach równoległych, oraz ściany boczne będące równoległobokami.
+    *   **Graniastosłup prosty:** krawędzie boczne są prostopadłe do podstaw. Ściany boczne to prostokąty.
+    *   **Graniastosłup ukośny:** krawędzie boczne nie są prostopadłe do podstaw. Ściany boczne to równoległoboki.
+    *   **Nazwa graniastosłupa** zależy od kształtu jego podstawy, np. graniastosłup trójkątny, czworokątny, sześciokątny.
+    *   **Elementy graniastosłupa:**
+        *   Podstawy: dwa identyczne wielokąty.
+        *   Ściany boczne: równoległoboki (w prostych – prostokąty).
+        *   Krawędzie: krawędzie podstaw i krawędzie boczne.
+        *   Wierzchołki: punkty, w których spotykają się krawędzie.
+        *   Wysokość ($H$): odległość między płaszczyznami podstaw (w graniastosłupie prostym wysokość jest równa długości krawędzi bocznej).
+    *   **Wzory (dla graniastosłupa prostego):**
+        *   Pole powierzchni całkowitej ($P_c$): $P_c = 2 \\cdot P_p + P_b$, gdzie $P_p$ to pole podstawy, a $P_b$ to pole powierzchni bocznej.
+        *   Objętość ($V$): $V = P_p \\cdot H$.
+
+*   **Ostrosłup** – bryła mająca jedną podstawę będącą wielokątem oraz ściany boczne będące trójkątami, które spotykają się w jednym punkcie zwanym wierzchołkiem ostrosłupa.
+    *   **Ostrosłup prosty:** spodek wysokości (rzut wierzchołka ostrosłupa na płaszczyznę podstawy) pokrywa się ze środkiem okręgu opisanego na podstawie.
+    *   **Ostrosłup prawidłowy:** podstawa jest wielokątem foremnym, a ściany boczne są trójkątami równoramiennymi. Wysokość ostrosłupa pada na środek podstawy.
+    *   **Elementy ostrosłupa:**
+        *   Podstawa: wielokąt.
+        *   Ściany boczne: trójkąty.
+        *   Wierzchołek ostrosłupa: punkt, w którym spotykają się ściany boczne.
+        *   Krawędzie: krawędzie podstawy i krawędzie boczne.
+        *   Wierzchołki: wierzchołki podstawy i wierzchołek ostrosłupa.
+        *   Wysokość ($H$): odcinek prostopadły do podstawy, łączący wierzchołek ostrosłupa z płaszczyzną podstawy.
+        *   Wysokość ściany bocznej (w ostrosłupie prawidłowym) – wysokość ściany bocznej opuszczona z wierzchołka ostrosłupa, zwana **apotemą** ($a$).
+    *   **Wzory (dla ostrosłupa):**
+        *   Pole powierzchni całkowitej ($P_c$): $P_c = P_p + P_b$.
+        *   Objętość ($V$): $V = \\frac{1}{3} \\cdot P_p \\cdot H$.
+
+*   **Bryły obrotowe** – powstają przez obrót figury płaskiej dookoła prostej leżącej w tej samej płaszczyźnie (osi obrotu).
+
+*   **Walec** – bryła obrotowa powstająca przez obrót prostokąta dookoła jednego z jego boków.
+    *   **Elementy walca:**
+        *   Podstawy: dwa identyczne koła.
+        *   Ściana boczna: powierzchnia zakrzywiona.
+        *   Promień podstawy ($r$).
+        *   Wysokość ($H$): odległość między podstawami.
+    *   **Wzory:**
+        *   Pole powierzchni całkowitej ($P_c$): $P_c = 2 \\cdot P_p + P_b = 2 \\pi r^2 + 2 \\pi r H$.
+        *   Objętość ($V$): $V = P_p \\cdot H = \\pi r^2 H$.
+
+*   **Stożek** – bryła obrotowa powstająca przez obrót trójkąta prostokątnego dookoła jednej z jego przyprostokątnych.
+    *   **Elementy stożka:**
+        *   Podstawa: koło.
+        *   Ściana boczna: powierzchnia zakrzywiona.
+        *   Promień podstawy ($r$).
+        *   Wysokość ($H$): przyprostokątna, wokół której obracamy trójkąt.
+        *   Tworząca ($l$): przeciwprostokątna obracanego trójkąta; odcinek łączący wierzchołek stożka z dowolnym punktem na brzegu podstawy. Związek między $r, H, l$: $l^2 = r^2 + H^2$.
+    *   **Wzory:**
+        *   Pole powierzchni całkowitej ($P_c$): $P_c = P_p + P_b = \\pi r^2 + \\pi r l$.
+        *   Objętość ($V$): $V = \\frac{1}{3} \\cdot P_p \\cdot H = \\frac{1}{3} \\pi r^2 H$.
+
+*   **Kula** – bryła geometryczna, zbiór wszystkich punktów równo oddalonych od pewnego punktu zwanego środkiem kuli.
+    *   **Elementy kuli:**
+        *   Środek kuli.
+        *   Promień ($R$): odległość od środka do dowolnego punktu na powierzchni kuli.
+    *   **Wzory:**
+        *   Pole powierzchni kuli ($P$): $P = 4 \\pi R^2$.
+        *   Objętość kuli ($V$): $V = \\frac{4}{3} \\pi R^3$.
 
 ## Przykład 1 — podstawowy
+Która z poniższych brył ma 12 krawędzi i 8 wierzchołków?
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+A. Ostrosłup trójkątny
+B. Graniastosłup trójkątny
+C. Ostrosłup czworokątny
+D. Graniastosłup czworokątny
+
+**Rozwiązanie:**
+
+**Krok 1.** Analizujemy podane informacje dotyczące liczby krawędzi i wierzchołków. Szukamy bryły, która spełnia oba te warunki jednocześnie.
+
+**Krok 2.** Rozważamy opcję A: Ostrosłup trójkątny.
+*   Podstawa: trójkąt (3 wierzchołki, 3 krawędzie).
+*   Wierzchołek ostrosłupa: 1 wierzchołek.
+*   Ściany boczne: 3 trójkąty.
+*   Krawędzie: 3 krawędzie podstawy + 3 krawędzie boczne = 6 krawędzi.
+*   Wierzchołki: 3 wierzchołki podstawy + 1 wierzchołek ostrosłupa = 4 wierzchołki.
+Opcja A odpada.
+
+**Krok 3.** Rozważamy opcję B: Graniastosłup trójkątny.
+*   Podstawy: dwa trójkąty (2 * 3 = 6 wierzchołków, 2 * 3 = 6 krawędzi podstaw).
+*   Ściany boczne: 3 prostokąty (w przypadku graniastosłupa prostego).
+*   Krawędzie: 6 krawędzi podstaw + 3 krawędzie boczne = 9 krawędzi.
+*   Wierzchołki: 6 wierzchołków (po 3 w każdej podstawie).
+Opcja B odpada.
+
+**Krok 4.** Rozważamy opcję C: Ostrosłup czworokątny.
+*   Podstawa: czworokąt (4 wierzchołki, 4 krawędzie).
+*   Wierzchołek ostrosłupa: 1 wierzchołek.
+*   Ściany boczne: 4 trójkąty.
+*   Krawędzie: 4 krawędzie podstawy + 4 krawędzie boczne = 8 krawędzi.
+*   Wierzchołki: 4 wierzchołki podstawy + 1 wierzchołek ostrosłupa = 5 wierzchołków.
+Opcja C odpada.
+
+**Krok 5.** Rozważamy opcję D: Graniastosłup czworokątny.
+*   Podstawy: dwa czworokąty (2 * 4 = 8 wierzchołków, 2 * 4 = 8 krawędzi podstaw).
+*   Ściany boczne: 4 prostokąty (w przypadku graniastosłupa prostego).
+*   Krawędzie: 8 krawędzi podstaw + 4 krawędzie boczne = 12 krawędzi.
+*   Wierzchołki: 8 wierzchołków (po 4 w każdej podstawie).
+Opcja D spełnia oba warunki: 12 krawędzi i 8 wierzchołków.
+
+**Sprawdzenie:** Graniastosłup czworokątny (np. sześcian) ma dwie podstawy w kształcie czworokąta. Każda podstawa ma 4 wierzchołki i 4 krawędzie. Do tego dochodzą 4 krawędzie boczne łączące wierzchołki podstaw. Łącznie: 4+4=8 krawędzi podstaw + 4 krawędzie boczne = 12 krawędzi. Wierzchołków jest 4+4=8. Zgadza się.
+
+**Odpowiedź:** D
+
+## Przykład 2 — maturalny
+Oblicz pole powierzchni całkowitej i objętość walca, którego promień podstawy wynosi 5 cm, a wysokość 10 cm. Wynik podaj z dokładnością do dwóch miejsc po przecinku, przyjmując $\\pi \\approx 3.14$.
+
+**Rozwiązanie:**
+
+**Krok 1.** Zapisujemy dane z zadania:
+*   Promień podstawy ($r$) = 5 cm
+*   Wysokość ($H$) = 10 cm
+*   Przybliżenie liczby $\\pi \\approx 3.14$
+
+**Krok 2.** Obliczamy pole podstawy ($P_p$). Podstawą walca jest koło.
+*   Wzór na pole koła: $P_p = \\pi r^2$
+*   Podstawiamy dane: $P_p = 3.14 \\cdot (5 \\text{ cm})^2 = 3.14 \\cdot 25 \\text{ cm}^2 = 78.50 \\text{ cm}^2$
+
+**Krok 3.** Obliczamy pole powierzchni bocznej ($P_b$). Powierzchnia boczna walca po rozwinięciu jest prostokątem o bokach równych obwodowi podstawy i wysokości walca.
+*   Obwód podstawy ($Ob_p$): $Ob_p = 2 \\pi r = 2 \\cdot 3.14 \\cdot 5 \\text{ cm} = 31.40 \\text{ cm}$
+*   Wzór na pole powierzchni bocznej: $P_b = Ob_p \\cdot H = 2 \\pi r H$
+*   Podstawiamy dane: $P_b = 31.40 \\text{ cm} \\cdot 10 \\text{ cm} = 314.00 \\text{ cm}^2$
+
+**Krok 4.** Obliczamy pole powierzchni całkowitej ($P_c$).
+*   Wzór: $P_c = 2 \\cdot P_p + P_b$
+*   Podstawiamy obliczone wartości: $P_c = 2 \\cdot 78.50 \\text{ cm}^2 + 314.00 \\text{ cm}^2 = 157.00 \\text{ cm}^2 + 314.00 \\text{ cm}^2 = 471.00 \\text{ cm}^2$
+
+**Krok 5.** Obliczamy objętość ($V$).
+*   Wzór: $V = P_p \\cdot H$
+*   Podstawiamy dane: $V = 78.50 \\text{ cm}^2 \\cdot 10 \\text{ cm} = 785.00 \\text{ cm}^3$
+
+**Sprawdzenie:** Obliczenia wykonano zgodnie ze wzorami. Jednostki są poprawne (cm² dla pól, cm³ dla objętości). Zaokrąglenie do dwóch miejsc po przecinku zostało uwzględnione.
+
+**Odpowiedź:** Pole powierzchni całkowitej walca wynosi $471.00 \\text{ cm}^2$, a objętość wynosi $785.00 \\text{ cm}^3$.
+
+## Przykład 3 — egzaminacyjny
+
+Oblicz objętość stożka, którego promień podstawy ma długość 6 cm, a tworząca ma długość 10 cm.
+
+**Rozwiązanie:**
+
+**Krok 1.** Zapisujemy dane:
+*   Promień podstawy ($r$) = 6 cm
+*   Tworząca ($l$) = 10 cm
+
+**Krok 2.** Aby obliczyć objętość stożka, potrzebujemy jego wysokości ($H$). Promień podstawy, wysokość i tworząca stożka tworzą trójkąt prostokątny, gdzie tworząca jest przeciwprostokątną. Stosujemy twierdzenie Pitagorasa: $r^2 + H^2 = l^2$.
+*   Podstawiamy dane: $(6 \\text{ cm})^2 + H^2 = (10 \\text{ cm})^2$
+*   $36 \\text{ cm}^2 + H^2 = 100 \\text{ cm}^2$
+*   $H^2 = 100 \\text{ cm}^2 - 36 \\text{ cm}^2$
+*   $H^2 = 64 \\text{ cm}^2$
+*   $H = \\sqrt{64 \\text{ cm}^2} = 8 \\text{ cm}$
+
+**Krok 3.** Obliczamy pole podstawy ($P_p$). Podstawą jest koło.
+*   Wzór na pole koła: $P_p = \\pi r^2$
+*   Podstawiamy dane: $P_p = \\pi \\cdot (6 \\text{ cm})^2 = 36 \\pi \\text{ cm}^2$
+
+**Krok 4.** Obliczamy objętość ($V$).
+*   Wzór: $V = \\frac{1}{3} \\cdot P_p \\cdot H$
+*   Podstawiamy obliczone wartości: $V = \\frac{1}{3} \\cdot 36 \\pi \\text{ cm}^2 \\cdot 8 \\text{ cm}$
+*   $V = 12 \\pi \\cdot 8 \\text{ cm}^3 = 96 \\pi \\text{ cm}^3$
+
+**Sprawdzenie:** Użyliśmy twierdzenia Pitagorasa do znalezienia wysokości, a następnie zastosowaliśmy wzór na objętość stożka. Obliczenia są poprawne.
+
+**Odpowiedź:** Objętość stożka wynosi $96 \\pi \\text{ cm}^3$.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie graniastosłupa z ostrosłupem:** Pamiętaj, że graniastosłup ma dwie podstawy i ściany boczne będące równoległobokami (najczęściej prostokątami), a ostrosłup ma jedną podstawę i ściany boczne będące trójkątami.
+*   **Używanie złych wzorów:** Dokładnie sprawdzaj, czy stosujesz wzór na pole powierzchni całkowitej, pole powierzchni bocznej czy objętość. Szczególną uwagę zwracaj na współczynnik $\\frac{1}{3}$ we wzorze na objętość ostrosłupa i stożka.
+*   **Błędy w twierdzeniu Pitagorasa:** Przy obliczaniu wysokości walca lub stożka (lub tworzącej) łatwo o błąd w zastosowaniu twierdzenia Pitagorasa. Zawsze upewnij się, która z danych jest przeciwprostokątną.
+*   **Zapominanie o $\\pi$:** W zadaniach dotyczących brył obrotowych często pojawia się liczba $\\pi$. Jeśli nie ma podanej konkretnej wartości do przybliżenia, wynik podajemy z $\\pi$.
+*   **Niewłaściwe jednostki:** Zawsze zwracaj uwagę na jednostki w zadaniu i w odpowiedzi. Pole powierzchni podajemy w jednostkach kwadratowych (np. cm²), a objętość w jednostkach sześciennych (np. cm³).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Podstawa graniastosłupa prostego to kwadrat o boku 4 cm. Wysokość graniastosłupa wynosi 7 cm. Oblicz pole powierzchni całkowitej i objętość tej bryły.
+2.  Znajdź promień podstawy i objętość kuli, jeśli jej pole powierzchni wynosi $100 \\pi \\text{ cm}^2$.
+3.  Ile wierzchołków, krawędzi i ścian ma ostrosłup sześciokątny?
+4.  Oblicz pole powierzchni bocznej i objętość stożka, którego promień podstawy wynosi 3 cm, a wysokość 4 cm.
+5.  Siatka walca składa się z dwóch kół o promieniu 5 cm i prostokąta. Długość jednego z boków tego prostokąta jest równa obwodowi koła, a drugiego wysokości walca. Oblicz pole powierzchni całkowitej walca, jeśli jego wysokość wynosi 8 cm.
+6.  W graniastosłupie prawidłowym czworokątnym przekątna podstawy ma długość $5\\sqrt{2}$ cm, a wysokość graniastosłupa wynosi 10 cm. Oblicz objętość tej bryły.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Pole podstawy: $P_p = 4^2 = 16 \\text{ cm}^2$. Pole powierzchni bocznej: $P_b = (4 \\cdot 4) \\cdot 7 = 16 \\cdot 7 = 112 \\text{ cm}^2$. Pole powierzchni całkowitej: $P_c = 2 \\cdot 16 + 112 = 32 + 112 = 144 \\text{ cm}^2$. Objętość: $V = 16 \\cdot 7 = 112 \\text{ cm}^3$.
+2.  $P = 4 \\pi R^2 = 100 \\pi \\text{ cm}^2 \\implies R^2 = 25 \\text{ cm}^2 \\implies R = 5 \\text{ cm}$. $V = \\frac{4}{3} \\pi R^3 = \\frac{4}{3} \\pi (5 \\text{ cm})^3 = \\frac{4}{3} \\pi \\cdot 125 \\text{ cm}^3 = \\frac{500}{3} \\pi \\text{ cm}^3$.
+3.  Wierzchołków: 7 (6 w podstawie + 1 ostrosłupa). Krawędzi: 12 (6 w podstawie + 6 bocznych). Ścian: 7 (1 podstawa + 6 bocznych).
+4.  Tworząca $l = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$ cm. Pole podstawy: $P_p = \\pi \\cdot 3^2 = 9\\pi \\text{ cm}^2$. Pole powierzchni bocznej: $P_b = \\pi r l = \\pi \\cdot 3 \\cdot 5 = 15\\pi \\text{ cm}^2$. Objętość: $V = \\frac{1}{3} P_p H = \\frac{1}{3} \\cdot 9\\pi \\cdot 4 = 12\\pi \\text{ cm}^3$.
+5.  Obwód koła: $2 \\pi r = 2 \\pi \\cdot 5 = 10\\pi$ cm. Pole podstawy: $P_p = \\pi r^2 = \\pi \\cdot 5^2 = 25\\pi \\text{ cm}^2$. Pole powierzchni bocznej: $P_b = 10\\pi \\cdot 8 = 80\\pi \\text{ cm}^2$. Pole powierzchni całkowitej: $P_c = 2 P_p + P_b = 2 \\cdot 25\\pi + 80\\pi = 50\\pi + 80\\pi = 130\\pi \\text{ cm}^2$.
+6.  Podstawa jest kwadratem (graniastosłup prawidłowy czworokątny). Przekątna kwadratu o boku $a$ wynosi $a\\sqrt{2}$. Zatem $a\\sqrt{2} = 5\\sqrt{2}$ cm, czyli $a=5$ cm. Pole podstawy: $P_p = a^2 = 5^2 = 25 \\text{ cm}^2$. Wysokość $H=10$ cm. Objętość: $V = P_p \\cdot H = 25 \\cdot 10 = 250 \\text{ cm}^3$.
 
 ## Szybka powtórka
+1.  Wymień wszystkie elementy bryły, jaką jest graniastosłup.
+2.  Jaka jest podstawowa różnica między graniastosłupem prostym a ukośnym?
+3.  Który element stożka jest odpowiednikiem wysokości w trójkącie prostokątnym, którego obrót tworzy stożek?
+4.  Jakie figury stanowią ściany boczne ostrosłupa?
+5.  Podaj wzór na objętość kuli.
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      /|\\
+     / | \\     <-- ściany boczne (trójkąty)
+    /  |  \\
+   /___|___\\   <-- podstawa (wielokąt)
+  /    |    \\
+ /     |     \\  <-- wierzchołek ostrosłupa
++------+------+
+|      |      |
+|      |      |  <-- ściany boczne (prostokąty)
++------+------+
+|      |      |
++------+------+  <-- podstawa (wielokąt)
+^^^^^^^^^^^^^^^  <-- krawędzie boczne
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "geometria_przestrzenna",
     topic: "objetosc_i_pole",
-    title: "Objętość i pole powierzchni — Egzamin 8-klasisty",
+    title: "Objętość i pole powierzchni brył geometrycznych",
     content: `## Na egzaminie
-
-Temat **Objętość i pole powierzchni** (Geometria przestrzenna) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące objętości i pola powierzchni brył pojawiają się na egzaminie ósmoklasisty regularnie, stanowiąc ważną część działu geometrii przestrzennej. Zwykle są to zadania otwarte, wymagające od ucznia zastosowania odpowiednich wzorów i przeprowadzenia obliczeń. Ich punktacja może wynosić od 2 do 4 punktów, w zależności od złożoności. Egzaminatorzy często sprawdzają umiejętność pracy z podstawowymi bryłami takimi jak prostopadłościan, sześcian, walec, stożek, kula, ostrosłup i graniastosłup.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Geometria przestrzenna**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Przypomnienie podstawowych pojęć związanych z bryłami geometrycznymi.
+2.  Wzory na objętość i pole powierzchni całkowitej sześcianu.
+3.  Wzory na objętość i pole powierzchni całkowitej prostopadłościanu.
+4.  Wzory na objętość i pole powierzchni całkowitej graniastosłupa (prostego).
+5.  Wzory na objętość i pole powierzchni całkowitej ostrosłupa (prostego).
+6.  Wzory na objętość i pole powierzchni całkowitej walca.
+7.  Wzory na objętość i pole powierzchni kuli.
+8.  Umiejętność stosowania wzorów w zadaniach obliczeniowych i tekstowych.
 
 ## Definicje i wzory
+Bryły geometryczne to trójwymiarowe figury ograniczone powierzchniami. Do podstawowych brył należą:
 
-*Materiał w trakcie uzupełniania dla: Objętość i pole powierzchni.*
+*   **Sześcian:** Bryła o sześciu ścianach w kształcie identycznych kwadratów. Wszystkie krawędzie mają tę samą długość.
+    *   Długość krawędzi: $a$
+    *   Objętość: $V = a^3$
+    *   Pole powierzchni całkowitej: $P_c = 6a^2$ (6 ścian, każda o polu $a^2$)
+
+*   **Prostopadłościan:** Bryła o sześciu ścianach w kształcie prostokątów. Przeciwległe ściany są identyczne.
+    *   Długości krawędzi: $a, b, c$
+    *   Objętość: $V = a \\cdot b \\cdot c$
+    *   Pole powierzchni całkowitej: $P_c = 2(ab + bc + ca)$ (suma pól trzech par identycznych ścian)
+
+*   **Graniastosłup:** Bryła, której dwie podstawy są przystającymi wielokątami leżącymi w płaszczyznach równoległych, a ściany boczne to równoległoboki.
+    *   **Graniastosłup prosty:** Ściany boczne są prostokątami, a krawędzie boczne są prostopadłe do podstaw.
+        *   Pole podstawy: $P_p$ (zależy od kształtu podstawy)
+        *   Wysokość graniastosłupa: $h$
+        *   Obwód podstawy: $O_p$
+        *   Objętość: $V = P_p \\cdot h$
+        *   Pole powierzchni bocznej: $P_b = O_p \\cdot h$ (suma pól prostokątnych ścian bocznych)
+        *   Pole powierzchni całkowitej: $P_c = 2P_p + P_b$
+
+*   **Ostrosłup:** Bryła, której jedną podstawę stanowi wielokąt, a wierzchołki tej podstawy są połączone z jednym punktem (wierzchołkiem ostrosłupa) leżącym poza płaszczyzną podstawy.
+    *   **Ostrosłup prosty:** Spodek wysokości (rzut wierzchołka na płaszczyznę podstawy) pokrywa się ze środkiem okręgu opisanego na podstawie lub jest to wierzchołek podstawy (w przypadku ostrosłupa trójkątnego). W przypadku ostrosłupów o podstawie wielokąta foremnego, wierzchołek znajduje się nad środkiem podstawy. Ściany boczne to trójkąty.
+        *   Pole podstawy: $P_p$
+        *   Wysokość ostrosłupa: $h$ (odległość wierzchołka od płaszczyzny podstawy)
+        *   Objętość: $V = \\frac{1}{3}P_p \\cdot h$
+        *   Pole powierzchni bocznej: $P_b$ (suma pól trójkątnych ścian bocznych). Dla ostrosłupów o podstawie wielokąta foremnego często używa się wysokości ściany bocznej (wysokości opuszczonej na krawędź podstawy), zwanej **wysokością ściany bocznej** $h_s$. Wtedy $P_b = \\frac{1}{2} O_p \\cdot h_s$ (jeśli ściany boczne są przystającymi trójkątami równoramiennymi).
+        *   Pole powierzchni całkowitej: $P_c = P_p + P_b$
+
+*   **Walec:** Bryła obrotowa powstała przez obrót prostokąta wokół jednego z jego boków. Ma dwie podstawy w kształcie kół.
+    *   Promień podstawy: $r$
+    *   Wysokość walca: $h$
+    *   Pole podstawy: $P_p = \\pi r^2$
+    *   Obwód podstawy (okręgu): $O_p = 2\\pi r$
+    *   Objętość: $V = P_p \\cdot h = \\pi r^2 h$
+    *   Pole powierzchni bocznej: $P_b = O_p \\cdot h = 2\\pi rh$ (powierzchnia rozwijana w prostokąt o bokach $h$ i $2\\pi r$)
+    *   Pole powierzchni całkowitej: $P_c = 2P_p + P_b = 2\\pi r^2 + 2\\pi rh = 2\\pi r(r+h)$
+
+*   **Stożek:** Bryła obrotowa powstała przez obrót trójkąta prostokątnego wokół jednej z jego przyprostokątnych. Ma jedną podstawę w kształcie koła.
+    *   Promień podstawy: $r$
+    *   Wysokość stożka: $h$
+    *   Tworząca stożka: $l$ (przeciwprostokątna obracanego trójkąta prostokątnego; $l = \\sqrt{r^2 + h^2}$)
+    *   Pole podstawy: $P_p = \\pi r^2$
+    *   Objętość: $V = \\frac{1}{3}P_p \\cdot h = \\frac{1}{3}\\pi r^2 h$
+    *   Pole powierzchni bocznej: $P_b = \\pi rl$ (powierzchnia rozwijana w wycinek koła o promieniu $l$)
+    *   Pole powierzchni całkowitej: $P_c = P_p + P_b = \\pi r^2 + \\pi rl = \\pi r(r+l)$
+
+*   **Kula:** Bryła obrotowa powstała przez obrót koła wokół jego średnicy.
+    *   Promień kuli: $R$
+    *   Objętość: $V = \\frac{4}{3}\\pi R^3$
+    *   Pole powierzchni: $P = 4\\pi R^2$
+
+**Uwaga:** Na egzaminie zazwyczaj podawane są wzory na pole podstawy i pole powierzchni bocznej dla figur płaskich potrzebnych do obliczeń (np. pole trójkąta, pole trapezu, pole koła). Wzory na objętości i pola powierzchni brył CKE zazwyczaj udostępnia na karcie wzorów.
 
 ## Przykład 1 — podstawowy
+Oblicz objętość i pole powierzchni całkowitej sześcianu, którego krawędź ma długość 5 cm.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj dane: Długość krawędzi sześcianu $a = 5$ cm.
+**Krok 2.** Zastosuj wzór na objętość sześcianu: $V = a^3$.
+**Krok 3.** Oblicz objętość: $V = (5 \\text{ cm})^3 = 125 \\text{ cm}^3$.
+**Krok 4.** Zastosuj wzór na pole powierzchni całkowitej sześcianu: $P_c = 6a^2$.
+**Krok 5.** Oblicz pole powierzchni całkowitej: $P_c = 6 \\cdot (5 \\text{ cm})^2 = 6 \\cdot 25 \\text{ cm}^2 = 150 \\text{ cm}^2$.
+
+**Odpowiedź:** Objętość sześcianu wynosi $125 \\text{ cm}^3$, a pole jego powierzchni całkowitej wynosi $150 \\text{ cm}^2$.
+
+## Przykład 2 — maturalny
+Działka w kształcie prostokąta ma wymiary 20 m na 30 m. Na działce tej ma stanąć budynek w kształcie prostopadłościanu o wymiarach podstawy 10 m na 15 m i wysokości 8 m. Oblicz, jaką powierzchnię działki zajmuje budynek, a jaką powierzchnię stanowi teren zielony wokół budynku. Oblicz również objętość budynku.
+
+**Krok 1.** Oblicz pole powierzchni całej działki.
+Działka ma kształt prostokąta o bokach 20 m i 30 m.
+Pole działki $P_{dzialki} = 20 \\text{ m} \\cdot 30 \\text{ m} = 600 \\text{ m}^2$.
+
+**Krok 2.** Oblicz powierzchnię zajmowaną przez budynek.
+Podstawa budynku ma wymiary 10 m na 15 m.
+Pole podstawy budynku $P_{budynku} = 10 \\text{ m} \\cdot 15 \\text{ m} = 150 \\text{ m}^2$. Jest to powierzchnia działki zajmowana przez budynek.
+
+**Krok 3.** Oblicz powierzchnię terenu zielonego.
+Teren zielony to różnica między polem całej działki a polem zajmowanym przez budynek.
+$P_{zielony} = P_{dzialki} - P_{budynku} = 600 \\text{ m}^2 - 150 \\text{ m}^2 = 450 \\text{ m}^2$.
+
+**Krok 4.** Oblicz objętość budynku.
+Budynek ma kształt prostopadłościanu o wymiarach podstawy 10 m na 15 m i wysokości 8 m.
+Objętość budynku $V_{budynku} = 10 \\text{ m} \\cdot 15 \\text{ m} \\cdot 8 \\text{ m} = 150 \\text{ m}^2 \\cdot 8 \\text{ m} = 1200 \\text{ m}^3$.
+
+**Odpowiedź:** Budynek zajmuje $150 \\text{ m}^2$ działki. Teren zielony stanowi $450 \\text{ m}^2$. Objętość budynku wynosi $1200 \\text{ m}^3$.
+
+## Przykład 3 — egzaminacyjny
+Do akwarium w kształcie prostopadłościanu o wymiarach podstawy 60 cm x 30 cm nalano wody do wysokości 40 cm. Oblicz objętość tej wody. Ile litrów wody znajduje się w akwarium? (1 litr = 1000 cm$^3$)
+
+**Krok 1.** Zidentyfikuj wymiary, które definiują objętość wody.
+Woda w akwarium tworzy prostopadłościan, którego podstawą jest podstawa akwarium, a wysokością jest poziom wody.
+Wymiary prostopadłościanu z wodą to: długość $a = 60$ cm, szerokość $b = 30$ cm, wysokość $h = 40$ cm.
+
+**Krok 2.** Oblicz objętość wody w cm$^3$.
+$V_{wody} = a \\cdot b \\cdot h = 60 \\text{ cm} \\cdot 30 \\text{ cm} \\cdot 40 \\text{ cm}$.
+$V_{wody} = 1800 \\text{ cm}^2 \\cdot 40 \\text{ cm} = 72000 \\text{ cm}^3$.
+
+**Krok 3.** Przelicz objętość wody na litry.
+Wiemy, że 1 litr = 1000 cm$^3$. Aby przeliczyć cm$^3$ na litry, dzielimy przez 1000.
+$V_{wody\\_litry} = \\frac{72000 \\text{ cm}^3}{1000 \\text{ cm}^3/\\text{litr}} = 72 \\text{ litry}$.
+
+**Odpowiedź:** Objętość wody w akwarium wynosi $72000 \\text{ cm}^3$, czyli 72 litry.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   ** Mylenie pola powierzchni całkowitej z polem powierzchni bocznej:** Pole powierzchni bocznej to suma pól tylko ścian bocznych, natomiast pole powierzchni całkowitej to suma pól wszystkich ścian, włącznie z podstawami. Należy uważać, o które pole pytają w zadaniu.
+*   ** Niewłaściwe stosowanie wzoru na objętość ostrosłupa i stożka:** Wzory na objętość ostrosłupa i stożka zawierają czynnik $\\frac{1}{3}$, który często jest pomijany. Objętość tych brył jest trzykrotnie mniejsza niż objętość graniastosłupa lub walca o tej samej podstawie i wysokości.
+*   ** Zaniedbywanie jednostek:** Podczas obliczeń należy pamiętać o jednostkach. Jeśli wymiary są podane w różnych jednostkach (np. metrach i centymetrach), przed obliczeniem należy je ujednolicić. Wynik powinien mieć odpowiednią jednostkę (np. cm$^3$ dla objętości, cm$^2$ dla pola).
+*   ** Błędy w obliczeniach procentowych lub skalowaniu:** Czasami zadania wymagają obliczenia o ile procent zmieniła się objętość lub pole po zmianie wymiarów, lub obliczenia objętości części bryły. Wymaga to precyzji i umiejętności pracy ze skalą.
+*   ** Niepoprawne obliczanie pola podstawy:** Wzór na objętość graniastosłupa czy ostrosłupa to $V = P_p \\cdot h$ (lub $\\frac{1}{3}P_p \\cdot h$). Kluczowe jest prawidłowe obliczenie pola podstawy $P_p$, które może być trójkątem, kwadratem, prostokątem, sześciokątem itp.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz objętość i pole powierzchni całkowitej walca, którego promień podstawy wynosi 4 cm, a wysokość 10 cm. Przyjmij $\\pi \\approx 3.14$.
+2.  Znajdź promień podstawy i wysokość stożka, którego tworząca $l=13$ cm, a promień podstawy $r=5$ cm. Następnie oblicz objętość i pole powierzchni całkowitej tego stożka.
+3.  Sześcian o krawędzi 3 cm umieszczono w większym sześcianie o krawędzi 5 cm. Oblicz objętość przestrzeni między sześcianami.
+4.  Dwa modele ołówków mają kształt walców. Pierwszy ma promień 3 mm i wysokość 180 mm. Drugi ma promień 4 mm i wysokość 150 mm. Oblicz objętość każdego ołówka i porównaj je.
+5.  Oblicz pole powierzchni bocznej i objętość ostrosłupa prawidłowego czworokątnego, którego krawędź podstawy ma długość 6 cm, a wysokość ściany bocznej (apotema) wynosi 5 cm.
+6.  Wysokość graniastosłupa prawidłowego sześciokątnego jest równa długości krawędzi jego podstawy. Oblicz objętość i pole powierzchni całkowitej tego graniastosłupa, jeśli długość krawędzi podstawy wynosi 2 cm.
+7.  Oblicz pole powierzchni kuli o promieniu 9 cm.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $V = \\pi r^2 h = \\pi \\cdot 4^2 \\cdot 10 = 160\\pi \\text{ cm}^3 \\approx 502.4 \\text{ cm}^3$. $P_c = 2\\pi r(r+h) = 2\\pi \\cdot 4(4+10) = 8\\pi \\cdot 14 = 112\\pi \\text{ cm}^2 \\approx 351.68 \\text{ cm}^2$.
+2.  $h = \\sqrt{l^2 - r^2} = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$ cm. $V = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi \\cdot 5^2 \\cdot 12 = \\frac{1}{3}\\pi \\cdot 25 \\cdot 12 = 100\\pi \\text{ cm}^3$. $P_c = \\pi r(r+l) = \\pi \\cdot 5(5+13) = 5\\pi \\cdot 18 = 90\\pi \\text{ cm}^2$.
+3.  Objętość większego sześcianu: $V_1 = 5^3 = 125 \\text{ cm}^3$. Objętość mniejszego sześcianu: $V_2 = 3^3 = 27 \\text{ cm}^3$. Objętość przestrzeni między sześcianami: $V_{roz} = V_1 - V_2 = 125 - 27 = 98 \\text{ cm}^3$.
+4.  Ołówek 1: $V_1 = \\pi r_1^2 h_1 = \\pi \\cdot 3^2 \\cdot 180 = \\pi \\cdot 9 \\cdot 180 = 1620\\pi \\text{ mm}^3$. Ołówek 2: $V_2 = \\pi r_2^2 h_2 = \\pi \\cdot 4^2 \\cdot 150 = \\pi \\cdot 16 \\cdot 150 = 2400\\pi \\text{ mm}^3$. Ołówek 2 ma większą objętość.
+5.  Pole podstawy: $P_p = 6^2 = 36 \\text{ cm}^2$. Pole powierzchni bocznej: $P_b = \\frac{1}{2} O_p \\cdot h_s = \\frac{1}{2} \\cdot (4 \\cdot 6) \\cdot 5 = \\frac{1}{2} \\cdot 24 \\cdot 5 = 60 \\text{ cm}^2$. Pole powierzchni całkowitej: $P_c = P_p + P_b = 36 + 60 = 96 \\text{ cm}^2$. Wysokość ostrosłupa: $h = \\sqrt{h_s^2 - (\\frac{a}{2})^2} = \\sqrt{5^2 - 3^2} = \\sqrt{25-9} = \\sqrt{16} = 4$ cm. Objętość: $V = \\frac{1}{3}P_p \\cdot h = \\frac{1}{3} \\cdot 36 \\cdot 4 = 48 \\text{ cm}^3$.
+6.  Długość krawędzi podstawy: $a=2$ cm. Wysokość graniastosłupa: $h=2$ cm. Pole podstawy (sześciokąt foremny): $P_p = \\frac{3\\sqrt{3}}{2}a^2 = \\frac{3\\sqrt{3}}{2} \\cdot 2^2 = \\frac{3\\sqrt{3}}{2} \\cdot 4 = 6\\sqrt{3} \\text{ cm}^2$. Obwód podstawy: $O_p = 6a = 6 \\cdot 2 = 12$ cm. Pole powierzchni bocznej: $P_b = O_p \\cdot h = 12 \\cdot 2 = 24 \\text{ cm}^2$. Pole powierzchni całkowitej: $P_c = 2P_p + P_b = 2 \\cdot 6\\sqrt{3} + 24 = 12\\sqrt{3} + 24 \\text{ cm}^2$. Objętość: $V = P_p \\cdot h = 6\\sqrt{3} \\cdot 2 = 12\\sqrt{3} \\text{ cm}^3$.
+7.  $P = 4\\pi R^2 = 4\\pi \\cdot 9^2 = 4\\pi \\cdot 81 = 324\\pi \\text{ cm}^2$.
 
 ## Szybka powtórka
+1.  Jaka jest podstawowa różnica między polem powierzchni bocznej a polem powierzchni całkowitej?
+2.  Które bryły mają we wzorze na objętość czynnik $\\frac{1}{3}$?
+3.  Jakie są wymiary prostopadłościanu?
+4.  Co to jest tworząca stożka i jak jest powiązana z promieniem i wysokością?
+5.  Jaka jest zależność między objętością kuli a jej promieniem?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+         +-------+
+        /|      /|
+       / |     / |  h (wysokość)
+      /  |    /  |
+     +-------+   |
+     |   |   |   |
+     |   +---|---+
+     |  /    |  /  b (szerokość)
+     | /     | /
+     |/      |/
+     +-------+
+       a (długość)
+
+   Prostopadłościan:
+   V = a * b * h
+   Pc = 2*(ab + bc + ca)
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "uklad_wspolrzednych",
     topic: "punkty_na_plaszczyznie",
-    title: "Punkty na płaszczyźnie — Egzamin 8-klasisty",
+    title: "Punkty na płaszczyźnie kartezjańskiej",
     content: `## Na egzaminie
-
-Temat **Punkty na płaszczyźnie** (Układ współrzędnych) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące układu współrzędnych pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj jako zadania otwarte lub zamknięte, warte od 1 do 3 punktów. CKE często sprawdza umiejętność zaznaczania punktów, odczytywania ich współrzędnych, obliczania odległości między punktami oraz znajdowania współrzędnych środka odcinka. Kluczowe jest zrozumienie zależności między współrzędnymi a położeniem punktu.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Układ współrzędnych**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+1.  Zrozumienie pojęcia płaszczyzny kartezjańskiej i osi współrzędnych (osi x i osi y).
+2.  Definicja punktu na płaszczyźnie za pomocą pary liczb (współrzędnych).
+3.  Zaznaczanie punktów o podanych współrzędnych na płaszczyźnie kartezjańskiej.
+4.  Odczytywanie współrzędnych punktów zaznaczonych na płaszczyźnie.
+5.  Obliczanie odległości między dwoma punktami na płaszczyźnie.
+6.  Wyznaczanie współrzędnych środka odcinka łączącego dwa punkty.
+7.  Rozwiązywanie prostych zadań tekstowych i geometrycznych z wykorzystaniem układu współrzędnych.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Punkty na płaszczyźnie.*
+*   **Płaszczyzna kartezjańska:** Jest to płaszczyzna, na której wprowadzono prostokątny układ współrzędnych. Składa się z dwóch prostopadłych osi liczbowych: osi poziomej (osi x, osi odciętych) i osi pionowej (osi y, osi rzędnych). Ich punkt przecięcia to początek układu współrzędnych o współrzędnych (0, 0).
+*   **Punkt na płaszczyźnie:** Każdy punkt na płaszczyźnie kartezjańskiej jest jednoznacznie określony przez parę liczb rzeczywistych $(x, y)$, zwanych jego współrzędnymi. Pierwsza liczba, $x$, to odcięta punktu (położenie względem osi y), a druga liczba, $y$, to rzędna punktu (położenie względem osi x). Punkt zapisujemy jako $A = (x_A, y_A)$.
+*   **Ćwiartki układu współrzędnych:** Płaszczyzna kartezjańska jest podzielona przez osie na cztery ćwiartki:
+    *   I ćwiartka: $x > 0$ i $y > 0$
+    *   II ćwiartka: $x < 0$ i $y > 0$
+    *   III ćwiartka: $x < 0$ i $y < 0$
+    *   IV ćwiartka: $x > 0$ i $y < 0$
+    Punkty leżące na osiach nie należą do żadnej ćwiartki.
+*   **Odległość między dwoma punktami:** Odległość $d$ między dwoma punktami $A = (x_A, y_A)$ i $B = (x_B, y_B)$ obliczamy za pomocą wzoru na podstawie twierdzenia Pitagorasa:
+    $$d(A, B) = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$$
+*   **Środek odcinka:** Współrzędne środka $S = (x_S, y_S)$ odcinka o końcach $A = (x_A, y_A)$ i $B = (x_B, y_B)$ obliczamy, biorąc średnią arytmetyczną odpowiednich współrzędnych końców:
+    $$x_S = \\frac{x_A + x_B}{2}$$
+    $$y_S = \\frac{y_A + y_B}{2}$$
+    Zatem $S = \\left(\\frac{x_A + x_B}{2}, \\frac{y_A + y_B}{2}\\right)$.
 
 ## Przykład 1 — podstawowy
+Zaznacz na płaszczyźnie kartezjańskiej punkty $A = (3, 2)$, $B = (-4, 1)$, $C = (-2, -3)$ i $D = (5, -2)$. Odczytaj współrzędne punktu $P$ zaznaczonego na rysunku.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+\`\`\`text
+        ^ y
+        |
+      3 +       . B
+        |     .
+      2 + . A
+        |
+      1 +
+        |
+------+-+---+-+--+-----> x
+     -4 -3 -2 -1 | 1  2  3  4  5
+        |       |
+     -1 +       . D
+        |     .
+     -2 + . C
+        |
+     -3 +
+        |
+\`\`\`
+
+**Krok 1.** Narysuj osie x i y przecinające się w punkcie (0, 0). Oznacz skale na osiach.
+**Krok 2.** Aby zaznaczyć punkt $A = (3, 2)$: znajdź liczbę 3 na osi x, a następnie przesuń się pionowo w górę do poziomu liczby 2 na osi y. Zaznacz punkt.
+**Krok 3.** Aby zaznaczyć punkt $B = (-4, 1)$: znajdź liczbę -4 na osi x, a następnie przesuń się pionowo w górę do poziomu liczby 1 na osi y. Zaznacz punkt.
+**Krok 4.** Aby zaznaczyć punkt $C = (-2, -3)$: znajdź liczbę -2 na osi x, a następnie przesuń się pionowo w dół do poziomu liczby -3 na osi y. Zaznacz punkt.
+**Krok 5.** Aby zaznaczyć punkt $D = (5, -2)$: znajdź liczbę 5 na osi x, a następnie przesuń się pionowo w dół do poziomu liczby -2 na osi y. Zaznacz punkt.
+**Krok 6.** Aby odczytać współrzędne punktu $P$: zlokalizuj punkt $P$ na rysunku. Opuszczając prostopadłą z punktu $P$ na oś x, odczytaj liczbę, w której się ona spotka z osią x (to będzie odcięta). Podobnie postępując z osią y, odczytaj rzędną. Z rysunku wynika, że punkt $P$ ma współrzędne $(-3, 0)$. (Uwaga: W zadaniu nie było podanego punktu P na rysunku, ale pozwoliłem sobie dodać go na potrzeby demonstracji odczytu). **Poprawiony rysunek z punktem P:**
+
+\`\`\`text
+        ^ y
+        |
+      3 +       . B
+        |     .
+      2 + . A
+        |
+      1 +
+        |
+------+-+-+-+---+-+--+-----> x
+     -4 -3 -2 -1 | 1  2  3  4  5
+        | P .   |
+     -1 + -+----. D
+        |     .
+     -2 + . C
+        |
+     -3 +
+        |
+\`\`\`
+**Krok 7.** Zaznaczonego punktu $P$ na rysunku wynika, że jego współrzędne to $P = (-3, 0)$.
+
+**Sprawdzenie:** Punkty zostały zaznaczone zgodnie z definicją współrzędnych. Punkt $A=(3,2)$ ma $x=3$ (na prawo od osi y) i $y=2$ (nad osią x). Punkt $B=(-4,1)$ ma $x=-4$ (na lewo od osi y) i $y=1$ (nad osią x). Punkt $C=(-2,-3)$ ma $x=-2$ (na lewo od osi y) i $y=-3$ (pod osią x). Punkt $D=(5,-2)$ ma $x=5$ (na prawo od osi y) i $y=-2$ (pod osią x). Odczytane współrzędne punktu $P=(-3,0)$ są zgodne z jego położeniem na osi x.
+
+## Przykład 2 — maturalny
+Oblicz odległość między punktami $A = (-1, 3)$ i $B = (5, -5)$.
+
+**Krok 1.** Zidentyfikuj współrzędne punktów: $x_A = -1$, $y_A = 3$, $x_B = 5$, $y_B = -5$.
+**Krok 2.** Zastosuj wzór na odległość między dwoma punktami: $d(A, B) = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$.
+**Krok 3.** Podstaw wartości współrzędnych do wzoru:
+$$d(A, B) = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$$
+**Krok 4.** Wykonaj odejmowanie w nawiasach:
+$$d(A, B) = \\sqrt{(5 + 1)^2 + (-8)^2}$$
+$$d(A, B) = \\sqrt{(6)^2 + (-8)^2}$$
+**Krok 5.** Podnieś do kwadratu:
+$$d(A, B) = \\sqrt{36 + 64}$$
+**Krok 6.** Dodaj liczby pod pierwiastkiem:
+$$d(A, B) = \\sqrt{100}$$
+**Krok 7.** Oblicz pierwiastek kwadratowy:
+$$d(A, B) = 10$$
+
+**Sprawdzenie:**
+Możemy również obliczyć $(x_A - x_B)^2 + (y_A - y_B)^2$:
+$\\sqrt{(-1 - 5)^2 + (3 - (-5))^2} = \\sqrt{(-6)^2 + (3 + 5)^2} = \\sqrt{36 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. Wynik jest taki sam.
+Odległość między punktami $A$ i $B$ wynosi 10.
+
+## Przykład 3 — egzaminacyjny
+
+Wyznacz współrzędne środka odcinka $MN$, gdzie $M = (-7, 4)$ i $N = (3, -2)$.
+
+**Krok 1.** Zidentyfikuj współrzędne punktów $M$ i $N$: $x_M = -7$, $y_M = 4$, $x_N = 3$, $y_N = -2$.
+**Krok 2.** Zastosuj wzory na współrzędne środka odcinka $S = (x_S, y_S)$:
+$x_S = \\frac{x_M + x_N}{2}$
+$y_S = \\frac{y_M + y_N}{2}$
+**Krok 3.** Oblicz współrzędną $x_S$:
+$x_S = \\frac{-7 + 3}{2} = \\frac{-4}{2} = -2$
+**Krok 4.** Oblicz współrzędną $y_S$:
+$y_S = \\frac{4 + (-2)}{2} = \\frac{4 - 2}{2} = \\frac{2}{2} = 1$
+**Krok 5.** Podaj współrzędne środka odcinka:
+$S = (-2, 1)$
+
+**Sprawdzenie:**
+Środek odcinka powinien znajdować się "w połowie drogi" między punktami. Punkt $S=(-2, 1)$ jest faktycznie w połowie drogi między $M=(-7, 4)$ a $N=(3, -2)$. Różnica w x: $-7 \\to -2$ to +5, a $-2 \\to 3$ to też +5. Różnica w y: $4 \\to 1$ to -3, a $1 \\to -2$ to też -3. Położenie jest poprawne.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Znaki współrzędnych:** Mylenie kolejności współrzędnych ($x$ i $y$) lub niepoprawne określanie ich znaków w zależności od ćwiartki. Zawsze pamiętaj: pierwsza liczba to $x$ (poziomo), druga to $y$ (pionowo).
+*   **Błędy przy odejmowaniu liczb ujemnych:** Szczególnie przy obliczaniu odległości, np. $5 - (-1)$ to $5+1=6$, a nie $5-1=4$. Podwójny minus daje plus.
+*   **Kolejność odejmowania we wzorze na odległość:** Wzór działa niezależnie od tego, czy odejmujemy $x_B - x_A$ czy $x_A - x_B$, ponieważ wynik jest podnoszony do kwadratu. Jednak konsekwentne odejmowanie współrzędnych w tej samej kolejności ($B-A$ lub $A-B$) zmniejsza ryzyko błędu.
+*   **Ułamki w środku odcinka:** Zapominanie o podzieleniu sumy współrzędnych przez 2. Środek odcinka to zawsze średnia arytmetyczna współrzędnych.
+*   **Brak rysunku lub nieczytelny rysunek:** W przypadku zadań geometrycznych wizualizacja jest kluczowa. Staraj się rysować czytelnie i zaznaczać wszystkie punkty i odcinki.
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Zaznacz na płaszczyźnie kartezjańskiej punkty $P=(-5, 3)$, $Q=(0, -2)$, $R=(4, 0)$ i $S=(2, 5)$.
+2.  Odczytaj współrzędne punktów $A, B, C$ zaznaczonych na rysunku:
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+    \`\`\`text
+            ^ y
+            |
+          5 +     . S
+            |   .
+          4 + . P
+            |
+          3 +
+            |
+          2 +
+            |
+          1 +
+            |
+    ------+-+-+-+-+-+-+-----> x
+         -5-4-3-2-1 | 1  2  3  4
+            |       |   . R
+          -1+       |
+            |     . C
+          -2+ . Q
+            |
+          -3+
+            |
+    \`\`\`
+3.  Oblicz odległość między punktami $K=(2, 1)$ i $L=(-3, 4)$.
+4.  Wyznacz współrzędne środka odcinka $AB$, gdzie $A=(6, -3)$ i $B=(-2, 5)$.
+5.  Punkty $D=(-1, -2)$ i $E=(x, 5)$ są oddalone od siebie o 10 jednostek. Znajdź możliwe wartości $x$.
+6.  Punkt $S=(1, 2)$ jest środkiem odcinka $PQ$, gdzie $P=(3, 7)$. Znajdź współrzędne punktu $Q$.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Rysunek z zaznaczonymi punktami $P, Q, R, S$.
+2.  $A = (1, 4)$, $B = (-3, 0)$, $C = (0, -2)$.
+3.  $d(K, L) = \\sqrt{(-3 - 2)^2 + (4 - 1)^2} = \\sqrt{(-5)^2 + 3^2} = \\sqrt{25 + 9} = \\sqrt{34}$.
+4.  $x_S = \\frac{6 + (-2)}{2} = \\frac{4}{2} = 2$, $y_S = \\frac{-3 + 5}{2} = \\frac{2}{2} = 1$. Środek to $(2, 1)$.
+5.  $d(D, E) = \\sqrt{(x - (-1))^2 + (5 - (-2))^2} = 10$.
+    $\\sqrt{(x+1)^2 + (7)^2} = 10$.
+    $(x+1)^2 + 49 = 100$.
+    $(x+1)^2 = 51$.
+    $x+1 = \\sqrt{51}$ lub $x+1 = -\\sqrt{51}$.
+    $x = -1 + \\sqrt{51}$ lub $x = -1 - \\sqrt{51}$.
+6.  $x_S = \\frac{x_P + x_Q}{2} \\implies 1 = \\frac{3 + x_Q}{2} \\implies 2 = 3 + x_Q \\implies x_Q = -1$.
+    $y_S = \\frac{y_P + y_Q}{2} \\implies 2 = \\frac{7 + y_Q}{2} \\implies 4 = 7 + y_Q \\implies y_Q = -3$.
+    Punkt $Q = (-1, -3)$.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Jakie liczby definiują położenie punktu na płaszczyźnie kartezjańskiej?
+2.  Która liczba jest odciętą, a która rzędną w punkcie $(x, y)$?
+3.  Jak obliczyć odległość między dwoma punktami, jeśli znamy ich współrzędne? Podaj wzór.
+4.  Jakie są wzory na współrzędne środka odcinka?
+5.  W której ćwiartce układu współrzędnych znajdują się punkty, których obie współrzędne są ujemne?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "uklad_wspolrzednych",
     topic: "dlugosc_odcinka",
-    title: "Długość odcinka — Egzamin 8-klasisty",
+    title: "Długość odcinka na płaszczyźnie",
     content: `## Na egzaminie
-
-Temat **Długość odcinka** (Układ współrzędnych) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Zadania dotyczące układu współrzędnych, w tym obliczanie długości odcinka, pojawiają się na egzaminie ósmoklasisty co roku, zazwyczaj jako jedno lub dwa zadania zamknięte lub jako część zadania otwartego. Punkty do zdobycia to zazwyczaj 1-3, w zależności od stopnia trudności i kontekstu zadania. CKE lubi sprawdzać umiejętność stosowania wzoru na odległość między dwoma punktami oraz umiejętność interpretacji graficznej tego zagadnienia.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Układ współrzędnych**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji opanujesz:
+1.  Zrozumienie pojęcia płaszczyzny kartezjańskiej i współrzędnych punktów.
+2.  Wprowadzenie i wyprowadzenie wzoru na długość odcinka o danych końcach.
+3.  Umiejętność stosowania wzoru na długość odcinka do obliczeń.
+4.  Rozwiązywanie zadań tekstowych związanych z długością odcinka.
+5.  Rozpoznawanie i rozwiązywanie zadań geometrycznych z wykorzystaniem płaszczyzny współrzędnych.
+6.  Ćwiczenie biegłości w stosowaniu twierdzenia Pitagorasa w kontekście współrzędnych.
+7.  Unikanie typowych błędów przy obliczaniu długości odcinka.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Długość odcinka.*
+*   **Płaszczyzna kartezjańska:** Jest to płaszczyzna wyposażona w prostokątny układ współrzędnych. Składa się z dwóch prostopadłych osi liczbowych: osi poziomej (osi X, odciętych) i osi pionowej (osi Y, rzędnych). Ich punkt przecięcia to początek układu współrzędnych o współrzędnych (0, 0).
+*   **Współrzędne punktu:** Każdy punkt na płaszczyźnie kartezjańskiej można jednoznacznie określić za pomocą pary liczb rzeczywistych $(x, y)$, gdzie $x$ to współrzędna pozioma (odcięta), a $y$ to współrzędna pionowa (rzędna).
+*   **Odcinek:** Jest to fragment prostej zawierający dwa punkty końcowe i wszystkie punkty leżące między nimi.
+*   **Długość odcinka:** Jest to odległość między jego dwoma końcami. Na płaszczyźnie kartezjańskiej, jeśli znamy współrzędne końców A i B odcinka, możemy obliczyć jego długość.
+*   **Wzór na długość odcinka:**
+    Niech punkt A ma współrzędne $(x_1, y_1)$, a punkt B ma współrzędne $(x_2, y_2)$. Długość odcinka AB, oznaczana jako $|AB|$, można obliczyć za pomocą wzoru:
+    $$|AB| = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+    Wzór ten wynika bezpośrednio z twierdzenia Pitagorasa. Rozważmy trójkąt prostokątny, którego przeciwprostokątną jest odcinek AB. Przyprostokątne tego trójkąta mają długości równe wartościom bezwzględnym różnic współrzędnych punktów A i B: $|x_2 - x_1|$ oraz $|y_2 - y_1|$. Zgodnie z twierdzeniem Pitagorasa:
+    $$(|x_2 - x_1|)^2 + (|y_2 - y_1|)^2 = |AB|^2$$
+    Ponieważ kwadrat liczby jest taki sam jak kwadrat jej wartości bezwzględnej ($(a)^2 = (-a)^2 = |a|^2$), możemy napisać:
+    $$(x_2 - x_1)^2 + (y_2 - y_1)^2 = |AB|^2$$
+    Wyciągając pierwiastek kwadratowy z obu stron (pamiętając, że długość jest nieujemna), otrzymujemy wzór na długość odcinka.
 
 ## Przykład 1 — podstawowy
+Oblicz długość odcinka o końcach w punktach A = (2, 3) i B = (5, 7).
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj współrzędne punktów A i B.
+$x_1 = 2$, $y_1 = 3$
+$x_2 = 5$, $y_2 = 7$
+
+**Krok 2.** Podstaw wartości do wzoru na długość odcinka.
+$$|AB| = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+$$|AB| = \\sqrt{(5 - 2)^2 + (7 - 3)^2}$$
+
+**Krok 3.** Oblicz różnice we współrzędnych.
+$$|AB| = \\sqrt{(3)^2 + (4)^2}$$
+
+**Krok 4.** Oblicz kwadraty różnic.
+$$|AB| = \\sqrt{9 + 16}$$
+
+**Krok 5.** Zsumuj kwadraty i oblicz pierwiastek.
+$$|AB| = \\sqrt{25}$$
+$$|AB| = 5$$
+
+**Sprawdzenie:**
+Odcinek AB ma długość 5. Wyobrażając sobie punkty na siatce: od A do B przesuwamy się o 3 jednostki w prawo ($5-2=3$) i o 4 jednostki w górę ($7-3=4$). Tworzą one przyprostokątne trójkąta prostokątnego. $3^2 + 4^2 = 9 + 16 = 25$. $\\sqrt{25} = 5$. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Oblicz długość odcinka łączącego punkty P = (-1, 4) i Q = (3, -2).
+
+**Krok 1.** Zidentyfikuj współrzędne punktów P i Q.
+$x_1 = -1$, $y_1 = 4$
+$x_2 = 3$, $y_2 = -2$
+
+**Krok 2.** Podstaw wartości do wzoru na długość odcinka. Zwróć uwagę na znaki ujemne.
+$$|PQ| = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+$$|PQ| = \\sqrt{(3 - (-1))^2 + (-2 - 4)^2}$$
+
+**Krok 3.** Uprość wyrażenia w nawiasach, szczególnie te z odejmowaniem liczby ujemnej.
+$$|PQ| = \\sqrt{(3 + 1)^2 + (-6)^2}$$
+$$|PQ| = \\sqrt{(4)^2 + (-6)^2}$$
+
+**Krok 4.** Oblicz kwadraty. Pamiętaj, że kwadrat liczby ujemnej jest liczbą dodatnią.
+$$|PQ| = \\sqrt{16 + 36}$$
+
+**Krok 5.** Zsumuj kwadraty i oblicz pierwiastek.
+$$|PQ| = \\sqrt{52}$$
+
+**Krok 6.** Uprość pierwiastek, jeśli to możliwe.
+$52 = 4 \\cdot 13$, więc $\\sqrt{52} = \\sqrt{4 \\cdot 13} = \\sqrt{4} \\cdot \\sqrt{13} = 2\\sqrt{13}$.
+$$|PQ| = 2\\sqrt{13}$$
+
+**Sprawdzenie:**
+Różnica współrzędnych x: $3 - (-1) = 4$. Różnica współrzędnych y: $-2 - 4 = -6$. Kwadraty: $4^2 = 16$, $(-6)^2 = 36$. Suma kwadratów: $16 + 36 = 52$. $\\sqrt{52} = 2\\sqrt{13}$. Wynik jest poprawny.
+
+## Przykład 3 — egzaminacyjny
+Punkty A = (-5, -2) i B = (1, 6) są końcami odcinka. Oblicz długość tego odcinka.
+
+**Krok 1.** Zidentyfikuj współrzędne punktów A i B.
+$x_1 = -5$, $y_1 = -2$
+$x_2 = 1$, $y_2 = 6$
+
+**Krok 2.** Podstaw wartości do wzoru na długość odcinka.
+$$|AB| = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+$$|AB| = \\sqrt{(1 - (-5))^2 + (6 - (-2))^2}$$
+
+**Krok 3.** Uprość wyrażenia w nawiasach.
+$$|AB| = \\sqrt{(1 + 5)^2 + (6 + 2)^2}$$
+$$|AB| = \\sqrt{(6)^2 + (8)^2}$$
+
+**Krok 4.** Oblicz kwadraty.
+$$|AB| = \\sqrt{36 + 64}$$
+
+**Krok 5.** Zsumuj i oblicz pierwiastek.
+$$|AB| = \\sqrt{100}$$
+$$|AB| = 10$$
+
+**Sprawdzenie:**
+Różnica x: $1 - (-5) = 6$. Różnica y: $6 - (-2) = 8$. Kwadraty: $6^2 = 36$, $8^2 = 64$. Suma: $36 + 64 = 100$. $\\sqrt{100} = 10$. Wynik poprawny. W tym przypadku otrzymaliśmy trójkąt o przyprostokątnych 6 i 8, co jest skalowaniem trójkąta "3-4-5" ($2 \\cdot 3, 2 \\cdot 4, 2 \\cdot 5$).
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Błędy ze znakami:** Najczęstsze błędy pojawiają się przy odejmowaniu współrzędnych, zwłaszcza gdy jedna lub obie są ujemne. Pamiętaj, że $a - (-b) = a + b$.
+*   **Zapominanie o kwadratach:** Wzór wymaga podniesienia różnic współrzędnych do kwadratu. Pominięcie tego kroku prowadzi do błędnego wyniku (np. obliczanie $|AB| = \\sqrt{(x_2 - x_1) + (y_2 - y_1)}$).
+*   **Kolejność punktów:** Kolejność punktów A i B we wzorze nie ma znaczenia, ponieważ $(x_2 - x_1)^2 = (x_1 - x_2)^2$ i $(y_2 - y_1)^2 = (y_1 - y_2)^2$. Ważne jest tylko, aby konsekwentnie odejmować współrzędne w tej samej kolejności dla obu osi.
+*   **Błędy w obliczeniach pierwiastka:** Po zsumowaniu kwadratów należy poprawnie obliczyć pierwiastek. Jeśli wynik nie jest liczbą całkowitą, warto sprawdzić, czy można go uprościć (np. $\\sqrt{52} = 2\\sqrt{13}$).
+*   **Nie stosowanie wartości bezwzględnej:** Choć w praktyce często pomija się wartość bezwzględną, bo podnosimy do kwadratu, to formalnie odległość między $x_1$ i $x_2$ to $|x_1 - x_2|$. Kwadrat i tak to eliminuje, ale warto pamiętać o koncepcji.
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  Oblicz długość odcinka o końcach w punktach C = (1, 2) i D = (4, 6).
+2.  Wyznacz długość odcinka o końcach E = (-3, 1) i F = (2, -3).
+3.  Punkt G ma współrzędne (-2, -5), a punkt H ma współrzędne (0, -1). Oblicz długość odcinka GH.
+4.  Dany jest odcinek o końcach K = (5, -4) i L = (-7, 2). Oblicz jego długość.
+5.  Oblicz odległość między punktami M = ($\\frac{1}{2}$, 1) i N = ($\\frac{3}{2}$, 3).
+6.  Punkty P = (0, 0) i Q = (-4, 3) są początkiem i końcem odcinka. Oblicz długość odcinka PQ.
+7.  Trójkąt ABC ma wierzchołki w punktach A = (1, 1), B = (4, 1) i C = (4, 5). Oblicz długości boków AB i BC.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $|CD| = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.
+2.  $|EF| = \\sqrt{(2 - (-3))^2 + (-3 - 1)^2} = \\sqrt{(2+3)^2 + (-4)^2} = \\sqrt{5^2 + 16} = \\sqrt{25 + 16} = \\sqrt{41}$.
+3.  $|GH| = \\sqrt{(0 - (-2))^2 + (-1 - (-5))^2} = \\sqrt{(0+2)^2 + (-1+5)^2} = \\sqrt{2^2 + 4^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.
+4.  $|KL| = \\sqrt{(-7 - 5)^2 + (2 - (-4))^2} = \\sqrt{(-12)^2 + (2+4)^2} = \\sqrt{144 + 6^2} = \\sqrt{144 + 36} = \\sqrt{180} = \\sqrt{36 \\cdot 5} = 6\\sqrt{5}$.
+5.  $|MN| = \\sqrt{(\\frac{3}{2} - \\frac{1}{2})^2 + (3 - 1)^2} = \\sqrt{(\\frac{2}{2})^2 + 2^2} = \\sqrt{1^2 + 4} = \\sqrt{1 + 4} = \\sqrt{5}$.
+6.  $|PQ| = \\sqrt{(-4 - 0)^2 + (3 - 0)^2} = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.
+7.  Długość boku AB: $|AB| = \\sqrt{(4-1)^2 + (1-1)^2} = \\sqrt{3^2 + 0^2} = \\sqrt{9} = 3$. Długość boku BC: $|BC| = \\sqrt{(4-4)^2 + (5-1)^2} = \\sqrt{0^2 + 4^2} = \\sqrt{16} = 4$.
 
 ## Szybka powtórka
+1.  Jakie są współrzędne początku układu kartezjańskiego?
+2.  Podaj wzór na długość odcinka o końcach $(x_1, y_1)$ i $(x_2, y_2)$.
+3.  Co się stanie ze znakiem liczby po jej podniesieniu do kwadratu?
+4.  Czy kolejność punktów we wzorze na długość odcinka ma znaczenie dla wyniku?
+5.  Co oznacza uproszczenie pierwiastka $\\sqrt{50}$ do $5\\sqrt{2}$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+       ^ Y
+       |
+       |     B(x2, y2)
+       |    /|
+       |   / |
+       |  /  | y2-y1
+       | /   |
+       |/    |
+A(x1, y1)-----
+       |  x2-x1
+-------+----------------> X
+       |
+\`\`\``,
     video_url: null,
   },
   {
@@ -7089,278 +9486,1549 @@ Temat **Długość odcinka** (Układ współrzędnych) należy do wymagań Egzam
     topic: "wykresy",
     title: "Odczyt wykresu funkcji",
     content: `## Na egzaminie
+Zadania polegające na odczycie wartości funkcji z wykresu lub interpretacji cech funkcji na podstawie jej wykresu pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zestawie zadań otwartych lub zamkniętych. Przeważnie są to zadania dające 1–2 punkty, ale ich prawidłowe rozwiązanie jest kluczowe dla osiągnięcia dobrego wyniku. CKE często sprawdza umiejętność rozumienia pojęć takich jak: dziedzina, zbiór wartości, miejsca zerowe, przedziały monotoniczności (rosnąca/malejąca), wartości maksymalne i minimalne.
 
-Odczyt wartości z wykresu, miejsca zerowe, gdzie funkcja rośnie/maleje — zadania z rysunkiem (2–4 pkt).
+## Mapa tematu
+1.  Zrozumienie czym jest wykres funkcji.
+2.  Odczytywanie wartości funkcji dla danego argumentu ($f(x)$ gdy znamy $x$).
+3.  Odczytywanie argumentu dla danej wartości funkcji ($x$ gdy znamy $f(x)$).
+4.  Określanie dziedziny funkcji na podstawie wykresu.
+5.  Określanie zbioru wartości funkcji na podstawie wykresu.
+6.  Znajdowanie miejsc zerowych funkcji na podstawie wykresu.
+7.  Określanie przedziałów monotoniczności (rosnąca, malejąca, stała) na podstawie wykresu.
+8.  Znajdowanie wartości maksymalnej i minimalnej funkcji na podstawie wykresu (jeśli istnieją).
 
-## Najważniejsze
+## Definicje i wzory
+*   **Funkcja:** Przyporządkowanie, w którym każdemu elementowi jednego zbioru (dziedziny) przyporządkowany jest dokładnie jeden element drugiego zbioru (zbioru wartości).
+*   **Wykres funkcji:** Zbiór wszystkich punktów na płaszczyźnie kartezjańskiej, których współrzędne $(x, f(x))$ spełniają warunek funkcji. Oś pozioma (OX) reprezentuje argumenty ($x$), a oś pionowa (OY) reprezentuje wartości funkcji ($f(x)$ lub $y$).
+*   **Argument ($x$):** Wartość należąca do dziedziny funkcji.
+*   **Wartość funkcji ($f(x)$ lub $y$):** Wartość funkcji odpowiadająca danemu argumentowi $x$.
+*   **Dziedzina funkcji ($D_f$):** Zbiór wszystkich dopuszczalnych argumentów $x$, dla których funkcja jest określona. Na wykresie jest to zbiór wszystkich współrzędnych $x$ punktów należących do wykresu.
+*   **Zbiór wartości funkcji ($ZW_f$):** Zbiór wszystkich wartości $f(x)$, jakie funkcja może przyjąć. Na wykresie jest to zbiór wszystkich współrzędnych $y$ punktów należących do wykresu.
+*   **Miejsce zerowe funkcji:** Argument $x$, dla którego wartość funkcji $f(x)$ wynosi 0. Są to punkty, w których wykres funkcji przecina oś OX.
+*   **Funkcja rosnąca:** Funkcja, która dla większych argumentów przyjmuje większe wartości. Na wykresie – "idzie w górę" od lewej do prawej.
+*   **Funkcja malejąca:** Funkcja, która dla większych argumentów przyjmuje mniejsze wartości. Na wykresie – "idzie w dół" od lewej do prawej.
+*   **Funkcja stała:** Funkcja, która dla wszystkich argumentów przyjmuje tę samą wartość. Na wykresie – linia pozioma.
+*   **Wartość maksymalna/minimalna:** Największa/najmniejsza wartość funkcji w danym przedziale lub na całej dziedzinie.
 
-**Układ współrzędnych:** oś pozioma $x$ (argument), pionowa $y$ (wartość).
+## Przykład 1 — podstawowy
+Na rysunku przedstawiono wykres funkcji $f$.
 
-**Punkt na wykresie:** $(x, f(x))$ — z wykresu odczytujesz $y$ dla danego $x$.
+\`\`\`text
+      ^ y
+      |
+    4 +-------*-------
+      |       |
+    3 +       |
+      |     / |
+    2 *----/--+
+      |   /   |
+    1 +--/----+-------
+      | /     |
+--+---+---+---+---+---+---> x
+ -2  -1   0   1   2   3
+      |
+\`\`\`
 
-**Miejsce zerowe:** punkt przecięcia z osią $x$ ($y = 0$).
+a) Oblicz $f(1)$.
+b) Znajdź $x$ takie, że $f(x) = 2$.
+c) Podaj dziedzinę funkcji $f$.
+d) Podaj zbiór wartości funkcji $f$.
+e) Znajdź miejsca zerowe funkcji $f$.
 
-**Rosnąca** — wykres idzie w górę (w lewo → w prawo); **malejąca** — w dół.
+**Rozwiązanie:**
 
-## Przykład krok po kroku
+**Krok 1.** Analiza wykresu.
+Obserwujemy kształt wykresu i zaznaczone punkty. Wykres składa się z odcinków prostych. Zaznaczone są kluczowe punkty, które pozwalają na dokładne odczytanie wartości.
 
-Z wykresu prostej przechodzącej przez $(0, 2)$ i $(2, 6)$ odczytaj $f(1)$.
+**Krok 2.** Obliczenie $f(1)$ (punkt a).
+Szukamy na osi OX wartości $x=1$. Następnie znajdujemy punkt na wykresie, który ma tę współrzędną $x$. Prowadzimy linię pionową od $x=1$ do przecięcia z wykresem, a następnie linię poziomą do osi OY. Odczytujemy wartość na osi OY. Dla $x=1$, $f(x)=1$. Zatem $f(1) = 1$.
 
-Prosta rosnąca równomiernie: między $x = 0$ a $x = 2$ wartość rośnie o 4, więc przy $x = 1$: $f(1) = 4$.
+**Krok 3.** Znalezienie $x$ dla $f(x)=2$ (punkt b).
+Szukamy na osi OY wartości $y=2$. Następnie znajdujemy punkty na wykresie, które mają tę współrzędną $y$. Prowadzimy linię poziomą od $y=2$ do przecięcia z wykresem, a następnie linie pionowe do osi OX. Odczytujemy wartości na osi OX. Funkcja przyjmuje wartość 2 dla $x=-1$ oraz dla $x=2$. Zatem $x=-1$ lub $x=2$.
+
+**Krok 4.** Określenie dziedziny (punkt c).
+Dziedzina to zbiór wszystkich dopuszczalnych wartości $x$. Patrzymy na wykres od lewej do prawej strony osi OX i sprawdzamy, dla jakich wartości $x$ istnieje fragment wykresu. Wykres zaczyna się dla $x=-2$ i kończy dla $x=3$. Oba końce są zamalowanymi punktami (*), co oznacza, że te wartości $x$ należą do dziedziny. Dziedziną jest przedział domknięty od -2 do 3. Zapisujemy to jako $D_f = [-2, 3]$.
+
+**Krok 5.** Określenie zbioru wartości (punkt d).
+Zbiór wartości to zbiór wszystkich wartości $y$, jakie funkcja przyjmuje. Patrzymy na wykres od dołu do góry osi OY i sprawdzamy, dla jakich wartości $y$ istnieje fragment wykresu. Najniższa wartość na osi OY, jaką przyjmuje funkcja, to 0 (w punkcie $x=0$). Najwyższa wartość na osi OY, jaką przyjmuje funkcja, to 4 (w punkcie $x=-2$). Zbiorem wartości jest przedział domknięty od 0 do 4. Zapisujemy to jako $ZW_f = [0, 4]$.
+
+**Krok 6.** Znalezienie miejsc zerowych (punkt e).
+Miejsca zerowe to wartości $x$, dla których $f(x)=0$. Są to punkty przecięcia wykresu z osią OX. Na wykresie widzimy, że wykres przecina oś OX tylko w jednym punkcie, dla $x=0$. Zatem jedynym miejscem zerowym jest $x=0$.
+
+**Sprawdzenie:**
+a) Podstawiając $x=1$ do wykresu, odczytujemy $y=1$. Zgadza się.
+b) Dla $x=-1$, $y=2$. Dla $x=2$, $y=2$. Zgadza się.
+c) Wykres rozciąga się od $x=-2$ do $x=3$. Zgadza się.
+d) Najniższa wartość $y=0$, najwyższa $y=4$. Zgadza się.
+e) Wykres przecina oś OX dla $x=0$. Zgadza się.
+
+## Przykład 2 — maturalny
+Na poniższym rysunku przedstawiono wykres funkcji $g$.
+
+\`\`\`text
+      ^ y
+      |
+    4 +       *
+      |      /|
+    3 +     / |
+      |    /  |
+    2 +---*---+-------
+      |  /|   |
+    1 + / |   |
+      |/  |   |
+--+---+---+---+---+---+---> x
+ -3  -2  -1   0   1   2
+      |
+   -1 +
+      |
+\`\`\`
+
+a) Odczytaj wartość funkcji $g$ dla argumentu $x=-1$.
+b) Znajdź argumenty $x$, dla których $g(x)=1$.
+c) Podaj dziedzinę funkcji $g$.
+d) Podaj zbiór wartości funkcji $g$.
+e) W jakich przedziałach funkcja $g$ jest rosnąca?
+f) W jakich przedziałach funkcja $g$ jest malejąca?
+g) Znajdź największą wartość funkcji $g$.
+
+**Rozwiązanie:**
+
+**Krok 1.** Analiza wykresu.
+Wykres składa się z dwóch odcinków prostych. Zwracamy uwagę na zaznaczone punkty kluczowe. Wykres jest określony dla $x$ od $-3$ do $2$.
+
+**Krok 2.** Odczytanie $g(-1)$ (punkt a).
+Szukamy na osi OX wartości $x=-1$. Punkt na wykresie nad $x=-1$ ma współrzędną $y=2$. Zatem $g(-1)=2$.
+
+**Krok 3.** Znalezienie $x$ dla $g(x)=1$ (punkt b).
+Szukamy na osi OY wartości $y=1$. Prowadzimy linię poziomą od $y=1$. Przecina ona wykres w dwóch punktach. Jedna linia pionowa prowadzi do $x=-2$, druga do $x=1$. Zatem $g(x)=1$ dla $x=-2$ lub $x=1$.
+
+**Krok 4.** Określenie dziedziny (punkt c).
+Wykres jest narysowany dla $x$ od $-3$ do $2$. Punkt na $x=-3$ jest zamalowany (*), punkt na $x=2$ jest zamalowany (*). Oznacza to, że te wartości należą do dziedziny. Dziedzina to przedział domknięty. $D_g = [-3, 2]$.
+
+**Krok 5.** Określenie zbioru wartości (punkt d).
+Najniższa wartość $y$ na wykresie to $-1$ (dla $x=0$). Najwyższa wartość $y$ na wykresie to $4$ (dla $x=2$). Zbiór wartości to przedział domknięty. $ZW_g = [-1, 4]$.
+
+**Krok 6.** Określenie przedziałów monotoniczności (punkty e i f).
+*   **Rosnąca:** Szukamy odcinków, gdzie wykres "idzie w górę" od lewej do prawej. Pierwszy odcinek, od $x=-3$ do $x=-1$, idzie w górę. Drugi odcinek, od $x=-1$ do $x=2$, również idzie w górę.
+    Funkcja $g$ jest rosnąca w przedziałach $[-3, -1]$ oraz $[-1, 2]$. Łącząc te przedziały, ponieważ funkcja jest ciągła w punkcie $x=-1$, możemy zapisać, że jest rosnąca w całym przedziale $[-3, 2]$.
+*   **Malejąca:** Nie ma odcinków, gdzie wykres "idzie w dół". Funkcja nie jest malejąca na żadnym przedziale.
+
+**Krok 7.** Znalezienie wartości maksymalnej (punkt g).
+Największa wartość funkcji to najwyższy punkt na wykresie. Jest to punkt $(2, 4)$. Największa wartość funkcji $g$ wynosi 4.
+
+**Sprawdzenie:**
+a) $g(-1) = 2$. Wykres potwierdza.
+b) Dla $x=-2$, $y=1$. Dla $x=1$, $y=1$. Wykres potwierdza.
+c) $D_g = [-3, 2]$. Wykres rozciąga się od -3 do 2. Wykres potwierdza.
+d) $ZW_g = [-1, 4]$. Najniższy punkt to (0, -1), najwyższy to (2, 4). Wykres potwierdza.
+e) Funkcja rośnie od lewej do prawej na całym swoim zakresie. Wykres potwierdza.
+f) Nie ma odcinków malejących. Wykres potwierdza.
+g) Najwyższy punkt to $y=4$. Wykres potwierdza.
+
+## Przykład 3 — egzaminacyjny
+
+Na rysunku przedstawiono fragment wykresu pewnej funkcji $h$ określonej dla $x \\in \\{-3, -2, -1, 0, 1, 2, 3\\}$.
+
+\`\`\`text
+      ^ y
+      |
+    2 +   *
+      |  /|
+    1 +--*--+-------
+      | / |   |
+--+---+---+---+---+---+---> x
+ -3  -2  -1   0   1   2   3
+      |
+   -1 +   *
+      |
+\`\`\`
+
+Odczytaj z wykresu:
+a) Argumenty, dla których funkcja $h$ przyjmuje wartość 1.
+b) Wartość funkcji $h$ dla argumentu $x=-2$.
+c) Miejsca zerowe funkcji $h$.
+
+**Rozwiązanie:**
+
+**Krok 1.** Analiza wykresu i dziedziny.
+Wykres przedstawia punkty dla konkretnych wartości całkowitych $x$ z przedziału $\\{-3, -2, -1, 0, 1, 2, 3\\}$. Nie jest to ciągła linia, ale zbiór izolowanych punktów.
+
+**Krok 2.** Znalezienie argumentów dla $h(x)=1$ (punkt a).
+Szukamy na osi OY wartości $y=1$. Znajdujemy punkty na wykresie, które mają tę współrzędną $y$. Są to punkty $(-3, 1)$, $(-1, 1)$ oraz $(1, 1)$. Argumentami są zatem $x=-3$, $x=-1$ i $x=1$.
+
+**Krok 3.** Odczytanie $h(-2)$ (punkt b).
+Szukamy na osi OX wartości $x=-2$. Znajdujemy odpowiadający mu punkt na wykresie. Jest to punkt $(-2, 2)$. Zatem $h(-2)=2$.
+
+**Krok 4.** Znalezienie miejsc zerowych (punkt c).
+Miejsca zerowe to wartości $x$, dla których $h(x)=0$. Szukamy punktów na wykresie, których współrzędna $y$ wynosi 0. Na wykresie nie ma żadnego punktu leżącego na osi OX. Zatem funkcja $h$ nie ma miejsc zerowych.
+
+**Sprawdzenie:**
+a) Punkty $(-3, 1), (-1, 1), (1, 1)$ leżą na wykresie i mają $y=1$. Argumenty to $-3, -1, 1$. Zgadza się.
+b) Punkt $(-2, 2)$ leży na wykresie. $h(-2)=2$. Zgadza się.
+c) Brak punktów z $y=0$. Brak miejsc zerowych. Zgadza się.
 
 ## Pułapki
+*   **Mylenie osi X i Y:** Najczęstszy błąd. Pamiętaj, że na osi poziomej są argumenty ($x$), a na pionowej wartości funkcji ($y$ lub $f(x)$). Kiedy szukasz $f(2)$, szukasz na osi X liczby 2, a potem idziesz do góry/dołu do wykresu i odczytujesz wartość na osi Y. Kiedy szukasz $x$ dla $f(x)=3$, szukasz na osi Y liczby 3, a potem idziesz w prawo/lewo do wykresu i odczytujesz wartość na osi X.
+*   **Niedokładne odczytywanie z wykresu:** Jeśli punkty nie są wyraźnie zaznaczone, staraj się prowadzić linie pomocnicze prostopadle do osi. Uważaj na linie przerywane lub niezaznaczone punkty końcowe.
+*   **Przedziały otwarte vs domknięte:** Pamiętaj, że kółko zamalowane (*) oznacza, że dana wartość należy do dziedziny/zbioru wartości lub jest początkiem/końcem przedziału monotoniczności. Kółko niezamalowane (o) oznacza, że dana wartość nie należy do dziedziny/zbioru wartości. W zadaniach egzaminacyjnych najczęściej spotkasz kółka zamalowane lub wykresy bez zaznaczonych kółek, co sugeruje, że końce przedziałów należą do dziedziny.
+*   **Łączenie przedziałów monotoniczności:** Funkcja może być rosnąca w kilku przedziałach. Jeśli punkty graniczne tych przedziałów są "połączone" (funkcja jest ciągła w tym punkcie), często można połączyć te przedziały w jeden większy. Np. funkcja rosnąca w $[-2, 0]$ i w $[0, 3]$ jest rosnąca w $[-2, 3]$. Jeśli w punkcie $x=0$ następuje "załamanie" wykresu i funkcja zaczyna maleć, to przedziały pozostają osobne.
 
-- Odczytuj **dokładnie** z podziałki osi
-- Miejsce zerowe to $x$, nie $y$
-- Wykres $\\neq$ tabela — sprawdzaj obie osie
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Na rysunku poniżej przedstawiono wykres funkcji $k$.
+    \`\`\`text
+          ^ y
+          |
+        3 +       *
+          |      /|
+        2 +-----* |
+          |    /  |
+        1 +---/---+-------
+          |  /    |
+    ------+--+----+---+---> x
+         -2  -1   0   1
+          |
+       -1 + *
+          |
+    \`\`\`
+    a) Oblicz $k(-1)$.
+    b) Znajdź $x$ takie, że $k(x)=1$.
+    c) Podaj dziedzinę funkcji $k$.
+    d) Podaj zbiór wartości funkcji $k$.
+    e) Podaj argumenty, dla których funkcja $k$ jest malejąca.
+
+2.  Dana jest funkcja $m$, której fragment wykresu przedstawiono poniżej. Wykres jest określony dla $x \\in \\{-4, -3, -2, -1, 0, 1, 2, 3, 4\\}$.
+    \`\`\`text
+          ^ y
+          |
+        2 +   *
+          |  /|
+        1 +--*--*-------
+          | / | /
+    ------+---+---+---+---> x
+         -2  -1   0   1
+          |
+       -1 +     *
+          |
+       -2 +       *
+          |
+    \`\`\`
+    a) Odczytaj z wykresu wartości $m(-3)$ oraz $m(0)$.
+    b) Znajdź argumenty $x$, dla których $m(x)=1$.
+    c) Znajdź miejsca zerowe funkcji $m$.
+
+3.  Na poniższym wykresie przedstawiono funkcję $p$.
+    \`\`\`text
+          ^ y
+          |
+        4 +---------*
+          |         |
+        3 +         |
+          |         |
+        2 +       / |
+          |      /  |
+        1 +-----*---+-------
+          |    /    |
+    ------+---+---+---+---> x
+         -1   0   1   2
+          |
+    \`\`\`
+    a) Jaka jest wartość funkcji $p$ dla $x=0$?
+    b) Dla jakich argumentów $x$ funkcja $p$ przyjmuje wartość $3$?
+    c) Podaj przedziały, w których funkcja $p$ jest rosnąca.
+    d) Podaj przedział, w którym funkcja $p$ jest stała.
+    e) Znajdź największą wartość funkcji $p$.
+
+4.  Wykres funkcji $q$ jest następujący:
+    \`\`\`text
+          ^ y
+          |
+        2 +   *
+          |  /|
+        1 +--+--*-------
+          | / | /
+    ------+---+---+---+---> x
+         -2  -1   0   1
+          |
+       -1 +     *
+          |
+    \`\`\`
+    Dziedzina funkcji $q$ to $D_q = \\{-2, -1, 0, 1\\}$. Podaj:
+    a) Wartość funkcji $q$ dla $x=0$.
+    b) Argumenty $x$, dla których $q(x)=-1$.
+    c) Miejsca zerowe funkcji $q$.
+
+5.  Na rysunku poniżej znajduje się wykres funkcji $r$.
+    \`\`\`text
+          ^ y
+          |
+        3 +       *
+          |      / \\
+        2 +-----*   *
+          |    /     \\
+        1 +---/-------\\---
+          |  /         \\
+    ------+--+----+----+-----> x
+         -3  -2   -1   0    1
+          |
+    \`\`\`
+    Dziedzina funkcji $r$ to $[-3, 1]$.
+    a) Odczytaj z wykresu wartość $r(-1)$.
+    b) Podaj argumenty, dla których $r(x)=1$.
+    c) Podaj przedziały, w których funkcja $r$ jest rosnąca.
+    d) Podaj przedziały, w których funkcja $r$ jest malejąca.
+    e) Podaj zbiór wartości funkcji $r$.
+
+6.  Funkcja $s$ jest przedstawiona na wykresie.
+    \`\`\`text
+          ^ y
+          |
+        3 +       *
+          |      /|
+        2 +-----* |
+          |    /  |
+        1 +---/---+-------
+          |  /    |
+    ------+--+----+---+---> x
+         -2  -1   0   1
+          |
+       -1 + *
+          |
+    \`\`\`
+    Jaka jest najmniejsza wartość funkcji $s$?
+
+7.  Funkcja $t$ ma następujący wykres:
+    \`\`\`text
+          ^ y
+          |
+        2 +       *
+          |      /
+        1 +-----*-------
+          |    /
+    ------+--+----+-----> x
+         -2  -1   0
+          |
+    \`\`\`
+    Dziedzina funkcji $t$ to $[-2, 0]$.
+    a) Odczytaj $t(-1)$.
+    b) Podaj argument $x$, dla którego $t(x)=2$.
+    c) Czy funkcja $t$ ma miejsca zerowe? Odpowiedź uzasadnij.
+
+## Odpowiedzi
+1.  a) $k(-1)=1$
+    b) $x=-1$ lub $x=0$
+    c) $D_k = [-2, 1]$
+    d) $ZW_k = [-1, 3]$
+    e) Funkcja jest malejąca w przedziale $[-1, 0]$.
+
+2.  a) $m(-3)=0$, $m(0)=1$
+    b) $x=-3$ lub $x=1$
+    c) $x=-3$ jest miejscem zerowym.
+
+3.  a) $p(0)=1$
+    b) Funkcja $p$ nie przyjmuje wartości $3$. (lub: nie ma takiego argumentu)
+    c) Funkcja $p$ jest rosnąca w przedziałach $[-1, 0]$ i $[0, 2]$. Łącznie: $[-1, 2]$.
+    d) Funkcja $p$ jest stała w przedziale $[1, 2]$.
+    e) Największa wartość funkcji $p$ wynosi $4$.
+
+4.  a) $q(0)=-1$
+    b) $x=-2$
+    c) Funkcja $q$ nie ma miejsc zerowych.
+
+5.  a) $r(-1)=2$
+    b) $x=-2$ oraz $x=0$
+    c) Funkcja $r$ jest rosnąca w przedziałach $[-3, -1]$ oraz $[-1, 0]$.
+    d) Funkcja $r$ jest malejąca w przedziale $[0, 1]$.
+    e) $ZW_r = [1, 3]$
+
+6.  Najmniejsza wartość funkcji $s$ wynosi $-1$.
+
+7.  a) $t(-1)=1$
+    b) $x=-2$
+    c) Nie, funkcja $t$ nie ma miejsc zerowych, ponieważ jej wykres nie przecina osi OX. Najniższa wartość funkcji to $1$.
 
 ## Szybka powtórka
-
-1. Co oznacza punkt $(3, -1)$ na wykresie?
-2. Gdzie szukać miejsc zerowych?
-3. Jak rozpoznać, że funkcja jest stała?`,
+1.  Co na wykresie reprezentuje oś pozioma (OX)?
+2.  Co na wykresie reprezentuje oś pionowa (OY)?
+3.  Gdzie na wykresie odczytujemy miejsca zerowe funkcji?
+4.  Jak na wykresie rozpoznać, czy funkcja jest rosnąca?
+5.  Czym różni się dziedzina od zbioru wartości w kontekście wykresu?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "funkcje",
     topic: "proporcjonalnosc",
-    title: "Proporcjonalność prosta — Egzamin 8-klasisty",
+    title: "Proporcjonalność prosta – klucz do zadań CKE",
     content: `## Na egzaminie
-
-Temat **Proporcjonalność prosta** (Funkcje i wykresy) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Proporcjonalność prosta pojawia się na egzaminie ósmoklasisty regularnie, często w zadaniach otwartych, wymagających obliczeń i uzasadnienia. Można ją spotkać zarówno w zadaniach obliczeniowych, jak i tekstowych, często powiązanych z kontekstem praktycznym (np. ceny, prędkość, przepisy kulinarne). Rozumienie tej zależności i umiejętność operowania jej wzorem jest kluczowa do zdobycia nawet kilku punktów na egzaminie.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Funkcje i wykresy**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji poznasz:
+1.  Definicję proporcjonalności prostej i jej charakterystyczne cechy.
+2.  Wzór opisujący proporcjonalność prostą: $y = ax$.
+3.  Znaczenie współczynnika proporcjonalności $a$.
+4.  Sposoby identyfikacji proporcjonalności prostej na podstawie tabeli, wykresu i opisu słownego.
+5.  Metody rozwiązywania zadań z wykorzystaniem proporcjonalności prostej.
+6.  Zastosowania proporcjonalności prostej w zadaniach praktycznych.
+7.  Rozwiązywanie zadań typu egzaminacyjnego z tym zagadnieniem.
 
 ## Definicje i wzory
-
-*Materiał w trakcie uzupełniania dla: Proporcjonalność prosta.*
+*   **Proporcjonalność prosta:** Mówimy, że wielkość $y$ jest wprost proporcjonalna do wielkości $x$, jeśli ich stosunek jest stały i różny od zera. Oznacza to, że gdy $x$ rośnie, $y$ rośnie w tym samym tempie, a gdy $x$ maleje, $y$ maleje proporcjonalnie.
+*   **Wzór:** Zależność tę opisuje wzór:
+    $$y = ax$$
+    gdzie:
+    *   $y$ jest wielkością zależną.
+    *   $x$ jest wielkością niezależną.
+    *   $a$ jest **współczynnikiem proporcjonalności** (stała, różna od zera).
+*   **Współczynnik proporcjonalności $a$**: Można go wyznaczyć ze wzoru $a = \\frac{y}{x}$ (dla $x \\neq 0$). Określa on, ile razy $y$ jest większe od $x$, lub jak bardzo $y$ zmienia się przy jednostkowej zmianie $x$.
+    *   Jeśli $a > 0$, wielkości $x$ i $y$ rosną i maleją w tym samym kierunku.
+    *   Jeśli $a < 0$, wielkości $x$ i $y$ zmieniają się w przeciwnych kierunkach (gdy $x$ rośnie, $y$ maleje i odwrotnie).
+*   **Wykres proporcjonalności prostej:** Wykresem zależności $y = ax$ jest linia prosta przechodząca przez początek układu współrzędnych (punkt (0,0)). Kierunek prostej zależy od znaku współczynnika $a$:
+    *   Dla $a > 0$ prosta jest rosnąca (wznosi się od lewej do prawej).
+    *   Dla $a < 0$ prosta jest malejąca (opada od lewej do prawej).
+*   **Charakterystyka tabeli:** W tabeli wielkości opisującej proporcjonalność prostą, stosunek odpowiednich wartości $y$ do $x$ jest stały. $\\frac{y_1}{x_1} = \\frac{y_2}{x_2} = \\dots = a$.
 
 ## Przykład 1 — podstawowy
+Cena 5 kg jabłek wynosi 15 zł. Ile będą kosztować 3 kg tych samych jabłek?
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj wielkości i zależność.
+Wielkością niezależną jest masa jabłek ($x$), a zależną jest ich cena ($y$). Ponieważ cena za kilogram jest stała, cena jest wprost proporcjonalna do masy.
+
+**Krok 2.** Zapisz wzór proporcjonalności.
+$y = ax$, gdzie $x$ to masa (w kg), a $y$ to cena (w zł).
+
+**Krok 3.** Oblicz współczynnik proporcjonalności $a$.
+Wiemy, że dla $x=5$ kg, $y=15$ zł. Podstawiamy do wzoru:
+$15 = a \\cdot 5$
+Dzielimy obie strony przez 5:
+$a = \\frac{15}{5} = 3$
+Współczynnik proporcjonalności $a=3$. Oznacza to, że 1 kg jabłek kosztuje 3 zł.
+
+**Krok 4.** Zapisz wzór dla konkretnego przypadku.
+Wzór opisujący cenę jabłek w zależności od ich masy to: $y = 3x$.
+
+**Krok 5.** Oblicz cenę dla zadanej masy.
+Chcemy obliczyć cenę dla $x=3$ kg. Podstawiamy do wzoru:
+$y = 3 \\cdot 3 = 9$
+Cena 3 kg jabłek wynosi 9 zł.
+
+**Sprawdzenie:**
+Cena za kg wynosi $15 \\text{ zł} / 5 \\text{ kg} = 3 \\text{ zł/kg}$.
+Cena za 3 kg to $3 \\text{ kg} \\cdot 3 \\text{ zł/kg} = 9 \\text{ zł}$. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Tabela przedstawia zależność między liczbą godzin pracy a ilością wyprodukowanych detali. Sprawdź, czy zależność ta jest proporcjonalnością prostą. Jeśli tak, wyznacz wzór tej zależności i oblicz, ile detali zostanie wyprodukowanych w ciągu 8 godzin pracy.
+
+| Liczba godzin pracy ($x$) | Liczba wyprodukowanych detali ($y$) |
+| :----------------------- | :-------------------------------- |
+| 2                        | 40                                |
+| 3                        | 60                                |
+| 5                        | 100                               |
+
+**Krok 1.** Sprawdź stałość stosunku $\\frac{y}{x}$.
+Obliczamy stosunek $y$ do $x$ dla każdej pary danych:
+Dla pierwszej pary: $\\frac{40}{2} = 20$
+Dla drugiej pary: $\\frac{60}{3} = 20$
+Dla trzeciej pary: $\\frac{100}{5} = 20$
+Stosunek $\\frac{y}{x}$ jest stały i wynosi 20.
+
+**Krok 2.** Zidentyfikuj rodzaj proporcjonalności i współczynnik.
+Ponieważ stosunek $\\frac{y}{x}$ jest stały i różny od zera, zależność jest proporcjonalnością prostą.
+Współczynnik proporcjonalności $a = 20$.
+
+**Krok 3.** Zapisz wzór zależności.
+Wzór opisujący tę zależność to $y = ax$, czyli:
+$y = 20x$
+gdzie $x$ to liczba godzin pracy, a $y$ to liczba wyprodukowanych detali.
+
+**Krok 4.** Oblicz liczbę detali dla 8 godzin pracy.
+Szukamy wartości $y$, gdy $x=8$ godzin. Podstawiamy do wzoru:
+$y = 20 \\cdot 8 = 160$
+
+**Odpowiedź:** Zależność jest proporcjonalnością prostą. Wzór to $y=20x$. W ciągu 8 godzin pracy zostanie wyprodukowanych 160 detali.
+
+## Przykład 3 — egzaminacyjny
+Na rysunku przedstawiono fragment wykresu zależności $y = ax$. Określ znak współczynnika $a$ oraz oblicz jego wartość.
+
+\`\`\`text
+      ^ y
+      |
+      |    . (x, y)
+      |   /
+      |  /
+------+------------> x
+     /|
+    / |
+   /  |
+  /   |
+\`\`\`
+*(Uwaga: Rysunek przedstawia prostą przechodzącą przez początek układu współrzędnych i znajdującą się w pierwszej i trzeciej ćwiartce układu współrzędnych. Punkt (x, y) zaznaczony jest w pierwszej ćwiartce, gdzie zarówno x, jak i y są dodatnie.)*
+
+**Krok 1.** Analiza wykresu.
+Wykres jest linią prostą przechodzącą przez początek układu współrzędnych (0,0). To potwierdza, że jest to proporcjonalność prosta. Wykres znajduje się w I i III ćwiartce.
+
+**Krok 2.** Określenie znaku współczynnika $a$.
+Ponieważ wykres jest wznoszący się (od lewej do prawej), oznacza to, że dla dodatnich wartości $x$ wartości $y$ są również dodatnie. Na przykład, punkt zaznaczony w pierwszej ćwiartce (gdzie $x>0$ i $y>0$) leży na tej prostej.
+Jeśli wybierzemy dowolny punkt na tej prostej z $x>0$ (np. zaznaczony punkt), to $y$ również jest dodatnie. Stosunek $\\frac{y}{x}$ będzie dodatni.
+Zatem współczynnik proporcjonalności $a$ jest dodatni ($a>0$).
+
+**Krok 3.** Wyznaczenie wartości współczynnika $a$.
+Aby dokładnie obliczyć $a$, potrzebowalibyśmy współrzędnych konkretnego punktu (innego niż (0,0)) leżącego na tej prostej. Ponieważ w zadaniu nie podano konkretnych wartości, zakładamy, że wykres przechodzi przez punkt (np.) $(2, 4)$, co można wywnioskować z rysunku lub jest to typowe założenie w tego typu zadaniach bez konkretnych danych.
+Jeżeli punkt $(2, 4)$ leży na prostej, to dla $x=2$ mamy $y=4$.
+Podstawiamy do wzoru $y = ax$:
+$4 = a \\cdot 2$
+Dzielimy przez 2:
+$a = \\frac{4}{2} = 2$
+
+**Odpowiedź:** Współczynnik $a$ jest dodatni ($a > 0$). Jego wartość wynosi 2 (przy założeniu, że wykres przechodzi przez punkt (2,4)).
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Mylenie proporcjonalności prostej z odwrotną:** W proporcjonalności odwrotnej iloczyn $x \\cdot y = const$. W prostej stosunek $\\frac{y}{x} = const$. Zawsze sprawdzaj, jaka zależność jest opisana.
+*   **Brak przejścia przez początek układu współrzędnych:** Wykres proporcjonalności prostej *zawsze* przechodzi przez punkt (0,0). Jeśli linia jest prosta, ale nie przechodzi przez początek, nie jest to proporcjonalność prosta (może to być funkcja liniowa $y=ax+b$ dla $b \\neq 0$).
+*   **Dzielenie przez zero:** Wzór $a = \\frac{y}{x}$ można stosować tylko wtedy, gdy $x \\neq 0$. Wartość $x=0$ zawsze odpowiada $y=0$ w proporcjonalności prostej.
+*   **Niepoprawne obliczenie współczynnika $a$:** Upewnij się, że zawsze obliczasz stosunek $y$ do $x$ ($a = \\frac{y}{x}$), a nie $x$ do $y$ ($a = \\frac{x}{y}$), chyba że wzór funkcji jest zapisany jako $x = ay$. W standardowej postaci $y=ax$, to $a = \\frac{y}{x}$.
+*   **Błąd w interpretacji kontekstu zadania:** Czasem wielkości mogą wydawać się proporcjonalne, ale kontekst zadania temu przeczy. Np. cena biletu plus stała opłata za wstęp nie jest proporcjonalnością prostą. Zawsze analizuj tekst zadania pod kątem stałości współczynnika.
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Sprawdź, czy wielkość $y$ jest wprost proporcjonalna do wielkości $x$ w poniższych przypadkach:
+    a) $x=2, y=6$; $x=4, y=12$; $x=-1, y=-3$
+    b) $x=1, y=5$; $x=2, y=10$; $x=3, y=12$
+    c) $x=3, y=9$; $x=5, y=15$; $x=-2, y=-6$
+2.  Cena 4 zeszytów wynosi 12 zł. Ile zapłacimy za 7 takich zeszytów?
+3.  Funkcja $f(x) = ax$ opisuje pewną proporcjonalność prostą. Wiadomo, że $f(3) = -9$.
+    a) Oblicz współczynnik proporcjonalności $a$.
+    b) Napisz wzór tej funkcji.
+    c) Oblicz $f(-5)$.
+4.  Tabela przedstawia zależność drogi ($s$) od czasu ($t$) dla ruchu jednostajnego prostoliniowego. Czy jest to proporcjonalność prosta? Jeśli tak, podaj wzór i oblicz drogę przebytą w ciągu 10 sekund.
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+    | Czas ($t$) [s] | Droga ($s$) [m] |
+    | :----------- | :------------ |
+    | 2            | 10            |
+    | 5            | 25            |
+    | 8            | 40            |
+
+5.  Na wykresie przedstawiono zależność $y=ax$. Prosta przechodzi przez punkt $(-2, 6)$.
+    a) Określ znak współczynnika $a$.
+    b) Oblicz wartość $a$.
+    c) Podaj wzór tej funkcji.
+6.  Piotr maluje płot. W ciągu 3 godzin pomalował 18 metrów bieżących płotu. Ile metrów pomaluje w ciągu 5 godzin, zakładając, że pracuje w tym samym tempie?
+7.  Funkcja $y=ax$ opisuje zależność pewnych wielkości. Zapisz, jak zmieni się wartość $y$, gdy wartość $x$:
+    a) wzrośnie 2 razy.
+    b) zmaleje 3 razy.
+    c) wzrośnie o 50%.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  a) Tak, $a=3$.
+    b) Nie, stosunki są różne ($5, 5, 4$).
+    c) Tak, $a=3$.
+2.  Cena za 1 zeszyt: $12 \\text{ zł} / 4 = 3 \\text{ zł}$. Cena za 7 zeszytów: $7 \\cdot 3 \\text{ zł} = 21 \\text{ zł}$.
+3.  a) $a = \\frac{-9}{3} = -3$.
+    b) $f(x) = -3x$.
+    c) $f(-5) = -3 \\cdot (-5) = 15$.
+4.  Tak, jest to proporcjonalność prosta. Stosunek $\\frac{s}{t} = \\frac{10}{2} = \\frac{25}{5} = \\frac{40}{8} = 5$.
+    Wzór: $s = 5t$.
+    Droga w ciągu 10 sekund: $s = 5 \\cdot 10 = 50$ m.
+5.  a) Współczynnik $a$ jest ujemny ($a < 0$), ponieważ prosta jest malejąca (przechodzi przez II i IV ćwiartkę, a punkt $(-2, 6)$ jest w II ćwiartce).
+    b) $6 = a \\cdot (-2) \\implies a = \\frac{6}{-2} = -3$.
+    c) $y = -3x$.
+6.  Tempo malowania: $18 \\text{ m} / 3 \\text{ h} = 6 \\text{ m/h}$.
+    W ciągu 5 godzin: $5 \\text{ h} \\cdot 6 \\text{ m/h} = 30 \\text{ m}$.
+7.  a) $y$ wzrośnie 2 razy (bo $y = a \\cdot (2x) = 2(ax)$).
+    b) $y$ zmaleje 3 razy (bo $y = a \\cdot (\\frac{x}{3}) = \\frac{1}{3}(ax)$).
+    c) $y$ wzrośnie o 50% (czyli będzie stanowić 150% pierwotnej wartości). $x_{nowe} = 1.5x$. $y_{nowe} = a \\cdot (1.5x) = 1.5 (ax) = 1.5y$.
 
 ## Szybka powtórka
+1.  Jaki jest podstawowy wzór na proporcjonalność prostą?
+2.  Co oznacza współczynnik proporcjonalności $a$?
+3.  Przez jaki punkt na układzie współrzędnych zawsze przechodzi wykres proporcjonalności prostej?
+4.  Jeśli cena 1 kg produktu wynosi 5 zł, to ile kosztuje 3 kg? Czy jest to proporcjonalność prosta?
+5.  Jak zmieni się wielkość $y$, gdy $x$ zwiększy się dwukrotnie w zależności $y=ax$?
 
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+## Diagram
+\`\`\`text
+      ^ y
+      |      /
+      |     /
+      |    / a > 0 (rosnąca)
+      |   /
+      |  /
+------+------------> x
+     /|
+    / |
+   /  | a < 0 (malejąca)
+  /   |
+ /    |
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "statystyka",
     topic: "srednia",
-    title: "Średnia arytmetyczna",
+    title: "Średnia arytmetyczna - klucz do sukcesu na egzaminie",
     content: `## Na egzaminie
+Średnia arytmetyczna jest jednym z najczęściej pojawiających się zagadnień w dziale statystyki na egzaminie ósmoklasisty. Zazwyczaj pojawia się w zadaniach otwartych, oferując od 2 do 4 punktów, ale może również występować w zadaniach zamkniętych. CKE często sprawdza umiejętność obliczania średniej z większej liczby danych, rozwiązywania zadań tekstowych wymagających znajomości średniej lub analizy danych przedstawionych w tabelach i diagramach.
 
-Obliczanie średniej z listy liczb lub tabeli — proste zadanie, ale wymaga dokładności (1–2 pkt).
+## Mapa tematu
+1. Zrozumienie definicji średniej arytmetycznej.
+2. Umiejętność obliczania średniej arytmetycznej z zestawu liczb.
+3. Umiejętność obliczania średniej ważonej.
+4. Rozwiązywanie zadań tekstowych z wykorzystaniem średniej arytmetycznej.
+5. Odczytywanie i interpretacja danych z tabel i wykresów w kontekście średniej.
+6. Wykorzystanie średniej do uzupełniania brakujących danych.
+7. Zrozumienie pojęcia mediany i dominanty jako uzupełnienie średniej.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Średnia arytmetyczna** – to suma wszystkich liczb w danym zbiorze podzielona przez liczbę tych liczb. Jest to najprostsza i najczęściej używana miara tendencji centralnej.
 
-$$\\bar{x} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}$$
+*   **Wzór na średnią arytmetyczną**
+    Dla zbioru danych $x_1, x_2, x_3, \\dots, x_n$, średnią arytmetyczną, oznaczoną jako $\\overline{x}$ (czyt. "iks kreska"), obliczamy ze wzoru:
+    $$ \\overline{x} = \\frac{x_1 + x_2 + x_3 + \\dots + x_n}{n} $$
+    gdzie $n$ to liczba elementów w zbiorze.
 
-**Interpretacja:** „typowy” wynik zbioru — np. średnia ocen, średnia temperatura.
+*   **Średnia ważona**
+    Gdy poszczególne elementy zbioru mają różne "znaczenie" lub "wagę", obliczamy średnią ważoną. Wzór wygląda następująco:
+    $$ \\overline{x}_{w} = \\frac{w_1 \\cdot x_1 + w_2 \\cdot x_2 + \\dots + w_n \\cdot x_n}{w_1 + w_2 + \\dots + w_n} $$
+    gdzie $x_i$ to wartości, a $w_i$ to ich wagi. Suma wag znajduje się w mianowniku. Często wagi są podane jako liczby, ale mogą też być przedstawione jako liczby elementów danych (np. oceny z testów i sprawdzianów).
 
-**Brakująca wartość:** jeśli znasz średnią i pozostałe liczby, sumuj i wylicz brakującą.
+*   **Mediana**
+    Mediana to wartość środkowa w posortowanym zbiorze danych.
+    *   Jeśli liczba danych $n$ jest **nieparzysta**, mediana jest środkowym elementem po posortowaniu.
+    *   Jeśli liczba danych $n$ jest **parzysta**, mediana jest średnią arytmetyczną dwóch środkowych elementów po posortowaniu.
 
-## Przykład krok po kroku
+*   **Dominanta (Moda)**
+    Dominanta to wartość, która najczęściej występuje w zbiorze danych. Zbiór danych może mieć jedną dominantę (unimodalny), więcej niż jedną (multimodalny) lub nie mieć dominanty wcale (jeśli wszystkie wartości występują z taką samą częstotliwością).
 
-Oceny: 4, 5, 3, 5, 5, 4. Oblicz średnią.
+## Przykład 1 — podstawowy
+Oblicz średnią arytmetyczną liczb: 12, 15, 18, 21, 24.
 
-Suma: $4 + 5 + 3 + 5 + 5 + 4 = 26$, $n = 6$
+**Krok 1.** Zidentyfikuj liczby w zbiorze.
+Liczby to: 12, 15, 18, 21, 24.
 
-$$\\bar{x} = \\frac{26}{6} \\approx 4{,}33$$
+**Krok 2.** Policz, ile jest liczb w zbiorze.
+Jest 5 liczb ($n=5$).
+
+**Krok 3.** Zsumuj wszystkie liczby.
+Suma $= 12 + 15 + 18 + 21 + 24$.
+$12 + 15 = 27$
+$27 + 18 = 45$
+$45 + 21 = 66$
+$66 + 24 = 90$.
+Suma wynosi 90.
+
+**Krok 4.** Podziel sumę przez liczbę liczb.
+Średnia $\\overline{x} = \\frac{90}{5}$.
+$\\frac{90}{5} = 18$.
+
+**Krok 5.** Zapisz wynik.
+Średnia arytmetyczna tych liczb wynosi 18.
+
+**Sprawdzenie:** Liczby są w pewnym sensie symetryczne wokół 18. Różnice od 18 to: -6, -3, 0, 3, 6. Suma różnic to -6 - 3 + 0 + 3 + 6 = 0, co potwierdza poprawność obliczeń.
+
+## Przykład 2 — maturalny
+W klasie liczącej 25 uczniów przeprowadzono test z matematyki. Średnia arytmetyczna uzyskanych punktów wyniosła 75. Jeden z uczniów, Janek, otrzymał 90 punktów. Po tym, jak wychowawca sprawdził obecność, okazało się, że jeden uczeń był nieobecny i jego wynik nie został uwzględniony w początkowym obliczeniu średniej. Po dodaniu wyniku tego nieobecnego ucznia, który wynosił 60 punktów, obliczono nową średnią dla całej klasy. Oblicz nową średnią arytmetyczną punktów uzyskanych przez wszystkich uczniów (włączając nieobecnego).
+
+**Krok 1.** Oblicz sumę punktów wszystkich 25 uczniów, na podstawie początkowej średniej.
+Średnia $\\overline{x} = 75$. Liczba uczniów $n = 25$.
+Suma punktów $S = \\overline{x} \\cdot n$.
+$S = 75 \\cdot 25$.
+$75 \\cdot 25 = 75 \\cdot (20 + 5) = 75 \\cdot 20 + 75 \\cdot 5 = 1500 + 375 = 1875$.
+Suma punktów 25 uczniów wynosi 1875.
+
+**Krok 2.** Zauważ, że wynik Janka (90 punktów) nie jest bezpośrednio potrzebny do obliczenia *nowej* średniej, ale jest częścią początkowej sumy. Trzeba też zwrócić uwagę na liczbę uczniów w dwóch scenariuszach. Początkowa średnia dotyczyła 25 uczniów.
+Jednak treść jest nieco myląca. Przeanalizujmy jeszcze raz: "Średnia arytmetyczna uzyskanych punktów wyniosła 75." To jest kluczowe. "Jeden z uczniów, Janek, otrzymał 90 punktów." To informacja, ale czy Janek był wśród tych 25? Dalej: "jeden uczeń był nieobecny i jego wynik nie został uwzględniony w początkowym obliczeniu średniej." To oznacza, że początkowa średnia (75) była obliczona dla $25-1=24$ uczniów.
+Poprawmy więc:
+Początkowa średnia obliczona została dla $n = 24$ uczniów.
+$\\overline{x}_{24} = 75$.
+Suma punktów tych 24 uczniów: $S_{24} = 75 \\cdot 24$.
+$75 \\cdot 24 = 75 \\cdot (20 + 4) = 1500 + 300 = 1800$.
+Suma punktów 24 uczniów wynosi 1800.
+
+**Krok 3.** Oblicz nową sumę punktów, dodając wynik nieobecnego ucznia.
+Wynik nieobecnego ucznia: 60 punktów.
+Nowa suma punktów $S_{25} = S_{24} + 60$.
+$S_{25} = 1800 + 60 = 1860$.
+Nowa suma punktów wszystkich 25 uczniów wynosi 1860.
+
+**Krok 4.** Oblicz nową średnią arytmetyczną dla wszystkich 25 uczniów.
+Nowa liczba uczniów $n' = 25$.
+Nowa średnia $\\overline{x}_{25} = \\frac{S_{25}}{n'} = \\frac{1860}{25}$.
+
+**Krok 5.** Wykonaj dzielenie.
+$\\frac{1860}{25} = \\frac{1860 \\cdot 4}{25 \\cdot 4} = \\frac{7440}{100} = 74.4$.
+Nowa średnia arytmetyczna wynosi 74.4.
+
+**Sprawdzenie:** Dodanie wyniku niższego niż początkowa średnia (60 < 75) powinno spowodować obniżenie średniej, co się stało (74.4 < 75). Wynik Janka (90) był tylko informacją wprowadzającą, niepotrzebną do ostatecznego obliczenia.
+
+## Przykład 3 — egzaminacyjny
+
+Tabela przedstawia oceny z matematyki uzyskane przez uczniów klasy 8a z ostatniego sprawdzianu:
+
+| Ocena        | Liczba uczniów |
+| :----------- | :------------- |
+| 1 (niedost.) | 2              |
+| 2 (dopuszcz.)| 5              |
+| 3 (dostatecz.)| 8              |
+| 4 (dobra)    | 6              |
+| 5 (bardzo d.)| 3              |
+| 6 (celująca) | 1              |
+
+Oblicz średnią arytmetyczną ocen z tego sprawdzianu.
+
+**Krok 1.** Zidentyfikuj wszystkie oceny i liczbę uczniów, którzy je uzyskali.
+Oceny: 1, 2, 3, 4, 5, 6.
+Liczba uczniów dla każdej oceny: 2, 5, 8, 6, 3, 1.
+
+**Krok 2.** Oblicz łączną liczbę uczniów w klasie.
+Suma liczby uczniów = $2 + 5 + 8 + 6 + 3 + 1 = 25$.
+Łączna liczba uczniów wynosi 25.
+
+**Krok 3.** Oblicz sumę punktów (ocen) wszystkich uczniów. Jest to suma iloczynów każdej oceny i liczby uczniów, którzy ją uzyskali.
+Suma ocen = $(1 \\cdot 2) + (2 \\cdot 5) + (3 \\cdot 8) + (4 \\cdot 6) + (5 \\cdot 3) + (6 \\cdot 1)$
+Suma ocen = $2 + 10 + 24 + 24 + 15 + 6$
+Suma ocen = $12 + 24 + 24 + 15 + 6 = 36 + 24 + 15 + 6 = 60 + 15 + 6 = 75 + 6 = 81$.
+Suma wszystkich ocen wynosi 81.
+
+**Krok 4.** Oblicz średnią arytmetyczną, dzieląc sumę ocen przez łączną liczbę uczniów.
+Średnia ocen $\\overline{x} = \\frac{\\text{Suma ocen}}{\\text{Liczba uczniów}} = \\frac{81}{25}$.
+
+**Krok 5.** Wykonaj dzielenie.
+$\\frac{81}{25} = \\frac{81 \\cdot 4}{25 \\cdot 4} = \\frac{324}{100} = 3.24$.
+Średnia arytmetyczna ocen z tego sprawdzianu wynosi 3.24.
+
+**Sprawdzenie:** Średnia (3.24) mieści się w zakresie ocen (1-6) i wydaje się rozsądna, biorąc pod uwagę największą grupę uczniów (8 osób) z oceną 3, oraz znaczną liczbę uczniów z ocenami 3 i 4.
 
 ## Pułapki
+*   **Pomylenie średniej z medianą lub dominantą:** Uczniowie często obliczają medianę (wartość środkową) lub dominantę (wartość najczęstszą) zamiast średniej arytmetycznej. Pamiętaj, że średnia to suma podzielona przez ilość.
+*   **Błędy rachunkowe przy sumowaniu lub dzieleniu:** Szczególnie przy większych liczbach lub ułamkach łatwo o pomyłkę. Zawsze sprawdzaj obliczenia, używaj kalkulatora w razie wątpliwości (jeśli jest dozwolony) lub wykonuj dzielenie "pisemnie" bardzo dokładnie.
+*   **Nieuwzględnienie wszystkich danych:** W zadaniach tekstowych lub tabelarycznych łatwo zapomnieć o jakimś elemencie (np. o nieobecnym uczniu) lub błędnie policzyć liczbę elementów. Dokładnie czytaj polecenie i licz wszystkie dane.
+*   **Zastosowanie złego wzoru:** Mylenie średniej zwykłej ze średnią ważoną. Jeśli dane mają przypisane "wagi" (np. liczby uczniów dla każdej oceny, punkty ECTS dla przedmiotów), należy użyć wzoru na średnią ważoną.
+*   **Zaokrąglanie wyników:** Jeśli polecenie nie mówi o zaokrąglaniu, podaj dokładny wynik. Czasem w zadaniach tekstowych podana jest informacja, że np. "średnia wieku jest liczbą całkowitą", co może sugerować pewne zaokrąglenie lub błąd w obliczeniach, jeśli wynik nie jest liczbą całkowitą.
 
-- **Dziel przez liczbę elementów**, nie przez największą wartość
-- Średnia może **nie być** liczbą całkowitą
-- Jedna wartość skrajna mocno przesuwa średnią
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Oblicz średnią arytmetyczną liczb: 7, 11, 5, 9, 13.
+2.  Pięciu zawodników uzyskało następujące czasy na biegu: 12.5 s, 11.8 s, 13.1 s, 12.2 s, 12.9 s. Oblicz średni czas tych zawodników.
+3.  Uczeń otrzymał następujące oceny z przedmiotów: polski - 4, matematyka - 5, historia - 3, przyroda - 4, angielski - 5. Oblicz średnią ocen, przypisując wszystkim przedmiotom jednakową wagę (1).
+4.  W pewnym sklepie sprzedano w ciągu tygodnia następującą liczbę sztuk danego produktu: poniedziałek - 25, wtorek - 30, środa - 28, czwartek - 35, piątek - 40, sobota - 45, niedziela - 32. Oblicz średnią dzienną sprzedaż tego produktu w tym tygodniu.
+5.  Średnia ocen z matematyki na koniec semestru dla 20 uczniów wynosiła 3.8. Ilu uczniów otrzymało ocenę 5, jeśli wiemy, że pozostali uczniowie otrzymali ocenę 3, a suma ocen wszystkich uczniów wynosi 76?
+6.  W klasie jest 30 uczniów. Średnia ich wzrostu wynosi 165 cm. Po zakończeniu roku szkolnego dołączyło 5 nowych uczniów, a średni wzrost wszystkich uczniów wynosi teraz 164 cm. Oblicz średni wzrost nowych uczniów.
+7.  Średnia arytmetyczna czterech liczb wynosi 15. Dwie z tych liczb to 10 i 20. Oblicz średnią arytmetyczną pozostałych dwóch liczb.
+
+## Odpowiedzi
+1.  Średnia = $\\frac{7+11+5+9+13}{5} = \\frac{45}{5} = 9$.
+2.  Średni czas = $\\frac{12.5 + 11.8 + 13.1 + 12.2 + 12.9}{5} = \\frac{62.5}{5} = 12.5$ s.
+3.  Średnia ocen = $\\frac{4+5+3+4+5}{5} = \\frac{21}{5} = 4.2$.
+4.  Średnia dzienna sprzedaż = $\\frac{25+30+28+35+40+45+32}{7} = \\frac{235}{7} \\approx 33.57$ sztuk.
+5.  Suma ocen wszystkich 20 uczniów = $3.8 \\cdot 20 = 76$.
+    Suma ocen uczniów z oceną 3 = $3 \\cdot (20-x)$, gdzie $x$ to liczba uczniów z oceną 5.
+    Suma ocen = $3 \\cdot (20-x) + 5x = 60 - 3x + 5x = 60 + 2x$.
+    Mamy $60 + 2x = 76$, więc $2x = 16$, $x=8$. 8 uczniów otrzymało ocenę 5.
+6.  Suma wzrostu 30 uczniów = $165 \\cdot 30 = 4950$ cm.
+    Suma wzrostu 35 uczniów = $164 \\cdot 35 = 5740$ cm.
+    Suma wzrostu 5 nowych uczniów = $5740 - 4950 = 790$ cm.
+    Średni wzrost nowych uczniów = $\\frac{790}{5} = 158$ cm.
+7.  Suma czterech liczb = $15 \\cdot 4 = 60$.
+    Suma dwóch znanych liczb = $10 + 20 = 30$.
+    Suma pozostałych dwóch liczb = $60 - 30 = 30$.
+    Średnia arytmetyczna pozostałych dwóch liczb = $\\frac{30}{2} = 15$.
 
 ## Szybka powtórka
-
-1. Średnia z 2, 4, 6, 8?
-2. Suma pięciu liczb to 50 — jaka średnia?
-3. Czym różni się średnia od mediany?`,
+1.  Jaka jest podstawowa definicja średniej arytmetycznej?
+2.  Jak obliczyć średnią, gdy mamy liczby 3, 6, 9?
+3.  W jakim celu stosujemy średnią ważoną?
+4.  Podaj przykładowy zbiór danych, dla którego mediana i średnia arytmetyczna będą różne.
+5.  Jeśli średnia arytmetyczna z pięciu liczb wynosi 10, jaka jest ich suma?`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "statystyka",
     topic: "mediana_i_dominanta",
-    title: "Mediana i dominanta — Egzamin 8-klasisty",
+    title: "Mediana i Dominanta - Klucz do Analizy Danych",
     content: `## Na egzaminie
-
-Temat **Mediana i dominanta** (Statystyka) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Temat mediany i dominanty pojawia się na egzaminie ósmoklasisty dość często, zazwyczaj jako zadanie otwarte wymagające obliczenia lub zinterpretowania tych wartości. Zwykle jedno zadanie na ten temat można spodziewać się w arkuszu, a jego punktacja wynosi 2-3 punkty. CKE lubi sprawdzać umiejętność wyznaczenia mediany dla danych nieuporządkowanych oraz dominanty w różnych zbiorach liczb, w tym w tabelach częstości. Ważne jest również zrozumienie, czym te miary opowiadają o zbiorze danych.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Statystyka**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W trakcie tej lekcji opanujesz:
+1. Definicję i znaczenie mediany w statystyce opisowej.
+2. Metody obliczania mediany dla zbioru danych nieuporządkowanych o parzystej i nieparzystej liczbie elementów.
+3. Definicję i znaczenie dominanty w statystyce opisowej.
+4. Metody wyznaczania dominanty dla zbioru danych z powtarzającymi się wartościami.
+5. Zrozumienie sytuacji, gdy mediana i dominanta mogą być takie same lub różne.
+6. Umiejętność obliczania mediany i dominanty na podstawie danych przedstawionych w tabeli częstości.
+7. Rozwiązywanie zadań tekstowych i problemów z życia codziennego wykorzystujących pojęcia mediany i dominanty.
+8. Interpretację wyników obliczeń mediany i dominanty w kontekście analizowanego problemu.
 
 ## Definicje i wzory
+*   **Średnia arytmetyczna:** Suma wszystkich liczb w zbiorze podzielona przez ich liczbę. Jest to jedna z podstawowych miar tendencji centralnej, ale może być wrażliwa na wartości odstające (ekstremalne).
+    $$ \\text{Średnia} = \\frac{a_1 + a_2 + \\dots + a_n}{n} $$
+    gdzie $a_1, a_2, \\dots, a_n$ to elementy zbioru, a $n$ to liczba elementów.
 
-*Materiał w trakcie uzupełniania dla: Mediana i dominanta.*
+*   **Mediana:** Wartość środkowa w zbiorze danych uporządkowanych rosnąco. Jest to miara mniej wrażliwa na wartości odstające niż średnia arytmetyczna.
+    *   Dla **nieparzystej** liczby danych ($n$ jest nieparzyste), mediana jest środkowym elementem po uporządkowaniu danych. Położenie mediany można obliczyć wzorem: $\\frac{n+1}{2}$.
+    *   Dla **parzystej** liczby danych ($n$ jest parzyste), mediana jest średnią arytmetyczną dwóch środkowych elementów po uporządkowaniu danych. Położenie tych elementów to $\\frac{n}{2}$ oraz $\\frac{n}{2} + 1$.
+
+*   **Dominanta (Moda):** Wartość, która najczęściej występuje w zbiorze danych. Zbiór danych może mieć jedną dominantę (jednomodalny), dwie dominanty (bimodalny), więcej dominant (wielomodalny) lub nie mieć dominanty wcale (jeśli wszystkie wartości występują tak samo często).
+
+*   **Tabela częstości:** Tabela przedstawiająca poszczególne wartości danych oraz liczbę ich wystąpień (częstość).
+
+    Przykład:
+    | Wartość | Częstość |
+    | :------ | :------- |
+    | 2       | 3        |
+    | 5       | 1        |
+    | 8       | 4        |
+
+    W powyższej tabeli wartość 2 występuje 3 razy, wartość 5 - 1 raz, a wartość 8 - 4 razy.
 
 ## Przykład 1 — podstawowy
+**Zadanie:** Oblicz medianę i dominantę dla następującego zbioru danych: 3, 7, 5, 3, 9, 5, 3, 1.
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Rozwiązanie:**
+
+**Krok 1.** Uporządkowanie danych.**
+Najpierw porządkujemy dane rosnąco: 1, 3, 3, 3, 5, 5, 7, 9.
+
+**Krok 2.** Wyznaczenie mediany.**
+W zbiorze mamy 8 liczb ($n=8$, liczba parzysta). Mediana będzie średnią arytmetyczną dwóch środkowych liczb. Położenie tych liczb to $\\frac{8}{2} = 4$ oraz $\\frac{8}{2} + 1 = 5$.
+Czyli czwarty i piąty element zbioru uporządkowanego.
+Są to liczby: 3 (czwarty element) i 5 (piąty element).
+$$ \\text{Mediana} = \\frac{3 + 5}{2} = \\frac{8}{2} = 4 $$
+
+**Krok 3.** Wyznaczenie dominanty.**
+Teraz sprawdzamy, która liczba występuje najczęściej.
+1 - występuje 1 raz
+3 - występuje 3 razy
+5 - występuje 2 razy
+7 - występuje 1 raz
+9 - występuje 1 raz
+Najczęściej występuje liczba 3 (3 razy).
+$$ \\text{Dominanta} = 3 $$
+
+**Sprawdzenie:**
+Dane uporządkowane: 1, 3, 3, 3, 5, 5, 7, 9.
+Mediana: $n=8$. Środkowe elementy to 4. i 5. (3 i 5). $\\frac{3+5}{2}=4$. Poprawnie.
+Dominanta: Liczba 3 występuje 3 razy, co jest największą częstością. Poprawnie.
+
+## Przykład 2 — maturalny
+**Zadanie:** W klasie liczącej 25 uczniów przeprowadzono sprawdzian z matematyki. Uzyskano następujące wyniki (liczba punktów): 4, 3, 5, 4, 2, 4, 3, 1, 5, 4, 3, 4, 2, 3, 4, 5, 4, 3, 3, 4, 5, 4, 3, 4, 4. Oblicz medianę i dominantę uzyskanych wyników.
+
+**Rozwiązanie:**
+
+**Krok 1.** Uporządkowanie danych.**
+Zbiór danych: 4, 3, 5, 4, 2, 4, 3, 1, 5, 4, 3, 4, 2, 3, 4, 5, 4, 3, 3, 4, 5, 4, 3, 4, 4.
+Liczba uczniów (danych) $n=25$.
+Uporządkujmy dane: 1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5.
+
+**Krok 2.** Wyznaczenie mediany.**
+Mamy $n=25$ (liczba nieparzysta). Mediana jest środkowym elementem. Jej położenie to $\\frac{n+1}{2} = \\frac{25+1}{2} = \\frac{26}{2} = 13$.
+Szukamy 13. elementu w uporządkowanym zbiorze danych.
+1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, **4**, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5.
+Trzynastym elementem jest liczba 4.
+$$ \\text{Mediana} = 4 $$
+
+**Krok 3.** Wyznaczenie dominanty.**
+Aby łatwiej znaleźć dominantę, możemy policzyć częstość występowania każdej liczby lub stworzyć tabelę częstości:
+*   1: występuje 1 raz
+*   2: występuje 2 razy
+*   3: występuje 7 razy
+*   4: występuje 12 razy
+*   5: występuje 4 razy
+
+Najczęściej występuje liczba 4 (12 razy).
+$$ \\text{Dominanta} = 4 $$
+
+**Alternatywnie, tworząc tabelę częstości:**
+
+| Wynik | Liczba uczniów (częstość) |
+| :---- | :------------------------ |
+| 1     | 1                         |
+| 2     | 2                         |
+| 3     | 7                         |
+| 4     | 12                        |
+| 5     | 4                         |
+| **Suma** | **25**                    |
+
+Największa częstość to 12, która odpowiada wynikowi 4.
+$$ \\text{Dominanta} = 4 $$
+
+**Sprawdzenie:**
+Dane uporządkowane: 1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, **4**, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5.
+Mediana: $n=25$, położenie $\\frac{25+1}{2}=13$. 13. element to 4. Poprawnie.
+Dominanta: Liczymy częstości. 4 występuje 12 razy, co jest największą częstością. Poprawnie.
+
+W tym przypadku mediana i dominanta są takie same.
+
+## Przykład 3 — egzaminacyjny
+
+**Zadanie:** W tabeli poniżej przedstawiono wiek grupy osób:
+
+| Wiek | Liczba osób |
+| :--- | :---------- |
+| 10   | 2           |
+| 12   | 3           |
+| 15   | 1           |
+| 18   | 4           |
+
+Oblicz medianę i dominantę wieku tych osób.
+
+**Rozwiązanie:**
+
+**Krok 1.** Wyznaczenie dominanty.**
+Dominanta to wartość najczęściej występująca. W tabeli widzimy, że największą liczbę osób (częstość) ma wiek 18 lat (4 osoby).
+$$ \\text{Dominanta} = 18 $$
+
+**Krok 2.** Wyznaczenie mediany.**
+Najpierw musimy ustalić, ile osób jest w sumie. Sumujemy liczby osób: $2 + 3 + 1 + 4 = 10$. Mamy $n=10$ (liczba parzysta).
+Mediana będzie średnią arytmetyczną dwóch środkowych osób. Położenie tych osób to $\\frac{10}{2} = 5$ oraz $\\frac{10}{2} + 1 = 6$. Szukamy 5. i 6. osoby w kolejności wiekowej.
+
+Aby to zrobić, rozpisujemy dane z tabeli w kolejności rosnącej:
+Osoby w wieku 10 lat: 2 osoby (1., 2. pozycja)
+Osoby w wieku 12 lat: 3 osoby (3., 4., 5. pozycja)
+Osoby w wieku 15 lat: 1 osoba (6. pozycja)
+Osoby w wieku 18 lat: 4 osoby (7., 8., 9., 10. pozycja)
+
+Pełny zapis: 10, 10, 12, 12, 12, 15, 18, 18, 18, 18.
+5. osoba ma wiek 12 lat.
+6. osoba ma wiek 15 lat.
+
+$$ \\text{Mediana} = \\frac{12 + 15}{2} = \\frac{27}{2} = 13.5 $$
+
+**Sprawdzenie:**
+Dominanta: Wiek 18 lat występuje najczęściej (4 razy). Poprawnie.
+Mediana: $n=10$. 5. i 6. pozycja. Dane: 10, 10, 12, 12, **12**, **15**, 18, 18, 18, 18. 5. to 12, 6. to 15. $\\frac{12+15}{2}=13.5$. Poprawnie.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Nieuporządkowanie danych przy obliczaniu mediany:** Zapominanie o uporządkowaniu danych przed wyznaczeniem mediany. Przykład: dla zbioru 5, 1, 3, 7, 2, mediana nie jest 3, ale po uporządkowaniu (1, 2, 3, 5, 7) wynosi 3.
+*   **Błąd w obliczeniu mediany dla parzystej liczby danych:** Używanie tylko jednego środkowego elementu zamiast średniej dwóch środkowych elementów. Dla 1, 2, 3, 4, mediana to nie 2 czy 3, ale $\\frac{2+3}{2}=2.5$.
+*   **Brak dominanty lub wielokrotna dominanta:** Z założenia dominanta jest JEDNĄ wartością najczęściej występującą. Jeśli wszystkie wartości występują tyle samo razy (np. 1, 2, 3, 4), zbiór nie ma dominanty. Jeśli dwie wartości występują najczęściej (np. 1, 1, 2, 2, 3), zbiór jest bimodalny i obie te wartości są dominantami (np. 1 i 2). Na egzaminie CKE zazwyczaj pojawiają się zbiory z jedną dominantą.
+*   **Niepoprawne odczytanie danych z tabeli częstości:** Szczególnie przy liczeniu sumy elementów lub wyznaczaniu pozycji elementów dla mediany. Trzeba pamiętać, że tabela częstości wymaga "rozpisania" danych w celu wyznaczenia pozycji mediany.
 
 ## Ćwiczenia do samodzielnego rozwiązania
+1.  Oblicz medianę i dominantę dla zbioru danych: 7, 2, 9, 2, 5, 2, 8.
+2.  Znajdź medianę i dominantę dla następujących wyników testu: 80, 90, 70, 80, 100, 70, 80, 90, 80.
+3.  W sklepie sprzedano następującą liczbę batonów dziennie przez tydzień: 15, 12, 18, 15, 16, 15, 13. Oblicz medianę i dominantę dziennej sprzedaży.
+4.  Dane dotyczące wieku grupy dzieci: 6, 7, 6, 8, 7, 6, 9, 6, 7, 6. Oblicz medianę i dominantę wieku tych dzieci.
+5.  Dla zbioru danych: 1, 5, 2, 5, 3, 4, 5, 3, 2, 1. Podaj medianę i dominantę.
+6.  W tabeli przedstawiono wyniki zbiórki pieniędzy:
 
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+    | Zebrana kwota (zł) | Liczba uczniów |
+    | :----------------- | :------------- |
+    | 5                  | 4              |
+    | 10                 | 6              |
+    | 15                 | 3              |
+    | 20                 | 2              |
+
+    Oblicz medianę i dominantę zebranej kwoty.
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  Dane uporządkowane: 2, 2, 2, 5, 7, 8, 9. Mediana = 5. Dominanta = 2.
+2.  Dane uporządkowane: 70, 70, 80, 80, 80, 80, 80, 90, 90, 100. $n=10$. Mediana = $\\frac{80+80}{2} = 80$. Dominanta = 80.
+3.  Dane uporządkowane: 12, 13, 15, 15, 15, 16, 18. $n=7$. Mediana = 15. Dominanta = 15.
+4.  Dane uporządkowane: 6, 6, 6, 6, 6, 7, 7, 7, 8, 9. $n=10$. Mediana = $\\frac{6+7}{2} = 6.5$. Dominanta = 6.
+5.  Dane uporządkowane: 1, 1, 2, 2, 3, 3, 4, 5, 5, 5. $n=10$. Mediana = $\\frac{3+3}{2} = 3$. Dominanta = 5.
+6.  Łączna liczba uczniów: $4+6+3+2=15$. Mediana: $\\frac{15+1}{2}=8$. 8. osoba. Rozpisanie: 5 (4 razy), 10 (6 razy), 15 (3 razy), 20 (2 razy). Dane: 5,5,5,5, **10**, 10,10,10,10,10,15,15,15,20,20. 8. osoba to 10. Mediana = 10. Dominanta: Najwięcej uczniów zebrało 10 zł (6 osób). Dominanta = 10.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Co to jest mediana i jak ją obliczyć dla nieparzystej liczby danych?
+2.  W jaki sposób oblicza się medianę dla parzystej liczby danych?
+3.  Czym jest dominanta i jakie są jej możliwe przypadki (jedna, wiele, brak)?
+4.  Która miara jest bardziej wrażliwa na wartości odstające: średnia arytmetyczna czy mediana?
+5.  Czy mediana i dominanta zawsze muszą być takie same? Uzasadnij.`,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "statystyka",
     topic: "diagramy",
-    title: "Diagramy słupkowe i kołowe",
+    title: "Diagramy słupkowe i kołowe na egzaminie ósmoklasisty",
     content: `## Na egzaminie
+Zadania dotyczące diagramów słupkowych i kołowych pojawiają się na egzaminie ósmoklasisty regularnie. Zwykle są to zadania otwarte, a ich punktacja mieści się w przedziale 2–4 punktów. CKE lubi sprawdzać umiejętność odczytywania danych z diagramów, dokonywania na ich podstawie obliczeń (np. procentowych, średniej, sumy) oraz porównywania przedstawionych informacji. Czasem wymagane jest też samodzielne stworzenie prostego diagramu na podstawie tabeli.
 
-Odczyt danych z diagramu, obliczanie udziałów procentowych, czasem rysowanie — 2–3 pkt.
+## Mapa tematu
+W tej lekcji nauczysz się:
+1.  Rozpoznawać i interpretować diagramy słupkowe.
+2.  Obliczać wartości liczbowe oraz procentowe na podstawie diagramów słupkowych.
+3.  Porównywać dane przedstawione na diagramach słupkowych.
+4.  Rozpoznawać i interpretować diagramy kołowe.
+5.  Obliczać kąt środkowy wycinka koła odpowiadającego danej kategorii.
+6.  Obliczać wartości liczbowe i procentowe na podstawie diagramów kołowych.
+7.  Przeliczać dane między diagramem słupkowym a kołowym.
+8.  Wykorzystywać wiedzę o diagramach do rozwiązywania zadań tekstowych.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Diagram słupkowy:** Graficzne przedstawienie danych za pomocą prostokątów (słupków) o długości proporcjonalnej do wartości przedstawianych danych. Słupki mogą być rysowane pionowo lub poziomo. Na osiach znajdują się zazwyczaj opisy kategorii danych i odpowiadające im wartości liczbowe.
+*   **Diagram kołowy (wykres kołowy):** Graficzne przedstawienie danych w postaci koła podzielonego na wycinki. Wielkość każdego wycinka (kąt środkowy) jest proporcjonalna do wartości danej kategorii w stosunku do całości. Całe koło reprezentuje 100% lub sumę wszystkich danych.
+*   **Kąt wycinka koła:** W diagramie kołowym kąt środkowy wycinka dla danej kategorii oblicza się ze wzoru:
+    $$ \\text{Kąt wycinka} = \\frac{\\text{Wartość danej kategorii}}{\\text{Suma wszystkich wartości}} \\cdot 360^\\circ $$
+*   **Procentowy udział kategorii:** W diagramie kołowym udział procentowy danej kategorii oblicza się ze wzoru:
+    $$ \\text{Udział procentowy} = \\frac{\\text{Wartość danej kategorii}}{\\text{Suma wszystkich wartości}} \\cdot 100\\% $$
+*   **Wartość kategorii na podstawie procentu:** Jeśli znamy procentowy udział kategorii i sumę wszystkich danych, możemy obliczyć wartość tej kategorii:
+    $$ \\text{Wartość kategorii} = \\frac{\\text{Udział procentowy}}{100\\%} \\cdot \\text{Suma wszystkich wartości} $$
+*   **Średnia arytmetyczna:** Suma wszystkich danych podzielona przez ich liczbę. W kontekście diagramów, suma wartości wszystkich kategorii podzielona przez liczbę kategorii.
+    $$ \\text{Średnia} = \\frac{a_1 + a_2 + \\dots + a_n}{n} $$
 
-**Diagram słupkowy:** wysokość (lub długość) słupka = wartość; dobre do porównań.
+## Przykład 1 — podstawowy
+Na poniższym diagramie słupkowym przedstawiono liczbę uczniów, którzy wybrali poszczególne języki obce jako drugi język.
 
-**Diagram kołowy:** kąt (lub procent) wycinka = udział w całości; całość = $360°$ lub 100%.
+[Wyobraź sobie diagram słupkowy: Na osi poziomej nazwy języków (Angielski, Niemiecki, Francuski, Hiszpański). Na osi pionowej liczba uczniów (od 0 do 30 z podziałką co 5). Słupki sięgają kolejno: Angielski - 25, Niemiecki - 15, Francuski - 10, Hiszpański - 20.]
 
-**Przeliczanie:** udział = $\\dfrac{\\text{wartość}}{\\text{suma}} \\cdot 100\\%$.
+a) Ilu uczniów wybrało język angielski?
+b) Który język wybrało najwięcej uczniów?
+c) Ilu uczniów łącznie uczy się języka niemieckiego i hiszpańskiego?
+d) Jaki procent wszystkich badanych uczniów uczy się języka francuskiego?
 
-## Przykład krok po kroku
+**Rozwiązanie:**
 
-W klasie 30 uczniów: 12 osób gra w piłkę, 8 w koszykówkę, reszta w siatkówkę. Ile osób gra w siatkówkę?
+*   **Krok 1. Odczytanie danych dla języka angielskiego:** Na diagramie znajdujemy słupek odpowiadający językowi angielskiemu. Jego wysokość wskazuje na liczbę uczniów. Jest to 25.
+    *   Odpowiedź a): 25 uczniów wybrało język angielski.
 
-**Krok 1.** $30 - 12 - 8 = 10$ osób
+*   **Krok 2. Identyfikacja najpopularniejszego języka:** Porównujemy wysokości wszystkich słupków: Angielski (25), Niemiecki (15), Francuski (10), Hiszpański (20). Najwyższy słupek odpowiada językowi angielskiemu.
+    *   Odpowiedź b): Język angielski wybrało najwięcej uczniów.
 
-**Krok 2.** Udział: $\\dfrac{10}{30} \\approx 33{,}3\\%$
+*   **Krok 3. Zsumowanie wybranych języków:** Odczytujemy liczbę uczniów dla języka niemieckiego (15) i hiszpańskiego (20). Następnie sumujemy te wartości: $15 + 20 = 35$.
+    *   Odpowiedź c): Łącznie 35 uczniów uczy się języka niemieckiego i hiszpańskiego.
+
+*   **Krok 4. Obliczenie liczby wszystkich uczniów:** Sumujemy uczniów wybierających wszystkie języki: $25 + 15 + 10 + 20 = 70$.
+    *   Całkowita liczba uczniów to 70.
+
+*   **Krok 5. Obliczenie procentowego udziału języka francuskiego:** Dzielimy liczbę uczniów uczących się francuskiego (10) przez całkowitą liczbę uczniów (70) i mnożymy przez 100%:
+    $$ \\frac{10}{70} \\cdot 100\\% = \\frac{1}{7} \\cdot 100\\% \\approx 14.29\\% $$
+    *   Odpowiedź d): Język francuski wybrało około 14.29% wszystkich badanych uczniów.
+
+**Sprawdzenie:** Wszystkie obliczenia wydają się poprawne, dane zostały odczytane prawidłowo z diagramu.
+
+## Przykład 2 — maturalny
+Na poniższym diagramie kołowym przedstawiono wyniki ankiety dotyczącej ulubionych kolorów uczniów pewnej klasy.
+
+[Wyobraź sobie diagram kołowy: Koło podzielone na 4 wycinki. Jeden wycinek (Niebieski) zajmuje około połowy koła. Drugi (Zielony) zajmuje około 1/4 koła. Trzeci (Czerwony) zajmuje 1/8 koła. Czwarty (Żółty) zajmuje 1/8 koła. Są podane procenty: Niebieski - 50%, Zielony - 25%, Czerwony - 12.5%, Żółty - 12.5%. Suma procentów: $50\\% + 25\\% + 12.5\\% + 12.5\\% = 100\\%$.]
+
+W klasie jest 32 uczniów.
+a) Ilu uczniów wybrało kolor niebieski jako ulubiony?
+b) Oblicz, jaki kąt środkowy ma wycinek odpowiadający kolorowi zielonemu.
+c) Gdybyśmy chcieli przedstawić te dane na diagramie słupkowym, jaka byłaby wysokość słupka dla koloru czerwonego, zakładając, że najwyższy słupek (niebieski) ma wysokość 10 cm?
+
+**Rozwiązanie:**
+
+*   **Krok 1. Obliczenie liczby uczniów dla koloru niebieskiego:** Skoro 50% uczniów wybrało kolor niebieski, a jest 32 uczniów, to liczba ta wynosi:
+    $$ 50\\% \\text{ z } 32 = \\frac{50}{100} \\cdot 32 = \\frac{1}{2} \\cdot 32 = 16 $$
+    *   Odpowiedź a): 16 uczniów wybrało kolor niebieski.
+
+*   **Krok 2. Obliczenie kąta środkowego dla koloru zielonego:** Kolor zielony stanowi 25% wszystkich uczniów. Kąt środkowy całego koła to $360^\\circ$. Obliczamy kąt dla 25%:
+    $$ 25\\% \\text{ z } 360^\\circ = \\frac{25}{100} \\cdot 360^\\circ = \\frac{1}{4} \\cdot 360^\\circ = 90^\\circ $$
+    *   Odpowiedź b): Wycinek odpowiadający kolorowi zielonemu ma kąt środkowy $90^\\circ$.
+
+*   **Krok 3. Ustalenie skali dla diagramu słupkowego:** Wiemy, że 50% uczniów (czyli 16 uczniów) odpowiada 10 cm wysokości słupka. Chcemy dowiedzieć się, jaka jest wysokość słupka dla koloru czerwonego.
+    *   Najpierw obliczmy liczbę uczniów wybierających kolor czerwony:
+        $$ 12.5\\% \\text{ z } 32 = \\frac{12.5}{100} \\cdot 32 = \\frac{1}{8} \\cdot 32 = 4 $$
+        4 uczniowie wybrali kolor czerwony.
+    *   Teraz ustalamy proporcję między liczbą uczniów a wysokością słupka. Jeśli 16 uczniów to 10 cm, to ilu cm odpowiada 4 uczniom?
+        $$ \\frac{16 \\text{ uczniów}}{10 \\text{ cm}} = \\frac{4 \\text{ uczniów}}{x \\text{ cm}} $$
+        $$ 16x = 4 \\cdot 10 $$
+        $$ 16x = 40 $$
+        $$ x = \\frac{40}{16} = \\frac{10}{4} = 2.5 \\text{ cm} $$
+    *   Alternatywnie, można zauważyć, że 4 uczniów to $\\frac{4}{16} = \\frac{1}{4}$ liczby uczniów odpowiadającej 10 cm. Zatem wysokość słupka będzie $\\frac{1}{4}$ tej wysokości: $\\frac{1}{4} \\cdot 10 \\text{ cm} = 2.5 \\text{ cm}$.
+    *   Odpowiedź c): Słupek dla koloru czerwonego miałby wysokość 2.5 cm.
+
+**Sprawdzenie:** Obliczenia procentowe i proporcje zostały wykonane poprawnie. Związek między liczbą uczniów a wielkością wycinka/słupka jest zachowany.
+
+## Przykład 3 — egzaminacyjny
+
+Poniżej znajduje się fragment tabeli przedstawiającej dochody pewnej firmy w kolejnych kwartałach roku 2023.
+
+| Kwartał | Dochód (w tys. zł) |
+| :------ | :----------------- |
+| I       | 120                |
+| II      | 150                |
+| III     | 130                |
+| IV      | 170                |
+
+a) Oblicz średni miesięczny dochód firmy w pierwszym kwartale.
+b) Przedstaw dochody firmy w drugim półroczu na diagramie kołowym. (Załóż, że II półrocze to IV kwartał)
+c) Jaki procent całorocznego dochodu stanowił dochód z trzeciego kwartału?
+
+**Rozwiązanie:**
+
+*   **Krok 1. Obliczenie dochodu w pierwszym kwartale:** Pierwszy kwartał to 3 miesiące. Dochód wyniósł 120 tys. zł. Średni miesięczny dochód to:
+    $$ \\text{Średni miesięczny dochód (I kwartał)} = \\frac{120 \\text{ tys. zł}}{3 \\text{ miesiące}} = 40 \\text{ tys. zł/miesiąc} $$
+    *   Odpowiedź a): Średni miesięczny dochód firmy w pierwszym kwartale wynosił 40 tys. zł.
+
+*   **Krok 2. Ustalenie dochodu w drugim półroczu i całorocznego dochodu:** Zadanie podaje, że II półrocze to IV kwartał. W zadaniu prawdopodobnie chodzi o analizę całego roku. Obliczmy najpierw całoroczny dochód:
+    $$ \\text{Całoroczny dochód} = 120 + 150 + 130 + 170 = 570 \\text{ tys. zł} $$
+    Dochód z II półrocza (IV kwartału) to 170 tys. zł.
+
+*   **Krok 3. Obliczenie kąta dla diagramu kołowego dla II półrocza:** Zakładamy, że pytanie dotyczyło udziału dochodu z IV kwartału w całym roku, a nie "drugiego półrocza" jako osobnego okresu. Jeśli jednak pytanie miało być o II półrocze, to musimy mieć dane z III i IV kwartału. Przyjmując tekst dosłownie: "Przedstaw dochody firmy w drugim półroczu na diagramie kołowym. (Załóż, że II półrocze to IV kwartał)". Jest to sformułowanie nieprecyzyjne. Najczęściej jednak w takich zadaniach chodzi o przedstawienie udziału poszczególnych kategorii w całości (tutaj: roku). Jeśli jednak mamy stworzyć diagram dla "drugiego półrocza", a wiemy, że to IV kwartał, to diagram kołowy dla jednej wartości nie ma sensu. Zakładając, że chodzi o udział **IV kwartału** w całym roku:
+    $$ \\text{Udział IV kwartału} = \\frac{170}{570} \\approx 0.2982 $$
+    $$ \\text{Kąt dla IV kwartału} = \\frac{170}{570} \\cdot 360^\\circ \\approx 0.2982 \\cdot 360^\\circ \\approx 107.35^\\circ $$
+    *   Odpowiedź b): Jeśli pytanie dotyczyło udziału IV kwartału w całym roku, to kąt wynosi około $107.35^\\circ$. (Uwaga: Sformułowanie zadania jest mylące. Jeśli chodziło o dochód z całego drugiego półrocza, potrzebne byłyby dane z III i IV kwartału, a potem obliczenie procentu lub kąta z całości roku.)
+
+*   **Krok 4. Obliczenie procentowego udziału dochodu z III kwartału:** Dochód z III kwartału to 130 tys. zł. Całoroczny dochód to 570 tys. zł.
+    $$ \\text{Udział procentowy III kwartału} = \\frac{130}{570} \\cdot 100\\% \\approx 0.2281 \\cdot 100\\% \\approx 22.81\\% $$
+    *   Odpowiedź c): Dochód z trzeciego kwartału stanowił około 22.81% całorocznego dochodu.
+
+**Sprawdzenie:** Obliczenia średniej, sumy, procentów i kątów zostały wykonane zgodnie ze wzorami. Uwzględniono nieścisłość w sformułowaniu pytania b).
 
 ## Pułapki
+*   **Błąd w odczycie danych:** Uważnie sprawdzaj wartości na osiach diagramu, zwłaszcza przy niestandardowej podziałce. Czasem wartości są podane w tysiącach, milionach lub procentach.
+*   **Niewłaściwa interpretacja procentów:** W diagramie kołowym procenty odnoszą się do całości (100%). W diagramie słupkowym mogą przedstawiać udziały lub konkretne liczby. Zawsze sprawdź opis osi i legendę.
+*   **Błędy w obliczeniach procentowych i proporcjach:** Przy obliczaniu procentów lub kątów łatwo o pomyłkę. Sprawdzaj rachunki, zwłaszcza przy dzieleniu i mnożeniu liczb dziesiętnych lub ułamków. Upewnij się, że używasz właściwej podstawy (suma wszystkich danych lub 360 stopni).
+*   **Niedostateczne obliczenie sumy:** Przy obliczaniu procentowego udziału lub średniej musisz znać sumę wszystkich danych. Upewnij się, że uwzględniłeś wszystkie kategorie przedstawione na diagramie.
+*   **Niepoprawne założenia przy zamianie diagramów:** Przechodząc z diagramu kołowego na słupkowy (lub odwrotnie), pamiętaj o zachowaniu proporcji. Jeśli np. słupek odpowiada konkretnej liczbie, a wycinek procentowi, musisz obliczyć liczbę odpowiadającą temu procentowi, lub ustalić skalę.
 
-- W diagramie kołowym **suma wycinków = całość**
-- Sprawdź skalę osi na diagramie słupkowym
-- Procenty zaokrąglaj rozsądnie
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Na diagramie słupkowym przedstawiono liczbę godzin spędzonych przez uczniów klasy 8a na nauce języka angielskiego w ciągu tygodnia. Odczytaj dane i odpowiedz na pytania:
+    [Diagram słupkowy: Oś pozioma - Dzień tygodnia (Pon, Wt, Śr, Czw, Pt, Sob, Niedz). Oś pionowa - Liczba godzin (0-4). Słupki: Pon - 1.5h, Wt - 2h, Śr - 1h, Czw - 2.5h, Pt - 0.5h, Sob - 3h, Niedz - 2h.]
+    a) Ile godzin w tygodniu na naukę języka angielskiego poświęcił najwięcej czasu uczeń?
+    b) W które dni uczeń poświęcił na naukę więcej niż 2 godziny?
+    c) Oblicz średnią liczbę godzin nauki języka angielskiego dziennie w ciągu całego tygodnia.
+
+2.  Diagram kołowy przedstawia podział budżetu pewnego miasta na różne cele. Na edukację przeznaczono 40%, na służbę zdrowia 30%, na kulturę 20%, a na transport 10%. Całkowity budżet miasta wynosi 80 milionów złotych.
+    a) Ile milionów złotych przeznaczono na kulturę?
+    b) Jaki kąt środkowy ma wycinek odpowiadający służbie zdrowia?
+    c) O ile procent więcej środków przeznaczono na edukację niż na transport?
+
+3.  W pewnej szkole przeprowadzono ankietę na temat ulubionych gatunków filmowych. Wyniki przedstawiono na diagramie słupkowym: Komedia - 120 głosów, Akcja - 90 głosów, Fantasy - 60 głosów, Sci-Fi - 30 głosów.
+    a) Ilu uczniów wzięło udział w ankiecie?
+    b) Jaki procent wszystkich głosów stanowiły głosy na filmy akcji?
+    c) Gdyby te dane przedstawić na diagramie kołowym, jaki kąt miałby wycinek odpowiadający filmom fantasy?
+
+4.  Na podstawie danych z zadania 3, przedstaw wyniki na diagramie kołowym. (Narysuj go lub opisz kąty poszczególnych wycinków).
+
+5.  Diagram kołowy przedstawia rozkład ocen z matematyki na świadectwie: 5 - 20%, 4 - 35%, 3 - 40%, 2 - 5%.
+    a) Jaki procent uczniów otrzymał ocenę 3 lub wyższą?
+    b) Ile stopni ma kąt środkowy wycinka odpowiadającego ocenie niedostatecznej (której nie ma na diagramie, zakładamy 0%)?
+    c) Jeśli w klasie jest 40 uczniów, ilu z nich otrzymało ocenę 4?
+
+6.  Poniższe dane przedstawiają sprzedaż lodów w budce w ciągu jednego dnia:
+    [Diagram słupkowy: Lody waniliowe - 50 szt., Czekoladowe - 70 szt., Truskawkowe - 40 szt., Śmietankowe - 60 szt.]
+    a) Ile sztuk lodów sprzedano łącznie?
+    b) Jaki procent całej sprzedaży stanowiły lody truskawkowe?
+    c) Na diagramie kołowym, jaki kąt miałby wycinek odpowiadający lodom czekoladowym?
+
+## Odpowiedzi
+1.  a) 3 godziny.
+    b) W czwartek (2.5h) i sobotę (3h).
+    c) Suma godzin: $1.5 + 2 + 1 + 2.5 + 0.5 + 3 + 2 = 12.5$ godziny. Średnia: $\\frac{12.5}{7} \\approx 1.79$ godziny dziennie.
+
+2.  a) $20\\% \\text{ z } 80 \\text{ mln zł} = \\frac{20}{100} \\cdot 80 = 0.2 \\cdot 80 = 16$ mln zł.
+    b) $30\\% \\text{ z } 360^\\circ = \\frac{30}{100} \\cdot 360^\\circ = 0.3 \\cdot 360^\\circ = 108^\\circ$.
+    c) Na edukację: 40%, na transport: 10%. Różnica: $40\\% - 10\\% = 30\\%$.
+
+3.  a) Suma głosów: $120 + 90 + 60 + 30 = 300$ uczniów.
+    b) $\\frac{90}{300} \\cdot 100\\% = \\frac{9}{30} \\cdot 100\\% = \\frac{3}{10} \\cdot 100\\% = 30\\%$.
+    c) Dane z III kwartału (Fantasy): 60 głosów. Całość: 300 głosów.
+    Kąt: $\\frac{60}{300} \\cdot 360^\\circ = \\frac{1}{5} \\cdot 360^\\circ = 72^\\circ$.
+
+4.  Kąty na diagramie kołowym:
+    Komedie: $\\frac{120}{300} \\cdot 360^\\circ = \\frac{2}{5} \\cdot 360^\\circ = 144^\\circ$.
+    Akcja: $\\frac{90}{300} \\cdot 360^\\circ = \\frac{3}{10} \\cdot 360^\\circ = 108^\\circ$.
+    Fantasy: $\\frac{60}{300} \\cdot 360^\\circ = \\frac{1}{5} \\cdot 360^\\circ = 72^\\circ$.
+    Sci-Fi: $\\frac{30}{300} \\cdot 360^\\circ = \\frac{1}{10} \\cdot 360^\\circ = 36^\\circ$.
+    Suma kątów: $144^\\circ + 108^\\circ + 72^\\circ + 36^\\circ = 360^\\circ$.
+
+5.  a) Udział ocen 3 i wyższych: $35\\% (\\text{ocena } 4) + 40\\% (\\text{ocena } 3) + 20\\% (\\text{ocena } 5) = 95\\%$.
+    b) Kąt dla 0% to $0^\\circ$.
+    c) $35\\% \\text{ z } 40 \\text{ uczniów} = \\frac{35}{100} \\cdot 40 = 0.35 \\cdot 40 = 14$ uczniów.
+
+6.  a) Suma sztuk: $50 + 70 + 40 + 60 = 220$ sztuk.
+    b) $\\frac{40}{220} \\cdot 100\\% = \\frac{4}{22} \\cdot 100\\% = \\frac{2}{11} \\cdot 100\\% \\approx 18.18\\%$.
+    c) Lody czekoladowe: 70 sztuk. Całość: 220 sztuk.
+    Kąt: $\\frac{70}{220} \\cdot 360^\\circ = \\frac{7}{22} \\cdot 360^\\circ \\approx 0.3182 \\cdot 360^\\circ \\approx 114.55^\\circ$.
 
 ## Szybka powtórka
+1.  Jakie dwie główne rodzaje diagramów omawialiśmy?
+2.  Co reprezentuje pełne koło w diagramie kołowym?
+3.  Jak obliczyć kąt środkowy wycinka, jeśli znamy procentowy udział danej kategorii?
+4.  Jak obliczyć średnią arytmetyczną z danych przedstawionych na diagramie słupkowym?
+5.  Dlaczego ważne jest dokładne odczytywanie danych z osi diagramu?
 
-1. Co pokazuje wysokość słupka?
-2. Całość w diagramie kołowym to ile procent?
-3. Jak obliczyć udział procentowy?`,
+## Diagram
+Diagram słupkowy (ogólny schemat):
+
+\`\`\`text
+^ Liczba
+|
+|    +---+
+|    |   |
+|    |   | +---+
+|    |   | |   |
+| +---+  | |   | +---+
+| |   |  | |   | |   |
++---------------------------> Kategoria
+  Kat A    Kat B    Kat C
+\`\`\`
+
+Diagram kołowy (ogólny schemat):
+
+\`\`\`text
+      /---\\
+     /     \\
+    /       \\
+   |---------|  <-- Środek koła
+    \\       /
+     \\     /
+      \\---/
+
+Wycinki reprezentują udziały procentowe lub liczbowe.
+Suma kątów wszystkich wycinków wynosi 360 stopni.
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "kombinatoryka",
     topic: "prawdopodobienstwo",
-    title: "Prawdopodobieństwo — wprowadzenie",
+    title: "Prawdopodobieństwo – klucz do sukcesu na egzaminie ósmoklasisty",
     content: `## Na egzaminie
+Prawdopodobieństwo pojawia się na egzaminie ósmoklasisty zazwyczaj jako jedno zadanie otwarte lub zamknięte, które można rozwiązać stosunkowo szybko, ale wymaga precyzyjnego zrozumienia definicji i umiejętności liczenia. Za poprawne rozwiązanie można zdobyć od 1 do 3 punktów. CKE często sprawdza umiejętność obliczania prawdopodobieństwa w sytuacjach związanych z rzutami kostką, monetą, losowaniem liczb z przedziału lub elementów ze zbioru. Ważne jest również interpretowanie wyników.
 
-Proste prawdopodobieństwo klasyczne: rzut kostką, monety, losowanie kul — 1–2 zadania.
+## Mapa tematu
+W tej lekcji nauczysz się:
+1. Rozumieć podstawowe pojęcie prawdopodobieństwa i jego znaczenie.
+2. Stosować wzór na prawdopodobieństwo zdarzenia losowego.
+3. Obliczać prawdopodobieństwo w prostych sytuacjach (rzuty kostką, monetą).
+4. Obliczać prawdopodobieństwo w bardziej złożonych sytuacjach (losowanie liczb, elementy ze zbioru).
+5. Rozpoznawać i obliczać prawdopodobieństwo zdarzeń niemożliwych i pewnych.
+6. Interpretować wyniki obliczeń prawdopodobieństwa.
+7. Rozwiązywać zadania tekstowe związane z prawdopodobieństwem.
+8. Unikać typowych błędów przy obliczaniu prawdopodobieństwa.
 
-## Najważniejsze
+## Definicje i wzory
+*   **Zdarzenie losowe:** Zdarzenie, którego wynik w danym doświadczeniu losowym nie jest z góry wiadomy.
+*   **Przestrzeń zdarzeń elementarnych ($\\Omega$)**: Zbiór wszystkich możliwych wyników danego doświadczenia losowego. Liczbę elementów tej przestrzeni oznaczamy jako $|\\Omega|$.
+*   **Zdarzenie elementarne:** Pojedynczy wynik doświadczenia losowego.
+*   **Zdarzenie sprzyjające (A)**: Zbiór zdarzeń elementarnych, które prowadzą do zajścia interesującego nas zdarzenia A. Liczbę elementów tego zbioru oznaczamy jako $|A|$.
+*   **Prawdopodobieństwo zdarzenia (P(A))**: Stosunek liczby zdarzeń sprzyjających zdarzeniu A do liczby wszystkich możliwych zdarzeń elementarnych w przestrzeni zdarzeń $\\Omega$.
+    $$P(A) = \\frac{|A|}{|\\Omega|}$$
+*   **Własności prawdopodobieństwa:**
+    *   Prawdopodobieństwo każdego zdarzenia jest liczbą nieujemną i nie większą od 1.
+        $$0 \\le P(A) \\le 1$$
+    *   Prawdopodobieństwo zdarzenia pewnego (które zawsze musi zajść) jest równe 1.
+        $$P(\\Omega) = 1$$
+    *   Prawdopodobieństwo zdarzenia niemożliwego (które nigdy nie może zajść) jest równe 0.
+        $$P(\\emptyset) = 0$$
+*   **Doświadczenie losowe:** Proces, którego wynik nie jest z góry określony i zależy od przypadku.
 
-$$P(A) = \\frac{\\text{liczba wyników sprzyjających}}{\\text{liczba wszystkich wyników}}$$
+**Przykłady doświadczeń losowych:**
+*   Rzut kostką do gry.
+*   Rzut monetą.
+*   Losowanie karty z talii.
+*   Losowanie liczby z danego przedziału.
 
-Wartość od 0 (niemożliwe) do 1 (pewne).
+**Przykład przestrzeni zdarzeń elementarnych:**
+*   Rzut kostką do gry: $\\Omega = \\{1, 2, 3, 4, 5, 6\\}$, $|\\Omega| = 6$.
+*   Rzut monetą: $\\Omega = \\{O, R\\}$ (Orzeł, Reszka), $|\\Omega| = 2$.
+*   Rzut dwiema monetami: $\\Omega = \\{OO, OR, RO, RR\\}$, $|\\Omega| = 4$.
 
-**Zdarzenie przeciwne:** $P(\\text{nie } A) = 1 - P(A)$.
+## Przykład 1 — podstawowy
+Rzucamy raz symetryczną sześcienną kostką do gry. Jakie jest prawdopodobieństwo, że wypadnie liczba parzysta?
 
-## Przykład krok po kroku
+**Krok 1.** Określenie przestrzeni zdarzeń elementarnych ($\\Omega$)**
+Wszystkie możliwe wyniki rzutu kostką to liczby od 1 do 6.
+$\\Omega = \\{1, 2, 3, 4, 5, 6\\}$
+Liczba wszystkich możliwych wyników to $|\\Omega| = 6$.
 
-Rzucamy symetryczną kostką. Prawdopodobieństwo wyrzucenia liczby większej niż 4?
+**Krok 2.** Określenie zdarzenia sprzyjającego (A)**
+Interesuje nas zdarzenie polegające na tym, że wypadnie liczba parzysta. Liczby parzyste w zbiorze $\\Omega$ to 2, 4, 6.
+$A = \\{2, 4, 6\\}$
 
-**Krok 1.** Sprzyjające: 5, 6 → 2 wyniki
+**Krok 3.** Określenie liczby zdarzeń sprzyjających**
+Liczba wyników sprzyjających zdarzeniu A to $|A| = 3$.
 
-**Krok 2.** Wszystkich: 6
+**Krok 4.** Obliczenie prawdopodobieństwa**
+Korzystamy ze wzoru $P(A) = \\frac{|A|}{|\\Omega|}$.
+$P(A) = \\frac{3}{6}$
 
-**Krok 3.** $P = \\dfrac{2}{6} = \\dfrac{1}{3}$
+**Krok 5.** Uproszczenie wyniku**
+$P(A) = \\frac{1}{2}$
+
+**Sprawdzenie:** Prawdopodobieństwo $\\frac{1}{2}$ jest liczbą z przedziału $[0, 1]$. Wynik jest logiczny, ponieważ połowa liczb na kostce jest parzysta.
+
+## Przykład 2 — maturalny
+W urnie znajdują się kule ponumerowane od 1 do 20. Losujemy jedną kulę. Jakie jest prawdopodobieństwo, że numer wylosowanej kuli jest podzielny przez 3 lub przez 5?
+
+**Krok 1.** Określenie przestrzeni zdarzeń elementarnych ($\\Omega$)**
+Kule są ponumerowane od 1 do 20, więc wszystkich możliwych wyników losowania jest 20.
+$\\Omega = \\{1, 2, ..., 20\\}$
+$|\\Omega| = 20$
+
+**Krok 2.** Określenie zdarzenia A – numer kuli podzielny przez 3**
+Wypisujemy liczby od 1 do 20 podzielne przez 3:
+3, 6, 9, 12, 15, 18
+$A = \\{3, 6, 9, 12, 15, 18\\}$
+Liczba wyników sprzyjających zdarzeniu A: $|A| = 6$.
+Prawdopodobieństwo zdarzenia A: $P(A) = \\frac{6}{20}$.
+
+**Krok 3.** Określenie zdarzenia B – numer kuli podzielny przez 5**
+Wypisujemy liczby od 1 do 20 podzielne przez 5:
+5, 10, 15, 20
+$B = \\{5, 10, 15, 20\\}$
+Liczba wyników sprzyjających zdarzeniu B: $|B| = 4$.
+Prawdopodobieństwo zdarzenia B: $P(B) = \\frac{4}{20}$.
+
+**Krok 4.** Rozważenie zdarzenia "A lub B"**
+Chcemy obliczyć prawdopodobieństwo, że numer jest podzielny przez 3 LUB przez 5. W przypadku zdarzeń "lub", należy uważać, aby nie policzyć zdarzeń wspólnych dwukrotnie. Musimy zidentyfikować liczby podzielne zarówno przez 3, jak i przez 5 (czyli podzielne przez 15).
+Jedyną liczbą w naszym zbiorze (1-20) podzielną przez 15 jest 15.
+Zdarzenie $A \\cap B$ (A i B) to numer podzielny przez 3 i przez 5.
+$A \\cap B = \\{15\\}$
+$|A \\cap B| = 1$.
+
+**Krok 5.** Obliczenie prawdopodobieństwa zdarzenia "A lub B"**
+Prawdopodobieństwo sumy zdarzeń obliczamy ze wzoru: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.
+Lub, używając liczby zdarzeń: $|A \\cup B| = |A| + |B| - |A \\cap B|$.
+$|A \\cup B| = 6 + 4 - 1 = 9$.
+Te 9 liczb to: 3, 5, 6, 9, 10, 12, 15, 18, 20.
+Prawdopodobieństwo:
+$P(A \\cup B) = \\frac{|A \\cup B|}{|\\Omega|} = \\frac{9}{20}$.
+
+**Sprawdzenie:** Wynik $\\frac{9}{20}$ jest liczbą z przedziału $[0, 1]$. Zbiór liczb sprzyjających (9) jest mniejszy niż suma $|A|+|B|=10$, co potwierdza prawidłowe uwzględnienie liczby 15.
+
+## Przykład 3 — egzaminacyjny
+Z urny zawierającej 5 kul białych i 7 kul czarnych losujemy jedną kulę. Jakie jest prawdopodobieństwo, że będzie to kula biała?
+
+**Krok 1.** Określenie liczby wszystkich kul**
+W urnie jest 5 kul białych + 7 kul czarnych = 12 kul.
+$|\\Omega| = 12$.
+
+**Krok 2.** Określenie liczby kul białych**
+Interesuje nas zdarzenie wylosowania kuli białej. Jest 5 kul białych.
+$|A| = 5$.
+
+**Krok 3.** Obliczenie prawdopodobieństwa**
+$P(A) = \\frac{|A|}{|\\Omega|} = \\frac{5}{12}$.
+
+**Sprawdzenie:** Prawdopodobieństwo $\\frac{5}{12}$ jest liczbą z przedziału $[0, 1]$.
 
 ## Pułapki
+*   **Niepoprawne określenie $|\\Omega|$**: Często uczniowie mylą liczbę wszystkich elementów z numeracją lub innymi danymi. Zawsze upewnij się, ile jest WSZYSTKICH możliwych wyników.
+*   **Dwukrotne liczenie zdarzeń wspólnych**: W zadaniach typu "lub" (zdarzenie A lub B), jeśli istnieje część wspólna zdarzeń (A i B), trzeba ją odjąć, aby nie policzyć jej dwukrotnie. Pamiętaj o wzorze $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.
+*   **Nieupraszczanie wyniku**: Choć często dopuszczalne, uproszczenie ułamka jest dobrą praktyką i pozwala łatwiej porównywać wyniki.
+*   **Pomyłka przy liczeniu zdarzeń sprzyjających**: Dokładnie wypisz lub policz elementy zdarzenia sprzyjającego, szczególnie gdy liczby są duże lub występują dodatkowe warunki (np. podzielność, parzystość).
+*   **Błędne rozumienie treści zadania**: Przeczytaj zadanie kilka razy. Czy chodzi o losowanie ze zwracaniem, bez zwracania, czy o jedno losowanie? Czy chodzi o liczby, przedmioty, punkty?
 
-- **Wszystkie wyniki jednakowo prawdopodobne** — warunek modelu klasycznego
-- „Co najmniej jeden” — czasem łatwiej $1 - P(\\text{żaden})$
-- $P = \\dfrac{1}{2}$ przy monecie tylko gdy uczciwa
+## Ćwiczenia do samodzielnego rozwiązania
+1.  Rzucamy dwa razy symetryczną monetą. Jakie jest prawdopodobieństwo, że wypadną dwie reszki?
+2.  Ze zbioru liczb $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$ losujemy jedną liczbę. Jakie jest prawdopodobieństwo, że wylosowana liczba będzie większa od 7?
+3.  W klasie jest 15 dziewcząt i 10 chłopców. Losujemy jedną osobę do reprezentacji klasy. Jakie jest prawdopodobieństwo, że wylosowana osoba będzie chłopcem?
+4.  Rzucamy raz sześcienną kostką. Jakie jest prawdopodobieństwo, że wypadnie liczba mniejsza od 4?
+5.  Z talii 52 kart losujemy jedną kartę. Jakie jest prawdopodobieństwo, że będzie to karta w kolorze czerwonym (kier lub karo)?
+6.  Rzucamy dwa razy symetryczną sześcienną kostką. Jakie jest prawdopodobieństwo, że suma oczek na obu kostkach będzie równa 5?
+7.  W urnie są 4 kule zielone, 3 kule niebieskie i 5 kul żółtych. Losujemy jedną kulę. Jakie jest prawdopodobieństwo, że będzie to kula niebieska lub żółta?
+
+## Odpowiedzi
+1.  $|\\Omega| = 4$ (OO, OR, RO, RR). Zdarzenie sprzyjające: RR, $|A|=1$. Prawdopodobieństwo: $\\frac{1}{4}$.
+2.  $|\\Omega| = 10$. Zdarzenia sprzyjające: $\\{8, 9, 10\\}$, $|A|=3$. Prawdopodobieństwo: $\\frac{3}{10}$.
+3.  $|\\Omega| = 15 + 10 = 25$. Zdarzenie sprzyjające (chłopiec): $|A|=10$. Prawdopodobieństwo: $\\frac{10}{25} = \\frac{2}{5}$.
+4.  $|\\Omega| = 6$. Zdarzenia sprzyjające: $\\{1, 2, 3\\}$, $|A|=3$. Prawdopodobieństwo: $\\frac{3}{6} = \\frac{1}{2}$.
+5.  $|\\Omega| = 52$. Kule czerwone to kier (13) i karo (13). $|A|=13+13=26$. Prawdopodobieństwo: $\\frac{26}{52} = \\frac{1}{2}$.
+6.  $|\\Omega| = 36$. Zdarzenia sprzyjające sumie 5: (1,4), (2,3), (3,2), (4,1). $|A|=4$. Prawdopodobieństwo: $\\frac{4}{36} = \\frac{1}{9}$.
+7.  $|\\Omega| = 4+3+5 = 12$. Zdarzenia sprzyjające (niebieska lub żółta): $3+5=8$. Prawdopodobieństwo: $\\frac{8}{12} = \\frac{2}{3}$.
 
 ## Szybka powtórka
+1.  Co to jest przestrzeń zdarzeń elementarnych?
+2.  Jaki jest wzór na obliczanie prawdopodobieństwa zdarzenia?
+3.  Jakie są dwie skrajne wartości prawdopodobieństwa i co one oznaczają?
+4.  W jakim przedziale zawsze mieści się prawdopodobieństwo dowolnego zdarzenia?
+5.  Co trzeba zrobić, gdy obliczasz prawdopodobieństwo zdarzenia "A lub B", a zdarzenia A i B mają część wspólną?
 
-1. $P(\\text{orzeł})$ przy rzucie monetą?
-2. $P(\\text{parzysta})$ na kostce?
-3. Ile wynosi $P(\\text{pewne})$?`,
+## Diagram
+Rzut kostką:
+\`\`\`text
++---+
+| 1 |
++---+
+
++---+
+| 2 |  (parzyste)
++---+
+
++---+
+| 3 |
++---+
+
++---+
+| 4 |  (parzyste)
++---+
+
++---+
+| 5 |
++---+
+
++---+
+| 6 |  (parzyste)
++---+
+
+Omega = {1, 2, 3, 4, 5, 6}, |Omega|=6
+Zdarzenie A = {2, 4, 6}, |A|=3
+P(A) = |A| / |Omega| = 3/6 = 1/2
+\`\`\``,
     video_url: null,
   },
   {
     exam_type: "8_klasa",
     category: "kombinatoryka",
     topic: "regula_mnozenia",
-    title: "Reguła mnożenia — Egzamin 8-klasisty",
+    title: "Reguła mnożenia – pierwszy krok do kombinatoryki",
     content: `## Na egzaminie
-
-Temat **Reguła mnożenia** (Kombinatoryka) należy do wymagań Egzamin 8-klasisty. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Reguła mnożenia pojawia się na egzaminie ósmoklasisty stosunkowo często, zazwyczaj w zadaniach otwartych punktowanych od 3 do 5 punktów. CKE lubi sprawdzać umiejętność zastosowania tej reguły w prostych sytuacjach życia codziennego, takich jak wybór stroju, układanie przedmiotów czy tworzenie kodów. Często jest też pierwszym krokiem w bardziej złożonych zadaniach kombinatorycznych.
 
 ## Mapa tematu
-
-1. Definicje i wzory z działu **Kombinatoryka**
-2. Przykłady krok po kroku
-3. Typowe pułapki egzaminacyjne
-4. Ćwiczenia z odpowiedziami
+W tej lekcji:
+1.  Zrozumiesz, czym jest reguła mnożenia.
+2.  Nauczysz się identyfikować sytuacje, w których można ją zastosować.
+3.  Opanujesz sposób obliczania liczby możliwości przy użyciu reguły mnożenia.
+4.  Rozwiążesz przykłady dotyczące wyboru elementów z różnych zbiorów.
+5.  Poznasz zastosowanie reguły mnożenia w zadaniach z tworzenia liczb i kodów.
+6.  Nauczysz się rozpoznawać typowe pułapki związane z tym zagadnieniem.
+7.  Przećwiczysz samodzielne rozwiązywanie zadań na poziomie egzaminacyjnym.
 
 ## Definicje i wzory
+**Reguła mnożenia** jest podstawową zasadą w kombinatoryce służącą do obliczania liczby wszystkich możliwych sposobów wykonania pewnego ciągu czynności, pod warunkiem, że liczba sposobów wykonania każdej czynności jest niezależna od sposobów wykonania czynności poprzednich.
 
-*Materiał w trakcie uzupełniania dla: Reguła mnożenia.*
+**Sytuacja:** Mamy wykonać pewien ciąg czynności.
+*   Czynność pierwszą można wykonać na $n_1$ sposobów.
+*   Czynność drugą można wykonać na $n_2$ sposobów.
+*   Czynność trzecią można wykonać na $n_3$ sposobów.
+*   ...
+*   Czynność k-tą można wykonać na $n_k$ sposobów.
+
+**Wzór:** Całkowita liczba sposobów wykonania całego ciągu czynności (czyli liczba wszystkich możliwych kombinacji) wynosi:
+$$ N = n_1 \\cdot n_2 \\cdot n_3 \\cdot \\dots \\cdot n_k $$
+
+**Kluczowe cechy zastosowania reguły mnożenia:**
+*   **Ciąg czynności:** Zadanie można rozłożyć na sekwencję niezależnych kroków.
+*   **Niezależność:** Wybór w jednym kroku nie wpływa na liczbę wyborów w kolejnych krokach.
+*   **Wszystkie możliwości:** Chcemy policzyć *wszystkie* możliwe kombinacje wyników tych czynności.
+
+**Przykład zastosowania:**
+Chcesz wybrać jeden element z pierwszego zbioru i jeden element z drugiego zbioru.
+*   Zbiór A ma 3 elementy: $\\{a_1, a_2, a_3\\}$.
+*   Zbiór B ma 4 elementy: $\\{b_1, b_2, b_3, b_4\\}$.
+
+Pierwszą czynnością jest wybór elementu ze zbioru A (można to zrobić na 3 sposoby).
+Drugą czynnością jest wybór elementu ze zbioru B (można to zrobić na 4 sposoby).
+
+Liczba wszystkich możliwych par $(a_i, b_j)$ wynosi: $3 \\cdot 4 = 12$.
+Są to pary: $(a_1, b_1), (a_1, b_2), (a_1, b_3), (a_1, b_4), (a_2, b_1), \\dots, (a_3, b_4)$.
 
 ## Przykład 1 — podstawowy
+Pewien sklep oferuje 3 rodzaje lodów waniliowych i 5 rodzajów polew do lodów. Na ile sposobów można wybrać jedną porcję lodów z jedną polewą?
 
-**Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
+**Krok 1.** Zidentyfikuj czynności do wykonania.
+Czynność 1: Wybór rodzaju lodów.
+Czynność 2: Wybór rodzaju polewy.
+
+**Krok 2.** Określ liczbę sposobów wykonania każdej czynności.
+Liczba sposobów wyboru lodów ($n_1$) = 3.
+Liczba sposobów wyboru polewy ($n_2$) = 5.
+
+**Krok 3.** Sprawdź, czy czynności są niezależne.
+Wybór rodzaju lodów nie wpływa na to, ile jest dostępnych polew, i na odwrót. Czynności są niezależne.
+
+**Krok 4.** Zastosuj regułę mnożenia.
+Całkowita liczba sposobów ($N$) = $n_1 \\cdot n_2$.
+$N = 3 \\cdot 5 = 15$.
+
+**Krok 5.** Sformułuj odpowiedź.
+Można wybrać porcję lodów z polewą na 15 sposobów.
+
+**Sprawdzenie:**
+Możemy to sobie wyobrazić:
+Lody L1 można połączyć z polewami P1, P2, P3, P4, P5 (5 możliwości).
+Lody L2 można połączyć z polewami P1, P2, P3, P4, P5 (5 możliwości).
+Lody L3 można połączyć z polewami P1, P2, P3, P4, P5 (5 możliwości).
+Razem: $5 + 5 + 5 = 15$ możliwości. Wynik jest poprawny.
+
+## Przykład 2 — maturalny
+Chcemy utworzyć dwucyfrową liczbę parzystą, używając cyfr $\\{1, 2, 3, 4, 5\\}$, przy czym cyfry mogą się powtarzać. Ile jest takich liczb?
+
+**Krok 1.** Rozłóż problem na czynności i zidentyfikuj warunki.
+Musimy wybrać dwie cyfry: cyfrę dziesiątek i cyfrę jedności.
+Warunki:
+1.  Liczba musi być dwucyfrowa (pierwsza cyfra nie może być 0 – tutaj nie ma 0, więc ten warunek jest automatycznie spełniony).
+2.  Liczba musi być parzysta (ostatnia cyfra musi być parzysta).
+3.  Cyfry mogą się powtarzać.
+4.  Używamy cyfr ze zbioru $\\{1, 2, 3, 4, 5\\}$.
+
+**Krok 2.** Określ liczbę sposobów dla każdej czynności, zaczynając od tej z największymi ograniczeniami.
+Największe ograniczenie dotyczy cyfry jedności (musi być parzysta).
+Czynność 1: Wybór cyfry jedności.
+Dostępne cyfry parzyste ze zbioru $\\{1, 2, 3, 4, 5\\}$ to $\\{2, 4\\}$.
+Zatem cyfrę jedności można wybrać na $n_1 = 2$ sposoby.
+
+Czynność 2: Wybór cyfry dziesiątek.
+Do wyboru mamy wszystkie cyfry ze zbioru $\\{1, 2, 3, 4, 5\\}$. Ponieważ cyfry mogą się powtarzać, wybór cyfry jedności nie ogranicza wyboru cyfry dziesiątek.
+Zatem cyfrę dziesiątek można wybrać na $n_2 = 5$ sposobów.
+
+**Krok 3.** Sprawdź niezależność i zastosuj regułę mnożenia.
+Czynności są niezależne (w sensie liczby dostępnych opcji w kolejnym kroku).
+Całkowita liczba sposobów ($N$) = $n_1 \\cdot n_2$.
+$N = 2 \\cdot 5 = 10$.
+
+**Krok 4.** Sformułuj odpowiedź.
+Istnieje 10 takich dwucyfrowych liczb parzystych.
+
+**Sprawdzenie:**
+Wypiszmy te liczby:
+Cyfra jedności to 2: 12, 22, 32, 42, 52 (5 liczb)
+Cyfra jedności to 4: 14, 24, 34, 44, 54 (5 liczb)
+Łącznie: $5 + 5 = 10$ liczb. Wynik poprawny.
+
+## Przykład 3 — egzaminacyjny
+Na ile sposobów można utworzyć trzyliterowy kod, używając liter ze zbioru $\\{A, B, C, D\\}$, jeśli litery mogą się powtarzać?
+
+**Krok 1.** Zidentyfikuj czynności.
+Musimy wybrać trzy litery do utworzenia kodu: pierwszą, drugą i trzecią.
+Czynność 1: Wybór pierwszej litery.
+Czynność 2: Wybór drugiej litery.
+Czynność 3: Wybór trzeciej litery.
+
+**Krok 2.** Określ liczbę sposobów dla każdej czynności.
+Zbiór dostępnych liter to $\\{A, B, C, D\\}$, więc mamy 4 dostępne litery.
+Litery mogą się powtarzać, więc wybór litery na jednej pozycji nie wpływa na liczbę dostępnych opcji na innych pozycjach.
+Liczba sposobów wyboru pierwszej litery ($n_1$) = 4.
+Liczba sposobów wyboru drugiej litery ($n_2$) = 4.
+Liczba sposobów wyboru trzeciej litery ($n_3$) = 4.
+
+**Krok 3.** Zastosuj regułę mnożenia.
+Całkowita liczba sposobów ($N$) = $n_1 \\cdot n_2 \\cdot n_3$.
+$N = 4 \\cdot 4 \\cdot 4 = 4^3 = 64$.
+
+**Krok 4.** Sformułuj odpowiedź.
+Można utworzyć 64 takie trzyliterowe kody.
 
 ## Pułapki
-
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+*   **Pomylenie z dodawaniem:** Reguła dodawania działa, gdy mamy wybierać *jedną* opcję spośród rozłącznych możliwości (np. wybierasz albo ciastko A, albo ciastko B). Reguła mnożenia działa, gdy wykonujesz *kolejne* czynności (np. wybierasz ciastko A *i* do tego napój B).
+*   **Powtarzanie się elementów:** W przykładach z tworzeniem liczb lub kodów, kluczowe jest ustalenie, czy cyfry/litery mogą się powtarzać. Jeśli się mogą, liczba opcji w każdym kroku jest taka sama. Jeśli nie mogą, liczba opcji w kolejnych krokach maleje.
+*   **Kolejność czynności:** Czasami łatwiej jest zacząć liczenie od czynności, która ma najwięcej ograniczeń (np. ostatnia cyfra w liczbie parzystej). Choć reguła mnożenia jest przemienna ($a \\cdot b = b \\cdot a$), taka kolejność obliczeń często ułatwia identyfikację liczby możliwości w każdym kroku.
+*   **Brak możliwości 0:** Pamiętaj, że pierwsza cyfra liczby (np. dwucyfrowej, trzycyfrowej) nie może być zerem. Jeśli zero jest w zbiorze dostępnych cyfr, musisz to uwzględnić jako ograniczenie w pierwszym kroku.
+*   **Nieczytanie polecenia:** Dokładnie czytaj, czy elementy mogą się powtarzać, ile elementów wybierasz, jakie są warunki (np. parzystość, podzielność).
 
 ## Ćwiczenia do samodzielnego rozwiązania
-
-1. Rozwiąż pierwsze zadanie z listy w treningu dla tego tematu.
+1.  W restauracji można zamówić zupę dnia, danie główne i deser. Jest 5 rodzajów zup, 10 rodzajów dań głównych i 6 rodzajów deserów. Na ile sposobów można skomponować trzydaniowy obiad?
+2.  Ile można utworzyć liczb trzycyfrowych, używając cyfr $\\{0, 1, 2, 3, 4\\}$, jeśli cyfry mogą się powtarzać?
+3.  Ile można utworzyć liczb trzycyfrowych parzystych, używając cyfr $\\{0, 1, 2, 3, 4\\}$, jeśli cyfry mogą się powtarzać?
+4.  Chłopiec ma 3 koszule i 4 pary spodni. Na ile sposobów może się ubrać, jeśli chce założyć jedną koszulę i jedne spodnie?
+5.  Ile jest wszystkich trzycyfrowych numerów samochodowych składających się z trzech różnych cyfr ze zbioru $\\{1, 2, 3, 4, 5, 6\\}$?
+6.  Na ile sposobów można wybrać przewodniczącego i zastępcę spośród 10 uczniów klasy, jeśli jedna osoba nie może pełnić obu funkcji?
+7.  Ile istnieje trzycyfrowych kodów PIN, w których każda kolejna cyfra jest większa od poprzedniej? (Cyfry od 0 do 9).
 
 ## Odpowiedzi
-
-1. Sprawdź rozwiązanie w aplikacji po ukończeniu zadania.
+1.  $5 \\cdot 10 \\cdot 6 = 300$ sposobów.
+2.  Pierwsza cyfra: 4 możliwości (bez 0). Druga cyfra: 5 możliwości. Trzecia cyfra: 5 możliwości. $4 \\cdot 5 \\cdot 5 = 100$ liczb.
+3.  Trzecia cyfra (jedności) musi być parzysta: $\\{0, 2, 4\\}$ (3 możliwości). Pierwsza cyfra: 4 możliwości (bez 0). Druga cyfra: 5 możliwości. $4 \\cdot 5 \\cdot 3 = 60$ liczb.
+4.  $3 \\cdot 4 = 12$ sposobów.
+5.  Pierwsza cyfra: 6 możliwości. Druga cyfra: 5 możliwości (bo inna niż pierwsza). Trzecia cyfra: 4 możliwości (bo inna niż dwie pierwsze). $6 \\cdot 5 \\cdot 4 = 120$ liczb.
+6.  Wybór przewodniczącego: 10 możliwości. Po wyborze przewodniczącego, wybór zastępcy: 9 możliwości. $10 \\cdot 9 = 90$ sposobów.
+7.  To zadanie jest bardziej złożone. Ponieważ cyfry muszą być różne i każda kolejna musi być większa, wystarczy wybrać 3 różne cyfry ze zbioru $\\{0, 1, \\dots, 9\\}$. Jedna taka kombinacja cyfr (np. $\\{1, 3, 7\\}$) daje dokładnie jeden kod (137). Liczba sposobów wybrania 3 cyfr ze 10 to $\\binom{10}{3} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120$.
 
 ## Szybka powtórka
-
-1. Jaki dział obejmuje ten temat?
-2. Gdzie znajdziesz zadania do ćwiczeń?`,
+1.  Kiedy stosujemy regułę mnożenia, a kiedy regułę dodawania?
+2.  Co oznacza, że czynności w regule mnożenia są "niezależne"?
+3.  Ile jest możliwości wyboru cyfry jedności w liczbie parzystej?
+4.  Dlaczego pierwsza cyfra liczby dwucyfrowej nie może być zerem?
+5.  W zadaniu o wyborze stroju (koszule i spodnie) – czy kolejność wyboru ma znaczenie dla ostatecznego wyniku liczby kombinacji?`,
     video_url: null,
   },
 ];

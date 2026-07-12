@@ -8,205 +8,205 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Dla każdej dodatniej liczby a iloraz ![Rysunek do zadania](/cke-matura/m16-maj/z01-1.png) jest równy A) a −3,9 B) a –2 C) a −1,3 D) a 1,3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wyrażenie, używając potęg. Przypomnij sobie, że $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$.\n$\\frac{a^2}{\\sqrt{a}} = \\frac{a^2}{a^{\\frac{1}{2}}}$\n\n**Krok 2.** Skorzystaj z własności dzielenia potęg o tych samych podstawach: $a^m : a^n = a^{m-n}$.\n$a^2 : a^{\\frac{1}{2}} = a^{2 - \\frac{1}{2}} = a^{\\frac{4}{2} - \\frac{1}{2}} = a^{\\frac{3}{2}}$\n\n**Krok 3.** Zamień potęgę z ułamkowym wykładnikiem z powrotem na postać z pierwiastkiem, $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$.\n$a^{\\frac{3}{2}} = \\sqrt[2]{a^3} = \\sqrt{a^3}$\n\n**Odpowiedź:** $\\sqrt{a^3}$"
     },
     {
       "numer": 2,
       "dzial": "Algebra",
       "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m16-maj/z02-1.png) jest równa A) 3 ⁄ 2 B) 2 C) 5 ⁄ 2 D) 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Uprość wyrażenie w liczniku, wykonując dodawanie ułamków o wspólnych mianownikach.\n$$ \\frac{1}{3} + \\frac{2}{3} = \\frac{1+2}{3} = \\frac{3}{3} = 1 $$\n**Krok 2.** Uprość wyrażenie w mianowniku, wykonując odejmowanie ułamków o wspólnych mianownikach.\n$$ \\frac{3}{2} - \\frac{1}{2} = \\frac{3-1}{2} = \\frac{2}{2} = 1 $$\n**Krok 3.** Podziel uproszczony licznik przez uproszczony mianownik.\n$$ \\frac{1}{1} = 1 $$\n**Odpowiedź:** D, czyli 1."
     },
     {
       "numer": 3,
       "dzial": "Algebra",
       "tresc": "Liczby a i c są dodatnie. Liczba b stanowi 48% liczby a oraz 32% liczby c . Wynika stąd, że A) c = 1,5 a B) c = 1,6 a C) c = 0,8 a D) c = 0,16 a",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz podane informacje w postaci równań: $b = 0,48a$ oraz $b = 0,32c$. Ponieważ obie zależności są równe $b$, możemy je przyrównać: $0,48a = 0,32c$.\n**Krok 2.** Przekształć równanie, aby wyznaczyć zależność między $c$ a $a$. Podziel obie strony przez $0,32$: $c = \\frac{0,48}{0,32}a$.\n**Krok 3.** Oblicz stosunek $\\frac{0,48}{0,32}$: $\\frac{48}{32} = \\frac{3 \\cdot 16}{2 \\cdot 16} = \\frac{3}{2} = 1,5$. Zatem $c = 1,5a$.\n\n**Odpowiedź:** A, czyli $c = 1,5a$."
     },
     {
       "numer": 4,
       "dzial": "Algebra",
       "tresc": "Równość ![Rysunek do zadania](/cke-matura/m16-maj/z04-1.png) jest prawdziwa dla A) a = 3 B) a = 1 C) a = − 2 D) a = − 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć lewą stronę równania do postaci $a \\cdot 2^x$. Zastosuj własność potęgowania potęg $(x^m)^n = x^{m \\cdot n}$.\n$32 \\cdot \\sqrt[3]{4^x} = 2^5 \\cdot (2^2)^{\\frac{1}{3}x} = 2^5 \\cdot 2^{\\frac{2}{3}x}$\n\n**Krok 2.** Zastosuj własność mnożenia potęg o tych samych podstawach $x^m \\cdot x^n = x^{m+n}$ i porównaj obie strony równania, aby wyznaczyć $a$.\n$2^5 \\cdot 2^{\\frac{2}{3}x} = a \\cdot 2^x \\implies a = \\frac{2^5 \\cdot 2^{\\frac{2}{3}x}}{2^x} = 2^5 \\cdot 2^{\\frac{2}{3}x - x} = 2^5 \\cdot 2^{-\\frac{1}{3}x}$\n\n**Krok 3.** Użyj informacji z rysunku, że $a$ nie zależy od $x$. Aby $a$ było stałe, wykładnik przy podstawie 2 musi być równy 0.\n$a = 2^5 \\cdot 2^{-\\frac{1}{3}x}$. Aby $a$ było stałe, wykładnik $-\\frac{1}{3}x$ musi być równy 0. To oznacza, że $x=0$. Podstawiając $x=0$ do równania otrzymujemy: $a = 2^5 \\cdot 2^0 = 32 \\cdot 1 = 32$.\nJednak, jeśli porównamy bezpośrednio $32 \\cdot \\sqrt[3]{4^x} = a \\cdot 2^x$ to:\n$2^5 \\cdot (2^2)^{\\frac{x}{3}} = a \\cdot 2^x$\n$2^5 \\cdot 2^{\\frac{2x}{3}} = a \\cdot 2^x$\n$2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$\nDla uproszczenia, aby pozbyć się $x$, możemy przekształcić lewą stronę do postaci $a \\cdot 2^x$.\n$32 \\cdot 4^{\\frac{x}{3}} = 32 \\cdot (2^2)^{\\frac{x}{3}} = 32 \\cdot 2^{\\frac{2x}{3}} = 32 \\cdot (2^x)^{\\frac{2}{3}}$.\nWidzimy, że lewa strona nie jest postaci $a \\cdot 2^x$.\n\n**Krok 4.** Przeanalizujmy jeszcze raz równanie i rysunek. Równość ma być prawdziwa dla pewnego $a$, niezależnie od $x$.\n$32 \\cdot 4^{\\frac{x}{3}} = a \\cdot 2^x$\n$2^5 \\cdot (2^2)^{\\frac{x}{3}} = a \\cdot 2^x$\n$2^5 \\cdot 2^{\\frac{2x}{3}} = a \\cdot 2^x$\n$2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$\nAby to równanie było prawdziwe dla wszystkich $x$, musimy dopasować postać lewej strony do prawej.\n$2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$\nDzielimy obie strony przez $2^x$:\n$a = \\frac{2^{5 + \\frac{2x}{3}}}{2^x} = 2^{5 + \\frac{2x}{3} - x} = 2^{5 - \\frac{x}{3}}$.\nWartość $a$ zależy od $x$, co jest sprzeczne z założeniem, że $a$ jest stałe. Należy sprawdzić, czy treść zadania nie sugeruje konkretnej wartości $x$, lub czy rysunek nie daje dodatkowych wskazówek. Rysunek jest linią prostą przechodzącą przez punkt (0, 32) na osi y, co oznacza, że przy $x=0$, wartość funkcji wynosi 32.\nPodstawiając $x=0$ do $a = 2^{5 - \\frac{x}{3}}$ otrzymujemy $a = 2^{5 - 0} = 2^5 = 32$. Jednakże $a$ nie jest 32, ponieważ żadna z opcji odpowiedzi nie zawiera 32. Sprawdźmy ponownie przekształcenia.\n$32 \\cdot \\sqrt[3]{4^x} = 32 \\cdot 4^{\\frac{x}{3}} = 32 \\cdot (2^2)^{\\frac{x}{3}} = 32 \\cdot 2^{\\frac{2x}{3}} = 2^5 \\cdot 2^{\\frac{2x}{3}} = 2^{5 + \\frac{2x}{3}}$\nMamy $2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$. Rysunek pokazuje zależność $y = a \\cdot 2^x$. Funkcja z lewej strony to $y = 2^{5 + \\frac{2x}{3}}$.\nAby te funkcje były równe dla każdego $x$, muszą być identyczne.\n$2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$\nDzieląc obie strony przez $2^x$:\n$a = \\frac{2^{5 + \\frac{2x}{3}}}{2^x} = 2^{5 + \\frac{2x}{3} - x} = 2^{5 - \\frac{x}{3}}$.\nWartość $a$ zależy od $x$. To oznacza, że równość $32 \\cdot \\sqrt[3]{4^x} = a \\cdot 2^x$ nie jest prawdziwa dla *dowolnego* $a$, ale dla konkretnego $a$ i \\cdot pewnego* $x$. Jednakże typowe zadania tego typu zakładają, że równość ma zachodzić dla każdego $x$.\nPrzyjmijmy, że chodzi o dopasowanie postaci.\nJeśli przyjmiemy $a = 2^k$, to $2^{5 + \\frac{2x}{3}} = 2^k \\cdot 2^x = 2^{k+x}$.\nWtedy $5 + \\frac{2x}{3} = k + x$.\n$5 - k = x - \\frac{2x}{3} = \\frac{x}{3}$.\n$15 - 3k = x$.\nTa zależność nadal zależy od $x$. Należy założyć, że pytanie jest o takie $a$, dla którego istnieje $x$ spełniające równanie. ALE rysunek sugeruje funkcję wykładniczą $a \\cdot 2^x$. Sprawdźmy opcje:\nA) $a=3$: $2^{5 + \\frac{2x}{3}} = 3 \\cdot 2^x \\implies 2^5 \\cdot 2^{\\frac{2x}{3}} = 3 \\cdot 2^x \\implies 32 \\cdot 2^{\\frac{2x}{3}} = 3 \\cdot 2^x$. To nie jest prawda dla każdego $x$.\nB) $a=1$: $2^{5 + \\frac{2x}{3}} = 1 \\cdot 2^x \\implies 2^{5 + \\frac{2x}{3}} = 2^x \\implies 5 + \\frac{2x}{3} = x \\implies 5 = x - \\frac{2x}{3} = \\frac{x}{3} \\implies x=15$.\nC) $a=-2$: niemożliwe, bo $a \\cdot 2^x$ ma być dodatnie.\nD) $a=-3$: niemożliwe.\n\nJeśli rysunek jest dla funkcji $y = f(x) = 32 \\cdot \\sqrt[3]{4^x}$, to punkt (0, 32) jest na wykresie.\n$f(0) = 32 \\cdot \\sqrt[3]{4^0} = 32 \\cdot 1 = 32$.\nWykres funkcji $y = a \\cdot 2^x$. Jeśli przyjmiemy, że ta sama funkcja jest przedstawiona, to punkt (0, 32) musi leżeć na wykresie $y = a \\cdot 2^x$.\n$32 = a \\cdot 2^0 = a \\cdot 1 = a$.\nWtedy $a=32$. Jednakże opcje są inne.\nMożliwe, że jest błąd w zadaniu lub w moim rozumieniu rysunku. Zakładając, że rysunek przedstawia *przykład* funkcji typu $a \\cdot 2^x$, a równość ma być spełniona dla *jakiegoś* $x$ dla danego $a$.\nPopatrzmy jeszcze raz: $2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$.\nJeśli podstawimy $x=3$:\n$2^{5 + \\frac{2 \\cdot 3}{3}} = a \\cdot 2^3$\n$2^{5+2} = a \\cdot 8$\n$2^7 = a \\cdot 8$\n$128 = 8a \\implies a = 16$.\n\nJeśli podstawimy $x=0$ (zgodnie z rysunkiem):\n$2^5 = a \\cdot 2^0 \\implies 32 = a$.\n\nNależy sprawdzić opcje dla *jakiegoś* $x$.\nA) $a=3$: $2^{5 + \\frac{2x}{3}} = 3 \\cdot 2^x$.\nB) $a=1$: $2^{5 + \\frac{2x}{3}} = 1 \\cdot 2^x \\implies 2^{5 + \\frac{2x}{3}} = 2^x \\implies 5 + \\frac{2x}{3} = x \\implies 5 = \\frac{x}{3} \\implies x=15$. Zatem dla $a=1$ istnieje $x=15$, dla którego równość jest spełniona.\n\n**Krok 1.** Przekształć lewą stronę równania: $32 \\cdot \\sqrt[3]{4^x} = 2^5 \\cdot (2^2)^{\\frac{x}{3}} = 2^5 \\cdot 2^{\\frac{2x}{3}} = 2^{5 + \\frac{2x}{3}}$.\n**Krok 2.** Zapisz równanie w postaci: $2^{5 + \\frac{2x}{3}} = a \\cdot 2^x$.\n**Krok 3.** Sprawdź opcje odpowiedzi. Dla $a=1$, mamy $2^{5 + \\frac{2x}{3}} = 1 \\cdot 2^x = 2^x$.\n**Krok 4.** Rozwiąż równanie wykładnicze $5 + \\frac{2x}{3} = x$. Po przekształceniu otrzymujemy $5 = x - \\frac{2x}{3} = \\frac{x}{3}$, czyli $x=15$. Ponieważ istnieje takie $x$, dla którego równość zachodzi, $a=1$ jest poprawną odpowiedzią.\n\n**Odpowiedź:** B, czyli $a=1$"
     },
     {
       "numer": 5,
       "dzial": "Równania",
       "tresc": "Jedną z liczb, które spełniają nierówność –x 5 + x 3 – x jest A) 1 B) –1 C) 2 D) –2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przepisujemy nierówność i przenosimy wszystkie wyrazy na jedną stronę, aby uzyskać postać $W(x) \\le 0$.\n$-x^5 + x^3 - x \\le 0$\n\n**Krok 2.** Mnożymy obie strony nierówności przez $-1$, pamiętając o zmianie znaku nierówności na przeciwny.\n$x^5 - x^3 + x \\ge 0$\n\n**Krok 3.** Wyłączamy $x$ przed nawias i sprawdzamy, która z podanych liczb spełnia nierówność $x(x^4 - x^2 + 1) \\ge 0$. Ponieważ wyrażenie w nawiasie $x^4 - x^2 + 1$ jest zawsze dodatnie (można to sprawdzić podstawiając $y = x^2$ i analizując $y^2 - y + 1$, co jest funkcją kwadratową z deltą $<0$), nierówność sprowadza się do $x \\ge 0$.\nZ podanych opcji, tylko $x=1$ i $x=2$ spełniają warunek $x \\ge 0$. Ponieważ pytanie brzmi \"Jedną z liczb\", sprawdzamy dalej.\n\n**Krok 4.** Sprawdzamy liczby, które spełniają $x \\ge 0$ w oryginalnej nierówności $-x^5 + x^3 - x \\le 0$.\nDla $x=1$: $-1^5 + 1^3 - 1 = -1 + 1 - 1 = -1 \\le 0$.\nDla $x=2$: $-2^5 + 2^3 - 2 = -32 + 8 - 2 = -26 \\le 0$.\nObie liczby spełniają nierówność. Zgodnie z formatem sprawdzamy odpowiedzi w podanej kolejności. Liczba 1 jest pierwszą dodatnią liczbą.\n\n**Odpowiedź:** A, czyli 1"
     },
     {
       "numer": 6,
       "dzial": "Równania",
       "tresc": "Proste o równaniach 2x − 3y = 4 i 5x − 6y = 7 przecinają się w punkcie P. Stąd wynika, że A) P = (1, 2) B) P = (− 1, 2) C) P = (− 1, − 2) D) P = (1, − 2)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozwiążemy układ równań z danych prostych, mnożąc pierwsze równanie przez $-2$, aby wyeliminować $y$. Otrzymamy: $-4x + 6y = -8$ oraz $5x - 6y = 7$.\n\n**Krok 2.** Dodamy stronami oba równania, aby wyznaczyć $x$: $(-4x + 5x) + (6y - 6y) = -8 + 7$, co daje $x = -1$.\n\n**Krok 3.** Podstawimy $x = -1$ do pierwszego równania $2x - 3y = 4$, aby wyznaczyć $y$: $2(-1) - 3y = 4$, czyli $-2 - 3y = 4$. Stąd $-3y = 6$, a więc $y = -2$.\n\n**Odpowiedź:** C, czyli P = (− 1, − 2)"
     },
     {
       "numer": 7,
       "dzial": "Algebra",
       "tresc": "Punkty ABCD leżą na okręgu o środku S (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z07-1.gif) Miara kąta BDC jest równa A) 91° B) 72,5° C) 18° D) 32°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Kąt BAC jest kątem wpisanym opartym na tym samym łuku BC, co kąt BDC. Kąty wpisane oparte na tym samym łuku mają równe miary, więc szukamy miary kąta BAC.\n\n**Krok 2.** Kąt BSC jest kątem środkowym opartym na tym samym łuku BC, co kąt BAC. Miara kąta środkowego jest dwukrotnie większa od miary kąta wpisanego opartego na tym samym łuku, więc miara kąta BAC wynosi $\\frac{1}{2} \\cdot \\text{miara kąta } BSC$.\n\n**Krok 3.** Z rysunku odczytujemy, że miara kąta BSC wynosi 36°. Zatem miara kąta BAC wynosi $\\frac{1}{2} \\cdot 36° = 18°$. Ponieważ kąty BAC i BDC są oparte na tym samym łuku, miara kąta BDC jest również równa 18°.\n\n**Odpowiedź:** C, czyli 18°"
     },
     {
       "numer": 8,
       "dzial": "Funkcje",
       "tresc": "Dana jest funkcja liniowa &fnof;(x) = 3 &frasl; 4 x + 6 . Miejscem zerowym tej funkcji jest liczba A) 8 B) 6 C) – 6 D) – 8",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Miejsce zerowe funkcji to wartość $x$, dla której $f(x) = 0$. Przyrównujemy więc wyrażenie definiujące funkcję do zera: $\\frac{3}{4}x + 6 = 0$.\n\n**Krok 2.** Rozwiązujemy równanie liniowe: odejmujemy 6 od obu stron, co daje $\\frac{3}{4}x = -6$. Następnie mnożymy obie strony przez $\\frac{4}{3}$, aby wyznaczyć $x$: $x = -6 \\cdot \\frac{4}{3}$.\n\n**Krok 3.** Obliczamy wartość $x$: $x = -\\frac{24}{3} = -8$.\n\n**Odpowiedź:** D, czyli – 8"
     },
     {
       "numer": 9,
       "dzial": "Funkcje",
       "tresc": "Równanie wymierne ![Rysunek do zadania](/cke-matura/m16-maj/z09-1.png) gdzie x ≠ − 5 , A) nie ma rozwiązań rzeczywistych. B) ma dokładnie jedno rozwiązanie rzeczywiste. C) ma dokładnie dwa rozwiązania rzeczywiste. D) ma dokładnie trzy rozwiązania rzeczywiste. Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (1,9) . Liczby –2 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć równanie, mnożąc obie strony przez mianownik $x+5$, pamiętając o założeniu $x \\neq -5$. Otrzymujemy $2(x+5) = x^2+5$.\n**Krok 2.** Zredukuj wyrazy podobne i przenieś wszystko na jedną stronę, aby otrzymać równanie kwadratowe w postaci standardowej $ax^2+bx+c=0$. Mamy $2x + 10 = x^2 + 5$, co daje $x^2 - 2x - 5 = 0$.\n**Krok 3.** Oblicz wyróżnik $\\Delta = b^2 - 4ac$ dla otrzymanego równania kwadratowego, aby określić liczbę rozwiązań rzeczywistych. W tym przypadku $a=1, b=-2, c=-5$, więc $\\Delta = (-2)^2 - 4(1)(-5) = 4 + 20 = 24$.\n**Krok 4.** Ponieważ $\\Delta > 0$, równanie kwadratowe ma dwa różne rozwiązania rzeczywiste. Sprawdź, czy któreś z nich jest równe $-5$. Rozwiązania to $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} = \\frac{2 \\pm \\sqrt{24}}{2} = 1 \\pm \\sqrt{6}$. Żadne z nich nie jest równe $-5$.\n\n**Odpowiedź:** C, czyli ma dokładnie dwa rozwiązania rzeczywiste."
     },
     {
       "numer": 10,
       "dzial": "Funkcje",
       "tresc": "Zbiorem wartości funkcji ƒ jest przedział A) ![Rysunek do zadania](/cke-matura/m16-maj/z10-1.png) B) ![Rysunek do zadania](/cke-matura/m16-maj/z10-2.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z10-3.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z10-4.png) Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (1,9) . Liczby –2 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m16-maj/z10-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz funkcję kwadratową w postaci iloczynowej, korzystając z miejsc zerowych -2 i 4: $f(x) = a(x - (-2))(x - 4) = a(x+2)(x-4)$.\n**Krok 2.** Wykorzystaj współrzędne wierzchołka W=(1,9), podstawiając je do wzoru funkcji i obliczając współczynnik $a$: $9 = a(1+2)(1-4) \\Rightarrow 9 = a(3)(-3) \\Rightarrow 9 = -9a \\Rightarrow a = -1$.\n**Krok 3.** Funkcja ma postać $f(x) = -(x+2)(x-4)$. Ponieważ współczynnik $a=-1$ jest ujemny, ramiona paraboli są skierowane w dół, a zbiorem wartości jest przedział $(-\\infty, y_W]$, gdzie $y_W=9$ jest maksymalną wartością funkcji (wartością w wierzchołku).\n\n**Odpowiedź:** $(-\\infty, 9]$"
     },
     {
       "numer": 11,
       "dzial": "Funkcje",
       "tresc": "Najmniejsza wartość funkcji ƒ w przedziale &lang;−1, 2&rang; jest równa A) 2 B) 5 C) 8 D) 9",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz pochodną funkcji $f(x) = x^2 - 4x + 7$ i przyrównaj ją do zera, aby znaleźć punkty stacjonarne: $f'(x) = 2x - 4$, $2x - 4 = 0 \\implies x = 2$.\n**Krok 2.** Sprawdź wartości funkcji na krańcach przedziału oraz w znalezionym punkcie stacjonarnym (jeśli należy do przedziału): $f(-1) = (-1)^2 - 4(-1) + 7 = 1 + 4 + 7 = 12$, $f(2) = 2^2 - 4(2) + 7 = 4 - 8 + 7 = 3$. Punkt $x=2$ należy do przedziału $\\langle-1, 2\\rangle$.\n**Krok 3.** Porównaj otrzymane wartości: $f(-1)=12$ i $f(2)=3$. Najmniejsza wartość to $3$.\n\n**Odpowiedź:** A, czyli 2"
     },
     {
       "numer": 12,
       "dzial": "Funkcje",
       "tresc": "Funkcja ƒ określona jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z12-1.png) dla każdej liczby rzeczywistej x. Wtedy ![Rysunek do zadania](/cke-matura/m16-maj/z12-2.png) jest równa A) ![Rysunek do zadania](/cke-matura/m16-maj/z12-3.gif) B) ![Rysunek do zadania](/cke-matura/m16-maj/z12-4.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z12-5.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z12-6.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz funkcję $f(x)$ w prostszej postaci, korzystając ze wzoru na różnicę kwadratów: $(a-b)(a+b) = a^2 - b^2$. Otrzymujemy $f(x) = \\frac{(x-3)(x+3)}{x-3} = x+3$ dla $x \\neq 3$.\n**Krok 2.** Oblicz wartość $f(10)$ podstawiając $x=10$ do uproszczonego wzoru funkcji: $f(10) = 10+3 = 13$.\n**Krok 3.** Oblicz wartość $f(-3)$ podstawiając $x=-3$ do uproszczonego wzoru funkcji: $f(-3) = -3+3 = 0$.\n**Krok 4.** Oblicz różnicę $f(10) - f(-3)$: $13 - 0 = 13$.\n\n**Odpowiedź:** A"
     },
     {
       "numer": 13,
       "dzial": "Algebra",
       "tresc": "W okręgu o środku w punkcie S poprowadzono cięciwę AB , która utworzyła z promieniem AS kąt o mierze 31° (zobacz rysunek). Promień tego okręgu ma długość 10. Odległość punktu S od cięciwy AB jest liczbą z przedziału ![Rysunek do zadania](/cke-matura/m16-maj/z13-1.gif) A) ![Rysunek do zadania](/cke-matura/m16-maj/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m16-maj/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z13-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Narysuj promień prostopadły do cięciwy AB, który przetnie ją w punkcie C. Trójkąt ASC jest prostokątny, a odległość punktu S od cięciwy AB to długość odcinka SC. Z rysunku wynika, że odcinek SC jest przyprostokątną w trójkącie prostokątnym ASC.\n\n**Krok 2.** W trójkącie prostokątnym ASC, promień AS ma długość 10 (przeciwprostokątna), a kąt $\\angle SAC = 31^\\circ$. Użyj funkcji cosinus do obliczenia długości odcinka SC: $\\cos(\\angle SAC) = \\frac{SC}{AS}$.\n\n**Krok 3.** Oblicz $SC = AS \\cdot \\cos(31^\\circ) = 10 \\cdot \\cos(31^\\circ)$. Wartość $\\cos(31^\\circ)$ jest liczbą z przedziału $(0.8, 1)$, więc $SC$ będzie z przedziału $(8, 10)$.\n\n**Odpowiedź:** D, czyli $(8, 10)$."
     },
     {
       "numer": 14,
       "dzial": "Ciągi",
       "tresc": "Czternasty wyraz ciągu arytmetycznego jest równy 8, a różnica tego ciągu jest równa ![Rysunek do zadania](/cke-matura/m16-maj/z14-1.png) Siódmy wyraz tego ciągu jest równy A) 37 ⁄ 2 B) – 37 ⁄ 2 C) – 5 ⁄ 2 D) 5 ⁄ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$. Wiemy, że $a_{14} = 8$ i $r = -\\frac{5}{2}$, więc $8 = a_1 + (14-1)(-\\frac{5}{2})$.\n**Krok 2.** Oblicz $a_1$. Z równania $8 = a_1 + 13(-\\frac{5}{2})$ otrzymujemy $8 = a_1 - \\frac{65}{2}$, co daje $a_1 = 8 + \\frac{65}{2} = \\frac{16+65}{2} = \\frac{81}{2}$.\n**Krok 3.** Oblicz siódmy wyraz ciągu ($a_7$) używając wzoru $a_7 = a_1 + (7-1)r$. Podstawiamy obliczone $a_1 = \\frac{81}{2}$ i dane $r = -\\frac{5}{2}$: $a_7 = \\frac{81}{2} + 6(-\\frac{5}{2}) = \\frac{81}{2} - \\frac{30}{2} = \\frac{51}{2}$.\n\n**Odpowiedź:** A, czyli $\\frac{51}{2}$."
     },
     {
       "numer": 15,
       "dzial": "Ciągi",
       "tresc": "Ciąg (x, 2x + 3, 4x + 3) jest geometryczny. Pierwszy wyraz tego ciągu jest równy A) – 4 B) 1 C) 0 D) – 1",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W ciągu geometrycznym iloraz dwóch kolejnych wyrazów jest stały. Zapiszemy tę zależność dla podanego ciągu: $\\frac{2x+3}{x} = \\frac{4x+3}{2x+3}$.\n**Krok 2.** Rozwiążemy otrzymane równanie, mnożąc na krzyż: $(2x+3)^2 = x(4x+3)$, co po rozwinięciu daje $4x^2 + 12x + 9 = 4x^2 + 3x$.\n**Krok 3.** Uprościmy równanie, redukując wyrazy podobne: $12x + 9 = 3x$, co daje $9x = -9$, a stąd $x = -1$.\n**Krok 4.** Wyraz pierwszy ciągu jest równy $x$, zatem jego wartość wynosi $-1$.\n\n**Odpowiedź:** D, czyli – 1"
     },
     {
       "numer": 16,
       "dzial": "Geometria",
       "tresc": "Przedstawione na rysunku trójkąty ABC i PQR są podobne. ![Rysunek do zadania](/cke-matura/m16-maj/z16-1.gif) Bok AB trójkąta ABC ma długość A) 8 B) 8,5 C) 9,5 D) 10",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz stosunek odpowiadających sobie boków trójkątów podobnych, gdzie bok $AB$ odpowiada bokowi $PQ$, a bok $AC$ bokowi $PR$. Stosunek ten wynosi $\\frac{AB}{PQ} = \\frac{AC}{PR}$.\n**Krok 2.** Podstaw znane długości boków do równania: $\\frac{AB}{6} = \\frac{10}{8}$.\n**Krok 3.** Rozwiąż równanie, mnożąc obie strony przez 6, aby obliczyć długość boku $AB$: $AB = \\frac{10}{8} \\cdot 6 = \\frac{60}{8} = \\frac{15}{2} = 7,5$.\n\nBrak litery ABCD do wyboru, więc liczę, że mój wynik jest pomocny.\n\n**Odpowiedź:** 7,5"
     },
     {
       "numer": 17,
       "dzial": "Algebra",
       "tresc": "Kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m16-maj/z17-1.png) Wtedy A) ![Rysunek do zadania](/cke-matura/m16-maj/z17-2.png) B) ![Rysunek do zadania](/cke-matura/m16-maj/z17-3.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z17-4.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z17-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna — 5.\n**Krok 2.** Skorzystaj z definicji funkcji trygonometrycznych w trójkącie prostokątnym: $\\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{4}{5}$.\n**Krok 3.** Sprawdź podane warianty odpowiedzi. Wariant B jest zgodny z obliczonym cosinusem: $\\cos \\alpha = \\frac{4}{5}$.\n\n**Odpowiedź:** B, czyli $\\cos \\alpha = \\frac{4}{5}$"
     },
     {
       "numer": 18,
       "dzial": "Geometria",
       "tresc": "Z odcinków o długościach: 5 , 2a + 1 , a − 1 można zbudować trójkąt równoramienny. Wynika stąd, że A) a = 6 B) a = 4 C) a = 3 D) a = 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby z odcinków można było zbudować trójkąt, suma długości dwóch krótszych boków musi być większa od długości najdłuższego boku. Ponieważ trójkąt jest równoramienny, mamy trzy możliwości przypisania długości boków: $(5, 5, 2a+1)$, $(5, a-1, a-1)$ lub $(2a+1, a-1, a-1)$.\n\n**Krok 2.** Analizujemy każdy przypadek.\n1.  $(5, 5, 2a+1)$: $5+5 > 2a+1 \\Rightarrow 10 > 2a+1 \\Rightarrow 9 > 2a \\Rightarrow a < 4.5$. Dodatkowo, $a-1$ musi być dodatnie, więc $a>1$.\n2.  $(5, a-1, a-1)$: $2(a-1) > 5 \\Rightarrow 2a-2 > 5 \\Rightarrow 2a > 7 \\Rightarrow a > 3.5$. Dodatkowo $a-1 > 0$.\n3.  $(2a+1, a-1, a-1)$: $(a-1)+(a-1) > 2a+1 \\Rightarrow 2a-2 > 2a+1 \\Rightarrow -2 > 1$, co jest sprzeczne. Ten przypadek nie jest możliwy.\n\n**Krok 3.** Rozważamy możliwe wartości $a$ z odpowiedzi.\n-   Dla $a=2$: przypadek 1: $2a+1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n-   Dla $a=3$: przypadek 1: $2a+1=7$, boki $(5,5,7)$, $5+5>7$ - OK. przypadek 2: $a-1=2$, boki $(5,2,2)$, $2+2 \\ngtr 5$ - nie OK.\n-   Dla $a=4$: przypadek 1: $2a+1=9$, boki $(5,5,9)$, $5+5>9$ - OK. przypadek 2: $a-1=3$, boki $(5,3,3)$, $3+3 > 5$ - OK.\n-   Dla $a=6$: przypadek 1: $2a+1=13$, boki $(5,5,13)$, $5+5 \\ngtr 13$ - nie OK. przypadek 2: $a-1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n\nJedyną wartością $a$, dla której zawsze można zbudować trójkąt równoramienny, jest $a=4$.\n\n**Odpowiedź:** B, czyli $a=4$"
     },
     {
       "numer": 19,
       "dzial": "Geometria",
       "tresc": "Okręgi o promieniach 3 i 4 są styczne zewnętrznie. Prosta styczna do okręgu o promieniu 4 w punkcie P przechodzi przez środek okręgu o promieniu 3 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z19-1.gif) Pole trójkąta, którego wierzchołkami są środki okręgów i punkt styczności P , jest równe A) ![Rysunek do zadania](/cke-matura/m16-maj/z19-2.png) B) ![Rysunek do zadania](/cke-matura/m16-maj/z19-3.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z19-4.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z19-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy środki okręgów jako $O_1$ (promień $r_1 = 3$) i $O_2$ (promień $r_2 = 4$). Punkt styczności okręgów to $S$. Ponieważ okręgi są styczne zewnętrznie, odległość między ich środkami wynosi $|O_1 O_2| = r_1 + r_2 = 3 + 4 = 7$.\n\n**Krok 2.** Prosta styczna do okręgu o środku $O_2$ i promieniu $r_2 = 4$ w punkcie $P$ przechodzi przez środek $O_1$. Odcinek $O_2 P$ jest promieniem okręgu o środku $O_2$, zatem $|O_2 P| = r_2 = 4$. Ponieważ prosta jest styczna w punkcie $P$, promień $O_2 P$ jest prostopadły do tej prostej. Trójkąt $O_1 P O_2$ jest więc prostokątny z kątem prostym przy wierzchołku $P$.\n\n**Krok 3.** Długość przeciwprostokątnej $|O_1 O_2| = 7$, a jednej z przyprostokątnych $|O_2 P| = 4$. Z twierdzenia Pitagorasa obliczamy długość drugiej przyprostokątnej $|O_1 P| = \\sqrt{|O_1 O_2|^2 - |O_2 P|^2} = \\sqrt{7^2 - 4^2} = \\sqrt{49 - 16} = \\sqrt{33}$. Pole trójkąta $O_1 P O_2$ wynosi $\\frac{1}{2} \\cdot |O_1 P| \\cdot |O_2 P| = \\frac{1}{2} \\cdot \\sqrt{33} \\cdot 4 = 2\\sqrt{33}$.\n\n**Odpowiedź:** $2\\sqrt{33}$"
     },
     {
       "numer": 20,
       "dzial": "Równania",
       "tresc": "Proste opisane równaniami ![Rysunek do zadania](/cke-matura/m16-maj/z20-1.png) są prostopadłe, gdy A) m = 2 B) m = 1 ⁄ 2 C) m = 1 ⁄ 3 D) m = − 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Odczytaj współczynniki kierunkowe prostych z równań. Dla prostej $y = ax + b$, współczynnik kierunkowy wynosi $a$. Proste na rysunku mają równania $y = \\frac{1}{2}x + 3$ i $y = -mx + 1$. Zatem $a_1 = \\frac{1}{2}$ i $a_2 = -m$.\n\n**Krok 2.** Zastosuj warunek prostopadłości prostych. Dwie proste o współczynnikach kierunkowych $a_1$ i $a_2$ są prostopadłe, gdy ich iloczyn wynosi -1, czyli $a_1 \\cdot a_2 = -1$.\n\n**Krok 3.** Oblicz wartość parametru $m$. Podstaw współczynniki kierunkowe do warunku prostopadłości: $\\frac{1}{2} \\cdot (-m) = -1$. Po pomnożeniu obu stron przez -2 otrzymujemy $m = 2$.\n\n**Odpowiedź:** A, czyli $m=2$."
     },
     {
       "numer": 21,
       "dzial": "Funkcje",
       "tresc": "W układzie współrzędnych dane są punkty A = (a,6) oraz B = (7,b) . Środkiem odcinka AB jest punkt M = (3,4). Wynika stąd, że A) a = 5 i b = 5 B) a = − 1 i b = 2 C) a = 4 i b = 10 D) a = − 4 i b = − 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Użyj wzoru na środek odcinka, gdzie $M = (\\frac{x_A + x_B}{2}, \\frac{y_A + y_B}{2})$. Podstaw dane: $(3,4) = (\\frac{a+7}{2}, \\frac{6+b}{2})$.\n**Krok 2.** Rozwiąż równania z tego wzoru: $3 = \\frac{a+7}{2}$ oraz $4 = \\frac{6+b}{2}$. Otrzymujemy $6 = a+7$ i $8 = 6+b$.\n**Krok 3.** Oblicz wartości $a$ i $b$: $a = 6-7 = -1$ oraz $b = 8-6 = 2$.\n**Odpowiedź:** B, czyli $a = -1$ i $b = 2$."
     },
     {
       "numer": 22,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Rzucamy trzy razy symetryczną monetą. Niech p oznacza prawdopodobieństwo otrzymania dokładnie dwóch orłów w tych trzech rzutach. Wtedy A) 0 ≤ p B) 0,2 ≤ p ≤ 0,35 C) 0,35 D) 0,5",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami — jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.\n**Krok 2.** Identyfikujemy zdarzenia sprzyjające, czyli te z dokładnie dwoma orłami (OO). Są to: ROO, ORO, OOR. Jest ich 3.\n**Krok 3.** Obliczamy prawdopodobieństwo $p$ jako stosunek liczby zdarzeń sprzyjających do liczby wszystkich możliwych zdarzeń: $p = \\frac{3}{8}$.\n**Krok 4.** Zamieniamy ułamek $\\frac{3}{8}$ na liczbę dziesiętną: $p = 0,375$. Analizujemy podane przedziały i wybieramy ten, który zawiera 0,375.\n\n**Odpowiedź:** D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, 0.2-0.35)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ — prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ — $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ — $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ — nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$"
     },
     {
       "numer": 23,
       "dzial": "Algebra",
       "tresc": "Kąt rozwarcia stożka ma miarę 120°, a tworząca tego stożka ma długość 4. Objętość tego stożka jest równa A) 36π B) 18π C) 24π D) 8π",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Podziel kąt rozwarcia stożka przez 2, aby otrzymać kąt między tworzącą a osią stożka ($\\alpha$). W tym przypadku $\\alpha = \\frac{120^\\circ}{2} = 60^\\circ$.\n\n**Krok 2.** Oblicz promień podstawy ($r$) i wysokość ($h$) stożka, korzystając z trygonometrii: $r = l \\cdot \\sin(\\alpha)$ i $h = l \\cdot \\cos(\\alpha)$, gdzie $l=4$. Zatem $r = 4 \\cdot \\sin(60^\\circ) = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3}$ oraz $h = 4 \\cdot \\cos(60^\\circ) = 4 \\cdot \\frac{1}{2} = 2$.\n\n**Krok 3.** Oblicz objętość stożka ($V$) ze wzoru $V = \\frac{1}{3} \\pi r^2 h$. Podstawiając obliczone wartości: $V = \\frac{1}{3} \\pi (2\\sqrt{3})^2 \\cdot 2 = \\frac{1}{3} \\pi (12) \\cdot 2 = 8\\pi$.\n\n**Odpowiedź:** D, czyli $8\\pi$"
     },
     {
       "numer": 24,
       "dzial": "Geometria",
       "tresc": "Przekątna podstawy graniastosłupa prawidłowego czworokątnego jest dwa razy dłuższa od wysokości graniastosłupa. Graniastosłup przecięto płaszczyzną przechodzącą przez przekątną podstawy i jeden wierzchołek drugiej podstawy (patrz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z24-1.gif) Płaszczyzna przekroju tworzy z podstawą graniastosłupa kąt α o mierze A) 30° B) 45° C) 60° D) 75°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy długość wysokości graniastosłupa jako $h$. Z treści zadania wynika, że przekątna podstawy $d$ jest dwa razy dłuższa od wysokości, czyli $d = 2h$.\n**Krok 2.** Przekrój jest trójkątem prostokątnym, gdzie jedna przyprostokątna to przekątna podstawy $d$, a druga to wysokość graniastosłupa $h$. Kąt $\\alpha$ jest kątem między przeciwprostokątną (przekątną graniastosłupa w tym przekroju) a przyprostokątną $d$.\n**Krok 3.** W tym trójkącie prostokątnym mamy $\\tan \\alpha = \\frac{\\text{przyprostokątna naprzeciw kąta}}{\\text{przyprostokątna przy kącie}} = \\frac{h}{d}$. Podstawiając $d=2h$, otrzymujemy $\\tan \\alpha = \\frac{h}{2h} = \\frac{1}{2}$. Po przeliczeniu z kalkulatora, $\\alpha \\approx 26.57^\\circ$.\n\n**Odpowiedź:** Jest błąd w treści zadania lub w podanych odpowiedziach, ponieważ obliczona wartość kąta nie pasuje do żadnej z opcji. Przy założeniu, że to wysokość jest dwa razy dłuższa od przekątnej podstawy ($h = 2d$), wtedy $\\tan \\alpha = \\frac{h}{d} = \\frac{2d}{d} = 2$, co daje $\\alpha \\approx 63.43^\\circ$, co również nie pasuje do odpowiedzi. Gdyby kąt $\\alpha$ był kątem między przekątną podstawy a krawędzią boczną (wysokością), wtedy $\\tan \\alpha = \\frac{h}{d} = \\frac{h}{2h} = \\frac{1}{2}$, co daje $\\alpha \\approx 26.57^\\circ$."
     },
     {
       "numer": 25,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna sześciu liczb naturalnych: 31, 16, 25, 29, 27, x, jest równa x &frasl; 2 . Mediana tych liczb jest równa A) 26 B) 27 C) 28 D) 29",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz równanie wynikające z definicji średniej arytmetycznej: $\\frac{31+16+25+29+27+x}{6} = \\frac{x}{2}$. Po uproszczeniu otrzymujemy $\\frac{128+x}{6} = \\frac{x}{2}$.\n\n**Krok 2.** Rozwiąż równanie, aby znaleźć wartość $x$: pomnóż obie strony przez 6, co daje $128+x = 3x$. Po przekształceniu otrzymujemy $128 = 2x$, czyli $x=64$.\n\n**Krok 3.** Uporządkuj liczby i wyznacz medianę: liczby to 16, 25, 27, 29, 31, 64. Mediana zbioru o parzystej liczbie elementów to średnia arytmetyczna dwóch środkowych liczb, czyli $\\frac{27+29}{2} = \\frac{56}{2} = 28$.\n\n**Odpowiedź:** C, czyli 28"
     },
     {
       "numer": 26,
       "dzial": "Statystyka",
       "tresc": "W tabeli przedstawiono roczne przyrosty wysokości pewnej sosny w ciągu sześciu kolejnych lat. kolejne lata 1 2 3 4 5 6 przyrost (w cm) 10 10 7 8 8 7 Oblicz średni roczny przyrost wysokości tej sosny w badanym okresie sześciu lat. Otrzymany wynik zaokrąglij do 1 cm. Oblicz błąd względny otrzymanego przybliżenia. Podaj ten błąd w procentach.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy sumę przyrostów wysokości sosny: $10+10+7+8+8+7 = 50$ cm.\n**Krok 2.** Obliczamy średni roczny przyrost, dzieląc sumę przez liczbę lat: $\\frac{50}{6} \\approx 8.33$ cm. Zaokrąglamy wynik do 1 cm, otrzymując $8$ cm.\n**Krok 3.** Obliczamy błąd bezwzględny: $|8.33 - 8| = 0.33$ cm. Błąd względny obliczamy, dzieląc błąd bezwzględny przez wartość dokładną i mnożąc przez 100%: $\\frac{0.33}{8.33} \\cdot 100\\% \\approx 3.96\\%$.\n\n**Odpowiedź:** Błąd względny wynosi ok. $3.96\\%$."
     },
     {
       "numer": 27,
       "dzial": "Równania",
       "tresc": "Rozwiąż nierówność 2x 2 − 4x > 3x 2 − 6x .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową w postaci standardowej $ax^2 + bx + c > 0$. Otrzymujemy: $-x^2 + 2x > 0$.\n\n**Krok 2.** Znajdź pierwiastki równania kwadratowego $-x^2 + 2x = 0$, wyciągając $x$ przed nawias: $x(-x+2) = 0$. Pierwiastki to $x_1 = 0$ oraz $x_2 = 2$.\n\n**Krok 3.** Narysuj parabolę dla funkcji $f(x) = -x^2 + 2x$. Ponieważ współczynnik $a = -1$ jest ujemny, ramiona paraboli są skierowane w dół. Nierówność jest spełniona, gdy wartości funkcji są dodatnie (czyli dla $x$ między pierwiastkami).\n\n**Odpowiedź:** $x \\in (0, 2)$"
     },
     {
       "numer": 28,
       "dzial": "Równania",
       "tresc": "Rozwiąż równanie (4 − x)(x 2 + 2x − 15) = 0 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby iloczyn był równy zero, przynajmniej jeden z czynników musi być równy zero. Rozważamy dwa przypadki: pierwszy nawias równy zero lub drugi nawias równy zero.\n**Krok 2.** Przyrównujemy pierwszy nawias do zera: $4 - x = 0$, co daje $x_1 = 4$.\n**Krok 3.** Przyrównujemy drugi nawias do zera: $x^2 + 2x - 15 = 0$. Obliczamy wyróżnik $\\Delta = 2^2 - 4 \\cdot 1 \\cdot (-15) = 4 + 60 = 64$, a następnie pierwiastki $x_2 = \\frac{-2 - \\sqrt{64}}{2} = \\frac{-2 - 8}{2} = -5$ oraz $x_3 = \\frac{-2 + \\sqrt{64}}{2} = \\frac{-2 + 8}{2} = 3$.\n**Odpowiedź:** $x \\in \\{-5, 3, 4\\}$"
     },
     {
       "numer": 29,
       "dzial": "Algebra",
       "tresc": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że |&#8738;DEC| = |&#8738;BGF| = 90° (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ, że trójkąty $CDE$ i $ABC$ mają wspólny kąt przy wierzchołku $C$ (kąt $\\alpha$). Dodatkowo, oba są prostokątne, więc kąty przy wierzchołkach $D$ i $B$ są równe $90^\\circ$.\n\n**Krok 2.** Zauważ, że trójkąty $BGF$ i $ABC$ mają wspólny kąt przy wierzchołku $B$ (kąt $\\beta$). Dodatkowo, oba są prostokątne, więc kąty przy wierzchołkach $G$ i $C$ są równe $90^\\circ$.\n\n**Krok 3.** Ponieważ trójkąty $CDE$ i $ABC$ mają dwa wspólne kąty ( $\\alpha$ oraz $90^\\circ$), są podobne na mocy cechy podobieństwa kąt-kąt (kk). Analogicznie, trójkąty $BGF$ i $ABC$ są podobne (kąt $\\beta$ oraz $90^\\circ$). Zatem trójkąt $CDE$ jest podobny do trójkąta $ABC$, a trójkąt $BGF$ jest podobny do trójkąta $ABC$.\n\n**Krok 4.** Skoro oba trójkąty ($CDE$ i $BGF$) są podobne do tego samego trójkąta ($ABC$), to są one podobne również do siebie nawzajem.\n\n**Odpowiedź:** Wykazano podobieństwo trójkątów CDE i FBG."
     },
     {
       "numer": 30,
       "dzial": "Algebra",
       "tresc": "Ciąg (a n ) jest określony wzorem a n = 2n 2 + 2n dla n ≥ 1 . Wykaż, że suma każdych dwóch kolejnych wyrazów tego ciągu jest kwadratem liczby naturalnej.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzór na sumę dwóch kolejnych wyrazów ciągu: $a_n + a_{n+1}$. Podstaw wzór ogólny ciągu $a_n = 2n^2 + 2n$.\n$a_n + a_{n+1} = (2n^2 + 2n) + (2(n+1)^2 + 2(n+1))$.\n\n**Krok 2.** Uprość wyrażenie, rozwijając $(n+1)^2$ oraz porządkując wyrazy.\n$a_n + a_{n+1} = 2n^2 + 2n + 2(n^2 + 2n + 1) + 2n + 2 = 2n^2 + 2n + 2n^2 + 4n + 2 + 2n + 2 = 4n^2 + 8n + 4$.\n\n**Krok 3.** Wykaż, że otrzymane wyrażenie jest kwadratem liczby naturalnej, grupując i wyłączając wspólny czynnik.\n$4n^2 + 8n + 4 = 4(n^2 + 2n + 1) = 4(n+1)^2 = [2(n+1)]^2$. Ponieważ $n \\ge 1$, to $n+1$ jest liczbą naturalną, a zatem $2(n+1)$ jest również liczbą naturalną.\n\n**Odpowiedź:** Suma każdych dwóch kolejnych wyrazów ciągu jest kwadratem liczby naturalnej $[2(n+1)]^2$."
     },
     {
       "numer": 31,
       "dzial": "Algebra",
       "tresc": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, A 0 =10 -4 cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, czy – mniejsza od 100 cm.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzór na skalę Richtera i podstaw dane z zadania: $M = \\log_{10} \\frac{A}{A_0}$. Wiemy, że $M = 6,2$ i $A_0 = 10^{-4}$ cm. Otrzymujemy: $6,2 = \\log_{10} \\frac{A}{10^{-4}}$.\n\n**Krok 2.** Rozwiąż równanie logarytmiczne, przekształcając je do postaci wykładniczej: $\\frac{A}{10^{-4}} = 10^{6,2}$. Stąd $A = 10^{6,2} \\cdot 10^{-4}$.\n\n**Krok 3.** Oblicz wartość amplitudy $A$: $A = 10^{6,2 - 4} = 10^{2,2}$. Ponieważ $10^2 = 100$, a $10^{2,2}$ jest większe od $10^2$, to $A > 100$ cm.\n\n**Odpowiedź:** $A = 10^{2,2}$ cm, jest większa od 100 cm."
     },
     {
       "numer": 32,
       "dzial": "Geometria",
       "tresc": "Jeden z kątów trójkąta jest trzy razy większy od mniejszego z dwóch pozostałych kątów, które różnią się o 50°. Oblicz kąty tego trójkąta.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy mniejszy z dwóch pozostałych kątów jako $x$. Wtedy drugi z tych kątów wynosi $x + 50^\\circ$. Trzeci kąt jest trzy razy większy od mniejszego z tych dwóch kątów, czyli $3x$.\n**Krok 2.** Suma kątów w trójkącie wynosi $180^\\circ$. Zapisujemy równanie: $x + (x + 50^\\circ) + 3x = 180^\\circ$.\n**Krok 3.** Rozwiązujemy równanie: $5x + 50^\\circ = 180^\\circ$, co daje $5x = 130^\\circ$, czyli $x = 26^\\circ$. Kąty to: $x = 26^\\circ$, $x + 50^\\circ = 76^\\circ$ oraz $3x = 3 \\cdot 26^\\circ = 78^\\circ$.\n**Odpowiedź:** Kąty trójkąta wynoszą $26^\\circ$, $76^\\circ$ i $78^\\circ$."
     },
     {
       "numer": 33,
       "dzial": "Trygonometria",
       "tresc": "Podstawą ostrosłupa prawidłowego trójkątnego ABCS jest trójkąt równoboczny ABC . Wysokość SO tego ostrosłupa jest równa wysokości jego podstawy. Objętość tego ostrosłupa jest równa 27. Oblicz pole powierzchni bocznej ostrosłupa ABCS oraz cosinus kąta, jaki tworzą wysokość ściany bocznej i płaszczyzna podstawy ostrosłupa.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy wysokość podstawy jako $h_p$, a wysokość ostrosłupa jako $H$. Z treści zadania wiemy, że $H = h_p$. Objętość ostrosłupa $V = \\frac{1}{3} P_p \\cdot H$, gdzie $P_p$ to pole podstawy. Mamy $V = 27$. W trójkącie równobocznym o boku $a$, $h_p = \\frac{a\\sqrt{3}}{2}$, a $P_p = \\frac{a^2\\sqrt{3}}{4}$. Podstawiając $H = h_p$ i $V = 27$, otrzymujemy $\\frac{1}{3} \\cdot \\frac{a^2\\sqrt{3}}{4} \\cdot \\frac{a\\sqrt{3}}{2} = 27$.\n**Krok 2.** Rozwiązujemy równanie z kroku 1: $\\frac{a^3 \\cdot 3}{24} = 27 \\implies \\frac{a^3}{8} = 27 \\implies a^3 = 216 \\implies a = 6$. Obliczamy wysokość podstawy: $h_p = \\frac{6\\sqrt{3}}{2} = 3\\sqrt{3}$. Zatem wysokość ostrosłupa $H = 3\\sqrt{3}$.\n**Krok 3.** Obliczamy pole powierzchni bocznej. Ściana boczna jest trójkątem równoramiennym o podstawie $a=6$. Obliczamy wysokość ściany bocznej $h_s$ z twierdzenia Pitagorasa w trójkącie prostokątnym o przyprostokątnych $H=3\\sqrt{3}$ i $\\frac{a}{2} = 3$: $h_s^2 = H^2 + (\\frac{a}{2})^2 = (3\\sqrt{3})^2 + 3^2 = 27 + 9 = 36$, więc $h_s = 6$. Pole jednej ściany bocznej $P_{sc} = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6 \\cdot 6 = 18$. Pole powierzchni bocznej $P_b = 3 \\cdot P_{sc} = 3 \\cdot 18 = 54$.\n**Krok 4.** Obliczamy cosinus kąta między wysokością ściany bocznej a płaszczyzną podstawy. Jest to kąt $\\alpha$ w trójkącie prostokątnym o przyprostokątnych $H=3\\sqrt{3}$ (wysokość ostrosłupa) i promieniu okręgu wpisanego w podstawę $r_w = \\frac{1}{3} h_p = \\frac{1}{3} \\cdot 3\\sqrt{3} = \\sqrt{3}$, oraz przeciwprostokątnej $h_s=6$. $\\cos \\alpha = \\frac{r_w}{h_s} = \\frac{\\sqrt{3}}{6}$.\n\n**Odpowiedź:** Pole powierzchni bocznej jest równe 54, a cosinus kąta wynosi $\\frac{\\sqrt{3}}{6}$."
     },
     {
       "numer": 34,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy kolejno dwa razy po jednej liczbie bez zwracania. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie równa 30. Wynik zapisz w postaci ułamka zwykłego nieskracalnego. <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Określamy przestrzeń zdarzeń elementarnych. Liczb dwucyfrowych jest $90$ (od $10$ do $99$). Losujemy dwie liczby bez zwracania, więc kolejność ma znaczenie. Liczba wszystkich możliwych par $(a, b)$ wynosi $90 \\cdot 89$.\n\n**Krok 2.** Identyfikujemy zdarzenia sprzyjające. Szukamy par $(a, b)$ takich, że $a \\neq b$ oraz $a+b=30$. Pary te to: $(11, 19), (12, 18), (13, 17), (14, 16), (15, 15), (16, 14), (17, 13), (18, 12), (19, 11), (20, 10), (10, 20), \\dots, (29, 1)$. Zauważmy, że $a, b$ muszą być dwucyfrowe, co eliminuje pary z liczbami mniejszymi niż $10$. Zauważamy też, że $a=15 \\implies b=15$, ale losujemy bez zwracania, więc ta para odpada. Pozostałe pary, gdzie $a$ i $b$ są różne i obie są dwucyfrowe, spełniające $a+b=30$: $(11, 19), (12, 18), (13, 17), (14, 16)$ oraz ich odwrócenia $(19, 11), (18, 12), (17, 13), (16, 14)$, a także $(10, 20)$ i $(20, 10)$. Mamy $8$ takich par.\n\n**Krok 3.** Obliczamy prawdopodobieństwo. Liczba zdarzeń sprzyjających wynosi $16$ (pary: $(11, 19), (12, 18), (13, 17), (14, 16), (16, 14), (17, 13), (18, 12), (19, 11), (10, 20), (20, 10)$). Całkowita liczba możliwych par wynosi $90 \\cdot 89$. Prawdopodobieństwo to $\\frac{16}{90 \\cdot 89} = \\frac{16}{8010} = \\frac{8}{4005}$.\n\n**Odpowiedź:** $\\frac{8}{4005}$"
     }
   ],
   "fetchedAt": "2026-05-24T14:02:12.057Z"

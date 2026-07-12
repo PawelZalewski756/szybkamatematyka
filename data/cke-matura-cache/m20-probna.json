@@ -8,205 +8,205 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Niech a = −2 , b = 3. Wartość wyrażenia a b − b a jest równa A) 73 ⁄ 9 B) 71 &frasl; 9 C) − 73 &frasl; 9 D) − 71 &frasl; 9",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Podstaw dane $a = -2$ i $b = 3$ do wyrażenia $a^b - b^a$. Otrzymamy $(-2)^3 - 3^{-2}$.\n**Krok 2.** Oblicz poszczególne potęgi: $(-2)^3 = -8$ oraz $3^{-2} = \\frac{1}{3^2} = \\frac{1}{9}$.\n**Krok 3.** Połącz obliczone wartości, odejmując drugą od pierwszej: $-8 - \\frac{1}{9}$. Aby odjąć, sprowadź do wspólnego mianownika: $-\\frac{72}{9} - \\frac{1}{9} = -\\frac{73}{9}$.\n\n**Odpowiedź:** C, czyli $-\\frac{73}{9}$"
     },
     {
       "numer": 2,
       "dzial": "Algebra",
       "tresc": "Liczba 9 9 ∙ 81 2 jest równa A) 81 4 B) 81 C) 9 13 D) 9 36",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zamień wszystkie podstawy potęg na tę samą liczbę, czyli 9. Pamiętaj, że $81 = 9^2$. Zastosuj własność potęgowania $(a^m)^n = a^{m \\cdot n}$.\n$9^9 \\cdot 81^2 = 9^9 \\cdot (9^2)^2 = 9^9 \\cdot 9^{2 \\cdot 2} = 9^9 \\cdot 9^4$.\n\n**Krok 2.** Skorzystaj z własności mnożenia potęg o tej samej podstawie $a^m \\cdot a^n = a^{m+n}$.\n$9^9 \\cdot 9^4 = 9^{9+4} = 9^{13}$.\n\n**Odpowiedź:** C, czyli $9^{13}$."
     },
     {
       "numer": 3,
       "dzial": "Potęgi",
       "tresc": "Wartość wyrażenia log 4 8 + 5log 4 2 jest równa A) 2 B) 4 C) 2 + log 4 5 D) 1 + log 4 10",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj z własności logarytmów: $\\log_a b^c = c \\log_a b$ i $\\log_a a = 1$. Rozpisz $\\log_4 8$ jako $\\log_4 2^3 = 3 \\log_4 2$. Wyrażenie przyjmuje postać $3 \\log_4 2 + 5 \\log_4 2$.\n**Krok 2.** Dodaj logarytmy, ponieważ mają tę samą podstawę i argument: $3 \\log_4 2 + 5 \\log_4 2 = (3+5) \\log_4 2 = 8 \\log_4 2$.\n**Krok 3.** Użyj własności logarytmu $\\log_a b^c = c \\log_a b$ w odwrotną stronę: $8 \\log_4 2 = \\log_4 2^8$. Oblicz $2^8 = 256$. Wyrażenie to $\\log_4 256$. Ponieważ $4^4 = 256$, wartość logarytmu wynosi 4.\n**Odpowiedź:** B, czyli 4"
     },
     {
       "numer": 4,
       "dzial": "Geometria",
       "tresc": "Dane są dwa koła. Promień pierwszego koła jest większy od promienia drugiego koła o 30%. Wynika stąd, że pole pierwszego koła jest większe od pola drugiego koła A) o mniej niż 50%, ale więcej niż 40% B) o mniej niż 60% , ale więcej niż 50% C) dokładnie o 60% D) o więcej niż 60%",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy promienie kół jako $r_1$ i $r_2$, gdzie $r_1$ to promień pierwszego koła, a $r_2$ to promień drugiego. Z treści zadania wiemy, że $r_1 = r_2 + 0.30 r_2 = 1.3 r_2$.\n\n**Krok 2.** Pola kół wynoszą odpowiednio $P_1 = \\pi r_1^2$ i $P_2 = \\pi r_2^2$. Podstawiając zależność między promieniami, otrzymujemy $P_1 = \\pi (1.3 r_2)^2 = \\pi \\cdot 1.69 r_2^2 = 1.69 P_2$.\n\n**Krok 3.** Obliczamy, o ile procent pole pierwszego koła jest większe od pola drugiego: $\\frac{P_1 - P_2}{P_2} \\cdot 100\\% = \\frac{1.69 P_2 - P_2}{P_2} \\cdot 100\\% = 0.69 \\cdot 100\\% = 69\\%$.\n\n**Odpowiedź:** D, czyli o więcej niż 60%"
     },
     {
       "numer": 5,
       "dzial": "Algebra",
       "tresc": "Liczba (2√ 7 − 5) 2 · (2√ 7 + 5) 2 jest równa A) 9 B) 3 C) 2809 D) 28 − 20√ 7",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zastosuj wzór na potęgę iloczynu $(a \\cdot b)^n = a^n \\cdot b^n$, aby połączyć wykładniki: $((2\\sqrt{7} - 5) \\cdot (2\\sqrt{7} + 5))^2$.\n**Krok 2.** Skorzystaj ze wzoru skróconego mnożenia na różnicę kwadratów $(a-b)(a+b) = a^2 - b^2$ wewnątrz nawiasu: $((2\\sqrt{7})^2 - 5^2)^2$.\n**Krok 3.** Oblicz wartość w nawiasie: $(4 \\cdot 7 - 25)^2 = (28 - 25)^2 = 3^2$.\n**Krok 4.** Oblicz ostateczny wynik: $3^2 = 9$.\n\n**Odpowiedź:** A, czyli 9"
     },
     {
       "numer": 6,
       "dzial": "Algebra",
       "tresc": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich liczb x spełniających warunek: 11 ≤ 2x−7 ≤ 15 . A) ![Rysunek do zadania](/cke-matura/m20-probna/z06-1.png) B) ![Rysunek do zadania](/cke-matura/m20-probna/z06-2.png) C) ![Rysunek do zadania](/cke-matura/m20-probna/z06-3.png) D) ![Rysunek do zadania](/cke-matura/m20-probna/z06-4.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozwiąż nierówność z wartością bezwzględną, przekształcając ją w podwójną nierówność. Dodaj 7 do każdej strony nierówności: $11+7 \\leq 2x \\leq 15+7$, co daje $18 \\leq 2x \\leq 22$.\n**Krok 2.** Podziel wszystkie części nierówności przez 2, aby wyznaczyć $x$: $\\frac{18}{2} \\leq x \\leq \\frac{22}{2}$, co daje $9 \\leq x \\leq 11$.\n**Krok 3.** Zaznacz na osi liczbowej przedział domknięty od 9 do 11 (włącznie z końcami), ponieważ nierówność jest ostra ($\\leq$).\n\n**Odpowiedź:** C, czyli przedział $[9, 11]$"
     },
     {
       "numer": 7,
       "dzial": "Algebra",
       "tresc": "Rozważmy treść następującego zadania: Obwód prostokąta o bokach długości a i b jest równy 60. Jeden z boków tego prostokąta jest o 10 dłuższy od drugiego. Oblicz długości boków tego prostokąta. Który układ równań opisuje zależności między długościami boków tego prostokąta? A) ![Rysunek do zadania](/cke-matura/m20-probna/z07-1.png) B) ![Rysunek do zadania](/cke-matura/m20-probna/z07-2.png) C) ![Rysunek do zadania](/cke-matura/m20-probna/z07-3.png) D) ![Rysunek do zadania](/cke-matura/m20-probna/z07-4.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzór na obwód prostokąta $2a + 2b = 60$ i informację o różnicy długości boków $a = b + 10$ (lub $b = a + 10$).\n**Krok 2.** Zauważ, że przedstawione układy równań odzwierciedlają te zależności, przy czym w pierwszej wersji literka $x$ oznacza jeden bok, a $y$ drugi.\n**Krok 3.** Sprawdź, który układ równań odpowiada $2a + 2b = 60$ i $a = b + 10$ (lub $b = a + 10$), co po podzieleniu pierwszego równania przez 2 daje $a + b = 30$.\n\n**Odpowiedź:** A, czyli $\\begin{cases} x+y=30 \\\\ x-y=10 \\end{cases}$"
     },
     {
       "numer": 8,
       "dzial": "Równania",
       "tresc": "Rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m20-probna/z08-1.png) , gdzie x ≠ – 2 , jest liczba należąca do przedziału A) (–2,1) B) &lang;1,+∞) C) (–∞,–5) D) &lang;–5,–2)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć równanie do postaci, w której po jednej stronie znajduje się 0. Odejmij $\\frac{3}{x+2}$ od obu stron równania, aby otrzymać $\\frac{2x+1}{x+2} - \\frac{3}{x+2} = 0$.\n**Krok 2.** Połącz ułamki i uprość licznik. Ponieważ mianowniki są takie same, można to zapisać jako $\\frac{(2x+1) - 3}{x+2} = 0$, co daje $\\frac{2x-2}{x+2} = 0$.\n**Krok 3.** Aby ułamek był równy zero, licznik musi być równy zero, a mianownik różny od zera. Rozwiąż równanie $2x-2 = 0$, co daje $x=1$. Sprawdź, czy dla $x=1$ mianownik $x+2$ jest różny od zera ($1+2=3 \\neq 0$). Otrzymane rozwiązanie $x=1$ należy do przedziału, ponieważ jest większe lub równe 1.\n**Odpowiedź:** B, czyli $\\langle1,+\\infty)$"
     },
     {
       "numer": 9,
       "dzial": "Algebra",
       "tresc": "Linę o długości 100 metrów rozcięto na trzy części, których długości pozostają w stosunku 3 : 4 : 5 . Stąd wynika, że najdłuższa z tych części ma długość A) 41 2 &frasl; 3 metra B) 33 1 &frasl; 3 metra C) 60 metrów D) 25 metrów",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznacz długości części jako $3x$, $4x$ i $5x$. Suma długości tych części jest równa 100 metrom, zatem $3x + 4x + 5x = 100$.\n**Krok 2.** Rozwiąż równanie: $12x = 100$, co daje $x = \\frac{100}{12} = \\frac{25}{3}$.\n**Krok 3.** Oblicz długość najdłuższej części, która wynosi $5x$: $5 \\cdot \\frac{25}{3} = \\frac{125}{3} = 41 \\frac{2}{3}$ metra.\n\n**Odpowiedź:** A, czyli $41 \\frac{2}{3}$ metra"
     },
     {
       "numer": 10,
       "dzial": "Funkcje",
       "tresc": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej &fnof; określonej wzorem &fnof;(x) = x 2 + bx + c . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i c – we wzorze funkcji &fnof; – spełniają warunki: A) b c > 0 B) b c C) b > 0 i c > 0 D) b > 0 i c",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Odczytaj z wykresu wierzchołek paraboli. Wierzchołek znajduje się w punkcie $(1, -4)$.\n**Krok 2.** Użyj postaci kanonicznej funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka. Podstawiając $a=1$ (bo ramiona są skierowane w górę) i współrzędne wierzchołka, otrzymujemy $f(x) = 1(x-1)^2 - 4$.\n**Krok 3.** Przekształć postać kanoniczną do postaci ogólnej $f(x) = x^2 + bx + c$, aby odczytać współczynniki $b$ i $c$. Po przekształceniu $f(x) = (x^2 - 2x + 1) - 4 = x^2 - 2x - 3$. Zatem $b = -2$ i $c = -3$.\n**Krok 4.** Sprawdź warunki podane w odpowiedziach, korzystając z obliczonych wartości $b = -2$ i $c = -3$. Obliczamy $b \\cdot c = (-2) \\cdot (-3) = 6$. Ponieważ $6 > 0$, warunek $b \\cdot c > 0$ jest spełniony.\n\n**Odpowiedź:** A, czyli $b \\cdot c > 0$"
     },
     {
       "numer": 11,
       "dzial": "Ciągi",
       "tresc": "Dany jest ciąg arytmetyczny (a n ) , określony dla n ≥ 1, w którym są dane: a 1 = 2 i a 2 = 9 . Wtedy a n = 79 dla A) n = 10 B) n = 11 C) n = 12 D) n = 13",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz różnicę ciągu arytmetycznego, odejmując pierwszy wyraz od drugiego: $r = a_2 - a_1 = 9 - 2 = 7$.\n**Krok 2.** Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i podstaw dane: $79 = 2 + (n-1) \\cdot 7$.\n**Krok 3.** Rozwiąż równanie, aby znaleźć $n$: $77 = (n-1) \\cdot 7 \\implies 11 = n-1 \\implies n = 12$.\n\n**Odpowiedź:** C, czyli $n=12$"
     },
     {
       "numer": 12,
       "dzial": "Ciągi",
       "tresc": "Dany jest trzywyrazowy ciąg geometryczny o wyrazach dodatnich: (81, 3x, 4) . Stąd wynika, że A) x = 18 B) x = 6 C) x = 85 &frasl; 6 D) x = 6 &frasl; 85",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W ciągu geometrycznym kwadrat środkowego wyrazu jest równy iloczynowi wyrazów skrajnych, czyli $ (3x)^2 = 81 \\cdot 4 $.\n**Krok 2.** Obliczamy $ (3x)^2 = 9x^2 $ i $ 81 \\cdot 4 = 324 $. Równanie przyjmuje postać $ 9x^2 = 324 $. Dzieląc obie strony przez 9, otrzymujemy $ x^2 = 36 $.\n**Krok 3.** Ponieważ wyrazy ciągu są dodatnie, szukamy dodatniego rozwiązania $ x $. Pierwiastkując obie strony, mamy $ x = \\sqrt{36} $, co daje $ x = 6 $.\n\n**Odpowiedź:** B, czyli $x = 6$"
     },
     {
       "numer": 13,
       "dzial": "Trygonometria",
       "tresc": "Kąt α jest ostry i spełniona jest równość ![Rysunek do zadania](/cke-matura/m20-probna/z13-1.png) . Stąd wynika, że A) cos&alpha; = 24 &frasl; 49 B) cos&alpha; = 5 &frasl; 7 C) cos&alpha; = 25 &frasl; 49 D) cos&alpha; = 5√ 6 &frasl; 7",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Z twierdzenia Pitagorasa dla trójkąta prostokątnego z rysunku oblicz długość przeciwprostokątnej. Mamy $a^2 + b^2 = c^2$, gdzie $a=5$, $b=12$, więc $5^2 + 12^2 = c^2 \\implies 25 + 144 = c^2 \\implies c^2 = 169 \\implies c = 13$.\n**Krok 2.** Z definicji cosinusa w trójkącie prostokątnym ($\\cos \\alpha = \\frac{\\text{przyprostokątna przy kącie}}{\\text{przeciwprostokątna}}$) oblicz $\\cos \\alpha$. Przyprostokątna przy kącie $\\alpha$ ma długość 5, a przeciwprostokątna 13. Zatem $\\cos \\alpha = \\frac{5}{13}$.\n**Krok 3.** Przeczytaj uważnie treść zadania. Kąt $\\alpha$ jest ostry i spełniona jest równość $\\sin \\alpha = \\frac{12}{13}$ (na rysunku jest $|\\sin \\alpha| = \\frac{12}{13}$). Korzystając z tożsamości $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, oblicz $\\cos \\alpha$. Mamy $(\\frac{12}{13})^2 + \\cos^2 \\alpha = 1 \\implies \\frac{144}{169} + \\cos^2 \\alpha = 1 \\implies \\cos^2 \\alpha = 1 - \\frac{144}{169} = \\frac{25}{169}$. Ponieważ $\\alpha$ jest kątem ostrym, $\\cos \\alpha > 0$, więc $\\cos \\alpha = \\sqrt{\\frac{25}{169}} = \\frac{5}{13}$.\n\n**Odpowiedź:** B, czyli $\\frac{5}{13}$"
     },
     {
       "numer": 14,
       "dzial": "Trygonometria",
       "tresc": "Na okręgu o środku w punkcie O leżą punkty A, B i C (zobacz rysunek). Kąt ABC ma miarę 121° , a kąt BOC ma miarę 40°. ![Rysunek do zadania](/cke-matura/m20-probna/z14-1.png) Kąt AOB ma miarę A) 59° B) 50° C) 81° D) 78°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Kąt środkowy oparty na tym samym łuku co kąt wpisany jest dwa razy większy od kąta wpisanego. Kąt $AOC$ jest kątem wpisanym opartym na łuku $ABC$, a kąt $ABC$ ma $121^{\\circ}$. Kąt środkowy oparty na łuku $ABC$ ma miarę $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Jest to kąt $AOC$ \"większy\". Kąt $AOC$ \"mniejszy\" ma miarę $360^{\\circ} - 118^{\\circ} = 242^{\\circ}$. Alternatywnie, kąt wpisany oparty na tym samym łuku, co kąt środkowy $AOC$, ma miarę $121^{\\circ}$. Taki kąt nie może istnieć, ponieważ jest większy od $180^{\\circ}$. Zatem rozważamy kąt oparty na mniejszym łuku $AC$. Kąt wpisany oparty na łuku $AC$ ma $180^{\\circ}-121^{\\circ} = 59^{\\circ}$. Kąt środkowy $AOC$ (mniejszy) ma miarę $2 \\cdot 59^{\\circ} = 118^{\\circ}$.\n\n**Krok 2.** Suma kątów środkowych tworzących pełny kąt wokół środka okręgu wynosi $360^{\\circ}$. Znamy kąt $BOC = 40^{\\circ}$ i mniejszy kąt $AOC = 118^{\\circ}$. Kąt $AOB$ możemy obliczyć, odejmując znane kąty od pełnego kąta: $\\angle AOB = 360^{\\circ} - \\angle AOC - \\angle BOC$. To jest błędne podejście, ponieważ nie wiemy, czy punkty A, B, C są w tej kolejności na okręgu.\n\n**Krok 2.** (poprawione).** Kąt wpisany $ABC$ jest oparty na łuku $AC$. Kąt środkowy oparty na tym samym łuku (mniejszym) to kąt $AOC$. Kąt $ABC = 121^{\\circ}$ jest kątem rozwartym, więc opiera się na łuku mniejszym niż półokrąg. Miara łuku $AC$ jest równa $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Kąt środkowy $AOC$ wynosi $118^{\\circ}$.\n\n**Krok 3.** Kąt $AOB$ i kąt $BOC$ sumują się do kąta $AOC$ lub różnią się o kąt $AOC$, w zależności od wzajemnego położenia punktów. Mając kąt $AOC = 118^{\\circ}$ i kąt $BOC = 40^{\\circ}$, możemy obliczyć kąt $AOB$. Ponieważ $118^{\\circ} > 40^{\\circ}$, punkt $B$ znajduje się między punktami $A$ i $C$ na łuku nie zawierającym $B$. Zatem $\\angle AOB = \\angle AOC - \\angle BOC = 118^{\\circ} - 40^{\\circ} = 78^{\\circ}$.\n\n**Odpowiedź:** D, czyli $78^{\\circ}$"
     },
     {
       "numer": 15,
       "dzial": "Algebra",
       "tresc": "W trójkącie ABC punkt D leży na boku BC, a punkt E leży na boku AC. Odcinek DE jest równoległy do boku AB, a ponadto |AE| = |DE| = 4 , |AB| = 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z15-1.png) Odcinek CE ma długość A) 16 &frasl; 3 B) 8 &frasl; 3 C) 8 D) 6",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ, że z równoległości DE i AB wynika podobieństwo trójkątów CDE i CAB. Dodatkowo, ponieważ $|AE|=|DE|$, trójkąt ADE jest równoramienny, co daje $|\\angle DAE| = |\\angle DEA|$. Z równoległości $DE \\parallel AB$ wynika, że $|\\angle DEA| = |\\angle EAB|$ (kąty naprzemianległe), stąd $|\\angle DAE| = |\\angle EAB|$.\n\n**Krok 2.** Ponieważ $|\\angle DAE| = |\\angle EAB|$, odcinek AE jest dwusieczną kąta CAB. Z twierdzenia o dwusiecznej kąta w trójkącie $AB \\frac{AC}{BC} = \\frac{AB}{CE}$ jest niepoprawne. Użyjemy podobieństwa trójkątów CDE i CAB. Stosunek podobieństwa wynosi $\\frac{DE}{AB} = \\frac{4}{6} = \\frac{2}{3}$.\n\n**Krok 3.** Z podobieństwa trójkątów $CDE$ i $CAB$ mamy $\\frac{CE}{CA} = \\frac{CD}{CB} = \\frac{DE}{AB} = \\frac{2}{3}$. Wiemy, że $CA = CE + EA = CE + 4$. Podstawiamy do równania: $\\frac{CE}{CE+4} = \\frac{2}{3}$.\n\n**Krok 4.** Rozwiązujemy równanie: $3 \\cdot CE = 2 \\cdot (CE+4)$, co daje $3CE = 2CE + 8$, czyli $CE = 8$.\n\n**Odpowiedź:** C, czyli $8$"
     },
     {
       "numer": 16,
       "dzial": "Geometria",
       "tresc": "Dany jest trójkąt równoboczny, którego pole powierzchni jest równe 6√ 3 . Bok tego trójkąta ma długość A) 3√ 2 B) 2√ 3 C) 2√ 6 D) 6√ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wzór na pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Podstawiamy dane: $6\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$.\n**Krok 2.** Przekształcamy równanie, aby wyznaczyć $a^2$: mnożymy obie strony przez 4 i dzielimy przez $\\sqrt{3}$, co daje $24 = a^2$.\n**Krok 3.** Obliczamy długość boku $a$, wyciągając pierwiastek kwadratowy z 24: $a = \\sqrt{24} = \\sqrt{4 \\cdot 6} = 2\\sqrt{6}$.\n\n**Odpowiedź:** C, czyli $2\\sqrt{6}$"
     },
     {
       "numer": 17,
       "dzial": "Geometria",
       "tresc": "Punkty B = (–2,4) i C = (5,1) są sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe A) 29 B) 40 C) 58 D) 74",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz kwadrat odległości między punktami B i C, który jest równy kwadratowi długości boku kwadratu. Użyj wzoru na kwadrat odległości: $d^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2$.\n$d^2 = (5 - (-2))^2 + (1 - 4)^2 = (5+2)^2 + (-3)^2 = 7^2 + 9 = 49 + 9 = 58$.\n\n**Krok 2.** Ponieważ pole kwadratu jest równe kwadratowi długości jego boku, obliczona wartość $d^2$ jest szukanym polem.\nPole kwadratu wynosi $58$.\n\n**Odpowiedź:** A, czyli $58$."
     },
     {
       "numer": 18,
       "dzial": "Geometria",
       "tresc": "Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD. ![Rysunek do zadania](/cke-matura/m20-probna/z18-1.png) Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to A) &#8738;SAO B) &#8738;SAB C) &#8738;SOA D) &#8738;ASB",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Kąt nachylenia krawędzi bocznej do płaszczyzny podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę. Krawędź boczna to $SA$, a płaszczyzna podstawy to $ABCD$.\n**Krok 2.** Rzutem prostokątnym krawędzi $SA$ na płaszczyznę podstawy $ABCD$ jest odcinek $SO$, gdzie $O$ jest środkiem kwadratu $ABCD$ (punkt przecięcia przekątnych). Kąt nachylenia $SA$ do podstawy to zatem kąt między odcinkami $SA$ i $SO$.\n**Krok 3.** Z definicji kąta między prostą a płaszczyzną, kątem tym jest kąt między prostą a jej rzutem prostokątnym na tę płaszczyznę. Szukanym kątem jest więc kąt $ASO$.\n\n**Odpowiedź:** C, czyli $\\angle SOA$"
     },
     {
       "numer": 19,
       "dzial": "Geometria",
       "tresc": "Graniastosłup ma 14 wierzchołków. Liczba wszystkich krawędzi tego graniastosłupa jest równa A) 14 B) 21 C) 28 D) 26",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Graniastosłup o $n$-bokach w podstawie ma $2n$ wierzchołków. Skoro graniastosłup ma 14 wierzchołków, to $2n = 14$, stąd $n = 7$. Podstawą graniastosłupa jest siedmiokąt.\n\n**Krok 2.** Liczba krawędzi graniastosłupa to suma krawędzi podstawy (2 razy $n$) i krawędzi bocznych (również $n$). Zatem liczba krawędzi wynosi $2n + n = 3n$.\n\n**Krok 3.** Podstawiamy $n=7$ do wzoru na liczbę krawędzi: $3 \\cdot 7 = 21$.\n\n**Odpowiedź:** B, czyli 21"
     },
     {
       "numer": 20,
       "dzial": "Równania",
       "tresc": "Prosta k przechodzi przez punkt A = (4,–4) i jest prostopadła do osi Ox . Prosta k ma równanie A) x – 4 = 0 B) x – y = 0 C) y + 4 = 0 D) x + y = 0",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Znajdź równanie prostej prostopadłej do osi Ox. Prosta prostopadła do osi Ox ma postać $x = c$, gdzie $c$ jest stałą.\n**Krok 2.** Ponieważ prosta k przechodzi przez punkt A = (4,–4), jej współrzędna x musi być równa 4. Zatem równanie prostej k to $x = 4$.\n**Krok 3.** Przekształć równanie prostej do postaci z podanych opcji. Równanie $x = 4$ jest równoważne $x - 4 = 0$.\n\n**Odpowiedź:** A, czyli $x – 4 = 0$"
     },
     {
       "numer": 21,
       "dzial": "Równania",
       "tresc": "Prosta l jest nachylona do osi Ox pod kątem 30° i przecina oś Oy w punkcie (0,– √ 3 ) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie A) y = √ 3 &frasl; 3 x – √ 3 B) y = √ 3 &frasl; 3 x + √ 3 C) y = 1 &frasl; 2 x – √ 3 D) y = 1 &frasl; 2 x + √ 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Współczynnik kierunkowy prostej $a$ jest równy tangensowi kąta $\\alpha$, jaki prosta tworzy z dodatnią półosią $Ox$. Dla kąta $30^\\circ$, $a = \\operatorname{tg}(30^\\circ) = \\frac{\\sqrt{3}}{3}$.\n**Krok 2.** Równanie prostej ma postać $y = ax + b$. Znamy $a = \\frac{\\sqrt{3}}{3}$ oraz punkt przecięcia z osią $Oy$, czyli $b = -\\sqrt{3}$.\n**Krok 3.** Podstawiamy obliczone wartości do ogólnego równania prostej: $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$.\n\n**Odpowiedź:** A, czyli $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$"
     },
     {
       "numer": 22,
       "dzial": "Algebra",
       "tresc": "Dany jest stożek o wysokości 6 i tworzącej 3√ 5 . Objętość tego stożka jest równa A) 36π B) 18π C) 108π D) 54π",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Z twierdzenia Pitagorasa oblicz promień $r$ podstawy stożka, znając jego wysokość $h=6$ i tworzącą $l=3\\sqrt{5}$. Mamy $r^2 + h^2 = l^2$, czyli $r^2 + 6^2 = (3\\sqrt{5})^2$.\n**Krok 2.** Oblicz promień: $r^2 + 36 = 9 \\cdot 5 = 45$, stąd $r^2 = 45 - 36 = 9$, więc $r = 3$.\n**Krok 3.** Oblicz objętość $V$ stożka ze wzoru $V = \\frac{1}{3}\\pi r^2 h$. Podstawiając dane: $V = \\frac{1}{3}\\pi \\cdot 3^2 \\cdot 6 = \\frac{1}{3}\\pi \\cdot 9 \\cdot 6$.\n**Krok 4.** Wykonaj obliczenia: $V = \\pi \\cdot 3 \\cdot 6 = 18\\pi$.\n\n**Odpowiedź:** B, czyli $18\\pi$."
     },
     {
       "numer": 23,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna zestawu ośmiu danych: x , 2, 4, 6, 8, 10, 12, 14 jest równa 9. Wtedy mediana tego zestawu danych jest równa A) 8 B) 9 C) 10 D) 16",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Ustawiamy dane w kolejności niemalejącej: $x, 2, 4, 6, 8, 10, 12, 14$. Suma tych danych to $x + 2 + 4 + 6 + 8 + 10 + 12 + 14 = x + 56$.\n**Krok 2.** Korzystamy ze wzoru na średnią arytmetyczną: $\\frac{x + 56}{8} = 9$. Mnożymy obie strony przez 8, aby otrzymać $x + 56 = 72$, co po odjęciu 56 daje $x = 16$.\n**Krok 3.** Zestaw danych po uporządkowaniu i uzupełnieniu wartości $x$ to: $2, 4, 6, 8, 10, 12, 14, 16$. Mediana to średnia arytmetyczna dwóch środkowych wartości: $\\frac{8+10}{2} = \\frac{18}{2} = 9$.\n\n**Odpowiedź:** B, czyli 9"
     },
     {
       "numer": 24,
       "dzial": "Kombinatoryka",
       "tresc": "Ile jest wszystkich czterocyfrowych liczb naturalnych mniejszych niż 2017? A) 2016 B) 2017 C) 1016 D) 1017",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Szukamy liczb naturalnych czterocyfrowych $n$, takich że $1000 \\le n < 2017$. Najmniejszą taką liczbą jest $1000$.\n\n**Krok 2.** Największą liczbą spełniającą warunek jest $2016$. Obliczamy liczbę elementów w tym przedziale, odejmując najmniejszą liczbę od największej i dodając 1: $2016 - 1000 + 1$.\n\n**Krok 3.** $2016 - 1000 + 1 = 1016 + 1 = 1017$.\n\n**Odpowiedź:** D, czyli $1017$"
     },
     {
       "numer": 25,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe 1 &frasl; 3 . Liczba kul czarnych jest równa A) n = 9 B) n = 2 C) n = 18 D) n = 12",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz prawdopodobieństwo wylosowania kuli białej jako stosunek liczby kul białych do łącznej liczby kul w pudełku: $P(\\text{biała}) = \\frac{6}{6+n}$.\n**Krok 2.** Zapisz równanie, przyrównując dane prawdopodobieństwo do informacji z zadania: $\\frac{6}{6+n} = \\frac{1}{3}$.\n**Krok 3.** Rozwiąż równanie, mnożąc obie strony przez $3(6+n)$, aby pozbyć się mianowników: $6 \\cdot 3 = 1 \\cdot (6+n)$, co daje $18 = 6+n$.\n**Krok 4.** Oblicz $n$, odejmując 6 od obu stron równania: $n = 18 - 6$, czyli $n = 12$.\n\n**Odpowiedź:** D, czyli $n=12$."
     },
     {
       "numer": 26,
       "dzial": "Równania",
       "tresc": "Rozwiąż nierówność 2x 2 + x – 6 ≤ 0 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz wyróżnik $\\Delta$ i pierwiastki równania kwadratowego $2x^2 + x - 6 = 0$. Mamy $\\Delta = b^2 - 4ac = 1^2 - 4 \\cdot 2 \\cdot (-6) = 1 + 48 = 49$, więc $\\sqrt{\\Delta} = 7$. Pierwiastki to $x_1 = \\frac{-1 - 7}{4} = -2$ i $x_2 = \\frac{-1 + 7}{4} = \\frac{6}{4} = \\frac{3}{2}$.\n\n**Krok 2.** Narysuj parabolę $y = 2x^2 + x - 6$. Ponieważ współczynnik przy $x^2$ jest dodatni ($2 > 0$), ramiona paraboli są skierowane w górę. Nierówność $2x^2 + x - 6 \\le 0$ jest spełniona dla argumentów $x$, dla których parabola znajduje się poniżej lub na osi OX, czyli między pierwiastkami (włącznie z nimi).\n\n**Odpowiedź:** $x \\in [-2, \\frac{3}{2}]$"
     },
     {
       "numer": 27,
       "dzial": "Równania",
       "tresc": "Rozwiąż równanie (x 2 – 6)(3x + 2) = 0 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby iloczyn dwóch czynników był równy zero, co najmniej jeden z nich musi być równy zero. Przyrównujemy zatem każdy czynnik do zera: $x^2 - 6 = 0$ lub $3x + 2 = 0$.\n\n**Krok 2.** Rozwiązujemy pierwsze równanie: $x^2 = 6$, co daje $x = \\sqrt{6}$ lub $x = -\\sqrt{6}$. Rozwiązujemy drugie równanie: $3x = -2$, co daje $x = -\\frac{2}{3}$.\n\n**Krok 3.** Zbieramy wszystkie znalezione rozwiązania równania.\n\n**Odpowiedź:** $x = \\sqrt{6}$, $x = -\\sqrt{6}$, $x = -\\frac{2}{3}$."
     },
     {
       "numer": 28,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla dowolnej dodatniej liczby rzeczywistej x prawdziwa jest nierówność ![Rysunek do zadania](/cke-matura/m20-probna/z28-1.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć nierówność, przenosząc wszystkie wyrazy na jedną stronę, aby uzyskać nierówność typu $f(x) \\ge 0$.\nPo przeniesieniu otrzymujemy: $x + \\frac{4}{x} - 4 \\ge 0$.\n\n**Krok 2.** Sprowadź wyrazy do wspólnego mianownika i uprość licznik.\nWspólnym mianownikiem jest $x$, więc nierówność przyjmuje postać: $\\frac{x^2 - 4x + 4}{x} \\ge 0$.\n\n**Krok 3.** Zauważ, że licznik jest kwadratem dwumianu, a mianownik jest dodatni dla $x > 0$.\nLicznik to $(x-2)^2$, a ponieważ $x$ jest dodatnie, mianownik $x$ również jest dodatni. Nierówność to $\\frac{(x-2)^2}{x} \\ge 0$. Kwadrat liczby rzeczywistej jest zawsze nieujemny, a dodatni mianownik sprawia, że całe wyrażenie jest nieujemne.\n\n**Odpowiedź:** Nierówność $\\frac{(x-2)^2}{x} \\ge 0$ jest prawdziwa dla każdej dodatniej liczby rzeczywistej $x$."
     },
     {
       "numer": 29,
       "dzial": "Algebra",
       "tresc": "Dany jest trójkąt prostokątny ABC, w którym |&#8738;ACB| = 90° i |&#8738;ABC| = 60° . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że |AD| : |DB| = 3 :1 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W trójkącie prostokątnym ABC mamy kąty $90^\\circ, 60^\\circ, 30^\\circ$. Ponieważ CD jest wysokością, dzieli ona trójkąt ABC na dwa mniejsze trójkąty prostokątne: ADC i BDC. Trójkąt ADC ma kąty $90^\\circ, 30^\\circ, 60^\\circ$, a trójkąt BDC ma kąty $90^\\circ, 60^\\circ, 30^\\circ$.\n**Krok 2.** W trójkącie prostokątnym o kątach $30^\\circ, 60^\\circ, 90^\\circ$ przyprostokątne pozostają w stosunku $1 : \\sqrt{3}$, a przeciwprostokątna jest dwukrotnie dłuższa od krótszej przyprostokątnej. Niech $|CD| = x$. Wtedy w trójkącie ADC, $|AD| = x \\sqrt{3}$, a w trójkącie BDC, $|DB| = \\frac{x}{\\sqrt{3}}$.\n**Krok 3.** Obliczamy stosunek $|AD|$ do $|DB|$: $\\frac{|AD|}{|DB|} = \\frac{x \\sqrt{3}}{\\frac{x}{\\sqrt{3}}} = x \\sqrt{3} \\cdot \\frac{\\sqrt{3}}{x} = 3$.\n**Odpowiedź:** $|AD|:|DB| = 3:1$."
     },
     {
       "numer": 30,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru liczb {1,2,4,5,10} losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloraz pierwszej wylosowanej liczby przez drugą wylosowaną liczbę jest liczbą całkowitą.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru 5-elementowego, więc wszystkich par jest $5 \\cdot 5 = 25$.\n\n**Krok 2.** Wypisujemy pary, dla których iloraz pierwszej liczby przez drugą jest liczbą całkowitą: (1,1), (2,1), (4,1), (5,1), (10,1), (2,2), (4,2), (10,2), (4,4), (5,5), (10,10). Jest ich 11.\n\n**Krok 3.** Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę sprzyjających wyników przez liczbę wszystkich możliwych wyników: $P(A) = \\frac{11}{25}$.\n\n**Odpowiedź:** $\\frac{11}{25}$"
     },
     {
       "numer": 31,
       "dzial": "Ciągi",
       "tresc": "Dany jest ciąg arytmetyczny ( a n ) , określony dla n ≥ 1 , w którym spełniona jest równość a 21 + a 24 + a 27 + a 30 = 100 . Oblicz sumę a 25 + a 26 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wzór na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i wyraź podane wyrazy za pomocą $a_1$ i $r$. Użyj własności ciągu arytmetycznego, że $a_k + a_m = a_p + a_q$, gdy $k+m = p+q$.\n$a_{21} + a_{24} + a_{27} + a_{30} = (a_{25.5-4.5}) + (a_{25.5-1.5}) + (a_{25.5+1.5}) + (a_{25.5+4.5})$. Ponieważ $21+30 = 51$ i $24+27 = 51$, mamy $a_{21}+a_{30} = a_{24}+a_{27}$. Zatem $2(a_{24}+a_{27}) = 100$, co daje $a_{24}+a_{27} = 50$.\n**Krok 2.** Wykorzystaj kolejną własność ciągu arytmetycznego: $a_k + a_m = 2 \\cdot a_{\\frac{k+m}{2}}$ dla nieparzystego $k+m$.\nSuma $a_{25} + a_{26}$ jest równa sumie wyrazów o indeksach, których średnia wynosi 25.5. Zauważmy, że $24+27 = 51$, więc $\\frac{24+27}{2} = 25.5$. Zatem $a_{24}+a_{27} = 2 \\cdot a_{25.5}$. Ale korzystając z sumy indeksów $21+30 = 51$ i $24+27 = 51$, możemy zapisać sumę jako $2 \\cdot (a_{21} + a_{30}) = 100$ lub $2 \\cdot (a_{24} + a_{27}) = 100$. Czyli $a_{24} + a_{27} = 50$. Szukana suma to $a_{25} + a_{26}$. Zauważmy, że $25+26=51$, tak jak $24+27=51$.\n**Krok 3.** Zapisz szukaną sumę jako $a_{25} + a_{26}$. Wyrazy $a_{25}$ i $a_{26}$ są wyrazami środkowymi pary o sumie indeksów 51.\nSuma $a_{25} + a_{26}$ ma te same indeksy sumujące się do 51 co para $a_{24}$ i $a_{27}$. Zatem $a_{25} + a_{26} = a_{24} + a_{27}$.\n\n**Odpowiedź:** 50"
     },
     {
       "numer": 32,
       "dzial": "Funkcje",
       "tresc": "Funkcja kwadratowa &fnof; określona wzorem &fnof;(x) = ax 2 + bx + c ma dwa miejsca zerowe: x 1 = –2 i x 2 = 6 . Wykres funkcji &fnof; przechodzi przez punkt A =(1,–5). Oblicz najmniejszą wartość funkcji &fnof;.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj z postaci iloczynowej funkcji kwadratowej $f(x) = a(x-x_1)(x-x_2)$, gdzie $x_1=-2$ i $x_2=6$, czyli $f(x) = a(x+2)(x-6)$.\n**Krok 2.** Wykorzystaj współrzędne punktu $A(1,-5)$, aby obliczyć współczynnik $a$: $-5 = a(1+2)(1-6) = a(3)(-5) = -15a$, stąd $a = \\frac{-5}{-15} = \\frac{1}{3}$.\n**Krok 3.** Oblicz współrzędną $x$ wierzchołka paraboli $x_w = \\frac{x_1+x_2}{2} = \\frac{-2+6}{2} = 2$, a następnie najmniejszą wartość funkcji (którą jest rzędna wierzchołka $y_w = f(x_w)$): $y_w = f(2) = \\frac{1}{3}(2+2)(2-6) = \\frac{1}{3}(4)(-4) = -\\frac{16}{3}$.\n\n**Odpowiedź:** $-\\frac{16}{3}$"
     },
     {
       "numer": 33,
       "dzial": "Funkcje",
       "tresc": "Punkt C =(0,0) jest wierzchołkiem trójkąta prostokątnego ABC , którego wierzchołek A leży na osi Ox , a wierzchołek B na osi Oy układu współrzędnych. Prosta zawierająca wysokość tego trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie D =(3,4). ![Rysunek do zadania](/cke-matura/m20-probna/z33-1.png) Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Znajdź równanie prostej przechodzącej przez punkty C=(0,0) i D=(3,4), która jest również prostopadła do przeciwprostokątnej AB.\nProsta CD ma równanie $y = \\frac{4}{3}x$. Prosta AB jest prostopadła do CD, więc jej nachylenie jest odwrotnością z minusem, czyli $-\\frac{3}{4}$. Równanie prostej AB to $y - 4 = -\\frac{3}{4}(x - 3)$.\n\n**Krok 2.** Wyznacz współrzędne punktów A i B. Punkt A leży na osi Ox (czyli $y_A=0$), a punkt B na osi Oy (czyli $x_B=0$). Podstaw te wartości do równania prostej AB i rozwiąż dla drugiego współrzędnika.\nDla punktu A ($y_A=0$): $0 - 4 = -\\frac{3}{4}(x_A - 3) \\implies -4 = -\\frac{3}{4}x_A + \\frac{9}{4} \\implies -\\frac{25}{4} = -\\frac{3}{4}x_A \\implies x_A = \\frac{25}{3}$. Zatem A = $(\\frac{25}{3}, 0)$.\nDla punktu B ($x_B=0$): $y_B - 4 = -\\frac{3}{4}(0 - 3) \\implies y_B - 4 = \\frac{9}{4} \\implies y_B = 4 + \\frac{9}{4} = \\frac{25}{4}$. Zatem B = $(0, \\frac{25}{4})$.\n\n**Krok 3.** Oblicz długość przeciwprostokątnej AB, korzystając ze wzoru na odległość między dwoma punktami.\nDługość AB = $\\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2} = \\sqrt{(\\frac{25}{3} - 0)^2 + (0 - \\frac{25}{4})^2} = \\sqrt{(\\frac{25}{3})^2 + (-\\frac{25}{4})^2} = \\sqrt{\\frac{625}{9} + \\frac{625}{16}} = \\sqrt{625(\\frac{1}{9} + \\frac{1}{16})} = \\sqrt{625 \\cdot \\frac{25}{144}} = 25 \\cdot \\frac{5}{12} = \\frac{125}{12}$.\n\n**Odpowiedź:** A = $(\\frac{25}{3}, 0)$, B = $(0, \\frac{25}{4})$, długość AB = $\\frac{125}{12}$."
     },
     {
       "numer": 34,
       "dzial": "Geometria",
       "tresc": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym |&#8738;ACB| = 90° (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png) <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz długości przyprostokątnych trójkąta ABC. Okrąg opisany na trójkącie prostokątnym ma środek w środku przeciwprostokątnej AB. Długość promienia okręgu opisanego jest równa długości odcinka SC, czyli 5. Zatem długość przeciwprostokątnej AB wynosi $2 \\cdot 5 = 10$. Oznaczamy $|AC| = 4x$ i $|BC| = 3x$. Z twierdzenia Pitagorasa dla $\\triangle ABC$: $(4x)^2 + (3x)^2 = 10^2 \\Rightarrow 16x^2 + 9x^2 = 100 \\Rightarrow 25x^2 = 100 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. Stąd $|AC| = 4 \\cdot 2 = 8$ i $|BC| = 3 \\cdot 2 = 6$.\n\n**Krok 2.** Oblicz pole podstawy graniastosłupa. Pole trójkąta prostokątnego ABC wynosi $\\frac{1}{2} |AC| \\cdot |BC| = \\frac{1}{2} \\cdot 8 \\cdot 6 = 24$.\n\n**Krok 3.** Oblicz wysokość graniastosłupa. Pole ściany bocznej BEFC wynosi $|BC| \\cdot H = 48$, gdzie H to wysokość graniastosłupa. Zatem $6 \\cdot H = 48 \\Rightarrow H = 8$.\n\n**Krok 4.** Oblicz objętość graniastosłupa. Objętość graniastosłupa jest iloczynem pola podstawy i wysokości: $V = P_p \\cdot H = 24 \\cdot 8 = 192$.\n\n**Odpowiedź:** $192$"
     }
   ],
   "fetchedAt": "2026-05-24T14:01:58.977Z"

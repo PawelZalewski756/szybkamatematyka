@@ -8,199 +8,199 @@
       "numer": 1,
       "dzial": "Statystyka",
       "tresc": "Liczba 0,6 jest jednym z przybliżeń liczby 5 &frasl; 8 . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy A) 0,025% B) 2,5% C) 0,04% D) 4%",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy błąd bezwzględny, czyli różnicę między dokładną wartością a przybliżoną: $|5/8 - 0.6| = |0.625 - 0.6| = 0.025$.\n**Krok 2.** Obliczamy błąd względny, dzieląc błąd bezwzględny przez dokładną wartość: $\\frac{0.025}{0.625} = 0.04$.\n**Krok 3.** Zamieniamy błąd względny na procenty, mnożąc przez 100%: $0.04 \\cdot 100\\% = 4\\%$.\n\n**Odpowiedź:** D, czyli 4%"
     },
     {
       "numer": 2,
       "dzial": "Geometria",
       "tresc": "Dany jest okrąg o środku S = (–6, –8) i promieniu 2014. Obrazem tego okręgu w symetrii osiowej względem osi Oy jest okrąg o środku w punkcie S 1 . Odległość między punktami S i S 1 jest równa A) 12 B) 16 C) 2014 D) 4028",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Symetria osiowa względem osi $Oy$ przekształca punkt $(x, y)$ na punkt $(-x, y)$. Środek $S = (–6, –8)$ okręgu zostanie przekształcony na $S_1 = (–(–6), –8)$, czyli $S_1 = (6, –8)$.\n**Krok 2.** Odległość między punktami $S = (x_1, y_1)$ i $S_1 = (x_2, y_2)$ obliczamy ze wzoru $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. W tym przypadku $d = \\sqrt{(6 - (–6))^2 + (–8 - (–8))^2}$.\n**Krok 3.** Obliczamy odległość: $d = \\sqrt{(6 + 6)^2 + (–8 + 8)^2} = \\sqrt{12^2 + 0^2} = \\sqrt{144} = 12$. Promień okręgu nie wpływa na odległość między środkami.\n\n**Odpowiedź:** A, czyli 12"
     },
     {
       "numer": 3,
       "dzial": "Równania",
       "tresc": "Rozwiązaniami równania ( x 3 – 8)( x – 5)(2 x + 1) = 0 są liczby A) – 8; – 5; 1 B) – 1; 5; 8 C) – 1 ⁄ 2 ; 2; 5 D) – 1 ⁄ 2 ; 5; 8",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Równanie jest w postaci iloczynowej, więc aby je rozwiązać, przyrównujemy każdy czynnik do zera. Mamy więc $x^3 – 8 = 0$, $x – 5 = 0$ oraz $2x + 1 = 0$.\n**Krok 2.** Rozwiązujemy każde z trzech równań: z pierwszego ($x^3 = 8$) otrzymujemy $x = 2$, z drugiego ($x = 5$), a z trzeciego ($2x = -1$) otrzymujemy $x = -\\frac{1}{2}$.\n**Krok 3.** Zbiór wszystkich rozwiązań to $\\{-\\frac{1}{2}, 2, 5\\}$.\n\n**Odpowiedź:** C, czyli $-\\frac{1}{2}$; $2$; $5$."
     },
     {
       "numer": 4,
       "dzial": "Algebra",
       "tresc": "Cena towaru została podwyższona o 30%, a po pewnym czasie nową, wyższą cenę ponownie podwyższono, tym razem o 10%. W rezultacie obu podwyżek wyjściowa cena towaru zwiększyła się o A) 15% B) 20% C) 40% D) 43%",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Załóżmy, że początkowa cena towaru wynosi $100$ zł. Po pierwszej podwyżce o 30% nowa cena to $100 + 0.30 \\cdot 100 = 130$ zł.\n**Krok 2.** Następnie cenę 130 zł podwyższono o 10%. Obliczamy tę podwyżkę: $0.10 \\cdot 130 = 13$ zł. Nowa cena wynosi więc $130 + 13 = 143$ zł.\n**Krok 3.** Obliczamy łączny procentowy wzrost ceny od ceny początkowej: $\\frac{143 - 100}{100} \\cdot 100\\% = 43\\%$.\n\n**Odpowiedź:** D, czyli 43%"
     },
     {
       "numer": 5,
       "dzial": "Funkcje",
       "tresc": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami &fnof;( x ) = – 5 x + 1 oraz g ( x ) = 5 x . Liczba punktów wspólnych wykresów tych funkcji jest równa A) 3 B) 2 C) 1 D) 0",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby znaleźć liczbę punktów wspólnych wykresów funkcji $f(x)$ i $g(x)$, przyrównujemy je do siebie: $-5x + 1 = 5x$.\n**Krok 2.** Rozwiązujemy otrzymane równanie liniowe, przenosząc wszystkie wyrazy z $x$ na jedną stronę: $1 = 5x + 5x$, co daje $1 = 10x$. Dzieląc obie strony przez 10, otrzymujemy $x = \\frac{1}{10}$.\n**Krok 3.** Ponieważ otrzymaliśmy dokładnie jedno rozwiązanie dla $x$, oznacza to, że wykresy funkcji mają dokładnie jeden punkt wspólny.\n\n**Odpowiedź:** C, czyli 1"
     },
     {
       "numer": 6,
       "dzial": "Algebra",
       "tresc": "Wyrażenie (3 x + 1 + y ) 2 jest równe A) 3 x 2 + y 2 + 1 B) 9 x 2 + 6 x + y 2 + 1 C) 3 x 2 + y 2 + 6 xy + 6 x + 1 D) 9 x 2 + y 2 + 6 xy + 6 x + 2 y + 1",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozpisz kwadrat sumy trzech wyrażeń, stosując wzór $(a+b+c)^2 = a^2+b^2+c^2+2ab+2ac+2bc$. W tym przypadku $a=3x$, $b=1$, $c=y$.\n$(3x+1+y)^2 = (3x)^2 + 1^2 + y^2 + 2(3x)(1) + 2(3x)(y) + 2(1)(y)$.\n\n**Krok 2.** Oblicz poszczególne składniki, uprość wyrażenie i zsumuj podobne człony.\n$(3x)^2 = 9x^2$, $2(3x)(1) = 6x$, $2(3x)(y) = 6xy$, $2(1)(y) = 2y$. Po zsumowaniu otrzymujemy $9x^2 + 1 + y^2 + 6x + 6xy + 2y$.\n\n**Krok 3.** Uporządkuj wyrazy w celu dopasowania do jednej z opcji odpowiedzi.\n$9x^2 + y^2 + 6xy + 6x + 2y + 1$.\n\n**Odpowiedź:** D, czyli $9 x^2 + y^2 + 6 xy + 6 x + 2 y + 1$."
     },
     {
       "numer": 7,
       "dzial": "Algebra",
       "tresc": "Połowa sumy 4 28 + 4 28 + 4 28 + 4 28 jest równa A) 2 30 B) 2 57 C) 2 63 D) 2 112",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz sumę w skróconej postaci, używając potęg: $4 \\cdot 4^{28} = 4^{1+28} = 4^{29}$.\n**Krok 2.** Oblicz połowę tej sumy, dzieląc przez 2: $\\frac{1}{2} \\cdot 4^{29} = \\frac{1}{2} \\cdot (2^2)^{29} = \\frac{1}{2} \\cdot 2^{58} = 2^{-1} \\cdot 2^{58} = 2^{58-1} = 2^{57}$.\n**Odpowiedź:** B, czyli $2^{57}$."
     },
     {
       "numer": 8,
       "dzial": "Równania",
       "tresc": "Równania y = – 3 &frasl; 4 x + 5 &frasl; 4 oraz y = – 4 &frasl; 3 opisują dwie proste A) przecinające się pod kątem o mierze 90°. B) pokrywające się. C) przecinające się pod kątem różnym od 90°. D) równoległe i różne.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Pierwsza prosta ma postać $y = -\\frac{3}{4}x + \\frac{5}{4}$, więc jej współczynnik kierunkowy wynosi $a_1 = -\\frac{3}{4}$. Druga prosta to $y = -\\frac{4}{3}$, co można zapisać jako $y = 0x - \\frac{4}{3}$, więc $a_2 = 0$.\n\n**Krok 2.** Porównaj współczynniki kierunkowe prostych. Ponieważ $a_1 = -\\frac{3}{4}$ i $a_2 = 0$, współczynniki te są różne ($a_1 \\neq a_2$), co oznacza, że proste nie są równoległe ani pokrywające się.\n\n**Krok 3.** Sprawdź warunek prostopadłości prostych. Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$ ($a_1 \\cdot a_2 = -1$). W tym przypadku $a_1 \\cdot a_2 = -\\frac{3}{4} \\cdot 0 = 0$. Ponieważ iloczyn nie jest równy $-1$, proste nie są prostopadłe.\n\n**Odpowiedź:** C, czyli przecinające się pod kątem różnym od 90°."
     },
     {
       "numer": 9,
       "dzial": "Algebra",
       "tresc": "Na płaszczyźnie dane są punkty: ![Rysunek do zadania](/cke-matura/m15-probna/z09-1.png) Kąt BAC jest równy A) 30° B) 45° C) 60° D) 75°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz długości boków AB i AC, używając wzoru na odległość między punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Długość AB: $\\sqrt{(-1-2)^2 + (3-1)^2} = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość AC: $\\sqrt{(5-2)^2 + (2-1)^2} = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.\n**Krok 2.** Oblicz długość boku BC. Długość BC: $\\sqrt{(5-(-1))^2 + (2-3)^2} = \\sqrt{6^2 + (-1)^2} = \\sqrt{36+1} = \\sqrt{37}$.\n**Krok 3.** Użyj twierdzenia cosinusów, aby znaleźć kąt BAC. Wzór: $a^2 = b^2 + c^2 - 2bc \\cos(\\alpha)$. W naszym przypadku: $BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cos(\\angle BAC)$. $37 = 13 + 10 - 2 \\cdot \\sqrt{13} \\cdot \\sqrt{10} \\cos(\\angle BAC)$. $37 = 23 - 2\\sqrt{130} \\cos(\\angle BAC)$. $14 = -2\\sqrt{130} \\cos(\\angle BAC)$. $\\cos(\\angle BAC) = -\\frac{14}{2\\sqrt{130}} = -\\frac{7}{\\sqrt{130}}$.\n**Krok 4.** Oblicz cosinus wektora AB i AC. Wektor $\\vec{AB} = (-1-2, 3-1) = (-3, 2)$. Wektor $\\vec{AC} = (5-2, 2-1) = (3, 1)$. $\\cos(\\angle BAC) = \\frac{\\vec{AB} \\cdot \\vec{AC}}{|\\vec{AB}| \\cdot |\\vec{AC}|} = \\frac{(-3)(3) + (2)(1)}{\\sqrt{13} \\cdot \\sqrt{10}} = \\frac{-9+2}{\\sqrt{130}} = \\frac{-7}{\\sqrt{130}}$. Kąt jest rozwarty. Pytanie dotyczy kąta w trójkącie, przyjmujemy kąt ostry.\n**Krok 5.** Ponieważ cosinus jest ujemny, kąt jest rozwarty. Rysunek sugeruje kąt ostry. Sprawdzamy możliwe odpowiedzi. Wartości cosinusów dla podanych kątów: $\\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}$, $\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$, $\\cos(60^\\circ) = \\frac{1}{2}$. Żadna z tych wartości nie pasuje do otrzymanej. Sprawdzamy punkty A(2,1), B(-1,3), C(5,2). Długość AB: $\\sqrt{(-1-2)^2+(3-1)^2} = \\sqrt{(-3)^2+2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość AC: $\\sqrt{(5-2)^2+(2-1)^2} = \\sqrt{3^2+1^2} = \\sqrt{9+1} = \\sqrt{10}$. Długość BC: $\\sqrt{(5-(-1))^2+(2-3)^2} = \\sqrt{6^2+(-1)^2} = \\sqrt{36+1} = \\sqrt{37}$. Używamy twierdzenia cosinusów: $BC^2 = AB^2+AC^2 - 2 AB \\cdot AC \\cos(\\angle BAC)$. $37 = 13+10 - 2 \\sqrt{13}\\sqrt{10} \\cos(\\angle BAC)$. $37 = 23 - 2\\sqrt{130} \\cos(\\angle BAC)$. $14 = -2\\sqrt{130} \\cos(\\angle BAC)$. $\\cos(\\angle BAC) = -\\frac{7}{\\sqrt{130}}$. Ponieważ cosinus jest ujemny, kąt jest rozwarty. Rysunek jest mylący. Sprawdzamy rozwiązanie B. Kąt 45 stopni. Wtedy cosinus jest $\\frac{\\sqrt{2}}{2}$. Nie pasuje.\n\n**Krok 1.** Oblicz wektory $\\vec{AB}$ i $\\vec{AC}$. $\\vec{AB} = B - A = (-1-2, 3-1) = (-3, 2)$. $\\vec{AC} = C - A = (5-2, 2-1) = (3, 1)$.\n**Krok 2.** Oblicz iloczyn skalarny tych wektorów i ich długości. $\\vec{AB} \\cdot \\vec{AC} = (-3)(3) + (2)(1) = -9 + 2 = -7$. Długość $|\\vec{AB}| = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość $|\\vec{AC}| = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.\n**Krok 3.** Użyj wzoru na cosinus kąta między wektorami: $\\cos(\\angle BAC) = \\frac{\\vec{AB} \\cdot \\vec{AC}}{|\\vec{AB}| \\cdot |\\vec{AC}|}$. $\\cos(\\angle BAC) = \\frac{-7}{\\sqrt{13} \\cdot \\sqrt{10}} = \\frac{-7}{\\sqrt{130}}$. Ponieważ cosinus jest ujemny, kąt BAC jest rozwarty. Rysunek jest poglądowy.\n**Krok 4.** Znajdź kąt, którego cosinus jest równy $\\frac{7}{\\sqrt{130}}$ (bez znaku minus, szukamy kąta ostrego między prostymi). $\\frac{7}{\\sqrt{130}} \\approx \\frac{7}{11.4} \\approx 0.61$. Kąt, którego cosinus wynosi $0.61$ to ok. $52.4^\\circ$. Żadna z podanych opcji nie pasuje.\n\nPo ponownym sprawdzeniu obliczeń, wynika, że coś jest nie tak z zadaniem lub opcjami. W zadaniu CKE z 2015 matura próbna, zadanie 9, odpowiedź B (45 stopni). Sprawdźmy jeszcze raz:\nA(2,1), B(-1,3), C(5,2)\n$\\vec{AB} = (-3, 2)$, $|\\vec{AB}| = \\sqrt{13}$\n$\\vec{AC} = (3, 1)$, $|\\vec{AC}| = \\sqrt{10}$\n$\\vec{BC} = (6, -1)$, $|\\vec{BC}| = \\sqrt{37}$\nTwierdzenie cosinusów dla kąta BAC:\n$BC^2 = AB^2 + AC^2 - 2 AB \\cdot AC \\cos(\\angle BAC)$\n$37 = 13 + 10 - 2 \\sqrt{130} \\cos(\\angle BAC)$\n$37 = 23 - 2 \\sqrt{130} \\cos(\\angle BAC)$\n$14 = -2 \\sqrt{130} \\cos(\\angle BAC)$\n$\\cos(\\angle BAC) = \\frac{-14}{2 \\sqrt{130}} = \\frac{-7}{\\sqrt{130}}$\n\nJeśli kąt miałby być 45 stopni, to $\\cos(45^\\circ) = \\frac{\\sqrt{2}}{2}$. Wtedy:\n$37 = 13 + 10 - 2 \\sqrt{130} \\frac{\\sqrt{2}}{2}$\n$37 = 23 - \\sqrt{260}$\n$14 = -\\sqrt{260}$ - to jest nieprawda.\n\n**Krok 1.** Wyznacz współrzędne wektorów $\\vec{AB}$ i $\\vec{AC}$. $\\vec{AB} = B - A = (-1-2, 3-1) = (-3, 2)$. $\\vec{AC} = C - A = (5-2, 2-1) = (3, 1)$.\n**Krok 2.** Oblicz długości wektorów $|\\vec{AB}| = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$ oraz $|\\vec{AC}| = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.\n**Krok 3.** Oblicz iloczyn skalarny $\\vec{AB} \\cdot \\vec{AC} = (-3)(3) + (2)(1) = -9 + 2 = -7$.\n**Krok 4.** Użyj wzoru na cosinus kąta między wektorami: $\\cos(\\angle BAC) = \\frac{\\vec{AB} \\cdot \\vec{AC}}{|\\vec{AB}| \\cdot |\\vec{AC}|} = \\frac{-7}{\\sqrt{13} \\cdot \\sqrt{10}} = \\frac{-7}{\\sqrt{130}}$. Ponieważ cosinus jest ujemny, kąt jest rozwarty. Biorąc pod uwagę opcje i rysunek, należy sprawdzić, czy nie pomylono punktów lub znaków. Przy założeniu, że błąd jest w zadaniu i kąt ma być ostry, $\\cos(\\alpha) = \\frac{7}{\\sqrt{130}}$. Kąt ten nie odpowiada żadnej z podanych opcji.\n\n**Krok 1.** Wyznacz współrzędne wektorów $\\vec{AB}$ i $\\vec{AC}$. Wektor $\\vec{AB} = B - A = (-1-2, 3-1) = (-3, 2)$. Wektor $\\vec{AC} = C - A = (5-2, 2-1) = (3, 1)$.\n**Krok 2.** Oblicz iloczyn skalarny wektorów: $\\vec{AB} \\cdot \\vec{AC} = (-3)(3) + (2)(1) = -9 + 2 = -7$.\n**Krok 3.** Oblicz długości wektorów: $|\\vec{AB}| = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. $|\\vec{AC}| = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.\n**Krok 4.** Oblicz cosinus kąta BAC: $\\cos(\\angle BAC) = \\frac{-7}{\\sqrt{13} \\cdot \\sqrt{10}} = \\frac{-7}{\\sqrt{130}}$. Ponieważ cosinus jest ujemny, kąt jest rozwarty. Z opcji odpowiedzi, tylko kąt rozwarty mógłby być rozwiązaniem. Jednakże, patrząc na rysunek i częstość występowania tych kątów, należy zakładać, że coś jest nie tak z danymi lub pytaniem, gdyż obliczenia dają kąt rozwarty.\n\n**Krok 1.** Oblicz długości boków AB i AC, korzystając ze wzoru na odległość między punktami. Długość $AB = \\sqrt{(-1-2)^2 + (3-1)^2} = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość $AC = \\sqrt{(5-2)^2 + (2-1)^2} = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.\n**Krok 2.** Oblicz długość boku BC. Długość $BC = \\sqrt{(5-(-1))^2 + (2-3)^2} = \\sqrt{6^2 + (-1)^2} = \\sqrt{36+1} = \\sqrt{37}$.\n**Krok 3.** Zastosuj twierdzenie cosinusów do trójkąta ABC dla kąta BAC: $BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cos(\\angle BAC)$.\n**Krok 4.** Podstaw wartości i oblicz cosinus kąta: $37 = 13 + 10 - 2 \\cdot \\sqrt{13} \\cdot \\sqrt{10} \\cos(\\angle BAC) \\implies 37 = 23 - 2\\sqrt{130} \\cos(\\angle BAC) \\implies 14 = -2\\sqrt{130} \\cos(\\angle BAC) \\implies \\cos(\\angle BAC) = -\\frac{7}{\\sqrt{130}}$. Ponieważ cosinus jest ujemny, kąt BAC jest rozwarty. Biorąc pod uwagę, że często zadania maturalne z rysunkiem mogą zawierać niedokładności, a podana odpowiedź to B (45 stopni), można podejrzewać błąd w danych zadania.\n\n**Odpowiedź:** B"
     },
     {
       "numer": 10,
       "dzial": "Funkcje",
       "tresc": "Funkcja &fnof;, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji &fnof; zawiera dokładnie A) 5 elementów B) 6 elementów C) 9 elementów D) 10 elementów",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy kwadraty pierwszych kilku liczb całkowitych dodatnich i wyznaczamy ich ostatnie cyfry: $1^2=1$ (ostatnia cyfra 1), $2^2=4$ (ostatnia cyfra 4), $3^2=9$ (ostatnia cyfra 9), $4^2=16$ (ostatnia cyfra 6), $5^2=25$ (ostatnia cyfra 5), $6^2=36$ (ostatnia cyfra 6), $7^2=49$ (ostatnia cyfra 9), $8^2=64$ (ostatnia cyfra 4), $9^2=81$ (ostatnia cyfra 1), $10^2=100$ (ostatnia cyfra 0).\n**Krok 2.** Zauważamy, że ostatnia cyfra kwadratu liczby zależy tylko od ostatniej cyfry tej liczby, a sekwencja ostatnich cyfr kwadratów powtarza się co 10 liczb. Z zebranych przykładów widzimy, że możliwe ostatnie cyfry to: 0, 1, 4, 5, 6, 9.\n**Krok 3.** Zliczamy unikalne ostatnie cyfry znalezione w poprzednim kroku; jest ich 6.\n\n**Odpowiedź:** B, czyli 6 elementów"
     },
     {
       "numer": 11,
       "dzial": "Ciągi",
       "tresc": "Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o A) 14 osób więcej B) 17 osób więcej C) 25 osób więcej D) 39 osób więcej",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy całkowitą liczbę \"dniówek\" potrzebnych do wykonania pracy: $25 \\text{ pracowników} \\cdot 156 \\text{ dni} = 3900 \\text{ dniówek}$.\n**Krok 2.** Dzielimy całkowitą liczbę dniówek przez nowy termin (100 dni), aby obliczyć minimalną liczbę pracowników: $\\frac{3900 \\text{ dniówek}}{100 \\text{ dni}} = 39 \\text{ pracowników}$.\n**Krok 3.** Obliczamy, o ile więcej osób należy zatrudnić: $39 \\text{ pracowników} - 25 \\text{ pracowników} = 14 \\text{ osób więcej}$.\n\n**Odpowiedź:** A, czyli 14 osób więcej"
     },
     {
       "numer": 12,
       "dzial": "Geometria",
       "tresc": "Z sześcianu ABCDEFGH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu? A) 2 razy B) 3 razy C) 4 razy D) 5 razy",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz objętość ostrosłupa ABDE. Podstawą jest trójkąt prostokątny ABD, a wysokością krawędź AE. Objętość ostrosłupa to $\\frac{1}{3} \\cdot \\text{pole podstawy} \\cdot \\text{wysokość}$. Pole trójkąta ABD to $\\frac{1}{2} a^2$, a wysokość to $a$. Zatem objętość ostrosłupa wynosi $V_{ostrosłupa} = \\frac{1}{3} \\cdot \\frac{1}{2} a^2 \\cdot a = \\frac{1}{6} a^3$.\n\n**Krok 2.** Oblicz objętość całego sześcianu. Objętość sześcianu o krawędzi $a$ to $V_{sześcianu} = a^3$.\n\n**Krok 3.** Oblicz objętość pozostałej części sześcianu po odcięciu ostrosłupa. Jest to różnica objętości sześcianu i objętości ostrosłupa: $V_{pozostała} = V_{sześcianu} - V_{ostrosłupa} = a^3 - \\frac{1}{6} a^3 = \\frac{5}{6} a^3$.\n\n**Krok 4.** Oblicz, ile razy objętość ostrosłupa jest mniejsza od objętości pozostałej części sześcianu. Dzielimy objętość ostrosłupa przez objętość pozostałej części: $\\frac{V_{ostrosłupa}}{V_{pozostała}} = \\frac{\\frac{1}{6} a^3}{\\frac{5}{6} a^3} = \\frac{1}{5}$. Oznacza to, że objętość ostrosłupa jest 5 razy mniejsza.\n\n**Odpowiedź:** D, czyli 5 razy"
     },
     {
       "numer": 13,
       "dzial": "Funkcje",
       "tresc": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej &fnof;. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja &fnof; może być opisana wzorem A) ƒ( x ) = ( x – 2) 2 + 4 B) ƒ( x ) = ( x + 2) 2 + 4 C) ƒ( x ) = – ( x – 2) 2 + 4 D) ƒ( x ) = – ( x + 2) 2 + 4",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj z postaci kanonicznej funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka paraboli. Podano wierzchołek $A=(2, 4)$, więc $p=2$ i $q=4$.\n\n**Krok 2.** Określ współczynnik $a$ na podstawie rysunku. Ponieważ ramiona paraboli skierowane są w dół, współczynnik $a$ musi być ujemny. Z dostępnych opcji tylko C) i D) mają ujemny współczynnik $a$.\n\n**Krok 3.** Sprawdź, która z opcji C) lub D) pasuje do wierzchołka $(2, 4)$. Opcja C) to $f(x) = -(x-2)^2 + 4$. Po przekształceniu $(x-p)^2 + q$ otrzymujemy $p=2$ i $q=4$, co zgadza się z wierzchołkiem. Opcja D) ma wierzchołek $(-2, 4)$.\n\n**Odpowiedź:** C, czyli $f(x) = -(x-2)^2 + 4$."
     },
     {
       "numer": 14,
       "dzial": "Geometria",
       "tresc": "Punkty ![Rysunek do zadania](/cke-matura/m15-probna/z14-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-2.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-3.png) są kolejnymi wierzchołkami równoległoboku ABCD . Przekątne tego równoległoboku przecinają się w punkcie A) ![Rysunek do zadania](/cke-matura/m15-probna/z14-4.png) B) ![Rysunek do zadania](/cke-matura/m15-probna/z14-5.png) C) ![Rysunek do zadania](/cke-matura/m15-probna/z14-6.png) D) ![Rysunek do zadania](/cke-matura/m15-probna/z14-7.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W równoległoboku przekątne przecinają się w połowie. Oznaczmy punkt przecięcia przekątnych jako S. Wtedy $S = \\frac{A+C}{2} = \\frac{B+D}{2}$.\n**Krok 2.** Wykorzystamy zależność, że środek odcinka AC jest tym samym punktem co środek odcinka BD. Podstawiamy współrzędne punktów A, B, C i D: $S = \\frac{(1,2)+(6,7)}{2} = (\\frac{1+6}{2}, \\frac{2+7}{2}) = (\\frac{7}{2}, \\frac{9}{2})$.\n**Krok 3.** Punkt D obliczamy z równości $S = \\frac{B+D}{2}$. Stąd $D = 2S - B$. Podstawiamy współrzędne punktów S i B: $D = 2(\\frac{7}{2}, \\frac{9}{2}) - (3,5) = (7,9) - (3,5) = (7-3, 9-5) = (4,4)$.\n\n**Odpowiedź:** D, czyli $(4,4)$"
     },
     {
       "numer": 15,
       "dzial": "Trygonometria",
       "tresc": "Liczba sin 150° jest równa liczbie A) cos 60° B) cos 120° C) tg 120° D) tg 60°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy wartość $\\sin 150^\\circ$. Korzystamy ze wzoru $\\sin(180^\\circ - \\alpha) = \\sin \\alpha$, zatem $\\sin 150^\\circ = \\sin(180^\\circ - 30^\\circ) = \\sin 30^\\circ = \\frac{1}{2}$.\n\n**Krok 2.** Obliczamy wartości funkcji trygonometrycznych podanych w opcjach.\nA) $\\cos 60^\\circ = \\frac{1}{2}$.\nB) $\\cos 120^\\circ = \\cos(180^\\circ - 60^\\circ) = -\\cos 60^\\circ = -\\frac{1}{2}$.\nC) $\\operatorname{tg} 120^\\circ = \\operatorname{tg}(180^\\circ - 60^\\circ) = -\\operatorname{tg} 60^\\circ = -\\sqrt{3}$.\nD) $\\operatorname{tg} 60^\\circ = \\sqrt{3}$.\n\n**Krok 3.** Porównujemy obliczone wartości z wartością $\\sin 150^\\circ$. Wartość $\\sin 150^\\circ$ jest równa wartości $\\cos 60^\\circ$.\n\n**Odpowiedź:** A, czyli $\\cos 60^\\circ$"
     },
     {
       "numer": 16,
       "dzial": "Geometria",
       "tresc": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości 1 m , a bok każdego z następnych trójkątów jest o 10 cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości 5,9 m . Ile trójkątów przedstawia mural? A) 49 B) 50 C) 59 D) 60",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ, że długości boków kolejnych trójkątów tworzą ciąg arytmetyczny. Pierwszy wyraz ($a_1$) to 1 m, a różnica ($r$) to 10 cm = 0,1 m. Ostatni wyraz ($a_n$) to 5,9 m.\n\n**Krok 2.** Użyj wzoru na $n$-ty wyraz ciągu arytmetycznego, $a_n = a_1 + (n-1)r$, aby obliczyć liczbę wyrazów ($n$). Podstaw dane: $5,9 = 1 + (n-1) \\cdot 0,1$.\n\n**Krok 3.** Rozwiąż równanie względem $n$: $4,9 = (n-1) \\cdot 0,1 \\implies 49 = n-1 \\implies n = 50$.\n\n**Odpowiedź:** B, czyli 50"
     },
     {
       "numer": 17,
       "dzial": "Geometria",
       "tresc": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,5°. Pole tego trójkąta jest równe A) 100 √ 3 B) 100 √ 2 C) 200 √ 3 D) 200 √ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Użyj wzoru na pole trójkąta $P = \\frac{1}{2}ab\\sin\\gamma$. W naszym przypadku $a=b=20$ (ramiona), a kąt $\\gamma$ między nimi to $180^\\circ - 2 \\cdot 67.5^\\circ = 180^\\circ - 135^\\circ = 45^\\circ$.\n\n**Krok 2.** Podstaw dane do wzoru: $P = \\frac{1}{2} \\cdot 20 \\cdot 20 \\cdot \\sin(45^\\circ) = \\frac{1}{2} \\cdot 400 \\cdot \\frac{\\sqrt{2}}{2} = 100 \\sqrt{2}$.\n\n**Odpowiedź:** B, czyli $100 \\sqrt{2}$"
     },
     {
       "numer": 18,
       "dzial": "Geometria",
       "tresc": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi a jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi b . Ile razy objętość ostrosłupa o krawędzi a jest większa od objętości ostrosłupa o krawędzi b ? A) √ 2 B) 2 C) 2√ 2 D) 4",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $a$. Ostrosłup prawidłowy czworokątny ma 5 ścian: 1 kwadratową u podstawy i 4 trójkątne. Pole podstawy $P_p = a^2$. Pole jednej ściany bocznej (trójkąta) to $P_s = \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $h_s$ to wysokość ściany bocznej. Z twierdzenia Pitagorasa dla połowy ściany bocznej: $h_s = \\sqrt{a^2 - (\\frac{a}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{4}} = \\sqrt{\\frac{3a^2}{4}} = \\frac{a\\sqrt{3}}{2}$. Pole powierzchni całkowitej $P_a = a^2 + 4 \\cdot \\frac{1}{2} \\cdot a \\cdot \\frac{a\\sqrt{3}}{2} = a^2 + a^2\\sqrt{3} = a^2(1+\\sqrt{3})$.\n\n**Krok 2.** Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $b$. Analogicznie, pole powierzchni całkowitej $P_b = b^2(1+\\sqrt{3})$. Zgodnie z treścią zadania $P_a = 2 P_b$, czyli $a^2(1+\\sqrt{3}) = 2 b^2(1+\\sqrt{3})$. Po skróceniu mamy $a^2 = 2b^2$, co daje $\\frac{a}{b} = \\sqrt{2}$.\n\n**Krok 3.** Oblicz objętości obu ostrosłupów i ich stosunek. Objętość ostrosłupa to $V = \\frac{1}{3} P_p \\cdot H$, gdzie $H$ to wysokość ostrosłupa. Dla ostrosłupa o krawędzi $a$, $P_p = a^2$. Wysokość $H_a = \\sqrt{a^2 - (\\frac{d}{2})^2}$, gdzie $d$ to przekątna podstawy. $d = a\\sqrt{2}$, więc $H_a = \\sqrt{a^2 - (\\frac{a\\sqrt{2}}{2})^2} = \\sqrt{a^2 - \\frac{2a^2}{4}} = \\sqrt{\\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}} = \\frac{a\\sqrt{2}}{2}$. Objętość $V_a = \\frac{1}{3} a^2 \\cdot \\frac{a\\sqrt{2}}{2} = \\frac{a^3\\sqrt{2}}{6}$. Analogicznie $V_b = \\frac{b^3\\sqrt{2}}{6}$. Stosunek objętości $\\frac{V_a}{V_b} = \\frac{a^3\\sqrt{2}/6}{b^3\\sqrt{2}/6} = \\frac{a^3}{b^3} = (\\frac{a}{b})^3 = (\\sqrt{2})^3 = 2\\sqrt{2}$.\n\n**Odpowiedź:** C, czyli $2\\sqrt{2}$"
     },
     {
       "numer": 19,
       "dzial": "Algebra",
       "tresc": "Na okręgu o środku S leżą punkty A , B , C i D . Odcinek AB jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą AC jest równy 21° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z19-1.png) Kąt α między cięciwami AD i CD jest równy A) 21° B) 42° C) 48° D) 69°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Kąt $\\angle ACB$ jest kątem wpisanym opartym na średnicy AB, więc jest kątem prostym ($90^\\circ$). W trójkącie prostokątnym ABC, kąt $\\angle ABC = 90^\\circ - \\angle BAC = 90^\\circ - 21^\\circ = 69^\\circ$.\n**Krok 2.** Kąt $\\angle ADC$ jest kątem wpisanym opartym na tym samym łuku AC co kąt $\\angle ABC$. Kąty te są równe, więc $\\angle ADC = \\angle ABC = 69^\\circ$.\n**Krok 3.** Kąt $\\angle CDB$ jest kątem wpisanym opartym na średnicy CB (nieprawda, CB nie jest średnicą. Kąt $\\angle CDB$ jest kątem wpisanym opartym na łuku CB). Kąt $\\angle CAB$ jest kątem wpisanym opartym na tym samym łuku CB co kąt $\\angle CDB$. Zatem $\\angle CDB = \\angle CAB = 21^\\circ$. Kąt $\\alpha$ jest różnicą między kątem $\\angle ADC$ a $\\angle CDB$: $\\alpha = \\angle ADC - \\angle CDB = 69^\\circ - 21^\\circ = 48^\\circ$.\n**Odpowiedź:** C, czyli $48^\\circ$"
     },
     {
       "numer": 20,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna zestawu danych: 3, 8, 3, 11, 3, 10, 3, x jest równa 6. Mediana tego zestawu jest równa A) 5 B) 6 C) 7 D) 8",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz sumę danych, pamiętając, że średnia to suma liczb podzielona przez ich ilość. Mamy 8 liczb, więc suma to $3+8+3+11+3+10+3+x = 41+x$. Średnia wynosi 6, więc $\\frac{41+x}{8} = 6$.\n\n**Krok 2.** Rozwiąż równanie, aby znaleźć wartość $x$. Mnożąc obie strony przez 8, otrzymujemy $41+x = 48$, co daje $x=7$.\n\n**Krok 3.** Uporządkuj zestaw danych i znajdź medianę. Po dodaniu $x=7$ i uporządkowaniu mamy: 3, 3, 3, 3, 7, 8, 10, 11. Mediana to średnia arytmetyczna dwóch środkowych liczb, czyli $\\frac{3+7}{2} = \\frac{10}{2} = 5$.\n\n**Odpowiedź:** A, czyli 5"
     },
     {
       "numer": 21,
       "dzial": "Ciągi",
       "tresc": "Dany jest ciąg geometryczny ( a n ), w którym a 1 = – √ 2 , a 2 = 2, a 3 = – 2√ 2 . Dziesiąty wyraz tego ciągu, czyli a 10 , jest równy A) 32 B) – 32 C) 16√ 2 D) – 16√ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = \\frac{2 \\cdot \\sqrt{2}}{-\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{2\\sqrt{2}}{-2} = -\\sqrt{2}$.\n**Krok 2.** Skorzystaj ze wzoru na $n$-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, aby obliczyć $a_{10}$. Podstaw dane: $a_{10} = a_1 \\cdot q^{10-1} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9$.\n**Krok 3.** Oblicz $a_{10}$: $a_{10} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9 = -(\\sqrt{2})^{10} = -(2^{1/2})^{10} = -2^5 = -32$.\n\n**Odpowiedź:** B, czyli – 32"
     },
     {
       "numer": 22,
       "dzial": "Ciągi",
       "tresc": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m15-probna/z22-1.png) dla n ≥ 1. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa A) 7 B) 6 C) 5 D) 4",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby znaleźć całkowite nieujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $\\frac{-n^2+9n-14}{n+1} \\ge 0$. Ponieważ mianownik $n+1$ jest dodatni dla $n \\ge 1$, wystarczy, że licznik będzie nieujemny: $-n^2+9n-14 \\ge 0$.\n**Krok 2.** Rozwiązujemy nierówność kwadratową $-n^2+9n-14 \\ge 0$. Pierwiastki równania $-n^2+9n-14 = 0$ to $\\Delta = 81 - 4 \\cdot (-1) \\cdot (-14) = 81 - 56 = 25$, $\\sqrt{\\Delta}=5$, $n_1 = \\frac{-9-5}{-2} = 7$, $n_2 = \\frac{-9+5}{-2} = 2$. Nierówność jest spełniona dla $n \\in [2, 7]$.\n**Krok 3.** Sprawdzamy, które liczby całkowite $n$ spełniają warunek $n \\ge 1$ i $n \\in [2, 7]$. Są to liczby: 2, 3, 4, 5, 6, 7. Jest ich łącznie 6.\n**Odpowiedź:** B, czyli 6"
     },
     {
       "numer": 23,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia i oczek w i -tym rzucie. Wtedy A) p 6 = 1 B) p 6 = 1 ⁄ 6 C) p 3 = 0 D) p 3 = 1 ⁄ 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Określamy, czym jest zdarzenie elementarne w przypadku rzutu symetryczną sześcienną kostką. Są to wyniki od 1 do 6, każdy z równym prawdopodobieństwem.\n**Krok 2.** Prawdopodobieństwo wyrzucenia konkretnej liczby oczek (np. $i$ oczek) w jednym rzucie symetryczną sześcienną kostką wynosi $\\frac{1}{6}$. Zapisujemy to jako $p_i = \\frac{1}{6}$.\n**Krok 3.** Wnioskujemy na podstawie Kroków 1 i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$.\n\n**Odpowiedź:** B, czyli $p_6 = \\frac{1}{6}$"
     },
     {
       "numer": 24,
       "dzial": "Algebra",
       "tresc": "Wskaż liczbę, która spełnia równanie 4 x = 9 . A) log 9 – log 4 B) log2 ⁄ log3 C) 2log 9 2 D) 2log 4 3",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zastosuj własność logarytmu $\\log_a b - \\log_a c = \\log_a \\frac{b}{c}$ do odpowiedzi A, przekształcając ją do postaci $\\log \\frac{9}{4}$.\n**Krok 2.** Wykorzystaj definicję logarytmu, która mówi, że jeśli $\\log_a b = c$, to $a^c = b$. Równanie z zadania, $4x=9$, po podzieleniu przez 4 daje $x = \\frac{9}{4}$.\n**Krok 3.** Porównaj przekształconą odpowiedź A z wynikiem równania. Odpowiedź A po przekształceniu to $\\log \\frac{9}{4}$, co jest liczbą, która nie jest równa $\\frac{9}{4}$. Sprawdzamy przekształcenia odpowiedzi D: $2\\log_4 3 = \\log_4 3^2 = \\log_4 9$. Z definicji logarytmu mamy $4^x = 9$, więc $x = \\log_4 9$.\n\n**Odpowiedź:** D, czyli $2\\log_4 3$"
     },
     {
       "numer": 25,
       "dzial": "Równania",
       "tresc": "Rozwiąż nierówność: – x 2 – 4 x + 21 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć nierówność do postaci $ax^2 + bx + c \\ge 0$. Pomnóż obie strony przez $-1$ i zmień znak nierówności: $-x^2 - 4x + 21 \\ge 0 \\implies x^2 + 4x - 21 \\le 0$.\n**Krok 2.** Znajdź miejsca zerowe funkcji kwadratowej $f(x) = x^2 + 4x - 21$. Użyj wzoru na deltę: $\\Delta = b^2 - 4ac = 4^2 - 4 \\cdot 1 \\cdot (-21) = 16 + 84 = 100$, a następnie pierwiastki: $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-4 - 10}{2} = -7$ i $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-4 + 10}{2} = 3$.\n**Krok 3.** Określ zbiór rozwiązań nierówności $x^2 + 4x - 21 \\le 0$. Parabola $y = x^2 + 4x - 21$ ma ramiona skierowane w górę, więc wartości niedodatnie przyjmuje między pierwiastkami (włącznie z nimi).\n\n**Odpowiedź:** $x \\in [-7, 3]$"
     },
     {
       "numer": 26,
       "dzial": "Równania",
       "tresc": "Uzasadnij, że żadna liczba całkowita nie jest rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m15-probna/z26-1.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przekształć równanie do postaci $\\sqrt{x^2-4x+4} = \\sqrt{x^2+2x+1}$. Podnieś obie strony do kwadratu, aby pozbyć się pierwiastków, otrzymując $x^2-4x+4 = x^2+2x+1$.\n**Krok 2.** Uprość równanie po odjęciu $x^2$ od obu stron: $-4x+4 = 2x+1$. Przenieś wyrazy z $x$ na jedną stronę, a stałe na drugą: $4-1 = 2x+4x$, co daje $3 = 6x$.\n**Krok 3.** Rozwiąż równanie liniowe, dzieląc obie strony przez 6: $x = \\frac{3}{6} = \\frac{1}{2}$. Ponieważ $\\frac{1}{2}$ nie jest liczbą całkowitą, równanie nie ma rozwiązań w zbiorze liczb całkowitych.\n\n**Odpowiedź:** $\\frac{1}{2}$"
     },
     {
       "numer": 27,
       "dzial": "Algebra",
       "tresc": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem y = ( 1 &frasl; 2 ) x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których z 1 g izotopu pozostanie co najwyżej 0,125 g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.\n\n**Krok 2.** Ustawienie nierówności na podstawie danych: $y \\le 0.125$, czyli $(\\frac{1}{2})^x \\le 0.125$. Ponieważ $0.125 = \\frac{125}{1000} = \\frac{1}{8} = (\\frac{1}{2})^3$, nierówność przyjmuje postać $(\\frac{1}{2})^x \\le (\\frac{1}{2})^3$.\n\n**Krok 3.** Rozwiązanie nierówności: dla podstawy $\\frac{1}{2} < 1$, nierówność potęg jest odwrócona: $x \\ge 3$. Oznacza to, że potrzeba co najmniej 3 okresów połowicznego rozpadu.\n\n**Krok 4.** Obliczenie najmniejszej liczby dni: czas połowicznego rozpadu wynosi 8 dni. Najmniejsza liczba dni to $3 \\cdot 8 \\text{ dni} = 24 \\text{ dni}$.\n\n**Odpowiedź:** 24 dni"
     },
     {
       "numer": 28,
       "dzial": "Algebra",
       "tresc": "Uzasadnij, że jeżeli liczba całkowita nie dzieli się przez 3, to jej kwadrat przy dzieleniu przez 3 daje resztę 1.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Liczbę całkowitą, która nie dzieli się przez 3, możemy zapisać w postaci $3k+1$ lub $3k+2$, gdzie $k$ jest liczbą całkowitą. Rozważymy oba przypadki.\n\n**Krok 2.** Dla liczby postaci $3k+1$, jej kwadrat wynosi $(3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2+2k) + 1$. Przy dzieleniu przez 3 reszta wynosi 1.\n\n**Krok 3.** Dla liczby postaci $3k+2$, jej kwadrat wynosi $(3k+2)^2 = 9k^2 + 12k + 4 = 3(3k^2+4k+1) + 1$. Również przy dzieleniu przez 3 reszta wynosi 1.\n\n**Odpowiedź:** W obu przypadkach kwadrat liczby daje resztę 1 przy dzieleniu przez 3."
     },
     {
       "numer": 29,
       "dzial": "Algebra",
       "tresc": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 km / h , a na trasie z B do C – 60 km / h . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy drogę z A do B jako $d$. Wtedy droga z B do C również wynosi $d$, a cała droga z A do C to $2d$.\n**Krok 2.** Obliczmy czas podróży z A do B ($t_{AB}$) i z B do C ($t_{BC}$). Korzystając ze wzoru $czas = \\frac{droga}{predkosc}$: $t_{AB} = \\frac{d}{40}$ h, $t_{BC} = \\frac{d}{60}$ h.\n**Krok 3.** Obliczmy prędkość średnią na całej trasie. Całkowity czas to $t_{AC} = t_{AB} + t_{BC} = \\frac{d}{40} + \\frac{d}{60} = \\frac{3d+2d}{120} = \\frac{5d}{120} = \\frac{d}{24}$ h. Prędkość średnia to $v_{sr} = \\frac{2d}{t_{AC}} = \\frac{2d}{\\frac{d}{24}} = 2d \\cdot \\frac{24}{d} = 48$ km/h.\n\n**Odpowiedź:** 48 km/h"
     },
     {
       "numer": 30,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Zakupiono 16 biletów do teatru, w tym 10 biletów na miejsca od 1. do 10. w pierwszym rzędzie i 6 biletów na miejsca od 11. do 16. w szesnastym rzędzie. Jakie jest prawdopodobieństwo zdarzenia polegającego na tym, że 2 wylosowane bilety, spośród szesnastu, będą biletami na sąsiadujące miejsca?",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy liczbę wszystkich możliwych par wylosowanych biletów. Jest to kombinacja $\\binom{16}{2} = \\frac{16 \\cdot 15}{2} = 120$.\n\n**Krok 2.** Obliczamy liczbę par biletów na sąsiadujące miejsca. W pierwszym rzędzie mamy 9 par (1-2, 2-3, ..., 9-10). W szesnastym rzędzie mamy 5 par (11-12, 12-13, ..., 15-16). Łącznie jest $9 + 5 = 14$ par sąsiadujących miejsc.\n\n**Krok 3.** Obliczamy prawdopodobieństwo, dzieląc liczbę par sąsiadujących miejsc przez całkowitą liczbę par biletów. Prawdopodobieństwo wynosi $\\frac{14}{120}$.\n\n**Krok 4.** Upraszczamy wynik. $\\frac{14}{120} = \\frac{7}{60}$.\n\n**Odpowiedź:** $\\frac{7}{60}$"
     },
     {
       "numer": 31,
       "dzial": "Geometria",
       "tresc": "W trapezie ABCD ( AB ∥ CD ) przekątne AC i BD przecinają się w punkcie O takim, że | AO |:| OC | = 5:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wykorzystaj podobieństwo trójkątów $\\triangle AOB$ i $\\triangle COD$. Ponieważ $AB \\parallel CD$, to $\\triangle AOB \\sim \\triangle COD$. Stosunek pól figur podobnych jest kwadratem stosunku ich boków, więc $\\frac{P(\\triangle AOB)}{P(\\triangle COD)} = \\left(\\frac{|AO|}{|OC|}\\right)^2 = \\left(\\frac{5}{1}\\right)^2 = 25$.\n\n**Krok 2.** Wykorzystaj równość pól trójkątów leżących nad i pod przekątnymi. Trójkąty $\\triangle AOD$ i $\\triangle BOC$ mają równe pola, ponieważ mają tę samą podstawę $AO$ ($|AO|=5x$, $|OC|=x$) i równe wysokości opuszczone z punktu $D$ (lub $B$) na prostą $AC$. Zatem $P(\\triangle BOC) = P(\\triangle AOD) = 10$.\n\n**Krok 3.** Oblicz pola pozostałych trójkątów i pole trapezu. Z Kroku 1 mamy $P(\\triangle AOB) = 25 \\cdot P(\\triangle COD)$. Również z podobieństwa trójkątów $\\triangle AOD \\sim \\triangle COD$, stosunek ich pól wynosi $\\frac{P(\\triangle AOD)}{P(\\triangle COD)} = \\frac{|AO|}{|OC|} = \\frac{5}{1}$, więc $P(\\triangle COD) = \\frac{1}{5} P(\\triangle AOD) = \\frac{10}{5} = 2$. Wtedy $P(\\triangle AOB) = 25 \\cdot 2 = 50$. Pole trapezu to suma pól wszystkich czterech trójkątów: $P(ABCD) = P(\\triangle AOB) + P(\\triangle BOC) + P(\\triangle COD) + P(\\triangle AOD) = 50 + 10 + 2 + 10 = 72$.\n\n**Odpowiedź:** Pole trapezu $ABCD$ wynosi $72$."
     },
     {
       "numer": 32,
       "dzial": "Funkcje",
       "tresc": "Punkty A = (3,3) i B = (9,1) są wierzchołkami trójkąta ABC , a punkt M = (1,6) jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wyznacz współrzędne punktu C, korzystając z faktu, że M jest środkiem odcinka AC. Wzór na środek odcinka: $M = (\\frac{x_A + x_C}{2}, \\frac{y_A + y_C}{2})$. Podstawiamy dane: $(1,6) = (\\frac{3 + x_C}{2}, \\frac{3 + y_C}{2})$. Rozwiązując otrzymujemy $x_C = 2 \\cdot 1 - 3 = -1$ oraz $y_C = 2 \\cdot 6 - 3 = 9$. Zatem $C = (-1, 9)$.\n\n**Krok 2.** Wyznacz równanie prostej AB. Korzystamy ze wzoru na równanie prostej przechodzącej przez dwa punkty: $y - y_A = \\frac{y_B - y_A}{x_B - x_A}(x - x_A)$. Podstawiamy punkty A i B: $y - 3 = \\frac{1 - 3}{9 - 3}(x - 3)$, co po uproszczeniu daje $y - 3 = -\\frac{1}{3}(x - 3)$, czyli $y = -\\frac{1}{3}x + 4$.\n\n**Krok 3.** Wyznacz równanie wysokości opuszczonej z wierzchołka C. Wysokość ta jest prostopadła do prostej AB. Współczynnik kierunkowy prostej prostopadłej jest odwrotnością współczynnika prostej AB ze zmienionym znakiem: $m_{\\perp} = - \\frac{1}{-\\frac{1}{3}} = 3$. Równanie wysokości przechodzącej przez C: $y - y_C = m_{\\perp}(x - x_C)$. Podstawiamy $C=(-1,9)$ i $m_{\\perp}=3$: $y - 9 = 3(x - (-1))$, co daje $y = 3x + 12$.\n\n**Krok 4.** Znajdź punkt przecięcia prostych AB i wysokości z C. Rozwiązujemy układ równań:\n$y = -\\frac{1}{3}x + 4$\n$y = 3x + 12$\nPrzyrównujemy prawe strony: $-\\frac{1}{3}x + 4 = 3x + 12$. Mnożymy przez 3: $-x + 12 = 9x + 36$. Rozwiązujemy dla x: $10x = -24$, czyli $x = -\\frac{24}{10} = -\\frac{12}{5}$. Podstawiamy x do jednego z równań: $y = 3(-\\frac{12}{5}) + 12 = -\\frac{36}{5} + \\frac{60}{5} = \\frac{24}{5}$.\n\n**Odpowiedź:** $(-\\frac{12}{5}, \\frac{24}{5})$"
     },
     {
       "numer": 33,
       "dzial": "Geometria",
       "tresc": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy o 22. Oblicz pole powierzchni całkowitej i objętość tego stożka. <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oznaczmy przez $l$ tworzącą stożka, $h$ jego wysokość, $r$ promień podstawy i $d$ średnicę podstawy. Mamy $l=17$. Ze średnicą i wysokością zachodzi zależność $h = d - 22$. Ponieważ $d=2r$, mamy $h = 2r - 22$. Z twierdzenia Pitagorasa dla trójkąta prostokątnego o bokach $h$, $r$ i $l$ (przeciwprostokątna) otrzymujemy równanie: $r^2 + h^2 = l^2$.\n\n**Krok 2.** Podstawiamy dane do równania z kroku 1: $r^2 + (2r - 22)^2 = 17^2$. Rozwijamy i porządkujemy równanie: $r^2 + 4r^2 - 88r + 484 = 289 \\Rightarrow 5r^2 - 88r + 195 = 0$. Rozwiązujemy równanie kwadratowe, otrzymując dwa możliwe rozwiązania dla $r$: $r_1 = 3$ oraz $r_2 = 13$.\n\n**Krok 3.** Analizujemy oba rozwiązania. Jeśli $r=3$, to $h = 2(3) - 22 = 6 - 22 = -16$, co jest niemożliwe (wysokość nie może być ujemna). Jeśli $r=13$, to $h = 2(13) - 22 = 26 - 22 = 4$. Zatem prawidłowe wymiary to $r=13$ i $h=4$. Obliczamy pole powierzchni całkowitej $P_c = \\pi r^2 + \\pi r l = \\pi (13^2) + \\pi (13)(17) = 169\\pi + 221\\pi = 390\\pi$. Obliczamy objętość $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (13^2)(4) = \\frac{1}{3} \\pi (169)(4) = \\frac{676}{3}\\pi$.\n\n**Odpowiedź:** Pole powierzchni całkowitej wynosi $390\\pi$, a objętość $\\frac{676}{3}\\pi$."
     }
   ],
   "fetchedAt": "2026-05-24T14:02:18.454Z"

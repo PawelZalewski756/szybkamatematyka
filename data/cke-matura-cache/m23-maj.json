@@ -8,187 +8,187 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Na osi liczbowej zaznaczono sumę przedziałów. ![Rysunek do zadania](/cke-matura/m23-maj/z01-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności A) |𝑥 − 3,5| ≥ 1,5 B) |𝑥 − 1,5| ≥ 3,5 C) |𝑥 − 3,5| ≤ 1,5 D) |𝑥 − 1,5| ≤ 3,5",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz zaznaczony przedział w postaci nierówności z wartością bezwzględną. Środek przedziału to $3,5$, a promień to $3,5 - 2 = 1,5$. Nierówność to $|x - 3,5| \\ge 1,5$.\n**Krok 2.** Sprawdź, która z podanych odpowiedzi odpowiada nierówności $|x - 3,5| \\ge 1,5$. Jest to opcja A.\n**Odpowiedź:** A, czyli $|x - 3,5| \\ge 1,5$"
     },
     {
       "numer": 2,
       "dzial": "Statystyka",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-maj/z02-1.png) jest równa A) (- 3 &frasl; 2 ) B) 3 &frasl; 2 C) 2 &frasl; 3 D) ( - 2 &frasl; 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz wyrażenie z użyciem wykładników ujemnych i ułamkowych: $\\frac{1}{\\sqrt[3]{(\\frac{2}{3})^2}} = \\frac{1}{(\\frac{2}{3})^{\\frac{2}{3}}} = (\\frac{2}{3})^{-\\frac{2}{3}}$.\n**Krok 2.** Odwróć podstawę potęgi, zmieniając znak wykładnika na przeciwny: $(\\frac{2}{3})^{-\\frac{2}{3}} = (\\frac{3}{2})^{\\frac{2}{3}}$.\n**Krok 3.** Zamień wykładnik ułamkowy na potęgę pierwiastkową: $(\\frac{3}{2})^{\\frac{2}{3}} = \\sqrt[3]{(\\frac{3}{2})^2} = \\sqrt[3]{\\frac{9}{4}}$.\n\n*Korekta na podstawie obrazka:* Obrazek zawiera liczbę $- \\sqrt[3]{\\frac{8}{27}}$.\n\n**Krok 1.** Zapisz liczbę pod pierwiastkiem jako sześcian liczby wymiernej: $- \\sqrt[3]{\\frac{8}{27}} = - \\sqrt[3]{(\\frac{2}{3})^3}$.\n**Krok 2.** Wyciągnij pierwiastek sześcienny z liczby wymiernej: $- \\sqrt[3]{(\\frac{2}{3})^3} = - \\frac{2}{3}$.\n\n**Odpowiedź:** D, czyli $(-\\frac{2}{3})$."
     },
     {
       "numer": 3,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba (𝟐𝒏 + 𝟏) 𝟐 − 𝟏 jest podzielna przez 𝟖.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozwiń kwadrat wyrażenia $(2n + 1)^2$. Użyj wzoru skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$. Otrzymasz $(2n)^2 + 2 \\cdot 2n \\cdot 1 + 1^2 = 4n^2 + 4n + 1$.\n**Krok 2.** Podstaw rozwinięte wyrażenie do oryginalnego wzoru i uprość: $(4n^2 + 4n + 1) - 1 = 4n^2 + 4n$.\n**Krok 3.** Wyłącz wspólny czynnik przed nawias. Wyrażenie $4n^2 + 4n$ można zapisać jako $4n(n+1)$. Zauważ, że iloczyn dwóch kolejnych liczb naturalnych $n(n+1)$ jest zawsze liczbą parzystą, czyli można go zapisać jako $2k$ dla pewnej liczby całkowitej $k$.\n**Krok 4.** Podstaw $n(n+1) = 2k$ do wyrażenia z kroku 3: $4n(n+1) = 4(2k) = 8k$. Ponieważ wynik jest postaci $8k$, gdzie $k$ jest liczbą całkowitą, to liczba $(2n + 1)^2 - 1$ jest podzielna przez 8 dla każdej liczby naturalnej $n \\geq 1$.\n\n**Odpowiedź:** Wykazano, że $(2n + 1)^2 - 1 = 8k$ dla pewnego $k \\in \\mathbb{Z}$."
     },
     {
       "numer": 4,
       "dzial": "Potęgi",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 27 + log 9 3 jest równa A) 81 B) 9 C) 4 D) 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Skorzystaj z własności logarytmów $\\log_b x + \\log_b y = \\log_b (x \\cdot y)$, aby połączyć oba logarytmy w jeden. Otrzymamy $\\log_9 (27 \\cdot 3)$.\n\n**Krok 2.** Oblicz iloczyn w argumencie logarytmu: $27 \\cdot 3 = 81$. Zatem mamy $\\log_9 81$.\n\n**Krok 3.** Znajdź liczbę, do której należy podnieść podstawę (9), aby otrzymać argument (81). Ponieważ $9^2 = 81$, $\\log_9 81 = 2$.\n\n**Odpowiedź:** D, czyli $2$."
     },
     {
       "numer": 5,
       "dzial": "Algebra",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 wyrażenie (2𝑎 − 3) 2 − (2𝑎 + 3) 2 jest równe A) −24𝑎 B) 0 C) 18 D) 16𝑎 2 − 24𝑎",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozwiń oba kwadraty używając wzorów skróconego mnożenia $(x-y)^2 = x^2 - 2xy + y^2$ oraz $(x+y)^2 = x^2 + 2xy + y^2$. Otrzymasz $(4a^2 - 12a + 9) - (4a^2 + 12a + 9)$.\n**Krok 2.** Opuszczamy nawiasy, pamiętając o zmianie znaków w drugim nawiasie: $4a^2 - 12a + 9 - 4a^2 - 12a - 9$.\n**Krok 3.** Redukujemy wyrazy podobne, grupując te z $a^2$, z $a$ i stałe: $(4a^2 - 4a^2) + (-12a - 12a) + (9 - 9) = 0 - 24a + 0 = -24a$.\n\n**Odpowiedź:** A, czyli $-24a$"
     },
     {
       "numer": 6,
       "dzial": "Algebra",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m23-maj/z06-1.png) jest przedział A) (−∞ , −4] B) (−∞ , 4] C) [−4 , ∞) D) [4 , ∞)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Rozwiązujemy nierówność kwadratową $x^2+4x-32 \\ge 0$. Najpierw znajdujemy pierwiastki równania $x^2+4x-32 = 0$. Delta wynosi $\\Delta = 4^2 - 4 \\cdot 1 \\cdot (-32) = 16 + 128 = 144$, więc $\\sqrt{\\Delta} = 12$. Pierwiastki to $x_1 = \\frac{-4-12}{2} = -8$ oraz $x_2 = \\frac{-4+12}{2} = 4$.\n**Krok 2.** Parabola $y=x^2+4x-32$ ma ramiona skierowane w górę (współczynnik przy $x^2$ jest dodatni). Nierówność $x^2+4x-32 \\ge 0$ jest spełniona dla wartości $x$ leżących na zewnątrz przedziału między pierwiastkami, włączając pierwiastki.\n**Krok 3.** Zatem zbiorem rozwiązań nierówności jest suma przedziałów $(-\\infty, -8] \\cup [4, \\infty)$. Sprawdzamy, która z podanych odpowiedzi jest zgodna z naszym wynikiem lub jego częścią. Widzimy, że przedział $[4, \\infty)$ jest jedną z opcji.\n\n**Odpowiedź:** D, czyli $[4, \\infty)$."
     },
     {
       "numer": 7,
       "dzial": "Równania",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania √ 3 (𝑥 2 − 2)(𝑥 + 3) = 0 jest liczba A) 3 B) 2 C) √ 3 D) √ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Przyrównaj każdy z czynników do zera, aby znaleźć potencjalne rozwiązania. Równanie jest spełnione, gdy co najmniej jeden z czynników jest równy zero.\n\n**Krok 2.** Rozwiąż poszczególne równania: $\\sqrt{3} = 0$ (niemożliwe), $x^2 - 2 = 0 \\Rightarrow x^2 = 2 \\Rightarrow x = \\sqrt{2}$ lub $x = -\\sqrt{2}$, oraz $x + 3 = 0 \\Rightarrow x = -3$.\n\n**Krok 3.** Spośród znalezionych rozwiązań ($-\\sqrt{2}$, $\\sqrt{2}$, $-3$) wybierz to, które znajduje się na liście odpowiedzi.\n\n**Odpowiedź:** D, czyli $\\sqrt{2}$"
     },
     {
       "numer": 8,
       "dzial": "Równania",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-maj/z08-1.png) w zbiorze liczb rzeczywistych A) nie ma rozwiązania. B) ma dokładnie jedno rozwiązanie: −1. C) ma dokładnie jedno rozwiązanie: 1. D) ma dokładnie dwa rozwiązania: −1 oraz 1.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz równanie w postaci z jedną stroną równą 0: $2x^2 = 2 \\iff 2x^2 - 2 = 0$.\n**Krok 2.** Uprość równanie, dzieląc obie strony przez 2: $x^2 - 1 = 0$.\n**Krok 3.** Rozwiąż równanie, rozkładając je na czynniki lub przenosząc 1 na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$.\n**Odpowiedź:** D, czyli ma dokładnie dwa rozwiązania: −1 oraz 1."
     },
     {
       "numer": 9,
       "dzial": "Równania",
       "tresc": "Rozwiąż równanie 𝟑𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟏𝟐𝒙 + 𝟖 = 𝟎",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Pogrupuj wyrazy, aby zastosować grupowanie wyrazów: $(3x^3 - 2x^2) + (-12x + 8) = 0$. Wyciągnij wspólne czynniki z każdej grupy: $x^2(3x - 2) - 4(3x - 2) = 0$.\n\n**Krok 2.** Wyciągnij wspólny nawias $(3x-2)$: $(x^2 - 4)(3x - 2) = 0$. Rozłóż różnicę kwadratów $x^2 - 4$ na czynniki: $(x-2)(x+2)(3x-2) = 0$.\n\n**Krok 3.** Przyrównaj każdy czynnik do zera, aby znaleźć rozwiązania: $x-2 = 0 \\implies x=2$, $x+2 = 0 \\implies x=-2$, $3x-2 = 0 \\implies x=\\frac{2}{3}$.\n\n**Odpowiedź:** $x \\in \\{-2, \\frac{2}{3}, 2\\}$"
     },
     {
       "numer": 10,
       "dzial": "Ciągi",
       "tresc": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (𝑥 , 𝑦) jednego z niżej zapisanych układów równań A – D. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest A) ![Rysunek do zadania](/cke-matura/m23-maj/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ, że na rysunku znajdują się dwie proste — pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.\n**Krok 2.** Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.\n**Krok 3.** Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$).\n**Odpowiedź:** B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$"
     },
     {
       "numer": 11,
       "dzial": "Algebra",
       "tresc": "Dany jest prostokąt o bokach długości 𝑎 i 𝑏, gdzie 𝑎 > 𝑏. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ……… oraz ……… . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obwód prostokąta to $2a + 2b$. Z treści wiemy, że $2a + 2b = 30$, co po skróceniu daje $a + b = 15$.\n**Krok 2.** Wiemy też, że jeden bok jest o 5 krótszy od drugiego. Ponieważ $a > b$, oznacza to, że $b = a - 5$.\n**Krok 3.** Mamy układ równań: $a + b = 15$ oraz $b = a - 5$. Jest to układ równań z zadania, który odpowiada opcji **D**.\n**Krok 4.** Po podstawieniu $b = a - 5$ do pierwszego równania otrzymujemy $a + (a - 5) = 15$, czyli $2a = 20$, co daje $a = 10$. Wtedy $b = 10 - 5 = 5$. Długości boków to 10 i 5. Ten układ odpowiada również opcji **E**.\n\n**Odpowiedź:** D oraz E"
     },
     {
       "numer": 12,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji 𝑓 jest zbiór A) [−6 , 5] B) (−6 , 5) C) (−3 , 5] D) [−3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji 𝑓 w przedziale [−4 , 1] jest równa A) 0 B) 1 C) 2 D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca w zbiorze A) [−6 , −3) B) [−3 , 1] C) (1 , 2] D) [2 , 5]",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Dziedzinę funkcji odczytujemy z osi X. Funkcja jest określona dla wartości od -6 (włącznie) do 5 (włącznie).\n**Krok 2.** Największą wartość funkcji w przedziale [−4, 1] odczytujemy z osi Y. Dla x = -4, y = 1, dla x = -2, y = 2, dla x = 1, y = 1. Największa wartość to 2.\n**Krok 3.** Funkcja jest malejąca, gdy jej wykres opada od lewej do prawej strony. Na wykresie widzimy, że funkcja maleje w przedziale od x = 1 do x = 5.\n\n**Odpowiedź:** 12.1. A) [−6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]"
     },
     {
       "numer": 13,
       "dzial": "Funkcje",
       "tresc": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji 𝑓 w kartezjańskim układzie współrzędnych (𝑥 , 𝑦). ![Rysunek do zadania](/cke-matura/m23-maj/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 oraz liczba 𝑏 we wzorze funkcji 𝑓 spełniają warunki: A) 𝑎 > 0 i 𝑏 > 0. B) 𝑎 > 0 i 𝑏 C) 𝑎 0. D) 𝑎",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Odczytujemy współczynniki 𝑎 i 𝑏 z wykresu, korzystając z punktów przez niego przechodzących. Z wykresu widać, że funkcja przechodzi przez punkty $(0, 2)$ i $(3, 0)$.\n**Krok 2.** Obliczamy współczynnik kierunkowy 𝑎. Jest on równy zmianie wartości funkcji przez zmianę argumentu, czyli $a = \\frac{0 - 2}{3 - 0} = \\frac{-2}{3}$.\n**Krok 3.** Odczytujemy wyraz wolny 𝑏, który jest wartością funkcji dla $x=0$. Z wykresu widzimy, że $f(0) = 2$, więc $b=2$.\n**Krok 4.** Sprawdzamy warunki dla 𝑎 i 𝑏. Mamy $a = -\\frac{2}{3}$, więc $a < 0$. Mamy $b=2$, więc $b > 0$.\n\n**Odpowiedź:** D, czyli 𝑎 < 0 i 𝑏 > 0."
     },
     {
       "numer": 14,
       "dzial": "Funkcje",
       "tresc": "Jednym z miejsc zerowych funkcji kwadratowej 𝑓 jest liczba (−5). Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji 𝑓, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji 𝑓 jest liczba A) 11 B) 1 C) (−1) D) (−13)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Własność paraboli mówi, że miejsca zerowe są symetryczne względem osi symetrii, której równanie to $x = x_w$. Oś symetrii przechodzi przez wierzchołek paraboli, więc $x_w = 3$.\n\n**Krok 2.** Oznaczmy miejsca zerowe jako $x_1$ i $x_2$. Wiemy, że $x_1 = -5$ i $x_w = 3$. Połowa odległości między miejscami zerowymi jest równa odległości od miejsca zerowego do osi symetrii. Zatem $\\frac{|x_2 - x_1|}{2} = |x_w - x_1|$.\n\n**Krok 3.** Podstawiamy dane: $\\frac{|x_2 - (-5)|}{2} = |3 - (-5)|$, co daje $\\frac{|x_2 + 5|}{2} = 8$. Stąd $|x_2 + 5| = 16$. Rozwiązujemy dwa przypadki: $x_2 + 5 = 16$ (czyli $x_2 = 11$) lub $x_2 + 5 = -16$ (czyli $x_2 = -21$). Ponieważ $x_1 = -5$, drugim miejscem zerowym musi być $11$.\n\n**Odpowiedź:** A, czyli 11"
     },
     {
       "numer": 15,
       "dzial": "Ciągi",
       "tresc": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = 2 𝑛 ⋅ (𝑛 + 1) dla każdej liczby naturalnej 𝑛 ≥ 1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyraz 𝑎 4 jest równy A) 64 B) 40 C) 48 D) 80",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Podstawiamy $n=4$ do wzoru $a_n = 2^n \\cdot (n+1)$. Otrzymujemy $a_4 = 2^4 \\cdot (4+1)$.\n**Krok 2.** Obliczamy potęgę $2^4 = 16$ i sumę w nawiasie $(4+1) = 5$.\n**Krok 3.** Mnożymy otrzymane wyniki: $a_4 = 16 \\cdot 5 = 80$.\n\n**Odpowiedź:** D, czyli 80"
     },
     {
       "numer": 16,
       "dzial": "Ciągi",
       "tresc": "Trzywyrazowy ciąg (27 , 9 , 𝑎 − 1) jest geometryczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 jest równa A) 3 B) 0 C) 4 D) 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W ciągu geometrycznym iloraz dowolnego wyrazu (oprócz pierwszego) przez wyraz poprzedzający jest stały. Zapisujemy to jako $\\frac{9}{27} = \\frac{a-1}{9}$.\n\n**Krok 2.** Rozwiązujemy równanie, mnożąc obie strony przez $27 \\cdot 9$: $9 \\cdot 9 = 27 \\cdot (a-1)$. Upraszczamy do $81 = 27a - 27$.\n\n**Krok 3.** Przenosimy stałe na jedną stronę: $81 + 27 = 27a$, czyli $108 = 27a$. Dzielimy przez 27, aby otrzymać $a = \\frac{108}{27} = 4$.\n\n**Odpowiedź:** C, czyli 4"
     },
     {
       "numer": 17,
       "dzial": "Algebra",
       "tresc": "Pan Stanisław spłacił pożyczkę w wysokości 8910 zł w osiemnastu ratach. Każda kolejna rata była mniejsza od poprzedniej o 30 zł. Oblicz kwotę pierwszej raty.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisujemy dane: kwota pożyczki $S_n = 8910$ zł, liczba rat $n=18$, różnica między ratami $d = -30$ zł. Szukamy pierwszej raty $a_1$.\n\n**Krok 2.** Korzystamy ze wzoru na sumę ciągu arytmetycznego: $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$. Podstawiamy dane: $8910 = \\frac{18}{2}(2a_1 + (18-1)(-30))$.\n\n**Krok 3.** Rozwiązujemy równanie: $8910 = 9(2a_1 + 17 \\cdot (-30))$, $8910 = 9(2a_1 - 510)$, $990 = 2a_1 - 510$, $1500 = 2a_1$, czyli $a_1 = 750$.\n\n**Odpowiedź:** 750 zł"
     },
     {
       "numer": 18,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) zaznaczono kąt 𝛼 o wierzchołku w punkcie 𝑂 = (0 , 0). Jedno z ramion tego kąta pokrywa się z dodatnią półosią 𝑂𝑥, a drugie przechodzi przez punkt 𝑃 = (−3 , 1) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy A) 1 &frasl; √ 10 B) (− 3 &frasl; √ 10 ) C) ( − 3 &frasl; 1 ) D) ( − 1 &frasl; 3 )",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Wierzchołek kąta jest w początku układu współrzędnych, a jedno z ramion pokrywa się z dodatnią półosią $Ox$. Drugie ramię przechodzi przez punkt $P=(-3, 1)$. Oznacza to, że punkt $P$ leży na drugim ramieniu kąta $\\alpha$.\n\n**Krok 2.** Tangens kąta $\\alpha$ w tym układzie współrzędnych możemy obliczyć ze wzoru $\\operatorname{tg} \\alpha = \\frac{y}{x}$, gdzie $(x, y)$ to współrzędne punktu leżącego na ramieniu kąta (różnego od początku układu). Podstawiamy współrzędne punktu $P$: $\\operatorname{tg} \\alpha = \\frac{1}{-3}$.\n\n**Krok 3.** Wartość $\\frac{1}{-3}$ można zapisać jako $-\\frac{1}{3}$.\n\n**Odpowiedź:** D, czyli $-\\frac{1}{3}$"
     },
     {
       "numer": 19,
       "dzial": "Trygonometria",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego 𝛼 wyrażenie sin 4 𝛼 + sin 2 𝛼 ⋅cos 2 𝛼 jest równe A) sin 2 𝛼 B) sin 6 𝛼 ⋅ cos 2 𝛼 C) sin 4 𝛼 + 1 D) sin 2 𝛼 ⋅ (sin𝛼 + cos𝛼) ⋅ (sin𝛼 − cos𝛼)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zastosuj tożsamość trygonometryczną $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Wyrażenie można przekształcić: $\\sin^4 \\alpha + \\sin^2 \\alpha \\cdot \\cos^2 \\alpha = \\sin^2 \\alpha (\\sin^2 \\alpha + \\cos^2 \\alpha)$.\n**Krok 2.** Po podstawieniu tożsamości $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ otrzymujemy: $\\sin^2 \\alpha \\cdot 1 = \\sin^2 \\alpha$.\n**Odpowiedź:** A, czyli $\\sin^2 \\alpha$"
     },
     {
       "numer": 20,
       "dzial": "Trygonometria",
       "tresc": "W rombie o boku długości 6√ 2 kąt rozwarty ma miarę 150°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy A) 24 B) 72 C) 36 D) 36√ 2",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Pole rombu możemy obliczyć ze wzoru $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to miara jednego z kątów. Skoro kąt rozwarty ma 150°, to kąt ostry ma $180° - 150° = 30°$. Używamy kąta ostrego, bo $\\sin 150° = \\sin 30°$.\n\n**Krok 2.** Obliczamy pole rombu: $P = (6\\sqrt{2})^2 \\sin 30° = (36 \\cdot 2) \\cdot \\frac{1}{2} = 72 \\cdot \\frac{1}{2} = 36$.\n\n**Krok 3.** Pole rombu można również obliczyć ze wzoru $P = \\frac{1}{2} d_1 d_2$, gdzie $d_1$ i $d_2$ to długości przekątnych. Szukamy iloczynu $d_1 d_2$, który jest równy $2P$.\n\n**Odpowiedź:** B, czyli 72"
     },
     {
       "numer": 21,
       "dzial": "Algebra",
       "tresc": "Punkty 𝐴, 𝐵, 𝐶 leżą na okręgu o środku w punkcie 𝑂. Kąt 𝐴𝐶𝑂 ma miarę 70° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐴𝐵𝐶 jest równa A) 10° B) 20° C) 35° D) 40°",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zauważ, że trójkąt 𝐴𝐶𝑂 jest równoramienny, ponieważ boki 𝐴𝑂 i 𝐶𝑂 są promieniami okręgu, stąd miara kąta 𝐶𝐴𝑂 jest również równa 70°.\n**Krok 2.** Oblicz miarę kąta 𝐴𝑂𝐶, który jest kątem środkowym. Suma kątów w trójkącie 𝐴𝑂𝐶 wynosi 180°, zatem $\\angle AOC = 180^\\circ - (70^\\circ + 70^\\circ) = 180^\\circ - 140^\\circ = 40^\\circ$.\n**Krok 3.** Zauważ, że kąt 𝐴𝐵𝐶 jest kątem wpisanym opartym na tym samym łuku co kąt środkowy 𝐴𝑂𝐶. Kąt wpisany ma miarę o połowę mniejszą od kąta środkowego opartego na tym samym łuku, zatem $\\angle ABC = \\frac{1}{2} \\angle AOC = \\frac{1}{2} \\cdot 40^\\circ = 20^\\circ$.\n\n**Odpowiedź:** B) 20°"
     },
     {
       "numer": 22,
       "dzial": "Geometria",
       "tresc": "Trójkąty prostokątne 𝑇 1 i 𝑇 2 są podobne. Przyprostokątne trójkąta 𝑇 1 mają długości 5 i 12. Przeciwprostokątna trójkąta 𝑇 2 ma długość 26. Oblicz pole trójkąta 𝑻 𝟐 .",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz przeciwprostokątną trójkąta $T_1$ z twierdzenia Pitagorasa: $c_1 = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.\n\n**Krok 2.** Wyznacz skalę podobieństwa $k$ między $T_2$ a $T_1$, porównując ich przeciwprostokątne: $k = \\frac{c_2}{c_1} = \\frac{26}{13} = 2$.\n\n**Krok 3.** Oblicz długości przyprostokątnych trójkąta $T_2$, mnożąc przyprostokątne $T_1$ przez skalę $k$: $a_2 = 5 \\cdot 2 = 10$, $b_2 = 12 \\cdot 2 = 24$.\n\n**Krok 4.** Oblicz pole trójkąta $T_2$, korzystając ze wzoru na pole trójkąta prostokątnego: $P_2 = \\frac{1}{2} a_2 b_2 = \\frac{1}{2} \\cdot 10 \\cdot 24 = 5 \\cdot 24 = 120$.\n\n**Odpowiedź:** $120$"
     },
     {
       "numer": 23,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dane są proste 𝑘 oraz 𝑙 o równaniach 𝑘: 𝑦 = 2 ⁄ 3 𝑥 𝑙: 𝑦 = − 3 ⁄ 2 𝑥 + 13 Dokończ zdanie tak aby było prawdziwe. Proste 𝑘 oraz 𝑙 A) są prostopadłe B) nie są prostopadłe i przecinają się w punkcie 𝑃 o współrzędnych A) (−6 , −4) B) (6 , 4) C) (−6 , 4)",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Sprawdź warunek prostopadłości prostych. Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. W tym przypadku $2/3 \\cdot (-3/2) = -1$, więc proste są prostopadłe.\n\n**Krok 2.** Znajdź punkt przecięcia prostych, przyrównując ich równania. Ponieważ proste są prostopadłe, to wystarczy podstawić tę informację, aby zawęzić odpowiedź. Jednak dla pewności możemy policzyć punkt przecięcia: $2/3 x = -3/2 x + 13$.\n\n**Krok 3.** Rozwiąż równanie z Kroku 2. $2/3 x + 3/2 x = 13 \\Rightarrow (4/6 + 9/6)x = 13 \\Rightarrow 13/6 x = 13 \\Rightarrow x = 6$. Następnie oblicz $y$: $y = 2/3 \\cdot 6 = 4$. Punkt przecięcia to $(6, 4)$.\n\n**Odpowiedź:** A, czyli są prostopadłe"
     },
     {
       "numer": 24,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dana jest prosta 𝑘 o równaniu 𝑦 = − 1 ⁄ 3 𝑥 + 2 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu 𝑦 = 𝑎𝑥 + 𝑏 jest równoległa do prostej 𝑘 i przechodzi przez punkt 𝑃 = (3 , 5), gdy A) 𝑎 = 3 i 𝑏 = 4. B) 𝑎 = − 1 &frasl; 3 i 𝑏 = 4. C) 𝑎 = 3 i 𝑏 = −4. D) 𝑎 = − 1 &frasl; 3 i 𝑏 = 6.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Proste równoległe mają takie same współczynniki kierunkowe. Skoro prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, to współczynnik kierunkowy $a$ szukanej prostej musi być równy $-\\frac{1}{3}$.\n\n**Krok 2.** Skorzystamy ze wzoru na równanie prostej przechodzącej przez punkt $(x_0, y_0)$ o danym współczynniku kierunkowym $a$: $y - y_0 = a(x - x_0)$. Podstawiamy dane: $P = (3, 5)$ i $a = -\\frac{1}{3}$.\n\n**Krok 3.** Obliczamy $b$: $y - 5 = -\\frac{1}{3}(x - 3) \\implies y - 5 = -\\frac{1}{3}x + 1 \\implies y = -\\frac{1}{3}x + 6$. Zatem $a = -\\frac{1}{3}$ i $b = 6$.\n\n**Odpowiedź:** D, czyli $a = -\\frac{1}{3}$ i $b = 6$."
     },
     {
       "numer": 25,
       "dzial": "Trygonometria",
       "tresc": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 𝛼 takim, że cos𝛼 = √ 2 &frasl; 3 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa A) 15√ 2 B) 45 C) 5√ 2 D) 10",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Z danych wiemy, że krawędź podstawy $a = 15$ oraz $\\cos\\alpha = \\frac{\\sqrt{2}}{3}$. W graniastosłupie prawidłowym czworokątnym podstawa jest kwadratem, zatem przekątna podstawy $d$ wynosi $d = a\\sqrt{2} = 15\\sqrt{2}$.\n\n**Krok 2.** Kąt $\\alpha$ nachylenia przekątnej graniastosłupa do płaszczyzny podstawy tworzy trójkąt prostokątny wraz z przekątną podstawy i przekątną graniastosłupa. Z definicji cosinusa mamy $\\cos\\alpha = \\frac{d}{D}$, gdzie $D$ to długość przekątnej graniastosłupa.\n\n**Krok 3.** Podstawiamy znane wartości do wzoru: $\\frac{\\sqrt{2}}{3} = \\frac{15\\sqrt{2}}{D}$. Mnożąc obie strony przez $3D$ otrzymujemy $\\sqrt{2}D = 3 \\cdot 15\\sqrt{2}$, co po skróceniu $\\sqrt{2}$ daje $D = 45$.\n\n**Odpowiedź:** B, czyli 45"
     },
     {
       "numer": 26,
       "dzial": "Geometria",
       "tresc": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem 30° i ma długość równą 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt 30° leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.\n\n**Krok 2.** Oblicz pole podstawy ($P_p$) oraz objętość ostrosłupa ($V$). Podstawa jest kwadratem o boku $a$, więc $P_p = a^2 = (6\\sqrt{3})^2 = 36 \\cdot 3 = 108$. Objętość to $V = \\frac{1}{3} P_p \\cdot h = \\frac{1}{3} \\cdot 108 \\cdot 3 = 108$.\n\n**Krok 3.** Oblicz pole jednej ściany bocznej ($P_b$) oraz pole powierzchni całkowitej ($P_c$). Pole ściany bocznej to $P_b = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6\\sqrt{3} \\cdot 6 = 18\\sqrt{3}$. Powierzchnia całkowita to suma pola podstawy i czterech pól ścian bocznych: $P_c = P_p + 4 P_b = 108 + 4 \\cdot 18\\sqrt{3} = 108 + 72\\sqrt{3}$.\n\n**Odpowiedź:** Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$."
     },
     {
       "numer": 27,
       "dzial": "Geometria",
       "tresc": "W pewnym ostrosłupie prawidłowym stosunek liczby 𝑊 wszystkich wierzchołków do liczby 𝐾 wszystkich krawędzi jest równy W &frasl; K = 3 &frasl; 5 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest A) kwadrat. B) pięciokąt foremny. C) sześciokąt foremny. D) siedmiokąt foremny.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** W ostrosłupie o $n$-kątnej podstawie mamy $n+1$ wierzchołków ( $n$ w podstawie i 1 wierzchołek stożka) i $2n$ krawędzi ( $n$ w podstawie i $n$ łączących wierzchołki podstawy z wierzchołkiem stożka).\n**Krok 2.** Zgodnie z treścią zadania, stosunek liczby wierzchołków ($W$) do liczby krawędzi ($K$) wynosi $\\frac{W}{K} = \\frac{n+1}{2n} = \\frac{3}{5}$.\n**Krok 3.** Rozwiązujemy równanie $\\frac{n+1}{2n} = \\frac{3}{5}$: $5(n+1) = 3(2n) \\implies 5n+5 = 6n \\implies n=5$. Podstawą jest pięciokąt.\n\n**Odpowiedź:** B) pięciokąt foremny."
     },
     {
       "numer": 28,
       "dzial": "Kombinatoryka",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych pięciocyfrowych, w których zapisie dziesiętnym występują tylko cyfry 0, 5, 7 (np. 57 075, 55 555), jest A) 5 3 B) 2 ⋅ 4 3 C) 2 ⋅ 3 4 D) 3 5",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Zapisz możliwości dla każdej z pięciu pozycji liczby pięciocyfrowej, pamiętając, że pierwsza cyfra nie może być zerem. Pierwsza cyfra może być 5 lub 7 (2 możliwości), a pozostałe cztery cyfry mogą być 0, 5 lub 7 (3 możliwości każda).\n**Krok 2.** Oblicz całkowitą liczbę takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $2 \\cdot 3 \\cdot 3 \\cdot 3 \\cdot 3 = 2 \\cdot 3^4$.\n**Krok 3.** Porównaj wynik z podanymi opcjami. Otrzymany wynik $2 \\cdot 3^4$ odpowiada opcji C.\n**Odpowiedź:** C, czyli $2 \\cdot 3^4$"
     },
     {
       "numer": 29,
       "dzial": "Statystyka",
       "tresc": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami A–E. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Uporządkuj dane cen od najniższej do najwyższej: 5,40, 5,50, 5,50, 5,60, 5,60, 5,60, 5,60, 5,70, 5,70, 5,80, 5,80, 5,90, 6,00, 6,10, 6,10, 6,20.\n**Krok 2.** Mediana to wartość środkowa; dla parzystej liczby danych (tutaj 16) to średnia dwóch środkowych wartości: 8. i 9. pozycji. Mediana = $\\frac{5,70 + 5,70}{2} = 5,70$ zł.\n**Krok 3.** Średnia to suma wszystkich cen podzielona przez ich liczbę (16). Suma cen = $5,40 + 2 \\cdot 5,50 + 4 \\cdot 5,60 + 2 \\cdot 5,70 + 2 \\cdot 5,80 + 5,90 + 6,00 + 2 \\cdot 6,10 + 6,20 = 92,30$ zł. Średnia = $\\frac{92,30}{16} = 5,76875$ zł. Zaokrąglając do dwóch miejsc po przecinku, otrzymujemy $5,77$ zł.\n\n**Odpowiedź:** Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł)."
     },
     {
       "numer": 30,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 𝟏𝟓.",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.\n**Krok 2.** Określamy zdarzenia sprzyjające. Iloczyn jest podzielny przez 15, gdy co najmniej jedna z liczb jest podzielna przez 5 (czyli 5), a druga jest podzielna przez 3 (czyli 3, 6, 9). Rozważamy przypadki: (5, 3), (5, 6), (5, 9) oraz (3, 5), (6, 5), (9, 5). Mamy 6 takich par. Dodatkowo, jeśli wylosujemy dwie piątki, iloczyn jest podzielny przez 15 (choć faktycznie przez 25). Para (5,5) jest również dozwolona.\n**Krok 3.** Zliczamy zdarzenia sprzyjające. Pary to: (5,3), (5,6), (5,9), (3,5), (6,5), (9,5), (5,5). Łącznie 7 zdarzeń.\n**Krok 4.** Obliczamy prawdopodobieństwo zdarzenia A. Jest to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $\\frac{7}{64}$.\n\n**Odpowiedź:** $\\frac{7}{64}$"
     },
     {
       "numer": 31,
       "dzial": "Funkcje",
       "tresc": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\"",
-      "rozwiazanie": "Rozwiązanie zostanie uzupełnione wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE."
+      "rozwiazanie": "**Krok 1.** Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.\n**Krok 2.** Aby ocenić drugie stwierdzenie, obliczamy liczbę klientów w trzecim dniu, podstawiając $n=3$ do wzoru: $L(3) = -(3)^2 + 22(3) + 279 = -9 + 66 + 279 = 336$.\n**Krok 3.** Aby znaleźć dzień z największą liczbą klientów, szukamy wierzchołka paraboli $L(n) = -n^2 + 22n + 279$. Wartość $n$ wierzchołka to $-\\frac{b}{2a} = -\\frac{22}{2(-1)} = 11$. Obliczamy liczbę klientów dla $n=11$: $L(11) = -(11)^2 + 22(11) + 279 = -121 + 242 + 279 = 400$.\n\n**Odpowiedź:** F, P, 11. dnia obsłużono 400 klientów."
     }
   ],
   "fetchedAt": "2026-05-24T14:01:33.581Z"
