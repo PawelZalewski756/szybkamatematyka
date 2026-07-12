@@ -1,5 +1,10 @@
 import { getSupabase } from "@/lib/supabase";
 import {
+  legacyDbSlugsForCkeTopic,
+  legacyExamTypesFor,
+  normalizeCkeMaterialKey,
+} from "@/lib/trening/cke-slug-normalize";
+import {
   classifyTheoryContent,
   type TheoryTier,
 } from "@/lib/trening/theory-content";
@@ -43,39 +48,84 @@ export async function fetchMaterialByTopic(
 ): Promise<Material | null> {
   const supabase = getSupabase();
 
-  // limit(1): przy duplikatach slugów bierzemy jeden wiersz (najwyższy id).
-  const { data, error } = await supabase
-    .from("materials")
-    .select(MATERIAL_SELECT)
-    .eq("exam_type", examType)
-    .eq("category", category)
-    .eq("topic", topic)
-    .order("id", { ascending: false })
-    .limit(1);
+  const tryFetch = async (
+    et: ExamType,
+    cat: string,
+    top: string,
+  ): Promise<Material | null> => {
+    const { data, error } = await supabase
+      .from("materials")
+      .select(MATERIAL_SELECT)
+      .eq("exam_type", et)
+      .eq("category", cat)
+      .eq("topic", top)
+      .order("id", { ascending: false })
+      .limit(1);
 
-  if (error) throw error;
-  const row = data?.[0];
-  if (!row) return null;
-  return mapMaterial(row as MaterialRow);
+    if (error) throw error;
+    const row = data?.[0];
+    if (!row) return null;
+    return mapMaterial(row as MaterialRow);
+  };
+
+  const canonical = await tryFetch(examType, category, topic);
+  if (canonical) return canonical;
+
+  for (const slug of legacyDbSlugsForCkeTopic(examType, category, topic)) {
+    if (slug.category === category && slug.topic === topic) continue;
+    const legacy = await tryFetch(examType, slug.category, slug.topic);
+    if (legacy) return legacy;
+  }
+
+  for (const et of legacyExamTypesFor(examType)) {
+    if (et === examType) continue;
+    const legacy = await tryFetch(et, category, topic);
+    if (legacy) return legacy;
+  }
+
+  return null;
 }
 
 export async function fetchMaterialSummariesForExam(
   examType: ExamType,
 ): Promise<MaterialTopicSummary[]> {
   const supabase = getSupabase();
+  const examTypes = legacyExamTypesFor(examType);
 
   const { data, error } = await supabase
     .from("materials")
-    .select("category, topic, content")
-    .eq("exam_type", examType);
+    .select("exam_type, category, topic, content")
+    .in("exam_type", examTypes);
 
   if (error) throw error;
 
-  return (data ?? []).map((row) => ({
-    category: String(row.category),
-    topic: String(row.topic),
-    tier: classifyTheoryContent(String(row.content ?? "")),
-  }));
+  const byKey = new Map<string, TheoryTier>();
+  for (const row of data ?? []) {
+    const normalized = normalizeCkeMaterialKey(
+      String(row.exam_type),
+      String(row.category),
+      String(row.topic),
+    );
+    if (normalized.examType !== examType) continue;
+    const tier = classifyTheoryContent(String(row.content ?? ""));
+    const key = `${normalized.category}:${normalized.topic}`;
+    const prev = byKey.get(key);
+    if (!prev || tierRank(tier) > tierRank(prev)) {
+      byKey.set(key, tier);
+    }
+  }
+
+  return [...byKey.entries()].map(([key, tier]) => {
+    const [category, topic] = key.split(":");
+    return { category: category!, topic: topic!, tier };
+  });
+}
+
+function tierRank(tier: TheoryTier): number {
+  if (tier === "comprehensive") return 3;
+  if (tier === "full") return 2;
+  if (tier === "basic") return 1;
+  return 0;
 }
 
 export async function fetchAllMaterials(): Promise<Material[]> {

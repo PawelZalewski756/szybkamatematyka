@@ -5,11 +5,12 @@ import {
   TRAINING_CURRICULUM,
   type TreningExamKey,
 } from "@/lib/trening/curriculum";
-import { buildTreningTreeFromTasks } from "@/lib/trening/dynamic-tree";
-import type {
-  CategoryWithProgress,
-  ExamWithProgress,
-  TrainingTopicWithProgress,
+import { countsFromTasks, solvedCountsFromTasks } from "@/lib/trening/dynamic-tree";
+import {
+  mergeExamProgress,
+  type CategoryWithProgress,
+  type ExamWithProgress,
+  type TrainingTopicWithProgress,
 } from "@/lib/trening/progress";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
@@ -335,7 +336,11 @@ export default function TreningPage() {
       }
 
       setExam(
-        buildTreningTreeFromTasks(tasks, solvedIds, TRAINING_CURRICULUM[examKey]),
+        mergeExamProgress(
+          examKey,
+          countsFromTasks(tasks, examType),
+          solvedCountsFromTasks(tasks, solvedIds, examType),
+        ),
       );
 
       const theoryMap = new Map<string, TheoryTier>();
@@ -448,7 +453,9 @@ export default function TreningPage() {
     return Math.round((solvedTasks / totalTasks) * 100);
   }, [exam.categories]);
 
-  const availableTopics = useMemo(
+  const topicCount = useMemo(() => countTopics(exam), [exam]);
+
+  const topicsWithTasks = useMemo(
     () =>
       exam.categories.reduce(
         (n, c) => n + c.topics.filter((t) => t.total > 0).length,
@@ -469,7 +476,13 @@ export default function TreningPage() {
           </p>
           {!loading && (
             <p className="mt-2 text-sm text-muted">
-              {exam.label} · postęp {overallProgress}% · {availableTopics} tematów
+              {exam.label} · postęp {overallProgress}% · {topicCount} tematów
+              {topicsWithTasks < topicCount && (
+                <span className="text-muted">
+                  {" "}
+                  ({topicsWithTasks} z zadaniami)
+                </span>
+              )}
             </p>
           )}
         </header>

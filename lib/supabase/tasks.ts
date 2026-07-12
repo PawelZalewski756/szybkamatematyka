@@ -1,4 +1,5 @@
 import { getSupabase } from "@/lib/supabase";
+import { legacyDbSlugsForCkeTopic, legacyExamTypesFor } from "@/lib/trening/cke-slug-normalize";
 import type { ExamType, Task } from "@/types/database";
 
 export type TaskRow = {
@@ -43,19 +44,28 @@ export async function fetchTasksByTopic(
   topic: string,
 ): Promise<(Task & { options: string[] })[]> {
   const supabase = getSupabase();
+  const slugVariants = legacyDbSlugsForCkeTopic(examType, category, topic);
+  const examTypes = legacyExamTypesFor(examType);
 
-  const { data, error } = await supabase
-    .from("tasks")
-    .select(
-      "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward",
-    )
-    .eq("exam_type", examType)
-    .eq("category", category)
-    .eq("topic", topic)
-    .order("difficulty", { ascending: true });
+  for (const et of examTypes) {
+    for (const slug of slugVariants) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .select(
+          "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward",
+        )
+        .eq("exam_type", et)
+        .eq("category", slug.category)
+        .eq("topic", slug.topic)
+        .order("difficulty", { ascending: true });
 
-  if (error) throw error;
-  return ((data as TaskRow[]) ?? []).map(mapTask);
+      if (error) throw error;
+      const rows = (data as TaskRow[]) ?? [];
+      if (rows.length > 0) return rows.map(mapTask);
+    }
+  }
+
+  return [];
 }
 
 import {
@@ -83,7 +93,7 @@ export async function fetchTasksForTree(
   const { data, error } = await supabase
     .from("tasks")
     .select("id, category, topic")
-    .eq("exam_type", examType);
+    .in("exam_type", legacyExamTypesFor(examType));
 
   if (error) throw error;
   return (data as TaskTreeRow[]) ?? [];

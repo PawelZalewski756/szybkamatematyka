@@ -1,4 +1,5 @@
 import { topicProgressKey } from "@/lib/supabase/solved-tasks";
+import { normalizeCkeTopicSlug } from "@/lib/trening/cke-slug-normalize";
 import type { TaskRow } from "@/lib/supabase/tasks";
 import type {
   ExamType,
@@ -193,7 +194,12 @@ export function countsFromTasks(
 ): Map<string, number> {
   const counts = new Map<string, number>();
   for (const task of tasks) {
-    const key = topicProgressKey(examType, task.category, task.topic);
+    const { category, topic } = normalizeCkeTopicSlug(
+      examType,
+      task.category,
+      task.topic,
+    );
+    const key = topicProgressKey(examType, category, topic);
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
   return counts;
@@ -207,7 +213,12 @@ export function solvedCountsFromTasks(
   const counts = new Map<string, number>();
   for (const task of tasks) {
     if (!solvedIds.has(task.id)) continue;
-    const key = topicProgressKey(examType, task.category, task.topic);
+    const { category, topic } = normalizeCkeTopicSlug(
+      examType,
+      task.category,
+      task.topic,
+    );
+    const key = topicProgressKey(examType, category, topic);
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
   return counts;
