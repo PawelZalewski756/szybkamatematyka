@@ -32,7 +32,8 @@
     "seed:overnight-all": "tsx scripts/overnightGeminiAll.ts",
     "seed:theory-cache": "tsx scripts/pushTheoryCache.ts",
     "seed:theory-sync": "tsx scripts/syncTheoryCacheToSeed.ts",
-    "seed:theory-sql": "tsx scripts/exportTheorySql.ts"
+    "seed:theory-sql": "tsx scripts/exportTheorySql.ts",
+    "seed:theory-index": "tsx scripts/exportTheoryIndex.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

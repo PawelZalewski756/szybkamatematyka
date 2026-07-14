@@ -18,6 +18,7 @@ import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import { fetchTasksForTree } from "@/lib/supabase/tasks";
 import { fetchMaterialSummariesForExam } from "@/lib/supabase/materials";
+import { mergeTheorySummaries } from "@/lib/trening/seed/theory-index";
 import type { TheoryTier } from "@/lib/trening/theory-content";
 import Link from "next/link";
 import {
@@ -231,7 +232,9 @@ function TopicRow({
       </span>
       <span className="min-w-0 flex-1 font-normal text-foreground">{topic.name}</span>
       {theory && (
-        <span className="hidden shrink-0 text-xs text-muted sm:inline">{theory}</span>
+        <span className="hidden shrink-0 rounded-full bg-accent/15 px-2 py-0.5 text-xs font-medium text-accent sm:inline">
+          {theory}
+        </span>
       )}
       <span className="shrink-0 tabular-nums text-xs text-muted">
         {canPlay
@@ -350,7 +353,7 @@ export default function TreningPage() {
       );
 
       const theoryMap = new Map<string, TheoryTier>();
-      for (const summary of materialSummaries) {
+      for (const summary of mergeTheorySummaries(examType, materialSummaries)) {
         theoryMap.set(`${summary.category}:${summary.topic}`, summary.tier);
       }
       setTheoryByTopic(theoryMap);

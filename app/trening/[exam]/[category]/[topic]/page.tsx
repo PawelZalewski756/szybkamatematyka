@@ -5,7 +5,7 @@ import {
 } from "@/lib/trening/cke-curriculum";
 import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
 import { decodeSlug, examTypeFromParam } from "@/lib/trening/slugs";
-import { fetchMaterialByTopic } from "@/lib/supabase/materials";
+import { resolveMaterialByTopic } from "@/lib/trening/resolve-material";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import type { ExamType, Material } from "@/types/database";
 import type { Metadata } from "next";
@@ -80,13 +80,13 @@ export default async function TreningTopicPage({ params }: PageProps) {
     initialMaterial = undefined;
   } else {
     try {
-      initialMaterial = await fetchMaterialByTopic(
+      initialMaterial = await resolveMaterialByTopic(
         examType,
         categorySlug,
         topicSlug,
       );
     } catch (err) {
-      console.error("[trening/topic] fetchMaterialByTopic failed:", err);
+      console.error("[trening/topic] resolveMaterialByTopic failed:", err);
       initialMaterial = undefined;
       initialMaterialError = "Nie udało się załadować materiału.";
     }

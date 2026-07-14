@@ -222,7 +222,24 @@ export function TopicPageClient({
     setMaterialError(null);
     try {
       const row = await fetchMaterialByTopic(examType, category, topic);
-      setMaterial(row);
+      if (row) {
+        setMaterial(row);
+        return;
+      }
+
+      const params = new URLSearchParams({
+        examType,
+        category,
+        topic,
+      });
+      const res = await fetch(`/api/trening/material?${params}`);
+      if (res.ok) {
+        const body = (await res.json()) as { material: Material | null };
+        setMaterial(body.material);
+        return;
+      }
+
+      setMaterial(null);
     } catch {
       setMaterialError("Nie udało się załadować materiału.");
       setMaterial(null);

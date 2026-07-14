@@ -26,14 +26,28 @@ UPDATE public.materials SET category = 'liczby_rzeczywiste', topic = 'wartosc_be
 UPDATE public.tasks SET category = 'liczby_rzeczywiste', topic = 'wartosc_bezwzgledna'
   WHERE exam_type = 'matura_podstawowa' AND category = 'algebra' AND topic = 'wartosc_bezwzgledna';
 
+UPDATE public.materials SET category = 'liczby_rzeczywiste', topic = 'notacja_wykladnicza'
+  WHERE exam_type = 'matura_podstawowa' AND category = 'algebra' AND topic = 'notacja_wykladnicza';
+UPDATE public.tasks SET category = 'liczby_rzeczywiste', topic = 'notacja_wykladnicza'
+  WHERE exam_type = 'matura_podstawowa' AND category = 'algebra' AND topic = 'notacja_wykladnicza';
+
+UPDATE public.materials SET category = 'liczby_rzeczywiste', topic = 'kolejnosc_dzialan'
+  WHERE exam_type = 'matura_podstawowa' AND category = 'algebra' AND topic = 'kolejnosc_dzialan';
+UPDATE public.tasks SET category = 'liczby_rzeczywiste', topic = 'kolejnosc_dzialan'
+  WHERE exam_type = 'matura_podstawowa' AND category = 'algebra' AND topic = 'kolejnosc_dzialan';
+
 -- 3) 8 klasa: arytmetyka → liczby
 UPDATE public.materials SET category = 'liczby', topic = 'ulamki'
   WHERE exam_type = '8_klasa' AND category = 'arytmetyka' AND topic = 'ulamki';
 UPDATE public.tasks SET category = 'liczby', topic = 'ulamki'
   WHERE exam_type = '8_klasa' AND category = 'arytmetyka' AND topic = 'ulamki';
 
--- 4) Usuń duplikaty po migracji (opcjonalnie — tylko jeśli UPSERT już wstawił właściwe wiersze)
--- DELETE FROM public.materials m
--- USING public.materials c
--- WHERE m.exam_type = c.exam_type AND m.category = c.category AND m.topic = c.topic
---   AND m.id < c.id;
+-- 4) Usuń osierocone duplikaty po migracji (stare slugi)
+DELETE FROM public.materials
+  WHERE exam_type = 'matura_podstawowa' AND category = 'algebra'
+    AND topic IN ('potegi', 'logarytmy', 'procenty', 'wartosc_bezwzgledna', 'notacja_wykladnicza', 'kolejnosc_dzialan');
+
+DELETE FROM public.materials
+  WHERE exam_type = '8_klasa' AND category = 'arytmetyka';
+
+-- 5) exam_type legacy (jeśli jeszcze zostały wiersze)

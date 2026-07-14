@@ -1,4 +1,5 @@
 import { getSupabase } from "@/lib/supabase";
+import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
 import {
   legacyDbSlugsForCkeTopic,
   legacyExamTypesFor,
@@ -92,15 +93,23 @@ export async function fetchMaterialSummariesForExam(
   const supabase = getSupabase();
   const examTypes = legacyExamTypesFor(examType);
 
-  const { data, error } = await supabase
-    .from("materials")
-    .select("exam_type, category, topic, content")
-    .in("exam_type", examTypes);
+  const { rows, error } = await fetchAllPages<{
+    exam_type: string;
+    category: string;
+    topic: string;
+    content: string;
+  }>((from, to) =>
+    supabase
+      .from("materials")
+      .select("exam_type, category, topic, content")
+      .in("exam_type", examTypes)
+      .range(from, to),
+  );
 
   if (error) throw error;
 
   const byKey = new Map<string, TheoryTier>();
-  for (const row of data ?? []) {
+  for (const row of rows) {
     const normalized = normalizeCkeMaterialKey(
       String(row.exam_type),
       String(row.category),
