@@ -38,6 +38,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     features: [
       "Wszystkie minigry + zapis EXP",
       "Pełna baza arkuszy CKE z rozwiązaniami",
+      "Asystent AI przy zadaniach (podpowiedzi + ocena otwartych)",
       "Filtry po roku, dziale i typie egzaminu",
       "Anulujesz kiedy chcesz",
     ],
@@ -52,6 +53,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     description: "Ten sam pakiet co Pro, taniej przy płatności z góry.",
     features: [
       "Wszystko z planu Pro",
+      "Asystent AI przy zadaniach",
       "Oszczędzasz vs 12× miesięczna",
       "Priorytet przy nowych arkuszach",
     ],

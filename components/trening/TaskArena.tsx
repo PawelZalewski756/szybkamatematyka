@@ -19,6 +19,7 @@ import type { ExamType, Task } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
 import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
 import { MathText } from "@/components/trening/MathText";
+import { TaskAiPanel } from "@/components/trening/TaskAiPanel";
 import { TaskContent } from "@/components/trening/TaskContent";
 import {
   ArrowLeft,
@@ -45,6 +46,12 @@ function shuffleTasks<T>(items: T[]): T[] {
 const OPTION_LABELS = ["A", "B", "C", "D"] as const;
 const CORRECT_DELAY_MS = 1500;
 const WRONG_UNLOCK_MS = 700;
+
+const EXAM_LABEL: Record<ExamType, string> = {
+  matura_podstawowa: "Matura podstawowa",
+  matura_rozszerzona: "Matura rozszerzona",
+  "8_klasa": "Egzamin 8-klasisty",
+};
 
 type TaskWithOptions = Task & { options: string[] };
 
@@ -98,6 +105,10 @@ export function TaskArena({
   const [shakeKey, setShakeKey] = useState(0);
   const [guestHint, setGuestHint] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
+  const [localCheckWrong, setLocalCheckWrong] = useState(false);
+  const [lastSubmittedAnswer, setLastSubmittedAnswer] = useState<string | null>(
+    null,
+  );
   const [topicHasTasks, setTopicHasTasks] = useState(false);
   const { recordResult } = useSolvedTasks();
 
@@ -189,6 +200,8 @@ export function TaskArena({
     setSelected(null);
     setFeedback(null);
     setAnswerLocked(false);
+    setLocalCheckWrong(false);
+    setLastSubmittedAnswer(null);
   }, [current?.id]);
 
   const progressLabel = useMemo(() => {
@@ -209,6 +222,70 @@ export function TaskArena({
     }
   }, [index, total]);
 
+  const completeCorrectAnswer = useCallback(
+    async (option: string) => {
+      if (!current) return;
+
+      setAnswerLocked(true);
+      setActionError(null);
+      setSelected(option);
+      setFeedback("correct");
+      setLocalCheckWrong(false);
+
+      if (getTaskById(current.id)) {
+        recordResult(current.id, true);
+      }
+
+      const taskAttempts = (attempts[current.id] ?? 0) + 1;
+      setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
+
+      let awarded = false;
+
+      if (userId) {
+        setAwarding(true);
+        try {
+          const firstSolve = await markTaskSolved(userId, current.id);
+          if (firstSolve && profile?.nick) {
+            const halfXp = taskAttempts > 1;
+            const xpGain = halfXp
+              ? Math.max(1, Math.floor(current.xp_reward / 2))
+              : current.xp_reward;
+            const updated = await awardArenaXp(profile, xpGain);
+            setProfile(updated);
+            setXpFlash(xpGain);
+            setTimeout(() => setXpFlash(null), 1800);
+            awarded = true;
+          }
+        } catch (err) {
+          console.error("[szybka-matma] TaskArena award:", err);
+          setActionError(
+            "Nie udało się zapisać postępu. XP może nie zostać naliczone.",
+          );
+        } finally {
+          setAwarding(false);
+        }
+      } else {
+        setGuestHint(true);
+      }
+
+      if (awarded || !userId) {
+        fireConfetti();
+      }
+
+      window.setTimeout(() => {
+        advanceOrFinish();
+      }, CORRECT_DELAY_MS);
+    },
+    [
+      advanceOrFinish,
+      attempts,
+      current,
+      profile,
+      recordResult,
+      userId,
+    ],
+  );
+
   const handleAnswer = async (option: string) => {
     if (!current || answerLocked || awarding || feedback === "correct") return;
 
@@ -220,64 +297,31 @@ export function TaskArena({
     setSelected(option);
     setFeedback(isCorrect ? "correct" : "wrong");
 
-    // Zapisz wynik podejścia. Harmonogram powtórek (/powtorki) renderuje
-    // wyłącznie zadania z katalogu `lib/baza-zadan`, a arena czerpie zadania
-    // z bazy Supabase (UUID), więc flagujemy do powtórki tylko te, które
-    // katalog potrafi wyświetlić — inaczej kolejka powtórek dostałaby wpisy
-    // niemożliwe do odtworzenia. Spójne dla gościa i zalogowanego.
     if (getTaskById(current.id)) {
       recordResult(current.id, isCorrect);
     }
 
     if (!isCorrect) {
       setShakeKey((k) => k + 1);
-      window.setTimeout(() => {
-        setSelected(null);
-        if (current.options.length === 0) setTypedAnswer("");
-        setFeedback(null);
-        setAnswerLocked(false);
-      }, WRONG_UNLOCK_MS);
+      const isOpen = current.options.length === 0;
+      if (isOpen) {
+        setLastSubmittedAnswer(option);
+        setLocalCheckWrong(true);
+        window.setTimeout(() => {
+          setFeedback(null);
+          setAnswerLocked(false);
+        }, WRONG_UNLOCK_MS);
+      } else {
+        window.setTimeout(() => {
+          setSelected(null);
+          setFeedback(null);
+          setAnswerLocked(false);
+        }, WRONG_UNLOCK_MS);
+      }
       return;
     }
 
-    const taskAttempts = (attempts[current.id] ?? 0) + 1;
-    setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
-
-    let xpGain = 0;
-    let awarded = false;
-
-    if (userId) {
-      setAwarding(true);
-      try {
-        const firstSolve = await markTaskSolved(userId, current.id);
-        if (firstSolve && profile?.nick) {
-          const halfXp = taskAttempts > 1;
-          xpGain = halfXp
-            ? Math.max(1, Math.floor(current.xp_reward / 2))
-            : current.xp_reward;
-          const updated = await awardArenaXp(profile, xpGain);
-          setProfile(updated);
-          setXpFlash(xpGain);
-          setTimeout(() => setXpFlash(null), 1800);
-          awarded = true;
-        }
-      } catch (err) {
-        console.error("[szybka-matma] TaskArena award:", err);
-        setActionError("Nie udało się zapisać postępu. XP może nie zostać naliczone.");
-      } finally {
-        setAwarding(false);
-      }
-    } else {
-      setGuestHint(true);
-    }
-
-    if (awarded || !userId) {
-      fireConfetti();
-    }
-
-    window.setTimeout(() => {
-      advanceOrFinish();
-    }, CORRECT_DELAY_MS);
+    await completeCorrectAnswer(option);
   };
 
   if (loading) {
@@ -476,6 +520,20 @@ export function TaskArena({
                 <DifficultyBadge difficulty={current.difficulty} />
               </div>
               <TaskContent content={current.content} />
+              <TaskAiPanel
+                taskId={current.id}
+                taskContent={current.content}
+                correctAnswer={current.correct_answer}
+                examLabel={EXAM_LABEL[examType]}
+                topicLabel={topicLabel}
+                isOpenTask={isOpenTask}
+                options={current.options}
+                feedback={feedback}
+                showGradeOption={localCheckWrong}
+                studentAnswer={lastSubmittedAnswer ?? typedAnswer}
+                disabled={answerLocked || awarding || feedback === "correct"}
+                onAiAccepted={(answer) => void completeCorrectAnswer(answer)}
+              />
             </div>
 
             <motion.div
