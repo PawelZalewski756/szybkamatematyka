@@ -1,5 +1,6 @@
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
 import type { TaskAssistAskTurn } from "@/lib/gemini/prompts-task-assist";
+import type { AssistQuotaSnapshot } from "@/lib/subscription/task-assist-quota";
 import { getSupabaseAccessToken } from "@/lib/supabase";
 
 export type TaskAssistHintRequest = {
@@ -39,7 +40,11 @@ export type TaskAssistRequest =
   | TaskAssistGradeRequest
   | TaskAssistAskRequest;
 
-async function postTaskAssist<T>(body: TaskAssistRequest): Promise<T> {
+type TaskAssistResponse<T> = T & { quota?: AssistQuotaSnapshot; error?: string };
+
+async function postTaskAssist<T>(
+  body: TaskAssistRequest,
+): Promise<TaskAssistResponse<T>> {
   const token = await getSupabaseAccessToken();
   if (!token) {
     throw new Error("Zaloguj się, aby skorzystać z asystenta.");
@@ -54,32 +59,52 @@ async function postTaskAssist<T>(body: TaskAssistRequest): Promise<T> {
     body: JSON.stringify(body),
   });
 
-  const data = (await res.json()) as {
-    error?: string;
-    hint?: string;
-    grade?: TaskGradeResult;
-    reply?: string;
-  };
+  const data = (await res.json()) as TaskAssistResponse<T>;
   if (!res.ok) {
-    throw new Error(data.error ?? "Asystent jest chwilowo niedostępny.");
+    const err = new Error(data.error ?? "Asystent jest chwilowo niedostępny.") as Error & {
+      quota?: AssistQuotaSnapshot;
+    };
+    err.quota = data.quota;
+    throw err;
   }
-  return data as T;
+  return data;
+}
+
+export async function fetchTaskAssistQuota(): Promise<AssistQuotaSnapshot> {
+  const token = await getSupabaseAccessToken();
+  if (!token) {
+    throw new Error("Zaloguj się, aby skorzystać z asystenta.");
+  }
+
+  const res = await fetch("/api/trening/task-assist/quota", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  const data = (await res.json()) as {
+    quota?: AssistQuotaSnapshot;
+    error?: string;
+  };
+  if (!res.ok || !data.quota) {
+    throw new Error(data.error ?? "Nie udało się sprawdzić limitu zapytań.");
+  }
+  return data.quota;
 }
 
 export async function fetchTaskHint(
   body: Omit<TaskAssistHintRequest, "mode">,
-): Promise<{ hint: string; hintLevel: number }> {
+): Promise<{ hint: string; hintLevel: number; quota?: AssistQuotaSnapshot }> {
   return postTaskAssist({ mode: "hint", ...body });
 }
 
 export async function fetchTaskGrade(
   body: Omit<TaskAssistGradeRequest, "mode">,
-): Promise<{ grade: TaskGradeResult }> {
+): Promise<{ grade: TaskGradeResult; quota?: AssistQuotaSnapshot }> {
   return postTaskAssist({ mode: "grade", ...body });
 }
 
 export async function fetchTaskAsk(
   body: Omit<TaskAssistAskRequest, "mode">,
-): Promise<{ reply: string }> {
+): Promise<{ reply: string; quota?: AssistQuotaSnapshot }> {
   return postTaskAssist({ mode: "ask", ...body });
 }
+
+export type { AssistQuotaSnapshot };

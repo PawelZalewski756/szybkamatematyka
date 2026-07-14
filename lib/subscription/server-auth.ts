@@ -54,6 +54,26 @@ export type ProAuthResult =
 export async function verifyProRequest(
   request: Request,
 ): Promise<ProAuthResult> {
+  const auth = await verifyTaskAssistRequest(request);
+  if (!auth.ok) return auth;
+  if (!auth.isPro) {
+    return {
+      ok: false,
+      status: 403,
+      error: "Asystent AI jest dostępny w planie Pro.",
+    };
+  }
+  return { ok: true, user: auth.user };
+}
+
+export type TaskAssistAuthResult =
+  | { ok: true; user: User; isPro: boolean }
+  | { ok: false; status: 401 | 403; error: string };
+
+/** Zalogowany użytkownik — Pro lub free (z limitem miesięcznym po stronie route). */
+export async function verifyTaskAssistRequest(
+  request: Request,
+): Promise<TaskAssistAuthResult> {
   const auth = await verifyUserRequest(request);
   if (!auth.ok) return auth;
 
@@ -76,7 +96,7 @@ export async function verifyProRequest(
     .maybeSingle();
 
   if (error) {
-    console.error("[verifyProRequest]", error);
+    console.error("[verifyTaskAssistRequest]", error);
     return {
       ok: false,
       status: 403,
@@ -84,13 +104,9 @@ export async function verifyProRequest(
     };
   }
 
-  if (!isProStatus(data?.subscription_status)) {
-    return {
-      ok: false,
-      status: 403,
-      error: "Asystent AI jest dostępny w planie Pro.",
-    };
-  }
-
-  return { ok: true, user: auth.user };
+  return {
+    ok: true,
+    user: auth.user,
+    isPro: isProStatus(data?.subscription_status),
+  };
 }

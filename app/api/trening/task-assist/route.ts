@@ -6,7 +6,12 @@ import {
   generateTaskHint,
   gradeOpenTaskAnswer,
 } from "@/lib/gemini/generate-task-assist";
-import { verifyProRequest } from "@/lib/subscription/server-auth";
+import {
+  consumeAssistQuota,
+  readAssistQuota,
+  type AssistQuotaSnapshot,
+} from "@/lib/subscription/task-assist-quota";
+import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -88,29 +93,36 @@ function readConversation(body: unknown, key: string): AskTurn[] | undefined {
   return turns.length > 0 ? turns : undefined;
 }
 
+function jsonWithQuota(payload: Record<string, unknown>, quota: AssistQuotaSnapshot) {
+  return Response.json({ ...payload, quota });
+}
+
 /**
  * POST /api/trening/task-assist
  * Body: { mode: "hint" | "grade" | "ask", taskContent, correctAnswer, ... }
- * Auth: Bearer + aktywna subskrypcja Pro.
+ * Auth: Bearer (Pro = bez limitu miesięcznego; free = max 10 zapytań / miesiąc).
  */
 export async function POST(request: Request) {
   try {
-    const auth = await verifyProRequest(request);
+    const auth = await verifyTaskAssistRequest(request);
     if (!auth.ok) {
       return Response.json({ error: auth.error }, { status: auth.status });
     }
+    const { user, isPro } = auth;
 
-    const limit = checkRateLimit(`pro-ai:${auth.user.id}`);
-    if (!limit.allowed) {
-      return Response.json(
-        {
-          error: `Limit asystenta AI (${RATE_LIMIT_MAX}/h). Spróbuj za ${limit.retryAfterSec} s.`,
-        },
-        {
-          status: 429,
-          headers: { "Retry-After": String(limit.retryAfterSec) },
-        },
-      );
+    if (isPro) {
+      const limit = checkRateLimit(`pro-ai:${user.id}`);
+      if (!limit.allowed) {
+        return Response.json(
+          {
+            error: `Limit zapytań (${RATE_LIMIT_MAX}/h). Spróbuj za ${limit.retryAfterSec} s.`,
+          },
+          {
+            status: 429,
+            headers: { "Retry-After": String(limit.retryAfterSec) },
+          },
+        );
+      }
     }
 
     let body: unknown;
@@ -134,8 +146,28 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!isPro) {
+      const current = await readAssistQuota(user.id, false);
+      if ((current.remaining ?? 0) <= 0) {
+        return Response.json(
+          {
+            error: `Wykorzystałeś ${current.limit} darmowych zapytań w ${current.periodLabel}. Plan Pro daje nielimitowany dostęp.`,
+            quota: current,
+          },
+          { status: 429 },
+        );
+      }
+    }
+
     const examLabel = readString(body, "examLabel");
     const topicLabel = readString(body, "topicLabel");
+
+    async function finish<T extends Record<string, unknown>>(payload: T) {
+      const quota = isPro
+        ? await readAssistQuota(user.id, true)
+        : (await consumeAssistQuota(user.id, false)).quota;
+      return jsonWithQuota(payload, quota);
+    }
 
     if (mode === "hint") {
       const hintLevel = Math.max(0, Math.min(2, readNumber(body, "hintLevel") ?? 0));
@@ -148,7 +180,7 @@ export async function POST(request: Request) {
         isOpenTask: readBool(body, "isOpenTask") ?? false,
         options: readStringArray(body, "options"),
       });
-      return Response.json({ hint, hintLevel });
+      return finish({ hint, hintLevel });
     }
 
     if (mode === "grade") {
@@ -167,7 +199,7 @@ export async function POST(request: Request) {
         correctAnswer,
         studentAnswer,
       });
-      return Response.json({ grade });
+      return finish({ grade });
     }
 
     if (mode === "ask") {
@@ -189,7 +221,7 @@ export async function POST(request: Request) {
         gradeContext: readString(body, "gradeContext"),
         conversationHistory: readConversation(body, "conversationHistory"),
       });
-      return Response.json({ reply });
+      return finish({ reply });
     }
 
     return Response.json(
@@ -199,7 +231,7 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("[task-assist]", err);
     const message =
-      err instanceof Error ? err.message : "Nieznany błąd asystenta AI.";
+      err instanceof Error ? err.message : "Nieznany błąd asystenta.";
     const { status, error } = formatGeminiErrorForUser(message);
     return Response.json({ error }, { status });
   }

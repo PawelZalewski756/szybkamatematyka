@@ -3,14 +3,16 @@
 import { MathText } from "@/components/trening/MathText";
 import {
   fetchTaskAsk,
+  fetchTaskAssistQuota,
   fetchTaskGrade,
   fetchTaskHint,
+  type AssistQuotaSnapshot,
 } from "@/lib/trening/task-assist-client";
 import type { TaskAssistAskTurn } from "@/lib/gemini/prompts-task-assist";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { Loader2, Lock, Send, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useState, type FormEvent } from "react";
 
 const MAX_HINTS = 3;
 const MAX_ASK = 6;
@@ -30,6 +32,17 @@ type TaskAiPanelProps = {
   disabled?: boolean;
 };
 
+function quotaRemaining(quota: AssistQuotaSnapshot | null, isPro: boolean): number {
+  if (isPro) return Number.POSITIVE_INFINITY;
+  return quota?.remaining ?? 0;
+}
+
+function freeQuotaLabel(quota: AssistQuotaSnapshot | null): string | null {
+  if (!quota || quota.isPro || quota.limit == null) return null;
+  const remaining = quota.remaining ?? 0;
+  return `Pozostało ${remaining} z ${quota.limit} zapytań (${quota.periodLabel})`;
+}
+
 export function TaskAiPanel({
   taskId,
   taskContent,
@@ -45,6 +58,8 @@ export function TaskAiPanel({
   disabled = false,
 }: TaskAiPanelProps) {
   const { loading, isLoggedIn, isPro } = useSubscription();
+  const [quota, setQuota] = useState<AssistQuotaSnapshot | null>(null);
+  const [quotaLoading, setQuotaLoading] = useState(false);
   const [hintLevel, setHintLevel] = useState(0);
   const [hintText, setHintText] = useState<string | null>(null);
   const [gradeText, setGradeText] = useState<string | null>(null);
@@ -52,6 +67,28 @@ export function TaskAiPanel({
   const [askDraft, setAskDraft] = useState("");
   const [busy, setBusy] = useState<"hint" | "grade" | "ask" | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const refreshQuota = useCallback(async () => {
+    if (!isLoggedIn) {
+      setQuota(null);
+      return;
+    }
+    setQuotaLoading(true);
+    try {
+      const next = await fetchTaskAssistQuota();
+      setQuota(next);
+    } catch {
+      /* ignore — panel nadal działa dla Pro */
+    } finally {
+      setQuotaLoading(false);
+    }
+  }, [isLoggedIn]);
+
+  useEffect(() => {
+    if (!loading && isLoggedIn) {
+      void refreshQuota();
+    }
+  }, [loading, isLoggedIn, isPro, refreshQuota]);
 
   useEffect(() => {
     setHintLevel(0);
@@ -63,8 +100,21 @@ export function TaskAiPanel({
     setBusy(null);
   }, [taskId]);
 
-  const canUse = isPro && !disabled && feedback !== "correct";
+  const remaining = quotaRemaining(quota, isPro);
+  const hasQuota = isPro || remaining > 0;
+  const canUse =
+    isLoggedIn && hasQuota && !disabled && feedback !== "correct";
   const askCount = chatTurns.filter((t) => t.role === "user").length;
+  const quotaLabel = freeQuotaLabel(quota);
+
+  function applyQuotaFromResponse(next?: AssistQuotaSnapshot) {
+    if (next) setQuota(next);
+  }
+
+  function applyQuotaFromError(err: unknown) {
+    const quotaFromErr = (err as { quota?: AssistQuotaSnapshot })?.quota;
+    if (quotaFromErr) setQuota(quotaFromErr);
+  }
 
   async function handleHint() {
     if (!canUse || busy) return;
@@ -76,7 +126,7 @@ export function TaskAiPanel({
     setBusy("hint");
     setError(null);
     try {
-      const { hint } = await fetchTaskHint({
+      const result = await fetchTaskHint({
         taskContent,
         correctAnswer,
         hintLevel,
@@ -85,9 +135,11 @@ export function TaskAiPanel({
         isOpenTask,
         options,
       });
-      setHintText(hint);
+      setHintText(result.hint);
       setHintLevel((n) => n + 1);
+      applyQuotaFromResponse(result.quota);
     } catch (err) {
+      applyQuotaFromError(err);
       setError(err instanceof Error ? err.message : "Błąd podpowiedzi.");
     } finally {
       setBusy(null);
@@ -101,18 +153,20 @@ export function TaskAiPanel({
     setError(null);
     setGradeText(null);
     try {
-      const { grade } = await fetchTaskGrade({
+      const result = await fetchTaskGrade({
         taskContent,
         correctAnswer,
         studentAnswer: studentAnswer.trim(),
         examLabel,
         topicLabel,
       });
-      setGradeText(grade.feedback);
-      if (grade.acceptAsCorrect && onAiAccepted) {
+      setGradeText(result.grade.feedback);
+      applyQuotaFromResponse(result.quota);
+      if (result.grade.acceptAsCorrect && onAiAccepted) {
         onAiAccepted(studentAnswer.trim());
       }
     } catch (err) {
+      applyQuotaFromError(err);
       setError(err instanceof Error ? err.message : "Błąd oceny odpowiedzi.");
     } finally {
       setBusy(null);
@@ -135,7 +189,7 @@ export function TaskAiPanel({
     setError(null);
 
     try {
-      const { reply } = await fetchTaskAsk({
+      const result = await fetchTaskAsk({
         taskContent,
         correctAnswer,
         userMessage: message,
@@ -145,10 +199,12 @@ export function TaskAiPanel({
         gradeContext: gradeText ?? undefined,
         conversationHistory: history,
       });
-      setChatTurns((prev) => [...prev, { role: "assistant", content: reply }]);
+      setChatTurns((prev) => [...prev, { role: "assistant", content: result.reply }]);
+      applyQuotaFromResponse(result.quota);
     } catch (err) {
       setChatTurns(history);
       setAskDraft(message);
+      applyQuotaFromError(err);
       setError(err instanceof Error ? err.message : "Nie udało się wysłać pytania.");
     } finally {
       setBusy(null);
@@ -157,15 +213,31 @@ export function TaskAiPanel({
 
   if (loading) return null;
 
-  if (!isLoggedIn || !isPro) {
+  if (!isLoggedIn) {
     return (
       <div className="mt-4 flex flex-wrap items-center gap-2">
         <Link
-          href={isLoggedIn ? "/cennik" : "/login"}
+          href="/login"
           className="inline-flex items-center gap-1.5 rounded-xl border border-brand/30 bg-brand/10 px-3 py-2 text-xs font-semibold text-brand transition hover:bg-brand/15"
         >
           <Lock className="h-3.5 w-3.5" />
-          Asystent — plan Pro
+          Zaloguj się, aby skorzystać z podpowiedzi
+        </Link>
+      </div>
+    );
+  }
+
+  if (!isPro && !quotaLoading && quota && (quota.remaining ?? 0) <= 0) {
+    return (
+      <div className="mt-4 space-y-2 rounded-xl border border-brand/25 bg-brand/5 px-4 py-3">
+        <p className="text-xs font-semibold text-foreground/90">
+          Wykorzystałeś {quota.limit} darmowych zapytań w {quota.periodLabel}.
+        </p>
+        <Link
+          href="/cennik"
+          className="inline-flex text-xs font-bold text-brand transition hover:underline"
+        >
+          Przejdź na Pro — nielimitowane podpowiedzi
         </Link>
       </div>
     );
@@ -176,6 +248,10 @@ export function TaskAiPanel({
 
   return (
     <div className="mt-4 space-y-3">
+      {!isPro && quotaLabel && (
+        <p className="text-[11px] font-semibold text-muted">{quotaLabel}</p>
+      )}
+
       <div className="flex flex-wrap gap-2">
         <button
           type="button"
@@ -267,7 +343,9 @@ export function TaskAiPanel({
         />
         <div className="flex items-center justify-between gap-2">
           <p className="text-[10px] text-muted">
-            {askCount > 0 ? `Pytania: ${askCount}/${MAX_ASK}` : "Możesz doprecyzować własnymi słowami"}
+            {askCount > 0
+              ? `Pytania do tego zadania: ${askCount}/${MAX_ASK}`
+              : quotaLabel ?? "Możesz doprecyzować własnymi słowami"}
           </p>
           <button
             type="submit"
