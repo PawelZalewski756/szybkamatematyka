@@ -90,10 +90,10 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
         aria-controls={sheetId}
         aria-label="Menu"
         onClick={() => setOpen(true)}
-        className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border transition-colors ${
+        className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${
           open || menuActive
-            ? "border-foreground bg-surface-hover text-foreground"
-            : "border-surface-border text-muted hover:bg-surface-hover hover:text-foreground"
+            ? "bg-white/[0.08] text-foreground"
+            : "text-muted hover:bg-white/[0.06] hover:text-foreground"
         }`}
       >
         <Menu className="h-[18px] w-[18px]" aria-hidden />

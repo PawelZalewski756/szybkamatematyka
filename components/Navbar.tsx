@@ -1,8 +1,7 @@
 "use client";
 
 import { BrandLogo } from "@/components/BrandLogo";
-import { NavbarClassBadge } from "@/components/NavbarClassBadge";
-import { NavbarProBadge } from "@/components/NavbarProBadge";
+import { NavbarMetaStrip } from "@/components/NavbarMetaStrip";
 import { NavbarProfileChip } from "@/components/NavbarProfileChip";
 import { NavbarSheet } from "@/components/NavbarSheet";
 import { useDesktopNav } from "@/components/useDesktopNav";
@@ -34,32 +33,87 @@ function PrimaryNavLinks() {
   const pathname = usePathname();
 
   return (
-    <ul className="flex h-full items-stretch gap-1">
+    <ul className="flex items-center gap-0.5">
       {NAV_PRIMARY_LINKS.map(({ href, label }) => {
         const active = isNavActive(pathname, href);
         return (
-          <li key={href} className="flex">
+          <li key={href}>
             <Link
               href={href}
               aria-current={active ? "page" : undefined}
-              className={`relative flex items-center px-3 text-sm font-medium transition-colors ${
+              className={`inline-flex items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
                 active
-                  ? "text-foreground"
-                  : "text-muted hover:text-foreground"
+                  ? "bg-white/[0.08] text-foreground"
+                  : "text-muted hover:bg-white/[0.04] hover:text-foreground"
               }`}
             >
               {label}
-              {active && (
-                <span
-                  className="absolute inset-x-2 bottom-0 h-px bg-foreground"
-                  aria-hidden
-                />
-              )}
             </Link>
           </li>
         );
       })}
     </ul>
+  );
+}
+
+function NavbarActions({
+  authReady,
+  user,
+  profile,
+  profileLoading,
+  loggingOut,
+  onLogout,
+}: {
+  authReady: boolean;
+  user: User | null;
+  profile: Profile | null;
+  profileLoading: boolean;
+  loggingOut: boolean;
+  onLogout: () => void;
+}) {
+  const showProfile = authReady && user && profile;
+
+  return (
+    <div className="flex shrink-0 items-center gap-1 rounded-full border border-surface-border bg-white/[0.02] p-1">
+      {!authReady && (
+        <span className="mx-2 h-7 w-16 animate-pulse rounded-full bg-surface-hover" aria-hidden />
+      )}
+
+      {user && profileLoading && (
+        <span className="mx-1 h-8 w-20 animate-pulse rounded-full bg-white/5" aria-hidden />
+      )}
+
+      {showProfile && <NavbarProfileChip profile={profile} />}
+
+      {authReady && !user && (
+        <Link
+          href="/login"
+          className="btn-primary mx-0.5 rounded-full px-4 py-2 text-xs sm:text-sm"
+        >
+          Zaloguj
+        </Link>
+      )}
+
+      {authReady && user && (
+        <>
+          {showProfile ? (
+            <span className="mx-0.5 hidden h-5 w-px bg-surface-border sm:block" aria-hidden />
+          ) : null}
+          <button
+            type="button"
+            onClick={onLogout}
+            disabled={loggingOut}
+            aria-label="Wyloguj"
+            title="Wyloguj"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-muted transition hover:bg-white/[0.06] hover:text-foreground disabled:opacity-50"
+          >
+            <LogOut className="h-4 w-4" aria-hidden />
+          </button>
+        </>
+      )}
+
+      <NavbarSheet showPrimaryLinks={false} />
+    </div>
   );
 }
 
@@ -179,89 +233,46 @@ export function Navbar() {
     }
   };
 
-  const showProfile = authReady && user && profile;
-  const showClassBadge = authReady && Boolean(user);
-  const showProBadge =
+  const showMeta = authReady && Boolean(user);
+  const showPro =
     authReady && !subscriptionLoading && Boolean(user && subscriptionIsPro);
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface pt-[max(env(safe-area-inset-top,0px),0px)]">
+    <header className="sticky top-0 z-[100] w-full border-b border-surface-border/80 bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md">
       <nav
-        className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-4 lg:px-10 xl:px-12 2xl:px-16"
+        className="mx-auto flex h-[3.75rem] w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
       >
-        <BrandLogo className="min-w-0 shrink-0" />
+        <div className="flex min-w-0 shrink-0 items-center gap-3">
+          <BrandLogo markSize={30} />
+          {showMeta ? (
+            <NavbarMetaStrip showClass showPro={showPro} />
+          ) : null}
+        </div>
 
         {isDesktopNav ? (
-          showClassBadge ? (
-            <>
-              <div className="hidden h-6 w-px shrink-0 bg-surface-border sm:block" aria-hidden />
-              <NavbarClassBadge
-                linkToProfile
-                className="hidden shrink-0 sm:inline-flex lg:max-w-[10.5rem]"
-              />
-              {showProBadge ? (
-                <NavbarProBadge linkToProfile className="hidden shrink-0 sm:inline-flex" />
-              ) : null}
-            </>
-          ) : null
+          <>
+            <div className="flex min-w-0 flex-1 justify-center">
+              <PrimaryNavLinks />
+            </div>
+
+            <NavbarActions
+              authReady={authReady}
+              user={user}
+              profile={profile}
+              profileLoading={profileLoading}
+              loggingOut={loggingOut}
+              onLogout={() => void handleLogout()}
+            />
+          </>
         ) : (
           <>
             <div className="min-w-0 flex-1" aria-hidden />
-            {showClassBadge ? (
-              <NavbarClassBadge
-                linkToProfile
-                className="max-w-[min(100%,9.5rem)] shrink-0 sm:max-w-[10.5rem]"
-              />
+            {showMeta ? (
+              <NavbarMetaStrip showClass showPro={showPro} className="!inline-flex" />
             ) : null}
-            {showProBadge ? (
-              <NavbarProBadge linkToProfile className="shrink-0" />
-            ) : null}
+            <NavbarSheet showPrimaryLinks />
           </>
-        )}
-
-        {isDesktopNav && (
-          <div className="flex min-w-0 flex-1 justify-center">
-            <PrimaryNavLinks />
-          </div>
-        )}
-
-        {isDesktopNav && (
-          <div className="flex shrink-0 items-center gap-2">
-          {!authReady && (
-            <span className="h-8 w-8 animate-pulse rounded-full bg-surface-hover" aria-hidden />
-          )}
-
-          {user && profileLoading && (
-            <span className="h-8 w-8 animate-pulse rounded-lg bg-white/5" aria-hidden />
-          )}
-
-          {showProfile && <NavbarProfileChip profile={profile} />}
-
-          {authReady && !user && (
-            <Link
-              href="/login"
-              className="btn-primary px-3.5 py-2 text-xs sm:text-sm"
-            >
-              Zaloguj
-            </Link>
-          )}
-
-          {authReady && user && (
-            <button
-              type="button"
-              onClick={() => void handleLogout()}
-              disabled={loggingOut}
-              aria-label="Wyloguj"
-              title="Wyloguj"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-surface-border text-muted transition hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
-            >
-              <LogOut className="h-4 w-4" aria-hidden />
-            </button>
-          )}
-
-          <NavbarSheet showPrimaryLinks={false} />
-          </div>
         )}
       </nav>
     </header>

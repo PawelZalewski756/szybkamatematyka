@@ -9,13 +9,14 @@ import Link from "next/link";
 
 type NavbarClassBadgeProps = {
   className?: string;
-  /** Gdy true — link do profilu (zalogowani). Goście widzą sam badge. */
   linkToProfile?: boolean;
+  inline?: boolean;
 };
 
 export function NavbarClassBadge({
   className = "",
   linkToProfile = false,
+  inline = false,
 }: NavbarClassBadgeProps) {
   const { schoolClass } = useLearningPath();
   const short = schoolClassShortLabel(schoolClass);
@@ -23,7 +24,11 @@ export function NavbarClassBadge({
 
   const badge = (
     <span
-      className={`inline-flex max-w-full items-center truncate rounded-lg border border-accent/25 bg-accent/10 px-2.5 py-1.5 text-xs font-bold text-accent lg:text-sm ${className}`}
+      className={
+        inline
+          ? `inline-flex max-w-full shrink-0 items-center truncate px-2.5 py-1 text-[11px] font-bold text-accent ${className}`
+          : `inline-flex max-w-full shrink-0 items-center truncate rounded-full border border-accent/25 bg-accent/10 px-2.5 py-1 text-[11px] font-bold text-accent ${className}`
+      }
       title={full}
     >
       {short}
@@ -34,7 +39,7 @@ export function NavbarClassBadge({
     return (
       <Link
         href="/profil#klasa"
-        className="min-w-0 shrink-0 transition hover:opacity-90"
+        className="min-w-0 shrink-0 rounded-full transition hover:bg-accent/10"
         aria-label={`Twoja klasa: ${full}. Zmień w profilu.`}
       >
         {badge}

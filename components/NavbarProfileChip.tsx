@@ -24,19 +24,18 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
     <Link
       href="/profil"
       title={`${nick} · poziom ${level}`}
-      className={`inline-flex shrink-0 items-center gap-1 rounded-lg border border-surface-border bg-surface p-0.5 transition-colors hover:bg-surface-hover ${className}`}
+      className={`inline-flex min-w-0 max-w-[9.5rem] shrink-0 items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-white/[0.06] sm:max-w-[11rem] ${className}`}
     >
-      <span className="flex h-7 w-7 items-center justify-center rounded-md border border-surface-border bg-surface-hover text-xs font-semibold text-foreground">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent/15 text-xs font-bold text-accent ring-1 ring-accent/25">
         {initial}
       </span>
-      <span className="hidden text-xs font-semibold tabular-nums text-foreground sm:inline">
+      <span className="hidden min-w-0 flex-col leading-tight md:flex">
+        <span className="truncate text-xs font-semibold text-foreground">{nick}</span>
+        <span className="text-[10px] font-medium text-muted">Poziom {level}</span>
+      </span>
+      <span className="rounded-full bg-white/[0.06] px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-foreground md:hidden">
         {level}
       </span>
-      {profile.streak >= 2 ? (
-        <span className="pr-1 text-[10px] font-medium text-muted" title="Seria dni">
-          {profile.streak} d.
-        </span>
-      ) : null}
     </Link>
   );
 }
