@@ -93,6 +93,22 @@ export function appendTasksToCache(
   return bundle;
 }
 
+export function countOpenTasksInCache(
+  slot: Pick<TaskSlot, "exam_type" | "category" | "topic">,
+): number {
+  const bundle = readTaskCache(slot);
+  return (bundle?.tasks ?? []).filter((t) => t.options.length === 0).length;
+}
+
+export function listTaskSlotsNeedingMoreOpen(
+  targetPerTopic: number,
+  exam?: ExamType,
+): TaskSlot[] {
+  return listAllTaskSlots()
+    .filter((slot) => !exam || slot.exam_type === exam)
+    .filter((slot) => countOpenTasksInCache(slot) < targetPerTopic);
+}
+
 export function countTasksInCache(slot: Pick<TaskSlot, "exam_type" | "category" | "topic">): number {
   return readTaskCache(slot)?.tasks.length ?? 0;
 }

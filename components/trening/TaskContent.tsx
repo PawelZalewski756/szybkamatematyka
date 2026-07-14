@@ -1,16 +1,40 @@
 "use client";
 
-import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { ContentImage } from "@/components/baza-zadan/ContentImage";
+import { MathText } from "@/components/trening/MathText";
+import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
+import { useMemo } from "react";
 
 type TaskContentProps = {
   content: string;
 };
 
-/** Treść zadania — markdown + LaTeX + SVG/data-URI z Gemini. */
+/** Treść zadania — LaTeX ($...$) + obrazki SVG z Gemini. */
 export function TaskContent({ content }: TaskContentProps) {
+  const parts = useMemo(() => splitTaskContent(content), [content]);
+
   return (
-    <div className="text-base font-semibold leading-relaxed text-foreground sm:text-lg">
-      <TheoryMarkdown content={content} variant="compact" />
+    <div className="space-y-3 text-base font-semibold leading-relaxed text-foreground sm:text-lg">
+      {parts.map((part, index) => {
+        if (part.type === "image") {
+          return (
+            <ContentImage
+              key={`img-${index}`}
+              src={part.src}
+              alt={part.alt}
+            />
+          );
+        }
+
+        return (
+          <MathText
+            key={`text-${index}`}
+            as="div"
+            content={part.content}
+            className="[&_.katex]:text-foreground"
+          />
+        );
+      })}
     </div>
   );
 }

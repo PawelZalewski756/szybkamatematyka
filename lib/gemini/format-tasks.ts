@@ -3,16 +3,23 @@ import {
   findEquivalentChoiceGroups,
 } from "@/lib/math/answer-equiv";
 
+export type TaskAnswerType = "choice" | "open";
+
 export type ParsedGeminiTask = {
   content: string;
   correct_answer: string;
   options: string[];
+  answer_type: TaskAnswerType;
   difficulty: 1 | 2 | 3;
   xp_reward: number;
   explanation: string;
   figure_svg: string | null;
   figure_caption: string | null;
 };
+
+export function isOpenTask(task: Pick<ParsedGeminiTask, "options" | "answer_type">): boolean {
+  return task.answer_type === "open" || task.options.length === 0;
+}
 
 function stripCodeFence(text: string): string {
   const trimmed = text.trim();
@@ -126,10 +133,7 @@ export function parseGeminiTasksJson(raw: string): unknown[] {
   throw lastError ?? new Error("Odpowiedź nie jest tablicą JSON zadań.");
 }
 
-export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
-  if (!raw || typeof raw !== "object") return null;
-  const row = raw as Record<string, unknown>;
-
+function normalizeChoiceTask(row: Record<string, unknown>): ParsedGeminiTask | null {
   const content = String(row.content ?? "").trim();
   const correct_answer = String(row.correct_answer ?? "").trim();
   const options = normalizeOptions(row.options);
@@ -159,6 +163,7 @@ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
     content,
     correct_answer,
     options,
+    answer_type: "choice",
     difficulty,
     xp_reward,
     explanation,
@@ -167,10 +172,54 @@ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
   };
 }
 
+function normalizeOpenTask(row: Record<string, unknown>): ParsedGeminiTask | null {
+  const content = String(row.content ?? "").trim();
+  const correct_answer = String(row.correct_answer ?? "").trim();
+  const difficulty = coerceDifficulty(row.difficulty);
+  const xp_reward = coerceXp(difficulty, row.xp_reward);
+  const explanation = String(row.explanation ?? "").trim();
+  const figure_svg = normalizeSvg(row.figure_svg);
+  const figure_caption =
+    typeof row.figure_caption === "string" && row.figure_caption.trim()
+      ? row.figure_caption.trim()
+      : null;
+
+  if (!content || content.length < 12) return null;
+  if (!correct_answer || correct_answer.length > 120) return null;
+
+  return {
+    content,
+    correct_answer,
+    options: [],
+    answer_type: "open",
+    difficulty,
+    xp_reward: Math.max(xp_reward, difficulty === 1 ? 14 : difficulty === 2 ? 18 : 22),
+    explanation,
+    figure_svg,
+    figure_caption,
+  };
+}
+
+export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
+  if (!raw || typeof raw !== "object") return null;
+  const row = raw as Record<string, unknown>;
+  const answerType = String(row.answer_type ?? "").toLowerCase();
+  const options = normalizeOptions(row.options);
+
+  if (answerType === "open" || options.length === 0) {
+    return normalizeOpenTask(row);
+  }
+  return normalizeChoiceTask(row);
+}
+
 export function validateGeminiTask(task: ParsedGeminiTask): string[] {
   const issues: string[] = [];
-  if (task.options.length !== 4) issues.push("options !== 4");
   if (!task.content.trim()) issues.push("empty content");
+  if (isOpenTask(task)) {
+    if (!task.correct_answer.trim()) issues.push("empty correct_answer");
+    return issues;
+  }
+  if (task.options.length !== 4) issues.push("options !== 4");
   if (!task.options.some((o) => checkAnswerMatch(o, task.correct_answer))) {
     issues.push("correct_answer mismatch");
   }

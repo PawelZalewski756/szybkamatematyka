@@ -24,9 +24,11 @@ import { sleep } from "../lib/gemini/generate-solution";
 import {
   appendTasksToCache,
   countTaskCacheProgress,
+  countOpenTasksInCache,
   countTasksInCache,
   listAllTaskSlots,
   listTaskSlotsNeedingMore,
+  listTaskSlotsNeedingMoreOpen,
   readTaskCache,
   writeTaskCache,
   type CachedGeminiTask,
@@ -44,6 +46,7 @@ const EXAM_LABEL: Record<ExamType, string> = {
 
 type CliOptions = {
   perTopic: number;
+  openPerTopic: number | null;
   batchSize: number;
   delayMs: number;
   dryRun: boolean;
@@ -54,6 +57,7 @@ type CliOptions = {
 
 function parseArgs(): CliOptions {
   let perTopic = 30;
+  let openPerTopic: number | null = null;
   let batchSize = 5;
   let delayMs = 600;
   let dryRun = false;
@@ -64,7 +68,9 @@ function parseArgs(): CliOptions {
   for (const arg of process.argv.slice(2)) {
     if (arg === "--dry-run") dryRun = true;
     else if (arg === "--regenerate") regenerate = true;
-    else if (arg.startsWith("--per-topic=")) {
+    else if (arg.startsWith("--open-per-topic=")) {
+      openPerTopic = Math.max(1, Number(arg.split("=")[1]));
+    } else if (arg.startsWith("--per-topic=")) {
       perTopic = Math.max(1, Number(arg.split("=")[1]));
     } else if (arg.startsWith("--batch-size=")) {
       batchSize = Math.max(1, Math.min(8, Number(arg.split("=")[1])));
@@ -86,7 +92,7 @@ function parseArgs(): CliOptions {
     }
   }
 
-  return { perTopic, batchSize, delayMs, dryRun, exam, only, regenerate };
+  return { perTopic, openPerTopic, batchSize, delayMs, dryRun, exam, only, regenerate };
 }
 
 function slotFingerprints(slot: TaskSlot): Set<string> {
@@ -114,13 +120,17 @@ async function generateForSlot(
     });
   }
 
-  const target = opts.perTopic;
+  const openMode = opts.openPerTopic !== null;
+  const target = openMode ? opts.openPerTopic! : opts.perTopic;
+  const countInSlot = (s: TaskSlot) =>
+    openMode ? countOpenTasksInCache(s) : countTasksInCache(s);
+
   let added = 0;
   const fingerprints = slotFingerprints(slot);
   let batchIndex = 0;
 
-  while (countTasksInCache(slot) + added < target) {
-    const remaining = target - countTasksInCache(slot) - added;
+  while (countInSlot(slot) + added < target) {
+    const remaining = target - countInSlot(slot) - added;
     const thisBatch = Math.min(opts.batchSize, remaining);
 
     const existingSamples = [...(readTaskCache(slot)?.tasks ?? [])]
@@ -129,7 +139,7 @@ async function generateForSlot(
 
     if (opts.dryRun) {
       console.log(
-        `  [dry-run] ${slot.exam_type}/${slot.category}/${slot.topic} +${thisBatch}`,
+        `  [dry-run] ${slot.exam_type}/${slot.category}/${slot.topic} +${thisBatch}${openMode ? " (open)" : ""}`,
       );
       added += thisBatch;
       batchIndex += 1;
@@ -145,6 +155,7 @@ async function generateForSlot(
       batchSize: thisBatch,
       batchIndex,
       existingSamples,
+      taskKind: openMode ? "open" : "choice",
     });
 
     const unique = dedupeTasks(tasks, fingerprints);
@@ -166,11 +177,12 @@ async function generateForSlot(
     added += cached.length;
     batchIndex += 1;
 
+    const kind = openMode ? "otwarte" : "ABCD";
     console.log(
-      `  ✓ ${slot.category}/${slot.topic} +${cached.length} (razem ${countTasksInCache(slot)}/${target}) [${model}]`,
+      `  ✓ ${slot.category}/${slot.topic} +${cached.length} ${kind} (razem ${countInSlot(slot)}/${target}) [${model}]`,
     );
 
-    if (countTasksInCache(slot) >= target) break;
+    if (countInSlot(slot) >= target) break;
     await sleep(opts.delayMs);
   }
 
@@ -186,12 +198,20 @@ async function main() {
 
   const slots = opts.only
     ? [opts.only]
-    : listTaskSlotsNeedingMore(opts.perTopic, opts.exam ?? undefined);
+    : opts.openPerTopic !== null
+      ? listTaskSlotsNeedingMoreOpen(opts.openPerTopic, opts.exam ?? undefined)
+      : listTaskSlotsNeedingMore(opts.perTopic, opts.exam ?? undefined);
 
   console.log("\n=== Gemini → zadania treningowe (cache) ===\n");
-  console.log(
-    `Cel: ${opts.perTopic}/temat · partia ${opts.batchSize} · delay ${opts.delayMs}ms`,
-  );
+  if (opts.openPerTopic !== null) {
+    console.log(
+      `Tryb: OTWARTE (wpisywanie) · cel ${opts.openPerTopic}/temat · partia ${opts.batchSize}`,
+    );
+  } else {
+    console.log(
+      `Tryb: ABCD · cel ${opts.perTopic}/temat · partia ${opts.batchSize} · delay ${opts.delayMs}ms`,
+    );
+  }
   console.log(`Tematy do uzupełnienia: ${slots.length}\n`);
 
   if (slots.length === 0) {

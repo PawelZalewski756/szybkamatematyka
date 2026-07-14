@@ -12,9 +12,12 @@ import {
   waitForGeminiRetry,
 } from "@/lib/gemini/gemini-retry";
 import {
+  buildOpenTasksBatchUserPrompt,
   buildTasksBatchUserPrompt,
   TASKS_BATCH_SYSTEM_PROMPT,
   TASKS_FORMAT_REMINDER,
+  TASKS_OPEN_FORMAT_REMINDER,
+  TASKS_OPEN_SYSTEM_PROMPT,
   type GenerateTasksInput,
 } from "@/lib/gemini/prompts-tasks";
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -42,15 +45,17 @@ export async function generateTasksBatch(
 
   const resolvedModel = getModelId(modelId);
   const genAI = new GoogleGenerativeAI(apiKey);
+  const isOpen = input.taskKind === "open";
   const model = genAI.getGenerativeModel({
     model: resolvedModel,
-    systemInstruction: TASKS_BATCH_SYSTEM_PROMPT,
+    systemInstruction: isOpen ? TASKS_OPEN_SYSTEM_PROMPT : TASKS_BATCH_SYSTEM_PROMPT,
   });
 
-  const userPrompt = buildTasksBatchUserPrompt(input);
-  const result = await model.generateContent(
-    `${userPrompt}\n\n${TASKS_FORMAT_REMINDER}`,
-  );
+  const userPrompt = isOpen
+    ? buildOpenTasksBatchUserPrompt(input)
+    : buildTasksBatchUserPrompt(input);
+  const reminder = isOpen ? TASKS_OPEN_FORMAT_REMINDER : TASKS_FORMAT_REMINDER;
+  const result = await model.generateContent(`${userPrompt}\n\n${reminder}`);
   const text = result.response.text()?.trim();
   if (!text) {
     throw new Error("Model nie zwrócił treści zadań.");

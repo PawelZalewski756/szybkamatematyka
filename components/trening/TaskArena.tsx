@@ -14,9 +14,11 @@ import {
   markTaskSolved,
 } from "@/lib/supabase/solved-tasks";
 import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
+import { stripChoiceLabelPrefix } from "@/lib/math/render-math-text";
 import type { ExamType, Task } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
 import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
+import { MathText } from "@/components/trening/MathText";
 import { TaskContent } from "@/components/trening/TaskContent";
 import {
   ArrowLeft,
@@ -85,6 +87,7 @@ export function TaskArena({
   const [index, setIndex] = useState(0);
   const [attempts, setAttempts] = useState<Record<string, number>>({});
   const [selected, setSelected] = useState<string | null>(null);
+  const [typedAnswer, setTypedAnswer] = useState("");
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
@@ -172,12 +175,21 @@ export function TaskArena({
     setFinished(false);
     setAttempts({});
     setSelected(null);
+    setTypedAnswer("");
     setFeedback(null);
     setAnswerLocked(false);
   }, [difficultyFilter, shuffleOrder]);
 
   const current = tasks[index];
   const total = tasks.length;
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setTypedAnswer("");
+    setSelected(null);
+    setFeedback(null);
+    setAnswerLocked(false);
+  }, [current?.id]);
 
   const progressLabel = useMemo(() => {
     if (finished) return "Ukończono";
@@ -191,6 +203,7 @@ export function TaskArena({
     } else {
       setIndex((i) => i + 1);
       setSelected(null);
+      setTypedAnswer("");
       setFeedback(null);
       setAnswerLocked(false);
     }
@@ -220,6 +233,7 @@ export function TaskArena({
       setShakeKey((k) => k + 1);
       window.setTimeout(() => {
         setSelected(null);
+        if (current.options.length === 0) setTypedAnswer("");
         setFeedback(null);
         setAnswerLocked(false);
       }, WRONG_UNLOCK_MS);
@@ -340,6 +354,8 @@ export function TaskArena({
     current.options.length > 0
       ? current.options
       : [current.correct_answer];
+
+  const isOpenTask = current.options.length === 0;
 
   const showHalfXpHint =
     (attempts[current.id] ?? 0) >= 1 && feedback !== "correct";
@@ -470,9 +486,58 @@ export function TaskArena({
                   : { x: 0 }
               }
               transition={{ duration: 0.45 }}
-              className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
+              className="mt-6"
             >
-              {options.map((option, i) => {
+              {isOpenTask ? (
+                <div className="mx-auto flex max-w-md flex-col gap-3">
+                  <label htmlFor="arena-answer" className="sr-only">
+                    Twoja odpowiedź
+                  </label>
+                  <input
+                    id="arena-answer"
+                    type="text"
+                    inputMode="text"
+                    autoComplete="off"
+                    value={typedAnswer}
+                    disabled={answerLocked || feedback === "correct" || awarding}
+                    onChange={(e) => setTypedAnswer(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && typedAnswer.trim()) {
+                        void handleAnswer(typedAnswer.trim());
+                      }
+                    }}
+                    placeholder="Wpisz odpowiedź…"
+                    className={`input-field w-full py-3 text-base font-medium ${
+                      feedback === "correct"
+                        ? "border-emerald-500/50 ring-1 ring-emerald-500/30"
+                        : feedback === "wrong"
+                          ? "border-red-500/50 ring-1 ring-red-500/30"
+                          : ""
+                    }`}
+                  />
+                  <button
+                    type="button"
+                    disabled={
+                      !typedAnswer.trim() ||
+                      answerLocked ||
+                      feedback === "correct" ||
+                      awarding
+                    }
+                    onClick={() => void handleAnswer(typedAnswer.trim())}
+                    className="btn-primary w-full py-3 text-sm font-semibold disabled:opacity-50"
+                  >
+                    Sprawdź
+                  </button>
+                  {feedback === "correct" && (
+                    <p className="flex items-center justify-center gap-2 text-sm font-semibold text-emerald-400">
+                      <CheckCircle2 className="h-4 w-4" />
+                      Dobrze!
+                    </p>
+                  )}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+                  {options.map((option, i) => {
                 const label = OPTION_LABELS[i] ?? String(i + 1);
                 const isSelected = selected === option;
                 const isCorrectOption = checkAnswerMatch(
@@ -509,7 +574,7 @@ export function TaskArena({
                       {label}
                     </span>
                     <span className="text-sm font-medium leading-snug sm:text-base">
-                      {option}
+                      <MathText content={stripChoiceLabelPrefix(option)} />
                     </span>
                     {showCorrect && (
                       <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-emerald-400" />
@@ -520,6 +585,8 @@ export function TaskArena({
                   </button>
                 );
               })}
+                </div>
+              )}
             </motion.div>
 
             {feedback === "wrong" && (

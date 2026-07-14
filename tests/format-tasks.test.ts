@@ -28,6 +28,22 @@ describe("normalizeGeminiTask", () => {
     expect(task?.options).toHaveLength(4);
   });
 
+  it("accepts open task with empty options", () => {
+    const task = normalizeGeminiTask({
+      answer_type: "open",
+      content: "Oblicz $3+4$.",
+      options: [],
+      correct_answer: "7",
+      difficulty: 2,
+      xp_reward: 16,
+      explanation: "3+4=7",
+      figure_svg: null,
+      figure_caption: null,
+    });
+    expect(task?.options).toHaveLength(0);
+    expect(task?.answer_type).toBe("open");
+  });
+
   it("rejects when correct_answer not in options", () => {
     const task = normalizeGeminiTask({
       content: "Pytanie?",

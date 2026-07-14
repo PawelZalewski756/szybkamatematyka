@@ -35,8 +35,10 @@
     "seed:theory-sql": "tsx scripts/exportTheorySql.ts",
     "seed:theory-index": "tsx scripts/exportTheoryIndex.ts",
     "seed:tasks-gemini": "tsx scripts/seedTasksGemini.ts",
+    "seed:tasks-open-gemini": "tsx scripts/seedTasksGemini.ts --open-per-topic=12",
     "seed:tasks-overnight": "tsx scripts/overnightTasksGemini.ts",
     "seed:tasks-sql": "tsx scripts/exportTasksSql.ts",
+    "seed:tasks-sql-split": "tsx scripts/splitTasksSql.ts",
     "seed:tasks-cache": "tsx scripts/pushTasksCache.ts"
   },
   "dependencies": {

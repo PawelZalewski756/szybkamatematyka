@@ -176,6 +176,7 @@ export function Navbar() {
   };
 
   const showProfile = authReady && user && profile;
+  const showClassBadge = authReady && Boolean(user);
 
   return (
     <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface pt-[max(env(safe-area-inset-top,0px),0px)]">
@@ -186,20 +187,24 @@ export function Navbar() {
         <BrandLogo className="min-w-0 shrink-0" />
 
         {isDesktopNav ? (
-          <>
-            <div className="hidden h-6 w-px shrink-0 bg-surface-border sm:block" aria-hidden />
-            <NavbarClassBadge
-              linkToProfile={Boolean(user)}
-              className="hidden shrink-0 sm:inline-flex lg:max-w-[10.5rem]"
-            />
-          </>
+          showClassBadge ? (
+            <>
+              <div className="hidden h-6 w-px shrink-0 bg-surface-border sm:block" aria-hidden />
+              <NavbarClassBadge
+                linkToProfile
+                className="hidden shrink-0 sm:inline-flex lg:max-w-[10.5rem]"
+              />
+            </>
+          ) : null
         ) : (
           <>
             <div className="min-w-0 flex-1" aria-hidden />
-            <NavbarClassBadge
-              linkToProfile={Boolean(user)}
-              className="max-w-[min(100%,9.5rem)] shrink-0 sm:max-w-[10.5rem]"
-            />
+            {showClassBadge ? (
+              <NavbarClassBadge
+                linkToProfile
+                className="max-w-[min(100%,9.5rem)] shrink-0 sm:max-w-[10.5rem]"
+              />
+            ) : null}
           </>
         )}
 
