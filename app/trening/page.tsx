@@ -206,9 +206,11 @@ function TopicRow({
   highlighted?: boolean;
   theoryTier: TheoryTier;
 }) {
-  const isComingSoon = topic.status === "coming_soon";
-  const isCompleted = topic.status === "completed";
+  const hasTheory = theoryTier !== "none";
   const canPlay = topic.total > 0;
+  const canOpen = canPlay || hasTheory;
+  const isComingSoon = !canOpen;
+  const isCompleted = topic.status === "completed";
   const href = buildTopicHref(examKey, category.id, topic.id);
   const theory = theoryLabel(theoryTier);
 
@@ -216,7 +218,7 @@ function TopicRow({
     "flex items-center gap-3 px-1 py-3 text-sm transition " +
     (highlighted
       ? "bg-surface-hover"
-      : canPlay
+      : canOpen
         ? "hover:bg-surface-hover"
         : "opacity-50");
 
@@ -232,15 +234,19 @@ function TopicRow({
         <span className="hidden shrink-0 text-xs text-muted sm:inline">{theory}</span>
       )}
       <span className="shrink-0 tabular-nums text-xs text-muted">
-        {canPlay ? `${topic.solved}/${topic.total}` : isComingSoon ? "Wkrótce" : "—"}
+        {canPlay
+          ? `${topic.solved}/${topic.total}`
+          : isComingSoon
+            ? "Wkrótce"
+            : null}
       </span>
-      {canPlay && (
+      {canOpen && (
         <ChevronRight className="h-4 w-4 shrink-0 text-muted" aria-hidden />
       )}
     </>
   );
 
-  if (!canPlay) {
+  if (!canOpen) {
     return <div className={rowClass}>{inner}</div>;
   }
 
@@ -464,6 +470,11 @@ export default function TreningPage() {
     [exam.categories],
   );
 
+  const topicsWithTheory = useMemo(
+    () => theoryByTopic.size,
+    [theoryByTopic],
+  );
+
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div className="page-container relative z-10 flex w-full flex-1 flex-col py-8 sm:py-12">
@@ -477,10 +488,11 @@ export default function TreningPage() {
           {!loading && (
             <p className="mt-2 text-sm text-muted">
               {exam.label} · postęp {overallProgress}% · {topicCount} tematów
-              {topicsWithTasks < topicCount && (
+              {(topicsWithTasks < topicCount || topicsWithTheory > 0) && (
                 <span className="text-muted">
                   {" "}
-                  ({topicsWithTasks} z zadaniami)
+                  ({topicsWithTasks} z zadaniami
+                  {topicsWithTheory > 0 && ` · ${topicsWithTheory} z teorią`})
                 </span>
               )}
             </p>

@@ -25,6 +25,7 @@ const LEGACY_TOPIC_BY_EXAM: Partial<
       category: "liczby_rzeczywiste",
       topic: "kolejnosc_dzialan",
     },
+    "funkcje:liniowa": { category: "funkcje", topic: "funkcja_liniowa" },
   },
   "8_klasa": {
     "arytmetyka:ulamki": { category: "liczby", topic: "ulamki" },

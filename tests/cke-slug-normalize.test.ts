@@ -18,6 +18,12 @@ describe("normalizeCkeTopicSlug", () => {
     ).toEqual({ category: "liczby_rzeczywiste", topic: "potegi" });
   });
 
+  it("maps legacy funkcje/liniowa to funkcja_liniowa", () => {
+    expect(
+      normalizeCkeTopicSlug("matura_podstawowa", "funkcje", "liniowa"),
+    ).toEqual({ category: "funkcje", topic: "funkcja_liniowa" });
+  });
+
   it("leaves canonical slugs unchanged", () => {
     expect(
       normalizeCkeTopicSlug("matura_podstawowa", "algebra", "rownania_liniowe"),

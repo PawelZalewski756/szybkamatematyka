@@ -1,4 +1,5 @@
 import { getSupabase } from "@/lib/supabase";
+import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
 import { legacyDbSlugsForCkeTopic, legacyExamTypesFor } from "@/lib/trening/cke-slug-normalize";
 import type { ExamType, Task } from "@/types/database";
 
@@ -89,14 +90,18 @@ export async function fetchTasksForTree(
   examType: ExamType,
 ): Promise<TaskTreeRow[]> {
   const supabase = getSupabase();
+  const examTypes = legacyExamTypesFor(examType);
 
-  const { data, error } = await supabase
-    .from("tasks")
-    .select("id, category, topic")
-    .in("exam_type", legacyExamTypesFor(examType));
+  const { rows, error } = await fetchAllPages<TaskTreeRow>((from, to) =>
+    supabase
+      .from("tasks")
+      .select("id, category, topic")
+      .in("exam_type", examTypes)
+      .range(from, to),
+  );
 
   if (error) throw error;
-  return (data as TaskTreeRow[]) ?? [];
+  return rows;
 }
 
 /** Liczba zadań w bazie per temat (klucz: exam_type:category:topic). */
@@ -105,17 +110,21 @@ export async function fetchTaskCountsByTopic(
 ): Promise<Map<string, number>> {
   const supabase = getSupabase();
 
-  let query = supabase.from("tasks").select("exam_type, category, topic");
-  if (examType) {
-    query = query.eq("exam_type", examType);
-  }
-
-  const { data, error } = await query;
+  const { rows, error } = await fetchAllPages<TopicTaskCountRow>((from, to) => {
+    let query = supabase
+      .from("tasks")
+      .select("exam_type, category, topic")
+      .range(from, to);
+    if (examType) {
+      query = query.eq("exam_type", examType);
+    }
+    return query;
+  });
 
   if (error) throw error;
 
   const counts = new Map<string, number>();
-  for (const row of (data as TopicTaskCountRow[]) ?? []) {
+  for (const row of rows) {
     const key = `${row.exam_type}:${row.category}:${row.topic}`;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
