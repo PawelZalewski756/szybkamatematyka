@@ -1,5 +1,9 @@
 import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
 import {
+  findCkeCategoryLabel,
+  findCkeTopicLabel,
+} from "@/lib/trening/cke-curriculum";
+import {
   TRAINING_CURRICULUM,
   type TreningExamKey,
 } from "@/lib/trening/curriculum";
@@ -74,13 +78,24 @@ export function buildArenaHref(
 }
 
 export function topicDisplayName(
-  _examKey: TreningExamKey,
+  examKey: TreningExamKey,
   categorySlug: string,
   topicSlug: string,
 ): string {
-  return formatTreningLabel(topicSlug);
+  const examType = TRAINING_CURRICULUM[examKey].examType;
+  return (
+    findCkeTopicLabel(examType, categorySlug, topicSlug) ??
+    formatTreningLabel(topicSlug)
+  );
 }
 
-export function categoryDisplayName(categorySlug: string): string {
-  return formatTreningLabel(categorySlug);
+export function categoryDisplayName(
+  examKey: TreningExamKey,
+  categorySlug: string,
+): string {
+  const examType = TRAINING_CURRICULUM[examKey].examType;
+  return (
+    findCkeCategoryLabel(examType, categorySlug) ??
+    formatTreningLabel(categorySlug)
+  );
 }

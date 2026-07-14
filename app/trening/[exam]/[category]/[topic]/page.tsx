@@ -1,4 +1,8 @@
 import { TopicPageClient } from "@/components/trening/TopicPageClient";
+import {
+  findCkeCategoryLabel,
+  findCkeTopicLabel,
+} from "@/lib/trening/cke-curriculum";
 import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
 import { decodeSlug, examTypeFromParam } from "@/lib/trening/slugs";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
@@ -35,8 +39,14 @@ export async function generateMetadata({
   }
 
   const examLabel = EXAM_LABELS[examType];
-  const categoryLabel = formatTreningLabel(decodeSlug(category));
-  const topicLabel = formatTreningLabel(decodeSlug(topic));
+  const categorySlug = decodeSlug(category);
+  const topicSlug = decodeSlug(topic);
+  const categoryLabel =
+    findCkeCategoryLabel(examType, categorySlug) ??
+    formatTreningLabel(categorySlug);
+  const topicLabel =
+    findCkeTopicLabel(examType, categorySlug, topicSlug) ??
+    formatTreningLabel(topicSlug);
 
   return {
     title: `${topicLabel} — trening (${examLabel})`,
@@ -57,7 +67,9 @@ export default async function TreningTopicPage({ params }: PageProps) {
 
   const categorySlug = decodeSlug(category);
   const topicSlug = decodeSlug(topic);
-  const label = formatTreningLabel(topicSlug);
+  const label =
+    findCkeTopicLabel(examType, categorySlug, topicSlug) ??
+    formatTreningLabel(topicSlug);
 
   const backHref = "/trening";
 

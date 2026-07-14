@@ -295,7 +295,7 @@ function CategorySection({
 }
 
 function emptyExamFor(key: SelectedExam): ExamWithProgress {
-  return buildTreningTreeFromTasks([], new Set(), TRAINING_CURRICULUM[key]);
+  return mergeExamProgress(key, new Map(), new Map());
 }
 
 export default function TreningPage() {

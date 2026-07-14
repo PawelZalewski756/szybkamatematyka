@@ -30,6 +30,15 @@ export function findCkeTopicLabel(
   return category?.topics.find((t) => t.slug === topicSlug)?.name ?? null;
 }
 
+export function findCkeCategoryLabel(
+  examType: ExamType,
+  categorySlug: string,
+): string | null {
+  const categories = getCkeCategoriesForExam(examType);
+  if (!categories) return null;
+  return categories.find((c) => c.slug === categorySlug)?.name ?? null;
+}
+
 export function listCkeTopicsForExam(examType: ExamType): {
   category: string;
   topic: string;
