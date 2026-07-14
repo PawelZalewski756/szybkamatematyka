@@ -24,11 +24,11 @@ import {
   nickChangeCooldownMessage,
   normalizeNick,
   profileFromUserFallback,
-  subscriptionSnapshotFromProfile,
   updateProfileNick,
   updateProfileSchoolClass,
   type Profile,
 } from "@/lib/supabase/profiles";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import {
   isPro as snapshotIsPro,
   subscriptionStatusLabel,
@@ -127,7 +127,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
     : null;
 
   return (
-    <section className="mt-8">
+    <section id="plan" className="mt-8">
       <div
         className={`relative overflow-hidden rounded-3xl border p-5 backdrop-blur-xl sm:p-6 ${
           pro
@@ -179,6 +179,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
 export default function ProfilPage() {
   const router = useRouter();
   const { setSchoolClass: setLocalSchoolClass } = useLearningPath();
+  const { snapshot: subscriptionSnapshot } = useSubscription();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -594,7 +595,7 @@ export default function ProfilPage() {
               />
             </section>
 
-            <PlanSection snapshot={subscriptionSnapshotFromProfile(profile)} />
+            <PlanSection snapshot={subscriptionSnapshot} />
 
             <StreakReminderPrompt variant="card" className="mt-8" />
 

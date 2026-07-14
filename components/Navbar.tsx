@@ -2,9 +2,11 @@
 
 import { BrandLogo } from "@/components/BrandLogo";
 import { NavbarClassBadge } from "@/components/NavbarClassBadge";
+import { NavbarProBadge } from "@/components/NavbarProBadge";
 import { NavbarProfileChip } from "@/components/NavbarProfileChip";
 import { NavbarSheet } from "@/components/NavbarSheet";
 import { useDesktopNav } from "@/components/useDesktopNav";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import { getSupabase } from "@/lib/supabase";
 import {
   ensureUserProfile,
@@ -65,6 +67,8 @@ export function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const isDesktopNav = useDesktopNav();
+  const { isPro: subscriptionIsPro, loading: subscriptionLoading } =
+    useSubscription();
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [authReady, setAuthReady] = useState(false);
@@ -177,6 +181,8 @@ export function Navbar() {
 
   const showProfile = authReady && user && profile;
   const showClassBadge = authReady && Boolean(user);
+  const showProBadge =
+    authReady && !subscriptionLoading && Boolean(user && subscriptionIsPro);
 
   return (
     <header className="sticky top-0 z-[100] w-full border-b border-surface-border bg-surface pt-[max(env(safe-area-inset-top,0px),0px)]">
@@ -194,6 +200,9 @@ export function Navbar() {
                 linkToProfile
                 className="hidden shrink-0 sm:inline-flex lg:max-w-[10.5rem]"
               />
+              {showProBadge ? (
+                <NavbarProBadge linkToProfile className="hidden shrink-0 sm:inline-flex" />
+              ) : null}
             </>
           ) : null
         ) : (
@@ -204,6 +213,9 @@ export function Navbar() {
                 linkToProfile
                 className="max-w-[min(100%,9.5rem)] shrink-0 sm:max-w-[10.5rem]"
               />
+            ) : null}
+            {showProBadge ? (
+              <NavbarProBadge linkToProfile className="shrink-0" />
             ) : null}
           </>
         )}

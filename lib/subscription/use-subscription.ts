@@ -6,7 +6,7 @@ import {
 } from "@/lib/profile-sync";
 import { getSupabaseOrNull } from "@/lib/supabase";
 import {
-  fetchProfileAllowEmpty,
+  fetchSubscriptionSnapshotForUser,
   subscriptionSnapshotFromProfile,
 } from "@/lib/supabase/profiles";
 import {
@@ -59,8 +59,8 @@ export function useSubscription(): SubscriptionState {
         return;
       }
       setIsLoggedIn(true);
-      const profile = await fetchProfileAllowEmpty(user.id, user);
-      setSnapshot(subscriptionSnapshotFromProfile(profile));
+      const nextSnapshot = await fetchSubscriptionSnapshotForUser(user.id);
+      setSnapshot(nextSnapshot);
     } catch {
       setIsLoggedIn(false);
       setSnapshot(FREE_SUBSCRIPTION);

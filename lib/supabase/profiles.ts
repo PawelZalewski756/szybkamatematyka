@@ -1,5 +1,5 @@
 import { findAvatarUrlInStorage } from "@/lib/supabase/avatar";
-import { getSupabase } from "@/lib/supabase";
+import { getSupabase, getSupabaseOrNull } from "@/lib/supabase";
 import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
 import { calculateLevel } from "@/lib/levelSystem";
 import { gameScoreToXp } from "@/lib/minigry/account-progress";
@@ -89,6 +89,16 @@ const SUBSCRIPTION_COLUMNS =
 const SUBSCRIPTION_SELECT = `${NICK_UPDATE_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
 const SCHOOL_CLASS_SELECT = `${SUBSCRIPTION_SELECT}, school_class`;
 
+/** Ścieżka bez minigry_xp (kolumna często brakuje w starszych bazach). */
+const STREAK_NO_MINIGRY_SELECT = `${CORE_SELECT}, streak, last_played_date`;
+const AVATAR_NO_MINIGRY_SELECT = `${STREAK_NO_MINIGRY_SELECT}, avatar_url`;
+const NICK_NO_MINIGRY_SELECT = `${AVATAR_NO_MINIGRY_SELECT}, last_nick_update`;
+const SUBSCRIPTION_NO_MINIGRY_SELECT = `${NICK_NO_MINIGRY_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
+const SCHOOL_NO_MINIGRY_SELECT = `${SUBSCRIPTION_NO_MINIGRY_SELECT}, school_class`;
+/** Gdy brakuje streak / avatar — nadal czytaj subskrypcję. */
+const SUBSCRIPTION_BARE_SELECT = `${CORE_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
+const SCHOOL_BARE_SELECT = `${SUBSCRIPTION_BARE_SELECT}, school_class`;
+
 const PROFILE_SELECT_FALLBACK_CHAIN = [
   SCHOOL_CLASS_SELECT,
   SUBSCRIPTION_SELECT,
@@ -96,6 +106,13 @@ const PROFILE_SELECT_FALLBACK_CHAIN = [
   FULL_SELECT,
   AVATAR_SELECT,
   STREAK_SELECT,
+  SCHOOL_NO_MINIGRY_SELECT,
+  SUBSCRIPTION_NO_MINIGRY_SELECT,
+  NICK_NO_MINIGRY_SELECT,
+  AVATAR_NO_MINIGRY_SELECT,
+  STREAK_NO_MINIGRY_SELECT,
+  SCHOOL_BARE_SELECT,
+  SUBSCRIPTION_BARE_SELECT,
   CORE_SELECT,
 ] as const;
 
@@ -872,6 +889,41 @@ export function subscriptionSnapshotFromProfile(
     planId: profile.subscriptionPlan ?? null,
     currentPeriodEnd: profile.subscriptionCurrentPeriodEnd ?? null,
     cancelAtPeriodEnd: profile.subscriptionCancelAtPeriodEnd ?? false,
+  };
+}
+
+/**
+ * Lekkie zapytanie tylko o kolumny subskrypcji — niezależne od fallbacku profilu
+ * (minigry_xp, streak itd.). Używane przez hook useSubscription.
+ */
+export async function fetchSubscriptionSnapshotForUser(
+  userId: string,
+): Promise<SubscriptionSnapshot> {
+  const supabase = getSupabaseOrNull();
+  if (!supabase) return FREE_SUBSCRIPTION;
+
+  const { data, error } = await supabase
+    .from("profiles")
+    .select(`id, ${SUBSCRIPTION_COLUMNS}`)
+    .eq("id", userId)
+    .maybeSingle();
+
+  if (error) {
+    if (isPostgrestUndefinedColumnError(error as PostgrestError)) {
+      return FREE_SUBSCRIPTION;
+    }
+    console.error("[szybka-matma] fetchSubscriptionSnapshotForUser:", error);
+    return FREE_SUBSCRIPTION;
+  }
+
+  if (!data) return FREE_SUBSCRIPTION;
+
+  const row = data as ProfileRow;
+  return {
+    status: normalizeSubscriptionStatus(row.subscription_status),
+    planId: readSubscriptionPlan(row),
+    currentPeriodEnd: row.subscription_current_period_end ?? null,
+    cancelAtPeriodEnd: Boolean(row.subscription_cancel_at_period_end),
   };
 }
 
