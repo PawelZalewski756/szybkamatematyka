@@ -2,6 +2,7 @@ import {
   checkAnswerMatch,
   findEquivalentChoiceGroups,
 } from "@/lib/math/answer-equiv";
+import { reconcileTaskAnswer } from "@/lib/gemini/task-quality";
 
 export type TaskAnswerType = "choice" | "open";
 
@@ -206,10 +207,17 @@ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
   const answerType = String(row.answer_type ?? "").toLowerCase();
   const options = normalizeOptions(row.options);
 
-  if (answerType === "open" || options.length === 0) {
-    return normalizeOpenTask(row);
-  }
-  return normalizeChoiceTask(row);
+  const base =
+    answerType === "open" || options.length === 0
+      ? normalizeOpenTask(row)
+      : normalizeChoiceTask(row);
+
+  if (!base) return null;
+
+  const reconciled = reconcileTaskAnswer(base);
+  if (reconciled.shouldRemove) return null;
+
+  return reconciled;
 }
 
 export function validateGeminiTask(task: ParsedGeminiTask): string[] {

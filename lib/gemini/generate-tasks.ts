@@ -98,8 +98,10 @@ export async function generateTasksBatchWithRetry(
       lastError = err instanceof Error ? err : new Error(message);
 
       const validationRetry =
-        /walidacji|tablicą JSON|Nie zwrócił/i.test(message) &&
-        validationAttempts < maxValidationAttempts;
+        (/walidacji|tablicą JSON|Nie zwrócił|JSON at position|Expected ',' or '\}'/i.test(
+          message,
+        ) &&
+          validationAttempts < maxValidationAttempts);
 
       if (validationRetry) {
         validationAttempts += 1;

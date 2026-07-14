@@ -57,9 +57,6 @@ Schemat:
 ]`;
 }
 
-export const TASKS_OPEN_FORMAT_REMINDER =
-  'answer_type="open", options=[], poprawna correct_answer do porównania z wpisem ucznia.';
-
 export const TASKS_BATCH_SYSTEM_PROMPT = `Jesteś autorem zadań maturalnych i egzaminu ósmoklasisty z matematyki dla polskiej aplikacji edukacyjnej.
 
 Zwracasz WYŁĄCZNIE poprawny JSON (tablica obiektów) — bez markdown, bez komentarzy, bez \`\`\`.
@@ -117,4 +114,9 @@ Schemat JSON (tablica):
 }
 
 export const TASKS_FORMAT_REMINDER =
-  "Pamiętaj: zwróć TYLKO tablicę JSON. correct_answer ∈ options. 4 unikalne opcje.";
+  "Pamiętaj: zwróć TYLKO tablicę JSON. correct_answer MUSI być identyczna z jedną opcją. " +
+  "Sprawdź obliczenia — correct_answer = wynik z explanation. Bez samokorekty w explanation.";
+
+export const TASKS_OPEN_FORMAT_REMINDER =
+  "Pamiętaj: zwróć TYLKO tablicę JSON. options=[]. correct_answer = końcowy wynik obliczeń (krótki). " +
+  "Sprawdź spójność: correct_answer musi zgadzać się z ostatnim wynikiem w explanation. Bez „błąd w zadaniu”.";
