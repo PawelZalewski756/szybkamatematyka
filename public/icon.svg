@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Szybka Matematyka">
+  <rect width="512" height="512" rx="112" fill="#f4b740"/>
+  <rect width="512" height="512" rx="112" fill="none" stroke="#ffd479" stroke-opacity="0.5" stroke-width="16"/>
+  <path d="M104 264 L160 288 L216 384 L336 144 H416" fill="none" stroke="#1a1200" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
