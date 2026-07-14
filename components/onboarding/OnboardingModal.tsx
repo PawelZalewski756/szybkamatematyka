@@ -19,7 +19,7 @@ import {
 } from "@/lib/learning-path";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
-import { Gamepad2, Loader2, Sparkles } from "lucide-react";
+import { Gamepad2, Loader2 } from "lucide-react";
 import { useState } from "react";
 
 type OnboardingModalProps = {
@@ -141,11 +141,13 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             className="btn-chunky mt-4 flex w-full py-3.5 text-base disabled:opacity-60"
           >
             {saving ? (
-              <Loader2 className="h-5 w-5 animate-spin" aria-hidden />
+              <span className="inline-flex items-center justify-center gap-2">
+                <Loader2 className="h-5 w-5 animate-spin" aria-hidden />
+                Zapisywanie…
+              </span>
             ) : (
-              <Sparkles className="h-5 w-5" aria-hidden />
+              "Dołącz do rankingu"
             )}
-            {saving ? "Zapisywanie…" : "Dołącz do rankingu"}
           </button>
         </form>
       </motion.div>

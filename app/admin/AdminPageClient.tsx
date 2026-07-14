@@ -363,8 +363,8 @@ export function AdminPageClient() {
             className="btn-chunky mt-3 flex w-full items-center justify-center gap-2 px-4 py-3.5 text-sm disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
           >
             {generatingAi
-              ? "Mielenie danych... 🧠"
-              : "✨ Generuj rozwiązanie AI (Gemini Flash)"}
+              ? "Generowanie rozwiązania…"
+              : "Generuj rozwiązanie (Gemini Flash)"}
           </motion.button>
           <textarea
             value={rozwiazanie}

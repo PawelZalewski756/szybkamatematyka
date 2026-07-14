@@ -57,9 +57,10 @@ import {
   Loader2,
   LogOut,
   Save,
-  Sparkles,
   Swords,
+  Target,
   Trophy,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -556,7 +557,7 @@ export default function ProfilPage() {
                   <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
                     Punkty XP
                   </p>
-                  <Sparkles className="h-4 w-4 shrink-0 text-accent" aria-hidden />
+                  <Zap className="h-4 w-4 shrink-0 text-accent" aria-hidden />
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <p className="text-xl font-black text-white sm:text-2xl">
@@ -590,7 +591,7 @@ export default function ProfilPage() {
                 label="Tematy ukończone"
                 value={`${topicsCompletedPercent}%`}
                 sub="ścieżka treningowa"
-                icon={Sparkles}
+                icon={Target}
                 accent="cyan"
               />
             </section>

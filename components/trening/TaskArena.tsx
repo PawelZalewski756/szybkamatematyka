@@ -26,7 +26,6 @@ import {
   CheckCircle2,
   Loader2,
   Shuffle,
-  Sparkles,
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
@@ -657,7 +656,7 @@ export function TaskArena({
 
             {feedback === "correct" && (
               <p className="mt-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
-                <Sparkles className="h-4 w-4" />
+                <CheckCircle2 className="h-4 w-4" />
                 Dobra odpowiedź!
               </p>
             )}

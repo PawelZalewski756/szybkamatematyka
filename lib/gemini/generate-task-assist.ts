@@ -4,10 +4,13 @@ import {
   type TaskGradeResult,
 } from "@/lib/gemini/format-task-assist";
 import {
+  buildAskUserPrompt,
   buildGradeUserPrompt,
   buildHintUserPrompt,
+  TASK_ASSIST_ASK_SYSTEM,
   TASK_ASSIST_GRADE_SYSTEM,
   TASK_ASSIST_HINT_SYSTEM,
+  type TaskAssistAskInput,
   type TaskAssistGradeInput,
   type TaskAssistHintInput,
 } from "@/lib/gemini/prompts-task-assist";
@@ -65,4 +68,21 @@ export async function gradeOpenTaskAnswer(
     throw new Error("Nie udało się odczytać oceny AI.");
   }
   return parsed;
+}
+
+export async function generateTaskAskReply(
+  input: TaskAssistAskInput,
+): Promise<string> {
+  const genAI = getClient();
+  const model = genAI.getGenerativeModel({
+    model: getModelId(),
+    systemInstruction: TASK_ASSIST_ASK_SYSTEM,
+  });
+
+  const result = await model.generateContent(buildAskUserPrompt(input));
+  const text = result.response.text()?.trim();
+  if (!text) {
+    throw new Error("Model nie zwrócił odpowiedzi.");
+  }
+  return normalizeHintText(text);
 }

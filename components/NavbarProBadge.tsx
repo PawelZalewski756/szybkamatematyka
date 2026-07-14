@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
 
 type NavbarProBadgeProps = {
   className?: string;
@@ -14,10 +13,9 @@ export function NavbarProBadge({
 }: NavbarProBadgeProps) {
   const badge = (
     <span
-      className={`inline-flex shrink-0 items-center gap-1 rounded-lg border border-orange-400/35 bg-gradient-to-r from-orange-500/20 to-amber-500/15 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-orange-200 sm:text-xs ${className}`}
+      className={`inline-flex shrink-0 items-center rounded-lg border border-orange-400/35 bg-gradient-to-r from-orange-500/20 to-amber-500/15 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-orange-200 sm:text-xs ${className}`}
       title="Plan Pro — pełny dostęp"
     >
-      <Sparkles className="h-3 w-3 shrink-0 text-orange-300" aria-hidden />
       Pro
     </span>
   );

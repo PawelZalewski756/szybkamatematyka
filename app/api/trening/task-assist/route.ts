@@ -2,6 +2,7 @@ import {
   formatGeminiErrorForUser,
 } from "@/lib/gemini/generate-solution";
 import {
+  generateTaskAskReply,
   generateTaskHint,
   gradeOpenTaskAnswer,
 } from "@/lib/gemini/generate-task-assist";
@@ -66,9 +67,30 @@ function readStringArray(body: unknown, key: string): string[] | undefined {
   return value.map((v) => String(v ?? "").trim()).filter(Boolean);
 }
 
+type AskTurn = { role: "user" | "assistant"; content: string };
+
+function readConversation(body: unknown, key: string): AskTurn[] | undefined {
+  if (typeof body !== "object" || body === null || !(key in body)) return undefined;
+  const value = (body as Record<string, unknown>)[key];
+  if (!Array.isArray(value)) return undefined;
+
+  const turns: AskTurn[] = [];
+  for (const item of value) {
+    if (typeof item !== "object" || item === null) continue;
+    const role = (item as Record<string, unknown>).role;
+    const content = (item as Record<string, unknown>).content;
+    if (role !== "user" && role !== "assistant") continue;
+    if (typeof content !== "string") continue;
+    const trimmed = content.trim();
+    if (!trimmed) continue;
+    turns.push({ role, content: trimmed });
+  }
+  return turns.length > 0 ? turns : undefined;
+}
+
 /**
  * POST /api/trening/task-assist
- * Body: { mode: "hint" | "grade", taskContent, correctAnswer, ... }
+ * Body: { mode: "hint" | "grade" | "ask", taskContent, correctAnswer, ... }
  * Auth: Bearer + aktywna subskrypcja Pro.
  */
 export async function POST(request: Request) {
@@ -148,8 +170,30 @@ export async function POST(request: Request) {
       return Response.json({ grade });
     }
 
+    if (mode === "ask") {
+      const userMessage = readString(body, "userMessage");
+      if (!userMessage) {
+        return Response.json(
+          { error: "Pole userMessage jest wymagane dla trybu ask." },
+          { status: 400 },
+        );
+      }
+
+      const reply = await generateTaskAskReply({
+        examLabel,
+        topicLabel,
+        taskContent,
+        correctAnswer,
+        userMessage,
+        hintContext: readString(body, "hintContext"),
+        gradeContext: readString(body, "gradeContext"),
+        conversationHistory: readConversation(body, "conversationHistory"),
+      });
+      return Response.json({ reply });
+    }
+
     return Response.json(
-      { error: 'Pole mode musi być "hint" lub "grade".' },
+      { error: 'Pole mode musi być "hint", "grade" lub "ask".' },
       { status: 400 },
     );
   } catch (err) {

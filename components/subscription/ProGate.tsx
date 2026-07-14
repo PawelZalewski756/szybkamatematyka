@@ -1,7 +1,7 @@
 "use client";
 
 import { useRequirePro } from "@/lib/subscription/use-require-pro";
-import { Loader2, Lock, Sparkles } from "lucide-react";
+import { Loader2, Lock } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -61,7 +61,6 @@ function DefaultPaywall({
             href="/cennik"
             className="inline-flex items-center gap-2 rounded-2xl bg-brand-gradient px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110"
           >
-            <Sparkles className="h-4 w-4" />
             Zobacz plany Pro
           </Link>
         </div>

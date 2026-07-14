@@ -6,7 +6,7 @@ import {
   saveSchoolClass,
   type SchoolClassPath,
 } from "@/lib/learning-path";
-import { GraduationCap, Sparkles } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -64,9 +64,8 @@ export function GuestClassModal({ onComplete }: GuestClassModalProps) {
 
           <button
             type="submit"
-            className="btn-chunky mt-4 flex w-full items-center justify-center gap-2 py-3.5 text-base"
+            className="btn-chunky mt-4 w-full py-3.5 text-base"
           >
-            <Sparkles className="h-5 w-5" aria-hidden />
             Zaczynamy
           </button>
         </form>

@@ -1,4 +1,5 @@
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
+import type { TaskAssistAskTurn } from "@/lib/gemini/prompts-task-assist";
 import { getSupabaseAccessToken } from "@/lib/supabase";
 
 export type TaskAssistHintRequest = {
@@ -21,12 +22,27 @@ export type TaskAssistGradeRequest = {
   topicLabel?: string;
 };
 
-export type TaskAssistRequest = TaskAssistHintRequest | TaskAssistGradeRequest;
+export type TaskAssistAskRequest = {
+  mode: "ask";
+  taskContent: string;
+  correctAnswer: string;
+  userMessage: string;
+  examLabel?: string;
+  topicLabel?: string;
+  hintContext?: string;
+  gradeContext?: string;
+  conversationHistory?: TaskAssistAskTurn[];
+};
+
+export type TaskAssistRequest =
+  | TaskAssistHintRequest
+  | TaskAssistGradeRequest
+  | TaskAssistAskRequest;
 
 async function postTaskAssist<T>(body: TaskAssistRequest): Promise<T> {
   const token = await getSupabaseAccessToken();
   if (!token) {
-    throw new Error("Zaloguj się, aby skorzystać z asystenta AI.");
+    throw new Error("Zaloguj się, aby skorzystać z asystenta.");
   }
 
   const res = await fetch("/api/trening/task-assist", {
@@ -38,9 +54,14 @@ async function postTaskAssist<T>(body: TaskAssistRequest): Promise<T> {
     body: JSON.stringify(body),
   });
 
-  const data = (await res.json()) as { error?: string; hint?: string; grade?: TaskGradeResult };
+  const data = (await res.json()) as {
+    error?: string;
+    hint?: string;
+    grade?: TaskGradeResult;
+    reply?: string;
+  };
   if (!res.ok) {
-    throw new Error(data.error ?? "Asystent AI jest chwilowo niedostępny.");
+    throw new Error(data.error ?? "Asystent jest chwilowo niedostępny.");
   }
   return data as T;
 }
@@ -55,4 +76,10 @@ export async function fetchTaskGrade(
   body: Omit<TaskAssistGradeRequest, "mode">,
 ): Promise<{ grade: TaskGradeResult }> {
   return postTaskAssist({ mode: "grade", ...body });
+}
+
+export async function fetchTaskAsk(
+  body: Omit<TaskAssistAskRequest, "mode">,
+): Promise<{ reply: string }> {
+  return postTaskAssist({ mode: "ask", ...body });
 }

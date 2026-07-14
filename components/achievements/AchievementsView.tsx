@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sparkles, Trophy } from "lucide-react";
+import { Trophy } from "lucide-react";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { AchievementCard } from "@/components/achievements/AchievementCard";
 import { AchievementGlyph } from "@/components/achievements/achievement-icon";
@@ -108,7 +108,7 @@ export function AchievementsView() {
               className="mx-auto mt-6 flex max-w-xl flex-col gap-2 rounded-2xl border border-accent/40 bg-accent-soft p-4 backdrop-blur-xl"
             >
               <div className="flex items-center gap-2 text-sm font-black text-accent">
-                <Sparkles className="h-4 w-4" aria-hidden />
+                <Trophy className="h-4 w-4" aria-hidden />
                 Nowe odznaki odblokowane!
               </div>
               <div className="flex flex-wrap gap-2">

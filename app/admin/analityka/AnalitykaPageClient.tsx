@@ -21,7 +21,6 @@ import {
   Gamepad2,
   Info,
   Layers,
-  Sparkles,
   TrendingUp,
   UserPlus,
   Users,
@@ -150,7 +149,7 @@ export function AnalitykaPageClient() {
               accent="text-accent"
             />
             <MetricCard
-              icon={Sparkles}
+              icon={TrendingUp}
               label="Rekord XP"
               value={formatCompactXp(players.maxXp)}
               sub="najlepszy gracz"

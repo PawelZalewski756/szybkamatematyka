@@ -7,10 +7,10 @@ import {
   CalendarCheck,
   Flame,
   Loader2,
-  Sparkles,
   Swords,
   Target,
   Trophy,
+  Zap,
 } from "lucide-react";
 import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { useProfileStats } from "@/lib/profile-stats/use-profile-stats";
@@ -160,7 +160,7 @@ export function ProfileStatsSection({
                 label="XP"
                 value={stats.xp.toLocaleString("pl-PL")}
                 sub="łącznie"
-                icon={Sparkles}
+                icon={Zap}
                 accent="cyan"
               />
               <KpiTile

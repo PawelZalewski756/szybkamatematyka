@@ -10,10 +10,10 @@ import {
   CheckCircle2,
   Flame,
   Loader2,
-  Sparkles,
   Swords,
   Trophy,
   XCircle,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -127,7 +127,7 @@ function RewardScreen({
       <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-center gap-1.5 text-accent">
-            <Sparkles className="h-4 w-4" aria-hidden />
+            <Zap className="h-4 w-4" aria-hidden />
             <span className="text-[10px] font-bold uppercase tracking-wide">
               Nagroda XP
             </span>
@@ -315,7 +315,7 @@ export function DailyChallengeView() {
                   className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-8"
                 >
                   <div className="flex items-center gap-2 text-accent">
-                    <Sparkles className="h-5 w-5" aria-hidden />
+                    <Swords className="h-5 w-5" aria-hidden />
                     <span className="text-sm font-bold uppercase tracking-wide">
                       Oceń: prawda czy fałsz?
                     </span>

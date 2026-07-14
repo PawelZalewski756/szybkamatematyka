@@ -2,7 +2,7 @@
 
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
 import { motion } from "framer-motion";
-import { RotateCcw, Sparkles, Trophy } from "lucide-react";
+import { RotateCcw, Trophy } from "lucide-react";
 import { useEffect } from "react";
 
 function fireConfetti() {
@@ -101,7 +101,7 @@ export function ReviewSummary({
         </button>
       ) : (
         <p className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-success/30 bg-success/10 px-5 py-3 text-sm font-bold text-success">
-          <Sparkles className="h-4 w-4" />
+          <Trophy className="h-4 w-4" />
           Na dziś nic więcej do powtórki — wróć jutro!
         </p>
       )}

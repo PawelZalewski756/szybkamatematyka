@@ -397,7 +397,7 @@ export default function LoginPage() {
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
-                {loading ? "Tworzenie konta…" : "Utwórz konto ✨"}
+                {loading ? "Tworzenie konta…" : "Utwórz konto"}
               </motion.button>
 
               <button
