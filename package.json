@@ -33,7 +33,11 @@
     "seed:theory-cache": "tsx scripts/pushTheoryCache.ts",
     "seed:theory-sync": "tsx scripts/syncTheoryCacheToSeed.ts",
     "seed:theory-sql": "tsx scripts/exportTheorySql.ts",
-    "seed:theory-index": "tsx scripts/exportTheoryIndex.ts"
+    "seed:theory-index": "tsx scripts/exportTheoryIndex.ts",
+    "seed:tasks-gemini": "tsx scripts/seedTasksGemini.ts",
+    "seed:tasks-overnight": "tsx scripts/overnightTasksGemini.ts",
+    "seed:tasks-sql": "tsx scripts/exportTasksSql.ts",
+    "seed:tasks-cache": "tsx scripts/pushTasksCache.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

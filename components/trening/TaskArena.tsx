@@ -17,6 +17,7 @@ import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
 import type { ExamType, Task } from "@/types/database";
 import { AnimatePresence, motion } from "framer-motion";
 import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
+import { TaskContent } from "@/components/trening/TaskContent";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -458,9 +459,7 @@ export function TaskArena({
               <div className="mb-3 flex justify-end">
                 <DifficultyBadge difficulty={current.difficulty} />
               </div>
-              <p className="whitespace-pre-wrap text-base font-semibold leading-relaxed text-foreground sm:text-lg">
-                {current.content}
-              </p>
+              <TaskContent content={current.content} />
             </div>
 
             <motion.div
