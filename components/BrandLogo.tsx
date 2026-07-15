@@ -18,7 +18,7 @@ function Wordmark() {
         <span className="font-bold text-accent"> · </span>
         <span className="font-semibold text-muted">matematyka</span>
       </span>
-      <span className="whitespace-nowrap text-sm font-extrabold tracking-tight text-foreground xl:hidden">
+      <span className="hidden whitespace-nowrap text-sm font-extrabold tracking-tight text-foreground lg:inline xl:hidden">
         szybka<span className="font-bold text-accent">mat</span>
       </span>
     </>

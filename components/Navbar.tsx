@@ -240,12 +240,12 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-[100] w-full border-b border-surface-border/80 bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md">
       <nav
-        className="mx-auto flex h-[3.75rem] w-full max-w-[1920px] items-center gap-3 px-4 sm:px-6 md:px-8 lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
+        className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-2 overflow-hidden px-3 sm:gap-3 sm:px-4 lg:h-[3.75rem] lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
       >
-        <div className="flex min-w-0 shrink-0 items-center gap-3">
-          <BrandLogo markSize={30} />
-          {showMeta ? (
+        <div className="flex min-w-0 shrink-0 items-center gap-2 lg:gap-3">
+          <BrandLogo markSize={isDesktopNav ? 30 : 28} />
+          {isDesktopNav && showMeta ? (
             <NavbarMetaStrip showClass showPro={showPro} />
           ) : null}
         </div>
@@ -266,13 +266,25 @@ export function Navbar() {
             />
           </>
         ) : (
-          <>
-            <div className="min-w-0 flex-1" aria-hidden />
+          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2">
             {showMeta ? (
-              <NavbarMetaStrip showClass showPro={showPro} className="!inline-flex" />
+              <NavbarMetaStrip
+                showClass
+                showPro={showPro}
+                compact
+                className="min-w-0"
+              />
+            ) : null}
+            {authReady && !user ? (
+              <Link
+                href="/login"
+                className="shrink-0 rounded-full px-2.5 py-1.5 text-xs font-semibold text-accent transition hover:bg-accent/10"
+              >
+                Zaloguj
+              </Link>
             ) : null}
             <NavbarSheet showPrimaryLinks />
-          </>
+          </div>
         )}
       </nav>
     </header>
