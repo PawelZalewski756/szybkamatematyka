@@ -244,7 +244,7 @@ export function Navbar() {
         aria-label="Główna nawigacja"
       >
         <div className="flex min-w-0 flex-1 items-center overflow-hidden lg:flex-none lg:gap-3">
-          <BrandLogo markSize={isDesktopNav ? 30 : 28} className="min-w-0" />
+          <BrandLogo markSize={isDesktopNav ? 30 : 26} className="min-w-0" />
           {isDesktopNav && showMeta ? (
             <NavbarMetaStrip showClass showPro={showPro} />
           ) : null}

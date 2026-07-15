@@ -12,19 +12,11 @@ type BrandLogoProps = {
 
 function Wordmark() {
   return (
-    <>
-      <span className="min-w-0 truncate text-[13px] font-extrabold tracking-tight text-foreground sm:text-sm lg:hidden">
-        szybka<span className="font-bold text-accent">mat</span>
-      </span>
-      <span className="hidden whitespace-nowrap text-sm font-extrabold tracking-tight text-foreground lg:inline xl:hidden">
-        szybka<span className="font-bold text-accent">mat</span>
-      </span>
-      <span className="hidden whitespace-nowrap text-[15px] font-extrabold tracking-tight text-foreground xl:inline lg:text-[17px]">
-        szybka
-        <span className="font-bold text-accent"> · </span>
-        <span className="font-semibold text-muted">matematyka</span>
-      </span>
-    </>
+    <span className="min-w-0 truncate text-[11px] font-extrabold leading-tight tracking-tight text-foreground sm:text-xs lg:text-sm xl:text-[15px]">
+      szybka
+      <span className="font-bold text-accent"> · </span>
+      <span className="font-semibold text-muted">matematyka</span>
+    </span>
   );
 }
 
