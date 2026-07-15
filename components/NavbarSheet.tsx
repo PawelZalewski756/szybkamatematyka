@@ -6,6 +6,7 @@ import {
   type NavLink,
 } from "@/lib/layout/nav-links";
 import { NavbarClassBadge } from "@/components/NavbarClassBadge";
+import { NavbarProBadge } from "@/components/NavbarProBadge";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { Menu, X } from "lucide-react";
@@ -43,9 +44,13 @@ function SheetLink({
 type NavbarSheetProps = {
   /** Główne linki w panelu (mobile / tablet). */
   showPrimaryLinks?: boolean;
+  showPro?: boolean;
 };
 
-export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
+export function NavbarSheet({
+  showPrimaryLinks = false,
+  showPro = false,
+}: NavbarSheetProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const sheetId = useId();
@@ -129,10 +134,11 @@ export function NavbarSheet({ showPrimaryLinks = false }: NavbarSheetProps) {
 
             {showPrimaryLinks && (
               <div className="border-b border-surface-border px-4 py-3">
-                <p className="mb-1.5 text-[11px] font-medium text-muted">
-                  Twoja klasa
-                </p>
-                <NavbarClassBadge className="mb-2" />
+                <div className="mb-2 flex flex-wrap items-center gap-2">
+                  <NavbarClassBadge />
+                  {showPro ? <NavbarProBadge linkToProfile /> : null}
+                </div>
+                <p className="mb-1.5 text-overline">Twoja klasa</p>
                 <SchoolClassPicker
                   id="navbar-sheet-class"
                   value={schoolClass}

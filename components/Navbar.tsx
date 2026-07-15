@@ -243,8 +243,8 @@ export function Navbar() {
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-2 overflow-hidden px-3 sm:gap-3 sm:px-4 lg:h-[3.75rem] lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
       >
-        <div className="flex min-w-0 shrink-0 items-center gap-2 lg:gap-3">
-          <BrandLogo markSize={isDesktopNav ? 30 : 28} />
+        <div className="flex min-w-0 flex-1 items-center overflow-hidden lg:flex-none lg:gap-3">
+          <BrandLogo markSize={isDesktopNav ? 30 : 28} className="min-w-0" />
           {isDesktopNav && showMeta ? (
             <NavbarMetaStrip showClass showPro={showPro} />
           ) : null}
@@ -266,24 +266,16 @@ export function Navbar() {
             />
           </>
         ) : (
-          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2">
-            {showMeta ? (
-              <NavbarMetaStrip
-                showClass
-                showPro={showPro}
-                compact
-                className="min-w-0"
-              />
-            ) : null}
+          <div className="flex shrink-0 items-center gap-1">
             {authReady && !user ? (
               <Link
                 href="/login"
-                className="shrink-0 rounded-full px-2.5 py-1.5 text-xs font-semibold text-accent transition hover:bg-accent/10"
+                className="shrink-0 rounded-full px-2 py-1 text-[11px] font-semibold text-accent transition hover:bg-accent/10 sm:px-2.5 sm:text-xs"
               >
                 Zaloguj
               </Link>
             ) : null}
-            <NavbarSheet showPrimaryLinks />
+            <NavbarSheet showPrimaryLinks showPro={showPro} />
           </div>
         )}
       </nav>

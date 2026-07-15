@@ -13,13 +13,16 @@ type BrandLogoProps = {
 function Wordmark() {
   return (
     <>
+      <span className="min-w-0 truncate text-[13px] font-extrabold tracking-tight text-foreground sm:text-sm lg:hidden">
+        szybka<span className="font-bold text-accent">mat</span>
+      </span>
+      <span className="hidden whitespace-nowrap text-sm font-extrabold tracking-tight text-foreground lg:inline xl:hidden">
+        szybka<span className="font-bold text-accent">mat</span>
+      </span>
       <span className="hidden whitespace-nowrap text-[15px] font-extrabold tracking-tight text-foreground xl:inline lg:text-[17px]">
         szybka
         <span className="font-bold text-accent"> · </span>
         <span className="font-semibold text-muted">matematyka</span>
-      </span>
-      <span className="hidden whitespace-nowrap text-sm font-extrabold tracking-tight text-foreground lg:inline xl:hidden">
-        szybka<span className="font-bold text-accent">mat</span>
       </span>
     </>
   );
@@ -33,7 +36,7 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const inner = (
     <span
-      className={`group inline-flex min-w-0 items-center gap-2.5 ${className}`}
+      className={`group inline-flex min-w-0 max-w-full items-center gap-2 ${className}`}
       title={BRAND_NAME}
     >
       <LogoMark
@@ -50,7 +53,7 @@ export function BrandLogo({
   return (
     <Link
       href="/"
-      className="shrink-0 rounded-lg outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-brand"
+      className="min-w-0 max-w-full shrink overflow-hidden rounded-lg outline-offset-4 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-brand"
       aria-label={BRAND_NAME}
     >
       {inner}
