@@ -9,8 +9,27 @@ import {
   checkAnswerMatch,
   findEquivalentChoiceGroups,
 } from "../lib/math/answer-equiv";
+import { TRAINING_CURRICULUM, type TreningExamKey } from "../lib/trening/curriculum";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
+
+function examKeyForType(examType: string): TreningExamKey | null {
+  for (const key of Object.keys(TRAINING_CURRICULUM) as TreningExamKey[]) {
+    if (TRAINING_CURRICULUM[key].examType === examType) return key;
+  }
+  return null;
+}
+
+function isKnownTopic(
+  examType: string,
+  category: string,
+  topic: string,
+): boolean {
+  const examKey = examKeyForType(examType);
+  if (!examKey) return false;
+  const cat = TRAINING_CURRICULUM[examKey].categories.find((c) => c.id === category);
+  return Boolean(cat?.topics.some((t) => t.id === topic));
+}
 
 type TaskRow = {
   id: string;
@@ -82,6 +101,13 @@ async function main() {
       issues.push({
         id: row.id,
         detail: `Wiele poprawnych opcji: ${matching.join(" | ")}`,
+      });
+    }
+
+    if (!isKnownTopic(row.exam_type, row.category, row.topic)) {
+      issues.push({
+        id: row.id,
+        detail: `Nieznany slot curriculum: ${row.exam_type}/${row.category}/${row.topic}`,
       });
     }
   }

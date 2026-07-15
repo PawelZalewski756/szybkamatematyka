@@ -1,6 +1,7 @@
 "use client";
 
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
+import { ProGate } from "@/components/subscription/ProGate";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -9,6 +10,8 @@ import { getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
 import { answersEquivalent } from "@/lib/math/answer-equiv";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { canViewFullSolutions } from "@/lib/subscription/content-limits";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -19,6 +22,7 @@ type TaskSolverViewProps = {
 
 export function TaskSolverView({ id }: TaskSolverViewProps) {
   const { path } = useLearningPath();
+  const { isPro } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
   const task = getTaskById(id);
   const [picked, setPicked] = useState<number | null>(null);
@@ -154,10 +158,19 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             )}
             <p className="mt-2 text-sm text-muted">{task.explanation}</p>
             {task.solutionSteps && task.solutionSteps.length > 0 && (
-              <SolutionSteps
-                steps={task.solutionSteps}
-                examLabel={task.examSource?.sessionLabel}
-              />
+              canViewFullSolutions(isPro) ? (
+                <SolutionSteps
+                  steps={task.solutionSteps}
+                  examLabel={task.examSource?.sessionLabel}
+                />
+              ) : (
+                <ProGate featureLabel="Rozwiązania krok po kroku">
+                  <SolutionSteps
+                    steps={task.solutionSteps}
+                    examLabel={task.examSource?.sessionLabel}
+                  />
+                </ProGate>
+              )
             )}
           </motion.div>
         )}

@@ -166,7 +166,7 @@ function TheoryTab({
 
   return (
     <div className="space-y-6">
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),11rem] lg:items-start lg:gap-8">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),12rem] xl:grid-cols-[minmax(0,1fr),14rem] lg:items-start lg:gap-8 xl:gap-10">
         <article className="min-w-0 surface-card p-6 sm:p-8">
           <h2 className="text-2xl font-bold text-foreground">{material.title}</h2>
           {headings.length >= 2 && (
@@ -271,7 +271,7 @@ export function TopicPageClient({
       </div>
 
       {activeTab === "teoria" ? (
-        <div role="tabpanel" className="mx-auto w-full max-w-3xl flex-1">
+        <div role="tabpanel" className="w-full flex-1">
           <TheoryTab
             material={material}
             loading={materialLoading}

@@ -278,7 +278,7 @@ function CategorySection({
   theoryByTopic: Map<string, TheoryTier>;
 }) {
   return (
-    <section className="mt-10">
+    <section className="mt-10 xl:mt-0">
       <div className="mb-2 flex items-baseline justify-between gap-4">
         <h2 className="text-lg font-semibold text-foreground">{category.name}</h2>
         <span className="text-xs text-muted">{category.progressPercent}%</span>
@@ -502,115 +502,119 @@ export default function TreningPage() {
           )}
         </header>
 
-        <div className="mt-8 max-w-2xl">
-          <ExamSwitcher selected={selectedExam} onChange={handleExamChange} />
-        </div>
+        <div className="page-with-sidebar mt-8">
+          <aside className="page-sidebar space-y-6">
+            <div>
+              <ExamSwitcher selected={selectedExam} onChange={handleExamChange} />
+            </div>
 
-        <div className="mt-6 max-w-md">
-          <label className="sr-only" htmlFor="trening-search">
-            Szukaj tematu
-          </label>
-          <div className="relative">
-            <Search
-              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-              aria-hidden
-            />
-            <input
-              id="trening-search"
-              type="search"
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              placeholder="Szukaj działu lub tematu…"
-              className="input-field w-full py-2.5 pl-10 pr-4 text-sm"
-            />
-          </div>
-          {debouncedQuery.trim() && !loading && (
-            <p className="mt-2 text-xs text-muted">
-              Znaleziono {matchedTopicCount}{" "}
-              {matchedTopicCount === 1
-                ? "temat"
-                : matchedTopicCount >= 2 && matchedTopicCount <= 4
-                  ? "tematy"
-                  : "tematów"}
-            </p>
-          )}
-        </div>
+            <div>
+              <label className="sr-only" htmlFor="trening-search">
+                Szukaj tematu
+              </label>
+              <div className="relative">
+                <Search
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                  aria-hidden
+                />
+                <input
+                  id="trening-search"
+                  type="search"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  placeholder="Szukaj działu lub tematu…"
+                  className="input-field w-full py-2.5 pl-10 pr-4 text-sm"
+                />
+              </div>
+              {debouncedQuery.trim() && !loading && (
+                <p className="mt-2 text-xs text-muted">
+                  Znaleziono {matchedTopicCount}{" "}
+                  {matchedTopicCount === 1
+                    ? "temat"
+                    : matchedTopicCount >= 2 && matchedTopicCount <= 4
+                      ? "tematy"
+                      : "tematów"}
+                </p>
+              )}
+            </div>
 
-        <div className="mt-4 flex max-w-2xl flex-col gap-3">
-          <div role="group" aria-label="Filtr tematów" className="flex flex-wrap gap-4 text-sm">
-            {(
-              [
-                { id: "all" as const, label: "Wszystkie" },
-                { id: "incomplete" as const, label: "Nieukończone" },
-                { id: "completed" as const, label: "Ukończone" },
-              ] as const
-            ).map((opt) => {
-              const active = topicFilter === opt.id;
-              return (
+            <div className="flex flex-col gap-3">
+              <div role="group" aria-label="Filtr tematów" className="flex flex-wrap gap-3 text-sm">
+                {(
+                  [
+                    { id: "all" as const, label: "Wszystkie" },
+                    { id: "incomplete" as const, label: "Nieukończone" },
+                    { id: "completed" as const, label: "Ukończone" },
+                  ] as const
+                ).map((opt) => {
+                  const active = topicFilter === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      onClick={() => setTopicFilter(opt.id)}
+                      className={`transition ${
+                        active
+                          ? "font-semibold text-accent underline underline-offset-4"
+                          : "text-muted hover:text-foreground"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
+              <div role="group" aria-label="Sortowanie tematów" className="flex flex-wrap gap-3 text-sm">
+                {(
+                  [
+                    { id: "az" as const, label: "A–Z" },
+                    { id: "progress" as const, label: "Postęp" },
+                  ] as const
+                ).map((opt) => {
+                  const active = topicSort === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      type="button"
+                      onClick={() => setTopicSort(opt.id)}
+                      className={`transition ${
+                        active
+                          ? "font-semibold text-accent underline underline-offset-4"
+                          : "text-muted hover:text-foreground"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {showPathBanner && pathBannerHref && !loading && (
+              <div className="border border-surface-border bg-surface px-4 py-3 text-sm text-muted">
+                Zacznij od pierwszego tematu —{" "}
+                <Link href={pathBannerHref} className="link-plain">
+                  przejdź do lekcji
+                </Link>
                 <button
-                  key={opt.id}
                   type="button"
-                  onClick={() => setTopicFilter(opt.id)}
-                  className={`transition ${
-                    active
-                      ? "font-semibold text-accent underline underline-offset-4"
-                      : "text-muted hover:text-foreground"
-                  }`}
+                  onClick={dismissPathBanner}
+                  className="ml-3 text-muted hover:text-foreground"
+                  aria-label="Zamknij"
                 >
-                  {opt.label}
+                  <X className="inline h-4 w-4" />
                 </button>
-              );
-            })}
-          </div>
-          <div role="group" aria-label="Sortowanie tematów" className="flex flex-wrap gap-4 text-sm">
-            {(
-              [
-                { id: "az" as const, label: "A–Z" },
-                { id: "progress" as const, label: "Postęp" },
-              ] as const
-            ).map((opt) => {
-              const active = topicSort === opt.id;
-              return (
-                <button
-                  key={opt.id}
-                  type="button"
-                  onClick={() => setTopicSort(opt.id)}
-                  className={`transition ${
-                    active
-                      ? "font-semibold text-accent underline underline-offset-4"
-                      : "text-muted hover:text-foreground"
-                  }`}
-                >
-                  {opt.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+            )}
+          </aside>
 
-        {showPathBanner && pathBannerHref && !loading && (
-          <div className="mt-6 max-w-md border border-surface-border bg-surface px-4 py-3 text-sm text-muted">
-            Zacznij od pierwszego tematu —{" "}
-            <Link href={pathBannerHref} className="link-plain">
-              przejdź do lekcji
-            </Link>
-            <button
-              type="button"
-              onClick={dismissPathBanner}
-              className="ml-3 text-muted hover:text-foreground"
-              aria-label="Zamknij"
-            >
-              <X className="inline h-4 w-4" />
-            </button>
-          </div>
-        )}
-
+          <div className="min-w-0">
         {loading ? (
-          <div className="mt-16">
+          <div className="mt-16 lg:mt-0">
             <Loader2 className="h-7 w-7 animate-spin text-muted" />
           </div>
         ) : (
-          <div className="mt-10 max-w-2xl">
+          <div className="space-y-10 xl:grid xl:grid-cols-2 xl:gap-x-10 xl:gap-y-10 xl:space-y-0">
               {exam.categories.length === 0 ? (
                 <p className="mt-16 text-center text-sm text-muted">
                   Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
@@ -657,6 +661,8 @@ export default function TreningPage() {
               )}
           </div>
         )}
+          </div>
+        </div>
       </div>
     </div>
   );

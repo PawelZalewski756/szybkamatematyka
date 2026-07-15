@@ -1,6 +1,9 @@
 "use client";
 
 import { DZIALY_MATEMATYKI, TYP_EGZAMINU_LABELS, type TypEgzaminu } from "@/lib/baza-zadan/dzialy";
+import { canUseAdvancedBazaFilters } from "@/lib/subscription/content-limits";
+import { useSubscription } from "@/lib/subscription/use-subscription";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 export type BazaZadanFilterState = {
@@ -46,6 +49,9 @@ export function BazaZadanFilters({
   availableYears,
   taskCount,
 }: BazaZadanFiltersProps) {
+  const { isPro } = useSubscription();
+  const advancedFilters = canUseAdvancedBazaFilters(isPro);
+
   return (
     <div className="space-y-6">
       <div>
@@ -53,6 +59,15 @@ export function BazaZadanFilters({
           Filtry
         </h2>
         <p className="mt-1 text-2xl font-black text-foreground">{taskCount} zadań</p>
+        {!advancedFilters && (
+          <p className="mt-2 text-xs text-muted">
+            Filtry roku i typu egzaminu są w planie{" "}
+            <Link href="/cennik" className="font-semibold text-accent hover:underline">
+              Pro
+            </Link>
+            .
+          </p>
+        )}
       </div>
 
       <div>
@@ -68,7 +83,7 @@ export function BazaZadanFilters({
             <FilterChip
               key={t}
               active={filters.typ === t}
-              onClick={() => onChange({ ...filters, typ: t })}
+              onClick={() => advancedFilters && onChange({ ...filters, typ: t })}
             >
               {TYP_EGZAMINU_LABELS[t]}
             </FilterChip>
@@ -89,7 +104,7 @@ export function BazaZadanFilters({
             <FilterChip
               key={y}
               active={filters.rok === y}
-              onClick={() => onChange({ ...filters, rok: y })}
+              onClick={() => advancedFilters && onChange({ ...filters, rok: y })}
             >
               {y}
             </FilterChip>
@@ -110,7 +125,7 @@ export function BazaZadanFilters({
             <FilterChip
               key={d}
               active={filters.dzial === d}
-              onClick={() => onChange({ ...filters, dzial: d })}
+              onClick={() => advancedFilters && onChange({ ...filters, dzial: d })}
             >
               {d}
             </FilterChip>

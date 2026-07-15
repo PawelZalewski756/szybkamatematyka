@@ -406,7 +406,7 @@ export default function ProfilPage() {
     <div className="relative flex min-h-0 flex-1 flex-col bg-background">
       <GamingBackground />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1920px] flex-1 flex-col py-8 sm:py-12">
+      <div className="relative z-10 page-container flex w-full flex-1 flex-col py-8 sm:py-12">
         {loading ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
             <div className="h-12 w-12 animate-spin rounded-full border-2 border-accent/30 border-t-accent" />
@@ -433,9 +433,10 @@ export default function ProfilPage() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex flex-1 flex-col"
+            className="flex flex-1 flex-col lg:grid lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:items-start lg:gap-10 xl:gap-12"
           >
-            <header className="flex flex-col items-center text-center">
+            <div className="min-w-0">
+            <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <h1 className="text-2xl font-black text-white sm:text-3xl">
                 Twój profil
               </h1>
@@ -544,8 +545,10 @@ export default function ProfilPage() {
                 </p>
               )}
             </section>
+            </div>
 
-            <section className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="mt-10 min-w-0 lg:mt-0">
+            <section className="grid grid-cols-2 gap-3 sm:gap-4">
               <StatCard
                 label="Poziom"
                 value={`Poziom ${calculateLevel(profile.xp)}`}
@@ -639,6 +642,7 @@ export default function ProfilPage() {
                 )}
                 {loggingOut ? "Wylogowywanie…" : "Wyloguj się"}
               </button>
+            </div>
             </div>
           </motion.div>
         ) : null}

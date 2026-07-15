@@ -2,9 +2,12 @@
 
 import { SolutionDisplay } from "@/components/baza-zadan/SolutionDisplay";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
+import { ProGate } from "@/components/subscription/ProGate";
 import { formatArkuszLabel } from "@/lib/baza-zadan/arkusz-format";
 import { TYP_EGZAMINU_LABELS } from "@/lib/baza-zadan/dzialy";
 import { isSolutionPlaceholder } from "@/lib/baza-zadan/solution-content";
+import { canViewFullSolutions } from "@/lib/subscription/content-limits";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -25,6 +28,7 @@ function SolutionPendingNotice() {
 
 export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) {
   const [showSolution, setShowSolution] = useState(false);
+  const { isPro } = useSubscription();
   const arkusz = zadanie.arkusz;
   const solutionPending = isSolutionPlaceholder(zadanie.rozwiazanie);
   const isArkuszView = context === "arkusz";
@@ -93,13 +97,17 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
               <div className="mt-4 border-l-2 border-success/40 pl-4">
                 {solutionPending ? (
                   <>
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-accent">
+                    <p className="text-overline text-accent">
                       Wkrótce
                     </p>
                     <SolutionPendingNotice />
                   </>
-                ) : (
+                ) : canViewFullSolutions(isPro) ? (
                   <SolutionDisplay raw={zadanie.rozwiazanie} />
+                ) : (
+                  <ProGate featureLabel="Pełne rozwiązania arkuszy CKE">
+                    <SolutionDisplay raw={zadanie.rozwiazanie} />
+                  </ProGate>
                 )}
               </div>
             </motion.div>

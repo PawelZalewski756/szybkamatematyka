@@ -60,43 +60,46 @@ export function HomeDashboard() {
 
   return (
     <section className="page-container py-8 sm:py-14">
-      <div className="mx-auto w-full max-w-3xl">
-        <span className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-3 py-1 text-xs font-medium text-muted">
-          <GraduationCap className="h-3.5 w-3.5 text-accent" aria-hidden />
-          {pathLabel}
-        </span>
+      <div className="lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-start lg:gap-12 xl:gap-16">
+        <div className="min-w-0">
+          <span className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+            <GraduationCap className="h-3.5 w-3.5 text-accent" aria-hidden />
+            {pathLabel}
+          </span>
 
-        <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl">
-          Ogarnij matematykę
-          <br />
-          <span className="text-accent">krok po kroku.</span>
-        </h1>
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-          Teoria, zadania z rozwiązaniami i całe arkusze CKE — poukładane po
-          tematach. Uczysz się tego, co faktycznie będzie na egzaminie.
-        </p>
+          <h1 className="mt-5 text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
+            Ogarnij matematykę
+            <br />
+            <span className="text-accent">krok po kroku.</span>
+          </h1>
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+            Teoria, zadania z rozwiązaniami i całe arkusze CKE — poukładane po
+            tematach. Uczysz się tego, co faktycznie będzie na egzaminie.
+          </p>
 
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/trening"
-            className="btn-chunky w-full px-7 py-4 text-base sm:w-auto"
-          >
-            Zacznij trening
-            <ArrowRight className="h-5 w-5" aria-hidden />
-          </Link>
-          <Link
-            href="/wyzwania"
-            className="btn-chunky-soft w-full px-7 py-4 text-base sm:w-auto"
-          >
-            <Flame className="h-5 w-5 text-accent" aria-hidden />
-            Wyzwanie dnia
-          </Link>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/trening"
+              className="btn-chunky w-full px-7 py-4 text-base sm:w-auto"
+            >
+              Zacznij trening
+              <ArrowRight className="h-5 w-5" aria-hidden />
+            </Link>
+            <Link
+              href="/wyzwania"
+              className="btn-chunky-soft w-full px-7 py-4 text-base sm:w-auto"
+            >
+              <Flame className="h-5 w-5 text-accent" aria-hidden />
+              Wyzwanie dnia
+            </Link>
+          </div>
         </div>
 
-        <h2 className="mt-14 text-sm font-bold uppercase tracking-wide text-muted">
-          Odkryj resztę
-        </h2>
-        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="mt-14 min-w-0 lg:mt-0">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-muted">
+            Odkryj resztę
+          </h2>
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
           {CARDS.map(({ href, label, hint, icon: Icon }) => (
             <Link
               key={href}
@@ -118,6 +121,7 @@ export function HomeDashboard() {
               />
             </Link>
           ))}
+          </div>
         </div>
       </div>
     </section>

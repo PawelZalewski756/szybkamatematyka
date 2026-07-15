@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPrerenderTaskIds } from "@/lib/baza-zadan/catalog";
 import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
+import { getTreningTopicUrls } from "@/lib/seo/trening-urls";
 import { SITE_URL } from "@/lib/seo/site";
 
 /**
@@ -56,5 +57,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticEntries, ...taskEntries, ...sheetEntries];
+  const treningTopicEntries: MetadataRoute.Sitemap = getTreningTopicUrls().map(
+    (entry) => ({
+      url: `${SITE_URL}${entry.path}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.65,
+    }),
+  );
+
+  return [...staticEntries, ...treningTopicEntries, ...taskEntries, ...sheetEntries];
 }

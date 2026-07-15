@@ -18,7 +18,7 @@ type ProGateProps = {
 
 function DefaultLoading() {
   return (
-    <div className="flex items-center justify-center gap-2 rounded-3xl border border-white/10 bg-white/5 p-8 text-sm text-zinc-400">
+    <div className="flex items-center justify-center gap-2 rounded-3xl border border-surface-border bg-surface p-8 text-sm text-muted">
       <Loader2 className="h-4 w-4 animate-spin" />
       Sprawdzam dostęp…
     </div>
@@ -34,16 +34,16 @@ function DefaultPaywall({
 }) {
   const needsLogin = reason === "not_logged_in";
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-zinc-900/80 p-8 text-center backdrop-blur-xl">
-      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
+    <div className="relative overflow-hidden rounded-3xl border border-accent/30 bg-surface-card p-8 text-center">
+      <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/15 blur-3xl" />
       <div className="relative">
-        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-orange-300">
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
           <Lock className="h-6 w-6" />
         </span>
-        <h3 className="mt-4 text-xl font-black text-white">
+        <h3 className="mt-4 text-xl font-black text-foreground">
           {featureLabel ? `${featureLabel} jest w planie Pro` : "Funkcja Pro"}
         </h3>
-        <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
+        <p className="mx-auto mt-2 max-w-md text-sm text-muted">
           {needsLogin
             ? "Zaloguj się i aktywuj subskrypcję Pro, aby odblokować tę sekcję."
             : "Odblokuj pełny dostęp do treningu, bazy arkuszy CKE i rozwiązań krok po kroku."}
@@ -52,14 +52,14 @@ function DefaultPaywall({
           {needsLogin && (
             <Link
               href="/login"
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-zinc-800/80 px-5 py-3 text-sm font-black text-zinc-100 transition hover:bg-zinc-700/80"
+              className="btn-chunky-soft px-5 py-3 text-sm"
             >
               Zaloguj się
             </Link>
           )}
           <Link
             href="/cennik"
-            className="inline-flex items-center gap-2 rounded-2xl bg-brand-gradient px-5 py-3 text-sm font-black text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110"
+            className="btn-chunky px-5 py-3 text-sm"
           >
             Zobacz plany Pro
           </Link>

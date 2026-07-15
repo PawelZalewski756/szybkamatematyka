@@ -9,6 +9,9 @@ import {
   splitCmsTasks,
   type CmsArkuszGroup,
 } from "@/lib/baza-zadan/cke/group-cms-tasks";
+import { FREE_CMS_SHEETS_VISIBLE } from "@/lib/subscription/content-limits";
+import { useSubscription } from "@/lib/subscription/use-subscription";
+import { ProGate } from "@/components/subscription/ProGate";
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
 import { FileQuestion } from "lucide-react";
 import Link from "next/link";
@@ -73,6 +76,7 @@ export function BazaZadanArkuszePanel({
   schemaMissing = false,
   cmsNote,
 }: BazaZadanArkuszePanelProps) {
+  const { isPro } = useSubscription();
   const [scope, setScope] = useState<CmsScope>("matura");
   const [year, setYear] = useState<number | "all">("all");
 
@@ -133,6 +137,15 @@ export function BazaZadanArkuszePanel({
     () => groupCmsTasksByYear(filtered),
     [filtered],
   );
+
+  const visibleGroups = useMemo(() => {
+    const flat = yearSections.flatMap((s) => s.groups);
+    if (isPro) return { shown: flat, locked: [] as CmsArkuszGroup[] };
+    return {
+      shown: flat.slice(0, FREE_CMS_SHEETS_VISIBLE),
+      locked: flat.slice(FREE_CMS_SHEETS_VISIBLE),
+    };
+  }, [yearSections, isPro]);
 
   if (schemaMissing) {
     return <DatabaseSetupCard />;
@@ -216,22 +229,24 @@ export function BazaZadanArkuszePanel({
       />
     ) : (
       <div className="space-y-8">
-        {yearSections.map(({ year: y, groups }) => (
-          <section key={y}>
-            {year === "all" && yearSections.length > 1 && (
-              <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
-                {y}
-              </h3>
-            )}
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {visibleGroups.shown.map((group) => (
+            <li key={group.arkuszId}>
+              <BazaArkuszCard group={group} />
+            </li>
+          ))}
+        </ul>
+        {visibleGroups.locked.length > 0 && (
+          <ProGate featureLabel={`Pełne archiwum arkuszy (${visibleGroups.locked.length} więcej)`}>
             <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
-              {groups.map((group) => (
+              {visibleGroups.locked.map((group) => (
                 <li key={group.arkuszId}>
                   <BazaArkuszCard group={group} />
                 </li>
               ))}
             </ul>
-          </section>
-        ))}
+          </ProGate>
+        )}
       </div>
     );
 

@@ -42,7 +42,9 @@
     "seed:tasks-overnight": "tsx scripts/overnightTasksGemini.ts",
     "seed:tasks-sql": "tsx scripts/exportTasksSql.ts",
     "seed:tasks-sql-split": "tsx scripts/splitTasksSql.ts",
-    "seed:tasks-cache": "tsx scripts/pushTasksCache.ts"
+    "seed:tasks-cache": "tsx scripts/pushTasksCache.ts",
+    "seed:exam-archive": "tsx scripts/exportExamArchive.ts",
+    "seed:all": "tsx scripts/seedAll.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
