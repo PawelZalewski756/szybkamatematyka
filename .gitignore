@@ -52,5 +52,4 @@ data/cke-matura-cache/overnight.log
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
 data/tasks-cache/*.log
