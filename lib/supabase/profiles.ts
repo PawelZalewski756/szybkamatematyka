@@ -588,7 +588,7 @@ export async function updateProfileSchoolClass(
 ): Promise<Profile> {
   const patch: Record<string, unknown> = { school_class: schoolClass };
 
-  let { row, error } = await updateAndSelectProfile(userId, patch);
+  const { row, error } = await updateAndSelectProfile(userId, patch);
 
   if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
     console.warn(

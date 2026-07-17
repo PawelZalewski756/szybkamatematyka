@@ -12,7 +12,7 @@ import { useLearningPath } from "@/components/LearningPathProvider";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 function isNavActive(pathname: string, href: string): boolean {
@@ -53,7 +53,12 @@ export function NavbarSheet({
   showPro = false,
 }: NavbarSheetProps) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [menuPath, setMenuPath] = useState<string | null>(null);
+  const open = menuPath === pathname;
+  const setOpen = useCallback(
+    (next: boolean) => setMenuPath(next ? pathname : null),
+    [pathname],
+  );
   const sheetId = useId();
   const { schoolClass, setSchoolClass } = useLearningPath();
 
@@ -64,10 +69,6 @@ export function NavbarSheet({
     isNavActive(pathname, "/profil") ||
     (showPrimaryLinks &&
       NAV_PRIMARY_LINKS.some((l) => isNavActive(pathname, l.href)));
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -95,7 +96,7 @@ export function NavbarSheet({
       document.body.style.paddingRight = prevBodyPadding;
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [open]);
+  }, [open, setOpen]);
 
   const close = () => setOpen(false);
 

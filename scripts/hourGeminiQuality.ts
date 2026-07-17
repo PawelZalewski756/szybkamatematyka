@@ -49,7 +49,10 @@ function sleep(ms: number): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-function needsQualityRewrite(rozwiazanie: string): string | null {
+function needsQualityRewrite(
+  rozwiazanie: string,
+  mode: "strict" | "polish" = "strict",
+): string | null {
   const r = rozwiazanie.trim();
   if (!r || isSolutionPlaceholder(r)) return "placeholder";
   if (r.length < 140) return "za krótkie";
@@ -57,6 +60,14 @@ function needsQualityRewrite(rozwiazanie: string): string | null {
     return "broken explanation";
   }
   if ((r.match(/Krok/gi) || []).length < 2 && r.length < 280) return "słabe kroki";
+  if (mode === "polish") {
+    const steps = (r.match(/Krok/gi) || []).length;
+    if (r.length < 420) return "dopracowanie (krótkie)";
+    if (steps < 3 && r.length < 700) return "dopracowanie (mało kroków)";
+    if (!/\$|\\frac|\\sqrt|\\cdot|\\times/i.test(r) && r.length < 900) {
+      return "dopracowanie (brak LaTeX)";
+    }
+  }
   return null;
 }
 
@@ -84,7 +95,10 @@ function runNpm(script: string, args: string[] = []): Promise<number> {
   });
 }
 
-async function improveCkeSolutions(deadline: number): Promise<number> {
+async function improveCkeSolutions(
+  deadline: number,
+  mode: "strict" | "polish" = "strict",
+): Promise<number> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const key =
     process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
@@ -111,7 +125,7 @@ async function improveCkeSolutions(deadline: number): Promise<number> {
 
     for (const task of sheet.tasks) {
       if (Date.now() >= deadline) break;
-      const reason = needsQualityRewrite(task.rozwiazanie);
+      const reason = needsQualityRewrite(task.rozwiazanie, mode);
       if (!reason) continue;
 
       log(
@@ -125,6 +139,14 @@ async function improveCkeSolutions(deadline: number): Promise<number> {
         });
         if (!next.trim() || isSolutionPlaceholder(next)) {
           log("    ⚠ puste — pomijam");
+          continue;
+        }
+        // W trybie polish nie degraduj już dobrego tekstu
+        if (
+          mode === "polish" &&
+          next.trim().length < task.rozwiazanie.trim().length * 0.85
+        ) {
+          log("    ⚠ krótsze niż poprzednie — pomijam");
           continue;
         }
         task.rozwiazanie = next.trim();
@@ -141,7 +163,6 @@ async function improveCkeSolutions(deadline: number): Promise<number> {
             })
             .eq("source_id", sid);
           if (error) {
-            // fallback: update by arkusz name + numer
             log(`    ⚠ update source_id: ${error.message}`);
           } else {
             log(`    ✓ DB zaktualizowane (${sid})`);
@@ -184,11 +205,19 @@ async function main() {
   await runNpm("audit:theory");
 
   // 2) Popraw słabe rozwiązania CKE (Gemini, bez nowych arkuszy)
-  log("\n═══ Poprawa jakości rozwiązań CKE ═══");
-  const improved = await improveCkeSolutions(deadline);
-  log(`Poprawiono rozwiązań: ${improved}`);
+  log("\n═══ Poprawa jakości rozwiązań CKE (strict) ═══");
+  const improvedStrict = await improveCkeSolutions(deadline, "strict");
+  log(`Poprawiono (strict): ${improvedStrict}`);
 
-  // 3) Audyt końcowy
+  // 3) Dopracuj średnie rozwiązania — pełne wykorzystanie godziny
+  if (Date.now() < deadline) {
+    log("\n═══ Dopracowanie rozwiązań CKE (polish) ═══");
+    const improvedPolish = await improveCkeSolutions(deadline, "polish");
+    log(`Poprawiono (polish): ${improvedPolish}`);
+    log(`Razem poprawionych: ${improvedStrict + improvedPolish}`);
+  }
+
+  // 4) Audyt końcowy
   await runNpm("audit:cke");
   await runNpm("audit:questions");
 

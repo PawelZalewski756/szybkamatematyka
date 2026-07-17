@@ -14,17 +14,29 @@ import {
   type ProfileUpdatedDetail,
 } from "@/lib/profile-sync";
 import type { User } from "@supabase/supabase-js";
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 
 type OnboardingGateProps = {
   children: ReactNode;
 };
 
+const emptySubscribe = () => () => {};
+
 export function OnboardingGate({ children }: OnboardingGateProps) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [ready, setReady] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
+  const hydrated = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
   const [guestClassDone, setGuestClassDone] = useState(false);
 
   const load = useCallback(async (sessionUser: User | null) => {
@@ -44,10 +56,6 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
     } finally {
       setReady(true);
     }
-  }, []);
-
-  useEffect(() => {
-    setHydrated(true);
   }, []);
 
   useEffect(() => {

@@ -43,7 +43,11 @@ function freeQuotaLabel(quota: AssistQuotaSnapshot | null): string | null {
   return `Pozostało ${remaining} z ${quota.limit} zapytań (${quota.periodLabel})`;
 }
 
-export function TaskAiPanel({
+export function TaskAiPanel(props: TaskAiPanelProps) {
+  return <TaskAiPanelInner key={props.taskId} {...props} />;
+}
+
+function TaskAiPanelInner({
   taskId,
   taskContent,
   correctAnswer,
@@ -85,20 +89,12 @@ export function TaskAiPanel({
   }, [isLoggedIn]);
 
   useEffect(() => {
-    if (!loading && isLoggedIn) {
+    if (loading || !isLoggedIn) return;
+    const id = window.setTimeout(() => {
       void refreshQuota();
-    }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, [loading, isLoggedIn, isPro, refreshQuota]);
-
-  useEffect(() => {
-    setHintLevel(0);
-    setHintText(null);
-    setGradeText(null);
-    setChatTurns([]);
-    setAskDraft("");
-    setError(null);
-    setBusy(null);
-  }, [taskId]);
 
   const remaining = quotaRemaining(quota, isPro);
   const hasQuota = isPro || remaining > 0;

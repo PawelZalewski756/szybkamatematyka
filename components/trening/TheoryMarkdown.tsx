@@ -52,15 +52,18 @@ function flattenText(node: ReactNode): string {
 
 function markdownComponents(withAnchors: boolean): Components {
   const heading =
-    (Tag: "h2" | "h3") =>
-    ({ children }: { children?: ReactNode }) => {
-      const text = flattenText(children);
-      const id = withAnchors ? slugifyHeading(text) : undefined;
-      return (
-        <Tag id={id} className={withAnchors ? "scroll-mt-24" : undefined}>
-          {children}
-        </Tag>
-      );
+    (Tag: "h2" | "h3") => {
+      function Heading({ children }: { children?: ReactNode }) {
+        const text = flattenText(children);
+        const id = withAnchors ? slugifyHeading(text) : undefined;
+        return (
+          <Tag id={id} className={withAnchors ? "scroll-mt-24" : undefined}>
+            {children}
+          </Tag>
+        );
+      }
+      Heading.displayName = Tag === "h2" ? "MarkdownH2" : "MarkdownH3";
+      return Heading;
     };
 
   return {

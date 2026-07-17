@@ -84,8 +84,24 @@ export function MobileTabBar() {
   const isDesktopNav = useDesktopNav();
   const pathname = usePathname();
   const router = useRouter();
-  const [grajOpen, setGrajOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [grajPath, setGrajPath] = useState<string | null>(null);
+  const [morePath, setMorePath] = useState<string | null>(null);
+  const grajOpen = grajPath === pathname;
+  const moreOpen = morePath === pathname;
+  const setGrajOpen = (
+    next: boolean | ((prev: boolean) => boolean),
+  ) => {
+    const resolved = typeof next === "function" ? next(grajOpen) : next;
+    setGrajPath(resolved ? pathname : null);
+    if (resolved) setMorePath(null);
+  };
+  const setMoreOpen = (
+    next: boolean | ((prev: boolean) => boolean),
+  ) => {
+    const resolved = typeof next === "function" ? next(moreOpen) : next;
+    setMorePath(resolved ? pathname : null);
+    if (resolved) setGrajPath(null);
+  };
   const [user, setUser] = useState<User | null>(null);
   const [authReady, setAuthReady] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
@@ -93,11 +109,6 @@ export function MobileTabBar() {
   const activeTab = getMobileActiveTab(pathname);
   const profilHref = user ? "/profil" : "/login";
   const profilLabel = user ? "Profil" : "Konto";
-
-  useEffect(() => {
-    setGrajOpen(false);
-    setMoreOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     const supabase = getSupabase();

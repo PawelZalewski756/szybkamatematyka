@@ -5,7 +5,7 @@ import {
   uploadUserAvatar,
 } from "@/lib/supabase/avatar";
 import { Camera, Loader2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 type PlayerAvatarUploadProps = {
   userId: string;
@@ -22,12 +22,8 @@ export function PlayerAvatarUpload({
 }: PlayerAvatarUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
-  const [imageBroken, setImageBroken] = useState(false);
-
-  useEffect(() => {
-    setImageBroken(false);
-  }, [avatarUrl]);
-
+  const [brokenForUrl, setBrokenForUrl] = useState<string | null>(null);
+  const imageBroken = Boolean(avatarUrl) && brokenForUrl === avatarUrl;
   const showImage = Boolean(avatarUrl) && !imageBroken;
 
   const handleFile = async (file: File | undefined) => {
@@ -65,7 +61,7 @@ export function PlayerAvatarUpload({
             src={avatarUrl!}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
-            onError={() => setImageBroken(true)}
+            onError={() => setBrokenForUrl(avatarUrl)}
           />
         ) : (
           <span className="flex h-full w-full items-center justify-center text-4xl font-black text-on-accent sm:text-5xl">

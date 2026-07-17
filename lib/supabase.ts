@@ -29,7 +29,7 @@ export async function getSupabaseAccessToken(): Promise<string | null> {
   const supabase = getSupabase();
   const readToken = () => supabase.auth.getSession().then(({ data }) => data.session?.access_token ?? null);
 
-  let token = await readToken();
+  const token = await readToken();
   if (token) return token;
 
   const { data, error } = await supabase.auth.refreshSession();

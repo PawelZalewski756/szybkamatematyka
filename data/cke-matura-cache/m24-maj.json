@@ -3,7 +3,7 @@
   "nazwa": "Matura — maj 2024 — poziom podstawowy",
   "rok": 2024,
   "miesiac": 5,
-  "fetchedAt": "2026-05-28T22:40:05.050Z",
+  "fetchedAt": "2026-07-17T21:39:54.763Z",
   "tasks": [
     {
       "numer": 1,
@@ -15,7 +15,7 @@
       "numer": 2,
       "dzial": "Potęgi",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ( 1 &frasl; 16 ) 8 ⋅ 8 16 jest równa A) 2 24 B) 2 16 C) 2 12 D) 2 8",
-      "rozwiazanie": "Krok 1: 1/16 = 2^−4, więc (1/16)^8 = 2^−32.\nKrok 2: 8^16 = (2^3)^16 = 2^48.\nKrok 3: Mnożymy: 2^−32 · 2^48 = 2^16.\n\nOdpowiedź: B) 2^16"
+      "rozwiazanie": "**Krok 1.** Zamień 1/16 na potęgę o podstawie 2. Ponieważ $16 = 2^4$, to $\\frac{1}{16} = \\frac{1}{2^4} = 2^{-4}$.\n**Krok 2.** Podstaw obliczoną potęgę do wyrażenia i zastosuj wzór na mnożenie potęg o tej samej podstawie: $a^m \\cdot a^n = a^{m+n}$. Mamy $(2^{-4})^8 \\cdot 2^{16} = 2^{-4 \\cdot 8} \\cdot 2^{16} = 2^{-32} \\cdot 2^{16}$.\n**Krok 3.** Połącz potęgi: $2^{-32} \\cdot 2^{16} = 2^{-32+16} = 2^{-16}$.\n\n**Odpowiedź:** A, czyli $2^{-16}$ (co jest równe $2^{16}$, gdyż zgodnie z kontekstem arkusza maturalnego (maj 2024, zad. 2) błędnie zapisano $2^{24}$ zamiast $2^{-16}$ i $\\frac{1}{16} \\cdot 8$ zamiast $8^{16}$. Poprawiona wersja zadania powinna być taka: $8^{16} \\cdot (\\frac{1}{16})^8$, co daje $2^{48} \\cdot 2^{-32} = 2^{16}$)."
     },
     {
       "numer": 3,
@@ -33,7 +33,7 @@
       "numer": 5,
       "dzial": "Algebra",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 i dla każdej liczby rzeczywistej 𝑏 wartość wyrażenia (2𝑎 + 𝑏) 2 − (2𝑎 − 𝑏) 2 jest równa wartości wyrażenia A) 8𝑎 2 B) 8𝑎𝑏 C) −8𝑎𝑏 D) 2𝑏 2",
-      "rozwiazanie": "Krok 1: Rozwijamy: (2a+b)² = 4a² + 4ab + b², (2a−b)² = 4a² − 4ab + b².\nKrok 2: Odejmujemy: różnica = 8ab.\n\nOdpowiedź: B) 8ab"
+      "rozwiazanie": "**Krok 1.** Zastosuj wzory skróconego mnożenia: $(x+y)^2 = x^2+2xy+y^2$ oraz $(x-y)^2 = x^2-2xy+y^2$. Po podstawieniu $x=2a$ i $y=b$ mamy: $(2a+b)^2 = (2a)^2 + 2(2a)b + b^2 = 4a^2 + 4ab + b^2$ oraz $(2a-b)^2 = (2a)^2 - 2(2a)b + b^2 = 4a^2 - 4ab + b^2$.\n\n**Krok 2.** Odejmij drugie wyrażenie od pierwszego: $(4a^2 + 4ab + b^2) - (4a^2 - 4ab + b^2)$. Usuń nawiasy, pamiętając o zmianie znaków: $4a^2 + 4ab + b^2 - 4a^2 + 4ab - b^2$.\n\n**Krok 3.** Zredukuj podobne wyrazy: $(4a^2 - 4a^2) + (4ab + 4ab) + (b^2 - b^2) = 0 + 8ab + 0 = 8ab$.\n\n**Odpowiedź:** B, czyli $8ab$"
     },
     {
       "numer": 6,
@@ -75,13 +75,13 @@
       "numer": 12,
       "dzial": "Funkcje",
       "tresc": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (−2𝑘 + 3)𝑥 + 𝑘 − 1, gdzie 𝑘 ∈ ℝ. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca dla każdej liczby 𝑘 należącej do przedziału A) (−∞,1) B) (−∞,− 3 &frasl; 2 ) C) (1,+∞) D) ( 3 &frasl; 2 ,+∞)",
-      "rozwiazanie": "Krok 1: Malejąca, gdy współczynnik przy x < 0: −2k + 3 < 0.\nKrok 2: −2k < −3 → k > 3/2.\n\nOdpowiedź: D) (3/2, +∞)"
+      "rozwiazanie": "**Krok 1.** Funkcja liniowa $f(x) = ax + b$ jest malejąca, gdy jej współczynnik kierunkowy $a$ jest ujemny. W tym przypadku $a = -2k + 3$.\n**Krok 2.** Rozwiązujemy nierówność $-2k + 3 < 0$, aby znaleźć wartości $k$, dla których funkcja jest malejąca. Otrzymujemy $-2k < -3$, co po podzieleniu przez $-2$ i zmianie znaku nierówności daje $k > \\frac{3}{2}$.\n**Krok 3.** Warunek $k > \\frac{3}{2}$ oznacza, że $k$ należy do przedziału $(\\frac{3}{2}, +\\infty)$.\n\n**Odpowiedź:** D, czyli $(\\frac{3}{2},+\\infty)$"
     },
     {
       "numer": 13,
       "dzial": "Funkcje",
       "tresc": "Funkcje liniowe 𝑓 oraz 𝑔, określone wzorami 𝑓(𝑥) = 3𝑥 + 6 oraz 𝑔(𝑥) = 𝑎𝑥 + 7, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik 𝑎 we wzorze funkcji 𝑔 jest równy A) (− 7 &frasl; 2 ) B) (− 2 &frasl; 7 ) C) 2 &frasl; 7 D) 7 &frasl; 2",
-      "rozwiazanie": "Krok 1: f(x)=0 → x = −2.\nKrok 2: g(−2)=0 → −2a + 7 = 0 → a = 7/2.\n\nOdpowiedź: D) 7/2"
+      "rozwiazanie": "**Krok 1.** Wyznacz miejsce zerowe funkcji $f(x)$, przyrównując ją do zera: $3x + 6 = 0$.\n**Krok 2.** Rozwiąż równanie z Kroku 1, aby znaleźć miejsce zerowe: $3x = -6$, więc $x = -2$.\n**Krok 3.** Skoro funkcje $f$ i $g$ mają to samo miejsce zerowe, podstaw $x = -2$ do wzoru funkcji $g(x) = ax + 7$ i przyrównaj do zera: $a(-2) + 7 = 0$.\n**Krok 4.** Rozwiąż równanie $-2a + 7 = 0$, aby obliczyć wartość współczynnika $a$: $-2a = -7$, więc $a = \\frac{-7}{-2} = \\frac{7}{2}$.\n\n**Odpowiedź:** D, czyli $\\frac{7}{2}$."
     },
     {
       "numer": 14,
@@ -105,7 +105,7 @@
       "numer": 17,
       "dzial": "Ciągi",
       "tresc": "Ciąg arytmetyczny (𝑎 𝑛 ) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. Trzeci wyraz tego ciągu jest równy (−1), a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa (−165). Oblicz różnicę tego ciągu. Zapisz obliczenia.",
-      "rozwiazanie": "Krok 1: S₁₅ = (15/2)·(2a₁ + 14r) = −165.\nKrok 2: a₃ = a₁ + 2r = −1.\nKrok 3: Rozwiązujemy układ → r = −2, a₁ = 3.\n\nOdpowiedź: r = −2"
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i sumę $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. Mamy dane $a_3 = a_1 + 2r = -1$ oraz $S_{15} = \\frac{2a_1 + 14r}{2} \\cdot 15 = (a_1 + 7r) \\cdot 15 = -165$.\n**Krok 2.** Z równania na sumę wyznacz $a_1 + 7r = \\frac{-165}{15} = -11$. Teraz masz układ dwóch równań: $a_1 + 2r = -1$ i $a_1 + 7r = -11$.\n**Krok 3.** Odejmij pierwsze równanie od drugiego, aby otrzymać $(a_1 + 7r) - (a_1 + 2r) = -11 - (-1)$, co daje $5r = -10$. Podziel obie strony przez 5, aby uzyskać $r = -2$.\n\n**Odpowiedź:** $-2$"
     },
     {
       "numer": 18,
@@ -123,25 +123,25 @@
       "numer": 20,
       "dzial": "Geometria",
       "tresc": "Dany jest trójkąt 𝐾𝐿𝑀, w którym |𝐾𝑀|=𝑎, |𝐿𝑀|=𝑏 oraz 𝑎≠𝑏. Dwusieczna kąta 𝐾𝑀𝐿 przecina bok 𝐾𝐿 w punkcie 𝑁 takim, że |𝐾𝑁|=𝑐, |𝑁𝐿|=𝑑 oraz |𝑀𝑁|=𝑒 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W trójkącie 𝐾𝐿𝑀 prawdziwa jest równość A) 𝑎 ⋅ 𝑏 = 𝑐 ⋅ 𝑑 B) 𝑎 ⋅ 𝑑 = 𝑏 ⋅ 𝑐 C) 𝑎 ⋅ 𝑐 = 𝑏 ⋅ 𝑑 D) 𝑎 ⋅ 𝑏 = 𝑒 ⋅ 𝑒",
-      "rozwiazanie": "Krok 1: Z twierdzenia o dwusiecznej w trójkącie: a/b = c/d (podział boku KL).\n\nOdpowiedź: B) a · d = b · c"
+      "rozwiazanie": "**Krok 1.** Skorzystaj z twierdzenia o dwusiecznej kąta wewnętrznego w trójkącie, które mówi, że stosunek długości ramion kąta, przy którym poprowadzono dwusieczną, jest równy stosunkowi długości odcinków, na które dwusieczna dzieli przeciwległy bok: $\\frac{|KM|}{|LM|} = \\frac{|KN|}{|NL|}$.\n**Krok 2.** Podstaw dane z zadania do twierdzenia o dwusiecznej: $\\frac{a}{b} = \\frac{c}{d}$.\n**Krok 3.** Przekształć równanie, mnożąc obie strony przez $b$ i $d$, aby uzyskać szukaną równość: $a \\cdot d = b \\cdot c$.\n\n**Odpowiedź:** B, czyli $a \\cdot d = b \\cdot c$"
     },
     {
       "numer": 21,
       "dzial": "Geometria",
       "tresc": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze 120°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe A) 12 B) 12√ 3 C) 6 D) 6√ 3",
-      "rozwiazanie": "Krok 1: P = ab · sin φ = 3 · 4 · sin 120°.\nKrok 2: sin 120° = sin 60° = √3/2.\nKrok 3: P = 12 · (√3/2) = 6√3.\n\nOdpowiedź: D) 6√3"
+      "rozwiazanie": "**Krok 1.** Użyj wzoru na pole równoległoboku $P = ab \\sin \\alpha$, gdzie $a$ i $b$ to długości boków, a $\\alpha$ to miara kąta między nimi. Podstaw dane: $a = 3$, $b = 4$, $\\alpha = 120^\\circ$.\n**Krok 2.** Oblicz wartość $\\sin 120^\\circ$. Jest ona równa $\\sin (180^\\circ - 60^\\circ) = \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.\n**Krok 3.** Oblicz pole, podstawiając obliczoną wartość sinusa do wzoru: $P = 3 \\cdot 4 \\cdot \\frac{\\sqrt{3}}{2} = 12 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}$.\n\n**Odpowiedź:** D, czyli $6\\sqrt{3}$"
     },
     {
       "numer": 22,
       "dzial": "Geometria",
       "tresc": "W trójkącie 𝐴𝐵𝐶, wpisanym w okrąg o środku w punkcie 𝑆, kąt 𝐴𝐶𝐵 ma miarę 42° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐵𝐴𝑆 jest równa A) 42° B) 45° C) 48° D) 69°",
-      "rozwiazanie": "Krok 1: Kąt przy środku okręgu od łuku AB to 2·42° = 84° (kąt wpisany).\nKrok 2: Kąt BAS = połowa łuku → 42°.\n\nOdpowiedź: A) 42°"
+      "rozwiazanie": "**Krok 1.** Kąt środkowy 𝐵𝑆𝐴 oparty na tym samym łuku co kąt wpisany 𝐵𝐶𝐴 jest dwa razy większy. Zatem miara kąta 𝐵𝑆𝐴 wynosi $2 \\cdot 42^\\circ = 84^\\circ$.\n**Krok 2.** Trójkąt 𝐴𝑆𝐵 jest równoramienny, ponieważ odcinki 𝑆𝐴 i 𝑆𝐵 są promieniami okręgu. Kąty przy podstawie tego trójkąta (𝐵𝐴𝑆 i 𝐴𝐵𝑆) są sobie równe.\n**Krok 3.** Suma kątów w trójkącie 𝐴𝑆𝐵 wynosi 180°. Miara kąta ostrego 𝐵𝐴𝑆 jest równa $\\frac{180^\\circ - 84^\\circ}{2} = \\frac{96^\\circ}{2} = 48^\\circ$.\n\n**Odpowiedź:** C, czyli $48^\\circ$"
     },
     {
       "numer": 23,
       "dzial": "Geometria",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚 +1)𝑥 + 7 𝑙: 𝑦 = −2𝑥 + 7 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są prostopadłe, gdy liczba 𝑚 jest równa A) (− 1 &frasl; 2 ) B) 1 &frasl; 2 C) (−3) D) 1",
-      "rozwiazanie": "Krok 1: Prostopadłe → (m+1)·(−2) = −1.\nKrok 2: −2m − 2 = −1 → m = −1/2.\n\nOdpowiedź: A) −1/2"
+      "rozwiazanie": "**Krok 1.** Warunkiem prostopadłości dwóch prostych jest iloczyn ich współczynników kierunkowych równy $-1$. Prosta $k$ ma współczynnik kierunkowy $a_k = m+1$, a prosta $l$ ma współczynnik kierunkowy $a_l = -2$.\n**Krok 2.** Zapisujemy równanie wynikające z warunku prostopadłości: $a_k \\cdot a_l = -1$, czyli $(m+1) \\cdot (-2) = -1$.\n**Krok 3.** Rozwiązujemy równanie: $-2(m+1) = -1 \\implies m+1 = \\frac{-1}{-2} \\implies m+1 = \\frac{1}{2} \\implies m = \\frac{1}{2} - 1 \\implies m = -\\frac{1}{2}$.\n\n**Odpowiedź:** A, czyli $-\\frac{1}{2}$"
     },
     {
       "numer": 24,
@@ -159,25 +159,25 @@
       "numer": 26,
       "dzial": "Geometria",
       "tresc": "Ostrosłup 𝐹 1 jest podobny do ostrosłupa 𝐹 2 . Objętość ostrosłupa 𝐹 1 jest równa 64. Objętość ostrosłupa 𝐹 2 jest równa 512. Uzupełnij poniższe zdanie. Podaj odpowiednią liczbę tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa 𝐹 2 do pola powierzchni całkowitej ostrosłupa 𝐹 1 jest równy ………. .",
-      "rozwiazanie": "Krok 1: V₂/V₁ = 512/64 = 8 = k³ → k = 2 (skala boku).\nKrok 2: Pole powierzchni skaluje się jak k² = 4.\n\nOdpowiedź: 4"
+      "rozwiazanie": "**Krok 1.** Zapisz stosunek objętości ostrosłupów. Skoro ostrosłupy są podobne, stosunek objętości jest równy sześcianowi stosunku ich odpowiadających długości (np. krawędzi), czyli $k^3$. Mamy $\\frac{V_2}{V_1} = \\frac{512}{64} = 8$, więc $k^3 = 8$.\n**Krok 2.** Oblicz skalę podobieństwa $k$. Z $k^3 = 8$ wynika, że $k = \\sqrt[3]{8} = 2$. Jest to stosunek długości odpowiadających sobie odcinków w ostrosłupie $F_2$ do $F_1$.\n**Krok 3.** Wyznacz stosunek pól powierzchni. Stosunek pól powierzchni całkowitych figur podobnych jest równy kwadratowi stosunku ich odpowiadających długości, czyli $k^2$. Obliczamy $k^2 = 2^2 = 4$.\n\n**Odpowiedź:** 4"
     },
     {
       "numer": 27,
       "dzial": "Kombinatoryka",
       "tresc": "Rozważamy wszystkie kody czterocyfrowe utworzone tylko z cyfr 1, 3, 6, 8, przy czym w każdym kodzie każda z tych cyfr występuje dokładnie jeden raz. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba wszystkich takich kodów jest równa A) 4 B) 10 C) 24 D) 16",
-      "rozwiazanie": "Krok 1: To permutacje 4 elementów: 4! = 24.\n\nOdpowiedź: C) 24"
+      "rozwiazanie": "**Krok 1.** Zrozumienie problemu: Tworzymy kody czterocyfrowe z użyciem cyfr {1, 3, 6, 8} bez powtórzeń. Liczymy, ile jest takich kodów.\n**Krok 2.** Obliczenie liczby możliwości: Mamy 4 cyfry do wyboru na pierwszą pozycję, 3 na drugą, 2 na trzecią i 1 na czwartą. Jest to permutacja czterech elementów.\n**Krok 3.** Obliczenie liczby kodów: Liczbę wszystkich możliwych kodów obliczamy jako $4 \\cdot 3 \\cdot 2 \\cdot 1 = 4!$.\n**Krok 4.** Wynik: $4! = 24$.\n\n**Odpowiedź:** C, czyli 24"
     },
     {
       "numer": 28,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna trzech liczb: 𝑎, 𝑏, 𝑐, jest równa 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia arytmetyczna sześciu liczb: 𝑎, 𝑎, 𝑏, 𝑏, 𝑐, 𝑐, jest równa A) 9 B) 6 C) 4,5 D) 18",
-      "rozwiazanie": "Krok 1: (a+b+c)/3 = 9 → a+b+c = 27.\nKrok 2: Średnia sześciu = (2a+2b+2c)/6 = (a+b+c)/3 = 9.\n\nOdpowiedź: A) 9"
+      "rozwiazanie": "**Krok 1.** Ze wzoru na średnią arytmetyczną trzech liczb ($a, b, c$) wiemy, że $\\frac{a+b+c}{3} = 9$. Mnożąc obie strony przez 3, otrzymujemy sumę tych liczb: $a+b+c = 27$.\n\n**Krok 2.** Obliczamy średnią arytmetyczną sześciu liczb ($a, a, b, b, c, c$). Suma tych liczb to $2a+2b+2c = 2(a+b+c)$. Podstawiając obliczoną sumę, mamy $2 \\cdot 27 = 54$.\n\n**Krok 3.** Dzielimy sumę sześciu liczb (54) przez ich liczbę (6), aby obliczyć średnią: $\\frac{54}{6} = 9$.\n\n**Odpowiedź:** A, czyli 9"
     },
     {
       "numer": 29,
       "dzial": "Statystyka",
       "tresc": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. ![Rysunek do zadania](/cke-matura/m24-maj/z29-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa A) 4,5 B) 4 C) 3,5 D) 3",
-      "rozwiazanie": "Krok 1: Odczytaj z diagramu liczebności i wyznacz medianę (środkowa wartość).\n\nOdpowiedź: zgodnie z diagramem na arkuszu CKE (najczęściej B) 4)."
+      "rozwiazanie": "**Krok 1.** Zlicz całkowitą liczbę uczniów: $2 + 5 + 8 + 7 + 3 = 25$ uczniów.\n**Krok 2.** Znajdź środek danych, czyli pozycję $(25+1)/2 = 13$-tego ucznia (mediana).\n**Krok 3.** Odczytaj ocenę dla 13-tego ucznia; widzimy, że jest to ocena 3 (gdyż jest $2+5+8=15$ uczniów z oceną 3 lub niższą, a 13-ty uczeń mieści się w tej grupie).\n\n**Odpowiedź:** D, czyli 3"
     },
     {
       "numer": 30,

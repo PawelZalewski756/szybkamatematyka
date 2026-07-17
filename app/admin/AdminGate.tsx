@@ -13,16 +13,16 @@ type GateState = "checking" | "allowed" | "denied";
  * Nieuprawnieni widzą zwykły 404 (bez podpowiedzi, że istnieje /admin).
  */
 export function AdminGate({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<GateState>("checking");
+  const [state, setState] = useState<GateState>(() =>
+    isSupabaseConfigured() ? "checking" : "denied",
+  );
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) {
-      setState("denied");
-      return;
-    }
+    if (!isSupabaseConfigured()) return;
 
     const supabase = getSupabaseOrNull();
     if (!supabase) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setState("denied");
       return;
     }
