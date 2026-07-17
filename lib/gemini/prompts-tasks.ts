@@ -9,6 +9,8 @@ export type GenerateTasksInput = {
   existingSamples: string[];
   /** choice = ABCD, open = wpisanie odpowiedzi */
   taskKind: "choice" | "open";
+  /** Wymuś SVG przy każdym zadaniu (geometria / wykresy). */
+  requireFigures?: boolean;
 };
 
 export const TASKS_OPEN_SYSTEM_PROMPT = `Jesteś autorem zadań maturalnych i egzaminu ósmoklasisty z matematyki.
@@ -89,12 +91,18 @@ export function buildTasksBatchUserPrompt(input: GenerateTasksInput): string {
           .join("\n")}\n`
       : "";
 
+  const figureRule = input.requireFigures
+    ? `\nWYMAGANE: KAŻDE zadanie MUSI mieć niepusty figure_svg (SVG z viewBox="0 0 240 180") oraz figure_caption. ` +
+      `Treść ma odwoływać się do rysunku (np. „Na rysunku…”, „Na wykresie…”). ` +
+      `Bez figure_svg = null.\n`
+    : "";
+
   return `Egzamin: ${input.examLabel}
 Dział: ${input.categoryName} (${input.categorySlug})
 Temat: ${input.topicName} (${input.topicSlug})
 Partia nr: ${input.batchIndex + 1}
 Liczba zadań w tej odpowiedzi: ${input.batchSize}
-${samples}
+${samples}${figureRule}
 Wygeneruj ${input.batchSize} różnorodnych zadań zamkniętych (ABCD) dla tego tematu.
 
 Schemat JSON (tablica):
@@ -107,8 +115,8 @@ Schemat JSON (tablica):
     "difficulty": 2,
     "xp_reward": 16,
     "explanation": "Dlaczego ta odpowiedź jest poprawna…",
-    "figure_svg": "<svg viewBox=\\"0 0 240 180\\" xmlns=\\"http://www.w3.org/2000/svg\\">...</svg>" lub null,
-    "figure_caption": "Opis figury" lub null
+    "figure_svg": "<svg viewBox=\\"0 0 240 180\\" xmlns=\\"http://www.w3.org/2000/svg\\">...</svg>"${input.requireFigures ? "" : " lub null"},
+    "figure_caption": "Opis figury"${input.requireFigures ? "" : " lub null"}
   }
 ]`;
 }
@@ -116,6 +124,10 @@ Schemat JSON (tablica):
 export const TASKS_FORMAT_REMINDER =
   "Pamiętaj: zwróć TYLKO tablicę JSON. correct_answer MUSI być identyczna z jedną opcją. " +
   "Sprawdź obliczenia — correct_answer = wynik z explanation. Bez samokorekty w explanation.";
+
+export const TASKS_FIGURES_REMINDER =
+  "KAŻDE zadanie musi mieć figure_svg (pełny <svg>…</svg>) i figure_caption. " +
+  "Rysunek czytelny na ciemnym tle (#e5e5e5). correct_answer = jedna z opcji i zgodna z explanation.";
 
 export const TASKS_OPEN_FORMAT_REMINDER =
   "Pamiętaj: zwróć TYLKO tablicę JSON. options=[]. correct_answer = końcowy wynik obliczeń (krótki). " +

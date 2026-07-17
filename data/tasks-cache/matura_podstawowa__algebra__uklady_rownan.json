@@ -1,0 +1,48 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "uklady_rownan",
+  "categoryName": "Algebra i równania",
+  "topicName": "Układy równań",
+  "tasks": [
+    {
+      "content": "Na wykresie przedstawiono dwie proste o równaniach $y = 2x - 1$ oraz $y = -x + 5$. \\\\\nRozwiązaniem układu równań utworzonego z tych dwóch równań jest para liczb $(x, y)$, która odpowiada współrzędnym punktu przecięcia się tych prostych. Podaj współrzędne tego punktu.",
+      "correct_answer": "A. $(2, 3)$",
+      "options": [
+        "A. $(2, 3)$",
+        "B. $(3, 2)$",
+        "C. $(1, 1)$",
+        "D. $(4, 7)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Aby znaleźć punkt przecięcia prostych, należy przyrównać ich równania: $2x - 1 = -x + 5$. Po przekształceniach otrzymujemy $3x = 6$, czyli $x = 2$. Następnie podstawiamy $x=2$ do jednego z równań, np. $y = 2(2) - 1 = 4 - 1 = 3$. Punkt przecięcia to $(2, 3)$.",
+      "figure_svg": "<svg viewBox=\"0 0 240 180\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#e5e5e5\" /></marker></defs><path d=\"M0,170 L230,170\" stroke=\"#e5e5e5\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\" /><path d=\"M10,170 L10,0\" stroke=\"#e5e5e5\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\" /><text x=\"235\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#e5e5e5\">x</text><text x=\"5\" y=\"10\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#e5e5e5\">y</text><path d=\"M20,150 L220,20\" stroke=\"#e5e5e5\" stroke-width=\"2\" /><text x=\"120\" y=\"160\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#e5e5e5\">y = 2x - 1</text><path d=\"M20,70 L160,160\" stroke=\"#e5e5e5\" stroke-width=\"2\" /><text x=\"170\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#e5e5e5\">y = -x + 5</text><circle cx=\"100\" cy=\"100\" r=\"3\" fill=\"#e5e5e5\" /></svg>",
+      "figure_caption": "Wykres dwóch przecinających się prostych.",
+      "id": "0a0dbc89-95e1-48ae-8fc1-b592150b004e",
+      "generatedAt": "2026-07-17T21:13:36.999Z",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "content": "Na poniższym rysunku przedstawiono geometryczną interpretację układu równań liniowych dwóch zmiennych. \\\\\nKtóry z poniższych układów równań jest opisany na rysunku?",
+      "correct_answer": "A. $y = x + 2$ i $y = -2x + 5$",
+      "options": [
+        "A. $y = x + 2$ i $y = -2x + 5$",
+        "B. $y = -x + 2$ i $y = 2x + 5$",
+        "C. $y = 2x + 2$ i $y = -x + 5$",
+        "D. $y = x + 2$ i $y = 2x + 5$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Pierwsza prosta przecina oś $y$ w punkcie $(0, 2)$ i ma dodatni współczynnik kierunkowy (rośnie), co pasuje do równania $y = x + 2$. Druga prosta przecina oś $y$ w punkcie $(0, 5)$ i ma ujemny współczynnik kierunkowy (maleje), co pasuje do równania $y = -2x + 5$. Punkt przecięcia $(1, 3)$ spełnia oba równania.",
+      "figure_svg": "<svg viewBox=\"0 0 240 180\" xmlns=\"http://www.w3.org/2000/svg\"><defs><marker id=\"arrowhead\" markerWidth=\"10\" markerHeight=\"10\" refX=\"0\" refY=\"5\" orient=\"auto\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#e5e5e5\" /></marker></defs><path d=\"M0,170 L230,170\" stroke=\"#e5e5e5\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\" /><path d=\"M10,170 L10,0\" stroke=\"#e5e5e5\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\" /><text x=\"235\" y=\"175\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#e5e5e5\">x</text><text x=\"5\" y=\"10\" font-family=\"sans-serif\" font-size=\"14\" fill=\"#e5e5e5\">y</text><path d=\"M20,150 L160,70\" stroke=\"#e5e5e5\" stroke-width=\"2\" /><text x=\"170\" y=\"60\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#e5e5e5\">y = -2x + 5</text><path d=\"M20,40 L160,100\" stroke=\"#e5e5e5\" stroke-width=\"2\" /><text x=\"170\" y=\"110\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#e5e5e5\">y = x + 2</text><circle cx=\"100\" cy=\"80\" r=\"3\" fill=\"#e5e5e5\" /></svg>",
+      "figure_caption": "Wykres dwóch przecinających się prostych o podanych równaniach.",
+      "id": "545b3512-601c-421e-bb74-3446daa6098c",
+      "generatedAt": "2026-07-17T21:13:36.999Z",
+      "model": "gemini-2.5-flash-lite"
+    }
+  ],
+  "updatedAt": "2026-07-17T21:15:02.998Z"
+}

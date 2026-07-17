@@ -1,0 +1,48 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "funkcje",
+  "topic": "funkcja_liniowa",
+  "categoryName": "Funkcje",
+  "topicName": "Funkcja liniowa",
+  "tasks": [
+    {
+      "content": "Na rysunku przedstawiono fragment wykresu funkcji liniowej $f(x) = ax+b$. Wyznacz współczynnik $a$.",
+      "correct_answer": "a = -$\\frac{1}{2}$",
+      "options": [
+        "a = -2",
+        "a = -$\\frac{1}{2}$",
+        "a = $\\frac{1}{2}$",
+        "a = 2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Wykres funkcji liniowej przechodzi przez punkty (0, 2) i (4, 0). Współczynnik kierunkowy $a$ obliczamy ze wzoru $a = \\frac{y_2 - y_1}{x_2 - x_1}$. Podstawiając współrzędne punktów: $a = \\frac{0 - 2}{4 - 0} = \\frac{-2}{4} = -\\frac{1}{2}$.",
+      "figure_svg": "<svg viewBox=\"0 0 240 180\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"0\" y1=\"20\" x2=\"240\" y2=\"160\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><text x=\"10\" y=\"20\" fill=\"#e5e5e5\">y</text><text x=\"230\" y=\"170\" fill=\"#e5e5e5\">x</text><line x1=\"10\" y1=\"0\" x2=\"10\" y2=\"180\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><line x1=\"0\" y1=\"170\" x2=\"240\" y2=\"170\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><text x=\"20\" y=\"30\" fill=\"#e5e5e5\">2</text><circle cx=\"10\" cy=\"40\" r=\"3\" fill=\"#e5e5e5\"/><circle cx=\"80\" cy=\"100\" r=\"3\" fill=\"#e5e5e5\"/><text x=\"220\" y=\"165\" fill=\"#e5e5e5\">4</text></svg>",
+      "figure_caption": "Fragment wykresu funkcji liniowej przechodzącej przez punkty (0, 2) i (4, 0).",
+      "id": "e711de12-e669-4f9d-8ef2-0a43c7cb28da",
+      "generatedAt": "2026-07-17T21:13:43.528Z",
+      "model": "gemini-2.5-flash-lite"
+    },
+    {
+      "content": "Na rysunku przedstawiono fragment wykresu funkcji liniowej $f(x) = ax+b$. Odczytaj z wykresu wartość współczynnika $b$.",
+      "correct_answer": "b = 2",
+      "options": [
+        "b = -1",
+        "b = 0",
+        "b = 1",
+        "b = 2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Wykres funkcji liniowej $f(x) = ax+b$ przecina oś Y w punkcie, którego współrzędne to (0, b). Zgodnie z rysunkiem, wykres przechodzi przez punkt (0, 2), zatem współczynnik $b$ jest równy 2.",
+      "figure_svg": "<svg viewBox=\"0 0 240 180\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"0\" y1=\"20\" x2=\"240\" y2=\"160\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><text x=\"10\" y=\"20\" fill=\"#e5e5e5\">y</text><text x=\"230\" y=\"170\" fill=\"#e5e5e5\">x</text><line x1=\"10\" y1=\"0\" x2=\"10\" y2=\"180\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><line x1=\"0\" y1=\"170\" x2=\"240\" y2=\"170\" stroke=\"#e5e5e5\" stroke-width=\"2\"/><text x=\"20\" y=\"30\" fill=\"#e5e5e5\">2</text><circle cx=\"10\" cy=\"40\" r=\"3\" fill=\"#e5e5e5\"/><circle cx=\"80\" cy=\"100\" r=\"3\" fill=\"#e5e5e5\"/><text x=\"220\" y=\"165\" fill=\"#e5e5e5\">4</text></svg>",
+      "figure_caption": "Fragment wykresu funkcji liniowej przechodzącej przez punkty (0, 2) i (4, 0).",
+      "id": "145b6100-f623-42ce-9aa1-8b01c16f27b7",
+      "generatedAt": "2026-07-17T21:13:43.528Z",
+      "model": "gemini-2.5-flash-lite"
+    }
+  ],
+  "updatedAt": "2026-07-17T21:13:43.528Z"
+}
