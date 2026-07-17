@@ -1,5 +1,7 @@
 "use client";
 
+import { calculateXpProgress } from "@/lib/levelSystem";
+
 type AccountLevelBarProps = {
   level: number;
   xp: number;
@@ -7,21 +9,35 @@ type AccountLevelBarProps = {
 };
 
 export function AccountLevelBar({ level, xp, subtitle }: AccountLevelBarProps) {
-  const xpInLevel = xp % 100;
-  const pct = Math.min(100, Math.max(0, xpInLevel));
+  const { currentLevelXp, xpForNextLevel } = calculateXpProgress(xp);
+  const pct = Math.min(
+    100,
+    Math.max(0, (currentLevelXp / xpForNextLevel) * 100),
+  );
 
   return (
     <div className="game-surface p-4">
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <span className="rounded-lg bg-accent px-2.5 py-1 text-sm font-black text-on-accent">
-            Lv.{level}
+        <div className="flex min-w-0 items-center gap-2">
+          <span className="shrink-0 rounded-lg bg-accent px-2.5 py-1 text-sm font-bold text-on-accent">
+            Poz. {level}
           </span>
-          <span className="text-sm font-semibold text-muted">{subtitle}</span>
+          {subtitle ? (
+            <span className="truncate text-sm text-muted">{subtitle}</span>
+          ) : null}
         </div>
-        <span className="text-sm font-bold tabular-nums text-accent">{xp} XP</span>
+        <span className="shrink-0 text-sm tabular-nums text-muted">
+          {currentLevelXp}/{xpForNextLevel} XP
+        </span>
       </div>
-      <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-surface-hover">
+      <div
+        className="mt-3 h-2 overflow-hidden rounded-full bg-surface-hover"
+        role="progressbar"
+        aria-valuenow={Math.round(pct)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label="Postęp do następnego poziomu"
+      >
         <div className="progress-accent" style={{ width: `${pct}%` }} />
       </div>
     </div>

@@ -43,6 +43,7 @@ export function BazaZadanTasksPanel() {
   const [category, setCategory] = useState<TaskCategory | "all">("all");
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const deferredSearch = useDeferredValue(search);
 
@@ -62,19 +63,17 @@ export function BazaZadanTasksPanel() {
   const resetPagination = () => setVisibleCount(PAGE_SIZE);
 
   const filtersSidebar = (
-    <aside className="page-sidebar space-y-6 rounded-2xl border border-surface-border bg-surface p-5">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-wide text-muted">Filtry</p>
-        <p className="mt-1 text-2xl font-black tabular-nums text-foreground">
-          {tasks.length}
-        </p>
-        <p className="text-xs text-muted">
+    <aside className="page-sidebar space-y-5 rounded-xl border border-surface-border bg-surface p-4 sm:p-5">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-sm font-semibold text-foreground">Filtry</p>
+        <p className="text-sm tabular-nums text-muted">
+          {tasks.length}{" "}
           {tasks.length === 1 ? "zadanie" : tasks.length < 5 ? "zadania" : "zadań"}
         </p>
       </div>
 
       <div>
-        <label htmlFor="baza-search" className="text-xs font-bold text-muted">
+        <label htmlFor="baza-search" className="text-xs font-medium text-muted">
           Szukaj
         </label>
         <input
@@ -86,13 +85,13 @@ export function BazaZadanTasksPanel() {
             resetPagination();
           }}
           placeholder="Tytuł lub treść…"
-          className="input-field mt-2 w-full px-3 py-2.5 text-sm"
+          className="input-field mt-1.5 w-full px-3 py-2 text-sm"
         />
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-muted">Trudność</p>
-        <div className="flex flex-wrap gap-2">
+        <p className="mb-1.5 text-xs font-medium text-muted">Trudność</p>
+        <div className="flex flex-wrap gap-1.5">
           <FilterChip
             active={difficulty === "all"}
             onClick={() => {
@@ -118,30 +117,25 @@ export function BazaZadanTasksPanel() {
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-muted">Dział</p>
-        <div className="flex max-h-64 flex-wrap gap-2 overflow-y-auto pr-1">
-          <FilterChip
-            active={category === "all"}
-            onClick={() => {
-              setCategory("all");
-              resetPagination();
-            }}
-          >
-            Wszystkie
-          </FilterChip>
+        <label htmlFor="baza-dzial" className="text-xs font-medium text-muted">
+          Dział
+        </label>
+        <select
+          id="baza-dzial"
+          value={category}
+          onChange={(e) => {
+            setCategory(e.target.value as TaskCategory | "all");
+            resetPagination();
+          }}
+          className="input-field mt-1.5 w-full px-3 py-2 text-sm"
+        >
+          <option value="all">Wszystkie działy</option>
           {ALL_CATEGORIES.map((c) => (
-            <FilterChip
-              key={c}
-              active={category === c}
-              onClick={() => {
-                setCategory(c);
-                resetPagination();
-              }}
-            >
+            <option key={c} value={c}>
               {CATEGORY_LABELS[c]}
-            </FilterChip>
+            </option>
           ))}
-        </div>
+        </select>
       </div>
     </aside>
   );
@@ -156,7 +150,7 @@ export function BazaZadanTasksPanel() {
         />
       ) : (
         <>
-          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
             {visible.map((task) => (
               <li key={task.id}>
                 <TaskCard task={task} />
@@ -181,9 +175,23 @@ export function BazaZadanTasksPanel() {
   );
 
   return (
-    <div className="page-with-sidebar">
-      {filtersSidebar}
-      <div>{taskGrid}</div>
+    <div className="space-y-4">
+      <div className="lg:hidden">
+        <button
+          type="button"
+          onClick={() => setFiltersOpen((v) => !v)}
+          className="btn-ghost w-full justify-between px-4 py-2.5 text-sm font-semibold"
+        >
+          {filtersOpen ? "Ukryj filtry" : "Pokaż filtry"}
+          <span className="tabular-nums text-muted">{tasks.length}</span>
+        </button>
+        {filtersOpen ? <div className="mt-3">{filtersSidebar}</div> : null}
+      </div>
+
+      <div className="page-with-sidebar">
+        <div className="hidden lg:block">{filtersSidebar}</div>
+        <div>{taskGrid}</div>
+      </div>
     </div>
   );
 }

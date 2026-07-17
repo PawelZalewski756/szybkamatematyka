@@ -34,6 +34,7 @@ import {
 import { sleep } from "../lib/gemini/generate-solution";
 import { fetchAllPages } from "../lib/supabase/fetch-all-pages";
 import { buildTopicHref } from "../lib/trening/slugs";
+import type { TreningExamKey } from "../lib/trening/curriculum";
 import {
   appendTasksToCache,
   countTaskCacheProgress,
@@ -228,7 +229,11 @@ function qualityGate(task: ParsedGeminiTask): {
 }
 
 function toReviewItem(slot: TaskSlot, task: CachedGeminiTask, issues: string[], repaired: boolean): ReviewItem {
-  const href = buildTopicHref(slot.exam_type, slot.category, slot.topic);
+  const href = buildTopicHref(
+    slot.exam_type as TreningExamKey,
+    slot.category,
+    slot.topic,
+  );
   return {
     id: task.id,
     exam_type: slot.exam_type,

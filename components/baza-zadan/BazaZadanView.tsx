@@ -19,10 +19,22 @@ type BazaZadanViewProps = {
   cmsNote?: string | null;
 };
 
-const TABS: { id: BazaTab; label: string }[] = [
-  { id: "zadania", label: "Zadania" },
-  { id: "arkusze", label: "Arkusze CKE" },
-  { id: "trening", label: "Arkusze treningowe" },
+const TABS: { id: BazaTab; label: string; hint: string }[] = [
+  {
+    id: "zadania",
+    label: "Ćwicz zadania",
+    hint: "Pojedyncze zadania treningowe — filtruj po dziale i trudności.",
+  },
+  {
+    id: "arkusze",
+    label: "Arkusze CKE",
+    hint: "Oficjalne matury i egzaminy z rozwiązaniami krok po kroku.",
+  },
+  {
+    id: "trening",
+    label: "Symulacje",
+    hint: "Krótkie arkusze treningowe w aplikacji (E8 / matura MIX).",
+  },
 ];
 
 function parseTab(value: string | null): BazaTab {
@@ -54,6 +66,8 @@ export function BazaZadanView({
     trening: sheetCount,
   };
 
+  const activeTab = TABS.find((t) => t.id === tab) ?? TABS[0]!;
+
   const setTab = (next: BazaTab) => {
     const params = new URLSearchParams(searchParams.toString());
     if (next === "zadania") params.delete("tab");
@@ -65,13 +79,13 @@ export function BazaZadanView({
   return (
     <div className="page-container w-full py-8 sm:py-10">
       <header>
-        <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Baza zadań
         </h1>
         <p className="mt-2 max-w-2xl text-base text-muted">
-          Zadania treningowe, oficjalne arkusze CKE i arkusze w aplikacji — dla
-          ścieżki{" "}
+          Ścieżka:{" "}
           <span className="font-semibold text-accent">{pathLabel}</span>.
+          Wybierz zakładkę poniżej — każde miejsce służy do czegoś innego.
         </p>
       </header>
 
@@ -104,7 +118,9 @@ export function BazaZadanView({
         })}
       </div>
 
-      <div className="mt-8" role="tabpanel">
+      <p className="mt-4 text-sm text-muted">{activeTab.hint}</p>
+
+      <div className="mt-6" role="tabpanel">
         {tab === "zadania" && <BazaZadanTasksPanel />}
         {tab === "arkusze" && (
           <BazaZadanArkuszePanel

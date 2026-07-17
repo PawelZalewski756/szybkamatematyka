@@ -30,12 +30,15 @@ function GamePickCard({
       href={`/minigry/${game.id}?mode=${mode}`}
       className="card-raised group flex min-h-[160px] flex-col justify-between p-5 sm:min-h-[180px]"
     >
-      <span className="text-4xl transition-transform group-hover:scale-110">
+      <span
+        className="text-xl font-semibold tabular-nums text-accent"
+        aria-hidden
+      >
         {game.emoji}
       </span>
       <motion.div>
-        <h3 className="text-lg font-black text-foreground">{game.title}</h3>
-        <p className="mt-1 text-sm text-muted">{game.description}</p>
+        <h3 className="text-base font-bold text-foreground">{game.title}</h3>
+        <p className="mt-1 line-clamp-2 text-sm text-muted">{game.description}</p>
       </motion.div>
     </Link>
   );
@@ -74,18 +77,21 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
           <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
             {config.badge}
           </span>
-          <h1 className="mt-4 text-3xl font-black text-foreground sm:text-4xl">
-            {config.emoji} {config.title}
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {config.title}
           </h1>
           <p className="mt-2 max-w-2xl text-sm text-muted sm:text-base">
             {modeDescription(mode)}
+          </p>
+          <p className="mt-3 text-sm font-medium text-foreground">
+            Wybierz minigrę poniżej.
           </p>
         </motion.div>
       </header>
 
       <section className="mt-10">
-        <h2 className="text-lg font-black text-foreground">
-          Wybierz grę dla{" "}
+        <h2 className="text-base font-semibold text-foreground">
+          Gry dla ścieżki{" "}
           <span className="text-accent">{pathLabel}</span>
         </h2>
         {games.length > 0 ? (

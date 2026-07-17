@@ -48,7 +48,7 @@ function arithmetic(
 
   return {
     id: `${op}-${a}-${b}`,
-    prompt: "Ile to jest?",
+    prompt: "Wynik",
     headline: `${a} ${op} ${b}`,
     correct,
     options: buildNumericOptions(correct, 4, op === "×" || op === "÷" ? 18 : 14),
@@ -67,7 +67,7 @@ export function generateMnozenie(path: LearningPath) {
   const q = generateMnozenieQuestion(path);
   return {
     id: q.id,
-    prompt: "Ile to jest?",
+    prompt: "Wynik",
     headline: q.prompt,
     correct: q.correct,
     options: q.options,
