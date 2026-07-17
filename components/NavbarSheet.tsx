@@ -56,8 +56,11 @@ export function NavbarSheet({
   const [menuPath, setMenuPath] = useState<string | null>(null);
   const open = menuPath === pathname;
   const setOpen = useCallback(
-    (next: boolean) => setMenuPath(next ? pathname : null),
-    [pathname],
+    (next: boolean | ((prev: boolean) => boolean)) => {
+      const resolved = typeof next === "function" ? next(menuPath === pathname) : next;
+      setMenuPath(resolved ? pathname : null);
+    },
+    [menuPath, pathname],
   );
   const sheetId = useId();
   const { schoolClass, setSchoolClass } = useLearningPath();
