@@ -8,6 +8,7 @@ export type MinigameModeConfig = {
   slug: string;
   title: string;
   description: string;
+  /** Opcjonalny symbol — unikamy zbędnych emotek. */
   emoji: string;
   badge: string;
 };
@@ -16,25 +17,25 @@ export const MINIGAME_MODES: MinigameModeConfig[] = [
   {
     id: "time_attack",
     slug: "time-attack",
-    title: "Time Attack",
-    description: "60 sekund na maksymalny wynik — każda dobra odpowiedź buduje combo.",
-    emoji: "⏱️",
-    badge: "Klasyczny",
+    title: "Na czas",
+    description: "60 sekund — jak najwięcej poprawnych odpowiedzi. Dobra passa daje combo.",
+    emoji: "",
+    badge: "60 s",
   },
   {
     id: "survival",
     slug: "survival",
-    title: "Survival",
-    description: "Bez limitu czasu — gra kończy się przy pierwszym błędzie.",
-    emoji: "💀",
-    badge: "Hardcore",
+    title: "Przetrwanie",
+    description: "Bez limitu czasu. Pierwszy błąd kończy rundę.",
+    emoji: "",
+    badge: "1 życie",
   },
   {
     id: "marathon",
     slug: "marathon",
-    title: "Marathon",
-    description: "Dokładnie 15 pytań — wygrywa ten, kto zrobi to najszybciej.",
-    emoji: "🏃",
+    title: "Maraton",
+    description: "Dokładnie 15 pytań. Liczy się wynik i czas ukończenia.",
+    emoji: "",
     badge: "15 pytań",
   },
 ];
@@ -52,16 +53,28 @@ export function modeFromSlug(slug: string): MinigamePlayMode | null {
 }
 
 export function getModeConfig(mode: MinigamePlayMode): MinigameModeConfig {
-  return MINIGAME_MODES.find((m) => m.id === mode) ?? MINIGAME_MODES[0];
+  return MINIGAME_MODES.find((m) => m.id === mode) ?? MINIGAME_MODES[0]!;
 }
 
 export function modeDescription(mode: MinigamePlayMode): string {
   switch (mode) {
     case "time_attack":
-      return "60 sekund — odpowiadaj jak najszybciej i buduj combo.";
+      return "Masz 60 sekund. Odpowiadaj szybko — seria poprawnych odpowiedzi buduje combo.";
     case "survival":
-      return "Bez timera — jeden błąd kończy grę.";
+      return "Bez timera. Jeden błąd kończy grę.";
     case "marathon":
-      return "15 pytań — liczy się czas ukończenia i wynik.";
+      return "15 pytań z rzędu. Na końcu zobaczysz wynik i czas.";
+  }
+}
+
+/** Krótka etykieta HUD (bez angielskich nazw). */
+export function modeHudLabel(mode: MinigamePlayMode): string {
+  switch (mode) {
+    case "time_attack":
+      return "Na czas";
+    case "survival":
+      return "Przetrwanie";
+    case "marathon":
+      return "Maraton";
   }
 }

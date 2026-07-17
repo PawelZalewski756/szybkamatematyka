@@ -15,6 +15,7 @@ import {
   buildOpenTasksBatchUserPrompt,
   buildTasksBatchUserPrompt,
   TASKS_BATCH_SYSTEM_PROMPT,
+  TASKS_FIGURES_REMINDER,
   TASKS_FORMAT_REMINDER,
   TASKS_OPEN_FORMAT_REMINDER,
   TASKS_OPEN_SYSTEM_PROMPT,
@@ -54,7 +55,11 @@ export async function generateTasksBatch(
   const userPrompt = isOpen
     ? buildOpenTasksBatchUserPrompt(input)
     : buildTasksBatchUserPrompt(input);
-  const reminder = isOpen ? TASKS_OPEN_FORMAT_REMINDER : TASKS_FORMAT_REMINDER;
+  const reminder = isOpen
+    ? TASKS_OPEN_FORMAT_REMINDER
+    : input.requireFigures
+      ? TASKS_FIGURES_REMINDER
+      : TASKS_FORMAT_REMINDER;
   const result = await model.generateContent(`${userPrompt}\n\n${reminder}`);
   const text = result.response.text()?.trim();
   if (!text) {
@@ -65,12 +70,16 @@ export async function generateTasksBatch(
   const tasks: ParsedGeminiTask[] = [];
   for (const item of rawItems) {
     const normalized = normalizeGeminiTask(item);
-    if (normalized) tasks.push(normalized);
+    if (!normalized) continue;
+    if (input.requireFigures && !normalized.figure_svg) continue;
+    tasks.push(normalized);
   }
 
   if (tasks.length === 0) {
     throw new Error(
-      `Żadne zadanie nie przeszło walidacji (surowo: ${rawItems.length}).`,
+      input.requireFigures
+        ? `Żadne zadanie z SVG nie przeszło walidacji (surowo: ${rawItems.length}).`
+        : `Żadne zadanie nie przeszło walidacji (surowo: ${rawItems.length}).`,
     );
   }
 

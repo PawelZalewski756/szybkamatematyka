@@ -4,6 +4,7 @@ import { AccountLevelBar } from "@/components/minigry/AccountLevelBar";
 import {
   getModeConfig,
   modeDescription,
+  modeHudLabel,
 } from "@/lib/minigry/game-modes";
 import type { useMinigameSession } from "@/lib/minigry/use-minigame-session";
 import { AnimatePresence, motion } from "framer-motion";
@@ -53,7 +54,6 @@ export function MinigameShell({
     account,
     accountLoading,
     pathLabel,
-    questionTrackLabel,
     phase,
     score,
     timeLeft,
@@ -100,16 +100,18 @@ export function MinigameShell({
         </Link>
 
         <div className="mt-6 flex flex-1 flex-col items-center justify-center text-center">
-          <p className={`text-sm font-bold uppercase tracking-widest ${theme.label}`}>
-            {modeConfig.badge} · Minigra
+          <p className={`text-sm font-semibold ${theme.label}`}>
+            {modeConfig.title}
           </p>
-          <h1 className="mt-2 text-4xl font-black text-foreground sm:text-5xl">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {title}
           </h1>
-          <p className="mt-4 max-w-md text-muted">{description}</p>
-          <p className="mt-2 text-sm text-muted">{modeDescription(mode)}</p>
+          <p className="mt-4 max-w-md text-base text-muted">
+            {modeDescription(mode)}
+          </p>
+          <p className="mt-2 max-w-md text-sm text-muted">{description}</p>
 
-          <motion.div className="mt-8 w-full">
+          <motion.div className="mt-8 w-full max-w-md">
             <AccountLevelBar
               level={displayProgress.level}
               xp={displayProgress.xp}
@@ -118,12 +120,8 @@ export function MinigameShell({
               }
             />
             <p className="mt-3 text-sm text-muted">
-              Teraz:{" "}
-              <span className={`font-semibold ${theme.tryText}`}>
-                {pathLabel}
-              </span>
-              {" · "}
-              <span className="text-muted">{questionTrackLabel}</span>
+              Ścieżka:{" "}
+              <span className={`font-medium ${theme.tryText}`}>{pathLabel}</span>
             </p>
           </motion.div>
 
@@ -133,12 +131,12 @@ export function MinigameShell({
               startGame();
               onStart();
             }}
-            className="btn-chunky mt-10 w-full py-5 text-xl"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            className="btn-chunky mt-10 w-full max-w-md py-4 text-lg"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
-            Rozpocznij
+            Start
           </motion.button>
         </div>
       </div>
@@ -162,50 +160,50 @@ export function MinigameShell({
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 className="px-6 text-center"
               >
-                <p className="text-6xl">🎉</p>
-                <h2 className="mt-4 text-3xl font-black text-accent sm:text-4xl">
-                  NOWY POZIOM KONTA!
+                <p className="text-5xl font-bold text-accent">↑</p>
+                <h2 className="mt-4 text-2xl font-bold text-accent sm:text-3xl">
+                  Nowy poziom konta
                 </h2>
-                <p className="mt-3 text-2xl font-black text-foreground">
-                  Poz. {cloudProfile?.level ?? displayProgress.level}
+                <p className="mt-3 text-xl font-semibold text-foreground">
+                  Poziom {cloudProfile?.level ?? displayProgress.level}
                 </p>
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        <p className={`text-sm font-bold uppercase tracking-widest ${theme.label}`}>
-          {pathLabel} · {questionTrackLabel} · {modeConfig.title}
+        <p className={`text-sm font-medium ${theme.label}`}>
+          {modeConfig.title} · {pathLabel}
         </p>
-        <h1 className="mt-2 text-5xl font-black text-foreground sm:text-6xl">
-          Koniec gry!
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Koniec rundy
         </h1>
-        <p className="mt-6 text-2xl text-muted">
-          Punkty w rundzie:{" "}
-          <span className="font-black text-accent">🏆 {score}</span>
+        <p className="mt-6 text-xl text-muted">
+          Wynik:{" "}
+          <span className="font-bold tabular-nums text-accent">{score}</span>
         </p>
         {mode === "marathon" && (
-          <p className="mt-2 text-lg text-accent">
+          <p className="mt-2 text-base text-muted">
             Czas: {formatElapsed(elapsedTime)}
           </p>
         )}
         {mode === "survival" && (
-          <p className="mt-2 text-lg text-muted">
+          <p className="mt-2 text-base text-muted">
             Poprawnych odpowiedzi: {questionsAnswered}
           </p>
         )}
         {account.isLoggedIn && cloudProfile ? (
-          <p className="mt-2 text-lg text-success">
+          <p className="mt-3 text-base text-success">
             {savedToCloud
-              ? `+${xpEarned} XP na koncie (wynik rundy: ${score} pkt) · Poz. ${cloudProfile.level}`
+              ? `+${xpEarned} XP · poziom ${cloudProfile.level}`
               : saveError ?? "Zapisywanie XP…"}
           </p>
         ) : (
-          <p className="mt-2 text-lg text-accent">
-            <Link href="/login" className="font-bold underline">
+          <p className="mt-3 text-base text-muted">
+            <Link href="/login" className="font-semibold text-accent underline">
               Zaloguj się
             </Link>
-            , żeby zapisać postęp na koncie.
+            , żeby zapisać XP na koncie.
           </p>
         )}
 
@@ -287,17 +285,17 @@ export function MinigameShell({
         <div className="mt-3 flex items-center justify-between gap-3 game-hud px-3 py-3 sm:px-4">
           <div className="min-w-0 flex-1">
             {mode === "time_attack" && (
-              <p className="text-xs font-bold uppercase tracking-wider text-muted">
-                Time Attack
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                {modeHudLabel(mode)}
               </p>
             )}
             {mode === "survival" && (
-              <p className="text-xs font-bold uppercase tracking-wider text-accent">
-                Survival · {questionsAnswered} poprawnych
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                {modeHudLabel(mode)} · {questionsAnswered} ok
               </p>
             )}
             {mode === "marathon" && (
-              <p className="text-xs font-bold uppercase tracking-wider text-accent">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
                 Pytanie {Math.min(questionsAnswered + 1, marathonTotal)}/
                 {marathonTotal}
               </p>
@@ -305,19 +303,17 @@ export function MinigameShell({
           </div>
 
           <div
-            className={`shrink-0 whitespace-nowrap text-3xl font-black tabular-nums sm:text-4xl ${
+            className={`shrink-0 whitespace-nowrap text-2xl font-bold tabular-nums sm:text-3xl ${
               isLowTime
                 ? "animate-pulse text-danger"
-                : mode === "marathon"
-                  ? "text-accent"
-                  : mode === "survival"
-                    ? "text-muted"
-                    : "text-foreground"
+                : mode === "survival"
+                  ? "text-muted"
+                  : "text-foreground"
             }`}
           >
             {mode === "time_attack" && `${timeLeft}s`}
             {mode === "marathon" && formatElapsed(elapsedTime)}
-            {mode === "survival" && "∞"}
+            {mode === "survival" && "bez limitu"}
           </div>
 
           <div className="flex min-w-0 flex-1 flex-col items-end gap-0.5">
@@ -329,21 +325,21 @@ export function MinigameShell({
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0, opacity: 0 }}
-                    className="whitespace-nowrap flex-shrink-0 rounded-full border border-accent/50 bg-accent/20 px-2 py-0.5 text-xs font-black text-accent"
+                    className="whitespace-nowrap rounded-full border border-accent/40 bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent"
                   >
-                    🔥 Seria ×{combo}
+                    Seria ×{combo}
                   </motion.span>
                 )}
               </AnimatePresence>
               <motion.div
-                className="whitespace-nowrap flex-shrink-0 text-lg font-black text-accent sm:text-xl"
+                className="whitespace-nowrap text-lg font-bold tabular-nums text-accent sm:text-xl"
                 animate={
-                  scoreAnimating ? { scale: [1, 1.45, 1] } : { scale: 1 }
+                  scoreAnimating ? { scale: [1, 1.25, 1] } : { scale: 1 }
                 }
-                transition={{ duration: 0.32 }}
+                transition={{ duration: 0.28 }}
                 onAnimationComplete={() => setScoreAnimating(false)}
               >
-                🏆 {score}
+                {score} pkt
               </motion.div>
             </div>
             {lastPointsGain !== null && (
@@ -351,7 +347,7 @@ export function MinigameShell({
                 key={lastPointsGain}
                 initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 0, y: -12 }}
-                className="text-xs font-bold text-success"
+                className="text-xs font-semibold text-success"
               >
                 +{lastPointsGain}
               </motion.span>
@@ -369,9 +365,7 @@ export function MinigameShell({
               exit={{ opacity: 0, y: -24 }}
               transition={{ duration: 0.22 }}
             >
-              <p className="text-sm font-semibold uppercase tracking-wide text-muted">
-                {questionPrompt}
-              </p>
+              <p className="text-sm font-medium text-muted">{questionPrompt}</p>
               {questionContent}
             </motion.div>
           </AnimatePresence>

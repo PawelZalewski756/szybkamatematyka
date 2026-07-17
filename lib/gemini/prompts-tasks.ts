@@ -9,6 +9,8 @@ export type GenerateTasksInput = {
   existingSamples: string[];
   /** choice = ABCD, open = wpisanie odpowiedzi */
   taskKind: "choice" | "open";
+  /** Wymuś SVG przy każdym zadaniu (geometria / wykresy). */
+  requireFigures?: boolean;
 };
 
 export const TASKS_OPEN_SYSTEM_PROMPT = `Jesteś autorem zadań maturalnych i egzaminu ósmoklasisty z matematyki.
@@ -73,10 +75,13 @@ Wymagania jakości:
 - explanation: krótkie (2–4 zdania) uzasadnienie poprawnej odpowiedzi po polsku, z LaTeX.
 - Unikaj powtórzeń wzorców z istniejących przykładów podanych w promptcie.
 
-Ilustracje (~ co 3–4 zadanie, zwłaszcza geometria, wykresy, układ współrzędnych):
+Ilustracje (TYLKO gdy rysunek jest niezbędny do rozwiązania):
 - figure_svg: kompaktowy SVG (viewBox="0 0 240 180"), czytelny na ciemnym tle: białe/szare linie (#e5e5e5), bez zewnętrznych fontów, polskie etykiety jako <text>.
 - figure_caption: krótki opis figury po polsku.
 - Gdy brak figury: figure_svg i figure_caption = null.
+- ZAKAZ ozdobnych rysunków: jeśli wszystkie dane liczbowe i geometryczne są w treści tekstowej i da się rozwiązać bez patrzenia na SVG — NIE dodawaj figure_svg.
+- Dobry przykład: odczyt współrzędnych/punktów/kąta/łuku WYŁĄCZNIE z rysunku; wykres bez podanego wzoru; diagram z wartościami tylko na rysunku.
+- Zły przykład: „promień 9 cm, ką 120° — oblicz łuk” + rysunek powtarzający te same liczby.
 
 NIE używaj obrazków URL — tylko SVG inline w figure_svg.`;
 
@@ -89,12 +94,21 @@ export function buildTasksBatchUserPrompt(input: GenerateTasksInput): string {
           .join("\n")}\n`
       : "";
 
+  const figureRule = input.requireFigures
+    ? `\nWYMAGANE — zadania WYŁĄCZNIE z niezbędnym rysunkiem:\n` +
+      `- KAŻDE zadanie MUSI mieć figure_svg (viewBox="0 0 240 180") + figure_caption.\n` +
+      `- Bez rysunku zadanie MUSI być nierozwiązywalne (brakuje liczb/współrzędnych/kątów podanych tylko na SVG).\n` +
+      `- Treść: „Na rysunku… / Na wykresie…” — NIE powtarzaj w tekście wszystkich danych z rysunku.\n` +
+      `- ZAKAZ dekoracji: nie generuj zadań, które da się rozwiązać samym tekstem.\n` +
+      `- ZAKAZ figure_svg = null.\n`
+    : "";
+
   return `Egzamin: ${input.examLabel}
 Dział: ${input.categoryName} (${input.categorySlug})
 Temat: ${input.topicName} (${input.topicSlug})
 Partia nr: ${input.batchIndex + 1}
 Liczba zadań w tej odpowiedzi: ${input.batchSize}
-${samples}
+${samples}${figureRule}
 Wygeneruj ${input.batchSize} różnorodnych zadań zamkniętych (ABCD) dla tego tematu.
 
 Schemat JSON (tablica):
@@ -107,8 +121,8 @@ Schemat JSON (tablica):
     "difficulty": 2,
     "xp_reward": 16,
     "explanation": "Dlaczego ta odpowiedź jest poprawna…",
-    "figure_svg": "<svg viewBox=\\"0 0 240 180\\" xmlns=\\"http://www.w3.org/2000/svg\\">...</svg>" lub null,
-    "figure_caption": "Opis figury" lub null
+    "figure_svg": "<svg viewBox=\\"0 0 240 180\\" xmlns=\\"http://www.w3.org/2000/svg\\">...</svg>"${input.requireFigures ? "" : " lub null"},
+    "figure_caption": "Opis figury"${input.requireFigures ? "" : " lub null"}
   }
 ]`;
 }
@@ -116,6 +130,12 @@ Schemat JSON (tablica):
 export const TASKS_FORMAT_REMINDER =
   "Pamiętaj: zwróć TYLKO tablicę JSON. correct_answer MUSI być identyczna z jedną opcją. " +
   "Sprawdź obliczenia — correct_answer = wynik z explanation. Bez samokorekty w explanation.";
+
+export const TASKS_FIGURES_REMINDER =
+  "KAŻDE zadanie: figure_svg + figure_caption. Rysunek NIEZBĘDNY do rozwiązania " +
+  "(dane kluczowe tylko na SVG, nie zdublowane w tekście). " +
+  "Rysunek czytelny na ciemnym tle (#e5e5e5). correct_answer = jedna z opcji i zgodna z explanation. " +
+  "Jeśli zadanie da się rozwiązać bez rysunku — NIE zwracaj go.";
 
 export const TASKS_OPEN_FORMAT_REMINDER =
   "Pamiętaj: zwróć TYLKO tablicę JSON. options=[]. correct_answer = końcowy wynik obliczeń (krótki). " +

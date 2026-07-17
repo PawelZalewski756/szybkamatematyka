@@ -170,18 +170,15 @@ export function BazaZadanArkuszePanel({
   }
 
   const filtersSidebar = (
-    <aside className="page-sidebar space-y-5 rounded-2xl border border-surface-border bg-surface p-5">
-      <div>
-        <p className="text-xs font-bold uppercase tracking-wide text-muted">Arkusze</p>
-        <p className="mt-1 text-2xl font-black tabular-nums text-foreground">
-          {filtered.length}
-        </p>
-        <p className="text-xs text-muted">w wybranym filtrze</p>
+    <aside className="page-sidebar space-y-5 rounded-xl border border-surface-border bg-surface p-4 sm:p-5">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-sm font-semibold text-foreground">Filtry</p>
+        <p className="text-sm tabular-nums text-muted">{filtered.length}</p>
       </div>
 
       <div>
-        <p className="mb-2 text-xs font-bold text-muted">Typ egzaminu</p>
-        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap lg:flex-col">
+        <p className="mb-1.5 text-xs font-medium text-muted">Typ egzaminu</p>
+        <div className="flex flex-col gap-1.5">
           {scopes.map((s) => (
             <ScopeChip
               key={s.id}
@@ -197,17 +194,25 @@ export function BazaZadanArkuszePanel({
 
       {years.length > 1 && (
         <div>
-          <p className="mb-2 text-xs font-bold text-muted">Rok</p>
-          <div className="flex flex-wrap gap-2">
-            <ScopeChip active={year === "all"} onClick={() => setYear("all")}>
-              Wszystkie
-            </ScopeChip>
+          <label htmlFor="arkusz-rok" className="text-xs font-medium text-muted">
+            Rok
+          </label>
+          <select
+            id="arkusz-rok"
+            value={year === "all" ? "all" : String(year)}
+            onChange={(e) => {
+              const v = e.target.value;
+              setYear(v === "all" ? "all" : Number(v));
+            }}
+            className="input-field mt-1.5 w-full px-3 py-2 text-sm"
+          >
+            <option value="all">Wszystkie lata</option>
             {years.map((y) => (
-              <ScopeChip key={y} active={year === y} onClick={() => setYear(y)}>
+              <option key={y} value={y}>
                 {y}
-              </ScopeChip>
+              </option>
             ))}
-          </div>
+          </select>
         </div>
       )}
 
@@ -215,7 +220,7 @@ export function BazaZadanArkuszePanel({
         href="/trening/arkusze"
         className="block text-sm font-semibold text-accent hover:text-accent-strong"
       >
-        Widok pełnoekranowy →
+        Pełny katalog arkuszy →
       </Link>
     </aside>
   );
@@ -229,16 +234,34 @@ export function BazaZadanArkuszePanel({
       />
     ) : (
       <div className="space-y-8">
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
-          {visibleGroups.shown.map((group) => (
-            <li key={group.arkuszId}>
-              <BazaArkuszCard group={group} />
-            </li>
-          ))}
-        </ul>
+        {yearSections.map((section) => {
+          const shownIds = new Set(visibleGroups.shown.map((g) => g.arkuszId));
+          const sectionShown = section.groups.filter((g) =>
+            shownIds.has(g.arkuszId),
+          );
+          if (sectionShown.length === 0) return null;
+          return (
+            <section key={section.year || "bez-roku"}>
+              {section.year > 0 ? (
+                <h3 className="mb-3 text-sm font-semibold text-foreground">
+                  {section.year}
+                </h3>
+              ) : null}
+              <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
+                {sectionShown.map((group) => (
+                  <li key={group.arkuszId}>
+                    <BazaArkuszCard group={group} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
         {visibleGroups.locked.length > 0 && (
-          <ProGate featureLabel={`Pełne archiwum arkuszy (${visibleGroups.locked.length} więcej)`}>
-            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <ProGate
+            featureLabel={`Pełne archiwum arkuszy (${visibleGroups.locked.length} więcej)`}
+          >
+            <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
               {visibleGroups.locked.map((group) => (
                 <li key={group.arkuszId}>
                   <BazaArkuszCard group={group} />

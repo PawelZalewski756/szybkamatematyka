@@ -80,7 +80,7 @@ export function ConfiguredMinigame({
     );
   }
 
-  const answerBtn = `min-h-[72px] rounded-2xl border bg-surface font-black text-foreground transition-colors hover:bg-surface-hover sm:min-h-[80px] ${def.answerClass}`;
+  const answerBtn = `min-h-[64px] rounded-xl border bg-surface text-lg font-semibold text-foreground transition-colors hover:bg-surface-hover sm:min-h-[72px] sm:text-xl ${def.answerClass}`;
 
   const handleChoice = (value: number) => {
     if (question.mode !== "choice") return;
@@ -110,7 +110,7 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = q.prompt;
     questionContent = (
-      <p className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl">
+      <p className="mt-4 break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl">
         {q.headline}
       </p>
     );
@@ -121,9 +121,9 @@ export function ConfiguredMinigame({
             key={`${q.id}-${opt}`}
             type="button"
             onClick={() => handleChoice(opt)}
-            className={`${answerBtn} text-2xl sm:text-3xl`}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.96 }}
+            className={`${answerBtn} tabular-nums`}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             {opt}
           </motion.button>
@@ -137,29 +137,29 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
     questionContent = (
-      <p className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl">
+      <p className="mt-4 break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl">
         {q.equation}
       </p>
     );
     answers = (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4">
         <motion.button
           type="button"
           onClick={() => handleTf(false)}
-          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-danger text-lg font-black text-foreground sm:min-h-[80px] sm:text-xl"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="flex min-h-[64px] items-center justify-center rounded-xl bg-danger text-base font-semibold text-foreground sm:min-h-[72px] sm:text-lg"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          ✖️ FAŁSZ
+          Fałsz
         </motion.button>
         <motion.button
           type="button"
           onClick={() => handleTf(true)}
-          className="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl bg-success text-lg font-black text-background sm:min-h-[80px] sm:text-xl"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="flex min-h-[64px] items-center justify-center rounded-xl bg-success text-base font-semibold text-background sm:min-h-[72px] sm:text-lg"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          ✔️ PRAWDA
+          Prawda
         </motion.button>
       </div>
     );
@@ -168,39 +168,36 @@ export function ConfiguredMinigame({
   if (question.mode === "compare") {
     const q = question.q;
     questionKey = q.id;
-    questionPrompt = "Która strona jest większa?";
+    questionPrompt = "Która wartość jest większa?";
     questionContent = (
-      <div className="mt-6 flex items-center justify-center gap-4 sm:gap-8">
-        <span className="text-4xl font-black text-foreground sm:text-5xl">
+      <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6">
+        <span className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl">
           {q.left}
         </span>
-        <span className="text-2xl font-black text-muted">vs</span>
-        <span className="text-4xl font-black text-foreground sm:text-5xl">
+        <span className="text-lg font-medium text-muted">czy</span>
+        <span className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl">
           {q.right}
         </span>
       </div>
     );
     answers = (
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         {(
           [
-            { id: "left" as const, label: "◀ Lewa", sub: "Lewa większa" },
-            { id: "equal" as const, label: "= Równe", sub: "Równe" },
-            { id: "right" as const, label: "Prawa ▶", sub: "Prawa większa" },
+            { id: "left" as const, label: "Lewa większa" },
+            { id: "equal" as const, label: "Równe" },
+            { id: "right" as const, label: "Prawa większa" },
           ] as const
-        ).map(({ id, label, sub }) => (
+        ).map(({ id, label }) => (
           <motion.button
             key={id}
             type="button"
             onClick={() => handleCompare(id)}
-            className={`${answerBtn} px-4 py-3 text-lg sm:text-xl`}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            className={`${answerBtn} px-4`}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span className="block">{label}</span>
-            <span className="mt-1 block text-xs font-semibold text-muted">
-              {sub}
-            </span>
+            {label}
           </motion.button>
         ))}
       </div>
