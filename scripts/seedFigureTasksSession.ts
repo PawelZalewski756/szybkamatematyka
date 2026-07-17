@@ -141,6 +141,38 @@ function countFiguresInSlot(slot: TaskSlot): number {
   return (readTaskCache(slot)?.tasks ?? []).filter((t) => t.figure_svg).length;
 }
 
+/** Odrzuć ozdobne SVG — rysunek musi być potrzebny do rozwiązania. */
+function decorativeFigureReason(task: ParsedGeminiTask): string | null {
+  const svg = task.figure_svg ?? "";
+  if (svg.length < 180 || !svg.includes("</svg>")) {
+    return "svg za małe/uszkodzone";
+  }
+  if (
+    !/na (rysunku|wykresie|diagramie|poniższym rysunku|poniższym wykresie)/i.test(
+      task.content,
+    )
+  ) {
+    return "brak odwołania do rysunku w treści";
+  }
+
+  const numbers = task.content.match(/\d+(?:[.,]\d+)?/g) ?? [];
+  const hasExplicitGeom =
+    /(promień|średnica|bok|wysokość|kąt|miar[aę]|wynosi|r\s*=)/i.test(task.content) &&
+    numbers.length >= 2;
+  const asksCompute = /oblicz|wyznacz|podaj długość|podaj pole|podaj objętość/i.test(
+    task.content,
+  );
+  const needsRead =
+    /odczyt|z (rysunku|wykresu)|na podstawie (rysunku|wykresu)|przedstawion(y|e|ą) na/i.test(
+      task.content,
+    );
+
+  if (hasExplicitGeom && asksCompute && !needsRead) {
+    return "dane kompletne w tekście — rysunek zbędny";
+  }
+  return null;
+}
+
 function qualityGate(task: ParsedGeminiTask): {
   task: ParsedGeminiTask;
   repaired: boolean;
@@ -172,6 +204,15 @@ function qualityGate(task: ParsedGeminiTask): {
   const issues = auditTaskQuality(next);
   if (!next.figure_svg) {
     return { task: next, repaired: Boolean(reconciled.repaired), issues: [...issues, "brak SVG"], reject: true };
+  }
+  const decorative = decorativeFigureReason(next);
+  if (decorative) {
+    return {
+      task: next,
+      repaired: Boolean(reconciled.repaired),
+      issues: [...issues, decorative],
+      reject: true,
+    };
   }
   if (
     issues.some(
