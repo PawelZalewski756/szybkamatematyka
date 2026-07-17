@@ -418,7 +418,8 @@ async function getOrCreateArkusz(
   supabase: SupabaseClient,
   session: CkeMaturaSession,
 ): Promise<string> {
-  const { data: existing, error } = await supabase
+  // 1) Dokładna nazwa (preferowana)
+  const { data: byName, error } = await supabase
     .from("arkusze")
     .select("id")
     .eq("nazwa", session.nazwa)
@@ -427,7 +428,29 @@ async function getOrCreateArkusz(
     .maybeSingle();
 
   if (error) throw new Error(error.message);
-  if (existing?.id) return existing.id;
+  if (byName?.id) return byName.id;
+
+  // 2) Ten sam rok+miesiąc+typ — unikaj drugiego arkusza przy innej nazwie
+  const { data: bySession, error: err2 } = await supabase
+    .from("arkusze")
+    .select("id,nazwa")
+    .eq("typ", "matura")
+    .eq("rok", session.rok)
+    .eq("miesiac", session.miesiac)
+    .order("created_at", { ascending: true });
+
+  if (err2) throw new Error(err2.message);
+  if (bySession && bySession.length > 0) {
+    // Preferuj wpis z „poziom podstawowy” / dłuższą nazwą CKE
+    const preferred =
+      bySession.find((a) => /poziom podstawowy/i.test(a.nazwa)) ??
+      bySession.find((a) => a.nazwa === session.nazwa) ??
+      bySession[0]!;
+    console.log(
+      `  ℹ Używam istniejącego arkusza „${preferred.nazwa}” zamiast tworzyć „${session.nazwa}”`,
+    );
+    return preferred.id;
+  }
 
   const { data: created, error: insErr } = await supabase
     .from("arkusze")
