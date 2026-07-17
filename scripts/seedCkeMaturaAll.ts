@@ -127,7 +127,8 @@ function parseArgs(): CliOptions {
 
   if (fixImages) {
     refreshCache = true;
-    noGemini = true;
+    // Nie nadpisuj rozwiązań placeholderami — tylko treść/rysunki.
+    // noGemini zostaje false, żeby buildSheetCache nie wstawiał PLACEHOLDER.
     replace = true;
   }
 
@@ -262,6 +263,46 @@ async function buildSheetCache(
 
   if (opts.fillSolutions && existing && existing.tasks.length > 0) {
     return fillGeminiSolutions(supabase, session, existing, opts);
+  }
+
+  // Odśwież rysunki/treść, ale zachowaj istniejące rozwiązania z cache
+  if (opts.fixImages && existing && existing.tasks.length > 0) {
+    console.log(`  ↓ Odświeżam treść+rysunki (zachowuję rozwiązania): ${session.nazwa}`);
+    const html = await fetchHtml(session.importUrl);
+    const parsed = parseMaturaTasksFromHtml(html);
+    if (parsed.length < 5) {
+      throw new Error(
+        `Za mało zadań (${parsed.length}) — zmieniony format strony lub błąd parsowania.`,
+      );
+    }
+    const byNumer = new Map(existing.tasks.map((t) => [t.numer, t]));
+    const tasks: CachedTask[] = [];
+    for (const p of parsed) {
+      const prev = byNumer.get(p.numer);
+      const tresc = await finalizeTresc(session, p.numer, p.tresc);
+      const rozwiazanie =
+        prev && !needsGeminiSolution(prev.rozwiazanie, false)
+          ? prev.rozwiazanie
+          : prev?.rozwiazanie?.trim()
+            ? prev.rozwiazanie
+            : `${PLACEHOLDER_MARK} wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE.`;
+      tasks.push({
+        numer: p.numer,
+        dzial: inferDzialMatura(p.tresc, p.numer),
+        tresc,
+        rozwiazanie,
+      });
+    }
+    const sheet: CachedSheet = {
+      sessionId: session.id,
+      nazwa: session.nazwa,
+      rok: session.rok,
+      miesiac: session.miesiac,
+      tasks,
+      fetchedAt: new Date().toISOString(),
+    };
+    writeCache(sheet);
+    return sheet;
   }
 
   if (!opts.refreshCache && !opts.fixImages && existing && existing.tasks.length > 0) {
