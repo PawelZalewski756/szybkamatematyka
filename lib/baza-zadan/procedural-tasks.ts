@@ -4,7 +4,6 @@ import {
   exactPercentOf,
   gcd,
   integerChoices,
-  shuffle,
   uniqueChoices,
 } from "@/lib/baza-zadan/task-generators";
 import type { Task } from "@/lib/baza-zadan/types";

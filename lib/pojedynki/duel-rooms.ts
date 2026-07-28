@@ -1,5 +1,5 @@
 import { getSupabaseOrNull } from "@/lib/supabase";
-import { normalizeLearningPath, type LearningPath } from "@/lib/learning-path";
+import { normalizeLearningPath } from "@/lib/learning-path";
 import type { DuelConfig, DuelResult } from "@/lib/pojedynki/duel-types";
 import { duelRoomCode } from "@/lib/pojedynki/duel-config";
 

@@ -71,7 +71,22 @@ function parseAbcd(tresc: string): {
     };
   }
 
-  return { prompt, choices: choices.slice(0, 4), hasChoices: true };
+  // Heurystyka dla zadań P/F: czasem CKE powoduje, że parser wycina
+  // identyczne krótkie etykiety typu "prawda" / "fałsz" jako osobne opcje.
+  // Żeby nie tworzyć niejednoznacznych odpowiedzi (i żeby audyt pytań nie
+  // flagował duplikatów), rozróżniamy takie etykiety numerem wystąpienia.
+  const picked = choices.slice(0, 4);
+  const counts = new Map<string, number>();
+  const disambiguated = picked.map((c) => {
+    const trimmed = c.trim();
+    const key = trimmed.toLowerCase();
+    if (key !== "prawda" && key !== "fałsz") return c;
+    const next = (counts.get(key) ?? 0) + 1;
+    counts.set(key, next);
+    return `${trimmed} (${next})`;
+  });
+
+  return { prompt, choices: disambiguated, hasChoices: true };
 }
 
 function inferDifficulty(numer: number, hasChoices: boolean): TaskDifficulty {

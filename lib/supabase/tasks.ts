@@ -70,7 +70,6 @@ export async function fetchTasksByTopic(
 }
 
 import {
-  answersEquivalent,
   checkAnswerMatch,
   normalizeAnswer,
 } from "@/lib/math/answer-equiv";

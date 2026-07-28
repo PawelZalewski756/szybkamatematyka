@@ -2,7 +2,6 @@
 
 import {
   examTypeForKey,
-  TRAINING_CURRICULUM,
   type TreningExamKey,
 } from "@/lib/trening/curriculum";
 import { countsFromTasks, solvedCountsFromTasks } from "@/lib/trening/dynamic-tree";

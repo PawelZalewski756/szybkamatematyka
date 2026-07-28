@@ -99,8 +99,16 @@ function YearSection({
   return (
     <section className="mt-10">
       <div className="flex items-center gap-2">
-        <Icon className={`h-5 w-5 ${accent === "emerald" ? "text-emerald-400" : "text-orange-400"}`} aria-hidden />
-        <h2 className="text-lg font-black text-white sm:text-xl">{title}</h2>
+        <Icon
+          className={`h-5 w-5 ${accent === "emerald" ? "text-emerald-400" : "text-orange-400"}`}
+          aria-hidden
+        />
+        <div className="flex flex-col">
+          <h2 className="text-lg font-black text-white sm:text-xl">
+            {title}
+          </h2>
+          <p className="mt-1 text-sm text-zinc-400">{subtitle}</p>
+        </div>
       </div>
 
       <div className="mt-8 space-y-10">

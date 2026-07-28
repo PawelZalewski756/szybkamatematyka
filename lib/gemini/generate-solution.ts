@@ -1,11 +1,9 @@
 import { normalizeSolution } from "@/lib/gemini/format-solution";
 import {
   formatGeminiWaitLabel,
-  getGeminiRetryWaitMs,
   isRateLimitError,
   isRetryableGeminiError,
   parseGeminiRetryDelayMs,
-  sleep,
   waitForGeminiRetry,
 } from "@/lib/gemini/gemini-retry";
 import {
