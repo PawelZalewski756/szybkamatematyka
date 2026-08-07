@@ -17,6 +17,24 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+const HERO_PATHS = [
+  {
+    href: "/trening",
+    label: "Trening",
+    text: "Tematy, teoria i zadania pod egzamin",
+  },
+  {
+    href: "/baza-zadan",
+    label: "Baza zadań",
+    text: "Zadania z pełnym rozwiązaniem",
+  },
+  {
+    href: "/trening/arkusze",
+    label: "Arkusze CKE",
+    text: "Oficjalne arkusze maturalne i 8-klasisty",
+  },
+] as const;
+
 const DESTINATIONS = [
   {
     href: "/trening",
@@ -75,9 +93,64 @@ const STEPS = [
 ] as const;
 
 const fadeUp = {
-  initial: { opacity: 0, y: 16 },
+  initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0 },
 };
+
+function HeroIndex() {
+  return (
+    <div className="relative flex h-full min-h-[18rem] flex-col justify-center border-t border-surface-border lg:min-h-0 lg:border-l lg:border-t-0">
+      <div
+        className="home-grid-bg pointer-events-none absolute inset-0 opacity-50"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(165deg, color-mix(in srgb, var(--surface) 55%, transparent) 0%, transparent 70%)",
+        }}
+        aria-hidden
+      />
+
+      <nav
+        aria-label="Główne działy"
+        className="relative mx-auto w-full max-w-md px-6 py-12 sm:px-8 lg:px-12 lg:py-0"
+      >
+        <p className="text-sm text-muted">W serwisie</p>
+        <ul className="mt-5 divide-y divide-surface-border border-y border-surface-border">
+          {HERO_PATHS.map((item, i) => (
+            <li key={item.href}>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.18 + i * 0.07 }}
+              >
+                <Link
+                  href={item.href}
+                  className="group flex items-baseline justify-between gap-4 py-5 transition-colors hover:text-accent"
+                >
+                  <span>
+                    <span className="block text-xl font-bold tracking-tight text-foreground group-hover:text-accent sm:text-2xl">
+                      {item.label}
+                    </span>
+                    <span className="mt-1 block text-sm text-muted">
+                      {item.text}
+                    </span>
+                  </span>
+                  <ArrowRight
+                    className="h-5 w-5 shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent"
+                    aria-hidden
+                  />
+                </Link>
+              </motion.div>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+}
 
 export function HomeDashboard() {
   const { path } = useLearningPath();
@@ -85,61 +158,62 @@ export function HomeDashboard() {
 
   return (
     <div className="flex flex-1 flex-col">
-      {/* ——— Hero: luzno — marka, jedna myśl, powietrze ——— */}
-      <section className="relative isolate -mx-4 min-h-[min(86vh,48rem)] overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
+      <section className="relative isolate -mx-4 min-h-[min(88vh,50rem)] overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
         <GamingBackground variant="hero" />
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 opacity-30"
           aria-hidden
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 55% at 70% 35%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 65%)",
-          }}
-        />
+        >
+          <div className="home-grid-bg absolute inset-0" />
+        </div>
 
-        <div className="page-container relative z-10 flex min-h-[min(86vh,48rem)] flex-col justify-center py-20 sm:py-24 lg:py-28">
-          <motion.h1
-            className="text-[clamp(2.5rem,8vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight"
-            {...fadeUp}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-accent">Szybka</span>
-            <br />
-            <span className="text-foreground">Matematyka</span>
-          </motion.h1>
-
-          <motion.p
-            className="mt-8 max-w-sm text-lg leading-relaxed text-muted sm:text-xl"
-            {...fadeUp}
-            transition={{ duration: 0.5, delay: 0.08 }}
-          >
-            Teoria, zadania i arkusze CKE
-            <span className="text-foreground/80"> — {pathLabel}</span>.
-          </motion.p>
-
-          <motion.div
-            className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center"
-            {...fadeUp}
-            transition={{ duration: 0.5, delay: 0.16 }}
-          >
-            <Link
-              href="/trening"
-              className="btn-chunky w-full px-8 py-4 text-base sm:w-auto"
+        <div className="relative z-10 grid min-h-[min(88vh,50rem)] lg:grid-cols-2">
+          <div className="flex flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <motion.h1
+              className="text-[clamp(2.25rem,6.5vw,4.5rem)] font-extrabold leading-[0.98] tracking-tight"
+              {...fadeUp}
+              transition={{ duration: 0.45 }}
             >
-              Zacznij trening
-              <ArrowRight className="h-5 w-5" aria-hidden />
-            </Link>
-            <Link
-              href="/trening/arkusze"
-              className="btn-chunky-soft w-full px-8 py-4 text-base sm:w-auto"
+              <span className="text-accent">Szybka</span>
+              <br />
+              <span className="text-foreground">Matematyka</span>
+            </motion.h1>
+
+            <motion.p
+              className="mt-7 max-w-md text-base leading-relaxed text-muted sm:text-lg"
+              {...fadeUp}
+              transition={{ duration: 0.45, delay: 0.06 }}
             >
-              Arkusze CKE
-            </Link>
-          </motion.div>
+              Nauka matematyki do egzaminu — teoria, zadania i arkusze CKE.
+              Aktualna ścieżka:{" "}
+              <span className="text-foreground/85">{pathLabel}</span>.
+            </motion.p>
+
+            <motion.div
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+              {...fadeUp}
+              transition={{ duration: 0.45, delay: 0.12 }}
+            >
+              <Link
+                href="/trening"
+                className="btn-chunky w-full px-8 py-4 text-base sm:w-auto"
+              >
+                Zacznij trening
+                <ArrowRight className="h-5 w-5" aria-hidden />
+              </Link>
+              <Link
+                href="/trening/arkusze"
+                className="btn-chunky-soft w-full px-8 py-4 text-base sm:w-auto"
+              >
+                Arkusze CKE
+              </Link>
+            </motion.div>
+          </div>
+
+          <HeroIndex />
         </div>
       </section>
 
-      {/* ——— Co jest w środku ——— */}
       <section className="border-b border-surface-border py-14 sm:py-20">
         <div className="page-container">
           <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
@@ -195,7 +269,6 @@ export function HomeDashboard() {
         </div>
       </section>
 
-      {/* ——— Jak działa ——— */}
       <section className="relative overflow-hidden py-14 sm:py-20">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,color-mix(in_srgb,var(--accent)_8%,transparent),transparent_50%)]"
