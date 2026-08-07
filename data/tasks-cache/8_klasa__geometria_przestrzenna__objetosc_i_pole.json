@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria_przestrzenna",
+  "topic": "objetosc_i_pole",
+  "categoryName": "Geometria przestrzenna",
+  "topicName": "Objętość i pole powierzchni",
+  "tasks": [
+    {
+      "content": "Oblicz 10+39​",
+      "correct_answer": "49",
+      "options": [
+        "47",
+        "48",
+        "49",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 49",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "105fe25b-89bd-4df2-9a3d-631eec28a405",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 33+22​​",
+      "correct_answer": "55",
+      "options": [
+        "54",
+        "50",
+        "55",
+        "53"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 55",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "20db0238-28ab-401b-8d16-ab28cfb4ddcb",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 56+5​​​",
+      "correct_answer": "61",
+      "options": [
+        "59",
+        "56",
+        "61",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 61",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "862da0d8-ca13-4b74-94b5-cbe4f2f126c9",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 79+28​​​​",
+      "correct_answer": "107",
+      "options": [
+        "105",
+        "107",
+        "106",
+        "102"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 107",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6187681f-87cd-4f2c-9da2-bf8ce4dc05d6",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 102+11​​​​​",
+      "correct_answer": "113",
+      "options": [
+        "112",
+        "111",
+        "108",
+        "113"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 113",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7172af01-4f0e-441d-816c-8bfe62e15da6",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 125+34​​​​​​",
+      "correct_answer": "159",
+      "options": [
+        "157",
+        "154",
+        "158",
+        "159"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 159",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2674ab43-f8b6-47a5-81bf-5906f3cb3350",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 28+17​​​​​​​",
+      "correct_answer": "45",
+      "options": [
+        "40",
+        "44",
+        "43",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "10556000-1f75-47f7-b7f5-82ec5168f15e",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 51+40​​​​​​​​",
+      "correct_answer": "91",
+      "options": [
+        "90",
+        "86",
+        "91",
+        "89"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 91",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "240f2192-dd19-4ed1-bf0b-568d2fc79332",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 74+23​​​​​​​​​",
+      "correct_answer": "97",
+      "options": [
+        "92",
+        "95",
+        "96",
+        "97"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 97",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e0b30fc6-d3fe-4701-8e9d-a1edc034660f",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 97+6​​​​​​​​​​",
+      "correct_answer": "103",
+      "options": [
+        "103",
+        "101",
+        "98",
+        "102"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 103",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1fd7a2fd-4386-4c3c-8852-0d414b37a164",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 120+29​​​​​​​​​​​",
+      "correct_answer": "149",
+      "options": [
+        "148",
+        "144",
+        "149",
+        "147"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 149",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "70fb8d7d-6837-4f82-b216-9e4a51ac727c",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 23+12​​​​​​​​​​​​",
+      "correct_answer": "35",
+      "options": [
+        "34",
+        "30",
+        "33",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 35",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b1962220-4ac6-45cf-83c1-b417c86a79a8",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 46+35​​​​​​​​​​​​​",
+      "correct_answer": "81",
+      "options": [
+        "76",
+        "80",
+        "79",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0cdef96-6d16-4a60-b563-ff9ad0e6e693",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
+      "correct_answer": "87",
+      "options": [
+        "87",
+        "86",
+        "85",
+        "82"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 87",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6d2522c-580d-40d5-a083-f171adfc1a12",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
+      "correct_answer": "133",
+      "options": [
+        "132",
+        "128",
+        "131",
+        "133"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 133",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c632844e-1e44-46eb-a5ab-ce7a6bac55bc",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
+      "correct_answer": "139",
+      "options": [
+        "137",
+        "134",
+        "138",
+        "139"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 139",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1a70def1-6493-4686-9c4d-2e843440a404",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
+      "correct_answer": "25",
+      "options": [
+        "25",
+        "20",
+        "24",
+        "23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6d18ca13-3b46-4daa-91c0-713661830320",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "71",
+      "options": [
+        "70",
+        "69",
+        "71",
+        "66"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 71",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7ef6a251-5d23-4c81-b384-3aca47032097",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "77",
+      "options": [
+        "76",
+        "75",
+        "72",
+        "77"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 77",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "48e145ec-d1d6-42ce-9cef-d19326e1b082",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "123",
+      "options": [
+        "122",
+        "121",
+        "118",
+        "123"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 123",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "faafc0b9-9d59-4e4c-8167-41b75ed6327a",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.896Z"
+}

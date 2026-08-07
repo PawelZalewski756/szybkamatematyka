@@ -58,9 +58,9 @@ npm test                   # testy jednostkowe banków
 
 Pipeline `.github/workflows/ci.yml`: `lint` → `tsc` → `npm test` → `build`.
 
-E2E lokalnie: `npm run test:e2e` (nie w CI — wolniejsze).
+E2E lokalnie: `npm run test:e2e` (nie w CI — wolniejsze). Skopiuj najpierw `.env.example` → `.env.local` albo pozwól Playwrightowi użyć placeholderów Supabase z `playwright.config.ts`.
 
-## 6. Stripe (na koniec)
+## 6. Stripe (opcjonalnie, później)
 
 1. Utwórz produkty/ceny w Stripe.
 2. Ustaw `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_*`.

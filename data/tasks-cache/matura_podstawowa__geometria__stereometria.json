@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "stereometria",
+  "categoryName": "Geometria",
+  "topicName": "Stereometria",
+  "tasks": [
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 9​",
+      "correct_answer": "486",
+      "options": [
+        "484",
+        "486",
+        "485",
+        "476"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 486",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69278f9f-8106-48aa-a1d8-2f508510a0ec",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 5×2×8​​",
+      "correct_answer": "80",
+      "options": [
+        "68",
+        "78",
+        "80",
+        "79"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 80",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e5c0a93c-66d0-4753-904a-877bdd8d10b7",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=2$, $h=4$, $\\pi\\approx 3{,}14$​​​",
+      "correct_answer": "50",
+      "options": [
+        "30",
+        "49",
+        "50",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 50",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "268282e6-7da7-4040-b743-30168ee36326",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 14​​​​",
+      "correct_answer": "1176",
+      "options": [
+        "1176",
+        "1174",
+        "1175",
+        "1166"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 1176",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a73f724f-fcc4-45b0-b3a2-4e9215c481e9",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 2×7×5​​​​​",
+      "correct_answer": "70",
+      "options": [
+        "58",
+        "68",
+        "70",
+        "69"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 70",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de75e7b2-16e8-471a-83c1-ad55d4248466",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=11$, $h=9$, $\\pi\\approx 3{,}14$​​​​​​",
+      "correct_answer": "3421",
+      "options": [
+        "3401",
+        "3419",
+        "3420",
+        "3421"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odpowiedź: 3421",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d9681d3-8282-49df-b4fa-64708a02218a",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 5​​​​​​​",
+      "correct_answer": "150",
+      "options": [
+        "140",
+        "150",
+        "149",
+        "148"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 150",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f68ce60-ec93-4db7-91e1-d43c022a0309",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 7×4×14​​​​​​​​",
+      "correct_answer": "392",
+      "options": [
+        "390",
+        "392",
+        "380",
+        "391"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 392",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "12807673-7337-4ec4-850d-c84716e4289b",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=10$, $h=14$, $\\pi\\approx 3{,}14$​​​​​​​​​",
+      "correct_answer": "4398",
+      "options": [
+        "4398",
+        "4396",
+        "4397",
+        "4378"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odpowiedź: 4398",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c2ce1f29-7c06-4c98-928a-ca24f101f040",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 10​​​​​​​​​​",
+      "correct_answer": "600",
+      "options": [
+        "599",
+        "600",
+        "598",
+        "590"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 600",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec06c3ad-90a3-4d6b-a081-b226b02f7688",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 4×9×11​​​​​​​​​​​",
+      "correct_answer": "396",
+      "options": [
+        "384",
+        "395",
+        "396",
+        "394"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 396",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0246cc68-c5b8-4936-8c4d-06517ab199d4",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=9$, $h=5$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​",
+      "correct_answer": "1272",
+      "options": [
+        "1271",
+        "1272",
+        "1270",
+        "1252"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Odpowiedź: 1272",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a4543651-1956-403d-9b3a-995d9b9141a2",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 15​​​​​​​​​​​​​",
+      "correct_answer": "1350",
+      "options": [
+        "1348",
+        "1349",
+        "1340",
+        "1350"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1350",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "43d5b8f9-f647-4e18-a361-8b615eaa598e",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 9×6×8​​​​​​​​​​​​​​",
+      "correct_answer": "432",
+      "options": [
+        "420",
+        "432",
+        "431",
+        "430"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 432",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb9880f8-2404-4bef-987f-824d406fb08d",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=8$, $h=10$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​​​​",
+      "correct_answer": "2011",
+      "options": [
+        "2011",
+        "2009",
+        "2010",
+        "1991"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odpowiedź: 2011",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4b92c89b-dc02-4c71-a26d-7c5fd8465913",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 6​​​​​​​​​​​​​​​​",
+      "correct_answer": "216",
+      "options": [
+        "215",
+        "216",
+        "206",
+        "214"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ada15608-8d10-41f7-87dd-609e3f15bdb2",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 6×3×5​​​​​​​​​​​​​​​​​",
+      "correct_answer": "90",
+      "options": [
+        "89",
+        "90",
+        "78",
+        "88"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72804955-f5d7-4585-8a7e-9381f46fc8da",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość walca $r=7$, $h=15$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "2309",
+      "options": [
+        "2307",
+        "2289",
+        "2308",
+        "2309"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Odpowiedź: 2309",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "00223b4f-5024-4762-8d12-1b0a983efa68",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole powierzchni sześcianu o krawędzi 11​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "726",
+      "options": [
+        "726",
+        "716",
+        "725",
+        "724"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 726",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "25017762-bb45-4ac2-b0dd-5efb1fb098bd",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Objętość prostopadłościanu 3×8×14​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "336",
+      "options": [
+        "324",
+        "335",
+        "336",
+        "334"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 336",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "46572d87-9790-47e1-b5d8-11a736875476",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.892Z"
+}

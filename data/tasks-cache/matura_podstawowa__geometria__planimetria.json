@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "planimetria",
+  "categoryName": "Geometria",
+  "topicName": "Planimetria",
+  "tasks": [
+    {
+      "content": "Pole trójkąta: podstawa 8, wysokość 13​",
+      "correct_answer": "52",
+      "options": [
+        "51",
+        "52",
+        "47",
+        "50"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a8e32777-7eeb-4764-aaac-c804a414edef",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 9 i 16​​",
+      "correct_answer": "18.4",
+      "options": [
+        "15.4",
+        "17.4",
+        "16.4",
+        "18.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 18.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0268040b-41f9-4e6a-be06-92f5a135d895",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 6, wysokość 11​​​",
+      "correct_answer": "33",
+      "options": [
+        "33",
+        "31",
+        "32",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "63b83324-976f-41b5-89c0-5d451a042a59",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 17 i 10​​​​",
+      "correct_answer": "19.7",
+      "options": [
+        "16.7",
+        "18.7",
+        "19.7",
+        "17.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 19.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c2cb344d-0687-430b-8d32-f6c7105e54d4",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 4, wysokość 9​​​​​",
+      "correct_answer": "18",
+      "options": [
+        "17",
+        "18",
+        "16",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07b40fe6-71f6-4856-b21b-92b1eb22323f",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 11 i 18​​​​​​",
+      "correct_answer": "21.1",
+      "options": [
+        "19.1",
+        "21.1",
+        "20.1",
+        "18.1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 21.1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57e9e282-67e2-4a04-8d30-dc84a539aa32",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 18, wysokość 7​​​​​​​",
+      "correct_answer": "63",
+      "options": [
+        "63",
+        "58",
+        "62",
+        "61"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2bb1756-1fd9-4135-85fa-536476009dde",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 5 i 12​​​​​​​​",
+      "correct_answer": "13",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef16ddd9-c898-412c-9e40-76953006c022",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 16, wysokość 5​​​​​​​​​",
+      "correct_answer": "40",
+      "options": [
+        "40",
+        "38",
+        "35",
+        "39"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9adcaf8b-a6d0-45f1-95e4-d05eed4b8a3a",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 13 i 6​​​​​​​​​​",
+      "correct_answer": "14.3",
+      "options": [
+        "11.3",
+        "12.3",
+        "14.3",
+        "13.3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 14.3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a96d79f5-7c9a-4336-adb5-3e1d83e56458",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 14, wysokość 3​​​​​​​​​​​",
+      "correct_answer": "21",
+      "options": [
+        "20",
+        "21",
+        "19",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9d36fab4-69a8-4cb7-ab24-470edbe350d1",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 7 i 14​​​​​​​​​​​​",
+      "correct_answer": "15.7",
+      "options": [
+        "13.7",
+        "14.7",
+        "15.7",
+        "12.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 15.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0bdde27d-ba96-4a2a-809e-2a8c8c5536f2",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 12, wysokość 17​​​​​​​​​​​​​",
+      "correct_answer": "102",
+      "options": [
+        "102",
+        "101",
+        "97",
+        "100"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 102",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd4f20d1-df36-44f5-8208-c1c1196c631c",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 15 i 8​​​​​​​​​​​​​​",
+      "correct_answer": "17",
+      "options": [
+        "17",
+        "15",
+        "14",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 17",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0ee7229b-af6b-41ef-8ec0-e7ec2fca852d",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 10, wysokość 15​​​​​​​​​​​​​​​",
+      "correct_answer": "75",
+      "options": [
+        "70",
+        "74",
+        "75",
+        "73"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 75",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a319ff36-6845-407a-a328-88c719ce6d4d",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 9 i 16​​​​​​​​​​​​​​​​",
+      "correct_answer": "18.4",
+      "options": [
+        "15.4",
+        "18.4",
+        "16.4",
+        "17.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 18.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "03d71a16-98b5-4277-9419-a7e477e087e6",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 8, wysokość 13​​​​​​​​​​​​​​​​​",
+      "correct_answer": "52",
+      "options": [
+        "51",
+        "47",
+        "50",
+        "52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe75dd59-e660-4839-a036-e0726addbd86",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 17 i 10​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "19.7",
+      "options": [
+        "19.7",
+        "17.7",
+        "16.7",
+        "18.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 19.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "153134f3-6df0-47c8-847b-62fb7849deaa",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole trójkąta: podstawa 6, wysokość 11​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "33",
+      "options": [
+        "33",
+        "32",
+        "31",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed4b69c3-1847-430f-bf21-9e3c15a7fcdc",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Przeciwprostokątna: przyprostokątne 11 i 18​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "21.1",
+      "options": [
+        "21.1",
+        "20.1",
+        "18.1",
+        "19.1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 21.1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "76045fd7-47ea-44fd-b567-d358a9c87c4e",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.892Z"
+}

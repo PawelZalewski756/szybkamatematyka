@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "algebra",
+  "topic": "rownania",
+  "categoryName": "Algebra",
+  "topicName": "Równania",
+  "tasks": [
+    {
+      "content": "Rozwiąż $x+8=10$​",
+      "correct_answer": "2",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e0a1db1-a49c-4ca1-bce4-195a955504c0",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+26=51$​​",
+      "correct_answer": "25",
+      "options": [
+        "25",
+        "22",
+        "24",
+        "23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6385b74c-2cec-4e17-8bde-d3698b4d6dc2",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+9=27$​​​",
+      "correct_answer": "18",
+      "options": [
+        "15",
+        "17",
+        "18",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f07a40a9-e062-451a-a586-e54c233bbbda",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+27=38$​​​​",
+      "correct_answer": "11",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1f97df38-a8e6-43fb-90af-a529bd0237cb",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+10=14$​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cbae1953-75a1-496b-96f6-c330c7344bbe",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+28=55$​​​​​​",
+      "correct_answer": "27",
+      "options": [
+        "26",
+        "24",
+        "25",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "861a098e-ba78-4f54-98ba-6624d60943ff",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+11=31$​​​​​​​",
+      "correct_answer": "20",
+      "options": [
+        "17",
+        "20",
+        "18",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cdd4786e-9e24-42e7-9523-d6be0732c978",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+29=42$​​​​​​​​",
+      "correct_answer": "13",
+      "options": [
+        "11",
+        "12",
+        "10",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c2ff5014-c860-482a-8e1e-1a104b0e96c9",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+12=18$​​​​​​​​​",
+      "correct_answer": "6",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3695b6df-bed2-47a0-be50-82d02790e22c",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+30=59$​​​​​​​​​​",
+      "correct_answer": "29",
+      "options": [
+        "27",
+        "26",
+        "28",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 29",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd9cc45a-aa20-46d4-a81c-ded26b955d43",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+13=35$​​​​​​​​​​​",
+      "correct_answer": "22",
+      "options": [
+        "20",
+        "21",
+        "22",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 22",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "41bfacdb-8299-4f05-a371-fcd7f04ccd4a",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+31=46$​​​​​​​​​​​​",
+      "correct_answer": "15",
+      "options": [
+        "12",
+        "13",
+        "15",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "685dc8ca-61b9-425a-8120-45128a9e9761",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+14=22$​​​​​​​​​​​​​",
+      "correct_answer": "8",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "16543098-4051-4dfd-973e-ad9688c59dac",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+32=63$​​​​​​​​​​​​​​",
+      "correct_answer": "31",
+      "options": [
+        "30",
+        "29",
+        "31",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 31",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6655fa83-7c83-4ebb-aeb5-fa80a437a6d2",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+15=39$​​​​​​​​​​​​​​​",
+      "correct_answer": "24",
+      "options": [
+        "21",
+        "23",
+        "22",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "90ca1cc0-f3af-488d-9be3-a96561b41dc4",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+33=50$​​​​​​​​​​​​​​​​",
+      "correct_answer": "17",
+      "options": [
+        "14",
+        "15",
+        "17",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 17",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "48984d26-d22b-46a6-a813-bbe4227e5bcf",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+16=26$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "10",
+      "options": [
+        "8",
+        "7",
+        "9",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6684fc91-7800-40f5-88bb-02a3dc0ffe99",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+34=37$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a88961e1-6565-44be-8ebd-687b7559f3cd",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+17=43$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "26",
+      "options": [
+        "23",
+        "25",
+        "26",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 26",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "df651108-e079-4c6a-bb0c-b3ecbf79f4f5",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Rozwiąż $x+35=54$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "19",
+      "options": [
+        "17",
+        "19",
+        "18",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 19",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aaefb14b-560c-4e64-8fa5-c7b0af80f609",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.895Z"
+}

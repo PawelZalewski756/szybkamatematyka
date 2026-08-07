@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "ulamki",
+  "categoryName": "Liczby i działania",
+  "topicName": "Ułamki zwykłe i dziesiętne",
+  "tasks": [
+    {
+      "content": "$\\frac{1}{7}+\\frac{3}{11}$​",
+      "correct_answer": "0.42",
+      "options": [
+        "-0.58",
+        "-1.58",
+        "0.42",
+        "0.12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 0.42",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cee8a359-a588-4a8b-ab11-77102b91282b",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{6}{11}+\\frac{2}{9}$​​",
+      "correct_answer": "0.77",
+      "options": [
+        "-1.23",
+        "0.47",
+        "-0.23",
+        "0.77"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 0.77",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "980927e4-6766-483d-9cfb-781e82bf7301",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{2}{6}+\\frac{1}{7}$​​​",
+      "correct_answer": "0.48",
+      "options": [
+        "-0.52",
+        "0.18",
+        "0.48",
+        "-1.52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 0.48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "38b80efd-80f2-483d-93be-e9edbf362f68",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{7}{10}+\\frac{8}{13}$​​​​",
+      "correct_answer": "1.32",
+      "options": [
+        "1.32",
+        "1.02",
+        "-0.68",
+        "0.32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1.32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e44d41b-7660-455f-9724-0b339c1810c9",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{3}{5}+\\frac{7}{11}$​​​​​",
+      "correct_answer": "1.24",
+      "options": [
+        "0.94",
+        "1.24",
+        "-0.76",
+        "0.24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 1.24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c34e7140-a9e4-46d4-b289-21417dca4276",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{8}{9}+\\frac{6}{9}$​​​​​​",
+      "correct_answer": "1.56",
+      "options": [
+        "-0.44",
+        "1.26",
+        "1.56",
+        "0.56"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 1.56",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5cf6e3e3-8b28-4991-b1a9-3ce632b58beb",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{4}{12}+\\frac{5}{7}$​​​​​​​",
+      "correct_answer": "1.05",
+      "options": [
+        "-0.95",
+        "0.05",
+        "0.75",
+        "1.05"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 1.05",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe7d3230-69fd-4982-826b-a0237b52046c",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{9}{16}+\\frac{4}{5}$​​​​​​​​",
+      "correct_answer": "1.36",
+      "options": [
+        "0.36",
+        "-0.64",
+        "1.36",
+        "1.06"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 1.36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bfd6ebcf-3ec6-45ec-8f50-2fa5188c6bee",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{5}{11}+\\frac{3}{11}$​​​​​​​​​",
+      "correct_answer": "0.73",
+      "options": [
+        "0.73",
+        "0.43",
+        "-1.27",
+        "-0.27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 0.73",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cafd70c7-8a20-4550-b559-528ed6ee4a74",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{1}{6}+\\frac{2}{9}$​​​​​​​​​​",
+      "correct_answer": "0.39",
+      "options": [
+        "-0.61",
+        "-1.61",
+        "0.39",
+        "0.09"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 0.39",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "948c706a-c7e0-4e59-8f24-8e8ba2f322dd",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{6}{10}+\\frac{1}{7}$​​​​​​​​​​​",
+      "correct_answer": "0.74",
+      "options": [
+        "-1.26",
+        "0.44",
+        "0.74",
+        "-0.26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 0.74",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0adace41-641c-4403-9cf8-b207b2e7c2f4",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{2}{5}+\\frac{8}{13}$​​​​​​​​​​​​",
+      "correct_answer": "1.02",
+      "options": [
+        "0.72",
+        "0.02",
+        "-0.98",
+        "1.02"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 1.02",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c79bbab0-34f3-4629-9484-99693b25f0ca",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{7}{9}+\\frac{7}{11}$​​​​​​​​​​​​​",
+      "correct_answer": "1.41",
+      "options": [
+        "1.11",
+        "-0.59",
+        "0.41",
+        "1.41"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 1.41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a575c3f9-f808-4075-aaa5-5592df76fbdf",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{3}{4}+\\frac{6}{9}$​​​​​​​​​​​​​​",
+      "correct_answer": "1.42",
+      "options": [
+        "-0.58",
+        "1.12",
+        "1.42",
+        "0.42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1.42",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04ece3dc-9cac-49c3-9969-605f39c5d01f",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{8}{16}+\\frac{5}{7}$​​​​​​​​​​​​​​​",
+      "correct_answer": "1.21",
+      "options": [
+        "-0.79",
+        "0.21",
+        "0.91",
+        "1.21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 1.21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "11a4ebe1-aa8c-41e0-a29b-d77f5f8e3853",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{4}{11}+\\frac{4}{5}$​​​​​​​​​​​​​​​​",
+      "correct_answer": "1.16",
+      "options": [
+        "1.16",
+        "0.86",
+        "0.16",
+        "-0.84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 1.16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e2b55fad-2a45-46ac-bcfd-9ff23485e824",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{9}{15}+\\frac{3}{11}$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0.87",
+      "options": [
+        "0.87",
+        "-0.13",
+        "-1.13",
+        "0.57"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 0.87",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f00da3c-7cd7-4321-b989-9e96dca74bb1",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{5}{10}+\\frac{2}{9}$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0.72",
+      "options": [
+        "-1.28",
+        "0.72",
+        "0.42",
+        "-0.28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 0.72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "456ff179-5605-4b1d-9d91-19ea79633cc4",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{1}{5}+\\frac{1}{7}$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0.34",
+      "options": [
+        "0.04",
+        "0.34",
+        "-0.66",
+        "-1.66"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 0.34",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2cd09146-a9fd-403b-8815-c13f6114ecec",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "$\\frac{6}{9}+\\frac{8}{13}$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "1.28",
+      "options": [
+        "0.28",
+        "-0.72",
+        "0.98",
+        "1.28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 1.28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73a32a74-d0a0-47dc-b7ee-124491620772",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.893Z"
+}

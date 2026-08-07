@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "wyrazenia_algebraiczne",
+  "categoryName": "Algebra i równania",
+  "topicName": "Wyrażenia algebraiczne",
+  "tasks": [
+    {
+      "content": "Oblicz $1x+8$ dla $x=1$​",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "7",
+        "5",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6b72d24-b711-4ff1-ae6b-cb07fa9b2096",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=24$​​",
+      "correct_answer": "625",
+      "options": [
+        "620",
+        "625",
+        "624",
+        "623"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 625",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "95d237f7-be2f-40f7-a18f-a0a31862d557",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $9x+2$ dla $x=47$​​​",
+      "correct_answer": "425",
+      "options": [
+        "425",
+        "424",
+        "421",
+        "423"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 425",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c184e89f-13c4-427e-a153-340af341d955",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=70$​​​​",
+      "correct_answer": "5041",
+      "options": [
+        "5036",
+        "5039",
+        "5041",
+        "5040"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 5041",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4113b83a-f376-4eac-8ab3-f96c5a28054a",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $3x+10$ dla $x=3$​​​​​",
+      "correct_answer": "19",
+      "options": [
+        "18",
+        "17",
+        "19",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 19",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a25d0c5b-96c0-4003-a061-28e1144c1bee",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=26$​​​​​​",
+      "correct_answer": "729",
+      "options": [
+        "724",
+        "729",
+        "727",
+        "728"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 729",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30335fdc-3014-41df-9d42-137704a7cd6a",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $11x+4$ dla $x=49$​​​​​​​",
+      "correct_answer": "543",
+      "options": [
+        "542",
+        "541",
+        "539",
+        "543"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 543",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "86a663d2-929c-40cb-820d-fbe053ac4010",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=72$​​​​​​​​",
+      "correct_answer": "5329",
+      "options": [
+        "5324",
+        "5329",
+        "5328",
+        "5327"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 5329",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1ca7c9bb-2949-4219-a25d-3920d6a95848",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $5x+12$ dla $x=5$​​​​​​​​​",
+      "correct_answer": "37",
+      "options": [
+        "35",
+        "33",
+        "37",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 37",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2a7a0912-4bf3-42dc-a379-f38b35c1fff2",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=28$​​​​​​​​​​",
+      "correct_answer": "841",
+      "options": [
+        "836",
+        "840",
+        "841",
+        "839"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 841",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14ac612e-8f18-4ee5-bf5d-baddc329d469",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $13x+6$ dla $x=51$​​​​​​​​​​​",
+      "correct_answer": "669",
+      "options": [
+        "665",
+        "669",
+        "667",
+        "668"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 669",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d633ae43-6eb6-416b-98c6-d5f15d2d413f",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=74$​​​​​​​​​​​​",
+      "correct_answer": "5625",
+      "options": [
+        "5624",
+        "5623",
+        "5620",
+        "5625"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 5625",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9d41e532-b77a-4ee6-b476-ca4a176cc3e0",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $7x+14$ dla $x=7$​​​​​​​​​​​​​",
+      "correct_answer": "63",
+      "options": [
+        "59",
+        "62",
+        "63",
+        "61"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1a787b13-737f-43aa-a581-c5c396536981",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=30$​​​​​​​​​​​​​​",
+      "correct_answer": "961",
+      "options": [
+        "959",
+        "961",
+        "960",
+        "956"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 961",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d2d3063-16ff-4847-a86b-21e34f6de1fd",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $1x+8$ dla $x=53$​​​​​​​​​​​​​​​",
+      "correct_answer": "61",
+      "options": [
+        "61",
+        "60",
+        "57",
+        "59"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 61",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2dfc49c-39a7-48f2-b920-5ad2dbb36f18",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=76$​​​​​​​​​​​​​​​​",
+      "correct_answer": "5929",
+      "options": [
+        "5927",
+        "5928",
+        "5929",
+        "5924"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 5929",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ae3da57-4aaa-4383-924a-3b7e1ca41a3b",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $9x+2$ dla $x=9$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "83",
+      "options": [
+        "83",
+        "79",
+        "82",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 83",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "780bc451-3390-47ac-b645-0321d7c2dacc",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=32$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "1089",
+      "options": [
+        "1084",
+        "1087",
+        "1088",
+        "1089"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 1089",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2dd77ec7-7971-4ad8-bc49-e4bd2ca72453",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $3x+10$ dla $x=55$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "175",
+      "options": [
+        "175",
+        "174",
+        "171",
+        "173"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 175",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2ace868-3657-471d-95ab-00c4ba1df185",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Oblicz $x^2+2x+1$ dla $x=78$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "6241",
+      "options": [
+        "6239",
+        "6240",
+        "6236",
+        "6241"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 6241",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4eaa1a23-1170-44cf-90cf-ba22d0b52660",
+      "generatedAt": "2026-08-07T15:45:15.888Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.888Z"
+}

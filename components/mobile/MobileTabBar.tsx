@@ -8,7 +8,7 @@ import {
   isMobileGrajActive,
   isMobileMoreActive,
 } from "@/lib/layout/mobile-nav";
-import { getSupabase } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import type { User } from "@supabase/supabase-js";
 import {
   GraduationCap,
@@ -111,7 +111,20 @@ export function MobileTabBar() {
   const profilLabel = user ? "Profil" : "Konto";
 
   useEffect(() => {
-    const supabase = getSupabase();
+    if (!isSupabaseConfigured()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setAuthReady(true);
+      return;
+    }
+
+    let supabase: ReturnType<typeof getSupabase>;
+    try {
+      supabase = getSupabase();
+    } catch {
+      setAuthReady(true);
+      return;
+    }
+
     let cancelled = false;
 
     void supabase.auth.getSession().then(({ data }) => {

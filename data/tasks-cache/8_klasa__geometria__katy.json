@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "katy",
+  "categoryName": "Geometria płaska",
+  "topicName": "Kąty i proste",
+  "tasks": [
+    {
+      "content": "Trójkąt prostokątny: ostry 15°. Drugi ostry:​",
+      "correct_answer": "75°",
+      "options": [
+        "75°",
+        "82°",
+        "68°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 75°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b147867f-61df-4928-bb19-4c0640383621",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 38°. Drugi ostry:​​",
+      "correct_answer": "52°",
+      "options": [
+        "90°",
+        "52°",
+        "59°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 52°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dbf6ce2-f1f9-4603-86e3-960f42fda970",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 61°. Drugi ostry:​​​",
+      "correct_answer": "29°",
+      "options": [
+        "36°",
+        "22°",
+        "90°",
+        "29°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 29°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5482365b-acd9-45b4-925d-7819a82e0f8e",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 24°. Drugi ostry:​​​​",
+      "correct_answer": "66°",
+      "options": [
+        "66°",
+        "59°",
+        "73°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 66°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2185e79-a2f6-4bb5-966b-9dd2313fb8c7",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 47°. Drugi ostry:​​​​​",
+      "correct_answer": "43°",
+      "options": [
+        "50°",
+        "43°",
+        "90°",
+        "36°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 43°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a49cb51b-84dd-41b2-aa90-20c6f269a80d",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 70°. Drugi ostry:​​​​​​",
+      "correct_answer": "20°",
+      "options": [
+        "20°",
+        "13°",
+        "90°",
+        "27°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 20°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bbf26cba-85cd-40d4-8e4d-de0cb15087e9",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 33°. Drugi ostry:​​​​​​​",
+      "correct_answer": "57°",
+      "options": [
+        "50°",
+        "64°",
+        "90°",
+        "57°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 57°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "984a2306-7c3a-4588-846a-dfa72cf5339a",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 56°. Drugi ostry:​​​​​​​​",
+      "correct_answer": "34°",
+      "options": [
+        "27°",
+        "34°",
+        "90°",
+        "41°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 34°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "894bbf44-c0df-4ef1-b9be-876885c1e55c",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 19°. Drugi ostry:​​​​​​​​​",
+      "correct_answer": "71°",
+      "options": [
+        "71°",
+        "78°",
+        "90°",
+        "64°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 71°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b15ab092-8526-4d58-a690-9e2dd1d0229f",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 42°. Drugi ostry:​​​​​​​​​​",
+      "correct_answer": "48°",
+      "options": [
+        "90°",
+        "55°",
+        "48°",
+        "41°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 48°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "587b50c4-8ac1-404b-b5aa-072343de1c81",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 65°. Drugi ostry:​​​​​​​​​​​",
+      "correct_answer": "25°",
+      "options": [
+        "25°",
+        "18°",
+        "32°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 25°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a6729590-29a3-4d0a-932d-c9fb6c6ed808",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 28°. Drugi ostry:​​​​​​​​​​​​",
+      "correct_answer": "62°",
+      "options": [
+        "69°",
+        "90°",
+        "62°",
+        "55°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 62°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d10e811a-0272-48f7-b9dc-21d5077b1126",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 51°. Drugi ostry:​​​​​​​​​​​​​",
+      "correct_answer": "39°",
+      "options": [
+        "90°",
+        "32°",
+        "46°",
+        "39°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 39°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "52999d17-5926-40c7-bdbf-abe9d9ffcedc",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 74°. Drugi ostry:​​​​​​​​​​​​​​",
+      "correct_answer": "16°",
+      "options": [
+        "9°",
+        "23°",
+        "16°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 16°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "597130a2-2372-42dc-96a6-91e61e433f74",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 37°. Drugi ostry:​​​​​​​​​​​​​​​",
+      "correct_answer": "53°",
+      "options": [
+        "53°",
+        "46°",
+        "90°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 53°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7ec1992-e29f-44ec-aad8-7bc0f6db30a1",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 60°. Drugi ostry:​​​​​​​​​​​​​​​​",
+      "correct_answer": "30°",
+      "options": [
+        "37°",
+        "90°",
+        "30°",
+        "23°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 30°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9c382495-ae9b-40bf-8d85-f6a303059c0b",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 23°. Drugi ostry:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "67°",
+      "options": [
+        "60°",
+        "90°",
+        "74°",
+        "67°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 67°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bcba0331-8006-435f-b621-2872cf58e8fc",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 46°. Drugi ostry:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "44°",
+      "options": [
+        "51°",
+        "37°",
+        "90°",
+        "44°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 44°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "859770de-e304-45ea-a59a-6ba793a096b2",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 69°. Drugi ostry:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "21°",
+      "options": [
+        "28°",
+        "14°",
+        "90°",
+        "21°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 21°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4ccbc867-b4ad-4ee6-bfdc-a3896f972b23",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Trójkąt prostokątny: ostry 32°. Drugi ostry:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "58°",
+      "options": [
+        "65°",
+        "90°",
+        "51°",
+        "58°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 58°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "139ec9e9-b1be-4912-83ea-bcf72773aa03",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.895Z"
+}

@@ -39,6 +39,7 @@
     "seed:theory-index": "tsx scripts/exportTheoryIndex.ts",
     "seed:tasks-gemini": "tsx scripts/seedTasksGemini.ts",
     "seed:tasks-open-gemini": "tsx scripts/seedTasksGemini.ts --open-per-topic=12",
+    "seed:tasks-parametric": "tsx scripts/seedTasksCacheParametric.ts",
     "seed:tasks-figures": "tsx scripts/seedFigureTasksSession.ts",
     "seed:hour-quality": "tsx scripts/hourGeminiQuality.ts",
     "seed:tasks-overnight": "tsx scripts/overnightTasksGemini.ts",

@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Szybka Matematyka
 
-## Getting Started
+Platforma do nauki matematyki: arkusze CKE, baza zadań, trening tematyczny, minigry i rankingi (matura + egzamin 8-klasisty).
 
-First, run the development server:
+Stack: **Next.js 16**, Supabase, Gemini, Vercel.
+
+## Start lokalny
 
 ```bash
+cp .env.example .env.local   # uzupełnij Supabase (+ opcjonalnie Gemini)
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Otwórz [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Najważniejsze komendy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Komenda | Opis |
+|---------|------|
+| `npm run lint` | ESLint |
+| `npm test` | Vitest |
+| `npm run build` | Build produkcyjny |
+| `npm run test:e2e` | Smoke Playwright (lokalnie) |
+| `npm run audit:cke` | Placeholdery rozwiązań CKE |
+| `npm run audit:questions` | Jakość opcji MC w katalogu |
+| `npm run seed:exam-archive` | Regeneracja archiwum CKE z cache |
+| `npm run seed:tasks-parametric` | Parametryczne zadania → `data/tasks-cache` (bez Gemini) |
+| `npm run seed:tasks-gemini` | Zadania Gemini (wymaga `GEMINI_API_KEY`) |
+| `npm run seed:hour-quality` | Godzinna poprawa rozwiązań CKE |
 
-## Learn More
+Wdrożenie: zobacz [`docs/DEPLOY.md`](docs/DEPLOY.md).
 
-To learn more about Next.js, take a look at the following resources:
+## Struktura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — trasy Next.js (trening, baza, minigry, admin…)
+- `data/cke-matura-cache/` — cache arkuszy CKE
+- `data/tasks-cache/` — cache zadań treningowych
+- `data/theory-cache/` — materiały teoretyczne
+- `scripts/` — seed / audyt / Gemini

@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "pola_figur",
+  "categoryName": "Geometria płaska",
+  "topicName": "Pola figur",
+  "tasks": [
+    {
+      "content": "Pole kwadratu o boku 8​",
+      "correct_answer": "64",
+      "options": [
+        "64",
+        "63",
+        "62",
+        "58"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4e9c1b1f-e9b4-44d8-8631-bb76966e2810",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 13×5​​",
+      "correct_answer": "65",
+      "options": [
+        "63",
+        "60",
+        "65",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 65",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e80fc640-c74a-49fa-ab79-3771c26a3fb4",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 6​​​",
+      "correct_answer": "36",
+      "options": [
+        "34",
+        "36",
+        "35",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04027564-0d71-494c-99f2-e13c55a0246e",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 11×3​​​​",
+      "correct_answer": "33",
+      "options": [
+        "33",
+        "28",
+        "32",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7f7cfbf-27e9-42d0-b4ea-99890dbd8278",
+      "generatedAt": "2026-08-07T15:45:15.895Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 4​​​​​",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "10",
+        "14",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7f40ef6-405c-4f67-b55e-843ac2ec2df4",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 9×13​​​​​​",
+      "correct_answer": "117",
+      "options": [
+        "117",
+        "116",
+        "115",
+        "112"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 117",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c91c549b-a66f-4b28-9f83-4999516ccca6",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 18​​​​​​​",
+      "correct_answer": "324",
+      "options": [
+        "318",
+        "324",
+        "323",
+        "322"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 324",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "45538242-4198-4e4a-b96d-b32912449a80",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 7×11​​​​​​​​",
+      "correct_answer": "77",
+      "options": [
+        "76",
+        "77",
+        "75",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 77",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f415450-5254-45eb-8da9-1e7608367ffa",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 16​​​​​​​​​",
+      "correct_answer": "256",
+      "options": [
+        "250",
+        "254",
+        "256",
+        "255"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 256",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8a5b7016-f32a-4f95-82d7-4cd8825101f8",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 5×9​​​​​​​​​​",
+      "correct_answer": "45",
+      "options": [
+        "44",
+        "40",
+        "43",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0cdcba2c-57d6-498f-b094-8e2414cee4fd",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 14​​​​​​​​​​​",
+      "correct_answer": "196",
+      "options": [
+        "196",
+        "190",
+        "194",
+        "195"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 196",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "948bab8e-5d5f-40db-b8b7-8994c87ad291",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 15×7​​​​​​​​​​​​",
+      "correct_answer": "105",
+      "options": [
+        "100",
+        "105",
+        "103",
+        "104"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 105",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9c1441bb-9c25-44b1-bcff-69bc802fdd8e",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 12​​​​​​​​​​​​​",
+      "correct_answer": "144",
+      "options": [
+        "138",
+        "144",
+        "142",
+        "143"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 144",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "912ce067-80d5-4dfb-aaf0-11cff66a1fb8",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 13×5​​​​​​​​​​​​​​",
+      "correct_answer": "65",
+      "options": [
+        "63",
+        "64",
+        "65",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 65",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07ec0cae-b58b-4a50-a51a-e456924ec374",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 10​​​​​​​​​​​​​​​",
+      "correct_answer": "100",
+      "options": [
+        "98",
+        "100",
+        "99",
+        "94"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "588f7505-6488-4a8c-b67c-746e2eaa54af",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 11×3​​​​​​​​​​​​​​​​",
+      "correct_answer": "33",
+      "options": [
+        "32",
+        "31",
+        "28",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "18f1d9a3-5945-47e0-9e3f-c7ab0043b264",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 8​​​​​​​​​​​​​​​​​",
+      "correct_answer": "64",
+      "options": [
+        "63",
+        "58",
+        "62",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "29414c04-5d81-4b78-94c4-4826e369ebbd",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 9×13​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "117",
+      "options": [
+        "112",
+        "117",
+        "115",
+        "116"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 117",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "773c8cb3-b92c-450b-a484-89283cdb8426",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole kwadratu o boku 6​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "36",
+      "options": [
+        "34",
+        "35",
+        "30",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4b706d11-7296-4a04-8148-4b4d5c362e7f",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Pole prostokąta 7×11​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "77",
+      "options": [
+        "75",
+        "76",
+        "72",
+        "77"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 77",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34f030cd-e384-42c7-ae52-4746afa82dd8",
+      "generatedAt": "2026-08-07T15:45:15.896Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.896Z"
+}

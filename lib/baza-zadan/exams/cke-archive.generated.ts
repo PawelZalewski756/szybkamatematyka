@@ -14118,12 +14118,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30).",
+    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\"",
     "choices": [
-      "prawda (1)",
-      "fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów.",
-      "prawda (2)",
-      "fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\""
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
@@ -14426,18 +14423,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-probna-ix-z10",
     "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 10",
     "category": "funkcje",
-    "difficulty": "latwy",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji &fnof; określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji &fnof;. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja &fnof; przyjmuje wartości ujemne.",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji &fnof; określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji &fnof;. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja &fnof; przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja &fnof; ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji &fnof; w przedziale [−4,0] jest równa A) (−4) B) (−3) C) (−2) D) 0",
     "choices": [
-      "prawda (1)",
-      "fałsz Funkcja &fnof; ma trzy miejsca zerowe.",
-      "prawda (2)",
-      "fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji &fnof; w przedziale [−4,0] jest równa"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) (−2)",
@@ -14551,18 +14545,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-probna-ix-z14",
     "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 14",
     "category": "ciagi",
-    "difficulty": "latwy",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-1.jpg) określony wzorem ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-2.jpg) dla każdej liczby naturalnej ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-3.jpg) . Zadanie 14.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pięćdziesiątym wyrazem ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-4.jpg) jest",
+    "prompt": "Dany jest ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-1.jpg) określony wzorem ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-2.jpg) dla każdej liczby naturalnej ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-3.jpg) . Zadanie 14.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pięćdziesiątym wyrazem ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-4.jpg) jest A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-5.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-6.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-7.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-8.jpg) Zadanie 14.2. Oceń prawdziwość poniższych stwierdzeń. Ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-9.jpg) jest geometryczny. A) prawda B) fałsz Suma trzech początkowych wyrazów ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-10.jpg) jest równa 20. A) prawda B) fałsz",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-5.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-6.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-7.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-8.jpg) Zadanie 14.2. Oceń prawdziwość poniższych stwierdzeń. Ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-9.jpg) jest geometryczny."
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B, czyli $2352$\n\n**Zadanie 14.2**\n\n**Krok 1.** Sprawdź, czy ciąg jest geometryczny, obliczając iloraz dwóch kolejnych wyrazów: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2 - 3(n+1) + 2}{n^2 - 3n + 2}$. Po uproszczeniu otrzymamy $\\frac{n^2-n+2}{n^2-3n+2}$, który zależy od $n$, więc ciąg nie jest geometryczny.\n**Krok 2.** Oblicz sumę trzech początkowych wyrazów: $a_1 = 1^2 - 3(1) + 2 = 0$, $a_2 = 2^2 - 3(2) + 2 = 0$, $a_3 = 3^2 - 3(3) + 2 = 2$. Suma $a_1 + a_2 + a_3 = 0 + 0 + 2 = 2$.\n\n**Odpowiedź:** Ciąg jest geometryczny: B) fałsz. Suma trzech początkowych wyrazów: B) fałsz.",
@@ -15375,18 +15366,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-probna-xii-z15",
     "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 15",
     "category": "ciagi",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = 2𝑛 2 + 𝑛 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Ciąg (𝑎 𝑛 ) jest malejący.",
+    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = 2𝑛 2 + 𝑛 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Ciąg (𝑎 𝑛 ) jest malejący. A) prawda B) fałsz Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136. A) prawda B) fałsz",
     "choices": [
-      "prawda (1)",
-      "fałsz Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136.",
-      "prawda (2)",
-      "fałsz (1)"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Ciąg (𝑎 𝑛 ) jest malejący – fałsz. Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136 – prawda.",
@@ -16400,18 +16388,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-przykladowa-z15",
     "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 15",
     "category": "ciagi",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = −3𝑛 + 5 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, (−1), (−4) są trzema kolejnymi początkowymi wyrazami ciągu (𝑎 𝑛 ).",
+    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = −3𝑛 + 5 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, (−1), (−4) są trzema kolejnymi początkowymi wyrazami ciągu (𝑎 𝑛 ). A) prawda B) fałsz (𝑎 𝑛 ) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "prawda (1)",
-      "fałsz (𝑎 𝑛 ) jest ciągiem arytmetycznym o różnicy równej 5.",
-      "prawda (2)",
-      "fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Stwierdzenie 1: Prawda. Stwierdzenie 2: Fałsz.",
@@ -16430,18 +16415,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-przykladowa-z16",
     "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 16",
     "category": "trygonometria",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 6, |𝐵𝐶| = 5, |𝐴𝐶| = 10. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta 𝐴𝐵𝐶 jest równy (−0,65).",
+    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 6, |𝐵𝐶| = 5, |𝐴𝐶| = 10. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta 𝐴𝐵𝐶 jest równy (−0,65). A) prawda B) fałsz Trójkąt 𝐴𝐵𝐶 jest rozwartokątny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "prawda (1)",
-      "fałsz Trójkąt 𝐴𝐵𝐶 jest rozwartokątny.",
-      "prawda (2)",
-      "fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Oba stwierdzenia są prawdziwe.",
@@ -16862,12 +16844,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny.",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi. <ul class=\"",
     "choices": [
-      "prawda (1)",
-      "fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny.",
-      "prawda (2)",
-      "fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P\n\n**Zadanie 30.2**\n\n**Krok 1.** Dominanta to wartość najczęściej występująca, czyli ta, której odpowiada najwyższy słupek na wykresie. Najwyższy słupek odpowiada czasowi 2,5 godziny.\n**Krok 2.** Odczytujemy z wykresu, że najwyższą liczbę uczniów (25) przypisano do czasu 2,5 godziny.\n\n**Odpowiedź:** B, czyli 2,50 godziny.",
@@ -17092,18 +17071,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m24-maj-z08",
     "title": "Matura — maj 2024 — poziom podstawowy — zad. 8",
     "category": "algebra",
-    "difficulty": "latwy",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 6𝑥 2 + 9𝑥. Oceń prawdziwość poniższych stwierdzeń. Wielomian 𝑊 jest iloczynem wielomianów 𝐹(𝑥) = 3𝑥 i 𝐺(𝑥) = 𝑥 2 + 2𝑥 + 3.",
+    "prompt": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 6𝑥 2 + 9𝑥. Oceń prawdziwość poniższych stwierdzeń. Wielomian 𝑊 jest iloczynem wielomianów 𝐹(𝑥) = 3𝑥 i 𝐺(𝑥) = 𝑥 2 + 2𝑥 + 3. A) prawda B) fałsz Liczba (−1) jest rozwiązaniem równania 𝑊(𝑥) = 0. A) prawda B) fałsz",
     "choices": [
-      "prawda (1)",
-      "fałsz Liczba (−1) jest rozwiązaniem równania 𝑊(𝑥) = 0.",
-      "prawda (2)",
-      "fałsz (1)"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
@@ -17294,18 +17270,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m24-maj-z15",
     "title": "Matura — maj 2024 — poziom podstawowy — zad. 15",
     "category": "ciagi",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = (−1) 𝑛 ⋅ (𝑛 − 5) dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Pierwszy wyraz ciągu (𝑎 𝑛 ) jest dwa razy większy od trzeciego wyrazu tego ciągu.",
+    "prompt": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = (−1) 𝑛 ⋅ (𝑛 − 5) dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Pierwszy wyraz ciągu (𝑎 𝑛 ) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu (𝑎 𝑛 ) są dodatnie. A) prawda B) fałsz",
     "choices": [
-      "prawda (1)",
-      "fałsz Wszystkie wyrazy ciągu (𝑎 𝑛 ) są dodatnie.",
-      "prawda (2)",
-      "fałsz (1)"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
@@ -18387,18 +18360,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m25-maj-z21",
     "title": "Matura — maj 2025 — poziom podstawowy — zad. 21",
     "category": "geometria",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 11, |𝐵𝐶| = 12 oraz |∡𝐴𝐵𝐶| = 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Trójkąt 𝐴𝐵𝐶 jest równoramienny.",
+    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 11, |𝐵𝐶| = 12 oraz |∡𝐴𝐵𝐶| = 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Trójkąt 𝐴𝐵𝐶 jest równoramienny. A) prawda B) fałsz Pole trójkąta 𝐴𝐵𝐶 jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "prawda (1)",
-      "fałsz Pole trójkąta 𝐴𝐵𝐶 jest równe 33√ 3 .",
-      "prawda (2)",
-      "fałsz SCHEMAT PUNKTACJI 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pierwsze stwierdzenie: fałsz, drugie stwierdzenie: prawda.",

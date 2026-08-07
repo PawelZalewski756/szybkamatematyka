@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "kombinatoryka",
+  "topic": "prawdopodobienstwo",
+  "categoryName": "Kombinatoryka",
+  "topicName": "Prawdopodobieństwo",
+  "tasks": [
+    {
+      "content": "P(czerwona) przy 8 z 24 kulach​",
+      "correct_answer": "1/3",
+      "options": [
+        "9/24",
+        "16/24",
+        "8/25",
+        "1/3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1/3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a15e6954-406a-480f-9acd-7f5e48513979",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 8-ścienna: P(wynik ≤ 5)​​",
+      "correct_answer": "5/8",
+      "options": [
+        "5/8",
+        "1/8",
+        "5/9",
+        "2/8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 5/8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "feae194b-ecd1-4539-b538-cbe3ca2dc83e",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 4 z 6 kulach​​​",
+      "correct_answer": "2/3",
+      "options": [
+        "2/3",
+        "5/6",
+        "4/7",
+        "2/6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 2/3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eb39ffd6-00a8-4da5-8a75-80bb8ce6346a",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 6-ścienna: P(wynik ≤ 3)​​​​",
+      "correct_answer": "1/2",
+      "options": [
+        "1/2",
+        "2/6",
+        "3/7",
+        "1/6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0c13b1ac-87e9-4510-a29f-fafcd0401b6c",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 10 z 18 kulach​​​​​",
+      "correct_answer": "5/9",
+      "options": [
+        "5/9",
+        "10/19",
+        "11/18",
+        "8/18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 5/9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2913b059-5b42-4470-bc8a-f153bc234e0e",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 10-ścienna: P(wynik ≤ 4)​​​​​​",
+      "correct_answer": "2/5",
+      "options": [
+        "1/10",
+        "2/5",
+        "2/10",
+        "4/11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 2/5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bed7dda8-1ccd-4e6a-a252-c3cbfecc2069",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 6 z 20 kulach​​​​​​​",
+      "correct_answer": "3/10",
+      "options": [
+        "6/21",
+        "3/10",
+        "14/20",
+        "7/20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 3/10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "762f781c-6b19-4dfe-b475-b5dd48ec60c2",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 8-ścienna: P(wynik ≤ 1)​​​​​​​​",
+      "correct_answer": "1/8",
+      "options": [
+        "1/9",
+        "NaN",
+        "1/8",
+        "2/8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 1/8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "84d3b126-e994-4fef-b41c-854ecb25f63e",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 2 z 22 kulach​​​​​​​​​",
+      "correct_answer": "1/11",
+      "options": [
+        "3/22",
+        "1/11",
+        "2/23",
+        "20/22"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 1/11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe02480e-198c-4d3a-bdaa-eb38c077345d",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 6-ścienna: P(wynik ≤ 1)​​​​​​​​​​",
+      "correct_answer": "1/6",
+      "options": [
+        "1/6",
+        "NaN",
+        "1/7",
+        "2/6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 1/6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6951ed8-609f-4b9a-b873-d265ffdad436",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 8 z 14 kulach​​​​​​​​​​​",
+      "correct_answer": "4/7",
+      "options": [
+        "6/14",
+        "9/14",
+        "8/15",
+        "4/7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 4/7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a6fb0dab-83e7-4623-8106-48ddab57e1b8",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 10-ścienna: P(wynik ≤ 7)​​​​​​​​​​​​",
+      "correct_answer": "7/10",
+      "options": [
+        "1/10",
+        "7/11",
+        "2/10",
+        "7/10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 7/10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "43d9d7b4-8491-4a00-a6aa-21c94eeb77c0",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 4 z 16 kulach​​​​​​​​​​​​​",
+      "correct_answer": "1/4",
+      "options": [
+        "5/16",
+        "4/17",
+        "1/4",
+        "12/16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1/4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0523533-2c00-4213-8da5-a004b76055ef",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 8-ścienna: P(wynik ≤ 4)​​​​​​​​​​​​​​",
+      "correct_answer": "1/2",
+      "options": [
+        "4/9",
+        "1/8",
+        "1/2",
+        "2/8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "63580850-84e7-4b45-b851-d69569b19251",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 10 z 28 kulach​​​​​​​​​​​​​​​",
+      "correct_answer": "5/14",
+      "options": [
+        "5/14",
+        "18/28",
+        "11/28",
+        "10/29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 5/14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ccc5d9e6-1a35-40fe-b7d3-9f5fd01867d8",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 6-ścienna: P(wynik ≤ 4)​​​​​​​​​​​​​​​​",
+      "correct_answer": "2/3",
+      "options": [
+        "2/3",
+        "2/6",
+        "4/7",
+        "1/6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 2/3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4fdf1d19-4143-4442-bbf6-ff5932db66e0",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 6 z 10 kulach​​​​​​​​​​​​​​​​​",
+      "correct_answer": "3/5",
+      "options": [
+        "3/5",
+        "4/10",
+        "6/11",
+        "7/10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 3/5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "711a0955-22a5-4343-ba0d-67567561dfb7",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 10-ścienna: P(wynik ≤ 1)​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "1/10",
+      "options": [
+        "NaN",
+        "2/10",
+        "1/11",
+        "1/10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 1/10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bf654ee0-6dbe-4b5c-a37d-66252c336c8b",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "P(czerwona) przy 2 z 12 kulach​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "1/6",
+      "options": [
+        "1/6",
+        "10/12",
+        "3/12",
+        "2/13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 1/6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "680b269a-5869-469c-b3f5-877730179ec9",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Kostka 8-ścienna: P(wynik ≤ 7)​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "7/8",
+      "options": [
+        "1/8",
+        "2/8",
+        "7/9",
+        "7/8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 7/8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9989154b-83c9-4e24-a2cd-59a690fa226a",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.898Z"
+}

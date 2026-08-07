@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "geometria_analityczna",
+  "categoryName": "Geometria",
+  "topicName": "Geometria analityczna",
+  "tasks": [
+    {
+      "content": "Odległość $(-8,-3)$ i $(2,7)$​",
+      "correct_answer": "14.1",
+      "options": [
+        "14.1",
+        "13.1",
+        "12.1",
+        "10.1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 14.1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1086e214-6289-4d76-aa77-ef1dd5263d45",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(7,-4)$ i $(1,6)$​​",
+      "correct_answer": "11.7",
+      "options": [
+        "7.7",
+        "10.7",
+        "11.7",
+        "9.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "59e71b3d-51f7-4247-848f-a1bb9eaa083d",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(6,-5)$ i $(0,5)$​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "9.7",
+        "7.7",
+        "11.7",
+        "10.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21d03515-6350-4a0d-a31c-e08fade1b5be",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(5,-6)$ i $(-1,4)$​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "9.7",
+        "7.7",
+        "11.7",
+        "10.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6fd9dcad-9f98-423d-be19-70a0ddf29c5a",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(4,-7)$ i $(-2,3)$​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "10.7",
+        "9.7",
+        "7.7",
+        "11.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac780b75-0793-485f-8f6b-2d4d411788c2",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(3,-8)$ i $(-3,2)$​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "10.7",
+        "11.7",
+        "7.7",
+        "9.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f980ed09-e010-4ec4-acb2-57140d7b8f80",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(2,7)$ i $(-4,1)$​​​​​​​",
+      "correct_answer": "8.5",
+      "options": [
+        "8.5",
+        "7.5",
+        "6.5",
+        "4.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Odpowiedź: 8.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "317016da-eb96-4278-b0e1-bd72cbe43c27",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(1,6)$ i $(-5,0)$​​​​​​​​",
+      "correct_answer": "8.5",
+      "options": [
+        "7.5",
+        "6.5",
+        "4.5",
+        "8.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odpowiedź: 8.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ebb2fd40-bde6-4314-bb34-48a41cc741c8",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(0,5)$ i $(-6,-1)$​​​​​​​​​",
+      "correct_answer": "8.5",
+      "options": [
+        "7.5",
+        "8.5",
+        "4.5",
+        "6.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 8.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e80c928c-3618-4d99-a5be-8d00f34a0a8b",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-1,4)$ i $(-7,-2)$​​​​​​​​​​",
+      "correct_answer": "8.5",
+      "options": [
+        "8.5",
+        "6.5",
+        "7.5",
+        "4.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 8.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a386e0c8-a39a-41f8-96f6-026eb84b5193",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-2,3)$ i $(-8,-3)$​​​​​​​​​​​",
+      "correct_answer": "8.5",
+      "options": [
+        "6.5",
+        "8.5",
+        "7.5",
+        "4.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Odpowiedź: 8.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dec0f66b-0715-49ae-b1c7-0135c09f3e91",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-3,2)$ i $(7,-4)$​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "11.7",
+        "9.7",
+        "7.7",
+        "10.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "db87bd99-bb7a-4188-877a-85bfcde05d03",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-4,1)$ i $(6,-5)$​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "7.7",
+        "11.7",
+        "10.7",
+        "9.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "831c7a54-6e8b-4085-afb7-a214784919a6",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-5,0)$ i $(5,-6)$​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "11.7",
+        "7.7",
+        "9.7",
+        "10.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99df97e7-722c-470a-9e00-dd385789fde2",
+      "generatedAt": "2026-08-07T15:45:15.892Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-6,-1)$ i $(4,-7)$​​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "9.7",
+        "10.7",
+        "7.7",
+        "11.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "95afee6c-6d0b-48f2-b891-e066b1ae3a98",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-7,-2)$ i $(3,-8)$​​​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "11.7",
+        "9.7",
+        "7.7",
+        "10.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec1d5037-b494-4cf2-90bc-3cdaa3b0af29",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(-8,-3)$ i $(2,7)$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "14.1",
+      "options": [
+        "13.1",
+        "14.1",
+        "12.1",
+        "10.1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Odpowiedź: 14.1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e152c0f2-b48d-44d0-b623-33708b7435fa",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(7,-4)$ i $(1,6)$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "9.7",
+        "7.7",
+        "10.7",
+        "11.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c9b4995-5624-4dff-b0db-d758935738bd",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(6,-5)$ i $(0,5)$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "11.7",
+        "7.7",
+        "10.7",
+        "9.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d4d3e6ed-efe5-4499-b9c4-34285de0ef98",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Odległość $(5,-6)$ i $(-1,4)$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "11.7",
+      "options": [
+        "10.7",
+        "9.7",
+        "7.7",
+        "11.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 11.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3cbc6bc8-ffae-4214-b95f-2ccc605171ed",
+      "generatedAt": "2026-08-07T15:45:15.893Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.893Z"
+}

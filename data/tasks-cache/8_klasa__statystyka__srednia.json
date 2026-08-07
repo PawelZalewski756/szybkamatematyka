@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "statystyka",
+  "topic": "srednia",
+  "categoryName": "Statystyka",
+  "topicName": "Średnia arytmetyczna",
+  "tasks": [
+    {
+      "content": "Średnia z 19, 18, 17​",
+      "correct_answer": "18",
+      "options": [
+        "16",
+        "18",
+        "19",
+        "17"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de8c6653-b37a-4e46-8a4e-cb63f9bceeaa",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 6, 5, 4, 3, 2​​",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "babd2cc9-d38c-4037-907b-0b69b2b15461",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 11, 10, 9, 8​​​",
+      "correct_answer": "9.5",
+      "options": [
+        "8.5",
+        "10.5",
+        "7.5",
+        "9.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 9.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "55821d17-ed13-4e6d-8a9f-ac9823d2511b",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 16, 15, 14​​​​",
+      "correct_answer": "15",
+      "options": [
+        "13",
+        "16",
+        "15",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bafaa5b9-0da7-477e-a2cf-9ffeadb3c560",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 3, 2, 19, 18, 17​​​​​",
+      "correct_answer": "11.8",
+      "options": [
+        "11.8",
+        "12.8",
+        "10.8",
+        "9.8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 11.8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ceeae55-d603-4022-ab34-c42c10d49bda",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 8, 7, 6, 5​​​​​​",
+      "correct_answer": "6.5",
+      "options": [
+        "6.5",
+        "7.5",
+        "5.5",
+        "4.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 6.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "088323b2-415b-401f-bcfb-dc67f7f51202",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 13, 12, 11​​​​​​​",
+      "correct_answer": "12",
+      "options": [
+        "13",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7b772b3b-f109-4881-9316-7ba1ef3f2e90",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 18, 17, 16, 15, 14​​​​​​​​",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "17",
+        "14",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d1d1ee87-99dd-49ba-b96b-a7f7e780d25f",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 5, 4, 3, 2​​​​​​​​​",
+      "correct_answer": "3.5",
+      "options": [
+        "2.5",
+        "1.5",
+        "3.5",
+        "4.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 3.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "451333ac-b0d0-41ce-b7c1-2326a1fbd4e8",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 10, 9, 8​​​​​​​​​​",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "549355c4-73c1-4ad4-8b34-4908871f44a4",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 15, 14, 13, 12, 11​​​​​​​​​​​",
+      "correct_answer": "13",
+      "options": [
+        "13",
+        "12",
+        "14",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b8045e9-6c1b-456d-a9f7-8feca057a9f5",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 2, 19, 18, 17​​​​​​​​​​​​",
+      "correct_answer": "14",
+      "options": [
+        "12",
+        "14",
+        "13",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a90fe09a-2282-4bc7-bc11-da4628c71c31",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 7, 6, 5​​​​​​​​​​​​​",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "4",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2a45b4d-96c5-4ece-bede-dd7f8173da43",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 12, 11, 10, 9, 8​​​​​​​​​​​​​​",
+      "correct_answer": "10",
+      "options": [
+        "9",
+        "11",
+        "8",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c70ab335-3d4d-4154-8ac3-dd0d0ec0d4b5",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 17, 16, 15, 14​​​​​​​​​​​​​​​",
+      "correct_answer": "15.5",
+      "options": [
+        "16.5",
+        "14.5",
+        "15.5",
+        "13.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 15.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a8c6c369-2e56-46db-bd05-a3a0270abfef",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 4, 3, 2​​​​​​​​​​​​​​​​",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Odpowiedź: 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cfc82906-f137-4c28-8463-ab4366d5ad52",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 9, 8, 7, 6, 5​​​​​​​​​​​​​​​​​",
+      "correct_answer": "7",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Odpowiedź: 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6a02c93e-b5e3-4feb-8de2-1f34e8e3e192",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 14, 13, 12, 11​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "12.5",
+      "options": [
+        "11.5",
+        "12.5",
+        "13.5",
+        "10.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 12.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc4c8991-c596-4acc-b1df-28f5d9241d7c",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 19, 18, 17​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "18",
+      "options": [
+        "19",
+        "18",
+        "17",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Odpowiedź: 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d742bb3c-46b3-46e9-8575-b81d7dbed671",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Średnia z 6, 5, 4, 3, 2​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Odpowiedź: 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a700273-9886-49b9-a10e-fa6db6455f39",
+      "generatedAt": "2026-08-07T15:45:15.898Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.898Z"
+}

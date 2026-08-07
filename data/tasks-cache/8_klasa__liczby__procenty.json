@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "procenty",
+  "categoryName": "Liczby i działania",
+  "topicName": "Procenty",
+  "tasks": [
+    {
+      "content": "5% z liczby 497 wynosi:​",
+      "correct_answer": "24.85",
+      "options": [
+        "23.85",
+        "-14.91",
+        "22.85",
+        "24.85"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 24.85",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d075937-4ee9-46da-8a4e-af5e0b228579",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "50% z liczby 220 wynosi:​​",
+      "correct_answer": "110",
+      "options": [
+        "108",
+        "110",
+        "92.4",
+        "109"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 110",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3a21b18-a5d3-46ae-a54d-93e3142cdd42",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "49% z liczby 403 wynosi:​​​",
+      "correct_answer": "197.47",
+      "options": [
+        "195.47",
+        "196.47",
+        "165.23",
+        "197.47"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 197.47",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5442627f-62dc-4b9b-8cd1-872dff7ffad7",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "48% z liczby 126 wynosi:​​​​",
+      "correct_answer": "60.48",
+      "options": [
+        "58.48",
+        "60.48",
+        "59.48",
+        "50.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 60.48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "565a36b6-5bae-4c27-9326-71b4a130d6f7",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "47% z liczby 309 wynosi:​​​​​",
+      "correct_answer": "145.23",
+      "options": [
+        "144.23",
+        "120.51",
+        "143.23",
+        "145.23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 145.23",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "babda3fc-70e5-4707-a379-91b642fbcd37",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "46% z liczby 492 wynosi:​​​​​​",
+      "correct_answer": "226.32",
+      "options": [
+        "186.96",
+        "226.32",
+        "224.32",
+        "225.32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 226.32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c7dbd02-eee6-4f35-82af-044327fa84ab",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "45% z liczby 215 wynosi:​​​​​​​",
+      "correct_answer": "96.75",
+      "options": [
+        "94.75",
+        "95.75",
+        "79.55",
+        "96.75"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 96.75",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e06123e9-65ee-486c-a57d-bdc4d8991902",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "44% z liczby 398 wynosi:​​​​​​​​",
+      "correct_answer": "175.12",
+      "options": [
+        "174.12",
+        "175.12",
+        "143.28",
+        "173.12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 175.12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "08ae7342-f431-4a06-a880-828b11dc6543",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "43% z liczby 121 wynosi:​​​​​​​​​",
+      "correct_answer": "52.03",
+      "options": [
+        "50.03",
+        "42.35",
+        "51.03",
+        "52.03"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 52.03",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "26f5e822-4acd-4e3a-bac9-de4cff25919a",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "42% z liczby 304 wynosi:​​​​​​​​​​",
+      "correct_answer": "127.68",
+      "options": [
+        "103.36",
+        "127.68",
+        "125.68",
+        "126.68"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 127.68",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "22908ed9-5335-42c1-a9dd-9109ad53883b",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "41% z liczby 487 wynosi:​​​​​​​​​​​",
+      "correct_answer": "199.67",
+      "options": [
+        "197.67",
+        "160.71",
+        "198.67",
+        "199.67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 199.67",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4a7d5855-c20e-40bd-8f22-204d0a99fc39",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "40% z liczby 210 wynosi:​​​​​​​​​​​​",
+      "correct_answer": "84",
+      "options": [
+        "67.2",
+        "84",
+        "82",
+        "83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 84",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bc1c303d-b011-49c3-b2b5-459b1bbcb3bc",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "39% z liczby 393 wynosi:​​​​​​​​​​​​​",
+      "correct_answer": "153.27",
+      "options": [
+        "151.27",
+        "153.27",
+        "152.27",
+        "121.83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 153.27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b481459c-8a2d-4e06-b719-43b24f072722",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "38% z liczby 116 wynosi:​​​​​​​​​​​​​​",
+      "correct_answer": "44.08",
+      "options": [
+        "42.08",
+        "43.08",
+        "34.8",
+        "44.08"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 44.08",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "36e66ff5-f2b4-428d-a7da-072fced6ace7",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "37% z liczby 299 wynosi:​​​​​​​​​​​​​​​",
+      "correct_answer": "110.63",
+      "options": [
+        "108.63",
+        "110.63",
+        "86.71",
+        "109.63"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 110.63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dff3ee0b-db0b-40df-a801-7ba0f0ef667d",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "36% z liczby 482 wynosi:​​​​​​​​​​​​​​​​",
+      "correct_answer": "173.52",
+      "options": [
+        "173.52",
+        "171.52",
+        "134.96",
+        "172.52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 173.52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de52cebd-4946-4d4d-b14c-b0de959fa652",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "35% z liczby 205 wynosi:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "71.75",
+      "options": [
+        "70.75",
+        "69.75",
+        "71.75",
+        "55.35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 71.75",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0452a40d-b2fe-4d9d-8cd2-1c096cf75788",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "34% z liczby 388 wynosi:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "131.92",
+      "options": [
+        "131.92",
+        "100.88",
+        "129.92",
+        "130.92"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 131.92",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f4656d29-c448-4eaf-b0aa-870a6b866b49",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "33% z liczby 111 wynosi:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "36.63",
+      "options": [
+        "35.63",
+        "34.63",
+        "27.75",
+        "36.63"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 36.63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcca15f7-5e4a-463f-b259-be0bab9644be",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "32% z liczby 294 wynosi:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "94.08",
+      "options": [
+        "70.56",
+        "93.08",
+        "94.08",
+        "92.08"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 94.08",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ccd60a5-117a-456b-ae11-4d254d6bf640",
+      "generatedAt": "2026-08-07T15:45:15.894Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.894Z"
+}

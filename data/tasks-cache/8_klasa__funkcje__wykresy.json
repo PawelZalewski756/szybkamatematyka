@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "funkcje",
+  "topic": "wykresy",
+  "categoryName": "Funkcje i wykresy",
+  "topicName": "Odczyt wykresu",
+  "tasks": [
+    {
+      "content": "Wykres $y=1x+14$: wartość dla $x=18$​",
+      "correct_answer": "32",
+      "options": [
+        "32",
+        "30",
+        "31",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1092c8f4-59e7-4b80-bc1e-e30ee482ece4",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=24x+17$: wartość dla $x=21$​​",
+      "correct_answer": "521",
+      "options": [
+        "521",
+        "519",
+        "516",
+        "520"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 521",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aa906959-e9e6-47a1-a3ab-49208742180e",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=7x+0$: wartość dla $x=24$​​​",
+      "correct_answer": "168",
+      "options": [
+        "163",
+        "166",
+        "167",
+        "168"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 168",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cdeb0690-9bb9-4aa7-ac81-0e02e47828d8",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=30x+3$: wartość dla $x=27$​​​​",
+      "correct_answer": "813",
+      "options": [
+        "812",
+        "808",
+        "811",
+        "813"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 813",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b2fa2635-7dcd-45aa-ac17-3e858a71ed37",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=13x+6$: wartość dla $x=30$​​​​​",
+      "correct_answer": "396",
+      "options": [
+        "396",
+        "395",
+        "394",
+        "391"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 396",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0f43c009-6f74-45e7-8945-ec35db7289c2",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=36x+9$: wartość dla $x=33$​​​​​​",
+      "correct_answer": "1197",
+      "options": [
+        "1197",
+        "1195",
+        "1196",
+        "1192"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 1197",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f947999d-5f0d-4fb8-bdbc-1443d8b403e1",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=19x+12$: wartość dla $x=36$​​​​​​​",
+      "correct_answer": "696",
+      "options": [
+        "696",
+        "695",
+        "691",
+        "694"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 696",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7741d2cc-c4a4-447b-abd5-7eed4fa02abc",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=2x+15$: wartość dla $x=39$​​​​​​​​",
+      "correct_answer": "93",
+      "options": [
+        "92",
+        "93",
+        "91",
+        "88"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 93",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef12e24a-238c-406f-811a-4fb55a8a6116",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=25x+18$: wartość dla $x=42$​​​​​​​​​",
+      "correct_answer": "1068",
+      "options": [
+        "1063",
+        "1067",
+        "1068",
+        "1066"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 1068",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "51ff030d-78df-4ace-a461-a1497dd5077b",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=8x+1$: wartość dla $x=45$​​​​​​​​​​",
+      "correct_answer": "361",
+      "options": [
+        "356",
+        "361",
+        "359",
+        "360"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 361",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3112c522-df7f-4a74-8e0b-582a792172b8",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=31x+4$: wartość dla $x=48$​​​​​​​​​​​",
+      "correct_answer": "1492",
+      "options": [
+        "1490",
+        "1492",
+        "1491",
+        "1487"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 1492",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "594ad873-8087-4eb7-8580-6cecd71d84a2",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=14x+7$: wartość dla $x=1$​​​​​​​​​​​​",
+      "correct_answer": "21",
+      "options": [
+        "21",
+        "16",
+        "19",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8b83704a-d01a-4aa6-96fe-30f521d3850f",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=37x+10$: wartość dla $x=4$​​​​​​​​​​​​​",
+      "correct_answer": "158",
+      "options": [
+        "157",
+        "156",
+        "153",
+        "158"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 158",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "55abf566-7d88-49b4-82b1-2255dfae5f04",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=20x+13$: wartość dla $x=7$​​​​​​​​​​​​​​",
+      "correct_answer": "153",
+      "options": [
+        "151",
+        "152",
+        "148",
+        "153"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 153",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c73380ae-b0bc-4683-ae07-078441153624",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=3x+16$: wartość dla $x=10$​​​​​​​​​​​​​​​",
+      "correct_answer": "46",
+      "options": [
+        "44",
+        "45",
+        "46",
+        "41"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 46",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8e010d1-14d0-4bcb-a160-c7f3619533a4",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=26x+19$: wartość dla $x=13$​​​​​​​​​​​​​​​​",
+      "correct_answer": "357",
+      "options": [
+        "352",
+        "357",
+        "355",
+        "356"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 357",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0040200-77a3-4cf6-b25d-4a6877e0b9b3",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=9x+2$: wartość dla $x=16$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "146",
+      "options": [
+        "144",
+        "141",
+        "145",
+        "146"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 146",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2acdeac4-b38e-4154-9e9a-21c9e1955145",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=32x+5$: wartość dla $x=19$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "613",
+      "options": [
+        "612",
+        "608",
+        "611",
+        "613"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 613",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe67590f-5974-40fc-8034-87d06c49bdf5",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=15x+8$: wartość dla $x=22$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "338",
+      "options": [
+        "333",
+        "336",
+        "338",
+        "337"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 338",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b34fe5cd-e83f-41db-808e-8276c5a5162b",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Wykres $y=38x+11$: wartość dla $x=25$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "961",
+      "options": [
+        "961",
+        "959",
+        "956",
+        "960"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 961",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "179d85b6-936d-4ffc-b18f-103f3445774d",
+      "generatedAt": "2026-08-07T15:45:15.897Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.897Z"
+}

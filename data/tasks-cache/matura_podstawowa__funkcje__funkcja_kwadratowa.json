@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "funkcje",
+  "topic": "funkcja_kwadratowa",
+  "categoryName": "Funkcje",
+  "topicName": "Funkcja kwadratowa",
+  "tasks": [
+    {
+      "content": "Dla $f(x)=x^2+-1x+7$ oblicz $f(-18)$​",
+      "correct_answer": "349",
+      "options": [
+        "347",
+        "348",
+        "349",
+        "342"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 349",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7f7694dd-5c36-4ffd-9a24-3ec541994fe2",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+2x+-6$ oblicz $f(5)$​​",
+      "correct_answer": "29",
+      "options": [
+        "22",
+        "29",
+        "27",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 29",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1640e58e-cc1d-4986-a250-d367ecbd37ad",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+5x+-1$ oblicz $f(-8)$​​​",
+      "correct_answer": "23",
+      "options": [
+        "23",
+        "21",
+        "16",
+        "22"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 23",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "666b1147-b850-490a-8c2a-fb8a35a68102",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-3x+4$ oblicz $f(15)$​​​​",
+      "correct_answer": "184",
+      "options": [
+        "182",
+        "177",
+        "183",
+        "184"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 184",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b02a056e-4779-4bb4-b4b3-0f588df3d2a2",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+0x+-9$ oblicz $f(2)$​​​​​",
+      "correct_answer": "-5",
+      "options": [
+        "-6",
+        "-5",
+        "-12",
+        "-7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: -5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e3749379-cd2b-4513-aa53-e8b8a7c1f6f8",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+3x+-4$ oblicz $f(-11)$​​​​​​",
+      "correct_answer": "84",
+      "options": [
+        "77",
+        "83",
+        "82",
+        "84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 84",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6d031b8f-52a1-4160-8ccf-c6b0775bd948",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-5x+1$ oblicz $f(12)$​​​​​​​",
+      "correct_answer": "85",
+      "options": [
+        "85",
+        "78",
+        "84",
+        "83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 85",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4fc95679-1f76-4778-bd6c-9b74d5259ab6",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-2x+6$ oblicz $f(-1)$​​​​​​​​",
+      "correct_answer": "9",
+      "options": [
+        "2",
+        "7",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "05f20823-b267-4da9-98dd-8b75d3f1ceed",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+1x+-7$ oblicz $f(-14)$​​​​​​​​​",
+      "correct_answer": "175",
+      "options": [
+        "174",
+        "168",
+        "175",
+        "173"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 175",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "142aaf02-f6d9-46bc-80f7-622876b59170",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+4x+-2$ oblicz $f(9)$​​​​​​​​​​",
+      "correct_answer": "115",
+      "options": [
+        "115",
+        "108",
+        "113",
+        "114"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 115",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b79ac71a-6130-471e-9428-e3f56890386a",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-4x+3$ oblicz $f(-4)$​​​​​​​​​​​",
+      "correct_answer": "35",
+      "options": [
+        "33",
+        "34",
+        "35",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 35",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e1f8befb-3acf-41f5-8870-96c6d88ad841",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-1x+8$ oblicz $f(-17)$​​​​​​​​​​​​",
+      "correct_answer": "314",
+      "options": [
+        "313",
+        "312",
+        "314",
+        "307"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 314",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47dd6a19-ef70-4026-8e1e-f1c4e73f76bd",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+2x+-5$ oblicz $f(6)$​​​​​​​​​​​​​",
+      "correct_answer": "43",
+      "options": [
+        "41",
+        "43",
+        "36",
+        "42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odpowiedź: 43",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "20bfa4c0-05bf-40bc-9f5a-f7d8cf21cd41",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+5x+0$ oblicz $f(-7)$​​​​​​​​​​​​​​",
+      "correct_answer": "14",
+      "options": [
+        "12",
+        "7",
+        "14",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Odpowiedź: 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2fd0ea69-bdc1-4085-ac71-bdbf74ed0987",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-3x+5$ oblicz $f(16)$​​​​​​​​​​​​​​​",
+      "correct_answer": "213",
+      "options": [
+        "213",
+        "212",
+        "211",
+        "206"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 213",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5c90a01d-f6aa-42ed-9fc1-d5117d6e167f",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+0x+-8$ oblicz $f(3)$​​​​​​​​​​​​​​​​",
+      "correct_answer": "1",
+      "options": [
+        "-6",
+        "1",
+        "-1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Odpowiedź: 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "145cff58-587f-4ed5-8121-2a1ef9936cb3",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+3x+-3$ oblicz $f(-10)$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "67",
+      "options": [
+        "66",
+        "67",
+        "65",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Odpowiedź: 67",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0c6a38c6-f206-44b9-949a-4644056c4ce4",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-5x+2$ oblicz $f(13)$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "106",
+      "options": [
+        "105",
+        "99",
+        "104",
+        "106"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Odpowiedź: 106",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7305c3e7-0421-4b1a-b1cc-7b1f99fad966",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+-2x+7$ oblicz $f(0)$​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "7",
+      "options": [
+        "0",
+        "7",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Odpowiedź: 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e8c05ec-bbf8-424a-9ecd-ba4d1dbe7c52",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    },
+    {
+      "content": "Dla $f(x)=x^2+1x+-6$ oblicz $f(-13)$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "150",
+      "options": [
+        "149",
+        "143",
+        "150",
+        "148"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Odpowiedź: 150",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "02ead7be-4473-4d72-a1f4-d5f3a0e03e7c",
+      "generatedAt": "2026-08-07T15:45:15.890Z",
+      "model": "parametric-v1"
+    }
+  ],
+  "updatedAt": "2026-08-07T15:45:15.890Z"
+}

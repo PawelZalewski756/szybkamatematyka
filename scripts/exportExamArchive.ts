@@ -7,6 +7,7 @@
 import fs from "fs";
 import path from "path";
 import { inferDzialMatura } from "../lib/baza-zadan/cke/parse-matura-page";
+import { parseAbcd } from "../lib/baza-zadan/cke/parse-abcd";
 import { parseSolutionSteps } from "../lib/baza-zadan/parse-solution-steps";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 import { bazaCategoryForCmsDzial } from "../lib/trening/taxonomy-bridge";
@@ -41,53 +42,6 @@ export type ExamArchiveSheetMeta = {
   month: number;
   taskIds: string[];
 };
-
-function parseAbcd(tresc: string): {
-  prompt: string;
-  choices: string[];
-  hasChoices: boolean;
-} {
-  const anchor = tresc.search(/\sA\)\s/);
-  if (anchor < 0) {
-    return {
-      prompt: tresc.trim(),
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
-      hasChoices: false,
-    };
-  }
-
-  const prompt = tresc.slice(0, anchor).trim();
-  const optsText = tresc.slice(anchor).trim();
-  const parts = optsText.split(/\s(?=[A-D]\)\s)/).filter(Boolean);
-  const choices = parts
-    .map((p) => p.replace(/^[A-D]\)\s*/, "").trim())
-    .filter(Boolean);
-
-  if (choices.length < 2) {
-    return {
-      prompt: tresc.trim(),
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
-      hasChoices: false,
-    };
-  }
-
-  // Heurystyka dla zadań P/F: czasem CKE powoduje, że parser wycina
-  // identyczne krótkie etykiety typu "prawda" / "fałsz" jako osobne opcje.
-  // Żeby nie tworzyć niejednoznacznych odpowiedzi (i żeby audyt pytań nie
-  // flagował duplikatów), rozróżniamy takie etykiety numerem wystąpienia.
-  const picked = choices.slice(0, 4);
-  const counts = new Map<string, number>();
-  const disambiguated = picked.map((c) => {
-    const trimmed = c.trim();
-    const key = trimmed.toLowerCase();
-    if (key !== "prawda" && key !== "fałsz") return c;
-    const next = (counts.get(key) ?? 0) + 1;
-    counts.set(key, next);
-    return `${trimmed} (${next})`;
-  });
-
-  return { prompt, choices: disambiguated, hasChoices: true };
-}
 
 function inferDifficulty(numer: number, hasChoices: boolean): TaskDifficulty {
   if (!hasChoices || numer >= 25) return "trudny";

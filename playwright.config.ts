@@ -28,5 +28,17 @@ export default defineConfig({
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
+    env: {
+      ...process.env,
+      // Smoke działa bez prawdziwego Supabase — wystarczy, że klient się tworzy.
+      NEXT_PUBLIC_SUPABASE_URL:
+        process.env.NEXT_PUBLIC_SUPABASE_URL ||
+        "https://example.supabase.co",
+      NEXT_PUBLIC_SUPABASE_ANON_KEY:
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.demo",
+      NEXT_PUBLIC_SITE_URL:
+        process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    },
   },
 });
