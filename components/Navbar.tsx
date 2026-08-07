@@ -74,13 +74,21 @@ function NavbarActions({
   const showProfile = authReady && user && profile;
 
   return (
-    <div className="flex shrink-0 items-center gap-1 rounded-full border border-surface-border bg-white/[0.02] p-1">
+    <div className="flex shrink-0 items-center gap-1.5">
       {!authReady && (
-        <span className="mx-2 h-7 w-16 animate-pulse rounded-full bg-surface-hover" aria-hidden />
+        <span
+          className="inline-flex h-9 items-center rounded-md border border-surface-border bg-surface px-3 text-xs font-medium text-muted"
+          aria-hidden
+        >
+          …
+        </span>
       )}
 
       {user && profileLoading && (
-        <span className="mx-1 h-8 w-20 animate-pulse rounded-full bg-white/5" aria-hidden />
+        <span
+          className="inline-flex h-9 w-24 animate-pulse rounded-md border border-surface-border bg-surface"
+          aria-hidden
+        />
       )}
 
       {showProfile && <NavbarProfileChip profile={profile} />}
@@ -88,28 +96,23 @@ function NavbarActions({
       {authReady && !user && (
         <Link
           href="/login"
-          className="btn-primary mx-0.5 rounded-full px-4 py-2 text-xs sm:text-sm"
+          className="btn-primary rounded-md px-4 py-2 text-xs sm:text-sm"
         >
           Zaloguj
         </Link>
       )}
 
       {authReady && user && (
-        <>
-          {showProfile ? (
-            <span className="mx-0.5 hidden h-5 w-px bg-surface-border sm:block" aria-hidden />
-          ) : null}
-          <button
-            type="button"
-            onClick={onLogout}
-            disabled={loggingOut}
-            aria-label="Wyloguj"
-            title="Wyloguj"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-muted transition hover:bg-white/[0.06] hover:text-foreground disabled:opacity-50"
-          >
-            <LogOut className="h-4 w-4" aria-hidden />
-          </button>
-        </>
+        <button
+          type="button"
+          onClick={onLogout}
+          disabled={loggingOut}
+          aria-label="Wyloguj"
+          title="Wyloguj"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-surface-border text-muted transition hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
+        >
+          <LogOut className="h-4 w-4" aria-hidden />
+        </button>
       )}
 
       <NavbarSheet showPrimaryLinks={false} />
@@ -243,8 +246,11 @@ export function Navbar() {
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-2 overflow-hidden px-3 sm:gap-3 sm:px-4 lg:h-[3.75rem] lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"
       >
-        <div className="flex min-w-0 flex-1 items-center overflow-hidden lg:flex-none lg:gap-3">
-          <BrandLogo markSize={isDesktopNav ? 30 : 26} className="min-w-0" />
+        <div className="flex min-w-0 flex-1 items-center gap-2 overflow-hidden lg:flex-none lg:gap-3">
+          <BrandLogo
+            markSize={isDesktopNav ? 30 : 28}
+            className="min-w-0 shrink"
+          />
           {isDesktopNav && showMeta ? (
             <NavbarMetaStrip showClass showPro={showPro} />
           ) : null}
@@ -266,11 +272,11 @@ export function Navbar() {
             />
           </>
         ) : (
-          <div className="flex shrink-0 items-center gap-1">
+          <div className="flex shrink-0 items-center gap-1.5">
             {authReady && !user ? (
               <Link
                 href="/login"
-                className="shrink-0 rounded-full px-2 py-1 text-[11px] font-semibold text-accent transition hover:bg-accent/10 sm:px-2.5 sm:text-xs"
+                className="shrink-0 rounded-md border border-accent/30 bg-accent-soft px-2.5 py-1.5 text-xs font-bold text-accent transition hover:bg-accent/15"
               >
                 Zaloguj
               </Link>

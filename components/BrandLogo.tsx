@@ -12,7 +12,7 @@ type BrandLogoProps = {
 
 function Wordmark() {
   return (
-    <span className="min-w-0 truncate text-[11px] font-extrabold leading-tight tracking-tight sm:text-xs lg:text-sm xl:text-[15px]">
+    <span className="truncate text-[12px] font-extrabold leading-tight tracking-tight sm:text-sm lg:text-[15px]">
       <span className="text-accent">Szybka</span>{" "}
       <span className="text-foreground">Matematyka</span>
     </span>
@@ -27,7 +27,7 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const inner = (
     <span
-      className={`group inline-flex min-w-0 max-w-full items-center gap-2 ${className}`}
+      className={`group inline-flex max-w-full items-center gap-2 ${className}`}
       title={BRAND_NAME}
     >
       <LogoMark

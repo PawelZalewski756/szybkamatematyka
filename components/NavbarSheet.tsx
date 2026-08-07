@@ -210,13 +210,18 @@ export function NavbarSheet({
         aria-controls={sheetId}
         aria-label="Menu"
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${
+        className={`inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-md border border-surface-border px-2.5 transition-colors ${
           open || menuActive
-            ? "bg-white/[0.08] text-foreground"
-            : "text-muted hover:bg-white/[0.06] hover:text-foreground"
+            ? "border-accent/40 bg-accent-soft text-accent"
+            : "bg-surface text-foreground hover:bg-surface-hover"
         }`}
       >
-        <Menu className="h-[18px] w-[18px]" aria-hidden />
+        {open ? (
+          <X className="h-[18px] w-[18px]" aria-hidden />
+        ) : (
+          <Menu className="h-[18px] w-[18px]" aria-hidden />
+        )}
+        <span className="text-xs font-bold tracking-wide">Menu</span>
       </button>
 
       {sheet}
