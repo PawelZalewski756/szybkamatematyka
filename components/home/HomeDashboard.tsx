@@ -2,7 +2,6 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { BRAND_NAME } from "@/lib/brand/constants";
 import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
 import {
@@ -76,68 +75,9 @@ const STEPS = [
 ] as const;
 
 const fadeUp = {
-  initial: { opacity: 0, y: 14 },
+  initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
 };
-
-/** Podgląd prawdziwego toku rozwiązania — pełnopłaszczyznowy, nie „karta z kodem”. */
-function HeroSolutionPlane() {
-  return (
-    <div className="relative flex h-full min-h-[22rem] flex-col justify-center border-t border-surface-border bg-[linear-gradient(160deg,color-mix(in_srgb,var(--surface)_92%,#000)_0%,var(--background)_55%)] lg:min-h-0 lg:border-l lg:border-t-0">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse at 80% 20%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 55%)",
-        }}
-        aria-hidden
-      />
-
-      <div className="relative mx-auto w-full max-w-lg px-6 py-10 sm:px-8 lg:px-10 lg:py-0">
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-accent">
-          Przykład z treningu
-        </p>
-        <p className="mt-3 text-sm font-semibold text-foreground">
-          Funkcja kwadratowa
-        </p>
-        <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">
-          Dana jest funkcja{" "}
-          <span className="font-medium text-foreground">
-            f(x) = −x² + 22x + 279
-          </span>
-          . Oblicz wartość w punkcie x = 3 oraz współrzędną wierzchołka.
-        </p>
-
-        <ol className="mt-7 space-y-4 border-l-2 border-accent/35 pl-4">
-          <li>
-            <p className="text-xs font-semibold text-accent">Krok 1</p>
-            <p className="mt-1 text-sm text-foreground/90">
-              f(3) = −9 + 66 + 279 ={" "}
-              <span className="font-semibold text-foreground">336</span>
-            </p>
-          </li>
-          <li>
-            <p className="text-xs font-semibold text-accent">Krok 2</p>
-            <p className="mt-1 text-sm text-foreground/90">
-              Wierzchołek: p = −b/(2a) = −22/(−2) ={" "}
-              <span className="font-semibold text-foreground">11</span>
-            </p>
-          </li>
-          <li>
-            <p className="text-xs font-semibold text-accent">Krok 3</p>
-            <p className="mt-1 text-sm text-foreground/90">
-              q = f(11) — podstawiasz i domykasz odpowiedź.
-            </p>
-          </li>
-        </ol>
-
-        <p className="mt-8 text-xs text-muted">
-          Tak wygląda tok rozwiązania w {BRAND_NAME}.
-        </p>
-      </div>
-    </div>
-  );
-}
 
 export function HomeDashboard() {
   const { path } = useLearningPath();
@@ -145,71 +85,56 @@ export function HomeDashboard() {
 
   return (
     <div className="flex flex-1 flex-col">
-      {/* ——— Hero: marka + jedna myśl + realny podgląd produktu ——— */}
-      <section className="relative isolate -mx-4 min-h-[min(90vh,54rem)] overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
+      {/* ——— Hero: luzno — marka, jedna myśl, powietrze ——— */}
+      <section className="relative isolate -mx-4 min-h-[min(86vh,48rem)] overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
         <GamingBackground variant="hero" />
         <div
-          className="home-grid-bg pointer-events-none absolute inset-0 opacity-40"
+          className="pointer-events-none absolute inset-0"
           aria-hidden
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 55% at 70% 35%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 65%)",
+          }}
         />
 
-        <div className="relative z-10 grid min-h-[min(90vh,54rem)] lg:grid-cols-2">
-          <div className="flex flex-col justify-center px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <motion.p
-              className="text-[clamp(1.75rem,4vw,2.75rem)] font-extrabold leading-none tracking-tight"
-              {...fadeUp}
-              transition={{ duration: 0.4 }}
-            >
-              <span className="text-accent">Szybka</span>{" "}
-              <span className="text-foreground">Matematyka</span>
-            </motion.p>
+        <div className="page-container relative z-10 flex min-h-[min(86vh,48rem)] flex-col justify-center py-20 sm:py-24 lg:py-28">
+          <motion.h1
+            className="text-[clamp(2.5rem,8vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight"
+            {...fadeUp}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="text-accent">Szybka</span>
+            <br />
+            <span className="text-foreground">Matematyka</span>
+          </motion.h1>
 
-            <motion.h1
-              className="mt-6 max-w-xl text-[clamp(1.85rem,4.2vw,3.15rem)] font-extrabold leading-[1.12] tracking-tight text-foreground"
-              {...fadeUp}
-              transition={{ duration: 0.45, delay: 0.05 }}
-            >
-              Matematyka do egzaminu — z pełnym tokiem rozwiązania.
-            </motion.h1>
-
-            <motion.p
-              className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-[1.05rem]"
-              {...fadeUp}
-              transition={{ duration: 0.45, delay: 0.1 }}
-            >
-              Teoria, zadania i arkusze CKE dla ścieżki{" "}
-              <span className="text-foreground/90">{pathLabel}</span>. Uczysz
-              się tematów, które wracają na egzaminie.
-            </motion.p>
-
-            <motion.div
-              className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
-              {...fadeUp}
-              transition={{ duration: 0.45, delay: 0.16 }}
-            >
-              <Link
-                href="/trening"
-                className="btn-chunky w-full px-8 py-4 text-base sm:w-auto"
-              >
-                Zacznij trening
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </Link>
-              <Link
-                href="/trening/arkusze"
-                className="btn-chunky-soft w-full px-8 py-4 text-base sm:w-auto"
-              >
-                Arkusze CKE
-              </Link>
-            </motion.div>
-          </div>
+          <motion.p
+            className="mt-8 max-w-sm text-lg leading-relaxed text-muted sm:text-xl"
+            {...fadeUp}
+            transition={{ duration: 0.5, delay: 0.08 }}
+          >
+            Teoria, zadania i arkusze CKE
+            <span className="text-foreground/80"> — {pathLabel}</span>.
+          </motion.p>
 
           <motion.div
-            className="min-h-0"
-            initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center"
+            {...fadeUp}
+            transition={{ duration: 0.5, delay: 0.16 }}
           >
-            <HeroSolutionPlane />
+            <Link
+              href="/trening"
+              className="btn-chunky w-full px-8 py-4 text-base sm:w-auto"
+            >
+              Zacznij trening
+              <ArrowRight className="h-5 w-5" aria-hidden />
+            </Link>
+            <Link
+              href="/trening/arkusze"
+              className="btn-chunky-soft w-full px-8 py-4 text-base sm:w-auto"
+            >
+              Arkusze CKE
+            </Link>
           </motion.div>
         </div>
       </section>
