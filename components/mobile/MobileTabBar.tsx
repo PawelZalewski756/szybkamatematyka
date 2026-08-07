@@ -103,7 +103,6 @@ export function MobileTabBar() {
     if (resolved) setGrajPath(null);
   };
   const [user, setUser] = useState<User | null>(null);
-  const [authReady, setAuthReady] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
 
   const activeTab = getMobileActiveTab(pathname);
@@ -111,34 +110,25 @@ export function MobileTabBar() {
   const profilLabel = user ? "Profil" : "Konto";
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setAuthReady(true);
-      return;
-    }
+    if (!isSupabaseConfigured()) return;
 
     let supabase: ReturnType<typeof getSupabase>;
     try {
       supabase = getSupabase();
     } catch {
-      setAuthReady(true);
       return;
     }
 
     let cancelled = false;
 
     void supabase.auth.getSession().then(({ data }) => {
-      if (!cancelled) {
-        setUser(data.session?.user ?? null);
-        setAuthReady(true);
-      }
+      if (!cancelled) setUser(data.session?.user ?? null);
     });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
-      setAuthReady(true);
     });
 
     return () => {
@@ -236,7 +226,7 @@ export function MobileTabBar() {
         open={moreOpen}
         onClose={() => setMoreOpen(false)}
         pathname={pathname}
-        isLoggedIn={authReady && Boolean(user)}
+        isLoggedIn={Boolean(user)}
         onLogout={() => void handleLogout()}
         loggingOut={loggingOut}
       />
