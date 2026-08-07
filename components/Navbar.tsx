@@ -57,62 +57,49 @@ function PrimaryNavLinks() {
 }
 
 function NavbarActions({
-  authReady,
   user,
   profile,
   profileLoading,
   loggingOut,
   onLogout,
 }: {
-  authReady: boolean;
   user: User | null;
   profile: Profile | null;
   profileLoading: boolean;
   loggingOut: boolean;
   onLogout: () => void;
 }) {
-  const showProfile = authReady && user && profile;
-
+  // Gość: zawsze pokazuj Zaloguj od razu (bez czekania na Supabase).
+  // Zalogowany: chip / skeleton / wyloguj pojawiają się po rozpoznaniu sesji.
   return (
     <div className="flex shrink-0 items-center gap-1.5">
-      {!authReady && (
-        <span
-          className="inline-flex h-9 items-center rounded-md border border-surface-border bg-surface px-3 text-xs font-medium text-muted"
-          aria-hidden
-        >
-          …
-        </span>
-      )}
-
-      {user && profileLoading && (
-        <span
-          className="inline-flex h-9 w-24 animate-pulse rounded-md border border-surface-border bg-surface"
-          aria-hidden
-        />
-      )}
-
-      {showProfile && <NavbarProfileChip profile={profile} />}
-
-      {authReady && !user && (
+      {!user ? (
         <Link
           href="/login"
           className="btn-primary rounded-md px-4 py-2 text-xs sm:text-sm"
         >
           Zaloguj
         </Link>
-      )}
-
-      {authReady && user && (
-        <button
-          type="button"
-          onClick={onLogout}
-          disabled={loggingOut}
-          aria-label="Wyloguj"
-          title="Wyloguj"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-surface-border text-muted transition hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
-        >
-          <LogOut className="h-4 w-4" aria-hidden />
-        </button>
+      ) : (
+        <>
+          {profileLoading && !profile ? (
+            <span
+              className="inline-flex h-9 w-24 animate-pulse rounded-md border border-surface-border bg-surface"
+              aria-hidden
+            />
+          ) : null}
+          {profile ? <NavbarProfileChip profile={profile} /> : null}
+          <button
+            type="button"
+            onClick={onLogout}
+            disabled={loggingOut}
+            aria-label="Wyloguj"
+            title="Wyloguj"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-surface-border text-muted transition hover:bg-surface-hover hover:text-foreground disabled:opacity-50"
+          >
+            <LogOut className="h-4 w-4" aria-hidden />
+          </button>
+        </>
       )}
 
       <NavbarSheet showPrimaryLinks={false} />
@@ -169,18 +156,43 @@ export function Navbar() {
       return;
     }
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      void loadProfile(session?.user ?? null).finally(() => setAuthReady(true));
-    });
+    let cancelled = false;
+
+    // Nie blokuj UI na getSession / profil — Zaloguj jest widoczny od razu.
+    // Jeśli sesja wisi, po krótkim limicie uznajemy gościa.
+    const readyTimeout = window.setTimeout(() => {
+      if (!cancelled) setAuthReady(true);
+    }, 1200);
+
+    const markReady = () => {
+      if (cancelled) return;
+      window.clearTimeout(readyTimeout);
+      setAuthReady(true);
+    };
+
+    void supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (cancelled) return;
+        markReady();
+        void loadProfile(session?.user ?? null);
+      })
+      .catch(() => {
+        markReady();
+      });
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      markReady();
       void loadProfile(session?.user ?? null);
-      setAuthReady(true);
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      cancelled = true;
+      window.clearTimeout(readyTimeout);
+      subscription.unsubscribe();
+    };
   }, [loadProfile]);
 
   useEffect(() => {
@@ -263,7 +275,6 @@ export function Navbar() {
             </div>
 
             <NavbarActions
-              authReady={authReady}
               user={user}
               profile={profile}
               profileLoading={profileLoading}
@@ -273,7 +284,7 @@ export function Navbar() {
           </>
         ) : (
           <div className="flex shrink-0 items-center gap-1.5">
-            {authReady && !user ? (
+            {!user ? (
               <Link
                 href="/login"
                 className="shrink-0 rounded-md border border-accent/30 bg-accent-soft px-2.5 py-1.5 text-xs font-bold text-accent transition hover:bg-accent/15"
