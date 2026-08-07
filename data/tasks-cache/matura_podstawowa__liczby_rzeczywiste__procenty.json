@@ -6,385 +6,385 @@
   "topicName": "Procenty i proporcje",
   "tasks": [
     {
-      "content": "5% z liczby 497 wynosi:​",
-      "correct_answer": "24.85",
+      "content": "Cena 307 zł podwyższona o 30% wynosi (zł):",
+      "correct_answer": "92.1",
       "options": [
-        "24.85",
-        "22.85",
-        "23.85",
-        "-14.91"
+        "108.1",
+        "92.1",
+        "107.1",
+        "90.1"
       ],
       "answer_type": "choice",
       "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 92.1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "79055965-b9a4-472d-a305-f1d7e23be528",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Po obniżce o 20% cena 288 zł wynosi (zł):",
+      "correct_answer": "230.4",
+      "options": [
+        "230.4",
+        "215.4",
+        "229.4",
+        "231.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 230.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "58350844-5de1-4bd9-973e-56da57760087",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ile wynosi 25% z liczby 280?",
+      "correct_answer": "70",
+      "options": [
+        "72",
+        "70",
+        "85",
+        "71"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Odpowiedź: 24.85",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 70",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "379c52fd-58bf-411b-87aa-7fc856861b15",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "ee36efe9-f9b4-4c6b-ab16-ffb9fae100c9",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "50% z liczby 220 wynosi:​​",
-      "correct_answer": "110",
+      "content": "Po obniżce o 20% cena 91 zł wynosi (zł):",
+      "correct_answer": "72.8",
       "options": [
-        "110",
-        "108",
-        "109",
-        "92.4"
+        "72.8",
+        "74.8",
+        "88.8",
+        "57.8"
       ],
       "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 110",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 72.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "165a59d2-53a2-49ef-a57e-f8d406b2932d",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "3cfd8db9-4687-442c-ac5a-4fc9b2dbede9",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "49% z liczby 403 wynosi:​​​",
-      "correct_answer": "197.47",
+      "content": "Cena 164 zł podwyższona o 50% wynosi (zł):",
+      "correct_answer": "82",
       "options": [
-        "196.47",
-        "165.23",
-        "195.47",
-        "197.47"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 197.47",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a1234833-cd5f-4d11-a792-e89df2310369",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "48% z liczby 126 wynosi:​​​​",
-      "correct_answer": "60.48",
-      "options": [
-        "59.48",
-        "60.48",
-        "50.4",
-        "58.48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 60.48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "774263a8-89c4-4261-b237-9c6e1cdc077f",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "47% z liczby 309 wynosi:​​​​​",
-      "correct_answer": "145.23",
-      "options": [
-        "145.23",
-        "144.23",
-        "143.23",
-        "120.51"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 145.23",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3cf6a5f3-52e8-485c-bb91-3dcf24c3edeb",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "46% z liczby 492 wynosi:​​​​​​",
-      "correct_answer": "226.32",
-      "options": [
-        "226.32",
-        "186.96",
-        "224.32",
-        "225.32"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Odpowiedź: 226.32",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6e279479-a2f7-4807-8de5-260b842e3a6d",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "45% z liczby 215 wynosi:​​​​​​​",
-      "correct_answer": "96.75",
-      "options": [
-        "79.55",
-        "95.75",
-        "94.75",
-        "96.75"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 96.75",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "254ac0b6-e31c-430e-aadf-72f5f7f0183c",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "44% z liczby 398 wynosi:​​​​​​​​",
-      "correct_answer": "175.12",
-      "options": [
-        "174.12",
-        "143.28",
-        "173.12",
-        "175.12"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 175.12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f188cfb0-3c5a-4535-b91e-01a1fb7973c9",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "43% z liczby 121 wynosi:​​​​​​​​​",
-      "correct_answer": "52.03",
-      "options": [
-        "42.35",
-        "52.03",
-        "50.03",
-        "51.03"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 52.03",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bb63b5aa-3207-4232-b912-7d4050a86686",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "42% z liczby 304 wynosi:​​​​​​​​​​",
-      "correct_answer": "127.68",
-      "options": [
-        "127.68",
-        "103.36",
-        "126.68",
-        "125.68"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 127.68",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "47c4ecb4-e369-4f58-88dd-0bec298aeb08",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "41% z liczby 487 wynosi:​​​​​​​​​​​",
-      "correct_answer": "199.67",
-      "options": [
-        "199.67",
-        "160.71",
-        "197.67",
-        "198.67"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 199.67",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fcb7d2b4-9c13-452c-8ca7-2af76afadfd2",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "40% z liczby 210 wynosi:​​​​​​​​​​​​",
-      "correct_answer": "84",
-      "options": [
+        "80",
         "82",
-        "84",
-        "83",
-        "67.2"
+        "91",
+        "74"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 84",
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 82",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5849cc9b-8cf1-42c2-9ee0-0178e864efd2",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "87cea695-f713-42b6-a531-5ab419b6d207",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "39% z liczby 393 wynosi:​​​​​​​​​​​​​",
-      "correct_answer": "153.27",
+      "content": "Po obniżce o 10% cena 354 zł wynosi (zł):",
+      "correct_answer": "318.6",
       "options": [
-        "152.27",
-        "151.27",
-        "153.27",
-        "121.83"
+        "333.6",
+        "316.6",
+        "320.6",
+        "318.6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 318.6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aa761181-c779-4d36-acde-c0e48ba9e4a0",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ile wynosi 15% z liczby 152?",
+      "correct_answer": "22.8",
+      "options": [
+        "22.8",
+        "31.8",
+        "14.8",
+        "21.8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 22.8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "416090f7-855c-405d-9c4e-d9154c8c1920",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Po obniżce o 25% cena 247 zł wynosi (zł):",
+      "correct_answer": "185.25",
+      "options": [
+        "170.25",
+        "183.25",
+        "186.25",
+        "185.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 185.25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a37eb974-a9d9-4678-b1bd-1f3c6b5d37bf",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Cena 256 zł podwyższona o 40% wynosi (zł):",
+      "correct_answer": "102.4",
+      "options": [
+        "101.4",
+        "104.4",
+        "102.4",
+        "103.4"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 23,
-      "explanation": "Odpowiedź: 153.27",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 102.4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c6286d71-0580-4d4f-a110-eaf854cd9a74",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "ef24f04b-19eb-4f13-9925-fa8e0c8fb1a4",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "38% z liczby 116 wynosi:​​​​​​​​​​​​​​",
-      "correct_answer": "44.08",
+      "content": "Po obniżce o 10% cena 266 zł wynosi (zł):",
+      "correct_answer": "239.4",
       "options": [
-        "34.8",
-        "44.08",
-        "43.08",
-        "42.08"
+        "255.4",
+        "237.4",
+        "239.4",
+        "224.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 239.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "775a8b02-ce27-4490-80fb-2a4f012332bc",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ile wynosi 15% z liczby 230?",
+      "correct_answer": "34.5",
+      "options": [
+        "34.5",
+        "35.5",
+        "47.5",
+        "46.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 34.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8b4dc7b-0623-4275-884a-bdb06de60c4e",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Po obniżce o 25% cena 367 zł wynosi (zł):",
+      "correct_answer": "275.25",
+      "options": [
+        "260.25",
+        "276.25",
+        "275.25",
+        "291.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 275.25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da5ad707-603a-4a87-8113-1d115f4c8b22",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Cena 252 zł podwyższona o 50% wynosi (zł):",
+      "correct_answer": "126",
+      "options": [
+        "126",
+        "140",
+        "127",
+        "125"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 126",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f4a9c9c-c8bf-4613-9feb-fb8ee1cbc499",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Po obniżce o 25% cena 91 zł wynosi (zł):",
+      "correct_answer": "68.25",
+      "options": [
+        "83.25",
+        "67.25",
+        "68.25",
+        "70.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 68.25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0a49cf4f-83e5-499b-842c-b887037ce08e",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ile wynosi 25% z liczby 272?",
+      "correct_answer": "68",
+      "options": [
+        "68",
+        "54",
+        "82",
+        "70"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 68",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9add85c-b4e3-43e2-a201-c84c4c9ba04f",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Po obniżce o 20% cena 356 zł wynosi (zł):",
+      "correct_answer": "284.8",
+      "options": [
+        "282.8",
+        "300.8",
+        "284.8",
+        "299.8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 284.8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "842d44e5-4357-4e07-93e2-4b32e88bd956",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Cena 388 zł podwyższona o 50% wynosi (zł):",
+      "correct_answer": "194",
+      "options": [
+        "194",
+        "175",
+        "195",
+        "196"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Odpowiedź: 44.08",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 194",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5b8e8ae6-0c78-4ec9-a7ed-5454e050db61",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "dab0bf7a-ba69-4c08-aec0-5e02ec099f6b",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "37% z liczby 299 wynosi:​​​​​​​​​​​​​​​",
-      "correct_answer": "110.63",
+      "content": "Po obniżce o 10% cena 188 zł wynosi (zł):",
+      "correct_answer": "169.2",
       "options": [
-        "109.63",
-        "110.63",
-        "86.71",
-        "108.63"
+        "154.2",
+        "184.2",
+        "169.2",
+        "168.2"
       ],
       "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 110.63",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 169.2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "423757b0-981a-48f5-9a99-f1fc685d608a",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "09f50dc3-6f84-4418-8cdb-e293134a3983",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "36% z liczby 482 wynosi:​​​​​​​​​​​​​​​​",
-      "correct_answer": "173.52",
+      "content": "Ile wynosi 25% z liczby 337?",
+      "correct_answer": "84.25",
       "options": [
-        "172.52",
-        "173.52",
-        "171.52",
-        "134.96"
+        "83.25",
+        "82.25",
+        "84.25",
+        "86.25"
       ],
       "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 173.52",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 84.25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c0726a14-23be-4ee4-86ca-f32e038ff66a",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "26e5cd2e-d327-4556-9fe5-044bf788ad40",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "35% z liczby 205 wynosi:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71.75",
+      "content": "Po obniżce o 25% cena 444 zł wynosi (zł):",
+      "correct_answer": "333",
       "options": [
-        "69.75",
-        "70.75",
-        "71.75",
-        "55.35"
+        "318",
+        "349",
+        "348",
+        "333"
       ],
       "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 71.75",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 333",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e2b3604f-b1f3-4246-90ad-14a2d844e95a",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "34% z liczby 388 wynosi:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "131.92",
-      "options": [
-        "129.92",
-        "130.92",
-        "100.88",
-        "131.92"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 131.92",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c9c132f2-23c4-4f4d-b3b2-7ab08e5bc49c",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "33% z liczby 111 wynosi:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "36.63",
-      "options": [
-        "27.75",
-        "34.63",
-        "36.63",
-        "35.63"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Odpowiedź: 36.63",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "38e55a62-3297-406f-b59f-35c17e0932a0",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "32% z liczby 294 wynosi:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "94.08",
-      "options": [
-        "93.08",
-        "70.56",
-        "94.08",
-        "92.08"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 94.08",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a2470656-5eea-4ee3-b25d-91bdba887faf",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "0bef91a2-49fc-41ea-9524-e89a44f23de6",
+      "generatedAt": "2026-08-07T16:30:27.548Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.887Z"
+  "updatedAt": "2026-08-07T16:30:27.548Z"
 }

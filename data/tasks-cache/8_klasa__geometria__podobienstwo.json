@@ -6,385 +6,385 @@
   "topicName": "Podobieństwo figur",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Trójkąty podobne w skali 2:1. Bok 10 odpowiada:​",
+      "correct_answer": "20",
       "options": [
-        "49",
-        "44",
-        "48",
-        "47"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 49",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "139ea33e-f378-4d8d-a09b-d1a9b258a162",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
-      "options": [
-        "54",
-        "50",
-        "55",
-        "53"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 55",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0c717e55-a3cb-4148-a7e9-38f1924d19f3",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
-      "options": [
-        "60",
-        "56",
-        "61",
-        "59"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 61",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "241d5a89-b4a8-459b-b4cd-1c71b8deeec0",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
-      "options": [
-        "102",
-        "106",
-        "107",
-        "105"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 107",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2462582e-3003-49e3-8b19-85d32ae07a72",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
-      "options": [
-        "112",
-        "108",
-        "111",
-        "113"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 113",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9278c508-58d3-4b42-80df-4859f731c9f9",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
-      "options": [
-        "158",
-        "159",
-        "157",
-        "154"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "27b94882-504e-4315-88ce-db0a2e54664d",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "44",
-        "45",
-        "40",
-        "43"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "45240033-c143-46e3-9d37-a829eec57298",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
-      "options": [
-        "90",
-        "91",
-        "89",
-        "86"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 91",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0e413cf3-0127-4f08-a229-da2d1f96fa3d",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
-      "options": [
-        "92",
-        "96",
-        "95",
-        "97"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 97",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2c0348c5-a9dc-4a5c-ac16-ab1eece86a22",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
-      "options": [
-        "102",
-        "101",
-        "98",
-        "103"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 103",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "463af22a-1d39-4f0e-8797-ee0e45a40c2e",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
-      "options": [
-        "147",
-        "149",
-        "148",
-        "144"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 149",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7d95c168-560d-4af9-8eb6-b4068b20f931",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
-      "options": [
-        "33",
-        "30",
-        "34",
-        "35"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 35",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "44a18bf0-001f-45f3-85a3-9800f50eadd3",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
-      "options": [
-        "76",
-        "81",
-        "79",
-        "80"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5251b28c-4777-4a72-9588-cd66a1bc5ab1",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
-      "options": [
-        "86",
-        "87",
-        "82",
-        "85"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 87",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d6a5fd2e-6b3c-4229-b12e-b6d9e5a844f0",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "133",
-        "128",
-        "132",
-        "131"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fcb3494d-b230-4b15-800f-4d715be017f7",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "137",
-        "139",
-        "138",
-        "134"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0164b116-d5b9-4465-993f-b78b0649ea62",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "25",
-        "23",
         "20",
-        "24"
+        "10",
+        "19",
+        "18"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ebec93fe-baa7-4323-bd49-f1418c719e43",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "a1fda021-314d-4b57-92fb-6e2a56f8cd32",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Trójkąty podobne w skali 4:1. Bok 3 odpowiada:​​",
+      "correct_answer": "12",
       "options": [
-        "66",
-        "70",
-        "69",
-        "71"
+        "11",
+        "9",
+        "12",
+        "10"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "721a2dae-ded7-4593-a116-e65f7cebab98",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "979e4628-a23c-489b-8eb9-8890397cccaa",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
+      "content": "Trójkąty podobne w skali 3:1. Bok 6 odpowiada:​​​",
+      "correct_answer": "18",
       "options": [
-        "75",
-        "72",
-        "77",
-        "76"
+        "17",
+        "12",
+        "18",
+        "16"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1fd952a0-b03e-44ec-8c95-2244f6845a6f",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 9 odpowiada:​​​​",
+      "correct_answer": "18",
+      "options": [
+        "9",
+        "17",
+        "18",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ea92963a-212c-4af7-a777-278cbb26f2cd",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 12 odpowiada:​​​​​",
+      "correct_answer": "48",
+      "options": [
+        "47",
+        "36",
+        "46",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dfb5f8b8-2913-4213-8cbf-2c528ee3e9b0",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 5 odpowiada:​​​​​​",
+      "correct_answer": "15",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "383695bd-be6e-4d3f-940c-f441f580df7d",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 8 odpowiada:​​​​​​​",
+      "correct_answer": "16",
+      "options": [
+        "15",
+        "16",
+        "8",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7f61d1a9-b97c-4035-b5b3-6bb6a491948b",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 11 odpowiada:​​​​​​​​",
+      "correct_answer": "44",
+      "options": [
+        "43",
+        "44",
+        "42",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 77",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 44",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e9ddde85-023e-4dea-810d-1ba8809a56f9",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "e2d89f44-679b-4e28-98fd-f047275ae753",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
+      "content": "Trójkąty podobne w skali 3:1. Bok 4 odpowiada:​​​​​​​​​",
+      "correct_answer": "12",
       "options": [
-        "121",
-        "118",
-        "123",
-        "122"
+        "8",
+        "11",
+        "10",
+        "12"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 123",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d57c4b6a-98f9-4c8e-98d6-122e7be9427a",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "3f3df008-6d62-4675-b20e-57f87bb11e7e",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 7 odpowiada:​​​​​​​​​​",
+      "correct_answer": "14",
+      "options": [
+        "13",
+        "12",
+        "7",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "42caaf85-21fa-4b7f-ad1b-88acd7ee3a93",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 10 odpowiada:​​​​​​​​​​​",
+      "correct_answer": "40",
+      "options": [
+        "38",
+        "40",
+        "39",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "065768e8-e65e-43b4-bf54-50df0ebbc921",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 3 odpowiada:​​​​​​​​​​​​",
+      "correct_answer": "9",
+      "options": [
+        "7",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7687bcdb-4ad7-4caf-a07c-072a6e984e9f",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 6 odpowiada:​​​​​​​​​​​​​",
+      "correct_answer": "12",
+      "options": [
+        "6",
+        "12",
+        "10",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d99a6218-1893-469f-b637-255acecc08e0",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 9 odpowiada:​​​​​​​​​​​​​​",
+      "correct_answer": "36",
+      "options": [
+        "35",
+        "36",
+        "27",
+        "34"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0d0a68c-a24d-488a-bacf-a3207f7d5928",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 12 odpowiada:​​​​​​​​​​​​​​​",
+      "correct_answer": "36",
+      "options": [
+        "36",
+        "24",
+        "35",
+        "34"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a9a100cf-3982-426f-91f6-a26585729a68",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 5 odpowiada:​​​​​​​​​​​​​​​​",
+      "correct_answer": "10",
+      "options": [
+        "8",
+        "10",
+        "9",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd40d1ab-595f-4c93-a02b-163df76328b2",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 8 odpowiada:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "32",
+      "options": [
+        "32",
+        "30",
+        "24",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1cd917d6-ef02-4d15-914d-c8e512a469ee",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 11 odpowiada:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "33",
+      "options": [
+        "22",
+        "32",
+        "31",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d48ce67d-5ed6-4396-a26d-33e2300684c5",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 4 odpowiada:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "8",
+      "options": [
+        "6",
+        "4",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2ad587e-6eb0-484d-9527-ced040fa33e1",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 7 odpowiada:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "28",
+      "options": [
+        "26",
+        "21",
+        "28",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "643f64cd-d1ba-4cc8-ba18-06b0ab1d355f",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.896Z"
+  "updatedAt": "2026-08-07T16:30:27.569Z"
 }

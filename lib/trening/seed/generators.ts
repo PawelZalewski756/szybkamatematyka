@@ -1,6 +1,14 @@
 import type { ExamType } from "@/types/database";
 import { generateParametricTask } from "@/lib/trening/seed/parametric";
-import { fmtNum, gcd, pick, randInt, shuffle, type Rng } from "@/lib/trening/seed/rng";
+import {
+  fmtNum,
+  gcd,
+  mulberry32,
+  pick,
+  randInt,
+  shuffle,
+  type Rng,
+} from "@/lib/trening/seed/rng";
 import type { SeedTopicSlot } from "@/lib/trening/seed/topics";
 
 export type TaskDraft = {
@@ -639,5 +647,15 @@ export function generateTaskDraft(
   slot: SeedTopicSlot,
   variantIndex: number,
 ): TaskDraft {
+  const list = GENERATORS[slot.topic];
+  if (list && list.length > 0) {
+    let h = 0;
+    for (const c of `${slot.exam_type}/${slot.category}/${slot.topic}`) {
+      h = (h * 31 + c.charCodeAt(0)) >>> 0;
+    }
+    const rng = mulberry32((variantIndex + 1) * 1_000_003 + h);
+    const gen = list[variantIndex % list.length]!;
+    return gen(rng, slot, variantIndex);
+  }
   return generateParametricTask(slot, variantIndex);
 }

@@ -6,385 +6,385 @@
   "topicName": "Logarytmy",
   "tasks": [
     {
-      "content": "Oblicz $\\log_{2} 128$​",
-      "correct_answer": "7",
+      "content": "Oblicz: $\\log_{2} 8$",
+      "correct_answer": "3",
       "options": [
         "5",
-        "7",
-        "8",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "59b05648-ba68-4097-b21f-87c517ab92bf",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 32 = k$, to $k$ równa się:",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "98a7e8e9-7a4a-4609-8286-2eb534cbcaa6",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{2} 8$",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "1",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1a1c48c3-231f-43cc-8cfd-51c497052c44",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 16 = k$, to $k$ równa się:",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "4",
+        "3",
         "6"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
+      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 7",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "979ee32f-92ac-4db5-8948-7ed6490860e4",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
+      "id": "eb72a156-32dd-4d60-a8ee-6097d7f72d02",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $\\log_{10} 1000000$​​",
-      "correct_answer": "6",
+      "content": "Oblicz: $\\log_{5} 125$",
+      "correct_answer": "3",
       "options": [
-        "4",
-        "7",
-        "6",
+        "2",
+        "1",
+        "3",
         "5"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 6",
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d198148a-3695-4004-bdb9-ceb91f8fc63b",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
+      "id": "95dfade5-7942-40d6-94e3-dd028a150220",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $\\log_{5} 3125$​​​",
+      "content": "Jeśli $\\log_2 32 = k$, to $k$ równa się:",
       "correct_answer": "5",
       "options": [
-        "3",
         "6",
         "5",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "15c9d87e-b0db-424e-8fe8-9415f83c3ff2",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{3} 81$​​​​",
-      "correct_answer": "4",
-      "options": [
-        "5",
-        "4",
-        "3",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f06e871a-d5de-485e-9f4a-fa7b7768912e",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{2} 8$​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "3",
-        "1",
-        "4",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "53a77e6a-5b0f-4d92-a227-662a192a217b",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{10} 100$​​​​​​",
-      "correct_answer": "2",
-      "options": [
-        "2",
-        "3",
-        "0",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "332b0af3-c052-48d5-a164-f8258fa3029c",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{5} 1220703125$​​​​​​​",
-      "correct_answer": "13",
-      "options": [
-        "14",
-        "12",
-        "13",
-        "11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 13",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "29c1e357-8228-42eb-9b6b-ee759efe466c",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{3} 531441$​​​​​​​​",
-      "correct_answer": "12",
-      "options": [
-        "10",
-        "13",
-        "12",
-        "11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bb81386e-5c45-4b6c-bdea-f084329da352",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{2} 2048$​​​​​​​​​",
-      "correct_answer": "11",
-      "options": [
-        "12",
-        "9",
-        "11",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 11",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0912acc5-ce9f-45df-9316-8f97334c0349",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{10} 10000000000$​​​​​​​​​​",
-      "correct_answer": "10",
-      "options": [
-        "10",
-        "8",
-        "11",
-        "9"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 10",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "75aed4a8-c4be-4b54-8256-c28c2190dab7",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{5} 1953125$​​​​​​​​​​​",
-      "correct_answer": "9",
-      "options": [
-        "10",
-        "9",
-        "8",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 9",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3832d558-438f-4812-98f7-c576cde5ce76",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{3} 6561$​​​​​​​​​​​​",
-      "correct_answer": "8",
-      "options": [
-        "6",
-        "8",
-        "9",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4b2a434b-5f1c-4161-8f68-30b537e57c18",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{2} 128$​​​​​​​​​​​​​",
-      "correct_answer": "7",
-      "options": [
-        "5",
-        "6",
         "7",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 7",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2b7fa4b6-4899-4513-b240-06a0822bd215",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{10} 1000000$​​​​​​​​​​​​​​",
-      "correct_answer": "6",
-      "options": [
-        "6",
-        "7",
-        "5",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0ab0035a-20a8-4cda-9bf1-89c3b5273ad4",
-      "generatedAt": "2026-08-07T15:45:15.885Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{5} 3125$​​​​​​​​​​​​​​​",
-      "correct_answer": "5",
-      "options": [
-        "5",
-        "6",
-        "4",
         "3"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 5",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e6acf254-21d4-49b8-9f51-dda1ca6d52d5",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "74e93ae0-0f57-4b58-8ebd-b5f275b8f1b7",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $\\log_{3} 81$​​​​​​​​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "3",
-        "4",
-        "2",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "67a6ba54-9d01-4850-a18b-7e35e58d28ca",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{2} 8$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "3",
-        "4",
-        "1",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "179c2b08-6d5c-43c7-9d32-f3319bc57997",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{10} 100$​​​​​​​​​​​​​​​​​​",
+      "content": "Oblicz: $\\log_{3} 9$",
       "correct_answer": "2",
       "options": [
         "3",
-        "1",
         "2",
+        "1",
         "0"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Odpowiedź: 2",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "aacf957c-64e4-4304-8e7d-84058eefb07c",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "ff0c7d52-6553-4567-acc4-bfbbd7fc4f5d",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $\\log_{5} 1220703125$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "13",
+      "content": "Jeśli $\\log_2 4 = k$, to $k$ równa się:",
+      "correct_answer": "2",
       "options": [
-        "13",
-        "14",
-        "12",
-        "11"
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4bda5ebd-278d-4b00-90b1-d08daf33c14b",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{10} 100000$",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "4"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 13",
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1af9b075-8345-40c0-88b6-8e3a4127fdc1",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "183c2c28-063a-4e46-bc94-75cc29be32ae",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $\\log_{3} 531441$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "12",
+      "content": "Jeśli $\\log_2 8 = k$, to $k$ równa się:",
+      "correct_answer": "3",
       "options": [
-        "13",
-        "12",
-        "10",
-        "11"
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "33f8862f-67a8-4ca1-b39c-4fc84f0e7020",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{3} 243$",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 12",
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "54a5efe0-0c3b-4209-9015-067bc5ccc682",
-      "generatedAt": "2026-08-07T15:45:15.886Z",
-      "model": "parametric-v1"
+      "id": "b1e6a314-7f23-4a25-a45a-8ae7e90f01dd",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 4 = k$, to $k$ równa się:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b89eecd9-5e72-4c92-bc70-d8481fb70039",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{5} 625$",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f43bc7c6-05fc-485b-a7ee-34083f20a1c9",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 8 = k$, to $k$ równa się:",
+      "correct_answer": "3",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e29620a-a895-4c90-adce-1f423b827dce",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{2} 16$",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "4",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bfdfc8a5-a21f-4475-8a9b-cb9ae7cc1463",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 32 = k$, to $k$ równa się:",
+      "correct_answer": "5",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72128982-cd00-4ef8-a60b-f7a97df88556",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{10} 10000$",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "6",
+        "4",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "77a293ff-dc8a-4be4-baa8-fd7224634023",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 16 = k$, to $k$ równa się:",
+      "correct_answer": "4",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "498a1e48-966e-4978-bc03-9fae350bb38c",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\log_{3} 9$",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d38d8cba-65c1-42da-8035-1a2002fdcf4c",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jeśli $\\log_2 16 = k$, to $k$ równa się:",
+      "correct_answer": "4",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c68998f-a113-4e60-94eb-5aeafddc6964",
+      "generatedAt": "2026-08-07T16:30:27.547Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.886Z"
+  "updatedAt": "2026-08-07T16:30:27.547Z"
 }

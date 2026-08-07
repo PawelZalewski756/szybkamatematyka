@@ -6,385 +6,385 @@
   "topicName": "Średnia arytmetyczna",
   "tasks": [
     {
-      "content": "Średnia z 19, 18, 17​",
-      "correct_answer": "18",
+      "content": "Średnia ocen 7, 10 i 5 wynosi:",
+      "correct_answer": "7.3",
       "options": [
-        "16",
-        "18",
-        "19",
-        "17"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 18",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "de8c6653-b37a-4e46-8a4e-cb63f9bceeaa",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 6, 5, 4, 3, 2​​",
-      "correct_answer": "4",
-      "options": [
-        "2",
-        "4",
-        "5",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "babd2cc9-d38c-4037-907b-0b69b2b15461",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 11, 10, 9, 8​​​",
-      "correct_answer": "9.5",
-      "options": [
-        "8.5",
-        "10.5",
-        "7.5",
-        "9.5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 9.5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "55821d17-ed13-4e6d-8a9f-ac9823d2511b",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 16, 15, 14​​​​",
-      "correct_answer": "15",
-      "options": [
-        "13",
-        "16",
-        "15",
-        "14"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 15",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bafaa5b9-0da7-477e-a2cf-9ffeadb3c560",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 3, 2, 19, 18, 17​​​​​",
-      "correct_answer": "11.8",
-      "options": [
-        "11.8",
-        "12.8",
-        "10.8",
-        "9.8"
+        "7.3",
+        "8.33",
+        "9.33",
+        "6.33"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Odpowiedź: 11.8",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2ceeae55-d603-4022-ab34-c42c10d49bda",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "8b1adfac-91d8-410f-9a0b-4b8e167ba78f",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Średnia z 8, 7, 6, 5​​​​​​",
-      "correct_answer": "6.5",
+      "content": "Średnia ocen 6, 10 i 9 wynosi:",
+      "correct_answer": "8.3",
       "options": [
-        "6.5",
-        "7.5",
-        "5.5",
-        "4.5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 6.5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "088323b2-415b-401f-bcfb-dc67f7f51202",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 13, 12, 11​​​​​​​",
-      "correct_answer": "12",
-      "options": [
-        "13",
-        "10",
-        "11",
-        "12"
+        "10.33",
+        "7.33",
+        "9.33",
+        "8.3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 12",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8.3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7b772b3b-f109-4881-9316-7ba1ef3f2e90",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "3aace468-a295-4acb-8fd1-3b241c0b0161",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Średnia z 18, 17, 16, 15, 14​​​​​​​​",
-      "correct_answer": "16",
+      "content": "Średnia ocen 7, 7 i 5 wynosi:",
+      "correct_answer": "6.3",
       "options": [
-        "16",
-        "17",
-        "14",
-        "15"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 16",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d1d1ee87-99dd-49ba-b96b-a7f7e780d25f",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 5, 4, 3, 2​​​​​​​​​",
-      "correct_answer": "3.5",
-      "options": [
-        "2.5",
-        "1.5",
-        "3.5",
-        "4.5"
+        "8.33",
+        "6.3",
+        "7.33",
+        "5.33"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Odpowiedź: 3.5",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "451333ac-b0d0-41ce-b7c1-2326a1fbd4e8",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "cd39664d-31f6-4d5b-b66f-8a1e1345d827",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Średnia z 10, 9, 8​​​​​​​​​​",
-      "correct_answer": "9",
+      "content": "Średnia ocen 5, 10 i 6 wynosi:",
+      "correct_answer": "7",
       "options": [
-        "10",
-        "9",
+        "5",
         "8",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 9",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "549355c4-73c1-4ad4-8b34-4908871f44a4",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 15, 14, 13, 12, 11​​​​​​​​​​​",
-      "correct_answer": "13",
-      "options": [
-        "13",
-        "12",
-        "14",
-        "11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 13",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2b8045e9-6c1b-456d-a9f7-8feca057a9f5",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 2, 19, 18, 17​​​​​​​​​​​​",
-      "correct_answer": "14",
-      "options": [
-        "12",
-        "14",
-        "13",
-        "15"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 14",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a90fe09a-2282-4bc7-bc11-da4628c71c31",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 7, 6, 5​​​​​​​​​​​​​",
-      "correct_answer": "6",
-      "options": [
-        "5",
-        "4",
         "7",
         "6"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Odpowiedź: 6",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a2a45b4d-96c5-4ece-bede-dd7f8173da43",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "79049152-7726-476b-aa09-fedf038bbd37",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Średnia z 12, 11, 10, 9, 8​​​​​​​​​​​​​​",
-      "correct_answer": "10",
+      "content": "Średnia ocen 4, 9 i 8 wynosi:",
+      "correct_answer": "7",
+      "options": [
+        "7",
+        "9",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6eb88ce8-33b3-4ba9-9416-d710f3007345",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 6, 10 i 5 wynosi:",
+      "correct_answer": "7",
       "options": [
         "9",
-        "11",
+        "6",
         "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0cc166f-9abb-429e-994c-c05c8d22813a",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 4, 8 i 6 wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5864ad86-15ba-4dbb-ba48-865894f45017",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 5, 10 i 9 wynosi:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "9",
+        "10",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e75c47c-ffa7-45fc-8dc5-090dc28579a4",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 7, 5 i 9 wynosi:",
+      "correct_answer": "7",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d41a7ac-8e0e-44a6-aea7-98527a2a3eb1",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 5, 5 i 5 wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9e3e21e0-bf1d-476b-94cf-68c176df2e67",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 8, 7 i 4 wynosi:",
+      "correct_answer": "6.3",
+      "options": [
+        "8.33",
+        "6.3",
+        "4.33",
+        "7.33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "999c1f83-89c5-45a3-bf4e-c58ac390154b",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 5, 5 i 4 wynosi:",
+      "correct_answer": "4.7",
+      "options": [
+        "5.67",
+        "6.67",
+        "4.7",
+        "3.67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f4a08954-bb57-40c5-be62-fc4b631d82fb",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 10, 6 i 8 wynosi:",
+      "correct_answer": "8",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d659416-c5e9-4727-a09b-cb9efa1cd55f",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 7, 5 i 8 wynosi:",
+      "correct_answer": "6.7",
+      "options": [
+        "5.67",
+        "8.67",
+        "7.67",
+        "6.7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e8bc9fa-ff25-4f70-8797-9c033c81995c",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 8, 7 i 4 wynosi:",
+      "correct_answer": "6.3",
+      "options": [
+        "6.3",
+        "5.33",
+        "4.33",
+        "7.33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "06a16930-a298-43b3-820b-328469258751",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 10, 9 i 10 wynosi:",
+      "correct_answer": "9.7",
+      "options": [
+        "7.67",
+        "9.7",
+        "11.67",
+        "8.67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a353e439-735b-4b41-adc2-9d23f48677ca",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 9, 4 i 5 wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47b1e0a0-6d07-4420-ab0c-fc4582ad1e71",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 6, 7 i 10 wynosi:",
+      "correct_answer": "7.7",
+      "options": [
+        "8.67",
+        "7.7",
+        "6.67",
+        "5.67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "219e53bf-7e17-4f7c-a2e0-a90b7541e276",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia ocen 9, 8 i 7 wynosi:",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "9",
+        "7",
         "10"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Odpowiedź: 10",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c70ab335-3d4d-4154-8ac3-dd0d0ec0d4b5",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "35725756-72da-48d5-bf6d-c798f71fec86",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Średnia z 17, 16, 15, 14​​​​​​​​​​​​​​​",
-      "correct_answer": "15.5",
-      "options": [
-        "16.5",
-        "14.5",
-        "15.5",
-        "13.5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 15.5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a8c6c369-2e56-46db-bd05-a3a0270abfef",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 4, 3, 2​​​​​​​​​​​​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "3",
-        "2",
-        "1",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "cfc82906-f137-4c28-8463-ab4366d5ad52",
-      "generatedAt": "2026-08-07T15:45:15.898Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 9, 8, 7, 6, 5​​​​​​​​​​​​​​​​​",
-      "correct_answer": "7",
+      "content": "Średnia ocen 10, 5 i 9 wynosi:",
+      "correct_answer": "8",
       "options": [
         "6",
         "7",
-        "5",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 7",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6a02c93e-b5e3-4feb-8de2-1f34e8e3e192",
-      "generatedAt": "2026-08-07T15:45:15.898Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 14, 13, 12, 11​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "12.5",
-      "options": [
-        "11.5",
-        "12.5",
-        "13.5",
-        "10.5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 12.5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fc4c8991-c596-4acc-b1df-28f5d9241d7c",
-      "generatedAt": "2026-08-07T15:45:15.898Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 19, 18, 17​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "18",
-      "options": [
-        "19",
-        "18",
-        "17",
-        "16"
+        "8",
+        "9"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Odpowiedź: 18",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d742bb3c-46b3-46e9-8575-b81d7dbed671",
-      "generatedAt": "2026-08-07T15:45:15.898Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Średnia z 6, 5, 4, 3, 2​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "2",
-        "4",
-        "5",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9a700273-9886-49b9-a10e-fa6db6455f39",
-      "generatedAt": "2026-08-07T15:45:15.898Z",
-      "model": "parametric-v1"
+      "id": "89dc4ab2-4fe1-492f-87b2-13f9d4f2d20b",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.898Z"
+  "updatedAt": "2026-08-07T16:30:27.572Z"
 }

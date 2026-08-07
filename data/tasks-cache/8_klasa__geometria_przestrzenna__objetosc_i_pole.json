@@ -6,385 +6,385 @@
   "topicName": "Objętość i pole powierzchni",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Objętość sześcianu o krawędzi 2:​",
+      "correct_answer": "8",
       "options": [
-        "47",
-        "48",
-        "49",
-        "44"
+        "6",
+        "7",
+        "8",
+        "2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 49",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "105fe25b-89bd-4df2-9a3d-631eec28a405",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
-      "options": [
-        "54",
-        "50",
-        "55",
-        "53"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 55",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "20db0238-28ab-401b-8d16-ab28cfb4ddcb",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
-      "options": [
-        "59",
-        "56",
-        "61",
-        "60"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 61",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "862da0d8-ca13-4b74-94b5-cbe4f2f126c9",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "69ece0f3-d320-4b2b-9f25-ba8c55f2113d",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Objętość prostopadłościanu 9×6×9:​​",
+      "correct_answer": "486",
       "options": [
-        "105",
-        "107",
-        "106",
-        "102"
+        "485",
+        "478",
+        "486",
+        "484"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 486",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6187681f-87cd-4f2c-9da2-bf8ce4dc05d6",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "63ce47a3-0cac-4bfc-9625-ebd8f7f74491",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Objętość sześcianu o krawędzi 8:​​​",
+      "correct_answer": "512",
       "options": [
-        "112",
-        "111",
-        "108",
-        "113"
+        "510",
+        "506",
+        "512",
+        "511"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7172af01-4f0e-441d-816c-8bfe62e15da6",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "a87753cd-2600-47ef-a212-0e387d9a5250",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Objętość prostopadłościanu 7×4×5:​​​​",
+      "correct_answer": "140",
       "options": [
-        "157",
-        "154",
-        "158",
-        "159"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2674ab43-f8b6-47a5-81bf-5906f3cb3350",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "40",
-        "44",
-        "43",
-        "45"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "10556000-1f75-47f7-b7f5-82ec5168f15e",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
-      "options": [
-        "90",
-        "86",
-        "91",
-        "89"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 91",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "240f2192-dd19-4ed1-bf0b-568d2fc79332",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
-      "options": [
-        "92",
-        "95",
-        "96",
-        "97"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 97",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e0b30fc6-d3fe-4701-8e9d-a1edc034660f",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
-      "options": [
-        "103",
-        "101",
-        "98",
-        "102"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 103",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1fd7a2fd-4386-4c3c-8852-0d414b37a164",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
-      "options": [
-        "148",
-        "144",
-        "149",
-        "147"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 149",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "70fb8d7d-6837-4f82-b216-9e4a51ac727c",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
-      "options": [
-        "34",
-        "30",
-        "33",
-        "35"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 35",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b1962220-4ac6-45cf-83c1-b417c86a79a8",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
-      "options": [
-        "76",
-        "80",
-        "79",
-        "81"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c0cdef96-6d16-4a60-b563-ff9ad0e6e693",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
-      "options": [
-        "87",
-        "86",
-        "85",
-        "82"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 87",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e6d2522c-580d-40d5-a083-f171adfc1a12",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "132",
-        "128",
-        "131",
-        "133"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c632844e-1e44-46eb-a5ab-ce7a6bac55bc",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "137",
-        "134",
         "138",
-        "139"
+        "140",
+        "139",
+        "132"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1a70def1-6493-4686-9c4d-2e843440a404",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "25",
-        "20",
-        "24",
-        "23"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 25",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 140",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6d18ca13-3b46-4daa-91c0-713661830320",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "c990464d-1a64-40c6-83c9-18efe9b77703",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Objętość sześcianu o krawędzi 6:​​​​​",
+      "correct_answer": "216",
       "options": [
-        "70",
-        "69",
-        "71",
-        "66"
+        "215",
+        "214",
+        "210",
+        "216"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7ef6a251-5d23-4c81-b384-3aca47032097",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "ffdec3a3-4182-4f01-86a1-e3df7f76cbc0",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
+      "content": "Objętość prostopadłościanu 5×2×11:​​​​​​",
+      "correct_answer": "110",
       "options": [
+        "108",
+        "102",
+        "109",
+        "110"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 110",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4fceed44-2efd-48cf-9904-8873fc02b3cf",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 4:​​​​​​​",
+      "correct_answer": "64",
+      "options": [
+        "58",
+        "63",
+        "62",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eaa2c4a3-c7e7-44b3-a58f-330591fe5c5a",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 3×8×7:​​​​​​​​",
+      "correct_answer": "168",
+      "options": [
+        "167",
+        "160",
+        "168",
+        "166"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 168",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "680d13f9-ae88-403d-a304-9fb237107088",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 2:​​​​​​​​​",
+      "correct_answer": "8",
+      "options": [
+        "2",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "494483a2-ee51-414a-aa2f-824c68dfbc99",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 9×6×3:​​​​​​​​​​",
+      "correct_answer": "162",
+      "options": [
+        "162",
+        "160",
+        "154",
+        "161"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 162",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cd12ed59-db63-43c4-a76f-56ffb0b49a20",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 8:​​​​​​​​​​​",
+      "correct_answer": "512",
+      "options": [
+        "511",
+        "506",
+        "512",
+        "510"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ba29b16c-088a-4c0a-a4bc-25a9d8802537",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 7×4×9:​​​​​​​​​​​​",
+      "correct_answer": "252",
+      "options": [
+        "251",
+        "244",
+        "250",
+        "252"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 252",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "18ef584e-c723-4624-832a-1699215cbb02",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 6:​​​​​​​​​​​​​",
+      "correct_answer": "216",
+      "options": [
+        "210",
+        "215",
+        "214",
+        "216"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4f44adea-2c8c-4986-8ac7-670e4813d062",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 5×2×5:​​​​​​​​​​​​​​",
+      "correct_answer": "50",
+      "options": [
+        "50",
+        "49",
+        "48",
+        "42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae91e6e9-a723-4cfd-80ee-c1f6409dee2e",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 4:​​​​​​​​​​​​​​​",
+      "correct_answer": "64",
+      "options": [
+        "63",
+        "58",
+        "62",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "50adfe40-4219-4abd-945b-35aac9dc1be8",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 3×8×11:​​​​​​​​​​​​​​​​",
+      "correct_answer": "264",
+      "options": [
+        "262",
+        "256",
+        "263",
+        "264"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 264",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "641ca19a-87c8-4ded-89e6-c1f99a16fe22",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 2:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "2",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4f0b5e72-28e7-4522-a182-868dea31cf38",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 9×6×7:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "378",
+      "options": [
+        "377",
+        "376",
+        "378",
+        "370"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 378",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8dff7af-709f-447e-a878-87de1f79b658",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość sześcianu o krawędzi 8:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "512",
+      "options": [
+        "511",
+        "510",
+        "506",
+        "512"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "94dee1da-9bb7-4476-b0d6-dcd4968c7ebf",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 7×4×3:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "84",
+      "options": [
+        "83",
+        "82",
         "76",
-        "75",
-        "72",
-        "77"
+        "84"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 77",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 84",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "48e145ec-d1d6-42ce-9cef-d19326e1b082",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "122",
-        "121",
-        "118",
-        "123"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "faafc0b9-9d59-4e4c-8167-41b75ed6327a",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "bf503115-8466-4759-bd10-c8ed8b82208e",
+      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.896Z"
+  "updatedAt": "2026-08-07T16:30:27.570Z"
 }

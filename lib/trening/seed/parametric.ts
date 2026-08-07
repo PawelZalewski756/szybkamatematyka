@@ -237,10 +237,431 @@ export function generateParametricTask(
       const b = 1 + pickV(v, 1, 35);
       return buildMc(rng, slot, `Rozwiąż $x+${b}=${x + b}$`, fmtNum(x), wrongs(rng, x, 3), 1, v);
     }
+    case "notacja_wykladnicza": {
+      const a = 1 + pickV(v, 0, 9);
+      const e = 2 + pickV(v, 1, 6);
+      const c = a * Math.pow(10, e);
+      return buildMc(
+        rng,
+        slot,
+        `Zapisz w notacji dziesiętnej: $${a}\\cdot 10^{${e}}$`,
+        fmtNum(c),
+        wrongs(rng, c, Math.max(10, c * 0.1)),
+        2,
+        v,
+      );
+    }
+    case "wartosc_bezwzgledna": {
+      const x = -20 + pickV(v, 0, 40);
+      if (x === 0) {
+        return buildMc(rng, slot, `Oblicz $|0|$`, "0", ["1", "-1", "2"], 1, v);
+      }
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $|${x}|$`,
+        fmtNum(Math.abs(x)),
+        wrongs(rng, Math.abs(x), 3),
+        1,
+        v,
+      );
+    }
+    case "kolejnosc_dzialan": {
+      const a = 2 + pickV(v, 0, 8);
+      const b = 2 + pickV(v, 1, 8);
+      const c = 2 + pickV(v, 2, 8);
+      const result = a + b * c;
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $${a}+${b}\\cdot ${c}$`,
+        fmtNum(result),
+        [fmtNum((a + b) * c), fmtNum(a * b + c), fmtNum(a * b * c)],
+        1,
+        v,
+      );
+    }
+    case "wzory_skroconego_mnozenia": {
+      const a = 2 + pickV(v, 0, 10);
+      const b = 1 + pickV(v, 1, 8);
+      const c = a * a + 2 * a * b + b * b;
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $(${a}+${b})^2$`,
+        fmtNum(c),
+        wrongs(rng, c, 8),
+        2,
+        v,
+      );
+    }
+    case "rownania_kwadratowe": {
+      const r1 = -6 + pickV(v, 0, 12);
+      const r2 = -6 + pickV(v, 1, 12);
+      // (x-r1)(x-r2)=0 → x^2 - (r1+r2)x + r1*r2
+      const sum = r1 + r2;
+      const prod = r1 * r2;
+      const signSum = sum >= 0 ? `-${sum}` : `+${-sum}`;
+      const signProd = prod >= 0 ? `+${prod}` : `${prod}`;
+      return buildMc(
+        rng,
+        slot,
+        `Jedno z rozwiązań $x^2${signSum}x${signProd}=0$ to:`,
+        fmtNum(r1),
+        wrongs(rng, r1, 3),
+        3,
+        v,
+      );
+    }
+    case "nierownosci": {
+      const a = 2 + pickV(v, 0, 8);
+      const b = 1 + pickV(v, 1, 20);
+      const c = a * (5 + pickV(v, 2, 10)) + b;
+      const x = (c - b) / a;
+      return buildMc(
+        rng,
+        slot,
+        `Rozwiązaniem $${a}x+${b}<${c}$ jest:`,
+        `x < ${fmtNum(x)}`,
+        [`x > ${fmtNum(x)}`, `x ≤ ${fmtNum(x)}`, `x ≥ ${fmtNum(x)}`],
+        2,
+        v,
+      );
+    }
+    case "wlasnosci_funkcji": {
+      const a = 1 + pickV(v, 0, 8);
+      const b = -5 + pickV(v, 1, 10);
+      // f(x)=ax+b, miejsce zerowe
+      const zero = -b / a;
+      return buildMc(
+        rng,
+        slot,
+        `Miejsce zerowe $f(x)=${a}x${b >= 0 ? "+" : ""}${b}$ to:`,
+        fmtNum(zero),
+        wrongs(rng, zero, 2),
+        2,
+        v,
+      );
+    }
+    case "odczyt_wykresu": {
+      const y1 = -4 + pickV(v, 0, 8);
+      const y2 = -4 + pickV(v, 1, 8);
+      const prod = y1 * y2;
+      return buildMc(
+        rng,
+        slot,
+        `Z wykresu: $f(-1)=${y1}$, $f(2)=${y2}$. Iloczyn $f(-1)\\cdot f(2)$:`,
+        fmtNum(prod),
+        wrongs(rng, prod, 4),
+        2,
+        v,
+      );
+    }
+    case "ciag_arytmetyczny": {
+      const a1 = -10 + pickV(v, 0, 30);
+      const r = -5 + pickV(v, 1, 12);
+      if (r === 0) {
+        return buildMc(rng, slot, `Ciąg stały $a_n=${a1}$. Wtedy $a_5$:`, fmtNum(a1), wrongs(rng, a1, 2), 1, v);
+      }
+      const n = 5 + pickV(v, 2, 6);
+      const an = a1 + (n - 1) * r;
+      return buildMc(
+        rng,
+        slot,
+        `Ciąg arytmetyczny: $a_1=${a1}$, $r=${r}$. Oblicz $a_{${n}}$`,
+        fmtNum(an),
+        wrongs(rng, an, Math.abs(r) + 2),
+        2,
+        v,
+      );
+    }
+    case "ciag_geometryczny": {
+      const a1 = 1 + pickV(v, 0, 6);
+      const q = 2 + pickV(v, 1, 3);
+      const n = 3 + pickV(v, 2, 3);
+      const an = a1 * Math.pow(q, n - 1);
+      return buildMc(
+        rng,
+        slot,
+        `Ciąg geometryczny: $a_1=${a1}$, $q=${q}$. Oblicz $a_{${n}}$`,
+        fmtNum(an),
+        wrongs(rng, an, an / 2 || 4),
+        2,
+        v,
+      );
+    }
+    case "sin_cos_tg": {
+      const angles = [
+        { deg: 30, sin: "1/2", cos: "√3/2", tg: "1/√3" },
+        { deg: 45, sin: "√2/2", cos: "√2/2", tg: "1" },
+        { deg: 60, sin: "√3/2", cos: "1/2", tg: "√3" },
+      ] as const;
+      const ang = angles[pickV(v, 0, 3)]!;
+      const mode = pickV(v, 1, 3);
+      if (mode === 0) {
+        return buildMc(rng, slot, `$\\sin ${ang.deg}^\\circ$ =`, ang.sin, [ang.cos, "1", "0"], 2, v);
+      }
+      if (mode === 1) {
+        return buildMc(rng, slot, `$\\cos ${ang.deg}^\\circ$ =`, ang.cos, [ang.sin, "1", "0"], 2, v);
+      }
+      return buildMc(rng, slot, `$\\mathrm{tg}\\, ${ang.deg}^\\circ$ =`, ang.tg, ["0", "1/2", "2"], 2, v);
+    }
+    case "zastosowania_trygonometrii": {
+      const a = 3 + pickV(v, 0, 8);
+      const b = 4 + pickV(v, 1, 8);
+      const c = Math.round(Math.sqrt(a * a + b * b) * 10) / 10;
+      return buildMc(
+        rng,
+        slot,
+        `Trójkąt prostokątny: przyprostokątne ${a} i ${b}. Przeciwprostokątna:`,
+        fmtNum(c),
+        wrongs(rng, c, 2),
+        2,
+        v,
+      );
+    }
+    case "pitagoras_i_podobienstwo":
+    case "pitagoras": {
+      const triples = [
+        [3, 4, 5],
+        [5, 12, 13],
+        [6, 8, 10],
+        [9, 12, 15],
+      ] as const;
+      const t = triples[pickV(v, 0, 4)]!;
+      return buildMc(
+        rng,
+        slot,
+        `Trójkąt prostokątny: przyprostokątne ${t[0]} i ${t[1]}. Przeciwprostokątna:`,
+        fmtNum(t[2]),
+        wrongs(rng, t[2], 3),
+        2,
+        v,
+      );
+    }
+    case "podobienstwo": {
+      const k = 2 + pickV(v, 0, 3);
+      const a = 3 + pickV(v, 1, 10);
+      return buildMc(
+        rng,
+        slot,
+        `Trójkąty podobne w skali ${k}:1. Bok ${a} odpowiada:`,
+        fmtNum(a * k),
+        wrongs(rng, a * k, a),
+        2,
+        v,
+      );
+    }
+    case "okrag_i_kolo": {
+      const r = 2 + pickV(v, 0, 12);
+      if (pickV(v, 1, 2) === 0) {
+        return buildMc(
+          rng,
+          slot,
+          `Pole koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowite):`,
+          fmtNum(Math.round(Math.PI * r * r)),
+          wrongs(rng, Math.round(Math.PI * r * r), 10),
+          2,
+          v,
+        );
+      }
+      return buildMc(
+        rng,
+        slot,
+        `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity):`,
+        fmtNum(Math.round(2 * Math.PI * r)),
+        wrongs(rng, Math.round(2 * Math.PI * r), 5),
+        2,
+        v,
+      );
+    }
+    case "kombinatoryka":
+    case "regula_mnozenia": {
+      const a = 2 + pickV(v, 0, 5);
+      const b = 2 + pickV(v, 1, 5);
+      const c = 2 + pickV(v, 2, 4);
+      return buildMc(
+        rng,
+        slot,
+        `Na ile sposobów wybrać 1 z ${a} koszulek, 1 z ${b} spodni i 1 z ${c} butów?`,
+        fmtNum(a * b * c),
+        wrongs(rng, a * b * c, 6),
+        2,
+        v,
+      );
+    }
+    case "pierwiastki": {
+      const bases = [4, 9, 16, 25, 36, 49, 64, 81, 100];
+      const n = bases[pickV(v, 0, bases.length)]!;
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $\\sqrt{${n}}$`,
+        fmtNum(Math.sqrt(n)),
+        wrongs(rng, Math.sqrt(n), 2),
+        1,
+        v,
+      );
+    }
+    case "liczby_calkowite": {
+      const a = -15 + pickV(v, 0, 30);
+      const b = -10 + pickV(v, 1, 20);
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $(${a})+(${b})$`,
+        fmtNum(a + b),
+        wrongs(rng, a + b, 4),
+        1,
+        v,
+      );
+    }
+    case "proporcje": {
+      const a = 2 + pickV(v, 0, 8);
+      const b = 2 + pickV(v, 1, 8);
+      const c = (1 + pickV(v, 2, 6)) * a;
+      // a/b = c/x → x = b*c/a
+      const x = (b * c) / a;
+      return buildMc(
+        rng,
+        slot,
+        `Z proporcji $${a}:${b}=${c}:x$ wynika $x=$`,
+        fmtNum(x),
+        wrongs(rng, x, Math.max(2, x / 4)),
+        2,
+        v,
+      );
+    }
+    case "symetrie": {
+      const x = -8 + pickV(v, 0, 16);
+      const y = -8 + pickV(v, 1, 16);
+      if (pickV(v, 2, 2) === 0) {
+        return buildMc(
+          rng,
+          slot,
+          `Obraz $(${x},${y})$ w symetrii względem osi $OY$:`,
+          `(${-x},${y})`,
+          [`(${x},${-y})`, `(${-x},${-y})`, `(${y},${x})`],
+          2,
+          v,
+        );
+      }
+      return buildMc(
+        rng,
+        slot,
+        `Obraz $(${x},${y})$ w symetrii względem osi $OX$:`,
+        `(${x},${-y})`,
+        [`(${-x},${y})`, `(${-x},${-y})`, `(${y},${x})`],
+        2,
+        v,
+      );
+    }
+    case "bryly":
+    case "objetosc_i_pole": {
+      const a = 2 + pickV(v, 0, 8);
+      const b = 2 + pickV(v, 1, 8);
+      const h = 2 + pickV(v, 2, 10);
+      if (pickV(v, 3, 2) === 0) {
+        return buildMc(
+          rng,
+          slot,
+          `Objętość prostopadłościanu ${a}×${b}×${h}:`,
+          fmtNum(a * b * h),
+          wrongs(rng, a * b * h, 8),
+          2,
+          v,
+        );
+      }
+      return buildMc(
+        rng,
+        slot,
+        `Objętość sześcianu o krawędzi ${a}:`,
+        fmtNum(a * a * a),
+        wrongs(rng, a * a * a, 6),
+        2,
+        v,
+      );
+    }
+    case "punkty_na_plaszczyznie": {
+      const quads = [
+        { x: 3, y: 4, ans: "I" },
+        { x: -2, y: 5, ans: "II" },
+        { x: -3, y: -1, ans: "III" },
+        { x: 4, y: -2, ans: "IV" },
+      ] as const;
+      const q = quads[pickV(v, 0, 4)]!;
+      return buildMc(
+        rng,
+        slot,
+        `Punkt $(${q.x},${q.y})$ leży w ćwiartce:`,
+        q.ans,
+        (["I", "II", "III", "IV"] as const).filter((x) => x !== q.ans),
+        1,
+        v,
+      );
+    }
+    case "dlugosc_odcinka": {
+      const x1 = -5 + pickV(v, 0, 10);
+      const y1 = -5 + pickV(v, 1, 10);
+      const x2 = -5 + pickV(v, 2, 10);
+      const y2 = -5 + pickV(v, 3, 10);
+      const d = Math.round(Math.hypot(x2 - x1, y2 - y1) * 10) / 10;
+      return buildMc(
+        rng,
+        slot,
+        `Długość odcinka $(${x1},${y1})$—$(${x2},${y2})$:`,
+        fmtNum(d),
+        wrongs(rng, d, 3),
+        2,
+        v,
+      );
+    }
+    case "proporcjonalnosc": {
+      const k = 2 + pickV(v, 0, 8);
+      const x = 1 + pickV(v, 1, 12);
+      return buildMc(
+        rng,
+        slot,
+        `y jest wprost proporcjonalne do x, $y=${k}$ gdy $x=1$. Dla $x=${x}$ y=`,
+        fmtNum(k * x),
+        wrongs(rng, k * x, k),
+        2,
+        v,
+      );
+    }
+    case "mediana_i_dominanta": {
+      const a = 2 + pickV(v, 0, 6);
+      const b = a + 1 + pickV(v, 1, 4);
+      const c = b + 1 + pickV(v, 2, 4);
+      const d = c + pickV(v, 3, 3);
+      const e = d + pickV(v, 4, 3);
+      const nums = [a, b, c, d, e].sort((p, q) => p - q);
+      const med = nums[2]!;
+      return buildMc(
+        rng,
+        slot,
+        `Mediana zbioru ${nums.join(", ")}:`,
+        fmtNum(med),
+        wrongs(rng, med, 2),
+        2,
+        v,
+      );
+    }
     default: {
-      const a = 10 + pickV(v, 0, 120);
-      const b = 2 + pickV(v, 1, 40);
-      return buildMc(rng, slot, `Oblicz ${a}+${b}`, fmtNum(a + b), wrongs(rng, a + b, 5), 1, v);
+      // Ostateczny fallback — nie „a+b”, tylko proste wyrażenie z kolejnością działań
+      const a = 2 + pickV(v, 0, 12);
+      const b = 2 + pickV(v, 1, 8);
+      const c = 2 + pickV(v, 2, 8);
+      const result = a * b - c;
+      return buildMc(
+        rng,
+        slot,
+        `Oblicz $${a}\\cdot ${b}-${c}$`,
+        fmtNum(result),
+        wrongs(rng, result, 4),
+        1,
+        v,
+      );
     }
   }
 }

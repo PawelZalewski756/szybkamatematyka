@@ -6,385 +6,385 @@
   "topicName": "Proporcje i skala",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Z proporcji $2:7=10:x$ wynika $x=$​",
+      "correct_answer": "35",
       "options": [
-        "48",
-        "44",
-        "47",
-        "49"
+        "34",
+        "26.25",
+        "33",
+        "35"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 35",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a76cb7a9-eaad-496c-bdd2-c3f26340ddfb",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "2fbae4b6-5fa0-40f7-8806-ed38d40e2172",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Z proporcji $9:6=36:x$ wynika $x=$​​",
+      "correct_answer": "24",
       "options": [
-        "54",
-        "50",
-        "53",
-        "55"
+        "23",
+        "18",
+        "22",
+        "24"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6b518b3-de9f-40d7-b210-6fe2cb7fb608",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $8:5=24:x$ wynika $x=$​​​",
+      "correct_answer": "15",
+      "options": [
+        "13",
+        "15",
+        "14",
+        "11.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 55",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a8d25bdf-14d5-417c-ace6-ed809e072e53",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "5a55cc6b-263c-4e21-8546-b3d40f9f3968",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Z proporcji $7:4=14:x$ wynika $x=$​​​​",
+      "correct_answer": "8",
       "options": [
-        "59",
-        "61",
-        "60",
-        "56"
+        "6",
+        "9",
+        "7",
+        "8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4592763b-7e33-4c5c-aa06-0eeae3f6bf76",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "6c0fb0d9-6c0b-4e58-a944-6025422c2423",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Z proporcji $6:3=6:x$ wynika $x=$​​​​​",
+      "correct_answer": "3",
       "options": [
-        "102",
-        "106",
-        "105",
-        "107"
+        "2",
+        "4",
+        "1",
+        "3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "072ee259-8413-42f8-975a-c4be64049a52",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "a6728e4e-157a-4c73-9668-4169bfc6fdf8",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Z proporcji $5:2=30:x$ wynika $x=$​​​​​​",
+      "correct_answer": "12",
       "options": [
-        "111",
-        "112",
-        "108",
-        "113"
+        "10",
+        "11",
+        "9",
+        "12"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "397fc786-7a93-4039-a7db-d8c729ffe887",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "577f8044-0364-4d28-a75f-74ab0d286b5c",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
-      "options": [
-        "157",
-        "158",
-        "154",
-        "159"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f6c496d2-98e0-4bc8-8ceb-753928f7833a",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
+      "content": "Z proporcji $4:9=20:x$ wynika $x=$​​​​​​​",
       "correct_answer": "45",
       "options": [
         "45",
         "44",
         "43",
-        "40"
+        "33.75"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "92995682-70c5-4f37-b994-536d0e005c33",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "5b7c0d62-cfb7-4427-8bf9-91327db812d7",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Z proporcji $3:8=12:x$ wynika $x=$​​​​​​​​",
+      "correct_answer": "32",
       "options": [
-        "90",
-        "91",
-        "89",
-        "86"
+        "31",
+        "32",
+        "30",
+        "24"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 91",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1b164363-c2a1-4007-913a-f899f79fc81c",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "d1b8b778-b62f-4c1b-9c3e-05bdd8375ced",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Z proporcji $2:7=6:x$ wynika $x=$​​​​​​​​​",
+      "correct_answer": "21",
       "options": [
-        "92",
-        "97",
-        "96",
-        "95"
+        "15.75",
+        "21",
+        "20",
+        "19"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0b3a52e0-ef75-4b01-83d4-c2b8445515f2",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "9a0a22ce-8590-48da-9cfe-34cb1fdea63a",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Z proporcji $9:6=18:x$ wynika $x=$​​​​​​​​​​",
+      "correct_answer": "12",
       "options": [
-        "102",
-        "103",
-        "98",
-        "101"
+        "11",
+        "12",
+        "9",
+        "10"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1eb69afa-d7c7-4c0f-9062-12ffd60d3451",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "74612ec2-1163-45b5-8085-fb5b10dce489",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Z proporcji $8:5=8:x$ wynika $x=$​​​​​​​​​​​",
+      "correct_answer": "5",
       "options": [
-        "144",
-        "149",
-        "147",
-        "148"
+        "3",
+        "5",
+        "4",
+        "6"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ef505da0-5666-453c-9a95-f15dcf57f747",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "02749342-8c64-4a3b-b2b7-a271f0249525",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Z proporcji $7:4=42:x$ wynika $x=$​​​​​​​​​​​​",
+      "correct_answer": "24",
       "options": [
-        "35",
-        "33",
+        "24",
+        "22",
+        "23",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cbf99281-c802-4203-95e2-2846bb6b3424",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $6:3=30:x$ wynika $x=$​​​​​​​​​​​​​",
+      "correct_answer": "15",
+      "options": [
+        "15",
+        "14",
+        "13",
+        "11.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30c05a30-b284-4596-ae52-4a8300a9c1c2",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $5:2=20:x$ wynika $x=$​​​​​​​​​​​​​​",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "6",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ce0e8d8-444b-4ba5-9b93-145d2dfae7b3",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $4:9=12:x$ wynika $x=$​​​​​​​​​​​​​​​",
+      "correct_answer": "27",
+      "options": [
+        "27",
+        "25",
+        "20.25",
+        "26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8438177a-9352-42b4-be60-247dc098acb3",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $3:8=6:x$ wynika $x=$​​​​​​​​​​​​​​​​",
+      "correct_answer": "16",
+      "options": [
+        "12",
+        "15",
+        "16",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ca8cc1bd-8bf5-4a0a-918b-3c04c92da195",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $2:7=2:x$ wynika $x=$​​​​​​​​​​​​​​​​​",
+      "correct_answer": "7",
+      "options": [
+        "5",
+        "8",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "22e310a3-e4a9-47dd-9bac-b19193306c46",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $9:6=54:x$ wynika $x=$​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "36",
+      "options": [
+        "27",
         "34",
-        "30"
+        "36",
+        "35"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fad87f6e-618f-4c11-a554-ac2ed8599589",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "8414a124-c842-4394-b68d-249fdf87f15d",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
-      "options": [
-        "81",
-        "80",
-        "79",
-        "76"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "411f57cf-569c-4a33-8f8f-dffb0731650e",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
-      "options": [
-        "85",
-        "82",
-        "86",
-        "87"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 87",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1015fc91-527f-46df-88af-faef37c94d0b",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "133",
-        "131",
-        "128",
-        "132"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4e8677d9-8aba-47d6-863d-43e565c881ee",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "134",
-        "138",
-        "139",
-        "137"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6c220c51-f652-45e2-abfe-5311eacfcb63",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $8:5=40:x$ wynika $x=$​​​​​​​​​​​​​​​​​​​",
       "correct_answer": "25",
       "options": [
-        "20",
-        "24",
+        "25",
         "23",
-        "25"
+        "24",
+        "18.75"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f301b21d-5f1b-44cd-84a3-20b4c0d85bc0",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "8736ecc2-5dd0-4565-a3b1-83279927909d",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Z proporcji $7:4=28:x$ wynika $x=$​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "16",
       "options": [
-        "66",
-        "69",
-        "71",
-        "70"
+        "15",
+        "12",
+        "16",
+        "14"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "164aa54f-81fc-4d4f-b26b-45dd306bd2c5",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "77",
-        "75",
-        "76",
-        "72"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b4e45f69-6cfc-4f93-91db-5d724535419d",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "122",
-        "118",
-        "123",
-        "121"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8057f87a-c26d-4a01-a316-9b184f87ddeb",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "e81d14d2-9198-43ff-94c3-8bb27f90baaf",
+      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.895Z"
+  "updatedAt": "2026-08-07T16:30:27.567Z"
 }

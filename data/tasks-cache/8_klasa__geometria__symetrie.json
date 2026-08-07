@@ -6,385 +6,385 @@
   "topicName": "Symetrie",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Obraz $(-8,-3)$ w symetrii względem osi $OY$:​",
+      "correct_answer": "(8,-3)",
       "options": [
-        "47",
-        "48",
-        "49",
-        "44"
+        "(8,3)",
+        "(-3,-8)",
+        "(8,-3)",
+        "(-8,3)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (8,-3)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cc1eabb4-001a-4c6e-9fd7-09c5d2c7f4e3",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "abb97e87-2fc7-43da-baab-e1f8fc372621",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Obraz $(7,-4)$ w symetrii względem osi $OX$:​​",
+      "correct_answer": "(7,4)",
       "options": [
-        "53",
-        "54",
-        "50",
-        "55"
+        "(-7,4)",
+        "(-4,7)",
+        "(-7,-4)",
+        "(7,4)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 55",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (7,4)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "955669b5-5a7f-4336-8a5e-77dd4ad947da",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "9f19cd79-0e08-46ca-a998-e150705c684a",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Obraz $(6,-5)$ w symetrii względem osi $OY$:​​​",
+      "correct_answer": "(-6,-5)",
       "options": [
-        "59",
-        "60",
-        "61",
-        "56"
+        "(-6,5)",
+        "(-5,6)",
+        "(-6,-5)",
+        "(6,5)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-6,-5)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "64a1d390-a650-4da5-9519-244c8ba7d292",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(5,-6)$ w symetrii względem osi $OX$:​​​​",
+      "correct_answer": "(5,6)",
+      "options": [
+        "(-5,6)",
+        "(-6,5)",
+        "(-5,-6)",
+        "(5,6)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (5,6)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee7014c6-37c8-4c87-bef8-53a86c15fdf1",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(4,-7)$ w symetrii względem osi $OY$:​​​​​",
+      "correct_answer": "(-4,-7)",
+      "options": [
+        "(-7,4)",
+        "(-4,-7)",
+        "(-4,7)",
+        "(4,7)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 61",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-4,-7)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3399a4c2-3376-42eb-b25f-73ffdb93491f",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "2d8dcd51-a82b-4949-9e6d-fd20300659eb",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Obraz $(3,-8)$ w symetrii względem osi $OX$:​​​​​​",
+      "correct_answer": "(3,8)",
       "options": [
-        "105",
-        "106",
-        "102",
-        "107"
+        "(3,8)",
+        "(-8,3)",
+        "(-3,8)",
+        "(-3,-8)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (3,8)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "514a6ffa-2344-44e8-8ccc-0f3b8101a266",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "fc8e82b3-27c1-43c2-80f5-844d1b158d0a",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Obraz $(2,7)$ w symetrii względem osi $OY$:​​​​​​​",
+      "correct_answer": "(-2,7)",
       "options": [
-        "112",
-        "113",
-        "111",
-        "108"
+        "(-2,7)",
+        "(7,2)",
+        "(2,-7)",
+        "(-2,-7)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-2,7)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bd2ccb72-8bd6-44ca-8ec4-83f2061d4da5",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "8e66b5cf-3ba8-483e-b198-58d0e45afec1",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Obraz $(1,6)$ w symetrii względem osi $OX$:​​​​​​​​",
+      "correct_answer": "(1,-6)",
       "options": [
-        "159",
-        "158",
-        "157",
-        "154"
+        "(-1,6)",
+        "(-1,-6)",
+        "(6,1)",
+        "(1,-6)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6dd66966-eb29-4c26-b91b-d97ae1d78161",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "45",
-        "44",
-        "40",
-        "43"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (1,-6)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "96284387-c3b6-48d0-a40b-21ec4178da50",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "83fd4cd9-5784-4e83-a3f1-443dcd57bbfd",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Obraz $(0,5)$ w symetrii względem osi $OY$:​​​​​​​​​",
+      "correct_answer": "(0,5)",
       "options": [
-        "86",
-        "89",
-        "90",
-        "91"
+        "NaN",
+        "(5,0)",
+        "(0,5)",
+        "(0,-5)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 91",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (0,5)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b8e0c2a7-643d-4044-83d1-a1f8ab126ee0",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "0d54234c-7752-4d38-99aa-b2a78291f729",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Obraz $(-1,4)$ w symetrii względem osi $OX$:​​​​​​​​​​",
+      "correct_answer": "(-1,-4)",
       "options": [
-        "96",
-        "95",
-        "92",
-        "97"
+        "(1,4)",
+        "(-1,-4)",
+        "(4,-1)",
+        "(1,-4)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-1,-4)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "14432bfb-3be6-4fba-a2d8-f07d550beb50",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "4085096a-ed52-4aeb-9a79-984c8ab5e264",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Obraz $(-2,3)$ w symetrii względem osi $OY$:​​​​​​​​​​​",
+      "correct_answer": "(2,3)",
       "options": [
-        "98",
-        "103",
-        "102",
-        "101"
+        "(-2,-3)",
+        "(2,-3)",
+        "(3,-2)",
+        "(2,3)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (2,3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b0f28ee8-02bf-494e-b339-4a5d6d40db26",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-3,2)$ w symetrii względem osi $OX$:​​​​​​​​​​​​",
+      "correct_answer": "(-3,-2)",
+      "options": [
+        "(3,-2)",
+        "(3,2)",
+        "(-3,-2)",
+        "(2,-3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-3,-2)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "575cddcd-9c22-4c1c-90bb-53e392584a5f",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-4,1)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​",
+      "correct_answer": "(4,1)",
+      "options": [
+        "(4,1)",
+        "(1,-4)",
+        "(4,-1)",
+        "(-4,-1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (4,1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34b03831-34ee-4aec-9b54-5bab6e40b48e",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-5,0)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​",
+      "correct_answer": "(-5,0)",
+      "options": [
+        "(-5,0)",
+        "(0,-5)",
+        "(5,0)",
+        "NaN"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-5,0)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69f9f994-224f-4ef1-9629-6bafe158fc5a",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-6,-1)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​",
+      "correct_answer": "(6,-1)",
+      "options": [
+        "(6,-1)",
+        "(6,1)",
+        "(-1,-6)",
+        "(-6,1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 103",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (6,-1)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f65515c6-c4b5-4ece-821f-05fd84ca1fbb",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "47d7edfc-b444-4cfd-80d7-e1d42d1b0a8f",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Obraz $(-7,-2)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​",
+      "correct_answer": "(-7,2)",
       "options": [
-        "144",
-        "147",
-        "148",
-        "149"
+        "(7,2)",
+        "(-2,-7)",
+        "(7,-2)",
+        "(-7,2)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-7,2)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1f011cdb-7528-4d66-8a06-6dc8f024e5bc",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "881015c5-1796-49e5-be6f-bc00079def02",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Obraz $(-8,-3)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "(8,-3)",
       "options": [
-        "33",
-        "30",
-        "35",
-        "34"
+        "(-8,3)",
+        "(8,-3)",
+        "(8,3)",
+        "(-3,-8)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (8,-3)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "690563a3-fd01-460f-8cf2-5e457fd88289",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "86a59e49-9f10-4b02-ba0e-a6b528fc8f42",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
+      "content": "Obraz $(7,-4)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "(7,4)",
       "options": [
-        "81",
-        "80",
-        "79",
-        "76"
+        "(-7,4)",
+        "(7,4)",
+        "(-7,-4)",
+        "(-4,7)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 81",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (7,4)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "69e1c7f8-3708-4fe9-9c76-19d491cdaca0",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "e14bedac-2e77-46cd-9c42-92de1cf8e015",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "Obraz $(6,-5)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "(-6,-5)",
       "options": [
-        "85",
-        "87",
-        "86",
-        "82"
+        "(-6,5)",
+        "(-6,-5)",
+        "(-5,6)",
+        "(6,5)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-6,-5)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f2acced7-e85f-4931-9298-f2adc2216a14",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "86be357b-f54d-481e-9f7b-60ae6d534d79",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
+      "content": "Obraz $(5,-6)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "(5,6)",
       "options": [
-        "133",
-        "131",
-        "132",
-        "128"
+        "(-6,5)",
+        "(-5,-6)",
+        "(-5,6)",
+        "(5,6)"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 133",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (5,6)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3c597652-6a2c-4fcd-b543-a56ac203d789",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "137",
-        "138",
-        "134",
-        "139"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a646d39c-57cd-4014-81b6-bc93c43b044a",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "20",
-        "25",
-        "23",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0c0b71ca-a621-4bde-9c5c-c17fd91e408a",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
-      "options": [
-        "69",
-        "71",
-        "66",
-        "70"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 71",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b5b296d7-e2c8-4f1a-b526-fef71ab6736f",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "75",
-        "77",
-        "76",
-        "72"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3a750466-d74b-4510-94c3-4bace1ac97e5",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "122",
-        "118",
-        "121",
-        "123"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e0de5b53-f389-44c8-adc9-3281909c80f8",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "ab7f7558-50a5-4465-8876-affa76fa8892",
+      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.896Z"
+  "updatedAt": "2026-08-07T16:30:27.569Z"
 }

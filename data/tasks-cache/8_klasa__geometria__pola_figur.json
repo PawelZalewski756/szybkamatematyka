@@ -6,385 +6,385 @@
   "topicName": "Pola figur",
   "tasks": [
     {
-      "content": "Pole kwadratu o boku 8​",
-      "correct_answer": "64",
+      "content": "Pole kwadratu o boku 4 wynosi:",
+      "correct_answer": "16",
       "options": [
-        "64",
-        "63",
-        "62",
-        "58"
+        "18",
+        "16",
+        "17",
+        "14"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 64",
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4e9c1b1f-e9b4-44d8-8631-bb76966e2810",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "eb4cd06e-1579-40b5-add3-da27748c77c7",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole prostokąta 13×5​​",
-      "correct_answer": "65",
+      "content": "Pole prostokąta o bokach 9 i 9 wynosi:",
+      "correct_answer": "81",
       "options": [
-        "63",
-        "60",
-        "65",
-        "64"
+        "79",
+        "83",
+        "80",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92028b9e-7863-430a-ab25-fb9a930f4a89",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 9 wynosi:",
+      "correct_answer": "81",
+      "options": [
+        "79",
+        "75",
+        "80",
+        "81"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Odpowiedź: 65",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e80fc640-c74a-49fa-ab79-3771c26a3fb4",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "7c35e782-6b02-4b99-b04c-e6671c14c2b7",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole kwadratu o boku 6​​​",
-      "correct_answer": "36",
+      "content": "Pole prostokąta o bokach 10 i 5 wynosi:",
+      "correct_answer": "50",
       "options": [
-        "34",
-        "36",
-        "35",
-        "30"
+        "50",
+        "51",
+        "48",
+        "52"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Odpowiedź: 36",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "04027564-0d71-494c-99f2-e13c55a0246e",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "4b631dce-ab58-4087-a6c8-c59e09ac4cbe",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole prostokąta 11×3​​​​",
-      "correct_answer": "33",
+      "content": "Pole kwadratu o boku 9 wynosi:",
+      "correct_answer": "81",
       "options": [
-        "33",
-        "28",
-        "32",
-        "31"
+        "81",
+        "87",
+        "80",
+        "83"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Odpowiedź: 33",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d7f7cfbf-27e9-42d0-b4ea-99890dbd8278",
-      "generatedAt": "2026-08-07T15:45:15.895Z",
-      "model": "parametric-v1"
+      "id": "965b5cd9-b82b-4041-9eb0-a86df8734b8e",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole kwadratu o boku 4​​​​​",
+      "content": "Pole prostokąta o bokach 7 i 7 wynosi:",
+      "correct_answer": "49",
+      "options": [
+        "51",
+        "49",
+        "50",
+        "47"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 49",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "002ca30f-2aae-4dd4-87cc-e20687cfb0db",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 4 wynosi:",
       "correct_answer": "16",
       "options": [
+        "17",
         "16",
-        "10",
-        "14",
-        "15"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 16",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d7f40ef6-405c-4f67-b55e-843ac2ec2df4",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 9×13​​​​​​",
-      "correct_answer": "117",
-      "options": [
-        "117",
-        "116",
-        "115",
-        "112"
+        "18",
+        "10"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 117",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c91c549b-a66f-4b28-9f83-4999516ccca6",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "44710faf-051c-4af5-abbc-2fdf9f8c088b",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole kwadratu o boku 18​​​​​​​",
-      "correct_answer": "324",
+      "content": "Pole prostokąta o bokach 10 i 6 wynosi:",
+      "correct_answer": "60",
       "options": [
-        "318",
-        "324",
-        "323",
-        "322"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 324",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "45538242-4198-4e4a-b96d-b32912449a80",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 7×11​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "76",
-        "77",
-        "75",
-        "72"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5f415450-5254-45eb-8da9-1e7608367ffa",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole kwadratu o boku 16​​​​​​​​​",
-      "correct_answer": "256",
-      "options": [
-        "250",
-        "254",
-        "256",
-        "255"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 256",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8a5b7016-f32a-4f95-82d7-4cd8825101f8",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 5×9​​​​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "44",
-        "40",
-        "43",
-        "45"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0cdcba2c-57d6-498f-b094-8e2414cee4fd",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole kwadratu o boku 14​​​​​​​​​​​",
-      "correct_answer": "196",
-      "options": [
-        "196",
-        "190",
-        "194",
-        "195"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 196",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "948bab8e-5d5f-40db-b8b7-8994c87ad291",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 15×7​​​​​​​​​​​​",
-      "correct_answer": "105",
-      "options": [
-        "100",
-        "105",
-        "103",
-        "104"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 105",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9c1441bb-9c25-44b1-bcff-69bc802fdd8e",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole kwadratu o boku 12​​​​​​​​​​​​​",
-      "correct_answer": "144",
-      "options": [
-        "138",
-        "144",
-        "142",
-        "143"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 144",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "912ce067-80d5-4dfb-aaf0-11cff66a1fb8",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 13×5​​​​​​​​​​​​​​",
-      "correct_answer": "65",
-      "options": [
-        "63",
-        "64",
+        "60",
+        "55",
         "65",
-        "60"
+        "61"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 65",
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 60",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "07ec0cae-b58b-4a50-a51a-e456924ec374",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "ac472e05-b884-4944-bf63-a1f3df2d7515",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole kwadratu o boku 10​​​​​​​​​​​​​​​",
+      "content": "Pole kwadratu o boku 10 wynosi:",
       "correct_answer": "100",
       "options": [
-        "98",
-        "100",
         "99",
+        "101",
+        "100",
         "94"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 100",
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "588f7505-6488-4a8c-b67c-746e2eaa54af",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "cf799201-e71b-4dcb-9c1e-982836da2e3a",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole prostokąta 11×3​​​​​​​​​​​​​​​​",
-      "correct_answer": "33",
+      "content": "Pole prostokąta o bokach 8 i 6 wynosi:",
+      "correct_answer": "48",
       "options": [
-        "32",
-        "31",
-        "28",
-        "33"
+        "53",
+        "48",
+        "50",
+        "49"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Odpowiedź: 33",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "18f1d9a3-5945-47e0-9e3f-c7ab0043b264",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "a17bb40c-f12c-4b1d-b2c1-17cf91e92b59",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole kwadratu o boku 8​​​​​​​​​​​​​​​​​",
+      "content": "Pole kwadratu o boku 6 wynosi:",
+      "correct_answer": "36",
+      "options": [
+        "38",
+        "43",
+        "42",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "918d14c0-a2d2-45e5-8607-13dd6578ff8b",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 9 i 9 wynosi:",
+      "correct_answer": "81",
+      "options": [
+        "87",
+        "82",
+        "76",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6507b5ee-4847-4aeb-bf06-3531b0665cf6",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 5 wynosi:",
+      "correct_answer": "25",
+      "options": [
+        "19",
+        "27",
+        "26",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0394d5b6-52c2-4731-b236-b4182229281a",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 5 i 5 wynosi:",
+      "correct_answer": "25",
+      "options": [
+        "27",
+        "25",
+        "20",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0c970c58-7770-43d9-8322-0138b1902b88",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 11 wynosi:",
+      "correct_answer": "121",
+      "options": [
+        "123",
+        "121",
+        "122",
+        "128"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 121",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f93ff48-1a05-49b6-a955-bd340703f1f1",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 8 i 8 wynosi:",
       "correct_answer": "64",
       "options": [
+        "70",
+        "64",
+        "59",
+        "66"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c3ec6e15-9fcd-43f0-9a12-2ba1e959e85e",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 9 wynosi:",
+      "correct_answer": "81",
+      "options": [
+        "87",
+        "81",
+        "79",
+        "80"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae6f6568-c81d-4c0e-9784-8508c1be4ed4",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 4 i 6 wynosi:",
+      "correct_answer": "24",
+      "options": [
+        "24",
+        "30",
+        "25",
+        "26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e2d13d69-740b-44db-8d88-6ded51a6312e",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 8 wynosi:",
+      "correct_answer": "64",
+      "options": [
+        "64",
+        "66",
+        "70",
+        "71"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff75de4b-5f59-48cd-a87a-8422a3404056",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 7 i 9 wynosi:",
+      "correct_answer": "63",
+      "options": [
         "63",
-        "58",
+        "65",
         "62",
         "64"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "29414c04-5d81-4b78-94c4-4826e369ebbd",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 9×13​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "117",
-      "options": [
-        "112",
-        "117",
-        "115",
-        "116"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 117",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "773c8cb3-b92c-450b-a484-89283cdb8426",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole kwadratu o boku 6​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "34",
-        "35",
-        "30",
-        "36"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4b706d11-7296-4a04-8148-4b4d5c362e7f",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole prostokąta 7×11​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "75",
-        "76",
-        "72",
-        "77"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 77",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 63",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "34f030cd-e384-42c7-ae52-4746afa82dd8",
-      "generatedAt": "2026-08-07T15:45:15.896Z",
-      "model": "parametric-v1"
+      "id": "528ce958-9ca9-475c-bfaf-a6378ea93035",
+      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.896Z"
+  "updatedAt": "2026-08-07T16:30:27.568Z"
 }

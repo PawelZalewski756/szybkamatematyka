@@ -6,385 +6,385 @@
   "topicName": "Odczyt wykresu funkcji",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​",
+      "correct_answer": "-4",
       "options": [
-        "44",
-        "49",
-        "47",
-        "48"
+        "-8",
+        "-4",
+        "-6",
+        "-5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 49",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "276c6a75-75cc-4d6b-abc5-12095c4f7812",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
-      "options": [
-        "53",
-        "50",
-        "55",
-        "54"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 55",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "366cc4e1-7e34-49ad-8e63-6feafdb9843f",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "fc5a3506-a7ba-4563-88f0-c9c6108a518e",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​",
+      "correct_answer": "0",
       "options": [
-        "59",
-        "56",
-        "61",
-        "60"
+        "-2",
+        "-4",
+        "0",
+        "-1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14c41f25-fe34-4d4d-910e-f2658a1b1203",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​",
+      "correct_answer": "-2",
+      "options": [
+        "-4",
+        "-6",
+        "-2",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2cad698c-293d-4487-85d0-e7cb81814085",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​",
+      "correct_answer": "-2",
+      "options": [
+        "-2",
+        "-3",
+        "-6",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da20c396-0cac-4d21-b9c1-178519c99c1f",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=0$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​",
+      "correct_answer": "0",
+      "options": [
+        "-4",
+        "0",
+        "-1",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e3277b52-13d7-41c1-84ff-9d42100e4455",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb1a443e-828e-4f8d-9506-da995038226d",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-2$, $f(2)=3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​",
+      "correct_answer": "-6",
+      "options": [
+        "-7",
+        "-8",
+        "-6",
+        "-10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6507193d-df07-4b26-96ca-a73ae86e17ae",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-3$, $f(2)=2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​",
+      "correct_answer": "-6",
+      "options": [
+        "-10",
+        "-7",
+        "-6",
+        "-8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "818e0a47-4037-4d42-bf23-93f24bcb162c",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​",
+      "correct_answer": "-4",
+      "options": [
+        "-6",
+        "-5",
+        "-4",
+        "-8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f1484e4c-de03-4e91-942c-c5f0f3bae6bc",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "-1",
+        "-2",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 61",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ea5482e4-adbf-4c72-ab82-9f0dbce0b824",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "2101fc1f-c98b-449e-85b8-2f230125ee5b",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​",
+      "correct_answer": "-2",
       "options": [
-        "107",
-        "106",
-        "102",
-        "105"
+        "-3",
+        "-4",
+        "-6",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8d1d43d1-f966-49fc-9bac-4697403e9b9c",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "16fadb8a-9b09-4110-b136-a24e6c0f0b63",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​",
+      "correct_answer": "-2",
       "options": [
-        "108",
-        "113",
-        "112",
-        "111"
+        "-3",
+        "-2",
+        "-6",
+        "-4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "50113768-eb03-458b-884a-94b6b46edae0",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "97fdcb7f-1f7d-4883-816f-e08699f98796",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Z wykresu: $f(-1)=0$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "158",
-        "159",
-        "157",
-        "154"
+        "-4",
+        "-2",
+        "-1",
+        "0"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3fe0cb0c-4800-4afc-97fd-a391656428f8",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 159",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "03f01d59-009a-4f6f-8d68-41327f3f1ada",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "45df3e39-bb41-4b14-b577-fe60cb6eda20",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
+      "content": "Z wykresu: $f(-1)=-2$, $f(2)=3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​",
+      "correct_answer": "-6",
       "options": [
-        "44",
-        "43",
-        "45",
-        "40"
+        "-8",
+        "-10",
+        "-6",
+        "-7"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "832c7cec-a8a2-4280-a7f2-95768cbf2262",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
-      "options": [
-        "86",
-        "90",
-        "91",
-        "89"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 91",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "132e8017-62cf-4029-a506-a03ef2c581f8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
-      "options": [
-        "95",
-        "96",
-        "97",
-        "92"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 97",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "02b1d2f6-b1d5-4b83-bdca-d760d63f57ec",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "a43d30b2-e5a6-4ece-a509-e0f551239ddb",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Z wykresu: $f(-1)=-3$, $f(2)=2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​",
+      "correct_answer": "-6",
       "options": [
-        "103",
-        "102",
-        "101",
-        "98"
+        "-10",
+        "-6",
+        "-8",
+        "-7"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a7242321-2c15-4757-a352-8e10c7d350c5",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "160e301d-715b-4278-b737-67d4262676af",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "-4",
       "options": [
-        "148",
-        "147",
-        "144",
-        "149"
+        "-5",
+        "-6",
+        "-4",
+        "-8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f4e2ce7e-a47d-4693-aa65-da86fde17e38",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "8f722882-e566-4967-a266-cbe6b2c894e0",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "34",
-        "35",
-        "30",
-        "33"
+        "-4",
+        "0",
+        "-1",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "eb912413-0689-41b1-aa35-85577ab53e90",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "06ffacc1-2e5f-4144-9770-97d45671a851",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
+      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "-2",
       "options": [
-        "76",
-        "79",
-        "80",
-        "81"
+        "-3",
+        "-4",
+        "-2",
+        "-6"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 81",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c3943025-35ce-49b3-8cdf-f2c17dee2720",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "c0c4feb6-065d-433c-957f-735a43abdd78",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "-2",
       "options": [
-        "87",
-        "82",
-        "86",
-        "85"
+        "-4",
+        "-6",
+        "-2",
+        "-3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ea4e54cc-c1bb-40bd-9008-257c7f4bb2b1",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "131",
-        "128",
-        "133",
-        "132"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e232093b-26fa-4b82-b21d-21ee3f4cb7fc",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "134",
-        "139",
-        "137",
-        "138"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2056193c-7cb4-4bc7-b431-d7c0465b1e3c",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "24",
-        "23",
-        "25",
-        "20"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d0eda7a7-02b2-40f9-9189-c58b8989fc1d",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
-      "options": [
-        "66",
-        "71",
-        "70",
-        "69"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 71",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "55660a7f-1b63-4fb2-b3b9-704d1acadb70",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "76",
-        "75",
-        "77",
-        "72"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a6beea8b-d19d-45e4-937e-ab7fa85c9754",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "121",
-        "118",
-        "123",
-        "122"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c842e501-f639-4130-b0ee-90738953ea7c",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "fa9db69b-b52a-49d5-8ed5-037d2ef21593",
+      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.891Z"
+  "updatedAt": "2026-08-07T16:30:27.557Z"
 }

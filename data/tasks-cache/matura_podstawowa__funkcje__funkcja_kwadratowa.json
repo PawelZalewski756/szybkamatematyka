@@ -6,385 +6,385 @@
   "topicName": "Funkcja kwadratowa",
   "tasks": [
     {
-      "content": "Dla $f(x)=x^2+-1x+7$ oblicz $f(-18)$​",
-      "correct_answer": "349",
+      "content": "Oblicz $f(0)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "1",
       "options": [
-        "347",
-        "348",
-        "349",
-        "342"
+        "-5",
+        "2",
+        "-1",
+        "1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 349",
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7f7694dd-5c36-4ffd-9a24-3ec541994fe2",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "21a07657-5edb-46b5-a5dd-dcdf0f256423",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+2x+-6$ oblicz $f(5)$​​",
-      "correct_answer": "29",
+      "content": "Suma pierwiastków równania $x^2--2x+-3=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-2",
       "options": [
-        "22",
-        "29",
-        "27",
-        "28"
+        "-3",
+        "-1",
+        "-2",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0fb400c1-a1f8-4572-81a2-fd9d00629d23",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(-3)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "10",
+        "14",
+        "18"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Odpowiedź: 29",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1640e58e-cc1d-4986-a250-d367ecbd37ad",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "3bf5ad78-d7b3-4b59-b471-33ca75726d94",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+5x+-1$ oblicz $f(-8)$​​​",
-      "correct_answer": "23",
+      "content": "Suma pierwiastków równania $x^2--2x+-8=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-2",
       "options": [
-        "23",
-        "21",
-        "16",
-        "22"
+        "-3",
+        "1",
+        "-4",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
+      "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Odpowiedź: 23",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "666b1147-b850-490a-8c2a-fb8a35a68102",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "2b8d0184-bc7e-4a80-91f2-1ca25003cc39",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+-3x+4$ oblicz $f(15)$​​​​",
-      "correct_answer": "184",
-      "options": [
-        "182",
-        "177",
-        "183",
-        "184"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 184",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b02a056e-4779-4bb4-b4b3-0f588df3d2a2",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+0x+-9$ oblicz $f(2)$​​​​​",
-      "correct_answer": "-5",
-      "options": [
-        "-6",
-        "-5",
-        "-12",
-        "-7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: -5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e3749379-cd2b-4513-aa53-e8b8a7c1f6f8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+3x+-4$ oblicz $f(-11)$​​​​​​",
-      "correct_answer": "84",
-      "options": [
-        "77",
-        "83",
-        "82",
-        "84"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 84",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6d031b8f-52a1-4160-8ccf-c6b0775bd948",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+-5x+1$ oblicz $f(12)$​​​​​​​",
-      "correct_answer": "85",
-      "options": [
-        "85",
-        "78",
-        "84",
-        "83"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 85",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4fc95679-1f76-4778-bd6c-9b74d5259ab6",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+-2x+6$ oblicz $f(-1)$​​​​​​​​",
+      "content": "Oblicz $f(4)$ dla $f(x)=x^2-2x+1$.",
       "correct_answer": "9",
       "options": [
-        "2",
         "7",
-        "9",
-        "8"
+        "11",
+        "16",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4222c958-860b-4272-bde2-e873c0a546d7",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Suma pierwiastków równania $x^2-2x+-3=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "5",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef616f4f-2045-4d85-9a93-fad77bdf7b7b",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(-1)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "-2",
+        "6",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Odpowiedź: 9",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "05f20823-b267-4da9-98dd-8b75d3f1ceed",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "f617ae2d-3322-4de3-bb20-c41806baf4f5",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+1x+-7$ oblicz $f(-14)$​​​​​​​​​",
-      "correct_answer": "175",
+      "content": "Suma pierwiastków równania $x^2--3x+-4=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-3",
       "options": [
-        "174",
-        "168",
-        "175",
-        "173"
+        "-3",
+        "-2",
+        "-5",
+        "-1"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 175",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "142aaf02-f6d9-46bc-80f7-622876b59170",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "c489edc3-ba16-4289-a1e3-1939000e91bf",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+4x+-2$ oblicz $f(9)$​​​​​​​​​​",
-      "correct_answer": "115",
+      "content": "Oblicz $f(2)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "1",
       "options": [
-        "115",
-        "108",
-        "113",
-        "114"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 115",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b79ac71a-6130-471e-9428-e3f56890386a",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+-4x+3$ oblicz $f(-4)$​​​​​​​​​​​",
-      "correct_answer": "35",
-      "options": [
-        "33",
-        "34",
-        "35",
-        "28"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 35",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e1f8befb-3acf-41f5-8870-96c6d88ad841",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+-1x+8$ oblicz $f(-17)$​​​​​​​​​​​​",
-      "correct_answer": "314",
-      "options": [
-        "313",
-        "312",
-        "314",
-        "307"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 314",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "47dd6a19-ef70-4026-8e1e-f1c4e73f76bd",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+2x+-5$ oblicz $f(6)$​​​​​​​​​​​​​",
-      "correct_answer": "43",
-      "options": [
-        "41",
-        "43",
-        "36",
-        "42"
+        "7",
+        "8",
+        "1",
+        "-1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Odpowiedź: 43",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "20bfa4c0-05bf-40bc-9f5a-f7d8cf21cd41",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "fde62bde-b964-46b0-9b7a-fd2b0abb6281",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+5x+0$ oblicz $f(-7)$​​​​​​​​​​​​​​",
-      "correct_answer": "14",
+      "content": "Suma pierwiastków równania $x^2--5x+4=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-5",
       "options": [
-        "12",
-        "7",
-        "14",
-        "13"
+        "-3",
+        "-5",
+        "-7",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2cd4bd0-6010-42b9-ac5c-2338b5679728",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(4)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "9",
+      "options": [
+        "8",
+        "15",
+        "11",
+        "9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 14",
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2fd0ea69-bdc1-4085-ac71-bdbf74ed0987",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "390d4151-ca0d-4d05-bcd6-e59e95afc867",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+-3x+5$ oblicz $f(16)$​​​​​​​​​​​​​​​",
-      "correct_answer": "213",
+      "content": "Suma pierwiastków równania $x^2--3x+2=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-3",
       "options": [
-        "213",
-        "212",
-        "211",
-        "206"
+        "-1",
+        "-3",
+        "-5",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "80c30f7b-4d90-4ba5-92b2-c7136ca6e437",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(-4)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "25",
+      "options": [
+        "25",
+        "19",
+        "24",
+        "31"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 213",
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5c90a01d-f6aa-42ed-9fc1-d5117d6e167f",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "60da2966-4567-4f3f-8ed2-53a7296195ad",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+0x+-8$ oblicz $f(3)$​​​​​​​​​​​​​​​​",
+      "content": "Suma pierwiastków równania $x^2--3x+0=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-3",
+      "options": [
+        "-3",
+        "0",
+        "-4",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "415518ae-362c-44b4-9398-f108b4e861b4",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(0)$ dla $f(x)=x^2-2x+1$.",
       "correct_answer": "1",
       "options": [
-        "-6",
         "1",
-        "-1",
+        "8",
+        "2",
         "0"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 1",
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "145cff58-587f-4ed5-8121-2a1ef9936cb3",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "dcdd69be-3975-4251-91ef-d71063f60eab",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+3x+-3$ oblicz $f(-10)$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "67",
+      "content": "Suma pierwiastków równania $x^2-0x+-4=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "0",
       "options": [
-        "66",
-        "67",
-        "65",
-        "60"
+        "1",
+        "2",
+        "0",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "84fe6261-7560-4397-b908-ca551d5168de",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(2)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "-1",
+        "7",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 67",
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0c6a38c6-f206-44b9-949a-4644056c4ce4",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "0ac400ba-538a-49a0-9fd2-14e6c841c718",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+-5x+2$ oblicz $f(13)$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "106",
+      "content": "Suma pierwiastków równania $x^2-0x+-1=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "0",
       "options": [
-        "105",
-        "99",
-        "104",
-        "106"
+        "-2",
+        "-1",
+        "0",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0c27963-63e0-4738-8052-05f021fd1134",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(5)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "16",
+      "options": [
+        "17",
+        "16",
+        "10",
+        "23"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Odpowiedź: 106",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7305c3e7-0421-4b1a-b1cc-7b1f99fad966",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "ea6e9cdc-71e9-43a8-b50b-c4a614d35331",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=x^2+-2x+7$ oblicz $f(0)$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "7",
+      "content": "Suma pierwiastków równania $x^2--5x+4=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-5",
       "options": [
-        "0",
-        "7",
-        "6",
-        "5"
+        "-5",
+        "-3",
+        "-7",
+        "-4"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 7",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7e8c05ec-bbf8-424a-9ecd-ba4d1dbe7c52",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Dla $f(x)=x^2+1x+-6$ oblicz $f(-13)$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "150",
-      "options": [
-        "149",
-        "143",
-        "150",
-        "148"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 150",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "02ead7be-4473-4d72-a1f4-d5f3a0e03e7c",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "c13b9c43-c0e9-4ba2-ba0d-fc31b742e44c",
+      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.890Z"
+  "updatedAt": "2026-08-07T16:30:27.555Z"
 }

@@ -6,385 +6,385 @@
   "topicName": "Wyrażenia algebraiczne",
   "tasks": [
     {
-      "content": "Oblicz $1x+8$ dla $x=1$​",
-      "correct_answer": "9",
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=2$, $b=1$.",
+      "correct_answer": "7",
       "options": [
-        "9",
-        "5",
+        "6",
         "7",
+        "5",
         "8"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Odpowiedź: 9",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "147474cf-7099-4d81-8d7e-9c7af7555d6b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "aadbf37b-7d1f-4ebc-87c0-b610b66cbe6f",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=24$​​",
-      "correct_answer": "625",
+      "content": "Oblicz $x^2-4$ dla $x=6$.",
+      "correct_answer": "32",
       "options": [
-        "623",
-        "624",
-        "620",
-        "625"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 625",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "de891fab-cbb5-40c4-aea8-595cde2dbb06",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $9x+2$ dla $x=47$​​​",
-      "correct_answer": "425",
-      "options": [
-        "425",
-        "423",
-        "424",
-        "421"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 425",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5bd0aceb-9a55-4eea-b306-f6f236156d1b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $x^2+2x+1$ dla $x=70$​​​​",
-      "correct_answer": "5041",
-      "options": [
-        "5040",
-        "5036",
-        "5039",
-        "5041"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 5041",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5931d25f-4f9b-4253-afd8-618604b547e9",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $3x+10$ dla $x=3$​​​​​",
-      "correct_answer": "19",
-      "options": [
-        "15",
-        "17",
-        "18",
-        "19"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 19",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "79a1a46d-8060-4db5-b907-8c2c78e993b9",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $x^2+2x+1$ dla $x=26$​​​​​​",
-      "correct_answer": "729",
-      "options": [
-        "729",
-        "728",
-        "724",
-        "727"
+        "27",
+        "34",
+        "32",
+        "30"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 729",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2b12b790-c3a8-4dce-af32-71968cba7a89",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "e5cbd7d6-9250-4535-bb72-516d87d811ef",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $11x+4$ dla $x=49$​​​​​​​",
-      "correct_answer": "543",
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
       "options": [
-        "542",
-        "541",
-        "543",
-        "539"
+        "5x",
+        "2x",
+        "8x",
+        "6x"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a885ba17-870b-43c4-b620-64e7f27f8eaf",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=3$, $b=1$.",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "8",
+        "10",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34898c58-4834-48c5-961a-d160e0eb0fb8",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $x^2-4$ dla $x=3$.",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "5",
+        "0",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d69bca01-aa4d-4462-9d7b-0a6f3a2386cf",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
+      "options": [
+        "8x",
+        "6x",
+        "5x",
+        "2x"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f767281a-8efe-4a89-9197-c87cafea7638",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=1$, $b=2$.",
+      "correct_answer": "8",
+      "options": [
+        "6",
+        "10",
+        "5",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Odpowiedź: 543",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8daf171f-fac2-4922-8b8f-36f384f46f6d",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "e66e86f6-77b1-4d69-84e7-ec8f66bec0cc",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=72$​​​​​​​​",
-      "correct_answer": "5329",
+      "content": "Oblicz $x^2-4$ dla $x=7$.",
+      "correct_answer": "45",
       "options": [
-        "5329",
-        "5324",
-        "5327",
-        "5328"
+        "44",
+        "51",
+        "43",
+        "45"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 5329",
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "47828afc-c3cc-4786-b81c-b46ed19e9c56",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "2c7718d2-2b84-4252-aef2-6d2a0f4302d5",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $5x+12$ dla $x=5$​​​​​​​​​",
-      "correct_answer": "37",
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
       "options": [
-        "36",
-        "33",
-        "35",
-        "37"
+        "2x",
+        "5x",
+        "6x",
+        "8x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Odpowiedź: 37",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e8553c25-8ba9-4d04-a156-560f6cbf6b3c",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "da13aca3-4c26-457e-9742-3a2798e8fac5",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=28$​​​​​​​​​​",
-      "correct_answer": "841",
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=3$, $b=3$.",
+      "correct_answer": "15",
       "options": [
-        "839",
-        "840",
-        "836",
-        "841"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 841",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ed69708a-3846-46f0-a69c-78216ed81fcc",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $13x+6$ dla $x=51$​​​​​​​​​​​",
-      "correct_answer": "669",
-      "options": [
-        "667",
-        "669",
-        "665",
-        "668"
+        "18",
+        "13",
+        "16",
+        "15"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 669",
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f355c11f-7db3-49a5-b719-5ad336f7bea1",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "662e8807-894c-4451-b240-54bd2eda4f89",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=74$​​​​​​​​​​​​",
-      "correct_answer": "5625",
+      "content": "Oblicz $x^2-4$ dla $x=3$.",
+      "correct_answer": "5",
       "options": [
-        "5625",
-        "5623",
-        "5624",
-        "5620"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 5625",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d459b69b-a934-4474-b99f-3b30408eae5a",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $7x+14$ dla $x=7$​​​​​​​​​​​​​",
-      "correct_answer": "63",
-      "options": [
-        "63",
-        "59",
-        "62",
-        "61"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 63",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "cd757827-e304-4867-84d4-78329d95a10b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $x^2+2x+1$ dla $x=30$​​​​​​​​​​​​​​",
-      "correct_answer": "961",
-      "options": [
-        "960",
-        "959",
-        "956",
-        "961"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 961",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "20367c5d-ec28-488c-acce-ee25ee192184",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $1x+8$ dla $x=53$​​​​​​​​​​​​​​​",
-      "correct_answer": "61",
-      "options": [
-        "61",
-        "57",
-        "60",
-        "59"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 61",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "58f29352-f1a6-4d0d-b537-2bc1df3c031d",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $x^2+2x+1$ dla $x=76$​​​​​​​​​​​​​​​​",
-      "correct_answer": "5929",
-      "options": [
-        "5927",
-        "5928",
-        "5924",
-        "5929"
+        "5",
+        "4",
+        "11",
+        "10"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Odpowiedź: 5929",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "26d1f034-a014-4c4e-aa9b-e30e63da9e6b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "ca1d5a4f-e7fa-408d-980f-077d385d9fc7",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $9x+2$ dla $x=9$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "83",
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
       "options": [
-        "79",
-        "82",
-        "81",
-        "83"
+        "6x",
+        "8x",
+        "5x",
+        "2x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 83",
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "55a966e5-2d79-47c9-a258-594dcbb44c0f",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "337692c9-754b-4d1a-83cf-58d62ee72ef4",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=32$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "1089",
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=2$, $b=2$.",
+      "correct_answer": "10",
       "options": [
-        "1087",
-        "1089",
-        "1084",
-        "1088"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 1089",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a1f0d758-1088-4149-97b3-8d4b292f8d28",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $3x+10$ dla $x=55$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "175",
-      "options": [
-        "173",
-        "175",
-        "171",
-        "174"
+        "8",
+        "10",
+        "11",
+        "13"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 175",
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ff03b72f-e618-4023-9537-32ec3c64cc2f",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "eb4b65df-da05-4b44-a453-f5c3c429b3b4",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2+2x+1$ dla $x=78$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "6241",
+      "content": "Oblicz $x^2-4$ dla $x=5$.",
+      "correct_answer": "21",
       "options": [
-        "6241",
-        "6236",
-        "6240",
-        "6239"
+        "16",
+        "19",
+        "21",
+        "27"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Odpowiedź: 6241",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4a3eec4e-c1e1-4bbd-814e-59cd13d18e29",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "f066df09-54a1-47d7-b61c-93a9a23a75e7",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
+      "options": [
+        "6x",
+        "5x",
+        "2x",
+        "8x"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2594ef51-3a17-459a-b0de-40f7160dec42",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=4$, $b=1$.",
+      "correct_answer": "11",
+      "options": [
+        "15",
+        "11",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8bce15d-df82-4916-a5de-6151143055b9",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $x^2-4$ dla $x=5$.",
+      "correct_answer": "21",
+      "options": [
+        "22",
+        "21",
+        "23",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6177d97b-295a-4f88-8d7a-de97b0ca6637",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Uprość: $2x+4x$",
+      "correct_answer": "6x",
+      "options": [
+        "2x",
+        "6x",
+        "5x",
+        "8x"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d46498b-325a-4120-8d86-e08d29628e01",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=1$, $b=4$.",
+      "correct_answer": "14",
+      "options": [
+        "13",
+        "17",
+        "12",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61488003-972f-4fa7-9ca1-a97e48172a18",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $x^2-4$ dla $x=6$.",
+      "correct_answer": "32",
+      "options": [
+        "37",
+        "38",
+        "32",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e53c6385-d66d-4d40-9b21-18cb6dcb60af",
+      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.894Z"
+  "updatedAt": "2026-08-07T16:30:27.566Z"
 }

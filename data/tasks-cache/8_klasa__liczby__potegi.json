@@ -6,385 +6,385 @@
   "topicName": "Potęgi",
   "tasks": [
     {
-      "content": "Oblicz $2^{9} \\cdot 2^{4}$​",
-      "correct_answer": "8192",
+      "content": "Oblicz: $5^{3} \\cdot 5^{4}$",
+      "correct_answer": "78125",
       "options": [
-        "8191",
-        "8192",
-        "8190",
-        "8184"
+        "78127",
+        "78120",
+        "78125",
+        "78130"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 8192",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 78125",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f9a9bd55-9169-4d1f-93d8-a08295809597",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "f63769eb-dea4-4efc-a6c5-9adb56b1f88d",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Uprość $7^{2} \\cdot 7^{3}$​​",
-      "correct_answer": "16807",
+      "content": "Oblicz: $\\dfrac{7^{3}}{7^{2}}$",
+      "correct_answer": "7",
       "options": [
-        "16801",
-        "16807",
-        "16806",
-        "16805"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 16807",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "51668787-bdb4-4c10-b287-44a8207d7590",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $12^{5} \\cdot 12^{2}$​​​",
-      "correct_answer": "35831808",
-      "options": [
-        "35831807",
-        "35831808",
-        "35831802",
-        "35831806"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 35831808",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "82a19328-9f32-45a8-a1f7-77075c4d42b5",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $17^{8} \\cdot 17^{9}$​​​​",
-      "correct_answer": "827240261886336800000",
-      "options": [
-        "827240261886336800000",
-        "827240261886336800000",
-        "827240261886336800000",
-        "827240261886336800000"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 827240261886336800000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "117a6bd2-c8f8-4fc9-9723-ef41d6d1be6b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $4^{11} \\cdot 4^{8}$​​​​​",
-      "correct_answer": "274877906944",
-      "options": [
-        "274877906944",
-        "274877906942",
-        "274877906943",
-        "274877906938"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 274877906944",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "eb6df96d-c09b-4e90-bba3-356d39f5a741",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $9^{4} \\cdot 9^{7}$​​​​​​",
-      "correct_answer": "31381059609",
-      "options": [
-        "31381059608",
-        "31381059603",
-        "31381059607",
-        "31381059609"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 31381059609",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9246e8b6-0a9a-4fc3-966b-adcf0e29e78b",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $14^{7} \\cdot 14^{6}$​​​​​​​",
-      "correct_answer": "793714773254144",
-      "options": [
-        "793714773254136",
-        "793714773254143",
-        "793714773254142",
-        "793714773254144"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 793714773254144",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "183d8d67-cef9-4ba0-a3af-1db3413492d7",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $19^{10} \\cdot 19^{5}$​​​​​​​​",
-      "correct_answer": "15181127029874799000",
-      "options": [
-        "15181127029874799000",
-        "15181127029874799000",
-        "15181127029874799000",
-        "15181127029874799000"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 15181127029874799000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f8e7ea66-b2b7-4289-a8c8-cc16fec538ea",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $6^{3} \\cdot 6^{4}$​​​​​​​​​",
-      "correct_answer": "279936",
-      "options": [
-        "279934",
-        "279935",
-        "279930",
-        "279936"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 279936",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4f69335c-183c-4d12-969e-7ff243e5c176",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $11^{6} \\cdot 11^{3}$​​​​​​​​​​",
-      "correct_answer": "2357947691",
-      "options": [
-        "2357947690",
-        "2357947689",
-        "2357947691",
-        "2357947683"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 2357947691",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ca8c4c17-3327-4016-a678-b2aa124e00e4",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $16^{9} \\cdot 16^{2}$​​​​​​​​​​​",
-      "correct_answer": "17592186044416",
-      "options": [
-        "17592186044410",
-        "17592186044416",
-        "17592186044415",
-        "17592186044414"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 17592186044416",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7f188e8b-661c-4862-aea0-5bba7a88a85e",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $3^{2} \\cdot 3^{9}$​​​​​​​​​​​​",
-      "correct_answer": "177147",
-      "options": [
-        "177145",
-        "177146",
-        "177141",
-        "177147"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 177147",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "aa9927c7-90c0-4631-9623-0b8db06e761f",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $8^{5} \\cdot 8^{8}$​​​​​​​​​​​​​",
-      "correct_answer": "549755813888",
-      "options": [
-        "549755813886",
-        "549755813888",
-        "549755813887",
-        "549755813880"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 549755813888",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e4668f0b-c135-447a-9e08-909395db1320",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $13^{8} \\cdot 13^{7}$​​​​​​​​​​​​​​",
-      "correct_answer": "51185893014090750",
-      "options": [
-        "51185893014090750",
-        "51185893014090750",
-        "51185893014090760",
-        "51185893014090744"
+        "3",
+        "7",
+        "6",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Odpowiedź: 51185893014090750",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c09e6148-fb5e-4d0f-9502-23602bd13e2f",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "62d4e814-c7b7-47d4-a436-b50597be3ba3",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Uprość $18^{11} \\cdot 18^{6}$​​​​​​​​​​​​​​​",
-      "correct_answer": "2.1859115597386964e+21",
+      "content": "Oblicz: $(6^{4})^2$",
+      "correct_answer": "1679616",
       "options": [
-        "2.1859115597386964e+21",
-        "2.1859115597386964e+21",
-        "2.1859115597386964e+21",
-        "2.1859115597386964e+21"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 2.1859115597386964e+21",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0022e08d-e439-4464-9414-38a69b175956",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz $5^{4} \\cdot 5^{5}$​​​​​​​​​​​​​​​​",
-      "correct_answer": "1953125",
-      "options": [
-        "1953123",
-        "1953117",
-        "1953124",
-        "1953125"
+        "1679616",
+        "1679626",
+        "1679617",
+        "1679627"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 1953125",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1679616",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c5a88ca0-a2b0-494f-819a-dd6b8853e8e6",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "846c3e75-8734-46e9-8900-df90eee1a533",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Uprość $10^{7} \\cdot 10^{4}$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "100000000000",
+      "content": "Oblicz: $9^{2} \\cdot 9^{4}$",
+      "correct_answer": "531441",
       "options": [
-        "99999999998",
-        "100000000000",
-        "99999999994",
-        "99999999999"
+        "531440",
+        "531436",
+        "531441",
+        "531442"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 531441",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "617a81eb-e6d5-41bb-ba71-1fa2b1459233",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{9^{5}}{9^{5}}$",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "-3",
+        "6",
+        "1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 100000000000",
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e66910c5-e109-45fc-a28f-114b5a119f66",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "76fdb26d-dcee-46fd-8300-4d901f45f185",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Uprość $15^{10} \\cdot 15^{3}$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "1946195068359375",
+      "content": "Oblicz: $(2^{2})^2$",
+      "correct_answer": "16",
       "options": [
-        "1946195068359369",
-        "1946195068359374",
-        "1946195068359375",
-        "1946195068359373"
+        "14",
+        "16",
+        "18",
+        "6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb683532-745e-43a5-aa38-c528c8e0e1da",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $6^{2} \\cdot 6^{3}$",
+      "correct_answer": "7776",
+      "options": [
+        "7777",
+        "7775",
+        "7771",
+        "7776"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Odpowiedź: 1946195068359375",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7776",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "50060e44-d364-439a-bded-9f288c40d4fe",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "3f9d794b-550f-4c53-870c-38c237572672",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $2^{3} \\cdot 2^{2}$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "32",
+      "content": "Oblicz: $\\dfrac{3^{5}}{3^{4}}$",
+      "correct_answer": "3",
       "options": [
-        "31",
-        "30",
-        "32",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 32",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6ff6022e-790f-4321-bd40-69acd215ac19",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Uprość $7^{6} \\cdot 7^{9}$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "4747561509943",
-      "options": [
-        "4747561509941",
-        "4747561509937",
-        "4747561509943",
-        "4747561509942"
+        "7",
+        "5",
+        "3",
+        "-1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Odpowiedź: 4747561509943",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2946bf3d-dbf1-4307-850d-5d69d52da57a",
-      "generatedAt": "2026-08-07T15:45:15.894Z",
-      "model": "parametric-v1"
+      "id": "9ee6791e-4b28-43c7-ba02-ac7ddbffd2d7",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $(6^{3})^2$",
+      "correct_answer": "46656",
+      "options": [
+        "46656",
+        "46657",
+        "46667",
+        "46654"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 46656",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "974bd806-4eff-4f80-9c26-1092de5889c2",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $3^{2} \\cdot 3^{2}$",
+      "correct_answer": "81",
+      "options": [
+        "80",
+        "86",
+        "81",
+        "82"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "09d8a406-f839-405c-b599-9b3ce5151e0d",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{7^{6}}{7^{2}}$",
+      "correct_answer": "2401",
+      "options": [
+        "2401",
+        "2400",
+        "2397",
+        "2403"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2401",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f7f35e49-e6d6-49f8-89b7-58f5c6978280",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $(4^{2})^2$",
+      "correct_answer": "256",
+      "options": [
+        "255",
+        "257",
+        "254",
+        "256"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 256",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "867ed76b-870a-46ec-b4ea-0a21f4cafc66",
+      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $2^{3} \\cdot 2^{4}$",
+      "correct_answer": "128",
+      "options": [
+        "123",
+        "128",
+        "130",
+        "129"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 128",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "047741ff-32a3-4112-b49a-f8f60fcc3582",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{6^{6}}{6^{3}}$",
+      "correct_answer": "216",
+      "options": [
+        "217",
+        "216",
+        "221",
+        "220"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "11fe3276-da11-4e5a-b2e1-fcdf59f62396",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $(3^{3})^2$",
+      "correct_answer": "729",
+      "options": [
+        "729",
+        "731",
+        "740",
+        "730"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 729",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fafb6b04-f441-4d7b-848d-e61084ccf685",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $8^{3} \\cdot 8^{3}$",
+      "correct_answer": "262144",
+      "options": [
+        "262144",
+        "262145",
+        "262139",
+        "262143"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 262144",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3b27ada8-4679-4a19-85db-e4669a2f9d56",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{12^{4}}{12^{4}}$",
+      "correct_answer": "1",
+      "options": [
+        "5",
+        "-1",
+        "-3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee7d3172-a4af-40e6-a767-08f9a0d9cc54",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $(2^{4})^2$",
+      "correct_answer": "256",
+      "options": [
+        "246",
+        "258",
+        "256",
+        "254"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 256",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eff817e7-4ea7-46d9-a4d5-b3ba079f4a3f",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $6^{2} \\cdot 6^{2}$",
+      "correct_answer": "1296",
+      "options": [
+        "1296",
+        "1298",
+        "1302",
+        "1297"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1296",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ca67310-c46c-4535-b0d3-a3857e7a121e",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{2^{6}}{2^{4}}$",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "5",
+        "8",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "942677eb-873a-44e3-9717-1f3721281cfc",
+      "generatedAt": "2026-08-07T16:30:27.564Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.894Z"
+  "updatedAt": "2026-08-07T16:30:27.564Z"
 }

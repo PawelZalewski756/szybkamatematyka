@@ -6,385 +6,385 @@
   "topicName": "Własności funkcji i wykres",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Miejsce zerowe $f(x)=1x+2$ to:​",
+      "correct_answer": "-2",
       "options": [
-        "49",
-        "44",
-        "48",
-        "47"
+        "-2",
+        "-4",
+        "-1",
+        "-3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e0371124-b51e-40cc-b18a-aacffee25cd2",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "8ad01f83-0241-4961-b6a1-2e8621592585",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Miejsce zerowe $f(x)=8x-5$ to:​​",
+      "correct_answer": "0.63",
       "options": [
-        "53",
-        "54",
-        "50",
-        "55"
+        "-0.38",
+        "1.63",
+        "-1.38",
+        "0.63"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 55",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.63",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "794733df-92af-4891-86bd-810c24db1d54",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "f7773abf-cac3-4372-81d8-f8f95aa0678b",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Miejsce zerowe $f(x)=7x-2$ to:​​​",
+      "correct_answer": "0.29",
       "options": [
-        "60",
-        "61",
-        "56",
-        "59"
+        "1.29",
+        "0.29",
+        "-1.71",
+        "-0.71"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.29",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "71972255-4f21-4bcd-8fcd-62c01a7233b1",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "a26f774b-4028-4e55-b8f2-5e81a4ce34d4",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Miejsce zerowe $f(x)=6x+1$ to:​​​​",
+      "correct_answer": "-0.17",
       "options": [
-        "105",
-        "102",
-        "107",
-        "106"
+        "-1.17",
+        "-2.17",
+        "-0.17",
+        "0.83"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -0.17",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "66a95c22-bf83-4368-8502-0776cdd5ece8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "d203fd51-7be5-4698-92df-ada0d0e904d4",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Miejsce zerowe $f(x)=5x+4$ to:​​​​​",
+      "correct_answer": "-0.8",
       "options": [
-        "108",
-        "113",
-        "111",
-        "112"
+        "-2.8",
+        "-0.8",
+        "-1.8",
+        "0.2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -0.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "78a69f85-93af-4cbe-8c99-94bfedda23e1",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "647b7131-64c3-4ab0-8ffa-a237c09edafb",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Miejsce zerowe $f(x)=4x-3$ to:​​​​​​",
+      "correct_answer": "0.75",
       "options": [
-        "159",
-        "157",
-        "154",
-        "158"
+        "0.75",
+        "-0.25",
+        "-1.25",
+        "1.75"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 159",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.75",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7efc15a0-e4af-48e9-9a5d-ca835ef9d9d8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "9982945c-19f1-470c-a94e-147bd9c1099d",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
+      "content": "Miejsce zerowe $f(x)=3x+0$ to:​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "44",
-        "40",
-        "45",
-        "43"
+        "1",
+        "-2",
+        "0",
+        "-1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "aed06c06-7743-4b62-8c6a-843f71263ca8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "c7358576-7696-4e81-883f-7dbfe0c4fbd1",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Miejsce zerowe $f(x)=2x+3$ to:​​​​​​​​",
+      "correct_answer": "-1.5",
       "options": [
-        "86",
-        "89",
-        "91",
-        "90"
+        "-3.5",
+        "-2.5",
+        "-1.5",
+        "-0.5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "564696ee-38d6-47f1-8a39-015881c78184",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=1x-4$ to:​​​​​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c067fd55-d256-4c2b-afa8-909aea7c69d6",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=8x-1$ to:​​​​​​​​​​",
+      "correct_answer": "0.13",
+      "options": [
+        "-0.88",
+        "-1.88",
+        "1.13",
+        "0.13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f108c0a-26be-49d7-b01a-e22f6a10a384",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=7x+2$ to:​​​​​​​​​​​",
+      "correct_answer": "-0.29",
+      "options": [
+        "-2.29",
+        "0.71",
+        "-0.29",
+        "-1.29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -0.29",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "26b310e4-22f0-46d9-9d58-a5034c81e9e9",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=6x-5$ to:​​​​​​​​​​​​",
+      "correct_answer": "0.83",
+      "options": [
+        "-1.17",
+        "-0.17",
+        "1.83",
+        "0.83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.83",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6de87169-ecc1-46cd-bfc2-a761b091a603",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=5x-2$ to:​​​​​​​​​​​​​",
+      "correct_answer": "0.4",
+      "options": [
+        "1.4",
+        "-1.6",
+        "-0.6",
+        "0.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4dfb3825-2a1b-4cda-9a4f-fd0bed935454",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=4x+1$ to:​​​​​​​​​​​​​​",
+      "correct_answer": "-0.25",
+      "options": [
+        "-0.25",
+        "0.75",
+        "-1.25",
+        "-2.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -0.25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac8ef4c3-948d-4e77-aa3a-c4ebd298c366",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=3x+4$ to:​​​​​​​​​​​​​​​",
+      "correct_answer": "-1.33",
+      "options": [
+        "-0.33",
+        "-2.33",
+        "-1.33",
+        "-3.33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1.33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe56a9cc-bf5c-48a7-ae62-a159beaaeb30",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Miejsce zerowe $f(x)=2x-3$ to:​​​​​​​​​​​​​​​​",
+      "correct_answer": "1.5",
+      "options": [
+        "0.5",
+        "2.5",
+        "-0.5",
+        "1.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 91",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7e01cd8a-8d31-46c1-bd71-d4321ac852c3",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "b883a3da-fb50-41e1-b118-db461aa3c61d",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Miejsce zerowe $f(x)=1x+0$ to:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "92",
-        "97",
-        "95",
-        "96"
+        "0",
+        "1",
+        "-2",
+        "-1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7fec0d9c-5b36-41cf-b93b-ef14d94d49fe",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "78493361-e294-4887-9227-b7dfe79f604e",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Miejsce zerowe $f(x)=8x+3$ to:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "-0.38",
       "options": [
-        "101",
-        "98",
-        "102",
-        "103"
+        "-0.38",
+        "0.63",
+        "-2.38",
+        "-1.38"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -0.38",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cf555fb6-171a-4c9c-9a64-8469387a5bae",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "95e62c3a-8eb3-4a85-8898-1ed8e9ed933a",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Miejsce zerowe $f(x)=7x-4$ to:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0.57",
       "options": [
-        "144",
-        "148",
-        "149",
-        "147"
+        "0.57",
+        "-0.43",
+        "1.57",
+        "-1.43"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.57",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e1ad0e60-81c8-4833-8354-63937d9bbf3b",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "6ae16b3e-4eec-4136-874f-cd0f44f82b80",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Miejsce zerowe $f(x)=6x-1$ to:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0.17",
       "options": [
-        "30",
-        "33",
-        "34",
-        "35"
+        "-1.83",
+        "0.17",
+        "1.17",
+        "-0.83"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.17",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5da1b146-de6f-4fa1-a355-5e18620e416b",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
-      "options": [
-        "80",
-        "76",
-        "79",
-        "81"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "07efb99e-c519-4d20-8b6b-bc0eef6391e8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
-      "options": [
-        "87",
-        "86",
-        "85",
-        "82"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 87",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4bbec4d3-5843-491a-a4eb-7bdc3aeab6bc",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "132",
-        "131",
-        "133",
-        "128"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "946e3520-dcca-46f5-8f2d-48eccb35be45",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "137",
-        "138",
-        "134",
-        "139"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "212124a5-bffc-468f-ab45-2784df04898f",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "25",
-        "24",
-        "20",
-        "23"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6ef9777d-fcb0-4a20-9444-1af87fefe2a0",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
-      "options": [
-        "71",
-        "70",
-        "66",
-        "69"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 71",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a65856f1-bc9a-4b64-b262-dba9dbe468ab",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "77",
-        "75",
-        "76",
-        "72"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "cf1e893c-788c-40ac-b6a5-0d067f8a238a",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "118",
-        "123",
-        "122",
-        "121"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c190bf06-8211-4124-8d2c-8138e103a779",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "73774b5e-4108-45e9-b273-44a80d032f72",
+      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.890Z"
+  "updatedAt": "2026-08-07T16:30:27.556Z"
 }

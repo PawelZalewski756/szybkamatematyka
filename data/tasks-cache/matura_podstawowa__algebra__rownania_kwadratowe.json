@@ -6,385 +6,385 @@
   "topicName": "Równania kwadratowe",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Jedno z rozwiązań $x^2+7x+6=0$ to:​",
+      "correct_answer": "-6",
       "options": [
-        "49",
-        "47",
-        "48",
-        "44"
+        "-6",
+        "-8",
+        "-7",
+        "-9"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "69f128ce-2c42-4f1f-ad6d-52fd7fb56751",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "d2513357-0b5a-4e47-80a2-9f7eee975b0f",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Jedno z rozwiązań $x^2-3x-10=0$ to:​​",
+      "correct_answer": "5",
       "options": [
-        "50",
-        "53",
-        "55",
-        "54"
+        "2",
+        "3",
+        "5",
+        "4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 55",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1d8a5bf7-ab31-4772-a418-90feaf0df39e",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "95daafa0-f711-4abb-a7da-b8179e997171",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Jedno z rozwiązań $x^2-1x-12=0$ to:​​​",
+      "correct_answer": "4",
       "options": [
-        "60",
-        "59",
-        "56",
-        "61"
+        "3",
+        "2",
+        "1",
+        "4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a5552438-c46b-450f-8fcb-16959f0578b7",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "20ff5d3d-ee46-4cdd-b9ab-de33bfca5cc3",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Jedno z rozwiązań $x^2+1x-12=0$ to:​​​​",
+      "correct_answer": "3",
       "options": [
-        "102",
-        "106",
-        "107",
-        "105"
+        "0",
+        "2",
+        "3",
+        "1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b4e4f223-ddad-48c3-82d1-d9afb17bdbc8",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "94d62095-d62b-401d-9d11-98476f4dc69f",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Jedno z rozwiązań $x^2+3x-10=0$ to:​​​​​",
+      "correct_answer": "2",
       "options": [
-        "113",
-        "111",
-        "108",
-        "112"
+        "2",
+        "0",
+        "-1",
+        "1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0c644dbe-a146-4230-8c6f-460ae9715c8e",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "53682d93-b732-4f52-8faa-da46e7f23706",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Jedno z rozwiązań $x^2+5x-6=0$ to:​​​​​​",
+      "correct_answer": "1",
       "options": [
-        "157",
-        "159",
-        "158",
-        "154"
+        "-1",
+        "1",
+        "0",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 159",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a1c80e5c-ab8f-4284-b94b-22caa4f5050a",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "24f9fdb9-8c9e-4aaf-8c27-618332bf2598",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
+      "content": "Jedno z rozwiązań $x^2-5x+0=0$ to:​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "45",
-        "44",
-        "40",
-        "43"
+        "0",
+        "-1",
+        "-3",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "94cefa7b-f5d1-470b-b8af-66d43cd2ff3a",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "8763e72e-7d5d-48f5-b538-c01de19f45a7",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Jedno z rozwiązań $x^2-3x-4=0$ to:​​​​​​​​",
+      "correct_answer": "-1",
       "options": [
-        "90",
-        "91",
-        "89",
-        "86"
+        "-2",
+        "-1",
+        "-3",
+        "-4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 91",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "56eeb8cb-dde0-4a3e-a2fc-71ad7fe8c83b",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "b4ad2bfd-3404-4e99-b8ee-1feeb314039f",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Jedno z rozwiązań $x^2-1x-6=0$ to:​​​​​​​​​",
+      "correct_answer": "-2",
       "options": [
-        "95",
-        "92",
-        "96",
-        "97"
+        "-4",
+        "-5",
+        "-3",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0f349c53-9f2d-41af-8c00-18e519eb61b1",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "15db5db8-af35-4c73-9030-d07101149d71",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Jedno z rozwiązań $x^2+1x-6=0$ to:​​​​​​​​​​",
+      "correct_answer": "-3",
       "options": [
-        "98",
-        "103",
-        "101",
-        "102"
+        "-6",
+        "-3",
+        "-5",
+        "-4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "37b1fac0-f789-4634-98c1-82ac199d8c80",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "81c9729c-6b31-441d-b5ac-144e6141454a",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Jedno z rozwiązań $x^2+3x-4=0$ to:​​​​​​​​​​​",
+      "correct_answer": "-4",
       "options": [
-        "149",
-        "147",
-        "144",
-        "148"
+        "-4",
+        "-6",
+        "-7",
+        "-5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2185ba50-4743-474f-93ba-783c1c6cd4e4",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "59c89d8c-22d8-48bc-86c9-7495d39db8e1",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Jedno z rozwiązań $x^2+5x+0=0$ to:​​​​​​​​​​​​",
+      "correct_answer": "-5",
       "options": [
-        "35",
-        "33",
-        "34",
-        "30"
+        "-5",
+        "-7",
+        "-6",
+        "-8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8e72b78b-a5b9-4b2e-ba94-8df4223a060d",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "f1716c61-d350-4cf2-967e-b9f7c938cd50",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
+      "content": "Jedno z rozwiązań $x^2+7x+6=0$ to:​​​​​​​​​​​​​",
+      "correct_answer": "-6",
       "options": [
-        "81",
-        "79",
-        "76",
-        "80"
+        "-6",
+        "-8",
+        "-9",
+        "-7"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 81",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "18cf1ade-1f37-47e1-bc67-1d4c74ce8565",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "404a7b33-e327-4760-9111-1d0640a57e19",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "Jedno z rozwiązań $x^2-3x-10=0$ to:​​​​​​​​​​​​​​",
+      "correct_answer": "5",
       "options": [
-        "87",
-        "86",
-        "82",
-        "85"
+        "5",
+        "4",
+        "2",
+        "3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d4972f9d-057b-4650-89fb-75e3553e5aa8",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "74ba07a8-7b09-461a-a4df-98546871293a",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
+      "content": "Jedno z rozwiązań $x^2-1x-12=0$ to:​​​​​​​​​​​​​​​",
+      "correct_answer": "4",
       "options": [
-        "131",
-        "132",
-        "128",
-        "133"
+        "2",
+        "3",
+        "1",
+        "4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 133",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "97de10b3-fbf9-4bf5-9c4f-ebac8a27c495",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "a325f37c-b94c-4d1f-a183-8bf831f03cc7",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
+      "content": "Jedno z rozwiązań $x^2+1x-12=0$ to:​​​​​​​​​​​​​​​​",
+      "correct_answer": "3",
       "options": [
-        "137",
-        "134",
-        "139",
-        "138"
+        "1",
+        "0",
+        "3",
+        "2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 139",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2cbcf8eb-994a-4097-99e1-3ad8bbdd81a1",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "139186ac-b6a6-4b9f-a795-26b2099ce7ec",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
+      "content": "Jedno z rozwiązań $x^2+3x-10=0$ to:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "2",
       "options": [
-        "24",
-        "23",
-        "20",
-        "25"
+        "1",
+        "0",
+        "-1",
+        "2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "46a5d498-3ae3-439c-be06-ae3781f6612c",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "e28f9072-8ad8-4216-95d9-08731f6ec1db",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Jedno z rozwiązań $x^2+5x-6=0$ to:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "1",
       "options": [
-        "69",
-        "71",
-        "66",
-        "70"
+        "-1",
+        "1",
+        "-2",
+        "0"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6fdfab4b-04bb-4350-bf70-43c5c2b71ba3",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "e0c73b52-1ad5-404e-add5-ec66573cf385",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
+      "content": "Jedno z rozwiązań $x^2-5x+0=0$ to:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "0",
       "options": [
-        "77",
-        "76",
-        "75",
-        "72"
+        "0",
+        "-1",
+        "-2",
+        "-3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 77",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fea5972a-7278-4f56-8d5a-55bdb3aac83e",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "fd02fc6f-8a3f-4089-87d1-db6440ace38c",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
+      "content": "Jedno z rozwiązań $x^2-3x-4=0$ to:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "-1",
       "options": [
-        "118",
-        "121",
-        "123",
-        "122"
+        "-4",
+        "-3",
+        "-1",
+        "-2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 123",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0c6de3bd-7ff1-4d71-8dcc-22b7643ba2be",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "94d4d744-5030-45dd-a9ee-0d7cb7d4458a",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.889Z"
+  "updatedAt": "2026-08-07T16:30:27.553Z"
 }

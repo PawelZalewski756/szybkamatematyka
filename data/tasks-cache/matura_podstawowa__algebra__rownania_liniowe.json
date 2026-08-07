@@ -6,385 +6,385 @@
   "topicName": "Równania liniowe",
   "tasks": [
     {
-      "content": "Rozwiąż $10x+5=-195$​",
-      "correct_answer": "-20",
-      "options": [
-        "-23",
-        "-20",
-        "-22",
-        "-21"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: -20",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bcc25e19-fd0d-4a04-95c2-14eb5fedbbb6",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $6x+28=46$​​",
+      "content": "Rozwiąż równanie: $2x+10=16$",
       "correct_answer": "3",
       "options": [
-        "0",
+        "6",
+        "4",
         "1",
-        "2",
         "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 3",
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fd8e0eb7-dc74-48ea-893d-f28c218ae4d3",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "a0e831c2-4c76-42f1-93d0-c026b88b9b27",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $2x+21=-7$​​​",
-      "correct_answer": "-14",
+      "content": "Rozwiąż: $4x=4$",
+      "correct_answer": "1",
       "options": [
-        "-15",
-        "-17",
-        "-14",
-        "-16"
+        "2",
+        "-2",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92514716-b3dc-49b4-aba1-3f9dd8df531f",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $5x+14=39$",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "8",
+        "7",
+        "5"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Odpowiedź: -14",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "137d03ae-e30a-41e2-9b5b-265c359cc29b",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "19a799ab-7e6c-4134-be60-baab0743b073",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $7x+14=77$​​​​",
+      "content": "Rozwiąż: $5x=45$",
       "correct_answer": "9",
       "options": [
         "8",
         "9",
         "6",
-        "7"
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "861cc7b7-7dfc-4adf-9055-8933fd666b64",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $7x+2=86$",
+      "correct_answer": "12",
+      "options": [
+        "11",
+        "15",
+        "13",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2bdc2eb0-918b-48b9-be4a-4d176152c330",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $4x=20$",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "6",
+        "5",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "44e27141-a9a8-4985-9820-de8ff2af7651",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $4x+11=31$",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "7",
+        "5",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Odpowiedź: 9",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "79c2604e-d2ac-4031-a45b-b4e15b996621",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "625e6538-7518-496f-a293-6ba1152f88b0",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $3x+7=-17$​​​​​",
-      "correct_answer": "-8",
+      "content": "Rozwiąż: $5x=5$",
+      "correct_answer": "1",
       "options": [
-        "-9",
-        "-8",
-        "-10",
-        "-11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: -8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f564992b-7ea6-44ec-a3f3-d431efb1028d",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $8x+30=150$​​​​​​",
-      "correct_answer": "15",
-      "options": [
-        "15",
-        "12",
-        "13",
-        "14"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 15",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5a165df4-fed6-4733-8985-12fdf5d35a88",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $4x+23=15$​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-3",
-        "-2",
-        "-5",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6cb5a58a-d336-4ad6-8f10-9f245e69356a",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $9x+16=-155$​​​​​​​​",
-      "correct_answer": "-19",
-      "options": [
-        "-20",
-        "-22",
-        "-21",
-        "-19"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: -19",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "94b3d918-d952-45fb-bf61-0edfda2f1477",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $5x+9=29$​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "2",
-        "3",
+        "5",
+        "0",
         "1",
         "4"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
+      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 4",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0521f8fb-94d1-4080-8a71-9aa4cd9f1387",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "85f0d949-1177-4b89-adda-e7ede90e7f98",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $10x+2=-128$​​​​​​​​​​",
-      "correct_answer": "-13",
-      "options": [
-        "-15",
-        "-13",
-        "-14",
-        "-16"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: -13",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c768e6c5-d9aa-41cd-b738-787e88c734c0",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $6x+25=85$​​​​​​​​​​​",
+      "content": "Rozwiąż równanie: $6x+13=73$",
       "correct_answer": "10",
       "options": [
-        "7",
-        "8",
-        "9",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 10",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4973c9e8-083c-4db7-ac80-7d2472d20fcd",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $2x+18=4$​​​​​​​​​​​​",
-      "correct_answer": "-7",
-      "options": [
-        "-7",
-        "-9",
-        "-8",
-        "-10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: -7",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c83714f3-0b9e-40ec-96ad-3c32395fc0fa",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $7x+11=123$​​​​​​​​​​​​​",
-      "correct_answer": "16",
-      "options": [
         "13",
-        "16",
-        "15",
-        "14"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 16",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "01e2e549-9383-4224-8077-d9536e591d4d",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $3x+4=1$​​​​​​​​​​​​​​",
-      "correct_answer": "-1",
-      "options": [
-        "-1",
-        "-4",
-        "-3",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: -1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f8703403-bd42-4ab4-a65d-f953f44c59cb",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $8x+27=-117$​​​​​​​​​​​​​​​",
-      "correct_answer": "-18",
-      "options": [
-        "-21",
-        "-18",
-        "-19",
-        "-20"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: -18",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1ad22269-8421-4a4b-b66c-2ed692bdf6bf",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $4x+20=40$​​​​​​​​​​​​​​​​",
-      "correct_answer": "5",
-      "options": [
-        "5",
-        "3",
-        "2",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8b9299f3-319e-4cc5-bb6b-d34515b1fe24",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $9x+13=-95$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-12",
-      "options": [
-        "-15",
-        "-13",
-        "-12",
-        "-14"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: -12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c5480b8d-c9de-4778-bf2d-8f4c259e419f",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Rozwiąż $5x+6=61$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "11",
-      "options": [
-        "8",
         "10",
-        "11",
-        "9"
+        "12",
+        "11"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 11",
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8a55a11b-97c4-4161-9035-89f539587b97",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "34641a29-99cb-4893-bccf-45734f0629f1",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $10x+29=-31$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-6",
+      "content": "Rozwiąż: $2x=-4$",
+      "correct_answer": "-2",
       "options": [
-        "-7",
-        "-6",
-        "-9",
+        "-5",
+        "0",
+        "-2",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a31176b6-84ab-4d2a-a5d7-eeb918184726",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $2x+13=27$",
+      "correct_answer": "7",
+      "options": [
+        "10",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "229f5b5f-0478-4dd4-b26a-3d087f39053f",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $3x=-15$",
+      "correct_answer": "-5",
+      "options": [
+        "-2",
+        "-3",
+        "-5",
         "-8"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -6",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8b02c6bc-8c3c-4662-93b6-f5eeece9f9fe",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "bcc828d3-42d6-4b38-ad52-4571b99d35d4",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Rozwiąż $6x+22=124$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "17",
+      "content": "Rozwiąż równanie: $2x+1=17$",
+      "correct_answer": "8",
       "options": [
-        "15",
-        "14",
-        "16",
-        "17"
+        "8",
+        "6",
+        "7",
+        "11"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 17",
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f659c4b3-f0f4-4b4e-a664-ebb2d4712cea",
-      "generatedAt": "2026-08-07T15:45:15.888Z",
-      "model": "parametric-v1"
+      "id": "11e01965-e8a2-4db8-b053-54f4131bebbd",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $4x=-20$",
+      "correct_answer": "-5",
+      "options": [
+        "-3",
+        "-8",
+        "-2",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b2d279d2-20c9-4e95-a963-8fc08bc6ac84",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $4x+9=17$",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "5",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3c8010f-92c6-4df1-b1af-875a18541033",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $5x=45$",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "11",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd783098-b440-4301-a704-4adf01c35608",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $2x+9=19$",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "8",
+        "7",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0b2170c4-11f3-48fa-9b22-c919cac9ecba",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $5x=5$",
+      "correct_answer": "1",
+      "options": [
+        "5",
+        "1",
+        "3",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "85cdc8bf-d1f6-4e50-a49b-31cac3bb62da",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie: $4x+7=39$",
+      "correct_answer": "8",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "236025b6-250f-4603-86a8-7824d2afb674",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż: $4x=-20$",
+      "correct_answer": "-5",
+      "options": [
+        "-6",
+        "-5",
+        "-4",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34c9510d-6e86-4697-a2c0-02452e0c6ba9",
+      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.888Z"
+  "updatedAt": "2026-08-07T16:30:27.553Z"
 }

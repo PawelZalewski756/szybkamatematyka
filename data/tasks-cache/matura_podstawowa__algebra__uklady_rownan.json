@@ -6,385 +6,385 @@
   "topicName": "Układy równań",
   "tasks": [
     {
-      "content": "Układ: $x+y=-19$, $x-y=-5$. Wartość $x$:​",
-      "correct_answer": "-12",
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "5",
       "options": [
-        "-11",
-        "-13",
-        "-14",
-        "-12"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: -12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8cb57fcb-ef56-4ea1-88de-1ac044b6f6cb",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=3$, $x-y=19$. Wartość $x$:​​",
-      "correct_answer": "11",
-      "options": [
-        "12",
-        "11",
-        "9",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 11",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a33ef439-43c5-4705-b41a-ed30bd878602",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=1$, $x-y=19$. Wartość $x$:​​​",
-      "correct_answer": "10",
-      "options": [
-        "10",
-        "8",
-        "9",
-        "11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 10",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1d9e0ac8-8ee3-440f-91db-70a925828f17",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-1$, $x-y=19$. Wartość $x$:​​​​",
-      "correct_answer": "9",
-      "options": [
-        "10",
         "7",
-        "9",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 9",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "642f973d-35e8-4090-a8e1-692aa630b44b",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-3$, $x-y=19$. Wartość $x$:​​​​​",
-      "correct_answer": "8",
-      "options": [
-        "9",
-        "8",
-        "7",
+        "5",
+        "3",
         "6"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 8",
+      "xp_reward": 24,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4bf0055a-9abd-4ca2-a75c-b70d5551ece9",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "75f6de2e-d076-4e10-9a5a-3ffc42d15254",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Układ: $x+y=-5$, $x-y=19$. Wartość $x$:​​​​​​",
-      "correct_answer": "7",
-      "options": [
-        "6",
-        "7",
-        "8",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 25,
-      "explanation": "Odpowiedź: 7",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "164be5bd-c132-4c33-8677-cd013b9a6681",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=17$, $x-y=-5$. Wartość $x$:​​​​​​​",
-      "correct_answer": "6",
-      "options": [
-        "6",
-        "4",
-        "7",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Odpowiedź: 6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e4e0597d-9758-4287-a28c-d51f5cf49bf2",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=15$, $x-y=-5$. Wartość $x$:​​​​​​​​",
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
       "correct_answer": "5",
       "options": [
-        "6",
         "4",
-        "3",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Odpowiedź: 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e12d44b5-9593-466e-86c6-462ed7eae86b",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=13$, $x-y=-5$. Wartość $x$:​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "3",
         "5",
-        "2",
-        "4"
+        "8",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Odpowiedź: 4",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "27ab3cb6-d56b-4548-9131-c10372411659",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "16cf58c0-335d-411c-84da-3a1d2668ab28",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Układ: $x+y=11$, $x-y=-5$. Wartość $x$:​​​​​​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "4",
-        "2",
-        "3",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6e747a18-3dd3-4167-b18e-49046a2731dc",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=9$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​",
+      "content": "Układ $\\begin{cases}x+y=8\\\\ x-y=-4\\end{cases}$. Wartość $x$ to:",
       "correct_answer": "2",
       "options": [
         "2",
         "0",
         "3",
-        "1"
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "45f0b447-3338-4ccd-9430-c74b98be4fef",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "2",
+        "7",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d1602f6-a622-4379-b34f-ae1c774993d2",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "3",
+        "0",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d231b3a-182f-4551-a166-afc955d935c7",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=5\\\\ x-y=1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "5",
+        "3",
+        "4"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Odpowiedź: 2",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6ae3fbb4-8f3f-43fd-afc6-adb35d01b91b",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "4df5dcf4-f3b0-4720-a50e-4ef9bf3ebfda",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Układ: $x+y=7$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​",
+      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "4",
+        "3",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "627ed0ff-6648-4896-b05d-20c5ee58f677",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "8",
+        "6",
+        "9",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eff7d50f-5632-45e1-ba25-cd23f97b384a",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=-3\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b4432452-1474-4124-857c-2cd9ae2c3f09",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "7",
+        "8",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07684f83-27b6-4947-aa8a-badf7b994453",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=6\\\\ x-y=-2\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "2",
+      "options": [
+        "0",
+        "4",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9bf90ad5-8ccb-45df-8ed4-3f54e026f333",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=5\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "9",
+        "6",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28dc9d3b-97f7-4e49-aa7a-9df935e86e91",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=5\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "4",
+        "9",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9bcab650-a871-4084-b91c-471eb3a3cc7f",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=4\\\\ x-y=0\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e39e285-f386-4465-a2b0-5428fc1737b3",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=-3\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6ee3ec5-694b-43d2-aa41-70ec6e0bf759",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "5",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f154c9f-d2a8-4636-b154-959acf4b4351",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
       "correct_answer": "1",
       "options": [
         "-1",
         "1",
         "2",
-        "0"
+        "4"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 1",
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "52a807a6-e337-4acc-aa45-dc3945099fa5",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "01c28b06-e72b-4612-9a56-fd17a15bdcdb",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Układ: $x+y=5$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​",
-      "correct_answer": "0",
+      "content": "Układ $\\begin{cases}x+y=8\\\\ x-y=0\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "4",
       "options": [
-        "-2",
-        "-1",
-        "0",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ad16f638-a21e-4587-8dd5-3508591a1ba2",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=3$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​",
-      "correct_answer": "-1",
-      "options": [
-        "0",
-        "-2",
-        "-1",
-        "-3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "32c93922-aeb3-4407-9d0e-0d3b32b1a8aa",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=1$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-3",
-        "-2",
-        "-1",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Odpowiedź: -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9edc1086-a5bd-42f9-8ef2-ee0fafd1b679",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-1$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​​",
-      "correct_answer": "-3",
-      "options": [
-        "-3",
-        "-5",
-        "-2",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: -3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b464e2f3-7d7f-416c-842a-6baf0bdb6518",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-3$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-4",
-      "options": [
-        "-6",
-        "-5",
-        "-4",
-        "-3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "02155929-e5c2-4954-a1e8-aabfca1ac2e3",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-5$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-5",
-      "options": [
-        "-4",
-        "-5",
-        "-6",
-        "-7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "eca7d655-7ad9-4c2e-b172-bd1f1b59e262",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-7$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-6",
-      "options": [
-        "-7",
-        "-5",
-        "-6",
-        "-8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: -6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8c34b3f6-fcba-439d-a0a6-c1e6f41e30d8",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Układ: $x+y=-9$, $x-y=-5$. Wartość $x$:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-7",
-      "options": [
-        "-8",
-        "-6",
-        "-9",
-        "-7"
+        "4",
+        "7",
+        "3",
+        "2"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Odpowiedź: -7",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d28e9abb-017a-4ae5-a451-3905cea4621a",
-      "generatedAt": "2026-08-07T15:45:15.890Z",
-      "model": "parametric-v1"
+      "id": "1fdbc1ef-1d0f-4606-98c9-310ab7a43df4",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=10\\\\ x-y=2\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "9",
+        "8",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ac2a826-d4aa-4d0d-bb14-228035fb2bee",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "3",
+        "5",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b560732f-ecd3-438b-a9d6-5cd5781f82fb",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.890Z"
+  "updatedAt": "2026-08-07T16:30:27.554Z"
 }

@@ -6,385 +6,385 @@
   "topicName": "Nierówności",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Rozwiązaniem $2x+18<36$ jest:​",
+      "correct_answer": "x < 9",
       "options": [
-        "49",
-        "44",
-        "47",
-        "48"
+        "x < 9",
+        "x > 9",
+        "x ≤ 9",
+        "x ≥ 9"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1a3948b6-c251-40bf-a1ca-07c5b0530066",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "0b67b094-52d9-4735-a58b-f527ce658b55",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Rozwiązaniem $9x+1<109$ jest:​​",
+      "correct_answer": "x < 12",
       "options": [
-        "53",
-        "50",
-        "55",
-        "54"
+        "x ≤ 12",
+        "x > 12",
+        "x < 12",
+        "x ≥ 12"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 55",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0bd99913-b358-4f85-920e-0f85d3a70598",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "fc6086ec-77ef-4728-951c-072458458ff1",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Rozwiązaniem $8x+4<44$ jest:​​​",
+      "correct_answer": "x < 5",
       "options": [
-        "59",
-        "61",
-        "56",
-        "60"
+        "x ≤ 5",
+        "x < 5",
+        "x > 5",
+        "x ≥ 5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "33e29816-5302-4cc4-bf8b-55fa038bb987",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "95e39425-9731-4d99-bfe1-6f6a28ad12dc",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Rozwiązaniem $7x+7<63$ jest:​​​​",
+      "correct_answer": "x < 8",
       "options": [
-        "107",
-        "106",
-        "102",
-        "105"
+        "x < 8",
+        "x ≥ 8",
+        "x > 8",
+        "x ≤ 8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "27bd3c3a-9f66-459c-90f7-7c8d44b87d89",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "fc339331-aa88-4353-bfd5-adcf106e81f4",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Rozwiązaniem $6x+10<76$ jest:​​​​​",
+      "correct_answer": "x < 11",
       "options": [
-        "113",
-        "112",
-        "108",
-        "111"
+        "x < 11",
+        "x ≥ 11",
+        "x > 11",
+        "x ≤ 11"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e19d33e-ad3c-49f5-963f-379cacd4a22a",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiązaniem $5x+13<83$ jest:​​​​​​",
+      "correct_answer": "x < 14",
+      "options": [
+        "x > 14",
+        "x ≤ 14",
+        "x ≥ 14",
+        "x < 14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c3b00978-1aac-46a8-b07a-ce151e05bc97",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiązaniem $4x+16<44$ jest:​​​​​​​",
+      "correct_answer": "x < 7",
+      "options": [
+        "x ≥ 7",
+        "x ≤ 7",
+        "x < 7",
+        "x > 7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 113",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "89c79d91-745f-4ef1-8be9-cc841c06ccc7",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "c73a6e9b-ce69-41d7-9264-1af77e2edd92",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Rozwiązaniem $3x+19<49$ jest:​​​​​​​​",
+      "correct_answer": "x < 10",
       "options": [
-        "154",
-        "157",
-        "158",
-        "159"
+        "x < 10",
+        "x ≤ 10",
+        "x > 10",
+        "x ≥ 10"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 159",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ff9dafc4-ef7e-4eb7-af99-6d665afd6c5a",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "00b90b52-99f5-4c5e-8dce-420e4c53c989",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
+      "content": "Rozwiązaniem $2x+2<28$ jest:​​​​​​​​​",
+      "correct_answer": "x < 13",
       "options": [
-        "44",
-        "43",
-        "45",
-        "40"
+        "x ≥ 13",
+        "x < 13",
+        "x ≤ 13",
+        "x > 13"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 13",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d140ae97-8874-4c62-a75c-951a0141fe42",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "9bf65555-c2ef-4cd1-9b3b-43525b14408b",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Rozwiązaniem $9x+5<59$ jest:​​​​​​​​​​",
+      "correct_answer": "x < 6",
       "options": [
-        "91",
-        "89",
-        "86",
-        "90"
+        "x ≥ 6",
+        "x ≤ 6",
+        "x > 6",
+        "x < 6"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 91",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2e6e2c47-be31-480f-aa34-a666a901113d",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "a0b762f0-91a4-4537-a436-6090dcc0bac6",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Rozwiązaniem $8x+8<80$ jest:​​​​​​​​​​​",
+      "correct_answer": "x < 9",
       "options": [
-        "96",
-        "97",
-        "95",
-        "92"
+        "x < 9",
+        "x ≥ 9",
+        "x > 9",
+        "x ≤ 9"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "26004c41-b5b3-4d65-8f5a-a6f425d0561e",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "3f1e704c-60d6-41fa-8029-ff2cf25b5079",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Rozwiązaniem $7x+11<95$ jest:​​​​​​​​​​​​",
+      "correct_answer": "x < 12",
       "options": [
-        "102",
-        "101",
-        "98",
-        "103"
+        "x ≤ 12",
+        "x < 12",
+        "x ≥ 12",
+        "x > 12"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "01672bcc-9ccc-41de-b5ee-50a651d1fc33",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "0580cda8-a20e-4fbd-8abd-8dd6fc180b25",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Rozwiązaniem $6x+14<44$ jest:​​​​​​​​​​​​​",
+      "correct_answer": "x < 5",
       "options": [
-        "149",
-        "148",
-        "144",
-        "147"
+        "x > 5",
+        "x ≥ 5",
+        "x < 5",
+        "x ≤ 5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1f4bb2dd-9e59-469d-8b3c-6e6bae09618d",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "c166196f-40c4-4f8e-bd97-809480932915",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Rozwiązaniem $5x+17<57$ jest:​​​​​​​​​​​​​​",
+      "correct_answer": "x < 8",
       "options": [
-        "33",
-        "35",
-        "34",
-        "30"
+        "x ≤ 8",
+        "x < 8",
+        "x ≥ 8",
+        "x > 8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 35",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0a82ffdc-9b3c-4b2f-8839-d01701f880c6",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
-      "options": [
-        "76",
-        "80",
-        "81",
-        "79"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 81",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3e062bc6-eea0-4ff4-8f5c-3e2124233afe",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "4dda35e8-af63-4354-9c39-fbfee1bd0e15",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "Rozwiązaniem $4x+20<64$ jest:​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 11",
       "options": [
-        "85",
-        "87",
-        "86",
-        "82"
+        "x ≤ 11",
+        "x < 11",
+        "x > 11",
+        "x ≥ 11"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 11",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0752f89e-8759-4725-9aa0-eaa98179ab31",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "1cfdf191-9fbd-4083-913c-0ae435397527",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
+      "content": "Rozwiązaniem $3x+3<45$ jest:​​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 14",
       "options": [
-        "131",
-        "133",
-        "128",
-        "132"
+        "x < 14",
+        "x > 14",
+        "x ≥ 14",
+        "x ≤ 14"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 133",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 14",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a56cf1ed-3ed9-499d-8804-8c27599c60c6",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "c2bec2fa-d1fe-4704-a612-7f8ca3ce802e",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
+      "content": "Rozwiązaniem $2x+6<20$ jest:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 7",
       "options": [
-        "139",
-        "134",
-        "138",
-        "137"
+        "x ≥ 7",
+        "x ≤ 7",
+        "x < 7",
+        "x > 7"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 139",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3529c474-af7e-4fb7-86cf-3b11ca39e206",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "5ae76257-12d7-4f63-b959-17f074572398",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
+      "content": "Rozwiązaniem $9x+9<99$ jest:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 10",
       "options": [
-        "24",
-        "23",
-        "25",
-        "20"
+        "x ≥ 10",
+        "x < 10",
+        "x > 10",
+        "x ≤ 10"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "81e6a40b-ebbe-4dc7-817c-bc63b5d47b61",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "b8b6fcdb-e0ee-421b-ae41-f7af73f52fba",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Rozwiązaniem $8x+12<116$ jest:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 13",
       "options": [
-        "70",
-        "71",
-        "66",
-        "69"
+        "x < 13",
+        "x > 13",
+        "x ≥ 13",
+        "x ≤ 13"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 13",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a2fe82d8-00e3-45ef-b629-9f85e0383bdd",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "56c79d78-a428-4a02-ac16-bd709230e019",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
+      "content": "Rozwiązaniem $7x+15<57$ jest:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "x < 6",
       "options": [
-        "77",
-        "72",
-        "76",
-        "75"
+        "x ≤ 6",
+        "x < 6",
+        "x > 6",
+        "x ≥ 6"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 77",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** x < 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ac5fb449-f526-44d8-b371-acb02f3d7d91",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "121",
-        "123",
-        "118",
-        "122"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e61059bb-e7a5-43ad-b9a0-df6dd5d830e9",
-      "generatedAt": "2026-08-07T15:45:15.889Z",
-      "model": "parametric-v1"
+      "id": "b5a41d89-b185-4ed8-9e2b-b2edf4930cf5",
+      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.889Z"
+  "updatedAt": "2026-08-07T16:30:27.554Z"
 }

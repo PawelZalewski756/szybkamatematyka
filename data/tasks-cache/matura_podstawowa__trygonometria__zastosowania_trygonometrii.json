@@ -6,385 +6,385 @@
   "topicName": "Zastosowania trygonometrii",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Trójkąt prostokątny: przyprostokątne 3 i 9. Przeciwprostokątna:​",
+      "correct_answer": "9.5",
       "options": [
-        "49",
-        "48",
-        "44",
-        "47"
+        "9.5",
+        "10.5",
+        "7.5",
+        "8.5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9.5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e7ec1f26-631a-446b-8d6f-45b14e38b38a",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąt prostokątny: przyprostokątne 10 i 8. Przeciwprostokątna:​​",
+      "correct_answer": "12.8",
+      "options": [
+        "12.8",
+        "13.8",
+        "11.8",
+        "10.8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28987eea-4ba2-48b7-aecd-c38fa1307ebc",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąt prostokątny: przyprostokątne 9 i 7. Przeciwprostokątna:​​​",
+      "correct_answer": "11.4",
+      "options": [
+        "10.4",
+        "11.4",
+        "12.4",
+        "9.4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11.4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07f65a8d-55b9-4bdf-a131-1684045bcaf3",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąt prostokątny: przyprostokątne 8 i 6. Przeciwprostokątna:​​​​",
+      "correct_answer": "10",
+      "options": [
+        "9",
+        "10",
+        "8",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed6625ef-a465-45a6-90a1-9587369ff212",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąt prostokątny: przyprostokątne 7 i 5. Przeciwprostokątna:​​​​​",
+      "correct_answer": "8.6",
+      "options": [
+        "6.6",
+        "8.6",
+        "7.6",
+        "9.6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 49",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8.6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "794aa47c-adbd-4376-b8f8-472a4d995cec",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "66ad5c89-1488-42cb-97ca-4f51aeae1bba",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
+      "content": "Trójkąt prostokątny: przyprostokątne 6 i 4. Przeciwprostokątna:​​​​​​",
+      "correct_answer": "7.2",
       "options": [
-        "55",
-        "54",
-        "53",
-        "50"
+        "7.2",
+        "8.2",
+        "5.2",
+        "6.2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 55",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4e82f7fb-9156-4bb9-b416-b3eaf727841d",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "34679fac-a722-4c14-ba57-f676e93dc5ec",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Trójkąt prostokątny: przyprostokątne 5 i 11. Przeciwprostokątna:​​​​​​​",
+      "correct_answer": "12.1",
       "options": [
-        "59",
-        "61",
-        "60",
-        "56"
+        "12.1",
+        "13.1",
+        "10.1",
+        "11.1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7042b443-edc9-4406-b05d-db4907c31b34",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "eb1b758c-9588-4d39-bfb6-1eaa60037422",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Trójkąt prostokątny: przyprostokątne 4 i 10. Przeciwprostokątna:​​​​​​​​",
+      "correct_answer": "10.8",
       "options": [
-        "105",
-        "107",
-        "102",
-        "106"
+        "9.8",
+        "10.8",
+        "8.8",
+        "11.8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e0d85f21-0649-4c0e-8bb4-0b58067e746f",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "6c19057c-3bb7-4d04-9d8f-f519c502c0ad",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Trójkąt prostokątny: przyprostokątne 3 i 9. Przeciwprostokątna:​​​​​​​​​",
+      "correct_answer": "9.5",
       "options": [
-        "108",
-        "113",
-        "111",
-        "112"
+        "9.5",
+        "8.5",
+        "10.5",
+        "7.5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 113",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b2fb39b3-b485-4c40-88f9-6f54dd240875",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
-      "options": [
-        "159",
-        "158",
-        "154",
-        "157"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9384391d-0ac3-4db4-969d-d727bd6bbbc6",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "45",
-        "44",
-        "40",
-        "43"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 45",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9.5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7d3bc9e4-f3ec-40c7-8e14-6bd6e4127efd",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "7cb5755f-564a-470c-98cf-6df1dc71efde",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Trójkąt prostokątny: przyprostokątne 10 i 8. Przeciwprostokątna:​​​​​​​​​​",
+      "correct_answer": "12.8",
       "options": [
-        "89",
-        "91",
-        "86",
-        "90"
+        "13.8",
+        "10.8",
+        "11.8",
+        "12.8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 91",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "944be5f5-7501-4051-9f6d-ef9b23a8d006",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "6f0c2fa2-c56c-4fd0-8a16-f47e10dee7cb",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
+      "content": "Trójkąt prostokątny: przyprostokątne 9 i 7. Przeciwprostokątna:​​​​​​​​​​​",
+      "correct_answer": "11.4",
       "options": [
-        "97",
-        "95",
-        "96",
-        "92"
+        "11.4",
+        "9.4",
+        "12.4",
+        "10.4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 97",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11.4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2fbc3227-b626-4252-9dd9-a9615f68a4f2",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "78af8cd3-d87b-4d64-b8e8-4fd59ad2c6bb",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
+      "content": "Trójkąt prostokątny: przyprostokątne 8 i 6. Przeciwprostokątna:​​​​​​​​​​​​",
+      "correct_answer": "10",
       "options": [
-        "102",
-        "98",
-        "101",
-        "103"
+        "10",
+        "11",
+        "9",
+        "8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 103",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bab3c0e5-157f-499f-8666-56fbec33b6e7",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "08e63912-99f6-4ef5-a8b5-66d6915a9031",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
+      "content": "Trójkąt prostokątny: przyprostokątne 7 i 5. Przeciwprostokątna:​​​​​​​​​​​​​",
+      "correct_answer": "8.6",
       "options": [
-        "149",
-        "144",
-        "148",
-        "147"
+        "6.6",
+        "9.6",
+        "7.6",
+        "8.6"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 149",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8.6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "82256867-5894-442c-baf4-2dbc334fef3d",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "a782a9e4-4331-4141-bdd3-e7c7a7d9cdfe",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
+      "content": "Trójkąt prostokątny: przyprostokątne 6 i 4. Przeciwprostokątna:​​​​​​​​​​​​​​",
+      "correct_answer": "7.2",
       "options": [
-        "35",
-        "34",
-        "33",
-        "30"
+        "6.2",
+        "7.2",
+        "5.2",
+        "8.2"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a6f48949-86fc-42f9-98d8-dcdf63d808f5",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "18a443dd-88da-4258-bae3-6b1f89263473",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
+      "content": "Trójkąt prostokątny: przyprostokątne 5 i 11. Przeciwprostokątna:​​​​​​​​​​​​​​​",
+      "correct_answer": "12.1",
       "options": [
-        "76",
-        "80",
-        "79",
-        "81"
+        "12.1",
+        "10.1",
+        "13.1",
+        "11.1"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 81",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5a1c2660-a6fc-4f6b-bea8-6c37fee6066b",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "21c0066c-8ade-4745-82da-97e301fffcd5",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "Trójkąt prostokątny: przyprostokątne 4 i 10. Przeciwprostokątna:​​​​​​​​​​​​​​​​",
+      "correct_answer": "10.8",
       "options": [
-        "85",
-        "87",
-        "82",
-        "86"
+        "9.8",
+        "8.8",
+        "11.8",
+        "10.8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "10a3a747-dd57-40cd-a2b0-f7b9b031268a",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "265a9179-409d-4283-b4b9-6e4e104a68c1",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
+      "content": "Trójkąt prostokątny: przyprostokątne 3 i 9. Przeciwprostokątna:​​​​​​​​​​​​​​​​​",
+      "correct_answer": "9.5",
       "options": [
-        "133",
-        "128",
-        "132",
-        "131"
+        "10.5",
+        "9.5",
+        "8.5",
+        "7.5"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 133",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9.5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "9360231a-ad66-44ce-ae1e-8e54fa87bbbf",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "a23e98ec-9738-47b7-b565-f3efb7d2a21d",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
+      "content": "Trójkąt prostokątny: przyprostokątne 10 i 8. Przeciwprostokątna:​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "12.8",
       "options": [
-        "137",
-        "134",
-        "138",
-        "139"
+        "10.8",
+        "13.8",
+        "11.8",
+        "12.8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 139",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.8",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d3e4b4d6-a519-4414-9978-036cd00a82a7",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "a5efbea9-58dc-4d2b-836a-781a54734b7e",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
+      "content": "Trójkąt prostokątny: przyprostokątne 9 i 7. Przeciwprostokątna:​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "11.4",
       "options": [
-        "24",
-        "25",
-        "23",
-        "20"
+        "12.4",
+        "11.4",
+        "9.4",
+        "10.4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11.4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d9052fa3-f7f9-442e-b515-7c3d7bb1cf28",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "96ca2492-adc9-4e26-9e14-1c7a61cc9389",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "Trójkąt prostokątny: przyprostokątne 8 i 6. Przeciwprostokątna:​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "10",
       "options": [
-        "66",
-        "70",
-        "69",
-        "71"
+        "9",
+        "11",
+        "10",
+        "8"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f1139da9-e13e-4ecc-a6a2-1f6c8b6f4a5c",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "76",
-        "77",
-        "72",
-        "75"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d9d85ded-ac1c-4866-948b-b6f3f027165e",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "121",
-        "122",
-        "123",
-        "118"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "56877065-851f-492a-bf52-1eebb77145cb",
-      "generatedAt": "2026-08-07T15:45:15.891Z",
-      "model": "parametric-v1"
+      "id": "a7f1c8a2-4f0a-40d2-9eb2-7aa36dea97b4",
+      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.891Z"
+  "updatedAt": "2026-08-07T16:30:27.558Z"
 }

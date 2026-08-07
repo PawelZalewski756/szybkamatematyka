@@ -6,385 +6,385 @@
   "topicName": "Kombinatoryka",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 4 butów?​",
+      "correct_answer": "32",
+      "options": [
+        "26",
+        "30",
+        "31",
+        "32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e80e41c8-3276-49d6-abe2-601e15a0d7d3",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 3 butów?​​",
+      "correct_answer": "30",
+      "options": [
+        "30",
+        "24",
+        "29",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ebcf432f-b65c-466e-80bf-2ccb27dae34f",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 2 butów?​​​",
+      "correct_answer": "30",
+      "options": [
+        "29",
+        "28",
+        "24",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2676380-01f1-4726-8297-3bcb20497c66",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 5 butów?​​​​",
+      "correct_answer": "90",
+      "options": [
+        "88",
+        "89",
+        "84",
+        "90"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14c8c191-8641-4eb5-b2c0-343f6a4169ca",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 4 butów?​​​​​",
+      "correct_answer": "96",
+      "options": [
+        "90",
+        "94",
+        "95",
+        "96"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "599a8193-6c57-4938-8cb8-ec2ca170cb8e",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 3 butów?​​​​​​",
+      "correct_answer": "24",
+      "options": [
+        "23",
+        "22",
+        "24",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f35c443c-00ac-4625-985f-b3cb2600037c",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 2 butów?​​​​​​​",
+      "correct_answer": "20",
+      "options": [
+        "19",
+        "18",
+        "14",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "057fa63c-a01e-423c-bdaa-a04e9e57a031",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 5 butów?​​​​​​​​",
+      "correct_answer": "75",
+      "options": [
+        "74",
+        "75",
+        "73",
+        "69"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 75",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34a96a1b-ece3-4a60-8f4a-1c7b9d0b4b0c",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 4 butów?​​​​​​​​​",
+      "correct_answer": "72",
+      "options": [
+        "72",
+        "70",
+        "66",
+        "71"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dca73d6-4dc5-4ef1-a5e1-5984cae9e024",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 3 butów?​​​​​​​​​​",
+      "correct_answer": "72",
+      "options": [
+        "70",
+        "72",
+        "66",
+        "71"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4509eb3b-9e72-4961-941c-78c3bdaec5fa",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 2 butów?​​​​​​​​​​​",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "10",
+        "14",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e5b0685-e5a2-4e3e-ae35-7aaf2c38c788",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 5 butów?​​​​​​​​​​​​",
+      "correct_answer": "50",
       "options": [
         "44",
-        "47",
+        "50",
         "48",
         "49"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 49",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "06a9bef7-7ed1-48ea-802d-d853425f212b",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
-      "options": [
-        "55",
-        "50",
-        "54",
-        "53"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 55",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8d697a92-a262-45d5-a984-90fe8e92f95c",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "b6eedacb-64f3-452c-9614-677d8131a0b6",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 4 butów?​​​​​​​​​​​​​",
+      "correct_answer": "60",
       "options": [
         "60",
+        "58",
         "59",
-        "56",
-        "61"
+        "54"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 61",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 60",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "02d74808-7308-4e7f-90fd-1832cd94ca41",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "122a3d01-783e-4331-872b-18911c8d6128",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 3 butów?​​​​​​​​​​​​​​",
+      "correct_answer": "54",
       "options": [
-        "105",
-        "106",
-        "102",
-        "107"
+        "53",
+        "52",
+        "48",
+        "54"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 107",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 54",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "294d781c-ba5c-4016-b9fe-07385d68f526",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "c47cfe55-4286-4b24-93b0-30f11288718a",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 2 butów?​​​​​​​​​​​​​​​",
+      "correct_answer": "48",
       "options": [
-        "108",
-        "111",
-        "112",
-        "113"
+        "42",
+        "46",
+        "47",
+        "48"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 113",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "73508e22-14bf-4b13-8238-aa9a122e9fc5",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "8ed4a0e3-c51c-489c-9f34-a18ca50184bf",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 5 butów?​​​​​​​​​​​​​​​​",
+      "correct_answer": "40",
       "options": [
-        "158",
-        "157",
-        "159",
-        "154"
+        "34",
+        "39",
+        "40",
+        "38"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 159",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "14d6d601-8986-48af-8a8a-bc548f40d72c",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "38096e22-4214-4454-ae82-a08e25d46481",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 28+17​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 4 butów?​​​​​​​​​​​​​​​​​",
+      "correct_answer": "40",
+      "options": [
+        "39",
+        "40",
+        "34",
+        "38"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f11525d4-9e55-4502-8cdf-4e22188a71bb",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 3 butów?​​​​​​​​​​​​​​​​​​",
       "correct_answer": "45",
       "options": [
-        "44",
+        "39",
         "43",
-        "40",
+        "44",
         "45"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "01b3efd8-6f5a-4ae0-83f5-90278968aec8",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "cfd0e5f7-666e-420e-bb84-10629d86ac02",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 2 butów?​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "36",
       "options": [
-        "90",
-        "91",
-        "89",
-        "86"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 91",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5d3c0191-8bb3-46b5-be7a-c73baf086d75",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
-      "options": [
-        "97",
-        "95",
-        "92",
-        "96"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 97",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8f918ab7-7020-4866-bac2-b9c13466ef2e",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
-      "options": [
-        "101",
-        "103",
-        "98",
-        "102"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 103",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e5f0d652-7f91-43bd-b865-2e318d2eb5da",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
-      "options": [
-        "149",
-        "144",
-        "147",
-        "148"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 149",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f3131216-50d3-4fb3-a202-b2db1938586d",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
-      "options": [
-        "30",
         "35",
-        "33",
-        "34"
+        "30",
+        "34",
+        "36"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e3eaf3c4-e541-48be-9bd5-03997307ffc6",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "fddfc5b1-0421-4bd9-a422-febdf07b10bf",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
-      "correct_answer": "81",
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 5 butów?​​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "120",
       "options": [
-        "81",
-        "79",
-        "80",
-        "76"
+        "119",
+        "120",
+        "118",
+        "114"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Odpowiedź: 81",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 120",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "18be7e24-f522-4dda-92b7-dbdcfaa905c1",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
-      "options": [
-        "86",
-        "85",
-        "82",
-        "87"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 87",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3471fdba-5f5d-4bfe-94fb-4eb3885a4d93",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
-      "options": [
-        "128",
-        "131",
-        "132",
-        "133"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 133",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7b882b4b-f37f-4da4-af07-3299611072fb",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
-      "options": [
-        "134",
-        "138",
-        "139",
-        "137"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 139",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a95eb772-35ad-4b19-a7f3-413684d7960e",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "24",
-        "25",
-        "20",
-        "23"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4296d4c0-fc4e-47ab-bb76-76ed778f64b2",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
-      "options": [
-        "66",
-        "69",
-        "70",
-        "71"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 71",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "da564e1d-c995-4c2a-baa7-004f147e25e0",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "77",
-      "options": [
-        "76",
-        "72",
-        "75",
-        "77"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 77",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0410e5fd-b29a-4156-9755-f997febbac00",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "122",
-        "123",
-        "121",
-        "118"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8c9f347a-7d3b-4f38-a649-527e0e95bcb5",
-      "generatedAt": "2026-08-07T15:45:15.893Z",
-      "model": "parametric-v1"
+      "id": "db2dd07e-634c-4762-a8ec-e6a8c3980c87",
+      "generatedAt": "2026-08-07T16:30:27.561Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.893Z"
+  "updatedAt": "2026-08-07T16:30:27.561Z"
 }

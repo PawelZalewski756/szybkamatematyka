@@ -6,385 +6,385 @@
   "topicName": "Proporcjonalność prosta",
   "tasks": [
     {
-      "content": "Oblicz 10+39​",
-      "correct_answer": "49",
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=6$ y=​",
+      "correct_answer": "12",
       "options": [
-        "44",
-        "49",
-        "48",
-        "47"
+        "10",
+        "12",
+        "13",
+        "11"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 49",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "219d0987-955a-49b1-ae1e-580c3b23b881",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "651e86c0-fb78-42b2-a9a2-935262f92913",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 33+22​​",
-      "correct_answer": "55",
-      "options": [
-        "55",
-        "54",
-        "50",
-        "53"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 55",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "be2dd847-ce19-4f0b-b2b3-46f2c820ba63",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 56+5​​​",
-      "correct_answer": "61",
-      "options": [
-        "60",
-        "56",
-        "61",
-        "59"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 61",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ab831bd5-629b-4124-9c95-b575e02e179c",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 79+28​​​​",
-      "correct_answer": "107",
-      "options": [
-        "102",
-        "106",
-        "105",
-        "107"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 107",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c324a2ce-548c-4549-bb22-6b7fd2eaa5dc",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 102+11​​​​​",
-      "correct_answer": "113",
-      "options": [
-        "111",
-        "113",
-        "108",
-        "112"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 113",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "10714302-a8e5-46c2-bb8d-18dba0caea62",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 125+34​​​​​​",
-      "correct_answer": "159",
-      "options": [
-        "159",
-        "158",
-        "157",
-        "154"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 159",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "adb55262-2ab7-4820-bbe0-34081479589c",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 28+17​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=5$ y=​​",
       "correct_answer": "45",
       "options": [
-        "44",
-        "40",
         "45",
+        "44",
+        "36",
         "43"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 45",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "62271af5-2f8c-4a14-8c67-307762418540",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "7800e585-40b7-435c-aacf-851677167947",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 51+40​​​​​​​​",
-      "correct_answer": "91",
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=4$ y=​​​",
+      "correct_answer": "32",
       "options": [
-        "89",
-        "91",
-        "86",
-        "90"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 91",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c6337264-4258-46ce-8dc0-9489bcb47515",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 74+23​​​​​​​​​",
-      "correct_answer": "97",
-      "options": [
-        "95",
-        "97",
-        "92",
-        "96"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 97",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6ed97ea0-5408-4245-b4dd-440ec3b11f65",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 97+6​​​​​​​​​​",
-      "correct_answer": "103",
-      "options": [
-        "101",
-        "103",
-        "98",
-        "102"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 103",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7e212be8-ab8c-4b9e-915d-043035d40c1f",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 120+29​​​​​​​​​​​",
-      "correct_answer": "149",
-      "options": [
-        "147",
-        "148",
-        "144",
-        "149"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 149",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a51fb656-1d41-44cc-bb9e-3d12b6239fd0",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 23+12​​​​​​​​​​​​",
-      "correct_answer": "35",
-      "options": [
-        "33",
-        "34",
-        "35",
+        "31",
+        "24",
+        "32",
         "30"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 35",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "209bd7c9-65ee-458e-946c-8aefc057cadc",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "210d3c1d-b8cd-4be0-9227-89b1a68aa63e",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 46+35​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=3$ y=​​​​",
+      "correct_answer": "21",
+      "options": [
+        "14",
+        "20",
+        "19",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "665cc61a-82c9-4922-a8bc-1977055e1750",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=2$ y=​​​​​",
+      "correct_answer": "12",
+      "options": [
+        "10",
+        "12",
+        "6",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6ad852a-1478-49c4-bc62-2d0a51ec1f07",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=1$ y=​​​​​​",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5ff41e5a-464a-4a56-8597-cddb56c5fa38",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=12$ y=​​​​​​​",
+      "correct_answer": "48",
+      "options": [
+        "47",
+        "44",
+        "48",
+        "46"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1bda4d4e-43f1-4987-98fd-0cd755f18afc",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=11$ y=​​​​​​​​",
+      "correct_answer": "33",
+      "options": [
+        "31",
+        "33",
+        "30",
+        "32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "237758bc-a7c1-4389-90b5-9ee80b814b98",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=10$ y=​​​​​​​​​",
+      "correct_answer": "20",
+      "options": [
+        "19",
+        "20",
+        "18",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bfff15c1-18e8-44e5-bce9-6b778c655b90",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=9$ y=​​​​​​​​​​",
       "correct_answer": "81",
       "options": [
-        "80",
-        "81",
         "79",
-        "76"
+        "81",
+        "72",
+        "80"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 81",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1f526b67-c5ba-42fa-990a-b9b8cccf9c8d",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "caa9fff9-5867-4ee0-b129-acf686ecef71",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 69+18​​​​​​​​​​​​​​",
-      "correct_answer": "87",
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=8$ y=​​​​​​​​​​​",
+      "correct_answer": "64",
       "options": [
-        "82",
-        "85",
-        "86",
-        "87"
+        "62",
+        "63",
+        "56",
+        "64"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Odpowiedź: 87",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8a600845-86cd-4327-808a-f8e27070c50a",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "7293b07e-232e-404a-b665-3e4fde729c55",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 92+41​​​​​​​​​​​​​​​",
-      "correct_answer": "133",
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=7$ y=​​​​​​​​​​​​",
+      "correct_answer": "49",
       "options": [
-        "131",
-        "128",
-        "133",
-        "132"
+        "47",
+        "48",
+        "49",
+        "42"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Odpowiedź: 133",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 49",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "56624a39-37c3-4a71-a24b-694a5e4674ca",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "8bbf6384-c9db-492d-afd4-56e665eb357e",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 115+24​​​​​​​​​​​​​​​​",
-      "correct_answer": "139",
+      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=6$ y=​​​​​​​​​​​​​",
+      "correct_answer": "36",
       "options": [
-        "137",
-        "138",
-        "134",
-        "139"
+        "35",
+        "36",
+        "34",
+        "30"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 139",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "849c98d9-7a6a-493e-a298-85bdda3528f5",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "6bd9ce77-3b5e-4a93-925a-8cc3bdb2a129",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 18+7​​​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=5$ y=​​​​​​​​​​​​​​",
       "correct_answer": "25",
       "options": [
+        "20",
         "23",
         "24",
-        "25",
-        "20"
+        "25"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Odpowiedź: 25",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "95b83cf5-39b1-4000-9b6d-808746b255f8",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "c97cec7e-12ed-41e1-9ed9-e3785bdb851d",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 41+30​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "71",
+      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=4$ y=​​​​​​​​​​​​​​​",
+      "correct_answer": "16",
       "options": [
-        "71",
-        "70",
-        "69",
-        "66"
+        "14",
+        "12",
+        "16",
+        "15"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 71",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4ea7b174-ba34-4e08-bf0b-9ae038d6187e",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "de9b2593-6d71-4c9f-9e95-3c7df855c27c",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Oblicz 64+13​​​​​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=3$ y=​​​​​​​​​​​​​​​​",
+      "correct_answer": "9",
+      "options": [
+        "7",
+        "8",
+        "6",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bc417fc9-ed14-4999-a3fc-bfbf2a501b41",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=2$ y=​​​​​​​​​​​​​​​​​",
+      "correct_answer": "4",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b922064d-8284-453f-8a04-dace2ed0bc50",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=1$ y=​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5207efba-99ea-4759-b5bc-b124ebf27cb8",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=12$ y=​​​​​​​​​​​​​​​​​​​",
+      "correct_answer": "96",
+      "options": [
+        "94",
+        "95",
+        "88",
+        "96"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47cd0a6e-08ac-4de7-b8c4-19c6a7b4e297",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=11$ y=​​​​​​​​​​​​​​​​​​​​",
       "correct_answer": "77",
       "options": [
         "75",
+        "77",
         "76",
-        "72",
-        "77"
+        "70"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Odpowiedź: 77",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 77",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8c6c6a06-5e31-4f7e-bd03-3f3f4feee309",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Oblicz 87+36​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "123",
-      "options": [
-        "121",
-        "123",
-        "122",
-        "118"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Odpowiedź: 123",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ff42fc69-6418-404b-aa57-49d11ba5d33a",
-      "generatedAt": "2026-08-07T15:45:15.897Z",
-      "model": "parametric-v1"
+      "id": "445446d9-bdea-47fb-a2f4-880ea90b5c2c",
+      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.897Z"
+  "updatedAt": "2026-08-07T16:30:27.572Z"
 }

@@ -6,385 +6,385 @@
   "topicName": "Stereometria",
   "tasks": [
     {
-      "content": "Pole powierzchni sześcianu o krawędzi 9​",
-      "correct_answer": "486",
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 7 wynosi:",
+      "correct_answer": "294",
       "options": [
-        "484",
-        "486",
-        "485",
-        "476"
+        "292",
+        "282",
+        "294",
+        "293"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 486",
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 294",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "69278f9f-8106-48aa-a1d8-2f508510a0ec",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
+      "id": "bd7aa202-40a1-4174-ba6f-baad8d7f8230",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 5×2×8​​",
-      "correct_answer": "80",
+      "content": "Objętość kuli o promieniu 3 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "113",
       "options": [
-        "68",
-        "78",
-        "80",
-        "79"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Odpowiedź: 80",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e5c0a93c-66d0-4753-904a-877bdd8d10b7",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=2$, $h=4$, $\\pi\\approx 3{,}14$​​​",
-      "correct_answer": "50",
-      "options": [
-        "30",
-        "49",
-        "50",
-        "48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "268282e6-7da7-4040-b743-30168ee36326",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole powierzchni sześcianu o krawędzi 14​​​​",
-      "correct_answer": "1176",
-      "options": [
-        "1176",
-        "1174",
-        "1175",
-        "1166"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 1176",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a73f724f-fcc4-45b0-b3a2-4e9215c481e9",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość prostopadłościanu 2×7×5​​​​​",
-      "correct_answer": "70",
-      "options": [
-        "58",
-        "68",
-        "70",
-        "69"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 70",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "de75e7b2-16e8-471a-83c1-ad55d4248466",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=11$, $h=9$, $\\pi\\approx 3{,}14$​​​​​​",
-      "correct_answer": "3421",
-      "options": [
-        "3401",
-        "3419",
-        "3420",
-        "3421"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 3421",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4d9681d3-8282-49df-b4fa-64708a02218a",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole powierzchni sześcianu o krawędzi 5​​​​​​​",
-      "correct_answer": "150",
-      "options": [
-        "140",
-        "150",
-        "149",
-        "148"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 150",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5f68ce60-ec93-4db7-91e1-d43c022a0309",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×14​​​​​​​​",
-      "correct_answer": "392",
-      "options": [
-        "390",
-        "392",
-        "380",
-        "391"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 392",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "12807673-7337-4ec4-850d-c84716e4289b",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=10$, $h=14$, $\\pi\\approx 3{,}14$​​​​​​​​​",
-      "correct_answer": "4398",
-      "options": [
-        "4398",
-        "4396",
-        "4397",
-        "4378"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 4398",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c2ce1f29-7c06-4c98-928a-ca24f101f040",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole powierzchni sześcianu o krawędzi 10​​​​​​​​​​",
-      "correct_answer": "600",
-      "options": [
-        "599",
-        "600",
-        "598",
-        "590"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 600",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ec06c3ad-90a3-4d6b-a081-b226b02f7688",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość prostopadłościanu 4×9×11​​​​​​​​​​​",
-      "correct_answer": "396",
-      "options": [
-        "384",
-        "395",
-        "396",
-        "394"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 396",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0246cc68-c5b8-4936-8c4d-06517ab199d4",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=9$, $h=5$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​",
-      "correct_answer": "1272",
-      "options": [
-        "1271",
-        "1272",
-        "1270",
-        "1252"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Odpowiedź: 1272",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a4543651-1956-403d-9b3a-995d9b9141a2",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole powierzchni sześcianu o krawędzi 15​​​​​​​​​​​​​",
-      "correct_answer": "1350",
-      "options": [
-        "1348",
-        "1349",
-        "1340",
-        "1350"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Odpowiedź: 1350",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "43d5b8f9-f647-4e18-a361-8b615eaa598e",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×8​​​​​​​​​​​​​​",
-      "correct_answer": "432",
-      "options": [
-        "420",
-        "432",
-        "431",
-        "430"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Odpowiedź: 432",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bb9880f8-2404-4bef-987f-824d406fb08d",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=8$, $h=10$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​​​​",
-      "correct_answer": "2011",
-      "options": [
-        "2011",
-        "2009",
-        "2010",
-        "1991"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Odpowiedź: 2011",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4b92c89b-dc02-4c71-a26d-7c5fd8465913",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Pole powierzchni sześcianu o krawędzi 6​​​​​​​​​​​​​​​​",
-      "correct_answer": "216",
-      "options": [
-        "215",
-        "216",
-        "206",
-        "214"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Odpowiedź: 216",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ada15608-8d10-41f7-87dd-609e3f15bdb2",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość prostopadłościanu 6×3×5​​​​​​​​​​​​​​​​​",
-      "correct_answer": "90",
-      "options": [
-        "89",
-        "90",
-        "78",
-        "88"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Odpowiedź: 90",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "72804955-f5d7-4585-8a7e-9381f46fc8da",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
-    },
-    {
-      "content": "Objętość walca $r=7$, $h=15$, $\\pi\\approx 3{,}14$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "2309",
-      "options": [
-        "2307",
-        "2289",
-        "2308",
-        "2309"
+        "111",
+        "115",
+        "93",
+        "113"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Odpowiedź: 2309",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 113",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "00223b4f-5024-4762-8d12-1b0a983efa68",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
+      "id": "eb1d74ca-a860-4955-b928-238121f551f7",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Pole powierzchni sześcianu o krawędzi 11​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "726",
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
+      "correct_answer": "96",
       "options": [
-        "726",
-        "716",
-        "725",
-        "724"
+        "84",
+        "98",
+        "96",
+        "94"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Odpowiedź: 726",
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "25017762-bb45-4ac2-b0dd-5efb1fb098bd",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
+      "id": "3b23d1e3-a0cc-4887-8192-b29ecbb46c7a",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 3×8×14​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "336",
+      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "905",
       "options": [
-        "324",
-        "335",
-        "336",
-        "334"
+        "906",
+        "885",
+        "905",
+        "903"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de4ff603-b04a-479b-9067-fad5fb209690",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 5 wynosi:",
+      "correct_answer": "150",
+      "options": [
+        "138",
+        "149",
+        "150",
+        "152"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Odpowiedź: 336",
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 150",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "46572d87-9790-47e1-b5d8-11a736875476",
-      "generatedAt": "2026-08-07T15:45:15.892Z",
-      "model": "parametric-v1"
+      "id": "6526ba89-5fbe-4f12-9d7b-f4338c943c68",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "905",
+      "options": [
+        "926",
+        "885",
+        "907",
+        "905"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65fe1e15-3c64-4172-9252-968bd5dd618a",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
+      "correct_answer": "216",
+      "options": [
+        "216",
+        "229",
+        "204",
+        "217"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74680103-efa9-41c9-a589-9cb973bbec4f",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "524",
+      "options": [
+        "522",
+        "524",
+        "545",
+        "525"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3ae1768-a77d-4d4b-aea2-684958d8fe84",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
+      "correct_answer": "96",
+      "options": [
+        "96",
+        "109",
+        "95",
+        "94"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24e0242e-5760-42ff-b43d-59383cfb48c0",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "524",
+      "options": [
+        "525",
+        "524",
+        "522",
+        "544"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1ae31475-2d6f-4465-ae22-bb1f8b9c4814",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
+      "correct_answer": "216",
+      "options": [
+        "204",
+        "217",
+        "216",
+        "215"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ece3ad25-5fb6-4b24-bc2b-2b8d861c697d",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "905",
+      "options": [
+        "906",
+        "903",
+        "905",
+        "925"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7379ab40-d1d1-4e0a-8ca5-2089d44ddb93",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 7 wynosi:",
+      "correct_answer": "294",
+      "options": [
+        "307",
+        "293",
+        "292",
+        "294"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 294",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "00591c53-60bc-4973-88fa-9e3974e2ea22",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 4 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "268",
+      "options": [
+        "269",
+        "289",
+        "268",
+        "248"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 268",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f943014-4b16-4256-8939-b963c5c8af8f",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 2 wynosi:",
+      "correct_answer": "24",
+      "options": [
+        "12",
+        "24",
+        "37",
+        "23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9cfaa9e7-e939-4269-b29f-90865a9edbdc",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "524",
+      "options": [
+        "523",
+        "504",
+        "525",
+        "524"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd0210d3-cbfe-4022-bb28-99e1cf995bf9",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
+      "correct_answer": "96",
+      "options": [
+        "108",
+        "96",
+        "98",
+        "84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "db017d53-e924-4bdd-9f9f-f3c95b098606",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 4 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "268",
+      "options": [
+        "266",
+        "267",
+        "268",
+        "289"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 268",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "54e188f7-d53d-484c-8d5d-8001ee744d4f",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
+      "correct_answer": "216",
+      "options": [
+        "217",
+        "229",
+        "215",
+        "216"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "16f3e431-7e3b-477c-8189-5b2136ecc477",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 2 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "34",
+      "options": [
+        "34",
+        "32",
+        "55",
+        "54"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 34",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c1c2143f-b511-4973-9a4c-1fa1b38c44a9",
+      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T15:45:15.892Z"
+  "updatedAt": "2026-08-07T16:30:27.560Z"
 }
