@@ -8,8 +8,8 @@ export function HomeGamingFooter() {
         <div>
           <BrandLogo asLink={false} className="justify-start" />
           <p className="mt-3 max-w-sm text-sm text-muted">
-            Matura i egzamin ósmoklasisty — teoria, zadania, arkusze CKE i
-            minigry w jednym miejscu.
+            Nauka matematyki do matury i egzaminu ósmoklasisty: teoria, zadania
+            z rozwiązaniami i arkusze CKE.
           </p>
           <p className="mt-3 text-xs text-muted">
             © {new Date().getFullYear()} Szybka Matematyka · szybkamatematyka.pl
