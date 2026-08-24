@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getPrerenderTaskIds } from "@/lib/baza-zadan/catalog";
 import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
+import { listOfficialCkeSheets } from "@/lib/baza-zadan/exams/archive-catalog";
+import { officialCkeSheetHref } from "@/lib/baza-zadan/exams/archive-sheet-meta";
 import { getTreningTopicUrls } from "@/lib/seo/trening-urls";
 import { SITE_URL } from "@/lib/seo/site";
 
@@ -66,5 +68,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  return [...staticEntries, ...treningTopicEntries, ...taskEntries, ...sheetEntries];
+  const ckeSheetEntries: MetadataRoute.Sitemap = listOfficialCkeSheets().map(
+    (sheet) => ({
+      url: `${SITE_URL}${officialCkeSheetHref(sheet.id)}`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.55,
+    }),
+  );
+
+  return [
+    ...staticEntries,
+    ...treningTopicEntries,
+    ...taskEntries,
+    ...sheetEntries,
+    ...ckeSheetEntries,
+  ];
 }
