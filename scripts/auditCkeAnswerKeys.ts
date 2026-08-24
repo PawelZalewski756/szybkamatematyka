@@ -21,24 +21,32 @@ type CachedSheet = {
   tasks: CachedTask[];
 };
 
-const cacheDir = path.resolve(process.cwd(), "data/cke-matura-cache");
+const cacheDirs = [
+  path.resolve(process.cwd(), "data/cke-matura-cache"),
+  path.resolve(process.cwd(), "data/cke-e8-cache"),
+];
 const expected = new Map<string, number | null>();
 const statuses = { resolved: 0, ambiguous: 0, ungraded: 0 };
 
-for (const file of fs.readdirSync(cacheDir).filter((name) => name.endsWith(".json"))) {
-  const sheet = JSON.parse(
-    fs.readFileSync(path.join(cacheDir, file), "utf8"),
-  ) as CachedSheet;
+for (const cacheDir of cacheDirs) {
+  if (!fs.existsSync(cacheDir)) continue;
+  for (const file of fs
+    .readdirSync(cacheDir)
+    .filter((name) => name.endsWith(".json"))) {
+    const sheet = JSON.parse(
+      fs.readFileSync(path.join(cacheDir, file), "utf8"),
+    ) as CachedSheet;
 
-  for (const task of sheet.tasks) {
-    const parsed = parseAbcd(task.tresc);
-    const answer = resolveCkeAnswer(task.rozwiazanie, parsed);
-    statuses[answer.status] += 1;
-    const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
-    expected.set(
-      id,
-      answer.status === "resolved" ? answer.correctIndex : null,
-    );
+    for (const task of sheet.tasks) {
+      const parsed = parseAbcd(task.tresc);
+      const answer = resolveCkeAnswer(task.rozwiazanie, parsed);
+      statuses[answer.status] += 1;
+      const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
+      expected.set(
+        id,
+        answer.status === "resolved" ? answer.correctIndex : null,
+      );
+    }
   }
 }
 

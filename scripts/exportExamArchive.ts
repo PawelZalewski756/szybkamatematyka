@@ -16,7 +16,10 @@ import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 import { bazaCategoryForCmsDzial } from "../lib/trening/taxonomy-bridge";
 import type { Task, TaskDifficulty } from "../lib/baza-zadan/types";
 
-const CACHE_DIR = path.resolve(process.cwd(), "data/cke-matura-cache");
+const CACHE_DIRS = [
+  path.resolve(process.cwd(), "data/cke-matura-cache"),
+  path.resolve(process.cwd(), "data/cke-e8-cache"),
+];
 const OUT_FILE = path.resolve(
   process.cwd(),
   "lib/baza-zadan/exams/cke-archive.generated.ts",
@@ -34,6 +37,7 @@ type CachedSheet = {
   nazwa: string;
   rok: number;
   miesiac: number;
+  typ?: "matura" | "egzamin-8";
   tasks: CachedTask[];
 };
 
@@ -43,6 +47,7 @@ export type ExamArchiveSheetMeta = {
   title: string;
   year: number;
   month: number;
+  kind: "matura" | "egzamin-8";
   taskIds: string[];
 };
 
@@ -66,6 +71,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   if (isSolutionPlaceholder(task.rozwiazanie)) return null;
 
   const parsedTask = parseAbcd(task.tresc);
+  const kind = sheet.typ === "egzamin-8" ? "egzamin-8" : "matura";
   const { prompt, choices, hasChoices } = parsedTask;
   const answer = resolveCkeAnswer(task.rozwiazanie, parsedTask);
   const dzial = task.dzial ?? inferDzialMatura(task.tresc, task.numer);
@@ -82,37 +88,40 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     title: `${sheet.nazwa} — zad. ${task.numer}`,
     category,
     difficulty: inferDifficulty(task.numer, hasChoices),
-    forPaths: ["liceum", "technikum", "zawodowa"],
+    forPaths:
+      kind === "egzamin-8"
+        ? ["klasa-7", "klasa-8"]
+        : ["liceum", "technikum", "zawodowa"],
     prompt,
     choices: choices.length >= 2 ? choices : [choices[0] ?? "—"],
     correctIndex: answer.status === "resolved" ? answer.correctIndex : null,
     explanation,
     solutionSteps: parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie],
     examSource: {
-      kind: "matura",
+      kind,
       year: sheet.rok,
       taskNumber: String(task.numer),
-      sessionLabel: `matura ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
+      sessionLabel:
+        kind === "egzamin-8"
+          ? `egzamin 8-klasisty ${monthLabel(sheet.miesiac)} ${sheet.rok}`
+          : `matura ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
     },
   };
 }
 
 function loadSheets(): CachedSheet[] {
-  if (!fs.existsSync(CACHE_DIR)) {
-    console.warn(`Brak katalogu ${CACHE_DIR}`);
-    return [];
-  }
-
-  const files = fs
-    .readdirSync(CACHE_DIR)
-    .filter((f) => f.endsWith(".json"))
-    .sort();
-
   const sheets: CachedSheet[] = [];
-  for (const file of files) {
-    const raw = fs.readFileSync(path.join(CACHE_DIR, file), "utf8");
-    const data = JSON.parse(raw) as CachedSheet;
-    if (data.tasks?.length > 0) sheets.push(data);
+  for (const cacheDir of CACHE_DIRS) {
+    if (!fs.existsSync(cacheDir)) continue;
+    const files = fs
+      .readdirSync(cacheDir)
+      .filter((file) => file.endsWith(".json"))
+      .sort();
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(cacheDir, file), "utf8");
+      const data = JSON.parse(raw) as CachedSheet;
+      if (data.tasks?.length > 0) sheets.push(data);
+    }
   }
   return sheets;
 }
@@ -145,6 +154,7 @@ function main(): void {
         title: sheet.nazwa,
         year: sheet.rok,
         month: sheet.miesiac,
+        kind: sheet.typ === "egzamin-8" ? "egzamin-8" : "matura",
         taskIds,
       });
     }

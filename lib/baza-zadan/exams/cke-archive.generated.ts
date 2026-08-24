@@ -18456,6 +18456,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2015 — poziom podstawowy",
     "year": 2015,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-maj-z01",
       "cke-m15-maj-z02",
@@ -18499,6 +18500,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2015 — poziom podstawowy",
     "year": 2015,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-probna-z01",
       "cke-m15-probna-z02",
@@ -18541,6 +18543,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — przykładowa 2015 — poziom podstawowy",
     "year": 2015,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-przykladowa-z01",
       "cke-m15-przykladowa-z02",
@@ -18583,6 +18586,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2016 — poziom podstawowy",
     "year": 2016,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m16-maj-z01",
       "cke-m16-maj-z02",
@@ -18626,6 +18630,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2017 — poziom podstawowy",
     "year": 2017,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m17-maj-z01",
       "cke-m17-maj-z02",
@@ -18669,6 +18674,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2018 — poziom podstawowy",
     "year": 2018,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m18-maj-z01",
       "cke-m18-maj-z02",
@@ -18712,6 +18718,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2019 — poziom podstawowy",
     "year": 2019,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m19-maj-z01",
       "cke-m19-maj-z02",
@@ -18755,6 +18762,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — czerwiec 2020 — poziom podstawowy",
     "year": 2020,
     "month": 6,
+    "kind": "matura",
     "taskIds": [
       "cke-m20-czerwiec-z01",
       "cke-m20-czerwiec-z02",
@@ -18798,6 +18806,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2020 — poziom podstawowy",
     "year": 2020,
     "month": 4,
+    "kind": "matura",
     "taskIds": [
       "cke-m20-probna-z01",
       "cke-m20-probna-z02",
@@ -18841,6 +18850,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2021 — poziom podstawowy",
     "year": 2021,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m21-maj-z01",
       "cke-m21-maj-z02",
@@ -18885,6 +18895,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2021 — poziom podstawowy",
     "year": 2021,
     "month": 3,
+    "kind": "matura",
     "taskIds": [
       "cke-m21-probna-z01",
       "cke-m21-probna-z02",
@@ -18929,6 +18940,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2022 — poziom podstawowy",
     "year": 2022,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m22-maj-z01",
       "cke-m22-maj-z02",
@@ -18973,6 +18985,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2023 — poziom podstawowy",
     "year": 2023,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-maj-z01",
       "cke-m23-maj-z02",
@@ -19013,6 +19026,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna wrzesień 2023 — poziom podstawowy",
     "year": 2023,
     "month": 9,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-probna-ix-z01",
       "cke-m23-probna-ix-z02",
@@ -19048,6 +19062,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna grudzień 2023 — poziom podstawowy",
     "year": 2023,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-probna-xii-z01",
       "cke-m23-probna-xii-z02",
@@ -19090,6 +19105,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — przykładowa 2023 — poziom podstawowy",
     "year": 2023,
     "month": 3,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-przykladowa-z01",
       "cke-m23-przykladowa-z02",
@@ -19129,6 +19145,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2024 — poziom podstawowy",
     "year": 2024,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m24-maj-z01",
       "cke-m24-maj-z02",
@@ -19169,6 +19186,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2025 — poziom podstawowy",
     "year": 2025,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m25-maj-z01",
       "cke-m25-maj-z02",

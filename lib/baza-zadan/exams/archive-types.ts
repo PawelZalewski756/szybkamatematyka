@@ -5,5 +5,6 @@ export type ExamArchiveSheetMeta = {
   title: string;
   year: number;
   month: number;
+  kind: "matura" | "egzamin-8";
   taskIds: string[];
 };

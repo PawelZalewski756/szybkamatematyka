@@ -24,6 +24,7 @@
     "sync:tasks-answers": "tsx scripts/syncTaskAnswers.ts",
     "audit:theory": "tsx scripts/auditTheoryCoverage.ts",
     "seed:cke": "node scripts/seedCKE.js",
+    "seed:cke-e8": "tsx scripts/seedCkeEgzamin8.ts",
     "seed:cke-matura": "tsx scripts/seedCkeMaturaAll.ts",
     "seed:cke-solutions": "tsx scripts/seedCkeMaturaAll.ts -- --fill-solutions --delay=2500",
     "seed:cke-overnight": "tsx scripts/overnightCkeGemini.ts",
