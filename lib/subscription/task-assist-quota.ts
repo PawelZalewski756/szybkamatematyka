@@ -156,14 +156,14 @@ export async function consumeAssistQuota(
     };
   }
 
-  const nextCount = used + 1;
-  const { error: updateError } = await sb
-    .from("profiles")
-    .update({
-      ai_assist_period: period,
-      ai_assist_count: nextCount,
-    })
-    .eq("id", userId);
+  const { data: consumed, error: updateError } = await sb.rpc(
+    "consume_ai_assist_quota",
+    {
+      p_user_id: userId,
+      p_period: period,
+      p_limit: FREE_MONTHLY_ASSIST_LIMIT,
+    },
+  );
 
   if (updateError) {
     console.error("[task-assist-quota] consume update failed:", updateError);
@@ -171,6 +171,15 @@ export async function consumeAssistQuota(
       ok: false,
       quota: freeQuota(period, used),
       error: "Nie udało się zarejestrować zapytania.",
+    };
+  }
+
+  const nextCount = Number(consumed);
+  if (!Number.isFinite(nextCount) || nextCount < 1) {
+    return {
+      ok: false,
+      quota: freeQuota(period, FREE_MONTHLY_ASSIST_LIMIT),
+      error: `Wykorzystałeś ${FREE_MONTHLY_ASSIST_LIMIT} darmowych zapytań w ${assistPeriodLabel(period)}. Plan Pro daje nielimitowany dostęp.`,
     };
   }
 

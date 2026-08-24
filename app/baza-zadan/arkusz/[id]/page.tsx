@@ -3,9 +3,9 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import {
-  getExamSheetById,
-  getTaskById,
-} from "@/lib/baza-zadan/catalog";
+  getClientExamSheetById,
+  getClientTaskById,
+} from "@/lib/baza-zadan/client-catalog";
 import Link from "next/link";
 import { use, useState } from "react";
 
@@ -16,7 +16,7 @@ type PageProps = {
 export default function ExamSheetPage({ params }: PageProps) {
   const { id } = use(params);
   const { markSolved, isSolved } = useSolvedTasks();
-  const sheet = getExamSheetById(id);
+  const sheet = getClientExamSheetById(id);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -34,14 +34,18 @@ export default function ExamSheetPage({ params }: PageProps) {
   }
 
   const taskId = sheet.taskIds[currentIndex];
-  const task = taskId ? getTaskById(taskId) : undefined;
+  const task = taskId ? getClientTaskById(taskId) : undefined;
   const total = sheet.taskIds.length;
+  const gradedTotal = sheet.taskIds.reduce((count, id) => {
+    const sheetTask = getClientTaskById(id);
+    return count + (sheetTask && sheetTask.correctIndex !== null ? 1 : 0);
+  }, 0);
   const progress = ((currentIndex + (picked !== null ? 1 : 0)) / total) * 100;
 
   const handlePick = (index: number) => {
     if (picked !== null || !task) return;
     setPicked(index);
-    if (index === task.correctIndex) {
+    if (task.correctIndex !== null && index === task.correctIndex) {
       setScore((s) => s + 1);
       markSolved(task.id);
     }
@@ -57,7 +61,8 @@ export default function ExamSheetPage({ params }: PageProps) {
   };
 
   if (finished) {
-    const pct = Math.round((score / total) * 100);
+    const pct =
+      gradedTotal > 0 ? Math.round((score / gradedTotal) * 100) : null;
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-12 text-center">
         <p className="text-6xl">📋</p>
@@ -65,10 +70,16 @@ export default function ExamSheetPage({ params }: PageProps) {
         <p className="mt-4 text-xl text-muted">
           Wynik:{" "}
           <span className="font-black text-success">
-            {score}/{total}
+            {score}/{gradedTotal}
           </span>{" "}
-          ({pct}%)
+          {pct === null ? "(bez zadań ocenianych)" : `(${pct}%)`}
         </p>
+        {gradedTotal < total && (
+          <p className="mt-2 text-sm text-muted">
+            Oceniono {gradedTotal} z {total} zadań. Pozostałe wymagają
+            sprawdzenia rozwiązania.
+          </p>
+        )}
         <div className="mt-8 flex flex-col gap-3">
           <button
             type="button"
@@ -142,7 +153,9 @@ export default function ExamSheetPage({ params }: PageProps) {
               className={`rounded-2xl border px-4 py-3 text-left font-bold text-foreground transition-colors ${
                 picked === null
                   ? "border-surface-border bg-surface hover:border-accent/40"
-                  : index === task.correctIndex
+                  : task.correctIndex === null && index === picked
+                    ? "border-accent/50 bg-accent/10"
+                    : index === task.correctIndex
                     ? "border-success/50 bg-success/20"
                     : index === picked
                       ? "border-danger/50 bg-danger/20"
@@ -156,6 +169,12 @@ export default function ExamSheetPage({ params }: PageProps) {
 
         {picked !== null && (
           <div className="mt-6">
+            {task.correctIndex === null && (
+              <p className="mb-2 text-sm font-semibold text-accent">
+                To zadanie nie jest automatycznie punktowane — porównaj tok
+                rozwiązania.
+              </p>
+            )}
             <p className="text-sm text-muted">{task.explanation}</p>
             {task.solutionSteps && task.solutionSteps.length > 0 && (
               <SolutionSteps

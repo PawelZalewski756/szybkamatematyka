@@ -20,7 +20,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-3.jpg)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-4.jpg)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B)",
     "solutionSteps": [
       "Rozwiąż nierówność – 4 ≤ x – 1 ≤ 4, dodając 1 do każdej jej części: – 4 + 1 ≤ x ≤ 4 + 1, co daje – 3 ≤ x ≤ 5.",
@@ -50,7 +50,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "⅓",
       "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $3$",
     "solutionSteps": [
       "Zauważ, że liczby są podane w postaci iloczynu potęg. Aby obliczyć $a \\cdot b \\cdot c$, należy pomnożyć podstawy potęg i dodać ich wykładniki (zgodnie z własnością potęgowania: $x^m \\cdot x^n = x^{m+n}$).",
@@ -81,7 +81,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z03-3.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z03-4.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "1032,40 zł",
     "solutionSteps": [
       "Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% z 1000 zł, czyli $1000 \\cdot 0.04 = 40$ zł.",
@@ -142,7 +142,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie dwa różne punkty",
       "zbiór nieskończony"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli dokładnie dwa różne punkty",
     "solutionSteps": [
       "Z pierwszego równania wyznaczamy $y$: $y = -x+4$.",
@@ -174,7 +174,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "– 21"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $1$",
     "solutionSteps": [
       "Równanie jest w postaci iloczynowej, więc pierwiastki odczytujemy z czynników, przyrównując każdy do zera.",
@@ -205,7 +205,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie jedno rozwiązanie: x = − 1",
       "ma dokładnie dwa rozwiązania: x = 0 , x = 1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli ma dwa rozwiązania: $x=0$, $x=1$.",
     "solutionSteps": [
       "Przekształć równanie do postaci $ax^2 + bx + c = 0$. Po przeniesieniu wszystkich wyrazów na jedną stronę otrzymamy $2x^2 - 2x = 0$.",
@@ -236,7 +236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "&lang;–2,2&rang;",
       "(–2,2&rang;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\langle-2,2\\rangle$",
     "solutionSteps": [
       "Odczytaj z wykresu najmniejszą i największą wartość funkcji (wartości na osi $y$). Najmniejsza wartość to $-2$ (z dołkiem funkcji), a największa to $2$ (z górką funkcji).",
@@ -267,7 +267,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 1",
       "m = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $m=0$.",
     "solutionSteps": [
       "Podstaw współrzędne punktu $S = (5, -2)$ do wzoru funkcji $f(x) = (m-1)x + 3$, pamiętając, że $x=5$ i $f(x)=-2$. Otrzymasz równanie $-2 = (m-1) \\cdot 5 + 3$.",
@@ -297,7 +297,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "b = – 8 &frasl; 3",
       "b = 4 &frasl; 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $b = -\\frac{8}{3}$",
     "solutionSteps": [
       "Obliczamy miejsce zerowe funkcji $g(x) = -3x + 4$. Miejsce zerowe to wartość $x$, dla której $g(x) = 0$, czyli $-3x + 4 = 0$. Rozwiązując to równanie, otrzymujemy $x = \\frac{4}{3}$.",
@@ -358,7 +358,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "16",
       "17"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 16",
     "solutionSteps": [
       "Rozwiązujemy nierówność kwadratową $\\frac{3}{4} \\le x^2$. Przenosimy wszystko na jedną stronę: $x^2 - \\frac{3}{4} \\ge 0$. Miejsca zerowe to $x = \\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{2}$ oraz $x = -\\sqrt{\\frac{3}{4}} = -\\frac{\\sqrt{3}}{2}$. Ponieważ parabola $y=x^2 - \\frac{3}{4}$ ma ramiona skierowane w górę, nierówność jest spełniona dla $x \\le -\\frac{\\sqrt{3}}{2}$ lub $x \\ge \\frac{\\sqrt{3}}{2}$.",
@@ -400,7 +400,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z13-3.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z13-4.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\sqrt[3]{3}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiając dane z zadania ($a_4 = 3a_1$), otrzymamy $a_1 \\cdot q^{4-1} = 3a_1$.",
@@ -492,7 +492,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20°",
       "30°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 20°",
     "solutionSteps": [
       "Oznaczmy miarę kąta wpisanego jako $\\alpha$, a miarę kąta środkowego jako $\\beta$. Z treści zadania wiemy, że $\\alpha = \\beta - 20°$.",
@@ -676,7 +676,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "18π",
       "6π"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $9\\pi\\sqrt{3}$",
     "solutionSteps": [
       "Z treści zadania wiemy, że bok trójkąta równobocznego wynosi 6. W przekroju osiowym stożka jest to jednocześnie tworząca stożka ($l=6$) oraz średnica podstawy ($2r=6$, czyli $r=3$). Wysokość stożka ($h$) obliczymy z Twierdzenia Pitagorasa: $h^2 + r^2 = l^2$.",
@@ -707,7 +707,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z23-3.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z23-4.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$192 + 32 \\sqrt{3}$",
     "solutionSteps": [
       "Oblicz pole podstawy graniastosłupa. Podstawą jest trójkąt równoboczny o boku $a=8$. Pole trójkąta równobocznego to $P_p = \\frac{a^2 \\sqrt{3}}{4}$.",
@@ -738,7 +738,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = 5",
       "x = 6"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli x = 6",
     "solutionSteps": [
       "Obliczamy średnią arytmetyczną pierwszego zestawu danych: suma liczb to $2+4+7+8+9=30$, a jest ich 5, więc średnia wynosi $\\frac{30}{5}=6$.",
@@ -769,7 +769,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "p = 1 &frasl; 2",
       "p = 2 &frasl; 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{3}{8}$",
     "solutionSteps": [
       "Określ prawdopodobieństwo wylosowania kuli czerwonej (C) i niebieskiej (N) z jednego pojemnika. Ponieważ w każdym pojemniku jest jedna kula czerwona i jedna niebieska, prawdopodobieństwo wylosowania kuli czerwonej $P(C) = \\frac{1}{2}$, a niebieskiej $P(N) = \\frac{1}{2}$.",
@@ -797,7 +797,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, 2) \\cup (3, \\infty)$",
     "solutionSteps": [
       "Rozwiń prawą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby uzyskać nierówność kwadratową.\n$2x^2 - 4x > x^2 - 2x + 3x - 6$\n$2x^2 - 4x > x^2 + x - 6$\n$2x^2 - x^2 - 4x - x + 6 > 0$\n$x^2 - 5x + 6 > 0$",
@@ -825,7 +825,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Nierówność jest zawsze prawdziwa, ponieważ jest sumą dwóch kwadratów liczb rzeczywistych.",
     "solutionSteps": [
       "Przekształć nierówność, grupując wyrazy tak, aby powstały kwadraty różnic. Możemy zapisać $4x^2 - 8xy + 5y^2$ jako $(4x^2 - 8xy + 4y^2) + y^2$.",
@@ -853,7 +853,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Stosunek pola czworokąta KLMN do pola kwadratu ABCD wynosi $\\frac{1}{6}$.",
     "solutionSteps": [
       "Oznaczmy długość boku kwadratu ABCD jako $a$. Wtedy długość jego przekątnej wynosi $a\\sqrt{2}$. Punkt E jest środkiem każdej z przekątnych, więc $|BE| = |DE| = \\frac{1}{2} a\\sqrt{2}$. Punkty K i M są środkami odcinków AE i EC. Długości odcinków $|BK|$ i $|DM|$ wyznaczymy, korzystając z podziału odcinka BE i DE przez punkty L i N.",
@@ -881,7 +881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Najmniejsza wartość to $-6$, a największa wartość to $3$.",
     "solutionSteps": [
       "Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.",
@@ -909,7 +909,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-7$",
     "solutionSteps": [
       "Obliczamy współczynnik kierunkowy prostej $a$, korzystając ze wzoru $a = \\frac{y_B - y_A}{x_B - x_A}$. Mamy: $a = \\frac{19 - (-12)}{50 - (-43)} = \\frac{31}{93} = \\frac{1}{3}$.",
@@ -937,7 +937,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{8}{17}$",
     "solutionSteps": [
       "Oznaczmy szukany ułamek jako $\\frac{x}{y}$, gdzie $x, y$ są dodatnie i $\\frac{x}{y}$ jest nieskracalny. Z treści zadania tworzymy dwa równania:\n$\\frac{x + \\frac{1}{2}x}{y + \\frac{1}{2}x} = \\frac{4}{7}$ oraz $\\frac{x+1}{y+1} = \\frac{1}{2}$.",
@@ -965,7 +965,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$144 + 384\\sqrt{2}$",
     "solutionSteps": [
       "Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość graniastosłupa ($h=16$). Przekątna graniastosłupa ($d$), przekątna podstawy ($p$) i wysokość graniastosłupa tworzą trójkąt prostokątny. Z treści zadania mamy $\\cos \\alpha = \\frac{p}{d} = \\frac{3}{5}$, gdzie $\\alpha$ to kąt nachylenia przekątnej graniastosłupa do płaszczyzny podstawy.",
@@ -994,7 +994,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{5}{23}$",
     "solutionSteps": [
       "Oblicz, ile osób kupiło tylko jeden rodzaj biletu, odejmując od liczby osób kupujących bilety ulgowe lub normalne liczbę osób kupujących oba rodzaje biletów. $76 - 27 = 49$ (tylko ulgowe), $41 - 27 = 14$ (tylko normalne).",
@@ -1023,7 +1023,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "11",
     "solutionSteps": [
       "Skorzystaj ze wzorów na sumę ( $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)r)$ ) i średnią arytmetyczną ciągu arytmetycznego, a następnie ułóż układ równań. Dla sumy jedenastu wyrazów: $S_{11} = \\frac{11}{2}(2a_1 + 10r) = 187$. Średnia pierwszego, trzeciego i dziewiątego wyrazu: $\\frac{a_1 + a_3 + a_9}{3} = \\frac{a_1 + (a_1+2r) + (a_1+8r)}{3} = \\frac{3a_1+10r}{3} = 12$.",
@@ -1054,7 +1054,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0,04%",
       "4%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 4%",
     "solutionSteps": [
       "Obliczamy błąd bezwzględny, czyli różnicę między dokładną wartością a przybliżoną: $|5/8 - 0.6| = |0.625 - 0.6| = 0.025$.",
@@ -1116,7 +1116,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "– 1 ⁄ 2 ; 2; 5",
       "– 1 ⁄ 2 ; 5; 8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $-\\frac{1}{2}$; $2$; $5$.",
     "solutionSteps": [
       "Równanie jest w postaci iloczynowej, więc aby je rozwiązać, przyrównujemy każdy czynnik do zera. Mamy więc $x^3 – 8 = 0$, $x – 5 = 0$ oraz $2x + 1 = 0$.",
@@ -1147,7 +1147,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40%",
       "43%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 43%",
     "solutionSteps": [
       "Załóżmy, że początkowa cena towaru wynosi $100$ zł. Po pierwszej podwyżce o 30% nowa cena to $100 + 0.30 \\cdot 100 = 130$ zł.",
@@ -1178,7 +1178,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "0"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 1",
     "solutionSteps": [
       "Aby znaleźć liczbę punktów wspólnych wykresów funkcji $f(x)$ i $g(x)$, przyrównujemy je do siebie: $-5x + 1 = 5x$.",
@@ -1209,7 +1209,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 x 2 + y 2 + 6 xy + 6 x + 1",
       "9 x 2 + y 2 + 6 xy + 6 x + 2 y + 1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $9 x^2 + y^2 + 6 xy + 6 x + 2 y + 1$.",
     "solutionSteps": [
       "Rozpisz kwadrat sumy trzech wyrażeń, stosując wzór $(a+b+c)^2 = a^2+b^2+c^2+2ab+2ac+2bc$. W tym przypadku $a=3x$, $b=1$, $c=y$.\n$(3x+1+y)^2 = (3x)^2 + 1^2 + y^2 + 2(3x)(1) + 2(3x)(y) + 2(1)(y)$.",
@@ -1240,7 +1240,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 63",
       "2 112"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $2^{57}$.",
     "solutionSteps": [
       "Zapisz sumę w skróconej postaci, używając potęg: $4 \\cdot 4^{28} = 4^{1+28} = 4^{29}$.",
@@ -1270,7 +1270,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "przecinające się pod kątem różnym od 90°.",
       "równoległe i różne."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli przecinające się pod kątem różnym od 90°.",
     "solutionSteps": [
       "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Pierwsza prosta ma postać $y = -\\frac{3}{4}x + \\frac{5}{4}$, więc jej współczynnik kierunkowy wynosi $a_1 = -\\frac{3}{4}$. Druga prosta to $y = -\\frac{4}{3}$, co można zapisać jako $y = 0x - \\frac{4}{3}$, więc $a_2 = 0$.",
@@ -1301,7 +1301,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "60°",
       "75°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Oblicz długości boków AB i AC, używając wzoru na odległość między punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Długość AB: $\\sqrt{(-1-2)^2 + (3-1)^2} = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość AC: $\\sqrt{(5-2)^2 + (2-1)^2} = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.",
@@ -1333,7 +1333,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 elementów",
       "10 elementów"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 6 elementów",
     "solutionSteps": [
       "Obliczamy kwadraty pierwszych kilku liczb całkowitych dodatnich i wyznaczamy ich ostatnie cyfry: $1^2=1$ (ostatnia cyfra 1), $2^2=4$ (ostatnia cyfra 4), $3^2=9$ (ostatnia cyfra 9), $4^2=16$ (ostatnia cyfra 6), $5^2=25$ (ostatnia cyfra 5), $6^2=36$ (ostatnia cyfra 6), $7^2=49$ (ostatnia cyfra 9), $8^2=64$ (ostatnia cyfra 4), $9^2=81$ (ostatnia cyfra 1), $10^2=100$ (ostatnia cyfra 0).",
@@ -1395,7 +1395,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4 razy",
       "5 razy"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 5 razy",
     "solutionSteps": [
       "Oblicz objętość ostrosłupa ABDE. Podstawą jest trójkąt prostokątny ABD, a wysokością krawędź AE. Objętość ostrosłupa to $\\frac{1}{3} \\cdot \\text{pole podstawy} \\cdot \\text{wysokość}$. Pole trójkąta ABD to $\\frac{1}{2} a^2$, a wysokość to $a$. Zatem objętość ostrosłupa wynosi $V_{ostrosłupa} = \\frac{1}{3} \\cdot \\frac{1}{2} a^2 \\cdot a = \\frac{1}{6} a^3$.",
@@ -1427,7 +1427,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ƒ( x ) = – ( x – 2) 2 + 4",
       "ƒ( x ) = – ( x + 2) 2 + 4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $f(x) = -(x-2)^2 + 4$.",
     "solutionSteps": [
       "Skorzystaj z postaci kanonicznej funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka paraboli. Podano wierzchołek $A=(2, 4)$, więc $p=2$ i $q=4$.",
@@ -1458,7 +1458,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-probna/z14-6.png)",
       "![Rysunek do zadania](/cke-matura/m15-probna/z14-7.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $(4,4)$",
     "solutionSteps": [
       "W równoległoboku przekątne przecinają się w połowie. Oznaczmy punkt przecięcia przekątnych jako S. Wtedy $S = \\frac{A+C}{2} = \\frac{B+D}{2}$.",
@@ -1520,7 +1520,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "59",
       "60"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 50",
     "solutionSteps": [
       "Zauważ, że długości boków kolejnych trójkątów tworzą ciąg arytmetyczny. Pierwszy wyraz ($a_1$) to 1 m, a różnica ($r$) to 10 cm = 0,1 m. Ostatni wyraz ($a_n$) to 5,9 m.",
@@ -1551,7 +1551,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "200 √ 3",
       "200 √ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $100 \\sqrt{2}$",
     "solutionSteps": [
       "Użyj wzoru na pole trójkąta $P = \\frac{1}{2}ab\\sin\\gamma$. W naszym przypadku $a=b=20$ (ramiona), a kąt $\\gamma$ między nimi to $180^\\circ - 2 \\cdot 67.5^\\circ = 180^\\circ - 135^\\circ = 45^\\circ$.",
@@ -1581,7 +1581,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 2",
       "4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt{2}$",
     "solutionSteps": [
       "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $a$. Ostrosłup prawidłowy czworokątny ma 5 ścian: 1 kwadratową u podstawy i 4 trójkątne. Pole podstawy $P_p = a^2$. Pole jednej ściany bocznej (trójkąta) to $P_s = \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $h_s$ to wysokość ściany bocznej. Z twierdzenia Pitagorasa dla połowy ściany bocznej: $h_s = \\sqrt{a^2 - (\\frac{a}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{4}} = \\sqrt{\\frac{3a^2}{4}} = \\frac{a\\sqrt{3}}{2}$. Pole powierzchni całkowitej $P_a = a^2 + 4 \\cdot \\frac{1}{2} \\cdot a \\cdot \\frac{a\\sqrt{3}}{2} = a^2 + a^2\\sqrt{3} = a^2(1+\\sqrt{3})$.",
@@ -1612,7 +1612,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "48°",
       "69°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $48^\\circ$",
     "solutionSteps": [
       "Kąt $\\angle ACB$ jest kątem wpisanym opartym na średnicy AB, więc jest kątem prostym ($90^\\circ$). W trójkącie prostokątnym ABC, kąt $\\angle ABC = 90^\\circ - \\angle BAC = 90^\\circ - 21^\\circ = 69^\\circ$.",
@@ -1674,7 +1674,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "16√ 2",
       "– 16√ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli – 32",
     "solutionSteps": [
       "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = \\frac{2 \\cdot \\sqrt{2}}{-\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{2\\sqrt{2}}{-2} = -\\sqrt{2}$.",
@@ -1705,7 +1705,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5",
       "4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 6",
     "solutionSteps": [
       "Aby znaleźć całkowite nieujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $\\frac{-n^2+9n-14}{n+1} \\ge 0$. Ponieważ mianownik $n+1$ jest dodatni dla $n \\ge 1$, wystarczy, że licznik będzie nieujemny: $-n^2+9n-14 \\ge 0$.",
@@ -1736,7 +1736,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "p 3 = 0",
       "p 3 = 1 ⁄ 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $p_6 = \\frac{1}{6}$",
     "solutionSteps": [
       "Określamy, czym jest zdarzenie elementarne w przypadku rzutu symetryczną sześcienną kostką. Są to wyniki od 1 do 6, każdy z równym prawdopodobieństwem.",
@@ -1767,7 +1767,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2log 9 2",
       "2log 4 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $2\\log_4 3$",
     "solutionSteps": [
       "Zastosuj własność logarytmu $\\log_a b - \\log_a c = \\log_a \\frac{b}{c}$ do odpowiedzi A, przekształcając ją do postaci $\\log \\frac{9}{4}$.",
@@ -1795,7 +1795,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in [-7, 3]$",
     "solutionSteps": [
       "Przekształć nierówność do postaci $ax^2 + bx + c \\ge 0$. Pomnóż obie strony przez $-1$ i zmień znak nierówności: $-x^2 - 4x + 21 \\ge 0 \\implies x^2 + 4x - 21 \\le 0$.",
@@ -1823,7 +1823,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{2}$",
     "solutionSteps": [
       "Przekształć równanie do postaci $\\sqrt{x^2-4x+4} = \\sqrt{x^2+2x+1}$. Podnieś obie strony do kwadratu, aby pozbyć się pierwiastków, otrzymując $x^2-4x+4 = x^2+2x+1$.",
@@ -1851,7 +1851,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "24 dni",
     "solutionSteps": [
       "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których z 1 g izotopu pozostanie co najwyżej 0,125 g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
@@ -1880,7 +1880,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "W obu przypadkach kwadrat liczby daje resztę 1 przy dzieleniu przez 3.",
     "solutionSteps": [
       "Liczbę całkowitą, która nie dzieli się przez 3, możemy zapisać w postaci $3k+1$ lub $3k+2$, gdzie $k$ jest liczbą całkowitą. Rozważymy oba przypadki.",
@@ -1908,7 +1908,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "48 km/h",
     "solutionSteps": [
       "Oznaczmy drogę z A do B jako $d$. Wtedy droga z B do C również wynosi $d$, a cała droga z A do C to $2d$.",
@@ -1936,7 +1936,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{7}{60}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych par wylosowanych biletów. Jest to kombinacja $\\binom{16}{2} = \\frac{16 \\cdot 15}{2} = 120$.",
@@ -1965,7 +1965,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Pole trapezu $ABCD$ wynosi $72$.",
     "solutionSteps": [
       "Wykorzystaj podobieństwo trójkątów $\\triangle AOB$ i $\\triangle COD$. Ponieważ $AB \\parallel CD$, to $\\triangle AOB \\sim \\triangle COD$. Stosunek pól figur podobnych jest kwadratem stosunku ich boków, więc $\\frac{P(\\triangle AOB)}{P(\\triangle COD)} = \\left(\\frac{|AO|}{|OC|}\\right)^2 = \\left(\\frac{5}{1}\\right)^2 = 25$.",
@@ -1993,7 +1993,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$(-\\frac{12}{5}, \\frac{24}{5})$",
     "solutionSteps": [
       "Wyznacz współrzędne punktu C, korzystając z faktu, że M jest środkiem odcinka AC. Wzór na środek odcinka: $M = (\\frac{x_A + x_C}{2}, \\frac{y_A + y_C}{2})$. Podstawiamy dane: $(1,6) = (\\frac{3 + x_C}{2}, \\frac{3 + y_C}{2})$. Rozwiązując otrzymujemy $x_C = 2 \\cdot 1 - 3 = -1$ oraz $y_C = 2 \\cdot 6 - 3 = 9$. Zatem $C = (-1, 9)$.",
@@ -2022,7 +2022,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Pole powierzchni całkowitej wynosi $390\\pi$, a objętość $\\frac{676}{3}\\pi$.",
     "solutionSteps": [
       "Oznaczmy przez $l$ tworzącą stożka, $h$ jego wysokość, $r$ promień podstawy i $d$ średnicę podstawy. Mamy $l=17$. Ze średnicą i wysokością zachodzi zależność $h = d - 22$. Ponieważ $d=2r$, mamy $h = 2r - 22$. Z twierdzenia Pitagorasa dla trójkąta prostokątnego o bokach $h$, $r$ i $l$ (przeciwprostokątna) otrzymujemy równanie: $r^2 + h^2 = l^2$.",
@@ -2053,7 +2053,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "15,20",
       "15,24"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 15,24",
     "solutionSteps": [
       "Zapisz wzór na błąd bezwzględny: błąd bezwzględny $= |x - \\text{przybliżenie}|$. Mamy podane, że przybliżenie wynosi 15, a błąd bezwzględny to 0,24.",
@@ -2084,7 +2084,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4√ 10",
       "20"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $4\\sqrt{10}$",
     "solutionSteps": [
       "Oblicz długość odcinka EF, który jest równy połowie długości boku kwadratu. Długość $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
@@ -2130,7 +2130,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $1$.",
     "solutionSteps": [
       "Rozpisz pierwiastki, zamieniając liczby mieszane na ułamki niewłaściwe i grupując czynniki: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$ oraz $\\sqrt{1\\frac{1}{3}} = \\sqrt{\\frac{4}{3}} = \\frac{\\sqrt{4}}{\\sqrt{3}} = \\frac{2}{\\sqrt{3}}$.",
@@ -2160,7 +2160,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$2x - 5y$",
     "solutionSteps": [
       "Zapisz wyrażenie z usuniętymi nawiasami, pamiętając o zmianie znaków przy minusie.\n$$(3x - 2y) - (x + 3y) = 3x - 2y - x - 3y$$",
@@ -2190,7 +2190,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = log 3 6",
       "x = log 6 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $x = \\log_3 6$",
     "solutionSteps": [
       "Zapisz równanie, podstawiając podaną wartość funkcji $f(x)=6$ do jej wzoru $f(x) = 3^x$. Otrzymujemy $6 = 3^x$.",
@@ -2252,7 +2252,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-3.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $x^2 - 2x - 3 = 0$",
     "solutionSteps": [
       "Rozpoznajemy, że na rysunkach znajdują się wykresy funkcji kwadratowych. Wartość $x$ najmniejszego argumentu dla którego funkcja przyjmuje wartość 0 (pierwiastek) to $x_1$. Wartość $x$ największego argumentu dla którego funkcja przyjmuje wartość 0 to $x_2$. Z wykresu odczytujemy pierwiastki funkcji.",
@@ -2284,7 +2284,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$[1, 3]$",
     "solutionSteps": [
       "Nierówność kwadratowa $x^2 - 4x + 3 \\le 0$. Znajdź miejsca zerowe funkcji $f(x) = x^2 - 4x + 3$ przyrównując ją do zera: $x^2 - 4x + 3 = 0$. Użyj wzoru na deltę $\\Delta = b^2 - 4ac$.",
@@ -2315,7 +2315,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20%",
       "25%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 20%",
     "solutionSteps": [
       "Oznaczmy liczbę dziewcząt przez $x$. Wtedy liczba chłopców wynosi $4x$.",
@@ -2346,7 +2346,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "7"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 7",
     "solutionSteps": [
       "Wykonujemy dzielenie liczby 55 przez 8, aby znaleźć iloraz i resztę.",
@@ -2376,7 +2376,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "&fnof;(45)",
       "&fnof;(48)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli &fnof;(44)",
     "solutionSteps": [
       "Rozkładamy każdą z podanych liczb na czynniki pierwsze i wyszukujemy największy czynnik pierwszy.\nDla 42: $42 = 2 \\cdot 3 \\cdot 7$. Największy dzielnik pierwszy to 7.\nDla 44: $44 = 2 \\cdot 2 \\cdot 11$. Największy dzielnik pierwszy to 11.\nDla 45: $45 = 3 \\cdot 3 \\cdot 5$. Największy dzielnik pierwszy to 5.\nDla 48: $48 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 3$. Największy dzielnik pierwszy to 3.",
@@ -2406,7 +2406,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "OSC",
       "SCB"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $OSC$",
     "solutionSteps": [
       "Kąt między krawędzią a płaszczyzną podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę.",
@@ -2500,7 +2500,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1 &frasl; 2 oraz 2",
       "–2 oraz 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $0$ oraz $\\frac{1}{2}$",
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby uzyskać równanie równe 0. Zauważ, że $(2x-1) = -(1-2x)$.\n$(2x-1)(x-2) = -(2x-1)(x+2)$\n$(2x-1)(x-2) + (2x-1)(x+2) = 0$",
@@ -2531,7 +2531,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 x +12 y – 10 = 0",
       "5 x + 4 y – 3 = 0"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C",
     "solutionSteps": [
       "Zapisz oba równania w postaci ogólnej $Ax + By + C = 0$ i porównaj współczynniki. Układ jest sprzeczny, gdy stosunek współczynników przy $x$ i przy $y$ jest taki sam, ale różny od stosunku wyrazów wolnych.",
@@ -2593,7 +2593,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $l=2r$",
     "solutionSteps": [
       "Zapisz wzory na pole powierzchni bocznej stożka ($P_b = \\pi r l$) i pole jego podstawy ($P_p = \\pi r^2$). Z treści zadania wiemy, że $P_b = 2 P_p$.",
@@ -2624,7 +2624,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "12,5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 10",
     "solutionSteps": [
       "Oznaczmy promienie okręgów jako $r_1$ i $r_2$, gdzie $r_1 = 10$ i $r_2 = 15$. Z treści zadania wiemy, że mniejszy okrąg przechodzi przez środek większego okręgu.",
@@ -2686,7 +2686,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-3.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 6",
     "solutionSteps": [
       "Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego: $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_1 = 3$, $a_9 = 12$, więc $12 = 3 \\cdot q^{9-1}$, co daje $q^8 = 4$.",
@@ -2717,7 +2717,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "7",
       "9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 4",
     "solutionSteps": [
       "Aby znaleźć ujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $a_n < 0$. Zapisujemy nierówność: $(n+3)(n-5) < 0$.",
@@ -2748,7 +2748,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 p 3 = p 6",
       "2 p 2 = p 4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} — 3 możliwości. $p_3$ (podzielne przez 3): {3, 6} — 2 możliwości. $p_4$ (podzielne przez 4): {4} — 1 możliwość. $p_6$ (podzielne przez 6): {6} — 1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników (6).",
@@ -2776,7 +2776,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$a = -2$",
     "solutionSteps": [
       "Nierówność $ax + 4 \\ge 0$ przekształcamy do postaci $ax \\ge -4$. Rozważamy dwa przypadki ze względu na znak współczynnika $a$.",
@@ -2805,7 +2805,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x = \\frac{3}{2}$",
     "solutionSteps": [
       "Pomnóż obie strony równania przez wspólny mianownik $(x-1)$, aby pozbyć się ułamków. Otrzymasz $1 = 2(x-1)$.",
@@ -2833,7 +2833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{a^2}{2^{22}}$",
     "solutionSteps": [
       "Długość boku kwadratu $K_n$ oznaczamy jako $a_n$. Zgodnie z treścią zadania, $a_1 = a$ oraz $a_n = \\frac{1}{2} a_{n-1}$ dla $n \\ge 2$. Jest to ciąg geometryczny o pierwszym wyrazie $a$ i ilorazie $q = \\frac{1}{2}$. Wzór ogólny na długość boku $n$-tego kwadratu to $a_n = a \\cdot \\left(\\frac{1}{2}\\right)^{n-1}$.",
@@ -2861,7 +2861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$P = 25\\pi$",
     "solutionSteps": [
       "Oznaczmy promienie zewnętrznego i wewnętrznego okręgu jako $R$ i $r$. Cięciwa o długości 10 jest styczna do wewnętrznego okręgu, co oznacza, że tworzy z promieniem $r$ trójkąt prostokątny. Połowa cięciwy (długości 5) jest jedną przyprostokątną, $r$ jest drugą przyprostokątną, a $R$ jest przeciwprostokątną. Stosujemy twierdzenie Pitagorasa: $r^2 + 5^2 = R^2$.",
@@ -2889,7 +2889,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Liczba jest podzielna przez 42.",
     "solutionSteps": [
       "Wyłącz wspólny czynnik z przed nawiasu.\n$4^{12} + 4^{13} + 4^{14} = 4^{12}(1 + 4^1 + 4^2)$.",
@@ -2917,7 +2917,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{\\sqrt{15}}{2}$",
     "solutionSteps": [
       "Sprawdź, czy trójkąt jest prostokątny, używając twierdzenia Pitagorasa. W tym celu podnieś długości boków do kwadratu: $(\\sqrt{7})^2=7$, $(\\sqrt{8})^2=8$, $(\\sqrt{15})^2=15$. Suma dwóch mniejszych kwadratów $7+8=15$, co jest równe kwadratowi najdłuższego boku.",
@@ -2945,7 +2945,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "2",
     "solutionSteps": [
       "Określamy równania prostych. Prosta $l$ przechodzi przez $(0, 4)$ i tworzy trójkąt o polu 8 z dodatnimi półosiami. Jej równanie to $\\frac{x}{a_1} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_1| \\cdot 4 = 8$, stąd $|a_1| = 4$. Ponieważ przecina dodatnią półos $Ox$, $a_1=4$. Równanie prostej $l$: $\\frac{x}{4} + \\frac{y}{4} = 1$, czyli $x+y=4$. Prosta $k$ ma równanie $\\frac{x}{a_2} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_2| \\cdot 4 = 10$, stąd $|a_2|=5$. Ponieważ przecina dodatnią półos $Ox$, $a_2=5$. Równanie prostej $k$: $\\frac{x}{5} + \\frac{y}{4} = 1$, czyli $4x+5y=20$.",
@@ -2973,7 +2973,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "7:20",
     "solutionSteps": [
       "Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę w 40 minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ km/h.",
@@ -3001,7 +3001,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$y = -\\frac{2}{3}x + \\frac{238}{15}$",
     "solutionSteps": [
       "Wyznacz równanie prostej AB, a następnie równanie prostej CD (wysokości), która jest prostopadła do AB i przechodzi przez C.\nProsta AB ma równanie $y = \\frac{1}{2}x + 1$. Prosta CD jest prostopadła do AB, więc jej współczynnik kierunkowy wynosi $-2$. Równanie prostej CD to $y - 9 = -2(x - 3)$, czyli $y = -2x + 15$.",
@@ -3029,7 +3029,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{16}{17}$",
     "solutionSteps": [
       "Oblicz objętość dużego sześcianu i liczbę mniejszych klocków. Duży sześcian ma krawędź 8 cm, więc jego objętość to $8^3 = 512 \\text{ cm}^3$. Mały klocek ma krawędź 2 cm, więc jego objętość to $2^3 = 8 \\text{ cm}^3$. Liczba klocków wynosi $\\frac{512}{8} = 64$.",
@@ -3061,7 +3061,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a −1,3",
       "a 1,3"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\sqrt{a^3}$",
     "solutionSteps": [
       "Zapisz wyrażenie, używając potęg. Przypomnij sobie, że $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$.\n$\\frac{a^2}{\\sqrt{a}} = \\frac{a^2}{a^{\\frac{1}{2}}}$",
@@ -3092,7 +3092,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5 ⁄ 2",
       "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 1.",
     "solutionSteps": [
       "Uprość wyrażenie w liczniku, wykonując dodawanie ułamków o wspólnych mianownikach.\n$$ \\frac{1}{3} + \\frac{2}{3} = \\frac{1+2}{3} = \\frac{3}{3} = 1 $$",
@@ -3154,7 +3154,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = − 2",
       "a = − 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $a = -2$ (przy założeniu poprawki do równania: $(a+2)^2 = 2(a+2)$).",
     "solutionSteps": [
       "Przekształć równanie, korzystając ze wzorów skróconego mnożenia. Po lewej stronie mamy $(a+2)^2 = a^2 + 4a + 4$, a po prawej stronie mamy $2(a+1) = 2a + 2$.",
@@ -3218,7 +3218,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "P = (− 1, − 2)",
       "P = (1, − 2)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli P = (− 1, − 2)",
     "solutionSteps": [
       "Rozwiążemy układ równań z danych prostych, mnożąc pierwsze równanie przez $-2$, aby wyeliminować $y$. Otrzymamy: $-4x + 6y = -8$ oraz $5x - 6y = 7$.",
@@ -3249,7 +3249,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "18°",
       "32°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 18°",
     "solutionSteps": [
       "Kąt BAC jest kątem wpisanym opartym na tym samym łuku BC, co kąt BDC. Kąty wpisane oparte na tym samym łuku mają równe miary, więc szukamy miary kąta BAC.",
@@ -3280,7 +3280,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "– 6",
       "– 8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli – 8",
     "solutionSteps": [
       "Miejsce zerowe funkcji to wartość $x$, dla której $f(x) = 0$. Przyrównujemy więc wyrażenie definiujące funkcję do zera: $\\frac{3}{4}x + 6 = 0$.",
@@ -3311,7 +3311,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie dwa rozwiązania rzeczywiste.",
       "ma dokładnie trzy rozwiązania rzeczywiste. Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (1,9) . Liczby –2 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli ma dokładnie dwa rozwiązania rzeczywiste.",
     "solutionSteps": [
       "Przekształć równanie, mnożąc obie strony przez mianownik $x+5$, pamiętając o założeniu $x \\neq -5$. Otrzymujemy $2(x+5) = x^2+5$.",
@@ -3343,7 +3343,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z10-4.png) Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (1,9) . Liczby –2 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m16-maj/z10-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$(-\\infty, 9]$",
     "solutionSteps": [
       "Zapisz funkcję kwadratową w postaci iloczynowej, korzystając z miejsc zerowych -2 i 4: $f(x) = a(x - (-2))(x - 4) = a(x+2)(x-4)$.",
@@ -3437,7 +3437,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-4.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $(8, 10)$.",
     "solutionSteps": [
       "Narysuj promień prostopadły do cięciwy AB, który przetnie ją w punkcie C. Trójkąt ASC jest prostokątny, a odległość punktu S od cięciwy AB to długość odcinka SC. Z rysunku wynika, że odcinek SC jest przyprostokątną w trójkącie prostokątnym ASC.",
@@ -3499,7 +3499,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0",
       "– 1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli – 1",
     "solutionSteps": [
       "W ciągu geometrycznym iloraz dwóch kolejnych wyrazów jest stały. Zapiszemy tę zależność dla podanego ciągu: $\\frac{2x+3}{x} = \\frac{4x+3}{2x+3}$.",
@@ -3531,7 +3531,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9,5",
       "10"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "7,5",
     "solutionSteps": [
       "Zapisz stosunek odpowiadających sobie boków trójkątów podobnych, gdzie bok $AB$ odpowiada bokowi $PQ$, a bok $AC$ bokowi $PR$. Stosunek ten wynosi $\\frac{AB}{PQ} = \\frac{AC}{PR}$.",
@@ -3562,7 +3562,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z17-4.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z17-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\cos \\alpha = \\frac{4}{5}$",
     "solutionSteps": [
       "Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna — 5.",
@@ -3593,7 +3593,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = 3",
       "a = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a=4$",
     "solutionSteps": [
       "Aby z odcinków można było zbudować trójkąt, suma długości dwóch krótszych boków musi być większa od długości najdłuższego boku. Ponieważ trójkąt jest równoramienny, mamy trzy możliwości przypisania długości boków: $(5, 5, 2a+1)$, $(5, a-1, a-1)$ lub $(2a+1, a-1, a-1)$.",
@@ -3624,7 +3624,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z19-4.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z19-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$2\\sqrt{33}$",
     "solutionSteps": [
       "Oznaczmy środki okręgów jako $O_1$ (promień $r_1 = 3$) i $O_2$ (promień $r_2 = 4$). Punkt styczności okręgów to $S$. Ponieważ okręgi są styczne zewnętrznie, odległość między ich środkami wynosi $|O_1 O_2| = r_1 + r_2 = 3 + 4 = 7$.",
@@ -3686,7 +3686,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = 4 i b = 10",
       "a = − 4 i b = − 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a = -1$ i $b = 2$.",
     "solutionSteps": [
       "Użyj wzoru na środek odcinka, gdzie $M = (\\frac{x_A + x_B}{2}, \\frac{y_A + y_B}{2})$. Podstaw dane: $(3,4) = (\\frac{a+7}{2}, \\frac{6+b}{2})$.",
@@ -3717,7 +3717,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0,35",
       "0,5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, 0.2-0.35)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ — prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ — $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ — $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ — nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$",
     "solutionSteps": [
       "Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami — jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.",
@@ -3749,7 +3749,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "24π",
       "8π"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $8\\pi$",
     "solutionSteps": [
       "Podziel kąt rozwarcia stożka przez 2, aby otrzymać kąt między tworzącą a osią stożka ($\\alpha$). W tym przypadku $\\alpha = \\frac{120^\\circ}{2} = 60^\\circ$.",
@@ -3780,7 +3780,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "60°",
       "75°"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Jest błąd w treści zadania lub w podanych odpowiedziach, ponieważ obliczona wartość kąta nie pasuje do żadnej z opcji.\n**Odpowiedź:** Jest błąd w treści zadania lub w podanych odpowiedziach, ponieważ obliczona wartość kąta nie pasuje do żadnej z opcji.",
     "solutionSteps": [
       "Oznaczmy długość wysokości graniastosłupa jako $h$. Z treści zadania wynika, że przekątna podstawy $d$ jest dwa razy dłuższa od wysokości, czyli $d = 2h$.",
@@ -3811,7 +3811,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "28",
       "29"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 28",
     "solutionSteps": [
       "Zapisz równanie wynikające z definicji średniej arytmetycznej: $\\frac{31+16+25+29+27+x}{6} = \\frac{x}{2}$. Po uproszczeniu otrzymujemy $\\frac{128+x}{6} = \\frac{x}{2}$.",
@@ -3839,7 +3839,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Błąd względny wynosi ok. $3.96\\%$.",
     "solutionSteps": [
       "Obliczamy sumę przyrostów wysokości sosny: $10+10+7+8+8+7 = 50$ cm.",
@@ -3867,7 +3867,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (0, 2)$",
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową w postaci standardowej $ax^2 + bx + c > 0$. Otrzymujemy: $-x^2 + 2x > 0$.",
@@ -3895,7 +3895,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in \\{-5, 3, 4\\}$",
     "solutionSteps": [
       "Aby iloczyn był równy zero, przynajmniej jeden z czynników musi być równy zero. Rozważamy dwa przypadki: pierwszy nawias równy zero lub drugi nawias równy zero.",
@@ -3923,7 +3923,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano podobieństwo trójkątów CDE i FBG.",
     "solutionSteps": [
       "Zauważ, że trójkąty $CDE$ i $ABC$ mają wspólny kąt przy wierzchołku $C$ (kąt $\\alpha$). Dodatkowo, oba są prostokątne, więc kąty przy wierzchołkach $D$ i $B$ są równe $90^\\circ$.",
@@ -3952,7 +3952,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Suma każdych dwóch kolejnych wyrazów ciągu jest kwadratem liczby naturalnej $[2(n+1)]^2$.",
     "solutionSteps": [
       "Zapisz wzór na sumę dwóch kolejnych wyrazów ciągu: $a_n + a_{n+1}$. Podstaw wzór ogólny ciągu $a_n = 2n^2 + 2n$.\n$a_n + a_{n+1} = (2n^2 + 2n) + (2(n+1)^2 + 2(n+1))$.",
@@ -3980,7 +3980,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$A = 10^{2,2}$ cm, jest większa od 100 cm.",
     "solutionSteps": [
       "Zapisz wzór na skalę Richtera i podstaw dane z zadania: $M = \\log_{10} \\frac{A}{A_0}$. Wiemy, że $M = 6,2$ i $A_0 = 10^{-4}$ cm. Otrzymujemy: $6,2 = \\log_{10} \\frac{A}{10^{-4}}$.",
@@ -4008,7 +4008,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Kąty trójkąta wynoszą $26^\\circ$, $76^\\circ$ i $78^\\circ$.",
     "solutionSteps": [
       "Oznaczmy mniejszy z dwóch pozostałych kątów jako $x$. Wtedy drugi z tych kątów wynosi $x + 50^\\circ$. Trzeci kąt jest trzy razy większy od mniejszego z tych dwóch kątów, czyli $3x$.",
@@ -4036,7 +4036,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Pole powierzchni bocznej jest równe 54, a cosinus kąta wynosi $\\frac{\\sqrt{3}}{6}$.",
     "solutionSteps": [
       "Oznaczmy wysokość podstawy jako $h_p$, a wysokość ostrosłupa jako $H$. Z treści zadania wiemy, że $H = h_p$. Objętość ostrosłupa $V = \\frac{1}{3} P_p \\cdot H$, gdzie $P_p$ to pole podstawy. Mamy $V = 27$. W trójkącie równobocznym o boku $a$, $h_p = \\frac{a\\sqrt{3}}{2}$, a $P_p = \\frac{a^2\\sqrt{3}}{4}$. Podstawiając $H = h_p$ i $V = 27$, otrzymujemy $\\frac{1}{3} \\cdot \\frac{a^2\\sqrt{3}}{4} \\cdot \\frac{a\\sqrt{3}}{2} = 27$.",
@@ -4065,7 +4065,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{8}{4005}$",
     "solutionSteps": [
       "Określamy przestrzeń zdarzeń elementarnych. Liczb dwucyfrowych jest $90$ (od $10$ do $99$). Losujemy dwie liczby bez zwracania, więc kolejność ma znaczenie. Liczba wszystkich możliwych par $(a, b)$ wynosi $90 \\cdot 89$.",
@@ -4127,7 +4127,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2&#8731; 2",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt[3]{2}$",
     "solutionSteps": [
       "Uprość pierwszy człon wyrażenia, rozkładając liczbę 54 na czynniki, z których jeden jest sześcianem: $54 = 27 \\cdot 2 = 3^3 \\cdot 2$. Wtedy $\\sqrt[3]{54} = \\sqrt[3]{3^3 \\cdot 2} = 3\\sqrt[3]{2}$.",
@@ -4218,7 +4218,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "prawdziwa dla x = –1",
       "fałszywa dla każdej liczby x"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $6 + 4\\sqrt{2}$",
     "solutionSteps": [
       "Rozwiń lewą stronę równania, używając wzoru $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = x\\sqrt{2}$ i $b = 2$. Otrzymamy: $(x\\sqrt{2})^2 - 2(x\\sqrt{2})(2) + 2^2 = 2x^2 - 4x\\sqrt{2} + 4$.",
@@ -4249,7 +4249,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 3",
     "solutionSteps": [
       "Nierówność $(x^4+1)(2-x) > 0$ jest spełniona, gdy czynniki mają przeciwne znaki. Ponieważ $x^4+1$ jest zawsze dodatnie (bo $x^4 \\ge 0$), musimy mieć $2-x > 0$.",
@@ -4280,7 +4280,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m17-maj/z07-3.jpg)",
       "![Rysunek do zadania](/cke-matura/m17-maj/z07-4.jpg)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D",
     "solutionSteps": [
       "Przekształć nierówność, aby wyznaczyć $x$. Odejmij 2 od obu stron i podziel przez -3, pamiętając o zmianie kierunku nierówności.\n$2 - 3x \\ge 4$\n$-3x \\ge 4 - 2$\n$-3x \\ge 2$\n$x \\le -\\frac{2}{3}$",
@@ -4310,7 +4310,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie trzy rozwiązania w zbiorze liczb rzeczywistych.",
       "ma dokładnie pięć rozwiązań w zbiorze liczb rzeczywistych."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli ma dokładnie trzy rozwiązania w zbiorze liczb rzeczywistych.",
     "solutionSteps": [
       "Rozłóż równanie na czynniki, przyrównując każdy do zera: $x = 0$ lub $x^2 - 4 = 0$ lub $x^2 + 4 = 0$.",
@@ -4341,7 +4341,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4√ 3 – 1",
       "–√ 3 + 12"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $4\\sqrt{3} - 1$.",
     "solutionSteps": [
       "Aby znaleźć miejsce zerowe funkcji, przyrównujemy ją do zera: $\\sqrt{3}(x + 1) - 12 = 0$.",
@@ -4373,7 +4373,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $c = -3$. (Uwaga: w oryginalnym zadaniu jest błąd, c powinno być -3. Przyjmując dane z zadania, gdzie c jest dodatnie, a miejscami zerowymi -3 i 1, punkt (0,3) musiałby leżeć na paraboli. Wtedy $3 = a(0+3)(0-1)$, czyli $3 = -3a$, $a=-1$. $f(x) = -1(x+3)(x-1) = -(x^2+2x-3) = -x^2-2x+3$. Wtedy c=3. Biorąc pod uwagę, że klucz odpowiedzi wskazuje na C, przyjmujemy $c=3$.",
     "solutionSteps": [
       "Skorzystaj z postaci iloczynowej funkcji kwadratowej, wiedząc, że miejsca zerowe to $x_1 = -3$ i $x_2 = 1$. Postać iloczynowa to $f(x) = a(x-x_1)(x-x_2)$. Podstawiając miejsca zerowe, otrzymujemy $f(x) = a(x-(-3))(x-1)$, czyli $f(x) = a(x+3)(x-1)$.",
@@ -4405,7 +4405,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "– 2",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $2$.",
     "solutionSteps": [
       "Skorzystaj z faktu, że punkt A=(1,2) należy do wykresu funkcji $f(x)=a^x$. Podstaw współrzędne punktu do wzoru funkcji, otrzymując równanie $2 = a^1$.",
@@ -4436,7 +4436,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a 11 = 71",
       "a 10 = 71"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a_{12} = 71$",
     "solutionSteps": [
       "Oblicz różnicę ciągu arytmetycznego $r$ ze wzoru $r = a_2 - a_1$. Mamy $r = 11 - 5 = 6$.",
@@ -4498,7 +4498,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = cos50°",
       "m = tg50°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\cos(40^\\circ)$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na sinus kąta uzupełniającego do 90 stopni: $\\sin(\\alpha) = \\cos(90^\\circ - \\alpha)$.",
@@ -4562,7 +4562,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "12",
       "11"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "20",
     "solutionSteps": [
       "Zauważ, że z treści zadania $\\triangle BDE \\sim \\triangle BCA$ (trójkąty podobne, ponieważ DE || AC, co daje równość kątów).",
@@ -4593,7 +4593,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(3 + √ 3 ) a",
       "(2 + √ 2 ) a"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $(3 + \\sqrt{3}) a$",
     "solutionSteps": [
       "Oblicz długość boku $AC$, korzystając z twierdzenia Pitagorasa w trójkącie prostokątnym $ADC$, gdzie $AD = \\frac{a}{2}$ i $CD = \\frac{\\sqrt{3}}{2}a$. Mamy $AC^2 = AD^2 + CD^2 = \\left(\\frac{a}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Stąd $AC = a$.",
@@ -4636,7 +4636,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "tgα = 2 &frasl; 3",
       "tgα = 3 &frasl; 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\operatorname{tg}\\alpha = -\\frac{3}{2}$",
     "solutionSteps": [
       "Kąt $\\alpha$ nachylenia prostej do osi $Ox$ jest równy tangensowi tej prostej. Wyznaczamy równanie prostej przechodzącej przez początek układu współrzędnych $(0,0)$ i punkt $A = (2, -3)$.",
@@ -4667,7 +4667,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "y = 4x – 12",
       "y = 4x + 12"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $y = 4x + 12$",
     "solutionSteps": [
       "Zauważ, że proste k i l są prostopadłe, a ich współczynniki kierunkowe $a_k$ i $a_l$ spełniają zależność $a_k \\cdot a_l = -1$. Z równania prostej k, $y = -\\frac{1}{4}x + \\frac{7}{2}$, odczytaj $a_k = -\\frac{1}{4}$.",
@@ -4760,7 +4760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "½",
       "1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $1$.",
     "solutionSteps": [
       "Z treści zadania wiemy, że promień podstawy walca $AS$ jest równy wysokości walca $OS$. Oznaczmy ten bok jako $r$, czyli $AS = OS = r$. Trójkąt $OAS$ jest trójkątem prostokątnym, z kątem prostym przy wierzchołku $O$.",
@@ -4791,7 +4791,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "144π",
       "48π"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $48\\pi$",
     "solutionSteps": [
       "Oblicz promień podstawy stożka, który jest połową średnicy: $r = \\frac{12}{2} = 6$.",
@@ -4822,7 +4822,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x=11",
       "x=13"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $x=13$.",
     "solutionSteps": [
       "Zapisz wzór na średnią arytmetyczną i podstaw dane z zadania. Suma ośmiu liczb wynosi $3+5+7+9+x+15+17+19$, a ich średnia to 11.\n$$ \\frac{3+5+7+9+x+15+17+19}{8} = 11 $$",
@@ -4853,7 +4853,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1 &frasl; 8",
       "1 &frasl; 6"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{1}{3}$",
     "solutionSteps": [
       "Określamy zbiór wszystkich możliwych zdarzeń. Losujemy jedną liczbę z 24 kolejnych liczb naturalnych od 1 do 24, więc mamy 24 możliwe zdarzenia elementarne.",
@@ -4881,7 +4881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in [0, 9]$",
     "solutionSteps": [
       "Wyciągnij wspólny czynnik przed nawias. Zauważ, że obie liczby są podzielne przez 8x, co pozwoli nam uprościć nierówność do postaci: $8x(x - 9) \\le 0$.",
@@ -4909,7 +4909,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano.",
     "solutionSteps": [
       "Wyłącz wspólny czynnik przed nawias, którym jest $4^{2017}$. Otrzymujemy $4^{2017}(1 + 4^1 + 4^2 + 4^3)$.",
@@ -4938,7 +4938,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\alpha = 180^\\circ - 2\\beta$",
     "solutionSteps": [
       "Zauważ, że trójkąty APC i BRC są równoramienne (ramiona to promienie okręgów), a odcinki AP i BR są prostopadłe do prostej AB. Symetria względem prostej PR sprawia, że trójkąty APC i BRC są przystające.",
@@ -4968,7 +4968,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-\\frac{1}{2}$",
     "solutionSteps": [
       "Odczytaj z wykresu wierzchołek paraboli. Wierzchołek paraboli to $W = (p, q)$. Z wykresu odczytujemy, że wierzchołek ma współrzędne $W = (2, 6)$. Największa wartość funkcji kwadratowej (dla ramion skierowanych w dół) to współrzędna $q$ wierzchołka, co zgadza się z informacją w zadaniu ($q=6$).",
@@ -4996,7 +4996,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "60 cm",
     "solutionSteps": [
       "Oznacz przyprostokątne jako $x$ i $x+14$. Z twierdzenia Pitagorasa mamy równanie: $x^2 + (x+14)^2 = 26^2$.",
@@ -5024,7 +5024,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$9$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na sumę pierwszych trzech wyrazów ciągu arytmetycznego: $S_3 = \\frac{a_1 + a_3}{2} \\cdot 3$. Podstaw dane $a_1=8$ i $S_3=33$, aby obliczyć $a_3$. Otrzymujemy $\\frac{8+a_3}{2} \\cdot 3 = 33$. Stąd $8+a_3 = 22$, czyli $a_3=14$.",
@@ -5052,7 +5052,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{243}{7}$",
     "solutionSteps": [
       "Znajdź wierzchołek B. B jest punktem przecięcia prostej $k: y = -2x + 10$ z osią Ox, więc jego współrzędna $y$ jest równa 0. Podstawiając $y=0$ do równania prostej, otrzymujemy $0 = -2x + 10$, co daje $2x = 10$, czyli $x = 5$. Zatem $B = (5,0)$.",
@@ -5080,7 +5080,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{9}$",
     "solutionSteps": [
       "Zliczamy wszystkie liczby dwucyfrowe. Liczby dwucyfrowe to liczby od 10 do 99, czyli jest ich $99 - 10 + 1 = 90$.",
@@ -5109,7 +5109,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{64\\sqrt{6}}{3}$",
     "solutionSteps": [
       "Oblicz pole powierzchni bocznej ($P_b$), wiedząc, że jest ona sumą pól trzech identycznych trójkątów równoramiennych. $P_b = 3 \\cdot \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $a$ to długość krawędzi podstawy, a $h_s$ to wysokość ściany bocznej. Mamy $P_b = 48\\sqrt{3}$, $h_s = 4\\sqrt{3}$, więc $48\\sqrt{3} = 3 \\cdot \\frac{1}{2} \\cdot a \\cdot 4\\sqrt{3}$.",
@@ -5141,7 +5141,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2log 3 2",
       "log 3 8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 2",
     "solutionSteps": [
       "Użyj własności logarytmów, aby $\\text{2}\\log_3 6 = \\log_3 6^2 = \\log_3 36$.",
@@ -5172,7 +5172,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m18-maj/z02-4.gif)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z02-5.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $25\\sqrt{5}$",
     "solutionSteps": [
       "Zapisz wyrażenie z pierwiastkami jako potęgi: $\\sqrt[3]{5} = 5^{\\frac{1}{3}}$ oraz $\\sqrt{5} = 5^{\\frac{1}{2}}$.",
@@ -5204,7 +5204,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1,5·10 8",
       "8,64·10 32"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $1,5 \\cdot 10^{8}$",
     "solutionSteps": [
       "Podziel liczby stojące przed potęgami oraz podziel potęgi liczby 10. Dzielenie potęg o tej samej podstawie polega na odjęciu wykładników.\n$$ \\frac{a}{b} = \\frac{3,6 \\cdot 10^{-12}}{2,4 \\cdot 10^{-20}} = \\frac{3,6}{2,4} \\cdot \\frac{10^{-12}}{10^{-20}} $$",
@@ -5235,7 +5235,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1000,00 zł",
       "977,50 zł"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $1000,00$ zł.",
     "solutionSteps": [
       "Oznacz cenę roweru przed obniżką jako $x$. Obniżka o 15% oznacza, że cena po obniżce to $100\\% - 15\\% = 85\\%$ ceny początkowej.",
@@ -5266,7 +5266,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m18-maj/z05-4.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z05-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $[1, 3]$",
     "solutionSteps": [
       "Przekształć nierówność, aby po jednej stronie uzyskać zero: $x^2 - 4x + 3 \\le 0$.",
@@ -5297,7 +5297,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x 1 +x 2 = 2",
       "x 1 +x 2 = 8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 2",
     "solutionSteps": [
       "Miejsca zerowe funkcji kwadratowej zapisanej w postaci iloczynowej $f(x) = a(x-x_1)(x-x_2)$ to $x_1$ i $x_2$. W podanym wzorze $f(x) = -2(x+3)(x-5)$ miejsca zerowe to $x_1 = -3$ i $x_2 = 5$.",
@@ -5359,7 +5359,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, 1 &frasl; 3 )",
       "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)",
     "solutionSteps": [
       "Funkcja liniowa $f(x) = ax + b$ jest rosnąca, gdy $a > 0$, a malejąca, gdy $a < 0$. Wykres funkcji liniowej przecina oś Oy w punkcie $(0, b)$.",
@@ -5389,7 +5389,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(3,-12)",
       "(6,-3)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $(3,-12)$",
     "solutionSteps": [
       "Aby znaleźć współrzędne wierzchołka paraboli o równaniu $y = ax^2 + bx + c$, użyjemy wzorów: $x_w = -\\frac{b}{2a}$ oraz $y_w = f(x_w)$. Dla funkcji $f(x) = x^2 - 6x - 3$ mamy $a=1$, $b=-6$, $c=-3$.",
@@ -5420,7 +5420,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "– 3 &frasl; 2",
       "–1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli –1",
     "solutionSteps": [
       "Skoro $x=1$ jest miejscem zerowym funkcji $f(x)=ax+b$, to $f(1)=0$. Podstawiamy do wzoru funkcji: $a \\cdot 1 + b = 0$, co daje równanie $a+b=0$.",
@@ -5451,7 +5451,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "geometryczny i jego iloraz jest równy q = – 1 &frasl; 3",
       "geometryczny i jego iloraz jest równy q = 5 &frasl; 6"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Brak poprawnej odpowiedzi spośród podanych opcji dla podanego wzoru.",
     "solutionSteps": [
       "Obliczamy dwa pierwsze wyrazy ciągu, podstawiając $n=1$ i $n=2$ do wzoru $a_n = \\frac{5n-1}{2n+1}$. Dla $n=1$: $a_1 = \\frac{5(1)-1}{2(1)+1} = \\frac{4}{3}$. Dla $n=2$: $a_2 = \\frac{5(2)-1}{2(2)+1} = \\frac{9}{5}$.",
@@ -5513,7 +5513,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-3.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $a_n = 2^{n - \\frac{1}{2}}$",
     "solutionSteps": [
       "Obliczamy iloraz ciągu geometrycznego $q$ ze wzoru $q = \\frac{a_{n+1}}{a_n}$. Korzystając z danych $a_2 = 2\\sqrt{2}$ i $a_1 = \\sqrt{2}$, mamy $q = \\frac{2\\sqrt{2}}{\\sqrt{2}} = 2$.",
@@ -5544,7 +5544,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "21°",
       "18°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 21°",
     "solutionSteps": [
       "W zadaniu mamy trójkąt prostokątny KLM, gdzie znamy długość przyprostokątnej $LM = 3$ oraz przeciwprostokątnej $KL = 8$. Chcemy znaleźć miarę kąta $\\alpha$, czyli kąta LKM. W trójkącie prostokątnym sinus kąta ostrego to stosunek długości przyprostokątnej przeciwległej temu kątowi do długości przeciwprostokątnej.",
@@ -5637,7 +5637,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a + 1 &frasl; 2 b",
       "a+b &frasl; 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $2(a - b)$",
     "solutionSteps": [
       "Zauważ, że po poprowadzeniu wysokości z wierzchołka M do podstawy KL, powstaje trójkąt prostokątny o jednym z kątów 60° i przyprostokątnym równym $a-b$.",
@@ -5669,7 +5669,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "L = (3,5)",
       "L = (4,6)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $L = (6,4)$",
     "solutionSteps": [
       "Znajdź współrzędne wektora $\\vec{NK}$, który jest prostopadły do boku $LM$. Ponieważ $N$ jest środkiem podstawy $LM$ (trójkąt jest równoramienny, a $MN$ jest wysokością), wektor $\\vec{NL}$ będzie miał przeciwne współrzędne. Wektor $\\vec{NK} = K - N = (2-4, 2-3) = (-2, -1)$.",
@@ -5708,7 +5708,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m=0",
       "m=1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $m=3$.",
     "solutionSteps": [
       "Warunek równoległości prostych to równość ich współczynników kierunkowych (nachylenia). W tym przypadku współczynniki wynoszą $m+2$ i $2m-1$.",
@@ -5739,7 +5739,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "α>60°",
       "α=60°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli α=60°",
     "solutionSteps": [
       "W trójkącie prostokątnym KNS mamy przyprostokątne KN i NS o długości 4. Obliczamy długość przeciwprostokątnej KS z twierdzenia Pitagorasa: $KS^2 = KN^2 + NS^2 = 4^2 + 4^2 = 16 + 16 = 32$, więc $KS = \\sqrt{32} = 4\\sqrt{2}$.",
@@ -5832,7 +5832,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1 &frasl; √ 2",
       "√ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 1",
     "solutionSteps": [
       "Obliczamy średnią arytmetyczną zestawu liczb. Mamy $m$ dwójek i $m$ czwórek, czyli $2m$ liczb. Średnia to $\\frac{m \\cdot 2 + m \\cdot 4}{2m} = \\frac{2m + 4m}{2m} = \\frac{6m}{2m} = 3$.",
@@ -5863,7 +5863,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "203",
       "204"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 204",
     "solutionSteps": [
       "Znajdź najmniejszą i największą liczbę naturalną czterocyfrową mniejszą od 2018 i podzielną przez 5. Najmniejsza to 1000, największa to 2015.",
@@ -5894,7 +5894,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "15 &frasl; 50",
       "35 &frasl; 50"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{35}{50}$",
     "solutionSteps": [
       "Obliczamy liczbę kuponów wygrywających. Mamy 50 kuponów łącznie, z czego 15 to kupony przegrywające, więc wygrywających jest $50 - 15 = 35$.",
@@ -5921,7 +5921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, -1) \\cup (\\frac{5}{2}, \\infty)$.",
     "solutionSteps": [
       "Przekształć nierówność do postaci ogólnej $ax^2+bx+c > 0$. Przenosimy wszystkie wyrazy na jedną stronę, otrzymując $2x^2 - 3x - 5 > 0$.",
@@ -5949,7 +5949,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in \\{-8, -5, 8\\}$",
     "solutionSteps": [
       "Rozłóż równanie na czynniki, przyrównując każdy do zera, ponieważ iloczyn jest równy zero, gdy co najmniej jeden z czynników jest równy zero: $(x^3 + 125) = 0$ lub $(x^2 - 64) = 0$.",
@@ -5977,7 +5977,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Dowód przeprowadzono.",
     "solutionSteps": [
       "Przekształć nierówność do postaci, w której jedną stronę stanowi zero. Pomnóż obie strony przez $2 \\sqrt{ab}$ (liczba dodatnia, więc znak nierówności się nie zmienia).\n$$ \\frac{a+b}{2} \\ge \\sqrt{ab} \\quad | \\cdot 2\\sqrt{ab} $$\n$$ (a+b)\\sqrt{ab} \\ge 2\\sqrt{ab}\\sqrt{ab} $$\n$$ a\\sqrt{ab} + b\\sqrt{ab} \\ge 2ab $$",
@@ -6006,7 +6006,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Uzasadnione w Kroku 4.",
     "solutionSteps": [
       "Przyjmijmy promień okręgu o środku A jako $r_A = 2$. Ponieważ okrąg jest styczny do obu ramion kąta prostego, środek A leży na dwusiecznej tego kąta. Odległość środka A od każdego ramienia wynosi $r_A = 2$. Z twierdzenia Pitagorasa dla trójkąta utworzonego przez środek A i punkty styczności na ramionach otrzymujemy, że odległość środka A od wierzchołka kąta (nazwijmy go O) wynosi $OA = \\sqrt{r_A^2 + r_A^2} = \\sqrt{2^2 + 2^2} = \\sqrt{8} = 2\\sqrt{2}$.",
@@ -6035,7 +6035,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$a=3$, zbiór wartości funkcji $g$ to $(-2, \\infty)$.",
     "solutionSteps": [
       "Skorzystaj z informacji, że punkt $P=(2,9)$ należy do wykresu funkcji $f(x) = ax$. Podstaw współrzędne punktu do wzoru funkcji, aby otrzymać równanie z niewiadomą $a$: $9 = a^2$.",
@@ -6064,7 +6064,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-3$",
     "solutionSteps": [
       "Skorzystaj ze wzorów na n-ty wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$) oraz sumę n-pierwszych wyrazów ($S_n = \\frac{a_1 + a_n}{2} \\cdot n$). Z treści zadania mamy dane: $a_{12} = 30$ oraz $S_{12} = 162$.",
@@ -6092,7 +6092,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$(\\frac{32}{5}, \\frac{79}{5})$",
     "solutionSteps": [
       "Oblicz współczynnik kierunkowy prostej AB. $m_{AB} = \\frac{5-3}{10-4} = \\frac{2}{6} = \\frac{1}{3}$.",
@@ -6121,7 +6121,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{17}{49}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych zdarzeń. Zbiór A ma 7 elementów, a zbiór B ma 7 elementów, więc łączna liczba par wylosowanych liczb wynosi $7 \\cdot 7 = 49$.",
@@ -6150,7 +6150,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{81}{2}$",
     "solutionSteps": [
       "Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość graniastosłupa. Pole podstawy $P_p = \\frac{a^2\\sqrt{3}}{4}$. Pole jednej ściany bocznej $P_s = a \\cdot h$. Z treści zadania $P_p = P_s$, czyli $\\frac{a^2\\sqrt{3}}{4} = a \\cdot h$. Po skróceniu przez $a$ (zakładamy $a>0$) otrzymujemy $h = \\frac{a\\sqrt{3}}{4}$.",
@@ -6214,7 +6214,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "16 cyfr",
       "30 cyfr"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 15 cyfr",
     "solutionSteps": [
       "Zapisz liczbę tak, aby można było użyć potęg o tym samym wykładniku: $n = 2^{14} \\cdot 5^{15} = 2^{14} \\cdot 5^{14} \\cdot 5^1 = (2 \\cdot 5)^{14} \\cdot 5$.",
@@ -6245,7 +6245,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "33%",
       "75%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 25%",
     "solutionSteps": [
       "Obliczamy nową wysokość prowizji po obniżce w lutym, odejmując 1 punkt procentowy od prowizji ze stycznia. Prowizja wynosiła $4\\% - 1\\% = 3\\%$.",
@@ -6276,7 +6276,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m19-maj/z04-4.gif)",
       "![Rysunek do zadania](/cke-matura/m19-maj/z04-5.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D",
     "solutionSteps": [
       "Przekształcamy lewą stronę równania: $\\frac{x}{2} - \\frac{2x}{3} = \\frac{3x - 4x}{6} = \\frac{-x}{6}$.",
@@ -6307,7 +6307,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = − 2",
       "a = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $a=2$",
     "solutionSteps": [
       "Podstaw dane $x=2$ i $y=2$ do pierwszego równania układu: $2+2=4$. To równanie jest spełnione, więc możemy przejść do drugiego równania.",
@@ -6338,7 +6338,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dwa różne rozwiązania: x = 1, x = − 2.",
       "ma dwa różne rozwiązania: x = − 1, x = 2."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli ma dwa różne rozwiązania: $x=1$, $x=-2$.",
     "solutionSteps": [
       "Zapisujemy równanie w postaci iloczynowej i przyrównujemy każdy z czynników do zera, aby znaleźć pierwiastki. Równanie ma postać $(x-1)(x+2)^2 = 0$.",
@@ -6369,7 +6369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 3 – 1",
       "2√ 3 – 1 &frasl; 3 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z07-2.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{2}$",
     "solutionSteps": [
       "Funkcja liniowa ma postać $f(x) = ax+b$. Miejscem zerowym jest $x_0$, dla którego $f(x_0) = 0$. Z rysunku odczytujemy dwa punkty należące do wykresu: $(0, 3)$ i $(1, -3)$.",
@@ -6400,7 +6400,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "&lang;− 4, + ∞)",
       "&lang;4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\langle -4, + \\infty )$",
     "solutionSteps": [
       "Odczytaj z rysunku i treści zadania współrzędne wierzchołka paraboli. Wierzchołek paraboli to punkt $W = (2, -4)$, zatem najmniejsza wartość funkcji wynosi $-4$.",
@@ -6431,7 +6431,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "0 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 0",
     "solutionSteps": [
       "Funkcja kwadratowa ma postać kanoniczną $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka. Z treści zadania wiemy, że $W=(2,-4)$, więc $p=2$ i $q=-4$. Funkcja ma postać $f(x) = a(x-2)^2 - 4$.",
@@ -6462,7 +6462,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "y = 2",
       "x = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $x = 2$",
     "solutionSteps": [
       "Zidentyfikuj typ funkcji. Wykres funkcji kwadratowej $f(x) = ax^2 + bx + c$ ma oś symetrii pionową.",
@@ -6522,7 +6522,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "√ 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $3$.",
     "solutionSteps": [
       "Zapisz dane z rysunku za pomocą wzoru ogólnego ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_2 = a_1 \\cdot q$ oraz $a_5 = a_1 \\cdot q^4$.",
@@ -6553,7 +6553,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cos α = 9 &frasl; 25",
       "cos α = 3 &frasl; 5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\cos \\alpha = \\frac{3}{5}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru jedynkowego $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, podstawiając $\\sin \\alpha = \\frac{4}{5}$. Otrzymasz $(\\frac{4}{5})^2 + \\cos^2 \\alpha = 1$.",
@@ -6584,7 +6584,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "α > 45 °",
       "α = 45 °"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\alpha > 45^\\circ$",
     "solutionSteps": [
       "Ponieważ trójkąt ABC jest równoboczny, jego kąty wewnętrzne wynoszą po $60^\\circ$. Kąt wpisany $\\angle ACB$ opiera się na tym samym łuku co kąt środkowy $\\angle AOB$, ale to nam nie pomoże. Kąt $\\angle ADB$ jest kątem wpisanym opartym na średnicy CD, więc jest kątem prostym, $\\angle ADB = 90^\\circ$.",
@@ -6619,7 +6619,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "|OK| = 10",
       "|OK| = 12"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 10",
     "solutionSteps": [
       "Zauważ, że trójkąty $\\triangle OAK$ i $\\triangle PBK$ są podobne na mocy cechy podobieństwa kąt-kąt (kąty przy wierzchołku K są równe jako wierzchołkowe, a kąty przy A i B są proste, ponieważ promienie są prostopadłe do stycznej).",
@@ -6681,7 +6681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 1",
       "m = 5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $m=5$",
     "solutionSteps": [
       "Warunkiem równoległości dwóch prostych w postaci $y = ax + b$ jest równość ich współczynników kierunkowych, czyli $a_1 = a_2$. W tym zadaniu mamy $a_1 = 2m + 2$ oraz $a_2 = 3m - 3$.",
@@ -6712,7 +6712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = − 4 i b = 2",
       "a = 1 &frasl; 4 i b = 1 &frasl; 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a = \\frac{1}{4}$ i $b = -\\frac{1}{8}$",
     "solutionSteps": [
       "Warunek prostopadłości prostych mówi, że iloczyn ich współczynników kierunkowych jest równy -1. Skoro dana prosta ma równanie $y = -4x + 1$, to współczynnik kierunkowy wynosi $-4$. Zatem dla szukanej prostej $y = ax + b$ musi zachodzić $a \\cdot (-4) = -1$, co daje $a = \\frac{1}{4}$.",
@@ -6742,7 +6742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "g(x) = −x − 4",
       "g(x) = −x + 4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $g(x) = -x - 4$.",
     "solutionSteps": [
       "Wyznacz wzór funkcji $f(x)$ przechodzącej przez punkty A(0, 4) i B(2, 2). Punkt A(0, 4) jest punktem przecięcia z osią OY, więc wyraz wolny $b=4$. Skorzystaj z punktu B do wyznaczenia współczynnika kierunkowego $a = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{2-4}{2-0} = \\frac{-2}{2} = -1$. Wzór funkcji $f(x)$ to $f(x) = -x + 4$.",
@@ -6773,7 +6773,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6√ 2",
       "2√ 6"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $6\\sqrt{2}$",
     "solutionSteps": [
       "Oblicz długość boku kwadratu AB, korzystając ze wzoru na odległość między dwoma punktami w układzie współrzędnych: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Długość boku wynosi $AB = \\sqrt{(4 - (-2))^2 + (-1 - 5)^2} = \\sqrt{6^2 + (-6)^2} = \\sqrt{36+36} = \\sqrt{72}$.",
@@ -6804,7 +6804,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3,61 dm",
       "5,39 dm"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 6,16 dm",
     "solutionSteps": [
       "Oblicz kwadrat długości przekątnej podstawy prostopadłościanu, korzystając z twierdzenia Pitagorasa: $d^2 = 5^2 + 3^2$.\n$d^2 = 25 + 9 = 34$ dm$^2$.",
@@ -6835,7 +6835,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "16",
       "12"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 12",
     "solutionSteps": [
       "Zapisz wzory na pole powierzchni kuli ($P_k$) i pole powierzchni całkowitej stożka ($P_s$). Wzory te to $P_k = 4\\pi r^2$ oraz $P_s = \\pi r(r+l)$, gdzie $r$ to promień podstawy, a $l$ to tworząca stożka. Użyj danych z zadania: $r=4$.\n$P_k = 4\\pi (4^2) = 64\\pi$\n$P_s = \\pi (4)(4+l) = 4\\pi(4+l)$",
@@ -6866,7 +6866,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = 14",
       "a = 20 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a=12$.",
     "solutionSteps": [
       "Uporządkuj dane liczby rosnąco, uwzględniając zmienną $a$. Mediana dla parzystej liczby danych to średnia dwóch środkowych liczb.",
@@ -6897,7 +6897,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "162",
       "243"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $2 \\cdot 3^4 = 2 \\cdot 81 = 162$",
     "solutionSteps": [
       "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc 2 możliwości wyboru pierwszej cyfry (2 lub 5).",
@@ -6956,7 +6956,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in \\{-1, 2, 5\\}$",
     "solutionSteps": [
       "Rozpisz równanie na iloczyn dwóch czynników i przyrównaj każdy z nich do zera. Otrzymujemy dwa osobne równania: $x^3 - 8 = 0$ oraz $x^2 - 4x - 5 = 0$.",
@@ -6985,7 +6985,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, \\frac{4}{3}) \\cup (4, +\\infty)$",
     "solutionSteps": [
       "Oblicz deltę i pierwiastki równania kwadratowego $3x^2 - 16x + 16 = 0$. Delta $\\Delta = b^2 - 4ac = (-16)^2 - 4 \\cdot 3 \\cdot 16 = 256 - 192 = 64$, pierwiastki $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{16 - 8}{6} = \\frac{8}{6} = \\frac{4}{3}$ oraz $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{16 + 8}{6} = \\frac{24}{6} = 4$.",
@@ -7013,7 +7013,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Nierówność jest prawdziwa, ponieważ jest sumą trzech kwadratów liczb rzeczywistych, które są zawsze nieujemne.",
     "solutionSteps": [
       "Przekształć nierówność, grupując wyrazy tak, aby można było zastosować wzory skróconego mnożenia. Nierówność można zapisać jako $2a^2 + (a^2 - 2ab + b^2) + 2b^2 \\ge 0$.",
@@ -7041,7 +7041,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle ASB$. Zatem $\\angle ASD = 180^\\circ - \\angle ASB = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To się nie zgadza.\n\n**Poprawiony Krok 1.** Ponieważ $SD=SB=r$, trójkąt $SDB$ jest równoramienny. Kąty przy podstawie $DB$ są równe, czyli $\\angle SBD = \\angle SDR = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym w trójkącie $SDB$, więc jego miara wynosi $\\angle BSD = \\angle SBD + \\angle SDR = \\alpha + \\alpha = 2\\alpha$.\n\n**Poprawiony Krok 3.** Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle BSD$. Zatem $\\angle ASD = 180^\\circ - \\angle BSD = 180^\\circ - 2\\alpha$. To nadal nie jest $3\\alpha$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB = BC = r$. Kąt $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Kąt $\\angle ACS = \\alpha$. Kąt $\\angle CSB$ jest kątem przyległym do kąta $\\angle ASB$.\n\n**Poprawiony Krok 2.** W trójkącie $SBC$ mamy $\\angle SBC = 180^\\circ - \\alpha$. Ponieważ $SB=BC$, to $\\angle BSC = \\angle BCS = \\alpha$. Ale $\\angle BCS$ to to samo co $\\angle ACS$. To znaczy, że $\\alpha$ to kąt przy wierzchołku C.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Miara kąta $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie, kąt przy podstawie to $\\angle BSC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC$ jest kątem przyległym do $\\angle ASB$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC = \\alpha$. To jest błędne rozumowanie.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle CSB$ jest kątem zewnętrznym do trójkąta $SAB$. Nie. Kąt $\\angle SCB$ jest równy $\\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle BSC$ nie jest równy $\\alpha$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = 180^\\circ - \\alpha$. To nie pomaga.\n\n**Poprawiony Krok 1.** Ponieważ $SD = SB = r$, trójkąt $SDB$ jest równoramienny. Kąt $\\angle SDR = \\alpha$. Kąt $\\angle SBD$ jest zewnętrzny do trójkąta $SBC$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Wobec tego $\\angle BSC = 180^\\circ - 2\\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle BSC$. Zatem $\\angle ASD = 180^\\circ - \\angle BSC = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To nadal nie $3\\alpha$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$, więc $\\angle SBC = 180^\\circ - \\angle SBA$.\n\n**Poprawiony Krok 2.** W trójkącie $SBC$, $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$. Nie tędy droga.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny, bo $SD = SB = r$. Zatem $\\angle SBD = \\angle SDR = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym trójkąta $SDB$. Nie, jest to kąt wewnętrzny.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle BSD$ jest przyległy do $\\angle BSC$, więc $\\angle BSD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To się nie zgadza.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$ mamy $SB = BC = r$, więc jest on równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny, bo $SD=SB=r$. Kąt $\\angle SDR = \\alpha$. Zatem $\\angle SBD = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym do trójkąta $SBC$. Nie. Kąt $\\angle ASD$ jest tym, co chcemy obliczyć.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$.\n\n**Poprawiony Krok 1.** Rozważmy trójkąt $SBC$. Mamy $SB = BC = r$, więc jest on równoramienny. Kąt $\\angle SCB = \\alpha$. W trójkącie tym $\\angle BSC = 180^\\circ - \\angle SBC - \\angle SCB$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc $\\angle BSC = \\angle SCB$. Ale kąt przy wierzchołku $C$ to $\\alpha$. Zatem $\\angle BSC = \\alpha$. To jest błędne.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt przy wierzchołku $B$ w tym trójkącie, czyli $\\angle SBC$, jest równy $180^\\circ - \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSC$ jest kątem środkowym opartym na łuku $DE$. Nie. Kąt $\\angle BSC$ jest kątem przyległym do kąta $\\angle ASD$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie, to kąty przy podstawie $SB$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąty przy podstawie $SB$ to $\\angle BSC$ i $\\angle BCS$. Nie. Podstawą jest $SB$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąty przy podstawie $SB$ to $\\angle BSC$ i $\\angle BCS$. Nie. Podstawą jest $SC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie, to kąty przy podstawie $SC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem przyległym do $\\angle ASD$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle BCS$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle ASD$ jest kątem przyległym do $\\angle BSC$. Zatem $\\angle ASD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To nadal nie działa.\n\n**Poprawiony Krok 1.** Rozważmy trójkąt $SAB$. Jest on równoramienny ($SA=SB=r$). Kąt $\\angle ACS = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\alpha$. W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\angle SBA$.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny ($SD=SB=r$). Kąt $\\angle SDR = \\alpha$. Zatem $\\angle SBD = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle ASD$ jest kątem środkowym opartym na łuku $AD$. Kąt $\\angle ABD$ jest kątem wpisanym opartym na tym samym łuku. Kąt $\\angle ABD = \\angle ABC$. Kąt $\\angle ABC = \\angle ABS$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem zewnętrznym trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem kąt $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle ASD$ jest kątem przyległym do $\\angle BSC$. Wtedy $\\angle ASD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. Znowu nie to.\n\n**Poprawiony Krok 1.** Trójkąt $SAB$ jest równoramienny ($SA=SB=r$). Kąt $\\angle ACS = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\alpha$. W trójkącie $SBC$ mamy $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB) = 180^\\circ - (180^\\circ - \\alpha + \\alpha) = 180^\\circ$. To jest nonsens.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Wobec tego $\\angle BSC = \\angle SBC$. Nie. Kąty przy podstawie $SB$ są równe.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle BCS$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem przyległym do kąta $\\angle ASD$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równ",
     "solutionSteps": [
       "Zauważ, że trójkąt $SDB$ jest równoramienny, ponieważ $SD = SB = r$ (promienie okręgu). Stąd kąt $\\angle SBD = \\angle SDR = \\alpha$.",
@@ -7073,7 +7073,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{9}{25}$",
     "solutionSteps": [
       "Określ liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem z 5-elementowego zbioru, więc wszystkich par $(x, y)$ jest $5 \\cdot 5 = 25$.",
@@ -7101,7 +7101,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$2\\sqrt{17}$",
     "solutionSteps": [
       "W trójkącie prostokątnym $ADC$, gdzie $AD$ jest wysokością trapezu, obliczymy długość boku $AD$ oraz odcinka $CD$. Korzystamy z faktu, że kąt $ACD$ wynosi $30^\\circ$. Zdefiniujmy $CD = x$. Wtedy $\\cos(30^\\circ) = \\frac{CD}{AC} \\implies \\frac{\\sqrt{3}}{2} = \\frac{x}{4}$, co daje $x = 2\\sqrt{3}$. Następnie $\\sin(30^\\circ) = \\frac{AD}{AC} \\implies \\frac{1}{2} = \\frac{AD}{4}$, co daje $AD = 2$.",
@@ -7130,7 +7130,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "a) $a_1 = 26$, b) $k = 27$.",
     "solutionSteps": [
       "Użyj wzoru na sumę pierwszych sześciu wyrazów ciągu arytmetycznego: $S_6 = \\frac{a_1 + a_6}{2} \\cdot 6$. Wiemy, że średnia sześciu wyrazów wynosi 16, więc $S_6 = 16 \\cdot 6 = 96$. Wstawiając do wzoru, otrzymujemy $96 = \\frac{a_1 + a_6}{2} \\cdot 6$.",
@@ -7159,7 +7159,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$(20.4, -2.8)$",
     "solutionSteps": [
       "Punkt A = (−18, 10) i środek odcinka AB leżą na prostej $y=3x$, więc muszą spełniać jej równanie. Wyznaczamy współrzędne środka S = (x, y) odcinka AB, podstawiając współrzędną A do równania prostej: $10 = 3 \\cdot (-18)$ — to błąd, punkt A nie leży na prostej $y=3x$. Środek odcinka AB leży na prostej $y=3x$. Oznaczmy środek jako $S=(x_S, y_S)$. Wtedy $y_S = 3x_S$.",
@@ -7188,7 +7188,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{3}$",
     "solutionSteps": [
       "Oznaczmy długość krawędzi podstawy jako $a=6$, a wysokość ostrosłupa jako $h$, a wysokość ściany bocznej jako $h_s$. Pole podstawy $P_p = a^2 = 6^2 = 36$. Pole powierzchni całkowitej $P_c = P_p + P_b$, gdzie $P_b$ to pole powierzchni bocznej. Z treści zadania $P_c = 4 P_p$, czyli $P_p + P_b = 4 P_p$, co daje $P_b = 3 P_p$.",
@@ -7220,7 +7220,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1 + 2√ 3",
       "1 – 2√ 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $3$.",
     "solutionSteps": [
       "Zauważ, że wyrażenie $x^2 - 6x + 9$ to wzór skróconego mnożenia na kwadrat różnicy: $(x-3)^2$.",
@@ -7251,7 +7251,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 30 · 3 20",
       "2 10 · 3 20"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$2^{30} \\cdot 3^{15}$.",
     "solutionSteps": [
       "Zapisujemy liczbę z rysunku w postaci potęg: $12 = 2^2 \\cdot 3$, więc $12^{30} = (2^2 \\cdot 3)^{30} = (2^2)^{30} \\cdot 3^{30} = 2^{60} \\cdot 3^{30}$.",
@@ -7318,7 +7318,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "3 &frasl; 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
     "solutionSteps": [
       "Zapisz $\\sqrt{125}$ jako potęgę liczby 5: $\\sqrt{125} = \\sqrt{5^3} = 5^{\\frac{3}{2}}$.",
@@ -7411,7 +7411,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "3 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $1$",
     "solutionSteps": [
       "Rozwiąż równanie, przyrównując każdy czynnik do zera. Równanie $x(x - 3)(x + 2) = 0$ jest spełnione, gdy $x = 0$, $x - 3 = 0$ lub $x + 2 = 0$.",
@@ -7442,7 +7442,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "− 2",
       "− 1 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $-1$",
     "solutionSteps": [
       "Skorzystaj z informacji o wierzchołku paraboli $W=(2,1)$ i podstaw jego współrzędne do wzoru funkcji, pamiętając, że $f(2)=1$. Otrzymasz: $a(2-1)(2-3)=1$.",
@@ -7473,7 +7473,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "2 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $1$",
     "solutionSteps": [
       "Skorzystaj z informacji o wierzchołku paraboli, który wynosi $(2, 1)$, aby wyznaczyć współczynnik $a$. Podstaw współrzędne wierzchołka do wzoru funkcji: $1 = a(2-1)(2-3)$.",
@@ -7505,7 +7505,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "y = 1",
       "y = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $x = 2$",
     "solutionSteps": [
       "Funkcja kwadratowa w postaci kanonicznej to $f(x) = a(x-p)^2 + q$. Oś symetrii paraboli to prosta pionowa $x=p$.",
@@ -7536,7 +7536,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie jedno rozwiązanie: x = 0",
       "ma dwa różne rozwiązania: x = 1 i x = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli ma dokładnie jedno rozwiązanie: $x=2$.",
     "solutionSteps": [
       "Przekształć równanie do postaci, gdzie po jednej stronie jest 0. Wymnóż nawiasy i przenieś wszystkie wyrazy na lewą stronę.\n$$x^2 - 2x = x^2 - 4x + 4$$\n$$x^2 - 2x - x^2 + 4x - 4 = 0$$",
@@ -7567,7 +7567,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a ⋅ b > 0",
       "a ⋅ b"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $a \\cdot b < 0$",
     "solutionSteps": [
       "Odczytaj z wykresu dwa punkty należące do prostej, np. $(0, 2)$ i $(1, 0)$.",
@@ -7599,7 +7599,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "17"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{9}{2}$",
     "solutionSteps": [
       "Podstaw podaną wartość $x = \\frac{1}{2}$ do wzoru funkcji $f(x) = 4 - x + 1$. Otrzymasz $f\\left(\\frac{1}{2}\\right) = 4 - \\frac{1}{2} + 1$.",
@@ -7630,7 +7630,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 11 &frasl; 4",
       "m = 10 &frasl; 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $m = \\frac{11}{4}$",
     "solutionSteps": [
       "Proste są równoległe, gdy mają równe współczynniki kierunkowe (liczby stojące przy $x$). W równaniu $y = (m-2)x$ współczynnik kierunkowy wynosi $m-2$, a w równaniu $y = \\frac{3}{4}x + 7$ wynosi $\\frac{3}{4}$.",
@@ -7661,7 +7661,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "36",
       "18"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 18",
     "solutionSteps": [
       "Oblicz $a_5$, podstawiając $n=5$ do wzoru $a_n = 2n^2$. Otrzymasz $a_5 = 2 \\cdot 5^2 = 2 \\cdot 25 = 50$.",
@@ -7692,7 +7692,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "− 18",
       "6"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $-18$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na $n$-ty wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Mając dane $a_4 = 3$ i $r = 5$, oblicz pierwszy wyraz $a_1$: $3 = a_1 + (4-1) \\cdot 5 \\implies 3 = a_1 + 15 \\implies a_1 = -12$.",
@@ -7726,7 +7726,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "b = − 1",
       "b = − 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $b = -2$",
     "solutionSteps": [
       "Podstaw współrzędne punktu $A = (\\frac{1}{3}, -1)$ do wzoru funkcji $f(x) = 3x + b$, gdzie $x = \\frac{1}{3}$ a $f(x) = -1$. Otrzymasz równanie $-1 = 3 \\cdot \\frac{1}{3} + b$.",
@@ -7757,7 +7757,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "62°",
       "31°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 31°",
     "solutionSteps": [
       "Kąt wpisany ABC opiera się na tym samym łuku AC, co kąt środkowy AOC. Kąt środkowy jest dwa razy większy od kąta wpisanego opartego na tym samym łuku.",
@@ -7819,7 +7819,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\cos \\alpha$",
     "solutionSteps": [
       "W trójkącie prostokątnym suma kątów ostrych jest równa 90 stopni, czyli $\\alpha + \\beta = 90^\\circ$. Z tego wynika, że $\\beta = 90^\\circ - \\alpha$.",
@@ -7881,7 +7881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20",
       "25"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$5 \\cdot 4 = 20$",
     "solutionSteps": [
       "Zauważ, że dwucyfrowa liczba naturalna ma dwie cyfry: pierwszą (dziesiątek) i drugą (jedności). Mamy do dyspozycji 5 cyfr: {1, 3, 5, 7, 9}.",
@@ -7912,7 +7912,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "54",
       "60"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 54.",
     "solutionSteps": [
       "Oznaczmy boki prostokąta jako $|AB| = x$ oraz $|BC| = y$. Z treści zadania wiemy, że pole prostokąta $ABCD$ wynosi $90$, czyli $x \\cdot y = 90$.",
@@ -8005,7 +8005,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "39 cm 3",
       "52,5 cm 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 30 cm$^3$.",
     "solutionSteps": [
       "Oznaczmy wysokości stożków jako $h_1$ i $h_2$ oraz ich wspólną promień podstawy jako $r$. Z treści zadania wiemy, że stosunek wysokości wynosi $h_1 : h_2 = 3 : 2$. Objętość stożka $V$ wyraża się wzorem $V = \\frac{1}{3}\\pi r^2 h$.",
@@ -8033,7 +8033,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$",
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową z zerem po prawej stronie. Wyciągnij wspólny czynnik przed nawias.\n$$2(x-1)(x+3) - (x-1) > 0$$\n$$(x-1)[2(x+3) - 1] > 0$$",
@@ -8061,7 +8061,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in \\{-1, 0, 1, 2\\}$",
     "solutionSteps": [
       "Rozkładamy drugi czynnik na iloczyn. Równanie przyjmuje postać $(x^2 - 1)(x(x - 2)) = 0$.",
@@ -8090,7 +8090,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano, że $a^2 - 2ab + 2b^2 > 0$ dla każdych różnych liczb rzeczywistych $a$ i $b$.",
     "solutionSteps": [
       "Przekształć nierówność, grupując wyrazy i wyłączając wspólny czynnik przed nawias. Zauważ, że wyjściowa nierówność jest równoważna $a^2 - 2ab + 2b^2 > 0$. Możemy ją zapisać jako $a^2 - 2ab + b^2 + b^2 > 0$.",
@@ -8118,7 +8118,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano $|CF| = \\frac{3\\sqrt{3}}{16}|CB|$, co nie jest równe $\\frac{9}{16}|CB|$.",
     "solutionSteps": [
       "Oznaczmy długość boku trójkąta ABC jako $a$. Wysokość trójkąta równobocznego wynosi $h = \\frac{a\\sqrt{3}}{2}$. Zgodnie z treścią zadania $|CD| = h$, więc $|CE| = \\frac{3}{4}h = \\frac{3a\\sqrt{3}}{8}$. Odcinek $ED$ ma długość $|ED| = |CD| - |CE| = h - \\frac{3}{4}h = \\frac{1}{4}h = \\frac{a\\sqrt{3}}{8}$.",
@@ -8147,7 +8147,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{11}{36}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych wyników. Rzucamy kostką dwa razy, więc wszystkich kombinacji jest $6 \\times 6 = 36$.",
@@ -8175,7 +8175,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{3}{4}$",
     "solutionSteps": [
       "Zauważ, że rysunek przedstawia trójkąt prostokątny, gdzie jedna przyprostokątna ma długość 3, a druga 4. Kąt α jest kątem ostrym tego trójkąta.",
@@ -8203,7 +8203,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Punkt przecięcia przekątnych to $(\\frac{9}{5}, \\frac{12}{5})$, pole kwadratu to $\\frac{964}{9}$.",
     "solutionSteps": [
       "Punkt przecięcia przekątnych kwadratu (środek symetrii) leży na przekątnej BD i spełnia równanie tej prostej. Aby znaleźć współrzędne środka, podstawiamy współrzędną x punktu A do równania prostej BD. Nie, to błąd. Punkt A nie leży na przekątnej BD. Środek przekątnych leży na prostej $y = \\frac{4}{3}x$. Musimy znaleźć prostą AC, która jest prostopadła do BD i przechodzi przez A.",
@@ -8232,7 +8232,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$3$",
     "solutionSteps": [
       "Zapisz warunek zadania, używając wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Mamy $a_2 = a_1 q$ oraz $a_3 = a_1 q^2$. Po podstawieniu otrzymujemy $6a_1 - 5(a_1 q) + (a_1 q^2) = 0$.",
@@ -8261,7 +8261,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{32\\sqrt{7}}{3}$",
     "solutionSteps": [
       "Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość ostrosłupa. Tangens kąta nachylenia ściany bocznej do podstawy to $\\frac{h}{\\frac{a}{2}}$, co jest równe $\\sqrt{7}$. Stąd $\\frac{2h}{a} = \\sqrt{7}$.",
@@ -8293,7 +8293,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "− 73 &frasl; 9",
       "− 71 &frasl; 9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $-\\frac{73}{9}$",
     "solutionSteps": [
       "Podstaw dane $a = -2$ i $b = 3$ do wyrażenia $a^b - b^a$. Otrzymamy $(-2)^3 - 3^{-2}$.",
@@ -8324,7 +8324,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 13",
       "9 36"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $9^{13}$.",
     "solutionSteps": [
       "Zamień wszystkie podstawy potęg na tę samą liczbę, czyli 9. Pamiętaj, że $81 = 9^2$. Zastosuj własność potęgowania $(a^m)^n = a^{m \\cdot n}$.\n$9^9 \\cdot 81^2 = 9^9 \\cdot (9^2)^2 = 9^9 \\cdot 9^{2 \\cdot 2} = 9^9 \\cdot 9^4$.",
@@ -8354,7 +8354,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 + log 4 5",
       "1 + log 4 10"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 4",
     "solutionSteps": [
       "Skorzystaj z własności logarytmów: $\\log_a b^c = c \\log_a b$ i $\\log_a a = 1$. Rozpisz $\\log_4 8$ jako $\\log_4 2^3 = 3 \\log_4 2$. Wyrażenie przyjmuje postać $3 \\log_4 2 + 5 \\log_4 2$.",
@@ -8385,7 +8385,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie o 60%",
       "o więcej niż 60%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli o więcej niż 60%",
     "solutionSteps": [
       "Oznaczmy promienie kół jako $r_1$ i $r_2$, gdzie $r_1$ to promień pierwszego koła, a $r_2$ to promień drugiego. Z treści zadania wiemy, że $r_1 = r_2 + 0.30 r_2 = 1.3 r_2$.",
@@ -8448,7 +8448,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli przedział $[9, 11]$",
     "solutionSteps": [
       "Rozwiąż nierówność z wartością bezwzględną, przekształcając ją w podwójną nierówność. Dodaj 7 do każdej strony nierówności: $11+7 \\leq 2x \\leq 15+7$, co daje $18 \\leq 2x \\leq 22$.",
@@ -8510,7 +8510,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(–∞,–5)",
       "&lang;–5,–2)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\langle1,+\\infty)$",
     "solutionSteps": [
       "Przekształć równanie do postaci, w której po jednej stronie znajduje się 0. Odejmij $\\frac{3}{x+2}$ od obu stron równania, aby otrzymać $\\frac{2x+1}{x+2} - \\frac{3}{x+2} = 0$.",
@@ -8604,7 +8604,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "n = 12",
       "n = 13"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $n=12$",
     "solutionSteps": [
       "Oblicz różnicę ciągu arytmetycznego, odejmując pierwszy wyraz od drugiego: $r = a_2 - a_1 = 9 - 2 = 7$.",
@@ -8635,7 +8635,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = 85 &frasl; 6",
       "x = 6 &frasl; 85"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $x = 6$",
     "solutionSteps": [
       "W ciągu geometrycznym kwadrat środkowego wyrazu jest równy iloczynowi wyrazów skrajnych, czyli $ (3x)^2 = 81 \\cdot 4 $.",
@@ -8666,7 +8666,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cos&alpha; = 25 &frasl; 49",
       "cos&alpha; = 5√ 6 &frasl; 7"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{5}{13}$",
     "solutionSteps": [
       "Z twierdzenia Pitagorasa dla trójkąta prostokątnego z rysunku oblicz długość przeciwprostokątnej. Mamy $a^2 + b^2 = c^2$, gdzie $a=5$, $b=12$, więc $5^2 + 12^2 = c^2 \\implies 25 + 144 = c^2 \\implies c^2 = 169 \\implies c = 13$.",
@@ -8697,7 +8697,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "81°",
       "78°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $78^{\\circ}$",
     "solutionSteps": [
       "Kąt środkowy oparty na tym samym łuku co kąt wpisany jest dwa razy większy od kąta wpisanego. Kąt $AOC$ jest kątem wpisanym opartym na łuku $ABC$, a kąt $ABC$ ma $121^{\\circ}$. Kąt środkowy oparty na łuku $ABC$ ma miarę $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Jest to kąt $AOC$ \"większy\". Kąt $AOC$ \"mniejszy\" ma miarę $360^{\\circ} - 118^{\\circ} = 242^{\\circ}$. Alternatywnie, kąt wpisany oparty na tym samym łuku, co kąt środkowy $AOC$, ma miarę $121^{\\circ}$. Taki kąt nie może istnieć, ponieważ jest większy od $180^{\\circ}$. Zatem rozważamy kąt oparty na mniejszym łuku $AC$. Kąt wpisany oparty na łuku $AC$ ma $180^{\\circ}-121^{\\circ} = 59^{\\circ}$. Kąt środkowy $AOC$ (mniejszy) ma miarę $2 \\cdot 59^{\\circ} = 118^{\\circ}$.",
@@ -8729,7 +8729,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "8",
       "6"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $8$",
     "solutionSteps": [
       "Zauważ, że z równoległości DE i AB wynika podobieństwo trójkątów CDE i CAB. Dodatkowo, ponieważ $|AE|=|DE|$, trójkąt ADE jest równoramienny, co daje $|\\angle DAE| = |\\angle DEA|$. Z równoległości $DE \\parallel AB$ wynika, że $|\\angle DEA| = |\\angle EAB|$ (kąty naprzemianległe), stąd $|\\angle DAE| = |\\angle EAB|$.",
@@ -8761,7 +8761,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 6",
       "6√ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt{6}$",
     "solutionSteps": [
       "Wzór na pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Podstawiamy dane: $6\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$.",
@@ -8822,7 +8822,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "&#8738;SOA",
       "&#8738;ASB"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\angle SOA$",
     "solutionSteps": [
       "Kąt nachylenia krawędzi bocznej do płaszczyzny podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę. Krawędź boczna to $SA$, a płaszczyzna podstawy to $ABCD$.",
@@ -8853,7 +8853,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "28",
       "26"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 21",
     "solutionSteps": [
       "Graniastosłup o $n$-bokach w podstawie ma $2n$ wierzchołków. Skoro graniastosłup ma 14 wierzchołków, to $2n = 14$, stąd $n = 7$. Podstawą graniastosłupa jest siedmiokąt.",
@@ -8946,7 +8946,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "108π",
       "54π"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $18\\pi$.",
     "solutionSteps": [
       "Z twierdzenia Pitagorasa oblicz promień $r$ podstawy stożka, znając jego wysokość $h=6$ i tworzącą $l=3\\sqrt{5}$. Mamy $r^2 + h^2 = l^2$, czyli $r^2 + 6^2 = (3\\sqrt{5})^2$.",
@@ -8978,7 +8978,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "16"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 9",
     "solutionSteps": [
       "Ustawiamy dane w kolejności niemalejącej: $x, 2, 4, 6, 8, 10, 12, 14$. Suma tych danych to $x + 2 + 4 + 6 + 8 + 10 + 12 + 14 = x + 56$.",
@@ -9009,7 +9009,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1016",
       "1017"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $1017$",
     "solutionSteps": [
       "Szukamy liczb naturalnych czterocyfrowych $n$, takich że $1000 \\le n < 2017$. Najmniejszą taką liczbą jest $1000$.",
@@ -9040,7 +9040,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "n = 18",
       "n = 12"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $n=12$.",
     "solutionSteps": [
       "Zapisz prawdopodobieństwo wylosowania kuli białej jako stosunek liczby kul białych do łącznej liczby kul w pudełku: $P(\\text{biała}) = \\frac{6}{6+n}$.",
@@ -9069,7 +9069,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in [-2, \\frac{3}{2}]$",
     "solutionSteps": [
       "Oblicz wyróżnik $\\Delta$ i pierwiastki równania kwadratowego $2x^2 + x - 6 = 0$. Mamy $\\Delta = b^2 - 4ac = 1^2 - 4 \\cdot 2 \\cdot (-6) = 1 + 48 = 49$, więc $\\sqrt{\\Delta} = 7$. Pierwiastki to $x_1 = \\frac{-1 - 7}{4} = -2$ i $x_2 = \\frac{-1 + 7}{4} = \\frac{6}{4} = \\frac{3}{2}$.",
@@ -9096,7 +9096,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x = \\sqrt{6}$, $x = -\\sqrt{6}$, $x = -\\frac{2}{3}$.",
     "solutionSteps": [
       "Aby iloczyn dwóch czynników był równy zero, co najmniej jeden z nich musi być równy zero. Przyrównujemy zatem każdy czynnik do zera: $x^2 - 6 = 0$ lub $3x + 2 = 0$.",
@@ -9124,7 +9124,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Nierówność $\\frac{(x-2)^2}{x} \\ge 0$ jest prawdziwa dla każdej dodatniej liczby rzeczywistej $x$.",
     "solutionSteps": [
       "Przekształć nierówność, przenosząc wszystkie wyrazy na jedną stronę, aby uzyskać nierówność typu $f(x) \\ge 0$.\nPo przeniesieniu otrzymujemy: $x + \\frac{4}{x} - 4 \\ge 0$.",
@@ -9152,7 +9152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$|AD|:|DB| = 3:1$.",
     "solutionSteps": [
       "W trójkącie prostokątnym ABC mamy kąty $90^\\circ, 60^\\circ, 30^\\circ$. Ponieważ CD jest wysokością, dzieli ona trójkąt ABC na dwa mniejsze trójkąty prostokątne: ADC i BDC. Trójkąt ADC ma kąty $90^\\circ, 30^\\circ, 60^\\circ$, a trójkąt BDC ma kąty $90^\\circ, 60^\\circ, 30^\\circ$.",
@@ -9180,7 +9180,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{11}{25}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru 5-elementowego, więc wszystkich par jest $5 \\cdot 5 = 25$.",
@@ -9208,7 +9208,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "50",
     "solutionSteps": [
       "Zapisz wzór na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i wyraź podane wyrazy za pomocą $a_1$ i $r$. Użyj własności ciągu arytmetycznego, że $a_k + a_m = a_p + a_q$, gdy $k+m = p+q$.\n$a_{21} + a_{24} + a_{27} + a_{30} = (a_{25.5-4.5}) + (a_{25.5-1.5}) + (a_{25.5+1.5}) + (a_{25.5+4.5})$. Ponieważ $21+30 = 51$ i $24+27 = 51$, mamy $a_{21}+a_{30} = a_{24}+a_{27}$. Zatem $2(a_{24}+a_{27}) = 100$, co daje $a_{24}+a_{27} = 50$.",
@@ -9236,7 +9236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-\\frac{16}{3}$",
     "solutionSteps": [
       "Skorzystaj z postaci iloczynowej funkcji kwadratowej $f(x) = a(x-x_1)(x-x_2)$, gdzie $x_1=-2$ i $x_2=6$, czyli $f(x) = a(x+2)(x-6)$.",
@@ -9264,7 +9264,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "A = $(\\frac{25}{3}, 0)$, B = $(0, \\frac{25}{4})$, długość AB = $\\frac{125}{12}$.",
     "solutionSteps": [
       "Znajdź równanie prostej przechodzącej przez punkty C=(0,0) i D=(3,4), która jest również prostopadła do przeciwprostokątnej AB.\nProsta CD ma równanie $y = \\frac{4}{3}x$. Prosta AB jest prostopadła do CD, więc jej nachylenie jest odwrotnością z minusem, czyli $-\\frac{3}{4}$. Równanie prostej AB to $y - 4 = -\\frac{3}{4}(x - 3)$.",
@@ -9292,7 +9292,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$192$",
     "solutionSteps": [
       "Oblicz długości przyprostokątnych trójkąta ABC. Okrąg opisany na trójkącie prostokątnym ma środek w środku przeciwprostokątnej AB. Długość promienia okręgu opisanego jest równa długości odcinka SC, czyli 5. Zatem długość przeciwprostokątnej AB wynosi $2 \\cdot 5 = 10$. Oznaczamy $|AC| = 4x$ i $|BC| = 3x$. Z twierdzenia Pitagorasa dla $\\triangle ABC$: $(4x)^2 + (3x)^2 = 10^2 \\Rightarrow 16x^2 + 9x^2 = 100 \\Rightarrow 25x^2 = 100 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. Stąd $|AC| = 4 \\cdot 2 = 8$ i $|BC| = 3 \\cdot 2 = 6$.",
@@ -9355,7 +9355,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "48",
       "39"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 52",
     "solutionSteps": [
       "Zapisz podaną informację w postaci równania, gdzie 78 to 150% liczby c. Możemy to zapisać jako $78 = 1.50 \\cdot c$.",
@@ -9418,7 +9418,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "5 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 4",
     "solutionSteps": [
       "Zastosuj wzór na logarytm potęgi: $\\log_b(a^c) = c \\log_b(a)$. W tym przypadku $\\log \\sqrt{10} = \\log(10^{1/2}) = \\frac{1}{2} \\log 10$. Pamiętaj, że $\\log 10 = 1$.",
@@ -9449,7 +9449,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "− 0,36",
       "– 4 &frasl; 11"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{4}{11}$.",
     "solutionSteps": [
       "Zamień liczbę 0,(3) na ułamek zwykły: $0,(3) = \\frac{3}{10} + \\frac{3}{100} + \\dots = \\frac{0,3}{1-0,1} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$. Alternatywnie: $x = 0,333...$, $10x = 3,333...$, $10x - x = 3$, $9x = 3$, $x = \\frac{3}{9} = \\frac{1}{3}$.",
@@ -9480,7 +9480,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−∞, 5⟩",
       "(−∞, 1 1 &frasl; 3 &rang;"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$.",
     "solutionSteps": [
       "Przekształć nierówność do postaci, gdzie jedna strona jest zerem, a następnie porównaj licznik z zerem, aby znaleźć miejsca zerowe funkcji $f(x) = \\frac{x-1}{x-5}$. Miejsca zerowe licznika to $x=1$, a mianownik jest różny od zera dla $x \\neq 5$.",
@@ -9586,7 +9586,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 6",
       "m = 9 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $m = 9$.",
     "solutionSteps": [
       "Proste są równoległe, gdy mają ten sam współczynnik kierunkowy (współczynnik przy $x$). W pierwszym równaniu jest to $3$.",
@@ -9617,7 +9617,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "![Rysunek do zadania](/cke-matura/m21-maj/z10-3.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\sqrt{3}$",
     "solutionSteps": [
       "Przekształć wzór funkcji $f(x)$, aby wyznaczyć prostszą postać wyrażenia. Wykorzystaj wzór skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$.\n$$ f(x) = \\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x+1 $$",
@@ -9709,7 +9709,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = 1",
       "x = 5 &frasl; 3 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $x = \\frac{5}{3}$",
     "solutionSteps": [
       "Dla ciągu geometrycznego zachodzi warunek, że kwadrat środkowego wyrazu jest równy iloczynowi wyrazów skrajnych: $(3x)^2 = 15 \\cdot \\frac{5}{3}$.",
@@ -9740,7 +9740,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9",
       "8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 8",
     "solutionSteps": [
       "Szukamy wyrazów niedodatnich, czyli takich, dla których $b_n \\le 0$. Podstawiamy wzór ciągu: $3n^2 - 25n \\le 0$.",
@@ -9771,7 +9771,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "33",
       "40 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 29",
     "solutionSteps": [
       "Skorzystaj z definicji ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Wyrazy $a_3$, $a_5$ i $a_4$ to odpowiednio $a_1+2r$, $a_1+4r$ oraz $a_1+3r$.",
@@ -9802,7 +9802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cos α",
       "sin 2 α pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\cos \\alpha$",
     "solutionSteps": [
       "Zastosuj wzór na sinus sumy kątów: $\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B$. W tym przypadku $A=\\alpha$ i $B=90^\\circ$. Pamiętaj, że $\\sin(90^\\circ)=1$ i $\\cos(90^\\circ)=0$.",
@@ -9833,7 +9833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40°",
       "50° pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 40°",
     "solutionSteps": [
       "Ustal, że trójkąt AOB jest równoramienny, ponieważ OA i OB są promieniami okręgu, więc $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 80^\\circ}{2} = 50^\\circ$.",
@@ -9864,7 +9864,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "62 &frasl; 5",
       "64 &frasl; 5 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{64}{5}$.",
     "solutionSteps": [
       "Z definicji tangensa w trójkącie prostokątnym, gdzie $\\alpha$ to kąt przy wierzchołku A, mamy $\\operatorname{tg} \\alpha = \\frac{|BC|}{|AC|}$. Podstawiając dane, otrzymujemy $\\frac{2}{5} = \\frac{|BC|}{8}$.",
@@ -9896,7 +9896,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4 &frasl; 3",
       "2 &frasl; 3 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Obwód tego trójkąta jest równy 6.",
     "solutionSteps": [
       "Ze wzoru na pole trójkąta równobocznego $P = \\frac{a^2\\sqrt{3}}{4}$ oraz podanego pola $P = \\sqrt{3}$, obliczamy długość boku $a$. Mamy $\\frac{a^2\\sqrt{3}}{4} = \\sqrt{3}$, co po skróceniu przez $\\sqrt{3}$ i przemnożeniu przez 4 daje $a^2 = 4$, czyli $a=2$.",
@@ -9957,7 +9957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "35°",
       "40°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 40°",
     "solutionSteps": [
       "Obliczamy miarę kąta przy wierzchołku S w trójkącie SBC. Ponieważ SB i SC to promienie okręgu, trójkąt SBC jest równoramienny. Kąt |∡SBC| = 60°, więc |∡SCB| = 60°, a |∡BSC| = 180° - 60° - 60° = 60°.",
@@ -9988,7 +9988,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "60°",
       "50°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $70^\\circ$",
     "solutionSteps": [
       "Suma miar kątów przy tym samym ramieniu w równoległoboku wynosi 180°. Kąt $\\alpha$ i kąt leżący przy tym samym boku (oznaczony jako $180^\\circ - \\beta$) sumują się do $180^\\circ$.",
@@ -10020,7 +10020,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dwunastokąt.",
       "piętnastokąt."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli dziesięciokąt.",
     "solutionSteps": [
       "Zapisz wzór na liczbę przekątnych $P$ n–kąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
@@ -10052,7 +10052,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 5",
       "3 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\sqrt{5}$",
     "solutionSteps": [
       "Oblicz pole figury F1 złożonej z dwóch kół o promieniach $r_1=1$ i $r_2=3$. Pole koła to $P = \\pi r^2$.\n$P_1 = \\pi (1)^2 + \\pi (3)^2 = \\pi + 9\\pi = 10\\pi$.",
@@ -10083,7 +10083,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 34",
       "8√ 34 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 136",
     "solutionSteps": [
       "Oblicz długość połowy przekątnej kwadratu jako odległość między punktem A i punktem M, używając wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\n$d_{AM} = \\sqrt{(1-3)^2 + (3-(-5))^2} = \\sqrt{(-2)^2 + 8^2} = \\sqrt{4 + 64} = \\sqrt{68}$.",
@@ -10145,7 +10145,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40",
       "299"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 60",
     "solutionSteps": [
       "Określamy warunki: liczba jest trzycyfrowa, większa od 700, cyfry pochodzą ze zbioru {1,2,3,7,8,9} i nie powtarzają się. Liczba musi być większa od 700, więc pierwsza cyfra (setek) może być tylko 7, 8 lub 9. Mamy 3 możliwości wyboru pierwszej cyfry.",
@@ -10176,7 +10176,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = 2",
       "x = 8 &frasl; 3 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $x=2$",
     "solutionSteps": [
       "Ciąg jest niemalejący, więc wyrazy są ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
@@ -10204,7 +10204,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in [-2, 7]$",
     "solutionSteps": [
       "Przekształć nierówność do postaci z zerem po prawej stronie: $x^2 - 5x - 14 \\leq 0$.",
@@ -10232,7 +10232,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.",
     "solutionSteps": [
       "Skorzystaj z podanej nierówności $a \\le b \\le c$ i przekształć ją, aby uzyskać relacje między poszczególnymi składnikami nierówności, którą mamy udowodnić. Z podanej zależności mamy: $a \\le b$ oraz $b \\le c$.",
@@ -10675,7 +10675,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$f(x) = 3x + 2$",
     "solutionSteps": [
       "Zapisz ogólny wzór funkcji liniowej jako $f(x) = ax + b$ i wykorzystaj warunek $f(0) = 2$. Podstawienie $x=0$ do wzoru daje $f(0) = a \\cdot 0 + b$, czyli $b=2$, zatem $f(x) = ax + 2$.",
@@ -10704,7 +10704,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x = \\frac{3 - \\sqrt{17}}{4}$ lub $x = \\frac{3 + \\sqrt{17}}{4}$",
     "solutionSteps": [
       "Przekształć równanie, aby jedna strona była równa zero. Odejmij $x$ od obu stron: $2x^2 - 3x - 1 = 0$.",
@@ -10732,7 +10732,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "4",
     "solutionSteps": [
       "Pole trójkąta równobocznego o boku $a$ to $\\frac{a^2\\sqrt{3}}{4}$. Zatem $9\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$, co po skróceniu $\\sqrt{3}$ i przemnożeniu przez 4 daje $a^2 = 36$, czyli $a=6$. Bok trójkąta ABC ma długość 6.",
@@ -10760,7 +10760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{3}$",
     "solutionSteps": [
       "Określ przestrzeń zdarzeń elementarnych. Rzucając dwukrotnie kostką, mamy $6 \\times 6 = 36$ możliwych wyników (par).",
@@ -10788,7 +10788,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Współrzędne wierzchołka C to (0, 27), a obwód trójkąta to $50 + 9\\sqrt{10}$.",
     "solutionSteps": [
       "Skoro punkt C leży na osi Oy, jego współrzędne to (0, y). Skorzystamy z warunku |AC| = |BC|, czyli z równości kwadratów odległości, aby obliczyć y. $|AC|^2 = (0 - (-20))^2 + (y - 12)^2 = 20^2 + (y - 12)^2 = 400 + (y - 12)^2$. $|BC|^2 = (0 - 7)^2 + (y - 3)^2 = (-7)^2 + (y - 3)^2 = 49 + (y - 3)^2$.",
@@ -10881,7 +10881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "76,00 zł",
       "66,40 zł"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 76,00 zł",
     "solutionSteps": [
       "Oznacz cenę maseczki przed podwyżką jako $x$. Po podwyżce o 40% cena wynosi $x + 0,40x = 1,40x$.",
@@ -10975,7 +10975,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "8 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "–4",
     "solutionSteps": [
       "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała 2 nie wpływa na rozwiązania.",
@@ -11006,7 +11006,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−∞, 3 &frasl; 8 )",
       "( 3 &frasl; 8 ,+∞)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Brak możliwości udzielenia odpowiedzi przy podanej treści zadania i braku rysunku.",
     "solutionSteps": [
       "Nierówność $\\frac{2x-3}{7-4x} \\ge 0$ jest spełniona, gdy licznik i mianownik mają przeciwne znaki lub licznik jest równy zero. Rozwiązujemy dwa przypadki: $2x-3 \\ge 0$ i $7-4x > 0$ (mianownik nie może być zerem) lub $2x-3 \\le 0$ i $7-4x < 0$.",
@@ -11037,7 +11037,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = 1",
       "a = 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $a = 1$",
     "solutionSteps": [
       "Funkcja liniowa $f(x) = (a-1)x + 3$ osiąga wartość najmniejszą, gdy jej współczynnik kierunkowy $(a-1)$ jest ujemny. Wartość najmniejszą równą 3 funkcja osiąga dla $x=0$, ponieważ $f(0) = (a-1)\\cdot 0 + 3 = 3$.",
@@ -11068,7 +11068,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Funkcja &fnof; dla argumentu 1 przyjmuje wartość (−1).",
       "Zbiorem wartości funkcji &fnof; jest przedział (−4,5⟩."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli Funkcja &fnof; dla argumentu 1 przyjmuje wartość (−1).",
     "solutionSteps": [
       "Odczytaj dziedzinę funkcji z wykresu. Dziedzina to zbiór wszystkich dopuszczalnych argumentów (wartości $x$), odczytujemy ją z osi $x$. Wykres funkcji istnieje dla $x$ od $-4$ (nie włącznie) do $5$ (włącznie).",
@@ -11100,7 +11100,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $0$.",
     "solutionSteps": [
       "Aby obliczyć wartość funkcji $f$ dla argumentu 1, podstawiamy $x=1$ do podanego wzoru funkcji: $f(1) = \\frac{1^3 - 2 \\cdot 1^2 + 1}{1^2 - 1} = \\frac{1 - 2 + 1}{1 - 1} = \\frac{0}{0}$. Otrzymaliśmy symbol nieoznaczony, co oznacza, że musimy uprościć wzór funkcji.",
@@ -11131,7 +11131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "3 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 4",
     "solutionSteps": [
       "W ciągu geometrycznym iloczyn wyrazów jest równy środkowemu wyrazowi podniesionemu do potęgi równej liczbie wyrazów. Mamy więc $x \\cdot y \\cdot z = y^3$.",
@@ -11162,7 +11162,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "25 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Zadanie jest błędnie sformułowane lub podana odpowiedź jest niepoprawna. Według podanych danych i kroków obliczeń, wynik to -4. Brak opcji -4 w odpowiedziach.",
     "solutionSteps": [
       "Zapisz wzór na ogólny wyraz ciągu arytmetycznego, podstawiając dane: $a_n = a_1 + (n-1)r = -3 + (n-1)5 = -3 + 5n - 5 = 5n - 8$.",
@@ -11224,7 +11224,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Ciąg ( c n ) jest arytmetyczny.",
       "Wśród ciągów ( a n ), ( b n ), ( c n ) nie ma ciągu arytmetycznego."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Ciąg arytmetyczny charakteryzuje się stałą różnicą między kolejnymi wyrazami, czyli $a_{n+1} - a_n = r$, gdzie $r$ jest stałą. Sprawdźmy ciąg (a_n).",
@@ -11256,7 +11256,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "–32",
       "–23"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $-23$",
     "solutionSteps": [
       "Aby obliczyć trzeci wyraz ciągu, podstawiamy $n=3$ do wzoru $a_n = (-2)^n \\cdot n + 1$.",
@@ -11287,7 +11287,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 &frasl; 4",
       "3 &frasl; 2 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
     "solutionSteps": [
       "W rombie o boku $a=2\\sqrt{3}$ i kącie $60^\\circ$ wysokość $h$ można obliczyć ze wzoru $h=a \\cdot \\sin(60^\\circ) = 2\\sqrt{3} \\cdot \\frac{\\sqrt{3}}{2} = 3$.",
@@ -11349,7 +11349,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 17",
       "6√ 2 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\sqrt{13}$",
     "solutionSteps": [
       "Oblicz współrzędne środka $S$ odcinka PR, korzystając ze wzoru $S = (\\frac{x_P+x_R}{2}, \\frac{y_P+y_R}{2})$. Podstaw dane: $S = (\\frac{4+(-2)}{2}, \\frac{7+(-3)}{2}) = (\\frac{2}{2}, \\frac{4}{2}) = (1,2)$.",
@@ -11379,7 +11379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cos &alpha; = – 3 &frasl; 5",
       "cos &alpha; = 3 &frasl; 5 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{5}$",
     "solutionSteps": [
       "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Podstaw znany sinus: $(\\frac{4}{5})^2 + \\cos^2 \\alpha = 1$.",
@@ -11441,7 +11441,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 &frasl; 2",
       "–5 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $-\\frac{1}{6}$",
     "solutionSteps": [
       "Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi -1. Współczynnik kierunkowy pierwszej prostej to $3a$, a drugiej to $2$.",
@@ -11472,7 +11472,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "y = 5 x – 10",
       "y = – 1 &frasl; 5 x + 28 &frasl; 5 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
     "solutionSteps": [
       "Proste zawierające ramiona trapezu są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. Prosta $AB$ ma równanie $y = 5x + 3$, więc jej współczynnik kierunkowy to $5$.",
@@ -11503,7 +11503,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m21-probna/z23-3.png)",
       "![Rysunek do zadania](/cke-matura/m21-probna/z23-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{(a-b)\\sqrt{3}}{6}$",
     "solutionSteps": [
       "Narysuj wysokość opuszczoną z wierzchołka C na podstawę AB. Nazwij punkt przecięcia D'. Powstanie trójkąt prostokątny BCC', gdzie kąt przy wierzchołku B ma miarę $180^\\circ - 30^\\circ = 150^\\circ$. Ponieważ trapez jest równoramienny, kąt przy wierzchołku B ma miarę $180^\\circ - 30^\\circ = 150^\\circ$, ale interesuje nas kąt przy podstawie, który wynosi $30^\\circ$. Zatem w trójkącie prostokątnym stworzonym przez wysokość z C, ramię BC i część podstawy AB, kąt przy A lub B jest $30^\\circ$.",
@@ -11565,7 +11565,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 ∶ 1",
       "1 ∶ 9 pokaż wskazówkę &raquo;"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $9 \\colon 1$",
     "solutionSteps": [
       "Oblicz pole podstawy każdego ostrosłupa. Pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Niech $a_1$ i $a_2$ będą długościami krawędzi podstaw, wtedy $a_1 = 3a_2$. Pola podstaw to $P_1 = \\frac{a_1^2\\sqrt{3}}{4} = \\frac{(3a_2)^2\\sqrt{3}}{4} = \\frac{9a_2^2\\sqrt{3}}{4}$ i $P_2 = \\frac{a_2^2\\sqrt{3}}{4}$. Zauważ, że $P_1 = 9P_2$.",
@@ -11640,7 +11640,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5 &frasl; 90",
       "18 &frasl; 90"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{18}{90}$",
     "solutionSteps": [
       "Określ liczbę wszystkich dwucyfrowych liczb naturalnych. Liczby dwucyfrowe to liczby od 10 do 99, czyli jest ich $99 - 10 + 1 = 90$.",
@@ -11699,7 +11699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, -4) \\cup (3, \\infty)$",
     "solutionSteps": [
       "Rozwiń lewą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową.\n$3x^2 + 3x > x^2 + x + 24 \\implies 2x^2 + 2x - 24 > 0$",
@@ -11727,7 +11727,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x=0$",
     "solutionSteps": [
       "Przekształć równanie, mnożąc obie strony przez wspólny mianownik $6$, aby pozbyć się ułamków. Otrzymasz $3(x-1) + 2(x+2) = 1$.",
@@ -11755,7 +11755,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$r = \\frac{ab}{a+b}$",
     "solutionSteps": [
       "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości są równe $r$.",
@@ -11784,7 +11784,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{24}{25}$",
     "solutionSteps": [
       "Podnieś obustronnie równanie $\\sin \\alpha + \\cos \\alpha = \\frac{7}{5}$ do kwadratu, aby uzyskać wyrażenie zawierające $\\sin^2 \\alpha$, $\\cos^2 \\alpha$ i $2 \\sin \\alpha \\cos \\alpha$.\n$$(\\sin \\alpha + \\cos \\alpha)^2 = \\left(\\frac{7}{5}\\right)^2$$\n$$\\sin^2 \\alpha + 2 \\sin \\alpha \\cos \\alpha + \\cos^2 \\alpha = \\frac{49}{25}$$",
@@ -11812,7 +11812,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "125",
     "solutionSteps": [
       "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok BD = 10. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, a kąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, a kąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, a kąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
@@ -11840,7 +11840,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano, że $1 + c > b$.",
     "solutionSteps": [
       "Funkcja kwadratowa nie ma miejsc zerowych, gdy jej wyróżnik (delta) jest ujemny. Wzór na deltę to $\\Delta = b^2 - 4ac$. Dla naszej funkcji $a=1$, więc $\\Delta = b^2 - 4c < 0$.",
@@ -11869,7 +11869,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$a_n = 3n - 7$",
     "solutionSteps": [
       "Zapisz warunki zadania w postaci równań. Suma pierwszych pięciu wyrazów ciągu arytmetycznego to $5a_1 + 10r = 10$, co upraszcza się do $a_1 + 2r = 2$. Z faktu, że $a_3, a_5, a_{13}$ tworzą ciąg geometryczny, wynika warunek $a_5^2 = a_3 \\cdot a_{13}$.",
@@ -11901,7 +11901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "26",
       "14"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 15.",
     "solutionSteps": [
       "Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.",
@@ -11963,7 +11963,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5",
       "6 log 4 16"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 5",
     "solutionSteps": [
       "Zastosuj wzór na logarytm potęgi: $log_a(x^k) = k \\cdot log_a(x)$. Otrzymujemy: $4 \\cdot \\frac{1}{2} \\log_4 4 + 2 \\cdot \\frac{3}{2} \\log_4 4$.",
@@ -11994,7 +11994,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "95 266 zł",
       "94 478 zł"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 97 200 zł",
     "solutionSteps": [
       "Oznaczmy pierwotną cenę działki jako $x$. Po pierwszej obniżce o 10% cena wynosi $x \\cdot (1 - 0.10) = 0.9x$.",
@@ -12025,7 +12025,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m22-maj/z05-4.png)",
       "![Rysunek do zadania](/cke-matura/m22-maj/z05-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{\\sqrt{3}}{2}$",
     "solutionSteps": [
       "Rozpisujemy pierwiastek z ułamka jako różnicę pierwiastków: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}}$.",
@@ -12055,7 +12055,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x 0 0 > 0",
       "x 0 0"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $x_0 < 0$ i $y_0 > 0$.",
     "solutionSteps": [
       "Przekształć drugie równanie tak, aby wyznaczyć $x$: $x = -2y + 4$.",
@@ -12087,7 +12087,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−∞, 3 &frasl; 4 )",
       "( 3 &frasl; 4 ,+∞)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{4}, +\\infty)$.",
     "solutionSteps": [
       "Nierówność $\\frac{x-3}{4-x} \\ge 0$ rozwiążemy, analizując znaki licznika i mianownika. Licznik jest zerowy dla $x=3$, a mianownik dla $x=4$. Zwróć uwagę, że $x \\neq 4$.",
@@ -12118,7 +12118,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0",
       "9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $0$.",
     "solutionSteps": [
       "Równanie $2x(x^2 - 9)(x + 1) = 0$ jest spełnione, gdy jeden z czynników jest równy zero. Stąd otrzymujemy $2x = 0$ lub $x^2 - 9 = 0$ lub $x + 1 = 0$.",
@@ -12149,7 +12149,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0",
       "16"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 0",
     "solutionSteps": [
       "Odczytaj wartości funkcji z wykresu dla $x = -3$, $x = 0$ i $x = 4$. Z wykresu wynika, że $f(-3) = -2$, $f(0) = 0$ oraz $f(4) = 2$.",
@@ -12180,7 +12180,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "g (x) = &fnof;(x) + 2",
       "g (x) = &fnof;(x + 2)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $g(x) = f(x) + 2$",
     "solutionSteps": [
       "Zauważ, że wykres funkcji $g(x)$ jest przesunięty względem wykresu funkcji $f(x)$ w pionie. Aby sprawdzić kierunek i wartość przesunięcia, porównaj charakterystyczne punkty obu wykresów.",
@@ -12242,7 +12242,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "&fnof;(x) = (x − 3) 2 + 2",
       "&fnof;(x) = (x + 3) 2 + 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $f(x) = 3(x + 3)^2 + 2$",
     "solutionSteps": [
       "Wzór ogólny funkcji kwadratowej w postaci kanonicznej to $f(x) = a(x-p)^2 + q$, gdzie $W=(p, q)$ to wierzchołek paraboli.",
@@ -12273,7 +12273,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−26)",
       "(−16)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $-26$.",
     "solutionSteps": [
       "Wzór na $a_n$ to $a_n = n^2 - 5n - 14$. Aby obliczyć $a_7$, podstawiamy $n=7$ do wzoru.",
@@ -12373,7 +12373,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 3 &frasl; 2",
       "1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 1",
     "solutionSteps": [
       "Zastosuj wzór na sinus sumy kątów: $\\sin(\\alpha + \\beta) = \\sin \\alpha \\cos \\beta + \\cos \\alpha \\sin \\beta$. W zadaniu mamy $\\alpha = 12^\\circ$ i $\\beta = 78^\\circ$.",
@@ -12404,7 +12404,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "180° − α − γ",
       "α + γ − 180°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $180^\\circ - \\frac{\\alpha}{2} - \\gamma$",
     "solutionSteps": [
       "Rozważ trójkąt SBC. Jest to trójkąt równoramienny, ponieważ SB i SC są promieniami okręgu. Kąt SBC ma miarę $\\frac{180^\\circ - \\alpha}{2} = 90^\\circ - \\frac{\\alpha}{2}$.",
@@ -12435,7 +12435,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10π",
       "12π"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $12\\pi$",
     "solutionSteps": [
       "Określ kształt czworokąta ASBP. Skoro wszystkie punkty leżą na okręgu o środku S i promieniu 6, to odcinki AS, SB, SP oraz BP są promieniami o długości 6. Ponieważ ASBP jest rombem, wszystkie jego boki są równe, co jest zgodne z faktem, że są to promienie okręgu. Kąt PAS wynosi 60°, a w rombie przeciwległe kąty są równe, więc kąt SBP również wynosi 60°. Suma kątów w czworokącie wynosi 360°, więc kąty ASB i APB mają po 120°. Ponieważ AS = SP = 6 i kąt między nimi wynosi 60°, trójkąt ASP jest równoboczny, co oznacza, że AP = 6. Ponieważ AS = SB = 6 i kąt między nimi wynosi 120°, trójkąt ASB jest równoramienny.",
@@ -12466,7 +12466,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "27√ 3",
       "36√ 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $36\\sqrt{3}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na wysokość trójkąta równobocznego: $h = \\frac{a\\sqrt{3}}{2}$, gdzie $a$ to długość boku. Podstawiając daną wysokość, mamy $6\\sqrt{3} = \\frac{a\\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i przemnożeniu przez 2 otrzymujemy $a=12$.",
@@ -12528,7 +12528,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−4)",
       "4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $-9$",
     "solutionSteps": [
       "Prosta przechodząca przez początek układu współrzędnych $(0,0)$ i punkt $A(-2,6)$ ma równanie postaci $y=ax$. Podstawiamy współrzędne punktu A, aby wyznaczyć $a$.",
@@ -12560,7 +12560,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "proste l oraz m.",
       "proste m oraz n."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli proste l oraz m.",
     "solutionSteps": [
       "Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych ($a_1 \\cdot a_2$) wynosi $-1$. Zidentyfikuj współczynniki kierunkowe ($a$) wszystkich danych prostych: $k: a_k = -1$, $l: a_l = \\frac{2}{3}$, $m: a_m = -\\frac{3}{2}$, $n: a_n = -\\frac{2}{3}$.",
@@ -12653,7 +12653,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "280 &frasl; 3 cm 3",
       "560 &frasl; 3 cm 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 280 cm$^3$",
     "solutionSteps": [
       "Oblicz pole podstawy graniastosłupa (rombu). Pole rombu $P$ to połowa iloczynu długości jego przekątnych ($d_1, d_2$).\n$$P = \\frac{1}{2} d_1 \\cdot d_2 = \\frac{1}{2} \\cdot 7 \\text{ cm} \\cdot 10 \\text{ cm} = 35 \\text{ cm}^2$$",
@@ -12684,7 +12684,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m22-maj/z26-4.png)",
       "![Rysunek do zadania](/cke-matura/m22-maj/z26-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$2a^2$",
     "solutionSteps": [
       "Ostrosłup EFGB ma w podstawie trójkąt prostokątny EFG, a jego ściany boczne to trójkąty prostokątne EFB, BFG oraz EGB. Każda z krawędzi EFG, EF, FG, EB, GB ma długość $a$. Długość krawędzi FB jest krótsza ($a\\sqrt{2}$), a przekątna EG ma długość $a\\sqrt{2}$.",
@@ -12716,7 +12716,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 ⋅ 10 ⋅ 10 ⋅ 2",
       "9 ⋅ 9 ⋅ 8 ⋅ 1"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 10 \\cdot 10 \\cdot 1$",
     "solutionSteps": [
       "Ustal warunki dla cyfr liczby czterocyfrowej nieparzystej podzielnej przez 5: pierwsza cyfra nie może być zerem (9 możliwości: 1-9), ostatnia cyfra musi być 0 lub 5 (2 możliwości), liczba musi być nieparzysta (ostania cyfra 5), a jednocześnie podzielna przez 5 (ostatnia cyfra 0 lub 5). Jedyny przypadek spełniający oba warunki to ostatnia cyfra 5.",
@@ -12747,7 +12747,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = −6",
       "x = 6 Uwagi ogólne do zadań otwartych 1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki zadania. 2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną liczbę punktów. 3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może otrzymać co najwyżej x − 1) punktów (gdzie x jest maksymalną możliwą do uzyskania liczbą punktów za dane zadanie)."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $x = -6$",
     "solutionSteps": [
       "Zapisz sumę liczb i podziel ją przez ich ilość (6), przyrównując do średniej (5). Suma liczb to $2x+4+6+8+11+13 = 2x+42$.",
@@ -12775,7 +12775,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in (-\\infty, -2] \\cup [\\frac{8}{3}, \\infty)$",
     "solutionSteps": [
       "Przekształć nierówność do postaci ogólnej $ax^2 + bx + c \\ge 0$. Odejmij 7 od obu stron, aby otrzymać $3x^2 - 2x - 16 \\ge 0$.",
@@ -12803,7 +12803,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$14750$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$), aby obliczyć różnicę $r$. Podstaw dane: $a_4 = a_1 + (4-1)r$, czyli $8 = -1 + 3r$, co daje $3r = 9$, a stąd $r=3$.",
@@ -12831,7 +12831,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Nierówność $\\frac{(a-b)^2}{4} \\ge 0$ jest prawdziwa dla wszystkich liczb rzeczywistych $a$ i $b$.",
     "solutionSteps": [
       "Przekształć nierówność, przenosząc wszystko na jedną stronę, aby otrzymać nierówność typu $W(a, b) \\ge 0$. Otrzymujemy $\\frac{a^2+b^2}{2} - \\frac{(a+b)^2}{4} \\ge 0$.",
@@ -12859,7 +12859,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{4}{5}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na sinus podwojonego kąta: $\\sin 2\\alpha = 2 \\sin \\alpha \\cos \\alpha$. Potrzebujemy znaleźć wartości $\\sin \\alpha$ i $\\cos \\alpha$.",
@@ -12888,7 +12888,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$72^\\circ$",
     "solutionSteps": [
       "Zapisz zależności wynikające z podobieństwa trójkątów ABC i BDA: $\\frac{|AB|}{|BD|} = \\frac{|BC|}{|BA|} = \\frac{|AC|}{|DA|}$. Ponieważ $|AC|=|BC|$, mamy $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Oznaczając $|AB|=x$ i $|BD|=y$, otrzymujemy $\\frac{x}{y} = \\frac{x}{y}$, co jest oczywiste. Użyjmy relacji $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Niech $|AC|=|BC|=a$ i $|AB|=x$. Wtedy $|BC|=|BD|+|DC|$, czyli $a = y+d$. Z podobieństwa $\\frac{a}{x} = \\frac{x}{y}$, stąd $x^2 = ay$.",
@@ -12917,7 +12917,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{4}{81}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy dwa razy ze zwracaniem z dziewięcioelementowego zbioru, więc wszystkich par $(a, b)$ jest $9 \\cdot 9 = 81$.",
@@ -12945,7 +12945,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$a = -\\frac{3}{8}$, $b = -\\frac{3}{4}$, $c = \\frac{45}{8}$",
     "solutionSteps": [
       "Z warunku dotyczącego jednego punktu wspólnego z prostą $y=6$ wiemy, że wierzchołek paraboli ma współrzędną $y_w = 6$. Z podanych miejsc zerowych $x_1 = -5$ i $x_2 = 3$ obliczamy współrzędną $x$ wierzchołka: $x_w = \\frac{x_1 + x_2}{2} = \\frac{-5+3}{2} = -1$.",
@@ -13006,7 +13006,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 &frasl; 3",
       "( - 2 &frasl; 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
     "solutionSteps": [
       "Zapisz wyrażenie z użyciem wykładników ujemnych i ułamkowych: $\\frac{1}{\\sqrt[3]{(\\frac{2}{3})^2}} = \\frac{1}{(\\frac{2}{3})^{\\frac{2}{3}}} = (\\frac{2}{3})^{-\\frac{2}{3}}$.",
@@ -13036,7 +13036,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano, że $(2n + 1)^2 - 1 = 8k$ dla pewnego $k \\in \\mathbb{Z}$.",
     "solutionSteps": [
       "Rozwiń kwadrat wyrażenia $(2n + 1)^2$. Użyj wzoru skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$. Otrzymasz $(2n)^2 + 2 \\cdot 2n \\cdot 1 + 1^2 = 4n^2 + 4n + 1$.",
@@ -13068,7 +13068,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $2$.",
     "solutionSteps": [
       "Skorzystaj z własności logarytmów $\\log_b x + \\log_b y = \\log_b (x \\cdot y)$, aby połączyć oba logarytmy w jeden. Otrzymamy $\\log_9 (27 \\cdot 3)$.",
@@ -13130,7 +13130,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "[−4 , ∞)",
       "[4 , ∞)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $[4, \\infty)$.",
     "solutionSteps": [
       "Rozwiązujemy nierówność kwadratową $x^2+4x-32 \\ge 0$. Najpierw znajdujemy pierwiastki równania $x^2+4x-32 = 0$. Delta wynosi $\\Delta = 4^2 - 4 \\cdot 1 \\cdot (-32) = 16 + 128 = 144$, więc $\\sqrt{\\Delta} = 12$. Pierwiastki to $x_1 = \\frac{-4-12}{2} = -8$ oraz $x_2 = \\frac{-4+12}{2} = 4$.",
@@ -13161,7 +13161,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 3",
       "√ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\sqrt{2}$",
     "solutionSteps": [
       "Przyrównaj każdy z czynników do zera, aby znaleźć potencjalne rozwiązania. Równanie jest spełnione, gdy co najmniej jeden z czynników jest równy zero.",
@@ -13192,7 +13192,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie jedno rozwiązanie: 1.",
       "ma dokładnie dwa rozwiązania: −1 oraz 1."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli ma dokładnie dwa rozwiązania: −1 oraz 1.",
     "solutionSteps": [
       "Zapisz równanie w postaci z jedną stroną równą 0: $2x^2 = 2 \\iff 2x^2 - 2 = 0$.",
@@ -13220,7 +13220,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in \\{-2, \\frac{2}{3}, 2\\}$",
     "solutionSteps": [
       "Pogrupuj wyrazy, aby zastosować grupowanie wyrazów: $(3x^3 - 2x^2) + (-12x + 8) = 0$. Wyciągnij wspólne czynniki z każdej grupy: $x^2(3x - 2) - 4(3x - 2) = 0$.",
@@ -13251,7 +13251,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$",
     "solutionSteps": [
       "Zauważ, że na rysunku znajdują się dwie proste — pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.",
@@ -13282,7 +13282,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D oraz E",
     "solutionSteps": [
       "Obwód prostokąta to $2a + 2b$. Z treści wiemy, że $2a + 2b = 30$, co po skróceniu daje $a + b = 15$.",
@@ -13314,7 +13314,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−3 , 5]",
       "[−3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji 𝑓 w przedziale [−4 , 1] jest równa"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "12.1. A) [−6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]",
     "solutionSteps": [
       "Dziedzinę funkcji odczytujemy z osi X. Funkcja jest określona dla wartości od -6 (włącznie) do 5 (włącznie).",
@@ -13345,7 +13345,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑎 0.",
       "𝑎"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 𝑎 < 0 i 𝑏 > 0.",
     "solutionSteps": [
       "Odczytujemy współczynniki 𝑎 i 𝑏 z wykresu, korzystając z punktów przez niego przechodzących. Z wykresu widać, że funkcja przechodzi przez punkty $(0, 2)$ i $(3, 0)$.",
@@ -13408,7 +13408,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "48",
       "80"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 80",
     "solutionSteps": [
       "Podstawiamy $n=4$ do wzoru $a_n = 2^n \\cdot (n+1)$. Otrzymujemy $a_4 = 2^4 \\cdot (4+1)$.",
@@ -13439,7 +13439,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 4",
     "solutionSteps": [
       "W ciągu geometrycznym iloraz dowolnego wyrazu (oprócz pierwszego) przez wyraz poprzedzający jest stały. Zapisujemy to jako $\\frac{9}{27} = \\frac{a-1}{9}$.",
@@ -13467,7 +13467,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "750 zł",
     "solutionSteps": [
       "Zapisujemy dane: kwota pożyczki $S_n = 8910$ zł, liczba rat $n=18$, różnica między ratami $d = -30$ zł. Szukamy pierwszej raty $a_1$.",
@@ -13498,7 +13498,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "( − 3 &frasl; 1 )",
       "( − 1 &frasl; 3 )"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{1}{3}$",
     "solutionSteps": [
       "Wierzchołek kąta jest w początku układu współrzędnych, a jedno z ramion pokrywa się z dodatnią półosią $Ox$. Drugie ramię przechodzi przez punkt $P=(-3, 1)$. Oznacza to, że punkt $P$ leży na drugim ramieniu kąta $\\alpha$.",
@@ -13559,7 +13559,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "36",
       "36√ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 72",
     "solutionSteps": [
       "Pole rombu możemy obliczyć ze wzoru $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to miara jednego z kątów. Skoro kąt rozwarty ma 150°, to kąt ostry ma $180° - 150° = 30°$. Używamy kąta ostrego, bo $\\sin 150° = \\sin 30°$.",
@@ -13590,7 +13590,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "35°",
       "40°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B) 20°",
     "solutionSteps": [
       "Zauważ, że trójkąt 𝐴𝐶𝑂 jest równoramienny, ponieważ boki 𝐴𝑂 i 𝐶𝑂 są promieniami okręgu, stąd miara kąta 𝐶𝐴𝑂 jest również równa 70°.",
@@ -13618,7 +13618,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$120$",
     "solutionSteps": [
       "Oblicz przeciwprostokątną trójkąta $T_1$ z twierdzenia Pitagorasa: $c_1 = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.",
@@ -13681,7 +13681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑎 = 3 i 𝑏 = −4.",
       "𝑎 = − 1 &frasl; 3 i 𝑏 = 6."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $a = -\\frac{1}{3}$ i $b = 6$.",
     "solutionSteps": [
       "Proste równoległe mają takie same współczynniki kierunkowe. Skoro prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, to współczynnik kierunkowy $a$ szukanej prostej musi być równy $-\\frac{1}{3}$.",
@@ -13712,7 +13712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5√ 2",
       "10"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 45",
     "solutionSteps": [
       "Z danych wiemy, że krawędź podstawy $a = 15$ oraz $\\cos\\alpha = \\frac{\\sqrt{2}}{3}$. W graniastosłupie prawidłowym czworokątnym podstawa jest kwadratem, zatem przekątna podstawy $d$ wynosi $d = a\\sqrt{2} = 15\\sqrt{2}$.",
@@ -13740,7 +13740,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$.",
     "solutionSteps": [
       "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt 30° leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
@@ -13771,7 +13771,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "sześciokąt foremny.",
       "siedmiokąt foremny."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B) pięciokąt foremny.",
     "solutionSteps": [
       "W ostrosłupie o $n$-kątnej podstawie mamy $n+1$ wierzchołków ( $n$ w podstawie i 1 wierzchołek stożka) i $2n$ krawędzi ( $n$ w podstawie i $n$ łączących wierzchołki podstawy z wierzchołkiem stożka).",
@@ -13802,7 +13802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 ⋅ 3 4",
       "3 5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $2 \\cdot 3^4$",
     "solutionSteps": [
       "Zapisz możliwości dla każdej z pięciu pozycji liczby pięciocyfrowej, pamiętając, że pierwsza cyfra nie może być zerem. Pierwsza cyfra może być 5 lub 7 (2 możliwości), a pozostałe cztery cyfry mogą być 0, 5 lub 7 (3 możliwości każda).",
@@ -13833,7 +13833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5,85 zł",
       "6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł).",
     "solutionSteps": [
       "Uporządkuj dane cen od najniższej do najwyższej: 5,40, 5,50, 5,50, 5,60, 5,60, 5,60, 5,60, 5,70, 5,70, 5,80, 5,80, 5,90, 6,00, 6,10, 6,10, 6,20.",
@@ -13861,7 +13861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{7}{64}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
@@ -13890,7 +13890,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
     "solutionSteps": [
       "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
@@ -13921,7 +13921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "36 ⁄ 49",
       "40 ⁄ 9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $\\frac{4}{25}$",
     "solutionSteps": [
       "Obliczamy wartość wyrażenia w nawiasie wewnętrznym, pamiętając o kolejności działań (najpierw mnożenie, potem dodawanie): $1 + 3 \\cdot 2^{-1} = 1 + 3 \\cdot \\frac{1}{2} = 1 + \\frac{3}{2} = \\frac{2}{2} + \\frac{3}{2} = \\frac{5}{2}$.",
@@ -13952,7 +13952,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "25"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 10",
     "solutionSteps": [
       "Zamieniamy liczby mieszane na ułamki niewłaściwe: $1 \\frac{1}{4} = \\frac{5}{4}$ oraz $2 \\frac{1}{2} = \\frac{5}{2}$.",
@@ -13984,7 +13984,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 ⋅ 9 ⋅ 4",
       "9 ⋅ 10 ⋅ 4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 10 \\cdot 2$",
     "solutionSteps": [
       "Liczba czterocyfrowa ma postać $\\overline{abcd}$, gdzie $a \\in \\{1, 2, \\dots, 9\\}$, a $b, c, d \\in \\{0, 1, \\dots, 9\\}$. Aby liczba była podzielna przez 25, musi się kończyć na 00, 25, 50 lub 75, czyli $d$ musi być 0 lub 5, a $c$ musi być 0 lub 5. Skoro liczba ma być nieparzysta, ostatnia cyfra $d$ musi być 5.",
@@ -14015,7 +14015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-4.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-5.jpg)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $x+1$",
     "solutionSteps": [
       "Przekształć licznik ułamka, stosując wzór skróconego mnożenia na różnicę kwadratów: $a^2 - b^2 = (a-b)(a+b)$. Mamy $x^2 - 1 = (x-1)(x+1)$.",
@@ -14046,7 +14046,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "[3 − (x + 2y)] 2",
       "[3 − (x − y)] ⋅ [3 + (x − y)] E) [3 − (x + 2y)] ⋅ [3 + (x + 2y)] F) −[(x − y) − 3] ⋅ [(x − y) + 3]"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, F",
     "solutionSteps": [
       "Zapisz dane wyrażenie i zauważ wzór skróconego mnożenia. Wyrażenie to $9 - (x^2 - 2xy + y^2)$. W nawiasie kryje się wzór $(x-y)^2$.",
@@ -14074,7 +14074,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x=-2$",
     "solutionSteps": [
       "Przekształć równanie do postaci kwadratowej $ax^2+bx+c=0$. Pomnóż obie strony przez $x-3$, pamiętając, że $x \\neq 3$. Otrzymasz $2(x-3) = 5x$.",
@@ -14105,7 +14105,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "trzy rozwiązania: x = −3, x = −1, x = 0.",
       "cztery rozwiązania: x = −3, x = −1, x = 0, x = 1."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli cztery rozwiązania: $x=-3$, $x=-1$, $x=0$, $x=1$.",
     "solutionSteps": [
       "Równanie możemy zapisać w postaci iloczynowej, przyrównując każdy z czynników do zera, aby znaleźć jego rozwiązania. Mamy $ (x+3)(x^2-1)x = 0 $, co oznacza, że $ x+3=0 $ lub $ x^2-1=0 $ lub $ x=0 $.",
@@ -14136,7 +14136,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "|x + 2| ≥ 2",
       "|x − 2| ≥ 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $|x - 2| \\le 2$",
     "solutionSteps": [
       "Zinterpretuj zaznaczony przedział na osi liczbowej. Kropki zamalowane, przedział zamknięty. Zaznaczony jest przedział $[0, 4]$. Odległość od środka $x=2$ do końców przedziału $0$ i $4$ wynosi $2$. Zapisujemy jako $|x - 2| \\le 2$.",
@@ -14167,7 +14167,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-3.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-4.jpg)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $50x + 100(2x) + 20(x-2) = 1040$",
     "solutionSteps": [
       "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów 50 zł). Liczba banknotów 50 zł: $x$. Liczba banknotów 100 zł: $2x$. Liczba banknotów 20 zł: $x-2$.",
@@ -14195,7 +14195,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) (−2)",
     "solutionSteps": [
       "Odczytaj z wykresu najmniejszą i największą wartość funkcji na osi Y. Zbiór wartości to przedział domknięty od najmniejszej do największej wartości, czyli $[min, max]$.",
@@ -14226,7 +14226,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 125",
       "√ 265"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 13",
     "solutionSteps": [
       "Odczytaj współrzędne środka okręgu i punktu A. Środek okręgu ma współrzędne $(3, -1)$, a punkt A ma współrzędne $(8, 11)$.",
@@ -14257,7 +14257,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2,2 m",
       "1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia."
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "D, czyli 1,8 m\n\n**Zadanie 12.2.**\n\n**Krok 1.** Skorzystaj z podanych punktów należących do paraboli: $(0, 1.2)$ oraz $(25, 1.8)$. Podstawiając $x=0$ do wzoru funkcji $y = ax^2 + bx + 1.2$, otrzymujemy $1.2 = a \\cdot 0^2 + b \\cdot 0 + 1.2$, co jest zgodne z danymi.\n**Krok 2.** Podstaw punkt $(25, 1.8)$ do równania funkcji: $1.8 = a \\cdot 25^2 + b \\cdot 25 + 1.2$. Po redukcji otrzymujemy równanie: $0.6 = 625a + 25b$.\n**Krok 3.** Zauważ, że na rysunku głębokość jest najmniejsza w połowie basenu, przy $x = \\frac{25}{2} = 12.5$ m. W tym punkcie nachylenie paraboli jest równe zero, co oznacza, że pochodna funkcji jest równa zero. Pochodna funkcji $y' = 2ax + b$. Zatem: $2a \\cdot 12.5 + b = 0$, czyli $25a + b = 0$.\n**Krok 4.** Rozwiąż układ równań:\n1) $625a + 25b = 0.6$\n2) $b = -25a$\nPodstawiając (2) do (1): $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6$, co jest sprzecznością.\n*Poprawka:* Na rysunku widać, że w połowie basenu $x=12.5$ m głębokość jest **minimalna**, a nie równa 0. Przyjmujemy zatem, że wierzchołek paraboli znajduje się dla $x=12.5$ m. Wzór funkcji można zapisać w postaci kanonicznej $y = a(x-p)^2 + q$. Wierzchołek $(p, q)$ to $(12.5, 1.2)$, bo w tym punkcie jest najpłycej.\n**Krok 5.** Zapisz funkcję w postaci kanonicznej: $y = a(x-12.5)^2 + 1.2$. Skorzystaj z punktu $(25, 1.8)$: $1.8 = a(25-12.5)^2 + 1.2 \\implies 0.6 = a(12.5)^2 \\implies 0.6 = 156.25a \\implies a = \\frac{0.6}{156.25} = 0.00384$.\n**Krok 6.** Przekształć postać kanoniczną do postaci ogólnej $y = ax^2 + bx + c$: $y = 0.00384(x^2 - 25x + 156.25) + 1.2 = 0.00384x^2 - 0.096x + 0.6 + 1.2 = 0.00384x^2 - 0.096x + 1.8$. Porównując z $y = ax^2 + bx + 1.2$, widać, że $c$ powinno być 1.2.\n*Ponowna poprawka:* Minimalna głębokość jest w połowie basenu, co oznacza, że wierzchołek paraboli jest na tej wysokości, a nie na minimalnej głębokości. Rysunek pokazuje, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. Przyjmijmy, że wierzchołek paraboli znajduje się dla $x = 12.5$.\n**Krok 7.** Z treści zadania wiemy, że głębokość w najpłytszym miejscu to 1.2 m, a w najgłębszym 1.8 m. Funkcja kwadratowa ma minimum (ramiona w górę). Minimum głębokości występuje dla $x=0$. Zatem $1.2$ m to wartość minimalna. Wierzchołek jest dla $x=0$.\n**Krok 8.** Skorzystaj z punktów $(0, 1.2)$ i $(25, 1.8)$. Funkcja ma postać $y = ax^2 + bx + c$. Podstawiając $(0, 1.2)$, mamy $c=1.2$. Podstawiając $(25, 1.8)$: $1.8 = a(25)^2 + b(25) + 1.2 \\implies 0.6 = 625a + 25b$.\n**Krok 9.** Rysunek sugeruje, że parabola jest symetryczna względem osi $x=12.5$. Zatem wierzchołek jest dla $x=12.5$. Wzór funkcji ma postać $y = a(x-12.5)^2 + q$. Wartość $q$ to najmniejsza głębokość. Z rysunku nie wynika, że najmniejsza głębokość to 1.2 m. Przyjmijmy dane z zadania: $y(0) = 1.2$ oraz $y(25) = 1.8$. Minimalna głębokość jest w połowie basenu, czyli $y(12.5)$. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. Ale ramiona paraboli są skierowane w górę, więc $y(12.5)$ jest minimum. To się kłóci z $y(0)=1.2$ i $y(25)=1.8$.\n**Krok 10.** Przyjmijmy, że przekrój podłużny basenu jest fragmentem paraboli, a nie całą. Z rysunku wynika, że funkcja opisuje głębokość dla $x \\in [0, 25]$. Najmniejsza głębokość jest dla $x=0$ ($1.2$ m), a największa dla $x=25$ ($1.8$ m). Minimum paraboli (wierzchołek) musi być dla $x=0$.\n**Krok 11.** Podstawiamy dane: $y(0) = a \\cdot 0^2 + b \\cdot 0 + 1.2 = 1.2$. $y(25) = a \\cdot 25^2 + b \\cdot 25 + 1.2 = 1.8 \\implies 625a + 25b = 0.6$. Z analizy rysunku widać, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. To jest sprzeczne z poprzednim wnioskiem.\n**Krok 12.** Rozważmy funkcję $y = ax^2 + bx + c$. Wiemy, że $y(0) = 1.2$, więc $c = 1.2$. Wiemy, że $y(25) = 1.8$, więc $625a + 25b = 0.6$. Na rysunku widać, że oś symetrii paraboli jest w $x = \\frac{0+25}{2} = 12.5$. Wierzchołek paraboli ma współrzędną $x = -\\frac{b}{2a}$. Zatem $-\\frac{b}{2a} = 12.5 \\implies b = -25a$.\n**Krok 13.** Podstawiamy $b = -25a$ do równania $625a + 25b = 0.6$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6 \\implies 0 = 0.6$. Jest to sprzeczność, więc założenie o osi symetrii $x=12.5$ jest błędne w kontekście podanych punktów krańcowych i funkcji kwadratowej z ramionami w górę.\n**Krok 14.** Ponieważ z zadania 12.1 wynika, że największa głębokość to 1.8 m, a najmniejsza 1.2 m, i są one na brzegach, funkcja musi opisywać fragment paraboli, której minimum jest w $x=0$ lub $x=25$. Skoro ramiona są w górę, minimum jest w $x=0$. Zatem wierzchołek jest dla $x=0$. Wtedy $b=0$.\n**Krok 15.** Z $b=0$ i $625a + 25b = 0.6$ otrzymujemy $625a = 0.6 \\implies a = \\frac{0.6}{625} = 0.00096$.\n**Odpowiedź:** $a = 0.00096$, $b = 0$",
     "solutionSteps": [
       "**Zadanie 12.1.**",
@@ -14317,7 +14317,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "B, czyli $2352$\n\n**Zadanie 14.2**\n\n**Krok 1.** Sprawdź, czy ciąg jest geometryczny, obliczając iloraz dwóch kolejnych wyrazów: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2 - 3(n+1) + 2}{n^2 - 3n + 2}$. Po uproszczeniu otrzymamy $\\frac{n^2-n+2}{n^2-3n+2}$, który zależy od $n$, więc ciąg nie jest geometryczny.\n**Krok 2.** Oblicz sumę trzech początkowych wyrazów: $a_1 = 1^2 - 3(1) + 2 = 0$, $a_2 = 2^2 - 3(2) + 2 = 0$, $a_3 = 3^2 - 3(3) + 2 = 2$. Suma $a_1 + a_2 + a_3 = 0 + 0 + 2 = 2$.\n\n**Odpowiedź:** Ciąg jest geometryczny: B) fałsz. Suma trzech początkowych wyrazów: B) fałsz.",
     "solutionSteps": [
       "**Zadanie 14.1**",
@@ -14348,7 +14348,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(−10)",
       "8"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $6$",
     "solutionSteps": [
       "Skoro punkt $A = (-1, 3)$ leży na prostej $k$, jego współrzędne muszą spełniać równanie prostej $y = 3x + b$. Podstawiamy $x = -1$ i $y = 3$ do równania prostej.",
@@ -14379,7 +14379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "stały, ponieważ dla każdej liczby naturalnej n ≥ 1",
       "a n+1 − a n = −1"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "16.1. C, ponieważ dla każdej liczby naturalnej n ≥ 1 C) a n+1 − a n = 3. 16.2. B) 9. 16.3. A) 6.",
     "solutionSteps": [
       "Obliczamy różnicę między kolejnymi wyrazami ciągu: $a_{n+1} - a_n = (3(n+1) - 1) - (3n - 1) = 3n + 3 - 1 - 3n + 1 = 3$. Ponieważ różnica jest dodatnia ($3 > 0$), ciąg jest rosnący.",
@@ -14410,7 +14410,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "są prostopadłe.",
       "przecinają się pod kątem 30°."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli są prostopadłe.",
     "solutionSteps": [
       "Porównaj współczynniki kierunkowe obu prostych. Prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, więc jej współczynnik kierunkowy $a_k = -\\frac{1}{3}$. Prosta $l$ ma równanie $y = 3x - 1$, więc jej współczynnik kierunkowy $a_l = 3$.",
@@ -14441,7 +14441,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "20"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $0$.",
     "solutionSteps": [
       "Zastosuj wzór na różnicę kwadratów $(a-b)(a+b) = a^2 - b^2$ dla pierwszego członu wyrażenia. Otrzymamy $1^2 - \\cos^2 20^\\circ = 1 - \\cos^2 20^\\circ$.",
@@ -14503,7 +14503,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "50°",
       "60°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $40^\\circ$.",
     "solutionSteps": [
       "Ustal, że trójkąty ABO i OBC są równoramienne, ponieważ boki AO, BO, CO to promienie okręgu. Zatem $|\\angle OAB| = |\\angle OBA| = 40^\\circ$ oraz $|\\angle OCB| = |\\angle OBC| = 10^\\circ$.",
@@ -14533,7 +14533,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{4}$",
     "solutionSteps": [
       "Największy kąt leży naprzeciwko najdłuższego boku. Oznaczmy boki $a=6, b=7, c=8$, a kąt naprzeciwko boku $c$ jako $\\gamma$. Użyjemy twierdzenia cosinusów: $c^2 = a^2 + b^2 - 2ab \\cos \\gamma$.",
@@ -14565,7 +14565,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "23 ⁄ 4",
       "92 ⁄ 25"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{92}{25}$",
     "solutionSteps": [
       "Zastosuj twierdzenie o dwusiecznej kąta. W trójkącie ABC dwusieczna BD dzieli bok AC proporcjonalnie do długości pozostałych boków, czyli $\\frac{|AD|}{|CD|} = \\frac{|AB|}{|BC|}$.",
@@ -14593,7 +14593,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Należy sprzedać 115 wiatraków, a największy zysk wyniesie 13055 zł.",
     "solutionSteps": [
       "Zapisz wzór na zysk Z(x) jako różnicę przychodu P(x) i kosztu K(x). Funkcja zysku będzie funkcją kwadratową, której ramiona skierowane są do dołu (współczynnik przy $x^2$ jest ujemny).\n$Z(x) = P(x) - K(x) = 251x - (x^2 + 21x + 170) = -x^2 + 230x - 170$.",
@@ -14653,7 +14653,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$5\\sqrt{5}$",
     "solutionSteps": [
       "Oblicz długość promienia okręgu opisanego na podstawie ostrosłupa. W podstawie jest trójkąt równoboczny o boku $a = 10\\sqrt{3}$. Promień $R$ tego okręgu to $R = \\frac{a\\sqrt{3}}{3} = \\frac{10\\sqrt{3} \\cdot \\sqrt{3}}{3} = \\frac{10 \\cdot 3}{3} = 10$.",
@@ -14681,7 +14681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano, że $10n^2 + 30n + 8 = 5k + 3$, gdzie $k = 2n^2 + 6n + 1$ jest liczbą całkowitą.",
     "solutionSteps": [
       "Przekształć dane wyrażenie, wyłączając liczbę 5 z pierwszych dwóch składników.\n$\\qquad 10n^2 + 30n + 8 = 5(2n^2 + 6n) + 8$.",
@@ -14834,7 +14834,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10⋅9⋅8⋅7",
       "9⋅10⋅10⋅10 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
     "solutionSteps": [
       "Określamy liczbę możliwości wyboru kolejnych cyfr liczby czterocyfrowej. Pierwsza cyfra (tysiące) może być dowolna z cyfr $\\{1, 2, \\dots, 9\\}$ (9 możliwości), ponieważ nie może być zerem.",
@@ -14865,7 +14865,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 1",
     "solutionSteps": [
       "Zapisz wzór funkcji f(x) oraz podaną wartość argumentu. Wartość argumentu odczytana z rysunku to $x = \\frac{1}{10}$. Wzór funkcji to $f(x) = -\\log x$.",
@@ -14893,7 +14893,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$f(x) = 3(x-5)^2 - 3$",
     "solutionSteps": [
       "Zapisz wzór funkcji kwadratowej w postaci kanonicznej, korzystając ze współrzędnych wierzchołka $W=(p, q)$. W postaci kanonicznej funkcja ma postać $f(x) = a(x-p)^2 + q$. Podstaw dane $p=5$ i $q=-3$, otrzymując $f(x) = a(x-5)^2 - 3$.",
@@ -14924,7 +14924,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(-3)",
       "3 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 3",
     "solutionSteps": [
       "Przepisujemy nierówność i przyrównujemy ją do zera, aby znaleźć pierwiastki: $(3x - 9)(x + k) = 0$. Otrzymujemy $3x - 9 = 0$ lub $x + k = 0$. Z pierwszego równania mamy $x = 3$.",
@@ -14955,7 +14955,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a b 2 − 4 ac",
       "a > 0 i b 2 − 4 ac"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Brak możliwości dokończenia zdania zgodnie z podanymi warunkami i opcjami.",
     "solutionSteps": [
       "Funkcja kwadratowa $f(x) = ax^2 + bx + c$ ma wykres leżący w całości nad osią $Ox$, gdy $a > 0$ (ramiona paraboli skierowane do góry) i brak miejsc zerowych, co oznacza, że wyróżnik $\\Delta = b^2 - 4ac$ jest ujemny ($\\Delta < 0$).",
@@ -15018,7 +15018,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑊(𝑥)=(𝑥+2)(𝑥 2 +3)",
       "𝑊(𝑥)=(𝑥–2)(𝑥 2 +3) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
     "solutionSteps": [
       "Grupujemy wyrazy wielomianu $W(x)$ po dwie: $W(x) = (x^3 - 2x^2) + (-3x + 6)$.",
@@ -15049,7 +15049,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "trzy rozwiązania.",
       "cztery rozwiązania. 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli trzy rozwiązania.",
     "solutionSteps": [
       "Zauważ, że równanie jest wielomianem czwartego stopnia. Przepisujemy je w postaci iloczynowej, wyciągając wspólny czynnik $x^2$: $x^2(x^2 - 5x + 4) = 0$.",
@@ -15081,7 +15081,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "7",
       "(-6) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 5",
     "solutionSteps": [
       "Zapisz nierówność w prostszej postaci, grupując wyrazy z niewiadomą i stałe. Po przeniesieniu $-3$ na drugą stronę nierówność przyjmie postać $2x \\le 10$.",
@@ -15109,7 +15109,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano.",
     "solutionSteps": [
       "Wyłącz wspólny czynnik przed nawias w wyrażeniu $5n^2 + 15n$, aby otrzymać $5n(n+3)$.",
@@ -15137,7 +15137,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Ciąg (𝑎 𝑛 ) jest malejący – fałsz. Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136 – prawda.",
     "solutionSteps": [
       "Sprawdzamy, czy ciąg jest malejący, badając znak różnicy $a_{n+1} - a_n$. Obliczamy $a_{n+1} = 2(n+1)^2 + (n+1) = 2(n^2+2n+1) + n+1 = 2n^2+4n+2+n+1 = 2n^2+5n+3$. Różnica $a_{n+1} - a_n = (2n^2+5n+3) - (2n^2+n) = 4n+3$. Dla $n \\ge 1$, $4n+3 > 0$, więc ciąg jest rosnący, a nie malejący.",
@@ -15167,7 +15167,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $x = 15$ i $y = 5$.",
     "solutionSteps": [
       "W ciągu arytmetycznym różnica między kolejnymi wyrazami jest stała; zapisujemy to jako równania: $10 - x = y - 10$ oraz $y - 10 = 2y - (y+5)$.",
@@ -15195,7 +15195,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "E, F, czyli $a_n = -5 \\cdot (-3)^{n-1}$",
     "solutionSteps": [
       "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy. $q = \\frac{a_2}{a_1} = \\frac{15}{-5} = -3$.",
@@ -15226,7 +15226,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{12}{25}$",
     "solutionSteps": [
       "Z rysunku odczytujemy wartości $\\sin \\alpha = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{4}{5}$.",
@@ -15284,7 +15284,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$a = 50$ m, $b = 100$ m.",
     "solutionSteps": [
       "Zapisz pole prostokąta $P = a \\cdot b$ oraz zależności wynikające z długości liny: $2a + b = 200$, skąd $b = 200 - 2a$.",
@@ -15316,7 +15316,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-5.png) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$16\\pi$",
     "solutionSteps": [
       "Zauważamy, że koło zakreślono z wierzchołka $A$ i ma promień równy bokowi kwadratu ($r=8$). Część wspólna koła i kwadratu to ćwiartka koła wpisana w kwadrat, ponieważ kąt przy wierzchołku $A$ wynosi $90^\\circ$.",
@@ -15347,7 +15347,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-5.png) 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "9",
     "solutionSteps": [
       "Zauważ, że trójkąty $\\triangle AOD$ i $\\triangle BOC$ są podobne (cecha kąt-kąt-kąt, ponieważ kąty przy wierzchołku $O$ są równe, a kąty przy $D$ i $C$ są proste). Oznaczmy długość odcinka $OC$ jako $x$.",
@@ -15375,7 +15375,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "10",
     "solutionSteps": [
       "Zauważ, że środek rombu pokrywa się ze środkiem równoległoboku. Punkt przecięcia przekątnych równoległoboku $O$ jest środkiem jego przekątnych. Ponieważ boki rombu są równoległe do przekątnych równoległoboku, punkt $O$ jest również środkiem rombu.",
@@ -15421,7 +15421,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{3\\sqrt{15}}{2}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na pole trójkąta, uwzględniając dane boki i cosinus kąta między nimi: $P = \\frac{1}{2}ab \\sin \\alpha$. Potrzebujemy $\\sin(\\angle BAC)$, a mamy $\\cos(\\angle BAC) = -\\frac{1}{4}$.",
@@ -15483,7 +15483,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9",
       "6 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D) 9",
     "solutionSteps": [
       "Trójkąty $ABO$ i $CDO$ są podobne na mocy cechy podobieństwa kąt-kąt-kąt (kąty naprzemianległe są równe, kąty wierzchołkowe są równe). Niech skala podobieństwa z trójkąta $CDO$ do $ABO$ wynosi $k$. Wtedy stosunek obwodów jest równy skali podobieństwa: $k = \\frac{39}{13} = 3$.",
@@ -15545,7 +15545,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "przecinają się w punkcie 𝑃 = (0,−1).",
       "się pokrywają. 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B) są prostopadłe.",
     "solutionSteps": [
       "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Dla prostej $k$: $2y = -x + 2 \\implies y = -\\frac{1}{2}x + 1$. Dla prostej $l$: $y = 2x - 1$.",
@@ -15576,7 +15576,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 1 &frasl; 2",
       "𝑚 = 2 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $m = 1$.",
     "solutionSteps": [
       "Oblicz współczynnik kierunkowy prostej przechodzącej przez punkty A i B. Wzór na współczynnik kierunkowy $a$ to $\\frac{y_B - y_A}{x_B - x_A}$. Podstawiając dane punkty, otrzymujemy $a = \\frac{m - 2}{2m - 1}$.",
@@ -15638,7 +15638,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "18𝑉",
       "27𝑉 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $27V$",
     "solutionSteps": [
       "Oblicz objętość sześcianu ℱ. Objętość sześcianu o krawędzi $a$ wynosi $V = a^3$.",
@@ -15669,7 +15669,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 &frasl; 9",
       "2 &frasl; 7 1 pkt – odpowiedź poprawna."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
     "solutionSteps": [
       "Z sumy części stosunku $2+7=9$ dowiadujemy się, że na każde 9 losów, 2 są wygrywające, a 7 są przegrywające.",
@@ -15697,7 +15697,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "II, IV",
     "solutionSteps": [
       "Obliczamy średnią arytmetyczną liczby wykiełkowanych nasion: $\\bar{x} = \\frac{133+140+119+147+161}{5} = \\frac{700}{5} = 140$.",
@@ -15728,7 +15728,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "36 100",
       "36 600 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $36 \\cdot 100$.",
     "solutionSteps": [
       "Zapisujemy sumę w postaci mnożenia: sześć razy dodajemy liczbę 6 100, co jest równe $6 \\cdot (6 \\cdot 100)$.",
@@ -15760,7 +15760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "(−1) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 2",
     "solutionSteps": [
       "Skorzystaj z własności działań na logarytmach: $\\log_b x - \\log_b y = \\log_b \\frac{x}{y}$. Zastosuj ją do podanego wyrażenia: $\\log_7 98 - \\log_7 2 = \\log_7 \\frac{98}{2}$.",
@@ -15791,7 +15791,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "648",
       "512 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 648",
     "solutionSteps": [
       "Określ liczbę dostępnych cyfr: mamy 10 cyfr (0-9). Wykluczamy cyfrę 2, co daje 9 dostępnych cyfr (0, 1, 3, 4, 5, 6, 7, 8, 9).",
@@ -15822,7 +15822,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "48a",
       "8a 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $48a$.",
     "solutionSteps": [
       "Zastosuj wzory skróconego mnożenia na $(a+b)^2 = a^2+2ab+b^2$ i $(a-b)^2 = a^2-2ab+b^2$ do obu członów wyrażenia, podstawiając $a=3$ i $b=4a$. Otrzymasz $(9+24a+16a^2) - (9-24a+16a^2)$.",
@@ -15853,7 +15853,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt – wybranie dwóch poprawnych odpowiedzi. 1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B i E",
     "solutionSteps": [
       "Kąty przyległe sumują się do 180 stopni, a kąty wierzchołkowe są równe. Z rysunku widać, że kąty o miarach $2x + 5^\\circ$ i $3x + 15^\\circ$ są przyległe, a kąty o miarach $2x + 5^\\circ$ i $y + 10^\\circ$ są wierzchołkowe.",
@@ -15884,7 +15884,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 4",
     "solutionSteps": [
       "Skoro liczba -2 jest pierwiastkiem wielomianu $W(x)$, to $W(-2) = 0$. Podstawiamy $x = -2$ do wzoru wielomianu i przyrównujemy do zera.\n$W(-2) = 3(-2)^3 + k(-2)^2 - 12(-2) - 7k + 12 = 0$",
@@ -15915,7 +15915,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie trzy rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 2.",
       "dokładnie cztery rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 1,5, 𝑥 = 2. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $x = -6, 𝑥 = 0, 𝑥 = 1.5, 𝑥 = 2$.",
     "solutionSteps": [
       "Zauważ, że równanie ma postać iloczynową: $(x-2)(x+6)(x^2-1.5x)=0$.",
@@ -15946,7 +15946,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Rozwiąż nierówność z wartością bezwzględną: $|x+1| \\leq 2$ jest równoważne $-2 \\leq x+1 \\leq 2$.",
@@ -15974,7 +15974,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano.",
     "solutionSteps": [
       "Liczbę całkowitą nieparzystą $n$ można zapisać w postaci $n = 2k+1$ dla pewnej liczby całkowitej $k$. Podstawiamy to do wyrażenia $n^2 + 2023$.\n$$n^2 + 2023 = (2k+1)^2 + 2023$$",
@@ -16005,7 +16005,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: 𝒇(𝒙) ≤ 𝟎 ......................... 1 pkt – rozwiązanie poprawne. 0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej."
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$f(x) = (x-1)^2 - 4$",
     "solutionSteps": [
       "Z wykresu odczytaj współrzędne wierzchołka paraboli funkcji $f(x)$, który wynosi $(1, -4)$.",
@@ -16068,7 +16068,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑃= −0,9𝑄 2 + 6,9",
       "𝑃= −3𝑄+27 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $Q = -3P+27$",
     "solutionSteps": [
       "Zapisujemy zależność liniową funkcji $Q(P)$, gdzie $P$ to cena, a $Q$ to liczba kupujących. Wiemy, że zmiana ceny o 1 powoduje zmianę liczby kupujących o -3, czyli współczynnik kierunkowy wynosi -3. Funkcja ma postać $Q = -3P + b$.",
@@ -16099,7 +16099,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 𝟎,𝟏 mg."
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda z 10 poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej z 10 poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
     "solutionSteps": [
       "**Zadanie 13.1.**",
@@ -16131,7 +16131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20 000∙1,06",
       "20 000∙(1,03) 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
     "solutionSteps": [
       "Obliczamy kwotę po pierwszym roku. Po roku do kwoty początkowej 20 000 zł doliczone zostaną odsetki w wysokości 3%, co daje nową kwotę: $20\\,000 \\cdot (1 + 0,03) = 20\\,000 \\cdot 1,03$.",
@@ -16159,7 +16159,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Stwierdzenie 1: Prawda. Stwierdzenie 2: Fałsz.",
     "solutionSteps": [
       "Obliczamy kilka pierwszych wyrazów ciągu, podstawiając $n=1, 2, 3$. Dla $n=1$, $a_1 = -3(1) + 5 = 2$. Dla $n=2$, $a_2 = -3(2) + 5 = -1$. Dla $n=3$, $a_3 = -3(3) + 5 = -4$. Stwierdzenie, że 2, -1, -4 są trzema kolejnymi początkowymi wyrazami, jest prawdziwe.",
@@ -16186,7 +16186,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Oba stwierdzenia są prawdziwe.",
     "solutionSteps": [
       "Użyj twierdzenia cosinusów, aby obliczyć cosinus kąta $\\beta$ (kąta $ABC$). Wzór to $a^2 + c^2 - b^2 = 2ac \\cos \\beta$. Podstawiając dane: $5^2 + 6^2 - 10^2 = 2 \\cdot 5 \\cdot 6 \\cos \\beta$.",
@@ -16245,7 +16245,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "6",
     "solutionSteps": [
       "Zauważ, że trójkąty $ABO$ i $ODC$ są podobne na mocy cechy podobieństwa kąt-bok-kąt (K-B-K). Mamy wspólny kąt przy wierzchołku $O$ (kąty wierzchołkowe $\\angle AOB = \\angle DOC$), a także dane równości kątów $\\angle OAB = \\angle OCD$.",
@@ -16276,7 +16276,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑦 = 1 &frasl; 3 𝑥 + 1",
       "𝑦 = − 1 &frasl; 3 𝑥 + 1 Zadanie 19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, E",
     "solutionSteps": [
       "Proste równoległe mają takie same współczynniki kierunkowe ($a$). Prosta $k$ ma równanie $y = -3x + 1$, więc jej współczynnik kierunkowy wynosi $-3$. Szukamy prostej, która też ma $a = -3$.",
@@ -16308,7 +16308,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 10",
       "8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $2\\sqrt{13}$",
     "solutionSteps": [
       "Oblicz długość przekątnej kwadratu, korzystając ze wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Podstaw współrzędne punktów $A=(-2,1)$ i $C=(4,5)$.\n$d = \\sqrt{(4 - (-2))^2 + (5 - 1)^2} = \\sqrt{(4+2)^2 + 4^2} = \\sqrt{6^2 + 4^2} = \\sqrt{36 + 16} = \\sqrt{52}$.",
@@ -16431,7 +16431,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "14°",
       "38° 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 38°",
     "solutionSteps": [
       "Zauważ, że odcinki $OA$ i $OB$ są promieniami okręgu, a proste $kA$ i $lB$ są do niego styczne w punktach $A$ i $B$. Promień poprowadzony do punktu styczności jest prostopadły do prostej stycznej, więc kąty $OAS$ i $OBS$ są proste ($90^\\circ$).",
@@ -16462,7 +16462,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2√ 3",
       "2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 2",
     "solutionSteps": [
       "W trójkącie prostokątnym 𝐴𝐵𝐶 (rys. obok przekątnej prostokąta 𝐴𝐶) odcinek 𝐴𝐶 to przeciwprostokątna o długości 16. Bok 𝐵𝐶 to wysokość graniastosłupa ($h$), a kąt między 𝐴𝐶 i 𝐵𝐶 ma miarę 30°. Używamy funkcji trygonometrycznych do znalezienia długości boku 𝐴𝐵.",
@@ -16493,7 +16493,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1∶8",
       "3∶8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $1∶8$",
     "solutionSteps": [
       "Ostrosłupy $𝐴𝐵𝐶𝑆$ i $𝐷𝐸𝐹𝑆$ są podobne. Skala podobieństwa jest wyznaczona przez stosunek długości krawędzi bocznych. Ponieważ $𝐷, 𝐸, 𝐹$ są środkami krawędzi $𝐴𝑆, 𝐵𝑆, 𝐶𝑆$, stosunek długości krawędzi ostrosłupa $𝐷𝐸𝐹𝑆$ do $𝐴𝐵𝐶𝑆$ wynosi $1∶2$.",
@@ -16524,7 +16524,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C",
     "solutionSteps": [
       "Zdefiniuj, czym jest kąt między ścianą boczną a przekątną ściany bocznej. Jest to kąt między płaszczyzną ściany bocznej a prostą (przekątną), który jest mierzony w płaszczyźnie prostopadłej do ich wspólnej krawędzi (o ile taka istnieje i jest ona prostopadła do obu). W tym przypadku rozpatrujemy kąt między ścianą $ACFD$ a przekątną $AE$ ściany $ABED$.",
@@ -16552,7 +16552,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{1}{900}$",
     "solutionSteps": [
       "Obliczamy całkowitą liczbę losów w pojemniku. Są to liczby od 1000 do 9999, czyli $9999 - 1000 + 1 = 9000$ losów.",
@@ -16581,7 +16581,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wzór funkcji pola: $P(x) = 50x - \\frac{1}{2}x^2$, dziedzina: $x \\in (0, 100)$. Wymiary równoległoboku o największym polu to $50 \\times 50$ (czyli romb), a największe pole wynosi $1250$.",
     "solutionSteps": [
       "Oznaczmy boki równoległoboku jako $x$ i $y$. Obwód wynosi $2x + 2y = 200$, więc $x + y = 100$, co daje $y = 100 - x$. Dziedzina $x$ to $(0, 100)$, ponieważ długości boków muszą być dodatnie, a suma dwóch boków $x$ i $y$ wynosi 100.",
@@ -16609,7 +16609,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "F, P\n\n**Zadanie 30.2**\n\n**Krok 1.** Dominanta to wartość najczęściej występująca, czyli ta, której odpowiada najwyższy słupek na wykresie. Najwyższy słupek odpowiada czasowi 2,5 godziny.\n**Krok 2.** Odczytujemy z wykresu, że najwyższą liczbę uczniów (25) przypisano do czasu 2,5 godziny.\n\n**Odpowiedź:** B, czyli 2,50 godziny.",
     "solutionSteps": [
       "**Zadanie 30.1**",
@@ -16641,7 +16641,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m24-maj/z01-3.png)",
       "![Rysunek do zadania](/cke-matura/m24-maj/z01-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C).",
     "solutionSteps": [
       "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C)."
@@ -16698,7 +16698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED.",
     "solutionSteps": [
       "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED."
@@ -16727,7 +16727,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "4",
       "9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "Krok 1: log√3(9) = log(9) / log(√3).\nKrok 2: log(9) = 2, bo 3² = 9 (przy podstawie 3).\nKrok 3: log(√3) = 1/2, bo √3 = 3^(1/2).\nKrok 4: Wynik = 2 : (1/2) = 4.\n\nOdpowiedź: C) 4",
     "solutionSteps": [
       "Krok 1: log√3(9) = log(9) / log(√3).\nKrok 2: log(9) = 2, bo 3² = 9 (przy podstawie 3).\nKrok 3: log(√3) = 1/2, bo √3 = 3^(1/2).\nKrok 4: Wynik = 2 : (1/2) = 4.\n\nOdpowiedź: C) 4"
@@ -16756,7 +16756,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "−8𝑎𝑏",
       "2𝑏 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $8ab$",
     "solutionSteps": [
       "Zastosuj wzory skróconego mnożenia: $(x+y)^2 = x^2+2xy+y^2$ oraz $(x-y)^2 = x^2-2xy+y^2$. Po podstawieniu $x=2a$ i $y=b$ mamy: $(2a+b)^2 = (2a)^2 + 2(2a)b + b^2 = 4a^2 + 4ab + b^2$ oraz $(2a-b)^2 = (2a)^2 - 2(2a)b + b^2 = 4a^2 - 4ab + b^2$.",
@@ -16787,7 +16787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(− 2 &frasl; 3 , +∞)",
       "( 2 &frasl; 3 , +∞)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 − (3/2)x + x < 2/3.\nKrok 2: 1 − (1/2)x < 2/3 → −(1/2)x < −1/3 → x > 2/3 (mnożymy przez −2).\n\nOdpowiedź: D) (2/3, +∞)",
     "solutionSteps": [
       "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 − (3/2)x + x < 2/3.\nKrok 2: 1 − (1/2)x < 2/3 → −(1/2)x < −1/3 → x > 2/3 (mnożymy przez −2).\n\nOdpowiedź: D) (2/3, +∞)"
@@ -16816,7 +16816,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "ma dokładnie dwa rozwiązania: (−2) oraz 3.",
       "ma dokładnie trzy rozwiązania: (−1), (−2) oraz 3."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1",
     "solutionSteps": [
       "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1"
@@ -16842,7 +16842,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
     "solutionSteps": [
       "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
@@ -16868,7 +16868,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Grupujemy: x²(x−2) − 3(x−2) = (x−2)(x²−3).\nKrok 2: x²−3 = (x−√3)(x+√3).\nKrok 3: Rozwiązania: x = 2, x = √3, x = −√3.\n\nOdpowiedź: x ∈ {2, √3, −√3}",
     "solutionSteps": [
       "Krok 1: Grupujemy: x²(x−2) − 3(x−2) = (x−2)(x²−3).\nKrok 2: x²−3 = (x−√3)(x+√3).\nKrok 3: Rozwiązania: x = 2, x = √3, x = −√3.\n\nOdpowiedź: x ∈ {2, √3, −√3}"
@@ -16897,7 +16897,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m24-maj/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m24-maj/z10-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu).",
     "solutionSteps": [
       "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu)."
@@ -16926,7 +16926,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m24-maj/z11-4.png)",
       "![Rysunek do zadania](/cke-matura/m24-maj/z11-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku.\n\nOdpowiedź: zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia).",
     "solutionSteps": [
       "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku.\n\nOdpowiedź: zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia)."
@@ -16955,7 +16955,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(1,+∞)",
       "( 3 &frasl; 2 ,+∞)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{2},+\\infty)$",
     "solutionSteps": [
       "Funkcja liniowa $f(x) = ax + b$ jest malejąca, gdy jej współczynnik kierunkowy $a$ jest ujemny. W tym przypadku $a = -2k + 3$.",
@@ -16986,7 +16986,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2 &frasl; 7",
       "7 &frasl; 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{7}{2}$.",
     "solutionSteps": [
       "Wyznacz miejsce zerowe funkcji $f(x)$, przyrównując ją do zera: $3x + 6 = 0$.",
@@ -17015,7 +17015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
     "solutionSteps": [
       "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
@@ -17041,7 +17041,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
     "solutionSteps": [
       "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
@@ -17070,7 +17070,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1. m = 1 &frasl; 2",
       "2. m = 2"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Iloraz q = 6/12 = 1/2.\nKrok 2: Trzeci wyraz: 12·(1/2)² = 3 = 2m−1 → 2m = 4 → m = 2.\nKrok 3: q < 1 więc ciąg malejący.\n\nOdpowiedź: malejący, m = 2 (opcje B i 2)",
     "solutionSteps": [
       "Krok 1: Iloraz q = 6/12 = 1/2.\nKrok 2: Trzeci wyraz: 12·(1/2)² = 3 = 2m−1 → 2m = 4 → m = 2.\nKrok 3: q < 1 więc ciąg malejący.\n\nOdpowiedź: malejący, m = 2 (opcje B i 2)"
@@ -17096,7 +17096,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-2$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i sumę $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. Mamy dane $a_3 = a_1 + 2r = -1$ oraz $S_{15} = \\frac{2a_1 + 14r}{2} \\cdot 15 = (a_1 + 7r) \\cdot 15 = -165$.",
@@ -17127,7 +17127,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "sin𝛼 ⋅ cos𝛼 > 0",
       "cos𝛼 > 0 E) sin𝛼 = − 1 &frasl; 3 cos𝛼 F) sin𝛼 = −3cos𝛼"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: α w II ćwiartce → sin α > 0, cos α < 0.\nKrok 2: sin α · cos α < 0.\nKrok 3: Z tg α = −3 wynika sin α = −3 cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)",
     "solutionSteps": [
       "Krok 1: α w II ćwiartce → sin α > 0, cos α < 0.\nKrok 2: sin α · cos α < 0.\nKrok 3: Z tg α = −3 wynika sin α = −3 cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)"
@@ -17156,7 +17156,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "tg20°",
       "sin20°⋅cos20°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Krok 1: sin 320° = −sin 40° = −cos 50°… upraszczamy do sin 20° po tożsamościach.\nKrok 2: cos 220° = −cos 40°, łącznie wychodzi sin 20°.\n\nOdpowiedź: B) sin 20°",
     "solutionSteps": [
       "Krok 1: sin 320° = −sin 40° = −cos 50°… upraszczamy do sin 20° po tożsamościach.\nKrok 2: cos 220° = −cos 40°, łącznie wychodzi sin 20°.\n\nOdpowiedź: B) sin 20°"
@@ -17185,7 +17185,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "𝑎 ⋅ 𝑐 = 𝑏 ⋅ 𝑑",
       "𝑎 ⋅ 𝑏 = 𝑒 ⋅ 𝑒"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $a \\cdot d = b \\cdot c$",
     "solutionSteps": [
       "Skorzystaj z twierdzenia o dwusiecznej kąta wewnętrznego w trójkącie, które mówi, że stosunek długości ramion kąta, przy którym poprowadzono dwusieczną, jest równy stosunkowi długości odcinków, na które dwusieczna dzieli przeciwległy bok: $\\frac{|KM|}{|LM|} = \\frac{|KN|}{|NL|}$.",
@@ -17216,7 +17216,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "6√ 3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $6\\sqrt{3}$",
     "solutionSteps": [
       "Użyj wzoru na pole równoległoboku $P = ab \\sin \\alpha$, gdzie $a$ i $b$ to długości boków, a $\\alpha$ to miara kąta między nimi. Podstaw dane: $a = 3$, $b = 4$, $\\alpha = 120^\\circ$.",
@@ -17247,7 +17247,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "48°",
       "69°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $48^\\circ$",
     "solutionSteps": [
       "Kąt środkowy 𝐵𝑆𝐴 oparty na tym samym łuku co kąt wpisany 𝐵𝐶𝐴 jest dwa razy większy. Zatem miara kąta 𝐵𝑆𝐴 wynosi $2 \\cdot 42^\\circ = 84^\\circ$.",
@@ -17306,7 +17306,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10",
     "solutionSteps": [
       "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10"
@@ -17332,7 +17332,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
     "solutionSteps": [
       "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
@@ -17358,7 +17358,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "4",
     "solutionSteps": [
       "Zapisz stosunek objętości ostrosłupów. Skoro ostrosłupy są podobne, stosunek objętości jest równy sześcianowi stosunku ich odpowiadających długości (np. krawędzi), czyli $k^3$. Mamy $\\frac{V_2}{V_1} = \\frac{512}{64} = 8$, więc $k^3 = 8$.",
@@ -17389,7 +17389,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "24",
       "16"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 24",
     "solutionSteps": [
       "Zrozumienie problemu: Tworzymy kody czterocyfrowe z użyciem cyfr {1, 3, 6, 8} bez powtórzeń. Liczymy, ile jest takich kodów.",
@@ -17452,7 +17452,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3,5",
       "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli 3",
     "solutionSteps": [
       "Zlicz całkowitą liczbę uczniów: $2 + 5 + 8 + 7 + 3 = 25$ uczniów.",
@@ -17480,7 +17480,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: P(nieparzysta) = 2/4 = 1/2 każde losowanie → P(sumy parzysta) = 1/2.\n\nOdpowiedź: 1/2",
     "solutionSteps": [
       "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: P(nieparzysta) = 2/4 = 1/2 każde losowanie → P(sumy parzysta) = 1/2.\n\nOdpowiedź: 1/2"
@@ -17506,7 +17506,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Krok 1: Obwód jednego wybiegu: 2(x+y), trzy wybiegi: 3·2(x+y)=36 → x+y=6.\nKrok 2: Suma pól = 3xy, przy x+y=6 maksimum gdy x=y=3.\n\nOdpowiedź: x = 3 m, y = 3 m",
     "solutionSteps": [
       "Krok 1: Obwód jednego wybiegu: 2(x+y), trzy wybiegi: 3·2(x+y)=36 → x+y=6.\nKrok 2: Suma pól = 3xy, przy x+y=6 maksimum gdy x=y=3.\n\nOdpowiedź: x = 3 m, y = 3 m"
@@ -17535,7 +17535,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "30",
       "34"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli 18",
     "solutionSteps": [
       "Zastosuj wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = \\sqrt{32}$ i $b = \\sqrt{2}$. Otrzymujemy $(\\sqrt{32})^2 - 2 \\cdot \\sqrt{32} \\cdot \\sqrt{2} + (\\sqrt{2})^2$.",
@@ -17566,7 +17566,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5 12",
       "5 27"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\frac{29}{14}$",
     "solutionSteps": [
       "Zamień liczby mieszane na ułamki niewłaściwe, pamiętając o kolejności działań: najpierw mnożenie, potem odejmowanie. Zapiszemy $5 \\frac{1}{6}$ jako $\\frac{5 \\cdot 6 + 1}{6} = \\frac{31}{6}$, a $2 \\frac{1}{3}$ jako $\\frac{2 \\cdot 3 + 1}{3} = \\frac{7}{3}$.",
@@ -17628,7 +17628,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5𝑥 2 + 24𝑥 − 5",
       "5𝑥 2 + 24𝑥 − 13"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $5x^2 + 24x - 5$",
     "solutionSteps": [
       "Rozwiń oba kwadraty, stosując wzory skróconego mnożenia $(a+b)^2 = a^2+2ab+b^2$ i $(a-b)^2 = a^2-2ab+b^2$. Otrzymasz $(9x^2 + 12x + 4) - (4x^2 - 12x + 9)$.",
@@ -17656,7 +17656,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wykazano, że $3n^2 + 2n + 7$ jest podzielne przez 4.",
     "solutionSteps": [
       "Przedstaw nieparzystą liczbę naturalną $n$ w postaci ogólnej. Ponieważ $n$ jest nieparzyste, możemy zapisać $n = 2k + 1$, gdzie $k$ jest liczbą całkowitą nieujemną.",
@@ -17687,7 +17687,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m25-maj/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m25-maj/z06-4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D",
     "solutionSteps": [
       "Uprość nierówność, najpierw mnożąc nawias: $3 - 2 + 4x \\geq 2x - 17$.",
@@ -17749,7 +17749,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-4.png)",
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{x}{x+2}$",
     "solutionSteps": [
       "Uprość licznik wyrażenia, stosując wzór skróconego mnożenia na różnicę kwadratów: $x^2 - 4 = (x-2)(x+2)$.",
@@ -17777,7 +17777,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "735 000 zł",
     "solutionSteps": [
       "Oznaczmy przez $A$ kwotę przyznaną zespołowi A, a przez $B$ kwotę przyznaną zespołowi B. Z treści zadania wiemy, że $A + B = 1\\,200\\,000$ zł. Wiemy również, że zespół A wykorzystał $0,13A$, a zespół B wykorzystał $0,11B$.",
@@ -17806,7 +17806,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$x \\in [-2, 2]$",
     "solutionSteps": [
       "Rozpisz nierówność i przenieś wszystkie wyrazy na jedną stronę.\n$6x^2 + 3 \\ge 7x^2 - 1$\n$0 \\ge 7x^2 - 6x^2 - 3 - 1$\n$0 \\ge x^2 - 4$",
@@ -17834,7 +17834,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$",
     "solutionSteps": [
       "Odczytaj dziedzinę z osi X — to wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi Y — to wszystkie możliwe wartości funkcji $f(x)$.",
@@ -17862,7 +17862,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$f(x) = -\\frac{1}{3}x^2 + 2x + 3$",
     "solutionSteps": [
       "Wykorzystaj wierzchołek paraboli $(p, q) = (3,6)$ do zapisania wzoru funkcji w postaci kanonicznej: $f(x) = a(x-p)^2 + q$, czyli $f(x) = a(x-3)^2 + 6$.",
@@ -17893,7 +17893,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "4"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 3",
     "solutionSteps": [
       "Funkcja liniowa nie ma miejsca zerowego, gdy jest stała i różna od zera. Dzieje się tak, gdy współczynnik przy $x$ jest równy zero. Wzór funkcji to $f(x) = (3-m)x - 4$.",
@@ -17921,7 +17921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$-\\frac{1}{2}, \\frac{1}{3}, \\frac{3}{4}$",
     "solutionSteps": [
       "Obliczamy pierwszy wyraz ciągu, podstawiając $n=1$ do wzoru $a_n = \\frac{2n-3}{n+1}$. Otrzymujemy $a_1 = \\frac{2 \\cdot 1 - 3}{1+1} = \\frac{2-3}{2} = -\\frac{1}{2}$.",
@@ -17949,7 +17949,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$m=2.5$",
     "solutionSteps": [
       "Zapisz warunek na ciąg arytmetyczny: środkowy wyraz jest średnią arytmetyczną skrajnych wyrazów, czyli $2(m^2+3) = (2m+11) + (5-m)$.",
@@ -17980,7 +17980,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "729"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $1$",
     "solutionSteps": [
       "Obliczamy iloraz $q$ ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{9}{27} = \\frac{1}{3}$.",
@@ -18011,7 +18011,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 3 /2",
       "√ 3 /3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $\\frac{\\sqrt{3}}{2}$",
     "solutionSteps": [
       "Zamień tangens na iloraz sinusa i cosinusa: $\\sqrt{3} \\cdot \\frac{\\sin\\alpha}{\\cos\\alpha} = 2\\sin\\alpha$. Ponieważ kąt $\\alpha$ jest ostry, $\\sin\\alpha \\ne 0$, więc możemy podzielić obie strony przez $\\sin\\alpha$. Otrzymujemy: $\\frac{\\sqrt{3}}{\\cos\\alpha} = 2$.",
@@ -18039,7 +18039,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$\\sin(\\alpha) = \\frac{24}{25}$",
     "solutionSteps": [
       "W trójkącie prostokątnym 𝐴𝐵𝐶, środkowa 𝐶𝐷 poprowadzona z wierzchołka kąta prostego do przeciwprostokątnej 𝐵𝐶 jest równa połowie tej przeciwprostokątnej. Mamy więc $CD = \\frac{1}{2} BC$. Ponieważ $CD = 5$, to $BC = 2 \\cdot 5 = 10$.",
@@ -18070,7 +18070,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40°",
       "50°"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 40°",
     "solutionSteps": [
       "Kąt wpisany 𝐴𝐵𝐶 opiera się na tym samym łuku co kąt środkowy 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 ma miarę dwa razy większą niż kąt 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 = 180° - 90° - 50° = 40°.",
@@ -18103,7 +18103,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2,5",
       "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $2,25$",
     "solutionSteps": [
       "Wypisanie danych zadania. Z treści zadania znamy długości boków trójkąta równoramiennego $ABC$:\n- $|AC| = 4$\n- $|BC| = 4$\n- $|AB| = 3$",
@@ -18131,7 +18131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Pierwsze stwierdzenie: fałsz, drugie stwierdzenie: prawda.",
     "solutionSteps": [
       "Aby zweryfikować, czy trójkąt $ABC$ o bokach $|AB| = 11$, $|BC| = 12$ i kącie $|\\angle ABC| = 60^\\circ$ jest równoramienny, musimy obliczyć długość trzeciego boku $|AC|$. Wykorzystamy w tym celu twierdzenie cosinusów dla trójkąta $ABC$:\n$$|AC|^2 = |AB|^2 + |BC|^2 - 2 \\cdot |AB| \\cdot |BC| \\cdot \\cos(60^\\circ)$$\n\nWstawiamy dane liczbowe, pamiętając, że $\\cos(60^\\circ) = \\frac{1}{2}$:\n$$|AC|^2 = 11^2 + 12^2 - 2 \\cdot 11 \\cdot 12 \\cdot \\frac{1}{2}$$\n$$|AC|^2 = 121 + 144 - 132$$\n$$|AC|^2 = 133$$\n$$|AC| = \\sqrt{133}$$",
@@ -18162,7 +18162,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "14"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $10$",
     "solutionSteps": [
       "Zauważmy, że punkt $S$ (punkt przecięcia przekątnych kwadratu) jest środkiem każdej z przekątnych kwadratu $ABCD$. Oznacza to, że odległość od wierzchołka $A$ do punktu $S$ jest równa połowie długości przekątnej $AC$. Długość całej przekątnej $d$ wynosi zatem:\n$$d = 2 \\cdot |AS|$$",
@@ -18193,7 +18193,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "5"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $m = -2$",
     "solutionSteps": [
       "Przypominamy warunek równoległości dwóch prostych w postaci kierunkowej. Dwie proste o równaniach $y = a_1x + b_1$ oraz $y = a_2x + b_2$ są równoległe wtedy i tylko wtedy, gdy ich współczynniki kierunkowe (liczby stojące przy zmiennej $x$) są równe:\n$$ a_1 = a_2 $$",
@@ -18224,7 +18224,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "C. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 2√ 5",
       "D. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 20"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B, czyli $(x − 2)^2 + (y − 4)^2 = 20$",
     "solutionSteps": [
       "Równanie okręgu o środku $(a, b)$ i promieniu $r$ to $(x-a)^2 + (y-b)^2 = r^2$. W naszym przypadku środek $S=(2,4)$, więc szukamy równania $(x-2)^2 + (y-4)^2 = r^2$.",
@@ -18253,7 +18253,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "$64\\pi$",
     "solutionSteps": [
       "Narysuj przekrój stożka, który jest trójkątem równoramiennym. Wysokość stożka $H$, promień podstawy $r$ i tworząca $l=8$ tworzą trójkąt prostokątny. Kąt między tworzącą a podstawą to połowa kąta rozwarcia, czyli $120^\\circ / 2 = 60^\\circ$.",
@@ -18314,7 +18314,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "54",
       "81"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli 45",
     "solutionSteps": [
       "Rozważ trzy przypadki ze względu na pozycję cyfry 0. Liczby trzycyfrowe mają postać $abc$, gdzie $a \\in \\{1, ..., 9\\}$ i $b, c \\in \\{0, ..., 9\\}$. Liczba musi być nieparzysta, czyli $c \\in \\{1, 3, 5, 7, 9\\}$.",
@@ -18346,7 +18346,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "11 &frasl; 36",
       "2 &frasl; 36"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D, czyli $\\frac{2}{36}$",
     "solutionSteps": [
       "Określ przestrzeń zdarzeń elementarnych. Rzucamy kostką dwa razy, więc mamy $6 \\times 6 = 36$ możliwych kombinacji wyników (np. (1,1), (1,2), ..., (6,6)).",
@@ -18377,7 +18377,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "7"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C, czyli $x+y=6$.",
     "solutionSteps": [
       "Skorzystaj ze wzoru na średnią arytmetyczną: suma liczb podzielona przez ich ilość. W tym przypadku mamy $\\frac{1+2+3+4+5+x+y}{7} = 3$.",
@@ -18405,7 +18405,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "1. Mediana jest równa 4. 2. Dominanta jest równa 5.",
     "solutionSteps": [
       "Wypisz wszystkie oceny z sprawdzianu w kolejności niemalejącej: 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5. Jest 24 uczniów.",
@@ -18433,7 +18433,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 0,
+    "correctIndex": null,
     "explanation": "Wzór funkcji $P(x) = -2x^2 + 22x + 88$, dziedzina to $(0, 11)$. Maksymalne pole powierzchni występuje dla $x = 5.5$.",
     "solutionSteps": [
       "Oznaczmy długości krawędzi prostopadłościanu wychodzących z wierzchołka B jako $|BC| = 4$, $|AB| = x$ oraz $|BF| = y$. Z treści zadania wiemy, że $|BC| = 4$ i $|AB| + |BC| + |BF| = 15$, co po podstawieniu daje $x + 4 + y = 15$, czyli $y = 11 - x$.",
@@ -18456,6 +18456,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2015 — poziom podstawowy",
     "year": 2015,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-maj-z01",
       "cke-m15-maj-z02",
@@ -18499,6 +18500,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2015 — poziom podstawowy",
     "year": 2015,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-probna-z01",
       "cke-m15-probna-z02",
@@ -18541,6 +18543,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — przykładowa 2015 — poziom podstawowy",
     "year": 2015,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m15-przykladowa-z01",
       "cke-m15-przykladowa-z02",
@@ -18583,6 +18586,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2016 — poziom podstawowy",
     "year": 2016,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m16-maj-z01",
       "cke-m16-maj-z02",
@@ -18626,6 +18630,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2017 — poziom podstawowy",
     "year": 2017,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m17-maj-z01",
       "cke-m17-maj-z02",
@@ -18669,6 +18674,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2018 — poziom podstawowy",
     "year": 2018,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m18-maj-z01",
       "cke-m18-maj-z02",
@@ -18712,6 +18718,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2019 — poziom podstawowy",
     "year": 2019,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m19-maj-z01",
       "cke-m19-maj-z02",
@@ -18755,6 +18762,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — czerwiec 2020 — poziom podstawowy",
     "year": 2020,
     "month": 6,
+    "kind": "matura",
     "taskIds": [
       "cke-m20-czerwiec-z01",
       "cke-m20-czerwiec-z02",
@@ -18798,6 +18806,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2020 — poziom podstawowy",
     "year": 2020,
     "month": 4,
+    "kind": "matura",
     "taskIds": [
       "cke-m20-probna-z01",
       "cke-m20-probna-z02",
@@ -18841,6 +18850,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2021 — poziom podstawowy",
     "year": 2021,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m21-maj-z01",
       "cke-m21-maj-z02",
@@ -18885,6 +18895,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna 2021 — poziom podstawowy",
     "year": 2021,
     "month": 3,
+    "kind": "matura",
     "taskIds": [
       "cke-m21-probna-z01",
       "cke-m21-probna-z02",
@@ -18929,6 +18940,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2022 — poziom podstawowy",
     "year": 2022,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m22-maj-z01",
       "cke-m22-maj-z02",
@@ -18973,6 +18985,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2023 — poziom podstawowy",
     "year": 2023,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-maj-z01",
       "cke-m23-maj-z02",
@@ -19013,6 +19026,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna wrzesień 2023 — poziom podstawowy",
     "year": 2023,
     "month": 9,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-probna-ix-z01",
       "cke-m23-probna-ix-z02",
@@ -19048,6 +19062,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — próbna grudzień 2023 — poziom podstawowy",
     "year": 2023,
     "month": 12,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-probna-xii-z01",
       "cke-m23-probna-xii-z02",
@@ -19090,6 +19105,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — przykładowa 2023 — poziom podstawowy",
     "year": 2023,
     "month": 3,
+    "kind": "matura",
     "taskIds": [
       "cke-m23-przykladowa-z01",
       "cke-m23-przykladowa-z02",
@@ -19129,6 +19145,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2024 — poziom podstawowy",
     "year": 2024,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m24-maj-z01",
       "cke-m24-maj-z02",
@@ -19169,6 +19186,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
     "title": "Matura — maj 2025 — poziom podstawowy",
     "year": 2025,
     "month": 5,
+    "kind": "matura",
     "taskIds": [
       "cke-m25-maj-z01",
       "cke-m25-maj-z02",

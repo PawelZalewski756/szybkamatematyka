@@ -1,10 +1,4 @@
 import { BazaZadanView } from "@/components/baza-zadan/BazaZadanView";
-import { isSupabaseConfigured } from "@/lib/supabase";
-import { fetchZadaniaSafe } from "@/lib/supabase/baza-zadan";
-import {
-  formatSupabaseErrorForUser,
-  isSchemaMissingError,
-} from "@/lib/supabase/errors";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -15,24 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/baza-zadan" },
 };
 
-export default async function BazaZadanPage() {
-  let cmsTasks: Awaited<ReturnType<typeof fetchZadaniaSafe>>["data"] = [];
-  let schemaMissing = false;
-  let cmsNote: string | null = null;
-
-  if (isSupabaseConfigured()) {
-    const { data, error } = await fetchZadaniaSafe();
-    if (error) {
-      if (isSchemaMissingError(error)) {
-        schemaMissing = true;
-      } else {
-        cmsNote = formatSupabaseErrorForUser(error);
-      }
-    } else {
-      cmsTasks = data;
-    }
-  }
-
+export default function BazaZadanPage() {
   return (
     <Suspense
       fallback={
@@ -41,11 +18,7 @@ export default async function BazaZadanPage() {
         </div>
       }
     >
-      <BazaZadanView
-        cmsTasks={cmsTasks}
-        schemaMissing={schemaMissing}
-        cmsNote={cmsNote}
-      />
+      <BazaZadanView />
     </Suspense>
   );
 }

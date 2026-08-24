@@ -19,6 +19,9 @@ export interface Task {
   correct_answer: string;
   options: string[];
   xp_reward: number;
+  source_id?: string | null;
+  explanation?: string | null;
+  solution_steps?: string[];
 }
 
 export interface Material {

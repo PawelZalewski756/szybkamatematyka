@@ -120,6 +120,7 @@ export function DuelResultScreen({
   const copy = OUTCOME_COPY[outcome];
   const [xpEarned, setXpEarned] = useState<number | null>(null);
   const [savedLevel, setSavedLevel] = useState<number | null>(null);
+  const [eventId] = useState(() => crypto.randomUUID());
   const appliedRef = useRef(false);
   const recordedRef = useRef(false);
 
@@ -142,17 +143,18 @@ export function DuelResultScreen({
       opponentResult,
       mode,
       slug,
+      eventId,
     }).catch(() => {
       /* zapis statystyk jest best-effort — nie blokuje UI wyniku */
     });
-  }, [account, awardXp, outcome, myResult, opponentResult, mode, slug]);
+  }, [account, awardXp, outcome, myResult, opponentResult, mode, slug, eventId]);
 
   useEffect(() => {
     if (!awardXp || appliedRef.current) return;
     if (!account?.isLoggedIn || !account.profile) return;
     appliedRef.current = true;
     const profile = account.profile;
-    void awardDuelXp(profile, myResult, outcome)
+    void awardDuelXp(profile, myResult, outcome, eventId)
       .then((summary) => {
         setXpEarned(summary.xpEarned);
         setSavedLevel(summary.level);
@@ -160,7 +162,7 @@ export function DuelResultScreen({
       .catch(() => {
         setXpEarned(null);
       });
-  }, [account, awardXp, myResult, outcome]);
+  }, [account, awardXp, myResult, outcome, eventId]);
 
   const previewXp = previewDuelXp(myResult, outcome);
   const iAmHighlighted = outcome === "win";

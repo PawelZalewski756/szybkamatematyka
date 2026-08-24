@@ -1,5 +1,3 @@
-"use client";
-
 import { HomeDashboard } from "@/components/home/HomeDashboard";
 import { HomeGamingFooter } from "@/components/home/HomeGamingFooter";
 

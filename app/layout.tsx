@@ -111,13 +111,23 @@ export default function RootLayout({
   return (
     <html lang="pl" className={jakarta.variable}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
+        <a
+          href="#main-content"
+          className="fixed left-3 top-3 z-[300] -translate-y-20 rounded-md bg-accent px-4 py-2 text-sm font-bold text-background transition-transform focus:translate-y-0"
+        >
+          Przejdź do treści
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Providers>
           <Navbar />
-          <main className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16">
+          <main
+            id="main-content"
+            tabIndex={-1}
+            className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16"
+          >
             {children}
           </main>
           <Footer />

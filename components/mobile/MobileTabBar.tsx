@@ -14,8 +14,8 @@ import {
   GraduationCap,
   Home,
   LayoutGrid,
+  Library,
   Play,
-  UserRound,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -38,7 +38,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </Link>
@@ -73,7 +73,7 @@ function TabButton({
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </button>
@@ -106,9 +106,6 @@ export function MobileTabBar() {
   const [loggingOut, setLoggingOut] = useState(false);
 
   const activeTab = getMobileActiveTab(pathname);
-  const profilHref = user ? "/profil" : "/login";
-  const profilLabel = user ? "Profil" : "Konto";
-
   useEffect(() => {
     if (!isSupabaseConfigured()) return;
 
@@ -188,7 +185,7 @@ export function MobileTabBar() {
               <Play className="ml-0.5 h-6 w-6" aria-hidden />
             </button>
             <span
-              className={`mt-1 text-[10px] font-semibold leading-tight ${
+              className={`mt-1 text-xs font-semibold leading-tight ${
                 isMobileGrajActive(pathname) || grajOpen
                   ? "text-foreground"
                   : "text-muted"
@@ -199,10 +196,10 @@ export function MobileTabBar() {
           </div>
 
           <TabLink
-            href={profilHref}
-            label={profilLabel}
-            icon={UserRound}
-            active={activeTab === "profil"}
+            href="/baza-zadan"
+            label="Baza"
+            icon={Library}
+            active={activeTab === "baza"}
           />
           <TabButton
             label="Więcej"

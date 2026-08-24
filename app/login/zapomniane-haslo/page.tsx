@@ -21,12 +21,19 @@ export default function ZapomnianeHasloPage() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
-    const supabase = getSupabase();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        router.replace("/");
-      }
-    });
+    try {
+      const supabase = getSupabase();
+      void supabase.auth
+        .getSession()
+        .then(({ data: { session } }) => {
+          if (session?.user) router.replace("/");
+        })
+        .catch(() => {
+          // Reset hasła nadal powinien być dostępny przy awarii odczytu sesji.
+        });
+    } catch {
+      // Formularz pokaże błąd dopiero przy próbie wysłania.
+    }
   }, [router]);
 
   const handleSubmit = async () => {

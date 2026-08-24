@@ -48,8 +48,7 @@ export async function generateMetadata({
 
 export default async function TaskPage({ params }: PageProps) {
   const { id } = await params;
-  if (!getTaskById(id)) {
-    notFound();
-  }
-  return <TaskSolverView id={id} />;
+  const task = getTaskById(id);
+  if (!task) notFound();
+  return <TaskSolverView task={task} />;
 }

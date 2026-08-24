@@ -45,6 +45,7 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
   const [saveError, setSaveError] = useState<string | null>(null);
   const [xpEarned, setXpEarned] = useState(0);
   const xpAppliedRef = useRef(false);
+  const rewardEventIdRef = useRef("");
   const [cloudProfile, setCloudProfile] = useState(
     () => account?.profile ?? null,
   );
@@ -75,7 +76,10 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     const profile = account.profile;
     const applySave = async () => {
       try {
-        const saved = await saveProfileAfterGame(profile, score);
+        const saved = await saveProfileAfterGame(profile, score, {
+          type: "minigame",
+          id: rewardEventIdRef.current,
+        });
         setCloudProfile(saved);
         if (saved.persisted) {
           // Zapis w chmurze potwierdzony — pokazujemy zdobyte XP i level-up.
@@ -141,6 +145,7 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
   // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const startGame = useCallback(() => {
     xpAppliedRef.current = false;
+    rewardEventIdRef.current = crypto.randomUUID();
     setSavedToCloud(false);
     setSaveError(null);
     setShowLevelUpOverlay(false);

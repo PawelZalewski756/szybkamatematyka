@@ -25,9 +25,14 @@ import { useState } from "react";
 type OnboardingModalProps = {
   user: User;
   onComplete: (profile: Profile) => void;
+  onSkip: () => void;
 };
 
-export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
+export function OnboardingModal({
+  user,
+  onComplete,
+  onSkip,
+}: OnboardingModalProps) {
   const [nick, setNick] = useState("");
   const [schoolClass, setSchoolClass] = useState<SchoolClassPath>(() =>
     loadSchoolClass(),
@@ -81,15 +86,14 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-background/80 p-4 backdrop-blur-xl"
+      className="fixed inset-x-0 bottom-20 z-[200] flex justify-center p-4 lg:bottom-4"
       role="dialog"
-      aria-modal="true"
       aria-labelledby="onboarding-title"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="w-full max-w-md rounded-3xl border border-accent/25 bg-surface p-6 shadow-2xl sm:p-8"
+        className="w-full max-w-md rounded-2xl border border-accent/25 bg-surface p-5 shadow-2xl sm:p-6"
       >
         <div className="mb-4 flex justify-center">
           <div className="icon-chip flex h-14 w-14 rounded-2xl">
@@ -101,7 +105,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
           id="onboarding-title"
           className="text-center text-xl font-black text-foreground sm:text-2xl"
         >
-          Witaj w grze!
+          Uzupełnij profil
         </h2>
         <p className="mt-2 text-center text-sm leading-relaxed text-muted">
           Wybierz nick i klasę — dopasujemy zadania do Twojego poziomu.
@@ -146,8 +150,16 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
                 Zapisywanie…
               </span>
             ) : (
-              "Dołącz do rankingu"
+              "Zapisz profil"
             )}
+          </button>
+          <button
+            type="button"
+            onClick={onSkip}
+            disabled={saving}
+            className="mt-3 w-full py-2 text-sm font-semibold text-muted hover:text-foreground disabled:opacity-50"
+          >
+            Później
           </button>
         </form>
       </motion.div>

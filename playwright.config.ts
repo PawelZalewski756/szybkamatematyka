@@ -1,10 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
 /**
- * E2E smoke tests — uruchamiane lokalnie: `npm run test:e2e`.
- *
- * Świadomie NIE dodajemy tego kroku do `.github/workflows/ci.yml` na razie
- * (wolne uruchomienie build+start, potencjalna flakiness przy dev-serverze).
+ * E2E smoke tests. W CI używamy buildu wykonanego we wcześniejszym kroku;
+ * lokalnie Playwright sam buduje aplikację.
  */
 export default defineConfig({
   testDir: "./e2e",
@@ -24,7 +22,9 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run build && npm run start",
+    command: process.env.CI
+      ? "npm run start"
+      : "npm run build && npm run start",
     url: "http://localhost:3000",
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,

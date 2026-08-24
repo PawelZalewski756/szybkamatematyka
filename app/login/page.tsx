@@ -35,12 +35,19 @@ export default function LoginPage() {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const supabase = getSupabase();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        router.replace("/");
-      }
-    });
+    try {
+      const supabase = getSupabase();
+      void supabase.auth
+        .getSession()
+        .then(({ data: { session } }) => {
+          if (session?.user) router.replace("/");
+        })
+        .catch(() => {
+          // Formularz logowania pozostaje dostępny także przy awarii auth.
+        });
+    } catch {
+      // Brak konfiguracji nie może wywracać całej strony formularza.
+    }
   }, [router]);
 
   const clearMessage = () => {
@@ -389,6 +396,21 @@ export default function LoginPage() {
               {message && (
                 <Alert message={message} isError={isError} />
               )}
+
+              <p className="text-xs leading-relaxed text-muted">
+                Zakładając konto, akceptujesz{" "}
+                <Link href="/regulamin" className="underline hover:text-foreground">
+                  regulamin
+                </Link>{" "}
+                i{" "}
+                <Link
+                  href="/polityka-prywatnosci"
+                  className="underline hover:text-foreground"
+                >
+                  politykę prywatności
+                </Link>
+                .
+              </p>
 
               <motion.button
                 type="submit"

@@ -35,4 +35,21 @@ describe("reconcileTaskAnswer", () => {
     expect(fixed.repaired).toBe(true);
     expect(fixed.correct_answer).toBe("0");
   });
+
+  it("removes MC with self-correcting explanation even when key is in options", () => {
+    const result = reconcileTaskAnswer({
+      content: "Oblicz wartość.",
+      correct_answer: "3",
+      options: ["1", "2", "3", "4"],
+      answer_type: "choice",
+      difficulty: 2,
+      xp_reward: 18,
+      explanation:
+        "Wychodzi 5. To jest błąd w moim rozumowaniu. Załóżmy więc, że odpowiedź to 3.",
+      figure_svg: null,
+      figure_caption: null,
+    });
+
+    expect(result.shouldRemove).toBe(true);
+  });
 });

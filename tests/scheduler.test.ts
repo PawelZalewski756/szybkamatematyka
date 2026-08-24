@@ -32,6 +32,24 @@ describe("createReviewItem", () => {
     const item = createReviewItem("task-1", NOW);
     expect(isDue(item, NOW)).toBe(true);
   });
+
+  it("zachowuje snapshot zadania spoza katalogu", () => {
+    const snapshot = {
+      id: "supabase-task-1",
+      title: "Równania",
+      category: "algebra",
+      difficulty: 2 as const,
+      prompt: "Rozwiąż x + 2 = 5",
+      choices: ["1", "2", "3", "4"],
+      correctIndex: 2,
+      correctAnswer: "3",
+      explanation: "Odejmij 2 od obu stron.",
+    };
+    const item = createReviewItem(snapshot.id, NOW, snapshot);
+
+    expect(item.taskSnapshot).toEqual(snapshot);
+    expect(gradeReviewItem(item, false, NOW).taskSnapshot).toEqual(snapshot);
+  });
 });
 
 describe("gradeReviewItem — poprawna odpowiedź", () => {

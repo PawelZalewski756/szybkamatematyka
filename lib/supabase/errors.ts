@@ -53,5 +53,8 @@ export function formatSupabaseErrorForUser(message: string): string {
   if (isPostgrestColumnMissingMessage(message)) {
     return "Baza profilu wymaga aktualizacji — uruchom migrację SQL w Supabase (supabase/migrations/add_profile_streak_columns.sql).";
   }
-  return message;
+  if (/typeerror:\s*fetch failed|failed to fetch|networkerror/i.test(message)) {
+    return "Nie udało się połączyć z bazą. Spróbuj ponownie za chwilę.";
+  }
+  return "Nie udało się wczytać danych. Spróbuj ponownie za chwilę.";
 }

@@ -24,6 +24,7 @@ function auditMcTasks() {
       });
     }
 
+    if (task.correctIndex === null) continue;
     const correct = task.choices[task.correctIndex];
     if (correct === undefined) {
       issues.push({

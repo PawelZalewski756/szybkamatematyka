@@ -31,7 +31,7 @@ const HERO_PATHS = [
   {
     href: "/trening/arkusze",
     label: "Arkusze CKE",
-    text: "Oficjalne arkusze maturalne i 8-klasisty",
+    text: "Oficjalne arkusze maturalne i egzamin ósmoklasisty",
   },
 ] as const;
 

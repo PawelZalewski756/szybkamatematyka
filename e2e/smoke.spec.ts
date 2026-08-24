@@ -1,10 +1,17 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Smoke", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("szybka-matma-school-class", "klasa-8");
+      localStorage.setItem("szybka-matma-learning-path", "sp");
+    });
+  });
+
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      /Szybka\s*Matematyka/,
     );
   });
 
@@ -60,7 +67,7 @@ test.describe("Smoke", () => {
   test("strona główna ma panel startowy", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      /Szybka\s*Matematyka/,
     );
   });
 
@@ -68,7 +75,62 @@ test.describe("Smoke", () => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");
     await expect(
-      page.getByRole("navigation").getByRole("link", { name: "Trening" }),
+      page
+        .getByRole("navigation")
+        .getByRole("link", { name: "Trening", exact: true }),
     ).toBeVisible();
+  });
+
+  test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
+    await page.goto("/trening/arkusze");
+    await expect(
+      page.getByRole("heading", { level: 1, name: /Arkusze/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /Matura CKE/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Matura — maj 2025/ }),
+    ).toBeVisible();
+    await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
+    await expect(page.getByText("TypeError")).toHaveCount(0);
+  });
+
+  test("polityka prywatności i regulamin są publiczne", async ({ page }) => {
+    await page.goto("/polityka-prywatnosci");
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Polityka prywatności" }),
+    ).toBeVisible();
+    await page.goto("/regulamin");
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Regulamin serwisu" }),
+    ).toBeVisible();
+  });
+
+  test("stopka strony głównej ma linki prawne", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await page.goto("/");
+    await expect(
+      page.getByRole("navigation", { name: "Informacje prawne" }).getByRole("link", {
+        name: "Polityka prywatności",
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("navigation", { name: "Informacje prawne" }).getByRole("link", {
+        name: "Regulamin",
+      }),
+    ).toBeVisible();
+  });
+
+  test("/api/health odpowiada bez sekretów", async ({ request }) => {
+    const response = await request.get("/api/health");
+    expect(response.ok()).toBeTruthy();
+    const body = (await response.json()) as {
+      status?: string;
+      checks?: Record<string, string>;
+    };
+    expect(body.status).toMatch(/ok|degraded/);
+    expect(JSON.stringify(body).toLowerCase()).not.toContain("eyj");
+    expect(body.checks?.supabase).toMatch(/configured|missing/);
   });
 });

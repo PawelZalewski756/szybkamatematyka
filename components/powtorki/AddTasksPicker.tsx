@@ -3,7 +3,10 @@
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useReview } from "@/components/powtorki/ReviewProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { getTaskById, getTasksForPath } from "@/lib/baza-zadan/catalog";
+import {
+  getClientTaskById,
+  getClientTasksForPath,
+} from "@/lib/baza-zadan/client-catalog";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import type { Task } from "@/lib/baza-zadan/types";
 import { Check, Plus, Search } from "lucide-react";
@@ -20,14 +23,17 @@ export function AddTasksPicker() {
   const results = useMemo<Task[]>(() => {
     const query = search.trim();
     if (query) {
-      return getTasksForPath(path, { search: query }).slice(0, MAX_RESULTS);
+      return getClientTasksForPath(path, { search: query }).slice(
+        0,
+        MAX_RESULTS,
+      );
     }
     // Bez wyszukiwania proponujemy zadania, które user już rozwiązywał.
     const suggested = [...solvedIds]
-      .map((id) => getTaskById(id))
+      .map((id) => getClientTaskById(id))
       .filter((t): t is Task => Boolean(t));
     if (suggested.length > 0) return suggested.slice(0, MAX_RESULTS);
-    return getTasksForPath(path).slice(0, MAX_RESULTS);
+    return getClientTasksForPath(path).slice(0, MAX_RESULTS);
   }, [search, path, solvedIds]);
 
   return (

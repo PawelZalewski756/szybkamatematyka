@@ -1,8 +1,7 @@
 "use client";
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
-import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { useReview } from "@/components/powtorki/ReviewProvider";
 import { TopicVictoryScreen } from "@/components/trening/TopicVictoryScreen";
 import {
   awardArenaXp,
@@ -16,6 +15,9 @@ import {
 import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
 import { stripChoiceLabelPrefix } from "@/lib/math/render-math-text";
 import type { ExamType, Task } from "@/types/database";
+import type { ReviewTaskSnapshot } from "@/lib/powtorki/types";
+import { recordTopicAttempt } from "@/lib/learning/mastery-store";
+import { trackProductEvent } from "@/lib/metrics/product-events";
 import { AnimatePresence, motion } from "framer-motion";
 import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
 import { MathText } from "@/components/trening/MathText";
@@ -43,13 +45,36 @@ function shuffleTasks<T>(items: T[]): T[] {
 }
 
 const OPTION_LABELS = ["A", "B", "C", "D"] as const;
+
+function toReviewSnapshot(
+  task: Task,
+  topicLabel: string,
+): ReviewTaskSnapshot {
+  const correctIndex = task.options.findIndex((option) =>
+    checkAnswerMatch(option, task.correct_answer),
+  );
+  return {
+    id: task.source_id?.trim() || task.id,
+    title: topicLabel,
+    category: task.category,
+    difficulty: task.difficulty,
+    prompt: task.content,
+    choices: [...task.options],
+    correctIndex: correctIndex >= 0 ? correctIndex : null,
+    correctAnswer: task.correct_answer,
+    explanation:
+      task.explanation?.trim() ||
+      `Poprawna odpowiedź: ${task.correct_answer}.`,
+    solutionSteps: task.solution_steps,
+  };
+}
 const CORRECT_DELAY_MS = 1500;
 const WRONG_UNLOCK_MS = 700;
 
 const EXAM_LABEL: Record<ExamType, string> = {
   matura_podstawowa: "Matura podstawowa",
   matura_rozszerzona: "Matura rozszerzona",
-  "8_klasa": "Egzamin 8-klasisty",
+  "8_klasa": "Egzamin ósmoklasisty",
 };
 
 type TaskWithOptions = Task & { options: string[] };
@@ -109,7 +134,7 @@ export function TaskArena({
     null,
   );
   const [topicHasTasks, setTopicHasTasks] = useState(false);
-  const { recordResult } = useSolvedTasks();
+  const { recordTaskResult } = useReview();
 
   const loadTasks = useCallback(async () => {
     setLoading(true);
@@ -231,9 +256,16 @@ export function TaskArena({
       setFeedback("correct");
       setLocalCheckWrong(false);
 
-      if (getTaskById(current.id)) {
-        recordResult(current.id, true);
-      }
+      recordTaskResult(toReviewSnapshot(current, topicLabel), true);
+      void recordTopicAttempt({
+        userId,
+        examType,
+        category,
+        topic,
+        correct: true,
+        difficulty: current.difficulty,
+      });
+      trackProductEvent("training_answer");
 
       const taskAttempts = (attempts[current.id] ?? 0) + 1;
       setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
@@ -249,9 +281,9 @@ export function TaskArena({
             const xpGain = halfXp
               ? Math.max(1, Math.floor(current.xp_reward / 2))
               : current.xp_reward;
-            const updated = await awardArenaXp(profile, xpGain);
+            const updated = await awardArenaXp(profile, xpGain, current.id);
             setProfile(updated);
-            setXpFlash(xpGain);
+            setXpFlash(updated.xpEarned);
             setTimeout(() => setXpFlash(null), 1800);
             awarded = true;
           }
@@ -280,7 +312,11 @@ export function TaskArena({
       attempts,
       current,
       profile,
-      recordResult,
+      category,
+      examType,
+      recordTaskResult,
+      topic,
+      topicLabel,
       userId,
     ],
   );
@@ -296,11 +332,17 @@ export function TaskArena({
     setSelected(option);
     setFeedback(isCorrect ? "correct" : "wrong");
 
-    if (getTaskById(current.id)) {
-      recordResult(current.id, isCorrect);
-    }
-
     if (!isCorrect) {
+      recordTaskResult(toReviewSnapshot(current, topicLabel), false);
+      void recordTopicAttempt({
+        userId,
+        examType,
+        category,
+        topic,
+        correct: false,
+        difficulty: current.difficulty,
+      });
+      trackProductEvent("training_answer");
       setShakeKey((k) => k + 1);
       const isOpen = current.options.length === 0;
       if (isOpen) {
@@ -655,10 +697,32 @@ export function TaskArena({
             )}
 
             {feedback === "correct" && (
-              <p className="mt-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
-                <CheckCircle2 className="h-4 w-4" />
-                Dobra odpowiedź!
-              </p>
+              <>
+                <p className="mt-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
+                  <CheckCircle2 className="h-4 w-4" />
+                  Dobra odpowiedź!
+                </p>
+                <section className="mt-5 rounded-xl border border-surface-border bg-surface p-4">
+                  <h3 className="text-sm font-bold text-foreground">
+                    Jak to rozwiązać
+                  </h3>
+                  <div className="mt-2 text-sm text-muted">
+                    <TaskContent
+                      content={
+                        current.solution_steps?.length
+                          ? current.solution_steps
+                              .map(
+                                (step, stepIndex) =>
+                                  `**Krok ${stepIndex + 1}.** ${step}`,
+                              )
+                              .join("\n\n")
+                          : current.explanation?.trim() ||
+                            `Poprawna odpowiedź: ${current.correct_answer}.`
+                      }
+                    />
+                  </div>
+                </section>
+              </>
             )}
           </motion.div>
         </AnimatePresence>

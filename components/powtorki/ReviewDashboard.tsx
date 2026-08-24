@@ -2,8 +2,9 @@
 
 import { AddTasksPicker } from "@/components/powtorki/AddTasksPicker";
 import { useReview } from "@/components/powtorki/ReviewProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
+import type { TaskCategory } from "@/lib/baza-zadan/types";
+import { resolveReviewTask } from "@/lib/powtorki/resolve-task";
 import { describeNextReview, isDue } from "@/lib/powtorki/scheduler";
 import { motion } from "framer-motion";
 import { Brain, CalendarClock, Loader2, Play, Trash2 } from "lucide-react";
@@ -110,7 +111,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
           ) : (
             <ul className="mt-3 space-y-2">
               {sortedItems.map((item) => {
-                const task = getTaskById(item.taskId);
+                const task = resolveReviewTask(item);
                 const due = isDue(item);
                 return (
                   <li key={item.taskId}>
@@ -132,7 +133,10 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
                           </span>
                           {task && (
                             <span className="text-muted">
-                              · {CATEGORY_LABELS[task.category]}
+                              ·{" "}
+                              {CATEGORY_LABELS[
+                                task.category as TaskCategory
+                              ] ?? task.category}
                             </span>
                           )}
                         </p>

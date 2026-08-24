@@ -1,6 +1,6 @@
 "use client";
 
-import { getAllTasks } from "@/lib/baza-zadan/catalog";
+import { getClientTasks } from "@/lib/baza-zadan/client-catalog";
 import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
 import { MINIGAME_REGISTRY } from "@/lib/minigry/minigame-registry";
 import { isSupabaseConfigured } from "@/lib/supabase";
@@ -25,7 +25,7 @@ type PlatformStatusProps = {
 export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
   const [status, setStatus] = useState<StatusState>({
     minigry: MINIGAME_REGISTRY.length,
-    zadania: getAllTasks().length,
+    zadania: getClientTasks().length,
     arkusze: EXAM_SHEETS.length,
     cmsExtra: null,
     loading: true,
@@ -37,7 +37,7 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
     async function load() {
       const base = {
         minigry: MINIGAME_REGISTRY.length,
-        zadania: getAllTasks().length,
+        zadania: getClientTasks().length,
         arkusze: EXAM_SHEETS.length,
         cmsExtra: null as number | null,
         loading: false,
