@@ -1,4 +1,4 @@
-import { getExamSheetById } from "@/lib/baza-zadan/catalog";
+import { getClientExamSheetById } from "@/lib/baza-zadan/client-catalog";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const sheet = getExamSheetById(id);
+  const sheet = getClientExamSheetById(id);
 
   if (!sheet) {
     return {

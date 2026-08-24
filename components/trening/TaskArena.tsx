@@ -2,7 +2,7 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { getClientTaskById } from "@/lib/baza-zadan/client-catalog";
 import { TopicVictoryScreen } from "@/components/trening/TopicVictoryScreen";
 import {
   awardArenaXp,
@@ -231,7 +231,7 @@ export function TaskArena({
       setFeedback("correct");
       setLocalCheckWrong(false);
 
-      if (getTaskById(current.id)) {
+      if (getClientTaskById(current.id)) {
         recordResult(current.id, true);
       }
 
@@ -296,7 +296,7 @@ export function TaskArena({
     setSelected(option);
     setFeedback(isCorrect ? "correct" : "wrong");
 
-    if (getTaskById(current.id)) {
+    if (getClientTaskById(current.id)) {
       recordResult(current.id, isCorrect);
     }
 

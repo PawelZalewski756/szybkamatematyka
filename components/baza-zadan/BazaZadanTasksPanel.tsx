@@ -3,7 +3,7 @@
 import { TaskCard } from "@/components/baza-zadan/TaskCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { getTasksForPath } from "@/lib/baza-zadan/catalog";
+import { getClientTasksForPath } from "@/lib/baza-zadan/client-catalog";
 import {
   ALL_CATEGORIES,
   CATEGORY_LABELS,
@@ -49,7 +49,7 @@ export function BazaZadanTasksPanel() {
 
   const tasks = useMemo(
     () =>
-      getTasksForPath(path, {
+      getClientTasksForPath(path, {
         category,
         difficulty,
         search: deferredSearch,

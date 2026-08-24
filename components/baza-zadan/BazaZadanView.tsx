@@ -4,7 +4,10 @@ import { BazaZadanArkuszePanel } from "@/components/baza-zadan/BazaZadanArkuszeP
 import { BazaZadanTasksPanel } from "@/components/baza-zadan/BazaZadanTasksPanel";
 import { BazaZadanTreningPanel } from "@/components/baza-zadan/BazaZadanTreningPanel";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { getTaskStats, getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
+import {
+  getClientExamSheetsForPath,
+  getClientTaskStats,
+} from "@/lib/baza-zadan/client-catalog";
 import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
 import { learningPathLabel } from "@/lib/learning-path";
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
@@ -53,8 +56,8 @@ export function BazaZadanView({
   const tab = parseTab(searchParams.get("tab"));
 
   const pathLabel = learningPathLabel(path);
-  const taskCount = getTaskStats(path).totalTasks;
-  const sheetCount = getExamSheetsForPath(path).length;
+  const taskCount = getClientTaskStats(path).totalTasks;
+  const sheetCount = getClientExamSheetsForPath(path).length;
   const cmsArkuszCount = useMemo(
     () => groupCmsTasksByArkusz(cmsTasks).length,
     [cmsTasks],

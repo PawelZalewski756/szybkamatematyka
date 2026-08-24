@@ -3,7 +3,7 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { getClientTaskById } from "@/lib/baza-zadan/client-catalog";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -31,7 +31,7 @@ export function ReviewSession({
   const initialQueue = useMemo(
     () =>
       taskIds.filter((id) => {
-        const task = getTaskById(id);
+        const task = getClientTaskById(id);
         return Boolean(task && task.correctIndex !== null);
       }),
     [taskIds],
@@ -62,7 +62,7 @@ export function ReviewSession({
   );
 
   const currentId = queue[index];
-  const task = currentId ? getTaskById(currentId) : undefined;
+  const task = currentId ? getClientTaskById(currentId) : undefined;
   const answered = picked !== null;
   const isCorrect =
     task && task.correctIndex !== null && picked !== null

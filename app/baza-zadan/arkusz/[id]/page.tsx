@@ -3,9 +3,9 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import {
-  getExamSheetById,
-  getTaskById,
-} from "@/lib/baza-zadan/catalog";
+  getClientExamSheetById,
+  getClientTaskById,
+} from "@/lib/baza-zadan/client-catalog";
 import Link from "next/link";
 import { use, useState } from "react";
 
@@ -16,7 +16,7 @@ type PageProps = {
 export default function ExamSheetPage({ params }: PageProps) {
   const { id } = use(params);
   const { markSolved, isSolved } = useSolvedTasks();
-  const sheet = getExamSheetById(id);
+  const sheet = getClientExamSheetById(id);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -34,10 +34,10 @@ export default function ExamSheetPage({ params }: PageProps) {
   }
 
   const taskId = sheet.taskIds[currentIndex];
-  const task = taskId ? getTaskById(taskId) : undefined;
+  const task = taskId ? getClientTaskById(taskId) : undefined;
   const total = sheet.taskIds.length;
   const gradedTotal = sheet.taskIds.reduce((count, id) => {
-    const sheetTask = getTaskById(id);
+    const sheetTask = getClientTaskById(id);
     return count + (sheetTask && sheetTask.correctIndex !== null ? 1 : 0);
   }, 0);
   const progress = ((currentIndex + (picked !== null ? 1 : 0)) / total) * 100;

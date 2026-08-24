@@ -3,7 +3,7 @@
 import { ExamSheetCard } from "@/components/baza-zadan/ExamSheetCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
+import { getClientExamSheetsForPath } from "@/lib/baza-zadan/client-catalog";
 import { EXAM_SHEET_KIND_LABELS } from "@/lib/baza-zadan/sections";
 import type { ExamSheetKind } from "@/lib/baza-zadan/types";
 import { learningPathLabel } from "@/lib/learning-path";
@@ -14,7 +14,7 @@ const KIND_ORDER: ExamSheetKind[] = ["trening", "egzamin-8", "matura"];
 
 export function BazaZadanTreningPanel() {
   const { path } = useLearningPath();
-  const sheets = useMemo(() => getExamSheetsForPath(path), [path]);
+  const sheets = useMemo(() => getClientExamSheetsForPath(path), [path]);
   const pathLabel = learningPathLabel(path);
 
   const grouped = useMemo(() => {

@@ -6,7 +6,8 @@ import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
-import { getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
+import { getClientRelatedTasks } from "@/lib/baza-zadan/client-catalog";
+import type { Task } from "@/lib/baza-zadan/types";
 import { answersEquivalent } from "@/lib/math/answer-equiv";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
@@ -17,14 +18,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type TaskSolverViewProps = {
-  id: string;
+  task: Task;
 };
 
-export function TaskSolverView({ id }: TaskSolverViewProps) {
+export function TaskSolverView({ task }: TaskSolverViewProps) {
   const { path } = useLearningPath();
   const { isPro } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
-  const task = getTaskById(id);
   const [picked, setPicked] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
 
@@ -39,20 +39,9 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
       setPicked(null);
       setShowExplanation(false);
     }
-  }, [task, ready, isSolved, id]);
+  }, [task, ready, isSolved]);
 
-  if (!task) {
-    return (
-      <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
-        <p className="text-xl font-black text-foreground">Nie znaleziono zadania</p>
-        <Link href="/baza-zadan" className="mt-4 inline-block text-accent">
-          ← Baza zadań
-        </Link>
-      </div>
-    );
-  }
-
-  const related = getRelatedTasks(task, path);
+  const related = getClientRelatedTasks(task, path);
   const answered = picked !== null;
   const correctIndex = task.correctIndex;
   const isGraded = correctIndex !== null;

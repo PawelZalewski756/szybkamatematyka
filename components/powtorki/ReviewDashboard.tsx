@@ -2,7 +2,7 @@
 
 import { AddTasksPicker } from "@/components/powtorki/AddTasksPicker";
 import { useReview } from "@/components/powtorki/ReviewProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { getClientTaskById } from "@/lib/baza-zadan/client-catalog";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import { describeNextReview, isDue } from "@/lib/powtorki/scheduler";
 import { motion } from "framer-motion";
@@ -110,7 +110,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
           ) : (
             <ul className="mt-3 space-y-2">
               {sortedItems.map((item) => {
-                const task = getTaskById(item.taskId);
+                const task = getClientTaskById(item.taskId);
                 const due = isDue(item);
                 return (
                   <li key={item.taskId}>
