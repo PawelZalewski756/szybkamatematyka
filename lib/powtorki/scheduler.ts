@@ -1,4 +1,7 @@
-import type { ReviewItem } from "@/lib/powtorki/types";
+import type {
+  ReviewItem,
+  ReviewTaskSnapshot,
+} from "@/lib/powtorki/types";
 
 /**
  * Lekki wariant algorytmu SM-2 (jak w Anki/SuperMemo).
@@ -24,6 +27,7 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 export function createReviewItem(
   taskId: string,
   now: number = Date.now(),
+  taskSnapshot?: ReviewTaskSnapshot,
 ): ReviewItem {
   return {
     taskId,
@@ -34,6 +38,7 @@ export function createReviewItem(
     lastResult: null,
     lastReviewedAt: null,
     addedAt: now,
+    ...(taskSnapshot ? { taskSnapshot } : {}),
   };
 }
 

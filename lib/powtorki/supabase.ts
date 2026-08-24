@@ -1,6 +1,12 @@
 import { getSupabaseOrNull } from "@/lib/supabase";
-import { isSchemaMissingError } from "@/lib/supabase/errors";
-import type { ReviewItem } from "@/lib/powtorki/types";
+import {
+  isPostgrestUndefinedColumnError,
+  isSchemaMissingError,
+} from "@/lib/supabase/errors";
+import type {
+  ReviewItem,
+  ReviewTaskSnapshot,
+} from "@/lib/powtorki/types";
 import type { PostgrestError } from "@supabase/supabase-js";
 
 const TABLE = "review_schedule";
@@ -37,7 +43,24 @@ type ReviewRow = {
   last_result: string | null;
   last_reviewed_at: string | null;
   added_at: string;
+  task_snapshot?: unknown;
 };
+
+function readTaskSnapshot(raw: unknown): ReviewTaskSnapshot | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const value = raw as Partial<ReviewTaskSnapshot>;
+  if (
+    typeof value.id !== "string" ||
+    typeof value.title !== "string" ||
+    typeof value.prompt !== "string" ||
+    !Array.isArray(value.choices) ||
+    (typeof value.correctIndex !== "number" && value.correctIndex !== null) ||
+    typeof value.correctAnswer !== "string"
+  ) {
+    return undefined;
+  }
+  return value as ReviewTaskSnapshot;
+}
 
 function rowToItem(row: ReviewRow): ReviewItem {
   const lastResult =
@@ -55,6 +78,9 @@ function rowToItem(row: ReviewRow): ReviewItem {
       ? new Date(row.last_reviewed_at).getTime()
       : null,
     addedAt: new Date(row.added_at).getTime(),
+    ...(readTaskSnapshot(row.task_snapshot)
+      ? { taskSnapshot: readTaskSnapshot(row.task_snapshot) }
+      : {}),
   };
 }
 
@@ -72,6 +98,7 @@ function itemToRow(userId: string, item: ReviewItem) {
         ? new Date(item.lastReviewedAt).toISOString()
         : null,
     added_at: new Date(item.addedAt).toISOString(),
+    task_snapshot: item.taskSnapshot ?? null,
   };
 }
 
@@ -82,23 +109,38 @@ export async function fetchReviewSchedule(
   const supabase = getSupabaseOrNull();
   if (!supabase) return [];
 
-  const { data, error } = await supabase
+  let result = await supabase
     .from(TABLE)
     .select(
-      "task_id, repetitions, interval_days, easiness, next_review_at, last_result, last_reviewed_at, added_at",
+      "task_id, repetitions, interval_days, easiness, next_review_at, last_result, last_reviewed_at, added_at, task_snapshot",
     )
     .eq("user_id", userId);
 
-  if (error) {
-    if (isTableUnavailable(error as PostgrestError)) {
+  if (
+    result.error &&
+    isPostgrestUndefinedColumnError(
+      result.error as PostgrestError,
+      "task_snapshot",
+    )
+  ) {
+    result = await supabase
+      .from(TABLE)
+      .select(
+        "task_id, repetitions, interval_days, easiness, next_review_at, last_result, last_reviewed_at, added_at",
+      )
+      .eq("user_id", userId);
+  }
+
+  if (result.error) {
+    if (isTableUnavailable(result.error as PostgrestError)) {
       warnTableMissingOnce();
       return [];
     }
-    console.warn("[szybka-matma] fetchReviewSchedule:", error);
+    console.warn("[szybka-matma] fetchReviewSchedule:", result.error);
     return [];
   }
 
-  return (data ?? []).map((row) => rowToItem(row as ReviewRow));
+  return (result.data ?? []).map((row) => rowToItem(row as ReviewRow));
 }
 
 /** Zapisuje (upsert) pojedynczy wpis. Best-effort — błędy nie blokują UI. */
@@ -109,9 +151,20 @@ export async function upsertReviewItem(
   const supabase = getSupabaseOrNull();
   if (!supabase) return;
 
-  const { error } = await supabase
+  const row = itemToRow(userId, item);
+  let { error } = await supabase
     .from(TABLE)
-    .upsert(itemToRow(userId, item), { onConflict: "user_id,task_id" });
+    .upsert(row, { onConflict: "user_id,task_id" });
+
+  if (
+    error &&
+    isPostgrestUndefinedColumnError(error as PostgrestError, "task_snapshot")
+  ) {
+    const { task_snapshot: _taskSnapshot, ...legacyRow } = row;
+    ({ error } = await supabase
+      .from(TABLE)
+      .upsert(legacyRow, { onConflict: "user_id,task_id" }));
+  }
 
   if (error && !isTableUnavailable(error as PostgrestError)) {
     console.warn("[szybka-matma] upsertReviewItem:", error);

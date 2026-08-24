@@ -7,9 +7,8 @@
  *   npm run seed:trening-tasks -- --materials-only
  *   npm run seed:trening-tasks -- --materials-only --refresh-materials
  *
- * Wymaga: .env.local (Supabase URL + klucz). Zalecane: migracja
- *   supabase/migrations/add_tasks_materials_insert.sql (INSERT przez anon).
- * Opcjonalnie: SUPABASE_SERVICE_ROLE_KEY (omija RLS).
+ * Wymaga: .env.local i SUPABASE_SERVICE_ROLE_KEY. Publiczny zapis do tabeli
+ * `tasks` jest celowo zamknięty przez produkcyjne RLS.
  */
 
 import { createHash } from "crypto";
@@ -74,22 +73,12 @@ function parseArgs(): CliOptions {
 function createSupabase(): SupabaseClient {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
-  const key = serviceKey || anonKey;
-
-  if (!url || !key) {
+  if (!url || !serviceKey) {
     throw new Error(
-      "Brakuje NEXT_PUBLIC_SUPABASE_URL lub klucza Supabase w .env.local",
+      "Brakuje NEXT_PUBLIC_SUPABASE_URL lub SUPABASE_SERVICE_ROLE_KEY w .env.local",
     );
   }
-
-  if (!serviceKey) {
-    console.warn(
-      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY — używam anon. Uruchom migrację add_tasks_materials_insert.sql lub dodaj service role.",
-    );
-  }
-
-  return createClient(url, key);
+  return createClient(url, serviceKey);
 }
 
 function contentHash(
@@ -218,13 +207,19 @@ async function insertTaskBatches(
         correct_answer: d.correct_answer,
         options: d.options,
         xp_reward: d.xp_reward,
+        source_id: contentHash(d.exam_type, d.category, d.topic, d.content),
+        explanation: `Rozwiązanie prowadzi do odpowiedzi ${d.correct_answer}.`,
+        solution_steps: [
+          "Wypisz dane i dobierz działanie lub wzór odpowiedni do treści.",
+          `Wykonaj obliczenia i porównaj wynik z odpowiedziami: ${d.correct_answer}.`,
+        ],
       })),
     );
 
     if (error) {
       if (/row-level security/i.test(error.message)) {
         throw new Error(
-          `${error.message}\n→ Uruchom w Supabase SQL: migrations/add_tasks_materials_insert.sql\n→ Lub ustaw SUPABASE_SERVICE_ROLE_KEY w .env.local`,
+          `${error.message}\n→ Użyj SUPABASE_SERVICE_ROLE_KEY; nie otwieraj zapisu dla anon.`,
         );
       }
       throw new Error(

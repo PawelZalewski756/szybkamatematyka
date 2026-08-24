@@ -22,7 +22,11 @@ import {
   fetchReviewSchedule,
   upsertReviewItem,
 } from "@/lib/powtorki/supabase";
-import type { ReviewItem, ReviewSchedule } from "@/lib/powtorki/types";
+import type {
+  ReviewItem,
+  ReviewSchedule,
+  ReviewTaskSnapshot,
+} from "@/lib/powtorki/types";
 import { getSupabaseOrNull } from "@/lib/supabase";
 import {
   createContext,
@@ -46,6 +50,7 @@ type ReviewContextValue = {
   addToReview: (taskId: string) => void;
   removeFromReview: (taskId: string) => void;
   grade: (taskId: string, correct: boolean) => void;
+  recordTaskResult: (task: ReviewTaskSnapshot, correct: boolean) => void;
 };
 
 const ReviewContext = createContext<ReviewContextValue | null>(null);
@@ -220,6 +225,27 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const recordTaskResult = useCallback(
+    (task: ReviewTaskSnapshot, correct: boolean) => {
+      const uid = userIdRef.current;
+      setSchedule((prev) => {
+        const existing = prev[task.id];
+        if (correct && !existing) return prev;
+        const base = existing ?? createReviewItem(task.id, Date.now(), task);
+        const updated = gradeReviewItem(
+          { ...base, taskSnapshot: task },
+          correct,
+        );
+        const next = { ...prev, [task.id]: updated };
+        saveSchedule(next, uid);
+        notifyScheduleUpdated(uid);
+        if (uid) void upsertReviewItem(uid, updated).catch(() => {});
+        return next;
+      });
+    },
+    [],
+  );
+
   const items = useMemo(() => Object.values(schedule), [schedule]);
 
   const dueItems = useMemo(() => {
@@ -250,6 +276,7 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
       addToReview,
       removeFromReview,
       grade,
+      recordTaskResult,
     }),
     [
       ready,
@@ -260,6 +287,7 @@ export function ReviewProvider({ children }: { children: ReactNode }) {
       addToReview,
       removeFromReview,
       grade,
+      recordTaskResult,
     ],
   );
 

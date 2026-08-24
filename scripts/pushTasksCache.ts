@@ -91,6 +91,13 @@ async function main() {
       correct_answer: task.correct_answer,
       options: task.options,
       xp_reward: task.xp_reward,
+      source_id:
+        task.id ?? contentFingerprint(taskContentForDb(task)),
+      explanation: task.explanation,
+      solution_steps: task.explanation
+        .split(/\n(?=(?:\*\*)?Krok\s+\d+)/i)
+        .map((step) => step.trim())
+        .filter(Boolean),
     }));
 
     const { error } = await supabase.from("tasks").insert(chunk);

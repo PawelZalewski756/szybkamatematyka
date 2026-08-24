@@ -3,12 +3,12 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
-import { getClientTaskById } from "@/lib/baza-zadan/client-catalog";
 import {
   CATEGORY_LABELS,
-  DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
 import { answersEquivalent } from "@/lib/math/answer-equiv";
+import { resolveReviewTask } from "@/lib/powtorki/resolve-task";
+import type { TaskCategory } from "@/lib/baza-zadan/types";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
@@ -25,21 +25,22 @@ export function ReviewSession({
   onComplete,
   onExit,
 }: ReviewSessionProps) {
-  const { grade } = useReview();
+  const { grade, getItem } = useReview();
 
   // Kolejka sesji: pomijamy ID, których nie ma już w katalogu.
   const initialQueue = useMemo(
     () =>
       taskIds.filter((id) => {
-        const task = getClientTaskById(id);
-        return Boolean(task && task.correctIndex !== null);
+        const item = getItem(id) ?? { taskId: id };
+        return Boolean(resolveReviewTask(item));
       }),
-    [taskIds],
+    [taskIds, getItem],
   );
 
   const [queue, setQueue] = useState<string[]>(() => [...initialQueue]);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
+  const [typedAnswer, setTypedAnswer] = useState("");
   const [firstResults, setFirstResults] = useState<Record<string, boolean>>(
     {},
   );
@@ -62,19 +63,28 @@ export function ReviewSession({
   );
 
   const currentId = queue[index];
-  const task = currentId ? getClientTaskById(currentId) : undefined;
+  const currentItem = currentId ? getItem(currentId) : undefined;
+  const task = currentItem
+    ? resolveReviewTask(currentItem)
+    : currentId
+      ? resolveReviewTask({ taskId: currentId })
+      : null;
+  const isOpen = Boolean(task && task.choices.length === 0);
   const answered = picked !== null;
   const isCorrect =
-    task && task.correctIndex !== null && picked !== null
-      ? answersEquivalent(task.choices[picked], task.choices[task.correctIndex])
+    task && picked !== null
+      ? answersEquivalent(
+          isOpen ? typedAnswer : task.choices[picked],
+          task.correctAnswer,
+        )
       : false;
 
   const handlePick = (choiceIndex: number) => {
-    if (!task || task.correctIndex === null || answered) return;
+    if (!task || answered) return;
     setPicked(choiceIndex);
     const correct = answersEquivalent(
-      task.choices[choiceIndex],
-      task.choices[task.correctIndex],
+      isOpen ? typedAnswer : task.choices[choiceIndex],
+      task.correctAnswer,
     );
     grade(task.id, correct);
 
@@ -96,6 +106,7 @@ export function ReviewSession({
     }
     setIndex(nextIndex);
     setPicked(null);
+    setTypedAnswer("");
   };
 
   if (!task) {
@@ -156,10 +167,14 @@ export function ReviewSession({
         >
           <div className="flex flex-wrap gap-2">
             <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
-              {CATEGORY_LABELS[task.category]}
+              {CATEGORY_LABELS[task.category as TaskCategory] ?? task.category}
             </span>
             <span className="rounded-md border border-surface-border bg-surface-hover px-2 py-1 text-xs font-bold text-foreground">
-              {DIFFICULTY_LABELS[task.difficulty]}
+              {task.difficulty === 1
+                ? "Łatwe"
+                : task.difficulty === 2
+                  ? "Średnie"
+                  : "Trudne"}
             </span>
           </div>
 
@@ -172,12 +187,40 @@ export function ReviewSession({
               <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
             )}
 
+            {isOpen ? (
+              <div className="mt-6 flex gap-2">
+                <label htmlFor="review-answer" className="sr-only">
+                  Twoja odpowiedź
+                </label>
+                <input
+                  id="review-answer"
+                  value={typedAnswer}
+                  disabled={answered}
+                  onChange={(event) => setTypedAnswer(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" && typedAnswer.trim()) {
+                      handlePick(0);
+                    }
+                  }}
+                  className="input-field min-w-0 flex-1 px-3 py-2"
+                  placeholder="Wpisz odpowiedź…"
+                />
+                <button
+                  type="button"
+                  disabled={!typedAnswer.trim() || answered}
+                  onClick={() => handlePick(0)}
+                  className="btn-primary px-4 py-2 disabled:opacity-50"
+                >
+                  Sprawdź
+                </button>
+              </div>
+            ) : (
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {task.choices.map((choice, choiceIndex) => {
                 let style =
                   "border-surface-border bg-background hover:border-accent/40 hover:bg-accent/10";
                 if (answered) {
-                  if (choiceIndex === task.correctIndex) {
+                  if (answersEquivalent(choice, task.correctAnswer)) {
                     style =
                       "border-success/60 bg-success/20 text-success";
                   } else if (choiceIndex === picked) {
@@ -197,18 +240,19 @@ export function ReviewSession({
                     whileTap={answered ? undefined : { scale: 0.98 }}
                   >
                     {choice}
-                    {answered && choiceIndex === task.correctIndex && (
+                    {answered && answersEquivalent(choice, task.correctAnswer) && (
                       <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-success" />
                     )}
                     {answered &&
                       choiceIndex === picked &&
-                      choiceIndex !== task.correctIndex && (
+                      !answersEquivalent(choice, task.correctAnswer) && (
                         <XCircle className="absolute right-3 top-3 h-5 w-5 text-red-400" />
                       )}
                   </motion.button>
                 );
               })}
             </div>
+            )}
 
             {answered && (
               <motion.div

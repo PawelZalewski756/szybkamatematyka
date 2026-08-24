@@ -1,4 +1,5 @@
 import { getSupabase } from "@/lib/supabase";
+import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
 import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
 import { legacyDbSlugsForCkeTopic, legacyExamTypesFor } from "@/lib/trening/cke-slug-normalize";
 import type { ExamType, Task } from "@/types/database";
@@ -13,6 +14,9 @@ export type TaskRow = {
   correct_answer: string;
   options: unknown;
   xp_reward: number;
+  source_id?: string | null;
+  explanation?: string | null;
+  solution_steps?: unknown;
 };
 
 function parseOptions(raw: unknown): string[] {
@@ -36,6 +40,9 @@ function mapTask(row: TaskRow): Task & { options: string[] } {
     correct_answer: row.correct_answer,
     xp_reward: Number(row.xp_reward) || 0,
     options: parseOptions(row.options),
+    source_id: row.source_id ?? null,
+    explanation: row.explanation?.trim() || null,
+    solution_steps: parseOptions(row.solution_steps),
   };
 }
 
@@ -50,18 +57,33 @@ export async function fetchTasksByTopic(
 
   for (const et of examTypes) {
     for (const slug of slugVariants) {
-      const { data, error } = await supabase
+      let result = await supabase
         .from("tasks")
         .select(
-          "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward",
+          "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward, source_id, explanation, solution_steps",
         )
         .eq("exam_type", et)
         .eq("category", slug.category)
         .eq("topic", slug.topic)
         .order("difficulty", { ascending: true });
 
-      if (error) throw error;
-      const rows = (data as TaskRow[]) ?? [];
+      if (
+        result.error &&
+        isPostgrestUndefinedColumnError(result.error)
+      ) {
+        result = await supabase
+          .from("tasks")
+          .select(
+            "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward",
+          )
+          .eq("exam_type", et)
+          .eq("category", slug.category)
+          .eq("topic", slug.topic)
+          .order("difficulty", { ascending: true });
+      }
+
+      if (result.error) throw result.error;
+      const rows = (result.data as TaskRow[]) ?? [];
       if (rows.length > 0) return rows.map(mapTask);
     }
   }
