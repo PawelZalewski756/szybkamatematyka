@@ -29,6 +29,13 @@ Uruchom pliki z `supabase/migrations/`:
 6. `20260529150000_audit_harden_new_tables_rls.sql`
 7. `20260529160000_add_duel_results.sql`
 8. `20260529161000_add_achievements.sql`
+9. `20260714210000_add_ai_assist_quota.sql`
+10. `20260824103000_production_security_baseline.sql` — uruchom jako ostatnią
+
+Przed punktem 10 wykonaj backup i zapisz aktualny raport polityk RLS. Po
+migracji sprawdź role `anon`, `authenticated` i konto admina. Aplikacja po tej
+migracji zapisuje XP i wyniki pojedynków przez idempotentne RPC; bez migracji
+nagrody pozostaną lokalne i UI pokaże błąd zapisu.
 
 Następnie dodaj siebie do adminów:
 
@@ -56,9 +63,12 @@ npm test                   # testy jednostkowe banków
 
 ## 5. CI (GitHub Actions)
 
-Pipeline `.github/workflows/ci.yml`: `lint` → `tsc` → `npm test` → `build`.
+Pipeline `.github/workflows/ci.yml`: lint → typecheck → unit → audyty treści
+→ audyt zależności runtime → build → Playwright smoke.
 
-E2E lokalnie: `npm run test:e2e` (nie w CI — wolniejsze). Skopiuj najpierw `.env.example` → `.env.local` albo pozwól Playwrightowi użyć placeholderów Supabase z `playwright.config.ts`.
+E2E lokalnie: najpierw `npx playwright install chromium`, następnie
+`npm run test:e2e`. Skopiuj `.env.example` → `.env.local` albo pozwól
+Playwrightowi użyć bezpiecznych placeholderów z `playwright.config.ts`.
 
 ## 6. Stripe (opcjonalnie, później)
 

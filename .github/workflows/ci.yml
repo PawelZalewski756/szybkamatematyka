@@ -1,11 +1,10 @@
 name: CI
 
-# Pipeline jakości: lint + typecheck + build.
-# Uruchamiany na push (dowolna gałąź) oraz dla pull requestów do main.
+# Pipeline jakości: kod, treść, bezpieczeństwo, build i krytyczne E2E.
 on:
   push:
   pull_request:
-    branches: [main]
+    branches: [master]
 
 # Anuluj starsze przebiegi dla tej samej gałęzi/PR, aby nie marnować runnerów.
 concurrency:
@@ -52,7 +51,31 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Content quality gates
+        run: |
+          npm run audit:cke
+          npm run audit:cke-keys
+          npm run audit:tasks-cache
+          npm run audit:questions
+
+      - name: Runtime dependency audit
+        run: npm audit --omit=dev --audit-level=high
+
       - name: Build
         run: npm run build
 
-      # E2E (Playwright) — uruchamiaj lokalnie: npm run test:e2e
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E smoke
+        run: npm run test:e2e
+
+      - name: Upload Playwright diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore

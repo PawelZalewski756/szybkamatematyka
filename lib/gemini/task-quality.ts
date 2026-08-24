@@ -113,7 +113,7 @@ export function reconcileTaskAnswer(task: ParsedGeminiTask): TaskRepairResult {
   const hasCorrect = task.options.some((o) =>
     checkAnswerMatch(o, task.correct_answer),
   );
-  if (hasCorrect) return task;
+  if (hasCorrect && !broken) return task;
 
   if (inferred) {
     const letter = inferred.match(/^([A-D])$/i)?.[1]?.toUpperCase();
