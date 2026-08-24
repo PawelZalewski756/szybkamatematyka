@@ -35,12 +35,19 @@ export default function LoginPage() {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const supabase = getSupabase();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        router.replace("/");
-      }
-    });
+    try {
+      const supabase = getSupabase();
+      void supabase.auth
+        .getSession()
+        .then(({ data: { session } }) => {
+          if (session?.user) router.replace("/");
+        })
+        .catch(() => {
+          // Formularz logowania pozostaje dostępny także przy awarii auth.
+        });
+    } catch {
+      // Brak konfiguracji nie może wywracać całej strony formularza.
+    }
   }, [router]);
 
   const clearMessage = () => {
