@@ -1,10 +1,17 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Smoke", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("szybka-matma-school-class", "klasa-8");
+      localStorage.setItem("szybka-matma-learning-path", "sp");
+    });
+  });
+
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      "Szybka Matematyka",
     );
   });
 
@@ -60,7 +67,7 @@ test.describe("Smoke", () => {
   test("strona główna ma panel startowy", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      "Szybka Matematyka",
     );
   });
 
@@ -68,7 +75,9 @@ test.describe("Smoke", () => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");
     await expect(
-      page.getByRole("navigation").getByRole("link", { name: "Trening" }),
+      page
+        .getByRole("navigation")
+        .getByRole("link", { name: "Trening", exact: true }),
     ).toBeVisible();
   });
 });
