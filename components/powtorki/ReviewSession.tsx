@@ -29,7 +29,11 @@ export function ReviewSession({
 
   // Kolejka sesji: pomijamy ID, których nie ma już w katalogu.
   const initialQueue = useMemo(
-    () => taskIds.filter((id) => getTaskById(id)),
+    () =>
+      taskIds.filter((id) => {
+        const task = getTaskById(id);
+        return Boolean(task && task.correctIndex !== null);
+      }),
     [taskIds],
   );
 
@@ -61,19 +65,17 @@ export function ReviewSession({
   const task = currentId ? getTaskById(currentId) : undefined;
   const answered = picked !== null;
   const isCorrect =
-    task && picked !== null
+    task && task.correctIndex !== null && picked !== null
       ? answersEquivalent(task.choices[picked], task.choices[task.correctIndex])
       : false;
 
   const handlePick = (choiceIndex: number) => {
-    if (!task || answered) return;
+    if (!task || task.correctIndex === null || answered) return;
     setPicked(choiceIndex);
-    const correct =
-      picked !== null &&
-      answersEquivalent(
-        task.choices[choiceIndex],
-        task.choices[task.correctIndex],
-      );
+    const correct = answersEquivalent(
+      task.choices[choiceIndex],
+      task.choices[task.correctIndex],
+    );
     grade(task.id, correct);
 
     setFirstResults((prev) =>

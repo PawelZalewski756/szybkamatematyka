@@ -3,6 +3,7 @@ import {
   cleanCkeTaskMarkup,
   isMultiClaimTrueFalse,
   parseAbcd,
+  resolveCkeAnswer,
 } from "@/lib/baza-zadan/cke/parse-abcd";
 
 describe("parseAbcd", () => {
@@ -37,5 +38,37 @@ describe("parseAbcd", () => {
     expect(parsed.hasChoices).toBe(true);
     expect(parsed.choices).toEqual(["1", "2", "3", "4"]);
     expect(parsed.prompt).toContain("Wartość wyrażenia");
+  });
+
+  it("rozpoznaje jednoznaczną literę z linii odpowiedzi", () => {
+    const task = parseAbcd("Ile to jest? A) 1 B) 2 C) 3 D) 4");
+    expect(
+      resolveCkeAnswer(
+        "**Krok 1.** Obliczamy.\n\n**Odpowiedź:** C, czyli 3",
+        task,
+      ),
+    ).toEqual({ status: "resolved", correctIndex: 2, letter: "C" });
+  });
+
+  it("nie zgaduje odpowiedzi opisowej", () => {
+    const task = parseAbcd("Wybierz wykres. A) a B) b C) c D) d");
+    expect(
+      resolveCkeAnswer(
+        "Odpowiedź: wybierz rysunek zgodny z kluczem CKE (zazwyczaj C).",
+        task,
+      ).status,
+    ).toBe("ambiguous");
+  });
+
+  it("nie punktuje wielu odpowiedzi", () => {
+    const task = parseAbcd("Wybierz odpowiedzi. A) a B) b C) c D) d");
+    expect(resolveCkeAnswer("Odpowiedź: B i D", task).status).toBe(
+      "ambiguous",
+    );
+  });
+
+  it("oznacza zadanie otwarte jako nieoceniane", () => {
+    const task = parseAbcd("Oblicz wartość wyrażenia i zapisz obliczenia.");
+    expect(resolveCkeAnswer("Odpowiedź: 42", task).status).toBe("ungraded");
   });
 });

@@ -30,7 +30,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
 
   useEffect(() => {
     if (!task || !ready) return;
-    if (isSolved(task.id)) {
+    if (isSolved(task.id) && task.correctIndex !== null) {
       // Restore solved state when the task or solved set changes.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setPicked(task.correctIndex);
@@ -54,9 +54,12 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
 
   const related = getRelatedTasks(task, path);
   const answered = picked !== null;
+  const correctIndex = task.correctIndex;
+  const isGraded = correctIndex !== null;
   const isCorrect =
+    correctIndex !== null &&
     picked !== null &&
-    answersEquivalent(task.choices[picked], task.choices[task.correctIndex]);
+    answersEquivalent(task.choices[picked], task.choices[correctIndex]);
 
   return (
     <div className="mx-auto w-full max-w-4xl flex-1 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
@@ -103,7 +106,9 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             let style =
               "border-surface-border bg-surface hover:border-accent/40 hover:bg-accent/10";
             if (answered) {
-              if (index === task.correctIndex) {
+              if (!isGraded && index === picked) {
+                style = "border-accent/50 bg-accent/10 text-foreground";
+              } else if (index === correctIndex) {
                 style =
                   "border-success/60 bg-success/20 text-foreground";
               } else if (index === picked) {
@@ -121,7 +126,8 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                 onClick={() => {
                   setPicked(index);
                   setShowExplanation(true);
-                  const correct = index === task.correctIndex;
+                  if (!isGraded) return;
+                  const correct = index === correctIndex;
                   // Błędna odpowiedź oznacza zadanie „do powtórki" (poprawna
                   // jest no-op) — spójnie dla gościa i zalogowanego.
                   recordResult(task.id, correct);
@@ -143,15 +149,21 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             className={`mt-6 rounded-2xl border p-4 ${
-              isCorrect
+              !isGraded
+                ? "border-accent/40 bg-accent/10"
+                : isCorrect
                 ? "border-success/40 bg-success/10"
                 : "border-danger/40 bg-danger/10"
             }`}
           >
             <p className="font-black text-foreground">
-              {isCorrect ? "Dobrze! 🎉" : "Nie tym razem"}
+              {!isGraded
+                ? "Sprawdź rozwiązanie"
+                : isCorrect
+                  ? "Dobrze! 🎉"
+                  : "Nie tym razem"}
             </p>
-            {!isCorrect && (
+            {isGraded && !isCorrect && (
               <p className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-accent">
                 ↻ Dodano do powtórek
               </p>

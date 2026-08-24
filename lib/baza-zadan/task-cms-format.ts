@@ -4,7 +4,7 @@ import type { Task } from "@/lib/baza-zadan/types";
 export function formatTaskTrescForDb(task: Task): string {
   const lines = [`${task.title}`, "", task.prompt.trim()];
 
-  if (task.choices.length > 0) {
+  if (task.choices.length > 0 && task.correctIndex !== null) {
     lines.push("", "Odpowiedzi:");
     task.choices.forEach((c, i) => {
       lines.push(`${String.fromCharCode(65 + i)}. ${c}`);
@@ -45,7 +45,7 @@ export function getCorrectAnswerMeta(task: Task): {
   numerOpcji: number | null;
   literaOpcji: string | null;
 } {
-  if (task.choices.length === 0) {
+  if (task.choices.length === 0 || task.correctIndex === null) {
     return { poprawnaOdpowiedz: null, numerOpcji: null, literaOpcji: null };
   }
   const idx = task.correctIndex;

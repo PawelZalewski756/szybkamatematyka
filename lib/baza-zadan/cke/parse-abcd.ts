@@ -9,6 +9,11 @@ export type ParsedAbcd = {
   hasChoices: boolean;
 };
 
+export type ResolvedCkeAnswer =
+  | { status: "resolved"; correctIndex: number; letter: "A" | "B" | "C" | "D" }
+  | { status: "ambiguous"; reason: string }
+  | { status: "ungraded"; reason: string };
+
 /** Usuwa śmieci HTML z parsera CKE. */
 export function cleanCkeTaskMarkup(tresc: string): string {
   return tresc
@@ -81,4 +86,56 @@ export function parseAbcd(tresc: string): ParsedAbcd {
   }
 
   return { prompt, choices: choices.slice(0, 4), hasChoices: true };
+}
+
+/**
+ * Rozwiązania w cache pochodzą z kilku pipeline'ów i nie mają osobnego pola
+ * z kluczem. Oceniamy zadanie wyłącznie wtedy, gdy końcowa linia
+ * „Odpowiedź:” zaczyna się od dokładnie jednej litery A–D.
+ *
+ * Sformułowania typu „zgodnie z kluczem”, „zazwyczaj C”, „B i E” są celowo
+ * odrzucane — lepiej pokazać rozwiązanie bez punktu niż przyznać błędny punkt.
+ */
+export function resolveCkeAnswer(
+  solution: string,
+  parsedTask: Pick<ParsedAbcd, "hasChoices" | "choices">,
+): ResolvedCkeAnswer {
+  if (!parsedTask.hasChoices || parsedTask.choices.length < 2) {
+    return { status: "ungraded", reason: "Zadanie otwarte lub wieloczęściowe" };
+  }
+
+  const normalized = solution.replace(/\*\*/g, "");
+  const answerLines = normalized
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^Odpowiedź\s*:/i.test(line));
+
+  if (answerLines.length === 0) {
+    return { status: "ambiguous", reason: "Brak jawnej linii „Odpowiedź:”" };
+  }
+
+  const answerText = answerLines.at(-1)!.replace(/^Odpowiedź\s*:\s*/i, "");
+  const leading = answerText.match(/^([A-D])(?:\)|[.,:]|\s|$)/i);
+  if (!leading) {
+    return {
+      status: "ambiguous",
+      reason: "Linia odpowiedzi nie zaczyna się od pojedynczej litery A–D",
+    };
+  }
+
+  const letter = leading[1].toUpperCase() as "A" | "B" | "C" | "D";
+  const rest = answerText.slice(leading[0].length);
+  if (/(?:^|[\s,(])(?:i|oraz|\/)\s*[A-D](?:[\s,).]|$)/i.test(rest)) {
+    return { status: "ambiguous", reason: "Rozwiązanie wskazuje wiele opcji" };
+  }
+
+  const correctIndex = letter.charCodeAt(0) - 65;
+  if (correctIndex >= parsedTask.choices.length) {
+    return {
+      status: "ambiguous",
+      reason: `Opcja ${letter} nie występuje w sparsowanej treści`,
+    };
+  }
+
+  return { status: "resolved", correctIndex, letter };
 }

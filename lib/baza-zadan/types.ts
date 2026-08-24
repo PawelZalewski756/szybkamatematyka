@@ -40,7 +40,11 @@ export type Task = {
   forPaths: readonly PathMatcher[];
   prompt: string;
   choices: readonly string[];
-  correctIndex: number;
+  /**
+   * `null` oznacza zadanie otwarte albo brak klucza, którego nie da się
+   * wiarygodnie ustalić. Takiego zadania nie wolno automatycznie punktować.
+   */
+  correctIndex: number | null;
   /** Krótkie podsumowanie po odpowiedzi. */
   explanation: string;
   /** Rozwiązanie krok po kroku — dla arkuszy E8 / matury. */

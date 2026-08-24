@@ -7,7 +7,10 @@
 import fs from "fs";
 import path from "path";
 import { inferDzialMatura } from "../lib/baza-zadan/cke/parse-matura-page";
-import { parseAbcd } from "../lib/baza-zadan/cke/parse-abcd";
+import {
+  parseAbcd,
+  resolveCkeAnswer,
+} from "../lib/baza-zadan/cke/parse-abcd";
 import { parseSolutionSteps } from "../lib/baza-zadan/parse-solution-steps";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 import { bazaCategoryForCmsDzial } from "../lib/trening/taxonomy-bridge";
@@ -62,7 +65,9 @@ function monthLabel(month: number): string {
 function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   if (isSolutionPlaceholder(task.rozwiazanie)) return null;
 
-  const { prompt, choices, hasChoices } = parseAbcd(task.tresc);
+  const parsedTask = parseAbcd(task.tresc);
+  const { prompt, choices, hasChoices } = parsedTask;
+  const answer = resolveCkeAnswer(task.rozwiazanie, parsedTask);
   const dzial = task.dzial ?? inferDzialMatura(task.tresc, task.numer);
   const category = bazaCategoryForCmsDzial(dzial);
   const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
@@ -80,7 +85,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     forPaths: ["liceum", "technikum", "zawodowa"],
     prompt,
     choices: choices.length >= 2 ? choices : [choices[0] ?? "—"],
-    correctIndex: 0,
+    correctIndex: answer.status === "resolved" ? answer.correctIndex : null,
     explanation,
     solutionSteps: parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie],
     examSource: {
