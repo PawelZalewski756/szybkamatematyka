@@ -12,7 +12,7 @@ import type { TaskAssistAskTurn } from "@/lib/gemini/prompts-task-assist";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { Loader2, Lock, Send, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useCallback, useEffect, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 
 const MAX_HINTS = 3;
 const MAX_ASK = 6;
@@ -27,6 +27,7 @@ type TaskAiPanelProps = {
   options?: string[];
   feedback: "correct" | "wrong" | null;
   showGradeOption?: boolean;
+  autoGrade?: boolean;
   studentAnswer?: string;
   onAiAccepted?: (answer: string) => void;
   disabled?: boolean;
@@ -57,6 +58,7 @@ function TaskAiPanelInner({
   options,
   feedback,
   showGradeOption = false,
+  autoGrade = false,
   studentAnswer,
   onAiAccepted,
   disabled = false,
@@ -142,7 +144,7 @@ function TaskAiPanelInner({
     }
   }
 
-  async function handleGrade() {
+  const handleGrade = useCallback(async () => {
     if (!canUse || busy || !studentAnswer?.trim()) return;
 
     setBusy("grade");
@@ -167,7 +169,34 @@ function TaskAiPanelInner({
     } finally {
       setBusy(null);
     }
-  }
+  }, [
+    busy,
+    canUse,
+    correctAnswer,
+    examLabel,
+    onAiAccepted,
+    studentAnswer,
+    taskContent,
+    topicLabel,
+  ]);
+
+  const gradedAnswerRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!autoGrade || loading) return;
+    const answer = studentAnswer?.trim();
+    if (!answer || !showGradeOption || !canUse || busy) return;
+    if (gradedAnswerRef.current === answer) return;
+    gradedAnswerRef.current = answer;
+    void handleGrade();
+  }, [
+    autoGrade,
+    busy,
+    canUse,
+    handleGrade,
+    loading,
+    showGradeOption,
+    studentAnswer,
+  ]);
 
   async function handleAsk(event?: FormEvent) {
     event?.preventDefault();

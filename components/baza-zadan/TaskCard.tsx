@@ -1,5 +1,9 @@
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import {
+  examTaskPoints,
+  formatPkt,
+} from "@/lib/baza-zadan/cke/exam-points";
+import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
@@ -49,6 +53,12 @@ export function TaskCard({ task }: TaskCardProps) {
         <span className={DIFFICULTY_STYLES[task.difficulty]}>
           {DIFFICULTY_LABELS[task.difficulty]}
         </span>
+        {task.examSource ? (
+          <>
+            <span className="mx-1.5 text-surface-border">·</span>
+            <span>{formatPkt(examTaskPoints(task))}</span>
+          </>
+        ) : null}
       </p>
     </Link>
   );

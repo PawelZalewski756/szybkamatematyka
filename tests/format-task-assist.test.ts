@@ -13,6 +13,7 @@ describe("parseTaskGradeResponse", () => {
       verdict: "correct",
       feedback: "Dobrze!",
       acceptAsCorrect: true,
+      awardedPoints: undefined,
     });
   });
 
@@ -26,6 +27,13 @@ describe("parseTaskGradeResponse", () => {
 
   it("returns null for invalid verdict", () => {
     expect(parseTaskGradeResponse('{"verdict":"maybe","feedback":"x"}')).toBeNull();
+  });
+
+  it("odczytuje awardedPoints", () => {
+    const result = parseTaskGradeResponse(
+      '{"verdict":"partial","feedback":"Jeden podpunkt","acceptAsCorrect":false,"awardedPoints":1}',
+    );
+    expect(result?.awardedPoints).toBe(1);
   });
 });
 

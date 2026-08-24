@@ -21,6 +21,8 @@ export type TaskAssistGradeRequest = {
   studentAnswer: string;
   examLabel?: string;
   topicLabel?: string;
+  maxPoints?: number;
+  markingNotes?: string;
 };
 
 export type TaskAssistAskRequest = {

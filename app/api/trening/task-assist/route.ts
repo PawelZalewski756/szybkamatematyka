@@ -198,6 +198,8 @@ export async function POST(request: Request) {
         taskContent,
         correctAnswer,
         studentAnswer,
+        maxPoints: readNumber(body, "maxPoints"),
+        markingNotes: readString(body, "markingNotes"),
       });
       return finish({ grade });
     }

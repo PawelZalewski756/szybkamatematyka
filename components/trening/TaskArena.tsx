@@ -529,6 +529,7 @@ export function TaskArena({
                 options={current.options}
                 feedback={feedback}
                 showGradeOption={localCheckWrong}
+                autoGrade={isOpenTask}
                 studentAnswer={lastSubmittedAnswer ?? typedAnswer}
                 disabled={answerLocked || awarding || feedback === "correct"}
                 onAiAccepted={(answer) => void completeCorrectAnswer(answer)}

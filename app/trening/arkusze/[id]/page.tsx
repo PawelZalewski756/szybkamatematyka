@@ -1,6 +1,12 @@
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import {
+  examSheetPoints,
+  examTaskPoints,
+  formatPkt,
+  isOpenExamTask,
+} from "@/lib/baza-zadan/cke/exam-points";
+import {
   getOfficialCkeSheetById,
   getOfficialCkeSheetTasks,
   listOfficialCkeSheets,
@@ -41,6 +47,7 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
   if (!sheet) notFound();
 
   const tasks = getOfficialCkeSheetTasks(sheet.id);
+  const totalPoints = examSheetPoints(tasks);
   const kindLabel =
     officialCkeSheetKind(sheet) === "egzamin-8"
       ? "Egzamin ósmoklasisty"
@@ -64,7 +71,8 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
             {sheet.title}
           </h1>
           <p className="mt-2 text-sm text-muted">
-            {tasks.length} zadań. Otwórz wybrane albo zacznij od pierwszego.
+            {tasks.length} zadań · {formatPkt(totalPoints)}. Otwórz wybrane
+            albo zacznij od pierwszego.
           </p>
           {tasks[0] ? (
             <Link
@@ -88,6 +96,9 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
                     Zad. {task.examSource?.taskNumber ?? index + 1}
                     {" · "}
                     {CATEGORY_LABELS[task.category]}
+                    {" · "}
+                    {formatPkt(examTaskPoints(task))}
+                    {isOpenExamTask(task) ? " · otwarte" : ""}
                   </span>
                   <span className="mt-1 block truncate text-sm font-semibold text-foreground">
                     {task.title}

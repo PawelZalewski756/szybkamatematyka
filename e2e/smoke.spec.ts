@@ -85,5 +85,7 @@ test.describe("Smoke", () => {
     ).toBeVisible();
     await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
     await expect(page.getByText("TypeError")).toHaveCount(0);
+    await page.getByRole("link", { name: /Matura — maj 2025/ }).click();
+    await expect(page.getByText(/\d+ pkt/)).toBeVisible();
   });
 });

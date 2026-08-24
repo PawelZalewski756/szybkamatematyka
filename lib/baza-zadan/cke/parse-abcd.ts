@@ -9,6 +9,8 @@ export type ParsedAbcd = {
   hasChoices: boolean;
 };
 
+export const OPEN_TASK_PLACEHOLDER = "Zadanie otwarte — patrz rozwiązanie";
+
 /** Usuwa śmieci HTML z parsera CKE. */
 export function cleanCkeTaskMarkup(tresc: string): string {
   return tresc
@@ -35,7 +37,7 @@ export function parseAbcd(tresc: string): ParsedAbcd {
   if (isMultiClaimTrueFalse(cleaned)) {
     return {
       prompt: cleaned,
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
+      choices: [OPEN_TASK_PLACEHOLDER],
       hasChoices: false,
     };
   }
@@ -44,7 +46,7 @@ export function parseAbcd(tresc: string): ParsedAbcd {
   if (anchor < 0) {
     return {
       prompt: cleaned,
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
+      choices: [OPEN_TASK_PLACEHOLDER],
       hasChoices: false,
     };
   }
@@ -59,7 +61,7 @@ export function parseAbcd(tresc: string): ParsedAbcd {
   if (choices.length < 2) {
     return {
       prompt: cleaned,
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
+      choices: [OPEN_TASK_PLACEHOLDER],
       hasChoices: false,
     };
   }
@@ -75,7 +77,7 @@ export function parseAbcd(tresc: string): ParsedAbcd {
   if (onlyPfLabels && hasDupPf) {
     return {
       prompt: cleaned,
-      choices: ["Zadanie otwarte — patrz rozwiązanie"],
+      choices: [OPEN_TASK_PLACEHOLDER],
       hasChoices: false,
     };
   }

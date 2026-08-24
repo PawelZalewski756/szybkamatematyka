@@ -4,6 +4,7 @@ export type TaskGradeResult = {
   verdict: TaskGradeVerdict;
   feedback: string;
   acceptAsCorrect: boolean;
+  awardedPoints?: number;
 };
 
 function stripCodeFence(text: string): string {
@@ -24,10 +25,15 @@ export function parseTaskGradeResponse(raw: string): TaskGradeResult | null {
     if (!feedback) return null;
     const acceptAsCorrect =
       verdict === "correct" && row.acceptAsCorrect !== false;
+    const awardedRaw = Number(row.awardedPoints);
+    const awardedPoints = Number.isFinite(awardedRaw)
+      ? Math.max(0, Math.round(awardedRaw))
+      : undefined;
     return {
       verdict,
       feedback,
       acceptAsCorrect,
+      awardedPoints,
     };
   } catch {
     return null;

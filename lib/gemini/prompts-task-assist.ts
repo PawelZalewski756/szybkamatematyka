@@ -14,6 +14,8 @@ export type TaskAssistGradeInput = {
   taskContent: string;
   correctAnswer: string;
   studentAnswer: string;
+  maxPoints?: number;
+  markingNotes?: string;
 };
 
 export type TaskAssistAskTurn = {
@@ -42,19 +44,22 @@ Zasady:
 - Im wyższy poziom podpowiedzi (0→2), tym bardziej konkretna wskazówka, ale nadal bez gotowej odpowiedzi.
 - Nie wymyślaj danych spoza treści zadania.`;
 
-export const TASK_ASSIST_GRADE_SYSTEM = `Jesteś egzaminatorem matematyki oceniającym odpowiedź ucznia.
+export const TASK_ASSIST_GRADE_SYSTEM = `Jesteś egzaminatorem matematyki CKE oceniającym odpowiedź ucznia.
 Oceń, czy odpowiedź ucznia jest matematycznie równoważna oczekiwanej (inne zapisy, ułamki, pierwiastki, jednostki OK).
+Przy zadaniach wieloczęściowych przyznaj punkty częściowe według klucza.
 
 Zwróć WYŁĄCZNIE JSON (bez markdown, bez \`\`\`):
 {
   "verdict": "correct" | "partial" | "wrong",
   "feedback": "krótkie uzasadnienie po polsku (1–3 zdania, LaTeX inline $...$ dozwolony)",
-  "acceptAsCorrect": true | false
+  "acceptAsCorrect": true | false,
+  "awardedPoints": 0
 }
 
 acceptAsCorrect=true tylko gdy verdict=correct (odpowiedź równoważna oczekiwanej).
-partial = blisko, ale błąd w obliczeniach lub brak jednostki.
-wrong = zła metoda lub wynik.`;
+partial = blisko, ale błąd w obliczeniach, brak jednostki albo tylko część podpunktów.
+wrong = zła metoda lub wynik.
+awardedPoints to liczba całkowita od 0 do maxPoints z polecenia.`;
 
 export function buildHintUserPrompt(input: TaskAssistHintInput): string {
   const parts: string[] = [];
@@ -77,8 +82,14 @@ export function buildGradeUserPrompt(input: TaskAssistGradeInput): string {
   const parts: string[] = [];
   if (input.examLabel) parts.push(`Egzamin: ${input.examLabel}`);
   if (input.topicLabel) parts.push(`Temat: ${input.topicLabel}`);
+  if (input.maxPoints != null) {
+    parts.push(`Maksymalna liczba punktów CKE: ${input.maxPoints}`);
+  }
   parts.push(`Treść zadania:\n${input.taskContent.trim()}`);
   parts.push(`Oczekiwana odpowiedź: ${input.correctAnswer}`);
+  if (input.markingNotes?.trim()) {
+    parts.push(`Klucz / kroki (wewnętrznie):\n${input.markingNotes.trim()}`);
+  }
   parts.push(`Odpowiedź ucznia: ${input.studentAnswer}`);
   parts.push("Oceń i zwróć JSON.");
   return parts.join("\n\n");
