@@ -28,7 +28,7 @@ export function buildRozwiazanieFromCatalog(task: Task): string | null {
     return null;
   }
 
-  if (task.choices.length > 0) {
+  if (task.choices.length > 0 && task.correctIndex !== null) {
     const correct = task.choices[task.correctIndex];
     const letter = String.fromCharCode(65 + task.correctIndex);
     steps.push(
