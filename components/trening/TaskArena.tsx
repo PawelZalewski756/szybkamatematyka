@@ -16,6 +16,8 @@ import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
 import { stripChoiceLabelPrefix } from "@/lib/math/render-math-text";
 import type { ExamType, Task } from "@/types/database";
 import type { ReviewTaskSnapshot } from "@/lib/powtorki/types";
+import { recordTopicAttempt } from "@/lib/learning/mastery-store";
+import { trackProductEvent } from "@/lib/metrics/product-events";
 import { AnimatePresence, motion } from "framer-motion";
 import { DifficultyBadge } from "@/components/trening/DifficultyBadge";
 import { MathText } from "@/components/trening/MathText";
@@ -255,6 +257,15 @@ export function TaskArena({
       setLocalCheckWrong(false);
 
       recordTaskResult(toReviewSnapshot(current, topicLabel), true);
+      void recordTopicAttempt({
+        userId,
+        examType,
+        category,
+        topic,
+        correct: true,
+        difficulty: current.difficulty,
+      });
+      trackProductEvent("training_answer");
 
       const taskAttempts = (attempts[current.id] ?? 0) + 1;
       setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
@@ -301,7 +312,10 @@ export function TaskArena({
       attempts,
       current,
       profile,
+      category,
+      examType,
       recordTaskResult,
+      topic,
       topicLabel,
       userId,
     ],
@@ -320,6 +334,15 @@ export function TaskArena({
 
     if (!isCorrect) {
       recordTaskResult(toReviewSnapshot(current, topicLabel), false);
+      void recordTopicAttempt({
+        userId,
+        examType,
+        category,
+        topic,
+        correct: false,
+        difficulty: current.difficulty,
+      });
+      trackProductEvent("training_answer");
       setShakeKey((k) => k + 1);
       const isOpen = current.options.length === 0;
       if (isOpen) {

@@ -30,6 +30,8 @@ Otwórz [http://localhost:3000](http://localhost:3000).
 | `npm run seed:hour-quality` | Godzinna poprawa rozwiązań CKE |
 
 Wdrożenie: zobacz [`docs/DEPLOY.md`](docs/DEPLOY.md).
+Incydenty: [`docs/INCIDENT.md`](docs/INCIDENT.md).
+Prywatność: [`/polityka-prywatnosci`](https://www.szybkamatematyka.pl/polityka-prywatnosci).
 
 ## Struktura
 

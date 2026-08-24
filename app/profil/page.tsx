@@ -4,6 +4,7 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { ProfileAchievements } from "@/components/achievements/ProfileAchievements";
 import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPrompt";
+import { AccountPrivacySection } from "@/components/profil/AccountPrivacySection";
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
 import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
@@ -610,6 +611,8 @@ export default function ProfilPage() {
               userId={user.id}
               solvedCount={arenaSolvedCount}
             />
+
+            <AccountPrivacySection />
 
             <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-center">
               <Link

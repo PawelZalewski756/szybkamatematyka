@@ -12,38 +12,15 @@ import {
   type AssistQuotaSnapshot,
 } from "@/lib/subscription/task-assist-quota";
 import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
+import { reportError } from "@/lib/observability/report-error";
+import { readRequestId, requestIdHeaders } from "@/lib/observability/request-id";
+import { consumeRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
 const RATE_LIMIT_MAX = 20;
-
-type RateBucket = { count: number; resetAt: number };
-const rateBuckets = new Map<string, RateBucket>();
-
-function checkRateLimit(key: string): {
-  allowed: boolean;
-  retryAfterSec: number;
-} {
-  const now = Date.now();
-  const bucket = rateBuckets.get(key);
-
-  if (!bucket || now >= bucket.resetAt) {
-    rateBuckets.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return { allowed: true, retryAfterSec: 0 };
-  }
-
-  if (bucket.count >= RATE_LIMIT_MAX) {
-    return {
-      allowed: false,
-      retryAfterSec: Math.max(1, Math.ceil((bucket.resetAt - now) / 1000)),
-    };
-  }
-
-  bucket.count += 1;
-  return { allowed: true, retryAfterSec: 0 };
-}
 
 function readString(body: unknown, key: string): string | undefined {
   if (typeof body !== "object" || body === null || !(key in body)) return undefined;
@@ -103,15 +80,25 @@ function jsonWithQuota(payload: Record<string, unknown>, quota: AssistQuotaSnaps
  * Auth: Bearer (Pro = bez limitu miesięcznego; free = max 10 zapytań / miesiąc).
  */
 export async function POST(request: Request) {
+  const requestId = readRequestId(request);
+  const reqHeaders = requestIdHeaders(requestId);
+
   try {
     const auth = await verifyTaskAssistRequest(request);
     if (!auth.ok) {
-      return Response.json({ error: auth.error }, { status: auth.status });
+      return Response.json(
+        { error: auth.error },
+        { status: auth.status, headers: reqHeaders },
+      );
     }
     const { user, isPro } = auth;
 
     if (isPro) {
-      const limit = checkRateLimit(`pro-ai:${user.id}`);
+      const limit = await consumeRateLimit(
+        `pro-ai:${user.id}`,
+        RATE_LIMIT_MAX,
+        RATE_LIMIT_WINDOW_MS,
+      );
       if (!limit.allowed) {
         return Response.json(
           {
@@ -119,7 +106,10 @@ export async function POST(request: Request) {
           },
           {
             status: 429,
-            headers: { "Retry-After": String(limit.retryAfterSec) },
+            headers: {
+              ...reqHeaders,
+              "Retry-After": String(limit.retryAfterSec),
+            },
           },
         );
       }
@@ -229,10 +219,10 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   } catch (err) {
-    console.error("[task-assist]", err);
+    await reportError(err, { source: "task-assist", requestId });
     const message =
       err instanceof Error ? err.message : "Nieznany błąd asystenta.";
     const { status, error } = formatGeminiErrorForUser(message);
-    return Response.json({ error }, { status });
+    return Response.json({ error }, { status, headers: reqHeaders });
   }
 }

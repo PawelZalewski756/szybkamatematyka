@@ -14,8 +14,9 @@ Skopiuj z `.env.example` i uzupełnij:
 | `ADMIN_EMAILS` | tak | E-maile adminów (serwer) |
 | `NEXT_PUBLIC_ADMIN_EMAILS` | tak | To samo (gate UI `/admin`) |
 | `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań CKE / API |
-| `SUPABASE_SERVICE_ROLE_KEY` | webhook Stripe | Zapis subskrypcji (później) |
-| `STRIPE_*` | później | Monetyzacja |
+| `SUPABASE_SERVICE_ROLE_KEY` | webhook Stripe, limity, metryki, usuwanie konta | Zapis subskrypcji, atomowe RPC, eksport/usuwanie |
+| `SENTRY_DSN` | opcjonalnie | Raport błędów serwera; bez DSN zostają logi JSON |
+| `STRIPE_*` | opcjonalnie | Monetyzacja |
 
 ## 2. Migracje Supabase (SQL Editor, w kolejności)
 
@@ -30,12 +31,15 @@ Uruchom pliki z `supabase/migrations/`:
 7. `20260529160000_add_duel_results.sql`
 8. `20260529161000_add_achievements.sql`
 9. `20260714210000_add_ai_assist_quota.sql`
-10. `20260824103000_production_security_baseline.sql` — uruchom jako ostatnią
+10. `20260824103000_production_security_baseline.sql`
+11. `20260824110000_training_solutions_reviews.sql`
+12. `20260824120000_operations_privacy_adaptive.sql` — limity, usuwanie konta, opanowanie tematów
 
-Przed punktem 10 wykonaj backup i zapisz aktualny raport polityk RLS. Po
+Przed punktami 10–12 wykonaj backup i zapisz aktualny raport polityk RLS. Po
 migracji sprawdź role `anon`, `authenticated` i konto admina. Aplikacja po tej
 migracji zapisuje XP i wyniki pojedynków przez idempotentne RPC; bez migracji
-nagrody pozostaną lokalne i UI pokaże błąd zapisu.
+nagrody pozostaną lokalne i UI pokaże błąd zapisu. Bez punktu 12 limity AI
+zostają w pamięci procesu, a usunięcie konta nie wyczyści wszystkich tabel.
 
 Następnie dodaj siebie do adminów:
 
@@ -69,6 +73,10 @@ Pipeline `.github/workflows/ci.yml`: lint → typecheck → unit → audyty tre�
 E2E lokalnie: najpierw `npx playwright install chromium`, następnie
 `npm run test:e2e`. Skopiuj `.env.example` → `.env.local` albo pozwól
 Playwrightowi użyć bezpiecznych placeholderów z `playwright.config.ts`.
+
+Po wdrożeniu sprawdź `GET /api/health` — ma zwracać `{ "status": "ok" }`
+albo `"degraded"` bez sekretów. Alerty: logi JSON na stdout (Vercel) oraz
+opcjonalny `SENTRY_DSN`. Incydenty: [`docs/INCIDENT.md`](INCIDENT.md).
 
 ## 6. Stripe (opcjonalnie, później)
 

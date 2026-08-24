@@ -397,6 +397,21 @@ export default function LoginPage() {
                 <Alert message={message} isError={isError} />
               )}
 
+              <p className="text-xs leading-relaxed text-muted">
+                Zakładając konto, akceptujesz{" "}
+                <Link href="/regulamin" className="underline hover:text-foreground">
+                  regulamin
+                </Link>{" "}
+                i{" "}
+                <Link
+                  href="/polityka-prywatnosci"
+                  className="underline hover:text-foreground"
+                >
+                  politykę prywatności
+                </Link>
+                .
+              </p>
+
               <motion.button
                 type="submit"
                 disabled={loading}

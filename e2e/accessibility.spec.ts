@@ -1,7 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-const ROUTES = ["/", "/login", "/baza-zadan"] as const;
+const ROUTES = ["/", "/login", "/baza-zadan", "/polityka-prywatnosci"] as const;
 
 test.describe("WCAG smoke", () => {
   test.beforeEach(async ({ page }) => {

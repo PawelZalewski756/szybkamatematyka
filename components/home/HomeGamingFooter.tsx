@@ -1,4 +1,5 @@
 import { BrandLogo } from "@/components/BrandLogo";
+import { LegalFooterLinks } from "@/components/legal/LegalFooterLinks";
 import Link from "next/link";
 
 export function HomeGamingFooter() {
@@ -15,6 +16,7 @@ export function HomeGamingFooter() {
             © {new Date().getFullYear()} Szybka Matematyka · szybkamatematyka.pl
           </p>
         </div>
+        <div className="flex flex-col gap-4 sm:items-end">
         <nav
           aria-label="Stopka"
           className="grid grid-cols-2 gap-x-10 gap-y-2 text-sm sm:text-right"
@@ -38,6 +40,8 @@ export function HomeGamingFooter() {
             Cennik
           </Link>
         </nav>
+        <LegalFooterLinks className="flex flex-wrap gap-x-6 gap-y-2 text-sm sm:justify-end" />
+        </div>
       </div>
     </footer>
   );

@@ -9,6 +9,12 @@ import {
   markSubscriptionCanceled,
   syncSubscriptionToProfile,
 } from "@/lib/stripe/subscription-sync";
+import {
+  claimStripeWebhookEvent,
+  releaseStripeWebhookEvent,
+} from "@/lib/stripe/webhook-events";
+import { logError, logInfo } from "@/lib/observability/logger";
+import { reportError } from "@/lib/observability/report-error";
 
 // Weryfikacja podpisu Stripe wymaga Node crypto → runtime Node (nie Edge).
 export const runtime = "nodejs";
@@ -68,11 +74,17 @@ export async function POST(request: Request) {
     );
   } catch (err) {
     const message = err instanceof Error ? err.message : "nieznany";
-    console.error("[stripe-webhook] Weryfikacja podpisu nieudana:", message);
+    logError("stripe.signature_invalid", { message });
     return Response.json(
       { error: `Nieprawidłowy podpis webhooka: ${message}` },
       { status: 400 },
     );
+  }
+
+  const claim = await claimStripeWebhookEvent(event.id, event.type);
+  if (claim === "duplicate") {
+    logInfo("stripe.duplicate_event", { eventId: event.id, type: event.type });
+    return Response.json({ received: true, duplicate: true });
   }
 
   try {
@@ -115,7 +127,10 @@ export async function POST(request: Request) {
         break;
     }
   } catch (err) {
-    console.error(`[stripe-webhook] Błąd obsługi ${event.type}:`, err);
+    await reportError(err, { source: "stripe-webhook", type: event.type });
+    if (claim === "new") {
+      await releaseStripeWebhookEvent(event.id);
+    }
     // 500 → Stripe ponowi dostarczenie webhooka.
     return Response.json(
       { error: "Błąd przetwarzania zdarzenia." },

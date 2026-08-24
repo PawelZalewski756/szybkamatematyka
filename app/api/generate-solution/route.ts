@@ -2,53 +2,34 @@ import {
   formatGeminiErrorForUser,
   generateMathSolution,
 } from "@/lib/gemini/generate-solution";
+import { reportError } from "@/lib/observability/report-error";
+import { readRequestId, requestIdHeaders } from "@/lib/observability/request-id";
+import { consumeRateLimit } from "@/lib/rate-limit";
 import { verifyAdminRequest } from "@/lib/supabase/admin";
 
-// --- Rate limit (in-memory, fixed window) -----------------------------------
-// UWAGA: stan trzymany jest w pamięci procesu, więc działa PER INSTANCJA.
-// W środowisku serverless (wiele instancji / cold starty) limit nie jest
-// globalny. Docelowo przenieść do współdzielonego store'u (Redis / Upstash),
-// żeby limit obowiązywał spójnie dla wszystkich instancji.
-const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minuta
-const RATE_LIMIT_MAX = 12; // maks. wywołań w oknie / użytkownika (lub IP)
-
-type RateBucket = { count: number; resetAt: number };
-const rateBuckets = new Map<string, RateBucket>();
-
-function checkRateLimit(key: string): {
-  allowed: boolean;
-  retryAfterSec: number;
-} {
-  const now = Date.now();
-  const bucket = rateBuckets.get(key);
-
-  if (!bucket || now >= bucket.resetAt) {
-    rateBuckets.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return { allowed: true, retryAfterSec: 0 };
-  }
-
-  if (bucket.count >= RATE_LIMIT_MAX) {
-    return {
-      allowed: false,
-      retryAfterSec: Math.max(1, Math.ceil((bucket.resetAt - now) / 1000)),
-    };
-  }
-
-  bucket.count += 1;
-  return { allowed: true, retryAfterSec: 0 };
-}
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 12;
 
 export async function POST(request: Request) {
+  const requestId = readRequestId(request);
+  const headers = requestIdHeaders(requestId);
+
   try {
     // 1) Autoryzacja: endpoint pali quota Gemini — tylko admin (panel / seed).
     const auth = await verifyAdminRequest(request);
     if (!auth.ok) {
-      return Response.json({ error: auth.error }, { status: auth.status });
+      return Response.json(
+        { error: auth.error },
+        { status: auth.status, headers },
+      );
     }
 
-    // 2) Rate limit per admin.
-    const rateKey = `admin:${auth.user.id}`;
-    const limit = checkRateLimit(rateKey);
+    // 2) Rate limit per admin — baza, gdy jest service role.
+    const limit = await consumeRateLimit(
+      `admin-gemini:${auth.user.id}`,
+      RATE_LIMIT_MAX,
+      RATE_LIMIT_WINDOW_MS,
+    );
     if (!limit.allowed) {
       return Response.json(
         {
@@ -56,7 +37,10 @@ export async function POST(request: Request) {
         },
         {
           status: 429,
-          headers: { "Retry-After": String(limit.retryAfterSec) },
+          headers: {
+            ...headers,
+            "Retry-After": String(limit.retryAfterSec),
+          },
         },
       );
     }
@@ -67,7 +51,7 @@ export async function POST(request: Request) {
     } catch {
       return Response.json(
         { error: "Nieprawidłowy format JSON w żądaniu." },
-        { status: 400 },
+        { status: 400, headers },
       );
     }
 
@@ -86,7 +70,7 @@ export async function POST(request: Request) {
     if (!trescZadania) {
       return Response.json(
         { error: "Pole trescZadania jest wymagane i nie może być puste." },
-        { status: 400 },
+        { status: 400, headers },
       );
     }
 
@@ -96,19 +80,21 @@ export async function POST(request: Request) {
       tytul: readString("tytul"),
     });
 
-    return Response.json({ solution });
+    return Response.json({ solution }, { headers });
   } catch (err) {
-    console.error("[generate-solution]", err);
+    await reportError(err, { source: "generate-solution", requestId });
     const message =
       err instanceof Error ? err.message : "Nieznany błąd generowania.";
     const { status, error } = formatGeminiErrorForUser(message);
-    const headers: Record<string, string> = {};
+    const responseHeaders: Record<string, string> = { ...headers };
     if (status === 429) {
       const retryMatch = message.match(/retry in (\d+(?:\.\d+)?)\s*s/i);
       if (retryMatch) {
-        headers["Retry-After"] = String(Math.ceil(parseFloat(retryMatch[1])));
+        responseHeaders["Retry-After"] = String(
+          Math.ceil(parseFloat(retryMatch[1])),
+        );
       }
     }
-    return Response.json({ error }, { status, headers });
+    return Response.json({ error }, { status, headers: responseHeaders });
   }
 }

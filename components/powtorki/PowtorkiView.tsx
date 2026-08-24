@@ -5,6 +5,7 @@ import { useReview } from "@/components/powtorki/ReviewProvider";
 import { ReviewSession } from "@/components/powtorki/ReviewSession";
 import { ReviewSummary } from "@/components/powtorki/ReviewSummary";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
+import { trackProductEvent } from "@/lib/metrics/product-events";
 import { useCallback, useState } from "react";
 
 type Phase = "dashboard" | "session" | "summary";
@@ -21,6 +22,7 @@ export function PowtorkiView() {
     setSessionIds(ids);
     setSummary(null);
     setPhase("session");
+    trackProductEvent("review_start");
   }, [dueItems]);
 
   const handleComplete = useCallback((result: ReviewSessionSummary) => {

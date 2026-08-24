@@ -80,4 +80,42 @@ test.describe("Smoke", () => {
         .getByRole("link", { name: "Trening", exact: true }),
     ).toBeVisible();
   });
+
+  test("polityka prywatności i regulamin są publiczne", async ({ page }) => {
+    await page.goto("/polityka-prywatnosci");
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Polityka prywatności" }),
+    ).toBeVisible();
+    await page.goto("/regulamin");
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Regulamin serwisu" }),
+    ).toBeVisible();
+  });
+
+  test("stopka strony głównej ma linki prawne", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 720 });
+    await page.goto("/");
+    await expect(
+      page.getByRole("navigation", { name: "Informacje prawne" }).getByRole("link", {
+        name: "Polityka prywatności",
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("navigation", { name: "Informacje prawne" }).getByRole("link", {
+        name: "Regulamin",
+      }),
+    ).toBeVisible();
+  });
+
+  test("/api/health odpowiada bez sekretów", async ({ request }) => {
+    const response = await request.get("/api/health");
+    expect(response.ok()).toBeTruthy();
+    const body = (await response.json()) as {
+      status?: string;
+      checks?: Record<string, string>;
+    };
+    expect(body.status).toMatch(/ok|degraded/);
+    expect(JSON.stringify(body).toLowerCase()).not.toContain("eyj");
+    expect(body.checks?.supabase).toMatch(/configured|missing/);
+  });
 });

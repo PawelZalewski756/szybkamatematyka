@@ -13,6 +13,8 @@ import {
 } from "@/lib/trening/progress";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
+import { LearningDashboard } from "@/components/trening/LearningDashboard";
+import { trackProductEvent } from "@/lib/metrics/product-events";
 import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import { fetchTasksForTree } from "@/lib/supabase/tasks";
@@ -365,6 +367,10 @@ export default function TreningPage() {
   }, []);
 
   useEffect(() => {
+    trackProductEvent("training_open");
+  }, []);
+
+  useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadProgress(selectedExam);
   }, [selectedExam, loadProgress]);
@@ -500,6 +506,12 @@ export default function TreningPage() {
             </p>
           )}
         </header>
+
+        <LearningDashboard
+          examKey={selectedExam}
+          exam={exam}
+          loading={loading}
+        />
 
         <div className="page-with-sidebar mt-8">
           <aside className="page-sidebar space-y-6">
