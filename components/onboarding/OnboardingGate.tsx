@@ -27,6 +27,20 @@ type OnboardingGateProps = {
 };
 
 const emptySubscribe = () => () => {};
+const DISMISS_KEY = "szybka-matma-onboarding-dismissed";
+
+function wasDismissed(scope: string): boolean {
+  if (typeof localStorage === "undefined") return false;
+  return localStorage.getItem(`${DISMISS_KEY}:${scope}`) === "1";
+}
+
+function dismiss(scope: string): void {
+  try {
+    localStorage.setItem(`${DISMISS_KEY}:${scope}`, "1");
+  } catch {
+    /* private mode */
+  }
+}
 
 export function OnboardingGate({ children }: OnboardingGateProps) {
   const [user, setUser] = useState<User | null>(null);
@@ -38,6 +52,7 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
     () => false,
   );
   const [guestClassDone, setGuestClassDone] = useState(false);
+  const [dismissedScope, setDismissedScope] = useState<string | null>(null);
 
   const load = useCallback(async (sessionUser: User | null) => {
     setUser(sessionUser);
@@ -98,33 +113,40 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
       window.removeEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
   }, [user]);
 
-  const userBlocked = ready && user !== null && profileNeedsOnboarding(profile);
+  const userScope = user?.id ?? "guest";
+  const dismissed =
+    dismissedScope === userScope || (hydrated && wasDismissed(userScope));
+  const userBlocked =
+    ready && user !== null && profileNeedsOnboarding(profile) && !dismissed;
   const guestBlocked =
     hydrated &&
     ready &&
     !user &&
     !guestClassDone &&
+    !dismissed &&
     !hasStoredSchoolClass();
-  const blocked = userBlocked || guestBlocked;
+  const handleSkip = () => {
+    dismiss(userScope);
+    setDismissedScope(userScope);
+  };
 
   return (
     <>
-      <div
-        className={
-          blocked
-            ? "pointer-events-none flex min-h-0 flex-1 flex-col select-none"
-            : "flex min-h-0 flex-1 flex-col"
-        }
-        aria-hidden={blocked ? true : undefined}
-        inert={blocked ? true : undefined}
-      >
+      <div className="flex min-h-0 flex-1 flex-col">
         {children}
       </div>
       {userBlocked && user && (
-        <OnboardingModal user={user} onComplete={(p) => setProfile(p)} />
+        <OnboardingModal
+          user={user}
+          onComplete={(p) => setProfile(p)}
+          onSkip={handleSkip}
+        />
       )}
       {guestBlocked && (
-        <GuestClassModal onComplete={() => setGuestClassDone(true)} />
+        <GuestClassModal
+          onComplete={() => setGuestClassDone(true)}
+          onSkip={handleSkip}
+        />
       )}
     </>
   );

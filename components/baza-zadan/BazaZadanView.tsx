@@ -1,6 +1,5 @@
 "use client";
 
-import { BazaZadanArkuszePanel } from "@/components/baza-zadan/BazaZadanArkuszePanel";
 import { BazaZadanTasksPanel } from "@/components/baza-zadan/BazaZadanTasksPanel";
 import { BazaZadanTreningPanel } from "@/components/baza-zadan/BazaZadanTreningPanel";
 import { useLearningPath } from "@/components/LearningPathProvider";
@@ -8,30 +7,17 @@ import {
   getClientExamSheetsForPath,
   getClientTaskStats,
 } from "@/lib/baza-zadan/client-catalog";
-import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
 import { learningPathLabel } from "@/lib/learning-path";
-import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
 
-export type BazaTab = "zadania" | "arkusze" | "trening";
-
-type BazaZadanViewProps = {
-  cmsTasks: ZadanieWithArkusz[];
-  schemaMissing?: boolean;
-  cmsNote?: string | null;
-};
+export type BazaTab = "zadania" | "trening";
 
 const TABS: { id: BazaTab; label: string; hint: string }[] = [
   {
     id: "zadania",
     label: "Ćwicz zadania",
     hint: "Pojedyncze zadania treningowe — filtruj po dziale i trudności.",
-  },
-  {
-    id: "arkusze",
-    label: "Arkusze CKE",
-    hint: "Oficjalne matury i egzaminy z rozwiązaniami krok po kroku.",
   },
   {
     id: "trening",
@@ -41,15 +27,11 @@ const TABS: { id: BazaTab; label: string; hint: string }[] = [
 ];
 
 function parseTab(value: string | null): BazaTab {
-  if (value === "arkusze" || value === "trening") return value;
+  if (value === "trening") return value;
   return "zadania";
 }
 
-export function BazaZadanView({
-  cmsTasks,
-  schemaMissing = false,
-  cmsNote,
-}: BazaZadanViewProps) {
+export function BazaZadanView() {
   const { path } = useLearningPath();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -58,14 +40,9 @@ export function BazaZadanView({
   const pathLabel = learningPathLabel(path);
   const taskCount = getClientTaskStats(path).totalTasks;
   const sheetCount = getClientExamSheetsForPath(path).length;
-  const cmsArkuszCount = useMemo(
-    () => groupCmsTasksByArkusz(cmsTasks).length,
-    [cmsTasks],
-  );
 
   const counts: Record<BazaTab, number> = {
     zadania: taskCount,
-    arkusze: cmsArkuszCount,
     trening: sheetCount,
   };
 
@@ -92,6 +69,13 @@ export function BazaZadanView({
         </p>
       </header>
 
+      <Link
+        href="/trening/arkusze"
+        className="mt-6 inline-flex items-center rounded-lg border border-accent/30 bg-accent-soft px-4 py-2.5 text-sm font-semibold text-accent hover:bg-accent/15"
+      >
+        Oficjalne arkusze CKE →
+      </Link>
+
       <div
         className="mt-8 flex gap-1 overflow-x-auto border-b border-surface-border pb-px [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         role="tablist"
@@ -104,6 +88,8 @@ export function BazaZadanView({
               key={id}
               type="button"
               role="tab"
+              id={`baza-tab-${id}`}
+              aria-controls="baza-tabpanel"
               aria-selected={active}
               onClick={() => setTab(id)}
               className={`shrink-0 border-b-2 px-4 py-3 text-sm font-semibold transition ${
@@ -123,15 +109,13 @@ export function BazaZadanView({
 
       <p className="mt-4 text-sm text-muted">{activeTab.hint}</p>
 
-      <div className="mt-6" role="tabpanel">
+      <div
+        id="baza-tabpanel"
+        className="mt-6"
+        role="tabpanel"
+        aria-labelledby={`baza-tab-${tab}`}
+      >
         {tab === "zadania" && <BazaZadanTasksPanel />}
-        {tab === "arkusze" && (
-          <BazaZadanArkuszePanel
-            cmsTasks={cmsTasks}
-            schemaMissing={schemaMissing}
-            cmsNote={cmsNote}
-          />
-        )}
         {tab === "trening" && <BazaZadanTreningPanel />}
       </div>
     </div>

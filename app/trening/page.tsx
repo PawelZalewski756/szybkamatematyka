@@ -154,7 +154,7 @@ type SelectedExam = TreningExamKey;
 
 const EXAM_OPTIONS: { key: SelectedExam; label: string }[] = [
   { key: "matura_podstawowa", label: "Matura Podstawowa" },
-  { key: "8_klasa", label: "Egzamin 8-klasisty" },
+  { key: "8_klasa", label: "Egzamin ósmoklasisty" },
 ];
 
 function ExamSwitcher({
@@ -616,11 +616,8 @@ export default function TreningPage() {
           <div className="space-y-10 xl:grid xl:grid-cols-2 xl:gap-x-10 xl:gap-y-10 xl:space-y-0">
               {exam.categories.length === 0 ? (
                 <p className="mt-16 text-center text-sm text-muted">
-                  Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
-                  <code className="rounded bg-surface px-1.5 py-0.5 text-foreground">
-                    npm run seed:trening-tasks
-                  </code>{" "}
-                  lub dodaj zadania w Supabase.
+                  Dla tego egzaminu nie ma jeszcze dostępnych tematów.
+                  Spróbuj ponownie później albo wybierz inną ścieżkę.
                 </p>
               ) : filteredExam.categories.length === 0 ? (
                 <EmptyState

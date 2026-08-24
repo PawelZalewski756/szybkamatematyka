@@ -131,7 +131,7 @@ export function getClientExamSheetsGrouped(
   const kinds: ExamSheetKind[] = ["trening", "egzamin-8", "matura"];
   const labels: Record<ExamSheetKind, string> = {
     trening: "Trening i podstawówka",
-    "egzamin-8": "Egzamin 8-klasisty",
+    "egzamin-8": "Egzamin ósmoklasisty",
     matura: "Arkusze maturalne (trening)",
   };
 

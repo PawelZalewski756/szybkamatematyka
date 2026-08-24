@@ -72,7 +72,7 @@ const WRONG_UNLOCK_MS = 700;
 const EXAM_LABEL: Record<ExamType, string> = {
   matura_podstawowa: "Matura podstawowa",
   matura_rozszerzona: "Matura rozszerzona",
-  "8_klasa": "Egzamin 8-klasisty",
+  "8_klasa": "Egzamin ósmoklasisty",
 };
 
 type TaskWithOptions = Task & { options: string[] };

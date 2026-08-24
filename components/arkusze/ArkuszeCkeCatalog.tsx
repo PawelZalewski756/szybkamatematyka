@@ -287,8 +287,8 @@ export function ArkuszeCkeCatalog({
         <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center backdrop-blur-xl">
           <p className="text-lg font-black text-white">Brak arkuszy w bazie</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
-            Uruchom import CKE (<code className="text-amber-400">npm run seed:cke-matura</code>)
-            lub dodaj arkusze skryptem seed.
+            Arkusze są właśnie uzupełniane. Wróć później albo przejdź do
+            treningu tematycznego.
           </p>
         </div>
       )}
@@ -316,7 +316,7 @@ export function ArkuszeCkeCatalog({
       )}
 
       <YearSection
-        title="Egzamin 8-klasisty"
+        title="Egzamin ósmoklasisty"
         subtitle="Arkusze egzaminacyjne dla ósmoklasistów"
         groups={e8Groups}
         accent="cyan"
