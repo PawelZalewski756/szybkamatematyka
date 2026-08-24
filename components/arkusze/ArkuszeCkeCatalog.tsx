@@ -5,12 +5,15 @@ import { formatArkuszLabel } from "@/lib/baza-zadan/arkusz-format";
 import {
   arkuszMaturaBadge,
   groupCmsTasksByYear,
-  isCkeMaturaArkusz,
-  maturaPoziomFromNazwa,
   splitCmsTasks,
   type CmsArkuszGroup,
 } from "@/lib/baza-zadan/cke/group-cms-tasks";
 import { TYP_EGZAMINU_LABELS } from "@/lib/baza-zadan/dzialy";
+import {
+  groupOfficialCkeSheetsByYear,
+  officialCkeSheetHref,
+} from "@/lib/baza-zadan/exams/archive-sheet-meta";
+import type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
 import { motion } from "framer-motion";
 import { FileText, GraduationCap, School } from "lucide-react";
@@ -18,12 +21,45 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 type ArkuszeCkeCatalogProps = {
-  cmsTasks: ZadanieWithArkusz[];
+  archiveSheets: ExamArchiveSheetMeta[];
+  cmsTasks?: ZadanieWithArkusz[];
   schemaMissing?: boolean;
   errorNote?: string | null;
 };
 
-function ArkuszCard({
+function ArchiveSheetCard({ sheet }: { sheet: ExamArchiveSheetMeta }) {
+  const kindLabel =
+    sheet.kind === "egzamin-8" ? "Egzamin 8-klasisty" : "CKE · podstawowa";
+
+  return (
+    <Link
+      href={officialCkeSheetHref(sheet.id)}
+      className="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-lg backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-xl hover:ring-emerald-400/40"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-emerald-500/30 bg-emerald-500/15 text-emerald-300">
+          <FileText className="h-5 w-5" aria-hidden />
+        </div>
+        <span className="rounded-full border border-white/10 bg-zinc-900/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-zinc-400">
+          {kindLabel}
+        </span>
+      </div>
+      <div className="mt-4">
+        <h3 className="text-lg font-black text-white group-hover:text-orange-400">
+          {sheet.title}
+        </h3>
+        <p className="mt-2 text-sm text-zinc-400">
+          {sheet.taskIds.length} zadań · rozwiązania krok po kroku
+        </p>
+        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-orange-300/90 opacity-0 transition-opacity group-hover:opacity-100">
+          Otwórz arkusz →
+        </p>
+      </div>
+    </Link>
+  );
+}
+
+function CmsArkuszCard({
   group,
   accent,
 }: {
@@ -36,7 +72,6 @@ function ArkuszCard({
   const href = `/arkusze/${group.arkuszId}`;
   const sourceBadge =
     sample && group.typ === "matura" ? arkuszMaturaBadge(sample) : null;
-
   const ring =
     accent === "emerald"
       ? "hover:ring-emerald-400/40 hover:shadow-emerald-500/10"
@@ -52,7 +87,8 @@ function ArkuszCard({
           className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border ${
             accent === "emerald"
               ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-300"
-              : "border-orange-500/30 bg-orange-500/15 text-amber-400"           }`}
+              : "border-orange-500/30 bg-orange-500/15 text-amber-400"
+          }`}
         >
           <FileText className="h-5 w-5" aria-hidden />
         </div>
@@ -67,15 +103,12 @@ function ArkuszCard({
         <p className="mt-2 text-sm text-zinc-400">
           {group.tasks.length} zadań · rozwiązania krok po kroku
         </p>
-        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-orange-300/90 opacity-0 transition-opacity group-hover:opacity-100">
-          Otwórz arkusz →
-        </p>
       </div>
     </Link>
   );
 }
 
-function YearSection({
+function CmsYearSection({
   title,
   subtitle,
   groups,
@@ -93,8 +126,7 @@ function YearSection({
   const yearGroups = groupCmsTasksByYear(groups).filter(
     ({ year }) => yearFilter === "all" || year === yearFilter,
   );
-  if (groups.length === 0) return null;
-  if (yearGroups.length === 0) return null;
+  if (groups.length === 0 || yearGroups.length === 0) return null;
 
   return (
     <section className="mt-10">
@@ -104,31 +136,26 @@ function YearSection({
           aria-hidden
         />
         <div className="flex flex-col">
-          <h2 className="text-lg font-black text-white sm:text-xl">
-            {title}
-          </h2>
+          <h2 className="text-lg font-black text-white sm:text-xl">{title}</h2>
           <p className="mt-1 text-sm text-zinc-400">{subtitle}</p>
         </div>
       </div>
-
       <div className="mt-8 space-y-10">
         {yearGroups.map(({ year, groups: yearItems }) => (
-          <motion.div
-            key={year}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.45 }}
-          >
+          <div key={year}>
             <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
               Rok {year}
             </h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {yearItems.map((group) => (
-                <ArkuszCard key={group.arkuszId} group={group} accent={accent} />
+                <CmsArkuszCard
+                  key={group.arkuszId}
+                  group={group}
+                  accent={accent}
+                />
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
@@ -136,192 +163,194 @@ function YearSection({
 }
 
 export function ArkuszeCkeCatalog({
-  cmsTasks,
+  archiveSheets,
+  cmsTasks = [],
   schemaMissing = false,
   errorNote,
 }: ArkuszeCkeCatalogProps) {
-  const { ckeGroups, otherGroups } = splitCmsTasks(cmsTasks);
-
-  const e8Groups = otherGroups.filter((g) => g.typ === "egzamin-8");
-  const treningMaturaGroups = otherGroups.filter(
-    (g) => g.typ === "matura" && !isCkeMaturaArkusz(g.tasks[0]!),
+  const { otherGroups } = splitCmsTasks(cmsTasks);
+  const e8Groups = otherGroups.filter((group) => group.typ === "egzamin-8");
+  const extraCmsGroups = otherGroups.filter(
+    (group) => group.typ !== "egzamin-8",
   );
 
-  const hasContent =
-    ckeGroups.length > 0 ||
-    treningMaturaGroups.length > 0 ||
-    e8Groups.length > 0;
-
-  const availableYears = useMemo(() => {
-    const years = new Set<number>();
-    for (const g of [...ckeGroups, ...treningMaturaGroups, ...e8Groups]) {
-      const y = g.tasks[0]?.arkusz.rok;
-      if (y) years.add(y);
-    }
-    return [...years].sort((a, b) => b - a);
-  }, [ckeGroups, treningMaturaGroups, e8Groups]);
+  const archiveYears = useMemo(
+    () => [...new Set(archiveSheets.map((sheet) => sheet.year))].sort((a, b) => b - a),
+    [archiveSheets],
+  );
 
   const [yearFilter, setYearFilter] = useState<number | "all">("all");
-  const [maturaFilter, setMaturaFilter] = useState<
-    "all" | "podstawowa" | "rozszerzona" | "cke" | "trening"
-  >("all");
 
-  const filteredCkeGroups = useMemo(() => {
-    return ckeGroups.filter((g) => {
-      const sample = g.tasks[0];
-      if (!sample) return false;
-      if (maturaFilter === "all" || maturaFilter === "cke") return true;
-      if (maturaFilter === "trening") return false;
-      const poziom = maturaPoziomFromNazwa(sample.arkusz.nazwa);
-      if (maturaFilter === "podstawowa") return poziom !== "rozszerzona";
-      return poziom === "rozszerzona";
-    });
-  }, [ckeGroups, maturaFilter]);
-
-  const showTreningSection =
-    maturaFilter === "all" || maturaFilter === "trening";
-
-  const hasRozszerzona = useMemo(
+  const filteredArchive = useMemo(
     () =>
-      ckeGroups.some(
-        (g) =>
-          maturaPoziomFromNazwa(g.tasks[0]?.arkusz.nazwa ?? "") ===
-          "rozszerzona",
-      ),
-    [ckeGroups],
+      yearFilter === "all"
+        ? archiveSheets
+        : archiveSheets.filter((sheet) => sheet.year === yearFilter),
+    [archiveSheets, yearFilter],
   );
+
+  const archiveByYear = groupOfficialCkeSheetsByYear(filteredArchive);
+  const archiveMatura = archiveByYear
+    .map((entry) => ({
+      ...entry,
+      sheets: entry.sheets.filter((sheet) => sheet.kind === "matura"),
+    }))
+    .filter((entry) => entry.sheets.length > 0);
+  const archiveE8 = archiveByYear
+    .map((entry) => ({
+      ...entry,
+      sheets: entry.sheets.filter((sheet) => sheet.kind === "egzamin-8"),
+    }))
+    .filter((entry) => entry.sheets.length > 0);
+
+  const hasArchive = archiveSheets.length > 0;
 
   return (
     <div className="page-container relative z-10 w-full py-8 sm:py-12">
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-black text-white sm:text-3xl">
           Arkusze{" "}
-          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">CKE</span>
+          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
+            CKE
+          </span>
         </h1>
         <p className="mt-2 text-sm text-zinc-400">
-          Oficjalne sesje maturalne i egzamin ósmoklasisty.{" "}
-          <Link href="/baza-zadan" className="font-semibold text-orange-400 hover:text-orange-200">
+          Oficjalne sesje matury podstawowej.{" "}
+          <Link
+            href="/baza-zadan"
+            className="font-semibold text-orange-400 hover:text-orange-200"
+          >
             Pełny katalog →
           </Link>
         </p>
       </motion.div>
 
-      {schemaMissing && (
+      {schemaMissing && !hasArchive && (
         <div className="mt-8">
           <DatabaseSetupCard />
         </div>
       )}
 
-      {errorNote && (
+      {errorNote && !hasArchive && (
         <p className="mt-6 rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
           {errorNote}
         </p>
       )}
 
-      {(ckeGroups.length > 0 || treningMaturaGroups.length > 0) && (
-        <div
-          role="group"
-          aria-label="Filtr matury"
-          className="mt-6 flex flex-wrap gap-2"
-        >
-          {(
-            [
-              ["all", "Wszystkie matury"],
-              ["podstawowa", "Podstawowa"],
-              ["cke", "CKE oficjalne"],
-              ["trening", "Trening"],
-            ] as const
-          ).map(([key, label]) => (
-            <button
-              key={key}
-              type="button"
-              onClick={() => setMaturaFilter(key)}
-              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${
-                maturaFilter === key
-                  ? "border-emerald-400/50 bg-emerald-500/20 text-emerald-100"
-                  : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-          {hasRozszerzona && (
-            <button
-              type="button"
-              onClick={() => setMaturaFilter("rozszerzona")}
-              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${
-                maturaFilter === "rozszerzona"
-                  ? "border-orange-400/50 bg-orange-500/20 text-orange-100"
-                  : "border-white/15 bg-white/5 text-zinc-400 hover:text-zinc-200"
-              }`}
-            >
-              Rozszerzona
-            </button>
-          )}
-        </div>
-      )}
-
-      {hasContent && availableYears.length > 0 && (
-        <label className="mt-3 flex items-center gap-2 text-sm text-zinc-400">
+      {hasArchive && archiveYears.length > 1 && (
+        <label className="mt-6 flex items-center gap-2 text-sm text-zinc-400">
           <span className="shrink-0 font-semibold">Rok:</span>
           <select
             value={yearFilter === "all" ? "all" : String(yearFilter)}
-            onChange={(e) => {
-              const v = e.target.value;
-              setYearFilter(v === "all" ? "all" : Number(v));
+            onChange={(event) => {
+              const value = event.target.value;
+              setYearFilter(value === "all" ? "all" : Number(value));
             }}
             className="rounded-lg border border-white/15 bg-zinc-900/80 px-3 py-1.5 text-sm font-semibold text-zinc-200 outline-none focus:border-orange-500/40"
           >
             <option value="all">Wszystkie</option>
-            {availableYears.map((year) => (
-              <option key={year} value={year}>{year}</option>
+            {archiveYears.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
             ))}
           </select>
         </label>
       )}
 
-      {!schemaMissing && !hasContent && !errorNote && (
+      {!hasArchive && e8Groups.length === 0 && extraCmsGroups.length === 0 && !schemaMissing && (
         <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center backdrop-blur-xl">
-          <p className="text-lg font-black text-white">Brak arkuszy w bazie</p>
+          <p className="text-lg font-black text-white">Brak arkuszy</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
-            Arkusze są właśnie uzupełniane. Wróć później albo przejdź do
-            treningu tematycznego.
+            Oficjalne sesje CKE powinny być w archiwum aplikacji. Sprawdź
+            wdrożenie albo wróć do treningu tematycznego.
           </p>
         </div>
       )}
 
-      {filteredCkeGroups.length > 0 && (
-        <YearSection
-          title="Matura CKE — oficjalne sesje"
-          subtitle="Sesje maturalne poziom podstawowy — po latach (najnowsze na górze), w roku: maj, czerwiec…"
-          groups={filteredCkeGroups}
-          accent="emerald"
-          icon={GraduationCap}
-          yearFilter={yearFilter}
-        />
+      {archiveMatura.length > 0 && (
+        <section className="mt-10">
+          <div className="flex items-center gap-2">
+            <GraduationCap className="h-5 w-5 text-emerald-400" aria-hidden />
+            <div>
+              <h2 className="text-lg font-black text-white sm:text-xl">
+                Matura CKE — oficjalne sesje
+              </h2>
+              <p className="mt-1 text-sm text-zinc-400">
+                Poziom podstawowy, od najnowszych sesji.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 space-y-10">
+            {archiveMatura.map(({ year, sheets }) => (
+              <div key={year}>
+                <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
+                  Rok {year}
+                </h3>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {sheets.map((sheet) => (
+                    <ArchiveSheetCard key={sheet.id} sheet={sheet} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
 
-      {showTreningSection && treningMaturaGroups.length > 0 && (
-        <YearSection
-          title="Matura — arkusze treningowe"
-          subtitle="Arkusze z aplikacji — oddzielnie od oficjalnych sesji CKE"
-          groups={treningMaturaGroups}
-          accent="cyan"
-          icon={GraduationCap}
-          yearFilter={yearFilter}
-        />
+      {archiveE8.length > 0 && (
+        <section className="mt-10">
+          <div className="flex items-center gap-2">
+            <School className="h-5 w-5 text-orange-400" aria-hidden />
+            <div>
+              <h2 className="text-lg font-black text-white sm:text-xl">
+                Egzamin ósmoklasisty
+              </h2>
+              <p className="mt-1 text-sm text-zinc-400">
+                Oficjalne arkusze CKE dla klasy 8.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 space-y-10">
+            {archiveE8.map(({ year, sheets }) => (
+              <div key={year}>
+                <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
+                  Rok {year}
+                </h3>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {sheets.map((sheet) => (
+                    <ArchiveSheetCard key={sheet.id} sheet={sheet} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
 
-      <YearSection
+      {hasArchive && archiveE8.length === 0 && e8Groups.length === 0 && (
+        <p className="mt-8 text-sm text-zinc-500">
+          Egzamin ósmoklasisty pojawi się tutaj po imporcie oficjalnych arkuszy
+          CKE.
+        </p>
+      )}
+
+      <CmsYearSection
         title="Egzamin ósmoklasisty"
-        subtitle="Arkusze egzaminacyjne dla ósmoklasistów"
+        subtitle="Arkusze z bazy serwisu"
         groups={e8Groups}
         accent="cyan"
         icon={School}
-        yearFilter={yearFilter}
+        yearFilter="all"
+      />
+
+      <CmsYearSection
+        title="Dodatkowe arkusze"
+        subtitle="Materiały spoza oficjalnego archiwum CKE"
+        groups={extraCmsGroups}
+        accent="cyan"
+        icon={GraduationCap}
+        yearFilter="all"
       />
     </div>
   );

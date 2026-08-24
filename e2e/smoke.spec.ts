@@ -81,6 +81,21 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
+  test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
+    await page.goto("/trening/arkusze");
+    await expect(
+      page.getByRole("heading", { level: 1, name: /Arkusze/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /Matura CKE/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Matura — maj 2025/ }),
+    ).toBeVisible();
+    await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
+    await expect(page.getByText("TypeError")).toHaveCount(0);
+  });
+
   test("polityka prywatności i regulamin są publiczne", async ({ page }) => {
     await page.goto("/polityka-prywatnosci");
     await expect(

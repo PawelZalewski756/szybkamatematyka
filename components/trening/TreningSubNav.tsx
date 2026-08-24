@@ -29,6 +29,7 @@ export function TreningSubNav() {
   const show =
     pathname === "/trening" ||
     pathname === "/trening/arkusze" ||
+    pathname.startsWith("/trening/arkusze/") ||
     pathname.startsWith("/arkusze/");
 
   if (!show) return null;
