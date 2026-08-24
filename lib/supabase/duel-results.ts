@@ -135,25 +135,8 @@ function saveDuelStatsLocal(userId: string | null, stats: DuelStats): void {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Zapis do Supabase + ostrzeżenie o braku migracji (raz na sesję).          */
+/*  Zapis i odczyt Supabase.                                                  */
 /* -------------------------------------------------------------------------- */
-
-const MISSING_WARN_KEY = "sm_duel_results_warned";
-
-function warnMissingOnce(detail: string): void {
-  if (typeof sessionStorage !== "undefined") {
-    if (sessionStorage.getItem(MISSING_WARN_KEY)) return;
-    try {
-      sessionStorage.setItem(MISSING_WARN_KEY, "1");
-    } catch {
-      /* ignore */
-    }
-  }
-  console.warn(
-    `[szybka-matma] ${detail} — wyniki pojedynków zapisywane tylko lokalnie. ` +
-      "Uruchom w Supabase SQL Editor: supabase/migrations/20260529160000_add_duel_results.sql",
-  );
-}
 
 const DUEL_PROFILE_COLUMNS =
   "duel_played, duel_wins, duel_losses, duel_draws, duel_rating";
