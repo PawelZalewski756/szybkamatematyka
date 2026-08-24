@@ -41,9 +41,13 @@ export async function awardDuelXp(
   profile: Profile,
   result: DuelResult,
   outcome: DuelOutcome,
+  eventId: string,
 ): Promise<DuelRewardSummary> {
   const roundScore = duelRoundScore(result, outcome);
-  const saved = await saveProfileAfterGame(profile, roundScore);
+  const saved = await saveProfileAfterGame(profile, roundScore, {
+    type: "duel",
+    id: eventId,
+  });
   return {
     xpEarned: saved.xpEarned,
     leveledUp: saved.leveledUp,

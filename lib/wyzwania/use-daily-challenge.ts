@@ -161,7 +161,7 @@ export function useDailyChallenge() {
       if (profile && userId) {
         const preview = calculateStreak(profile.lastPlayedDate, profile.streak);
         const xp = challengeXpReward(correct, preview.streak);
-        const saved = await awardDailyChallenge(profile, xp);
+        const saved = await awardDailyChallenge(profile, xp, today);
         profileRef.current = saved;
 
         const reward: ChallengeReward = {

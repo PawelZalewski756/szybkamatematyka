@@ -3,6 +3,8 @@ import { getSupabase } from "@/lib/supabase";
 import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
 import type { PostgrestError } from "@supabase/supabase-js";
 
+const LEADERBOARD_RELATION = "public_leaderboard_profiles";
+
 export type LeaderboardTab = "all" | "minigry" | "pojedynki";
 
 export type LeaderboardEntry = {
@@ -101,7 +103,7 @@ async function fetchLeaderboardRows(
   const column = orderColumn(tab);
 
   const full = await supabase
-    .from("profiles")
+    .from(LEADERBOARD_RELATION)
     .select(selectForTab(tab))
     .order(column, { ascending: false })
     .limit(limit);
@@ -127,7 +129,7 @@ async function fetchLeaderboardRows(
     isPostgrestUndefinedColumnError(error, "minigry_xp")
   ) {
     const fallback = await supabase
-      .from("profiles")
+      .from(LEADERBOARD_RELATION)
       .select(LEADERBOARD_SELECT_FALLBACK)
       .order("xp", { ascending: false })
       .limit(limit);
@@ -135,7 +137,7 @@ async function fetchLeaderboardRows(
     error = fallback.error as PostgrestError | null;
   } else if (error && isPostgrestUndefinedColumnError(error)) {
     const fallback = await supabase
-      .from("profiles")
+      .from(LEADERBOARD_RELATION)
       .select(LEADERBOARD_SELECT_FALLBACK)
       .order("xp", { ascending: false })
       .limit(limit);
@@ -169,7 +171,7 @@ export async function fetchMyLeaderboardRank(
   const supabase = getSupabase();
 
   const full = await supabase
-    .from("profiles")
+    .from(LEADERBOARD_RELATION)
     .select(selectForTab(tab))
     .eq("id", userId)
     .maybeSingle();
@@ -188,7 +190,7 @@ export async function fetchMyLeaderboardRank(
 
     const myScore = scoreForTab(me, tab);
     const { count, error: countError } = await supabase
-      .from("profiles")
+      .from(LEADERBOARD_RELATION)
       .select("*", { count: "exact", head: true })
       .gt("duel_rating", myScore);
 
@@ -204,7 +206,7 @@ export async function fetchMyLeaderboardRank(
 
   if (meError && isPostgrestUndefinedColumnError(meError)) {
     const fallback = await supabase
-      .from("profiles")
+      .from(LEADERBOARD_RELATION)
       .select(LEADERBOARD_SELECT_FALLBACK)
       .eq("id", userId)
       .maybeSingle();
@@ -219,7 +221,7 @@ export async function fetchMyLeaderboardRank(
   const column = orderColumn(tab);
 
   const { count, error: countError } = await supabase
-    .from("profiles")
+    .from(LEADERBOARD_RELATION)
     .select("*", { count: "exact", head: true })
     .gt(column, myScore);
 
@@ -229,7 +231,7 @@ export async function fetchMyLeaderboardRank(
     isPostgrestUndefinedColumnError(countError, "minigry_xp")
   ) {
     const fallbackCount = await supabase
-      .from("profiles")
+      .from(LEADERBOARD_RELATION)
       .select("*", { count: "exact", head: true })
       .gt("xp", myScore);
     if (fallbackCount.error) throw fallbackCount.error;

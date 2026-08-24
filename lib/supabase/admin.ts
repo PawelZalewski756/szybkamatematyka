@@ -18,6 +18,13 @@ export function getAdminEmails(): string[] {
     .filter(Boolean);
 }
 
+function getServerAdminEmails(): string[] {
+  return (process.env.ADMIN_EMAILS ?? "")
+    .split(",")
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean);
+}
+
 /** Czy skonfigurowano jakąkolwiek whitelistę adminów. */
 export function isAdminWhitelistConfigured(): boolean {
   return getAdminEmails().length > 0;
@@ -52,9 +59,8 @@ export function getBearerToken(request: Request): string | null {
  *
  * Polityka:
  * - brak/niepoprawny token → 401,
- * - gdy whitelist ADMIN_EMAILS jest ustawiona → wymagany admin (inaczej 403),
- * - gdy whitelist nie jest ustawiona → wystarczy zalogowany użytkownik
- *   (degradacja: zamyka dziurę „każdy anonim”, choć zalecane jest ustawienie ADMIN_EMAILS).
+ * - brak serwerowej whitelisty ADMIN_EMAILS → odmowa (fail closed),
+ * - poprawna sesja, ale e-mail spoza whitelisty → 403.
  */
 export async function verifyAdminRequest(
   request: Request,
@@ -62,6 +68,15 @@ export async function verifyAdminRequest(
   const token = getBearerToken(request);
   if (!token) {
     return { ok: false, status: 401, error: "Wymagane zalogowanie." };
+  }
+
+  const adminEmails = getServerAdminEmails();
+  if (adminEmails.length === 0) {
+    return {
+      ok: false,
+      status: 403,
+      error: "Panel administratora nie jest skonfigurowany.",
+    };
   }
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
@@ -80,8 +95,10 @@ export async function verifyAdminRequest(
     return { ok: false, status: 401, error: "Sesja wygasła lub jest nieprawidłowa." };
   }
 
-  const admin = isAdminEmail(user.email);
-  if (isAdminWhitelistConfigured() && !admin) {
+  const admin = Boolean(
+    user.email && adminEmails.includes(user.email.trim().toLowerCase()),
+  );
+  if (!admin) {
     return {
       ok: false,
       status: 403,

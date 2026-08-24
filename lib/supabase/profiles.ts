@@ -2,7 +2,6 @@ import { findAvatarUrlInStorage } from "@/lib/supabase/avatar";
 import { getSupabase, getSupabaseOrNull } from "@/lib/supabase";
 import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
 import { calculateLevel } from "@/lib/levelSystem";
-import { gameScoreToXp } from "@/lib/minigry/account-progress";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import {
   FREE_SUBSCRIPTION,
@@ -707,41 +706,76 @@ export async function ensureUserProfile(user: User): Promise<Profile> {
   };
 }
 
+type RewardEventType = "arena" | "minigame" | "daily" | "duel";
+
+type RewardRpcRow = ProfileRow & {
+  xp_earned?: number | null;
+  duplicate?: boolean | null;
+};
+
+async function applyProfileReward(
+  profile: Profile,
+  eventType: RewardEventType,
+  eventId: string,
+  value: number,
+): Promise<{
+  profile: Profile;
+  xpEarned: number;
+  persisted: boolean;
+}> {
+  const supabase = getSupabaseOrNull();
+  if (!supabase) {
+    return { profile, xpEarned: 0, persisted: false };
+  }
+
+  const { data, error } = await supabase.rpc("apply_profile_reward", {
+    p_event_type: eventType,
+    p_event_id: eventId,
+    p_value: Math.max(0, Math.round(value)),
+  });
+
+  const row = (Array.isArray(data) ? data[0] : data) as RewardRpcRow | null;
+  if (error || !row) {
+    console.warn("[szybka-matma] apply_profile_reward:", error);
+    return { profile, xpEarned: 0, persisted: false };
+  }
+
+  const saved = mapRow(row);
+  notifyProfileUpdated(saved);
+  return {
+    profile: saved,
+    xpEarned: Math.max(0, Number(row.xp_earned) || 0),
+    persisted: true,
+  };
+}
+
 export async function awardArenaXp(
   profile: Profile,
   xpAmount: number,
-): Promise<Profile & { leveledUp: boolean; previousLevel: number; xpEarned: number }> {
-  const withXp = applyXpGain(profile, xpAmount);
-
-  const { row, error } = await updateAndSelectProfile(profile.id, {
-    xp: withXp.xp,
-    level: withXp.level,
-  });
-
-  if (error) {
-    console.warn("[szybka-matma] awardArenaXp — zapis XP:", error);
-    notifyProfileUpdated(withXp);
-    return {
-      ...withXp,
-      leveledUp: withXp.leveledUp,
-      previousLevel: withXp.previousLevel,
-      xpEarned: xpAmount,
-    };
+  eventId: string,
+): Promise<
+  Profile & {
+    leveledUp: boolean;
+    previousLevel: number;
+    xpEarned: number;
+    persisted: boolean;
   }
-
-  const saved = mapRow(row as ProfileRow);
-  notifyProfileUpdated(saved);
+> {
+  const previousLevel = profile.level;
+  const reward = await applyProfileReward(profile, "arena", eventId, xpAmount);
   return {
-    ...saved,
-    leveledUp: withXp.leveledUp,
-    previousLevel: withXp.previousLevel,
-    xpEarned: xpAmount,
+    ...reward.profile,
+    leveledUp: reward.profile.level > previousLevel,
+    previousLevel,
+    xpEarned: reward.xpEarned,
+    persisted: reward.persisted,
   };
 }
 
 export async function saveProfileAfterGame(
   profile: Profile,
   roundScore: number,
+  event: { type: "minigame" | "duel"; id: string },
 ): Promise<
   Profile & {
     leveledUp: boolean;
@@ -756,68 +790,19 @@ export async function saveProfileAfterGame(
     persisted: boolean;
   }
 > {
-  const xpEarned = gameScoreToXp(roundScore);
-  const withXp = applyXpGain(profile, xpEarned);
-  const { streak, lastPlayedDate } = calculateStreak(
-    profile.lastPlayedDate,
-    profile.streak,
+  const previousLevel = profile.level;
+  const reward = await applyProfileReward(
+    profile,
+    event.type,
+    event.id,
+    roundScore,
   );
-
-  const minigryXp = profile.minigryXp + xpEarned;
-
-  const fullUpdate = {
-    xp: withXp.xp,
-    level: withXp.level,
-    minigry_xp: minigryXp,
-    streak,
-    last_played_date: lastPlayedDate,
-  };
-
-  let { row, error } = await updateAndSelectProfile(profile.id, fullUpdate);
-
-  if (error && isPostgrestUndefinedColumnError(error)) {
-    ({ row, error } = await updateAndSelectProfile(profile.id, {
-      xp: withXp.xp,
-      level: withXp.level,
-      streak,
-      last_played_date: lastPlayedDate,
-    }));
-    if (error && isPostgrestUndefinedColumnError(error, "minigry_xp")) {
-      ({ row, error } = await updateAndSelectProfile(profile.id, {
-        xp: withXp.xp,
-        level: withXp.level,
-      }));
-    }
-  }
-
-  const resultBase = {
-    ...withXp,
-    minigryXp,
-    streak,
-    lastPlayedDate,
-    leveledUp: withXp.leveledUp,
-    previousLevel: withXp.previousLevel,
-    xpEarned,
-  };
-
-  if (error) {
-    console.warn("[szybka-matma] saveProfileAfterGame — zapis XP bez streak:", error);
-    notifyProfileUpdated(resultBase);
-    return { ...resultBase, persisted: false };
-  }
-
-  const saved = {
-    ...mapRow(row as ProfileRow),
-    streak,
-    lastPlayedDate,
-  };
-  notifyProfileUpdated(saved);
   return {
-    ...saved,
-    leveledUp: withXp.leveledUp,
-    previousLevel: withXp.previousLevel,
-    xpEarned,
-    persisted: true,
+    ...reward.profile,
+    leveledUp: reward.profile.level > previousLevel,
+    previousLevel,
+    xpEarned: reward.xpEarned,
+    persisted: reward.persisted,
   };
 }
 
@@ -830,52 +815,23 @@ export async function saveProfileAfterGame(
 export async function awardDailyChallenge(
   profile: Profile,
   xpAmount: number,
+  eventId: string,
 ): Promise<
-  Profile & { leveledUp: boolean; previousLevel: number; xpEarned: number }
+  Profile & {
+    leveledUp: boolean;
+    previousLevel: number;
+    xpEarned: number;
+    persisted: boolean;
+  }
 > {
-  const xpEarned = Math.max(0, Math.round(xpAmount));
-  const withXp = applyXpGain(profile, xpEarned);
-  const { streak, lastPlayedDate } = calculateStreak(
-    profile.lastPlayedDate,
-    profile.streak,
-  );
-
-  let { row, error } = await updateAndSelectProfile(profile.id, {
-    xp: withXp.xp,
-    level: withXp.level,
-    streak,
-    last_played_date: lastPlayedDate,
-  });
-
-  if (error && isPostgrestUndefinedColumnError(error)) {
-    ({ row, error } = await updateAndSelectProfile(profile.id, {
-      xp: withXp.xp,
-      level: withXp.level,
-    }));
-  }
-
-  const resultBase = {
-    ...withXp,
-    streak,
-    lastPlayedDate,
-    leveledUp: withXp.leveledUp,
-    previousLevel: withXp.previousLevel,
-    xpEarned,
-  };
-
-  if (error) {
-    console.warn("[szybka-matma] awardDailyChallenge — zapis bez streak:", error);
-    notifyProfileUpdated(resultBase);
-    return resultBase;
-  }
-
-  const saved = { ...mapRow(row as ProfileRow), streak, lastPlayedDate };
-  notifyProfileUpdated(saved);
+  const previousLevel = profile.level;
+  const reward = await applyProfileReward(profile, "daily", eventId, xpAmount);
   return {
-    ...saved,
-    leveledUp: withXp.leveledUp,
-    previousLevel: withXp.previousLevel,
-    xpEarned,
+    ...reward.profile,
+    leveledUp: reward.profile.level > previousLevel,
+    previousLevel,
+    xpEarned: reward.xpEarned,
+    persisted: reward.persisted,
   };
 }
 

@@ -166,6 +166,8 @@ export type DuelOutcomeInput = {
   opponentResult: DuelResult;
   mode: DuelMode;
   slug: string;
+  /** Stabilny identyfikator jednego zakończenia — chroni przed podwójną nagrodą. */
+  eventId: string;
 };
 
 export type RecordDuelResult = {
@@ -184,7 +186,8 @@ export type RecordDuelResult = {
 export async function recordDuelOutcome(
   input: DuelOutcomeInput,
 ): Promise<RecordDuelResult> {
-  const { userId, outcome, myResult, opponentResult, mode, slug } = input;
+  const { userId, outcome, myResult, opponentResult, mode, slug, eventId } =
+    input;
 
   // 1) Lokalny fallback — zawsze (gość, offline, brak kolumn).
   const localNext = applyOutcomeToStats(loadDuelStats(userId), outcome);
@@ -197,86 +200,25 @@ export async function recordDuelOutcome(
   const supabase = getSupabaseOrNull();
   if (!supabase) return { stats: localNext, persisted: false };
 
-  // 2) Best-effort: prywatna historia pojedynku.
   try {
-    const { error: insertError } = await supabase.from("duel_results").insert({
-      user_id: userId,
-      outcome,
-      mode,
-      slug,
-      score: myResult.score,
-      opponent_score: opponentResult.score,
-      correct: myResult.correct,
-      total: myResult.total,
-      duration_ms: myResult.durationMs,
-      rating_delta: duelRatingDelta(outcome),
+    const { data, error } = await supabase.rpc("record_duel_result", {
+      p_event_id: eventId,
+      p_outcome: outcome,
+      p_mode: mode,
+      p_slug: slug,
+      p_score: myResult.score,
+      p_opponent_score: opponentResult.score,
+      p_correct: myResult.correct,
+      p_total: myResult.total,
+      p_duration_ms: myResult.durationMs,
     });
-    if (insertError) {
-      const pg = insertError as PostgrestError;
-      if (pg.code === "42P01" || /duel_results/i.test(pg.message ?? "")) {
-        warnMissingOnce("Tabela duel_results niedostępna");
-        return { stats: localNext, persisted: false };
-      }
-      // Inny błąd zapisu historii nie blokuje aktualizacji rankingu.
-      console.warn("[szybka-matma] duel_results insert:", insertError);
-    }
-  } catch (err) {
-    console.warn("[szybka-matma] duel_results insert (wyjątek):", err);
-  }
-
-  // 3) Zagregowane liczniki w profiles (źródło rankingu). DB jest autorytatywne:
-  //    czytamy bieżące wartości, dokładamy rezultat, zapisujemy.
-  try {
-    const { data, error: selectError } = await supabase
-      .from("profiles")
-      .select(DUEL_PROFILE_COLUMNS)
-      .eq("id", userId)
-      .maybeSingle();
-
-    if (selectError) {
-      if (isPostgrestUndefinedColumnError(selectError as PostgrestError)) {
-        warnMissingOnce("Kolumny profiles.duel_* niedostępne");
-        return { stats: localNext, persisted: false };
-      }
-      console.warn("[szybka-matma] profiles duel select:", selectError);
+    if (error) {
+      console.warn("[szybka-matma] record_duel_result:", error);
       return { stats: localNext, persisted: false };
     }
-
-    const row = (data ?? {}) as Record<string, unknown>;
-    const dbStats: DuelStats = normalizeStats({
-      played: Number(row.duel_played) || 0,
-      wins: Number(row.duel_wins) || 0,
-      losses: Number(row.duel_losses) || 0,
-      draws: Number(row.duel_draws) || 0,
-      rating: Number(row.duel_rating) || 0,
-    });
-    const dbNext = applyOutcomeToStats(dbStats, outcome);
-
-    const { error: updateError } = await supabase
-      .from("profiles")
-      .update({
-        duel_played: dbNext.played,
-        duel_wins: dbNext.wins,
-        duel_losses: dbNext.losses,
-        duel_draws: dbNext.draws,
-        duel_rating: dbNext.rating,
-      })
-      .eq("id", userId);
-
-    if (updateError) {
-      if (isPostgrestUndefinedColumnError(updateError as PostgrestError)) {
-        warnMissingOnce("Kolumny profiles.duel_* niedostępne");
-        return { stats: localNext, persisted: false };
-      }
-      console.warn("[szybka-matma] profiles duel update:", updateError);
-      return { stats: localNext, persisted: false };
-    }
-
-    // Synchronizujemy lokalny cache z autorytatywnym stanem DB.
-    saveDuelStatsLocal(userId, dbNext);
-    return { stats: dbNext, persisted: true };
+    return { stats: localNext, persisted: Boolean(data) };
   } catch (err) {
-    console.warn("[szybka-matma] profiles duel update (wyjątek):", err);
+    console.warn("[szybka-matma] record_duel_result (wyjątek):", err);
     return { stats: localNext, persisted: false };
   }
 }

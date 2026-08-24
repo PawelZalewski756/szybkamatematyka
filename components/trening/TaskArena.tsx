@@ -249,9 +249,9 @@ export function TaskArena({
             const xpGain = halfXp
               ? Math.max(1, Math.floor(current.xp_reward / 2))
               : current.xp_reward;
-            const updated = await awardArenaXp(profile, xpGain);
+            const updated = await awardArenaXp(profile, xpGain, current.id);
             setProfile(updated);
-            setXpFlash(xpGain);
+            setXpFlash(updated.xpEarned);
             setTimeout(() => setXpFlash(null), 1800);
             awarded = true;
           }
