@@ -9,6 +9,7 @@
     "dev": "next dev",
     "dev:clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev",
     "build": "next build",
+    "check:bundle": "tsx scripts/checkClientBundleSize.ts",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
