@@ -271,7 +271,7 @@ export function ReviewSession({
                 {task.solutionSteps && task.solutionSteps.length > 0 && (
                   <SolutionSteps
                     steps={task.solutionSteps}
-                    examLabel={task.examSource?.sessionLabel}
+                    examLabel={task.examLabel}
                   />
                 )}
               </motion.div>

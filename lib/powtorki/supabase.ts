@@ -123,12 +123,12 @@ export async function fetchReviewSchedule(
       "task_snapshot",
     )
   ) {
-    result = await supabase
+    result = (await supabase
       .from(TABLE)
       .select(
         "task_id, repetitions, interval_days, easiness, next_review_at, last_result, last_reviewed_at, added_at",
       )
-      .eq("user_id", userId);
+      .eq("user_id", userId)) as typeof result;
   }
 
   if (result.error) {
@@ -160,7 +160,8 @@ export async function upsertReviewItem(
     error &&
     isPostgrestUndefinedColumnError(error as PostgrestError, "task_snapshot")
   ) {
-    const { task_snapshot: _taskSnapshot, ...legacyRow } = row;
+    const legacyRow = { ...row } as Partial<typeof row>;
+    delete legacyRow.task_snapshot;
     ({ error } = await supabase
       .from(TABLE)
       .upsert(legacyRow, { onConflict: "user_id,task_id" }));

@@ -11,6 +11,8 @@ export type ReviewTaskSnapshot = {
   correctAnswer: string;
   explanation: string;
   solutionSteps?: string[];
+  hint?: string;
+  examLabel?: string;
 };
 
 /**

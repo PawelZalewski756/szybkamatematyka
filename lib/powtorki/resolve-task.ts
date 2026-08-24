@@ -23,6 +23,8 @@ export function snapshotFromCatalogTask(task: Task): ReviewTaskSnapshot | null {
     correctAnswer: task.choices[task.correctIndex] ?? "",
     explanation: task.explanation,
     solutionSteps: task.solutionSteps ? [...task.solutionSteps] : undefined,
+    hint: task.hint,
+    examLabel: task.examSource?.sessionLabel,
   };
 }
 

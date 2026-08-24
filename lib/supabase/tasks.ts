@@ -71,7 +71,7 @@ export async function fetchTasksByTopic(
         result.error &&
         isPostgrestUndefinedColumnError(result.error)
       ) {
-        result = await supabase
+        result = (await supabase
           .from("tasks")
           .select(
             "id, exam_type, category, topic, difficulty, content, correct_answer, options, xp_reward",
@@ -79,7 +79,7 @@ export async function fetchTasksByTopic(
           .eq("exam_type", et)
           .eq("category", slug.category)
           .eq("topic", slug.topic)
-          .order("difficulty", { ascending: true });
+          .order("difficulty", { ascending: true })) as typeof result;
       }
 
       if (result.error) throw result.error;
