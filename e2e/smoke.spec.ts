@@ -94,6 +94,41 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("rejestracja nie blokuje się po chwilowej awarii sprawdzania nicku", async ({
+    page,
+  }) => {
+    await page.route("**/rest/v1/profiles*", (route) => route.abort("failed"));
+    await page.route("**/auth/v1/signup*", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          user: {
+            id: "00000000-0000-4000-8000-000000000001",
+            aud: "authenticated",
+            role: "authenticated",
+            email: "nowy@example.com",
+            app_metadata: { provider: "email", providers: ["email"] },
+            user_metadata: { nick: "NowyUczen", nickname: "NowyUczen" },
+          },
+          session: null,
+        }),
+      });
+    });
+
+    await page.goto("/login");
+    await page.getByRole("button", { name: "Załóż konto" }).click();
+    await page.locator('input[name="nick"]').fill("NowyUczen");
+    await page.locator('input[name="email"]').fill("nowy@example.com");
+    await page.locator('input[name="password"]').fill("poprawnehaslo");
+    await page.locator('input[name="passwordConfirm"]').fill("poprawnehaslo");
+    await page.getByRole("button", { name: "Utwórz konto" }).click();
+
+    await expect(page.locator('p[role="alert"]')).toContainText(
+      "Konto utworzone!",
+    );
+  });
+
   test("reset hasła mapuje błąd limitu Supabase", async ({ page }) => {
     await page.route("**/auth/v1/recover*", async (route) => {
       await route.fulfill({

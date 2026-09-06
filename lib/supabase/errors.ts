@@ -46,6 +46,24 @@ export function isPostgrestColumnMissingMessage(
   return /column\s+[\w.]+\s+does not exist|PGRST204/i.test(message);
 }
 
+export function isSupabaseNetworkError(error: unknown): boolean {
+  const message =
+    error instanceof Error
+      ? error.message
+      : typeof error === "string"
+        ? error
+        : error &&
+            typeof error === "object" &&
+            "message" in error &&
+            typeof error.message === "string"
+          ? error.message
+          : "";
+
+  return /typeerror:\s*fetch failed|failed to fetch|networkerror|network request failed|load failed/i.test(
+    message,
+  );
+}
+
 export function formatSupabaseErrorForUser(message: string): string {
   if (isSchemaMissingError(message)) {
     return "Tabele arkusze i zadania nie istnieją w Supabase. Uruchom migrację SQL (instrukcja poniżej).";
@@ -53,7 +71,7 @@ export function formatSupabaseErrorForUser(message: string): string {
   if (isPostgrestColumnMissingMessage(message)) {
     return "Baza profilu wymaga aktualizacji — uruchom migrację SQL w Supabase (supabase/migrations/add_profile_streak_columns.sql).";
   }
-  if (/typeerror:\s*fetch failed|failed to fetch|networkerror/i.test(message)) {
+  if (isSupabaseNetworkError(message)) {
     return "Nie udało się połączyć z bazą. Spróbuj ponownie za chwilę.";
   }
   return message;

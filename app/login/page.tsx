@@ -12,6 +12,7 @@ import {
   isNickTaken,
   normalizeNick,
 } from "@/lib/supabase/profiles";
+import { isSupabaseNetworkError } from "@/lib/supabase/errors";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { authRedirectUrl } from "@/lib/auth-password-reset";
 import { AnimatePresence, motion } from "framer-motion";
@@ -151,10 +152,22 @@ export default function LoginPage() {
       const trimmedEmail = email.trim();
       const normalizedNick = normalizeNick(nick);
 
-      if (await isNickTaken(normalizedNick)) {
-        setIsError(true);
-        setMessage("Ten nick jest już zajęty!");
-        return;
+      try {
+        if (await isNickTaken(normalizedNick)) {
+          setIsError(true);
+          setMessage("Ten nick jest już zajęty!");
+          return;
+        }
+      } catch (nickCheckError) {
+        if (!isSupabaseNetworkError(nickCheckError)) {
+          throw nickCheckError;
+        }
+
+        // Sprawdzenie nicku korzysta z PostgREST, a rejestracja z Auth.
+        // Chwilowa awaria jednego endpointu nie powinna blokować drugiego.
+        console.warn(
+          "[szybka-matma] Nie udało się sprawdzić dostępności nicku; kontynuuję rejestrację.",
+        );
       }
 
       const { data, error } = await supabase.auth.signUp({
