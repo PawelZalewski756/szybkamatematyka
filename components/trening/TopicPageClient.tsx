@@ -171,7 +171,7 @@ function TheoryTab({
 
   return (
     <div className="space-y-6">
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr),12rem] xl:grid-cols-[minmax(0,1fr),14rem] lg:items-start lg:gap-8 xl:gap-10">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_12rem] xl:grid-cols-[minmax(0,1fr)_14rem] lg:items-start lg:gap-8 xl:gap-10">
         <article className="min-w-0 surface-card p-6 sm:p-8">
           <h2 className="text-2xl font-bold text-foreground">{material.title}</h2>
           {headings.length >= 2 && (

@@ -259,7 +259,7 @@ function MaterialyAdminContent() {
         </p>
       )}
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr,minmax(0,22rem)]">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_minmax(0,22rem)]">
         <section className="min-w-0 rounded-3xl border border-surface-border bg-surface/80 p-4 backdrop-blur-xl sm:p-6">
           <div className="mb-4 flex items-center justify-between gap-3">
             <h2 className="text-lg font-black text-white">Lista ({rows.length})</h2>

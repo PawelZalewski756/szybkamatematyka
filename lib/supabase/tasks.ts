@@ -1,4 +1,4 @@
-import { getSupabase } from "@/lib/supabase";
+import { getSupabaseOrNull } from "@/lib/supabase";
 import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
 import { legacyDbSlugsForCkeTopic, legacyExamTypesFor } from "@/lib/trening/cke-slug-normalize";
 import type { ExamType, Task } from "@/types/database";
@@ -104,9 +104,20 @@ export async function fetchTasksByTopic(
   category: string,
   topic: string,
 ): Promise<(Task & { options: string[] })[]> {
-  const supabase = getSupabase();
+  const supabase = getSupabaseOrNull();
   const slugVariants = legacyDbSlugsForCkeTopic(examType, category, topic);
   const examTypes = legacyExamTypesFor(examType);
+
+  if (!supabase) {
+    const cachedRows = await fetchCachedTasks(
+      examType,
+      false,
+      isTaskRow,
+      category,
+      topic,
+    );
+    return cachedRows.map(mapTask);
+  }
 
   for (const et of examTypes) {
     for (const slug of slugVariants) {
@@ -168,8 +179,12 @@ export type TaskTreeRow = Pick<TaskRow, "id" | "category" | "topic">;
 export async function fetchTasksForTree(
   examType: ExamType,
 ): Promise<TaskTreeRow[]> {
-  const supabase = getSupabase();
+  const supabase = getSupabaseOrNull();
   const examTypes = legacyExamTypesFor(examType);
+
+  if (!supabase) {
+    return fetchCachedTasks(examType, true, isTaskTreeRow);
+  }
 
   const { rows, error } = await fetchAllPages<TaskTreeRow>((from, to) =>
     supabase
@@ -190,7 +205,25 @@ export async function fetchTasksForTree(
 export async function fetchTaskCountsByTopic(
   examType?: ExamType,
 ): Promise<Map<string, number>> {
-  const supabase = getSupabase();
+  const supabase = getSupabaseOrNull();
+  if (!supabase) {
+    const counts = new Map<string, number>();
+    const examTypes: ExamType[] = examType
+      ? [examType]
+      : ["matura_podstawowa", "matura_rozszerzona", "8_klasa"];
+    for (const currentExamType of examTypes) {
+      const rows = await fetchCachedTasks(
+        currentExamType,
+        true,
+        isTaskTreeRow,
+      );
+      for (const row of rows) {
+        const key = `${currentExamType}:${row.category}:${row.topic}`;
+        counts.set(key, (counts.get(key) ?? 0) + 1);
+      }
+    }
+    return counts;
+  }
 
   const { rows, error } = await fetchAllPages<TopicTaskCountRow>((from, to) => {
     let query = supabase

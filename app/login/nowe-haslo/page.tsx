@@ -5,24 +5,32 @@ import {
   getAuthErrorMessage,
   validatePasswordResetInput,
 } from "@/lib/auth-errors";
-import { getSupabase } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+
+const SUPABASE_CONFIGURED = isSupabaseConfigured();
+const AUTH_UNAVAILABLE_MESSAGE =
+  "Ustawianie nowego hasła jest obecnie niedostępne. Spróbuj ponownie później.";
 
 export default function NoweHasloPage() {
   const router = useRouter();
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [loading, setLoading] = useState(false);
-  const [checking, setChecking] = useState(true);
+  const [checking, setChecking] = useState(SUPABASE_CONFIGURED);
   const [canReset, setCanReset] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
-  const [isError, setIsError] = useState(false);
+  const [message, setMessage] = useState<string | null>(
+    SUPABASE_CONFIGURED ? null : AUTH_UNAVAILABLE_MESSAGE,
+  );
+  const [isError, setIsError] = useState(!SUPABASE_CONFIGURED);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
+    if (!SUPABASE_CONFIGURED) return;
+
     const supabase = getSupabase();
     let cancelled = false;
 
@@ -92,6 +100,12 @@ export default function NoweHasloPage() {
     if (validationError) {
       setIsError(true);
       setMessage(validationError);
+      return;
+    }
+
+    if (!SUPABASE_CONFIGURED) {
+      setIsError(true);
+      setMessage(AUTH_UNAVAILABLE_MESSAGE);
       return;
     }
 

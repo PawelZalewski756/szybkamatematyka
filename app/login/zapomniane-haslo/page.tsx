@@ -6,7 +6,7 @@ import {
   getAuthErrorMessage,
   validateEmailInput,
 } from "@/lib/auth-errors";
-import { getSupabase } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,12 +21,19 @@ export default function ZapomnianeHasloPage() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
+    if (!isSupabaseConfigured()) return;
+
     const supabase = getSupabase();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        router.replace("/");
-      }
-    });
+    void supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (session?.user) {
+          router.replace("/");
+        }
+      })
+      .catch((error: unknown) => {
+        console.warn("[szybka-matma] password reset session check:", error);
+      });
   }, [router]);
 
   const handleSubmit = async () => {
@@ -37,6 +44,14 @@ export default function ZapomnianeHasloPage() {
     if (validationError) {
       setIsError(true);
       setMessage(validationError);
+      return;
+    }
+
+    if (!isSupabaseConfigured()) {
+      setIsError(true);
+      setMessage(
+        "Odzyskiwanie hasła jest obecnie niedostępne. Spróbuj ponownie później.",
+      );
       return;
     }
 

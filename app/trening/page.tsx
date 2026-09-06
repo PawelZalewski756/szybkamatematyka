@@ -13,6 +13,7 @@ import {
 } from "@/lib/trening/progress";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
+import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import {
@@ -626,6 +627,7 @@ export default function TreningPage() {
 
   useEffect(() => {
     if (loading) return;
+    if (!isSupabaseConfigured()) return;
     try {
       if (localStorage.getItem(PATH_BANNER_KEY)) return;
     } catch {
@@ -635,25 +637,29 @@ export default function TreningPage() {
     let cancelled = false;
 
     void (async () => {
-      const { getSupabase } = await import("@/lib/supabase");
-      const {
-        data: { session },
-      } = await getSupabase().auth.getSession();
-      const user = session?.user;
-      if (!user || cancelled) return;
+      try {
+        const { getSupabase } = await import("@/lib/supabase");
+        const {
+          data: { session },
+        } = await getSupabase().auth.getSession();
+        const user = session?.user;
+        if (!user || cancelled) return;
 
-      const solvedIds = await cachedSolvedTaskIds(user.id);
-      if (solvedIds.size > 0 || cancelled) return;
+        const solvedIds = await cachedSolvedTaskIds(user.id);
+        if (solvedIds.size > 0 || cancelled) return;
 
-      const profile = await fetchProfileAllowEmpty(user.id);
-      const xp = profile?.xp ?? 0;
-      if (xp >= ONBOARDING_XP_MAX || cancelled) return;
+        const profile = await fetchProfileAllowEmpty(user.id);
+        const xp = profile?.xp ?? 0;
+        if (xp >= ONBOARDING_XP_MAX || cancelled) return;
 
-      const href = findFirstPlayableTopic(exam, selectedExam);
-      if (!href || cancelled) return;
+        const href = findFirstPlayableTopic(exam, selectedExam);
+        if (!href || cancelled) return;
 
-      setPathBannerHref(href);
-      setShowPathBanner(true);
+        setPathBannerHref(href);
+        setShowPathBanner(true);
+      } catch (error) {
+        console.warn("[szybka-matma] training path banner:", error);
+      }
     })();
 
     return () => {

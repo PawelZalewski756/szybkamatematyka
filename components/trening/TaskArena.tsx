@@ -9,6 +9,7 @@ import {
   ensureUserProfile,
   type Profile,
 } from "@/lib/supabase/profiles";
+import { getSupabaseOrNull } from "@/lib/supabase";
 import {
   fetchSolvedTaskIds,
   markTaskSolved,
@@ -117,11 +118,12 @@ export function TaskArena({
     setActionError(null);
 
     try {
+      const supabase = getSupabaseOrNull();
       const [rows, sessionResult] = await Promise.all([
         fetchTasksByTopic(examType, category, topic),
-        import("@/lib/supabase").then(({ getSupabase }) =>
-          getSupabase().auth.getSession(),
-        ),
+        supabase
+          ? supabase.auth.getSession()
+          : Promise.resolve({ data: { session: null } }),
       ]);
 
       let solvedIds = new Set<string>();

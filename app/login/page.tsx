@@ -12,7 +12,7 @@ import {
   isNickTaken,
   normalizeNick,
 } from "@/lib/supabase/profiles";
-import { getSupabase } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -35,12 +35,19 @@ export default function LoginPage() {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
+    if (!isSupabaseConfigured()) return;
+
     const supabase = getSupabase();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        router.replace("/");
-      }
-    });
+    void supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (session?.user) {
+          router.replace("/");
+        }
+      })
+      .catch((error: unknown) => {
+        console.warn("[szybka-matma] login session check:", error);
+      });
   }, [router]);
 
   const clearMessage = () => {
@@ -68,6 +75,12 @@ export default function LoginPage() {
     if (validationError) {
       setIsError(true);
       setMessage(validationError);
+      return;
+    }
+
+    if (!isSupabaseConfigured()) {
+      setIsError(true);
+      setMessage("Logowanie jest obecnie niedostępne. Spróbuj ponownie później.");
       return;
     }
 
@@ -111,6 +124,12 @@ export default function LoginPage() {
     if (validationError) {
       setIsError(true);
       setMessage(validationError);
+      return;
+    }
+
+    if (!isSupabaseConfigured()) {
+      setIsError(true);
+      setMessage("Rejestracja jest obecnie niedostępna. Spróbuj ponownie później.");
       return;
     }
 
