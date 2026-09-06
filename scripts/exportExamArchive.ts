@@ -8,6 +8,7 @@ import fs from "fs";
 import path from "path";
 import { inferDzialMatura } from "../lib/baza-zadan/cke/parse-matura-page";
 import { parseAbcd } from "../lib/baza-zadan/cke/parse-abcd";
+import { inferCorrectChoiceIndex } from "../lib/baza-zadan/cke/answer-key";
 import { parseSolutionSteps } from "../lib/baza-zadan/parse-solution-steps";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 import { bazaCategoryForCmsDzial } from "../lib/trening/taxonomy-bridge";
@@ -71,16 +72,20 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     parsed.answer ??
     parsed.steps[parsed.steps.length - 1] ??
     task.rozwiazanie.slice(0, 280);
+  const correctIndex = hasChoices
+    ? inferCorrectChoiceIndex(parsed.answer, choices)
+    : null;
+  const isOpen = !hasChoices || correctIndex === null;
 
   return {
     id,
     title: `${sheet.nazwa} — zad. ${task.numer}`,
     category,
-    difficulty: inferDifficulty(task.numer, hasChoices),
+    difficulty: inferDifficulty(task.numer, !isOpen),
     forPaths: ["liceum", "technikum", "zawodowa"],
-    prompt,
-    choices: choices.length >= 2 ? choices : [choices[0] ?? "—"],
-    correctIndex: 0,
+    prompt: isOpen && hasChoices ? `${prompt}\n\nRozwiąż zadanie.` : prompt,
+    choices: isOpen ? ["Zadanie otwarte — patrz rozwiązanie"] : choices,
+    correctIndex: isOpen ? 0 : correctIndex,
     explanation,
     solutionSteps: parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie],
     examSource: {

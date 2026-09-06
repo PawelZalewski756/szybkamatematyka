@@ -4,6 +4,7 @@ import {
   getOfficialCkeSheetTasks,
   listOfficialCkeSheets,
 } from "@/lib/baza-zadan/exams/archive-catalog";
+import { EXAM_ARCHIVE_TASKS } from "@/lib/baza-zadan/exams/cke-archive.generated";
 import { officialCkeSheetHref, officialCkeSheetKind } from "@/lib/baza-zadan/exams/archive-sheet-meta";
 
 describe("listOfficialCkeSheets", () => {
@@ -23,6 +24,36 @@ describe("getOfficialCkeSheetTasks", () => {
     const tasks = getOfficialCkeSheetTasks("arkusz-m25-maj");
     expect(tasks).toHaveLength(sheet!.taskIds.length);
     expect(tasks[0]?.id).toBe("cke-m25-maj-z01");
+  });
+});
+
+describe("EXAM_ARCHIVE_TASKS answer keys", () => {
+  it("does not publish an out-of-range or implicit A key", () => {
+    const multipleChoice = EXAM_ARCHIVE_TASKS.filter(
+      (task) => task.choices.length > 1,
+    );
+
+    expect(multipleChoice.length).toBeGreaterThan(0);
+    expect(
+      multipleChoice.every(
+        (task) =>
+          task.correctIndex >= 0 && task.correctIndex < task.choices.length,
+      ),
+    ).toBe(true);
+    expect(
+      EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m15-maj-z02")
+        ?.correctIndex,
+    ).toBe(3);
+  });
+
+  it("keeps unresolved image and composite solutions open", () => {
+    expect(
+      EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m15-maj-z03")
+        ?.choices,
+    ).toHaveLength(1);
+    expect(
+      EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m23-maj-z12")?.choices,
+    ).toHaveLength(1);
   });
 });
 

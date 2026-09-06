@@ -31,10 +31,21 @@ export function isMultiClaimTrueFalse(tresc: string): boolean {
   return prawdaLabels.length >= 2;
 }
 
+function isCompositeOrExtendedChoiceTask(tresc: string): boolean {
+  return (
+    /(?:^|\s)[EF]\)\s/i.test(tresc) ||
+    /\bZadanie\s+\d+\.\d+\b/i.test(tresc) ||
+    /\bwybierz\s+(?:dwie|dwa|więcej niż jedną)\b/i.test(tresc)
+  );
+}
+
 export function parseAbcd(tresc: string): ParsedAbcd {
   const cleaned = cleanCkeTaskMarkup(tresc);
 
-  if (isMultiClaimTrueFalse(cleaned)) {
+  if (
+    isMultiClaimTrueFalse(cleaned) ||
+    isCompositeOrExtendedChoiceTask(cleaned)
+  ) {
     return {
       prompt: cleaned,
       choices: [OPEN_TASK_PLACEHOLDER],

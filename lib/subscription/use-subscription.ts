@@ -28,9 +28,9 @@ export type SubscriptionState = {
  * Hook czytający status subskrypcji bieżącego użytkownika.
  *
  * Źródłem prawdy jest kolumna `profiles.subscription_status` (zapisywana przez
- * webhook Stripe). Hook słucha też zdarzenia PROFILE_UPDATED_EVENT oraz zmian
- * sesji Supabase, więc UI odświeża się po (od)zalogowaniu. Działa bezpiecznie
- * bez konfiguracji Supabase — wtedy zwraca stan „niezalogowany / free".
+ * webhook Stripe i odczytywana przez bezpieczne RPC właściciela). Hook słucha
+ * też zmian sesji Supabase, więc UI odświeża się po (od)zalogowaniu. Działa
+ * bezpiecznie bez konfiguracji Supabase — wtedy zwraca stan „niezalogowany / free".
  */
 export function useSubscription(): SubscriptionState {
   const [loading, setLoading] = useState(true);
@@ -77,7 +77,7 @@ export function useSubscription(): SubscriptionState {
 
     const onProfileUpdated = (event: Event) => {
       const detail = (event as CustomEvent<ProfileUpdatedDetail>).detail;
-      if (detail?.profile) {
+      if (detail?.profile?.subscriptionStatus !== undefined) {
         setSnapshot(subscriptionSnapshotFromProfile(detail.profile));
       }
     };

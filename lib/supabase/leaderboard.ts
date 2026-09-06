@@ -193,7 +193,7 @@ export async function fetchMyLeaderboardRank(
     const myScore = scoreForTab(me, tab);
     const { count, error: countError } = await supabase
       .from("profiles")
-      .select("*", { count: "exact", head: true })
+      .select("id", { count: "exact", head: true })
       .gt("duel_rating", myScore)
       .retry(false);
 
@@ -226,7 +226,7 @@ export async function fetchMyLeaderboardRank(
 
   const { count, error: countError } = await supabase
     .from("profiles")
-    .select("*", { count: "exact", head: true })
+    .select("id", { count: "exact", head: true })
     .gt(column, myScore)
     .retry(false);
 
@@ -237,7 +237,7 @@ export async function fetchMyLeaderboardRank(
   ) {
     const fallbackCount = await supabase
       .from("profiles")
-      .select("*", { count: "exact", head: true })
+      .select("id", { count: "exact", head: true })
       .gt("xp", myScore)
       .retry(false);
     if (fallbackCount.error) throw fallbackCount.error;

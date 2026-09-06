@@ -1,6 +1,9 @@
 import { createClient, type User } from "@supabase/supabase-js";
 import { getBearerToken } from "@/lib/supabase/admin";
-import { isProStatus } from "@/lib/subscription/status";
+import {
+  isProStatus,
+  normalizeSubscriptionStatus,
+} from "@/lib/subscription/status";
 
 /**
  * Weryfikacja zalogowanego użytkownika dla route handlerów płatności.
@@ -89,11 +92,7 @@ export async function verifyTaskAssistRequest(
     auth: { persistSession: false, autoRefreshToken: false },
   });
 
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("subscription_status")
-    .eq("id", auth.user.id)
-    .maybeSingle();
+  const { data, error } = await supabase.rpc("get_my_subscription");
 
   if (error) {
     console.error("[verifyTaskAssistRequest]", error);
@@ -104,9 +103,14 @@ export async function verifyTaskAssistRequest(
     };
   }
 
+  const row = (Array.isArray(data) ? data[0] : data) as
+    | { subscription_status?: string | null }
+    | null
+    | undefined;
+
   return {
     ok: true,
     user: auth.user,
-    isPro: isProStatus(data?.subscription_status),
+    isPro: isProStatus(normalizeSubscriptionStatus(row?.subscription_status)),
   };
 }

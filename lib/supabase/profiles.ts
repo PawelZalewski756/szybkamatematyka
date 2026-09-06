@@ -32,12 +32,7 @@ export type Profile = {
   lastNickUpdate: string | null;
   /** Klasa ucznia (migracja add_profile_school_class). */
   schoolClass?: SchoolClassPath | null;
-  /**
-   * Subskrypcja (dodane w migracji *_add_subscription_columns). Pola opcjonalne,
-   * aby aplikacja działała także zanim migracja zostanie uruchomiona — brak
-   * kolumn jest tolerowany (fallback w łańcuchu SELECT), a `undefined` traktujemy
-   * jako plan darmowy.
-   */
+  /** Subskrypcja odczytywana osobnym, ograniczonym zapytaniem dla właściciela. */
   subscriptionStatus?: SubscriptionStatus;
   subscriptionPlan?: SubscriptionPlanId | null;
   subscriptionCurrentPeriodEnd?: string | null;
@@ -84,35 +79,26 @@ const STREAK_SELECT = `${MINIGRY_SELECT}, streak, last_played_date`;
 const AVATAR_SELECT = `${MINIGRY_SELECT}, avatar_url`;
 const FULL_SELECT = `${STREAK_SELECT}, avatar_url`;
 const NICK_UPDATE_SELECT = `${FULL_SELECT}, last_nick_update`;
-const SUBSCRIPTION_COLUMNS =
-  "subscription_status, subscription_plan, subscription_current_period_end, subscription_cancel_at_period_end";
-const SUBSCRIPTION_SELECT = `${NICK_UPDATE_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
-const SCHOOL_CLASS_SELECT = `${SUBSCRIPTION_SELECT}, school_class`;
+const SCHOOL_CLASS_SELECT = `${NICK_UPDATE_SELECT}, school_class`;
 
 /** Ścieżka bez minigry_xp (kolumna często brakuje w starszych bazach). */
 const STREAK_NO_MINIGRY_SELECT = `${CORE_SELECT}, streak, last_played_date`;
 const AVATAR_NO_MINIGRY_SELECT = `${STREAK_NO_MINIGRY_SELECT}, avatar_url`;
 const NICK_NO_MINIGRY_SELECT = `${AVATAR_NO_MINIGRY_SELECT}, last_nick_update`;
-const SUBSCRIPTION_NO_MINIGRY_SELECT = `${NICK_NO_MINIGRY_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
-const SCHOOL_NO_MINIGRY_SELECT = `${SUBSCRIPTION_NO_MINIGRY_SELECT}, school_class`;
-/** Gdy brakuje streak / avatar — nadal czytaj subskrypcję. */
-const SUBSCRIPTION_BARE_SELECT = `${CORE_SELECT}, ${SUBSCRIPTION_COLUMNS}`;
-const SCHOOL_BARE_SELECT = `${SUBSCRIPTION_BARE_SELECT}, school_class`;
+const SCHOOL_NO_MINIGRY_SELECT = `${NICK_NO_MINIGRY_SELECT}, school_class`;
+const SCHOOL_BARE_SELECT = `${CORE_SELECT}, school_class`;
 
 const PROFILE_SELECT_FALLBACK_CHAIN = [
   SCHOOL_CLASS_SELECT,
-  SUBSCRIPTION_SELECT,
   NICK_UPDATE_SELECT,
   FULL_SELECT,
   AVATAR_SELECT,
   STREAK_SELECT,
   SCHOOL_NO_MINIGRY_SELECT,
-  SUBSCRIPTION_NO_MINIGRY_SELECT,
   NICK_NO_MINIGRY_SELECT,
   AVATAR_NO_MINIGRY_SELECT,
   STREAK_NO_MINIGRY_SELECT,
   SCHOOL_BARE_SELECT,
-  SUBSCRIPTION_BARE_SELECT,
   CORE_SELECT,
 ] as const;
 
@@ -898,8 +884,8 @@ export function subscriptionSnapshotFromProfile(
 }
 
 /**
- * Lekkie zapytanie tylko o kolumny subskrypcji — niezależne od fallbacku profilu
- * (minigry_xp, streak itd.). Używane przez hook useSubscription.
+ * Lekkie zapytanie o własną subskrypcję. Nie czyta prywatnych kolumn przez
+ * PostgREST — migracja udostępnia wyłącznie funkcję RPC ograniczoną do auth.uid().
  */
 export async function fetchSubscriptionSnapshotForUser(
   userId: string,
@@ -907,24 +893,19 @@ export async function fetchSubscriptionSnapshotForUser(
   const supabase = getSupabaseOrNull();
   if (!supabase) return FREE_SUBSCRIPTION;
 
-  const { data, error } = await supabase
-    .from("profiles")
-    .select(`id, ${SUBSCRIPTION_COLUMNS}`)
-    .eq("id", userId)
-    .maybeSingle()
-    .retry(false);
+  void userId;
+  const { data, error } = await supabase.rpc("get_my_subscription");
 
   if (error) {
-    if (isPostgrestUndefinedColumnError(error as PostgrestError)) {
-      return FREE_SUBSCRIPTION;
-    }
     console.error("[szybka-matma] fetchSubscriptionSnapshotForUser:", error);
     return FREE_SUBSCRIPTION;
   }
 
-  if (!data) return FREE_SUBSCRIPTION;
+  const row = (
+    Array.isArray(data) ? data[0] : data
+  ) as ProfileRow | null | undefined;
+  if (!row) return FREE_SUBSCRIPTION;
 
-  const row = data as ProfileRow;
   return {
     status: normalizeSubscriptionStatus(row.subscription_status),
     planId: readSubscriptionPlan(row),

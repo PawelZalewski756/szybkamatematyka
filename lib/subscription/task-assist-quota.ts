@@ -120,16 +120,13 @@ export async function consumeAssistQuota(
     };
   }
 
-  const { data: row, error: readError } = await sb
-    .from("profiles")
-    .select("ai_assist_period, ai_assist_count")
-    .eq("id", userId)
-    .maybeSingle();
+  const { data, error } = await sb.rpc("consume_ai_assist_quota", {
+    p_user_id: userId,
+    p_period: period,
+    p_limit: FREE_MONTHLY_ASSIST_LIMIT,
+  });
 
-  if (
-    readError &&
-    isPostgrestUndefinedColumnError(readError as PostgrestError)
-  ) {
+  if (error && isPostgrestUndefinedColumnError(error as PostgrestError)) {
     return {
       ok: false,
       quota: freeQuota(period, 0),
@@ -138,8 +135,8 @@ export async function consumeAssistQuota(
     };
   }
 
-  if (readError) {
-    console.error("[task-assist-quota] read before consume:", readError);
+  if (error) {
+    console.error("[task-assist-quota] atomic consume failed:", error);
     return {
       ok: false,
       quota: freeQuota(period, 0),
@@ -147,32 +144,19 @@ export async function consumeAssistQuota(
     };
   }
 
-  const used = readUsed(row as ProfileQuotaRow, period);
-  if (used >= FREE_MONTHLY_ASSIST_LIMIT) {
+  const result = (
+    Array.isArray(data) ? data[0] : data
+  ) as { allowed?: boolean; period?: string; used?: number } | null | undefined;
+  const used = Math.max(0, Number(result?.used) || 0);
+  const quota = freeQuota(result?.period ?? period, used);
+
+  if (!result?.allowed) {
     return {
       ok: false,
-      quota: freeQuota(period, used),
+      quota,
       error: `Wykorzystałeś ${FREE_MONTHLY_ASSIST_LIMIT} darmowych zapytań w ${assistPeriodLabel(period)}. Plan Pro daje nielimitowany dostęp.`,
     };
   }
 
-  const nextCount = used + 1;
-  const { error: updateError } = await sb
-    .from("profiles")
-    .update({
-      ai_assist_period: period,
-      ai_assist_count: nextCount,
-    })
-    .eq("id", userId);
-
-  if (updateError) {
-    console.error("[task-assist-quota] consume update failed:", updateError);
-    return {
-      ok: false,
-      quota: freeQuota(period, used),
-      error: "Nie udało się zarejestrować zapytania.",
-    };
-  }
-
-  return { ok: true, quota: freeQuota(period, nextCount) };
+  return { ok: true, quota };
 }

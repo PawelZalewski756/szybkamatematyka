@@ -66,6 +66,24 @@ create policy "profiles_update_own"
   on public.profiles for update to authenticated
   using (auth.uid() = id) with check (auth.uid() = id);
 
+-- Profile rows are used by the public leaderboard, but billing and quota
+-- columns must never be exposed through PostgREST. Later migrations add any
+-- optional public columns that exist in a deployed database.
+revoke select on table public.profiles from anon, authenticated;
+grant select (
+  id,
+  created_at,
+  nick,
+  nickname,
+  xp,
+  level,
+  streak,
+  last_played_date,
+  avatar_url,
+  last_nick_update,
+  hearts
+) on table public.profiles to anon, authenticated;
+
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql

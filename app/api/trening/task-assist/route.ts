@@ -155,6 +155,13 @@ export async function POST(request: Request) {
     const submittedTaskContent = readString(body, "taskContent", 8_000);
     const submittedCorrectAnswer = readString(body, "correctAnswer", 500);
 
+    if (mode !== "hint" && mode !== "grade" && mode !== "ask") {
+      return Response.json(
+        { error: 'Pole mode musi być "hint", "grade" lub "ask".' },
+        { status: 400 },
+      );
+    }
+
     if (!submittedTaskContent || !submittedCorrectAnswer) {
       return Response.json(
         { error: "Pola taskContent i correctAnswer są wymagane." },
@@ -187,21 +194,43 @@ export async function POST(request: Request) {
           Math.min(10, Math.round(readNumber(body, "maxPoints") ?? 1)),
         );
 
-    if (!isPro) {
-      const current = await readAssistQuota(user.id, false);
-      if ((current.remaining ?? 0) <= 0) {
-        return Response.json(
-          {
-            error: `Wykorzystałeś ${current.limit} darmowych zapytań w ${current.periodLabel}. Plan Pro daje nielimitowany dostęp.`,
-            quota: current,
-          },
-          { status: 429 },
-        );
-      }
+    const studentAnswer = mode === "grade"
+      ? readString(body, "studentAnswer")
+      : undefined;
+    const userMessage = mode === "ask"
+      ? readString(body, "userMessage")
+      : undefined;
+
+    if (mode === "grade" && !studentAnswer) {
+      return Response.json(
+        { error: "Pole studentAnswer jest wymagane dla trybu grade." },
+        { status: 400 },
+      );
+    }
+    if (mode === "ask" && !userMessage) {
+      return Response.json(
+        { error: "Pole userMessage jest wymagane dla trybu ask." },
+        { status: 400 },
+      );
     }
 
     const examLabel = readString(body, "examLabel");
     const topicLabel = readString(body, "topicLabel");
+    let reservedQuota: AssistQuotaSnapshot | null = null;
+
+    if (!isPro) {
+      const reservation = await consumeAssistQuota(user.id, false);
+      if (!reservation.ok) {
+        const status = reservation.error.startsWith("Wykorzystałeś")
+          ? 429
+          : 503;
+        return Response.json(
+          { error: reservation.error, quota: reservation.quota },
+          { status },
+        );
+      }
+      reservedQuota = reservation.quota;
+    }
 
     async function finish<T extends Record<string, unknown>>(
       payload: T,
@@ -210,15 +239,10 @@ export async function POST(request: Request) {
         return jsonWithQuota(payload, await readAssistQuota(user.id, true));
       }
 
-      const consumed = await consumeAssistQuota(user.id, false);
-      if (!consumed.ok) {
-        const status = consumed.error.startsWith("Wykorzystałeś") ? 429 : 503;
-        return Response.json(
-          { error: consumed.error, quota: consumed.quota },
-          { status },
-        );
+      if (!reservedQuota) {
+        throw new Error("Brak rezerwacji limitu asysty.");
       }
-      return jsonWithQuota(payload, consumed.quota);
+      return jsonWithQuota(payload, reservedQuota);
     }
 
     if (mode === "hint") {
@@ -239,20 +263,12 @@ export async function POST(request: Request) {
     }
 
     if (mode === "grade") {
-      const studentAnswer = readString(body, "studentAnswer");
-      if (!studentAnswer) {
-        return Response.json(
-          { error: "Pole studentAnswer jest wymagane dla trybu grade." },
-          { status: 400 },
-        );
-      }
-
       const grade = await gradeOpenTaskAnswer({
         examLabel,
         topicLabel,
         taskContent,
         correctAnswer,
-        studentAnswer,
+        studentAnswer: studentAnswer!,
         maxPoints,
         markingNotes: readString(body, "markingNotes"),
       });
@@ -260,20 +276,12 @@ export async function POST(request: Request) {
     }
 
     if (mode === "ask") {
-      const userMessage = readString(body, "userMessage");
-      if (!userMessage) {
-        return Response.json(
-          { error: "Pole userMessage jest wymagane dla trybu ask." },
-          { status: 400 },
-        );
-      }
-
       const reply = await generateTaskAskReply({
         examLabel,
         topicLabel,
         taskContent,
         correctAnswer,
-        userMessage,
+        userMessage: userMessage!,
         hintContext: readString(body, "hintContext"),
         gradeContext: readString(body, "gradeContext"),
         conversationHistory: readConversation(body, "conversationHistory"),
@@ -281,10 +289,7 @@ export async function POST(request: Request) {
       return finish({ reply });
     }
 
-    return Response.json(
-      { error: 'Pole mode musi być "hint", "grade" lub "ask".' },
-      { status: 400 },
-    );
+    throw new Error("Nieobsługiwany tryb asysty.");
   } catch (err) {
     console.error("[task-assist]", err);
     const message =
