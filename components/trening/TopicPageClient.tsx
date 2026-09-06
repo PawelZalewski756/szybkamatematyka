@@ -3,8 +3,9 @@
 import { TaskArena } from "@/components/trening/TaskArena";
 import { TheorySectionView } from "@/components/trening/TheorySectionView";
 import { TheoryTableOfContents } from "@/components/trening/TheoryTableOfContents";
-import { isSupabaseConfigured } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
+import { saveRecentTrainingTopic } from "@/lib/trening/recent-topic";
 import {
   parseTheorySections,
   sectionsToHeadings,
@@ -267,6 +268,35 @@ export function TopicPageClient({
     },
     [examType, category, topic],
   );
+
+  useEffect(() => {
+    const examKey =
+      examType === "8_klasa"
+        ? ("8_klasa" as const)
+        : ("matura_podstawowa" as const);
+    const recentTopic = { examKey, category, topic };
+
+    saveRecentTrainingTopic(recentTopic);
+
+    if (!isSupabaseConfigured()) return;
+
+    let cancelled = false;
+    try {
+      const supabase = getSupabase();
+      void supabase.auth.getSession().then(({ data }) => {
+        const userId = data.session?.user?.id;
+        if (!cancelled && userId) {
+          saveRecentTrainingTopic(recentTopic, userId);
+        }
+      });
+    } catch {
+      // Runtime config may still be loading; the guest snapshot is enough.
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [category, examType, topic]);
 
   useEffect(() => {
     if (!hasInitialMaterial) {

@@ -103,7 +103,13 @@ body {
 
   @media (min-width: 1280px) {
     .page-container {
-      max-width: 72rem;
+      max-width: 96rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .page-container {
+      max-width: 108rem;
     }
   }
 

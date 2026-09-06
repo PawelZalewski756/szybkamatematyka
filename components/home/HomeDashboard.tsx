@@ -4,6 +4,14 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { learningPathLabel } from "@/lib/learning-path";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
+import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
+import {
+  loadRecentTrainingTopic,
+  type RecentTrainingTopic,
+} from "@/lib/trening/recent-topic";
+import { buildTopicHref } from "@/lib/trening/slugs";
+import { topicDisplayName } from "@/lib/trening/slugs";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -18,6 +26,7 @@ import {
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const ENTRY_PATHS = [
   {
@@ -72,7 +81,105 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-function ProductPreview({ pathLabel }: { pathLabel: string }) {
+function ProductPreview({
+  path,
+  pathLabel,
+}: {
+  path: "sp" | "srednia";
+  pathLabel: string;
+}) {
+  const sampleTopic =
+    path === "sp"
+      ? {
+          examKey: "8_klasa" as const,
+          topic: "rownania",
+          topicLabel: "Równania",
+          levelLabel: "egzamin ósmoklasisty",
+        }
+      : {
+          examKey: "matura_podstawowa" as const,
+          topic: "rownania_liniowe",
+          topicLabel: "Równania liniowe",
+          levelLabel: "poziom podstawowy",
+        };
+  const [recentTopic, setRecentTopic] =
+    useState<RecentTrainingTopic | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadRecentTopic = async () => {
+      let userId: string | null = null;
+
+      if (isSupabaseConfigured()) {
+        try {
+          const { data } = await getSupabase().auth.getSession();
+          userId = data.session?.user?.id ?? null;
+        } catch (error) {
+          console.warn("[szybka-matma] dashboard session:", error);
+        }
+      }
+
+      const localTopic = loadRecentTrainingTopic(userId);
+      if (localTopic) {
+        if (!cancelled) setRecentTopic(localTopic);
+        return;
+      }
+
+      if (!userId || !isSupabaseConfigured()) {
+        if (!cancelled) setRecentTopic(null);
+        return;
+      }
+
+      const latestSolved = await fetchLatestSolvedTopic(userId);
+      if (cancelled) return;
+
+      if (
+        latestSolved?.examType === "matura_podstawowa" ||
+        latestSolved?.examType === "8_klasa"
+      ) {
+        setRecentTopic({
+          examKey: latestSolved.examType,
+          category: latestSolved.category,
+          topic: latestSolved.topic,
+          visitedAt: Date.parse(latestSolved.solvedAt) || Date.now(),
+        });
+      } else {
+        setRecentTopic(null);
+      }
+    };
+
+    void loadRecentTopic();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const hasRecentTopic = recentTopic !== null;
+  const activeTopic = recentTopic ?? {
+    examKey: sampleTopic.examKey,
+    category: "algebra",
+    topic: sampleTopic.topic,
+  };
+  const activeTopicLabel = recentTopic
+    ? topicDisplayName(
+        recentTopic.examKey,
+        recentTopic.category,
+        recentTopic.topic,
+      )
+    : sampleTopic.topicLabel;
+  const activeLevelLabel = recentTopic
+    ? recentTopic.examKey === "8_klasa"
+      ? "egzamin ósmoklasisty"
+      : "poziom podstawowy"
+    : sampleTopic.levelLabel;
+  const topicHref = buildTopicHref(
+    activeTopic.examKey,
+    activeTopic.category,
+    activeTopic.topic,
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
@@ -89,7 +196,9 @@ function ProductPreview({ pathLabel }: { pathLabel: string }) {
       <div className="relative">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-overline">Przykładowa sesja</p>
+            <p className="text-overline">
+              {hasRecentTopic ? "Ostatni temat" : "Przykładowa sesja"}
+            </p>
             <p className="mt-1 text-lg font-extrabold tracking-tight text-foreground">
               {pathLabel}
             </p>
@@ -99,56 +208,83 @@ function ProductPreview({ pathLabel }: { pathLabel: string }) {
           </span>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-surface-border bg-background/70 p-4 sm:p-5">
+        <Link
+          href={topicHref}
+          className="group mt-6 block rounded-2xl border border-surface-border bg-background/70 p-4 transition-colors hover:border-accent/60 hover:bg-background sm:p-5"
+          aria-label={`${hasRecentTopic ? "Wróć do tematu" : "Otwórz temat"} ${activeTopicLabel}`}
+        >
           <div className="flex items-center justify-between gap-3">
-            <p className="text-overline">NASTĘPNY TEMAT</p>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-bold text-accent">
-              <Clock3 className="h-3.5 w-3.5" aria-hidden />
-              12 min
-            </span>
+            <p className="text-overline">
+              {hasRecentTopic ? "KONTYNUUJ NAUKĘ" : "NASTĘPNY TEMAT"}
+            </p>
+            {!hasRecentTopic && (
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-bold text-accent">
+                <Clock3 className="h-3.5 w-3.5" aria-hidden />
+                12 min
+              </span>
+            )}
           </div>
-          <h2 className="mt-3 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
-            Równania liniowe
+          <h2 className="mt-3 text-xl font-extrabold tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
+            {activeTopicLabel}
           </h2>
           <p className="mt-1 text-sm text-muted">
-            2 zadania · poziom podstawowy
+            {hasRecentTopic
+              ? `Wróć do ostatnio otwartego tematu · ${activeLevelLabel}`
+              : `2 zadania · ${activeLevelLabel}`}
           </p>
 
-          <div className="mt-5">
-            <div className="flex items-center justify-between text-xs font-semibold">
-              <span className="text-muted">Postęp tematu</span>
-              <span className="text-accent">3/5</span>
+          {hasRecentTopic ? (
+            <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
+              Otwórz temat i kontynuuj od miejsca, w którym skończyłeś.
+            </p>
+          ) : (
+            <div className="mt-5">
+              <div className="flex items-center justify-between text-xs font-semibold">
+                <span className="text-muted">Postęp tematu</span>
+                <span className="text-accent">3/5</span>
+              </div>
+              <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
+                <div className="progress-accent w-3/5" />
+              </div>
             </div>
-            <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
-              <div className="progress-accent w-3/5" />
-            </div>
+          )}
+          <div className="mt-4 flex items-center justify-between text-sm font-bold text-accent">
+            <span>{hasRecentTopic ? "Wróć do tematu" : "Otwórz temat"}</span>
+            <ArrowRight
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              aria-hidden
+            />
           </div>
-        </div>
+        </Link>
 
-        <div className="mt-3 grid grid-cols-2 gap-3">
-          <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
-            <div className="flex items-center gap-2 text-muted">
-              <Target className="h-4 w-4 text-accent" aria-hidden />
-              <span className="text-xs font-semibold">Dzisiejszy cel</span>
+        {!hasRecentTopic && (
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
+              <div className="flex items-center gap-2 text-muted">
+                <Target className="h-4 w-4 text-accent" aria-hidden />
+                <span className="text-xs font-semibold">Dzisiejszy cel</span>
+              </div>
+              <p className="mt-2 text-lg font-extrabold text-foreground">60%</p>
+              <p className="text-xs text-muted">3 z 5 tematów</p>
             </div>
-            <p className="mt-2 text-lg font-extrabold text-foreground">60%</p>
-            <p className="text-xs text-muted">3 z 5 tematów</p>
-          </div>
-          <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
-            <div className="flex items-center gap-2 text-muted">
-              <Flame className="h-4 w-4 text-accent" aria-hidden />
-              <span className="text-xs font-semibold">Seria nauki</span>
+            <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
+              <div className="flex items-center gap-2 text-muted">
+                <Flame className="h-4 w-4 text-accent" aria-hidden />
+                <span className="text-xs font-semibold">Seria nauki</span>
+              </div>
+              <p className="mt-2 text-lg font-extrabold text-foreground">4 dni</p>
+              <p className="text-xs text-muted">Wróć jutro</p>
             </div>
-            <p className="mt-2 text-lg font-extrabold text-foreground">4 dni</p>
-            <p className="text-xs text-muted">Wróć jutro</p>
           </div>
-        </div>
+        )}
 
         <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">
             <Check className="h-3.5 w-3.5" aria-hidden />
           </span>
-          Każdy temat kończy się zadaniem do sprawdzenia
+          {hasRecentTopic
+            ? "Ostatnio otwarty temat czeka na Ciebie."
+            : "Każdy temat kończy się zadaniem do sprawdzenia"}
         </div>
       </div>
     </motion.div>
@@ -267,16 +403,19 @@ export function HomeDashboard() {
               >
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-accent" aria-hidden />
-                  Start bez karty
+                  Teoria i zadania krok po kroku
+                </span>
+                <span className="text-surface-border" aria-hidden>
+                  •
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-accent" aria-hidden />
-                  Matura i egzamin 8-klasisty
+                  Matura i egzamin ósmoklasisty
                 </span>
               </motion.div>
             </div>
 
-            <ProductPreview pathLabel={pathLabel} />
+            <ProductPreview path={path} pathLabel={pathLabel} />
           </div>
 
           <div className="border-t border-surface-border px-4 py-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">

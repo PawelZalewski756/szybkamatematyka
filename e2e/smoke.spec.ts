@@ -196,6 +196,47 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("panel następnego tematu prowadzi do treningu", async ({ page }) => {
+    await page.goto("/");
+    const topicLink = page.getByRole("link", {
+      name: "Otwórz temat Równania",
+    });
+
+    await expect(topicLink).toHaveAttribute(
+      "href",
+      "/trening/egzamin-osmoklasisty/algebra/rownania",
+    );
+    await topicLink.click();
+    await expect(page).toHaveURL(
+      /\/trening\/egzamin-osmoklasisty\/algebra\/rownania$/,
+    );
+  });
+
+  test("panel pokazuje ostatnio otwarty temat", async ({ page }) => {
+    await page.addInitScript(() => {
+      window.localStorage.setItem(
+        "szybka-matma-last-training-topic:guest",
+        JSON.stringify({
+          examKey: "8_klasa",
+          category: "algebra",
+          topic: "rownania",
+          visitedAt: Date.now(),
+        }),
+      );
+    });
+    await page.goto("/");
+
+    const topicLink = page.getByRole("link", {
+      name: "Wróć do tematu Równania",
+    });
+    await expect(topicLink).toHaveAttribute(
+      "href",
+      "/trening/egzamin-osmoklasisty/algebra/rownania",
+    );
+    await expect(page.getByText("OSTATNI TEMAT")).toBeVisible();
+    await expect(page.getByText("Przykładowa sesja")).toHaveCount(0);
+  });
+
   test("nawigacja ma link Trening", async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");

@@ -30,6 +30,14 @@ function isSolvedTasksUnavailable(error: PostgrestError | null): boolean {
   return /solved_tasks/i.test(error.message ?? "");
 }
 
+function isExamType(value: unknown): value is ExamType {
+  return (
+    value === "matura_podstawowa" ||
+    value === "matura_rozszerzona" ||
+    value === "8_klasa"
+  );
+}
+
 export function topicProgressKey(
   examType: ExamType,
   category: string,
@@ -61,6 +69,59 @@ export async function fetchSolvedTaskIds(userId: string): Promise<Set<string>> {
       .map((row) => row.task_id as string)
       .filter(Boolean),
   );
+}
+
+export type RecentSolvedTopic = {
+  examType: ExamType;
+  category: string;
+  topic: string;
+  solvedAt: string;
+};
+
+/** Ostatni temat, w którym zalogowany użytkownik rozwiązał zadanie. */
+export async function fetchLatestSolvedTopic(
+  userId: string,
+): Promise<RecentSolvedTopic | null> {
+  const supabase = getSupabase();
+  const { data, error } = await supabase
+    .from("solved_tasks")
+    .select("solved_at, tasks!inner(exam_type, category, topic)")
+    .eq("user_id", userId)
+    .order("solved_at", { ascending: false })
+    .limit(1)
+    .maybeSingle()
+    .retry(false);
+
+  if (error) {
+    if (!isSolvedTasksUnavailable(error as PostgrestError)) {
+      console.warn("[szybka-matma] fetchLatestSolvedTopic:", error);
+    }
+    return null;
+  }
+
+  const rawTask = data?.tasks as unknown;
+  const task = (Array.isArray(rawTask) ? rawTask[0] : rawTask) as {
+    exam_type?: unknown;
+    category?: unknown;
+    topic?: unknown;
+  } | null;
+
+  if (
+    !task ||
+    !isExamType(task.exam_type) ||
+    typeof task.category !== "string" ||
+    typeof task.topic !== "string"
+  ) {
+    return null;
+  }
+
+  return {
+    examType: task.exam_type,
+    category: task.category,
+    topic: task.topic,
+    solvedAt:
+      typeof data?.solved_at === "string" ? data.solved_at : new Date().toISOString(),
+  };
 }
 
 /** Zwraca true, gdy zadanie zostało zapisane po raz pierwszy. */
