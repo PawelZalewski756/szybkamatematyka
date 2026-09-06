@@ -80,6 +80,25 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
+  test("trening pokazuje zadania z lokalnego cache", async ({ page }) => {
+    await page.goto(
+      "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
+    );
+    await page.getByRole("tab", { name: "Zadania" }).click();
+    await expect(page.getByText(/Zadanie \d+ z \d+/)).toBeVisible();
+    await expect(page.getByText("Nie udało się załadować zadań.")).toHaveCount(0);
+    await page.getByRole("button", { name: /B\s+18/ }).click();
+    await expect(page.getByText("Spróbuj jeszcze raz!")).toBeVisible();
+    await page.getByRole("button", { name: /A\s+30/ }).click();
+    await expect(page.getByText("Dobra odpowiedź!")).toBeVisible();
+  });
+
+  test("lista treningu pokazuje tematy z lokalnego cache", async ({ page }) => {
+    await page.goto("/trening");
+    await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
+    await expect(page.getByText(/28 z zadaniami/)).toBeVisible();
+  });
+
   test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
     await page.goto("/trening/arkusze");
     await expect(

@@ -113,6 +113,9 @@ export function reconcileTaskAnswer(task: ParsedGeminiTask): TaskRepairResult {
   const hasCorrect = task.options.some((o) =>
     checkAnswerMatch(o, task.correct_answer),
   );
+  if (hasCorrect && broken) {
+    return { ...task, shouldRemove: true, repairReason: "broken explanation" };
+  }
   if (hasCorrect) return task;
 
   if (inferred) {

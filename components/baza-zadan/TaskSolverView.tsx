@@ -223,7 +223,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
               onClick={() => void handleOpenCheck()}
               className="rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent disabled:opacity-50"
             >
-              {grading ? "Sprawdzam…" : "Sprawdź z AI"}
+              {grading ? "Sprawdzam…" : "Sprawdź odpowiedź"}
             </button>
             {!isLoggedIn && (
               <p className="text-xs text-muted">
@@ -231,7 +231,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                 <Link href="/login" className="font-semibold text-accent hover:underline">
                   zaloguj się
                 </Link>
-                , żeby Gemini oceniło odpowiedź.
+                , żeby otrzymać dodatkową ocenę odpowiedzi.
               </p>
             )}
             {gradeError && (

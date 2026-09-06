@@ -74,7 +74,8 @@ export async function markTaskSolved(
     .from("solved_tasks")
     .insert({ user_id: userId, task_id: taskId })
     .select("task_id")
-    .maybeSingle();
+    .maybeSingle()
+    .retry(false);
 
   if (error) {
     const pgError = error as PostgrestError;
@@ -84,7 +85,7 @@ export async function markTaskSolved(
       return false;
     }
     console.warn("[szybka-matma] markTaskSolved:", error);
-    return false;
+    throw error;
   }
 
   return Boolean(data?.task_id);
@@ -106,7 +107,8 @@ export async function fetchSolvedCountsByTopic(
   let query = supabase
     .from("solved_tasks")
     .select("task_id, tasks!inner(exam_type, category, topic)")
-    .eq("user_id", userId);
+    .eq("user_id", userId)
+    .retry(false);
 
   if (examType) {
     query = query.eq("tasks.exam_type", examType);
@@ -152,7 +154,8 @@ async function fetchSolvedCountsByTopicFallback(
   let query = supabase
     .from("tasks")
     .select("id, exam_type, category, topic")
-    .in("id", [...solvedIds]);
+    .in("id", [...solvedIds])
+    .retry(false);
 
   if (examType) {
     query = query.eq("exam_type", examType);

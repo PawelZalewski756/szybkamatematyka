@@ -39,6 +39,66 @@ function mapTask(row: TaskRow): Task & { options: string[] } {
   };
 }
 
+function isExamType(value: unknown): value is ExamType {
+  return (
+    value === "matura_podstawowa" ||
+    value === "matura_rozszerzona" ||
+    value === "8_klasa"
+  );
+}
+
+function isTaskRow(value: unknown): value is TaskRow {
+  if (!value || typeof value !== "object") return false;
+  const row = value as Record<string, unknown>;
+  return (
+    typeof row.id === "string" &&
+    isExamType(row.exam_type) &&
+    typeof row.category === "string" &&
+    typeof row.topic === "string" &&
+    typeof row.difficulty === "number" &&
+    typeof row.content === "string" &&
+    typeof row.correct_answer === "string" &&
+    typeof row.xp_reward === "number"
+  );
+}
+
+function isTaskTreeRow(value: unknown): value is TaskTreeRow {
+  if (!value || typeof value !== "object") return false;
+  const row = value as Record<string, unknown>;
+  return (
+    typeof row.id === "string" &&
+    typeof row.category === "string" &&
+    typeof row.topic === "string"
+  );
+}
+
+async function fetchCachedTasks<T>(
+  examType: ExamType,
+  summary: boolean,
+  isValid: (value: unknown) => value is T,
+  category?: string,
+  topic?: string,
+): Promise<T[]> {
+  const params = new URLSearchParams({ examType });
+  if (category) params.set("category", category);
+  if (topic) params.set("topic", topic);
+  if (summary) params.set("summary", "1");
+
+  const response = await fetch(`/api/trening/tasks?${params.toString()}`, {
+    cache: "force-cache",
+  });
+  if (!response.ok) {
+    throw new Error(`Cached training tasks request failed (${response.status}).`);
+  }
+
+  const payload = (await response.json()) as { tasks?: unknown };
+  if (!Array.isArray(payload.tasks) || !payload.tasks.every(isValid)) {
+    throw new Error("Cached training tasks response is invalid.");
+  }
+
+  return payload.tasks;
+}
+
 export async function fetchTasksByTopic(
   examType: ExamType,
   category: string,
@@ -61,11 +121,30 @@ export async function fetchTasksByTopic(
         .order("difficulty", { ascending: true })
         .retry(false);
 
-      if (error) throw error;
+      if (error) {
+        const cachedRows = await fetchCachedTasks(
+          examType,
+          false,
+          isTaskRow,
+          category,
+          topic,
+        );
+        if (cachedRows.length > 0) return cachedRows.map(mapTask);
+        throw error;
+      }
       const rows = (data as TaskRow[]) ?? [];
       if (rows.length > 0) return rows.map(mapTask);
     }
   }
+
+  const cachedRows = await fetchCachedTasks(
+    examType,
+    false,
+    isTaskRow,
+    category,
+    topic,
+  );
+  if (cachedRows.length > 0) return cachedRows.map(mapTask);
 
   return [];
 }
@@ -101,7 +180,9 @@ export async function fetchTasksForTree(
       .retry(false),
   );
 
-  if (error) throw error;
+  if (error) {
+    return fetchCachedTasks(examType, true, isTaskTreeRow);
+  }
   return rows;
 }
 
@@ -115,7 +196,8 @@ export async function fetchTaskCountsByTopic(
     let query = supabase
       .from("tasks")
       .select("exam_type, category, topic")
-      .range(from, to);
+      .range(from, to)
+      .retry(false);
     if (examType) {
       query = query.eq("exam_type", examType);
     }

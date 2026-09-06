@@ -35,4 +35,21 @@ describe("reconcileTaskAnswer", () => {
     expect(fixed.repaired).toBe(true);
     expect(fixed.correct_answer).toBe("0");
   });
+
+  it("removes a multiple-choice task with a broken explanation", () => {
+    const result = reconcileTaskAnswer({
+      content: "Oblicz wartość $x$.",
+      correct_answer: "3",
+      options: ["1", "2", "3", "4"],
+      answer_type: "choice",
+      difficulty: 1,
+      xp_reward: 12,
+      explanation: "W treści zadania jest błąd w opcjach.",
+      figure_svg: null,
+      figure_caption: null,
+    });
+
+    expect(result.shouldRemove).toBe(true);
+    expect(result.repairReason).toBe("broken explanation");
+  });
 });

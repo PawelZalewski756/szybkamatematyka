@@ -10,7 +10,7 @@ import {
 } from "@/lib/trening/task-assist-client";
 import type { TaskAssistAskTurn } from "@/lib/gemini/prompts-task-assist";
 import { useSubscription } from "@/lib/subscription/use-subscription";
-import { Loader2, Lock, Send, Sparkles } from "lucide-react";
+import { Loader2, Lock, Send } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 
@@ -286,10 +286,8 @@ function TaskAiPanelInner({
         >
           {busy === "hint" ? (
             <Loader2 className="h-3.5 w-3.5 animate-spin" />
-          ) : (
-            <Sparkles className="h-3.5 w-3.5" />
-          )}
-          Podpowiedź AI
+          ) : null}
+          Podpowiedź
           {hintLevel > 0 ? ` (${hintLevel}/${MAX_HINTS})` : ""}
         </button>
 

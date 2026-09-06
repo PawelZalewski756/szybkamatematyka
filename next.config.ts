@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
         remotePatterns: [storagePattern],
       }
     : undefined,
+  outputFileTracingIncludes: {
+    "/api/trening/tasks": ["./data/tasks-cache/**/*"],
+  },
 };
 
 export default nextConfig;

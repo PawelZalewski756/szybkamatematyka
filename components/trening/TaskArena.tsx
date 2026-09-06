@@ -346,10 +346,18 @@ export function TaskArena({
       <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
         {!compactChrome && <GamingBackground />}
         <p className="relative z-10 text-red-400">{loadError}</p>
+        <button
+          type="button"
+          onClick={() => void loadTasks()}
+          className="relative z-10 mt-4 rounded-lg border border-surface-border px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-surface-hover"
+        >
+          Spróbuj ponownie
+        </button>
         {!compactChrome && (
           <Link
             href={backHref}
-            className="relative z-10 mt-4 text-sm font-bold text-brand"           >
+            className="relative z-10 mt-3 text-sm font-bold text-brand"
+          >
             ← Wróć do treningu
           </Link>
         )}
