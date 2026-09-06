@@ -109,7 +109,6 @@ function NavbarActions({
 
 export function Navbar() {
   const router = useRouter();
-  const pathname = usePathname();
   const isDesktopNav = useDesktopNav();
   const { isPro: subscriptionIsPro, loading: subscriptionLoading } =
     useSubscription();
@@ -211,26 +210,6 @@ export function Navbar() {
     return () =>
       window.removeEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
   }, []);
-
-  useEffect(() => {
-    if (!user || !authReady) return;
-
-    let cancelled = false;
-
-    const refreshQuietly = async () => {
-      try {
-        const row = await fetchProfile(user.id, user);
-        if (!cancelled && row) setProfile(row);
-      } catch {
-        /* ignore */
-      }
-    };
-
-    void refreshQuietly();
-    return () => {
-      cancelled = true;
-    };
-  }, [pathname, user, authReady]);
 
   const handleLogout = async () => {
     setLoggingOut(true);

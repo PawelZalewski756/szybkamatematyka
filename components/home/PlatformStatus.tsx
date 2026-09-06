@@ -4,7 +4,7 @@ import { getAllTasks } from "@/lib/baza-zadan/catalog";
 import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
 import { MINIGAME_REGISTRY } from "@/lib/minigry/minigame-registry";
 import { isSupabaseConfigured } from "@/lib/supabase";
-import { fetchZadaniaSafe } from "@/lib/supabase/baza-zadan";
+import { fetchZadaniaCatalogSafe } from "@/lib/supabase/baza-zadan";
 import { isSchemaMissingError } from "@/lib/supabase/errors";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
         return;
       }
 
-      const { data, error } = await fetchZadaniaSafe();
+      const { data, error } = await fetchZadaniaCatalogSafe();
       if (cancelled) return;
 
       setStatus({

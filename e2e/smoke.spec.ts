@@ -1,6 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Smoke", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("szybka-matma-school-class", "klasa-8");
+    });
+  });
+
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
@@ -68,7 +74,9 @@ test.describe("Smoke", () => {
     await page.setViewportSize({ width: 1280, height: 720 });
     await page.goto("/");
     await expect(
-      page.getByRole("navigation").getByRole("link", { name: "Trening" }),
+      page
+        .getByRole("navigation", { name: "Główna nawigacja" })
+        .getByRole("link", { name: "Trening" }),
     ).toBeVisible();
   });
 
@@ -86,6 +94,8 @@ test.describe("Smoke", () => {
     await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
     await expect(page.getByText("TypeError")).toHaveCount(0);
     await page.getByRole("link", { name: /Matura — maj 2025/ }).click();
-    await expect(page.getByText(/\d+ pkt/)).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /Matura — maj 2025/ }),
+    ).toBeVisible();
   });
 });

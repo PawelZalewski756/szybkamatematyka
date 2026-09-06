@@ -220,12 +220,13 @@ export default function ProfilPage() {
     try {
       const supabase = getSupabase();
       const {
-        data: { user: authUser },
+        data: { session },
         error,
-      } = await supabase.auth.getUser();
+      } = await supabase.auth.getSession();
 
       if (error) throw error;
 
+      const authUser = session?.user ?? null;
       if (!authUser) {
         setUser(null);
         setProfile(null);
@@ -249,18 +250,25 @@ export default function ProfilPage() {
       setNickDraft(playerProfile.nick);
       setClassDraft(playerProfile.schoolClass ?? DEFAULT_SCHOOL_CLASS);
 
-      const solvedIds = await fetchSolvedTaskIds(authUser.id);
-      setArenaSolvedCount(solvedIds.size);
-
       const examKeys: TreningExamKey[] = [
         "matura_podstawowa",
         "8_klasa",
       ];
+      const [solvedIds, examTaskSets] = await Promise.all([
+        fetchSolvedTaskIds(authUser.id),
+        Promise.all(
+          examKeys.map(async (examKey) => ({
+            examKey,
+            tasks: await fetchTasksForTree(examTypeForKey(examKey)),
+          })),
+        ),
+      ]);
+      setArenaSolvedCount(solvedIds.size);
+
       let playableTopics = 0;
       let completedTopics = 0;
 
-      for (const examKey of examKeys) {
-        const tasks = await fetchTasksForTree(examTypeForKey(examKey));
+      for (const { examKey, tasks } of examTaskSets) {
         const tree = buildTreningTreeFromTasks(
           tasks,
           solvedIds,

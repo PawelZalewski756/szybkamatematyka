@@ -75,20 +75,16 @@ export default function LoginPage() {
 
     try {
       const supabase = getSupabase();
-      const { error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase.auth.signInWithPassword({
         email: email.trim(),
         password,
       });
 
       if (error) throw error;
 
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-
-      if (user) {
+      if (data.user) {
         try {
-          await ensureUserProfile(user);
+          await ensureUserProfile(data.user);
         } catch {
           /* sesja OK — profil naprawi navbar; i tak idziemy na stronę główną */
         }

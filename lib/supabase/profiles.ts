@@ -238,7 +238,8 @@ async function fetchAvatarUrlFromDb(userId: string): Promise<string | null> {
     .from("profiles")
     .select("avatar_url")
     .eq("id", userId)
-    .maybeSingle();
+    .maybeSingle()
+    .retry(false);
 
   if (error) {
     if (isPostgrestUndefinedColumnError(error as PostgrestError, "avatar_url")) {
@@ -386,7 +387,8 @@ async function selectProfile(
     .from("profiles")
     .select(columns)
     .eq("id", userId)
-    .maybeSingle();
+    .maybeSingle()
+    .retry(false);
 
   return {
     row: (data as ProfileRow | null) ?? null,
@@ -424,7 +426,8 @@ async function updateAndSelectProfile(
       .update(patch)
       .eq("id", userId)
       .select(columns)
-      .single();
+      .single()
+      .retry(false);
 
     if (!error) {
       return { row: (data as unknown as ProfileRow) ?? null, error: null };
@@ -450,7 +453,8 @@ async function insertAndSelectProfile(
       .from("profiles")
       .insert(payload)
       .select(columns)
-      .single();
+      .single()
+      .retry(false);
 
     if (!error) {
       return { row: (data as unknown as ProfileRow) ?? null, error: null };
@@ -492,7 +496,8 @@ export async function isNickTaken(
   const { data, error } = await supabase
     .from("profiles")
     .select("id")
-    .ilike("nick", normalized);
+    .ilike("nick", normalized)
+    .retry(false);
 
   if (error) throw error;
   const rows = data ?? [];
@@ -906,7 +911,8 @@ export async function fetchSubscriptionSnapshotForUser(
     .from("profiles")
     .select(`id, ${SUBSCRIPTION_COLUMNS}`)
     .eq("id", userId)
-    .maybeSingle();
+    .maybeSingle()
+    .retry(false);
 
   if (error) {
     if (isPostgrestUndefinedColumnError(error as PostgrestError)) {
@@ -964,7 +970,8 @@ export async function updateProfileAvatarUrl(
   const { error: updateError } = await supabase
     .from("profiles")
     .update({ avatar_url: avatarUrl })
-    .eq("id", userId);
+    .eq("id", userId)
+    .retry(false);
 
   if (
     updateError &&
@@ -1034,7 +1041,8 @@ export async function updateProfileProgress(
     .update({ xp, level })
     .eq("id", userId)
     .select(CORE_SELECT)
-    .single();
+    .single()
+    .retry(false);
 
   if (error) throw error;
   return mapRow(data as ProfileRow);
