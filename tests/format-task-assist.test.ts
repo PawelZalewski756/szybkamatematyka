@@ -35,6 +35,23 @@ describe("parseTaskGradeResponse", () => {
     );
     expect(result?.awardedPoints).toBe(1);
   });
+
+  it("wyciąga JSON z komentarza modelu i ogranicza punkty do maxPoints", () => {
+    const result = parseTaskGradeResponse(
+      'Oto ocena:\n```json\n{"verdict":"partial","feedback":"Częściowo poprawnie.","awardedPoints":9}\n```',
+      2,
+    );
+    expect(result?.awardedPoints).toBe(2);
+  });
+
+  it("nie pozwala na zbyt długi feedback", () => {
+    const feedback = "x".repeat(1_201);
+    expect(
+      parseTaskGradeResponse(
+        JSON.stringify({ verdict: "wrong", feedback }),
+      ),
+    ).toBeNull();
+  });
 });
 
 describe("normalizeHintText", () => {

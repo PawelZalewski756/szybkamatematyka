@@ -1,5 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { passwordResetRedirectUrl } from "@/lib/auth-password-reset";
+import {
+  authRedirectUrl,
+  passwordResetRedirectUrl,
+} from "@/lib/auth-password-reset";
 
 describe("passwordResetRedirectUrl", () => {
   afterEach(() => {
@@ -27,5 +30,19 @@ describe("passwordResetRedirectUrl", () => {
     });
 
     expect(passwordResetRedirectUrl()).toBe("http://localhost:3000/login/nowe-haslo");
+  });
+
+  it("używa tego samego callbacku dla potwierdzenia rejestracji", () => {
+    vi.stubEnv("NEXT_PUBLIC_SITE_URL", "https://szybkamatematyka.pl/");
+    vi.stubGlobal("window", {
+      location: {
+        hostname: "szybkamatematyka.pl",
+        origin: "https://szybkamatematyka.pl",
+      },
+    });
+
+    expect(authRedirectUrl("/login")).toBe(
+      "https://szybkamatematyka.pl/login",
+    );
   });
 });

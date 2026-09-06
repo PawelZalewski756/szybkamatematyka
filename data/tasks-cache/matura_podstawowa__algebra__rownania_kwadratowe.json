@@ -6,349 +6,330 @@
   "topicName": "Równania kwadratowe",
   "tasks": [
     {
-      "content": "Jedno z rozwiązań $x^2+7x+6=0$ to:​",
+      "content": "Jedno z rozwiązań $x^2+12x+36=0$ to:",
       "correct_answer": "-6",
       "options": [
-        "-6",
-        "-8",
         "-7",
+        "-8",
+        "-6",
         "-9"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d2513357-0b5a-4e47-80a2-9f7eee975b0f",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2-3x-10=0$ to:​​",
-      "correct_answer": "5",
-      "options": [
-        "2",
-        "3",
-        "5",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "95daafa0-f711-4abb-a7da-b8179e997171",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2-1x-12=0$ to:​​​",
-      "correct_answer": "4",
-      "options": [
-        "3",
-        "2",
-        "1",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "20ff5d3d-ee46-4cdd-b9ab-de33bfca5cc3",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+1x-12=0$ to:​​​​",
-      "correct_answer": "3",
-      "options": [
-        "0",
-        "2",
-        "3",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "94d62095-d62b-401d-9d11-98476f4dc69f",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+3x-10=0$ to:​​​​​",
-      "correct_answer": "2",
-      "options": [
-        "2",
-        "0",
-        "-1",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "53682d93-b732-4f52-8faa-da46e7f23706",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+5x-6=0$ to:​​​​​​",
-      "correct_answer": "1",
-      "options": [
-        "-1",
-        "1",
-        "0",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "24f9fdb9-8c9e-4aaf-8c27-618332bf2598",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2-5x+0=0$ to:​​​​​​​",
-      "correct_answer": "0",
-      "options": [
-        "0",
-        "-1",
-        "-3",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8763e72e-7d5d-48f5-b538-c01de19f45a7",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2-3x-4=0$ to:​​​​​​​​",
-      "correct_answer": "-1",
-      "options": [
-        "-2",
-        "-1",
-        "-3",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b4ad2bfd-3404-4e99-b8ee-1feeb314039f",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2-1x-6=0$ to:​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-4",
-        "-5",
-        "-3",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "15db5db8-af35-4c73-9030-d07101149d71",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+1x-6=0$ to:​​​​​​​​​​",
-      "correct_answer": "-3",
-      "options": [
-        "-6",
-        "-3",
-        "-5",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "81c9729c-6b31-441d-b5ac-144e6141454a",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+3x-4=0$ to:​​​​​​​​​​​",
-      "correct_answer": "-4",
-      "options": [
-        "-4",
-        "-6",
-        "-7",
-        "-5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "59c89d8c-22d8-48bc-86c9-7495d39db8e1",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+5x+0=0$ to:​​​​​​​​​​​​",
+      "content": "Jedno z rozwiązań $x^2+11x+30=0$ to:",
       "correct_answer": "-5",
       "options": [
-        "-5",
-        "-7",
         "-6",
+        "-7",
+        "-5",
         "-8"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "xp_reward": 24,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f1716c61-d350-4cf2-967e-b9f7c938cd50",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "id": "95daafa0-f711-4abb-a7da-b8179e997171",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2+7x+6=0$ to:​​​​​​​​​​​​​",
-      "correct_answer": "-6",
+      "content": "Jedno z rozwiązań $x^2+10x+24=0$ to:",
+      "correct_answer": "-4",
       "options": [
+        "-7",
+        "-4",
         "-6",
-        "-8",
-        "-9",
-        "-7"
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "20ff5d3d-ee46-4cdd-b9ab-de33bfca5cc3",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+9x+18=0$ to:",
+      "correct_answer": "-3",
+      "options": [
+        "-4",
+        "-6",
+        "-3",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "94d62095-d62b-401d-9d11-98476f4dc69f",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+8x+12=0$ to:",
+      "correct_answer": "-2",
+      "options": [
+        "-5",
+        "-2",
+        "-4",
+        "-3"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "404a7b33-e327-4760-9111-1d0640a57e19",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "id": "53682d93-b732-4f52-8faa-da46e7f23706",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2-3x-10=0$ to:​​​​​​​​​​​​​​",
+      "content": "Jedno z rozwiązań $x^2+7x+6=0$ to:",
+      "correct_answer": "-1",
+      "options": [
+        "-2",
+        "-4",
+        "-1",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24f9fdb9-8c9e-4aaf-8c27-618332bf2598",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+6x+0=0$ to:",
+      "correct_answer": "0",
+      "options": [
+        "-2",
+        "-1",
+        "0",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8763e72e-7d5d-48f5-b538-c01de19f45a7",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+5x-6=0$ to:",
+      "correct_answer": "1",
+      "options": [
+        "-2",
+        "1",
+        "0",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b4ad2bfd-3404-4e99-b8ee-1feeb314039f",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+4x-12=0$ to:",
+      "correct_answer": "2",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "15db5db8-af35-4c73-9030-d07101149d71",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+3x-18=0$ to:",
+      "correct_answer": "3",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "81c9729c-6b31-441d-b5ac-144e6141454a",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+2x-24=0$ to:",
+      "correct_answer": "4",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "59c89d8c-22d8-48bc-86c9-7495d39db8e1",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+1x-30=0$ to:",
       "correct_answer": "5",
       "options": [
-        "5",
         "4",
+        "5",
         "2",
         "3"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "74ba07a8-7b09-461a-a4df-98546871293a",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "id": "f1716c61-d350-4cf2-967e-b9f7c938cd50",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2-1x-12=0$ to:​​​​​​​​​​​​​​​",
-      "correct_answer": "4",
+      "content": "Jedno z rozwiązań $x^2+10x+25=0$ to:",
+      "correct_answer": "-5",
       "options": [
-        "2",
-        "3",
-        "1",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a325f37c-b94c-4d1f-a183-8bf831f03cc7",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+1x-12=0$ to:​​​​​​​​​​​​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "1",
-        "0",
-        "3",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "139186ac-b6a6-4b9f-a795-26b2099ce7ec",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+3x-10=0$ to:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "2",
-      "options": [
-        "1",
-        "0",
-        "-1",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 23,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e28f9072-8ad8-4216-95d9-08731f6ec1db",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Jedno z rozwiązań $x^2+5x-6=0$ to:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "1",
-      "options": [
-        "-1",
-        "1",
-        "-2",
-        "0"
+        "-6",
+        "-7",
+        "-8",
+        "-5"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e0c73b52-1ad5-404e-add5-ec66573cf385",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "id": "404a7b33-e327-4760-9111-1d0640a57e19",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2-5x+0=0$ to:​​​​​​​​​​​​​​​​​​​",
+      "content": "Jedno z rozwiązań $x^2+9x+20=0$ to:",
+      "correct_answer": "-4",
+      "options": [
+        "-7",
+        "-5",
+        "-4",
+        "-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74ba07a8-7b09-461a-a4df-98546871293a",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+8x+15=0$ to:",
+      "correct_answer": "-3",
+      "options": [
+        "-5",
+        "-6",
+        "-3",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a325f37c-b94c-4d1f-a183-8bf831f03cc7",
+      "generatedAt": "2026-09-06T19:54:36.609Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+7x+10=0$ to:",
+      "correct_answer": "-2",
+      "options": [
+        "-2",
+        "-3",
+        "-5",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "139186ac-b6a6-4b9f-a795-26b2099ce7ec",
+      "generatedAt": "2026-09-06T19:54:36.610Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+6x+5=0$ to:",
+      "correct_answer": "-1",
+      "options": [
+        "-2",
+        "-3",
+        "-4",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e28f9072-8ad8-4216-95d9-08731f6ec1db",
+      "generatedAt": "2026-09-06T19:54:36.610Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+5x+0=0$ to:",
       "correct_answer": "0",
       "options": [
         "0",
@@ -358,33 +339,52 @@
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fd02fc6f-8a3f-4089-87d1-db6440ace38c",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "id": "e0c73b52-1ad5-404e-add5-ec66573cf385",
+      "generatedAt": "2026-09-06T19:54:36.610Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Jedno z rozwiązań $x^2-3x-4=0$ to:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-1",
+      "content": "Jedno z rozwiązań $x^2+4x-5=0$ to:",
+      "correct_answer": "1",
       "options": [
-        "-4",
-        "-3",
+        "-2",
+        "0",
         "-1",
-        "-2"
+        "1"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -1",
+      "xp_reward": 21,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd02fc6f-8a3f-4089-87d1-db6440ace38c",
+      "generatedAt": "2026-09-06T19:54:36.610Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jedno z rozwiązań $x^2+3x-10=0$ to:",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "94d4d744-5030-45dd-a9ee-0d7cb7d4458a",
-      "generatedAt": "2026-08-07T16:30:27.553Z",
+      "generatedAt": "2026-09-06T19:54:36.610Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.553Z"
+  "updatedAt": "2026-09-06T19:54:36.610Z"
 }

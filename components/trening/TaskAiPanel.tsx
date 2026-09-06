@@ -125,6 +125,7 @@ function TaskAiPanelInner({
     setError(null);
     try {
       const result = await fetchTaskHint({
+        taskId,
         taskContent,
         correctAnswer,
         hintLevel,
@@ -152,6 +153,7 @@ function TaskAiPanelInner({
     setGradeText(null);
     try {
       const result = await fetchTaskGrade({
+        taskId,
         taskContent,
         correctAnswer,
         studentAnswer: studentAnswer.trim(),
@@ -215,6 +217,7 @@ function TaskAiPanelInner({
 
     try {
       const result = await fetchTaskAsk({
+        taskId,
         taskContent,
         correctAnswer,
         userMessage: message,

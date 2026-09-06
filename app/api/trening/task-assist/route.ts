@@ -12,6 +12,13 @@ import {
   type AssistQuotaSnapshot,
 } from "@/lib/subscription/task-assist-quota";
 import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
+import { findCachedTaskById } from "@/lib/trening/seed/tasks-cache-utils";
+import { getTaskById } from "@/lib/baza-zadan/catalog";
+import {
+  examTaskPoints,
+  expectedOpenAnswer,
+  isOpenExamTask,
+} from "@/lib/baza-zadan/cke/exam-points";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -45,11 +52,16 @@ function checkRateLimit(key: string): {
   return { allowed: true, retryAfterSec: 0 };
 }
 
-function readString(body: unknown, key: string): string | undefined {
+function readString(
+  body: unknown,
+  key: string,
+  maxLength = 8_000,
+): string | undefined {
   if (typeof body !== "object" || body === null || !(key in body)) return undefined;
   const value = (body as Record<string, unknown>)[key];
   if (typeof value !== "string") return undefined;
   const trimmed = value.trim();
+  if (trimmed.length > maxLength) return undefined;
   return trimmed || undefined;
 }
 
@@ -69,7 +81,10 @@ function readStringArray(body: unknown, key: string): string[] | undefined {
   if (typeof body !== "object" || body === null || !(key in body)) return undefined;
   const value = (body as Record<string, unknown>)[key];
   if (!Array.isArray(value)) return undefined;
-  return value.map((v) => String(v ?? "").trim()).filter(Boolean);
+  return value
+    .slice(0, 8)
+    .map((v) => String(v ?? "").trim().slice(0, 500))
+    .filter(Boolean);
 }
 
 type AskTurn = { role: "user" | "assistant"; content: string };
@@ -88,9 +103,9 @@ function readConversation(body: unknown, key: string): AskTurn[] | undefined {
     if (typeof content !== "string") continue;
     const trimmed = content.trim();
     if (!trimmed) continue;
-    turns.push({ role, content: trimmed });
+    turns.push({ role, content: trimmed.slice(0, 1_000) });
   }
-  return turns.length > 0 ? turns : undefined;
+  return turns.length > 0 ? turns.slice(-12) : undefined;
 }
 
 function jsonWithQuota(payload: Record<string, unknown>, quota: AssistQuotaSnapshot) {
@@ -99,7 +114,7 @@ function jsonWithQuota(payload: Record<string, unknown>, quota: AssistQuotaSnaps
 
 /**
  * POST /api/trening/task-assist
- * Body: { mode: "hint" | "grade" | "ask", taskContent, correctAnswer, ... }
+ * Body: { mode: "hint" | "grade" | "ask", taskId, taskContent, correctAnswer, ... }
  * Auth: Bearer (Pro = bez limitu miesięcznego; free = max 10 zapytań / miesiąc).
  */
 export async function POST(request: Request) {
@@ -135,16 +150,42 @@ export async function POST(request: Request) {
       );
     }
 
-    const mode = readString(body, "mode");
-    const taskContent = readString(body, "taskContent");
-    const correctAnswer = readString(body, "correctAnswer");
+    const mode = readString(body, "mode", 20);
+    const taskId = readString(body, "taskId", 160);
+    const submittedTaskContent = readString(body, "taskContent", 8_000);
+    const submittedCorrectAnswer = readString(body, "correctAnswer", 500);
 
-    if (!taskContent || !correctAnswer) {
+    if (!submittedTaskContent || !submittedCorrectAnswer) {
       return Response.json(
         { error: "Pola taskContent i correctAnswer są wymagane." },
         { status: 400 },
       );
     }
+
+    const canonicalTask = taskId ? findCachedTaskById(taskId) : null;
+    const catalogTask =
+      !canonicalTask && taskId ? getTaskById(taskId) ?? null : null;
+    const taskContent =
+      canonicalTask?.content.replace(/[\u200B-\u200D\uFEFF]/g, "").trim() ??
+      catalogTask?.prompt.trim() ??
+      submittedTaskContent;
+    const correctAnswer =
+      canonicalTask?.correct_answer.trim() ??
+      (catalogTask
+        ? isOpenExamTask(catalogTask)
+          ? expectedOpenAnswer(catalogTask).trim()
+          : catalogTask.choices[catalogTask.correctIndex]?.trim()
+        : undefined) ??
+      submittedCorrectAnswer;
+    const canonicalOptions =
+      canonicalTask?.options ??
+      (catalogTask ? [...catalogTask.choices] : undefined);
+    const maxPoints = catalogTask
+      ? examTaskPoints(catalogTask)
+      : Math.max(
+          1,
+          Math.min(10, Math.round(readNumber(body, "maxPoints") ?? 1)),
+        );
 
     if (!isPro) {
       const current = await readAssistQuota(user.id, false);
@@ -162,11 +203,22 @@ export async function POST(request: Request) {
     const examLabel = readString(body, "examLabel");
     const topicLabel = readString(body, "topicLabel");
 
-    async function finish<T extends Record<string, unknown>>(payload: T) {
-      const quota = isPro
-        ? await readAssistQuota(user.id, true)
-        : (await consumeAssistQuota(user.id, false)).quota;
-      return jsonWithQuota(payload, quota);
+    async function finish<T extends Record<string, unknown>>(
+      payload: T,
+    ): Promise<Response> {
+      if (isPro) {
+        return jsonWithQuota(payload, await readAssistQuota(user.id, true));
+      }
+
+      const consumed = await consumeAssistQuota(user.id, false);
+      if (!consumed.ok) {
+        const status = consumed.error.startsWith("Wykorzystałeś") ? 429 : 503;
+        return Response.json(
+          { error: consumed.error, quota: consumed.quota },
+          { status },
+        );
+      }
+      return jsonWithQuota(payload, consumed.quota);
     }
 
     if (mode === "hint") {
@@ -177,8 +229,11 @@ export async function POST(request: Request) {
         taskContent,
         correctAnswer,
         hintLevel,
-        isOpenTask: readBool(body, "isOpenTask") ?? false,
-        options: readStringArray(body, "options"),
+        isOpenTask:
+          canonicalOptions !== undefined
+            ? canonicalOptions.length === 0
+            : (readBool(body, "isOpenTask") ?? false),
+        options: canonicalOptions ?? readStringArray(body, "options"),
       });
       return finish({ hint, hintLevel });
     }
@@ -198,7 +253,7 @@ export async function POST(request: Request) {
         taskContent,
         correctAnswer,
         studentAnswer,
-        maxPoints: readNumber(body, "maxPoints"),
+        maxPoints,
         markingNotes: readString(body, "markingNotes"),
       });
       return finish({ grade });

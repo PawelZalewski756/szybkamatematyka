@@ -14,11 +14,13 @@ import {
   type TaskAssistGradeInput,
   type TaskAssistHintInput,
 } from "@/lib/gemini/prompts-task-assist";
+import { getTheoryModelChain } from "@/lib/gemini/gemini-model-chain";
+import {
+  isDailyQuotaExhausted,
+  isRetryableGeminiError,
+  waitForGeminiRetry,
+} from "@/lib/gemini/gemini-retry";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-
-function getModelId(): string {
-  return process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash-lite";
-}
 
 function getClient() {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
@@ -28,44 +30,75 @@ function getClient() {
   return new GoogleGenerativeAI(apiKey);
 }
 
+type AssistGenerationConfig = {
+  responseMimeType?: string;
+};
+
+async function generateAssistText(
+  systemInstruction: string,
+  prompt: string,
+  generationConfig?: AssistGenerationConfig,
+): Promise<string> {
+  const genAI = getClient();
+  let lastError: Error | null = null;
+
+  for (const modelId of getTheoryModelChain()) {
+    const model = genAI.getGenerativeModel({
+      model: modelId,
+      systemInstruction,
+      ...(generationConfig ? { generationConfig } : {}),
+    });
+
+    for (let attempt = 1; attempt <= 2; attempt += 1) {
+      try {
+        const result = await model.generateContent(prompt);
+        const text = result.response.text()?.trim();
+        if (!text) {
+          throw new Error("Model nie zwrócił odpowiedzi.");
+        }
+        return text;
+      } catch (err) {
+        lastError = err instanceof Error ? err : new Error(String(err));
+        const message = lastError.message;
+        if (isDailyQuotaExhausted(message)) {
+          break;
+        }
+        if (
+          !isRetryableGeminiError(message) ||
+          attempt >= 2
+        ) {
+          throw lastError;
+        }
+        await waitForGeminiRetry(message, attempt);
+      }
+    }
+  }
+
+  throw lastError ?? new Error("Nie udało się uzyskać odpowiedzi modelu.");
+}
+
 export async function generateTaskHint(
   input: TaskAssistHintInput,
 ): Promise<string> {
-  const genAI = getClient();
-  const model = genAI.getGenerativeModel({
-    model: getModelId(),
-    systemInstruction: TASK_ASSIST_HINT_SYSTEM,
-  });
-
-  const result = await model.generateContent(buildHintUserPrompt(input));
-  const text = result.response.text()?.trim();
-  if (!text) {
-    throw new Error("Model nie zwrócił podpowiedzi.");
-  }
+  const text = await generateAssistText(
+    TASK_ASSIST_HINT_SYSTEM,
+    buildHintUserPrompt(input),
+  );
   return normalizeHintText(text);
 }
 
 export async function gradeOpenTaskAnswer(
   input: TaskAssistGradeInput,
 ): Promise<TaskGradeResult> {
-  const genAI = getClient();
-  const model = genAI.getGenerativeModel({
-    model: getModelId(),
-    systemInstruction: TASK_ASSIST_GRADE_SYSTEM,
-    generationConfig: {
-      responseMimeType: "application/json",
-    },
-  });
+  const text = await generateAssistText(
+    TASK_ASSIST_GRADE_SYSTEM,
+    buildGradeUserPrompt(input),
+    { responseMimeType: "application/json" },
+  );
 
-  const result = await model.generateContent(buildGradeUserPrompt(input));
-  const text = result.response.text()?.trim();
-  if (!text) {
-    throw new Error("Model nie zwrócił oceny.");
-  }
-
-  const parsed = parseTaskGradeResponse(text);
+  const parsed = parseTaskGradeResponse(text, input.maxPoints);
   if (!parsed) {
-    throw new Error("Nie udało się odczytać oceny AI.");
+    throw new Error("Nie udało się odczytać oceny odpowiedzi.");
   }
   return parsed;
 }
@@ -73,16 +106,9 @@ export async function gradeOpenTaskAnswer(
 export async function generateTaskAskReply(
   input: TaskAssistAskInput,
 ): Promise<string> {
-  const genAI = getClient();
-  const model = genAI.getGenerativeModel({
-    model: getModelId(),
-    systemInstruction: TASK_ASSIST_ASK_SYSTEM,
-  });
-
-  const result = await model.generateContent(buildAskUserPrompt(input));
-  const text = result.response.text()?.trim();
-  if (!text) {
-    throw new Error("Model nie zwrócił odpowiedzi.");
-  }
+  const text = await generateAssistText(
+    TASK_ASSIST_ASK_SYSTEM,
+    buildAskUserPrompt(input),
+  );
   return normalizeHintText(text);
 }

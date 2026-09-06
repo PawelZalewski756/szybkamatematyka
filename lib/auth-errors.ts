@@ -117,6 +117,23 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
     return "Rejestracja jest wyłączona w Supabase. Włącz ją w Authentication → Providers → Email.";
   }
 
+  if (
+    message.includes("Invalid API key") ||
+    message.includes("Project not found") ||
+    message.includes("supabaseUrl is required") ||
+    message.includes("supabaseKey is required")
+  ) {
+    return "Logowanie jest źle skonfigurowane na serwerze. Ustaw zmienne Supabase przed zbudowaniem aplikacji.";
+  }
+
+  if (
+    message.includes("redirect") ||
+    message.includes("Redirect URL") ||
+    message.includes("not allowed")
+  ) {
+    return "Adres przekierowania logowania nie jest dozwolony w Supabase. Dodaj domenę aplikacji w Authentication → URL Configuration.";
+  }
+
   if (message.includes("Database error saving new user")) {
     return "Błąd bazy przy rejestracji — w Supabase uruchom plik supabase/profiles.sql (SQL Editor), potem spróbuj ponownie.";
   }

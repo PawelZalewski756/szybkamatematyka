@@ -19,9 +19,19 @@ export default function ZapomnianeHasloPage() {
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
   const [sent, setSent] = useState(false);
+  const [supabaseReady, setSupabaseReady] = useState(() =>
+    isSupabaseConfigured(),
+  );
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) return;
+    const onConfigReady = () => setSupabaseReady(true);
+    window.addEventListener("supabase-config-ready", onConfigReady);
+    return () =>
+      window.removeEventListener("supabase-config-ready", onConfigReady);
+  }, []);
+
+  useEffect(() => {
+    if (!supabaseReady) return;
 
     const supabase = getSupabase();
     void supabase.auth
@@ -34,7 +44,7 @@ export default function ZapomnianeHasloPage() {
       .catch((error: unknown) => {
         console.warn("[szybka-matma] password reset session check:", error);
       });
-  }, [router]);
+  }, [router, supabaseReady]);
 
   const handleSubmit = async () => {
     setMessage(null);
@@ -47,7 +57,7 @@ export default function ZapomnianeHasloPage() {
       return;
     }
 
-    if (!isSupabaseConfigured()) {
+    if (!supabaseReady) {
       setIsError(true);
       setMessage(
         "Odzyskiwanie hasła jest obecnie niedostępne. Spróbuj ponownie później.",

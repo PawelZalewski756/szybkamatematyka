@@ -17,11 +17,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "21a07657-5edb-46b5-a5dd-dcdf0f256423",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -36,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "0fb400c1-a1f8-4572-81a2-fd9d00629d23",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -55,11 +55,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3bf5ad78-d7b3-4b59-b471-33ca75726d94",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -74,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2b8d0184-bc7e-4a80-91f2-1ca25003cc39",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -93,11 +93,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4222c958-860b-4272-bde2-e873c0a546d7",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -112,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ef616f4f-2045-4d85-9a93-fad77bdf7b7b",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -131,11 +131,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f617ae2d-3322-4de3-bb20-c41806baf4f5",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -150,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c489edc3-ba16-4289-a1e3-1939000e91bf",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -169,11 +169,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "fde62bde-b964-46b0-9b7a-fd2b0abb6281",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -188,30 +188,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 23,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f2cd4bd0-6010-42b9-ac5c-2338b5679728",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $f(4)$ dla $f(x)=x^2-2x+1$.",
-      "correct_answer": "9",
-      "options": [
-        "8",
-        "15",
-        "11",
-        "9"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "390d4151-ca0d-4d05-bcd6-e59e95afc867",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -226,11 +207,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "80c30f7b-4d90-4ba5-92b2-c7136ca6e437",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "390d4151-ca0d-4d05-bcd6-e59e95afc867",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -245,11 +226,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "60da2966-4567-4f3f-8ed2-53a7296195ad",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "80c30f7b-4d90-4ba5-92b2-c7136ca6e437",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -264,30 +245,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "415518ae-362c-44b4-9398-f108b4e861b4",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $f(0)$ dla $f(x)=x^2-2x+1$.",
-      "correct_answer": "1",
-      "options": [
-        "1",
-        "8",
-        "2",
-        "0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "dcdd69be-3975-4251-91ef-d71063f60eab",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "60da2966-4567-4f3f-8ed2-53a7296195ad",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -302,30 +264,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "84fe6261-7560-4397-b908-ca551d5168de",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $f(2)$ dla $f(x)=x^2-2x+1$.",
-      "correct_answer": "1",
-      "options": [
-        "1",
-        "-1",
-        "7",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0ac400ba-538a-49a0-9fd2-14e6c841c718",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "415518ae-362c-44b4-9398-f108b4e861b4",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -340,11 +283,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f0c27963-63e0-4738-8052-05f021fd1134",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "dcdd69be-3975-4251-91ef-d71063f60eab",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
@@ -359,32 +302,89 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ea6e9cdc-71e9-43a8-b50b-c4a614d35331",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "id": "84fe6261-7560-4397-b908-ca551d5168de",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Suma pierwiastków równania $x^2--5x+4=0$ (wzór Viete'a) wynosi:",
-      "correct_answer": "-5",
+      "content": "Oblicz $f(1)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "0",
       "options": [
-        "-5",
-        "-3",
-        "-7",
-        "-4"
+        "0",
+        "-2",
+        "2",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0ac400ba-538a-49a0-9fd2-14e6c841c718",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Suma pierwiastków równania $x^2--4x+3=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-4",
+      "options": [
+        "-2",
+        "-4",
+        "-6",
+        "-3"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0c27963-63e0-4738-8052-05f021fd1134",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $f(-2)$ dla $f(x)=x^2-2x+1$.",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "15",
+        "10",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ea6e9cdc-71e9-43a8-b50b-c4a614d35331",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Suma pierwiastków równania $x^2--1x+-6=0$ (wzór Viete'a) wynosi:",
+      "correct_answer": "-1",
+      "options": [
+        "-1",
+        "1",
+        "0",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 24,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c13b9c43-c0e9-4ba2-ba0d-fc31b742e44c",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.618Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.555Z"
+  "updatedAt": "2026-09-06T19:54:36.618Z"
 }

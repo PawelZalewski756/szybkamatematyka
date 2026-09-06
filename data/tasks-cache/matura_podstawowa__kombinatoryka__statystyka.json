@@ -6,45 +6,45 @@
   "topicName": "Statystyka",
   "tasks": [
     {
-      "content": "Średnia arytmetyczna liczb 4, 2, 7, 9, 12 wynosi:",
+      "content": "Średnia arytmetyczna liczb 4, 2, 7, 9, 12 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "6.8",
       "options": [
         "6.8",
-        "10",
-        "9",
-        "6"
+        "9.8",
+        "8.8",
+        "5.8"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.8",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 6.8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "618f3197-81a4-4dbe-b2ee-46ca46c4684c",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 5, 8, 9, 10, 12 to:",
+      "correct_answer": "9",
       "options": [
-        "4",
-        "2",
         "7",
-        "5"
+        "10",
+        "9",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8812475e-b013-4735-a9a8-03a4b10d2ee9",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 6, 8, 2, 7, 7 wynosi:",
+      "content": "Średnia arytmetyczna liczb 6, 8, 2, 7, 7 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "6",
       "options": [
         "9",
@@ -55,110 +55,110 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "9a79d12b-bd2e-4642-b900-12328165838d",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 2, 11, 11, 12, 12 to:",
+      "correct_answer": "11",
       "options": [
-        "2",
-        "4",
-        "7",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0d9ce432-a71d-48da-aef4-d032b19c4e5d",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Średnia arytmetyczna liczb 7, 7, 9, 9, 4 wynosi:",
-      "correct_answer": "7.2",
-      "options": [
-        "7.2",
-        "9",
-        "6",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a52905fe-72d7-4f59-a351-4d2ed644fd3c",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
-      "options": [
-        "5",
-        "7",
-        "4",
-        "2"
+        "12",
+        "11",
+        "10",
+        "13"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 11",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5104705f-c370-4ec3-bc18-e34aa39647d2",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "id": "0d9ce432-a71d-48da-aef4-d032b19c4e5d",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 9, 10, 3, 3, 8 wynosi:",
+      "content": "Średnia arytmetyczna liczb 7, 7, 9, 9, 4 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "7.2",
+      "options": [
+        "7.2",
+        "9.2",
+        "6.2",
+        "8.2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 7.2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a52905fe-72d7-4f59-a351-4d2ed644fd3c",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Mediana zbioru 5, 5, 5, 6, 7 to:",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5104705f-c370-4ec3-bc18-e34aa39647d2",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia arytmetyczna liczb 9, 10, 3, 3, 8 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "6.6",
       "options": [
-        "6",
-        "9",
-        "10",
+        "5.6",
+        "8.6",
+        "9.6",
         "6.6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.6",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 6.6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "63c050d7-32f9-4a81-a261-1fe86cd9cb36",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 2, 7, 8, 8, 9 to:",
+      "correct_answer": "8",
       "options": [
-        "5",
-        "2",
-        "4",
-        "7"
+        "6",
+        "10",
+        "11",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d21aea0b-32c3-454b-b44b-6e8748b14e12",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 10, 3, 11, 9, 12 wynosi:",
+      "content": "Średnia arytmetyczna liczb 10, 3, 11, 9, 12 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "9",
       "options": [
         "11",
@@ -169,72 +169,72 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "7dc9aa31-f236-480f-9ce9-024614ef893e",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 2, 5, 6, 10, 10 to:",
+      "correct_answer": "6",
       "options": [
-        "5",
-        "7",
-        "2",
-        "4"
+        "4",
+        "6",
+        "9",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2e48d8f6-c06d-48ce-b8dc-b27d6afa58bb",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 2, 8, 5, 8, 10 wynosi:",
+      "content": "Średnia arytmetyczna liczb 2, 8, 5, 8, 10 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "6.6",
       "options": [
         "6.6",
-        "10",
-        "9",
-        "5"
+        "9.6",
+        "8.6",
+        "4.6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6.6",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 6.6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5fd46dce-ef0e-4381-b5ca-3cd3cf6e446a",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
+      "content": "Mediana zbioru 2, 2, 4, 9, 10 to:",
       "correct_answer": "4",
       "options": [
-        "2",
         "5",
-        "7",
-        "4"
+        "3",
+        "4",
+        "7"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "68f83ac2-4fc0-41f9-aeb9-5262a8cebe3e",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 10, 9, 12, 7, 12 wynosi:",
+      "content": "Średnia arytmetyczna liczb 10, 9, 12, 7, 12 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "10",
       "options": [
         "10",
@@ -245,146 +245,146 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c4d9c14a-b130-4ad2-814c-333cb527e14d",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 2, 2, 5, 6, 8 to:",
+      "correct_answer": "5",
       "options": [
+        "4",
+        "3",
         "7",
-        "5",
-        "2",
-        "4"
+        "5"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "66d2cd2e-a4fc-4ed1-8240-e256be75328c",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 12, 10, 3, 2, 9 wynosi:",
+      "content": "Średnia arytmetyczna liczb 12, 10, 3, 2, 9 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "7.2",
       "options": [
-        "9",
-        "5",
+        "9.2",
+        "5.2",
         "7.2",
-        "6"
+        "6.2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7.2",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 7.2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a1272dfe-5b7d-44ab-9ed4-493d550a9efc",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
+      "content": "Mediana zbioru 2, 2, 7, 10, 12 to:",
+      "correct_answer": "7",
       "options": [
-        "7",
-        "4",
-        "2",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f0e3c6a3-1d7a-4fd1-a561-903edf762ae6",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Średnia arytmetyczna liczb 4, 6, 4, 12, 3 wynosi:",
-      "correct_answer": "5.8",
-      "options": [
-        "5.8",
-        "4",
         "9",
-        "5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5.8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "692de5bf-909a-4c7d-bd5b-900f95276c2e",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
-      "correct_answer": "4",
-      "options": [
-        "4",
-        "2",
+        "6",
         "5",
         "7"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2d0f64d3-6d7f-4813-b5f2-affae6019db1",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "id": "f0e3c6a3-1d7a-4fd1-a561-903edf762ae6",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Średnia arytmetyczna liczb 9, 8, 10, 7, 9 wynosi:",
+      "content": "Średnia arytmetyczna liczb 4, 6, 4, 12, 3 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "5.8",
+      "options": [
+        "5.8",
+        "3.8",
+        "8.8",
+        "4.8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 5.8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "692de5bf-909a-4c7d-bd5b-900f95276c2e",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Mediana zbioru 2, 7, 8, 9, 10 to:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "8",
+        "11",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d0f64d3-6d7f-4813-b5f2-affae6019db1",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Średnia arytmetyczna liczb 9, 8, 10, 7, 9 wynosi (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "8.6",
       "options": [
         "8.6",
-        "7",
-        "10",
-        "11"
+        "6.6",
+        "9.6",
+        "10.6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8.6",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 8.6",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ec1949b0-b33c-4ccb-81e7-45f6ce42d6b3",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Mediana zbioru 2, 4, 4, 7, 9 to:",
+      "content": "Mediana zbioru 3, 4, 4, 7, 11 to:",
       "correct_answer": "4",
       "options": [
-        "5",
-        "7",
         "4",
-        "2"
+        "5",
+        "6",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "22648223-4860-4d41-989a-9e1cfe6f78e4",
-      "generatedAt": "2026-08-07T16:30:27.562Z",
+      "generatedAt": "2026-09-06T19:54:36.639Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.562Z"
+  "updatedAt": "2026-09-06T19:54:36.639Z"
 }

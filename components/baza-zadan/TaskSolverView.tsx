@@ -133,6 +133,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
 
     try {
       const { grade } = await fetchTaskGrade({
+        taskId: task.id,
         taskContent: task.prompt,
         correctAnswer: expected,
         studentAnswer: answer,

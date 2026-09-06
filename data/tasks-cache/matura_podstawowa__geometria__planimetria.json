@@ -17,30 +17,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 22",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 22",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ad7717f5-152f-4270-951a-71d8e5594b2f",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.628Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 6 i 12. Długość przeciwprostokątnej to:",
-      "correct_answer": "13.42",
+      "content": "Trójkąt prostokątny ma przyprostokątne 6 i 12. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "13.4",
       "options": [
         "11.42",
         "10.42",
         "15.42",
-        "13.42"
+        "13.4"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 13.42",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 13.4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ee6f099a-949a-4fe6-9bb8-d6006bd1f72e",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.628Z",
       "model": "parametric-v2"
     },
     {
@@ -55,30 +55,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
       "figure_svg": null,
       "figure_caption": null,
       "id": "337d50f9-09a8-490e-ba8f-ebc474b48cdf",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.628Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 5 i 13. Długość przeciwprostokątnej to:",
-      "correct_answer": "13.93",
+      "content": "Trójkąt prostokątny ma przyprostokątne 5 i 13. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "13.9",
       "options": [
         "12.93",
-        "13.93",
+        "13.9",
         "15.93",
         "10.93"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 13.93",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 13.9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3a11673b-55c3-49b9-aa97-9d3e9e19433c",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -93,30 +93,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e521cb06-c983-41f1-b013-6719e5994057",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 11 i 10. Długość przeciwprostokątnej to:",
-      "correct_answer": "14.87",
+      "content": "Trójkąt prostokątny ma przyprostokątne 11 i 10. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "14.9",
       "options": [
         "17.87",
         "16.87",
         "13.87",
-        "14.87"
+        "14.9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14.87",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 14.9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d226f6f0-3d1c-4e7d-a475-006072dcaf06",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -131,18 +131,18 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "0bbc240d-b652-4440-831b-e576cb67cfb7",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 6 i 11. Długość przeciwprostokątnej to:",
-      "correct_answer": "12.53",
+      "content": "Trójkąt prostokątny ma przyprostokątne 6 i 11. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "12.5",
       "options": [
-        "12.53",
+        "12.5",
         "16.53",
         "13.53",
         "15.53"
@@ -150,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.53",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 12.5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a3feac35-33c3-4613-bf2c-ecc350011491",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -169,15 +169,15 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "eb449c12-85af-4772-9793-edfbd0a53a54",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 9 i 12. Długość przeciwprostokątnej to:",
+      "content": "Trójkąt prostokątny ma przyprostokątne 9 i 12. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "15",
       "options": [
         "15",
@@ -188,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8583dd21-6cf6-4a17-ad3f-2dfa0627a012",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -207,30 +207,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5ef39220-faed-44a8-a11d-eaebdec4a999",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 10 i 6. Długość przeciwprostokątnej to:",
-      "correct_answer": "11.66",
+      "content": "Trójkąt prostokątny ma przyprostokątne 10 i 6. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "11.7",
       "options": [
         "8.66",
         "12.66",
         "14.66",
-        "11.66"
+        "11.7"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11.66",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 11.7",
       "figure_svg": null,
       "figure_caption": null,
       "id": "44edc936-008e-4831-944c-77b198e32916",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -245,18 +245,18 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 14",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d7268806-1153-44e7-8612-4560772f5e0d",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 7 i 13. Długość przeciwprostokątnej to:",
-      "correct_answer": "14.76",
+      "content": "Trójkąt prostokątny ma przyprostokątne 7 i 13. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "14.8",
       "options": [
-        "14.76",
+        "14.8",
         "16.76",
         "18.76",
         "17.76"
@@ -264,11 +264,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14.76",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 14.8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "397ffe9b-88ac-48f3-9f64-488eaf03ec3b",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -283,15 +283,15 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 42",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 42",
       "figure_svg": null,
       "figure_caption": null,
       "id": "674b665b-9888-44f2-8139-73be63d3c772",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 10 i 13. Długość przeciwprostokątnej to:",
+      "content": "Trójkąt prostokątny ma przyprostokątne 10 i 13. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "16.4",
       "options": [
         "14.4",
@@ -302,11 +302,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16.4",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 16.4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5d89a4cc-c7fb-4c45-af9f-a9afa2854907",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -321,18 +321,18 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f1512e5f-4fe0-47c6-acf9-020d491dea07",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 8 i 9. Długość przeciwprostokątnej to:",
-      "correct_answer": "12.04",
+      "content": "Trójkąt prostokątny ma przyprostokątne 8 i 9. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "12",
       "options": [
-        "12.04",
+        "12",
         "9.04",
         "10.04",
         "13.04"
@@ -340,11 +340,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12.04",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
       "id": "6d46c986-0021-4d74-b628-3932d49de851",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
@@ -359,32 +359,32 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 22.5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 22.5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8f2e99bd-3710-48dd-9b8f-85c779f14bd3",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąt prostokątny ma przyprostokątne 7 i 6. Długość przeciwprostokątnej to:",
-      "correct_answer": "9.22",
+      "content": "Trójkąt prostokątny ma przyprostokątne 7 i 6. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):",
+      "correct_answer": "9.2",
       "options": [
         "10.22",
         "11.22",
         "8.22",
-        "9.22"
+        "9.2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9.22",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 9.2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "fe3c98be-9d3d-4810-af0f-cc6094e1540a",
-      "generatedAt": "2026-08-07T16:30:27.559Z",
+      "generatedAt": "2026-09-06T19:54:36.629Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.559Z"
+  "updatedAt": "2026-09-06T19:54:36.629Z"
 }

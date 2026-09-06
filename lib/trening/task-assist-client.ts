@@ -5,6 +5,7 @@ import { getSupabaseAccessToken } from "@/lib/supabase";
 
 export type TaskAssistHintRequest = {
   mode: "hint";
+  taskId: string;
   taskContent: string;
   correctAnswer: string;
   hintLevel: number;
@@ -16,6 +17,7 @@ export type TaskAssistHintRequest = {
 
 export type TaskAssistGradeRequest = {
   mode: "grade";
+  taskId: string;
   taskContent: string;
   correctAnswer: string;
   studentAnswer: string;
@@ -27,6 +29,7 @@ export type TaskAssistGradeRequest = {
 
 export type TaskAssistAskRequest = {
   mode: "ask";
+  taskId: string;
   taskContent: string;
   correctAnswer: string;
   userMessage: string;

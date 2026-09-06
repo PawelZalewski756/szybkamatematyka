@@ -6,345 +6,288 @@
   "topicName": "Diagramy słupkowe i kołowe",
   "tasks": [
     {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
+      "content": "W diagramie kołowym 30% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
+      "correct_answer": "150",
       "options": [
-        "50",
-        "40",
-        "48",
-        "51"
+        "150",
+        "161",
+        "152",
+        "160"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 150",
       "figure_svg": null,
       "figure_caption": null,
       "id": "cf68e338-9d0d-445f-af65-3bd6dc1d01e8",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
+      "content": "W diagramie kołowym 10% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
       "correct_answer": "50",
       "options": [
+        "61",
         "49",
         "50",
-        "52",
-        "61"
+        "52"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5b13da88-a510-439b-bb89-2b2c7f3eb77d",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
+      "content": "W diagramie kołowym 75% uczniów wybrało matematykę. Ile to uczniów przy 400 uczniach?",
+      "correct_answer": "300",
       "options": [
-        "40",
-        "60",
-        "61",
-        "50"
+        "298",
+        "301",
+        "300",
+        "299"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 300",
       "figure_svg": null,
       "figure_caption": null,
       "id": "badcd1d1-f916-48cf-9f34-595fec5b0a41",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
-      "options": [
-        "40",
-        "50",
-        "61",
-        "49"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c2750ba7-ed01-4e7b-a20a-6a6aaa26ec7a",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 25% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "25",
-      "options": [
-        "36",
-        "23",
-        "25",
-        "27"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "79176dce-928e-40cd-ae83-77d608e69eeb",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
+      "content": "W diagramie kołowym 20% uczniów wybrało matematykę. Ile to uczniów przy 200 uczniach?",
       "correct_answer": "40",
       "options": [
-        "51",
-        "40",
         "38",
-        "30"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3dc5e7d6-7fd3-4ee3-b9e6-6648032557f7",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
-      "options": [
-        "60",
-        "49",
-        "48",
-        "50"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "74a921c2-4f1b-478e-ab8d-c8c74e6c286c",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 25% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "25",
-      "options": [
-        "35",
-        "23",
-        "25",
-        "15"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4970a19f-84ef-47ff-89ff-d5952b65e293",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
-      "options": [
-        "61",
-        "40",
+        "42",
         "50",
-        "49"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e4f42dda-9b35-4071-a0f1-c3cf94633158",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
-      "options": [
-        "51",
-        "40",
-        "39",
-        "50"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c462964d-b6ce-49d3-a16a-f86fb9d8e6bc",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
-      "options": [
-        "40",
-        "38",
-        "30",
-        "41"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "49aeddae-321b-4b26-a21c-dd062b884cb4",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
-      "options": [
-        "40",
-        "30",
-        "51",
-        "42"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "dd17d53a-9b18-4004-b62e-50ae92f12145",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
-      "options": [
-        "40",
-        "52",
-        "50",
-        "60"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f7effb48-b8fa-4863-9ce3-6b66a6f421ef",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
-      "options": [
-        "41",
-        "50",
-        "51",
         "40"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 40",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c5fc5844-50da-467f-ab54-637d50c14fdb",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "c2750ba7-ed01-4e7b-a20a-6a6aaa26ec7a",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
+      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 300 uczniach?",
+      "correct_answer": "120",
       "options": [
-        "49",
-        "51",
+        "120",
+        "118",
+        "121",
+        "110"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "79176dce-928e-40cd-ae83-77d608e69eeb",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 30% uczniów wybrało matematykę. Ile to uczniów przy 200 uczniach?",
+      "correct_answer": "60",
+      "options": [
+        "59",
+        "71",
         "50",
         "60"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 60",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fd661a0e-a3b4-40b0-921d-19b6f8ecdac2",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "3dc5e7d6-7fd3-4ee3-b9e6-6648032557f7",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
+      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
+      "correct_answer": "200",
       "options": [
-        "39",
-        "50",
+        "190",
+        "211",
+        "199",
+        "200"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 200",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74a921c2-4f1b-478e-ab8d-c8c74e6c286c",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 10% uczniów wybrało matematykę. Ile to uczniów przy 300 uczniach?",
+      "correct_answer": "30",
+      "options": [
+        "28",
         "40",
+        "30",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4970a19f-84ef-47ff-89ff-d5952b65e293",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 20% uczniów wybrało matematykę. Ile to uczniów przy 400 uczniach?",
+      "correct_answer": "80",
+      "options": [
+        "70",
+        "80",
+        "79",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 80",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4f42dda-9b35-4071-a0f1-c3cf94633158",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 300 uczniach?",
+      "correct_answer": "150",
+      "options": [
+        "150",
+        "160",
+        "140",
+        "149"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 150",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c462964d-b6ce-49d3-a16a-f86fb9d8e6bc",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 400 uczniach?",
+      "correct_answer": "200",
+      "options": [
+        "199",
+        "190",
+        "210",
+        "200"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 200",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "49aeddae-321b-4b26-a21c-dd062b884cb4",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 25% uczniów wybrało matematykę. Ile to uczniów przy 400 uczniach?",
+      "correct_answer": "100",
+      "options": [
+        "102",
+        "101",
+        "100",
+        "111"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd17d53a-9b18-4004-b62e-50ae92f12145",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 75% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
+      "correct_answer": "375",
+      "options": [
+        "376",
+        "386",
+        "373",
+        "375"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 375",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f7effb48-b8fa-4863-9ce3-6b66a6f421ef",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 20% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
+      "correct_answer": "20",
+      "options": [
+        "21",
+        "22",
+        "20",
         "30"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7c048112-64e8-4d04-a634-1fb617c57d12",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "c5fc5844-50da-467f-ab54-637d50c14fdb",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 25% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "25",
+      "content": "W diagramie kołowym 60% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
+      "correct_answer": "300",
       "options": [
-        "26",
-        "27",
-        "23",
-        "25"
+        "310",
+        "311",
+        "290",
+        "300"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 300",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5b4a90f1-ef01-48f9-8d73-693d139996b5",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W diagramie kołowym 50% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "50",
-      "options": [
-        "51",
-        "40",
-        "50",
-        "60"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2d9ebe06-9d23-4cc5-a7bf-7d576c79ae2d",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "fd661a0e-a3b4-40b0-921d-19b6f8ecdac2",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
@@ -353,38 +296,95 @@
       "options": [
         "25",
         "24",
-        "15",
+        "35",
         "27"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "583a8f36-2668-481a-a28d-8e61863ea458",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "7c048112-64e8-4d04-a634-1fb617c57d12",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
-      "correct_answer": "40",
+      "content": "W diagramie kołowym 25% uczniów wybrało matematykę. Ile to uczniów przy 300 uczniach?",
+      "correct_answer": "75",
       "options": [
-        "40",
-        "38",
-        "41",
-        "50"
+        "75",
+        "76",
+        "74",
+        "73"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 75",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b4a90f1-ef01-48f9-8d73-693d139996b5",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 40% uczniów wybrało matematykę. Ile to uczniów przy 400 uczniach?",
+      "correct_answer": "160",
+      "options": [
+        "170",
+        "161",
+        "150",
+        "160"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 160",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d9ebe06-9d23-4cc5-a7bf-7d576c79ae2d",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 60% uczniów wybrało matematykę. Ile to uczniów przy 100 uczniach?",
+      "correct_answer": "60",
+      "options": [
+        "70",
+        "61",
+        "59",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "583a8f36-2668-481a-a28d-8e61863ea458",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W diagramie kołowym 20% uczniów wybrało matematykę. Ile to uczniów przy 500 uczniach?",
+      "correct_answer": "100",
+      "options": [
+        "100",
+        "110",
+        "99",
+        "111"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e0356b6f-6ca2-44bf-810b-776563412926",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.675Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.573Z"
+  "updatedAt": "2026-09-06T19:54:36.675Z"
 }

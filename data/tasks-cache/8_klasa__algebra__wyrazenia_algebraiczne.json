@@ -17,11 +17,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
       "id": "aadbf37b-7d1f-4ebc-87c0-b610b66cbe6f",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -36,30 +36,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e5cbd7d6-9250-4535-bb72-516d87d811ef",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
+      "content": "Uprość: $2x+9x$",
+      "correct_answer": "11x",
       "options": [
-        "5x",
-        "2x",
-        "8x",
-        "6x"
+        "9x",
+        "11x",
+        "12x",
+        "2x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 11x",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a885ba17-870b-43c4-b620-64e7f27f8eaf",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -74,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "34898c58-4834-48c5-961a-d160e0eb0fb8",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -93,30 +93,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d69bca01-aa4d-4462-9d7b-0a6f3a2386cf",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
+      "content": "Uprość: $9x+6x$",
+      "correct_answer": "15x",
       "options": [
-        "8x",
+        "16x",
         "6x",
-        "5x",
-        "2x"
+        "15x",
+        "9x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15x",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f767281a-8efe-4a89-9197-c87cafea7638",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -131,11 +131,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e66e86f6-77b1-4d69-84e7-ec8f66bec0cc",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -150,30 +150,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2c7718d2-2b84-4252-aef2-6d2a0f4302d5",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
+      "content": "Uprość: $6x+2x$",
+      "correct_answer": "8x",
       "options": [
+        "8x",
         "2x",
-        "5x",
         "6x",
-        "8x"
+        "9x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8x",
       "figure_svg": null,
       "figure_caption": null,
       "id": "da13aca3-4c26-457e-9742-3a2798e8fac5",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -188,49 +188,30 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "662e8807-894c-4451-b240-54bd2eda4f89",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2-4$ dla $x=3$.",
-      "correct_answer": "5",
+      "content": "Uprość: $8x+5x$",
+      "correct_answer": "13x",
       "options": [
-        "5",
-        "4",
-        "11",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ca1d5a4f-e7fa-408d-980f-077d385d9fc7",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
-      "options": [
-        "6x",
-        "8x",
+        "13x",
         "5x",
-        "2x"
+        "8x",
+        "14x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 13x",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "337692c9-754b-4d1a-83cf-58d62ee72ef4",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "ca1d5a4f-e7fa-408d-980f-077d385d9fc7",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -245,11 +226,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 10",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "eb4b65df-da05-4b44-a453-f5c3c429b3b4",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "337692c9-754b-4d1a-83cf-58d62ee72ef4",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -264,30 +245,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 21",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f066df09-54a1-47d7-b61c-93a9a23a75e7",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "eb4b65df-da05-4b44-a453-f5c3c429b3b4",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
+      "content": "Uprość: $6x+8x$",
+      "correct_answer": "14x",
       "options": [
+        "14x",
         "6x",
-        "5x",
-        "2x",
-        "8x"
+        "8x",
+        "15x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 14x",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2594ef51-3a17-459a-b0de-40f7160dec42",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "f066df09-54a1-47d7-b61c-93a9a23a75e7",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -302,49 +283,30 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 11",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 11",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f8bce15d-df82-4916-a5de-6151143055b9",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "2594ef51-3a17-459a-b0de-40f7160dec42",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2-4$ dla $x=5$.",
-      "correct_answer": "21",
+      "content": "Uprość: $6x+5x$",
+      "correct_answer": "11x",
       "options": [
-        "22",
-        "21",
-        "23",
-        "16"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6177d97b-295a-4f88-8d7a-de97b0ca6637",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Uprość: $2x+4x$",
-      "correct_answer": "6x",
-      "options": [
-        "2x",
-        "6x",
+        "12x",
         "5x",
-        "8x"
+        "11x",
+        "6x"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6x",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 11x",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3d46498b-325a-4120-8d86-e08d29628e01",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "f8bce15d-df82-4916-a5de-6151143055b9",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
@@ -359,32 +321,70 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 14",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "61488003-972f-4fa7-9ca1-a97e48172a18",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "id": "6177d97b-295a-4f88-8d7a-de97b0ca6637",
+      "generatedAt": "2026-09-06T19:54:36.649Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $x^2-4$ dla $x=6$.",
-      "correct_answer": "32",
+      "content": "Uprość: $4x+8x$",
+      "correct_answer": "12x",
       "options": [
-        "37",
-        "38",
-        "32",
-        "27"
+        "13x",
+        "12x",
+        "4x",
+        "8x"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12x",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d46498b-325a-4120-8d86-e08d29628e01",
+      "generatedAt": "2026-09-06T19:54:36.650Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz wartość wyrażenia $2a+3b$ dla $a=5$, $b=4$.",
+      "correct_answer": "22",
+      "options": [
+        "25",
+        "22",
+        "24",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 22",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61488003-972f-4fa7-9ca1-a97e48172a18",
+      "generatedAt": "2026-09-06T19:54:36.650Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Uprość: $9x+5x$",
+      "correct_answer": "14x",
+      "options": [
+        "14x",
+        "9x",
+        "5x",
+        "15x"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 14x",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e53c6385-d66d-4d40-9b21-18cb6dcb60af",
-      "generatedAt": "2026-08-07T16:30:27.566Z",
+      "generatedAt": "2026-09-06T19:54:36.650Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.566Z"
+  "updatedAt": "2026-09-06T19:54:36.650Z"
 }

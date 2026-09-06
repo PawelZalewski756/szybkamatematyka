@@ -6,102 +6,140 @@
   "topicName": "Punkty na płaszczyźnie",
   "tasks": [
     {
-      "content": "Punkt $(3,4)$ leży w ćwiartce:​",
+      "content": "Punkt $(3,4)$ leży w ćwiartce:",
       "correct_answer": "I",
       "options": [
-        "II",
+        "I",
         "III",
         "IV",
-        "I"
+        "II"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** I",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** I",
       "figure_svg": null,
       "figure_caption": null,
       "id": "91fb7373-6678-4986-bd0b-aad89a38fb2c",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.666Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(4,-2)$ leży w ćwiartce:​​",
-      "correct_answer": "IV",
+      "content": "Punkt $(-2,5)$ leży w ćwiartce:",
+      "correct_answer": "II",
       "options": [
         "II",
-        "IV",
         "III",
+        "IV",
         "I"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** IV",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** II",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d7a7b70a-74bb-418e-b78f-a2cf78f4ce47",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-3,-1)$ leży w ćwiartce:​​​",
+      "content": "Punkt $(-3,-1)$ leży w ćwiartce:",
       "correct_answer": "III",
       "options": [
-        "IV",
         "II",
+        "IV",
         "I",
         "III"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** III",
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** III",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4a7ab938-ef51-4d61-87b3-14fbc25424af",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-2,5)$ leży w ćwiartce:​​​​",
-      "correct_answer": "II",
+      "content": "Punkt $(4,-2)$ leży w ćwiartce:",
+      "correct_answer": "IV",
       "options": [
         "II",
-        "IV",
+        "III",
         "I",
-        "III"
+        "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** II",
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** IV",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c52b6217-986e-4ace-8d08-05b8cc158dd0",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(3,4)$ leży w ćwiartce:​​​​​",
+      "content": "Punkt $(6,2)$ leży w ćwiartce:",
       "correct_answer": "I",
       "options": [
         "IV",
-        "I",
         "III",
+        "II",
+        "I"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** I",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d2ef47c-b85c-48a9-9521-2695c6a8deb8",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(-4,7)$ leży w ćwiartce:",
+      "correct_answer": "II",
+      "options": [
+        "IV",
+        "III",
+        "I",
         "II"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** I",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** II",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4d2ef47c-b85c-48a9-9521-2695c6a8deb8",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "529a1150-3c16-4da8-b497-e676578a15ff",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(4,-2)$ leży w ćwiartce:​​​​​​",
+      "content": "Punkt $(-6,-3)$ leży w ćwiartce:",
+      "correct_answer": "III",
+      "options": [
+        "I",
+        "III",
+        "II",
+        "IV"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** III",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb062e3c-8de0-40cf-a26f-9722c7fce767",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(8,-5)$ leży w ćwiartce:",
       "correct_answer": "IV",
       "options": [
         "I",
@@ -111,226 +149,188 @@
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** IV",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** IV",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "529a1150-3c16-4da8-b497-e676578a15ff",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "b565665f-55b5-4b07-98a7-ead9499ecc47",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-3,-1)$ leży w ćwiartce:​​​​​​​",
-      "correct_answer": "III",
+      "content": "Punkt $(2,9)$ leży w ćwiartce:",
+      "correct_answer": "I",
       "options": [
-        "IV",
+        "I",
         "II",
         "III",
-        "I"
+        "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** III",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** I",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bb062e3c-8de0-40cf-a26f-9722c7fce767",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "d19914df-a2e5-4d82-baec-842128f0bcdb",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-2,5)$ leży w ćwiartce:​​​​​​​​",
+      "content": "Punkt $(-7,4)$ leży w ćwiartce:",
       "correct_answer": "II",
       "options": [
-        "II",
-        "III",
         "I",
-        "IV"
+        "IV",
+        "II",
+        "III"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** II",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b565665f-55b5-4b07-98a7-ead9499ecc47",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(3,4)$ leży w ćwiartce:​​​​​​​​​",
-      "correct_answer": "I",
-      "options": [
-        "I",
-        "II",
-        "IV",
-        "III"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** I",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d19914df-a2e5-4d82-baec-842128f0bcdb",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(4,-2)$ leży w ćwiartce:​​​​​​​​​​",
-      "correct_answer": "IV",
-      "options": [
-        "II",
-        "I",
-        "IV",
-        "III"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** IV",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** II",
       "figure_svg": null,
       "figure_caption": null,
       "id": "0b4e1a33-2427-4ac7-a63b-2d2b023f7ba2",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-3,-1)$ leży w ćwiartce:​​​​​​​​​​​",
+      "content": "Punkt $(-5,-8)$ leży w ćwiartce:",
       "correct_answer": "III",
       "options": [
         "III",
-        "II",
         "I",
-        "IV"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** III",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7553ed0c-616d-41c5-ab95-b1cabadefc7d",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(-2,5)$ leży w ćwiartce:​​​​​​​​​​​​",
-      "correct_answer": "II",
-      "options": [
-        "I",
-        "III",
         "II",
         "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** II",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** III",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5268f6d5-1355-4664-96d3-954a00e14803",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "7553ed0c-616d-41c5-ab95-b1cabadefc7d",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(3,4)$ leży w ćwiartce:​​​​​​​​​​​​​",
-      "correct_answer": "I",
+      "content": "Punkt $(9,-1)$ leży w ćwiartce:",
+      "correct_answer": "IV",
       "options": [
         "III",
-        "II",
         "I",
+        "II",
         "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** I",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bccf13d6-6839-4961-abf1-c96ddf14ca55",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(4,-2)$ leży w ćwiartce:​​​​​​​​​​​​​​",
-      "correct_answer": "IV",
-      "options": [
-        "III",
-        "II",
-        "IV",
-        "I"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** IV",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** IV",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fbe92c5f-01ef-4415-987a-dfb6fa20b8ee",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "5268f6d5-1355-4664-96d3-954a00e14803",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-3,-1)$ leży w ćwiartce:​​​​​​​​​​​​​​​",
-      "correct_answer": "III",
-      "options": [
-        "II",
-        "IV",
-        "III",
-        "I"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** III",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8ee63d3f-15db-4ed5-ae90-c979f24eca88",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(-2,5)$ leży w ćwiartce:​​​​​​​​​​​​​​​​",
-      "correct_answer": "II",
+      "content": "Punkt $(1,6)$ leży w ćwiartce:",
+      "correct_answer": "I",
       "options": [
         "IV",
-        "II",
         "I",
+        "II",
         "III"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** II",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** I",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8d06acef-8408-40bf-9529-cb03eb925901",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "bccf13d6-6839-4961-abf1-c96ddf14ca55",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(3,4)$ leży w ćwiartce:​​​​​​​​​​​​​​​​​",
+      "content": "Punkt $(-8,3)$ leży w ćwiartce:",
+      "correct_answer": "II",
+      "options": [
+        "II",
+        "IV",
+        "III",
+        "I"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** II",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fbe92c5f-01ef-4415-987a-dfb6fa20b8ee",
+      "generatedAt": "2026-09-06T19:54:36.667Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(-9,-2)$ leży w ćwiartce:",
+      "correct_answer": "III",
+      "options": [
+        "III",
+        "IV",
+        "II",
+        "I"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** III",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ee63d3f-15db-4ed5-ae90-c979f24eca88",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(7,-7)$ leży w ćwiartce:",
+      "correct_answer": "IV",
+      "options": [
+        "I",
+        "IV",
+        "II",
+        "III"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** IV",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8d06acef-8408-40bf-9529-cb03eb925901",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(5,10)$ leży w ćwiartce:",
       "correct_answer": "I",
       "options": [
         "III",
+        "II",
         "I",
-        "IV",
-        "II"
+        "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** I",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** I",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d2345861-cc85-4a45-a69b-3e90ded1a34d",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(4,-2)$ leży w ćwiartce:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "IV",
+      "content": "Punkt $(-10,5)$ leży w ćwiartce:",
+      "correct_answer": "II",
       "options": [
         "III",
         "II",
@@ -339,52 +339,52 @@
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** IV",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** II",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e99a5d2a-bf34-479d-bcba-104eac83dfde",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Punkt $(-3,-1)$ leży w ćwiartce:​​​​​​​​​​​​​​​​​​​",
+      "content": "Punkt $(-2,-9)$ leży w ćwiartce:",
       "correct_answer": "III",
       "options": [
-        "IV",
-        "I",
-        "III",
-        "II"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** III",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "73a47648-774d-4b0e-b3e6-1084c37aca1e",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Punkt $(-2,5)$ leży w ćwiartce:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "II",
-      "options": [
-        "I",
         "II",
+        "I",
         "III",
         "IV"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** II",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** III",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73a47648-774d-4b0e-b3e6-1084c37aca1e",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Punkt $(10,-4)$ leży w ćwiartce:",
+      "correct_answer": "IV",
+      "options": [
+        "II",
+        "III",
+        "IV",
+        "I"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** IV",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f01d27a0-122c-410b-83fd-db28cdd89fb5",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.668Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.570Z"
+  "updatedAt": "2026-09-06T19:54:36.668Z"
 }

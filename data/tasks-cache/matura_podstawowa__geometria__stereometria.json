@@ -6,385 +6,385 @@
   "topicName": "Stereometria",
   "tasks": [
     {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 7 wynosi:",
-      "correct_answer": "294",
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 2 wynosi:",
+      "correct_answer": "24",
       "options": [
-        "292",
-        "282",
-        "294",
-        "293"
+        "36",
+        "24",
+        "23",
+        "12"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 294",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
       "figure_svg": null,
       "figure_caption": null,
       "id": "bd7aa202-40a1-4174-ba6f-baad8d7f8230",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     },
     {
       "content": "Objętość kuli o promieniu 3 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
       "correct_answer": "113",
       "options": [
-        "111",
-        "115",
         "93",
-        "113"
+        "114",
+        "113",
+        "115"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 113",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 113",
       "figure_svg": null,
       "figure_caption": null,
       "id": "eb1d74ca-a860-4955-b928-238121f551f7",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     },
     {
       "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
       "correct_answer": "96",
       "options": [
-        "84",
-        "98",
-        "96",
-        "94"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3b23d1e3-a0cc-4887-8192-b29ecbb46c7a",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "905",
-      "options": [
-        "906",
-        "885",
-        "905",
-        "903"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "de4ff603-b04a-479b-9067-fad5fb209690",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 5 wynosi:",
-      "correct_answer": "150",
-      "options": [
-        "138",
-        "149",
-        "150",
-        "152"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 150",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6526ba89-5fbe-4f12-9d7b-f4338c943c68",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "905",
-      "options": [
-        "926",
-        "885",
-        "907",
-        "905"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "65fe1e15-3c64-4172-9252-968bd5dd618a",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
-      "correct_answer": "216",
-      "options": [
-        "216",
-        "229",
-        "204",
-        "217"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "74680103-efa9-41c9-a589-9cb973bbec4f",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "524",
-      "options": [
-        "522",
-        "524",
-        "545",
-        "525"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a3ae1768-a77d-4d4b-aea2-684958d8fe84",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
-      "correct_answer": "96",
-      "options": [
-        "96",
         "109",
-        "95",
-        "94"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "24e0242e-5760-42ff-b43d-59383cfb48c0",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "524",
-      "options": [
-        "525",
-        "524",
-        "522",
-        "544"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 24,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1ae31475-2d6f-4465-ae22-bb1f8b9c4814",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
-      "correct_answer": "216",
-      "options": [
-        "204",
-        "217",
-        "216",
-        "215"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ece3ad25-5fb6-4b24-bc2b-2b8d861c697d",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 6 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "905",
-      "options": [
-        "906",
-        "903",
-        "905",
-        "925"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 905",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7379ab40-d1d1-4e0a-8ca5-2089d44ddb93",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 7 wynosi:",
-      "correct_answer": "294",
-      "options": [
-        "307",
-        "293",
-        "292",
-        "294"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 294",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "00591c53-60bc-4973-88fa-9e3974e2ea22",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 4 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "268",
-      "options": [
-        "269",
-        "289",
-        "268",
-        "248"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 268",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f943014-4b16-4256-8939-b963c5c8af8f",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 2 wynosi:",
-      "correct_answer": "24",
-      "options": [
-        "12",
-        "24",
-        "37",
-        "23"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9cfaa9e7-e939-4269-b29f-90865a9edbdc",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "524",
-      "options": [
-        "523",
-        "504",
-        "525",
-        "524"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 524",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fd0210d3-cbfe-4022-bb28-99e1cf995bf9",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 4 wynosi:",
-      "correct_answer": "96",
-      "options": [
-        "108",
         "96",
         "98",
         "84"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 96",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "db017d53-e924-4bdd-9f9f-f3c95b098606",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "id": "3b23d1e3-a0cc-4887-8192-b29ecbb46c7a",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość kuli o promieniu 4 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "268",
+      "content": "Objętość kuli o promieniu 5 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "523",
       "options": [
-        "266",
-        "267",
-        "268",
-        "289"
+        "521",
+        "523",
+        "503",
+        "522"
       ],
       "answer_type": "choice",
       "difficulty": 3,
-      "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 268",
+      "xp_reward": 24,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 523",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "54e188f7-d53d-484c-8d5d-8001ee744d4f",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "id": "de4ff603-b04a-479b-9067-fad5fb209690",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     },
     {
       "content": "Pole całkowitej powierzchni sześcianu o krawędzi 6 wynosi:",
       "correct_answer": "216",
       "options": [
-        "217",
-        "229",
-        "215",
+        "228",
+        "214",
+        "204",
         "216"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 216",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "16f3e431-7e3b-477c-8189-5b2136ecc477",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "id": "6526ba89-5fbe-4f12-9d7b-f4338c943c68",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość kuli o promieniu 2 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
-      "correct_answer": "34",
+      "content": "Objętość kuli o promieniu 7 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "1436",
       "options": [
-        "34",
-        "32",
-        "55",
-        "54"
+        "1434",
+        "1457",
+        "1436",
+        "1438"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 25,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 1436",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65fe1e15-3c64-4172-9252-968bd5dd618a",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 8 wynosi:",
+      "correct_answer": "384",
+      "options": [
+        "384",
+        "382",
+        "372",
+        "386"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 384",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74680103-efa9-41c9-a589-9cb973bbec4f",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 9 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "3052",
+      "options": [
+        "3052",
+        "3051",
+        "3053",
+        "3072"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 3052",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3ae1768-a77d-4d4b-aea2-684958d8fe84",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 10 wynosi:",
+      "correct_answer": "600",
+      "options": [
+        "602",
+        "613",
+        "599",
+        "600"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 600",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24e0242e-5760-42ff-b43d-59383cfb48c0",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 11 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "5572",
+      "options": [
+        "5572",
+        "5593",
+        "5552",
+        "5574"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 5572",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1ae31475-2d6f-4465-ae22-bb1f8b9c4814",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 12 wynosi:",
+      "correct_answer": "864",
+      "options": [
+        "852",
+        "865",
+        "863",
+        "864"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 864",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ece3ad25-5fb6-4b24-bc2b-2b8d861c697d",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 13 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "9198",
+      "options": [
+        "9196",
+        "9198",
+        "9200",
+        "9197"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 9198",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7379ab40-d1d1-4e0a-8ca5-2089d44ddb93",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 14 wynosi:",
+      "correct_answer": "1176",
+      "options": [
+        "1178",
+        "1174",
+        "1164",
+        "1176"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1176",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "00591c53-60bc-4973-88fa-9e3974e2ea22",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 15 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "14130",
+      "options": [
+        "14150",
+        "14110",
+        "14129",
+        "14130"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 14130",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f943014-4b16-4256-8939-b963c5c8af8f",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 16 wynosi:",
+      "correct_answer": "1536",
+      "options": [
+        "1548",
+        "1536",
+        "1535",
+        "1534"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1536",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9cfaa9e7-e939-4269-b29f-90865a9edbdc",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 17 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "20569",
+      "options": [
+        "20570",
+        "20568",
+        "20569",
+        "20549"
       ],
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 34",
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 20569",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd0210d3-cbfe-4022-bb28-99e1cf995bf9",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 18 wynosi:",
+      "correct_answer": "1944",
+      "options": [
+        "1944",
+        "1946",
+        "1932",
+        "1942"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1944",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "db017d53-e924-4bdd-9f9f-f3c95b098606",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 19 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "28716",
+      "options": [
+        "28696",
+        "28716",
+        "28736",
+        "28717"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 28716",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "54e188f7-d53d-484c-8d5d-8001ee744d4f",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole całkowitej powierzchni sześcianu o krawędzi 20 wynosi:",
+      "correct_answer": "2400",
+      "options": [
+        "2399",
+        "2401",
+        "2400",
+        "2398"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2400",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "16f3e431-7e3b-477c-8189-5b2136ecc477",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość kuli o promieniu 21 (użyj $\\pi \\approx 3{,}14$) wynosi (zaokrąglij do całości):",
+      "correct_answer": "38773",
+      "options": [
+        "38773",
+        "38775",
+        "38771",
+        "38794"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem.\n**Odpowiedź:** 38773",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c1c2143f-b511-4973-9a4c-1fa1b38c44a9",
-      "generatedAt": "2026-08-07T16:30:27.560Z",
+      "generatedAt": "2026-09-06T19:54:36.632Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.560Z"
+  "updatedAt": "2026-09-06T19:54:36.632Z"
 }

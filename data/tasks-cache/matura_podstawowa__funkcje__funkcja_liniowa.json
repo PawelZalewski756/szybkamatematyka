@@ -17,30 +17,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
       "figure_svg": null,
       "figure_caption": null,
       "id": "428fa280-3c0b-4dac-97a5-d7e792c73cbc",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=5x-1$.",
+      "correct_answer": "5",
       "options": [
-        "1",
-        "2",
-        "-2",
-        "0"
+        "6",
+        "5",
+        "7",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "fe348f76-1d94-4dfe-87ce-32e101df6b42",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -55,30 +55,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -12",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -12",
       "figure_svg": null,
       "figure_caption": null,
       "id": "eb78eb1a-48c5-43eb-a8f2-e2bfbd814276",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=-1x-8$.",
+      "correct_answer": "-1",
       "options": [
+        "-3",
+        "-1",
         "1",
-        "0",
-        "2",
         "-2"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2fbd9400-0c91-4a4a-8b66-04187d17da6d",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -93,30 +93,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3895f60c-7286-486c-9ef8-f5bb13111c45",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=-1x+0$.",
+      "correct_answer": "-1",
       "options": [
-        "1",
         "2",
         "0",
-        "-2"
+        "-2",
+        "-1"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "899fb01e-ef56-464f-a1d8-198267d0c72b",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -131,30 +131,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2da4fb92-07ea-49fe-b3c2-df36bbff7751",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=2x-2$.",
       "correct_answer": "2",
       "options": [
-        "0",
+        "4",
+        "3",
         "2",
-        "-2",
-        "1"
+        "5"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "06789124-97c5-4732-aaac-442eb47d4910",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -169,30 +169,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -9",
       "figure_svg": null,
       "figure_caption": null,
       "id": "026ed1ee-1b93-46e2-89b4-5efc60c7ef10",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=1x+5$.",
+      "correct_answer": "1",
       "options": [
-        "-2",
-        "2",
-        "0",
-        "1"
+        "1",
+        "4",
+        "3",
+        "0"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "da0ead7e-86fc-4c5b-b6ee-bdf4a710e7a8",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -207,30 +207,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 27",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 27",
       "figure_svg": null,
       "figure_caption": null,
       "id": "1248bb0b-816e-44b1-8e50-3393a62f2558",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=-2x-7$.",
+      "correct_answer": "-2",
       "options": [
+        "-4",
         "1",
-        "0",
-        "2",
-        "-2"
+        "-2",
+        "-3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3e92dc0b-a75d-4db4-a8d1-1722360f2ac2",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -245,30 +245,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "aa179e89-f265-4c15-ba70-11276b249162",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=1x-6$.",
+      "correct_answer": "1",
       "options": [
-        "0",
-        "-2",
-        "2",
-        "1"
+        "3",
+        "-1",
+        "1",
+        "2"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4779deff-be4e-4d83-b212-f567cd750abc",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -283,30 +283,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "94725dde-ae33-4983-b27a-6b0a7f28edcb",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=4x+6$.",
+      "correct_answer": "4",
       "options": [
-        "-2",
         "2",
-        "1",
-        "0"
+        "6",
+        "4",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "96ab1668-1b6c-4f03-a1c6-cce3d3d4074b",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -321,30 +321,30 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e40a59b8-ea52-43d7-87e5-926ece3f8f80",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=4x-8$.",
+      "correct_answer": "4",
       "options": [
-        "1",
-        "-2",
-        "2",
-        "0"
+        "4",
+        "6",
+        "7",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "50b63374-3445-4cad-9de2-be96e0349841",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
@@ -359,32 +359,32 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c07388e4-30c2-47eb-98ef-a6ee10b787d4",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż nachylenie prostej $y=2x+1$.",
-      "correct_answer": "2",
+      "content": "Dla $f(x)=2x+2$ oblicz $f(3)$.",
+      "correct_answer": "8",
       "options": [
-        "-2",
-        "1",
-        "2",
-        "0"
+        "10",
+        "12",
+        "8",
+        "4"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
+      "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8b9ace56-e33b-4206-8308-8daa9cb7e17e",
-      "generatedAt": "2026-08-07T16:30:27.555Z",
+      "generatedAt": "2026-09-06T19:54:36.616Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.555Z"
+  "updatedAt": "2026-09-06T19:54:36.616Z"
 }

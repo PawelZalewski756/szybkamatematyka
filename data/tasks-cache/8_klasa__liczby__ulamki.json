@@ -17,30 +17,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.36",
       "figure_svg": null,
       "figure_caption": null,
       "id": "90348a34-b6da-4e00-b581-ae18e836c407",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz: $\\dfrac{5}{9}+\\dfrac{4}{5}$ (wynik jako ułamek dziesiętny):",
-      "correct_answer": "1.36",
-      "options": [
-        "2.61",
-        "1.36",
-        "1.61",
-        "1.11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ee317fa9-8ea1-4de7-b893-c50de8558b62",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -55,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.09",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.09",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "614111c9-bdf4-40ad-b581-5da9e5240ca0",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "ee317fa9-8ea1-4de7-b893-c50de8558b62",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -74,11 +55,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.07",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.07",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b20c2ecf-3562-4b4e-88aa-cf19c7e91bd9",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "614111c9-bdf4-40ad-b581-5da9e5240ca0",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -93,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.33",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.33",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5abb1868-a47d-4c4f-9544-8cdce78559fd",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "b20c2ecf-3562-4b4e-88aa-cf19c7e91bd9",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -112,11 +93,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.58",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.58",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8abae64c-abfe-4e42-a5e4-07288891071e",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "5abb1868-a47d-4c4f-9544-8cdce78559fd",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -131,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cdd43c86-b41b-485e-a384-e4692158a9f1",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "8abae64c-abfe-4e42-a5e4-07288891071e",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -150,11 +131,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.73",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.73",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bb3f5914-e53c-4b6c-9ac3-51ddd35bff98",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "cdd43c86-b41b-485e-a384-e4692158a9f1",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -169,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.78",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.78",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8879ba45-b951-49e4-943f-b56af797cc4e",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "bb3f5914-e53c-4b6c-9ac3-51ddd35bff98",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -188,11 +169,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.33",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.33",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "354c723a-9ec6-41ca-984d-6dceea9b5920",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "8879ba45-b951-49e4-943f-b56af797cc4e",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -207,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.72",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.72",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4fdc0ad3-3c0c-4ba1-b598-ec92dbfec5f6",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "354c723a-9ec6-41ca-984d-6dceea9b5920",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -226,11 +207,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.05",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.05",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e3bdff0f-92f2-40e9-90c4-4b47746b7c5a",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "4fdc0ad3-3c0c-4ba1-b598-ec92dbfec5f6",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -245,11 +226,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.21",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.21",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4f900fcf-9148-4830-b54a-b01b9cb1f969",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "e3bdff0f-92f2-40e9-90c4-4b47746b7c5a",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -264,11 +245,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.79",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.79",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "793d1edc-5127-4841-8b0e-1302fca0cee9",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "4f900fcf-9148-4830-b54a-b01b9cb1f969",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -283,11 +264,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.61",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.61",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2121327e-d38e-44a5-be8b-1f954dab3042",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "793d1edc-5127-4841-8b0e-1302fca0cee9",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -302,11 +283,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.67",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.67",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "87094291-5d15-4a95-aac9-e79ce9271417",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "2121327e-d38e-44a5-be8b-1f954dab3042",
+      "generatedAt": "2026-09-06T19:54:36.640Z",
       "model": "parametric-v2"
     },
     {
@@ -321,11 +302,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b42ca1ca-86ea-48d7-ab49-7f8d1ebc7bfb",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "87094291-5d15-4a95-aac9-e79ce9271417",
+      "generatedAt": "2026-09-06T19:54:36.641Z",
       "model": "parametric-v2"
     },
     {
@@ -340,11 +321,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1.46",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1.46",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "06dcef31-98bc-4ebc-84d0-649a9418232b",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "b42ca1ca-86ea-48d7-ab49-7f8d1ebc7bfb",
+      "generatedAt": "2026-09-06T19:54:36.641Z",
       "model": "parametric-v2"
     },
     {
@@ -359,11 +340,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "303649be-1359-44b1-89c5-40c7116862df",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "id": "06dcef31-98bc-4ebc-84d0-649a9418232b",
+      "generatedAt": "2026-09-06T19:54:36.641Z",
       "model": "parametric-v2"
     },
     {
@@ -378,13 +359,32 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0.6",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "303649be-1359-44b1-89c5-40c7116862df",
+      "generatedAt": "2026-09-06T19:54:36.641Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz: $\\dfrac{2}{8}+\\dfrac{2}{8}$ (wynik jako ułamek dziesiętny):",
+      "correct_answer": "0.5",
+      "options": [
+        "1.5",
+        "0.5",
+        "0.25",
+        "2.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0.5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c1724074-4f8f-42b7-86cb-5bc74a77db49",
-      "generatedAt": "2026-08-07T16:30:27.563Z",
+      "generatedAt": "2026-09-06T19:54:36.641Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.563Z"
+  "updatedAt": "2026-09-06T19:54:36.641Z"
 }

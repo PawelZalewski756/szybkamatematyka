@@ -1,5 +1,6 @@
 import type { ExamType } from "@/types/database";
 import { generateParametricTask } from "@/lib/trening/seed/parametric";
+import { answersEquivalent } from "@/lib/math/answer-equiv";
 import {
   fmtNum,
   gcd,
@@ -30,10 +31,26 @@ function buildMc(
   wrongs: string[],
   difficulty: 1 | 2 | 3,
 ): TaskDraft {
-  const unique = new Set<string>([correct, ...wrongs]);
-  const pool = [...unique];
+  const pool: string[] = [correct.trim()];
+  for (const candidate of wrongs) {
+    const value = candidate.trim();
+    if (
+      value &&
+      !pool.some((existing) => answersEquivalent(existing, value))
+    ) {
+      pool.push(value);
+    }
+  }
   while (pool.length < 4) {
-    pool.push(`${Number(correct) + pool.length}`);
+    const fraction = correct.match(/^(-?\d+)\s*\/\s*(-?\d+)$/);
+    const fallback = fraction
+      ? `${Number(fraction[1]) + pool.length}/${fraction[2]}`
+      : `${Number(correct) + pool.length}`;
+    if (!pool.some((existing) => answersEquivalent(existing, fallback))) {
+      pool.push(fallback);
+    } else {
+      pool.push(`Odpowiedź ${pool.length + 1}`);
+    }
   }
   const options = shuffle(rng, pool.slice(0, 4)).map((s) => s.trim());
   const xp =
@@ -155,14 +172,15 @@ const genProcenty: GenFn[] = [
     const n = randInt(rng, 40, 400);
     const correct = (n * p) / 100;
     const hard = slot.exam_type === "matura_podstawowa" && v % 4 === 0;
+    const answer = hard ? n * (1 + p / 100) : correct;
     return buildMc(
       rng,
       slot,
       hard
         ? `Cena ${n} zł podwyższona o ${p}% wynosi (zł):`
         : `Ile wynosi ${p}% z liczby ${n}?`,
-      fmtNum(correct),
-      wrongNumeric(rng, correct, Math.max(2, Math.round(n * 0.05))),
+      fmtNum(answer),
+      wrongNumeric(rng, answer, Math.max(2, Math.round(n * 0.05))),
       hard ? 3 : 2,
     );
   },
@@ -209,13 +227,15 @@ const genWyrazenia: GenFn[] = [
     );
   },
   (rng, slot) => {
-    const correct = "6x";
+    const a = randInt(rng, 2, 9);
+    const b = randInt(rng, 2, 9);
+    const correct = `${a + b}x`;
     return buildMc(
       rng,
       slot,
-      `Uprość: $2x+4x$`,
+      `Uprość: $${a}x+${b}x$`,
       correct,
-      ["5x", "8x", "2x"],
+      [`${a}x`, `${b}x`, `${a + b + 1}x`],
       1,
     );
   },
@@ -285,14 +305,14 @@ const genFunkcjaLiniowa: GenFn[] = [
     );
   },
   (rng, slot) => {
-    const m = 2;
-    const b = 1;
+    const m = randInt(rng, -5, 5) || 1;
+    const b = randInt(rng, -8, 8);
     return buildMc(
       rng,
       slot,
-      `Wskaż nachylenie prostej $y=${m}x+${b}$.`,
+      `Wskaż współczynnik kierunkowy prostej $y=${m}x${b >= 0 ? "+" : ""}${b}$.`,
       fmtNum(m),
-      ["-2", "1", "0"],
+      wrongNumeric(rng, m, 2),
       1,
     );
   },
@@ -349,8 +369,8 @@ const genPlanimetria: GenFn[] = [
     return buildMc(
       rng,
       slot,
-      `Trójkąt prostokątny ma przyprostokątne ${a} i ${b}. Długość przeciwprostokątnej to:`,
-      fmtNum(c),
+      `Trójkąt prostokątny ma przyprostokątne ${a} i ${b}. Długość przeciwprostokątnej to (w przybliżeniu do 1 miejsca po przecinku):`,
+      fmtNum(Math.round(c * 10) / 10),
       wrongNumeric(rng, c, 3),
       2,
     );
@@ -359,8 +379,8 @@ const genPlanimetria: GenFn[] = [
 
 // --- Stereometria ---
 const genStereometria: GenFn[] = [
-  (rng, slot) => {
-    const a = randInt(rng, 2, 8);
+  (rng, slot, v) => {
+    const a = 2 + (v % 40);
     const correct = 6 * a * a;
     return buildMc(
       rng,
@@ -371,9 +391,9 @@ const genStereometria: GenFn[] = [
       2,
     );
   },
-  (rng, slot) => {
-    const r = randInt(rng, 2, 7);
-    const correct = (4 / 3) * Math.PI * r * r * r;
+  (rng, slot, v) => {
+    const r = 2 + (v % 30);
+    const correct = (4 / 3) * 3.14 * r * r * r;
     return buildMc(
       rng,
       slot,
@@ -396,9 +416,9 @@ const genGeoAnalityczna: GenFn[] = [
     return buildMc(
       rng,
       slot,
-      `Odległość punktów $A(${x1},${y1})$ i $B(${x2},${y2})$ wynosi:`,
+      `Odległość punktów $A(${x1},${y1})$ i $B(${x2},${y2})$ wynosi (w przybliżeniu do 1 miejsca po przecinku):`,
       fmtNum(Math.round(correct * 10) / 10),
-      wrongNumeric(rng, Math.round(correct), 3),
+      wrongNumeric(rng, Math.round(correct * 10) / 10, 0.8),
       3,
     );
   },
@@ -420,11 +440,12 @@ const genPrawdopodobienstwo: GenFn[] = [
       2,
     );
   },
-  (rng, slot) => {
+  (rng, slot, v) => {
+    const sides = 6 + 2 * (v % 10);
     return buildMc(
       rng,
       slot,
-      `Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:`,
+      `Rzut symetryczną kostką ${sides}-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:`,
       "1/2",
       ["1/3", "2/3", "1/6"],
       1,
@@ -440,20 +461,23 @@ const genStatystyka: GenFn[] = [
     return buildMc(
       rng,
       slot,
-      `Średnia arytmetyczna liczb ${nums.join(", ")} wynosi:`,
+      `Średnia arytmetyczna liczb ${nums.join(", ")} wynosi (w przybliżeniu do 1 miejsca po przecinku):`,
       fmtNum(Math.round(correct * 10) / 10),
-      wrongNumeric(rng, Math.round(correct), 2),
+      wrongNumeric(rng, Math.round(correct * 10) / 10, 2),
       2,
     );
   },
   (rng, slot) => {
-    const sorted = [2, 4, 4, 7, 9];
+    const sorted = Array.from({ length: 5 }, () => randInt(rng, 2, 12)).sort(
+      (a, b) => a - b,
+    );
+    const correct = sorted[2]!;
     return buildMc(
       rng,
       slot,
       `Mediana zbioru ${sorted.join(", ")} to:`,
-      "4",
-      ["2", "7", "5"],
+      fmtNum(correct),
+      wrongNumeric(rng, correct, 2),
       1,
     );
   },
@@ -508,8 +532,8 @@ const genPolaFigur: GenFn[] = [
 
 // --- Obwody / kąty ---
 const genObwody: GenFn[] = [
-  (rng, slot) => {
-    const a = randInt(rng, 3, 12);
+  (rng, slot, v) => {
+    const a = 3 + (v % 30);
     return buildMc(
       rng,
       slot,
@@ -540,7 +564,7 @@ const genKaty: GenFn[] = [
 const genWykresy: GenFn[] = [
   (rng, slot) => {
     const m = 2;
-    const x = randInt(rng, 0, 6);
+    const x = randInt(rng, 0, 24);
     const correct = m * x;
     return buildMc(
       rng,
@@ -556,14 +580,14 @@ const genWykresy: GenFn[] = [
 // --- Średnia / diagramy (8) ---
 const genSrednia: GenFn[] = [
   (rng, slot) => {
-    const a = randInt(rng, 4, 10);
-    const b = randInt(rng, 4, 10);
-    const c = randInt(rng, 4, 10);
+    const a = randInt(rng, 4, 20);
+    const b = randInt(rng, 4, 20);
+    const c = randInt(rng, 4, 20);
     const correct = (a + b + c) / 3;
     return buildMc(
       rng,
       slot,
-      `Średnia ocen ${a}, ${b} i ${c} wynosi:`,
+      `Średnia ocen ${a}, ${b} i ${c} wynosi (w przybliżeniu do 1 miejsca po przecinku):`,
       fmtNum(Math.round(correct * 10) / 10),
       wrongNumeric(rng, correct, 1),
       1,
@@ -573,8 +597,8 @@ const genSrednia: GenFn[] = [
 
 const genDiagramy: GenFn[] = [
   (rng, slot) => {
-    const total = 100;
-    const p = pick(rng, [25, 40, 50]);
+    const total = 100 * randInt(rng, 1, 5);
+    const p = pick(rng, [10, 20, 25, 30, 40, 50, 60, 75]);
     return buildMc(
       rng,
       slot,

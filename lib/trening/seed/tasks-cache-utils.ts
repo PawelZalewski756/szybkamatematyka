@@ -30,6 +30,8 @@ export type CachedTaskBundle = {
   updatedAt: string;
 };
 
+let cachedTaskIndex: Map<string, CachedGeminiTask> | null = null;
+
 export function taskSlotKey(slot: Pick<TaskSlot, "exam_type" | "category" | "topic">): string {
   return `${slot.exam_type}:${slot.category}:${slot.topic}`;
 }
@@ -173,4 +175,14 @@ export function listAllCachedTasks(): Array<CachedGeminiTask & Pick<TaskSlot, "e
     }
   }
   return out;
+}
+
+/** Zwraca kanoniczne zadanie po ID bez przyjmowania odpowiedzi z przeglądarki. */
+export function findCachedTaskById(id: string): CachedGeminiTask | null {
+  if (!cachedTaskIndex) {
+    cachedTaskIndex = new Map(
+      listAllCachedTasks().map((task) => [task.id, task] as const),
+    );
+  }
+  return cachedTaskIndex.get(id) ?? null;
 }

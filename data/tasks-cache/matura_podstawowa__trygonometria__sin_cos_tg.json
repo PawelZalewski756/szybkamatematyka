@@ -6,255 +6,84 @@
   "topicName": "Sinus, cosinus, tangens",
   "tasks": [
     {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​",
-      "correct_answer": "1/√3",
+      "content": "$\\sin 0^\\circ$ =",
+      "correct_answer": "0",
       "options": [
-        "1/√3",
         "0",
-        "1/2",
-        "2"
+        "1",
+        "4",
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
       "id": "735dbf7c-5e3e-4e0e-8d63-e12d00728b3d",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\cos 60^\\circ$ =​​",
-      "correct_answer": "1/2",
+      "content": "$\\cos 0^\\circ$ =",
+      "correct_answer": "1",
       "options": [
-        "1/2",
+        "1",
         "0",
-        "√3/2",
-        "1"
+        "5",
+        "4"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
       "id": "cb86b3eb-4312-491f-b5ea-19046ff760ac",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\sin 45^\\circ$ =​​​",
-      "correct_answer": "√2/2",
+      "content": "$\\mathrm{tg}\\, 0^\\circ$ =",
+      "correct_answer": "0",
       "options": [
-        "√2/2",
-        "NaN",
-        "0",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0d661ffc-4c89-41c8-955a-c290bed11ec6",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​",
-      "correct_answer": "1/√3",
-      "options": [
-        "1/√3",
-        "0",
-        "2",
-        "1/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1595603c-e4e9-4cfc-b064-4dabd3ca4c3f",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\cos 60^\\circ$ =​​​​​",
-      "correct_answer": "1/2",
-      "options": [
-        "0",
         "1/2",
-        "√3/2",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7f95a430-e6ba-4ce2-8a1f-872efb7bef1d",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\sin 45^\\circ$ =​​​​​​",
-      "correct_answer": "√2/2",
-      "options": [
         "0",
-        "NaN",
-        "1",
-        "√2/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "89a53b35-b49b-4cce-aa5e-594584c8c188",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​​​​",
-      "correct_answer": "1/√3",
-      "options": [
-        "0",
-        "1/√3",
-        "2",
-        "1/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "32ac0d7f-fa94-4186-b8a9-20f50a7d7b12",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\cos 60^\\circ$ =​​​​​​​​",
-      "correct_answer": "1/2",
-      "options": [
-        "0",
-        "1/2",
-        "√3/2",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "20a6d17f-3ef6-4cb8-9685-870639247aaa",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\sin 45^\\circ$ =​​​​​​​​​",
-      "correct_answer": "√2/2",
-      "options": [
-        "√2/2",
-        "NaN",
-        "0",
-        "1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2932fc5b-102e-4dc7-935d-59c866e6f600",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​​​​​​​",
-      "correct_answer": "1/√3",
-      "options": [
-        "0",
-        "1/√3",
-        "1/2",
+        "4",
         "2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fe81d58d-455c-4196-9491-e94612ed8592",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\cos 60^\\circ$ =​​​​​​​​​​​",
-      "correct_answer": "1/2",
-      "options": [
-        "1",
-        "√3/2",
-        "0",
-        "1/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "69742cc2-9b83-4aec-823c-4a905434306e",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "id": "0d661ffc-4c89-41c8-955a-c290bed11ec6",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\sin 45^\\circ$ =​​​​​​​​​​​​",
-      "correct_answer": "√2/2",
-      "options": [
-        "NaN",
-        "1",
-        "0",
-        "√2/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e87da246-cca1-4fd3-84e8-2ad7da580eae",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​​​​​​​​​​",
-      "correct_answer": "1/√3",
-      "options": [
-        "1/2",
-        "2",
-        "1/√3",
-        "0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f013e67a-7e8e-4148-91ae-6e5433fe0a48",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\cos 60^\\circ$ =​​​​​​​​​​​​​​",
+      "content": "$\\sin 30^\\circ$ =",
       "correct_answer": "1/2",
+      "options": [
+        "0",
+        "1/2",
+        "1",
+        "√3/2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1595603c-e4e9-4cfc-b064-4dabd3ca4c3f",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\cos 30^\\circ$ =",
+      "correct_answer": "√3/2",
       "options": [
         "1/2",
         "1",
@@ -263,128 +92,299 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √3/2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0a4dcb8d-b02b-41a2-8c3b-f33486bbf81d",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "id": "7f95a430-e6ba-4ce2-8a1f-872efb7bef1d",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\sin 45^\\circ$ =​​​​​​​​​​​​​​​",
+      "content": "$\\mathrm{tg}\\, 30^\\circ$ =",
+      "correct_answer": "1/√3",
+      "options": [
+        "2",
+        "1/2",
+        "1/√3",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/√3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "89a53b35-b49b-4cce-aa5e-594584c8c188",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\sin 45^\\circ$ =",
       "correct_answer": "√2/2",
       "options": [
-        "1",
-        "√2/2",
         "0",
+        "1",
+        "NaN",
+        "√2/2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √2/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "32ac0d7f-fa94-4186-b8a9-20f50a7d7b12",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\cos 45^\\circ$ =",
+      "correct_answer": "√2/2",
+      "options": [
+        "0",
+        "√2/2",
+        "1",
         "NaN"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √2/2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "589d529d-8720-42b6-9977-07c88f64c0ae",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "id": "20a6d17f-3ef6-4cb8-9685-870639247aaa",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​​​​​​​​​​​​​",
-      "correct_answer": "1/√3",
+      "content": "$\\mathrm{tg}\\, 45^\\circ$ =",
+      "correct_answer": "1",
       "options": [
         "0",
-        "1/√3",
         "2",
-        "1/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "754ce772-0e8d-4a7c-bfab-d7d2748e5da3",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\cos 60^\\circ$ =​​​​​​​​​​​​​​​​​",
-      "correct_answer": "1/2",
-      "options": [
-        "√3/2",
-        "1",
         "1/2",
-        "0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d1770664-4230-45c1-a741-f6cb3407d299",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "$\\sin 45^\\circ$ =​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "√2/2",
-      "options": [
-        "√2/2",
-        "NaN",
-        "0",
         "1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** √2/2",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d4cfc47c-f195-462e-9e0c-ace5204d98d7",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "id": "2932fc5b-102e-4dc7-935d-59c866e6f600",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\mathrm{tg}\\, 30^\\circ$ =​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "1/√3",
+      "content": "$\\sin 60^\\circ$ =",
+      "correct_answer": "√3/2",
       "options": [
-        "2",
-        "1/√3",
         "0",
-        "1/2"
+        "√3/2",
+        "1/2",
+        "1"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/√3",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √3/2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "65ca2eac-46e4-492d-94d4-3f6a6344e9f6",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "id": "fe81d58d-455c-4196-9491-e94612ed8592",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     },
     {
-      "content": "$\\cos 60^\\circ$ =​​​​​​​​​​​​​​​​​​​​",
+      "content": "$\\cos 60^\\circ$ =",
       "correct_answer": "1/2",
       "options": [
-        "1",
+        "0",
         "1/2",
+        "√3/2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69742cc2-9b83-4aec-823c-4a905434306e",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\mathrm{tg}\\, 60^\\circ$ =",
+      "correct_answer": "√3",
+      "options": [
+        "2",
+        "√3",
+        "1/2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e87da246-cca1-4fd3-84e8-2ad7da580eae",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\sin 90^\\circ$ =",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "4",
+        "5",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f013e67a-7e8e-4148-91ae-6e5433fe0a48",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\cos 90^\\circ$ =",
+      "correct_answer": "0",
+      "options": [
+        "4",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0a4dcb8d-b02b-41a2-8c3b-f33486bbf81d",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\mathrm{tg}\\, 90^\\circ$ =",
+      "correct_answer": "nie istnieje",
+      "options": [
+        "nie istnieje",
+        "2",
+        "1/2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** nie istnieje",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "589d529d-8720-42b6-9977-07c88f64c0ae",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\sin 120^\\circ$ =",
+      "correct_answer": "√3/2",
+      "options": [
+        "√3/2",
+        "0",
+        "1",
+        "-1/2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √3/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "754ce772-0e8d-4a7c-bfab-d7d2748e5da3",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\cos 120^\\circ$ =",
+      "correct_answer": "-1/2",
+      "options": [
+        "1",
+        "-1/2",
         "√3/2",
         "0"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d1770664-4230-45c1-a741-f6cb3407d299",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\mathrm{tg}\\, 120^\\circ$ =",
+      "correct_answer": "-√3",
+      "options": [
+        "1/2",
+        "-√3",
+        "0",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -√3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d4cfc47c-f195-462e-9e0c-ace5204d98d7",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\sin 135^\\circ$ =",
+      "correct_answer": "√2/2",
+      "options": [
+        "-√2/2",
+        "0",
+        "1",
+        "√2/2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** √2/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65ca2eac-46e4-492d-94d4-3f6a6344e9f6",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "$\\cos 135^\\circ$ =",
+      "correct_answer": "-√2/2",
+      "options": [
+        "√2/2",
+        "0",
+        "-√2/2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -√2/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5439313d-a980-4c3f-8799-ad1921d75153",
-      "generatedAt": "2026-08-07T16:30:27.558Z",
+      "generatedAt": "2026-09-06T19:54:36.625Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.558Z"
+  "updatedAt": "2026-09-06T19:54:36.625Z"
 }

@@ -6,385 +6,385 @@
   "topicName": "Bryły — rozpoznawanie",
   "tasks": [
     {
-      "content": "Objętość sześcianu o krawędzi 2:​",
+      "content": "Objętość sześcianu o krawędzi 2:",
       "correct_answer": "8",
       "options": [
-        "2",
-        "8",
+        "7",
         "6",
-        "7"
+        "8",
+        "2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "6fe1f2c3-e36e-4eda-8c85-ed5048afb468",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 9×6×9:​​",
+      "content": "Objętość prostopadłościanu 9×6×9:",
       "correct_answer": "486",
       "options": [
         "486",
         "478",
-        "484",
-        "485"
+        "485",
+        "484"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 486",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 486",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d55d9a50-7276-4ceb-b091-6d0d51a0e845",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 8:​​​",
+      "content": "Objętość sześcianu o krawędzi 8:",
       "correct_answer": "512",
       "options": [
-        "512",
         "506",
+        "512",
         "510",
         "511"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 512",
       "figure_svg": null,
       "figure_caption": null,
       "id": "89c6df2e-4110-4e57-8d76-c9b74952fb19",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 7×4×5:​​​​",
+      "content": "Objętość prostopadłościanu 7×4×5:",
       "correct_answer": "140",
       "options": [
-        "139",
+        "140",
         "138",
         "132",
-        "140"
+        "139"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 140",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 140",
       "figure_svg": null,
       "figure_caption": null,
       "id": "f62a82b0-1089-42ad-ab04-261a93aabbc9",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 6:​​​​​",
+      "content": "Objętość sześcianu o krawędzi 6:",
       "correct_answer": "216",
       "options": [
+        "216",
         "215",
-        "210",
         "214",
-        "216"
+        "210"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 216",
       "figure_svg": null,
       "figure_caption": null,
       "id": "766dd64e-4faa-46b1-b1b7-99bc83df8874",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 5×2×11:​​​​​​",
+      "content": "Objętość prostopadłościanu 5×2×11:",
       "correct_answer": "110",
       "options": [
         "108",
-        "102",
         "109",
+        "102",
         "110"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 110",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 110",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8ba06e79-b4b1-4f32-be74-025c45a7b64b",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 4:​​​​​​​",
+      "content": "Objętość sześcianu o krawędzi 4:",
       "correct_answer": "64",
       "options": [
-        "63",
         "62",
         "58",
-        "64"
+        "64",
+        "63"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
       "id": "33ecb35b-5cdd-4235-bd54-4f5219a35a94",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość prostopadłościanu 3×8×7:​​​​​​​​",
+      "content": "Objętość prostopadłościanu 3×8×7:",
       "correct_answer": "168",
       "options": [
-        "168",
         "167",
+        "168",
         "166",
         "160"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 168",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 168",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3ce09a20-bd33-4ca0-b8f1-217b648565f0",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 2:​​​​​​​​​",
-      "correct_answer": "8",
-      "options": [
-        "8",
-        "2",
-        "6",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "798a8840-7113-47de-a251-19b206ae0fbd",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×3:​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 9×6×3:",
       "correct_answer": "162",
       "options": [
-        "160",
-        "154",
         "161",
+        "154",
+        "160",
         "162"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 162",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 162",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "22159290-b39c-42f5-a4c2-c4be0f5bc7f9",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "798a8840-7113-47de-a251-19b206ae0fbd",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 8:​​​​​​​​​​​",
-      "correct_answer": "512",
-      "options": [
-        "506",
-        "512",
-        "510",
-        "511"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f40db14-1ebd-42f1-802d-e2320f52023e",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×9:​​​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 7×4×9:",
       "correct_answer": "252",
       "options": [
-        "244",
         "251",
+        "244",
         "250",
         "252"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 252",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 252",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0f1b4f5a-1e9d-4fc8-aaf8-b4f02faf8d8c",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "22159290-b39c-42f5-a4c2-c4be0f5bc7f9",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 6:​​​​​​​​​​​​​",
-      "correct_answer": "216",
-      "options": [
-        "214",
-        "215",
-        "210",
-        "216"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 216",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f40caff2-5d16-4839-bfb4-85a0095a3cb0",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 5×2×5:​​​​​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 5×2×5:",
       "correct_answer": "50",
       "options": [
-        "50",
         "48",
-        "42",
-        "49"
+        "50",
+        "49",
+        "42"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "76f24e33-0d44-4f3e-8871-dddadbf24bbc",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "2f40db14-1ebd-42f1-802d-e2320f52023e",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 4:​​​​​​​​​​​​​​​",
-      "correct_answer": "64",
-      "options": [
-        "63",
-        "58",
-        "62",
-        "64"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f698a93-690e-44d6-9e94-230dd04b6826",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 3×8×11:​​​​​​​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 3×8×11:",
       "correct_answer": "264",
       "options": [
-        "263",
-        "262",
         "256",
+        "262",
+        "263",
         "264"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 264",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 264",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "302e8793-94f6-4866-9c6d-c65a3cdf5de2",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "0f1b4f5a-1e9d-4fc8-aaf8-b4f02faf8d8c",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 2:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "8",
-      "options": [
-        "2",
-        "7",
-        "6",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "61024819-d4e7-482b-989d-3bd3cbe98349",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×7:​​​​​​​​​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 9×6×7:",
       "correct_answer": "378",
       "options": [
-        "370",
         "377",
+        "378",
         "376",
-        "378"
+        "370"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 378",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 378",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "79211bde-f522-423d-8045-ffe5746f04c1",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "id": "f40caff2-5d16-4839-bfb4-85a0095a3cb0",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 8:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "512",
-      "options": [
-        "511",
-        "512",
-        "506",
-        "510"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 512",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "322691dc-e2af-4396-96f2-197da5b025e2",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×3:​​​​​​​​​​​​​​​​​​​​",
+      "content": "Objętość prostopadłościanu 7×4×3:",
       "correct_answer": "84",
       "options": [
+        "84",
         "82",
         "76",
-        "83",
-        "84"
+        "83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 84",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "76f24e33-0d44-4f3e-8871-dddadbf24bbc",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 5×2×9:",
+      "correct_answer": "90",
+      "options": [
+        "89",
+        "82",
+        "90",
+        "88"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 84",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f698a93-690e-44d6-9e94-230dd04b6826",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 3×8×5:",
+      "correct_answer": "120",
+      "options": [
+        "118",
+        "120",
+        "119",
+        "112"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "302e8793-94f6-4866-9c6d-c65a3cdf5de2",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 9×6×11:",
+      "correct_answer": "594",
+      "options": [
+        "586",
+        "592",
+        "593",
+        "594"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 594",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61024819-d4e7-482b-989d-3bd3cbe98349",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 7×4×7:",
+      "correct_answer": "196",
+      "options": [
+        "195",
+        "194",
+        "188",
+        "196"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 196",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "79211bde-f522-423d-8045-ffe5746f04c1",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 5×2×3:",
+      "correct_answer": "30",
+      "options": [
+        "29",
+        "22",
+        "30",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "322691dc-e2af-4396-96f2-197da5b025e2",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Objętość prostopadłościanu 3×8×9:",
+      "correct_answer": "216",
+      "options": [
+        "214",
+        "208",
+        "216",
+        "215"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 216",
       "figure_svg": null,
       "figure_caption": null,
       "id": "76a79851-3914-4d2e-9a7d-9a15ea30751b",
-      "generatedAt": "2026-08-07T16:30:27.570Z",
+      "generatedAt": "2026-09-06T19:54:36.664Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.570Z"
+  "updatedAt": "2026-09-06T19:54:36.664Z"
 }

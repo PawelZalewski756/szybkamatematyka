@@ -6,385 +6,385 @@
   "topicName": "Obwody figur",
   "tasks": [
     {
-      "content": "Obwód kwadratu o boku 8 wynosi:",
-      "correct_answer": "32",
+      "content": "Obwód kwadratu o boku 3 wynosi:",
+      "correct_answer": "12",
       "options": [
-        "34",
-        "32",
-        "30",
-        "33"
+        "10",
+        "13",
+        "11",
+        "12"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
       "id": "241de5c0-a2e8-45a8-b95f-5080c64dd37e",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 8 wynosi:",
-      "correct_answer": "32",
-      "options": [
-        "28",
-        "32",
-        "30",
-        "33"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e625cd41-c198-4690-a6fc-9dc458c1a8de",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 5 wynosi:",
-      "correct_answer": "20",
-      "options": [
-        "16",
-        "20",
-        "22",
-        "19"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8e24a801-67bf-4e07-9a34-6ed2a6c08bce",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 11 wynosi:",
-      "correct_answer": "44",
-      "options": [
-        "49",
-        "40",
-        "48",
-        "44"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 44",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b296d206-9c27-4622-ad42-7fe66fb35aa6",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 10 wynosi:",
-      "correct_answer": "40",
-      "options": [
-        "41",
-        "40",
-        "44",
-        "45"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5a378c03-da22-47bf-b8b4-d8f67d2f3c64",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 7 wynosi:",
-      "correct_answer": "28",
-      "options": [
-        "28",
-        "24",
-        "27",
-        "33"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 28",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "cc66d7c4-f1e6-4280-8445-cceafb152a0c",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 6 wynosi:",
-      "correct_answer": "24",
-      "options": [
-        "26",
-        "24",
-        "25",
-        "23"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "884be16d-d682-4cd6-b950-b7604abf5f49",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 6 wynosi:",
-      "correct_answer": "24",
-      "options": [
-        "24",
-        "20",
-        "28",
-        "25"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "af80a300-1807-42be-b7a0-d5c3582efb21",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 12 wynosi:",
-      "correct_answer": "48",
-      "options": [
-        "49",
-        "52",
-        "50",
-        "48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0d4bd522-86ef-462c-b611-eab8c12c50d2",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 10 wynosi:",
-      "correct_answer": "40",
-      "options": [
-        "42",
-        "40",
-        "44",
-        "45"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ec706a63-b041-45c1-9ff3-3349e8e504da",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 5 wynosi:",
-      "correct_answer": "20",
-      "options": [
-        "25",
-        "20",
-        "16",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2918c825-88f3-43f1-adc3-97575a66b3a9",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 10 wynosi:",
-      "correct_answer": "40",
-      "options": [
-        "38",
-        "40",
-        "36",
-        "39"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8fe22d0e-0c94-48ba-a543-a0096656849d",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
       "model": "parametric-v2"
     },
     {
       "content": "Obwód kwadratu o boku 4 wynosi:",
       "correct_answer": "16",
       "options": [
-        "12",
-        "21",
         "16",
-        "18"
+        "12",
+        "14",
+        "21"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "08290902-8e18-419e-93df-c4363bb055a4",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "e625cd41-c198-4690-a6fc-9dc458c1a8de",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 5 wynosi:",
+      "correct_answer": "20",
+      "options": [
+        "18",
+        "22",
+        "20",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e24a801-67bf-4e07-9a34-6ed2a6c08bce",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 6 wynosi:",
+      "correct_answer": "24",
+      "options": [
+        "28",
+        "26",
+        "20",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b296d206-9c27-4622-ad42-7fe66fb35aa6",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
       "model": "parametric-v2"
     },
     {
       "content": "Obwód kwadratu o boku 7 wynosi:",
       "correct_answer": "28",
       "options": [
-        "24",
-        "32",
-        "26",
-        "28"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 28",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5ca05588-eec4-4a4d-ab40-3f9b60ab606e",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 11 wynosi:",
-      "correct_answer": "44",
-      "options": [
-        "48",
-        "46",
-        "44",
-        "49"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 44",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "69caf929-9490-4122-b6f2-893c78aed317",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 12 wynosi:",
-      "correct_answer": "48",
-      "options": [
-        "47",
-        "50",
-        "53",
-        "48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3ee097f8-9c0a-4215-83c6-e51f38c86266",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 10 wynosi:",
-      "correct_answer": "40",
-      "options": [
-        "44",
-        "38",
-        "40",
-        "42"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4c84ea5c-51ef-4dbb-8028-51b7271af23d",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obwód kwadratu o boku 6 wynosi:",
-      "correct_answer": "24",
-      "options": [
-        "25",
-        "22",
+        "28",
         "29",
+        "32",
         "24"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 28",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "46b3afe9-0ba4-4fbc-aee2-2af9a9fa4b48",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "5a378c03-da22-47bf-b8b4-d8f67d2f3c64",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Obwód kwadratu o boku 6 wynosi:",
-      "correct_answer": "24",
+      "content": "Obwód kwadratu o boku 8 wynosi:",
+      "correct_answer": "32",
       "options": [
-        "24",
-        "25",
-        "22",
-        "23"
+        "36",
+        "30",
+        "28",
+        "32"
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6e257571-6f5a-46a5-a406-c850c72d963f",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "cc66d7c4-f1e6-4280-8445-cceafb152a0c",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
       "model": "parametric-v2"
     },
     {
       "content": "Obwód kwadratu o boku 9 wynosi:",
       "correct_answer": "36",
       "options": [
-        "32",
-        "38",
         "36",
-        "37"
+        "34",
+        "32",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "884be16d-d682-4cd6-b950-b7604abf5f49",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 10 wynosi:",
+      "correct_answer": "40",
+      "options": [
+        "40",
+        "36",
+        "45",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "af80a300-1807-42be-b7a0-d5c3582efb21",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 11 wynosi:",
+      "correct_answer": "44",
+      "options": [
+        "45",
+        "43",
+        "46",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 44",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d4bd522-86ef-462c-b611-eab8c12c50d2",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 12 wynosi:",
+      "correct_answer": "48",
+      "options": [
+        "50",
+        "48",
+        "52",
+        "46"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec706a63-b041-45c1-9ff3-3349e8e504da",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 13 wynosi:",
+      "correct_answer": "52",
+      "options": [
+        "52",
+        "54",
+        "56",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2918c825-88f3-43f1-adc3-97575a66b3a9",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 14 wynosi:",
+      "correct_answer": "56",
+      "options": [
+        "52",
+        "55",
+        "60",
+        "56"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 56",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8fe22d0e-0c94-48ba-a543-a0096656849d",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 15 wynosi:",
+      "correct_answer": "60",
+      "options": [
+        "56",
+        "64",
+        "61",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "08290902-8e18-419e-93df-c4363bb055a4",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 16 wynosi:",
+      "correct_answer": "64",
+      "options": [
+        "60",
+        "69",
+        "64",
+        "62"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5ca05588-eec4-4a4d-ab40-3f9b60ab606e",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 17 wynosi:",
+      "correct_answer": "68",
+      "options": [
+        "70",
+        "67",
+        "72",
+        "68"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 68",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69caf929-9490-4122-b6f2-893c78aed317",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 18 wynosi:",
+      "correct_answer": "72",
+      "options": [
+        "71",
+        "76",
+        "73",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ee097f8-9c0a-4215-83c6-e51f38c86266",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 19 wynosi:",
+      "correct_answer": "76",
+      "options": [
+        "74",
+        "76",
+        "80",
+        "78"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 76",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c84ea5c-51ef-4dbb-8028-51b7271af23d",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 20 wynosi:",
+      "correct_answer": "80",
+      "options": [
+        "79",
+        "78",
+        "80",
+        "84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 80",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "46b3afe9-0ba4-4fbc-aee2-2af9a9fa4b48",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 21 wynosi:",
+      "correct_answer": "84",
+      "options": [
+        "84",
+        "83",
+        "88",
+        "89"
       ],
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 84",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6e257571-6f5a-46a5-a406-c850c72d963f",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód kwadratu o boku 22 wynosi:",
+      "correct_answer": "88",
+      "options": [
+        "87",
+        "88",
+        "89",
+        "84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 88",
       "figure_svg": null,
       "figure_caption": null,
       "id": "90cea288-69eb-426a-b95d-eb33052a71df",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.656Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.568Z"
+  "updatedAt": "2026-09-06T19:54:36.656Z"
 }

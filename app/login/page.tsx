@@ -13,6 +13,7 @@ import {
   normalizeNick,
 } from "@/lib/supabase/profiles";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
+import { authRedirectUrl } from "@/lib/auth-password-reset";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -33,9 +34,19 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
+  const [supabaseReady, setSupabaseReady] = useState(() =>
+    isSupabaseConfigured(),
+  );
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) return;
+    const onConfigReady = () => setSupabaseReady(true);
+    window.addEventListener("supabase-config-ready", onConfigReady);
+    return () =>
+      window.removeEventListener("supabase-config-ready", onConfigReady);
+  }, []);
+
+  useEffect(() => {
+    if (!supabaseReady) return;
 
     const supabase = getSupabase();
     void supabase.auth
@@ -48,7 +59,7 @@ export default function LoginPage() {
       .catch((error: unknown) => {
         console.warn("[szybka-matma] login session check:", error);
       });
-  }, [router]);
+  }, [router, supabaseReady]);
 
   const clearMessage = () => {
     setMessage(null);
@@ -78,7 +89,7 @@ export default function LoginPage() {
       return;
     }
 
-    if (!isSupabaseConfigured()) {
+    if (!supabaseReady) {
       setIsError(true);
       setMessage("Logowanie jest obecnie niedostępne. Spróbuj ponownie później.");
       return;
@@ -127,7 +138,7 @@ export default function LoginPage() {
       return;
     }
 
-    if (!isSupabaseConfigured()) {
+    if (!supabaseReady) {
       setIsError(true);
       setMessage("Rejestracja jest obecnie niedostępna. Spróbuj ponownie później.");
       return;
@@ -150,7 +161,7 @@ export default function LoginPage() {
         email: trimmedEmail,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/login`,
+          emailRedirectTo: authRedirectUrl("/login"),
           data: { nick: normalizedNick, nickname: normalizedNick },
         },
       });

@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
     : undefined,
   outputFileTracingIncludes: {
     "/api/trening/tasks": ["./data/tasks-cache/**/*"],
+    "/api/trening/task-assist": ["./data/tasks-cache/**/*"],
   },
 };
 

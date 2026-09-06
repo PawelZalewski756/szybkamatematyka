@@ -10,22 +10,22 @@
       "correct_answer": "2/5",
       "options": [
         "2/5",
-        "NaN",
+        "5/5",
         "2/6",
         "3/5"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2/5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2/5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c6880f7b-3d98-4f37-8eb2-2acbc5f6111a",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
+      "content": "Rzut symetryczną kostką 8-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:",
       "correct_answer": "1/2",
       "options": [
         "1/3",
@@ -36,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "64f21cc8-3c44-4d94-b6b7-d01b712bf145",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -55,15 +55,15 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/3",
       "figure_svg": null,
       "figure_caption": null,
       "id": "191cc872-7ea0-45c2-8fb7-379d565a25f4",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
+      "content": "Rzut symetryczną kostką 12-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:",
       "correct_answer": "1/2",
       "options": [
         "1/2",
@@ -74,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d9c03dc6-25c9-45f5-bb57-755289c9e68e",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -88,20 +88,20 @@
         "1/2",
         "3/7",
         "4/6",
-        "3/6"
+        "4/2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c1bc6c3d-271e-4632-870e-da10b39d846c",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
+      "content": "Rzut symetryczną kostką 16-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:",
       "correct_answer": "1/2",
       "options": [
         "1/6",
@@ -112,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "6fc17ed1-664f-49f2-b8d6-c669db03d911",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -131,15 +131,15 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/4",
       "figure_svg": null,
       "figure_caption": null,
       "id": "53485746-2906-4d5d-a5f0-d6e6c8d45fff",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
+      "content": "Rzut symetryczną kostką 20-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:",
       "correct_answer": "1/2",
       "options": [
         "1/6",
@@ -150,18 +150,18 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "6a7bed8d-74ad-4f86-901f-977956aa27ee",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
       "content": "Losujemy kulę z 7 kul, z czego 3 są czerwone. Prawdopodobieństwo czerwonej to:",
       "correct_answer": "3/7",
       "options": [
-        "NaN",
+        "6/7",
         "3/7",
         "4/7",
         "3/8"
@@ -169,15 +169,15 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3/7",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3/7",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a943a80e-8b0b-4bfb-b42a-93f4481e5fe3",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
+      "content": "Rzut symetryczną kostką 24-ścienną. Prawdopodobieństwo uzyskania liczby parzystej to:",
       "correct_answer": "1/2",
       "options": [
         "2/3",
@@ -188,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "0fd3dbe3-8d8a-4505-b247-a54ccde9b538",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -207,30 +207,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3/10",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3/10",
       "figure_svg": null,
       "figure_caption": null,
       "id": "b35f315f-86d7-4763-b0f6-c63a7ee0de7b",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
-      "correct_answer": "1/2",
-      "options": [
-        "2/3",
-        "1/3",
-        "1/6",
-        "1/2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "43a299bc-b391-4d61-bd08-f33484b1321d",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -245,30 +226,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3/5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3/5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "768e0eed-309d-4a7a-9a86-019ec96d36b1",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
-      "correct_answer": "1/2",
-      "options": [
-        "1/3",
-        "1/2",
-        "1/6",
-        "2/3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5335ab5e-0639-441b-9f3a-2a5a3ed90580",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "43a299bc-b391-4d61-bd08-f33484b1321d",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
@@ -283,108 +245,146 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2/7",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2/7",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e86ffbf0-e9c4-4195-ae61-6a22aeec664f",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "768e0eed-309d-4a7a-9a86-019ec96d36b1",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
-      "correct_answer": "1/2",
+      "content": "Losujemy kulę z 6 kul, z czego 2 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/3",
       "options": [
-        "1/6",
-        "1/3",
-        "1/2",
-        "2/3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d53a55b8-8170-44ab-842e-21930969c07f",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Losujemy kulę z 6 kul, z czego 3 są czerwone. Prawdopodobieństwo czerwonej to:",
-      "correct_answer": "1/2",
-      "options": [
+        "2/7",
         "3/6",
         "4/6",
-        "1/2",
-        "3/7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e2549317-f29d-4e15-b1b6-79d14171097f",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
-      "correct_answer": "1/2",
-      "options": [
-        "1/2",
-        "2/3",
-        "1/6",
         "1/3"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b549f908-bead-436f-affb-57c1394416df",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "5335ab5e-0639-441b-9f3a-2a5a3ed90580",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Losujemy kulę z 5 kul, z czego 3 są czerwone. Prawdopodobieństwo czerwonej to:",
-      "correct_answer": "3/5",
+      "content": "Losujemy kulę z 4 kul, z czego 2 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/2",
       "options": [
-        "4/5",
-        "3/5",
+        "1/2",
+        "4/2",
         "2/5",
-        "3/6"
+        "3/4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e86ffbf0-e9c4-4195-ae61-6a22aeec664f",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Losujemy kulę z 9 kul, z czego 2 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "2/9",
+      "options": [
+        "7/9",
+        "3/9",
+        "2/9",
+        "2/10"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3/5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2/9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3c753b9f-d81c-4b09-8725-00b266146d79",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "id": "d53a55b8-8170-44ab-842e-21930969c07f",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Rzut symetryczną sześcienną kostką. Prawdopodobieństwo uzyskania liczby parzystej to:",
-      "correct_answer": "1/2",
+      "content": "Losujemy kulę z 10 kul, z czego 1 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/10",
       "options": [
-        "1/6",
-        "1/2",
-        "1/3",
-        "2/3"
+        "9/10",
+        "2/10",
+        "1/10",
+        "1/11"
       ],
       "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1/2",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e2549317-f29d-4e15-b1b6-79d14171097f",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Losujemy kulę z 10 kul, z czego 2 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/5",
+      "options": [
+        "1/5",
+        "3/10",
+        "2/11",
+        "8/10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b549f908-bead-436f-affb-57c1394416df",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Losujemy kulę z 4 kul, z czego 1 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/4",
+      "options": [
+        "1/5",
+        "3/4",
+        "1/4",
+        "2/4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3c753b9f-d81c-4b09-8725-00b266146d79",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Losujemy kulę z 5 kul, z czego 1 są czerwone. Prawdopodobieństwo czerwonej to:",
+      "correct_answer": "1/5",
+      "options": [
+        "2/5",
+        "1/5",
+        "1/6",
+        "4/5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1/5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "7a9b5561-702d-4668-9995-859731213ac9",
-      "generatedAt": "2026-08-07T16:30:27.573Z",
+      "generatedAt": "2026-09-06T19:54:36.676Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.574Z"
+  "updatedAt": "2026-09-06T19:54:36.676Z"
 }

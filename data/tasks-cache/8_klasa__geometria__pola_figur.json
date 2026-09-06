@@ -17,11 +17,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "eb4cd06e-1579-40b5-add3-da27748c77c7",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -36,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
       "id": "92028b9e-7863-430a-ab25-fb9a930f4a89",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -55,11 +55,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
       "id": "7c35e782-6b02-4b99-b04c-e6671c14c2b7",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -74,30 +74,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4b631dce-ab58-4087-a6c8-c59e09ac4cbe",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole kwadratu o boku 9 wynosi:",
-      "correct_answer": "81",
-      "options": [
-        "81",
-        "87",
-        "80",
-        "83"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "965b5cd9-b82b-4041-9eb0-a86df8734b8e",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -112,30 +93,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 10,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 49",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 49",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "002ca30f-2aae-4dd4-87cc-e20687cfb0db",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole kwadratu o boku 4 wynosi:",
-      "correct_answer": "16",
-      "options": [
-        "17",
-        "16",
-        "18",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "44710faf-051c-4af5-abbc-2fdf9f8c088b",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "965b5cd9-b82b-4041-9eb0-a86df8734b8e",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -150,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 60",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 60",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ac472e05-b884-4944-bf63-a1f3df2d7515",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "002ca30f-2aae-4dd4-87cc-e20687cfb0db",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -169,11 +131,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cf799201-e71b-4dcb-9c1e-982836da2e3a",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "44710faf-051c-4af5-abbc-2fdf9f8c088b",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -188,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a17bb40c-f12c-4b1d-b2c1-17cf91e92b59",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "ac472e05-b884-4944-bf63-a1f3df2d7515",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -207,30 +169,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "918d14c0-a2d2-45e5-8607-13dd6578ff8b",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole prostokąta o bokach 9 i 9 wynosi:",
-      "correct_answer": "81",
-      "options": [
-        "87",
-        "82",
-        "76",
-        "81"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6507b5ee-4847-4aeb-bf06-3531b0665cf6",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "cf799201-e71b-4dcb-9c1e-982836da2e3a",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -245,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0394d5b6-52c2-4731-b236-b4182229281a",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "a17bb40c-f12c-4b1d-b2c1-17cf91e92b59",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -264,11 +207,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0c970c58-7770-43d9-8322-0138b1902b88",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "918d14c0-a2d2-45e5-8607-13dd6578ff8b",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -283,11 +226,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 121",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 121",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "9f93ff48-1a05-49b6-a955-bd340703f1f1",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "6507b5ee-4847-4aeb-bf06-3531b0665cf6",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -302,30 +245,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c3ec6e15-9fcd-43f0-9a12-2ba1e959e85e",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Pole kwadratu o boku 9 wynosi:",
-      "correct_answer": "81",
-      "options": [
-        "87",
-        "81",
-        "79",
-        "80"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 11,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ae6f6568-c81d-4c0e-9784-8508c1be4ed4",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "0394d5b6-52c2-4731-b236-b4182229281a",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -340,11 +264,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e2d13d69-740b-44db-8d88-6ded51a6312e",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "0c970c58-7770-43d9-8322-0138b1902b88",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -359,11 +283,11 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ff75de4b-5f59-48cd-a87a-8422a3404056",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "9f93ff48-1a05-49b6-a955-bd340703f1f1",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     },
     {
@@ -378,13 +302,89 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 63",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c3ec6e15-9fcd-43f0-9a12-2ba1e959e85e",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 9 i 8 wynosi:",
+      "correct_answer": "72",
+      "options": [
+        "67",
+        "72",
+        "77",
+        "73"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae6f6568-c81d-4c0e-9784-8508c1be4ed4",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole kwadratu o boku 3 wynosi:",
+      "correct_answer": "9",
+      "options": [
+        "15",
+        "9",
+        "7",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e2d13d69-740b-44db-8d88-6ded51a6312e",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 6 i 6 wynosi:",
+      "correct_answer": "36",
+      "options": [
+        "42",
+        "36",
+        "35",
+        "37"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff75de4b-5f59-48cd-a87a-8422a3404056",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole prostokąta o bokach 10 i 7 wynosi:",
+      "correct_answer": "70",
+      "options": [
+        "69",
+        "70",
+        "65",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 70",
       "figure_svg": null,
       "figure_caption": null,
       "id": "528ce958-9ca9-475c-bfaf-a6378ea93035",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.657Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.568Z"
+  "updatedAt": "2026-09-06T19:54:36.657Z"
 }

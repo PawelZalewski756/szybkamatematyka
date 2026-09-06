@@ -60,140 +60,178 @@
       "model": "gemini-2.5-flash-lite"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=15$, $r=-5$. Oblicz $a_{10}$​​​​​​",
-      "correct_answer": "-30",
+      "content": "Ciąg arytmetyczny: $a_1=-1$, $r=-3$. Oblicz $a_{6}$",
+      "correct_answer": "-16",
       "options": [
-        "-31",
-        "-30",
-        "-37",
-        "-32"
+        "-21",
+        "-18",
+        "-16",
+        "-17"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -30",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "286aae6f-84d0-44b7-828a-9f36adf98a69",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=8$, $r=6$. Oblicz $a_{9}$​​​​​​​",
-      "correct_answer": "56",
+      "content": "Ciąg arytmetyczny: $a_1=-8$, $r=-4$. Oblicz $a_{5}$",
+      "correct_answer": "-24",
       "options": [
-        "48",
-        "56",
-        "55",
-        "54"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 56",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2551d1eb-4fef-4c30-8323-4974f49febc3",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Ciąg arytmetyczny: $a_1=1$, $r=5$. Oblicz $a_{8}$​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "34",
-        "35",
-        "29",
-        "36"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8650028e-7328-49bc-8f03-6c9195c64147",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Ciąg arytmetyczny: $a_1=-6$, $r=4$. Oblicz $a_{7}$​​​​​​​​​",
-      "correct_answer": "18",
-      "options": [
-        "16",
-        "12",
-        "17",
-        "18"
+        "-25",
+        "-30",
+        "-24",
+        "-26"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -24",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c701ebf3-7aba-4574-88b4-19a0ab11ab85",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "2551d1eb-4fef-4c30-8323-4974f49febc3",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=17$, $r=3$. Oblicz $a_{6}$​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=15$, $r=-5$. Oblicz $a_{10}$",
+      "correct_answer": "-30",
+      "options": [
+        "-32",
+        "-37",
+        "-31",
+        "-30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8650028e-7328-49bc-8f03-6c9195c64147",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=8$, $r=6$. Oblicz $a_{9}$",
+      "correct_answer": "56",
+      "options": [
+        "54",
+        "48",
+        "55",
+        "56"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 56",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c701ebf3-7aba-4574-88b4-19a0ab11ab85",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=1$, $r=5$. Oblicz $a_{8}$",
+      "correct_answer": "36",
+      "options": [
+        "34",
+        "35",
+        "36",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b180c8a6-0246-4976-ae37-b351d074307a",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=-6$, $r=4$. Oblicz $a_{7}$",
+      "correct_answer": "18",
+      "options": [
+        "18",
+        "17",
+        "16",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b1bc80a0-10cd-441b-b1d8-af720876178a",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=17$, $r=3$. Oblicz $a_{6}$",
       "correct_answer": "32",
       "options": [
         "27",
         "32",
-        "30",
-        "31"
+        "31",
+        "30"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b180c8a6-0246-4976-ae37-b351d074307a",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "ee808a90-5c49-4755-8b30-26849b4953a2",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=10$, $r=2$. Oblicz $a_{5}$​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=10$, $r=2$. Oblicz $a_{5}$",
       "correct_answer": "18",
       "options": [
-        "17",
         "16",
         "18",
+        "17",
         "14"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 18",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b1bc80a0-10cd-441b-b1d8-af720876178a",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "54c7439e-dead-47c8-a7b9-a316876c89ec",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=3$, $r=1$. Oblicz $a_{10}$​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=3$, $r=1$. Oblicz $a_{10}$",
       "correct_answer": "12",
       "options": [
+        "11",
         "12",
         "10",
-        "11",
         "9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ee808a90-5c49-4755-8b30-26849b4953a2",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "334433db-d483-4eec-adf0-1c53f7fc389e",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg stały $a_n=-4$. Wtedy $a_5$:​​​​​​​​​​​​​",
+      "content": "Ciąg stały $a_n=-4$. Wtedy $a_5$:",
       "correct_answer": "-4",
       "options": [
         "-5",
@@ -203,147 +241,147 @@
       ],
       "answer_type": "choice",
       "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "54c7439e-dead-47c8-a7b9-a316876c89ec",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "873e0b5d-3460-480a-9514-9b0ecf596126",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=19$, $r=-1$. Oblicz $a_{8}$​​​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=19$, $r=-1$. Oblicz $a_{8}$",
       "correct_answer": "12",
       "options": [
         "12",
         "11",
-        "9",
-        "10"
+        "10",
+        "9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "334433db-d483-4eec-adf0-1c53f7fc389e",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "9269044d-2eae-4a2d-bfe5-52230251ae24",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=12$, $r=-2$. Oblicz $a_{7}$​​​​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=12$, $r=-2$. Oblicz $a_{7}$",
       "correct_answer": "0",
       "options": [
-        "0",
         "-1",
+        "0",
         "-4",
         "-2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "873e0b5d-3460-480a-9514-9b0ecf596126",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Ciąg arytmetyczny: $a_1=5$, $r=-3$. Oblicz $a_{6}$​​​​​​​​​​​​​​​​",
-      "correct_answer": "-10",
-      "options": [
-        "-12",
-        "-15",
-        "-10",
-        "-11"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -10",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9269044d-2eae-4a2d-bfe5-52230251ae24",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Ciąg arytmetyczny: $a_1=-2$, $r=-4$. Oblicz $a_{5}$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-18",
-      "options": [
-        "-20",
-        "-18",
-        "-24",
-        "-19"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -18",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5b2804e1-5e6a-4233-8f21-2d219ed53059",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=-9$, $r=-5$. Oblicz $a_{10}$​​​​​​​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=5$, $r=-3$. Oblicz $a_{6}$",
+      "correct_answer": "-10",
+      "options": [
+        "-11",
+        "-12",
+        "-15",
+        "-10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4a22f6ac-6bf7-4cba-b717-72b41481fba3",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=-2$, $r=-4$. Oblicz $a_{5}$",
+      "correct_answer": "-18",
+      "options": [
+        "-20",
+        "-24",
+        "-19",
+        "-18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a8eba867-9af5-4576-9e23-fe03961e1c94",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Ciąg arytmetyczny: $a_1=-9$, $r=-5$. Oblicz $a_{10}$",
       "correct_answer": "-54",
       "options": [
-        "-56",
-        "-55",
         "-54",
+        "-55",
+        "-56",
         "-61"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -54",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -54",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4a22f6ac-6bf7-4cba-b717-72b41481fba3",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "f8d3407d-7f9c-4adc-9b48-ee2adb15e5a4",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=14$, $r=6$. Oblicz $a_{9}$​​​​​​​​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=14$, $r=6$. Oblicz $a_{9}$",
       "correct_answer": "62",
       "options": [
-        "62",
         "60",
         "54",
+        "62",
         "61"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 62",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 62",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a8eba867-9af5-4576-9e23-fe03961e1c94",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "3519007e-cfb9-4e15-876c-8d279fa47d19",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Ciąg arytmetyczny: $a_1=7$, $r=5$. Oblicz $a_{8}$​​​​​​​​​​​​​​​​​​​​",
+      "content": "Ciąg arytmetyczny: $a_1=7$, $r=5$. Oblicz $a_{8}$",
       "correct_answer": "42",
       "options": [
-        "35",
-        "41",
+        "40",
         "42",
-        "40"
+        "41",
+        "35"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 42",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 42",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "f8d3407d-7f9c-4adc-9b48-ee2adb15e5a4",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "id": "10bbf539-5d1a-42ed-95bc-4fba33eca1b4",
+      "generatedAt": "2026-09-06T19:54:36.622Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.557Z"
+  "updatedAt": "2026-09-06T19:54:36.623Z"
 }

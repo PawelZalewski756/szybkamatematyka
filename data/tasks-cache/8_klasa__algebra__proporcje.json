@@ -6,216 +6,26 @@
   "topicName": "Proporcje i skala",
   "tasks": [
     {
-      "content": "Z proporcji $2:7=10:x$ wynika $x=$​",
+      "content": "Z proporcji $2:7=10:x$ wynika $x=$",
       "correct_answer": "35",
       "options": [
         "34",
-        "26.25",
         "33",
-        "35"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 35",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2fbae4b6-5fa0-40f7-8806-ed38d40e2172",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $9:6=36:x$ wynika $x=$​​",
-      "correct_answer": "24",
-      "options": [
-        "23",
-        "18",
-        "22",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f6b518b3-de9f-40d7-b210-6fe2cb7fb608",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $8:5=24:x$ wynika $x=$​​​",
-      "correct_answer": "15",
-      "options": [
-        "13",
-        "15",
-        "14",
-        "11.25"
+        "35",
+        "26.25"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 35",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5a55cc6b-263c-4e21-8546-b3d40f9f3968",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "2fbae4b6-5fa0-40f7-8806-ed38d40e2172",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $7:4=14:x$ wynika $x=$​​​​",
-      "correct_answer": "8",
-      "options": [
-        "6",
-        "9",
-        "7",
-        "8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6c0fb0d9-6c0b-4e58-a944-6025422c2423",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $6:3=6:x$ wynika $x=$​​​​​",
-      "correct_answer": "3",
-      "options": [
-        "2",
-        "4",
-        "1",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a6728e4e-157a-4c73-9668-4169bfc6fdf8",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $5:2=30:x$ wynika $x=$​​​​​​",
-      "correct_answer": "12",
-      "options": [
-        "10",
-        "11",
-        "9",
-        "12"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "577f8044-0364-4d28-a75f-74ab0d286b5c",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $4:9=20:x$ wynika $x=$​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "45",
-        "44",
-        "43",
-        "33.75"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5b7c0d62-cfb7-4427-8bf9-91327db812d7",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $3:8=12:x$ wynika $x=$​​​​​​​​",
-      "correct_answer": "32",
-      "options": [
-        "31",
-        "32",
-        "30",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d1b8b778-b62f-4c1b-9c3e-05bdd8375ced",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $2:7=6:x$ wynika $x=$​​​​​​​​​",
-      "correct_answer": "21",
-      "options": [
-        "15.75",
-        "21",
-        "20",
-        "19"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9a0a22ce-8590-48da-9cfe-34cb1fdea63a",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $9:6=18:x$ wynika $x=$​​​​​​​​​​",
-      "correct_answer": "12",
-      "options": [
-        "11",
-        "12",
-        "9",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "74612ec2-1163-45b5-8085-fb5b10dce489",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $8:5=8:x$ wynika $x=$​​​​​​​​​​​",
-      "correct_answer": "5",
-      "options": [
-        "3",
-        "5",
-        "4",
-        "6"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "02749342-8c64-4a3b-b2b7-a271f0249525",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z proporcji $7:4=42:x$ wynika $x=$​​​​​​​​​​​​",
+      "content": "Z proporcji $9:6=36:x$ wynika $x=$",
       "correct_answer": "24",
       "options": [
         "24",
@@ -225,166 +35,356 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cbf99281-c802-4203-95e2-2846bb6b3424",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "f6b518b3-de9f-40d7-b210-6fe2cb7fb608",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $6:3=30:x$ wynika $x=$​​​​​​​​​​​​​",
+      "content": "Z proporcji $8:5=24:x$ wynika $x=$",
       "correct_answer": "15",
       "options": [
-        "15",
+        "11.25",
         "14",
-        "13",
-        "11.25"
+        "15",
+        "13"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "30c05a30-b284-4596-ae52-4a8300a9c1c2",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "5a55cc6b-263c-4e21-8546-b3d40f9f3968",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $5:2=20:x$ wynika $x=$​​​​​​​​​​​​​​",
+      "content": "Z proporcji $7:4=14:x$ wynika $x=$",
       "correct_answer": "8",
       "options": [
-        "7",
         "6",
         "9",
+        "7",
         "8"
       ],
       "answer_type": "choice",
       "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6c0fb0d9-6c0b-4e58-a944-6025422c2423",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $6:3=6:x$ wynika $x=$",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a6728e4e-157a-4c73-9668-4169bfc6fdf8",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $5:2=30:x$ wynika $x=$",
+      "correct_answer": "12",
+      "options": [
+        "11",
+        "10",
+        "12",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "577f8044-0364-4d28-a75f-74ab0d286b5c",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $4:9=20:x$ wynika $x=$",
+      "correct_answer": "45",
+      "options": [
+        "43",
+        "33.75",
+        "44",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b7c0d62-cfb7-4427-8bf9-91327db812d7",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $3:8=12:x$ wynika $x=$",
+      "correct_answer": "32",
+      "options": [
+        "30",
+        "31",
+        "32",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d1b8b778-b62f-4c1b-9c3e-05bdd8375ced",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $2:7=6:x$ wynika $x=$",
+      "correct_answer": "21",
+      "options": [
+        "15.75",
+        "21",
+        "19",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a0a22ce-8590-48da-9cfe-34cb1fdea63a",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $9:6=18:x$ wynika $x=$",
+      "correct_answer": "12",
+      "options": [
+        "9",
+        "12",
+        "10",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74612ec2-1163-45b5-8085-fb5b10dce489",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $8:5=8:x$ wynika $x=$",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "6",
+        "5",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "02749342-8c64-4a3b-b2b7-a271f0249525",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $7:4=42:x$ wynika $x=$",
+      "correct_answer": "24",
+      "options": [
+        "23",
+        "18",
+        "22",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cbf99281-c802-4203-95e2-2846bb6b3424",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $6:3=30:x$ wynika $x=$",
+      "correct_answer": "15",
+      "options": [
+        "14",
+        "13",
+        "15",
+        "11.25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30c05a30-b284-4596-ae52-4a8300a9c1c2",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z proporcji $5:2=20:x$ wynika $x=$",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2ce0e8d8-444b-4ba5-9b93-145d2dfae7b3",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $4:9=12:x$ wynika $x=$​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $4:9=12:x$ wynika $x=$",
       "correct_answer": "27",
       "options": [
-        "27",
         "25",
-        "20.25",
-        "26"
+        "27",
+        "26",
+        "20.25"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 27",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 27",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8438177a-9352-42b4-be60-247dc098acb3",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $3:8=6:x$ wynika $x=$​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $3:8=6:x$ wynika $x=$",
       "correct_answer": "16",
       "options": [
         "12",
-        "15",
+        "14",
         "16",
-        "14"
+        "15"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ca8cc1bd-8bf5-4a0a-918b-3c04c92da195",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $2:7=2:x$ wynika $x=$​​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $2:7=2:x$ wynika $x=$",
       "correct_answer": "7",
       "options": [
+        "7",
         "5",
         "8",
-        "6",
-        "7"
+        "6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 7",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 7",
       "figure_svg": null,
       "figure_caption": null,
       "id": "22e310a3-e4a9-47dd-9bac-b19193306c46",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $9:6=54:x$ wynika $x=$​​​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $9:6=54:x$ wynika $x=$",
       "correct_answer": "36",
       "options": [
         "27",
         "34",
-        "36",
-        "35"
+        "35",
+        "36"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8414a124-c842-4394-b68d-249fdf87f15d",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $8:5=40:x$ wynika $x=$​​​​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $8:5=40:x$ wynika $x=$",
       "correct_answer": "25",
       "options": [
-        "25",
+        "18.75",
         "23",
         "24",
-        "18.75"
+        "25"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8736ecc2-5dd0-4565-a3b1-83279927909d",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z proporcji $7:4=28:x$ wynika $x=$​​​​​​​​​​​​​​​​​​​​",
+      "content": "Z proporcji $7:4=28:x$ wynika $x=$",
       "correct_answer": "16",
       "options": [
-        "15",
         "12",
+        "14",
         "16",
-        "14"
+        "15"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e81d14d2-9198-43ff-94c3-8bb27f90baaf",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.654Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.567Z"
+  "updatedAt": "2026-09-06T19:54:36.654Z"
 }

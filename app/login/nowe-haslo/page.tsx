@@ -11,7 +11,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const SUPABASE_CONFIGURED = isSupabaseConfigured();
 const AUTH_UNAVAILABLE_MESSAGE =
   "Ustawianie nowego hasła jest obecnie niedostępne. Spróbuj ponownie później.";
 
@@ -20,75 +19,91 @@ export default function NoweHasloPage() {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [loading, setLoading] = useState(false);
-  const [checking, setChecking] = useState(SUPABASE_CONFIGURED);
+  const [supabaseReady, setSupabaseReady] = useState(() =>
+    isSupabaseConfigured(),
+  );
+  const [checking, setChecking] = useState(() => isSupabaseConfigured());
   const [canReset, setCanReset] = useState(false);
   const [message, setMessage] = useState<string | null>(
-    SUPABASE_CONFIGURED ? null : AUTH_UNAVAILABLE_MESSAGE,
+    isSupabaseConfigured() ? null : AUTH_UNAVAILABLE_MESSAGE,
   );
-  const [isError, setIsError] = useState(!SUPABASE_CONFIGURED);
+  const [isError, setIsError] = useState(!isSupabaseConfigured());
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    if (!SUPABASE_CONFIGURED) return;
-
-    const supabase = getSupabase();
     let cancelled = false;
+    let started = false;
+    let unsubscribe = () => {};
 
-    const init = async () => {
-      const params = new URLSearchParams(window.location.search);
-      const code = params.get("code");
+    const start = () => {
+      if (started || !isSupabaseConfigured()) return;
+      started = true;
+      setSupabaseReady(true);
+      setChecking(true);
+      setMessage(null);
+      setIsError(false);
 
-      if (code) {
-        const { error } = await supabase.auth.exchangeCodeForSession(code);
-        if (!cancelled) {
-          if (!error) {
-            setCanReset(true);
+      const supabase = getSupabase();
+      const init = async () => {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+
+        if (code) {
+          const { error } = await supabase.auth.exchangeCodeForSession(code);
+          if (!cancelled) {
+            if (!error) {
+              setCanReset(true);
+              setChecking(false);
+              window.history.replaceState({}, "", "/login/nowe-haslo");
+              return;
+            }
             setChecking(false);
-            window.history.replaceState({}, "", "/login/nowe-haslo");
+            setIsError(true);
+            setMessage(
+              "Link wygasł lub jest nieprawidłowy. Poproś o nowy link resetujący hasło.",
+            );
             return;
           }
+        }
+
+        const { data } = await supabase.auth.getSession();
+        if (cancelled) return;
+
+        if (data.session) {
+          setCanReset(true);
           setChecking(false);
-          setIsError(true);
-          setMessage(
-            "Link wygasł lub jest nieprawidłowy. Poproś o nowy link resetujący hasło.",
-          );
           return;
         }
-      }
 
-      const { data } = await supabase.auth.getSession();
-      if (cancelled) return;
-
-      if (data.session) {
-        setCanReset(true);
         setChecking(false);
-        return;
-      }
+        setIsError(true);
+        setMessage(
+          "Link wygasł lub jest nieprawidłowy. Poproś o nowy link resetujący hasło.",
+        );
+      };
 
-      setChecking(false);
-      setIsError(true);
-      setMessage(
-        "Link wygasł lub jest nieprawidłowy. Poproś o nowy link resetujący hasło.",
-      );
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((event, session) => {
+        if (cancelled) return;
+        if (event === "PASSWORD_RECOVERY" || session) {
+          setCanReset(true);
+          setChecking(false);
+          setIsError(false);
+          setMessage(null);
+        }
+      });
+      unsubscribe = () => subscription.unsubscribe();
+      void init();
     };
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      if (cancelled) return;
-      if (event === "PASSWORD_RECOVERY" || session) {
-        setCanReset(true);
-        setChecking(false);
-        setIsError(false);
-        setMessage(null);
-      }
-    });
-
-    void init();
+    window.addEventListener("supabase-config-ready", start);
+    start();
 
     return () => {
       cancelled = true;
-      subscription.unsubscribe();
+      window.removeEventListener("supabase-config-ready", start);
+      unsubscribe();
     };
   }, []);
 
@@ -103,7 +118,7 @@ export default function NoweHasloPage() {
       return;
     }
 
-    if (!SUPABASE_CONFIGURED) {
+    if (!supabaseReady) {
       setIsError(true);
       setMessage(AUTH_UNAVAILABLE_MESSAGE);
       return;

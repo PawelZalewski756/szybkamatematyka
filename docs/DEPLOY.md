@@ -24,6 +24,21 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 służy tylko do ukrycia/pokazania panelu w przeglądarce — obie wartości muszą być
 identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
+`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` i
+`NEXT_PUBLIC_SITE_URL` ustaw przed `next build`, ponieważ Next.js wbudowuje
+publiczne zmienne w bundle. Aplikacja ma dodatkowo endpoint
+`/api/runtime-config`, który pobiera te trzy wartości przy uruchomieniu serwera;
+to zabezpiecza wdrożenia Node/standalone budowane bez konfiguracji, ale nie
+zastępuje ustawienia zmiennych w środowisku produkcyjnym ani nie działa przy
+czysto statycznym eksporcie.
+
+W Supabase dodaj do Authentication → URL Configuration:
+
+- Site URL: wartość `NEXT_PUBLIC_SITE_URL`;
+- Redirect URLs: `${NEXT_PUBLIC_SITE_URL}/login`,
+  `${NEXT_PUBLIC_SITE_URL}/login/nowe-haslo` oraz lokalny
+  `http://localhost:3000/**` do testów.
+
 ## 2. Supabase — kolejność SQL
 
 Repozytorium zawiera starsze pliki SQL przeznaczone do uruchamiania w SQL

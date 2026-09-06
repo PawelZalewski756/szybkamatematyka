@@ -7,20 +7,21 @@ const DEFAULT_THEORY_MODEL_CHAIN = [
 ] as const;
 
 export function getTheoryModelChain(): string[] {
-  const fallback = process.env.GEMINI_MODEL_FALLBACK?.trim();
-  if (fallback) {
-    return fallback
-      .split(",")
-      .map((m) => m.trim())
-      .filter(Boolean);
-  }
-
   const primary = process.env.GEMINI_MODEL?.trim();
-  if (primary && !DEFAULT_THEORY_MODEL_CHAIN.includes(primary as (typeof DEFAULT_THEORY_MODEL_CHAIN)[number])) {
-    return [primary, ...DEFAULT_THEORY_MODEL_CHAIN];
-  }
+  const fallback = process.env.GEMINI_MODEL_FALLBACK?.trim();
+  const configuredFallbacks =
+    fallback
+      ?.split(",")
+      .map((model) => model.trim())
+      .filter(Boolean) ?? [];
 
-  return [...DEFAULT_THEORY_MODEL_CHAIN];
+  return [
+    ...new Set([
+      ...(primary ? [primary] : []),
+      ...configuredFallbacks,
+      ...DEFAULT_THEORY_MODEL_CHAIN,
+    ]),
+  ];
 }
 
 /** Wyciąga nazwę modelu z komunikatu błędu quota (jeśli jest). */

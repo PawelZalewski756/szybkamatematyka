@@ -6,385 +6,385 @@
   "topicName": "Odczyt wykresu funkcji",
   "tasks": [
     {
-      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​",
-      "correct_answer": "-4",
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "16",
       "options": [
-        "-8",
-        "-4",
-        "-6",
-        "-5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fc5a3506-a7ba-4563-88f0-c9c6108a518e",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​",
-      "correct_answer": "0",
-      "options": [
-        "-2",
-        "-4",
-        "0",
-        "-1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "14c41f25-fe34-4d4d-910e-f2658a1b1203",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-4",
-        "-6",
-        "-2",
-        "-3"
+        "14",
+        "15",
+        "12",
+        "16"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2cad698c-293d-4487-85d0-e7cb81814085",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "id": "fc5a3506-a7ba-4563-88f0-c9c6108a518e",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​",
-      "correct_answer": "-2",
+      "content": "Z wykresu: $f(-1)=-3$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "12",
       "options": [
-        "-2",
-        "-3",
-        "-6",
-        "-4"
+        "12",
+        "8",
+        "10",
+        "11"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "da20c396-0cac-4d21-b9c1-178519c99c1f",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "id": "14c41f25-fe34-4d4d-910e-f2658a1b1203",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z wykresu: $f(-1)=0$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​",
+      "content": "Z wykresu: $f(-1)=-2$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "6",
+        "4",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2cad698c-293d-4487-85d0-e7cb81814085",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da20c396-0cac-4d21-b9c1-178519c99c1f",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=0$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
       "correct_answer": "0",
       "options": [
-        "-4",
         "0",
+        "-4",
         "-1",
         "-2"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e3277b52-13d7-41c1-84ff-9d42100e4455",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​",
+      "content": "Z wykresu: $f(-1)=1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-4",
+      "options": [
+        "-4",
+        "-8",
+        "-6",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb1a443e-828e-4f8d-9506-da995038226d",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=2$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-8",
+      "options": [
+        "-8",
+        "-10",
+        "-9",
+        "-12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6507193d-df07-4b26-96ca-a73ae86e17ae",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=3$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-12",
+      "options": [
+        "-12",
+        "-14",
+        "-13",
+        "-16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "818e0a47-4037-4d42-bf23-93f24bcb162c",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "12",
+      "options": [
+        "11",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f1484e4c-de03-4e91-942c-c5f0f3bae6bc",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-3$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "9",
+      "options": [
+        "5",
+        "8",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2101fc1f-c98b-449e-85b8-2f230125ee5b",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-2$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "6",
+      "options": [
+        "4",
+        "2",
+        "5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "16fadb8a-9b09-4110-b136-a24e6c0f0b63",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "3",
+        "-1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "97fdcb7f-1f7d-4883-816f-e08699f98796",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=0$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "0",
+      "options": [
+        "-4",
+        "-2",
+        "-1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3fe0cb0c-4800-4afc-97fd-a391656428f8",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=1$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-3",
+      "options": [
+        "-4",
+        "-3",
+        "-5",
+        "-7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "45df3e39-bb41-4b14-b577-fe60cb6eda20",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=2$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-6",
+      "options": [
+        "-7",
+        "-6",
+        "-10",
+        "-8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a43d30b2-e5a6-4ece-a509-e0f551239ddb",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=3$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "-9",
+      "options": [
+        "-11",
+        "-10",
+        "-9",
+        "-13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "160e301d-715b-4278-b737-67d4262676af",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-4$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8f722882-e566-4967-a266-cbe6b2c894e0",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-3$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "4",
+        "2",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "06ffacc1-2e5f-4144-9770-97d45671a851",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-2$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:",
       "correct_answer": "4",
       "options": [
         "3",
+        "2",
         "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0c4feb6-065d-433c-957f-735a43abdd78",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "-2",
         "2",
         "0"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bb1a443e-828e-4f8d-9506-da995038226d",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-2$, $f(2)=3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​",
-      "correct_answer": "-6",
-      "options": [
-        "-7",
-        "-8",
-        "-6",
-        "-10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6507193d-df07-4b26-96ca-a73ae86e17ae",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-3$, $f(2)=2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​",
-      "correct_answer": "-6",
-      "options": [
-        "-10",
-        "-7",
-        "-6",
-        "-8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "818e0a47-4037-4d42-bf23-93f24bcb162c",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​",
-      "correct_answer": "-4",
-      "options": [
-        "-6",
-        "-5",
-        "-4",
-        "-8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f1484e4c-de03-4e91-942c-c5f0f3bae6bc",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​",
-      "correct_answer": "0",
-      "options": [
-        "0",
-        "-1",
-        "-2",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2101fc1f-c98b-449e-85b8-2f230125ee5b",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-3",
-        "-4",
-        "-6",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "16fadb8a-9b09-4110-b136-a24e6c0f0b63",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-3",
-        "-2",
-        "-6",
-        "-4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "97fdcb7f-1f7d-4883-816f-e08699f98796",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=0$, $f(2)=-3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​",
-      "correct_answer": "0",
-      "options": [
-        "-4",
-        "-2",
-        "-1",
-        "0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3fe0cb0c-4800-4afc-97fd-a391656428f8",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-1$, $f(2)=-4$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "4",
-        "0",
-        "3",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "45df3e39-bb41-4b14-b577-fe60cb6eda20",
-      "generatedAt": "2026-08-07T16:30:27.556Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-2$, $f(2)=3$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​",
-      "correct_answer": "-6",
-      "options": [
-        "-8",
-        "-10",
-        "-6",
-        "-7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a43d30b2-e5a6-4ece-a509-e0f551239ddb",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-3$, $f(2)=2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​",
-      "correct_answer": "-6",
-      "options": [
-        "-10",
-        "-6",
-        "-8",
-        "-7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "160e301d-715b-4278-b737-67d4262676af",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=-4$, $f(2)=1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-4",
-      "options": [
-        "-5",
-        "-6",
-        "-4",
-        "-8"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8f722882-e566-4967-a266-cbe6b2c894e0",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=3$, $f(2)=0$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "0",
-      "options": [
-        "-4",
-        "0",
-        "-1",
-        "-2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 0",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "06ffacc1-2e5f-4144-9770-97d45671a851",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=2$, $f(2)=-1$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-3",
-        "-4",
-        "-2",
-        "-6"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c0c4feb6-065d-433c-957f-735a43abdd78",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Z wykresu: $f(-1)=1$, $f(2)=-2$. Iloczyn $f(-1)\\cdot f(2)$:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "-2",
-      "options": [
-        "-4",
-        "-6",
-        "-2",
-        "-3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** -2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
       "id": "fa9db69b-b52a-49d5-8ed5-037d2ef21593",
-      "generatedAt": "2026-08-07T16:30:27.557Z",
+      "generatedAt": "2026-09-06T19:54:36.621Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.557Z"
+  "updatedAt": "2026-09-06T19:54:36.621Z"
 }

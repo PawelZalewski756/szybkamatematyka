@@ -6,385 +6,385 @@
   "topicName": "Notacja wykładnicza",
   "tasks": [
     {
-      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{7}$​",
-      "correct_answer": "10000000",
+      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{2}$",
+      "correct_answer": "100",
       "options": [
-        "9999999",
-        "9999998",
-        "10000000",
-        "9000000"
+        "99",
+        "90",
+        "98",
+        "100"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10000000",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
       "figure_svg": null,
       "figure_caption": null,
       "id": "134fc313-137a-4259-ad83-72cf5b33b19b",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $6\\cdot 10^{6}$​​",
-      "correct_answer": "6000000",
+      "content": "Zapisz w notacji dziesiętnej: $2\\cdot 10^{2}$",
+      "correct_answer": "200",
       "options": [
-        "5999998",
-        "6000000",
-        "5999999",
-        "5400000"
+        "200",
+        "180",
+        "199",
+        "198"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6000000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 200",
       "figure_svg": null,
       "figure_caption": null,
       "id": "79b88060-89d2-4698-b8eb-50f09fc7d777",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $2\\cdot 10^{5}$​​​",
-      "correct_answer": "200000",
+      "content": "Zapisz w notacji dziesiętnej: $3\\cdot 10^{2}$",
+      "correct_answer": "300",
       "options": [
-        "199999",
-        "200000",
-        "180000",
-        "199998"
+        "298",
+        "300",
+        "270",
+        "299"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 300",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83a99410-52e5-4fa3-bfa8-3f67d70837ba",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $4\\cdot 10^{2}$",
+      "correct_answer": "400",
+      "options": [
+        "360",
+        "399",
+        "400",
+        "398"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 400",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d5b6f0fd-a863-41d6-b906-6a3befea0d42",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $5\\cdot 10^{2}$",
+      "correct_answer": "500",
+      "options": [
+        "450",
+        "500",
+        "498",
+        "499"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 200000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 500",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "83a99410-52e5-4fa3-bfa8-3f67d70837ba",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "id": "3a2fe30b-e40a-4c18-bac6-bc16cce3d0b6",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $7\\cdot 10^{4}$​​​​",
-      "correct_answer": "70000",
+      "content": "Zapisz w notacji dziesiętnej: $6\\cdot 10^{2}$",
+      "correct_answer": "600",
       "options": [
-        "70000",
-        "69998",
-        "63000",
-        "69999"
+        "598",
+        "540",
+        "599",
+        "600"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 70000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 600",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d5b6f0fd-a863-41d6-b906-6a3befea0d42",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "id": "21e6077f-faac-49dc-83f1-cb087db37010",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $3\\cdot 10^{3}$​​​​​",
+      "content": "Zapisz w notacji dziesiętnej: $7\\cdot 10^{2}$",
+      "correct_answer": "700",
+      "options": [
+        "630",
+        "699",
+        "700",
+        "698"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 700",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "97f6db2a-b97e-417e-83e3-c2b36e54d509",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $8\\cdot 10^{2}$",
+      "correct_answer": "800",
+      "options": [
+        "720",
+        "799",
+        "800",
+        "798"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 800",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c91c54a6-d200-46e3-9c5b-9adbbfdd0180",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $9\\cdot 10^{2}$",
+      "correct_answer": "900",
+      "options": [
+        "900",
+        "810",
+        "899",
+        "898"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 900",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ab8b2bc-880b-4508-bcd2-b1f5af272e52",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{3}$",
+      "correct_answer": "1000",
+      "options": [
+        "999",
+        "998",
+        "1000",
+        "900"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0031edf8-7f01-482f-9fd6-83b994197ed2",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $2\\cdot 10^{3}$",
+      "correct_answer": "2000",
+      "options": [
+        "2000",
+        "1800",
+        "1998",
+        "1999"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0bb1a4f6-bea2-4662-ae56-6e97a0051969",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $3\\cdot 10^{3}$",
       "correct_answer": "3000",
       "options": [
+        "2999",
         "3000",
         "2700",
-        "2999",
         "2998"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3a2fe30b-e40a-4c18-bac6-bc16cce3d0b6",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $8\\cdot 10^{2}$​​​​​​",
-      "correct_answer": "800",
-      "options": [
-        "798",
-        "799",
-        "720",
-        "800"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 800",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3000",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "21e6077f-faac-49dc-83f1-cb087db37010",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "id": "465c2e37-24e5-47da-9428-766dcc3a5ca5",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $4\\cdot 10^{7}$​​​​​​​",
-      "correct_answer": "40000000",
+      "content": "Zapisz w notacji dziesiętnej: $4\\cdot 10^{3}$",
+      "correct_answer": "4000",
       "options": [
-        "36000000",
-        "40000000",
-        "39999999",
-        "39999998"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40000000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "97f6db2a-b97e-417e-83e3-c2b36e54d509",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $9\\cdot 10^{6}$​​​​​​​​",
-      "correct_answer": "9000000",
-      "options": [
-        "8100000",
-        "9000000",
-        "8999999",
-        "8999998"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9000000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c91c54a6-d200-46e3-9c5b-9adbbfdd0180",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $5\\cdot 10^{5}$​​​​​​​​​",
-      "correct_answer": "500000",
-      "options": [
-        "499999",
-        "500000",
-        "450000",
-        "499998"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 500000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8ab8b2bc-880b-4508-bcd2-b1f5af272e52",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{4}$​​​​​​​​​​",
-      "correct_answer": "10000",
-      "options": [
-        "10000",
-        "9998",
-        "9000",
-        "9999"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0031edf8-7f01-482f-9fd6-83b994197ed2",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $6\\cdot 10^{3}$​​​​​​​​​​​",
-      "correct_answer": "6000",
-      "options": [
-        "5400",
-        "5999",
-        "5998",
-        "6000"
+        "3999",
+        "3600",
+        "4000",
+        "3998"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0bb1a4f6-bea2-4662-ae56-6e97a0051969",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $2\\cdot 10^{2}$​​​​​​​​​​​​",
-      "correct_answer": "200",
-      "options": [
-        "198",
-        "200",
-        "180",
-        "199"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 200",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "465c2e37-24e5-47da-9428-766dcc3a5ca5",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $7\\cdot 10^{7}$​​​​​​​​​​​​​",
-      "correct_answer": "70000000",
-      "options": [
-        "70000000",
-        "69999998",
-        "69999999",
-        "63000000"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 70000000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4000",
       "figure_svg": null,
       "figure_caption": null,
       "id": "b5a0b747-cd69-41f8-bbd9-59cefccedf44",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $3\\cdot 10^{6}$​​​​​​​​​​​​​​",
-      "correct_answer": "3000000",
+      "content": "Zapisz w notacji dziesiętnej: $5\\cdot 10^{3}$",
+      "correct_answer": "5000",
       "options": [
-        "2999999",
-        "2999998",
-        "3000000",
-        "2700000"
+        "5000",
+        "4500",
+        "4998",
+        "4999"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3000000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5000",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a52a970e-16bd-473e-b332-65cfc85be6c8",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $8\\cdot 10^{5}$​​​​​​​​​​​​​​​",
-      "correct_answer": "800000",
+      "content": "Zapisz w notacji dziesiętnej: $6\\cdot 10^{3}$",
+      "correct_answer": "6000",
       "options": [
-        "720000",
-        "799999",
-        "800000",
-        "799998"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 800000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8e23475f-ae05-44ca-9355-7d9d039ad8ba",
-      "generatedAt": "2026-08-07T16:30:27.549Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $4\\cdot 10^{4}$​​​​​​​​​​​​​​​​",
-      "correct_answer": "40000",
-      "options": [
-        "36000",
-        "40000",
-        "39998",
-        "39999"
+        "5998",
+        "5400",
+        "6000",
+        "5999"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40000",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6000",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d19b2348-4676-4482-af8d-40a392695273",
-      "generatedAt": "2026-08-07T16:30:27.550Z",
+      "id": "8e23475f-ae05-44ca-9355-7d9d039ad8ba",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $9\\cdot 10^{3}$​​​​​​​​​​​​​​​​​",
+      "content": "Zapisz w notacji dziesiętnej: $7\\cdot 10^{3}$",
+      "correct_answer": "7000",
+      "options": [
+        "7000",
+        "6999",
+        "6998",
+        "6300"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 7000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d19b2348-4676-4482-af8d-40a392695273",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $8\\cdot 10^{3}$",
+      "correct_answer": "8000",
+      "options": [
+        "7998",
+        "8000",
+        "7200",
+        "7999"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d23b8a3-3915-4fca-a343-4c1651b79bbb",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Zapisz w notacji dziesiętnej: $9\\cdot 10^{3}$",
       "correct_answer": "9000",
       "options": [
-        "8999",
-        "8100",
         "8998",
+        "8100",
+        "8999",
         "9000"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9000",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7d23b8a3-3915-4fca-a343-4c1651b79bbb",
-      "generatedAt": "2026-08-07T16:30:27.550Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Zapisz w notacji dziesiętnej: $5\\cdot 10^{2}$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "500",
-      "options": [
-        "498",
-        "500",
-        "499",
-        "450"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 500",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9000",
       "figure_svg": null,
       "figure_caption": null,
       "id": "202de99b-cd42-4a7e-bfb7-357f7d6919c1",
-      "generatedAt": "2026-08-07T16:30:27.550Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{7}$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "10000000",
+      "content": "Zapisz w notacji dziesiętnej: $1\\cdot 10^{4}$",
+      "correct_answer": "10000",
       "options": [
-        "9999999",
-        "9000000",
-        "9999998",
-        "10000000"
+        "9999",
+        "10000",
+        "9998",
+        "9000"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10000000",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 10000",
       "figure_svg": null,
       "figure_caption": null,
       "id": "b2b55970-f3e2-4f9c-8f11-2eaf17b9f9f0",
-      "generatedAt": "2026-08-07T16:30:27.550Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Zapisz w notacji dziesiętnej: $6\\cdot 10^{6}$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "6000000",
+      "content": "Zapisz w notacji dziesiętnej: $2\\cdot 10^{4}$",
+      "correct_answer": "20000",
       "options": [
-        "5999999",
-        "5999998",
-        "6000000",
-        "5400000"
+        "19999",
+        "19998",
+        "20000",
+        "18000"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6000000",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20000",
       "figure_svg": null,
       "figure_caption": null,
       "id": "cc6ee23d-413d-4f06-9fb5-019417a7b5df",
-      "generatedAt": "2026-08-07T16:30:27.550Z",
+      "generatedAt": "2026-09-06T19:54:36.599Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.550Z"
+  "updatedAt": "2026-09-06T19:54:36.599Z"
 }

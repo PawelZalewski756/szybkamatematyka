@@ -1,10 +1,7 @@
 import { fmtNum, gcd, mulberry32, randInt, shuffle, type Rng } from "@/lib/trening/seed/rng";
+import { answersEquivalent } from "@/lib/math/answer-equiv";
 import type { SeedTopicSlot } from "@/lib/trening/seed/topics";
 import type { TaskDraft } from "@/lib/trening/seed/generators";
-
-function uniqueMarker(variantIndex: number): string {
-  return "\u200b".repeat(1 + variantIndex);
-}
 
 function buildMc(
   rng: Rng,
@@ -15,8 +12,27 @@ function buildMc(
   difficulty: 1 | 2 | 3,
   variantIndex: number,
 ): TaskDraft {
-  const pool = shuffle(rng, [correct, ...wrongs].filter((v, i, a) => a.indexOf(v) === i));
-  while (pool.length < 4) pool.push(fmtNum(Number(correct) + pool.length + 1));
+  const pool: string[] = [correct.trim()];
+  for (const candidate of wrongs) {
+    const value = candidate.trim();
+    if (
+      value &&
+      !pool.some((existing) => answersEquivalent(existing, value))
+    ) {
+      pool.push(value);
+    }
+  }
+  while (pool.length < 4) {
+    const fraction = correct.match(/^(-?\d+)\s*\/\s*(-?\d+)$/);
+    const fallback = fraction
+      ? `${Number(fraction[1]) + pool.length + 1}/${fraction[2]}`
+      : fmtNum(Number(correct) + pool.length + 1);
+    if (!pool.some((existing) => answersEquivalent(existing, fallback))) {
+      pool.push(fallback);
+    } else {
+      pool.push(`Odpowiedź ${pool.length + 1}`);
+    }
+  }
   const xp =
     difficulty === 1
       ? 10 + randInt(rng, 0, 4)
@@ -28,7 +44,7 @@ function buildMc(
     exam_type: slot.exam_type,
     category: slot.category,
     topic: slot.topic,
-    content: `${content}${uniqueMarker(variantIndex)}`,
+    content,
     correct_answer: correct,
     options: shuffle(rng, pool.slice(0, 4)),
     difficulty,
@@ -134,23 +150,23 @@ export function generateParametricTask(
       const a = 5 + pickV(v, 3, 14);
       const b = 5 + pickV(v, 4, 14);
       const c = Math.round(Math.sqrt(a * a + b * b) * 10) / 10;
-      return buildMc(rng, slot, `Przeciwprostokątna: przyprostokątne ${a} i ${b}`, fmtNum(c), wrongs(rng, c, 3), 2, v);
+      return buildMc(rng, slot, `Przeciwprostokątna: przyprostokątne ${a} i ${b} (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(c), wrongs(rng, c, 3), 2, v);
     }
     case "stereometria": {
-      const mode = pickV(v, 0, 3);
+      const mode = v % 3;
       if (mode === 0) {
-        const a = 2 + pickV(v, 1, 14);
+        const a = 2 + (Math.floor(v / 3) % 14);
         return buildMc(rng, slot, `Pole powierzchni sześcianu o krawędzi ${a}`, fmtNum(6 * a * a), wrongs(rng, 6 * a * a, 10), 2, v);
       }
       if (mode === 1) {
-        const r = 2 + pickV(v, 2, 10);
-        const h = 3 + pickV(v, 3, 14);
-        const vol = Math.round(Math.PI * r * r * h);
+        const r = 2 + (Math.floor(v / 3) % 10);
+        const h = 3 + (Math.floor(v / 30) % 14);
+        const vol = Math.round(3.14 * r * r * h);
         return buildMc(rng, slot, `Objętość walca $r=${r}$, $h=${h}$, $\\pi\\approx 3{,}14$`, fmtNum(vol), wrongs(rng, vol, 20), 3, v);
       }
-      const a = 2 + pickV(v, 4, 8);
-      const b = 2 + pickV(v, 5, 8);
-      const h = 3 + pickV(v, 6, 12);
+      const a = 2 + (Math.floor(v / 3) % 8);
+      const b = 2 + (Math.floor(v / 24) % 8);
+      const h = 3 + (Math.floor(v / 192) % 12);
       return buildMc(rng, slot, `Objętość prostopadłościanu ${a}×${b}×${h}`, fmtNum(a * b * h), wrongs(rng, a * b * h, 12), 2, v);
     }
     case "geometria_analityczna": {
@@ -159,7 +175,7 @@ export function generateParametricTask(
       const x2 = -8 + pickV(v, 2, 16);
       const y2 = -8 + pickV(v, 3, 16);
       const d = Math.round(Math.hypot(x2 - x1, y2 - y1) * 10) / 10;
-      return buildMc(rng, slot, `Odległość $(${x1},${y1})$ i $(${x2},${y2})$`, fmtNum(d), wrongs(rng, d, 4), 3, v);
+      return buildMc(rng, slot, `Odległość $(${x1},${y1})$ i $(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(d), wrongs(rng, d, 4), 3, v);
     }
     case "prawdopodobienstwo": {
       if (pickV(v, 0, 2) === 0) {
@@ -177,7 +193,8 @@ export function generateParametricTask(
       const n = 4 + pickV(v, 0, 3);
       const nums = Array.from({ length: n }, (_, i) => 2 + pickV(v, i + 1, 20));
       const avg = nums.reduce((s, x) => s + x, 0) / n;
-      return buildMc(rng, slot, `Średnia z ${nums.join(", ")}`, fmtNum(Math.round(avg * 100) / 100), wrongs(rng, avg, 2), 2, v);
+      const rounded = Math.round(avg * 100) / 100;
+      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 2, v);
     }
     case "ulamki": {
       const n1 = 1 + pickV(v, 0, 9);
@@ -208,7 +225,8 @@ export function generateParametricTask(
         return buildMc(rng, slot, `Obwód prostokąta ${a}×${b}`, fmtNum(2 * (a + b)), wrongs(rng, 2 * (a + b), 5), 1, v);
       }
       const r = 3 + pickV(v, 4, 10);
-      return buildMc(rng, slot, `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity)`, fmtNum(Math.round(2 * Math.PI * r)), wrongs(rng, Math.round(2 * Math.PI * r), 4), 2, v);
+      const circumference = Math.round(2 * 3.14 * r);
+      return buildMc(rng, slot, `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity)`, fmtNum(circumference), wrongs(rng, circumference, 4), 2, v);
     }
     case "katy": {
       const alpha = 15 + pickV(v, 0, 60);
@@ -225,10 +243,11 @@ export function generateParametricTask(
       const len = 3 + pickV(v, 0, 3);
       const nums = Array.from({ length: len }, (_, i) => 2 + pickV(v, i + 1, 18));
       const avg = nums.reduce((s, n) => s + n, 0) / len;
-      return buildMc(rng, slot, `Średnia z ${nums.join(", ")}`, fmtNum(Math.round(avg * 100) / 100), wrongs(rng, avg, 2), 1, v);
+      const rounded = Math.round(avg * 100) / 100;
+      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 1, v);
     }
     case "diagramy": {
-      const total = 60 + pickV(v, 0, 200);
+      const total = 100 * (1 + pickV(v, 0, 5));
       const p = 5 + pickV(v, 1, 45);
       return buildMc(rng, slot, `${p}% z ${total} uczniów`, fmtNum((total * p) / 100), wrongs(rng, (total * p) / 100, 10), 2, v);
     }
@@ -238,8 +257,8 @@ export function generateParametricTask(
       return buildMc(rng, slot, `Rozwiąż $x+${b}=${x + b}$`, fmtNum(x), wrongs(rng, x, 3), 1, v);
     }
     case "notacja_wykladnicza": {
-      const a = 1 + pickV(v, 0, 9);
-      const e = 2 + pickV(v, 1, 6);
+      const a = 1 + (v % 9);
+      const e = 2 + (Math.floor(v / 9) % 6);
       const c = a * Math.pow(10, e);
       return buildMc(
         rng,
@@ -267,9 +286,9 @@ export function generateParametricTask(
       );
     }
     case "kolejnosc_dzialan": {
-      const a = 2 + pickV(v, 0, 8);
-      const b = 2 + pickV(v, 1, 8);
-      const c = 2 + pickV(v, 2, 8);
+      const a = 2 + (v % 8);
+      const b = 2 + (Math.floor(v / 8) % 8);
+      const c = 2 + (Math.floor(v / 64) % 8);
       const result = a + b * c;
       return buildMc(
         rng,
@@ -296,8 +315,8 @@ export function generateParametricTask(
       );
     }
     case "rownania_kwadratowe": {
-      const r1 = -6 + pickV(v, 0, 12);
-      const r2 = -6 + pickV(v, 1, 12);
+      const r1 = -6 + (v % 12);
+      const r2 = -6 + (Math.floor(v / 12) % 12);
       // (x-r1)(x-r2)=0 → x^2 - (r1+r2)x + r1*r2
       const sum = r1 + r2;
       const prod = r1 * r2;
@@ -344,8 +363,8 @@ export function generateParametricTask(
       );
     }
     case "odczyt_wykresu": {
-      const y1 = -4 + pickV(v, 0, 8);
-      const y2 = -4 + pickV(v, 1, 8);
+      const y1 = -4 + (v % 8);
+      const y2 = -4 + (Math.floor(v / 8) % 8);
       const prod = y1 * y2;
       return buildMc(
         rng,
@@ -376,9 +395,9 @@ export function generateParametricTask(
       );
     }
     case "ciag_geometryczny": {
-      const a1 = 1 + pickV(v, 0, 6);
-      const q = 2 + pickV(v, 1, 3);
-      const n = 3 + pickV(v, 2, 3);
+      const a1 = 1 + (v % 20);
+      const q = 2 + (Math.floor(v / 20) % 3);
+      const n = 3 + (Math.floor(v / 60) % 3);
       const an = a1 * Math.pow(q, n - 1);
       return buildMc(
         rng,
@@ -392,12 +411,18 @@ export function generateParametricTask(
     }
     case "sin_cos_tg": {
       const angles = [
+        { deg: 0, sin: "0", cos: "1", tg: "0" },
         { deg: 30, sin: "1/2", cos: "√3/2", tg: "1/√3" },
         { deg: 45, sin: "√2/2", cos: "√2/2", tg: "1" },
         { deg: 60, sin: "√3/2", cos: "1/2", tg: "√3" },
+        { deg: 90, sin: "1", cos: "0", tg: "nie istnieje" },
+        { deg: 120, sin: "√3/2", cos: "-1/2", tg: "-√3" },
+        { deg: 135, sin: "√2/2", cos: "-√2/2", tg: "-1" },
+        { deg: 150, sin: "1/2", cos: "-√3/2", tg: "-1/√3" },
+        { deg: 180, sin: "0", cos: "-1", tg: "0" },
       ] as const;
-      const ang = angles[pickV(v, 0, 3)]!;
-      const mode = pickV(v, 1, 3);
+      const ang = angles[Math.floor(v / 3) % angles.length]!;
+      const mode = v % 3;
       if (mode === 0) {
         return buildMc(rng, slot, `$\\sin ${ang.deg}^\\circ$ =`, ang.sin, [ang.cos, "1", "0"], 2, v);
       }
@@ -407,13 +432,13 @@ export function generateParametricTask(
       return buildMc(rng, slot, `$\\mathrm{tg}\\, ${ang.deg}^\\circ$ =`, ang.tg, ["0", "1/2", "2"], 2, v);
     }
     case "zastosowania_trygonometrii": {
-      const a = 3 + pickV(v, 0, 8);
-      const b = 4 + pickV(v, 1, 8);
+      const a = 3 + (v % 8);
+      const b = 4 + (Math.floor(v / 8) % 8);
       const c = Math.round(Math.sqrt(a * a + b * b) * 10) / 10;
       return buildMc(
         rng,
         slot,
-        `Trójkąt prostokątny: przyprostokątne ${a} i ${b}. Przeciwprostokątna:`,
+        `Trójkąt prostokątny: przyprostokątne ${a} i ${b}. Przeciwprostokątna (w przybliżeniu do 1 miejsca po przecinku):`,
         fmtNum(c),
         wrongs(rng, c, 2),
         2,
@@ -427,8 +452,24 @@ export function generateParametricTask(
         [5, 12, 13],
         [6, 8, 10],
         [9, 12, 15],
+        [8, 15, 17],
+        [7, 24, 25],
+        [20, 21, 29],
+        [12, 16, 20],
+        [10, 24, 26],
+        [15, 20, 25],
+        [12, 35, 37],
+        [9, 40, 41],
+        [16, 30, 34],
+        [18, 24, 30],
+        [21, 28, 35],
+        [20, 48, 52],
+        [28, 45, 53],
+        [33, 44, 55],
+        [36, 48, 60],
+        [11, 60, 61],
       ] as const;
-      const t = triples[pickV(v, 0, 4)]!;
+      const t = triples[v % triples.length]!;
       return buildMc(
         rng,
         slot,
@@ -453,14 +494,14 @@ export function generateParametricTask(
       );
     }
     case "okrag_i_kolo": {
-      const r = 2 + pickV(v, 0, 12);
-      if (pickV(v, 1, 2) === 0) {
+      const r = 2 + (Math.floor(v / 2) % 12);
+      if (v % 2 === 0) {
         return buildMc(
           rng,
           slot,
           `Pole koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowite):`,
-          fmtNum(Math.round(Math.PI * r * r)),
-          wrongs(rng, Math.round(Math.PI * r * r), 10),
+          fmtNum(Math.round(3.14 * r * r)),
+          wrongs(rng, Math.round(3.14 * r * r), 10),
           2,
           v,
         );
@@ -469,8 +510,8 @@ export function generateParametricTask(
         rng,
         slot,
         `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity):`,
-        fmtNum(Math.round(2 * Math.PI * r)),
-        wrongs(rng, Math.round(2 * Math.PI * r), 5),
+        fmtNum(Math.round(2 * 3.14 * r)),
+        wrongs(rng, Math.round(2 * 3.14 * r), 5),
         2,
         v,
       );
@@ -491,7 +532,10 @@ export function generateParametricTask(
       );
     }
     case "pierwiastki": {
-      const bases = [4, 9, 16, 25, 36, 49, 64, 81, 100];
+      const bases = [
+        4, 9, 16, 25, 36, 49, 64, 81, 100, 121,
+        144, 169, 196, 225, 256, 289, 324, 361, 400, 441,
+      ];
       const n = bases[pickV(v, 0, bases.length)]!;
       return buildMc(
         rng,
@@ -533,9 +577,9 @@ export function generateParametricTask(
       );
     }
     case "symetrie": {
-      const x = -8 + pickV(v, 0, 16);
-      const y = -8 + pickV(v, 1, 16);
-      if (pickV(v, 2, 2) === 0) {
+      const x = -8 + (v % 16);
+      const y = -8 + (Math.floor(v / 16) % 16);
+      if (v % 2 === 0) {
         return buildMc(
           rng,
           slot,
@@ -588,8 +632,24 @@ export function generateParametricTask(
         { x: -2, y: 5, ans: "II" },
         { x: -3, y: -1, ans: "III" },
         { x: 4, y: -2, ans: "IV" },
+        { x: 6, y: 2, ans: "I" },
+        { x: -4, y: 7, ans: "II" },
+        { x: -6, y: -3, ans: "III" },
+        { x: 8, y: -5, ans: "IV" },
+        { x: 2, y: 9, ans: "I" },
+        { x: -7, y: 4, ans: "II" },
+        { x: -5, y: -8, ans: "III" },
+        { x: 9, y: -1, ans: "IV" },
+        { x: 1, y: 6, ans: "I" },
+        { x: -8, y: 3, ans: "II" },
+        { x: -9, y: -2, ans: "III" },
+        { x: 7, y: -7, ans: "IV" },
+        { x: 5, y: 10, ans: "I" },
+        { x: -10, y: 5, ans: "II" },
+        { x: -2, y: -9, ans: "III" },
+        { x: 10, y: -4, ans: "IV" },
       ] as const;
-      const q = quads[pickV(v, 0, 4)]!;
+      const q = quads[v % quads.length]!;
       return buildMc(
         rng,
         slot,
@@ -601,15 +661,15 @@ export function generateParametricTask(
       );
     }
     case "dlugosc_odcinka": {
-      const x1 = -5 + pickV(v, 0, 10);
-      const y1 = -5 + pickV(v, 1, 10);
-      const x2 = -5 + pickV(v, 2, 10);
-      const y2 = -5 + pickV(v, 3, 10);
+      const x1 = -5 + (v % 10);
+      const y1 = -5 + (Math.floor(v / 10) % 10);
+      const x2 = x1 + 3;
+      const y2 = y1 + 4;
       const d = Math.round(Math.hypot(x2 - x1, y2 - y1) * 10) / 10;
       return buildMc(
         rng,
         slot,
-        `Długość odcinka $(${x1},${y1})$—$(${x2},${y2})$:`,
+        `Długość odcinka $(${x1},${y1})$—$(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku):`,
         fmtNum(d),
         wrongs(rng, d, 3),
         2,
@@ -630,11 +690,11 @@ export function generateParametricTask(
       );
     }
     case "mediana_i_dominanta": {
-      const a = 2 + pickV(v, 0, 6);
-      const b = a + 1 + pickV(v, 1, 4);
-      const c = b + 1 + pickV(v, 2, 4);
-      const d = c + pickV(v, 3, 3);
-      const e = d + pickV(v, 4, 3);
+      const a = 2 + (v % 12);
+      const b = a + 1 + (Math.floor(v / 12) % 4);
+      const c = b + 1 + (Math.floor(v / 48) % 4);
+      const d = c + (v % 3);
+      const e = d + 1 + (Math.floor(v / 3) % 3);
       const nums = [a, b, c, d, e].sort((p, q) => p - q);
       const med = nums[2]!;
       return buildMc(

@@ -6,385 +6,385 @@
   "topicName": "Proporcjonalność prosta",
   "tasks": [
     {
-      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=6$ y=​",
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=6$ y=",
       "correct_answer": "12",
       "options": [
-        "10",
         "12",
-        "13",
-        "11"
+        "11",
+        "10",
+        "13"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
       "id": "651e86c0-fb78-42b2-a9a2-935262f92913",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=5$ y=​​",
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=5$ y=",
       "correct_answer": "45",
       "options": [
-        "45",
         "44",
         "36",
-        "43"
+        "43",
+        "45"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 45",
       "figure_svg": null,
       "figure_caption": null,
       "id": "7800e585-40b7-435c-aacf-851677167947",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=4$ y=​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=4$ y=",
       "correct_answer": "32",
       "options": [
         "31",
-        "24",
         "32",
+        "24",
         "30"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
       "id": "210d3c1d-b8cd-4be0-9227-89b1a68aa63e",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=3$ y=​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=3$ y=",
       "correct_answer": "21",
       "options": [
-        "14",
-        "20",
         "19",
-        "21"
+        "14",
+        "21",
+        "20"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 21",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 21",
       "figure_svg": null,
       "figure_caption": null,
       "id": "665cc61a-82c9-4922-a8bc-1977055e1750",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=2$ y=​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=2$ y=",
       "correct_answer": "12",
       "options": [
-        "10",
+        "11",
         "12",
-        "6",
-        "11"
+        "10",
+        "6"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e6ad852a-1478-49c4-bc62-2d0a51ec1f07",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=1$ y=​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=1$ y=",
       "correct_answer": "5",
       "options": [
+        "0",
         "5",
         "4",
-        "3",
-        "0"
+        "3"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5ff41e5a-464a-4a56-8597-cddb56c5fa38",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=12$ y=​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=12$ y=",
       "correct_answer": "48",
       "options": [
-        "47",
-        "44",
         "48",
-        "46"
+        "47",
+        "46",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1bda4d4e-43f1-4987-98fd-0cd755f18afc",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=11$ y=",
+      "correct_answer": "33",
+      "options": [
+        "31",
+        "30",
+        "32",
+        "33"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1bda4d4e-43f1-4987-98fd-0cd755f18afc",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=11$ y=​​​​​​​​",
-      "correct_answer": "33",
-      "options": [
-        "31",
-        "33",
-        "30",
-        "32"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 33",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 33",
       "figure_svg": null,
       "figure_caption": null,
       "id": "237758bc-a7c1-4389-90b5-9ee80b814b98",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=10$ y=​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=10$ y=",
       "correct_answer": "20",
       "options": [
-        "19",
         "20",
+        "19",
         "18",
         "21"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
       "figure_svg": null,
       "figure_caption": null,
       "id": "bfff15c1-18e8-44e5-bce9-6b778c655b90",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=9$ y=​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=9$ y=",
       "correct_answer": "81",
       "options": [
-        "79",
-        "81",
         "72",
-        "80"
+        "80",
+        "79",
+        "81"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 81",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 81",
       "figure_svg": null,
       "figure_caption": null,
       "id": "caa9fff9-5867-4ee0-b129-acf686ecef71",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=8$ y=​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=8$ y=",
       "correct_answer": "64",
       "options": [
+        "64",
         "62",
-        "63",
         "56",
-        "64"
+        "63"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
       "id": "7293b07e-232e-404a-b665-3e4fde729c55",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=7$ y=​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=7$ y=",
       "correct_answer": "49",
       "options": [
-        "47",
         "48",
+        "42",
         "49",
-        "42"
+        "47"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 49",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8bbf6384-c9db-492d-afd4-56e665eb357e",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=6$ y=",
+      "correct_answer": "36",
+      "options": [
+        "30",
+        "35",
+        "34",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6bd9ce77-3b5e-4a93-925a-8cc3bdb2a129",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=5$ y=",
+      "correct_answer": "25",
+      "options": [
+        "20",
+        "25",
+        "23",
+        "24"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 49",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8bbf6384-c9db-492d-afd4-56e665eb357e",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "y jest wprost proporcjonalne do x, $y=6$ gdy $x=1$. Dla $x=6$ y=​​​​​​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "35",
-        "36",
-        "34",
-        "30"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6bd9ce77-3b5e-4a93-925a-8cc3bdb2a129",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "y jest wprost proporcjonalne do x, $y=5$ gdy $x=1$. Dla $x=5$ y=​​​​​​​​​​​​​​",
-      "correct_answer": "25",
-      "options": [
-        "20",
-        "23",
-        "24",
-        "25"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 25",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c97cec7e-12ed-41e1-9ed9-e3785bdb851d",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=4$ y=​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=4$ gdy $x=1$. Dla $x=4$ y=",
       "correct_answer": "16",
       "options": [
-        "14",
+        "15",
         "12",
         "16",
-        "15"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "de9b2593-6d71-4c9f-9e95-3c7df855c27c",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=3$ y=​​​​​​​​​​​​​​​​",
-      "correct_answer": "9",
-      "options": [
-        "7",
-        "8",
-        "6",
-        "9"
+        "14"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bc417fc9-ed14-4999-a3fc-bfbf2a501b41",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "id": "de9b2593-6d71-4c9f-9e95-3c7df855c27c",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=2$ y=​​​​​​​​​​​​​​​​​",
-      "correct_answer": "4",
-      "options": [
-        "3",
-        "5",
-        "4",
-        "2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b922064d-8284-453f-8a04-dace2ed0bc50",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=1$ y=​​​​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=3$ gdy $x=1$. Dla $x=3$ y=",
       "correct_answer": "9",
       "options": [
         "9",
-        "8",
+        "6",
         "7",
-        "0"
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "5207efba-99ea-4759-b5bc-b124ebf27cb8",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "id": "bc417fc9-ed14-4999-a3fc-bfbf2a501b41",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=12$ y=​​​​​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=2$ gdy $x=1$. Dla $x=2$ y=",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b922064d-8284-453f-8a04-dace2ed0bc50",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=9$ gdy $x=1$. Dla $x=1$ y=",
+      "correct_answer": "9",
+      "options": [
+        "0",
+        "8",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5207efba-99ea-4759-b5bc-b124ebf27cb8",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "y jest wprost proporcjonalne do x, $y=8$ gdy $x=1$. Dla $x=12$ y=",
       "correct_answer": "96",
       "options": [
-        "94",
         "95",
+        "94",
         "88",
         "96"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 96",
       "figure_svg": null,
       "figure_caption": null,
       "id": "47cd0a6e-08ac-4de7-b8c4-19c6a7b4e297",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     },
     {
-      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=11$ y=​​​​​​​​​​​​​​​​​​​​",
+      "content": "y jest wprost proporcjonalne do x, $y=7$ gdy $x=1$. Dla $x=11$ y=",
       "correct_answer": "77",
       "options": [
-        "75",
         "77",
         "76",
-        "70"
+        "70",
+        "75"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 77",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 77",
       "figure_svg": null,
       "figure_caption": null,
       "id": "445446d9-bdea-47fb-a2f4-880ea90b5c2c",
-      "generatedAt": "2026-08-07T16:30:27.572Z",
+      "generatedAt": "2026-09-06T19:54:36.671Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.572Z"
+  "updatedAt": "2026-09-06T19:54:36.672Z"
 }

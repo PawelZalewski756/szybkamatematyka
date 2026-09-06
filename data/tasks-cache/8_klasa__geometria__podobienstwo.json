@@ -6,368 +6,368 @@
   "topicName": "Podobieństwo figur",
   "tasks": [
     {
-      "content": "Trójkąty podobne w skali 2:1. Bok 10 odpowiada:​",
+      "content": "Trójkąty podobne w skali 2:1. Bok 10 odpowiada:",
       "correct_answer": "20",
       "options": [
-        "20",
-        "10",
+        "18",
         "19",
-        "18"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a1fda021-314d-4b57-92fb-6e2a56f8cd32",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 4:1. Bok 3 odpowiada:​​",
-      "correct_answer": "12",
-      "options": [
-        "11",
-        "9",
-        "12",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "979e4628-a23c-489b-8eb9-8890397cccaa",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 3:1. Bok 6 odpowiada:​​​",
-      "correct_answer": "18",
-      "options": [
-        "17",
-        "12",
-        "18",
-        "16"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "1fd952a0-b03e-44ec-8c95-2244f6845a6f",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 2:1. Bok 9 odpowiada:​​​​",
-      "correct_answer": "18",
-      "options": [
-        "9",
-        "17",
-        "18",
-        "16"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 18",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ea92963a-212c-4af7-a777-278cbb26f2cd",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 4:1. Bok 12 odpowiada:​​​​​",
-      "correct_answer": "48",
-      "options": [
-        "47",
-        "36",
-        "46",
-        "48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "dfb5f8b8-2913-4213-8cbf-2c528ee3e9b0",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 3:1. Bok 5 odpowiada:​​​​​​",
-      "correct_answer": "15",
-      "options": [
-        "14",
-        "15",
-        "13",
-        "10"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 15",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "383695bd-be6e-4d3f-940c-f441f580df7d",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 2:1. Bok 8 odpowiada:​​​​​​​",
-      "correct_answer": "16",
-      "options": [
-        "15",
-        "16",
-        "8",
-        "14"
+        "10",
+        "20"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7f61d1a9-b97c-4035-b5b3-6bb6a491948b",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "a1fda021-314d-4b57-92fb-6e2a56f8cd32",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 4:1. Bok 11 odpowiada:​​​​​​​​",
-      "correct_answer": "44",
-      "options": [
-        "43",
-        "44",
-        "42",
-        "33"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 44",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e2d89f44-679b-4e28-98fd-f047275ae753",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 3:1. Bok 4 odpowiada:​​​​​​​​​",
+      "content": "Trójkąty podobne w skali 4:1. Bok 3 odpowiada:",
       "correct_answer": "12",
       "options": [
-        "8",
-        "11",
         "10",
-        "12"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3f3df008-6d62-4675-b20e-57f87bb11e7e",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 2:1. Bok 7 odpowiada:​​​​​​​​​​",
-      "correct_answer": "14",
-      "options": [
-        "13",
         "12",
-        "7",
-        "14"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 14",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "42caaf85-21fa-4b7f-ad1b-88acd7ee3a93",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 4:1. Bok 10 odpowiada:​​​​​​​​​​​",
-      "correct_answer": "40",
-      "options": [
-        "38",
-        "40",
-        "39",
-        "30"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "065768e8-e65e-43b4-bf54-50df0ebbc921",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 3:1. Bok 3 odpowiada:​​​​​​​​​​​​",
-      "correct_answer": "9",
-      "options": [
-        "7",
-        "6",
-        "8",
+        "11",
         "9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 9",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7687bcdb-4ad7-4caf-a07c-072a6e984e9f",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "979e4628-a23c-489b-8eb9-8890397cccaa",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 2:1. Bok 6 odpowiada:​​​​​​​​​​​​​",
-      "correct_answer": "12",
+      "content": "Trójkąty podobne w skali 3:1. Bok 6 odpowiada:",
+      "correct_answer": "18",
       "options": [
-        "6",
         "12",
-        "10",
-        "11"
+        "17",
+        "16",
+        "18"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 12",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 18",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d99a6218-1893-469f-b637-255acecc08e0",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "1fd952a0-b03e-44ec-8c95-2244f6845a6f",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 4:1. Bok 9 odpowiada:​​​​​​​​​​​​​​",
-      "correct_answer": "36",
+      "content": "Trójkąty podobne w skali 2:1. Bok 9 odpowiada:",
+      "correct_answer": "18",
       "options": [
-        "35",
-        "36",
-        "27",
-        "34"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f0d0a68c-a24d-488a-bacf-a3207f7d5928",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Trójkąty podobne w skali 3:1. Bok 12 odpowiada:​​​​​​​​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "36",
-        "24",
-        "35",
-        "34"
+        "16",
+        "18",
+        "17",
+        "9"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 18",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a9a100cf-3982-426f-91f6-a26585729a68",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "ea92963a-212c-4af7-a777-278cbb26f2cd",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 2:1. Bok 5 odpowiada:​​​​​​​​​​​​​​​​",
-      "correct_answer": "10",
+      "content": "Trójkąty podobne w skali 4:1. Bok 12 odpowiada:",
+      "correct_answer": "48",
       "options": [
-        "8",
-        "10",
-        "9",
-        "5"
+        "48",
+        "47",
+        "46",
+        "36"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 10",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "fd40d1ab-595f-4c93-a02b-163df76328b2",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "dfb5f8b8-2913-4213-8cbf-2c528ee3e9b0",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 4:1. Bok 8 odpowiada:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "32",
+      "content": "Trójkąty podobne w skali 3:1. Bok 5 odpowiada:",
+      "correct_answer": "15",
       "options": [
-        "32",
-        "30",
-        "24",
-        "31"
+        "15",
+        "13",
+        "14",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "383695bd-be6e-4d3f-940c-f441f580df7d",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 8 odpowiada:",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "14",
+        "8",
+        "15"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1cd917d6-ef02-4d15-914d-c8e512a469ee",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "7f61d1a9-b97c-4035-b5b3-6bb6a491948b",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 3:1. Bok 11 odpowiada:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "33",
+      "content": "Trójkąty podobne w skali 4:1. Bok 11 odpowiada:",
+      "correct_answer": "44",
       "options": [
-        "22",
-        "32",
-        "31",
-        "33"
+        "33",
+        "42",
+        "43",
+        "44"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 33",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 44",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d48ce67d-5ed6-4396-a26d-33e2300684c5",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "e2d89f44-679b-4e28-98fd-f047275ae753",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 2:1. Bok 4 odpowiada:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "8",
+      "content": "Trójkąty podobne w skali 3:1. Bok 4 odpowiada:",
+      "correct_answer": "12",
       "options": [
+        "10",
+        "8",
+        "12",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3f3df008-6d62-4675-b20e-57f87bb11e7e",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 7 odpowiada:",
+      "correct_answer": "14",
+      "options": [
+        "7",
+        "14",
+        "12",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "42caaf85-21fa-4b7f-ad1b-88acd7ee3a93",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 10 odpowiada:",
+      "correct_answer": "40",
+      "options": [
+        "38",
+        "30",
+        "39",
+        "40"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "065768e8-e65e-43b4-bf54-50df0ebbc921",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 3 odpowiada:",
+      "correct_answer": "9",
+      "options": [
+        "9",
         "6",
-        "4",
         "8",
         "7"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 8",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 9",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d2ad587e-6eb0-484d-9527-ced040fa33e1",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "7687bcdb-4ad7-4caf-a07c-072a6e984e9f",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Trójkąty podobne w skali 4:1. Bok 7 odpowiada:​​​​​​​​​​​​​​​​​​​​",
+      "content": "Trójkąty podobne w skali 2:1. Bok 6 odpowiada:",
+      "correct_answer": "12",
+      "options": [
+        "11",
+        "10",
+        "12",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d99a6218-1893-469f-b637-255acecc08e0",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 9 odpowiada:",
+      "correct_answer": "36",
+      "options": [
+        "36",
+        "34",
+        "27",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0d0a68c-a24d-488a-bacf-a3207f7d5928",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 12 odpowiada:",
+      "correct_answer": "36",
+      "options": [
+        "34",
+        "36",
+        "24",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a9a100cf-3982-426f-91f6-a26585729a68",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 5 odpowiada:",
+      "correct_answer": "10",
+      "options": [
+        "5",
+        "8",
+        "10",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd40d1ab-595f-4c93-a02b-163df76328b2",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 8 odpowiada:",
+      "correct_answer": "32",
+      "options": [
+        "32",
+        "31",
+        "30",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1cd917d6-ef02-4d15-914d-c8e512a469ee",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 3:1. Bok 11 odpowiada:",
+      "correct_answer": "33",
+      "options": [
+        "31",
+        "22",
+        "33",
+        "32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d48ce67d-5ed6-4396-a26d-33e2300684c5",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 2:1. Bok 4 odpowiada:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2ad587e-6eb0-484d-9527-ced040fa33e1",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Trójkąty podobne w skali 4:1. Bok 7 odpowiada:",
       "correct_answer": "28",
       "options": [
         "26",
@@ -377,14 +377,14 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 28",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 28",
       "figure_svg": null,
       "figure_caption": null,
       "id": "643f64cd-d1ba-4cc8-ba18-06b0ab1d355f",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "generatedAt": "2026-09-06T19:54:36.660Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.569Z"
+  "updatedAt": "2026-09-06T19:54:36.660Z"
 }

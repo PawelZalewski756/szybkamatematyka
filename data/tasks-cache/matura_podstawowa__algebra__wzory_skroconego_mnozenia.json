@@ -6,235 +6,26 @@
   "topicName": "Wzory skróconego mnożenia",
   "tasks": [
     {
-      "content": "Oblicz $(2+6)^2$​",
+      "content": "Oblicz $(2+6)^2$",
       "correct_answer": "64",
       "options": [
         "62",
-        "56",
         "63",
+        "56",
         "64"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
       "figure_svg": null,
       "figure_caption": null,
       "id": "9fcd04c4-2c30-4846-b56d-ee7ef3b0a9e9",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $(5+5)^2$​​",
-      "correct_answer": "100",
-      "options": [
-        "100",
-        "99",
-        "92",
-        "98"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e94cf4e6-170d-4257-96ca-e60d339046f7",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(8+4)^2$​​​",
-      "correct_answer": "144",
-      "options": [
-        "143",
-        "136",
-        "144",
-        "142"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 144",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "020aa84f-866f-4411-afb7-3b7509dccd4e",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(11+3)^2$​​​​",
-      "correct_answer": "196",
-      "options": [
-        "195",
-        "196",
-        "188",
-        "194"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 196",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bcac475c-6ecf-4727-acc4-29457dee965a",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(4+2)^2$​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "34",
-        "28",
-        "36",
-        "35"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9caa1ba2-6f56-4b54-b8ff-6a20c169d71e",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(7+1)^2$​​​​​​",
-      "correct_answer": "64",
-      "options": [
-        "62",
-        "56",
-        "63",
-        "64"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b553aee2-11af-442e-afc2-abb4d2445ea2",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(10+8)^2$​​​​​​​",
-      "correct_answer": "324",
-      "options": [
-        "316",
-        "322",
-        "324",
-        "323"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 324",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "05395c56-c7e0-4a46-b084-b0d361130b30",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(3+7)^2$​​​​​​​​",
-      "correct_answer": "100",
-      "options": [
-        "100",
-        "98",
-        "99",
-        "92"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "10939842-c05b-4552-bb53-ee6294bbb7df",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(6+6)^2$​​​​​​​​​",
-      "correct_answer": "144",
-      "options": [
-        "142",
-        "136",
-        "144",
-        "143"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 144",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fb1f483c-2f3a-4f71-a23f-78e9ccf35921",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(9+5)^2$​​​​​​​​​​",
-      "correct_answer": "196",
-      "options": [
-        "194",
-        "188",
-        "195",
-        "196"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 196",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0f34c47a-11eb-4d57-a697-2cecf449a452",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(2+4)^2$​​​​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "34",
-        "36",
-        "35",
-        "28"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f2ed76f1-ee3b-4c13-8dee-a521a9d1d7f9",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(5+3)^2$​​​​​​​​​​​​",
-      "correct_answer": "64",
-      "options": [
-        "56",
-        "62",
-        "64",
-        "63"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ac433e29-421f-4ee3-ab2f-e5f35f05a4f8",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(8+2)^2$​​​​​​​​​​​​​",
+      "content": "Oblicz $(5+5)^2$",
       "correct_answer": "100",
       "options": [
         "92",
@@ -244,35 +35,339 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "ecca0c3f-9409-497d-9a23-08f53345e8c6",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
+      "id": "e94cf4e6-170d-4257-96ca-e60d339046f7",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $(11+1)^2$​​​​​​​​​​​​​​",
+      "content": "Oblicz $(8+4)^2$",
+      "correct_answer": "144",
+      "options": [
+        "136",
+        "143",
+        "142",
+        "144"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 144",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "020aa84f-866f-4411-afb7-3b7509dccd4e",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(11+3)^2$",
+      "correct_answer": "196",
+      "options": [
+        "188",
+        "194",
+        "195",
+        "196"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 196",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bcac475c-6ecf-4727-acc4-29457dee965a",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(4+2)^2$",
+      "correct_answer": "36",
+      "options": [
+        "28",
+        "35",
+        "34",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9caa1ba2-6f56-4b54-b8ff-6a20c169d71e",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(7+1)^2$",
+      "correct_answer": "64",
+      "options": [
+        "62",
+        "64",
+        "56",
+        "63"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b553aee2-11af-442e-afc2-abb4d2445ea2",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(10+8)^2$",
+      "correct_answer": "324",
+      "options": [
+        "324",
+        "322",
+        "323",
+        "316"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 324",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "05395c56-c7e0-4a46-b084-b0d361130b30",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(3+7)^2$",
+      "correct_answer": "100",
+      "options": [
+        "99",
+        "100",
+        "98",
+        "92"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "10939842-c05b-4552-bb53-ee6294bbb7df",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(6+6)^2$",
       "correct_answer": "144",
       "options": [
         "142",
+        "143",
+        "136",
+        "144"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 144",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fb1f483c-2f3a-4f71-a23f-78e9ccf35921",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(9+5)^2$",
+      "correct_answer": "196",
+      "options": [
+        "196",
+        "194",
+        "188",
+        "195"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 196",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0f34c47a-11eb-4d57-a697-2cecf449a452",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(2+4)^2$",
+      "correct_answer": "36",
+      "options": [
+        "34",
+        "35",
+        "36",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2ed76f1-ee3b-4c13-8dee-a521a9d1d7f9",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(5+3)^2$",
+      "correct_answer": "64",
+      "options": [
+        "62",
+        "63",
+        "56",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac433e29-421f-4ee3-ab2f-e5f35f05a4f8",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(8+2)^2$",
+      "correct_answer": "100",
+      "options": [
+        "92",
+        "98",
+        "100",
+        "99"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ecca0c3f-9409-497d-9a23-08f53345e8c6",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(11+1)^2$",
+      "correct_answer": "144",
+      "options": [
         "144",
+        "136",
+        "142",
+        "143"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 144",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e0ab80ef-7b84-4dce-8249-9d99638b11cc",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(4+8)^2$",
+      "correct_answer": "144",
+      "options": [
+        "144",
+        "142",
         "143",
         "136"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 144",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 144",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e0ab80ef-7b84-4dce-8249-9d99638b11cc",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
+      "id": "b085c2a9-b986-46f7-a107-bf59217305be",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Oblicz $(4+8)^2$​​​​​​​​​​​​​​​",
+      "content": "Oblicz $(7+7)^2$",
+      "correct_answer": "196",
+      "options": [
+        "188",
+        "194",
+        "196",
+        "195"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 196",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d11dab8a-6d49-481f-a4b0-9cae9f430db6",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(10+6)^2$",
+      "correct_answer": "256",
+      "options": [
+        "255",
+        "248",
+        "256",
+        "254"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 256",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "68c80581-c94f-4901-95d7-52c5ed80ce8b",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(3+5)^2$",
+      "correct_answer": "64",
+      "options": [
+        "62",
+        "56",
+        "63",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c00d90ff-9c53-4816-bb4e-1a4c13fc8f8c",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(6+4)^2$",
+      "correct_answer": "100",
+      "options": [
+        "100",
+        "99",
+        "98",
+        "92"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e80ddabb-bad0-4cf0-b430-472c19f5ffb6",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Oblicz $(9+3)^2$",
       "correct_answer": "144",
       "options": [
         "136",
@@ -282,109 +377,14 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 144",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b085c2a9-b986-46f7-a107-bf59217305be",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(7+7)^2$​​​​​​​​​​​​​​​​",
-      "correct_answer": "196",
-      "options": [
-        "188",
-        "196",
-        "195",
-        "194"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 196",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d11dab8a-6d49-481f-a4b0-9cae9f430db6",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(10+6)^2$​​​​​​​​​​​​​​​​​",
-      "correct_answer": "256",
-      "options": [
-        "254",
-        "256",
-        "255",
-        "248"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 256",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "68c80581-c94f-4901-95d7-52c5ed80ce8b",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(3+5)^2$​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "64",
-      "options": [
-        "62",
-        "63",
-        "64",
-        "56"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "c00d90ff-9c53-4816-bb4e-1a4c13fc8f8c",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(6+4)^2$​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "100",
-      "options": [
-        "100",
-        "99",
-        "92",
-        "98"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 100",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "e80ddabb-bad0-4cf0-b430-472c19f5ffb6",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Oblicz $(9+3)^2$​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "144",
-      "options": [
-        "142",
-        "143",
-        "144",
-        "136"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 144",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 144",
       "figure_svg": null,
       "figure_caption": null,
       "id": "19b2ba07-f3f4-4b41-ab76-4a18bad11f1b",
-      "generatedAt": "2026-08-07T16:30:27.552Z",
+      "generatedAt": "2026-09-06T19:54:36.606Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.552Z"
+  "updatedAt": "2026-09-06T19:54:36.606Z"
 }

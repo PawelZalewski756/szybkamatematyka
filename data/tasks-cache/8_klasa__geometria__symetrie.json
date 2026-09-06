@@ -6,385 +6,385 @@
   "topicName": "Symetrie",
   "tasks": [
     {
-      "content": "Obraz $(-8,-3)$ w symetrii względem osi $OY$:​",
-      "correct_answer": "(8,-3)",
+      "content": "Obraz $(-8,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(8,-8)",
       "options": [
-        "(8,3)",
+        "(-8,8)",
+        "(8,8)",
+        "(8,-8)",
+        "(-8,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (8,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "abb97e87-2fc7-43da-baab-e1f8fc372621",
+      "generatedAt": "2026-09-06T19:54:36.661Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-7,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-7,8)",
+      "options": [
+        "(7,-8)",
+        "(7,8)",
+        "(-7,8)",
+        "(-8,-7)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-7,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f19cd79-0e08-46ca-a998-e150705c684a",
+      "generatedAt": "2026-09-06T19:54:36.661Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-6,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(6,-8)",
+      "options": [
+        "(6,-8)",
+        "(6,8)",
+        "(-8,-6)",
+        "(-6,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (6,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "64a1d390-a650-4da5-9519-244c8ba7d292",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-5,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-5,8)",
+      "options": [
+        "(5,-8)",
+        "(5,8)",
+        "(-5,8)",
+        "(-8,-5)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-5,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee7014c6-37c8-4c87-bef8-53a86c15fdf1",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-4,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(4,-8)",
+      "options": [
+        "(-4,8)",
+        "(4,8)",
+        "(-8,-4)",
+        "(4,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (4,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d8dcd51-a82b-4949-9e6d-fd20300659eb",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-3,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-3,8)",
+      "options": [
+        "(-3,8)",
+        "(-8,-3)",
+        "(3,-8)",
+        "(3,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-3,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc8e82b3-27c1-43c2-80f5-844d1b158d0a",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-2,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(2,-8)",
+      "options": [
+        "(2,-8)",
+        "(-8,-2)",
+        "(-2,8)",
+        "(2,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (2,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e66b5cf-3ba8-483e-b198-58d0e45afec1",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-1,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-1,8)",
+      "options": [
+        "(-8,-1)",
+        "(-1,8)",
+        "(1,-8)",
+        "(1,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-1,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83fd4cd9-5784-4e83-a3f1-443dcd57bbfd",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(0,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(0,-8)",
+      "options": [
+        "NaN",
+        "(0,-8)",
+        "(-8,0)",
+        "(0,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (0,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d54234c-7752-4d38-99aa-b2a78291f729",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(1,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(1,8)",
+      "options": [
+        "(1,8)",
+        "(-8,1)",
+        "(-1,8)",
+        "(-1,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (1,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4085096a-ed52-4aeb-9a79-984c8ab5e264",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(2,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(-2,-8)",
+      "options": [
+        "(-8,2)",
+        "(2,8)",
+        "(-2,-8)",
+        "(-2,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-2,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b0f28ee8-02bf-494e-b339-4a5d6d40db26",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(3,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(3,8)",
+      "options": [
+        "(-3,8)",
         "(-3,-8)",
-        "(8,-3)",
+        "(3,8)",
         "(-8,3)"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (8,-3)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "abb97e87-2fc7-43da-baab-e1f8fc372621",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(7,-4)$ w symetrii względem osi $OX$:​​",
-      "correct_answer": "(7,4)",
-      "options": [
-        "(-7,4)",
-        "(-4,7)",
-        "(-7,-4)",
-        "(7,4)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (7,4)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9f19cd79-0e08-46ca-a998-e150705c684a",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(6,-5)$ w symetrii względem osi $OY$:​​​",
-      "correct_answer": "(-6,-5)",
-      "options": [
-        "(-6,5)",
-        "(-5,6)",
-        "(-6,-5)",
-        "(6,5)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-6,-5)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "64a1d390-a650-4da5-9519-244c8ba7d292",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(5,-6)$ w symetrii względem osi $OX$:​​​​",
-      "correct_answer": "(5,6)",
-      "options": [
-        "(-5,6)",
-        "(-6,5)",
-        "(-5,-6)",
-        "(5,6)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (5,6)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ee7014c6-37c8-4c87-bef8-53a86c15fdf1",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(4,-7)$ w symetrii względem osi $OY$:​​​​​",
-      "correct_answer": "(-4,-7)",
-      "options": [
-        "(-7,4)",
-        "(-4,-7)",
-        "(-4,7)",
-        "(4,7)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-4,-7)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2d8dcd51-a82b-4949-9e6d-fd20300659eb",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(3,-8)$ w symetrii względem osi $OX$:​​​​​​",
-      "correct_answer": "(3,8)",
-      "options": [
-        "(3,8)",
-        "(-8,3)",
-        "(-3,8)",
-        "(-3,-8)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (3,8)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fc8e82b3-27c1-43c2-80f5-844d1b158d0a",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(2,7)$ w symetrii względem osi $OY$:​​​​​​​",
-      "correct_answer": "(-2,7)",
-      "options": [
-        "(-2,7)",
-        "(7,2)",
-        "(2,-7)",
-        "(-2,-7)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-2,7)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "8e66b5cf-3ba8-483e-b198-58d0e45afec1",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(1,6)$ w symetrii względem osi $OX$:​​​​​​​​",
-      "correct_answer": "(1,-6)",
-      "options": [
-        "(-1,6)",
-        "(-1,-6)",
-        "(6,1)",
-        "(1,-6)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (1,-6)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "83fd4cd9-5784-4e83-a3f1-443dcd57bbfd",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(0,5)$ w symetrii względem osi $OY$:​​​​​​​​​",
-      "correct_answer": "(0,5)",
-      "options": [
-        "NaN",
-        "(5,0)",
-        "(0,5)",
-        "(0,-5)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (0,5)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0d54234c-7752-4d38-99aa-b2a78291f729",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-1,4)$ w symetrii względem osi $OX$:​​​​​​​​​​",
-      "correct_answer": "(-1,-4)",
-      "options": [
-        "(1,4)",
-        "(-1,-4)",
-        "(4,-1)",
-        "(1,-4)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-1,-4)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4085096a-ed52-4aeb-9a79-984c8ab5e264",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-2,3)$ w symetrii względem osi $OY$:​​​​​​​​​​​",
-      "correct_answer": "(2,3)",
-      "options": [
-        "(-2,-3)",
-        "(2,-3)",
-        "(3,-2)",
-        "(2,3)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (2,3)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b0f28ee8-02bf-494e-b339-4a5d6d40db26",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-3,2)$ w symetrii względem osi $OX$:​​​​​​​​​​​​",
-      "correct_answer": "(-3,-2)",
-      "options": [
-        "(3,-2)",
-        "(3,2)",
-        "(-3,-2)",
-        "(2,-3)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-3,-2)",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (3,8)",
       "figure_svg": null,
       "figure_caption": null,
       "id": "575cddcd-9c22-4c1c-90bb-53e392584a5f",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Obraz $(-4,1)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​",
-      "correct_answer": "(4,1)",
+      "content": "Obraz $(4,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(-4,-8)",
       "options": [
-        "(4,1)",
-        "(1,-4)",
-        "(4,-1)",
-        "(-4,-1)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (4,1)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "34b03831-34ee-4aec-9b54-5bab6e40b48e",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-5,0)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​",
-      "correct_answer": "(-5,0)",
-      "options": [
-        "(-5,0)",
-        "(0,-5)",
-        "(5,0)",
-        "NaN"
+        "(-4,-8)",
+        "(-4,8)",
+        "(4,8)",
+        "(-8,4)"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-5,0)",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-4,-8)",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "69f9f994-224f-4ef1-9629-6bafe158fc5a",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "id": "34b03831-34ee-4aec-9b54-5bab6e40b48e",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Obraz $(-6,-1)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​",
-      "correct_answer": "(6,-1)",
+      "content": "Obraz $(5,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(5,8)",
       "options": [
-        "(6,-1)",
-        "(6,1)",
-        "(-1,-6)",
-        "(-6,1)"
+        "(5,8)",
+        "(-8,5)",
+        "(-5,-8)",
+        "(-5,8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (5,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69f9f994-224f-4ef1-9629-6bafe158fc5a",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(6,-8)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(-6,-8)",
+      "options": [
+        "(6,8)",
+        "(-8,6)",
+        "(-6,8)",
+        "(-6,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-6,-8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47d7edfc-b444-4cfd-80d7-e1d42d1b0a8f",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(7,-8)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(7,8)",
+      "options": [
+        "(7,8)",
+        "(-7,8)",
+        "(-8,7)",
+        "(-7,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (7,8)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "881015c5-1796-49e5-be6f-bc00079def02",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-8,-7)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(8,-7)",
+      "options": [
+        "(8,-7)",
+        "(8,7)",
+        "(-8,7)",
+        "(-7,-8)"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (6,-1)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "47d7edfc-b444-4cfd-80d7-e1d42d1b0a8f",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-7,-2)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​",
-      "correct_answer": "(-7,2)",
-      "options": [
-        "(7,2)",
-        "(-2,-7)",
-        "(7,-2)",
-        "(-7,2)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-7,2)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "881015c5-1796-49e5-be6f-bc00079def02",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(-8,-3)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​​​",
-      "correct_answer": "(8,-3)",
-      "options": [
-        "(-8,3)",
-        "(8,-3)",
-        "(8,3)",
-        "(-3,-8)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (8,-3)",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (8,-7)",
       "figure_svg": null,
       "figure_caption": null,
       "id": "86a59e49-9f10-4b02-ba0e-a6b528fc8f42",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "generatedAt": "2026-09-06T19:54:36.662Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Obraz $(7,-4)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "(7,4)",
+      "content": "Obraz $(-7,-7)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-7,7)",
       "options": [
-        "(-7,4)",
-        "(7,4)",
-        "(-7,-4)",
-        "(-4,7)"
+        "(-7,-7)",
+        "(7,7)",
+        "(-7,7)",
+        "(7,-7)"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (7,4)",
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-7,7)",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e14bedac-2e77-46cd-9c42-92de1cf8e015",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "generatedAt": "2026-09-06T19:54:36.663Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Obraz $(6,-5)$ w symetrii względem osi $OY$:​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "(-6,-5)",
+      "content": "Obraz $(-6,-7)$ w symetrii względem osi $OY$:",
+      "correct_answer": "(6,-7)",
       "options": [
-        "(-6,5)",
-        "(-6,-5)",
-        "(-5,6)",
-        "(6,5)"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (-6,-5)",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "86be357b-f54d-481e-9f7b-60ae6d534d79",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Obraz $(5,-6)$ w symetrii względem osi $OX$:​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "(5,6)",
-      "options": [
-        "(-6,5)",
-        "(-5,-6)",
-        "(-5,6)",
-        "(5,6)"
+        "(6,7)",
+        "(-7,-6)",
+        "(6,-7)",
+        "(-6,7)"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** (5,6)",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (6,-7)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "86be357b-f54d-481e-9f7b-60ae6d534d79",
+      "generatedAt": "2026-09-06T19:54:36.663Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obraz $(-5,-7)$ w symetrii względem osi $OX$:",
+      "correct_answer": "(-5,7)",
+      "options": [
+        "(5,7)",
+        "(5,-7)",
+        "(-5,7)",
+        "(-7,-5)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** (-5,7)",
       "figure_svg": null,
       "figure_caption": null,
       "id": "ab7f7558-50a5-4465-8876-affa76fa8892",
-      "generatedAt": "2026-08-07T16:30:27.569Z",
+      "generatedAt": "2026-09-06T19:54:36.663Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.569Z"
+  "updatedAt": "2026-09-06T19:54:36.663Z"
 }

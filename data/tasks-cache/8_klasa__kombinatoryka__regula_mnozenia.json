@@ -6,159 +6,159 @@
   "topicName": "Reguła mnożenia",
   "tasks": [
     {
-      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 4 butów?​",
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 4 butów?",
       "correct_answer": "32",
       "options": [
+        "30",
         "31",
-        "26",
         "32",
-        "30"
+        "26"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 32",
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 32",
       "figure_svg": null,
       "figure_caption": null,
       "id": "59093196-df2f-4961-aea2-4913696af58c",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 3 butów?​​",
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 3 butów?",
       "correct_answer": "30",
       "options": [
         "24",
-        "29",
-        "28",
-        "30"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a19c52f2-8194-42a8-968a-4514b187c32d",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 2 butów?​​​",
-      "correct_answer": "30",
-      "options": [
         "30",
         "28",
-        "24",
         "29"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30",
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "087a9d20-da08-443d-b023-ecacd5ee47fc",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "id": "a19c52f2-8194-42a8-968a-4514b187c32d",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 5 butów?​​​​",
-      "correct_answer": "90",
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 2 butów?",
+      "correct_answer": "30",
       "options": [
-        "89",
-        "88",
-        "90",
-        "84"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 90",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a0c0491f-50b4-47f0-90a0-cdeffe240cae",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 4 butów?​​​​​",
-      "correct_answer": "96",
-      "options": [
-        "95",
-        "96",
-        "94",
-        "90"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 96",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "18e86991-538a-4ca1-ae32-f66c286b3e8b",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 3 butów?​​​​​​",
-      "correct_answer": "24",
-      "options": [
-        "18",
-        "22",
-        "23",
-        "24"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b6d4ba24-7582-4fcf-a525-b15a74245155",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 2 butów?​​​​​​​",
-      "correct_answer": "20",
-      "options": [
-        "14",
-        "19",
-        "18",
-        "20"
+        "29",
+        "24",
+        "30",
+        "28"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "9a1a478b-e339-4754-8c32-15f6932bf187",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "id": "087a9d20-da08-443d-b023-ecacd5ee47fc",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 5 butów?​​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 5 butów?",
+      "correct_answer": "90",
+      "options": [
+        "89",
+        "84",
+        "88",
+        "90"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a0c0491f-50b4-47f0-90a0-cdeffe240cae",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 4 butów?",
+      "correct_answer": "96",
+      "options": [
+        "94",
+        "90",
+        "96",
+        "95"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 96",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "18e86991-538a-4ca1-ae32-f66c286b3e8b",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 3 butów?",
+      "correct_answer": "24",
+      "options": [
+        "23",
+        "18",
+        "22",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b6d4ba24-7582-4fcf-a525-b15a74245155",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 2 butów?",
+      "correct_answer": "20",
+      "options": [
+        "19",
+        "14",
+        "20",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a1a478b-e339-4754-8c32-15f6932bf187",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 5 butów?",
       "correct_answer": "75",
       "options": [
-        "75",
         "73",
+        "75",
         "74",
         "69"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 75",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 75",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d294f2ee-afff-4d38-ab20-90ae251d4225",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 4 butów?​​​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 4 butów?",
       "correct_answer": "72",
       "options": [
         "71",
@@ -168,16 +168,16 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 72",
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 72",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4a32c47f-333d-4a81-80f6-feceed35b7b1",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 3 butów?​​​​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 3 butów?",
       "correct_answer": "72",
       "options": [
         "72",
@@ -187,204 +187,204 @@
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 72",
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 72",
       "figure_svg": null,
       "figure_caption": null,
       "id": "66f21879-1f3f-4807-852c-ce4fda02208a",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 2 butów?​​​​​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 2 butów?",
       "correct_answer": "16",
       "options": [
         "14",
-        "10",
         "15",
+        "10",
         "16"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 16",
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
       "figure_svg": null,
       "figure_caption": null,
       "id": "74e597ff-e02c-444b-a4cd-40af782ec8c4",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 5 butów?​​​​​​​​​​​​",
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 5 butów?",
       "correct_answer": "50",
       "options": [
-        "48",
+        "49",
         "50",
-        "44",
-        "49"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 14,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "cc189f7a-b253-48a6-9249-63e31383bfc9",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 4 butów?​​​​​​​​​​​​​",
-      "correct_answer": "60",
-      "options": [
-        "59",
-        "60",
-        "54",
-        "58"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 60",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4b8a31f8-7ffa-4f02-8010-38dc24dcc6c1",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 3 butów?​​​​​​​​​​​​​​",
-      "correct_answer": "54",
-      "options": [
-        "54",
-        "52",
-        "53",
-        "48"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 54",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "92243cf4-e1ee-44f7-b8a2-1650a7bec338",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 2 butów?​​​​​​​​​​​​​​​",
-      "correct_answer": "48",
-      "options": [
         "48",
-        "47",
-        "42",
-        "46"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "883c9590-c25a-491f-a9d2-d0608cb6a871",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 5 butów?​​​​​​​​​​​​​​​​",
-      "correct_answer": "40",
-      "options": [
-        "34",
-        "40",
-        "39",
-        "38"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3b1b60b4-5475-49f4-acca-3e6b1d05bb15",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 4 butów?​​​​​​​​​​​​​​​​​",
-      "correct_answer": "40",
-      "options": [
-        "39",
-        "34",
-        "40",
-        "38"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 40",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7d9760eb-05bb-4efc-a8cd-82d1c887526d",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 3 butów?​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "45",
-      "options": [
-        "44",
-        "45",
-        "43",
-        "39"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5e66bd4c-f27c-466a-83a4-3467eaf6c161",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 2 butów?​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "36",
-      "options": [
-        "35",
-        "36",
-        "34",
-        "30"
+        "44"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 36",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "c8fd59dc-14f3-4ae3-ab64-23adb6e105db",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "id": "cc189f7a-b253-48a6-9249-63e31383bfc9",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     },
     {
-      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 5 butów?​​​​​​​​​​​​​​​​​​​​",
-      "correct_answer": "120",
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 4 butów?",
+      "correct_answer": "60",
       "options": [
-        "120",
-        "118",
-        "114",
-        "119"
+        "58",
+        "54",
+        "60",
+        "59"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4b8a31f8-7ffa-4f02-8010-38dc24dcc6c1",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 3 butów?",
+      "correct_answer": "54",
+      "options": [
+        "48",
+        "53",
+        "54",
+        "52"
       ],
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 17,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 120",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 54",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92243cf4-e1ee-44f7-b8a2-1650a7bec338",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 2 butów?",
+      "correct_answer": "48",
+      "options": [
+        "47",
+        "42",
+        "46",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "883c9590-c25a-491f-a9d2-d0608cb6a871",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 2 koszulek, 1 z 4 spodni i 1 z 5 butów?",
+      "correct_answer": "40",
+      "options": [
+        "39",
+        "40",
+        "34",
+        "38"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3b1b60b4-5475-49f4-acca-3e6b1d05bb15",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 5 koszulek, 1 z 2 spodni i 1 z 4 butów?",
+      "correct_answer": "40",
+      "options": [
+        "39",
+        "38",
+        "34",
+        "40"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d9760eb-05bb-4efc-a8cd-82d1c887526d",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 3 koszulek, 1 z 5 spodni i 1 z 3 butów?",
+      "correct_answer": "45",
+      "options": [
+        "45",
+        "44",
+        "39",
+        "43"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e66bd4c-f27c-466a-83a4-3467eaf6c161",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 6 koszulek, 1 z 3 spodni i 1 z 2 butów?",
+      "correct_answer": "36",
+      "options": [
+        "35",
+        "30",
+        "34",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c8fd59dc-14f3-4ae3-ab64-23adb6e105db",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Na ile sposobów wybrać 1 z 4 koszulek, 1 z 6 spodni i 1 z 5 butów?",
+      "correct_answer": "120",
+      "options": [
+        "120",
+        "114",
+        "119",
+        "118"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 120",
       "figure_svg": null,
       "figure_caption": null,
       "id": "1b3d6d79-c1c4-4871-a745-991278ad027a",
-      "generatedAt": "2026-08-07T16:30:27.574Z",
+      "generatedAt": "2026-09-06T19:54:36.677Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.574Z"
+  "updatedAt": "2026-09-06T19:54:36.677Z"
 }

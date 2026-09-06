@@ -17,30 +17,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 35°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 35°",
       "figure_svg": null,
       "figure_caption": null,
       "id": "d7d85d96-a317-421b-8beb-4ade5a0db9da",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W trójkącie prostokątnym jeden ostry kąt ma 55°. Drugi ostry kąt ma:",
-      "correct_answer": "35°",
-      "options": [
-        "90°",
-        "35°",
-        "25°",
-        "45°"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 35°",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a5281f6d-3aac-4c85-ae15-bceea390d3a5",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -55,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 48°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 48°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "dfd30077-fc7a-493a-b91f-02c8d724e3bf",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "a5281f6d-3aac-4c85-ae15-bceea390d3a5",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -74,11 +55,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 55°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 55°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "deca7b48-9d8c-485b-b309-e7893c4b0094",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "dfd30077-fc7a-493a-b91f-02c8d724e3bf",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -93,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 45°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 45°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2daa145b-c992-49cb-ada1-9ebaf225fc84",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "deca7b48-9d8c-485b-b309-e7893c4b0094",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -112,11 +93,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 31°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 31°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3e500055-1eed-48ed-b6fa-7701eef7b51a",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "2daa145b-c992-49cb-ada1-9ebaf225fc84",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -131,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 30°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6eaeff62-353d-4a62-9ec0-54e89655c06c",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "3e500055-1eed-48ed-b6fa-7701eef7b51a",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -150,11 +131,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 28°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 28°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "24685f3f-b4fe-4702-91be-98ccf8cce99c",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "6eaeff62-353d-4a62-9ec0-54e89655c06c",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -169,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 27°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 27°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "46c1712f-5da9-4733-b4d8-4e47d28b4f82",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "24685f3f-b4fe-4702-91be-98ccf8cce99c",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -188,11 +169,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 23°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 23°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8a294983-ce47-4050-b80c-c8a1e2b37162",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "46c1712f-5da9-4733-b4d8-4e47d28b4f82",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -207,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 24°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 24°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4bb4d1a9-a685-4ee2-bdc8-ae27c0ed49f0",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "8a294983-ce47-4050-b80c-c8a1e2b37162",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -226,30 +207,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 20°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "d7879970-a083-47b6-a84f-5865690b970c",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W trójkącie prostokątnym jeden ostry kąt ma 70°. Drugi ostry kąt ma:",
-      "correct_answer": "20°",
-      "options": [
-        "20°",
-        "30°",
-        "90°",
-        "10°"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 20°",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7cdbc71e-2ad9-402e-8eaf-4cdb09d94a4a",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "4bb4d1a9-a685-4ee2-bdc8-ae27c0ed49f0",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -264,11 +226,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 49°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 49°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0d4c6377-8c0c-4877-8d22-3e47b4776d0f",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "d7879970-a083-47b6-a84f-5865690b970c",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -283,30 +245,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 56°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 56°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "bc9b058b-e524-4831-9d50-d28802238bc5",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "W trójkącie prostokątnym jeden ostry kąt ma 59°. Drugi ostry kąt ma:",
-      "correct_answer": "31°",
-      "options": [
-        "41°",
-        "21°",
-        "90°",
-        "31°"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 31°",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7ce3a6e8-8ec1-404a-9249-70f4ca24bded",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "7cdbc71e-2ad9-402e-8eaf-4cdb09d94a4a",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -321,11 +264,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 47°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 47°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "a9f0bc48-0e0e-4e30-9aae-5925b06943c9",
-      "generatedAt": "2026-08-07T16:30:27.567Z",
+      "id": "0d4c6377-8c0c-4877-8d22-3e47b4776d0f",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -340,11 +283,11 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 43°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 43°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "cdf66e89-2e60-40c9-a376-19976fcdc5a3",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "bc9b058b-e524-4831-9d50-d28802238bc5",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
@@ -359,32 +302,89 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 54°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 54°",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "3ae34f68-d63d-449c-95d3-e612a8268fdd",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "id": "7ce3a6e8-8ec1-404a-9249-70f4ca24bded",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     },
     {
-      "content": "W trójkącie prostokątnym jeden ostry kąt ma 43°. Drugi ostry kąt ma:",
-      "correct_answer": "47°",
+      "content": "W trójkącie prostokątnym jeden ostry kąt ma 54°. Drugi ostry kąt ma:",
+      "correct_answer": "36°",
       "options": [
-        "47°",
-        "57°",
-        "37°",
+        "90°",
+        "46°",
+        "26°",
+        "36°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 36°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a9f0bc48-0e0e-4e30-9aae-5925b06943c9",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W trójkącie prostokątnym jeden ostry kąt ma 31°. Drugi ostry kąt ma:",
+      "correct_answer": "59°",
+      "options": [
+        "59°",
+        "69°",
+        "49°",
         "90°"
       ],
       "answer_type": "choice",
       "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 59°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cdf66e89-2e60-40c9-a376-19976fcdc5a3",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W trójkącie prostokątnym jeden ostry kąt ma 52°. Drugi ostry kąt ma:",
+      "correct_answer": "38°",
+      "options": [
+        "48°",
+        "90°",
+        "28°",
+        "38°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 38°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ae34f68-d63d-449c-95d3-e612a8268fdd",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "W trójkącie prostokątnym jeden ostry kąt ma 49°. Drugi ostry kąt ma:",
+      "correct_answer": "41°",
+      "options": [
+        "90°",
+        "41°",
+        "51°",
+        "31°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 47°",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 41°",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c00ca1ca-3700-4ee6-b808-5be3ef5e263c",
-      "generatedAt": "2026-08-07T16:30:27.568Z",
+      "generatedAt": "2026-09-06T19:54:36.655Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.568Z"
+  "updatedAt": "2026-09-06T19:54:36.655Z"
 }

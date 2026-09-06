@@ -56,21 +56,32 @@ function parseArgs(): CliOptions {
 function draftToCached(
   draft: ReturnType<typeof generateTaskDraft>,
   model: string,
+  previous?: CachedGeminiTask,
 ): CachedGeminiTask {
+  const approximation = /w przybliżeniu|zaokrągl/i.test(draft.content);
   return {
-    content: draft.content,
+    content: draft.content.replace(/\u200b/g, ""),
     correct_answer: draft.correct_answer,
     options: draft.options,
     answer_type: draft.options.length > 0 ? "choice" : "open",
     difficulty: draft.difficulty,
     xp_reward: draft.xp_reward,
-    explanation: `Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** ${draft.correct_answer}`,
+    explanation: `${approximation ? "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem." : "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia."}\n**Odpowiedź:** ${draft.correct_answer}`,
     figure_svg: null,
     figure_caption: null,
-    id: randomUUID(),
+    id: previous?.id ?? randomUUID(),
     generatedAt: new Date().toISOString(),
     model,
   };
+}
+
+function contentFingerprint(content: string): string {
+  return content
+    .replace(/\u200b/g, "")
+    .normalize("NFKC")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLocaleLowerCase("pl-PL");
 }
 
 function main(): void {
@@ -96,6 +107,12 @@ function main(): void {
       }) ?? [];
     const have = kept.length;
     const need = Math.max(0, perTopic - have);
+    const previousParametric =
+      refreshParametric
+        ? existing?.tasks.filter((t) =>
+            String(t.model || "").startsWith("parametric"),
+          ) ?? []
+        : [];
     if (need === 0 && (!refreshParametric || (existing?.tasks.length ?? 0) === have)) {
       skippedFull += 1;
       continue;
@@ -109,8 +126,24 @@ function main(): void {
     };
 
     const batch: CachedGeminiTask[] = [];
-    for (let i = 0; i < need; i++) {
-      batch.push(draftToCached(generateTaskDraft(seedSlot, have + i), modelTag));
+    const usedFingerprints = new Set(kept.map((task) => contentFingerprint(task.content)));
+    let attempts = 0;
+    const maxAttempts = Math.max(need * 12, 120);
+    while (batch.length < need && attempts < maxAttempts) {
+      const draft = generateTaskDraft(seedSlot, have + attempts);
+      attempts += 1;
+      const fingerprint = contentFingerprint(draft.content);
+      if (usedFingerprints.has(fingerprint)) continue;
+      usedFingerprints.add(fingerprint);
+      batch.push(
+        draftToCached(draft, modelTag, previousParametric[batch.length]),
+      );
+    }
+
+    if (batch.length < need) {
+      console.warn(
+        `  Uwaga: ${slot.topic} ma tylko ${batch.length} unikalnych wariantów z celem ${need}.`,
+      );
     }
 
     const removed =

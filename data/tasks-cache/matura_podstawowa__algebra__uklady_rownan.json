@@ -17,30 +17,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 24,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "75f6de2e-d076-4e10-9a5a-3ffc42d15254",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
-      "correct_answer": "5",
-      "options": [
-        "4",
-        "5",
-        "8",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 5",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "16cf58c0-335d-411c-84da-3a1d2668ab28",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -55,11 +36,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "45f0b447-3338-4ccd-9430-c74b98be4fef",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "16cf58c0-335d-411c-84da-3a1d2668ab28",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -74,11 +55,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 24,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "0d1602f6-a622-4379-b34f-ae1c774993d2",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "45f0b447-3338-4ccd-9430-c74b98be4fef",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -93,11 +74,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "7d231b3a-182f-4551-a166-afc955d935c7",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "0d1602f6-a622-4379-b34f-ae1c774993d2",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -112,30 +93,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "4df5dcf4-f3b0-4720-a50e-4ef9bf3ebfda",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
-      "correct_answer": "1",
-      "options": [
-        "1",
-        "4",
-        "3",
-        "-1"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "627ed0ff-6648-4896-b05d-20c5ee58f677",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "7d231b3a-182f-4551-a166-afc955d935c7",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -150,11 +112,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 21,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "eff7d50f-5632-45e1-ba25-cd23f97b384a",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "4df5dcf4-f3b0-4720-a50e-4ef9bf3ebfda",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -169,30 +131,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "b4432452-1474-4124-857c-2cd9ae2c3f09",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=3\\end{cases}$. Wartość $x$ to:",
-      "correct_answer": "6",
-      "options": [
-        "5",
-        "7",
-        "8",
-        "6"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "07684f83-27b6-4947-aa8a-badf7b994453",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "627ed0ff-6648-4896-b05d-20c5ee58f677",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -207,11 +150,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "9bf90ad5-8ccb-45df-8ed4-3f54e026f333",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "eff7d50f-5632-45e1-ba25-cd23f97b384a",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -226,30 +169,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "28dc9d3b-97f7-4e49-aa7a-9df935e86e91",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=5\\end{cases}$. Wartość $x$ to:",
-      "correct_answer": "6",
-      "options": [
-        "4",
-        "9",
-        "6",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9bcab650-a871-4084-b91c-471eb3a3cc7f",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "b4432452-1474-4124-857c-2cd9ae2c3f09",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -264,11 +188,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8e39e285-f386-4465-a2b0-5428fc1737b3",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "07684f83-27b6-4947-aa8a-badf7b994453",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -283,11 +207,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 3",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "e6ee3ec5-694b-43d2-aa41-70ec6e0bf759",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "9bf90ad5-8ccb-45df-8ed4-3f54e026f333",
+      "generatedAt": "2026-09-06T19:54:36.614Z",
       "model": "parametric-v2"
     },
     {
@@ -302,30 +226,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 19,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 2",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "6f154c9f-d2a8-4636-b154-959acf4b4351",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Układ $\\begin{cases}x+y=3\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
-      "correct_answer": "1",
-      "options": [
-        "-1",
-        "1",
-        "2",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 20,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 1",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "01c28b06-e72b-4612-9a56-fd17a15bdcdb",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "28dc9d3b-97f7-4e49-aa7a-9df935e86e91",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
       "model": "parametric-v2"
     },
     {
@@ -340,11 +245,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 25,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "1fdbc1ef-1d0f-4606-98c9-310ab7a43df4",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "9bcab650-a871-4084-b91c-471eb3a3cc7f",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
       "model": "parametric-v2"
     },
     {
@@ -359,11 +264,11 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 18,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 6",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "2ac2a826-d4aa-4d0d-bb14-228035fb2bee",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "id": "8e39e285-f386-4465-a2b0-5428fc1737b3",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
       "model": "parametric-v2"
     },
     {
@@ -378,13 +283,108 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 24,
-      "explanation": "Krok 1. Przelicz wyrażenie / równanie z treści.\nKrok 2. Porównaj wynik z opcjami.\n**Odpowiedź:** 4",
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6ee3ec5-694b-43d2-aa41-70ec6e0bf759",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=7\\\\ x-y=-1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "5",
+        "3",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f154c9f-d2a8-4636-b154-959acf4b4351",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=6\\\\ x-y=0\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "3",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "01c28b06-e72b-4612-9a56-fd17a15bdcdb",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=10\\\\ x-y=0\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "7",
+        "5",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1fdbc1ef-1d0f-4606-98c9-310ab7a43df4",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=8\\\\ x-y=4\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "6",
+      "options": [
+        "9",
+        "4",
+        "8",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 21,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ac2a826-d4aa-4d0d-bb14-228035fb2bee",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Układ $\\begin{cases}x+y=9\\\\ x-y=1\\end{cases}$. Wartość $x$ to:",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "5",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 23,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
       "id": "b560732f-ecd3-438b-a9d6-5cd5781f82fb",
-      "generatedAt": "2026-08-07T16:30:27.554Z",
+      "generatedAt": "2026-09-06T19:54:36.615Z",
       "model": "parametric-v2"
     }
   ],
-  "updatedAt": "2026-08-07T16:30:27.554Z"
+  "updatedAt": "2026-09-06T19:54:36.615Z"
 }
