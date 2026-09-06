@@ -96,7 +96,12 @@ test.describe("Smoke", () => {
   test("lista treningu pokazuje tematy z lokalnego cache", async ({ page }) => {
     await page.goto("/trening");
     await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
-    await expect(page.getByText(/28 z zadaniami/)).toBeVisible();
+    await expect(
+      page.getByText("Aktywne", { exact: true }).first(),
+    ).toBeVisible();
+    await expect(
+      page.locator("dd").filter({ hasText: /^28$/ }).first(),
+    ).toBeVisible();
   });
 
   test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
