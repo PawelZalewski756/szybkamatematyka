@@ -7,14 +7,22 @@ import { useLearningPath } from "@/components/LearningPathProvider";
 import { getTaskStats, getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
 import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
 import { learningPathLabel } from "@/lib/learning-path";
-import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
+import { isSupabaseConfigured } from "@/lib/supabase";
+import {
+  fetchZadaniaCatalogSafe,
+  type ZadanieWithArkusz,
+} from "@/lib/supabase/baza-zadan";
+import {
+  formatSupabaseErrorForUser,
+  isSchemaMissingError,
+} from "@/lib/supabase/errors";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export type BazaTab = "zadania" | "arkusze" | "trening";
 
 type BazaZadanViewProps = {
-  cmsTasks: ZadanieWithArkusz[];
+  cmsTasks?: ZadanieWithArkusz[];
   schemaMissing?: boolean;
   cmsNote?: string | null;
 };
@@ -43,14 +51,64 @@ function parseTab(value: string | null): BazaTab {
 }
 
 export function BazaZadanView({
-  cmsTasks,
+  cmsTasks: initialCmsTasks = [],
   schemaMissing = false,
-  cmsNote,
+  cmsNote: initialCmsNote = null,
 }: BazaZadanViewProps) {
   const { path } = useLearningPath();
   const router = useRouter();
   const searchParams = useSearchParams();
   const tab = parseTab(searchParams.get("tab"));
+  const [cmsTasks, setCmsTasks] = useState(initialCmsTasks);
+  const [cmsLoading, setCmsLoading] = useState(
+    initialCmsTasks.length === 0 && isSupabaseConfigured(),
+  );
+  const [cmsSchemaMissing, setCmsSchemaMissing] = useState(schemaMissing);
+  const [cmsNote, setCmsNote] = useState(initialCmsNote);
+
+  useEffect(() => {
+    if (
+      tab !== "arkusze" ||
+      !isSupabaseConfigured() ||
+      cmsTasks.length > 0 ||
+      cmsSchemaMissing ||
+      cmsNote
+    ) {
+      return;
+    }
+    let cancelled = false;
+
+    void fetchZadaniaCatalogSafe()
+      .then(({ data, error }) => {
+        if (cancelled) return;
+
+        if (error) {
+          if (isSchemaMissingError(error)) {
+            setCmsSchemaMissing(true);
+          } else {
+            setCmsNote(formatSupabaseErrorForUser(error));
+          }
+          return;
+        }
+
+        setCmsTasks(data);
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        setCmsNote(
+          error instanceof Error
+            ? error.message
+            : "Nie udało się pobrać arkuszy.",
+        );
+      })
+      .finally(() => {
+        if (!cancelled) setCmsLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [cmsNote, cmsSchemaMissing, cmsTasks.length, tab]);
 
   const pathLabel = learningPathLabel(path);
   const taskCount = getTaskStats(path).totalTasks;
@@ -123,11 +181,15 @@ export function BazaZadanView({
       <div className="mt-6" role="tabpanel">
         {tab === "zadania" && <BazaZadanTasksPanel />}
         {tab === "arkusze" && (
-          <BazaZadanArkuszePanel
-            cmsTasks={cmsTasks}
-            schemaMissing={schemaMissing}
-            cmsNote={cmsNote}
-          />
+          cmsLoading ? (
+            <p className="text-sm text-muted">Ładowanie arkuszy…</p>
+          ) : (
+            <BazaZadanArkuszePanel
+              cmsTasks={cmsTasks}
+              schemaMissing={cmsSchemaMissing}
+              cmsNote={cmsNote}
+            />
+          )
         )}
         {tab === "trening" && <BazaZadanTreningPanel />}
       </div>

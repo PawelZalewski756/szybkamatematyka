@@ -15,11 +15,19 @@ import {
   officialCkeSheetKind,
 } from "@/lib/baza-zadan/exams/archive-sheet-meta";
 import type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";
-import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
+import { isSupabaseConfigured } from "@/lib/supabase";
+import {
+  fetchZadaniaCatalogSafe,
+  type ZadanieWithArkusz,
+} from "@/lib/supabase/baza-zadan";
+import {
+  formatSupabaseErrorForUser,
+  isSchemaMissingError,
+} from "@/lib/supabase/errors";
 import { motion } from "framer-motion";
 import { FileText, GraduationCap, School } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type ArkuszeCkeCatalogProps = {
   archiveSheets: ExamArchiveSheetMeta[];
@@ -147,10 +155,63 @@ function CmsYearSection({
 
 export function ArkuszeCkeCatalog({
   archiveSheets,
-  cmsTasks = [],
-  schemaMissing = false,
-  errorNote,
+  cmsTasks: initialCmsTasks = [],
+  schemaMissing: initialSchemaMissing = false,
+  errorNote: initialErrorNote,
 }: ArkuszeCkeCatalogProps) {
+  const [cmsTasks, setCmsTasks] = useState(initialCmsTasks);
+  const [cmsLoading, setCmsLoading] = useState(
+    initialCmsTasks.length === 0 && isSupabaseConfigured(),
+  );
+  const [schemaMissing, setSchemaMissing] = useState(initialSchemaMissing);
+  const [errorNote, setErrorNote] = useState<string | null>(
+    initialErrorNote ?? null,
+  );
+
+  useEffect(() => {
+    if (
+      !isSupabaseConfigured() ||
+      cmsTasks.length > 0 ||
+      schemaMissing ||
+      errorNote
+    ) {
+      return;
+    }
+
+    let cancelled = false;
+
+    void fetchZadaniaCatalogSafe()
+      .then(({ data, error }) => {
+        if (cancelled) return;
+
+        if (error) {
+          if (isSchemaMissingError(error)) {
+            setSchemaMissing(true);
+          } else {
+            setErrorNote(formatSupabaseErrorForUser(error));
+          }
+          return;
+        }
+
+        setCmsTasks(data);
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        setErrorNote(
+          error instanceof Error
+            ? error.message
+            : "Nie udało się pobrać arkuszy.",
+        );
+      })
+      .finally(() => {
+        if (!cancelled) setCmsLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [cmsTasks.length, errorNote, schemaMissing]);
+
   const { otherGroups } = splitCmsTasks(cmsTasks);
   const e8Groups = otherGroups.filter((group) => group.typ === "egzamin-8");
   const extraCmsGroups = otherGroups.filter(
@@ -256,7 +317,14 @@ export function ArkuszeCkeCatalog({
         </div>
       )}
 
-      {!hasArchive && e8Groups.length === 0 && extraCmsGroups.length === 0 && !schemaMissing && (
+      {!hasArchive &&
+        cmsLoading && (
+          <p className="mt-10 text-sm text-muted">
+            Ładowanie dodatkowych arkuszy…
+          </p>
+        )}
+
+      {!hasArchive && e8Groups.length === 0 && extraCmsGroups.length === 0 && !schemaMissing && !cmsLoading && (
         <div className="mt-10 rounded-2xl border border-surface-border bg-surface p-8 text-center">
           <p className="text-lg font-extrabold text-foreground">Brak arkuszy</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-muted">

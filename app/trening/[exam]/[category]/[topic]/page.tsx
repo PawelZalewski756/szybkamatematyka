@@ -5,8 +5,7 @@ import {
 } from "@/lib/trening/cke-curriculum";
 import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
 import { decodeSlug, examTypeFromParam } from "@/lib/trening/slugs";
-import { resolveMaterialByTopic } from "@/lib/trening/resolve-material";
-import { isSupabaseConfigured } from "@/lib/supabase";
+import { resolveSeedMaterial } from "@/lib/trening/resolve-material";
 import type { ExamType, Material } from "@/types/database";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -73,24 +72,8 @@ export default async function TreningTopicPage({ params }: PageProps) {
 
   const backHref = "/trening";
 
-  let initialMaterial: Material | null | undefined;
-  let initialMaterialError: string | null = null;
-
-  if (!isSupabaseConfigured()) {
-    initialMaterial = undefined;
-  } else {
-    try {
-      initialMaterial = await resolveMaterialByTopic(
-        examType,
-        categorySlug,
-        topicSlug,
-      );
-    } catch (err) {
-      console.error("[trening/topic] resolveMaterialByTopic failed:", err);
-      initialMaterial = undefined;
-      initialMaterialError = "Nie udało się załadować materiału.";
-    }
-  }
+  const initialMaterial: Material | null | undefined =
+    resolveSeedMaterial(examType, categorySlug, topicSlug) ?? undefined;
 
   return (
     <TopicPageClient
@@ -100,7 +83,6 @@ export default async function TreningTopicPage({ params }: PageProps) {
       topicLabel={label}
       backHref={backHref}
       initialMaterial={initialMaterial}
-      initialMaterialError={initialMaterialError}
     />
   );
 }

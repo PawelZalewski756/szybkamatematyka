@@ -3,6 +3,7 @@
 import { TaskArena } from "@/components/trening/TaskArena";
 import { TheorySectionView } from "@/components/trening/TheorySectionView";
 import { TheoryTableOfContents } from "@/components/trening/TheoryTableOfContents";
+import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
 import {
   parseTheorySections,
@@ -27,6 +28,10 @@ type TopicPageClientProps = {
   backHref: string;
   initialMaterial?: Material | null;
   initialMaterialError?: string | null;
+};
+
+type LoadMaterialOptions = {
+  background?: boolean;
 };
 
 function TabSwitcher({
@@ -217,42 +222,63 @@ export function TopicPageClient({
     initialMaterialError ?? null,
   );
 
-  const loadMaterial = useCallback(async () => {
-    setMaterialLoading(true);
-    setMaterialError(null);
-    try {
-      const row = await fetchMaterialByTopic(examType, category, topic);
-      if (row) {
-        setMaterial(row);
-        return;
+  const loadMaterial = useCallback(
+    async ({ background = false }: LoadMaterialOptions = {}) => {
+      if (!background) {
+        setMaterialLoading(true);
+        setMaterialError(null);
       }
 
-      const params = new URLSearchParams({
-        examType,
-        category,
-        topic,
-      });
-      const res = await fetch(`/api/trening/material?${params}`);
-      if (res.ok) {
-        const body = (await res.json()) as { material: Material | null };
-        setMaterial(body.material);
-        return;
-      }
+      try {
+        const row = await fetchMaterialByTopic(examType, category, topic);
+        if (row) {
+          setMaterial(row);
+          return;
+        }
 
-      setMaterial(null);
-    } catch {
-      setMaterialError("Nie udało się załadować materiału.");
-      setMaterial(null);
-    } finally {
-      setMaterialLoading(false);
-    }
-  }, [examType, category, topic]);
+        if (background) return;
+
+        const params = new URLSearchParams({
+          examType,
+          category,
+          topic,
+        });
+        const res = await fetch(`/api/trening/material?${params}`);
+        if (res.ok) {
+          const body = (await res.json()) as { material: Material | null };
+          setMaterial(body.material);
+          return;
+        }
+
+        setMaterial(null);
+      } catch (error) {
+        if (background) {
+          console.warn(
+            "[trening/topic] background material refresh failed:",
+            error,
+          );
+          return;
+        }
+        setMaterialError("Nie udało się załadować materiału.");
+        setMaterial(null);
+      } finally {
+        if (!background) setMaterialLoading(false);
+      }
+    },
+    [examType, category, topic],
+  );
 
   useEffect(() => {
-    if (hasInitialMaterial) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    void loadMaterial();
-  }, [hasInitialMaterial, loadMaterial]);
+    if (!hasInitialMaterial) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      void loadMaterial();
+      return;
+    }
+
+    if (initialMaterial?.id.startsWith("seed:") && isSupabaseConfigured()) {
+      void loadMaterial({ background: true });
+    }
+  }, [hasInitialMaterial, initialMaterial?.id, loadMaterial]);
 
   return (
     <div className="page-container flex min-h-0 flex-1 flex-col py-6 sm:py-10">

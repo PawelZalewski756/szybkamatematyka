@@ -31,6 +31,8 @@ export type ZadaniaFilters = {
   typ?: TypEgzaminu | "all";
   rok?: number | "all";
   dzial?: string | "all";
+  arkuszId?: string;
+  summary?: boolean;
 };
 
 export type FetchZadaniaResult = {
@@ -62,6 +64,35 @@ const ZADANIA_SELECT_LEGACY = `
   dzial,
   tresc,
   rozwiazanie,
+  created_at,
+  arkusz:arkusze!inner (
+    id,
+    nazwa,
+    typ,
+    rok
+  )
+`;
+
+const ZADANIA_SELECT_SUMMARY_WITH_MIESIAC = `
+  id,
+  arkusz_id,
+  numer_zadania,
+  dzial,
+  created_at,
+  arkusz:arkusze!inner (
+    id,
+    nazwa,
+    typ,
+    rok,
+    miesiac
+  )
+`;
+
+const ZADANIA_SELECT_SUMMARY_LEGACY = `
+  id,
+  arkusz_id,
+  numer_zadania,
+  dzial,
   created_at,
   arkusz:arkusze!inner (
     id,
@@ -199,16 +230,26 @@ export async function fetchZadaniaSafe(
   }
 
   const pageSize = 1000;
+  const selectWithMiesiac = filters.summary
+    ? ZADANIA_SELECT_SUMMARY_WITH_MIESIAC
+    : ZADANIA_SELECT_WITH_MIESIAC;
+  const selectLegacy = filters.summary
+    ? ZADANIA_SELECT_SUMMARY_LEGACY
+    : ZADANIA_SELECT_LEGACY;
 
   const runQuery = async (select: string, from: number, to: number) => {
     let query = supabase
       .from("zadania")
       .select(select)
       .order("numer_zadania", { ascending: true })
-      .range(from, to);
+      .range(from, to)
+      .retry(false);
 
     if (filters.dzial && filters.dzial !== "all") {
       query = query.eq("dzial", filters.dzial);
+    }
+    if (filters.arkuszId) {
+      query = query.eq("arkusz_id", filters.arkuszId);
     }
 
     return query;
@@ -241,7 +282,7 @@ export async function fetchZadaniaSafe(
   };
 
   try {
-    let result = await fetchAllPages(ZADANIA_SELECT_WITH_MIESIAC);
+    let result = await fetchAllPages(selectWithMiesiac);
 
     if (
       result.errorMessage &&
@@ -249,7 +290,7 @@ export async function fetchZadaniaSafe(
         result.errorMessage.includes("column") ||
         result.errorCode === "42703")
     ) {
-      result = await fetchAllPages(ZADANIA_SELECT_LEGACY);
+      result = await fetchAllPages(selectLegacy);
     }
 
     if (result.errorMessage) {
@@ -269,6 +310,19 @@ export async function fetchZadaniaSafe(
           : "Nie udało się połączyć z bazą danych.",
     };
   }
+}
+
+let catalogRequest: Promise<FetchZadaniaResult> | null = null;
+
+/** Współdzielone, lekkie pobranie katalogu arkuszy dla ekranów klienckich. */
+export function fetchZadaniaCatalogSafe(): Promise<FetchZadaniaResult> {
+  if (catalogRequest) return catalogRequest;
+
+  catalogRequest = fetchZadaniaSafe({ summary: true });
+  catalogRequest.catch(() => {
+    catalogRequest = null;
+  });
+  return catalogRequest;
 }
 
 export async function fetchZadania(

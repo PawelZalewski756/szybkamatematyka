@@ -15,10 +15,17 @@ import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
-import { fetchTasksForTree } from "@/lib/supabase/tasks";
-import { fetchMaterialSummariesForExam } from "@/lib/supabase/materials";
+import {
+  fetchTasksForTree,
+  type TaskTreeRow,
+} from "@/lib/supabase/tasks";
+import {
+  fetchMaterialSummariesForExam,
+  type MaterialTopicSummary,
+} from "@/lib/supabase/materials";
 import { mergeTheorySummaries } from "@/lib/trening/seed/theory-index";
 import type { TheoryTier } from "@/lib/trening/theory-content";
+import type { ExamType } from "@/types/database";
 import Link from "next/link";
 import {
   CheckCircle2,
@@ -27,10 +34,57 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const PATH_BANNER_KEY = "sm_trening_path_banner_v1";
 const ONBOARDING_XP_MAX = 100;
+
+const taskTreeCache = new Map<ExamType, Promise<TaskTreeRow[]>>();
+const materialSummaryCache = new Map<ExamType, Promise<MaterialTopicSummary[]>>();
+const solvedTaskCache = new Map<string, Promise<Set<string>>>();
+
+function cachedTaskTree(examType: ExamType): Promise<TaskTreeRow[]> {
+  const existing = taskTreeCache.get(examType);
+  if (existing) return existing;
+
+  const request = fetchTasksForTree(examType);
+  taskTreeCache.set(examType, request);
+  request.catch((error) => {
+    if (taskTreeCache.get(examType) === request) taskTreeCache.delete(examType);
+    console.warn("[szybka-matma] fetchTasksForTree:", error);
+  });
+  return request;
+}
+
+function cachedMaterialSummaries(
+  examType: ExamType,
+): Promise<MaterialTopicSummary[]> {
+  const existing = materialSummaryCache.get(examType);
+  if (existing) return existing;
+
+  const request = fetchMaterialSummariesForExam(examType);
+  materialSummaryCache.set(examType, request);
+  request.catch((error) => {
+    if (materialSummaryCache.get(examType) === request) {
+      materialSummaryCache.delete(examType);
+    }
+    console.warn("[szybka-matma] fetchMaterialSummariesForExam:", error);
+  });
+  return request;
+}
+
+function cachedSolvedTaskIds(userId: string): Promise<Set<string>> {
+  const existing = solvedTaskCache.get(userId);
+  if (existing) return existing;
+
+  const request = fetchSolvedTaskIds(userId);
+  solvedTaskCache.set(userId, request);
+  request.catch((error) => {
+    if (solvedTaskCache.get(userId) === request) solvedTaskCache.delete(userId);
+    console.warn("[szybka-matma] fetchSolvedTaskIds:", error);
+  });
+  return request;
+}
 
 function normalizeSearchText(value: string): string {
   return value
@@ -322,44 +376,71 @@ export default function TreningPage() {
   const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
     new Map(),
   );
+  const loadRequestRef = useRef(0);
 
   const loadProgress = useCallback(async (examKey: SelectedExam) => {
+    const requestId = ++loadRequestRef.current;
+    const examType = examTypeForKey(examKey);
     setLoading(true);
+    setTheoryByTopic(
+      new Map(
+        mergeTheorySummaries(examType, []).map((summary) => [
+          `${summary.category}:${summary.topic}`,
+          summary.tier,
+        ]),
+      ),
+    );
+
     try {
-      const examType = examTypeForKey(examKey);
-      const [tasks, materialSummaries] = await Promise.all([
-        fetchTasksForTree(examType),
-        fetchMaterialSummariesForExam(examType).catch(() => []),
-      ]);
-      let solvedIds = new Set<string>();
+      const tasks = await cachedTaskTree(examType);
+      if (requestId !== loadRequestRef.current) return;
 
-      const { getSupabase } = await import("@/lib/supabase");
-      const supabase = getSupabase();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const taskCounts = countsFromTasks(tasks, examType);
+      setExam(mergeExamProgress(examKey, taskCounts, new Map()));
+      setLoading(false);
 
-      if (user) {
-        solvedIds = await fetchSolvedTaskIds(user.id);
-      }
+      void cachedMaterialSummaries(examType)
+        .then((materialSummaries) => {
+          if (requestId !== loadRequestRef.current) return;
 
-      setExam(
-        mergeExamProgress(
-          examKey,
-          countsFromTasks(tasks, examType),
-          solvedCountsFromTasks(tasks, solvedIds, examType),
-        ),
-      );
+          const theoryMap = new Map<string, TheoryTier>();
+          for (const summary of mergeTheorySummaries(
+            examType,
+            materialSummaries,
+          )) {
+            theoryMap.set(`${summary.category}:${summary.topic}`, summary.tier);
+          }
+          setTheoryByTopic(theoryMap);
+        })
+        .catch(() => {
+          // Seed theory remains available when the optional CMS request fails.
+        });
 
-      const theoryMap = new Map<string, TheoryTier>();
-      for (const summary of mergeTheorySummaries(examType, materialSummaries)) {
-        theoryMap.set(`${summary.category}:${summary.topic}`, summary.tier);
-      }
-      setTheoryByTopic(theoryMap);
+      void (async () => {
+        try {
+          const { getSupabase } = await import("@/lib/supabase");
+          const {
+            data: { session },
+          } = await getSupabase().auth.getSession();
+          if (!session?.user) return;
+
+          const solvedIds = await cachedSolvedTaskIds(session.user.id);
+          if (requestId !== loadRequestRef.current) return;
+
+          setExam(
+            mergeExamProgress(
+              examKey,
+              taskCounts,
+              solvedCountsFromTasks(tasks, solvedIds, examType),
+            ),
+          );
+        } catch (error) {
+          console.warn("[szybka-matma] hydrate training progress:", error);
+        }
+      })();
     } catch {
+      if (requestId !== loadRequestRef.current) return;
       setExam(emptyExamFor(examKey));
-      setTheoryByTopic(new Map());
-    } finally {
       setLoading(false);
     }
   }, []);
@@ -386,13 +467,13 @@ export default function TreningPage() {
 
     void (async () => {
       const { getSupabase } = await import("@/lib/supabase");
-      const supabase = getSupabase();
       const {
-        data: { user },
-      } = await supabase.auth.getUser();
+        data: { session },
+      } = await getSupabase().auth.getSession();
+      const user = session?.user;
       if (!user || cancelled) return;
 
-      const solvedIds = await fetchSolvedTaskIds(user.id);
+      const solvedIds = await cachedSolvedTaskIds(user.id);
       if (solvedIds.size > 0 || cancelled) return;
 
       const profile = await fetchProfileAllowEmpty(user.id);

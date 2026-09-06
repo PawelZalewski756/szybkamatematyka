@@ -1,6 +1,5 @@
 import { ArkuszCkeDetail } from "@/components/arkusze/ArkuszCkeDetail";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
-import { formatArkuszLabel } from "@/lib/baza-zadan/arkusz-format";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchZadaniaSafe } from "@/lib/supabase/baza-zadan";
 import type { Metadata } from "next";
@@ -10,27 +9,10 @@ type PageProps = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  if (!isSupabaseConfigured()) {
-    return { title: "Arkusz CKE" };
-  }
-
-  const { data } = await fetchZadaniaSafe();
-  const tasks = data.filter((z) => z.arkusz_id === id);
-  const sample = tasks[0];
-
-  if (!sample) {
-    return { title: "Arkusz CKE" };
-  }
-
-  const label = formatArkuszLabel(sample.arkusz);
-  return {
-    title: label,
-    description: `Zadania i rozwiązania: ${label} (${tasks.length} zadań).`,
-    alternates: { canonical: `/arkusze/${id}` },
-  };
-}
+export const metadata: Metadata = {
+  title: "Arkusz CKE — Szybka Matematyka",
+  description: "Zadania i rozwiązania arkusza CKE krok po kroku.",
+};
 
 export default async function ArkuszCkePage({ params }: PageProps) {
   const { id } = await params;
@@ -39,14 +21,12 @@ export default async function ArkuszCkePage({ params }: PageProps) {
     notFound();
   }
 
-  const { data, error } = await fetchZadaniaSafe();
+  const { data, error } = await fetchZadaniaSafe({ arkuszId: id });
   if (error) {
     notFound();
   }
 
-  const tasks = data
-    .filter((z) => z.arkusz_id === id)
-    .sort((a, b) => a.numer_zadania - b.numer_zadania);
+  const tasks = data.sort((a, b) => a.numer_zadania - b.numer_zadania);
 
   if (tasks.length === 0) {
     notFound();

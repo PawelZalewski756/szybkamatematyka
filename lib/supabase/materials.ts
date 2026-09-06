@@ -61,7 +61,8 @@ export async function fetchMaterialByTopic(
       .eq("category", cat)
       .eq("topic", top)
       .order("id", { ascending: false })
-      .limit(1);
+      .limit(1)
+      .retry(false);
 
     if (error) throw error;
     const row = data?.[0];
@@ -103,7 +104,8 @@ export async function fetchMaterialSummariesForExam(
       .from("materials")
       .select("exam_type, category, topic, content")
       .in("exam_type", examTypes)
-      .range(from, to),
+      .range(from, to)
+      .retry(false),
   );
 
   if (error) throw error;

@@ -44,7 +44,8 @@ export async function fetchSolvedTaskIds(userId: string): Promise<Set<string>> {
   const { data, error } = await supabase
     .from("solved_tasks")
     .select("task_id")
-    .eq("user_id", userId);
+    .eq("user_id", userId)
+    .retry(false);
 
   if (error) {
     if (isSolvedTasksUnavailable(error as PostgrestError)) {

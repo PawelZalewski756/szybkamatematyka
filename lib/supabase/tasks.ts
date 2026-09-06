@@ -58,7 +58,8 @@ export async function fetchTasksByTopic(
         .eq("exam_type", et)
         .eq("category", slug.category)
         .eq("topic", slug.topic)
-        .order("difficulty", { ascending: true });
+        .order("difficulty", { ascending: true })
+        .retry(false);
 
       if (error) throw error;
       const rows = (data as TaskRow[]) ?? [];
@@ -96,7 +97,8 @@ export async function fetchTasksForTree(
       .from("tasks")
       .select("id, category, topic")
       .in("exam_type", examTypes)
-      .range(from, to),
+      .range(from, to)
+      .retry(false),
   );
 
   if (error) throw error;

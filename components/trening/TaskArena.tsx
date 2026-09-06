@@ -117,24 +117,30 @@ export function TaskArena({
     setActionError(null);
 
     try {
-      const rows = await fetchTasksByTopic(examType, category, topic);
+      const [rows, sessionResult] = await Promise.all([
+        fetchTasksByTopic(examType, category, topic),
+        import("@/lib/supabase").then(({ getSupabase }) =>
+          getSupabase().auth.getSession(),
+        ),
+      ]);
 
       let solvedIds = new Set<string>();
-      const { getSupabase } = await import("@/lib/supabase");
-      const supabase = getSupabase();
       const {
-        data: { user },
-      } = await supabase.auth.getUser();
+        data: { session },
+      } = sessionResult;
+      const user = session?.user;
 
       if (user) {
         setUserId(user.id);
-        solvedIds = await fetchSolvedTaskIds(user.id);
-        try {
-          const p = await ensureUserProfile(user);
-          if (p.nick) setProfile(p);
-        } catch (err) {
-          console.error("[szybka-matma] TaskArena profile:", err);
-        }
+        const [loadedSolvedIds, loadedProfile] = await Promise.all([
+          fetchSolvedTaskIds(user.id),
+          ensureUserProfile(user).catch((err) => {
+            console.error("[szybka-matma] TaskArena profile:", err);
+            return null;
+          }),
+        ]);
+        solvedIds = loadedSolvedIds;
+        if (loadedProfile?.nick) setProfile(loadedProfile);
       } else {
         setUserId(null);
         setProfile(null);
