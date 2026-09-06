@@ -28,4 +28,16 @@ describe("SEED_MATERIALS coverage", () => {
       ).toBe(true);
     }
   });
+
+  it("does not expose generation or correction commentary in lessons", () => {
+    const metaCommentary =
+      /Problem polega na tym|Korekta zadania|Dla celów treningowych|załóżmy, że zadanie jest poprawne/i;
+
+    for (const material of SEED_MATERIALS) {
+      expect(
+        material.content,
+        `${material.exam_type}/${material.category}/${material.topic}`,
+      ).not.toMatch(metaCommentary);
+    }
+  });
 });

@@ -1929,54 +1929,22 @@ Na osi liczbowej: kółko niezamalowane nad $\\frac{1}{2}$, strzałka w lewo.
 \`\`\`
 
 ## Przykład 3 — egzaminacyjny
-Dane są nierówności: $5x - 1 \\leq 2x + 5$ oraz $3x + 4 > x - 2$.
-Która z poniższych liczb jest rozwiązaniem obu nierówności?
-A. -1
-B. 0
-C. 1
-D. 3
+Rozwiąż nierówność $2x + 3 < 11$. Wskaż poprawny przedział rozwiązań:
+A. $(-\\infty, 4)$
+B. $(-\\infty, 7)$
+C. $(4, \\infty)$
+D. $[4, \\infty)$
 
-**Krok 1.** Rozwiąż pierwszą nierówność: $5x - 1 \\leq 2x + 5$.
-$5x - 2x \\leq 5 + 1$
-$3x \\leq 6$
-$x \\leq 2$
+**Krok 1.** Odejmij 3 od obu stron:
+$2x < 8$.
 
-**Krok 2.** Rozwiąż drugą nierówność: $3x + 4 > x - 2$.
-$3x - x > -2 - 4$
-$2x > -6$
-$x > -3$
+**Krok 2.** Podziel obie strony przez dodatnią liczbę 2. Znak nierówności pozostaje bez zmian:
+$x < 4$.
 
-**Krok 3.** Znajdź część wspólną rozwiązań obu nierówności.
-Szukamy liczb $x$, które spełniają warunki: $x \\leq 2$ ORAZ $x > -3$.
-W postaci przedziału: $x \\in (-3, 2]$.
+**Krok 3.** Zapisz rozwiązanie w postaci przedziału:
+$x \\in (-\\infty, 4)$.
 
-**Krok 4.** Sprawdź, która z podanych liczb należy do przedziału $(-3, 2]$.
-A. -1: $-3 < -1 \\leq 2$ (Prawda)
-B. 0: $-3 < 0 \\leq 2$ (Prawda)
-C. 1: $-3 < 1 \\leq 2$ (Prawda)
-D. 3: $-3 < 3 \\leq 2$ (Fałsz, bo $3$ nie jest mniejsze ani równe $2$)
-
-Problem polega na tym, że w typowym zadaniu CKE jest tylko jedna poprawna odpowiedź. Z treści polecenia wynika, że mamy wybrać jedną liczbę, która jest rozwiązaniem obu nierówności. Przeanalizujmy to ponownie.
-Okazuje się, że powyższe zadanie jest źle skonstruowane, jeśli ma być w formie jednokrotnego wyboru. Zazwyczaj w takich przypadkach pojawia się pytanie "Która liczba NIE jest rozwiązaniem obu nierówności?" lub podane są tylko dwie liczby spełniające warunki. Przyjmijmy, że pytanie brzmi "Która z poniższych liczb jest rozwiązaniem obu nierówności?" i zakładamy, że jedna z podanych jest poprawna.
-
-W tym przypadku, jeśli mamy wybrać jedną liczbę, może chodzić o to, że tylko jedna z opcji jest *jedynym* możliwym wyborem w pewnym kontekście, lub po prostu jedno z pytań może mieć błąd.
-Jeśli sprawdzamy kolejno:
-A. -1: spełnia obie nierówności.
-B. 0: spełnia obie nierówności.
-C. 1: spełnia obie nierówności.
-D. 3: nie spełnia pierwszej nierówności.
-
-W standardowym teście wielokrotnego wyboru, taka sytuacja wskazuje na błąd w zadaniu lub w opcjach. Jednak często zdarza się, że należy wybrać jedną z *prawidłowych* opcji.
-Jeśli mielibyśmy wybierać jedną najlepszą odpowiedź, zadanie wymagałoby dodatkowych kryteriów. Bez nich, A, B i C są poprawnymi odpowiedziami. Dla celów treningowych, załóżmy, że zadanie jest poprawne i jedna opcja jest jedyna słuszna. Przyjrzyjmy się jeszcze raz.
-
-**Korekta zadania (aby miało sens):**
-Załóżmy, że zadanie ma na celu wybór JEDNEJ poprawnej odpowiedzi i np. opcje są: A. -4, B. -2, C. 3, D. 5.
-Rozwiązanie: $x \\in (-3, 2]$.
-A. -4: $-4 \\notin (-3, 2]$ (nie)
-B. -2: $-3 < -2 \\leq 2$ (tak)
-C. 3: $3 \\notin (-3, 2]$ (nie)
-D. 5: $5 \\notin (-3, 2]$ (nie)
-W tym zmodyfikowanym przypadku, poprawną odpowiedzią byłoby B.
+Poprawna odpowiedź to **A**. Pozostałe przedziały mają inną granicę albo wskazują liczby większe od 4.
 
 ## Pułapki
 *   **Zmiana znaku nierówności:** Najczęstszy błąd to zapominanie o zmianie znaku nierówności przy mnożeniu lub dzieleniu obu stron przez liczbę ujemną. Zawsze zwracaj na to uwagę.
@@ -3471,14 +3439,7 @@ Na egzaminie należałoby wybrać opcję zawierającą zdania I i II.
 4.  Na przedziale $\\langle -1, 2 \\rangle$:
     *   Wartość największa: $2$ (osiągnięta dla $x = -1$ i $x = 2$).
     *   Wartość najmniejsza: $-2$ (osiągnięta dla $x = 2$).
-5.  Prawdziwe są zdania I i III.
-    *   I. $f(0) = 1$. Punkt $(0, 1)$ leży na wykresie. Prawda.
-    *   II. Funkcja jest rosnąca w przedziale $\\langle -4, -1 \\rangle$. Od $x = -4$ do $x = -1$ wykres "idzie w górę", więc jest rosnąca. Prawda.
-    *   III. Największa wartość funkcji na przedziale $\\langle 0, 2 \\rangle$ wynosi $2$. Na tym przedziale najwyższy punkt to $(2, 2)$. Prawda.
-
-    *(Uwaga do zadania 5: W zadaniu musiałem wybrać, które zdania są prawdziwe. Wygląda na to, że wszystkie trzy są prawdziwe dla podanego fragmentu wykresu. Często w takich zadaniach jedno zdanie jest fałszywe. Przyjmując, że podana jest pełna informacja, wszystkie są prawdziwe.)*
-    *Re-analiza zadania 5 dla typowych pytań CKE:* Często zdanie II mogłoby brzmieć "funkcja jest *wyłącznie* rosnąca w przedziale $\\langle -4, -1 \\rangle$". Lub w zadaniu jest błąd w rysunku/opisie. Przyjmijmy, że mamy wybrać spośród opcji typu "tylko I", "I i II", "II i III" itd. Zakładając, że zadanie ma być typowe, a wykres jest poprawny: zdanie II jest prawdziwe. Zdań III: na przedziale $\\langle 0, 2 \\rangle$ wartości to od $f(0)=1$ do $f(1) \\approx -0.5$ i znowu do $f(2)=2$. Najwyższa wartość to 2. Zatem zdanie III jest prawdziwe. **Poprawka:** w zadaniu 5, na przedziale $\\langle 0, 2 \\rangle$, funkcja najpierw maleje od $y=1$ do $y \\approx -0.5$ (przy $x \\approx 1$), a potem rośnie do $y=2$ (przy $x=2$). Więc zdanie III jest prawdziwe, największa wartość to $2$. Zdanie II jest również prawdziwe. Zdanie I jest prawdziwe. Jeśli byłyby opcje wyboru, należałoby wybrać te zawierające prawdziwe zdania.
-
+5.  Prawdziwe są zdania I, II i III. Z wykresu odczytujemy $f(0)=1$, funkcja rośnie na przedziale $\\langle -4, -1 \\rangle$, a największa wartość na przedziale $\\langle 0, 2 \\rangle$ wynosi $2$.
 6.  I. Funkcja $f$ ma dokładnie jedno miejsce zerowe $x=-3$. Wykres przecina oś $Ox$ w punkcie $x=-3$. Jest to miejsce zerowe. Czy jest jedyne? Na podstawie fragmentu wykresu trudno powiedzieć, ale zakładając, że to jest jedyne przecięcie z osią $Ox$ na tym fragmencie, to zdanie może być prawdziwe, jeśli dalej wykres nie przecina osi $Ox$.
     II. $f(-1) = -1$. Punkt $(-1, -1)$ leży na wykresie. Prawda.
     III. Funkcja jest malejąca w przedziale $\\langle -3, 0 \\rangle$. Od $x=-3$ do $x=0$, wykres "idzie w dół" (od $y=0$ do $y=-1$). Prawda.
@@ -3704,7 +3665,7 @@ Wynik się zgadza.
 3.  Oblicz sumę pierwszych 15 wyrazów ciągu arytmetycznego, w którym $a_1 = 1$ i $r = 0.5$.
 4.  W ciągu arytmetycznym wiadomo, że $a_4 = 11$ i $a_9 = 26$. Wyznacz wzór ogólny na $n$-ty wyraz tego ciągu ($a_n$).
 5.  Suma $n$ początkowych wyrazów pewnego ciągu arytmetycznego jest dana wzorem $S_n = n^2 + 2n$. Wyznacz wzór na $n$-ty wyraz tego ciągu ($a_n$) i oblicz jego różnicę $r$.
-6.  Ciąg $(a_n)$ jest ciągiem arytmetycznym. Wiadomo, że $a_5 + a_7 = 30$. Oblicz sumę pierwszych dziewięciu wyrazów tego ciągu ($S_9$).
+6.  Ciąg $(a_n)$ jest ciągiem arytmetycznym. Wiadomo, że $a_4 + a_6 = 30$. Oblicz sumę pierwszych dziewięciu wyrazów tego ciągu ($S_9$).
 7.  Trzy liczby: $x-1$, $x+2$, $2x+5$ są kolejnymi wyrazami ciągu arytmetycznego. Oblicz wartość $x$ i podaj te trzy liczby.
 
 ## Odpowiedzi
@@ -3713,42 +3674,10 @@ Wynik się zgadza.
 3.  $a_{15} = 1 + (15-1) \\cdot 0.5 = 1 + 14 \\cdot 0.5 = 1 + 7 = 8$. $S_{15} = \\frac{1+8}{2} \\cdot 15 = \\frac{9}{2} \\cdot 15 = \\frac{135}{2} = 67.5$.
 4.  $r = \\frac{a_9 - a_4}{9-4} = \\frac{26-11}{5} = \\frac{15}{5} = 3$. $a_1 = a_4 - (4-1)r = 11 - 3 \\cdot 3 = 11 - 9 = 2$. Wzór: $a_n = 2 + (n-1)3 = 2 + 3n - 3 = 3n - 1$.
 5.  $a_1 = S_1 = 1^2 + 2 \\cdot 1 = 3$. $S_2 = 2^2 + 2 \\cdot 2 = 4 + 4 = 8$. $a_2 = S_2 - S_1 = 8 - 3 = 5$. $r = a_2 - a_1 = 5 - 3 = 2$. Wzór na $a_n$: $a_n = a_1 + (n-1)r = 3 + (n-1)2 = 3 + 2n - 2 = 2n + 1$. (Można też zauważyć, że $a_n = S_n - S_{n-1} = (n^2+2n) - ((n-1)^2 + 2(n-1)) = n^2+2n - (n^2-2n+1 + 2n-2) = n^2+2n - (n^2-1) = 2n+1$). Różnica $r=2$.
-6.  Własność ciągu arytmetycznego: $a_n = \\frac{a_{n-1} + a_{n+1}}{2}$. Stąd $a_6 = \\frac{a_5+a_7}{2}$. Skoro $a_5+a_7=30$, to $a_6 = \\frac{30}{2} = 15$. W ciągu arytmetycznym suma $S_n = n \\cdot a_{środkowy}$, gdzie $a_{środkowy}$ to wyraz środkowy. Dla $n=9$, wyrazem środkowym jest $a_5$. Jednakże, jest też własność, że $S_n = n \\cdot \\frac{a_1+a_n}{2}$. Mamy $a_5+a_7 = (a_1+4r)+(a_1+6r) = 2a_1+10r = 30$, czyli $a_1+5r = 15$. Zauważmy, że $a_1+5r$ to właśnie $a_6$. Czyli $a_6 = 15$. Zauważmy też, że $S_9 = \\frac{a_1+a_9}{2} \\cdot 9 = \\frac{a_1 + a_1+8r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$. To nie jest $a_6$. Ale $a_5+a_7=30$. Możemy też napisać $S_9 = 9 \\cdot \\frac{a_1+a_9}{2}$. Ponieważ $a_1+a_9 = a_1 + a_1+8r = 2a_1+8r$ oraz $a_5+a_7 = a_1+4r + a_1+6r = 2a_1+10r$. Nie jest to to samo. Ale pamiętajmy, że $a_1+a_n = a_2+a_{n-1} = ...$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. A $a_5$ jest środkowy. Warto zauważyć, że $a_5+a_7 = 30$. Suma $S_9 = 9 \\cdot a_5$. Ale $a_5$ nie jest $a_6$. Hmm. Jest znana własność $a_1 + ... + a_n = n \\cdot a_{\\frac{n+1}{2}}$ gdy $n$ jest nieparzyste. Czyli $S_9 = 9 \\cdot a_5$. Ale my znamy $a_5+a_7=30$. Ale $a_5+a_7 = a_1+4r + a_1+6r = 2a_1+10r = 30$. I $S_9 = 9 \\cdot a_5 = 9(a_1+4r)$. Nie wiemy ile jest $a_1+4r$. Ale możemy użyć $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. $S_9 = \\frac{2a_1+(9-1)r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$. Dalej nie wiem. Ale $a_5+a_7=30$. Możemy napisać $a_5 = a_6-r$ i $a_7 = a_6+r$. Wtedy $(a_6-r) + (a_6+r) = 30$, czyli $2a_6=30$, stąd $a_6=15$. Tak, $a_6$ jest środkowym wyrazem dla $a_5$ i $a_7$. Ale dla $S_9$, środkowym wyrazem jest $a_5$. Suma $S_9 = 9 \\cdot a_5$. Wiemy, że $a_5+a_7=30$. $a_5 = a_1+4r$, $a_7 = a_1+6r$. $2a_1+10r = 30 \\implies a_1+5r = 15$. Ale to jest $a_6$. Więc $a_6=15$. Jak to się ma do $S_9$? $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. $a_1+a_9 = a_1+a_1+8r = 2a_1+8r$. $S_9 = (a_1+4r) \\cdot 9$. To jest $a_5 \\cdot 9$. Ale $a_1+5r=15$. Nie możemy jednoznacznie obliczyć $a_5$. Coś jest źle w moim rozumowaniu lub w poleceniu. Sprawdźmy. Jeśli $a_5+a_7=30$, to $a_6=15$. Czy $S_9 = 9 \\cdot a_6$? Nie, $S_9 = 9 \\cdot a_5$. A $a_5 = a_6-r = 15-r$. $S_9 = 9(15-r)$. To zależy od $r$.
-Ok, wróćmy do definicji: $a_n = \\frac{a_{n-1} + a_{n+1}}{2}$. Czyli $a_6 = \\frac{a_5+a_7}{2} = \\frac{30}{2} = 15$. Teraz $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. Pamiętajmy, że $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. Nie mamy tych wartości. Ale $a_1+a_9 = (a_6-5r) + (a_6+3r) = 2a_6 - 2r = 30-2r$. Nie. $a_1 = a_6 - 5r$, $a_9 = a_6+3r$. Suma $= (a_6-5r)+(a_6+3r)=2a_6-2r$. Wzór na sumę: $S_9 = \\frac{a_1+a_9}{2} \\cdot 9 = \\frac{2a_6-2r}{2} \\cdot 9 = (a_6-r) \\cdot 9 = a_5 \\cdot 9$. Nadal $a_5$. Aha, ale jest też $a_1+a_n = a_k + a_{n-k+1}$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$. Suma wyrazów symetrycznych względem środka jest taka sama. Czyli $a_1+a_9 = a_4+a_6$. Pytanie brzmi, czy $a_5+a_7=30$ dało się użyć do wyliczenia $S_9$.
-Z treści zadania $a_5 + a_7 = 30$. Użyjmy wzoru $a_n = a_1 + (n-1)r$.
-$(a_1 + 4r) + (a_1 + 6r) = 30$
-$2a_1 + 10r = 30$
-$a_1 + 5r = 15$. Zauważmy, że $a_1+5r$ to jest $a_6$. Więc $a_6 = 15$.
-Szukamy $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$.
-$a_1+a_9 = a_1 + (a_1+8r) = 2a_1+8r = 2(a_1+4r)$.
-To jest $2 \\cdot a_5$.
-Tak, $a_1+a_9 = a_k + a_{n-k+1}$. Dla $n=9$. $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$.
-Mamy $a_5+a_7 = 30$. To nam dało $a_6=15$. Ale nie mamy $a_4$ ani $a_6$.
-Jest wzór $S_n = n \\times \\text{wyraz środkowy}$ dla $n$ nieparzystego. Dla $S_9$, wyrazem środkowym jest $a_5$. Więc $S_9 = 9 \\cdot a_5$.
-Mamy $a_5+a_7=30$. Z tego wynika $a_6=15$. Ale nie da się z tego obliczyć $a_5$.
-A może chodziło o $a_6$? Jeśli $a_1+a_n = a_2+a_{n-1} = \\dots$. Czyli $a_1+a_9 = a_2+a_8 = a_3+a_7 = a_4+a_6$.
-Mamy $a_5+a_7=30$. To nic nie daje. Co jeśli $a_4+a_6=30$? Wtedy $S_9 = \\frac{30}{2} \\cdot 9 = 15 \\cdot 9 = 135$.
-Może w treści zadania powinno być $a_4+a_6=30$? Albo $a_5+a_5=30$? To by znaczyło $a_5=15$, wtedy $S_9 = 9 \\cdot 15 = 135$.
-Zakładając, że autor zadania chciał, aby środkowy wyraz sumy był powiązany z podanymi. $S_9 = 9 \\cdot a_5$. $a_5+a_7=30 \\implies a_6=15$. Ale $a_5 = a_6-r = 15-r$.
-$S_9 = 9(15-r)$. To nadal zależy od $r$.
-**Poprawka do zadania 6:** Jeśli w treści było np. $a_4+a_6=30$, wtedy $S_9 = \\frac{a_1+a_9}{2} \\cdot 9$. Ponieważ $a_1+a_9 = a_4+a_6$, to $S_9 = \\frac{30}{2} \\cdot 9 = 15 \\cdot 9 = 135$.
-**Jeśli polecenie jest poprawne jak jest:** $a_5+a_7=30 \\implies a_6=15$. $S_9 = 9 \\cdot a_5$. Aby policzyć $S_9$, potrzebujemy $a_5$. $a_5 = a_6-r = 15-r$. Nie znamy $r$. Nie da się policzyć.
-**Ale!** $a_n = a_1+(n-1)r$.
-$a_5 = a_1+4r$. $a_7 = a_1+6r$. $a_5+a_7=2a_1+10r=30$. $a_1+5r=15$. Czyli $a_6=15$.
-$S_9 = \\frac{2a_1+(9-1)r}{2} \\cdot 9 = \\frac{2a_1+8r}{2} \\cdot 9 = (a_1+4r) \\cdot 9$.
-Czyli $S_9 = a_5 \\cdot 9$. Nadal potrzebujemy $a_5$.
-Z $a_1+5r=15$ i $a_5=a_1+4r$, mamy $a_1=15-5r$.
-$a_5 = (15-5r)+4r = 15-r$.
-$S_9 = 9 \\cdot (15-r)$.
-CKE zadałoby takie zadanie, gdzie odpowiedź zależy od $r$? Raczej nie.
-Jest jakaś inna własność?
-A może chodziło o to, że $a_5$ i $a_7$ są podane, a sumę mamy policzyć dla $a_1, \\dots, a_{11}$? $S_{11} = \\frac{a_1+a_{11}}{2} \\cdot 11$. $a_1+a_{11} = a_5+a_7 = 30$. Wtedy $S_{11} = \\frac{30}{2} \\cdot 11 = 15 \\cdot 11 = 165$. To ma sens.
-Przyjmuję, że zadanie 6 miało na myśli $S_{11}$. Ale zgodnie z treścią:
-**Odpowiedź do zadania 6 (przy założeniu, że było $S_{11}$):** $S_{11} = 165$.
-**Odpowiedź do zadania 6 (przy założeniu, że $a_4+a_6=30$):** $S_9 = 135$.
-**Odpowiedź do zadania 6 (przy oryginalnej treści $a_5+a_7=30$ i $S_9$):** Nie da się jednoznacznie obliczyć. (Ale jeśli już CKE daje takie zadanie, to zazwyczaj da się obliczyć. Może jest jakiś trik.)
-Sprawdźmy jeszcze raz: $a_1+5r=15$. $S_9=9a_5$. $a_5=15-r$. $S_9 = 9(15-r)$. To jest prawidłowo wyliczone.
-Zakładam, że zadanie 6 w oryginalnej formie jest błędne lub niepełne.
+6.  Wyrazy $a_4$ i $a_6$ są symetryczne względem środkowego wyrazu $a_5$, więc $a_4 + a_6 = 2a_5$. Z warunku $a_4 + a_6 = 30$ otrzymujemy $a_5 = 15$.
+    Suma dziewięciu początkowych wyrazów jest równa dziewięciokrotności środkowego wyrazu:
+    $S_9 = 9a_5 = 9 \\cdot 15 = 135$.
+    Odpowiedź: $S_9 = 135$.
 7.  Aby liczby były kolejnymi wyrazami ciągu arytmetycznego, różnica między kolejnymi wyrazami musi być stała.
     $(x+2) - (x-1) = r$
     $2x+5 - (x+2) = r$
@@ -4769,12 +4698,14 @@ Odpowiedź: B
 
 ## Odpowiedzi
 1.  15 cm. ($9^2 + 12^2 = 81 + 144 = 225$, $\\sqrt{225} = 15$)
-2.  4 cm. ($\\sqrt{21}^2 + b^2 = 5^2 \\implies 21 + b^2 = 25 \\implies b^2 = 4 \\implies b = 2$) – **Poprawka**: $\\sqrt{21}^2 + b^2 = 5^2 \\implies 21 + b^2 = 25 \\implies b^2 = 4 \\implies b = 2$. **Wygląda na to, że popełniłem błąd w odpowiedziach. Poprawiam:** Długość drugiej przyprostokątnej to 2 cm.
+2.  Długość drugiej przyprostokątnej wynosi $2$ cm, ponieważ $21 + b^2 = 25$, więc $b^2 = 4$ i $b = 2$.
 3.  Pole = 24 cm$^2$ ($\\frac{1}{2} \\cdot 6 \\cdot 8 = 24$), Obwód = 24 cm ($6 + 8 + 10 = 24$).
 4.  Boki drugiego trójkąta to 30, 72, 78. (Obwód pierwszego = $10+24+26=60$. Skala $k = 180/60 = 3$. Boki: $3 \\cdot 10 = 30$, $3 \\cdot 24 = 72$, $3 \\cdot 26 = 78$).
 5.  Obwód $\\triangle A'B'C'$ = 72 cm (Obwód $\\triangle ABC = 9+12+15=36$, $k=2$, $2 \\cdot 36 = 72$). Pole $\\triangle A'B'C'$ = 216 cm$^2$ (Pole $\\triangle ABC = \\frac{1}{2} \\cdot 9 \\cdot 12 = 54$. Stosunek pól $k^2 = 2^2 = 4$. $4 \\cdot 54 = 216$).
 6.  Sprawdzenie $7^2 + (\\sqrt{15})^2 = 49 + 15 = 64$. $8^2 = 64$. Ponieważ $7^2 + (\\sqrt{15})^2 = 8^2$, trójkąt jest prostokątny z przeciwprostokątną o długości 8.
-7.  Przyprostokątne mają długości $a=6$ cm i $b=24$ cm. (Wysokość w trójkącie prostokątnym spełnia warunek $h^2 = p \\cdot q$. W tym przypadku $h^2 = 3 \\cdot 12 = 36$, więc $h=6$. Przyprostokątne można obliczyć z twierdzenia Pitagorasa w mniejszych trójkątach: $a^2 = p^2 + h^2 = 3^2 + 6^2 = 9+36=45$, $a=\\sqrt{45}=3\\sqrt{5}$. **Ponownie błąd w moich obliczeniach. Sprawdzam inny wzór.** Wzór na przyprostokątną jest też taki: $a^2 = p \\cdot c$ oraz $b^2 = q \\cdot c$, gdzie $c = p+q$. $c = 3 + 12 = 15$. $a^2 = 3 \\cdot 15 = 45 \\implies a = \\sqrt{45} = 3\\sqrt{5}$. $b^2 = 12 \\cdot 15 = 180 \\implies b = \\sqrt{180} = 6\\sqrt{5}$. Te przyprostokątne $3\\sqrt{5}$ i $6\\sqrt{5}$ spełniają Pitagorasa: $(3\\sqrt{5})^2 + (6\\sqrt{5})^2 = 45 + 180 = 225 = 15^2$. **OK, to są poprawne przyprostokątne.**)
+7.  Przeciwprostokątna ma długość $c = p + q = 15$ cm. Z twierdzenia o przyprostokątnych:
+    $a^2 = pc = 3 \\cdot 15 = 45$, więc $a = 3\\sqrt{5}$ cm.
+    $b^2 = qc = 12 \\cdot 15 = 180$, więc $b = 6\\sqrt{5}$ cm.
 
 ## Szybka powtórka
 1.  Jakie są boki trójkąta prostokątnego w twierdzeniu Pitagorasa?
@@ -7029,7 +6960,7 @@ Każde wyrażenie zostało obliczone zgodnie z zasadami kolejności działań. P
 3.  Oblicz: $\\frac{2}{3} + \\frac{1}{4} \\cdot (\\frac{4}{5} - 0,5)$
 4.  Oblicz: $(18 - 2 \\cdot 5) \\cdot [3 + (7 - 4)]$
 5.  Oblicz: $100 - (50 - 3 \\cdot 7) + (4 \\cdot 6 - 50)$
-6.  Które wyrażenie ma wartość 10?
+6.  Które wyrażenie ma wartość 15?
     A) $1 + 2 \\cdot 3 + 4$
     B) $(1 + 2) \\cdot 3 + 4$
     C) $1 + (2 \\cdot 3) + 4$
@@ -7041,7 +6972,7 @@ Każde wyrażenie zostało obliczone zgodnie z zasadami kolejności działań. P
 3.  $\\frac{2}{3} + \\frac{1}{4} \\cdot (\\frac{8}{10} - \\frac{5}{10}) = \\frac{2}{3} + \\frac{1}{4} \\cdot \\frac{3}{10} = \\frac{2}{3} + \\frac{3}{40} = \\frac{80}{120} + \\frac{9}{120} = \\frac{89}{120}$
 4.  $(18 - 10) \\cdot [3 + 3] = 8 \\cdot 6 = 48$
 5.  $100 - (50 - 21) + (24 - 50) = 100 - 29 + (-26) = 71 - 26 = 45$
-6.  A) $1 + 6 + 4 = 11$, B) $3 \\cdot 3 + 4 = 9 + 4 = 13$, C) $1 + 6 + 4 = 11$, D) $1 + 2 + 12 = 15$. Wygląda na to, że żadne z wyrażeń nie ma wartości 10. Sprawdźmy ponownie przykład C: $1+(2 \\cdot 3)+4 = 1+6+4=11$. Przepraszam za błąd w przykładzie. Przyjmijmy, że pytanie brzmiało "Które wyrażenie ma wartość 11?". Wtedy odpowiedzią byłoby A i C. W pierwotnej formie zadania, żaden wynik nie wynosi 10. Załóżmy, że chodziło o poprawne obliczenie, a nie konkretny wynik. Wartości to 11, 13, 11, 15.
+6.  A) $1 + 2 \\cdot 3 + 4 = 11$, B) $(1 + 2) \\cdot 3 + 4 = 13$, C) $1 + (2 \\cdot 3) + 4 = 11$, D) $1 + 2 + 3 \\cdot 4 = 15$. Poprawna odpowiedź: D.
 
 ## Szybka powtórka
 1.  Jaka jest pierwsza operacja, którą wykonujemy w wyrażeniu z nawiasami?
@@ -8073,7 +8004,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     *   $1 \\text{ m} = 100 \\text{ cm} \\implies 1 \\text{ m}^2 = (100 \\text{ cm})^2 = 10000 \\text{ cm}^2$
     *   $1 \\text{ km} = 1000 \\text{ m} \\implies 1 \\text{ km}^2 = 1000000 \\text{ m}^2$
     *   $1 \\text{ ar (a)} = 100 \\text{ m}^2$
-    *   $1 \\text{ hektar (ha)} = 100 \\text{ arów} = 10000 \\text{ m}^2 = 1 \\text{ km}^2$ (niepoprawnie, 1 ha = 10000 m^2, czyli 1 ha = 1 km^2 jest błędne, poprawka: $1 \\text{ ha} = 10000 \\text{ m}^2$).
+    *   $1 \\text{ hektar (ha)} = 100 \\text{ arów} = 10000 \\text{ m}^2$.
 
 ## Przykład 1 — podstawowy
 Oblicz pole prostokąta o bokach długości 5 cm i 8 cm.
