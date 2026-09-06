@@ -32,6 +32,17 @@ function nearlyEqual(a: number, b: number): boolean {
   return Math.abs(a - b) < EPS;
 }
 
+function parseExactInteger(raw: string): bigint | null {
+  const text = stripAnswerUnits(raw).replace(/\s+/g, "");
+  if (!/^-?\d+$/.test(text)) return null;
+
+  try {
+    return BigInt(text);
+  } catch {
+    return null;
+  }
+}
+
 /** Usuwa jednostki i zbędne znaki z końca odpowiedzi. */
 export function stripAnswerUnits(text: string): string {
   return text
@@ -100,6 +111,10 @@ export function answersEquivalent(a: string, b: string): boolean {
   const na = stripAnswerUnits(a);
   const nb = stripAnswerUnits(b);
   if (na.toLowerCase() === nb.toLowerCase()) return true;
+
+  const exactA = parseExactInteger(na);
+  const exactB = parseExactInteger(nb);
+  if (exactA !== null && exactB !== null) return exactA === exactB;
 
   const va = parseNumericToken(na) ?? evaluateSimpleExpression(na);
   const vb = parseNumericToken(nb) ?? evaluateSimpleExpression(nb);

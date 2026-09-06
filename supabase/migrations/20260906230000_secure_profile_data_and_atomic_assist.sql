@@ -161,3 +161,8 @@ $$;
 
 revoke all on function public.consume_ai_assist_quota(uuid, text, integer) from public;
 grant execute on function public.consume_ai_assist_quota(uuid, text, integer) to service_role;
+
+-- Older hardening migrations installed a narrower duplicate trigger. Keep one
+-- authoritative protection function so future schema changes cannot diverge.
+drop trigger if exists protect_subscription_columns_trg on public.profiles;
+drop function if exists public.protect_subscription_columns();

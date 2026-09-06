@@ -66,8 +66,10 @@ wykonaj poniższe kroki:
    `20260529161000_add_achievements.sql`,
    `20260703000000_materials_created_at.sql`,
    `20260714210000_add_ai_assist_quota.sql`.
-9. Na końcu uruchom:
-   `20260906220000_production_hardening.sql`.
+9. Na końcu uruchom, w tej kolejności:
+   `20260906220000_production_hardening.sql`,
+   `20260906230000_secure_profile_data_and_atomic_assist.sql`,
+   `20260906240000_fix_auth_profile_trigger.sql`.
 
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
@@ -101,7 +103,13 @@ npm run seed:trening-tasks -- --dry-run
 npm run seed:trening-tasks
 npm run audit:trening
 npm run audit:questions
+npm run repair:production-tasks
 ```
+
+`repair:production-tasks` domyślnie wykonuje tylko audyt. Użyj
+`npm run repair:production-tasks -- --apply` wyłącznie po sprawdzeniu raportu;
+naprawia znane duplikaty opcji, usuwa zadania bez poprawnej opcji i mapuje
+stare sloty curriculum.
 
 ## 3. Kontrola RLS po wdrożeniu
 

@@ -62,14 +62,19 @@ async function main() {
   }
 
   const sb = createClient(url, key);
-  const { data, error } = await sb
-    .from("tasks")
-    .select("id,exam_type,category,topic,content,correct_answer,options")
-    .limit(10000);
+  const rows: TaskRow[] = [];
+  const pageSize = 1000;
 
-  if (error) throw error;
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await sb
+      .from("tasks")
+      .select("id,exam_type,category,topic,content,correct_answer,options")
+      .range(from, from + pageSize - 1);
 
-  const rows = (data ?? []) as TaskRow[];
+    if (error) throw error;
+    rows.push(...((data ?? []) as TaskRow[]));
+    if (!data || data.length < pageSize) break;
+  }
   const issues: { id: string; detail: string }[] = [];
 
   for (const row of rows) {

@@ -28,6 +28,9 @@ describe("answersEquivalent", () => {
   it("rozróżnia różne wartości", () => {
     expect(answersEquivalent("1/2", "1/3")).toBe(false);
     expect(answersEquivalent("15", "16")).toBe(false);
+    expect(
+      answersEquivalent("9007199254740992", "9007199254740993"),
+    ).toBe(false);
   });
 });
 

@@ -17,6 +17,7 @@
     "audit:questions": "tsx scripts/auditQuestionQuality.ts",
     "audit:cke": "tsx scripts/auditCkeSolutions.ts",
     "audit:trening": "tsx scripts/auditTreningTasks.ts",
+    "repair:production-tasks": "tsx scripts/repairProductionTasks.ts",
     "audit:tasks-cache": "tsx scripts/auditTasksCache.ts",
     "repair:tasks-cache": "tsx scripts/repairTasksCache.ts",
     "sync:tasks-answers": "tsx scripts/syncTaskAnswers.ts",

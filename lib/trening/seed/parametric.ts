@@ -71,6 +71,18 @@ function slotHash(slot: SeedTopicSlot): number {
   return h;
 }
 
+function exactPower(base: number, exponent: number): string {
+  return (BigInt(base) ** BigInt(exponent)).toString();
+}
+
+function powerDistractors(base: number, exponent: number): string[] {
+  return [
+    exactPower(base, exponent - 1),
+    exactPower(base, exponent + 1),
+    exactPower(base, exponent - 2),
+  ];
+}
+
 function pickV(v: number, index: number, mod: number): number {
   return ((v * 1_103 + index * 917) >>> 0) % mod;
 }
@@ -88,12 +100,27 @@ export function generateParametricTask(
       const a = 2 + pickV(v, 0, 18);
       const m = 2 + pickV(v, 1, 10);
       const n = 2 + pickV(v, 2, 8);
+      const exponent = m + n;
       if (pickV(v, 3, 3) === 0) {
-        const c = Math.pow(a, m) * Math.pow(a, n);
-        return buildMc(rng, slot, `Oblicz $${a}^{${m}} \\cdot ${a}^{${n}}$`, fmtNum(c), wrongs(rng, c, 8), hard ? 2 : 1, v);
+        return buildMc(
+          rng,
+          slot,
+          `Oblicz $${a}^{${m}} \\cdot ${a}^{${n}}$`,
+          exactPower(a, exponent),
+          powerDistractors(a, exponent),
+          hard ? 2 : 1,
+          v,
+        );
       }
-      const c = Math.pow(a, m + n);
-      return buildMc(rng, slot, `Uprość $${a}^{${m}} \\cdot ${a}^{${n}}$`, fmtNum(c), wrongs(rng, c, 6), 2, v);
+      return buildMc(
+        rng,
+        slot,
+        `Uprość $${a}^{${m}} \\cdot ${a}^{${n}}$`,
+        exactPower(a, exponent),
+        powerDistractors(a, exponent),
+        2,
+        v,
+      );
     }
     case "logarytmy": {
       const bases = [2, 3, 5, 10] as const;

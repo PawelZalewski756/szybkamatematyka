@@ -42,10 +42,7 @@ function buildMc(
     }
   }
   while (pool.length < 4) {
-    const fraction = correct.match(/^(-?\d+)\s*\/\s*(-?\d+)$/);
-    const fallback = fraction
-      ? `${Number(fraction[1]) + pool.length}/${fraction[2]}`
-      : `${Number(correct) + pool.length}`;
+    const fallback = fallbackAnswer(correct, pool.length);
     if (!pool.some((existing) => answersEquivalent(existing, fallback))) {
       pool.push(fallback);
     } else {
@@ -88,6 +85,30 @@ function wrongNumeric(rng: Rng, correct: number, spread: number): string[] {
 }
 
 type GenFn = (rng: Rng, slot: SeedTopicSlot, variant: number) => TaskDraft;
+
+function fallbackAnswer(correct: string, offset: number): string {
+  const fraction = correct.match(/^(-?\d+)\s*\/\s*(-?\d+)$/);
+  if (fraction) {
+    try {
+      return `${BigInt(fraction[1]) + BigInt(offset)}/${fraction[2]}`;
+    } catch {
+      // Fall through to the numeric representation below.
+    }
+  }
+
+  if (/^-?\d+$/.test(correct.trim())) {
+    try {
+      return (BigInt(correct.trim()) + BigInt(offset)).toString();
+    } catch {
+      // Fall through to the numeric representation below.
+    }
+  }
+
+  const numeric = Number(correct);
+  return Number.isFinite(numeric)
+    ? fmtNum(numeric + offset)
+    : `Odpowiedź ${offset + 1}`;
+}
 
 // --- Potęgi / pierwiastki ---
 const genPotegi: GenFn[] = [
