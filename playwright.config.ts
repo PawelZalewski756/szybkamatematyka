@@ -1,5 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const e2ePort = Number(process.env.E2E_PORT ?? 3000);
+const e2eBaseUrl = `http://localhost:${e2ePort}`;
+
 /**
  * E2E smoke tests — uruchamiane lokalnie: `npm run test:e2e`.
  *
@@ -14,7 +17,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: "list",
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: e2eBaseUrl,
     trace: "on-first-retry",
   },
   projects: [
@@ -24,9 +27,11 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run build && npm run start",
-    url: "http://localhost:3000",
-    reuseExistingServer: !process.env.CI,
+    // Build bez publicznych envów sprawdza ścieżkę runtime-config, a start
+    // dostaje te same wartości dopiero przy uruchomieniu serwera.
+    command: `node scripts/buildE2e.mjs && npm run start -- --port ${e2ePort}`,
+    url: e2eBaseUrl,
+    reuseExistingServer: !process.env.CI && !process.env.E2E_PORT,
     timeout: 180_000,
     env: {
       ...process.env,

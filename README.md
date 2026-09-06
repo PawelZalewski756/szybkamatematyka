@@ -29,6 +29,15 @@ Otwórz [http://localhost:3000](http://localhost:3000).
 | `npm run seed:tasks-gemini` | Zadania Gemini (wymaga `GEMINI_API_KEY`) |
 | `npm run seed:hour-quality` | Godzinna poprawa rozwiązań CKE |
 
+Testy E2E budują aplikację bez publicznych zmiennych Supabase i sprawdzają ich
+podanie dopiero przy uruchomieniu serwera. Aby wymusić osobny port oraz pełny
+test ścieżki runtime lokalnie, ustaw `E2E_PORT`, np. w PowerShell:
+
+```powershell
+$env:E2E_PORT = "3001"
+npm run test:e2e
+```
+
 Wdrożenie: zobacz [`docs/DEPLOY.md`](docs/DEPLOY.md).
 
 ## Struktura

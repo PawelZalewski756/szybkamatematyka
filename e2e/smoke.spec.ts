@@ -33,6 +33,97 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
+  test("/api/runtime-config zwraca bezpieczny status konfiguracji", async ({
+    request,
+  }) => {
+    const response = await request.get("/api/runtime-config");
+    if (process.env.CI || process.env.E2E_PORT) {
+      expect(response.status()).toBe(200);
+    } else {
+      expect([200, 503]).toContain(response.status());
+    }
+    expect(response.headers()["cache-control"]).toBe("no-store");
+
+    const body = (await response.json()) as {
+      configured?: boolean;
+      supabaseUrl?: string;
+      supabaseAnonKey?: string;
+    };
+    expect(typeof body.configured).toBe("boolean");
+    if (body.configured) {
+      expect(body.supabaseUrl).toMatch(/^https?:\/\//);
+      expect(body.supabaseAnonKey).toBeTruthy();
+    }
+  });
+
+  test("logowanie pokazuje walidację bez wysyłania pustych danych", async ({
+    page,
+  }) => {
+    await page.goto("/login");
+    await page.locator('input[name="email"]').fill("niepoprawny-adres");
+    await page.locator('input[name="password"]').fill("123");
+    await page.getByRole("button", { name: "Zaloguj się" }).click();
+
+    await expect(page.locator('p[role="alert"]')).toContainText(
+      "Podaj poprawny adres e-mail",
+    );
+  });
+
+  test("logowanie mapuje błąd Supabase na komunikat dla użytkownika", async ({
+    page,
+  }) => {
+    await page.route("**/auth/v1/token*", async (route) => {
+      await route.fulfill({
+        status: 400,
+        contentType: "application/json",
+        body: JSON.stringify({
+          error: "invalid_grant",
+          error_description: "Invalid login credentials",
+          msg: "Invalid login credentials",
+        }),
+      });
+    });
+
+    await page.goto("/login");
+    await page.locator('input[name="email"]').fill("uczen@example.com");
+    await page.locator('input[name="password"]').fill("poprawnehaslo");
+    await page.getByRole("button", { name: "Zaloguj się" }).click();
+
+    await expect(page.locator('p[role="alert"]')).toContainText(
+      "Zły e-mail lub hasło",
+    );
+  });
+
+  test("reset hasła mapuje błąd limitu Supabase", async ({ page }) => {
+    await page.route("**/auth/v1/recover*", async (route) => {
+      await route.fulfill({
+        status: 429,
+        contentType: "application/json",
+        body: JSON.stringify({
+          error: "over_email_send_rate_limit",
+          message: "For security purposes, you can only request this after 60 seconds.",
+        }),
+      });
+    });
+
+    await page.goto("/login/zapomniane-haslo");
+    await page.locator('input[name="email"]').fill("uczen@example.com");
+    await page.getByRole("button", { name: "Wyślij link resetujący" }).click();
+
+    await expect(page.locator('p[role="alert"]')).toContainText(
+      "Poczekaj chwilę przed kolejną próbą",
+    );
+  });
+
+  test("strona nowego hasła odrzuca wejście bez ważnego linku", async ({
+    page,
+  }) => {
+    await page.goto("/login/nowe-haslo");
+    await expect(page.locator('p[role="alert"]')).toContainText(
+      "Link wygasł lub jest nieprawidłowy",
+    );
+  });
+
   test("/rankingi ładuje ranking", async ({ page }) => {
     await page.goto("/rankingi");
     await expect(
@@ -81,15 +172,31 @@ test.describe("Smoke", () => {
   });
 
   test("trening pokazuje zadania z lokalnego cache", async ({ page }) => {
+    await page.route("**/rest/v1/tasks*", (route) => route.abort());
     await page.goto(
       "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
     );
     await page.getByRole("tab", { name: "Zadania" }).click();
     await expect(page.getByText(/Zadanie \d+ z \d+/)).toBeVisible();
     await expect(page.getByText("Nie udało się załadować zadań.")).toHaveCount(0);
-    await page.getByRole("button", { name: /B\s+18/ }).click();
+    const response = await page.request.get(
+      "/api/trening/tasks?examType=matura_podstawowa&category=liczby_rzeczywiste&topic=kolejnosc_dzialan",
+    );
+    expect(response.ok()).toBeTruthy();
+    const payload = (await response.json()) as {
+      tasks: Array<{ options: string[]; correct_answer: string }>;
+    };
+    const firstTask = payload.tasks[0];
+    expect(firstTask).toBeDefined();
+    const correctIndex = firstTask.options.indexOf(firstTask.correct_answer);
+    const wrongIndex = firstTask.options.findIndex(
+      (_, index) => index !== correctIndex,
+    );
+    const answerButtons = page.getByTestId("training-answer-option");
+    await expect(answerButtons).toHaveCount(firstTask.options.length);
+    await answerButtons.nth(wrongIndex).click();
     await expect(page.getByText("Spróbuj jeszcze raz!")).toBeVisible();
-    await page.getByRole("button", { name: /A\s+30/ }).click();
+    await answerButtons.nth(correctIndex).click();
     await expect(page.getByText("Dobra odpowiedź!")).toBeVisible();
   });
 

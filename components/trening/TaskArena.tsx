@@ -640,6 +640,8 @@ export function TaskArena({
                   <button
                     key={option}
                     type="button"
+                    data-testid="training-answer-option"
+                    data-option-index={i}
                     disabled={answerLocked || feedback === "correct" || awarding}
                     onClick={() => void handleAnswer(option)}
                     className={cardClass}
