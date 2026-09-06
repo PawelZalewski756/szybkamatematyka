@@ -4,7 +4,7 @@ test.describe("Smoke", () => {
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      "Przygotuj się do",
     );
   });
 
@@ -60,7 +60,7 @@ test.describe("Smoke", () => {
   test("strona główna ma panel startowy", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Ogarnij matematykę",
+      "Przygotuj się do",
     );
   });
 

@@ -1,154 +1,196 @@
 "use client";
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
+import { PlatformStatus } from "@/components/home/PlatformStatus";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   BookOpen,
+  Check,
+  Clock3,
   FileText,
   Flame,
   Gamepad2,
   Library,
-  RotateCcw,
-  Swords,
+  Target,
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
 
-const HERO_PATHS = [
+const ENTRY_PATHS = [
   {
     href: "/trening",
-    label: "Trening",
-    text: "Tematy, teoria i zadania pod egzamin",
-  },
-  {
-    href: "/baza-zadan",
-    label: "Baza zadań",
-    text: "Zadania z pełnym rozwiązaniem",
-  },
-  {
-    href: "/trening/arkusze",
-    label: "Arkusze CKE",
-    text: "Oficjalne arkusze maturalne i 8-klasisty",
-  },
-] as const;
-
-const DESTINATIONS = [
-  {
-    href: "/trening",
-    label: "Trening tematyczny",
-    hint: "Tematy w kolejności egzaminacyjnej — teoria, potem zadania",
+    eyebrow: "NAJLEPSZY START",
+    label: "Trening tematów",
+    text: "Krótka teoria, potem zadania. Budujesz pewność bez skakania po przypadkowych materiałach.",
+    action: "Zacznij od podstaw",
     icon: BookOpen,
+    featured: true,
   },
   {
     href: "/baza-zadan",
+    eyebrow: "KONKRETNE ZADANIE",
     label: "Baza zadań",
-    hint: "Zadania z pełnym tokiem rozwiązania",
+    text: "Wybierz dział, poziom i zadanie. Gdy utkniesz, dostajesz rozwiązanie krok po kroku.",
+    action: "Przeglądaj bazę",
     icon: Library,
+    featured: false,
   },
   {
     href: "/trening/arkusze",
+    eyebrow: "PRÓBA GENERALNA",
     label: "Arkusze CKE",
-    hint: "Oficjalne arkusze maturalne i egzamin ósmoklasisty",
+    text: "Sprawdź się na oficjalnych arkuszach maturalnych i egzaminie ósmoklasisty.",
+    action: "Otwórz arkusze",
     icon: FileText,
-  },
-  {
-    href: "/minigry",
-    label: "Minigry",
-    hint: "Krótkie rundy na czas i na wytrwałość",
-    icon: Gamepad2,
-  },
-  {
-    href: "/powtorki",
-    label: "Powtórki",
-    hint: "Wracasz do tematów, które poszły słabiej",
-    icon: RotateCcw,
-  },
-  {
-    href: "/pojedynki",
-    label: "Pojedynki",
-    hint: "Rozwiązujesz to samo zadanie przeciwko innemu uczniowi",
-    icon: Swords,
+    featured: false,
   },
 ] as const;
 
 const STEPS = [
   {
-    n: "1",
-    title: "Ustaw ścieżkę",
-    text: "Klasa albo matura — treść dopasowana do Twojego egzaminu.",
+    n: "01",
+    title: "Wybierasz ścieżkę",
+    text: "Matura albo egzamin ósmoklasisty — widzisz materiały dopasowane do celu.",
   },
   {
-    n: "2",
-    title: "Ćwicz temat",
-    text: "Krótka teoria, potem zadania. Wiesz, na czym stanąć.",
+    n: "02",
+    title: "Robisz mały krok",
+    text: "Jeden temat, kilka zadań i jasne rozwiązanie, kiedy potrzebujesz podpowiedzi.",
   },
   {
-    n: "3",
-    title: "Rozwiąż arkusz",
-    text: "Cały arkusz CKE albo treningowy — z rozwiązaniami do sprawdzenia.",
+    n: "03",
+    title: "Sprawdzasz wynik",
+    text: "Arkusz CKE pokazuje, czy wiedza działa także pod presją czasu.",
   },
 ] as const;
 
 const fadeUp = {
-  initial: { opacity: 0, y: 14 },
+  initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
 };
 
-function HeroIndex() {
+function ProductPreview({ pathLabel }: { pathLabel: string }) {
   return (
-    <div className="relative flex h-full min-h-[18rem] flex-col justify-center border-t border-surface-border lg:min-h-0 lg:border-l lg:border-t-0">
+    <motion.div
+      initial={{ opacity: 0, y: 20, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.55, delay: 0.15 }}
+      className="card-raised relative overflow-hidden p-4 sm:p-6"
+      aria-label="Podgląd sesji nauki"
+    >
       <div
-        className="home-grid-bg pointer-events-none absolute inset-0 opacity-50"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(165deg, color-mix(in srgb, var(--surface) 55%, transparent) 0%, transparent 70%)",
-        }}
+        className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl"
         aria-hidden
       />
 
-      <nav
-        aria-label="Główne działy"
-        className="relative mx-auto w-full max-w-md px-6 py-12 sm:px-8 lg:px-12 lg:py-0"
-      >
-        <p className="text-sm text-muted">W serwisie</p>
-        <ul className="mt-5 divide-y divide-surface-border border-y border-surface-border">
-          {HERO_PATHS.map((item, i) => (
-            <li key={item.href}>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.18 + i * 0.07 }}
-              >
-                <Link
-                  href={item.href}
-                  className="group flex items-baseline justify-between gap-4 py-5 transition-colors hover:text-accent"
-                >
-                  <span>
-                    <span className="block text-xl font-bold tracking-tight text-foreground group-hover:text-accent sm:text-2xl">
-                      {item.label}
-                    </span>
-                    <span className="mt-1 block text-sm text-muted">
-                      {item.text}
-                    </span>
-                  </span>
-                  <ArrowRight
-                    className="h-5 w-5 shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent"
-                    aria-hidden
-                  />
-                </Link>
-              </motion.div>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+      <div className="relative">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="text-overline">Przykładowa sesja</p>
+            <p className="mt-1 text-lg font-extrabold tracking-tight text-foreground">
+              {pathLabel}
+            </p>
+          </div>
+          <span className="icon-chip h-11 w-11 shrink-0">
+            <BookOpen className="h-5 w-5" aria-hidden />
+          </span>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-surface-border bg-background/70 p-4 sm:p-5">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-overline">NASTĘPNY TEMAT</p>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-bold text-accent">
+              <Clock3 className="h-3.5 w-3.5" aria-hidden />
+              12 min
+            </span>
+          </div>
+          <h2 className="mt-3 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
+            Równania liniowe
+          </h2>
+          <p className="mt-1 text-sm text-muted">
+            2 zadania · poziom podstawowy
+          </p>
+
+          <div className="mt-5">
+            <div className="flex items-center justify-between text-xs font-semibold">
+              <span className="text-muted">Postęp tematu</span>
+              <span className="text-accent">3/5</span>
+            </div>
+            <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
+              <div className="progress-accent w-3/5" />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-3 grid grid-cols-2 gap-3">
+          <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
+            <div className="flex items-center gap-2 text-muted">
+              <Target className="h-4 w-4 text-accent" aria-hidden />
+              <span className="text-xs font-semibold">Dzisiejszy cel</span>
+            </div>
+            <p className="mt-2 text-lg font-extrabold text-foreground">60%</p>
+            <p className="text-xs text-muted">3 z 5 tematów</p>
+          </div>
+          <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
+            <div className="flex items-center gap-2 text-muted">
+              <Flame className="h-4 w-4 text-accent" aria-hidden />
+              <span className="text-xs font-semibold">Seria nauki</span>
+            </div>
+            <p className="mt-2 text-lg font-extrabold text-foreground">4 dni</p>
+            <p className="text-xs text-muted">Wróć jutro</p>
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">
+            <Check className="h-3.5 w-3.5" aria-hidden />
+          </span>
+          Każdy temat kończy się zadaniem do sprawdzenia
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function EntryPathCard({
+  href,
+  eyebrow,
+  label,
+  text,
+  action,
+  icon: Icon,
+  featured,
+}: (typeof ENTRY_PATHS)[number]) {
+  return (
+    <Link
+      href={href}
+      className={`group card-raised flex min-h-64 flex-col p-5 sm:p-6 ${
+        featured
+          ? "border-accent/45 bg-accent-soft/35 hover:border-accent/70"
+          : ""
+      }`}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <span className="icon-chip h-12 w-12 shrink-0">
+          <Icon className="h-5 w-5" aria-hidden />
+        </span>
+        <ArrowRight
+          className="h-5 w-5 text-muted transition group-hover:translate-x-1 group-hover:text-accent"
+          aria-hidden
+        />
+      </div>
+      <p className="mt-6 text-overline">{eyebrow}</p>
+      <h3 className="mt-2 text-xl font-extrabold tracking-tight text-foreground group-hover:text-accent">
+        {label}
+      </h3>
+      <p className="mt-3 text-sm leading-relaxed text-muted">{text}</p>
+      <span className="mt-auto pt-6 text-sm font-bold text-foreground group-hover:text-accent">
+        {action} <span aria-hidden>→</span>
+      </span>
+    </Link>
   );
 }
 
@@ -158,113 +200,131 @@ export function HomeDashboard() {
 
   return (
     <div className="flex flex-1 flex-col">
-      <section className="relative isolate -mx-4 min-h-[min(88vh,50rem)] overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
+      <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
         <GamingBackground variant="hero" />
         <div
-          className="pointer-events-none absolute inset-0 opacity-30"
+          className="pointer-events-none absolute inset-0 opacity-35"
           aria-hidden
         >
           <div className="home-grid-bg absolute inset-0" />
         </div>
 
-        <div className="relative z-10 grid min-h-[min(88vh,50rem)] lg:grid-cols-2">
-          <div className="flex flex-col justify-center px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-            <motion.h1
-              className="text-[clamp(2.25rem,6.5vw,4.5rem)] font-extrabold leading-[0.98] tracking-tight"
-              {...fadeUp}
-              transition={{ duration: 0.45 }}
-            >
-              <span className="text-accent">Szybka</span>
-              <br />
-              <span className="text-foreground">Matematyka</span>
-            </motion.h1>
-
-            <motion.p
-              className="mt-7 max-w-md text-base leading-relaxed text-muted sm:text-lg"
-              {...fadeUp}
-              transition={{ duration: 0.45, delay: 0.06 }}
-            >
-              Nauka matematyki do egzaminu — teoria, zadania i arkusze CKE.
-              Aktualna ścieżka:{" "}
-              <span className="text-foreground/85">{pathLabel}</span>.
-            </motion.p>
-
-            <motion.div
-              className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
-              {...fadeUp}
-              transition={{ duration: 0.45, delay: 0.12 }}
-            >
-              <Link
-                href="/trening"
-                className="btn-chunky w-full px-8 py-4 text-base sm:w-auto"
+        <div className="page-container relative z-10">
+          <div className="grid items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 md:px-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(28rem,0.82fr)] lg:gap-14 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
+            <div>
+              <motion.div
+                className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft/70 px-3 py-1.5 text-xs font-bold text-accent"
+                {...fadeUp}
+                transition={{ duration: 0.45 }}
               >
-                Zacznij trening
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </Link>
-              <Link
-                href="/trening/arkusze"
-                className="btn-chunky-soft w-full px-8 py-4 text-base sm:w-auto"
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                Ścieżka: {pathLabel}
+              </motion.div>
+
+              <motion.h1
+                className="mt-8 max-w-2xl text-[clamp(2.65rem,6.5vw,5.4rem)] font-extrabold leading-[0.94] tracking-[-0.055em]"
+                {...fadeUp}
+                transition={{ duration: 0.5, delay: 0.08 }}
               >
-                Arkusze CKE
-              </Link>
-            </motion.div>
+                <span className="text-foreground">Przygotuj się do</span>
+                <br />
+                <span className="text-accent">egzaminu z matematyki.</span>
+              </motion.h1>
+
+              <motion.p
+                className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+                {...fadeUp}
+                transition={{ duration: 0.5, delay: 0.14 }}
+              >
+                Wybierz temat, rozwiązuj zadania i sprawdzaj się na arkuszach
+                CKE — wszystko w jednym miejscu.
+              </motion.p>
+
+              <motion.div
+                className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4"
+                {...fadeUp}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Link
+                  href="/trening"
+                  className="btn-chunky px-7 py-4 text-base sm:px-8"
+                >
+                  Zacznij trening
+                  <ArrowRight className="h-5 w-5" aria-hidden />
+                </Link>
+                <Link
+                  href="/trening/arkusze"
+                  className="text-sm font-bold text-foreground underline decoration-surface-border underline-offset-4 transition hover:text-accent hover:decoration-accent"
+                >
+                  Zobacz arkusze CKE
+                </Link>
+              </motion.div>
+
+              <motion.div
+                className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold text-muted"
+                {...fadeUp}
+                transition={{ duration: 0.5, delay: 0.26 }}
+              >
+                <span className="inline-flex items-center gap-1.5">
+                  <Check className="h-4 w-4 text-accent" aria-hidden />
+                  Start bez karty
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Check className="h-4 w-4 text-accent" aria-hidden />
+                  Matura i egzamin 8-klasisty
+                </span>
+              </motion.div>
+            </div>
+
+            <ProductPreview pathLabel={pathLabel} />
           </div>
 
-          <HeroIndex />
+          <div className="border-t border-surface-border px-4 py-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm font-semibold text-muted">
+                Wszystko, czego potrzebujesz do regularnej nauki
+              </p>
+              <PlatformStatus variant="inline" />
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="border-b border-surface-border py-14 sm:py-20">
-        <div className="page-container">
-          <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-            Co znajdziesz w serwisie
-          </h2>
-          <p className="mt-3 max-w-2xl text-base text-muted">
-            Trening, baza zadań i arkusze — w jednym miejscu, pod Twój egzamin.
-          </p>
+        <div className="page-container px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+          <div className="max-w-2xl">
+            <p className="text-overline">TRZY DROGI, JEDEN CEL</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Wybierz swój pierwszy krok
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              Nie musisz wiedzieć, od czego zacząć. Wybierz tryb, który pasuje
+              do tego, czego potrzebujesz dzisiaj.
+            </p>
+          </div>
 
-          <ul className="mt-10 divide-y divide-surface-border border-y border-surface-border">
-            {DESTINATIONS.map(({ href, label, hint, icon: Icon }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="group flex items-start gap-4 py-5 transition-colors hover:bg-surface/40 sm:items-center sm:gap-5 sm:px-2"
-                >
-                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-surface-border bg-accent-soft text-accent sm:mt-0">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-base font-bold text-foreground group-hover:text-accent">
-                      {label}
-                    </span>
-                    <span className="mt-0.5 block text-sm text-muted">
-                      {hint}
-                    </span>
-                  </span>
-                  <ArrowRight
-                    className="mt-1 h-5 w-5 shrink-0 text-muted transition group-hover:translate-x-0.5 group-hover:text-accent sm:mt-0"
-                    aria-hidden
-                  />
-                </Link>
-              </li>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {ENTRY_PATHS.map((item) => (
+              <EntryPathCard key={item.href} {...item} />
             ))}
-          </ul>
+          </div>
+        </div>
+      </section>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
-            <Link
-              href="/rankingi"
-              className="inline-flex items-center gap-2 hover:text-accent"
-            >
-              <Trophy className="h-4 w-4" aria-hidden />
-              Rankingi
-            </Link>
-            <Link
-              href="/wyzwania"
-              className="inline-flex items-center gap-2 hover:text-accent"
-            >
-              <Flame className="h-4 w-4" aria-hidden />
-              Wyzwanie dnia
-            </Link>
+      <section className="border-b border-surface-border bg-surface/35 py-14 sm:py-20">
+        <div className="page-container px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+            <div>
+              <p className="text-overline">MATERIAŁY W ŚRODKU</p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+                Nie zaczynasz od pustej kartki
+              </h2>
+              <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
+                Masz gotową bazę do pracy: zadania, minigry i oficjalne arkusze.
+                Wchodzisz, wybierasz cel i robisz następny krok.
+              </p>
+            </div>
+            <PlatformStatus variant="cards" />
           </div>
         </div>
       </section>
@@ -274,38 +334,82 @@ export function HomeDashboard() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,color-mix(in_srgb,var(--accent)_8%,transparent),transparent_50%)]"
           aria-hidden
         />
-        <div className="page-container relative">
-          <h2 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-            Od tematu do arkusza
-          </h2>
-          <p className="mt-3 max-w-xl text-base text-muted">
-            Prosta kolejność: ścieżka, trening, sprawdzenie na arkuszu.
-          </p>
+        <div className="page-container relative px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+          <div className="max-w-2xl">
+            <p className="text-overline">PROSTY RYTM NAUKI</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Od pierwszego zadania do wyniku
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              Nie chodzi o siedzenie nad matematyką przez cały dzień. Chodzi o
+              regularne, konkretne sesje.
+            </p>
+          </div>
 
-          <ol className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8">
+          <ol className="mt-10 grid gap-4 lg:grid-cols-3">
             {STEPS.map((step) => (
-              <li key={step.n} className="min-w-0">
-                <p className="text-sm font-bold tracking-wide text-accent">
+              <li
+                key={step.n}
+                className="card-raised flex min-h-52 flex-col p-5 sm:p-6"
+              >
+                <span className="text-sm font-extrabold tracking-[0.12em] text-accent">
                   {step.n}
-                </p>
-                <h3 className="mt-3 text-lg font-bold text-foreground">
+                </span>
+                <h3 className="mt-7 text-xl font-extrabold tracking-tight text-foreground">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
+                <p className="mt-3 text-sm leading-relaxed text-muted">
                   {step.text}
                 </p>
               </li>
             ))}
           </ol>
 
-          <div className="mt-12">
-            <Link href="/trening" className="btn-chunky px-8 py-4 text-base">
-              Przejdź do treningu
-              <ArrowRight className="h-5 w-5" aria-hidden />
+          <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.45fr)]">
+            <div className="card-raised flex flex-col justify-between gap-6 p-5 sm:flex-row sm:items-center sm:p-6">
+              <div>
+                <p className="text-overline">WIĘCEJ MOTYWACJI</p>
+                <h3 className="mt-2 text-xl font-extrabold tracking-tight text-foreground">
+                  Nauka, która nie kończy się na teorii
+                </h3>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+                  Wskocz w krótką minigrę, zrób wyzwanie dnia albo porównaj
+                  wynik w rankingu.
+                </p>
+              </div>
+              <div className="flex shrink-0 flex-wrap gap-2 text-xs font-bold text-muted">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                  <Gamepad2 className="h-3.5 w-3.5" aria-hidden />
+                  Minigry
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                  <Flame className="h-3.5 w-3.5" aria-hidden />
+                  Wyzwania
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                  <Trophy className="h-3.5 w-3.5" aria-hidden />
+                  Rankingi
+                </span>
+              </div>
+            </div>
+
+            <Link
+              href="/trening"
+              className="card-raised group flex items-center justify-between gap-4 p-5 sm:p-6"
+            >
+              <span>
+                <span className="block text-sm font-bold text-muted">
+                  Gotowy?
+                </span>
+                <span className="mt-1 block text-lg font-extrabold tracking-tight text-foreground group-hover:text-accent">
+                  Przejdź do treningu
+                </span>
+              </span>
+              <ArrowRight
+                className="h-5 w-5 shrink-0 text-accent transition group-hover:translate-x-1"
+                aria-hidden
+              />
             </Link>
-            <p className="mt-3 text-xs text-muted">
-              Aktualna ścieżka: {pathLabel}
-            </p>
           </div>
         </div>
       </section>

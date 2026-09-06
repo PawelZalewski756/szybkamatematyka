@@ -14,6 +14,7 @@ import {
   type ProfileUpdatedDetail,
 } from "@/lib/profile-sync";
 import type { User } from "@supabase/supabase-js";
+import { usePathname } from "next/navigation";
 import {
   useCallback,
   useEffect,
@@ -29,6 +30,7 @@ type OnboardingGateProps = {
 const emptySubscribe = () => () => {};
 
 export function OnboardingGate({ children }: OnboardingGateProps) {
+  const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [ready, setReady] = useState(false);
@@ -98,8 +100,27 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
       window.removeEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);
   }, [user]);
 
-  const userBlocked = ready && user !== null && profileNeedsOnboarding(profile);
+  const shouldPromptOnboarding =
+    pathname === "/" ||
+    pathname === "/trening" ||
+    (pathname.startsWith("/trening/") &&
+      !pathname.startsWith("/trening/arkusze")) ||
+    pathname === "/minigry" ||
+    pathname.startsWith("/minigry/") ||
+    pathname === "/pojedynki" ||
+    pathname.startsWith("/pojedynki/") ||
+    pathname === "/powtorki" ||
+    pathname.startsWith("/powtorki/") ||
+    pathname === "/wyzwania" ||
+    pathname === "/profil";
+
+  const userBlocked =
+    shouldPromptOnboarding &&
+    ready &&
+    user !== null &&
+    profileNeedsOnboarding(profile);
   const guestBlocked =
+    shouldPromptOnboarding &&
     hydrated &&
     ready &&
     !user &&

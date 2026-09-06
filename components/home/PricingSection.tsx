@@ -21,13 +21,13 @@ function PlanCta({
   onBuy: (planId: string) => void;
 }) {
   const base =
-    "mt-5 w-full rounded-lg py-2.5 text-center text-sm font-medium transition";
+    "mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl px-3 py-2.5 text-center text-sm font-bold transition";
 
   if (!plan.paid) {
     return (
       <Link
         href={isLoggedIn ? "/trening" : "/login"}
-        className={`${base} border border-white/15 text-slate-200 hover:border-white/25 hover:bg-white/[0.04]`}
+        className={`${base} border border-surface-border bg-surface text-foreground shadow-sm hover:border-accent/40 hover:bg-surface-hover`}
       >
         {isLoggedIn ? "Korzystaj za darmo" : "Zacznij bez opłat"}
       </Link>
@@ -38,7 +38,7 @@ function PlanCta({
     return (
       <Link
         href="/profil"
-        className={`${base} border border-emerald-500/25 text-emerald-300/90 hover:bg-emerald-500/5`}
+        className={`${base} border border-success/40 bg-success/10 text-success hover:bg-success/15`}
       >
         Masz aktywny plan
       </Link>
@@ -49,7 +49,7 @@ function PlanCta({
     return (
       <Link
         href="/login"
-        className={`${base} border border-white/12 text-slate-400 hover:border-white/20 hover:text-slate-200`}
+        className={`${base} border border-surface-border text-muted hover:border-accent/40 hover:bg-accent-soft hover:text-accent`}
       >
         Zaloguj się, aby wykupić
       </Link>
@@ -62,7 +62,7 @@ function PlanCta({
       type="button"
       disabled={pending}
       onClick={() => onBuy(plan.id)}
-      className={`${base} inline-flex items-center justify-center gap-2 border border-white/12 text-slate-300 hover:border-teal-500/30 hover:bg-teal-500/5 hover:text-white disabled:opacity-50`}
+      className={`${base} gap-2 border border-accent/50 bg-accent-soft text-accent hover:bg-accent/15 disabled:opacity-50`}
     >
       {pending && <Loader2 className="h-4 w-4 animate-spin" />}
       {pending ? "Przekierowuję…" : "Wybierz plan"}
@@ -98,39 +98,51 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
         {SUBSCRIPTION_PLANS.map((plan) => (
           <article
             key={plan.id}
-            className={`flex flex-col rounded-xl border border-white/[0.08] bg-white/[0.02] ${
-              compact ? "p-4" : "p-5"
-            }`}
+            className={`relative flex h-full flex-col rounded-2xl border ${
+              plan.highlighted
+                ? "border-accent/60 bg-accent-soft/45 shadow-lg shadow-accent/10"
+                : "border-surface-border bg-surface"
+            } ${compact ? "p-4" : "p-6"}`}
           >
+            {plan.badge ? (
+              <span className="absolute -top-3 left-5 rounded-full border border-accent/50 bg-accent px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-on-accent shadow-lg shadow-accent/10">
+                {plan.badge}
+              </span>
+            ) : null}
+
             <div className="flex items-baseline justify-between gap-2">
-              <h3 className="text-sm font-semibold text-slate-200">{plan.name}</h3>
+              <h3
+                className={`text-base font-bold ${
+                  plan.highlighted ? "text-accent" : "text-foreground"
+                }`}
+              >
+                {plan.name}
+              </h3>
               {!plan.paid && (
-                <span className="text-[10px] font-medium uppercase tracking-wide text-slate-600">
-                  domyślny
-                </span>
+                <span className="text-overline">domyślny</span>
               )}
             </div>
 
-            <p className="mt-2 text-xl font-semibold tabular-nums text-white">
+            <p className="mt-3 text-2xl font-extrabold tabular-nums text-foreground">
               {plan.price}
-              <span className="ml-1 text-xs font-normal text-slate-500">
+              <span className="ml-1 text-xs font-medium text-muted">
                 / {plan.period}
               </span>
             </p>
 
-            <p className="mt-2 text-xs leading-relaxed text-slate-500">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               {plan.description}
             </p>
 
-            <ul className="mt-4 flex-1 space-y-1.5">
+            <ul className="mt-5 flex-1 space-y-2">
               {plan.features.map((f) => (
                 <li
                   key={f}
-                  className="flex items-start gap-2 text-xs leading-relaxed text-slate-400"
+                  className="flex items-start gap-2 text-sm leading-relaxed text-muted"
                 >
                   <Check
                     size={14}
-                    className="mt-0.5 shrink-0 text-slate-600"
+                    className="mt-0.5 shrink-0 text-accent"
                     aria-hidden
                   />
                   {f}
@@ -139,7 +151,7 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
             </ul>
 
             {loading ? (
-              <div className="mt-5 flex items-center justify-center gap-2 py-2.5 text-xs text-slate-500">
+              <div className="mt-5 flex items-center justify-center gap-2 py-2.5 text-xs text-muted">
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
                 Sprawdzam…
               </div>
@@ -157,12 +169,15 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
       </div>
 
       {error && (
-        <p className="mt-3 text-center text-xs text-red-400/90">{error}</p>
+        <p className="mt-3 text-center text-xs text-danger">{error}</p>
       )}
 
-      <p className="mt-4 text-xs leading-relaxed text-slate-600">
+      <p className="mt-4 text-xs leading-relaxed text-muted">
         Płatności przez Stripe — możesz anulować w dowolnym momencie.{" "}
-        <Link href="/cennik" className="text-slate-400 underline-offset-2 hover:text-slate-300 hover:underline">
+        <Link
+          href="/cennik"
+          className="text-accent underline-offset-2 hover:text-foreground hover:underline"
+        >
           Szczegóły cennika
         </Link>
       </p>

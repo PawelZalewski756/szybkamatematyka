@@ -37,24 +37,24 @@ function ArchiveSheetCard({ sheet }: { sheet: ExamArchiveSheetMeta }) {
   return (
     <Link
       href={officialCkeSheetHref(sheet.id)}
-      className="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-lg backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-xl hover:ring-emerald-400/40"
+      className="card-raised group flex min-h-[11rem] flex-col justify-between p-4 sm:p-5"
     >
       <div className="flex items-start justify-between gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-emerald-500/30 bg-emerald-500/15 text-emerald-300">
+        <div className="icon-chip flex h-11 w-11 shrink-0 rounded-xl">
           <FileText className="h-5 w-5" aria-hidden />
         </div>
-        <span className="rounded-full border border-white/10 bg-zinc-900/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-zinc-400">
+        <span className="rounded-full border border-surface-border bg-surface-hover px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-muted">
           {kindLabel}
         </span>
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-black text-white group-hover:text-orange-400">
+        <h3 className="text-lg font-bold text-foreground group-hover:text-accent">
           {sheet.title}
         </h3>
-        <p className="mt-2 text-sm text-zinc-400">
+        <p className="mt-2 text-sm text-muted">
           {sheet.taskIds.length} zadań · rozwiązania krok po kroku
         </p>
-        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-orange-300/90 opacity-0 transition-opacity group-hover:opacity-100">
+        <p className="mt-3 text-xs font-bold uppercase tracking-wide text-accent transition-opacity sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-visible:opacity-100">
           Otwórz arkusz →
         </p>
       </div>
@@ -64,10 +64,8 @@ function ArchiveSheetCard({ sheet }: { sheet: ExamArchiveSheetMeta }) {
 
 function CmsArkuszCard({
   group,
-  accent,
 }: {
   group: CmsArkuszGroup;
-  accent: "emerald" | "cyan";
 }) {
   const sample = group.tasks[0];
   const arkusz = sample?.arkusz;
@@ -75,35 +73,24 @@ function CmsArkuszCard({
   const href = `/arkusze/${group.arkuszId}`;
   const sourceBadge =
     sample && group.typ === "matura" ? arkuszMaturaBadge(sample) : null;
-  const ring =
-    accent === "emerald"
-      ? "hover:ring-emerald-400/40 hover:shadow-emerald-500/10"
-      : "hover:ring-orange-500/40 hover:shadow-orange-500/10";
-
   return (
     <Link
       href={href}
-      className={`group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-lg backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-xl ${ring}`}
+      className="card-raised group flex min-h-[11rem] flex-col justify-between p-4 sm:p-5"
     >
       <div className="flex items-start justify-between gap-3">
-        <div
-          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border ${
-            accent === "emerald"
-              ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-300"
-              : "border-orange-500/30 bg-orange-500/15 text-amber-400"
-          }`}
-        >
+        <div className="icon-chip flex h-11 w-11 shrink-0 rounded-xl">
           <FileText className="h-5 w-5" aria-hidden />
         </div>
-        <span className="rounded-full border border-white/10 bg-zinc-900/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-zinc-400">
+        <span className="rounded-full border border-surface-border bg-surface-hover px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-muted">
           {sourceBadge ?? TYP_EGZAMINU_LABELS[group.typ]}
         </span>
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-black text-white group-hover:text-orange-400">
+        <h3 className="text-lg font-bold text-foreground group-hover:text-accent">
           {label}
         </h3>
-        <p className="mt-2 text-sm text-zinc-400">
+        <p className="mt-2 text-sm text-muted">
           {group.tasks.length} zadań · rozwiązania krok po kroku
         </p>
       </div>
@@ -115,14 +102,12 @@ function CmsYearSection({
   title,
   subtitle,
   groups,
-  accent,
   icon: Icon,
   yearFilter,
 }: {
   title: string;
   subtitle: string;
   groups: CmsArkuszGroup[];
-  accent: "emerald" | "cyan";
   icon: typeof GraduationCap;
   yearFilter: number | "all";
 }) {
@@ -132,30 +117,25 @@ function CmsYearSection({
   if (groups.length === 0 || yearGroups.length === 0) return null;
 
   return (
-    <section className="mt-10">
+    <section className="mt-8">
       <div className="flex items-center gap-2">
-        <Icon
-          className={`h-5 w-5 ${accent === "emerald" ? "text-emerald-400" : "text-orange-400"}`}
-          aria-hidden
-        />
+        <Icon className="h-5 w-5 text-accent" aria-hidden />
         <div className="flex flex-col">
-          <h2 className="text-lg font-black text-white sm:text-xl">{title}</h2>
-          <p className="mt-1 text-sm text-zinc-400">{subtitle}</p>
+          <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
+            {title}
+          </h2>
+          <p className="mt-1 text-sm text-muted">{subtitle}</p>
         </div>
       </div>
-      <div className="mt-8 space-y-10">
+      <div className="mt-6 space-y-8">
         {yearGroups.map(({ year, groups: yearItems }) => (
           <div key={year}>
-            <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
+            <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
               Rok {year}
             </h3>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {yearItems.map((group) => (
-                <CmsArkuszCard
-                  key={group.arkuszId}
-                  group={group}
-                  accent={accent}
-                />
+                <CmsArkuszCard key={group.arkuszId} group={group} />
               ))}
             </div>
           </div>
@@ -215,17 +195,15 @@ export function ArkuszeCkeCatalog({
   return (
     <div className="page-container relative z-10 w-full py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-2xl font-black text-white sm:text-3xl">
+        <h1 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
           Arkusze{" "}
-          <span className="bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
-            CKE
-          </span>
+          <span className="text-accent">CKE</span>
         </h1>
-        <p className="mt-2 text-sm text-zinc-400">
+        <p className="mt-2 text-sm text-muted">
           Oficjalne sesje matury podstawowej.{" "}
           <Link
             href="/baza-zadan"
-            className="font-semibold text-orange-400 hover:text-orange-200"
+            className="font-semibold text-accent hover:text-foreground"
           >
             Pełny katalog →
           </Link>
@@ -239,36 +217,49 @@ export function ArkuszeCkeCatalog({
       )}
 
       {errorNote && !hasArchive && (
-        <p className="mt-6 rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+        <p className="mt-6 rounded-2xl border border-accent/30 bg-accent-soft px-4 py-3 text-sm text-foreground">
           {errorNote}
         </p>
       )}
 
       {hasArchive && archiveYears.length > 1 && (
-        <label className="mt-6 flex items-center gap-2 text-sm text-zinc-400">
-          <span className="shrink-0 font-semibold">Rok:</span>
-          <select
-            value={yearFilter === "all" ? "all" : String(yearFilter)}
-            onChange={(event) => {
-              const value = event.target.value;
-              setYearFilter(value === "all" ? "all" : Number(value));
-            }}
-            className="rounded-lg border border-white/15 bg-zinc-900/80 px-3 py-1.5 text-sm font-semibold text-zinc-200 outline-none focus:border-orange-500/40"
+        <div
+          className="mt-6 flex flex-wrap items-center gap-2"
+          role="group"
+          aria-label="Filtruj arkusze po roku"
+        >
+          <span className="text-overline mr-1">Rok</span>
+          <button
+            type="button"
+            aria-pressed={yearFilter === "all"}
+            onClick={() => setYearFilter("all")}
+            className={`filter-chip ${
+              yearFilter === "all" ? "filter-chip-active" : ""
+            }`}
           >
-            <option value="all">Wszystkie</option>
-            {archiveYears.map((year) => (
-              <option key={year} value={year}>
+            Wszystkie
+          </button>
+          {archiveYears.map((year) => {
+            const active = yearFilter === year;
+            return (
+              <button
+                key={year}
+                type="button"
+                aria-pressed={active}
+                onClick={() => setYearFilter(year)}
+                className={`filter-chip ${active ? "filter-chip-active" : ""}`}
+              >
                 {year}
-              </option>
-            ))}
-          </select>
-        </label>
+              </button>
+            );
+          })}
+        </div>
       )}
 
       {!hasArchive && e8Groups.length === 0 && extraCmsGroups.length === 0 && !schemaMissing && (
-        <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center backdrop-blur-xl">
-          <p className="text-lg font-black text-white">Brak arkuszy</p>
-          <p className="mx-auto mt-2 max-w-md text-sm text-zinc-400">
+        <div className="mt-10 rounded-2xl border border-surface-border bg-surface p-8 text-center">
+          <p className="text-lg font-extrabold text-foreground">Brak arkuszy</p>
+          <p className="mx-auto mt-2 max-w-md text-sm text-muted">
             Oficjalne sesje CKE powinny być w archiwum aplikacji. Sprawdź
             wdrożenie albo wróć do treningu tematycznego.
           </p>
@@ -276,25 +267,25 @@ export function ArkuszeCkeCatalog({
       )}
 
       {archiveMatura.length > 0 && (
-        <section className="mt-10">
+        <section className="mt-8">
           <div className="flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-emerald-400" aria-hidden />
+            <GraduationCap className="h-5 w-5 text-accent" aria-hidden />
             <div>
-              <h2 className="text-lg font-black text-white sm:text-xl">
+              <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
                 Matura CKE — oficjalne sesje
               </h2>
-              <p className="mt-1 text-sm text-zinc-400">
+              <p className="mt-1 text-sm text-muted">
                 Poziom podstawowy, od najnowszych sesji.
               </p>
             </div>
           </div>
-          <div className="mt-8 space-y-10">
+          <div className="mt-6 space-y-8">
             {archiveMatura.map(({ year, sheets }) => (
               <div key={year}>
-                <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
+                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
                   Rok {year}
                 </h3>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {sheets.map((sheet) => (
                     <ArchiveSheetCard key={sheet.id} sheet={sheet} />
                   ))}
@@ -306,25 +297,25 @@ export function ArkuszeCkeCatalog({
       )}
 
       {archiveE8.length > 0 && (
-        <section className="mt-10">
+        <section className="mt-8">
           <div className="flex items-center gap-2">
-            <School className="h-5 w-5 text-orange-400" aria-hidden />
+            <School className="h-5 w-5 text-accent" aria-hidden />
             <div>
-              <h2 className="text-lg font-black text-white sm:text-xl">
+              <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
                 Egzamin ósmoklasisty
               </h2>
-              <p className="mt-1 text-sm text-zinc-400">
+              <p className="mt-1 text-sm text-muted">
                 Oficjalne arkusze CKE dla klasy 8.
               </p>
             </div>
           </div>
-          <div className="mt-8 space-y-10">
+          <div className="mt-6 space-y-8">
             {archiveE8.map(({ year, sheets }) => (
               <div key={year}>
-                <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-zinc-500">
+                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
                   Rok {year}
                 </h3>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {sheets.map((sheet) => (
                     <ArchiveSheetCard key={sheet.id} sheet={sheet} />
                   ))}
@@ -336,7 +327,7 @@ export function ArkuszeCkeCatalog({
       )}
 
       {hasArchive && archiveE8.length === 0 && e8Groups.length === 0 && (
-        <p className="mt-8 text-sm text-zinc-500">
+        <p className="mt-8 text-sm text-muted">
           Egzamin ósmoklasisty pojawi się tutaj po imporcie oficjalnych arkuszy
           CKE.
         </p>
@@ -346,7 +337,6 @@ export function ArkuszeCkeCatalog({
         title="Egzamin ósmoklasisty"
         subtitle="Arkusze z bazy serwisu"
         groups={e8Groups}
-        accent="cyan"
         icon={School}
         yearFilter="all"
       />
@@ -355,7 +345,6 @@ export function ArkuszeCkeCatalog({
         title="Dodatkowe arkusze"
         subtitle="Materiały spoza oficjalnego archiwum CKE"
         groups={extraCmsGroups}
-        accent="cyan"
         icon={GraduationCap}
         yearFilter="all"
       />

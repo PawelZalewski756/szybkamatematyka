@@ -42,6 +42,8 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
       "Filtry po roku, dziale i typie egzaminu",
       "Anulujesz kiedy chcesz",
     ],
+    highlighted: true,
+    badge: "Najczęściej wybierany",
     paid: true,
     priceEnvVar: "STRIPE_PRICE_PRO",
   },
