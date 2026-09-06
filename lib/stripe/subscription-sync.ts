@@ -1,5 +1,8 @@
 import type Stripe from "stripe";
-import { getServiceSupabaseOrNull } from "@/lib/stripe/service-supabase";
+import {
+  getServiceSupabaseOrNull,
+  isServiceRoleConfigured,
+} from "@/lib/stripe/service-supabase";
 import { planIdForPriceId, type SubscriptionPlanId } from "@/lib/subscription/plans";
 import {
   normalizeSubscriptionStatus,
@@ -11,8 +14,9 @@ import type { PostgrestError } from "@supabase/supabase-js";
 /**
  * Synchronizacja stanu subskrypcji ze Stripe do tabeli `profiles` (service role).
  * Wywoływana z webhooka — nie ma tu sesji użytkownika, więc używamy klucza
- * serwisowego (omija RLS). Gdy brak konfiguracji service role, logujemy i
- * pomijamy zapis (kod się buduje, webhook nie wywróci aplikacji).
+ * serwisowego (omija RLS). Brak konfiguracji albo błąd zapisu jest błędem
+ * przetwarzania webhooka — wywołujący musi dostać 5xx, aby Stripe ponowił
+ * dostarczenie zamiast trwale zgubić zmianę subskrypcji.
  */
 
 type ProfileSubscriptionPatch = {
@@ -69,10 +73,11 @@ async function applyPatch(
 ): Promise<void> {
   const supabase = getServiceSupabaseOrNull();
   if (!supabase) {
-    console.warn(
-      "[stripe-webhook] Brak SUPABASE_SERVICE_ROLE_KEY — pomijam zapis subskrypcji.",
+    throw new Error(
+      isServiceRoleConfigured()
+        ? "Nie udało się utworzyć klienta Supabase service role."
+        : "Brak SUPABASE_SERVICE_ROLE_KEY — nie można zapisać subskrypcji.",
     );
-    return;
   }
 
   let { error } = await supabase
@@ -94,6 +99,7 @@ async function applyPatch(
 
   if (error) {
     console.error("[stripe-webhook] Zapis subskrypcji nieudany:", error);
+    throw new Error("Zapis subskrypcji w profilu nieudany.");
   }
 }
 

@@ -1,36 +1,71 @@
 # Wdrożenie Szybka Matematyka
 
-Checklist przed uruchomieniem produkcyjnym (Vercel + Supabase).
+Checklist przed uruchomieniem produkcyjnym (Vercel + Supabase + Stripe).
 
-## 1. Zmienne środowiskowe (`.env.local` / Vercel)
+## 1. Zmienne środowiskowe
 
-Skopiuj z `.env.example` i uzupełnij:
+Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 
 | Zmienna | Wymagane | Opis |
 |---------|----------|------|
 | `NEXT_PUBLIC_SUPABASE_URL` | tak | URL projektu Supabase |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | tak | Klucz anon |
-| `NEXT_PUBLIC_SITE_URL` | produkcja | np. `https://szybkamatematyka.pl` |
-| `ADMIN_EMAILS` | tak | E-maile adminów (serwer) |
-| `NEXT_PUBLIC_ADMIN_EMAILS` | tak | To samo (gate UI `/admin`) |
-| `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań CKE / API |
-| `SUPABASE_SERVICE_ROLE_KEY` | webhook Stripe | Zapis subskrypcji (później) |
-| `STRIPE_*` | później | Monetyzacja |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | tak | Publiczny klucz anon |
+| `NEXT_PUBLIC_SITE_URL` | produkcja | Pełny adres aplikacji, np. `https://szybkamatematyka.pl` |
+| `ADMIN_EMAILS` | tak | Serwerowa lista e-maili adminów, po przecinku |
+| `NEXT_PUBLIC_ADMIN_EMAILS` | tak | Ta sama lista dla gate'u UI `/admin` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Stripe / quota | Nigdy nie wystawiaj jej w przeglądarce |
+| `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań i asysta |
+| `STRIPE_SECRET_KEY` | płatności | Sekret Stripe test/live |
+| `STRIPE_WEBHOOK_SECRET` | płatności | Sekret endpointu webhooka |
+| `STRIPE_PRICE_PRO` | płatności | Price ID planu miesięcznego |
+| `STRIPE_PRICE_ROCZNY` | płatności | Price ID planu rocznego |
 
-## 2. Migracje Supabase (SQL Editor, w kolejności)
+`ADMIN_EMAILS` jest źródłem prawdy po stronie serwera. `NEXT_PUBLIC_ADMIN_EMAILS`
+służy tylko do ukrycia/pokazania panelu w przeglądarce — obie wartości muszą być
+identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
-Uruchom pliki z `supabase/migrations/`:
+## 2. Supabase — kolejność SQL
 
-1. `20260529120000_harden_rls_admin_writes.sql`
-2. `20260529130000_add_subscription_columns.sql`
-3. `20260529135000_add_daily_challenges.sql`
-4. `20260529140000_add_review_schedule.sql`
-5. `20260529140100_init_duel_rooms.sql`
-6. `20260529150000_audit_harden_new_tables_rls.sql`
-7. `20260529160000_add_duel_results.sql`
-8. `20260529161000_add_achievements.sql`
+Repozytorium zawiera starsze pliki SQL przeznaczone do uruchamiania w SQL
+Editorze. Nie uruchamiaj ich w przypadkowej kolejności. Na świeżym projekcie
+wykonaj poniższe kroki:
 
-Następnie dodaj siebie do adminów:
+1. `supabase/profiles.sql`
+2. `supabase/migrations/init_profiles_avatars.sql`
+3. `supabase/migrations/init_baza_zadan.sql`
+4. `supabase/migrations/init_tasks.sql`
+5. `supabase/migrations/init_materials.sql`
+6. `supabase/migrations/init_solved_tasks.sql`
+7. Drobne migracje profilu i danych:
+   `add_avatar_url_only.sql`, `add_last_nick_update.sql`,
+   `add_profile_hearts.sql`, `add_profile_minigry_xp.sql`,
+   `add_profile_school_class.sql`, `add_profile_streak_columns.sql`,
+   `add_arkusz_miesiac.sql`, `add_zadania_source_id.sql`,
+   `krok2_tylko_source_id.sql`, `fix_cke_legacy_slugs.sql`.
+8. Migracje funkcjonalne w kolejności dat:
+   `20260529130000_add_subscription_columns.sql`,
+   `20260529135000_add_daily_challenges.sql`,
+   `20260529140000_add_review_schedule.sql`,
+   `20260529140100_init_duel_rooms.sql`,
+   `20260529160000_add_duel_results.sql`,
+   `20260529161000_add_achievements.sql`,
+   `20260703000000_materials_created_at.sql`,
+   `20260714210000_add_ai_assist_quota.sql`.
+9. Na końcu uruchom:
+   `20260906220000_production_hardening.sql`.
+
+`20260529120000_harden_rls_admin_writes.sql` i
+`20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
+plikami hardeningu. Nie są wymagane w nowej instalacji — końcowa migracja
+odtwarza ich potrzebne elementy po utworzeniu tabel.
+
+Ostatni plik sprawdza istnienie tabel bazowych i końcowo ustawia RLS. Zamyka
+zapis anon/authenticated do `arkusze`, `zadania`, `tasks` i `materials`,
+zostawiając zapis wyłącznie dla adminów przez `public.is_admin()`. Ponownie
+tworzy polityki own-row dla postępu, wyzwań, powtórek, osiągnięć i historii
+pojedynków oraz chroni pola subskrypcji i limitu asysty w `profiles`.
+
+Po hardeningu dodaj adminów:
 
 ```sql
 insert into public.admin_emails (email)
@@ -38,31 +73,80 @@ values ('twoj@email.pl')
 on conflict do nothing;
 ```
 
-## 3. Treść CKE (rozwiązania)
+### Seed danych
+
+`add_tasks_materials_insert.sql` otwiera zapis dla anon i authenticated. To
+plik wyłącznie do jednorazowego, lokalnego/stagingowego seedu i nie wolno go
+uruchamiać na produkcji. Na produkcji używaj `SUPABASE_SERVICE_ROLE_KEY` w
+skryptach seedujących, a po każdym seedzie uruchom ponownie
+`20260906220000_production_hardening.sql`.
 
 ```bash
-npm run audit:cke                    # raport placeholderów
-npm run seed:cke-matura -- --fill-solutions --replace   # Gemini → cache + DB
-npm run seed:cke-matura -- --only=m25-maj --fill-solutions --replace  # jedna sesja
+npm run seed:trening-tasks -- --dry-run
+npm run seed:trening-tasks
+npm run audit:trening
+npm run audit:questions
 ```
 
-## 4. Jakość pytań
+## 3. Kontrola RLS po wdrożeniu
+
+W SQL Editorze sprawdź, czy nie ma publicznych polityk zapisu:
+
+```sql
+select schemaname, tablename, policyname, cmd, roles
+from pg_policies
+where schemaname = 'public'
+  and cmd <> 'SELECT'
+  and roles::text ilike '%anon%';
+```
+
+Powinno zostać 0 wierszy dla tabel treści i profilu. Publiczne polityki
+`duel_rooms` są wyjątkiem opisanym w migracji: gra anonimowa wymaga odczytu,
+insertu i update bez logowania, ale pokój ma blokadę zmian strukturalnych.
+
+Sprawdź również:
+
+```sql
+select relname, relrowsecurity
+from pg_class
+where relnamespace = 'public'::regnamespace
+  and relname in (
+    'profiles', 'solved_tasks', 'daily_challenges', 'review_schedule',
+    'user_achievements', 'duel_results', 'arkusze', 'zadania', 'tasks',
+    'materials'
+  )
+order by relname;
+```
+
+Każda wymieniona tabela powinna mieć `relrowsecurity = true`.
+
+## 4. Treść i CI
 
 ```bash
-npm run audit:questions    # katalog lokalny (1275 zadań MC)
-npm run audit:trening      # zadania areny w Supabase
-npm test                   # testy jednostkowe banków
+npm run audit:cke
+npm run audit:questions
+npm run audit:trening
+npm test
+npm run lint
+npx tsc --noEmit
+npm run build
 ```
 
-## 5. CI (GitHub Actions)
+CI (`.github/workflows/ci.yml`) uruchamia lint, TypeScript, testy i build.
+E2E lokalnie: `npm run test:e2e`.
 
-Pipeline `.github/workflows/ci.yml`: `lint` → `tsc` → `npm test` → `build`.
+## 5. Stripe w trybie testowym
 
-E2E lokalnie: `npm run test:e2e` (nie w CI — wolniejsze). Skopiuj najpierw `.env.example` → `.env.local` albo pozwól Playwrightowi użyć placeholderów Supabase z `playwright.config.ts`.
+1. Utwórz produkty i ceny testowe, a następnie ustaw oba `STRIPE_PRICE_*`.
+2. Wdróż aplikację z `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`,
+   `SUPABASE_SERVICE_ROLE_KEY` i `NEXT_PUBLIC_SITE_URL`.
+3. Skonfiguruj endpoint `POST /api/stripe/webhook`.
+4. W Stripe CLI przekaż zdarzenia testowe do endpointu i sprawdź:
+   `checkout.session.completed`, `customer.subscription.updated` oraz
+   `customer.subscription.deleted`.
+5. Potwierdź, że webhook aktualizuje tylko właściwy profil i że użytkownik
+   nie może sam zmienić `subscription_*`, `stripe_*` ani `ai_assist_*`.
 
-## 6. Stripe (opcjonalnie, później)
-
-1. Utwórz produkty/ceny w Stripe.
-2. Ustaw `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_*`.
-3. Webhook: `POST /api/stripe/webhook`.
-4. `SUPABASE_SERVICE_ROLE_KEY` dla zapisu statusu subskrypcji.
+Webhook zwraca `503`, gdy brakuje klucza service role, oraz `500` po błędzie
+zapisu profilu. Dzięki temu Stripe ponawia dostarczenie zamiast trwale zgubić
+zmianę subskrypcji.

@@ -14,11 +14,13 @@ type GateState = "checking" | "allowed" | "denied";
  */
 export function AdminGate({ children }: { children: ReactNode }) {
   const [state, setState] = useState<GateState>(() =>
-    isSupabaseConfigured() ? "checking" : "denied",
+    isSupabaseConfigured() && isAdminWhitelistConfigured()
+      ? "checking"
+      : "denied",
   );
 
   useEffect(() => {
-    if (!isSupabaseConfigured()) return;
+    if (!isSupabaseConfigured() || !isAdminWhitelistConfigured()) return;
 
     const supabase = getSupabaseOrNull();
     if (!supabase) {
@@ -38,7 +40,7 @@ export function AdminGate({ children }: { children: ReactNode }) {
         return;
       }
 
-      if (isAdminWhitelistConfigured() && !isAdminEmail(user.email)) {
+      if (!isAdminEmail(user.email)) {
         setState("denied");
         return;
       }

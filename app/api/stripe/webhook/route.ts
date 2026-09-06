@@ -9,6 +9,7 @@ import {
   markSubscriptionCanceled,
   syncSubscriptionToProfile,
 } from "@/lib/stripe/subscription-sync";
+import { isServiceRoleConfigured } from "@/lib/stripe/service-supabase";
 
 // Weryfikacja podpisu Stripe wymaga Node crypto → runtime Node (nie Edge).
 export const runtime = "nodejs";
@@ -33,9 +34,16 @@ export const dynamic = "force-dynamic";
  *  - customer.subscription.deleted
  */
 export async function POST(request: Request) {
-  if (!isStripeConfigured() || !isStripeWebhookConfigured()) {
+  if (
+    !isStripeConfigured() ||
+    !isStripeWebhookConfigured() ||
+    !isServiceRoleConfigured()
+  ) {
     return Response.json(
-      { error: "Webhook Stripe nie jest skonfigurowany." },
+      {
+        error:
+          "Webhook Stripe nie jest skonfigurowany (wymaga także klucza Supabase service role).",
+      },
       { status: 503 },
     );
   }

@@ -3,15 +3,16 @@ import { createClient, type User } from "@supabase/supabase-js";
 /**
  * Whitelist administratorów.
  *
- * Źródłem prawdy jest serwerowa zmienna ADMIN_EMAILS (lista adresów po przecinku).
- * NEXT_PUBLIC_ADMIN_EMAILS jest opcjonalnym lustrem dla gate'u w UI panelu admina
- * (przeglądarka widzi tylko zmienne z prefiksem NEXT_PUBLIC_). Ustaw obie na tę
- * samą wartość. Realne wymuszenie i tak dzieje się po stronie serwera (route
- * handler) oraz w RLS Supabase — gate w UI to tylko UX.
+ * Źródłem prawdy po stronie serwera jest ADMIN_EMAILS (lista adresów po
+ * przecinku). Przeglądarka korzysta wyłącznie z NEXT_PUBLIC_ADMIN_EMAILS jako
+ * lustra dla gate'u UI. Ustaw obie zmienne na tę samą wartość — publiczna lista
+ * nie może być używana przez serwer do nadawania uprawnień.
  */
 export function getAdminEmails(): string[] {
   const raw =
-    process.env.ADMIN_EMAILS ?? process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? "";
+    typeof window === "undefined"
+      ? process.env.ADMIN_EMAILS ?? ""
+      : process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? "";
   return raw
     .split(",")
     .map((email) => email.trim().toLowerCase())
@@ -52,9 +53,8 @@ export function getBearerToken(request: Request): string | null {
  *
  * Polityka:
  * - brak/niepoprawny token → 401,
- * - gdy whitelist ADMIN_EMAILS jest ustawiona → wymagany admin (inaczej 403),
- * - gdy whitelist nie jest ustawiona → wystarczy zalogowany użytkownik
- *   (degradacja: zamyka dziurę „każdy anonim”, choć zalecane jest ustawienie ADMIN_EMAILS).
+ * - brak whitelisty ADMIN_EMAILS → 403 (fail closed),
+ * - użytkownik spoza whitelisty → 403.
  */
 export async function verifyAdminRequest(
   request: Request,
@@ -80,8 +80,16 @@ export async function verifyAdminRequest(
     return { ok: false, status: 401, error: "Sesja wygasła lub jest nieprawidłowa." };
   }
 
+  if (!isAdminWhitelistConfigured()) {
+    return {
+      ok: false,
+      status: 403,
+      error: "Panel administratora nie jest skonfigurowany.",
+    };
+  }
+
   const admin = isAdminEmail(user.email);
-  if (isAdminWhitelistConfigured() && !admin) {
+  if (!admin) {
     return {
       ok: false,
       status: 403,

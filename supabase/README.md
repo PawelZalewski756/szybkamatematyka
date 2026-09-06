@@ -1,90 +1,109 @@
-# Konfiguracja bazy (Supabase)
+# Konfiguracja bazy Supabase
 
-Błąd **„Could not find the table public.zadania”** oznacza, że migracja nie została uruchomiona w Twoim projekcie Supabase.
+## Kolejność wdrożenia
 
-## Kroki (5 minut)
+Pliki w `supabase/migrations/` powstały w kilku etapach projektu. Część z nich
+ma historyczne, nietimestampowane nazwy i jest przeznaczona do ręcznego
+uruchomienia w SQL Editorze. Na świeżym projekcie wykonaj:
 
-### Krok 1 — tabele (tylko raz)
+1. `profiles.sql`
+2. `migrations/init_profiles_avatars.sql`
+3. `migrations/init_baza_zadan.sql`
+4. `migrations/init_tasks.sql`
+5. `migrations/init_materials.sql`
+6. `migrations/init_solved_tasks.sql`
+7. Drobne migracje `add_*`, `krok2_tylko_source_id.sql` i
+   `fix_cke_legacy_slugs.sql`, jeśli ich kolumny lub dane nie istnieją.
+8. Timestampowane migracje funkcjonalne w kolejności dat.
+9. **Ostatni krok:** `migrations/20260906220000_production_hardening.sql`.
 
-1. [supabase.com/dashboard](https://supabase.com/dashboard) → **SQL Editor** → **New query**
-2. Wklej cały plik `migrations/init_baza_zadan.sql` → **Run**
+Ostatnia migracja jest celowo restrykcyjna: przerwie działanie z komunikatem,
+jeśli nie istnieją wymagane tabele. Można uruchomić ją ponownie — naprawia
+przypadek, w którym wcześniejsze pliki hardeningu zostały uruchomione przed
+utworzeniem tabel.
 
-Jeśli widzisz **„policy … already exists”** — **krok 1 masz już zrobiony**. Nie uruchamiaj go ponownie. Przejdź od razu do kroku 2 (`krok2_tylko_source_id.sql`).
+Starsze pliki `20260529120000_harden_rls_admin_writes.sql` oraz
+`20260529150000_audit_harden_new_tables_rls.sql` są zastąpione przez końcowy
+hardening i nie trzeba ich uruchamiać na świeżej bazie.
 
-### Krok 2 — kolumna source_id
+## Admin i RLS
 
-Wklej i uruchom plik `migrations/krok2_tylko_source_id.sql` → **Run**
-5. W projekcie Next.js sprawdź `.env.local`:
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
-   ```
-   Klucze bierz z **Project Settings → API** (ten sam projekt!).
-6. Zrestartuj `npm run dev` i wejdź na `/admin`, aby dodać pierwszy arkusz.
+Po hardeningu dodaj adresy administratorów:
 
-## Seed testowy (3 zadania)
+```sql
+insert into public.admin_emails (email)
+values ('twoj@email.pl')
+on conflict do nothing;
+```
 
-Po migracji SQL:
+Finalny stan:
+
+- `arkusze`, `zadania`, `tasks` i `materials` są publicznie czytelne;
+- insert/update/delete tych tabel jest dostępny wyłącznie dla
+  zalogowanych adminów (`public.is_admin()`);
+- `profiles`, `solved_tasks`, `daily_challenges`, `review_schedule`,
+  `user_achievements` i `duel_results` używają own-row RLS;
+- `profiles` blokuje samodzielną zmianę pól subskrypcji Stripe i limitu asysty;
+- `duel_rooms` pozostaje świadomie otwarte dla anonimowych pojedynków, ale
+  trigger blokuje zmianę celu pokoju po jego utworzeniu.
+
+W aplikacji ustaw `ADMIN_EMAILS` oraz identyczne
+`NEXT_PUBLIC_ADMIN_EMAILS`. Serwer używa tylko `ADMIN_EMAILS`; publiczna
+zmienna jest wyłącznie wskazówką dla gate'u UI.
+
+## Seed danych
+
+Nie uruchamiaj `add_tasks_materials_insert.sql` na produkcji. Ten plik otwiera
+zapis dla anon/authenticated i służy tylko do lokalnego lub stagingowego
+seedu. Na produkcji skrypty seedujące powinny używać
+`SUPABASE_SERVICE_ROLE_KEY`, a po ich wykonaniu należy ponownie uruchomić
+`20260906220000_production_hardening.sql`.
 
 ```bash
-npm run seed:cke
+npm run seed:trening-tasks -- --dry-run
+npm run seed:trening-tasks
+npm run audit:trening
+npx tsx scripts/countDb.ts
 ```
 
-Skrypt `scripts/seedCKE.js` tworzy arkusz **Matura Maj 2024** i wgrywa 3 przykładowe zadania.
+## Awatary
 
-## Auto-import (~1000 zadań + Gemini)
+Aplikacja zapisuje pliki w publicznym bucketcie `avatary`. Uruchom
+`migrations/init_profiles_avatars.sql` albo `setup_avatary_bucket.sql`.
+Polityki Storage pozwalają odczyt publiczny oraz zapis, zmianę i usunięcie
+wyłącznie we własnym katalogu użytkownika.
 
-```bash
-npm run seed:auto -- --limit=10   # test
-npm run seed:auto                 # pełny import (długo!)
+## Kontrola po wdrożeniu
+
+W SQL Editorze sprawdź publiczne zapisy:
+
+```sql
+select schemaname, tablename, policyname, cmd, roles
+from pg_policies
+where schemaname = 'public'
+  and cmd <> 'SELECT'
+  and roles::text ilike '%anon%';
 ```
 
-Wymaga kolumny `source_id` — jeśli błąd 42703, uruchom **cały** plik `migrations/add_zadania_source_id.sql` (najpierw `ALTER`, potem indeks).
+Zapytanie powinno zwrócić 0 wierszy dla wszystkich tabel poza świadomie
+otwartym `duel_rooms`.
 
-## Profile i rankingi
+Sprawdź RLS:
 
-1. Uruchom `profiles.sql` (tabela `profiles`, RLS, trigger przy rejestracji).
-2. Uruchom `migrations/init_profiles_avatars.sql` (kolumna `avatar_url`, bucket Storage **`avatary`**).
-
-Bez kroku 2 upload awatara w profilu zwróci błąd kolumny lub Storage.
-
-### Bucket awatarów „avatary”
-
-Aplikacja zapisuje pliki do bucketa o id **`avatary`**.
-
-**Krok po kroku w Supabase:**
-
-1. Otwórz [supabase.com/dashboard](https://supabase.com/dashboard) → wybierz **ten sam projekt** co w `.env.local` (`NEXT_PUBLIC_SUPABASE_URL`).
-2. **SQL Editor** → **New query**.
-3. Wklej całą zawartość pliku `migrations/init_profiles_avatars.sql` (profil + bucket) **albo** tylko `setup_avatary_bucket.sql` (sam bucket i polityki Storage).
-4. Kliknij **Run**. Komunikat sukcesu lub brak błędu = OK; skrypt jest idempotentny (można uruchomić ponownie).
-5. **Storage** → **Buckets** — na liście musi być bucket **`avatary`**, oznaczony jako **Public**.
-6. Zrestartuj `npm run dev` i spróbuj ponownie wgrać awatar na `/profil`.
-
-Jeśli `INSERT` do `storage.buckets` zwraca błąd uprawnień, utwórz bucket ręcznie: **Storage** → **New bucket** → nazwa **`avatary`**, **Public bucket** włączone, limit 2 MB, typy PNG/JPG — potem uruchom `setup_avatary_bucket.sql` (polityki Storage).
-
-## Arena treningowa (`tasks`, `materials`)
-
-Po migracjach `init_tasks.sql` i `init_materials.sql` uruchom w SQL Editor:
-
-```
-migrations/add_tasks_materials_insert.sql
+```sql
+select relname, relrowsecurity
+from pg_class
+where relnamespace = 'public'::regnamespace
+order by relname;
 ```
 
-Dzięki temu skrypt `npm run seed:trening-tasks` może wstawiać zadania i materiały kluczem **anon** (bez `SUPABASE_SERVICE_ROLE_KEY`). Polityki INSERT/UPDATE/DELETE dla `tasks` i `materials` są otwarte dla anon i authenticated — odpowiednie tylko na etapie seedu; na produkcji rozważ polityki admin-only.
+## Najczęstsze błędy
 
-```bash
-npm run seed:trening-tasks              # ~5000 zadań + materiały teoretyczne
-npm run seed:trening-tasks -- --dry-run # podgląd bez zapisu
-npm run seed:trening-tasks -- --materials-only
-```
-
-Ponowne uruchomienie deduplikuje treść (SHA hash) — nie tworzy duplikatów. Liczniki w bazie: `npx tsx scripts/countDb.ts`.
-
-## Tabele
-
-- `arkusze` — matura / Egzamin 8-klasisty, miesiąc, rok
-- `zadania` — treść + rozwiązanie krok po kroku
-- `tasks` — arena treningowa (egzamin, dział, temat, XP)
-- `materials` — teoria przy tematach treningu
-- `profiles` — nick, XP, poziom, streak, `avatar_url`
+- `Could not find the table public.zadania` — uruchom
+  `migrations/init_baza_zadan.sql`.
+- `column source_id does not exist` — uruchom cały
+  `migrations/add_zadania_source_id.sql`.
+- Brak aktualizacji subskrypcji — sprawdź `SUPABASE_SERVICE_ROLE_KEY`,
+  `STRIPE_WEBHOOK_SECRET` i końcową migrację hardeningu.
+- Brak dostępu do panelu `/admin` — ustaw obie zmienne adminów oraz dodaj
+  adres w `public.admin_emails`.
