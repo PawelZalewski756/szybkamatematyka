@@ -365,44 +365,63 @@ test.describe("Smoke", () => {
     await page.goto("/trening");
     await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
     await expect(
-      page.getByRole("link", { name: /Zacznij tutaj/i }),
+      page.getByTestId("training-department-navigation"),
+    ).toBeVisible();
+    await expect(
+      page.getByTestId("training-next-step"),
     ).toHaveAttribute(
       "href",
       "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
     );
+    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
+    await expect(page.getByText("30 tematów").first()).toBeVisible();
     await expect(
-      page.locator(
-        'a[href="/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan"]',
-      ).last(),
-    ).toBeVisible();
-    await expect(
-      page.getByText(/30 tematów · 30 z zadaniami/),
-    ).toBeVisible();
-    await expect(
-      page.getByRole("button", { name: /Pokaż jeszcze/ }).first(),
+      page.getByRole("button", { name: /Pokaż tematy/ }).first(),
     ).toBeVisible();
   });
 
-  test("lista treningu pozwala rozwinąć dział bez przeładowania", async ({
+  test("lista treningu otwiera tematy dopiero po wyborze działu", async ({
     page,
   }) => {
     await page.goto("/trening");
-    const categorySection = page
-      .getByRole("heading", { name: "Liczby rzeczywiste" })
-      .locator("xpath=ancestor::section[1]");
-    const topicLinks = categorySection.locator(
+    const departmentButton = page.getByRole("button", {
+      name: /Liczby rzeczywiste/,
+    });
+    const departmentPanel = page.getByTestId("training-department-panel");
+    const topicLinks = page.getByTestId("training-topic-list").locator(
       'a[href^="/trening/matura/liczby_rzeczywiste/"]',
     );
-    await expect(categorySection).toBeVisible();
-    await expect(topicLinks).not.toHaveCount(0);
+    await expect(departmentButton).toBeVisible();
+    await expect(departmentPanel).toBeVisible();
+    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
 
-    const expandButton = categorySection.getByRole("button", {
-      name: /Pokaż jeszcze/,
+    const expandButton = departmentPanel.getByRole("button", {
+      name: /Pokaż tematy/,
     });
     await expect(expandButton).toBeVisible();
     await expandButton.click();
 
+    await expect(page.getByTestId("training-topic-list")).toBeVisible();
     await expect(topicLinks).toHaveCount(7);
+  });
+
+  test("trening zachowuje hierarchię i szerokość na telefonie", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/trening");
+
+    await expect(page.getByTestId("training-next-step")).toBeVisible();
+    await expect(
+      page.getByTestId("training-department-navigation"),
+    ).toBeVisible();
+    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
+
+    const widths = await page.evaluate(() => ({
+      document: document.documentElement.scrollWidth,
+      viewport: window.innerWidth,
+    }));
+    expect(widths.document).toBeLessThanOrEqual(widths.viewport);
   });
 
   test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {

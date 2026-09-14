@@ -30,8 +30,12 @@ import {
   ArrowRight,
   BookOpen,
   CheckCircle2,
+  ChevronDown,
   ChevronRight,
+  Compass,
   Search,
+  Target,
+  X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -188,6 +192,7 @@ function sortTopicsInExam(
 
 type NextTrainingTopic = {
   href: string;
+  categoryId: string;
   categoryName: string;
   topic: TrainingTopicWithProgress;
 };
@@ -203,6 +208,7 @@ function findNextTrainingTopic(
       if (topic.total > 0) {
         const candidate = {
           href: buildTopicHref(examKey, category.id, topic.id),
+          categoryId: category.id,
           categoryName: category.name,
           topic,
         };
@@ -280,9 +286,18 @@ function TopicRow({
   const href = buildTopicHref(examKey, category.id, topic.id);
   const theory = theoryLabel(theoryTier);
   const progress = Math.max(0, Math.min(100, topic.percent));
+  const statusLabel = isComingSoon
+    ? "Wkrótce"
+    : !canPlay
+      ? "Teoria dostępna"
+    : isCompleted
+      ? "Ukończone"
+      : topic.solved > 0
+        ? "W toku"
+        : "Do zrobienia";
 
   const rowClass =
-    "group flex min-h-14 items-center gap-3 border-l-2 border-transparent px-4 py-3.5 text-sm transition " +
+    "group flex min-h-16 items-center gap-3 border-l-2 border-transparent px-4 py-3.5 text-sm transition " +
     (canOpen
       ? "hover:border-accent/60 hover:bg-surface-hover"
       : "opacity-50");
@@ -303,7 +318,10 @@ function TopicRow({
         )}
       </span>
       <span className="min-w-0 flex-1 font-normal text-foreground">
-        {topic.name}
+        <span className="block truncate">{topic.name}</span>
+        <span className="mt-1 block text-xs text-muted sm:hidden">
+          {canPlay ? `${statusLabel} · ${topic.solved}/${topic.total}` : statusLabel}
+        </span>
       </span>
       {theory && (
         <span
@@ -317,7 +335,7 @@ function TopicRow({
       )}
       {canPlay && (
         <div
-          className="hidden w-16 shrink-0 sm:block"
+          className="hidden w-24 shrink-0 sm:block"
           role="progressbar"
           aria-label={`Postęp tematu: ${progress}%`}
           aria-valuemin={0}
@@ -330,6 +348,9 @@ function TopicRow({
               style={{ width: `${progress}%` }}
             />
           </div>
+          <span className="mt-1 block text-right text-[11px] text-muted">
+            {statusLabel}
+          </span>
         </div>
       )}
       <span className="shrink-0 tabular-nums text-xs text-muted">
@@ -337,7 +358,7 @@ function TopicRow({
           ? `${topic.solved}/${topic.total}`
           : isComingSoon
             ? "Wkrótce"
-            : null}
+            : "Teoria"}
       </span>
       {canOpen && (
         <ChevronRight className="h-4 w-4 shrink-0 text-muted" aria-hidden />
@@ -362,95 +383,57 @@ function theoryLabel(tier: TheoryTier): string | null {
   return "Skrót";
 }
 
-function CategorySection({
-  examKey,
-  category,
-  theoryByTopic,
-}: {
-  examKey: SelectedExam;
-  category: CategoryWithProgress;
-  theoryByTopic: Map<string, TheoryTier>;
-}) {
-  const [showAllTopics, setShowAllTopics] = useState(false);
-  const playableTopics = category.topics.filter(
-    (topic) => topic.total > 0,
-  ).length;
-  const completedTopics = category.topics.filter(
+function polishCount(
+  count: number,
+  one: string,
+  few: string,
+  many: string,
+): string {
+  if (count === 1) return `${count} ${one}`;
+  if (count >= 2 && count <= 4) return `${count} ${few}`;
+  return `${count} ${many}`;
+}
+
+type CategoryMetrics = {
+  playableTopics: number;
+  completedTopics: number;
+  inProgressTopics: number;
+  totalTasks: number;
+  solvedTasks: number;
+  progress: number;
+};
+
+function getCategoryMetrics(category: CategoryWithProgress): CategoryMetrics {
+  const playableTopics = category.topics.filter((topic) => topic.total > 0);
+  const completedTopics = playableTopics.filter(
     (topic) => topic.status === "completed",
   ).length;
-  const progress = Math.max(0, Math.min(100, category.progressPercent));
-  const visibleTopics = showAllTopics
-    ? category.topics
-    : category.topics.slice(0, 4);
-  const hiddenTopicCount = category.topics.length - visibleTopics.length;
-
-  return (
-    <section className="overflow-hidden rounded-2xl border border-surface-border bg-surface">
-      <div className="border-b border-surface-border bg-surface-hover/30 p-4 sm:p-5">
-        <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
-            <h2 className="text-base font-bold text-foreground sm:text-lg">
-              {category.name}
-            </h2>
-          </div>
-          <span className="shrink-0 text-sm font-bold tabular-nums text-accent">
-            {category.progressPercent}%
-          </span>
-        </div>
-        <div
-          className="mt-4 h-1.5 overflow-hidden rounded-full bg-surface-hover"
-          role="progressbar"
-          aria-label={`Postęp działu ${category.name}: ${progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-        >
-          <div className="progress-accent" style={{ width: `${progress}%` }} />
-        </div>
-        <p className="mt-2 text-xs text-muted">
-          {playableTopics}{" "}
-          {playableTopics === 1
-            ? "temat z zadaniami"
-            : playableTopics >= 2 && playableTopics <= 4
-              ? "tematy z zadaniami"
-              : "tematów z zadaniami"}
-          {completedTopics > 0 && ` · ${completedTopics} ukończonych`}
-        </p>
-      </div>
-
-      <div className="divide-y divide-surface-border">
-        {visibleTopics.map((topic) => {
-          return (
-            <TopicRow
-              key={topic.id}
-              examKey={examKey}
-              category={category}
-              topic={topic}
-              theoryTier={theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"}
-            />
-          );
-        })}
-      </div>
-
-      {hiddenTopicCount > 0 && (
-        <button
-          type="button"
-          onClick={() => setShowAllTopics((visible) => !visible)}
-          className="w-full border-t border-surface-border px-4 py-3 text-left text-xs font-bold text-accent transition hover:bg-surface-hover"
-        >
-          {showAllTopics
-            ? "Pokaż mniej"
-            : `Pokaż jeszcze ${hiddenTopicCount} ${
-                hiddenTopicCount === 1
-                  ? "temat"
-                  : hiddenTopicCount >= 2 && hiddenTopicCount <= 4
-                    ? "tematy"
-                    : "tematów"
-              }`}
-        </button>
-      )}
-    </section>
+  const inProgressTopics = playableTopics.filter(
+    (topic) => topic.solved > 0 && topic.status !== "completed",
+  ).length;
+  const totalTasks = playableTopics.reduce((sum, topic) => sum + topic.total, 0);
+  const solvedTasks = playableTopics.reduce(
+    (sum, topic) => sum + topic.solved,
+    0,
   );
+
+  return {
+    playableTopics: playableTopics.length,
+    completedTopics,
+    inProgressTopics,
+    totalTasks,
+    solvedTasks,
+    progress: Math.max(0, Math.min(100, category.progressPercent)),
+  };
+}
+
+function categoryStatus(metrics: CategoryMetrics): string {
+  if (metrics.playableTopics === 0) return "Wkrótce";
+  if (metrics.progress === 100) return "Ukończony";
+  if (metrics.inProgressTopics > 0 || metrics.completedTopics > 0) {
+    return "W toku";
+  }
+  return "Do zrobienia";
 }
 
 function TrainingOverview({
@@ -465,42 +448,56 @@ function TrainingOverview({
   topicsWithTasks: number;
 }) {
   const progress = Math.max(0, Math.min(100, overallProgress));
+  const progressMessage =
+    overallProgress === 0
+      ? "Zacznij od jednego tematu — reszta ścieżki poczeka."
+      : overallProgress === 100
+        ? "Ścieżka ukończona — możesz wrócić do wybranych tematów."
+        : "Każdy rozwiązany temat przybliża Cię do celu.";
 
   return (
-    <section className="mt-7 border-y border-surface-border py-4 sm:py-5">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="text-overline">Postęp ścieżki</p>
-          <p className="mt-1 text-sm font-bold text-foreground">
-            {exam.label}
-            <span className="ml-2 font-normal text-muted">
-              · {topicCount} tematów · {topicsWithTasks} z zadaniami
-            </span>
+    <section
+      className="mt-5 grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto_auto]"
+      aria-label="Podsumowanie postępu"
+    >
+      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
+        <div className="flex items-baseline justify-between gap-4">
+          <div className="min-w-0">
+            <p className="text-overline">Postęp ścieżki</p>
+            <p className="mt-1 truncate text-sm font-bold text-foreground">
+              {exam.label}
+            </p>
+          </div>
+          <p className="shrink-0 text-lg font-extrabold tabular-nums text-accent">
+            {progress}%
           </p>
         </div>
-        <p className="text-sm font-bold text-accent">
-          {overallProgress}% <span className="font-normal text-muted">ukończone</span>
+        <div
+          className="mt-3 h-2 overflow-hidden rounded-full bg-surface-hover"
+          role="progressbar"
+          aria-label={`Ogólny postęp treningu: ${progress}%`}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={progress}
+        >
+          <div className="progress-accent" style={{ width: `${progress}%` }} />
+        </div>
+        <p className="mt-2 text-xs text-muted">{progressMessage}</p>
+      </div>
+      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:min-w-32 sm:p-5">
+        <p className="text-overline">Tematy</p>
+        <p className="mt-1 text-xl font-extrabold tabular-nums text-foreground">
+          {topicCount}
         </p>
+        <p className="mt-1 text-xs text-muted">w ścieżce</p>
       </div>
-
-      <div
-        className="mt-4 h-2 overflow-hidden rounded-full bg-surface-hover"
-        role="progressbar"
-        aria-label={`Ogólny postęp treningu: ${progress}%`}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={progress}
-      >
-        <div className="progress-accent" style={{ width: `${progress}%` }} />
+      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:min-w-32 sm:p-5">
+        <p className="text-overline">Aktywne</p>
+        <p className="mt-1 text-xl font-extrabold tabular-nums text-foreground">
+          {topicsWithTasks}
+        </p>
+        <p className="mt-1 text-xs text-muted">z zadaniami</p>
       </div>
-
-      <p className="mt-2 text-xs text-muted">
-        {overallProgress === 0
-          ? "Wybierz pierwszy temat i zacznij od krótkiej teorii."
-          : overallProgress === 100
-            ? "Ścieżka ukończona — możesz wrócić do wybranych tematów."
-            : "Każdy rozwiązany temat przybliża Cię do celu."}
-      </p>
     </section>
   );
 }
@@ -513,63 +510,316 @@ function NextStepCard({
   overallProgress: number;
 }) {
   const hasStarted = overallProgress > 0 || nextTopic.topic.solved > 0;
+  const progress = Math.max(
+    0,
+    Math.min(100, nextTopic.topic.percent),
+  );
+  const focusLabel =
+    overallProgress === 100
+      ? "Powtórka"
+      : hasStarted
+        ? "Następny krok"
+        : "Zacznij tutaj";
+  const focusAction = overallProgress === 100 ? "Powtórz temat" : "Otwórz temat";
 
   return (
     <Link
       href={nextTopic.href}
-      className="group mt-6 flex flex-col gap-4 rounded-2xl border border-accent/35 bg-accent-soft/35 p-4 transition hover:border-accent/70 hover:bg-accent-soft/55 sm:flex-row sm:items-center sm:justify-between sm:p-5"
+      data-testid="training-next-step"
+      className="group mt-8 block overflow-hidden rounded-3xl border border-accent/40 bg-accent-soft/35 transition hover:border-accent/75 hover:bg-accent-soft/55"
     >
-      <div className="flex min-w-0 items-start gap-3">
-        <span className="icon-chip h-10 w-10 shrink-0">
-          <BookOpen className="h-4 w-4" aria-hidden />
+      <div className="flex flex-col gap-6 p-5 sm:p-7 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex min-w-0 items-start gap-4">
+          <span className="icon-chip h-12 w-12 shrink-0 rounded-2xl sm:h-14 sm:w-14">
+            <Target className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+          </span>
+          <div className="min-w-0">
+            <p className="text-overline text-accent">{focusLabel}</p>
+            <h2 className="mt-1 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
+              {nextTopic.topic.name}
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              {nextTopic.categoryName} · {nextTopic.topic.total} zadań
+              {nextTopic.topic.solved > 0
+                ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
+                : ""}
+            </p>
+          </div>
+        </div>
+        <span className="btn-chunky shrink-0 px-4 py-3 text-sm sm:px-5">
+          {focusAction}
+          <ArrowRight
+            className="h-4 w-4 transition-transform group-hover:translate-x-1"
+            aria-hidden
+          />
         </span>
-        <div className="min-w-0">
-          <p className="text-overline">
-            {hasStarted ? "Następny krok" : "Zacznij tutaj"}
-          </p>
-          <h2 className="mt-1 truncate text-base font-extrabold text-foreground sm:text-lg">
-            {nextTopic.topic.name}
-          </h2>
-          <p className="mt-1 text-xs text-muted">
-            {nextTopic.categoryName} · {nextTopic.topic.total} zadań
-            {nextTopic.topic.solved > 0
-              ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
-              : ""}
+      </div>
+      <div className="border-t border-accent/20 px-5 py-4 sm:px-7">
+        <div className="flex items-center justify-between gap-4 text-xs">
+          <span className="font-semibold text-foreground">Postęp tego tematu</span>
+          <span className="tabular-nums text-muted">
+            {nextTopic.topic.solved}/{nextTopic.topic.total} zadań · {progress}%
+          </span>
+        </div>
+        <div
+          className="mt-2 h-2 overflow-hidden rounded-full bg-background/60"
+          role="progressbar"
+          aria-label={`Postęp tematu ${nextTopic.topic.name}: ${progress}%`}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={progress}
+        >
+          <div className="progress-accent" style={{ width: `${progress}%` }} />
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function DepartmentNavigation({
+  categories,
+  activeCategoryId,
+  onSelect,
+}: {
+  categories: CategoryWithProgress[];
+  activeCategoryId: string | null;
+  onSelect: (categoryId: string) => void;
+}) {
+  return (
+    <nav
+      data-testid="training-department-navigation"
+      aria-label="Działy treningu"
+      className="rounded-2xl border border-surface-border bg-surface p-3 sm:p-4 lg:sticky lg:top-5"
+    >
+      <div className="flex items-start gap-3 px-2 pb-3">
+        <span className="icon-chip h-9 w-9 shrink-0 rounded-xl">
+          <Compass className="h-4 w-4" aria-hidden />
+        </span>
+        <div>
+          <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
+          <p className="mt-1 text-xs leading-relaxed text-muted">
+            Wybierz jeden obszar, żeby przejść do jego tematów.
           </p>
         </div>
       </div>
-      <span className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-accent">
-        Otwórz temat
-        <ArrowRight
-          className="h-4 w-4 transition-transform group-hover:translate-x-1"
-          aria-hidden
-        />
-      </span>
-    </Link>
+      <div className="space-y-1">
+        {categories.map((category, index) => {
+          const metrics = getCategoryMetrics(category);
+          const active = category.id === activeCategoryId;
+          return (
+            <button
+              key={category.id}
+              type="button"
+              data-testid={`training-department-${category.id}`}
+              aria-pressed={active}
+              aria-label={`${category.name}, ${categoryStatus(metrics)}, ${metrics.progress}% postępu`}
+              onClick={() => onSelect(category.id)}
+              className={`w-full rounded-xl border px-3 py-3 text-left transition ${
+                active
+                  ? "border-accent/45 bg-accent-soft/55 text-foreground"
+                  : "border-transparent text-muted hover:border-surface-border hover:bg-surface-hover hover:text-foreground"
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                <span
+                  aria-hidden="true"
+                  className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
+                    active
+                      ? "bg-accent text-on-accent"
+                      : "bg-surface-hover text-muted"
+                  }`}
+                >
+                  {index + 1}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-start justify-between gap-2">
+                    <span className="truncate text-sm font-bold">{category.name}</span>
+                    <span className="shrink-0 text-xs tabular-nums text-accent">
+                      {metrics.progress}%
+                    </span>
+                  </span>
+                  <span className="mt-1 block text-xs">
+                    {polishCount(
+                      metrics.playableTopics,
+                      "temat",
+                      "tematy",
+                      "tematów",
+                    )}{" "}
+                    · {categoryStatus(metrics)}
+                  </span>
+                  <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
+                    <span
+                      className="block h-full rounded-full bg-accent transition-[width]"
+                      style={{ width: `${metrics.progress}%` }}
+                    />
+                  </span>
+                </span>
+                <ChevronRight
+                  className={`mt-1 h-4 w-4 shrink-0 ${
+                    active ? "text-accent" : "text-muted"
+                  }`}
+                  aria-hidden
+                />
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
+function DepartmentPanel({
+  examKey,
+  category,
+  theoryByTopic,
+  topicsVisible,
+  onToggleTopics,
+}: {
+  examKey: SelectedExam;
+  category: CategoryWithProgress;
+  theoryByTopic: Map<string, TheoryTier>;
+  topicsVisible: boolean;
+  onToggleTopics: () => void;
+}) {
+  const metrics = getCategoryMetrics(category);
+  const topicsId = `training-topics-${category.id}`;
+
+  return (
+    <section
+      data-testid="training-department-panel"
+      aria-labelledby={`training-department-heading-${category.id}`}
+      className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
+    >
+      <div className="p-5 sm:p-7">
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0">
+            <p className="text-overline">Wybrany dział</p>
+            <h2
+              id={`training-department-heading-${category.id}`}
+              className="mt-1 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl"
+            >
+              {category.name}
+            </h2>
+            <p className="mt-2 text-sm text-muted">
+              {polishCount(
+                category.topics.length,
+                "temat",
+                "tematy",
+                "tematów",
+              )}{" "}
+              w dziale · {metrics.totalTasks} zadań do rozwiązania
+            </p>
+          </div>
+          <span
+            className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-extrabold ${
+              metrics.progress === 100
+                ? "bg-success/15 text-success"
+                : "bg-accent-soft text-accent"
+            }`}
+          >
+            {metrics.progress}%
+          </span>
+        </div>
+
+        <div
+          className="mt-5 h-2 overflow-hidden rounded-full bg-surface-hover"
+          role="progressbar"
+          aria-label={`Postęp działu ${category.name}: ${metrics.progress}%`}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={metrics.progress}
+        >
+          <div
+            className="progress-accent"
+            style={{ width: `${metrics.progress}%` }}
+          />
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
+          <span>
+            <strong className="text-foreground">{metrics.playableTopics}</strong>{" "}
+            z zadaniami
+          </span>
+          <span>
+            <strong className="text-foreground">{metrics.completedTopics}</strong>{" "}
+            ukończonych
+          </span>
+          {metrics.inProgressTopics > 0 && (
+            <span>
+              <strong className="text-foreground">{metrics.inProgressTopics}</strong>{" "}
+              w toku
+            </span>
+          )}
+        </div>
+
+        <button
+          type="button"
+          aria-expanded={topicsVisible}
+          aria-controls={topicsId}
+          onClick={onToggleTopics}
+          className="btn-chunky-soft mt-6 w-full px-4 py-3 text-sm sm:w-auto"
+        >
+          {topicsVisible ? "Ukryj tematy" : `Pokaż tematy (${category.topics.length})`}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform ${
+              topicsVisible ? "rotate-180" : ""
+            }`}
+            aria-hidden
+          />
+        </button>
+      </div>
+
+      {topicsVisible && (
+        <div
+          id={topicsId}
+          data-testid="training-topic-list"
+          className="border-t border-surface-border"
+        >
+          <div className="flex items-center justify-between gap-3 bg-surface-hover/30 px-5 py-3 text-xs text-muted sm:px-7">
+            <span>Tematy i ich stan</span>
+            <span className="tabular-nums">
+              {metrics.solvedTasks}/{metrics.totalTasks} rozwiązanych
+            </span>
+          </div>
+          <div className="divide-y divide-surface-border">
+            {category.topics.map((topic) => (
+              <TopicRow
+                key={topic.id}
+                examKey={examKey}
+                category={category}
+                topic={topic}
+                theoryTier={
+                  theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"
+                }
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
   );
 }
 
 function TrainingListSkeleton() {
   return (
-    <div className="grid gap-6 xl:grid-cols-2">
-      {[0, 1, 2, 3].map((item) => (
-        <div key={item} className="card-raised overflow-hidden">
-          <div className="border-b border-surface-border bg-surface-hover/30 p-5">
-            <div className="h-4 w-24 animate-pulse rounded bg-surface-hover" />
-            <div className="mt-3 h-6 w-2/3 animate-pulse rounded bg-surface-hover" />
-            <div className="mt-4 h-1.5 animate-pulse rounded-full bg-surface-hover" />
-          </div>
-          <div className="divide-y divide-surface-border">
-            {[0, 1, 2].map((row) => (
-              <div key={row} className="flex items-center gap-3 px-4 py-4">
-                <div className="h-2 w-2 animate-pulse rounded-full bg-surface-hover" />
-                <div className="h-4 flex-1 animate-pulse rounded bg-surface-hover" />
-                <div className="h-3 w-10 animate-pulse rounded bg-surface-hover" />
-              </div>
-            ))}
-          </div>
+    <div className="grid gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
+      <div className="card-raised h-80 animate-pulse p-5">
+        <div className="h-5 w-24 rounded bg-surface-hover" />
+        <div className="mt-3 h-3 w-44 rounded bg-surface-hover" />
+        <div className="mt-7 space-y-3">
+          {[0, 1, 2, 3, 4].map((item) => (
+            <div key={item} className="h-14 rounded-xl bg-surface-hover" />
+          ))}
         </div>
-      ))}
+      </div>
+      <div className="card-raised h-80 animate-pulse p-5 sm:p-7">
+        <div className="h-3 w-28 rounded bg-surface-hover" />
+        <div className="mt-3 h-7 w-2/3 rounded bg-surface-hover" />
+        <div className="mt-4 h-3 w-1/2 rounded bg-surface-hover" />
+        <div className="mt-8 h-2 rounded-full bg-surface-hover" />
+        <div className="mt-7 h-12 w-40 rounded-xl bg-surface-hover" />
+      </div>
     </div>
   );
 }
@@ -589,6 +839,12 @@ export default function TreningPage() {
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
   const [topicSort, setTopicSort] = useState<TopicSort>("az");
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
+    null,
+  );
+  const [expandedCategoryId, setExpandedCategoryId] = useState<string | null>(
+    null,
+  );
   const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
     new Map(),
   );
@@ -679,6 +935,8 @@ export default function TreningPage() {
     setDebouncedQuery("");
     setTopicFilter("all");
     setTopicSort("az");
+    setSelectedCategoryId(null);
+    setExpandedCategoryId(null);
   };
 
   const filteredExam = useMemo(() => {
@@ -696,6 +954,34 @@ export default function TreningPage() {
     () => findNextTrainingTopic(sortTopicsInExam(exam, "az"), selectedExam),
     [exam, selectedExam],
   );
+
+  const hasFilterIntent =
+    Boolean(debouncedQuery.trim()) ||
+    topicFilter !== "all" ||
+    topicSort !== "az";
+
+  const activeCategory = useMemo(
+    () =>
+      filteredExam.categories.find(
+        (category) => category.id === selectedCategoryId,
+      ) ??
+      filteredExam.categories.find(
+        (category) => category.id === nextTopic?.categoryId,
+      ) ??
+      filteredExam.categories[0] ??
+      null,
+    [filteredExam.categories, nextTopic, selectedCategoryId],
+  );
+
+  const topicsVisible = Boolean(
+    activeCategory &&
+      (expandedCategoryId === activeCategory.id || hasFilterIntent),
+  );
+
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategoryId(categoryId);
+    setExpandedCategoryId(null);
+  };
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
@@ -746,13 +1032,6 @@ export default function TreningPage() {
           />
         </header>
 
-        <TrainingOverview
-          exam={exam}
-          overallProgress={overallProgress}
-          topicCount={topicCount}
-          topicsWithTasks={topicsWithTasks}
-        />
-
         {!loading && nextTopic && (
           <NextStepCard
             nextTopic={nextTopic}
@@ -760,87 +1039,125 @@ export default function TreningPage() {
           />
         )}
 
-        <section className="mt-8" aria-label="Przeglądanie tematów">
-          <div className="flex flex-col gap-4 border-y border-surface-border py-4 lg:flex-row lg:items-center">
-            <div className="min-w-0 flex-1">
-              <label className="sr-only" htmlFor="trening-search">
-                Szukaj tematu
-              </label>
-              <div className="relative">
-                <Search
-                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-                  aria-hidden
-                />
-                <input
-                  id="trening-search"
-                  type="search"
-                  value={searchInput}
-                  onChange={(e) => setSearchInput(e.target.value)}
-                  placeholder="Szukaj działu lub tematu…"
-                  className="input-field w-full py-2.5 pl-10 pr-4 text-sm"
-                />
+        <TrainingOverview
+          exam={exam}
+          overallProgress={overallProgress}
+          topicCount={topicCount}
+          topicsWithTasks={topicsWithTasks}
+        />
+
+        <section
+          className="mt-8"
+          aria-label="Przeglądanie tematów"
+          data-testid="training-browse"
+        >
+          <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-overline">Biblioteka tematów</p>
+                    <h2 className="mt-1 text-lg font-extrabold text-foreground">
+                      Wybierz dział
+                    </h2>
+                  </div>
+                  <span className="hidden rounded-full bg-surface-hover px-2.5 py-1 text-xs font-bold text-muted sm:inline-flex">
+                    {matchedTopicCount} tematów
+                  </span>
+                </div>
+                <label className="sr-only" htmlFor="trening-search">
+                  Szukaj tematu
+                </label>
+                <div className="relative mt-4">
+                  <Search
+                    className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                    aria-hidden
+                  />
+                  <input
+                    id="trening-search"
+                    type="search"
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                    placeholder="Szukaj działu lub tematu…"
+                    className="input-field w-full py-2.5 pl-10 pr-10 text-sm"
+                  />
+                  {searchInput && (
+                    <button
+                      type="button"
+                      aria-label="Wyczyść wyszukiwanie"
+                      onClick={() => {
+                        setSearchInput("");
+                        setDebouncedQuery("");
+                      }}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-muted transition hover:bg-surface-hover hover:text-foreground"
+                    >
+                      <X className="h-4 w-4" aria-hidden />
+                    </button>
+                  )}
+                </div>
+                <p className="mt-2 text-xs text-muted" aria-live="polite">
+                  {loading
+                    ? "Ładowanie tematów…"
+                    : debouncedQuery.trim()
+                      ? `Znaleziono ${polishCount(
+                          matchedTopicCount,
+                          "temat",
+                          "tematy",
+                          "tematów",
+                        )}`
+                      : `${matchedTopicCount} tematów`}
+                </p>
               </div>
-              <p className="mt-2 text-xs text-muted" aria-live="polite">
-                {loading
-                  ? "Ładowanie tematów…"
-                  : debouncedQuery.trim()
-                    ? `Znaleziono ${matchedTopicCount} ${
-                        matchedTopicCount === 1
-                          ? "temat"
-                          : matchedTopicCount >= 2 && matchedTopicCount <= 4
-                            ? "tematy"
-                            : "tematów"
-                      }`
-                    : `${matchedTopicCount} tematów`}
-              </p>
-            </div>
 
-            <div
-              role="group"
-              aria-label="Filtr tematów"
-              className="flex flex-wrap items-center gap-2"
-            >
-              <span className="text-caption mr-1">Pokaż</span>
-              {(
-                [
-                  { id: "all" as const, label: "Wszystkie" },
-                  { id: "incomplete" as const, label: "Nieukończone" },
-                  { id: "completed" as const, label: "Ukończone" },
-                ] as const
-              ).map((opt) => {
-                const active = topicFilter === opt.id;
-                return (
-                  <button
-                    key={opt.id}
-                    type="button"
-                    onClick={() => setTopicFilter(opt.id)}
-                    className={`filter-chip ${
-                      active ? "filter-chip-active" : ""
-                    }`}
+              <div className="flex flex-col gap-3 lg:min-w-[22rem]">
+                <div
+                  role="group"
+                  aria-label="Filtr tematów"
+                  className="flex flex-wrap items-center gap-2"
+                >
+                  <span className="text-caption mr-1">Pokaż</span>
+                  {(
+                    [
+                      { id: "all" as const, label: "Wszystkie" },
+                      { id: "incomplete" as const, label: "Nieukończone" },
+                      { id: "completed" as const, label: "Ukończone" },
+                    ] as const
+                  ).map((opt) => {
+                    const active = topicFilter === opt.id;
+                    return (
+                      <button
+                        key={opt.id}
+                        type="button"
+                        onClick={() => setTopicFilter(opt.id)}
+                        className={`filter-chip ${
+                          active ? "filter-chip-active" : ""
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <label className="flex items-center gap-2 lg:self-end">
+                  <span className="text-caption">Sortuj</span>
+                  <select
+                    id="topic-sort"
+                    aria-label="Sortowanie tematów"
+                    value={topicSort}
+                    onChange={(e) => setTopicSort(e.target.value as TopicSort)}
+                    className="input-field min-w-32 py-2.5 text-sm"
                   >
-                    {opt.label}
-                  </button>
-                );
-              })}
+                    <option value="az">A–Z</option>
+                    <option value="progress">Postęp</option>
+                  </select>
+                </label>
+              </div>
             </div>
-
-            <label className="flex items-center gap-2 lg:shrink-0">
-              <span className="text-caption">Sortuj</span>
-              <select
-                id="topic-sort"
-                aria-label="Sortowanie tematów"
-                value={topicSort}
-                onChange={(e) => setTopicSort(e.target.value as TopicSort)}
-                className="input-field min-w-28 py-2.5 text-sm"
-              >
-                <option value="az">A–Z</option>
-                <option value="progress">Postęp</option>
-              </select>
-            </label>
           </div>
         </section>
 
-        <div className="mt-6">
+        <div className="mt-6" data-testid="training-results">
           {loading ? (
             <TrainingListSkeleton />
           ) : exam.categories.length === 0 ? (
@@ -875,15 +1192,25 @@ export default function TreningPage() {
               }
             />
           ) : (
-            <div className="grid items-start gap-5 xl:grid-cols-2">
-              {filteredExam.categories.map((category) => (
-                <CategorySection
-                  key={category.id}
+            <div className="grid items-start gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
+              <DepartmentNavigation
+                categories={filteredExam.categories}
+                activeCategoryId={activeCategory?.id ?? null}
+                onSelect={handleCategorySelect}
+              />
+              {activeCategory && (
+                <DepartmentPanel
                   examKey={selectedExam}
-                  category={category}
+                  category={activeCategory}
                   theoryByTopic={theoryByTopic}
+                  topicsVisible={topicsVisible}
+                  onToggleTopics={() =>
+                    setExpandedCategoryId((current) =>
+                      current === activeCategory.id ? null : activeCategory.id,
+                    )
+                  }
                 />
-              ))}
+              )}
             </div>
           )}
         </div>
