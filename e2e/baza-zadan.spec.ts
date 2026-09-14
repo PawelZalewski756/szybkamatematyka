@@ -7,21 +7,46 @@ test.describe("Baza zadań", () => {
     });
   });
 
-  test("ma jeden punkt startowy i kompaktowe filtry", async ({ page }) => {
+  test("domyślnie pokazuje katalog zamiast ściany kart", async ({ page }) => {
     await page.goto("/baza-zadan");
 
     await expect(
-      page.getByRole("heading", { level: 1, name: "Znajdź zadanie" }),
+      page.getByRole("heading", { level: 1, name: "Wybierz punkt startu" }),
     ).toBeVisible();
     await expect(
       page
         .getByRole("tablist", { name: "Sposób pracy w bazie zadań" })
         .getByRole("tab", { name: /Ćwicz zadania/ }),
     ).toHaveAttribute("aria-selected", "true");
-    await expect(page.getByLabel("Szukaj zadań")).toBeVisible();
     await expect(
-      page.getByRole("status").filter({ hasText: "Znaleziono" }),
-    ).toContainText("zadań");
+      page.getByLabel("Szukaj po tytule lub treści"),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", {
+        name: "Od czego chcesz zacząć?",
+      }),
+    ).toBeVisible();
+    await expect(page.getByRole("list", { name: "Wyniki zadań" })).toHaveCount(
+      0,
+    );
+  });
+
+  test("pokazuje wyniki dopiero po wyborze działu", async ({ page }) => {
+    await page.goto("/baza-zadan");
+
+    await page
+      .getByRole("button", { name: /Algebra i równania/ })
+      .click();
+
+    await expect(
+      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("list", { name: "Wyniki zadań" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Wróć do katalogu" }),
+    ).toBeVisible();
   });
 
   test("zachowuje wybór celu w URL i przełącza panel bez przeładowania", async ({
@@ -52,15 +77,15 @@ test.describe("Baza zadań", () => {
     page,
   }) => {
     await page.goto("/baza-zadan");
-    const search = page.getByLabel("Szukaj zadań");
+    const search = page.getByLabel("Szukaj po tytule lub treści");
 
     await search.fill("fraza-której-nie-ma-w-bazie-987654");
     await expect(page.getByText("Brak zadań")).toBeVisible();
     await expect(
-      page.getByRole("button", { name: "Wyczyść filtry" }),
+      page.getByRole("button", { name: "Wyczyść wybór" }),
     ).toBeVisible();
 
-    await page.getByRole("button", { name: "Wyczyść filtry" }).click();
+    await page.getByRole("button", { name: "Wyczyść wybór" }).click();
     await expect(page.getByText("Brak zadań")).toHaveCount(0);
     await expect(search).toHaveValue("");
   });
@@ -104,9 +129,11 @@ test.describe("Baza zadań", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/baza-zadan");
 
-    await expect(page.getByLabel("Szukaj zadań")).toBeVisible();
     await expect(
-      page.getByRole("button", { name: "Pokaż", exact: true }),
+      page.getByLabel("Szukaj po tytule lub treści"),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Doprecyzuj filtry", exact: true }),
     ).toBeVisible();
   });
 });

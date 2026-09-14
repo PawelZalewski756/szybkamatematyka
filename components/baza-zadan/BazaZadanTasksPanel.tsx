@@ -5,16 +5,25 @@ import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { getTasksForPath } from "@/lib/baza-zadan/catalog";
 import {
-  ALL_CATEGORIES,
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
+import {
+  TASK_CATEGORY_GROUPS,
+  type TaskCategoryGroupId,
+} from "@/lib/baza-zadan/sections";
 import type { TaskCategory, TaskDifficulty } from "@/lib/baza-zadan/types";
-import { Search, SearchX } from "lucide-react";
+import {
+  ArrowLeft,
+  ChevronRight,
+  Search,
+  SearchX,
+  SlidersHorizontal,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import { useDeferredValue, useMemo, useState } from "react";
 
-const PAGE_SIZE = 18;
+const PAGE_SIZE = 9;
 
 function polishCount(count: number): string {
   const absolute = Math.abs(count);
@@ -58,34 +67,107 @@ export function BazaZadanTasksPanel() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
+  const [selectedGroup, setSelectedGroup] =
+    useState<TaskCategoryGroupId | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const deferredSearch = useDeferredValue(search);
-
-  const tasks = useMemo(
+  const allTasks = useMemo(() => getTasksForPath(path), [path]);
+  const catalogGroups = useMemo(
     () =>
-      getTasksForPath(path, {
-        category,
-        difficulty,
-        search: deferredSearch,
-      }),
-    [path, category, difficulty, deferredSearch],
+      TASK_CATEGORY_GROUPS.map((group) => ({
+        ...group,
+        taskCount: allTasks.filter((task) =>
+          group.categories.includes(task.category),
+        ).length,
+      })).filter((group) => group.taskCount > 0),
+    [allTasks],
   );
+  const selectedGroupDefinition = selectedGroup
+    ? TASK_CATEGORY_GROUPS.find((group) => group.id === selectedGroup)
+    : undefined;
 
+  const tasks = useMemo(() => {
+    const groupCategories = selectedGroupDefinition?.categories;
+
+    return getTasksForPath(path, {
+      difficulty,
+      search: deferredSearch,
+    }).filter((task) => {
+      if (category !== "all" && task.category !== category) return false;
+      if (groupCategories && !groupCategories.includes(task.category)) {
+        return false;
+      }
+      return true;
+    });
+  }, [
+    category,
+    deferredSearch,
+    difficulty,
+    path,
+    selectedGroupDefinition,
+  ]);
+
+  const hasIntent =
+    selectedGroup !== null ||
+    category !== "all" ||
+    difficulty !== "all" ||
+    search.trim().length > 0;
   const visible = tasks.slice(0, visibleCount);
   const hasMore = visibleCount < tasks.length;
-  const filtersActive =
-    search.trim().length > 0 || category !== "all" || difficulty !== "all";
+  const resultTitle = selectedGroupDefinition
+    ? `Zadania: ${selectedGroupDefinition.label}`
+    : search.trim()
+      ? "Wyniki wyszukiwania"
+      : category !== "all"
+        ? CATEGORY_LABELS[category]
+        : "Wybrane zadania";
 
   const resetPagination = () => setVisibleCount(PAGE_SIZE);
 
-  const filterControls = (
-    <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
-      <label htmlFor="baza-search" className="text-xs font-semibold text-muted">
-        Szukaj zadań
+  const clearSelection = () => {
+    setSearch("");
+    setCategory("all");
+    setDifficulty("all");
+    setSelectedGroup(null);
+    resetPagination();
+  };
+
+  const chooseGroup = (groupId: TaskCategoryGroupId) => {
+    setSearch("");
+    setCategory("all");
+    setDifficulty("all");
+    setSelectedGroup(groupId);
+    resetPagination();
+  };
+
+  const searchAndFilters = (
+    <section
+      className="rounded-3xl border border-surface-border bg-surface p-5 sm:p-6"
+      aria-labelledby="baza-zadan-search-heading"
+    >
+      <div className="max-w-2xl">
+        <p className="text-overline">Zadania treningowe</p>
+        <h2
+          id="baza-zadan-search-heading"
+          className="mt-1 text-xl font-black text-foreground sm:text-2xl"
+        >
+          Wybierz dział lub wyszukaj zadanie
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted">
+          Zacznij od jednej intencji. Wyniki pokażemy dopiero wtedy, gdy
+          wybierzesz temat, filtr albo wpiszesz własną frazę.
+        </p>
+      </div>
+
+      <label
+        htmlFor="baza-search"
+        className="mt-5 block text-xs font-semibold text-muted"
+      >
+        Szukaj po tytule lub treści
       </label>
-      <div className="relative mt-1.5">
+      <div className="relative mt-1.5 max-w-2xl">
         <Search
           className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
           aria-hidden="true"
@@ -96,114 +178,203 @@ export function BazaZadanTasksPanel() {
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
+            setSelectedGroup(null);
             resetPagination();
           }}
-          placeholder="Tytuł lub treść…"
-          className="input-field w-full py-2.5 pl-10 pr-3 text-sm"
+          placeholder="Np. równania, procenty, trójkąt…"
+          className="input-field w-full py-3 pl-10 pr-3 text-sm"
         />
       </div>
 
-      <div className="mt-4 flex items-center justify-between gap-3 lg:hidden">
-        <p className="text-xs font-semibold text-muted">Filtry szczegółowe</p>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
         <button
           type="button"
           aria-expanded={filtersOpen}
-          onClick={() => setFiltersOpen((v) => !v)}
-          className="btn-ghost px-3 py-1.5 text-xs font-semibold"
+          aria-controls="baza-zadan-detailed-filters"
+          onClick={() => setFiltersOpen((open) => !open)}
+          className="btn-ghost inline-flex items-center gap-2 px-3 py-2 text-xs font-bold"
         >
-          {filtersOpen ? "Ukryj" : "Pokaż"}
+          <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
+          {filtersOpen ? "Ukryj filtry" : "Doprecyzuj filtry"}
         </button>
-      </div>
-
-      <div
-        className={`${filtersOpen ? "mt-4 grid" : "hidden"} gap-4 border-t border-surface-border pt-4 lg:mt-4 lg:grid lg:grid-cols-2`}
-      >
-        <div>
-          <p className="mb-1.5 text-xs font-semibold text-muted">Trudność</p>
-          <div className="flex flex-wrap gap-1.5">
-            <FilterChip
-              active={difficulty === "all"}
-              onClick={() => {
-                setDifficulty("all");
-                resetPagination();
-              }}
-            >
-              Wszystkie
-            </FilterChip>
-            {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
-              <FilterChip
-                key={d}
-                active={difficulty === d}
-                onClick={() => {
-                  setDifficulty(d);
-                  resetPagination();
-                }}
-              >
-                {DIFFICULTY_LABELS[d]}
-              </FilterChip>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <label htmlFor="baza-dzial" className="text-xs font-semibold text-muted">
-            Dział
-          </label>
-          <select
-            id="baza-dzial"
-            value={category}
-            onChange={(e) => {
-              setCategory(e.target.value as TaskCategory | "all");
-              resetPagination();
-            }}
-            className="input-field mt-1.5 w-full px-3 py-2.5 text-sm"
-          >
-            <option value="all">Wszystkie działy</option>
-            {ALL_CATEGORIES.map((c) => (
-              <option key={c} value={c}>
-                {CATEGORY_LABELS[c]}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-surface-border pt-4">
-        <p className="text-sm text-muted" role="status" aria-live="polite">
-          Znaleziono{" "}
-          <span className="font-semibold text-foreground">
-            {polishCount(tasks.length)}
-          </span>
-        </p>
-        {filtersActive ? (
+        {hasIntent ? (
           <button
             type="button"
-            onClick={() => {
-              setSearch("");
-              setCategory("all");
-              setDifficulty("all");
-              resetPagination();
-            }}
+            onClick={clearSelection}
             className="text-sm font-semibold text-accent hover:text-accent-strong"
           >
-            Wyczyść filtry
+            Wyczyść wybór
           </button>
         ) : null}
       </div>
-    </div>
+
+      {filtersOpen ? (
+        <div
+          id="baza-zadan-detailed-filters"
+          className="mt-5 grid gap-5 border-t border-surface-border pt-5 sm:grid-cols-2"
+        >
+          <div>
+            <p className="mb-2 text-xs font-semibold text-muted">Trudność</p>
+            <div className="flex flex-wrap gap-1.5">
+              <FilterChip
+                active={difficulty === "all"}
+                onClick={() => {
+                  setDifficulty("all");
+                  resetPagination();
+                }}
+              >
+                Wszystkie
+              </FilterChip>
+              {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
+                <FilterChip
+                  key={d}
+                  active={difficulty === d}
+                  onClick={() => {
+                    setDifficulty(d);
+                    setSelectedGroup(null);
+                    resetPagination();
+                  }}
+                >
+                  {DIFFICULTY_LABELS[d]}
+                </FilterChip>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="baza-dzial"
+              className="text-xs font-semibold text-muted"
+            >
+              Dział
+            </label>
+            <select
+              id="baza-dzial"
+              value={category}
+              onChange={(e) => {
+                setCategory(e.target.value as TaskCategory | "all");
+                setSelectedGroup(null);
+                resetPagination();
+              }}
+              className="input-field mt-1.5 w-full px-3 py-2.5 text-sm"
+            >
+              <option value="all">Wszystkie działy</option>
+              {Object.entries(CATEGORY_LABELS).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      ) : null}
+    </section>
   );
 
-  const taskGrid = (
-    <div>
+  const catalog = (
+    <section
+      className="rounded-3xl border border-surface-border bg-surface p-5 sm:p-6"
+      aria-labelledby="baza-zadan-catalog-heading"
+    >
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
+        <div>
+          <p className="text-overline">Katalog tematów</p>
+          <h2
+            id="baza-zadan-catalog-heading"
+            className="mt-1 text-xl font-black text-foreground"
+          >
+            Od czego chcesz zacząć?
+          </h2>
+        </div>
+        <p className="text-sm text-muted">
+          <span className="font-semibold text-foreground">
+            {polishCount(allTasks.length)}
+          </span>{" "}
+          w tej ścieżce
+        </p>
+      </div>
+
+      <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+        {catalogGroups.map((group) => (
+          <li key={group.id}>
+            <button
+              type="button"
+              onClick={() => chooseGroup(group.id)}
+              className="group flex w-full items-center gap-3 rounded-2xl border border-surface-border bg-background/35 px-4 py-3 text-left transition hover:border-accent/40 hover:bg-surface-hover"
+              aria-label={`${group.label}, ${polishCount(group.taskCount)}`}
+            >
+              <span
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-xl"
+                aria-hidden="true"
+              >
+                {group.emoji}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-sm font-bold text-foreground group-hover:text-accent">
+                  {group.label}
+                </span>
+                <span className="mt-0.5 block text-xs leading-relaxed text-muted">
+                  {group.description}
+                </span>
+              </span>
+              <span className="flex shrink-0 items-center gap-2">
+                <span className="text-xs font-semibold tabular-nums text-muted">
+                  {group.taskCount}
+                </span>
+                <ChevronRight
+                  className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+                  aria-hidden="true"
+                />
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+
+  const results = (
+    <section aria-labelledby="baza-zadan-results-heading">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-overline">Wyniki</p>
+          <h2
+            id="baza-zadan-results-heading"
+            className="mt-1 text-xl font-black text-foreground"
+          >
+            {resultTitle}
+          </h2>
+          <p className="mt-1 text-sm text-muted" role="status" aria-live="polite">
+            Znaleziono{" "}
+            <span className="font-semibold text-foreground">
+              {polishCount(tasks.length)}
+            </span>
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={clearSelection}
+          className="inline-flex items-center gap-2 self-start text-sm font-semibold text-accent hover:text-accent-strong sm:self-auto"
+        >
+          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+          Wróć do katalogu
+        </button>
+      </div>
+
       {tasks.length === 0 ? (
-        <EmptyState
-          icon={SearchX}
-          title="Brak zadań"
-          description="Zmień filtry albo wyszukiwaną frazę."
-        />
+        <div className="mt-5">
+          <EmptyState
+            icon={SearchX}
+            title="Brak zadań"
+            description="Zmień frazę albo wybierz inny dział i spróbuj ponownie."
+          />
+        </div>
       ) : (
         <>
-          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <ul
+            className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
+            aria-label="Wyniki zadań"
+          >
             {visible.map((task) => (
               <li key={task.id}>
                 <TaskCard task={task} />
@@ -211,26 +382,26 @@ export function BazaZadanTasksPanel() {
             ))}
           </ul>
 
-          {hasMore && (
+          {hasMore ? (
             <div className="mt-6 flex justify-center">
               <button
                 type="button"
-                onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
                 className="btn-ghost px-6 py-2.5 text-sm font-semibold"
               >
                 Pokaż więcej ({tasks.length - visibleCount} pozostało)
               </button>
             </div>
-          )}
+          ) : null}
         </>
       )}
-    </div>
+    </section>
   );
 
   return (
     <div className="space-y-5">
-      {filterControls}
-      {taskGrid}
+      {searchAndFilters}
+      {hasIntent ? results : catalog}
     </div>
   );
 }

@@ -31,7 +31,7 @@ const TABS: readonly { id: BazaTab; label: string; hint: string }[] = [
   {
     id: "zadania",
     label: "Ćwicz zadania",
-    hint: "Pojedyncze zadania treningowe z filtrowaniem po dziale i trudności.",
+    hint: "Spokojny katalog tematów, wyszukiwarka i zadania odkrywane po wyborze.",
   },
   {
     id: "arkusze",
@@ -87,6 +87,18 @@ export function BazaZadanView({
   );
   const [cmsSchemaMissing, setCmsSchemaMissing] = useState(schemaMissing);
   const [cmsNote, setCmsNote] = useState(initialCmsNote);
+  const [runtimeSupabaseReady, setRuntimeSupabaseReady] = useState(() =>
+    isSupabaseConfigured(),
+  );
+
+  useEffect(() => {
+    if (runtimeSupabaseReady || isSupabaseConfigured()) return;
+
+    const handleConfigReady = () => setRuntimeSupabaseReady(true);
+    window.addEventListener("supabase-config-ready", handleConfigReady);
+    return () =>
+      window.removeEventListener("supabase-config-ready", handleConfigReady);
+  }, [runtimeSupabaseReady]);
 
   useEffect(() => {
     if (
@@ -128,7 +140,7 @@ export function BazaZadanView({
     return () => {
       cancelled = true;
     };
-  }, [cmsLoadState, tab]);
+  }, [cmsLoadState, runtimeSupabaseReady, tab]);
 
   const cmsLoading =
     tab === "arkusze" &&
@@ -179,10 +191,11 @@ export function BazaZadanView({
       <header className="max-w-3xl">
         <p className="text-overline">Baza zadań</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Znajdź zadanie
+          Wybierz punkt startu
         </h1>
-        <p className="mt-3 text-base leading-relaxed text-muted">
-          Zacznij od tego, czego potrzebujesz. Twoja ścieżka to{" "}
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
+          Nie musisz przeglądać całej bazy. Wybierz temat, wpisz własną frazę
+          albo przejdź do arkuszy. Twoja ścieżka to{" "}
           <span className="font-semibold text-accent">{pathLabel}</span>, a
           poniżej masz{" "}
           <span className="font-semibold text-foreground">
