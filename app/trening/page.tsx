@@ -13,8 +13,6 @@ import {
 } from "@/lib/trening/progress";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
-import { isSupabaseConfigured } from "@/lib/supabase";
-import { fetchProfileAllowEmpty } from "@/lib/supabase/profiles";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import {
   fetchTasksForTree,
@@ -29,17 +27,13 @@ import type { TheoryTier } from "@/lib/trening/theory-content";
 import type { ExamType } from "@/types/database";
 import Link from "next/link";
 import {
+  ArrowRight,
   BookOpen,
   CheckCircle2,
   ChevronRight,
   Search,
-  Target,
-  X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-
-const PATH_BANNER_KEY = "sm_trening_path_banner_v1";
-const ONBOARDING_XP_MAX = 100;
 
 const taskTreeCache = new Map<ExamType, Promise<TaskTreeRow[]>>();
 const materialSummaryCache = new Map<ExamType, Promise<MaterialTopicSummary[]>>();
@@ -192,24 +186,39 @@ function sortTopicsInExam(
   return { ...exam, categories };
 }
 
-function findFirstPlayableTopic(
+type NextTrainingTopic = {
+  href: string;
+  categoryName: string;
+  topic: TrainingTopicWithProgress;
+};
+
+function findNextTrainingTopic(
   exam: ExamWithProgress,
   examKey: SelectedExam,
-): string | null {
+): NextTrainingTopic | null {
+  let firstPlayable: NextTrainingTopic | null = null;
+
   for (const category of exam.categories) {
     for (const topic of category.topics) {
       if (topic.total > 0) {
-        return buildTopicHref(examKey, category.id, topic.id);
+        const candidate = {
+          href: buildTopicHref(examKey, category.id, topic.id),
+          categoryName: category.name,
+          topic,
+        };
+        firstPlayable ??= candidate;
+        if (topic.solved < topic.total) return candidate;
       }
     }
   }
-  return null;
+
+  return firstPlayable;
 }
 
 type SelectedExam = TreningExamKey;
 
 const EXAM_OPTIONS: { key: SelectedExam; label: string }[] = [
-  { key: "matura_podstawowa", label: "Matura Podstawowa" },
+  { key: "matura_podstawowa", label: "Matura podstawowa" },
   { key: "8_klasa", label: "Egzamin 8-klasisty" },
 ];
 
@@ -221,30 +230,33 @@ function ExamSwitcher({
   onChange: (exam: SelectedExam) => void;
 }) {
   return (
-    <div
-      role="tablist"
-      aria-label="Wybór egzaminu"
-      className="grid w-full max-w-md grid-cols-2 gap-1 rounded-xl border border-surface-border bg-background/45 p-1 text-sm"
-    >
-      {EXAM_OPTIONS.map((opt) => {
-        const isActive = selected === opt.key;
-        return (
-          <button
-            key={opt.key}
-            type="button"
-            role="tab"
-            aria-selected={isActive}
-            onClick={() => onChange(opt.key)}
-            className={`rounded-lg px-3 py-2.5 text-left font-semibold transition ${
-              isActive
-                ? "bg-accent text-on-accent shadow-sm"
-                : "text-muted hover:bg-surface-hover hover:text-foreground"
-            }`}
-          >
-            {opt.label}
-          </button>
-        );
-      })}
+    <div>
+      <p className="mb-2 text-caption">Wybierz ścieżkę</p>
+      <div
+        role="tablist"
+        aria-label="Wybór egzaminu"
+        className="inline-flex w-full rounded-xl border border-surface-border bg-background/45 p-1 text-sm sm:w-auto"
+      >
+        {EXAM_OPTIONS.map((opt) => {
+          const isActive = selected === opt.key;
+          return (
+            <button
+              key={opt.key}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => onChange(opt.key)}
+              className={`min-w-0 flex-1 rounded-lg px-3 py-2.5 text-left font-semibold transition sm:min-w-44 ${
+                isActive
+                  ? "bg-accent text-on-accent shadow-sm"
+                  : "text-muted hover:bg-surface-hover hover:text-foreground"
+              }`}
+            >
+              {opt.label}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -253,13 +265,11 @@ function TopicRow({
   examKey,
   category,
   topic,
-  highlighted,
   theoryTier,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
   topic: TrainingTopicWithProgress;
-  highlighted?: boolean;
   theoryTier: TheoryTier;
 }) {
   const hasTheory = theoryTier !== "none";
@@ -273,11 +283,9 @@ function TopicRow({
 
   const rowClass =
     "group flex min-h-14 items-center gap-3 border-l-2 border-transparent px-4 py-3.5 text-sm transition " +
-    (highlighted
-      ? "border-accent bg-accent-soft/40"
-      : canOpen
-        ? "hover:border-accent/60 hover:bg-surface-hover"
-        : "opacity-50");
+    (canOpen
+      ? "hover:border-accent/60 hover:bg-surface-hover"
+      : "opacity-50");
 
   const inner = (
     <>
@@ -298,8 +306,13 @@ function TopicRow({
         {topic.name}
       </span>
       {theory && (
-        <span className="inline-flex shrink-0 rounded-full bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent">
-          {theory}
+        <span
+          aria-label={theory}
+          title={theory}
+          className="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent/15 px-2 py-1 text-xs font-semibold text-accent"
+        >
+          <BookOpen className="h-3 w-3" aria-hidden />
+          <span className="hidden sm:inline">{theory}</span>
         </span>
       )}
       {canPlay && (
@@ -352,26 +365,28 @@ function theoryLabel(tier: TheoryTier): string | null {
 function CategorySection({
   examKey,
   category,
-  highlightTopicHref,
   theoryByTopic,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
-  highlightTopicHref?: string | null;
   theoryByTopic: Map<string, TheoryTier>;
 }) {
+  const [showAllTopics, setShowAllTopics] = useState(false);
   const playableTopics = category.topics.filter(
     (topic) => topic.total > 0,
   ).length;
   const progress = Math.max(0, Math.min(100, category.progressPercent));
+  const visibleTopics = showAllTopics
+    ? category.topics
+    : category.topics.slice(0, 4);
+  const hiddenTopicCount = category.topics.length - visibleTopics.length;
 
   return (
-    <section className="card-raised overflow-hidden xl:mt-0">
+    <section className="overflow-hidden rounded-2xl border border-surface-border bg-surface">
       <div className="border-b border-surface-border bg-surface-hover/30 p-4 sm:p-5">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
-            <p className="text-overline">Dział</p>
-            <h2 className="mt-1 text-lg font-bold text-foreground">
+            <h2 className="text-base font-bold text-foreground sm:text-lg">
               {category.name}
             </h2>
           </div>
@@ -400,20 +415,33 @@ function CategorySection({
       </div>
 
       <div className="divide-y divide-surface-border">
-        {category.topics.map((topic) => {
-          const href = buildTopicHref(examKey, category.id, topic.id);
+        {visibleTopics.map((topic) => {
           return (
             <TopicRow
               key={topic.id}
               examKey={examKey}
               category={category}
               topic={topic}
-              highlighted={!!highlightTopicHref && highlightTopicHref === href}
               theoryTier={theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"}
             />
           );
         })}
       </div>
+
+      {hiddenTopicCount > 0 && (
+        <button
+          type="button"
+          onClick={() => setShowAllTopics(true)}
+          className="w-full border-t border-surface-border px-4 py-3 text-left text-xs font-bold text-accent transition hover:bg-surface-hover"
+        >
+          Pokaż jeszcze {hiddenTopicCount}{" "}
+          {hiddenTopicCount === 1
+            ? "temat"
+            : hiddenTopicCount >= 2 && hiddenTopicCount <= 4
+              ? "tematy"
+              : "tematów"}
+        </button>
+      )}
     </section>
   );
 }
@@ -432,72 +460,85 @@ function TrainingOverview({
   const progress = Math.max(0, Math.min(100, overallProgress));
 
   return (
-    <section className="card-raised relative mt-8 overflow-hidden border-accent/25 bg-accent-soft/25 p-5 sm:p-6">
-      <div
-        className="pointer-events-none absolute -right-12 -top-16 h-40 w-40 rounded-full bg-accent/10 blur-3xl"
-        aria-hidden
-      />
-      <div className="relative">
-        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
-          <div>
-            <p className="text-overline">Aktualna ścieżka</p>
-            <h2 className="mt-1 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
-              {exam.label}
-            </h2>
-            <p className="mt-2 max-w-xl text-sm text-muted">
-              Wybierz dział, otwórz temat i przejdź od krótkiej teorii do zadań.
-            </p>
-          </div>
-          <div className="flex items-baseline gap-2 sm:flex-col sm:items-end sm:gap-0">
-            <span className="text-3xl font-extrabold tracking-tight text-accent">
-              {overallProgress}%
+    <section className="mt-7 border-y border-surface-border py-4 sm:py-5">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-overline">Postęp ścieżki</p>
+          <p className="mt-1 text-sm font-bold text-foreground">
+            {exam.label}
+            <span className="ml-2 font-normal text-muted">
+              · {topicCount} tematów · {topicsWithTasks} z zadaniami
             </span>
-            <span className="text-xs font-semibold text-muted">ukończonego treningu</span>
-          </div>
+          </p>
         </div>
-
-        <div
-          className="mt-5 h-2 overflow-hidden rounded-full bg-background/70"
-          role="progressbar"
-          aria-label={`Ogólny postęp treningu: ${progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-        >
-          <div className="progress-accent" style={{ width: `${progress}%` }} />
-        </div>
-
-        <dl className="mt-5 grid grid-cols-3 gap-3">
-          <div className="rounded-xl border border-surface-border bg-surface/70 p-3">
-            <dt className="flex items-center gap-1.5 text-xs font-semibold text-muted">
-              <Target className="h-3.5 w-3.5 text-accent" aria-hidden />
-              Postęp
-            </dt>
-            <dd className="mt-1 text-lg font-extrabold text-foreground">
-              {overallProgress}%
-            </dd>
-          </div>
-          <div className="rounded-xl border border-surface-border bg-surface/70 p-3">
-            <dt className="flex items-center gap-1.5 text-xs font-semibold text-muted">
-              <BookOpen className="h-3.5 w-3.5 text-accent" aria-hidden />
-              Tematy
-            </dt>
-            <dd className="mt-1 text-lg font-extrabold text-foreground">
-              {topicCount}
-            </dd>
-          </div>
-          <div className="rounded-xl border border-surface-border bg-surface/70 p-3">
-            <dt className="flex items-center gap-1.5 text-xs font-semibold text-muted">
-              <CheckCircle2 className="h-3.5 w-3.5 text-accent" aria-hidden />
-              Aktywne
-            </dt>
-            <dd className="mt-1 text-lg font-extrabold text-foreground">
-              {topicsWithTasks}
-            </dd>
-          </div>
-        </dl>
+        <p className="text-sm font-bold text-accent">
+          {overallProgress}% <span className="font-normal text-muted">ukończone</span>
+        </p>
       </div>
+
+      <div
+        className="mt-4 h-2 overflow-hidden rounded-full bg-surface-hover"
+        role="progressbar"
+        aria-label={`Ogólny postęp treningu: ${progress}%`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+      >
+        <div className="progress-accent" style={{ width: `${progress}%` }} />
+      </div>
+
+      <p className="mt-2 text-xs text-muted">
+        {overallProgress === 0
+          ? "Wybierz pierwszy temat i zacznij od krótkiej teorii."
+          : overallProgress === 100
+            ? "Ścieżka ukończona — możesz wrócić do wybranych tematów."
+            : "Każdy rozwiązany temat przybliża Cię do celu."}
+      </p>
     </section>
+  );
+}
+
+function NextStepCard({
+  nextTopic,
+  overallProgress,
+}: {
+  nextTopic: NextTrainingTopic;
+  overallProgress: number;
+}) {
+  const hasStarted = overallProgress > 0 || nextTopic.topic.solved > 0;
+
+  return (
+    <Link
+      href={nextTopic.href}
+      className="group mt-6 flex flex-col gap-4 rounded-2xl border border-accent/35 bg-accent-soft/35 p-4 transition hover:border-accent/70 hover:bg-accent-soft/55 sm:flex-row sm:items-center sm:justify-between sm:p-5"
+    >
+      <div className="flex min-w-0 items-start gap-3">
+        <span className="icon-chip h-10 w-10 shrink-0">
+          <BookOpen className="h-4 w-4" aria-hidden />
+        </span>
+        <div className="min-w-0">
+          <p className="text-overline">
+            {hasStarted ? "Następny krok" : "Zacznij tutaj"}
+          </p>
+          <h2 className="mt-1 truncate text-base font-extrabold text-foreground sm:text-lg">
+            {nextTopic.topic.name}
+          </h2>
+          <p className="mt-1 text-xs text-muted">
+            {nextTopic.categoryName} · {nextTopic.topic.total} zadań
+            {nextTopic.topic.solved > 0
+              ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
+              : ""}
+          </p>
+        </div>
+      </div>
+      <span className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-accent">
+        Otwórz temat
+        <ArrowRight
+          className="h-4 w-4 transition-transform group-hover:translate-x-1"
+          aria-hidden
+        />
+      </span>
+    </Link>
   );
 }
 
@@ -541,8 +582,6 @@ export default function TreningPage() {
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
   const [topicSort, setTopicSort] = useState<TopicSort>("az");
-  const [showPathBanner, setShowPathBanner] = useState(false);
-  const [pathBannerHref, setPathBannerHref] = useState<string | null>(null);
   const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
     new Map(),
   );
@@ -625,57 +664,6 @@ export default function TreningPage() {
     return () => clearTimeout(timer);
   }, [searchInput]);
 
-  useEffect(() => {
-    if (loading) return;
-    if (!isSupabaseConfigured()) return;
-    try {
-      if (localStorage.getItem(PATH_BANNER_KEY)) return;
-    } catch {
-      return;
-    }
-
-    let cancelled = false;
-
-    void (async () => {
-      try {
-        const { getSupabase } = await import("@/lib/supabase");
-        const {
-          data: { session },
-        } = await getSupabase().auth.getSession();
-        const user = session?.user;
-        if (!user || cancelled) return;
-
-        const solvedIds = await cachedSolvedTaskIds(user.id);
-        if (solvedIds.size > 0 || cancelled) return;
-
-        const profile = await fetchProfileAllowEmpty(user.id);
-        const xp = profile?.xp ?? 0;
-        if (xp >= ONBOARDING_XP_MAX || cancelled) return;
-
-        const href = findFirstPlayableTopic(exam, selectedExam);
-        if (!href || cancelled) return;
-
-        setPathBannerHref(href);
-        setShowPathBanner(true);
-      } catch (error) {
-        console.warn("[szybka-matma] training path banner:", error);
-      }
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [loading, exam, selectedExam]);
-
-  const dismissPathBanner = () => {
-    try {
-      localStorage.setItem(PATH_BANNER_KEY, "1");
-    } catch {
-      /* ignore */
-    }
-    setShowPathBanner(false);
-  };
-
   const handleExamChange = (key: SelectedExam) => {
     setSelectedExam(key);
     setExam(emptyExamFor(key));
@@ -695,6 +683,11 @@ export default function TreningPage() {
   const matchedTopicCount = useMemo(
     () => countTopics(filteredExam),
     [filteredExam],
+  );
+
+  const nextTopic = useMemo(
+    () => findNextTrainingTopic(sortTopicsInExam(exam, "az"), selectedExam),
+    [exam, selectedExam],
   );
 
   const examSubtitle =
@@ -731,13 +724,19 @@ export default function TreningPage() {
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div className="page-container relative z-10 flex w-full flex-1 flex-col py-8 sm:py-12">
-        <header>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Trening
-          </h1>
-          <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
-            {examSubtitle}
-          </p>
+        <header className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h1 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+              Trening
+            </h1>
+            <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
+              {examSubtitle}
+            </p>
+          </div>
+          <ExamSwitcher
+            selected={selectedExam}
+            onChange={handleExamChange}
+          />
         </header>
 
         <TrainingOverview
@@ -747,180 +746,139 @@ export default function TreningPage() {
           topicsWithTasks={topicsWithTasks}
         />
 
-        <div className="page-with-sidebar mt-6 sm:mt-8">
-          <aside className="page-sidebar space-y-4">
-            <div className="card-raised space-y-5 p-4 sm:p-5">
-              <div>
-                <ExamSwitcher
-                  selected={selectedExam}
-                  onChange={handleExamChange}
+        {!loading && nextTopic && (
+          <NextStepCard
+            nextTopic={nextTopic}
+            overallProgress={overallProgress}
+          />
+        )}
+
+        <section className="mt-8" aria-label="Przeglądanie tematów">
+          <div className="flex flex-col gap-4 border-y border-surface-border py-4 lg:flex-row lg:items-center">
+            <div className="min-w-0 flex-1">
+              <label className="sr-only" htmlFor="trening-search">
+                Szukaj tematu
+              </label>
+              <div className="relative">
+                <Search
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                  aria-hidden
+                />
+                <input
+                  id="trening-search"
+                  type="search"
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  placeholder="Szukaj działu lub tematu…"
+                  className="input-field w-full py-2.5 pl-10 pr-4 text-sm"
                 />
               </div>
-
-              <div>
-                <label className="sr-only" htmlFor="trening-search">
-                  Szukaj tematu
-                </label>
-                <div className="relative">
-                  <Search
-                    className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-                    aria-hidden
-                  />
-                  <input
-                    id="trening-search"
-                    type="search"
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                    placeholder="Szukaj działu lub tematu…"
-                    className="input-field w-full py-2.5 pl-10 pr-4 text-sm"
-                  />
-                </div>
-                {debouncedQuery.trim() && !loading && (
-                  <p className="mt-2 text-xs text-muted">
-                    Znaleziono {matchedTopicCount}{" "}
-                    {matchedTopicCount === 1
-                      ? "temat"
-                      : matchedTopicCount >= 2 && matchedTopicCount <= 4
-                        ? "tematy"
-                        : "tematów"}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-4">
-                <div>
-                  <p className="mb-2 text-caption">Pokaż</p>
-                  <div
-                    role="group"
-                    aria-label="Filtr tematów"
-                    className="flex flex-wrap gap-2"
-                  >
-                  {(
-                    [
-                      { id: "all" as const, label: "Wszystkie" },
-                      { id: "incomplete" as const, label: "Nieukończone" },
-                      { id: "completed" as const, label: "Ukończone" },
-                    ] as const
-                  ).map((opt) => {
-                    const active = topicFilter === opt.id;
-                    return (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => setTopicFilter(opt.id)}
-                        className={`filter-chip ${
-                          active ? "filter-chip-active" : ""
-                        }`}
-                      >
-                        {opt.label}
-                      </button>
-                    );
-                  })}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="mb-2 text-caption">Sortuj</p>
-                  <div
-                    role="group"
-                    aria-label="Sortowanie tematów"
-                    className="flex flex-wrap gap-2"
-                  >
-                    {(
-                      [
-                        { id: "az" as const, label: "A–Z" },
-                        { id: "progress" as const, label: "Postęp" },
-                      ] as const
-                    ).map((opt) => {
-                      const active = topicSort === opt.id;
-                      return (
-                        <button
-                          key={opt.id}
-                          type="button"
-                          onClick={() => setTopicSort(opt.id)}
-                          className={`filter-chip ${
-                            active ? "filter-chip-active" : ""
-                          }`}
-                        >
-                          {opt.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
+              <p className="mt-2 text-xs text-muted" aria-live="polite">
+                {loading
+                  ? "Ładowanie tematów…"
+                  : debouncedQuery.trim()
+                    ? `Znaleziono ${matchedTopicCount} ${
+                        matchedTopicCount === 1
+                          ? "temat"
+                          : matchedTopicCount >= 2 && matchedTopicCount <= 4
+                            ? "tematy"
+                            : "tematów"
+                      }`
+                    : `${matchedTopicCount} tematów`}
+              </p>
             </div>
 
-            {showPathBanner && pathBannerHref && !loading && (
-              <div className="card-raised border-accent/30 bg-accent-soft/30 px-4 py-3 text-sm text-muted">
-                Zacznij od pierwszego tematu —{" "}
-                <Link href={pathBannerHref} className="link-plain">
-                  przejdź do lekcji
-                </Link>
-                <button
-                  type="button"
-                  onClick={dismissPathBanner}
-                  className="ml-3 text-muted hover:text-foreground"
-                  aria-label="Zamknij"
-                >
-                  <X className="inline h-4 w-4" />
-                </button>
-              </div>
-            )}
-          </aside>
+            <div
+              role="group"
+              aria-label="Filtr tematów"
+              className="flex flex-wrap items-center gap-2"
+            >
+              <span className="text-caption mr-1">Pokaż</span>
+              {(
+                [
+                  { id: "all" as const, label: "Wszystkie" },
+                  { id: "incomplete" as const, label: "Nieukończone" },
+                  { id: "completed" as const, label: "Ukończone" },
+                ] as const
+              ).map((opt) => {
+                const active = topicFilter === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setTopicFilter(opt.id)}
+                    className={`filter-chip ${
+                      active ? "filter-chip-active" : ""
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
+            </div>
 
-          <div className="min-w-0">
-        {loading ? (
-          <TrainingListSkeleton />
-        ) : (
-          <div className="space-y-10 xl:grid xl:grid-cols-2 xl:gap-x-10 xl:gap-y-10 xl:space-y-0">
-              {exam.categories.length === 0 ? (
-                <p className="mt-16 text-center text-sm text-muted">
-                  Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
-                  <code className="rounded bg-surface px-1.5 py-0.5 text-foreground">
-                    npm run seed:trening-tasks
-                  </code>{" "}
-                  lub dodaj zadania w Supabase.
-                </p>
-              ) : filteredExam.categories.length === 0 ? (
-                <EmptyState
-                  className="mt-16"
-                  icon={Search}
-                  title={
-                    debouncedQuery.trim()
-                      ? "Brak pasujących tematów"
-                      : topicFilter === "completed"
-                        ? "Brak ukończonych tematów"
-                        : topicFilter === "incomplete"
-                          ? "Wszystko ukończone!"
-                          : "Brak tematów do wyświetlenia"
-                  }
-                  description={
-                    debouncedQuery.trim()
-                      ? `Nie znaleziono tematów dla „${debouncedQuery.trim()}”. Spróbuj innej frazy.`
-                      : topicFilter === "completed"
-                        ? "Rozwiąż zadania w arenie, aby ukończyć pierwsze tematy."
-                        : topicFilter === "incomplete"
-                          ? "Wszystkie aktywne tematy są ukończone — możesz przejść do powtórek."
-                          : "Zmień filtr lub wyszukiwanie, aby zobaczyć tematy."
-                  }
+            <label className="flex items-center gap-2 lg:shrink-0">
+              <span className="text-caption">Sortuj</span>
+              <select
+                id="topic-sort"
+                aria-label="Sortowanie tematów"
+                value={topicSort}
+                onChange={(e) => setTopicSort(e.target.value as TopicSort)}
+                className="input-field min-w-28 py-2.5 text-sm"
+              >
+                <option value="az">A–Z</option>
+                <option value="progress">Postęp</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <div className="mt-6">
+          {loading ? (
+            <TrainingListSkeleton />
+          ) : exam.categories.length === 0 ? (
+            <p className="mt-16 text-center text-sm text-muted">
+              Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
+              <code className="rounded bg-surface px-1.5 py-0.5 text-foreground">
+                npm run seed:trening-tasks
+              </code>{" "}
+              lub dodaj zadania w Supabase.
+            </p>
+          ) : filteredExam.categories.length === 0 ? (
+            <EmptyState
+              className="mt-16"
+              icon={Search}
+              title={
+                debouncedQuery.trim()
+                  ? "Brak pasujących tematów"
+                  : topicFilter === "completed"
+                    ? "Brak ukończonych tematów"
+                    : topicFilter === "incomplete"
+                      ? "Wszystko ukończone!"
+                      : "Brak tematów do wyświetlenia"
+              }
+              description={
+                debouncedQuery.trim()
+                  ? `Nie znaleziono tematów dla „${debouncedQuery.trim()}”. Spróbuj innej frazy.`
+                  : topicFilter === "completed"
+                    ? "Rozwiąż zadania w arenie, aby ukończyć pierwsze tematy."
+                    : topicFilter === "incomplete"
+                      ? "Wszystkie aktywne tematy są ukończone — możesz przejść do powtórek."
+                      : "Zmień filtr lub wyszukiwanie, aby zobaczyć tematy."
+              }
+            />
+          ) : (
+            <div className="grid items-start gap-5 xl:grid-cols-2">
+              {filteredExam.categories.map((category) => (
+                <CategorySection
+                  key={category.id}
+                  examKey={selectedExam}
+                  category={category}
+                  theoryByTopic={theoryByTopic}
                 />
-              ) : (
-                filteredExam.categories.map((category) => (
-                  <CategorySection
-                    key={category.id}
-                    examKey={selectedExam}
-                    category={category}
-                    highlightTopicHref={
-                      showPathBanner ? pathBannerHref : null
-                    }
-                    theoryByTopic={theoryByTopic}
-                  />
-                ))
-              )}
-          </div>
-        )}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

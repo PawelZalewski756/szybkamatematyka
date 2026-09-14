@@ -280,11 +280,39 @@ test.describe("Smoke", () => {
     await page.goto("/trening");
     await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
     await expect(
-      page.getByText("Aktywne", { exact: true }).first(),
+      page.getByRole("link", { name: /Zacznij tutaj/i }),
+    ).toHaveAttribute(
+      "href",
+      "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
+    );
+    await expect(
+      page.locator(
+        'a[href="/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan"]',
+      ).last(),
     ).toBeVisible();
     await expect(
-      page.locator("dd").filter({ hasText: /^28$/ }).first(),
+      page.getByText(/28 tematów · 28 z zadaniami/),
     ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: /Pokaż jeszcze/ }).first(),
+    ).toBeVisible();
+  });
+
+  test("lista treningu pozwala rozwinąć dział bez przeładowania", async ({
+    page,
+  }) => {
+    await page.goto("/trening");
+    const topicLinks = page.locator(
+      'a[href^="/trening/matura/liczby_rzeczywiste/"]',
+    );
+    await expect(topicLinks).toHaveCount(5);
+
+    await page
+      .getByRole("button", { name: "Pokaż jeszcze 2 tematy" })
+      .first()
+      .click();
+
+    await expect(topicLinks).toHaveCount(7);
   });
 
   test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
