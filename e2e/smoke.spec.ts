@@ -196,6 +196,91 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("/minigry pokazuje jeden polecany start i krótki wybór trybu", async ({
+    page,
+  }) => {
+    await page.goto("/minigry");
+
+    await expect(
+      page.getByRole("heading", { level: 1, name: /Minigry/ }),
+    ).toBeVisible();
+    const recommendedStart = page.getByTestId("minigame-recommended-start");
+    await expect(recommendedStart).toBeVisible();
+    await expect(recommendedStart).toHaveAttribute(
+      "href",
+      "/minigry/prawda-falsz?mode=time_attack",
+    );
+    await expect(page.getByText("Dla Ciebie")).toHaveCount(0);
+
+    await expect(
+      page.getByRole("heading", { name: "Wybierz tryb" }),
+    ).toBeVisible();
+    await expect(page.getByTestId("minigame-mode-time_attack")).toHaveAttribute(
+      "href",
+      "/minigry/modes/time-attack",
+    );
+    await expect(
+      page.getByTestId("minigame-mode-time_attack"),
+    ).toContainText("Polecany start");
+  });
+
+  test("/minigry odkrywa karty dopiero po otwarciu obszaru", async ({
+    page,
+  }) => {
+    await page.goto("/minigry");
+
+    const matchedLibrary = page.getByTestId("minigame-matched-library");
+    const arithmeticGroup = matchedLibrary.getByTestId(
+      "minigame-group-rachunki",
+    );
+    const multiplicationLink = arithmeticGroup.getByRole("link", {
+      name: /Szybkie Mnożenie/,
+    });
+
+    await expect(arithmeticGroup).toBeVisible();
+    await expect(multiplicationLink).toBeHidden();
+    await arithmeticGroup.locator("summary").click();
+    await expect(multiplicationLink).toBeVisible();
+    await expect(multiplicationLink).toHaveAttribute(
+      "href",
+      "/minigry/mnozenie?mode=time_attack",
+    );
+
+    const fullLibrary = page.getByTestId("minigame-other-library");
+    await expect(fullLibrary).toBeVisible();
+    await expect(
+      fullLibrary.getByRole("link", { name: /f\(x\) Express/ }),
+    ).toBeHidden();
+  });
+
+  test("/minigry zachowuje tryb po przejściu do katalogu trybu", async ({
+    page,
+  }) => {
+    await page.goto("/minigry");
+    await page.getByTestId("minigame-mode-survival").click();
+
+    await expect(page).toHaveURL(/\/minigry\/modes\/survival$/);
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Przetrwanie" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Prawda czy Fałsz/ }).first(),
+    ).toHaveAttribute("href", "/minigry/prawda-falsz?mode=survival");
+  });
+
+  test("/minigry nie wychodzi poza ekran telefonu", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/minigry");
+
+    await expect(page.getByTestId("minigame-recommended-start")).toBeVisible();
+    await expect(page.getByTestId("minigame-mode-selection")).toBeVisible();
+    const widths = await page.evaluate(() => ({
+      document: document.documentElement.scrollWidth,
+      viewport: window.innerWidth,
+    }));
+    expect(widths.document).toBeLessThanOrEqual(widths.viewport);
+  });
+
   test("panel następnego tematu prowadzi do treningu", async ({ page }) => {
     await page.goto("/");
     const topicLink = page.getByRole("link", {
