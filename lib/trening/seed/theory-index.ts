@@ -13,6 +13,30 @@ export const THEORY_INDEX: TheoryIndexEntry[] = [
   {
     "exam_type": "matura_podstawowa",
     "category": "liczby_rzeczywiste",
+    "topic": "zbiory_i_przedzialy",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "funkcje",
+    "topic": "funkcja_wykladnicza",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "podzielnosc",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "okrag_i_kolo",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "liczby_rzeczywiste",
     "topic": "potegi",
     "tier": "comprehensive"
   },
@@ -368,21 +392,17 @@ export type TheorySummary = {
   tier: TheoryTier;
 };
 
-/** Scala indeks seeda z wierszami Supabase (DB wygrywa przy konflikcie). */
 export function mergeTheorySummaries(
   examType: ExamType,
   fromDb: TheorySummary[],
 ): TheorySummary[] {
   const byKey = new Map<string, TheoryTier>();
-
   for (const entry of seedTheorySummariesForExam(examType)) {
     byKey.set(`${entry.category}:${entry.topic}`, entry.tier);
   }
-
   for (const row of fromDb) {
     byKey.set(`${row.category}:${row.topic}`, row.tier);
   }
-
   return [...byKey.entries()].map(([key, tier]) => {
     const [category, topic] = key.split(":");
     return { category: category!, topic: topic!, tier };

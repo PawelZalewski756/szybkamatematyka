@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "podzielnosc",
+  "categoryName": "Liczby i działania",
+  "topicName": "Podzielność liczb",
+  "tasks": [
+    {
+      "content": "Największy wspólny dzielnik liczb 12 i 23 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2da882c6-847f-4255-9e42-129913796cf8",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 19 przez 3?",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee504416-b235-4fe8-b0ff-a80fb43352b4",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 22 i 9 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "-2",
+        "0",
+        "-1",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5817d680-1451-4404-b401-bc6e8d83eeb0",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 39 przez 9?",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "-5",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 10,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d115e372-7ffd-4f3e-a9d4-2ad373160fcc",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 32 i 25 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "-1",
+        "1",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f4daba23-fdda-4342-8d4f-74d4b473af2a",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 103 przez 7?",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "-1",
+        "3",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9cc4ccad-6285-4418-b1cc-0019b5a71916",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 42 i 11 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "-2",
+        "1",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d25c548d-df32-4762-9eb2-7e0028b1d1ca",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 62 przez 5?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 11,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "733f10b2-ce59-4391-9fb9-3eb821de9cab",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 16 i 27 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "-2",
+        "0",
+        "1",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2020611f-8924-4cc4-8fed-c34d1d184e69",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 30 przez 3?",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "-1",
+        "-2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e633e9e2-9506-4d51-a074-df6055a67155",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 26 i 13 wynosi:",
+      "correct_answer": "13",
+      "options": [
+        "12",
+        "10",
+        "11",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aac1c86b-08c5-4112-b8ff-59d698f2c4b3",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 74 przez 9?",
+      "correct_answer": "2",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 13,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0b2d1c0-0187-4caa-880e-7d01e06c6722",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 36 i 29 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "-1",
+        "1",
+        "-2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d4779baa-a673-41f7-9e43-11e6581e5952",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 48 przez 7?",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "0",
+        "4",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3f1897c6-d320-4f69-9235-62aef80e6bc3",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 46 i 15 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "-1",
+        "0",
+        "-2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e2094cc-6caa-4c5b-b649-dd016ce1b364",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 20 przez 5?",
+      "correct_answer": "0",
+      "options": [
+        "-1",
+        "-4",
+        "0",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 12,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6a87f8b-1740-4c16-89de-242d8fbd38da",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 20 i 31 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "-2",
+        "0",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28efffc1-5364-4c1b-9a4c-89bdb97de6a9",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 44 przez 3?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2bfe6f4-9933-4fe4-864f-156a3805c869",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Największy wspólny dzielnik liczb 30 i 17 wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8c53776d-4c51-4387-9cc4-66937389473c",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Jaka jest reszta z dzielenia liczby 109 przez 9?",
+      "correct_answer": "1",
+      "options": [
+        "-1",
+        "0",
+        "-7",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1e42ecef-aacc-45f4-9708-8bcfbe58144f",
+      "generatedAt": "2026-09-14T20:53:26.251Z",
+      "model": "parametric-v2"
+    }
+  ],
+  "updatedAt": "2026-09-14T20:53:26.252Z"
+}

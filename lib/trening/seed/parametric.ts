@@ -297,6 +297,53 @@ export function generateParametricTask(
         v,
       );
     }
+    case "zbiory_i_przedzialy": {
+      const left = -(2 + (v % 10));
+      const right = 8 + (Math.floor(v / 10) % 5);
+      const shift = 1 + (v % 3);
+      const intersectionLeft = left + shift;
+      const intersectionRight = right - shift;
+      const correct = `[${intersectionLeft}, ${intersectionRight}]`;
+      return buildMc(
+        rng,
+        slot,
+        `Wyznacz część wspólną przedziałów $[${left},${right}]$ i $[${intersectionLeft},${right + shift}]$.`,
+        correct,
+        [
+          `[${left}, ${right}]`,
+          `(${intersectionLeft}, ${intersectionRight})`,
+          `[${left}, ${intersectionRight}]`,
+        ],
+        2,
+        v,
+      );
+    }
+    case "funkcja_wykladnicza": {
+      const bases = [2, 3, 5] as const;
+      const base = bases[Math.floor(v / 10) % bases.length]!;
+      const exponent = 1 + (v % 10);
+      const value = Math.pow(base, exponent);
+      if (v % 2 === 0) {
+        return buildMc(
+          rng,
+          slot,
+          `Dla $f(x)=${base}^x$ oblicz $f(${exponent})$.`,
+          fmtNum(value),
+          wrongs(rng, value, Math.max(2, base)),
+          2,
+          v,
+        );
+      }
+      return buildMc(
+        rng,
+        slot,
+        `Rozwiąż równanie $${base}^x=${value}$.`,
+        fmtNum(exponent),
+        wrongs(rng, exponent, 2),
+        2,
+        v,
+      );
+    }
     case "wartosc_bezwzgledna": {
       const x = -20 + pickV(v, 0, 40);
       if (x === 0) {
@@ -583,6 +630,34 @@ export function generateParametricTask(
         `Oblicz $(${a})+(${b})$`,
         fmtNum(a + b),
         wrongs(rng, a + b, 4),
+        1,
+        v,
+      );
+    }
+    case "podzielnosc": {
+      const a = 12 + pickV(v, 0, 36);
+      const b = 6 + pickV(v, 1, 30);
+      const divisor = 2 + pickV(v, 2, 8);
+      if (v % 2 === 0) {
+        const answer = gcd(a, b);
+        return buildMc(
+          rng,
+          slot,
+          `Największy wspólny dzielnik liczb ${a} i ${b} wynosi:`,
+          fmtNum(answer),
+          wrongs(rng, answer, 3),
+          2,
+          v,
+        );
+      }
+      const number = divisor * (4 + pickV(v, 3, 12)) + (v % divisor);
+      const remainder = number % divisor;
+      return buildMc(
+        rng,
+        slot,
+        `Jaka jest reszta z dzielenia liczby ${number} przez ${divisor}?`,
+        fmtNum(remainder),
+        wrongs(rng, remainder, Math.max(2, divisor - 1)),
         1,
         v,
       );

@@ -1,6 +1,10 @@
 import { getSupabaseOrNull } from "@/lib/supabase";
 import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
-import { legacyDbSlugsForCkeTopic, legacyExamTypesFor } from "@/lib/trening/cke-slug-normalize";
+import {
+  legacyDbSlugsForCkeTopic,
+  legacyExamTypesFor,
+  normalizeCkeTopicSlug,
+} from "@/lib/trening/cke-slug-normalize";
 import type { ExamType, Task } from "@/types/database";
 
 export type TaskRow = {
@@ -175,6 +179,48 @@ export type TopicTaskCountRow = {
 
 export type TaskTreeRow = Pick<TaskRow, "id" | "category" | "topic">;
 
+export function mergeCachedTaskTreeRows(
+  examType: ExamType,
+  databaseRows: TaskTreeRow[],
+  cachedRows: TaskTreeRow[],
+): TaskTreeRow[] {
+  const coveredTopics = new Set(
+    databaseRows.map((row) => {
+      const normalized = normalizeCkeTopicSlug(
+        examType,
+        row.category,
+        row.topic,
+      );
+      return `${normalized.category}:${normalized.topic}`;
+    }),
+  );
+  const cacheOnlyTopics = new Set(
+    cachedRows.map((row) => {
+      const normalized = normalizeCkeTopicSlug(
+        examType,
+        row.category,
+        row.topic,
+      );
+      return `${normalized.category}:${normalized.topic}`;
+    }),
+  );
+  for (const key of coveredTopics) {
+    cacheOnlyTopics.delete(key);
+  }
+
+  const fallbackRows = cachedRows.filter((row) => {
+    const normalized = normalizeCkeTopicSlug(
+      examType,
+      row.category,
+      row.topic,
+    );
+    const key = `${normalized.category}:${normalized.topic}`;
+    return cacheOnlyTopics.has(key);
+  });
+
+  return [...databaseRows, ...fallbackRows];
+}
+
 /** Lekka lista zadań do budowy drzewa treningu (bez treści). */
 export async function fetchTasksForTree(
   examType: ExamType,
@@ -198,7 +244,13 @@ export async function fetchTasksForTree(
   if (error) {
     return fetchCachedTasks(examType, true, isTaskTreeRow);
   }
-  return rows;
+
+  const cachedRows = await fetchCachedTasks(
+    examType,
+    true,
+    isTaskTreeRow,
+  );
+  return mergeCachedTaskTreeRows(examType, rows, cachedRows);
 }
 
 /** Liczba zadań w bazie per temat (klucz: exam_type:category:topic). */

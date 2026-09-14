@@ -34,6 +34,7 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
         { slug: "logarytmy", name: "Logarytmy" },
         { slug: "procenty", name: "Procenty i proporcje" },
         { slug: "notacja_wykladnicza", name: "Notacja wykładnicza" },
+        { slug: "zbiory_i_przedzialy", name: "Zbiory i przedziały" },
         { slug: "wartosc_bezwzgledna", name: "Wartość bezwzględna" },
         { slug: "kolejnosc_dzialan", name: "Kolejność wykonywania działań" },
       ],
@@ -56,6 +57,7 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       topics: [
         { slug: "funkcja_liniowa", name: "Funkcja liniowa" },
         { slug: "funkcja_kwadratowa", name: "Funkcja kwadratowa" },
+        { slug: "funkcja_wykladnicza", name: "Funkcja wykładnicza" },
         { slug: "wlasnosci_funkcji", name: "Własności funkcji i wykres" },
         { slug: "odczyt_wykresu", name: "Odczyt wykresu funkcji" },
       ],

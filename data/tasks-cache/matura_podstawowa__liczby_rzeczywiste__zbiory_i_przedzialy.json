@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "liczby_rzeczywiste",
+  "topic": "zbiory_i_przedzialy",
+  "categoryName": "Liczby rzeczywiste",
+  "topicName": "Zbiory i przedziały",
+  "tasks": [
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-2,10]$ i $[1,13]$.",
+      "correct_answer": "[1, 7]",
+      "options": [
+        "[-2, 10]",
+        "[1, 7]",
+        "[-2, 7]",
+        "(1, 7)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [1, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d8837488-0fc9-42b7-85f4-716cef77267a",
+      "generatedAt": "2026-09-14T20:53:26.208Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-9,9]$ i $[-7,11]$.",
+      "correct_answer": "[-7, 7]",
+      "options": [
+        "(-7, 7)",
+        "[-7, 7]",
+        "[-9, 7]",
+        "[-9, 9]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-7, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a71f6bd-9bce-401a-9aff-116e88c86c0f",
+      "generatedAt": "2026-09-14T20:53:26.209Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-8,8]$ i $[-7,9]$.",
+      "correct_answer": "[-7, 7]",
+      "options": [
+        "[-8, 8]",
+        "[-7, 7]",
+        "(-7, 7)",
+        "[-8, 7]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-7, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9b9b33f8-5451-46e3-ab67-0277b60dbc17",
+      "generatedAt": "2026-09-14T20:53:26.209Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-7,7]$ i $[-3,11]$.",
+      "correct_answer": "[-3, 3]",
+      "options": [
+        "[-7, 7]",
+        "[-3, 3]",
+        "[-7, 3]",
+        "(-3, 3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 3]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a14a59c6-7b19-4efb-a5e8-5a68588a646e",
+      "generatedAt": "2026-09-14T20:53:26.210Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-6,6]$ i $[-3,9]$.",
+      "correct_answer": "[-3, 3]",
+      "options": [
+        "[-6, 3]",
+        "[-6, 6]",
+        "[-3, 3]",
+        "(-3, 3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 3]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e9239215-4d28-422d-ab39-3ae892dfb06a",
+      "generatedAt": "2026-09-14T20:53:26.210Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-5,5]$ i $[-3,7]$.",
+      "correct_answer": "[-3, 3]",
+      "options": [
+        "[-5, 3]",
+        "[-5, 5]",
+        "[-3, 3]",
+        "(-3, 3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 3]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aac4d6ab-5c30-4f2f-a0b3-c839967378a7",
+      "generatedAt": "2026-09-14T20:53:26.210Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-4,12]$ i $[-3,13]$.",
+      "correct_answer": "[-3, 11]",
+      "options": [
+        "[-4, 11]",
+        "[-3, 11]",
+        "[-4, 12]",
+        "(-3, 11)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 11]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "453c6e64-20d0-42c7-b8da-ad7fa3675d94",
+      "generatedAt": "2026-09-14T20:53:26.210Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-3,11]$ i $[1,15]$.",
+      "correct_answer": "[1, 7]",
+      "options": [
+        "(1, 7)",
+        "[1, 7]",
+        "[-3, 7]",
+        "[-3, 11]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [1, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14951554-310a-47a3-b36e-5e26a0cb14a7",
+      "generatedAt": "2026-09-14T20:53:26.210Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-10,8]$ i $[-7,11]$.",
+      "correct_answer": "[-7, 5]",
+      "options": [
+        "[-10, 5]",
+        "[-7, 5]",
+        "[-10, 8]",
+        "(-7, 5)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-7, 5]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "633382f2-431a-4161-a8b3-06a3e05fa781",
+      "generatedAt": "2026-09-14T20:54:02.931Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-11,8]$ i $[-10,9]$.",
+      "correct_answer": "[-10, 7]",
+      "options": [
+        "[-11, 7]",
+        "[-10, 7]",
+        "(-10, 7)",
+        "[-11, 8]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-10, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2c753d2e-638a-4c1a-916d-f11a272f2113",
+      "generatedAt": "2026-09-14T20:54:02.932Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-2,9]$ i $[0,11]$.",
+      "correct_answer": "[0, 7]",
+      "options": [
+        "[0, 7]",
+        "(0, 7)",
+        "[-2, 7]",
+        "[-2, 9]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [0, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b5d11d18-740a-4a06-8fca-a0fdd87e6901",
+      "generatedAt": "2026-09-14T20:54:02.932Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-3,9]$ i $[0,12]$.",
+      "correct_answer": "[0, 6]",
+      "options": [
+        "(0, 6)",
+        "[0, 6]",
+        "[-3, 9]",
+        "[-3, 6]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [0, 6]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "09930b29-e481-4cfa-9892-c21f6f36d279",
+      "generatedAt": "2026-09-14T20:54:02.932Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-4,9]$ i $[-3,10]$.",
+      "correct_answer": "[-3, 8]",
+      "options": [
+        "(-3, 8)",
+        "[-4, 9]",
+        "[-3, 8]",
+        "[-4, 8]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 8]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a480790b-3481-4af3-a24e-6307286a7044",
+      "generatedAt": "2026-09-14T20:54:02.932Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-5,9]$ i $[-3,11]$.",
+      "correct_answer": "[-3, 7]",
+      "options": [
+        "[-3, 7]",
+        "[-5, 9]",
+        "[-5, 7]",
+        "(-3, 7)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ba5ce617-101a-4a4e-b3ed-79334fef653f",
+      "generatedAt": "2026-09-14T20:54:02.933Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-6,9]$ i $[-3,12]$.",
+      "correct_answer": "[-3, 6]",
+      "options": [
+        "[-6, 6]",
+        "[-6, 9]",
+        "(-3, 6)",
+        "[-3, 6]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-3, 6]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d6e95b1-26e5-4438-9be6-b7a3411b8853",
+      "generatedAt": "2026-09-14T20:54:02.933Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-7,9]$ i $[-6,10]$.",
+      "correct_answer": "[-6, 8]",
+      "options": [
+        "[-7, 8]",
+        "[-6, 8]",
+        "[-7, 9]",
+        "(-6, 8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-6, 8]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ea99e9db-e17c-4b35-9c78-3c78e1dc9b9a",
+      "generatedAt": "2026-09-14T20:54:02.933Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-8,9]$ i $[-6,11]$.",
+      "correct_answer": "[-6, 7]",
+      "options": [
+        "[-6, 7]",
+        "[-8, 7]",
+        "(-6, 7)",
+        "[-8, 9]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-6, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bf6c4a67-1b45-4d89-9d5b-abcf96ceb061",
+      "generatedAt": "2026-09-14T20:54:02.933Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-9,9]$ i $[-6,12]$.",
+      "correct_answer": "[-6, 6]",
+      "options": [
+        "(-6, 6)",
+        "[-6, 6]",
+        "[-9, 6]",
+        "[-9, 9]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-6, 6]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bffc0755-85bb-4516-9360-3c86ba0cd8e9",
+      "generatedAt": "2026-09-14T20:54:02.933Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-10,9]$ i $[-9,10]$.",
+      "correct_answer": "[-9, 8]",
+      "options": [
+        "(-9, 8)",
+        "[-9, 8]",
+        "[-10, 9]",
+        "[-10, 8]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-9, 8]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae155f9e-b3b0-4b4c-9222-fa697b4293e5",
+      "generatedAt": "2026-09-14T20:54:02.934Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Wyznacz część wspólną przedziałów $[-11,9]$ i $[-9,11]$.",
+      "correct_answer": "[-9, 7]",
+      "options": [
+        "(-9, 7)",
+        "[-11, 9]",
+        "[-9, 7]",
+        "[-11, 7]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** [-9, 7]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "39bd7181-8a4b-49ff-aef2-c78450287b5c",
+      "generatedAt": "2026-09-14T20:54:02.934Z",
+      "model": "parametric-v2"
+    }
+  ],
+  "updatedAt": "2026-09-14T20:54:02.934Z"
+}

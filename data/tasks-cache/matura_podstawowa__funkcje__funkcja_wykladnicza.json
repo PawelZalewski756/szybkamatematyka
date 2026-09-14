@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "funkcje",
+  "topic": "funkcja_wykladnicza",
+  "categoryName": "Funkcje",
+  "topicName": "Funkcja wykładnicza",
+  "tasks": [
+    {
+      "content": "Dla $f(x)=2^x$ oblicz $f(6)$.",
+      "correct_answer": "64",
+      "options": [
+        "62",
+        "64",
+        "65",
+        "63"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3f35b313-29fd-490f-be57-4cb3a043dd53",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $5^x=3125$.",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "91a4c143-8db6-41dd-a89d-e1017a210187",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(4)$.",
+      "correct_answer": "81",
+      "options": [
+        "79",
+        "81",
+        "78",
+        "80"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e001c419-4318-440e-b092-7aa1b644c0ee",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $2^x=8$.",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef614add-bc20-493f-8110-8de127ea86b1",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=5^x$ oblicz $f(2)$.",
+      "correct_answer": "25",
+      "options": [
+        "24",
+        "20",
+        "25",
+        "23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "51add14a-6eee-4a16-a244-2cb8ac288676",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=3$.",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "354b0032-eb0c-4a6b-a833-4811b14e671e",
+      "generatedAt": "2026-09-14T20:53:26.236Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=2^x$ oblicz $f(7)$.",
+      "correct_answer": "128",
+      "options": [
+        "128",
+        "127",
+        "126",
+        "129"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 128",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "efc93ea7-f8cb-47f3-9d9e-7afeca84fef4",
+      "generatedAt": "2026-09-14T20:54:02.938Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $2^x=256$.",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "6",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1dee182d-2d02-4a26-8260-b84c008fb577",
+      "generatedAt": "2026-09-14T20:54:02.938Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=2^x$ oblicz $f(9)$.",
+      "correct_answer": "512",
+      "options": [
+        "512",
+        "511",
+        "510",
+        "513"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 512",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "066884b8-eb9b-46b0-a000-6cd154125b92",
+      "generatedAt": "2026-09-14T20:54:02.938Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $2^x=1024$.",
+      "correct_answer": "10",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed68352e-c031-4e16-947d-6660d5c84d2f",
+      "generatedAt": "2026-09-14T20:54:02.938Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(1)$.",
+      "correct_answer": "3",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21fd94c3-a3ba-4cbc-bde6-25ad44cb8569",
+      "generatedAt": "2026-09-14T20:54:02.938Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=9$.",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "89fdb9e7-ed6d-46da-8d93-a55298003ed8",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(3)$.",
+      "correct_answer": "27",
+      "options": [
+        "26",
+        "25",
+        "24",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f4e7e6e4-6181-4ca3-8442-b227d0a28368",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=81$.",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2cd11919-a3b0-4330-b021-f99a634beb47",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(5)$.",
+      "correct_answer": "243",
+      "options": [
+        "241",
+        "240",
+        "242",
+        "243"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 243",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0ce261c6-5a3a-485f-a2e6-b0fa83f7c96d",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=729$.",
+      "correct_answer": "6",
+      "options": [
+        "7",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "97ef84f8-7d4c-4d40-9111-be14de77365b",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(7)$.",
+      "correct_answer": "2187",
+      "options": [
+        "2187",
+        "2184",
+        "2185",
+        "2186"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2187",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5d5d7d44-25e9-43a8-813e-6b25dfcd0319",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=6561$.",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "7",
+        "9",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 15,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "698fc941-4710-48fb-a7d8-a1321c20af82",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Dla $f(x)=3^x$ oblicz $f(9)$.",
+      "correct_answer": "19683",
+      "options": [
+        "19681",
+        "19683",
+        "19682",
+        "19680"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 19683",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cf24ec19-8823-442a-b99c-fd0f12db8fee",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Rozwiąż równanie $3^x=59049$.",
+      "correct_answer": "10",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dbcd27f6-a330-4e99-ae43-6e09bcd5b830",
+      "generatedAt": "2026-09-14T20:54:02.939Z",
+      "model": "parametric-v2"
+    }
+  ],
+  "updatedAt": "2026-09-14T20:54:02.939Z"
+}

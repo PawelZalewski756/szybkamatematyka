@@ -375,6 +375,9 @@ function CategorySection({
   const playableTopics = category.topics.filter(
     (topic) => topic.total > 0,
   ).length;
+  const completedTopics = category.topics.filter(
+    (topic) => topic.status === "completed",
+  ).length;
   const progress = Math.max(0, Math.min(100, category.progressPercent));
   const visibleTopics = showAllTopics
     ? category.topics
@@ -411,6 +414,7 @@ function CategorySection({
             : playableTopics >= 2 && playableTopics <= 4
               ? "tematy z zadaniami"
               : "tematów z zadaniami"}
+          {completedTopics > 0 && ` · ${completedTopics} ukończonych`}
         </p>
       </div>
 
@@ -431,15 +435,18 @@ function CategorySection({
       {hiddenTopicCount > 0 && (
         <button
           type="button"
-          onClick={() => setShowAllTopics(true)}
+          onClick={() => setShowAllTopics((visible) => !visible)}
           className="w-full border-t border-surface-border px-4 py-3 text-left text-xs font-bold text-accent transition hover:bg-surface-hover"
         >
-          Pokaż jeszcze {hiddenTopicCount}{" "}
-          {hiddenTopicCount === 1
-            ? "temat"
-            : hiddenTopicCount >= 2 && hiddenTopicCount <= 4
-              ? "tematy"
-              : "tematów"}
+          {showAllTopics
+            ? "Pokaż mniej"
+            : `Pokaż jeszcze ${hiddenTopicCount} ${
+                hiddenTopicCount === 1
+                  ? "temat"
+                  : hiddenTopicCount >= 2 && hiddenTopicCount <= 4
+                    ? "tematy"
+                    : "tematów"
+              }`}
         </button>
       )}
     </section>

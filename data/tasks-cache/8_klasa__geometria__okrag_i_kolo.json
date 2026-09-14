@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "okrag_i_kolo",
+  "categoryName": "Geometria płaska",
+  "topicName": "Okrąg i koło",
+  "tasks": [
+    {
+      "content": "Pole koła $r=2$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "13",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6c7429a-44b0-4088-b586-58423e3e844e",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=2$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "13",
+      "options": [
+        "8",
+        "12",
+        "11",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3caa2e2e-61f2-45cd-afcf-d0b8f7904ac0",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=3$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "28",
+      "options": [
+        "18",
+        "27",
+        "26",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "25d7222c-179e-4b8b-949c-8cce8fc73d1c",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=3$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "19",
+      "options": [
+        "17",
+        "14",
+        "18",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 19",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6d1a1346-d4da-4835-bc78-63a1e70919e9",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=4$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "50",
+      "options": [
+        "48",
+        "49",
+        "40",
+        "50"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa7a4b53-9693-4e5d-907a-dc18500f2d0a",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=4$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "25",
+      "options": [
+        "23",
+        "24",
+        "25",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "80e832e8-345c-4672-9b63-c51c7954bac6",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=5$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "79",
+      "options": [
+        "78",
+        "79",
+        "69",
+        "77"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 79",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "67820bc8-dc19-4541-b821-09a0b292baeb",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=5$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "31",
+      "options": [
+        "31",
+        "29",
+        "26",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 31",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "23f1067d-55bb-4f82-80f0-ccc569923ea5",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=6$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "113",
+      "options": [
+        "113",
+        "103",
+        "111",
+        "112"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 113",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "98fc4f39-aa63-4f93-b735-120e96816425",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=6$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "38",
+      "options": [
+        "36",
+        "33",
+        "38",
+        "37"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 38",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa0f32c8-d6ad-4083-9cfb-d591b403ce74",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=7$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "154",
+      "options": [
+        "154",
+        "153",
+        "144",
+        "152"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 154",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30f546a1-0aff-442d-b9f0-c3cfb9437593",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=7$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "44",
+      "options": [
+        "39",
+        "43",
+        "44",
+        "42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 44",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2587a6a1-9dbb-4a89-9f16-cb89d4d5f234",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=8$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "201",
+      "options": [
+        "191",
+        "201",
+        "200",
+        "199"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 14,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 201",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e33450c0-b363-4310-b119-4ecf0f4ea1a3",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=8$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "50",
+      "options": [
+        "45",
+        "50",
+        "48",
+        "49"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "41f6f887-59b1-4be1-85e1-6a7a978df9bd",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=9$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "254",
+      "options": [
+        "244",
+        "254",
+        "252",
+        "253"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 17,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 254",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e377d200-ba27-4d9f-a833-d4ca18297119",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=9$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "57",
+      "options": [
+        "56",
+        "55",
+        "52",
+        "57"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 57",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4f355112-3cc6-4bf6-aff0-ad2f84d08ed4",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=10$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "314",
+      "options": [
+        "314",
+        "304",
+        "313",
+        "312"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 314",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2a84b5c5-c2ee-465a-aaf3-1bd460b43296",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=10$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "63",
+      "options": [
+        "58",
+        "63",
+        "62",
+        "61"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 20,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dcc368a8-ea75-4eb3-b0f3-0d3bf4fa8cde",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Pole koła $r=11$, $\\pi\\approx 3{,}14$ (całkowite):",
+      "correct_answer": "380",
+      "options": [
+        "378",
+        "379",
+        "380",
+        "370"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 19,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 380",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e7a77467-93fc-4682-b78b-b6857ec5eb52",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    },
+    {
+      "content": "Obwód koła $r=11$, $\\pi\\approx 3{,}14$ (całkowity):",
+      "correct_answer": "69",
+      "options": [
+        "69",
+        "64",
+        "68",
+        "67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 16,
+      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 69",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5fc71b0a-ecf4-4883-ab66-b175e6323011",
+      "generatedAt": "2026-09-14T20:53:26.260Z",
+      "model": "parametric-v2"
+    }
+  ],
+  "updatedAt": "2026-09-14T20:53:26.260Z"
+}
