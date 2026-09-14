@@ -4,15 +4,47 @@ import { AccountLevelBar } from "@/components/minigry/AccountLevelBar";
 import {
   groupMinigames,
   type MinigameGroup,
+  type MinigameGroupVisual,
 } from "@/components/minigry/minigame-groups";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
   getMinigamesForPath,
   type MinigameEntry,
 } from "@/lib/minigry/minigames-catalog";
-import { MINIGAME_MODES } from "@/lib/minigry/game-modes";
+import {
+  MINIGAME_MODES,
+  type MinigamePlayMode,
+} from "@/lib/minigry/game-modes";
 import { learningPathLabel } from "@/lib/learning-path";
 import { useGameAccount } from "@/lib/minigry/use-game-account";
+import {
+  ArrowRight,
+  Calculator,
+  ChevronDown,
+  Circle,
+  Divide,
+  Equal,
+  Grid2X2,
+  Layers,
+  LineChart,
+  Minus,
+  MoveHorizontal,
+  Percent,
+  Plus,
+  Radical,
+  Ruler,
+  Scale,
+  ShieldCheck,
+  Sigma,
+  Sparkles,
+  Square,
+  Target,
+  Timer,
+  Triangle,
+  Trophy,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -22,6 +54,551 @@ function gameCountLabel(count: number): string {
   return `${count} gier`;
 }
 
+const VISUAL_TONES = {
+  amber: {
+    panel: "border-amber-300/30 bg-amber-400/15",
+    glow: "bg-amber-300/20",
+    text: "text-amber-200",
+    strong: "bg-amber-300 text-amber-950",
+  },
+  sky: {
+    panel: "border-sky-300/30 bg-sky-400/15",
+    glow: "bg-sky-300/20",
+    text: "text-sky-200",
+    strong: "bg-sky-300 text-sky-950",
+  },
+  violet: {
+    panel: "border-violet-300/30 bg-violet-400/15",
+    glow: "bg-violet-300/20",
+    text: "text-violet-200",
+    strong: "bg-violet-300 text-violet-950",
+  },
+  rose: {
+    panel: "border-rose-300/30 bg-rose-400/15",
+    glow: "bg-rose-300/20",
+    text: "text-rose-200",
+    strong: "bg-rose-300 text-rose-950",
+  },
+  emerald: {
+    panel: "border-emerald-300/30 bg-emerald-400/15",
+    glow: "bg-emerald-300/20",
+    text: "text-emerald-200",
+    strong: "bg-emerald-300 text-emerald-950",
+  },
+  cyan: {
+    panel: "border-cyan-300/30 bg-cyan-400/15",
+    glow: "bg-cyan-300/20",
+    text: "text-cyan-200",
+    strong: "bg-cyan-300 text-cyan-950",
+  },
+  orange: {
+    panel: "border-orange-300/30 bg-orange-400/15",
+    glow: "bg-orange-300/20",
+    text: "text-orange-200",
+    strong: "bg-orange-300 text-orange-950",
+  },
+  indigo: {
+    panel: "border-indigo-300/30 bg-indigo-400/15",
+    glow: "bg-indigo-300/20",
+    text: "text-indigo-200",
+    strong: "bg-indigo-300 text-indigo-950",
+  },
+  fuchsia: {
+    panel: "border-fuchsia-300/30 bg-fuchsia-400/15",
+    glow: "bg-fuchsia-300/20",
+    text: "text-fuchsia-200",
+    strong: "bg-fuchsia-300 text-fuchsia-950",
+  },
+  lime: {
+    panel: "border-lime-300/30 bg-lime-400/15",
+    glow: "bg-lime-300/20",
+    text: "text-lime-200",
+    strong: "bg-lime-300 text-lime-950",
+  },
+  teal: {
+    panel: "border-teal-300/30 bg-teal-400/15",
+    glow: "bg-teal-300/20",
+    text: "text-teal-200",
+    strong: "bg-teal-300 text-teal-950",
+  },
+  slate: {
+    panel: "border-slate-300/25 bg-slate-400/10",
+    glow: "bg-slate-300/15",
+    text: "text-slate-200",
+    strong: "bg-slate-300 text-slate-950",
+  },
+} as const;
+
+type VisualTone = keyof typeof VISUAL_TONES;
+type VisualMotif =
+  | "grid"
+  | "dots"
+  | "orbit"
+  | "rays"
+  | "bars"
+  | "triangle"
+  | "fraction"
+  | "axis"
+  | "waves"
+  | "squares"
+  | "formula"
+  | "chart"
+  | "layers";
+
+type GameVisual = {
+  icon: LucideIcon;
+  label: string;
+  marker: string;
+  motif: VisualMotif;
+  tone: VisualTone;
+};
+
+const GAME_VISUALS: Record<string, GameVisual> = {
+  "prawda-falsz": {
+    icon: Scale,
+    label: "Pułapki",
+    marker: "T/N",
+    motif: "axis",
+    tone: "violet",
+  },
+  mnozenie: {
+    icon: Calculator,
+    label: "Tabliczka",
+    marker: "×",
+    motif: "grid",
+    tone: "amber",
+  },
+  dodawanie: {
+    icon: Plus,
+    label: "Sumowanie",
+    marker: "+",
+    motif: "rays",
+    tone: "orange",
+  },
+  odejmowanie: {
+    icon: Minus,
+    label: "Różnica",
+    marker: "−",
+    motif: "axis",
+    tone: "rose",
+  },
+  dzielenie: {
+    icon: Divide,
+    label: "Iloraz",
+    marker: "÷",
+    motif: "fraction",
+    tone: "sky",
+  },
+  porownaj: {
+    icon: Scale,
+    label: "Relacje",
+    marker: "≷",
+    motif: "axis",
+    tone: "indigo",
+  },
+  ulamki: {
+    icon: Grid2X2,
+    label: "Ułamki",
+    marker: "½",
+    motif: "fraction",
+    tone: "cyan",
+  },
+  procenty: {
+    icon: Percent,
+    label: "Procenty",
+    marker: "%",
+    motif: "dots",
+    tone: "lime",
+  },
+  potegi: {
+    icon: Zap,
+    label: "Potęgi",
+    marker: "x²",
+    motif: "rays",
+    tone: "violet",
+  },
+  pierwiastki: {
+    icon: Radical,
+    label: "Pierwiastki",
+    marker: "√",
+    motif: "formula",
+    tone: "teal",
+  },
+  rownania: {
+    icon: Equal,
+    label: "Równania",
+    marker: "x=",
+    motif: "formula",
+    tone: "fuchsia",
+  },
+  ciag: {
+    icon: MoveHorizontal,
+    label: "Ciągi",
+    marker: "…",
+    motif: "dots",
+    tone: "emerald",
+  },
+  nawiasy: {
+    icon: Calculator,
+    label: "Kolejność",
+    marker: "( )",
+    motif: "squares",
+    tone: "orange",
+  },
+  funkcje: {
+    icon: LineChart,
+    label: "Funkcje",
+    marker: "f(x)",
+    motif: "chart",
+    tone: "emerald",
+  },
+  wzory: {
+    icon: Sparkles,
+    label: "Wzory",
+    marker: "a²",
+    motif: "formula",
+    tone: "fuchsia",
+  },
+  logarytmy: {
+    icon: Target,
+    label: "Logarytmy",
+    marker: "log",
+    motif: "orbit",
+    tone: "indigo",
+  },
+  pole: {
+    icon: Square,
+    label: "Pola",
+    marker: "a·b",
+    motif: "squares",
+    tone: "rose",
+  },
+  obwod: {
+    icon: Ruler,
+    label: "Obwody",
+    marker: "2a+2b",
+    motif: "axis",
+    tone: "sky",
+  },
+  nwd: {
+    icon: Grid2X2,
+    label: "Dzielniki",
+    marker: "NWD",
+    motif: "grid",
+    tone: "amber",
+  },
+  zaokraglenie: {
+    icon: Circle,
+    label: "Przybliżenia",
+    marker: "≈",
+    motif: "orbit",
+    tone: "teal",
+  },
+  przeciwna: {
+    icon: MoveHorizontal,
+    label: "Oś liczbowa",
+    marker: "−x",
+    motif: "axis",
+    tone: "indigo",
+  },
+  "potegi-10": {
+    icon: Zap,
+    label: "Dziesiątki",
+    marker: "10ⁿ",
+    motif: "bars",
+    tone: "amber",
+  },
+  trojkat: {
+    icon: Triangle,
+    label: "Kąty",
+    marker: "180°",
+    motif: "triangle",
+    tone: "rose",
+  },
+  "ulamki-plus": {
+    icon: Plus,
+    label: "Ułamki",
+    marker: "⅓+",
+    motif: "fraction",
+    tone: "cyan",
+  },
+  sinusy: {
+    icon: LineChart,
+    label: "Sinus",
+    marker: "sin",
+    motif: "waves",
+    tone: "sky",
+  },
+  kosinusy: {
+    icon: LineChart,
+    label: "Kosinus",
+    marker: "cos",
+    motif: "waves",
+    tone: "violet",
+  },
+  nww: {
+    icon: Grid2X2,
+    label: "Wielokrotności",
+    marker: "NWW",
+    motif: "grid",
+    tone: "lime",
+  },
+  kwadrat: {
+    icon: Square,
+    label: "Kwadraty",
+    marker: "x²",
+    motif: "squares",
+    tone: "orange",
+  },
+  modulo: {
+    icon: Divide,
+    label: "Reszta",
+    marker: "mod",
+    motif: "bars",
+    tone: "fuchsia",
+  },
+  "wartosc-bezwzgledna": {
+    icon: MoveHorizontal,
+    label: "Odległość",
+    marker: "|x|",
+    motif: "axis",
+    tone: "teal",
+  },
+  "ulamki-minus": {
+    icon: Minus,
+    label: "Ułamki",
+    marker: "⅔−",
+    motif: "fraction",
+    tone: "orange",
+  },
+  "pole-kola": {
+    icon: Circle,
+    label: "Koło",
+    marker: "πr²",
+    motif: "orbit",
+    tone: "rose",
+  },
+  srednia: {
+    icon: Sigma,
+    label: "Statystyka",
+    marker: "x̄",
+    motif: "chart",
+    tone: "emerald",
+  },
+  "procent-odwrotny": {
+    icon: Percent,
+    label: "Proporcje",
+    marker: "p%",
+    motif: "dots",
+    tone: "lime",
+  },
+};
+
+const DEFAULT_GAME_VISUAL: GameVisual = {
+  icon: Sparkles,
+  label: "Minigra",
+  marker: "∎",
+  motif: "layers",
+  tone: "slate",
+};
+
+function getGameVisual(game: MinigameEntry): GameVisual {
+  return GAME_VISUALS[game.id] ?? DEFAULT_GAME_VISUAL;
+}
+
+const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
+  calculator: Calculator,
+  sigma: Sigma,
+  radical: Radical,
+  triangle: Triangle,
+  "line-chart": LineChart,
+  layers: Layers,
+};
+
+function VisualMotif({
+  motif,
+  tone,
+}: {
+  motif: VisualMotif;
+  tone: VisualTone;
+}) {
+  const motifClass = `pointer-events-none absolute inset-0 opacity-55 ${VISUAL_TONES[tone].text}`;
+  const dotClass = "h-1.5 w-1.5 rounded-full bg-current";
+
+  switch (motif) {
+    case "grid":
+      return (
+        <span
+          className={`${motifClass} grid grid-cols-3 place-content-center gap-1.5 p-3`}
+          aria-hidden
+        >
+          {Array.from({ length: 9 }, (_, index) => (
+            <span key={index} className="h-1.5 w-1.5 rounded-sm bg-current" />
+          ))}
+        </span>
+      );
+    case "dots":
+      return (
+        <span
+          className={`${motifClass} grid grid-cols-2 place-content-center gap-2 p-4`}
+          aria-hidden
+        >
+          {Array.from({ length: 4 }, (_, index) => (
+            <span key={index} className={dotClass} />
+          ))}
+        </span>
+      );
+    case "orbit":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full border border-current" />
+          <span className="absolute left-1/2 top-1/2 h-8 w-20 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-[50%] border border-current" />
+          <span className="absolute left-[68%] top-[27%] h-2 w-2 rounded-full bg-current" />
+        </span>
+      );
+    case "rays":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-1/2 top-1/2 h-20 w-1 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-current" />
+          <span className="absolute left-1/2 top-1/2 h-20 w-1 -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
+          <span className="absolute left-1/2 top-1/2 h-16 w-1 -translate-x-1/2 -translate-y-1/2 rotate-90 rounded-full bg-current" />
+        </span>
+      );
+    case "bars":
+      return (
+        <span
+          className={`${motifClass} flex items-end justify-center gap-1.5 p-4`}
+          aria-hidden
+        >
+          <span className="h-5 w-1.5 rounded-full bg-current" />
+          <span className="h-9 w-1.5 rounded-full bg-current" />
+          <span className="h-7 w-1.5 rounded-full bg-current" />
+          <span className="h-12 w-1.5 rounded-full bg-current" />
+        </span>
+      );
+    case "triangle":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-md border-2 border-current" />
+          <span className="absolute left-1/2 top-[28%] h-2 w-2 -translate-x-1/2 rounded-full bg-current" />
+        </span>
+      );
+    case "fraction":
+      return (
+        <span className={`${motifClass} flex flex-col items-center justify-center gap-1`} aria-hidden>
+          <span className="text-xs font-bold">1</span>
+          <span className="h-px w-8 bg-current" />
+          <span className="text-xs font-bold">2</span>
+        </span>
+      );
+    case "axis":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-4 right-4 top-1/2 h-px bg-current" />
+          <span className="absolute left-1/2 top-4 bottom-4 w-px bg-current" />
+          <span className="absolute left-[30%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-current" />
+          <span className="absolute left-[70%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-current" />
+        </span>
+      );
+    case "waves":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-1/2 top-1/2 h-10 w-20 -translate-x-1/2 -translate-y-1/2 -rotate-6 rounded-[50%] border-2 border-current" />
+          <span className="absolute left-1/2 top-1/2 h-6 w-20 -translate-x-1/2 -translate-y-1/2 rotate-6 rounded-[50%] border-2 border-current" />
+        </span>
+      );
+    case "squares":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-[25%] top-[25%] h-8 w-8 rounded-md border-2 border-current" />
+          <span className="absolute bottom-[25%] right-[25%] h-8 w-8 rounded-md border-2 border-current" />
+        </span>
+      );
+    case "formula":
+      return (
+        <span className={`${motifClass} flex flex-col justify-center gap-2 px-4`} aria-hidden>
+          <span className="h-1 w-12 rounded-full bg-current" />
+          <span className="h-1 w-8 rounded-full bg-current" />
+          <span className="h-1 w-10 rounded-full bg-current" />
+        </span>
+      );
+    case "chart":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute bottom-5 left-4 h-px w-16 bg-current" />
+          <span className="absolute bottom-5 left-4 h-16 w-px bg-current" />
+          <span className="absolute bottom-6 left-7 h-8 w-8 -rotate-45 border-l-2 border-t-2 border-current" />
+          <span className="absolute bottom-10 left-12 h-8 w-8 rotate-12 border-l-2 border-t-2 border-current" />
+        </span>
+      );
+    case "layers":
+      return (
+        <span className={motifClass} aria-hidden>
+          <span className="absolute left-1/2 top-[32%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
+          <span className="absolute left-1/2 top-[48%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
+          <span className="absolute left-1/2 top-[64%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
+        </span>
+      );
+  }
+}
+
+const GAME_VISUAL_SIZES = {
+  card: "min-h-[144px] w-20 rounded-none border-y-0 border-l-0 border-r sm:w-24",
+  hero: "h-28 w-28 rounded-3xl",
+  group: "h-12 w-12 rounded-2xl",
+} as const;
+
+function GameVisual({
+  visual,
+  size,
+}: {
+  visual: GameVisual;
+  size: keyof typeof GAME_VISUAL_SIZES;
+}) {
+  const Icon = visual.icon;
+  const tone = VISUAL_TONES[visual.tone];
+
+  return (
+    <span
+      className={`relative isolate flex shrink-0 items-center justify-center overflow-hidden border ${tone.panel} ${GAME_VISUAL_SIZES[size]}`}
+      aria-hidden
+    >
+      <span className={`absolute -right-5 -top-5 h-16 w-16 rounded-full blur-2xl ${tone.glow}`} />
+      <VisualMotif motif={visual.motif} tone={visual.tone} />
+      <span className={`relative z-10 flex items-center justify-center rounded-2xl border border-current/30 bg-background/20 p-2.5 ${tone.text}`}>
+        <Icon className={size === "hero" ? "h-9 w-9" : "h-6 w-6"} strokeWidth={1.8} />
+      </span>
+      <span className={`absolute bottom-2 right-2 z-10 text-[10px] font-black tracking-tight ${tone.text}`}>
+        {visual.marker}
+      </span>
+    </span>
+  );
+}
+
+const MODE_VISUALS: Record<
+  MinigamePlayMode,
+  { eyebrow: string; icon: LucideIcon; motif: VisualMotif; tone: VisualTone }
+> = {
+  time_attack: {
+    eyebrow: "Szybki sprint",
+    icon: Timer,
+    motif: "rays",
+    tone: "amber",
+  },
+  survival: {
+    eyebrow: "Jedno życie",
+    icon: ShieldCheck,
+    motif: "orbit",
+    tone: "rose",
+  },
+  marathon: {
+    eyebrow: "Długi dystans",
+    icon: Trophy,
+    motif: "bars",
+    tone: "sky",
+  },
+};
+
 function ModeHubCard({
   mode,
   recommended,
@@ -29,30 +606,43 @@ function ModeHubCard({
   mode: (typeof MINIGAME_MODES)[number];
   recommended: boolean;
 }) {
+  const visual = MODE_VISUALS[mode.id];
+  const Icon = visual.icon;
+  const tone = VISUAL_TONES[visual.tone];
+
   return (
     <Link
       href={`/minigry/modes/${mode.slug}`}
       data-testid={`minigame-mode-${mode.id}`}
-      className={`card-raised group flex min-h-[148px] flex-col justify-between p-4 sm:p-5 ${
+      className={`card-raised group relative isolate flex min-h-[202px] flex-col overflow-hidden p-0 ${
         recommended ? "border-accent/50 bg-accent-soft" : ""
       }`}
     >
-      <div className="flex items-center justify-between gap-3">
-        <span className="rounded-full border border-surface-border bg-surface-hover px-2.5 py-0.5 text-xs font-semibold text-muted">
-          {mode.badge}
+      <span className={`pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
+      <span className="relative flex items-start justify-between gap-3 p-4 sm:p-5">
+        <span className={`relative isolate flex h-20 w-20 items-center justify-center overflow-hidden rounded-3xl border ${tone.panel}`}>
+          <VisualMotif motif={visual.motif} tone={visual.tone} />
+          <Icon className={`relative z-10 h-9 w-9 ${tone.text}`} strokeWidth={1.8} aria-hidden />
         </span>
-        {recommended ? (
-          <span className="text-xs font-bold text-accent">Polecany start</span>
-        ) : null}
-      </div>
-      <div className="mt-5">
-        <h3 className="text-lg font-bold text-foreground">{mode.title}</h3>
-        <p className="mt-1 text-sm leading-relaxed text-muted">
-          {mode.description}
-        </p>
-      </div>
-      <span className="mt-4 text-sm font-semibold text-accent">
-        Wybierz minigrę <span aria-hidden>→</span>
+        <span className="flex min-w-0 flex-col items-end gap-2 text-right">
+          <span className={`rounded-full border px-2.5 py-1 text-xs font-bold ${tone.panel} ${tone.text}`}>
+            {mode.badge}
+          </span>
+          {recommended ? (
+            <span className="text-xs font-bold text-accent">Polecany start</span>
+          ) : null}
+        </span>
+      </span>
+      <span className="relative mt-auto p-4 pt-0 sm:p-5 sm:pt-0">
+        <span className={`text-[11px] font-bold uppercase tracking-[0.16em] ${tone.text}`}>
+          {visual.eyebrow}
+        </span>
+        <h3 className="mt-1 text-lg font-bold text-foreground">{mode.title}</h3>
+        <p className="mt-1 text-sm leading-relaxed text-muted">{mode.description}</p>
+        <span className={`mt-4 flex items-center gap-2 text-sm font-bold ${tone.text}`}>
+          Wybierz minigrę
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+        </span>
       </span>
     </Link>
   );
@@ -76,89 +666,131 @@ function RecommendedStart({
     );
   }
 
+  const visual = getGameVisual(game);
+  const tone = VISUAL_TONES[visual.tone];
+
   return (
     <Link
       href={`${game.href}?mode=time_attack`}
       data-testid="minigame-recommended-start"
-      className="card-raised group flex flex-col justify-between border-accent/45 bg-accent-soft p-5 sm:p-6"
+      className="card-raised group relative isolate overflow-hidden border-accent/45 bg-accent-soft p-0"
     >
-      <div className="flex items-start gap-4">
-        <span className="icon-chip h-12 w-12 shrink-0 text-lg font-bold sm:h-14 sm:w-14">
-          {game.emoji}
+      <span className={`pointer-events-none absolute -right-14 -top-16 h-56 w-56 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
+      <span className="relative flex flex-col gap-5 p-5 sm:p-6 lg:flex-row lg:items-center">
+        <span className="flex shrink-0 items-center gap-3">
+          <GameVisual visual={visual} size="hero" />
+          <span className={`hidden text-[11px] font-bold uppercase tracking-[0.16em] sm:block lg:hidden ${tone.text}`}>
+            {visual.label}
+          </span>
         </span>
-        <div className="min-w-0">
-          <p className="text-overline text-accent">Polecany start</p>
-          <h2 className="mt-1 text-xl font-bold text-foreground sm:text-2xl">
+        <span className="min-w-0">
+          <span className="flex flex-wrap items-center gap-2">
+            <span className="text-overline text-accent">Polecany start</span>
+            <span className={`rounded-full border px-2 py-0.5 text-[11px] font-bold ${tone.panel} ${tone.text}`}>
+              {visual.label}
+            </span>
+          </span>
+          <h2 className="mt-2 text-xl font-bold text-foreground sm:text-2xl">
             {game.title}
           </h2>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
             {game.description}
           </p>
-        </div>
-      </div>
-      <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+        </span>
+      </span>
+      <span className="relative flex flex-col items-start gap-3 border-t border-accent/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
         <span className="btn-chunky px-5 py-3 text-sm">
-          Zagraj teraz <span aria-hidden>→</span>
+          Zagraj teraz
+          <ArrowRight className="h-4 w-4" aria-hidden />
         </span>
         <span className="text-xs font-semibold text-muted">
           {pathLabel} · Na czas · 60 s
         </span>
-      </div>
+      </span>
     </Link>
   );
 }
 
 function MinigameCard({ game }: { game: MinigameEntry }) {
+  const visual = getGameVisual(game);
+  const tone = VISUAL_TONES[visual.tone];
+
   return (
     <Link
       href={`${game.href}?mode=time_attack`}
       data-testid="minigame-game-card"
-      className="group flex min-h-[116px] items-start gap-3 rounded-xl border border-surface-border bg-surface p-4 transition-colors hover:border-accent/45 hover:bg-surface-hover"
+      className="group flex min-h-[144px] overflow-hidden rounded-2xl border border-surface-border bg-surface transition-[border-color,background-color,transform] hover:-translate-y-0.5 hover:border-accent/45 hover:bg-surface-hover"
     >
-      <span className="icon-chip h-10 w-10 shrink-0 text-base font-semibold">
-        {game.emoji}
-      </span>
-      <span className="min-w-0">
-        <span className="flex items-start justify-between gap-2">
-          <span className="text-sm font-bold text-foreground">{game.title}</span>
-          <span
-            className="shrink-0 text-sm text-muted transition-colors group-hover:text-accent"
-            aria-hidden
-          >
-            →
+      <GameVisual visual={visual} size="card" />
+      <span className="flex min-w-0 flex-1 flex-col justify-between gap-3 p-4">
+        <span className="min-w-0">
+          <span className="flex items-start justify-between gap-2">
+            <span className="min-w-0">
+              <span className={`block text-[10px] font-bold uppercase tracking-[0.14em] ${tone.text}`}>
+                {visual.label}
+              </span>
+              <span className="mt-1 block line-clamp-1 text-sm font-bold text-foreground">
+                {game.title}
+              </span>
+            </span>
+            <ArrowRight className={`mt-0.5 h-4 w-4 shrink-0 text-muted transition-transform group-hover:translate-x-1 ${tone.text}`} aria-hidden />
+          </span>
+          <span className="mt-2 block line-clamp-2 text-xs leading-relaxed text-muted">
+            {game.description}
           </span>
         </span>
-        <span className="mt-1 block line-clamp-2 text-xs leading-relaxed text-muted">
-          {game.description}
+        <span className="flex items-center gap-2 text-[11px] font-semibold text-muted">
+          <span className={`h-1.5 w-1.5 rounded-full ${tone.strong}`} aria-hidden />
+          Na czas · 60 s
         </span>
       </span>
     </Link>
   );
 }
 
+function GroupVisual({ group }: { group: MinigameGroup }) {
+  const Icon = GROUP_ICONS[group.visual.icon];
+  const tone = VISUAL_TONES[group.visual.tone];
+
+  return (
+    <span className={`relative isolate flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl border ${tone.panel}`}>
+      <VisualMotif motif={group.visual.motif} tone={group.visual.tone} />
+      <Icon className={`relative z-10 h-5 w-5 ${tone.text}`} strokeWidth={1.8} aria-hidden />
+    </span>
+  );
+}
+
 function MinigameGroupDisclosure({ group }: { group: MinigameGroup }) {
+  const tone = VISUAL_TONES[group.visual.tone];
+
   return (
     <details
-      className="group rounded-xl border border-surface-border bg-background"
+      className="group overflow-hidden rounded-2xl border border-surface-border bg-background"
       data-testid={`minigame-group-${group.id}`}
     >
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 marker:content-none">
-        <span className="min-w-0">
-          <span className="block text-sm font-bold text-foreground">
-            {group.title}
-          </span>
-          <span className="mt-0.5 block text-xs text-muted">
-            {group.description}
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-3 marker:content-none sm:gap-4 sm:p-4">
+        <span className="flex min-w-0 items-center gap-3">
+          <GroupVisual group={group} />
+          <span className="min-w-0">
+            <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span className={`text-[10px] font-bold uppercase tracking-[0.14em] ${tone.text}`}>
+                {group.visual.eyebrow}
+              </span>
+              <span className="text-xs font-semibold text-muted">
+                {gameCountLabel(group.games.length)}
+              </span>
+            </span>
+            <span className="mt-1 block text-sm font-bold text-foreground sm:text-base">
+              {group.title}
+            </span>
+            <span className="mt-0.5 block line-clamp-2 text-xs text-muted">
+              {group.description}
+            </span>
           </span>
         </span>
-        <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-muted">
-          {gameCountLabel(group.games.length)}
-          <span
-            className="text-base transition-transform group-open:rotate-45"
-            aria-hidden
-          >
-            +
-          </span>
+        <span className={`flex shrink-0 items-center gap-2 text-xs font-semibold ${tone.text}`}>
+          <span className="hidden sm:inline">Otwórz</span>
+          <ChevronDown className="h-5 w-5 transition-transform group-open:rotate-180" aria-hidden />
         </span>
       </summary>
       <div className="border-t border-surface-border p-3 sm:p-4">
@@ -190,18 +822,22 @@ function MinigameLibraryDisclosure({
   return (
     <details
       open={open}
-      className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
+      className="group overflow-hidden rounded-3xl border border-surface-border bg-surface"
       data-testid={testId}
     >
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-4 marker:content-none sm:px-5">
-        <span className="min-w-0">
-          <span className="block text-base font-bold text-foreground">
-            {title}
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 marker:content-none sm:p-5">
+        <span className="flex min-w-0 items-start gap-3">
+          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
+            <Sparkles className="h-4 w-4" aria-hidden />
           </span>
-          <span className="mt-1 block text-sm text-muted">{description}</span>
+          <span className="min-w-0">
+            <span className="block text-base font-bold text-foreground">{title}</span>
+            <span className="mt-1 block text-sm text-muted">{description}</span>
+          </span>
         </span>
-        <span className="shrink-0 text-xs font-semibold text-muted">
+        <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-muted">
           {gameCountLabel(gameCount)}
+          <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden />
         </span>
       </summary>
       <div className="space-y-3 border-t border-surface-border p-3 sm:p-4">
@@ -210,6 +846,27 @@ function MinigameLibraryDisclosure({
         ))}
       </div>
     </details>
+  );
+}
+
+function HubHeroArt() {
+  return (
+    <span className="relative hidden h-36 w-56 shrink-0 items-center justify-center sm:flex" aria-hidden>
+      <span className="absolute h-32 w-32 rounded-full border border-accent/25" />
+      <span className="absolute h-24 w-24 rounded-full border border-accent/20 [transform:rotateX(62deg)_rotateZ(-18deg)]" />
+      <span className="absolute h-16 w-16 rotate-45 rounded-2xl border border-accent/35 bg-accent/10" />
+      <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-accent text-on-accent shadow-[0_8px_0_var(--accent-press)]">
+        <Sigma className="h-7 w-7" aria-hidden />
+      </span>
+      <span className="absolute left-2 top-4 flex h-8 w-8 items-center justify-center rounded-xl border border-sky-300/30 bg-sky-400/15 text-sky-200">
+        <Plus className="h-4 w-4" aria-hidden />
+      </span>
+      <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl border border-rose-300/30 bg-rose-400/15 text-rose-200">
+        <Triangle className="h-4 w-4" aria-hidden />
+      </span>
+      <span className="absolute right-6 top-1 text-xs font-bold text-emerald-200">f(x)</span>
+      <span className="absolute bottom-0 left-10 text-xs font-bold text-violet-200">πr²</span>
+    </span>
   );
 }
 
@@ -227,22 +884,35 @@ export default function MinigryPage() {
   const otherGroups = groupMinigames(otherGames);
 
   return (
-    <div className="page-container flex w-full flex-1 flex-col py-8 sm:py-12">
+    <div className="page-container flex w-full flex-1 flex-col py-6 sm:py-10">
       <motion.header
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
+        className="relative isolate overflow-hidden rounded-[2rem] border border-surface-border bg-surface p-5 sm:p-8"
       >
-        <p className="text-overline">Krótkie rundy · szybkie liczenie</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Minigry · <span className="text-gradient-brand">{pathLabel}</span>
-        </h1>
-        <p className="mt-3 max-w-2xl text-base text-muted">
-          Zacznij od jednej polecanej gry, wybierz tempo rundy, a resztę
-          tematów odkrywaj wtedy, kiedy masz na nie ochotę.
-        </p>
+        <span className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" aria-hidden />
+        <span className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(var(--surface-border)_1px,transparent_1px),linear-gradient(90deg,var(--surface-border)_1px,transparent_1px)] [background-size:2rem_2rem] [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden />
+        <span className="relative flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+          <span className="min-w-0">
+            <span className="flex flex-wrap items-center gap-2">
+              <span className="text-overline">Krótkie rundy · szybkie liczenie</span>
+              <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
+                3 tryby
+              </span>
+            </span>
+            <h1 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Minigry · <span className="text-gradient-brand">{pathLabel}</span>
+            </h1>
+            <p className="mt-3 max-w-2xl text-base text-muted">
+              Zacznij od jednej polecanej gry, wybierz tempo rundy, a resztę
+              tematów odkrywaj wtedy, kiedy masz na nie ochotę.
+            </p>
+          </span>
+          <HubHeroArt />
+        </span>
       </motion.header>
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(18rem,0.7fr)]">
+      <div className="mt-6 grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(18rem,0.7fr)]">
         <RecommendedStart game={recommendedStart} pathLabel={pathLabel} />
 
         <aside>
@@ -314,8 +984,8 @@ export default function MinigryPage() {
             Odkrywaj według tematu
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-muted">
-            Gry są pogrupowane, żeby łatwiej było znaleźć konkretny rodzaj
-            ćwiczeń. Otwórz tylko obszar, który Cię teraz interesuje.
+            Każdy obszar ma własny rytm: od siatki rachunków po układ
+            współrzędnych. Otwórz tylko to, co chcesz teraz przećwiczyć.
           </p>
         </div>
 
