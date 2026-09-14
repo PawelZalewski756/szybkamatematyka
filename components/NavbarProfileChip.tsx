@@ -3,6 +3,8 @@
 import { calculateLevel } from "@/lib/levelSystem";
 import type { Profile } from "@/lib/supabase/profiles";
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 type NavbarProfileChipProps = {
   profile: Profile;
@@ -19,6 +21,9 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
   const level = calculateLevel(profile.xp);
   const initial = displayInitial(profile);
   const nick = profile.nick.trim() || "Profil";
+  const [brokenForUrl, setBrokenForUrl] = useState<string | null>(null);
+  const showImage =
+    Boolean(profile.avatarUrl) && brokenForUrl !== profile.avatarUrl;
 
   return (
     <Link
@@ -26,8 +31,20 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
       title={`${nick} · poziom ${level}`}
       className={`inline-flex min-w-0 max-w-[9.5rem] shrink-0 items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-white/[0.06] sm:max-w-[11rem] ${className}`}
     >
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent/15 text-xs font-bold text-accent ring-1 ring-accent/25">
-        {initial}
+      <span className="relative flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-accent/15 text-xs font-bold text-accent ring-1 ring-accent/25">
+        {showImage ? (
+          <Image
+            src={profile.avatarUrl!}
+            alt=""
+            fill
+            sizes="28px"
+            unoptimized
+            className="object-cover"
+            onError={() => setBrokenForUrl(profile.avatarUrl)}
+          />
+        ) : (
+          initial
+        )}
       </span>
       <span className="hidden min-w-0 flex-col leading-tight md:flex">
         <span className="truncate text-xs font-semibold text-foreground">{nick}</span>

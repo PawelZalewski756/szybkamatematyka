@@ -69,14 +69,20 @@ wykonaj poniższe kroki:
 9. Na końcu uruchom, w tej kolejności:
    `20260906220000_production_hardening.sql`,
    `20260906230000_secure_profile_data_and_atomic_assist.sql`,
-   `20260906240000_fix_auth_profile_trigger.sql`.
+   `20260906240000_fix_auth_profile_trigger.sql`,
+   `20260907000000_repair_public_profile_grants.sql`.
+
+Ostatnia migracja naprawia granty odczytu dla opcjonalnych kolumn profilu
+(w tym `avatar_url`, XP z minigier i danych pojedynków). Jest ważna także przy
+aktualizacji istniejącego projektu, który używał wcześniejszych, ręcznych
+skryptów SQL.
 
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
 plikami hardeningu. Nie są wymagane w nowej instalacji — końcowa migracja
 odtwarza ich potrzebne elementy po utworzeniu tabel.
 
-Ostatni plik sprawdza istnienie tabel bazowych i końcowo ustawia RLS. Zamyka
+Migracja hardeningu sprawdza istnienie tabel bazowych i końcowo ustawia RLS. Zamyka
 zapis anon/authenticated do `arkusze`, `zadania`, `tasks` i `materials`,
 zostawiając zapis wyłącznie dla adminów przez `public.is_admin()`. Ponownie
 tworzy polityki own-row dla postępu, wyzwań, powtórek, osiągnięć i historii

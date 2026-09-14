@@ -38,6 +38,10 @@ begin
       add column if not exists duel_losses  integer not null default 0,
       add column if not exists duel_draws   integer not null default 0,
       add column if not exists duel_rating  integer not null default 0;
+
+    execute
+      'grant select (duel_played, duel_wins, duel_losses, duel_draws, duel_rating) ' ||
+      'on table public.profiles to anon, authenticated';
   end if;
 end $$;
 

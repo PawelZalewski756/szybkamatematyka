@@ -3,3 +3,4 @@ alter table public.profiles
   add column if not exists minigry_xp integer not null default 0;
 
 comment on column public.profiles.minigry_xp is 'Suma XP zdobyta wyłącznie w minigrach (do rankingu Minigry).';
+grant select (minigry_xp) on table public.profiles to anon, authenticated;

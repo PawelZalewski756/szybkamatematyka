@@ -3,6 +3,8 @@
 -- Tylko kolumna (bez Storage): add_avatar_url_only.sql
 
 alter table public.profiles add column if not exists avatar_url text;
+grant select (avatar_url) on table public.profiles to anon, authenticated;
+grant update (avatar_url) on table public.profiles to authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Storage: bucket „avatary” (publiczny odczyt, upload tylko własny folder)
