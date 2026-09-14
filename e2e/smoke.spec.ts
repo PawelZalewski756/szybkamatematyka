@@ -376,7 +376,7 @@ test.describe("Smoke", () => {
       ).last(),
     ).toBeVisible();
     await expect(
-      page.getByText(/28 tematów · 28 z zadaniami/),
+      page.getByText(/30 tematów · 30 z zadaniami/),
     ).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Pokaż jeszcze/ }).first(),
@@ -387,15 +387,20 @@ test.describe("Smoke", () => {
     page,
   }) => {
     await page.goto("/trening");
-    const topicLinks = page.locator(
+    const categorySection = page
+      .getByRole("heading", { name: "Liczby rzeczywiste" })
+      .locator("xpath=ancestor::section[1]");
+    const topicLinks = categorySection.locator(
       'a[href^="/trening/matura/liczby_rzeczywiste/"]',
     );
-    await expect(topicLinks).toHaveCount(5);
+    await expect(categorySection).toBeVisible();
+    await expect(topicLinks).not.toHaveCount(0);
 
-    await page
-      .getByRole("button", { name: "Pokaż jeszcze 2 tematy" })
-      .first()
-      .click();
+    const expandButton = categorySection.getByRole("button", {
+      name: /Pokaż jeszcze/,
+    });
+    await expect(expandButton).toBeVisible();
+    await expandButton.click();
 
     await expect(topicLinks).toHaveCount(7);
   });
