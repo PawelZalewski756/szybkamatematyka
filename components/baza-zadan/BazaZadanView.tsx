@@ -16,7 +16,7 @@ import {
   formatSupabaseErrorForUser,
   isSchemaMissingError,
 } from "@/lib/supabase/errors";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export type BazaTab = "zadania" | "arkusze" | "trening";
@@ -27,11 +27,11 @@ type BazaZadanViewProps = {
   cmsNote?: string | null;
 };
 
-const TABS: { id: BazaTab; label: string; hint: string }[] = [
+const TABS: readonly { id: BazaTab; label: string; hint: string }[] = [
   {
     id: "zadania",
     label: "Ćwicz zadania",
-    hint: "Pojedyncze zadania treningowe — filtruj po dziale i trudności.",
+    hint: "Pojedyncze zadania treningowe z filtrowaniem po dziale i trudności.",
   },
   {
     id: "arkusze",
@@ -41,7 +41,7 @@ const TABS: { id: BazaTab; label: string; hint: string }[] = [
   {
     id: "trening",
     label: "Symulacje",
-    hint: "Krótkie arkusze treningowe w aplikacji (E8 / matura MIX).",
+    hint: "Pełne arkusze treningowe w aplikacji (E8 / matura MIX).",
   },
 ];
 
@@ -50,18 +50,40 @@ function parseTab(value: string | null): BazaTab {
   return "zadania";
 }
 
+function polishCount(
+  count: number,
+  one: string,
+  few: string,
+  many: string,
+): string {
+  const absolute = Math.abs(count);
+  const lastDigit = absolute % 10;
+  const lastTwoDigits = absolute % 100;
+  const form =
+    absolute === 1
+      ? one
+      : lastDigit >= 2 &&
+          lastDigit <= 4 &&
+          (lastTwoDigits < 10 || lastTwoDigits >= 20)
+        ? few
+        : many;
+
+  return `${count} ${form}`;
+}
+
 export function BazaZadanView({
   cmsTasks: initialCmsTasks = [],
   schemaMissing = false,
   cmsNote: initialCmsNote = null,
 }: BazaZadanViewProps) {
   const { path } = useLearningPath();
-  const router = useRouter();
   const searchParams = useSearchParams();
   const tab = parseTab(searchParams.get("tab"));
   const [cmsTasks, setCmsTasks] = useState(initialCmsTasks);
-  const [cmsLoading, setCmsLoading] = useState(
-    initialCmsTasks.length === 0 && isSupabaseConfigured(),
+  const [cmsLoadState, setCmsLoadState] = useState<"idle" | "ready">(
+    initialCmsTasks.length > 0 || schemaMissing || Boolean(initialCmsNote)
+      ? "ready"
+      : "idle",
   );
   const [cmsSchemaMissing, setCmsSchemaMissing] = useState(schemaMissing);
   const [cmsNote, setCmsNote] = useState(initialCmsNote);
@@ -70,9 +92,7 @@ export function BazaZadanView({
     if (
       tab !== "arkusze" ||
       !isSupabaseConfigured() ||
-      cmsTasks.length > 0 ||
-      cmsSchemaMissing ||
-      cmsNote
+      cmsLoadState !== "idle"
     ) {
       return;
     }
@@ -102,14 +122,18 @@ export function BazaZadanView({
         );
       })
       .finally(() => {
-        if (!cancelled) setCmsLoading(false);
+        if (!cancelled) setCmsLoadState("ready");
       });
 
     return () => {
       cancelled = true;
     };
-  }, [cmsNote, cmsSchemaMissing, cmsTasks.length, tab]);
+  }, [cmsLoadState, tab]);
 
+  const cmsLoading =
+    tab === "arkusze" &&
+    cmsLoadState === "idle" &&
+    isSupabaseConfigured();
   const pathLabel = learningPathLabel(path);
   const taskCount = getTaskStats(path).totalTasks;
   const sheetCount = getExamSheetsForPath(path).length;
@@ -118,10 +142,22 @@ export function BazaZadanView({
     [cmsTasks],
   );
 
-  const counts: Record<BazaTab, number> = {
-    zadania: taskCount,
-    arkusze: cmsArkuszCount,
-    trening: sheetCount,
+  const countValues: Record<BazaTab, string> = {
+    zadania: String(taskCount),
+    arkusze:
+      cmsLoading ? "…" : cmsLoadState === "idle" ? "—" : String(cmsArkuszCount),
+    trening: String(sheetCount),
+  };
+
+  const countLabels: Record<BazaTab, string> = {
+    zadania: polishCount(taskCount, "zadanie", "zadania", "zadań"),
+    arkusze:
+      cmsLoading
+        ? "Ładowanie liczby arkuszy"
+        : cmsLoadState === "idle"
+        ? "Otwórz, aby sprawdzić liczbę arkuszy"
+        : polishCount(cmsArkuszCount, "arkusz", "arkusze", "arkuszy"),
+    trening: polishCount(sheetCount, "arkusz", "arkusze", "arkuszy"),
   };
 
   const activeTab = TABS.find((t) => t.id === tab) ?? TABS[0]!;
@@ -131,58 +167,107 @@ export function BazaZadanView({
     if (next === "zadania") params.delete("tab");
     else params.set("tab", next);
     const q = params.toString();
-    router.replace(q ? `/baza-zadan?${q}` : "/baza-zadan", { scroll: false });
+    window.history.replaceState(
+      null,
+      "",
+      q ? `/baza-zadan?${q}` : "/baza-zadan",
+    );
   };
 
   return (
     <div className="page-container w-full py-8 sm:py-10">
-      <header>
-        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Baza zadań
+      <header className="max-w-3xl">
+        <p className="text-overline">Baza zadań</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          Znajdź zadanie
         </h1>
-        <p className="mt-2 max-w-2xl text-base text-muted">
-          Ścieżka:{" "}
-          <span className="font-semibold text-accent">{pathLabel}</span>.
-          Wybierz zakładkę poniżej — każde miejsce służy do czegoś innego.
+        <p className="mt-3 text-base leading-relaxed text-muted">
+          Zacznij od tego, czego potrzebujesz. Twoja ścieżka to{" "}
+          <span className="font-semibold text-accent">{pathLabel}</span>, a
+          poniżej masz{" "}
+          <span className="font-semibold text-foreground">
+            {polishCount(taskCount, "zadanie", "zadania", "zadań")}
+          </span>{" "}
+          do przećwiczenia.
         </p>
       </header>
 
-      <div
-        className="mt-8 flex gap-1 overflow-x-auto border-b border-surface-border pb-px [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        role="tablist"
-        aria-label="Sekcje bazy zadań"
+      <section
+        className="mt-8 max-w-5xl"
+        aria-labelledby="baza-zadan-goal-heading"
       >
-        {TABS.map(({ id, label }) => {
-          const active = tab === id;
-          return (
-            <button
-              key={id}
-              type="button"
-              role="tab"
-              aria-selected={active}
-              onClick={() => setTab(id)}
-              className={`shrink-0 border-b-2 px-4 py-3 text-sm font-semibold transition ${
-                active
-                  ? "border-accent text-foreground"
-                  : "border-transparent text-muted hover:text-foreground"
-              }`}
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+          <div>
+            <p className="text-overline">Następny krok</p>
+            <h2
+              id="baza-zadan-goal-heading"
+              className="mt-1 text-lg font-bold text-foreground"
             >
-              {label}
-              <span className="ml-1.5 tabular-nums text-muted">
-                {counts[id]}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+              Wybierz sposób pracy
+            </h2>
+          </div>
+          <p className="text-sm text-muted">
+            Aktywne:{" "}
+            <span className="font-semibold text-foreground">
+              {activeTab.label}
+            </span>
+          </p>
+        </div>
 
-      <p className="mt-4 text-sm text-muted">{activeTab.hint}</p>
+        <div
+          className="mt-4 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          role="tablist"
+          aria-label="Sposób pracy w bazie zadań"
+        >
+          {TABS.map(({ id, label }) => {
+            const active = tab === id;
+            return (
+              <button
+                key={id}
+                id={`baza-tab-${id}`}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                aria-controls="baza-zadan-panel"
+                aria-label={`${label}, ${countLabels[id]}`}
+                onClick={() => setTab(id)}
+                className={`flex min-w-44 shrink-0 items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition sm:min-w-0 sm:flex-1 ${
+                  active
+                    ? "border-accent bg-accent-soft text-foreground"
+                    : "border-surface-border bg-surface text-muted hover:border-accent/35 hover:bg-surface-hover hover:text-foreground"
+                }`}
+              >
+                <span>{label}</span>
+                <span
+                  aria-hidden="true"
+                  className={`min-w-8 rounded-full px-2 py-1 text-center text-xs tabular-nums ${
+                    active
+                      ? "bg-accent text-on-accent"
+                      : "bg-surface-hover text-muted"
+                  }`}
+                >
+                  {countValues[id]}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
-      <div className="mt-6" role="tabpanel">
+        <p className="mt-3 text-sm text-muted">{activeTab.hint}</p>
+      </section>
+
+      <div
+        id="baza-zadan-panel"
+        className="mt-7"
+        role="tabpanel"
+        aria-labelledby={`baza-tab-${tab}`}
+      >
         {tab === "zadania" && <BazaZadanTasksPanel />}
         {tab === "arkusze" && (
           cmsLoading ? (
-            <p className="text-sm text-muted">Ładowanie arkuszy…</p>
+            <p className="rounded-xl border border-surface-border bg-surface px-4 py-3 text-sm text-muted">
+              Ładowanie arkuszy…
+            </p>
           ) : (
             <BazaZadanArkuszePanel
               cmsTasks={cmsTasks}

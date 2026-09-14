@@ -42,17 +42,38 @@ export function BazaZadanTreningPanel() {
   }
 
   return (
-    <div className="space-y-8">
-      <p className="text-sm text-muted">
-        Kompletne arkusze w aplikacji — rozwiązujesz zadania po kolei, na końcu
-        widzisz wynik. Dla ścieżki{" "}
-        <span className="font-semibold text-foreground">{pathLabel}</span>.
-      </p>
+    <div className="space-y-5">
+      <div className="flex flex-col gap-2 rounded-2xl border border-surface-border bg-surface p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+        <div>
+          <p className="text-overline">Symulacje</p>
+          <p className="mt-1 text-sm text-muted">
+            Kompletne arkusze z wynikiem na końcu:{" "}
+            <span className="font-semibold text-foreground">
+              {sheets.length}
+            </span>
+            .
+          </p>
+        </div>
+        <p className="text-sm text-muted">
+          Ścieżka:{" "}
+          <span className="font-semibold text-foreground">{pathLabel}</span>
+        </p>
+      </div>
 
       {grouped.map(({ kind, label, sheets: items }) => (
-        <section key={kind}>
-          <h3 className="mb-3 text-sm font-bold text-foreground">{label}</h3>
-          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <section key={kind} aria-labelledby={`trening-group-${kind}`}>
+          <div className="mb-3 flex items-baseline justify-between gap-3">
+            <h2
+              id={`trening-group-${kind}`}
+              className="text-base font-bold text-foreground"
+            >
+              {label}
+            </h2>
+            <span className="text-sm tabular-nums text-muted">
+              {items.length}
+            </span>
+          </div>
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {items.map((sheet) => (
               <li key={sheet.id}>
                 <ExamSheetCard sheet={sheet} />

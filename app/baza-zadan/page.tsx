@@ -13,8 +13,8 @@ export default function BazaZadanPage() {
   return (
     <Suspense
       fallback={
-        <div className="mx-auto max-w-6xl px-4 py-16 text-sm text-muted xl:max-w-7xl">
-          Ładowanie bazy zadań…
+        <div className="page-container px-4 py-12 text-sm text-muted sm:py-16">
+          Ładowanie…
         </div>
       }
     >

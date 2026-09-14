@@ -40,7 +40,7 @@ function ScopeChip({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`filter-chip w-full text-left sm:w-auto ${active ? "filter-chip-active" : ""}`}
+      className={`filter-chip flex items-center justify-between gap-2 whitespace-nowrap text-left ${active ? "filter-chip-active" : ""}`}
     >
       {children}
     </button>
@@ -169,60 +169,71 @@ export function BazaZadanArkuszePanel({
     );
   }
 
-  const filtersSidebar = (
-    <aside className="page-sidebar space-y-5 rounded-xl border border-surface-border bg-surface p-4 sm:p-5">
-      <div className="flex items-baseline justify-between gap-2">
-        <p className="text-sm font-semibold text-foreground">Filtry</p>
-        <p className="text-sm tabular-nums text-muted">{filtered.length}</p>
-      </div>
-
-      <div>
-        <p className="mb-1.5 text-xs font-medium text-muted">Typ egzaminu</p>
-        <div className="flex flex-col gap-1.5">
-          {scopes.map((s) => (
-            <ScopeChip
-              key={s.id}
-              active={activeScope === s.id}
-              onClick={() => setScope(s.id)}
-            >
-              {s.label}{" "}
-              <span className="tabular-nums opacity-70">({s.count})</span>
-            </ScopeChip>
-          ))}
-        </div>
-      </div>
-
-      {years.length > 1 && (
+  const filtersToolbar = (
+    <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
+      <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <div>
-          <label htmlFor="arkusz-rok" className="text-xs font-medium text-muted">
-            Rok
-          </label>
-          <select
-            id="arkusz-rok"
-            value={year === "all" ? "all" : String(year)}
-            onChange={(e) => {
-              const v = e.target.value;
-              setYear(v === "all" ? "all" : Number(v));
-            }}
-            className="input-field mt-1.5 w-full px-3 py-2 text-sm"
-          >
-            <option value="all">Wszystkie lata</option>
-            {years.map((y) => (
-              <option key={y} value={y}>
-                {y}
-              </option>
-            ))}
-          </select>
+          <p className="text-overline">Arkusze CKE</p>
+          <p className="mt-1 text-sm text-muted" role="status" aria-live="polite">
+            Wyświetlono{" "}
+            <span className="font-semibold text-foreground">
+              {filtered.length}
+            </span>{" "}
+            {filtered.length === 1 ? "arkusz" : "arkuszy"}
+          </p>
         </div>
-      )}
 
-      <Link
-        href="/trening/arkusze"
-        className="block text-sm font-semibold text-accent hover:text-accent-strong"
-      >
-        Pełny katalog arkuszy →
-      </Link>
-    </aside>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div
+            className="flex flex-wrap gap-2"
+            role="group"
+            aria-label="Typ egzaminu"
+          >
+            {scopes.map((s) => (
+              <ScopeChip
+                key={s.id}
+                active={activeScope === s.id}
+                onClick={() => setScope(s.id)}
+              >
+                <span>{s.label}</span>
+                <span className="tabular-nums opacity-70">{s.count}</span>
+              </ScopeChip>
+            ))}
+          </div>
+
+          {years.length > 1 && (
+            <div className="sm:min-w-40">
+              <label htmlFor="arkusz-rok" className="sr-only">
+                Rok
+              </label>
+              <select
+                id="arkusz-rok"
+                value={year === "all" ? "all" : String(year)}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  setYear(v === "all" ? "all" : Number(v));
+                }}
+                className="input-field w-full px-3 py-2 text-sm"
+              >
+                <option value="all">Wszystkie lata</option>
+                {years.map((y) => (
+                  <option key={y} value={y}>
+                    {y}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          <Link
+            href="/trening/arkusze"
+            className="text-sm font-semibold text-accent hover:text-accent-strong"
+          >
+            Pełny katalog →
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 
   const cardsContent =
@@ -274,21 +285,9 @@ export function BazaZadanArkuszePanel({
     );
 
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-muted lg:hidden">
-        Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej stronie.
-      </p>
-
-      <div className="page-with-sidebar">
-        {filtersSidebar}
-        <div>
-          <p className="mb-5 hidden text-sm text-muted lg:block">
-            Oficjalne arkusze z rozwiązaniami — każdy otwiera się na osobnej
-            stronie.
-          </p>
-          {cardsContent}
-        </div>
-      </div>
+    <div className="space-y-5">
+      {filtersToolbar}
+      {cardsContent}
     </div>
   );
 }
