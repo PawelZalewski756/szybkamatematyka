@@ -54,79 +54,26 @@ function gameCountLabel(count: number): string {
   return `${count} gier`;
 }
 
+const SHARED_VISUAL_TONE = {
+  panel: "border-accent/25 bg-accent/10",
+  glow: "bg-accent/10",
+  text: "text-accent",
+  strong: "bg-accent",
+} as const;
+
 const VISUAL_TONES = {
-  amber: {
-    panel: "border-amber-300/30 bg-amber-400/15",
-    glow: "bg-amber-300/20",
-    text: "text-amber-200",
-    strong: "bg-amber-300 text-amber-950",
-  },
-  sky: {
-    panel: "border-sky-300/30 bg-sky-400/15",
-    glow: "bg-sky-300/20",
-    text: "text-sky-200",
-    strong: "bg-sky-300 text-sky-950",
-  },
-  violet: {
-    panel: "border-violet-300/30 bg-violet-400/15",
-    glow: "bg-violet-300/20",
-    text: "text-violet-200",
-    strong: "bg-violet-300 text-violet-950",
-  },
-  rose: {
-    panel: "border-rose-300/30 bg-rose-400/15",
-    glow: "bg-rose-300/20",
-    text: "text-rose-200",
-    strong: "bg-rose-300 text-rose-950",
-  },
-  emerald: {
-    panel: "border-emerald-300/30 bg-emerald-400/15",
-    glow: "bg-emerald-300/20",
-    text: "text-emerald-200",
-    strong: "bg-emerald-300 text-emerald-950",
-  },
-  cyan: {
-    panel: "border-cyan-300/30 bg-cyan-400/15",
-    glow: "bg-cyan-300/20",
-    text: "text-cyan-200",
-    strong: "bg-cyan-300 text-cyan-950",
-  },
-  orange: {
-    panel: "border-orange-300/30 bg-orange-400/15",
-    glow: "bg-orange-300/20",
-    text: "text-orange-200",
-    strong: "bg-orange-300 text-orange-950",
-  },
-  indigo: {
-    panel: "border-indigo-300/30 bg-indigo-400/15",
-    glow: "bg-indigo-300/20",
-    text: "text-indigo-200",
-    strong: "bg-indigo-300 text-indigo-950",
-  },
-  fuchsia: {
-    panel: "border-fuchsia-300/30 bg-fuchsia-400/15",
-    glow: "bg-fuchsia-300/20",
-    text: "text-fuchsia-200",
-    strong: "bg-fuchsia-300 text-fuchsia-950",
-  },
-  lime: {
-    panel: "border-lime-300/30 bg-lime-400/15",
-    glow: "bg-lime-300/20",
-    text: "text-lime-200",
-    strong: "bg-lime-300 text-lime-950",
-  },
-  teal: {
-    panel: "border-teal-300/30 bg-teal-400/15",
-    glow: "bg-teal-300/20",
-    text: "text-teal-200",
-    strong: "bg-teal-300 text-teal-950",
-  },
-  slate: {
-    panel: "border-slate-300/25 bg-slate-400/10",
-    glow: "bg-slate-300/15",
-    text: "text-slate-200",
-    strong: "bg-slate-300 text-slate-950",
-  },
+  amber: SHARED_VISUAL_TONE,
+  sky: SHARED_VISUAL_TONE,
+  violet: SHARED_VISUAL_TONE,
+  rose: SHARED_VISUAL_TONE,
+  emerald: SHARED_VISUAL_TONE,
+  cyan: SHARED_VISUAL_TONE,
+  orange: SHARED_VISUAL_TONE,
+  indigo: SHARED_VISUAL_TONE,
+  fuchsia: SHARED_VISUAL_TONE,
+  lime: SHARED_VISUAL_TONE,
+  teal: SHARED_VISUAL_TONE,
+  slate: SHARED_VISUAL_TONE,
 } as const;
 
 type VisualTone = keyof typeof VISUAL_TONES;
@@ -422,7 +369,7 @@ function VisualMotif({
   motif: VisualMotif;
   tone: VisualTone;
 }) {
-  const motifClass = `pointer-events-none absolute inset-0 opacity-55 ${VISUAL_TONES[tone].text}`;
+  const motifClass = `pointer-events-none absolute inset-0 opacity-25 ${VISUAL_TONES[tone].text}`;
   const dotClass = "h-1.5 w-1.5 rounded-full bg-current";
 
   switch (motif) {
@@ -544,7 +491,7 @@ function VisualMotif({
 
 const GAME_VISUAL_SIZES = {
   card: "min-h-[144px] w-20 rounded-none border-y-0 border-l-0 border-r sm:w-24",
-  hero: "h-28 w-28 rounded-3xl",
+  hero: "h-20 w-20 rounded-2xl",
   group: "h-12 w-12 rounded-2xl",
 } as const;
 
@@ -566,7 +513,7 @@ function GameVisual({
       <span className={`absolute -right-5 -top-5 h-16 w-16 rounded-full blur-2xl ${tone.glow}`} />
       <VisualMotif motif={visual.motif} tone={visual.tone} />
       <span className={`relative z-10 flex items-center justify-center rounded-2xl border border-current/30 bg-background/20 p-2.5 ${tone.text}`}>
-        <Icon className={size === "hero" ? "h-9 w-9" : "h-6 w-6"} strokeWidth={1.8} />
+        <Icon className={size === "hero" ? "h-7 w-7" : "h-6 w-6"} strokeWidth={1.8} />
       </span>
       <span className={`absolute bottom-2 right-2 z-10 text-[10px] font-black tracking-tight ${tone.text}`}>
         {visual.marker}
@@ -614,15 +561,15 @@ function ModeHubCard({
     <Link
       href={`/minigry/modes/${mode.slug}`}
       data-testid={`minigame-mode-${mode.id}`}
-      className={`card-raised group relative isolate flex min-h-[202px] flex-col overflow-hidden p-0 ${
+      className={`group relative isolate flex min-h-0 flex-col overflow-hidden border-b border-surface-border p-0 transition last:border-b-0 hover:bg-surface-hover md:border-b-0 md:border-r md:last:border-r-0 ${
         recommended ? "border-accent/50 bg-accent-soft" : ""
       }`}
     >
       <span className={`pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
       <span className="relative flex items-start justify-between gap-3 p-4 sm:p-5">
-        <span className={`relative isolate flex h-20 w-20 items-center justify-center overflow-hidden rounded-3xl border ${tone.panel}`}>
+        <span className={`relative isolate flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border ${tone.panel}`}>
           <VisualMotif motif={visual.motif} tone={visual.tone} />
-          <Icon className={`relative z-10 h-9 w-9 ${tone.text}`} strokeWidth={1.8} aria-hidden />
+          <Icon className={`relative z-10 h-6 w-6 ${tone.text}`} strokeWidth={1.8} aria-hidden />
         </span>
         <span className="flex min-w-0 flex-col items-end gap-2 text-right">
           <span className={`rounded-full border px-2.5 py-1 text-xs font-bold ${tone.panel} ${tone.text}`}>
@@ -673,10 +620,10 @@ function RecommendedStart({
     <Link
       href={`${game.href}?mode=time_attack`}
       data-testid="minigame-recommended-start"
-      className="card-raised group relative isolate overflow-hidden border-accent/45 bg-accent-soft p-0"
+      className="group relative isolate overflow-hidden rounded-r-2xl border-y border-r border-accent/35 border-l-4 border-l-accent bg-accent-soft/30 p-0 transition hover:bg-accent-soft/50"
     >
       <span className={`pointer-events-none absolute -right-14 -top-16 h-56 w-56 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
-      <span className="relative flex flex-col gap-5 p-5 sm:p-6 lg:flex-row lg:items-center">
+      <span className="relative flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center">
         <span className="flex shrink-0 items-center gap-3">
           <GameVisual visual={visual} size="hero" />
           <span className={`hidden text-[11px] font-bold uppercase tracking-[0.16em] sm:block lg:hidden ${tone.text}`}>
@@ -690,7 +637,7 @@ function RecommendedStart({
               {visual.label}
             </span>
           </span>
-          <h2 className="mt-2 text-xl font-bold text-foreground sm:text-2xl">
+          <h2 className="mt-1 text-lg font-bold text-foreground sm:text-xl">
             {game.title}
           </h2>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
@@ -698,8 +645,8 @@ function RecommendedStart({
           </p>
         </span>
       </span>
-      <span className="relative flex flex-col items-start gap-3 border-t border-accent/20 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-        <span className="btn-chunky px-5 py-3 text-sm">
+      <span className="relative flex flex-col items-start gap-3 border-t border-accent/20 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+        <span className="btn-chunky px-4 py-2.5 text-sm">
           Zagraj teraz
           <ArrowRight className="h-4 w-4" aria-hidden />
         </span>
@@ -765,7 +712,7 @@ function MinigameGroupDisclosure({ group }: { group: MinigameGroup }) {
 
   return (
     <details
-      className="group overflow-hidden rounded-2xl border border-surface-border bg-background"
+      className="group overflow-hidden border-t border-surface-border bg-background"
       data-testid={`minigame-group-${group.id}`}
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-3 marker:content-none sm:gap-4 sm:p-4">
@@ -822,7 +769,7 @@ function MinigameLibraryDisclosure({
   return (
     <details
       open={open}
-      className="group overflow-hidden rounded-3xl border border-surface-border bg-surface"
+      className="group overflow-hidden border-y border-surface-border bg-surface"
       data-testid={testId}
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 marker:content-none sm:p-5">
@@ -849,27 +796,6 @@ function MinigameLibraryDisclosure({
   );
 }
 
-function HubHeroArt() {
-  return (
-    <span className="relative hidden h-36 w-56 shrink-0 items-center justify-center sm:flex" aria-hidden>
-      <span className="absolute h-32 w-32 rounded-full border border-accent/25" />
-      <span className="absolute h-24 w-24 rounded-full border border-accent/20 [transform:rotateX(62deg)_rotateZ(-18deg)]" />
-      <span className="absolute h-16 w-16 rotate-45 rounded-2xl border border-accent/35 bg-accent/10" />
-      <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-accent text-on-accent shadow-[0_8px_0_var(--accent-press)]">
-        <Sigma className="h-7 w-7" aria-hidden />
-      </span>
-      <span className="absolute left-2 top-4 flex h-8 w-8 items-center justify-center rounded-xl border border-sky-300/30 bg-sky-400/15 text-sky-200">
-        <Plus className="h-4 w-4" aria-hidden />
-      </span>
-      <span className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-xl border border-rose-300/30 bg-rose-400/15 text-rose-200">
-        <Triangle className="h-4 w-4" aria-hidden />
-      </span>
-      <span className="absolute right-6 top-1 text-xs font-bold text-emerald-200">f(x)</span>
-      <span className="absolute bottom-0 left-10 text-xs font-bold text-violet-200">πr²</span>
-    </span>
-  );
-}
-
 export default function MinigryPage() {
   const { path } = useLearningPath();
   const { account, loading, displayProgress } = useGameAccount();
@@ -888,14 +814,12 @@ export default function MinigryPage() {
       <motion.header
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative isolate overflow-hidden rounded-[2rem] border border-surface-border bg-surface p-5 sm:p-8"
+        className="border-b border-surface-border pb-6 sm:pb-7"
       >
-        <span className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" aria-hidden />
-        <span className="pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(var(--surface-border)_1px,transparent_1px),linear-gradient(90deg,var(--surface-border)_1px,transparent_1px)] [background-size:2rem_2rem] [mask-image:linear-gradient(to_bottom,black,transparent)]" aria-hidden />
-        <span className="relative flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+        <span className="relative block">
           <span className="min-w-0">
             <span className="flex flex-wrap items-center gap-2">
-              <span className="text-overline">Krótkie rundy · szybkie liczenie</span>
+              <span className="text-overline">Krótkie rundy</span>
               <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
                 3 tryby
               </span>
@@ -903,12 +827,10 @@ export default function MinigryPage() {
             <h1 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Minigry · <span className="text-gradient-brand">{pathLabel}</span>
             </h1>
-            <p className="mt-3 max-w-2xl text-base text-muted">
-              Zacznij od jednej polecanej gry, wybierz tempo rundy, a resztę
-              tematów odkrywaj wtedy, kiedy masz na nie ochotę.
+            <p className="mt-2 max-w-2xl text-sm text-muted sm:text-base">
+              Wybierz jedną rundę i zacznij ćwiczyć.
             </p>
           </span>
-          <HubHeroArt />
         </span>
       </motion.header>
 
@@ -944,11 +866,11 @@ export default function MinigryPage() {
       </div>
 
       <section
-        className="mt-12"
+        className="mt-9"
         aria-labelledby="minigame-mode-selection"
         data-testid="minigame-mode-selection"
       >
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
           <div>
             <p className="text-overline">Sposób gry</p>
             <h2
@@ -958,23 +880,18 @@ export default function MinigryPage() {
               Wybierz tryb
             </h2>
           </div>
-          <p className="max-w-xl text-sm text-muted">
-            Na czas to najprostszy start. Przetrwanie i maraton wybierz, gdy
-            chcesz zmienić zasady rundy.
+          <p className="max-w-xl text-xs text-muted sm:text-sm">
+            Zmienisz tryb, gdy będziesz mieć ochotę na inną rundę.
           </p>
         </div>
-        <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-xl border border-surface-border bg-surface md:grid-cols-3">
           {MINIGAME_MODES.map((mode) => (
-            <ModeHubCard
-              key={mode.id}
-              mode={mode}
-              recommended={mode.id === "time_attack"}
-            />
+            <ModeHubCard key={mode.id} mode={mode} recommended={mode.id === "time_attack"} />
           ))}
         </div>
       </section>
 
-      <section className="mt-14" aria-labelledby="minigame-library">
+      <section className="mt-10" aria-labelledby="minigame-library">
         <div>
           <p className="text-overline">Biblioteka</p>
           <h2
@@ -984,8 +901,7 @@ export default function MinigryPage() {
             Odkrywaj według tematu
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-muted">
-            Każdy obszar ma własny rytm: od siatki rachunków po układ
-            współrzędnych. Otwórz tylko to, co chcesz teraz przećwiczyć.
+            Otwórz obszar, który chcesz teraz przećwiczyć.
           </p>
         </div>
 

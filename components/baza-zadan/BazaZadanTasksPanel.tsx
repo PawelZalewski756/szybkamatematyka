@@ -144,20 +144,19 @@ export function BazaZadanTasksPanel() {
 
   const searchAndFilters = (
     <section
-      className="rounded-3xl border border-surface-border bg-surface p-5 sm:p-6"
+      className="border-b border-surface-border pb-6"
       aria-labelledby="baza-zadan-search-heading"
     >
-      <div className="max-w-2xl">
+      <div className="max-w-xl">
         <p className="text-overline">Zadania treningowe</p>
         <h2
           id="baza-zadan-search-heading"
-          className="mt-1 text-xl font-black text-foreground sm:text-2xl"
+          className="mt-1 text-lg font-bold text-foreground sm:text-xl"
         >
           Wybierz dział lub wyszukaj zadanie
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          Zacznij od jednej intencji. Wyniki pokażemy dopiero wtedy, gdy
-          wybierzesz temat, filtr albo wpiszesz własną frazę.
+        <p className="mt-2 text-sm text-muted">
+          Zacznij od tematu albo wpisz szukaną frazę.
         </p>
       </div>
 
@@ -273,7 +272,7 @@ export function BazaZadanTasksPanel() {
 
   const catalog = (
     <section
-      className="rounded-3xl border border-surface-border bg-surface p-5 sm:p-6"
+      className="pt-5"
       aria-labelledby="baza-zadan-catalog-heading"
     >
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
@@ -281,7 +280,7 @@ export function BazaZadanTasksPanel() {
           <p className="text-overline">Katalog tematów</p>
           <h2
             id="baza-zadan-catalog-heading"
-            className="mt-1 text-xl font-black text-foreground"
+            className="mt-1 text-lg font-bold text-foreground"
           >
             Od czego chcesz zacząć?
           </h2>
@@ -294,20 +293,20 @@ export function BazaZadanTasksPanel() {
         </p>
       </div>
 
-      <ul className="mt-5 grid gap-2 sm:grid-cols-2">
-        {catalogGroups.map((group) => (
+      <ul className="mt-4 divide-y divide-surface-border border-y border-surface-border">
+        {catalogGroups.map((group, index) => (
           <li key={group.id}>
             <button
               type="button"
               onClick={() => chooseGroup(group.id)}
-              className="group flex w-full items-center gap-3 rounded-2xl border border-surface-border bg-background/35 px-4 py-3 text-left transition hover:border-accent/40 hover:bg-surface-hover"
+              className="group flex w-full items-center gap-3 px-1 py-3.5 text-left transition hover:bg-surface-hover/60 sm:px-2"
               aria-label={`${group.label}, ${polishCount(group.taskCount)}`}
             >
               <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-xl"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-xs font-bold tabular-nums text-accent"
                 aria-hidden="true"
               >
-                {group.emoji}
+                {index + 1}
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block text-sm font-bold text-foreground group-hover:text-accent">
@@ -319,7 +318,7 @@ export function BazaZadanTasksPanel() {
               </span>
               <span className="flex shrink-0 items-center gap-2">
                 <span className="text-xs font-semibold tabular-nums text-muted">
-                  {group.taskCount}
+                  {polishCount(group.taskCount)}
                 </span>
                 <ChevronRight
                   className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"

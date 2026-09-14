@@ -32,9 +32,7 @@ import {
   CheckCircle2,
   ChevronDown,
   ChevronRight,
-  Compass,
   Search,
-  Target,
   X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -457,23 +455,16 @@ function TrainingOverview({
 
   return (
     <section
-      className="mt-5 grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto_auto]"
+      className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 border-y border-surface-border py-3"
       aria-label="Podsumowanie postępu"
     >
-      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
-        <div className="flex items-baseline justify-between gap-4">
-          <div className="min-w-0">
-            <p className="text-overline">Postęp ścieżki</p>
-            <p className="mt-1 truncate text-sm font-bold text-foreground">
-              {exam.label}
-            </p>
-          </div>
-          <p className="shrink-0 text-lg font-extrabold tabular-nums text-accent">
-            {progress}%
-          </p>
+      <div className="min-w-52 flex-1">
+        <div className="flex items-center justify-between gap-3 text-xs">
+          <span className="font-semibold text-foreground">{exam.label}</span>
+          <span className="font-bold tabular-nums text-accent">{progress}%</span>
         </div>
         <div
-          className="mt-3 h-2 overflow-hidden rounded-full bg-surface-hover"
+          className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-hover"
           role="progressbar"
           aria-label={`Ogólny postęp treningu: ${progress}%`}
           aria-valuemin={0}
@@ -482,21 +473,14 @@ function TrainingOverview({
         >
           <div className="progress-accent" style={{ width: `${progress}%` }} />
         </div>
-        <p className="mt-2 text-xs text-muted">{progressMessage}</p>
+        <p className="mt-1.5 text-xs text-muted">{progressMessage}</p>
       </div>
-      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:min-w-32 sm:p-5">
-        <p className="text-overline">Tematy</p>
-        <p className="mt-1 text-xl font-extrabold tabular-nums text-foreground">
-          {topicCount}
-        </p>
-        <p className="mt-1 text-xs text-muted">w ścieżce</p>
+      <div className="text-xs text-muted">
+        <span className="font-bold text-foreground">{topicCount}</span> tematów
       </div>
-      <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:min-w-32 sm:p-5">
-        <p className="text-overline">Aktywne</p>
-        <p className="mt-1 text-xl font-extrabold tabular-nums text-foreground">
-          {topicsWithTasks}
-        </p>
-        <p className="mt-1 text-xs text-muted">z zadaniami</p>
+      <div className="text-xs text-muted">
+        <span className="font-bold text-foreground">{topicsWithTasks}</span>{" "}
+        aktywnych
       </div>
     </section>
   );
@@ -526,19 +510,16 @@ function NextStepCard({
     <Link
       href={nextTopic.href}
       data-testid="training-next-step"
-      className="group mt-8 block overflow-hidden rounded-3xl border border-accent/40 bg-accent-soft/35 transition hover:border-accent/75 hover:bg-accent-soft/55"
+      className="group mt-6 block overflow-hidden rounded-r-2xl border-y border-r border-accent/35 border-l-4 border-l-accent bg-accent-soft/30 transition hover:bg-accent-soft/50"
     >
-      <div className="flex flex-col gap-6 p-5 sm:p-7 lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex min-w-0 items-start gap-4">
-          <span className="icon-chip h-12 w-12 shrink-0 rounded-2xl sm:h-14 sm:w-14">
-            <Target className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
-          </span>
           <div className="min-w-0">
             <p className="text-overline text-accent">{focusLabel}</p>
-            <h2 className="mt-1 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
+            <h2 className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl">
               {nextTopic.topic.name}
             </h2>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-1.5 text-sm text-muted">
               {nextTopic.categoryName} · {nextTopic.topic.total} zadań
               {nextTopic.topic.solved > 0
                 ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
@@ -546,7 +527,7 @@ function NextStepCard({
             </p>
           </div>
         </div>
-        <span className="btn-chunky shrink-0 px-4 py-3 text-sm sm:px-5">
+        <span className="btn-chunky shrink-0 px-4 py-2.5 text-sm sm:px-5">
           {focusAction}
           <ArrowRight
             className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -554,7 +535,7 @@ function NextStepCard({
           />
         </span>
       </div>
-      <div className="border-t border-accent/20 px-5 py-4 sm:px-7">
+      <div className="border-t border-accent/20 px-4 py-3 sm:px-5">
         <div className="flex items-center justify-between gap-4 text-xs">
           <span className="font-semibold text-foreground">Postęp tego tematu</span>
           <span className="tabular-nums text-muted">
@@ -589,18 +570,11 @@ function DepartmentNavigation({
     <nav
       data-testid="training-department-navigation"
       aria-label="Działy treningu"
-      className="rounded-2xl border border-surface-border bg-surface p-3 sm:p-4 lg:sticky lg:top-5"
+      className="border-y border-surface-border py-3 lg:sticky lg:top-5"
     >
-      <div className="flex items-start gap-3 px-2 pb-3">
-        <span className="icon-chip h-9 w-9 shrink-0 rounded-xl">
-          <Compass className="h-4 w-4" aria-hidden />
-        </span>
-        <div>
-          <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
-          <p className="mt-1 text-xs leading-relaxed text-muted">
-            Wybierz jeden obszar, żeby przejść do jego tematów.
-          </p>
-        </div>
+      <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
+        <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
+        <p className="text-xs text-muted">Wybierz obszar</p>
       </div>
       <div className="space-y-1">
         {categories.map((category, index) => {
@@ -614,10 +588,10 @@ function DepartmentNavigation({
               aria-pressed={active}
               aria-label={`${category.name}, ${categoryStatus(metrics)}, ${metrics.progress}% postępu`}
               onClick={() => onSelect(category.id)}
-              className={`w-full rounded-xl border px-3 py-3 text-left transition ${
+              className={`w-full border-l-2 px-3 py-3 text-left transition ${
                 active
-                  ? "border-accent/45 bg-accent-soft/55 text-foreground"
-                  : "border-transparent text-muted hover:border-surface-border hover:bg-surface-hover hover:text-foreground"
+                  ? "border-accent bg-accent-soft/55 text-foreground"
+                  : "border-transparent text-muted hover:bg-surface-hover hover:text-foreground"
               }`}
             >
               <div className="flex items-start gap-3">
@@ -689,15 +663,15 @@ function DepartmentPanel({
     <section
       data-testid="training-department-panel"
       aria-labelledby={`training-department-heading-${category.id}`}
-      className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
+      className="overflow-hidden border-y border-surface-border"
     >
-      <div className="p-5 sm:p-7">
+      <div className="py-4 sm:py-5">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">
             <p className="text-overline">Wybrany dział</p>
             <h2
               id={`training-department-heading-${category.id}`}
-              className="mt-1 text-xl font-extrabold tracking-tight text-foreground sm:text-2xl"
+              className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl"
             >
               {category.name}
             </h2>
@@ -758,7 +732,7 @@ function DepartmentPanel({
           aria-expanded={topicsVisible}
           aria-controls={topicsId}
           onClick={onToggleTopics}
-          className="btn-chunky-soft mt-6 w-full px-4 py-3 text-sm sm:w-auto"
+          className="btn-ghost mt-5 px-3 py-2 text-sm font-bold"
         >
           {topicsVisible ? "Ukryj tematy" : `Pokaż tematy (${category.topics.length})`}
           <ChevronDown
@@ -776,7 +750,7 @@ function DepartmentPanel({
           data-testid="training-topic-list"
           className="border-t border-surface-border"
         >
-          <div className="flex items-center justify-between gap-3 bg-surface-hover/30 px-5 py-3 text-xs text-muted sm:px-7">
+          <div className="flex items-center justify-between gap-3 bg-surface-hover/30 px-3 py-3 text-xs text-muted sm:px-4">
             <span>Tematy i ich stan</span>
             <span className="tabular-nums">
               {metrics.solvedTasks}/{metrics.totalTasks} rozwiązanych
@@ -804,7 +778,7 @@ function DepartmentPanel({
 function TrainingListSkeleton() {
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
-      <div className="card-raised h-80 animate-pulse p-5">
+      <div className="h-80 animate-pulse border-y border-surface-border py-5">
         <div className="h-5 w-24 rounded bg-surface-hover" />
         <div className="mt-3 h-3 w-44 rounded bg-surface-hover" />
         <div className="mt-7 space-y-3">
@@ -813,7 +787,7 @@ function TrainingListSkeleton() {
           ))}
         </div>
       </div>
-      <div className="card-raised h-80 animate-pulse p-5 sm:p-7">
+      <div className="h-80 animate-pulse border-y border-surface-border py-5 sm:py-7">
         <div className="h-3 w-28 rounded bg-surface-hover" />
         <div className="mt-3 h-7 w-2/3 rounded bg-surface-hover" />
         <div className="mt-4 h-3 w-1/2 rounded bg-surface-hover" />
@@ -1051,20 +1025,32 @@ export default function TreningPage() {
           aria-label="Przeglądanie tematów"
           data-testid="training-browse"
         >
-          <div className="rounded-2xl border border-surface-border bg-surface p-4 sm:p-5">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-overline">Biblioteka tematów</p>
-                    <h2 className="mt-1 text-lg font-extrabold text-foreground">
-                      Wybierz dział
-                    </h2>
-                  </div>
-                  <span className="hidden rounded-full bg-surface-hover px-2.5 py-1 text-xs font-bold text-muted sm:inline-flex">
-                    {matchedTopicCount} tematów
-                  </span>
-                </div>
+          <div className="border-y border-surface-border py-4">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="text-overline">Tematy</p>
+                <h2 className="mt-1 text-lg font-extrabold text-foreground">
+                  Wybierz dział
+                </h2>
+              </div>
+              <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-bold text-muted">
+                {matchedTopicCount} tematów
+              </span>
+            </div>
+
+            <details className="group mt-3">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-surface-border pt-3 text-sm font-semibold text-muted transition hover:text-foreground marker:content-none">
+                <span className="inline-flex items-center gap-2">
+                  <Search className="h-4 w-4" aria-hidden />
+                  Znajdź temat lub filtruj
+                </span>
+                <ChevronDown
+                  className="h-4 w-4 transition-transform group-open:rotate-180"
+                  aria-hidden
+                />
+              </summary>
+              <div className="mt-3 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
+                <div className="min-w-0">
                 <label className="sr-only" htmlFor="trening-search">
                   Szukaj tematu
                 </label>
@@ -1107,9 +1093,9 @@ export default function TreningPage() {
                         )}`
                       : `${matchedTopicCount} tematów`}
                 </p>
-              </div>
+                </div>
 
-              <div className="flex flex-col gap-3 lg:min-w-[22rem]">
+                <div className="flex flex-col gap-3 lg:min-w-[22rem]">
                 <div
                   role="group"
                   aria-label="Filtr tematów"
@@ -1152,8 +1138,9 @@ export default function TreningPage() {
                     <option value="progress">Postęp</option>
                   </select>
                 </label>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </section>
 

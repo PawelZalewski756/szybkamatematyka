@@ -193,33 +193,28 @@ export function BazaZadanView({
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Wybierz punkt startu
         </h1>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
-          Nie musisz przeglądać całej bazy. Wybierz temat, wpisz własną frazę
-          albo przejdź do arkuszy. Twoja ścieżka to{" "}
-          <span className="font-semibold text-accent">{pathLabel}</span>, a
-          poniżej masz{" "}
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+          Wybierz temat, wpisz własną frazę albo przejdź do arkuszy. Ścieżka:{" "}
+          <span className="font-semibold text-accent">{pathLabel}</span>{" "}
+          <span className="text-muted/75">·</span>{" "}
           <span className="font-semibold text-foreground">
             {polishCount(taskCount, "zadanie", "zadania", "zadań")}
-          </span>{" "}
-          do przećwiczenia.
+          </span>
         </p>
       </header>
 
       <section
-        className="mt-8 max-w-5xl"
+        className="mt-7 max-w-6xl border-y border-surface-border py-3"
         aria-labelledby="baza-zadan-goal-heading"
       >
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-          <div>
-            <p className="text-overline">Następny krok</p>
-            <h2
-              id="baza-zadan-goal-heading"
-              className="mt-1 text-lg font-bold text-foreground"
-            >
-              Wybierz sposób pracy
-            </h2>
-          </div>
-          <p className="text-sm text-muted">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <h2
+            id="baza-zadan-goal-heading"
+            className="text-sm font-bold text-foreground"
+          >
+            Sposób pracy
+          </h2>
+          <p className="text-xs text-muted">
             Aktywne:{" "}
             <span className="font-semibold text-foreground">
               {activeTab.label}
@@ -228,7 +223,7 @@ export function BazaZadanView({
         </div>
 
         <div
-          className="mt-4 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-3 flex gap-1 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           role="tablist"
           aria-label="Sposób pracy w bazie zadań"
         >
@@ -244,18 +239,18 @@ export function BazaZadanView({
                 aria-controls="baza-zadan-panel"
                 aria-label={`${label}, ${countLabels[id]}`}
                 onClick={() => setTab(id)}
-                className={`flex min-w-44 shrink-0 items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left text-sm font-semibold transition sm:min-w-0 sm:flex-1 ${
+                className={`flex min-w-36 shrink-0 items-center gap-2 rounded-lg border px-3 py-2 text-left text-sm font-semibold transition sm:min-w-0 ${
                   active
-                    ? "border-accent bg-accent-soft text-foreground"
-                    : "border-surface-border bg-surface text-muted hover:border-accent/35 hover:bg-surface-hover hover:text-foreground"
+                    ? "border-accent bg-accent text-on-accent"
+                    : "border-transparent text-muted hover:border-surface-border hover:bg-surface-hover hover:text-foreground"
                 }`}
               >
                 <span>{label}</span>
                 <span
                   aria-hidden="true"
-                  className={`min-w-8 rounded-full px-2 py-1 text-center text-xs tabular-nums ${
+                  className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-[11px] tabular-nums ${
                     active
-                      ? "bg-accent text-on-accent"
+                      ? "bg-on-accent/15 text-on-accent"
                       : "bg-surface-hover text-muted"
                   }`}
                 >
@@ -266,7 +261,6 @@ export function BazaZadanView({
           })}
         </div>
 
-        <p className="mt-3 text-sm text-muted">{activeTab.hint}</p>
       </section>
 
       <div
