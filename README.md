@@ -1,49 +1,101 @@
 # Szybka Matematyka
 
-Platforma do nauki matematyki: arkusze CKE, baza zadań, trening tematyczny, minigry i rankingi (matura + egzamin 8-klasisty).
+**Pełna aplikacja webowa do nauki matematyki przed maturą i egzaminem
+ósmoklasisty.** Łączy teorię, zadania, arkusze CKE i krótkie gry w jednym
+miejscu.
 
-Stack: **Next.js 16**, Supabase, Gemini, Vercel.
+### [Otwórz działającą aplikację →](https://szybka-matma.vercel.app)
 
-## Start lokalny
+## Co robi aplikacja?
+
+Uczeń wybiera swój egzamin i temat, a następnie:
+
+1. poznaje teorię,
+2. rozwiązuje zadania krok po kroku,
+3. zapisuje postęp,
+4. sprawdza wiedzę na arkuszach CKE,
+5. utrwala materiał przez minigry i powtórki.
+
+## Najważniejsze funkcje
+
+- osobne ścieżki dla matury podstawowej i egzaminu ósmoklasisty,
+- tematyczny trening z rozwiązaniami i śledzeniem postępu,
+- baza zadań oraz archiwum arkuszy CKE,
+- konta użytkowników, profile, osiągnięcia, rankingi i serie nauki,
+- minigry matematyczne, codzienne wyzwania i pojedynki,
+- system inteligentnych powtórek,
+- asysta AI oparta na Gemini,
+- płatności i plan PRO obsługiwane przez Stripe,
+- responsywny interfejs działający na komputerze i telefonie,
+- panel administratora do zarządzania treścią.
+
+## Projekt od strony technicznej
+
+To nie jest statyczna strona. Aplikacja obejmuje frontend, backend, bazę danych,
+logowanie, płatności, integrację AI, testy i wdrożenie produkcyjne.
+
+| Obszar | Rozwiązanie |
+| --- | --- |
+| Interfejs | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
+| Backend | Next.js Route Handlers |
+| Dane i logowanie | Supabase, PostgreSQL, Row Level Security |
+| AI | Google Gemini |
+| Płatności | Stripe + webhooki |
+| Testy | Vitest, Playwright |
+| Wdrożenie | Vercel, GitHub Actions |
+
+Najważniejsze decyzje techniczne:
+
+- dane użytkownika są chronione politykami dostępu w bazie (RLS),
+- postęp może działać lokalnie, a po zalogowaniu synchronizuje się z chmurą,
+- treści matematyczne mają własne skrypty do generowania, importu i kontroli
+  jakości,
+- CI automatycznie sprawdza lint, typy, testy i build aplikacji.
+
+## Uruchomienie lokalne
+
+Wymagany jest Node.js 20.9 lub nowszy.
 
 ```bash
-cp .env.example .env.local   # uzupełnij Supabase (+ opcjonalnie Gemini)
+git clone https://github.com/PawelZalewski756/szybkamatematyka.git
+cd szybkamatematyka
 npm ci
+cp .env.example .env.local
 npm run dev
 ```
 
-Otwórz [http://localhost:3000](http://localhost:3000).
+Po uzupełnieniu danych Supabase w `.env.local` otwórz
+[http://localhost:3000](http://localhost:3000).
 
-## Najważniejsze komendy
+Gemini i Stripe są opcjonalne — bez ich kluczy można uruchomić podstawową część
+aplikacji. Przykładowe zmienne znajdują się w [`.env.example`](.env.example).
 
-| Komenda | Opis |
-|---------|------|
-| `npm run lint` | ESLint |
-| `npm test` | Vitest |
-| `npm run build` | Build produkcyjny |
-| `npm run test:e2e` | Smoke Playwright (lokalnie) |
-| `npm run audit:cke` | Placeholdery rozwiązań CKE |
-| `npm run audit:questions` | Jakość opcji MC w katalogu |
-| `npm run seed:exam-archive` | Regeneracja archiwum CKE z cache |
-| `npm run seed:tasks-parametric` | Parametryczne zadania → `data/tasks-cache` (bez Gemini) |
-| `npm run seed:tasks-gemini` | Zadania Gemini (wymaga `GEMINI_API_KEY`) |
-| `npm run seed:hour-quality` | Godzinna poprawa rozwiązań CKE |
+## Jakość kodu
 
-Testy E2E budują aplikację bez publicznych zmiennych Supabase i sprawdzają ich
-podanie dopiero przy uruchomieniu serwera. Aby wymusić osobny port oraz pełny
-test ścieżki runtime lokalnie, ustaw `E2E_PORT`, np. w PowerShell:
-
-```powershell
-$env:E2E_PORT = "3001"
-npm run test:e2e
+```bash
+npm run lint        # ESLint
+npm test            # testy jednostkowe
+npm run test:e2e    # testy przeglądarkowe
+npm run build       # build produkcyjny
 ```
 
-Wdrożenie: zobacz [`docs/DEPLOY.md`](docs/DEPLOY.md).
+Repozytorium zawiera również testy logiki nauki, naliczania punktów, serii,
+subskrypcji, integracji z Supabase i formatowania treści matematycznych.
 
-## Struktura
+## Struktura projektu
 
-- `app/` — trasy Next.js (trening, baza, minigry, admin…)
-- `data/cke-matura-cache/` — cache arkuszy CKE
-- `data/tasks-cache/` — cache zadań treningowych
-- `data/theory-cache/` — materiały teoretyczne
-- `scripts/` — seed / audyt / Gemini
+- `app/` — widoki i endpointy API,
+- `components/` — komponenty interfejsu,
+- `lib/` — logika biznesowa i integracje,
+- `data/` — zadania, teoria i dane arkuszy,
+- `supabase/` — schemat bazy, migracje i polityki bezpieczeństwa,
+- `tests/` — testy automatyczne,
+- `scripts/` — import, generowanie i kontrola jakości treści.
+
+Szczegóły konfiguracji produkcyjnej znajdują się w
+[`docs/DEPLOY.md`](docs/DEPLOY.md).
+
+---
+
+Szybka Matematyka jest niezależnym projektem edukacyjnym i nie jest oficjalnym
+serwisem Centralnej Komisji Egzaminacyjnej.
