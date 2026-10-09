@@ -4,7 +4,9 @@
 ósmoklasisty.** Łączy teorię, zadania, arkusze CKE i krótkie gry w jednym
 miejscu.
 
-### [Otwórz działającą aplikację →](https://szybka-matma.vercel.app)
+Projekt jest dostępny publicznie pod własną domeną:
+
+### [szybkamatematyka.pl — otwórz działającą aplikację →](https://szybkamatematyka.pl)
 
 ## Co robi aplikacja?
 
