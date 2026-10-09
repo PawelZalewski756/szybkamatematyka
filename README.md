@@ -1,12 +1,8 @@
-# Szybka Matematyka
+# Szybka Matematyka — [szybkamatematyka.pl](https://szybkamatematyka.pl)
 
 **Pełna aplikacja webowa do nauki matematyki przed maturą i egzaminem
 ósmoklasisty.** Łączy teorię, zadania, arkusze CKE i krótkie gry w jednym
 miejscu.
-
-Projekt jest dostępny publicznie pod własną domeną:
-
-### [szybkamatematyka.pl — otwórz działającą aplikację →](https://szybkamatematyka.pl)
 
 ## Co robi aplikacja?
 
