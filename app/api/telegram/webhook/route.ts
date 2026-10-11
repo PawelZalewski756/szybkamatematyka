@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { timingSafeEqual } from "node:crypto";
 import {
+  describeTelegramCommandError,
   escapeTelegramText,
   isTelegramAdmin,
   parseTelegramCommand,
@@ -199,7 +200,7 @@ export async function POST(request: Request): Promise<Response> {
     await sendTelegramMessage(
       botToken,
       chatId,
-      "Nie udało się pobrać danych. Sprawdź logi funkcji w Vercel.",
+      describeTelegramCommandError(error),
     );
     return Response.json({ ok: true });
   }

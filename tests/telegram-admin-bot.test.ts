@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  describeTelegramCommandError,
   escapeTelegramText,
   isTelegramAdmin,
   parseTelegramAdminIds,
@@ -26,5 +27,18 @@ describe("Telegram admin bot helpers", () => {
     expect(escapeTelegramText("<admin & user>")).toBe(
       "&lt;admin &amp; user&gt;",
     );
+  });
+
+  it("gives actionable diagnostics for missing Supabase configuration and stats table", () => {
+    expect(
+      describeTelegramCommandError(
+        new Error("Missing Supabase server configuration for Telegram bot."),
+      ),
+    ).toContain("SUPABASE_SERVICE_ROLE_KEY");
+    expect(
+      describeTelegramCommandError({
+        message: "Could not find the table 'public.solved_tasks' in the schema cache",
+      }),
+    ).toContain("init_solved_tasks.sql");
   });
 });
