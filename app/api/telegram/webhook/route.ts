@@ -59,6 +59,17 @@ function getSupabaseAdmin() {
 }
 
 async function buildCommandReply(command: string): Promise<string> {
+  if (command === "help") {
+    return [
+      "Komendy administratora:",
+      "/stats — użytkownicy, nowe konta i zadania",
+      "/new — ostatnie rejestracje",
+      "/top — ranking XP",
+      "/health — sprawdzenie połączenia",
+      "/pomoc — pokaż tę listę",
+    ].join("\n");
+  }
+
   const supabase = getSupabaseAdmin();
 
   if (command === "stats") {
@@ -131,6 +142,7 @@ async function buildCommandReply(command: string): Promise<string> {
     "/new — ostatnie rejestracje",
     "/top — ranking XP",
     "/health — sprawdzenie połączenia",
+    "/pomoc — pokaż tę listę",
   ].join("\n");
 }
 

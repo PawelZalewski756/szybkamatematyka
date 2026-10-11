@@ -7,7 +7,8 @@ export function parseTelegramCommand(text: string): TelegramCommand | null {
   const [command = "", ...args] = text.trim().split(/\s+/);
   if (!command.startsWith("/")) return null;
 
-  const name = command.slice(1).split("@")[0]?.toLowerCase() ?? "";
+  const parsedName = command.slice(1).split("@")[0]?.toLowerCase() ?? "";
+  const name = parsedName === "pomoc" ? "help" : parsedName;
   return name ? { name, args } : null;
 }
 
