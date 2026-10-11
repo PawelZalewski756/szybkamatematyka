@@ -18,6 +18,7 @@ type TelegramUpdate = {
 };
 
 const USERS_PER_PAGE = 20;
+const AUTH_USERS_PER_PAGE = 1000;
 
 function matchesSecret(actual: string | null, expected: string): boolean {
   if (!actual) return false;
@@ -60,6 +61,52 @@ function getSupabaseAdmin() {
   });
 }
 
+async function getAllAuthUsers(supabase: ReturnType<typeof getSupabaseAdmin>) {
+  const users = [];
+  for (let page = 1; ; page += 1) {
+    const { data, error } = await supabase.auth.admin.listUsers({
+      page,
+      perPage: AUTH_USERS_PER_PAGE,
+    });
+    if (error) throw new Error(`Could not load registered users: ${error.message}`);
+    users.push(...data.users);
+    if (data.users.length < AUTH_USERS_PER_PAGE) return users;
+  }
+}
+
+async function getProfileNames(
+  supabase: ReturnType<typeof getSupabaseAdmin>,
+  userIds: string[],
+) {
+  if (userIds.length === 0) return new Map<string, string>();
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("id, nick, nickname")
+    .in("id", userIds);
+  if (error) throw new Error(`Could not load user profiles: ${error.message}`);
+  return new Map(
+    (data ?? []).map((profile) => [
+      profile.id,
+      profile.nick || profile.nickname || "",
+    ]),
+  );
+}
+
+function getAuthUserName(user: {
+  id: string;
+  user_metadata: Record<string, unknown>;
+}, profileNames: Map<string, string>): string {
+  const metadataName =
+    typeof user.user_metadata.nick === "string"
+      ? user.user_metadata.nick
+      : typeof user.user_metadata.nickname === "string"
+        ? user.user_metadata.nickname
+        : "";
+  return (profileNames.get(user.id) || metadataName || "bez nicku")
+    .replace(/[\r\n]/g, " ")
+    .slice(0, 80);
+}
+
 async function buildCommandReply(command: string, args: string[]): Promise<string> {
   if (command === "help") {
     return [
@@ -67,6 +114,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       "/stats — użytkownicy, nowe konta i zadania",
       "/new — ostatnie rejestracje",
       "/users [strona] — lista wszystkich użytkowników",
+      "/visits [dni] — odsłony i unikalni odwiedzający",
       "/top — ranking XP",
       "/health — sprawdzenie połączenia",
       "/pomoc — pokaż tę listę",
@@ -76,42 +124,63 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   const supabase = getSupabaseAdmin();
 
   if (command === "stats") {
-    const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-    const [users, newUsers, solved] = await Promise.all([
+    const since = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    const [users, authUsers, solved] = await Promise.all([
       supabase.from("profiles").select("id", { count: "exact", head: true }),
-      supabase
-        .from("profiles")
-        .select("id", { count: "exact", head: true })
-        .gte("created_at", since),
+      getAllAuthUsers(supabase),
       supabase
         .from("solved_tasks")
         .select("task_id", { count: "exact", head: true })
-        .gte("solved_at", since),
+        .gte("solved_at", new Date(since).toISOString()),
     ]);
-    const error = users.error || newUsers.error || solved.error;
-    if (error) throw new Error(`Could not load bot stats: ${error.message}`);
+    if (users.error) throw new Error(`Could not count profiles: ${users.error.message}`);
+    if (solved.error) throw new Error(`Could not count solved tasks: ${solved.error.message}`);
     return [
       "Statystyki (ostatnie 7 dni)",
       `Użytkownicy łącznie: ${users.count ?? 0}`,
-      `Nowe konta: ${newUsers.count ?? 0}`,
+      `Nowe konta: ${authUsers.filter((user) => Date.parse(user.created_at) >= since).length}`,
       `Rozwiązane zadania: ${solved.count ?? 0}`,
     ].join("\n");
   }
 
+  if (command === "visits") {
+    const days = args[0] ? Number(args[0]) : 7;
+    if (!Number.isSafeInteger(days) || days < 1 || days > 3650) {
+      return "Podaj okres od 1 do 3650 dni, np. /visits 30.";
+    }
+    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+    const [allTime, period] = await Promise.all([
+      supabase.rpc("get_page_view_stats", { p_since: null }),
+      supabase.rpc("get_page_view_stats", { p_since: since }),
+    ]);
+    if (allTime.error) throw new Error(`Could not load visit stats: ${allTime.error.message}`);
+    if (period.error) throw new Error(`Could not load visit stats: ${period.error.message}`);
+    const totals = allTime.data?.[0];
+    const recent = period.data?.[0];
+    return [
+      `Odwiedziny (ostatnie ${days} dni)`,
+      `Odsłony: ${recent?.total_views ?? 0}`,
+      `Unikalni odwiedzający: ${recent?.unique_visitors ?? 0}`,
+      "Łącznie od uruchomienia licznika:",
+      `Odsłony: ${totals?.total_views ?? 0}`,
+      `Unikalni odwiedzający: ${totals?.unique_visitors ?? 0}`,
+      "Pomiar anonimowy; działa od wdrożenia i tylko po zgodzie na analitykę.",
+    ].join("\n");
+  }
+
   if (command === "new") {
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("nick, nickname, created_at")
-      .order("created_at", { ascending: false })
-      .limit(10);
-    if (error) throw new Error(`Could not load recent users: ${error.message}`);
-    if (!data?.length) return "Brak zarejestrowanych użytkowników.";
+    const users = (await getAllAuthUsers(supabase))
+      .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+      .slice(0, 10);
+    if (!users.length) return "Brak zarejestrowanych użytkowników.";
+    const profileNames = await getProfileNames(
+      supabase,
+      users.map((user) => user.id),
+    );
     return [
       "Ostatnie rejestracje:",
-      ...data.map((user) => {
-        const name = (user.nick || user.nickname || "bez nicku")
-          .replace(/[\r\n]/g, " ")
-          .slice(0, 80);
+      ...users.map((user) => {
+        const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `• ${name} — ${date}`;
       }),
@@ -128,33 +197,38 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       return "Podaj numer strony, np. /users 2.";
     }
 
-    const { data, count, error } = await supabase
-      .from("profiles")
-      .select("nick, nickname, created_at", { count: "exact" })
-      .order("created_at", { ascending: false })
-      .range(
-        (requestedPage - 1) * USERS_PER_PAGE,
-        requestedPage * USERS_PER_PAGE - 1,
-      );
+    const { data, error } = await supabase.auth.admin.listUsers({
+      page: requestedPage,
+      perPage: USERS_PER_PAGE,
+    });
     if (error) throw new Error(`Could not load users: ${error.message}`);
-    if (!count) return "Brak zarejestrowanych użytkowników.";
-
-    const totalPages = Math.ceil(count / USERS_PER_PAGE);
-    if (requestedPage > totalPages) {
-      return `Nie ma takiej strony. Łącznie stron: ${totalPages}.`;
+    if (!data.users.length) {
+      return requestedPage === 1
+        ? "Brak zarejestrowanych użytkowników."
+        : "Nie ma takiej strony.";
     }
+
+    const profileNames = await getProfileNames(
+      supabase,
+      data.users.map((user) => user.id),
+    );
+    const { count, error: countError } = await supabase
+      .from("profiles")
+      .select("id", { count: "exact", head: true });
+    if (countError) throw new Error(`Could not count profiles: ${countError.message}`);
+    const totalUsers = data.total || count || data.users.length;
+    const totalPages = Math.max(1, Math.ceil(totalUsers / USERS_PER_PAGE));
 
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
     return [
       `Wszyscy użytkownicy — strona ${requestedPage}/${totalPages}`,
-      `Wyświetlam ${firstUserNumber}–${firstUserNumber + (data?.length ?? 0) - 1} z ${count}:`,
-      ...(data ?? []).map((user, index) => {
-        const rawName = user.nick || user.nickname || "bez nicku";
-        const name = rawName.replace(/[\r\n]/g, " ").slice(0, 80);
+      `Wyświetlam ${firstUserNumber}–${firstUserNumber + data.users.length - 1} z ${totalUsers}:`,
+      ...data.users.map((user, index) => {
+        const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `${firstUserNumber + index}. ${name} — ${date}`;
       }),
-      requestedPage < totalPages
+      data.nextPage !== null
         ? `Następna strona: /users ${requestedPage + 1}`
         : "To ostatnia strona.",
     ].join("\n");
@@ -190,6 +264,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     "/stats — użytkownicy, nowe konta i zadania",
     "/new — ostatnie rejestracje",
     "/users [strona] — lista wszystkich użytkowników",
+    "/visits [dni] — odsłony i unikalni odwiedzający",
     "/top — ranking XP",
     "/health — sprawdzenie połączenia",
     "/pomoc — pokaż tę listę",

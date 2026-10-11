@@ -87,6 +87,13 @@ Ostatnia migracja naprawia granty odczytu dla opcjonalnych kolumn profilu
 aktualizacji istniejącego projektu, który używał wcześniejszych, ręcznych
 skryptów SQL.
 
+Aby włączyć statystyki odwiedzin w bocie Telegrama, uruchom dodatkowo
+`supabase/migrations/20261011100000_add_anonymous_page_analytics.sql` w
+Supabase → SQL Editor. Pomiar zacznie działać po wdrożeniu tej migracji i
+wyłącznie dla przeglądarek, które zaakceptują analitykę. Zapisywane są
+anonimowe odsłony i skrót losowego identyfikatora przeglądarki — bez adresów IP.
+Bot udostępnia `/visits` (ostatnie 7 dni) oraz `/visits 30` (ostatnie 30 dni).
+
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
 plikami hardeningu. Nie są wymagane w nowej instalacji — końcowa migracja

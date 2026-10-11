@@ -6,6 +6,7 @@ import { SchoolClassSync } from "@/components/SchoolClassSync";
 import { StreakReminderHost } from "@/components/reminders/StreakReminderHost";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { SolvedTasksProvider } from "@/components/SolvedTasksProvider";
+import { PageViewAnalytics } from "@/components/analytics/PageViewAnalytics";
 import { setRuntimePublicConfig, isSupabaseConfigured } from "@/lib/supabase/config";
 import { MotionConfig } from "framer-motion";
 import { useEffect } from "react";
@@ -61,6 +62,7 @@ export function Providers({ children }: { children: ReactNode }) {
     <MotionConfig reducedMotion="user">
       <RuntimePublicConfig />
       <ServiceWorkerRegister />
+      <PageViewAnalytics />
       <LearningPathProvider>
         <SchoolClassSync />
         <SolvedTasksProvider>
