@@ -43,15 +43,16 @@ export function PageViewAnalytics() {
     getServerConsentSnapshot,
   );
   const [editingConsent, setEditingConsent] = useState(false);
+  const [promptDismissed, setPromptDismissed] = useState(false);
   const lastTrackedPath = useRef<string | null>(null);
 
   useEffect(() => {
     if (consent !== "accepted" || editingConsent || !pathname) return;
     if (lastTrackedPath.current === pathname) return;
+    const isLandingPage = lastTrackedPath.current === null;
     lastTrackedPath.current = pathname;
 
     let visitorId: string;
-    const isLandingPage = lastTrackedPath.current === null;
     try {
       const id = getOrCreateVisitorId();
       if (!id) return;
@@ -98,12 +99,13 @@ export function PageViewAnalytics() {
       }
       window.dispatchEvent(new Event(CONSENT_EVENT));
       setEditingConsent(false);
+      setPromptDismissed(false);
     } catch (error) {
       console.error("Could not save analytics consent:", error);
     }
   }
 
-  if (consent !== "unknown" && !editingConsent) {
+  if ((consent !== "unknown" && !editingConsent) || promptDismissed) {
     return (
       <button
         type="button"
@@ -112,7 +114,7 @@ export function PageViewAnalytics() {
         }}
         className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] right-3 z-[90] rounded-full border border-surface-border bg-surface px-3 py-2 text-xs font-semibold text-muted shadow-lg hover:text-foreground lg:bottom-3"
       >
-        Ustawienia prywatności
+        Prywatność
       </button>
     );
   }
@@ -120,30 +122,46 @@ export function PageViewAnalytics() {
   return (
     <aside
       aria-label="Zgoda na anonimową analitykę"
-      className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-xl rounded-2xl border border-surface-border bg-surface p-4 shadow-2xl lg:bottom-4"
+      className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3"
     >
-      <p className="text-sm text-foreground">
-        Czy możemy anonimowo mierzyć odsłony, sesje, rejestracje i pierwsze
-        rozwiązane zadanie, aby ulepszać serwis? Zapisujemy też źródło kampanii
-        (UTM), jeśli odwiedzasz stronę z oznaczonego linku. Nie zapisujemy
-        adresu IP ani danych konta. Losowy identyfikator przeglądarki zapisujemy
-        wyłącznie po zgodzie. Zapisujemy tylko domenę strony odsyłającej, bez
-        pełnego adresu.
-      </p>
-      <div className="mt-3 flex flex-wrap justify-end gap-2">
+      <div className="flex items-start justify-between gap-2">
+        <p className="text-xs leading-relaxed text-foreground">
+          Zgodzisz się na anonimowe statystyki, które pomogą nam ulepszać serwis?
+        </p>
+        <button
+          type="button"
+          aria-label="Nie teraz — zamknij komunikat"
+          onClick={() => setPromptDismissed(true)}
+          className="-mr-1 -mt-1 rounded-lg p-1 text-muted hover:text-foreground"
+        >
+          ×
+        </button>
+      </div>
+      <details className="mt-1 text-xs text-muted">
+        <summary className="w-fit cursor-pointer hover:text-foreground">
+          Jakie dane?
+        </summary>
+        <p className="mt-1 leading-relaxed">
+          Odsłony, sesje, rejestracje, pierwsze rozwiązane zadanie, źródło
+          kampanii i domena strony odsyłającej. Bez adresu IP, pełnego adresu
+          strony odsyłającej i danych konta. Losowy identyfikator zapisujemy
+          tylko po zgodzie.
+        </p>
+      </details>
+      <div className="mt-2 flex justify-end gap-2">
         <button
           type="button"
           onClick={() => chooseConsent("rejected")}
-          className="rounded-xl border border-surface-border px-3 py-2 text-sm font-semibold text-muted hover:text-foreground"
+          className="rounded-lg border border-surface-border px-3 py-1.5 text-xs font-semibold text-muted hover:text-foreground"
         >
           Odrzuć
         </button>
         <button
           type="button"
           onClick={() => chooseConsent("accepted")}
-          className="rounded-xl bg-accent px-3 py-2 text-sm font-bold text-background"
+          className="rounded-lg bg-accent px-3 py-1.5 text-xs font-bold text-background"
         >
-          Zgadzam się
+          Akceptuj
         </button>
       </div>
     </aside>
