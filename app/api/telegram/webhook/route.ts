@@ -2,7 +2,6 @@ import { createClient } from "@supabase/supabase-js";
 import { timingSafeEqual } from "node:crypto";
 import {
   describeTelegramCommandError,
-  escapeTelegramText,
   isTelegramAdmin,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
@@ -17,6 +16,8 @@ type TelegramUpdate = {
     text?: string;
   };
 };
+
+const USERS_PER_PAGE = 20;
 
 function matchesSecret(actual: string | null, expected: string): boolean {
   if (!actual) return false;
@@ -59,12 +60,13 @@ function getSupabaseAdmin() {
   });
 }
 
-async function buildCommandReply(command: string): Promise<string> {
+async function buildCommandReply(command: string, args: string[]): Promise<string> {
   if (command === "help") {
     return [
       "Komendy administratora:",
       "/stats — użytkownicy, nowe konta i zadania",
       "/new — ostatnie rejestracje",
+      "/users [strona] — lista wszystkich użytkowników",
       "/top — ranking XP",
       "/health — sprawdzenie połączenia",
       "/pomoc — pokaż tę listę",
@@ -96,7 +98,7 @@ async function buildCommandReply(command: string): Promise<string> {
     ].join("\n");
   }
 
-  if (command === "new" || command === "users") {
+  if (command === "new") {
     const { data, error } = await supabase
       .from("profiles")
       .select("nick, nickname, created_at")
@@ -107,10 +109,54 @@ async function buildCommandReply(command: string): Promise<string> {
     return [
       "Ostatnie rejestracje:",
       ...data.map((user) => {
-        const name = escapeTelegramText(user.nick || user.nickname || "bez nicku");
+        const name = (user.nick || user.nickname || "bez nicku")
+          .replace(/[\r\n]/g, " ")
+          .slice(0, 80);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `• ${name} — ${date}`;
       }),
+    ].join("\n");
+  }
+
+  if (command === "users") {
+    const requestedPage = args[0] ? Number(args[0]) : 1;
+    if (
+      !Number.isSafeInteger(requestedPage) ||
+      requestedPage < 1 ||
+      requestedPage - 1 > Math.floor(Number.MAX_SAFE_INTEGER / USERS_PER_PAGE)
+    ) {
+      return "Podaj numer strony, np. /users 2.";
+    }
+
+    const { data, count, error } = await supabase
+      .from("profiles")
+      .select("nick, nickname, created_at", { count: "exact" })
+      .order("created_at", { ascending: false })
+      .range(
+        (requestedPage - 1) * USERS_PER_PAGE,
+        requestedPage * USERS_PER_PAGE - 1,
+      );
+    if (error) throw new Error(`Could not load users: ${error.message}`);
+    if (!count) return "Brak zarejestrowanych użytkowników.";
+
+    const totalPages = Math.ceil(count / USERS_PER_PAGE);
+    if (requestedPage > totalPages) {
+      return `Nie ma takiej strony. Łącznie stron: ${totalPages}.`;
+    }
+
+    const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
+    return [
+      `Wszyscy użytkownicy — strona ${requestedPage}/${totalPages}`,
+      `Wyświetlam ${firstUserNumber}–${firstUserNumber + (data?.length ?? 0) - 1} z ${count}:`,
+      ...(data ?? []).map((user, index) => {
+        const rawName = user.nick || user.nickname || "bez nicku";
+        const name = rawName.replace(/[\r\n]/g, " ").slice(0, 80);
+        const date = new Date(user.created_at).toLocaleDateString("pl-PL");
+        return `${firstUserNumber + index}. ${name} — ${date}`;
+      }),
+      requestedPage < totalPages
+        ? `Następna strona: /users ${requestedPage + 1}`
+        : "To ostatnia strona.",
     ].join("\n");
   }
 
@@ -125,7 +171,9 @@ async function buildCommandReply(command: string): Promise<string> {
     return [
       "Ranking XP:",
       ...data.map((user, index) => {
-        const name = escapeTelegramText(user.nick || user.nickname || "bez nicku");
+        const name = (user.nick || user.nickname || "bez nicku")
+          .replace(/[\r\n]/g, " ")
+          .slice(0, 80);
         return `${index + 1}. ${name} — ${user.xp ?? 0} XP`;
       }),
     ].join("\n");
@@ -141,6 +189,7 @@ async function buildCommandReply(command: string): Promise<string> {
     "Komendy administratora:",
     "/stats — użytkownicy, nowe konta i zadania",
     "/new — ostatnie rejestracje",
+    "/users [strona] — lista wszystkich użytkowników",
     "/top — ranking XP",
     "/health — sprawdzenie połączenia",
     "/pomoc — pokaż tę listę",
@@ -192,7 +241,7 @@ export async function POST(request: Request): Promise<Response> {
   if (!command) return Response.json({ ok: true });
 
   try {
-    const reply = await buildCommandReply(command.name);
+    const reply = await buildCommandReply(command.name, command.args);
     await sendTelegramMessage(botToken, chatId, reply);
     return Response.json({ ok: true });
   } catch (error) {
