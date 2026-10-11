@@ -14,6 +14,10 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 | `ADMIN_EMAILS` | tak | Serwerowa lista e-maili adminów, po przecinku |
 | `NEXT_PUBLIC_ADMIN_EMAILS` | tak | Ta sama lista dla gate'u UI `/admin` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Stripe / quota | Nigdy nie wystawiaj jej w przeglądarce |
+| `TELEGRAM_BOT_TOKEN` | Telegram admin bot | Token z BotFather; wyłącznie jako sekret serwerowy |
+| `TELEGRAM_ADMIN_IDS` | Telegram admin bot | Numeryczne ID administratorów Telegrama, rozdzielone przecinkami |
+| `TELEGRAM_WEBHOOK_SECRET` | Telegram admin bot | Losowy sekret używany do weryfikacji webhooka Telegrama |
+| `TELEGRAM_SETUP_SECRET` | Telegram admin bot | Sekret Bearer do jednorazowego skonfigurowania webhooka |
 | `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań i asysta |
 | `STRIPE_SECRET_KEY` | płatności | Sekret Stripe test/live |
 | `STRIPE_WEBHOOK_SECRET` | płatności | Sekret endpointu webhooka |
@@ -23,6 +27,12 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 `ADMIN_EMAILS` jest źródłem prawdy po stronie serwera. `NEXT_PUBLIC_ADMIN_EMAILS`
 służy tylko do ukrycia/pokazania panelu w przeglądarce — obie wartości muszą być
 identyczne. Brak whitelisty blokuje panel administratora (fail closed).
+
+Bot Telegrama przyjmuje wyłącznie prywatne wiadomości od ID z `TELEGRAM_ADMIN_IDS`.
+Do jego podłączenia po wdrożeniu wykonaj jednorazowe żądanie `POST
+/api/telegram/setup` z nagłówkiem `Authorization: Bearer <TELEGRAM_SETUP_SECRET>`.
+Token bota i klucz `SUPABASE_SERVICE_ROLE_KEY` nigdy nie mogą mieć prefiksu
+`NEXT_PUBLIC_`.
 
 `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` i
 `NEXT_PUBLIC_SITE_URL` ustaw przed `next build`, ponieważ Next.js wbudowuje
