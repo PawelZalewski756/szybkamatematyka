@@ -40,3 +40,30 @@ export function escapeTelegramText(value: string): string {
     return "&gt;";
   });
 }
+
+export function describeTelegramCommandError(error: unknown): string {
+  const message =
+    error instanceof Error
+      ? error.message
+      : typeof error === "object" &&
+          error !== null &&
+          "message" in error &&
+          typeof error.message === "string"
+        ? error.message
+        : "Nieznany błąd.";
+
+  if (message.includes("Missing Supabase server configuration")) {
+    return "Brak SUPABASE_SERVICE_ROLE_KEY lub NEXT_PUBLIC_SUPABASE_URL w zmiennych Production Vercel.";
+  }
+
+  if (
+    message.includes("solved_tasks") &&
+    (message.includes("does not exist") ||
+      message.includes("schema cache") ||
+      message.includes("Could not find the table"))
+  ) {
+    return "Brakuje tabeli solved_tasks. Uruchom supabase/migrations/init_solved_tasks.sql w Supabase → SQL Editor.";
+  }
+
+  return `Błąd pobierania danych: ${message.slice(0, 300)}`;
+}
