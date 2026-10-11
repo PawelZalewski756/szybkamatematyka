@@ -30,7 +30,33 @@ export function isValidAnalyticsSource(value: unknown): value is string {
   );
 }
 
+export function isValidReferrerDomain(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    value.length <= 253 &&
+    !/^[0-9.]+$/.test(value) &&
+    /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(
+      value,
+    )
+  );
+}
+
 export function getAnalyticsSource(search: string): string | null {
   const source = new URLSearchParams(search).get("utm_source")?.trim().toLowerCase();
   return source && isValidAnalyticsSource(source) ? source : null;
+}
+
+export function getAnalyticsReferrerDomain(
+  referrer: string,
+  currentHost: string,
+): string | null {
+  try {
+    const domain = new URL(referrer).hostname.toLowerCase().replace(/\.$/, "");
+    return domain !== currentHost.toLowerCase() &&
+      isValidReferrerDomain(domain)
+      ? domain
+      : null;
+  } catch {
+    return null;
+  }
 }

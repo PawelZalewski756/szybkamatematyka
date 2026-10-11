@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
   hashVisitorId,
+  getAnalyticsReferrerDomain,
   getAnalyticsSource,
+  isValidReferrerDomain,
   isValidPagePath,
   isValidVisitorId,
 } from "@/lib/analytics/page-view";
@@ -76,5 +78,16 @@ describe("anonymous page-view analytics helpers", () => {
   it("keeps only safe campaign source labels", () => {
     expect(getAnalyticsSource("?utm_source=instagram")).toBe("instagram");
     expect(getAnalyticsSource("?utm_source=student%40example.com")).toBeNull();
+  });
+
+  it("stores only a valid external referrer hostname", () => {
+    expect(
+      getAnalyticsReferrerDomain("https://www.google.com/search?q=math", "example.com"),
+    ).toBe("www.google.com");
+    expect(
+      getAnalyticsReferrerDomain("https://example.com/other-page", "example.com"),
+    ).toBeNull();
+    expect(isValidReferrerDomain("192.0.2.1")).toBe(false);
+    expect(isValidReferrerDomain("not a domain")).toBe(false);
   });
 });

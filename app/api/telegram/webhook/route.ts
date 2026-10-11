@@ -150,14 +150,16 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       return "Podaj okres od 1 do 3650 dni, np. /visits 30.";
     }
     const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
-    const [allTime, period, sources] = await Promise.all([
+    const [allTime, period, sources, hours] = await Promise.all([
       supabase.rpc("get_page_view_stats", { p_since: null }),
       supabase.rpc("get_page_view_stats", { p_since: since }),
       supabase.rpc("get_traffic_source_stats", { p_since: since }),
+      supabase.rpc("get_visit_hour_stats", { p_since: since }),
     ]);
     if (allTime.error) throw new Error(`Could not load visit stats: ${allTime.error.message}`);
     if (period.error) throw new Error(`Could not load visit stats: ${period.error.message}`);
     if (sources.error) throw new Error(`Could not load traffic sources: ${sources.error.message}`);
+    if (hours.error) throw new Error(`Could not load visit hours: ${hours.error.message}`);
     const totals = allTime.data?.[0];
     const recent = period.data?.[0];
     return [
@@ -174,10 +176,36 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
               source: string;
               unique_visitors: number;
               views: number;
-            }) =>
-              `• ${source.source}: ${source.unique_visitors} osób / ${source.views} odsłon`,
+            }) => {
+              const label = source.source.startsWith("utm:")
+                ? `Kampania ${source.source.slice(4)}`
+                : source.source.startsWith("referrer:")
+                  ? source.source.slice(9)
+                  : "Wejścia bezpośrednie";
+              return `• ${label}: ${source.unique_visitors} osób / ${source.views} odsłon`;
+            },
           )
-        : ["• Brak wejść z oznaczonych kampanii UTM"]),
+        : ["• Brak danych o źródłach"]),
+      "Najczęstsze godziny (czas polski):",
+      ...((hours.data ?? []).length
+        ? hours.data
+            .slice()
+            .sort(
+              (
+                first: { total_views: number },
+                second: { total_views: number },
+              ) => second.total_views - first.total_views,
+            )
+            .slice(0, 5)
+            .map(
+              (hour: {
+                local_hour: number;
+                total_views: number;
+                unique_visitors: number;
+              }) =>
+                `• ${String(hour.local_hour).padStart(2, "0")}:00 — ${hour.total_views} odsłon / ${hour.unique_visitors} osób`,
+            )
+        : ["• Brak danych"]),
       "Pomiar anonimowy; działa od wdrożenia i tylko po zgodzie na analitykę.",
     ].join("\n");
   }

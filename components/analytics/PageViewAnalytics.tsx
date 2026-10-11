@@ -7,7 +7,10 @@ import {
   getOrCreateVisitorId,
   trackAnalyticsEvent,
 } from "@/lib/analytics/client";
-import { getAnalyticsSource } from "@/lib/analytics/page-view";
+import {
+  getAnalyticsReferrerDomain,
+  getAnalyticsSource,
+} from "@/lib/analytics/page-view";
 
 const CONSENT_KEY = "sm-analytics-consent";
 const CONSENT_EVENT = "sm-analytics-consent-changed";
@@ -48,6 +51,7 @@ export function PageViewAnalytics() {
     lastTrackedPath.current = pathname;
 
     let visitorId: string;
+    const isLandingPage = lastTrackedPath.current === null;
     try {
       const id = getOrCreateVisitorId();
       if (!id) return;
@@ -64,6 +68,12 @@ export function PageViewAnalytics() {
         visitorId,
         path: pathname,
         source: getAnalyticsSource(window.location.search),
+        referrerDomain: isLandingPage
+          ? getAnalyticsReferrerDomain(
+              document.referrer,
+              window.location.hostname,
+            )
+          : null,
       }),
       keepalive: true,
     }).then((response) => {
@@ -117,7 +127,8 @@ export function PageViewAnalytics() {
         rozwiązane zadanie, aby ulepszać serwis? Zapisujemy też źródło kampanii
         (UTM), jeśli odwiedzasz stronę z oznaczonego linku. Nie zapisujemy
         adresu IP ani danych konta. Losowy identyfikator przeglądarki zapisujemy
-        wyłącznie po zgodzie.
+        wyłącznie po zgodzie. Zapisujemy tylko domenę strony odsyłającej, bez
+        pełnego adresu.
       </p>
       <div className="mt-3 flex flex-wrap justify-end gap-2">
         <button

@@ -101,6 +101,10 @@ zadanie i źródła UTM. Na wdrożeniach z aktywnym GitHub Actions migracji
 zastosuje się automatycznie po pushu na `master`. Bot udostępnia `/funnel`
 (ostatnie 7 dni) i `/funnel 30`; `/visits` pokazuje również oznaczone źródła
 kampanii. Dodatkowe zdarzenia również są zbierane tylko po zgodzie na analitykę.
+Kolejna migracja `20261011180000_add_referrer_and_hour_stats.sql` dodaje
+domenę strony odsyłającej (bez pełnego URL-a) i statystyki godzinowe w strefie
+`Europe/Warsaw`; bot pokaże najczęstsze godziny w `/visits`. Dane te również
+zapisują się tylko po zgodzie.
 
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi

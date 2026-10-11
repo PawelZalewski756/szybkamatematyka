@@ -78,6 +78,7 @@ export function describeTelegramCommandError(error: unknown): string {
     message.includes("get_funnel_stats") ||
     message.includes("get_traffic_source_stats") ||
     message.includes("get_source_funnel_stats") ||
+    message.includes("get_visit_hour_stats") ||
     message.includes("record_analytics_event") ||
     message.includes("record_page_view_with_source")
   ) {

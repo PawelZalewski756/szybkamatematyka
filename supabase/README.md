@@ -20,7 +20,8 @@ go do Vercel ani do kodu. Historyczne i nietimestampowane pliki SQL nie są
 automatycznie wykonywane. Workflow uwzględnia jednorazowo idempotentną migrację
 analityki `20261011100000_add_anonymous_page_analytics.sql`; kolejne pliki
 migracji (w tym `20261011170000_add_funnel_analytics.sql`) wykonuje dopiero,
-gdy zostaną dodane na `master`. Istniejącą migrację analityki możesz uruchomić
+gdy zostaną dodane na `master`; zakres lejka uzupełnia
+`20261011180000_add_referrer_and_hour_stats.sql`. Istniejącą migrację analityki możesz uruchomić
 po dodaniu sekretu przyciskiem **Actions → Supabase migrations → Run workflow**.
 
 ## Kolejność wdrożenia

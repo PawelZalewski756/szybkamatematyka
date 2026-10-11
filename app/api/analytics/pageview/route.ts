@@ -3,6 +3,7 @@ import {
   hashVisitorId,
   isValidAnalyticsSource,
   isValidPagePath,
+  isValidReferrerDomain,
   isValidVisitorId,
 } from "@/lib/analytics/page-view";
 
@@ -12,6 +13,7 @@ type PageViewRequest = {
   visitorId?: unknown;
   path?: unknown;
   source?: unknown;
+  referrerDomain?: unknown;
 };
 
 export async function POST(request: Request): Promise<Response> {
@@ -25,7 +27,9 @@ export async function POST(request: Request): Promise<Response> {
   if (
     !isValidVisitorId(payload.visitorId) ||
     !isValidPagePath(payload.path) ||
-    (payload.source != null && !isValidAnalyticsSource(payload.source))
+    (payload.source != null && !isValidAnalyticsSource(payload.source)) ||
+    (payload.referrerDomain != null &&
+      !isValidReferrerDomain(payload.referrerDomain))
   ) {
     return Response.json({ error: "Invalid page view." }, { status: 400 });
   }
@@ -46,6 +50,7 @@ export async function POST(request: Request): Promise<Response> {
     p_visitor_hash: hashVisitorId(payload.visitorId),
     p_page_path: payload.path,
     p_source: payload.source ?? null,
+    p_referrer_domain: payload.referrerDomain ?? null,
   });
 
   if (error) {
