@@ -94,8 +94,7 @@ jobs:
                 --tuples-only \
                 --no-align \
                 --set ON_ERROR_STOP=1 \
-                --set "migration_version=$version" \
-                --command "select checksum from public.app_migration_history where version = :'migration_version';"
+                --command "select checksum from public.app_migration_history where version = '$version';"
             )"
 
             if [[ -n "$existing_checksum" ]]; then
@@ -108,12 +107,12 @@ jobs:
             fi
 
             echo "Applying: $version"
-            psql "$SUPABASE_DB_URL" \
+            {
+              cat "$migration"
+              printf "insert into public.app_migration_history (version, checksum) values ('%s', '%s');\n" \
+                "$version" "$checksum"
+            } | psql "$SUPABASE_DB_URL" \
               --no-psqlrc \
               --set ON_ERROR_STOP=1 \
-              --set "migration_version=$version" \
-              --set "migration_checksum=$checksum" \
-              --single-transaction \
-              --file "$migration" \
-              --command "insert into public.app_migration_history (version, checksum) values (:'migration_version', :'migration_checksum');"
+              --single-transaction
           done

@@ -21,3 +21,16 @@ export function isValidPagePath(value: unknown): value is string {
     !/[?#\r\n]/.test(value)
   );
 }
+
+export function isValidAnalyticsSource(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    value.length <= 64 &&
+    /^[a-z0-9_-]+$/.test(value)
+  );
+}
+
+export function getAnalyticsSource(search: string): string | null {
+  const source = new URLSearchParams(search).get("utm_source")?.trim().toLowerCase();
+  return source && isValidAnalyticsSource(source) ? source : null;
+}

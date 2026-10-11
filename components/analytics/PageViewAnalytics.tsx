@@ -2,9 +2,14 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import {
+  clearStoredAnalyticsIdentity,
+  getOrCreateVisitorId,
+  trackAnalyticsEvent,
+} from "@/lib/analytics/client";
+import { getAnalyticsSource } from "@/lib/analytics/page-view";
 
 const CONSENT_KEY = "sm-analytics-consent";
-const VISITOR_ID_KEY = "sm-analytics-visitor-id";
 const CONSENT_EVENT = "sm-analytics-consent-changed";
 
 type Consent = "unknown" | "accepted" | "rejected";
@@ -27,17 +32,6 @@ function getServerConsentSnapshot(): Consent {
   return "unknown";
 }
 
-function getOrCreateVisitorId(): string {
-  const storedId = window.localStorage.getItem(VISITOR_ID_KEY);
-  if (storedId && /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(storedId)) {
-    return storedId;
-  }
-
-  const visitorId = window.crypto.randomUUID();
-  window.localStorage.setItem(VISITOR_ID_KEY, visitorId);
-  return visitorId;
-}
-
 export function PageViewAnalytics() {
   const pathname = usePathname();
   const consent = useSyncExternalStore(
@@ -55,7 +49,9 @@ export function PageViewAnalytics() {
 
     let visitorId: string;
     try {
-      visitorId = getOrCreateVisitorId();
+      const id = getOrCreateVisitorId();
+      if (!id) return;
+      visitorId = id;
     } catch (error) {
       console.error("Could not initialize anonymous analytics:", error);
       return;
@@ -64,7 +60,11 @@ export function PageViewAnalytics() {
     void fetch("/api/analytics/pageview", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ visitorId, path: pathname }),
+      body: JSON.stringify({
+        visitorId,
+        path: pathname,
+        source: getAnalyticsSource(window.location.search),
+      }),
       keepalive: true,
     }).then((response) => {
       if (!response.ok) {
@@ -75,11 +75,16 @@ export function PageViewAnalytics() {
     });
   }, [consent, editingConsent, pathname]);
 
+  useEffect(() => {
+    if (consent !== "accepted" || editingConsent || !pathname) return;
+    void trackAnalyticsEvent("session_start", pathname);
+  }, [consent, editingConsent, pathname]);
+
   function chooseConsent(choice: "accepted" | "rejected") {
     try {
       window.localStorage.setItem(CONSENT_KEY, choice);
       if (choice === "rejected") {
-        window.localStorage.removeItem(VISITOR_ID_KEY);
+        clearStoredAnalyticsIdentity();
       }
       window.dispatchEvent(new Event(CONSENT_EVENT));
       setEditingConsent(false);
@@ -108,9 +113,11 @@ export function PageViewAnalytics() {
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-xl rounded-2xl border border-surface-border bg-surface p-4 shadow-2xl lg:bottom-4"
     >
       <p className="text-sm text-foreground">
-        Czy możemy zapisywać anonimowe odsłony i liczbę unikalnych
-        odwiedzających? Nie zapisujemy adresu IP. Identyfikator przeglądarki
-        zostanie zapisany tylko po zgodzie.
+        Czy możemy anonimowo mierzyć odsłony, sesje, rejestracje i pierwsze
+        rozwiązane zadanie, aby ulepszać serwis? Zapisujemy też źródło kampanii
+        (UTM), jeśli odwiedzasz stronę z oznaczonego linku. Nie zapisujemy
+        adresu IP ani danych konta. Losowy identyfikator przeglądarki zapisujemy
+        wyłącznie po zgodzie.
       </p>
       <div className="mt-3 flex flex-wrap justify-end gap-2">
         <button

@@ -15,6 +15,7 @@ import {
 import { isSupabaseNetworkError } from "@/lib/supabase/errors";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { authRedirectUrl } from "@/lib/auth-password-reset";
+import { trackAnalyticsEvent } from "@/lib/analytics/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -182,13 +183,15 @@ export default function LoginPage() {
       if (error) throw error;
 
       // Supabase często zwraca user: null bez błędu, gdy e-mail jest już w bazie
-      if (!data.user) {
+      if (!data.user || data.user.identities?.length === 0) {
         setIsError(true);
         setMessage(
           "Ten e-mail jest już zarejestrowany — użyj „Zaloguj się” albo innego adresu.",
         );
         return;
       }
+
+      void trackAnalyticsEvent("signup_completed", window.location.pathname);
 
       if (data.session) {
         const existing = await fetchProfile(data.user.id);

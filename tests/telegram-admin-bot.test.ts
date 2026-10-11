@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   hashVisitorId,
+  getAnalyticsSource,
   isValidPagePath,
   isValidVisitorId,
 } from "@/lib/analytics/page-view";
@@ -50,6 +51,11 @@ describe("Telegram admin bot helpers", () => {
         message: "Could not find the function public.get_page_view_stats in the schema cache",
       }),
     ).toContain("20261011100000_add_anonymous_page_analytics.sql");
+    expect(
+      describeTelegramCommandError({
+        message: "Could not find the function public.get_source_funnel_stats in the schema cache",
+      }),
+    ).toContain("20261011170000_add_funnel_analytics.sql");
   });
 });
 
@@ -65,5 +71,10 @@ describe("anonymous page-view analytics helpers", () => {
     expect(isValidPagePath("/trening/matura")).toBe(true);
     expect(isValidPagePath("//elsewhere.example")).toBe(false);
     expect(isValidPagePath("/profil?email=x@example.com")).toBe(false);
+  });
+
+  it("keeps only safe campaign source labels", () => {
+    expect(getAnalyticsSource("?utm_source=instagram")).toBe("instagram");
+    expect(getAnalyticsSource("?utm_source=student%40example.com")).toBeNull();
   });
 });

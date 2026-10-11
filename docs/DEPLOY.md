@@ -94,6 +94,14 @@ wyłącznie dla przeglądarek, które zaakceptują analitykę. Zapisywane są
 anonimowe odsłony i skrót losowego identyfikatora przeglądarki — bez adresów IP.
 Bot udostępnia `/visits` (ostatnie 7 dni) oraz `/visits 30` (ostatnie 30 dni).
 
+Kolejna timestampowana migracja,
+`supabase/migrations/20261011170000_add_funnel_analytics.sql`, rozszerza
+pomiar o sesje, powracających odwiedzających, rejestracje, pierwsze rozwiązane
+zadanie i źródła UTM. Na wdrożeniach z aktywnym GitHub Actions migracji
+zastosuje się automatycznie po pushu na `master`. Bot udostępnia `/funnel`
+(ostatnie 7 dni) i `/funnel 30`; `/visits` pokazuje również oznaczone źródła
+kampanii. Dodatkowe zdarzenia również są zbierane tylko po zgodzie na analitykę.
+
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
 plikami hardeningu. Nie są wymagane w nowej instalacji — końcowa migracja

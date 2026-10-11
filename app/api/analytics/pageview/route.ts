@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import {
   hashVisitorId,
+  isValidAnalyticsSource,
   isValidPagePath,
   isValidVisitorId,
 } from "@/lib/analytics/page-view";
@@ -10,6 +11,7 @@ export const runtime = "nodejs";
 type PageViewRequest = {
   visitorId?: unknown;
   path?: unknown;
+  source?: unknown;
 };
 
 export async function POST(request: Request): Promise<Response> {
@@ -20,7 +22,11 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  if (!isValidVisitorId(payload.visitorId) || !isValidPagePath(payload.path)) {
+  if (
+    !isValidVisitorId(payload.visitorId) ||
+    !isValidPagePath(payload.path) ||
+    (payload.source != null && !isValidAnalyticsSource(payload.source))
+  ) {
     return Response.json({ error: "Invalid page view." }, { status: 400 });
   }
 
@@ -36,9 +42,10 @@ export async function POST(request: Request): Promise<Response> {
   const supabase = createClient(url, serviceKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
-  const { error } = await supabase.rpc("record_page_view", {
+  const { error } = await supabase.rpc("record_page_view_with_source", {
     p_visitor_hash: hashVisitorId(payload.visitorId),
     p_page_path: payload.path,
+    p_source: payload.source ?? null,
   });
 
   if (error) {
