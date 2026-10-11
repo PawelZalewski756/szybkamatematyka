@@ -1,5 +1,28 @@
 # Konfiguracja bazy Supabase
 
+## Automatyczne migracje produkcyjne
+
+Nowe migracje timestampowane (`YYYYMMDDHHMMSS_nazwa.sql`) dodane do
+`supabase/migrations/` i wysłane na `master` są wykonywane przez
+`.github/workflows/supabase-migrations.yml`. Workflow zapisuje checksum
+zastosowanej migracji, wykonuje SQL i wpis historii w jednej transakcji oraz
+odmawia ponownego zastosowania zmienionego pliku.
+
+Przed pierwszym uruchomieniem dodaj w GitHub:
+**Settings → Secrets and variables → Actions → New repository secret**:
+
+- nazwa: `SUPABASE_DB_URL`
+- wartość: connection string PostgreSQL z Supabase → **Connect → Session pooler**
+  (nie klucz API, `service_role` ani connection string trybu Transaction pooler).
+
+Sekret jest używany wyłącznie przez GitHub Actions podczas migracji; nie dodawaj
+go do Vercel ani do kodu. Historyczne i nietimestampowane pliki SQL nie są
+automatycznie wykonywane. Workflow uwzględnia jednorazowo idempotentną migrację
+analityki `20261011100000_add_anonymous_page_analytics.sql`; kolejne pliki
+migracji wykonuje dopiero, gdy zostaną dodane na `master`. Istniejącą migrację
+analityki możesz uruchomić po dodaniu sekretu przyciskiem **Actions → Supabase
+migrations → Run workflow**.
+
 ## Kolejność wdrożenia
 
 Pliki w `supabase/migrations/` powstały w kilku etapach projektu. Część z nich

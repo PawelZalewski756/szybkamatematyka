@@ -1,0 +1,119 @@
+name: Supabase migrations
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "supabase/migrations/**"
+      - ".github/workflows/supabase-migrations.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-migrations-master
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    name: Apply new Supabase migrations
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes postgresql-client
+
+      - name: Apply pending migrations
+        shell: bash
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${SUPABASE_DB_URL:-}" ]]; then
+            echo "::error::Add SUPABASE_DB_URL as a GitHub Actions repository secret."
+            exit 1
+          fi
+
+          psql "$SUPABASE_DB_URL" \
+            --no-psqlrc \
+            --set ON_ERROR_STOP=1 \
+            --command "
+              create table if not exists public.app_migration_history (
+                version text primary key,
+                checksum text not null,
+                applied_at timestamptz not null default now()
+              );
+              revoke all on table public.app_migration_history
+                from public, anon, authenticated;
+            "
+
+          migrations=("supabase/migrations/20261011100000_add_anonymous_page_analytics.sql")
+
+          if [[ "${BEFORE_SHA:-}" =~ ^[0-9a-f]{40}$ ]] &&
+             [[ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]]; then
+            while IFS= read -r migration; do
+              [[ "$migration" =~ ^supabase/migrations/[0-9]{14}_[a-z0-9_]+\.sql$ ]] || continue
+              migrations+=("$migration")
+            done < <(
+              git diff \
+                --diff-filter=A \
+                --name-only \
+                "$BEFORE_SHA" \
+                "$CURRENT_SHA" \
+                -- supabase/migrations
+            )
+          fi
+
+          declare -A seen=()
+          for migration in "${migrations[@]}"; do
+            [[ -f "$migration" ]] || continue
+            [[ "$migration" =~ ^supabase/migrations/([0-9]{14}_[a-z0-9_]+)\.sql$ ]] || {
+              echo "::error::Refusing migration with an invalid timestamped filename: $migration"
+              exit 1
+            }
+
+            version="${BASH_REMATCH[1]}"
+            [[ -n "${seen[$version]:-}" ]] && continue
+            seen[$version]=1
+            checksum="$(sha256sum "$migration" | cut -d ' ' -f 1)"
+
+            existing_checksum="$(
+              psql "$SUPABASE_DB_URL" \
+                --no-psqlrc \
+                --tuples-only \
+                --no-align \
+                --set ON_ERROR_STOP=1 \
+                --set "migration_version=$version" \
+                --command "select checksum from public.app_migration_history where version = :'migration_version';"
+            )"
+
+            if [[ -n "$existing_checksum" ]]; then
+              if [[ "$existing_checksum" != "$checksum" ]]; then
+                echo "::error::Applied migration $version has changed. Add a new migration instead of editing it."
+                exit 1
+              fi
+              echo "Already applied: $version"
+              continue
+            fi
+
+            echo "Applying: $version"
+            psql "$SUPABASE_DB_URL" \
+              --no-psqlrc \
+              --set ON_ERROR_STOP=1 \
+              --set "migration_version=$version" \
+              --set "migration_checksum=$checksum" \
+              --single-transaction \
+              --file "$migration" \
+              --command "insert into public.app_migration_history (version, checksum) values (:'migration_version', :'migration_checksum');"
+          done
