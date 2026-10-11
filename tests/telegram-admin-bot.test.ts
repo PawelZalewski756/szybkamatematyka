@@ -12,6 +12,7 @@ describe("Telegram admin bot helpers", () => {
       name: "stats",
       args: ["extra"],
     });
+    expect(parseTelegramCommand("/pomoc")).toEqual({ name: "help", args: [] });
     expect(parseTelegramCommand("hello")).toBeNull();
   });
 
