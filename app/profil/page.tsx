@@ -4,6 +4,7 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { ProfileAchievements } from "@/components/achievements/ProfileAchievements";
 import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPrompt";
+import { CheckoutStatusBanner } from "@/components/profil/CheckoutStatusBanner";
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
 import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
@@ -28,6 +29,7 @@ import {
   updateProfileSchoolClass,
   type Profile,
 } from "@/lib/supabase/profiles";
+import { startBillingPortal } from "@/lib/subscription/billing-portal-client";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import {
   isPro as snapshotIsPro,
@@ -126,6 +128,18 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
         year: "numeric",
       })
     : null;
+  const [portalPending, setPortalPending] = useState(false);
+  const [portalError, setPortalError] = useState<string | null>(null);
+
+  const handleManage = async () => {
+    setPortalError(null);
+    setPortalPending(true);
+    const result = await startBillingPortal();
+    if (!result.ok) {
+      setPortalError(result.error);
+      setPortalPending(false);
+    }
+  };
 
   return (
     <section id="plan" className="mt-8">
@@ -172,6 +186,27 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             </Link>
           )}
         </div>
+
+        {(pro || snapshot.status === "canceled" || snapshot.status === "past_due") && (
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+            <button
+              type="button"
+              disabled={portalPending}
+              onClick={() => void handleManage()}
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-surface-border bg-white/10 px-4 py-2 text-sm font-bold text-white transition hover:bg-white/15 disabled:opacity-50"
+            >
+              {portalPending
+                ? "Otwieram portal…"
+                : "Zarządzaj subskrypcją"}
+            </button>
+            <p className="text-xs text-muted">
+              Karta, faktury i anulowanie — przez bezpieczny portal Stripe.
+            </p>
+          </div>
+        )}
+        {portalError && (
+          <p className="mt-2 text-xs text-danger">{portalError}</p>
+        )}
       </div>
     </section>
   );
@@ -606,6 +641,8 @@ export default function ProfilPage() {
                 accent="cyan"
               />
             </section>
+
+            <CheckoutStatusBanner />
 
             <PlanSection snapshot={subscriptionSnapshot} />
 

@@ -1,0 +1,128 @@
+================================================================================
+  SZYBKA MATEMATYKA — konfiguracja Stripe (płatności Pro / Roczny)
+================================================================================
+
+Kod checkoutu, webhooka i portalu jest już w aplikacji. Po założeniu konta
+Stripe wystarczy: produkty + ceny, zmienne środowiskowe, webhook i migracja
+kolumn subskrypcji w Supabase.
+
+
+1. PRODUKTY I CENY W STRIPE
+--------------------------------------------------------------------------------
+  Dashboard → Products → Add product (tryb Test, potem Live):
+
+  a) Pro — subskrypcja miesięczna
+     - Nazwa: Pro
+     - Cena: 29,00 PLN
+     - Billing period: Monthly
+     - Skopiuj Price ID (price_...) → STRIPE_PRICE_PRO
+
+  b) Roczny — subskrypcja roczna
+     - Nazwa: Roczny
+     - Cena: 249,00 PLN
+     - Billing period: Yearly
+     - Skopiuj Price ID (price_...) → STRIPE_PRICE_ROCZNY
+
+  Ceny w UI (lib/subscription/plans.ts) powinny być zgodne z tym, co ustawisz
+  w Stripe — inaczej uczeń zobaczy inną kwotę niż na Checkout.
+
+
+2. KLUCZE API
+--------------------------------------------------------------------------------
+  Developers → API keys:
+
+  - Secret key (sk_test_... / sk_live_...) → STRIPE_SECRET_KEY
+  - NIE wklejaj Publishable key do .env — Checkout działa przez API serwera.
+
+
+3. CUSTOMER PORTAL (anulowanie / karta / faktury)
+--------------------------------------------------------------------------------
+  Settings → Billing → Customer portal → włącz:
+
+  - aktualizację metody płatności,
+  - anulowanie subskrypcji,
+  - podgląd faktur (opcjonalnie).
+
+  Bez tego przycisk „Zarządzaj subskrypcją” na /profil otworzy portal, ale
+  opcje mogą być puste / wyłączone.
+
+
+4. WEBHOOK
+--------------------------------------------------------------------------------
+  Endpoint produkcyjny:
+
+    POST https://szybkamatematyka.pl/api/stripe/webhook
+
+  (albo Twój NEXT_PUBLIC_SITE_URL + /api/stripe/webhook)
+
+  Zdarzenia do zaznaczenia:
+    - checkout.session.completed
+    - customer.subscription.updated
+    - customer.subscription.deleted
+
+  Signing secret (whsec_...) → STRIPE_WEBHOOK_SECRET
+
+  Lokalnie (opcjonalnie, Stripe CLI):
+
+    stripe listen --forward-to localhost:3000/api/stripe/webhook
+
+  CLI wypisze tymczasowy whsec_ — wklej go do .env.local na czas testów.
+
+
+5. ZMIENNE ŚRODOWISKOWE
+--------------------------------------------------------------------------------
+  Lokalnie (.env.local) oraz na Vercel (Project → Settings → Environment
+  Variables) ustaw:
+
+    STRIPE_SECRET_KEY=sk_...
+    STRIPE_WEBHOOK_SECRET=whsec_...
+    STRIPE_PRICE_PRO=price_...
+    STRIPE_PRICE_ROCZNY=price_...
+    SUPABASE_SERVICE_ROLE_KEY=eyJ...   # wymagane dla webhooka i portalu
+    NEXT_PUBLIC_SITE_URL=https://szybkamatematyka.pl
+
+  Po zmianie zmiennych na Vercel zrób Redeploy.
+
+
+6. SUPABASE — KOLUMNY SUBSKRYPCJI
+--------------------------------------------------------------------------------
+  W SQL Editor uruchom (jeśli jeszcze nie):
+
+    supabase/migrations/20260529130000_add_subscription_columns.sql
+
+  oraz hardening z docs/DEPLOY.md (chroni subscription_* / stripe_* przed
+  samoczynną zmianą przez użytkownika). Webhook używa service role.
+
+
+7. SMOKE TEST (tryb Test)
+--------------------------------------------------------------------------------
+  1) Zaloguj się na stronie.
+  2) /cennik → Wybierz plan → Stripe Checkout.
+  3) Karta testowa: 4242 4242 4242 4242, dowolna przyszła data, dowolny CVC.
+  4) Po powrocie na /profil status powinien przejść na Pro (webhook).
+  5) „Zarządzaj subskrypcją” → portal Stripe (anulowanie / karta).
+  6) W Stripe Dashboard → Developers → Webhooks sprawdź dostarczenia 2xx.
+
+
+8. LIVE (produkcja)
+--------------------------------------------------------------------------------
+  - Przełącz Dashboard na Live.
+  - Utwórz produkty/ceny Live (nowe Price ID!).
+  - Nowe klucze sk_live_ + whsec_ z endpointu Live.
+  - Zaktualizuj zmienne na Vercel i Redeploy.
+  - Upewnij się, że konto Stripe ma włączone płatności w PLN / PL.
+
+
+9. GDZIE TO DZIAŁA W KODZIE
+--------------------------------------------------------------------------------
+  Checkout ........... POST /api/checkout
+  Webhook ............ POST /api/stripe/webhook
+  Portal ............. POST /api/billing-portal
+  Cennik UI .......... /cennik + PricingSection
+  Status planu ....... /profil (PlanSection)
+  Plany / Price env .. lib/subscription/plans.ts
+
+
+================================================================================
+  Ostatnia aktualizacja: październik 2026
+================================================================================

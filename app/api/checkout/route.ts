@@ -3,6 +3,7 @@ import {
   isStripeConfigured,
   resolveSiteUrl,
 } from "@/lib/stripe/config";
+import { resolveStripeCustomer } from "@/lib/stripe/customer";
 import { getPlanById } from "@/lib/subscription/plans";
 import { verifyUserRequest } from "@/lib/subscription/server-auth";
 
@@ -92,13 +93,22 @@ export async function POST(request: Request) {
     const origin = request.headers.get("origin");
     const siteUrl = resolveSiteUrl(origin);
 
-    // 5) Tworzymy sesję Checkout. client_reference_id + metadata pozwalają
+    // 5) Preferujemy istniejącego klienta Stripe (unikamy duplikatów przy
+    //    kolejnych checkoutach). Bez service role zostaje customer_email.
+    const customerId = await resolveStripeCustomer({
+      userId: auth.user.id,
+      email: auth.user.email,
+    });
+
+    // 6) Tworzymy sesję Checkout. client_reference_id + metadata pozwalają
     //    webhookowi jednoznacznie powiązać płatność z użytkownikiem Supabase.
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       client_reference_id: auth.user.id,
-      customer_email: auth.user.email ?? undefined,
+      ...(customerId
+        ? { customer: customerId }
+        : { customer_email: auth.user.email ?? undefined }),
       allow_promotion_codes: true,
       metadata: {
         supabase_user_id: auth.user.id,
