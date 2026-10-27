@@ -71,10 +71,14 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   const category = bazaCategoryForCmsDzial(dzial);
   const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
   const parsed = parseSolutionSteps(task.rozwiazanie);
-  const explanation =
+  const rawExplanation =
     parsed.answer ??
     parsed.steps[parsed.steps.length - 1] ??
     task.rozwiazanie.slice(0, 280);
+  const explanation = formatCkeMathText(rawExplanation);
+  const rawSteps =
+    parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie];
+  const solutionSteps = rawSteps.map((step) => formatCkeMathText(step));
   const correctIndex = hasChoices
     ? inferCorrectChoiceIndex(parsed.answer, formattedChoices)
     : null;
@@ -94,7 +98,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
       : formattedChoices,
     correctIndex: isOpen ? 0 : correctIndex,
     explanation,
-    solutionSteps: parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie],
+    solutionSteps,
     examSource: {
       kind: "matura",
       year: sheet.rok,

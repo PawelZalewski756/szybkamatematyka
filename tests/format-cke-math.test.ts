@@ -90,6 +90,38 @@ describe("formatCkeMathText", () => {
     expect(out).not.toContain("&fnof;");
     expect(out).toContain("\\frac{4}{7}");
   });
+
+  it("nie myli polskiego „a i b” z indeksem a_i", () => {
+    const out = formatCkeMathText(
+      "dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność 3a 2 − 2ab + 3b 2 ≥ 0 .",
+    );
+    expect(out).toContain("a i b");
+    expect(out).not.toContain("a_{i}");
+    expect(out).toMatch(/3a\^\{2\}/);
+    expect(out).toMatch(/\\ge\s*0/);
+    expect(out.match(/\$\$/g) ?? []).toHaveLength(0);
+  });
+
+  it("trzyma sin/cos ze stopniami w jednej wyspie", () => {
+    const sin = formatCkeMathText("Jeśli m = sin50°, to");
+    expect(sin).toMatch(/\$m\s*=\s*(\\sin|sin)\s*50\^\{\\circ\}\$/);
+    expect(sin).not.toContain("$$");
+
+    const chain = formatCkeMathText("|∡DEC| = |∡BGF| = 90°");
+    expect(chain).toMatch(/\\angle\s*DEC/);
+    expect(chain).toMatch(/\\angle\s*BGF/);
+    expect(chain).toMatch(/90\^\{\\circ\}/);
+    expect(chain.match(/\$\$/g) ?? []).toHaveLength(0);
+    expect((chain.match(/\$/g) ?? []).length % 2).toBe(0);
+
+    const trig = formatCkeMathText(
+      "(1 − cos20°) ⋅ (1 + cos20°) − sin 2 20°",
+    );
+    expect(trig).toContain("\\cos");
+    expect(trig).toMatch(/sin\^\{2\}|\\sin\^\{2\}/);
+    expect(trig).not.toMatch(/\(\$/);
+    expect(trig.match(/\$\$/g) ?? []).toHaveLength(0);
+  });
 });
 
 describe("hasCkeHtmlGarbage", () => {

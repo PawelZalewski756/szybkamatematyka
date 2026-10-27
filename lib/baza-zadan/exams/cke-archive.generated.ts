@@ -13,7 +13,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności – 4 ≤ x – 1 ≤ 4.",
+    "prompt": "Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności $-4 \\le x - 1 \\le 4$.",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-1.jpg)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-2.jpg)",
@@ -23,8 +23,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B)",
     "solutionSteps": [
-      "Rozwiąż nierówność – 4 ≤ x – 1 ≤ 4, dodając 1 do każdej jej części: – 4 + 1 ≤ x ≤ 4 + 1, co daje – 3 ≤ x ≤ 5.",
-      "Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby od – 3 do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach – 3 i 5 oraz odcinkiem między nimi."
+      "Rozwiąż nierówność $-4 \\le x - 1 \\le 4$, dodając_{1} do każdej jej części: $-4 + 1 \\le x \\le 4 + 1$, co daje $-3 \\le x \\le 5$.",
+      "Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby $od - 3$ do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach -3 i 5 oraz odcinkiem między nimi."
     ],
     "examSource": {
       "kind": "matura",
@@ -45,9 +45,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są liczby ![Rysunek do zadania](/cke-matura/m15-maj/z02-1.png) . Iloczyn abc jest równy",
     "choices": [
-      "– 9",
-      "– ⅓",
-      "⅓",
+      "-9",
+      "-$\\frac{1}{3}$",
+      "$\\frac{1}{3}$",
       "3"
     ],
     "correctIndex": 3,
@@ -81,7 +81,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "1032,40 zł",
     "solutionSteps": [
-      "Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% z 1000 zł, czyli $1000 \\cdot 0.04 = 40$ zł.",
+      "Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% $z^{1000}$ zł, czyli $1000 \\cdot 0.04 = 40$ zł.",
       "Oblicz kwotę podatku od odsetek. Podatek wynosi 19% od 40 zł, czyli $40 \\cdot 0.19 = 7.60$ zł.",
       "Oblicz kwotę do wypłaty po potrąceniu podatku. Od kwoty początkowej (1000 zł) dodajemy odsetki pomniejszone o podatek: $1000 + (40 - 7.60) = 1000 + 32.40 = 1032.40$ zł."
     ],
@@ -104,10 +104,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równość ![Rysunek do zadania](/cke-matura/m15-maj/z04-1.png) zachodzi dla",
     "choices": [
-      "m = 5",
-      "m = 4",
-      "m = 1",
-      "m = – 5"
+      "$m = 5$",
+      "$m = 4$",
+      "$m = 1$",
+      "$m = -5$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $m = 5$.",
@@ -164,12 +164,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma wszystkich pierwiastków równania ( x + 3)( x + 7)( x – 11) = 0 jest równa",
+    "prompt": "Suma wszystkich pierwiastków równania $(x + 3)(x + 7)(x - 11)$ = 0 jest równa",
     "choices": [
-      "– 1",
+      "-1",
       "21",
       "1",
-      "– 21"
+      "-21"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1$",
@@ -197,10 +197,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równanie ![Rysunek do zadania](/cke-matura/m15-maj/z07-1.png)",
     "choices": [
-      "ma dokładnie jedno rozwiązanie: x = 1",
-      "ma dokładnie jedno rozwiązanie: x = 0",
-      "ma dokładnie jedno rozwiązanie: x = − 1",
-      "ma dokładnie dwa rozwiązania: x = 0 , x = 1"
+      "ma dokładnie jedno rozwiązanie: $x = 1$",
+      "ma dokładnie jedno rozwiązanie: $x = 0$",
+      "ma dokładnie jedno rozwiązanie: $x = -1$",
+      "ma dokładnie dwa rozwiązania: $x = 0$ , $x = 1$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli ma dwa rozwiązania: $x=0$, $x=1$.",
@@ -226,12 +226,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m15-maj/z08-1.png) Zbiorem wartości funkcji ƒ jest",
+    "prompt": "Na rysunku przedstawiono wykres funkcji $f$. ![Rysunek do zadania](/cke-matura/m15-maj/z08-1.png) Zbiorem wartości funkcji $f$ jest",
     "choices": [
-      "(–2,2)",
-      "⟨–2,2)",
-      "⟨–2,2⟩",
-      "(–2,2⟩"
+      "$(-2,2)$",
+      "⟨-2,2)",
+      "⟨-2,2⟩",
+      "(-2,2⟩"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\langle-2,2\\rangle$",
@@ -257,12 +257,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na wykresie funkcji liniowej określonej wzorem f( x ) = ( m − 1) x + 3 leży punkt S = (5, −2) . Zatem",
+    "prompt": "Na wykresie funkcji liniowej określonej wzorem $f(x)$ = $(m - 1) x + 3$ leży punkt S = $(5, - 2)$ . Zatem",
     "choices": [
-      "m = − 1",
-      "m = 0",
-      "m = 1",
-      "m = 2"
+      "$m = -1$",
+      "$m = 0$",
+      "$m = 1$",
+      "$m = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m=0$.",
@@ -287,12 +287,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa f określona wzorem f( x ) = 2 x + b ma takie samo miejsce zerowe, jakie ma funkcja liniowa g ( x ) = −3 x + 4. Stąd wynika, że",
+    "prompt": "Funkcja liniowa f określona wzorem $f(x) = 2x + b$ ma takie samo miejsce zerowe, jakie ma funkcja liniowa $g(x) = -3x + 4$. Stąd wynika, że",
     "choices": [
-      "b = 4",
-      "b = – 3 / 2",
-      "b = – 8 / 3",
-      "b = 4 / 3"
+      "$b = 4$",
+      "$b = -\\frac{3}{2}$",
+      "$b = -\\frac{8}{3}$",
+      "$b = \\frac{4}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $b = -\\frac{8}{3}$",
@@ -318,12 +318,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa określona jest wzorem f( x ) = x 2 + x + c . Jeżeli f(3) = 4, to",
+    "prompt": "Funkcja kwadratowa określona jest wzorem $f(x) = x^{2} + x + c$ . Jeżeli $f(3) = 4$, to",
     "choices": [
-      "f(1) = − 6",
-      "f(1) = 0",
-      "f(1) = 6",
-      "f(1) = 18"
+      "$f(1) = -6$",
+      "$f(1) = 0$",
+      "$f(1) = 6$",
+      "$f(1) = 18$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(1) = -6$.",
@@ -360,13 +360,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Rozwiązujemy nierówność kwadratową $\\frac{3}{4} \\le x^2$. Przenosimy wszystko na jedną stronę: $x^2 - \\frac{3}{4} \\ge 0$. Miejsca zerowe to $x = \\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{2}$ oraz $x = -\\sqrt{\\frac{3}{4}} = -\\frac{\\sqrt{3}}{2}$. Ponieważ parabola $y=x^2 - \\frac{3}{4}$ ma ramiona skierowane w górę, nierówność jest spełniona dla $x \\le -\\frac{\\sqrt{3}}{2}$ lub $x \\ge \\frac{\\sqrt{3}}{2}$.",
       "Znajdujemy przybliżone wartości pierwiastków: $\\sqrt{3} \\approx 1.732$, więc $\\frac{\\sqrt{3}}{2} \\approx 0.866$. Nierówność spełniają liczby $x \\le -0.866$ lub $x \\ge 0.866$.",
-      "Szukamy liczb całkowitych w przedziałach $(- \\infty, -0.866]$ oraz $[0.866, \\infty)$ z zakresu podanego w treści zadania, czyli od -10 do 10 włącznie. W pierwszym przedziale mamy liczby od -10 do -1 (10 liczb). W drugim przedziale mamy liczby od 1 do 10 (10 liczb). Łącznie jest 20 liczb.",
-      "Poprawiamy Krok 3. Nierówność jest spełniona dla liczb całkowitych $x \\in \\{-10, -9, \\dots, -1\\}$ oraz $x \\in \\{1, 2, \\dots, 10\\}$. Liczb całkowitych spełniających warunek $x \\le -0.866$ jest 10 (od -10 do -1). Liczb całkowitych spełniających warunek $x \\ge 0.866$ jest 10 (od 1 do 10). Łączna liczba całkowitych rozwiązań wynosi $10+10 = 20$. Prawdopodobnie wkradł się błąd w rozumowaniu, albo treść zadania jest niepełna (np. brak rysunku, który mógł zawierać dodatkowe ograniczenia). Ponownie analizujemy sytuację.",
+      "Szukamy liczb całkowitych w przedziałach $(- \\infty, -0.866]$ oraz $[0.866, \\infty)$ z zakresu podanego w treści zadania, czyli $od - 10$ do 10 włącznie. W pierwszym przedziale mamy liczby $od - 10 do - 1$ (10 liczb). W drugim przedziale mamy liczby od 1 do 10 (10 liczb). Łącznie jest 20 liczb.",
+      "Poprawiamy Krok 3. Nierówność jest spełniona dla liczb całkowitych $x \\in \\{-10, -9, \\dots, -1\\}$ oraz $x \\in \\{1, 2, \\dots, 10\\}$. Liczb całkowitych spełniających warunek $x \\le -0.866$ jest 10 $(od - 10 do - 1)$. Liczb całkowitych spełniających warunek $x \\ge 0.866$ jest 10 (od 1 do 10). Łączna liczba całkowitych rozwiązań wynosi $10+10 = 20$. Prawdopodobnie wkradł się błąd w rozumowaniu, albo treść zadania jest niepełna (np. brak rysunku, który mógł zawierać dodatkowe ograniczenia). Ponownie analizujemy sytuację.",
       "Biorąc pod uwagę podane odpowiedzi, musi istnieć dodatkowe ograniczenie. Zakładając, że rysunek ograniczał zakres liczb całkowitych, a nie ich wartości bezwzględne, spróbujmy inne podejście. Nierówność pierwotna jest $x^2 \\ge \\frac{3}{4}$. Bezpośrednio szukamy liczb całkowitych $x$ takich, że $x \\le -\\frac{\\sqrt{3}}{2}$ lub $x \\ge \\frac{\\sqrt{3}}{2}$. Liczbami całkowitymi mniejszymi lub równymi $-\\frac{\\sqrt{3}}{2} \\approx -0.866$ są $\\{-1, -2, -3, \\ldots \\}$. Liczbami całkowitymi większymi lub równymi $\\frac{\\sqrt{3}}{2} \\approx 0.866$ są $\\{1, 2, 3, \\ldots \\}$. W zakresie od $-10$ do $10$, liczby całkowite spełniające nierówność to $\\{-10, -9, \\dots, -1\\}$ (10 liczb) oraz $\\{1, 2, \\dots, 10\\}$ (10 liczb). Łącznie 20. Ponieważ 20 nie ma na liście odpowiedzi, a najbliższa jest 17, prawdopodobnie rysunek zawierał dodatkowe ograniczenie typu $-10 \\le x \\le 10$. Przyjrzyjmy się dokładniej.",
       "Rozwiązujemy nierówność $\\frac{3}{4} \\le x^2$. Po przekształceniu mamy $x^2 - \\frac{3}{4} \\ge 0$, co daje $(x - \\frac{\\sqrt{3}}{2})(x + \\frac{\\sqrt{3}}{2}) \\ge 0$. Rozwiązaniem jest $x \\in (-\\infty, -\\frac{\\sqrt{3}}{2}] \\cup [\\frac{\\sqrt{3}}{2}, \\infty)$.",
       "Przybliżamy wartości krańcowe: $-\\frac{\\sqrt{3}}{2} \\approx -0.866$ i $\\frac{\\sqrt{3}}{2} \\approx 0.866$. Nierówność spełniają liczby $x \\le -0.866$ lub $x \\ge 0.866$.",
-      "Na podstawie domniemanych ograniczeń z rysunku (zakładamy, że było to $-10 \\le x \\le 10$ i $x$ jest liczbą całkowitą), szukamy liczb całkowitych w tych przedziałach. Liczby całkowite spełniające $x \\le -0.866$ w zakresie od -10 do 10 to $x \\in \\{-10, -9, \\dots, -1\\}$. Jest ich 10.",
-      "Liczby całkowite spełniające $x \\ge 0.866$ w zakresie od -10 do 10 to $x \\in \\{1, 2, \\dots, 10\\}$. Jest ich 10. Łącznie jest 20 liczb.",
+      "Na podstawie domniemanych ograniczeń z rysunku (zakładamy, że było to $-10 \\le x \\le 10$ i $x$ jest liczbą całkowitą), szukamy liczb całkowitych w tych przedziałach. Liczby całkowite spełniające $x \\le -0.866$ w zakresie $od - 10$ do 10 to $x \\in \\{-10, -9, \\dots, -1\\}$. Jest ich 10.",
+      "Liczby całkowite spełniające $x \\ge 0.866$ w zakresie $od - 10$ do 10 to $x \\in \\{1, 2, \\dots, 10\\}$. Jest ich 10. Łącznie jest 20 liczb.",
       "Analizujemy możliwość błędnego odczytania nierówności lub odpowiedzi. Wracamy do treści. Jeśli przyjąć, że nierówność była $x^2 \\le \\frac{3}{4}$, rozwiązaniem byłoby $x \\in [-\\frac{\\sqrt{3}}{2}, \\frac{\\sqrt{3}}{2}]$, czyli $x \\in [-0.866, 0.866]$. Jedyną liczbą całkowitą spełniającą to jest 0. To też nie pasuje.",
       "Ponieważ jedna z odpowiedzi jest poprawna, a obliczenia pokazują 20, a nie jedną z opcji, przyjmujemy, że rysunek zawierał inny zakres lub symbol. Jeśli rysunek wskazywał przedział $[-10, 10]$, a nierówność jest poprawnie przepisana, możliwe jest, że liczby całkowite sprawdzamy tylko dla pewnych wartości.",
       "Jeśli odczyt zadania jest poprawny, i odpowiedzi są poprawne, to gdzieś jest błąd. Skoro mamy opcje 14, 15, 16, 17, a nasze obliczenia dają 20, to znaczy, że albo zakres liczb całkowitych jest mniejszy, albo nierówność jest inna. Jeśli założymy, że zadanie jest poprawne, sprawdźmy, jaka liczba całkowitych w przedziale $[-N, N]$ spełnia nierówność. Liczb całkowitych w $[-N, N]$ jest $2N+1$. W naszym przypadku, dla $N=10$, mamy 21 liczb. Odpada 0. Zostaje 20.",
@@ -390,7 +390,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W rosnącym ciągu geometrycznym ( a n ) , określonym dla n ≥ 1, spełniony jest warunek a 4 = 3 a 1 . Iloraz q tego ciągu jest równy",
+    "prompt": "W rosnącym ciągu geometrycznym ($a_{n}$) , określonym dla $n \\ge 1$, spełniony jest warunek $a_{4} = 3a_{1}$ . Iloraz q tego ciągu jest równy",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-maj/z13-1.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z13-2.gif)",
@@ -400,7 +400,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C, czyli $\\sqrt[3]{3}$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiając dane z zadania ($a_4 = 3a_1$), otrzymamy $a_1 \\cdot q^{4-1} = 3a_1$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiając dane z zadania ($a_4 = 3a_1$), otrzymamy $a_1 \\cdot q^{4-1} = 3a_1$.",
       "Uprość równanie uzyskane w poprzednim kroku: $a_1 \\cdot q^3 = 3a_1$. Ponieważ ciąg jest rosnący, $a_1 \\ne 0$, możemy podzielić obie strony przez $a_1$, co daje $q^3 = 3$.",
       "Wyznacz iloraz $q$ z równania $q^3 = 3$. Aby to zrobić, oblicz pierwiastek sześcienny z obu stron: $q = \\sqrt[3]{3}$."
     ],
@@ -451,7 +451,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeżeli 0° oraz tg α = 2sin α, to",
+    "prompt": "Jeżeli $0^{\\circ}$ oraz tg $α = 2$ sin α, to",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-maj/z15-1.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z15-2.gif)",
@@ -482,18 +482,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miara kąta wpisanego w okrąg jest o 20° mniejsza od miary kąta środkowego opartego na tym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa",
+    "prompt": "Miara kąta wpisanego w okrąg jest o $20^{\\circ}$ mniejsza od miary kąta środkowego opartego na tym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa",
     "choices": [
-      "5°",
-      "10°",
-      "20°",
-      "30°"
+      "$5^{\\circ}$",
+      "$10^{\\circ}$",
+      "$20^{\\circ}$",
+      "$30^{\\circ}$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 20°",
+    "explanation": "C, czyli $20^{\\circ}$",
     "solutionSteps": [
       "Oznaczmy miarę kąta wpisanego jako $\\alpha$, a miarę kąta środkowego jako $\\beta$. Z treści zadania wiemy, że $\\alpha = \\beta - 20°$.",
-      "Z twierdzenia o związku między kątem wpisanym a kątem środkowym opartymi na tym samym łuku wiemy, że $\\beta = 2\\alpha$.",
+      "Z twierdzenia o związku między kątem wpisanym $a_{k}$ątem środkowym opartymi na tym samym łuku wiemy, że $\\beta = 2\\alpha$.",
       "Podstawiamy drugie równanie do pierwszego: $\\alpha = 2\\alpha - 20°$, co po przekształceniu daje $\\alpha = 20°$."
     ],
     "examSource": {
@@ -515,17 +515,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pole rombu o obwodzie 8 jest równe 1. Kąt ostry tego rombu ma miarę α. Wtedy",
     "choices": [
-      "14°",
-      "29°",
-      "60°",
-      "75°"
+      "$14^{\\circ}$",
+      "$29^{\\circ}$",
+      "$60^{\\circ}$",
+      "$75^{\\circ}$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 14°",
+    "explanation": "A, czyli $14^{\\circ}$",
     "solutionSteps": [
       "Oblicz długość boku rombu. Obwód rombu to $4a$, gdzie $a$ to długość boku. Mamy $4a=8$, więc $a=2$.",
       "Wyznacz pole rombu ze wzoru $P = a^2 \\sin \\alpha$. Wstawiając dane, otrzymujemy $1 = 2^2 \\sin \\alpha$, czyli $1 = 4 \\sin \\alpha$.",
-      "Rozwiąż równanie ze względu na $\\sin \\alpha$. Dzieląc obie strony przez 4, mamy $\\sin \\alpha = \\frac{1}{4}$. Kąt ostry $\\alpha$, dla którego $\\sin \\alpha = \\frac{1}{4}$, wynosi w przybliżeniu 14.5°, co odpowiada opcji A."
+      "Rozwiąż równanie ze względu na $\\sin \\alpha$. Dzieląc obie strony przez 4, mamy $\\sin \\alpha = \\frac{1}{4}$. Kąt ostry $\\alpha$, dla którego $\\sin \\alpha = \\frac{1}{4}$, wynosi w przybliżeniu 14.$5^{\\circ}$, co odpowiada opcji A."
     ],
     "examSource": {
       "kind": "matura",
@@ -544,12 +544,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta l o równaniu y = m 2 x + 3 jest równoległa do prostej k o równaniu y = (4 m − 4) x − 3. Zatem",
+    "prompt": "Prosta l o równaniu $y = m^{2} x + 3$ jest równoległa do prostej k o równaniu y = $(4m - 4) x - 3$. Zatem",
     "choices": [
-      "m = 2",
-      "m = − 2",
-      "m = − 2 − 2√ 2",
-      "m = 2 + 2√ 2"
+      "$m = 2$",
+      "$m = -2$",
+      "$m = -2 - 2$√ 2",
+      "$m = 2 + 2$√ 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $m = 2$.",
@@ -574,12 +574,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach: y = 2 mx − m 2 − 1 oraz y = 4 m 2 x + m 2 + 1 są prostopadłe dla",
+    "prompt": "Proste o równaniach: $y = 2 mx - m^{2} - 1$ oraz $y = 4 m^{2} x + m^{2} + 1$ są prostopadłe dla",
     "choices": [
-      "m = − 1 / 2",
-      "m = 1 / 2",
-      "m = 1",
-      "m = 2"
+      "$m = -\\frac{1}{2}$",
+      "$m = \\frac{1}{2}$",
+      "$m = 1$",
+      "$m = 2$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $m = -\\frac{1}{2}$",
@@ -605,7 +605,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są punkty M = (− 2,1) i N = (− 1,3) . Punkt K jest środkiem odcinka MN . Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt",
+    "prompt": "Dane są punkty M = $(-2,1)$ i N = $(-1,3)$ . Punkt K jest środkiem odcinka MN . Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-maj/z20-1.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z20-2.gif)",
@@ -697,7 +697,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość $r$ówną 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -727,13 +727,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9 jest taka sama jak średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9, x . Wynika stąd, że",
     "choices": [
-      "x = 0",
-      "x = 3",
-      "x = 5",
-      "x = 6"
+      "$x = 0$",
+      "$x = 3$",
+      "$x = 5$",
+      "$x = 6$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli x = 6",
+    "explanation": "D, czyli $x = 6$",
     "solutionSteps": [
       "Obliczamy średnią arytmetyczną pierwszego zestawu danych: suma liczb to $2+4+7+8+9=30$, a jest ich 5, więc średnia wynosi $\\frac{30}{5}=6$.",
       "Obliczamy średnią arytmetyczną drugiego zestawu danych: suma liczb to $2+4+7+8+9+x=30+x$, a jest ich 6, więc średnia wynosi $\\frac{30+x}{6}$.",
@@ -756,12 +756,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga – niebieska. Z każdego pojemnika losujemy jedną kulę. Niech p oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy",
+    "prompt": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga - niebieska. Z każdego pojemnika losujemy jedną kulę. Niech p oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy",
     "choices": [
-      "p = 1 / 4",
-      "p = 3 / 8",
-      "p = 1 / 2",
-      "p = 2 / 3"
+      "$p = \\frac{1}{4}$",
+      "$p = \\frac{3}{8}$",
+      "$p = \\frac{1}{2}$",
+      "$p = \\frac{2}{3}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{3}{8}$",
@@ -787,7 +787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 2 x 2 − 4 x > ( x + 3)( x − 2) .",
+    "prompt": "Rozwiąż nierówność $2x^{2} - 4x$ > $(x + 3)(x - 2)$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -815,7 +815,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y prawdziwa jest nierówność 4 x 2 −8 xy + 5 y 2 ≥ 0 .",
+    "prompt": "Wykaż, że dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y prawdziwa jest nierówność $4x^{2} - 8 xy + 5y^{2} \\ge 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -843,7 +843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków – odpowiednio – AE i EC . Punkty L i N leżą na przekątnej BD tak, że | BL | = 1 / 3 | BE | i | DN | = 1 / 3 | DE | (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
+    "prompt": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków - odpowiednio - AE i EC . Punkty L i N leżą na przekątnej BD tak, że $|BL| = \\frac{1}{3}|BE|$ i $|DN| = \\frac{1}{3}|DE|$ (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -871,7 +871,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Oblicz najmniejszą i największą wartość funkcji kwadratowej f( x ) = x 2 − 6 x + 3 w przedziale ⟨0,4⟩.",
+    "prompt": "Oblicz najmniejszą i największą wartość funkcji kwadratowej $f(x) = x^{2} - 6x + 3$ w przedziale ⟨0,4⟩.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -879,7 +879,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "Najmniejsza wartość to $-6$, a największa wartość to $3$.",
     "solutionSteps": [
       "Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.",
-      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji będzie w tym punkcie. Oblicz wartość funkcji w wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
+      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji $b$ędzie w tym punkcie. Oblicz wartość funkcji $w$ wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
       "Oblicz wartości funkcji na krańcach przedziału: $f(0) = 0^2 - 6 \\cdot 0 + 3 = 3$ oraz $f(4) = 4^2 - 6 \\cdot 4 + 3 = 16 - 24 + 3 = -5$. Największą wartością będzie największa z obliczonych wartości, czyli $f(0)=3$."
     ],
     "examSource": {
@@ -899,7 +899,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych są dane punkty A = (−43,−12) , B = (50,19) . Prosta AB przecina oś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .",
+    "prompt": "W układzie współrzędnych są dane punkty A = $(-43, - 12)$ , $B = (50,19)$ . Prosta AB przecina oś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -927,7 +927,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy 4 / 7 , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy 1 / 2 . Wyznacz ten ułamek.",
+    "prompt": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy $\\frac{4}{7}$ , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy $\\frac{1}{2}$ . Wyznacz ten ułamek.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -955,7 +955,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3 / 5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
+    "prompt": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy $\\frac{3}{5}$ . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -984,7 +984,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wśród 115 osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
+    "prompt": "Wśród_{115} osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1013,14 +1013,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W nieskończonym ciągu arytmetycznym ( a n ) , określonym dla n ≥ 1 , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy a 1 , a 3 , a k ciągu ( a n ), w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny ( b n ). Oblicz k .",
+    "prompt": "W nieskończonym ciągu arytmetycznym ($a_{n}$) , określonym dla $n \\ge 1$ , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy $a_{1}$ , $a_{3}$ , $a_{k}$ ciągu ($a_{n}$), w podanej kolejności, tworzą nowy ciąg - trzywyrazowy ciąg geometryczny ($b_{n}$). Oblicz k .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "11",
     "solutionSteps": [
-      "Skorzystaj ze wzorów na sumę ( $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)r)$ ) i średnią arytmetyczną ciągu arytmetycznego, a następnie ułóż układ równań. Dla sumy jedenastu wyrazów: $S_{11} = \\frac{11}{2}(2a_1 + 10r) = 187$. Średnia pierwszego, trzeciego i dziewiątego wyrazu: $\\frac{a_1 + a_3 + a_9}{3} = \\frac{a_1 + (a_1+2r) + (a_1+8r)}{3} = \\frac{3a_1+10r}{3} = 12$.",
+      "Skorzystaj ze wzorów na sumę ($S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)r)$) i średnią arytmetyczną ciągu arytmetycznego, a następnie ułóż układ równań. Dla sumy jedenastu wyrazów: $S_{11} = \\frac{11}{2}(2a_1 + 10r) = 187$. Średnia pierwszego, trzeciego i dziewiątego wyrazu: $\\frac{a_1 + a_3 + a_9}{3} = \\frac{a_1 + (a_1+2r) + (a_1+8r)}{3} = \\frac{3a_1+10r}{3} = 12$.",
       "Rozwiąż układ równań uzyskany w poprzednim kroku. Z pierwszego równania $11(a_1 + 5r) = 187 \\implies a_1 + 5r = 17$. Z drugiego równania $3a_1 + 10r = 36$. Po pomnożeniu pierwszego równania przez 2 i odjęciu od drugiego: $(3a_1 + 10r) - 2(a_1 + 5r) = 36 - 2(17) \\implies a_1 = 2$. Podstawiając $a_1=2$ do $a_1 + 5r = 17$, otrzymujemy $2 + 5r = 17 \\implies 5r = 15 \\implies r = 3$. Zatem $a_1 = 2$ i $r = 3$.",
       "Wykorzystaj warunek tworzenia ciągu geometrycznego. Wyrazy $a_1$, $a_3$, $a_k$ tworzą ciąg geometryczny, więc iloraz sąsiednich wyrazów jest stały: $\\frac{a_3}{a_1} = \\frac{a_k}{a_3}$. Oblicz $a_1 = 2$, $a_3 = a_1 + 2r = 2 + 2(3) = 8$. Następnie $a_k = a_1 + (k-1)r = 2 + (k-1)3$. Podstawiając do warunku: $\\frac{8}{2} = \\frac{2 + 3(k-1)}{8} \\implies 4 = \\frac{2 + 3k - 3}{8} \\implies 32 = 3k - 1 \\implies 3k = 33 \\implies k = 11$."
     ],
@@ -1041,7 +1041,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 0,6 jest jednym z przybliżeń liczby 5 / 8 . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
+    "prompt": "Liczba 0,6 jest jednym z przybliżeń liczby $\\frac{5}{8}$ . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
     "choices": [
       "0,025%",
       "2,5%",
@@ -1072,7 +1072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest okrąg o środku S = (–6, –8) i promieniu 2014. Obrazem tego okręgu w symetrii osiowej względem osi Oy jest okrąg o środku w punkcie S 1 . Odległość między punktami S i S 1 jest równa",
+    "prompt": "Dany jest okrąg o środku S = $(-6, - 8)$ i promieniu 2014. Obrazem tego okręgu w symetrii osiowej względem osi Oy jest okrąg o środku w punkcie $S_{1}$ . Odległość między punktami S i $S_{1}$ jest równa",
     "choices": [
       "12",
       "16",
@@ -1103,12 +1103,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiązaniami równania ( x 3 – 8)( x – 5)(2 x + 1) = 0 są liczby",
+    "prompt": "Rozwiązaniami równania $(x^{3} - 8)(x - 5)(2x + 1)$ = 0 są liczby",
     "choices": [
-      "– 8; – 5; 1",
-      "– 1; 5; 8",
-      "– 1 ⁄ 2 ; 2; 5",
-      "– 1 ⁄ 2 ; 5; 8"
+      "-8; -5; 1",
+      "-1; 5; 8",
+      "-$\\frac{1}{2}$ ; 2; 5",
+      "-$\\frac{1}{2}$ ; 5; 8"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $-\\frac{1}{2}$; $2$; $5$.",
@@ -1165,7 +1165,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami f( x ) = – 5 x + 1 oraz g ( x ) = 5 x . Liczba punktów wspólnych wykresów tych funkcji jest równa",
+    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami $f(x) = -5x + 1$ oraz $g(x) = 5x$ . Liczba punktów wspólnych wykresów tych funkcji jest równa",
     "choices": [
       "3",
       "2",
@@ -1176,7 +1176,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "C, czyli 1",
     "solutionSteps": [
       "Aby znaleźć liczbę punktów wspólnych wykresów funkcji $f(x)$ i $g(x)$, przyrównujemy je do siebie: $-5x + 1 = 5x$.",
-      "Rozwiązujemy otrzymane równanie liniowe, przenosząc wszystkie wyrazy z $x$ na jedną stronę: $1 = 5x + 5x$, co daje $1 = 10x$. Dzieląc obie strony przez 10, otrzymujemy $x = \\frac{1}{10}$.",
+      "Rozwiązujemy otrzymane równanie liniowe, przenosząc wszystkie wyrazy $z$ $x$ na jedną stronę: $1 = 5x + 5x$, co daje $1 = 10x$. Dzieląc obie strony przez 10, otrzymujemy $x = \\frac{1}{10}$.",
       "Ponieważ otrzymaliśmy dokładnie jedno rozwiązanie dla $x$, oznacza to, że wykresy funkcji mają dokładnie jeden punkt wspólny."
     ],
     "examSource": {
@@ -1196,19 +1196,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie (3 x + 1 + y ) 2 jest równe",
+    "prompt": "Wyrażenie $(3x + 1 + y)$ 2 jest równe",
     "choices": [
-      "3 x 2 + y 2 + 1",
-      "9 x 2 + 6 x + y 2 + 1",
-      "3 x 2 + y 2 + 6 xy + 6 x + 1",
-      "9 x 2 + y 2 + 6 xy + 6 x + 2 y + 1"
+      "$3x^{2} + y^{2} + 1$",
+      "$9x^{2} + 6x + y^{2} + 1$",
+      "$3x^{2} + y^{2} + 6 xy + 6x + 1$",
+      "$9x^{2} + y^{2} + 6 xy + 6x + 2y + 1$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $9 x^2 + y^2 + 6 xy + 6 x + 2 y + 1$.",
     "solutionSteps": [
       "Rozpisz kwadrat sumy trzech wyrażeń, stosując wzór $(a+b+c)^2 = a^2+b^2+c^2+2ab+2ac+2bc$. W tym przypadku $a=3x$, $b=1$, $c=y$.\n$(3x+1+y)^2 = (3x)^2 + 1^2 + y^2 + 2(3x)(1) + 2(3x)(y) + 2(1)(y)$.",
       "Oblicz poszczególne składniki, uprość wyrażenie i zsumuj podobne człony.\n$(3x)^2 = 9x^2$, $2(3x)(1) = 6x$, $2(3x)(y) = 6xy$, $2(1)(y) = 2y$. Po zsumowaniu otrzymujemy $9x^2 + 1 + y^2 + 6x + 6xy + 2y$.",
-      "Uporządkuj wyrazy w celu dopasowania do jednej z opcji odpowiedzi.\n$9x^2 + y^2 + 6xy + 6x + 2y + 1$."
+      "Uporządkuj wyrazy $w$ celu dopasowania do jednej z opcji odpowiedzi.\n$9x^2 + y^2 + 6xy + 6x + 2y + 1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -1227,7 +1227,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Połowa sumy 4 28 + 4 28 + 4 28 + 4 28 jest równa",
+    "prompt": "Połowa sumy 4 $28 + 4 28 + 4 28 + 4$ 28 jest równa",
     "choices": [
       "2 30",
       "2 57",
@@ -1257,15 +1257,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równania y = – 3 / 4 x + 5 / 4 oraz y = – 4 / 3 opisują dwie proste",
+    "prompt": "Równania $y = -3 / 4x + \\frac{5}{4}$ oraz $y = -\\frac{4}{3}$ opisują dwie proste",
     "choices": [
-      "przecinające się pod kątem o mierze 90°.",
+      "przecinające się pod kątem o mierze $90^{\\circ}$.",
       "pokrywające się.",
-      "przecinające się pod kątem różnym od 90°.",
+      "przecinające się pod kątem różnym od $90^{\\circ}$.",
       "równoległe i różne."
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli przecinające się pod kątem różnym od 90°.",
+    "explanation": "C, czyli przecinające się pod kątem różnym od $90^{\\circ}$.",
     "solutionSteps": [
       "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Pierwsza prosta ma postać $y = -\\frac{3}{4}x + \\frac{5}{4}$, więc jej współczynnik kierunkowy wynosi $a_1 = -\\frac{3}{4}$. Druga prosta to $y = -\\frac{4}{3}$, co można zapisać jako $y = 0x - \\frac{4}{3}$, więc $a_2 = 0$.",
       "Porównaj współczynniki kierunkowe prostych. Ponieważ $a_1 = -\\frac{3}{4}$ i $a_2 = 0$, współczynniki te są różne ($a_1 \\neq a_2$), co oznacza, że proste nie są równoległe ani pokrywające się.",
@@ -1290,10 +1290,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na płaszczyźnie dane są punkty: ![Rysunek do zadania](/cke-matura/m15-probna/z09-1.png) Kąt BAC jest równy",
     "choices": [
-      "30°",
-      "45°",
-      "60°",
-      "75°"
+      "$30^{\\circ}$",
+      "$45^{\\circ}$",
+      "$60^{\\circ}$",
+      "$75^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B",
@@ -1320,7 +1320,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja f, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji f zawiera dokładnie",
+    "prompt": "Funkcja $f$, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji $f$ zawiera dokładnie",
     "choices": [
       "5 elementów",
       "6 elementów",
@@ -1351,7 +1351,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o",
+    "prompt": "Ekipa złożona $z^{25}$ pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o",
     "choices": [
       "14 osób więcej",
       "17 osób więcej",
@@ -1382,7 +1382,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z sześcianu ABCDEFGH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
+    "prompt": "Z sześcianu ABCDEFGH o krawędzi $d$ługości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
     "choices": [
       "2 razy",
       "3 razy",
@@ -1414,12 +1414,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej f. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja f może być opisana wzorem",
+    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie $A = (2, 4)$, która jest wykresem funkcji kwadratowej f. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja $f$ może być opisana wzorem",
     "choices": [
-      "ƒ( x ) = ( x – 2) 2 + 4",
-      "ƒ( x ) = ( x + 2) 2 + 4",
-      "ƒ( x ) = – ( x – 2) 2 + 4",
-      "ƒ( x ) = – ( x + 2) 2 + 4"
+      "$f(x)$ = $(x - 2) 2 + 4$",
+      "$f(x)$ = $(x + 2) 2 + 4$",
+      "$f(x)$ = - $(x - 2) 2 + 4$",
+      "$f(x)$ = - $(x + 2) 2 + 4$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $f(x) = -(x-2)^2 + 4$.",
@@ -1476,12 +1476,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba sin 150° jest równa liczbie",
+    "prompt": "Liczba $\\sin 150^{\\circ}$ jest równa liczbie",
     "choices": [
-      "cos 60°",
-      "cos 120°",
-      "tg 120°",
-      "tg 60°"
+      "$\\cos 60^{\\circ}$",
+      "$\\cos 120^{\\circ}$",
+      "$\\operatorname{tg} 120^{\\circ}$",
+      "$\\operatorname{tg} 60^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\cos 60^\\circ$",
@@ -1507,7 +1507,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości 1 m , a bok każdego z następnych trójkątów jest o 10 cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości 5,9 m . Ile trójkątów przedstawia mural?",
+    "prompt": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości 1m , a bok każdego z następnych trójkątów jest o 10 cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości 5,9m . Ile trójkątów przedstawia mural?",
     "choices": [
       "49",
       "50",
@@ -1517,7 +1517,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 50",
     "solutionSteps": [
-      "Zauważ, że długości boków kolejnych trójkątów tworzą ciąg arytmetyczny. Pierwszy wyraz ($a_1$) to 1 m, a różnica ($r$) to 10 cm = 0,1 m. Ostatni wyraz ($a_n$) to 5,9 m.",
+      "Zauważ, że długości boków kolejnych trójkątów tworzą ciąg arytmetyczny. Pierwszy wyraz ($a_1$) to 1m, a różnica ($r$) to 10 $cm = 0,1m$. Ostatni wyraz ($a_n$) to 5,9m.",
       "Użyj wzoru na $n$-ty wyraz ciągu arytmetycznego, $a_n = a_1 + (n-1)r$, aby obliczyć liczbę wyrazów ($n$). Podstaw dane: $5,9 = 1 + (n-1) \\cdot 0,1$.",
       "Rozwiąż równanie względem $n$: $4,9 = (n-1) \\cdot 0,1 \\implies 49 = n-1 \\implies n = 50$."
     ],
@@ -1538,7 +1538,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,5°. Pole tego trójkąta jest równe",
+    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt^{67},$5^{\\circ}$. Pole tego trójkąta jest równe",
     "choices": [
       "100 √ 3",
       "100 √ 2",
@@ -1548,7 +1548,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $100 \\sqrt{2}$",
     "solutionSteps": [
-      "Użyj wzoru na pole trójkąta $P = \\frac{1}{2}ab\\sin\\gamma$. W naszym przypadku $a=b=20$ (ramiona), a kąt $\\gamma$ między nimi to $180^\\circ - 2 \\cdot 67.5^\\circ = 180^\\circ - 135^\\circ = 45^\\circ$.",
+      "Użyj wzoru na pole trójkąta $P = \\frac{1}{2}ab\\sin\\gamma$. W naszym przypadku $a=b=20$ (ramiona), $a_{k}$ąt $\\gamma$ między nimi to $180^\\circ - 2 \\cdot 67.5^\\circ = 180^\\circ - 135^\\circ = 45^\\circ$.",
       "Podstaw dane do wzoru: $P = \\frac{1}{2} \\cdot 20 \\cdot 20 \\cdot \\sin(45^\\circ) = \\frac{1}{2} \\cdot 400 \\cdot \\frac{\\sqrt{2}}{2} = 100 \\sqrt{2}$."
     ],
     "examSource": {
@@ -1568,7 +1568,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi a jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi b . Ile razy objętość ostrosłupa o krawędzi a jest większa od objętości ostrosłupa o krawędzi b ?",
+    "prompt": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi $a$ jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi $b$ . Ile razy objętość ostrosłupa o krawędzi $a$ jest większa od objętości ostrosłupa o krawędzi $b$ ?",
     "choices": [
       "√ 2",
       "2",
@@ -1578,7 +1578,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt{2}$",
     "solutionSteps": [
-      "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $a$. Ostrosłup prawidłowy czworokątny ma 5 ścian: 1 kwadratową u podstawy i 4 trójkątne. Pole podstawy $P_p = a^2$. Pole jednej ściany bocznej (trójkąta) to $P_s = \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $h_s$ to wysokość ściany bocznej. Z twierdzenia Pitagorasa dla połowy ściany bocznej: $h_s = \\sqrt{a^2 - (\\frac{a}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{4}} = \\sqrt{\\frac{3a^2}{4}} = \\frac{a\\sqrt{3}}{2}$. Pole powierzchni całkowitej $P_a = a^2 + 4 \\cdot \\frac{1}{2} \\cdot a \\cdot \\frac{a\\sqrt{3}}{2} = a^2 + a^2\\sqrt{3} = a^2(1+\\sqrt{3})$.",
+      "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $a$. Ostrosłup prawidłowy czworokątny ma 5 ścian: 1 kwadratową u podstawy $i$ 4 trójkątne. Pole podstawy $P_p = a^2$. Pole jednej ściany bocznej (trójkąta) to $P_s = \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $h_s$ to wysokość ściany bocznej. Z twierdzenia Pitagorasa dla połowy ściany bocznej: $h_s = \\sqrt{a^2 - (\\frac{a}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{4}} = \\sqrt{\\frac{3a^2}{4}} = \\frac{a\\sqrt{3}}{2}$. Pole powierzchni całkowitej $P_a = a^2 + 4 \\cdot \\frac{1}{2} \\cdot a \\cdot \\frac{a\\sqrt{3}}{2} = a^2 + a^2\\sqrt{3} = a^2(1+\\sqrt{3})$.",
       "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $b$. Analogicznie, pole powierzchni całkowitej $P_b = b^2(1+\\sqrt{3})$. Zgodnie z treścią zadania $P_a = 2 P_b$, czyli $a^2(1+\\sqrt{3}) = 2 b^2(1+\\sqrt{3})$. Po skróceniu mamy $a^2 = 2b^2$, co daje $\\frac{a}{b} = \\sqrt{2}$.",
       "Oblicz objętości obu ostrosłupów i ich stosunek. Objętość ostrosłupa to $V = \\frac{1}{3} P_p \\cdot H$, gdzie $H$ to wysokość ostrosłupa. Dla ostrosłupa o krawędzi $a$, $P_p = a^2$. Wysokość $H_a = \\sqrt{a^2 - (\\frac{d}{2})^2}$, gdzie $d$ to przekątna podstawy. $d = a\\sqrt{2}$, więc $H_a = \\sqrt{a^2 - (\\frac{a\\sqrt{2}}{2})^2} = \\sqrt{a^2 - \\frac{2a^2}{4}} = \\sqrt{\\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}} = \\frac{a\\sqrt{2}}{2}$. Objętość $V_a = \\frac{1}{3} a^2 \\cdot \\frac{a\\sqrt{2}}{2} = \\frac{a^3\\sqrt{2}}{6}$. Analogicznie $V_b = \\frac{b^3\\sqrt{2}}{6}$. Stosunek objętości $\\frac{V_a}{V_b} = \\frac{a^3\\sqrt{2}/6}{b^3\\sqrt{2}/6} = \\frac{a^3}{b^3} = (\\frac{a}{b})^3 = (\\sqrt{2})^3 = 2\\sqrt{2}$."
     ],
@@ -1599,12 +1599,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na okręgu o środku S leżą punkty A , B , C i D . Odcinek AB jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą AC jest równy 21° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z19-1.png) Kąt α między cięciwami AD i CD jest równy",
+    "prompt": "Na okręgu o środku S leżą punkty A , B , C i D . Odcinek AB jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą AC jest równy $21^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z19-1.png) Kąt α między cięciwami AD i CD jest równy",
     "choices": [
-      "21°",
-      "42°",
-      "48°",
-      "69°"
+      "$21^{\\circ}$",
+      "$42^{\\circ}$",
+      "$48^{\\circ}$",
+      "$69^{\\circ}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48^\\circ$",
@@ -1661,15 +1661,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ( a n ), w którym a 1 = – √ 2 , a 2 = 2, a 3 = – 2√ 2 . Dziesiąty wyraz tego ciągu, czyli a 10 , jest równy",
+    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), w którym $a_{1}$ = - √ 2 , $a_{2} = 2$, $a_{3} = -2$√ 2 . Dziesiąty wyraz tego ciągu, czyli $a_{10}$ , jest równy",
     "choices": [
       "32",
-      "– 32",
+      "-32",
       "16√ 2",
-      "– 16√ 2"
+      "-16√ 2"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli – 32",
+    "explanation": "B, czyli -32",
     "solutionSteps": [
       "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = \\frac{2 \\cdot \\sqrt{2}}{-\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{2\\sqrt{2}}{-2} = -\\sqrt{2}$.",
       "Skorzystaj ze wzoru na $n$-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, aby obliczyć $a_{10}$. Podstaw dane: $a_{10} = a_1 \\cdot q^{10-1} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9$.",
@@ -1692,7 +1692,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m15-probna/z22-1.png) dla n ≥ 1. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem ![Rysunek do zadania](/cke-matura/m15-probna/z22-1.png) dla $n \\ge 1$. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa",
     "choices": [
       "7",
       "6",
@@ -1723,19 +1723,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia i oczek w i -tym rzucie. Wtedy",
+    "prompt": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia i oczek w $i - tym$ rzucie. Wtedy",
     "choices": [
-      "p 6 = 1",
-      "p 6 = 1 ⁄ 6",
-      "p 3 = 0",
-      "p 3 = 1 ⁄ 3"
+      "$p_{6} = 1$",
+      "$p_{6} = \\frac{1}{6}$",
+      "$p_{3} = 0$",
+      "$p_{3} = \\frac{1}{3}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $p_6 = \\frac{1}{6}$",
     "solutionSteps": [
       "Określamy, czym jest zdarzenie elementarne w przypadku rzutu symetryczną sześcienną kostką. Są to wyniki od 1 do 6, każdy z równym prawdopodobieństwem.",
       "Prawdopodobieństwo wyrzucenia konkretnej liczby oczek (np. $i$ oczek) w jednym rzucie symetryczną sześcienną kostką wynosi $\\frac{1}{6}$. Zapisujemy to jako $p_i = \\frac{1}{6}$.",
-      "Wnioskujemy na podstawie Kroków 1 i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$."
+      "Wnioskujemy na podstawie Kroków_{1} i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -1754,10 +1754,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wskaż liczbę, która spełnia równanie 4 x = 9 .",
+    "prompt": "Wskaż liczbę, która spełnia równanie $4x = 9$ .",
     "choices": [
-      "log 9 – log 4",
-      "log2 ⁄ log3",
+      "$\\log 9 - \\log 4$",
+      "$\\log 2 / \\log 3$",
       "2log 9 2",
       "2log 4 3"
     ],
@@ -1785,7 +1785,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: – x 2 – 4 x + 21 .",
+    "prompt": "Rozwiąż nierówność: - $x^{2} - 4x + 21$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1821,7 +1821,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{1}{2}$",
     "solutionSteps": [
       "Przekształć równanie do postaci $\\sqrt{x^2-4x+4} = \\sqrt{x^2+2x+1}$. Podnieś obie strony do kwadratu, aby pozbyć się pierwiastków, otrzymując $x^2-4x+4 = x^2+2x+1$.",
-      "Uprość równanie po odjęciu $x^2$ od obu stron: $-4x+4 = 2x+1$. Przenieś wyrazy z $x$ na jedną stronę, a stałe na drugą: $4-1 = 2x+4x$, co daje $3 = 6x$.",
+      "Uprość równanie po odjęciu $x^2$ od obu stron: $-4x+4 = 2x+1$. Przenieś wyrazy $z$ $x$ na jedną stronę, a stałe na drugą: $4-1 = 2x+4x$, co daje $3 = 6x$.",
       "Rozwiąż równanie liniowe, dzieląc obie strony przez 6: $x = \\frac{3}{6} = \\frac{1}{2}$. Ponieważ $\\frac{1}{2}$ nie jest liczbą całkowitą, równanie nie ma rozwiązań w zbiorze liczb całkowitych."
     ],
     "examSource": {
@@ -1841,14 +1841,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem y = ( 1 / 2 ) x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
+    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem $y = (\\frac{1}{2})$ x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie $z^{1}$ g 131 I nie więcej niż 0,125 g tego pierwiastka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "24 dni",
     "solutionSteps": [
-      "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których z 1 g izotopu pozostanie co najwyżej 0,125 g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
+      "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których $z^{1}$ g izotopu pozostanie co najwyżej 0,125g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
       "Ustawienie nierówności na podstawie danych: $y \\le 0.125$, czyli $(\\frac{1}{2})^x \\le 0.125$. Ponieważ $0.125 = \\frac{125}{1000} = \\frac{1}{8} = (\\frac{1}{2})^3$, nierówność przyjmuje postać $(\\frac{1}{2})^x \\le (\\frac{1}{2})^3$.",
       "Rozwiązanie nierówności: dla podstawy $\\frac{1}{2} < 1$, nierówność potęg jest odwrócona: $x \\ge 3$. Oznacza to, że potrzeba co najmniej 3 okresów połowicznego rozpadu.",
       "Obliczenie najmniejszej liczby dni: czas połowicznego rozpadu wynosi 8 dni. Najmniejsza liczba dni to $3 \\cdot 8 \\text{ dni} = 24 \\text{ dni}$."
@@ -1898,16 +1898,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 km / h , a na trasie z B do C – 60 km / h . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
+    "prompt": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 $km / h$ , a na trasie z B do $C - 60 km / h$ . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "48 km/h",
+    "explanation": "48 $km/h$",
     "solutionSteps": [
       "Oznaczmy drogę z A do B jako $d$. Wtedy droga z B do C również wynosi $d$, a cała droga z A do C to $2d$.",
       "Obliczmy czas podróży z A do B ($t_{AB}$) i z B do C ($t_{BC}$). Korzystając ze wzoru $czas = \\frac{droga}{predkosc}$: $t_{AB} = \\frac{d}{40}$ h, $t_{BC} = \\frac{d}{60}$ h.",
-      "Obliczmy prędkość średnią na całej trasie. Całkowity czas to $t_{AC} = t_{AB} + t_{BC} = \\frac{d}{40} + \\frac{d}{60} = \\frac{3d+2d}{120} = \\frac{5d}{120} = \\frac{d}{24}$ h. Prędkość średnia to $v_{sr} = \\frac{2d}{t_{AC}} = \\frac{2d}{\\frac{d}{24}} = 2d \\cdot \\frac{24}{d} = 48$ km/h."
+      "Obliczmy prędkość średnią na całej trasie. Całkowity czas to $t_{AC} = t_{AB} + t_{BC} = \\frac{d}{40} + \\frac{d}{60} = \\frac{3d+2d}{120} = \\frac{5d}{120} = \\frac{d}{24}$ h. Prędkość średnia to $v_{sr} = \\frac{2d}{t_{AC}} = \\frac{2d}{\\frac{d}{24}} = 2d \\cdot \\frac{24}{d} = 48$ $km/h$."
     ],
     "examSource": {
       "kind": "matura",
@@ -1934,7 +1934,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{7}{60}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych par wylosowanych biletów. Jest to kombinacja $\\binom{16}{2} = \\frac{16 \\cdot 15}{2} = 120$.",
-      "Obliczamy liczbę par biletów na sąsiadujące miejsca. W pierwszym rzędzie mamy 9 par (1-2, 2-3, ..., 9-10). W szesnastym rzędzie mamy 5 par (11-12, 12-13, ..., 15-16). Łącznie jest $9 + 5 = 14$ par sąsiadujących miejsc.",
+      "Obliczamy liczbę par biletów na sąsiadujące miejsca. W pierwszym rzędzie mamy 9 par $(1 - 2, 2 - 3, ..., 9 - 10)$. W szesnastym rzędzie mamy 5 par $(11 - 12, 12 - 13, ..., 15 - 16)$. Łącznie jest $9 + 5 = 14$ par sąsiadujących miejsc.",
       "Obliczamy prawdopodobieństwo, dzieląc liczbę par sąsiadujących miejsc przez całkowitą liczbę par biletów. Prawdopodobieństwo wynosi $\\frac{14}{120}$.",
       "Upraszczamy wynik. $\\frac{14}{120} = \\frac{7}{60}$."
     ],
@@ -1955,7 +1955,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie ABCD ( AB ∥ CD ) przekątne AC i BD przecinają się w punkcie O takim, że | AO |:| OC | = 5:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
+    "prompt": "W trapezie ABCD (AB ∥ CD) przekątne AC i BD przecinają się w punkcie O takim, że $|AO|$:$|OC| = 5$:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1983,7 +1983,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = (3,3) i B = (9,1) są wierzchołkami trójkąta ABC , a punkt M = (1,6) jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
+    "prompt": "Punkty $A = (3,3)$ i $B = (9,1)$ są wierzchołkami trójkąta ABC , a punkt $M = (1,6)$ jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2012,14 +2012,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy o 22. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
+    "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy $o$ 22. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pole powierzchni całkowitej wynosi $390\\pi$, a objętość $\\frac{676}{3}\\pi$.",
     "solutionSteps": [
-      "Oznaczmy przez $l$ tworzącą stożka, $h$ jego wysokość, $r$ promień podstawy i $d$ średnicę podstawy. Mamy $l=17$. Ze średnicą i wysokością zachodzi zależność $h = d - 22$. Ponieważ $d=2r$, mamy $h = 2r - 22$. Z twierdzenia Pitagorasa dla trójkąta prostokątnego o bokach $h$, $r$ i $l$ (przeciwprostokątna) otrzymujemy równanie: $r^2 + h^2 = l^2$.",
+      "Oznaczmy przez $l$ tworzącą stożka, $h$ jego wysokość, $r$ promień podstawy $i$ $d$ średnicę podstawy. Mamy $l=17$. Ze średnicą i wysokością zachodzi zależność $h = d - 22$. Ponieważ $d=2r$, mamy $h = 2r - 22$. Z twierdzenia Pitagorasa dla trójkąta prostokątnego o bokach $h$, $r$ i $l$ (przeciwprostokątna) otrzymujemy równanie: $r^2 + h^2 = l^2$.",
       "Podstawiamy dane do równania z kroku 1: $r^2 + (2r - 22)^2 = 17^2$. Rozwijamy i porządkujemy równanie: $r^2 + 4r^2 - 88r + 484 = 289 \\Rightarrow 5r^2 - 88r + 195 = 0$. Rozwiązujemy równanie kwadratowe, otrzymując dwa możliwe rozwiązania dla $r$: $r_1 = 3$ oraz $r_2 = 13$.",
       "Analizujemy oba rozwiązania. Jeśli $r=3$, to $h = 2(3) - 22 = 6 - 22 = -16$, co jest niemożliwe (wysokość nie może być ujemna). Jeśli $r=13$, to $h = 2(13) - 22 = 26 - 22 = 4$. Zatem prawidłowe wymiary to $r=13$ i $h=4$. Obliczamy pole powierzchni całkowitej $P_c = \\pi r^2 + \\pi r l = \\pi (13^2) + \\pi (13)(17) = 169\\pi + 221\\pi = 390\\pi$. Obliczamy objętość $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (13^2)(4) = \\frac{1}{3} \\pi (169)(4) = \\frac{676}{3}\\pi$."
     ],
@@ -2071,7 +2071,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty E = (7,1) i F = (9,7 ) to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość",
+    "prompt": "Punkty $E = (7,1)$ i $F = (9,7)$ to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość",
     "choices": [
       "4√ 5",
       "10",
@@ -2174,12 +2174,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja wykładnicza określona wzorem f( x ) = 3 x przyjmuje wartość 6 dla argumentu",
+    "prompt": "Funkcja wykładnicza określona wzorem $f(x) = 3$ x przyjmuje wartość 6 dla argumentu",
     "choices": [
-      "x = 2",
-      "x = log 3 2",
-      "x = log 3 6",
-      "x = log 6 3"
+      "$x = 2$",
+      "$x = \\log 3$ 2",
+      "$x = \\log 3$ 6",
+      "$x = \\log 6$ 3"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $x = \\log_3 6$",
@@ -2205,12 +2205,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie 16 – (3 x + 1) 2 jest równe",
+    "prompt": "Wyrażenie 16 - $(3x + 1)$ 2 jest równe",
     "choices": [
-      "(3 – 3 x ) ⋅ (5 + 3 x )",
-      "(15 – 3 x ) 2",
-      "(5 – 3 x ) ⋅ (5 + 3 x )",
-      "15 – 9 x 2"
+      "$(3 - 3x)$ ⋅ $(5 + 3x)$",
+      "$(15 - 3x)$ 2",
+      "$(5 - 3x)$ ⋅ $(5 + 3x)$",
+      "$15 - 9x^{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(3 – 3 x ) ⋅ (5 + 3 x )$",
@@ -2357,15 +2357,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja f przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: f(42), f(44), f(45), f(48) największa to",
+    "prompt": "Funkcja $f$ przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: $f(42)$, $f(44)$, $f(45)$, $f(48)$ największa to",
     "choices": [
-      "f(42)",
-      "f(44)",
-      "f(45)",
-      "f(48)"
+      "$f(42)$",
+      "$f(44)$",
+      "$f(45)$",
+      "$f(48)$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli f(44)",
+    "explanation": "B, czyli $f(44)$",
     "solutionSteps": [
       "Rozkładamy każdą z podanych liczb na czynniki pierwsze i wyszukujemy największy czynnik pierwszy.\nDla 42: $42 = 2 \\cdot 3 \\cdot 7$. Największy dzielnik pierwszy to 7.\nDla 44: $44 = 2 \\cdot 2 \\cdot 11$. Największy dzielnik pierwszy to 11.\nDla 45: $45 = 3 \\cdot 3 \\cdot 5$. Największy dzielnik pierwszy to 5.\nDla 48: $48 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 3$. Największy dzielnik pierwszy to 3.",
       "Porównujemy otrzymane wartości: 7, 11, 5, 3. Największą z nich jest 11, które odpowiada liczbie 44."
@@ -2418,17 +2418,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej f jest parabola o wierzchołku W = (5,7) . Wówczas prawdziwa jest równość",
+    "prompt": "Wykresem funkcji kwadratowej f jest parabola o wierzchołku $W = (5,7)$ . Wówczas prawdziwa jest równość",
     "choices": [
-      "f(1) = f(9)",
-      "f(1) = f(11)",
-      "f(1) = f(13)",
-      "f(1) = f(15)"
+      "$f(1) = f(9)$",
+      "$f(1) = f(11)$",
+      "$f(1) = f(13)$",
+      "$f(1) = f(15)$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(1) = f(9)$",
     "solutionSteps": [
-      "Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji są równe.",
+      "Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji $s$ą równe.",
       "Wierzchołek paraboli to $W=(5,7)$, więc oś symetrii ma równanie $x=5$. Sprawdzamy odległości argumentów od 5 dla każdej opcji.",
       "Dla opcji A) argumenty 1 i 9 są oddalone od 5 o 4 ($|1-5|=4$, $|9-5|=4$), co oznacza, że $f(1) = f(9)$. Dla pozostałych opcji odległości są różne."
     ],
@@ -2451,10 +2451,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Jeżeli kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m15-przykladowa/z14-1.png) równa się",
     "choices": [
-      "– 1",
-      "– 1 / 3",
-      "3 / 7",
-      "84 / 25"
+      "-1",
+      "-$\\frac{1}{3}$",
+      "$\\frac{3}{7}$",
+      "$\\frac{84}{25}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{12}{35}$.",
@@ -2481,12 +2481,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie (2 x – 1)⋅( x – 2) = (1 – 2 x )⋅( x + 2) ma dwa rozwiązania. Są to liczby",
+    "prompt": "Równanie $(2x - 1)$⋅$(x - 2)$ = $(1 - 2x)$⋅$(x + 2)$ ma dwa rozwiązania. Są to liczby",
     "choices": [
-      "–2 oraz 1 / 2",
-      "0 oraz 1 / 2",
-      "1 / 2 oraz 2",
-      "–2 oraz 2"
+      "-2 oraz $\\frac{1}{2}$",
+      "0 oraz $\\frac{1}{2}$",
+      "$\\frac{1}{2}$ oraz 2",
+      "-2 oraz 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $0$ oraz $\\frac{1}{2}$",
@@ -2512,12 +2512,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane jest równanie 3 x + 4 y – 5 = 0 . Z którym z poniższych równań tworzy ono układ sprzeczny?",
+    "prompt": "Dane jest równanie $3x + 4y - 5 = 0$ . Z którym z poniższych równań tworzy ono układ sprzeczny?",
     "choices": [
-      "6 x + 8 y –10 = 0",
-      "4 x – 3 y + 5 = 0",
-      "9 x +12 y – 10 = 0",
-      "5 x + 4 y – 3 = 0"
+      "$6x + 8y - 10 = 0$",
+      "$4x - 3y + 5 = 0$",
+      "$9x + 12y - 10 = 0$",
+      "$5x + 4y - 3 = 0$"
     ],
     "correctIndex": 2,
     "explanation": "C",
@@ -2574,7 +2574,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość l , a promień jego podstawy jest równy r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-1.png) Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas",
+    "prompt": "Tworząca stożka ma długość $l$ , a promień jego podstawy jest równy r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-1.png) Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-2.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-3.png)",
@@ -2646,7 +2646,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli 66",
     "solutionSteps": [
-      "Zrozum, że problem dotyczy kombinacji bez powtórzeń – każdy uścisk dłoni to wybór 2 osób z 12, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.",
+      "Zrozum, że problem dotyczy kombinacji bez powtórzeń - każdy uścisk dłoni to wybór^{2} osób $z^{12}$, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.",
       "W tym zadaniu mamy $n=12$ (wszystkie osoby) i $k=2$ (dwie osoby biorące udział w uścisku dłoni). Podstaw wartości do wzoru: $C(12, 2) = \\frac{12!}{2!(12-2)!} = \\frac{12!}{2!10!}$.",
       "Oblicz wartość kombinacji: $\\frac{12 \\times 11}{2 \\times 1} = 6 \\times 11 = 66$."
     ],
@@ -2677,7 +2677,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 6",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego: $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_1 = 3$, $a_9 = 12$, więc $12 = 3 \\cdot q^{9-1}$, co daje $q^8 = 4$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego: $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_1 = 3$, $a_9 = 12$, więc $12 = 3 \\cdot q^{9-1}$, co daje $q^8 = 4$.",
       "Oblicz 5. wyraz ciągu ($a_5$) używając wzoru $a_5 = a_1 \\cdot q^{5-1}$. Podstawiając dane i wynik z poprzedniego kroku: $a_5 = 3 \\cdot q^4$. Ponieważ $q^8 = 4$, to $q^4 = \\sqrt{4} = 2$.",
       "Oblicz $a_5$: $a_5 = 3 \\cdot 2 = 6$."
     ],
@@ -2698,7 +2698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( a n ) jest określony wzorem a n = ( n + 3)( n – 5) dla n ≥ 1 . Liczba ujemnych wyrazów tego ciągu jest równa",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(n + 3)(n - 5)$ dla $n \\ge 1$ . Liczba ujemnych wyrazów tego ciągu jest równa",
     "choices": [
       "3",
       "4",
@@ -2731,15 +2731,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez i . Wtedy",
     "choices": [
-      "2 p 4 = p 2",
-      "2 p 6 = p 3",
-      "2 p 3 = p 6",
-      "2 p 2 = p 4"
+      "$2p_{4} = p_{2}$",
+      "$2p_{6} = p_{3}$",
+      "$2p_{3} = p_{6}$",
+      "$2p_{2} = p_{4}$"
     ],
     "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
-      "Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} — 3 możliwości. $p_3$ (podzielne przez 3): {3, 6} — 2 możliwości. $p_4$ (podzielne przez 4): {4} — 1 możliwość. $p_6$ (podzielne przez 6): {6} — 1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników (6).",
+      "Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} -3 możliwości. $p_3$ (podzielne przez 3): {3, 6} -2 możliwości. $p_4$ (podzielne przez 4): {4} -1 możliwość. $p_6$ (podzielne przez 6): {6} -1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników(6).",
       "Wyraź obliczone prawdopodobieństwa w formie ułamków. $p_2 = \\frac{3}{6} = \\frac{1}{2}$, $p_3 = \\frac{2}{6} = \\frac{1}{3}$, $p_4 = \\frac{1}{6}$, $p_6 = \\frac{1}{6}$.",
       "Sprawdź równości podane w opcjach.\nA) $2 \\cdot p_4 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_2 = \\frac{1}{2}$. $\\frac{1}{3} \\neq \\frac{1}{2}$.\nB) $2 \\cdot p_6 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_3 = \\frac{1}{3}$. $\\frac{1}{3} = \\frac{1}{3}$.\nC) $2 \\cdot p_3 = 2 \\cdot \\frac{1}{3} = \\frac{2}{3}$, $p_6 = \\frac{1}{6}$. $\\frac{2}{3} \\neq \\frac{1}{6}$.\nD) $2 \\cdot p_2 = 2 \\cdot \\frac{1}{2} = 1$, $p_4 = \\frac{1}{6}$. $1 \\neq \\frac{1}{6}$."
     ],
@@ -2760,7 +2760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem rozwiązań nierówności ax + 4 ≥ 0 z niewiadomą x jest przedział (–∞, 2⟩ . Wyznacz a .",
+    "prompt": "Zbiorem rozwiązań nierówności $ax + 4 \\ge 0$ z niewiadomą $x$ jest przedział (-∞, 2⟩ . Wyznacz a .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2817,7 +2817,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kwadrat K 1 ma bok długości a . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , … takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
+    "prompt": "Kwadrat K 1 ma bok długości $a$ . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , ... takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2873,7 +2873,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Uzasadnij, że liczba 4 12 + 4 13 + 4 14 jest podzielna przez 42.",
+    "prompt": "Uzasadnij, że liczba 4 $12 + 4 13 + 4$ 14 jest podzielna przez 42.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2929,7 +2929,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste l i k przecinają się w punkcie A = (0, 4) . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k – trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
+    "prompt": "Proste l i k przecinają się w punkcie $A = (0, 4)$ . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta $k - tr$ójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2957,15 +2957,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała 10 minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
+    "prompt": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała_{10} minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "7:20",
     "solutionSteps": [
-      "Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę w 40 minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ km/h.",
-      "Oblicz prędkość Oli. Ola wyjechała 10 minut później niż Ala (o 7:10) i jechała 20 minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ km/h. Zauważ, że $v_O = 2v_A$.",
+      "Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę $w_{40}$ minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ $km/h$.",
+      "Oblicz prędkość Oli. Ola wyjechała_{10} minut później niż Ala (o 7:10) i jechała_{20} minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ $km/h$. Zauważ, że $v_O = 2v_A$.",
       "Oblicz czas, po którym Ola wyprzedziła Alę. Ala jechała $t$ minut, Ola jechała $t - 10$ minut. Droga pokonana przez Alę to $d_A = v_A \\cdot \\frac{t}{60}$. Droga pokonana przez Olę to $d_O = v_O \\cdot \\frac{t-10}{60}$. Ola wyprzedziła Alę, gdy $d_O = d_A$. Podstawiając prędkości: $3d \\cdot \\frac{t-10}{60} = \\frac{3d}{2} \\cdot \\frac{t}{60}$. Po skróceniu $d$, $60$, $3$: $2(t-10) = t$, czyli $2t - 20 = t$, co daje $t = 20$ minut. Ola wyprzedziła Alę po 20 minutach od wyjazdu Ali, czyli o 7:20."
     ],
     "examSource": {
@@ -2985,7 +2985,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są wierzchołki trójkąta ABC : A = (2, 2) , B = (9, 5) i C = (3, 9) . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
+    "prompt": "Dane są wierzchołki trójkąta ABC : $A = (2, 2)$ , $B = (9, 5)$ i $C = (3, 9)$ . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3013,7 +3013,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę – graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
+    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę - graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3072,9 +3072,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m16-maj/z02-1.png) jest równa",
     "choices": [
-      "3 ⁄ 2",
+      "$\\frac{3}{2}$",
       "2",
-      "5 ⁄ 2",
+      "$\\frac{5}{2}$",
       "3"
     ],
     "correctIndex": 3,
@@ -3103,10 +3103,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczby a i c są dodatnie. Liczba b stanowi 48% liczby a oraz 32% liczby c . Wynika stąd, że",
     "choices": [
-      "c = 1,5 a",
-      "c = 1,6 a",
-      "c = 0,8 a",
-      "c = 0,16 a"
+      "$c = 1,5a$",
+      "$c = 1,6a$",
+      "$c = 0,8a$",
+      "$c = 0,16a$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $c = 1,5a$.",
@@ -3134,10 +3134,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równość ![Rysunek do zadania](/cke-matura/m16-maj/z04-1.png) jest prawdziwa dla",
     "choices": [
-      "a = 3",
-      "a = 1",
-      "a = − 2",
-      "a = − 3"
+      "$a = 3$",
+      "$a = 1$",
+      "$a = -2$",
+      "$a = -3$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $a = -2$ (przy założeniu poprawki do równania: $(a+2)^2 = 2(a+2)$).",
@@ -3164,12 +3164,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jedną z liczb, które spełniają nierówność –x 5 + x 3 – x jest",
+    "prompt": "Jedną z liczb, które spełniają nierówność -$x^{5} + x^{3} - x$ jest",
     "choices": [
       "1",
-      "–1",
+      "-1",
       "2",
-      "–2"
+      "-2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 1",
@@ -3196,15 +3196,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach 2x − 3y = 4 i 5x − 6y = 7 przecinają się w punkcie P. Stąd wynika, że",
+    "prompt": "Proste o równaniach $2x - 3y = 4$ i $5x - 6y = 7$ przecinają się w punkcie P. Stąd wynika, że",
     "choices": [
-      "P = (1, 2)",
-      "P = (− 1, 2)",
-      "P = (− 1, − 2)",
-      "P = (1, − 2)"
+      "$P = (1, 2)$",
+      "P = $(-1, 2)$",
+      "P = $(-1, - 2)$",
+      "P = $(1, - 2)$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli P = (− 1, − 2)",
+    "explanation": "C, czyli P = $(-1, - 2)$",
     "solutionSteps": [
       "Rozwiążemy układ równań z danych prostych, mnożąc pierwsze równanie przez $-2$, aby wyeliminować $y$. Otrzymamy: $-4x + 6y = -8$ oraz $5x - 6y = 7$.",
       "Dodamy stronami oba równania, aby wyznaczyć $x$: $(-4x + 5x) + (6y - 6y) = -8 + 7$, co daje $x = -1$.",
@@ -3229,17 +3229,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty ABCD leżą na okręgu o środku S (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z07-1.gif) Miara kąta BDC jest równa",
     "choices": [
-      "91°",
-      "72,5°",
-      "18°",
-      "32°"
+      "$91^{\\circ}$",
+      "72,$5^{\\circ}$",
+      "$18^{\\circ}$",
+      "$32^{\\circ}$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 18°",
+    "explanation": "C, czyli $18^{\\circ}$",
     "solutionSteps": [
       "Kąt BAC jest kątem wpisanym opartym na tym samym łuku BC, co kąt BDC. Kąty wpisane oparte na tym samym łuku mają równe miary, więc szukamy miary kąta BAC.",
       "Kąt BSC jest kątem środkowym opartym na tym samym łuku BC, co kąt BAC. Miara kąta środkowego jest dwukrotnie większa od miary kąta wpisanego opartego na tym samym łuku, więc miara kąta BAC wynosi $\\frac{1}{2} \\cdot \\text{miara kąta } BSC$.",
-      "Z rysunku odczytujemy, że miara kąta BSC wynosi 36°. Zatem miara kąta BAC wynosi $\\frac{1}{2} \\cdot 36° = 18°$. Ponieważ kąty BAC i BDC są oparte na tym samym łuku, miara kąta BDC jest również równa 18°."
+      "Z rysunku odczytujemy, że miara kąta BSC wynosi $36^{\\circ}$. Zatem miara kąta BAC wynosi $\\frac{1}{2} \\cdot 36° = 18°$. Ponieważ kąty BAC i BDC są oparte na tym samym łuku, miara kąta BDC jest również równa $18^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3258,15 +3258,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja liniowa f(x) = 3 / 4 x + 6 . Miejscem zerowym tej funkcji jest liczba",
+    "prompt": "Dana jest funkcja liniowa $f(x) = 3 / 4x + 6$ . Miejscem zerowym tej funkcji jest liczba",
     "choices": [
       "8",
       "6",
-      "– 6",
-      "– 8"
+      "-6",
+      "-8"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli – 8",
+    "explanation": "D, czyli -8",
     "solutionSteps": [
       "Miejsce zerowe funkcji to wartość $x$, dla której $f(x) = 0$. Przyrównujemy więc wyrażenie definiujące funkcję do zera: $\\frac{3}{4}x + 6 = 0$.",
       "Rozwiązujemy równanie liniowe: odejmujemy 6 od obu stron, co daje $\\frac{3}{4}x = -6$. Następnie mnożymy obie strony przez $\\frac{4}{3}$, aby wyznaczyć $x$: $x = -6 \\cdot \\frac{4}{3}$.",
@@ -3289,12 +3289,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie wymierne ![Rysunek do zadania](/cke-matura/m16-maj/z09-1.png) gdzie x ≠ − 5 ,",
+    "prompt": "Równanie wymierne ![Rysunek do zadania](/cke-matura/m16-maj/z09-1.png) gdzie x ≠ -5 ,",
     "choices": [
       "nie ma rozwiązań rzeczywistych.",
       "ma dokładnie jedno rozwiązanie rzeczywiste.",
       "ma dokładnie dwa rozwiązania rzeczywiste.",
-      "ma dokładnie trzy rozwiązania rzeczywiste. Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (1,9) . Liczby –2 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)"
+      "ma dokładnie trzy rozwiązania rzeczywiste. Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt $W = (1,9)$ . Liczby -2 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli ma dokładnie dwa rozwiązania rzeczywiste.",
@@ -3321,7 +3321,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wartości funkcji ƒ jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Zbiorem wartości funkcji $f$ jest przedział\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3329,7 +3329,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$(-\\infty, 9]$",
     "solutionSteps": [
       "Zapisz funkcję kwadratową w postaci iloczynowej, korzystając z miejsc zerowych -2 i 4: $f(x) = a(x - (-2))(x - 4) = a(x+2)(x-4)$.",
-      "Wykorzystaj współrzędne wierzchołka W=(1,9), podstawiając je do wzoru funkcji i obliczając współczynnik $a$: $9 = a(1+2)(1-4) \\Rightarrow 9 = a(3)(-3) \\Rightarrow 9 = -9a \\Rightarrow a = -1$.",
+      "Wykorzystaj współrzędne wierzchołka $W = (1,9)$, podstawiając je do wzoru funkcji $i$ obliczając współczynnik $a$: $9 = a(1+2)(1-4) \\Rightarrow 9 = a(3)(-3) \\Rightarrow 9 = -9a \\Rightarrow a = -1$.",
       "Funkcja ma postać $f(x) = -(x+2)(x-4)$. Ponieważ współczynnik $a=-1$ jest ujemny, ramiona paraboli są skierowane w dół, a zbiorem wartości jest przedział $(-\\infty, y_W]$, gdzie $y_W=9$ jest maksymalną wartością funkcji (wartością w wierzchołku)."
     ],
     "examSource": {
@@ -3349,7 +3349,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Najmniejsza wartość funkcji ƒ w przedziale ⟨−1, 2⟩ jest równa",
+    "prompt": "Najmniejsza wartość funkcji $f$ w przedziale ⟨-1, 2⟩ jest równa",
     "choices": [
       "2",
       "5",
@@ -3380,7 +3380,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja ƒ określona jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z12-1.png) dla każdej liczby rzeczywistej x. Wtedy ![Rysunek do zadania](/cke-matura/m16-maj/z12-2.png) jest równa",
+    "prompt": "Funkcja $f$ określona jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z12-1.png) dla każdej liczby rzeczywistej x. Wtedy ![Rysunek do zadania](/cke-matura/m16-maj/z12-2.png) jest równa",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m16-maj/z12-3.gif)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z12-4.png)",
@@ -3412,7 +3412,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W okręgu o środku w punkcie S poprowadzono cięciwę AB , która utworzyła z promieniem AS kąt o mierze 31° (zobacz rysunek). Promień tego okręgu ma długość 10. Odległość punktu S od cięciwy AB jest liczbą z przedziału ![Rysunek do zadania](/cke-matura/m16-maj/z13-1.gif)",
+    "prompt": "W okręgu o środku w punkcie S poprowadzono cięciwę AB , która utworzyła z promieniem AS kąt o mierze $31^{\\circ}$ (zobacz rysunek). Promień tego okręgu ma długość 10. Odległość punktu S od cięciwy AB jest liczbą z przedziału ![Rysunek do zadania](/cke-matura/m16-maj/z13-1.gif)",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-2.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-3.png)",
@@ -3423,7 +3423,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "D, czyli $(8, 10)$.",
     "solutionSteps": [
       "Narysuj promień prostopadły do cięciwy AB, który przetnie ją w punkcie C. Trójkąt ASC jest prostokątny, a odległość punktu S od cięciwy AB to długość odcinka SC. Z rysunku wynika, że odcinek SC jest przyprostokątną w trójkącie prostokątnym ASC.",
-      "W trójkącie prostokątnym ASC, promień AS ma długość 10 (przeciwprostokątna), a kąt $\\angle SAC = 31^\\circ$. Użyj funkcji cosinus do obliczenia długości odcinka SC: $\\cos(\\angle SAC) = \\frac{SC}{AS}$.",
+      "W trójkącie prostokątnym ASC, promień AS ma długość 10 (przeciwprostokątna), $a_{k}$ąt $\\angle SAC = 31^\\circ$. Użyj funkcji cosinus do obliczenia długości odcinka SC: $\\cos(\\angle SAC) = \\frac{SC}{AS}$.",
       "Oblicz $SC = AS \\cdot \\cos(31^\\circ) = 10 \\cdot \\cos(31^\\circ)$. Wartość $\\cos(31^\\circ)$ jest liczbą z przedziału $(0.8, 1)$, więc $SC$ będzie z przedziału $(8, 10)$."
     ],
     "examSource": {
@@ -3445,15 +3445,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Czternasty wyraz ciągu arytmetycznego jest równy 8, a różnica tego ciągu jest równa ![Rysunek do zadania](/cke-matura/m16-maj/z14-1.png) Siódmy wyraz tego ciągu jest równy",
     "choices": [
-      "37 ⁄ 2",
-      "– 37 ⁄ 2",
-      "– 5 ⁄ 2",
-      "5 ⁄ 2"
+      "$\\frac{37}{2}$",
+      "-$\\frac{37}{2}$",
+      "-$\\frac{5}{2}$",
+      "$\\frac{5}{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{51}{2}$.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$. Wiemy, że $a_{14} = 8$ i $r = -\\frac{5}{2}$, więc $8 = a_1 + (14-1)(-\\frac{5}{2})$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$. Wiemy, że $a_{14} = 8$ i $r = -\\frac{5}{2}$, więc $8 = a_1 + (14-1)(-\\frac{5}{2})$.",
       "Oblicz $a_1$. Z równania $8 = a_1 + 13(-\\frac{5}{2})$ otrzymujemy $8 = a_1 - \\frac{65}{2}$, co daje $a_1 = 8 + \\frac{65}{2} = \\frac{16+65}{2} = \\frac{81}{2}$.",
       "Oblicz siódmy wyraz ciągu ($a_7$) używając wzoru $a_7 = a_1 + (7-1)r$. Podstawiamy obliczone $a_1 = \\frac{81}{2}$ i dane $r = -\\frac{5}{2}$: $a_7 = \\frac{81}{2} + 6(-\\frac{5}{2}) = \\frac{81}{2} - \\frac{30}{2} = \\frac{51}{2}$."
     ],
@@ -3474,15 +3474,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (x, 2x + 3, 4x + 3) jest geometryczny. Pierwszy wyraz tego ciągu jest równy",
+    "prompt": "Ciąg $(x, 2x + 3, 4x + 3)$ jest geometryczny. Pierwszy wyraz tego ciągu jest równy",
     "choices": [
-      "– 4",
+      "-4",
       "1",
       "0",
-      "– 1"
+      "-1"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli – 1",
+    "explanation": "D, czyli -1",
     "solutionSteps": [
       "W ciągu geometrycznym iloraz dwóch kolejnych wyrazów jest stały. Zapiszemy tę zależność dla podanego ciągu: $\\frac{2x+3}{x} = \\frac{4x+3}{2x+3}$.",
       "Rozwiążemy otrzymane równanie, mnożąc na krzyż: $(2x+3)^2 = x(4x+3)$, co po rozwinięciu daje $4x^2 + 12x + 9 = 4x^2 + 3x$.",
@@ -3544,7 +3544,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $\\cos \\alpha = \\frac{4}{5}$",
     "solutionSteps": [
-      "Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna — 5.",
+      "Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna -5.",
       "Skorzystaj z definicji funkcji trygonometrycznych w trójkącie prostokątnym: $\\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{4}{5}$.",
       "Sprawdź podane warianty odpowiedzi. Wariant B jest zgodny z obliczonym cosinusem: $\\cos \\alpha = \\frac{4}{5}$."
     ],
@@ -3565,19 +3565,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z odcinków o długościach: 5 , 2a + 1 , a − 1 można zbudować trójkąt równoramienny. Wynika stąd, że",
+    "prompt": "Z odcinków o długościach: 5 , $2a + 1$ , $a - 1$ można zbudować trójkąt równoramienny. Wynika stąd, że",
     "choices": [
-      "a = 6",
-      "a = 4",
-      "a = 3",
-      "a = 2"
+      "$a = 6$",
+      "$a = 4$",
+      "$a = 3$",
+      "$a = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a=4$",
     "solutionSteps": [
       "Aby z odcinków można było zbudować trójkąt, suma długości dwóch krótszych boków musi być większa od długości najdłuższego boku. Ponieważ trójkąt jest równoramienny, mamy trzy możliwości przypisania długości boków: $(5, 5, 2a+1)$, $(5, a-1, a-1)$ lub $(2a+1, a-1, a-1)$.",
-      "Analizujemy każdy przypadek.\n1.  $(5, 5, 2a+1)$: $5+5 > 2a+1 \\Rightarrow 10 > 2a+1 \\Rightarrow 9 > 2a \\Rightarrow a < 4.5$. Dodatkowo, $a-1$ musi być dodatnie, więc $a>1$.\n2.  $(5, a-1, a-1)$: $2(a-1) > 5 \\Rightarrow 2a-2 > 5 \\Rightarrow 2a > 7 \\Rightarrow a > 3.5$. Dodatkowo $a-1 > 0$.\n3.  $(2a+1, a-1, a-1)$: $(a-1)+(a-1) > 2a+1 \\Rightarrow 2a-2 > 2a+1 \\Rightarrow -2 > 1$, co jest sprzeczne. Ten przypadek nie jest możliwy.",
-      "Rozważamy możliwe wartości $a$ z odpowiedzi.\n-   Dla $a=2$: przypadek 1: $2a+1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n-   Dla $a=3$: przypadek 1: $2a+1=7$, boki $(5,5,7)$, $5+5>7$ - OK. przypadek 2: $a-1=2$, boki $(5,2,2)$, $2+2 \\ngtr 5$ - nie OK.\n-   Dla $a=4$: przypadek 1: $2a+1=9$, boki $(5,5,9)$, $5+5>9$ - OK. przypadek 2: $a-1=3$, boki $(5,3,3)$, $3+3 > 5$ - OK.\n-   Dla $a=6$: przypadek 1: $2a+1=13$, boki $(5,5,13)$, $5+5 \\ngtr 13$ - nie OK. przypadek 2: $a-1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n\nJedyną wartością $a$, dla której zawsze można zbudować trójkąt równoramienny, jest $a=4$."
+      "Analizujemy każdy przypadek.\n1. $(5, 5, 2a+1)$: $5+5 > 2a+1 \\Rightarrow 10 > 2a+1 \\Rightarrow 9 > 2a \\Rightarrow a < 4.5$. Dodatkowo, $a-1$ musi być dodatnie, więc $a>1$.\n2. $(5, a-1, a-1)$: $2(a-1) > 5 \\Rightarrow 2a-2 > 5 \\Rightarrow 2a > 7 \\Rightarrow a > 3.5$. Dodatkowo $a-1 > 0$.\n3. $(2a+1, a-1, a-1)$: $(a-1)+(a-1) > 2a+1 \\Rightarrow 2a-2 > 2a+1 \\Rightarrow -2 > 1$, co jest sprzeczne. Ten przypadek nie jest możliwy.",
+      "Rozważamy możliwe wartości $a$ z odpowiedzi.\n- Dla $a=2$: przypadek 1: $2a+1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n- Dla $a=3$: przypadek 1: $2a+1=7$, boki $(5,5,7)$, $5+5>7$ - OK. przypadek 2: $a-1=2$, boki $(5,2,2)$, $2+2 \\ngtr 5$ - nie OK.\n- Dla $a=4$: przypadek 1: $2a+1=9$, boki $(5,5,9)$, $5+5>9$ - OK. przypadek 2: $a-1=3$, boki $(5,3,3)$, $3+3 > 5$ - OK.\n- Dla $a=6$: przypadek 1: $2a+1=13$, boki $(5,5,13)$, $5+5 \\ngtr 13$ - nie OK. przypadek 2: $a-1=5$, boki $(5,5,5)$ - trójkąt równoboczny, jest OK.\n\nJedyną wartością $a$, dla której zawsze można zbudować trójkąt równoramienny, jest $a=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3626,10 +3626,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Proste opisane równaniami ![Rysunek do zadania](/cke-matura/m16-maj/z20-1.png) są prostopadłe, gdy",
     "choices": [
-      "m = 2",
-      "m = 1 ⁄ 2",
-      "m = 1 ⁄ 3",
-      "m = − 2"
+      "$m = 2$",
+      "$m = \\frac{1}{2}$",
+      "$m = \\frac{1}{3}$",
+      "$m = -2$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $m=2$.",
@@ -3655,12 +3655,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych dane są punkty A = (a,6) oraz B = (7,b) . Środkiem odcinka AB jest punkt M = (3,4). Wynika stąd, że",
+    "prompt": "W układzie współrzędnych dane są punkty $A = (a,6)$ oraz $B = (7,b)$ . Środkiem odcinka AB jest punkt $M = (3,4)$. Wynika stąd, że",
     "choices": [
-      "a = 5 i b = 5",
-      "a = − 1 i b = 2",
-      "a = 4 i b = 10",
-      "a = − 4 i b = − 2"
+      "$a = 5$ i $b = 5$",
+      "$a = -1$ i $b = 2$",
+      "$a = 4$ i $b = 10$",
+      "$a = -4$ i $b = -2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a = -1$ i $b = 2$.",
@@ -3691,9 +3691,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, 0.2-0.35)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ — prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ — $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ — $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ — nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$",
+    "explanation": "D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, $0.2 - 0.35$)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ - prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ - $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ - $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ - nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$",
     "solutionSteps": [
-      "Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami — jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.",
+      "Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami - jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.",
       "Identyfikujemy zdarzenia sprzyjające, czyli te z dokładnie dwoma orłami (OO). Są to: ROO, ORO, OOR. Jest ich 3.",
       "Obliczamy prawdopodobieństwo $p$ jako stosunek liczby zdarzeń sprzyjających do liczby wszystkich możliwych zdarzeń: $p = \\frac{3}{8}$.",
       "Zamieniamy ułamek $\\frac{3}{8}$ na liczbę dziesiętną: $p = 0,375$. Analizujemy podane przedziały i wybieramy ten, który zawiera 0,375."
@@ -3715,7 +3715,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt rozwarcia stożka ma miarę 120°, a tworząca tego stożka ma długość 4. Objętość tego stożka jest równa",
+    "prompt": "Kąt rozwarcia stożka ma miarę $120^{\\circ}$, a tworząca tego stożka ma długość 4. Objętość tego stożka jest równa",
     "choices": [
       "36π",
       "18π",
@@ -3746,7 +3746,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątna podstawy graniastosłupa prawidłowego czworokątnego jest dwa razy dłuższa od wysokości graniastosłupa. Graniastosłup przecięto płaszczyzną przechodzącą przez przekątną podstawy i jeden wierzchołek drugiej podstawy (patrz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z24-1.gif) Płaszczyzna przekroju tworzy z podstawą graniastosłupa kąt α o mierze\n\nRozwiąż zadanie.",
+    "prompt": "Przekątna podstawy graniastosłupa prawidłowego czworokątnego jest dwa razy dłuższa od wysokości graniastosłupa. Graniastosłup przecięto płaszczyzną przechodzącą przez przekątną podstawy $i$ jeden wierzchołek drugiej podstawy (patrz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z24-1.gif) Płaszczyzna przekroju tworzy z podstawą graniastosłupa kąt α o mierze\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3774,7 +3774,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna sześciu liczb naturalnych: 31, 16, 25, 29, 27, x, jest równa x / 2 . Mediana tych liczb jest równa",
+    "prompt": "Średnia arytmetyczna sześciu liczb naturalnych: 31, 16, 25, 29, 27, x, jest równa $x / 2$ . Mediana tych liczb jest równa",
     "choices": [
       "26",
       "27",
@@ -3805,7 +3805,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W tabeli przedstawiono roczne przyrosty wysokości pewnej sosny w ciągu sześciu kolejnych lat. kolejne lata 1 2 3 4 5 6 przyrost (w cm) 10 10 7 8 8 7 Oblicz średni roczny przyrost wysokości tej sosny w badanym okresie sześciu lat. Otrzymany wynik zaokrąglij do 1 cm. Oblicz błąd względny otrzymanego przybliżenia. Podaj ten błąd w procentach.",
+    "prompt": "W tabeli przedstawiono roczne przyrosty wysokości pewnej sosny w ciągu sześciu kolejnych lat. kolejne lata 1 2 3 4 5 6 przyrost ($w_{cm}$) 10 10 7 8 8 7 Oblicz średni roczny przyrost wysokości tej sosny w badanym okresie sześciu lat. Otrzymany wynik zaokrąglij do 1 cm. Oblicz błąd względny otrzymanego przybliżenia. Podaj ten błąd w procentach.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3833,7 +3833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 2x 2 − 4x > 3x 2 − 6x .",
+    "prompt": "Rozwiąż nierówność $2x^{2} - 4x > 3x^{2} - 6x$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3842,7 +3842,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową w postaci standardowej $ax^2 + bx + c > 0$. Otrzymujemy: $-x^2 + 2x > 0$.",
       "Znajdź pierwiastki równania kwadratowego $-x^2 + 2x = 0$, wyciągając $x$ przed nawias: $x(-x+2) = 0$. Pierwiastki to $x_1 = 0$ oraz $x_2 = 2$.",
-      "Narysuj parabolę dla funkcji $f(x) = -x^2 + 2x$. Ponieważ współczynnik $a = -1$ jest ujemny, ramiona paraboli są skierowane w dół. Nierówność jest spełniona, gdy wartości funkcji są dodatnie (czyli dla $x$ między pierwiastkami)."
+      "Narysuj parabolę dla funkcji $f(x) = -x^2 + 2x$. Ponieważ współczynnik $a = -1$ jest ujemny, ramiona paraboli są skierowane w dół. Nierówność jest spełniona, gdy wartości funkcji $s$ą dodatnie (czyli dla $x$ między pierwiastkami)."
     ],
     "examSource": {
       "kind": "matura",
@@ -3861,7 +3861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie (4 − x)(x 2 + 2x − 15) = 0 .",
+    "prompt": "Rozwiąż równanie $(4 - x)(x^{2} + 2x - 15)$ = 0 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3889,16 +3889,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że |∠DEC| = |∠BGF| = 90° (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
+    "prompt": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że $|\\angle DEC| = |\\angle BGF| = 90^{\\circ}$ (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano podobieństwo trójkątów CDE i FBG.",
     "solutionSteps": [
-      "Zauważ, że trójkąty $CDE$ i $ABC$ mają wspólny kąt przy wierzchołku $C$ (kąt $\\alpha$). Dodatkowo, oba są prostokątne, więc kąty przy wierzchołkach $D$ i $B$ są równe $90^\\circ$.",
-      "Zauważ, że trójkąty $BGF$ i $ABC$ mają wspólny kąt przy wierzchołku $B$ (kąt $\\beta$). Dodatkowo, oba są prostokątne, więc kąty przy wierzchołkach $G$ i $C$ są równe $90^\\circ$.",
-      "Ponieważ trójkąty $CDE$ i $ABC$ mają dwa wspólne kąty ( $\\alpha$ oraz $90^\\circ$), są podobne na mocy cechy podobieństwa kąt-kąt (kk). Analogicznie, trójkąty $BGF$ i $ABC$ są podobne (kąt $\\beta$ oraz $90^\\circ$). Zatem trójkąt $CDE$ jest podobny do trójkąta $ABC$, a trójkąt $BGF$ jest podobny do trójkąta $ABC$.",
+      "Zauważ, że trójkąty $CDE$ i $ABC$ mają wspólny kąt przy wierzchołku $C$ (kąt $\\alpha$). Dodatkowo, oba są prostokątne, więc_{k}ąty przy wierzchołkach $D$ i $B$ są równe $90^\\circ$.",
+      "Zauważ, że trójkąty $BGF$ i $ABC$ mają wspólny kąt przy wierzchołku $B$ (kąt $\\beta$). Dodatkowo, oba są prostokątne, więc_{k}ąty przy wierzchołkach $G$ i $C$ są równe $90^\\circ$.",
+      "Ponieważ trójkąty $CDE$ i $ABC$ mają dwa wspólne kąty ($\\alpha$ oraz $90^\\circ$), są podobne na mocy cechy podobieństwa kąt-kąt(kk). Analogicznie, trójkąty $BGF$ i $ABC$ są podobne (kąt $\\beta$ oraz $90^\\circ$). Zatem trójkąt $CDE$ jest podobny do trójkąta $ABC$, a trójkąt $BGF$ jest podobny do trójkąta $ABC$.",
       "Skoro oba trójkąty ($CDE$ i $BGF$) są podobne do tego samego trójkąta ($ABC$), to są one podobne również do siebie nawzajem."
     ],
     "examSource": {
@@ -3918,7 +3918,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (a n ) jest określony wzorem a n = 2n 2 + 2n dla n ≥ 1 . Wykaż, że suma każdych dwóch kolejnych wyrazów tego ciągu jest kwadratem liczby naturalnej.",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n} = 2n^{2} + 2n$ dla $n \\ge 1$ . Wykaż, że suma każdych dwóch kolejnych wyrazów tego ciągu jest kwadratem liczby naturalnej.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3946,7 +3946,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, A 0 =10 -4 cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, czy – mniejsza od 100 cm.",
+    "prompt": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, $A_{0} = 10 - 4$ cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, $czy - mni$ejsza od 100 cm.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3974,7 +3974,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeden z kątów trójkąta jest trzy razy większy od mniejszego z dwóch pozostałych kątów, które różnią się o 50°. Oblicz kąty tego trójkąta.",
+    "prompt": "Jeden z kątów trójkąta jest trzy razy większy od mniejszego z dwóch pozostałych kątów, które różnią się o $50^{\\circ}$. Oblicz kąty tego trójkąta.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4059,10 +4059,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 5 8 · 16 −2 jest równa.",
+    "prompt": "Liczba 5 $8 \\cdot 16 - 2$ jest równa.",
     "choices": [
-      "( 5 / 2 ) 8",
-      "5 / 2",
+      "($\\frac{5}{2}$) 8",
+      "$\\frac{5}{2}$",
       "10 8",
       "10"
     ],
@@ -4090,7 +4090,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ∛ 54 – ∛ 2 jest równa",
+    "prompt": "Liczba ∛ 54 - ∛ 2 jest równa",
     "choices": [
       "∛ 52",
       "3",
@@ -4120,12 +4120,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2log 2 3 - 2log 2 5 jest równa.",
+    "prompt": "Liczba 2log 2 $3 - 2log$ 2 5 jest równa.",
     "choices": [
-      "log 2 9 / 25",
-      "log 2 3 / 5",
-      "log 2 9 / 5",
-      "log 2 6 / 25"
+      "log 2 $\\frac{9}{25}$",
+      "log 2 $\\frac{3}{5}$",
+      "log 2 $\\frac{9}{5}$",
+      "log 2 $\\frac{6}{25}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\log_2 \\frac{9}{25}$",
@@ -4150,7 +4150,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba osobników pewnego zagrożonego wyginięciem gatunku zwierząt wzrosła w stosunku do liczby tych zwierząt z 31 grudnia 2011 r. o 120% i obecnie jest równa 8910. Ile zwierząt liczyła populacja tego gatunku w ostatnim dniu 2011 roku?",
+    "prompt": "Liczba osobników pewnego zagrożonego wyginięciem gatunku zwierząt wzrosła w stosunku do liczby tych zwierząt $z^{31}$ grudnia 2011r. o 120% i obecnie jest równa 8910. Ile zwierząt liczyła populacja tego gatunku w ostatnim dniu 2011 roku?",
     "choices": [
       "4050",
       "1782",
@@ -4181,11 +4181,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równość (x√ 2 – 2) 2 = (2 + √ 2 ) 2 jest",
+    "prompt": "Równość $(x\\sqrt2 - 2)$ 2 = $(2 + \\sqrt2)$ 2 jest",
     "choices": [
-      "prawdziwa dla x = –√ 2",
+      "prawdziwa dla x = -√ 2",
       "prawdziwa dla x = √ 2",
-      "prawdziwa dla x = –1",
+      "prawdziwa dla $x = -1$",
       "fałszywa dla każdej liczby x"
     ],
     "correctIndex": 2,
@@ -4212,10 +4212,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do zbioru rozwiązań nierówności (x 4 + 1)(2 − x) > 0 nie należy liczba",
+    "prompt": "Do zbioru rozwiązań nierówności $(x^{4} + 1)(2 - x)$ > 0 nie należy liczba",
     "choices": [
-      "–3",
-      "–1",
+      "-3",
+      "-1",
       "1",
       "3"
     ],
@@ -4243,7 +4243,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich rozwiązań nierówności 2 – 3x ≥ 4 .",
+    "prompt": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich rozwiązań nierówności $2 - 3x \\ge 4$ .",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m17-maj/z07-1.jpg)",
       "![Rysunek do zadania](/cke-matura/m17-maj/z07-2.jpg)",
@@ -4273,7 +4273,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie x(x 2 – 4)(x 2 + 4) = 0 z niewiadomą x",
+    "prompt": "Równanie x$(x^{2} - 4)(x^{2} + 4)$ = 0 z niewiadomą $x$",
     "choices": [
       "nie ma rozwiązań w zbiorze liczb rzeczywistych.",
       "ma dokładnie dwa rozwiązania w zbiorze liczb rzeczywistych.",
@@ -4304,12 +4304,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej ƒ(x)=√ 3 (x + 1) – 12 jest liczba",
+    "prompt": "Miejscem zerowym funkcji liniowej $f(x)$=√ 3 $(x + 1)$ -12 jest liczba",
     "choices": [
-      "√ 3 – 4",
-      "–2√ 3 + 1",
-      "4√ 3 – 1",
-      "–√ 3 + 12"
+      "√ $3 - 4$",
+      "-2√ $3 + 1$",
+      "4√ $3 - 1$",
+      "-√ $3 + 12$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $4\\sqrt{3} - 1$.",
@@ -4336,12 +4336,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej ƒ(x)= ax 2 +bx+c , której miejsca zerowe to: –3 i 1 . ![Rysunek do zadania](/cke-matura/m17-maj/z10-1.jpg) Współczynnik c we wzorze funkcji ƒ jest równy\n\nRozwiąż zadanie.",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej $f(x) = ax 2 + bx + c$ , której miejsca zerowe to: -3 i 1 . ![Rysunek do zadania](/cke-matura/m17-maj/z10-1.jpg) Współczynnik $c$ we wzorze funkcji $f$ jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "C, czyli $c = -3$. (Uwaga: w oryginalnym zadaniu jest błąd, c powinno być -3. Przyjmując dane z zadania, gdzie c jest dodatnie, a miejscami zerowymi -3 i 1, punkt (0,3) musiałby leżeć na paraboli. Wtedy $3 = a(0+3)(0-1)$, czyli $3 = -3a$, $a=-1$. $f(x) = -1(x+3)(x-1) = -(x^2+2x-3) = -x^2-2x+3$. Wtedy c=3. Biorąc pod uwagę, że klucz odpowiedzi wskazuje na C, przyjmujemy $c=3$.",
+    "explanation": "C, czyli $c = -3$. (Uwaga: w oryginalnym zadaniu jest błąd, c powinno być -3. Przyjmując dane z zadania, gdzie c jest dodatnie, a miejscami zerowymi -3 i 1, punkt (0,3) musiałby leżeć na paraboli. Wtedy $3 = a(0+3)(0-1)$, czyli $3 = -3a$, $a=-1$. $f(x) = -1(x+3)(x-1) = -(x^2+2x-3) = -x^2-2x+3$. Wtedy $c = 3$. Biorąc pod uwagę, że klucz odpowiedzi wskazuje na C, przyjmujemy $c=3$.",
     "solutionSteps": [
       "Skorzystaj z postaci iloczynowej funkcji kwadratowej, wiedząc, że miejsca zerowe to $x_1 = -3$ i $x_2 = 1$. Postać iloczynowa to $f(x) = a(x-x_1)(x-x_2)$. Podstawiając miejsca zerowe, otrzymujemy $f(x) = a(x-(-3))(x-1)$, czyli $f(x) = a(x+3)(x-1)$.",
       "Zidentyfikuj na wykresie dodatkowy punkt, który należy do paraboli, aby wyznaczyć współczynnik $a$. Widać, że punkt $(0, -3)$ leży na wykresie funkcji. Podstaw ten punkt do postaci iloczynowej: $-3 = a(0+3)(0-1)$, co daje $-3 = a(3)(-1)$, czyli $-3 = -3a$.",
@@ -4365,17 +4365,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji wykładniczej ƒ określonej wzorem ƒ(x) = a x . Punkt A = (1,2) należy do tego wykresu funkcji. ![Rysunek do zadania](/cke-matura/m17-maj/z11-1.jpg) Podstawa a potęgi jest równa",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji wykładniczej f określonej wzorem $f(x) = a$ x . Punkt $A = (1,2)$ należy do tego wykresu funkcji. ![Rysunek do zadania](/cke-matura/m17-maj/z11-1.jpg) Podstawa $a$ potęgi jest równa",
     "choices": [
-      "– ½",
-      "½",
-      "– 2",
+      "-$\\frac{1}{2}$",
+      "$\\frac{1}{2}$",
+      "-2",
       "2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $2$.",
     "solutionSteps": [
-      "Skorzystaj z faktu, że punkt A=(1,2) należy do wykresu funkcji $f(x)=a^x$. Podstaw współrzędne punktu do wzoru funkcji, otrzymując równanie $2 = a^1$.",
+      "Skorzystaj z faktu, że punkt $A = (1,2)$ należy do wykresu funkcji $f(x)=a^x$. Podstaw współrzędne punktu do wzoru funkcji, otrzymując równanie $2 = a^1$.",
       "Rozwiąż otrzymane równanie, aby wyznaczyć wartość podstawy $a$. Równanie $2 = a^1$ jest równoważne $a=2$.",
       "Porównaj otrzymaną wartość $a$ z podanymi wariantami odpowiedzi. Wartość $a=2$ odpowiada opcji D."
     ],
@@ -4396,12 +4396,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , dane są: a 1 = 5 , a 2 = 11 . Wedy",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla $n \\ge 1$ , dane są: $a_{1} = 5$ , $a_{2} = 11$ . Wedy",
     "choices": [
-      "a 14 = 71",
-      "a 12 = 71",
-      "a 11 = 71",
-      "a 10 = 71"
+      "$a_{14} = 71$",
+      "$a_{12} = 71$",
+      "$a_{11} = 71$",
+      "$a_{10} = 71$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a_{12} = 71$",
@@ -4427,18 +4427,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trzywyrazowy ciąg geometryczny (24, 6, a-1) . Stąd wynika, że",
+    "prompt": "Dany jest trzywyrazowy ciąg geometryczny $(24, 6, a - 1)$ . Stąd wynika, że",
     "choices": [
-      "a = 5 ⁄ 2",
-      "a = 2 ⁄ 5",
-      "a = 3 ⁄ 2",
-      "a = 2 ⁄ 3"
+      "$a = \\frac{5}{2}$",
+      "$a = \\frac{2}{5}$",
+      "$a = \\frac{3}{2}$",
+      "$a = \\frac{2}{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $a = \\frac{5}{2}$",
     "solutionSteps": [
       "W ciągu geometrycznym iloraz dwóch kolejnych wyrazów jest stały. Zapiszemy to jako $\\frac{6}{24} = \\frac{a-1}{6}$.",
-      "Rozwiążemy równanie, aby znaleźć $a$: $6 \\cdot 6 = 24 \\cdot (a-1)$, czyli $36 = 24a - 24$. Przenosząc 24 na drugą stronę otrzymujemy $60 = 24a$, a stąd $a = \\frac{60}{24}$.",
+      "Rozwiążemy równanie, aby znaleźć $a$: $6 \\cdot 6 = 24 \\cdot (a-1)$, czyli $36 = 24a - 24$. Przenosząc_{24} na drugą stronę otrzymujemy $60 = 24a$, a stąd $a = \\frac{60}{24}$.",
       "Uproszczamy ułamek $\\frac{60}{24}$ dzieląc licznik i mianownik przez ich największy wspólny dzielnik, którym jest 12. Otrzymujemy $a = \\frac{5}{2}$."
     ],
     "examSource": {
@@ -4458,12 +4458,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeśli m = sin50°, to",
+    "prompt": "Jeśli $m = \\sin 50^{\\circ}$, to",
     "choices": [
-      "m = sin40°",
-      "m = cos40°",
-      "m = cos50°",
-      "m = tg50°"
+      "$m = \\sin 40^{\\circ}$",
+      "$m = \\cos 40^{\\circ}$",
+      "$m = \\cos 50^{\\circ}$",
+      "$m = \\operatorname{tg} 50^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\cos(40^\\circ)$",
@@ -4490,10 +4490,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na okręgu o środku w punkcie O leży punkt C (zobacz rysunek). Odcinek AB jest średnicą tego okręgu. Zaznaczony na rysunku kąt środkowy α ma miarę ![Rysunek do zadania](/cke-matura/m17-maj/z15-1.jpg)",
     "choices": [
-      "116°",
-      "114°",
-      "112°",
-      "110°"
+      "$116^{\\circ}$",
+      "$114^{\\circ}$",
+      "$112^{\\circ}$",
+      "$110^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $116^\\circ$",
@@ -4501,7 +4501,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Kąt ACB jest kątem wpisanym opartym na średnicy AB, więc jest kątem prostym, $\\angle ACB = 90^\\circ$. Suma kątów w trójkącie ABC wynosi $180^\\circ$.",
       "Kąt $\\angle CAB$ jest kątem wpisanym opartym na tym samym łuku co kąt $\\angle COB$ (kąt środkowy), stąd $\\angle COB = 2 \\cdot \\angle CAB$. W trójkącie COB kąty przy podstawie OC i OB są równe, $\\angle OCB = \\angle OAC = \\angle CAB$.",
       "Kąt środkowy $\\alpha$ jest kątem przyległym do kąta $\\angle COB$, więc $\\alpha + \\angle COB = 180^\\circ$. Wiemy, że $\\angle ACB = 90^\\circ$, a $\\angle ACB = \\angle ACO + \\angle OCB$. Skoro $\\triangle ACO$ jest równoramienny ($OA=OC$), to $\\angle ACO = \\angle OAC$. W trójkącie $\\triangle ABC$, $\\angle CAB + \\angle CBA + \\angle ACB = 180^\\circ$, czyli $\\angle CAB + \\angle CBA + 90^\\circ = 180^\\circ$, co daje $\\angle CAB + \\angle CBA = 90^\\circ$.",
-      "Z rysunku widzimy, że $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem przyległym do kąta $\\angle COB$, więc $\\alpha = 180^\\circ - 116^\\circ = 64^\\circ$. Sprawdzając ponownie rysunek, kąt środkowy $\\alpha$ nie jest kątem przyległym do $\\angle COB$. Kąt $\\angle AOC$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\angle AOC = 2 \\cdot \\angle ABC$. Ponieważ $\\triangle ABC$ jest trójkątem prostokątnym, a $OA=OC=OB$ (promienie), to $\\triangle AOC$ i $\\triangle BOC$ są trójkątami równoramiennymi. Kąt $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku BC. Kąt $\\angle BAC$ jest kątem wpisanym opartym na łuku BC. Zatem $\\alpha = 2 \\cdot \\angle BAC$. W trójkącie prostokątnym $\\triangle ABC$, $\\angle ACB = 90^\\circ$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $\\triangle BOC$, który jest równoramienny, kąty przy podstawie wynoszą $\\frac{180^\\circ - 116^\\circ}{2} = \\frac{64^\\circ}{2} = 32^\\circ$. Zatem $\\angle OBC = \\angle OCB = 32^\\circ$. Ponieważ $\\angle ACB = 90^\\circ$, to $\\angle ACO = \\angle ACB - \\angle OCB = 90^\\circ - 32^\\circ = 58^\\circ$. W trójkącie $\\triangle AOC$, który jest równoramienny, $\\angle OAC = \\angle OCA = 58^\\circ$. Suma kątów w $\\triangle AOC$ wynosi $180^\\circ$, więc $\\angle AOC = 180^\\circ - (58^\\circ + 58^\\circ) = 180^\\circ - 116^\\circ = 64^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Zatem $\\alpha = \\angle AOC = 64^\\circ$. Na rysunku jest błąd w oznaczeniach lub merytoryce zadania, ponieważ podane odpowiedzi są większe niż 90 stopni, a kąt $\\alpha$ na rysunku wydaje się być ostry. Przyjmując dane z rysunku, że kąt $\\angle COB = 116^\\circ$, a kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC, więc $\\angle AOC = 2 \\angle ABC$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $BOC$, $OB=OC$, więc jest równoramienny. $\\angle OBC = \\angle OCB = (180^\\circ - 116^\\circ)/2 = 32^\\circ$. Kąt $\\angle ACB = 90^\\circ$. W trójkącie $ABC$: $\\angle BAC + \\angle ABC + 90^\\circ = 180^\\circ$. $\\angle ABC = 180^\\circ - 90^\\circ - \\angle BAC = 90^\\circ - \\angle BAC$. Ponieważ $\\angle OBC = 32^\\circ$, to $\\angle ABC = 32^\\circ$. Wtedy $\\angle BAC = 90^\\circ - 32^\\circ = 58^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\alpha = 2 \\angle ABC = 2 \\cdot 32^\\circ = 64^\\circ$.\nPonieważ jedna z odpowiedzi jest poprawna, a moje obliczenia nie pasują, zakładam, że na rysunku $\\alpha$ jest zaznaczone jako kąt $\\angle BOC$. Wtedy $116^\\circ$ jest prawidłową odpowiedzią. Jednak zadanie mówi \"Zaznaczony na rysunku kąt środkowy α ma miarę\". Na rysunku zaznaczono kąt $\\angle BOC$ jako $\\alpha$.",
+      "Z rysunku widzimy, że $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem przyległym do kąta $\\angle COB$, więc $\\alpha = 180^\\circ - 116^\\circ = 64^\\circ$. Sprawdzając ponownie rysunek, kąt środkowy $\\alpha$ nie jest kątem przyległym do $\\angle COB$. Kąt $\\angle AOC$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\angle AOC = 2 \\cdot \\angle ABC$. Ponieważ $\\triangle ABC$ jest trójkątem prostokątnym, a $OA=OC=OB$ (promienie), to $\\triangle AOC$ i $\\triangle BOC$ są trójkątami równoramiennymi. Kąt $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku BC. Kąt $\\angle BAC$ jest kątem wpisanym opartym na łuku BC. Zatem $\\alpha = 2 \\cdot \\angle BAC$. W trójkącie prostokątnym $\\triangle ABC$, $\\angle ACB = 90^\\circ$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $\\triangle BOC$, który jest równoramienny, kąty przy podstawie wynoszą $\\frac{180^\\circ - 116^\\circ}{2} = \\frac{64^\\circ}{2} = 32^\\circ$. Zatem $\\angle OBC = \\angle OCB = 32^\\circ$. Ponieważ $\\angle ACB = 90^\\circ$, to $\\angle ACO = \\angle ACB - \\angle OCB = 90^\\circ - 32^\\circ = 58^\\circ$. W trójkącie $\\triangle AOC$, który jest równoramienny, $\\angle OAC = \\angle OCA = 58^\\circ$. Suma kątów w $\\triangle AOC$ wynosi $180^\\circ$, więc $\\angle AOC = 180^\\circ - (58^\\circ + 58^\\circ) = 180^\\circ - 116^\\circ = 64^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Zatem $\\alpha = \\angle AOC = 64^\\circ$. Na rysunku jest błąd w oznaczeniach lub merytoryce zadania, ponieważ podane odpowiedzi są większe niż 90 stopni, $a_{k}$ąt $\\alpha$ na rysunku wydaje się być ostry. Przyjmując dane z rysunku, że kąt $\\angle COB = 116^\\circ$, $a_{k}$ąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC, więc $\\angle AOC = 2 \\angle ABC$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $BOC$, $OB=OC$, więc jest równoramienny. $\\angle OBC = \\angle OCB = (180^\\circ - 116^\\circ)/2 = 32^\\circ$. Kąt $\\angle ACB = 90^\\circ$. W trójkącie $ABC$: $\\angle BAC + \\angle ABC + 90^\\circ = 180^\\circ$. $\\angle ABC = 180^\\circ - 90^\\circ - \\angle BAC = 90^\\circ - \\angle BAC$. Ponieważ $\\angle OBC = 32^\\circ$, to $\\angle ABC = 32^\\circ$. Wtedy $\\angle BAC = 90^\\circ - 32^\\circ = 58^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\alpha = 2 \\angle ABC = 2 \\cdot 32^\\circ = 64^\\circ$.\nPonieważ jedna z odpowiedzi jest poprawna, a moje obliczenia nie pasują, zakładam, że na rysunku $\\alpha$ jest zaznaczone jako kąt $\\angle BOC$. Wtedy $116^\\circ$ jest prawidłową odpowiedzią. Jednak zadanie mówi \"Zaznaczony na rysunku kąt środkowy α ma miarę\". Na rysunku zaznaczono kąt $\\angle BOC$ jako $\\alpha$.",
       "Z rysunku odczytujemy, że kąt środkowy $\\alpha$ jest równy kątowi $\\angle BOC$.",
       "Kąt $\\angle BOC$ jest dany na rysunku i ma miarę $116^\\circ$."
     ],
@@ -4522,7 +4522,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC punkt D leży na boku BC , a punkt E leży na boku AB . Odcinek DE jest równoległy do boku AC , a ponadto | BD | = 10, | BC | = 12 i | AC | = 24 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m17-maj/z16-1.jpg) Długość odcinka DE jest równa",
+    "prompt": "W trójkącie ABC punkt D leży na boku BC , a punkt E leży na boku AB . Odcinek DE jest równoległy do boku AC , a ponadto $|BD| = 10$, $|BC| = 12$ i $|AC| = 24$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m17-maj/z16-1.jpg) Długość odcinka DE jest równa",
     "choices": [
       "22",
       "20",
@@ -4555,10 +4555,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Obwód trójkąta ABC, przedstawionego na rysunku, jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z17-1.jpg)",
     "choices": [
-      "(3 + √ 3 / 2 ) a",
-      "(2 + √ 2 / 2 ) a",
-      "(3 + √ 3 ) a",
-      "(2 + √ 2 ) a"
+      "$(3 + \\sqrt\\frac{3}{2})$ a",
+      "$(2 + \\sqrt\\frac{2}{2})$ a",
+      "$(3 + \\sqrt3)$ a",
+      "$(2 + \\sqrt2)$ a"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $(3 + \\sqrt{3}) a$",
@@ -4596,12 +4596,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiona jest prosta k, przechodząca przez punkt A = (2,–3) i przez początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox. ![Rysunek do zadania](/cke-matura/m17-maj/z18-1.jpg) Zatem",
+    "prompt": "Na rysunku przedstawiona jest prosta k, przechodząca przez punkt A = $(2, - 3)$ i przez początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox. ![Rysunek do zadania](/cke-matura/m17-maj/z18-1.jpg) Zatem",
     "choices": [
-      "tgα = – 2 / 3",
-      "tgα = – 3 / 2",
-      "tgα = 2 / 3",
-      "tgα = 3 / 2"
+      "tgα = -$\\frac{2}{3}$",
+      "tgα = -$\\frac{3}{2}$",
+      "tgα = $\\frac{2}{3}$",
+      "tgα = $\\frac{3}{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\operatorname{tg}\\alpha = -\\frac{3}{2}$",
@@ -4627,19 +4627,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = (–2,4) . Prosta k jest określona równaniem y = – 1 / 4 x + 7 / 2 . Zatem prostą l opisuje równanie",
+    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = $(-2,4)$ . Prosta k jest określona równaniem $y = -1 / 4x + \\frac{7}{2}$ . Zatem prostą l opisuje równanie",
     "choices": [
-      "y = 1 / 4 x + 7 / 2",
-      "y = – 1 / 4 x – 7 / 2",
-      "y = 4x – 12",
-      "y = 4x + 12"
+      "$y = 1 / 4x + \\frac{7}{2}$",
+      "$y = -1 / 4x - \\frac{7}{2}$",
+      "$y = 4x - 12$",
+      "$y = 4x + 12$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $y = 4x + 12$",
     "solutionSteps": [
       "Zauważ, że proste k i l są prostopadłe, a ich współczynniki kierunkowe $a_k$ i $a_l$ spełniają zależność $a_k \\cdot a_l = -1$. Z równania prostej k, $y = -\\frac{1}{4}x + \\frac{7}{2}$, odczytaj $a_k = -\\frac{1}{4}$.",
       "Oblicz współczynnik kierunkowy prostej l: $a_l = \\frac{-1}{a_k} = \\frac{-1}{-\\frac{1}{4}} = 4$. Prosta l ma więc postać $y = 4x + b$.",
-      "Wykorzystaj fakt, że prosta l przechodzi przez punkt A = (–2, 4). Podstaw współrzędne punktu A do równania prostej l, aby obliczyć wyraz wolny b: $4 = 4 \\cdot (-2) + b \\Rightarrow 4 = -8 + b \\Rightarrow b = 12$."
+      "Wykorzystaj fakt, że prosta l przechodzi przez punkt A = $(-2, 4)$. Podstaw współrzędne punktu A do równania prostej l, aby obliczyć wyraz wolny b: $4 = 4 \\cdot (-2) + b \\Rightarrow 4 = -8 + b \\Rightarrow b = 12$."
     ],
     "examSource": {
       "kind": "matura",
@@ -4658,12 +4658,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest okrąg o środku S = (2,3) i promieniu r = 5 . Który z podanych punktów leży na tym okręgu?",
+    "prompt": "Dany jest okrąg o środku $S = (2,3)$ i promieniu $r = 5$ . Który z podanych punktów leży na tym okręgu?",
     "choices": [
-      "A = (–1,7)",
-      "B = (2,–3)",
-      "C = (3,2)",
-      "D = (5,3)"
+      "A = $(-1,7)$",
+      "B = $(2, - 3)$",
+      "$C = (3,2)$",
+      "$D = (5,3)$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-1,7)$",
@@ -4722,9 +4722,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Promień AS podstawy walca jest równy wysokości OS tego walca. Sinus kąta OAS (zobacz rysunek) jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z22-1.jpg)",
     "choices": [
-      "√ 3 / 2",
-      "√ 2 / 2",
-      "½",
+      "√ $\\frac{3}{2}$",
+      "√ $\\frac{2}{2}$",
+      "$\\frac{1}{2}$",
       "1"
     ],
     "correctIndex": 3,
@@ -4784,10 +4784,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Średnia arytmetyczna ośmiu liczb: 3, 5, 7, 9, x, 15, 17, 19 jest równa 11. Wtedy",
     "choices": [
-      "x=1",
-      "x=2",
-      "x=11",
-      "x=13"
+      "$x = 1$",
+      "$x = 2$",
+      "$x = 11$",
+      "$x = 13$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x=13$.",
@@ -4815,15 +4815,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od 1 do 24 losujemy jedną liczbę. Niech A oznacza zdarzenie, że wylosowana liczba będzie dzielnikiem liczby 24. Wtedy prawdopodobieństwo zdarzenia A jest równe",
     "choices": [
-      "1 / 4",
-      "1 / 3",
-      "1 / 8",
-      "1 / 6"
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{8}$",
+      "$\\frac{1}{6}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{1}{3}$",
     "solutionSteps": [
-      "Określamy zbiór wszystkich możliwych zdarzeń. Losujemy jedną liczbę z 24 kolejnych liczb naturalnych od 1 do 24, więc mamy 24 możliwe zdarzenia elementarne.",
+      "Określamy zbiór wszystkich możliwych zdarzeń. Losujemy jedną liczbę $z^{24}$ kolejnych liczb naturalnych od 1 do 24, więc mamy 24 możliwe zdarzenia elementarne.",
       "Określamy zbiór zdarzeń sprzyjających zdarzeniu A. Dzielniki liczby 24 ze zbioru {1, 2, ..., 24} to {1, 2, 3, 4, 6, 8, 12, 24}. Jest ich 8.",
       "Obliczamy prawdopodobieństwo zdarzenia A. Prawdopodobieństwo to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $P(A) = \\frac{8}{24}$. Upraszczamy ułamek do $\\frac{1}{3}$."
     ],
@@ -4844,7 +4844,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 8x 2 − 72x ≤ 0 .",
+    "prompt": "Rozwiąż nierówność $8x^{2} - 72x \\le 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4872,7 +4872,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że liczba 4 2017 + 4 2018 + 4 2019 + 4 2020 jest podzielna przez 17.",
+    "prompt": "Wykaż, że liczba 4 $2017 + 4 2018 + 4 2019 + 4$ 2020 jest podzielna przez 17.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4901,7 +4901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz |∠APC| = α i |∠ABC| = β (zobacz rysunek). Wykaż, że α = 180° − 2β . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
+    "prompt": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz $|\\angle APC| = α$ i $|\\angle ABC| = β$ (zobacz rysunek). Wykaż, że $α = 180^{\\circ} - 2β$ . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4909,8 +4909,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\alpha = 180^\\circ - 2\\beta$",
     "solutionSteps": [
       "Zauważ, że trójkąty APC i BRC są równoramienne (ramiona to promienie okręgów), a odcinki AP i BR są prostopadłe do prostej AB. Symetria względem prostej PR sprawia, że trójkąty APC i BRC są przystające.",
-      "Rozważ czworokąt APBR. Suma jego kątów wewnętrznych wynosi 360°. Ponieważ kąty przy A i B są proste (90°), mamy: $|\\angle RPB| + |\\angle APC| + 90^\\circ + 90^\\circ = 360^\\circ$, co daje $|\\angle RPB| = 180^\\circ - \\alpha$.",
-      "W trójkącie RPB, punkty R, P i C są współliniowe. Kąt $|\\angle RPB|$ jest kątem środkowym, a kąt $|\\angle RCB|$ jest kątem wpisanym opartym na tym samym łuku. Z twierdzenia o kącie środkowym i wpisanym mamy $|\\angle RCB| = \\frac{1}{2}|\\angle RPB| = \\frac{1}{2}(180^\\circ - \\alpha)$.",
+      "Rozważ czworokąt APBR. Suma jego kątów wewnętrznych wynosi $360^{\\circ}$. Ponieważ kąty przy A i B są proste ($90^{\\circ}$), mamy: $|\\angle RPB| + |\\angle APC| + 90^\\circ + 90^\\circ = 360^\\circ$, co daje $|\\angle RPB| = 180^\\circ - \\alpha$.",
+      "W trójkącie RPB, punkty R, P i C są współliniowe. Kąt $|\\angle RPB|$ jest kątem środkowym, $a_{k}$ąt $|\\angle RCB|$ jest kątem wpisanym opartym na tym samym łuku. Z twierdzenia o kącie środkowym i wpisanym mamy $|\\angle RCB| = \\frac{1}{2}|\\angle RPB| = \\frac{1}{2}(180^\\circ - \\alpha)$.",
       "W trójkącie ABC, kąty przy podstawie AB są równe, gdyż leżą na okręgu o średnicy AC i BC. To nie jest prawda. W trójkącie ABC mamy $|\\angle CAB| = 90^\\circ$ (kąt między promieniem a styczną). Kąt $\\beta$ jest jednym z kątów w trójkącie prostokątnym ABC. Z sumy kątów w trójkącie ABC: $|\\angle ACB| + 90^\\circ + \\beta = 180^\\circ$, czyli $|\\angle ACB| = 90^\\circ - \\beta$.",
       "Zauważ, że kąt $|\\angle ACB|$ to suma kątów $|\\angle ACP|$ i $|\\angle RCB|$. Kąt $|\\angle ACP|$ jest kątem w trójkącie równoramiennym APC, więc $|\\angle ACP| = \\frac{180^\\circ - \\alpha}{2} = 90^\\circ - \\frac{\\alpha}{2}$. Wtedy: $90^\\circ - \\frac{\\alpha}{2} + \\frac{180^\\circ - \\alpha}{2} = 90^\\circ - \\beta$. Co po uproszczeniu daje $\\alpha = 180^\\circ - 2\\beta$."
     ],
@@ -4931,7 +4931,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa ƒ jest określona dla wszystkich liczb rzeczywistych x wzorem ƒ(x) = ax 2 + bx + c . Największa wartość funkcji ƒ jest równa 6 oraz ![Rysunek do zadania](/cke-matura/m17-maj/z29-1.png) Oblicz wartość współczynnika a .",
+    "prompt": "Funkcja kwadratowa f jest określona dla wszystkich liczb rzeczywistych x wzorem $f(x) = ax 2 + bx + c$ . Największa wartość funkcji $f$ jest równa 6 oraz ![Rysunek do zadania](/cke-matura/m17-maj/z29-1.png) Oblicz wartość współczynnika a .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4987,7 +4987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , dane są: wyraz a 1 = 8 i suma trzech początkowych wyrazów tego ciągu S 3 = 33 . Oblicz różnicę a 16 − a 13 .",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla $n \\ge 1$ , dane są: wyraz $a_{1} = 8$ i suma trzech początkowych wyrazów tego ciągu $S_{3} = 33$ . Oblicz różnicę $a_{16} - a_{13}$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5015,7 +5015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są punkty A = (−4,0) i M = (2,9) oraz prosta k o równaniu y = −2x + 10 . Wierzchołek B trójkąta ABC to punkt przecięcia prostej k z osią Ox układu współrzędnych, a wierzchołek C jest punktem przecięcia prostej k z prostą AM. Oblicz pole trójkąta ABC.",
+    "prompt": "Dane są punkty A = $(-4,0)$ i $M = (2,9)$ oraz prosta k o równaniu $y = -2x + 10$ . Wierzchołek B trójkąta ABC to punkt przecięcia prostej k z osią Ox układu współrzędnych, a wierzchołek C jest punktem przecięcia prostej k z prostą AM. Oblicz pole trójkąta ABC.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5101,7 +5101,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2log 3 6 − log 3 4 jest równa",
+    "prompt": "Liczba 2log 3 $6 - \\log 3$ 4 jest równa",
     "choices": [
       "4",
       "2",
@@ -5164,12 +5164,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są liczby a = 3,6·10 –12 oraz b = 2,4·10 –20 . Wtedy iloraz a / b jest równy",
+    "prompt": "Dane są liczby $a = 3,6\\cdot10 - 12$ oraz $b = 2,4\\cdot10 - 20$ . Wtedy iloraz $a / b$ jest równy",
     "choices": [
-      "8,64·10 –32",
-      "1,5·10 –8",
-      "1,5·10 8",
-      "8,64·10 32"
+      "$8,64\\cdot10 - 32$",
+      "$1,5\\cdot10 - 8$",
+      "$1,5\\cdot10$ 8",
+      "$8,64\\cdot10$ 32"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $1,5 \\cdot 10^{8}$",
@@ -5257,12 +5257,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa jest określona wzorem ƒ(x)= –2(x+3)(x–5) . Liczby x 1 ,x 2 są różnymi miejscami zerowymi funkcji ƒ. Zatem",
+    "prompt": "Funkcja kwadratowa jest określona wzorem $f(x) = -2(x + 3)(x - 5)$ . Liczby $x^{1}$ ,$x^{2}$ są różnymi miejscami zerowymi funkcji $f$. Zatem",
     "choices": [
-      "x 1 +x 2 = –8",
-      "x 1 +x 2 = –2",
-      "x 1 +x 2 = 2",
-      "x 1 +x 2 = 8"
+      "$x^{1} + x^{2} = -8$",
+      "$x^{1} + x^{2} = -2$",
+      "$x^{1} + x^{2} = 2$",
+      "$x^{1} + x^{2} = 8$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 2",
@@ -5290,10 +5290,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równanie ![Rysunek do zadania](/cke-matura/m18-maj/z07-1.png)",
     "choices": [
-      "ma trzy rozwiązania: x = − 2 , x = 0 , x = 2",
-      "ma dwa rozwiązania: x = 0 , x = − 2",
-      "ma dwa rozwiązania: x = − 2 , x = 2",
-      "ma jedno rozwiązanie: x = 0"
+      "ma trzy rozwiązania: $x = -2$ , $x = 0$ , $x = 2$",
+      "ma dwa rozwiązania: $x = 0$ , $x = -2$",
+      "ma dwa rozwiązania: $x = -2$ , $x = 2$",
+      "ma jedno rozwiązanie: $x = 0$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli ma trzy rozwiązania: $x=-2$, $x=0$, $x=2$",
@@ -5319,15 +5319,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa ƒ określona jest wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z08-1.png) , dla wszystkich liczb rzeczywistych x. Wskaż zdanie prawdziwe.",
+    "prompt": "Funkcja liniowa f określona jest wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z08-1.png) , dla wszystkich liczb rzeczywistych x. Wskaż zdanie prawdziwe.",
     "choices": [
-      "Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, 1 / 3 )",
-      "Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, -1)",
-      "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, 1 / 3 )",
-      "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)"
+      "Funkcja $f$ jest malejąca i jej wykres przecina oś Oy w punkcie $P = (0, \\frac{1}{3})$",
+      "Funkcja $f$ jest malejąca i jej wykres przecina oś Oy w punkcie P = $(0, - 1)$",
+      "Funkcja $f$ jest rosnąca i jej wykres przecina oś Oy w punkcie $P = (0, \\frac{1}{3})$",
+      "Funkcja $f$ jest rosnąca i jej wykres przecina oś Oy w punkcie P = $(0, - 1)$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)",
+    "explanation": "D, czyli Funkcja $f$ jest rosnąca i jej wykres przecina oś Oy w punkcie P = $(0, - 1)$",
     "solutionSteps": [
       "Funkcja liniowa $f(x) = ax + b$ jest rosnąca, gdy $a > 0$, a malejąca, gdy $a < 0$. Wykres funkcji liniowej przecina oś Oy w punkcie $(0, b)$.",
       "W funkcji $f(x) = \\frac{1}{3}x - 1$ współczynnik kierunkowy $a = \\frac{1}{3}$ i wyraz wolny $b = -1$. Ponieważ $a = \\frac{1}{3} > 0$, funkcja jest rosnąca. Punkt przecięcia z osią Oy to $(0, -1)$."
@@ -5349,12 +5349,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej ƒ(x) = x 2 – 6x – 3 jest parabola, której wierzchołkiem jest punkt o współrzędnych",
+    "prompt": "Wykresem funkcji kwadratowej $f(x) = x^{2} - 6x - 3$ jest parabola, której wierzchołkiem jest punkt o współrzędnych",
     "choices": [
-      "(-6,-3)",
-      "(-6,69)",
-      "(3,-12)",
-      "(6,-3)"
+      "$(-6, - 3)$",
+      "$(-6,69)$",
+      "$(3, - 12)$",
+      "$(6, - 3)$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $(3,-12)$",
@@ -5380,15 +5380,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 1 jest miejscem zerowym funkcji liniowej ƒ(x) = ax + b , a punkt M = (3,–2) należy do wykresu tej funkcji. Współczynnik a we wzorze tej funkcji jest równy",
+    "prompt": "Liczba 1 jest miejscem zerowym funkcji liniowej $f(x) = ax + b$ , a punkt M = $(3, - 2)$ należy do wykresu tej funkcji. Współczynnik $a$ we wzorze tej funkcji jest równy",
     "choices": [
       "1",
-      "3 / 2",
-      "– 3 / 2",
-      "–1"
+      "$\\frac{3}{2}$",
+      "-$\\frac{3}{2}$",
+      "-1"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli –1",
+    "explanation": "D, czyli -1",
     "solutionSteps": [
       "Skoro $x=1$ jest miejscem zerowym funkcji $f(x)=ax+b$, to $f(1)=0$. Podstawiamy do wzoru funkcji: $a \\cdot 1 + b = 0$, co daje równanie $a+b=0$.",
       "Punkt $M=(3,-2)$ należy do wykresu funkcji, więc $f(3)=-2$. Podstawiamy do wzoru funkcji: $a \\cdot 3 + b = -2$, co daje równanie $3a+b=-2$.",
@@ -5411,7 +5411,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ( a n ) określony wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z11-1.png) dla n ≥ 1 . Ciąg ten jest\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z11-1.png) dla $n \\ge 1$ . Ciąg ten jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5439,17 +5439,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dla ciągu arytmetycznego (a n ), określonego dla n ≥ 1 , jest spełniony warunek a 4 + a 5 + a 6 = 12 . Wtedy",
+    "prompt": "Dla ciągu arytmetycznego ($a_{n}$), określonego dla $n \\ge 1$ , jest spełniony warunek $a_{4} + a_{5} + a_{6} = 12$ . Wtedy",
     "choices": [
-      "a 5 = 4",
-      "a 5 = 3",
-      "a 5 = 6",
-      "a 5 = 5"
+      "$a_{5} = 4$",
+      "$a_{5} = 3$",
+      "$a_{5} = 6$",
+      "$a_{5} = 5$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $a_5 = 4$.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ oraz zauważ, że środkowy wyraz ciągu (tutaj $a_5$) jest średnią arytmetyczną wyrazów równo oddalonych od niego.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ oraz zauważ, że środkowy wyraz ciągu (tutaj $a_5$) jest średnią arytmetyczną wyrazów równo oddalonych od niego.",
       "Zapisz dane równanie, używając wzoru na $a_n$ lub właściwości ciągu: $(a_5 - r) + a_5 + (a_5 + r) = 12$, co upraszcza się do $3a_5 = 12$.",
       "Oblicz wartość $a_5$ z otrzymanego równania: $a_5 = \\frac{12}{3}$."
     ],
@@ -5470,7 +5470,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny (a n ), określony dla n ≥ 1 , w którym a 1 = √ 2 , a 2 = 2√ 2 , a 3 = 4√ 2 . Wzór na n-ty wyraz tego ciągu ma postać",
+    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla $n \\ge 1$ , w którym $a_{1}$ = √ 2 , $a_{2} = 2$√ 2 , $a_{3} = 4$√ 2 . Wzór na $n - ty$ wyraz tego ciągu ma postać",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-1.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-2.png)",
@@ -5503,17 +5503,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przyprostokątna LM trójkąta prostokątnego KLM ma długość 3, a przeciwprostokątna KL ma długość 8 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z14-1.gif) Wtedy miara α kąta ostrego LKM tego trójkąta spełnia warunek",
     "choices": [
-      "27°",
-      "24°",
-      "21°",
-      "18°"
+      "$27^{\\circ}$",
+      "$24^{\\circ}$",
+      "$21^{\\circ}$",
+      "$18^{\\circ}$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 21°",
+    "explanation": "C, czyli $21^{\\circ}$",
     "solutionSteps": [
       "W zadaniu mamy trójkąt prostokątny KLM, gdzie znamy długość przyprostokątnej $LM = 3$ oraz przeciwprostokątnej $KL = 8$. Chcemy znaleźć miarę kąta $\\alpha$, czyli kąta LKM. W trójkącie prostokątnym sinus kąta ostrego to stosunek długości przyprostokątnej przeciwległej temu kątowi do długości przeciwprostokątnej.",
       "Korzystając z definicji sinusa kąta, otrzymujemy zależność: $\\sin(\\alpha) = \\frac{LM}{KL} = \\frac{3}{8}$.",
-      "Aby znaleźć miarę kąta $\\alpha$, obliczamy wartość odwrotnej funkcji sinus (arcsin) dla stosunku $\\frac{3}{8}$: $\\alpha = \\arcsin\\left(\\frac{3}{8}\\right)$. Używając kalkulatora, otrzymujemy przybliżoną wartość $\\alpha \\approx 22.02^\\circ$. Porównując z podanymi opcjami, najbliższą wartością jest 21°."
+      "Aby znaleźć miarę kąta $\\alpha$, obliczamy wartość odwrotnej funkcji sinus (arcsin) dla stosunku $\\frac{3}{8}$: $\\alpha = \\arcsin\\left(\\frac{3}{8}\\right)$. Używając kalkulatora, otrzymujemy przybliżoną wartość $\\alpha \\approx 22.02^\\circ$. Porównując z podanymi opcjami, najbliższą wartością jest $21^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5563,12 +5563,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest okrąg o środku S. Punkty K, L i M leżą na tym okręgu. Na łuku KL tego okręgu są oparte kąty KSL i KML (zobacz rysunek), których miary α i β spełniają warunek α + β = 111° . Wynika stąd, że ![Rysunek do zadania](/cke-matura/m18-maj/z16-1.gif)",
+    "prompt": "Dany jest okrąg o środku S. Punkty K, L i M leżą na tym okręgu. Na łuku KL tego okręgu są oparte kąty KSL i KML (zobacz rysunek), których miary α i β spełniają warunek $α + β$ = $111^{\\circ}$ . Wynika stąd, że ![Rysunek do zadania](/cke-matura/m18-maj/z16-1.gif)",
     "choices": [
-      "α=74°",
-      "α=76°",
-      "α=70°",
-      "α=72°"
+      "α=$74^{\\circ}$",
+      "α=$76^{\\circ}$",
+      "α=$70^{\\circ}$",
+      "α=$72^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\alpha=74^\\circ$",
@@ -5594,19 +5594,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trapez prostokątny KLMN, którego podstawy mają długości |KL| = a , |MN| = b , a > b . Kąt KLM ma miarę 60° . Długość ramienia LM tego trapezu jest równa ![Rysunek do zadania](/cke-matura/m18-maj/z17-1.gif)",
+    "prompt": "Dany jest trapez prostokątny KLMN, którego podstawy mają długości $|KL| = a$ , $|MN| = b$ , $a > b$ . Kąt KLM ma miarę $60^{\\circ}$ . Długość ramienia LM tego trapezu jest równa ![Rysunek do zadania](/cke-matura/m18-maj/z17-1.gif)",
     "choices": [
-      "a − b",
-      "2(a − b)",
-      "a + 1 / 2 b",
-      "a+b / 2"
+      "$a - b$",
+      "2$(a - b)$",
+      "$a + 1 / 2b$",
+      "$a + b / 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2(a - b)$",
     "solutionSteps": [
-      "Zauważ, że po poprowadzeniu wysokości z wierzchołka M do podstawy KL, powstaje trójkąt prostokątny o jednym z kątów 60° i przyprostokątnym równym $a-b$.",
-      "W tym trójkącie prostokątnym, przyprostokątna oznaczona jako $a-b$ leży naprzeciwko kąta 60°, a ramię trapezu (przeciwprostokątna) jest szukaną długością. Korzystając z definicji sinusa ($\\sin(60^\\circ) = \\frac{\\text{przyprostokątna naprzeciwko}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\sin(60^\\circ) = \\frac{a-b}{|LM|}$.",
-      "Ponieważ $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, możemy zapisać równanie $\\frac{\\sqrt{3}}{2} = \\frac{a-b}{|LM|}$. Przekształcając je, aby wyznaczyć $|LM|$, otrzymujemy $|LM| = \\frac{2(a-b)}{\\sqrt{3}}$. Jednakże, przyprostokątna *obok* kąta 60° to $a-b$, a ramię trapezu to przeciwprostokątna. Z definicji cosinusa ($\\cos(60^\\circ) = \\frac{\\text{przyprostokątna przy}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\cos(60^\\circ) = \\frac{a-b}{|LM|}$.",
+      "Zauważ, że po poprowadzeniu wysokości z wierzchołka M do podstawy KL, powstaje trójkąt prostokątny o jednym z kątów_{60}^{\\circ} i przyprostokątnym równym $a-b$.",
+      "W tym trójkącie prostokątnym, przyprostokątna oznaczona jako $a-b$ leży naprzeciwko kąta $60^{\\circ}$, a ramię trapezu (przeciwprostokątna) jest szukaną długością. Korzystając z definicji sinusa ($\\sin(60^\\circ) = \\frac{\\text{przyprostokątna naprzeciwko}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\sin(60^\\circ) = \\frac{a-b}{|LM|}$.",
+      "Ponieważ $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, możemy zapisać równanie $\\frac{\\sqrt{3}}{2} = \\frac{a-b}{|LM|}$. Przekształcając je, aby wyznaczyć $|LM|$, otrzymujemy $|LM| = \\frac{2(a-b)}{\\sqrt{3}}$. Jednakże, przyprostokątna *obok* kąta $60^{\\circ}$ to $a-b$, a ramię trapezu to przeciwprostokątna. Z definicji cosinusa ($\\cos(60^\\circ) = \\frac{\\text{przyprostokątna przy}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\cos(60^\\circ) = \\frac{a-b}{|LM|}$.",
       "Ponieważ $\\cos(60^\\circ) = \\frac{1}{2}$, mamy $\\frac{1}{2} = \\frac{a-b}{|LM|}$. Stąd $|LM| = 2(a-b)$."
     ],
     "examSource": {
@@ -5626,12 +5626,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt K = (2,2) jest wierzchołkiem trójkąta równoramiennego KLM, w którym |KM| = |LM| . Odcinek MN jest wysokością trójkąta i N = (4,3) . Zatem",
+    "prompt": "Punkt $K = (2,2)$ jest wierzchołkiem trójkąta równoramiennego KLM, w którym $|KM| = |LM|$ . Odcinek MN jest wysokością trójkąta i $N = (4,3)$ . Zatem",
     "choices": [
-      "L = (5,3)",
-      "L = (6,4)",
-      "L = (3,5)",
-      "L = (4,6)"
+      "$L = (5,3)$",
+      "$L = (6,4)$",
+      "$L = (3,5)$",
+      "$L = (4,6)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $L = (6,4)$",
@@ -5665,12 +5665,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = (m + 2)x + 3 oraz y = (2m – 1)x – 3 są równoległe, gdy",
+    "prompt": "Proste o równaniach y = $(m + 2) x + 3$ oraz y = $(2m - 1) x - 3$ są równoległe, gdy",
     "choices": [
-      "m=2",
-      "m=3",
-      "m=0",
-      "m=1"
+      "$m = 2$",
+      "$m = 3$",
+      "$m = 0$",
+      "$m = 1$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m=3$.",
@@ -5698,17 +5698,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Podstawą ostrosłupa jest kwadrat KLMN o boku długości 4. Wysokością tego ostrosłupa jest krawędź NS, a jej długość też jest równa 4 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z20-1.gif) Kąt α, jaki tworzą krawędzie KS i MS, spełnia warunek",
     "choices": [
-      "α=45°",
-      "45°",
-      "α>60°",
-      "α=60°"
+      "α=$45^{\\circ}$",
+      "$45^{\\circ}$",
+      "α>$60^{\\circ}$",
+      "α=$60^{\\circ}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli α=60°",
+    "explanation": "D, czyli α=$60^{\\circ}$",
     "solutionSteps": [
       "W trójkącie prostokątnym KNS mamy przyprostokątne KN i NS o długości 4. Obliczamy długość przeciwprostokątnej KS z twierdzenia Pitagorasa: $KS^2 = KN^2 + NS^2 = 4^2 + 4^2 = 16 + 16 = 32$, więc $KS = \\sqrt{32} = 4\\sqrt{2}$.",
       "Trójkąt KSM jest równoramienny, bo $KS = MS = 4\\sqrt{2}$. Krawędź KM jest przekątną kwadratu KLMN, więc $KM = \\sqrt{4^2 + 4^2} = \\sqrt{32} = 4\\sqrt{2}$. Ponieważ $KS = MS = KM$, trójkąt KSM jest równoboczny.",
-      "Kąt α jest kątem przy wierzchołku S w trójkącie równobocznym KSM. Wszystkie kąty w trójkącie równobocznym mają miarę 60°."
+      "Kąt α jest kątem przy wierzchołku S w trójkącie równobocznym KSM. Wszystkie kąty w trójkącie równobocznym mają miarę $60^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5727,18 +5727,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Podstawą graniastosłupa prostego jest prostokąt o bokach długości 3 i 4. Kąt α , jaki przekątna tego graniastosłupa tworzy z jego podstawą, jest równy 45° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z21-1.gif) Wysokość graniastosłupa jest równa",
+    "prompt": "Podstawą graniastosłupa prostego jest prostokąt o bokach długości 3 i 4. Kąt α , jaki przekątna tego graniastosłupa tworzy z jego podstawą, jest równy $45^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z21-1.gif) Wysokość graniastosłupa jest równa",
     "choices": [
       "5",
       "3√ 2",
       "5√ 2",
-      "5√ 3 / 3"
+      "5√ $\\frac{3}{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 5",
     "solutionSteps": [
       "Oblicz długość przekątnej podstawy graniastosłupa. Podstawa jest prostokątem o bokach 3 i 4, więc przekątną (d) obliczamy z twierdzenia Pitagorasa: $d^2 = 3^2 + 4^2 = 9 + 16 = 25$, co daje $d = 5$.",
-      "Skorzystaj z informacji o kącie α. Kąt między przekątną graniastosłupa (p), przekątną podstawy (d) i wysokością graniastosłupa (h) wynosi 45°. Tworzą one trójkąt prostokątny, gdzie $tg(\\alpha) = \\frac{h}{d}$.",
+      "Skorzystaj z informacji o kącie α. Kąt między przekątną graniastosłupa (p), przekątną podstawy (d) i wysokością graniastosłupa (h) wynosi $45^{\\circ}$. Tworzą one trójkąt prostokątny, gdzie $tg(\\alpha) = \\frac{h}{d}$.",
       "Oblicz wysokość graniastosłupa. Skoro $tg(45^\\circ) = 1$, to $1 = \\frac{h}{5}$, czyli $h = 5$."
     ],
     "examSource": {
@@ -5760,10 +5760,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono bryłę zbudowaną z walca i półkuli. Wysokość walca jest równa r i jest taka sama jak promień półkuli oraz taka sama jak promień podstawy walca. ![Rysunek do zadania](/cke-matura/m18-maj/z22-1.gif) Objętość tej bryły jest równa",
     "choices": [
-      "5 / 3 πr 3",
-      "4 / 3 πr 3",
-      "2 / 3 πr 3",
-      "1 / 3 πr 3"
+      "$\\frac{5}{3}$ π$r^{3}$",
+      "$\\frac{4}{3}$ π$r^{3}$",
+      "$\\frac{2}{3}$ π$r^{3}$",
+      "$\\frac{1}{3}$ π$r^{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{5}{3} \\pi r^3$",
@@ -5789,7 +5789,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W zestawie ![Rysunek do zadania](/cke-matura/m18-maj/z23-1.png) jest 2 m liczb ( m ≥ 1) , w tym m liczb 2 i m liczb 4. Odchylenie standardowe tego zestawu liczb jest równe",
+    "prompt": "W zestawie ![Rysunek do zadania](/cke-matura/m18-maj/z23-1.png) jest 2 m liczb $(m \\ge 1)$ , w tym m liczb 2 i m liczb 4. Odchylenie standardowe tego zestawu liczb jest równe",
     "choices": [
       "2",
       "1",
@@ -5853,10 +5853,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pudełku jest 50 kuponów, wśród których jest 15 kuponów przegrywających, a pozostałe kupony są wygrywające. Z tego pudełka w sposób losowy wyciągamy jeden kupon. Prawdopodobieństwo zdarzenia polegającego na tym, że wyciągniemy kupon wygrywający, jest równe",
     "choices": [
-      "15 / 35",
-      "1 / 50",
-      "15 / 50",
-      "35 / 50"
+      "$\\frac{15}{35}$",
+      "$\\frac{1}{50}$",
+      "$\\frac{15}{50}$",
+      "$\\frac{35}{50}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{35}{50}$",
@@ -5881,7 +5881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 2x 2 − 3x > 5 .",
+    "prompt": "Rozwiąż nierówność $2x^{2} - 3x > 5$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5909,7 +5909,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie (x 3 + 125)(x 2 − 64) = 0 .",
+    "prompt": "Rozwiąż równanie $(x^{3} + 125)(x^{2} - 64)$ = 0 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5966,7 +5966,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od √ 2 –1.",
+    "prompt": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od √ $2 - 1$.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5995,7 +5995,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem ƒ(x)=a x (gdzie a>0 i a≠1), należy punkt P=(2,9) . Oblicz a i zapisz zbiór wartości funkcji g , określonej wzorem g (x)=ƒ(x)−2 .",
+    "prompt": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem $f(x) = a$ x $(gdzie $a > 0$ i a\\ne 1)$, należy punkt $P = (2,9)$ . Oblicz a i zapisz zbiór wartości funkcji $g$ , określonej wzorem $g(x) = f(x) - 2$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6024,14 +6024,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dwunasty wyraz ciągu arytmetycznego (a n ), określonego dla n≥1, jest równy 30, a suma jego dwunastu początkowych wyrazów jest równa 162. Oblicz pierwszy wyraz tego ciągu.",
+    "prompt": "Dwunasty wyraz ciągu arytmetycznego ($a_{n}$), określonego dla $n\\ge 1$, jest równy 30, a suma jego dwunastu początkowych wyrazów jest równa 162. Oblicz pierwszy wyraz tego ciągu.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-3$",
     "solutionSteps": [
-      "Skorzystaj ze wzorów na n-ty wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$) oraz sumę n-pierwszych wyrazów ($S_n = \\frac{a_1 + a_n}{2} \\cdot n$). Z treści zadania mamy dane: $a_{12} = 30$ oraz $S_{12} = 162$.",
+      "Skorzystaj ze wzorów na $n - ty$ wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$) oraz sumę $n - pie$rwszych wyrazów ($S_n = \\frac{a_1 + a_n}{2} \\cdot n$). Z treści zadania mamy dane: $a_{12} = 30$ oraz $S_{12} = 162$.",
       "Podstaw dane do wzoru na sumę dwunastu wyrazów: $162 = \\frac{a_1 + 30}{2} \\cdot 12$. Uprość równanie: $162 = (a_1 + 30) \\cdot 6$.",
       "Rozwiąż równanie z jedną niewiadomą $a_1$: podziel obie strony przez 6 ($27 = a_1 + 30$), a następnie odejmij 30 ($a_1 = 27 - 30$)."
     ],
@@ -6052,7 +6052,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych punkty A=(4,3) i B=(10,5) są wierzchołkami trójkąta ABC. Wierzchołek C leży na prostej o równaniu y = 2x + 3 . Oblicz współrzędne punktu C, dla którego kąt ABC jest prosty.",
+    "prompt": "W układzie współrzędnych punkty $A = (4,3)$ i $B = (10,5)$ są wierzchołkami trójkąta ABC. Wierzchołek C leży na prostej o równaniu $y = 2x + 3$ . Oblicz współrzędne punktu C, dla którego kąt ABC jest prosty.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6061,7 +6061,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Oblicz współczynnik kierunkowy prostej AB. $m_{AB} = \\frac{5-3}{10-4} = \\frac{2}{6} = \\frac{1}{3}$.",
       "Ponieważ kąt ABC jest prosty, prosta BC jest prostopadła do prostej AB. Oblicz współczynnik kierunkowy prostej BC. $m_{BC} = -\\frac{1}{m_{AB}} = -3$.",
-      "Zapisz równanie prostej BC przechodzącej przez punkt B=(10,5) o współczynniku kierunkowym $m_{BC} = -3$. $y - 5 = -3(x - 10) \\Rightarrow y = -3x + 35$.",
+      "Zapisz równanie prostej BC przechodzącej przez punkt $B = (10,5)$ o współczynniku kierunkowym $m_{BC} = -3$. $y - 5 = -3(x - 10) \\Rightarrow y = -3x + 35$.",
       "Znajdź punkt przecięcia prostych $y = 2x + 3$ (prosta zawierająca punkt C) i $y = -3x + 35$ (prosta BC). Przyrównaj równania: $2x + 3 = -3x + 35 \\Rightarrow 5x = 32 \\Rightarrow x = \\frac{32}{5}$. Oblicz współrzędną y: $y = 2(\\frac{32}{5}) + 3 = \\frac{64}{5} + \\frac{15}{5} = \\frac{79}{5}$."
     ],
     "examSource": {
@@ -6144,7 +6144,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "4",
       "√ 2",
-      "½"
+      "$\\frac{1}{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $2$.",
@@ -6171,7 +6171,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba naturalna n = 2 14 ⋅ 5 15 w zapisie dziesiętnym ma",
+    "prompt": "Liczba naturalna $n = 2$ 14 ⋅ 5 15 w zapisie dziesiętnym ma",
     "choices": [
       "14 cyfr",
       "15 cyfr",
@@ -6212,7 +6212,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 25%",
     "solutionSteps": [
-      "Obliczamy nową wysokość prowizji po obniżce w lutym, odejmując 1 punkt procentowy od prowizji ze stycznia. Prowizja wynosiła $4\\% - 1\\% = 3\\%$.",
+      "Obliczamy nową wysokość prowizji po obniżce w lutym, odejmując_{1} punkt procentowy od prowizji ze stycznia. Prowizja wynosiła $4\\% - 1\\% = 3\\%$.",
       "Obliczamy o ile procent faktycznie zmniejszyła się prowizja, porównując jej obniżkę (1 punkt procentowy) do pierwotnej wysokości (4%). Obliczenie to: $\\frac{1\\%}{4\\%} = \\frac{1}{4}$.",
       "Zamieniamy ułamek $\\frac{1}{4}$ na procent, mnożąc przez 100%. Otrzymujemy $\\frac{1}{4} \\cdot 100\\% = 25\\%$."
     ],
@@ -6264,19 +6264,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Para liczb x = 2 i y = 2 jest rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m19-maj/z05-1.gif)",
+    "prompt": "Para liczb $x = 2$ i $y = 2$ jest rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m19-maj/z05-1.gif)",
     "choices": [
-      "a = − 1",
-      "a = 1",
-      "a = − 2",
-      "a = 2"
+      "$a = -1$",
+      "$a = 1$",
+      "$a = -2$",
+      "$a = 2$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $a=2$",
     "solutionSteps": [
       "Podstaw dane $x=2$ i $y=2$ do pierwszego równania układu: $2+2=4$. To równanie jest spełnione, więc możemy przejść do drugiego równania.",
       "Podstaw dane $x=2$ i $y=2$ do drugiego równania: $a \\cdot 2 + 2 = 2$.",
-      "Rozwiąż równanie z jedną niewiadomą $a$: $2a + 2 = 2 \\implies 2a = 0 \\implies a = 0$. W treści zadania pojawił się błąd — para $x=2, y=2$ nie jest rozwiązaniem żadnego z podanych układów. Zakładając, że w zadaniu chodziło o układ:\n$\\begin{cases} x+y=4 \\\\ ax+y=2 \\end{cases}$\nwtedy podstawienie $x=2, y=2$ do drugiego równania dałoby $a \\cdot 2 + 2 = 2 \\implies 2a=0 \\implies a=0$. Nadal nie pasuje do odpowiedzi.\nJeśli drugi układ to:\n$\\begin{cases} x+y=4 \\\\ x+ay=2 \\end{cases}$\nwtedy $2 + a \\cdot 2 = 2 \\implies 2a = 0 \\implies a=0$.\nJeśli drugi układ to:\n$\\begin{cases} x+y=4 \\\\ ax-y=2 \\end{cases}$\nwtedy $a \\cdot 2 - 2 = 2 \\implies 2a = 4 \\implies a=2$. To pasuje do odpowiedzi D."
+      "Rozwiąż równanie z jedną niewiadomą $a$: $2a + 2 = 2 \\implies 2a = 0 \\implies a = 0$. W treści zadania pojawił się błąd - para $x=2, y=2$ nie jest rozwiązaniem żadnego z podanych układów. Zakładając, że w zadaniu chodziło o układ:\n$\\begin{cases} x+y=4 \\\\ ax+y=2 \\end{cases}$\nwtedy podstawienie $x=2, y=2$ do drugiego równania dałoby $a \\cdot 2 + 2 = 2 \\implies 2a=0 \\implies a=0$. Nadal nie pasuje do odpowiedzi.\nJeśli drugi układ to:\n$\\begin{cases} x+y=4 \\\\ x+ay=2 \\end{cases}$\nwtedy $2 + a \\cdot 2 = 2 \\implies 2a = 0 \\implies a=0$.\nJeśli drugi układ to:\n$\\begin{cases} x+y=4 \\\\ ax-y=2 \\end{cases}$\nwtedy $a \\cdot 2 - 2 = 2 \\implies 2a = 4 \\implies a=2$. To pasuje do odpowiedzi D."
     ],
     "examSource": {
       "kind": "matura",
@@ -6297,10 +6297,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równanie ![Rysunek do zadania](/cke-matura/m19-maj/z06-1.gif)",
     "choices": [
-      "ma trzy różne rozwiązania: x = 1, x = 3, x = − 2.",
-      "ma trzy różne rozwiązania: x = − 1, x = − 3, x = 2.",
-      "ma dwa różne rozwiązania: x = 1, x = − 2.",
-      "ma dwa różne rozwiązania: x = − 1, x = 2."
+      "ma trzy różne rozwiązania: $x = 1$, $x = 3$, $x = -2$.",
+      "ma trzy różne rozwiązania: $x = -1$, $x = -3$, $x = 2$.",
+      "ma dwa różne rozwiązania: $x = 1$, $x = -2$.",
+      "ma dwa różne rozwiązania: $x = -1$, $x = 2$."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli ma dwa różne rozwiązania: $x=1$, $x=-2$.",
@@ -6354,12 +6354,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wartości funkcji f jest przedział",
+    "prompt": "Zbiorem wartości funkcji $f$ jest przedział",
     "choices": [
-      "(− ∞,0⟩",
+      "(- ∞,0⟩",
       "⟨0, 4⟩",
-      "⟨− 4, + ∞)",
-      "⟨4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
+      "⟨- 4, + ∞)",
+      "⟨4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\langle -4, + \\infty )$",
@@ -6385,19 +6385,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji f w przedziale ⟨1,4⟩ jest równa",
+    "prompt": "Największa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
     "choices": [
-      "− 3",
-      "− 4",
+      "-3",
+      "-4",
       "4",
-      "0 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)"
+      "0 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 0",
     "solutionSteps": [
       "Funkcja kwadratowa ma postać kanoniczną $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka. Z treści zadania wiemy, że $W=(2,-4)$, więc $p=2$ i $q=-4$. Funkcja ma postać $f(x) = a(x-2)^2 - 4$.",
       "Wyznacz współczynnik $a$ korzystając z jednego z miejsc zerowych (np. $x=0$). Podstaw $x=0$ i $f(0)=0$ do wzoru: $0 = a(0-2)^2 - 4$, czyli $0 = 4a - 4$, co daje $a=1$. Funkcja ma postać $f(x) = (x-2)^2 - 4$.",
-      "Określ największą wartość funkcji w przedziale $\\langle 1, 4 \\rangle$. Jest to funkcja kwadratowa z ramionami skierowanymi w górę (bo $a=1>0$), więc największa wartość będzie na krańcach przedziału. Oblicz wartości funkcji na krańcach: $f(1)=(1-2)^2 - 4 = 1-4 = -3$ oraz $f(4)=(4-2)^2 - 4 = 4-4 = 0$. Porównując $f(1)=-3$ i $f(4)=0$, widzimy, że największa wartość to 0."
+      "Określ największą wartość funkcji $w$ przedziale $\\langle 1, 4 \\rangle$. Jest to funkcja kwadratowa z ramionami skierowanymi w górę (bo $a=1>0$), więc największa wartość będzie na krańcach przedziału. Oblicz wartości funkcji na krańcach: $f(1)=(1-2)^2 - 4 = 1-4 = -3$ oraz $f(4)=(4-2)^2 - 4 = 4-4 = 0$. Porównując $f(1)=-3$ i $f(4)=0$, widzimy, że największa wartość to 0."
     ],
     "examSource": {
       "kind": "matura",
@@ -6416,12 +6416,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii wykresu funkcji f jest prosta o równaniu",
+    "prompt": "Osią symetrii wykresu funkcji $f$ jest prosta o równaniu",
     "choices": [
-      "y = − 4",
-      "x = − 4",
-      "y = 2",
-      "x = 2"
+      "$y = -4$",
+      "$x = -4$",
+      "$y = 2$",
+      "$x = 2$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = 2$",
@@ -6446,17 +6446,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym ( a n ), określonym dla n ≥ 1 , dane są dwa wyrazy: a 1 = 7 i a 8 = − 49. Suma ośmiu początkowych wyrazów tego ciągu jest równa",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla $n \\ge 1$ , dane są dwa wyrazy: $a_{1} = 7$ i $a_{8} = -49$. Suma ośmiu początkowych wyrazów tego ciągu jest równa",
     "choices": [
-      "–168",
-      "–189",
-      "–21",
-      "–42 pokaż wskazówkę »"
+      "-168",
+      "-189",
+      "-21",
+      "-42 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $-168$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Podstaw dane $a_1 = 7$, $a_8 = -49$ i $n=8$, aby obliczyć różnicę $r$.\n$$-49 = 7 + (8-1)r$$\n$$-49 = 7 + 7r$$\n$$-56 = 7r$$\n$$r = -8$$",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Podstaw dane $a_1 = 7$, $a_8 = -49$ i $n=8$, aby obliczyć różnicę $r$.\n$$-49 = 7 + (8-1)r$$\n$$-49 = 7 + 7r$$\n$$-56 = 7r$$\n$$r = -8$$",
       "Użyj wzoru na sumę ośmiu początkowych wyrazów ciągu arytmetycznego: $S_n = \\frac{n(a_1 + a_n)}{2}$. Podstaw $n=8$, $a_1 = 7$ i $a_8 = -49$.\n$$S_8 = \\frac{8(7 + (-49))}{2}$$\n$$S_8 = \\frac{8(-42)}{2}$$\n$$S_8 = 4(-42)$$\n$$S_8 = -168$$"
     ],
     "examSource": {
@@ -6476,9 +6476,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ( a n ), określony dla n ≥ 1 . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy",
+    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla $n \\ge 1$ . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy",
     "choices": [
-      "1 / 3",
+      "$\\frac{1}{3}$",
       "1 / √ 3",
       "3",
       "√ 3"
@@ -6507,12 +6507,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sinus kąta ostrego α jest równy 4 / 5 . Wtedy",
+    "prompt": "Sinus kąta ostrego α jest równy $\\frac{4}{5}$ . Wtedy",
     "choices": [
-      "cos α = 4 / 5",
-      "cos α = 1 / 5",
-      "cos α = 9 / 25",
-      "cos α = 3 / 5"
+      "cos $α = \\frac{4}{5}$",
+      "cos $α = \\frac{1}{5}$",
+      "cos $α = \\frac{9}{25}$",
+      "cos $α = \\frac{3}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\cos \\alpha = \\frac{3}{5}$",
@@ -6540,10 +6540,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty D i E leżą na okręgu opisanym na trójkącie równobocznym ABC (zobacz rysunek). Odcinek CD jest średnicą tego okręgu. Kąt wpisany DEB ma miarę α . ![Rysunek do zadania](/cke-matura/m19-maj/z14-1.gif) Zatem",
     "choices": [
-      "α = 30 °",
+      "α = $30^{\\circ}$",
       "α",
-      "α > 45 °",
-      "α = 45 °"
+      "α > $45^{\\circ}$",
+      "α = $45^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\alpha > 45^\\circ$",
@@ -6551,7 +6551,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Ponieważ trójkąt ABC jest równoboczny, jego kąty wewnętrzne wynoszą po $60^\\circ$. Kąt wpisany $\\angle ACB$ opiera się na tym samym łuku co kąt środkowy $\\angle AOB$, ale to nam nie pomoże. Kąt $\\angle ADB$ jest kątem wpisanym opartym na średnicy CD, więc jest kątem prostym, $\\angle ADB = 90^\\circ$.",
       "Kąt $\\angle CDB$ jest kątem wpisanym opartym na łuku CB. Kąt środkowy $\\angle COB$ (gdzie O to środek okręgu) jest równy $120^\\circ$ (ponieważ trójkąt ABC jest równoboczny). Zatem kąt wpisany $\\angle CDB = \\frac{1}{2} \\angle COB = \\frac{1}{2} \\cdot 120^\\circ = 60^\\circ$. Alternatywnie, kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB co $\\angle CDB$.",
       "Kąt $\\angle ADE$ jest częścią kąta prostego $\\angle ADB$. Kąt $\\angle CDB = 60^\\circ$. Kąt $\\angle ADB = 90^\\circ$. Trójkąt $\\triangle BCD$ ma kąty $90^\\circ$ i $60^\\circ$, więc $\\angle DBC = 180^\\circ - 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\angle DEB = \\alpha$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Kąt $\\angle DCB$ jest częścią kąta $\\angle ACB = 60^\\circ$. Ponieważ CD jest średnicą, trójkąt $\\triangle CBD$ jest prostokątny i $\\angle CBD = 90^\\circ$. Trójkąt równoboczny ABC ma wszystkie kąty $60^\\circ$. Kąt $\\angle DCB$ jest równy $\\angle ACB = 60^\\circ$. Kąt wpisany $\\alpha = \\angle DEB$ opiera się na tym samym łuku DB co kąt wpisany $\\angle DCB$. Zatem $\\alpha = \\angle DCB$. Skoro $\\triangle ABC$ jest równoboczny, $\\angle ACB = 60^\\circ$. Kąt $\\angle DCB$ jest równy $60^\\circ$.",
-      "Skoro $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB, ich miary są równe. Kąt $\\angle ACB$ ma miarę $60^\\circ$. Ponieważ CD jest średnicą, kąt $\\angle CBD = 90^\\circ$. W trójkącie $\\triangle BCD$, kąty wynoszą $90^\\circ$, $60^\\circ$ (kąt przy C) i $30^\\circ$. Zatem $\\angle DCB = 60^\\circ$. Stąd $\\alpha = 60^\\circ$. Jest to sytuacja szczególna. Sprawdźmy inny kąt. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, a kąt $\\angle CAB$ na tym samym łuku. $\\angle CAB = 60^\\circ$. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Z rysunku widać, że $\\angle ADC = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Zatem $\\angle ADB = 90^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Kąt $\\angle ACB = 60^\\circ$. Ponieważ CD jest średnicą, trójkąt $\\triangle CBD$ jest prostokątny, $\\angle CBD = 90^\\circ$. Trójkąt równoboczny ABC ma kąty $60^\\circ$. Kąt $\\angle DCB = \\angle ACB = 60^\\circ$. Kąt $\\angle DEB = \\alpha$. Kąty $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DCB = 60^\\circ$. Poprawka: $\\angle ADB$ jest kątem opartym na średnicy, więc $\\angle ADB = 90^\\circ$. $\\angle CDB$ jest kątem opartym na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB, zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = \\angle ADB - \\angle CDB = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Jeszcze raz. Kąt $\\angle ADB = 90^\\circ$ (oparty na średnicy). Kąt $\\angle CDB$ opiera się na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DAB = 60^\\circ$. Jednak w zadaniu jest podany inny rysunek, gdzie E jest po drugiej stronie. Przyjmując rysunek i opis, kąt $\\angle ADB=90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, tak jak $\\angle CAB=60^\\circ$. Zatem $\\angle CDB=60^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DCB$ jest częścią kąta $\\angle ACB = 60^\\circ$. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Zatem odpowiedź B jest poprawna, bo $\\alpha=60^\\circ > 45^\\circ$.",
+      "Skoro $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB, ich miary są równe. Kąt $\\angle ACB$ ma miarę $60^\\circ$. Ponieważ CD jest średnicą, kąt $\\angle CBD = 90^\\circ$. W trójkącie $\\triangle BCD$, kąty wynoszą $90^\\circ$, $60^\\circ$ (kąt przy C) i $30^\\circ$. Zatem $\\angle DCB = 60^\\circ$. Stąd $\\alpha = 60^\\circ$. Jest to sytuacja szczególna. Sprawdźmy inny kąt. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, $a_{k}$ąt $\\angle CAB$ na tym samym łuku. $\\angle CAB = 60^\\circ$. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Z rysunku widać, że $\\angle ADC = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Zatem $\\angle ADB = 90^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Kąt $\\angle ACB = 60^\\circ$. Ponieważ CD jest średnicą, trójkąt $\\triangle CBD$ jest prostokątny, $\\angle CBD = 90^\\circ$. Trójkąt równoboczny ABC ma kąty $60^\\circ$. Kąt $\\angle DCB = \\angle ACB = 60^\\circ$. Kąt $\\angle DEB = \\alpha$. Kąty $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DCB = 60^\\circ$. Poprawka: $\\angle ADB$ jest kątem opartym na średnicy, więc $\\angle ADB = 90^\\circ$. $\\angle CDB$ jest kątem opartym na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB, zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = \\angle ADB - \\angle CDB = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Jeszcze raz. Kąt $\\angle ADB = 90^\\circ$ (oparty na średnicy). Kąt $\\angle CDB$ opiera się na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DAB = 60^\\circ$. Jednak w zadaniu jest podany inny rysunek, gdzie E jest po drugiej stronie. Przyjmując rysunek i opis, kąt $\\angle ADB=90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, tak jak $\\angle CAB=60^\\circ$. Zatem $\\angle CDB=60^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DCB$ jest częścią kąta $\\angle ACB = 60^\\circ$. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Zatem odpowiedź B jest poprawna, bo $\\alpha=60^\\circ > 45^\\circ$.",
       "Kąt $\\angle ADB$ jest kątem wpisanym opartym na średnicy CD, więc jest kątem prostym: $\\angle ADB = 90^\\circ$.",
       "Kąt $\\angle CDB$ opiera się na łuku CB. Kąt $\\angle CAB$ również opiera się na łuku CB i ma miarę $60^\\circ$ (bo $\\triangle ABC$ jest równoboczny), zatem $\\angle CDB = 60^\\circ$.",
       "Kąt $\\alpha = \\angle DEB$. Kąty wpisane opierające się na tym samym łuku są równe. Kąt $\\alpha$ opiera się na łuku DB, tak samo jak kąt $\\angle DAB$. Kąt $\\angle DAB$ jest równy kątowi $\\angle CAB$, który wynosi $60^\\circ$. Zatem $\\alpha = 60^\\circ$."
@@ -6575,15 +6575,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są dwa okręgi: okrąg o środku w punkcie O i promieniu 5 oraz okrąg o środku w punkcie P i promieniu 3. Odcinek OP ma długość 16. Prosta AB jest styczna do tych okręgów w punktach A i B . Ponadto prosta AB przecina odcinek OP w punkcie K (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z15-1.gif) Wtedy",
     "choices": [
-      "|OK| = 6",
-      "|OK| = 8",
-      "|OK| = 10",
-      "|OK| = 12"
+      "$|OK| = 6$",
+      "$|OK| = 8$",
+      "$|OK| = 10$",
+      "$|OK| = 12$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 10",
     "solutionSteps": [
-      "Zauważ, że trójkąty $\\triangle OAK$ i $\\triangle PBK$ są podobne na mocy cechy podobieństwa kąt-kąt (kąty przy wierzchołku K są równe jako wierzchołkowe, a kąty przy A i B są proste, ponieważ promienie są prostopadłe do stycznej).",
+      "Zauważ, że trójkąty $\\triangle OAK$ i $\\triangle PBK$ są podobne na mocy cechy podobieństwa kąt-kąt (kąty przy wierzchołku K są równe jako wierzchołkowe, $a_{k}$ąty przy A i B są proste, ponieważ promienie są prostopadłe do stycznej).",
       "Zapisz stosunek odpowiadających sobie boków podobnych trójkątów: $\\frac{|OA|}{|PB|} = \\frac{|OK|}{|PK|}$. Podstaw dane: $\\frac{5}{3} = \\frac{|OK|}{|PK|}$.",
       "Skorzystaj z faktu, że $|OK| + |PK| = |OP| = 16$. Z poprzedniego kroku mamy $|PK| = \\frac{3}{5}|OK|$. Podstawiając do równania na długość odcinka OP: $|OK| + \\frac{3}{5}|OK| = 16$. Rozwiązując równanie, otrzymujemy $\\frac{8}{5}|OK| = 16$, czyli $|OK| = 16 \\cdot \\frac{5}{8} = 10$."
     ],
@@ -6604,7 +6604,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest romb o boku długości 4 i kącie rozwartym 150° . Pole tego rombu jest równe",
+    "prompt": "Dany jest romb o boku długości 4 i kącie rozwartym $150^{\\circ}$ . Pole tego rombu jest równe",
     "choices": [
       "8",
       "12",
@@ -6614,7 +6614,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli 8",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na pole rombu $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to kąt ostry rombu. Kąt rozwarty to 150°, więc kąt ostry wynosi $180° - 150° = 30°$.",
+      "Skorzystaj ze wzoru na pole rombu $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to kąt ostry rombu. Kąt rozwarty to $150^{\\circ}$, więc_{k}ąt ostry wynosi $180° - 150° = 30°$.",
       "Podstaw dane do wzoru: $P = 4^2 \\sin 30°$. Pamiętaj, że $\\sin 30° = \\frac{1}{2}$.",
       "Oblicz pole: $P = 16 \\cdot \\frac{1}{2} = 8$."
     ],
@@ -6635,18 +6635,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = (2m + 2)x − 2019 oraz y = (3m − 3)x + 2019 są równoległe, gdy",
+    "prompt": "Proste o równaniach y = $(2m + 2) x - 2019$ oraz y = $(3m - 3) x + 2019$ są równoległe, gdy",
     "choices": [
-      "m = − 1",
-      "m = 0",
-      "m = 1",
-      "m = 5"
+      "$m = -1$",
+      "$m = 0$",
+      "$m = 1$",
+      "$m = 5$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $m=5$",
     "solutionSteps": [
       "Warunkiem równoległości dwóch prostych w postaci $y = ax + b$ jest równość ich współczynników kierunkowych, czyli $a_1 = a_2$. W tym zadaniu mamy $a_1 = 2m + 2$ oraz $a_2 = 3m - 3$.",
-      "Przyrównujemy współczynniki kierunkowe do siebie: $2m + 2 = 3m - 3$, a następnie rozwiązujemy równanie, aby znaleźć wartość $m$. Przenosimy wyrazy z $m$ na jedną stronę, a stałe na drugą: $2 + 3 = 3m - 2m$.",
+      "Przyrównujemy współczynniki kierunkowe do siebie: $2m + 2 = 3m - 3$, a następnie rozwiązujemy równanie, aby znaleźć wartość $m$. Przenosimy wyrazy $z$ $m$ na jedną stronę, a stałe na drugą: $2 + 3 = 3m - 2m$.",
       "Upraszczamy równanie: $5 = m$. Otrzymana wartość $m=5$ oznacza, że proste są równoległe."
     ],
     "examSource": {
@@ -6666,12 +6666,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta o równaniu y = ax + b jest prostopadła do prostej o równaniu y = −4x + 1 i przechodzi przez punkt P = (½,0), gdy",
+    "prompt": "Prosta o równaniu $y = ax + b$ jest prostopadła do prostej o równaniu $y = -4x + 1$ i przechodzi przez punkt $P = (\\frac{1}{2},0)$, gdy",
     "choices": [
-      "a = − 4 i b = − 2",
-      "a = 1 / 4 i b = − 1 / 8",
-      "a = − 4 i b = 2",
-      "a = 1 / 4 i b = 1 / 2"
+      "$a = -4$ i $b = -2$",
+      "$a = \\frac{1}{4}$ i $b = -\\frac{1}{8}$",
+      "$a = -4$ i $b = 2$",
+      "$a = \\frac{1}{4}$ i $b = \\frac{1}{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a = \\frac{1}{4}$ i $b = -\\frac{1}{8}$",
@@ -6696,17 +6696,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiony jest fragment wykresu funkcji liniowej f . Na wykresie tej funkcji leżą punkty A = (0, 4) i B = (2, 2) . ![Rysunek do zadania](/cke-matura/m19-maj/z19-1.gif) Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres funkcji g określonej wzorem",
+    "prompt": "Na rysunku przedstawiony jest fragment wykresu funkcji liniowej f . Na wykresie tej funkcji leżą punkty $A = (0, 4)$ i $B = (2, 2)$ . ![Rysunek do zadania](/cke-matura/m19-maj/z19-1.gif) Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres funkcji $g$ określonej wzorem",
     "choices": [
-      "g(x) = x + 4",
-      "g(x) = x − 4",
-      "g(x) = −x − 4",
-      "g(x) = −x + 4"
+      "$g(x) = x + 4$",
+      "$g(x) = x - 4$",
+      "$g(x)$ = -$x - 4$",
+      "$g(x)$ = -$x + 4$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $g(x) = -x - 4$.",
     "solutionSteps": [
-      "Wyznacz wzór funkcji $f(x)$ przechodzącej przez punkty A(0, 4) i B(2, 2). Punkt A(0, 4) jest punktem przecięcia z osią OY, więc wyraz wolny $b=4$. Skorzystaj z punktu B do wyznaczenia współczynnika kierunkowego $a = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{2-4}{2-0} = \\frac{-2}{2} = -1$. Wzór funkcji $f(x)$ to $f(x) = -x + 4$.",
+      "Wyznacz wzór funkcji $f(x)$ przechodzącej przez punkty $A(0, 4)$ i $B(2, 2)$. Punkt $A(0, 4)$ jest punktem przecięcia z osią OY, więc wyraz wolny $b=4$. Skorzystaj z punktu B do wyznaczenia współczynnika kierunkowego $a = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{2-4}{2-0} = \\frac{-2}{2} = -1$. Wzór funkcji $f(x)$ to $f(x) = -x + 4$.",
       "Znajdź wzór funkcji $g(x)$, która jest obrazem prostej AB w symetrii względem początku układu współrzędnych. Symetria względem początku układu $(0,0)$ oznacza, że punkt $(x,y)$ przechodzi na punkt $(-x,-y)$. Zatem, jeśli $y = f(x)$, to w symetrii $-y = f(-x)$. Stąd $g(x) = -f(-x)$.",
       "Podstaw wzór funkcji $f(x)$ do zależności z kroku 2. $g(x) = -f(-x) = - (-( -x) + 4) = - (x + 4) = -x - 4$."
     ],
@@ -6727,7 +6727,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są punkty o współrzędnych A = (− 2, 5) oraz B = (4, − 1) . Średnica okręgu wpisanego w kwadrat o boku AB jest równa",
+    "prompt": "Dane są punkty o współrzędnych A = $(-2, 5)$ oraz B = $(4, - 1)$ . Średnica okręgu wpisanego w kwadrat o boku AB jest równa",
     "choices": [
       "12",
       "6",
@@ -6758,7 +6758,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pudełko w kształcie prostopadłościanu ma wymiary 5 dm × 3 dm × 2 dm (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z21-1.gif) Przekątna KL tego prostopadłościanu jest – z dokładnością do 0,01 dm – równa",
+    "prompt": "Pudełko w kształcie prostopadłościanu ma wymiary 5 $dm \\times 3 dm \\times 2$ dm (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z21-1.gif) Przekątna KL tego prostopadłościanu jest - z dokładnością do 0,01 $dm - r$ówna",
     "choices": [
       "5,83 dm",
       "6,16 dm",
@@ -6822,10 +6822,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Mediana zestawu sześciu danych liczb: 4, 8, 21, a , 16, 25, jest równa 14. Zatem",
     "choices": [
-      "a = 7",
-      "a = 12",
-      "a = 14",
-      "a = 20 pokaż wskazówkę »"
+      "$a = 7$",
+      "$a = 12$",
+      "$a = 14$",
+      "$a = 20$ pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a=12$.",
@@ -6861,7 +6861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli $2 \\cdot 3^4 = 2 \\cdot 81 = 162$",
     "solutionSteps": [
-      "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc 2 możliwości wyboru pierwszej cyfry (2 lub 5).",
+      "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc_{2} możliwości wyboru pierwszej cyfry (2 lub 5).",
       "Na pozostałych czterech pozycjach możemy umieścić dowolną z trzech cyfr (0, 2, 5).",
       "Oblicz liczbę wszystkich takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $2 \\cdot 3 \\cdot 3 \\cdot 3 \\cdot 3 = 2 \\cdot 3^4$."
     ],
@@ -6884,10 +6884,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pudełku jest 40 kul. Wśród nich jest 35 kul białych, a pozostałe to kule czerwone. Prawdopodobieństwo wylosowania każdej kuli jest takie samo. Z pudełka losujemy jedną kulę. Prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy kulę czerwoną, jest równe",
     "choices": [
-      "1 / 8",
-      "1 / 5",
-      "1 / 40",
-      "1 / 35"
+      "$\\frac{1}{8}$",
+      "$\\frac{1}{5}$",
+      "$\\frac{1}{40}$",
+      "$\\frac{1}{35}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{1}{8}$",
@@ -6913,7 +6913,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie (x 3 − 8)(x 2 − 4x − 5) = 0 .",
+    "prompt": "Rozwiąż równanie $(x^{3} - 8)(x^{2} - 4x - 5)$ = 0 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6942,7 +6942,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 3x 2 − 16x + 16 > 0 .",
+    "prompt": "Rozwiąż nierówność $3x^{2} - 16x + 16 > 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6970,7 +6970,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność 3a 2 − 2ab + 3b 2 ≥ 0 .",
+    "prompt": "Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność $3a^{2} - 2ab + 3b^{2} \\ge 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -7037,7 +7037,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{9}{25}$",
     "solutionSteps": [
-      "Określ liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem z 5-elementowego zbioru, więc wszystkich par $(x, y)$ jest $5 \\cdot 5 = 25$.",
+      "Określ liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem $z^{5} - ele$mentowego zbioru, więc wszystkich par $(x, y)$ jest $5 \\cdot 5 = 25$.",
       "Określ liczbę wyników sprzyjających zdarzeniu A. Iloczyn dwóch liczb jest nieparzysty wtedy i tylko wtedy, gdy obie liczby są nieparzyste. W zbiorze {1,2,3,4,5} mamy 3 liczby nieparzyste (1, 3, 5). Zatem liczb par $(x, y)$, gdzie obie liczby są nieparzyste, jest $3 \\cdot 3 = 9$.",
       "Oblicz prawdopodobieństwo zdarzenia A. Prawdopodobieństwo to stosunek liczby wyników sprzyjających zdarzeniu do liczby wszystkich możliwych wyników: $P(A) = \\frac{9}{25}$."
     ],
@@ -7058,7 +7058,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu ma długość 4 i tworzy z krótszą podstawą trapezu kąt o mierze 30° (zobacz rysunek). Oblicz długość przekątnej BD tego trapezu. ![Rysunek do zadania](/cke-matura/m19-maj/z31-1.gif)",
+    "prompt": "W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu ma długość 4 i tworzy z krótszą podstawą trapezu kąt o mierze $30^{\\circ}$ (zobacz rysunek). Oblicz długość przekątnej BD tego trapezu. ![Rysunek do zadania](/cke-matura/m19-maj/z31-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -7087,7 +7087,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg arytmetyczny (a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Różnicą tego ciągu jest liczba r = − 4 , a średnia arytmetyczna początkowych sześciu wyrazów tego ciągu: a 1 ,a 2 ,a 3 ,a 4 ,a 5 ,a 6 , jest równa 16. a) Oblicz pierwszy wyraz tego ciągu. b) Oblicz liczbę k, dla której a k = − 78 .",
+    "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$ . Różnicą tego ciągu jest liczba $r = -4$ , a średnia arytmetyczna początkowych sześciu wyrazów tego ciągu: $a_{1}$ ,$a_{2}$ ,$a_{3}$ ,$a_{4}$ ,$a_{5}$ ,$a_{6}$ , jest równa 16. a) Oblicz pierwszy wyraz tego ciągu. b) Oblicz liczbę k, dla której $a_{k} = -78$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -7097,7 +7097,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Użyj wzoru na sumę pierwszych sześciu wyrazów ciągu arytmetycznego: $S_6 = \\frac{a_1 + a_6}{2} \\cdot 6$. Wiemy, że średnia sześciu wyrazów wynosi 16, więc $S_6 = 16 \\cdot 6 = 96$. Wstawiając do wzoru, otrzymujemy $96 = \\frac{a_1 + a_6}{2} \\cdot 6$.",
       "Wyraź szósty wyraz ($a_6$) za pomocą pierwszego wyrazu ($a_1$) i różnicy ($r=-4$): $a_6 = a_1 + (6-1)r = a_1 + 5(-4) = a_1 - 20$. Podstaw ten wzór do równania z kroku 1: $96 = \\frac{a_1 + (a_1 - 20)}{2} \\cdot 6$.",
       "Rozwiąż równanie z kroku 2, aby obliczyć $a_1$: $96 = (2a_1 - 20) \\cdot 3 \\Rightarrow 32 = 2a_1 - 20 \\Rightarrow 52 = 2a_1 \\Rightarrow a_1 = 26$.",
-      "Użyj ogólnego wzoru na n-ty wyraz ciągu arytmetycznego $a_k = a_1 + (k-1)r$, aby znaleźć $k$. Podstaw obliczone $a_1 = 26$ i dane $a_k = -78$ oraz $r = -4$: $-78 = 26 + (k-1)(-4)$. Rozwiąż równanie: $-104 = (k-1)(-4) \\Rightarrow 26 = k-1 \\Rightarrow k = 27$."
+      "Użyj ogólnego wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_k = a_1 + (k-1)r$, aby znaleźć $k$. Podstaw obliczone $a_1 = 26$ i dane $a_k = -78$ oraz $r = -4$: $-78 = 26 + (k-1)(-4)$. Rozwiąż równanie: $-104 = (k-1)(-4) \\Rightarrow 26 = k-1 \\Rightarrow k = 27$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7116,14 +7116,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest punkt A = (−18,10). Prosta o równaniu y = 3x jest symetralną odcinka AB. Wyznacz współrzędne punktu B.",
+    "prompt": "Dany jest punkt A = $(-18,10)$. Prosta o równaniu $y = 3$ x jest symetralną odcinka AB. Wyznacz współrzędne punktu B.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$(20.4, -2.8)$",
     "solutionSteps": [
-      "Punkt A = (−18, 10) i środek odcinka AB leżą na prostej $y=3x$, więc muszą spełniać jej równanie. Wyznaczamy współrzędne środka S = (x, y) odcinka AB, podstawiając współrzędną A do równania prostej: $10 = 3 \\cdot (-18)$ — to błąd, punkt A nie leży na prostej $y=3x$. Środek odcinka AB leży na prostej $y=3x$. Oznaczmy środek jako $S=(x_S, y_S)$. Wtedy $y_S = 3x_S$.",
+      "Punkt A = $(-18, 10)$ i środek odcinka AB leżą na prostej $y=3x$, więc muszą spełniać jej równanie. Wyznaczamy współrzędne środka $S = (x, y)$ odcinka AB, podstawiając współrzędną A do równania prostej: $10 = 3 \\cdot (-18)$ - to błąd, punkt A nie leży na prostej $y=3x$. Środek odcinka AB leży na prostej $y=3x$. Oznaczmy środek jako $S=(x_S, y_S)$. Wtedy $y_S = 3x_S$.",
       "Środek odcinka AB to $S = \\left(\\frac{-18+x_B}{2}, \\frac{10+y_B}{2}\\right)$. Ponieważ S leży na prostej $y=3x$, podstawiamy współrzędne S do równania prostej: $\\frac{10+y_B}{2} = 3 \\cdot \\frac{-18+x_B}{2}$. Upraszczamy do $10+y_B = 3(-18+x_B)$, czyli $10+y_B = -54+3x_B$, co daje $y_B - 3x_B = -64$.",
       "Prosta $y=3x$ jest prostopadła do odcinka AB. Współczynnik kierunkowy prostej to 3. Współczynnik kierunkowy odcinka AB wynosi $\\frac{y_B-10}{x_B-(-18)} = \\frac{y_B-10}{x_B+18}$. Warunek prostopadłości prostych to iloczyn ich współczynników kierunkowych równy -1: $3 \\cdot \\frac{y_B-10}{x_B+18} = -1$. Upraszczamy do $3(y_B-10) = -(x_B+18)$, czyli $3y_B-30 = -x_B-18$, co daje $x_B + 3y_B = 12$.",
       "Rozwiązujemy układ równań:\n1) $y_B - 3x_B = -64$\n2) $x_B + 3y_B = 12$\nZ pierwszego równania $y_B = 3x_B - 64$. Podstawiamy do drugiego równania: $x_B + 3(3x_B - 64) = 12$.\n$x_B + 9x_B - 192 = 12$.\n$10x_B = 204$.\n$x_B = 20.4$.\nTeraz obliczamy $y_B = 3 \\cdot 20.4 - 64 = 61.2 - 64 = -2.8$."
@@ -7174,12 +7174,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość wyrażenia x 2 − 6x + 9 dla x = √ 3 + 3 jest równa",
+    "prompt": "Wartość wyrażenia $x^{2} - 6x + 9$ dla x = √ $3 + 3$ jest równa",
     "choices": [
       "1",
       "3",
-      "1 + 2√ 3",
-      "1 – 2√ 3"
+      "$1 + 2$√ 3",
+      "$1 - 2$√ 3"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $3$.",
@@ -7271,10 +7271,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba log 5 √ 125 jest równa",
     "choices": [
-      "2 / 3",
+      "$\\frac{2}{3}$",
       "2",
       "3",
-      "3 / 2"
+      "$\\frac{3}{2}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
@@ -7331,17 +7331,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wszystkich rozwiązań nierówności 3(1 − x) > 2(3x − 1) − 12x jest przedział",
+    "prompt": "Zbiorem wszystkich rozwiązań nierówności 3$(1 - x)$ > 2$(3x - 1)$ -12x jest przedział",
     "choices": [
-      "(– 5 / 3 , + ∞)",
-      "( – ∞, 5 / 3 )",
-      "( 5 / 3 , + ∞)",
-      "( – ∞, – 5 / 3 )"
+      "$(-\\frac{5}{3} , + \\infty )$",
+      "$(-\\infty , \\frac{5}{3})$",
+      "$(\\frac{5}{3} , + \\infty )$",
+      "$(-\\infty , - \\frac{5}{3})$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-\\frac{5}{3}, +\\infty)$",
     "solutionSteps": [
-      "Uprość nierówność, mnożąc nawiasy i grupując wyrazy z x po jednej stronie, a stałe po drugiej.\n$3 - 3x > 6x - 2 - 12x$\n$3 - 3x > -6x - 2$\n$3x > -5$",
+      "Uprość nierówność, mnożąc nawiasy i grupując wyrazy $z$ x po jednej stronie, a stałe po drugiej.\n$3 - 3x > 6x - 2 - 12x$\n$3 - 3x > -6x - 2$\n$3x > -5$",
       "Podziel obie strony przez 3, aby wyznaczyć x. Pamiętaj, że dzielenie przez liczbę dodatnią nie zmienia kierunku nierówności.\n$x > -\\frac{5}{3}$",
       "Zapisz rozwiązanie w postaci przedziału, uwzględniając znak nierówności większości.\n$x \\in (-\\frac{5}{3}, +\\infty)$"
     ],
@@ -7362,12 +7362,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma wszystkich rozwiązań równania x(x − 3)(x + 2) = 0 jest równa",
+    "prompt": "Suma wszystkich rozwiązań równania x$(x - 3)(x + 2)$ = 0 jest równa",
     "choices": [
       "0",
       "1",
       "2",
-      "3 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)"
+      "3 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $1$",
@@ -7393,12 +7393,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Współczynnik a we wzorze funkcji f jest równy",
+    "prompt": "Współczynnik $a$ we wzorze funkcji $f$ jest równy",
     "choices": [
       "1",
       "2",
-      "− 2",
-      "− 1 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)"
+      "-2",
+      "-1 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-1$",
@@ -7424,12 +7424,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji f w przedziale ⟨1,4⟩ jest równa",
+    "prompt": "Największa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
     "choices": [
-      "− 3",
+      "-3",
       "0",
       "1",
-      "2 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)"
+      "2 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1$",
@@ -7456,12 +7456,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii paraboli będącej wykresem funkcji f jest prosta o równaniu",
+    "prompt": "Osią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu",
     "choices": [
-      "x = 1",
-      "x = 2",
-      "y = 1",
-      "y = 2"
+      "$x = 1$",
+      "$x = 2$",
+      "$y = 1$",
+      "$y = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 2$",
@@ -7487,12 +7487,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie x(x − 2) = (x − 2) 2 w zbiorze liczb rzeczywistych",
+    "prompt": "Równanie x$(x - 2)$ = $(x - 2)$ 2 w zbiorze liczb rzeczywistych",
     "choices": [
       "nie ma rozwiązań",
-      "ma dokładnie jedno rozwiązanie: x = 2",
-      "ma dokładnie jedno rozwiązanie: x = 0",
-      "ma dwa różne rozwiązania: x = 1 i x = 2"
+      "ma dokładnie jedno rozwiązanie: $x = 2$",
+      "ma dokładnie jedno rozwiązanie: $x = 0$",
+      "ma dwa różne rozwiązania: $x = 1$ i $x = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli ma dokładnie jedno rozwiązanie: $x=2$.",
@@ -7518,11 +7518,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji liniowej f określonej wzorem f(x) = ax + b . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z11-1.png) Współczynniki a oraz b we wzorze funkcji f spełniają zależność",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji liniowej f określonej wzorem $f(x) = ax + b$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z11-1.png) Współczynniki a oraz b we wzorze funkcji $f$ spełniają zależność",
     "choices": [
-      "a + b > 0",
-      "a + b = 0",
-      "a ⋅ b > 0",
+      "$a + b > 0$",
+      "$a + b = 0$",
+      "a ⋅ $b > 0$",
       "a ⋅ b"
     ],
     "correctIndex": 3,
@@ -7550,10 +7550,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja f jest określona wzorem f(x) = 4 –x + 1 dla każdej liczby rzeczywistej x. Liczba f(½) jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = 4 - x + 1$ dla każdej liczby rzeczywistej x. Liczba $f(\\frac{1}{2})$ jest równa",
     "choices": [
-      "½",
-      "3 / 2",
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{2}$",
       "3",
       "17"
     ],
@@ -7581,12 +7581,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = (m − 2)x oraz y = 3 / 4 x + 7 są równoległe. Wtedy",
+    "prompt": "Proste o równaniach y = $(m - 2)$x oraz $y = 3 / 4x + 7$ są równoległe. Wtedy",
     "choices": [
-      "m = − 5 / 4",
-      "m = 2 / 3",
-      "m = 11 / 4",
-      "m = 10 / 3"
+      "$m = -\\frac{5}{4}$",
+      "$m = \\frac{2}{3}$",
+      "$m = \\frac{11}{4}$",
+      "$m = \\frac{10}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $m = \\frac{11}{4}$",
@@ -7612,7 +7612,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (a n ) jest określony wzorem a n = 2n 2 dla n ≥ 1 . Różnica a 5 − a 4 jest równa",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n} = 2 n^{2}$ dla $n \\ge 1$ . Różnica $a_{5} - a_{4}$ jest równa",
     "choices": [
       "4",
       "20",
@@ -7643,11 +7643,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , czwarty wyraz jest równy 3, a różnica tego ciągu jest równa 5. Suma a 1 + a 2 + a 3 + a 4 jest równa",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla $n \\ge 1$ , czwarty wyraz jest równy 3, a różnica tego ciągu jest równa 5. Suma $a_{1} + a_{2} + a_{3} + a_{4}$ jest równa",
     "choices": [
-      "− 42",
-      "− 36",
-      "− 18",
+      "-42",
+      "-36",
+      "-18",
       "6"
     ],
     "correctIndex": 2,
@@ -7677,12 +7677,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt A = ( 1 / 3 , − 1) należy do wykresu funkcji liniowej f określonej wzorem f(x) = 3x + b . Wynika stąd, że",
+    "prompt": "Punkt A = $(\\frac{1}{3} , - 1)$ należy do wykresu funkcji liniowej f określonej wzorem $f(x) = 3x + b$ . Wynika stąd, że",
     "choices": [
-      "b = 2",
-      "b = 1",
-      "b = − 1",
-      "b = − 2"
+      "$b = 2$",
+      "$b = 1$",
+      "$b = -1$",
+      "$b = -2$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $b = -2$",
@@ -7708,18 +7708,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C, D leżą na okręgu o środku w punkcie O. Kąt środkowy DOC ma miarę 118° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z17-1.png) Miara kąta ABC jest równa",
+    "prompt": "Punkty A, B, C, D leżą na okręgu o środku w punkcie O. Kąt środkowy DOC ma miarę $118^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z17-1.png) Miara kąta ABC jest równa",
     "choices": [
-      "59°",
-      "48°",
-      "62°",
-      "31°"
+      "$59^{\\circ}$",
+      "$48^{\\circ}$",
+      "$62^{\\circ}$",
+      "$31^{\\circ}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 31°",
+    "explanation": "D, czyli $31^{\\circ}$",
     "solutionSteps": [
       "Kąt wpisany ABC opiera się na tym samym łuku AC, co kąt środkowy AOC. Kąt środkowy jest dwa razy większy od kąta wpisanego opartego na tym samym łuku.",
-      "Kąt AOC jest kątem przyległym do kąta DOC, więc ich suma wynosi 180°. Obliczamy miarę kąta AOC: $180° - 118° = 62°$.",
+      "Kąt AOC jest kątem przyległym do kąta DOC, więc ich suma wynosi $180^{\\circ}$. Obliczamy miarę kąta AOC: $180° - 118° = 62°$.",
       "Kąt ABC jest dwa razy mniejszy od kąta środkowego AOC, który opiera się na tym samym łuku AC. Obliczamy miarę kąta ABC: $\\frac{62°}{2} = 31°$."
     ],
     "examSource": {
@@ -7739,12 +7739,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta przechodząca przez punkty A = (3, −2) i B = (−1, 6) jest określona równaniem",
+    "prompt": "Prosta przechodząca przez punkty A = $(3, - 2)$ i B = $(-1, 6)$ jest określona równaniem",
     "choices": [
-      "y = − 2x + 4",
-      "y = − 2x − 8",
-      "y = 2x + 8",
-      "y = 2x − 4"
+      "$y = -2x + 4$",
+      "$y = -2x - 8$",
+      "$y = 2x + 8$",
+      "$y = 2x - 4$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $y = -2x + 4$.",
@@ -7770,7 +7770,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny o kątach ostrych α i β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z19-1.png) Wyrażenie 2cos α − sin β jest równe",
+    "prompt": "Dany jest trójkąt prostokątny o kątach ostrych α i β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z19-1.png) Wyrażenie 2cos $α - sin$ β jest równe",
     "choices": [
       "2sin β",
       "cos α",
@@ -7801,7 +7801,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt B jest obrazem punktu A = (− 3, 5) w symetrii względem początku układu współrzędnych. Długość odcinka AB jest równa",
+    "prompt": "Punkt B jest obrazem punktu A = $(-3, 5)$ w symetrii względem początku układu współrzędnych. Długość odcinka AB jest równa",
     "choices": [
       "2√ 34",
       "8",
@@ -7811,7 +7811,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli $2\\sqrt{34}$",
     "solutionSteps": [
-      "Znajdź współrzędne punktu B, który jest obrazem punktu A w symetrii względem początku układu współrzędnych. W symetrii względem początku współrzędne punktu (x, y) zmieniają się na (-x, -y), więc $B = (3, -5)$.",
+      "Znajdź współrzędne punktu B, który jest obrazem punktu A w symetrii względem początku układu współrzędnych. W symetrii względem początku współrzędne punktu (x, y) zmieniają się na $(-x, - y)$, więc $B = (3, -5)$.",
       "Oblicz długość odcinka AB, korzystając ze wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Długość $AB = \\sqrt{(3 - (-3))^2 + (-5 - 5)^2} = \\sqrt{(3+3)^2 + (-10)^2}$.",
       "Uprość wyrażenie: $AB = \\sqrt{6^2 + (-10)^2} = \\sqrt{36 + 100} = \\sqrt{136}$. Zapisz $\\sqrt{136}$ w prostszej postaci: $\\sqrt{136} = \\sqrt{4 \\cdot 34} = 2\\sqrt{34}$."
     ],
@@ -7863,7 +7863,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pole prostokąta ABCD jest równe 90. Na bokach AB i CD wybrano – odpowiednio – punkty P i R, takie, że ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-2.png) Pole czworokąta APCR jest równe",
+    "prompt": "Pole prostokąta ABCD jest równe 90. Na bokach AB i CD wybrano - odpowiednio - punkty P i R, takie, że ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z22-2.png) Pole czworokąta APCR jest równe",
     "choices": [
       "36",
       "40",
@@ -7875,7 +7875,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Oznaczmy boki prostokąta jako $|AB| = x$ oraz $|BC| = y$. Z treści zadania wiemy, że pole prostokąta $ABCD$ wynosi $90$, czyli $x \\cdot y = 90$.",
       "Z rysunku odczytujemy, że punkt $P$ leży na boku $AB$ tak, że $|AP| = \\frac{1}{3}|AB| = \\frac{1}{3}x$, a punkt $R$ leży na boku $CD$ tak, że $|CR| = \\frac{1}{3}|CD| = \\frac{1}{3}x$.",
-      "Czworokąt $APCR$ składa się z dwóch trójkątów: $APR$ i $PCR$. Ponieważ $|AP| = |CR| = \\frac{1}{3}x$ i są to boki leżące naprzeciw siebie w prostokącie, to czworokąt $APCR$ jest równoległobokiem. Pole równoległoboku można obliczyć jako iloczyn długości podstawy i wysokości. Przyjmując podstawę $AP$, wysokość jest równa $AD$, czyli $y$. Pole $APCR = |AP| \\cdot |AD| = \\frac{1}{3}x \\cdot y = \\frac{1}{3}(xy)$.",
+      "Czworokąt $APCR$ składa się z dwóch trójkątów: $APR$ i $PCR$. Ponieważ $|AP| = |CR| = \\frac{1}{3}x$ i są to boki leżące naprzeciw siebie w prostokącie, to czworokąt $APCR$ jest równoległobokiem. Pole równoległoboku można obliczyć jako iloczyn długości podstawy $i$ wysokości. Przyjmując podstawę $AP$, wysokość jest równa $AD$, czyli $y$. Pole $APCR = |AP| \\cdot |AD| = \\frac{1}{3}x \\cdot y = \\frac{1}{3}(xy)$.",
       "Podstawiamy pole prostokąta $xy=90$ do wzoru na pole czworokąta $APCR$: Pole $APCR = \\frac{1}{3} \\cdot 90 = 30$. **Uwaga:** Sprawdzając opcje, widzę, że mój wynik nie pokrywa się z żadną z nich. Przeanalizowałem ponownie zadanie i rysunek. Czworokąt $APCR$ nie jest równoległobokiem. Jest to trapez, ponieważ boki $AP$ i $CR$ są równoległe. Niestety, długości przekątnych nie można jednoznacznie wyznaczyć z danych.\n\n**Korekta kroku 3:** Pole czworokąta $APCR$ można obliczyć odejmując pola dwóch trójkątów prostokątnych od pola prostokąta $ABCD$. Są to trójkąty $PBC$ i $RDA$. $|PB| = |AB| - |AP| = x - \\frac{1}{3}x = \\frac{2}{3}x$. $|DR| = |CD| - |CR| = x - \\frac{1}{3}x = \\frac{2}{3}x$.\n\n**Korekta kroku 4:** Pole trójkąta $PBC = \\frac{1}{2} |PB| \\cdot |BC| = \\frac{1}{2} \\cdot \\frac{2}{3}x \\cdot y = \\frac{1}{3}xy$. Pole trójkąta $RDA = \\frac{1}{2} |DR| \\cdot |AD| = \\frac{1}{2} \\cdot \\frac{2}{3}x \\cdot y = \\frac{1}{3}xy$.\n\n**Korekta kroku 5:** Pole czworokąta $APCR = \\text{Pole } ABCD - (\\text{Pole } PBC + \\text{Pole } RDA) = 90 - (\\frac{1}{3}xy + \\frac{1}{3}xy) = 90 - \\frac{2}{3}xy = 90 - \\frac{2}{3}(90) = 90 - 60 = 30$.\n\n**Ponowna analiza:** Okazuje się, że błąd tkwił w założeniu, że pole czworokąta $APCR$ można obliczyć przez odjęcie dwóch trójkątów. Poprawna interpretacja rysunku pokazuje, że czworokąt ten składa się z trójkąta $APR$ i trójkąta $PCR$. Z warunków zadania: $|AP| = \\frac{1}{3}x$, $|CR| = \\frac{1}{3}x$. W prostokącie mamy $|AD| = |BC| = y$.\n\n**Poprawny krok 3:** Pole trójkąta $APR = \\frac{1}{2} |AP| \\cdot |AD| = \\frac{1}{2} \\cdot \\frac{1}{3}x \\cdot y = \\frac{1}{6}xy$. Pole trójkąta $PCR = \\frac{1}{2} |CR| \\cdot |BC| = \\frac{1}{2} \\cdot \\frac{1}{3}x \\cdot y = \\frac{1}{6}xy$.\n\n**Poprawny krok 4:** Pole czworokąta $APCR = \\text{Pole trójkąta } APR + \\text{Pole trójkąta } PCR = \\frac{1}{6}xy + \\frac{1}{6}xy = \\frac{2}{6}xy = \\frac{1}{3}xy$.\n\n**Poprawny krok 5:** Podstawiamy $xy=90$: Pole $APCR = \\frac{1}{3} \\cdot 90 = 30$.\n\n**Ostateczna weryfikacja z odpowiedziami:** Nadal nie zgadza się z podanymi odpowiedziami. Błąd musi tkwić w interpretacji podziału boków lub w treści zadania. Załóżmy, że $|AP| = \\frac{1}{3}|AB|$ i $|CR| = \\frac{1}{3}|CD|$. Wtedy $AP = \\frac{1}{3}x$ i $CR = \\frac{1}{3}x$. Czworokąt $APCR$ ma równoległe boki $AP$ i $CR$ (leżą na prostych $AB$ i $CD$ które są równoległe), oraz równe długości. Jest to więc równoległobok. Wysokość równoległoboku jest równa odległości między prostymi $AB$ i $CD$, czyli $|AD| = y$. Pole równoległoboku $APCR = \\text{podstawa} \\times \\text{wysokość} = |AP| \\times |AD| = \\frac{1}{3}x \\times y = \\frac{1}{3}(xy)$.\n\n**Ponowna analiza rysunku:** Na rysunku widać, że $P$ leży na $AB$, a $R$ na $CD$. Długość $AP$ jest $\\frac{1}{3}$ długości $AB$. Długość $CR$ jest $\\frac{1}{3}$ długości $CD$."
     ],
     "examSource": {
@@ -7897,10 +7897,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Cztery liczby: 2, 3, a, 8, tworzące zestaw danych, są uporządkowane rosnąco. Mediana tego zestawu czterech danych jest równa medianie zestawu pięciu danych: 5, 3, 6, 8, 2. Zatem",
     "choices": [
-      "a = 7",
-      "a = 6",
-      "a = 5",
-      "a = 4"
+      "$a = 7$",
+      "$a = 6$",
+      "$a = 5$",
+      "$a = 4$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $a=7$.",
@@ -7987,7 +7987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 2(x − 1)(x + 3) > x − 1 .",
+    "prompt": "Rozwiąż nierówność 2$(x - 1)(x + 3)$ > $x - 1$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -7996,7 +7996,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową z zerem po prawej stronie. Wyciągnij wspólny czynnik przed nawias.\n$$2(x-1)(x+3) - (x-1) > 0$$\n$$(x-1)[2(x+3) - 1] > 0$$",
       "Uprość wyrażenie w drugim nawiasie i znajdź miejsca zerowe otrzymanego trójmianu kwadratowego.\n$$(x-1)(2x+6-1) > 0$$\n$$(x-1)(2x+5) > 0$$\nMiejsca zerowe to $x=1$ oraz $x=-\\frac{5}{2}$.",
-      "Naszkicuj parabolę lub zaznacz przedziały na osi liczbowej, uwzględniając nierówność \"większe od zera\" (> 0). Nierówność jest spełniona dla argumentów x znajdujących się na zewnątrz przedziału wyznaczonego przez miejsca zerowe.\n$$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$$"
+      "Naszkicuj parabolę lub zaznacz przedziały na osi liczbowej, uwzględniając nierówność \"większe od zera\" $(> 0)$. Nierówność jest spełniona dla argumentów x znajdujących się na zewnątrz przedziału wyznaczonego przez miejsca zerowe.\n$$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$$"
     ],
     "examSource": {
       "kind": "matura",
@@ -8015,7 +8015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie (x 2 − 1)(x 2 − 2x) = 0.",
+    "prompt": "Rozwiąż równanie $(x^{2} - 1)(x^{2} - 2x)$ = 0.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8044,14 +8044,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdych dwóch różnych liczb rzeczywistych a i b prawdziwa jest nierówność a(a − 2b) + 2b 2 > 0 .",
+    "prompt": "Wykaż, że dla każdych dwóch różnych liczb rzeczywistych a i b prawdziwa jest nierówność a$(a - 2b)$ + $2b^{2} > 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $a^2 - 2ab + 2b^2 > 0$ dla każdych różnych liczb rzeczywistych $a$ i $b$.",
     "solutionSteps": [
-      "Przekształć nierówność, grupując wyrazy i wyłączając wspólny czynnik przed nawias. Zauważ, że wyjściowa nierówność jest równoważna $a^2 - 2ab + 2b^2 > 0$. Możemy ją zapisać jako $a^2 - 2ab + b^2 + b^2 > 0$.",
+      "Przekształć nierówność, grupując wyrazy $i$ wyłączając wspólny czynnik przed nawias. Zauważ, że wyjściowa nierówność jest równoważna $a^2 - 2ab + 2b^2 > 0$. Możemy ją zapisać jako $a^2 - 2ab + b^2 + b^2 > 0$.",
       "Użyj wzoru skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$ i zauważ, że $b^2$ jest zawsze nieujemne, a $(a-b)^2$ jest zawsze dodatnie dla różnych liczb $a$ i $b$. Suma tych dwóch wyrażeń jest zatem zawsze dodatnia.",
       "Ponieważ $(a-b)^2 > 0$ dla $a \\neq b$, a $b^2 \\ge 0$, to $(a-b)^2 + b^2 > 0$. Rozpisując nawias, otrzymujemy $a^2 - 2ab + b^2 + b^2 > 0$, czyli $a^2 - 2ab + 2b^2 > 0$. Oznacza to, że wykazaliśmy prawdziwość nierówności."
     ],
@@ -8072,7 +8072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz |CE| = 3 / 4 |CD| . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że |CF| = 9 / 16 |CB|.",
+    "prompt": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz $|CE| = \\frac{3}{4}|CD|$ . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że $|CF| = \\frac{9}{16}|CB|$.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8101,7 +8101,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rzucamy dwa razy symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że co najmniej jeden raz wypadnie ścianka z pięcioma oczkami.",
+    "prompt": "Rzucamy dwa razy symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że co najmniej jeden raz wypadnie ścianka z pięcioma oczkami.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8137,7 +8137,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{3}{4}$",
     "solutionSteps": [
       "Zauważ, że rysunek przedstawia trójkąt prostokątny, gdzie jedna przyprostokątna ma długość 3, a druga 4. Kąt α jest kątem ostrym tego trójkąta.",
-      "Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej przeciwległej do tego kąta do długości przyprostokątnej leżącej przy tym kącie. W tym przypadku przeciwległa przyprostokątna ma długość 3, a przyległa 4.",
+      "Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej przeciwległej do tego kąta do długości przyprostokątnej leżącej przy tym kącie. W tym przypadku przeciwległa przyprostokątna ma długość 3, a przyległa_{4}.",
       "Oblicz tangens kąta α, dzieląc długość przyprostokątnej przeciwległej przez długość przyprostokątnej przyległej: $\\operatorname{tg} \\alpha = \\frac{3}{4}$."
     ],
     "examSource": {
@@ -8157,7 +8157,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD, w którym A = (5, − 5 / 3 ). Przekątna BD tego kwadratu jest zawarta w prostej o równaniu y = 4 / 3 x. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
+    "prompt": "Dany jest kwadrat ABCD, w którym A = $(5, - \\frac{5}{3})$. Przekątna BD tego kwadratu jest zawarta w prostej o równaniu $y = 4 / 3x$. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8186,15 +8186,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkie wyrazy ciągu geometrycznego (a n ), określonego dla n ≥ 1 , są dodatnie. Wyrazy tego ciągu spełniają warunek 6a 1 − 5a 2 + a 3 = 0 . Oblicz iloraz q tego ciągu należący do przedziału ⟨2√ 2 ,3√ 2 ⟩.",
+    "prompt": "Wszystkie wyrazy ciągu geometrycznego ($a_{n}$), określonego dla $n \\ge 1$ , są dodatnie. Wyrazy tego ciągu spełniają warunek $6a^{1} - 5a^{2} + a_{3} = 0$ . Oblicz iloraz q tego ciągu należący do przedziału ⟨2√ 2 ,3√ 2 ⟩.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$3$",
     "solutionSteps": [
-      "Zapisz warunek zadania, używając wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Mamy $a_2 = a_1 q$ oraz $a_3 = a_1 q^2$. Po podstawieniu otrzymujemy $6a_1 - 5(a_1 q) + (a_1 q^2) = 0$.",
-      "Uprość równanie, dzieląc obie strony przez $a_1$ (ponieważ wszystkie wyrazy są dodatnie, $a_1 \\neq 0$). Otrzymujemy $6 - 5q + q^2 = 0$.",
+      "Zapisz warunek zadania, używając wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Mamy $a_2 = a_1 q$ oraz $a_3 = a_1 q^2$. Po podstawieniu otrzymujemy $6a_1 - 5(a_1 q) + (a_1 q^2) = 0$.",
+      "Uprość równanie, dzieląc obie strony przez $a_1$ (ponieważ wszystkie wyrazy $s$ą dodatnie, $a_1 \\neq 0$). Otrzymujemy $6 - 5q + q^2 = 0$.",
       "Rozwiąż równanie kwadratowe $q^2 - 5q + 6 = 0$. Można je rozwiązać, rozkładając na czynniki $(q-2)(q-3) = 0$. Rozwiązaniami są $q=2$ oraz $q=3$.",
       "Wybierz rozwiązanie należące do przedziału $\\langle 2\\sqrt{2}, 3\\sqrt{2} \\rangle$. Ponieważ $2\\sqrt{2} \\approx 2.828$ i $3\\sqrt{2} \\approx 4.242$, jedynym rozwiązaniem z tego przedziału jest $q=3$."
     ],
@@ -8223,7 +8223,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{32\\sqrt{7}}{3}$",
     "solutionSteps": [
       "Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość ostrosłupa. Tangens kąta nachylenia ściany bocznej do podstawy to $\\frac{h}{\\frac{a}{2}}$, co jest równe $\\sqrt{7}$. Stąd $\\frac{2h}{a} = \\sqrt{7}$.",
-      "Z twierdzenia Pitagorasa dla trójkąta prostokątnego utworzonego przez wysokość ostrosłupa, połowę przekątnej podstawy i krawędź boczną: $h^2 + (\\frac{a\\sqrt{2}}{2})^2 = 6^2$. Podstawiając $h = \\frac{a\\sqrt{7}}{2}$ z kroku 1, otrzymujemy $(\\frac{a\\sqrt{7}}{2})^2 + \\frac{a^2 \\cdot 2}{4} = 36$.",
+      "Z twierdzenia Pitagorasa dla trójkąta prostokątnego utworzonego przez wysokość ostrosłupa, połowę przekątnej podstawy $i$ krawędź boczną: $h^2 + (\\frac{a\\sqrt{2}}{2})^2 = 6^2$. Podstawiając $h = \\frac{a\\sqrt{7}}{2}$ z kroku 1, otrzymujemy $(\\frac{a\\sqrt{7}}{2})^2 + \\frac{a^2 \\cdot 2}{4} = 36$.",
       "Rozwiązując równanie z kroku 2: $\\frac{7a^2}{4} + \\frac{2a^2}{4} = 36 \\implies \\frac{9a^2}{4} = 36 \\implies 9a^2 = 144 \\implies a^2 = 16 \\implies a = 4$. Wtedy $h = \\frac{4\\sqrt{7}}{2} = 2\\sqrt{7}$.",
       "Obliczamy objętość ostrosłupa ze wzoru $V = \\frac{1}{3}a^2h$: $V = \\frac{1}{3} \\cdot 4^2 \\cdot 2\\sqrt{7} = \\frac{1}{3} \\cdot 16 \\cdot 2\\sqrt{7} = \\frac{32\\sqrt{7}}{3}$."
     ],
@@ -8244,12 +8244,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Niech a = −2 , b = 3. Wartość wyrażenia a b − b a jest równa",
+    "prompt": "Niech $a = -2$ , $b = 3$. Wartość wyrażenia a $b - b$ a jest równa",
     "choices": [
-      "73 ⁄ 9",
-      "71 / 9",
-      "− 73 / 9",
-      "− 71 / 9"
+      "$\\frac{73}{9}$",
+      "$\\frac{71}{9}$",
+      "-$\\frac{73}{9}$",
+      "-$\\frac{71}{9}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $-\\frac{73}{9}$",
@@ -8305,12 +8305,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość wyrażenia log 4 8 + 5log 4 2 jest równa",
+    "prompt": "Wartość wyrażenia log 4 $8 + 5log$ 4 2 jest równa",
     "choices": [
       "2",
       "4",
-      "2 + log 4 5",
-      "1 + log 4 10"
+      "$2 + \\log 4$ 5",
+      "$1 + \\log 4$ 10"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 4",
@@ -8367,12 +8367,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba (2√ 7 − 5) 2 · (2√ 7 + 5) 2 jest równa",
+    "prompt": "Liczba $(2\\sqrt7 - 5)$ 2 \\cdot $(2\\sqrt7 + 5)$ 2 jest równa",
     "choices": [
       "9",
       "3",
       "2809",
-      "28 − 20√ 7"
+      "$28 - 20$√ 7"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 9",
@@ -8399,7 +8399,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich liczb x spełniających warunek: 11 ≤ 2x−7 ≤ 15 .",
+    "prompt": "Wskaż rysunek, na którym jest przedstawiony zbiór wszystkich liczb x spełniających warunek: $11 \\le 2x - 7 \\le 15$ .",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-1.png)",
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-2.png)",
@@ -8430,7 +8430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważmy treść następującego zadania: Obwód prostokąta o bokach długości a i b jest równy 60. Jeden z boków tego prostokąta jest o 10 dłuższy od drugiego. Oblicz długości boków tego prostokąta. Który układ równań opisuje zależności między długościami boków tego prostokąta?",
+    "prompt": "Rozważmy treść następującego zadania: Obwód prostokąta o bokach długości $a$ i b jest równy 60. Jeden z boków tego prostokąta jest o 10 dłuższy od drugiego. Oblicz długości boków tego prostokąta. Który układ równań opisuje zależności między długościami boków tego prostokąta?",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m20-probna/z07-1.png)",
       "![Rysunek do zadania](/cke-matura/m20-probna/z07-2.png)",
@@ -8461,12 +8461,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m20-probna/z08-1.png) , gdzie x ≠ – 2 , jest liczba należąca do przedziału",
+    "prompt": "Rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m20-probna/z08-1.png) , gdzie x ≠ -2 , jest liczba należąca do przedziału",
     "choices": [
-      "(–2,1)",
+      "$(-2,1)$",
       "⟨1,+∞)",
-      "(–∞,–5)",
-      "⟨–5,–2)"
+      "$(-\\infty , - 5)$",
+      "⟨-5,-2)"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\langle1,+\\infty)$",
@@ -8494,8 +8494,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Linę o długości 100 metrów rozcięto na trzy części, których długości pozostają w stosunku 3 : 4 : 5 . Stąd wynika, że najdłuższa z tych części ma długość",
     "choices": [
-      "41 2 / 3 metra",
-      "33 1 / 3 metra",
+      "41 $\\frac{2}{3}$ metra",
+      "33 $\\frac{1}{3}$ metra",
       "60 metrów",
       "25 metrów"
     ],
@@ -8523,12 +8523,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem f(x) = x 2 + bx + c . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i c – we wzorze funkcji f – spełniają warunki:",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem $f(x) = x^{2} + bx + c$ . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i $c - we$ wzorze funkcji $f - spe$łniają warunki:",
     "choices": [
-      "b c > 0",
+      "b $c > 0$",
       "b c",
-      "b > 0 i c > 0",
-      "b > 0 i c"
+      "$b > 0$ i $c > 0$",
+      "$b > 0$ i c"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $b \\cdot c > 0$",
@@ -8555,18 +8555,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg arytmetyczny (a n ) , określony dla n ≥ 1, w którym są dane: a 1 = 2 i a 2 = 9 . Wtedy a n = 79 dla",
+    "prompt": "Dany jest ciąg arytmetyczny ($a_{n}$) , określony dla $n \\ge 1$, w którym są dane: $a_{1} = 2$ i $a_{2} = 9$ . Wtedy $a_{n} = 79$ dla",
     "choices": [
-      "n = 10",
-      "n = 11",
-      "n = 12",
-      "n = 13"
+      "$n = 10$",
+      "$n = 11$",
+      "$n = 12$",
+      "$n = 13$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $n=12$",
     "solutionSteps": [
       "Oblicz różnicę ciągu arytmetycznego, odejmując pierwszy wyraz od drugiego: $r = a_2 - a_1 = 9 - 2 = 7$.",
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i podstaw dane: $79 = 2 + (n-1) \\cdot 7$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i podstaw dane: $79 = 2 + (n-1) \\cdot 7$.",
       "Rozwiąż równanie, aby znaleźć $n$: $77 = (n-1) \\cdot 7 \\implies 11 = n-1 \\implies n = 12$."
     ],
     "examSource": {
@@ -8588,10 +8588,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trzywyrazowy ciąg geometryczny o wyrazach dodatnich: (81, 3x, 4) . Stąd wynika, że",
     "choices": [
-      "x = 18",
-      "x = 6",
-      "x = 85 / 6",
-      "x = 6 / 85"
+      "$x = 18$",
+      "$x = 6$",
+      "$x = \\frac{85}{6}$",
+      "$x = \\frac{6}{85}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 6$",
@@ -8619,10 +8619,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i spełniona jest równość ![Rysunek do zadania](/cke-matura/m20-probna/z13-1.png) . Stąd wynika, że",
     "choices": [
-      "cosα = 24 / 49",
-      "cosα = 5 / 7",
-      "cosα = 25 / 49",
-      "cosα = 5√ 6 / 7"
+      "cosα = $\\frac{24}{49}$",
+      "cosα = $\\frac{5}{7}$",
+      "cosα = $\\frac{25}{49}$",
+      "cosα = 5√ $\\frac{6}{7}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{5}{13}$",
@@ -8648,20 +8648,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na okręgu o środku w punkcie O leżą punkty A, B i C (zobacz rysunek). Kąt ABC ma miarę 121° , a kąt BOC ma miarę 40°. ![Rysunek do zadania](/cke-matura/m20-probna/z14-1.png) Kąt AOB ma miarę",
+    "prompt": "Na okręgu o środku w punkcie O leżą punkty A, B i C (zobacz rysunek). Kąt ABC ma miarę $121^{\\circ}$ , $a_{k}$ąt BOC ma miarę $40^{\\circ}$. ![Rysunek do zadania](/cke-matura/m20-probna/z14-1.png) Kąt AOB ma miarę",
     "choices": [
-      "59°",
-      "50°",
-      "81°",
-      "78°"
+      "$59^{\\circ}$",
+      "$50^{\\circ}$",
+      "$81^{\\circ}$",
+      "$78^{\\circ}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $78^{\\circ}$",
     "solutionSteps": [
-      "Kąt środkowy oparty na tym samym łuku co kąt wpisany jest dwa razy większy od kąta wpisanego. Kąt $AOC$ jest kątem wpisanym opartym na łuku $ABC$, a kąt $ABC$ ma $121^{\\circ}$. Kąt środkowy oparty na łuku $ABC$ ma miarę $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Jest to kąt $AOC$ \"większy\". Kąt $AOC$ \"mniejszy\" ma miarę $360^{\\circ} - 118^{\\circ} = 242^{\\circ}$. Alternatywnie, kąt wpisany oparty na tym samym łuku, co kąt środkowy $AOC$, ma miarę $121^{\\circ}$. Taki kąt nie może istnieć, ponieważ jest większy od $180^{\\circ}$. Zatem rozważamy kąt oparty na mniejszym łuku $AC$. Kąt wpisany oparty na łuku $AC$ ma $180^{\\circ}-121^{\\circ} = 59^{\\circ}$. Kąt środkowy $AOC$ (mniejszy) ma miarę $2 \\cdot 59^{\\circ} = 118^{\\circ}$.",
+      "Kąt środkowy oparty na tym samym łuku co kąt wpisany jest dwa razy większy od kąta wpisanego. Kąt $AOC$ jest kątem wpisanym opartym na łuku $ABC$, $a_{k}$ąt $ABC$ ma $121^{\\circ}$. Kąt środkowy oparty na łuku $ABC$ ma miarę $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Jest to kąt $AOC$ \"większy\". Kąt $AOC$ \"mniejszy\" ma miarę $360^{\\circ} - 118^{\\circ} = 242^{\\circ}$. Alternatywnie, kąt wpisany oparty na tym samym łuku, co kąt środkowy $AOC$, ma miarę $121^{\\circ}$. Taki kąt nie może istnieć, ponieważ jest większy od $180^{\\circ}$. Zatem rozważamy kąt oparty na mniejszym łuku $AC$. Kąt wpisany oparty na łuku $AC$ ma $180^{\\circ}-121^{\\circ} = 59^{\\circ}$. Kąt środkowy $AOC$ (mniejszy) ma miarę $2 \\cdot 59^{\\circ} = 118^{\\circ}$.",
       "Suma kątów środkowych tworzących pełny kąt wokół środka okręgu wynosi $360^{\\circ}$. Znamy kąt $BOC = 40^{\\circ}$ i mniejszy kąt $AOC = 118^{\\circ}$. Kąt $AOB$ możemy obliczyć, odejmując znane kąty od pełnego kąta: $\\angle AOB = 360^{\\circ} - \\angle AOC - \\angle BOC$. To jest błędne podejście, ponieważ nie wiemy, czy punkty A, B, C są w tej kolejności na okręgu.",
       "(poprawione).** Kąt wpisany $ABC$ jest oparty na łuku $AC$. Kąt środkowy oparty na tym samym łuku (mniejszym) to kąt $AOC$. Kąt $ABC = 121^{\\circ}$ jest kątem rozwartym, więc opiera się na łuku mniejszym niż półokrąg. Miara łuku $AC$ jest równa $2 \\cdot (180^{\\circ} - 121^{\\circ}) = 2 \\cdot 59^{\\circ} = 118^{\\circ}$. Kąt środkowy $AOC$ wynosi $118^{\\circ}$.",
-      "Kąt $AOB$ i kąt $BOC$ sumują się do kąta $AOC$ lub różnią się o kąt $AOC$, w zależności od wzajemnego położenia punktów. Mając kąt $AOC = 118^{\\circ}$ i kąt $BOC = 40^{\\circ}$, możemy obliczyć kąt $AOB$. Ponieważ $118^{\\circ} > 40^{\\circ}$, punkt $B$ znajduje się między punktami $A$ i $C$ na łuku nie zawierającym $B$. Zatem $\\angle AOB = \\angle AOC - \\angle BOC = 118^{\\circ} - 40^{\\circ} = 78^{\\circ}$."
+      "Kąt $AOB$ i kąt $BOC$ sumują się do kąta $AOC$ lub różnią się o kąt $AOC$, w zależności od wzajemnego położenia punktów. Mając_{k}ąt $AOC = 118^{\\circ}$ i kąt $BOC = 40^{\\circ}$, możemy obliczyć kąt $AOB$. Ponieważ $118^{\\circ} > 40^{\\circ}$, punkt $B$ znajduje się między punktami $A$ i $C$ na łuku nie zawierającym $B$. Zatem $\\angle AOB = \\angle AOC - \\angle BOC = 118^{\\circ} - 40^{\\circ} = 78^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8680,10 +8680,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC punkt D leży na boku BC, a punkt E leży na boku AC. Odcinek DE jest równoległy do boku AB, a ponadto |AE| = |DE| = 4 , |AB| = 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z15-1.png) Odcinek CE ma długość",
+    "prompt": "W trójkącie ABC punkt D leży na boku BC, a punkt E leży na boku AC. Odcinek DE jest równoległy do boku AB, a ponadto $|AE| = |DE| = 4$ , $|AB| = 6$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z15-1.png) Odcinek CE ma długość",
     "choices": [
-      "16 / 3",
-      "8 / 3",
+      "$\\frac{16}{3}$",
+      "$\\frac{8}{3}$",
       "8",
       "6"
     ],
@@ -8724,7 +8724,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Wzór na pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Podstawiamy dane: $6\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$.",
       "Przekształcamy równanie, aby wyznaczyć $a^2$: mnożymy obie strony przez 4 i dzielimy przez $\\sqrt{3}$, co daje $24 = a^2$.",
-      "Obliczamy długość boku $a$, wyciągając pierwiastek kwadratowy z 24: $a = \\sqrt{24} = \\sqrt{4 \\cdot 6} = 2\\sqrt{6}$."
+      "Obliczamy długość boku $a$, wyciągając pierwiastek kwadratowy $z^{24}$: $a = \\sqrt{24} = \\sqrt{4 \\cdot 6} = 2\\sqrt{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8743,7 +8743,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty B = (–2,4) i C = (5,1) są sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe",
+    "prompt": "Punkty B = $(-2,4)$ i $C = (5,1)$ są sąsiednimi wierzchołkami kwadratu ABCD. Pole tego kwadratu jest równe",
     "choices": [
       "29",
       "40",
@@ -8775,17 +8775,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD. ![Rysunek do zadania](/cke-matura/m20-probna/z18-1.png) Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to",
     "choices": [
-      "∠SAO",
-      "∠SAB",
-      "∠SOA",
-      "∠ASB"
+      "\\angle SAO",
+      "\\angle SAB",
+      "\\angle SOA",
+      "\\angle ASB"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\angle SOA$",
     "solutionSteps": [
       "Kąt nachylenia krawędzi bocznej do płaszczyzny podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę. Krawędź boczna to $SA$, a płaszczyzna podstawy to $ABCD$.",
       "Rzutem prostokątnym krawędzi $SA$ na płaszczyznę podstawy $ABCD$ jest odcinek $SO$, gdzie $O$ jest środkiem kwadratu $ABCD$ (punkt przecięcia przekątnych). Kąt nachylenia $SA$ do podstawy to zatem kąt między odcinkami $SA$ i $SO$.",
-      "Z definicji kąta między prostą a płaszczyzną, kątem tym jest kąt między prostą a jej rzutem prostokątnym na tę płaszczyznę. Szukanym kątem jest więc kąt $ASO$."
+      "Z definicji kąta między prostą a płaszczyzną, kątem tym jest kąt między prostą a jej rzutem prostokątnym na tę płaszczyznę. Szukanym kątem jest więc_{k}ąt $ASO$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8835,18 +8835,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta k przechodzi przez punkt A = (4,–4) i jest prostopadła do osi Ox . Prosta k ma równanie",
+    "prompt": "Prosta k przechodzi przez punkt A = $(4, - 4)$ i jest prostopadła do osi Ox . Prosta k ma równanie",
     "choices": [
-      "x – 4 = 0",
-      "x – y = 0",
-      "y + 4 = 0",
-      "x + y = 0"
+      "$x - 4 = 0$",
+      "$x - y = 0$",
+      "$y + 4 = 0$",
+      "$x + y = 0$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $x – 4 = 0$",
     "solutionSteps": [
       "Znajdź równanie prostej prostopadłej do osi Ox. Prosta prostopadła do osi Ox ma postać $x = c$, gdzie $c$ jest stałą.",
-      "Ponieważ prosta k przechodzi przez punkt A = (4,–4), jej współrzędna x musi być równa 4. Zatem równanie prostej k to $x = 4$.",
+      "Ponieważ prosta k przechodzi przez punkt A = $(4, - 4)$, jej współrzędna x musi być równa 4. Zatem równanie prostej k to $x = 4$.",
       "Przekształć równanie prostej do postaci z podanych opcji. Równanie $x = 4$ jest równoważne $x - 4 = 0$."
     ],
     "examSource": {
@@ -8866,12 +8866,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta l jest nachylona do osi Ox pod kątem 30° i przecina oś Oy w punkcie (0,– √ 3 ) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie",
+    "prompt": "Prosta l jest nachylona do osi Ox pod kątem $30^{\\circ}$ i przecina oś Oy w punkcie $(0, - \\sqrt3)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie",
     "choices": [
-      "y = √ 3 / 3 x – √ 3",
-      "y = √ 3 / 3 x + √ 3",
-      "y = 1 / 2 x – √ 3",
-      "y = 1 / 2 x + √ 3"
+      "y = √ $3 / 3x$ - √ 3",
+      "y = √ $3 / 3x$ + √ 3",
+      "$y = 1 / 2x$ - √ 3",
+      "$y = 1 / 2x$ + √ 3"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$",
@@ -8971,7 +8971,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "D, czyli $1017$",
     "solutionSteps": [
       "Szukamy liczb naturalnych czterocyfrowych $n$, takich że $1000 \\le n < 2017$. Najmniejszą taką liczbą jest $1000$.",
-      "Największą liczbą spełniającą warunek jest $2016$. Obliczamy liczbę elementów w tym przedziale, odejmując najmniejszą liczbę od największej i dodając 1: $2016 - 1000 + 1$.",
+      "Największą liczbą spełniającą warunek jest $2016$. Obliczamy liczbę elementów w tym przedziale, odejmując najmniejszą liczbę od największej i dodając_{1}: $2016 - 1000 + 1$.",
       "$2016 - 1000 + 1 = 1016 + 1 = 1017$."
     ],
     "examSource": {
@@ -8991,12 +8991,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe 1 / 3 . Liczba kul czarnych jest równa",
+    "prompt": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe $\\frac{1}{3}$ . Liczba kul czarnych jest równa",
     "choices": [
-      "n = 9",
-      "n = 2",
-      "n = 18",
-      "n = 12"
+      "$n = 9$",
+      "$n = 2$",
+      "$n = 18$",
+      "$n = 12$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $n=12$.",
@@ -9004,7 +9004,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zapisz prawdopodobieństwo wylosowania kuli białej jako stosunek liczby kul białych do łącznej liczby kul w pudełku: $P(\\text{biała}) = \\frac{6}{6+n}$.",
       "Zapisz równanie, przyrównując dane prawdopodobieństwo do informacji z zadania: $\\frac{6}{6+n} = \\frac{1}{3}$.",
       "Rozwiąż równanie, mnożąc obie strony przez $3(6+n)$, aby pozbyć się mianowników: $6 \\cdot 3 = 1 \\cdot (6+n)$, co daje $18 = 6+n$.",
-      "Oblicz $n$, odejmując 6 od obu stron równania: $n = 18 - 6$, czyli $n = 12$."
+      "Oblicz $n$, odejmując_{6} od obu stron równania: $n = 18 - 6$, czyli $n = 12$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9023,7 +9023,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 2x 2 + x – 6 ≤ 0 .",
+    "prompt": "Rozwiąż nierówność $2x^{2} + x - 6 \\le 0$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9050,7 +9050,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie (x 2 – 6)(3x + 2) = 0 .",
+    "prompt": "Rozwiąż równanie $(x^{2} - 6)(3x + 2)$ = 0 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9106,7 +9106,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny ABC, w którym |∠ACB| = 90° i |∠ABC| = 60° . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że |AD| : |DB| = 3 :1 .",
+    "prompt": "Dany jest trójkąt prostokątny ABC, w którym $|\\angle ACB| = 90^{\\circ}$ i $|\\angle ABC| = 60^{\\circ}$ . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że $|AD|$ : $|DB| = 3$ :1 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9141,7 +9141,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{11}{25}$",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru 5-elementowego, więc wszystkich par jest $5 \\cdot 5 = 25$.",
+      "Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru $5 - ele$mentowego, więc wszystkich par jest $5 \\cdot 5 = 25$.",
       "Wypisujemy pary, dla których iloraz pierwszej liczby przez drugą jest liczbą całkowitą: (1,1), (2,1), (4,1), (5,1), (10,1), (2,2), (4,2), (10,2), (4,4), (5,5), (10,10). Jest ich 11.",
       "Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę sprzyjających wyników przez liczbę wszystkich możliwych wyników: $P(A) = \\frac{11}{25}$."
     ],
@@ -9162,16 +9162,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg arytmetyczny ( a n ) , określony dla n ≥ 1 , w którym spełniona jest równość a 21 + a 24 + a 27 + a 30 = 100 . Oblicz sumę a 25 + a 26 .",
+    "prompt": "Dany jest ciąg arytmetyczny ($a_{n}$) , określony dla $n \\ge 1$ , w którym spełniona jest równość $a_{21} + a_{24} + a_{27} + a_{30} = 100$ . Oblicz sumę $a_{25} + a_{26}$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "50",
     "solutionSteps": [
-      "Zapisz wzór na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i wyraź podane wyrazy za pomocą $a_1$ i $r$. Użyj własności ciągu arytmetycznego, że $a_k + a_m = a_p + a_q$, gdy $k+m = p+q$.\n$a_{21} + a_{24} + a_{27} + a_{30} = (a_{25.5-4.5}) + (a_{25.5-1.5}) + (a_{25.5+1.5}) + (a_{25.5+4.5})$. Ponieważ $21+30 = 51$ i $24+27 = 51$, mamy $a_{21}+a_{30} = a_{24}+a_{27}$. Zatem $2(a_{24}+a_{27}) = 100$, co daje $a_{24}+a_{27} = 50$.",
+      "Zapisz wzór na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i wyraź podane wyrazy za pomocą $a_1$ i $r$. Użyj własności ciągu arytmetycznego, że $a_k + a_m = a_p + a_q$, gdy $k+m = p+q$.\n$a_{21} + a_{24} + a_{27} + a_{30} = (a_{25.5-4.5}) + (a_{25.5-1.5}) + (a_{25.5+1.5}) + (a_{25.5+4.5})$. Ponieważ $21+30 = 51$ i $24+27 = 51$, mamy $a_{21}+a_{30} = a_{24}+a_{27}$. Zatem $2(a_{24}+a_{27}) = 100$, co daje $a_{24}+a_{27} = 50$.",
       "Wykorzystaj kolejną własność ciągu arytmetycznego: $a_k + a_m = 2 \\cdot a_{\\frac{k+m}{2}}$ dla nieparzystego $k+m$.\nSuma $a_{25} + a_{26}$ jest równa sumie wyrazów o indeksach, których średnia wynosi 25.5. Zauważmy, że $24+27 = 51$, więc $\\frac{24+27}{2} = 25.5$. Zatem $a_{24}+a_{27} = 2 \\cdot a_{25.5}$. Ale korzystając z sumy indeksów $21+30 = 51$ i $24+27 = 51$, możemy zapisać sumę jako $2 \\cdot (a_{21} + a_{30}) = 100$ lub $2 \\cdot (a_{24} + a_{27}) = 100$. Czyli $a_{24} + a_{27} = 50$. Szukana suma to $a_{25} + a_{26}$. Zauważmy, że $25+26=51$, tak jak $24+27=51$.",
-      "Zapisz szukaną sumę jako $a_{25} + a_{26}$. Wyrazy $a_{25}$ i $a_{26}$ są wyrazami środkowymi pary o sumie indeksów 51.\nSuma $a_{25} + a_{26}$ ma te same indeksy sumujące się do 51 co para $a_{24}$ i $a_{27}$. Zatem $a_{25} + a_{26} = a_{24} + a_{27}$."
+      "Zapisz szukaną sumę jako $a_{25} + a_{26}$. Wyrazy $a_{25}$ i $a_{26}$ są wyrazami środkowymi pary o sumie indeksów_{51}.\nSuma $a_{25} + a_{26}$ ma te same indeksy sumujące się do 51 co para $a_{24}$ i $a_{27}$. Zatem $a_{25} + a_{26} = a_{24} + a_{27}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9190,7 +9190,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f określona wzorem f(x) = ax 2 + bx + c ma dwa miejsca zerowe: x 1 = –2 i x 2 = 6 . Wykres funkcji f przechodzi przez punkt A =(1,–5). Oblicz najmniejszą wartość funkcji f.",
+    "prompt": "Funkcja kwadratowa f określona wzorem $f(x) = ax 2 + bx + c$ ma dwa miejsca zerowe: $x^{1} = -2$ i $x^{2} = 6$ . Wykres funkcji $f$ przechodzi przez punkt A =$(1, - 5)$. Oblicz najmniejszą wartość funkcji $f$.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9218,14 +9218,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt C =(0,0) jest wierzchołkiem trójkąta prostokątnego ABC , którego wierzchołek A leży na osi Ox , a wierzchołek B na osi Oy układu współrzędnych. Prosta zawierająca wysokość tego trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie D =(3,4). ![Rysunek do zadania](/cke-matura/m20-probna/z33-1.png) Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB .",
+    "prompt": "Punkt $C = (0,0)$ jest wierzchołkiem trójkąta prostokątnego ABC , którego wierzchołek A leży na osi Ox , a wierzchołek B na osi Oy układu współrzędnych. Prosta zawierająca wysokość tego trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie $D = (3,4)$. ![Rysunek do zadania](/cke-matura/m20-probna/z33-1.png) Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A = $(\\frac{25}{3}, 0)$, B = $(0, \\frac{25}{4})$, długość AB = $\\frac{125}{12}$.",
     "solutionSteps": [
-      "Znajdź równanie prostej przechodzącej przez punkty C=(0,0) i D=(3,4), która jest również prostopadła do przeciwprostokątnej AB.\nProsta CD ma równanie $y = \\frac{4}{3}x$. Prosta AB jest prostopadła do CD, więc jej nachylenie jest odwrotnością z minusem, czyli $-\\frac{3}{4}$. Równanie prostej AB to $y - 4 = -\\frac{3}{4}(x - 3)$.",
+      "Znajdź równanie prostej przechodzącej przez punkty $C = (0,0)$ i $D = (3,4)$, która jest również prostopadła do przeciwprostokątnej AB.\nProsta CD ma równanie $y = \\frac{4}{3}x$. Prosta AB jest prostopadła do CD, więc jej nachylenie jest odwrotnością z minusem, czyli $-\\frac{3}{4}$. Równanie prostej AB to $y - 4 = -\\frac{3}{4}(x - 3)$.",
       "Wyznacz współrzędne punktów A i B. Punkt A leży na osi Ox (czyli $y_A=0$), a punkt B na osi Oy (czyli $x_B=0$). Podstaw te wartości do równania prostej AB i rozwiąż dla drugiego współrzędnika.\nDla punktu A ($y_A=0$): $0 - 4 = -\\frac{3}{4}(x_A - 3) \\implies -4 = -\\frac{3}{4}x_A + \\frac{9}{4} \\implies -\\frac{25}{4} = -\\frac{3}{4}x_A \\implies x_A = \\frac{25}{3}$. Zatem A = $(\\frac{25}{3}, 0)$.\nDla punktu B ($x_B=0$): $y_B - 4 = -\\frac{3}{4}(0 - 3) \\implies y_B - 4 = \\frac{9}{4} \\implies y_B = 4 + \\frac{9}{4} = \\frac{25}{4}$. Zatem B = $(0, \\frac{25}{4})$.",
       "Oblicz długość przeciwprostokątnej AB, korzystając ze wzoru na odległość między dwoma punktami.\nDługość AB = $\\sqrt{(x_A - x_B)^2 + (y_A - y_B)^2} = \\sqrt{(\\frac{25}{3} - 0)^2 + (0 - \\frac{25}{4})^2} = \\sqrt{(\\frac{25}{3})^2 + (-\\frac{25}{4})^2} = \\sqrt{\\frac{625}{9} + \\frac{625}{16}} = \\sqrt{625(\\frac{1}{9} + \\frac{1}{16})} = \\sqrt{625 \\cdot \\frac{25}{144}} = 25 \\cdot \\frac{5}{12} = \\frac{125}{12}$."
     ],
@@ -9246,7 +9246,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym |∠ACB| = 90° (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png)",
+    "prompt": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym $|\\angle ACB| = 90^{\\circ}$ (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9256,7 +9256,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Oblicz długości przyprostokątnych trójkąta ABC. Okrąg opisany na trójkącie prostokątnym ma środek w środku przeciwprostokątnej AB. Długość promienia okręgu opisanego jest równa długości odcinka SC, czyli 5. Zatem długość przeciwprostokątnej AB wynosi $2 \\cdot 5 = 10$. Oznaczamy $|AC| = 4x$ i $|BC| = 3x$. Z twierdzenia Pitagorasa dla $\\triangle ABC$: $(4x)^2 + (3x)^2 = 10^2 \\Rightarrow 16x^2 + 9x^2 = 100 \\Rightarrow 25x^2 = 100 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. Stąd $|AC| = 4 \\cdot 2 = 8$ i $|BC| = 3 \\cdot 2 = 6$.",
       "Oblicz pole podstawy graniastosłupa. Pole trójkąta prostokątnego ABC wynosi $\\frac{1}{2} |AC| \\cdot |BC| = \\frac{1}{2} \\cdot 8 \\cdot 6 = 24$.",
       "Oblicz wysokość graniastosłupa. Pole ściany bocznej BEFC wynosi $|BC| \\cdot H = 48$, gdzie H to wysokość graniastosłupa. Zatem $6 \\cdot H = 48 \\Rightarrow H = 8$.",
-      "Oblicz objętość graniastosłupa. Objętość graniastosłupa jest iloczynem pola podstawy i wysokości: $V = P_p \\cdot H = 24 \\cdot 8 = 192$."
+      "Oblicz objętość graniastosłupa. Objętość graniastosłupa jest iloczynem pola podstawy $i$ wysokości: $V = P_p \\cdot H = 24 \\cdot 8 = 192$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9275,12 +9275,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 100 5 ⋅ (0,1) –6 jest równa",
+    "prompt": "Liczba 100 5 ⋅ $(0,1) - 6$ jest równa",
     "choices": [
       "10 13",
       "10 16",
-      "10 –1",
-      "10 –30 pokaż wskazówkę »"
+      "$10 - 1$",
+      "$10 - 30$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $10^{13}$",
@@ -9337,7 +9337,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważamy przedziały liczbowe (−∞, 5) i ⟨−1, +∞). Ile jest wszystkich liczb całkowitych, które należą jednocześnie do obu rozważanych przedziałów?",
+    "prompt": "Rozważamy przedziały liczbowe $(-\\infty , 5)$ i ⟨-1, +∞). Ile jest wszystkich liczb całkowitych, które należą jednocześnie do obu rozważanych przedziałów?",
     "choices": [
       "6",
       "5",
@@ -9369,7 +9369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma 2 log √ 10 + log 10 3 jest równa",
+    "prompt": "Suma 2 log √ $10 + \\log 10$ 3 jest równa",
     "choices": [
       "2",
       "3",
@@ -9381,7 +9381,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zastosuj wzór na logarytm potęgi: $\\log_b(a^c) = c \\log_b(a)$. W tym przypadku $\\log \\sqrt{10} = \\log(10^{1/2}) = \\frac{1}{2} \\log 10$. Pamiętaj, że $\\log 10 = 1$.",
       "Podstaw wynik z pierwszego kroku do wyrażenia: $2 \\log \\sqrt{10} + \\log 3 = 2 \\cdot \\frac{1}{2} \\cdot 1 + \\log 3 = 1 + \\log 3$.",
-      "Użyj wzoru na sumę logarytmów: $\\log_b(x) + \\log_b(y) = \\log_b(x \\cdot y)$. Otrzymasz $1 + \\log 3 = \\log 10 + \\log 3 = \\log(10 \\cdot 3) = \\log 30$. Zauważ, że w treści zadania jest błąd — suma wynosi $\\log 30$, a nie jedną z podanych opcji. Poprawna odpowiedź"
+      "Użyj wzoru na sumę logarytmów: $\\log_b(x) + \\log_b(y) = \\log_b(x \\cdot y)$. Otrzymasz $1 + \\log 3 = \\log 10 + \\log 3 = \\log(10 \\cdot 3) = \\log 30$. Zauważ, że w treści zadania jest błąd - suma wynosi $\\log 30$, a nie jedną z podanych opcji. Poprawna odpowiedź"
     ],
     "examSource": {
       "kind": "matura",
@@ -9400,12 +9400,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Różnica 0,(3) – 23 / 33 jest równa",
+    "prompt": "Różnica 0,$(3) - \\frac{23}{33}$ jest równa",
     "choices": [
-      "− 0,(39)",
-      "– 39 / 100",
-      "− 0,36",
-      "– 4 / 11"
+      "-0,(39)",
+      "-$\\frac{39}{100}$",
+      "-0,36",
+      "-$\\frac{4}{11}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{4}{11}$.",
@@ -9445,7 +9445,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Określ dziedzinę nierówności: $x-1 \\ge 0$, czyli $x \\ge 1$.",
       "Rozważ dwa przypadki.\nPrzypadek 1: $5-x < 0$, czyli $x > 5$. Wtedy nierówność nie ma rozwiązań, bo $\\sqrt{x-1} \\ge 0$.\nPrzypadek 2: $5-x \\ge 0$, czyli $x \\le 5$. Podnieś obie strony do kwadratu: $x-1 \\le (5-x)^2$, co daje $x-1 \\le 25 - 10x + x^2$. Przekształcając otrzymujemy $x^2 - 11x + 26 \\ge 0$.",
       "Rozwiąż nierówność kwadratową $x^2 - 11x + 26 \\ge 0$. Miejsca zerowe to $\\frac{11 \\pm \\sqrt{121 - 4 \\cdot 26}}{2} = \\frac{11 \\pm \\sqrt{17}}{2}$. Nierówność jest spełniona dla $x \\in (-\\infty, \\frac{11 - \\sqrt{17}}{2}] \\cup [\\frac{11 + \\sqrt{17}}{2}, +\\infty)$.",
-      "Połącz warunki z dziedziny, przypadków i rozwiązania nierówności kwadratowej. $\\sqrt{17}$ jest między 4 a 5.\n$\\frac{11 - \\sqrt{17}}{2} \\approx \\frac{11 - 4.12}{2} \\approx 3.44$.\n$\\frac{11 + \\sqrt{17}}{2} \\approx \\frac{11 + 4.12}{2} \\approx 7.56$.\nRozwiązanie z kroku 3 to $x \\in (-\\infty, 3.44] \\cup [7.56, \\infty)$.\nŁącząc z warunkiem $x \\ge 1$ (dziedzina) i $x \\le 5$ (przypadek 2), otrzymujemy przedział $\\langle 1, \\frac{11 - \\sqrt{17}}{2} \\rangle$. Nadal żadna z odpowiedzi nie pasuje.\n\nZakładam, że rysunek przedstawia nierówność $\\frac{x-1}{x-5} \\le 0$.",
+      "Połącz warunki z dziedziny, przypadków i rozwiązania nierówności kwadratowej. $\\sqrt{17}$ jest między 4a_{5}.\n$\\frac{11 - \\sqrt{17}}{2} \\approx \\frac{11 - 4.12}{2} \\approx 3.44$.\n$\\frac{11 + \\sqrt{17}}{2} \\approx \\frac{11 + 4.12}{2} \\approx 7.56$.\nRozwiązanie z kroku 3 to $x \\in (-\\infty, 3.44] \\cup [7.56, \\infty)$.\nŁącząc z warunkiem $x \\ge 1$ (dziedzina) i $x \\le 5$ (przypadek 2), otrzymujemy przedział $\\langle 1, \\frac{11 - \\sqrt{17}}{2} \\rangle$. Nadal żadna z odpowiedzi nie pasuje.\n\nZakładam, że rysunek przedstawia nierówność $\\frac{x-1}{x-5} \\le 0$.",
       "Znajdź miejsca zerowe licznika i mianownika: $x=1$ oraz $x=5$ (nie należy do dziedziny).",
       "Narysuj oś liczbową i zaznacz punkty 1 (zamalowane) i 5 (kółko otwarte). Funkcja $\\frac{x-1}{x-5}$ jest ujemna lub równa zero między miejscem zerowym licznika a miejscem zerowym mianownika.",
       "Rozwiązaniem nierówności jest przedział $\\langle 1, 5)$. Nadal nie ma takiej odpowiedzi.\n\nPrzeanalizowałem treść zadania z matury maj 2021 podstawowy zadanie 6. Nierówność jest $\\frac{x-1}{x-5} \\ge 0$.",
@@ -9470,12 +9470,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji f określonej w zbiorze ⟨−6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja g jest określona wzorem g (x) = f(x) − 2 dla x ∈ ⟨−6, 5⟩ . Wskaż zdanie prawdziwe.",
+    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji $f$ określonej w zbiorze ⟨-6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja $g$ jest określona wzorem $g(x) = f(x) - 2$ dla x ∈ ⟨-6, 5⟩ . Wskaż zdanie prawdziwe.",
     "choices": [
-      "Liczba f(2) + g (2) jest równa (−2) .",
-      "Zbiory wartości funkcji f i g są równe.",
+      "Liczba $f(2) + g(2)$ jest równa $(-2)$ .",
+      "Zbiory wartości funkcji $f$ i g są równe.",
       "Funkcje f i g mają te same miejsca zerowe.",
-      "Punkt P = (0, −2) należy do wykresów funkcji f i g . pokaż wskazówkę »"
+      "Punkt P = $(0, - 2)$ należy do wykresów funkcji $f$ i g . pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(2) + g(2) = -2$ (przy założeniu $f(2)=0$ na podstawie potencjalnego błędu w treści zadania).",
@@ -9483,7 +9483,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Analizujemy wykres funkcji $f(x)$. Odczytujemy wartości kluczowych punktów: $f(0) = 0$, $f(2) = 2$, $f(5) = -2$. Zbiorem wartości funkcji $f$ jest $\\langle -2, 2 \\rangle$.",
       "Analizujemy wzór funkcji $g(x) = f(x) - 2$. Oznacza to, że wykres funkcji $g$ otrzymujemy przez przesunięcie wykresu funkcji $f$ o 2 jednostki w dół.",
       "Sprawdzamy poszczególne odpowiedzi.\nA) $f(2) + g(2) = f(2) + (f(2) - 2) = 2 + (2 - 2) = 2$. Zdanie fałszywe.\nB) Zbiór wartości funkcji $g$ to $\\langle -2-2, 2-2 \\rangle = \\langle -4, 0 \\rangle$. Zbiory wartości funkcji $f$ i $g$ nie są równe. Zdanie fałszywe.\nC) Miejsca zerowe funkcji $f$ to $x = 0$. Miejsca zerowe funkcji $g$ to $x$ takie, że $f(x) - 2 = 0$, czyli $f(x) = 2$. Z wykresu wynika, że $f(2)=2$, zatem $x=2$ jest jedynym miejscem zerowym funkcji $g$. Miejsca zerowe nie są te same. Zdanie fałszywe.\nD) Sprawdzamy, czy punkt $P=(0, -2)$ należy do wykresów funkcji $f$ i $g$. Dla funkcji $f$: $f(0)=0$, więc punkt $(0,0)$ należy do wykresu $f$. Dla funkcji $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Zatem punkt $(0, -2)$ należy do wykresu funkcji $g$. Zdanie fałszywe.",
-      "Ponownie analizujemy wykres i opisy. Wartość $f(2)$ wynosi 2, a nie $-2$. Zatem $f(2) + g(2) = 2 + (f(2) - 2) = 2 + (2 - 2) = 2$. Zatem opcja A jest niepoprawnie zinterpretowana przez mnie w kroku 3. Ponowna analiza opcji A: $f(2) = 2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2) + g(2) = 2 + 0 = 2$. Zdanie A jest fałszywe.\nPrzyjrzyjmy się ponownie opcji D. Punkt $P=(0, -2)$. Dla $f$: $f(0)=0$. Punkt $(0,0)$ jest na wykresie $f$. Dla $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Punkt $(0, -2)$ jest na wykresie $g$. Zatem punkt P=(0,-2) należy do wykresu funkcji g. Ale nie do f. Czyli D jest fałszywe.\nWrócmy do opcji A. Może źle odczytałem wartości. Wykres przechodzi przez $(2,2)$. Zatem $f(2)=2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2)+g(2) = 2+0=2$. A jest fałszywe.\nMożliwe, że ja źle interpretuje zapis $(-2)$ jako $-2$.\nA) Liczba $f(2) + g(2)$ jest równa $-2$. Obliczyliśmy, że $f(2)+g(2) = 2$. A jest fałszywe.\nB) Zbiory wartości $f$: $\\langle -2, 2 \\rangle$. Zbiór wartości $g$: $\\langle -4, 0 \\rangle$. B jest fałszywe.\nC) Miejsca zerowe $f$: $x=0$. Miejsca zerowe $g$: $f(x)=2$, $x=2$. C jest fałszywe.\nD) Punkt $P = (0, -2)$. $f(0)=0$. Punkt $(0,0)$ na $f$. $g(0) = f(0)-2 = 0-2 = -2$. Punkt $(0, -2)$ na $g$. D jest fałszywe.\n\nChyba mam problem z odczytem wykresu lub treści."
+      "Ponownie analizujemy wykres i opisy. Wartość $f(2)$ wynosi 2, a nie $-2$. Zatem $f(2) + g(2) = 2 + (f(2) - 2) = 2 + (2 - 2) = 2$. Zatem opcja A jest niepoprawnie zinterpretowana przez mnie w kroku 3. Ponowna analiza opcji A: $f(2) = 2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2) + g(2) = 2 + 0 = 2$. Zdanie A jest fałszywe.\nPrzyjrzyjmy się ponownie opcji D. Punkt $P=(0, -2)$. Dla $f$: $f(0)=0$. Punkt $(0,0)$ jest na wykresie $f$. Dla $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Punkt $(0, -2)$ jest na wykresie $g$. Zatem punkt P=$(0, - 2)$ należy do wykresu funkcji $g$. Ale nie do f. Czyli D jest fałszywe.\nWrócmy do opcji A. Może źle odczytałem wartości. Wykres przechodzi przez $(2,2)$. Zatem $f(2)=2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2)+g(2) = 2+0=2$. A jest fałszywe.\nMożliwe, że ja źle interpretuje zapis $(-2)$ jako $-2$.\nA) Liczba $f(2) + g(2)$ jest równa $-2$. Obliczyliśmy, że $f(2)+g(2) = 2$. A jest fałszywe.\nB) Zbiory wartości $f$: $\\langle -2, 2 \\rangle$. Zbiór wartości $g$: $\\langle -4, 0 \\rangle$. B jest fałszywe.\nC) Miejsca zerowe $f$: $x=0$. Miejsca zerowe $g$: $f(x)=2$, $x=2$. C jest fałszywe.\nD) Punkt $P = (0, -2)$. $f(0)=0$. Punkt $(0,0)$ na $f$. $g(0) = f(0)-2 = 0-2 = -2$. Punkt $(0, -2)$ na $g$. D jest fałszywe.\n\nChyba mam problem z odczytem wykresu lub treści."
     ],
     "examSource": {
       "kind": "matura",
@@ -9515,7 +9515,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zauważ, że rysunek przedstawia dwie proste przecinające się w punkcie $(1, 2)$. Układ równań, którego rozwiązaniem jest ten punkt, będzie pasował do rysunku.",
       "Sprawdź, który z podanych układów równań ma rozwiązanie $(1, 2)$, podstawiając $x=1$ i $y=2$ do każdego równania.",
       "Zapiszmy punkty przecięcia dla poszczególnych opcji:\nA) $y=x+1$ i $y=-x+3$: $2=1+1$ (prawda) i $2=-1+3$ (prawda).\nB) $y=2x$ i $y=-x+3$: $2=2 \\cdot 1$ (prawda) i $2=-1+3$ (prawda).\nC) $y=x-1$ i $y=-2x+4$: $2=1-1$ (fałsz).\nD) $y=-x+3$ i $y=-x+1$: $2=-1+3$ (prawda) i $2=-1+1$ (fałsz).",
-      "Równania z punktu A) i B) spełniają warunki. Sprawdźmy rysunki. Rysunek do zadania pokazuje proste o dodatnich i ujemnych nachyleniach, z dodatnimi $y$-interceptami. Proste w układzie A) to $y=x+1$ (dodatnie nachylenie, $y$-intercept 1) i $y=-x+3$ (ujemne nachylenie, $y$-intercept 3). Proste w układzie B) to $y=2x$ (dodatnie nachylenie, $y$-intercept 0) i $y=-x+3$ (ujemne nachylenie, $y$-intercept 3). Rysunek przedstawia proste, które przecinają oś $y$ w punktach 1 i 3."
+      "Równania z punktu A) i B) spełniają warunki. Sprawdźmy rysunki. Rysunek do zadania pokazuje proste o dodatnich i ujemnych nachyleniach, z dodatnimi $y$-interceptami. Proste w układzie A) to $y=x+1$ $(dodatnie nachylenie, $y$ - intercept 1)$ i $y=-x+3$ $(ujemne nachylenie, $y$ - intercept 3)$. Proste w układzie B) to $y=2x$ $(dodatnie nachylenie, $y$ - intercept 0)$ i $y=-x+3$ $(ujemne nachylenie, $y$ - intercept 3)$. Rysunek przedstawia proste, które przecinają oś $y$ w punktach 1 i 3."
     ],
     "examSource": {
       "kind": "matura",
@@ -9534,12 +9534,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = 3x − 5 oraz ![Rysunek do zadania](/cke-matura/m21-maj/z09-1.png) są równoległe, gdy",
+    "prompt": "Proste o równaniach $y = 3x - 5$ oraz ![Rysunek do zadania](/cke-matura/m21-maj/z09-1.png) są równoległe, gdy",
     "choices": [
-      "m = 1",
-      "m = 3",
-      "m = 6",
-      "m = 9 pokaż wskazówkę »"
+      "$m = 1$",
+      "$m = 3$",
+      "$m = 6$",
+      "$m = 9$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $m = 9$.",
@@ -9565,10 +9565,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja ƒ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = √ 3 − 1 wartość funkcji ƒ jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = √ $3 - 1$ wartość funkcji $f$ jest równa",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m21-maj/z10-2.png)",
-      "–1",
+      "-1",
       "1",
       "![Rysunek do zadania](/cke-matura/m21-maj/z10-3.png)"
     ],
@@ -9596,11 +9596,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wykresu funkcji f określonej dla każdej liczby rzeczywistej x wzorem f(x) = 3 x − 2 należy punkt o współrzędnych",
+    "prompt": "Do wykresu funkcji $f$ określonej dla każdej liczby rzeczywistej x wzorem $f(x) = 3x - 2$ należy punkt o współrzędnych",
     "choices": [
-      "(−1, −5)",
-      "(0, −2)",
-      "(0, −1)",
+      "$(-1, - 5)$",
+      "$(0, - 2)$",
+      "$(0, - 1)$",
       "(2, 4) pokaż wskazówkę »"
     ],
     "correctIndex": 0,
@@ -9626,12 +9626,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f określona wzorem f(x) = −2(x + 1)(x − 3) jest malejąca w przedziale",
+    "prompt": "Funkcja kwadratowa f określona wzorem $f(x) = -2(x + 1)(x - 3)$ jest malejąca w przedziale",
     "choices": [
       "⟨1, +∞)",
-      "(−∞, 1⟩",
-      "(−∞, −8⟩",
-      "⟨−8, +∞)"
+      "(-∞, 1⟩",
+      "(-∞, -8⟩",
+      "⟨-8, +∞)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\langle 1, +\\infty)$",
@@ -9657,12 +9657,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg (15, 3x, 5 / 3 ) jest geometryczny i wszystkie jego wyrazy są dodatnie. Stąd wynika, że",
+    "prompt": "Trzywyrazowy ciąg (15, 3x, $\\frac{5}{3}$) jest geometryczny i wszystkie jego wyrazy $s$ą dodatnie. Stąd wynika, że",
     "choices": [
-      "x = 3 / 5",
-      "x = 4 / 5",
-      "x = 1",
-      "x = 5 / 3 pokaż wskazówkę »"
+      "$x = \\frac{3}{5}$",
+      "$x = \\frac{4}{5}$",
+      "$x = 1$",
+      "$x = \\frac{5}{3}$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = \\frac{5}{3}$",
@@ -9688,7 +9688,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (b n ) jest określony wzorem b n = 3n 2 − 25n dla każdej liczby naturalnej n ≥ 1. Liczba niedodatnich wyrazów ciągu (b n ) jest równa",
+    "prompt": "Ciąg ($b_{n}$) jest określony wzorem $b_{n} = 3n^{2} - 25n$ dla każdej liczby naturalnej $n \\ge 1$. Liczba niedodatnich wyrazów ciągu ($b_{n}$) jest równa",
     "choices": [
       "14",
       "13",
@@ -9719,7 +9719,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg arytmetyczny (a n ) jest określony dla każdej liczby naturalnej n ≥ 1. Trzeci i piąty wyraz ciągu spełniają warunek a 3 + a 5 = 58 . Wtedy czwarty wyraz tego ciągu jest równy",
+    "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$. Trzeci i piąty wyraz ciągu spełniają warunek $a_{3} + a_{5} = 58$ . Wtedy czwarty wyraz tego ciągu jest równy",
     "choices": [
       "28",
       "29",
@@ -9781,15 +9781,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta k jest styczna w punkcie A do okręgu o środku O . Punkt B leży na tym okręgu i miara kąta AOB jest równa 80°. Przez punkty O i B poprowadzono prostą, która przecina prostą k w punkcie C (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z17-1.gif) Miara kąta BAC jest równa",
+    "prompt": "Prosta k jest styczna w punkcie A do okręgu o środku O . Punkt B leży na tym okręgu i miara kąta AOB jest równa $80^{\\circ}$. Przez punkty O i B poprowadzono prostą, która przecina prostą k w punkcie C (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z17-1.gif) Miara kąta BAC jest równa",
     "choices": [
-      "10°",
-      "30°",
-      "40°",
-      "50° pokaż wskazówkę »"
+      "$10^{\\circ}$",
+      "$30^{\\circ}$",
+      "$40^{\\circ}$",
+      "$50^{\\circ}$ pokaż wskazówkę »"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 40°",
+    "explanation": "C, czyli $40^{\\circ}$",
     "solutionSteps": [
       "Ustal, że trójkąt AOB jest równoramienny, ponieważ OA i OB są promieniami okręgu, więc $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 80^\\circ}{2} = 50^\\circ$.",
       "Zauważ, że promień OA jest prostopadły do prostej stycznej k w punkcie A, więc $\\angle OAC = 90^\\circ$. Kąt BAC jest częścią kąta OAC, a konkretnie $\\angle BAC = \\angle OAC - \\angle OAB$.",
@@ -9812,12 +9812,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg α = 2 / 5 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe",
+    "prompt": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg $α = \\frac{2}{5}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe",
     "choices": [
       "12",
-      "37 / 3",
-      "62 / 5",
-      "64 / 5 pokaż wskazówkę »"
+      "$\\frac{37}{3}$",
+      "$\\frac{62}{5}$",
+      "$\\frac{64}{5}$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{64}{5}$.",
@@ -9871,18 +9871,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach |AD| = 3 i |BD| = 12 (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png)",
+    "prompt": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach $|AD| = 3$ i $|BD| = 12$ (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png)",
     "choices": [
       "√ 34",
-      "13 / 4",
+      "$\\frac{13}{4}$",
       "2√ 14",
       "3√ 45 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{34}$",
     "solutionSteps": [
-      "Zauważ, że wysokość CD dzieli trójkąt ABC na dwa trójkąty prostokątne: ADC i BDC. W trójkącie BDC znamy długości przyprostokątnych: BC = 13 i BD = 12. Obliczamy długość wysokości CD z twierdzenia Pitagorasa: $CD^2 + BD^2 = BC^2$, czyli $CD^2 + 12^2 = 13^2$.",
-      "Obliczona wysokość CD wynosi $CD = \\sqrt{13^2 - 12^2} = \\sqrt{169 - 144} = \\sqrt{25} = 5$. Teraz rozważamy trójkąt prostokątny ADC, w którym znamy długości przyprostokątnych AD = 3 i CD = 5.",
+      "Zauważ, że wysokość CD dzieli trójkąt ABC na dwa trójkąty prostokątne: ADC i BDC. W trójkącie BDC znamy długości przyprostokątnych: $BC = 13$ i $BD = 12$. Obliczamy długość wysokości CD z twierdzenia Pitagorasa: $CD^2 + BD^2 = BC^2$, czyli $CD^2 + 12^2 = 13^2$.",
+      "Obliczona wysokość CD wynosi $CD = \\sqrt{13^2 - 12^2} = \\sqrt{169 - 144} = \\sqrt{25} = 5$. Teraz rozważamy trójkąt prostokątny ADC, w którym znamy długości przyprostokątnych $AD = 3$ i $CD = 5$.",
       "Obliczamy długość boku AC z twierdzenia Pitagorasa dla trójkąta ADC: $AC^2 = AD^2 + CD^2$. Podstawiamy wartości: $AC^2 = 3^2 + 5^2 = 9 + 25 = 34$. Stąd $AC = \\sqrt{34}$."
     ],
     "examSource": {
@@ -9902,19 +9902,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C i D leżą na okręgu o środku S. Miary kątów SBC, BCD, CDA są równe odpowiednio: |∡SBC| = 60° , |∡BCD| = 110° , |∡CDA| = 90° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z21-1.png) Wynika stąd, że miara α kąta DAS jest równa",
+    "prompt": "Punkty A, B, C i D leżą na okręgu o środku S. Miary kątów SBC, BCD, CDA są równe odpowiednio: $|\\angle SBC| = 60^{\\circ}$ , $|\\angle BCD| = 110^{\\circ}$ , $|\\angle CDA| = 90^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z21-1.png) Wynika stąd, że miara α kąta DAS jest równa",
     "choices": [
-      "25°",
-      "30°",
-      "35°",
-      "40°"
+      "$25^{\\circ}$",
+      "$30^{\\circ}$",
+      "$35^{\\circ}$",
+      "$40^{\\circ}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 40°",
+    "explanation": "D, czyli $40^{\\circ}$",
     "solutionSteps": [
-      "Obliczamy miarę kąta przy wierzchołku S w trójkącie SBC. Ponieważ SB i SC to promienie okręgu, trójkąt SBC jest równoramienny. Kąt |∡SBC| = 60°, więc |∡SCB| = 60°, a |∡BSC| = 180° - 60° - 60° = 60°.",
-      "Wyznaczamy miary kątów środkowych opartych na łukach CD i DA. Kąt |∡BCD| = 110°, a ponieważ jest to kąt wpisany oparty na łuku DAB, to kąt środkowy oparty na tym łuku jest dwa razy większy: |∡DSB| = 2 * |∡DCB| = 2 * (180° - 110°) = 2 * 70° = 140° (kąt środkowy oparty na łuku DAB to suma kątów środkowych opartych na łukach DCB). Kąt |∡CDA| = 90°, a jest to kąt wpisany oparty na łuku CBA. Kąt środkowy oparty na łuku CBA to 2 * 90° = 180°.",
-      "Obliczamy miarę kąta środkowego |∡DSA|. Suma kątów środkowych wokół środka S wynosi 360°. Mamy |∡BSC| = 60° i kąt środkowy oparty na łuku DCB, czyli |∡DSC| + |∡CSB| = 2 * |∡DAB|. Kąt |∡BCD| = 110°. Kąt |∡BCD| jest wpisany i opiera się na łuku DAB. Zatem kąt środkowy oparty na łuku DAB wynosi 2 * (180° - 110°) = 2 * 70° = 140° (nie jest to kąt środkowy, ale suma kątów na łuku). Kąt wpisany |∡CDA| = 90°, więc kąt środkowy oparty na łuku CBA to 180°. |∡BSC|=60°. Kąt |∡BCD|=110°. Kąt |∡BCD| jest wpisany, oparty na łuku DAB. Kąt |∡DAS| = $\\alpha$. |∡SBC| = 60°, więc |∡BSC| = 60°. |∡BCD| = 110°. Kąt |∡BAD| + |∡BCD| = 180°, więc |∡BAD| = 180° - 110° = 70°. |∡CDA| = 90°. Kąt |∡ABC| + |∡CDA| = 180°, więc |∡ABC| = 180° - 90° = 90°. |∡ABC| = |∡SBC| + |∡ABS| = 60° + |∡ABS| = 90°, więc |∡ABS| = 30°. W trójkącie ABS: |∡ASB| = 180° - 30° - 30° = 120°. |∡BSC| = 60°. Kąt środkowy |∡DSA| = 360° - |∡ASB| - |∡BSC| - |∡CSD|. Kąt |∡CDA| = 90°. Kąt |∡DSA| = 2 * |∡DBA|. Kąt |∡BCD| = 110°. |∡BAD| = 180° - 110° = 70°. |∡BAD| = |∡DAS| + |∡SAB| = $\\alpha$ + |∡SAB| = 70°. Kąt |∡CDA| = 90°. Kąt |∡ABC| = 180° - 90° = 90°. |∡ABC| = |∡ABS| + |∡SBC| = |∡ABS| + 60° = 90°. Zatem |∡ABS| = 30°. W trójkącie ABS, SA = SB (promienie), więc jest równoramienny. |∡SAB| = |∡ABS| = 30°. Wówczas |∡BAD| = |∡DAS| + |∡SAB| = $\\alpha$ + 30° = 70°. Stąd $\\alpha$ = 40°."
+      "Obliczamy miarę kąta przy wierzchołku S w trójkącie SBC. Ponieważ SB i SC to promienie okręgu, trójkąt SBC jest równoramienny. Kąt $|\\angle SBC| = 60^{\\circ}$, więc $|\\angle SCB| = 60^{\\circ}$, a $|\\angle BSC| = 180^{\\circ}$ -$60^{\\circ}$ -$60^{\\circ}$ = $60^{\\circ}$.",
+      "Wyznaczamy miary kątów środkowych opartych na łukach CD i DA. Kąt $|\\angle BCD| = 110^{\\circ}$, a ponieważ jest to kąt wpisany oparty na łuku DAB, to kąt środkowy oparty na tym łuku jest dwa razy większy: $|\\angle DSB| = 2^{\\circ}$* $|\\angle DCB| = 2^{\\circ}$* $($180^{\\circ}$ - $110^{\\circ}$) = 2$ * $70^{\\circ}$ = $140^{\\circ}$ (kąt środkowy oparty na łuku DAB to suma kątów środkowych opartych na łukach DCB). Kąt $|\\angle CDA| = 90^{\\circ}$, a jest to kąt wpisany oparty na łuku CBA. Kąt środkowy oparty na łuku CBA to 2 * $90^{\\circ}$ = $180^{\\circ}$.",
+      "Obliczamy miarę kąta środkowego |\\angle DSA|. Suma kątów środkowych wokół środka S wynosi $360^{\\circ}$. Mamy $|\\angle BSC| = 60^{\\circ}$ i kąt środkowy oparty na łuku DCB, czyli |\\angle DSC| + $|\\angle CSB| = 2^{\\circ}$* |\\angle DAB|. Kąt $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BCD| jest wpisany i opiera się na łuku DAB. Zatem kąt środkowy oparty na łuku DAB wynosi $2 * ($180^{\\circ}$ - $110^{\\circ}$) = 2$ * $70^{\\circ}$ = $140^{\\circ}$ (nie jest to kąt środkowy, ale suma kątów na łuku). Kąt wpisany $|\\angle CDA| = 90^{\\circ}$, więc_{k}ąt środkowy oparty na łuku CBA to $180^{\\circ}$. $|\\angle BSC| = 60^{\\circ}$. Kąt $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BCD| jest wpisany, oparty na łuku DAB. Kąt |\\angle DAS| = $\\alpha$. $|\\angle SBC| = 60^{\\circ}$, więc $|\\angle BSC| = 60^{\\circ}$. $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BAD| + $|\\angle BCD| = 180^{\\circ}$, więc $|\\angle BAD| = 180^{\\circ}$ -$110^{\\circ}$ = $70^{\\circ}$. $|\\angle CDA| = 90^{\\circ}$. Kąt |\\angle ABC| + $|\\angle CDA| = 180^{\\circ}$, więc $|\\angle ABC| = 180^{\\circ}$ -$90^{\\circ}$ = $90^{\\circ}$. $|\\angle ABC| = |\\angle SBC|$ + $|\\angle ABS| = 60^{\\circ}$ + $|\\angle ABS| = 90^{\\circ}$, więc $|\\angle ABS| = 30^{\\circ}$. W trójkącie ABS: $|\\angle ASB| = 180^{\\circ}$ -$30^{\\circ}$ -$30^{\\circ}$ = $120^{\\circ}$. $|\\angle BSC| = 60^{\\circ}$. Kąt środkowy $|\\angle DSA| = 360^{\\circ}$ - $|\\angle ASB| - |\\angle BSC| - |\\angle CSD|$. Kąt $|\\angle CDA| = 90^{\\circ}$. Kąt $|\\angle DSA| = 2^{\\circ}$* |\\angle DBA|. Kąt $|\\angle BCD| = 110^{\\circ}$. $|\\angle BAD| = 180^{\\circ}$ -$110^{\\circ}$ = $70^{\\circ}$. $|\\angle BAD| = |\\angle DAS| + |\\angle SAB|$ = $\\alpha$ + $|\\angle SAB| = 70^{\\circ}$. Kąt $|\\angle CDA| = 90^{\\circ}$. Kąt $|\\angle ABC| = 180^{\\circ}$ -$90^{\\circ}$ = $90^{\\circ}$. $|\\angle ABC| = |\\angle ABS| + |\\angle SBC| = |\\angle ABS|$ + $60^{\\circ}$ = $90^{\\circ}$. Zatem $|\\angle ABS| = 30^{\\circ}$. W trójkącie ABS, $SA = SB$ (promienie), więc jest równoramienny. $|\\angle SAB| = |\\angle ABS| = 30^{\\circ}$. Wówczas $|\\angle BAD| = |\\angle DAS| + |\\angle SAB|$ = $\\alpha$ + $30^{\\circ}$ = $70^{\\circ}$. Stąd $\\alpha$ = $40^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9933,20 +9933,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W równoległoboku ABCD, przedstawionym na rysunku, kąt α ma miarę 70°. ![Rysunek do zadania](/cke-matura/m21-maj/z22-1.png) Wtedy kąt β ma miarę",
+    "prompt": "W równoległoboku ABCD, przedstawionym na rysunku, kąt α ma miarę $70^{\\circ}$. ![Rysunek do zadania](/cke-matura/m21-maj/z22-1.png) Wtedy kąt β ma miarę",
     "choices": [
-      "80°",
-      "70°",
-      "60°",
-      "50°"
+      "$80^{\\circ}$",
+      "$70^{\\circ}$",
+      "$60^{\\circ}$",
+      "$50^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $70^\\circ$",
     "solutionSteps": [
-      "Suma miar kątów przy tym samym ramieniu w równoległoboku wynosi 180°. Kąt $\\alpha$ i kąt leżący przy tym samym boku (oznaczony jako $180^\\circ - \\beta$) sumują się do $180^\\circ$.",
-      "Kąt $\\beta$ jest kątem wewnętrznym równoległoboku. Kąt $\\beta$ i kąt $\\alpha$ są kątami leżącymi naprzeciwko siebie w równoległoboku, więc są równe. Kąt $\\alpha = 70^\\circ$, więc kąt $\\beta = 70^\\circ$.",
-      "Kąt wewnętrzny równoległoboku, do którego przylega kąt $\\beta$, ma miarę $180^\\circ - \\beta$. Z treści zadania wiemy, że kąt $\\alpha$ jest miarą jednego z kątów wewnętrznych. Kąt $\\beta$ jest kątem wewnętrznym sąsiednim do kąta, którego miara jest dana. Zatem $\\alpha + \\beta = 180^\\circ$. Skoro $\\alpha = 70^\\circ$, to $70^\\circ + \\beta = 180^\\circ$, co daje $\\beta = 180^\\circ - 70^\\circ = 110^\\circ$. Kąt zaznaczony na rysunku jako $\\beta$ jest kątem ostrym. Kąty w równoległoboku, które nie są równe, tworzą pary kątów ostrych i kątów rozwartych. Kąty ostre mają miarę $\\alpha = 70^\\circ$, a kąty rozwarte mają miarę $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym.",
-      "Kąty wierzchołkowe są równe. Kąt $\\beta$ na rysunku jest równy kątowi przeciwległemu w równoległoboku, a kąty przeciwległe w równoległoboku są równe. Dodatkowo, kąt $\\beta$ jest również wierzchołkowy do jednego z kątów równoległoboku. Kąty sąsiadujące przy jednym ramieniu równoległoboku sumują się do $180^\\circ$. Kąt $\\alpha$ jest dany jako $70^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym. W równoległoboku mamy dwie pary równych kątów. Jeden z kątów wynosi $70^\\circ$. Drugi kąt wynosi $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym, więc ma miarę $70^\\circ$."
+      "Suma miar kątów przy tym samym ramieniu w równoległoboku wynosi $180^{\\circ}$. Kąt $\\alpha$ i kąt leżący przy tym samym boku (oznaczony jako $180^\\circ - \\beta$) sumują się do $180^\\circ$.",
+      "Kąt $\\beta$ jest kątem wewnętrznym równoległoboku. Kąt $\\beta$ i kąt $\\alpha$ są kątami leżącymi naprzeciwko siebie w równoległoboku, więc są równe. Kąt $\\alpha = 70^\\circ$, więc_{k}ąt $\\beta = 70^\\circ$.",
+      "Kąt wewnętrzny równoległoboku, do którego przylega kąt $\\beta$, ma miarę $180^\\circ - \\beta$. Z treści zadania wiemy, że kąt $\\alpha$ jest miarą jednego z kątów wewnętrznych. Kąt $\\beta$ jest kątem wewnętrznym sąsiednim do kąta, którego miara jest dana. Zatem $\\alpha + \\beta = 180^\\circ$. Skoro $\\alpha = 70^\\circ$, to $70^\\circ + \\beta = 180^\\circ$, co daje $\\beta = 180^\\circ - 70^\\circ = 110^\\circ$. Kąt zaznaczony na rysunku jako $\\beta$ jest kątem ostrym. Kąty w równoległoboku, które nie są równe, tworzą pary kątów ostrych i kątów rozwartych. Kąty ostre mają miarę $\\alpha = 70^\\circ$, $a_{k}$ąty rozwarte mają miarę $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym.",
+      "Kąty wierzchołkowe są równe. Kąt $\\beta$ na rysunku jest równy kątowi przeciwległemu w równoległoboku, $a_{k}$ąty przeciwległe w równoległoboku są równe. Dodatkowo, kąt $\\beta$ jest również wierzchołkowy do jednego z kątów równoległoboku. Kąty sąsiadujące przy jednym ramieniu równoległoboku sumują się do $180^\\circ$. Kąt $\\alpha$ jest dany jako $70^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym. W równoległoboku mamy dwie pary równych kątów. Jeden z kątów wynosi $70^\\circ$. Drugi kąt wynosi $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym, więc ma miarę $70^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9965,7 +9965,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W każdym n–kącie wypukłym (n ≥ 3) liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest",
+    "prompt": "W każdym $n - k$ącie wypukłym $(n \\ge 3)$ liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest",
     "choices": [
       "siedmiokąt.",
       "dziesięciokąt.",
@@ -9975,7 +9975,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli dziesięciokąt.",
     "solutionSteps": [
-      "Zapisz wzór na liczbę przekątnych $P$ n–kąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
+      "Zapisz wzór na liczbę przekątnych $P$ $n - k$ąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
       "Zapisz równanie zgodnie z treścią zadania: liczba przekątnych jest o 25 większa od liczby boków, czyli $P = n + 25$. Podstaw wzór na $P$: $\\frac{n(n-3)}{2} = n + 25$.",
       "Rozwiąż otrzymane równanie kwadratowe: $n(n-3) = 2(n+25) \\implies n^2 - 3n = 2n + 50 \\implies n^2 - 5n - 50 = 0$. Wyróżnik $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot (-50) = 25 + 200 = 225$, $\\sqrt{\\Delta} = 15$. Rozwiązania to $n_1 = \\frac{5 - 15}{2} = -5$ (odrzucamy, bo n musi być dodatnie) i $n_2 = \\frac{5 + 15}{2} = 10$.",
       "Sprawdź, który z podanych wielokątów ma 10 boków. Dziesięciokąt ma 10 boków."
@@ -9997,7 +9997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pole figury F 1 złożonej z dwóch stycznych zewnętrznie kół o promieniach 1 i 3 jest równe polu figury F 2 złożonej z dwóch stycznych zewnętrznie kół o promieniach długości r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z24-1.png) ![Rysunek do zadania](/cke-matura/m21-maj/z24-2.png) Długość r promienia jest równa",
+    "prompt": "Pole figury F 1 złożonej z dwóch stycznych zewnętrznie kół o promieniach 1 i 3 jest równe polu figury F 2 złożonej z dwóch stycznych zewnętrznie kół o promieniach długości $r$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z24-1.png) ![Rysunek do zadania](/cke-matura/m21-maj/z24-2.png) Długość $r$ promienia jest równa",
     "choices": [
       "√ 3",
       "2",
@@ -10028,7 +10028,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt A = (3, −5) jest wierzchołkiem kwadratu ABCD, a punkt M = (1, 3) jest punktem przecięcia się przekątnych tego kwadratu. Wynika stąd, że pole kwadratu ABCD jest równe",
+    "prompt": "Punkt A = $(3, - 5)$ jest wierzchołkiem kwadratu ABCD, a punkt $M = (1, 3)$ jest punktem przecięcia się przekątnych tego kwadratu. Wynika stąd, że pole kwadratu ABCD jest równe",
     "choices": [
       "68",
       "136",
@@ -10061,10 +10061,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Z wierzchołków sześcianu ABCDEFGH losujemy jednocześnie dwa różne wierzchołki. Prawdopodobieństwo tego, że wierzchołki te będą końcami przekątnej sześcianu ABCDEFGH, jest równe",
     "choices": [
-      "1 / 7",
-      "4 / 7",
-      "1 / 14",
-      "3 / 7 pokaż wskazówkę »"
+      "$\\frac{1}{7}$",
+      "$\\frac{4}{7}$",
+      "$\\frac{1}{14}$",
+      "$\\frac{3}{7}$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{1}{7}$",
@@ -10121,17 +10121,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sześciowyrazowy ciąg liczbowy (1, 2, 2x, x + 2, 5, 6) jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że",
+    "prompt": "Sześciowyrazowy ciąg liczbowy $(1, 2, 2x, x + 2, 5, 6)$ jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że",
     "choices": [
-      "x = 1",
-      "x = 3 / 2",
-      "x = 2",
-      "x = 8 / 3 pokaż wskazówkę »"
+      "$x = 1$",
+      "$x = \\frac{3}{2}$",
+      "$x = 2$",
+      "$x = \\frac{8}{3}$ pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $x=2$",
     "solutionSteps": [
-      "Ciąg jest niemalejący, więc wyrazy są ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
+      "Ciąg jest niemalejący, więc wyrazy $s$ą ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
       "Ciąg ma 6 wyrazów. Mediana to średnia arytmetyczna dwóch środkowych wyrazów, czyli wyrazów na 3. i 4. pozycji. Mając $x=2$, ciąg to (1, 2, 4, 4, 5, 6). Mediana wynosi $\\frac{4+4}{2}=4$.",
       "Ponieważ otrzymana mediana jest zgodna z treścią zadania ($4=4$) i nierówności dla $x$ są spełnione, znalezioną wartość $x=2$ można uznać za poprawną."
     ],
@@ -10152,7 +10152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: x 2 − 5x ≤ 14",
+    "prompt": "Rozwiąż nierówność: $x^{2} - 5x \\le 14$",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10185,7 +10185,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.",
+    "explanation": "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.",
     "solutionSteps": [
       "Skorzystaj z podanej nierówności $a \\le b \\le c$ i przekształć ją, aby uzyskać relacje między poszczególnymi składnikami nierówności, którą mamy udowodnić. Z podanej zależności mamy: $a \\le b$ oraz $b \\le c$.",
       "Przekształć lewą stronę nierówności do wykazania: $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$. Zauważ, że możemy wyciągnąć $\\sqrt{b}$ przed nawias: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c})$.",
@@ -10198,413 +10198,413 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Wykorzystajmy warunek $a \\le b \\le c$. Mamy $\\sqrt{ab} \\ge \\sqrt{a^2} = a$ oraz $\\sqrt{bc} \\ge \\sqrt{b^2} = b$.\nNiech $x = \\sqrt{a}, y = \\sqrt{b}, z = \\sqrt{c}$. Chcemy wykazać $xy + yz \\ge 2xz$.\nZ $a \\le b \\le c$ wynika $x \\le y \\le z$.\n$xy + yz = y(x+z)$. Chcemy pokazać $y(x+z) \\ge 2xz$.\nPodzielmy przez $xz$ (zakładając $x,z>0$): $\\frac{y}{z} + \\frac{y}{x} \\ge 2$.\nZ $x \\le y \\le z$ mamy: $y/z \\le 1$ oraz $y/x \\ge 1$.\nTo nie jest wystarczające.",
       "Zastosujmy nierówność $(p+q)^2 \\ge 4pq$ dla $p=\\sqrt{a}, q=\\sqrt{c}$. $(\\sqrt{a}+\\sqrt{c})^2 \\ge 4\\sqrt{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$ (co jest dozwolone, bo $a,c>0$): $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Z $a \\le b \\le c$ mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $\\frac{1}{y} + x \\ge 2$.\nPonieważ $x \\ge 1$ oraz $y \\ge 1$, to $\\frac{1}{y} \\le 1$.\nZatem $\\frac{1}{y} + x \\ge 0 + 1 = 1$. To nie jest wystarczające.",
       "Wykażemy, że $\\sqrt{ab} \\ge a$ i $\\sqrt{bc} \\ge b$ nie jest wystarczające.\nZamiast tego, przekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $2\\sqrt{ac}$: $\\frac{\\sqrt{b}}{2\\sqrt{c}} + \\frac{\\sqrt{b}}{2\\sqrt{a}} \\ge 1$.\nPonieważ $a \\le b \\le c$, to $\\frac{b}{c} \\le 1$ oraz $\\frac{b}{a} \\ge 1$.\nZatem $\\sqrt{\\frac{b}{c}} \\le 1$ i $\\sqrt{\\frac{b}{a}} \\ge 1$.\nOznacza to $\\frac{\\sqrt{b}}{2\\sqrt{c}} \\le \\frac{1}{2}$ i $\\frac{\\sqrt{b}}{2\\sqrt{a}} \\ge \\frac{1}{2}$.\nSuma tych dwóch wyrażeń może być mniejsza od 1.",
-      "(kluczowy).** Podnieś do kwadratu nierówność $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$ (obie strony są nieujemne). Otrzymujemy $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nPrzekształcamy do $b(a+c) + 2b\\sqrt{ac} \\ge 4ac$.\nZ $a \\le b \\le c$ wynika, że $b \\ge a$ oraz $b \\ge c$ to nieprawda.\nZ $a \\le b \\le c$ mamy $b \\ge a$ i $c \\ge b$.\nZatem $a+c \\ge a+a = 2a$ i $a+c \\ge c+c = 2c$.\nPodstawmy $b=a$ i $c=a$. Wtedy nierówność to $\\sqrt{a^2} + \\sqrt{a^2} \\ge 2\\sqrt{a^2}$, czyli $2a \\ge 2a$, co jest prawdą.\nPodstawmy $b=c$ i $a=b$. Wtedy nierówność to $\\sqrt{a^2} + \\sqrt{c^2} \\ge 2\\sqrt{ac}$, czyli $a+c \\ge 2\\sqrt{ac}$, co jest prawdą z nierówności AM-GM.\nPodstawmy $a=b=c$. Wtedy $\\sqrt{a^2}+\\sqrt{a^2} \\ge 2\\sqrt{a^2}$, $2a \\ge 2a$, co jest prawdą.",
+      "(kluczowy).** Podnieś do kwadratu nierówność $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$ (obie strony są nieujemne). Otrzymujemy $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nPrzekształcamy do $b(a+c) + 2b\\sqrt{ac} \\ge 4ac$.\nZ $a \\le b \\le c$ wynika, że $b \\ge a$ oraz $b \\ge c$ to nieprawda.\nZ $a \\le b \\le c$ mamy $b \\ge a$ i $c \\ge b$.\nZatem $a+c \\ge a+a = 2a$ i $a+c \\ge c+c = 2c$.\nPodstawmy $b=a$ i $c=a$. Wtedy nierówność to $\\sqrt{a^2} + \\sqrt{a^2} \\ge 2\\sqrt{a^2}$, czyli $2a \\ge 2a$, co jest prawdą.\nPodstawmy $b=c$ i $a=b$. Wtedy nierówność to $\\sqrt{a^2} + \\sqrt{c^2} \\ge 2\\sqrt{ac}$, czyli $a+c \\ge 2\\sqrt{ac}$, co jest prawdą z nierówności $AM - GM$.\nPodstawmy $a=b=c$. Wtedy $\\sqrt{a^2}+\\sqrt{a^2} \\ge 2\\sqrt{a^2}$, $2a \\ge 2a$, co jest prawdą.",
       "Podnieś nierówność do kwadratu: $(\\sqrt{ab} + \\sqrt{bc})^2 \\ge (2\\sqrt{ac})^2$, co daje $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nPonieważ $a \\le b \\le c$, mamy $b \\ge a$ oraz $c \\ge b$.\nStąd $b \\ge a \\implies ab \\ge a^2$.\nStąd $c \\ge b \\implies bc \\ge b^2$.\nTo nie pomaga.",
-      "Z warunku $a \\le b \\le c$ wynika, że $\\frac{b}{a} \\ge 1$ i $\\frac{c}{b} \\ge 1$.\nNierówność, którą mamy wykazać, to $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{\\frac{b}{a}} \\ge 1$ oraz $y = \\sqrt{\\frac{c}{b}} \\ge 1$.\nNierówność ma postać $\\frac{1}{y} + x \\ge 2$.\nZ nierówności AM-GM, dla liczb $x$ i $1/y$ mamy $\\frac{x + 1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}} = \\sqrt{\\frac{x}{y}}$.\nTo nie prowadzi do celu.",
-      "Wykorzystajmy nierówność między średnią arytmetyczną i geometryczną dla dwóch liczb: $p+q \\ge 2\\sqrt{pq}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nZapiszmy to jako $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ nierówności AM-GM dla $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\sqrt{a} + \\sqrt{c} \\ge 2\\sqrt{\\sqrt{a}\\sqrt{c}} = 2\\sqrt[4]{ac}$.\nZatem $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge \\sqrt{b} \\cdot 2\\sqrt[4]{ac}$.\nTo nie jest $2\\sqrt{ac}$.",
+      "Z warunku $a \\le b \\le c$ wynika, że $\\frac{b}{a} \\ge 1$ i $\\frac{c}{b} \\ge 1$.\nNierówność, którą mamy wykazać, to $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{\\frac{b}{a}} \\ge 1$ oraz $y = \\sqrt{\\frac{c}{b}} \\ge 1$.\nNierówność ma postać $\\frac{1}{y} + x \\ge 2$.\nZ nierówności $AM - GM$, dla liczb $x$ i $1/y$ mamy $\\frac{x + 1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}} = \\sqrt{\\frac{x}{y}}$.\nTo nie prowadzi do celu.",
+      "Wykorzystajmy nierówność między średnią arytmetyczną i geometryczną dla dwóch liczb: $p+q \\ge 2\\sqrt{pq}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nZapiszmy to jako $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ nierówności $AM - GM$ dla $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\sqrt{a} + \\sqrt{c} \\ge 2\\sqrt{\\sqrt{a}\\sqrt{c}} = 2\\sqrt[4]{ac}$.\nZatem $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge \\sqrt{b} \\cdot 2\\sqrt[4]{ac}$.\nTo nie jest $2\\sqrt{ac}$.",
       "Z warunków $a \\le b$ i $b \\le c$ mamy $\\sqrt{ab} \\ge \\sqrt{a^2} = a$ i $\\sqrt{bc} \\ge \\sqrt{b^2} = b$. To nie jest pomocne.\nZamiast tego, skupmy się na $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nOznaczmy $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $\\frac{1}{y} + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ warunków $x \\ge 1$ i $1/y \\le 1$, nie wynika bezpośrednio $x + 1/y \\ge 2$.",
       "Z warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nOznaczmy $x=\\sqrt{a}$, $y=\\sqrt{b}$, $z=\\sqrt{c}$. Wtedy $x \\le y \\le z$.\nNierówność do wykazania to $xy + yz \\ge 2xz$.\nPodzielmy przez $xz$ (ponieważ $a,c>0$, to $x,z>0$): $\\frac{y}{z} + \\frac{y}{x} \\ge 2$.\nPonieważ $x \\le y$, to $\\frac{y}{x} \\ge 1$.\nPonieważ $y \\le z$, to $\\frac{y}{z} \\le 1$.\nZatem mamy $\\frac{y}{z} + \\frac{y}{x} \\ge 0 + 1 = 1$. To nadal nie jest wystarczające.",
       "Podnieś obie strony do kwadratu: $(\\sqrt{ab} + \\sqrt{bc})^2 \\ge (2\\sqrt{ac})^2$.\n$ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $b \\ge a \\implies ab \\ge a^2$.\nStąd $c \\ge b \\implies bc \\ge b^2$.\nTo nie jest pomocne.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{a}\\sqrt{c}} = \\sqrt[4]{ac}$. To nie jest to.\nZastosuj nierówność AM-GM dla liczb $\\sqrt{ab}$ i $\\sqrt{bc}$: $\\frac{\\sqrt{ab}+\\sqrt{bc}}{2} \\ge \\sqrt{\\sqrt{ab}\\sqrt{bc}} = \\sqrt{b\\sqrt{ac}}$.\nDostajemy $\\sqrt{ab}+\\sqrt{bc} \\ge 2b\\sqrt[4]{ac}$. To też nie jest to.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{a}\\sqrt{c}} = \\sqrt[4]{ac}$. To nie jest to.\nZastosuj nierówność $AM - GM$ dla liczb $\\sqrt{ab}$ i $\\sqrt{bc}$: $\\frac{\\sqrt{ab}+\\sqrt{bc}}{2} \\ge \\sqrt{\\sqrt{ab}\\sqrt{bc}} = \\sqrt{b\\sqrt{ac}}$.\nDostajemy $\\sqrt{ab}+\\sqrt{bc} \\ge 2b\\sqrt[4]{ac}$. To też nie jest to.",
       "Wykorzystaj warunek $a \\le b \\le c$. Mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nPodzielmy nierówność $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$ przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $\\frac{1}{y} + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ warunku $a \\le b$ mamy $b/a \\ge 1$, więc $x \\ge 1$.\nZ warunku $b \\le c$ mamy $c/b \\ge 1$, więc $y \\ge 1$.\nZatem $1/y \\le 1$.\nSuma $x + 1/y \\ge 1 + 1/y$. Nie jest to $\\ge 2$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ $a \\le b \\le c$ mamy $b \\ge a$ i $c \\ge b$.\nZatem $ab \\ge a^2$ i $bc \\ge b^2$.\nTo nie działa.",
-      "Zastosuj nierówność AM-GM do liczb $a$ i $c$. Mamy $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nWykorzystajmy warunek $a \\le b \\le c$.\nMamy $\\sqrt{ab} \\ge \\sqrt{a \\cdot a} = a$ i $\\sqrt{bc} \\ge \\sqrt{b \\cdot b} = b$.\nTo nie jest właściwe.",
+      "Zastosuj nierówność $AM - GM$ do liczb $a$ i $c$. Mamy $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nWykorzystajmy warunek $a \\le b \\le c$.\nMamy $\\sqrt{ab} \\ge \\sqrt{a \\cdot a} = a$ i $\\sqrt{bc} \\ge \\sqrt{b \\cdot b} = b$.\nTo nie jest właściwe.",
       "Podzielmy nierówność przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{\\frac{b}{a}}$ oraz $y = \\sqrt{\\frac{c}{b}}$. Z warunku $a \\le b \\le c$, mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność przyjmuje postać $\\frac{1}{y} + x \\ge 2$.\nPonieważ $x \\ge 1$ oraz $y \\ge 1$, to $1/y \\le 1$.\nWykażemy, że $\\frac{1}{y} + x \\ge 2$ jest zawsze spełnione.\nZ $x \\ge 1$ i $y \\ge 1$, mamy $x \\ge 1$ i $1/y \\le 1$.\nTo wciąż nie jest wystarczające.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{a}\\sqrt{c}} = \\sqrt[4]{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a}$ i $y=\\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nSkoro $x \\ge 1$ i $y \\ge 1$, to $x \\ge 1$ i $1/y \\le 1$.\nTo nie jest bezpośrednio $\\ge 2$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$. Mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ warunków $a \\le b \\le c$ mamy $b/a \\ge 1$ oraz $c/b \\ge 1$.\nZatem $x \\ge 1$ i $y \\ge 1$. Stąd $1/y \\le 1$.\nZ nierówności AM-GM dla liczb $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}} = \\sqrt{\\frac{x}{y}}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{a}\\sqrt{c}} = \\sqrt[4]{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a}$ i $y=\\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nSkoro $x \\ge 1$ i $y \\ge 1$, to $x \\ge 1$ i $1/y \\le 1$.\nTo nie jest bezpośrednio $\\ge 2$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$. Mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ warunków $a \\le b \\le c$ mamy $b/a \\ge 1$ oraz $c/b \\ge 1$.\nZatem $x \\ge 1$ i $y \\ge 1$. Stąd $1/y \\le 1$.\nZ nierówności $AM - GM$ dla liczb $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}} = \\sqrt{\\frac{x}{y}}$.",
       "Przekształć nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPonieważ $a \\le b \\le c$, to $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nMamy $\\sqrt{b} \\ge \\sqrt{a}$ oraz $\\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\nI $\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.\nTo nie prowadzi do celu.",
       "Podnieś obie strony nierówności do kwadratu: $(\\sqrt{ab} + \\sqrt{bc})^2 \\ge (2\\sqrt{ac})^2$, czyli $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nPonieważ $a \\le b \\le c$, to $b \\ge a$ i $c \\ge b$.\nZatem $b \\ge a \\implies ab \\ge a^2$.\nZatem $c \\ge b \\implies bc \\ge b^2$.\nTo nie działa.",
-      "Podzielmy nierówność przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Z $a \\le b \\le c$, mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM dla liczb $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}}$.\nTo nie jest poprawne.",
+      "Podzielmy nierówność przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Z $a \\le b \\le c$, mamy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$ dla liczb $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x \\cdot \\frac{1}{y}}$.\nTo nie jest poprawne.",
       "Z warunków $a \\le b \\le c$ mamy:\n$\\sqrt{ab} \\ge \\sqrt{a \\cdot a} = a$\n$\\sqrt{bc} \\ge \\sqrt{b \\cdot b} = b$\nTo nie prowadzi do celu.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nWykorzystajmy $a \\le b$ i $b \\le c$.\n$b \\ge a \\implies ab \\ge a^2$.\n$c \\ge b \\implies bc \\ge b^2$.\nTo nie jest pomocne.",
-      "Z nierówności AM-GM dla liczb $a$ i $c$ mamy $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nZastosujmy nierówność AM-GM dla $\\sqrt{ab}$ i $\\sqrt{bc}$: $\\frac{\\sqrt{ab}+\\sqrt{bc}}{2} \\ge \\sqrt{\\sqrt{ab}\\sqrt{bc}} = \\sqrt{b\\sqrt{ac}}$.\nDostajemy $\\sqrt{ab}+\\sqrt{bc} \\ge 2b\\sqrt[4]{ac}$. To nie jest $2\\sqrt{ac}$.",
+      "Z nierówności $AM - GM$ dla liczb $a$ i $c$ mamy $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nChcemy wykazać $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$.\nZastosujmy nierówność $AM - GM$ dla $\\sqrt{ab}$ i $\\sqrt{bc}$: $\\frac{\\sqrt{ab}+\\sqrt{bc}}{2} \\ge \\sqrt{\\sqrt{ab}\\sqrt{bc}} = \\sqrt{b\\sqrt{ac}}$.\nDostajemy $\\sqrt{ab}+\\sqrt{bc} \\ge 2b\\sqrt[4]{ac}$. To nie jest $2\\sqrt{ac}$.",
       "Przekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$ mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nStąd $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\nMamy $\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\nMamy $\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.\nTo nie jest pomocne.",
-      "Zastosuj nierówność AM-GM dla liczb $p=\\sqrt{a}$ i $q=\\sqrt{c}$: $p+q \\ge 2\\sqrt{pq}$.\n$(\\sqrt{a}+\\sqrt{c})^2 \\ge 4\\sqrt{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ warunków $a \\le b \\le c$:\n$\\sqrt{ab} \\ge \\sqrt{a^2} = a$.\n$\\sqrt{bc} \\ge \\sqrt{b^2} = b$.\nZ warunków $a \\le b \\le c$:\n$\\sqrt{ab} \\ge \\sqrt{a \\cdot a} = a$.\n$\\sqrt{bc} \\ge \\sqrt{b \\cdot b} = b$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $p=\\sqrt{a}$ i $q=\\sqrt{c}$: $p+q \\ge 2\\sqrt{pq}$.\n$(\\sqrt{a}+\\sqrt{c})^2 \\ge 4\\sqrt{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ warunków $a \\le b \\le c$:\n$\\sqrt{ab} \\ge \\sqrt{a^2} = a$.\n$\\sqrt{bc} \\ge \\sqrt{b^2} = b$.\nZ warunków $a \\le b \\le c$:\n$\\sqrt{ab} \\ge \\sqrt{a \\cdot a} = a$.\n$\\sqrt{bc} \\ge \\sqrt{b \\cdot b} = b$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\n$ab \\ge a^2$. $bc \\ge b^2$.\nTo nie prowadzi do celu.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $x \\ge 1$ i $y \\ge 1$, mamy $x \\ge 1$ i $1/y \\le 1$.\nWykażemy, że $x+1/y \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$.\nZ AM-GM: $x + 1/y \\ge 2\\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a}$ i $y = \\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $x \\ge 1$ i $y \\ge 1$, mamy $x \\ge 1$ i $1/y \\le 1$.\nWykażemy, że $x+1/y \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$.\nZ $AM - GM$: $x + 1/y \\ge 2\\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$ mamy: $b \\ge a$ i $c \\ge b$.\n$ab \\ge a^2$. $bc \\ge b^2$.\nTo nie działa.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$ dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Przekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunku $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$. To nie prowadzi do celu.",
-      "Zastosuj nierówność AM-GM dla liczb $p=\\sqrt{a}$ i $q=\\sqrt{c}$: $p+q \\ge 2\\sqrt{pq}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.\nTo nie jest wystarczające.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ AM-GM dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $a$ i $c$: $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a}+\\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a}$ i $y=\\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ AM-GM dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $p=\\sqrt{a}$ i $q=\\sqrt{c}$: $p+q \\ge 2\\sqrt{pq}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.\nTo nie jest wystarczające.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ $AM - GM$ dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $a$ i $c$: $\\frac{a+c}{2} \\ge \\sqrt{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a}+\\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a}$ i $y=\\sqrt{c/b}$. Wtedy $x \\ge 1$ i $y \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nPonieważ $x \\ge 1$ i $y \\ge 1$, to $1/y \\le 1$.\nZ $AM - GM$ dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Przekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\n$ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunku $a \\le b \\le c$ mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$ dla $x$ i $1/y$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunku $a \\le b \\le c$ mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\n$ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś do kwadratu nierówność $\\sqrt{ab} + \\sqrt{bc} \\ge 2\\sqrt{ac}$: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a} \\ge 1$ i $y = \\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x = \\sqrt{b/a} \\ge 1$ i $y = \\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nPrzekształćmy nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Przekształć nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Przekształć nierówność do wykazania: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt[4]{ac}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Przekształć nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
       "Podnieś nierówność do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ AM-GM: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
-      "Zastosuj nierówność AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.\nNierówność to $1/y + x \\ge 2$.\nZ $AM - GM$: $\\frac{x+1/y}{2} \\ge \\sqrt{x/y}$.",
+      "Zastosuj nierówność $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$: $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nPrzekształćmy nierówność: $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nZ warunków $a \\le b \\le c$, mamy $\\sqrt{a} \\le \\sqrt{b} \\le \\sqrt{c}$.\nZatem $\\sqrt{b} \\ge \\sqrt{a}$ i $\\sqrt{b} \\le \\sqrt{c}$.\n$\\sqrt{ab} = \\sqrt{b}\\sqrt{a} \\ge \\sqrt{a}\\sqrt{a} = a$.\n$\\sqrt{bc} = \\sqrt{b}\\sqrt{c} \\ge \\sqrt{b}\\sqrt{b} = b$.",
       "Podnieś obie strony nierówności do kwadratu: $ab + bc + 2b\\sqrt{ac} \\ge 4ac$.\nZ warunków $a \\le b \\le c$, mamy $b \\ge a$ i $c \\ge b$.\nStąd $ab \\ge a^2$ i $bc \\ge b^2$.",
-      "Z nierówności AM-GM dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$."
+      "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10623,7 +10623,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa f przyjmuje wartość 2 dla argumentu 0, a ponadto f(4) − f(2) = 6 . Wyznacz wzór funkcji f.",
+    "prompt": "Funkcja liniowa f przyjmuje wartość 2 dla argumentu 0, a ponadto $f(4) - f(2) = 6$ . Wyznacz wzór funkcji $f$.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10680,7 +10680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC – odpowiednio – w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy 3 / 2 . Oblicz długość boku trójkąta AKL.",
+    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i $AC - odp$owiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10688,7 +10688,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "4",
     "solutionSteps": [
       "Pole trójkąta równobocznego o boku $a$ to $\\frac{a^2\\sqrt{3}}{4}$. Zatem $9\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$, co po skróceniu $\\sqrt{3}$ i przemnożeniu przez 4 daje $a^2 = 36$, czyli $a=6$. Bok trójkąta ABC ma długość 6.",
-      "Stosunek długości boków trójkątów podobnych ABC i AKL wynosi 3/2. Ponieważ trójkąty są podobne, stosunek ten dotyczy wszystkich ich odpowiednich boków. Oznacza to, że bok trójkąta ABC jest $\\frac{3}{2}$ razy dłuższy od odpowiedniego boku trójkąta AKL.",
+      "Stosunek długości boków trójkątów podobnych ABC i AKL wynosi $\\frac{3}{2}$. Ponieważ trójkąty są podobne, stosunek ten dotyczy wszystkich ich odpowiednich boków. Oznacza to, że bok trójkąta ABC jest $\\frac{3}{2}$ razy dłuższy od odpowiedniego boku trójkąta AKL.",
       "Niech $x$ będzie długością boku trójkąta AKL. Wtedy stosunek długości boków wynosi $\\frac{6}{x} = \\frac{3}{2}$. Rozwiązując to równanie, mnożymy na krzyż: $6 \\cdot 2 = 3 \\cdot x$, co daje $12 = 3x$, a stąd $x=4$."
     ],
     "examSource": {
@@ -10715,7 +10715,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{1}{3}$",
     "solutionSteps": [
-      "Określ przestrzeń zdarzeń elementarnych. Rzucając dwukrotnie kostką, mamy $6 \\times 6 = 36$ możliwych wyników (par).",
+      "Określ przestrzeń zdarzeń elementarnych. Rzucając dwukrotnie kostką, mamy $6 \\times 6 = 36$ możliwych wyników(par).",
       "Wypisz zdarzenia sprzyjające sumie równej 4, 5 lub 6. Suma równa 4: (1,3), (2,2), (3,1). Suma równa 5: (1,4), (2,3), (3,2), (4,1). Suma równa 6: (1,5), (2,4), (3,3), (4,2), (5,1). Jest łącznie $3+4+5=12$ takich zdarzeń.",
       "Oblicz prawdopodobieństwo, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich możliwych zdarzeń. Prawdopodobieństwo $P(A) = \\frac{12}{36} = \\frac{1}{3}$."
     ],
@@ -10736,14 +10736,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = (−20, 12) i B = (7, 3) są wierzchołkami trójkąta równoramiennego ABC, w którym |AC| = |BC|. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta.",
+    "prompt": "Punkty A = $(-20, 12)$ i $B = (7, 3)$ są wierzchołkami trójkąta równoramiennego ABC, w którym $|AC| = |BC|$. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Współrzędne wierzchołka C to (0, 27), a obwód trójkąta to $50 + 9\\sqrt{10}$.",
     "solutionSteps": [
-      "Skoro punkt C leży na osi Oy, jego współrzędne to (0, y). Skorzystamy z warunku |AC| = |BC|, czyli z równości kwadratów odległości, aby obliczyć y. $|AC|^2 = (0 - (-20))^2 + (y - 12)^2 = 20^2 + (y - 12)^2 = 400 + (y - 12)^2$. $|BC|^2 = (0 - 7)^2 + (y - 3)^2 = (-7)^2 + (y - 3)^2 = 49 + (y - 3)^2$.",
+      "Skoro punkt C leży na osi Oy, jego współrzędne to (0, y). Skorzystamy z warunku $|AC| = |BC|$, czyli z równości kwadratów odległości, aby obliczyć y. $|AC|^2 = (0 - (-20))^2 + (y - 12)^2 = 20^2 + (y - 12)^2 = 400 + (y - 12)^2$. $|BC|^2 = (0 - 7)^2 + (y - 3)^2 = (-7)^2 + (y - 3)^2 = 49 + (y - 3)^2$.",
       "Przyrównujemy $|AC|^2$ i $|BC|^2$: $400 + (y - 12)^2 = 49 + (y - 3)^2$. Rozpisujemy kwadraty: $400 + y^2 - 24y + 144 = 49 + y^2 - 6y + 9$. Upraszczamy równanie: $544 - 24y = 58 - 6y$. Rozwiązujemy dla y: $486 = 18y$, czyli $y = 27$. Zatem punkt C ma współrzędne (0, 27).",
       "Obliczamy długości boków trójkąta: $|AC| = |BC| = \\sqrt{49 + (27 - 3)^2} = \\sqrt{49 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$. $|AB| = \\sqrt{(7 - (-20))^2 + (3 - 12)^2} = \\sqrt{27^2 + (-9)^2} = \\sqrt{729 + 81} = \\sqrt{810} = \\sqrt{81 \\cdot 10} = 9\\sqrt{10}$. Obwód trójkąta wynosi $25 + 25 + 9\\sqrt{10} = 50 + 9\\sqrt{10}$."
     ],
@@ -10764,12 +10764,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba (√ 6 − √ 2 ) 2 − 2√ 3 jest równa",
+    "prompt": "Liczba $(\\sqrt6 - \\sqrt2) 2 - 2$√ 3 jest równa",
     "choices": [
-      "8 – 6√ 3",
-      "8 – 2√ 3",
-      "4 – 2√ 3",
-      "8 – 4√ 3 pokaż wskazówkę »"
+      "$8 - 6$√ 3",
+      "$8 - 2$√ 3",
+      "$4 - 2$√ 3",
+      "$8 - 4$√ 3 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $8 - 6\\sqrt{3}$",
@@ -10795,11 +10795,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2 log 5 4 − 3 log 5 1 / 2 jest równa",
+    "prompt": "Liczba 2 log 5 $4 - 3$ log 5 $\\frac{1}{2}$ jest równa",
     "choices": [
-      "–log 5 7 / 2",
+      "-log 5 $\\frac{7}{2}$",
       "7 log 5 2",
-      "–log 5 2",
+      "-log 5 2",
       "log 5 2 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
@@ -10859,10 +10859,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dla każdej dodatniej liczby b wyrażenie ![Rysunek do zadania](/cke-matura/m21-probna/z04-1.png) jest równe",
     "choices": [
-      "b 2",
-      "b 0,25",
-      "b 8 / 3",
-      "b 4 / 3 pokaż wskazówkę »"
+      "$b_{2}$",
+      "$b_{0}$,25",
+      "$b_{8} / 3$",
+      "$b_{4} / 3$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $b^{\\frac{7}{6}}$",
@@ -10888,12 +10888,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Para liczb x = 1 , y = –3 spełnia układ równań ![Rysunek do zadania](/cke-matura/m21-probna/z05-1.png) Wtedy a jest równe",
+    "prompt": "Para liczb $x = 1$ , $y = -3$ spełnia układ równań ![Rysunek do zadania](/cke-matura/m21-probna/z05-1.png) Wtedy a jest równe",
     "choices": [
       "2",
-      "–2",
+      "-2",
       "√ 2",
-      "–√ 2"
+      "-√ 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $2$.",
@@ -10914,23 +10914,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-probna-z06",
     "title": "Matura — próbna 2021 — poziom podstawowy — zad. 6",
     "category": "rownania",
-    "difficulty": "latwy",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Iloczyn wszystkich rozwiązań równania 2( x − 4)( x 2 − 1) = 0 jest równy",
+    "prompt": "Iloczyn wszystkich rozwiązań równania 2$(x - 4)(x^{2} - 1)$ = 0 jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "–8",
-      "–4",
-      "4",
-      "8 pokaż wskazówkę »"
+      "Zadanie otwarte — patrz rozwiązanie"
     ],
-    "correctIndex": 1,
-    "explanation": "–4",
+    "correctIndex": 0,
+    "explanation": "-4",
     "solutionSteps": [
-      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała 2 nie wpływa na rozwiązania.",
+      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała_{2} nie wpływa na rozwiązania.",
       "Rozwiązania to $x-4=0 \\Rightarrow x=4$ oraz $x^2-1=0 \\Rightarrow x^2=1 \\Rightarrow x=1$ lub $x=-1$.",
       "Oblicz iloczyn wszystkich rozwiązań: $4 \\cdot 1 \\cdot (-1)$."
     ],
@@ -10960,7 +10957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Nierówność $\\frac{2x-3}{7-4x} \\ge 0$ jest spełniona, gdy licznik i mianownik mają przeciwne znaki lub licznik jest równy zero. Rozwiązujemy dwa przypadki: $2x-3 \\ge 0$ i $7-4x > 0$ (mianownik nie może być zerem) lub $2x-3 \\le 0$ i $7-4x < 0$.",
       "W pierwszym przypadku: $x \\ge \\frac{3}{2}$ i $x < \\frac{7}{4}$. Zatem $\\frac{3}{2} \\le x < \\frac{7}{4}$. W drugim przypadku: $x \\le \\frac{3}{2}$ i $x > \\frac{7}{4}$. Ten przypadek nie ma rozwiązań, ponieważ $x$ nie może być jednocześnie mniejszy lub równy $\\frac{3}{2}$ i większy od $\\frac{7}{4}$.",
-      "Połączone rozwiązanie z pierwszego przypadku to przedział $\\left[ \\frac{3}{2}, \\frac{7}{4} \\right)$. Należy sprawdzić, czy to rozwiązanie jest dostępne w opcjach odpowiedzi. Zauważamy, że pytanie jest błędnie sformułowane lub rysunek (którego nie widzę) stanowi część nierówności, której tu nie ma. Zakładając, że celem było rozwiązanie podanej nierówności, żadna z opcji A-D nie odpowiada wynikowi. Przyjmując, że pytanie dotyczyło pierwiastków z rysunku i nierówność miała być inna, nie można udzielić prawidłowej odpowiedzi."
+      "Połączone rozwiązanie z pierwszego przypadku to przedział $\\left[ \\frac{3}{2}, \\frac{7}{4} \\right)$. Należy sprawdzić, czy to rozwiązanie jest dostępne w opcjach odpowiedzi. Zauważamy, że pytanie jest błędnie sformułowane lub rysunek (którego nie widzę) stanowi część nierówności, której tu nie ma. Zakładając, że celem było rozwiązanie podanej nierówności, żadna z opcji $A - D$ nie odpowiada wynikowi. Przyjmując, że pytanie dotyczyło pierwiastków z rysunku i nierówność miała być inna, nie można udzielić prawidłowej odpowiedzi."
     ],
     "examSource": {
       "kind": "matura",
@@ -10979,12 +10976,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa f( x ) = ( a − 1) x + 3 osiąga wartość najmniejszą równą 3. Wtedy",
+    "prompt": "Funkcja liniowa $f(x)$ = $(a - 1) x + 3$ osiąga wartość najmniejszą równą 3. Wtedy",
     "choices": [
-      "a = –1",
-      "a = 0",
-      "a = 1",
-      "a = 3"
+      "$a = -1$",
+      "$a = 0$",
+      "$a = 1$",
+      "$a = 3$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $a = 1$",
@@ -11010,18 +11007,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na wykresie przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m21-probna/z09-1.png) Wskaż zdanie prawdziwe.",
+    "prompt": "Na wykresie przedstawiono wykres funkcji $f$. ![Rysunek do zadania](/cke-matura/m21-probna/z09-1.png) Wskaż zdanie prawdziwe.",
     "choices": [
-      "Dziedziną funkcji f jest przedział (−4,5).",
-      "Funkcja f ma dwa miejsca zerowe.",
-      "Funkcja f dla argumentu 1 przyjmuje wartość (−1).",
-      "Zbiorem wartości funkcji f jest przedział (−4,5⟩."
+      "Dziedziną funkcji $f$ jest przedział $(-4,5)$.",
+      "Funkcja $f$ ma dwa miejsca zerowe.",
+      "Funkcja $f$ dla argumentu 1 przyjmuje wartość $(-1)$.",
+      "Zbiorem wartości funkcji $f$ jest przedział (-4,5⟩."
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli Funkcja f dla argumentu 1 przyjmuje wartość (−1).",
+    "explanation": "C, czyli Funkcja $f$ dla argumentu 1 przyjmuje wartość $(-1)$.",
     "solutionSteps": [
-      "Odczytaj dziedzinę funkcji z wykresu. Dziedzina to zbiór wszystkich dopuszczalnych argumentów (wartości $x$), odczytujemy ją z osi $x$. Wykres funkcji istnieje dla $x$ od $-4$ (nie włącznie) do $5$ (włącznie).",
-      "Określ zbiór wartości funkcji z wykresu. Zbiór wartości to zbiór wszystkich wartości przyjmowanych przez funkcję (wartości $y$), odczytujemy go z osi $y$. Najniższa wartość to $-4$ (włącznie), a najwyższa to $5$ (włącznie).",
+      "Odczytaj dziedzinę funkcji $z$ wykresu. Dziedzina to zbiór wszystkich dopuszczalnych argumentów (wartości $x$), odczytujemy ją z osi $x$. Wykres funkcji istnieje dla $x$ od $-4$ (nie włącznie) do $5$ (włącznie).",
+      "Określ zbiór wartości funkcji $z$ wykresu. Zbiór wartości to zbiór wszystkich wartości przyjmowanych przez funkcję (wartości $y$), odczytujemy go z osi $y$. Najniższa wartość to $-4$ (włącznie), a najwyższa to $5$ (włącznie).",
       "Sprawdź miejsca zerowe i wartość funkcji dla argumentu 1. Miejsca zerowe to punkty, w których wykres przecina oś $x$ (mają $y=0$). Wartość funkcji dla $x=1$ to $y$ odczytane z wykresu dla $x=1$. Funkcja ma dwa miejsca zerowe, a dla $x=1$ przyjmuje wartość $y=-1$.",
       "Oceń prawdziwość podanych zdań. A) Dziedzina to $(-4, 5]$, nie $(-4, 5)$. B) Funkcja ma dwa miejsca zerowe. C) Funkcja dla argumentu 1 przyjmuje wartość $-1$. D) Zbiór wartości to $[-4, 5]$, nie $(-4, 5]$. Zdania B i C są prawdziwe, ale w zadaniach CKE wybieramy jedno najlepsze. Zwykle chodzi o konkretną wartość, więc C jest precyzyjniejsze. Przyjęliśmy standard CKE, że podajemy jedną poprawną odpowiedź."
     ],
@@ -11042,10 +11039,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja ƒ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-probna/z10-1.png) dla każdej liczby rzeczywistej x . Wartość funkcji ƒ dla argumentu 1 jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-probna/z10-1.png) dla każdej liczby rzeczywistej x . Wartość funkcji $f$ dla argumentu 1 jest równa",
     "choices": [
-      "1 / 5",
-      "1 / 3",
+      "$\\frac{1}{5}$",
+      "$\\frac{1}{3}$",
       "1",
       "2"
     ],
@@ -11073,10 +11070,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( x , y , z ) jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy 64. Stąd wynika, że y jest równe",
+    "prompt": "Ciąg (x , y , z) jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy 64. Stąd wynika, że y jest równe",
     "choices": [
       "3 ⋅ 64",
-      "64 / 3",
+      "$\\frac{64}{3}$",
       "4",
       "3 pokaż wskazówkę »"
     ],
@@ -11085,7 +11082,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "W ciągu geometrycznym iloczyn wyrazów jest równy środkowemu wyrazowi podniesionemu do potęgi równej liczbie wyrazów. Mamy więc $x \\cdot y \\cdot z = y^3$.",
       "Wiemy, że $x \\cdot y \\cdot z = 64$, więc możemy zapisać równanie $y^3 = 64$.",
-      "Obliczamy $y$ z równania $y^3 = 64$. Jest to pierwiastek sześcienny z 64, czyli $y = \\sqrt[3]{64}$."
+      "Obliczamy $y$ z równania $y^3 = 64$. Jest to pierwiastek sześcienny $z^{64}$, czyli $y = \\sqrt[3]{64}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11104,12 +11101,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( a n ), określony dla każdej liczby naturalnej n ≥ 1, jest arytmetyczny. Różnica tego ciągu jest równa 5, a pierwszy wyraz tego ciągu jest równy (−3). Wtedy iloraz ![Rysunek do zadania](/cke-matura/m21-probna/z12-1.png) jest równy\n\nRozwiąż zadanie.",
+    "prompt": "Ciąg ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$, jest arytmetyczny. Różnica tego ciągu jest równa 5, a pierwszy wyraz tego ciągu jest równy $(-3)$. Wtedy iloraz ![Rysunek do zadania](/cke-matura/m21-probna/z12-1.png) jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Zadanie jest błędnie sformułowane lub podana odpowiedź jest niepoprawna. Według podanych danych i kroków obliczeń, wynik to -4. Brak opcji -4 w odpowiedziach.",
+    "explanation": "Zadanie jest błędnie sformułowane lub podana odpowiedź jest niepoprawna. Według podanych danych i kroków obliczeń, wynik $to - 4$. Brak opcji -4 w odpowiedziach.",
     "solutionSteps": [
       "Zapisz wzór na ogólny wyraz ciągu arytmetycznego, podstawiając dane: $a_n = a_1 + (n-1)r = -3 + (n-1)5 = -3 + 5n - 5 = 5n - 8$.",
       "Oblicz wartość $a_4$: $a_4 = 5 \\cdot 4 - 8 = 20 - 8 = 12$.",
@@ -11132,12 +11129,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt ABC jest wpisany w okrąg o środku O . Miara kąta CAO jest równa 70° (zobacz rysunek). Wtedy miara kąta ABC jest równa ![Rysunek do zadania](/cke-matura/m21-probna/z13-1.png)",
+    "prompt": "Trójkąt ABC jest wpisany w okrąg o środku O . Miara kąta CAO jest równa $70^{\\circ}$ (zobacz rysunek). Wtedy miara kąta ABC jest równa ![Rysunek do zadania](/cke-matura/m21-probna/z13-1.png)",
     "choices": [
-      "20°",
-      "25°",
-      "30°",
-      "35° pokaż wskazówkę »"
+      "$20^{\\circ}$",
+      "$25^{\\circ}$",
+      "$30^{\\circ}$",
+      "$35^{\\circ}$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $20^\\circ$",
@@ -11163,12 +11160,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciągi ( a n ), ( b n ) oraz ( c n ) są określone dla każdej liczby naturalnej n ≥ 1 następująco: • a n = 6 n 2 − n 3 • b n = 2 n + 13 • c n = 2 n Wskaż zdanie prawdziwe.",
+    "prompt": "Ciągi ($a_{n}$), ($b_{n}$) oraz ($c_{n}$) są określone dla każdej liczby naturalnej $n \\ge 1$ następująco: • $a_{n} = 6n^{2} - n^{3}$ • $b_{n} = 2n + 13$ • $c_{n} = 2$ n Wskaż zdanie prawdziwe.",
     "choices": [
-      "Ciąg ( a n ) jest arytmetyczny.",
-      "Ciąg ( b n ) jest arytmetyczny.",
-      "Ciąg ( c n ) jest arytmetyczny.",
-      "Wśród ciągów ( a n ), ( b n ), ( c n ) nie ma ciągu arytmetycznego."
+      "Ciąg ($a_{n}$) jest arytmetyczny.",
+      "Ciąg ($b_{n}$) jest arytmetyczny.",
+      "Ciąg ($c_{n}$) jest arytmetyczny.",
+      "Wśród ciągów ($a_{n}$), ($b_{n}$), ($c_{n}$) nie ma ciągu arytmetycznego."
     ],
     "correctIndex": 1,
     "explanation": "B",
@@ -11195,12 +11192,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( a n ) jest określony wzorem a n = (−2) n ⋅ n + 1 dla każdej liczby naturalnej n ≥ 1 . Wtedy trzeci wyraz tego ciągu jest równy",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-2)$ n ⋅ $n + 1$ dla każdej liczby naturalnej $n \\ge 1$ . Wtedy trzeci wyraz tego ciągu jest równy",
     "choices": [
-      "–24",
-      "–17",
-      "–32",
-      "–23"
+      "-24",
+      "-17",
+      "-32",
+      "-23"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-23$",
@@ -11226,12 +11223,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W romb o boku 2√ 3 i kącie 60° wpisano okrąg. Promień tego okręgu jest równy",
+    "prompt": "W romb o boku 2√ 3 i kącie $60^{\\circ}$ wpisano okrąg. Promień tego okręgu jest równy",
     "choices": [
       "3",
-      "1 / 2",
-      "3 / 4",
-      "3 / 2 pokaż wskazówkę »"
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{3}{2}$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
@@ -11267,9 +11264,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "A, czyli 9 ∶ 4",
     "solutionSteps": [
       "Punkt przecięcia wysokości w trójkącie równobocznym to jego środek ciężkości. Dzieli on każdą wysokość w stosunku 2:1, licząc od wierzchołka. Oznacza to, że wysokość trójkąta CDE stanowi $\\frac{1}{3}$ wysokości trójkąta ABC.",
-      "Ponieważ trójkąty ABC i CDE są podobne (kąty przy wierzchołku C są takie same, a kąty przy podstawie DE i AB są równe jako odpowiadające przy prostych równoległych), stosunek ich pól jest równy kwadratowi stosunku odpowiadających sobie wysokości.",
+      "Ponieważ trójkąty ABC i CDE są podobne (kąty przy wierzchołku C są takie same, $a_{k}$ąty przy podstawie DE i AB są równe jako odpowiadające przy prostych równoległych), stosunek ich pól jest równy kwadratowi stosunku odpowiadających sobie wysokości.",
       "Stosunek pola ABC do pola CDE wynosi $(\\frac{h_{ABC}}{h_{CDE}})^2 = (\\frac{3}{1})^2 = \\frac{9}{1}$. Ponieważ w zadaniu pytanie jest o stosunek pola ABC do pola CDE, to jest on równy 9:1.",
-      "Chwila, w treści zadania jest \"stosunek pola trójkąta ABC do pola trójkąta CDE jest równy\". Według moich obliczeń stosunek ten wynosi 9:1. Sprawdzam opcje. Opcje A) 9 ∶ 4, B) 4 ∶ 1, C) 4 ∶ 9, D) 3 ∶ 2. Moja odpowiedź 9:1 nie pasuje do żadnej opcji. Zastanawiam się, czy rysunek nie wprowadza w błąd lub ja czegoś nie zrozumiałem. Sprawdzam raz jeszcze. Punkt przecięcia wysokości jest środkiem okręgu wpisanego i opisanego. Wysokość dzieli się w stosunku 2:1. Czyli od wierzchołka do środka jest 2/3, od środka do podstawy 1/3. Wysokość trójkąta CDE to ta od wierzchołka C do prostej DE. Czyli wysokość CDE wynosi 2/3 wysokości ABC. Stosunek pól to kwadrat stosunku wysokości. Czyli $(\\frac{h_{ABC}}{h_{CDE}})^2 = (\\frac{3}{2})^2 = \\frac{9}{4}$."
+      "Chwila, w treści zadania jest \"stosunek pola trójkąta ABC do pola trójkąta CDE jest równy\". Według moich obliczeń stosunek ten wynosi 9:1. Sprawdzam opcje. Opcje A) 9 ∶ 4, B) 4 ∶ 1, C) 4 ∶ 9, D) 3 ∶ 2. Moja odpowiedź 9:1 nie pasuje do żadnej opcji. Zastanawiam się, czy rysunek nie wprowadza w błąd lub ja czegoś nie zrozumiałem. Sprawdzam raz jeszcze. Punkt przecięcia wysokości jest środkiem okręgu wpisanego i opisanego. Wysokość dzieli się w stosunku 2:1. Czyli od wierzchołka do środka jest $\\frac{2}{3}$, od środka do podstawy $\\frac{1}{3}$. Wysokość trójkąta CDE to ta od wierzchołka C do prostej DE. Czyli wysokość CDE wynosi $\\frac{2}{3}$ wysokości ABC. Stosunek pól to kwadrat stosunku wysokości. Czyli $(\\frac{h_{ABC}}{h_{CDE}})^2 = (\\frac{3}{2})^2 = \\frac{9}{4}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11288,7 +11285,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Końcami odcinka PR są punkty P = (4,7) i R = (−2,−3) . Odległość punktu T = (3,−1) od środka odcinka PR jest równa",
+    "prompt": "Końcami odcinka PR są punkty $P = (4,7)$ i R = $(-2, - 3)$ . Odległość punktu T = $(3, - 1)$ od środka odcinka PR jest równa",
     "choices": [
       "√ 3",
       "√ 13",
@@ -11318,12 +11315,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry oraz sin α = 4 / 5 . Wtedy",
+    "prompt": "Kąt α jest ostry oraz sin $α = \\frac{4}{5}$ . Wtedy",
     "choices": [
-      "cos α = 1 / 5",
-      "cos α = – 1 / 5",
-      "cos α = – 3 / 5",
-      "cos α = 3 / 5 pokaż wskazówkę »"
+      "cos $α = \\frac{1}{5}$",
+      "cos $α = -\\frac{1}{5}$",
+      "cos $α = -\\frac{3}{5}$",
+      "cos $α = \\frac{3}{5}$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{5}$",
@@ -11349,17 +11346,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są punkty M = (6,0) , N = (6,8) oraz O = (0,0) . Tangens kąta ostrego MON jest równy",
+    "prompt": "Dane są punkty $M = (6,0)$ , $N = (6,8)$ oraz $O = (0,0)$ . Tangens kąta ostrego MON jest równy",
     "choices": [
-      "4 / 3",
-      "6 / 10",
-      "3 / 4",
-      "8 / 10 pokaż wskazówkę »"
+      "$\\frac{4}{3}$",
+      "$\\frac{6}{10}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{8}{10}$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{4}{3}$",
     "solutionSteps": [
-      "Zauważ, że punkty O, M, N tworzą trójkąt prostokątny o wierzchołkach w O(0,0), M(6,0) i N(6,8). Przyprostokątne tego trójkąta to OM (długość 6) i MN (długość 8).",
+      "Zauważ, że punkty O, M, N tworzą trójkąt prostokątny o wierzchołkach w $O(0,0)$, $M(6,0)$ i $N(6,8)$. Przyprostokątne tego trójkąta to OM (długość 6) i MN (długość 8).",
       "Tangens kąta MON to stosunek długości przyprostokątnej leżącej naprzeciwko kąta do długości przyprostokątnej leżącej przy tym kącie, czyli $\\operatorname{tg}(\\angle MON) = \\frac{MN}{OM} = \\frac{8}{6}$.",
       "Uprość otrzymany ułamek: $\\frac{8}{6} = \\frac{4}{3}$."
     ],
@@ -11380,12 +11377,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = 3 ax − 2 i y = 2 x + 3 a są prostopadłe. Wtedy a jest równe",
+    "prompt": "Proste o równaniach $y = 3 ax - 2$ i $y = 2x + 3$ a są prostopadłe. Wtedy a jest równe",
     "choices": [
-      "2 / 3",
-      "– 1 / 6",
-      "3 / 2",
-      "–5 pokaż wskazówkę »"
+      "$\\frac{2}{3}$",
+      "-$\\frac{1}{6}$",
+      "$\\frac{3}{2}$",
+      "-5 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $-\\frac{1}{6}$",
@@ -11411,12 +11408,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz C = (3,5) . Wierzchołki A i B tego trapezu leżą na prostej o równaniu y = 5 x + 3 . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu",
+    "prompt": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz $C = (3,5)$ . Wierzchołki A i B tego trapezu leżą na prostej o równaniu $y = 5x + 3$ . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu",
     "choices": [
-      "y = 3 x + 5",
-      "y = – 1 / 5 x + 3",
-      "y = 5 x – 10",
-      "y = – 1 / 5 x + 28 / 5 pokaż wskazówkę »"
+      "$y = 3x + 5$",
+      "$y = -1 / 5x + 3$",
+      "$y = 5x - 10$",
+      "$y = -1 / 5x + \\frac{28}{5}$ pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
@@ -11442,7 +11439,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości równe odpowiednio a i b (przy czym a > b ). Miara kąta ostrego trapezu jest równa 30°. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
+    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości $r$ówne odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11549,15 +11546,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Rozważ trzy przypadki, gdzie cyfra 7 występuje raz: 7 _ _, _ 7 _, _ _ 7. Cyfra jedności musi być parzysta (0, 2, 4, 6, 8).",
       "Przypadek 7 _ _: Cyfra setek to 7 (1 możliwość). Cyfra dziesiątek może być dowolna z wyjątkiem 7 (9 możliwości). Cyfra jedności musi być parzysta (5 możliwości). Daje to $1 \\cdot 9 \\cdot 5 = 45$ liczb.",
       "Przypadek _ 7 _: Cyfra setek nie może być 0 ani 7 (8 możliwości). Cyfra dziesiątek to 7 (1 możliwość). Cyfra jedności musi być parzysta (5 możliwości). Daje to $8 \\cdot 1 \\cdot 5 = 40$ liczb.",
-      "Przypadek _ _ 7: Cyfra setek nie może być 0 ani 7 (8 możliwości). Cyfra dziesiątek nie może być 7 (9 możliwości). Cyfra jedności to 7 (1 możliwość). Cyfra jedności musi być parzysta - to już jest niemożliwe, jeśli 7 jest jedyną siódemką i jest na miejscu jedności. Zatem rozpatrzmy przypadek _ _ 7, gdzie ostatnia cyfra JEST parzysta, a 7 występuje dokładnie raz, ale NIE jest ostatnią cyfrą.",
+      "Przypadek _ _ 7: Cyfra setek nie może być 0 ani 7 (8 możliwości). Cyfra dziesiątek nie może być 7 (9 możliwości). Cyfra jedności to 7 (1 możliwość). Cyfra jedności musi być parzysta - to już jest niemożliwe, jeśli 7 jest jedyną siódemką i jest na miejscu jedności. Zatem rozpatrzmy przypadek _ _ 7, gdzie ostatnia cyfra JEST parzysta, $a_{7}$ występuje dokładnie raz, ale NIE jest ostatnią cyfrą.",
       "Trzy przypadki: 7 _ _ (parzysta), _ 7 _ (parzysta), _ _ 7 (parzysta). Cyfra jedności musi być parzysta (0, 2, 4, 6, 8) i różna od 7.",
-      "Przypadek 7 _ P (P-parzysta): 1 możliwość dla 7, 9 dla cyfry dziesiątek (nie 7), 5 dla cyfry jedności. $1 \\cdot 9 \\cdot 5 = 45$.",
+      "Przypadek 7 _ P$(P - parzysta)$: 1 możliwość dla 7, 9 dla cyfry dziesiątek (nie 7), 5 dla cyfry jedności. $1 \\cdot 9 \\cdot 5 = 45$.",
       "Przypadek _ 7 P: 8 możliwości dla cyfry setek (nie 0, nie 7), 1 dla 7, 5 dla cyfry jedności. $8 \\cdot 1 \\cdot 5 = 40$.",
-      "Przypadek P1 P2 7 (gdzie P1, P2 to nie 7, P2 parzyste): To wymaga, aby ostatnia cyfra była 7, co jest sprzeczne z parzystością. Poprawmy: przypadek _ _ P, gdzie 7 jest raz i nie na ostatniej pozycji.",
+      "Przypadek P1 P2 7 (gdzie P1, P2 to nie 7, P2 parzyste): To wymaga, aby ostatnia cyfra była_{7}, co jest sprzeczne z parzystością. Poprawmy: przypadek _ _ P, gdzie 7 jest raz i nie na ostatniej pozycji.",
       "Rozważ trzy pozycje dla cyfry 7: setki (7 _ _), dziesiątki (_ 7 _), jedności (_ _ 7). Cyfra jedności musi być parzysta (0, 2, 4, 6, 8).",
       "7 _ P: 1 możliwość dla 7, 9 dla cyfry dziesiątek (nie 7), 5 dla cyfry jedności (parzysta). $1 \\cdot 9 \\cdot 5 = 45$.",
       "_ 7 P: 8 możliwości dla cyfry setek (nie 0, nie 7), 1 dla 7, 5 dla cyfry jedności (parzysta). $8 \\cdot 1 \\cdot 5 = 40$.",
-      "_ P 7: Cyfra jedności to 7, co nie jest parzyste. Ten przypadek jest niemożliwy. Zatem suma wynosi $45 + 40 = 85$."
+      "_ $P_{7}$: Cyfra jedności to 7, co nie jest parzyste. Ten przypadek jest niemożliwy. Zatem suma wynosi $45 + 40 = 85$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11578,10 +11575,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru liczb naturalnych dwucyfrowych losujemy jedną liczbę. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowana liczba jest podzielna przez 5, jest równe",
     "choices": [
-      "2 / 5",
-      "5 / 100",
-      "5 / 90",
-      "18 / 90"
+      "$\\frac{2}{5}$",
+      "$\\frac{5}{100}$",
+      "$\\frac{5}{90}$",
+      "$\\frac{18}{90}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{18}{90}$",
@@ -11607,12 +11604,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba x jest dodatnia. Mediana zestawu czterech liczb: 1 + x , 1 + 2 x , 4 + 3 x , 1 , jest równa 10. Wtedy",
+    "prompt": "Liczba x jest dodatnia. Mediana zestawu czterech liczb: $1 + x$ , $1 + 2x$ , $4 + 3x$ , 1 , jest równa 10. Wtedy",
     "choices": [
-      "x = 6",
-      "x = 5,5",
-      "x = 2,5",
-      "x = 1 pokaż wskazówkę »"
+      "$x = 6$",
+      "$x = 5,5$",
+      "$x = 2,5$",
+      "$x = 1$ pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $x=6$",
@@ -11638,7 +11635,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: 3 x ( x + 1) > x 2 + x + 24",
+    "prompt": "Rozwiąż nierówność: 3 x $(x + 1)$ > $x^{2} + x + 24$",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11647,7 +11644,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Rozwiń lewą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową.\n$3x^2 + 3x > x^2 + x + 24 \\implies 2x^2 + 2x - 24 > 0$",
       "Uprość nierówność, dzieląc obie strony przez 2, a następnie znajdź pierwiastki równania kwadratowego $x^2 + x - 12 = 0$.\n$x^2 + x - 12 > 0$. Pierwiastki to $x_1 = -4$ i $x_2 = 3$.",
-      "Naszkicuj parabolę $y = x^2 + x - 12$ z ramionami skierowanymi w górę i odczytaj z wykresu przedziały, dla których wartości funkcji są dodatnie.\nNierówność jest spełniona dla $x < -4$ lub $x > 3$."
+      "Naszkicuj parabolę $y = x^2 + x - 12$ z ramionami skierowanymi w górę i odczytaj z wykresu przedziały, dla których wartości funkcji $s$ą dodatnie.\nNierówność jest spełniona dla $x < -4$ lub $x > 3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11694,15 +11691,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości a i b . Punkt O leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z31-1.png) Wykaż, że promień r tego okręgu jest równy ![Rysunek do zadania](/cke-matura/m21-probna/z31-2.png) .",
+    "prompt": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości $a$ i b . Punkt O leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z31-1.png) Wykaż, że promień r tego okręgu jest równy ![Rysunek do zadania](/cke-matura/m21-probna/z31-2.png) .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$r = \\frac{ab}{a+b}$",
     "solutionSteps": [
-      "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości są równe $r$.",
-      "Czworokąt OQCP jest kwadratem o boku $r$, ponieważ kąty przy C, P, Q są proste, a OP = OQ = $r$. Punkt O ma zatem współrzędne $(r, r)$, jeśli umieścimy wierzchołek C w początku układu współrzędnych $(0, 0)$, a przyprostokątne wzdłuż osi układu.",
+      "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości $s$ą równe $r$.",
+      "Czworokąt OQCP jest kwadratem o boku $r$, ponieważ kąty przy C, P, Q są proste, a $OP = OQ$ = $r$. Punkt O ma zatem współrzędne $(r, r)$, jeśli umieścimy wierzchołek C w początku układu współrzędnych $(0, 0)$, a przyprostokątne wzdłuż osi układu.",
       "Ponieważ O leży na przeciwprostokątnej AB, odległość punktu O od prostej AB jest równa 0. Równanie prostej AB przechodzącej przez punkty $(0, a)$ i $(b, 0)$ wynosi $\\frac{x}{b} + \\frac{y}{a} = 1$, co można zapisać jako $ax + by - ab = 0$. Korzystając ze wzoru na odległość punktu $(x_0, y_0)$ od prostej $Ax + By + C = 0$, czyli $d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$, dla punktu O$(r, r)$ i prostej $ax + by - ab = 0$ mamy $0 = \\frac{|ar + br - ab|}{\\sqrt{a^2 + b^2}}$. Stąd $|r(a+b) - ab| = 0$, czyli $r(a+b) = ab$.",
       "Dzieląc obie strony równania $r(a+b) = ab$ przez $(a+b)$, otrzymujemy $r = \\frac{ab}{a+b}$."
     ],
@@ -11723,7 +11720,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry i sin α + cos α = 7 / 5 . Oblicz wartość wyrażenia 2 sin α cos α .",
+    "prompt": "Kąt α jest ostry i sin $α + cos α = \\frac{7}{5}$ . Oblicz wartość wyrażenia 2 sin α cos α .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11732,7 +11729,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Podnieś obustronnie równanie $\\sin \\alpha + \\cos \\alpha = \\frac{7}{5}$ do kwadratu, aby uzyskać wyrażenie zawierające $\\sin^2 \\alpha$, $\\cos^2 \\alpha$ i $2 \\sin \\alpha \\cos \\alpha$.\n$$(\\sin \\alpha + \\cos \\alpha)^2 = \\left(\\frac{7}{5}\\right)^2$$\n$$\\sin^2 \\alpha + 2 \\sin \\alpha \\cos \\alpha + \\cos^2 \\alpha = \\frac{49}{25}$$",
       "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby uprościć równanie z kroku 1.\n$$1 + 2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25}$$",
-      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując 1 od obu stron równania.\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$$"
+      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując_{1} od obu stron równania.\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$$"
     ],
     "examSource": {
       "kind": "matura",
@@ -11751,14 +11748,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest czworokąt ABCD , w którym | BC | = | CD | =| AD | = 13 (zobacz rysunek). Przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD . Oblicz pole czworokąta ABCD . ![Rysunek do zadania](/cke-matura/m21-probna/z33-1.png)",
+    "prompt": "Dany jest czworokąt ABCD , w którym $|BC| = |CD| = |AD| = 13$ (zobacz rysunek). Przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD . Oblicz pole czworokąta ABCD . ![Rysunek do zadania](/cke-matura/m21-probna/z33-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "125",
     "solutionSteps": [
-      "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok BD = 10. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, a kąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, a kąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, a kąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
+      "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok $BD = 10$. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, $a_{k}$ąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
       "Oblicz pole trójkąta BCD. Trójkąt BCD jest trójkątem równoramiennym, ponieważ $|BC| = |CD| = 13$. Podstawą tego trójkąta jest bok BD o długości 10. Obliczymy wysokość tego trójkąta opuszczoną z wierzchołka C na podstawę BD. Wysokość ta dzieli podstawę BD na dwie równe części.\n$$h_{BCD}^2 + (\\frac{10}{2})^2 = 13^2$$\n$$h_{BCD}^2 + 5^2 = 13^2$$\n$$h_{BCD}^2 + 25 = 169$$\n$$h_{BCD}^2 = 144$$\n$$h_{BCD} = 12$$\nPole trójkąta BCD wynosi:\n$$P_{BCD} = \\frac{1}{2} \\cdot |BD| \\cdot h_{BCD} = \\frac{1}{2} \\cdot 10 \\cdot 12 = 60$$",
       "Oblicz pole całego czworokąta ABCD. Sumujemy pola obliczonych trójkątów ABD i BCD.\n$$P_{ABCD} = P_{ABD} + P_{BCD} = 65 + 60 = 125$$"
     ],
@@ -11779,7 +11776,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f( x ) = x 2 + bx + c nie ma miejsc zerowych. Wykaż, że 1 + c > b .",
+    "prompt": "Funkcja kwadratowa $f(x) = x^{2} + bx + c$ nie ma miejsc zerowych. Wykaż, że $1 + c > b$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11808,7 +11805,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rosnący ciąg arytmetyczny ( a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy a 3 , a 5 , a 13 tworzą – w podanej kolejności – ciąg geometryczny. Wyznacz wzór na n -ty wyraz ciągu arytmetycznego ( a n ).",
+    "prompt": "Rosnący ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$ . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy $a_{3}$ , $a_{5}$ , $a_{13}$ tworzą - w podanej kolejności - ciąg geometryczny. Wyznacz wzór na $n - ty$ wyraz ciągu arytmetycznego ($a_{n}$).",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11847,8 +11844,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli 15.",
     "solutionSteps": [
-      "Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.",
-      "Oblicz wartość pierwiastka sześciennego z 8, czyli $\\sqrt[3]{8} = 2$.",
+      "Oblicz wartość pierwiastka kwadratowego $z^{169}$, czyli $\\sqrt{169} = 13$.",
+      "Oblicz wartość pierwiastka sześciennego $z^{8}$, czyli $\\sqrt[3]{8} = 2$.",
       "Dodaj uzyskane wyniki: $13 + 2 = 15$."
     ],
     "examSource": {
@@ -11868,12 +11865,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dodatnie liczby x i y spełniają warunek 2x = 3y. Wynika stąd, że wartość wyrażenia ![Rysunek do zadania](/cke-matura/m22-maj/z02-1.png) jest równa",
+    "prompt": "Dodatnie liczby x i y spełniają warunek $2x = 3y$. Wynika stąd, że wartość wyrażenia ![Rysunek do zadania](/cke-matura/m22-maj/z02-1.png) jest równa",
     "choices": [
-      "2 / 3",
-      "13 / 6",
-      "6 / 13",
-      "3 / 2"
+      "$\\frac{2}{3}$",
+      "$\\frac{13}{6}$",
+      "$\\frac{6}{13}$",
+      "$\\frac{3}{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{2}{3}$.\n\n*(Uwaga: W opisie zadania wystąpił błąd w obliczeniach. Poprawna odpowiedź przy podanym warunku to $\\frac{8}{7}$, która nie znajduje się wśród proponowanych opcji. Jeśli jednak założyć, że w zadaniu chodziło o wyrażenie $\\frac{2x-y}{3x+y}$ lub inny warunek, odpowiedź mogłaby być inna.)*\n\n**\n**Odpowiedź:** A, czyli $\\frac{2}{3}$.",
@@ -11899,7 +11896,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 4 log 4 2 + 2 log 4 8 jest równa",
+    "prompt": "Liczba 4 log 4 $2 + 2$ log 4 8 jest równa",
     "choices": [
       "6 log 4 10",
       "16",
@@ -11991,12 +11988,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m22-maj/z06-1.png) jest para liczb: x = x 0 , y = y 0 . Wtedy",
+    "prompt": "Rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m22-maj/z06-1.png) jest para liczb: $x = x^{0}$ , $y = y^{0}$ . Wtedy",
     "choices": [
-      "x 0 > 0 i y 0 > 0",
-      "x 0 > 0 i y 0",
-      "x 0 0 > 0",
-      "x 0 0"
+      "$x^{0} > 0$ i $y^{0} > 0$",
+      "$x^{0} > 0$ i $y^{0}$",
+      "$x^{0} 0 > 0$",
+      "$x^{0}$ 0"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x_0 < 0$ i $y_0 > 0$.",
@@ -12025,10 +12022,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m22-maj/z07-1.png) jest przedział",
     "choices": [
-      "(−∞, 0)",
-      "(0, +∞)",
-      "(−∞, 3 / 4 )",
-      "( 3 / 4 ,+∞)"
+      "$(-\\infty , 0)$",
+      "$(0, + \\infty )$",
+      "$(-\\infty , \\frac{3}{4})$",
+      "$(\\frac{3}{4} , + \\infty )$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{4}, +\\infty)$.",
@@ -12054,9 +12051,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Iloczyn wszystkich rozwiązań równania 2x(x 2 − 9)(x + 1) = 0 jest równy",
+    "prompt": "Iloczyn wszystkich rozwiązań równania 2x$(x^{2} - 9)(x + 1)$ = 0 jest równy",
     "choices": [
-      "(−3)",
+      "$(-3)$",
       "3",
       "0",
       "9"
@@ -12085,17 +12082,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono wykres funkcji f. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn ƒ(−3) ⋅ ƒ(0) ⋅ ƒ(4) jest równy",
+    "prompt": "Na rysunku przedstawiono wykres funkcji $f$. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn f$(-3)$ ⋅ $f(0)$ ⋅ $f(4)$ jest równy",
     "choices": [
-      "(−12)",
-      "(−8)",
+      "$(-12)$",
+      "$(-8)$",
       "0",
       "16"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 0",
     "solutionSteps": [
-      "Odczytaj wartości funkcji z wykresu dla $x = -3$, $x = 0$ i $x = 4$. Z wykresu wynika, że $f(-3) = -2$, $f(0) = 0$ oraz $f(4) = 2$.",
+      "Odczytaj wartości funkcji $z$ wykresu dla $x = -3$, $x = 0$ i $x = 4$. Z wykresu wynika, że $f(-3) = -2$, $f(0) = 0$ oraz $f(4) = 2$.",
       "Oblicz iloczyn odczytanych wartości. Mamy $f(-3) \\cdot f(0) \\cdot f(4) = (-2) \\cdot 0 \\cdot 2$.",
       "Wynikiem mnożenia jest 0, ponieważ jednym z czynników jest 0."
     ],
@@ -12116,12 +12113,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku 1. przedstawiono wykres funkcji f określonej na zbiorze 〈−4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji ƒ. Wykres funkcji g przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że",
+    "prompt": "Na rysunku 1. przedstawiono wykres funkcji $f$ określonej na zbiorze 〈-4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji $f$. Wykres funkcji $g$ przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że",
     "choices": [
-      "g (x) = f(x) − 2",
-      "g (x) = f(x − 2)",
-      "g (x) = f(x) + 2",
-      "g (x) = f(x + 2)"
+      "$g(x) = f(x) - 2$",
+      "$g(x) = f(x - 2)$",
+      "$g(x) = f(x) + 2$",
+      "$g(x) = f(x + 2)$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $g(x) = f(x) + 2$",
@@ -12147,10 +12144,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej ƒ określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba",
+    "prompt": "Miejscem zerowym funkcji liniowej f określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba",
     "choices": [
-      "(−3)",
-      "9 / 2",
+      "$(-3)$",
+      "$\\frac{9}{2}$",
       "5",
       "12"
     ],
@@ -12178,12 +12175,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej f(x) = 3x 2 + bx + c jest parabola o wierzchołku w punkcie W = (−3, 2). Wzór tej funkcji w postaci kanonicznej to",
+    "prompt": "Wykresem funkcji kwadratowej $f(x) = 3x^{2} + bx + c$ jest parabola o wierzchołku w punkcie W = $(-3, 2)$. Wzór tej funkcji $w$ postaci kanonicznej to",
     "choices": [
-      "f(x) = 3(x − 3) 2 + 2",
-      "f(x) = 3(x + 3) 2 + 2",
-      "f(x) = (x − 3) 2 + 2",
-      "f(x) = (x + 3) 2 + 2"
+      "$f(x) = 3(x - 3) 2 + 2$",
+      "$f(x) = 3(x + 3) 2 + 2$",
+      "$f(x)$ = $(x - 3) 2 + 2$",
+      "$f(x)$ = $(x + 3) 2 + 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $f(x) = 3(x + 3)^2 + 2$",
@@ -12209,12 +12206,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z13-1.png) dla każdej liczby naturalnej n ≥ 1. Wtedy a 7 jest równy",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z13-1.png) dla każdej liczby naturalnej $n \\ge 1$. Wtedy $a_{7}$ jest równy",
     "choices": [
-      "(−196)",
-      "(−32)",
-      "(−26)",
-      "(−16)"
+      "$(-196)$",
+      "$(-32)$",
+      "$(-26)$",
+      "$(-16)$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $-26$.",
@@ -12247,17 +12244,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym ( a n ), określonym dla każdej liczby naturalnej n ≥ 1, a 5 = −31 oraz a 10 = −66. Różnica tego ciągu jest równa",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla każdej liczby naturalnej $n \\ge 1$, $a_{5} = -31$ oraz $a_{10} = -66$. Różnica tego ciągu jest równa",
     "choices": [
-      "(−7)",
-      "(−19,4)",
+      "$(-7)$",
+      "$(-19,4)$",
       "7",
       "19,4"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-7)$.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Zapisz dane zadania w postaci układu równań: $a_5 = a_1 + 4r = -31$ oraz $a_{10} = a_1 + 9r = -66$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Zapisz dane zadania w postaci układu równań: $a_5 = a_1 + 4r = -31$ oraz $a_{10} = a_1 + 9r = -66$.",
       "Odejmij pierwsze równanie od drugiego, aby wyeliminować $a_1$ i obliczyć różnicę $r$. Otrzymasz: $(a_1 + 9r) - (a_1 + 4r) = -66 - (-31)$, co upraszcza się do $5r = -35$.",
       "Podziel obie strony równania przez 5, aby znaleźć wartość $r$. Dzieląc $-35$ przez $5$, otrzymasz $r = -7$."
     ],
@@ -12278,18 +12275,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkie wyrazy nieskończonego ciągu geometrycznego (a n ), określonego dla każdej liczby naturalnej n ≥ 1, są dodatnie i 9a 5 = 4a 3 . Wtedy iloraz tego ciągu jest równy",
+    "prompt": "Wszystkie wyrazy nieskończonego ciągu geometrycznego ($a_{n}$), określonego dla każdej liczby naturalnej $n \\ge 1$, są dodatnie i $9a^{5} = 4a_{3}$ . Wtedy iloraz tego ciągu jest równy",
     "choices": [
-      "2 / 3",
-      "3 / 2",
-      "2 / 9",
-      "9 / 2"
+      "$\\frac{2}{3}$",
+      "$\\frac{3}{2}$",
+      "$\\frac{2}{9}$",
+      "$\\frac{9}{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{2}{3}$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Zapisz dane równanie $9a_5 = 4a_3$ przy użyciu tego wzoru.\n$9 \\cdot (a_1 \\cdot q^{5-1}) = 4 \\cdot (a_1 \\cdot q^{3-1})$\n$9a_1 q^4 = 4a_1 q^2$",
-      "Podziel obie strony równania przez $a_1$ (wiemy, że $a_1 \\ne 0$, bo wszystkie wyrazy są dodatnie) i przez $q^2$ (wiemy, że $q \\ne 0$, bo wszystkie wyrazy są dodatnie).\n$9q^2 = 4$",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Zapisz dane równanie $9a_5 = 4a_3$ przy użyciu tego wzoru.\n$9 \\cdot (a_1 \\cdot q^{5-1}) = 4 \\cdot (a_1 \\cdot q^{3-1})$\n$9a_1 q^4 = 4a_1 q^2$",
+      "Podziel obie strony równania przez $a_1$ (wiemy, że $a_1 \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie) i przez $q^2$ (wiemy, że $q \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie).\n$9q^2 = 4$",
       "Rozwiąż równanie kwadratowe dla $q$ i wybierz dodatnie rozwiązanie, ponieważ wszystkie wyrazy ciągu są dodatnie.\n$q^2 = \\frac{4}{9}$\n$q = \\sqrt{\\frac{4}{9}}$\n$q = \\frac{2}{3}$"
     ],
     "examSource": {
@@ -12309,11 +12306,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba cos 12° ⋅ sin 78° + sin 12° ⋅ cos 78° jest równa",
+    "prompt": "Liczba $\\cos 12^{\\circ}$ ⋅ $\\sin 78^{\\circ}$ + $\\sin 12^{\\circ}$ ⋅ $\\cos 78^{\\circ}$ jest równa",
     "choices": [
-      "½",
-      "√ 2 / 2",
-      "√ 3 / 2",
+      "$\\frac{1}{2}$",
+      "√ $\\frac{2}{2}$",
+      "√ $\\frac{3}{2}$",
       "1"
     ],
     "correctIndex": 3,
@@ -12342,10 +12339,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty A, B, C leżą na okręgu o środku S. Punkt D jest punktem przecięcia cięciwy AC i średnicy okręgu poprowadzonej z punktu B. Miara kąta BSC jest równa α, a miara kąta ADB jest równa γ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z17-1.png) Wtedy kąt ABD ma miarę",
     "choices": [
-      "α / 2 + γ − 180°",
-      "180° − α / 2 − γ",
-      "180° − α − γ",
-      "α + γ − 180°"
+      "$α / 2 + γ$ -$180^{\\circ}$",
+      "$180^{\\circ}$ - $α / 2 - γ$",
+      "$180^{\\circ}$ - $α - γ$",
+      "$α + γ$ -$180^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $180^\\circ - \\frac{\\alpha}{2} - \\gamma$",
@@ -12371,7 +12368,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, P leżą na okręgu o środku S i promieniu 6. Czworokąt ASBP jest rombem, w którym kąt ostry PAS ma miarę 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z18-1.png) Pole zakreskowanej na rysunku figury jest równe",
+    "prompt": "Punkty A, B, P leżą na okręgu o środku S i promieniu 6. Czworokąt ASBP jest rombem, w którym kąt ostry PAS ma miarę $60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z18-1.png) Pole zakreskowanej na rysunku figury jest równe",
     "choices": [
       "6π",
       "9π",
@@ -12381,9 +12378,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli $12\\pi$",
     "solutionSteps": [
-      "Określ kształt czworokąta ASBP. Skoro wszystkie punkty leżą na okręgu o środku S i promieniu 6, to odcinki AS, SB, SP oraz BP są promieniami o długości 6. Ponieważ ASBP jest rombem, wszystkie jego boki są równe, co jest zgodne z faktem, że są to promienie okręgu. Kąt PAS wynosi 60°, a w rombie przeciwległe kąty są równe, więc kąt SBP również wynosi 60°. Suma kątów w czworokącie wynosi 360°, więc kąty ASB i APB mają po 120°. Ponieważ AS = SP = 6 i kąt między nimi wynosi 60°, trójkąt ASP jest równoboczny, co oznacza, że AP = 6. Ponieważ AS = SB = 6 i kąt między nimi wynosi 120°, trójkąt ASB jest równoramienny.",
-      "Oblicz pole rombu. Pole rombu można obliczyć jako sumę pól dwóch trójkątów równobocznych o boku 6 (ASP i SBP) lub jako sumę pól dwóch trójkątów równoramiennych (ASB i APB). Używając wzoru na pole trójkąta równobocznego $P = \\frac{a^2\\sqrt{3}}{4}$, pole trójkąta ASP wynosi $\\frac{6^2\\sqrt{3}}{4} = 9\\sqrt{3}$. Ponieważ romb składa się z dwóch takich trójkątów, jego pole wynosi $2 \\cdot 9\\sqrt{3} = 18\\sqrt{3}$. Alternatywnie, można obliczyć pole jako $P = \\frac{1}{2}d_1 d_2$, gdzie $d_1$ i $d_2$ to przekątne. Przekątna SP ma długość 6. Aby znaleźć długość przekątnej AB, możemy rozważyć trójkąt ASB. Wysokość z S na AB dzieli kąt ASB na dwa kąty po 60°, a odcinek AB na dwie równe części. Długość połowy AB wynosi $6 \\sin(60^\\circ) = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Zatem AB = $6\\sqrt{3}$. Pole rombu to $\\frac{1}{2} \\cdot 6 \\cdot 6\\sqrt{3} = 18\\sqrt{3}$.",
-      "Oblicz pole wycinka koła. Zakreskowana figura to wycinek koła o środku S i promieniu 6, odpowiadający kątowi środkowemu ASB, który wynosi 120°. Pole wycinka koła obliczamy ze wzoru $P_{wycinka} = \\frac{\\alpha}{360^\\circ} \\cdot \\pi r^2$, gdzie $\\alpha$ to kąt środkowy w stopniach. W tym przypadku $P_{wycinka} = \\frac{120^\\circ}{360^\\circ} \\cdot \\pi \\cdot 6^2 = \\frac{1}{3} \\cdot 36\\pi = 12\\pi$."
+      "Określ kształt czworokąta ASBP. Skoro wszystkie punkty leżą na okręgu o środku S i promieniu 6, to odcinki AS, SB, SP oraz BP są promieniami o długości 6. Ponieważ ASBP jest rombem, wszystkie jego boki są równe, co jest zgodne z faktem, że są to promienie okręgu. Kąt PAS wynosi $60^{\\circ}$, a w rombie przeciwległe kąty są równe, więc_{k}ąt SBP również wynosi $60^{\\circ}$. Suma kątów w czworokącie wynosi $360^{\\circ}$, więc_{k}ąty ASB i APB mają po $120^{\\circ}$. Ponieważ $AS = SP = 6$ i kąt między nimi wynosi $60^{\\circ}$, trójkąt ASP jest równoboczny, co oznacza, że $AP = 6$. Ponieważ $AS = SB = 6$ i kąt między nimi wynosi $120^{\\circ}$, trójkąt ASB jest równoramienny.",
+      "Oblicz pole rombu. Pole rombu można obliczyć jako sumę pól dwóch trójkątów równobocznych o boku 6 (ASP i SBP) lub jako sumę pól dwóch trójkątów równoramiennych (ASB i APB). Używając wzoru na pole trójkąta równobocznego $P = \\frac{a^2\\sqrt{3}}{4}$, pole trójkąta ASP wynosi $\\frac{6^2\\sqrt{3}}{4} = 9\\sqrt{3}$. Ponieważ romb składa się z dwóch takich trójkątów, jego pole wynosi $2 \\cdot 9\\sqrt{3} = 18\\sqrt{3}$. Alternatywnie, można obliczyć pole jako $P = \\frac{1}{2}d_1 d_2$, gdzie $d_1$ i $d_2$ to przekątne. Przekątna SP ma długość 6. Aby znaleźć długość przekątnej AB, możemy rozważyć trójkąt ASB. Wysokość z S na AB dzieli kąt ASB na dwa kąty po $60^{\\circ}$, a odcinek AB na dwie równe części. Długość połowy AB wynosi $6 \\sin(60^\\circ) = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Zatem AB = $6\\sqrt{3}$. Pole rombu to $\\frac{1}{2} \\cdot 6 \\cdot 6\\sqrt{3} = 18\\sqrt{3}$.",
+      "Oblicz pole wycinka koła. Zakreskowana figura to wycinek koła o środku S i promieniu 6, odpowiadający kątowi środkowemu ASB, który wynosi $120^{\\circ}$. Pole wycinka koła obliczamy ze wzoru $P_{wycinka} = \\frac{\\alpha}{360^\\circ} \\cdot \\pi r^2$, gdzie $\\alpha$ to kąt środkowy w stopniach. W tym przypadku $P_{wycinka} = \\frac{120^\\circ}{360^\\circ} \\cdot \\pi \\cdot 6^2 = \\frac{1}{3} \\cdot 36\\pi = 12\\pi$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12414,7 +12411,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Skorzystaj ze wzoru na wysokość trójkąta równobocznego: $h = \\frac{a\\sqrt{3}}{2}$, gdzie $a$ to długość boku. Podstawiając daną wysokość, mamy $6\\sqrt{3} = \\frac{a\\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i przemnożeniu przez 2 otrzymujemy $a=12$.",
       "Oblicz pole trójkąta równobocznego ze wzoru $P = \\frac{a^2\\sqrt{3}}{4}$. Podstaw długość boku $a=12$: $P = \\frac{12^2\\sqrt{3}}{4} = \\frac{144\\sqrt{3}}{4}$.",
-      "Uprość wynik, dzieląc 144 przez 4: $P = 36\\sqrt{3}$."
+      "Uprość wynik, dzieląc_{144} przez 4: $P = 36\\sqrt{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12433,7 +12430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Boki równoległoboku mają długości 6 i 10, a kąt rozwarty między tymi bokami ma miarę 120°. Pole tego równoległoboku jest równe",
+    "prompt": "Boki równoległoboku mają długości 6 i 10, $a_{k}$ąt rozwarty między tymi bokami ma miarę $120^{\\circ}$. Pole tego równoległoboku jest równe",
     "choices": [
       "30√ 3",
       "30",
@@ -12464,11 +12461,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = (−2,6) oraz B = (3,b) leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy b jest równe",
+    "prompt": "Punkty A = $(-2,6)$ oraz $B = (3,b)$ leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy b jest równe",
     "choices": [
       "9",
-      "(−9)",
-      "(−4)",
+      "$(-9)$",
+      "$(-4)$",
       "4"
     ],
     "correctIndex": 1,
@@ -12496,7 +12493,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = −x + 1 l : y = 2 / 3 x + 1 m : y = − 3 / 2 x + 4 n : y = − 2 / 3 x – 1 Wśród tych prostych prostopadłe są",
+    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = -$x + 1$ l : $y = 2 / 3x + 1$ m : $y = -3 / 2x + 4$ n : $y = -2 / 3x - 1$ Wśród tych prostych prostopadłe są",
     "choices": [
       "proste k oraz l.",
       "proste k oraz n.",
@@ -12527,12 +12524,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty K = (4,−10) i L = (b,2) są końcami odcinka KL. Pierwsza współrzędna środka odcinka KL jest równa (−12). Wynika stąd, że",
+    "prompt": "Punkty K = $(4, - 10)$ i $L = (b,2)$ są końcami odcinka KL. Pierwsza współrzędna środka odcinka KL jest równa $(-12)$. Wynika stąd, że",
     "choices": [
-      "b = −28",
-      "b = −14",
-      "b = −24",
-      "b = −10"
+      "$b = -28$",
+      "$b = -14$",
+      "$b = -24$",
+      "$b = -10$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $b = -28$",
@@ -12558,7 +12555,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = (−4,4) i B = (4,0) są sąsiednimi wierzchołkami kwadratu ABCD. Przekątna tego kwadratu ma długość",
+    "prompt": "Punkty A = $(-4,4)$ i $B = (4,0)$ są sąsiednimi wierzchołkami kwadratu ABCD. Przekątna tego kwadratu ma długość",
     "choices": [
       "4√ 10",
       "4√ 2",
@@ -12593,8 +12590,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "560 cm 3",
       "280 cm 3",
-      "280 / 3 cm 3",
-      "560 / 3 cm 3"
+      "$\\frac{280}{3}$ cm 3",
+      "$\\frac{560}{3}$ cm 3"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 280 cm$^3$",
@@ -12620,7 +12617,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12659,8 +12656,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 10 \\cdot 10 \\cdot 1$",
     "solutionSteps": [
-      "Ustal warunki dla cyfr liczby czterocyfrowej nieparzystej podzielnej przez 5: pierwsza cyfra nie może być zerem (9 możliwości: 1-9), ostatnia cyfra musi być 0 lub 5 (2 możliwości), liczba musi być nieparzysta (ostania cyfra 5), a jednocześnie podzielna przez 5 (ostatnia cyfra 0 lub 5). Jedyny przypadek spełniający oba warunki to ostatnia cyfra 5.",
-      "Określ liczbę możliwości dla każdej pozycji cyfr: pierwsza cyfra (tysiące) ma 9 możliwości (1-9), druga cyfra (setki) ma 10 możliwości (0-9), trzecia cyfra (dziesiątki) ma 10 możliwości (0-9), a czwarta cyfra (jedności) musi być 5, co daje 1 możliwość.",
+      "Ustal warunki dla cyfr liczby czterocyfrowej nieparzystej podzielnej przez 5: pierwsza cyfra nie może być zerem $(9 możliwości: 1 - 9)$, ostatnia cyfra musi być 0 lub 5 (2 możliwości), liczba musi być nieparzysta (ostania cyfra 5), a jednocześnie podzielna przez 5 (ostatnia cyfra 0 lub 5). Jedyny przypadek spełniający oba warunki to ostatnia cyfra 5.",
+      "Określ liczbę możliwości dla każdej pozycji cyfr: pierwsza cyfra (tysiące) ma 9 możliwości $(1 - 9)$, druga cyfra (setki) ma 10 możliwości $(0 - 9)$, trzecia cyfra (dziesiątki) ma 10 możliwości $(0 - 9)$, a czwarta cyfra (jedności) musi być 5, co daje 1 możliwość.",
       "Oblicz całkowitą liczbę takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $9 \\cdot 10 \\cdot 10 \\cdot 1$."
     ],
     "examSource": {
@@ -12682,10 +12679,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Średnia arytmetyczna zestawu sześciu liczb: 2x,4,6,8,11,13, jest równa 5. Wynika stąd, że",
     "choices": [
-      "x = −1",
-      "x = 7",
-      "x = −6",
-      "x = 6 Uwagi ogólne do zadań otwartych 1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki zadania. 2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną liczbę punktów. 3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może otrzymać co najwyżej x − 1) punktów (gdzie x jest maksymalną możliwą do uzyskania liczbą punktów za dane zadanie)."
+      "$x = -1$",
+      "$x = 7$",
+      "$x = -6$",
+      "$x = 6$ Uwagi ogólne do zadań otwartych 1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki zadania. 2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną liczbę punktów. 3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może otrzymać co najwyżej $x - 1$) punktów (gdzie x jest maksymalną możliwą do uzyskania liczbą punktów za dane zadanie)."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $x = -6$",
@@ -12711,7 +12708,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: 3x 2 − 2x − 9 ≥ 7",
+    "prompt": "Rozwiąż nierówność: $3x^{2} - 2x - 9 \\ge 7$",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12739,14 +12736,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym (a n ), określonym dla każdej liczby naturalnej n ≥ 1, a 1 = −1 i a 4 = 8. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
+    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla każdej liczby naturalnej $n \\ge 1$, $a_{1} = -1$ i $a_{4} = 8$. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$14750$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$), aby obliczyć różnicę $r$. Podstaw dane: $a_4 = a_1 + (4-1)r$, czyli $8 = -1 + 3r$, co daje $3r = 9$, a stąd $r=3$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$), aby obliczyć różnicę $r$. Podstaw dane: $a_4 = a_1 + (4-1)r$, czyli $8 = -1 + 3r$, co daje $3r = 9$, a stąd $r=3$.",
       "Oblicz sumę stu początkowych wyrazów ciągu ($S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$). Podstaw dane: $S_{100} = \\frac{2(-1) + (100-1)3}{2} \\cdot 100 = \\frac{-2 + 99 \\cdot 3}{2} \\cdot 100$.",
       "Dokończ obliczenia sumy: $S_{100} = \\frac{-2 + 297}{2} \\cdot 100 = \\frac{295}{2} \\cdot 100 = 295 \\cdot 50 = 14750$."
     ],
@@ -12795,7 +12792,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry i tg α = 2. Oblicz wartość wyrażenia sin 2 α.",
+    "prompt": "Kąt α jest ostry i tg $α = 2$. Oblicz wartość wyrażenia sin 2 α.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12824,7 +12821,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoramienny ABC, w którym |AC| = |BC|. Dwusieczna kąta BAC przecina bok BC w takim punkcie D, że trójkąty ABC i BDA są podobne (zobacz rysunek). Oblicz miarę kąta BAC. ![Rysunek do zadania](/cke-matura/m22-maj/z33-1.png)",
+    "prompt": "Dany jest trójkąt równoramienny ABC, w którym $|AC| = |BC|$. Dwusieczna kąta BAC przecina bok BC w takim punkcie D, że trójkąty ABC i BDA są podobne (zobacz rysunek). Oblicz miarę kąta BAC. ![Rysunek do zadania](/cke-matura/m22-maj/z33-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12833,7 +12830,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zapisz zależności wynikające z podobieństwa trójkątów ABC i BDA: $\\frac{|AB|}{|BD|} = \\frac{|BC|}{|BA|} = \\frac{|AC|}{|DA|}$. Ponieważ $|AC|=|BC|$, mamy $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Oznaczając $|AB|=x$ i $|BD|=y$, otrzymujemy $\\frac{x}{y} = \\frac{x}{y}$, co jest oczywiste. Użyjmy relacji $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Niech $|AC|=|BC|=a$ i $|AB|=x$. Wtedy $|BC|=|BD|+|DC|$, czyli $a = y+d$. Z podobieństwa $\\frac{a}{x} = \\frac{x}{y}$, stąd $x^2 = ay$.",
       "Skorzystaj z faktu, że AD jest dwusieczną kąta BAC. Z twierdzenia o dwusiecznej kąta w trójkącie ABC mamy $\\frac{|AB|}{|AC|} = \\frac{|BD|}{|DC|}$, czyli $\\frac{x}{a} = \\frac{y}{d}$. Z tego $d = \\frac{ay}{x}$. Podstawiamy do $a = y+d$: $a = y + \\frac{ay}{x} = y(1+\\frac{a}{x})$.",
-      "Połącz zależności. Z $a = y(1+\\frac{a}{x})$ wyznaczamy $y = \\frac{a}{1+\\frac{a}{x}} = \\frac{ax}{x+a}$. Podstawiamy to do $x^2 = ay$: $x^2 = a \\cdot \\frac{ax}{x+a}$. Dzieląc przez $x$ (ponieważ $x=|AB|>0$), otrzymujemy $x = \\frac{a^2}{x+a}$. Stąd $x(x+a) = a^2$, czyli $x^2+ax-a^2=0$. Rozwiązując to równanie kwadratowe względem $\\frac{x}{a}$ (dzieląc przez $a^2$ i oznaczając $t=\\frac{x}{a}$), dostajemy $t^2+t-1=0$. Jedynym dodatnim rozwiązaniem jest $t=\\frac{\\sqrt{5}-1}{2}$. To jest stosunek $\\frac{|AB|}{|AC|}$, który dla trójkąta o takim podobieństwie jest znany jako stosunek złoty, a kąt $\\alpha = \\angle BAC$ spełnia warunek $2 \\cos \\alpha = \\frac{\\sqrt{5}-1}{2}$.",
+      "Połącz zależności. Z $a = y(1+\\frac{a}{x})$ wyznaczamy $y = \\frac{a}{1+\\frac{a}{x}} = \\frac{ax}{x+a}$. Podstawiamy to do $x^2 = ay$: $x^2 = a \\cdot \\frac{ax}{x+a}$. Dzieląc przez $x$ (ponieważ $x=|AB|>0$), otrzymujemy $x = \\frac{a^2}{x+a}$. Stąd $x(x+a) = a^2$, czyli $x^2+ax-a^2=0$. Rozwiązując to równanie kwadratowe względem $\\frac{x}{a}$ (dzieląc przez $a^2$ i oznaczając $t=\\frac{x}{a}$), dostajemy $t^2+t-1=0$. Jedynym dodatnim rozwiązaniem jest $t=\\frac{\\sqrt{5}-1}{2}$. To jest stosunek $\\frac{|AB|}{|AC|}$, który dla trójkąta o takim podobieństwie jest znany jako stosunek złoty, $a_{k}$ąt $\\alpha = \\angle BAC$ spełnia warunek $2 \\cos \\alpha = \\frac{\\sqrt{5}-1}{2}$.",
       "Wykorzystaj fakt, że $\\cos(36^\\circ) = \\frac{1+\\sqrt{5}}{4}$ i $\\cos(72^\\circ) = \\frac{\\sqrt{5}-1}{4}$. Ponieważ $\\frac{x}{a} = \\frac{|AB|}{|AC|} = 2 \\cos(\\angle BAC)$, a obliczona wartość to $\\frac{\\sqrt{5}-1}{2}$, to $2 \\cos(\\angle BAC) = \\frac{\\sqrt{5}-1}{2}$. Kąt $\\angle BAC$ wynosi $72^\\circ$."
     ],
     "examSource": {
@@ -12861,7 +12858,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{4}{81}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy dwa razy ze zwracaniem z dziewięcioelementowego zbioru, więc wszystkich par $(a, b)$ jest $9 \\cdot 9 = 81$.",
-      "Wypisujemy wszystkie pary liczb $(a, b)$ ze zbioru M, których iloczyn wynosi 24. Pary te to: $(3, 8)$, $(8, 3)$, $(4, 6)$, $(6, 4)$. Mamy więc 4 zdarzenia sprzyjające zdarzeniu A.",
+      "Wypisujemy wszystkie pary liczb $(a, b)$ ze zbioru M, których iloczyn wynosi 24. Pary te to: $(3, 8)$, $(8, 3)$, $(4, 6)$, $(6, 4)$. Mamy więc_{4} zdarzenia sprzyjające zdarzeniu A.",
       "Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich zdarzeń elementarnych: $P(A) = \\frac{4}{81}$."
     ],
     "examSource": {
@@ -12881,7 +12878,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykres funkcji kwadratowej f określonej wzorem f(x) = ax 2 + bx + c ma z prostą o równaniu y = 6 dokładnie jeden punkt wspólny. Punkty A = (−5,0) i B = (3,0) należą do wykresu funkcji f. Oblicz wartości współczynników a, b oraz c.",
+    "prompt": "Wykres funkcji kwadratowej f określonej wzorem $f(x) = ax 2 + bx + c$ ma z prostą o równaniu $y = 6$ dokładnie jeden punkt wspólny. Punkty A = $(-5,0)$ i $B = (3,0)$ należą do wykresu funkcji $f$. Oblicz wartości współczynników a, b oraz c.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12911,10 +12908,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na osi liczbowej zaznaczono sumę przedziałów. ![Rysunek do zadania](/cke-matura/m23-maj/z01-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności",
     "choices": [
-      "|𝑥 − 3,5| ≥ 1,5",
-      "|𝑥 − 1,5| ≥ 3,5",
-      "|𝑥 − 3,5| ≤ 1,5",
-      "|𝑥 − 1,5| ≤ 3,5"
+      "|$x - 3,5$| ≥ 1,5",
+      "|$x - 1,5$| ≥ 3,5",
+      "|$x - 3,5$| ≤ 1,5",
+      "|$x - 1,5$| ≤ 3,5"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $|x - 3,5| \\ge 1,5$",
@@ -12941,10 +12938,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-maj/z02-1.png) jest równa",
     "choices": [
-      "(- 3 / 2 )",
-      "3 / 2",
-      "2 / 3",
-      "( - 2 / 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "$(-\\frac{3}{2})$",
+      "$\\frac{3}{2}$",
+      "$\\frac{2}{3}$",
+      "$(-\\frac{2}{3})$ Zasady oceniania 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
@@ -12972,7 +12969,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba (𝟐𝒏 + 𝟏) 𝟐 − 𝟏 jest podzielna przez 𝟖.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $(2n + 1) 2 - 1$ jest podzielna przez 8.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -13001,7 +12998,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 27 + log 9 3 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 $27 + \\log 9$ 3 jest równa",
     "choices": [
       "81",
       "9",
@@ -13032,12 +13029,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 wyrażenie (2𝑎 − 3) 2 − (2𝑎 + 3) 2 jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wyrażenie $(2a - 3)$ 2 - $(2a + 3)$ 2 jest równe",
     "choices": [
-      "−24𝑎",
+      "-24a",
       "0",
       "18",
-      "16𝑎 2 − 24𝑎"
+      "$16a^{2} - 24a$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $-24a$",
@@ -13065,9 +13062,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m23-maj/z06-1.png) jest przedział",
     "choices": [
-      "(−∞ , −4]",
-      "(−∞ , 4]",
-      "[−4 , ∞)",
+      "(-∞ , -4]",
+      "(-∞ , 4]",
+      "[-4 , ∞)",
       "[4 , ∞)"
     ],
     "correctIndex": 3,
@@ -13094,7 +13091,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania √ 3 (𝑥 2 − 2)(𝑥 + 3) = 0 jest liczba",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania √ 3 $(x^{2} - 2)(x + 3)$ = 0 jest liczba",
     "choices": [
       "3",
       "2",
@@ -13128,16 +13125,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-maj/z08-1.png) w zbiorze liczb rzeczywistych",
     "choices": [
       "nie ma rozwiązania.",
-      "ma dokładnie jedno rozwiązanie: −1.",
+      "ma dokładnie jedno rozwiązanie: -1.",
       "ma dokładnie jedno rozwiązanie: 1.",
-      "ma dokładnie dwa rozwiązania: −1 oraz 1."
+      "ma dokładnie dwa rozwiązania: -1 oraz 1."
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli ma dokładnie dwa rozwiązania: −1 oraz 1.",
+    "explanation": "D, czyli ma dokładnie dwa rozwiązania: -1 oraz 1.",
     "solutionSteps": [
       "Zapisz równanie w postaci z jedną stroną równą 0: $2x^2 = 2 \\iff 2x^2 - 2 = 0$.",
       "Uprość równanie, dzieląc obie strony przez 2: $x^2 - 1 = 0$.",
-      "Rozwiąż równanie, rozkładając je na czynniki lub przenosząc 1 na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$."
+      "Rozwiąż równanie, rozkładając je na czynniki lub przenosząc_{1} na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13156,7 +13153,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie 𝟑𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟏𝟐𝒙 + 𝟖 = 𝟎",
+    "prompt": "Rozwiąż równanie $3x^{3} - 2x^{2} - 12x + 8 = 0$",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -13184,7 +13181,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (𝑥 , 𝑦) jednego z niżej zapisanych układów równań A – D. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest",
+    "prompt": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (x , y) jednego z niżej zapisanych układów równań $A - D$. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-3.png)",
@@ -13194,7 +13191,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$",
     "solutionSteps": [
-      "Zauważ, że na rysunku znajdują się dwie proste — pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.",
+      "Zauważ, że na rysunku znajdują się dwie proste - pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.",
       "Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.",
       "Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$)."
     ],
@@ -13215,7 +13212,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest prostokąt o bokach długości 𝑎 i 𝑏, gdzie 𝑎 > 𝑏. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ……… oraz ……… . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
+    "prompt": "Dany jest prostokąt o bokach długości $a$ i b, gdzie $a > b$. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$ i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ......... oraz ......... . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -13244,16 +13241,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) narysowano wykres funkcji 𝑦 = 𝑓(𝑥) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji 𝑓 jest zbiór A) [−6 , 5] B) (−6 , 5) C) (−3 , 5] D) [−3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji 𝑓 w przedziale [−4 , 1] jest równa A) 0 B) 1 C) 2 D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca w zbiorze A) [−6 , −3) B) [−3 , 1] C) (1 , 2] D) [2 , 5]",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) narysowano wykres funkcji $y = f(x)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji $f$ jest zbiór A) [-6 , 5] B) $(-6 , 5)$ C) $(-3 , 5] D)$ [-3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji $f$ w przedziale [-4 , 1] jest równa A) 0B) 1C) 2D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ jest malejąca w zbiorze A) [-6 , -3) B) [-3 , 1] C) (1 , 2] D) [2 , 5]",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "12.1. A) [−6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]",
+    "explanation": "12.1. A) [-6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]",
     "solutionSteps": [
-      "Dziedzinę funkcji odczytujemy z osi X. Funkcja jest określona dla wartości od -6 (włącznie) do 5 (włącznie).",
-      "Największą wartość funkcji w przedziale [−4, 1] odczytujemy z osi Y. Dla x = -4, y = 1, dla x = -2, y = 2, dla x = 1, y = 1. Największa wartość to 2.",
-      "Funkcja jest malejąca, gdy jej wykres opada od lewej do prawej strony. Na wykresie widzimy, że funkcja maleje w przedziale od x = 1 do x = 5."
+      "Dziedzinę funkcji odczytujemy z osi X. Funkcja jest określona dla wartości $od - 6$ (włącznie) do 5 (włącznie).",
+      "Największą wartość funkcji $w$ przedziale [-4, 1] odczytujemy z osi Y. Dla $x = -4$, $y = 1$, dla $x = -2$, $y = 2$, dla $x = 1$, $y = 1$. Największa wartość to 2.",
+      "Funkcja jest malejąca, gdy jej wykres opada od lewej do prawej strony. Na wykresie widzimy, że funkcja maleje w przedziale od $x = 1$ do $x = 5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13272,20 +13269,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji 𝑓 w kartezjańskim układzie współrzędnych (𝑥 , 𝑦). ![Rysunek do zadania](/cke-matura/m23-maj/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 oraz liczba 𝑏 we wzorze funkcji 𝑓 spełniają warunki:",
+    "prompt": "Funkcja liniowa f jest określona wzorem $f(x) = ax + b$, gdzie a i b są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji $f$ w kartezjańskim układzie współrzędnych (x , y). ![Rysunek do zadania](/cke-matura/m23-maj/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba a oraz liczba b we wzorze funkcji $f$ spełniają warunki:",
     "choices": [
-      "𝑎 > 0 i 𝑏 > 0.",
-      "𝑎 > 0 i 𝑏",
-      "𝑎 0.",
-      "𝑎"
+      "$a > 0$ i $b > 0$.",
+      "$a > 0$ i b",
+      "$a_{0}$.",
+      "a"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 𝑎 < 0 i 𝑏 > 0.",
+    "explanation": "D, czyli $a < 0$ i $b > 0$.",
     "solutionSteps": [
-      "Odczytujemy współczynniki 𝑎 i 𝑏 z wykresu, korzystając z punktów przez niego przechodzących. Z wykresu widać, że funkcja przechodzi przez punkty $(0, 2)$ i $(3, 0)$.",
-      "Obliczamy współczynnik kierunkowy 𝑎. Jest on równy zmianie wartości funkcji przez zmianę argumentu, czyli $a = \\frac{0 - 2}{3 - 0} = \\frac{-2}{3}$.",
-      "Odczytujemy wyraz wolny 𝑏, który jest wartością funkcji dla $x=0$. Z wykresu widzimy, że $f(0) = 2$, więc $b=2$.",
-      "Sprawdzamy warunki dla 𝑎 i 𝑏. Mamy $a = -\\frac{2}{3}$, więc $a < 0$. Mamy $b=2$, więc $b > 0$."
+      "Odczytujemy współczynniki a i b z wykresu, korzystając z punktów przez niego przechodzących. Z wykresu widać, że funkcja przechodzi przez punkty $(0, 2)$ i $(3, 0)$.",
+      "Obliczamy współczynnik kierunkowy a. Jest on równy zmianie wartości funkcji przez zmianę argumentu, czyli $a = \\frac{0 - 2}{3 - 0} = \\frac{-2}{3}$.",
+      "Odczytujemy wyraz wolny b, który jest wartością funkcji dla $x=0$. Z wykresu widzimy, że $f(0) = 2$, więc $b=2$.",
+      "Sprawdzamy warunki dla a i b. Mamy $a = -\\frac{2}{3}$, więc $a < 0$. Mamy $b=2$, więc $b > 0$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13304,12 +13301,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jednym z miejsc zerowych funkcji kwadratowej 𝑓 jest liczba (−5). Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji 𝑓, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji 𝑓 jest liczba",
+    "prompt": "Jednym z miejsc zerowych funkcji kwadratowej f jest liczba $(-5)$. Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji $f$, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji $f$ jest liczba",
     "choices": [
       "11",
       "1",
-      "(−1)",
-      "(−13)"
+      "$(-1)$",
+      "$(-13)$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 11",
@@ -13335,7 +13332,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = 2 𝑛 ⋅ (𝑛 + 1) dla każdej liczby naturalnej 𝑛 ≥ 1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyraz 𝑎 4 jest równy",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n} = 2$ n ⋅ $(n + 1)$ dla każdej liczby naturalnej $n \\ge 1$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyraz $a_{4}$ jest równy",
     "choices": [
       "64",
       "40",
@@ -13366,7 +13363,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg (27 , 9 , 𝑎 − 1) jest geometryczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑎 jest równa",
+    "prompt": "Trzywyrazowy ciąg $(27 , 9 , a - 1)$ jest geometryczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba a jest równa",
     "choices": [
       "3",
       "0",
@@ -13425,12 +13422,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) zaznaczono kąt 𝛼 o wierzchołku w punkcie 𝑂 = (0 , 0). Jedno z ramion tego kąta pokrywa się z dodatnią półosią 𝑂𝑥, a drugie przechodzi przez punkt 𝑃 = (−3 , 1) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) zaznaczono kąt α o wierzchołku w punkcie $O = (0 , 0)$. Jedno z ramion tego kąta pokrywa się z dodatnią półosią Ox, a drugie przechodzi przez punkt P = $(-3 , 1)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
     "choices": [
       "1 / √ 10",
-      "(− 3 / √ 10 )",
-      "( − 3 / 1 )",
-      "( − 1 / 3 )"
+      "$(-3 / \\sqrt10)$",
+      "$(-\\frac{3}{1})$",
+      "$(-\\frac{1}{3})$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{1}{3}$",
@@ -13456,12 +13453,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego 𝛼 wyrażenie sin 4 𝛼 + sin 2 𝛼 ⋅cos 2 𝛼 jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego α wyrażenie sin 4 $α + \\sin 2$ α ⋅cos 2 α jest równe",
     "choices": [
-      "sin 2 𝛼",
-      "sin 6 𝛼 ⋅ cos 2 𝛼",
-      "sin 4 𝛼 + 1",
-      "sin 2 𝛼 ⋅ (sin𝛼 + cos𝛼) ⋅ (sin𝛼 − cos𝛼)"
+      "sin 2 α",
+      "sin 6 α ⋅ cos 2 α",
+      "sin 4 $α + 1$",
+      "sin 2 α ⋅ $(\\sinα + \\cosα)$ ⋅ $(\\sinα - \\cosα)$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sin^2 \\alpha$",
@@ -13486,7 +13483,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W rombie o boku długości 6√ 2 kąt rozwarty ma miarę 150°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy",
+    "prompt": "W rombie o boku długości 6√ 2 kąt rozwarty ma miarę $150^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy",
     "choices": [
       "24",
       "72",
@@ -13496,7 +13493,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 72",
     "solutionSteps": [
-      "Pole rombu możemy obliczyć ze wzoru $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to miara jednego z kątów. Skoro kąt rozwarty ma 150°, to kąt ostry ma $180° - 150° = 30°$. Używamy kąta ostrego, bo $\\sin 150° = \\sin 30°$.",
+      "Pole rombu możemy obliczyć ze wzoru $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to miara jednego z kątów. Skoro kąt rozwarty ma $150^{\\circ}$, to kąt ostry ma $180° - 150° = 30°$. Używamy kąta ostrego, bo $\\sin 150° = \\sin 30°$.",
       "Obliczamy pole rombu: $P = (6\\sqrt{2})^2 \\sin 30° = (36 \\cdot 2) \\cdot \\frac{1}{2} = 72 \\cdot \\frac{1}{2} = 36$.",
       "Pole rombu można również obliczyć ze wzoru $P = \\frac{1}{2} d_1 d_2$, gdzie $d_1$ i $d_2$ to długości przekątnych. Szukamy iloczynu $d_1 d_2$, który jest równy $2P$."
     ],
@@ -13517,19 +13514,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty 𝐴, 𝐵, 𝐶 leżą na okręgu o środku w punkcie 𝑂. Kąt 𝐴𝐶𝑂 ma miarę 70° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐴𝐵𝐶 jest równa",
+    "prompt": "Punkty A, B, C leżą na okręgu o środku w punkcie O. Kąt ACO ma miarę $70^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego ABC jest równa",
     "choices": [
-      "10°",
-      "20°",
-      "35°",
-      "40°"
+      "$10^{\\circ}$",
+      "$20^{\\circ}$",
+      "$35^{\\circ}$",
+      "$40^{\\circ}$"
     ],
     "correctIndex": 1,
-    "explanation": "B) 20°",
+    "explanation": "B) $20^{\\circ}$",
     "solutionSteps": [
-      "Zauważ, że trójkąt 𝐴𝐶𝑂 jest równoramienny, ponieważ boki 𝐴𝑂 i 𝐶𝑂 są promieniami okręgu, stąd miara kąta 𝐶𝐴𝑂 jest również równa 70°.",
-      "Oblicz miarę kąta 𝐴𝑂𝐶, który jest kątem środkowym. Suma kątów w trójkącie 𝐴𝑂𝐶 wynosi 180°, zatem $\\angle AOC = 180^\\circ - (70^\\circ + 70^\\circ) = 180^\\circ - 140^\\circ = 40^\\circ$.",
-      "Zauważ, że kąt 𝐴𝐵𝐶 jest kątem wpisanym opartym na tym samym łuku co kąt środkowy 𝐴𝑂𝐶. Kąt wpisany ma miarę o połowę mniejszą od kąta środkowego opartego na tym samym łuku, zatem $\\angle ABC = \\frac{1}{2} \\angle AOC = \\frac{1}{2} \\cdot 40^\\circ = 20^\\circ$."
+      "Zauważ, że trójkąt ACO jest równoramienny, ponieważ boki AO i CO są promieniami okręgu, stąd miara kąta CAO jest również równa $70^{\\circ}$.",
+      "Oblicz miarę kąta AOC, który jest kątem środkowym. Suma kątów w trójkącie AOC wynosi $180^{\\circ}$, zatem $\\angle AOC = 180^\\circ - (70^\\circ + 70^\\circ) = 180^\\circ - 140^\\circ = 40^\\circ$.",
+      "Zauważ, że kąt ABC jest kątem wpisanym opartym na tym samym łuku co kąt środkowy AOC. Kąt wpisany ma miarę o połowę mniejszą od kąta środkowego opartego na tym samym łuku, zatem $\\angle ABC = \\frac{1}{2} \\angle AOC = \\frac{1}{2} \\cdot 40^\\circ = 20^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13548,7 +13545,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąty prostokątne 𝑇 1 i 𝑇 2 są podobne. Przyprostokątne trójkąta 𝑇 1 mają długości 5 i 12. Przeciwprostokątna trójkąta 𝑇 2 ma długość 26. Oblicz pole trójkąta 𝑻 𝟐 .",
+    "prompt": "Trójkąty prostokątne T 1 i T 2 są podobne. Przyprostokątne trójkąta T 1 mają długości 5 i 12. Przeciwprostokątna trójkąta T 2 ma długość 26. Oblicz pole trójkąta T 2 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -13577,11 +13574,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dane są proste 𝑘 oraz 𝑙 o równaniach 𝑘: 𝑦 = 2 ⁄ 3 𝑥 𝑙: 𝑦 = − 3 ⁄ 2 𝑥 + 13 Dokończ zdanie tak aby było prawdziwe. Proste 𝑘 oraz 𝑙",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są proste k oraz l o równaniach k: $y = \\frac{2}{3}$ x l: $y = -3 / 2x + 13$ Dokończ zdanie tak aby było prawdziwe. Proste k oraz l",
     "choices": [
       "są prostopadłe",
-      "nie są prostopadłe i przecinają się w punkcie 𝑃 o współrzędnych",
-      "(−6 , −4)",
+      "nie są prostopadłe i przecinają się w punkcie P o współrzędnych",
+      "$(-6 , - 4)$",
       "(6 , 4)"
     ],
     "correctIndex": 0,
@@ -13608,12 +13605,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dana jest prosta 𝑘 o równaniu 𝑦 = − 1 ⁄ 3 𝑥 + 2 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu 𝑦 = 𝑎𝑥 + 𝑏 jest równoległa do prostej 𝑘 i przechodzi przez punkt 𝑃 = (3 , 5), gdy",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dana jest prosta k o równaniu $y = -1 / 3x + 2$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu $y = ax + b$ jest równoległa do prostej k i przechodzi przez punkt $P = (3 , 5)$, gdy",
     "choices": [
-      "𝑎 = 3 i 𝑏 = 4.",
-      "𝑎 = − 1 / 3 i 𝑏 = 4.",
-      "𝑎 = 3 i 𝑏 = −4.",
-      "𝑎 = − 1 / 3 i 𝑏 = 6."
+      "$a = 3$ i $b = 4$.",
+      "$a = -\\frac{1}{3}$ i $b = 4$.",
+      "$a = 3$ i $b = -4$.",
+      "$a = -\\frac{1}{3}$ i $b = 6$."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $a = -\\frac{1}{3}$ i $b = 6$.",
@@ -13639,7 +13636,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 𝛼 takim, że cos𝛼 = √ 2 / 3 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
+    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem α takim, że cosα = √ $\\frac{2}{3}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
     "choices": [
       "15√ 2",
       "45",
@@ -13650,7 +13647,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, czyli 45",
     "solutionSteps": [
       "Z danych wiemy, że krawędź podstawy $a = 15$ oraz $\\cos\\alpha = \\frac{\\sqrt{2}}{3}$. W graniastosłupie prawidłowym czworokątnym podstawa jest kwadratem, zatem przekątna podstawy $d$ wynosi $d = a\\sqrt{2} = 15\\sqrt{2}$.",
-      "Kąt $\\alpha$ nachylenia przekątnej graniastosłupa do płaszczyzny podstawy tworzy trójkąt prostokątny wraz z przekątną podstawy i przekątną graniastosłupa. Z definicji cosinusa mamy $\\cos\\alpha = \\frac{d}{D}$, gdzie $D$ to długość przekątnej graniastosłupa.",
+      "Kąt $\\alpha$ nachylenia przekątnej graniastosłupa do płaszczyzny podstawy tworzy trójkąt prostokątny wraz z przekątną podstawy $i$ przekątną graniastosłupa. Z definicji cosinusa mamy $\\cos\\alpha = \\frac{d}{D}$, gdzie $D$ to długość przekątnej graniastosłupa.",
       "Podstawiamy znane wartości do wzoru: $\\frac{\\sqrt{2}}{3} = \\frac{15\\sqrt{2}}{D}$. Mnożąc obie strony przez $3D$ otrzymujemy $\\sqrt{2}D = 3 \\cdot 15\\sqrt{2}$, co po skróceniu $\\sqrt{2}$ daje $D = 45$."
     ],
     "examSource": {
@@ -13670,16 +13667,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem 30° i ma długość równą 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość $r$ówną 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$.",
     "solutionSteps": [
-      "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt 30° leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
+      "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt^{30}^{\\circ} leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
       "Oblicz pole podstawy ($P_p$) oraz objętość ostrosłupa ($V$). Podstawa jest kwadratem o boku $a$, więc $P_p = a^2 = (6\\sqrt{3})^2 = 36 \\cdot 3 = 108$. Objętość to $V = \\frac{1}{3} P_p \\cdot h = \\frac{1}{3} \\cdot 108 \\cdot 3 = 108$.",
-      "Oblicz pole jednej ściany bocznej ($P_b$) oraz pole powierzchni całkowitej ($P_c$). Pole ściany bocznej to $P_b = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6\\sqrt{3} \\cdot 6 = 18\\sqrt{3}$. Powierzchnia całkowita to suma pola podstawy i czterech pól ścian bocznych: $P_c = P_p + 4 P_b = 108 + 4 \\cdot 18\\sqrt{3} = 108 + 72\\sqrt{3}$."
+      "Oblicz pole jednej ściany bocznej ($P_b$) oraz pole powierzchni całkowitej ($P_c$). Pole ściany bocznej to $P_b = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6\\sqrt{3} \\cdot 6 = 18\\sqrt{3}$. Powierzchnia całkowita to suma pola podstawy $i$ czterech pól ścian bocznych: $P_c = P_p + 4 P_b = 108 + 4 \\cdot 18\\sqrt{3} = 108 + 72\\sqrt{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13698,7 +13695,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby 𝑊 wszystkich wierzchołków do liczby 𝐾 wszystkich krawędzi jest równy W / K = 3 / 5 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest",
+    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby W wszystkich wierzchołków do liczby K wszystkich krawędzi jest równy $W / K = \\frac{3}{5}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest",
     "choices": [
       "kwadrat.",
       "pięciokąt foremny.",
@@ -13708,7 +13705,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B) pięciokąt foremny.",
     "solutionSteps": [
-      "W ostrosłupie o $n$-kątnej podstawie mamy $n+1$ wierzchołków ( $n$ w podstawie i 1 wierzchołek stożka) i $2n$ krawędzi ( $n$ w podstawie i $n$ łączących wierzchołki podstawy z wierzchołkiem stożka).",
+      "W ostrosłupie o $n$-kątnej podstawie mamy $n+1$ wierzchołków ($n$ w podstawie i 1 wierzchołek stożka) i $2n$ krawędzi ($n$ w podstawie i $n$ łączących wierzchołki podstawy $z$ wierzchołkiem stożka).",
       "Zgodnie z treścią zadania, stosunek liczby wierzchołków ($W$) do liczby krawędzi ($K$) wynosi $\\frac{W}{K} = \\frac{n+1}{2n} = \\frac{3}{5}$.",
       "Rozwiązujemy równanie $\\frac{n+1}{2n} = \\frac{3}{5}$: $5(n+1) = 3(2n) \\implies 5n+5 = 6n \\implies n=5$. Podstawą jest pięciokąt."
     ],
@@ -13760,12 +13757,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami A–E. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
+    "prompt": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami $A - E$. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł).",
+    "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku $z^{5}$,76875 zł).",
     "solutionSteps": [
       "Uporządkuj dane cen od najniższej do najwyższej: 5,40, 5,50, 5,50, 5,60, 5,60, 5,60, 5,60, 5,70, 5,70, 5,80, 5,80, 5,90, 6,00, 6,10, 6,10, 6,20.",
       "Mediana to wartość środkowa; dla parzystej liczby danych (tutaj 16) to średnia dwóch środkowych wartości: 8. i 9. pozycji. Mediana = $\\frac{5,70 + 5,70}{2} = 5,70$ zł.",
@@ -13788,14 +13785,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 𝟏𝟓.",
+    "prompt": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 15.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{7}{64}$",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
+      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby $z^{8}$, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
       "Określamy zdarzenia sprzyjające. Iloczyn jest podzielny przez 15, gdy co najmniej jedna z liczb jest podzielna przez 5 (czyli 5), a druga jest podzielna przez 3 (czyli 3, 6, 9). Rozważamy przypadki: (5, 3), (5, 6), (5, 9) oraz (3, 5), (6, 5), (9, 5). Mamy 6 takich par. Dodatkowo, jeśli wylosujemy dwie piątki, iloczyn jest podzielny przez 15 (choć faktycznie przez 25). Para (5,5) jest również dozwolona.",
       "Zliczamy zdarzenia sprzyjające. Pary to: (5,3), (5,6), (5,9), (3,5), (6,5), (9,5), (5,5). Łącznie 7 zdarzeń.",
       "Obliczamy prawdopodobieństwo zdarzenia A. Jest to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $\\frac{7}{64}$."
@@ -13817,14 +13814,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
+    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów $z^{30}$ kolejnych dni. Przyjmijmy, że liczbę L obsługiwanych klientów $n - teg$o dnia opisuje funkcja $L(n)$ = -$n^{2} + 22n + 279$ gdzie n jest liczbą naturalną spełniającą warunki $n \\ge 1$ i $n \\le 30$. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$. A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
     "solutionSteps": [
-      "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
+      "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów $z^{30}$ dni, a nie tylko liczbę klientów_{30}. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
       "Aby ocenić drugie stwierdzenie, obliczamy liczbę klientów w trzecim dniu, podstawiając $n=3$ do wzoru: $L(3) = -(3)^2 + 22(3) + 279 = -9 + 66 + 279 = 336$.",
       "Aby znaleźć dzień z największą liczbą klientów, szukamy wierzchołka paraboli $L(n) = -n^2 + 22n + 279$. Wartość $n$ wierzchołka to $-\\frac{b}{2a} = -\\frac{22}{2(-1)} = 11$. Obliczamy liczbę klientów dla $n=11$: $L(11) = -(11)^2 + 22(11) + 279 = -121 + 242 + 279 = 400$."
     ],
@@ -13845,12 +13842,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia (1 + 3 ⋅ 2 −1 ) −2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia $(1 + 3 ⋅ 2 - 1)$ -2 jest równa",
     "choices": [
-      "25 ⁄ 4",
-      "4 ⁄ 25",
-      "36 ⁄ 49",
-      "40 ⁄ 9"
+      "$\\frac{25}{4}$",
+      "$\\frac{4}{25}$",
+      "$\\frac{36}{49}$",
+      "$\\frac{40}{9}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{4}{25}$",
@@ -13919,7 +13916,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, czyli $9 \\cdot 10 \\cdot 2$",
     "solutionSteps": [
       "Liczba czterocyfrowa ma postać $\\overline{abcd}$, gdzie $a \\in \\{1, 2, \\dots, 9\\}$, a $b, c, d \\in \\{0, 1, \\dots, 9\\}$. Aby liczba była podzielna przez 25, musi się kończyć na 00, 25, 50 lub 75, czyli $d$ musi być 0 lub 5, a $c$ musi być 0 lub 5. Skoro liczba ma być nieparzysta, ostatnia cyfra $d$ musi być 5.",
-      "Jeśli $d=5$, to aby liczba była podzielna przez 25, musi się kończyć na 25 lub 75. Zatem $c$ może być tylko 2 lub 7. Mamy więc 2 możliwości dla $c$ i 1 możliwość dla $d$.",
+      "Jeśli $d=5$, to aby liczba była podzielna przez 25, musi się kończyć na 25 lub 75. Zatem $c$ może być tylko 2 lub 7. Mamy więc_{2} możliwości dla $c$ i 1 możliwość dla $d$.",
       "Pierwsza cyfra $a$ może przyjmować wartości od 1 do 9 (9 możliwości), a druga cyfra $b$ od 0 do 9 (10 możliwości). Łączna liczba takich liczb wynosi $9 \\cdot 10 \\cdot 2 \\cdot 1 = 180$."
     ],
     "examSource": {
@@ -13970,7 +13967,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych. Dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y wyrażenie 9 − ( x 2 − 2 xy + y 2 ) jest równe A) [3 − (x − 2y)] 2 B) [3 + (x − 2y)] 2 C) [3 − (x + 2y)] 2 D) [3 − (x − y)] ⋅ [3 + (x − y)] E) [3 − (x + 2y)] ⋅ [3 + (x + 2y)] F) −[(x − y) − 3] ⋅ [(x − y) + 3]",
+    "prompt": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych. Dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y wyrażenie 9 - $(x^{2} - 2 xy + y^{2})$ jest równe A) [3 - $(x - 2y)$] 2B) [3 + $(x - 2y)$] 2C) [3 - $(x + 2y)$] 2D) [3 - $(x - y)$] ⋅ [3 + $(x - y)$] E) [3 - $(x + 2y)$] ⋅ [3 + $(x + 2y)$] F) -[$(x - y)$ -3] ⋅ [$(x - y)$ + 3]",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14028,10 +14025,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z07-1.jpg) ma w zbiorze liczb rzeczywistych dokładnie",
     "choices": [
-      "jedno rozwiązanie: x = −3.",
-      "dwa rozwiązania: x = −3, x = 0.",
-      "trzy rozwiązania: x = −3, x = −1, x = 0.",
-      "cztery rozwiązania: x = −3, x = −1, x = 0, x = 1."
+      "jedno rozwiązanie: $x = -3$.",
+      "dwa rozwiązania: $x = -3$, $x = 0$.",
+      "trzy rozwiązania: $x = -3$, $x = -1$, $x = 0$.",
+      "cztery rozwiązania: $x = -3$, $x = -1$, $x = 0$, $x = 1$."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli cztery rozwiązania: $x=-3$, $x=-1$, $x=0$, $x=1$.",
@@ -14057,12 +14054,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Spośród nierówności A–D wybierz tę, której zbiór wszystkich rozwiązań zaznaczono na osi liczbowej. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z08-1.jpg)",
+    "prompt": "Spośród nierówności $A - D$ wybierz tę, której zbiór wszystkich rozwiązań zaznaczono na osi liczbowej. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z08-1.jpg)",
     "choices": [
-      "|x + 2| ≤ 2",
-      "|x − 2| ≤ 2",
-      "|x + 2| ≥ 2",
-      "|x − 2| ≥ 2"
+      "|$x + 2$| ≤ 2",
+      "|$x - 2$| ≤ 2",
+      "|$x + 2$| ≥ 2",
+      "|$x - 2$| ≥ 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $|x - 2| \\le 2$",
@@ -14088,7 +14085,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów 100-złotowych było dwa razy więcej niż 50-złotowych , a banknotów 20-złotowych było o 2 mniej niż 50-złotowych . Niech x oznacza liczbę banknotów 50-złotowych , a y – liczbę banknotów 20-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to",
+    "prompt": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów_{100}-złotowych było dwa razy więcej niż $50 - z$łotowych , a banknotów_{20}-złotowych było o 2 mniej niż $50 - z$łotowych . Niech x oznacza liczbę banknotów_{50}-złotowych , a $y - lic$zbę banknotów_{20}-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-1.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-2.jpg)",
@@ -14098,7 +14095,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $50x + 100(2x) + 20(x-2) = 1040$",
     "solutionSteps": [
-      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów 50 zł). Liczba banknotów 50 zł: $x$. Liczba banknotów 100 zł: $2x$. Liczba banknotów 20 zł: $x-2$.",
+      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów_{50} zł). Liczba banknotów_{50} zł: $x$. Liczba banknotów_{100} zł: $2x$. Liczba banknotów_{20} zł: $x-2$.",
       "Układamy równanie, sumując wartość wszystkich banknotów, która musi być równa 1040 zł: $50x + 100(2x) + 20(x-2) = 1040$.",
       "Przekształcamy równanie do postaci wymaganej w odpowiedziach: $50x + 200x + 20x - 40 = 1040$, co daje $270x - 40 = 1040$."
     ],
@@ -14119,16 +14116,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji f określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji f. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja f przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja f ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji f w przedziale [−4,0] jest równa A) (−4) B) (−3) C) (−2) D) 0",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x , y) , przedstawiono wykres funkcji $f$ określonej dla każdego x ∈ [-5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji $f$. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału $(-4, - 2)$ funkcja $f$ przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja $f$ ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji $f$ w przedziale [-4,0] jest równa A) $(-4)$ B) $(-3)$ C) $(-2)$ D) 0",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) (−2)",
+    "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) $(-2)$",
     "solutionSteps": [
       "Odczytaj z wykresu najmniejszą i największą wartość funkcji na osi Y. Zbiór wartości to przedział domknięty od najmniejszej do największej wartości, czyli $[min, max]$.",
       "Aby ocenić stwierdzenia, sprawdź odczytane z wykresu wartości funkcji dla odpowiednich argumentów. Wartości ujemne to te poniżej osi X, a miejsca zerowe to przecięcia osi X.",
-      "Dla zadania 10.3, zlokalizuj przedział $[−4,0]$ na osi X i odczytaj z wykresu najniższy punkt (najmniejszą wartość) funkcji w tym przedziale."
+      "Dla zadania 10.3, zlokalizuj przedział $[−4,0]$ na osi X i odczytaj z wykresu najniższy punkt (najmniejszą wartość) funkcji $w$ tym przedziale."
     ],
     "examSource": {
       "kind": "matura",
@@ -14147,7 +14144,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych ( x , y ) dane są: punkt A = (8,11) oraz okrąg o równaniu ( x − 3) 2 + ( y + 1) 2 = 25. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są: punkt $A = (8,11)$ oraz okrąg o równaniu $(x - 3)$ 2 + $(y + 1) 2 = 25$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa",
     "choices": [
       "25",
       "13",
@@ -14178,12 +14175,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Basen ma długość 25 m. W najpłytszym miejscu jego głębokość jest równa 1,2 m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku. Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją: ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-1.jpg) Odległość x jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości x i y są wyrażone w metrach. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-2.jpg) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa głębokość basenu jest równa A) 5,4 m B) 3,6 m C) 2,2 m D) 1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia.",
+    "prompt": "Basen ma długość 25m. W najpłytszym miejscu jego głębokość jest równa 1,2m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku. Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją: ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-1.jpg) Odległość x jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości x i y są wyrażone w metrach. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-2.jpg) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa głębokość basenu jest równa A) 5,4 m B) 3,6 m C) 2,2 m D) 1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "D, czyli 1,8 m\n\n**Zadanie 12.2.**\n\n**Krok 1.** Skorzystaj z podanych punktów należących do paraboli: $(0, 1.2)$ oraz $(25, 1.8)$. Podstawiając $x=0$ do wzoru funkcji $y = ax^2 + bx + 1.2$, otrzymujemy $1.2 = a \\cdot 0^2 + b \\cdot 0 + 1.2$, co jest zgodne z danymi.\n**Krok 2.** Podstaw punkt $(25, 1.8)$ do równania funkcji: $1.8 = a \\cdot 25^2 + b \\cdot 25 + 1.2$. Po redukcji otrzymujemy równanie: $0.6 = 625a + 25b$.\n**Krok 3.** Zauważ, że na rysunku głębokość jest najmniejsza w połowie basenu, przy $x = \\frac{25}{2} = 12.5$ m. W tym punkcie nachylenie paraboli jest równe zero, co oznacza, że pochodna funkcji jest równa zero. Pochodna funkcji $y' = 2ax + b$. Zatem: $2a \\cdot 12.5 + b = 0$, czyli $25a + b = 0$.\n**Krok 4.** Rozwiąż układ równań:\n1) $625a + 25b = 0.6$\n2) $b = -25a$\nPodstawiając (2) do (1): $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6$, co jest sprzecznością.\n*Poprawka:* Na rysunku widać, że w połowie basenu $x=12.5$ m głębokość jest **minimalna**, a nie równa 0. Przyjmujemy zatem, że wierzchołek paraboli znajduje się dla $x=12.5$ m. Wzór funkcji można zapisać w postaci kanonicznej $y = a(x-p)^2 + q$. Wierzchołek $(p, q)$ to $(12.5, 1.2)$, bo w tym punkcie jest najpłycej.\n**Krok 5.** Zapisz funkcję w postaci kanonicznej: $y = a(x-12.5)^2 + 1.2$. Skorzystaj z punktu $(25, 1.8)$: $1.8 = a(25-12.5)^2 + 1.2 \\implies 0.6 = a(12.5)^2 \\implies 0.6 = 156.25a \\implies a = \\frac{0.6}{156.25} = 0.00384$.\n**Krok 6.** Przekształć postać kanoniczną do postaci ogólnej $y = ax^2 + bx + c$: $y = 0.00384(x^2 - 25x + 156.25) + 1.2 = 0.00384x^2 - 0.096x + 0.6 + 1.2 = 0.00384x^2 - 0.096x + 1.8$. Porównując z $y = ax^2 + bx + 1.2$, widać, że $c$ powinno być 1.2.\n*Ponowna poprawka:* Minimalna głębokość jest w połowie basenu, co oznacza, że wierzchołek paraboli jest na tej wysokości, a nie na minimalnej głębokości. Rysunek pokazuje, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. Przyjmijmy, że wierzchołek paraboli znajduje się dla $x = 12.5$.\n**Krok 7.** Z treści zadania wiemy, że głębokość w najpłytszym miejscu to 1.2 m, a w najgłębszym 1.8 m. Funkcja kwadratowa ma minimum (ramiona w górę). Minimum głębokości występuje dla $x=0$. Zatem $1.2$ m to wartość minimalna. Wierzchołek jest dla $x=0$.\n**Krok 8.** Skorzystaj z punktów $(0, 1.2)$ i $(25, 1.8)$. Funkcja ma postać $y = ax^2 + bx + c$. Podstawiając $(0, 1.2)$, mamy $c=1.2$. Podstawiając $(25, 1.8)$: $1.8 = a(25)^2 + b(25) + 1.2 \\implies 0.6 = 625a + 25b$.\n**Krok 9.** Rysunek sugeruje, że parabola jest symetryczna względem osi $x=12.5$. Zatem wierzchołek jest dla $x=12.5$. Wzór funkcji ma postać $y = a(x-12.5)^2 + q$. Wartość $q$ to najmniejsza głębokość. Z rysunku nie wynika, że najmniejsza głębokość to 1.2 m. Przyjmijmy dane z zadania: $y(0) = 1.2$ oraz $y(25) = 1.8$. Minimalna głębokość jest w połowie basenu, czyli $y(12.5)$. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. Ale ramiona paraboli są skierowane w górę, więc $y(12.5)$ jest minimum. To się kłóci z $y(0)=1.2$ i $y(25)=1.8$.\n**Krok 10.** Przyjmijmy, że przekrój podłużny basenu jest fragmentem paraboli, a nie całą. Z rysunku wynika, że funkcja opisuje głębokość dla $x \\in [0, 25]$. Najmniejsza głębokość jest dla $x=0$ ($1.2$ m), a największa dla $x=25$ ($1.8$ m). Minimum paraboli (wierzchołek) musi być dla $x=0$.\n**Krok 11.** Podstawiamy dane: $y(0) = a \\cdot 0^2 + b \\cdot 0 + 1.2 = 1.2$. $y(25) = a \\cdot 25^2 + b \\cdot 25 + 1.2 = 1.8 \\implies 625a + 25b = 0.6$. Z analizy rysunku widać, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. To jest sprzeczne z poprzednim wnioskiem.\n**Krok 12.** Rozważmy funkcję $y = ax^2 + bx + c$. Wiemy, że $y(0) = 1.2$, więc $c = 1.2$. Wiemy, że $y(25) = 1.8$, więc $625a + 25b = 0.6$. Na rysunku widać, że oś symetrii paraboli jest w $x = \\frac{0+25}{2} = 12.5$. Wierzchołek paraboli ma współrzędną $x = -\\frac{b}{2a}$. Zatem $-\\frac{b}{2a} = 12.5 \\implies b = -25a$.\n**Krok 13.** Podstawiamy $b = -25a$ do równania $625a + 25b = 0.6$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6 \\implies 0 = 0.6$. Jest to sprzeczność, więc założenie o osi symetrii $x=12.5$ jest błędne w kontekście podanych punktów krańcowych i funkcji kwadratowej z ramionami w górę.\n**Krok 14.** Ponieważ z zadania 12.1 wynika, że największa głębokość to 1.8 m, a najmniejsza 1.2 m, i są one na brzegach, funkcja musi opisywać fragment paraboli, której minimum jest w $x=0$ lub $x=25$. Skoro ramiona są w górę, minimum jest w $x=0$. Zatem wierzchołek jest dla $x=0$. Wtedy $b=0$.\n**Krok 15.** Z $b=0$ i $625a + 25b = 0.6$ otrzymujemy $625a = 0.6 \\implies a = \\frac{0.6}{625} = 0.00096$.\n**Odpowiedź:** $a = 0.00096$, $b = 0$",
+    "explanation": "D, czyli 1,8 m\n\n**Zadanie 12.2.**\n\n**Krok 1.** Skorzystaj z podanych punktów należących do paraboli: $(0, 1.2)$ oraz $(25, 1.8)$. Podstawiając $x=0$ do wzoru funkcji $y = ax^2 + bx + 1.2$, otrzymujemy $1.2 = a \\cdot 0^2 + b \\cdot 0 + 1.2$, co jest zgodne z danymi.\n**Krok 2.** Podstaw punkt $(25, 1.8)$ do równania funkcji: $1.8 = a \\cdot 25^2 + b \\cdot 25 + 1.2$. Po redukcji otrzymujemy równanie: $0.6 = 625a + 25b$.\n**Krok 3.** Zauważ, że na rysunku głębokość jest najmniejsza w połowie basenu, przy $x = \\frac{25}{2} = 12.5$ m. W tym punkcie nachylenie paraboli jest równe zero, co oznacza, że pochodna funkcji jest równa zero. Pochodna funkcji $y' = 2ax + b$. Zatem: $2a \\cdot 12.5 + b = 0$, czyli $25a + b = 0$.\n**Krok 4.** Rozwiąż układ równań:\n1) $625a + 25b = 0.6$\n2) $b = -25a$\nPodstawiając(2) do (1): $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6$, co jest sprzecznością.\n*Poprawka:* Na rysunku widać, że w połowie basenu $x=12.5$ m głębokość jest **minimalna**, a nie równa 0. Przyjmujemy zatem, że wierzchołek paraboli znajduje się dla $x=12.5$ m. Wzór funkcji można zapisać w postaci kanonicznej $y = a(x-p)^2 + q$. Wierzchołek $(p, q)$ to $(12.5, 1.2)$, bo w tym punkcie jest najpłycej.\n**Krok 5.** Zapisz funkcję w postaci kanonicznej: $y = a(x-12.5)^2 + 1.2$. Skorzystaj z punktu $(25, 1.8)$: $1.8 = a(25-12.5)^2 + 1.2 \\implies 0.6 = a(12.5)^2 \\implies 0.6 = 156.25a \\implies a = \\frac{0.6}{156.25} = 0.00384$.\n**Krok 6.** Przekształć postać kanoniczną do postaci ogólnej $y = ax^2 + bx + c$: $y = 0.00384(x^2 - 25x + 156.25) + 1.2 = 0.00384x^2 - 0.096x + 0.6 + 1.2 = 0.00384x^2 - 0.096x + 1.8$. Porównując z $y = ax^2 + bx + 1.2$, widać, że $c$ powinno być 1.2.\n*Ponowna poprawka:* Minimalna głębokość jest w połowie basenu, co oznacza, że wierzchołek paraboli jest na tej wysokości, a nie na minimalnej głębokości. Rysunek pokazuje, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. Przyjmijmy, że wierzchołek paraboli znajduje się dla $x = 12.5$.\n**Krok 7.** Z treści zadania wiemy, że głębokość w najpłytszym miejscu to 1.2m, a w najgłębszym 1.8m. Funkcja kwadratowa ma minimum (ramiona w górę). Minimum głębokości występuje dla $x=0$. Zatem $1.2$ m to wartość minimalna. Wierzchołek jest dla $x=0$.\n**Krok 8.** Skorzystaj z punktów $(0, 1.2)$ i $(25, 1.8)$. Funkcja ma postać $y = ax^2 + bx + c$. Podstawiając $(0, 1.2)$, mamy $c=1.2$. Podstawiając $(25, 1.8)$: $1.8 = a(25)^2 + b(25) + 1.2 \\implies 0.6 = 625a + 25b$.\n**Krok 9.** Rysunek sugeruje, że parabola jest symetryczna względem osi $x=12.5$. Zatem wierzchołek jest dla $x=12.5$. Wzór funkcji ma postać $y = a(x-12.5)^2 + q$. Wartość $q$ to najmniejsza głębokość. Z rysunku nie wynika, że najmniejsza głębokość to 1.2m. Przyjmijmy dane z zadania: $y(0) = 1.2$ oraz $y(25) = 1.8$. Minimalna głębokość jest w połowie basenu, czyli $y(12.5)$. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. Ale ramiona paraboli są skierowane w górę, więc $y(12.5)$ jest minimum. To się kłóci z $y(0)=1.2$ i $y(25)=1.8$.\n**Krok 10.** Przyjmijmy, że przekrój podłużny basenu jest fragmentem paraboli, a nie całą. Z rysunku wynika, że funkcja opisuje głębokość dla $x \\in [0, 25]$. Najmniejsza głębokość jest dla $x=0$ ($1.2$ m), a największa dla $x=25$ ($1.8$ m). Minimum paraboli (wierzchołek) musi być dla $x=0$.\n**Krok 11.** Podstawiamy dane: $y(0) = a \\cdot 0^2 + b \\cdot 0 + 1.2 = 1.2$. $y(25) = a \\cdot 25^2 + b \\cdot 25 + 1.2 = 1.8 \\implies 625a + 25b = 0.6$. Z analizy rysunku widać, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. To jest sprzeczne z poprzednim wnioskiem.\n**Krok 12.** Rozważmy funkcję $y = ax^2 + bx + c$. Wiemy, że $y(0) = 1.2$, więc $c = 1.2$. Wiemy, że $y(25) = 1.8$, więc $625a + 25b = 0.6$. Na rysunku widać, że oś symetrii paraboli jest w $x = \\frac{0+25}{2} = 12.5$. Wierzchołek paraboli ma współrzędną $x = -\\frac{b}{2a}$. Zatem $-\\frac{b}{2a} = 12.5 \\implies b = -25a$.\n**Krok 13.** Podstawiamy $b = -25a$ do równania $625a + 25b = 0.6$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6 \\implies 0 = 0.6$. Jest to sprzeczność, więc założenie o osi symetrii $x=12.5$ jest błędne w kontekście podanych punktów krańcowych i funkcji kwadratowej z ramionami w górę.\n**Krok 14.** Ponieważ z zadania 12.1 wynika, że największa głębokość to 1.8m, a najmniejsza 1.2m, i są one na brzegach, funkcja musi opisywać fragment paraboli, której minimum jest w $x=0$ lub $x=25$. Skoro ramiona są w górę, minimum jest w $x=0$. Zatem wierzchołek jest dla $x=0$. Wtedy $b=0$.\n**Krok 15.** Z $b=0$ i $625a + 25b = 0.6$ otrzymujemy $625a = 0.6 \\implies a = \\frac{0.6}{625} = 0.00096$.\n**Odpowiedź:** $a = 0.00096$, $b = 0$",
     "solutionSteps": [
       "**Zadanie 12.1.**",
       "Zauważ, że funkcja opisująca głębokość basenu jest funkcją kwadratową z ramionami skierowanymi w górę (współczynnik przy $x^2$ jest dodatni). Największa głębokość będzie więc występować na krańcach basenu.",
@@ -14207,12 +14204,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f jest określona wzorem f( x ) = −( x − 1) 2 + 2. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji f jest parabola, której wierzchołek ma współrzędne A) (1,2) B) (−1,2) C) (1,−2) D) (−1,−2) Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji f jest przedział A) (−∞,2] B) (−∞,2) C) (2,+∞) D) [2,+∞)",
+    "prompt": "Funkcja kwadratowa f jest określona wzorem $f(x)$ = -$(x - 1) 2 + 2$. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne A) (1,2) B) $(-1,2)$ C) $(1, - 2)$ D) $(-1, - 2)$ Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $f$ jest przedział A) $(-\\infty ,2] B)(-\\infty ,2)$ C) $(2, + \\infty )$ D) [2,+∞)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli (1,2) (dla zadania 13.1); A, czyli (−∞,2] (dla zadania 13.2).",
+    "explanation": "A, czyli (1,2) (dla zadania 13.1); A, czyli (-∞,2] (dla zadania 13.2).",
     "solutionSteps": [
       "Rozpoznajemy postać kanoniczną funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka paraboli. W naszym przypadku $f(x) = -(x-1)^2 + 2$.",
       "Odczytujemy współrzędne wierzchołka: $p = 1$ i $q = 2$. Wartość $a = -1$ informuje nas, że ramiona paraboli są skierowane w dół.",
@@ -14263,11 +14260,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych ( x , y ) , dana jest prosta k o równaniu y = 3 x + b , przechodząca przez punkt A = (−1,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik b w równaniu tej prostej jest równy",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x , y) , dana jest prosta k o równaniu $y = 3x + b$ , przechodząca przez punkt A = $(-1,3)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik $b$ w równaniu tej prostej jest równy",
     "choices": [
       "0",
       "6",
-      "(−10)",
+      "$(-10)$",
       "8"
     ],
     "correctIndex": 1,
@@ -14294,12 +14291,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ( a n ) określony wzorem a n = 3 n − 1 dla każdej liczby naturalnej n ≥ 1. Zadanie 16.1. Dokończ zdanie tak, aby było prawdziwe. Ciąg ( a n ) jest A) rosnący, B) malejący, C) stały, ponieważ dla każdej liczby naturalnej n ≥ 1 A) a n+1 − a n = −1 B) a n+1 − a n = 0 C) a n+1 − a n = 3 Zadanie 16.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejszą wartością n , dla której wyraz a n jest większy od 25, jest A) 8 B) 9 C) 7 D) 26 Zadanie 16.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma n początkowych wyrazów ciągu ( a n ) jest równa 57 dla n równego A) 6 B) 23 C) 5 D) 11",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 3n - 1$ dla każdej liczby naturalnej $n \\ge 1$. Zadanie 16.1. Dokończ zdanie tak, aby było prawdziwe. Ciąg ($a_{n}$) jest A) rosnący, B) malejący, C) stały, ponieważ dla każdej liczby naturalnej $n \\ge 1A$) $a_{n} + 1 - a_{n} = -1B$) $a_{n} + 1 - a_{n} = 0C$) $a_{n} + 1 - a_{n} = 3$ Zadanie 16.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejszą wartością n , dla której wyraz $a_{n}$ jest większy od 25, jest A) 8B) 9C) 7D) 26 Zadanie 16.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma n początkowych wyrazów ciągu ($a_{n}$) jest równa 57 dla n równego A) 6B) 23C) 5D) 11",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "16.1. C, ponieważ dla każdej liczby naturalnej n ≥ 1 C) a n+1 − a n = 3. 16.2. B) 9. 16.3. A) 6.",
+    "explanation": "16.1. C, ponieważ dla każdej liczby naturalnej $n \\ge 1C$) $a_{n} + 1 - a_{n} = 3$. 16.2. B) 9. 16.3. A) 6.",
     "solutionSteps": [
       "Obliczamy różnicę między kolejnymi wyrazami ciągu: $a_{n+1} - a_n = (3(n+1) - 1) - (3n - 1) = 3n + 3 - 1 - 3n + 1 = 3$. Ponieważ różnica jest dodatnia ($3 > 0$), ciąg jest rosnący.",
       "Szukamy najmniejszego $n$, dla którego $a_n > 25$. Rozwiązujemy nierówność $3n - 1 > 25$, co daje $3n > 26$, czyli $n > \\frac{26}{3} = 8\\frac{2}{3}$. Najmniejszą liczbą naturalną spełniającą ten warunek jest $n=9$.",
@@ -14322,7 +14319,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych ( x , y ), dane są: prosta k o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-1.jpg) prosta l o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-2.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k i l\n\nRozwiąż zadanie.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x , y), dane są: prosta k o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-1.jpg) prosta l o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-2.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k i l\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14350,9 +14347,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia (1 − cos20°) ⋅ (1 + cos20°) − sin 2 20° jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia $(1 - \\cos 20^{\\circ})$ ⋅ $(1 + \\cos 20^{\\circ})$ - $\\sin^{2} 20^{\\circ}$ jest równa",
     "choices": [
-      "(−1)",
+      "$(-1)$",
       "0",
       "1",
       "20"
@@ -14383,10 +14380,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pojemniku są wyłącznie kule białe i czerwone. Stosunek liczby kul białych do liczby kul czerwonych jest równy 4∶5 . Z pojemnika losujemy jedną kulę. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo wylosowania kuli białej jest równe",
     "choices": [
-      "4 ⁄ 9",
-      "4 ⁄ 5",
-      "1 ⁄ 9",
-      "1 ⁄ 4"
+      "$\\frac{4}{9}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{1}{9}$",
+      "$\\frac{1}{4}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{4}{9}$",
@@ -14412,12 +14409,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A , B oraz C leżą na okręgu o środku w punkcie O . Kąt ABO ma miarę 40°, a kąt OBC ma miarę 10° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z20-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ACO jest równa",
+    "prompt": "Punkty A , B oraz C leżą na okręgu o środku w punkcie O . Kąt ABO ma miarę $40^{\\circ}$, $a_{k}$ąt OBC ma miarę $10^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z20-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ACO jest równa",
     "choices": [
-      "30°",
-      "40°",
-      "50°",
-      "60°"
+      "$30^{\\circ}$",
+      "$40^{\\circ}$",
+      "$50^{\\circ}$",
+      "$60^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $40^\\circ$.",
@@ -14452,7 +14449,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{1}{4}$",
     "solutionSteps": [
-      "Największy kąt leży naprzeciwko najdłuższego boku. Oznaczmy boki $a=6, b=7, c=8$, a kąt naprzeciwko boku $c$ jako $\\gamma$. Użyjemy twierdzenia cosinusów: $c^2 = a^2 + b^2 - 2ab \\cos \\gamma$.",
+      "Największy kąt leży naprzeciwko najdłuższego boku. Oznaczmy boki $a=6, b=7, c=8$, $a_{k}$ąt naprzeciwko boku $c$ jako $\\gamma$. Użyjemy twierdzenia cosinusów: $c^2 = a^2 + b^2 - 2ab \\cos \\gamma$.",
       "Podstawiamy dane do wzoru i przekształcamy, aby wyznaczyć $\\cos \\gamma$: $8^2 = 6^2 + 7^2 - 2 \\cdot 6 \\cdot 7 \\cos \\gamma$, co daje $64 = 36 + 49 - 84 \\cos \\gamma$.",
       "Rozwiązujemy równanie: $64 = 85 - 84 \\cos \\gamma$, czyli $84 \\cos \\gamma = 85 - 64$, co daje $84 \\cos \\gamma = 21$. Dzieląc obie strony przez 84, otrzymujemy $\\cos \\gamma = \\frac{21}{84}$.",
       "Upraszczamy ułamek: $\\cos \\gamma = \\frac{21}{84} = \\frac{1}{4}$."
@@ -14474,12 +14471,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC bok AB ma długość 4, a bok BC ma długość 4,6. Dwusieczna kąta ABC przecina bok AC w punkcie D takim, że | AD | = 3,2 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z22-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek CD ma długość",
+    "prompt": "W trójkącie ABC bok AB ma długość 4, a bok BC ma długość 4,6. Dwusieczna kąta ABC przecina bok AC w punkcie D takim, że $|AD| = 3,2$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z22-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek CD ma długość",
     "choices": [
-      "64 ⁄ 23",
-      "16 ⁄ 5",
-      "23 ⁄ 4",
-      "92 ⁄ 25"
+      "$\\frac{64}{23}$",
+      "$\\frac{16}{5}$",
+      "$\\frac{23}{4}$",
+      "$\\frac{92}{25}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{92}{25}$",
@@ -14505,14 +14502,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że: przychód P (w złotych) z tygodniowej sprzedaży x wiatraków można opisać funkcją P ( x ) = 251 x koszt K (w złotych) produkcji x wiatraków w ciągu jednego tygodnia można określić funkcją K ( x ) = x 2 + 21 x + 170. Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków. Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
+    "prompt": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że: przychód P (w złotych) z tygodniowej sprzedaży x wiatraków można opisać funkcją $P(x) = 251$ x koszt K (w złotych) produkcji x wiatraków w ciągu jednego tygodnia można określić funkcją $K(x) = x^{2} + 21x + 170$. Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków. Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Należy sprzedać 115 wiatraków, a największy zysk wyniesie 13055 zł.",
     "solutionSteps": [
-      "Zapisz wzór na zysk Z(x) jako różnicę przychodu P(x) i kosztu K(x). Funkcja zysku będzie funkcją kwadratową, której ramiona skierowane są do dołu (współczynnik przy $x^2$ jest ujemny).\n$Z(x) = P(x) - K(x) = 251x - (x^2 + 21x + 170) = -x^2 + 230x - 170$.",
+      "Zapisz wzór na zysk $Z(x)$ jako różnicę przychodu $P(x)$ i kosztu $K(x)$. Funkcja zysku będzie funkcją kwadratową, której ramiona skierowane są do dołu (współczynnik przy $x^2$ jest ujemny).\n$Z(x) = P(x) - K(x) = 251x - (x^2 + 21x + 170) = -x^2 + 230x - 170$.",
       "Znajdź wierzchołek paraboli reprezentującej funkcję zysku, ponieważ jego współrzędna $x_w$ odpowiada liczbie wiatraków dającej największy zysk, a współrzędna $y_w$ jest tym największym zyskiem. Oblicz $x_w = -\\frac{b}{2a}$.\n$x_w = -\\frac{230}{2 \\cdot (-1)} = -\\frac{230}{-2} = 115$.",
       "Oblicz największy zysk, podstawiając $x_w = 115$ do wzoru funkcji zysku $Z(x)$. Sprawdź, czy liczba sprzedanych wiatraków nie przekracza limitu produkcji (150).\n$Z(115) = -(115)^2 + 230 \\cdot 115 - 170 = -13225 + 26450 - 170 = 13055$."
     ],
@@ -14533,7 +14530,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Firma ℱ zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano – wyrażoną w złotych – miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy ℱ, którzy otrzymują płacę miesięczną w danej wysokości. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z24-1.jpg) Zadanie 24.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia miesięczna płaca brutto w firmie ℱ jest równa A) 4 593,75 zł B) 4 800,00 zł C) 5 360,00 zł D) 2 399,33 zł Zadanie 24.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana miesięcznej płacy pracowników firmy ℱ jest równa A) 4 000 zł B) 4 800 zł C) 5 000 zł D) 5 500 zł Zadanie 24.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba pracowników firmy ℱ, których miesięczna płaca brutto nie przewyższa 5 000 zł, stanowi (w zaokrągleniu do 1%) A) 91% liczby wszystkich pracowników tej firmy. B) 78% liczby wszystkich pracowników tej firmy. C) 53% liczby wszystkich pracowników tej firmy. D) 22% liczby wszystkich pracowników tej firmy.",
+    "prompt": "Firma F zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano - wyrażoną w złotych - miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy F, którzy otrzymują płacę miesięczną w danej wysokości. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z24-1.jpg) Zadanie 24.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia miesięczna płaca brutto w firmie F jest równa A) 4 593,75 zł B) 4 800,00 zł C) 5 360,00 zł D) 2 399,33 zł Zadanie 24.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana miesięcznej płacy pracowników firmy F jest równa A) 4 000 zł B) 4 800 zł C) 5 000 zł D) 5 500 zł Zadanie 24.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba pracowników firmy F, których miesięczna płaca brutto nie przewyższa 5 000 zł, stanowi (w zaokrągleniu do 1%) A) 91% liczby wszystkich pracowników tej firmy. B) 78% liczby wszystkich pracowników tej firmy. C) 53% liczby wszystkich pracowników tej firmy. D) 22% liczby wszystkich pracowników tej firmy.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14590,7 +14587,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba 10 n 2 + 30 n + 8 przy dzieleniu przez 5 daje resztę 3.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $10n^{2} + 30n + 8$ przy dzieleniu przez 5 daje resztę 3.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14623,7 +14620,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4$.",
@@ -14653,7 +14650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40 000⋅(1,07) 2 zł",
       "40 000⋅(1,7) 2 zł",
       "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł 1 pkt – odpowiedź poprawna."
+      "40 000⋅1,49 zł 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
@@ -14678,19 +14675,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po 𝑥 zł za parę i 40 identycznych marynarek po 𝑦 zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży 50% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cenę pary spodni 𝑥 oraz cenę marynarki 𝑦, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
+    "prompt": "Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po x zł za parę i 40 identycznych marynarek po y zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży^{50}% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cenę pary spodni x oraz cenę marynarki y, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
     "solutionSteps": [
       "Zapisz równanie opisujące łączny koszt zakupów w hurtowni: $50x + 40y = 8000$.",
       "Zapisz ceny detaliczne spodni i marynarek po doliczeniu marży, a następnie ich równość: $x \\cdot 1.5 = y \\cdot 1.2$.",
-      "Uporządkuj drugie równanie, aby uzyskać postać $1.5x - 1.2y = 0$ lub $5x - 4y = 0$ po pomnożeniu przez 10/3."
+      "Uporządkuj drugie równanie, aby uzyskać postać $1.5x - 1.2y = 0$ lub $5x - 4y = 0$ po pomnożeniu przez $\\frac{10}{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14709,12 +14706,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczby rzeczywiste 𝑥 i 𝑦 są dodatnie oraz 𝑥≠𝑦. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyrażenie ![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-1.png) można przekształcić do postaci",
+    "prompt": "Liczby rzeczywiste x i y są dodatnie oraz x≠y. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyrażenie ![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-1.png) można przekształcić do postaci",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
@@ -14745,7 +14742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9⋅8⋅7⋅6",
       "9⋅9⋅8⋅7",
       "10⋅9⋅8⋅7",
-      "9⋅10⋅10⋅10 1 pkt – odpowiedź poprawna."
+      "9⋅10⋅10⋅10 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
@@ -14771,18 +14768,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja 𝑓 jest określona wzorem 𝑓(𝑥) = − log 𝑥 dla wszystkich liczb rzeczywistych dodatnich 𝑥. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość funkcji 𝑓 dla argumentu ![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-1.png) jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x)$ = - log x dla wszystkich liczb rzeczywistych dodatnich x. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość funkcji $f$ dla argumentu ![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-1.png) jest równa",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 1",
     "solutionSteps": [
-      "Zapisz wzór funkcji f(x) oraz podaną wartość argumentu. Wartość argumentu odczytana z rysunku to $x = \\frac{1}{10}$. Wzór funkcji to $f(x) = -\\log x$.",
-      "Podstaw wartość argumentu do wzoru funkcji i wykonaj obliczenia. $f(\\frac{1}{10}) = -\\log(\\frac{1}{10})$. Ponieważ $\\log(\\frac{1}{10}) = \\log(10^{-1}) = -1$, otrzymujemy $f(\\frac{1}{10}) = -(-1)$.",
+      "Zapisz wzór funkcji $f(x)$ oraz podaną wartość argumentu. Wartość argumentu odczytana z rysunku to $x = \\frac{1}{10}$. Wzór funkcji to $f(x) = -\\log x$.",
+      "Podstaw wartość argumentu do wzoru funkcji $i$ wykonaj obliczenia. $f(\\frac{1}{10}) = -\\log(\\frac{1}{10})$. Ponieważ $\\log(\\frac{1}{10}) = \\log(10^{-1}) = -1$, otrzymujemy $f(\\frac{1}{10}) = -(-1)$.",
       "Oblicz ostateczną wartość funkcji. $f(\\frac{1}{10}) = 1$."
     ],
     "examSource": {
@@ -14802,7 +14799,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment wykresu funkcji kwadratowej 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐. Wierzchołek paraboli, która jest wykresem funkcji 𝑓, ma współrzędne (5,−3). Jeden z punktów przecięcia paraboli z osią 𝑂𝑥 układu współrzędnych ma współrzędne (4,0). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z07-1.png) Zadanie 7.1. Podaj zbiór wszystkich wartości funkcji 𝒇. ......................... Zadanie 7.2. Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej .",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment wykresu funkcji kwadratowej $f(x) = ax 2 + bx + c$. Wierzchołek paraboli, która jest wykresem funkcji $f$, ma współrzędne $(5, - 3)$. Jeden z punktów przecięcia paraboli z osią Ox układu współrzędnych ma współrzędne (4,0). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z07-1.png) Zadanie 7.1. Podaj zbiór wszystkich wartości funkcji $f$. ......................... Zadanie 7.2. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14811,7 +14808,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zapisz wzór funkcji kwadratowej w postaci kanonicznej, korzystając ze współrzędnych wierzchołka $W=(p, q)$. W postaci kanonicznej funkcja ma postać $f(x) = a(x-p)^2 + q$. Podstaw dane $p=5$ i $q=-3$, otrzymując $f(x) = a(x-5)^2 - 3$.",
       "Wyznacz współczynnik $a$ funkcji, korzystając z podanego punktu leżącego na paraboli $(4,0)$. Podstaw $x=4$ i $f(x)=0$ do wzoru z kroku 1: $0 = a(4-5)^2 - 3$. Rozwiąż równanie: $0 = a(-1)^2 - 3$, czyli $0 = a - 3$, co daje $a=3$.",
-      "Zapisz ostateczny wzór funkcji w postaci kanonicznej, podstawiając wyznaczone $a=3$ do wzoru z kroku 1. Otrzymujemy $f(x) = 3(x-5)^2 - 3$."
+      "Zapisz ostateczny wzór funkcji $w$ postaci kanonicznej, podstawiając wyznaczone $a=3$ do wzoru z kroku 1. Otrzymujemy $f(x) = 3(x-5)^2 - 3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14830,12 +14827,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność kwadratowa (3𝑥 − 9)(𝑥 + 𝑘) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Liczba 𝑘 jest równa",
+    "prompt": "Dana jest nierówność kwadratowa $(3x - 9)(x + k)$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Liczba k jest równa",
     "choices": [
-      "(-2)",
+      "$(-2)$",
       "2",
-      "(-3)",
-      "3 1 pkt – odpowiedź poprawna."
+      "$(-3)$",
+      "3 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 3",
@@ -14861,7 +14858,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja kwadratowa 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐, gdzie 𝑎, 𝑏 i 𝑐 są liczbami rzeczywistymi takimi, że 𝑎 ≠ 0 oraz 𝑐 Dokończ zdanie tak, aby było prawdziwe. Wykres funkcji 𝑓 leży w całości\n\nRozwiąż zadanie.",
+    "prompt": "Dana jest funkcja kwadratowa $f(x) = ax 2 + bx + c$, gdzie a, b i c są liczbami rzeczywistymi takimi, że a ≠ 0 oraz c Dokończ zdanie tak, aby było prawdziwe. Wykres funkcji $f$ leży w całości\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14890,12 +14887,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest układ równań ![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-1.png) Na którym z rysunków A–D przedstawiona jest interpretacja geometryczna tego układu równań? Wybierz właściwą odpowiedź spośród podanych.",
+    "prompt": "Dany jest układ równań ![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-1.png) Na którym z rysunków $A - D$ przedstawiona jest interpretacja geometryczna tego układu równań? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -14921,12 +14918,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest wielomian 𝑊 określony wzorem 𝑊(𝑥) = 𝑥 3 − 2𝑥 2 − 3𝑥 + 6 dla każdej liczby rzeczywistej 𝑥. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wielomian 𝑊 przy rozkładzie na czynniki ma postać",
+    "prompt": "Dany jest wielomian W określony wzorem $W(x) = x^{3} - 2x^{2} - 3x + 6$ dla każdej liczby rzeczywistej x. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wielomian W przy rozkładzie na czynniki ma postać",
     "choices": [
-      "𝑊(𝑥)=(𝑥+2)(𝑥 2 −3)",
-      "𝑊(𝑥)=(𝑥–2)(𝑥 2 −3)",
-      "𝑊(𝑥)=(𝑥+2)(𝑥 2 +3)",
-      "𝑊(𝑥)=(𝑥–2)(𝑥 2 +3) 1 pkt – odpowiedź poprawna."
+      "$W(x)$=$(x + 2)(x^{2} - 3)$",
+      "$W(x)$=$(x - 2)(x^{2} - 3)$",
+      "$W(x)$=$(x + 2)(x^{2} + 3)$",
+      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
@@ -14957,7 +14954,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "jedno rozwiązanie.",
       "dwa rozwiązania.",
       "trzy rozwiązania.",
-      "cztery rozwiązania. 1 pkt – odpowiedź poprawna."
+      "cztery rozwiązania. 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli trzy rozwiązania.",
@@ -14989,12 +14986,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "5",
       "7",
-      "(-6) 1 pkt – odpowiedź poprawna."
+      "$(-6)$ 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 5",
     "solutionSteps": [
-      "Zapisz nierówność w prostszej postaci, grupując wyrazy z niewiadomą i stałe. Po przeniesieniu $-3$ na drugą stronę nierówność przyjmie postać $2x \\le 10$.",
+      "Zapisz nierówność w prostszej postaci, grupując wyrazy $z$ niewiadomą $i$ stałe. Po przeniesieniu $-3$ na drugą stronę nierówność przyjmie postać $2x \\le 10$.",
       "Rozwiąż nierówność, dzieląc obie strony przez $2$. Otrzymasz $x \\le 5$.",
       "Znajdź największą liczbę całkowitą, która spełnia warunek $x \\le 5$. Tą liczbą jest $5$."
     ],
@@ -15015,7 +15012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej 𝒏 liczba 𝟓𝒏 𝟐 + 𝟏𝟓𝒏 jest podzielna przez 𝟏𝟎.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $5n^{2} + 15n$ jest podzielna przez 10.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15043,12 +15040,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = 2𝑛 2 + 𝑛 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Ciąg (𝑎 𝑛 ) jest malejący. A) prawda B) fałsz Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136. A) prawda B) fałsz",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 2n^{2} + n$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Ciąg ($a_{n}$) jest malejący. A) prawda B) fałsz Ósmy wyraz ciągu ($a_{n}$) jest równy 136. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Ciąg (𝑎 𝑛 ) jest malejący – fałsz. Ósmy wyraz ciągu (𝑎 𝑛 ) jest równy 136 – prawda.",
+    "explanation": "Ciąg ($a_{n}$) jest malejący - fałsz. Ósmy wyraz ciągu ($a_{n}$) jest równy $136 - pra$wda.",
     "solutionSteps": [
       "Sprawdzamy, czy ciąg jest malejący, badając znak różnicy $a_{n+1} - a_n$. Obliczamy $a_{n+1} = 2(n+1)^2 + (n+1) = 2(n^2+2n+1) + n+1 = 2n^2+4n+2+n+1 = 2n^2+5n+3$. Różnica $a_{n+1} - a_n = (2n^2+5n+3) - (2n^2+n) = 4n+3$. Dla $n \\ge 1$, $4n+3 > 0$, więc ciąg jest rosnący, a nie malejący.",
       "Obliczamy ósmy wyraz ciągu, podstawiając $n=8$ do wzoru $a_n = 2n^2+n$. Mamy $a_8 = 2 \\cdot 8^2 + 8 = 2 \\cdot 64 + 8 = 128 + 8 = 136$."
@@ -15070,12 +15067,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pięciowyrazowy ciąg ![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-1.png) jest arytmetyczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczby 𝑥 oraz 𝑦 są równe",
+    "prompt": "Pięciowyrazowy ciąg ![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-1.png) jest arytmetyczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczby x oraz y są równe",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 15$ i $y = 5$.",
@@ -15101,7 +15098,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny (𝑎 𝑛 ), określony dla każdej liczby naturalnej 𝑛 ≥ 1. W tym ciągu 𝑎 1 = −5, 𝑎 2 = 15, 𝑎 3 = −45. Dokończ zdanie. Podaj dwie odpowiedzi tak, aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Wzór ogólny ciągu (𝑎 𝑛 ) ma postać A. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-1.png) B. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-2.png) C. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-3.png) D. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-4.png) E. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-5.png) F. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-6.png)",
+    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$. W tym ciągu $a_{1} = -5$, $a_{2} = 15$, $a_{3} = -45$. Dokończ zdanie. Podaj dwie odpowiedzi tak, aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Wzór ogólny ciągu ($a_{n}$) ma postać A. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-1.png) B. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-2.png) C. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-3.png) D. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-4.png) E. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-5.png) F. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-6.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15129,12 +15126,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt 𝛼 jest ostry oraz ![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia sin 𝛼 ∙ cos 𝛼 jest równa",
+    "prompt": "Kąt α jest ostry oraz ![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia sin α ∙ cos α jest równa",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 pkt – odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{12}{25}$",
@@ -15160,18 +15157,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty 𝐴, 𝐵, 𝐶 leżą na okręgu o środku 𝑂 (zobacz rysunek). Ponadto |∡𝐴𝑂𝐶| = 130° oraz |∡𝐵𝑂𝐴| = 110°. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta wewnętrznego 𝐵𝐴𝐶 trójkąta 𝐴𝐵𝐶 jest równa",
+    "prompt": "Punkty A, B, C leżą na okręgu o środku O (zobacz rysunek). Ponadto $|\\angle AOC| = 130^{\\circ}$ oraz $|\\angle BOA| = 110^{\\circ}$. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta wewnętrznego BAC trójkąta ABC jest równa",
     "choices": [
-      "60°",
-      "55°",
-      "50°",
-      "65° 1 pkt – odpowiedź poprawna."
+      "$60^{\\circ}$",
+      "$55^{\\circ}$",
+      "$50^{\\circ}$",
+      "$65^{\\circ}$ 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 60°",
+    "explanation": "A, czyli $60^{\\circ}$",
     "solutionSteps": [
-      "Oblicz miarę kąta środkowego 𝐵𝑂𝐶, korzystając z faktu, że suma kątów środkowych wokół punktu O wynosi 360°.\n$|\\measuredangle BOC| = 360° - |\\measuredangle AOC| - |\\measuredangle BOA| = 360° - 130° - 110° = 120°$.",
-      "Oblicz miarę kąta wpisanego 𝐵𝐴𝐶, wiedząc, że jest on równy połowie miary kąta środkowego opartego na tym samym łuku 𝐵𝐶.\n$|\\measuredangle BAC| = \\frac{1}{2} |\\measuredangle BOC| = \\frac{1}{2} \\cdot 120° = 60°$."
+      "Oblicz miarę kąta środkowego BOC, korzystając z faktu, że suma kątów środkowych wokół punktu O wynosi $360^{\\circ}$.\n$|\\measuredangle BOC| = 360° - |\\measuredangle AOC| - |\\measuredangle BOA| = 360° - 130° - 110° = 120°$.",
+      "Oblicz miarę kąta wpisanego BAC, wiedząc, że jest on równy połowie miary kąta środkowego opartego na tym samym łuku BC.\n$|\\measuredangle BAC| = \\frac{1}{2} |\\measuredangle BOC| = \\frac{1}{2} \\cdot 120° = 60°$."
     ],
     "examSource": {
       "kind": "matura",
@@ -15190,7 +15187,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny o długości 200 m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który w tym miejscu jest linią prostą (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z20-1.png) Oblicz wymiary 𝒂 i 𝒃 kąpieliska tak, aby jego powierzchnia była największa.",
+    "prompt": "Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny o długości 200m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który w tym miejscu jest linią prostą (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z20-1.png) Oblicz wymiary a i $b_{k}$ąpieliska tak, aby jego powierzchnia była największa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15219,7 +15216,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat 𝐴𝐵𝐶𝐷 o boku długości 8. Z wierzchołka 𝐴 zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest kwadrat ABCD o boku długości 8. Z wierzchołka A zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15247,14 +15244,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinki 𝐴𝐶 i 𝐵𝐷 przecinają się w punkcie 𝑂. Ponadto |𝐴𝐷| = 4 i |𝑂𝐷| = |𝐵𝐶| = 6. Kąty 𝑂𝐷𝐴 i 𝐵𝐶𝑂 są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka 𝑂𝐶 jest równa\n\nRozwiąż zadanie.",
+    "prompt": "Odcinki AC i BD przecinają się w punkcie O. Ponadto $|AD| = 4$ i $|OD| = |BC| = 6$. Kąty ODA i BCO są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka OC jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "9",
     "solutionSteps": [
-      "Zauważ, że trójkąty $\\triangle AOD$ i $\\triangle BOC$ są podobne (cecha kąt-kąt-kąt, ponieważ kąty przy wierzchołku $O$ są równe, a kąty przy $D$ i $C$ są proste). Oznaczmy długość odcinka $OC$ jako $x$.",
+      "Zauważ, że trójkąty $\\triangle AOD$ i $\\triangle BOC$ są podobne (cecha kąt-kąt-kąt, ponieważ kąty przy wierzchołku $O$ są równe, $a_{k}$ąty przy $D$ i $C$ są proste). Oznaczmy długość odcinka $OC$ jako $x$.",
       "Z podobieństwa trójkątów mamy proporcję $\\frac{|AD|}{|BC|} = \\frac{|OD|}{|OC|}$, co po podstawieniu danych daje $\\frac{4}{6} = \\frac{6}{x}$.",
       "Rozwiąż równanie, aby znaleźć $x$: $4x = 36$, czyli $x = \\frac{36}{4} = 9$."
     ],
@@ -15275,7 +15272,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątne równoległoboku 𝐴𝐵𝐶𝐷 mają długości: |𝐴𝐶| = 16 oraz |𝐵𝐷| = 12. Wierzchołki 𝐸, 𝐹, 𝐺 oraz 𝐻 rombu 𝐸𝐹𝐺𝐻 leżą na bokach równoległoboku 𝐴𝐵𝐶𝐷 (zobacz rysunek). Boki tego rombu są równoległe do przekątnych równoległoboku. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z23-1.png) Oblicz długość boku rombu 𝑬𝑭𝑮𝑯.",
+    "prompt": "Przekątne równoległoboku ABCD mają długości: $|AC| = 16$ oraz $|BD| = 12$. Wierzchołki E, F, G oraz H rombu EFGH leżą na bokach równoległoboku ABCD (zobacz rysunek). Boki tego rombu są równoległe do przekątnych równoległoboku. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z23-1.png) Oblicz długość boku rombu EFGH.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15295,7 +15292,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(naprawdę ostatnia próba)** Skoro boki rombu są równoległe do przekątnych równoległoboku, to rozważmy trójkąt $\\triangle OAB$, gdzie $O$ jest środkiem równoległoboku. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$. Odcinek $OE$ jest równoległy do $BC$. To też nie ma zastosowania.\nSkoro boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$, to rozważmy fragment równoległoboku utworzony przez środek $O$ i jeden z wierzchołków, np. $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ jest na $AB$. Odcinek $OE$ jest równoległy do $BC$.",
       "(w końcu poprawne)** Zauważ, że środek rombu $O$ jest środkiem równoległoboku. Ponieważ boki rombu są równoległe do przekątnych równoległoboku, rozważ trójkąt $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, a $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$.",
       "(bardzo konkretnie)** Skoro boki rombu są równoległe do przekątnych, rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem $AC$. Odcinek $EF$ jest bokiem rombu i jest równoległy do $BD$. Ponieważ $O$ jest środkiem $AC$, a $E$ leży na $AB$ i $F$ na $BC$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$ w skali $k$. W tym przypadku, ponieważ $EF$ jest równoległy do $BD$, a $O$ jest środkiem, to $OE$ jest równoległe do $BC$. To nie jest pomocne.",
-      "(z diagramu)** Skoro boki rombu są równoległe do przekątnych, to przekątne rombu są prostopadłe do boków równoległoboku. Nie.",
+      "($z_{diagramu}$)** Skoro boki rombu są równoległe do przekątnych, to przekątne rombu są prostopadłe do boków równoległoboku. Nie.",
       "(prawidłowe rozumowanie)** Skoro boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$, to rozważ trójkąt $\\triangle OAB$, gdzie $O$ jest środkiem równoległoboku. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, punkt $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$. Rozważmy trójkąt $\\triangle OMA$, gdzie $M$ jest środkiem boku $AB$. Długość boku rombu jest równa $\\frac{1}{2} |AC|$ lub $\\frac{1}{2} |BD|$. Nie, to nie tak.",
       "(nowe podejście)** Rozważmy jeden z czterech mniejszych równoległoboków utworzonych przez środek $O$ i punkty $A, B, C, D$, np. równoległobok $OAEH$. Nie, to nie jest równoległobok.\nNiech $x$ będzie długością boku rombu. Ponieważ boki rombu są równoległe do przekątnych, rozważmy trójkąt $\\triangle ABC$. Odcinek $EF$ jest bokiem rombu i jest równoległy do $BD$. Ponieważ $O$ jest środkiem $AC$, a $E$ i $F$ leżą na bokach $AB$ i $BC$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$. W tym przypadku, długość boku rombu jest związana z połową długości przekątnych.",
       "(najprościej jak się da)** Rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem boku $AC$. Bok rombu $EF$ jest równoległy do $BD$. Z twierdzenia o odcinku łączącym środki boków (jeśli $E$ i $F$ byłyby środkami) mielibyśmy $EF = \\frac{1}{2} AC$. Tutaj $EF$ jest równoległy do $BD$. To prowadzi do wniosku, że $EF = \\frac{1}{2} AC$. Analogicznie, rozważając trójkąt $\\triangle BCD$, bok rombu $FG$ jest równoległy do $AC$, więc $FG = \\frac{1}{2} BD$. Ponieważ $EFGH$ jest rombem, $|EF| = |FG|$.",
@@ -15321,7 +15318,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐶 = 4, |𝐴𝐵| = 3, cos ∡𝐵𝐴𝐶 = ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta 𝑨𝑩𝑪.",
+    "prompt": "Dany jest trójkąt ABC, w którym |$AC = 4$, $|AB| = 3$, cos \\angle BAC = ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta ABC.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15349,14 +15346,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześciokąt foremny 𝐴𝐵𝐶𝐷𝐸𝐹 o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta 𝐴𝐵𝐸 jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 pkt – odpowiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka 𝐴𝐸 jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 pkt – odpowiedź poprawna.",
+    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 $pkt - odp$owiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 $pkt - odp$owiedź poprawna.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4\\sqrt{3}$ (zadanie 25.1), D, czyli $4$ (zadanie 25.2).",
     "solutionSteps": [
-      "Sześciokąt foremny składa się z 6 trójkątów równobocznych o boku $a$. Pole sześciokąta to $P_{sześciokąta} = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4}$. Wiemy, że $P_{sześciokąta} = 24\\sqrt{3}$, więc $24\\sqrt{3} = \\frac{3a^2 \\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i pomnożeniu przez $\\frac{2}{3}$, otrzymujemy $a^2 = 16$, co daje $a = 4$.",
+      "Sześciokąt foremny składa się $z^{6}$ trójkątów równobocznych o boku $a$. Pole sześciokąta to $P_{sześciokąta} = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4}$. Wiemy, że $P_{sześciokąta} = 24\\sqrt{3}$, więc $24\\sqrt{3} = \\frac{3a^2 \\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i pomnożeniu przez $\\frac{2}{3}$, otrzymujemy $a^2 = 16$, co daje $a = 4$.",
       "Trójkąt $ABE$ jest równoramienny, a jego podstawa $AB$ ma długość $a=4$. Kąt przy wierzchołku $A$ między bokami $AB$ i $AE$ wynosi $120^\\circ$ (ponieważ suma kątów w sześciokącie to $720^\\circ$, a każdy kąt wewnętrzny to $120^\\circ$). Pole trójkąta $ABE$ obliczymy ze wzoru $P_{ABE} = \\frac{1}{2} |AB| \\cdot |AE| \\sin(\\angle BAE)$. Ponieważ $|AB| = |AE| = a = 4$, mamy $P_{ABE} = \\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin(120^\\circ) = 8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$.",
       "Długość odcinka $AE$ jest równa długości boku sześciokąta, czyli $a$. Obliczyliśmy, że $a=4$."
     ],
@@ -15377,12 +15374,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trapez 𝐴𝐵𝐶𝐷, w którym 𝐴𝐵||𝐶𝐷 oraz przekątne 𝐴𝐶 i 𝐵𝐷 przecinają się w punkcie 𝑂 (zobacz rysunek). Wysokość tego trapezu jest równa 12. Obwód trójkąta 𝐴𝐵𝑂 jest równy 39, a obwód trójkąta 𝐶𝐷𝑂 jest równy 13. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wysokość trójkąta 𝐴𝐵𝑂 poprowadzona z punktu 𝑂 jest równa",
+    "prompt": "Dany jest trapez ABCD, w którym AB||CD oraz przekątne AC i BD przecinają się w punkcie O (zobacz rysunek). Wysokość tego trapezu jest równa 12. Obwód trójkąta ABO jest równy 39, a obwód trójkąta CDO jest równy 13. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wysokość trójkąta ABO poprowadzona z punktu O jest równa",
     "choices": [
       "3",
       "4",
       "9",
-      "6 1 pkt – odpowiedź poprawna."
+      "6 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D) 9",
@@ -15408,19 +15405,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dany jest okrąg 𝒪 o równaniu (𝑥 − 3) 2 + (𝑦 − 3) 2 = 13 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg 𝒪 przecina oś 𝑂𝑦 w punktach o współrzędnych",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg O o równaniu $(x - 3)$ 2 + $(y - 3) 2 = 13$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O przecina oś Oy w punktach o współrzędnych",
     "choices": [
       "(0,1) i (0,5).",
-      "(0,1) i (0,−5).",
+      "(0,1) i $(0, - 5)$.",
       "(1,0) i (5,0).",
-      "(0,−1) i (0,5). 1 pkt – odpowiedź poprawna."
+      "$(0, - 1)$ i (0,5). 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli (0,1) i (0,5).",
     "solutionSteps": [
-      "Okrąg przecina oś O𝑦, gdy współrzędna 𝑥 wynosi 0. Podstawiamy 𝑥 = 0 do równania okręgu: $(0-3)^2 + (y-3)^2 = 13$.",
-      "Rozwiązujemy równanie powstałe w poprzednim kroku, aby znaleźć wartości 𝑦: $9 + (y-3)^2 = 13$, czyli $(y-3)^2 = 4$. Stąd $y-3 = 2$ lub $y-3 = -2$, co daje $y = 5$ lub $y = 1$.",
-      "Punkty przecięcia okręgu z osią O𝑦 mają współrzędne (0, 1) i (0, 5)."
+      "Okrąg przecina oś Oy, gdy współrzędna x wynosi 0. Podstawiamy $x = 0$ do równania okręgu: $(0-3)^2 + (y-3)^2 = 13$.",
+      "Rozwiązujemy równanie powstałe w poprzednim kroku, aby znaleźć wartości y: $9 + (y-3)^2 = 13$, czyli $(y-3)^2 = 4$. Stąd $y-3 = 2$ lub $y-3 = -2$, co daje $y = 5$ lub $y = 1$.",
+      "Punkty przecięcia okręgu z osią Oy mają współrzędne (0, 1) i (0, 5)."
     ],
     "examSource": {
       "kind": "matura",
@@ -15439,7 +15436,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dane są proste 𝑘 oraz 𝑙 o równaniach ![Rysunek do zadania](/cke-matura/m23-probna-xii/z28-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙\n\nRozwiąż zadanie.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dane są proste k oraz l o równaniach ![Rysunek do zadania](/cke-matura/m23-probna-xii/z28-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k oraz l\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15467,12 +15464,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dane są punkty 𝐴 = (1,2) i 𝐵 = (2𝑚,𝑚), gdzie 𝑚 jest liczbą rzeczywistą, oraz prosta 𝑘 o równaniu 𝑦 = −𝑥 −1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta przechodząca przez punkty 𝐴 i 𝐵 jest równoległa do prostej 𝑘, gdy",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dane są punkty $A = (1,2)$ i $B = (2m,m)$, gdzie m jest liczbą rzeczywistą, oraz prosta k o równaniu y = -$x - 1$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta przechodząca przez punkty A i B jest równoległa do prostej k, gdy",
     "choices": [
-      "𝑚 = −1",
-      "𝑚 = 1",
-      "m = 1 / 2",
-      "𝑚 = 2 1 pkt – odpowiedź poprawna."
+      "$m = -1$",
+      "$m = 1$",
+      "$m = \\frac{1}{2}$",
+      "$m = 2$ 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m = 1$.",
@@ -15498,7 +15495,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻 o krawędzi długości 9. Wierzchołki podstawy 𝐴𝐵𝐶𝐷 sześcianu połączono odcinkami z punktem 𝑊, który jest punktem przecięcia przekątnych podstawy 𝐸𝐹𝐺𝐻. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny 𝐴𝐵𝐶𝐷𝑊 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość 𝑉 ostrosłupa 𝐴𝐵𝐶𝐷𝑊 jest równa A) 243 B) 364,5 C) 489 D) 729 1 pkt – odpowiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 $pkt - odp$owiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15526,19 +15523,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ℱ o krawędzi długości 𝑎 i objętości 𝑉 oraz sześcian 𝒢 o krawędzi długości 3𝑎. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu 𝒢 jest równa",
+    "prompt": "Dany jest sześcian F o krawędzi $d$ługości a i objętości V oraz sześcian G o krawędzi $d$ługości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
     "choices": [
-      "3𝑉",
-      "9𝑉",
-      "18𝑉",
-      "27𝑉 1 pkt – odpowiedź poprawna."
+      "3V",
+      "9V",
+      "18V",
+      "27V^{1} $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $27V$",
     "solutionSteps": [
-      "Oblicz objętość sześcianu ℱ. Objętość sześcianu o krawędzi $a$ wynosi $V = a^3$.",
-      "Oblicz objętość sześcianu 𝒢. Sześcian 𝒢 ma krawędź $3a$, więc jego objętość wynosi $(3a)^3 = 27a^3$.",
-      "Porównaj objętości sześcianów 𝒢 i ℱ. Ponieważ $27a^3 = 27 \\cdot a^3 = 27V$, objętość sześcianu 𝒢 jest 27 razy większa od objętości sześcianu ℱ."
+      "Oblicz objętość sześcianu F. Objętość sześcianu o krawędzi $a$ wynosi $V = a^3$.",
+      "Oblicz objętość sześcianu G. Sześcian G ma krawędź $3a$, więc jego objętość wynosi $(3a)^3 = 27a^3$.",
+      "Porównaj objętości sześcianów G i F. Ponieważ $27a^3 = 27 \\cdot a^3 = 27V$, objętość sześcianu G jest 27 razy większa od objętości sześcianu F."
     ],
     "examSource": {
       "kind": "matura",
@@ -15559,15 +15556,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na loterii stosunek liczby losów wygrywających do liczby losów przegrywających jest równy 2∶7. Zakupiono jeden los z tej loterii. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia polegającego na tym, że zakupiony los jest wygrywający, jest równe",
     "choices": [
-      "1 / 9",
-      "1 / 2",
-      "2 / 9",
-      "2 / 7 1 pkt – odpowiedź poprawna."
+      "$\\frac{1}{9}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{2}{9}$",
+      "$\\frac{2}{7}$ 1 $pkt - odp$owiedź poprawna."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
     "solutionSteps": [
-      "Z sumy części stosunku $2+7=9$ dowiadujemy się, że na każde 9 losów, 2 są wygrywające, a 7 są przegrywające.",
+      "Z sumy części stosunku $2+7=9$ dowiadujemy się, że na każde 9 losów, 2 są wygrywające, $a_{7}$ są przegrywające.",
       "Prawdopodobieństwo zdarzenia (wylosowanie losu wygrywającego) obliczamy dzieląc liczbę losów wygrywających przez łączną liczbę losów.",
       "Prawdopodobieństwo wynosi $\\frac{2}{9}$."
     ],
@@ -15588,7 +15585,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy – 133 nasiona • w II donicy – 140 nasion • w III donicy – 119 nasion • w IV donicy – 147 nasion • w V donicy – 161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe 𝜎 = 14. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej.",
+    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy -133 nasiona • w II donicy -140 nasion • w III donicy -119 nasion • w IV donicy -147 nasion • w V donicy -161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe $σ = 14$. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15597,7 +15594,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Obliczamy średnią arytmetyczną liczby wykiełkowanych nasion: $\\bar{x} = \\frac{133+140+119+147+161}{5} = \\frac{700}{5} = 140$.",
       "Określamy przedział zgodny z definicją: $[\\bar{x} - \\sigma, \\bar{x} + \\sigma] = [140 - 14, 140 + 14] = [126, 154]$.",
-      "Sprawdzamy, w których donicach liczba wykiełkowanych nasion mieści się w przedziale $[126, 154]$: donica II (140), donica III (119 – nie mieści się), donica IV (147). Donica I (133) mieści się, ale odchylenie od średniej to 7, a nie 14. Donica V (161) nie mieści się w przedziale."
+      "Sprawdzamy, w których donicach liczba wykiełkowanych nasion mieści się w przedziale $[126, 154]$: donica II (140), donica III $(119 - nie mieści się)$, donica IV (147). Donica $I(133)$ mieści się, ale odchylenie od średniej to 7, a nie 14. Donica $V(161)$ nie mieści się w przedziale."
     ],
     "examSource": {
       "kind": "matura",
@@ -15616,12 +15613,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 6 100 + 6 100 + 6 100 + 6 100 + 6 100 + 6 100 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 6 $100 + 6 100 + 6 100 + 6 100 + 6 100 + 6$ 100 jest równa",
     "choices": [
       "6 600",
       "6 101",
       "36 100",
-      "36 600 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "36 600 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $36 \\cdot 100$.",
@@ -15648,12 +15645,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia log 7 98 − log 7 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia log 7 $98 - \\log 7$ 2 jest równa",
     "choices": [
       "7",
       "2",
       "1",
-      "(−1) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "$(-1)$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 2",
@@ -15684,12 +15681,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "900",
       "729",
       "648",
-      "512 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "512 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 648",
     "solutionSteps": [
-      "Określ liczbę dostępnych cyfr: mamy 10 cyfr (0-9). Wykluczamy cyfrę 2, co daje 9 dostępnych cyfr (0, 1, 3, 4, 5, 6, 7, 8, 9).",
+      "Określ liczbę dostępnych cyfr: mamy 10 cyfr $(0 - 9)$. Wykluczamy cyfrę 2, co daje 9 dostępnych cyfr (0, 1, 3, 4, 5, 6, 7, 8, 9).",
       "Oblicz liczbę możliwości dla każdej pozycji liczby trzycyfrowej: pierwsza cyfra nie może być 0 ani 2 (8 możliwości), a pozostałe dwie cyfry nie mogą być 2 (ale mogą być 0) (po 9 możliwości).",
       "Pomnóż liczbę możliwości dla każdej pozycji: $8 \\cdot 9 \\cdot 9 = 648$."
     ],
@@ -15710,12 +15707,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wartość wyrażenia (3 + 4a) 2 − (3 − 4a) 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wartość wyrażenia $(3 + 4a)$ 2 - $(3 - 4a)$ 2 jest równa",
     "choices": [
-      "32a 2",
+      "32a^{2}",
       "0",
       "48a",
-      "8a 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "8a^{2} 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48a$.",
@@ -15741,14 +15738,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt – wybranie dwóch poprawnych odpowiedzi. 1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 $pkt - wyb$ranie dwóch poprawnych odpowiedzi. 1 $pkt - wyb$ranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B i E",
     "solutionSteps": [
-      "Kąty przyległe sumują się do 180 stopni, a kąty wierzchołkowe są równe. Z rysunku widać, że kąty o miarach $2x + 5^\\circ$ i $3x + 15^\\circ$ są przyległe, a kąty o miarach $2x + 5^\\circ$ i $y + 10^\\circ$ są wierzchołkowe.",
+      "Kąty przyległe sumują się do 180 stopni, $a_{k}$ąty wierzchołkowe są równe. Z rysunku widać, że kąty o miarach $2x + 5^\\circ$ i $3x + 15^\\circ$ są przyległe, $a_{k}$ąty o miarach $2x + 5^\\circ$ i $y + 10^\\circ$ są wierzchołkowe.",
       "Z równości kątów wierzchołkowych mamy $2x + 5^\\circ = y + 10^\\circ$, czyli $y = 2x - 5^\\circ$. Z sumy kątów przyległych mamy $(2x + 5^\\circ) + (3x + 15^\\circ) = 180^\\circ$, co po uproszczeniu daje $5x + 20^\\circ = 180^\\circ$.",
       "Z równania $5x + 20^\\circ = 180^\\circ$ obliczamy $x$: $5x = 160^\\circ$, więc $x = 32^\\circ$. Następnie obliczamy $y$: $y = 2x - 5^\\circ = 2(32^\\circ) - 5^\\circ = 64^\\circ - 5^\\circ = 59^\\circ$. Układ równań to $y = 2x - 5^\\circ$ i $5x = 160^\\circ$, co odpowiada opcjom B i E."
     ],
@@ -15769,12 +15766,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 𝑘𝑥 2 − 12𝑥 − 7𝑘 + 12 gdzie 𝑘 jest pewną liczbą rzeczywistą. Wiadomo, że liczba (−2) jest pierwiastkiem tego wielomianu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba 𝑘 jest równa",
+    "prompt": "Dany jest wielomian $W(x) = 3x^{3} + kx 2 - 12x - 7k + 12$ gdzie k jest pewną liczbą rzeczywistą. Wiadomo, że liczba $(-2)$ jest pierwiastkiem tego wielomianu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba k jest równa",
     "choices": [
       "2",
       "4",
       "6",
-      "8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 4",
@@ -15802,10 +15799,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-przykladowa/z07-1.png) ma w zbiorze liczb rzeczywistych",
     "choices": [
-      "dokładnie jedno rozwiązanie: 𝑥 = 2.",
-      "dokładnie dwa rozwiązania: 𝑥 = 1,5, 𝑥 = 2.",
-      "dokładnie trzy rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 2.",
-      "dokładnie cztery rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 1,5, 𝑥 = 2. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "dokładnie jedno rozwiązanie: $x = 2$.",
+      "dokładnie dwa rozwiązania: $x = 1,5$, $x = 2$.",
+      "dokładnie trzy rozwiązania: $x = -6$, $x = 0$, $x = 2$.",
+      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$. 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = -6, 𝑥 = 0, 𝑥 = 1.5, 𝑥 = 2$.",
@@ -15831,19 +15828,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Spośród rysunków A–D wybierz ten, na którym prawidłowo zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających nierówność: |x+1| ≤ 2",
+    "prompt": "Spośród rysunków $A - D$ wybierz ten, na którym prawidłowo zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających nierówność: |$x + 1$| ≤ 2",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Rozwiąż nierówność z wartością bezwzględną: $|x+1| \\leq 2$ jest równoważne $-2 \\leq x+1 \\leq 2$.",
-      "Przekształć nierówność, odejmując 1 od wszystkich jej stron: $-2-1 \\leq x \\leq 2-1$, co daje $-3 \\leq x \\leq 1$.",
-      "Zaznacz otrzymany przedział na osi liczbowej, pamiętając, że ostre nierówności (≤, ≥) oznaczają domknięte kółka na krańcach przedziału."
+      "Przekształć nierówność, odejmując_{1} od wszystkich jej stron: $-2-1 \\leq x \\leq 2-1$, co daje $-3 \\leq x \\leq 1$.",
+      "Zaznacz otrzymany przedział na osi liczbowej, pamiętając, że ostre nierówności $(\\le , \\ge )$ oznaczają domknięte kółka na krańcach przedziału."
     ],
     "examSource": {
       "kind": "matura",
@@ -15862,7 +15859,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby całkowitej nieparzystej n liczba n 2 + 2023 jest podzielna przez 8.",
+    "prompt": "Wykaż, że dla każdej liczby całkowitej nieparzystej n liczba $n^{2} + 2023$ jest podzielna przez 8.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15890,7 +15887,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja kwadratowa 𝑓, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji 𝑓, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja 𝑔 jest określona za pomocą funkcji 𝑓 następująco: 𝑔(𝑥) = 𝑓(𝑥−2). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji 𝑔 przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: 𝒇(𝒙) ≤ 𝟎 ......................... 1 pkt – rozwiązanie poprawne. 0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej.",
+    "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: $f(x) \\le 0$ ......................... 1 $pkt - roz$wiązanie poprawne. 0 $pkt - roz$wiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15919,12 +15916,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja liniowa 𝑓 określona wzorem 𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są liczbami rzeczywistymi. Wykres funkcji 𝑓 przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku obok. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynniki 𝑎 i 𝑏 we wzorze funkcji 𝑓 spełniają warunki",
+    "prompt": "Dana jest funkcja liniowa f określona wzorem $f(x) = ax + b$, gdzie a i b są liczbami rzeczywistymi. Wykres funkcji $f$ przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku obok. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynniki a i b we wzorze funkcji $f$ spełniają warunki",
     "choices": [
-      "𝑎 > 0 i 𝑏 > 0.",
-      "𝑎 > 0 i 𝑏",
-      "𝑎 0.",
-      "𝑎 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "$a > 0$ i $b > 0$.",
+      "$a > 0$ i b",
+      "$a_{0}$.",
+      "$a_{1} pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A) $a > 0$ i $b > 0$.",
@@ -15950,17 +15947,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Firma przeprowadziła badania rynkowe dotyczące wpływu zmiany ceny 𝑃 swojego produktu na liczbę 𝑄 kupujących ten produkt. Z badań wynika, że każdorazowe zwiększenie ceny o 1 jednostkę powoduje spadek liczby kupujących o 3 jednostki. Ponadto przy cenie równej 5 jednostek liczba kupujących jest równa 12 jednostek. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja, która opisuje zależność liczby kupujących ten produkt od jego ceny, ma wzór",
+    "prompt": "Firma przeprowadziła badania rynkowe dotyczące wpływu zmiany ceny P swojego produktu na liczbę Q kupujących ten produkt. Z badań wynika, że każdorazowe zwiększenie ceny o 1 jednostkę powoduje spadek liczby kupujących o 3 jednostki. Ponadto przy cenie równej 5 jednostek liczba kupujących jest równa 12 jednostek. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja, która opisuje zależność liczby kupujących ten produkt od jego ceny, ma wzór",
     "choices": [
-      "𝑄= −0,9𝑃 2 + 6,9",
-      "𝑄= −3𝑃+27",
-      "𝑃= −0,9𝑄 2 + 6,9",
-      "𝑃= −3𝑄+27 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "$Q = -0,9P^{2} + 6,9$",
+      "$Q = -3P + 27$",
+      "$P = -0,9Q^{2} + 6,9$",
+      "$P = -3Q + 27$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $Q = -3P+27$",
     "solutionSteps": [
-      "Zapisujemy zależność liniową funkcji $Q(P)$, gdzie $P$ to cena, a $Q$ to liczba kupujących. Wiemy, że zmiana ceny o 1 powoduje zmianę liczby kupujących o -3, czyli współczynnik kierunkowy wynosi -3. Funkcja ma postać $Q = -3P + b$.",
+      "Zapisujemy zależność liniową funkcji $Q(P)$, gdzie $P$ to cena, a $Q$ to liczba kupujących. Wiemy, że zmiana ceny o 1 powoduje zmianę liczby kupujących $o - 3$, czyli współczynnik kierunkowy wynosi -3. Funkcja ma postać $Q = -3P + b$.",
       "Wyznaczamy wyraz wolny $b$, korzystając z podanego punktu $(P, Q) = (5, 12)$. Podstawiamy wartości do wzoru: $12 = -3 \\cdot 5 + b$, skąd $12 = -15 + b$, czyli $b = 27$.",
       "Zapisujemy ostateczny wzór funkcji, podstawiając wyznaczone $b$: $Q = -3P + 27$."
     ],
@@ -15981,17 +15978,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas 𝑇 półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę – po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa 𝑚 leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: 𝑚 0 – masa przyjętej dawki leku, 𝑇 – czas półtrwania leku, 𝑡 – czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę 𝑚 0 = 100 mg leku L. Czas półtrwania tego leku w organizmie jest równy 𝑇 = 4 doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy 𝑀 leku L w organizmie tego pacjenta od czasu 𝑡, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 𝟎,𝟏 mg.",
+    "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0} - mas$a przyjętej dawki leku, $T - cza$s półtrwania leku, $t - cza$s liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 0,1 mg.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda z 10 poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej z 10 poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
+    "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda $z^{10}$ poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej $z^{10}$ poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
     "solutionSteps": [
       "**Zadanie 13.1.**",
       "Zauważ, że pacjent otrzymuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania wynosi $T = 4$ dni. Oznacza to, że po każdym kolejnym podaniu dawki leku, poprzednia dawka zmniejszy się o połowę.",
       "Pierwsza dawka $m_0 = 100$ mg. Po 4 dniach (przed przyjęciem drugiej dawki) pozostanie $100 \\cdot \\frac{1}{2} = 50$ mg. Po kolejnych 4 dniach (przed przyjęciem trzeciej dawki) pozostanie $50 \\cdot \\frac{1}{2} = 25$ mg z pierwszej dawki. Podobnie z kolejnymi dawkami.",
-      "Wykres powinien odzwierciedlać ten proces: po każdej podanej dawce masa leku skokowo rośnie, a następnie stopniowo maleje, zbliżając się do poziomu z poprzednich okresów. Taki charakter mają wykresy, gdzie funkcja maleje wykładniczo pomiędzy okresami. Wykres A przedstawia stały przyrost masy leku, wykres B – nieregularny, wykres D – malejącą masę leku od początku. Wykres C pokazuje prawidłowe zachowanie."
+      "Wykres powinien odzwierciedlać ten proces: po każdej podanej dawce masa leku skokowo rośnie, a następnie stopniowo maleje, zbliżając się do poziomu z poprzednich okresów. Taki charakter mają wykresy, gdzie funkcja maleje wykładniczo pomiędzy okresami. Wykres A przedstawia stały przyrost masy leku, wykres $B - nie$regularny, wykres $D - mal$ejącą masę leku od początku. Wykres C pokazuje prawidłowe zachowanie."
     ],
     "examSource": {
       "kind": "matura",
@@ -16015,7 +16012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20 000∙(1,12) 2",
       "20 000∙2⋅1,03",
       "20 000∙1,06",
-      "20 000∙(1,03) 2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "20 000∙(1,03) 2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
@@ -16041,7 +16038,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg (𝑎 𝑛 ) określony wzorem 𝑎 𝑛 = −3𝑛 + 5 dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, (−1), (−4) są trzema kolejnymi początkowymi wyrazami ciągu (𝑎 𝑛 ). A) prawda B) fałsz (𝑎 𝑛 ) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16068,7 +16065,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 6, |𝐵𝐶| = 5, |𝐴𝐶| = 10. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta 𝐴𝐵𝐶 jest równy (−0,65). A) prawda B) fałsz Trójkąt 𝐴𝐵𝐶 jest rozwartokątny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16096,12 +16093,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dany jest okrąg o środku 𝑆 = (2,−5 ) i promieniu 𝑟 = 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie tego okręgu ma postać",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg o środku S = $(2, - 5)$ i promieniu $r = 3$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie tego okręgu ma postać",
     "choices": [
-      "(𝑥−2) 2 + (𝑦+5) 2 = 9",
-      "(𝑥+2) 2 + (𝑦−5) 2 = 3",
-      "(𝑥−2) 2 + (𝑦+5) 2 = 3",
-      "(𝑥+2) 2 + (𝑦−3) 2 = 9 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "$(x - 2)$ 2 + $(y + 5) 2 = 9$",
+      "$(x + 2)$ 2 + $(y - 5) 2 = 3$",
+      "$(x - 2)$ 2 + $(y + 5) 2 = 3$",
+      "$(x + 2)$ 2 + $(y - 3) 2 = 9$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(x-2)^2 + (y+5)^2 = 9$.",
@@ -16127,14 +16124,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinki 𝐴𝐷 i 𝐵𝐶 przecinają się w punkcie 𝑂. W trójkątach 𝐴𝐵𝑂 i 𝑂𝐷𝐶 zachodzą związki: |𝐴𝑂| = 5, |𝐵𝑂| = 3, |𝑂𝐶| = 10, |∡𝑂𝐴𝐵| = |∡𝑂𝐶𝐷| (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z18-1.png) Oblicz długość boku 𝑶𝑫 trójkąta 𝑶𝑫𝑪.",
+    "prompt": "Odcinki AD i BC przecinają się w punkcie O. W trójkątach ABO i ODC zachodzą związki: $|AO| = 5$, $|BO| = 3$, $|OC| = 10$, $|\\angle OAB| = |\\angle OCD|$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z18-1.png) Oblicz długość boku OD trójkąta ODC.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "6",
     "solutionSteps": [
-      "Zauważ, że trójkąty $ABO$ i $ODC$ są podobne na mocy cechy podobieństwa kąt-bok-kąt (K-B-K). Mamy wspólny kąt przy wierzchołku $O$ (kąty wierzchołkowe $\\angle AOB = \\angle DOC$), a także dane równości kątów $\\angle OAB = \\angle OCD$.",
+      "Zauważ, że trójkąty $ABO$ i $ODC$ są podobne na mocy cechy podobieństwa kąt-$bok - k$ąt$(K - B - K)$. Mamy wspólny kąt przy wierzchołku $O$ (kąty wierzchołkowe $\\angle AOB = \\angle DOC$), a także dane równości kątów $\\angle OAB = \\angle OCD$.",
       "Z podobieństwa trójkątów wynikają proporcjonalności odpowiednich boków: $\\frac{|AO|}{|OC|} = \\frac{|BO|}{|OD|}$. Podstawiamy dane: $\\frac{5}{10} = \\frac{3}{|OD|}$.",
       "Rozwiązujemy równanie, aby znaleźć długość boku $OD$. Mamy $\\frac{1}{2} = \\frac{3}{|OD|}$, co po przekształceniu daje $|OD| = 2 \\cdot 3 = 6$."
     ],
@@ -16155,7 +16152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dana jest prosta 𝑘 o równaniu 𝑦 = −3𝑥 + 1. Dokończ zdania. Wybierz odpowiedź spośród A–D oraz odpowiedź spośród E–H. Zadanie 19.1. Jedną z prostych równoległych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 3𝑥 + 2 B) 𝑦 = −3𝑥 + 2 C) 𝑦 = 1 / 3 𝑥 + 1 D) 𝑦 = − 1 / 3 𝑥 + 1 Zadanie 19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 1 / 3 𝑥 + 2 B) 𝑦 = − 1 / 3 𝑥 + 2 C) 𝑦 = 3𝑥 + 1 D) 𝑦 = −3𝑥 + 1 2 pkt – poprawne dokończenia dwóch zdań. 1 pkt – poprawne dokończenie jednego zdania. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 $pkt - pop$rawne dokończenia dwóch zdań. 1 $pkt - pop$rawne dokończenie jednego zdania. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16163,9 +16160,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, E",
     "solutionSteps": [
       "Proste równoległe mają takie same współczynniki kierunkowe ($a$). Prosta $k$ ma równanie $y = -3x + 1$, więc jej współczynnik kierunkowy wynosi $-3$. Szukamy prostej, która też ma $a = -3$.",
-      "Spośród podanych opcji A–D, prosta o równaniu $y = -3x + 2$ (opcja B) ma współczynnik kierunkowy równy $-3$.",
+      "Spośród podanych opcji $A - D$, prosta o równaniu $y = -3x + 2$ (opcja B) ma współczynnik kierunkowy równy $-3$.",
       "Proste prostopadłe mają współczynniki kierunkowe spełniające warunek $a_1 \\cdot a_2 = -1$. Dla prostej $k$ ($a_1 = -3$), współczynnik kierunkowy prostej prostopadłej wynosi $a_2 = \\frac{-1}{-3} = \\frac{1}{3}$.",
-      "Spośród podanych opcji E–H, prosta o równaniu $y = \\frac{1}{3}x + 2$ (opcja E) ma współczynnik kierunkowy równy $\\frac{1}{3}$."
+      "Spośród podanych opcji $E - H$, prosta o równaniu $y = \\frac{1}{3}x + 2$ (opcja E) ma współczynnik kierunkowy równy $\\frac{1}{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -16184,12 +16181,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest kwadrat 𝐴𝐵𝐶𝐷. Wierzchołki 𝐴 = (−2,1) i 𝐶 = (4,5) są końcami przekątnej tego kwadratu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej kwadratu 𝐴𝐵𝐶𝐷 jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) dany jest kwadrat ABCD. Wierzchołki A = $(-2,1)$ i $C = (4,5)$ są końcami przekątnej tego kwadratu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej kwadratu ABCD jest równa",
     "choices": [
       "10",
       "2√ 13",
       "2√ 10",
-      "8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"
+      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2\\sqrt{13}$",
@@ -16214,12 +16211,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinek 𝐴𝐵 jest średnicą okręgu o środku w punkcie 𝑂 i promieniu 𝑟 = 8 (zobacz rysunek). Cięciwa 𝐴𝐶 ma długość 8√ 3 . ![Rysunek do zadania](/cke-matura/m23-przykladowa/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta 𝐵𝐴𝐶 jest równa",
+    "prompt": "Odcinek AB jest średnicą okręgu o środku w punkcie O i promieniu $r = 8$ (zobacz rysunek). Cięciwa AC ma długość 8√ 3 . ![Rysunek do zadania](/cke-matura/m23-przykladowa/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta BAC jest równa",
     "choices": [
-      "30°",
-      "45°",
-      "15°",
-      "60° 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi"
+      "$30^{\\circ}$",
+      "$45^{\\circ}$",
+      "$15^{\\circ}$",
+      "$60^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $30^\\circ$.",
@@ -16245,12 +16242,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt 𝛼 jest ostry oraz 4tg𝛼 = 3sin 2 𝛼 + 3cos 2 𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy",
+    "prompt": "Kąt α jest ostry oraz 4tgα = 3 sin 2 $α + 3cos$ 2 α. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
     "choices": [
-      "3 / 4",
-      "4 / 3",
+      "$\\frac{3}{4}$",
+      "$\\frac{4}{3}$",
       "14",
-      "4 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "4 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{3}{4}$",
@@ -16276,7 +16273,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwa trójkąty podobne 𝐴𝐵𝐶 i 𝐾𝐿𝑀 o polach równych – odpowiednio – 𝑃 oraz 2𝑃. Obwód trójkąta 𝐴𝐵𝐶 jest równy 𝑥. Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3. Obwód trójkąta KLM jest równy:",
+    "prompt": "Dane są dwa trójkąty podobne ABC i KLM o polach równych - odpowiednio - P oraz 2P. Obwód trójkąta ABC jest równy x. Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3. Obwód trójkąta KLM jest równy:",
     "choices": [
       "√ 2 ⋅ x",
       "2x ponieważ stosunek obwodów trójkątów podobnych jest równy",
@@ -16307,17 +16304,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty 𝐴 oraz 𝐵 leżą na okręgu o środku 𝑂. Proste 𝑘 i 𝑙 są styczne do tego okręgu w punktach – odpowiednio – 𝐴 i 𝐵. Te proste przecinają się w punkcie 𝑆 i tworzą kąt o mierze 76° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z24-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta 𝑂𝐵𝐴 jest równa",
+    "prompt": "Punkty A oraz B leżą na okręgu o środku O. Proste k i l są styczne do tego okręgu w punktach - odpowiednio - A i B. Te proste przecinają się w punkcie S i tworzą kąt o mierze $76^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z24-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta OBA jest równa",
     "choices": [
-      "52°",
-      "26°",
-      "14°",
-      "38° 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "$52^{\\circ}$",
+      "$26^{\\circ}$",
+      "$14^{\\circ}$",
+      "$38^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 38°",
+    "explanation": "D, czyli $38^{\\circ}$",
     "solutionSteps": [
-      "Zauważ, że odcinki $OA$ i $OB$ są promieniami okręgu, a proste $kA$ i $lB$ są do niego styczne w punktach $A$ i $B$. Promień poprowadzony do punktu styczności jest prostopadły do prostej stycznej, więc kąty $OAS$ i $OBS$ są proste ($90^\\circ$).",
+      "Zauważ, że odcinki $OA$ i $OB$ są promieniami okręgu, a proste $kA$ i $lB$ są do niego styczne w punktach $A$ i $B$. Promień poprowadzony do punktu styczności jest prostopadły do prostej stycznej, więc_{k}ąty $OAS$ i $OBS$ są proste ($90^\\circ$).",
       "Czworokąt $OASB$ ma sumę kątów równą $360^\\circ$. Znamy kąty przy $S$ ($76^\\circ$) i przy $A$ i $B$ ($90^\\circ$). Stąd kąt $AOB$ wynosi $360^\\circ - 90^\\circ - 90^\\circ - 76^\\circ = 104^\\circ$.",
       "Trójkąt $OAB$ jest równoramienny, ponieważ $OA$ i $OB$ są promieniami. Suma kątów w trójkącie to $180^\\circ$. Kąt $OBA$ jest jednym z kątów przy podstawie, więc aby go obliczyć, odejmujemy kąt $AOB$ od $180^\\circ$ i dzielimy przez 2: $(180^\\circ - 104^\\circ) / 2 = 76^\\circ / 2 = 38^\\circ$."
     ],
@@ -16338,19 +16335,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano w ten sposób prostokąt 𝐴𝐵𝐶𝐷, w którym bok 𝐵𝐶 odpowiada krawędzi rozcięcia (wysokości graniastosłupa). Przekątna 𝐴𝐶 tego prostokąta ma długość 16 i tworzy z bokiem 𝐵𝐶 kąt o mierze 30° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z25-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość krawędzi podstawy tego graniastosłupa jest równa",
+    "prompt": "Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano w ten sposób prostokąt ABCD, w którym bok BC odpowiada krawędzi rozcięcia (wysokości graniastosłupa). Przekątna AC tego prostokąta ma długość 16 i tworzy z bokiem BC kąt o mierze $30^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z25-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość krawędzi podstawy tego graniastosłupa jest równa",
     "choices": [
       "8",
       "8√ 3",
       "2√ 3",
-      "2 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 2",
     "solutionSteps": [
-      "W trójkącie prostokątnym 𝐴𝐵𝐶 (rys. obok przekątnej prostokąta 𝐴𝐶) odcinek 𝐴𝐶 to przeciwprostokątna o długości 16. Bok 𝐵𝐶 to wysokość graniastosłupa ($h$), a kąt między 𝐴𝐶 i 𝐵𝐶 ma miarę 30°. Używamy funkcji trygonometrycznych do znalezienia długości boku 𝐴𝐵.",
-      "Bok 𝐴𝐵 prostokąta 𝐴𝐵𝐶𝐷 jest równy obwodowi podstawy graniastosłupa, czyli $4a$, gdzie $a$ to długość krawędzi podstawy. Obliczamy długość boku 𝐴𝐵, korzystając z $\\sin(30^\\circ) = \\frac{AB}{AC}$.",
-      "Po obliczeniu długości boku 𝐴𝐵, dzielimy ją przez 4, aby otrzymać długość krawędzi podstawy $a$.\n\n$\\sin(30^\\circ) = \\frac{1}{2}$, więc $AB = AC \\cdot \\sin(30^\\circ) = 16 \\cdot \\frac{1}{2} = 8$.\n$AB = 4a = 8$.\n$a = \\frac{8}{4} = 2$."
+      "W trójkącie prostokątnym ABC (rys. obok przekątnej prostokąta AC) odcinek AC to przeciwprostokątna o długości 16. Bok BC to wysokość graniastosłupa ($h$), $a_{k}$ąt między AC i BC ma miarę $30^{\\circ}$. Używamy funkcji trygonometrycznych do znalezienia długości boku AB.",
+      "Bok AB prostokąta ABCD jest równy obwodowi podstawy graniastosłupa, czyli $4a$, gdzie $a$ to długość krawędzi podstawy. Obliczamy długość boku AB, korzystając z $\\sin(30^\\circ) = \\frac{AB}{AC}$.",
+      "Po obliczeniu długości boku AB, dzielimy ją przez 4, aby otrzymać długość krawędzi podstawy $a$.\n\n$\\sin(30^\\circ) = \\frac{1}{2}$, więc $AB = AC \\cdot \\sin(30^\\circ) = 16 \\cdot \\frac{1}{2} = 8$.\n$AB = 4a = 8$.\n$a = \\frac{8}{4} = 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -16369,12 +16366,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy trójkątny 𝐴𝐵𝐶𝑆 o podstawie 𝐴𝐵𝐶. Punkty 𝐷, 𝐸 i 𝐹 są środkami – odpowiednio – krawędzi bocznych 𝐴𝑆, 𝐵𝑆 i 𝐶𝑆 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Stosunek objętości ostrosłupa 𝐷𝐸𝐹𝑆 do objętości ostrosłupa 𝐴𝐵𝐶𝑆 jest równy",
+    "prompt": "Dany jest ostrosłup prawidłowy trójkątny ABCS o podstawie ABC. Punkty D, E i F są środkami - odpowiednio - krawędzi bocznych AS, BS i CS (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Stosunek objętości ostrosłupa DEFS do objętości ostrosłupa ABCS jest równy",
     "choices": [
       "3∶4",
       "1∶4",
       "1∶8",
-      "3∶8 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "3∶8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1∶8$",
@@ -16400,12 +16397,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy trójkątny 𝐴𝐵𝐶𝐷𝐸𝐹 (zobacz rysunek obok). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-1.png) Na którym z rysunków prawidłowo narysowano, oznaczono i podpisano kąt 𝜶 pomiędzy ścianą boczną 𝑨𝑪𝑭𝑫 i przekątną 𝑨𝑬 ściany bocznej 𝑨𝑩𝑬𝑫 tego graniastosłupa? Wybierz właściwą odpowiedź spośród podanych.",
+    "prompt": "Dany jest graniastosłup prawidłowy trójkątny ABCDEF (zobacz rysunek obok). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-1.png) Na którym z rysunków prawidłowo narysowano, oznaczono i podpisano kąt α pomiędzy ścianą boczną ACFD i przekątną AE ściany bocznej ABED tego graniastosłupa? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C",
@@ -16460,7 +16457,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważamy wszystkie równoległoboki o obwodzie równym 200 i kącie ostrym o mierze 30°. Podaj wzór i dziedzinę funkcji opisującej zależność pola takiego równoległoboku od długości 𝒙 boku równoległoboku. Oblicz wymiary tego z rozważanych równoległoboków, który ma największe pole, i oblicz to największe pole.",
+    "prompt": "Rozważamy wszystkie równoległoboki o obwodzie równym 200 i kącie ostrym o mierze $30^{\\circ}$. Podaj wzór i dziedzinę funkcji opisującej zależność pola takiego równoległoboku od długości $x$ boku równoległoboku. Oblicz wymiary tego z rozważanych równoległoboków, który ma największe pole, i oblicz to największe pole.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16468,7 +16465,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "Wzór funkcji pola: $P(x) = 50x - \\frac{1}{2}x^2$, dziedzina: $x \\in (0, 100)$. Wymiary równoległoboku o największym polu to $50 \\times 50$ (czyli romb), a największe pole wynosi $1250$.",
     "solutionSteps": [
       "Oznaczmy boki równoległoboku jako $x$ i $y$. Obwód wynosi $2x + 2y = 200$, więc $x + y = 100$, co daje $y = 100 - x$. Dziedzina $x$ to $(0, 100)$, ponieważ długości boków muszą być dodatnie, a suma dwóch boków $x$ i $y$ wynosi 100.",
-      "Pole równoległoboku wynosi $P = x \\cdot y \\cdot \\sin(\\alpha)$, gdzie $\\alpha$ to kąt między bokami. Podany kąt ostry to 30°, więc $\\sin(30^\\circ) = \\frac{1}{2}$. Podstawiając $y = 100 - x$, otrzymujemy wzór funkcji pola: $P(x) = x(100 - x) \\cdot \\frac{1}{2} = 50x - \\frac{1}{2}x^2$.",
+      "Pole równoległoboku wynosi $P = x \\cdot y \\cdot \\sin(\\alpha)$, gdzie $\\alpha$ to kąt między bokami. Podany kąt ostry to $30^{\\circ}$, więc $\\sin(30^\\circ) = \\frac{1}{2}$. Podstawiając $y = 100 - x$, otrzymujemy wzór funkcji pola: $P(x) = x(100 - x) \\cdot \\frac{1}{2} = 50x - \\frac{1}{2}x^2$.",
       "Aby znaleźć maksymalne pole, obliczamy wierzchołek paraboli $P(x) = -\\frac{1}{2}x^2 + 50x$. Współrzędna $x$ wierzchołka to $x_w = -\\frac{b}{2a} = -\\frac{50}{2 \\cdot (-\\frac{1}{2})} = 50$. Wtedy $y = 100 - x_w = 100 - 50 = 50$. Maksymalne pole wynosi $P(50) = 50 \\cdot 50 - \\frac{1}{2}(50)^2 = 2500 - 1250 = 1250$."
     ],
     "examSource": {
@@ -16488,16 +16485,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "F, P\n\n**Zadanie 30.2**\n\n**Krok 1.** Dominanta to wartość najczęściej występująca, czyli ta, której odpowiada najwyższy słupek na wykresie. Najwyższy słupek odpowiada czasowi 2,5 godziny.\n**Krok 2.** Odczytujemy z wykresu, że najwyższą liczbę uczniów (25) przypisano do czasu 2,5 godziny.\n\n**Odpowiedź:** B, czyli 2,50 godziny.",
+    "explanation": "F, P\n\n**Zadanie 30.2**\n\n**Krok 1.** Dominanta to wartość najczęściej występująca, czyli ta, której odpowiada najwyższy słupek na wykresie. Najwyższy słupek odpowiada czasowi 2,5 godziny.\n**Krok 2.** Odczytujemy z wykresu, że najwyższą liczbę uczniów(25) przypisano do czasu 2,5 godziny.\n\n**Odpowiedź:** B, czyli 2,50 godziny.",
     "solutionSteps": [
       "**Zadanie 30.1**",
-      "Aby obliczyć medianę, znajdujemy środek danych. W grupie 100 uczniów jest to pozycja 50. i 51. uczniów. Zsumuj liczby uczniów dla czasu poniżej 2 godzin (50) oraz dla 2 godzin (100). Mediana wypada pomiędzy 2 a 2,5 godziny.",
-      "Stwierdzenie 1: Mediana jest równa 2,25 godziny. Ponieważ mediana mieści się pomiędzy 2 a 2,5 godziną, a dane są pogrupowane, prawdziwa wartość jest bliżej 2,5 niż 2,25. Stwierdzenie jest fałszywe.",
+      "Aby obliczyć medianę, znajdujemy środek danych. W grupie 100 uczniów jest to pozycja 50. i 51. uczniów. Zsumuj liczby uczniów dla czasu poniżej 2 godzin (50) oraz dla 2 godzin (100). Mediana wypada pomiędzy 2a_{2},5 godziny.",
+      "Stwierdzenie 1: Mediana jest równa 2,25 godziny. Ponieważ mediana mieści się pomiędzy 2a_{2},5 godziną, a dane są pogrupowane, prawdziwa wartość jest bliżej 2,5 niż 2,25. Stwierdzenie jest fałszywe.",
       "Stwierdzenie 2: Połowa uczniów korzysta krócej niż 2,5 godziny. Suma uczniów korzystających krócej niż 2,5 godziny wynosi 100 (wszyscy uczniowie), co oznacza, że połowa korzysta krócej. Stwierdzenie jest prawdziwe."
     ],
     "examSource": {
@@ -16517,14 +16514,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność |𝑥 − 1|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
+    "prompt": "Dana jest nierówność |$x - 1$|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C).",
+    "explanation": "Krok 1: |$x - 1$| ≥ 3 oznacza $x - 1 \\ge 3$ lub $x - 1 \\le - 3$.\nKrok 2: $x \\ge 4$ lub $x \\le - 2$.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz $od - 2$ w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem $(-2, 4)$ - zgodnie z kluczem CKE (zazwyczaj opcja C).",
     "solutionSteps": [
-      "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C)."
+      "Krok 1: |$x - 1$| ≥ 3 oznacza $x - 1 \\ge 3$ lub $x - 1 \\le - 3$.\nKrok 2: $x \\ge 4$ lub $x \\le - 2$.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz $od - 2$ w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem $(-2, 4)$ - zgodnie z kluczem CKE (zazwyczaj opcja C)."
     ],
     "examSource": {
       "kind": "matura",
@@ -16543,7 +16540,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ( 1 / 16 ) 8 ⋅ 8 16 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ($\\frac{1}{16}$) 8 ⋅ 8 16 jest równa",
     "choices": [
       "2 24",
       "2 16",
@@ -16553,7 +16550,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli $2^{-16}$ (co jest równe $2^{16}$, gdyż zgodnie z kontekstem arkusza maturalnego (maj 2024, zad. 2) błędnie zapisano $2^{24}$ zamiast $2^{-16}$ i $\\frac{1}{16} \\cdot 8$ zamiast $8^{16}$. Poprawiona wersja zadania powinna być taka: $8^{16} \\cdot (\\frac{1}{16})^8$, co daje $2^{48} \\cdot 2^{-32} = 2^{16}$).",
     "solutionSteps": [
-      "Zamień 1/16 na potęgę o podstawie 2. Ponieważ $16 = 2^4$, to $\\frac{1}{16} = \\frac{1}{2^4} = 2^{-4}$.",
+      "Zamień $\\frac{1}{16}$ na potęgę o podstawie 2. Ponieważ $16 = 2^4$, to $\\frac{1}{16} = \\frac{1}{2^4} = 2^{-4}$.",
       "Podstaw obliczoną potęgę do wyrażenia i zastosuj wzór na mnożenie potęg o tej samej podstawie: $a^m \\cdot a^n = a^{m+n}$. Mamy $(2^{-4})^8 \\cdot 2^{16} = 2^{-4 \\cdot 8} \\cdot 2^{16} = 2^{-32} \\cdot 2^{16}$.",
       "Połącz potęgi: $2^{-32} \\cdot 2^{16} = 2^{-32+16} = 2^{-16}$."
     ],
@@ -16574,14 +16571,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba 𝒏 𝟐 + (𝒏 + 𝟏) 𝟐 + (𝒏 + 𝟐) 𝟐 przy dzieleniu przez 𝟑 daje resztę 𝟐.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $n^{2}$ + $(n + 1)$ 2 + $(n + 2)$ 2 przy dzieleniu przez 3 daje resztę 2.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED.",
+    "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1 - sum$a reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$.",
     "solutionSteps": [
-      "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED."
+      "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1 - sum$a reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$."
     ],
     "examSource": {
       "kind": "matura",
@@ -16605,9 +16602,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: log√3(9) = log(9) / log(√3).\nKrok 2: log(9) = 2, bo 3² = 9 (przy podstawie 3).\nKrok 3: log(√3) = 1/2, bo √3 = 3^(1/2).\nKrok 4: Wynik = 2 : (1/2) = 4.\n\nOdpowiedź: C) 4",
+    "explanation": "Krok 1: log√$3(9) = \\log(9) / \\log(\\sqrt3)$.\nKrok 2: $\\log(9) = 2$, bo $32 = 9$ (przy podstawie 3).\nKrok 3: $\\log(\\sqrt3) = \\frac{1}{2}$, bo √$3 = 3$^($\\frac{1}{2}$).\nKrok 4: Wynik = 2 : $(\\frac{1}{2}) = 4$.\n\nOdpowiedź: C) 4",
     "solutionSteps": [
-      "Krok 1: log√3(9) = log(9) / log(√3).\nKrok 2: log(9) = 2, bo 3² = 9 (przy podstawie 3).\nKrok 3: log(√3) = 1/2, bo √3 = 3^(1/2).\nKrok 4: Wynik = 2 : (1/2) = 4.\n\nOdpowiedź: C) 4"
+      "Krok 1: log√$3(9) = \\log(9) / \\log(\\sqrt3)$.\nKrok 2: $\\log(9) = 2$, bo $32 = 9$ (przy podstawie 3).\nKrok 3: $\\log(\\sqrt3) = \\frac{1}{2}$, bo √$3 = 3$^($\\frac{1}{2}$).\nKrok 4: Wynik = 2 : $(\\frac{1}{2}) = 4$.\n\nOdpowiedź: C) 4"
     ],
     "examSource": {
       "kind": "matura",
@@ -16626,12 +16623,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑎 i dla każdej liczby rzeczywistej 𝑏 wartość wyrażenia (2𝑎 + 𝑏) 2 − (2𝑎 − 𝑏) 2 jest równa wartości wyrażenia",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a i dla każdej liczby rzeczywistej b wartość wyrażenia $(2a + b)$ 2 - $(2a - b)$ 2 jest równa wartości wyrażenia",
     "choices": [
-      "8𝑎 2",
-      "8𝑎𝑏",
-      "−8𝑎𝑏",
-      "2𝑏 2"
+      "8a^{2}",
+      "8ab",
+      "-8ab",
+      "2b^{2}"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $8ab$",
@@ -16657,14 +16654,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności 1 − 3 / 2 𝑥 2 / 3 − 𝑥 jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności $1 - \\frac{3}{2} x^{2} / 3 - x$ jest przedział\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 − (3/2)x + x < 2/3.\nKrok 2: 1 − (1/2)x < 2/3 → −(1/2)x < −1/3 → x > 2/3 (mnożymy przez −2).\n\nOdpowiedź: D) (2/3, +∞)",
+    "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: $1 - (\\frac{3}{2}) x + x < \\frac{2}{3}$.\nKrok 2: $1 - (\\frac{1}{2}) x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$",
     "solutionSteps": [
-      "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 − (3/2)x + x < 2/3.\nKrok 2: 1 − (1/2)x < 2/3 → −(1/2)x < −1/3 → x > 2/3 (mnożymy przez −2).\n\nOdpowiedź: D) (2/3, +∞)"
+      "Krok 1: Przenosimy x na lewo, liczby na prawo: $1 - (\\frac{3}{2}) x + x < \\frac{2}{3}$.\nKrok 2: $1 - (\\frac{1}{2}) x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$"
     ],
     "examSource": {
       "kind": "matura",
@@ -16683,14 +16680,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 𝑥+1 / (𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych\n\nRozwiąż zadanie.",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie $x + 1$ / $(x + 2)(x - 3)$ = 0 w zbiorze liczb rzeczywistych\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1",
+    "explanation": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → $x = -1$.\nKrok 2: Sprawdzamy: $x = -1$ daje 0, mianownik $(-1)(-4)$ ≠ 0.\nKrok 3: $x = -2$ i $x = 3$ zerują mianownik - odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: $x = -1$",
     "solutionSteps": [
-      "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1"
+      "Krok 1: Licznik musi być 0, mianownik ≠ 0 → $x = -1$.\nKrok 2: Sprawdzamy: $x = -1$ daje 0, mianownik $(-1)(-4)$ ≠ 0.\nKrok 3: $x = -2$ i $x = 3$ zerują mianownik - odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: $x = -1$"
     ],
     "examSource": {
       "kind": "matura",
@@ -16709,14 +16706,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 6𝑥 2 + 9𝑥. Oceń prawdziwość poniższych stwierdzeń. Wielomian 𝑊 jest iloczynem wielomianów 𝐹(𝑥) = 3𝑥 i 𝐺(𝑥) = 𝑥 2 + 2𝑥 + 3. A) prawda B) fałsz Liczba (−1) jest rozwiązaniem równania 𝑊(𝑥) = 0. A) prawda B) fałsz",
+    "prompt": "Dany jest wielomian $W(x) = 3x^{3} + 6x^{2} + 9x$. Oceń prawdziwość poniższych stwierdzeń. Wielomian W jest iloczynem wielomianów $F(x) = 3$ x i $G(x) = x^{2} + 2x + 3$. A) prawda B) fałsz Liczba $(-1)$ jest rozwiązaniem równania $W(x) = 0$. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
+    "explanation": "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ $0 - dru$gie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
     "solutionSteps": [
-      "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
+      "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ $0 - dru$gie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
     ],
     "examSource": {
       "kind": "matura",
@@ -16735,14 +16732,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie 𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟑𝒙 + 𝟔 = 𝟎 Zapisz obliczenia.",
+    "prompt": "Rozwiąż równanie $x^{3} - 2x^{2} - 3x + 6 = 0$ Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Grupujemy: x²(x−2) − 3(x−2) = (x−2)(x²−3).\nKrok 2: x²−3 = (x−√3)(x+√3).\nKrok 3: Rozwiązania: x = 2, x = √3, x = −√3.\n\nOdpowiedź: x ∈ {2, √3, −√3}",
+    "explanation": "Krok 1: Grupujemy: x2$(x - 2)$ -3$(x - 2)$ = $(x - 2)(x2 - 3)$.\nKrok 2: x2-3 = $(x - \\sqrt3)(x + \\sqrt3)$.\nKrok 3: Rozwiązania: $x = 2$, x = √3, x = -√3.\n\nOdpowiedź: x ∈ {2, √3, -√3}",
     "solutionSteps": [
-      "Krok 1: Grupujemy: x²(x−2) − 3(x−2) = (x−2)(x²−3).\nKrok 2: x²−3 = (x−√3)(x+√3).\nKrok 3: Rozwiązania: x = 2, x = √3, x = −√3.\n\nOdpowiedź: x ∈ {2, √3, −√3}"
+      "Krok 1: Grupujemy: x2$(x - 2)$ -3$(x - 2)$ = $(x - 2)(x2 - 3)$.\nKrok 2: x2-3 = $(x - \\sqrt3)(x + \\sqrt3)$.\nKrok 3: Rozwiązania: $x = 2$, x = √3, x = -√3.\n\nOdpowiedź: x ∈ {2, √3, -√3}"
     ],
     "examSource": {
       "kind": "matura",
@@ -16761,14 +16758,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech 𝑥 oraz 𝑦 oznaczają liczby drzew posadzonych – odpowiednio – w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby 𝑥 drzew posadzonych w pierwszym sadzie oraz liczby 𝑦 drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
+    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła_{60}% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu).",
+    "explanation": "Krok 1: $x + y = 1960$, po roku: 0,95x i 0,9y.\nKrok 2: $0,9y = 0,6 \\cdot 0,95x$ → $y = 0,63x$.\nKrok 3: $x + 0,63x = 1960$ → $x = 1200$, $y = 760$.\n\nOdpowiedź: układ z $x + y = 1960$ i zależnością $0,9y = 0,6\\cdot0,95x(zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu)$.",
     "solutionSteps": [
-      "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu)."
+      "Krok 1: $x + y = 1960$, po roku: 0,95x i 0,9y.\nKrok 2: $0,9y = 0,6 \\cdot 0,95x$ → $y = 0,63x$.\nKrok 3: $x + 0,63x = 1960$ → $x = 1200$, $y = 760$.\n\nOdpowiedź: układ z $x + y = 1960$ i zależnością $0,9y = 0,6\\cdot0,95x(zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -16787,7 +16784,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (𝑥,𝑦), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań A–D. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nRozwiąż zadanie.",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x,y), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań $A - D$. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16813,12 +16810,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (−2𝑘 + 3)𝑥 + 𝑘 − 1, gdzie 𝑘 ∈ ℝ. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca dla każdej liczby 𝑘 należącej do przedziału",
+    "prompt": "Funkcja liniowa f jest określona wzorem $f(x)$ = $(-2k + 3) x + k - 1$, gdzie k ∈ R. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ jest malejąca dla każdej liczby k należącej do przedziału",
     "choices": [
-      "(−∞,1)",
-      "(−∞,− 3 / 2 )",
-      "(1,+∞)",
-      "( 3 / 2 ,+∞)"
+      "$(-\\infty ,1)$",
+      "$(-\\infty , - \\frac{3}{2})$",
+      "$(1, + \\infty )$",
+      "$(\\frac{3}{2} , + \\infty )$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{2},+\\infty)$",
@@ -16844,12 +16841,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcje liniowe 𝑓 oraz 𝑔, określone wzorami 𝑓(𝑥) = 3𝑥 + 6 oraz 𝑔(𝑥) = 𝑎𝑥 + 7, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik 𝑎 we wzorze funkcji 𝑔 jest równy",
+    "prompt": "Funkcje liniowe f oraz g, określone wzorami $f(x) = 3x + 6$ oraz $g(x) = ax + 7$, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik $a$ we wzorze funkcji $g$ jest równy",
     "choices": [
-      "(− 7 / 2 )",
-      "(− 2 / 7 )",
-      "2 / 7",
-      "7 / 2"
+      "$(-\\frac{7}{2})$",
+      "$(-\\frac{2}{7})$",
+      "$\\frac{2}{7}$",
+      "$\\frac{7}{2}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{7}{2}$.",
@@ -16876,14 +16873,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej 𝑓 (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osiami układu współrzędnych mają obie współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m24-maj/z14-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osiami układu współrzędnych mają obie współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m24-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
+    "explanation": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie $f(x) \\ge 0$.\nKrok 2 (14.2): Dopasowujemy wzór $f(x) = a(x - p) 2 + q$ do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): $g(x) = f(x + 3)$, $h(x) = f(-x)$ - przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
     "solutionSteps": [
-      "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
+      "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie $f(x) \\ge 0$.\nKrok 2 (14.2): Dopasowujemy wzór $f(x) = a(x - p) 2 + q$ do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): $g(x) = f(x + 3)$, $h(x) = f(-x)$ - przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
     ],
     "examSource": {
       "kind": "matura",
@@ -16902,14 +16899,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = (−1) 𝑛 ⋅ (𝑛 − 5) dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Pierwszy wyraz ciągu (𝑎 𝑛 ) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu (𝑎 𝑛 ) są dodatnie. A) prawda B) fałsz",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-1)$ n ⋅ $(n - 5)$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Pierwszy wyraz ciągu ($a_{n}$) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu ($a_{n}$) są dodatnie. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
+    "explanation": "Krok 1: a1 = -4, a3 = $-2 - pie$rwsze nie jest $2\\times wi$ększe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
     "solutionSteps": [
-      "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
+      "Krok 1: a1 = -4, a3 = $-2 - pie$rwsze nie jest $2\\times wi$ększe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
     ],
     "examSource": {
       "kind": "matura",
@@ -16928,14 +16925,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg (12, 6 ,2𝑚 − 1) jest geometryczny. Dokończ zdanie. Wybierz poprawne odpowiedzi. Ten ciąg jest\n\nRozwiąż zadanie.",
+    "prompt": "Trzywyrazowy ciąg $(12, 6 ,2m - 1)$ jest geometryczny. Dokończ zdanie. Wybierz poprawne odpowiedzi. Ten ciąg jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Iloraz q = 6/12 = 1/2.\nKrok 2: Trzeci wyraz: 12·(1/2)² = 3 = 2m−1 → 2m = 4 → m = 2.\nKrok 3: q < 1 więc ciąg malejący.\n\nOdpowiedź: malejący, m = 2 (opcje B i 2)",
+    "explanation": "Krok 1: Iloraz $q = \\frac{6}{12} = \\frac{1}{2}$.\nKrok 2: Trzeci wyraz: $12\\cdot(\\frac{1}{2}) 2 = 3 = 2m - 1$ → $2m = 4$ → $m = 2$.\nKrok 3: $q < 1$ więc ciąg malejący.\n\nOdpowiedź: malejący, $m = 2$ (opcje B i 2)",
     "solutionSteps": [
-      "Krok 1: Iloraz q = 6/12 = 1/2.\nKrok 2: Trzeci wyraz: 12·(1/2)² = 3 = 2m−1 → 2m = 4 → m = 2.\nKrok 3: q < 1 więc ciąg malejący.\n\nOdpowiedź: malejący, m = 2 (opcje B i 2)"
+      "Krok 1: Iloraz $q = \\frac{6}{12} = \\frac{1}{2}$.\nKrok 2: Trzeci wyraz: $12\\cdot(\\frac{1}{2}) 2 = 3 = 2m - 1$ → $2m = 4$ → $m = 2$.\nKrok 3: $q < 1$ więc ciąg malejący.\n\nOdpowiedź: malejący, $m = 2$ (opcje B i 2)"
     ],
     "examSource": {
       "kind": "matura",
@@ -16954,14 +16951,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg arytmetyczny (𝑎 𝑛 ) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. Trzeci wyraz tego ciągu jest równy (−1), a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa (−165). Oblicz różnicę tego ciągu. Zapisz obliczenia.",
+    "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$. Trzeci wyraz tego ciągu jest równy $(-1)$, a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa $(-165)$. Oblicz różnicę tego ciągu. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-2$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na n-ty wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i sumę $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. Mamy dane $a_3 = a_1 + 2r = -1$ oraz $S_{15} = \\frac{2a_1 + 14r}{2} \\cdot 15 = (a_1 + 7r) \\cdot 15 = -165$.",
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i sumę $S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$. Mamy dane $a_3 = a_1 + 2r = -1$ oraz $S_{15} = \\frac{2a_1 + 14r}{2} \\cdot 15 = (a_1 + 7r) \\cdot 15 = -165$.",
       "Z równania na sumę wyznacz $a_1 + 7r = \\frac{-165}{15} = -11$. Teraz masz układ dwóch równań: $a_1 + 2r = -1$ i $a_1 + 7r = -11$.",
       "Odejmij pierwsze równanie od drugiego, aby otrzymać $(a_1 + 7r) - (a_1 + 2r) = -11 - (-1)$, co daje $5r = -10$. Podziel obie strony przez 5, aby uzyskać $r = -2$."
     ],
@@ -16982,14 +16979,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) zaznaczono kąt o mierze 𝛼 taki, że tg 𝛼 = −3 oraz 90° ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F. Prawdziwe są zależności: .............. oraz .............. . A) sin𝛼 B) sin𝛼 ⋅ cos𝛼 C) sin𝛼 ⋅ cos𝛼 > 0 D) cos𝛼 > 0 E) sin𝛼 = − 1 / 3 cos𝛼 F) sin𝛼 = −3cos𝛼",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) zaznaczono kąt o mierze α taki, że tg $α = -3$ oraz $90^{\\circ}$ ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$. Prawdziwe są zależności: .............. oraz .............. . A) sinα B) sinα ⋅ cosα C) sinα ⋅ cosα > 0D) cosα > 0E) sinα = -$\\frac{1}{3}$ cosα F) sinα = -3 cosα",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: α w II ćwiartce → sin α > 0, cos α < 0.\nKrok 2: sin α · cos α < 0.\nKrok 3: Z tg α = −3 wynika sin α = −3 cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)",
+    "explanation": "Krok 1: α w II ćwiartce → sin $α > 0$, cos $α < 0$.\nKrok 2: sin $α \\cdot cos α < 0$.\nKrok 3: Z tg $α = -3$ wynika sin $α = -3$ cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)",
     "solutionSteps": [
-      "Krok 1: α w II ćwiartce → sin α > 0, cos α < 0.\nKrok 2: sin α · cos α < 0.\nKrok 3: Z tg α = −3 wynika sin α = −3 cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)"
+      "Krok 1: α w II ćwiartce → sin $α > 0$, cos $α < 0$.\nKrok 2: sin $α \\cdot cos α < 0$.\nKrok 3: Z tg $α = -3$ wynika sin $α = -3$ cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)"
     ],
     "examSource": {
       "kind": "matura",
@@ -17008,14 +17005,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba sin 3 20° + cos 2 20°⋅sin20° jest równa\n\nRozwiąż zadanie.",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba sin 3 $20^{\\circ}$ + $\\cos^{2} 20^{\\circ}$⋅$\\sin 20^{\\circ}$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: sin 320° = −sin 40° = −cos 50°… upraszczamy do sin 20° po tożsamościach.\nKrok 2: cos 220° = −cos 40°, łącznie wychodzi sin 20°.\n\nOdpowiedź: B) sin 20°",
+    "explanation": "Krok 1: $\\sin 320^{\\circ}$ = -$\\sin 40^{\\circ}$ = -$\\cos 50^{\\circ}$... upraszczamy do $\\sin 20^{\\circ}$ po tożsamościach.\nKrok 2: $\\cos 220^{\\circ}$ = -$\\cos 40^{\\circ}$, łącznie wychodzi $\\sin 20^{\\circ}$.\n\nOdpowiedź: B) $\\sin 20^{\\circ}$",
     "solutionSteps": [
-      "Krok 1: sin 320° = −sin 40° = −cos 50°… upraszczamy do sin 20° po tożsamościach.\nKrok 2: cos 220° = −cos 40°, łącznie wychodzi sin 20°.\n\nOdpowiedź: B) sin 20°"
+      "Krok 1: $\\sin 320^{\\circ}$ = -$\\sin 40^{\\circ}$ = -$\\cos 50^{\\circ}$... upraszczamy do $\\sin 20^{\\circ}$ po tożsamościach.\nKrok 2: $\\cos 220^{\\circ}$ = -$\\cos 40^{\\circ}$, łącznie wychodzi $\\sin 20^{\\circ}$.\n\nOdpowiedź: B) $\\sin 20^{\\circ}$"
     ],
     "examSource": {
       "kind": "matura",
@@ -17034,12 +17031,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐾𝐿𝑀, w którym |𝐾𝑀|=𝑎, |𝐿𝑀|=𝑏 oraz 𝑎≠𝑏. Dwusieczna kąta 𝐾𝑀𝐿 przecina bok 𝐾𝐿 w punkcie 𝑁 takim, że |𝐾𝑁|=𝑐, |𝑁𝐿|=𝑑 oraz |𝑀𝑁|=𝑒 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W trójkącie 𝐾𝐿𝑀 prawdziwa jest równość",
+    "prompt": "Dany jest trójkąt KLM, w którym $|KM| = a$, $|LM| = b$ oraz a≠b. Dwusieczna kąta KML przecina bok KL w punkcie N takim, że $|KN| = c$, $|NL| = d$ oraz $|MN| = e$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W trójkącie KLM prawdziwa jest równość",
     "choices": [
-      "𝑎 ⋅ 𝑏 = 𝑐 ⋅ 𝑑",
-      "𝑎 ⋅ 𝑑 = 𝑏 ⋅ 𝑐",
-      "𝑎 ⋅ 𝑐 = 𝑏 ⋅ 𝑑",
-      "𝑎 ⋅ 𝑏 = 𝑒 ⋅ 𝑒"
+      "a ⋅ $b = c$ ⋅ d",
+      "a ⋅ $d = b$ ⋅ c",
+      "a ⋅ $c = b$ ⋅ d",
+      "a ⋅ $b = e$ ⋅ e"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a \\cdot d = b \\cdot c$",
@@ -17065,7 +17062,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze 120°. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe",
+    "prompt": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze $120^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe",
     "choices": [
       "12",
       "12√ 3",
@@ -17096,19 +17093,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie 𝐴𝐵𝐶, wpisanym w okrąg o środku w punkcie 𝑆, kąt 𝐴𝐶𝐵 ma miarę 42° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐵𝐴𝑆 jest równa",
+    "prompt": "W trójkącie ABC, wpisanym w okrąg o środku w punkcie S, kąt ACB ma miarę $42^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m24-maj/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego BAS jest równa",
     "choices": [
-      "42°",
-      "45°",
-      "48°",
-      "69°"
+      "$42^{\\circ}$",
+      "$45^{\\circ}$",
+      "$48^{\\circ}$",
+      "$69^{\\circ}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48^\\circ$",
     "solutionSteps": [
-      "Kąt środkowy 𝐵𝑆𝐴 oparty na tym samym łuku co kąt wpisany 𝐵𝐶𝐴 jest dwa razy większy. Zatem miara kąta 𝐵𝑆𝐴 wynosi $2 \\cdot 42^\\circ = 84^\\circ$.",
-      "Trójkąt 𝐴𝑆𝐵 jest równoramienny, ponieważ odcinki 𝑆𝐴 i 𝑆𝐵 są promieniami okręgu. Kąty przy podstawie tego trójkąta (𝐵𝐴𝑆 i 𝐴𝐵𝑆) są sobie równe.",
-      "Suma kątów w trójkącie 𝐴𝑆𝐵 wynosi 180°. Miara kąta ostrego 𝐵𝐴𝑆 jest równa $\\frac{180^\\circ - 84^\\circ}{2} = \\frac{96^\\circ}{2} = 48^\\circ$."
+      "Kąt środkowy BSA oparty na tym samym łuku co kąt wpisany BCA jest dwa razy większy. Zatem miara kąta BSA wynosi $2 \\cdot 42^\\circ = 84^\\circ$.",
+      "Trójkąt ASB jest równoramienny, ponieważ odcinki SA i SB są promieniami okręgu. Kąty przy podstawie tego trójkąta (BAS i ABS) są sobie równe.",
+      "Suma kątów w trójkącie ASB wynosi $180^{\\circ}$. Miara kąta ostrego BAS jest równa $\\frac{180^\\circ - 84^\\circ}{2} = \\frac{96^\\circ}{2} = 48^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -17127,11 +17124,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚 +1)𝑥 + 7 𝑙: 𝑦 = −2𝑥 + 7 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są prostopadłe, gdy liczba 𝑚 jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) proste k oraz l są określone równaniami k: y = $(m + 1) x + 7$ l: $y = -2x + 7$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k oraz l są prostopadłe, gdy liczba m jest równa",
     "choices": [
-      "(− 1 / 2 )",
-      "1 / 2",
-      "(−3)",
+      "$(-\\frac{1}{2})$",
+      "$\\frac{1}{2}$",
+      "$(-3)$",
       "1"
     ],
     "correctIndex": 0,
@@ -17158,14 +17155,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest równoległobok 𝐴𝐵𝐶𝐷, w którym 𝐴 = (−2 , 6) oraz 𝐵 = (10 , 2). Przekątne 𝐴𝐶 oraz 𝐵𝐷 tego równoległoboku przecinają się w punkcie 𝑃 = (6 , 7). Oblicz długość boku 𝑩𝑪 tego równoległoboku. Zapisz obliczenia.",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) dany jest równoległobok ABCD, w którym A = $(-2 , 6)$ oraz $B = (10 , 2)$. Przekątne AC oraz BD tego równoległoboku przecinają się w punkcie $P = (6 , 7)$. Oblicz długość boku BC tego równoległoboku. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10",
+    "explanation": "Krok 1: Środek przekątnych to środek równoległoboku - wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: $|BC|$ = √((12)2 + $(-4)$2) = √$160 = 4$√10.\n\nOdpowiedź: 4√10",
     "solutionSteps": [
-      "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10"
+      "Krok 1: Środek przekątnych to środek równoległoboku - wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: $|BC|$ = √((12)2 + $(-4)$2) = √$160 = 4$√10.\n\nOdpowiedź: 4√10"
     ],
     "examSource": {
       "kind": "matura",
@@ -17189,9 +17186,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
+    "explanation": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej - wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
     "solutionSteps": [
-      "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
+      "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej - wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
     ],
     "examSource": {
       "kind": "matura",
@@ -17210,7 +17207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ostrosłup 𝐹 1 jest podobny do ostrosłupa 𝐹 2 . Objętość ostrosłupa 𝐹 1 jest równa 64. Objętość ostrosłupa 𝐹 2 jest równa 512. Uzupełnij poniższe zdanie. Podaj odpowiednią liczbę tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa 𝐹 2 do pola powierzchni całkowitej ostrosłupa 𝐹 1 jest równy ………. .",
+    "prompt": "Ostrosłup F 1 jest podobny do ostrosłupa F 2 . Objętość ostrosłupa F 1 jest równa 64. Objętość ostrosłupa F 2 jest równa 512. Uzupełnij poniższe zdanie. Podaj odpowiednią liczbę tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa F 2 do pola powierzchni całkowitej ostrosłupa F 1 jest równy .......... .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17270,7 +17267,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna trzech liczb: 𝑎, 𝑏, 𝑐, jest równa 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia arytmetyczna sześciu liczb: 𝑎, 𝑎, 𝑏, 𝑏, 𝑐, 𝑐, jest równa",
+    "prompt": "Średnia arytmetyczna trzech liczb: a, b, c, jest równa 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia arytmetyczna sześciu liczb: a, a, b, b, c, c, jest równa",
     "choices": [
       "9",
       "6",
@@ -17313,7 +17310,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zlicz całkowitą liczbę uczniów: $2 + 5 + 8 + 7 + 3 = 25$ uczniów.",
       "Znajdź środek danych, czyli pozycję $(25+1)/2 = 13$-tego ucznia (mediana).",
-      "Odczytaj ocenę dla 13-tego ucznia; widzimy, że jest to ocena 3 (gdyż jest $2+5+8=15$ uczniów z oceną 3 lub niższą, a 13-ty uczeń mieści się w tej grupie)."
+      "Odczytaj ocenę dla $13 - teg$o ucznia; widzimy, że jest to ocena 3 (gdyż jest $2+5+8=15$ uczniów z oceną 3 lub niższą, $a_{13} - ty$ uczeń mieści się w tej grupie)."
     ],
     "examSource": {
       "kind": "matura",
@@ -17332,14 +17329,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest pięcioelementowy zbiór 𝐾 = {5,6,7,8,9}. Wylosowanie każdej liczby z tego zbioru jest jednakowo prawdopodobne. Ze zbioru 𝐾 losujemy ze zwracaniem kolejno dwa razy po jednej liczbie i zapisujemy je w kolejności losowania. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że suma wylosowanych liczb jest liczbą parzystą. Zapisz obliczenia.",
+    "prompt": "Dany jest pięcioelementowy zbiór K = {5,6,7,8,9}. Wylosowanie każdej liczby z tego zbioru jest jednakowo prawdopodobne. Ze zbioru K losujemy ze zwracaniem kolejno dwa razy po jednej liczbie i zapisujemy je w kolejności losowania. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że suma wylosowanych liczb jest liczbą parzystą. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: P(nieparzysta) = 2/4 = 1/2 każde losowanie → P(sumy parzysta) = 1/2.\n\nOdpowiedź: 1/2",
+    "explanation": "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: $P(nieparzysta) = \\frac{2}{4} = \\frac{1}{2}$ każde losowanie → $P(sumy parzysta) = \\frac{1}{2}$.\n\nOdpowiedź: $\\frac{1}{2}$",
     "solutionSteps": [
-      "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: P(nieparzysta) = 2/4 = 1/2 każde losowanie → P(sumy parzysta) = 1/2.\n\nOdpowiedź: 1/2"
+      "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: $P(nieparzysta) = \\frac{2}{4} = \\frac{1}{2}$ każde losowanie → $P(sumy parzysta) = \\frac{1}{2}$.\n\nOdpowiedź: $\\frac{1}{2}$"
     ],
     "examSource": {
       "kind": "matura",
@@ -17358,14 +17355,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary 𝒙 oraz 𝒚 jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia.",
+    "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary x oraz y jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Obwód jednego wybiegu: 2(x+y), trzy wybiegi: 3·2(x+y)=36 → x+y=6.\nKrok 2: Suma pól = 3xy, przy x+y=6 maksimum gdy x=y=3.\n\nOdpowiedź: x = 3 m, y = 3 m",
+    "explanation": "Krok 1: Obwód jednego wybiegu: 2$(x + y)$, trzy wybiegi: $3\\cdot2(x + y)$=36 → $x + y = 6$.\nKrok 2: Suma pól = 3 xy, przy $x + y = 6$ maksimum gdy $x = y = 3$.\n\nOdpowiedź: $x = 3m$, $y = 3m$",
     "solutionSteps": [
-      "Krok 1: Obwód jednego wybiegu: 2(x+y), trzy wybiegi: 3·2(x+y)=36 → x+y=6.\nKrok 2: Suma pól = 3xy, przy x+y=6 maksimum gdy x=y=3.\n\nOdpowiedź: x = 3 m, y = 3 m"
+      "Krok 1: Obwód jednego wybiegu: 2$(x + y)$, trzy wybiegi: $3\\cdot2(x + y)$=36 → $x + y = 6$.\nKrok 2: Suma pól = 3 xy, przy $x + y = 6$ maksimum gdy $x = y = 3$.\n\nOdpowiedź: $x = 3m$, $y = 3m$"
     ],
     "examSource": {
       "kind": "matura",
@@ -17384,7 +17381,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba (√ 32 − √ 2 ) 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $(\\sqrt32 - \\sqrt2)$ 2 jest równa",
     "choices": [
       "16",
       "18",
@@ -17443,7 +17440,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 3 108 − 2log 3 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 3 $108 - 2log$ 3 2 jest równa",
     "choices": [
       "3",
       "9",
@@ -17474,12 +17471,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑥 wartość wyrażenia (3𝑥 + 2) 2 − (2𝑥 − 3) 2 jest równa wartości wyrażenia",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x wartość wyrażenia $(3x + 2)$ 2 - $(2x - 3)$ 2 jest równa wartości wyrażenia",
     "choices": [
-      "5𝑥 2 − 5",
-      "5𝑥 2 + 13",
-      "5𝑥 2 + 24𝑥 − 5",
-      "5𝑥 2 + 24𝑥 − 13"
+      "$5x^{2} - 5$",
+      "$5x^{2} + 13$",
+      "$5x^{2} + 24x - 5$",
+      "$5x^{2} + 24x - 13$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $5x^2 + 24x - 5$",
@@ -17505,7 +17502,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej nieparzystej liczby naturalnej 𝒏 liczba 𝟑𝒏 𝟐 + 𝟐𝒏 + 𝟕 jest podzielna przez 𝟒.",
+    "prompt": "Wykaż, że dla każdej nieparzystej liczby naturalnej n liczba $3n^{2} + 2n + 7$ jest podzielna przez 4.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17533,7 +17530,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność 3 − 2(1 − 2𝑥) ≥ 2𝑥 − 17 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.",
+    "prompt": "Dana jest nierówność $3 - 2(1 - 2x)$ ≥ $2x - 17$ Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m25-maj/z06-1.png)",
       "![Rysunek do zadania](/cke-matura/m25-maj/z06-2.png)",
@@ -17544,7 +17541,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "D",
     "solutionSteps": [
       "Uprość nierówność, najpierw mnożąc nawias: $3 - 2 + 4x \\geq 2x - 17$.",
-      "Przenieś wyrazy z $x$ na lewą stronę, a stałe na prawą: $4x - 2x \\geq -17 - 1$, co daje $2x \\geq -18$.",
+      "Przenieś wyrazy $z$ $x$ na lewą stronę, a stałe na prawą: $4x - 2x \\geq -17 - 1$, co daje $2x \\geq -18$.",
       "Podziel obie strony przez 2, aby wyznaczyć $x$: $x \\geq -9$. Zbiór liczb spełniających nierówność to $[-9, \\infty)$."
     ],
     "examSource": {
@@ -17564,15 +17561,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 2𝑥(𝑥 + 3)(𝑥 2 + 25) = 0 w zbiorze liczb rzeczywistych ma dokładnie",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 2x$(x + 3)(x^{2} + 25)$ = 0 w zbiorze liczb rzeczywistych ma dokładnie",
     "choices": [
-      "dwa rozwiązania: (−3) oraz 0.",
-      "dwa rozwiązania: (−3) oraz 2.",
-      "trzy rozwiązania: (−5), (−3) oraz 0.",
-      "cztery rozwiązania: (−5), (−3), 0 oraz 5."
+      "dwa rozwiązania: $(-3)$ oraz 0.",
+      "dwa rozwiązania: $(-3)$ oraz 2.",
+      "trzy rozwiązania: $(-5)$, $(-3)$ oraz 0.",
+      "cztery rozwiązania: $(-5)$, $(-3)$, 0 oraz 5."
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli dwa rozwiązania: (−3) oraz 0.",
+    "explanation": "A, czyli dwa rozwiązania: $(-3)$ oraz 0.",
     "solutionSteps": [
       "Aby równanie $2x(x+3)(x^2+25)=0$ było spełnione, przynajmniej jeden z czynników musi być równy zero. Rozpatrujemy każdy czynnik osobno.",
       "Czynniki $2x=0$ i $x+3=0$ dają rozwiązania $x=0$ i $x=-3$. Równanie $x^2+25=0$ nie ma rozwiązań w zbiorze liczb rzeczywistych, ponieważ $x^2 = -25$ nie jest możliwe dla $x \\in \\mathbb{R}$.",
@@ -17595,7 +17592,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej 𝑥 różnej od (−2) oraz różnej od 0 wartość wyrażenia ![Rysunek do zadania](/cke-matura/m25-maj/z08-1.png) jest równa wartości wyrażenia",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x różnej od $(-2)$ oraz różnej od 0 wartość wyrażenia ![Rysunek do zadania](/cke-matura/m25-maj/z08-1.png) jest równa wartości wyrażenia",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-3.png)",
@@ -17626,7 +17623,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zarząd firmy wydzielił z budżetu kwotę 1 200 000 złotych łącznie na projekty badawcze dla dwóch zespołów: A i B. W pierwszym półroczu realizacji tych projektów oba zespoły wykorzystały łącznie 146 700 złotych – zespół A wykorzystał 13% przyznanych mu środków, a zespół B wykorzystał 11% przyznanych mu środków. Oblicz kwotę przyznaną zespołowi A na realizację projektu badawczego. Zapisz obliczenia.",
+    "prompt": "Zarząd firmy wydzielił z budżetu kwotę 1 200 000 złotych łącznie na projekty badawcze dla dwóch zespołów: A i B. W pierwszym półroczu realizacji tych projektów oba zespoły wykorzystały łącznie 146 700 złotych - zespół A wykorzystał 13% przyznanych mu środków, a zespół B wykorzystał 11% przyznanych mu środków. Oblicz kwotę przyznaną zespołowi A na realizację projektu badawczego. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17655,7 +17652,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność 𝟑(𝟐𝒙 𝟐 + 𝟏) Zapisz obliczenia.",
+    "prompt": "Rozwiąż nierówność 3$(2x^{2} + 1)$ Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17683,14 +17680,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja 𝑓 jest określona następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z11-1.jpg) Wykres funkcji 𝑦=𝑓(𝑥) przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku poniżej. ![Rysunek do zadania](/cke-matura/m25-maj/z11-2.jpg) 1. Dziedziną funkcji 𝑓 jest przedział ......................... 2. Zbiorem wartości funkcji 𝑓 jest przedział ......................... 3. Zbiorem wszystkich argumentów, dla których funkcja 𝑓 przyjmuje wartości dodatnie, jest przedział ......................... 4. Zbiorem wszystkich rozwiązań równania 𝑓(𝑥) = 3 jest przedział .........................",
+    "prompt": "Funkcja $f$ jest określona następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z11-1.jpg) Wykres funkcji $y = f(x)$ przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. ![Rysunek do zadania](/cke-matura/m25-maj/z11-2.jpg) 1. Dziedziną funkcji $f$ jest przedział ......................... 2. Zbiorem wartości funkcji $f$ jest przedział ......................... 3. Zbiorem wszystkich argumentów, dla których funkcja $f$ przyjmuje wartości dodatnie, jest przedział ......................... 4. Zbiorem wszystkich rozwiązań równania $f(x) = 3$ jest przedział .........................",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$",
     "solutionSteps": [
-      "Odczytaj dziedzinę z osi X — to wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi Y — to wszystkie możliwe wartości funkcji $f(x)$.",
+      "Odczytaj dziedzinę z osi $X - to$ wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi $Y - to$ wszystkie możliwe wartości funkcji $f(x)$.",
       "Znajdź argumenty $x$, dla których $f(x) > 0$. Na wykresie to fragmenty, gdzie funkcja jest nad osią X.",
       "Znajdź argumenty $x$, dla których $f(x) = 3$. Na wykresie znajdź punkty, gdzie wykres przecina się z prostą $y=3$."
     ],
@@ -17711,14 +17708,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej 𝑓 (zobacz rysunek). Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś 𝑂𝑦 w punkcie o współrzędnych (0,3). ![Rysunek do zadania](/cke-matura/m25-maj/z12-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f (zobacz rysunek). Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś Oy w punkcie o współrzędnych (0,3). ![Rysunek do zadania](/cke-matura/m25-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$f(x) = -\\frac{1}{3}x^2 + 2x + 3$",
     "solutionSteps": [
-      "Wykorzystaj wierzchołek paraboli $(p, q) = (3,6)$ do zapisania wzoru funkcji w postaci kanonicznej: $f(x) = a(x-p)^2 + q$, czyli $f(x) = a(x-3)^2 + 6$.",
+      "Wykorzystaj wierzchołek paraboli $(p, q) = (3,6)$ do zapisania wzoru funkcji $w$ postaci kanonicznej: $f(x) = a(x-p)^2 + q$, czyli $f(x) = a(x-3)^2 + 6$.",
       "Użyj punktu $(0,3)$, przez który przechodzi parabola, aby obliczyć współczynnik $a$: $3 = a(0-3)^2 + 6 \\implies 3 = 9a + 6 \\implies -3 = 9a \\implies a = -\\frac{1}{3}$.",
       "Zapisz pełny wzór funkcji kwadratowej w postaci kanonicznej: $f(x) = -\\frac{1}{3}(x-3)^2 + 6$. Aby uzyskać postać ogólną, rozwiń wzór: $f(x) = -\\frac{1}{3}(x^2 - 6x + 9) + 6 = -\\frac{1}{3}x^2 + 2x - 3 + 6 = -\\frac{1}{3}x^2 + 2x + 3$."
     ],
@@ -17739,9 +17736,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (3 − 𝑚)𝑥 − 4. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 nie ma miejsca zerowego dla 𝑚 równego",
+    "prompt": "Funkcja liniowa f jest określona wzorem $f(x)$ = $(3 - m) x - 4$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ nie ma miejsca zerowego dla m równego",
     "choices": [
-      "(−3)",
+      "$(-3)$",
       "0",
       "3",
       "4"
@@ -17770,7 +17767,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (𝑎𝑛) jest określony następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z14-1.png) dla każdej liczby naturalnej 𝑛 ≥ 1",
+    "prompt": "Ciąg(an) jest określony następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z14-1.png) dla każdej liczby naturalnej $n \\ge 1$",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17798,7 +17795,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyznacz wartość 𝒎 , dla której trzywyrazowy ciąg (𝟐𝒎 + 𝟏𝟏, 𝒎 𝟐 + 𝟑, 𝟓 − 𝒎) jest arytmetyczny i malejący. Zapisz obliczenia.",
+    "prompt": "Wyznacz wartość m , dla której trzywyrazowy ciąg $(2m + 11, m^{2} + 3, 5 - m)$ jest arytmetyczny i malejący. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17826,9 +17823,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny (𝑎 𝑛 ) określony dla każdej liczby naturalnej 𝑛 ≥ 1, w którym 𝑎 1 = 27 oraz 𝑎 2 = 9. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Czwarty wyraz ciągu (𝑎𝑛) jest równy",
+    "prompt": "Dany jest ciąg geometryczny ($a_{n}$) określony dla każdej liczby naturalnej $n \\ge 1$, w którym $a_{1} = 27$ oraz $a_{2} = 9$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Czwarty wyraz ciągu (an) jest równy",
     "choices": [
-      "1/3",
+      "$\\frac{1}{3}$",
       "1",
       "3",
       "729"
@@ -17857,12 +17854,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt 𝛼 jest ostry i spełnia warunek √ 3 tg𝛼 = 2 sin𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cosinus kąta 𝛼 jest równy",
+    "prompt": "Kąt α jest ostry i spełnia warunek √ 3 tgα = 2 sinα. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cosinus kąta α jest równy",
     "choices": [
-      "1/2",
-      "√ 2 /2",
-      "√ 3 /2",
-      "√ 3 /3"
+      "$\\frac{1}{2}$",
+      "√ $\\frac{2}{2}$",
+      "√ $\\frac{3}{2}$",
+      "√ $\\frac{3}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{\\sqrt{3}}{2}$",
@@ -17888,16 +17885,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny 𝐴𝐵𝐶, w którym bok 𝐵𝐶 jest przeciwprostokątną, przyprostokątna 𝐴𝐵 ma długość 6, a środkowa 𝐶𝐷 ma długość 5. Oznaczmy kąt 𝐴𝐷𝐶 przez 𝛼, natomiast kąt 𝐴𝐵𝐶 – przez 𝛽 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
+    "prompt": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez α, natomiast kąt $ABC - prz$ez β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\sin(\\alpha) = \\frac{24}{25}$",
     "solutionSteps": [
-      "W trójkącie prostokątnym 𝐴𝐵𝐶, środkowa 𝐶𝐷 poprowadzona z wierzchołka kąta prostego do przeciwprostokątnej 𝐵𝐶 jest równa połowie tej przeciwprostokątnej. Mamy więc $CD = \\frac{1}{2} BC$. Ponieważ $CD = 5$, to $BC = 2 \\cdot 5 = 10$.",
-      "Z twierdzenia Pitagorasa dla trójkąta 𝐴𝐵𝐶 mamy $AB^2 + AC^2 = BC^2$. Podstawiając znane wartości: $6^2 + AC^2 = 10^2$, czyli $36 + AC^2 = 100$. Stąd $AC^2 = 100 - 36 = 64$, a $AC = \\sqrt{64} = 8$.",
-      "W trójkącie 𝐴𝐵𝐶, $\\cos(\\beta) = \\frac{AB}{BC} = \\frac{6}{10} = \\frac{3}{5}$. W trójkącie prostokątnym $ADC$, $AD = \\frac{1}{2} BC = 5$. Z twierdzenia cosinusów dla trójkąta $ADC$: $AC^2 = AD^2 + CD^2 - 2 \\cdot AD \\cdot CD \\cdot \\cos(\\alpha)$. Mamy $8^2 = 5^2 + 5^2 - 2 \\cdot 5 \\cdot 5 \\cdot \\cos(\\alpha)$, czyli $64 = 25 + 25 - 50 \\cos(\\alpha)$. Stąd $64 = 50 - 50 \\cos(\\alpha)$, co daje $14 = -50 \\cos(\\alpha)$, a $\\cos(\\alpha) = -\\frac{14}{50} = -\\frac{7}{25}$. Ponieważ $\\alpha$ jest kątem w trójkącie, $0 < \\alpha < 180^{\\circ}$. Z zależności między funkcjami trygonometrycznymi mamy $\\sin^2(\\alpha) = 1 - \\cos^2(\\alpha) = 1 - (-\\frac{7}{25})^2 = 1 - \\frac{49}{625} = \\frac{576}{625}$. Stąd $\\sin(\\alpha) = \\sqrt{\\frac{576}{625}} = \\frac{24}{25}$ (sinus kąta w trójkącie jest dodatni)."
+      "W trójkącie prostokątnym ABC, środkowa CD poprowadzona z wierzchołka kąta prostego do przeciwprostokątnej BC jest równa połowie tej przeciwprostokątnej. Mamy więc $CD = \\frac{1}{2} BC$. Ponieważ $CD = 5$, to $BC = 2 \\cdot 5 = 10$.",
+      "Z twierdzenia Pitagorasa dla trójkąta ABC mamy $AB^2 + AC^2 = BC^2$. Podstawiając znane wartości: $6^2 + AC^2 = 10^2$, czyli $36 + AC^2 = 100$. Stąd $AC^2 = 100 - 36 = 64$, a $AC = \\sqrt{64} = 8$.",
+      "W trójkącie ABC, $\\cos(\\beta) = \\frac{AB}{BC} = \\frac{6}{10} = \\frac{3}{5}$. W trójkącie prostokątnym $ADC$, $AD = \\frac{1}{2} BC = 5$. Z twierdzenia cosinusów dla trójkąta $ADC$: $AC^2 = AD^2 + CD^2 - 2 \\cdot AD \\cdot CD \\cdot \\cos(\\alpha)$. Mamy $8^2 = 5^2 + 5^2 - 2 \\cdot 5 \\cdot 5 \\cdot \\cos(\\alpha)$, czyli $64 = 25 + 25 - 50 \\cos(\\alpha)$. Stąd $64 = 50 - 50 \\cos(\\alpha)$, co daje $14 = -50 \\cos(\\alpha)$, a $\\cos(\\alpha) = -\\frac{14}{50} = -\\frac{7}{25}$. Ponieważ $\\alpha$ jest kątem w trójkącie, $0 < \\alpha < 180^{\\circ}$. Z zależności między funkcjami trygonometrycznymi mamy $\\sin^2(\\alpha) = 1 - \\cos^2(\\alpha) = 1 - (-\\frac{7}{25})^2 = 1 - \\frac{49}{625} = \\frac{576}{625}$. Stąd $\\sin(\\alpha) = \\sqrt{\\frac{576}{625}} = \\frac{24}{25}$ (sinus kąta w trójkącie jest dodatni)."
     ],
     "examSource": {
       "kind": "matura",
@@ -17916,21 +17913,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty 𝐴, 𝐵 oraz 𝐶 leżą na okręgu o środku w punkcie 𝑂. Miara kąta 𝐵𝐶𝐴 jest równa 50° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego 𝐴𝐵𝑂 jest równa",
+    "prompt": "Punkty A, B oraz C leżą na okręgu o środku w punkcie O. Miara kąta BCA jest równa $50^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego ABO jest równa",
     "choices": [
-      "20°",
-      "35°",
-      "40°",
-      "50°"
+      "$20^{\\circ}$",
+      "$35^{\\circ}$",
+      "$40^{\\circ}$",
+      "$50^{\\circ}$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 40°",
+    "explanation": "C, czyli $40^{\\circ}$",
     "solutionSteps": [
-      "Kąt wpisany 𝐴𝐵𝐶 opiera się na tym samym łuku co kąt środkowy 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 ma miarę dwa razy większą niż kąt 𝐴𝑂𝐶. Kąt 𝐴𝐵𝐶 = 180° - 90° - 50° = 40°.",
-      "Kąt środkowy 𝐴𝑂𝐶 = 2 * 40° = 80°. Trójkąt 𝐴𝑂𝐶 jest równoramienny (ramiona to promienie okręgu), więc kąty przy podstawie 𝑂𝐴 i 𝑂𝐶 są równe. Kąt 𝑂𝐴𝐶 = kąt 𝑂𝐶𝐴 = (180° - 80°) / 2 = 50°.",
-      "Kąt 𝐴𝐶𝐵 ma 50°, a kąt 𝑂𝐶𝐴 ma 50°. Kąt 𝐴𝐶𝑂 = 50°. Kąt 𝐵𝐶𝑂 ma 0°, ponieważ punkty A, B, C leżą na okręgu.",
-      "Trójkąt 𝐵𝑂𝐶 jest równoramienny. Kąt 𝑂𝐶𝐵 = 0°. Kąt 𝑂𝐵𝐶 = 0°. Kąt 𝐵𝑂𝐶 = 180°.",
-      "Kąt 𝐴𝐵𝑂 jest równy 40° - 0° = 40°."
+      "Kąt wpisany ABC opiera się na tym samym łuku co kąt środkowy AOC. Kąt ABC ma miarę dwa razy większą niż kąt AOC. Kąt ABC = $180^{\\circ}$ -$90^{\\circ}$ -$50^{\\circ}$ = $40^{\\circ}$.",
+      "Kąt środkowy $AOC = 2$ * $40^{\\circ}$ = $80^{\\circ}$. Trójkąt AOC jest równoramienny (ramiona to promienie okręgu), więc_{k}ąty przy podstawie OA i OC są równe. Kąt $OAC = k$ąt $OCA = ($180^{\\circ}$ - $80^{\\circ}$) / 2$ = $50^{\\circ}$.",
+      "Kąt ACB ma $50^{\\circ}$, $a_{k}$ąt OCA ma $50^{\\circ}$. Kąt ACO = $50^{\\circ}$. Kąt BCO ma $0^{\\circ}$, ponieważ punkty A, B, C leżą na okręgu.",
+      "Trójkąt BOC jest równoramienny. Kąt OCB = $0^{\\circ}$. Kąt OBC = $0^{\\circ}$. Kąt BOC = $180^{\\circ}$.",
+      "Kąt ABO jest równy $40^{\\circ}$ -$0^{\\circ}$ = $40^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -17949,7 +17946,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie równoramiennym 𝐴𝐵𝐶 dane są: |𝐴𝐶| = |𝐵𝐶| = 4 i |𝐴𝐵| = 3. Na boku 𝐵𝐶, między punktami 𝐵 i 𝐶, wybrano taki punkt 𝐷, że trójkąty 𝐴𝐵𝐶 i 𝐵𝐷𝐴 są podobne (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek 𝐵𝐷 ma długość",
+    "prompt": "W trójkącie równoramiennym ABC dane są: $|AC| = |BC| = 4$ i $|AB| = 3$. Na boku BC, między punktami B i C, wybrano taki punkt D, że trójkąty ABC i BDA są podobne (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z20-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek BD ma długość",
     "choices": [
       "2",
       "2,25",
@@ -17980,7 +17977,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt 𝐴𝐵𝐶, w którym |𝐴𝐵| = 11, |𝐵𝐶| = 12 oraz |∡𝐴𝐵𝐶| = 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Trójkąt 𝐴𝐵𝐶 jest równoramienny. A) prawda B) fałsz Pole trójkąta 𝐴𝐵𝐶 jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -18008,7 +18005,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest kwadrat 𝐴𝐵𝐶𝐷, w którym 𝐴 = (4,−1). Przekątne tego kwadratu przecinają się w punkcie 𝑆 = (1,3). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Przekątna kwadratu 𝐴𝐵𝐶𝐷 ma długość",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) dany jest kwadrat ABCD, w którym A = $(4, - 1)$. Przekątne tego kwadratu przecinają się w punkcie $S = (1,3)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Przekątna kwadratu ABCD ma długość",
     "choices": [
       "5",
       "7",
@@ -18039,10 +18036,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚−2)𝑥 + 5 𝑙: 𝑦 = −4𝑥 + (𝑚 + 3) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są równoległe, gdy liczba 𝑚 jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) proste k oraz l są określone równaniami k: y = $(m - 2) x + 5$ l: $y = -4x$ + $(m + 3)$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k oraz l są równoległe, gdy liczba m jest równa",
     "choices": [
-      "(−4)",
-      "(−2)",
+      "$(-4)$",
+      "$(-2)$",
       "2",
       "5"
     ],
@@ -18070,12 +18067,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) punkt 𝑃 = (0,0) leży na okręgu 𝒪 o środku w punkcie 𝑆 = (2,4). Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg 𝒪 jest określony równaniem",
+    "prompt": "W kartezjańskim układzie współrzędnych (x,y) punkt $P = (0,0)$ leży na okręgu O o środku w punkcie $S = (2,4)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O jest określony równaniem",
     "choices": [
-      "A. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 2√ 5",
-      "B. (𝑥 − 2) 2 + (𝑦 − 4) 2 = 20",
-      "C. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 2√ 5",
-      "D. (𝑥 + 2) 2 + (𝑦 + 4) 2 = 20"
+      "A. $(x - 2)$ 2 + $(y - 4) 2 = 2$√ 5",
+      "B. $(x - 2)$ 2 + $(y - 4) 2 = 20$",
+      "C. $(x + 2)$ 2 + $(y + 4) 2 = 2$√ 5",
+      "D. $(x + 2)$ 2 + $(y + 4) 2 = 20$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $(x − 2)^2 + (y − 4)^2 = 20$",
@@ -18102,7 +18099,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę 120°. Oblicz objętość tego stożka. Zapisz obliczenia.",
+    "prompt": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę $120^{\\circ}$. Oblicz objętość tego stożka. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -18172,8 +18169,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Rozważ trzy przypadki ze względu na pozycję cyfry 0. Liczby trzycyfrowe mają postać $abc$, gdzie $a \\in \\{1, ..., 9\\}$ i $b, c \\in \\{0, ..., 9\\}$. Liczba musi być nieparzysta, czyli $c \\in \\{1, 3, 5, 7, 9\\}$.",
       "Przypadek 1: $a=0$ (niemożliwe, bo liczba musi być trzycyfrowa). Przypadek 2: $b=0$. Wtedy $a \\in \\{1, ..., 9\\}$ (9 możliwości) i $c \\in \\{1, 3, 5, 7, 9\\}$ (5 możliwości). Mamy $9 \\cdot 1 \\cdot 5 = 45$ takich liczb.",
-      "Przypadek 3: $c=0$ (niemożliwe, bo liczba musi być nieparzysta). Przypadek 4: $a \\ne 0$, $b \\ne 0$, $c \\ne 0$ i tylko jedna z cyfr $a$ lub $b$ jest 0. Ale już wykluczyliśmy $c=0$. Więc przypadek 3: $a \\ne 0$, $b=0$, $c \\ne 0$ (rozpatrzono w kroku 2). Został przypadek 5: $a=0$ (niemożliwe) lub $b=0$ (rozpatrzono) lub $c=0$ (niemożliwe). **Poprawka:** Rozważmy pozycję zera.\n    - Zera na pozycji setek: niemożliwe.\n    - Zera na pozycji dziesiątek: $a \\in \\{1..9\\}$ (9 możliwości), $b=0$ (1 możliwość), $c \\in \\{1,3,5,7,9\\}$ (5 możliwości). $9 \\cdot 1 \\cdot 5 = 45$ liczb.\n    - Zera na pozycji jedności: niemożliwe, bo liczba ma być nieparzysta.",
-      "Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc 9 możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$)."
+      "Przypadek 3: $c=0$ (niemożliwe, bo liczba musi być nieparzysta). Przypadek 4: $a \\ne 0$, $b \\ne 0$, $c \\ne 0$ i tylko jedna z cyfr $a$ lub $b$ jest 0. Ale już wykluczyliśmy $c=0$. Więc przypadek 3: $a \\ne 0$, $b=0$, $c \\ne 0$ (rozpatrzono w kroku 2). Został przypadek 5: $a=0$ (niemożliwe) lub $b=0$ (rozpatrzono) lub $c=0$ (niemożliwe). **Poprawka:** Rozważmy pozycję zera.\n - Zera na pozycji setek: niemożliwe.\n - Zera na pozycji dziesiątek: $a \\in \\{1..9\\}$ (9 możliwości), $b=0$ (1 możliwość), $c \\in \\{1,3,5,7,9\\}$ (5 możliwości). $9 \\cdot 1 \\cdot 5 = 45$ liczb.\n - Zera na pozycji jedności: niemożliwe, bo liczba ma być nieparzysta.",
+      "Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc_{9} możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$)."
     ],
     "examSource": {
       "kind": "matura",
@@ -18192,12 +18189,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Zdarzenie 𝐴 polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia 𝐴 jest równe",
+    "prompt": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek. Zdarzenie A polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia A jest równe",
     "choices": [
-      "1 / 36",
-      "6 / 36",
-      "11 / 36",
-      "2 / 36"
+      "$\\frac{1}{36}$",
+      "$\\frac{6}{36}$",
+      "$\\frac{11}{36}$",
+      "$\\frac{2}{36}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{2}{36}$",
@@ -18223,7 +18220,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna siedmiu liczb: 1, 2, 3, 4, 5, 𝑥, 𝑦, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma 𝑥 + 𝑦 jest równa",
+    "prompt": "Średnia arytmetyczna siedmiu liczb: 1, 2, 3, 4, 5, x, y, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma $x + y$ jest równa",
     "choices": [
       "4",
       "5",
@@ -18262,8 +18259,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "1. Mediana jest równa 4. 2. Dominanta jest równa 5.",
     "solutionSteps": [
       "Wypisz wszystkie oceny z sprawdzianu w kolejności niemalejącej: 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5. Jest 24 uczniów.",
-      "Oblicz medianę: ponieważ jest parzysta liczba uczniów (24), mediana to średnia arytmetyczna 12. i 13. oceny. Są to 4 i 4, więc mediana to $\\frac{4+4}{2} = 4$.",
-      "Określ dominantę: jest to ocena najczęściej występująca. Najwięcej uczniów (8) otrzymało ocenę 5."
+      "Oblicz medianę: ponieważ jest parzysta liczba uczniów(24), mediana to średnia arytmetyczna 12. i 13. oceny. Są to 4 i 4, więc mediana to $\\frac{4+4}{2} = 4$.",
+      "Określ dominantę: jest to ocena najczęściej występująca. Najwięcej uczniów(8) otrzymało ocenę 5."
     ],
     "examSource": {
       "kind": "matura",
@@ -18282,7 +18279,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻, w których krawędź 𝐵𝐶 ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka 𝐵 jest równa 15 (zobacz rysunek). Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości 𝑥 krawędzi 𝐴𝐵. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji 𝑷 . Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia.",
+    "prompt": "Rozważamy wszystkie prostopadłościany ABCDEFGH, w których krawędź BC ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka B jest równa 15 (zobacz rysunek). Niech $P(x)$ oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości $x$ krawędzi AB. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji $P$ . Oblicz długość $x$ krawędzi AB tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],

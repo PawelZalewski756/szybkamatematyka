@@ -102,7 +102,17 @@ function compactSpacedMath(text: string): string {
   // | AB |
   out = out.replace(/\|\s*([A-Za-z]{1,6})\s*\|/g, (_m, seg: string) => `|${seg}|`);
 
-  // Potęgi / indeksy: x 2, a 4
+  // Potęgi ASCII: a^2 → a^{2}
+  out = out.replace(/\b([a-zA-Z])\^(\d+)\b/g, "$1^{$2}");
+
+  // 3a 2 → 3a^{2} (litera sklejona ze współczynnikiem → potęga, nie indeks)
+  out = out.replace(
+    /(\d)([a-zA-Z])\s+(\d+)\b/g,
+    (_m, coeff: string, base: string, exp: string) =>
+      `${coeff}${base}^{${exp}}`,
+  );
+
+  // Potęgi / indeksy: x 2, a 4 (tylko samotna litera — nie środek polskiego słowa)
   out = out.replace(
     /\b([a-zA-Z])\s+(\d+)\b/g,
     (full, base: string, exp: string) => {
@@ -114,10 +124,22 @@ function compactSpacedMath(text: string): string {
     },
   );
 
-  // a n
+  // a n / a k — bez litery „i” (polskie „a i b” = „a oraz b”)
   out = out.replace(
-    /\b([abcpqsS])\s+([nkmi])\b/g,
+    /\b([abcpqsS])\s+([nkm])\b/g,
     (_m, base: string, idx: string) => `${base}_{${idx}}`,
+  );
+
+  // sin50° / cos 20 → sin 50 / cos 20 (żeby weszło do jednej wyspy z °)
+  out = out.replace(
+    /\b(sin|cos|tg|ctg|log|ln)\s*(\d+)/gi,
+    (_m, fn: string, n: string) => `${fn} ${n}`,
+  );
+
+  // sin 2 20° → sin^{2} 20° (OCR potęgi funkcji trygonometrycznej)
+  out = out.replace(
+    /\b(sin|cos|tg|ctg)\s+2\s+(\d+(?:\^\{\\circ\})?)/gi,
+    (_m, fn: string, rest: string) => `${fn}^{2} ${rest}`,
   );
 
   // Współczynnik: 2 x → 2x, tylko gdy dalej operator/koniec (nie "0 z niewiadomą")
@@ -168,7 +190,7 @@ function latexifySymbols(expr: string): string {
     .replace(/∞/g, "\\infty ")
     .replace(/√\s*/g, "\\sqrt")
     .replace(/°/g, "^{\\circ}")
-    .replace(/\b(sin|cos|tg|ctg|log|ln)(?=[\\(\sα-ωa-zA-Z0-9])/g, (_m, fn: string) => {
+    .replace(/\b(sin|cos|tg|ctg|log|ln)(?=[\\(^(\sα-ωa-zA-Z0-9])/g, (_m, fn: string) => {
       if (fn === "tg") return "\\operatorname{tg}";
       if (fn === "ctg") return "\\operatorname{ctg}";
       return `\\${fn}`;
@@ -187,9 +209,9 @@ function latexifySymbols(expr: string): string {
  * startując tylko od bezpiecznego tokenu (nie ze środka polskiego słowa).
  */
 function wrapMathIslands(text: string): string {
-  // Atom: ułamek, |AB|, f(x), ax, -3x, 90^{\circ}, (…), α.
+  // Atom: ułamek, |AB|, f(x), ax, -3x, sin 50^{\circ}, 90^{\circ}, (…), α.
   const atom =
-    String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,40}\)|\-?\d+(?:[.,]\d+)?(?:\^\{\\circ\})?|[α-ω])`;
+    String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z]+(?:_\{[^}]+\}|\^\{[^}]+\})?|(?:sin|cos|tg|ctg|log|ln)(?:\^\{[^}]+\})?\s+\d+(?:\^\{\\circ\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,80}\)|\-?\d+(?:[.,]\d+)?(?:\^\{\\circ\})?|[α-ω])`;
   const op = String.raw`(?:[=<>≤≥+\-*/]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
   // Operator albo juxtapozycja nawiasów: (x+3)(x-2)
   const island = new RegExp(
@@ -239,17 +261,67 @@ function wrapContextualVariables(text: string): string {
   );
 }
 
-/** Kąty i stopnie: |∠ACB| = 90° oraz samotne 90°. */
+/** Kąty i stopnie: |∠ACB| = |∠BGF| = 90° oraz samotne 90°. */
 function wrapAnglesAndDegrees(text: string): string {
   let out = text.replace(
-    /(?<!\$)(\|\\angle\s*[A-Za-z]{1,6}\|)\s*=\s*(\d+)\s*(?:\^\{\\circ\}|°)?(?!\$)/g,
-    (_m, ang: string, deg: string) => `$${ang} = ${deg}^{\\circ}$`,
+    /(?<!\$)((?:\|\\angle\s*[A-Za-z]{1,6}\|\s*=\s*)+)(\d+)\s*(?:\^\{\\circ\}|°)?(?!\$)/g,
+    (_m, chain: string, deg: string) => {
+      const left = chain
+        .replace(/\s*=\s*/g, " = ")
+        .replace(/\s*=\s*$/, "")
+        .trim();
+      return `$${left} = ${deg}^{\\circ}$`;
+    },
   );
+
+  // α = 180° - 2β (bez \b — greka nie jest „word char” bez flagi u)
   out = out.replace(
-    /(?<!\$)(?<![A-Za-z0-9])(\d+)\s*(?:\^\{\\circ\}|°)(?!\$)/g,
-    (_m, deg: string) => `$${deg}^{\\circ}$`,
+    /(?<!\$)([α-ω])\s*=\s*(\d+)\s*(?:\^\{\\circ\}|°)\s*-\s*(\d+)\s*([α-ω])(?!\$)/g,
+    (_m, a: string, deg: string, coef: string, b: string) =>
+      `$${a} = ${deg}^{\\circ} - ${coef}${b}$`,
+  );
+
+  // m = sin 50° / sin^{2} 20° / cos 20° jako całość (nie wewnątrz nawiasów)
+  out = out.replace(
+    /(?<!\$)(?:([a-zA-Z])\s*=\s*)?\b((?:sin|cos|tg|ctg)(?:\^\{[^}]+\})?\s+\d+)\s*(?:\^\{\\circ\}|°)(?!\$)/gi,
+    (match, lhs: string | undefined, body: string, offset: number, whole: string) => {
+      if (oddDollarBefore(whole, offset)) return match;
+      const before = whole.slice(0, offset);
+      const open = (before.match(/\(/g) ?? []).length;
+      const close = (before.match(/\)/g) ?? []).length;
+      if (open > close) return match;
+      const expr = lhs ? `${lhs} = ${body}^{\\circ}` : `${body}^{\\circ}`;
+      return `$${latexifySymbols(expr)}$`;
+    },
+  );
+
+  out = out.replace(
+    /(?<!\$)(?<![A-Za-z0-9\\])(\d+)\s*(?:\^\{\\circ\}|°)(?!\$)/g,
+    (match, deg: string, offset: number, whole: string) => {
+      if (oddDollarBefore(whole, offset)) return match;
+      const before = whole.slice(Math.max(0, offset - 16), offset);
+      if (/(?:sin|cos|tg|ctg|log|ln)(?:\^\{[^}]+\})?\s*$/i.test(before)) {
+        return match;
+      }
+      return `$${deg}^{\\circ}$`;
+    },
   );
   return out;
+}
+
+/** Nawiasy z matematyką: (1 - cos 20°) zanim wyspa oderwie wnętrze. */
+function wrapParenMath(text: string): string {
+  return text.replace(/\(([^$\n()]{1,80})\)/g, (full, inner: string, offset: number, whole: string) => {
+    if (oddDollarBefore(whole, offset)) return full;
+    if (
+      !/[+\-=<>≤≥*/]|\\times|\\cdot|\\le|\\ge|\bsin\b|\bcos\b|\btg\b|\bctg\b|\d\^\{\\circ\}/.test(
+        inner,
+      )
+    ) {
+      return full;
+    }
+    return `$${latexifySymbols(`(${inner.trim()})`)}$`;
+  });
 }
 
 /**
@@ -277,10 +349,12 @@ export function formatCkeMathText(input: string): string {
 
   out = normalizeUnicodeMath(out);
   out = compactSpacedMath(out);
+  // Kąty / trig+° / nawiasy przed wyspami — inaczej `$m = sin$` odrywa stopnie.
+  out = wrapAnglesAndDegrees(out);
+  out = wrapParenMath(out);
   out = wrapMathIslands(out);
   out = wrapLoneTokens(out);
   out = wrapSimpleInequalities(out);
-  out = wrapAnglesAndDegrees(out);
   out = wrapContextualVariables(out);
   out = mergeAdjacentMath(out);
 
