@@ -22,11 +22,8 @@ import type {
   TrueFalseQuestion,
 } from "@/lib/minigry/questions/types";
 
-function latexOp(op: "+" | "−" | "×" | "÷"): string {
-  if (op === "−") return "-";
-  if (op === "×") return "\\times";
-  if (op === "÷") return "\\div";
-  return "+";
+function plainOp(op: "+" | "−" | "×" | "÷"): string {
+  return op;
 }
 
 function arithmetic(
@@ -56,7 +53,7 @@ function arithmetic(
   return {
     id: `${op}-${a}-${b}`,
     prompt: "Wynik",
-    headline: `$${a} ${latexOp(op)} ${b}$`,
+    headline: `${a} ${plainOp(op)} ${b}`,
     correct,
     options: buildNumericOptions(correct, 4, op === "×" || op === "÷" ? 18 : 14),
   };
@@ -111,7 +108,7 @@ export function generateProcenty(path: LearningPath): ChoiceQuestion {
   return {
     id: `pct-${pct}-${base}`,
     prompt: "Oblicz procent",
-    headline: `$${pct}\\%$ z $${base}$`,
+    headline: `${pct}% z ${base}`,
     correct,
     options: buildNumericOptions(correct, 4, 20),
   };

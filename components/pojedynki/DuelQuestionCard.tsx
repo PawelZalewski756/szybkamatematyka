@@ -1,6 +1,6 @@
 "use client";
 
-import { MathText } from "@/components/trening/MathText";
+import { QuizEquation } from "@/components/minigry/QuizEquation";
 import type { CompareSide } from "@/lib/minigry/questions/types";
 import type { DuelQuestion } from "@/lib/pojedynki/duel-types";
 import { motion } from "framer-motion";
@@ -31,10 +31,10 @@ export function DuelQuestionCard({
         <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           {q.prompt}
         </p>
-        <MathText
+        <QuizEquation
           content={q.headline}
           as="div"
-          className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl [&_.katex]:text-[1em]"
+          className="mt-4 flex max-w-full flex-wrap items-center justify-center gap-x-[0.12em] break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl"
         />
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
           {q.options.map((opt) => (
@@ -62,10 +62,10 @@ export function DuelQuestionCard({
         <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           Czy to prawda?
         </p>
-        <MathText
+        <QuizEquation
           content={q.equation}
           as="div"
-          className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl [&_.katex]:text-[1em]"
+          className="mt-4 flex max-w-full flex-wrap items-center justify-center gap-x-[0.12em] break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl"
         />
         <div className="mt-8 grid grid-cols-2 gap-4">
           <motion.button
@@ -105,14 +105,14 @@ export function DuelQuestionCard({
         Która strona jest większa?
       </p>
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-8">
-        <MathText
+        <QuizEquation
           content={q.left}
-          className="text-4xl font-black text-foreground sm:text-5xl [&_.katex]:text-[1em]"
+          className="inline-flex items-center text-4xl font-black text-foreground sm:text-5xl"
         />
         <span className="text-2xl font-black text-muted">vs</span>
-        <MathText
+        <QuizEquation
           content={q.right}
-          className="text-4xl font-black text-foreground sm:text-5xl [&_.katex]:text-[1em]"
+          className="inline-flex items-center text-4xl font-black text-foreground sm:text-5xl"
         />
       </div>
       <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">

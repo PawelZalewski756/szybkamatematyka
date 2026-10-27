@@ -1,7 +1,7 @@
 "use client";
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
-import { MathText } from "@/components/trening/MathText";
+import { QuizEquation } from "@/components/minigry/QuizEquation";
 import { useDailyChallenge } from "@/lib/wyzwania/use-daily-challenge";
 import { DAILY_CHALLENGE_QUESTION_COUNT } from "@/lib/wyzwania/daily-challenge";
 import type { ChallengeReward } from "@/lib/wyzwania/types";
@@ -386,10 +386,10 @@ export function DailyChallengeView() {
                           : "border-white/15 bg-white/[0.06]"
                     }`}
                   >
-                    <MathText
+                    <QuizEquation
                       content={current.claim}
                       as="div"
-                      className="text-3xl font-black text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+                      className="flex max-w-full flex-wrap items-center justify-center gap-x-[0.12em] text-3xl font-black text-foreground sm:text-4xl"
                     />
                   </motion.div>
 

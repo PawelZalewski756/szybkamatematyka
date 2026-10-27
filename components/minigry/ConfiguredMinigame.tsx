@@ -1,7 +1,7 @@
 "use client";
 
 import { MinigameShell } from "@/components/minigry/MinigameShell";
-import { MathText } from "@/components/trening/MathText";
+import { QuizEquation } from "@/components/minigry/QuizEquation";
 import { getMinigameBySlug } from "@/lib/minigry/minigame-registry";
 import { type MinigamePlayMode } from "@/lib/minigry/game-modes";
 import type {
@@ -111,10 +111,10 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = q.prompt;
     questionContent = (
-      <MathText
+      <QuizEquation
         content={q.headline}
         as="div"
-        className="mt-4 break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+        className="mt-4 flex max-w-full flex-wrap items-center justify-center gap-x-[0.12em] break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl"
       />
     );
     answers = (
@@ -140,10 +140,10 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
     questionContent = (
-      <MathText
+      <QuizEquation
         content={q.equation}
         as="div"
-        className="mt-4 break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl [&_.katex]:text-[1em]"
+        className="mt-4 flex max-w-full flex-wrap items-center justify-center gap-x-[0.12em] break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl"
       />
     );
     answers = (
@@ -176,14 +176,14 @@ export function ConfiguredMinigame({
     questionPrompt = "Która wartość jest większa?";
     questionContent = (
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6">
-        <MathText
+        <QuizEquation
           content={q.left}
-          className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+          className="inline-flex items-center text-3xl font-bold tabular-nums text-foreground sm:text-4xl"
         />
         <span className="text-lg font-medium text-muted">czy</span>
-        <MathText
+        <QuizEquation
           content={q.right}
-          className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+          className="inline-flex items-center text-3xl font-bold tabular-nums text-foreground sm:text-4xl"
         />
       </div>
     );
