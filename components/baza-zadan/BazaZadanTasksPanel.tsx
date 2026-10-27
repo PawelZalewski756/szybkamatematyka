@@ -18,8 +18,10 @@ import {
   ChevronRight,
   Search,
   SearchX,
+  Shuffle,
   SlidersHorizontal,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { useDeferredValue, useMemo, useState } from "react";
 
@@ -63,6 +65,7 @@ function FilterChip({
 }
 
 export function BazaZadanTasksPanel() {
+  const router = useRouter();
   const { path } = useLearningPath();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
@@ -186,6 +189,20 @@ export function BazaZadanTasksPanel() {
       </div>
 
       <div className="mt-4 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          onClick={() => {
+            const pool =
+              tasks.length > 0 ? tasks : getTasksForPath(path);
+            if (pool.length === 0) return;
+            const pick = pool[Math.floor(Math.random() * pool.length)];
+            if (pick) router.push(`/baza-zadan/${pick.id}`);
+          }}
+          className="inline-flex items-center gap-2 rounded-xl bg-accent px-3.5 py-2 text-xs font-bold text-on-accent shadow-sm transition hover:brightness-105"
+        >
+          <Shuffle className="h-4 w-4" aria-hidden="true" />
+          Losowe zadanie
+        </button>
         <button
           type="button"
           aria-expanded={filtersOpen}
