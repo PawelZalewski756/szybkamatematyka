@@ -12,7 +12,19 @@ export function cleanMaturaTaskText(text: string): string {
   return text
     .replace(/\s*pwz:\s*\d+%[\s\S]*$/i, "")
     .replace(/\s*Poziom wykonania zadania[\s\S]*$/i, "")
+    // Urwany tag HTML bez `>` (klasyczny śmieć scrapera: `<ul class="`).
+    .replace(/<[a-zA-Z][^<>]*$/gm, "")
     .replace(/&radic;/g, "√")
+    .replace(/&fnof;/g, "f")
+    .replace(/&frasl;/g, "/")
+    .replace(/&lang;/g, "⟨")
+    .replace(/&rang;/g, "⟩")
+    .replace(/&raquo;/g, "»")
+    .replace(/&alpha;/g, "α")
+    .replace(/&ge;/g, "≥")
+    .replace(/&#8738;/g, "∠")
+    .replace(/&#8730;/g, "√")
+    .replace(/&#8731;/g, "∛")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -24,6 +36,8 @@ function stripHtml(html: string): string {
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/div>/gi, "\n")
     .replace(/<[^>]+>/g, " ")
+    // Niekompletne tagi bez `>` (stripHtml wcześniej je zostawiał).
+    .replace(/<[a-zA-Z][^<>]*$/gm, " ")
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")

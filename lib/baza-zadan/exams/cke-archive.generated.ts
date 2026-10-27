@@ -229,9 +229,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Na rysunku przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m15-maj/z08-1.png) Zbiorem wartości funkcji ƒ jest",
     "choices": [
       "(–2,2)",
-      "&lang;–2,2)",
-      "&lang;–2,2&rang;",
-      "(–2,2&rang;"
+      "⟨–2,2)",
+      "⟨–2,2⟩",
+      "(–2,2⟩"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\langle-2,2\\rangle$",
@@ -257,7 +257,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na wykresie funkcji liniowej określonej wzorem &fnof;( x ) = ( m − 1) x + 3 leży punkt S = (5, −2) . Zatem",
+    "prompt": "Na wykresie funkcji liniowej określonej wzorem f( x ) = ( m − 1) x + 3 leży punkt S = (5, −2) . Zatem",
     "choices": [
       "m = − 1",
       "m = 0",
@@ -287,12 +287,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa &fnof; określona wzorem &fnof;( x ) = 2 x + b ma takie samo miejsce zerowe, jakie ma funkcja liniowa g ( x ) = −3 x + 4. Stąd wynika, że",
+    "prompt": "Funkcja liniowa f określona wzorem f( x ) = 2 x + b ma takie samo miejsce zerowe, jakie ma funkcja liniowa g ( x ) = −3 x + 4. Stąd wynika, że",
     "choices": [
       "b = 4",
-      "b = – 3 &frasl; 2",
-      "b = – 8 &frasl; 3",
-      "b = 4 &frasl; 3"
+      "b = – 3 / 2",
+      "b = – 8 / 3",
+      "b = 4 / 3"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $b = -\\frac{8}{3}$",
@@ -318,12 +318,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa określona jest wzorem &fnof;( x ) = x 2 + x + c . Jeżeli &fnof;(3) = 4, to",
+    "prompt": "Funkcja kwadratowa określona jest wzorem f( x ) = x 2 + x + c . Jeżeli f(3) = 4, to",
     "choices": [
-      "&fnof;(1) = − 6",
-      "&fnof;(1) = 0",
-      "&fnof;(1) = 6",
-      "&fnof;(1) = 18"
+      "f(1) = − 6",
+      "f(1) = 0",
+      "f(1) = 6",
+      "f(1) = 18"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(1) = -6$.",
@@ -576,8 +576,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Proste o równaniach: y = 2 mx − m 2 − 1 oraz y = 4 m 2 x + m 2 + 1 są prostopadłe dla",
     "choices": [
-      "m = − 1 &frasl; 2",
-      "m = 1 &frasl; 2",
+      "m = − 1 / 2",
+      "m = 1 / 2",
       "m = 1",
       "m = 2"
     ],
@@ -758,10 +758,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga – niebieska. Z każdego pojemnika losujemy jedną kulę. Niech p oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy",
     "choices": [
-      "p = 1 &frasl; 4",
-      "p = 3 &frasl; 8",
-      "p = 1 &frasl; 2",
-      "p = 2 &frasl; 3"
+      "p = 1 / 4",
+      "p = 3 / 8",
+      "p = 1 / 2",
+      "p = 2 / 3"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{3}{8}$",
@@ -843,7 +843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków – odpowiednio – AE i EC . Punkty L i N leżą na przekątnej BD tak, że | BL | = 1 &frasl; 3 | BE | i | DN | = 1 &frasl; 3 | DE | (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
+    "prompt": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków – odpowiednio – AE i EC . Punkty L i N leżą na przekątnej BD tak, że | BL | = 1 / 3 | BE | i | DN | = 1 / 3 | DE | (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -871,7 +871,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Oblicz najmniejszą i największą wartość funkcji kwadratowej &fnof;( x ) = x 2 − 6 x + 3 w przedziale &lang;0,4&rang;.",
+    "prompt": "Oblicz najmniejszą i największą wartość funkcji kwadratowej f( x ) = x 2 − 6 x + 3 w przedziale ⟨0,4⟩.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -927,7 +927,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy 4 &frasl; 7 , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy 1 &frasl; 2 . Wyznacz ten ułamek.",
+    "prompt": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy 4 / 7 , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy 1 / 2 . Wyznacz ten ułamek.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -955,7 +955,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3 &frasl; 5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
+    "prompt": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3 / 5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1013,7 +1013,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W nieskończonym ciągu arytmetycznym ( a n ) , określonym dla n ≥ 1 , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy a 1 , a 3 , a k ciągu ( a n ), w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny ( b n ). Oblicz k . <ul class=\"",
+    "prompt": "W nieskończonym ciągu arytmetycznym ( a n ) , określonym dla n ≥ 1 , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy a 1 , a 3 , a k ciągu ( a n ), w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny ( b n ). Oblicz k .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1041,7 +1041,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 0,6 jest jednym z przybliżeń liczby 5 &frasl; 8 . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
+    "prompt": "Liczba 0,6 jest jednym z przybliżeń liczby 5 / 8 . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
     "choices": [
       "0,025%",
       "2,5%",
@@ -1165,7 +1165,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami &fnof;( x ) = – 5 x + 1 oraz g ( x ) = 5 x . Liczba punktów wspólnych wykresów tych funkcji jest równa",
+    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami f( x ) = – 5 x + 1 oraz g ( x ) = 5 x . Liczba punktów wspólnych wykresów tych funkcji jest równa",
     "choices": [
       "3",
       "2",
@@ -1257,7 +1257,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równania y = – 3 &frasl; 4 x + 5 &frasl; 4 oraz y = – 4 &frasl; 3 opisują dwie proste",
+    "prompt": "Równania y = – 3 / 4 x + 5 / 4 oraz y = – 4 / 3 opisują dwie proste",
     "choices": [
       "przecinające się pod kątem o mierze 90°.",
       "pokrywające się.",
@@ -1320,7 +1320,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja &fnof;, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji &fnof; zawiera dokładnie",
+    "prompt": "Funkcja f, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji f zawiera dokładnie",
     "choices": [
       "5 elementów",
       "6 elementów",
@@ -1414,7 +1414,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej &fnof;. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja &fnof; może być opisana wzorem",
+    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie A = (2, 4), która jest wykresem funkcji kwadratowej f. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja f może być opisana wzorem",
     "choices": [
       "ƒ( x ) = ( x – 2) 2 + 4",
       "ƒ( x ) = ( x + 2) 2 + 4",
@@ -1841,7 +1841,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem y = ( 1 &frasl; 2 ) x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
+    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem y = ( 1 / 2 ) x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2012,7 +2012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy o 22. Oblicz pole powierzchni całkowitej i objętość tego stożka. <ul class=\"",
+    "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy o 22. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2174,7 +2174,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja wykładnicza określona wzorem &fnof;( x ) = 3 x przyjmuje wartość 6 dla argumentu",
+    "prompt": "Funkcja wykładnicza określona wzorem f( x ) = 3 x przyjmuje wartość 6 dla argumentu",
     "choices": [
       "x = 2",
       "x = log 3 2",
@@ -2357,15 +2357,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja &fnof; przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: &fnof;(42), &fnof;(44), &fnof;(45), &fnof;(48) największa to",
+    "prompt": "Funkcja f przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: f(42), f(44), f(45), f(48) największa to",
     "choices": [
-      "&fnof;(42)",
-      "&fnof;(44)",
-      "&fnof;(45)",
-      "&fnof;(48)"
+      "f(42)",
+      "f(44)",
+      "f(45)",
+      "f(48)"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli &fnof;(44)",
+    "explanation": "B, czyli f(44)",
     "solutionSteps": [
       "Rozkładamy każdą z podanych liczb na czynniki pierwsze i wyszukujemy największy czynnik pierwszy.\nDla 42: $42 = 2 \\cdot 3 \\cdot 7$. Największy dzielnik pierwszy to 7.\nDla 44: $44 = 2 \\cdot 2 \\cdot 11$. Największy dzielnik pierwszy to 11.\nDla 45: $45 = 3 \\cdot 3 \\cdot 5$. Największy dzielnik pierwszy to 5.\nDla 48: $48 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 3$. Największy dzielnik pierwszy to 3.",
       "Porównujemy otrzymane wartości: 7, 11, 5, 3. Największą z nich jest 11, które odpowiada liczbie 44."
@@ -2418,12 +2418,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej &fnof; jest parabola o wierzchołku W = (5,7) . Wówczas prawdziwa jest równość",
+    "prompt": "Wykresem funkcji kwadratowej f jest parabola o wierzchołku W = (5,7) . Wówczas prawdziwa jest równość",
     "choices": [
-      "&fnof;(1) = &fnof;(9)",
-      "&fnof;(1) = &fnof;(11)",
-      "&fnof;(1) = &fnof;(13)",
-      "&fnof;(1) = &fnof;(15)"
+      "f(1) = f(9)",
+      "f(1) = f(11)",
+      "f(1) = f(13)",
+      "f(1) = f(15)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(1) = f(9)$",
@@ -2452,9 +2452,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Jeżeli kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m15-przykladowa/z14-1.png) równa się",
     "choices": [
       "– 1",
-      "– 1 &frasl; 3",
-      "3 &frasl; 7",
-      "84 &frasl; 25"
+      "– 1 / 3",
+      "3 / 7",
+      "84 / 25"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{12}{35}$.",
@@ -2483,9 +2483,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Równanie (2 x – 1)⋅( x – 2) = (1 – 2 x )⋅( x + 2) ma dwa rozwiązania. Są to liczby",
     "choices": [
-      "–2 oraz 1 &frasl; 2",
-      "0 oraz 1 &frasl; 2",
-      "1 &frasl; 2 oraz 2",
+      "–2 oraz 1 / 2",
+      "0 oraz 1 / 2",
+      "1 / 2 oraz 2",
       "–2 oraz 2"
     ],
     "correctIndex": 1,
@@ -2543,7 +2543,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego &alpha; jest równy ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-1.png)",
+    "prompt": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego α jest równy ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-1.png)",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-2.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-3.png)",
@@ -2760,7 +2760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem rozwiązań nierówności ax + 4 ≥ 0 z niewiadomą x jest przedział (–∞, 2&rang; . Wyznacz a .",
+    "prompt": "Zbiorem rozwiązań nierówności ax + 4 ≥ 0 z niewiadomą x jest przedział (–∞, 2⟩ . Wyznacz a .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3013,7 +3013,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę – graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego. <ul class=\"",
+    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę – graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3258,7 +3258,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja liniowa &fnof;(x) = 3 &frasl; 4 x + 6 . Miejscem zerowym tej funkcji jest liczba",
+    "prompt": "Dana jest funkcja liniowa f(x) = 3 / 4 x + 6 . Miejscem zerowym tej funkcji jest liczba",
     "choices": [
       "8",
       "6",
@@ -3349,7 +3349,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Najmniejsza wartość funkcji ƒ w przedziale &lang;−1, 2&rang; jest równa",
+    "prompt": "Najmniejsza wartość funkcji ƒ w przedziale ⟨−1, 2⟩ jest równa",
     "choices": [
       "2",
       "5",
@@ -3774,7 +3774,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna sześciu liczb naturalnych: 31, 16, 25, 29, 27, x, jest równa x &frasl; 2 . Mediana tych liczb jest równa",
+    "prompt": "Średnia arytmetyczna sześciu liczb naturalnych: 31, 16, 25, 29, 27, x, jest równa x / 2 . Mediana tych liczb jest równa",
     "choices": [
       "26",
       "27",
@@ -3889,7 +3889,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że |&#8738;DEC| = |&#8738;BGF| = 90° (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
+    "prompt": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że |∠DEC| = |∠BGF| = 90° (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4031,7 +4031,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy kolejno dwa razy po jednej liczbie bez zwracania. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie równa 30. Wynik zapisz w postaci ułamka zwykłego nieskracalnego. <ul class=\"",
+    "prompt": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy kolejno dwa razy po jednej liczbie bez zwracania. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie równa 30. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4061,8 +4061,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba 5 8 · 16 −2 jest równa.",
     "choices": [
-      "( 5 &frasl; 2 ) 8",
-      "5 &frasl; 2",
+      "( 5 / 2 ) 8",
+      "5 / 2",
       "10 8",
       "10"
     ],
@@ -4090,11 +4090,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba &#8731; 54 – &#8731; 2 jest równa",
+    "prompt": "Liczba ∛ 54 – ∛ 2 jest równa",
     "choices": [
-      "&#8731; 52",
+      "∛ 52",
       "3",
-      "2&#8731; 2",
+      "2∛ 2",
       "2"
     ],
     "correctIndex": 2,
@@ -4122,10 +4122,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba 2log 2 3 - 2log 2 5 jest równa.",
     "choices": [
-      "log 2 9 &frasl; 25",
-      "log 2 3 &frasl; 5",
-      "log 2 9 &frasl; 5",
-      "log 2 6 &frasl; 25"
+      "log 2 9 / 25",
+      "log 2 3 / 5",
+      "log 2 9 / 5",
+      "log 2 6 / 25"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\log_2 \\frac{9}{25}$",
@@ -4181,7 +4181,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równość (x&#8730; 2 – 2) 2 = (2 + &#8730; 2 ) 2 jest",
+    "prompt": "Równość (x√ 2 – 2) 2 = (2 + √ 2 ) 2 jest",
     "choices": [
       "prawdziwa dla x = –√ 2",
       "prawdziwa dla x = √ 2",
@@ -4304,7 +4304,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej ƒ(x)=&#8730; 3 (x + 1) – 12 jest liczba",
+    "prompt": "Miejscem zerowym funkcji liniowej ƒ(x)=√ 3 (x + 1) – 12 jest liczba",
     "choices": [
       "√ 3 – 4",
       "–2√ 3 + 1",
@@ -4396,7 +4396,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym (a n ), określonym dla n &ge; 1 , dane są: a 1 = 5 , a 2 = 11 . Wedy",
+    "prompt": "W ciągu arytmetycznym (a n ), określonym dla n ≥ 1 , dane są: a 1 = 5 , a 2 = 11 . Wedy",
     "choices": [
       "a 14 = 71",
       "a 12 = 71",
@@ -4555,8 +4555,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Obwód trójkąta ABC, przedstawionego na rysunku, jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z17-1.jpg)",
     "choices": [
-      "(3 + √ 3 &frasl; 2 ) a",
-      "(2 + √ 2 &frasl; 2 ) a",
+      "(3 + √ 3 / 2 ) a",
+      "(2 + √ 2 / 2 ) a",
       "(3 + √ 3 ) a",
       "(2 + √ 2 ) a"
     ],
@@ -4598,10 +4598,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiona jest prosta k, przechodząca przez punkt A = (2,–3) i przez początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox. ![Rysunek do zadania](/cke-matura/m17-maj/z18-1.jpg) Zatem",
     "choices": [
-      "tgα = – 2 &frasl; 3",
-      "tgα = – 3 &frasl; 2",
-      "tgα = 2 &frasl; 3",
-      "tgα = 3 &frasl; 2"
+      "tgα = – 2 / 3",
+      "tgα = – 3 / 2",
+      "tgα = 2 / 3",
+      "tgα = 3 / 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\operatorname{tg}\\alpha = -\\frac{3}{2}$",
@@ -4627,10 +4627,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = (–2,4) . Prosta k jest określona równaniem y = – 1 &frasl; 4 x + 7 &frasl; 2 . Zatem prostą l opisuje równanie",
+    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = (–2,4) . Prosta k jest określona równaniem y = – 1 / 4 x + 7 / 2 . Zatem prostą l opisuje równanie",
     "choices": [
-      "y = 1 &frasl; 4 x + 7 &frasl; 2",
-      "y = – 1 &frasl; 4 x – 7 &frasl; 2",
+      "y = 1 / 4 x + 7 / 2",
+      "y = – 1 / 4 x – 7 / 2",
       "y = 4x – 12",
       "y = 4x + 12"
     ],
@@ -4722,8 +4722,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Promień AS podstawy walca jest równy wysokości OS tego walca. Sinus kąta OAS (zobacz rysunek) jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z22-1.jpg)",
     "choices": [
-      "√ 3 &frasl; 2",
-      "√ 2 &frasl; 2",
+      "√ 3 / 2",
+      "√ 2 / 2",
       "½",
       "1"
     ],
@@ -4815,10 +4815,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od 1 do 24 losujemy jedną liczbę. Niech A oznacza zdarzenie, że wylosowana liczba będzie dzielnikiem liczby 24. Wtedy prawdopodobieństwo zdarzenia A jest równe",
     "choices": [
-      "1 &frasl; 4",
-      "1 &frasl; 3",
-      "1 &frasl; 8",
-      "1 &frasl; 6"
+      "1 / 4",
+      "1 / 3",
+      "1 / 8",
+      "1 / 6"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{1}{3}$",
@@ -4901,7 +4901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz |&#8738;APC| = α i |&#8738;ABC| = β (zobacz rysunek). Wykaż, że α = 180° − 2β . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
+    "prompt": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz |∠APC| = α i |∠ABC| = β (zobacz rysunek). Wykaż, że α = 180° − 2β . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5072,7 +5072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ostrosłupie prawidłowym trójkątnym wysokość ściany bocznej prostopadła do krawędzi podstawy ostrosłupa jest równa ![Rysunek do zadania](/cke-matura/m17-maj/z34-1.png) a pole powierzchni bocznej tego ostrosłupa jest równe ![Rysunek do zadania](/cke-matura/m17-maj/z34-2.png) Oblicz objętość tego ostrosłupa. <ul class=\"",
+    "prompt": "W ostrosłupie prawidłowym trójkątnym wysokość ściany bocznej prostopadła do krawędzi podstawy ostrosłupa jest równa ![Rysunek do zadania](/cke-matura/m17-maj/z34-1.png) a pole powierzchni bocznej tego ostrosłupa jest równe ![Rysunek do zadania](/cke-matura/m17-maj/z34-2.png) Oblicz objętość tego ostrosłupa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -5164,7 +5164,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są liczby a = 3,6·10 –12 oraz b = 2,4·10 –20 . Wtedy iloraz a &frasl; b jest równy",
+    "prompt": "Dane są liczby a = 3,6·10 –12 oraz b = 2,4·10 –20 . Wtedy iloraz a / b jest równy",
     "choices": [
       "8,64·10 –32",
       "1,5·10 –8",
@@ -5321,9 +5321,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja liniowa ƒ określona jest wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z08-1.png) , dla wszystkich liczb rzeczywistych x. Wskaż zdanie prawdziwe.",
     "choices": [
-      "Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, 1 &frasl; 3 )",
+      "Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, 1 / 3 )",
       "Funkcja ƒ jest malejąca i jej wykres przecina oś Oy w punkcie P = (0, -1)",
-      "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, 1 &frasl; 3 )",
+      "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, 1 / 3 )",
       "Funkcja ƒ jest rosnąca i jej wykres przecina oś Oy w punkcie P = (0, -1)"
     ],
     "correctIndex": 3,
@@ -5383,8 +5383,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Liczba 1 jest miejscem zerowym funkcji liniowej ƒ(x) = ax + b , a punkt M = (3,–2) należy do wykresu tej funkcji. Współczynnik a we wzorze tej funkcji jest równy",
     "choices": [
       "1",
-      "3 &frasl; 2",
-      "– 3 &frasl; 2",
+      "3 / 2",
+      "– 3 / 2",
       "–1"
     ],
     "correctIndex": 3,
@@ -5532,7 +5532,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt o bokach długości: 2&#8730; 5 , 3&#8730; 5 , 4&#8730; 5 . Trójkątem podobnym do tego trójkąta jest trójkąt, którego boki mają długości",
+    "prompt": "Dany jest trójkąt o bokach długości: 2√ 5 , 3√ 5 , 4√ 5 . Trójkątem podobnym do tego trójkąta jest trójkąt, którego boki mają długości",
     "choices": [
       "10, 15, 20",
       "20, 45, 80",
@@ -5598,8 +5598,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "a − b",
       "2(a − b)",
-      "a + 1 &frasl; 2 b",
-      "a+b &frasl; 2"
+      "a + 1 / 2 b",
+      "a+b / 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2(a - b)$",
@@ -5732,7 +5732,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5",
       "3√ 2",
       "5√ 2",
-      "5√ 3 &frasl; 3"
+      "5√ 3 / 3"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 5",
@@ -5760,10 +5760,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono bryłę zbudowaną z walca i półkuli. Wysokość walca jest równa r i jest taka sama jak promień półkuli oraz taka sama jak promień podstawy walca. ![Rysunek do zadania](/cke-matura/m18-maj/z22-1.gif) Objętość tej bryły jest równa",
     "choices": [
-      "5 &frasl; 3 πr 3",
-      "4 &frasl; 3 πr 3",
-      "2 &frasl; 3 πr 3",
-      "1 &frasl; 3 πr 3"
+      "5 / 3 πr 3",
+      "4 / 3 πr 3",
+      "2 / 3 πr 3",
+      "1 / 3 πr 3"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{5}{3} \\pi r^3$",
@@ -5793,7 +5793,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "2",
       "1",
-      "1 &frasl; √ 2",
+      "1 / √ 2",
       "√ 2"
     ],
     "correctIndex": 1,
@@ -5853,10 +5853,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pudełku jest 50 kuponów, wśród których jest 15 kuponów przegrywających, a pozostałe kupony są wygrywające. Z tego pudełka w sposób losowy wyciągamy jeden kupon. Prawdopodobieństwo zdarzenia polegającego na tym, że wyciągniemy kupon wygrywający, jest równe",
     "choices": [
-      "15 &frasl; 35",
-      "1 &frasl; 50",
-      "15 &frasl; 50",
-      "35 &frasl; 50"
+      "15 / 35",
+      "1 / 50",
+      "15 / 50",
+      "35 / 50"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{35}{50}$",
@@ -6110,7 +6110,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe 45√ 3 . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif) <ul class=\"",
+    "prompt": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe 45√ 3 . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6326,7 +6326,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej &fnof; określonej wzorem ![Rysunek do zadania](/cke-matura/m19-maj/z07-1.gif)\n\nRozwiąż zadanie.",
+    "prompt": "Miejscem zerowym funkcji liniowej f określonej wzorem ![Rysunek do zadania](/cke-matura/m19-maj/z07-1.gif)\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6354,12 +6354,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wartości funkcji &fnof; jest przedział",
+    "prompt": "Zbiorem wartości funkcji f jest przedział",
     "choices": [
-      "(− ∞,0&rang;",
-      "&lang;0, 4&rang;",
-      "&lang;− 4, + ∞)",
-      "&lang;4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
+      "(− ∞,0⟩",
+      "⟨0, 4⟩",
+      "⟨− 4, + ∞)",
+      "⟨4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej ƒ. Wierzchołkiem tej paraboli jest punkt W = (2, − 4). Liczby 0 i 4 to miejsca zerowe funkcji ƒ. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\langle -4, + \\infty )$",
@@ -6385,7 +6385,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji &fnof; w przedziale &lang;1,4&rang; jest równa",
+    "prompt": "Największa wartość funkcji f w przedziale ⟨1,4⟩ jest równa",
     "choices": [
       "− 3",
       "− 4",
@@ -6416,7 +6416,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii wykresu funkcji &fnof; jest prosta o równaniu",
+    "prompt": "Osią symetrii wykresu funkcji f jest prosta o równaniu",
     "choices": [
       "y = − 4",
       "x = − 4",
@@ -6451,7 +6451,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "–168",
       "–189",
       "–21",
-      "–42 pokaż wskazówkę &raquo;"
+      "–42 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $-168$",
@@ -6478,8 +6478,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg geometryczny ( a n ), określony dla n ≥ 1 . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy",
     "choices": [
-      "1 &frasl; 3",
-      "1 &frasl; √ 3",
+      "1 / 3",
+      "1 / √ 3",
       "3",
       "√ 3"
     ],
@@ -6507,12 +6507,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sinus kąta ostrego α jest równy 4 &frasl; 5 . Wtedy",
+    "prompt": "Sinus kąta ostrego α jest równy 4 / 5 . Wtedy",
     "choices": [
-      "cos α = 4 &frasl; 5",
-      "cos α = 1 &frasl; 5",
-      "cos α = 9 &frasl; 25",
-      "cos α = 3 &frasl; 5"
+      "cos α = 4 / 5",
+      "cos α = 1 / 5",
+      "cos α = 9 / 25",
+      "cos α = 3 / 5"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\cos \\alpha = \\frac{3}{5}$",
@@ -6669,9 +6669,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Prosta o równaniu y = ax + b jest prostopadła do prostej o równaniu y = −4x + 1 i przechodzi przez punkt P = (½,0), gdy",
     "choices": [
       "a = − 4 i b = − 2",
-      "a = 1 &frasl; 4 i b = − 1 &frasl; 8",
+      "a = 1 / 4 i b = − 1 / 8",
       "a = − 4 i b = 2",
-      "a = 1 &frasl; 4 i b = 1 &frasl; 2"
+      "a = 1 / 4 i b = 1 / 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a = \\frac{1}{4}$ i $b = -\\frac{1}{8}$",
@@ -6696,7 +6696,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiony jest fragment wykresu funkcji liniowej &fnof; . Na wykresie tej funkcji leżą punkty A = (0, 4) i B = (2, 2) . ![Rysunek do zadania](/cke-matura/m19-maj/z19-1.gif) Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres funkcji g określonej wzorem",
+    "prompt": "Na rysunku przedstawiony jest fragment wykresu funkcji liniowej f . Na wykresie tej funkcji leżą punkty A = (0, 4) i B = (2, 2) . ![Rysunek do zadania](/cke-matura/m19-maj/z19-1.gif) Obrazem prostej AB w symetrii względem początku układu współrzędnych jest wykres funkcji g określonej wzorem",
     "choices": [
       "g(x) = x + 4",
       "g(x) = x − 4",
@@ -6825,7 +6825,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "a = 7",
       "a = 12",
       "a = 14",
-      "a = 20 pokaż wskazówkę &raquo;"
+      "a = 20 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a=12$.",
@@ -6884,10 +6884,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pudełku jest 40 kul. Wśród nich jest 35 kul białych, a pozostałe to kule czerwone. Prawdopodobieństwo wylosowania każdej kuli jest takie samo. Z pudełka losujemy jedną kulę. Prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy kulę czerwoną, jest równe",
     "choices": [
-      "1 &frasl; 8",
-      "1 &frasl; 5",
-      "1 &frasl; 40",
-      "1 &frasl; 35"
+      "1 / 8",
+      "1 / 5",
+      "1 / 40",
+      "1 / 35"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{1}{8}$",
@@ -7145,7 +7145,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Długość krawędzi podstawy ostrosłupa prawidłowego czworokątnego jest równa 6. Pole powierzchni całkowitej tego ostrosłupa jest cztery razy większe od pola jego podstawy. Kąt α jest kątem nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy (zobacz rysunek). Oblicz cosinus kąta α. ![Rysunek do zadania](/cke-matura/m19-maj/z34-1.gif) <ul class=\"",
+    "prompt": "Długość krawędzi podstawy ostrosłupa prawidłowego czworokątnego jest równa 6. Pole powierzchni całkowitej tego ostrosłupa jest cztery razy większe od pola jego podstawy. Kąt α jest kątem nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy (zobacz rysunek). Oblicz cosinus kąta α. ![Rysunek do zadania](/cke-matura/m19-maj/z34-1.gif)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -7271,10 +7271,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba log 5 √ 125 jest równa",
     "choices": [
-      "2 &frasl; 3",
+      "2 / 3",
       "2",
       "3",
-      "3 &frasl; 2"
+      "3 / 2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
@@ -7333,10 +7333,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem wszystkich rozwiązań nierówności 3(1 − x) > 2(3x − 1) − 12x jest przedział",
     "choices": [
-      "(– 5 &frasl; 3 , + ∞)",
-      "( – ∞, 5 &frasl; 3 )",
-      "( 5 &frasl; 3 , + ∞)",
-      "( – ∞, – 5 &frasl; 3 )"
+      "(– 5 / 3 , + ∞)",
+      "( – ∞, 5 / 3 )",
+      "( 5 / 3 , + ∞)",
+      "( – ∞, – 5 / 3 )"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-\\frac{5}{3}, +\\infty)$",
@@ -7393,7 +7393,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Współczynnik a we wzorze funkcji &fnof; jest równy",
+    "prompt": "Współczynnik a we wzorze funkcji f jest równy",
     "choices": [
       "1",
       "2",
@@ -7424,7 +7424,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji &fnof; w przedziale &lang;1,4&rang; jest równa",
+    "prompt": "Największa wartość funkcji f w przedziale ⟨1,4⟩ jest równa",
     "choices": [
       "− 3",
       "0",
@@ -7456,7 +7456,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii paraboli będącej wykresem funkcji &fnof; jest prosta o równaniu",
+    "prompt": "Osią symetrii paraboli będącej wykresem funkcji f jest prosta o równaniu",
     "choices": [
       "x = 1",
       "x = 2",
@@ -7518,7 +7518,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji liniowej &fnof; określonej wzorem &fnof;(x) = ax + b . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z11-1.png) Współczynniki a oraz b we wzorze funkcji &fnof; spełniają zależność",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji liniowej f określonej wzorem f(x) = ax + b . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z11-1.png) Współczynniki a oraz b we wzorze funkcji f spełniają zależność",
     "choices": [
       "a + b > 0",
       "a + b = 0",
@@ -7550,10 +7550,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja &fnof; jest określona wzorem &fnof;(x) = 4 –x + 1 dla każdej liczby rzeczywistej x. Liczba &fnof;(½) jest równa",
+    "prompt": "Funkcja f jest określona wzorem f(x) = 4 –x + 1 dla każdej liczby rzeczywistej x. Liczba f(½) jest równa",
     "choices": [
       "½",
-      "3 &frasl; 2",
+      "3 / 2",
       "3",
       "17"
     ],
@@ -7581,12 +7581,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = (m − 2)x oraz y = 3 &frasl; 4 x + 7 są równoległe. Wtedy",
+    "prompt": "Proste o równaniach y = (m − 2)x oraz y = 3 / 4 x + 7 są równoległe. Wtedy",
     "choices": [
-      "m = − 5 &frasl; 4",
-      "m = 2 &frasl; 3",
-      "m = 11 &frasl; 4",
-      "m = 10 &frasl; 3"
+      "m = − 5 / 4",
+      "m = 2 / 3",
+      "m = 11 / 4",
+      "m = 10 / 3"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $m = \\frac{11}{4}$",
@@ -7677,7 +7677,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt A = ( 1 &frasl; 3 , − 1) należy do wykresu funkcji liniowej &fnof; określonej wzorem &fnof;(x) = 3x + b . Wynika stąd, że",
+    "prompt": "Punkt A = ( 1 / 3 , − 1) należy do wykresu funkcji liniowej f określonej wzorem f(x) = 3x + b . Wynika stąd, że",
     "choices": [
       "b = 2",
       "b = 1",
@@ -8072,7 +8072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz |CE| = 3 &frasl; 4 |CD| . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że |CF| = 9 &frasl; 16 |CB|.",
+    "prompt": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz |CE| = 3 / 4 |CD| . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że |CF| = 9 / 16 |CB|.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8157,7 +8157,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD, w którym A = (5, − 5 &frasl; 3 ). Przekątna BD tego kwadratu jest zawarta w prostej o równaniu y = 4 &frasl; 3 x. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
+    "prompt": "Dany jest kwadrat ABCD, w którym A = (5, − 5 / 3 ). Przekątna BD tego kwadratu jest zawarta w prostej o równaniu y = 4 / 3 x. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8186,7 +8186,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkie wyrazy ciągu geometrycznego (a n ), określonego dla n ≥ 1 , są dodatnie. Wyrazy tego ciągu spełniają warunek 6a 1 − 5a 2 + a 3 = 0 . Oblicz iloraz q tego ciągu należący do przedziału &lang;2√ 2 ,3√ 2 &rang;.",
+    "prompt": "Wszystkie wyrazy ciągu geometrycznego (a n ), określonego dla n ≥ 1 , są dodatnie. Wyrazy tego ciągu spełniają warunek 6a 1 − 5a 2 + a 3 = 0 . Oblicz iloraz q tego ciągu należący do przedziału ⟨2√ 2 ,3√ 2 ⟩.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8215,7 +8215,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy √ 7 . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png) <ul class=\"",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy √ 7 . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8247,9 +8247,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Niech a = −2 , b = 3. Wartość wyrażenia a b − b a jest równa",
     "choices": [
       "73 ⁄ 9",
-      "71 &frasl; 9",
-      "− 73 &frasl; 9",
-      "− 71 &frasl; 9"
+      "71 / 9",
+      "− 73 / 9",
+      "− 71 / 9"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $-\\frac{73}{9}$",
@@ -8464,9 +8464,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m20-probna/z08-1.png) , gdzie x ≠ – 2 , jest liczba należąca do przedziału",
     "choices": [
       "(–2,1)",
-      "&lang;1,+∞)",
+      "⟨1,+∞)",
       "(–∞,–5)",
-      "&lang;–5,–2)"
+      "⟨–5,–2)"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\langle1,+\\infty)$",
@@ -8494,8 +8494,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Linę o długości 100 metrów rozcięto na trzy części, których długości pozostają w stosunku 3 : 4 : 5 . Stąd wynika, że najdłuższa z tych części ma długość",
     "choices": [
-      "41 2 &frasl; 3 metra",
-      "33 1 &frasl; 3 metra",
+      "41 2 / 3 metra",
+      "33 1 / 3 metra",
       "60 metrów",
       "25 metrów"
     ],
@@ -8523,7 +8523,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej &fnof; określonej wzorem &fnof;(x) = x 2 + bx + c . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i c – we wzorze funkcji &fnof; – spełniają warunki:",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem f(x) = x 2 + bx + c . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i c – we wzorze funkcji f – spełniają warunki:",
     "choices": [
       "b c > 0",
       "b c",
@@ -8590,8 +8590,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "x = 18",
       "x = 6",
-      "x = 85 &frasl; 6",
-      "x = 6 &frasl; 85"
+      "x = 85 / 6",
+      "x = 6 / 85"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 6$",
@@ -8619,10 +8619,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i spełniona jest równość ![Rysunek do zadania](/cke-matura/m20-probna/z13-1.png) . Stąd wynika, że",
     "choices": [
-      "cos&alpha; = 24 &frasl; 49",
-      "cos&alpha; = 5 &frasl; 7",
-      "cos&alpha; = 25 &frasl; 49",
-      "cos&alpha; = 5√ 6 &frasl; 7"
+      "cosα = 24 / 49",
+      "cosα = 5 / 7",
+      "cosα = 25 / 49",
+      "cosα = 5√ 6 / 7"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{5}{13}$",
@@ -8682,8 +8682,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W trójkącie ABC punkt D leży na boku BC, a punkt E leży na boku AC. Odcinek DE jest równoległy do boku AB, a ponadto |AE| = |DE| = 4 , |AB| = 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z15-1.png) Odcinek CE ma długość",
     "choices": [
-      "16 &frasl; 3",
-      "8 &frasl; 3",
+      "16 / 3",
+      "8 / 3",
       "8",
       "6"
     ],
@@ -8775,10 +8775,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD. ![Rysunek do zadania](/cke-matura/m20-probna/z18-1.png) Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to",
     "choices": [
-      "&#8738;SAO",
-      "&#8738;SAB",
-      "&#8738;SOA",
-      "&#8738;ASB"
+      "∠SAO",
+      "∠SAB",
+      "∠SOA",
+      "∠ASB"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\angle SOA$",
@@ -8868,10 +8868,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Prosta l jest nachylona do osi Ox pod kątem 30° i przecina oś Oy w punkcie (0,– √ 3 ) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie",
     "choices": [
-      "y = √ 3 &frasl; 3 x – √ 3",
-      "y = √ 3 &frasl; 3 x + √ 3",
-      "y = 1 &frasl; 2 x – √ 3",
-      "y = 1 &frasl; 2 x + √ 3"
+      "y = √ 3 / 3 x – √ 3",
+      "y = √ 3 / 3 x + √ 3",
+      "y = 1 / 2 x – √ 3",
+      "y = 1 / 2 x + √ 3"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$",
@@ -8991,7 +8991,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe 1 &frasl; 3 . Liczba kul czarnych jest równa",
+    "prompt": "Z pudełka, w którym jest tylko 6 kul białych i n kul czarnych, losujemy jedną kulę. Prawdopodobieństwo wylosowania kuli białej jest równe 1 / 3 . Liczba kul czarnych jest równa",
     "choices": [
       "n = 9",
       "n = 2",
@@ -9106,7 +9106,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny ABC, w którym |&#8738;ACB| = 90° i |&#8738;ABC| = 60° . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że |AD| : |DB| = 3 :1 .",
+    "prompt": "Dany jest trójkąt prostokątny ABC, w którym |∠ACB| = 90° i |∠ABC| = 60° . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że |AD| : |DB| = 3 :1 .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9190,7 +9190,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa &fnof; określona wzorem &fnof;(x) = ax 2 + bx + c ma dwa miejsca zerowe: x 1 = –2 i x 2 = 6 . Wykres funkcji &fnof; przechodzi przez punkt A =(1,–5). Oblicz najmniejszą wartość funkcji &fnof;.",
+    "prompt": "Funkcja kwadratowa f określona wzorem f(x) = ax 2 + bx + c ma dwa miejsca zerowe: x 1 = –2 i x 2 = 6 . Wykres funkcji f przechodzi przez punkt A =(1,–5). Oblicz najmniejszą wartość funkcji f.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9246,7 +9246,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym |&#8738;ACB| = 90° (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png) <ul class=\"",
+    "prompt": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym |∠ACB| = 90° (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -9280,7 +9280,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10 13",
       "10 16",
       "10 –1",
-      "10 –30 pokaż wskazówkę &raquo;"
+      "10 –30 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $10^{13}$",
@@ -9374,7 +9374,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "3",
       "4",
-      "5 pokaż wskazówkę &raquo;"
+      "5 pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 4",
@@ -9400,12 +9400,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Różnica 0,(3) – 23 &frasl; 33 jest równa",
+    "prompt": "Różnica 0,(3) – 23 / 33 jest równa",
     "choices": [
       "− 0,(39)",
-      "– 39 &frasl; 100",
+      "– 39 / 100",
       "− 0,36",
-      "– 4 &frasl; 11"
+      "– 4 / 11"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{4}{11}$.",
@@ -9470,12 +9470,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji &fnof; określonej w zbiorze ⟨−6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja g jest określona wzorem g (x) = &fnof;(x) − 2 dla x ∈ ⟨−6, 5⟩ . Wskaż zdanie prawdziwe.",
+    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji f określonej w zbiorze ⟨−6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja g jest określona wzorem g (x) = f(x) − 2 dla x ∈ ⟨−6, 5⟩ . Wskaż zdanie prawdziwe.",
     "choices": [
-      "Liczba &fnof;(2) + g (2) jest równa (−2) .",
-      "Zbiory wartości funkcji &fnof; i g są równe.",
-      "Funkcje &fnof; i g mają te same miejsca zerowe.",
-      "Punkt P = (0, −2) należy do wykresów funkcji &fnof; i g . pokaż wskazówkę &raquo;"
+      "Liczba f(2) + g (2) jest równa (−2) .",
+      "Zbiory wartości funkcji f i g są równe.",
+      "Funkcje f i g mają te same miejsca zerowe.",
+      "Punkt P = (0, −2) należy do wykresów funkcji f i g . pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(2) + g(2) = -2$ (przy założeniu $f(2)=0$ na podstawie potencjalnego błędu w treści zadania).",
@@ -9507,7 +9507,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-3.png)",
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-4.png)",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png) pokaż wskazówkę &raquo;"
+      "![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png) pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -9539,7 +9539,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "m = 1",
       "m = 3",
       "m = 6",
-      "m = 9 pokaż wskazówkę &raquo;"
+      "m = 9 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $m = 9$.",
@@ -9596,12 +9596,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wykresu funkcji &fnof; określonej dla każdej liczby rzeczywistej x wzorem &fnof;(x) = 3 x − 2 należy punkt o współrzędnych",
+    "prompt": "Do wykresu funkcji f określonej dla każdej liczby rzeczywistej x wzorem f(x) = 3 x − 2 należy punkt o współrzędnych",
     "choices": [
       "(−1, −5)",
       "(0, −2)",
       "(0, −1)",
-      "(2, 4) pokaż wskazówkę &raquo;"
+      "(2, 4) pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-1, -5)$",
@@ -9626,7 +9626,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa &fnof; określona wzorem &fnof;(x) = −2(x + 1)(x − 3) jest malejąca w przedziale",
+    "prompt": "Funkcja kwadratowa f określona wzorem f(x) = −2(x + 1)(x − 3) jest malejąca w przedziale",
     "choices": [
       "⟨1, +∞)",
       "(−∞, 1⟩",
@@ -9657,12 +9657,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg (15, 3x, 5 &frasl; 3 ) jest geometryczny i wszystkie jego wyrazy są dodatnie. Stąd wynika, że",
+    "prompt": "Trzywyrazowy ciąg (15, 3x, 5 / 3 ) jest geometryczny i wszystkie jego wyrazy są dodatnie. Stąd wynika, że",
     "choices": [
-      "x = 3 &frasl; 5",
-      "x = 4 &frasl; 5",
+      "x = 3 / 5",
+      "x = 4 / 5",
       "x = 1",
-      "x = 5 &frasl; 3 pokaż wskazówkę &raquo;"
+      "x = 5 / 3 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = \\frac{5}{3}$",
@@ -9724,7 +9724,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "28",
       "29",
       "33",
-      "40 pokaż wskazówkę &raquo;"
+      "40 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 29",
@@ -9755,7 +9755,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "sin α",
       "tg α",
       "cos α",
-      "sin 2 α pokaż wskazówkę &raquo;"
+      "sin 2 α pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\cos \\alpha$",
@@ -9786,7 +9786,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10°",
       "30°",
       "40°",
-      "50° pokaż wskazówkę &raquo;"
+      "50° pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 40°",
@@ -9812,12 +9812,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg α = 2 &frasl; 5 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe",
+    "prompt": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg α = 2 / 5 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe",
     "choices": [
       "12",
-      "37 &frasl; 3",
-      "62 &frasl; 5",
-      "64 &frasl; 5 pokaż wskazówkę &raquo;"
+      "37 / 3",
+      "62 / 5",
+      "64 / 5 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{64}{5}$.",
@@ -9874,9 +9874,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach |AD| = 3 i |BD| = 12 (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png)",
     "choices": [
       "√ 34",
-      "13 &frasl; 4",
+      "13 / 4",
       "2√ 14",
-      "3√ 45 pokaż wskazówkę &raquo;"
+      "3√ 45 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{34}$",
@@ -10002,7 +10002,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 3",
       "2",
       "√ 5",
-      "3 pokaż wskazówkę &raquo;"
+      "3 pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\sqrt{5}$",
@@ -10033,7 +10033,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "68",
       "136",
       "2√ 34",
-      "8√ 34 pokaż wskazówkę &raquo;"
+      "8√ 34 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 136",
@@ -10061,10 +10061,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Z wierzchołków sześcianu ABCDEFGH losujemy jednocześnie dwa różne wierzchołki. Prawdopodobieństwo tego, że wierzchołki te będą końcami przekątnej sześcianu ABCDEFGH, jest równe",
     "choices": [
-      "1 &frasl; 7",
-      "4 &frasl; 7",
-      "1 &frasl; 14",
-      "3 &frasl; 7 pokaż wskazówkę &raquo;"
+      "1 / 7",
+      "4 / 7",
+      "1 / 14",
+      "3 / 7 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{1}{7}$",
@@ -10124,9 +10124,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Sześciowyrazowy ciąg liczbowy (1, 2, 2x, x + 2, 5, 6) jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że",
     "choices": [
       "x = 1",
-      "x = 3 &frasl; 2",
+      "x = 3 / 2",
       "x = 2",
-      "x = 8 &frasl; 3 pokaż wskazówkę &raquo;"
+      "x = 8 / 3 pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $x=2$",
@@ -10623,7 +10623,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa &fnof; przyjmuje wartość 2 dla argumentu 0, a ponadto &fnof;(4) − &fnof;(2) = 6 . Wyznacz wzór funkcji &fnof;.",
+    "prompt": "Funkcja liniowa f przyjmuje wartość 2 dla argumentu 0, a ponadto f(4) − f(2) = 6 . Wyznacz wzór funkcji f.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10680,7 +10680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC – odpowiednio – w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy 3 &frasl; 2 . Oblicz długość boku trójkąta AKL.",
+    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC – odpowiednio – w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy 3 / 2 . Oblicz długość boku trójkąta AKL.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10736,7 +10736,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = (−20, 12) i B = (7, 3) są wierzchołkami trójkąta równoramiennego ABC, w którym |AC| = |BC|. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta. <ul class=\"",
+    "prompt": "Punkty A = (−20, 12) i B = (7, 3) są wierzchołkami trójkąta równoramiennego ABC, w którym |AC| = |BC|. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10769,7 +10769,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "8 – 6√ 3",
       "8 – 2√ 3",
       "4 – 2√ 3",
-      "8 – 4√ 3 pokaż wskazówkę &raquo;"
+      "8 – 4√ 3 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $8 - 6\\sqrt{3}$",
@@ -10795,12 +10795,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2 log 5 4 − 3 log 5 1 &frasl; 2 jest równa",
+    "prompt": "Liczba 2 log 5 4 − 3 log 5 1 / 2 jest równa",
     "choices": [
-      "–log 5 7 &frasl; 2",
+      "–log 5 7 / 2",
       "7 log 5 2",
       "–log 5 2",
-      "log 5 2 pokaż wskazówkę &raquo;"
+      "log 5 2 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4 \\log_5 2$.",
@@ -10861,8 +10861,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "b 2",
       "b 0,25",
-      "b 8 &frasl; 3",
-      "b 4 &frasl; 3 pokaż wskazówkę &raquo;"
+      "b 8 / 3",
+      "b 4 / 3 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $b^{\\frac{7}{6}}$",
@@ -10925,7 +10925,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "–8",
       "–4",
       "4",
-      "8 pokaż wskazówkę &raquo;"
+      "8 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "–4",
@@ -10979,7 +10979,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa &fnof;( x ) = ( a − 1) x + 3 osiąga wartość najmniejszą równą 3. Wtedy",
+    "prompt": "Funkcja liniowa f( x ) = ( a − 1) x + 3 osiąga wartość najmniejszą równą 3. Wtedy",
     "choices": [
       "a = –1",
       "a = 0",
@@ -11012,13 +11012,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na wykresie przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m21-probna/z09-1.png) Wskaż zdanie prawdziwe.",
     "choices": [
-      "Dziedziną funkcji &fnof; jest przedział (−4,5).",
-      "Funkcja &fnof; ma dwa miejsca zerowe.",
-      "Funkcja &fnof; dla argumentu 1 przyjmuje wartość (−1).",
-      "Zbiorem wartości funkcji &fnof; jest przedział (−4,5⟩."
+      "Dziedziną funkcji f jest przedział (−4,5).",
+      "Funkcja f ma dwa miejsca zerowe.",
+      "Funkcja f dla argumentu 1 przyjmuje wartość (−1).",
+      "Zbiorem wartości funkcji f jest przedział (−4,5⟩."
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli Funkcja &fnof; dla argumentu 1 przyjmuje wartość (−1).",
+    "explanation": "C, czyli Funkcja f dla argumentu 1 przyjmuje wartość (−1).",
     "solutionSteps": [
       "Odczytaj dziedzinę funkcji z wykresu. Dziedzina to zbiór wszystkich dopuszczalnych argumentów (wartości $x$), odczytujemy ją z osi $x$. Wykres funkcji istnieje dla $x$ od $-4$ (nie włącznie) do $5$ (włącznie).",
       "Określ zbiór wartości funkcji z wykresu. Zbiór wartości to zbiór wszystkich wartości przyjmowanych przez funkcję (wartości $y$), odczytujemy go z osi $y$. Najniższa wartość to $-4$ (włącznie), a najwyższa to $5$ (włącznie).",
@@ -11044,8 +11044,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja ƒ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-probna/z10-1.png) dla każdej liczby rzeczywistej x . Wartość funkcji ƒ dla argumentu 1 jest równa",
     "choices": [
-      "1 &frasl; 5",
-      "1 &frasl; 3",
+      "1 / 5",
+      "1 / 3",
       "1",
       "2"
     ],
@@ -11076,9 +11076,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Ciąg ( x , y , z ) jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy 64. Stąd wynika, że y jest równe",
     "choices": [
       "3 ⋅ 64",
-      "64 &frasl; 3",
+      "64 / 3",
       "4",
-      "3 pokaż wskazówkę &raquo;"
+      "3 pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 4",
@@ -11137,7 +11137,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20°",
       "25°",
       "30°",
-      "35° pokaż wskazówkę &raquo;"
+      "35° pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $20^\\circ$",
@@ -11229,9 +11229,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "W romb o boku 2√ 3 i kącie 60° wpisano okrąg. Promień tego okręgu jest równy",
     "choices": [
       "3",
-      "1 &frasl; 2",
-      "3 &frasl; 4",
-      "3 &frasl; 2 pokaż wskazówkę &raquo;"
+      "1 / 2",
+      "3 / 4",
+      "3 / 2 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
@@ -11261,7 +11261,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 ∶ 4",
       "4 ∶ 1",
       "4 ∶ 9",
-      "3 ∶ 2 pokaż wskazówkę &raquo;"
+      "3 ∶ 2 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 9 ∶ 4",
@@ -11293,7 +11293,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "√ 3",
       "√ 13",
       "√ 17",
-      "6√ 2 pokaż wskazówkę &raquo;"
+      "6√ 2 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\sqrt{13}$",
@@ -11318,19 +11318,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt &alpha; jest ostry oraz sin &alpha; = 4 &frasl; 5 . Wtedy",
+    "prompt": "Kąt α jest ostry oraz sin α = 4 / 5 . Wtedy",
     "choices": [
-      "cos &alpha; = 1 &frasl; 5",
-      "cos &alpha; = – 1 &frasl; 5",
-      "cos &alpha; = – 3 &frasl; 5",
-      "cos &alpha; = 3 &frasl; 5 pokaż wskazówkę &raquo;"
+      "cos α = 1 / 5",
+      "cos α = – 1 / 5",
+      "cos α = – 3 / 5",
+      "cos α = 3 / 5 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{5}$",
     "solutionSteps": [
       "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Podstaw znany sinus: $(\\frac{4}{5})^2 + \\cos^2 \\alpha = 1$.",
       "Oblicz $\\cos^2 \\alpha$: $\\frac{16}{25} + \\cos^2 \\alpha = 1$, czyli $\\cos^2 \\alpha = 1 - \\frac{16}{25} = \\frac{9}{25}$.",
-      "Wyciągnij pierwiastek, pamiętając, że kąt &alpha; jest ostry (czyli $\\cos \\alpha > 0$): $\\cos \\alpha = \\sqrt{\\frac{9}{25}} = \\frac{3}{5}$."
+      "Wyciągnij pierwiastek, pamiętając, że kąt α jest ostry (czyli $\\cos \\alpha > 0$): $\\cos \\alpha = \\sqrt{\\frac{9}{25}} = \\frac{3}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11351,10 +11351,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są punkty M = (6,0) , N = (6,8) oraz O = (0,0) . Tangens kąta ostrego MON jest równy",
     "choices": [
-      "4 &frasl; 3",
-      "6 &frasl; 10",
-      "3 &frasl; 4",
-      "8 &frasl; 10 pokaż wskazówkę &raquo;"
+      "4 / 3",
+      "6 / 10",
+      "3 / 4",
+      "8 / 10 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{4}{3}$",
@@ -11382,10 +11382,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Proste o równaniach y = 3 ax − 2 i y = 2 x + 3 a są prostopadłe. Wtedy a jest równe",
     "choices": [
-      "2 &frasl; 3",
-      "– 1 &frasl; 6",
-      "3 &frasl; 2",
-      "–5 pokaż wskazówkę &raquo;"
+      "2 / 3",
+      "– 1 / 6",
+      "3 / 2",
+      "–5 pokaż wskazówkę »"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $-\\frac{1}{6}$",
@@ -11414,9 +11414,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz C = (3,5) . Wierzchołki A i B tego trapezu leżą na prostej o równaniu y = 5 x + 3 . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu",
     "choices": [
       "y = 3 x + 5",
-      "y = – 1 &frasl; 5 x + 3",
+      "y = – 1 / 5 x + 3",
       "y = 5 x – 10",
-      "y = – 1 &frasl; 5 x + 28 &frasl; 5 pokaż wskazówkę &raquo;"
+      "y = – 1 / 5 x + 28 / 5 pokaż wskazówkę »"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
@@ -11506,7 +11506,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 ∶ 1",
       "1 ∶ 3",
       "9 ∶ 1",
-      "1 ∶ 9 pokaż wskazówkę &raquo;"
+      "1 ∶ 9 pokaż wskazówkę »"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $9 \\colon 1$",
@@ -11578,10 +11578,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru liczb naturalnych dwucyfrowych losujemy jedną liczbę. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowana liczba jest podzielna przez 5, jest równe",
     "choices": [
-      "2 &frasl; 5",
-      "5 &frasl; 100",
-      "5 &frasl; 90",
-      "18 &frasl; 90"
+      "2 / 5",
+      "5 / 100",
+      "5 / 90",
+      "18 / 90"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{18}{90}$",
@@ -11612,7 +11612,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "x = 6",
       "x = 5,5",
       "x = 2,5",
-      "x = 1 pokaż wskazówkę &raquo;"
+      "x = 1 pokaż wskazówkę »"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $x=6$",
@@ -11723,7 +11723,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt &alpha; jest ostry i sin &alpha; + cos &alpha; = 7 &frasl; 5 . Oblicz wartość wyrażenia 2 sin &alpha; cos &alpha; .",
+    "prompt": "Kąt α jest ostry i sin α + cos α = 7 / 5 . Oblicz wartość wyrażenia 2 sin α cos α .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11779,7 +11779,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa &fnof;( x ) = x 2 + bx + c nie ma miejsc zerowych. Wykaż, że 1 + c > b .",
+    "prompt": "Funkcja kwadratowa f( x ) = x 2 + bx + c nie ma miejsc zerowych. Wykaż, że 1 + c > b .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11808,7 +11808,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rosnący ciąg arytmetyczny ( a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy a 3 , a 5 , a 13 tworzą – w podanej kolejności – ciąg geometryczny. Wyznacz wzór na n -ty wyraz ciągu arytmetycznego ( a n ). <ul class=\"",
+    "prompt": "Rosnący ciąg arytmetyczny ( a n ) jest określony dla każdej liczby naturalnej n ≥ 1 . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy a 3 , a 5 , a 13 tworzą – w podanej kolejności – ciąg geometryczny. Wyznacz wzór na n -ty wyraz ciągu arytmetycznego ( a n ).",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11870,10 +11870,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dodatnie liczby x i y spełniają warunek 2x = 3y. Wynika stąd, że wartość wyrażenia ![Rysunek do zadania](/cke-matura/m22-maj/z02-1.png) jest równa",
     "choices": [
-      "2 &frasl; 3",
-      "13 &frasl; 6",
-      "6 &frasl; 13",
-      "3 &frasl; 2"
+      "2 / 3",
+      "13 / 6",
+      "6 / 13",
+      "3 / 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{2}{3}$.\n\n*(Uwaga: W opisie zadania wystąpił błąd w obliczeniach. Poprawna odpowiedź przy podanym warunku to $\\frac{8}{7}$, która nie znajduje się wśród proponowanych opcji. Jeśli jednak założyć, że w zadaniu chodziło o wyrażenie $\\frac{2x-y}{3x+y}$ lub inny warunek, odpowiedź mogłaby być inna.)*\n\n**\n**Odpowiedź:** A, czyli $\\frac{2}{3}$.",
@@ -12027,8 +12027,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "(−∞, 0)",
       "(0, +∞)",
-      "(−∞, 3 &frasl; 4 )",
-      "( 3 &frasl; 4 ,+∞)"
+      "(−∞, 3 / 4 )",
+      "( 3 / 4 ,+∞)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{4}, +\\infty)$.",
@@ -12085,7 +12085,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono wykres funkcji &fnof;. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn ƒ(−3) ⋅ ƒ(0) ⋅ ƒ(4) jest równy",
+    "prompt": "Na rysunku przedstawiono wykres funkcji f. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn ƒ(−3) ⋅ ƒ(0) ⋅ ƒ(4) jest równy",
     "choices": [
       "(−12)",
       "(−8)",
@@ -12116,12 +12116,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku 1. przedstawiono wykres funkcji &fnof; określonej na zbiorze 〈−4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji ƒ. Wykres funkcji g przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że",
+    "prompt": "Na rysunku 1. przedstawiono wykres funkcji f określonej na zbiorze 〈−4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji ƒ. Wykres funkcji g przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że",
     "choices": [
-      "g (x) = &fnof;(x) − 2",
-      "g (x) = &fnof;(x − 2)",
-      "g (x) = &fnof;(x) + 2",
-      "g (x) = &fnof;(x + 2)"
+      "g (x) = f(x) − 2",
+      "g (x) = f(x − 2)",
+      "g (x) = f(x) + 2",
+      "g (x) = f(x + 2)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $g(x) = f(x) + 2$",
@@ -12150,7 +12150,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Miejscem zerowym funkcji liniowej ƒ określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba",
     "choices": [
       "(−3)",
-      "9 &frasl; 2",
+      "9 / 2",
       "5",
       "12"
     ],
@@ -12178,12 +12178,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej &fnof;(x) = 3x 2 + bx + c jest parabola o wierzchołku w punkcie W = (−3, 2). Wzór tej funkcji w postaci kanonicznej to",
+    "prompt": "Wykresem funkcji kwadratowej f(x) = 3x 2 + bx + c jest parabola o wierzchołku w punkcie W = (−3, 2). Wzór tej funkcji w postaci kanonicznej to",
     "choices": [
-      "&fnof;(x) = 3(x − 3) 2 + 2",
-      "&fnof;(x) = 3(x + 3) 2 + 2",
-      "&fnof;(x) = (x − 3) 2 + 2",
-      "&fnof;(x) = (x + 3) 2 + 2"
+      "f(x) = 3(x − 3) 2 + 2",
+      "f(x) = 3(x + 3) 2 + 2",
+      "f(x) = (x − 3) 2 + 2",
+      "f(x) = (x + 3) 2 + 2"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $f(x) = 3(x + 3)^2 + 2$",
@@ -12280,10 +12280,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wszystkie wyrazy nieskończonego ciągu geometrycznego (a n ), określonego dla każdej liczby naturalnej n ≥ 1, są dodatnie i 9a 5 = 4a 3 . Wtedy iloraz tego ciągu jest równy",
     "choices": [
-      "2 &frasl; 3",
-      "3 &frasl; 2",
-      "2 &frasl; 9",
-      "9 &frasl; 2"
+      "2 / 3",
+      "3 / 2",
+      "2 / 9",
+      "9 / 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{2}{3}$",
@@ -12312,8 +12312,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Liczba cos 12° ⋅ sin 78° + sin 12° ⋅ cos 78° jest równa",
     "choices": [
       "½",
-      "√ 2 &frasl; 2",
-      "√ 3 &frasl; 2",
+      "√ 2 / 2",
+      "√ 3 / 2",
       "1"
     ],
     "correctIndex": 3,
@@ -12342,8 +12342,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty A, B, C leżą na okręgu o środku S. Punkt D jest punktem przecięcia cięciwy AC i średnicy okręgu poprowadzonej z punktu B. Miara kąta BSC jest równa α, a miara kąta ADB jest równa γ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z17-1.png) Wtedy kąt ABD ma miarę",
     "choices": [
-      "&alpha; &frasl; 2 + γ − 180°",
-      "180° − &alpha; &frasl; 2 − γ",
+      "α / 2 + γ − 180°",
+      "180° − α / 2 − γ",
       "180° − α − γ",
       "α + γ − 180°"
     ],
@@ -12496,7 +12496,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = −x + 1 l : y = 2 &frasl; 3 x + 1 m : y = − 3 &frasl; 2 x + 4 n : y = − 2 &frasl; 3 x – 1 Wśród tych prostych prostopadłe są",
+    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = −x + 1 l : y = 2 / 3 x + 1 m : y = − 3 / 2 x + 4 n : y = − 2 / 3 x – 1 Wśród tych prostych prostopadłe są",
     "choices": [
       "proste k oraz l.",
       "proste k oraz n.",
@@ -12593,8 +12593,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "560 cm 3",
       "280 cm 3",
-      "280 &frasl; 3 cm 3",
-      "560 &frasl; 3 cm 3"
+      "280 / 3 cm 3",
+      "560 / 3 cm 3"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 280 cm$^3$",
@@ -12881,7 +12881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykres funkcji kwadratowej &fnof; określonej wzorem &fnof;(x) = ax 2 + bx + c ma z prostą o równaniu y = 6 dokładnie jeden punkt wspólny. Punkty A = (−5,0) i B = (3,0) należą do wykresu funkcji &fnof;. Oblicz wartości współczynników a, b oraz c. <ul class=\"",
+    "prompt": "Wykres funkcji kwadratowej f określonej wzorem f(x) = ax 2 + bx + c ma z prostą o równaniu y = 6 dokładnie jeden punkt wspólny. Punkty A = (−5,0) i B = (3,0) należą do wykresu funkcji f. Oblicz wartości współczynników a, b oraz c.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12941,10 +12941,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-maj/z02-1.png) jest równa",
     "choices": [
-      "(- 3 &frasl; 2 )",
-      "3 &frasl; 2",
-      "2 &frasl; 3",
-      "( - 2 &frasl; 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
+      "(- 3 / 2 )",
+      "3 / 2",
+      "2 / 3",
+      "( - 2 / 3 ) Zasady oceniania 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
@@ -13427,10 +13427,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) zaznaczono kąt 𝛼 o wierzchołku w punkcie 𝑂 = (0 , 0). Jedno z ramion tego kąta pokrywa się z dodatnią półosią 𝑂𝑥, a drugie przechodzi przez punkt 𝑃 = (−3 , 1) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy",
     "choices": [
-      "1 &frasl; √ 10",
-      "(− 3 &frasl; √ 10 )",
-      "( − 3 &frasl; 1 )",
-      "( − 1 &frasl; 3 )"
+      "1 / √ 10",
+      "(− 3 / √ 10 )",
+      "( − 3 / 1 )",
+      "( − 1 / 3 )"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-\\frac{1}{3}$",
@@ -13611,9 +13611,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dana jest prosta 𝑘 o równaniu 𝑦 = − 1 ⁄ 3 𝑥 + 2 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu 𝑦 = 𝑎𝑥 + 𝑏 jest równoległa do prostej 𝑘 i przechodzi przez punkt 𝑃 = (3 , 5), gdy",
     "choices": [
       "𝑎 = 3 i 𝑏 = 4.",
-      "𝑎 = − 1 &frasl; 3 i 𝑏 = 4.",
+      "𝑎 = − 1 / 3 i 𝑏 = 4.",
       "𝑎 = 3 i 𝑏 = −4.",
-      "𝑎 = − 1 &frasl; 3 i 𝑏 = 6."
+      "𝑎 = − 1 / 3 i 𝑏 = 6."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $a = -\\frac{1}{3}$ i $b = 6$.",
@@ -13639,7 +13639,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 𝛼 takim, że cos𝛼 = √ 2 &frasl; 3 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
+    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem 𝛼 takim, że cos𝛼 = √ 2 / 3 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
     "choices": [
       "15√ 2",
       "45",
@@ -13698,7 +13698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby 𝑊 wszystkich wierzchołków do liczby 𝐾 wszystkich krawędzi jest równy W &frasl; K = 3 &frasl; 5 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest",
+    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby 𝑊 wszystkich wierzchołków do liczby 𝐾 wszystkich krawędzi jest równy W / K = 3 / 5 . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest",
     "choices": [
       "kwadrat.",
       "pięciokąt foremny.",
@@ -13817,7 +13817,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\"",
+    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14119,7 +14119,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji &fnof; określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji &fnof;. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja &fnof; przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja &fnof; ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji &fnof; w przedziale [−4,0] jest równa A) (−4) B) (−3) C) (−2) D) 0",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych ( x , y ) , przedstawiono wykres funkcji f określonej dla każdego x ∈ [−5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji f. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału (−4,−2) funkcja f przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja f ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji f w przedziale [−4,0] jest równa A) (−4) B) (−3) C) (−2) D) 0",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14207,7 +14207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa &fnof; jest określona wzorem &fnof;( x ) = −( x − 1) 2 + 2. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji &fnof; jest parabola, której wierzchołek ma współrzędne A) (1,2) B) (−1,2) C) (1,−2) D) (−1,−2) Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji &fnof; jest przedział A) (−∞,2] B) (−∞,2) C) (2,+∞) D) [2,+∞)",
+    "prompt": "Funkcja kwadratowa f jest określona wzorem f( x ) = −( x − 1) 2 + 2. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji f jest parabola, której wierzchołek ma współrzędne A) (1,2) B) (−1,2) C) (1,−2) D) (−1,−2) Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji f jest przedział A) (−∞,2] B) (−∞,2) C) (2,+∞) D) [2,+∞)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14590,7 +14590,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba 10 n 2 + 30 n + 8 przy dzieleniu przez 5 daje resztę 3. <ul class=\"",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba 10 n 2 + 30 n + 8 przy dzieleniu przez 5 daje resztę 3.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15471,7 +15471,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "𝑚 = −1",
       "𝑚 = 1",
-      "m = 1 &frasl; 2",
+      "m = 1 / 2",
       "𝑚 = 2 1 pkt – odpowiedź poprawna."
     ],
     "correctIndex": 1,
@@ -15559,10 +15559,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na loterii stosunek liczby losów wygrywających do liczby losów przegrywających jest równy 2∶7. Zakupiono jeden los z tej loterii. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia polegającego na tym, że zakupiony los jest wygrywający, jest równe",
     "choices": [
-      "1 &frasl; 9",
-      "1 &frasl; 2",
-      "2 &frasl; 9",
-      "2 &frasl; 7 1 pkt – odpowiedź poprawna."
+      "1 / 9",
+      "1 / 2",
+      "2 / 9",
+      "2 / 7 1 pkt – odpowiedź poprawna."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
@@ -15588,7 +15588,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy – 133 nasiona • w II donicy – 140 nasion • w III donicy – 119 nasion • w IV donicy – 147 nasion • w V donicy – 161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe 𝜎 = 14. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej. <ul class=\"",
+    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy – 133 nasiona • w II donicy – 140 nasion • w III donicy – 119 nasion • w IV donicy – 147 nasion • w V donicy – 161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe 𝜎 = 14. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16155,7 +16155,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dana jest prosta 𝑘 o równaniu 𝑦 = −3𝑥 + 1. Dokończ zdania. Wybierz odpowiedź spośród A–D oraz odpowiedź spośród E–H. Zadanie 19.1. Jedną z prostych równoległych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 3𝑥 + 2 B) 𝑦 = −3𝑥 + 2 C) 𝑦 = 1 &frasl; 3 𝑥 + 1 D) 𝑦 = − 1 &frasl; 3 𝑥 + 1 Zadanie 19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 1 &frasl; 3 𝑥 + 2 B) 𝑦 = − 1 &frasl; 3 𝑥 + 2 C) 𝑦 = 3𝑥 + 1 D) 𝑦 = −3𝑥 + 1 2 pkt – poprawne dokończenia dwóch zdań. 1 pkt – poprawne dokończenie jednego zdania. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥,𝑦), dana jest prosta 𝑘 o równaniu 𝑦 = −3𝑥 + 1. Dokończ zdania. Wybierz odpowiedź spośród A–D oraz odpowiedź spośród E–H. Zadanie 19.1. Jedną z prostych równoległych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 3𝑥 + 2 B) 𝑦 = −3𝑥 + 2 C) 𝑦 = 1 / 3 𝑥 + 1 D) 𝑦 = − 1 / 3 𝑥 + 1 Zadanie 19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu A) 𝑦 = 1 / 3 𝑥 + 2 B) 𝑦 = − 1 / 3 𝑥 + 2 C) 𝑦 = 3𝑥 + 1 D) 𝑦 = −3𝑥 + 1 2 pkt – poprawne dokończenia dwóch zdań. 1 pkt – poprawne dokończenie jednego zdania. 0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16247,8 +16247,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt 𝛼 jest ostry oraz 4tg𝛼 = 3sin 2 𝛼 + 3cos 2 𝛼. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta 𝛼 jest równy",
     "choices": [
-      "3 &frasl; 4",
-      "4 &frasl; 3",
+      "3 / 4",
+      "4 / 3",
       "14",
       "4 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepoprawna albo brak odpowiedzi."
     ],
@@ -16488,7 +16488,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi. <ul class=\"",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt – obie odpowiedzi poprawne. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt – odpowiedź poprawna. 0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16543,7 +16543,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ( 1 &frasl; 16 ) 8 ⋅ 8 16 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ( 1 / 16 ) 8 ⋅ 8 16 jest równa",
     "choices": [
       "2 24",
       "2 16",
@@ -16657,7 +16657,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności 1 − 3 &frasl; 2 𝑥 2 &frasl; 3 − 𝑥 jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności 1 − 3 / 2 𝑥 2 / 3 − 𝑥 jest przedział\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16683,7 +16683,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 𝑥+1 &frasl; (𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych\n\nRozwiąż zadanie.",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 𝑥+1 / (𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16816,9 +16816,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = (−2𝑘 + 3)𝑥 + 𝑘 − 1, gdzie 𝑘 ∈ ℝ. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja 𝑓 jest malejąca dla każdej liczby 𝑘 należącej do przedziału",
     "choices": [
       "(−∞,1)",
-      "(−∞,− 3 &frasl; 2 )",
+      "(−∞,− 3 / 2 )",
       "(1,+∞)",
-      "( 3 &frasl; 2 ,+∞)"
+      "( 3 / 2 ,+∞)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(\\frac{3}{2},+\\infty)$",
@@ -16846,10 +16846,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcje liniowe 𝑓 oraz 𝑔, określone wzorami 𝑓(𝑥) = 3𝑥 + 6 oraz 𝑔(𝑥) = 𝑎𝑥 + 7, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik 𝑎 we wzorze funkcji 𝑔 jest równy",
     "choices": [
-      "(− 7 &frasl; 2 )",
-      "(− 2 &frasl; 7 )",
-      "2 &frasl; 7",
-      "7 &frasl; 2"
+      "(− 7 / 2 )",
+      "(− 2 / 7 )",
+      "2 / 7",
+      "7 / 2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{7}{2}$.",
@@ -16982,7 +16982,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) zaznaczono kąt o mierze 𝛼 taki, że tg 𝛼 = −3 oraz 90° ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F. Prawdziwe są zależności: .............. oraz .............. . A) sin𝛼 B) sin𝛼 ⋅ cos𝛼 C) sin𝛼 ⋅ cos𝛼 > 0 D) cos𝛼 > 0 E) sin𝛼 = − 1 &frasl; 3 cos𝛼 F) sin𝛼 = −3cos𝛼",
+    "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) zaznaczono kąt o mierze 𝛼 taki, że tg 𝛼 = −3 oraz 90° ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami A–F. Prawdziwe są zależności: .............. oraz .............. . A) sin𝛼 B) sin𝛼 ⋅ cos𝛼 C) sin𝛼 ⋅ cos𝛼 > 0 D) cos𝛼 > 0 E) sin𝛼 = − 1 / 3 cos𝛼 F) sin𝛼 = −3cos𝛼",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17129,8 +17129,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) proste 𝑘 oraz 𝑙 są określone równaniami 𝑘: 𝑦 = (𝑚 +1)𝑥 + 7 𝑙: 𝑦 = −2𝑥 + 7 Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste 𝑘 oraz 𝑙 są prostopadłe, gdy liczba 𝑚 jest równa",
     "choices": [
-      "(− 1 &frasl; 2 )",
-      "1 &frasl; 2",
+      "(− 1 / 2 )",
+      "1 / 2",
       "(−3)",
       "1"
     ],
@@ -17358,7 +17358,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary 𝒙 oraz 𝒚 jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia. <ul class=\"",
+    "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary 𝒙 oraz 𝒚 jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -18194,10 +18194,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek. Zdarzenie 𝐴 polega na tym, że suma liczb wyrzuconych oczek będzie równa 11. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia 𝐴 jest równe",
     "choices": [
-      "1 &frasl; 36",
-      "6 &frasl; 36",
-      "11 &frasl; 36",
-      "2 &frasl; 36"
+      "1 / 36",
+      "6 / 36",
+      "11 / 36",
+      "2 / 36"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{2}{36}$",
@@ -18282,7 +18282,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻, w których krawędź 𝐵𝐶 ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka 𝐵 jest równa 15 (zobacz rysunek). Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości 𝑥 krawędzi 𝐴𝐵. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji 𝑷 . Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia. <ul class=\"",
+    "prompt": "Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻, w których krawędź 𝐵𝐶 ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka 𝐵 jest równa 15 (zobacz rysunek). Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości 𝑥 krawędzi 𝐴𝐵. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji 𝑷 . Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],

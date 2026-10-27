@@ -11,12 +11,59 @@ export type ParsedAbcd = {
 
 export const OPEN_TASK_PLACEHOLDER = "Zadanie otwarte — patrz rozwiązanie";
 
-/** Usuwa śmieci HTML z parsera CKE. */
+const HTML_ENTITIES: Record<string, string> = {
+  "&nbsp;": " ",
+  "&amp;": "&",
+  "&lt;": "<",
+  "&gt;": ">",
+  "&quot;": '"',
+  "&apos;": "'",
+  "&fnof;": "f",
+  "&frasl;": "/",
+  "&lang;": "⟨",
+  "&rang;": "⟩",
+  "&raquo;": "»",
+  "&laquo;": "«",
+  "&alpha;": "α",
+  "&beta;": "β",
+  "&gamma;": "γ",
+  "&delta;": "δ",
+  "&pi;": "π",
+  "&ge;": "≥",
+  "&le;": "≤",
+  "&ne;": "≠",
+  "&radic;": "√",
+  "&#8738;": "∠",
+  "&#8730;": "√",
+  "&#8731;": "∛",
+};
+
+/** Dekoduje encje HTML typowe dla arkuszy CKE. */
+export function decodeCkeHtmlEntities(text: string): string {
+  return text
+    .replace(/&#(\d+);/g, (match, code) => {
+      const known = HTML_ENTITIES[match.toLowerCase()];
+      if (known) return known;
+      const n = Number(code);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : match;
+    })
+    .replace(/&[a-zA-Z]+;/g, (match) => HTML_ENTITIES[match.toLowerCase()] ?? match);
+}
+
+/**
+ * Usuwa śmieci HTML z parsera CKE.
+ * Łapie też urwany tag typu `<ul class="` (bez zamykającego `>`),
+ * który wcześniej przechodził do UI jako widoczny tekst.
+ */
 export function cleanCkeTaskMarkup(tresc: string): string {
-  return tresc
-    .replace(/<ul\s+class=["'][^"']*["'][^>]*>/gi, "")
-    .replace(/<\/?ul[^>]*>/gi, "")
-    .replace(/\s{2,}/g, " ")
+  return decodeCkeHtmlEntities(tresc)
+    .replace(/<\/?ul\b[^>]*>/gi, "")
+    // Urwany tag bez `>` (np. `<ul class="` na końcu treści).
+    .replace(/<[a-zA-Z][^<>]*$/gm, "")
+    // Pozostałe kompletne tagi (nie rusza nierówności `0 < x`).
+    .replace(/<\/?[a-zA-Z][^>]*>/g, "")
+    .replace(/[^\S\n]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
     .trim();
 }
 

@@ -2,6 +2,7 @@
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { cleanCkeTaskMarkup } from "@/lib/baza-zadan/cke/parse-abcd";
 import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
 import { useMemo } from "react";
 
@@ -16,7 +17,10 @@ export function TaskTresc({
   className = "",
   variant = "task",
 }: TaskTrescProps) {
-  const parts = useMemo(() => splitTaskContent(tresc), [tresc]);
+  const parts = useMemo(
+    () => splitTaskContent(cleanCkeTaskMarkup(tresc)),
+    [tresc],
+  );
   const markdownVariant = variant === "solution" ? "solution" : "default";
 
   return (
