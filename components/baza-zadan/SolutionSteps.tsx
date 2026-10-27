@@ -1,4 +1,5 @@
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 
 type SolutionStepsProps = {
   steps: readonly string[];
@@ -17,7 +18,7 @@ export function SolutionSteps({ steps, examLabel }: SolutionStepsProps) {
       <ol className="mt-3 list-decimal space-y-4 pl-5 marker:font-bold marker:text-accent">
         {steps.map((step, i) => (
           <li key={i} className="text-sm text-foreground">
-            <TheoryMarkdown content={step} />
+            <TheoryMarkdown content={formatCkeMathText(step)} />
           </li>
         ))}
       </ol>

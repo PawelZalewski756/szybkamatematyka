@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { parseSolutionSteps } from "@/lib/baza-zadan/parse-solution-steps";
 import {
   formatSolutionForDisplay,
@@ -12,7 +13,7 @@ type SolutionDisplayProps = {
 };
 
 export function SolutionDisplay({ raw }: SolutionDisplayProps) {
-  const formatted = formatSolutionForDisplay(raw);
+  const formatted = formatCkeMathText(formatSolutionForDisplay(raw));
   if (!formatted || isSolutionPlaceholder(formatted)) return null;
 
   const { steps, answer } = parseSolutionSteps(formatted);

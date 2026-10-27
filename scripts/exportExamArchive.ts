@@ -8,6 +8,7 @@ import fs from "fs";
 import path from "path";
 import { inferDzialMatura } from "../lib/baza-zadan/cke/parse-matura-page";
 import { parseAbcd } from "../lib/baza-zadan/cke/parse-abcd";
+import { formatCkeMathText } from "../lib/baza-zadan/cke/format-cke-math";
 import { inferCorrectChoiceIndex } from "../lib/baza-zadan/cke/answer-key";
 import { parseSolutionSteps } from "../lib/baza-zadan/parse-solution-steps";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
@@ -64,6 +65,8 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   if (isSolutionPlaceholder(task.rozwiazanie)) return null;
 
   const { prompt, choices, hasChoices } = parseAbcd(task.tresc);
+  const formattedPrompt = formatCkeMathText(prompt);
+  const formattedChoices = choices.map((c) => formatCkeMathText(c));
   const dzial = task.dzial ?? inferDzialMatura(task.tresc, task.numer);
   const category = bazaCategoryForCmsDzial(dzial);
   const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
@@ -73,7 +76,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     parsed.steps[parsed.steps.length - 1] ??
     task.rozwiazanie.slice(0, 280);
   const correctIndex = hasChoices
-    ? inferCorrectChoiceIndex(parsed.answer, choices)
+    ? inferCorrectChoiceIndex(parsed.answer, formattedChoices)
     : null;
   const isOpen = !hasChoices || correctIndex === null;
 
@@ -83,8 +86,12 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     category,
     difficulty: inferDifficulty(task.numer, !isOpen),
     forPaths: ["liceum", "technikum", "zawodowa"],
-    prompt: isOpen && hasChoices ? `${prompt}\n\nRozwiąż zadanie.` : prompt,
-    choices: isOpen ? ["Zadanie otwarte — patrz rozwiązanie"] : choices,
+    prompt: isOpen && hasChoices
+      ? `${formattedPrompt}\n\nRozwiąż zadanie.`
+      : formattedPrompt,
+    choices: isOpen
+      ? ["Zadanie otwarte — patrz rozwiązanie"]
+      : formattedChoices,
     correctIndex: isOpen ? 0 : correctIndex,
     explanation,
     solutionSteps: parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie],

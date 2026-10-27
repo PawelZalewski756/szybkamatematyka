@@ -2,7 +2,9 @@
 
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
+import { MathText } from "@/components/trening/MathText";
 import { ProGate } from "@/components/subscription/ProGate";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import {
   examTaskPoints,
   expectedOpenAnswer,
@@ -273,7 +275,10 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                   className={`rounded-2xl border px-4 py-4 text-left text-base font-bold text-foreground transition-colors ${style}`}
                   whileTap={answeredClosed ? undefined : { scale: 0.98 }}
                 >
-                  {choice}
+                  <MathText
+                    content={formatCkeMathText(choice)}
+                    className="[&_.katex]:text-[1em]"
+                  />
                 </motion.button>
               );
             })}
