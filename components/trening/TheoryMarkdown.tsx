@@ -23,18 +23,20 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
       "prose-code:rounded prose-code:bg-surface prose-code:px-1 prose-code:text-foreground " +
       "prose-pre:border prose-pre:border-surface-border prose-pre:bg-surface " +
       "prose-li:text-foreground/95 prose-blockquote:border-surface-border prose-blockquote:text-muted " +
-      "[&_.katex-display]:my-4 [&_.katex]:text-foreground",
+      "[&_.katex-display]:my-4 [&_.katex-display]:overflow-x-auto [&_.katex]:text-foreground " +
+      "[&_.katex-display>.katex]:inline-block [&_.katex-display>.katex]:max-w-none",
     compact:
       "prose prose-sm prose-invert max-w-none break-words " +
       "prose-p:leading-relaxed prose-p:text-foreground/90 prose-strong:text-foreground " +
-      "[&_.katex-display]:my-2 [&_.katex]:text-foreground",
+      "[&_.katex-display]:my-2 [&_.katex-display]:overflow-x-auto [&_.katex]:text-foreground " +
+      "[&_.katex-display>.katex]:inline-block [&_.katex-display>.katex]:max-w-none",
     solution:
       "prose prose-sm prose-invert max-w-none break-words " +
       "prose-p:my-1.5 prose-p:leading-relaxed prose-p:text-foreground/90 " +
       "prose-strong:text-success prose-li:text-foreground/90 " +
       "prose-headings:text-foreground prose-headings:font-bold prose-headings:text-sm " +
-      "[&_.katex-display]:my-2 [&_.katex-display]:overflow-x-auto " +
-      "[&_.katex]:text-foreground",
+      "[&_.katex-display]:my-2 [&_.katex-display]:overflow-x-auto [&_.katex]:text-foreground " +
+      "[&_.katex-display>.katex]:inline-block [&_.katex-display>.katex]:max-w-none",
   };
 
 function flattenText(node: ReactNode): string {
