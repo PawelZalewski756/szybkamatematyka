@@ -1,7 +1,11 @@
 "use client";
 
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
+import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
+import { MathText } from "@/components/trening/MathText";
+import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import {
   getExamSheetById,
   getTaskById,
@@ -125,7 +129,10 @@ export default function ExamSheetPage({ params }: PageProps) {
 
       <div className="mt-8 rounded-3xl border border-surface-border bg-surface p-6">
         <div className="flex flex-wrap items-center gap-2">
-          <p className="text-lg font-semibold text-foreground">{task.prompt}</p>
+          <TaskTresc
+            tresc={task.prompt}
+            className="text-lg font-semibold text-foreground"
+          />
           {isSolved(task.id) && (
             <span className="rounded-full border border-success/40 bg-success/15 px-2 py-0.5 text-xs font-bold text-success">
               ✓ wcześniej rozwiązane
@@ -149,14 +156,21 @@ export default function ExamSheetPage({ params }: PageProps) {
                       : "border-surface-border opacity-40"
               }`}
             >
-              {choice}
+              <MathText content={formatCkeMathText(choice)} />
             </button>
           ))}
         </div>
 
         {picked !== null && (
           <div className="mt-6">
-            <p className="text-sm text-muted">{task.explanation}</p>
+            {task.explanation.trim() && (
+              <div className="text-sm text-muted">
+                <TheoryMarkdown
+                  content={formatCkeMathText(task.explanation)}
+                  variant="solution"
+                />
+              </div>
+            )}
             {task.solutionSteps && task.solutionSteps.length > 0 && (
               <SolutionSteps
                 steps={task.solutionSteps}

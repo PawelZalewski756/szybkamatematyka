@@ -1,8 +1,10 @@
 "use client";
 
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
+import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { getTaskById } from "@/lib/baza-zadan/catalog";
 import {
   CATEGORY_LABELS,
@@ -164,7 +166,7 @@ export function ReviewSession({
           <div className="mt-4 rounded-3xl border border-accent/20 bg-surface/90 p-6 sm:p-8">
             <h2 className="text-xl font-black text-white">{task.title}</h2>
             <div className="mt-3">
-              <TheoryMarkdown content={task.prompt} />
+              <TheoryMarkdown content={formatCkeMathText(task.prompt)} />
             </div>
             {task.hint && !answered && (
               <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
@@ -194,7 +196,7 @@ export function ReviewSession({
                     className={`relative rounded-2xl border px-4 py-4 text-left text-base font-bold text-white transition-colors ${style}`}
                     whileTap={answered ? undefined : { scale: 0.98 }}
                   >
-                    {choice}
+                    <MathText content={formatCkeMathText(choice)} />
                     {answered && choiceIndex === task.correctIndex && (
                       <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-success" />
                     )}
@@ -221,7 +223,14 @@ export function ReviewSession({
                 <p className="font-black text-white">
                   {isCorrect ? "Dobrze! 🎉" : "Wróci do powtórki wkrótce"}
                 </p>
-                <p className="mt-2 text-sm text-foreground">{task.explanation}</p>
+                {task.explanation.trim() && (
+                  <div className="mt-2 text-sm text-foreground">
+                    <TheoryMarkdown
+                      content={formatCkeMathText(task.explanation)}
+                      variant="solution"
+                    />
+                  </div>
+                )}
                 {task.solutionSteps && task.solutionSteps.length > 0 && (
                   <SolutionSteps
                     steps={task.solutionSteps}

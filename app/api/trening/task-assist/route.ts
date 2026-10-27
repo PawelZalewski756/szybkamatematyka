@@ -19,6 +19,7 @@ import {
   expectedOpenAnswer,
   isOpenExamTask,
 } from "@/lib/baza-zadan/cke/exam-points";
+import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -172,10 +173,11 @@ export async function POST(request: Request) {
     const canonicalTask = taskId ? findCachedTaskById(taskId) : null;
     const catalogTask =
       !canonicalTask && taskId ? getTaskById(taskId) ?? null : null;
-    const taskContent =
+    const rawTaskContent =
       canonicalTask?.content.replace(/[\u200B-\u200D\uFEFF]/g, "").trim() ??
       catalogTask?.prompt.trim() ??
       submittedTaskContent;
+    const taskContent = formatCkeMathText(rawTaskContent);
     const correctAnswer =
       canonicalTask?.correct_answer.trim() ??
       (catalogTask

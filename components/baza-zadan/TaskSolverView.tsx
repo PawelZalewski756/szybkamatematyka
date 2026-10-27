@@ -3,6 +3,7 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
 import { MathText } from "@/components/trening/MathText";
+import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { ProGate } from "@/components/subscription/ProGate";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import {
@@ -136,13 +137,15 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
     try {
       const { grade } = await fetchTaskGrade({
         taskId: task.id,
-        taskContent: task.prompt,
+        taskContent: formatCkeMathText(task.prompt),
         correctAnswer: expected,
         studentAnswer: answer,
         examLabel: task.examSource?.sessionLabel,
         topicLabel: CATEGORY_LABELS[task.category],
         maxPoints,
-        markingNotes: task.solutionSteps?.join("\n"),
+        markingNotes: task.solutionSteps
+          ?.map((step) => formatCkeMathText(step))
+          .join("\n"),
       });
       const awarded = resolveAwardedPoints(grade, maxPoints);
       setOpenGrade(grade);
@@ -326,8 +329,13 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             {open && openGrade && (
               <p className="mt-2 text-sm text-muted">{openGrade.feedback}</p>
             )}
-            {!open && (
-              <p className="mt-2 text-sm text-muted">{task.explanation}</p>
+            {!open && task.explanation.trim() && (
+              <div className="mt-2 text-sm text-muted">
+                <TheoryMarkdown
+                  content={formatCkeMathText(task.explanation)}
+                  variant="solution"
+                />
+              </div>
             )}
             {task.solutionSteps && task.solutionSteps.length > 0 && (
               canViewFullSolutions(isPro) ? (
