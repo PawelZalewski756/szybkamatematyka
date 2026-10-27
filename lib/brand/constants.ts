@@ -13,5 +13,8 @@ export const BRAND_NAME_LOCATIVE = "Szybkiej Matematyce";
 /** Domyślna domena produkcyjna. */
 export const BRAND_DOMAIN = "szybkamatematyka.pl";
 
+/** Publiczny adres kontaktowy (stopka, regulamin, RODO). */
+export const CONTACT_EMAIL = "kontakt@szybkamatematyka.pl";
+
 /** Domyślny znak w logo i faviconie (stoper z =). */
 export const DEFAULT_LOGO_MARK = "brand" as const;
