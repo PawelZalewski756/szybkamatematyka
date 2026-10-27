@@ -102,6 +102,16 @@ describe("formatCkeMathText", () => {
     expect(out.match(/\$\$/g) ?? []).toHaveLength(0);
   });
 
+  it("składa OCR wykładnicze a$ x do a^{x}", () => {
+    const out = formatCkeMathText(
+      "wzorem $f(x) = a$ x $(gdzie $a > 0$ i a\\ne 1)$, należy punkt",
+    );
+    expect(out).toContain("a^{x}");
+    expect(out).not.toMatch(/=\s*a\$\s*x/);
+    expect(out).toMatch(/\\ne/);
+    expect(out.match(/\$\$/g) ?? []).toHaveLength(0);
+  });
+
   it("trzyma sin/cos ze stopniami w jednej wyspie", () => {
     const sin = formatCkeMathText("Jeśli m = sin50°, to");
     expect(sin).toMatch(/\$m\s*=\s*(\\sin|sin)\s*50\^\{\\circ\}\$/);

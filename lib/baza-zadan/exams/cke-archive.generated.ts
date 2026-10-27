@@ -2154,8 +2154,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$2x - 5y$",
     "solutionSteps": [
-      "Zapisz wyrażenie z usuniętymi nawiasami, pamiętając o zmianie znaków przy minusie.\n$$(3x - 2y) - (x + 3y) = 3x - 2y - x - 3y$$",
-      "Zredukuj wyrazy podobne, grupując `x` z `x` oraz `y` z `y`.\n$$(3x - x) + (-2y - 3y) = 2x - 5y$$"
+      "Zapisz wyrażenie z usuniętymi nawiasami, pamiętając o zmianie znaków przy minusie.\n$(3x - 2y) - (x + 3y) = 3x - 2y - x - 3y$",
+      "Zredukuj wyrazy podobne, grupując `x` z `x` oraz `y` z `y`.\n$(3x - x) + (-2y - 3y) = 2x - 5y$"
     ],
     "examSource": {
       "kind": "matura",
@@ -3082,7 +3082,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Uprość wyrażenie w liczniku, wykonując dodawanie ułamków o wspólnych mianownikach.\n$$ \\frac{1}{3} + \\frac{2}{3} = \\frac{1+2}{3} = \\frac{3}{3} = 1 $$",
       "Uprość wyrażenie w mianowniku, wykonując odejmowanie ułamków o wspólnych mianownikach.\n$$ \\frac{3}{2} - \\frac{1}{2} = \\frac{3-1}{2} = \\frac{2}{2} = 1 $$",
-      "Podziel uproszczony licznik przez uproszczony mianownik.\n$$ \\frac{1}{1} = 1 $$"
+      "Podziel uproszczony licznik przez uproszczony mianownik.\n$ \\frac{1}{1} = 1 $"
     ],
     "examSource": {
       "kind": "matura",
@@ -4365,7 +4365,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji wykładniczej f określonej wzorem $f(x) = a$ x . Punkt $A = (1,2)$ należy do tego wykresu funkcji. ![Rysunek do zadania](/cke-matura/m17-maj/z11-1.jpg) Podstawa $a$ potęgi jest równa",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji wykładniczej f określonej wzorem $f(x) = a^{x}$ . Punkt $A = (1,2)$ należy do tego wykresu funkcji. ![Rysunek do zadania](/cke-matura/m17-maj/z11-1.jpg) Podstawa $a$ potęgi jest równa",
     "choices": [
       "-$\\frac{1}{2}$",
       "$\\frac{1}{2}$",
@@ -4792,9 +4792,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli $x=13$.",
     "solutionSteps": [
-      "Zapisz wzór na średnią arytmetyczną i podstaw dane z zadania. Suma ośmiu liczb wynosi $3+5+7+9+x+15+17+19$, a ich średnia to 11.\n$$ \\frac{3+5+7+9+x+15+17+19}{8} = 11 $$",
-      "Oblicz sumę znanych liczb i uprość równanie. Suma $3+5+7+9+15+17+19 = 75$.\n$$ \\frac{75+x}{8} = 11 $$",
-      "Rozwiąż równanie, aby znaleźć wartość $x$. Pomnóż obie strony przez 8, a następnie odejmij 75.\n$$ 75+x = 11 \\cdot 8 $$\n$$ 75+x = 88 $$\n$$ x = 88 - 75 $$\n$$ x = 13 $$"
+      "Zapisz wzór na średnią arytmetyczną i podstaw dane z zadania. Suma ośmiu liczb wynosi $3+5+7+9+x+15+17+19$, a ich średnia to 11.\n$ \\frac{3+5+7+9+x+15+17+19}{8} = 11 $",
+      "Oblicz sumę znanych liczb i uprość równanie. Suma $3+5+7+9+15+17+19 = 75$.\n$ \\frac{75+x}{8} = 11 $",
+      "Rozwiąż równanie, aby znaleźć wartość $x$. Pomnóż obie strony przez 8, a następnie odejmij 75.\n$ 75+x = 11 \\cdot 8 $\n$ 75+x = 88 $\n$ x = 88 - 75 $\n$ x = 13 $"
     ],
     "examSource": {
       "kind": "matura",
@@ -5175,8 +5175,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, czyli $1,5 \\cdot 10^{8}$",
     "solutionSteps": [
       "Podziel liczby stojące przed potęgami oraz podziel potęgi liczby 10. Dzielenie potęg o tej samej podstawie polega na odjęciu wykładników.\n$$ \\frac{a}{b} = \\frac{3,6 \\cdot 10^{-12}}{2,4 \\cdot 10^{-20}} = \\frac{3,6}{2,4} \\cdot \\frac{10^{-12}}{10^{-20}} $$",
-      "Oblicz iloraz części liczbowej i części potęgowej. Odejmij wykładniki potęg liczby 10: $-12 - (-20) = -12 + 20 = 8$.\n$$ \\frac{3,6}{2,4} = 1,5 $$\n$$ \\frac{10^{-12}}{10^{-20}} = 10^{8} $$",
-      "Połącz obliczone wartości, aby otrzymać wynik końcowy.\n$$ 1,5 \\cdot 10^{8} $$"
+      "Oblicz iloraz części liczbowej i części potęgowej. Odejmij wykładniki potęg liczby 10: $-12 - (-20) = -12 + 20 = 8$.\n$ \\frac{3,6}{2,4} = 1,5 $\n$ \\frac{10^{-12}}{10^{-20}} = 10^{8} $",
+      "Połącz obliczone wartości, aby otrzymać wynik końcowy.\n$ 1,5 \\cdot 10^{8} $"
     ],
     "examSource": {
       "kind": "matura",
@@ -5944,10 +5944,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "Dowód przeprowadzono.",
     "solutionSteps": [
-      "Przekształć nierówność do postaci, w której jedną stronę stanowi zero. Pomnóż obie strony przez $2 \\sqrt{ab}$ (liczba dodatnia, więc znak nierówności się nie zmienia).\n$$ \\frac{a+b}{2} \\ge \\sqrt{ab} \\quad | \\cdot 2\\sqrt{ab} $$\n$$ (a+b)\\sqrt{ab} \\ge 2\\sqrt{ab}\\sqrt{ab} $$\n$$ a\\sqrt{ab} + b\\sqrt{ab} \\ge 2ab $$",
-      "Przenieś wszystkie wyrazy na jedną stronę, aby uzyskać nierówność postaci $f(a,b) \\ge 0$.\n$$ a\\sqrt{ab} + b\\sqrt{ab} - 2ab \\ge 0 $$\nZauważmy, że $\\sqrt{ab} \\cdot \\sqrt{ab} = ab$.\n$$ a\\sqrt{a}\\sqrt{b} + b\\sqrt{a}\\sqrt{b} - 2ab \\ge 0 $$",
-      "Zastosuj podstawienie: $x = \\sqrt{a}$ oraz $y = \\sqrt{b}$. Ponieważ $a, b$ są dodatnie, $x, y$ również są dodatnie. Podstawienie to pozwoli na uproszczenie nierówności do znanej formy.\n$$ x^2 \\cdot x \\cdot y + y^2 \\cdot x \\cdot y - 2 x^2 y^2 \\ge 0 $$\n$$ x^3y + xy^3 - 2x^2y^2 \\ge 0 $$\nWyłącz wspólny czynnik $xy$:\n$$ xy(x^2 + y^2 - 2xy) \\ge 0 $$\nZauważ, że $x^2 + y^2 - 2xy = (x-y)^2$.\n$$ xy(x-y)^2 \\ge 0 $$",
-      "Zinterpretuj wynik. Ponieważ $a, b$ są liczbami dodatnimi, $x = \\sqrt{a}$ i $y = \\sqrt{b}$ również są dodatnie. Zatem $xy > 0$. Kwadrat liczby rzeczywistej jest zawsze nieujemny, czyli $(x-y)^2 \\ge 0$. Iloczyn liczby dodatniej i liczby nieujemnej jest zawsze nieujemny.\n$$ xy(x-y)^2 \\ge 0 $$\nNierówność jest prawdziwa dla dowolnych dodatnich $a, b$."
+      "Przekształć nierówność do postaci, w której jedną stronę stanowi zero. Pomnóż obie strony przez $2 \\sqrt{ab}$ (liczba dodatnia, więc znak nierówności się nie zmienia).\n$$ \\frac{a+b}{2} \\ge \\sqrt{ab} \\quad | \\cdot 2\\sqrt{ab} $$\n$ (a+b)\\sqrt{ab} \\ge 2\\sqrt{ab}\\sqrt{ab} $\n$ a\\sqrt{ab} + b\\sqrt{ab} \\ge 2ab $",
+      "Przenieś wszystkie wyrazy na jedną stronę, aby uzyskać nierówność postaci $f(a,b) \\ge 0$.\n$ a\\sqrt{ab} + b\\sqrt{ab} - 2ab \\ge 0 $\nZauważmy, że $\\sqrt{ab} \\cdot \\sqrt{ab} = ab$.\n$$ a\\sqrt{a}\\sqrt{b} + b\\sqrt{a}\\sqrt{b} - 2ab \\ge 0 $$",
+      "Zastosuj podstawienie: $x = \\sqrt{a}$ oraz $y = \\sqrt{b}$. Ponieważ $a, b$ są dodatnie, $x, y$ również są dodatnie. Podstawienie to pozwoli na uproszczenie nierówności do znanej formy.\n$$ x^2 \\cdot x \\cdot y + y^2 \\cdot x \\cdot y - 2 x^2 y^2 \\ge 0 $$\n$ x^3y + xy^3 - 2x^2y^2 \\ge 0 $\nWyłącz wspólny czynnik $xy$:\n$ xy(x^2 + y^2 - 2xy) \\ge 0 $\nZauważ, że $x^2 + y^2 - 2xy = (x-y)^2$.\n$ xy(x-y)^2 \\ge 0 $",
+      "Zinterpretuj wynik. Ponieważ $a, b$ są liczbami dodatnimi, $x = \\sqrt{a}$ i $y = \\sqrt{b}$ również są dodatnie. Zatem $xy > 0$. Kwadrat liczby rzeczywistej jest zawsze nieujemny, czyli $(x-y)^2 \\ge 0$. Iloczyn liczby dodatniej i liczby nieujemnej jest zawsze nieujemny.\n$ xy(x-y)^2 \\ge 0 $\nNierówność jest prawdziwa dla dowolnych dodatnich $a, b$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5995,7 +5995,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem $f(x) = a$ x $(gdzie $a > 0$ i a\\ne 1)$, należy punkt $P = (2,9)$ . Oblicz a i zapisz zbiór wartości funkcji $g$ , określonej wzorem $g(x) = f(x) - 2$ .",
+    "prompt": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem $f(x) = a^{x}$ $(gdzie a > 0 i a \\ne 1)$, należy punkt $P = (2,9)$ . Oblicz a i zapisz zbiór wartości funkcji $g$ , określonej wzorem $g(x) = f(x) - 2$ .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -6456,8 +6456,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli $-168$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Podstaw dane $a_1 = 7$, $a_8 = -49$ i $n=8$, aby obliczyć różnicę $r$.\n$$-49 = 7 + (8-1)r$$\n$$-49 = 7 + 7r$$\n$$-56 = 7r$$\n$$r = -8$$",
-      "Użyj wzoru na sumę ośmiu początkowych wyrazów ciągu arytmetycznego: $S_n = \\frac{n(a_1 + a_n)}{2}$. Podstaw $n=8$, $a_1 = 7$ i $a_8 = -49$.\n$$S_8 = \\frac{8(7 + (-49))}{2}$$\n$$S_8 = \\frac{8(-42)}{2}$$\n$$S_8 = 4(-42)$$\n$$S_8 = -168$$"
+      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Podstaw dane $a_1 = 7$, $a_8 = -49$ i $n=8$, aby obliczyć różnicę $r$.\n$-49 = 7 + (8-1)r$\n$-49 = 7 + 7r$\n$-56 = 7r$\n$r = -8$",
+      "Użyj wzoru na sumę ośmiu początkowych wyrazów ciągu arytmetycznego: $S_n = \\frac{n(a_1 + a_n)}{2}$. Podstaw $n=8$, $a_1 = 7$ i $a_8 = -49$.\n$S_8 = \\frac{8(7 + (-49))}{2}$\n$S_8 = \\frac{8(-42)}{2}$\n$S_8 = 4(-42)$\n$S_8 = -168$"
     ],
     "examSource": {
       "kind": "matura",
@@ -7497,9 +7497,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli ma dokładnie jedno rozwiązanie: $x=2$.",
     "solutionSteps": [
-      "Przekształć równanie do postaci, gdzie po jednej stronie jest 0. Wymnóż nawiasy i przenieś wszystkie wyrazy na lewą stronę.\n$$x^2 - 2x = x^2 - 4x + 4$$\n$$x^2 - 2x - x^2 + 4x - 4 = 0$$",
-      "Uprość lewą stronę równania, redukując podobne wyrazy.\n$$2x - 4 = 0$$",
-      "Rozwiąż otrzymane równanie liniowe, wyznaczając wartość $x$.\n$$2x = 4$$\n$$x = 2$$"
+      "Przekształć równanie do postaci, gdzie po jednej stronie jest 0. Wymnóż nawiasy i przenieś wszystkie wyrazy na lewą stronę.\n$x^2 - 2x = x^2 - 4x + 4$\n$x^2 - 2x - x^2 + 4x - 4 = 0$",
+      "Uprość lewą stronę równania, redukując podobne wyrazy.\n$2x - 4 = 0$",
+      "Rozwiąż otrzymane równanie liniowe, wyznaczając wartość $x$.\n$2x = 4$\n$x = 2$"
     ],
     "examSource": {
       "kind": "matura",
@@ -7994,9 +7994,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$",
     "solutionSteps": [
-      "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową z zerem po prawej stronie. Wyciągnij wspólny czynnik przed nawias.\n$$2(x-1)(x+3) - (x-1) > 0$$\n$$(x-1)[2(x+3) - 1] > 0$$",
-      "Uprość wyrażenie w drugim nawiasie i znajdź miejsca zerowe otrzymanego trójmianu kwadratowego.\n$$(x-1)(2x+6-1) > 0$$\n$$(x-1)(2x+5) > 0$$\nMiejsca zerowe to $x=1$ oraz $x=-\\frac{5}{2}$.",
-      "Naszkicuj parabolę lub zaznacz przedziały na osi liczbowej, uwzględniając nierówność \"większe od zera\" $(> 0)$. Nierówność jest spełniona dla argumentów x znajdujących się na zewnątrz przedziału wyznaczonego przez miejsca zerowe.\n$$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$$"
+      "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową z zerem po prawej stronie. Wyciągnij wspólny czynnik przed nawias.\n$2(x-1)(x+3) - (x-1) > 0$\n$(x-1)[2(x+3) - 1] > 0$",
+      "Uprość wyrażenie w drugim nawiasie i znajdź miejsca zerowe otrzymanego trójmianu kwadratowego.\n$(x-1)(2x+6-1) > 0$\n$(x-1)(2x+5) > 0$\nMiejsca zerowe to $x=1$ oraz $x=-\\frac{5}{2}$.",
+      "Naszkicuj parabolę lub zaznacz przedziały na osi liczbowej, uwzględniając nierówność \"większe od zera\" $(> 0)$. Nierówność jest spełniona dla argumentów x znajdujących się na zewnątrz przedziału wyznaczonego przez miejsca zerowe.\n$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$"
     ],
     "examSource": {
       "kind": "matura",
@@ -9576,8 +9576,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "D, czyli $\\sqrt{3}$",
     "solutionSteps": [
       "Przekształć wzór funkcji $f(x)$, aby wyznaczyć prostszą postać wyrażenia. Wykorzystaj wzór skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$.\n$$ f(x) = \\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x+1 $$",
-      "Podstaw podaną wartość $x = \\sqrt{3} - 1$ do uproszczonego wzoru funkcji $f(x)$.\n$$ f(\\sqrt{3}-1) = (\\sqrt{3}-1) + 1 $$",
-      "Oblicz końcową wartość funkcji.\n$$ f(\\sqrt{3}-1) = \\sqrt{3} $$"
+      "Podstaw podaną wartość $x = \\sqrt{3} - 1$ do uproszczonego wzoru funkcji $f(x)$.\n$ f(\\sqrt{3}-1) = (\\sqrt{3}-1) + 1 $",
+      "Oblicz końcową wartość funkcji.\n$ f(\\sqrt{3}-1) = \\sqrt{3} $"
     ],
     "examSource": {
       "kind": "matura",
@@ -11728,8 +11728,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{24}{25}$",
     "solutionSteps": [
       "Podnieś obustronnie równanie $\\sin \\alpha + \\cos \\alpha = \\frac{7}{5}$ do kwadratu, aby uzyskać wyrażenie zawierające $\\sin^2 \\alpha$, $\\cos^2 \\alpha$ i $2 \\sin \\alpha \\cos \\alpha$.\n$$(\\sin \\alpha + \\cos \\alpha)^2 = \\left(\\frac{7}{5}\\right)^2$$\n$$\\sin^2 \\alpha + 2 \\sin \\alpha \\cos \\alpha + \\cos^2 \\alpha = \\frac{49}{25}$$",
-      "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby uprościć równanie z kroku 1.\n$$1 + 2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25}$$",
-      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując_{1} od obu stron równania.\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$$"
+      "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby uprościć równanie z kroku 1.\n$1 + 2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25}$",
+      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując_{1} od obu stron równania.\n$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$"
     ],
     "examSource": {
       "kind": "matura",
@@ -11755,9 +11755,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "125",
     "solutionSteps": [
-      "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok $BD = 10$. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, $a_{k}$ąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
-      "Oblicz pole trójkąta BCD. Trójkąt BCD jest trójkątem równoramiennym, ponieważ $|BC| = |CD| = 13$. Podstawą tego trójkąta jest bok BD o długości 10. Obliczymy wysokość tego trójkąta opuszczoną z wierzchołka C na podstawę BD. Wysokość ta dzieli podstawę BD na dwie równe części.\n$$h_{BCD}^2 + (\\frac{10}{2})^2 = 13^2$$\n$$h_{BCD}^2 + 5^2 = 13^2$$\n$$h_{BCD}^2 + 25 = 169$$\n$$h_{BCD}^2 = 144$$\n$$h_{BCD} = 12$$\nPole trójkąta BCD wynosi:\n$$P_{BCD} = \\frac{1}{2} \\cdot |BD| \\cdot h_{BCD} = \\frac{1}{2} \\cdot 10 \\cdot 12 = 60$$",
-      "Oblicz pole całego czworokąta ABCD. Sumujemy pola obliczonych trójkątów ABD i BCD.\n$$P_{ABCD} = P_{ABD} + P_{BCD} = 65 + 60 = 125$$"
+      "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok $BD = 10$. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, $a_{k}$ąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, $a_{k}$ąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
+      "Oblicz pole trójkąta BCD. Trójkąt BCD jest trójkątem równoramiennym, ponieważ $|BC| = |CD| = 13$. Podstawą tego trójkąta jest bok BD o długości 10. Obliczymy wysokość tego trójkąta opuszczoną z wierzchołka C na podstawę BD. Wysokość ta dzieli podstawę BD na dwie równe części.\n$h_{BCD}^2 + (\\frac{10}{2})^2 = 13^2$\n$h_{BCD}^2 + 5^2 = 13^2$\n$h_{BCD}^2 + 25 = 169$\n$h_{BCD}^2 = 144$\n$h_{BCD} = 12$\nPole trójkąta BCD wynosi:\n$$P_{BCD} = \\frac{1}{2} \\cdot |BD| \\cdot h_{BCD} = \\frac{1}{2} \\cdot 10 \\cdot 12 = 60$$",
+      "Oblicz pole całego czworokąta ABCD. Sumujemy pola obliczonych trójkątów ABD i BCD.\n$P_{ABCD} = P_{ABD} + P_{BCD} = 65 + 60 = 125$"
     ],
     "examSource": {
       "kind": "matura",
@@ -12597,7 +12597,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, czyli 280 cm$^3$",
     "solutionSteps": [
       "Oblicz pole podstawy graniastosłupa (rombu). Pole rombu $P$ to połowa iloczynu długości jego przekątnych ($d_1, d_2$).\n$$P = \\frac{1}{2} d_1 \\cdot d_2 = \\frac{1}{2} \\cdot 7 \\text{ cm} \\cdot 10 \\text{ cm} = 35 \\text{ cm}^2$$",
-      "Oblicz wysokość graniastosłupa. Dłuższa przekątna rombu ma 10 cm, a wysokość graniastosłupa jest od niej krótsza o 2 cm.\n$$h = 10 \\text{ cm} - 2 \\text{ cm} = 8 \\text{ cm}$$",
+      "Oblicz wysokość graniastosłupa. Dłuższa przekątna rombu ma 10 cm, a wysokość graniastosłupa jest od niej krótsza o 2 cm.\n$h = 10 \\text{ cm} - 2 \\text{ cm} = 8 \\text{ cm}$",
       "Oblicz objętość graniastosłupa. Objętość $V$ to pole podstawy $P$ pomnożone przez wysokość $h$.\n$$V = P \\cdot h = 35 \\text{ cm}^2 \\cdot 8 \\text{ cm} = 280 \\text{ cm}^3$$"
     ],
     "examSource": {
@@ -15866,7 +15866,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "Wykazano.",
     "solutionSteps": [
-      "Liczbę całkowitą nieparzystą $n$ można zapisać w postaci $n = 2k+1$ dla pewnej liczby całkowitej $k$. Podstawiamy to do wyrażenia $n^2 + 2023$.\n$$n^2 + 2023 = (2k+1)^2 + 2023$$",
+      "Liczbę całkowitą nieparzystą $n$ można zapisać w postaci $n = 2k+1$ dla pewnej liczby całkowitej $k$. Podstawiamy to do wyrażenia $n^2 + 2023$.\n$n^2 + 2023 = (2k+1)^2 + 2023$",
       "Rozwijamy kwadrat i upraszczamy wyrażenie, zauważając, że $2024 = 8 \\cdot 253$.\n$$(2k+1)^2 + 2023 = 4k^2 + 4k + 1 + 2023 = 4k^2 + 4k + 2024 = 4k(k+1) + 8 \\cdot 253$$",
       "Wyrażenie $k(k+1)$ jest zawsze parzyste, więc można je zapisać jako $2m$ dla pewnej liczby całkowitej $m$. Stąd $4k(k+1) = 4(2m) = 8m$. Ostatecznie mamy $8m + 8 \\cdot 253 = 8(m+253)$, co jest liczbą podzielną przez 8."
     ],
@@ -17958,7 +17958,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Wypisanie danych zadania. Z treści zadania znamy długości boków trójkąta równoramiennego $ABC$:\n- $|AC| = 4$\n- $|BC| = 4$\n- $|AB| = 3$",
       "Zapisanie warunku podobieństwa trójkątów. Trójkąty $ABC$ i $BDA$ są podobne ($\\triangle ABC \\sim \\triangle BDA$). Z podobieństwa tego wynika, że stosunki długości odpowiednich boków tych trójkątów są równe:\n$$ \\frac{|AB|}{|BD|} = \\frac{|BC|}{|DA|} = \\frac{|CA|}{|AB|} $$",
-      "Wyznaczenie długości odcinka $BD$. Wykorzystujemy pierwszą i trzecią część zapisanej proporcji:\n$$ \\frac{|AB|}{|BD|} = \\frac{|CA|}{|AB|} $$\n\nPodstawiamy dane liczbowe $|AB| = 3$ oraz $|CA| = 4$:\n$$ \\frac{3}{|BD|} = \\frac{4}{3} $$\n\nMnożymy równanie \"na krzyż\":\n$$ 4 \\cdot |BD| = 3 \\cdot 3 $$\n$$ 4 \\cdot |BD| = 9 $$\n$$ |BD| = \\frac{9}{4} = 2,25 $$\n\nOtrzymany wynik odpowiada opcji B."
+      "Wyznaczenie długości odcinka $BD$. Wykorzystujemy pierwszą i trzecią część zapisanej proporcji:\n$ \\frac{|AB|}{|BD|} = \\frac{|CA|}{|AB|} $\n\nPodstawiamy dane liczbowe $|AB| = 3$ oraz $|CA| = 4$:\n$ \\frac{3}{|BD|} = \\frac{4}{3} $\n\nMnożymy równanie \"na krzyż\":\n$ 4 \\cdot |BD| = 3 \\cdot 3 $\n$ 4 \\cdot |BD| = 9 $\n$ |BD| = \\frac{9}{4} = 2,25 $\n\nOtrzymany wynik odpowiada opcji B."
     ],
     "examSource": {
       "kind": "matura",
@@ -17984,9 +17984,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "Pierwsze stwierdzenie: fałsz, drugie stwierdzenie: prawda.",
     "solutionSteps": [
-      "Aby zweryfikować, czy trójkąt $ABC$ o bokach $|AB| = 11$, $|BC| = 12$ i kącie $|\\angle ABC| = 60^\\circ$ jest równoramienny, musimy obliczyć długość trzeciego boku $|AC|$. Wykorzystamy w tym celu twierdzenie cosinusów dla trójkąta $ABC$:\n$$|AC|^2 = |AB|^2 + |BC|^2 - 2 \\cdot |AB| \\cdot |BC| \\cdot \\cos(60^\\circ)$$\n\nWstawiamy dane liczbowe, pamiętając, że $\\cos(60^\\circ) = \\frac{1}{2}$:\n$$|AC|^2 = 11^2 + 12^2 - 2 \\cdot 11 \\cdot 12 \\cdot \\frac{1}{2}$$\n$$|AC|^2 = 121 + 144 - 132$$\n$$|AC|^2 = 133$$\n$$|AC| = \\sqrt{133}$$",
+      "Aby zweryfikować, czy trójkąt $ABC$ o bokach $|AB| = 11$, $|BC| = 12$ i kącie $|\\angle ABC| = 60^\\circ$ jest równoramienny, musimy obliczyć długość trzeciego boku $|AC|$. Wykorzystamy w tym celu twierdzenie cosinusów dla trójkąta $ABC$:\n$$|AC|^2 = |AB|^2 + |BC|^2 - 2 \\cdot |AB| \\cdot |BC| \\cdot \\cos(60^\\circ)$$\n\nWstawiamy dane liczbowe, pamiętając, że $\\cos(60^\\circ) = \\frac{1}{2}$:\n$$|AC|^2 = 11^2 + 12^2 - 2 \\cdot 11 \\cdot 12 \\cdot \\frac{1}{2}$$\n$|AC|^2 = 121 + 144 - 132$\n$|AC|^2 = 133$\n$|AC| = \\sqrt{133}$",
       "Porównujemy długości wszystkich boków trójkąta $ABC$. Wynoszą one odpowiednio: $11$, $12$ oraz $\\sqrt{133}$ (co w przybliżeniu daje $11{,}53$). Ponieważ wszystkie trzy boki mają różne długości, trójkąt nie jest równoramienny. Pierwsze stwierdzenie jest **fałszywe**.",
-      "Aby zweryfikować drugie stwierdzenie, obliczamy pole trójkąta $ABC$ ze wzoru wykorzystującego dwa boki i sinus kąta między nimi:\n$$P = \\frac{1}{2} \\cdot |AB| \\cdot |BC| \\cdot \\sin(60^\\circ)$$\n\nWstawiamy dane liczbowe, wiedząc, że $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$:\n$$P = \\frac{1}{2} \\cdot 11 \\cdot 12 \\cdot \\frac{\\sqrt{3}}{2}$$\n$$P = 6 \\cdot 11 \\cdot \\frac{\\sqrt{3}}{2}$$\n$$P = 3 \\cdot 11 \\cdot \\sqrt{3} = 33\\sqrt{3}$$\n\nPole trójkąta jest równe $33\\sqrt{3}$, co oznacza, że drugie stwierdzenie jest **prawdziwe**."
+      "Aby zweryfikować drugie stwierdzenie, obliczamy pole trójkąta $ABC$ ze wzoru wykorzystującego dwa boki i sinus kąta między nimi:\n$$P = \\frac{1}{2} \\cdot |AB| \\cdot |BC| \\cdot \\sin(60^\\circ)$$\n\nWstawiamy dane liczbowe, wiedząc, że $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$:\n$$P = \\frac{1}{2} \\cdot 11 \\cdot 12 \\cdot \\frac{\\sqrt{3}}{2}$$\n$P = 6 \\cdot 11 \\cdot \\frac{\\sqrt{3}}{2}$\n$P = 3 \\cdot 11 \\cdot \\sqrt{3} = 33\\sqrt{3}$\n\nPole trójkąta jest równe $33\\sqrt{3}$, co oznacza, że drugie stwierdzenie jest **prawdziwe**."
     ],
     "examSource": {
       "kind": "matura",
@@ -18015,9 +18015,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C, czyli $10$",
     "solutionSteps": [
-      "Zauważmy, że punkt $S$ (punkt przecięcia przekątnych kwadratu) jest środkiem każdej z przekątnych kwadratu $ABCD$. Oznacza to, że odległość od wierzchołka $A$ do punktu $S$ jest równa połowie długości przekątnej $AC$. Długość całej przekątnej $d$ wynosi zatem:\n$$d = 2 \\cdot |AS|$$",
-      "Obliczmy odległość między punktami $A = (4, -1)$ i $S = (1, 3)$, korzystając ze wzoru na długość odcinka w układzie współrzędnych:\n$$|AS| = \\sqrt{(x_S - x_A)^2 + (y_S - y_A)^2}$$\n\nPodstawiamy współrzędne punktów:\n$$|AS| = \\sqrt{(1 - 4)^2 + (3 - (-1))^2}$$\n$$|AS| = \\sqrt{(-3)^2 + (4)^2}$$\n$$|AS| = \\sqrt{9 + 16}$$\n$$|AS| = \\sqrt{25} = 5$$",
-      "Obliczmy długość przekątnej kwadratu $ABCD$, mnożąc otrzymaną odległość $|AS|$ przez $2$:\n$$d = 2 \\cdot 5 = 10$$\n\nSzukana długość przekątnej wynosi $10$, co odpowiada opcji C."
+      "Zauważmy, że punkt $S$ (punkt przecięcia przekątnych kwadratu) jest środkiem każdej z przekątnych kwadratu $ABCD$. Oznacza to, że odległość od wierzchołka $A$ do punktu $S$ jest równa połowie długości przekątnej $AC$. Długość całej przekątnej $d$ wynosi zatem:\n$d = 2 \\cdot |AS|$",
+      "Obliczmy odległość między punktami $A = (4, -1)$ i $S = (1, 3)$, korzystając ze wzoru na długość odcinka w układzie współrzędnych:\n$|AS| = \\sqrt{(x_S - x_A)^2 + (y_S - y_A)^2}$\n\nPodstawiamy współrzędne punktów:\n$|AS| = \\sqrt{(1 - 4)^2 + (3 - (-1))^2}$\n$|AS| = \\sqrt{(-3)^2 + (4)^2}$\n$|AS| = \\sqrt{9 + 16}$\n$|AS| = \\sqrt{25} = 5$",
+      "Obliczmy długość przekątnej kwadratu $ABCD$, mnożąc otrzymaną odległość $|AS|$ przez $2$:\n$d = 2 \\cdot 5 = 10$\n\nSzukana długość przekątnej wynosi $10$, co odpowiada opcji C."
     ],
     "examSource": {
       "kind": "matura",
@@ -18046,9 +18046,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $m = -2$",
     "solutionSteps": [
-      "Przypominamy warunek równoległości dwóch prostych w postaci kierunkowej. Dwie proste o równaniach $y = a_1x + b_1$ oraz $y = a_2x + b_2$ są równoległe wtedy i tylko wtedy, gdy ich współczynniki kierunkowe (liczby stojące przy zmiennej $x$) są równe:\n$$ a_1 = a_2 $$",
+      "Przypominamy warunek równoległości dwóch prostych w postaci kierunkowej. Dwie proste o równaniach $y = a_1x + b_1$ oraz $y = a_2x + b_2$ są równoległe wtedy i tylko wtedy, gdy ich współczynniki kierunkowe (liczby stojące przy zmiennej $x$) są równe:\n$ a_1 = a_2 $",
       "Wyznaczamy współczynniki kierunkowe prostych $k$ oraz $l$ podanych w treści zadania:\n- dla prostej $k: y = (m-2)x + 5$ współczynnik kierunkowy to $a_1 = m - 2$\n- dla prostej $l: y = -4x + (m + 3)$ współczynnik kierunkowy to $a_2 = -4$",
-      "Przyrównujemy oba współczynniki do siebie i rozwiązujemy powstałe równanie liniowe z niewiadomą $m$:\n$$ m - 2 = -4 $$\n$$ m = -4 + 2 $$\n$$ m = -2 $$\n\nWartość $m = -2$ odpowiada opcji B."
+      "Przyrównujemy oba współczynniki do siebie i rozwiązujemy powstałe równanie liniowe z niewiadomą $m$:\n$ m - 2 = -4 $\n$ m = -4 + 2 $\n$ m = -2 $\n\nWartość $m = -2$ odpowiada opcji B."
     ],
     "examSource": {
       "kind": "matura",

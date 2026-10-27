@@ -361,6 +361,24 @@ export function formatCkeMathText(input: string): string {
   out = restoreSegments(out, existingMath.parts, MATH_PLACEHOLDER);
   out = restoreSegments(out, images.parts, IMG_PLACEHOLDER);
 
+  // OCR wykładnicze: $f(x) = a$ x → $f(x) = a^{x}$
+  out = out.replace(
+    /\$([^$]*?=\s*[a-zA-Z])\$\s*x\b/g,
+    (_m, body: string) => `$${body}^{x}$`,
+  );
+  // $(gdzie $a > 0$ i a\ne 1)$ / $$a > 0$$ → $(gdzie a > 0 i a \ne 1)$
+  out = out.replace(
+    /\$\(\s*gdzie\s*\$+([^$]+?)\$+\s*i\s*([^)]+?)\)\$/gi,
+    (_m, cond: string, rest: string) =>
+      `$(gdzie ${cond.trim()} i ${rest
+        .trim()
+        .replace(/\\ne/g, "\\ne ")
+        .replace(/\s+/g, " ")})$`,
+  );
+  out = out.replace(/\ba\\ne\b/g, "a \\ne ");
+  // Przypadkowe $$…$$ na krótkim inline (nie display) → $…$
+  out = out.replace(/\$\$([^$\n]{1,48})\$\$/g, (_m, body: string) => `$${body}$`);
+
   return out.replace(/[^\S\n]{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
 }
 
