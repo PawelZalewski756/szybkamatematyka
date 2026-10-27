@@ -81,6 +81,26 @@ export async function POST(request: Request) {
       );
     }
 
+    // Częsty błąd konfiguracji: w env wklejono Product ID (prod_…) zamiast Price ID (price_…).
+    if (priceId.startsWith("prod_")) {
+      return Response.json(
+        {
+          error: `W ${plan.priceEnvVar} jest Product ID (prod_…), a potrzebny jest Price ID (price_…). W Stripe: Product → Pricing → skopiuj Price ID, nie ID produktu.`,
+          code: "product_id_instead_of_price",
+        },
+        { status: 503 },
+      );
+    }
+    if (!priceId.startsWith("price_")) {
+      return Response.json(
+        {
+          error: `Nieprawidłowy ${plan.priceEnvVar}: oczekiwano Price ID zaczynającego się od „price_”.`,
+          code: "invalid_price_id",
+        },
+        { status: 503 },
+      );
+    }
+
     const stripe = getStripeOrNull();
     if (!stripe) {
       return Response.json(

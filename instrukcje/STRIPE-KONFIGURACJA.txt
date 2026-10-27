@@ -23,6 +23,18 @@ kolumn subskrypcji w Supabase.
      - Billing period: Yearly
      - Skopiuj Price ID (price_...) → STRIPE_PRICE_ROCZNY
 
+  WAŻNE — nie myl ID:
+     - Product ID zaczyna się od prod_   ← NIE wklejaj tego do STRIPE_PRICE_*
+     - Price ID zaczyna się od price_   ← TYLKO to idzie do STRIPE_PRICE_*
+
+  Jak znaleźć Price ID:
+     Products → kliknij produkt (np. Pro) → sekcja Pricing → kliknij cenę
+     → skopiuj ID zaczynające się od price_
+     (albo w liście cen kolumna API ID / Price ID).
+
+  Błąd „No such price: 'prod_…'” oznacza, że w Vercel jest Product ID
+  zamiast Price ID — podmień zmienną i zrób Redeploy.
+
   Ceny w UI (lib/subscription/plans.ts) powinny być zgodne z tym, co ustawisz
   w Stripe — inaczej uczeń zobaczy inną kwotę niż na Checkout.
 
