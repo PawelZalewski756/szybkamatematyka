@@ -1,6 +1,7 @@
 "use client";
 
 import { MinigameShell } from "@/components/minigry/MinigameShell";
+import { MathText } from "@/components/trening/MathText";
 import { getMinigameBySlug } from "@/lib/minigry/minigame-registry";
 import { type MinigamePlayMode } from "@/lib/minigry/game-modes";
 import type {
@@ -110,9 +111,11 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = q.prompt;
     questionContent = (
-      <p className="mt-4 break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-        {q.headline}
-      </p>
+      <MathText
+        content={q.headline}
+        as="div"
+        className="mt-4 break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+      />
     );
     answers = (
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -137,9 +140,11 @@ export function ConfiguredMinigame({
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
     questionContent = (
-      <p className="mt-4 break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl">
-        {q.equation}
-      </p>
+      <MathText
+        content={q.equation}
+        as="div"
+        className="mt-4 break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl [&_.katex]:text-[1em]"
+      />
     );
     answers = (
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
@@ -171,13 +176,15 @@ export function ConfiguredMinigame({
     questionPrompt = "Która wartość jest większa?";
     questionContent = (
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-6">
-        <span className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl">
-          {q.left}
-        </span>
+        <MathText
+          content={q.left}
+          className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+        />
         <span className="text-lg font-medium text-muted">czy</span>
-        <span className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl">
-          {q.right}
-        </span>
+        <MathText
+          content={q.right}
+          className="text-3xl font-bold tabular-nums text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+        />
       </div>
     );
     answers = (

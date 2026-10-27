@@ -22,6 +22,13 @@ import type {
   TrueFalseQuestion,
 } from "@/lib/minigry/questions/types";
 
+function latexOp(op: "+" | "−" | "×" | "÷"): string {
+  if (op === "−") return "-";
+  if (op === "×") return "\\times";
+  if (op === "÷") return "\\div";
+  return "+";
+}
+
 function arithmetic(
   path: LearningPath,
   op: "+" | "−" | "×" | "÷",
@@ -49,7 +56,7 @@ function arithmetic(
   return {
     id: `${op}-${a}-${b}`,
     prompt: "Wynik",
-    headline: `${a} ${op} ${b}`,
+    headline: `$${a} ${latexOp(op)} ${b}$`,
     correct,
     options: buildNumericOptions(correct, 4, op === "×" || op === "÷" ? 18 : 14),
   };
@@ -89,8 +96,8 @@ export function generatePorownaj(path: LearningPath): CompareQuestion {
 
   return {
     id: `cmp-${left}-${right}`,
-    left: String(left),
-    right: String(right),
+    left: `$${left}$`,
+    right: `$${right}$`,
     correct,
   };
 }
@@ -104,7 +111,7 @@ export function generateProcenty(path: LearningPath): ChoiceQuestion {
   return {
     id: `pct-${pct}-${base}`,
     prompt: "Oblicz procent",
-    headline: `${pct}% z ${base}`,
+    headline: `$${pct}\\%$ z $${base}$`,
     correct,
     options: buildNumericOptions(correct, 4, 20),
   };
@@ -120,8 +127,8 @@ export function generatePotegi(): TrueFalseQuestion {
   return {
     id: `pow-${base}-${exp}`,
     equation: showCorrect
-      ? `${base}^${exp} = ${val}`
-      : `${base}^${exp} = ${trap}`,
+      ? `$${base}^{${exp}} = ${val}$`
+      : `$${base}^{${exp}} = ${trap}$`,
     isCorrect: showCorrect,
   };
 }
@@ -136,7 +143,7 @@ export function generatePierwiastki(path: LearningPath): ChoiceQuestion {
   return {
     id: `sqrt-${squared}`,
     prompt: "Ile wynosi pierwiastek?",
-    headline: `√${squared}`,
+    headline: `$\\sqrt{${squared}}$`,
     correct,
     options: buildNumericOptions(correct, 4, 8),
   };
@@ -152,7 +159,7 @@ export function generateRownania(path: LearningPath): ChoiceQuestion {
   return {
     id: `eq-${a}x+${b}=${c}`,
     prompt: "Znajdź x",
-    headline: `${a}x + ${b} = ${c}`,
+    headline: `$${a}x + ${b} = ${c}$`,
     correct: x,
     options: buildNumericOptions(x, 4, 6),
   };
@@ -170,7 +177,7 @@ export function generateCiag(path: LearningPath): ChoiceQuestion {
     return {
       id: `seq-a-${seq.join("-")}`,
       prompt: "Jaka jest następna liczba?",
-      headline: `${seq.join(", ")}, ?`,
+      headline: `$${seq.join(", ")},\\ ?$`,
       correct,
       options: buildNumericOptions(correct, 4, 15),
     };
@@ -189,7 +196,7 @@ export function generateCiag(path: LearningPath): ChoiceQuestion {
   return {
     id: `seq-g-${seq.join("-")}`,
     prompt: "Jaka jest następna liczba?",
-    headline: `${seq.join(", ")}, ?`,
+    headline: `$${seq.join(", ")},\\ ?$`,
     correct,
     options: buildNumericOptions(correct, 4, 40),
   };
@@ -211,7 +218,7 @@ export function generateNawiasy(path: LearningPath): ChoiceQuestion {
   return {
     id: `ops-${a}+${b}*${c}`,
     prompt: "Oblicz zgodnie z kolejnością działań",
-    headline: `${a} + ${b} × ${c}`,
+    headline: `$${a} + ${b} \\times ${c}$`,
     correct,
     options: shuffle(options),
   };
@@ -222,11 +229,12 @@ export function generateFunkcje(): ChoiceQuestion {
   const a = randomInt(2, 5);
   const b = randomInt(-5, 8);
   const correct = a * x + b;
+  const bPart = b >= 0 ? `+ ${b}` : `- ${Math.abs(b)}`;
 
   return {
     id: `fx-${a}x+${b}@${x}`,
     prompt: "Oblicz f(x)",
-    headline: `f(x) = ${a}x ${b >= 0 ? "+ " + b : "− " + Math.abs(b)},  x = ${x}`,
+    headline: `$f(x) = ${a}x ${bPart},\\ x = ${x}$`,
     correct,
     options: buildNumericOptions(correct, 4, 12),
   };
@@ -234,11 +242,23 @@ export function generateFunkcje(): ChoiceQuestion {
 
 export function generateWzory(): TrueFalseQuestion {
   const bank = [
-    { true: "(a + b)² = a² + 2ab + b²", false: "(a + b)² = a² + b²" },
-    { true: "(a − b)² = a² − 2ab + b²", false: "(a − b)² = a² − b²" },
-    { true: "a² − b² = (a − b)(a + b)", false: "a² − b² = (a − b)²" },
-    { true: "(2x)² = 4x²", false: "(2x)² = 2x²" },
-    { true: "x² · x³ = x⁵", false: "x² · x³ = x⁶" },
+    {
+      true: "$(a + b)^{2} = a^{2} + 2ab + b^{2}$",
+      false: "$(a + b)^{2} = a^{2} + b^{2}$",
+    },
+    {
+      true: "$(a - b)^{2} = a^{2} - 2ab + b^{2}$",
+      false: "$(a - b)^{2} = a^{2} - b^{2}$",
+    },
+    {
+      true: "$a^{2} - b^{2} = (a - b)(a + b)$",
+      false: "$a^{2} - b^{2} = (a - b)^{2}$",
+    },
+    { true: "$(2x)^{2} = 4x^{2}$", false: "$(2x)^{2} = 2x^{2}$" },
+    {
+      true: "$x^{2} \\cdot x^{3} = x^{5}$",
+      false: "$x^{2} \\cdot x^{3} = x^{6}$",
+    },
   ] as const;
   const t = pickRandom(bank);
   const showCorrect = Math.random() < 0.5;
@@ -276,7 +296,7 @@ export function generatePole(): ChoiceQuestion {
   return {
     id: `area-${w}x${h}`,
     prompt: "Oblicz pole prostokąta",
-    headline: `a = ${w} cm, b = ${h} cm`,
+    headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
     correct,
     options: buildNumericOptions(correct, 4, 25),
   };
@@ -289,7 +309,7 @@ export function generateObwod(): ChoiceQuestion {
   return {
     id: `perim-${w}x${h}`,
     prompt: "Oblicz obwód prostokąta",
-    headline: `a = ${w} cm, b = ${h} cm`,
+    headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
     correct,
     options: buildNumericOptions(correct, 4, 20),
   };
@@ -302,7 +322,7 @@ export function generateNwd(): ChoiceQuestion {
   return {
     id: `gcd-${a}-${b}`,
     prompt: "Oblicz NWD",
-    headline: `NWD(${a}, ${b})`,
+    headline: `$\\mathrm{NWD}(${a}, ${b})$`,
     correct,
     options: buildNumericOptions(correct, 4, 8),
   };
@@ -311,11 +331,11 @@ export function generateNwd(): ChoiceQuestion {
 export function generateZaokraglenie(): ChoiceQuestion {
   const val = randomInt(11, 99) + randomInt(1, 9) / 10;
   const rounded = Math.round(val);
-  const display = val.toFixed(1).replace(".", ",");
+  const display = val.toFixed(1).replace(".", "{,}");
   return {
-    id: `rnd-${display}`,
+    id: `rnd-${val.toFixed(1).replace(".", ",")}`,
     prompt: "Zaokrąglij do liczby całkowitej",
-    headline: display,
+    headline: `$${display}$`,
     correct: rounded,
     options: buildNumericOptions(rounded, 4, 5),
   };
@@ -327,7 +347,7 @@ export function generateLiczbaPrzeciwna(): ChoiceQuestion {
   return {
     id: `opp-${n}`,
     prompt: "Jaka jest liczba przeciwna?",
-    headline: String(n),
+    headline: `$${n}$`,
     correct,
     options: buildNumericOptions(correct, 4, 10),
   };
@@ -341,8 +361,8 @@ export function generatePotegaDziesiatki(): TrueFalseQuestion {
   return {
     id: `10^${exp}`,
     equation: showCorrect
-      ? `10^${exp} = ${correct}`
-      : `10^${exp} = ${trap}`,
+      ? `$10^{${exp}} = ${correct}$`
+      : `$10^{${exp}} = ${trap}$`,
     isCorrect: showCorrect,
   };
 }
@@ -356,8 +376,8 @@ export function generateTrojkat(): TrueFalseQuestion {
   return {
     id: `tri-${a}-${b}`,
     equation: showCorrect
-      ? `${a}° + ${b}° + trzeci kąt = 180°`
-      : `${a}° + ${b}° + trzeci kąt = ${trap}°`,
+      ? `$${a}^{\\circ} + ${b}^{\\circ} + \\text{trzeci kąt} = 180^{\\circ}$`
+      : `$${a}^{\\circ} + ${b}^{\\circ} + \\text{trzeci kąt} = ${trap}^{\\circ}$`,
     isCorrect: showCorrect,
   };
 }
@@ -371,7 +391,7 @@ export function generateUlamkiDodaj(): ChoiceQuestion {
   return {
     id: `frac+${n1}-${n2}-${d}`,
     prompt: "Ile wynosi suma liczników (ten sam mianownik)?",
-    headline: `${n1}/${d} + ${n2}/${d}`,
+    headline: `$\\frac{${n1}}{${d}} + \\frac{${n2}}{${d}}$`,
     correct: promptCorrect,
     options: buildNumericOptions(promptCorrect, 4, 6),
   };
@@ -392,7 +412,7 @@ export function generateSinCos(): ChoiceQuestion {
   return {
     id: `sin-${deg}`,
     prompt: `Oblicz sin(${deg}°)`,
-    headline: `sin(${deg}°) = ?`,
+    headline: `$\\sin(${deg}^{\\circ}) = ?$`,
     correct,
     options: shuffle([...new Set(opts)]).slice(0, 4),
   };
@@ -410,7 +430,7 @@ export function generateCos(): ChoiceQuestion {
   return {
     id: `cos-${deg}`,
     prompt: `Oblicz cos(${deg}°)`,
-    headline: `cos(${deg}°) = ?`,
+    headline: `$\\cos(${deg}^{\\circ}) = ?$`,
     correct: cos,
     options: shuffle([...new Set(opts)]).slice(0, 4),
   };
@@ -423,7 +443,7 @@ export function generateNww(): ChoiceQuestion {
   return {
     id: `nww-${a}-${b}`,
     prompt: "Najmniejsza wspólna wielokrotność",
-    headline: `NWW(${a}, ${b}) = ?`,
+    headline: `$\\mathrm{NWW}(${a}, ${b}) = ?$`,
     correct,
     options: buildNumericOptions(correct, 4, 18),
   };
@@ -435,7 +455,7 @@ export function generateKwadrat(): ChoiceQuestion {
   return {
     id: `sq-${n}`,
     prompt: "Podnieś do kwadratu",
-    headline: `${n}² = ?`,
+    headline: `$${n}^{2} = ?$`,
     correct,
     options: buildNumericOptions(correct, 4, 20),
   };
@@ -449,7 +469,7 @@ export function generateModulo(): ChoiceQuestion {
   return {
     id: `mod-${a}-${b}`,
     prompt: "Reszta z dzielenia",
-    headline: `${a} mod ${b} = ?`,
+    headline: `$${a} \\bmod ${b} = ?$`,
     correct,
     options: buildNumericOptions(correct, 4, 6),
   };
@@ -462,7 +482,7 @@ export function generateWartoscBezwzgledna(): ChoiceQuestion {
   return {
     id: `abs-${n}`,
     prompt: "Wartość bezwzględna",
-    headline: `|${n}| = ?`,
+    headline: `$|${n}| = ?$`,
     correct,
     options: buildNumericOptions(correct, 4, 8),
   };
@@ -476,7 +496,7 @@ export function generateUlamkiOdejmij(): ChoiceQuestion {
   return {
     id: `frac-sub-${n1}-${n2}-${d}`,
     prompt: "Odejmij ułamki (ten sam mianownik)",
-    headline: `${n1}/${d} − ${n2}/${d}`,
+    headline: `$\\frac{${n1}}{${d}} - \\frac{${n2}}{${d}}$`,
     correct,
     options: buildNumericOptions(correct, 4, 6),
   };
@@ -488,7 +508,7 @@ export function generatePoleKola(): ChoiceQuestion {
   return {
     id: `circle-${r}`,
     prompt: "Pole koła w cm² (π ≈ 3,14)",
-    headline: `r = ${r} cm`,
+    headline: `$r = ${r}\\,\\mathrm{cm}$`,
     correct,
     options: buildNumericOptions(correct, 4, 25),
   };
@@ -501,7 +521,7 @@ export function generateSrednia(): ChoiceQuestion {
   return {
     id: `avg-${nums.join("-")}`,
     prompt: "Średnia arytmetyczna",
-    headline: `(${nums.join(" + ")}) / ${nums.length}`,
+    headline: `$\\dfrac{${nums.join(" + ")}}{${nums.length}}$`,
     correct,
     options: buildNumericOptions(correct, 4, 8),
   };
@@ -514,7 +534,7 @@ export function generateProcentOdwrotny(): ChoiceQuestion {
   return {
     id: `pct-rev-${part}-${total}`,
     prompt: "Jaki to procent?",
-    headline: `${part} z ${total} to ?%`,
+    headline: `$${part}$ z $${total}$ to $?\\%$`,
     correct,
     options: buildNumericOptions(correct, 4, 15),
   };

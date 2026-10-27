@@ -47,7 +47,7 @@ export function generateMnozenieQuestion(path: LearningPath): MnozenieQuestion {
 
   return {
     id: `${a}x${b}`,
-    prompt: `${a} × ${b}`,
+    prompt: `$${a} \\times ${b}$`,
     correct,
     options: buildOptions(correct),
   };

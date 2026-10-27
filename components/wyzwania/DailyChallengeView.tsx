@@ -1,6 +1,7 @@
 "use client";
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
+import { MathText } from "@/components/trening/MathText";
 import { useDailyChallenge } from "@/lib/wyzwania/use-daily-challenge";
 import { DAILY_CHALLENGE_QUESTION_COUNT } from "@/lib/wyzwania/daily-challenge";
 import type { ChallengeReward } from "@/lib/wyzwania/types";
@@ -385,9 +386,11 @@ export function DailyChallengeView() {
                           : "border-white/15 bg-white/[0.06]"
                     }`}
                   >
-                    <p className="text-3xl font-black text-foreground sm:text-4xl">
-                      {current.claim}
-                    </p>
+                    <MathText
+                      content={current.claim}
+                      as="div"
+                      className="text-3xl font-black text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+                    />
                   </motion.div>
 
                   <div className="grid grid-cols-2 gap-3 sm:gap-4">
