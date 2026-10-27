@@ -1,5 +1,52 @@
+/**
+ * Krzywa XP → poziom.
+ *
+ * Poziom 2 ma być łatwy do wbicia, a każde kolejne przejście coraz droższe.
+ * Wzór na XP potrzebne do awansu z poziomu `level` → `level+1`:
+ *   round(BASE * GROWTH^(level - 1))
+ *
+ * Przy BASE=100, GROWTH=1.45:
+ *   1→2: 100,  2→3: 145,  3→4: 210,  4→5: 305,  5→6: 442, …
+ */
+
+export const XP_LEVEL_BASE = 100;
+export const XP_LEVEL_GROWTH = 1.45;
+
+/** XP wymagane, żeby przejść z `level` na `level + 1` (level ≥ 1). */
+export function xpToAdvanceFrom(level: number): number {
+  const safeLevel = Math.max(1, Math.floor(level));
+  return Math.max(
+    1,
+    Math.round(XP_LEVEL_BASE * XP_LEVEL_GROWTH ** (safeLevel - 1)),
+  );
+}
+
+/**
+ * Minimalne łączne XP, żeby osiągnąć dany poziom (poziom 1 = 0 XP).
+ * cumulativeXpForLevel(3) = xpToAdvanceFrom(1) + xpToAdvanceFrom(2).
+ */
+export function cumulativeXpForLevel(level: number): number {
+  const target = Math.max(1, Math.floor(level));
+  if (target <= 1) return 0;
+  let total = 0;
+  for (let lvl = 1; lvl < target; lvl += 1) {
+    total += xpToAdvanceFrom(lvl);
+  }
+  return total;
+}
+
 export function calculateLevel(totalXp: number): number {
-  return Math.floor(Math.max(0, totalXp) / 500) + 1;
+  const xp = Math.max(0, totalXp);
+  let level = 1;
+  let spent = 0;
+  // Górny limit chroni przed nieskończoną pętlą przy ekstremalnym XP.
+  while (level < 10_000) {
+    const need = xpToAdvanceFrom(level);
+    if (spent + need > xp) break;
+    spent += need;
+    level += 1;
+  }
+  return level;
 }
 
 export function calculateXpProgress(totalXp: number): {
@@ -7,8 +54,11 @@ export function calculateXpProgress(totalXp: number): {
   xpForNextLevel: number;
 } {
   const xp = Math.max(0, totalXp);
+  const level = calculateLevel(xp);
+  const floorXp = cumulativeXpForLevel(level);
+  const xpForNextLevel = xpToAdvanceFrom(level);
   return {
-    currentLevelXp: xp % 500,
-    xpForNextLevel: 500,
+    currentLevelXp: xp - floorXp,
+    xpForNextLevel,
   };
 }
