@@ -7,7 +7,7 @@ import {
 } from "@/lib/levelSystem";
 
 describe("xpToAdvanceFrom", () => {
-  it("poziom 1→2 jest najtańszy", () => {
+  it("poziom 1→2 jest najtańszy (100 XP)", () => {
     expect(xpToAdvanceFrom(1)).toBe(100);
   });
 
@@ -33,12 +33,13 @@ describe("calculateLevel", () => {
     expect(calculateLevel(100)).toBe(2);
   });
 
-  it("progi rosną — 500 XP to już więcej niż poziom 2", () => {
-    // L3 = 245, L4 = 455, L5 = 760
-    expect(calculateLevel(244)).toBe(2);
-    expect(calculateLevel(245)).toBe(3);
-    expect(calculateLevel(500)).toBe(4);
-    expect(calculateLevel(760)).toBe(5);
+  it("320 XP to już co najmniej poziom 2 (realny gracz 42b)", () => {
+    expect(calculateLevel(320)).toBeGreaterThanOrEqual(2);
+    expect(calculateLevel(320)).toBe(3);
+  });
+
+  it("8400 XP ≈ poziom 12 (realny gracz camel — nie 17 ze starej krzywej)", () => {
+    expect(calculateLevel(8400)).toBe(12);
   });
 
   it("jest monotoniczny (nigdy nie maleje wraz ze wzrostem XP)", () => {

@@ -177,7 +177,7 @@ describe("buildPlayerStats", () => {
       duelChallengesCreated: 1,
       behavior: emptyBehavior,
     });
-    // Krzywa BASE*1.45^(n-1): 1200 XP ≈ poz. 5, 600 XP ≈ poz. 4
+    // Krzywa BASE*1.32^(n-1) — poziom z XP, nie z pola profile.level
     expect(stats.level).toBe(calculateLevel(1200));
     expect(stats.minigryLevel).toBe(calculateLevel(600));
     expect(stats.solvedCount).toBe(12);

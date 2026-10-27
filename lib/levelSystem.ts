@@ -1,16 +1,18 @@
 /**
  * Krzywa XP → poziom.
  *
- * Poziom 2 ma być łatwy do wbicia, a każde kolejne przejście coraz droższe.
- * Wzór na XP potrzebne do awansu z poziomu `level` → `level+1`:
+ * Poziom 2 ma być łatwy (~100 XP), a każde kolejne przejście droższe.
+ * Wzór na XP z poziomu `level` → `level+1`:
  *   round(BASE * GROWTH^(level - 1))
  *
- * Przy BASE=100, GROWTH=1.45:
- *   1→2: 100,  2→3: 145,  3→4: 210,  4→5: 305,  5→6: 442, …
+ * Przy BASE=100, GROWTH=1.32 (dobrane pod realne konta):
+ *   1→2: 100 XP
+ *   ~320 XP → poziom 3
+ *   ~8400 XP → poziom 12
  */
 
 export const XP_LEVEL_BASE = 100;
-export const XP_LEVEL_GROWTH = 1.45;
+export const XP_LEVEL_GROWTH = 1.32;
 
 /** XP wymagane, żeby przejść z `level` na `level + 1` (level ≥ 1). */
 export function xpToAdvanceFrom(level: number): number {
