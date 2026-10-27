@@ -28,6 +28,14 @@ const MOBILE_MORE_GROUPS: readonly NavGroup[] = [
     label: null,
     links: [{ href: "/cennik", label: "Cennik" }],
   },
+  {
+    label: "Informacje",
+    links: [
+      { href: "/regulamin", label: "Regulamin" },
+      { href: "/polityka-prywatnosci", label: "Polityka prywatności" },
+      { href: "/kontakt", label: "Kontakt" },
+    ],
+  },
 ];
 
 function SheetLink({
