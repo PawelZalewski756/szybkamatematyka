@@ -33,8 +33,8 @@ export function MathText({ content, className, as: Tag = "span" }: MathTextProps
             key={index}
             className={
               part.kind === "display"
-                ? "katex-display my-2 block overflow-x-auto"
-                : "[&_.katex]:text-inherit"
+                ? "katex-display my-2 block max-w-full overflow-x-auto"
+                : "inline-block max-w-full overflow-x-auto align-baseline [&_.katex]:text-inherit"
             }
             dangerouslySetInnerHTML={{ __html: html }}
           />
