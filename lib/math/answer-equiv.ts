@@ -123,9 +123,26 @@ export function answersEquivalent(a: string, b: string): boolean {
   return false;
 }
 
-/** Czy twierdzenie typu „7+8=15” lub „½+½=1” jest matematycznie prawdziwe. */
+/**
+ * Sprowadza twierdzenie zapisane w LaTeXu ($...$, \frac, \times …)
+ * do postaci, którą rozumie evaluateSimpleExpression / parseNumericToken.
+ */
+export function latexClaimToPlain(claim: string): string {
+  let s = claim.trim().replace(/\$\$/g, "").replace(/\$/g, "");
+  s = s.replace(/\\frac\{(-?\d+)\}\{(-?\d+)\}/g, "($1)/($2)");
+  s = s.replace(/\\times/g, "*");
+  s = s.replace(/\\div/g, "/");
+  s = s.replace(/\\cdot/g, "*");
+  s = s.replace(/\\%/g, "");
+  s = s.replace(/\\text\{[^}]*\}/g, " ");
+  s = s.replace(/\\mathrm\{[^}]*\}/g, " ");
+  s = s.replace(/−/g, "-");
+  return s.replace(/\s+/g, " ").trim();
+}
+
+/** Czy twierdzenie typu „7+8=15” lub „½+½=1” (także w LaTeXu) jest prawdziwe. */
 export function isNumericClaimTrue(claim: string): boolean | null {
-  const trimmed = claim.trim();
+  const trimmed = latexClaimToPlain(claim);
   const eqIdx = trimmed.indexOf("=");
   if (eqIdx <= 0) return null;
 

@@ -26,8 +26,8 @@ function formatFraction(num: number, den: number): string {
   const g = gcd(num, den);
   const n = num / g;
   const d = den / g;
-  if (d === 1) return String(n);
-  return `${n}/${d}`;
+  if (d === 1) return `$${n}$`;
+  return `$\\frac{${n}}{${d}}$`;
 }
 
 function randomFraction(maxDen = 12): { num: number; den: number; value: number } {

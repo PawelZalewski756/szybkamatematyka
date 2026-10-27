@@ -14,23 +14,23 @@ function pickRandom<T>(items: readonly T[]): T {
 }
 
 const LOG_BANK: readonly QuestionTemplate[] = [
-  { true: "log₂(8) = 3", false: "log₂(8) = 2" },
-  { true: "log₁₀(100) = 2", false: "log₁₀(100) = 10" },
-  { true: "log₃(27) = 3", false: "log₃(27) = 9" },
-  { true: "log₂(16) = 4", false: "log₂(16) = 8" },
-  { true: "log₅(25) = 2", false: "log₅(25) = 5" },
-  { true: "log₂(2) = 1", false: "log₂(2) = 2" },
-  { true: "log₄(64) = 3", false: "log₄(64) = 4" },
-  { true: "log₃(9) = 2", false: "log₃(9) = 3" },
+  { true: "$\\log_{2}(8) = 3$", false: "$\\log_{2}(8) = 2$" },
+  { true: "$\\log_{10}(100) = 2$", false: "$\\log_{10}(100) = 10$" },
+  { true: "$\\log_{3}(27) = 3$", false: "$\\log_{3}(27) = 9$" },
+  { true: "$\\log_{2}(16) = 4$", false: "$\\log_{2}(16) = 8$" },
+  { true: "$\\log_{5}(25) = 2$", false: "$\\log_{5}(25) = 5$" },
+  { true: "$\\log_{2}(2) = 1$", false: "$\\log_{2}(2) = 2$" },
+  { true: "$\\log_{4}(64) = 3$", false: "$\\log_{4}(64) = 4$" },
+  { true: "$\\log_{3}(9) = 2$", false: "$\\log_{3}(9) = 3$" },
 ];
 
 const LOG_PAIRS = [
-  { label: "log₂", arg: 8, result: 3 },
-  { label: "log₂", arg: 16, result: 4 },
-  { label: "log₃", arg: 27, result: 3 },
-  { label: "log₅", arg: 25, result: 2 },
-  { label: "log₂", arg: 32, result: 5 },
-  { label: "log₄", arg: 16, result: 2 },
+  { base: 2, arg: 8, result: 3 },
+  { base: 2, arg: 16, result: 4 },
+  { base: 3, arg: 27, result: 3 },
+  { base: 5, arg: 25, result: 2 },
+  { base: 2, arg: 32, result: 5 },
+  { base: 4, arg: 16, result: 2 },
 ] as const;
 
 function fromTemplate(
@@ -44,9 +44,9 @@ function fromTemplate(
 }
 
 function generateProcedural(showCorrect: boolean): Question {
-  const { label, arg, result } = pickRandom(LOG_PAIRS);
-  const correct = `${label}(${arg}) = ${result}`;
-  const trap = `${label}(${arg}) = ${result + randomInt(1, 3)}`;
+  const { base, arg, result } = pickRandom(LOG_PAIRS);
+  const correct = `$\\log_{${base}}(${arg}) = ${result}$`;
+  const trap = `$\\log_{${base}}(${arg}) = ${result + randomInt(1, 3)}$`;
   return {
     equation: showCorrect ? correct : trap,
     isCorrect: showCorrect,

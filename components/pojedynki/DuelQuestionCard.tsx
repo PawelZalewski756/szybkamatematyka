@@ -1,5 +1,6 @@
 "use client";
 
+import { MathText } from "@/components/trening/MathText";
 import type { CompareSide } from "@/lib/minigry/questions/types";
 import type { DuelQuestion } from "@/lib/pojedynki/duel-types";
 import { motion } from "framer-motion";
@@ -30,9 +31,11 @@ export function DuelQuestionCard({
         <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           {q.prompt}
         </p>
-        <p className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl">
-          {q.headline}
-        </p>
+        <MathText
+          content={q.headline}
+          as="div"
+          className="mt-4 break-words text-3xl font-black leading-tight text-foreground sm:text-4xl md:text-5xl [&_.katex]:text-[1em]"
+        />
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
           {q.options.map((opt) => (
             <motion.button
@@ -59,9 +62,11 @@ export function DuelQuestionCard({
         <p className="text-sm font-semibold uppercase tracking-wide text-muted">
           Czy to prawda?
         </p>
-        <p className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl">
-          {q.equation}
-        </p>
+        <MathText
+          content={q.equation}
+          as="div"
+          className="mt-4 break-words text-2xl font-black leading-tight text-foreground sm:text-3xl md:text-4xl [&_.katex]:text-[1em]"
+        />
         <div className="mt-8 grid grid-cols-2 gap-4">
           <motion.button
             type="button"
@@ -100,13 +105,15 @@ export function DuelQuestionCard({
         Która strona jest większa?
       </p>
       <div className="mt-6 flex items-center justify-center gap-4 sm:gap-8">
-        <span className="text-4xl font-black text-foreground sm:text-5xl">
-          {q.left}
-        </span>
+        <MathText
+          content={q.left}
+          className="text-4xl font-black text-foreground sm:text-5xl [&_.katex]:text-[1em]"
+        />
         <span className="text-2xl font-black text-muted">vs</span>
-        <span className="text-4xl font-black text-foreground sm:text-5xl">
-          {q.right}
-        </span>
+        <MathText
+          content={q.right}
+          className="text-4xl font-black text-foreground sm:text-5xl [&_.katex]:text-[1em]"
+        />
       </div>
       <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
         {options.map(({ id, label, sub }) => (

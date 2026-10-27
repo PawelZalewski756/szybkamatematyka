@@ -49,6 +49,17 @@ describe("isNumericClaimTrue", () => {
   it("wykrywa pułapkę równoważną — ¼+¼=2/4 jest PRAWDĄ", () => {
     expect(isNumericClaimTrue("¼ + ¼ = 2/4")).toBe(true);
   });
+
+  it("rozumie twierdzenia zapisane w LaTeXu", () => {
+    expect(isNumericClaimTrue("$7 + 8 = 15$")).toBe(true);
+    expect(isNumericClaimTrue("$6 \\times 4 = 24$")).toBe(true);
+    expect(
+      isNumericClaimTrue("$\\frac{1}{2} + \\frac{1}{2} = 1$"),
+    ).toBe(true);
+    expect(
+      isNumericClaimTrue("$\\frac{1}{2} + \\frac{1}{2} = \\frac{1}{4}$"),
+    ).toBe(false);
+  });
 });
 
 describe("findEquivalentChoiceGroups", () => {
