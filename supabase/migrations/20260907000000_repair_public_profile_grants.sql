@@ -56,5 +56,8 @@ begin
       execute
         'grant update (avatar_url) on table public.profiles to authenticated';
     end if;
+
+    -- Pełne granty zapisu są w 20261027140000_repair_profile_write_grants.sql.
+    -- Tutaj zostawiamy avatar_url dla kompatybilności ze starszymi deployami.
   end if;
 end $$;

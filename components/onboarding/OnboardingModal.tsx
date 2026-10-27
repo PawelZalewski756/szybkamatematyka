@@ -56,13 +56,20 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
       let saved: Profile;
       try {
         saved = await completeProfileOnboarding(user.id, next, schoolClass);
-      } catch {
+      } catch (primaryErr) {
+        if (primaryErr instanceof NickTakenError) throw primaryErr;
+        // Fallback: insert/update nick, potem osobno klasa (gdy school_class pada).
+        saved = await createProfile(user.id, next);
         try {
-          saved = await createProfile(user.id, next);
           saved = await updateProfileSchoolClass(user.id, schoolClass);
         } catch {
-          saved = await createProfile(user.id, next);
+          // Klasa lokalnie — nick w bazie jest ważniejszy niż school_class.
         }
+      }
+
+      if (normalizeNick(saved.nick) !== next) {
+        setError("Nick nie został zapisany w bazie. Spróbuj ponownie.");
+        return;
       }
 
       saveSchoolClass(schoolClass);
@@ -73,7 +80,11 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         setError("Ten nick jest już zajęty!");
         return;
       }
-      setError("Nie udało się zapisać profilu. Spróbuj ponownie.");
+      const detail =
+        err instanceof Error && /migracj|uprawnie/i.test(err.message)
+          ? err.message
+          : "Nie udało się zapisać profilu. Spróbuj ponownie.";
+      setError(detail);
     } finally {
       setSaving(false);
     }

@@ -80,12 +80,14 @@ wykonaj poniższe kroki:
    `20260906220000_production_hardening.sql`,
    `20260906230000_secure_profile_data_and_atomic_assist.sql`,
    `20260906240000_fix_auth_profile_trigger.sql`,
-   `20260907000000_repair_public_profile_grants.sql`.
+   `20260907000000_repair_public_profile_grants.sql`,
+   `20261027140000_repair_profile_write_grants.sql`.
 
-Ostatnia migracja naprawia granty odczytu dla opcjonalnych kolumn profilu
-(w tym `avatar_url`, XP z minigier i danych pojedynków). Jest ważna także przy
-aktualizacji istniejącego projektu, który używał wcześniejszych, ręcznych
-skryptów SQL.
+Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
+profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
+`20261027140000` dodaje brakujące granty **zapisu** (`UPDATE`/`INSERT` na nick,
+XP, klasę, streak itd.) — bez niej onboarding nicku i zapis EXP kończą się
+`permission denied`. Obie są ważne przy aktualizacji istniejącego projektu.
 
 Aby włączyć statystyki odwiedzin w bocie Telegrama, uruchom dodatkowo
 `supabase/migrations/20261011100000_add_anonymous_page_analytics.sql` w

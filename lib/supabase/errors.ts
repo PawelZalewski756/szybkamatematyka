@@ -46,6 +46,22 @@ export function isPostgrestColumnMissingMessage(
   return /column\s+[\w.]+\s+does not exist|PGRST204/i.test(message);
 }
 
+/** PostgREST PGRST116 — .single()/.maybeSingle() bez wiersza (np. UPDATE 0 rows). */
+export function isPostgrestNoRowsError(
+  error: PostgrestError | null | undefined,
+): boolean {
+  return error?.code === "PGRST116";
+}
+
+/** PostgreSQL 42501 — brak GRANT na kolumnę/tabelę. */
+export function isPostgrestPermissionError(
+  error: PostgrestError | null | undefined,
+): boolean {
+  if (!error) return false;
+  if (error.code === "42501") return true;
+  return /permission denied|42501/i.test(error.message ?? "");
+}
+
 export function isSupabaseNetworkError(error: unknown): boolean {
   const message =
     error instanceof Error
@@ -70,6 +86,9 @@ export function formatSupabaseErrorForUser(message: string): string {
   }
   if (isPostgrestColumnMissingMessage(message)) {
     return "Baza profilu wymaga aktualizacji — uruchom migrację SQL w Supabase (supabase/migrations/add_profile_streak_columns.sql).";
+  }
+  if (/permission denied|42501|uprawnie.*profilu|repair_profile_write_grants/i.test(message)) {
+    return "Brak uprawnień do zapisu profilu. W Supabase uruchom migrację 20261027140000_repair_profile_write_grants.sql.";
   }
   if (isSupabaseNetworkError(message)) {
     return "Nie udało się połączyć z bazą. Spróbuj ponownie za chwilę.";

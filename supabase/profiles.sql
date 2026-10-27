@@ -84,6 +84,33 @@ grant select (
   hearts
 ) on table public.profiles to anon, authenticated;
 
+-- Zapis własnego profilu (nick, XP, streak…) — bez tego onboarding i XP
+-- kończą się permission denied przy kolumnowych grantach SELECT.
+grant insert (
+  id,
+  created_at,
+  nick,
+  nickname,
+  xp,
+  level,
+  streak,
+  last_played_date,
+  avatar_url,
+  last_nick_update,
+  hearts
+) on table public.profiles to authenticated;
+grant update (
+  nick,
+  nickname,
+  xp,
+  level,
+  streak,
+  last_played_date,
+  avatar_url,
+  last_nick_update,
+  hearts
+) on table public.profiles to authenticated;
+
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql

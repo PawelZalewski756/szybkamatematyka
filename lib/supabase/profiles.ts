@@ -1,6 +1,10 @@
 import { findAvatarUrlInStorage } from "@/lib/supabase/avatar";
 import { getSupabase, getSupabaseOrNull } from "@/lib/supabase";
-import { isPostgrestUndefinedColumnError } from "@/lib/supabase/errors";
+import {
+  isPostgrestNoRowsError,
+  isPostgrestPermissionError,
+  isPostgrestUndefinedColumnError,
+} from "@/lib/supabase/errors";
 import { calculateLevel } from "@/lib/levelSystem";
 import { gameScoreToXp } from "@/lib/minigry/account-progress";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
@@ -511,22 +515,22 @@ export async function createProfile(
     ({ row, error } = await insertAndSelectProfile(base));
   }
 
-  if (error) {
-    console.error("[szybka-matma] createProfile failed:", error);
-    return {
-      id: userId,
-      nick: normalizeNick(nick),
-      xp: 0,
-      minigryXp: 0,
-      level: 1,
-      streak: 0,
-      lastPlayedDate: null,
-      avatarUrl: null,
-      lastNickUpdate: null,
-    };
+  // Profil już istnieje (trigger auth) — dopisz nick zamiast udawać sukces lokalnie.
+  if (error && isUniqueViolation(error)) {
+    return updateProfileNick(userId, nick);
   }
 
-  return mapRow(row as ProfileRow);
+  if (error) {
+    console.error("[szybka-matma] createProfile failed:", error);
+    if (isUniqueViolation(error)) throw new NickTakenError();
+    throw error;
+  }
+
+  if (!row) {
+    throw new Error("createProfile: brak wiersza po insercie");
+  }
+
+  return mapRow(row);
 }
 
 function isUniqueViolation(error: PostgrestError | null): boolean {
@@ -613,8 +617,9 @@ export async function completeProfileOnboarding(
     if (cooldownMsg) throw new NickCooldownError(cooldownMsg);
   }
 
+  const nickPayload = profileWritePayload(nick);
   const patch: Record<string, unknown> = {
-    ...profileWritePayload(nick),
+    ...nickPayload,
     school_class: schoolClass,
     last_nick_update: new Date().toISOString(),
   };
@@ -623,28 +628,51 @@ export async function completeProfileOnboarding(
 
   if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
     ({ row, error } = await updateAndSelectProfile(userId, {
-      ...profileWritePayload(nick),
+      ...nickPayload,
       last_nick_update: new Date().toISOString(),
     }));
   }
 
   if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
     ({ row, error } = await updateAndSelectProfile(userId, {
-      ...profileWritePayload(nick),
+      ...nickPayload,
       school_class: schoolClass,
     }));
   }
 
   if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
-    ({ row, error } = await updateAndSelectProfile(
-      userId,
-      profileWritePayload(nick),
-    ));
+    ({ row, error } = await updateAndSelectProfile(userId, nickPayload));
+  }
+
+  // Brak wiersza profilu (stare konta / nieudany trigger) → INSERT.
+  if (error && isPostgrestNoRowsError(error)) {
+    ({ row, error } = await insertAndSelectProfile({
+      id: userId,
+      ...patch,
+      xp: 0,
+      level: 1,
+      streak: 0,
+      last_played_date: null,
+    }));
+
+    if (error && isPostgrestUndefinedColumnError(error)) {
+      ({ row, error } = await insertAndSelectProfile({
+        id: userId,
+        ...nickPayload,
+        xp: 0,
+        level: 1,
+      }));
+    }
   }
 
   if (error) {
     if (isUniqueViolation(error)) throw new NickTakenError();
     console.error("[szybka-matma] completeProfileOnboarding failed:", error);
+    if (isPostgrestPermissionError(error)) {
+      throw new Error(
+        "Brak uprawnień do zapisu profilu w bazie. Uruchom migrację 20261027140000_repair_profile_write_grants.sql.",
+      );
+    }
     throw error;
   }
 
@@ -652,7 +680,12 @@ export async function completeProfileOnboarding(
     throw new Error("completeProfileOnboarding: brak wiersza po aktualizacji");
   }
 
-  return mapRow(row);
+  const saved = mapRow(row);
+  if (normalizeNick(saved.nick) !== normalizeNick(nick)) {
+    throw new Error("completeProfileOnboarding: nick nie został zapisany");
+  }
+
+  return saved;
 }
 
 export async function fetchProfileAllowEmpty(
@@ -675,16 +708,23 @@ export async function ensureUserProfile(user: User): Promise<Profile> {
   const existing = await fetchProfileAllowEmpty(user.id, user);
   if (existing) return existing;
 
-  const metaNick = nickFromUserMetadata(user);
-  if (metaNick) {
-    try {
-      const created = await createProfile(user.id, metaNick);
-      return mergeProfileAvatarFromMetadata(created, user);
-    } catch {
-      /* profil może już istnieć */
+  const metaNick =
+    nickFromUserMetadata(user) ??
+    `gracz_${user.id.replace(/-/g, "").slice(0, 8)}`;
+
+  try {
+    const created = await createProfile(user.id, metaNick);
+    return mergeProfileAvatarFromMetadata(created, user);
+  } catch (err) {
+    if (err instanceof NickTakenError) {
+      const again = await fetchProfileAllowEmpty(user.id, user);
+      if (again) return again;
     }
+    console.error("[szybka-matma] ensureUserProfile create failed:", err);
   }
 
+  // Ostatnia deska — lokalny szkielet tylko gdy baza nie przyjmuje INSERT.
+  // Pusty nick wymusza onboarding; nie udajemy zapisanego profilu.
   return {
     id: user.id,
     nick: "",
@@ -711,16 +751,19 @@ export async function awardArenaXp(
 
   if (error) {
     console.warn("[szybka-matma] awardArenaXp — zapis XP:", error);
-    notifyProfileUpdated(withXp);
-    return {
-      ...withXp,
-      leveledUp: withXp.leveledUp,
-      previousLevel: withXp.previousLevel,
-      xpEarned: xpAmount,
-    };
+    if (isPostgrestPermissionError(error) || isPostgrestNoRowsError(error)) {
+      throw error;
+    }
+    // Inne błędy (np. sieć): lokalny bump, ale UI treningu i tak pokazuje ostrzeżenie
+    // tylko gdy rzucimy — więc rzucamy zawsze, żeby nie udawać zapisu w chmurze.
+    throw error;
   }
 
-  const saved = mapRow(row as ProfileRow);
+  if (!row) {
+    throw new Error("awardArenaXp: brak wiersza po aktualizacji XP");
+  }
+
+  const saved = mapRow(row);
   notifyProfileUpdated(saved);
   return {
     ...saved,
@@ -793,7 +836,7 @@ export async function saveProfileAfterGame(
 
   if (error) {
     console.warn("[szybka-matma] saveProfileAfterGame — zapis XP bez streak:", error);
-    notifyProfileUpdated(resultBase);
+    // Nie powiadamiaj o „sukcesie” lokalnym — UI minigier polega na `persisted`.
     return { ...resultBase, persisted: false };
   }
 
