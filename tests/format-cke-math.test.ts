@@ -61,6 +61,29 @@ describe("formatCkeMathText", () => {
     expect(out).toMatch(/\$x\s*=\s*1\$/);
   });
 
+  it("owija funkcję P i długość x w kontekście", () => {
+    const out = formatCkeMathText(
+      "Wyznacz wzór i dziedzinę funkcji P. Oblicz długość x krawędzi AB.",
+    );
+    expect(out).toContain("funkcji $P$");
+    expect(out).toContain("długość $x$");
+  });
+
+  it("naprawia sklejony OCR przy nierówności i kątach", () => {
+    const out = formatCkeMathText(
+      "Zbiorem rozwiązań nierówności ax + 4 ≥ 0z niewiadomą x jest przedział.",
+    );
+    expect(out).toMatch(/\\ge\s*0/);
+    expect(out).not.toContain("0z");
+    expect(out).toContain("niewiadomą $x$");
+
+    const ang = formatCkeMathText("|∡ACB| = 90°");
+    expect(ang).toContain("$");
+    expect(ang).toMatch(/\\angle/);
+    expect(ang).toMatch(/\\circ/);
+    expect(ang.endsWith("°")).toBe(false);
+  });
+
   it("dekoduje encje i ułamki", () => {
     const out = formatCkeMathText("otrzymamy 4 &frasl; 7 oraz &fnof;(x)");
     expect(out).not.toContain("&frasl;");

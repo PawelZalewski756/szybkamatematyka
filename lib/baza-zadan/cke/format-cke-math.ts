@@ -70,9 +70,14 @@ function normalizeUnicodeMath(text: string): string {
     .replace(/ƒ/g, "f")
     .replace(/⁄/g, "/")
     .replace(/[−–—]/g, "-")
+    .replace(/[∡∠]/g, "\\angle ")
     .replace(/×/g, "\\times")
     .replace(/·/g, "\\cdot")
-    .replace(/÷/g, "\\div");
+    .replace(/÷/g, "\\div")
+    // Stopnie przed owijaniem, żeby weszły do wyspy matematycznej.
+    .replace(/(\d)\s*°/g, "$1^{\\circ}")
+    // Sklejony OCR: "≥ 0z niewiadomą" → "≥ 0 z niewiadomą"
+    .replace(/([=<>≤≥])\s*(-?\d+)([a-ząćęłńóśźż])/gi, "$1 $2 $3");
 }
 
 /** Zacieśnia typowe rozstrzelone fragmenty OCR. */
@@ -115,9 +120,9 @@ function compactSpacedMath(text: string): string {
     (_m, base: string, idx: string) => `${base}_{${idx}}`,
   );
 
-  // Współczynnik: 2 x → 2x, 4 x^{2} → 4x^{2} (tylko pojedyncza litera, nie "7 oraz")
+  // Współczynnik: 2 x → 2x, tylko gdy dalej operator/koniec (nie "0 z niewiadomą")
   out = out.replace(
-    /\b(\d+)\s+([a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?)(?![a-zA-ZĄąĆćĘęŁłŃńÓóŚśŹźŻż])/g,
+    /\b(\d+)\s+([a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?)(?=\s*[+\-=<>≤≥).,]|\s*$)/g,
     "$1$2",
   );
 
@@ -182,10 +187,10 @@ function latexifySymbols(expr: string): string {
  * startując tylko od bezpiecznego tokenu (nie ze środka polskiego słowa).
  */
 function wrapMathIslands(text: string): string {
-  // Atom: ułamek, |AB|, f(x), (…), -3x, 2, α — z opcjonalnym unarnym minusem.
+  // Atom: ułamek, |AB|, f(x), ax, -3x, 90^{\circ}, (…), α.
   const atom =
-    String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\|[A-Za-z]{1,6}\||-?\d+(?:[.,]\d+)?[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?|[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,40}\)|\-?\d+(?:[.,]\d+)?|[α-ω])`;
-  const op = String.raw`(?:[=<>+\-*/]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
+    String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,40}\)|\-?\d+(?:[.,]\d+)?(?:\^\{\\circ\})?|[α-ω])`;
+  const op = String.raw`(?:[=<>≤≥+\-*/]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
   // Operator albo juxtapozycja nawiasów: (x+3)(x-2)
   const island = new RegExp(
     `(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])${atom}(?:\\s*${op}\\s*${atom}|(?=\\()${atom})+`,
@@ -214,13 +219,37 @@ function wrapLoneTokens(text: string): string {
 
 function wrapSimpleInequalities(text: string): string {
   return text.replace(
-    /(?<!\$)(?<![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])([a-zA-Z])\s*(≤|≥|<|>)\s*(-?\d+)\b(?!\$)/g,
+    /(?<!\$)(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])([a-zA-Z](?:[a-zA-Z])?(?:\([^)]*\))?)\s*(≤|≥|<|>)\s*(-?\d+)\b(?!\$)/g,
     (_m, v: string, op: string, n: string) => {
       const mapped =
         op === "≤" ? "\\le" : op === "≥" ? "\\ge" : op;
       return `$${v} ${mapped} ${n}$`;
     },
   );
+}
+
+/**
+ * Owija samotne zmienne w typowym kontekście polskim:
+ * „funkcji P”, „długość x”, „niewiadomą x”.
+ */
+function wrapContextualVariables(text: string): string {
+  return text.replace(
+    /(?<!\$)\b(funkcji|funkcja|długość|długości|niewiadomą|niewiadoma|wyraz|wyrazy|współczynnik|argument|podstawa|podstawy|krawędzi|krawędź)\s+([A-Za-z])\b(?!\$)/gi,
+    (_m, word: string, v: string) => `${word} $${v}$`,
+  );
+}
+
+/** Kąty i stopnie: |∠ACB| = 90° oraz samotne 90°. */
+function wrapAnglesAndDegrees(text: string): string {
+  let out = text.replace(
+    /(?<!\$)(\|\\angle\s*[A-Za-z]{1,6}\|)\s*=\s*(\d+)\s*(?:\^\{\\circ\}|°)?(?!\$)/g,
+    (_m, ang: string, deg: string) => `$${ang} = ${deg}^{\\circ}$`,
+  );
+  out = out.replace(
+    /(?<!\$)(?<![A-Za-z0-9])(\d+)\s*(?:\^\{\\circ\}|°)(?!\$)/g,
+    (_m, deg: string) => `$${deg}^{\\circ}$`,
+  );
+  return out;
 }
 
 /**
@@ -251,6 +280,8 @@ export function formatCkeMathText(input: string): string {
   out = wrapMathIslands(out);
   out = wrapLoneTokens(out);
   out = wrapSimpleInequalities(out);
+  out = wrapAnglesAndDegrees(out);
+  out = wrapContextualVariables(out);
   out = mergeAdjacentMath(out);
 
   out = restoreSegments(out, existingMath.parts, MATH_PLACEHOLDER);
