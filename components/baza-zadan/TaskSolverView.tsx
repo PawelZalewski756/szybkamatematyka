@@ -327,7 +327,11 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
               </p>
             )}
             {open && openGrade && (
-              <p className="mt-2 text-sm text-muted">{openGrade.feedback}</p>
+              <MathText
+                content={openGrade.feedback}
+                as="div"
+                className="mt-2 text-sm text-muted"
+              />
             )}
             {!open && task.explanation.trim() && (
               <div className="mt-2 text-sm text-muted">

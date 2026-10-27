@@ -1,5 +1,6 @@
 /** Parsowanie listy zadań z publicznej strony arkusza (HTML). */
 
+import { formatCkeMathText } from "./format-cke-math";
 import { injectImagesIntoHtmlChunk } from "./matura-images";
 
 export type ParsedMaturaTask = {
@@ -7,9 +8,12 @@ export type ParsedMaturaTask = {
   tresc: string;
 };
 
-/** Usuwa statystyki „pwz” i inne śmieci z końca bloku zadania. */
+/**
+ * Usuwa statystyki „pwz” i śmieci scrapera, potem normalizuje matematykę do LaTeX.
+ * Wywoływane przy seedzie — kolejne importy nie wpuszczają znowu HTML ani surowego Unicode.
+ */
 export function cleanMaturaTaskText(text: string): string {
-  return text
+  const cleaned = text
     .replace(/\s*pwz:\s*\d+%[\s\S]*$/i, "")
     .replace(/\s*Poziom wykonania zadania[\s\S]*$/i, "")
     // Urwany tag HTML bez `>` (klasyczny śmieć scrapera: `<ul class="`).
@@ -27,6 +31,8 @@ export function cleanMaturaTaskText(text: string): string {
     .replace(/&#8731;/g, "∛")
     .replace(/\s+/g, " ")
     .trim();
+
+  return formatCkeMathText(cleaned);
 }
 
 function stripHtml(html: string): string {
