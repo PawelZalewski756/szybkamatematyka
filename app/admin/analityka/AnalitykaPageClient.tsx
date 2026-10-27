@@ -191,8 +191,9 @@ export function AnalitykaPageClient() {
             emptyLabel="Brak danych o poziomach"
           />
           <p className="mt-3 text-xs text-muted">
-            Poziom liczony z całkowitego XP (500 XP = 1 poziom). Średnia seria
-            aktywności: {PL_NUMBER.format(players.avgStreak)} dni.
+            Poziom z krzywej XP (100 XP → poz. 2, potem ×1,32 za każdy awans).
+            Średnia seria aktywności: {PL_NUMBER.format(players.avgStreak)}{" "}
+            dni.
           </p>
         </Section>
       )}

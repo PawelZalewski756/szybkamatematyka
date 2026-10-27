@@ -20,6 +20,7 @@ import {
   type BehaviorFlags,
 } from "@/lib/achievements/stats";
 import type { PlayerStats } from "@/lib/achievements/types";
+import { calculateLevel } from "@/lib/levelSystem";
 
 function makeStats(overrides: Partial<PlayerStats> = {}): PlayerStats {
   return { ...emptyPlayerStats(), ...overrides };
@@ -176,9 +177,9 @@ describe("buildPlayerStats", () => {
       duelChallengesCreated: 1,
       behavior: emptyBehavior,
     });
-    // calculateLevel = floor(xp/500)+1
-    expect(stats.level).toBe(3); // floor(1200/500)+1
-    expect(stats.minigryLevel).toBe(2); // floor(600/500)+1
+    // Krzywa BASE*1.32^(n-1) — poziom z XP, nie z pola profile.level
+    expect(stats.level).toBe(calculateLevel(1200));
+    expect(stats.minigryLevel).toBe(calculateLevel(600));
     expect(stats.solvedCount).toBe(12);
     expect(stats.streak).toBe(4);
   });
