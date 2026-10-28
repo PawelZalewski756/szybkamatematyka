@@ -95,6 +95,40 @@ export function getRelatedTasks(task: Task, path: LearningPath, limit = 4) {
     .slice(0, limit);
 }
 
+function pickFrom(pool: Task[]): Task | null {
+  if (pool.length === 0) return null;
+  return pool[Math.floor(Math.random() * pool.length)] ?? null;
+}
+
+/**
+ * Kolejne losowe zadanie do przycisku w solverze.
+ * Preferuje: nierozwiązane z tego samego działu → nierozwiązane z ścieżki
+ * → dowolne z działu → dowolne z ścieżki (zawsze inne niż bieżące).
+ */
+export function pickNextRandomTask(
+  current: Task,
+  path: LearningPath,
+  isSolved: (id: string) => boolean,
+): Task | null {
+  const sameCategory = getTasksForPath(path, {
+    category: current.category,
+  }).filter((t) => t.id !== current.id);
+  const allForPath = getTasksForPath(path).filter((t) => t.id !== current.id);
+
+  const pools: Task[][] = [
+    sameCategory.filter((t) => !isSolved(t.id)),
+    allForPath.filter((t) => !isSolved(t.id)),
+    sameCategory,
+    allForPath,
+  ];
+
+  for (const pool of pools) {
+    const hit = pickFrom(pool);
+    if (hit) return hit;
+  }
+  return null;
+}
+
 export type TaskGroupSection = {
   id: TaskCategoryGroupId;
   label: string;

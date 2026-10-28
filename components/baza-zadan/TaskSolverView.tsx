@@ -16,7 +16,11 @@ import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
-import { getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
+import {
+  getRelatedTasks,
+  getTaskById,
+  pickNextRandomTask,
+} from "@/lib/baza-zadan/catalog";
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { useLearningPath } from "@/components/LearningPathProvider";
@@ -25,7 +29,9 @@ import { canViewFullSolutions } from "@/lib/subscription/content-limits";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { fetchTaskGrade } from "@/lib/trening/task-assist-client";
 import { motion } from "framer-motion";
+import { Shuffle } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type TaskSolverViewProps = {
@@ -45,6 +51,7 @@ function resolveAwardedPoints(
 }
 
 export function TaskSolverView({ id }: TaskSolverViewProps) {
+  const router = useRouter();
   const { path } = useLearningPath();
   const { isPro, isLoggedIn } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
@@ -358,6 +365,26 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             )}
           </motion.div>
         )}
+      </div>
+
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <button
+          type="button"
+          onClick={() => {
+            const next = pickNextRandomTask(task, path, isSolved);
+            if (next) router.push(`/baza-zadan/${next.id}`);
+          }}
+          className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-3 text-base font-black text-on-accent shadow-lg shadow-accent/20 transition hover:brightness-105 active:scale-[0.98]"
+        >
+          <Shuffle className="h-5 w-5" aria-hidden />
+          Kolejne losowe zadanie
+        </button>
+        <Link
+          href="/baza-zadan"
+          className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-surface-border bg-surface px-5 py-3 text-sm font-bold text-foreground transition hover:border-accent/40 hover:bg-surface-hover"
+        >
+          Wróć do katalogu
+        </Link>
       </div>
 
       {related.length > 0 && (
