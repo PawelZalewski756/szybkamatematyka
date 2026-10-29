@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAdsTag } from "@/components/analytics/GoogleAdsTag";
 import { Footer } from "@/components/Footer";
 import { MobileTabBar } from "@/components/mobile/MobileTabBar";
 import { Providers } from "@/components/Providers";
@@ -111,6 +112,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className={jakarta.variable}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
+        <GoogleAdsTag />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
