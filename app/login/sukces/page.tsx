@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { GoogleAdsConversion } from "@/components/analytics/GoogleAdsConversion";
+import {
+  GOOGLE_ADS_SIGNUP_CONVERSION,
+  isGoogleAdsSignupConversionConfigured,
+} from "@/lib/analytics/google-ads";
 import { BRAND_NAME } from "@/lib/brand/constants";
 
 export const metadata: Metadata = {
@@ -21,6 +26,9 @@ export default async function SignupSuccessPage({
 
   return (
     <div className="mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-md flex-1 flex-col justify-center px-4 py-12 sm:px-6">
+      {isGoogleAdsSignupConversionConfigured() ? (
+        <GoogleAdsConversion sendTo={GOOGLE_ADS_SIGNUP_CONVERSION} />
+      ) : null}
       <div className="rounded-3xl border border-surface-border bg-surface/60 p-6 shadow-sm sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-wide text-accent">
           Rejestracja
