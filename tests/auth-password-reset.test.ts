@@ -2,6 +2,8 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   authRedirectUrl,
   passwordResetRedirectUrl,
+  SIGNUP_SUCCESS_PATH,
+  signupSuccessPath,
 } from "@/lib/auth-password-reset";
 
 describe("passwordResetRedirectUrl", () => {
@@ -44,5 +46,16 @@ describe("passwordResetRedirectUrl", () => {
     expect(authRedirectUrl("/login")).toBe(
       "https://szybkamatematyka.pl/login",
     );
+  });
+});
+
+describe("signupSuccessPath", () => {
+  it("zwraca stały URL sukcesu rejestracji", () => {
+    expect(SIGNUP_SUCCESS_PATH).toBe("/login/sukces");
+    expect(signupSuccessPath()).toBe("/login/sukces");
+  });
+
+  it("dodaje flagę potwierdzenia e-mail", () => {
+    expect(signupSuccessPath(true)).toBe("/login/sukces?confirm=1");
   });
 });

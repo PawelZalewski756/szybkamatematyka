@@ -124,9 +124,11 @@ test.describe("Smoke", () => {
     await page.locator('input[name="passwordConfirm"]').fill("poprawnehaslo");
     await page.getByRole("button", { name: "Utwórz konto" }).click();
 
-    await expect(page.locator('p[role="alert"]')).toContainText(
-      "Konto utworzone!",
-    );
+    await expect(page).toHaveURL(/\/login\/sukces\?confirm=1/);
+    await expect(
+      page.getByRole("heading", { name: "Konto utworzone" }),
+    ).toBeVisible();
+    await expect(page.getByText(/Sprawdź skrzynkę e-mail/i)).toBeVisible();
   });
 
   test("reset hasła mapuje błąd limitu Supabase", async ({ page }) => {

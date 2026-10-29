@@ -14,7 +14,10 @@ import {
 } from "@/lib/supabase/profiles";
 import { isSupabaseNetworkError } from "@/lib/supabase/errors";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
-import { authRedirectUrl } from "@/lib/auth-password-reset";
+import {
+  authRedirectUrl,
+  signupSuccessPath,
+} from "@/lib/auth-password-reset";
 import { trackAnalyticsEvent } from "@/lib/analytics/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -210,19 +213,16 @@ export default function LoginPage() {
           }
         }
 
-        router.push("/");
+        // Stały URL sukcesu — do pomiaru konwersji (Google Ads).
+        router.push(signupSuccessPath(false));
         router.refresh();
         return;
       }
 
-      // Konto utworzone, czeka na potwierdzenie e-mail — profil utworzy trigger w bazie
-      setIsError(false);
-      setMessage(
-        "Konto utworzone! Sprawdź skrzynkę e-mail, kliknij link potwierdzający, a potem się zaloguj.",
-      );
-      setPassword("");
-      setPasswordConfirm("");
-      setNick("");
+      // Konto utworzone, czeka na potwierdzenie e-mail — profil utworzy trigger w bazie.
+      // Osobny URL sukcesu (z ?confirm=1), żeby Ads mogło mierzyć rejestrację.
+      router.push(signupSuccessPath(true));
+      return;
     } catch (err) {
       setIsError(true);
       setMessage(getAuthErrorMessage(err as Error));
