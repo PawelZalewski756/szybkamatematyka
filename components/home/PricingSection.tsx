@@ -26,10 +26,10 @@ function PlanCta({
   if (!plan.paid) {
     return (
       <Link
-        href={isLoggedIn ? "/trening" : "/login"}
+        href="/trening"
         className={`${base} border border-surface-border bg-surface text-foreground shadow-sm hover:border-accent/40 hover:bg-surface-hover`}
       >
-        {isLoggedIn ? "Korzystaj za darmo" : "Zacznij bez opłat"}
+        Zacznij bez opłat
       </Link>
     );
   }
@@ -173,13 +173,7 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
       )}
 
       <p className="mt-4 text-xs leading-relaxed text-muted">
-        Płatności przez Stripe — możesz anulować w dowolnym momencie.{" "}
-        <Link
-          href="/cennik"
-          className="text-accent underline-offset-2 hover:text-foreground hover:underline"
-        >
-          Szczegóły cennika
-        </Link>
+        Płatności przez Stripe — możesz anulować w dowolnym momencie.
       </p>
     </div>
   );

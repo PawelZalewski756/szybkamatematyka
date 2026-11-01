@@ -8,6 +8,7 @@ import {
 } from "@/lib/supabase/profiles";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
+  hasStoredSchoolClass,
   isSchoolClassPath,
   normalizeSchoolClass,
   saveSchoolClass,
@@ -54,7 +55,11 @@ export function SchoolClassSync() {
           return;
         }
 
-        if (!profileClass && isSchoolClassPath(schoolClass)) {
+        if (
+          !profileClass &&
+          hasStoredSchoolClass() &&
+          isSchoolClassPath(schoolClass)
+        ) {
           const updated = await updateProfileSchoolClass(user.id, schoolClass);
           window.dispatchEvent(
             new CustomEvent<ProfileUpdatedDetail>(PROFILE_UPDATED_EVENT, {

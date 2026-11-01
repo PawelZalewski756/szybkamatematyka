@@ -1,13 +1,5 @@
 import { describe, expect, it } from "vitest";
 import {
-  hashVisitorId,
-  getAnalyticsReferrerDomain,
-  getAnalyticsSource,
-  isValidReferrerDomain,
-  isValidPagePath,
-  isValidVisitorId,
-} from "@/lib/analytics/page-view";
-import {
   describeTelegramCommandError,
   escapeTelegramText,
   isTelegramAdmin,
@@ -48,46 +40,5 @@ describe("Telegram admin bot helpers", () => {
         message: "Could not find the table 'public.solved_tasks' in the schema cache",
       }),
     ).toContain("init_solved_tasks.sql");
-    expect(
-      describeTelegramCommandError({
-        message: "Could not find the function public.get_page_view_stats in the schema cache",
-      }),
-    ).toContain("20261011100000_add_anonymous_page_analytics.sql");
-    expect(
-      describeTelegramCommandError({
-        message: "Could not find the function public.get_source_funnel_stats in the schema cache",
-      }),
-    ).toContain("20261011170000_add_funnel_analytics.sql");
-  });
-});
-
-describe("anonymous page-view analytics helpers", () => {
-  it("accepts a UUID and hashes it without retaining the original identifier", () => {
-    const visitorId = "123e4567-e89b-42d3-a456-426614174000";
-    expect(isValidVisitorId(visitorId)).toBe(true);
-    expect(hashVisitorId(visitorId)).toMatch(/^[0-9a-f]{64}$/);
-    expect(hashVisitorId(visitorId)).toBe(hashVisitorId(visitorId.toUpperCase()));
-  });
-
-  it("accepts only local pathnames without query strings or fragments", () => {
-    expect(isValidPagePath("/trening/matura")).toBe(true);
-    expect(isValidPagePath("//elsewhere.example")).toBe(false);
-    expect(isValidPagePath("/profil?email=x@example.com")).toBe(false);
-  });
-
-  it("keeps only safe campaign source labels", () => {
-    expect(getAnalyticsSource("?utm_source=instagram")).toBe("instagram");
-    expect(getAnalyticsSource("?utm_source=student%40example.com")).toBeNull();
-  });
-
-  it("stores only a valid external referrer hostname", () => {
-    expect(
-      getAnalyticsReferrerDomain("https://www.google.com/search?q=math", "example.com"),
-    ).toBe("www.google.com");
-    expect(
-      getAnalyticsReferrerDomain("https://example.com/other-page", "example.com"),
-    ).toBeNull();
-    expect(isValidReferrerDomain("192.0.2.1")).toBe(false);
-    expect(isValidReferrerDomain("not a domain")).toBe(false);
   });
 });

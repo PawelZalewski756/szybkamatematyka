@@ -13,6 +13,7 @@ import {
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import { AUTH_INPUT_CLASS } from "@/components/auth/AuthFormParts";
 import {
+  hasStoredSchoolClass,
   loadSchoolClass,
   saveSchoolClass,
   type SchoolClassPath,
@@ -29,8 +30,8 @@ type OnboardingModalProps = {
 
 export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
   const [nick, setNick] = useState("");
-  const [schoolClass, setSchoolClass] = useState<SchoolClassPath>(() =>
-    loadSchoolClass(),
+  const [schoolClass, setSchoolClass] = useState<SchoolClassPath | "">(() =>
+    hasStoredSchoolClass() ? loadSchoolClass() : "",
   );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -58,12 +59,14 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         saved = await completeProfileOnboarding(user.id, next, schoolClass);
       } catch (primaryErr) {
         if (primaryErr instanceof NickTakenError) throw primaryErr;
-        // Fallback: insert/update nick, potem osobno klasa (gdy school_class pada).
+        // Fallback: save the required nick even if optional class sync is unavailable.
         saved = await createProfile(user.id, next);
-        try {
-          saved = await updateProfileSchoolClass(user.id, schoolClass);
-        } catch {
-          // Klasa lokalnie — nick w bazie jest ważniejszy niż school_class.
+        if (schoolClass) {
+          try {
+            saved = await updateProfileSchoolClass(user.id, schoolClass);
+          } catch {
+            // The profile can still be completed without an optional class.
+          }
         }
       }
 
@@ -72,7 +75,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         return;
       }
 
-      saveSchoolClass(schoolClass);
+      if (schoolClass) saveSchoolClass(schoolClass);
       notifyProfileUpdated(saved);
       onComplete(saved);
     } catch (err) {
@@ -115,7 +118,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
           Witaj w grze!
         </h2>
         <p className="mt-2 text-center text-sm leading-relaxed text-muted">
-          Wybierz nick i klasę — dopasujemy zadania do Twojego poziomu.
+          Ustaw nick, żeby dołączyć do rankingu. Klasę możesz wybrać teraz lub później.
         </p>
 
         <form onSubmit={(e) => void handleSubmit(e)} className="mt-6">
@@ -134,12 +137,13 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             className={`${AUTH_INPUT_CLASS} mt-2 w-full text-base font-bold`}
           />
 
-          <p className="text-overline mt-4">Twoja klasa</p>
+          <p className="text-overline mt-4">Twoja klasa (opcjonalnie)</p>
           <SchoolClassPicker
             id="onboarding-class"
             value={schoolClass}
             onChange={setSchoolClass}
             className="mt-2"
+            optional
           />
 
           {error && (

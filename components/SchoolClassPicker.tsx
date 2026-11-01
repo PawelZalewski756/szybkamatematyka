@@ -6,11 +6,12 @@ import {
 } from "@/lib/learning-path";
 
 type SchoolClassPickerProps = {
-  value: SchoolClassPath;
+  value: SchoolClassPath | "";
   onChange: (value: SchoolClassPath) => void;
   id?: string;
   className?: string;
   disabled?: boolean;
+  optional?: boolean;
 };
 
 export function SchoolClassPicker({
@@ -19,6 +20,7 @@ export function SchoolClassPicker({
   id = "school-class",
   className = "",
   disabled = false,
+  optional = false,
 }: SchoolClassPickerProps) {
   return (
     <label htmlFor={id} className={`flex min-w-0 flex-col gap-0.5 ${className}`}>
@@ -30,6 +32,7 @@ export function SchoolClassPicker({
         onChange={(e) => onChange(e.target.value as SchoolClassPath)}
         className="input-field w-full cursor-pointer truncate py-1.5 pl-2.5 pr-7 text-xs font-medium lg:py-2 lg:text-sm"
       >
+        {optional ? <option value="">Wybiorę później</option> : null}
         {SCHOOL_CLASS_GROUPS.map((group) => (
           <optgroup key={group.id} label={group.label}>
             {group.options.map((option) => (

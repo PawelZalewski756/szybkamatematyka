@@ -67,7 +67,9 @@ wykonaj poniższe kroki:
    `add_profile_school_class.sql`, `add_profile_streak_columns.sql`,
    `add_arkusz_miesiac.sql`, `add_zadania_source_id.sql`,
    `krok2_tylko_source_id.sql`, `fix_cke_legacy_slugs.sql`.
-8. Migracje funkcjonalne w kolejności dat:
+8. Migracje funkcjonalne w kolejności dat (nie uruchamiaj historycznych
+   migracji anonimowych statystyk `20261011100000`, `20261011170000` i
+   `20261011180000`, ponieważ ich zbieranie danych jest wyłączone):
    `20260529130000_add_subscription_columns.sql`,
    `20260529135000_add_daily_challenges.sql`,
    `20260529140000_add_review_schedule.sql`,
@@ -81,7 +83,11 @@ wykonaj poniższe kroki:
    `20260906230000_secure_profile_data_and_atomic_assist.sql`,
    `20260906240000_fix_auth_profile_trigger.sql`,
    `20260907000000_repair_public_profile_grants.sql`,
-   `20261027140000_repair_profile_write_grants.sql`.
+   `20261027140000_repair_profile_write_grants.sql`,
+   `20261101180000_signup_school_class.sql`.
+
+Ostatnia migracja zapisuje opcjonalną klasę wybraną podczas rejestracji.
+Brak wyboru nie blokuje utworzenia konta; uczeń może ustawić klasę później.
 
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
@@ -89,24 +95,10 @@ profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
 XP, klasę, streak itd.) — bez niej onboarding nicku i zapis EXP kończą się
 `permission denied`. Obie są ważne przy aktualizacji istniejącego projektu.
 
-Aby włączyć statystyki odwiedzin w bocie Telegrama, uruchom dodatkowo
-`supabase/migrations/20261011100000_add_anonymous_page_analytics.sql` w
-Supabase → SQL Editor. Pomiar zacznie działać po wdrożeniu tej migracji i
-wyłącznie dla przeglądarek, które zaakceptują analitykę. Zapisywane są
-anonimowe odsłony i skrót losowego identyfikatora przeglądarki — bez adresów IP.
-Bot udostępnia `/visits` (ostatnie 7 dni) oraz `/visits 30` (ostatnie 30 dni).
-
-Kolejna timestampowana migracja,
-`supabase/migrations/20261011170000_add_funnel_analytics.sql`, rozszerza
-pomiar o sesje, powracających odwiedzających, rejestracje, pierwsze rozwiązane
-zadanie i źródła UTM. Na wdrożeniach z aktywnym GitHub Actions migracji
-zastosuje się automatycznie po pushu na `master`. Bot udostępnia `/funnel`
-(ostatnie 7 dni) i `/funnel 30`; `/visits` pokazuje również oznaczone źródła
-kampanii. Dodatkowe zdarzenia również są zbierane tylko po zgodzie na analitykę.
-Kolejna migracja `20261011180000_add_referrer_and_hour_stats.sql` dodaje
-domenę strony odsyłającej (bez pełnego URL-a) i statystyki godzinowe w strefie
-`Europe/Warsaw`; bot pokaże najczęstsze godziny w `/visits`. Dane te również
-zapisują się tylko po zgodzie.
+Własne anonimowe statystyki odsłon i zdarzeń oraz komendy `/visits` i `/funnel`
+w bocie Telegrama są wyłączone. Historyczne pliki migracji i zapisane wcześniej
+rekordy pozostają w bazie; nie są usuwane ani uzupełniane nowymi danymi.
+Pomiar konwersji Google Ads jest odrębnym mechanizmem i pozostaje aktywny.
 
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi

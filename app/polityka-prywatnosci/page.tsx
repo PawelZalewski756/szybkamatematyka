@@ -66,8 +66,7 @@ export default function PolitykaPrywatnosciPage() {
             subskrypcja.
           </li>
           <li>
-            Uzasadniony interes — bezpieczeństwo, analityka w celu ulepszania
-            platformy, przeciwdziałanie nadużyciom.
+            Uzasadniony interes — bezpieczeństwo i przeciwdziałanie nadużyciom.
           </li>
           <li>
             Obowiązki prawne — rozliczenia i wymagania księgowe związane z
@@ -81,8 +80,10 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="4. Odbiorcy danych">
         <p>
           Korzystamy z zaufanych dostawców infrastruktury (hosting, baza danych,
-          uwierzytelnianie, płatności Stripe). Przekazujemy im tylko dane
-          niezbędne do realizacji usług. Dane nie są sprzedawane.
+          uwierzytelnianie, płatności Stripe). Jeśli tag Google Ads jest
+          skonfigurowany, Google otrzymuje dane z jego działania w celu pomiaru
+          reklam. Przekazujemy dostawcom dane niezbędne do tych celów. Dane nie
+          są sprzedawane.
         </p>
       </InfoSection>
 
@@ -115,10 +116,10 @@ export default function PolitykaPrywatnosciPage() {
 
       <InfoSection title="7. Pliki cookies">
         <p>
-          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania.
-          Możemy stosować także narzędzia analityczne lub techniczne cookies
-          ułatwiające działanie aplikacji. Szczegóły zależą od konfiguracji
-          środowiska produkcyjnego.
+          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Własne
+          anonimowe statystyki odwiedzin i zdarzeń są wyłączone. Skonfigurowany
+          tag Google Ads działa odrębnie i może korzystać z własnych technologii
+          pomiarowych Google.
         </p>
       </InfoSection>
 

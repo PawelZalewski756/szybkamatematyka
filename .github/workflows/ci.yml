@@ -5,7 +5,7 @@ name: CI
 on:
   push:
   pull_request:
-    branches: [main]
+    branches: [master]
 
 # Anuluj starsze przebiegi dla tej samej gałęzi/PR, aby nie marnować runnerów.
 concurrency:

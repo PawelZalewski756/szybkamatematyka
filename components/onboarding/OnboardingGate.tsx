@@ -1,6 +1,5 @@
 "use client";
 
-import { GuestClassModal } from "@/components/onboarding/GuestClassModal";
 import { OnboardingModal } from "@/components/onboarding/OnboardingModal";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
@@ -8,7 +7,6 @@ import {
   profileNeedsOnboarding,
   type Profile,
 } from "@/lib/supabase/profiles";
-import { hasStoredSchoolClass } from "@/lib/learning-path";
 import {
   PROFILE_UPDATED_EVENT,
   type ProfileUpdatedDetail,
@@ -19,7 +17,6 @@ import {
   useCallback,
   useEffect,
   useState,
-  useSyncExternalStore,
   type ReactNode,
 } from "react";
 
@@ -34,12 +31,6 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [ready, setReady] = useState(false);
-  const hydrated = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false,
-  );
-  const [guestClassDone, setGuestClassDone] = useState(false);
 
   const load = useCallback(async (sessionUser: User | null) => {
     setUser(sessionUser);
@@ -119,33 +110,18 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
     ready &&
     user !== null &&
     profileNeedsOnboarding(profile);
-  const guestBlocked =
-    shouldPromptOnboarding &&
-    hydrated &&
-    ready &&
-    !user &&
-    !guestClassDone &&
-    !hasStoredSchoolClass();
-  const blocked = userBlocked || guestBlocked;
 
   return (
     <>
       <div
-        className={
-          blocked
-            ? "pointer-events-none flex min-h-0 flex-1 flex-col select-none"
-            : "flex min-h-0 flex-1 flex-col"
-        }
-        aria-hidden={blocked ? true : undefined}
-        inert={blocked ? true : undefined}
+        className="flex min-h-0 flex-1 flex-col"
+        aria-hidden={userBlocked ? true : undefined}
+        inert={userBlocked ? true : undefined}
       >
         {children}
       </div>
       {userBlocked && user && (
         <OnboardingModal user={user} onComplete={(p) => setProfile(p)} />
-      )}
-      {guestBlocked && (
-        <GuestClassModal onComplete={() => setGuestClassDone(true)} />
       )}
     </>
   );

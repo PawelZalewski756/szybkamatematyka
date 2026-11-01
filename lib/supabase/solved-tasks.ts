@@ -1,5 +1,4 @@
 import { getSupabase } from "@/lib/supabase";
-import { trackAnalyticsEvent } from "@/lib/analytics/client";
 import {
   isPostgrestUndefinedColumnError,
   isSchemaMissingError,
@@ -150,11 +149,7 @@ export async function markTaskSolved(
     throw error;
   }
 
-  const firstSolve = Boolean(data?.task_id);
-  if (firstSolve && typeof window !== "undefined") {
-    void trackAnalyticsEvent("first_task_solved", window.location.pathname);
-  }
-  return firstSolve;
+  return Boolean(data?.task_id);
 }
 
 export type SolvedTopicCount = {

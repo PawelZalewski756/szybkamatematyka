@@ -1,17 +1,57 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Smoke", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.setItem("szybka-matma-school-class", "klasa-8");
-    });
-  });
-
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       "Przygotuj się do",
     );
+  });
+
+  test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({
+    page,
+  }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem("szybka-matma-school-class");
+      localStorage.removeItem("szybka-matma-learning-path");
+    });
+    await page.goto("/");
+
+    await expect(page.getByRole("heading", { level: 1 })).toContainText(
+      "Przygotuj się do",
+    );
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await expect(page).toHaveURL(/\/trening$/);
+  });
+
+  test("nie zbiera własnych statystyk i usuwa dawny identyfikator", async ({
+    page,
+  }) => {
+    let analyticsRequests = 0;
+    page.on("request", (request) => {
+      if (new URL(request.url()).pathname.startsWith("/api/analytics/")) {
+        analyticsRequests += 1;
+      }
+    });
+    await page.addInitScript(() => {
+      localStorage.setItem("sm-analytics-consent", "accepted");
+      localStorage.setItem(
+        "sm-analytics-visitor-id",
+        "123e4567-e89b-42d3-a456-426614174000",
+      );
+    });
+    await page.goto("/");
+
+    await expect(
+      page.locator('[aria-label="Zgoda na anonimową analitykę"]'),
+    ).toHaveCount(0);
+    await expect
+      .poll(() =>
+        page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
+      )
+      .toBeNull();
+    expect(analyticsRequests).toBe(0);
   });
 
   test("/login ma formularz logowania", async ({ page }) => {
@@ -118,6 +158,7 @@ test.describe("Smoke", () => {
 
     await page.goto("/login");
     await page.getByRole("button", { name: "Załóż konto" }).click();
+    await expect(page.getByLabel("Klasa (opcjonalnie)")).toBeVisible();
     await page.locator('input[name="nick"]').fill("NowyUczen");
     await page.locator('input[name="email"]').fill("nowy@example.com");
     await page.locator('input[name="password"]').fill("poprawnehaslo");

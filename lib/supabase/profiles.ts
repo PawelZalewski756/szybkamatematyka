@@ -320,10 +320,7 @@ export function normalizeNick(raw: string): string {
 }
 
 export function profileNeedsOnboarding(profile: Profile | null): boolean {
-  if (!profile?.nick?.trim()) return true;
-  if (profile.schoolClass === undefined) return false;
-  if (!profile.schoolClass) return true;
-  return false;
+  return !profile?.nick?.trim();
 }
 
 export function nickFromUserMetadata(user: User): string | null {
@@ -609,7 +606,7 @@ export async function updateProfileSchoolClass(
 export async function completeProfileOnboarding(
   userId: string,
   nick: string,
-  schoolClass: SchoolClassPath,
+  schoolClass?: SchoolClassPath | "",
   options?: { lastNickUpdate?: string | null },
 ): Promise<Profile> {
   if (options?.lastNickUpdate !== undefined) {
@@ -620,7 +617,7 @@ export async function completeProfileOnboarding(
   const nickPayload = profileWritePayload(nick);
   const patch: Record<string, unknown> = {
     ...nickPayload,
-    school_class: schoolClass,
+    ...(schoolClass ? { school_class: schoolClass } : {}),
     last_nick_update: new Date().toISOString(),
   };
 
@@ -636,7 +633,7 @@ export async function completeProfileOnboarding(
   if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
     ({ row, error } = await updateAndSelectProfile(userId, {
       ...nickPayload,
-      school_class: schoolClass,
+      ...(schoolClass ? { school_class: schoolClass } : {}),
     }));
   }
 

@@ -12,13 +12,18 @@ import {
   isNickTaken,
   normalizeNick,
 } from "@/lib/supabase/profiles";
+import { SchoolClassPicker } from "@/components/SchoolClassPicker";
+import {
+  hasStoredSchoolClass,
+  loadSchoolClass,
+  type SchoolClassPath,
+} from "@/lib/learning-path";
 import { isSupabaseNetworkError } from "@/lib/supabase/errors";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
   authRedirectUrl,
   signupSuccessPath,
 } from "@/lib/auth-password-reset";
-import { trackAnalyticsEvent } from "@/lib/analytics/client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -34,6 +39,9 @@ export default function LoginPage() {
   const [view, setView] = useState<AuthView>("login");
   const [email, setEmail] = useState("");
   const [nick, setNick] = useState("");
+  const [schoolClass, setSchoolClass] = useState<SchoolClassPath | "">(() =>
+    hasStoredSchoolClass() ? loadSchoolClass() : "",
+  );
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [loading, setLoading] = useState(false);
@@ -75,6 +83,7 @@ export default function LoginPage() {
     clearMessage();
     setPasswordConfirm("");
     setNick("");
+    setSchoolClass(hasStoredSchoolClass() ? loadSchoolClass() : "");
     setView("signup");
   };
 
@@ -179,7 +188,11 @@ export default function LoginPage() {
         password,
         options: {
           emailRedirectTo: authRedirectUrl("/login"),
-          data: { nick: normalizedNick, nickname: normalizedNick },
+          data: {
+            nick: normalizedNick,
+            nickname: normalizedNick,
+            school_class: schoolClass || null,
+          },
         },
       });
 
@@ -193,8 +206,6 @@ export default function LoginPage() {
         );
         return;
       }
-
-      void trackAnalyticsEvent("signup_completed", window.location.pathname);
 
       if (data.session) {
         const existing = await fetchProfile(data.user.id);
@@ -382,6 +393,22 @@ export default function LoginPage() {
                   className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>
+
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="signup-school-class"
+                  className="text-xs font-bold uppercase tracking-wide text-accent/80"
+                >
+                  Klasa (opcjonalnie)
+                </label>
+                <SchoolClassPicker
+                  id="signup-school-class"
+                  value={schoolClass}
+                  onChange={setSchoolClass}
+                  className="w-full"
+                  optional
+                />
+              </div>
 
               <label className="flex flex-col gap-2">
                 <span className="text-xs font-bold uppercase tracking-wide text-accent/80">

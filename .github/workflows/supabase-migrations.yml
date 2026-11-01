@@ -58,7 +58,7 @@ jobs:
                 from public, anon, authenticated;
             "
 
-          migrations=("supabase/migrations/20261011100000_add_anonymous_page_analytics.sql")
+          migrations=()
 
           if [[ "${BEFORE_SHA:-}" =~ ^[0-9a-f]{40}$ ]] &&
              [[ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]]; then

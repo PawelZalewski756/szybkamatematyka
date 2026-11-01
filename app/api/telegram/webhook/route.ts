@@ -114,8 +114,6 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       "/stats — użytkownicy, nowe konta i zadania",
       "/new — ostatnie rejestracje",
       "/users [strona] — lista wszystkich użytkowników",
-      "/visits [dni] — odsłony i unikalni odwiedzający",
-      "/funnel [dni] — odwiedziny, rejestracje i pierwsze zadanie",
       "/top — ranking XP",
       "/health — sprawdzenie połączenia",
       "/pomoc — pokaż tę listę",
@@ -141,120 +139,6 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Użytkownicy łącznie: ${users.count ?? 0}`,
       `Nowe konta: ${authUsers.filter((user) => Date.parse(user.created_at) >= since).length}`,
       `Rozwiązane zadania: ${solved.count ?? 0}`,
-    ].join("\n");
-  }
-
-  if (command === "visits") {
-    const days = args[0] ? Number(args[0]) : 7;
-    if (!Number.isSafeInteger(days) || days < 1 || days > 3650) {
-      return "Podaj okres od 1 do 3650 dni, np. /visits 30.";
-    }
-    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
-    const [allTime, period, sources, hours] = await Promise.all([
-      supabase.rpc("get_page_view_stats", { p_since: null }),
-      supabase.rpc("get_page_view_stats", { p_since: since }),
-      supabase.rpc("get_traffic_source_stats", { p_since: since }),
-      supabase.rpc("get_visit_hour_stats", { p_since: since }),
-    ]);
-    if (allTime.error) throw new Error(`Could not load visit stats: ${allTime.error.message}`);
-    if (period.error) throw new Error(`Could not load visit stats: ${period.error.message}`);
-    if (sources.error) throw new Error(`Could not load traffic sources: ${sources.error.message}`);
-    if (hours.error) throw new Error(`Could not load visit hours: ${hours.error.message}`);
-    const totals = allTime.data?.[0];
-    const recent = period.data?.[0];
-    return [
-      `Odwiedziny (ostatnie ${days} dni)`,
-      `Odsłony: ${recent?.total_views ?? 0}`,
-      `Unikalni odwiedzający: ${recent?.unique_visitors ?? 0}`,
-      "Łącznie od uruchomienia licznika:",
-      `Odsłony: ${totals?.total_views ?? 0}`,
-      `Unikalni odwiedzający: ${totals?.unique_visitors ?? 0}`,
-      "Źródła odwiedzin:",
-      ...((sources.data ?? []).length
-        ? sources.data.map(
-            (source: {
-              source: string;
-              unique_visitors: number;
-              views: number;
-            }) => {
-              const label = source.source.startsWith("utm:")
-                ? `Kampania ${source.source.slice(4)}`
-                : source.source.startsWith("referrer:")
-                  ? source.source.slice(9)
-                  : "Wejścia bezpośrednie";
-              return `• ${label}: ${source.unique_visitors} osób / ${source.views} odsłon`;
-            },
-          )
-        : ["• Brak danych o źródłach"]),
-      "Najczęstsze godziny (czas polski):",
-      ...((hours.data ?? []).length
-        ? hours.data
-            .slice()
-            .sort(
-              (
-                first: { total_views: number },
-                second: { total_views: number },
-              ) => second.total_views - first.total_views,
-            )
-            .slice(0, 5)
-            .map(
-              (hour: {
-                local_hour: number;
-                total_views: number;
-                unique_visitors: number;
-              }) =>
-                `• ${String(hour.local_hour).padStart(2, "0")}:00 — ${hour.total_views} odsłon / ${hour.unique_visitors} osób`,
-            )
-        : ["• Brak danych"]),
-      "Pomiar anonimowy; działa od wdrożenia i tylko po zgodzie na analitykę.",
-    ].join("\n");
-  }
-
-  if (command === "funnel") {
-    const days = args[0] ? Number(args[0]) : 7;
-    if (!Number.isSafeInteger(days) || days < 1 || days > 3650) {
-      return "Podaj okres od 1 do 3650 dni, np. /funnel 30.";
-    }
-    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
-    const [funnelResult, sourcesResult] = await Promise.all([
-      supabase.rpc("get_funnel_stats", { p_since: since }),
-      supabase.rpc("get_source_funnel_stats", { p_since: since }),
-    ]);
-    if (funnelResult.error) {
-      throw new Error(`Could not load conversion funnel: ${funnelResult.error.message}`);
-    }
-    if (sourcesResult.error) {
-      throw new Error(`Could not load source funnel: ${sourcesResult.error.message}`);
-    }
-    const data = funnelResult.data;
-    const funnel = data?.[0];
-    if (!funnel) return "Brak danych lejka. Statystyki zaczną się zbierać po zgodzie na analitykę.";
-    const visitors = Number(funnel.unique_visitors) || 0;
-    const registrations = Number(funnel.registrations) || 0;
-    const firstTaskSolvers = Number(funnel.first_task_solvers) || 0;
-    const percentage = (count: number) =>
-      visitors > 0 ? `${((count / visitors) * 100).toFixed(1)}% odwiedzających` : "brak odwiedzających";
-    return [
-      `Lejek (ostatnie ${days} dni)`,
-      `Unikalni odwiedzający: ${visitors}`,
-      `Odsłony: ${funnel.total_views ?? 0}`,
-      `Sesje: ${funnel.sessions ?? 0}`,
-      `Powracający: ${funnel.returning_visitors ?? 0}`,
-      `Rejestracje: ${registrations} (${percentage(registrations)})`,
-      `Rozwiązali pierwsze zadanie: ${firstTaskSolvers} (${percentage(firstTaskSolvers)})`,
-      "Skuteczność źródeł UTM (odwiedzający / rejestracje / zadanie):",
-      ...((sourcesResult.data ?? []).length
-        ? sourcesResult.data.map(
-            (source: {
-              source: string;
-              unique_visitors: number;
-              registrations: number;
-              first_task_solvers: number;
-            }) =>
-              `• ${source.source}: ${source.unique_visitors} / ${source.registrations} / ${source.first_task_solvers}`,
-          )
-        : ["• Brak oznaczonych wejść z kampanii UTM"]),
-      "Dane liczone anonimowo, wyłącznie po zgodzie na analitykę.",
     ].join("\n");
   }
 
@@ -354,8 +238,6 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     "/stats — użytkownicy, nowe konta i zadania",
     "/new — ostatnie rejestracje",
     "/users [strona] — lista wszystkich użytkowników",
-    "/visits [dni] — odsłony i unikalni odwiedzający",
-    "/funnel [dni] — odwiedziny, rejestracje i pierwsze zadanie",
     "/top — ranking XP",
     "/health — sprawdzenie połączenia",
     "/pomoc — pokaż tę listę",

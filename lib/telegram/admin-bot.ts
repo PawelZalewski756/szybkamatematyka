@@ -65,25 +65,5 @@ export function describeTelegramCommandError(error: unknown): string {
     return "Brakuje tabeli solved_tasks. Uruchom supabase/migrations/init_solved_tasks.sql w Supabase → SQL Editor.";
   }
 
-  if (
-    message.includes("page_views") ||
-    message.includes("get_page_view_stats") ||
-    message.includes("record_page_view")
-  ) {
-    return "Brakuje migracji analityki odwiedzin. Uruchom supabase/migrations/20261011100000_add_anonymous_page_analytics.sql w Supabase → SQL Editor.";
-  }
-
-  if (
-    message.includes("analytics_events") ||
-    message.includes("get_funnel_stats") ||
-    message.includes("get_traffic_source_stats") ||
-    message.includes("get_source_funnel_stats") ||
-    message.includes("get_visit_hour_stats") ||
-    message.includes("record_analytics_event") ||
-    message.includes("record_page_view_with_source")
-  ) {
-    return "Brakuje migracji lejka analitycznego. Uruchom supabase/migrations/20261011170000_add_funnel_analytics.sql w Supabase → SQL Editor.";
-  }
-
   return `Błąd pobierania danych: ${message.slice(0, 300)}`;
 }

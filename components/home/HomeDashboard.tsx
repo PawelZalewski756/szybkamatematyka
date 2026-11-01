@@ -17,12 +17,10 @@ import {
   ArrowRight,
   BookOpen,
   Check,
-  Clock3,
   FileText,
   Flame,
   Gamepad2,
   Library,
-  Target,
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
@@ -230,7 +228,7 @@ function ProductPreview({
           <p className="mt-1 text-sm text-muted">
             {hasRecentTopic
               ? `Wróć do ostatnio otwartego tematu · ${activeLevelLabel}`
-              : `2 zadania · ${activeLevelLabel}`}
+              : `Przykładowy temat · ${activeLevelLabel}`}
           </p>
 
           {hasRecentTopic ? (
@@ -238,15 +236,9 @@ function ProductPreview({
               Otwórz temat i kontynuuj od miejsca, w którym skończyłeś.
             </p>
           ) : (
-            <div className="mt-5">
-              <div className="flex items-center justify-between text-xs font-semibold">
-                <span className="text-muted">Postęp tematu</span>
-                <span className="text-accent">3/5</span>
-              </div>
-              <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover">
-                <div className="progress-accent w-3/5" />
-              </div>
-            </div>
+            <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
+              Zobacz, jak wygląda lekcja — bez zakładania konta.
+            </p>
           )}
           <div className="mt-4 flex items-center justify-between text-sm font-bold text-accent">
             <span>{hasRecentTopic ? "Wróć do tematu" : "Otwórz temat"}</span>
@@ -256,27 +248,6 @@ function ProductPreview({
             />
           </div>
         </Link>
-
-        {!hasRecentTopic && (
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
-              <div className="flex items-center gap-2 text-muted">
-                <Target className="h-4 w-4 text-accent" aria-hidden />
-                <span className="text-xs font-semibold">Dzisiejszy cel</span>
-              </div>
-              <p className="mt-2 text-lg font-extrabold text-foreground">60%</p>
-              <p className="text-xs text-muted">3 z 5 tematów</p>
-            </div>
-            <div className="rounded-2xl border border-surface-border bg-surface-hover/50 p-3.5">
-              <div className="flex items-center gap-2 text-muted">
-                <Flame className="h-4 w-4 text-accent" aria-hidden />
-                <span className="text-xs font-semibold">Seria nauki</span>
-              </div>
-              <p className="mt-2 text-lg font-extrabold text-foreground">4 dni</p>
-              <p className="text-xs text-muted">Wróć jutro</p>
-            </div>
-          </div>
-        )}
 
         <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">

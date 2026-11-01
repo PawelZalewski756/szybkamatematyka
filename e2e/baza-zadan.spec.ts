@@ -1,12 +1,6 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Baza zadań", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.setItem("szybka-matma-school-class", "klasa-8");
-    });
-  });
-
   test("domyślnie pokazuje katalog zamiast ściany kart", async ({ page }) => {
     await page.goto("/baza-zadan");
 
