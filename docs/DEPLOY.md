@@ -84,10 +84,13 @@ wykonaj poniższe kroki:
    `20260906240000_fix_auth_profile_trigger.sql`,
    `20260907000000_repair_public_profile_grants.sql`,
    `20261027140000_repair_profile_write_grants.sql`,
-   `20261101180000_signup_school_class.sql`.
+   `20261101180000_signup_school_class.sql`,
+   `20261101190000_school_level_only.sql`.
 
-Ostatnia migracja zapisuje opcjonalną klasę wybraną podczas rejestracji.
-Brak wyboru nie blokuje utworzenia konta; uczeń może ustawić klasę później.
+Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
+(szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
+sprowadzane do jednego z tych poziomów. Brak wyboru nie blokuje utworzenia
+konta; poziom można ustawić później.
 
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).

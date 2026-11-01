@@ -2,8 +2,8 @@
 
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
-  schoolClassLabel,
-  schoolClassShortLabel,
+  learningPathLabel,
+  learningPathShortLabel,
 } from "@/lib/learning-path";
 import Link from "next/link";
 
@@ -18,9 +18,11 @@ export function NavbarClassBadge({
   linkToProfile = false,
   inline = false,
 }: NavbarClassBadgeProps) {
-  const { schoolClass } = useLearningPath();
-  const short = schoolClassShortLabel(schoolClass);
-  const full = schoolClassLabel(schoolClass);
+  const { path, hasPathSelection } = useLearningPath();
+  if (!hasPathSelection) return null;
+
+  const short = learningPathShortLabel(path);
+  const full = learningPathLabel(path);
 
   const badge = (
     <span
@@ -40,7 +42,7 @@ export function NavbarClassBadge({
       <Link
         href="/profil#klasa"
         className="min-w-0 shrink-0 rounded-full transition hover:bg-accent/10"
-        aria-label={`Twoja klasa: ${full}. Zmień w profilu.`}
+        aria-label={`Poziom nauki: ${full}. Zmień w profilu.`}
       >
         {badge}
       </Link>
@@ -50,7 +52,7 @@ export function NavbarClassBadge({
   return (
     <span
       className={`min-w-0 shrink-0 ${className}`}
-      aria-label={`Twoja klasa: ${full}`}
+      aria-label={`Poziom nauki: ${full}`}
     >
       {badge}
     </span>

@@ -63,7 +63,7 @@ export function NavbarSheet({
     [menuPath, pathname],
   );
   const sheetId = useId();
-  const { schoolClass, setSchoolClass } = useLearningPath();
+  const { path, setPath, clearPath, hasPathSelection } = useLearningPath();
 
   const menuActive =
     NAV_MORE_GROUPS.some((g) =>
@@ -139,11 +139,18 @@ export function NavbarSheet({
                     <NavbarClassBadge />
                     {showPro ? <NavbarProBadge linkToProfile /> : null}
                   </div>
-                  <p className="mb-1.5 text-overline">Twoja klasa</p>
+                  <p className="mb-1.5 text-overline">Poziom nauki</p>
                   <SchoolClassPicker
                     id="navbar-sheet-class"
-                    value={schoolClass}
-                    onChange={setSchoolClass}
+                    value={hasPathSelection ? path : ""}
+                    onChange={(next) => {
+                      if (next) {
+                        setPath(next);
+                      } else {
+                        clearPath();
+                      }
+                    }}
+                    optional
                   />
                 </div>
               )}

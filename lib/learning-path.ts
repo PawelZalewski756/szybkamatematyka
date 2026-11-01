@@ -1,9 +1,9 @@
-﻿/** Uproszczona ścieżka (SP vs szkoła średnia) — pochodna z klasy ucznia. */
+/** Generalny poziom nauki wybierany przez użytkownika: SP albo szkoła średnia. */
 export type LearningPath = "sp" | "srednia";
 
 export type PathGroup = "sp" | "liceum" | "technikum" | "zawodowa";
 
-/** Konkretna klasa ucznia — wybór w onboardingu i profilu. */
+/** Legacy values for specific classes; retained to normalize existing data. */
 export type SchoolClassPath =
   | `klasa-${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8}`
   | `liceum-${1 | 2 | 3 | 4}`
@@ -68,6 +68,14 @@ export const SCHOOL_CLASS_GROUPS: readonly SchoolClassGroup[] = [
 
 export const ALL_SCHOOL_CLASS_OPTIONS: readonly SchoolClassOption[] =
   SCHOOL_CLASS_GROUPS.flatMap((g) => g.options);
+
+export const SCHOOL_LEVEL_OPTIONS: readonly {
+  value: LearningPath;
+  label: string;
+}[] = [
+  { value: "sp", label: "Szkoła podstawowa" },
+  { value: "srednia", label: "Szkoła średnia" },
+];
 
 /** @deprecated Użyj SCHOOL_CLASS_GROUPS */
 export type PathOption = { value: LearningPath; label: string };
@@ -233,9 +241,20 @@ function migrateLegacyStorage(): SchoolClassPath | null {
 }
 
 export function hasStoredSchoolClass(): boolean {
+  return hasStoredLearningPath();
+}
+
+export function hasStoredLearningPath(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    return localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY) !== null;
+    return (
+      normalizeLearningPath(
+        localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY) ?? "",
+      ) !== null ||
+      normalizeLearningPath(
+        localStorage.getItem(LEGACY_PATH_STORAGE_KEY) ?? "",
+      ) !== null
+    );
   } catch {
     return false;
   }
@@ -271,7 +290,28 @@ export function getSchoolClassServerSnapshot(): SchoolClassPath {
 }
 
 export function loadLearningPath(): LearningPath {
-  return learningPathFromSchoolClass(loadSchoolClass());
+  if (typeof window === "undefined") return DEFAULT_PATH;
+
+  try {
+    const storedLevel =
+      localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY) ??
+      localStorage.getItem(LEGACY_PATH_STORAGE_KEY);
+    if (storedLevel) {
+      const path = normalizeLearningPath(storedLevel);
+      if (path) return path;
+    }
+
+    const migrated = migrateLegacyStorage();
+    if (migrated) {
+      const path = learningPathFromSchoolClass(migrated);
+      saveLearningPath(path);
+      return path;
+    }
+  } catch {
+    /* ignore */
+  }
+
+  return DEFAULT_PATH;
 }
 
 export function getLearningPathServerSnapshot(): LearningPath {
@@ -296,18 +336,22 @@ function notifyLearningPathChange(): void {
 }
 
 export function saveSchoolClass(schoolClass: SchoolClassPath): void {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, schoolClass);
-  localStorage.setItem(
-    LEGACY_PATH_STORAGE_KEY,
-    learningPathFromSchoolClass(schoolClass),
-  );
-  notifyLearningPathChange();
+  saveLearningPath(learningPathFromSchoolClass(schoolClass));
 }
 
 /** @deprecated Zapisuj schoolClass — path jest pochodną. */
 export function saveLearningPath(path: LearningPath): void {
-  saveSchoolClass(path === "sp" ? DEFAULT_SCHOOL_CLASS : "liceum-3");
+  if (typeof window === "undefined") return;
+  localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, path);
+  localStorage.setItem(LEGACY_PATH_STORAGE_KEY, path);
+  notifyLearningPathChange();
+}
+
+export function clearLearningPath(): void {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(SCHOOL_CLASS_STORAGE_KEY);
+  localStorage.removeItem(LEGACY_PATH_STORAGE_KEY);
+  notifyLearningPathChange();
 }
 
 /** Skrót dopasowania po torze pytań (egzamin 8-kl. / matura). */

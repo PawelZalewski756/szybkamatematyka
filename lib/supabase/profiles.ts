@@ -17,9 +17,8 @@ import {
 } from "@/lib/subscription/status";
 import { getPlanById, type SubscriptionPlanId } from "@/lib/subscription/plans";
 import {
-  isSchoolClassPath,
-  normalizeSchoolClass,
-  type SchoolClassPath,
+  normalizeLearningPath,
+  type LearningPath,
 } from "@/lib/learning-path";
 import type { PostgrestError } from "@supabase/supabase-js";
 import type { User } from "@supabase/supabase-js";
@@ -34,8 +33,8 @@ export type Profile = {
   lastPlayedDate: string | null;
   avatarUrl: string | null;
   lastNickUpdate: string | null;
-  /** Klasa ucznia (migracja add_profile_school_class). */
-  schoolClass?: SchoolClassPath | null;
+  /** Ogólny poziom nauki zapisany w profiles.school_class. */
+  schoolLevel?: LearningPath | null;
   /** Subskrypcja odczytywana osobnym, ograniczonym zapytaniem dla właściciela. */
   subscriptionStatus?: SubscriptionStatus;
   subscriptionPlan?: SubscriptionPlanId | null;
@@ -117,16 +116,16 @@ function readSubscriptionPlan(row: ProfileRow): SubscriptionPlanId | null {
   return plan ? plan.id : null;
 }
 
-function readSchoolClass(row: ProfileRow): SchoolClassPath | null {
+function readSchoolLevel(row: ProfileRow): LearningPath | null {
   const raw = row.school_class?.trim();
   if (!raw) return null;
-  return isSchoolClassPath(raw) ? raw : normalizeSchoolClass(raw);
+  return normalizeLearningPath(raw);
 }
 
 function mapRow(row: ProfileRow): Profile {
   const xp = Number(row.xp) || 0;
   const hasSubscription = row.subscription_status !== undefined;
-  const hasSchoolClass = row.school_class !== undefined;
+  const hasSchoolLevel = row.school_class !== undefined;
   return {
     id: row.id,
     nick: readNick(row),
@@ -137,7 +136,7 @@ function mapRow(row: ProfileRow): Profile {
     lastPlayedDate: row.last_played_date ?? null,
     avatarUrl: row.avatar_url?.trim() || null,
     lastNickUpdate: row.last_nick_update ?? null,
-    ...(hasSchoolClass ? { schoolClass: readSchoolClass(row) } : {}),
+    ...(hasSchoolLevel ? { schoolLevel: readSchoolLevel(row) } : {}),
     ...(hasSubscription
       ? {
           subscriptionStatus: normalizeSubscriptionStatus(
@@ -574,30 +573,30 @@ export async function updateProfileNick(
   return mapRow(row);
 }
 
-export async function updateProfileSchoolClass(
+export async function updateProfileSchoolLevel(
   userId: string,
-  schoolClass: SchoolClassPath,
+  schoolLevel: LearningPath | null,
 ): Promise<Profile> {
-  const patch: Record<string, unknown> = { school_class: schoolClass };
+  const patch: Record<string, unknown> = { school_class: schoolLevel };
 
   const { row, error } = await updateAndSelectProfile(userId, patch);
 
   if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
     console.warn(
-      "[szybka-matma] Kolumna profiles.school_class niedostępna — uruchom migrację add_profile_school_class.sql",
+      "[szybka-matma] Kolumna profiles.school_class niedostępna — uruchom aktualne migracje Supabase",
     );
     const { row: current } = await selectProfileWithFallback(userId);
-    if (!current) throw new Error("updateProfileSchoolClass: brak profilu");
+    if (!current) throw new Error("updateProfileSchoolLevel: brak profilu");
     return mapRow(current);
   }
 
   if (error) {
-    console.error("[szybka-matma] updateProfileSchoolClass failed:", error);
+    console.error("[szybka-matma] updateProfileSchoolLevel failed:", error);
     throw error;
   }
 
   if (!row) {
-    throw new Error("updateProfileSchoolClass: brak wiersza po aktualizacji");
+    throw new Error("updateProfileSchoolLevel: brak wiersza po aktualizacji");
   }
 
   return mapRow(row);
@@ -606,7 +605,7 @@ export async function updateProfileSchoolClass(
 export async function completeProfileOnboarding(
   userId: string,
   nick: string,
-  schoolClass?: SchoolClassPath | "",
+  schoolLevel?: LearningPath | "",
   options?: { lastNickUpdate?: string | null },
 ): Promise<Profile> {
   if (options?.lastNickUpdate !== undefined) {
@@ -617,7 +616,7 @@ export async function completeProfileOnboarding(
   const nickPayload = profileWritePayload(nick);
   const patch: Record<string, unknown> = {
     ...nickPayload,
-    ...(schoolClass ? { school_class: schoolClass } : {}),
+    ...(schoolLevel ? { school_class: schoolLevel } : {}),
     last_nick_update: new Date().toISOString(),
   };
 
@@ -633,7 +632,7 @@ export async function completeProfileOnboarding(
   if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
     ({ row, error } = await updateAndSelectProfile(userId, {
       ...nickPayload,
-      ...(schoolClass ? { school_class: schoolClass } : {}),
+      ...(schoolLevel ? { school_class: schoolLevel } : {}),
     }));
   }
 

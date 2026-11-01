@@ -10,10 +10,10 @@ import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
-  DEFAULT_SCHOOL_CLASS,
-  saveSchoolClass,
-  schoolClassLabel,
-  type SchoolClassPath,
+  clearLearningPath,
+  learningPathLabel,
+  saveLearningPath,
+  type LearningPath,
 } from "@/lib/learning-path";
 import {
   ensureUserProfile,
@@ -25,7 +25,7 @@ import {
   normalizeNick,
   profileFromUserFallback,
   updateProfileNick,
-  updateProfileSchoolClass,
+  updateProfileSchoolLevel,
   type Profile,
 } from "@/lib/supabase/profiles";
 import { useSubscription } from "@/lib/subscription/use-subscription";
@@ -179,7 +179,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
 
 export default function ProfilPage() {
   const router = useRouter();
-  const { setSchoolClass: setLocalSchoolClass } = useLearningPath();
+  const { setPath: setLocalPath } = useLearningPath();
   const { snapshot: subscriptionSnapshot } = useSubscription();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
@@ -195,7 +195,7 @@ export default function ProfilPage() {
     ok: boolean;
     variant?: "taken";
   } | null>(null);
-  const [classDraft, setClassDraft] = useState<SchoolClassPath>(DEFAULT_SCHOOL_CLASS);
+  const [schoolLevelDraft, setSchoolLevelDraft] = useState<LearningPath | "">("");
   const [classSaving, setClassSaving] = useState(false);
   const [classMessage, setClassMessage] = useState<{
     text: string;
@@ -248,7 +248,7 @@ export default function ProfilPage() {
 
       setProfile(playerProfile);
       setNickDraft(playerProfile.nick);
-      setClassDraft(playerProfile.schoolClass ?? DEFAULT_SCHOOL_CLASS);
+      setSchoolLevelDraft(playerProfile.schoolLevel ?? "");
 
       const examKeys: TreningExamKey[] = [
         "matura_podstawowa",
@@ -373,9 +373,9 @@ export default function ProfilPage() {
     }
   };
 
-  const handleSaveClass = async () => {
+  const handleSaveSchoolLevel = async () => {
     if (!user || !profile) return;
-    if (classDraft === (profile.schoolClass ?? DEFAULT_SCHOOL_CLASS)) {
+    if (schoolLevelDraft === (profile.schoolLevel ?? "")) {
       setClassMessage({ text: "Bez zmian.", ok: true });
       return;
     }
@@ -383,14 +383,24 @@ export default function ProfilPage() {
     setClassSaving(true);
     setClassMessage(null);
     try {
-      const updated = await updateProfileSchoolClass(user.id, classDraft);
+      const updated = await updateProfileSchoolLevel(
+        user.id,
+        schoolLevelDraft || null,
+      );
       setProfile(updated);
-      saveSchoolClass(classDraft);
-      setLocalSchoolClass(classDraft);
+      if (schoolLevelDraft) {
+        saveLearningPath(schoolLevelDraft);
+        setLocalPath(schoolLevelDraft);
+      } else {
+        clearLearningPath();
+      }
       notifyProfileUpdated(updated);
-      setClassMessage({ text: "Klasa zapisana!", ok: true });
+      setClassMessage({ text: "Poziom nauki zapisany!", ok: true });
     } catch {
-      setClassMessage({ text: "Nie udało się zapisać klasy.", ok: false });
+      setClassMessage({
+        text: "Nie udało się zapisać poziomu nauki.",
+        ok: false,
+      });
     } finally {
       setClassSaving(false);
     }
@@ -514,25 +524,28 @@ export default function ProfilPage() {
 
             <section id="klasa" className="mt-8 scroll-mt-24">
               <p className="text-xs font-bold uppercase tracking-wider text-muted">
-                Klasa
+                Poziom nauki
               </p>
               <p className="mt-1 text-sm text-muted">
                 Aktualnie:{" "}
                 <span className="font-semibold text-white">
-                  {schoolClassLabel(classDraft)}
+                  {schoolLevelDraft
+                    ? learningPathLabel(schoolLevelDraft)
+                    : "Nie wybrano"}
                 </span>
               </p>
               <div className="mt-2 flex gap-2">
                 <SchoolClassPicker
                   id="profile-class"
-                  value={classDraft}
-                  onChange={setClassDraft}
+                  value={schoolLevelDraft}
+                  onChange={setSchoolLevelDraft}
                   className="min-w-0 flex-1"
+                  optional
                 />
                 <button
                   type="button"
                   disabled={classSaving}
-                  onClick={() => void handleSaveClass()}
+                  onClick={() => void handleSaveSchoolLevel()}
                   className="btn-chunky inline-flex shrink-0 items-center gap-1.5 px-4 py-3 text-sm disabled:opacity-60"
                 >
                   {classSaving ? (

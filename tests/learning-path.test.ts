@@ -5,8 +5,18 @@ import {
   normalizeLearningPath,
   normalizeSchoolClass,
   questionTrackForPath,
+  SCHOOL_LEVEL_OPTIONS,
   spClassLevel,
 } from "@/lib/learning-path";
+
+describe("school level options", () => {
+  it("offers only elementary or secondary school", () => {
+    expect(SCHOOL_LEVEL_OPTIONS).toEqual([
+      { value: "sp", label: "Szkoła podstawowa" },
+      { value: "srednia", label: "Szkoła średnia" },
+    ]);
+  });
+});
 
 describe("normalizeLearningPath", () => {
   it("zostawia sp i srednia bez zmian", () => {

@@ -18,7 +18,9 @@ Przed pierwszym uruchomieniem dodaj w GitHub:
 Sekret jest używany wyłącznie przez GitHub Actions podczas migracji; nie dodawaj
 go do Vercel ani do kodu. Historyczne i nietimestampowane pliki SQL nie są
 automatycznie wykonywane. Workflow wykonuje wyłącznie nowe timestampowane
-migracje dodane na `master`. Historyczne migracje anonimowych statystyk
+migracje dodane na `master`. Poziom nauki zapisuje się jako „sp” lub „srednia”;
+historyczne wartości konkretnych klas są sprowadzane do jednego z tych poziomów.
+Historyczne migracje anonimowych statystyk
 pozostają w repozytorium i mogą pozostać w istniejących bazach, ale mechanizm
 zbierania danych oraz komendy raportujące zostały wyłączone.
 

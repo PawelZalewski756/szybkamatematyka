@@ -3,15 +3,13 @@
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
   ensureUserProfile,
-  updateProfileSchoolClass,
+  updateProfileSchoolLevel,
   type Profile,
 } from "@/lib/supabase/profiles";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
-  hasStoredSchoolClass,
-  isSchoolClassPath,
-  normalizeSchoolClass,
-  saveSchoolClass,
+  hasStoredLearningPath,
+  saveLearningPath,
 } from "@/lib/learning-path";
 import {
   PROFILE_UPDATED_EVENT,
@@ -20,11 +18,11 @@ import {
 import { useEffect, useRef } from "react";
 
 /**
- * Synchronizuje klasę ucznia między profilem Supabase a localStorage.
+ * Synchronizuje wybrany poziom nauki między profilem Supabase a localStorage.
  * Profil ma pierwszeństwo po zalogowaniu; brak w profilu → zapis z localStorage.
  */
 export function SchoolClassSync() {
-  const { schoolClass, setSchoolClass, ready } = useLearningPath();
+  const { path, ready } = useLearningPath();
   const syncingRef = useRef(false);
 
   useEffect(() => {
@@ -49,18 +47,14 @@ export function SchoolClassSync() {
           return;
         }
 
-        const profileClass = profile.schoolClass;
-        if (profileClass && profileClass !== schoolClass) {
-          saveSchoolClass(profileClass);
+        const profileLevel = profile.schoolLevel;
+        if (profileLevel && profileLevel !== path) {
+          saveLearningPath(profileLevel);
           return;
         }
 
-        if (
-          !profileClass &&
-          hasStoredSchoolClass() &&
-          isSchoolClassPath(schoolClass)
-        ) {
-          const updated = await updateProfileSchoolClass(user.id, schoolClass);
+        if (!profileLevel && hasStoredLearningPath()) {
+          const updated = await updateProfileSchoolLevel(user.id, path);
           window.dispatchEvent(
             new CustomEvent<ProfileUpdatedDetail>(PROFILE_UPDATED_EVENT, {
               detail: { profile: updated },
@@ -75,15 +69,14 @@ export function SchoolClassSync() {
     };
 
     void sync();
-  }, [ready, schoolClass, setSchoolClass]);
+  }, [ready, path]);
 
   useEffect(() => {
     const onProfileUpdated = (event: Event) => {
       const detail = (event as CustomEvent<ProfileUpdatedDetail>).detail;
-      const raw = detail?.profile?.schoolClass;
+      const raw = detail?.profile?.schoolLevel;
       if (!raw) return;
-      const normalized = normalizeSchoolClass(raw);
-      if (normalized) saveSchoolClass(normalized);
+      saveLearningPath(raw);
     };
 
     window.addEventListener(PROFILE_UPDATED_EVENT, onProfileUpdated);

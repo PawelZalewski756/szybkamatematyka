@@ -11,15 +11,15 @@ import {
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import type { User } from "@supabase/supabase-js";
 import {
+  Ellipsis,
   GraduationCap,
   Home,
-  LayoutGrid,
   Play,
   UserRound,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useId, useState } from "react";
 
 type TabLinkProps = {
   href: string;
@@ -47,7 +47,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
 
 type TabButtonProps = {
   label: string;
-  icon: typeof LayoutGrid;
+  icon: typeof Ellipsis;
   active: boolean;
   onClick: () => void;
   ariaExpanded?: boolean;
@@ -68,8 +68,10 @@ function TabButton({
       onClick={onClick}
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
-      className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
-        active ? "text-foreground" : "text-muted active:text-foreground"
+      className={`mx-0.5 flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent ${
+        active
+          ? "bg-accent/10 text-accent"
+          : "text-muted hover:bg-surface-hover active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
@@ -84,6 +86,7 @@ export function MobileTabBar() {
   const isDesktopNav = useDesktopNav();
   const pathname = usePathname();
   const router = useRouter();
+  const moreSheetId = useId();
   const [grajPath, setGrajPath] = useState<string | null>(null);
   const [morePath, setMorePath] = useState<string | null>(null);
   const grajOpen = grajPath === pathname;
@@ -206,13 +209,14 @@ export function MobileTabBar() {
           />
           <TabButton
             label="Więcej"
-            icon={LayoutGrid}
+            icon={Ellipsis}
             active={isMobileMoreActive(pathname) || moreOpen}
             onClick={() => {
               setGrajOpen(false);
               setMoreOpen((v) => !v);
             }}
             ariaExpanded={moreOpen}
+            ariaControls={moreSheetId}
           />
         </div>
       </nav>
@@ -224,6 +228,7 @@ export function MobileTabBar() {
       />
       <MoreSheet
         open={moreOpen}
+        sheetId={moreSheetId}
         onClose={() => setMoreOpen(false)}
         pathname={pathname}
         isLoggedIn={Boolean(user)}

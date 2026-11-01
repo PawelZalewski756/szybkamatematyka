@@ -14,9 +14,9 @@ import {
 } from "@/lib/supabase/profiles";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import {
-  hasStoredSchoolClass,
-  loadSchoolClass,
-  type SchoolClassPath,
+  hasStoredLearningPath,
+  loadLearningPath,
+  type LearningPath,
 } from "@/lib/learning-path";
 import { isSupabaseNetworkError } from "@/lib/supabase/errors";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
@@ -39,8 +39,8 @@ export default function LoginPage() {
   const [view, setView] = useState<AuthView>("login");
   const [email, setEmail] = useState("");
   const [nick, setNick] = useState("");
-  const [schoolClass, setSchoolClass] = useState<SchoolClassPath | "">(() =>
-    hasStoredSchoolClass() ? loadSchoolClass() : "",
+  const [schoolLevel, setSchoolLevel] = useState<LearningPath | "">(() =>
+    hasStoredLearningPath() ? loadLearningPath() : "",
   );
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
@@ -83,7 +83,7 @@ export default function LoginPage() {
     clearMessage();
     setPasswordConfirm("");
     setNick("");
-    setSchoolClass(hasStoredSchoolClass() ? loadSchoolClass() : "");
+    setSchoolLevel(hasStoredLearningPath() ? loadLearningPath() : "");
     setView("signup");
   };
 
@@ -191,7 +191,7 @@ export default function LoginPage() {
           data: {
             nick: normalizedNick,
             nickname: normalizedNick,
-            school_class: schoolClass || null,
+            school_level: schoolLevel || null,
           },
         },
       });
@@ -399,12 +399,12 @@ export default function LoginPage() {
                   htmlFor="signup-school-class"
                   className="text-xs font-bold uppercase tracking-wide text-accent/80"
                 >
-                  Klasa (opcjonalnie)
+                  Poziom nauki (opcjonalnie)
                 </label>
                 <SchoolClassPicker
                   id="signup-school-class"
-                  value={schoolClass}
-                  onChange={setSchoolClass}
+                  value={schoolLevel}
+                  onChange={setSchoolLevel}
                   className="w-full"
                   optional
                 />

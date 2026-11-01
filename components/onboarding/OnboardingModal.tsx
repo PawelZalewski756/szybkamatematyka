@@ -7,16 +7,16 @@ import {
   isNickTaken,
   NickTakenError,
   normalizeNick,
-  updateProfileSchoolClass,
+  updateProfileSchoolLevel,
   type Profile,
 } from "@/lib/supabase/profiles";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import { AUTH_INPUT_CLASS } from "@/components/auth/AuthFormParts";
 import {
-  hasStoredSchoolClass,
-  loadSchoolClass,
-  saveSchoolClass,
-  type SchoolClassPath,
+  hasStoredLearningPath,
+  loadLearningPath,
+  saveLearningPath,
+  type LearningPath,
 } from "@/lib/learning-path";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
@@ -30,8 +30,8 @@ type OnboardingModalProps = {
 
 export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
   const [nick, setNick] = useState("");
-  const [schoolClass, setSchoolClass] = useState<SchoolClassPath | "">(() =>
-    hasStoredSchoolClass() ? loadSchoolClass() : "",
+  const [schoolLevel, setSchoolLevel] = useState<LearningPath | "">(() =>
+    hasStoredLearningPath() ? loadLearningPath() : "",
   );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -56,16 +56,16 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
 
       let saved: Profile;
       try {
-        saved = await completeProfileOnboarding(user.id, next, schoolClass);
+        saved = await completeProfileOnboarding(user.id, next, schoolLevel);
       } catch (primaryErr) {
         if (primaryErr instanceof NickTakenError) throw primaryErr;
-        // Fallback: save the required nick even if optional class sync is unavailable.
+        // Fallback: save the required nick even if optional level sync is unavailable.
         saved = await createProfile(user.id, next);
-        if (schoolClass) {
+        if (schoolLevel) {
           try {
-            saved = await updateProfileSchoolClass(user.id, schoolClass);
+            saved = await updateProfileSchoolLevel(user.id, schoolLevel);
           } catch {
-            // The profile can still be completed without an optional class.
+            // The profile can still be completed without an optional level.
           }
         }
       }
@@ -75,7 +75,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         return;
       }
 
-      if (schoolClass) saveSchoolClass(schoolClass);
+      if (schoolLevel) saveLearningPath(schoolLevel);
       notifyProfileUpdated(saved);
       onComplete(saved);
     } catch (err) {
@@ -118,7 +118,8 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
           Witaj w grze!
         </h2>
         <p className="mt-2 text-center text-sm leading-relaxed text-muted">
-          Ustaw nick, żeby dołączyć do rankingu. Klasę możesz wybrać teraz lub później.
+          Ustaw nick, żeby dołączyć do rankingu. Poziom nauki możesz wybrać teraz
+          lub później.
         </p>
 
         <form onSubmit={(e) => void handleSubmit(e)} className="mt-6">
@@ -137,11 +138,11 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             className={`${AUTH_INPUT_CLASS} mt-2 w-full text-base font-bold`}
           />
 
-          <p className="text-overline mt-4">Twoja klasa (opcjonalnie)</p>
+          <p className="text-overline mt-4">Poziom nauki (opcjonalnie)</p>
           <SchoolClassPicker
             id="onboarding-class"
-            value={schoolClass}
-            onChange={setSchoolClass}
+            value={schoolLevel}
+            onChange={setSchoolLevel}
             className="mt-2"
             optional
           />

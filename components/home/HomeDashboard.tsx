@@ -2,6 +2,7 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
+import { useLearningPath } from "@/components/LearningPathProvider";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
 import {
@@ -78,13 +79,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-function ProductPreview({
-  path,
-  pathLabel,
-}: {
-  path: "sp" | "srednia";
-  pathLabel: string;
-}) {
+function ProductPreview({ path }: { path: "sp" | "srednia" }) {
   const sampleTopic =
     path === "sp"
       ? {
@@ -196,9 +191,6 @@ function ProductPreview({
             <p className="text-overline">
               {hasRecentTopic ? "Ostatni temat" : "Przykładowa sesja"}
             </p>
-            <p className="mt-1 text-lg font-extrabold tracking-tight text-foreground">
-              {pathLabel}
-            </p>
           </div>
           <span className="icon-chip h-11 w-11 shrink-0">
             <BookOpen className="h-5 w-5" aria-hidden />
@@ -301,6 +293,8 @@ function EntryPathCard({
 }
 
 export function HomeDashboard() {
+  const { path } = useLearningPath();
+
   return (
     <div className="flex flex-1 flex-col">
       <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
@@ -373,7 +367,7 @@ export function HomeDashboard() {
               </motion.div>
             </div>
 
-            <ProductPreview path={path} pathLabel={pathLabel} />
+            <ProductPreview path={path} />
           </div>
 
           <div className="border-t border-surface-border px-4 py-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">

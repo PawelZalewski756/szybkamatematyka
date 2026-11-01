@@ -161,7 +161,15 @@ test.describe("Smoke", () => {
 
     await page.goto("/login");
     await page.getByRole("button", { name: "Załóż konto" }).click();
-    await expect(page.getByLabel("Klasa (opcjonalnie)")).toBeVisible();
+    const schoolLevelPicker = page.getByLabel(
+      "Poziom nauki (opcjonalnie)",
+    );
+    await expect(schoolLevelPicker).toBeVisible();
+    await expect(schoolLevelPicker.locator("option")).toHaveText([
+      "Wybiorę później",
+      "Szkoła podstawowa",
+      "Szkoła średnia",
+    ]);
     await page.locator('input[name="nick"]').fill("NowyUczen");
     await page.locator('input[name="email"]').fill("nowy@example.com");
     await page.locator('input[name="password"]').fill("poprawnehaslo");
@@ -233,6 +241,16 @@ test.describe("Smoke", () => {
     await expect(
       page.getByRole("navigation", { name: "Nawigacja mobilna" }).getByLabel("Graj"),
     ).toBeVisible();
+    const moreButton = page
+      .getByRole("navigation", { name: "Nawigacja mobilna" })
+      .getByRole("button", { name: "Więcej" });
+    await moreButton.click();
+    const moreMenu = page.getByRole("dialog", { name: "Więcej" });
+    await expect(moreMenu).toBeVisible();
+    await expect(moreButton).toHaveAttribute("aria-controls", /.+/);
+    await expect(moreMenu.getByLabel("Poziom nauki")).toHaveValue("");
+    await moreMenu.getByRole("link", { name: "Kontakt" }).click();
+    await expect(page).toHaveURL(/\/kontakt$/);
   });
 
   test("strona główna ma panel startowy", async ({ page }) => {
