@@ -302,7 +302,7 @@ export function generateParametricTask(
       const right = 8 + (Math.floor(v / 10) % 5);
       const shift = 1 + (v % 3);
       const intersectionLeft = left + shift;
-      const intersectionRight = right - shift;
+      const intersectionRight = right;
       const correct = `[${intersectionLeft}, ${intersectionRight}]`;
       return buildMc(
         rng,

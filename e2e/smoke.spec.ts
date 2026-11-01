@@ -401,7 +401,6 @@ test.describe("Smoke", () => {
     await page.goto(
       "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
     );
-    await page.getByRole("button", { name: /Odrzu/ }).click();
     await page.getByRole("tab", { name: "Zadania" }).click();
     await expect(page.getByText(/Zadanie \d+ z \d+/)).toBeVisible();
     await expect(page.getByText("Nie udało się załadować zadań.")).toHaveCount(0);
