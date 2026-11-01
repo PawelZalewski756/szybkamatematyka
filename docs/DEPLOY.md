@@ -29,8 +29,10 @@ służy tylko do ukrycia/pokazania panelu w przeglądarce — obie wartości mus
 identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
 Bot Telegrama przyjmuje wyłącznie prywatne wiadomości od ID z `TELEGRAM_ADMIN_IDS`.
-Do jego podłączenia po wdrożeniu wykonaj jednorazowe żądanie `POST
-/api/telegram/setup` z nagłówkiem `Authorization: Bearer <TELEGRAM_SETUP_SECRET>`.
+Aby podłączyć go po wdrożeniu, wykonaj jednorazowe żądanie:
+`POST /api/telegram/setup` z nagłówkiem `Authorization: <TELEGRAM_SETUP_SECRET>`.
+Każdy administrator musi wcześniej rozpocząć prywatną rozmowę z botem komendą
+`/start`, aby Telegram pozwolił mu odbierać powiadomienia o nowych kontach.
 Token bota i klucz `SUPABASE_SERVICE_ROLE_KEY` nigdy nie mogą mieć prefiksu
 `NEXT_PUBLIC_`.
 
@@ -85,12 +87,21 @@ wykonaj poniższe kroki:
    `20260907000000_repair_public_profile_grants.sql`,
    `20261027140000_repair_profile_write_grants.sql`,
    `20261101180000_signup_school_class.sql`,
-   `20261101190000_school_level_only.sql`.
+   `20261101190000_school_level_only.sql`,
+   `20261101200000_signup_telegram_notifications.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
 sprowadzane do jednego z tych poziomów. Brak wyboru nie blokuje utworzenia
 konta; poziom można ustawić później.
+
+Migracja `20261101200000_signup_telegram_notifications.sql` tworzy prywatną
+tabelę potwierdzeń wysyłki, aby ponowione żądanie nie wysyłało administratorowi
+duplikatu powiadomienia. Przy nowych rejestracjach bot wysyła administratorom
+nick, e-mail, wybrany poziom nauki oraz status potwierdzenia adresu. Wymaga to
+ustawionych `TELEGRAM_BOT_TOKEN`, `TELEGRAM_ADMIN_IDS` i
+`SUPABASE_SERVICE_ROLE_KEY`; każdy odbiorca musi wcześniej rozpocząć prywatną
+rozmowę z botem Telegrama komendą `/start`.
 
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).

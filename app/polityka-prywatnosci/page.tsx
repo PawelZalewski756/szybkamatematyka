@@ -19,7 +19,7 @@ export default function PolitykaPrywatnosciPage() {
     <InfoPageShell
       title="Polityka prywatności"
       description={`Informacje o przetwarzaniu danych osobowych w serwisie ${BRAND_NAME}.`}
-      updatedAt="27 października 2026"
+      updatedAt="1 listopada 2026"
     >
       <InfoSection title="1. Administrator">
         <p>
@@ -40,8 +40,8 @@ export default function PolitykaPrywatnosciPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li>
             Dane konta: adres e-mail, hasło (w formie zaszyfrowanej u dostawcy
-            uwierzytelniania), opcjonalnie dane profilu (np. nick, klasa,
-            awatar).
+            uwierzytelniania), opcjonalnie dane profilu (np. nick, poziom
+            nauki, awatar).
           </li>
           <li>
             Dane użytkowania: postęp nauki, wyniki minigier, wyzwań, ustawienia
@@ -66,6 +66,11 @@ export default function PolitykaPrywatnosciPage() {
             subskrypcja.
           </li>
           <li>
+            Obsługa nowych kont — administrator otrzymuje przez prywatnego bota
+            Telegram powiadomienie zawierające nick, adres e-mail, wybrany
+            poziom nauki i status potwierdzenia adresu.
+          </li>
+          <li>
             Uzasadniony interes — bezpieczeństwo i przeciwdziałanie nadużyciom.
           </li>
           <li>
@@ -79,11 +84,14 @@ export default function PolitykaPrywatnosciPage() {
 
       <InfoSection title="4. Odbiorcy danych">
         <p>
-          Korzystamy z zaufanych dostawców infrastruktury (hosting, baza danych,
-          uwierzytelnianie, płatności Stripe). Jeśli tag Google Ads jest
+          Korzystamy z dostawców infrastruktury (hosting, baza danych,
+          uwierzytelnianie, płatności Stripe) oraz Telegrama do prywatnych
+          powiadomień administracyjnych o nowych kontach. W takim powiadomieniu
+          administrator otrzymuje nick, adres e-mail, poziom nauki i status
+          potwierdzenia adresu; wiadomość jest przetwarzana przez Telegram
+          zgodnie z jego zasadami prywatności. Jeśli tag Google Ads jest
           skonfigurowany, Google otrzymuje dane z jego działania w celu pomiaru
-          reklam. Przekazujemy dostawcom dane niezbędne do tych celów. Dane nie
-          są sprzedawane.
+          reklam. Dane nie są sprzedawane.
         </p>
       </InfoSection>
 
