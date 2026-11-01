@@ -13,6 +13,13 @@ describe("containsProfanity", () => {
     "f.u.c.k",
     "sh1t",
     "bitch123",
+    "cwel",
+    "cwela",
+    "c_w_e_l_123",
+    "skurwysyn",
+    "debil",
+    "pedał",
+    "dumbass",
   ])(
     "rejects Polish and English profanity, including obfuscations: %s",
     (nick) => {

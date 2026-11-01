@@ -89,7 +89,8 @@ wykonaj poniższe kroki:
    `20261101180000_signup_school_class.sql`,
    `20261101190000_school_level_only.sql`,
    `20261101200000_signup_telegram_notifications.sql`,
-   `20261101210000_block_profanity_in_profile_names.sql`.
+   `20261101210000_block_profanity_in_profile_names.sql`,
+   `20261101220000_expand_profile_name_profanity_filter.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
@@ -109,6 +110,8 @@ wulgaryzmy po polsku i angielsku zarówno przy rejestracji, jak i zmianie nicku.
 Walidacja ignoruje wielkość liter, polskie znaki diakrytyczne, separatory i
 popularne zamiany liter na cyfry; dodatkowy trigger w bazie blokuje ominięcie
 walidacji formularza.
+Migracja `20261101220000_expand_profile_name_profanity_filter.sql` rozszerza
+listę, m.in. o `cwel` wraz z odmianami, `debil`, `kretyn` i `dumbass`.
 
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
