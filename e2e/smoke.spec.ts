@@ -6,6 +6,9 @@ test.describe("Smoke", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       "Przygotuj się do",
     );
+    await expect(
+      page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
+    ).toHaveCount(0);
   });
 
   test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({

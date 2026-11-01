@@ -2,8 +2,6 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
-import { useLearningPath } from "@/components/LearningPathProvider";
-import { learningPathLabel } from "@/lib/learning-path";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
 import {
@@ -303,9 +301,6 @@ function EntryPathCard({
 }
 
 export function HomeDashboard() {
-  const { path } = useLearningPath();
-  const pathLabel = learningPathLabel(path);
-
   return (
     <div className="flex flex-1 flex-col">
       <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
@@ -320,17 +315,8 @@ export function HomeDashboard() {
         <div className="page-container relative z-10">
           <div className="grid items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 md:px-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(28rem,0.82fr)] lg:gap-14 lg:px-10 lg:py-24 xl:px-12 2xl:px-16">
             <div>
-              <motion.div
-                className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft/70 px-3 py-1.5 text-xs font-bold text-accent"
-                {...fadeUp}
-                transition={{ duration: 0.45 }}
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-                Ścieżka: {pathLabel}
-              </motion.div>
-
               <motion.h1
-                className="mt-8 max-w-2xl text-[clamp(2.65rem,6.5vw,5.4rem)] font-extrabold leading-[0.94] tracking-[-0.055em]"
+                className="max-w-2xl text-[clamp(2.65rem,6.5vw,5.4rem)] font-extrabold leading-[0.94] tracking-[-0.055em]"
                 {...fadeUp}
                 transition={{ duration: 0.5, delay: 0.08 }}
               >
