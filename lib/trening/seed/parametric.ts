@@ -1,5 +1,6 @@
 import { fmtNum, gcd, mulberry32, randInt, shuffle, type Rng } from "@/lib/trening/seed/rng";
 import { answersEquivalent } from "@/lib/math/answer-equiv";
+import { explainParametricTask } from "@/lib/trening/seed/parametric-explanations";
 import type { SeedTopicSlot } from "@/lib/trening/seed/topics";
 import type { TaskDraft } from "@/lib/trening/seed/generators";
 
@@ -49,6 +50,7 @@ function buildMc(
     options: shuffle(rng, pool.slice(0, 4)),
     difficulty,
     xp_reward: xp,
+    explanation: explainParametricTask(slot.topic, content, correct) ?? undefined,
   };
 }
 

@@ -19,6 +19,7 @@ export interface Task {
   correct_answer: string;
   options: string[];
   xp_reward: number;
+  explanation?: string;
 }
 
 export interface Material {

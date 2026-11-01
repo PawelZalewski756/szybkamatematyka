@@ -1,5 +1,6 @@
 import { taskContentForDb } from "@/lib/gemini/format-tasks";
 import { listAllCachedTasks } from "@/lib/trening/seed/tasks-cache-utils";
+import { explainParametricTask } from "@/lib/trening/seed/parametric-explanations";
 import type { ExamType } from "@/types/database";
 import { NextResponse } from "next/server";
 
@@ -21,6 +22,7 @@ type CachedTaskResponse = {
   correct_answer: string;
   options: string[];
   xp_reward: number;
+  explanation?: string;
 };
 
 let cachedTasks: CachedTaskResponse[] | null = null;
@@ -28,17 +30,23 @@ let cachedTasks: CachedTaskResponse[] | null = null;
 function loadCachedTasks(): CachedTaskResponse[] {
   if (cachedTasks) return cachedTasks;
 
-  cachedTasks = listAllCachedTasks().map((task) => ({
-    id: task.id,
-    exam_type: task.exam_type,
-    category: task.category,
-    topic: task.topic,
-    difficulty: task.difficulty,
-    content: taskContentForDb(task),
-    correct_answer: task.correct_answer,
-    options: task.options,
-    xp_reward: task.xp_reward,
-  }));
+  cachedTasks = listAllCachedTasks().map((task) => {
+    const explanation = String(task.model || "").startsWith("parametric")
+      ? explainParametricTask(task.topic, task.content, task.correct_answer)
+      : task.explanation;
+    return {
+      id: task.id,
+      exam_type: task.exam_type,
+      category: task.category,
+      topic: task.topic,
+      difficulty: task.difficulty,
+      content: taskContentForDb(task),
+      correct_answer: task.correct_answer,
+      options: task.options,
+      xp_reward: task.xp_reward,
+      explanation: explanation ?? undefined,
+    };
+  });
 
   return cachedTasks;
 }

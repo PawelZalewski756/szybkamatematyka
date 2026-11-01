@@ -281,7 +281,7 @@ export function TaskArena({
 
       window.setTimeout(() => {
         advanceOrFinish();
-      }, CORRECT_DELAY_MS);
+      }, current.explanation ? 8_000 : CORRECT_DELAY_MS);
     },
     [
       advanceOrFinish,
@@ -674,10 +674,24 @@ export function TaskArena({
             )}
 
             {feedback === "correct" && (
-              <p className="mt-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
-                <CheckCircle2 className="h-4 w-4" />
-                Dobra odpowiedź!
-              </p>
+              <div className="mt-4">
+                <p className="flex items-center justify-center gap-1.5 text-sm font-semibold text-emerald-400">
+                  <CheckCircle2 className="h-4 w-4" />
+                  Dobra odpowiedź!
+                </p>
+                {current.explanation && (
+                  <div className="mt-4 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-left">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-emerald-300">
+                      Rozwiązanie
+                    </p>
+                    <MathText
+                      as="div"
+                      content={current.explanation}
+                      className="whitespace-pre-line text-sm font-medium leading-relaxed text-foreground"
+                    />
+                  </div>
+                )}
+              </div>
             )}
           </motion.div>
         </AnimatePresence>

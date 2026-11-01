@@ -66,7 +66,9 @@ function draftToCached(
     answer_type: draft.options.length > 0 ? "choice" : "open",
     difficulty: draft.difficulty,
     xp_reward: draft.xp_reward,
-    explanation: `${approximation ? "Zastosuj wzór, wykonaj obliczenia i zaokrąglij wynik zgodnie z poleceniem." : "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia."}\n**Odpowiedź:** ${draft.correct_answer}`,
+    explanation:
+      draft.explanation ??
+      `${approximation ? "Zastosuj odpowiedni wzór, podstaw dane i zaokrąglij wynik zgodnie z poleceniem." : "Zastosuj metodę właściwą dla tego typu zadania i sprawdź wynik."}\n\n**Odpowiedź:** ${draft.correct_answer}`,
     figure_svg: null,
     figure_caption: null,
     id: previous?.id ?? randomUUID(),

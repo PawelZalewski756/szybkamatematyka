@@ -21,6 +21,7 @@ export type TaskDraft = {
   options: string[];
   difficulty: 1 | 2 | 3;
   xp_reward: number;
+  explanation?: string;
 };
 
 function buildMc(

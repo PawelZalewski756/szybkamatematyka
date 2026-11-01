@@ -17,6 +17,7 @@ export type TaskRow = {
   correct_answer: string;
   options: unknown;
   xp_reward: number;
+  explanation?: string;
 };
 
 function parseOptions(raw: unknown): string[] {
@@ -40,6 +41,7 @@ function mapTask(row: TaskRow): Task & { options: string[] } {
     correct_answer: row.correct_answer,
     xp_reward: Number(row.xp_reward) || 0,
     options: parseOptions(row.options),
+    explanation: row.explanation,
   };
 }
 
