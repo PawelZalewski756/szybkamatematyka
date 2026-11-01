@@ -24,8 +24,6 @@ type OnboardingGateProps = {
   children: ReactNode;
 };
 
-const emptySubscribe = () => () => {};
-
 export function OnboardingGate({ children }: OnboardingGateProps) {
   const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);

@@ -17,6 +17,7 @@ import {
   ArrowRight,
   BookOpen,
   Check,
+  Clock3,
   FileText,
   Flame,
   Gamepad2,
