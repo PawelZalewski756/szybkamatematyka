@@ -1,4 +1,5 @@
 import type { AuthError } from "@supabase/supabase-js";
+import { containsProfanity } from "@/lib/profanity";
 import { formatSupabaseErrorForUser } from "@/lib/supabase/errors";
 
 export function validateAuthInput(email: string, password: string): string | null {
@@ -66,6 +67,10 @@ export function validateNick(nick: string): string | null {
 
   if (trimmed.length > 20) {
     return "Nick może mieć maksymalnie 20 znaków.";
+  }
+
+  if (containsProfanity(trimmed)) {
+    return "Nick nie może zawierać wulgarnych słów.";
   }
 
   if (!/^[a-zA-Z0-9_ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/.test(trimmed)) {

@@ -88,7 +88,8 @@ wykonaj poniższe kroki:
    `20261027140000_repair_profile_write_grants.sql`,
    `20261101180000_signup_school_class.sql`,
    `20261101190000_school_level_only.sql`,
-   `20261101200000_signup_telegram_notifications.sql`.
+   `20261101200000_signup_telegram_notifications.sql`,
+   `20261101210000_block_profanity_in_profile_names.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
@@ -102,6 +103,12 @@ nick, e-mail, wybrany poziom nauki oraz status potwierdzenia adresu. Wymaga to
 ustawionych `TELEGRAM_BOT_TOKEN`, `TELEGRAM_ADMIN_IDS` i
 `SUPABASE_SERVICE_ROLE_KEY`; każdy odbiorca musi wcześniej rozpocząć prywatną
 rozmowę z botem Telegrama komendą `/start`.
+
+Migracja `20261101210000_block_profanity_in_profile_names.sql` blokuje wybrane
+wulgaryzmy po polsku i angielsku zarówno przy rejestracji, jak i zmianie nicku.
+Walidacja ignoruje wielkość liter, polskie znaki diakrytyczne, separatory i
+popularne zamiany liter na cyfry; dodatkowy trigger w bazie blokuje ominięcie
+walidacji formularza.
 
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).

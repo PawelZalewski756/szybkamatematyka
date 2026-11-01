@@ -6,6 +6,7 @@ import { ProfileAchievements } from "@/components/achievements/ProfileAchievemen
 import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPrompt";
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
+import { containsProfanity } from "@/lib/profanity";
 import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
@@ -326,6 +327,13 @@ export default function ProfilPage() {
     if (!next || next.length < 2) {
       setNickMessage({
         text: "Nick musi mieć co najmniej 2 znaki.",
+        ok: false,
+      });
+      return;
+    }
+    if (containsProfanity(next)) {
+      setNickMessage({
+        text: "Nick nie może zawierać wulgarnych słów.",
         ok: false,
       });
       return;
