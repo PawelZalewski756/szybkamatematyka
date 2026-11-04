@@ -3,8 +3,8 @@
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
   groupMinigames,
-  type MinigameGroupVisual,
 } from "@/components/minigry/minigame-groups";
+import { MINIGAME_GROUP_ICONS } from "@/components/minigry/minigame-group-icons";
 import {
   getMinigamesForPath,
   type MinigameEntry,
@@ -14,15 +14,7 @@ import {
   modeDescription,
   type MinigamePlayMode,
 } from "@/lib/minigry/game-modes";
-import {
-  Calculator,
-  Layers,
-  LineChart,
-  Radical,
-  Sigma,
-  Triangle,
-  type LucideIcon,
-} from "lucide-react";
+import { Calculator, type LucideIcon } from "lucide-react";
 import {
   MINIGAME_MODE_GLOW,
   MINIGAME_MODE_HEADER_CLASS,
@@ -30,15 +22,6 @@ import {
 import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
-  calculator: Calculator,
-  sigma: Sigma,
-  radical: Radical,
-  triangle: Triangle,
-  "line-chart": LineChart,
-  layers: Layers,
-};
 
 function GamePickCard({
   game,
@@ -73,7 +56,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
   const games = [...recommended, ...other];
   const iconByGameId = new Map<string, LucideIcon>();
   for (const group of groupMinigames(games)) {
-    const Icon = GROUP_ICONS[group.visual.icon];
+    const Icon = MINIGAME_GROUP_ICONS[group.visual.icon];
     for (const game of group.games) iconByGameId.set(game.id, Icon);
   }
 
