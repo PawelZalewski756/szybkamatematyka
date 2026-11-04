@@ -429,9 +429,6 @@ test.describe("Smoke", () => {
   });
 
   test("lista treningu pokazuje tematy z lokalnego cache", async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.setItem("szybka-matma-school-class", "liceum-3");
-    });
     await page.goto("/trening");
     await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
     await expect(
@@ -441,7 +438,7 @@ test.describe("Smoke", () => {
       page.getByTestId("training-next-step"),
     ).toHaveAttribute(
       "href",
-      "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
+      "/trening/egzamin-osmoklasisty/liczby/kolejnosc_dzialan",
     );
     await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
     await expect(page.getByText("30 tematów").first()).toBeVisible();
@@ -453,16 +450,13 @@ test.describe("Smoke", () => {
   test("lista treningu otwiera tematy dopiero po wyborze działu", async ({
     page,
   }) => {
-    await page.addInitScript(() => {
-      localStorage.setItem("szybka-matma-school-class", "liceum-3");
-    });
     await page.goto("/trening");
     const departmentButton = page.getByRole("button", {
-      name: /Liczby rzeczywiste/,
+      name: /Liczby i działania/,
     });
     const departmentPanel = page.getByTestId("training-department-panel");
     const topicLinks = page.getByTestId("training-topic-list").locator(
-      'a[href^="/trening/matura/liczby_rzeczywiste/"]',
+      'a[href^="/trening/egzamin-osmoklasisty/liczby/"]',
     );
     await expect(departmentButton).toBeVisible();
     await expect(departmentPanel).toBeVisible();
