@@ -36,7 +36,6 @@ import {
   Scale,
   ShieldCheck,
   Sigma,
-  Sparkles,
   Square,
   Target,
   Timer,
@@ -56,7 +55,6 @@ function gameCountLabel(count: number): string {
 
 const SHARED_VISUAL_TONE = {
   panel: "border-accent/25 bg-accent/10",
-  glow: "bg-accent/10",
   text: "text-accent",
   strong: "bg-accent",
 } as const;
@@ -77,26 +75,10 @@ const VISUAL_TONES = {
 } as const;
 
 type VisualTone = keyof typeof VISUAL_TONES;
-type VisualMotif =
-  | "grid"
-  | "dots"
-  | "orbit"
-  | "rays"
-  | "bars"
-  | "triangle"
-  | "fraction"
-  | "axis"
-  | "waves"
-  | "squares"
-  | "formula"
-  | "chart"
-  | "layers";
 
 type GameVisual = {
   icon: LucideIcon;
   label: string;
-  marker: string;
-  motif: VisualMotif;
   tone: VisualTone;
 };
 
@@ -104,248 +86,178 @@ const GAME_VISUALS: Record<string, GameVisual> = {
   "prawda-falsz": {
     icon: Scale,
     label: "Prawda/fałsz",
-    marker: "T/N",
-    motif: "axis",
     tone: "violet",
   },
   mnozenie: {
     icon: Calculator,
     label: "Tabliczka",
-    marker: "×",
-    motif: "grid",
     tone: "amber",
   },
   dodawanie: {
     icon: Plus,
     label: "Sumowanie",
-    marker: "+",
-    motif: "rays",
     tone: "orange",
   },
   odejmowanie: {
     icon: Minus,
     label: "Różnica",
-    marker: "−",
-    motif: "axis",
     tone: "rose",
   },
   dzielenie: {
     icon: Divide,
     label: "Iloraz",
-    marker: "÷",
-    motif: "fraction",
     tone: "sky",
   },
   porownaj: {
     icon: Scale,
     label: "Relacje",
-    marker: "≷",
-    motif: "axis",
     tone: "indigo",
   },
   ulamki: {
     icon: Grid2X2,
     label: "Ułamki",
-    marker: "½",
-    motif: "fraction",
     tone: "cyan",
   },
   procenty: {
     icon: Percent,
     label: "Procenty",
-    marker: "%",
-    motif: "dots",
     tone: "lime",
   },
   potegi: {
     icon: Zap,
     label: "Potęgi",
-    marker: "x²",
-    motif: "rays",
     tone: "violet",
   },
   pierwiastki: {
     icon: Radical,
     label: "Pierwiastki",
-    marker: "√",
-    motif: "formula",
     tone: "teal",
   },
   rownania: {
     icon: Equal,
     label: "Równania",
-    marker: "x=",
-    motif: "formula",
     tone: "fuchsia",
   },
   ciag: {
     icon: MoveHorizontal,
     label: "Ciągi",
-    marker: "…",
-    motif: "dots",
     tone: "emerald",
   },
   nawiasy: {
     icon: Calculator,
     label: "Kolejność",
-    marker: "( )",
-    motif: "squares",
     tone: "orange",
   },
   funkcje: {
     icon: LineChart,
     label: "Funkcje",
-    marker: "f(x)",
-    motif: "chart",
     tone: "emerald",
   },
   wzory: {
-    icon: Sparkles,
+    icon: Equal,
     label: "Wzory",
-    marker: "a²",
-    motif: "formula",
     tone: "fuchsia",
   },
   logarytmy: {
     icon: Target,
     label: "Logarytmy",
-    marker: "log",
-    motif: "orbit",
     tone: "indigo",
   },
   pole: {
     icon: Square,
     label: "Pola",
-    marker: "a·b",
-    motif: "squares",
     tone: "rose",
   },
   obwod: {
     icon: Ruler,
     label: "Obwody",
-    marker: "2a+2b",
-    motif: "axis",
     tone: "sky",
   },
   nwd: {
     icon: Grid2X2,
     label: "Dzielniki",
-    marker: "NWD",
-    motif: "grid",
     tone: "amber",
   },
   zaokraglenie: {
     icon: Circle,
     label: "Przybliżenia",
-    marker: "≈",
-    motif: "orbit",
     tone: "teal",
   },
   przeciwna: {
     icon: MoveHorizontal,
     label: "Oś liczbowa",
-    marker: "−x",
-    motif: "axis",
     tone: "indigo",
   },
   "potegi-10": {
     icon: Zap,
     label: "Dziesiątki",
-    marker: "10ⁿ",
-    motif: "bars",
     tone: "amber",
   },
   trojkat: {
     icon: Triangle,
     label: "Kąty",
-    marker: "180°",
-    motif: "triangle",
     tone: "rose",
   },
   "ulamki-plus": {
     icon: Plus,
     label: "Ułamki",
-    marker: "⅓+",
-    motif: "fraction",
     tone: "cyan",
   },
   sinusy: {
     icon: LineChart,
     label: "Sinus",
-    marker: "sin",
-    motif: "waves",
     tone: "sky",
   },
   kosinusy: {
     icon: LineChart,
     label: "Kosinus",
-    marker: "cos",
-    motif: "waves",
     tone: "violet",
   },
   nww: {
     icon: Grid2X2,
     label: "Wielokrotności",
-    marker: "NWW",
-    motif: "grid",
     tone: "lime",
   },
   kwadrat: {
     icon: Square,
     label: "Kwadraty",
-    marker: "x²",
-    motif: "squares",
     tone: "orange",
   },
   modulo: {
     icon: Divide,
     label: "Reszta",
-    marker: "mod",
-    motif: "bars",
     tone: "fuchsia",
   },
   "wartosc-bezwzgledna": {
     icon: MoveHorizontal,
     label: "Odległość",
-    marker: "|x|",
-    motif: "axis",
     tone: "teal",
   },
   "ulamki-minus": {
     icon: Minus,
     label: "Ułamki",
-    marker: "⅔−",
-    motif: "fraction",
     tone: "orange",
   },
   "pole-kola": {
     icon: Circle,
     label: "Koło",
-    marker: "πr²",
-    motif: "orbit",
     tone: "rose",
   },
   srednia: {
     icon: Sigma,
     label: "Statystyka",
-    marker: "x̄",
-    motif: "chart",
     tone: "emerald",
   },
   "procent-odwrotny": {
     icon: Percent,
     label: "Proporcje",
-    marker: "p%",
-    motif: "dots",
     tone: "lime",
   },
 };
 
 const DEFAULT_GAME_VISUAL: GameVisual = {
-  icon: Sparkles,
+  icon: Calculator,
   label: "Minigra",
-  marker: "∎",
-  motif: "layers",
   tone: "slate",
 };
 
@@ -362,137 +274,9 @@ const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
   layers: Layers,
 };
 
-function VisualMotif({
-  motif,
-  tone,
-}: {
-  motif: VisualMotif;
-  tone: VisualTone;
-}) {
-  const motifClass = `pointer-events-none absolute inset-0 opacity-25 ${VISUAL_TONES[tone].text}`;
-  const dotClass = "h-1.5 w-1.5 rounded-full bg-current";
-
-  switch (motif) {
-    case "grid":
-      return (
-        <span
-          className={`${motifClass} grid grid-cols-3 place-content-center gap-1.5 p-3`}
-          aria-hidden
-        >
-          {Array.from({ length: 9 }, (_, index) => (
-            <span key={index} className="h-1.5 w-1.5 rounded-sm bg-current" />
-          ))}
-        </span>
-      );
-    case "dots":
-      return (
-        <span
-          className={`${motifClass} grid grid-cols-2 place-content-center gap-2 p-4`}
-          aria-hidden
-        >
-          {Array.from({ length: 4 }, (_, index) => (
-            <span key={index} className={dotClass} />
-          ))}
-        </span>
-      );
-    case "orbit":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full border border-current" />
-          <span className="absolute left-1/2 top-1/2 h-8 w-20 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-[50%] border border-current" />
-          <span className="absolute left-[68%] top-[27%] h-2 w-2 rounded-full bg-current" />
-        </span>
-      );
-    case "rays":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-1/2 top-1/2 h-20 w-1 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-current" />
-          <span className="absolute left-1/2 top-1/2 h-20 w-1 -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
-          <span className="absolute left-1/2 top-1/2 h-16 w-1 -translate-x-1/2 -translate-y-1/2 rotate-90 rounded-full bg-current" />
-        </span>
-      );
-    case "bars":
-      return (
-        <span
-          className={`${motifClass} flex items-end justify-center gap-1.5 p-4`}
-          aria-hidden
-        >
-          <span className="h-5 w-1.5 rounded-full bg-current" />
-          <span className="h-9 w-1.5 rounded-full bg-current" />
-          <span className="h-7 w-1.5 rounded-full bg-current" />
-          <span className="h-12 w-1.5 rounded-full bg-current" />
-        </span>
-      );
-    case "triangle":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-md border-2 border-current" />
-          <span className="absolute left-1/2 top-[28%] h-2 w-2 -translate-x-1/2 rounded-full bg-current" />
-        </span>
-      );
-    case "fraction":
-      return (
-        <span className={`${motifClass} flex flex-col items-center justify-center gap-1`} aria-hidden>
-          <span className="text-xs font-bold">1</span>
-          <span className="h-px w-8 bg-current" />
-          <span className="text-xs font-bold">2</span>
-        </span>
-      );
-    case "axis":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-4 right-4 top-1/2 h-px bg-current" />
-          <span className="absolute left-1/2 top-4 bottom-4 w-px bg-current" />
-          <span className="absolute left-[30%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-current" />
-          <span className="absolute left-[70%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-current" />
-        </span>
-      );
-    case "waves":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-1/2 top-1/2 h-10 w-20 -translate-x-1/2 -translate-y-1/2 -rotate-6 rounded-[50%] border-2 border-current" />
-          <span className="absolute left-1/2 top-1/2 h-6 w-20 -translate-x-1/2 -translate-y-1/2 rotate-6 rounded-[50%] border-2 border-current" />
-        </span>
-      );
-    case "squares":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-[25%] top-[25%] h-8 w-8 rounded-md border-2 border-current" />
-          <span className="absolute bottom-[25%] right-[25%] h-8 w-8 rounded-md border-2 border-current" />
-        </span>
-      );
-    case "formula":
-      return (
-        <span className={`${motifClass} flex flex-col justify-center gap-2 px-4`} aria-hidden>
-          <span className="h-1 w-12 rounded-full bg-current" />
-          <span className="h-1 w-8 rounded-full bg-current" />
-          <span className="h-1 w-10 rounded-full bg-current" />
-        </span>
-      );
-    case "chart":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute bottom-5 left-4 h-px w-16 bg-current" />
-          <span className="absolute bottom-5 left-4 h-16 w-px bg-current" />
-          <span className="absolute bottom-6 left-7 h-8 w-8 -rotate-45 border-l-2 border-t-2 border-current" />
-          <span className="absolute bottom-10 left-12 h-8 w-8 rotate-12 border-l-2 border-t-2 border-current" />
-        </span>
-      );
-    case "layers":
-      return (
-        <span className={motifClass} aria-hidden>
-          <span className="absolute left-1/2 top-[32%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
-          <span className="absolute left-1/2 top-[48%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
-          <span className="absolute left-1/2 top-[64%] h-8 w-14 -translate-x-1/2 rotate-45 rounded-md border-2 border-current" />
-        </span>
-      );
-  }
-}
-
 const GAME_VISUAL_SIZES = {
-  card: "min-h-[144px] w-20 rounded-none border-y-0 border-l-0 border-r sm:w-24",
-  hero: "h-20 w-20 rounded-2xl",
-  group: "h-12 w-12 rounded-2xl",
+  card: "h-12 w-12 rounded-xl",
+  hero: "h-14 w-14 rounded-xl",
 } as const;
 
 function GameVisual({
@@ -510,35 +294,31 @@ function GameVisual({
       className={`relative isolate flex shrink-0 items-center justify-center overflow-hidden border ${tone.panel} ${GAME_VISUAL_SIZES[size]}`}
       aria-hidden
     >
-      <span className={`absolute -right-5 -top-5 h-16 w-16 rounded-full blur-2xl ${tone.glow}`} />
-      <VisualMotif motif={visual.motif} tone={visual.tone} />
-      <span className={`relative z-10 flex items-center justify-center rounded-2xl border border-current/30 bg-background/20 p-2.5 ${tone.text}`}>
-        <Icon className={size === "hero" ? "h-7 w-7" : "h-6 w-6"} strokeWidth={1.8} />
-      </span>
+      <Icon
+        className={`${size === "hero" ? "h-6 w-6" : "h-5 w-5"} ${tone.text}`}
+        strokeWidth={1.8}
+      />
     </span>
   );
 }
 
 const MODE_VISUALS: Record<
   MinigamePlayMode,
-  { eyebrow: string; icon: LucideIcon; motif: VisualMotif; tone: VisualTone }
+  { eyebrow: string; icon: LucideIcon; tone: VisualTone }
 > = {
   time_attack: {
     eyebrow: "60 sekund",
     icon: Timer,
-    motif: "rays",
     tone: "amber",
   },
   survival: {
     eyebrow: "Bez limitu czasu",
     icon: ShieldCheck,
-    motif: "orbit",
     tone: "rose",
   },
   marathon: {
     eyebrow: "15 pytań",
     icon: Trophy,
-    motif: "bars",
     tone: "sky",
   },
 };
@@ -562,11 +342,9 @@ function ModeHubCard({
         recommended ? "border-accent/50 bg-accent-soft" : ""
       }`}
     >
-      <span className={`pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
       <span className="relative flex items-start justify-between gap-3 p-4 sm:p-5">
-        <span className={`relative isolate flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border ${tone.panel}`}>
-          <VisualMotif motif={visual.motif} tone={visual.tone} />
-          <Icon className={`relative z-10 h-6 w-6 ${tone.text}`} strokeWidth={1.8} aria-hidden />
+        <span className={`flex h-12 w-12 items-center justify-center rounded-xl border ${tone.panel}`}>
+          <Icon className={`h-5 w-5 ${tone.text}`} strokeWidth={1.8} aria-hidden />
         </span>
         <span className="flex min-w-0 flex-col items-end gap-2 text-right">
           <span className={`rounded-full border px-2.5 py-1 text-xs font-bold ${tone.panel} ${tone.text}`}>
@@ -619,7 +397,6 @@ function RecommendedStart({
       data-testid="minigame-recommended-start"
       className="group relative isolate overflow-hidden rounded-r-2xl border-y border-r border-accent/35 border-l-4 border-l-accent bg-accent-soft/30 p-0 transition hover:bg-accent-soft/50"
     >
-      <span className={`pointer-events-none absolute -right-14 -top-16 h-56 w-56 rounded-full blur-3xl ${tone.glow}`} aria-hidden />
       <span className="relative flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center">
         <span className="flex shrink-0 items-center gap-3">
           <GameVisual visual={visual} size="hero" />
@@ -697,9 +474,8 @@ function GroupVisual({ group }: { group: MinigameGroup }) {
   const tone = VISUAL_TONES[group.visual.tone];
 
   return (
-    <span className={`relative isolate flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl border ${tone.panel}`}>
-      <VisualMotif motif={group.visual.motif} tone={group.visual.tone} />
-      <Icon className={`relative z-10 h-5 w-5 ${tone.text}`} strokeWidth={1.8} aria-hidden />
+    <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border ${tone.panel}`}>
+      <Icon className={`h-5 w-5 ${tone.text}`} strokeWidth={1.8} aria-hidden />
     </span>
   );
 }
@@ -772,7 +548,7 @@ function MinigameLibraryDisclosure({
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 marker:content-none sm:p-5">
         <span className="flex min-w-0 items-start gap-3">
           <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
-            <Sparkles className="h-4 w-4" aria-hidden />
+            <Layers className="h-4 w-4" aria-hidden />
           </span>
           <span className="min-w-0">
             <span className="block text-base font-bold text-foreground">{title}</span>

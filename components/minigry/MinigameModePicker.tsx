@@ -1,9 +1,7 @@
 "use client";
 
 import { useLearningPath } from "@/components/LearningPathProvider";
-import {
-  groupMinigames,
-} from "@/components/minigry/minigame-groups";
+import { groupMinigames } from "@/components/minigry/minigame-groups";
 import { MINIGAME_GROUP_ICONS } from "@/components/minigry/minigame-group-icons";
 import {
   getMinigamesForPath,
@@ -15,10 +13,7 @@ import {
   type MinigamePlayMode,
 } from "@/lib/minigry/game-modes";
 import { Calculator, type LucideIcon } from "lucide-react";
-import {
-  MINIGAME_MODE_GLOW,
-  MINIGAME_MODE_HEADER_CLASS,
-} from "@/lib/minigry/minigame-themes";
+import { MINIGAME_MODE_HEADER_CLASS } from "@/lib/minigry/minigame-themes";
 import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -79,10 +74,6 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
           animate={{ opacity: 1, y: 0 }}
           className={`relative ${MINIGAME_MODE_HEADER_CLASS}`}
         >
-          <span
-            className={`pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full blur-3xl opacity-60 ${MINIGAME_MODE_GLOW}`}
-            aria-hidden
-          />
           <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
             {config.badge}
           </span>
