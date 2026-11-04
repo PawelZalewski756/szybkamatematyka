@@ -25,7 +25,7 @@ import {
   isSchemaMissingError,
 } from "@/lib/supabase/errors";
 import { motion } from "framer-motion";
-import { FileText, GraduationCap, School } from "lucide-react";
+import { ExternalLink, FileText, GraduationCap, School } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -35,6 +35,78 @@ type ArkuszeCkeCatalogProps = {
   schemaMissing?: boolean;
   errorNote?: string | null;
 };
+
+const OFFICIAL_ARCHIVES = [
+  {
+    title: "Matura z matematyki",
+    description:
+      "Poziom podstawowy i rozszerzony, dostępne formuły oraz terminy.",
+    href: "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny",
+    icon: GraduationCap,
+  },
+  {
+    title: "Egzamin ósmoklasisty z matematyki",
+    description:
+      "Arkusze z kolejnych roczników oraz oficjalne materiały egzaminacyjne.",
+    href: "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty",
+    icon: School,
+  },
+] as const;
+
+const OFFICIAL_2026_ARCHIVES = [
+  {
+    title: "Matura 2026 — sesja majowa",
+    description:
+      "Matematyka na poziomie podstawowym i rozszerzonym, arkusze i zasady oceniania.",
+    href: "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny?exam=egzamin-maturalny&formula=F2023&exam_session=2026-maj&subject=Matematyka",
+    icon: GraduationCap,
+  },
+  {
+    title: "Egzamin ósmoklasisty 2026",
+    description:
+      "Matematyka — arkusze z rocznika 2026 i oficjalne materiały CKE.",
+    href: "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty?exam=egzamin-osmoklasisty&exam_session=2026&subject=Matematyka",
+    icon: School,
+  },
+] as const;
+
+function OfficialArchiveCard({
+  title,
+  description,
+  href,
+  icon: Icon,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  icon: typeof GraduationCap;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="card-raised group flex min-h-36 items-start gap-4 p-4 sm:p-5"
+    >
+      <div className="icon-chip flex h-11 w-11 shrink-0 rounded-xl">
+        <Icon className="h-5 w-5" aria-hidden />
+      </div>
+      <div className="min-w-0 flex-1">
+        <h3 className="flex items-center gap-2 font-bold text-foreground group-hover:text-accent">
+          {title}
+          <ExternalLink
+            className="h-4 w-4 shrink-0 text-muted"
+            aria-hidden
+          />
+        </h3>
+        <p className="mt-2 text-sm text-muted">{description}</p>
+        <span className="mt-3 inline-block text-xs font-bold uppercase tracking-wide text-accent">
+          Oficjalne arkusze i materiały
+        </span>
+      </div>
+    </a>
+  );
+}
 
 function ArchiveSheetCard({ sheet }: { sheet: ExamArchiveSheetMeta }) {
   const kindLabel =
@@ -261,7 +333,8 @@ export function ArkuszeCkeCatalog({
           <span className="text-accent">CKE</span>
         </h1>
         <p className="mt-2 text-sm text-muted">
-          Oficjalne sesje matury podstawowej.{" "}
+          Interaktywne arkusze z rozwiązaniami oraz odnośniki do pełnego
+          archiwum PDF CKE.{" "}
           <Link
             href="/baza-zadan"
             className="font-semibold text-accent hover:text-foreground"
@@ -270,6 +343,44 @@ export function ArkuszeCkeCatalog({
           </Link>
         </p>
       </motion.div>
+
+      <section className="mt-8">
+        <div className="flex items-center gap-2">
+          <FileText className="h-5 w-5 text-accent" aria-hidden />
+          <div>
+            <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
+              Arkusze z 2026 roku
+            </h2>
+            <p className="mt-1 text-sm text-muted">
+              Najnowsze arkusze matematyczne bezpośrednio z katalogu CKE.
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {OFFICIAL_2026_ARCHIVES.map((archive) => (
+            <OfficialArchiveCard key={archive.href} {...archive} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <div className="flex items-center gap-2">
+          <FileText className="h-5 w-5 text-accent" aria-hidden />
+          <div>
+            <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
+              Pełne archiwum arkuszy CKE
+            </h2>
+            <p className="mt-1 text-sm text-muted">
+              Otwórz oficjalny katalog, aby wybrać matematykę, rocznik i sesję.
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {OFFICIAL_ARCHIVES.map((archive) => (
+            <OfficialArchiveCard key={archive.href} {...archive} />
+          ))}
+        </div>
+      </section>
 
       {schemaMissing && !hasArchive && (
         <div className="mt-8">

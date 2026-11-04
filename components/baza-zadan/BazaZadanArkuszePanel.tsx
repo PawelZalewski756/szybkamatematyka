@@ -163,8 +163,12 @@ export function BazaZadanArkuszePanel({
     return (
       <EmptyState
         icon={FileQuestion}
-        title="Brak arkuszy w bazie"
-        description="Arkusze CKE dodajesz skryptem seed. Na razie korzystaj z zakładki Zadania i Arkusze treningowe."
+        title="Brak arkuszy interaktywnych"
+        description="Pełne oficjalne arkusze PDF oraz zasady oceniania znajdziesz w katalogu CKE."
+        action={{
+          label: "Otwórz katalog arkuszy CKE",
+          href: "/trening/arkusze",
+        }}
       />
     );
   }

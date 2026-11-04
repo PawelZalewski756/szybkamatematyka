@@ -20,9 +20,22 @@ export type TaskRow = {
   explanation?: string;
 };
 
-function parseOptions(raw: unknown): string[] {
-  if (!Array.isArray(raw)) return [];
-  return raw
+export function parseTaskOptions(raw: unknown): string[] {
+  let values: unknown;
+  if (Array.isArray(raw)) {
+    values = raw;
+  } else if (typeof raw === "string") {
+    try {
+      values = JSON.parse(raw) as unknown;
+    } catch {
+      return [];
+    }
+  } else {
+    return [];
+  }
+
+  if (!Array.isArray(values)) return [];
+  return values
     .filter((item): item is string => typeof item === "string")
     .map((s) => s.trim())
     .filter(Boolean);
@@ -40,7 +53,7 @@ function mapTask(row: TaskRow): Task & { options: string[] } {
     content: row.content,
     correct_answer: row.correct_answer,
     xp_reward: Number(row.xp_reward) || 0,
-    options: parseOptions(row.options),
+    options: parseTaskOptions(row.options),
     explanation: row.explanation,
   };
 }

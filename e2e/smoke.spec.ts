@@ -9,6 +9,37 @@ test.describe("Smoke", () => {
     await expect(
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
     ).toHaveCount(0);
+    const quickTask = page.getByRole("group", {
+      name: "Odpowiedzi do szybkiego zadania",
+    });
+    await expect(quickTask).toBeVisible();
+    await quickTask.getByRole("button", { name: "Odpowiedź 3" }).click();
+    await expect(
+      page.getByText("Jeszcze nie — spróbuj ponownie."),
+    ).toBeVisible();
+    await quickTask.getByRole("button", { name: "Odpowiedź 4" }).click();
+    await expect(page.getByText("Dobrze — 3 · 4 + 2 = 14.")).toBeVisible();
+    await page.getByRole("button", { name: "Jeszcze raz" }).click();
+    await expect(
+      page.getByText("Wybierz odpowiedź, aby sprawdzić."),
+    ).toBeVisible();
+  });
+
+  test("kroki nauki są zwarte na telefonie i zachowują układ na desktopie", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+    const steps = page
+      .locator("ol")
+      .filter({ hasText: "Wybierasz ścieżkę" });
+    const firstStep = steps.locator("li").first();
+
+    await expect(steps.locator("li")).toHaveCount(3);
+    await expect(firstStep).toHaveCSS("flex-direction", "row");
+
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await expect(firstStep).toHaveCSS("flex-direction", "column");
   });
 
   test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({
@@ -364,7 +395,9 @@ test.describe("Smoke", () => {
     );
   });
 
-  test("panel pokazuje ostatnio otwarty temat", async ({ page }) => {
+  test("gość nie widzi ostatniego tematu zapisanego lokalnie", async ({
+    page,
+  }) => {
     await page.addInitScript(() => {
       window.localStorage.setItem(
         "szybka-matma-last-training-topic:guest",
@@ -378,15 +411,11 @@ test.describe("Smoke", () => {
     });
     await page.goto("/");
 
-    const topicLink = page.getByRole("link", {
-      name: "Wróć do tematu Równania",
-    });
-    await expect(topicLink).toHaveAttribute(
-      "href",
-      "/trening/egzamin-osmoklasisty/algebra/rownania",
-    );
-    await expect(page.getByText("OSTATNI TEMAT")).toBeVisible();
-    await expect(page.getByText("Przykładowa sesja")).toHaveCount(0);
+    await expect(page.getByText("OSTATNI TEMAT")).toHaveCount(0);
+    await expect(
+      page.getByRole("link", { name: "Otwórz temat Równania" }),
+    ).toHaveAttribute("href", "/trening/egzamin-osmoklasisty/algebra/rownania");
+    await expect(page.getByText("Przykładowa sesja")).toBeVisible();
   });
 
   test("nawigacja ma link Trening", async ({ page }) => {
@@ -496,6 +525,36 @@ test.describe("Smoke", () => {
     await expect(
       page.getByRole("heading", { level: 1, name: /Arkusze/ }),
     ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Pełne archiwum arkuszy CKE" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Arkusze z 2026 roku" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Matura 2026 — sesja majowa/ }),
+    ).toHaveAttribute(
+      "href",
+      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny?exam=egzamin-maturalny&formula=F2023&exam_session=2026-maj&subject=Matematyka",
+    );
+    await expect(
+      page.getByRole("link", { name: /Egzamin ósmoklasisty 2026/ }),
+    ).toHaveAttribute(
+      "href",
+      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty?exam=egzamin-osmoklasisty&exam_session=2026&subject=Matematyka",
+    );
+    await expect(
+      page.getByRole("link", { name: /Matura z matematyki/ }),
+    ).toHaveAttribute(
+      "href",
+      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny",
+    );
+    await expect(
+      page.getByRole("link", { name: /Egzamin ósmoklasisty z matematyki/ }),
+    ).toHaveAttribute(
+      "href",
+      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty",
+    );
     await expect(
       page.getByRole("heading", { name: /Matura CKE/ }),
     ).toBeVisible();

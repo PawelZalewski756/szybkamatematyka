@@ -5,10 +5,7 @@ import { PlatformStatus } from "@/components/home/PlatformStatus";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
-import {
-  loadRecentTrainingTopic,
-  type RecentTrainingTopic,
-} from "@/lib/trening/recent-topic";
+import type { RecentTrainingTopic } from "@/lib/trening/recent-topic";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { topicDisplayName } from "@/lib/trening/slugs";
 import { motion } from "framer-motion";
@@ -74,12 +71,15 @@ const STEPS = [
   },
 ] as const;
 
+const PREVIEW_ANSWERS = ["3", "4", "5", "6"] as const;
+
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
 };
 
 function ProductPreview({ path }: { path: "sp" | "srednia" }) {
+  const [previewAnswer, setPreviewAnswer] = useState<string | null>(null);
   const sampleTopic =
     path === "sp"
       ? {
@@ -110,12 +110,6 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
         } catch (error) {
           console.warn("[szybka-matma] dashboard session:", error);
         }
-      }
-
-      const localTopic = loadRecentTrainingTopic(userId);
-      if (localTopic) {
-        if (!cancelled) setRecentTopic(localTopic);
-        return;
       }
 
       if (!userId || !isSupabaseConfigured()) {
@@ -239,6 +233,81 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
             />
           </div>
         </Link>
+
+        <div className="mt-4 rounded-2xl border border-surface-border bg-surface/70 p-4 sm:p-5">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-overline">SZYBKA PRÓBA</p>
+            <span className="rounded-full bg-background px-2.5 py-1 text-xs font-semibold text-muted">
+              1 zadanie
+            </span>
+          </div>
+          <p className="mt-3 text-sm font-bold leading-relaxed text-foreground sm:text-base">
+            Rozwiąż: 3x + 2 = 14. Ile wynosi x?
+          </p>
+          <div
+            className="mt-3 grid grid-cols-2 gap-2"
+            role="group"
+            aria-label="Odpowiedzi do szybkiego zadania"
+          >
+            {PREVIEW_ANSWERS.map((answer, index) => {
+              const selected = previewAnswer === answer;
+              const isCorrect = answer === "4";
+              let answerStyle =
+                "border-surface-border bg-background text-foreground hover:border-accent/50 hover:bg-surface-hover";
+              if (selected && isCorrect) {
+                answerStyle =
+                  "border-emerald-500/50 bg-emerald-500/10 text-emerald-300";
+              } else if (selected) {
+                answerStyle = "border-red-500/50 bg-red-500/10 text-red-300";
+              }
+
+              return (
+                <button
+                  key={answer}
+                  type="button"
+                  aria-label={`Odpowiedź ${answer}`}
+                  aria-pressed={selected}
+                  disabled={previewAnswer === "4"}
+                  onClick={() => setPreviewAnswer(answer)}
+                  className={`flex min-h-12 items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm font-semibold transition-colors disabled:cursor-default ${answerStyle}`}
+                >
+                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface text-xs font-bold text-muted">
+                    {String.fromCharCode(65 + index)}
+                  </span>
+                  {answer}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex min-h-6 items-center justify-between gap-3">
+            <p
+              className="text-xs font-semibold text-muted"
+              aria-live="polite"
+            >
+              {previewAnswer === "4" ? (
+                <span className="inline-flex items-center gap-1.5 text-emerald-400">
+                  <Check className="h-4 w-4" aria-hidden />
+                  Dobrze — 3 · 4 + 2 = 14.
+                </span>
+              ) : previewAnswer ? (
+                <span className="text-red-400">
+                  Jeszcze nie — spróbuj ponownie.
+                </span>
+              ) : (
+                "Wybierz odpowiedź, aby sprawdzić."
+              )}
+            </p>
+            {previewAnswer === "4" && (
+              <button
+                type="button"
+                onClick={() => setPreviewAnswer(null)}
+                className="shrink-0 text-xs font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+              >
+                Jeszcze raz
+              </button>
+            )}
+          </div>
+        </div>
 
         <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">
@@ -437,21 +506,23 @@ export function HomeDashboard() {
             </p>
           </div>
 
-          <ol className="mt-10 grid gap-4 lg:grid-cols-3">
+          <ol className="mt-8 grid gap-3 lg:mt-10 lg:grid-cols-3 lg:gap-4">
             {STEPS.map((step) => (
               <li
                 key={step.n}
-                className="card-raised flex min-h-52 flex-col p-5 sm:p-6"
+                className="card-raised flex items-start gap-4 p-4 sm:gap-5 sm:p-5 lg:min-h-52 lg:flex-col lg:p-6"
               >
-                <span className="text-sm font-extrabold tracking-[0.12em] text-accent">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-xs font-extrabold tracking-[0.12em] text-accent lg:h-auto lg:w-auto lg:justify-start lg:rounded-none lg:bg-transparent lg:text-sm">
                   {step.n}
                 </span>
-                <h3 className="mt-7 text-xl font-extrabold tracking-tight text-foreground">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {step.text}
-                </p>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-extrabold tracking-tight text-foreground lg:mt-7 lg:text-xl">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted lg:mt-3">
+                    {step.text}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>

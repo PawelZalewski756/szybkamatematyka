@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Arkusze CKE — matura i egzamin ósmoklasisty",
   description:
-    "Oryginalne arkusze maturalne CKE z poprzednich lat, z rozwiązaniami krok po kroku.",
+    "Arkusze CKE z matematyki: matura podstawowa i rozszerzona oraz egzamin ósmoklasisty. Pełne archiwum PDF i wybrane rozwiązania krok po kroku.",
   alternates: { canonical: "/trening/arkusze" },
 };
 
