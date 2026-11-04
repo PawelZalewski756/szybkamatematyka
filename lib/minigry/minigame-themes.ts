@@ -16,5 +16,4 @@ export const MINIGAME_ANSWER_BORDER =
 
 /** Nagłówek trybu gry (Time Attack, Survival…). */
 export const MINIGAME_MODE_HEADER_CLASS =
-  "relative overflow-hidden rounded-2xl border border-accent/25 bg-surface p-6 sm:p-8";
-export const MINIGAME_MODE_GLOW = "bg-accent/10";
+  "rounded-2xl border border-accent/25 bg-surface p-6 sm:p-8";

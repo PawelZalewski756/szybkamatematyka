@@ -8,14 +8,6 @@ export type MinigameGroupTone =
   | "emerald"
   | "slate";
 
-export type MinigameGroupMotif =
-  | "grid"
-  | "orbit"
-  | "formula"
-  | "triangle"
-  | "chart"
-  | "layers";
-
 export type MinigameGroupVisual = {
   eyebrow: string;
   icon:
@@ -25,7 +17,6 @@ export type MinigameGroupVisual = {
     | "triangle"
     | "line-chart"
     | "layers";
-  motif: MinigameGroupMotif;
   tone: MinigameGroupTone;
 };
 
@@ -49,7 +40,6 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
     visual: {
       eyebrow: "Podstawowe operacje",
       icon: "calculator",
-      motif: "grid",
       tone: "amber",
     },
     slugs: [
@@ -70,7 +60,6 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
     visual: {
       eyebrow: "Liczby i ułamki",
       icon: "sigma",
-      motif: "orbit",
       tone: "sky",
     },
     slugs: [
@@ -94,7 +83,6 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
     visual: {
       eyebrow: "Równania i wzory",
       icon: "radical",
-      motif: "formula",
       tone: "violet",
     },
     slugs: [
@@ -114,7 +102,6 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
     visual: {
       eyebrow: "Figury i pomiary",
       icon: "triangle",
-      motif: "triangle",
       tone: "rose",
     },
     slugs: ["pole", "obwod", "trojkat", "pole-kola"],
@@ -126,7 +113,6 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
     visual: {
       eyebrow: "Funkcje i wykresy",
       icon: "line-chart",
-      motif: "chart",
       tone: "emerald",
     },
     slugs: ["funkcje", "logarytmy", "sinusy", "kosinusy"],
@@ -165,7 +151,6 @@ export function groupMinigames(
       visual: {
         eyebrow: "Inne minigry",
         icon: "layers",
-        motif: "layers",
         tone: "slate",
       },
       games: ungroupedGames,
