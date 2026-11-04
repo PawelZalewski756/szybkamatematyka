@@ -4,7 +4,7 @@ test.describe("Smoke", () => {
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
     await expect(
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
@@ -21,11 +21,11 @@ test.describe("Smoke", () => {
     await page.goto("/");
 
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await page.getByRole("link", { name: /Egzamin ósmoklasisty/ }).click();
-    await expect(page).toHaveURL(/\/trening\/.+\/.+\/.+/);
+    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await expect(page).toHaveURL(/\/trening$/);
   });
 
   test("nie zbiera własnych statystyk i usuwa dawny identyfikator", async ({
@@ -256,7 +256,7 @@ test.describe("Smoke", () => {
   test("strona główna ma panel startowy", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
   });
 
