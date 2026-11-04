@@ -115,6 +115,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       "/new — ostatnie rejestracje",
       "/users [strona] — lista wszystkich użytkowników",
       "/top — ranking XP",
+      "/szybkaproba - statystyki szybkiej próby",
       "/health — sprawdzenie połączenia",
       "/pomoc — pokaż tę listę",
     ].join("\n");
@@ -139,6 +140,23 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Użytkownicy łącznie: ${users.count ?? 0}`,
       `Nowe konta: ${authUsers.filter((user) => Date.parse(user.created_at) >= since).length}`,
       `Rozwiązane zadania: ${solved.count ?? 0}`,
+    ].join("\n");
+  }
+
+  if (command === "szybkaproba") {
+    const { data, error } = await supabase.rpc("get_quick_trial_stats");
+    if (error) {
+      throw new Error(`Could not load quick trial stats: ${error.message}`);
+    }
+
+    const stats = data?.[0];
+    if (!stats) return "Brak zarejestrowanych odpowiedzi.";
+    return [
+      "Szybka próba - łącznie",
+      `Sesje z odpowiedzią: ${stats.unique_sessions}`,
+      `Wszystkie próby: ${stats.total_attempts}`,
+      `Poprawne odpowiedzi: ${stats.correct_attempts}`,
+      `Błędne odpowiedzi: ${stats.incorrect_attempts}`,
     ].join("\n");
   }
 
@@ -239,6 +257,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     "/new — ostatnie rejestracje",
     "/users [strona] — lista wszystkich użytkowników",
     "/top — ranking XP",
+    "/szybkaproba - statystyki szybkiej próby",
     "/health — sprawdzenie połączenia",
     "/pomoc — pokaż tę listę",
   ].join("\n");

@@ -19,7 +19,7 @@ export default function PolitykaPrywatnosciPage() {
     <InfoPageShell
       title="Polityka prywatności"
       description={`Informacje o przetwarzaniu danych osobowych w serwisie ${BRAND_NAME}.`}
-      updatedAt="1 listopada 2026"
+      updatedAt="4 listopada 2026"
     >
       <InfoSection title="1. Administrator">
         <p>
@@ -45,7 +45,7 @@ export default function PolitykaPrywatnosciPage() {
           </li>
           <li>
             Dane użytkowania: postęp nauki, wyniki minigier, wyzwań, ustawienia
-            przypomnień.
+            przypomnień oraz anonimowe liczniki odpowiedzi w Szybkiej próbie.
           </li>
           <li>
             Dane techniczne: logi, typ urządzenia/przeglądarki, przybliżona
@@ -72,6 +72,10 @@ export default function PolitykaPrywatnosciPage() {
           </li>
           <li>
             Uzasadniony interes — bezpieczeństwo i przeciwdziałanie nadużyciom.
+          </li>
+          <li>
+            Pomiar użycia Szybkiej próby — zliczanie anonimowych sesji oraz
+            poprawnych i błędnych odpowiedzi po ich wybraniu.
           </li>
           <li>
             Obowiązki prawne — rozliczenia i wymagania księgowe związane z
@@ -102,6 +106,12 @@ export default function PolitykaPrywatnosciPage() {
           anonimizujemy dane osobowe, o ile prawo nie nakazuje dłuższego
           przechowywania.
         </p>
+        <p>
+          Przy kolejnym zapisie odpowiedzi lub pobraniu statystyk usuwamy
+          identyfikatory sesji starsze niż 30 dni. Zagregowane liczniki
+          odpowiedzi nie zawierają identyfikatorów i są przechowywane
+          bezterminowo.
+        </p>
       </InfoSection>
 
       <InfoSection title="6. Twoje prawa">
@@ -125,9 +135,12 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="7. Pliki cookies">
         <p>
           Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Własne
-          anonimowe statystyki odwiedzin i zdarzeń są wyłączone. Skonfigurowany
-          tag Google Ads działa odrębnie i może korzystać z własnych technologii
-          pomiarowych Google.
+          statystyki odwiedzin i zdarzeń są wyłączone. Wyjątkiem jest Szybka
+          próba: po wybraniu odpowiedzi zapisujemy losowy identyfikator sesji
+          strony na 30 dni oraz zagregowane liczniki poprawnych i błędnych
+          odpowiedzi. Identyfikator nie jest łączony z kontem; nie zapisujemy
+          przy nim adresu IP. Skonfigurowany tag Google Ads działa odrębnie i
+          może korzystać z własnych technologii pomiarowych Google.
         </p>
       </InfoSection>
 

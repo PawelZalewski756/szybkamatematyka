@@ -20,9 +20,13 @@ go do Vercel ani do kodu. Historyczne i nietimestampowane pliki SQL nie są
 automatycznie wykonywane. Workflow wykonuje wyłącznie nowe timestampowane
 migracje dodane na `master`. Poziom nauki zapisuje się jako „sp” lub „srednia”;
 historyczne wartości konkretnych klas są sprowadzane do jednego z tych poziomów.
-Historyczne migracje anonimowych statystyk
-pozostają w repozytorium i mogą pozostać w istniejących bazach, ale mechanizm
-zbierania danych oraz komendy raportujące zostały wyłączone.
+Historyczne migracje anonimowych statystyk pozostają w repozytorium i mogą
+pozostać w istniejących bazach, ale ich ogólne zbieranie danych i komendy
+raportujące pozostają wyłączone. Osobna migracja
+`20261104214800_quick_trial_analytics.sql` włącza wyłącznie liczniki Szybkiej
+próby: sesje bez konta oraz poprawne i błędne odpowiedzi. Identyfikatory sesji
+są czyszczone przy zapisie lub odczycie statystyk, gdy przekroczą 30 dni, a
+komenda administratora Telegrama to `/szybkaproba`.
 
 ## Kolejność wdrożenia
 

@@ -90,7 +90,8 @@ wykonaj poniższe kroki:
    `20261101190000_school_level_only.sql`,
    `20261101200000_signup_telegram_notifications.sql`,
    `20261101210000_block_profanity_in_profile_names.sql`,
-   `20261101220000_expand_profile_name_profanity_filter.sql`.
+   `20261101220000_expand_profile_name_profanity_filter.sql`,
+   `20261104214800_quick_trial_analytics.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
@@ -120,8 +121,11 @@ XP, klasę, streak itd.) — bez niej onboarding nicku i zapis EXP kończą się
 `permission denied`. Obie są ważne przy aktualizacji istniejącego projektu.
 
 Własne anonimowe statystyki odsłon i zdarzeń oraz komendy `/visits` i `/funnel`
-w bocie Telegrama są wyłączone. Historyczne pliki migracji i zapisane wcześniej
-rekordy pozostają w bazie; nie są usuwane ani uzupełniane nowymi danymi.
+pozostają wyłączone. Osobna migracja `20261104214800_quick_trial_analytics.sql`
+uruchamia wyłącznie liczniki odpowiedzi Szybkiej próby, dostępne przez
+administratorską komendę Telegrama `/szybkaproba`. Zapisuje anonimowe sesje i
+poprawne/błędne odpowiedzi; identyfikatory sesji są czyszczone przy zapisie
+lub odczycie statystyk, gdy przekroczą 30 dni.
 Pomiar konwersji Google Ads jest odrębnym mechanizmem i pozostaje aktywny.
 
 `20260529120000_harden_rls_admin_writes.sql` i

@@ -57,6 +57,15 @@ export function describeTelegramCommandError(error: unknown): string {
   }
 
   if (
+    message.includes("quick_trial") &&
+    (message.includes("does not exist") ||
+      message.includes("schema cache") ||
+      message.includes("Could not find the function"))
+  ) {
+    return "Brakuje migracji szybkiej próby. Uruchom supabase/migrations/20261104214800_quick_trial_analytics.sql.";
+  }
+
+  if (
     message.includes("solved_tasks") &&
     (message.includes("does not exist") ||
       message.includes("schema cache") ||

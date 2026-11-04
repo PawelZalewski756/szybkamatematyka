@@ -21,7 +21,7 @@ import {
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ENTRY_PATHS = [
   {
@@ -57,7 +57,7 @@ const STEPS = [
   {
     n: "01",
     title: "Wybierasz ścieżkę",
-    text: "Matura albo egzamin ósmoklasisty — widzisz materiały dopasowane do celu.",
+    text: "Matura albo egzamin ósmoklasisty - widzisz materiały dopasowane do celu.",
   },
   {
     n: "02",
@@ -78,8 +78,109 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-function ProductPreview({ path }: { path: "sp" | "srednia" }) {
+function QuickTrial() {
   const [previewAnswer, setPreviewAnswer] = useState<string | null>(null);
+  const previewSessionId = useRef<string | null>(null);
+  const choosePreviewAnswer = (answer: string) => {
+    setPreviewAnswer(answer);
+
+    const sessionId = previewSessionId.current ?? crypto.randomUUID();
+    previewSessionId.current = sessionId;
+
+    void fetch("/api/quick-trial/attempt", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ sessionId, isCorrect: answer === "4" }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `Quick trial tracking failed with status ${response.status}.`,
+          );
+        }
+      })
+      .catch((error: unknown) => {
+        console.error("[szybka-matma] quick trial tracking:", error);
+      });
+  };
+
+  return (
+    <div className="mt-4 rounded-2xl border border-surface-border bg-surface/70 p-4 sm:p-5">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-overline">SZYBKA PRÓBA</p>
+        <span className="rounded-full bg-background px-2.5 py-1 text-xs font-semibold text-muted">
+          1 zadanie
+        </span>
+      </div>
+      <p className="mt-3 text-sm font-bold leading-relaxed text-foreground sm:text-base">
+        Rozwiąż: 3x + 2 = 14. Ile wynosi x?
+      </p>
+      <div
+        className="mt-3 grid grid-cols-2 gap-2"
+        role="group"
+        aria-label="Odpowiedzi do szybkiego zadania"
+      >
+        {PREVIEW_ANSWERS.map((answer, index) => {
+          const selected = previewAnswer === answer;
+          const isCorrect = answer === "4";
+          let answerStyle =
+            "border-surface-border bg-background text-foreground hover:border-accent/50 hover:bg-surface-hover";
+          if (selected && isCorrect) {
+            answerStyle =
+              "border-emerald-500/50 bg-emerald-500/10 text-emerald-300";
+          } else if (selected) {
+            answerStyle = "border-red-500/50 bg-red-500/10 text-red-300";
+          }
+
+          return (
+            <button
+              key={answer}
+              type="button"
+              aria-label={`Odpowiedź ${answer}`}
+              aria-pressed={selected}
+              disabled={previewAnswer === "4"}
+              onClick={() => choosePreviewAnswer(answer)}
+              className={`flex min-h-12 items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm font-semibold transition-colors disabled:cursor-default ${answerStyle}`}
+            >
+              <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface text-xs font-bold text-muted">
+                {String.fromCharCode(65 + index)}
+              </span>
+              {answer}
+            </button>
+          );
+        })}
+      </div>
+      <div className="mt-3 flex min-h-6 items-center justify-between gap-3">
+        <p className="text-xs font-semibold text-muted" aria-live="polite">
+          {previewAnswer === "4" ? (
+            <span className="inline-flex items-center gap-1.5 text-emerald-400">
+              <Check className="h-4 w-4" aria-hidden />
+              Dobrze - 3 · 4 + 2 = 14.
+            </span>
+          ) : previewAnswer ? (
+            <span className="text-red-400">
+              To nie ta odpowiedź - wybierz inną.
+            </span>
+          ) : (
+            "Wybierz odpowiedź, aby sprawdzić."
+          )}
+        </p>
+        {previewAnswer === "4" && (
+          <button
+            type="button"
+            onClick={() => setPreviewAnswer(null)}
+            className="shrink-0 text-xs font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+          >
+            Jeszcze raz
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ProductPreview({ path }: { path: "sp" | "srednia" }) {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const sampleTopic =
     path === "sp"
       ? {
@@ -99,26 +200,44 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
 
   useEffect(() => {
     let cancelled = false;
+    let authRevision = 0;
+    const hasSupabaseConfig = isSupabaseConfigured();
+    let supabase: ReturnType<typeof getSupabase> | null = null;
+    if (hasSupabaseConfig) {
+      try {
+        supabase = getSupabase();
+      } catch (error) {
+        console.warn("[szybka-matma] dashboard client:", error);
+      }
+    }
 
     const loadRecentTopic = async () => {
+      const revision = authRevision;
+      if (hasSupabaseConfig && !supabase) return;
       let userId: string | null = null;
 
-      if (isSupabaseConfigured()) {
+      if (supabase) {
         try {
-          const { data } = await getSupabase().auth.getSession();
+          const { data } = await supabase.auth.getSession();
           userId = data.session?.user?.id ?? null;
         } catch (error) {
-          console.warn("[szybka-matma] dashboard session:", error);
+          if (revision === authRevision) {
+            console.warn("[szybka-matma] dashboard session:", error);
+          }
+          return;
         }
       }
 
-      if (!userId || !isSupabaseConfigured()) {
-        if (!cancelled) setRecentTopic(null);
+      if (cancelled || revision !== authRevision) return;
+      if (!userId || !supabase) {
+        setIsAuthenticated(false);
+        setRecentTopic(null);
         return;
       }
 
+      setIsAuthenticated(true);
       const latestSolved = await fetchLatestSolvedTopic(userId);
-      if (cancelled) return;
+      if (cancelled || revision !== authRevision) return;
 
       if (
         latestSolved?.examType === "matura_podstawowa" ||
@@ -135,10 +254,27 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
       }
     };
 
+    const subscription = supabase?.auth.onAuthStateChange((_event, session) => {
+      if (cancelled) return;
+
+      authRevision += 1;
+      const userId = session?.user?.id ?? null;
+      setIsAuthenticated(userId !== null);
+      if (!userId) {
+        setRecentTopic(null);
+        return;
+      }
+
+      window.setTimeout(() => {
+        if (!cancelled) void loadRecentTopic();
+      }, 0);
+    }).data.subscription;
+
     void loadRecentTopic();
 
     return () => {
       cancelled = true;
+      subscription?.unsubscribe();
     };
   }, []);
 
@@ -222,7 +358,7 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
             </p>
           ) : (
             <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
-              Zobacz, jak wygląda lekcja — bez zakładania konta.
+              Zobacz, jak wygląda lekcja - bez zakładania konta.
             </p>
           )}
           <div className="mt-4 flex items-center justify-between text-sm font-bold text-accent">
@@ -234,80 +370,7 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
           </div>
         </Link>
 
-        <div className="mt-4 rounded-2xl border border-surface-border bg-surface/70 p-4 sm:p-5">
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-overline">SZYBKA PRÓBA</p>
-            <span className="rounded-full bg-background px-2.5 py-1 text-xs font-semibold text-muted">
-              1 zadanie
-            </span>
-          </div>
-          <p className="mt-3 text-sm font-bold leading-relaxed text-foreground sm:text-base">
-            Rozwiąż: 3x + 2 = 14. Ile wynosi x?
-          </p>
-          <div
-            className="mt-3 grid grid-cols-2 gap-2"
-            role="group"
-            aria-label="Odpowiedzi do szybkiego zadania"
-          >
-            {PREVIEW_ANSWERS.map((answer, index) => {
-              const selected = previewAnswer === answer;
-              const isCorrect = answer === "4";
-              let answerStyle =
-                "border-surface-border bg-background text-foreground hover:border-accent/50 hover:bg-surface-hover";
-              if (selected && isCorrect) {
-                answerStyle =
-                  "border-emerald-500/50 bg-emerald-500/10 text-emerald-300";
-              } else if (selected) {
-                answerStyle = "border-red-500/50 bg-red-500/10 text-red-300";
-              }
-
-              return (
-                <button
-                  key={answer}
-                  type="button"
-                  aria-label={`Odpowiedź ${answer}`}
-                  aria-pressed={selected}
-                  disabled={previewAnswer === "4"}
-                  onClick={() => setPreviewAnswer(answer)}
-                  className={`flex min-h-12 items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm font-semibold transition-colors disabled:cursor-default ${answerStyle}`}
-                >
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface text-xs font-bold text-muted">
-                    {String.fromCharCode(65 + index)}
-                  </span>
-                  {answer}
-                </button>
-              );
-            })}
-          </div>
-          <div className="mt-3 flex min-h-6 items-center justify-between gap-3">
-            <p
-              className="text-xs font-semibold text-muted"
-              aria-live="polite"
-            >
-              {previewAnswer === "4" ? (
-                <span className="inline-flex items-center gap-1.5 text-emerald-400">
-                  <Check className="h-4 w-4" aria-hidden />
-                  Dobrze — 3 · 4 + 2 = 14.
-                </span>
-              ) : previewAnswer ? (
-                <span className="text-red-400">
-                  Jeszcze nie — spróbuj ponownie.
-                </span>
-              ) : (
-                "Wybierz odpowiedź, aby sprawdzić."
-              )}
-            </p>
-            {previewAnswer === "4" && (
-              <button
-                type="button"
-                onClick={() => setPreviewAnswer(null)}
-                className="shrink-0 text-xs font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
-              >
-                Jeszcze raz
-              </button>
-            )}
-          </div>
-        </div>
+        {isAuthenticated === false && <QuickTrial />}
 
         <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">
@@ -394,7 +457,7 @@ export function HomeDashboard() {
                 transition={{ duration: 0.5, delay: 0.14 }}
               >
                 Wybierz temat, rozwiązuj zadania i sprawdzaj się na arkuszach
-                CKE — wszystko w jednym miejscu.
+                CKE - wszystko w jednym miejscu.
               </motion.p>
 
               <motion.div
