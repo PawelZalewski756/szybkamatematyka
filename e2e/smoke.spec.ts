@@ -4,7 +4,7 @@ test.describe("Smoke", () => {
   test("strona główna ładuje się", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
     await expect(
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
@@ -21,11 +21,11 @@ test.describe("Smoke", () => {
     await page.goto("/");
 
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await page.getByRole("link", { name: /Egzamin ósmoklasisty/ }).click();
-    await expect(page).toHaveURL(/\/trening\/.+\/.+\/.+/);
+    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await expect(page).toHaveURL(/\/trening$/);
   });
 
   test("nie zbiera własnych statystyk i usuwa dawny identyfikator", async ({
@@ -256,7 +256,7 @@ test.describe("Smoke", () => {
   test("strona główna ma panel startowy", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Matematyka na maturę",
+      "Przygotuj się do",
     );
   });
 
@@ -438,10 +438,10 @@ test.describe("Smoke", () => {
       page.getByTestId("training-next-step"),
     ).toHaveAttribute(
       "href",
-      "/trening/matura/liczby_rzeczywiste/kolejnosc_dzialan",
+      "/trening/egzamin-osmoklasisty/liczby/kolejnosc_dzialan",
     );
     await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-    await expect(page.getByText("30 tematów").first()).toBeVisible();
+    await expect(page.getByText("7 tematów").first()).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Pokaż tematy/ }).first(),
     ).toBeVisible();
@@ -452,11 +452,11 @@ test.describe("Smoke", () => {
   }) => {
     await page.goto("/trening");
     const departmentButton = page.getByRole("button", {
-      name: /Liczby rzeczywiste/,
+      name: /Liczby i działania/,
     });
     const departmentPanel = page.getByTestId("training-department-panel");
     const topicLinks = page.getByTestId("training-topic-list").locator(
-      'a[href^="/trening/matura/liczby_rzeczywiste/"]',
+      'a[href^="/trening/egzamin-osmoklasisty/liczby/"]',
     );
     await expect(departmentButton).toBeVisible();
     await expect(departmentPanel).toBeVisible();

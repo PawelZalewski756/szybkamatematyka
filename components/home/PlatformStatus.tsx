@@ -71,7 +71,7 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
 
   if (variant === "inline") {
     return (
-      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
         {[
           { label: "Minigry", value: String(status.minigry) },
           { label: "Zadania", value: zadaniaLabel },
