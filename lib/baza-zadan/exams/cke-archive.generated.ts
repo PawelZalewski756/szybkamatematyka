@@ -697,7 +697,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość $r$ówną 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -879,7 +879,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "Najmniejsza wartość to $-6$, a największa wartość to $3$.",
     "solutionSteps": [
       "Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.",
-      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji $b$ędzie w tym punkcie. Oblicz wartość funkcji $w$ wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
+      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji będzie w tym punkcie. Oblicz wartość funkcji $w$ wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
       "Oblicz wartości funkcji na krańcach przedziału: $f(0) = 0^2 - 6 \\cdot 0 + 3 = 3$ oraz $f(4) = 4^2 - 6 \\cdot 4 + 3 = 16 - 24 + 3 = -5$. Największą wartością będzie największa z obliczonych wartości, czyli $f(0)=3$."
     ],
     "examSource": {
@@ -1227,7 +1227,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Połowa sumy 4 $28 + 4 28 + 4 28 + 4$ 28 jest równa",
+    "prompt": "Połowa sumy 4 28 + 4 28 + 4 28 + 4 28 jest równa",
     "choices": [
       "2 30",
       "2 57",
@@ -1382,7 +1382,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z sześcianu ABCDEFGH o krawędzi $d$ługości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
+    "prompt": "Z sześcianu ABCDEFGH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
     "choices": [
       "2 razy",
       "3 razy",
@@ -2428,7 +2428,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli $f(1) = f(9)$",
     "solutionSteps": [
-      "Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji $s$ą równe.",
+      "Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji są równe.",
       "Wierzchołek paraboli to $W=(5,7)$, więc oś symetrii ma równanie $x=5$. Sprawdzamy odległości argumentów od 5 dla każdej opcji.",
       "Dla opcji A) argumenty 1 i 9 są oddalone od 5 o 4 ($|1-5|=4$, $|9-5|=4$), co oznacza, że $f(1) = f(9)$. Dla pozostałych opcji odległości są różne."
     ],
@@ -2873,7 +2873,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Uzasadnij, że liczba 4 $12 + 4 13 + 4$ 14 jest podzielna przez 42.",
+    "prompt": "Uzasadnij, że liczba 4 12 + 4 13 + 4 14 jest podzielna przez 42.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -3842,7 +3842,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową w postaci standardowej $ax^2 + bx + c > 0$. Otrzymujemy: $-x^2 + 2x > 0$.",
       "Znajdź pierwiastki równania kwadratowego $-x^2 + 2x = 0$, wyciągając $x$ przed nawias: $x(-x+2) = 0$. Pierwiastki to $x_1 = 0$ oraz $x_2 = 2$.",
-      "Narysuj parabolę dla funkcji $f(x) = -x^2 + 2x$. Ponieważ współczynnik $a = -1$ jest ujemny, ramiona paraboli są skierowane w dół. Nierówność jest spełniona, gdy wartości funkcji $s$ą dodatnie (czyli dla $x$ między pierwiastkami)."
+      "Narysuj parabolę dla funkcji $f(x) = -x^2 + 2x$. Ponieważ współczynnik $a = -1$ jest ujemny, ramiona paraboli są skierowane w dół. Nierówność jest spełniona, gdy wartości funkcji są dodatnie (czyli dla $x$ między pierwiastkami)."
     ],
     "examSource": {
       "kind": "matura",
@@ -4872,7 +4872,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że liczba 4 $2017 + 4 2018 + 4 2019 + 4$ 2020 jest podzielna przez 17.",
+    "prompt": "Wykaż, że liczba 4 2017 + 4 2018 + 4 2019 + 4 2020 jest podzielna przez 17.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -8194,7 +8194,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$3$",
     "solutionSteps": [
       "Zapisz warunek zadania, używając wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Mamy $a_2 = a_1 q$ oraz $a_3 = a_1 q^2$. Po podstawieniu otrzymujemy $6a_1 - 5(a_1 q) + (a_1 q^2) = 0$.",
-      "Uprość równanie, dzieląc obie strony przez $a_1$ (ponieważ wszystkie wyrazy $s$ą dodatnie, $a_1 \\neq 0$). Otrzymujemy $6 - 5q + q^2 = 0$.",
+      "Uprość równanie, dzieląc obie strony przez $a_1$ (ponieważ wszystkie wyrazy są dodatnie, $a_1 \\neq 0$). Otrzymujemy $6 - 5q + q^2 = 0$.",
       "Rozwiąż równanie kwadratowe $q^2 - 5q + 6 = 0$. Można je rozwiązać, rozkładając na czynniki $(q-2)(q-3) = 0$. Rozwiązaniami są $q=2$ oraz $q=3$.",
       "Wybierz rozwiązanie należące do przedziału $\\langle 2\\sqrt{2}, 3\\sqrt{2} \\rangle$. Ponieważ $2\\sqrt{2} \\approx 2.828$ i $3\\sqrt{2} \\approx 4.242$, jedynym rozwiązaniem z tego przedziału jest $q=3$."
     ],
@@ -8305,7 +8305,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość wyrażenia log 4 $8 + 5log$ 4 2 jest równa",
+    "prompt": "Wartość wyrażenia log 4 8 + 5log$ 4 2 jest równa",
     "choices": [
       "2",
       "4",
@@ -9657,7 +9657,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg (15, 3x, $\\frac{5}{3}$) jest geometryczny i wszystkie jego wyrazy $s$ą dodatnie. Stąd wynika, że",
+    "prompt": "Trzywyrazowy ciąg (15, 3x, $\\frac{5}{3}$) jest geometryczny i wszystkie jego wyrazy są dodatnie. Stąd wynika, że",
     "choices": [
       "$x = \\frac{3}{5}$",
       "$x = \\frac{4}{5}$",
@@ -10131,7 +10131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C, czyli $x=2$",
     "solutionSteps": [
-      "Ciąg jest niemalejący, więc wyrazy $s$ą ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
+      "Ciąg jest niemalejący, więc wyrazy są ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
       "Ciąg ma 6 wyrazów. Mediana to średnia arytmetyczna dwóch środkowych wyrazów, czyli wyrazów na 3. i 4. pozycji. Mając $x=2$, ciąg to (1, 2, 4, 4, 5, 6). Mediana wynosi $\\frac{4+4}{2}=4$.",
       "Ponieważ otrzymana mediana jest zgodna z treścią zadania ($4=4$) i nierówności dla $x$ są spełnione, znalezioną wartość $x=2$ można uznać za poprawną."
     ],
@@ -11439,7 +11439,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości $r$ówne odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
+    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości równe odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -11644,7 +11644,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Rozwiń lewą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową.\n$3x^2 + 3x > x^2 + x + 24 \\implies 2x^2 + 2x - 24 > 0$",
       "Uprość nierówność, dzieląc obie strony przez 2, a następnie znajdź pierwiastki równania kwadratowego $x^2 + x - 12 = 0$.\n$x^2 + x - 12 > 0$. Pierwiastki to $x_1 = -4$ i $x_2 = 3$.",
-      "Naszkicuj parabolę $y = x^2 + x - 12$ z ramionami skierowanymi w górę i odczytaj z wykresu przedziały, dla których wartości funkcji $s$ą dodatnie.\nNierówność jest spełniona dla $x < -4$ lub $x > 3$."
+      "Naszkicuj parabolę $y = x^2 + x - 12$ z ramionami skierowanymi w górę i odczytaj z wykresu przedziały, dla których wartości funkcji są dodatnie.\nNierówność jest spełniona dla $x < -4$ lub $x > 3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11698,7 +11698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$r = \\frac{ab}{a+b}$",
     "solutionSteps": [
-      "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości $s$ą równe $r$.",
+      "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości są równe $r$.",
       "Czworokąt OQCP jest kwadratem o boku $r$, ponieważ kąty przy C, P, Q są proste, a $OP = OQ$ = $r$. Punkt O ma zatem współrzędne $(r, r)$, jeśli umieścimy wierzchołek C w początku układu współrzędnych $(0, 0)$, a przyprostokątne wzdłuż osi układu.",
       "Ponieważ O leży na przeciwprostokątnej AB, odległość punktu O od prostej AB jest równa 0. Równanie prostej AB przechodzącej przez punkty $(0, a)$ i $(b, 0)$ wynosi $\\frac{x}{b} + \\frac{y}{a} = 1$, co można zapisać jako $ax + by - ab = 0$. Korzystając ze wzoru na odległość punktu $(x_0, y_0)$ od prostej $Ax + By + C = 0$, czyli $d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$, dla punktu O$(r, r)$ i prostej $ax + by - ab = 0$ mamy $0 = \\frac{|ar + br - ab|}{\\sqrt{a^2 + b^2}}$. Stąd $|r(a+b) - ab| = 0$, czyli $r(a+b) = ab$.",
       "Dzieląc obie strony równania $r(a+b) = ab$ przez $(a+b)$, otrzymujemy $r = \\frac{ab}{a+b}$."
@@ -11896,7 +11896,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 4 log 4 $2 + 2$ log 4 8 jest równa",
+    "prompt": "Liczba 4 log 4 2 + 2$ log 4 8 jest równa",
     "choices": [
       "6 log 4 10",
       "16",
@@ -12286,7 +12286,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "A, czyli $\\frac{2}{3}$",
     "solutionSteps": [
       "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Zapisz dane równanie $9a_5 = 4a_3$ przy użyciu tego wzoru.\n$9 \\cdot (a_1 \\cdot q^{5-1}) = 4 \\cdot (a_1 \\cdot q^{3-1})$\n$9a_1 q^4 = 4a_1 q^2$",
-      "Podziel obie strony równania przez $a_1$ (wiemy, że $a_1 \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie) i przez $q^2$ (wiemy, że $q \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie).\n$9q^2 = 4$",
+      "Podziel obie strony równania przez $a_1$ (wiemy, że $a_1 \\ne 0$, bo wszystkie wyrazy są dodatnie) i przez $q^2$ (wiemy, że $q \\ne 0$, bo wszystkie wyrazy są dodatnie).\n$9q^2 = 4$",
       "Rozwiąż równanie kwadratowe dla $q$ i wybierz dodatnie rozwiązanie, ponieważ wszystkie wyrazy ciągu są dodatnie.\n$q^2 = \\frac{4}{9}$\n$q = \\sqrt{\\frac{4}{9}}$\n$q = \\frac{2}{3}$"
     ],
     "examSource": {
@@ -12617,7 +12617,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -12941,7 +12941,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-\\frac{3}{2})$",
       "$\\frac{3}{2}$",
       "$\\frac{2}{3}$",
-      "$(-\\frac{2}{3})$ Zasady oceniania 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$(-\\frac{2}{3})$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
@@ -12998,7 +12998,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 $27 + \\log 9$ 3 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 27 + \\log 9$ 3 jest równa",
     "choices": [
       "81",
       "9",
@@ -13667,7 +13667,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość $r$ówną 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość równą 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -14620,7 +14620,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4$.",
@@ -14650,7 +14650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40 000⋅(1,07) 2 zł",
       "40 000⋅(1,7) 2 zł",
       "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł 1 $pkt - odp$owiedź poprawna."
+      "40 000⋅1,49 zł"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
@@ -14680,7 +14680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
@@ -14711,7 +14711,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
@@ -14742,7 +14742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9⋅8⋅7⋅6",
       "9⋅9⋅8⋅7",
       "10⋅9⋅8⋅7",
-      "9⋅10⋅10⋅10 1 $pkt - odp$owiedź poprawna."
+      "9⋅10⋅10⋅10"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
@@ -14773,7 +14773,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 1",
@@ -14832,7 +14832,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-2)$",
       "2",
       "$(-3)$",
-      "3 1 $pkt - odp$owiedź poprawna."
+      "3"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 3",
@@ -14892,7 +14892,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -14923,7 +14923,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$W(x)$=$(x + 2)(x^{2} - 3)$",
       "$W(x)$=$(x - 2)(x^{2} - 3)$",
       "$W(x)$=$(x + 2)(x^{2} + 3)$",
-      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 $pkt - odp$owiedź poprawna."
+      "$W(x)$=$(x - 2)(x^{2} + 3)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
@@ -14954,7 +14954,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "jedno rozwiązanie.",
       "dwa rozwiązania.",
       "trzy rozwiązania.",
-      "cztery rozwiązania. 1 $pkt - odp$owiedź poprawna."
+      "cztery rozwiązania."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli trzy rozwiązania.",
@@ -14986,7 +14986,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "5",
       "7",
-      "$(-6)$ 1 $pkt - odp$owiedź poprawna."
+      "$(-6)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 5",
@@ -15072,7 +15072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png)"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 15$ i $y = 5$.",
@@ -15131,7 +15131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{12}{25}$",
@@ -15162,7 +15162,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$60^{\\circ}$",
       "$55^{\\circ}$",
       "$50^{\\circ}$",
-      "$65^{\\circ}$ 1 $pkt - odp$owiedź poprawna."
+      "$65^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $60^{\\circ}$",
@@ -15379,7 +15379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "4",
       "9",
-      "6 1 $pkt - odp$owiedź poprawna."
+      "6"
     ],
     "correctIndex": 3,
     "explanation": "D) 9",
@@ -15410,7 +15410,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(0,1) i (0,5).",
       "(0,1) i $(0, - 5)$.",
       "(1,0) i (5,0).",
-      "$(0, - 1)$ i (0,5). 1 $pkt - odp$owiedź poprawna."
+      "$(0, - 1)$ i (0,5)."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli (0,1) i (0,5).",
@@ -15469,7 +15469,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$m = -1$",
       "$m = 1$",
       "$m = \\frac{1}{2}$",
-      "$m = 2$ 1 $pkt - odp$owiedź poprawna."
+      "$m = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m = 1$.",
@@ -15495,7 +15495,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 $pkt - odp$owiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi długości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 $pkt - odp$owiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15523,12 +15523,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian F o krawędzi $d$ługości a i objętości V oraz sześcian G o krawędzi $d$ługości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
+    "prompt": "Dany jest sześcian F o krawędzi długości a i objętości V oraz sześcian G o krawędzi długości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
     "choices": [
       "3V",
       "9V",
       "18V",
-      "27V^{1} $pkt - odp$owiedź poprawna."
+      "27V^{1}"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $27V$",
@@ -15559,7 +15559,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{1}{9}$",
       "$\\frac{1}{2}$",
       "$\\frac{2}{9}$",
-      "$\\frac{2}{7}$ 1 $pkt - odp$owiedź poprawna."
+      "$\\frac{2}{7}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
@@ -15613,12 +15613,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 6 $100 + 6 100 + 6 100 + 6 100 + 6 100 + 6$ 100 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia 6 100 + 6 100 + 6 100 + 6 100 + 6 100 + 6 100 jest równa",
     "choices": [
       "6 600",
       "6 101",
       "36 100",
-      "36 600 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "36 600"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $36 \\cdot 100$.",
@@ -15650,7 +15650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "7",
       "2",
       "1",
-      "$(-1)$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$(-1)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 2",
@@ -15681,7 +15681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "900",
       "729",
       "648",
-      "512 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "512"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 648",
@@ -15712,7 +15712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "32a^{2}",
       "0",
       "48a",
-      "8a^{2} 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "8a^{2}"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48a$.",
@@ -15771,7 +15771,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "4",
       "6",
-      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "8"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 4",
@@ -15802,7 +15802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie jedno rozwiązanie: $x = 2$.",
       "dokładnie dwa rozwiązania: $x = 1,5$, $x = 2$.",
       "dokładnie trzy rozwiązania: $x = -6$, $x = 0$, $x = 2$.",
-      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$. 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = -6, 𝑥 = 0, 𝑥 = 1.5, 𝑥 = 2$.",
@@ -15833,7 +15833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png)"
     ],
     "correctIndex": 1,
     "explanation": "B",
@@ -15921,7 +15921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$a > 0$ i $b > 0$.",
       "$a > 0$ i b",
       "$a_{0}$.",
-      "$a_{1} pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$a_{1}"
     ],
     "correctIndex": 0,
     "explanation": "A) $a > 0$ i $b > 0$.",
@@ -15952,7 +15952,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$Q = -0,9P^{2} + 6,9$",
       "$Q = -3P + 27$",
       "$P = -0,9Q^{2} + 6,9$",
-      "$P = -3Q + 27$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$P = -3Q + 27$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $Q = -3P+27$",
@@ -16012,7 +16012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20 000∙(1,12) 2",
       "20 000∙2⋅1,03",
       "20 000∙1,06",
-      "20 000∙(1,03) 2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "20 000∙(1,03) 2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
@@ -16098,7 +16098,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(x - 2)$ 2 + $(y + 5) 2 = 9$",
       "$(x + 2)$ 2 + $(y - 5) 2 = 3$",
       "$(x - 2)$ 2 + $(y + 5) 2 = 3$",
-      "$(x + 2)$ 2 + $(y - 3) 2 = 9$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "$(x + 2)$ 2 + $(y - 3) 2 = 9$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(x-2)^2 + (y+5)^2 = 9$.",
@@ -16152,7 +16152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 $pkt - pop$rawne dokończenia dwóch zdań. 1 $pkt - pop$rawne dokończenie jednego zdania. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1 2 $pkt - pop$rawne dokończenia dwóch zdań. 1 $pkt - pop$rawne dokończenie jednego zdania. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16186,7 +16186,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "2√ 13",
       "2√ 10",
-      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
+      "8"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2\\sqrt{13}$",
@@ -16216,7 +16216,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$30^{\\circ}$",
       "$45^{\\circ}$",
       "$15^{\\circ}$",
-      "$60^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
+      "$60^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $30^\\circ$.",
@@ -16247,7 +16247,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{3}{4}$",
       "$\\frac{4}{3}$",
       "14",
-      "4 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "4"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{3}{4}$",
@@ -16309,7 +16309,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$52^{\\circ}$",
       "$26^{\\circ}$",
       "$14^{\\circ}$",
-      "$38^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$38^{\\circ}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $38^{\\circ}$",
@@ -16340,7 +16340,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "8",
       "8√ 3",
       "2√ 3",
-      "2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 2",
@@ -16371,7 +16371,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3∶4",
       "1∶4",
       "1∶8",
-      "3∶8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "3∶8"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1∶8$",
@@ -16402,7 +16402,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png)"
     ],
     "correctIndex": 2,
     "explanation": "C",
