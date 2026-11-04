@@ -429,6 +429,9 @@ test.describe("Smoke", () => {
   });
 
   test("lista treningu pokazuje tematy z lokalnego cache", async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("szybka-matma-school-class", "liceum-3");
+    });
     await page.goto("/trening");
     await expect(page.getByRole("heading", { name: "Trening" })).toBeVisible();
     await expect(
@@ -450,6 +453,9 @@ test.describe("Smoke", () => {
   test("lista treningu otwiera tematy dopiero po wyborze działu", async ({
     page,
   }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem("szybka-matma-school-class", "liceum-3");
+    });
     await page.goto("/trening");
     const departmentButton = page.getByRole("button", {
       name: /Liczby rzeczywiste/,
