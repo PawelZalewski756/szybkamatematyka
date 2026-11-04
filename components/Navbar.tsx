@@ -104,7 +104,7 @@ function NavbarActions({
         </>
       )}
 
-      <NavbarSheet showPrimaryLinks={false} />
+      <NavbarSheet showPrimaryLinks={false} isLoggedIn={Boolean(user)} />
     </div>
   );
 }

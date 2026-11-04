@@ -1,6 +1,7 @@
 export type NavLink = {
   href: string;
   label: string;
+  requiresAuth?: boolean;
 };
 
 export type NavGroup = {
@@ -26,7 +27,7 @@ export const NAV_MORE_GROUPS: readonly NavGroup[] = [
   },
   {
     label: "Nauka",
-    links: [{ href: "/powtorki", label: "Powtórki" }],
+    links: [{ href: "/powtorki", label: "Powtórki", requiresAuth: true }],
   },
   {
     label: "Społeczność",
@@ -51,3 +52,10 @@ export const NAV_LINKS: readonly NavLink[] = [
   ...NAV_PRIMARY_LINKS,
   ...NAV_MORE_GROUPS.flatMap((g) => g.links),
 ];
+
+export function isNavLinkVisible(
+  link: Pick<NavLink, "requiresAuth">,
+  isLoggedIn: boolean,
+): boolean {
+  return !link.requiresAuth || isLoggedIn;
+}

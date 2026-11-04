@@ -6,6 +6,10 @@ import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { isNavActive } from "@/lib/layout/mobile-nav";
 import {
+  isNavLinkVisible,
+  type NavLink,
+} from "@/lib/layout/nav-links";
+import {
   Award,
   CreditCard,
   FileText,
@@ -21,9 +25,7 @@ import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
 
-type MobileMoreLink = {
-  href: string;
-  label: string;
+type MobileMoreLink = NavLink & {
   icon: LucideIcon;
 };
 
@@ -35,7 +37,14 @@ type MobileMoreGroup = {
 const MOBILE_MORE_GROUPS: readonly MobileMoreGroup[] = [
   {
     label: "Nauka",
-    links: [{ href: "/powtorki", label: "Powtórki", icon: RotateCcw }],
+    links: [
+      {
+        href: "/powtorki",
+        label: "Powtórki",
+        icon: RotateCcw,
+        requiresAuth: true,
+      },
+    ],
   },
   {
     label: "Społeczność",
@@ -108,6 +117,10 @@ export function MoreSheet({
   loggingOut = false,
 }: MoreSheetProps) {
   const { path, setPath, clearPath, hasPathSelection } = useLearningPath();
+  const visibleGroups = MOBILE_MORE_GROUPS.map((group) => ({
+    ...group,
+    links: group.links.filter((link) => isNavLinkVisible(link, isLoggedIn)),
+  })).filter((group) => group.links.length > 0);
 
   useEffect(() => {
     if (!open) return;
@@ -204,7 +217,7 @@ export function MoreSheet({
             />
           </div>
 
-          {MOBILE_MORE_GROUPS.map((group, index) => (
+          {visibleGroups.map((group, index) => (
             <div
               key={group.label ?? "misc"}
               className={

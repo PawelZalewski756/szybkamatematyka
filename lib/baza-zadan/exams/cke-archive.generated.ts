@@ -23,7 +23,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B)",
     "solutionSteps": [
-      "Rozwiąż nierówność $-4 \\le x - 1 \\le 4$, dodając_{1} do każdej jej części: $-4 + 1 \\le x \\le 4 + 1$, co daje $-3 \\le x \\le 5$.",
+      "Rozwiąż nierówność $-4 \\le x - 1 \\le 4$, dodając 1 do każdej jej części: $-4 + 1 \\le x \\le 4 + 1$, co daje $-3 \\le x \\le 5$.",
       "Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby $od - 3$ do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach -3 i 5 oraz odcinkiem między nimi."
     ],
     "examSource": {
@@ -81,7 +81,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "1032,40 zł",
     "solutionSteps": [
-      "Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% $z^{1000}$ zł, czyli $1000 \\cdot 0.04 = 40$ zł.",
+      "Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% z 1000 zł, czyli $1000 \\cdot 0.04 = 40$ zł.",
       "Oblicz kwotę podatku od odsetek. Podatek wynosi 19% od 40 zł, czyli $40 \\cdot 0.19 = 7.60$ zł.",
       "Oblicz kwotę do wypłaty po potrąceniu podatku. Od kwoty początkowej (1000 zł) dodajemy odsetki pomniejszone o podatek: $1000 + (40 - 7.60) = 1000 + 32.40 = 1032.40$ zł."
     ],
@@ -984,7 +984,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wśród_{115} osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
+    "prompt": "Wśród 115 osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -1351,7 +1351,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ekipa złożona $z^{25}$ pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o",
+    "prompt": "Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o",
     "choices": [
       "14 osób więcej",
       "17 osób więcej",
@@ -1538,7 +1538,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt^{67},$5^{\\circ}$. Pole tego trójkąta jest równe",
+    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,$5^{\\circ}$. Pole tego trójkąta jest równe",
     "choices": [
       "100 √ 3",
       "100 √ 2",
@@ -1735,7 +1735,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Określamy, czym jest zdarzenie elementarne w przypadku rzutu symetryczną sześcienną kostką. Są to wyniki od 1 do 6, każdy z równym prawdopodobieństwem.",
       "Prawdopodobieństwo wyrzucenia konkretnej liczby oczek (np. $i$ oczek) w jednym rzucie symetryczną sześcienną kostką wynosi $\\frac{1}{6}$. Zapisujemy to jako $p_i = \\frac{1}{6}$.",
-      "Wnioskujemy na podstawie Kroków_{1} i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$."
+      "Wnioskujemy na podstawie Kroków 1 i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -1841,14 +1841,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem $y = (\\frac{1}{2})$ x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie $z^{1}$ g 131 I nie więcej niż 0,125 g tego pierwiastka.",
+    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem $y = (\\frac{1}{2})$ x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "24 dni",
     "solutionSteps": [
-      "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których $z^{1}$ g izotopu pozostanie co najwyżej 0,125g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
+      "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których z 1 g izotopu pozostanie co najwyżej 0,125g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
       "Ustawienie nierówności na podstawie danych: $y \\le 0.125$, czyli $(\\frac{1}{2})^x \\le 0.125$. Ponieważ $0.125 = \\frac{125}{1000} = \\frac{1}{8} = (\\frac{1}{2})^3$, nierówność przyjmuje postać $(\\frac{1}{2})^x \\le (\\frac{1}{2})^3$.",
       "Rozwiązanie nierówności: dla podstawy $\\frac{1}{2} < 1$, nierówność potęg jest odwrócona: $x \\ge 3$. Oznacza to, że potrzeba co najmniej 3 okresów połowicznego rozpadu.",
       "Obliczenie najmniejszej liczby dni: czas połowicznego rozpadu wynosi 8 dni. Najmniejsza liczba dni to $3 \\cdot 8 \\text{ dni} = 24 \\text{ dni}$."
@@ -2646,7 +2646,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli 66",
     "solutionSteps": [
-      "Zrozum, że problem dotyczy kombinacji bez powtórzeń - każdy uścisk dłoni to wybór^{2} osób $z^{12}$, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.",
+      "Zrozum, że problem dotyczy kombinacji bez powtórzeń - każdy uścisk dłoni to wybór 2 osób z 12, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.",
       "W tym zadaniu mamy $n=12$ (wszystkie osoby) i $k=2$ (dwie osoby biorące udział w uścisku dłoni). Podstaw wartości do wzoru: $C(12, 2) = \\frac{12!}{2!(12-2)!} = \\frac{12!}{2!10!}$.",
       "Oblicz wartość kombinacji: $\\frac{12 \\times 11}{2 \\times 1} = 6 \\times 11 = 66$."
     ],
@@ -2929,7 +2929,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste l i k przecinają się w punkcie $A = (0, 4)$ . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta $k - tr$ójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
+    "prompt": "Proste l i k przecinają się w punkcie $A = (0, 4)$ . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k - trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2957,7 +2957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała_{10} minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
+    "prompt": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała 10 minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -2965,7 +2965,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "7:20",
     "solutionSteps": [
       "Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę $w_{40}$ minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ $km/h$.",
-      "Oblicz prędkość Oli. Ola wyjechała_{10} minut później niż Ala (o 7:10) i jechała_{20} minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ $km/h$. Zauważ, że $v_O = 2v_A$.",
+      "Oblicz prędkość Oli. Ola wyjechała 10 minut później niż Ala (o 7:10) i jechała 20 minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ $km/h$. Zauważ, że $v_O = 2v_A$.",
       "Oblicz czas, po którym Ola wyprzedziła Alę. Ala jechała $t$ minut, Ola jechała $t - 10$ minut. Droga pokonana przez Alę to $d_A = v_A \\cdot \\frac{t}{60}$. Droga pokonana przez Olę to $d_O = v_O \\cdot \\frac{t-10}{60}$. Ola wyprzedziła Alę, gdy $d_O = d_A$. Podstawiając prędkości: $3d \\cdot \\frac{t-10}{60} = \\frac{3d}{2} \\cdot \\frac{t}{60}$. Po skróceniu $d$, $60$, $3$: $2(t-10) = t$, czyli $2t - 20 = t$, co daje $t = 20$ minut. Ola wyprzedziła Alę po 20 minutach od wyjazdu Ali, czyli o 7:20."
     ],
     "examSource": {
@@ -3946,7 +3946,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, $A_{0} = 10 - 4$ cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, $czy - mni$ejsza od 100 cm.",
+    "prompt": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, $A_{0} = 10 - 4$ cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, czy - mniejsza od 100 cm.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -4150,7 +4150,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba osobników pewnego zagrożonego wyginięciem gatunku zwierząt wzrosła w stosunku do liczby tych zwierząt $z^{31}$ grudnia 2011r. o 120% i obecnie jest równa 8910. Ile zwierząt liczyła populacja tego gatunku w ostatnim dniu 2011 roku?",
+    "prompt": "Liczba osobników pewnego zagrożonego wyginięciem gatunku zwierząt wzrosła w stosunku do liczby tych zwierząt z 31 grudnia 2011r. o 120% i obecnie jest równa 8910. Ile zwierząt liczyła populacja tego gatunku w ostatnim dniu 2011 roku?",
     "choices": [
       "4050",
       "1782",
@@ -4438,7 +4438,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "A, czyli $a = \\frac{5}{2}$",
     "solutionSteps": [
       "W ciągu geometrycznym iloraz dwóch kolejnych wyrazów jest stały. Zapiszemy to jako $\\frac{6}{24} = \\frac{a-1}{6}$.",
-      "Rozwiążemy równanie, aby znaleźć $a$: $6 \\cdot 6 = 24 \\cdot (a-1)$, czyli $36 = 24a - 24$. Przenosząc_{24} na drugą stronę otrzymujemy $60 = 24a$, a stąd $a = \\frac{60}{24}$.",
+      "Rozwiążemy równanie, aby znaleźć $a$: $6 \\cdot 6 = 24 \\cdot (a-1)$, czyli $36 = 24a - 24$. Przenosząc 24 na drugą stronę otrzymujemy $60 = 24a$, a stąd $a = \\frac{60}{24}$.",
       "Uproszczamy ułamek $\\frac{60}{24}$ dzieląc licznik i mianownik przez ich największy wspólny dzielnik, którym jest 12. Otrzymujemy $a = \\frac{5}{2}$."
     ],
     "examSource": {
@@ -4823,7 +4823,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{1}{3}$",
     "solutionSteps": [
-      "Określamy zbiór wszystkich możliwych zdarzeń. Losujemy jedną liczbę $z^{24}$ kolejnych liczb naturalnych od 1 do 24, więc mamy 24 możliwe zdarzenia elementarne.",
+      "Określamy zbiór wszystkich możliwych zdarzeń. Losujemy jedną liczbę z 24 kolejnych liczb naturalnych od 1 do 24, więc mamy 24 możliwe zdarzenia elementarne.",
       "Określamy zbiór zdarzeń sprzyjających zdarzeniu A. Dzielniki liczby 24 ze zbioru {1, 2, ..., 24} to {1, 2, 3, 4, 6, 8, 12, 24}. Jest ich 8.",
       "Obliczamy prawdopodobieństwo zdarzenia A. Prawdopodobieństwo to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $P(A) = \\frac{8}{24}$. Upraszczamy ułamek do $\\frac{1}{3}$."
     ],
@@ -5604,7 +5604,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $2(a - b)$",
     "solutionSteps": [
-      "Zauważ, że po poprowadzeniu wysokości z wierzchołka M do podstawy KL, powstaje trójkąt prostokątny o jednym z kątów_{60}^{\\circ} i przyprostokątnym równym $a-b$.",
+      "Zauważ, że po poprowadzeniu wysokości z wierzchołka M do podstawy KL, powstaje trójkąt prostokątny o jednym z kątów $60^{\\circ}$ i przyprostokątnym równym $a-b$.",
       "W tym trójkącie prostokątnym, przyprostokątna oznaczona jako $a-b$ leży naprzeciwko kąta $60^{\\circ}$, a ramię trapezu (przeciwprostokątna) jest szukaną długością. Korzystając z definicji sinusa ($\\sin(60^\\circ) = \\frac{\\text{przyprostokątna naprzeciwko}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\sin(60^\\circ) = \\frac{a-b}{|LM|}$.",
       "Ponieważ $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$, możemy zapisać równanie $\\frac{\\sqrt{3}}{2} = \\frac{a-b}{|LM|}$. Przekształcając je, aby wyznaczyć $|LM|$, otrzymujemy $|LM| = \\frac{2(a-b)}{\\sqrt{3}}$. Jednakże, przyprostokątna *obok* kąta $60^{\\circ}$ to $a-b$, a ramię trapezu to przeciwprostokątna. Z definicji cosinusa ($\\cos(60^\\circ) = \\frac{\\text{przyprostokątna przy}}{\\text{przeciwprostokątna}}$), otrzymujemy $\\cos(60^\\circ) = \\frac{a-b}{|LM|}$.",
       "Ponieważ $\\cos(60^\\circ) = \\frac{1}{2}$, mamy $\\frac{1}{2} = \\frac{a-b}{|LM|}$. Stąd $|LM| = 2(a-b)$."
@@ -6031,7 +6031,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$-3$",
     "solutionSteps": [
-      "Skorzystaj ze wzorów na $n - ty$ wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$) oraz sumę $n - pie$rwszych wyrazów ($S_n = \\frac{a_1 + a_n}{2} \\cdot n$). Z treści zadania mamy dane: $a_{12} = 30$ oraz $S_{12} = 162$.",
+      "Skorzystaj ze wzorów na $n - ty$ wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$) oraz sumę n-pierwszych wyrazów ($S_n = \\frac{a_1 + a_n}{2} \\cdot n$). Z treści zadania mamy dane: $a_{12} = 30$ oraz $S_{12} = 162$.",
       "Podstaw dane do wzoru na sumę dwunastu wyrazów: $162 = \\frac{a_1 + 30}{2} \\cdot 12$. Uprość równanie: $162 = (a_1 + 30) \\cdot 6$.",
       "Rozwiąż równanie z jedną niewiadomą $a_1$: podziel obie strony przez 6 ($27 = a_1 + 30$), a następnie odejmij 30 ($a_1 = 27 - 30$)."
     ],
@@ -6212,7 +6212,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 25%",
     "solutionSteps": [
-      "Obliczamy nową wysokość prowizji po obniżce w lutym, odejmując_{1} punkt procentowy od prowizji ze stycznia. Prowizja wynosiła $4\\% - 1\\% = 3\\%$.",
+      "Obliczamy nową wysokość prowizji po obniżce w lutym, odejmując 1 punkt procentowy od prowizji ze stycznia. Prowizja wynosiła $4\\% - 1\\% = 3\\%$.",
       "Obliczamy o ile procent faktycznie zmniejszyła się prowizja, porównując jej obniżkę (1 punkt procentowy) do pierwotnej wysokości (4%). Obliczenie to: $\\frac{1\\%}{4\\%} = \\frac{1}{4}$.",
       "Zamieniamy ułamek $\\frac{1}{4}$ na procent, mnożąc przez 100%. Otrzymujemy $\\frac{1}{4} \\cdot 100\\% = 25\\%$."
     ],
@@ -6758,7 +6758,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pudełko w kształcie prostopadłościanu ma wymiary 5 $dm \\times 3 dm \\times 2$ dm (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z21-1.gif) Przekątna KL tego prostopadłościanu jest - z dokładnością do 0,01 $dm - r$ówna",
+    "prompt": "Pudełko w kształcie prostopadłościanu ma wymiary 5 $dm \\times 3 dm \\times 2$ dm (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m19-maj/z21-1.gif) Przekątna KL tego prostopadłościanu jest - z dokładnością do 0,01 dm - równa",
     "choices": [
       "5,83 dm",
       "6,16 dm",
@@ -6861,7 +6861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli $2 \\cdot 3^4 = 2 \\cdot 81 = 162$",
     "solutionSteps": [
-      "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc_{2} możliwości wyboru pierwszej cyfry (2 lub 5).",
+      "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc 2 możliwości wyboru pierwszej cyfry (2 lub 5).",
       "Na pozostałych czterech pozycjach możemy umieścić dowolną z trzech cyfr (0, 2, 5).",
       "Oblicz liczbę wszystkich takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $2 \\cdot 3 \\cdot 3 \\cdot 3 \\cdot 3 = 2 \\cdot 3^4$."
     ],
@@ -7037,7 +7037,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{9}{25}$",
     "solutionSteps": [
-      "Określ liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem $z^{5} - ele$mentowego zbioru, więc wszystkich par $(x, y)$ jest $5 \\cdot 5 = 25$.",
+      "Określ liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem z 5-elementowego zbioru, więc wszystkich par $(x, y)$ jest $5 \\cdot 5 = 25$.",
       "Określ liczbę wyników sprzyjających zdarzeniu A. Iloczyn dwóch liczb jest nieparzysty wtedy i tylko wtedy, gdy obie liczby są nieparzyste. W zbiorze {1,2,3,4,5} mamy 3 liczby nieparzyste (1, 3, 5). Zatem liczb par $(x, y)$, gdzie obie liczby są nieparzyste, jest $3 \\cdot 3 = 9$.",
       "Oblicz prawdopodobieństwo zdarzenia A. Prawdopodobieństwo to stosunek liczby wyników sprzyjających zdarzeniu do liczby wszystkich możliwych wyników: $P(A) = \\frac{9}{25}$."
     ],
@@ -8137,7 +8137,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{3}{4}$",
     "solutionSteps": [
       "Zauważ, że rysunek przedstawia trójkąt prostokątny, gdzie jedna przyprostokątna ma długość 3, a druga 4. Kąt α jest kątem ostrym tego trójkąta.",
-      "Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej przeciwległej do tego kąta do długości przyprostokątnej leżącej przy tym kącie. W tym przypadku przeciwległa przyprostokątna ma długość 3, a przyległa_{4}.",
+      "Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej przeciwległej do tego kąta do długości przyprostokątnej leżącej przy tym kącie. W tym przypadku przeciwległa przyprostokątna ma długość 3, a przyległa 4.",
       "Oblicz tangens kąta α, dzieląc długość przyprostokątnej przeciwległej przez długość przyprostokątnej przyległej: $\\operatorname{tg} \\alpha = \\frac{3}{4}$."
     ],
     "examSource": {
@@ -8523,7 +8523,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem $f(x) = x^{2} + bx + c$ . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i $c - we$ wzorze funkcji $f - spe$łniają warunki:",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej f określonej wzorem $f(x) = x^{2} + bx + c$ . ![Rysunek do zadania](/cke-matura/m20-probna/z10-1.png) Współczynniki b i $c - we$ wzorze funkcji $f$ - spełniają warunki:",
     "choices": [
       "b $c > 0$",
       "b c",
@@ -8724,7 +8724,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Wzór na pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Podstawiamy dane: $6\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$.",
       "Przekształcamy równanie, aby wyznaczyć $a^2$: mnożymy obie strony przez 4 i dzielimy przez $\\sqrt{3}$, co daje $24 = a^2$.",
-      "Obliczamy długość boku $a$, wyciągając pierwiastek kwadratowy $z^{24}$: $a = \\sqrt{24} = \\sqrt{4 \\cdot 6} = 2\\sqrt{6}$."
+      "Obliczamy długość boku $a$, wyciągając pierwiastek kwadratowy z 24: $a = \\sqrt{24} = \\sqrt{4 \\cdot 6} = 2\\sqrt{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8971,7 +8971,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "D, czyli $1017$",
     "solutionSteps": [
       "Szukamy liczb naturalnych czterocyfrowych $n$, takich że $1000 \\le n < 2017$. Najmniejszą taką liczbą jest $1000$.",
-      "Największą liczbą spełniającą warunek jest $2016$. Obliczamy liczbę elementów w tym przedziale, odejmując najmniejszą liczbę od największej i dodając_{1}: $2016 - 1000 + 1$.",
+      "Największą liczbą spełniającą warunek jest $2016$. Obliczamy liczbę elementów w tym przedziale, odejmując najmniejszą liczbę od największej i dodając 1: $2016 - 1000 + 1$.",
       "$2016 - 1000 + 1 = 1016 + 1 = 1017$."
     ],
     "examSource": {
@@ -9004,7 +9004,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zapisz prawdopodobieństwo wylosowania kuli białej jako stosunek liczby kul białych do łącznej liczby kul w pudełku: $P(\\text{biała}) = \\frac{6}{6+n}$.",
       "Zapisz równanie, przyrównując dane prawdopodobieństwo do informacji z zadania: $\\frac{6}{6+n} = \\frac{1}{3}$.",
       "Rozwiąż równanie, mnożąc obie strony przez $3(6+n)$, aby pozbyć się mianowników: $6 \\cdot 3 = 1 \\cdot (6+n)$, co daje $18 = 6+n$.",
-      "Oblicz $n$, odejmując_{6} od obu stron równania: $n = 18 - 6$, czyli $n = 12$."
+      "Oblicz $n$, odejmując 6 od obu stron równania: $n = 18 - 6$, czyli $n = 12$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9141,7 +9141,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{11}{25}$",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru $5 - ele$mentowego, więc wszystkich par jest $5 \\cdot 5 = 25$.",
+      "Obliczamy liczbę wszystkich możliwych wyników losowania. Losujemy dwie liczby ze zwracaniem ze zbioru 5-elementowego, więc wszystkich par jest $5 \\cdot 5 = 25$.",
       "Wypisujemy pary, dla których iloraz pierwszej liczby przez drugą jest liczbą całkowitą: (1,1), (2,1), (4,1), (5,1), (10,1), (2,2), (4,2), (10,2), (4,4), (5,5), (10,10). Jest ich 11.",
       "Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę sprzyjających wyników przez liczbę wszystkich możliwych wyników: $P(A) = \\frac{11}{25}$."
     ],
@@ -9171,7 +9171,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zapisz wzór na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$ i wyraź podane wyrazy za pomocą $a_1$ i $r$. Użyj własności ciągu arytmetycznego, że $a_k + a_m = a_p + a_q$, gdy $k+m = p+q$.\n$a_{21} + a_{24} + a_{27} + a_{30} = (a_{25.5-4.5}) + (a_{25.5-1.5}) + (a_{25.5+1.5}) + (a_{25.5+4.5})$. Ponieważ $21+30 = 51$ i $24+27 = 51$, mamy $a_{21}+a_{30} = a_{24}+a_{27}$. Zatem $2(a_{24}+a_{27}) = 100$, co daje $a_{24}+a_{27} = 50$.",
       "Wykorzystaj kolejną własność ciągu arytmetycznego: $a_k + a_m = 2 \\cdot a_{\\frac{k+m}{2}}$ dla nieparzystego $k+m$.\nSuma $a_{25} + a_{26}$ jest równa sumie wyrazów o indeksach, których średnia wynosi 25.5. Zauważmy, że $24+27 = 51$, więc $\\frac{24+27}{2} = 25.5$. Zatem $a_{24}+a_{27} = 2 \\cdot a_{25.5}$. Ale korzystając z sumy indeksów $21+30 = 51$ i $24+27 = 51$, możemy zapisać sumę jako $2 \\cdot (a_{21} + a_{30}) = 100$ lub $2 \\cdot (a_{24} + a_{27}) = 100$. Czyli $a_{24} + a_{27} = 50$. Szukana suma to $a_{25} + a_{26}$. Zauważmy, że $25+26=51$, tak jak $24+27=51$.",
-      "Zapisz szukaną sumę jako $a_{25} + a_{26}$. Wyrazy $a_{25}$ i $a_{26}$ są wyrazami środkowymi pary o sumie indeksów_{51}.\nSuma $a_{25} + a_{26}$ ma te same indeksy sumujące się do 51 co para $a_{24}$ i $a_{27}$. Zatem $a_{25} + a_{26} = a_{24} + a_{27}$."
+      "Zapisz szukaną sumę jako $a_{25} + a_{26}$. Wyrazy $a_{25}$ i $a_{26}$ są wyrazami środkowymi pary o sumie indeksów 51.\nSuma $a_{25} + a_{26}$ ma te same indeksy sumujące się do 51 co para $a_{24}$ i $a_{27}$. Zatem $a_{25} + a_{26} = a_{24} + a_{27}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9965,7 +9965,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W każdym $n - k$ącie wypukłym $(n \\ge 3)$ liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest",
+    "prompt": "W każdym n-kącie wypukłym $(n \\ge 3)$ liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest",
     "choices": [
       "siedmiokąt.",
       "dziesięciokąt.",
@@ -9975,7 +9975,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli dziesięciokąt.",
     "solutionSteps": [
-      "Zapisz wzór na liczbę przekątnych $P$ $n - k$ąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
+      "Zapisz wzór na liczbę przekątnych $P$ n-kąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
       "Zapisz równanie zgodnie z treścią zadania: liczba przekątnych jest o 25 większa od liczby boków, czyli $P = n + 25$. Podstaw wzór na $P$: $\\frac{n(n-3)}{2} = n + 25$.",
       "Rozwiąż otrzymane równanie kwadratowe: $n(n-3) = 2(n+25) \\implies n^2 - 3n = 2n + 50 \\implies n^2 - 5n - 50 = 0$. Wyróżnik $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot (-50) = 25 + 200 = 225$, $\\sqrt{\\Delta} = 15$. Rozwiązania to $n_1 = \\frac{5 - 15}{2} = -5$ (odrzucamy, bo n musi być dodatnie) i $n_2 = \\frac{5 + 15}{2} = 10$.",
       "Sprawdź, który z podanych wielokątów ma 10 boków. Dziesięciokąt ma 10 boków."
@@ -10680,7 +10680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i $AC - odp$owiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
+    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC - odpowiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -10927,7 +10927,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "-4",
     "solutionSteps": [
-      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała_{2} nie wpływa na rozwiązania.",
+      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała 2 nie wpływa na rozwiązania.",
       "Rozwiązania to $x-4=0 \\Rightarrow x=4$ oraz $x^2-1=0 \\Rightarrow x^2=1 \\Rightarrow x=1$ lub $x=-1$.",
       "Oblicz iloczyn wszystkich rozwiązań: $4 \\cdot 1 \\cdot (-1)$."
     ],
@@ -11082,7 +11082,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "W ciągu geometrycznym iloczyn wyrazów jest równy środkowemu wyrazowi podniesionemu do potęgi równej liczbie wyrazów. Mamy więc $x \\cdot y \\cdot z = y^3$.",
       "Wiemy, że $x \\cdot y \\cdot z = 64$, więc możemy zapisać równanie $y^3 = 64$.",
-      "Obliczamy $y$ z równania $y^3 = 64$. Jest to pierwiastek sześcienny $z^{64}$, czyli $y = \\sqrt[3]{64}$."
+      "Obliczamy $y$ z równania $y^3 = 64$. Jest to pierwiastek sześcienny z 64, czyli $y = \\sqrt[3]{64}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11550,7 +11550,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Trzy przypadki: 7 _ _ (parzysta), _ 7 _ (parzysta), _ _ 7 (parzysta). Cyfra jedności musi być parzysta (0, 2, 4, 6, 8) i różna od 7.",
       "Przypadek 7 _ P$(P - parzysta)$: 1 możliwość dla 7, 9 dla cyfry dziesiątek (nie 7), 5 dla cyfry jedności. $1 \\cdot 9 \\cdot 5 = 45$.",
       "Przypadek _ 7 P: 8 możliwości dla cyfry setek (nie 0, nie 7), 1 dla 7, 5 dla cyfry jedności. $8 \\cdot 1 \\cdot 5 = 40$.",
-      "Przypadek P1 P2 7 (gdzie P1, P2 to nie 7, P2 parzyste): To wymaga, aby ostatnia cyfra była_{7}, co jest sprzeczne z parzystością. Poprawmy: przypadek _ _ P, gdzie 7 jest raz i nie na ostatniej pozycji.",
+      "Przypadek P1 P2 7 (gdzie P1, P2 to nie 7, P2 parzyste): To wymaga, aby ostatnia cyfra była 7, co jest sprzeczne z parzystością. Poprawmy: przypadek _ _ P, gdzie 7 jest raz i nie na ostatniej pozycji.",
       "Rozważ trzy pozycje dla cyfry 7: setki (7 _ _), dziesiątki (_ 7 _), jedności (_ _ 7). Cyfra jedności musi być parzysta (0, 2, 4, 6, 8).",
       "7 _ P: 1 możliwość dla 7, 9 dla cyfry dziesiątek (nie 7), 5 dla cyfry jedności (parzysta). $1 \\cdot 9 \\cdot 5 = 45$.",
       "_ 7 P: 8 możliwości dla cyfry setek (nie 0, nie 7), 1 dla 7, 5 dla cyfry jedności (parzysta). $8 \\cdot 1 \\cdot 5 = 40$.",
@@ -11729,7 +11729,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Podnieś obustronnie równanie $\\sin \\alpha + \\cos \\alpha = \\frac{7}{5}$ do kwadratu, aby uzyskać wyrażenie zawierające $\\sin^2 \\alpha$, $\\cos^2 \\alpha$ i $2 \\sin \\alpha \\cos \\alpha$.\n$$(\\sin \\alpha + \\cos \\alpha)^2 = \\left(\\frac{7}{5}\\right)^2$$\n$$\\sin^2 \\alpha + 2 \\sin \\alpha \\cos \\alpha + \\cos^2 \\alpha = \\frac{49}{25}$$",
       "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby uprościć równanie z kroku 1.\n$1 + 2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25}$",
-      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując_{1} od obu stron równania.\n$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$"
+      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując 1 od obu stron równania.\n$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$"
     ],
     "examSource": {
       "kind": "matura",
@@ -11844,8 +11844,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli 15.",
     "solutionSteps": [
-      "Oblicz wartość pierwiastka kwadratowego $z^{169}$, czyli $\\sqrt{169} = 13$.",
-      "Oblicz wartość pierwiastka sześciennego $z^{8}$, czyli $\\sqrt[3]{8} = 2$.",
+      "Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.",
+      "Oblicz wartość pierwiastka sześciennego z 8, czyli $\\sqrt[3]{8} = 2$.",
       "Dodaj uzyskane wyniki: $13 + 2 = 15$."
     ],
     "examSource": {
@@ -12411,7 +12411,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Skorzystaj ze wzoru na wysokość trójkąta równobocznego: $h = \\frac{a\\sqrt{3}}{2}$, gdzie $a$ to długość boku. Podstawiając daną wysokość, mamy $6\\sqrt{3} = \\frac{a\\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i przemnożeniu przez 2 otrzymujemy $a=12$.",
       "Oblicz pole trójkąta równobocznego ze wzoru $P = \\frac{a^2\\sqrt{3}}{4}$. Podstaw długość boku $a=12$: $P = \\frac{12^2\\sqrt{3}}{4} = \\frac{144\\sqrt{3}}{4}$.",
-      "Uprość wynik, dzieląc_{144} przez 4: $P = 36\\sqrt{3}$."
+      "Uprość wynik, dzieląc 144 przez 4: $P = 36\\sqrt{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12858,7 +12858,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "$\\frac{4}{81}$",
     "solutionSteps": [
       "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy dwa razy ze zwracaniem z dziewięcioelementowego zbioru, więc wszystkich par $(a, b)$ jest $9 \\cdot 9 = 81$.",
-      "Wypisujemy wszystkie pary liczb $(a, b)$ ze zbioru M, których iloczyn wynosi 24. Pary te to: $(3, 8)$, $(8, 3)$, $(4, 6)$, $(6, 4)$. Mamy więc_{4} zdarzenia sprzyjające zdarzeniu A.",
+      "Wypisujemy wszystkie pary liczb $(a, b)$ ze zbioru M, których iloczyn wynosi 24. Pary te to: $(3, 8)$, $(8, 3)$, $(4, 6)$, $(6, 4)$. Mamy więc 4 zdarzenia sprzyjające zdarzeniu A.",
       "Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich zdarzeń elementarnych: $P(A) = \\frac{4}{81}$."
     ],
     "examSource": {
@@ -12941,7 +12941,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-\\frac{3}{2})$",
       "$\\frac{3}{2}$",
       "$\\frac{2}{3}$",
-      "$(-\\frac{2}{3})$ Zasady oceniania 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$(-\\frac{2}{3})$ Zasady oceniania 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
@@ -13134,7 +13134,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zapisz równanie w postaci z jedną stroną równą 0: $2x^2 = 2 \\iff 2x^2 - 2 = 0$.",
       "Uprość równanie, dzieląc obie strony przez 2: $x^2 - 1 = 0$.",
-      "Rozwiąż równanie, rozkładając je na czynniki lub przenosząc_{1} na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$."
+      "Rozwiąż równanie, rozkładając je na czynniki lub przenosząc 1 na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13674,7 +13674,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$.",
     "solutionSteps": [
-      "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt^{30}^{\\circ} leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
+      "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt $30^{\\circ}$ leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
       "Oblicz pole podstawy ($P_p$) oraz objętość ostrosłupa ($V$). Podstawa jest kwadratem o boku $a$, więc $P_p = a^2 = (6\\sqrt{3})^2 = 36 \\cdot 3 = 108$. Objętość to $V = \\frac{1}{3} P_p \\cdot h = \\frac{1}{3} \\cdot 108 \\cdot 3 = 108$.",
       "Oblicz pole jednej ściany bocznej ($P_b$) oraz pole powierzchni całkowitej ($P_c$). Pole ściany bocznej to $P_b = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6\\sqrt{3} \\cdot 6 = 18\\sqrt{3}$. Powierzchnia całkowita to suma pola podstawy $i$ czterech pól ścian bocznych: $P_c = P_p + 4 P_b = 108 + 4 \\cdot 18\\sqrt{3} = 108 + 72\\sqrt{3}$."
     ],
@@ -13762,7 +13762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku $z^{5}$,76875 zł).",
+    "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł).",
     "solutionSteps": [
       "Uporządkuj dane cen od najniższej do najwyższej: 5,40, 5,50, 5,50, 5,60, 5,60, 5,60, 5,60, 5,70, 5,70, 5,80, 5,80, 5,90, 6,00, 6,10, 6,10, 6,20.",
       "Mediana to wartość środkowa; dla parzystej liczby danych (tutaj 16) to średnia dwóch środkowych wartości: 8. i 9. pozycji. Mediana = $\\frac{5,70 + 5,70}{2} = 5,70$ zł.",
@@ -13792,7 +13792,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{7}{64}$",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby $z^{8}$, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
+      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
       "Określamy zdarzenia sprzyjające. Iloczyn jest podzielny przez 15, gdy co najmniej jedna z liczb jest podzielna przez 5 (czyli 5), a druga jest podzielna przez 3 (czyli 3, 6, 9). Rozważamy przypadki: (5, 3), (5, 6), (5, 9) oraz (3, 5), (6, 5), (9, 5). Mamy 6 takich par. Dodatkowo, jeśli wylosujemy dwie piątki, iloczyn jest podzielny przez 15 (choć faktycznie przez 25). Para (5,5) jest również dozwolona.",
       "Zliczamy zdarzenia sprzyjające. Pary to: (5,3), (5,6), (5,9), (3,5), (6,5), (9,5), (5,5). Łącznie 7 zdarzeń.",
       "Obliczamy prawdopodobieństwo zdarzenia A. Jest to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $\\frac{7}{64}$."
@@ -13814,14 +13814,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów $z^{30}$ kolejnych dni. Przyjmijmy, że liczbę L obsługiwanych klientów $n - teg$o dnia opisuje funkcja $L(n)$ = -$n^{2} + 22n + 279$ gdzie n jest liczbą naturalną spełniającą warunki $n \\ge 1$ i $n \\le 30$. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$. A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
+    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę L obsługiwanych klientów n-tego dnia opisuje funkcja $L(n)$ = -$n^{2} + 22n + 279$ gdzie n jest liczbą naturalną spełniającą warunki $n \\ge 1$ i $n \\le 30$. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$. A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
     "solutionSteps": [
-      "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów $z^{30}$ dni, a nie tylko liczbę klientów_{30}. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
+      "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
       "Aby ocenić drugie stwierdzenie, obliczamy liczbę klientów w trzecim dniu, podstawiając $n=3$ do wzoru: $L(3) = -(3)^2 + 22(3) + 279 = -9 + 66 + 279 = 336$.",
       "Aby znaleźć dzień z największą liczbą klientów, szukamy wierzchołka paraboli $L(n) = -n^2 + 22n + 279$. Wartość $n$ wierzchołka to $-\\frac{b}{2a} = -\\frac{22}{2(-1)} = 11$. Obliczamy liczbę klientów dla $n=11$: $L(11) = -(11)^2 + 22(11) + 279 = -121 + 242 + 279 = 400$."
     ],
@@ -13916,7 +13916,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "B, czyli $9 \\cdot 10 \\cdot 2$",
     "solutionSteps": [
       "Liczba czterocyfrowa ma postać $\\overline{abcd}$, gdzie $a \\in \\{1, 2, \\dots, 9\\}$, a $b, c, d \\in \\{0, 1, \\dots, 9\\}$. Aby liczba była podzielna przez 25, musi się kończyć na 00, 25, 50 lub 75, czyli $d$ musi być 0 lub 5, a $c$ musi być 0 lub 5. Skoro liczba ma być nieparzysta, ostatnia cyfra $d$ musi być 5.",
-      "Jeśli $d=5$, to aby liczba była podzielna przez 25, musi się kończyć na 25 lub 75. Zatem $c$ może być tylko 2 lub 7. Mamy więc_{2} możliwości dla $c$ i 1 możliwość dla $d$.",
+      "Jeśli $d=5$, to aby liczba była podzielna przez 25, musi się kończyć na 25 lub 75. Zatem $c$ może być tylko 2 lub 7. Mamy więc 2 możliwości dla $c$ i 1 możliwość dla $d$.",
       "Pierwsza cyfra $a$ może przyjmować wartości od 1 do 9 (9 możliwości), a druga cyfra $b$ od 0 do 9 (10 możliwości). Łączna liczba takich liczb wynosi $9 \\cdot 10 \\cdot 2 \\cdot 1 = 180$."
     ],
     "examSource": {
@@ -14085,7 +14085,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów_{100}-złotowych było dwa razy więcej niż $50 - z$łotowych , a banknotów_{20}-złotowych było o 2 mniej niż $50 - z$łotowych . Niech x oznacza liczbę banknotów_{50}-złotowych , a $y - lic$zbę banknotów_{20}-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to",
+    "prompt": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów 100-złotowych było dwa razy więcej niż 50-złotowych , a banknotów 20-złotowych było o 2 mniej niż 50-złotowych . Niech x oznacza liczbę banknotów 50-złotowych , a y - liczbę banknotów 20-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-1.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-2.jpg)",
@@ -14095,7 +14095,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $50x + 100(2x) + 20(x-2) = 1040$",
     "solutionSteps": [
-      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów_{50} zł). Liczba banknotów_{50} zł: $x$. Liczba banknotów_{100} zł: $2x$. Liczba banknotów_{20} zł: $x-2$.",
+      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów 50 zł). Liczba banknotów 50 zł: $x$. Liczba banknotów 100 zł: $2x$. Liczba banknotów 20 zł: $x-2$.",
       "Układamy równanie, sumując wartość wszystkich banknotów, która musi być równa 1040 zł: $50x + 100(2x) + 20(x-2) = 1040$.",
       "Przekształcamy równanie do postaci wymaganej w odpowiedziach: $50x + 200x + 20x - 40 = 1040$, co daje $270x - 40 = 1040$."
     ],
@@ -14620,7 +14620,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4$.",
@@ -14650,7 +14650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40 000⋅(1,07) 2 zł",
       "40 000⋅(1,7) 2 zł",
       "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł 1 $pkt - odp$owiedź poprawna."
+      "40 000⋅1,49 zł 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
@@ -14675,12 +14675,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po x zł za parę i 40 identycznych marynarek po y zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży^{50}% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cenę pary spodni x oraz cenę marynarki y, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
+    "prompt": "Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po x zł za parę i 40 identycznych marynarek po y zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży 50% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cenę pary spodni x oraz cenę marynarki y, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
@@ -14711,7 +14711,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
@@ -14742,7 +14742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9⋅8⋅7⋅6",
       "9⋅9⋅8⋅7",
       "10⋅9⋅8⋅7",
-      "9⋅10⋅10⋅10 1 $pkt - odp$owiedź poprawna."
+      "9⋅10⋅10⋅10 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
@@ -14773,7 +14773,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 1",
@@ -14832,7 +14832,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-2)$",
       "2",
       "$(-3)$",
-      "3 1 $pkt - odp$owiedź poprawna."
+      "3 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 3",
@@ -14892,7 +14892,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -14923,7 +14923,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$W(x)$=$(x + 2)(x^{2} - 3)$",
       "$W(x)$=$(x - 2)(x^{2} - 3)$",
       "$W(x)$=$(x + 2)(x^{2} + 3)$",
-      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 $pkt - odp$owiedź poprawna."
+      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
@@ -14954,7 +14954,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "jedno rozwiązanie.",
       "dwa rozwiązania.",
       "trzy rozwiązania.",
-      "cztery rozwiązania. 1 $pkt - odp$owiedź poprawna."
+      "cztery rozwiązania. 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli trzy rozwiązania.",
@@ -14986,7 +14986,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "5",
       "7",
-      "$(-6)$ 1 $pkt - odp$owiedź poprawna."
+      "$(-6)$ 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 5",
@@ -15045,7 +15045,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Ciąg ($a_{n}$) jest malejący - fałsz. Ósmy wyraz ciągu ($a_{n}$) jest równy $136 - pra$wda.",
+    "explanation": "Ciąg ($a_{n}$) jest malejący - fałsz. Ósmy wyraz ciągu ($a_{n}$) jest równy 136 - prawda.",
     "solutionSteps": [
       "Sprawdzamy, czy ciąg jest malejący, badając znak różnicy $a_{n+1} - a_n$. Obliczamy $a_{n+1} = 2(n+1)^2 + (n+1) = 2(n^2+2n+1) + n+1 = 2n^2+4n+2+n+1 = 2n^2+5n+3$. Różnica $a_{n+1} - a_n = (2n^2+5n+3) - (2n^2+n) = 4n+3$. Dla $n \\ge 1$, $4n+3 > 0$, więc ciąg jest rosnący, a nie malejący.",
       "Obliczamy ósmy wyraz ciągu, podstawiając $n=8$ do wzoru $a_n = 2n^2+n$. Mamy $a_8 = 2 \\cdot 8^2 + 8 = 2 \\cdot 64 + 8 = 128 + 8 = 136$."
@@ -15072,7 +15072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 15$ i $y = 5$.",
@@ -15131,7 +15131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 $pkt - odp$owiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{12}{25}$",
@@ -15162,7 +15162,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$60^{\\circ}$",
       "$55^{\\circ}$",
       "$50^{\\circ}$",
-      "$65^{\\circ}$ 1 $pkt - odp$owiedź poprawna."
+      "$65^{\\circ}$ 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $60^{\\circ}$",
@@ -15346,14 +15346,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 $pkt - odp$owiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 $pkt - odp$owiedź poprawna.",
+    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 pkt - odpowiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 pkt - odpowiedź poprawna.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4\\sqrt{3}$ (zadanie 25.1), D, czyli $4$ (zadanie 25.2).",
     "solutionSteps": [
-      "Sześciokąt foremny składa się $z^{6}$ trójkątów równobocznych o boku $a$. Pole sześciokąta to $P_{sześciokąta} = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4}$. Wiemy, że $P_{sześciokąta} = 24\\sqrt{3}$, więc $24\\sqrt{3} = \\frac{3a^2 \\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i pomnożeniu przez $\\frac{2}{3}$, otrzymujemy $a^2 = 16$, co daje $a = 4$.",
+      "Sześciokąt foremny składa się z 6 trójkątów równobocznych o boku $a$. Pole sześciokąta to $P_{sześciokąta} = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4}$. Wiemy, że $P_{sześciokąta} = 24\\sqrt{3}$, więc $24\\sqrt{3} = \\frac{3a^2 \\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i pomnożeniu przez $\\frac{2}{3}$, otrzymujemy $a^2 = 16$, co daje $a = 4$.",
       "Trójkąt $ABE$ jest równoramienny, a jego podstawa $AB$ ma długość $a=4$. Kąt przy wierzchołku $A$ między bokami $AB$ i $AE$ wynosi $120^\\circ$ (ponieważ suma kątów w sześciokącie to $720^\\circ$, a każdy kąt wewnętrzny to $120^\\circ$). Pole trójkąta $ABE$ obliczymy ze wzoru $P_{ABE} = \\frac{1}{2} |AB| \\cdot |AE| \\sin(\\angle BAE)$. Ponieważ $|AB| = |AE| = a = 4$, mamy $P_{ABE} = \\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin(120^\\circ) = 8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$.",
       "Długość odcinka $AE$ jest równa długości boku sześciokąta, czyli $a$. Obliczyliśmy, że $a=4$."
     ],
@@ -15379,7 +15379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "4",
       "9",
-      "6 1 $pkt - odp$owiedź poprawna."
+      "6 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D) 9",
@@ -15410,7 +15410,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "(0,1) i (0,5).",
       "(0,1) i $(0, - 5)$.",
       "(1,0) i (5,0).",
-      "$(0, - 1)$ i (0,5). 1 $pkt - odp$owiedź poprawna."
+      "$(0, - 1)$ i (0,5). 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli (0,1) i (0,5).",
@@ -15469,7 +15469,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$m = -1$",
       "$m = 1$",
       "$m = \\frac{1}{2}$",
-      "$m = 2$ 1 $pkt - odp$owiedź poprawna."
+      "$m = 2$ 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m = 1$.",
@@ -15495,7 +15495,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 $pkt - odp$owiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 pkt - odpowiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15528,7 +15528,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3V",
       "9V",
       "18V",
-      "27V^{1} $pkt - odp$owiedź poprawna."
+      "27V^{1} pkt - odpowiedź poprawna."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $27V$",
@@ -15559,7 +15559,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{1}{9}$",
       "$\\frac{1}{2}$",
       "$\\frac{2}{9}$",
-      "$\\frac{2}{7}$ 1 $pkt - odp$owiedź poprawna."
+      "$\\frac{2}{7}$ 1 pkt - odpowiedź poprawna."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
@@ -15618,7 +15618,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6 600",
       "6 101",
       "36 100",
-      "36 600 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "36 600 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $36 \\cdot 100$.",
@@ -15650,7 +15650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "7",
       "2",
       "1",
-      "$(-1)$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$(-1)$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 2",
@@ -15681,7 +15681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "900",
       "729",
       "648",
-      "512 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "512 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 648",
@@ -15712,7 +15712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "32a^{2}",
       "0",
       "48a",
-      "8a^{2} 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "8a^{2} 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48a$.",
@@ -15738,7 +15738,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 $pkt - wyb$ranie dwóch poprawnych odpowiedzi. 1 $pkt - wyb$ranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt - wybranie dwóch poprawnych odpowiedzi. 1 pkt - wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15771,7 +15771,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "4",
       "6",
-      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 4",
@@ -15802,7 +15802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie jedno rozwiązanie: $x = 2$.",
       "dokładnie dwa rozwiązania: $x = 1,5$, $x = 2$.",
       "dokładnie trzy rozwiązania: $x = -6$, $x = 0$, $x = 2$.",
-      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$. 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$. 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = -6, 𝑥 = 0, 𝑥 = 1.5, 𝑥 = 2$.",
@@ -15833,13 +15833,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B",
     "solutionSteps": [
       "Rozwiąż nierówność z wartością bezwzględną: $|x+1| \\leq 2$ jest równoważne $-2 \\leq x+1 \\leq 2$.",
-      "Przekształć nierówność, odejmując_{1} od wszystkich jej stron: $-2-1 \\leq x \\leq 2-1$, co daje $-3 \\leq x \\leq 1$.",
+      "Przekształć nierówność, odejmując 1 od wszystkich jej stron: $-2-1 \\leq x \\leq 2-1$, co daje $-3 \\leq x \\leq 1$.",
       "Zaznacz otrzymany przedział na osi liczbowej, pamiętając, że ostre nierówności $(\\le , \\ge )$ oznaczają domknięte kółka na krańcach przedziału."
     ],
     "examSource": {
@@ -15887,7 +15887,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: $f(x) \\le 0$ ......................... 1 $pkt - roz$wiązanie poprawne. 0 $pkt - roz$wiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej.",
+    "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: $f(x) \\le 0$ ......................... 1 pkt - rozwiązanie poprawne. 0 pkt - rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -15921,7 +15921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$a > 0$ i $b > 0$.",
       "$a > 0$ i b",
       "$a_{0}$.",
-      "$a_{1} pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$a_{1}$ pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A) $a > 0$ i $b > 0$.",
@@ -15952,7 +15952,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$Q = -0,9P^{2} + 6,9$",
       "$Q = -3P + 27$",
       "$P = -0,9Q^{2} + 6,9$",
-      "$P = -3Q + 27$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$P = -3Q + 27$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $Q = -3P+27$",
@@ -15978,17 +15978,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0} - mas$a przyjętej dawki leku, $T - cza$s półtrwania leku, $t - cza$s liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 0,1 mg.",
+    "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0}$ - masa przyjętej dawki leku, T - czas półtrwania leku, t - czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 0,1 mg.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda $z^{10}$ poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej $z^{10}$ poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
+    "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda z 10 poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej z 10 poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
     "solutionSteps": [
       "**Zadanie 13.1.**",
       "Zauważ, że pacjent otrzymuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania wynosi $T = 4$ dni. Oznacza to, że po każdym kolejnym podaniu dawki leku, poprzednia dawka zmniejszy się o połowę.",
       "Pierwsza dawka $m_0 = 100$ mg. Po 4 dniach (przed przyjęciem drugiej dawki) pozostanie $100 \\cdot \\frac{1}{2} = 50$ mg. Po kolejnych 4 dniach (przed przyjęciem trzeciej dawki) pozostanie $50 \\cdot \\frac{1}{2} = 25$ mg z pierwszej dawki. Podobnie z kolejnymi dawkami.",
-      "Wykres powinien odzwierciedlać ten proces: po każdej podanej dawce masa leku skokowo rośnie, a następnie stopniowo maleje, zbliżając się do poziomu z poprzednich okresów. Taki charakter mają wykresy, gdzie funkcja maleje wykładniczo pomiędzy okresami. Wykres A przedstawia stały przyrost masy leku, wykres $B - nie$regularny, wykres $D - mal$ejącą masę leku od początku. Wykres C pokazuje prawidłowe zachowanie."
+      "Wykres powinien odzwierciedlać ten proces: po każdej podanej dawce masa leku skokowo rośnie, a następnie stopniowo maleje, zbliżając się do poziomu z poprzednich okresów. Taki charakter mają wykresy, gdzie funkcja maleje wykładniczo pomiędzy okresami. Wykres A przedstawia stały przyrost masy leku, wykres B - nieregularny, wykres D - malejącą masę leku od początku. Wykres C pokazuje prawidłowe zachowanie."
     ],
     "examSource": {
       "kind": "matura",
@@ -16012,7 +16012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20 000∙(1,12) 2",
       "20 000∙2⋅1,03",
       "20 000∙1,06",
-      "20 000∙(1,03) 2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "20 000∙(1,03) 2 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
@@ -16038,7 +16038,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16065,7 +16065,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16098,7 +16098,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(x - 2)$ 2 + $(y + 5) 2 = 9$",
       "$(x + 2)$ 2 + $(y - 5) 2 = 3$",
       "$(x - 2)$ 2 + $(y + 5) 2 = 3$",
-      "$(x + 2)$ 2 + $(y - 3) 2 = 9$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "$(x + 2)$ 2 + $(y - 3) 2 = 9$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(x-2)^2 + (y+5)^2 = 9$.",
@@ -16131,7 +16131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "6",
     "solutionSteps": [
-      "Zauważ, że trójkąty $ABO$ i $ODC$ są podobne na mocy cechy podobieństwa kąt-$bok - k$ąt$(K - B - K)$. Mamy wspólny kąt przy wierzchołku $O$ (kąty wierzchołkowe $\\angle AOB = \\angle DOC$), a także dane równości kątów $\\angle OAB = \\angle OCD$.",
+      "Zauważ, że trójkąty $ABO$ i $ODC$ są podobne na mocy cechy podobieństwa kąt-bok-kąt$(K - B - K)$. Mamy wspólny kąt przy wierzchołku $O$ (kąty wierzchołkowe $\\angle AOB = \\angle DOC$), a także dane równości kątów $\\angle OAB = \\angle OCD$.",
       "Z podobieństwa trójkątów wynikają proporcjonalności odpowiednich boków: $\\frac{|AO|}{|OC|} = \\frac{|BO|}{|OD|}$. Podstawiamy dane: $\\frac{5}{10} = \\frac{3}{|OD|}$.",
       "Rozwiązujemy równanie, aby znaleźć długość boku $OD$. Mamy $\\frac{1}{2} = \\frac{3}{|OD|}$, co po przekształceniu daje $|OD| = 2 \\cdot 3 = 6$."
     ],
@@ -16152,7 +16152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 $pkt - pop$rawne dokończenia dwóch zdań. 1 $pkt - pop$rawne dokończenie jednego zdania. 0 $pkt - odp$owiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 pkt - poprawne dokończenia dwóch zdań. 1 pkt - poprawne dokończenie jednego zdania. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16186,7 +16186,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10",
       "2√ 13",
       "2√ 10",
-      "8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
+      "8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2\\sqrt{13}$",
@@ -16216,7 +16216,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$30^{\\circ}$",
       "$45^{\\circ}$",
       "$15^{\\circ}$",
-      "$60^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi"
+      "$60^{\\circ}$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $30^\\circ$.",
@@ -16247,7 +16247,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{3}{4}$",
       "$\\frac{4}{3}$",
       "14",
-      "4 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "4 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{3}{4}$",
@@ -16309,7 +16309,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$52^{\\circ}$",
       "$26^{\\circ}$",
       "$14^{\\circ}$",
-      "$38^{\\circ}$ 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "$38^{\\circ}$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $38^{\\circ}$",
@@ -16340,7 +16340,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "8",
       "8√ 3",
       "2√ 3",
-      "2 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "2 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 2",
@@ -16371,7 +16371,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3∶4",
       "1∶4",
       "1∶8",
-      "3∶8 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "3∶8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1∶8$",
@@ -16402,7 +16402,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
     ],
     "correctIndex": 2,
     "explanation": "C",
@@ -16485,7 +16485,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 $pkt - obi$e odpowiedzi poprawne. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16576,9 +16576,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1 - sum$a reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$.",
+    "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1$ - suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$.",
     "solutionSteps": [
-      "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1 - sum$a reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$."
+      "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1$ - suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$."
     ],
     "examSource": {
       "kind": "matura",
@@ -16659,9 +16659,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: $1 - (\\frac{3}{2}) x + x < \\frac{2}{3}$.\nKrok 2: $1 - (\\frac{1}{2}) x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$",
+    "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 - ($\\frac{3}{2}$)$x + x < \\frac{2}{3}$.\nKrok 2: 1 - ($\\frac{1}{2}$)$x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$",
     "solutionSteps": [
-      "Krok 1: Przenosimy x na lewo, liczby na prawo: $1 - (\\frac{3}{2}) x + x < \\frac{2}{3}$.\nKrok 2: $1 - (\\frac{1}{2}) x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$"
+      "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 - ($\\frac{3}{2}$)$x + x < \\frac{2}{3}$.\nKrok 2: 1 - ($\\frac{1}{2}$)$x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$"
     ],
     "examSource": {
       "kind": "matura",
@@ -16711,9 +16711,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ $0 - dru$gie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
+    "explanation": "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ 0 - drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
     "solutionSteps": [
-      "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ $0 - dru$gie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
+      "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ 0 - drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
     ],
     "examSource": {
       "kind": "matura",
@@ -16758,7 +16758,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła_{60}% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
+    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -16899,14 +16899,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-1)$ n ⋅ $(n - 5)$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Pierwszy wyraz ciągu ($a_{n}$) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu ($a_{n}$) są dodatnie. A) prawda B) fałsz",
+    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-1)$ n ⋅ $(n - 5)$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Pierwszy wyraz ciągu ($a_{n}$) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu ($a_{n}$) są dodatnie. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Krok 1: a1 = -4, a3 = $-2 - pie$rwsze nie jest $2\\times wi$ększe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
+    "explanation": "Krok 1: a1 = -4, a3 = -2 - pierwsze nie jest 2\\times większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
     "solutionSteps": [
-      "Krok 1: a1 = -4, a3 = $-2 - pie$rwsze nie jest $2\\times wi$ększe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
+      "Krok 1: a1 = -4, a3 = -2 - pierwsze nie jest 2\\times większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
     ],
     "examSource": {
       "kind": "matura",
@@ -17310,7 +17310,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Zlicz całkowitą liczbę uczniów: $2 + 5 + 8 + 7 + 3 = 25$ uczniów.",
       "Znajdź środek danych, czyli pozycję $(25+1)/2 = 13$-tego ucznia (mediana).",
-      "Odczytaj ocenę dla $13 - teg$o ucznia; widzimy, że jest to ocena 3 (gdyż jest $2+5+8=15$ uczniów z oceną 3 lub niższą, $a_{13} - ty$ uczeń mieści się w tej grupie)."
+      "Odczytaj ocenę dla 13-tego ucznia; widzimy, że jest to ocena 3 (gdyż jest $2+5+8=15$ uczniów z oceną 3 lub niższą, $a_{13} - ty$ uczeń mieści się w tej grupie)."
     ],
     "examSource": {
       "kind": "matura",
@@ -17885,7 +17885,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez α, natomiast kąt $ABC - prz$ez β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
+    "prompt": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez α, natomiast kąt ABC - przez β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -17924,7 +17924,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "C, czyli $40^{\\circ}$",
     "solutionSteps": [
       "Kąt wpisany ABC opiera się na tym samym łuku co kąt środkowy AOC. Kąt ABC ma miarę dwa razy większą niż kąt AOC. Kąt ABC = $180^{\\circ}$ -$90^{\\circ}$ -$50^{\\circ}$ = $40^{\\circ}$.",
-      "Kąt środkowy $AOC = 2$ * $40^{\\circ}$ = $80^{\\circ}$. Trójkąt AOC jest równoramienny (ramiona to promienie okręgu), więc_{k}ąty przy podstawie OA i OC są równe. Kąt $OAC = k$ąt $OCA = ($180^{\\circ}$ - $80^{\\circ}$) / 2$ = $50^{\\circ}$.",
+      "Kąt środkowy $AOC = 2$ * $40^{\\circ}$ = $80^{\\circ}$. Trójkąt AOC jest równoramienny (ramiona to promienie okręgu), więc_{k}ąty przy podstawie OA i OC są równe. Kąt OAC = kąt $OCA = ($180^{\\circ}$ - $80^{\\circ}$) / 2$ = $50^{\\circ}$.",
       "Kąt ACB ma $50^{\\circ}$, $a_{k}$ąt OCA ma $50^{\\circ}$. Kąt ACO = $50^{\\circ}$. Kąt BCO ma $0^{\\circ}$, ponieważ punkty A, B, C leżą na okręgu.",
       "Trójkąt BOC jest równoramienny. Kąt OCB = $0^{\\circ}$. Kąt OBC = $0^{\\circ}$. Kąt BOC = $180^{\\circ}$.",
       "Kąt ABO jest równy $40^{\\circ}$ -$0^{\\circ}$ = $40^{\\circ}$."
@@ -17977,7 +17977,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo $F - je$śli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 $pkt - odp$owiedź poprawna. 0 $pkt - odp$owiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
       "Zadanie otwarte — patrz rozwiązanie"
     ],
@@ -18170,7 +18170,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Rozważ trzy przypadki ze względu na pozycję cyfry 0. Liczby trzycyfrowe mają postać $abc$, gdzie $a \\in \\{1, ..., 9\\}$ i $b, c \\in \\{0, ..., 9\\}$. Liczba musi być nieparzysta, czyli $c \\in \\{1, 3, 5, 7, 9\\}$.",
       "Przypadek 1: $a=0$ (niemożliwe, bo liczba musi być trzycyfrowa). Przypadek 2: $b=0$. Wtedy $a \\in \\{1, ..., 9\\}$ (9 możliwości) i $c \\in \\{1, 3, 5, 7, 9\\}$ (5 możliwości). Mamy $9 \\cdot 1 \\cdot 5 = 45$ takich liczb.",
       "Przypadek 3: $c=0$ (niemożliwe, bo liczba musi być nieparzysta). Przypadek 4: $a \\ne 0$, $b \\ne 0$, $c \\ne 0$ i tylko jedna z cyfr $a$ lub $b$ jest 0. Ale już wykluczyliśmy $c=0$. Więc przypadek 3: $a \\ne 0$, $b=0$, $c \\ne 0$ (rozpatrzono w kroku 2). Został przypadek 5: $a=0$ (niemożliwe) lub $b=0$ (rozpatrzono) lub $c=0$ (niemożliwe). **Poprawka:** Rozważmy pozycję zera.\n - Zera na pozycji setek: niemożliwe.\n - Zera na pozycji dziesiątek: $a \\in \\{1..9\\}$ (9 możliwości), $b=0$ (1 możliwość), $c \\in \\{1,3,5,7,9\\}$ (5 możliwości). $9 \\cdot 1 \\cdot 5 = 45$ liczb.\n - Zera na pozycji jedności: niemożliwe, bo liczba ma być nieparzysta.",
-      "Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc_{9} możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$)."
+      "Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc 9 możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$)."
     ],
     "examSource": {
       "kind": "matura",

@@ -38,6 +38,23 @@ describe("formatCkeMathText", () => {
     expect(out).toContain("a_{1}");
   });
 
+  it("nie zamienia przyimka „z” przed liczbą na potęgę", () => {
+    expect(formatCkeMathText("Ile to 20% z 150?")).toBe("Ile to 20% z 150?");
+    expect(formatCkeMathText("z 24 kolejnych liczb")).toBe(
+      "z 24 kolejnych liczb",
+    );
+    expect(formatCkeMathText("Ekipa złożona z 25 pracowników")).toBe(
+      "Ekipa złożona z 25 pracowników",
+    );
+    expect(formatCkeMathText("wybór 2 osób z 12")).toBe("wybór 2 osób z 12");
+    expect(formatCkeMathText("zbiór z 5 - elementowego")).toBe(
+      "zbiór z 5 - elementowego",
+    );
+
+    const power = formatCkeMathText("Zapisz: z 2 = 9.");
+    expect(power).toContain("z^{2}");
+  });
+
   it("owija nierówności i zachowuje obrazki markdown", () => {
     const out = formatCkeMathText(
       "Rozwiąż nierówność 2 x 2 − 4 x > ( x + 3)( x − 2) . ![Rysunek](/cke-matura/x.png)",

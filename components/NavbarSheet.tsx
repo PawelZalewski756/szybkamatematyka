@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  isNavLinkVisible,
   NAV_MORE_GROUPS,
   NAV_PRIMARY_LINKS,
   type NavLink,
@@ -46,11 +47,13 @@ type NavbarSheetProps = {
   /** Główne linki w panelu (mobile / tablet). */
   showPrimaryLinks?: boolean;
   showPro?: boolean;
+  isLoggedIn: boolean;
 };
 
 export function NavbarSheet({
   showPrimaryLinks = false,
   showPro = false,
+  isLoggedIn,
 }: NavbarSheetProps) {
   const pathname = usePathname();
   const [menuPath, setMenuPath] = useState<string | null>(null);
@@ -64,9 +67,13 @@ export function NavbarSheet({
   );
   const sheetId = useId();
   const { path, setPath, clearPath, hasPathSelection } = useLearningPath();
+  const visibleGroups = NAV_MORE_GROUPS.map((group) => ({
+    ...group,
+    links: group.links.filter((link) => isNavLinkVisible(link, isLoggedIn)),
+  })).filter((group) => group.links.length > 0);
 
   const menuActive =
-    NAV_MORE_GROUPS.some((g) =>
+    visibleGroups.some((g) =>
       g.links.some((l) => isNavActive(pathname, l.href)),
     ) ||
     isNavActive(pathname, "/profil") ||
@@ -169,7 +176,7 @@ export function NavbarSheet({
                   </div>
                 )}
 
-                {NAV_MORE_GROUPS.map((group, index) => (
+                {visibleGroups.map((group, index) => (
                   <div
                     key={group.label ?? "misc"}
                     className={

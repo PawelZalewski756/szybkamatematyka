@@ -1,3 +1,4 @@
+import { ReviewAccessGate } from "@/components/powtorki/ReviewAccessGate";
 import { PowtorkiView } from "@/components/powtorki/PowtorkiView";
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function PowtorkiPage() {
         <div className="absolute right-0 top-32 h-72 w-72 rounded-full bg-accent/15 blur-[120px]" />
       </div>
       <div className="relative z-10 flex min-h-0 flex-1 flex-col">
-        <PowtorkiView />
+        <ReviewAccessGate>
+          <PowtorkiView />
+        </ReviewAccessGate>
       </div>
     </div>
   );

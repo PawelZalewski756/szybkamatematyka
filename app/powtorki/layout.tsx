@@ -1,4 +1,3 @@
-import { ReviewProvider } from "@/components/powtorki/ReviewProvider";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -10,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function PowtorkiLayout({ children }: { children: ReactNode }) {
-  return <ReviewProvider>{children}</ReviewProvider>;
+  return children;
 }

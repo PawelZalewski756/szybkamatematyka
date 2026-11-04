@@ -114,8 +114,17 @@ function compactSpacedMath(text: string): string {
 
   // Potęgi / indeksy: x 2, a 4 (tylko samotna litera — nie środek polskiego słowa)
   out = out.replace(
-    /\b([a-zA-Z])\s+(\d+)\b/g,
-    (full, base: string, exp: string) => {
+    /(?<![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])([a-zA-Z])\s+(\d+)(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])/g,
+    (full, base: string, exp: string, offset: number, whole: string) => {
+      if (base === "z") {
+        // „z 150” can be ordinary Polish text, so require a nearby math operator.
+        const before = whole.slice(0, offset);
+        const after = whole.slice(offset + full.length);
+        const hasMathContext =
+          /[A-Za-z0-9)]\s*[=+\-*/<>≤≥]\s*$/.test(before) ||
+          /^\s*(?:[=<>≤≥]|[+*/-]\s*(?:\\(?:frac|sqrt|times|cdot)|\d|[A-Za-z](?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])|\())/.test(after);
+        if (!hasMathContext) return full;
+      }
       if (POWER_BASES.has(base)) return `${base}^{${exp}}`;
       if (SUB_BASES.has(base) || SUB_BASES.has(base.toLowerCase())) {
         return `${base}_{${exp}}`;
@@ -215,7 +224,7 @@ function wrapMathIslands(text: string): string {
   const op = String.raw`(?:[=<>≤≥+\-*/]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
   // Operator albo juxtapozycja nawiasów: (x+3)(x-2)
   const island = new RegExp(
-    `(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])${atom}(?:\\s*${op}\\s*${atom}|(?=\\()${atom})+`,
+    `(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])${atom}(?:\\s*${op}\\s*${atom}|(?=\\()${atom})+(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])`,
     "g",
   );
 
