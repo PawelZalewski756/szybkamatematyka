@@ -1,7 +1,11 @@
 import { describe, expect, it } from "vitest";
 
 import { TRAINING_CURRICULUM } from "@/lib/trening/curriculum";
-import { getNextTopic } from "@/lib/trening/next-topic";
+import {
+  examKeyForLearningPath,
+  getFirstTopic,
+  getNextTopic,
+} from "@/lib/trening/next-topic";
 
 describe("getNextTopic", () => {
   const cats = TRAINING_CURRICULUM["8_klasa"].categories;
@@ -23,5 +27,17 @@ describe("getNextTopic", () => {
     expect(getNextTopic("8_klasa", lastCat.id, lastCat.topics.at(-1)!.id)).toBeNull();
     expect(getNextTopic("8_klasa", "x", "y")).toBeNull();
     expect(getNextTopic("matura_rozszerzona", "x", "y")).toBeNull();
+  });
+});
+
+describe("getFirstTopic / examKeyForLearningPath", () => {
+  it("mapuje ścieżkę na egzamin", () => {
+    expect(examKeyForLearningPath("sp")).toBe("8_klasa");
+    expect(examKeyForLearningPath("srednia")).toBe("matura_podstawowa");
+  });
+
+  it("zwraca pierwszy temat dla obu egzaminów", () => {
+    expect(getFirstTopic("8_klasa")).not.toBeNull();
+    expect(getFirstTopic("matura_podstawowa")).not.toBeNull();
   });
 });

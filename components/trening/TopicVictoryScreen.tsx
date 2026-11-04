@@ -39,10 +39,10 @@ export function TopicVictoryScreen({
         </motion.div>
 
         <h2 className="mt-8 text-2xl font-black text-amber-200 sm:text-4xl">
-          Temat Ukończony!
+          Temat ukończony
         </h2>
         <p className="mt-3 max-w-md text-sm font-semibold text-foreground sm:text-base">
-          Zmiażdżyłeś wszystkie zadania!
+          Wszystkie zadania z tego tematu są rozwiązane.
         </p>
 
         <div className="mt-10 flex w-full max-w-sm flex-col items-stretch gap-3">

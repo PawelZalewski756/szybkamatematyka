@@ -338,7 +338,7 @@ export function TaskArena({
         {!compactChrome && <GamingBackground />}
         <Loader2 className="relative z-10 h-10 w-10 animate-spin text-brand" />
         <p className="relative z-10 mt-3 text-sm font-semibold text-muted">
-          Ładowanie areny…
+          Ładowanie zadań…
         </p>
       </div>
     );
