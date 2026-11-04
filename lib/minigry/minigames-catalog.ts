@@ -10,7 +10,6 @@ export type MinigameEntry = {
   href: string;
   title: string;
   description: string;
-  emoji: string;
   gradient: string;
   glow: string;
   available: boolean;
@@ -23,7 +22,6 @@ export const MINIGAMES_CATALOG: MinigameEntry[] = MINIGAME_REGISTRY.map(
     href: `/minigry/${game.slug}`,
     title: game.title,
     description: game.description,
-    emoji: game.emoji,
     gradient: game.gradient,
     glow: game.glow,
     available: true,

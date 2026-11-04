@@ -4,13 +4,24 @@ import { useDuel } from "@/components/pojedynki/DuelProvider";
 import { OnlineDuel } from "@/components/pojedynki/OnlineDuel";
 import { ChallengeDuel } from "@/components/pojedynki/ChallengeDuel";
 import { LocalDuel } from "@/components/pojedynki/LocalDuel";
+import { groupMinigames } from "@/components/minigry/minigame-groups";
+import { MINIGAME_GROUP_ICONS } from "@/components/minigry/minigame-group-icons";
 import { getMinigamesForPath } from "@/lib/minigry/minigames-catalog";
 import { DUEL_LENGTH_OPTIONS, type DuelLength } from "@/lib/pojedynki/duel-config";
 import { BOT_PRESETS, type BotLevel } from "@/lib/pojedynki/duel-storage";
 import { learningPathLabel } from "@/lib/learning-path";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { motion } from "framer-motion";
-import { Bot, Pencil, Radio, Share2, Swords, Users } from "lucide-react";
+import {
+  Bot,
+  Calculator,
+  Pencil,
+  Radio,
+  Share2,
+  Swords,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import { useState } from "react";
 
 type Delivery = "online" | "challenge" | "local" | "bot";
@@ -75,6 +86,11 @@ export function PojedynkiHome() {
 
   const { recommended, other } = getMinigamesForPath(path);
   const games = [...recommended, ...other];
+  const iconByGameId = new Map<string, LucideIcon>();
+  for (const group of groupMinigames(games)) {
+    const Icon = MINIGAME_GROUP_ICONS[group.visual.icon];
+    for (const game of group.games) iconByGameId.set(game.id, Icon);
+  }
   const pathLabel = learningPathLabel(path);
   const supabaseOn = isSupabaseConfigured();
 
@@ -133,6 +149,7 @@ export function PojedynkiHome() {
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {games.map((game) => {
             const selected = game.id === slug;
+            const Icon = iconByGameId.get(game.id) ?? Calculator;
             return (
               <button
                 key={game.id}
@@ -144,7 +161,9 @@ export function PojedynkiHome() {
                     : "border-surface-border bg-surface hover:border-accent/30 hover:bg-surface-hover"
                 }`}
               >
-                <span className="text-3xl">{game.emoji}</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-accent/20 bg-accent/5 text-accent">
+                  <Icon className="h-4 w-4" strokeWidth={1.8} aria-hidden />
+                </span>
                 <span className="mt-2 text-sm font-black text-foreground">
                   {game.title}
                 </span>

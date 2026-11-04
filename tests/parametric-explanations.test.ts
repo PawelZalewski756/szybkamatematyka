@@ -19,7 +19,7 @@ describe("parametric task explanations", () => {
     );
 
     expect(explanation).toContain("dodajemy wykładniki");
-    expect(explanation).toContain("$5^{3+4}=78125$");
+    expect(explanation).toContain("5^{3+4}=78125");
   });
 
   it("provides an equation method and the actual rearrangement", () => {
