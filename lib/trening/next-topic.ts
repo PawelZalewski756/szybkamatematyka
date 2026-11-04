@@ -42,3 +42,23 @@ export function getNextTopic(
     categoryName: next.category.name,
   };
 }
+
+export type LearningPathKey = "sp" | "srednia";
+
+export function examKeyForLearningPath(path: LearningPathKey): TreningExamKey {
+  return path === "sp" ? "8_klasa" : "matura_podstawowa";
+}
+
+/** Pierwszy temat egzaminu — punkt startu dla nowego użytkownika. */
+export function getFirstTopic(examKey: TreningExamKey): NextTopic | null {
+  const category = TRAINING_CURRICULUM[examKey].categories.find(
+    (c) => c.topics.length > 0,
+  );
+  const topic = category?.topics[0];
+  if (!category || !topic) return null;
+  return {
+    href: buildTopicHref(examKey, category.id, topic.id),
+    name: topic.name,
+    categoryName: category.name,
+  };
+}
