@@ -33,7 +33,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
   return (
     <div className="w-full py-8 sm:py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-3xl font-black text-white sm:text-4xl md:text-5xl">
+        <h1 className="text-3xl font-black text-foreground sm:text-4xl md:text-5xl">
           Po
           <span className="text-gradient-brand">wtórki</span>
         </h1>
@@ -56,7 +56,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
               <Brain className="h-3.5 w-3.5" />
               Do powtórki dziś
             </div>
-            <p className="mt-3 text-5xl font-black text-white tabular-nums">
+            <p className="mt-3 text-5xl font-black text-foreground tabular-nums">
               {dueCount}
             </p>
             <p className="mt-1 text-sm font-semibold text-muted">
@@ -81,7 +81,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
 
         <div className="mt-6 grid grid-cols-2 gap-3 border-t border-surface-border pt-6 sm:max-w-md">
           <div>
-            <p className="text-2xl font-black text-white tabular-nums">
+            <p className="text-2xl font-black text-foreground tabular-nums">
               {totalCount}
             </p>
             <p className="text-xs font-semibold text-muted">
@@ -89,7 +89,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
             </p>
           </div>
           <div>
-            <p className="text-2xl font-black text-white tabular-nums">
+            <p className="text-2xl font-black text-foreground tabular-nums">
               {upcomingCount}
             </p>
             <p className="text-xs font-semibold text-muted">
@@ -101,7 +101,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         <section>
-          <h2 className="text-lg font-black text-white">Twoja talia powtórek</h2>
+          <h2 className="text-lg font-black text-foreground">Twoja talia powtórek</h2>
           {sortedItems.length === 0 ? (
             <p className="mt-3 rounded-2xl border border-surface-border bg-surface/60 px-4 py-6 text-sm text-muted">
               Nic tu jeszcze nie ma. Dodaj zadania po prawej, a my zajmiemy się

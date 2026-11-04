@@ -22,7 +22,7 @@ export function DuelQuestionCard({
   disabled = false,
   onAnswer,
 }: DuelQuestionCardProps) {
-  const answerBtn = `min-h-[68px] rounded-2xl border bg-surface font-black text-foreground shadow-lg transition-colors hover:bg-white/5 disabled:opacity-60 sm:min-h-[76px] ${answerClass}`;
+  const answerBtn = `min-h-[68px] rounded-2xl border bg-surface font-black text-foreground shadow-lg transition-colors hover:bg-foreground/5 disabled:opacity-60 sm:min-h-[76px] ${answerClass}`;
 
   if (question.kind === "choice") {
     const q = question.q;

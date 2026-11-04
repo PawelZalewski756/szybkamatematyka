@@ -32,7 +32,7 @@ import { useEffect, useState } from "react";
 type AuthView = "login" | "signup";
 
 const inputClassName =
-  "rounded-2xl border border-surface-border bg-background px-4 py-3.5 text-white outline-none transition-shadow placeholder:text-muted focus:ring-4";
+  "rounded-2xl border border-surface-border bg-background px-4 py-3.5 text-foreground outline-none transition-shadow placeholder:text-muted focus:ring-4";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -279,7 +279,7 @@ export default function LoginPage() {
             <p className="text-center text-sm font-bold uppercase tracking-widest text-accent">
               Logowanie
             </p>
-            <h1 className="mt-2 text-center text-3xl font-black text-white sm:text-4xl">
+            <h1 className="mt-2 text-center text-3xl font-black text-foreground sm:text-4xl">
               Zaloguj się do{" "}
               <span className="text-gradient-brand">Szybkiej Matematyki</span>
             </h1>
@@ -352,7 +352,7 @@ export default function LoginPage() {
                 type="button"
                 disabled={loading}
                 onClick={switchToSignup}
-                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-lg font-black text-white transition-colors hover:border-accent/40 hover:bg-accent/10 disabled:opacity-60"
+                className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-lg font-black text-foreground transition-colors hover:border-accent/40 hover:bg-accent/10 disabled:opacity-60"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -385,7 +385,7 @@ export default function LoginPage() {
               <p className="mt-2 text-sm font-bold uppercase tracking-widest text-accent/90">
                 Nowe konto
               </p>
-              <h1 className="mt-2 text-3xl font-black text-white sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-black text-foreground sm:text-4xl">
                 Dołącz do{" "}
                 <span className="text-gradient-brand">Szybkiej Matematyki</span>
               </h1>

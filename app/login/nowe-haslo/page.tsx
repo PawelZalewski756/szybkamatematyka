@@ -158,7 +158,7 @@ export default function NoweHasloPage() {
         <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
           Nowe hasło
         </p>
-        <h1 className="mt-2 text-center text-2xl font-black text-white sm:text-3xl">
+        <h1 className="mt-2 text-center text-2xl font-black text-foreground sm:text-3xl">
           Ustaw nowe hasło
         </h1>
         <p className="mt-3 text-center text-sm text-muted">
@@ -225,7 +225,7 @@ export default function NoweHasloPage() {
             {message && <AuthAlert message={message} isError={isError} />}
             <Link
               href="/login/zapomniane-haslo"
-              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-sm font-bold text-white transition hover:border-accent/30"
+              className="flex min-h-[52px] items-center justify-center rounded-2xl border border-surface-border bg-background text-sm font-bold text-foreground transition hover:border-accent/30"
             >
               Poproś o nowy link
             </Link>

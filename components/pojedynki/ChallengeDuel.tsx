@@ -271,7 +271,7 @@ export function ChallengeDuel({
           <button
             type="button"
             onClick={restartCreate}
-            className="flex-1 rounded-2xl border border-surface-border px-6 py-4 text-lg font-black text-foreground hover:bg-white/5"
+            className="flex-1 rounded-2xl border border-surface-border px-6 py-4 text-lg font-black text-foreground hover:bg-foreground/5"
           >
             Zagraj jeszcze raz
           </button>

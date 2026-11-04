@@ -229,7 +229,7 @@ function MaterialyAdminContent() {
         ← Panel administratora
       </Link>
 
-      <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+      <h1 className="mt-4 text-3xl font-black text-foreground sm:text-4xl">
         Materiały{" "}
         <span className="bg-gradient-to-r from-accent to-accent bg-clip-text text-transparent">
           teoretyczne
@@ -262,7 +262,7 @@ function MaterialyAdminContent() {
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_minmax(0,22rem)]">
         <section className="min-w-0 rounded-3xl border border-surface-border bg-surface/80 p-4 backdrop-blur-xl sm:p-6">
           <div className="mb-4 flex items-center justify-between gap-3">
-            <h2 className="text-lg font-black text-white">Lista ({rows.length})</h2>
+            <h2 className="text-lg font-black text-foreground">Lista ({rows.length})</h2>
             <Link
               href="/admin/materialy"
               className="shrink-0 rounded-xl border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent hover:bg-accent/20"
@@ -282,7 +282,7 @@ function MaterialyAdminContent() {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[32rem] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-surface-border text-[10px] font-bold uppercase tracking-wider text-muted">
+                  <tr className="border-b border-surface-border text-xs font-bold uppercase tracking-wider text-muted">
                     <th className="pb-2 pr-3">Egzamin</th>
                     <th className="pb-2 pr-3">Dział</th>
                     <th className="pb-2 pr-3">Temat</th>
@@ -295,7 +295,7 @@ function MaterialyAdminContent() {
                     return (
                       <tr
                         key={row.id}
-                        className={`border-b border-white/5 transition hover:bg-white/[0.03] ${
+                        className={`border-b border-foreground/5 transition hover:bg-foreground/[0.03] ${
                           active ? "bg-accent/10" : ""
                         }`}
                       >
@@ -311,7 +311,7 @@ function MaterialyAdminContent() {
                         <td className="py-2.5">
                           <Link
                             href={`/admin/materialy?id=${row.id}`}
-                            className="font-semibold text-white hover:text-accent"
+                            className="font-semibold text-foreground hover:text-accent"
                           >
                             {row.title}
                           </Link>
@@ -329,7 +329,7 @@ function MaterialyAdminContent() {
           onSubmit={(e) => void handleSubmit(e)}
           className="space-y-4 rounded-3xl border border-surface-border bg-surface/80 p-5 backdrop-blur-xl sm:p-6"
         >
-          <h2 className="text-lg font-black text-white">
+          <h2 className="text-lg font-black text-foreground">
             {editId ? "Edycja" : "Nowy materiał"}
           </h2>
 
@@ -340,7 +340,7 @@ function MaterialyAdminContent() {
               onChange={(e) =>
                 handleExamTypeChange(e.target.value as ExamType)
               }
-              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
             >
               {EXAM_TYPES.map((opt) => (
                 <option key={opt.value} value={opt.value}>
@@ -357,7 +357,7 @@ function MaterialyAdminContent() {
                 value={form.category}
                 onChange={(e) => handleCategoryChange(e.target.value)}
                 required
-                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
               >
                 <option value="">Wybierz dział…</option>
                 {ckeCategories.map((category) => (
@@ -374,7 +374,7 @@ function MaterialyAdminContent() {
                 }
                 required
                 placeholder="np. algebra"
-                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-sm text-white outline-none focus:border-accent/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-sm text-foreground outline-none focus:border-accent/50"
               />
             )}
           </div>
@@ -386,7 +386,7 @@ function MaterialyAdminContent() {
                 value={form.topic}
                 onChange={(e) => handleTopicChange(e.target.value)}
                 required
-                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
               >
                 <option value="">Wybierz temat…</option>
                 {selectedCategory.topics.map((topic) => (
@@ -403,7 +403,7 @@ function MaterialyAdminContent() {
                 }
                 required
                 placeholder="np. rownania_liniowe"
-                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-sm text-white outline-none focus:border-accent/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-sm text-foreground outline-none focus:border-accent/50"
               />
             )}
           </div>
@@ -416,7 +416,7 @@ function MaterialyAdminContent() {
                 setForm((f) => ({ ...f, title: e.target.value }))
               }
               required
-              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
             />
           </div>
 
@@ -442,7 +442,7 @@ function MaterialyAdminContent() {
                     role="tab"
                     aria-selected={editorTab === tab.id}
                     onClick={() => setEditorTab(tab.id)}
-                    className={`rounded-lg px-3 py-1 text-[11px] font-bold transition ${
+                    className={`rounded-lg px-3 py-1 text-xs font-bold transition ${
                       editorTab === tab.id
                         ? "bg-accent/20 text-accent"                         : "text-muted hover:text-foreground"
                     }`}
@@ -461,7 +461,7 @@ function MaterialyAdminContent() {
                 required
                 rows={10}
                 placeholder="## Wzór&#10;&#10;$$ x = ... $$"
-                className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-xs text-white outline-none focus:border-success/50"
+                className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 font-mono text-xs text-foreground outline-none focus:border-success/50"
               />
             ) : (
               <div
@@ -490,7 +490,7 @@ function MaterialyAdminContent() {
                 setForm((f) => ({ ...f, video_url: e.target.value }))
               }
               placeholder="https://…"
-              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
             />
           </div>
 

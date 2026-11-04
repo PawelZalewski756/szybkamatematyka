@@ -26,6 +26,8 @@ import { mergeTheorySummaries } from "@/lib/trening/seed/theory-index";
 import type { TheoryTier } from "@/lib/trening/theory-content";
 import type { ExamType } from "@/types/database";
 import Link from "next/link";
+import { useLearningPath } from "@/components/LearningPathProvider";
+import { examKeyForLearningPath } from "@/lib/trening/next-topic";
 import {
   ArrowRight,
   BookOpen,
@@ -346,7 +348,7 @@ function TopicRow({
               style={{ width: `${progress}%` }}
             />
           </div>
-          <span className="mt-1 block text-right text-[11px] text-muted">
+          <span className="mt-1 block text-right text-xs text-muted">
             {statusLabel}
           </span>
         </div>
@@ -803,6 +805,7 @@ function emptyExamFor(key: SelectedExam): ExamWithProgress {
 }
 
 export default function TreningPage() {
+  const { path: learningPath, setPath: setLearningPath } = useLearningPath();
   const [selectedExam, setSelectedExam] =
     useState<SelectedExam>("matura_podstawowa");
   const [exam, setExam] = useState<ExamWithProgress>(() =>
@@ -901,7 +904,21 @@ export default function TreningPage() {
     return () => clearTimeout(timer);
   }, [searchInput]);
 
+  const pathSyncedRef = useRef(false);
+  useEffect(() => {
+    if (pathSyncedRef.current || !learningPath) return;
+    pathSyncedRef.current = true;
+    const key = examKeyForLearningPath(learningPath);
+    if (key !== "matura_podstawowa") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSelectedExam(key);
+      setExam(emptyExamFor(key));
+    }
+  }, [learningPath]);
+
   const handleExamChange = (key: SelectedExam) => {
+    if (key === "8_klasa") setLearningPath("sp");
+    else if (key === "matura_podstawowa") setLearningPath("srednia");
     setSelectedExam(key);
     setExam(emptyExamFor(key));
     setTheoryByTopic(new Map());

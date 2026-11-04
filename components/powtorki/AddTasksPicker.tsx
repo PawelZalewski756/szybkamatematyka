@@ -32,7 +32,7 @@ export function AddTasksPicker() {
 
   return (
     <div className="rounded-3xl border border-surface-border bg-surface/60 p-5 sm:p-6">
-      <h2 className="text-lg font-black text-white">Dodaj zadania do powtórek</h2>
+      <h2 className="text-lg font-black text-foreground">Dodaj zadania do powtórek</h2>
       <p className="mt-1 text-sm text-muted">
         {search.trim()
           ? "Wyniki wyszukiwania w bazie zadań."

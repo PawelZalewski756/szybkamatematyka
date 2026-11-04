@@ -28,8 +28,8 @@ export function NavbarClassBadge({
     <span
       className={
         inline
-          ? `inline-flex max-w-full shrink-0 items-center truncate px-2.5 py-1 text-[11px] font-bold text-accent ${className}`
-          : `inline-flex max-w-full shrink-0 items-center truncate rounded-full border border-accent/25 bg-accent/10 px-2.5 py-1 text-[11px] font-bold text-accent ${className}`
+          ? `inline-flex max-w-full shrink-0 items-center truncate px-2.5 py-1 text-xs font-bold text-accent ${className}`
+          : `inline-flex max-w-full shrink-0 items-center truncate rounded-full border border-accent/25 bg-accent/10 px-2.5 py-1 text-xs font-bold text-accent ${className}`
       }
       title={full}
     >

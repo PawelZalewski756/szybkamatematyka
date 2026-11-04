@@ -81,8 +81,8 @@ function StreakBanner({
         </p>
       </div>
       {bestStreak > 0 && bestStreak > streak && (
-        <div className="ml-auto rounded-xl border border-surface-border bg-white/5 px-3 py-1.5 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-muted">
+        <div className="ml-auto rounded-xl border border-surface-border bg-foreground/5 px-3 py-1.5 text-center">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">
             Rekord
           </p>
           <p className="text-sm font-black text-accent tabular-nums">
@@ -110,7 +110,7 @@ function RewardScreen({
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: 12 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 text-center backdrop-blur-xl sm:p-8"
+      className="rounded-3xl border border-foreground/15 bg-foreground/[0.06] p-6 text-center backdrop-blur-xl sm:p-8"
     >
       <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-accent shadow-[0_0_28px_rgba(244,183,64,0.35)]">
         <CheckCircle2 className="h-9 w-9 text-on-accent" aria-hidden />
@@ -129,7 +129,7 @@ function RewardScreen({
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-center gap-1.5 text-accent">
             <Zap className="h-4 w-4" aria-hidden />
-            <span className="text-[10px] font-bold uppercase tracking-wide">
+            <span className="text-xs font-bold uppercase tracking-wide">
               Nagroda XP
             </span>
           </div>
@@ -140,7 +140,7 @@ function RewardScreen({
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-center gap-1.5 text-accent">
             <Flame className="h-4 w-4" aria-hidden />
-            <span className="text-[10px] font-bold uppercase tracking-wide">
+            <span className="text-xs font-bold uppercase tracking-wide">
               Seria
             </span>
           </div>
@@ -166,7 +166,7 @@ function RewardScreen({
         </p>
       )}
 
-      <div className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-surface-border bg-white/5 px-4 py-3 text-sm font-semibold text-foreground">
+      <div className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-surface-border bg-foreground/5 px-4 py-3 text-sm font-semibold text-foreground">
         <CalendarCheck className="h-4 w-4 text-accent" aria-hidden />
         Następne wyzwanie jutro
       </div>
@@ -313,7 +313,7 @@ export function DailyChallengeView() {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
-                  className="rounded-3xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-8"
+                  className="rounded-3xl border border-foreground/15 bg-foreground/[0.06] p-6 backdrop-blur-xl sm:p-8"
                 >
                   <div className="flex items-center gap-2 text-accent">
                     <Swords className="h-5 w-5" aria-hidden />
@@ -383,7 +383,7 @@ export function DailyChallengeView() {
                         ? "border-success/50 bg-success/10"
                         : feedback === "wrong"
                           ? "border-red-500/50 bg-red-500/10"
-                          : "border-white/15 bg-white/[0.06]"
+                          : "border-foreground/15 bg-foreground/[0.06]"
                     }`}
                   >
                     <MathText

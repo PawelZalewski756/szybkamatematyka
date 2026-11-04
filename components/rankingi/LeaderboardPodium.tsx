@@ -100,13 +100,13 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
               />
               <PodiumAvatar entry={entry} sizeClass={slot.avatar} />
             </div>
-            <p className="max-w-full truncate text-center text-xs font-black text-white sm:text-sm">
+            <p className="max-w-full truncate text-center text-xs font-black text-foreground sm:text-sm">
               {entry.nick}
             </p>
             <div className="mt-1 flex justify-center">
               <LevelBadge level={entry.level} size="sm" />
             </div>
-            <p className="mt-0.5 text-[10px] font-bold tabular-nums text-accent sm:text-xs">
+            <p className="mt-0.5 text-xs font-bold tabular-nums text-accent sm:text-xs">
               {formatCompactXp(entry.xp)}
             </p>
             <div
@@ -117,7 +117,7 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
               >
                 {slot.place}
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">
+              <span className="text-xs font-bold uppercase tracking-wider text-muted">
                 miejsce
               </span>
             </div>

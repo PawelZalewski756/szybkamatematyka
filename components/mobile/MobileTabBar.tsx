@@ -12,10 +12,10 @@ import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import type { User } from "@supabase/supabase-js";
 import {
   Ellipsis,
+  Gamepad2,
   GraduationCap,
   Home,
-  Play,
-  UserRound,
+  Library,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -38,7 +38,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </Link>
@@ -75,7 +75,7 @@ function TabButton({
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </button>
@@ -109,8 +109,6 @@ export function MobileTabBar() {
   const [loggingOut, setLoggingOut] = useState(false);
 
   const activeTab = getMobileActiveTab(pathname);
-  const profilHref = user ? "/profil" : "/login";
-  const profilLabel = user ? "Profil" : "Konto";
 
   useEffect(() => {
     if (!isSupabaseConfigured()) return;
@@ -163,7 +161,7 @@ export function MobileTabBar() {
         className="fixed inset-x-0 bottom-0 z-[90] border-t border-surface-border bg-surface pb-[max(env(safe-area-inset-bottom,0px),0px)] lg:hidden"
         aria-label="Nawigacja mobilna"
       >
-        <div className="mx-auto flex h-16 max-w-lg items-end px-1">
+        <div className="mx-auto flex h-16 max-w-lg items-center px-1">
           <TabLink
             href="/"
             label="Start"
@@ -177,35 +175,21 @@ export function MobileTabBar() {
             active={activeTab === "trening"}
           />
 
-          <div className="relative flex min-w-0 flex-1 flex-col items-center">
-            <button
-              type="button"
-              onClick={() => {
-                setMoreOpen(false);
-                setGrajOpen((v) => !v);
-              }}
-              aria-expanded={grajOpen}
-              aria-label="Graj"
-              className={`-mt-5 flex h-14 w-14 items-center justify-center rounded-full border-2 border-surface-border bg-surface-hover text-foreground transition hover:bg-surface active:scale-95`}
-            >
-              <Play className="ml-0.5 h-6 w-6" aria-hidden />
-            </button>
-            <span
-              className={`mt-1 text-[10px] font-semibold leading-tight ${
-                isMobileGrajActive(pathname) || grajOpen
-                  ? "text-foreground"
-                  : "text-muted"
-              }`}
-            >
-              Graj
-            </span>
-          </div>
-
           <TabLink
-            href={profilHref}
-            label={profilLabel}
-            icon={UserRound}
-            active={activeTab === "profil"}
+            href="/baza-zadan"
+            label="Zadania"
+            icon={Library}
+            active={activeTab === "zadania"}
+          />
+          <TabButton
+            label="Graj"
+            icon={Gamepad2}
+            active={isMobileGrajActive(pathname) || grajOpen}
+            onClick={() => {
+              setMoreOpen(false);
+              setGrajOpen((v) => !v);
+            }}
+            ariaExpanded={grajOpen}
           />
           <TabButton
             label="Więcej"

@@ -3,6 +3,7 @@
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { getNextTopic } from "@/lib/trening/next-topic";
 import { TopicVictoryScreen } from "@/components/trening/TopicVictoryScreen";
 import {
   awardArenaXp,
@@ -336,8 +337,8 @@ export function TaskArena({
       <div className="relative flex min-h-[50vh] flex-1 flex-col items-center justify-center">
         {!compactChrome && <GamingBackground />}
         <Loader2 className="relative z-10 h-10 w-10 animate-spin text-brand" />
-        <p className="relative z-10 mt-3 text-sm font-semibold text-zinc-400">
-          Ładowanie areny…
+        <p className="relative z-10 mt-3 text-sm font-semibold text-muted">
+          Ładowanie zadań…
         </p>
       </div>
     );
@@ -372,10 +373,10 @@ export function TaskArena({
       return (
         <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
           {!compactChrome && <GamingBackground />}
-          <p className="relative z-10 text-lg font-bold text-zinc-200">
+          <p className="relative z-10 text-lg font-bold text-foreground">
             Brak zadań dla wybranego filtra
           </p>
-          <p className="relative z-10 mt-2 max-w-sm text-sm text-zinc-400">
+          <p className="relative z-10 mt-2 max-w-sm text-sm text-muted">
             Wybierz inną trudność lub „Wszystkie”, aby kontynuować sesję.
           </p>
         </div>
@@ -385,10 +386,10 @@ export function TaskArena({
       return (
         <div className="relative flex flex-1 flex-col items-center justify-center py-16 text-center">
           {!compactChrome && <GamingBackground />}
-          <p className="relative z-10 text-lg font-bold text-zinc-200">
+          <p className="relative z-10 text-lg font-bold text-foreground">
             Brak zadań w tym temacie
           </p>
-          <p className="relative z-10 mt-2 max-w-sm text-sm text-zinc-400">
+          <p className="relative z-10 mt-2 max-w-sm text-sm text-muted">
             Zadania pojawią się po imporcie do bazy. Sprawdź zakładkę Teoria lub
             wróć później.
           </p>
@@ -402,11 +403,19 @@ export function TaskArena({
         </div>
       );
     }
-    return <TopicVictoryScreen backHref={backHref} />;
+    return <TopicVictoryScreen
+      backHref={backHref}
+      nextTopic={getNextTopic(examType, category, topic)}
+      isGuest={!userId}
+    />;
   }
 
   if (finished) {
-    return <TopicVictoryScreen backHref={backHref} />;
+    return <TopicVictoryScreen
+      backHref={backHref}
+      nextTopic={getNextTopic(examType, category, topic)}
+      isGuest={!userId}
+    />;
   }
 
   const options =
@@ -428,7 +437,7 @@ export function TaskArena({
       >
         {compactChrome ? (
           <div className="mb-4 flex justify-end">
-            <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+            <span className="text-xs font-bold uppercase tracking-wider text-muted">
               {progressLabel}
             </span>
           </div>
@@ -442,7 +451,7 @@ export function TaskArena({
                 <ArrowLeft className="h-4 w-4" />
                 Trening
               </Link>
-              <span className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+              <span className="text-xs font-bold uppercase tracking-wider text-muted">
                 {progressLabel}
               </span>
             </div>
@@ -509,12 +518,12 @@ export function TaskArena({
               );
             })}
           </div>
-          <label className="mx-auto flex cursor-pointer items-center gap-2 text-xs font-semibold text-zinc-400">
+          <label className="mx-auto flex cursor-pointer items-center gap-2 text-xs font-semibold text-muted">
             <input
               type="checkbox"
               checked={shuffleOrder}
               onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-white/20 bg-zinc-900 text-accent focus:ring-accent/40"
+              className="h-4 w-4 rounded border-foreground/20 bg-surface text-accent focus:ring-accent/40"
             />
             <Shuffle className="h-3.5 w-3.5" aria-hidden />
             Losuj kolejność

@@ -137,7 +137,7 @@ export function ReviewSession({
         </span>
       </div>
 
-      <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-white/10">
+      <div className="mb-6 h-2 w-full overflow-hidden rounded-full bg-foreground/10">
         <motion.div
           className="progress-accent"
           animate={{ width: `${progressPct}%` }}
@@ -164,7 +164,7 @@ export function ReviewSession({
           </div>
 
           <div className="mt-4 rounded-3xl border border-accent/20 bg-surface/90 p-6 sm:p-8">
-            <h2 className="text-xl font-black text-white">{task.title}</h2>
+            <h2 className="text-xl font-black text-foreground">{task.title}</h2>
             <div className="mt-3">
               <TheoryMarkdown content={formatCkeMathText(task.prompt)} />
             </div>
@@ -193,7 +193,7 @@ export function ReviewSession({
                     type="button"
                     disabled={answered}
                     onClick={() => handlePick(choiceIndex)}
-                    className={`relative rounded-2xl border px-4 py-4 text-left text-base font-bold text-white transition-colors ${style}`}
+                    className={`relative rounded-2xl border px-4 py-4 text-left text-base font-bold text-foreground transition-colors ${style}`}
                     whileTap={answered ? undefined : { scale: 0.98 }}
                   >
                     <MathText content={formatCkeMathText(choice)} />
@@ -220,7 +220,7 @@ export function ReviewSession({
                     : "border-red-500/40 bg-red-500/10"
                 }`}
               >
-                <p className="font-black text-white">
+                <p className="font-black text-foreground">
                   {isCorrect ? "Dobrze! 🎉" : "Wróci do powtórki wkrótce"}
                 </p>
                 {task.explanation.trim() && (

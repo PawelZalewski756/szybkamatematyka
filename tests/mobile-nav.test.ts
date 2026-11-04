@@ -9,8 +9,8 @@ describe("getMobileActiveTab", () => {
     expect(getMobileActiveTab("/trening/matura/algebra")).toBe("trening");
     expect(getMobileActiveTab("/arkusze")).toBe("trening");
     expect(getMobileActiveTab("/arkusze/cke-2024")).toBe("trening");
-    expect(getMobileActiveTab("/profil")).toBe("profil");
-    expect(getMobileActiveTab("/login")).toBe("profil");
+    expect(getMobileActiveTab("/profil")).toBe("wiecej");
+    expect(getMobileActiveTab("/login")).toBe("wiecej");
   });
 
   it("mapuje sekcje gier", () => {
@@ -21,7 +21,7 @@ describe("getMobileActiveTab", () => {
   });
 
   it("mapuje sekcje w Więcej", () => {
-    expect(getMobileActiveTab("/baza-zadan")).toBe("wiecej");
+    expect(getMobileActiveTab("/baza-zadan")).toBe("zadania");
     expect(getMobileActiveTab("/powtorki")).toBe("wiecej");
     expect(getMobileActiveTab("/rankingi")).toBe("wiecej");
     expect(getMobileActiveTab("/cennik")).toBe("wiecej");

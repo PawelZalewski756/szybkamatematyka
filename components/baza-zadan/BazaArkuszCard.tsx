@@ -24,7 +24,7 @@ export function BazaArkuszCard({ group }: { group: CmsArkuszGroup }) {
         <h3 className="text-sm font-semibold leading-snug text-foreground group-hover:text-accent">
           {label}
         </h3>
-        <span className="shrink-0 text-[11px] font-medium uppercase tracking-wide text-muted">
+        <span className="shrink-0 text-xs font-medium uppercase tracking-wide text-muted">
           {badge}
         </span>
       </div>

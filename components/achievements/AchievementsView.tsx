@@ -76,14 +76,14 @@ export function AchievementsView() {
             <Trophy className="h-3.5 w-3.5" aria-hidden />
             Osiągnięcia
           </div>
-          <h1 className="text-2xl font-black text-white sm:text-3xl">
+          <h1 className="text-2xl font-black text-foreground sm:text-3xl">
             Twoja gablota odznak
           </h1>
           <p className="mt-2 max-w-md text-sm text-muted">
             Zbieraj odznaki za rozwiązane zadania, serie, wyzwania i minigry.
           </p>
 
-          <div className="mt-5 w-full max-w-md rounded-2xl border border-surface-border bg-white/5 p-4 backdrop-blur-md">
+          <div className="mt-5 w-full max-w-md rounded-2xl border border-surface-border bg-foreground/5 p-4 backdrop-blur-md">
             <div className="flex items-center justify-between text-sm font-bold">
               <span className="text-foreground">Zdobyte odznaki</span>
               <span className="tabular-nums text-accent">
@@ -115,7 +115,7 @@ export function AchievementsView() {
                 {newlyUnlocked.map((a) => (
                   <span
                     key={a.id}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-white"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-foreground/10 px-3 py-1 text-xs font-bold text-foreground"
                   >
                     <AchievementGlyph icon={a.icon} className="h-3.5 w-3.5" />
                     {a.title}
@@ -153,7 +153,7 @@ export function AchievementsView() {
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="h-40 animate-pulse rounded-2xl border border-surface-border bg-white/[0.03]"
+                className="h-40 animate-pulse rounded-2xl border border-surface-border bg-foreground/[0.03]"
                 aria-hidden
               />
             ))}

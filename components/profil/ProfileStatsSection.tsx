@@ -48,12 +48,12 @@ function KpiTile({
             : "text-yellow-400";
 
   return (
-    <div className="rounded-2xl border border-surface-border bg-white/5 p-3 backdrop-blur-md sm:p-4">
+    <div className="rounded-2xl border border-surface-border bg-foreground/5 p-3 backdrop-blur-md sm:p-4">
       <div className="flex items-start justify-between gap-2">
         <p className="text-overline">{label}</p>
         <Icon className={`h-3.5 w-3.5 shrink-0 ${iconColor}`} aria-hidden />
       </div>
-      <p className="mt-1.5 text-lg font-black text-white sm:text-xl">{value}</p>
+      <p className="mt-1.5 text-lg font-black text-foreground sm:text-xl">{value}</p>
       {sub && (
         <p className="mt-0.5 text-caption sm:text-xs">{sub}</p>
       )}
@@ -125,7 +125,7 @@ export function ProfileStatsSection({
 
   return (
     <section className="mt-8" aria-labelledby="profile-stats-heading">
-      <div className="rounded-3xl border border-surface-border bg-white/5 p-5 backdrop-blur-xl sm:p-6">
+      <div className="rounded-3xl border border-surface-border bg-foreground/5 p-5 backdrop-blur-xl sm:p-6">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
             <BarChart3 className="h-4 w-4 text-accent" aria-hidden />
@@ -206,7 +206,7 @@ export function ProfileStatsSection({
               />
             </div>
 
-            <div className="mt-5 rounded-2xl border border-surface-border bg-white/5 p-4">
+            <div className="mt-5 rounded-2xl border border-surface-border bg-foreground/5 p-4">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-xs font-bold uppercase tracking-wider text-muted">
                   Postęp do poziomu {stats.level + 1}
@@ -227,7 +227,7 @@ export function ProfileStatsSection({
               </div>
             </div>
 
-            <div className="mt-5 rounded-2xl border border-surface-border bg-white/5 p-4">
+            <div className="mt-5 rounded-2xl border border-surface-border bg-foreground/5 p-4">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-xs font-bold uppercase tracking-wider text-muted">
                   Aktywność

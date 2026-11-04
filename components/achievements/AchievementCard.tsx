@@ -62,7 +62,7 @@ export function AchievementCard({
       }`}
     >
       {isNew && (
-        <span className="absolute right-3 top-3 rounded-full bg-accent px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-on-accent shadow-md">
+        <span className="absolute right-3 top-3 rounded-full bg-accent px-2 py-0.5 text-xs font-black uppercase tracking-wider text-on-accent shadow-md">
           Nowe!
         </span>
       )}
@@ -93,7 +93,7 @@ export function AchievementCard({
             {achievement.title}
           </p>
           <p
-            className={`text-[10px] font-bold uppercase tracking-wider ${
+            className={`text-xs font-bold uppercase tracking-wider ${
               unlocked ? tier.tierText : "text-muted"
             }`}
           >
@@ -113,7 +113,7 @@ export function AchievementCard({
       </p>
 
       {unlocked ? (
-        <span className="mt-auto inline-flex w-fit items-center gap-1 rounded-full bg-success/15 px-2.5 py-1 text-[11px] font-bold text-success">
+        <span className="mt-auto inline-flex w-fit items-center gap-1 rounded-full bg-success/15 px-2.5 py-1 text-xs font-bold text-success">
           Zdobyte
         </span>
       ) : (
@@ -126,7 +126,7 @@ export function AchievementCard({
               />
             </div>
           )}
-          <span className="text-[11px] font-bold tabular-nums text-muted">
+          <span className="text-xs font-bold tabular-nums text-muted">
             {status.target > 1
               ? `${status.current.toLocaleString("pl-PL")} / ${status.target.toLocaleString("pl-PL")}`
               : "Zablokowane"}

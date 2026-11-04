@@ -100,6 +100,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   }
 
   const related = getRelatedTasks(task, path);
+  const nextTask = related.find((r) => !isSolved(r.id)) ?? related[0] ?? null;
   const answeredClosed = picked !== null;
   const isCorrectClosed =
     picked !== null &&
@@ -359,6 +360,16 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
           </motion.div>
         )}
       </div>
+
+      {showResult && nextTask && (
+        <Link
+          href={`/baza-zadan/${nextTask.id}`}
+          data-testid="next-task"
+          className="btn-primary mt-6 flex w-full items-center justify-center px-6 py-3 text-sm"
+        >
+          Następne zadanie →
+        </Link>
+      )}
 
       {related.length > 0 && (
         <section className="mt-10">

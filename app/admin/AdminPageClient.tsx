@@ -179,7 +179,7 @@ export function AdminPageClient() {
         ← Baza zadań
       </Link>
 
-      <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+      <h1 className="mt-4 text-3xl font-black text-foreground sm:text-4xl">
         Panel{" "}
         <span className="text-gradient-brand">
           Administratora
@@ -239,7 +239,7 @@ export function AdminPageClient() {
             value={arkuszMode}
             onChange={(e) => setArkuszMode(e.target.value)}
             disabled={loadingArkusze}
-            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
           >
             <option value={NEW_ARKUSZ}>➕ Dodaj nowy arkusz…</option>
             {arkusze.map((a) => (
@@ -269,9 +269,9 @@ export function AdminPageClient() {
                 className={`flex-1 rounded-lg py-2.5 text-sm font-bold transition-colors ${
                   typ === t
                     ? t === "matura"
-                      ? "bg-accent-strong text-white"
-                      : "bg-accent text-white"
-                    : "text-muted hover:text-white"
+                      ? "bg-accent-strong text-on-accent"
+                      : "bg-accent text-on-accent"
+                    : "text-muted hover:text-foreground"
                 }`}
               >
                 {TYP_EGZAMINU_LABELS[t]}
@@ -289,7 +289,7 @@ export function AdminPageClient() {
               <select
                 value={miesiac}
                 onChange={(e) => setMiesiac(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+                className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
               >
                 {MIESIACE_PL.map((label, i) => (
                   <option key={label} value={i + 1}>
@@ -308,7 +308,7 @@ export function AdminPageClient() {
               value={rok}
               onChange={(e) => setRok(Number(e.target.value))}
               disabled={arkuszMode !== NEW_ARKUSZ}
-              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50 disabled:opacity-50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50 disabled:opacity-50"
             />
           </div>
           <div>
@@ -318,7 +318,7 @@ export function AdminPageClient() {
               min={1}
               value={numerZadania}
               onChange={(e) => setNumerZadania(Number(e.target.value))}
-              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+              className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
             />
           </div>
         </div>
@@ -328,7 +328,7 @@ export function AdminPageClient() {
           <select
             value={dzial}
             onChange={(e) => setDzial(e.target.value)}
-            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+            className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
           >
             {DZIALY_MATEMATYKI.map((d) => (
               <option key={d} value={d}>
@@ -346,7 +346,7 @@ export function AdminPageClient() {
             required
             rows={5}
             placeholder="Wpisz pełną treść zadania…"
-            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-accent/50"
+            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
           />
         </div>
 
@@ -372,7 +372,7 @@ export function AdminPageClient() {
             required
             rows={8}
             placeholder={"Krok 1: …\nKrok 2: …\nOdpowiedź: …"}
-            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-white outline-none focus:border-success/50"
+            className="mt-2 w-full resize-y rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-success/50"
           />
         </div>
 
@@ -387,7 +387,7 @@ export function AdminPageClient() {
           <button
             type="button"
             onClick={resetFormFields}
-            className="rounded-2xl border border-surface-border px-6 py-4 text-sm font-bold text-foreground hover:bg-white/5"
+            className="rounded-2xl border border-surface-border px-6 py-4 text-sm font-bold text-foreground hover:bg-foreground/5"
           >
             Wyczyść pola
           </button>
