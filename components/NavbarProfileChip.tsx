@@ -48,9 +48,9 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
       </span>
       <span className="hidden min-w-0 flex-col leading-tight md:flex">
         <span className="truncate text-xs font-semibold text-foreground">{nick}</span>
-        <span className="text-[10px] font-medium text-muted">Poziom {level}</span>
+        <span className="text-xs font-medium text-muted">Poziom {level}</span>
       </span>
-      <span className="rounded-full bg-foreground/[0.06] px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-foreground md:hidden">
+      <span className="rounded-full bg-foreground/[0.06] px-1.5 py-0.5 text-xs font-bold tabular-nums text-foreground md:hidden">
         {level}
       </span>
     </Link>

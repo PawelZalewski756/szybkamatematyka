@@ -248,7 +248,7 @@ export function BazaZadanView({
                 <span>{label}</span>
                 <span
                   aria-hidden="true"
-                  className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-[11px] tabular-nums ${
+                  className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-xs tabular-nums ${
                     active
                       ? "bg-on-accent/15 text-on-accent"
                       : "bg-surface-hover text-muted"

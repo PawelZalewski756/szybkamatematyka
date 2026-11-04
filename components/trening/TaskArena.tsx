@@ -406,6 +406,7 @@ export function TaskArena({
     return <TopicVictoryScreen
       backHref={backHref}
       nextTopic={getNextTopic(examType, category, topic)}
+      isGuest={!userId}
     />;
   }
 
@@ -413,6 +414,7 @@ export function TaskArena({
     return <TopicVictoryScreen
       backHref={backHref}
       nextTopic={getNextTopic(examType, category, topic)}
+      isGuest={!userId}
     />;
   }
 

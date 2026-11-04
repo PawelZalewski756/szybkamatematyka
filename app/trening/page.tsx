@@ -348,7 +348,7 @@ function TopicRow({
               style={{ width: `${progress}%` }}
             />
           </div>
-          <span className="mt-1 block text-right text-[11px] text-muted">
+          <span className="mt-1 block text-right text-xs text-muted">
             {statusLabel}
           </span>
         </div>

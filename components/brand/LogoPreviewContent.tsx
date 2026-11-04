@@ -22,13 +22,13 @@ function FaviconMock({ mark }: { mark: LogoMarkVariant }) {
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0a0f14] ring-1 ring-foreground/10">
           <LogoMark variant={mark} size={20} />
         </div>
-        <span className="text-[10px] text-slate-600">32px</span>
+        <span className="text-xs text-slate-600">32px</span>
       </div>
       <div className="flex flex-col items-center gap-1.5">
         <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0a0f14] ring-1 ring-foreground/10">
           <LogoMark variant={mark} size={40} />
         </div>
-        <span className="text-[10px] text-slate-600">64px</span>
+        <span className="text-xs text-slate-600">64px</span>
       </div>
     </div>
   );

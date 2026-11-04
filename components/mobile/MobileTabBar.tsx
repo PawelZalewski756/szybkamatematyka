@@ -38,7 +38,7 @@ function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </Link>
@@ -75,7 +75,7 @@ function TabButton({
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-[10px] font-medium leading-tight">
+      <span className="max-w-full truncate text-xs font-medium leading-tight">
         {label}
       </span>
     </button>

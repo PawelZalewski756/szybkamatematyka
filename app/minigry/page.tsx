@@ -356,7 +356,7 @@ function ModeHubCard({
         </span>
       </span>
       <span className="relative mt-auto p-4 pt-0 sm:p-5 sm:pt-0">
-        <span className={`text-[11px] font-bold uppercase tracking-[0.16em] ${tone.text}`}>
+        <span className={`text-xs font-bold uppercase tracking-[0.16em] ${tone.text}`}>
           {visual.eyebrow}
         </span>
         <h3 className="mt-1 text-lg font-bold text-foreground">{mode.title}</h3>
@@ -400,14 +400,14 @@ function RecommendedStart({
       <span className="relative flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center">
         <span className="flex shrink-0 items-center gap-3">
           <GameVisual visual={visual} size="hero" />
-          <span className={`hidden text-[11px] font-bold uppercase tracking-[0.16em] sm:block lg:hidden ${tone.text}`}>
+          <span className={`hidden text-xs font-bold uppercase tracking-[0.16em] sm:block lg:hidden ${tone.text}`}>
             {visual.label}
           </span>
         </span>
         <span className="min-w-0">
           <span className="flex flex-wrap items-center gap-2">
             <span className="text-overline text-accent">Proponowana minigra</span>
-            <span className={`rounded-full border px-2 py-0.5 text-[11px] font-bold ${tone.panel} ${tone.text}`}>
+            <span className={`rounded-full border px-2 py-0.5 text-xs font-bold ${tone.panel} ${tone.text}`}>
               {visual.label}
             </span>
           </span>
@@ -447,7 +447,7 @@ function MinigameCard({ game }: { game: MinigameEntry }) {
         <span className="min-w-0">
           <span className="flex items-start justify-between gap-2">
             <span className="min-w-0">
-              <span className={`block text-[10px] font-bold uppercase tracking-[0.14em] ${tone.text}`}>
+              <span className={`block text-xs font-bold uppercase tracking-[0.14em] ${tone.text}`}>
                 {visual.label}
               </span>
               <span className="mt-1 block line-clamp-1 text-sm font-bold text-foreground">
@@ -460,7 +460,7 @@ function MinigameCard({ game }: { game: MinigameEntry }) {
             {game.description}
           </span>
         </span>
-        <span className="flex items-center gap-2 text-[11px] font-semibold text-muted">
+        <span className="flex items-center gap-2 text-xs font-semibold text-muted">
           <span className={`h-1.5 w-1.5 rounded-full ${tone.strong}`} aria-hidden />
           Na czas · 60 s
         </span>
@@ -493,7 +493,7 @@ function MinigameGroupDisclosure({ group }: { group: MinigameGroup }) {
           <GroupVisual group={group} />
           <span className="min-w-0">
             <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <span className={`text-[10px] font-bold uppercase tracking-[0.14em] ${tone.text}`}>
+              <span className={`text-xs font-bold uppercase tracking-[0.14em] ${tone.text}`}>
                 {group.visual.eyebrow}
               </span>
               <span className="text-xs font-semibold text-muted">
@@ -593,7 +593,7 @@ export default function MinigryPage() {
           <span className="min-w-0">
             <span className="flex flex-wrap items-center gap-2">
               <span className="text-overline">Krótkie rundy</span>
-              <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
+              <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-xs font-bold uppercase tracking-[0.14em] text-accent">
                 3 tryby
               </span>
             </span>

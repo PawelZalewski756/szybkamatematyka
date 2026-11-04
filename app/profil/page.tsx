@@ -104,7 +104,7 @@ function StatCard({
       className={`rounded-2xl border border-surface-border bg-foreground/10 p-4 backdrop-blur-md sm:p-5 ${ring}`}
     >
       <div className="flex items-start justify-between gap-2">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
+        <p className="text-xs font-bold uppercase tracking-wider text-muted sm:text-xs">
           {label}
         </p>
         <Icon className={`h-4 w-4 shrink-0 ${iconColor}`} aria-hidden />
@@ -586,7 +586,7 @@ export default function ProfilPage() {
               />
               <div className="rounded-2xl border border-surface-border bg-foreground/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
                 <div className="flex items-start justify-between gap-2">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted sm:text-xs">
                     Punkty XP
                   </p>
                   <Zap className="h-4 w-4 shrink-0 text-accent" aria-hidden />

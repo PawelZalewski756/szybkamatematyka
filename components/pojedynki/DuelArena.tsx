@@ -127,7 +127,7 @@ export function DuelArena({
       />
 
       <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl border border-surface-border bg-surface/90 px-4 py-3 shadow-lg">
-        <p className="text-[11px] font-bold uppercase tracking-wider text-muted">
+        <p className="text-xs font-bold uppercase tracking-wider text-muted">
           Pytanie {Math.min(match.index + 1, match.total)}/{match.total}
         </p>
         <div className="flex items-center gap-3">

@@ -282,7 +282,7 @@ function MaterialyAdminContent() {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[32rem] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-surface-border text-[10px] font-bold uppercase tracking-wider text-muted">
+                  <tr className="border-b border-surface-border text-xs font-bold uppercase tracking-wider text-muted">
                     <th className="pb-2 pr-3">Egzamin</th>
                     <th className="pb-2 pr-3">Dział</th>
                     <th className="pb-2 pr-3">Temat</th>
@@ -442,7 +442,7 @@ function MaterialyAdminContent() {
                     role="tab"
                     aria-selected={editorTab === tab.id}
                     onClick={() => setEditorTab(tab.id)}
-                    className={`rounded-lg px-3 py-1 text-[11px] font-bold transition ${
+                    className={`rounded-lg px-3 py-1 text-xs font-bold transition ${
                       editorTab === tab.id
                         ? "bg-accent/20 text-accent"                         : "text-muted hover:text-foreground"
                     }`}

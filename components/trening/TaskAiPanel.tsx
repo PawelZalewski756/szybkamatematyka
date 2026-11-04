@@ -277,7 +277,7 @@ function TaskAiPanelInner({
   return (
     <div className="mt-4 space-y-3">
       {!isPro && quotaLabel && (
-        <p className="text-[11px] font-semibold text-muted">{quotaLabel}</p>
+        <p className="text-xs font-semibold text-muted">{quotaLabel}</p>
       )}
 
       <div className="flex flex-wrap gap-2">
@@ -338,7 +338,7 @@ function TaskAiPanelInner({
                   : "border-t border-surface-border/60 pt-2 text-sm leading-relaxed text-foreground/90 first:border-t-0 first:pt-0"
               }
             >
-              <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-muted">
+              <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted">
                 {turn.role === "user" ? "Ty" : "Odpowiedź"}
               </p>
               {turn.role === "user" ? (
@@ -368,7 +368,7 @@ function TaskAiPanelInner({
           className="w-full resize-none rounded-lg border border-surface-border bg-surface px-3 py-2 text-sm text-foreground placeholder:text-muted focus:border-violet-500/40 focus:outline-none disabled:opacity-50"
         />
         <div className="flex items-center justify-between gap-2">
-          <p className="text-[10px] text-muted">
+          <p className="text-xs text-muted">
             {askCount > 0
               ? `Pytania do tego zadania: ${askCount}/${MAX_ASK}`
               : quotaLabel ?? "Możesz doprecyzować własnymi słowami"}

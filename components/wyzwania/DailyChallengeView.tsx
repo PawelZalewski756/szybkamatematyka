@@ -82,7 +82,7 @@ function StreakBanner({
       </div>
       {bestStreak > 0 && bestStreak > streak && (
         <div className="ml-auto rounded-xl border border-surface-border bg-foreground/5 px-3 py-1.5 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-muted">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted">
             Rekord
           </p>
           <p className="text-sm font-black text-accent tabular-nums">
@@ -129,7 +129,7 @@ function RewardScreen({
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-center gap-1.5 text-accent">
             <Zap className="h-4 w-4" aria-hidden />
-            <span className="text-[10px] font-bold uppercase tracking-wide">
+            <span className="text-xs font-bold uppercase tracking-wide">
               Nagroda XP
             </span>
           </div>
@@ -140,7 +140,7 @@ function RewardScreen({
         <div className="rounded-2xl border border-accent/20 bg-accent/5 p-4">
           <div className="flex items-center justify-center gap-1.5 text-accent">
             <Flame className="h-4 w-4" aria-hidden />
-            <span className="text-[10px] font-bold uppercase tracking-wide">
+            <span className="text-xs font-bold uppercase tracking-wide">
               Seria
             </span>
           </div>

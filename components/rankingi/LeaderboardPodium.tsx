@@ -106,7 +106,7 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
             <div className="mt-1 flex justify-center">
               <LevelBadge level={entry.level} size="sm" />
             </div>
-            <p className="mt-0.5 text-[10px] font-bold tabular-nums text-accent sm:text-xs">
+            <p className="mt-0.5 text-xs font-bold tabular-nums text-accent sm:text-xs">
               {formatCompactXp(entry.xp)}
             </p>
             <div
@@ -117,7 +117,7 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
               >
                 {slot.place}
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted">
+              <span className="text-xs font-bold uppercase tracking-wider text-muted">
                 miejsce
               </span>
             </div>
