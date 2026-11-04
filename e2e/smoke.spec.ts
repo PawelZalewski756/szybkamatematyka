@@ -441,7 +441,7 @@ test.describe("Smoke", () => {
       "/trening/egzamin-osmoklasisty/liczby/kolejnosc_dzialan",
     );
     await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-    await expect(page.getByText("30 tematów").first()).toBeVisible();
+    await expect(page.getByText("7 tematów").first()).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Pokaż tematy/ }).first(),
     ).toBeVisible();
