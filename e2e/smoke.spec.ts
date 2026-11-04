@@ -268,6 +268,9 @@ test.describe("Smoke", () => {
     await expect(
       page.getByRole("heading", { level: 1, name: /Minigry/ }),
     ).toBeVisible();
+    await expect(page.getByText("Mentalny sprint")).toHaveCount(0);
+    await expect(page.getByText("Szybki sprint")).toHaveCount(0);
+    await expect(page.getByText("Długi dystans")).toHaveCount(0);
     const recommendedStart = page.getByTestId("minigame-recommended-start");
     await expect(recommendedStart).toBeVisible();
     await expect(recommendedStart).toHaveAttribute(
@@ -285,7 +288,7 @@ test.describe("Smoke", () => {
     );
     await expect(
       page.getByTestId("minigame-mode-time_attack"),
-    ).toContainText("Polecany start");
+    ).toContainText("Proponowana minigra");
   });
 
   test("/minigry odkrywa karty dopiero po otwarciu obszaru", async ({
@@ -298,7 +301,7 @@ test.describe("Smoke", () => {
       "minigame-group-rachunki",
     );
     const multiplicationLink = arithmeticGroup.getByRole("link", {
-      name: /Szybkie Mnożenie/,
+      name: /Mnożenie/,
     });
 
     await expect(arithmeticGroup).toBeVisible();
@@ -313,7 +316,7 @@ test.describe("Smoke", () => {
     const fullLibrary = page.getByTestId("minigame-other-library");
     await expect(fullLibrary).toBeVisible();
     await expect(
-      fullLibrary.getByRole("link", { name: /f\(x\) Express/ }),
+      fullLibrary.getByRole("link", { name: /Funkcje/ }),
     ).toBeHidden();
   });
 
@@ -325,7 +328,7 @@ test.describe("Smoke", () => {
 
     await expect(page).toHaveURL(/\/minigry\/modes\/survival$/);
     await expect(
-      page.getByRole("heading", { level: 1, name: "Przetrwanie" }),
+      page.getByRole("heading", { level: 1, name: "Bez limitu czasu" }),
     ).toBeVisible();
     await expect(
       page.getByRole("link", { name: /Prawda czy Fałsz/ }).first(),

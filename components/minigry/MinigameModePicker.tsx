@@ -2,6 +2,10 @@
 
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
+  groupMinigames,
+  type MinigameGroupVisual,
+} from "@/components/minigry/minigame-groups";
+import {
   getMinigamesForPath,
   type MinigameEntry,
 } from "@/lib/minigry/minigames-catalog";
@@ -11,6 +15,15 @@ import {
   type MinigamePlayMode,
 } from "@/lib/minigry/game-modes";
 import {
+  Calculator,
+  Layers,
+  LineChart,
+  Radical,
+  Sigma,
+  Triangle,
+  type LucideIcon,
+} from "lucide-react";
+import {
   MINIGAME_MODE_GLOW,
   MINIGAME_MODE_HEADER_CLASS,
 } from "@/lib/minigry/minigame-themes";
@@ -18,23 +31,31 @@ import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
+  calculator: Calculator,
+  sigma: Sigma,
+  radical: Radical,
+  triangle: Triangle,
+  "line-chart": LineChart,
+  layers: Layers,
+};
+
 function GamePickCard({
   game,
   mode,
+  Icon,
 }: {
   game: MinigameEntry;
   mode: MinigamePlayMode;
+  Icon: LucideIcon;
 }) {
   return (
     <Link
       href={`/minigry/${game.id}?mode=${mode}`}
       className="card-raised group flex min-h-[160px] flex-col justify-between p-5 sm:min-h-[180px]"
     >
-      <span
-        className="text-xl font-semibold tabular-nums text-accent"
-        aria-hidden
-      >
-        {game.emoji}
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/20 bg-accent/5 text-accent">
+        <Icon className="h-5 w-5" strokeWidth={1.8} aria-hidden />
       </span>
       <motion.div>
         <h3 className="text-base font-bold text-foreground">{game.title}</h3>
@@ -50,6 +71,11 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
   const { recommended, other } = getMinigamesForPath(path);
   const pathLabel = learningPathLabel(path);
   const games = [...recommended, ...other];
+  const iconByGameId = new Map<string, LucideIcon>();
+  for (const group of groupMinigames(games)) {
+    const Icon = GROUP_ICONS[group.visual.icon];
+    for (const game of group.games) iconByGameId.set(game.id, Icon);
+  }
 
   return (
     <motion.div
@@ -103,7 +129,11 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.03 * index }}
               >
-                <GamePickCard game={game} mode={mode} />
+                <GamePickCard
+                  game={game}
+                  mode={mode}
+                  Icon={iconByGameId.get(game.id) ?? Calculator}
+                />
               </motion.div>
             ))}
           </div>

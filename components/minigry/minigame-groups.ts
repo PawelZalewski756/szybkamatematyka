@@ -45,7 +45,7 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
   {
     id: "rachunki",
     title: "Rachunki i działania",
-    description: "Szybkie obliczenia, które dobrze sprawdzają się na start.",
+    description: "Dodawanie, odejmowanie, mnożenie i dzielenie.",
     visual: {
       eyebrow: "Podstawowe operacje",
       icon: "calculator",
@@ -66,7 +66,7 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
   {
     id: "liczby",
     title: "Liczby, ułamki i procenty",
-    description: "Porównywanie, części całości i własności liczb.",
+    description: "Ułamki, procenty i własności liczb.",
     visual: {
       eyebrow: "Liczby i ułamki",
       icon: "sigma",
@@ -90,7 +90,7 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
   {
     id: "algebra",
     title: "Algebra i potęgi",
-    description: "Równania, wzory i matematyczne pułapki.",
+    description: "Równania, wzory i potęgi.",
     visual: {
       eyebrow: "Równania i wzory",
       icon: "radical",
@@ -110,7 +110,7 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
   {
     id: "geometria",
     title: "Geometria",
-    description: "Pola, obwody i kąty w krótkich rundach.",
+    description: "Obliczanie pól, obwodów i kątów.",
     visual: {
       eyebrow: "Figury i pomiary",
       icon: "triangle",
@@ -122,7 +122,7 @@ const MINIGAME_GROUP_DEFINITIONS: readonly MinigameGroupDefinition[] = [
   {
     id: "funkcje",
     title: "Funkcje i trygonometria",
-    description: "Tematy ze szkoły średniej: funkcje, logarytmy i kąty.",
+    description: "Wykresy funkcji, logarytmy i trygonometria.",
     visual: {
       eyebrow: "Funkcje i wykresy",
       icon: "line-chart",

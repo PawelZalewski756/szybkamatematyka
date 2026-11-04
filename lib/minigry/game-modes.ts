@@ -8,8 +8,6 @@ export type MinigameModeConfig = {
   slug: string;
   title: string;
   description: string;
-  /** Opcjonalny symbol — unikamy zbędnych emotek. */
-  emoji: string;
   badge: string;
 };
 
@@ -18,24 +16,21 @@ export const MINIGAME_MODES: MinigameModeConfig[] = [
     id: "time_attack",
     slug: "time-attack",
     title: "Na czas",
-    description: "60 sekund — jak najwięcej poprawnych odpowiedzi. Dobra passa daje combo.",
-    emoji: "",
+    description: "60 sekund na jak najwięcej poprawnych odpowiedzi.",
     badge: "60 s",
   },
   {
     id: "survival",
     slug: "survival",
-    title: "Przetrwanie",
-    description: "Bez limitu czasu. Pierwszy błąd kończy rundę.",
-    emoji: "",
-    badge: "1 życie",
+    title: "Bez limitu czasu",
+    description: "Pierwsza błędna odpowiedź kończy rundę.",
+    badge: "1 błąd",
   },
   {
     id: "marathon",
     slug: "marathon",
-    title: "Maraton",
-    description: "Dokładnie 15 pytań. Liczy się wynik i czas ukończenia.",
-    emoji: "",
+    title: "15 pytań",
+    description: "Po 15 pytaniach zobaczysz wynik i czas.",
     badge: "15 pytań",
   },
 ];
@@ -57,14 +52,7 @@ export function getModeConfig(mode: MinigamePlayMode): MinigameModeConfig {
 }
 
 export function modeDescription(mode: MinigamePlayMode): string {
-  switch (mode) {
-    case "time_attack":
-      return "Masz 60 sekund. Odpowiadaj szybko — seria poprawnych odpowiedzi buduje combo.";
-    case "survival":
-      return "Bez timera. Jeden błąd kończy grę.";
-    case "marathon":
-      return "15 pytań z rzędu. Na końcu zobaczysz wynik i czas.";
-  }
+  return getModeConfig(mode).description;
 }
 
 /** Krótka etykieta HUD (bez angielskich nazw). */
@@ -73,8 +61,8 @@ export function modeHudLabel(mode: MinigamePlayMode): string {
     case "time_attack":
       return "Na czas";
     case "survival":
-      return "Przetrwanie";
+      return "Bez limitu czasu";
     case "marathon":
-      return "Maraton";
+      return "15 pytań";
   }
 }

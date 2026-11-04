@@ -103,7 +103,7 @@ type GameVisual = {
 const GAME_VISUALS: Record<string, GameVisual> = {
   "prawda-falsz": {
     icon: Scale,
-    label: "Pułapki",
+    label: "Prawda/fałsz",
     marker: "T/N",
     motif: "axis",
     tone: "violet",
@@ -515,9 +515,6 @@ function GameVisual({
       <span className={`relative z-10 flex items-center justify-center rounded-2xl border border-current/30 bg-background/20 p-2.5 ${tone.text}`}>
         <Icon className={size === "hero" ? "h-7 w-7" : "h-6 w-6"} strokeWidth={1.8} />
       </span>
-      <span className={`absolute bottom-2 right-2 z-10 text-[10px] font-black tracking-tight ${tone.text}`}>
-        {visual.marker}
-      </span>
     </span>
   );
 }
@@ -527,19 +524,19 @@ const MODE_VISUALS: Record<
   { eyebrow: string; icon: LucideIcon; motif: VisualMotif; tone: VisualTone }
 > = {
   time_attack: {
-    eyebrow: "Szybki sprint",
+    eyebrow: "60 sekund",
     icon: Timer,
     motif: "rays",
     tone: "amber",
   },
   survival: {
-    eyebrow: "Jedno życie",
+    eyebrow: "Bez limitu czasu",
     icon: ShieldCheck,
     motif: "orbit",
     tone: "rose",
   },
   marathon: {
-    eyebrow: "Długi dystans",
+    eyebrow: "15 pytań",
     icon: Trophy,
     motif: "bars",
     tone: "sky",
@@ -576,7 +573,7 @@ function ModeHubCard({
             {mode.badge}
           </span>
           {recommended ? (
-            <span className="text-xs font-bold text-accent">Polecany start</span>
+            <span className="text-xs font-bold text-accent">Proponowana minigra</span>
           ) : null}
         </span>
       </span>
@@ -632,7 +629,7 @@ function RecommendedStart({
         </span>
         <span className="min-w-0">
           <span className="flex flex-wrap items-center gap-2">
-            <span className="text-overline text-accent">Polecany start</span>
+            <span className="text-overline text-accent">Proponowana minigra</span>
             <span className={`rounded-full border px-2 py-0.5 text-[11px] font-bold ${tone.panel} ${tone.text}`}>
               {visual.label}
             </span>
@@ -647,7 +644,7 @@ function RecommendedStart({
       </span>
       <span className="relative flex flex-col items-start gap-3 border-t border-accent/20 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5">
         <span className="btn-chunky px-4 py-2.5 text-sm">
-          Zagraj teraz
+          Otwórz minigrę
           <ArrowRight className="h-4 w-4" aria-hidden />
         </span>
         <span className="text-xs font-semibold text-muted">
