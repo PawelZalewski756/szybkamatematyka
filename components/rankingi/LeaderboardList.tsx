@@ -27,12 +27,12 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.05 * index, duration: 0.35 }}
-          className="flex items-center gap-3 rounded-2xl border border-surface-border bg-white/5 px-3 py-2.5 backdrop-blur-md sm:gap-4 sm:px-4 sm:py-3"
+          className="flex items-center gap-3 rounded-2xl border border-surface-border bg-foreground/5 px-3 py-2.5 backdrop-blur-md sm:gap-4 sm:px-4 sm:py-3"
         >
           <span className="w-8 shrink-0 text-center text-sm font-black tabular-nums text-muted sm:w-10 sm:text-base">
             {entry.rank}
           </span>
-          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-accent ring-2 ring-white/10 sm:h-11 sm:w-11">
+          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-accent ring-2 ring-foreground/10 sm:h-11 sm:w-11">
             {entry.avatarUrl ? (
               <Image
                 src={entry.avatarUrl}
@@ -49,7 +49,7 @@ export function LeaderboardList({ entries }: LeaderboardListProps) {
             )}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-black text-white sm:text-base">
+            <p className="truncate text-sm font-black text-foreground sm:text-base">
               {entry.nick}
             </p>
             <div className="mt-0.5 flex items-center gap-1.5">

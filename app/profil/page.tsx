@@ -101,7 +101,7 @@ function StatCard({
 
   return (
     <div
-      className={`rounded-2xl border border-surface-border bg-white/10 p-4 backdrop-blur-md sm:p-5 ${ring}`}
+      className={`rounded-2xl border border-surface-border bg-foreground/10 p-4 backdrop-blur-md sm:p-5 ${ring}`}
     >
       <div className="flex items-start justify-between gap-2">
         <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
@@ -109,7 +109,7 @@ function StatCard({
         </p>
         <Icon className={`h-4 w-4 shrink-0 ${iconColor}`} aria-hidden />
       </div>
-      <p className="mt-2 text-xl font-black text-white sm:text-2xl">{value}</p>
+      <p className="mt-2 text-xl font-black text-foreground sm:text-2xl">{value}</p>
       {sub && (
         <p className="mt-0.5 text-xs font-semibold text-muted">{sub}</p>
       )}
@@ -134,7 +134,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
         className={`relative overflow-hidden rounded-3xl border p-5 backdrop-blur-xl sm:p-6 ${
           pro
             ? "border-accent/40 bg-accent-soft"
-            : "border-surface-border bg-white/5"
+            : "border-surface-border bg-foreground/5"
         }`}
       >
         <div className="flex items-start justify-between gap-4">
@@ -146,7 +146,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
               />
               Twój plan
             </div>
-            <p className="mt-2 text-xl font-black text-white">
+            <p className="mt-2 text-xl font-black text-foreground">
               {pro ? (plan?.name ?? "Pro") : "Start (darmowy)"}
             </p>
             <p className="mt-1 text-sm text-muted">
@@ -463,7 +463,7 @@ export default function ProfilPage() {
           >
             <div className="min-w-0">
             <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <h1 className="text-2xl font-black text-white sm:text-3xl">
+              <h1 className="text-2xl font-black text-foreground sm:text-3xl">
                 Twój profil
               </h1>
               <PlayerAvatarUpload
@@ -493,7 +493,7 @@ export default function ProfilPage() {
                   onChange={(e) => setNickDraft(e.target.value)}
                   maxLength={24}
                   disabled={nickChangeBlocked}
-                  className="min-w-0 flex-1 rounded-2xl border border-surface-border bg-white/5 px-4 py-3 text-sm font-bold text-white outline-none backdrop-blur-md placeholder:text-muted focus:border-accent/50 focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="min-w-0 flex-1 rounded-2xl border border-surface-border bg-foreground/5 px-4 py-3 text-sm font-bold text-foreground outline-none backdrop-blur-md placeholder:text-muted focus:border-accent/50 focus:ring-2 focus:ring-accent/20 disabled:cursor-not-allowed disabled:opacity-50"
                   placeholder="np. KasiaM"
                 />
                 <button
@@ -536,7 +536,7 @@ export default function ProfilPage() {
               </p>
               <p className="mt-1 text-sm text-muted">
                 Aktualnie:{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-foreground">
                   {schoolLevelDraft
                     ? learningPathLabel(schoolLevelDraft)
                     : "Nie wybrano"}
@@ -584,7 +584,7 @@ export default function ProfilPage() {
                 icon={Trophy}
                 accent="amber"
               />
-              <div className="rounded-2xl border border-surface-border bg-white/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
+              <div className="rounded-2xl border border-surface-border bg-foreground/10 p-4 backdrop-blur-md sm:p-5 shadow-[0_0_24px_rgba(232,112,42,0.18)]">
                 <div className="flex items-start justify-between gap-2">
                   <p className="text-[10px] font-bold uppercase tracking-wider text-muted sm:text-xs">
                     Punkty XP
@@ -592,7 +592,7 @@ export default function ProfilPage() {
                   <Zap className="h-4 w-4 shrink-0 text-accent" aria-hidden />
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <p className="text-xl font-black text-white sm:text-2xl">
+                  <p className="text-xl font-black text-foreground sm:text-2xl">
                     {profile.xp.toLocaleString("pl-PL")}
                   </p>
                   <LevelBadge level={calculateLevel(profile.xp)} />

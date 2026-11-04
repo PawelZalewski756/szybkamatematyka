@@ -99,7 +99,7 @@ export default function ZapomnianeHasloPage() {
         <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
           Odzyskiwanie hasła
         </p>
-        <h1 className="mt-2 text-center text-2xl font-black text-white sm:text-3xl">
+        <h1 className="mt-2 text-center text-2xl font-black text-foreground sm:text-3xl">
           Zapomniałeś hasła?
         </h1>
         <p className="mt-3 text-center text-sm text-muted">

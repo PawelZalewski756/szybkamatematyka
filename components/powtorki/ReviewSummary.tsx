@@ -70,8 +70,8 @@ export function ReviewSummary({
       </p>
 
       <div className="mt-8 grid w-full grid-cols-3 gap-3">
-        <div className="rounded-2xl border border-surface-border bg-white/[0.05] p-4">
-          <p className="text-2xl font-black text-white tabular-nums">
+        <div className="rounded-2xl border border-surface-border bg-foreground/[0.05] p-4">
+          <p className="text-2xl font-black text-foreground tabular-nums">
             {summary.total}
           </p>
           <p className="mt-1 text-xs font-semibold text-muted">Zadań</p>

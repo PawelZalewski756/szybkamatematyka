@@ -21,7 +21,7 @@ export function NavbarMetaStrip({
 
   return (
     <div
-      className={`inline-flex min-w-0 shrink-0 items-center rounded-full border border-surface-border bg-white/[0.03] ${
+      className={`inline-flex min-w-0 shrink-0 items-center rounded-full border border-surface-border bg-foreground/[0.03] ${
         compact ? "p-0" : "p-0.5"
       } ${className}`}
     >

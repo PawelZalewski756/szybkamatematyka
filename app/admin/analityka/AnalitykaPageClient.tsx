@@ -46,7 +46,7 @@ function Section({
 }) {
   return (
     <section className="mt-8 rounded-3xl border border-surface-border bg-surface/80 p-6 sm:p-7">
-      <h2 className="flex items-center gap-2 text-lg font-black text-white">
+      <h2 className="flex items-center gap-2 text-lg font-black text-foreground">
         <Icon size={18} className="text-accent" />
         {title}
       </h2>
@@ -99,7 +99,7 @@ export function AnalitykaPageClient() {
         ← Panel administratora
       </Link>
 
-      <h1 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+      <h1 className="mt-4 text-3xl font-black text-foreground sm:text-4xl">
         Analityka{" "}
         <span className="text-gradient-brand">
           platformy
@@ -281,7 +281,7 @@ export function AnalitykaPageClient() {
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 rounded-2xl border border-surface-border bg-white/5 p-5"
+          className="mt-8 rounded-2xl border border-surface-border bg-foreground/5 p-5"
         >
           <h2 className="flex items-center gap-2 text-sm font-bold text-foreground">
             <Info size={16} className="text-muted" />

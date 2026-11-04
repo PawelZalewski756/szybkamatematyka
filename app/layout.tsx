@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { GoogleAdsTag } from "@/components/analytics/GoogleAdsTag";
 import { Footer } from "@/components/Footer";
 import { MobileTabBar } from "@/components/mobile/MobileTabBar";
+import { THEME_INIT_SCRIPT } from "@/components/ThemeToggle";
 import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
 import { BRAND_NAME } from "@/lib/brand/constants";
@@ -86,7 +87,6 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#0f0e0b",
-  colorScheme: "dark",
 };
 
 const jsonLd = {
@@ -110,7 +110,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={jakarta.variable}>
+    <html lang="pl" className={jakarta.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
         <GoogleAdsTag />
         <script

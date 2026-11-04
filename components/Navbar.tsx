@@ -3,6 +3,7 @@
 import { BrandLogo } from "@/components/BrandLogo";
 import { NavbarMetaStrip } from "@/components/NavbarMetaStrip";
 import { NavbarProfileChip } from "@/components/NavbarProfileChip";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { NavbarSheet } from "@/components/NavbarSheet";
 import { useDesktopNav } from "@/components/useDesktopNav";
 import { useSubscription } from "@/lib/subscription/use-subscription";
@@ -43,8 +44,8 @@ function PrimaryNavLinks() {
               aria-current={active ? "page" : undefined}
               className={`inline-flex items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
                 active
-                  ? "bg-white/[0.08] text-foreground"
-                  : "text-muted hover:bg-white/[0.04] hover:text-foreground"
+                  ? "bg-foreground/[0.08] text-foreground"
+                  : "text-muted hover:bg-foreground/[0.04] hover:text-foreground"
               }`}
             >
               {label}
@@ -73,6 +74,7 @@ function NavbarActions({
   // Zalogowany: chip / skeleton / wyloguj pojawiają się po rozpoznaniu sesji.
   return (
     <div className="flex shrink-0 items-center gap-1.5">
+      <ThemeToggle />
       {!user ? (
         <Link
           href="/login"
@@ -263,15 +265,17 @@ export function Navbar() {
           </>
         ) : (
           <div className="flex shrink-0 items-center gap-1.5">
+            <ThemeToggle />
             {!user ? (
               <Link
                 href="/login"
-                className="shrink-0 rounded-md border border-accent/30 bg-accent-soft px-2.5 py-1.5 text-xs font-bold text-accent transition hover:bg-accent/15"
+                className="btn-primary shrink-0 rounded-md px-3 py-1.5 text-xs"
               >
                 Zaloguj
               </Link>
+            ) : profile ? (
+              <NavbarProfileChip profile={profile} />
             ) : null}
-            <NavbarSheet showPrimaryLinks showPro={showPro} />
           </div>
         )}
       </nav>

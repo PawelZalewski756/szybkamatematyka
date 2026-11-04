@@ -36,7 +36,7 @@ export function ProfileAchievements() {
 
   return (
     <section className="mt-8">
-      <div className="rounded-3xl border border-surface-border bg-white/5 p-5 backdrop-blur-xl sm:p-6">
+      <div className="rounded-3xl border border-surface-border bg-foreground/5 p-5 backdrop-blur-xl sm:p-6">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
             <Trophy className="h-4 w-4 text-yellow-400" aria-hidden />
@@ -51,7 +51,7 @@ export function ProfileAchievements() {
         </div>
 
         <div className="mt-3 flex items-center justify-between text-sm font-bold">
-          <span className="text-white">
+          <span className="text-foreground">
             {ready ? `${unlockedCount} / ${total} zdobytych` : "Ładowanie…"}
           </span>
           <span className="tabular-nums text-accent">{percent}%</span>

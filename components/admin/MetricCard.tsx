@@ -21,14 +21,14 @@ export function MetricCard({
   accent = "text-accent",
 }: MetricCardProps) {
   return (
-    <div className="rounded-2xl border border-surface-border bg-white/5 p-5 backdrop-blur-md">
+    <div className="rounded-2xl border border-surface-border bg-foreground/5 p-5 backdrop-blur-md">
       <div className="flex items-center gap-2 text-muted">
         <Icon size={16} className={accent} />
         <span className="text-xs font-bold uppercase tracking-wide">
           {label}
         </span>
       </div>
-      <p className="mt-2 text-2xl font-black text-white">{value}</p>
+      <p className="mt-2 text-2xl font-black text-foreground">{value}</p>
       {sub && <p className="mt-1 text-xs text-muted">{sub}</p>}
     </div>
   );

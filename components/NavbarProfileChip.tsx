@@ -29,7 +29,7 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
     <Link
       href="/profil"
       title={`${nick} · poziom ${level}`}
-      className={`inline-flex min-w-0 max-w-[9.5rem] shrink-0 items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-white/[0.06] sm:max-w-[11rem] ${className}`}
+      className={`inline-flex min-w-0 max-w-[9.5rem] shrink-0 items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-foreground/[0.06] sm:max-w-[11rem] ${className}`}
     >
       <span className="relative flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-accent/15 text-xs font-bold text-accent ring-1 ring-accent/25">
         {showImage ? (
@@ -50,7 +50,7 @@ export function NavbarProfileChip({ profile, className = "" }: NavbarProfileChip
         <span className="truncate text-xs font-semibold text-foreground">{nick}</span>
         <span className="text-[10px] font-medium text-muted">Poziom {level}</span>
       </span>
-      <span className="rounded-full bg-white/[0.06] px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-foreground md:hidden">
+      <span className="rounded-full bg-foreground/[0.06] px-1.5 py-0.5 text-[10px] font-bold tabular-nums text-foreground md:hidden">
         {level}
       </span>
     </Link>

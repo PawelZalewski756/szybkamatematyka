@@ -101,7 +101,7 @@ export default function RankingiPage() {
           <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 ring-1 ring-accent/30">
             <Trophy className="h-6 w-6 text-accent" aria-hidden />
           </div>
-          <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">
+          <h1 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
             Rankingi
           </h1>
           <p className="mt-1 text-sm text-muted">
@@ -111,7 +111,7 @@ export default function RankingiPage() {
           <div
             role="tablist"
             aria-label="Filtr rankingu"
-            className="mx-auto mt-5 flex w-full max-w-xs rounded-2xl border border-surface-border bg-white/[0.06] p-1 backdrop-blur-xl"
+            className="mx-auto mt-5 flex w-full max-w-xs rounded-2xl border border-surface-border bg-foreground/[0.06] p-1 backdrop-blur-xl"
           >
             {(
               [
@@ -149,7 +149,7 @@ export default function RankingiPage() {
                 );
               }}
               disabled={loading || refreshing}
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-surface-border bg-white/5 px-4 py-2 text-xs font-bold text-foreground transition hover:border-accent/30 hover:bg-accent/10 hover:text-accent disabled:opacity-50"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-surface-border bg-foreground/5 px-4 py-2 text-xs font-bold text-foreground transition hover:border-accent/30 hover:bg-accent/10 hover:text-accent disabled:opacity-50"
             >
               <RefreshCw
                 className={`h-3.5 w-3.5 ${refreshing ? "animate-spin" : ""}`}

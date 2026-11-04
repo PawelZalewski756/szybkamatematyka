@@ -20,7 +20,7 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
   if (!sample || !arkusz) {
     return (
       <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
-        <p className="text-xl font-black text-white">Nie znaleziono arkusza</p>
+        <p className="text-xl font-black text-foreground">Nie znaleziono arkusza</p>
         <Link
           href="/trening/arkusze"
           className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-orange-400"         >
@@ -38,7 +38,7 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
     <div className="relative z-10 w-full py-6 sm:py-8">
       <Link
         href="/trening/arkusze"
-        className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-500 transition-colors hover:text-orange-400"       >
+        className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-colors hover:text-orange-400"       >
         <ArrowLeft className="h-4 w-4" aria-hidden />
         Wszystkie arkusze
       </Link>
@@ -48,8 +48,8 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
         animate={{ opacity: 1, y: 0 }}
         className="mt-4"
       >
-        <h1 className="text-2xl font-black text-white sm:text-3xl">{label}</h1>
-        <p className="mt-1 text-sm text-zinc-400">
+        <h1 className="text-2xl font-black text-foreground sm:text-3xl">{label}</h1>
+        <p className="mt-1 text-sm text-muted">
           {badge || TYP_EGZAMINU_LABELS[arkusz.typ]} · {tasks.length} zadań
         </p>
       </motion.header>

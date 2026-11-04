@@ -4,7 +4,7 @@ export function isNavActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export type MobileTabId = "start" | "trening" | "graj" | "profil" | "wiecej";
+export type MobileTabId = "start" | "trening" | "zadania" | "graj" | "wiecej";
 
 export const MOBILE_TAB_BAR_HEIGHT_PX = 64;
 
@@ -17,7 +17,8 @@ export const MOBILE_GRAJ_PREFIXES = [
 
 /** Trasy przypisane do zakładki „Więcej”. */
 export const MOBILE_WIECEJ_PREFIXES = [
-  "/baza-zadan",
+  "/profil",
+  "/login",
   "/powtorki",
   "/rankingi",
   "/osiagniecia",
@@ -34,8 +35,7 @@ export function getMobileActiveTab(pathname: string): MobileTabId | null {
   if (pathname === "/") return "start";
   if (isTreningRoute(pathname)) return "trening";
   if (MOBILE_GRAJ_PREFIXES.some((p) => isNavActive(pathname, p))) return "graj";
-  if (isNavActive(pathname, "/profil") || isNavActive(pathname, "/login"))
-    return "profil";
+  if (isNavActive(pathname, "/baza-zadan")) return "zadania";
   if (MOBILE_WIECEJ_PREFIXES.some((p) => isNavActive(pathname, p))) {
     return "wiecej";
   }

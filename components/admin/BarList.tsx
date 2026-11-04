@@ -57,7 +57,7 @@ export function BarList({
               </span>
             </div>
             <div
-              className="mt-1 h-2 w-full overflow-hidden rounded-full bg-white/5"
+              className="mt-1 h-2 w-full overflow-hidden rounded-full bg-foreground/5"
               role="img"
               aria-label={`${item.label}: ${item.count}`}
             >

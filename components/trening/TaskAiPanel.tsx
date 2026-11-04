@@ -328,7 +328,7 @@ function TaskAiPanelInner({
       )}
 
       {chatTurns.length > 0 && (
-        <div className="space-y-2 rounded-xl border border-surface-border bg-white/[0.03] px-4 py-3">
+        <div className="space-y-2 rounded-xl border border-surface-border bg-foreground/[0.03] px-4 py-3">
           {chatTurns.map((turn, index) => (
             <div
               key={`${turn.role}-${index}`}
@@ -353,7 +353,7 @@ function TaskAiPanelInner({
 
       <form
         onSubmit={(event) => void handleAsk(event)}
-        className="space-y-2 rounded-xl border border-surface-border bg-white/[0.02] p-3"
+        className="space-y-2 rounded-xl border border-surface-border bg-foreground/[0.02] p-3"
       >
         <label htmlFor={`task-ask-${taskId}`} className="sr-only">
           Napisz, czego nie rozumiesz

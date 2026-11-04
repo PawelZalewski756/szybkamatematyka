@@ -100,7 +100,7 @@ export function LeaderboardPodium({ topThree }: LeaderboardPodiumProps) {
               />
               <PodiumAvatar entry={entry} sizeClass={slot.avatar} />
             </div>
-            <p className="max-w-full truncate text-center text-xs font-black text-white sm:text-sm">
+            <p className="max-w-full truncate text-center text-xs font-black text-foreground sm:text-sm">
               {entry.nick}
             </p>
             <div className="mt-1 flex justify-center">

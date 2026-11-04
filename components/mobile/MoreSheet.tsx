@@ -1,12 +1,12 @@
 "use client";
 
 import { NavbarClassBadge } from "@/components/NavbarClassBadge";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { isNavActive } from "@/lib/layout/mobile-nav";
 import {
   Award,
-  BookOpen,
   CreditCard,
   FileText,
   LogOut,
@@ -14,6 +14,7 @@ import {
   RotateCcw,
   Shield,
   Trophy,
+  UserRound,
   X,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -34,10 +35,7 @@ type MobileMoreGroup = {
 const MOBILE_MORE_GROUPS: readonly MobileMoreGroup[] = [
   {
     label: "Nauka",
-    links: [
-      { href: "/baza-zadan", label: "Baza zadań", icon: BookOpen },
-      { href: "/powtorki", label: "Powtórki", icon: RotateCcw },
-    ],
+    links: [{ href: "/powtorki", label: "Powtórki", icon: RotateCcw }],
   },
   {
     label: "Społeczność",
@@ -196,6 +194,16 @@ export function MoreSheet({
         </div>
 
         <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3">
+          <div className="mb-3 border-b border-surface-border pb-3">
+            <SheetLink
+              href={isLoggedIn ? "/profil" : "/login"}
+              label={isLoggedIn ? "Mój profil" : "Zaloguj się lub załóż konto"}
+              icon={UserRound}
+              active={isNavActive(pathname, isLoggedIn ? "/profil" : "/login")}
+              onNavigate={onClose}
+            />
+          </div>
+
           {MOBILE_MORE_GROUPS.map((group, index) => (
             <div
               key={group.label ?? "misc"}
@@ -218,6 +226,10 @@ export function MoreSheet({
               </div>
             </div>
           ))}
+
+          <div className="mt-3 border-t border-surface-border px-1 pt-3">
+            <ThemeToggle withLabel />
+          </div>
 
           {isLoggedIn && onLogout && (
             <div className="mt-3 border-t border-surface-border px-1 pt-3">

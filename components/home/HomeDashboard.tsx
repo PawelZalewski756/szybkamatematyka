@@ -469,18 +469,27 @@ export function HomeDashboard() {
                 </p>
               </div>
               <div className="flex shrink-0 flex-wrap gap-2 text-xs font-bold text-muted">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                <Link
+                  href="/minigry"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
+                >
                   <Gamepad2 className="h-3.5 w-3.5" aria-hidden />
                   Minigry
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                </Link>
+                <Link
+                  href="/wyzwania"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
+                >
                   <Flame className="h-3.5 w-3.5" aria-hidden />
                   Wyzwania
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent">
+                </Link>
+                <Link
+                  href="/rankingi"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
+                >
                   <Trophy className="h-3.5 w-3.5" aria-hidden />
                   Rankingi
-                </span>
+                </Link>
               </div>
             </div>
 
