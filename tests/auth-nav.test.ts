@@ -11,9 +11,10 @@ describe("authenticated navigation links", () => {
 
   it("hides Powtórki from guests and shows it to signed-in users", () => {
     expect(reviewLink).toBeDefined();
-    expect(reviewLink?.requiresAuth).toBe(true);
-    expect(isNavLinkVisible(reviewLink ?? {}, false)).toBe(false);
-    expect(isNavLinkVisible(reviewLink ?? {}, true)).toBe(true);
+    if (!reviewLink) throw new Error("Powtórki link is missing");
+    expect(reviewLink.requiresAuth).toBe(true);
+    expect(isNavLinkVisible(reviewLink, false)).toBe(false);
+    expect(isNavLinkVisible(reviewLink, true)).toBe(true);
   });
 
   it("keeps public links visible to guests", () => {

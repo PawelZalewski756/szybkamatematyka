@@ -54,7 +54,7 @@ export const NAV_LINKS: readonly NavLink[] = [
 ];
 
 export function isNavLinkVisible(
-  link: Pick<NavLink, "requiresAuth">,
+  link: NavLink,
   isLoggedIn: boolean,
 ): boolean {
   return !link.requiresAuth || isLoggedIn;
