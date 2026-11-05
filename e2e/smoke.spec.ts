@@ -536,47 +536,27 @@ test.describe("Smoke", () => {
     expect(widths.document).toBeLessThanOrEqual(widths.viewport);
   });
 
-  test("arkusze CKE pokazują oficjalne sesje z archiwum", async ({ page }) => {
+  test("arkusze CKE prowadzą do lokalnych zadań", async ({ page }) => {
     await page.goto("/trening/arkusze");
     await expect(
       page.getByRole("heading", { level: 1, name: /Arkusze/ }),
     ).toBeVisible();
     await expect(
       page.getByRole("heading", { name: "Pełne archiwum arkuszy CKE" }),
-    ).toBeVisible();
+    ).toHaveCount(0);
     await expect(
       page.getByRole("heading", { name: "Arkusze z 2026 roku" }),
-    ).toBeVisible();
-    await expect(
-      page.getByRole("link", { name: /Matura 2026 — sesja majowa/ }),
-    ).toHaveAttribute(
-      "href",
-      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny?exam=egzamin-maturalny&formula=F2023&exam_session=2026-maj&subject=Matematyka",
-    );
-    await expect(
-      page.getByRole("link", { name: /Egzamin ósmoklasisty 2026/ }),
-    ).toHaveAttribute(
-      "href",
-      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty?exam=egzamin-osmoklasisty&exam_session=2026&subject=Matematyka",
-    );
-    await expect(
-      page.getByRole("link", { name: /Matura z matematyki/ }),
-    ).toHaveAttribute(
-      "href",
-      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny",
-    );
-    await expect(
-      page.getByRole("link", { name: /Egzamin ósmoklasisty z matematyki/ }),
-    ).toHaveAttribute(
-      "href",
-      "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-osmoklasisty",
-    );
+    ).toHaveCount(0);
+    await expect(page.locator('a[href*="egzaminy.gov.pl"]')).toHaveCount(0);
     await expect(
       page.getByRole("heading", { name: /Matura CKE/ }),
     ).toBeVisible();
     await expect(
       page.getByRole("link", { name: /Matura — maj 2025/ }),
     ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Matura — maj 2025/ }),
+    ).toHaveAttribute("href", "/trening/arkusze/arkusz-m25-maj");
     await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
     await expect(page.getByText("TypeError")).toHaveCount(0);
     await page.getByRole("link", { name: /Matura — maj 2025/ }).click();
