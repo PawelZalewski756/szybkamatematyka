@@ -74,7 +74,7 @@ function StreakBanner({
         </p>
         <p className="text-xs font-semibold text-muted">
           {completed
-            ? "Seria podtrzymana — wróć jutro!"
+            ? "Seria podtrzymana - wróć jutro!"
             : active
               ? "Ukończ dziś, by nie stracić serii"
               : "Ukończ wyzwanie, by rozpocząć serię"}
@@ -162,7 +162,7 @@ function RewardScreen({
           <Link href="/login" className="font-bold text-accent">
             Zaloguj się
           </Link>{" "}
-          — by zapisać XP na koncie i synchronizować serię między urządzeniami.
+          - by zapisać XP na koncie i synchronizować serię między urządzeniami.
         </p>
       )}
 
@@ -336,7 +336,7 @@ export function DailyChallengeView() {
                   </button>
                   {!isLoggedIn && (
                     <p className="mt-3 text-center text-xs font-semibold text-muted">
-                      Grasz jako gość — seria zapisze się lokalnie.{" "}
+                      Grasz jako gość - seria zapisze się lokalnie.{" "}
                       <Link href="/login" className="text-accent">
                         Zaloguj się
                       </Link>{" "}

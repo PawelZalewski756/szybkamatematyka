@@ -9,7 +9,7 @@ type LayoutProps = {
 
 /**
  * Strona arkusza (`page.tsx`) jest komponentem klienckim (interaktywny solver),
- * więc metadata dostarczamy z serwerowego layoutu — ma dostęp do tych samych
+ * więc metadata dostarczamy z serwerowego layoutu - ma dostęp do tych samych
  * parametrów trasy i może je zbudować na bazie treści arkusza.
  */
 export async function generateMetadata({

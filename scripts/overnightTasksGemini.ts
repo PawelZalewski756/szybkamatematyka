@@ -1,5 +1,5 @@
 /**
- * Nocny generator zadań Gemini — pętla aż każdy temat ma --per-topic zadań.
+ * Nocny generator zadań Gemini - pętla aż każdy temat ma --per-topic zadań.
  *
  *   npm run seed:tasks-overnight
  *   npm run seed:tasks-overnight -- --per-topic=40
@@ -88,13 +88,13 @@ async function main() {
     }
 
     if (code !== 0 && after.totalTasks === before.totalTasks) {
-      log(`Generator zatrzymany (exit ${code}) — czekam ${STALL_WAIT_MS / 1000}s…`);
+      log(`Generator zatrzymany (exit ${code}) - czekam ${STALL_WAIT_MS / 1000}s…`);
       await sleep(STALL_WAIT_MS);
     }
   }
 
   await runNpm("seed:tasks-sql", []);
-  log("Koniec — SQL wyeksportowany.");
+  log("Koniec - SQL wyeksportowany.");
 }
 
 main().catch((err) => {

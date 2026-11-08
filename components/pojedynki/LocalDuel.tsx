@@ -123,7 +123,7 @@ export function LocalDuel({
         title={title}
         heading="Tura gracza 1"
         subtitle="Gracz 1 rozwiązuje pierwszy. Gracz 2 dostanie DOKŁADNIE ten sam zestaw pytań."
-        buttonLabel="Gracz 1 — start"
+        buttonLabel="Gracz 1 - start"
         onStart={() => setStage("play1")}
         onExit={onExit}
       />
@@ -150,8 +150,8 @@ export function LocalDuel({
       <ReadyCard
         title={title}
         heading="Tura gracza 2"
-        subtitle="Przekaż urządzenie. Ten sam zestaw pytań — kto będzie lepszy?"
-        buttonLabel="Gracz 2 — start"
+        subtitle="Przekaż urządzenie. Ten sam zestaw pytań - kto będzie lepszy?"
+        buttonLabel="Gracz 2 - start"
         onStart={() => setStage("play2")}
         onExit={onExit}
       />

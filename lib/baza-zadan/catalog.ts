@@ -40,7 +40,7 @@ export function getTaskById(id: string): Task | undefined {
 /**
  * ID-y zadań prerenderowanych statycznie w trakcie buildu (rdzeń bazy: zadania
  * statyczne `st-*` oraz egzaminacyjne). Zadania proceduralne (`proc-*`) są
- * renderowane on-demand przy pierwszym wejściu — to mocno ogranicza liczbę
+ * renderowane on-demand przy pierwszym wejściu - to mocno ogranicza liczbę
  * stron generowanych w buildzie bez psucia żadnego URL-a.
  */
 export function getPrerenderTaskIds(): string[] {
@@ -103,7 +103,7 @@ export type TaskGroupSection = {
   tasks: Task[];
 };
 
-/** Zadania pogrupowane po działach — do segregowanej listy. */
+/** Zadania pogrupowane po działach - do segregowanej listy. */
 export function getTasksGroupedBySection(
   path: LearningPath,
   filters: TaskFilters = {},
@@ -137,7 +137,7 @@ export type ExamSheetGroup = {
   sheets: ExamSheet[];
 };
 
-/** Numer arkusza z tytułu (np. „#2”) — nie sortuj alfabetycznie po nazwie. */
+/** Numer arkusza z tytułu (np. „#2”) - nie sortuj alfabetycznie po nazwie. */
 function examSheetOrderKey(title: string): number {
   const hash = title.match(/#(\d+)/);
   if (hash) return Number(hash[1]);

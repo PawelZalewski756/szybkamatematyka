@@ -5,7 +5,7 @@ import {
   formatSolutionForDisplay,
 } from "@/lib/gemini/format-solution";
 
-describe("normalizeSolution — delimitery LaTeX", () => {
+describe("normalizeSolution - delimitery LaTeX", () => {
   it("konwertuje \\(..\\) na $..$", () => {
     expect(normalizeSolution("Wynik to \\(x + 1\\) gotowe")).toBe(
       "Wynik to $x + 1$ gotowe",
@@ -17,7 +17,7 @@ describe("normalizeSolution — delimitery LaTeX", () => {
   });
 });
 
-describe("normalizeSolution — bloki kodu", () => {
+describe("normalizeSolution - bloki kodu", () => {
   it("usuwa otaczający blok ```markdown", () => {
     const input = "```markdown\nTreść rozwiązania\n```";
     expect(normalizeSolution(input)).toBe("Treść rozwiązania");
@@ -29,7 +29,7 @@ describe("normalizeSolution — bloki kodu", () => {
   });
 });
 
-describe("normalizeSolution — etykiety", () => {
+describe("normalizeSolution - etykiety", () => {
   it("ujednolica 'Krok 1.' do '**Krok 1.**'", () => {
     expect(normalizeSolution("Krok 1: oblicz")).toBe("**Krok 1.** oblicz");
     expect(normalizeSolution("Krok 2) policz")).toBe("**Krok 2.** policz");
@@ -41,7 +41,7 @@ describe("normalizeSolution — etykiety", () => {
   });
 });
 
-describe("normalizeSolution — artefakty matematyczne", () => {
+describe("normalizeSolution - artefakty matematyczne", () => {
   it("zamienia potrójne dolary na blokowe $$", () => {
     expect(normalizeSolution("$$$x$$$")).toBe("$$x$$");
   });
@@ -51,7 +51,7 @@ describe("normalizeSolution — artefakty matematyczne", () => {
   });
 });
 
-describe("normalizeSolution — przypadki brzegowe", () => {
+describe("normalizeSolution - przypadki brzegowe", () => {
   it("pusty/whitespace wejście → pusty string", () => {
     expect(normalizeSolution("")).toBe("");
     expect(normalizeSolution("   \n  ")).toBe("");

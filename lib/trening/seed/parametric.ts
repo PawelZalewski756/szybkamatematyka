@@ -741,7 +741,7 @@ export function generateParametricTask(
       return buildMc(
         rng,
         slot,
-        `Długość odcinka $(${x1},${y1})$—$(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku):`,
+        `Długość odcinka $(${x1},${y1})$-$(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku):`,
         fmtNum(d),
         wrongs(rng, d, 3),
         2,
@@ -777,7 +777,7 @@ export function generateParametricTask(
       );
     }
     default: {
-      // Ostateczny fallback — nie „a+b”, tylko proste wyrażenie z kolejnością działań
+      // Ostateczny fallback - nie „a+b”, tylko proste wyrażenie z kolejnością działań
       const a = 2 + pickV(v, 0, 12);
       const b = 2 + pickV(v, 1, 8);
       const c = 2 + pickV(v, 2, 8);

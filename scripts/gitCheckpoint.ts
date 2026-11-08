@@ -41,7 +41,7 @@ function globTheoryGeminiLogs(): string[] {
     .map((f) => path.join("data", f));
 }
 
-/** Zapisuje postęp generatorów — commit + push (pomija pliki *.log). */
+/** Zapisuje postęp generatorów - commit + push (pomija pliki *.log). */
 export async function gitCheckpoint(
   message: string,
   log?: (line: string) => void,

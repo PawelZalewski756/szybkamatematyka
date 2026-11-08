@@ -79,7 +79,7 @@ export function normalizeSubscriptionStatus(
   }
 }
 
-/** Etykieta statusu po polsku — do wyświetlenia w profilu. */
+/** Etykieta statusu po polsku - do wyświetlenia w profilu. */
 export function subscriptionStatusLabel(status: SubscriptionStatus): string {
   switch (status) {
     case "active":

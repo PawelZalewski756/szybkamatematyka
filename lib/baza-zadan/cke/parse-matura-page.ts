@@ -10,7 +10,7 @@ export type ParsedMaturaTask = {
 
 /**
  * Usuwa statystyki „pwz” i śmieci scrapera, potem normalizuje matematykę do LaTeX.
- * Wywoływane przy seedzie — kolejne importy nie wpuszczają znowu HTML ani surowego Unicode.
+ * Wywoływane przy seedzie - kolejne importy nie wpuszczają znowu HTML ani surowego Unicode.
  */
 export function cleanMaturaTaskText(text: string): string {
   const cleaned = text
@@ -112,7 +112,7 @@ export function parseMaturaTasksFromHtml(html: string): ParsedMaturaTask[] {
     }));
 }
 
-/** Starsze arkusze (2010–2013) — prostszy układ HTML. */
+/** Starsze arkusze (2010–2013) - prostszy układ HTML. */
 function parseLegacyPlain(html: string): ParsedMaturaTask[] {
   const body = sliceTaskSection(html);
   const re = /Zadanie\s+(\d+)\.([\s\S]*?)(?=Zadanie\s+\d+\.|$)/gi;

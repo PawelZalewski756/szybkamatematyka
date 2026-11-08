@@ -23,7 +23,7 @@ function sqlJson(value: string[]): string {
 function main() {
   const tasks = listAllCachedTasks();
   if (tasks.length === 0) {
-    console.error("\nBrak zadań w data/tasks-cache — najpierw npm run seed:tasks-gemini\n");
+    console.error("\nBrak zadań w data/tasks-cache - najpierw npm run seed:tasks-gemini\n");
     process.exit(1);
   }
 

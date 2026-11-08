@@ -2,7 +2,7 @@
  * Katalog arkuszy CKE po stronie serwera.
  *
  * Importuje pełne archiwum zadań (~1.5 MB). Nie wolno go importować z Client
- * Componentów — użyj `archive-sheet-meta.ts` do linków i grupowania.
+ * Componentów - użyj `archive-sheet-meta.ts` do linków i grupowania.
  */
 import { compareArkuszSession } from "@/lib/baza-zadan/cke/sort-arkusze";
 import type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";
@@ -26,7 +26,7 @@ function archiveTaskMap(): Map<string, Task> {
   return taskById;
 }
 
-/** Oficjalne sesje CKE z archiwum kodowego — bez Supabase. */
+/** Oficjalne sesje CKE z archiwum kodowego - bez Supabase. */
 export function listOfficialCkeSheets(): ExamArchiveSheetMeta[] {
   return [...EXAM_ARCHIVE_SHEETS].sort((a, b) =>
     compareArkuszSession(

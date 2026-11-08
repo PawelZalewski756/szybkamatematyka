@@ -5,7 +5,7 @@ import { createClient, type User } from "@supabase/supabase-js";
  *
  * Źródłem prawdy po stronie serwera jest ADMIN_EMAILS (lista adresów po
  * przecinku). Przeglądarka korzysta wyłącznie z NEXT_PUBLIC_ADMIN_EMAILS jako
- * lustra dla gate'u UI. Ustaw obie zmienne na tę samą wartość — publiczna lista
+ * lustra dla gate'u UI. Ustaw obie zmienne na tę samą wartość - publiczna lista
  * nie może być używana przez serwer do nadawania uprawnień.
  */
 export function getAdminEmails(): string[] {
@@ -49,7 +49,7 @@ export function getBearerToken(request: Request): string | null {
  * Weryfikuje sesję Supabase przesłaną jako Bearer token i sprawdza uprawnienia.
  *
  * Sesja Supabase żyje wyłącznie po stronie klienta (localStorage), więc serwer
- * nie ma dostępu do ciasteczka sesji — token musi przyjść w nagłówku Authorization.
+ * nie ma dostępu do ciasteczka sesji - token musi przyjść w nagłówku Authorization.
  *
  * Polityka:
  * - brak/niepoprawny token → 401,
@@ -102,7 +102,7 @@ export async function verifyAdminRequest(
 
 /**
  * Weryfikuje tylko zalogowanego użytkownika (Bearer token).
- * Bez wymogu wpisu na liście adminów — do endpointów uczniowskich (np. AI).
+ * Bez wymogu wpisu na liście adminów - do endpointów uczniowskich (np. AI).
  */
 export async function verifyAuthenticatedRequest(
   request: Request,

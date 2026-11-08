@@ -85,7 +85,7 @@ export async function readAssistQuota(
     .maybeSingle();
 
   if (error && isPostgrestUndefinedColumnError(error as PostgrestError)) {
-    console.warn("[task-assist-quota] Brak kolumn ai_assist_* — uruchom migrację SQL.");
+    console.warn("[task-assist-quota] Brak kolumn ai_assist_* - uruchom migrację SQL.");
     return freeQuota(period, 0);
   }
 
@@ -131,7 +131,7 @@ export async function consumeAssistQuota(
       ok: false,
       quota: freeQuota(period, 0),
       error:
-        "Limit zapytań wymaga aktualizacji bazy — skontaktuj się z administratorem.",
+        "Limit zapytań wymaga aktualizacji bazy - skontaktuj się z administratorem.",
     };
   }
 

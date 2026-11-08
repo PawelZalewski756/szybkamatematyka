@@ -39,7 +39,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-muted">
           Inteligentne powtórki w systemie spaced repetition. Utrwalaj zadania,
-          z którymi miałeś problem — wracają dokładnie wtedy, gdy zaczynasz je
+          z którymi miałeś problem - wracają dokładnie wtedy, gdy zaczynasz je
           zapominać.
         </p>
       </motion.div>
@@ -61,7 +61,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
             </p>
             <p className="mt-1 text-sm font-semibold text-muted">
               {dueCount === 0
-                ? "Brak zaległych powtórek — super!"
+                ? "Brak zaległych powtórek - super!"
                 : dueCount === 1
                   ? "zadanie czeka na powtórkę"
                   : "zadań czeka na powtórkę"}

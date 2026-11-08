@@ -11,5 +11,5 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || `https://${BRAND_DOMAIN}`
 ).replace(/\/+$/, "");
 
-/** Nazwa serwisu — spójna w `title.template`, OpenGraph i JSON-LD. */
+/** Nazwa serwisu - spójna w `title.template`, OpenGraph i JSON-LD. */
 export const SITE_NAME = BRAND_NAME;

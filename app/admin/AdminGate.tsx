@@ -9,7 +9,7 @@ import { useEffect, useState, type ReactNode } from "react";
 type GateState = "checking" | "allowed" | "denied";
 
 /**
- * Gate panelu administratora — bez publicznych linków w UI.
+ * Gate panelu administratora - bez publicznych linków w UI.
  * Nieuprawnieni widzą zwykły 404 (bez podpowiedzi, że istnieje /admin).
  */
 export function AdminGate({ children }: { children: ReactNode }) {

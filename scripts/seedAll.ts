@@ -78,7 +78,7 @@ function runStep(script: string): boolean {
 function main(): void {
   const { apply, skipAudit, cke } = parseArgs();
 
-  console.log("══ Szybka Matematyka — seed:all ══");
+  console.log("══ Szybka Matematyka - seed:all ══");
   console.log(
     apply
       ? "Tryb: audyt + eksport" + (cke ? " + import CKE" : "")
@@ -92,7 +92,7 @@ function main(): void {
 
     console.log(`\n── ${step.label} ──`);
     if (!runStep(step.npmScript)) {
-      console.error("\n✗ Pipeline przerwany — popraw błędy audytu przed seedem.");
+      console.error("\n✗ Pipeline przerwany - popraw błędy audytu przed seedem.");
       process.exit(1);
     }
   }

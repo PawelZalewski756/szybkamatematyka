@@ -1,6 +1,6 @@
 {
   "sessionId": "m15-przykladowa",
-  "nazwa": "Matura — przykładowa 2015 — poziom podstawowy",
+  "nazwa": "Matura - przykładowa 2015 - poziom podstawowy",
   "rok": 2015,
   "miesiac": 12,
   "tasks": [
@@ -140,7 +140,7 @@
       "numer": 23,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez i . Wtedy A) 2 p 4 = p 2 B) 2 p 6 = p 3 C) 2 p 3 = p 6 D) 2 p 2 = p 4",
-      "rozwiazanie": "**Krok 1.** Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} — 3 możliwości. $p_3$ (podzielne przez 3): {3, 6} — 2 możliwości. $p_4$ (podzielne przez 4): {4} — 1 możliwość. $p_6$ (podzielne przez 6): {6} — 1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników (6).\n**Krok 2.** Wyraź obliczone prawdopodobieństwa w formie ułamków. $p_2 = \\frac{3}{6} = \\frac{1}{2}$, $p_3 = \\frac{2}{6} = \\frac{1}{3}$, $p_4 = \\frac{1}{6}$, $p_6 = \\frac{1}{6}$.\n**Krok 3.** Sprawdź równości podane w opcjach.\nA) $2 \\cdot p_4 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_2 = \\frac{1}{2}$. $\\frac{1}{3} \\neq \\frac{1}{2}$.\nB) $2 \\cdot p_6 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_3 = \\frac{1}{3}$. $\\frac{1}{3} = \\frac{1}{3}$.\nC) $2 \\cdot p_3 = 2 \\cdot \\frac{1}{3} = \\frac{2}{3}$, $p_6 = \\frac{1}{6}$. $\\frac{2}{3} \\neq \\frac{1}{6}$.\nD) $2 \\cdot p_2 = 2 \\cdot \\frac{1}{2} = 1$, $p_4 = \\frac{1}{6}$. $1 \\neq \\frac{1}{6}$.\n\n**Odpowiedź:** B"
+      "rozwiazanie": "**Krok 1.** Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ (podzielne przez 2): {2, 4, 6} - 3 możliwości. $p_3$ (podzielne przez 3): {3, 6} - 2 możliwości. $p_4$ (podzielne przez 4): {4} - 1 możliwość. $p_6$ (podzielne przez 6): {6} - 1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników (6).\n**Krok 2.** Wyraź obliczone prawdopodobieństwa w formie ułamków. $p_2 = \\frac{3}{6} = \\frac{1}{2}$, $p_3 = \\frac{2}{6} = \\frac{1}{3}$, $p_4 = \\frac{1}{6}$, $p_6 = \\frac{1}{6}$.\n**Krok 3.** Sprawdź równości podane w opcjach.\nA) $2 \\cdot p_4 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_2 = \\frac{1}{2}$. $\\frac{1}{3} \\neq \\frac{1}{2}$.\nB) $2 \\cdot p_6 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_3 = \\frac{1}{3}$. $\\frac{1}{3} = \\frac{1}{3}$.\nC) $2 \\cdot p_3 = 2 \\cdot \\frac{1}{3} = \\frac{2}{3}$, $p_6 = \\frac{1}{6}$. $\\frac{2}{3} \\neq \\frac{1}{6}$.\nD) $2 \\cdot p_2 = 2 \\cdot \\frac{1}{2} = 1$, $p_4 = \\frac{1}{6}$. $1 \\neq \\frac{1}{6}$.\n\n**Odpowiedź:** B"
     },
     {
       "numer": 24,

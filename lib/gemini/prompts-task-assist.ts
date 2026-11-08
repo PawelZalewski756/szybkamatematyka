@@ -40,7 +40,7 @@ Twoim zadaniem jest PODPOWIADAĆ, nie rozwiązywać za ucznia.
 Zasady:
 - Pisz po polsku, krótko (2–4 zdania + ewentualnie jeden wzór w LaTeX inline $...$).
 - NIGDY nie podawaj końcowej poprawnej odpowiedzi ani pełnego rozwiązania krok po kroku do końca.
-- Wskazuj metodę, pierwszy krok lub typowe błędy — ucz ucznia myśleć samodzielnie.
+- Wskazuj metodę, pierwszy krok lub typowe błędy - ucz ucznia myśleć samodzielnie.
 - Im wyższy poziom podpowiedzi (0→2), tym bardziej konkretna wskazówka, ale nadal bez gotowej odpowiedzi.
 - Nie wymyślaj danych spoza treści zadania.`;
 
@@ -72,7 +72,7 @@ export function buildHintUserPrompt(input: TaskAssistHintInput): string {
     parts.push(`Opcje:\n${input.options.map((o, i) => `${String.fromCharCode(65 + i)}. ${o}`).join("\n")}`);
   }
   parts.push(
-    `Poprawna odpowiedź (TYLKO do wiedzy wewnętrznej — NIE ujawniaj uczniowi): ${input.correctAnswer}`,
+    `Poprawna odpowiedź (TYLKO do wiedzy wewnętrznej - NIE ujawniaj uczniowi): ${input.correctAnswer}`,
   );
   parts.push("Podaj podpowiedź zgodnie z zasadami systemowymi.");
   return parts.join("\n\n");
@@ -96,11 +96,11 @@ export function buildGradeUserPrompt(input: TaskAssistGradeInput): string {
 }
 
 export const TASK_ASSIST_ASK_SYSTEM = `Jesteś cierpliwym korepetytorem matematyki dla uczniów w Polsce.
-Uczeń rozwiązuje zadanie i zadaje pytanie własnymi słowami — czegoś nie rozumie albo chce doprecyzowania.
+Uczeń rozwiązuje zadanie i zadaje pytanie własnymi słowami - czegoś nie rozumie albo chce doprecyzowania.
 
 Zasady:
 - Odpowiadaj po polsku, prosto i na temat (2–5 zdań; wzory w LaTeX inline $...$ dozwolone).
-- Odnieś się do tego, co uczeń napisał — nie ignoruj jego pytania.
+- Odnieś się do tego, co uczeń napisał - nie ignoruj jego pytania.
 - NIGDY nie podawaj gotowej końcowej odpowiedzi na zadanie ani pełnego rozwiązania do końca.
 - Możesz wyjaśnić pojęcie, wskazać kolejny krok myślenia albo rozwiać wątpliwość co do treści.
 - Nie wymyślaj danych spoza zadania.`;
@@ -111,7 +111,7 @@ export function buildAskUserPrompt(input: TaskAssistAskInput): string {
   if (input.topicLabel) parts.push(`Temat: ${input.topicLabel}`);
   parts.push(`Treść zadania:\n${input.taskContent.trim()}`);
   parts.push(
-    `Poprawna odpowiedź (TYLKO do wiedzy wewnętrznej — NIE ujawniaj uczniowi): ${input.correctAnswer}`,
+    `Poprawna odpowiedź (TYLKO do wiedzy wewnętrznej - NIE ujawniaj uczniowi): ${input.correctAnswer}`,
   );
 
   if (input.hintContext?.trim()) {

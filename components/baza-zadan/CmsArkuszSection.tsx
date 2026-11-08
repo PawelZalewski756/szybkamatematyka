@@ -15,7 +15,7 @@ type CmsArkuszSectionProps = {
   title: string;
   subtitle: string;
   groups: CmsArkuszGroup[];
-  /** Nagłówki lat — arkusze CKE po roku sesji. */
+  /** Nagłówki lat - arkusze CKE po roku sesji. */
   groupByYear?: boolean;
 };
 

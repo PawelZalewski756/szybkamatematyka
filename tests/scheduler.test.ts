@@ -34,7 +34,7 @@ describe("createReviewItem", () => {
   });
 });
 
-describe("gradeReviewItem — poprawna odpowiedź", () => {
+describe("gradeReviewItem - poprawna odpowiedź", () => {
   it("pierwsza poprawna → interwał 1 dzień i wzrost EF", () => {
     const item = createReviewItem("t", NOW);
     const graded = gradeReviewItem(item, true, NOW);
@@ -82,7 +82,7 @@ describe("gradeReviewItem — poprawna odpowiedź", () => {
   });
 });
 
-describe("gradeReviewItem — błędna odpowiedź", () => {
+describe("gradeReviewItem - błędna odpowiedź", () => {
   it("resetuje powtórki i ustawia krótki interwał (minuty)", () => {
     const item = createReviewItem("t", NOW);
     const ok = gradeReviewItem(item, true, NOW);
@@ -102,7 +102,7 @@ describe("gradeReviewItem — błędna odpowiedź", () => {
     const firstWrong = gradeReviewItem(item, false, NOW);
     expect(firstWrong.easiness).toBeLessThan(DEFAULT_EASINESS);
 
-    // wiele błędów z rzędu — EF nie spada poniżej progu
+    // wiele błędów z rzędu - EF nie spada poniżej progu
     item = createReviewItem("t2", NOW);
     for (let i = 0; i < 20; i++) {
       item = gradeReviewItem(item, false, NOW);

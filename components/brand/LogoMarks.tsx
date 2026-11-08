@@ -21,7 +21,7 @@ const WHITE = "#f6f1e7";
 const BG = "#1a1712";
 const ON_ACCENT = "#1a1200";
 
-/** Znak marki — bursztynowy kafelek z pierwiastkiem. Czytelny „matematyczny” symbol. */
+/** Znak marki - bursztynowy kafelek z pierwiastkiem. Czytelny „matematyczny” symbol. */
 export function LogoMarkBrand({ size = 24, className, ...props }: LogoMarkProps) {
   return (
     <svg

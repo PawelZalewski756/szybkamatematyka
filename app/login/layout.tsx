@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Logowanie",
   description:
     `Zaloguj się do ${BRAND_NAME_GENITIVE}, aby zapisywać postępy, zdobywać XP i synchronizować naukę między urządzeniami.`,
-  // Strona uwierzytelniania — bez wartości dla wyszukiwarek.
+  // Strona uwierzytelniania - bez wartości dla wyszukiwarek.
   robots: { index: false, follow: false },
 };
 

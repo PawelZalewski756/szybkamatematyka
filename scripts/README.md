@@ -1,14 +1,14 @@
 # Skrypty
 
-## `npm run seed:auto` — pełna automatyzacja
+## `npm run seed:auto` - pełna automatyzacja
 
-Pobiera zadania z **katalogu treningowego** w aplikacji (~1275) — to **nie** są oryginalne skany arkuszy CKE.
+Pobiera zadania z **katalogu treningowego** w aplikacji (~1275) - to **nie** są oryginalne skany arkuszy CKE.
 
 Dla każdego zadania:
 
 1. Zapisuje treść z opcjami A/B/C/D do Supabase
 2. Rozwiązanie: **najpierw z katalogu** (spójne z poprawną odpowiedzią), Gemini tylko gdy brak
-3. Format rozwiązania: `Krok 1:`, `Krok 2:`, `Odpowiedź: …` — bez LaTeX
+3. Format rozwiązania: `Krok 1:`, `Krok 2:`, `Odpowiedź: …` - bez LaTeX
 
 **Wymagania:** `.env.local` z `GEMINI_API_KEY`, Supabase URL/KEY, migracje SQL (w tym `add_zadania_source_id.sql`).
 
@@ -16,7 +16,7 @@ Dla każdego zadania:
 # Wszystko: arkusze treningowe + reszta katalogu po działach
 npm run seed:auto
 
-# Test — podmień 5 wcześniejszych importów
+# Test - podmień 5 wcześniejszych importów
 npm run seed:auto -- --limit=5 --replace
 
 # Wyczyść cały import w Supabase (SQL): migrations/wyczysc_import.sql
@@ -33,15 +33,15 @@ npm run seed:auto -- --delay=4000
 
 Ponowne uruchomienie **pomija** zadania już zapisane (`source_id` = id z katalogu).
 
-**Uwaga:** Pełny import ~1000 zadań trwa wiele godzin i zużywa limit Gemini — najpierw testuj `--limit=10`.
+**Uwaga:** Pełny import ~1000 zadań trwa wiele godzin i zużywa limit Gemini - najpierw testuj `--limit=10`.
 
-## `npm run seed:cke-matura` — arkusze maturalne CKE (poziom podstawowy)
+## `npm run seed:cke-matura` - arkusze maturalne CKE (poziom podstawowy)
 
 Import **oficjalnych** zadań maturalnych (treść na stronie, bez linków dla ucznia).
 
 - **18 arkuszy** z pełną treścią online: lata **2015–2025** (maj, próbne, przykładowe) + **maj 2024** z gotowymi rozwiązaniami w kodzie
 - **~560 zadań** w Supabase po pierwszym imporcie
-- Lata **2007–2014**: na źródłach tylko PDF — pomijane w automacie
+- Lata **2007–2014**: na źródłach tylko PDF - pomijane w automacie
 
 ```bash
 # 1) Treść wszystkich arkuszy (szybko)
@@ -55,7 +55,7 @@ npm run seed:cke-matura -- --fill-solutions --only=m25-maj,m23-maj
 npm run seed:cke-matura -- --only=m23-maj --replace --fill-solutions
 ```
 
-Cache: `data/cke-matura-cache/` — po przerwaniu importu wznów `--fill-solutions`.
+Cache: `data/cke-matura-cache/` - po przerwaniu importu wznów `--fill-solutions`.
 
 Rysunki z arkusza (zadania z wykresem / diagramem):
 
@@ -69,7 +69,7 @@ Pobiera ilustracje do `public/cke-matura/` i aktualizuje treść w Supabase.
 
 3 przykładowe zadania matury (ręczna tablica JSON).
 
-## `npm run seed:trening-tasks` — arena treningowa (tasks + materials)
+## `npm run seed:trening-tasks` - arena treningowa (tasks + materials)
 
 Masowy import zadań wielokrotnego wyboru do tabeli **`tasks`** oraz materiałów teoretycznych do **`materials`** (~5000 zadań, ~25 materiałów).
 

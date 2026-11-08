@@ -128,7 +128,7 @@ export function DuelResultScreen({
   }, [outcome]);
 
   // Trwały zapis wyniku pojedynku (statystyki + historia). Liczymy tylko realne
-  // pojedynki rywalizacyjne (awardXp) — pomijamy hot-seat (dwóch graczy na jednym
+  // pojedynki rywalizacyjne (awardXp) - pomijamy hot-seat (dwóch graczy na jednym
   // urządzeniu) i trening z łatwym botem. Dla gościa zapis trafia do localStorage,
   // dla zalogowanego dodatkowo do Supabase (profiles.duel_* + duel_results).
   useEffect(() => {
@@ -143,7 +143,7 @@ export function DuelResultScreen({
       mode,
       slug,
     }).catch(() => {
-      /* zapis statystyk jest best-effort — nie blokuje UI wyniku */
+      /* zapis statystyk jest best-effort - nie blokuje UI wyniku */
     });
   }, [account, awardXp, outcome, myResult, opponentResult, mode, slug]);
 
@@ -222,7 +222,7 @@ export function DuelResultScreen({
               , aby zapisać {previewXp} XP z pojedynku.
             </>
           ) : (
-            "Trening z botem — bez zapisu XP."
+            "Trening z botem - bez zapisu XP."
           )}
         </p>
       )}

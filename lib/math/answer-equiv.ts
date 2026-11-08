@@ -1,5 +1,5 @@
 /**
- * Porównywanie odpowiedzi matematycznych — ułamki (ASCII i Unicode),
+ * Porównywanie odpowiedzi matematycznych - ułamki (ASCII i Unicode),
  * liczby całkowite, ułamki dziesiętne, proste wyrażenia po lewej stronie „=”.
  */
 
@@ -154,7 +154,7 @@ export function isNumericClaimTrue(claim: string): boolean | null {
   return nearlyEqual(left, right);
 }
 
-/** Indeks poprawnej odpowiedzi — pierwszy równoważny correctIndex, fallback na exact match. */
+/** Indeks poprawnej odpowiedzi - pierwszy równoważny correctIndex, fallback na exact match. */
 export function resolveCorrectChoiceIndex(
   choices: string[],
   correctIndex: number,

@@ -43,7 +43,7 @@ export function integerChoices(correct: number, count = 4): {
   };
 }
 
-/** Buduje unikalne opcje MC — bez równoważnych duplikatów (np. 1/2 i 2/4). */
+/** Buduje unikalne opcje MC - bez równoważnych duplikatów (np. 1/2 i 2/4). */
 export function uniqueChoices(
   correct: string,
   wrongs: string[],
@@ -68,7 +68,7 @@ export function uniqueChoices(
 const PERCENTS = [5, 10, 15, 20, 25, 50] as const;
 const PRICE_PERCENTS = [10, 20, 25, 50] as const;
 
-/** Np. 20% z 30 = 6 — zawsze wynik całkowity. */
+/** Np. 20% z 30 = 6 - zawsze wynik całkowity. */
 export function exactPercentOf(seed: number): {
   pct: number;
   base: number;
@@ -83,7 +83,7 @@ export function exactPercentOf(seed: number): {
   return { pct, base, value };
 }
 
-/** Np. 15 z 60 = 25% — zawsze wynik całkowity. */
+/** Np. 15 z 60 = 25% - zawsze wynik całkowity. */
 export function exactWhatPercent(seed: number): {
   part: number;
   total: number;
@@ -96,7 +96,7 @@ export function exactWhatPercent(seed: number): {
   return { part, total, pct };
 }
 
-/** Cena po podwyżce o X% — wynik całkowity w złotówkach. */
+/** Cena po podwyżce o X% - wynik całkowity w złotówkach. */
 export function exactPriceAfterIncrease(seed: number): {
   price: number;
   pct: number;
@@ -120,7 +120,7 @@ export function exactAverage(seed: number): {
   return { nums, avg };
 }
 
-/** Cena po obniżce — wynik całkowity. */
+/** Cena po obniżce - wynik całkowity. */
 export function exactPriceAfterDiscount(seed: number): {
   price: number;
   pct: number;

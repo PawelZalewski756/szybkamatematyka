@@ -9,7 +9,7 @@ type TaskContentProps = {
   content: string;
 };
 
-/** Treść zadania — LaTeX ($...$) + obrazki SVG z Gemini. */
+/** Treść zadania - LaTeX ($...$) + obrazki SVG z Gemini. */
 export function TaskContent({ content }: TaskContentProps) {
   const parts = useMemo(() => splitTaskContent(content), [content]);
 

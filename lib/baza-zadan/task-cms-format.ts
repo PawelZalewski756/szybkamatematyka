@@ -14,7 +14,7 @@ export function formatTaskTrescForDb(task: Task): string {
   return lines.join("\n").trim();
 }
 
-/** Gotowe rozwiązanie z katalogu (bez Gemini) — spójne z poprawną odpowiedzią. */
+/** Gotowe rozwiązanie z katalogu (bez Gemini) - spójne z poprawną odpowiedzią. */
 export function buildRozwiazanieFromCatalog(task: Task): string | null {
   const steps: string[] = [];
 

@@ -48,7 +48,7 @@ export async function generateMetadata({
     formatTreningLabel(topicSlug);
 
   return {
-    title: `${topicLabel} — trening (${examLabel})`,
+    title: `${topicLabel} - trening (${examLabel})`,
     description: `Zadania z tematu „${topicLabel}” (dział: ${categoryLabel}) pod ${examLabel}. Ćwicz, zdobywaj EXP i utrwalaj materiał krok po kroku.`,
     alternates: {
       canonical: `/trening/${exam}/${category}/${topic}`,

@@ -29,7 +29,7 @@ export function getSupabase(): SupabaseClient {
   return browserClient;
 }
 
-/** Token sesji do nagłówka Authorization — odświeża wygasłą sesję jeśli trzeba. */
+/** Token sesji do nagłówka Authorization - odświeża wygasłą sesję jeśli trzeba. */
 export async function getSupabaseAccessToken(): Promise<string | null> {
   if (!isSupabaseConfigured()) return null;
 
@@ -60,7 +60,7 @@ export async function getSupabaseAccessToken(): Promise<string | null> {
   return data.session.access_token;
 }
 
-/** Zwraca klienta lub null — bez rzucania wyjątku (bezpieczne dla UI). */
+/** Zwraca klienta lub null - bez rzucania wyjątku (bezpieczne dla UI). */
 export function getSupabaseOrNull(): SupabaseClient | null {
   if (!isSupabaseConfigured()) return null;
   try {

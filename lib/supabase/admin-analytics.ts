@@ -16,7 +16,7 @@ import type { PostgrestError } from "@supabase/supabase-js";
  *  - `solved_tasks`, `daily_challenges`, `review_schedule` mają politykę *_select_own
  *    (using auth.uid() = user_id), więc klient sesji widzi tylko własne wiersze.
  *    Platformowa liczba rozwiązanych zadań wymagałaby service_role/SQL po stronie
- *    serwera — nie wymyślamy sekretów, więc tę metrykę pomijamy i opisujemy w `notes`.
+ *    serwera - nie wymyślamy sekretów, więc tę metrykę pomijamy i opisujemy w `notes`.
  */
 
 const PAGE_SIZE = 1000;
@@ -68,7 +68,7 @@ export type AdminAnalytics = {
 };
 
 // ---------------------------------------------------------------------------
-// Czyste funkcje agregujące (bez I/O) — łatwe do testów i ponownego użycia.
+// Czyste funkcje agregujące (bez I/O) - łatwe do testów i ponownego użycia.
 // ---------------------------------------------------------------------------
 
 /** Czy data (YYYY-MM-DD lub ISO) mieści się w ostatnich `days` dniach od `now`. */
@@ -86,7 +86,7 @@ export function isWithinDays(
   return diffDays <= days;
 }
 
-/** Rozkład poziomów (z XP) — posortowany rosnąco po numerze poziomu. */
+/** Rozkład poziomów (z XP) - posortowany rosnąco po numerze poziomu. */
 export function computeLevelDistribution(
   rows: ProfileAnalyticsRow[],
 ): LevelBucket[] {
@@ -100,7 +100,7 @@ export function computeLevelDistribution(
     .sort((a, b) => a.level - b.level);
 }
 
-/** Rozkład wartości tekstowych (np. działów) — posortowany malejąco po liczbie. */
+/** Rozkład wartości tekstowych (np. działów) - posortowany malejąco po liczbie. */
 export function buildDistribution(values: string[]): DistributionItem[] {
   const counts = new Map<string, number>();
   for (const raw of values) {
@@ -314,7 +314,7 @@ async function fetchContentStats(notes: string[]): Promise<ContentStats> {
  */
 export async function fetchAdminAnalytics(): Promise<AdminAnalytics> {
   const notes: string[] = [
-    "Liczba rozwiązanych zadań w skali platformy nie jest liczona — tabele " +
+    "Liczba rozwiązanych zadań w skali platformy nie jest liczona - tabele " +
       "solved_tasks / daily_challenges / review_schedule mają RLS „tylko własne " +
       "wiersze”, więc klient sesji nie widzi danych innych graczy (wymagałoby to " +
       "service_role po stronie serwera).",

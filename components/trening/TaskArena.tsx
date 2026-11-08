@@ -62,7 +62,7 @@ type TaskArenaProps = {
   topic: string;
   topicLabel: string;
   backHref: string;
-  /** Ukrywa nagłówek (powrót + etykieta) — np. w zakładce areny na stronie tematu. */
+  /** Ukrywa nagłówek (powrót + etykieta) - np. w zakładce areny na stronie tematu. */
   compactChrome?: boolean;
 };
 
@@ -677,7 +677,7 @@ export function TaskArena({
             {feedback === "wrong" && (
               <p className="mt-4 text-center text-sm font-semibold text-red-400">
                 {showHalfXpHint
-                  ? "Spróbuj jeszcze raz — po poprawnej odpowiedzi dostaniesz połowę XP."
+                  ? "Spróbuj jeszcze raz - po poprawnej odpowiedzi dostaniesz połowę XP."
                   : "Spróbuj jeszcze raz!"}
               </p>
             )}

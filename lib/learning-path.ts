@@ -45,7 +45,7 @@ export const SCHOOL_CLASS_GROUPS: readonly SchoolClassGroup[] = [
     label: "Liceum",
     options: HS_YEARS.map((n) => ({
       value: `liceum-${n}` as SchoolClassPath,
-      label: `Liceum — klasa ${n}`,
+      label: `Liceum - klasa ${n}`,
     })),
   },
   {
@@ -53,7 +53,7 @@ export const SCHOOL_CLASS_GROUPS: readonly SchoolClassGroup[] = [
     label: "Technikum",
     options: TECH_YEARS.map((n) => ({
       value: `technikum-${n}` as SchoolClassPath,
-      label: `Technikum — klasa ${n}`,
+      label: `Technikum - klasa ${n}`,
     })),
   },
   {
@@ -61,7 +61,7 @@ export const SCHOOL_CLASS_GROUPS: readonly SchoolClassGroup[] = [
     label: "Szkoła branżowa I stopnia",
     options: TECH_YEARS.map((n) => ({
       value: `zawodowa-${n}` as SchoolClassPath,
-      label: `Branżówka — klasa ${n}`,
+      label: `Branżówka - klasa ${n}`,
     })),
   },
 ] as const;
@@ -206,7 +206,7 @@ export function learningPathShortLabel(path: LearningPath): string {
   return PATH_SHORT_LABELS[path];
 }
 
-/** Etykieta do UI — preferuje konkretną klasę. */
+/** Etykieta do UI - preferuje konkretną klasę. */
 export function displayPathLabel(schoolClass: SchoolClassPath): string {
   return schoolClassLabel(schoolClass);
 }
@@ -339,7 +339,7 @@ export function saveSchoolClass(schoolClass: SchoolClassPath): void {
   saveLearningPath(learningPathFromSchoolClass(schoolClass));
 }
 
-/** @deprecated Zapisuj schoolClass — path jest pochodną. */
+/** @deprecated Zapisuj schoolClass - path jest pochodną. */
 export function saveLearningPath(path: LearningPath): void {
   if (typeof window === "undefined") return;
   localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, path);

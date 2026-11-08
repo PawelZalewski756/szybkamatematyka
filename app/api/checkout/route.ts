@@ -6,9 +6,9 @@ import {
 import { getPlanById } from "@/lib/subscription/plans";
 import { verifyUserRequest } from "@/lib/subscription/server-auth";
 
-// Stripe SDK używa Node crypto / fetcha — wymuszamy runtime Node (nie Edge).
+// Stripe SDK używa Node crypto / fetcha - wymuszamy runtime Node (nie Edge).
 export const runtime = "nodejs";
-// Tworzenie sesji Checkout to operacja zależna od żądania — nigdy nie cache'ować.
+// Tworzenie sesji Checkout to operacja zależna od żądania - nigdy nie cache'ować.
 export const dynamic = "force-dynamic";
 
 /**
@@ -18,13 +18,13 @@ export const dynamic = "force-dynamic";
  * Tworzy Stripe Checkout Session w trybie `subscription` dla wybranego planu i
  * zwraca `{ url }` do przekierowania (frontend robi window.location = url).
  *
- * Auth: wymaga zalogowanego użytkownika (Bearer token z sesji Supabase — sesja
+ * Auth: wymaga zalogowanego użytkownika (Bearer token z sesji Supabase - sesja
  * żyje w localStorage po stronie klienta, więc token wędruje w nagłówku,
  * analogicznie do /api/generate-solution).
  */
 export async function POST(request: Request) {
   try {
-    // 1) Płatności mogą być wyłączone (brak kluczy) — odpowiadamy łagodnie.
+    // 1) Płatności mogą być wyłączone (brak kluczy) - odpowiadamy łagodnie.
     if (!isStripeConfigured()) {
       return Response.json(
         {
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     const plan = getPlanById(planId);
     if (!plan || !plan.paid || !plan.priceEnvVar) {
       return Response.json(
-        { error: "Nieznany lub darmowy plan — brak czego opłacać." },
+        { error: "Nieznany lub darmowy plan - brak czego opłacać." },
         { status: 400 },
       );
     }

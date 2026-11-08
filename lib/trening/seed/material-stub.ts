@@ -5,11 +5,11 @@ export function buildMaterialStub(input: {
   topicName: string;
 }): { title: string; content: string } {
   const { examLabel, categoryName, topicName } = input;
-  const title = `${topicName} — ${examLabel}`;
+  const title = `${topicName} - ${examLabel}`;
 
   const content = `## Na egzaminie
 
-Temat **${topicName}** (${categoryName}) należy do wymagań ${examLabel}. Pełna lekcja jest generowana automatycznie — odśwież za chwilę, jeśli widzisz ten szkic.
+Temat **${topicName}** (${categoryName}) należy do wymagań ${examLabel}. Pełna lekcja jest generowana automatycznie - odśwież za chwilę, jeśli widzisz ten szkic.
 
 ## Mapa tematu
 
@@ -22,13 +22,13 @@ Temat **${topicName}** (${categoryName}) należy do wymagań ${examLabel}. Pełn
 
 *Materiał w trakcie uzupełniania dla: ${topicName}.*
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 
 **Krok 1.** Przejdź do zadań w arenie treningowej dla tego tematu.
 
 ## Pułapki
 
-- Ten wpis to tymczasowy placeholder — docelowa lekcja ma min. 2500 znaków i pełne przykłady.
+- Ten wpis to tymczasowy placeholder - docelowa lekcja ma min. 2500 znaków i pełne przykłady.
 
 ## Ćwiczenia do samodzielnego rozwiązania
 

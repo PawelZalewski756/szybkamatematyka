@@ -1,4 +1,4 @@
-/** Modele z osobnymi limitami RPD (per model) — rotacja przy limicie dziennym. */
+/** Modele z osobnymi limitami RPD (per model) - rotacja przy limicie dziennym. */
 
 const DEFAULT_THEORY_MODEL_CHAIN = [
   "gemini-2.5-flash-lite",

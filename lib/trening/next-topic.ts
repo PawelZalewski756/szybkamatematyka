@@ -49,7 +49,7 @@ export function examKeyForLearningPath(path: LearningPathKey): TreningExamKey {
   return path === "sp" ? "8_klasa" : "matura_podstawowa";
 }
 
-/** Pierwszy temat egzaminu — punkt startu dla nowego użytkownika. */
+/** Pierwszy temat egzaminu - punkt startu dla nowego użytkownika. */
 export function getFirstTopic(examKey: TreningExamKey): NextTopic | null {
   const category = TRAINING_CURRICULUM[examKey].categories.find(
     (c) => c.topics.length > 0,

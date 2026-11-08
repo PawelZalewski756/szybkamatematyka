@@ -113,7 +113,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
           </div>
         ) : (
           <p className="mt-4 text-muted">
-            Brak minigier — zmień ścieżkę w pasku u góry.
+            Brak minigier - zmień ścieżkę w pasku u góry.
           </p>
         )}
       </section>

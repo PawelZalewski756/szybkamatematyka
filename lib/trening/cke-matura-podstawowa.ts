@@ -20,7 +20,7 @@ export type CkeMaturaPodstawowaTree = {
   categories: CkeCategoryDef[];
 };
 
-/** Drzewo CKE — matura podstawowa (wymagania egzaminacyjne + typowe działy arkuszy). */
+/** Drzewo CKE - matura podstawowa (wymagania egzaminacyjne + typowe działy arkuszy). */
 export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
   examType: "matura_podstawowa",
   label: "Matura podstawowa",

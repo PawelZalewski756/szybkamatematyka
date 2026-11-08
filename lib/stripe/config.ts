@@ -4,7 +4,7 @@ import Stripe from "stripe";
  * Konfiguracja Stripe po stronie serwera.
  *
  * Klucze (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, STRIPE_PRICE_*) są wyłącznie
- * serwerowe — nigdy nie trafiają do przeglądarki. Cała aplikacja działa też BEZ
+ * serwerowe - nigdy nie trafiają do przeglądarki. Cała aplikacja działa też BEZ
  * tych zmiennych: wtedy `isStripeConfigured()` zwraca false, a UI/route handlery
  * uprzejmie informują, że płatności są chwilowo niedostępne (analogicznie do
  * sytuacji braku konfiguracji Supabase).
@@ -25,7 +25,7 @@ export function getStripeOrNull(): Stripe | null {
   if (!isStripeConfigured()) return null;
   if (!stripeClient) {
     stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY!.trim(), {
-      // apiVersion celowo pominięty — używamy wersji przypiętej przez SDK,
+      // apiVersion celowo pominięty - używamy wersji przypiętej przez SDK,
       // co eliminuje rozjazd typów przy aktualizacjach pakietu.
       typescript: true,
       appInfo: { name: "Szybka Matematyka" },
@@ -34,11 +34,11 @@ export function getStripeOrNull(): Stripe | null {
   return stripeClient;
 }
 
-/** Wariant rzucający — używaj tam, gdzie konfiguracja jest już zweryfikowana. */
+/** Wariant rzucający - używaj tam, gdzie konfiguracja jest już zweryfikowana. */
 export function getStripe(): Stripe {
   const stripe = getStripeOrNull();
   if (!stripe) {
-    throw new Error("Brak STRIPE_SECRET_KEY — płatności są wyłączone.");
+    throw new Error("Brak STRIPE_SECRET_KEY - płatności są wyłączone.");
   }
   return stripe;
 }
@@ -46,7 +46,7 @@ export function getStripe(): Stripe {
 export function getStripeWebhookSecret(): string {
   const secret = process.env.STRIPE_WEBHOOK_SECRET?.trim();
   if (!secret) {
-    throw new Error("Brak STRIPE_WEBHOOK_SECRET — webhook nie może zweryfikować podpisu.");
+    throw new Error("Brak STRIPE_WEBHOOK_SECRET - webhook nie może zweryfikować podpisu.");
   }
   return secret;
 }

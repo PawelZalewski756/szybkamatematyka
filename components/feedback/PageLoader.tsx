@@ -3,7 +3,7 @@ import { Loader2 } from "lucide-react";
 type PageLoaderProps = {
   /** Tekst komunikatu pod spinnerem. */
   label?: string;
-  /** Krótszy wariant — mniej pionowego paddingu (np. wewnątrz sekcji). */
+  /** Krótszy wariant - mniej pionowego paddingu (np. wewnątrz sekcji). */
   compact?: boolean;
 };
 

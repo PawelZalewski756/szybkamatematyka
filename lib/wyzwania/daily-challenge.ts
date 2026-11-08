@@ -65,7 +65,7 @@ function buildQuestion(
 }
 
 /**
- * Deterministyczny zestaw na dany dzień i tor — ten sam zestaw przy każdym
+ * Deterministyczny zestaw na dany dzień i tor - ten sam zestaw przy każdym
  * wejściu tego samego dnia (seedowany datą + torem).
  */
 export function generateDailyChallenge(

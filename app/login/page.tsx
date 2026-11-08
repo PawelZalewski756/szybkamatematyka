@@ -124,7 +124,7 @@ export default function LoginPage() {
         try {
           await ensureUserProfile(data.user);
         } catch {
-          /* sesja OK — profil naprawi navbar; i tak idziemy na stronę główną */
+          /* sesja OK - profil naprawi navbar; i tak idziemy na stronę główną */
         }
       }
 
@@ -202,7 +202,7 @@ export default function LoginPage() {
       if (!data.user || data.user.identities?.length === 0) {
         setIsError(true);
         setMessage(
-          "Ten e-mail jest już zarejestrowany — użyj „Zaloguj się” albo innego adresu.",
+          "Ten e-mail jest już zarejestrowany - użyj „Zaloguj się” albo innego adresu.",
         );
         return;
       }
@@ -246,13 +246,13 @@ export default function LoginPage() {
           }
         }
 
-        // Stały URL sukcesu — do pomiaru konwersji (Google Ads).
+        // Stały URL sukcesu - do pomiaru konwersji (Google Ads).
         router.push(signupSuccessPath(false));
         router.refresh();
         return;
       }
 
-      // Konto utworzone, czeka na potwierdzenie e-mail — profil utworzy trigger w bazie.
+      // Konto utworzone, czeka na potwierdzenie e-mail - profil utworzy trigger w bazie.
       // Osobny URL sukcesu (z ?confirm=1), żeby Ads mogło mierzyć rejestrację.
       router.push(signupSuccessPath(true));
       return;

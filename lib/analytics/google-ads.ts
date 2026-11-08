@@ -1,5 +1,5 @@
 /**
- * Publiczny ID tagu Google Ads (gtag). Nie jest sekretem — i tak trafia do HTML.
+ * Publiczny ID tagu Google Ads (gtag). Nie jest sekretem - i tak trafia do HTML.
  * Nadpisanie: NEXT_PUBLIC_GOOGLE_ADS_ID.
  */
 export const GOOGLE_ADS_ID =

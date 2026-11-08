@@ -69,12 +69,12 @@ describe("canShowDailyReminder", () => {
 });
 
 describe("shouldTriggerStreakReminder", () => {
-  it("przy wejściu na stronę — zawsze", () => {
+  it("przy wejściu na stronę - zawsze", () => {
     expect(shouldTriggerStreakReminder(true, atLocalHour(10))).toBe(true);
     expect(shouldTriggerStreakReminder(true, atLocalHour(20))).toBe(true);
   });
 
-  it("bez nawigacji — tylko po godzinie wieczornej", () => {
+  it("bez nawigacji - tylko po godzinie wieczornej", () => {
     expect(
       shouldTriggerStreakReminder(false, atLocalHour(STREAK_REMINDER_EVENING_HOUR - 1)),
     ).toBe(false);

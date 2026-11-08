@@ -216,7 +216,7 @@ export async function createZadanie(input: {
   return data as ZadanieRow;
 }
 
-/** Bezpieczne pobranie zadań — nie rzuca; zwraca pustą tablicę przy błędzie. */
+/** Bezpieczne pobranie zadań - nie rzuca; zwraca pustą tablicę przy błędzie. */
 export async function fetchZadaniaSafe(
   filters: ZadaniaFilters = {},
 ): Promise<FetchZadaniaResult> {

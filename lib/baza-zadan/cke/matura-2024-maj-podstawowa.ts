@@ -1,5 +1,5 @@
 /**
- * Matura matematyka — maj 2024, poziom podstawowy (formuła 2023).
+ * Matura matematyka - maj 2024, poziom podstawowy (formuła 2023).
  * Treść zadań zgodna z arkuszem CKE z sesji 8 maja 2024 (źródło publiczne: arkusz egzaminacyjny).
  */
 
@@ -11,7 +11,7 @@ export type CkeMaturaTask = {
 };
 
 export const CKE_MATURA_2024_MAJ_META = {
-  nazwa: "Matura — maj 2024 — poziom podstawowy",
+  nazwa: "Matura - maj 2024 - poziom podstawowy",
   typ: "matura" as const,
   rok: 2024,
   miesiac: 5,
@@ -27,7 +27,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "Dana jest nierówność |x − 1| ≥ 3.\n\nNa którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\n(Uwaga: na arkuszu CKE są cztery rysunki oznaczone A, B, C, D.)",
     rozwiazanie:
-      "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C).",
+      "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) - zgodnie z kluczem CKE (zazwyczaj opcja C).",
   },
   {
     numer: 2,
@@ -75,7 +75,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRównanie x + 1/((x+2)(x−3)) = 0 w zbiorze liczb rzeczywistych:\nA) nie ma rozwiązania\nB) ma dokładnie jedno rozwiązanie: (−1)\nC) ma dokładnie dwa rozwiązania: (−2) oraz 3\nD) ma dokładnie trzy rozwiązania: (−1), (−2) oraz 3",
     rozwiazanie:
-      "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1",
+      "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik - odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1",
   },
   {
     numer: 8,
@@ -83,7 +83,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "Dany jest wielomian W(x) = 3x³ + 6x² + 9x.\n\nOceń prawdziwość stwierdzeń:\n1) W(x) = 3x · (x² + 2x + 3)\n2) Liczba (−1) jest rozwiązaniem równania W(x) = 0",
     rozwiazanie:
-      "**Krok 1.** Wyłączamy wspólny czynnik: $W(x)=3x^{3}+6x^{2}+9x=3x\\left(x^{2}+2x+3\\right)$, więc stwierdzenie 1 jest prawdziwe.\n\n**Krok 2.** Sprawdzamy $x=-1$: $W(-1)=3(-1)^{3}+6(-1)^{2}+9(-1)=-3+6-9=-6\\ne 0$, więc $-1$ nie jest pierwiastkiem — stwierdzenie 2 jest fałszywe.\n\n**Odpowiedź:** 1) P, 2) F.",
+      "**Krok 1.** Wyłączamy wspólny czynnik: $W(x)=3x^{3}+6x^{2}+9x=3x\\left(x^{2}+2x+3\\right)$, więc stwierdzenie 1 jest prawdziwe.\n\n**Krok 2.** Sprawdzamy $x=-1$: $W(-1)=3(-1)^{3}+6(-1)^{2}+9(-1)=-3+6-9=-6\\ne 0$, więc $-1$ nie jest pierwiastkiem - stwierdzenie 2 jest fałszywe.\n\n**Odpowiedź:** 1) P, 2) F.",
   },
   {
     numer: 9,
@@ -96,15 +96,15 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     numer: 10,
     dzial: "Równania",
     tresc:
-      "W październiku 2022 założono dwa sady: łącznie 1960 drzew. Po roku uschło 5% w pierwszym i 10% w drugim. Usunięto uschnięte, nie dosadzano. Liczba drzew w drugim sadzie po roku to 60% liczby w pierwszym. x — drzewa w pierwszym, y — w drugim. Wybierz układ równań (A–D na arkuszu).",
+      "W październiku 2022 założono dwa sady: łącznie 1960 drzew. Po roku uschło 5% w pierwszym i 10% w drugim. Usunięto uschnięte, nie dosadzano. Liczba drzew w drugim sadzie po roku to 60% liczby w pierwszym. x - drzewa w pierwszym, y - w drugim. Wybierz układ równań (A–D na arkuszu).",
     rozwiazanie:
-      "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu).",
+      "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu).",
   },
   {
     numer: 11,
     dzial: "Geometria",
     tresc:
-      "Na rysunku przedstawiono dwie równoległe proste — interpretacja geometryczna jednego z układów A–D. Wybierz właściwy układ.",
+      "Na rysunku przedstawiono dwie równoległe proste - interpretacja geometryczna jednego z układów A–D. Wybierz właściwy układ.",
     rozwiazanie:
       "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku.\n\nOdpowiedź: zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia).",
   },
@@ -130,7 +130,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "W układzie współrzędnych przedstawiono fragment paraboli (funkcja kwadratowa f). Wierzchołek i punkty przecięcia z osiami mają współrzędne całkowite.\n\nZadania 14.1–14.4 dotyczą tej paraboli (na arkuszu jest rysunek).",
     rozwiazanie:
-      "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
+      "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) - przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
   },
   {
     numer: 15,
@@ -138,7 +138,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "a_n = (−1)^n · (n − 5). Oceń prawdziwość:\n1) Pierwszy wyraz jest dwa razy większy od trzeciego.\n2) Wszystkie wyrazy ciągu są dodatnie.",
     rozwiazanie:
-      "**Krok 1.** Liczymy wyrazy: $a_{1}=(-1)^{1}\\cdot(1-5)=(-1)\\cdot(-4)=4$ oraz $a_{3}=(-1)^{3}\\cdot(3-5)=(-1)\\cdot(-2)=2$.\n\n**Krok 2.** Stwierdzenie 1: $a_{1}=4=2\\cdot 2=2\\cdot a_{3}$, więc pierwszy wyraz jest dwa razy większy od trzeciego — PRAWDA.\n\n**Krok 3.** Stwierdzenie 2: $a_{4}=(-1)^{4}\\cdot(4-5)=-1<0$, więc nie wszystkie wyrazy są dodatnie — FAŁSZ.\n\n**Odpowiedź:** 1) P, 2) F.",
+      "**Krok 1.** Liczymy wyrazy: $a_{1}=(-1)^{1}\\cdot(1-5)=(-1)\\cdot(-4)=4$ oraz $a_{3}=(-1)^{3}\\cdot(3-5)=(-1)\\cdot(-2)=2$.\n\n**Krok 2.** Stwierdzenie 1: $a_{1}=4=2\\cdot 2=2\\cdot a_{3}$, więc pierwszy wyraz jest dwa razy większy od trzeciego - PRAWDA.\n\n**Krok 3.** Stwierdzenie 2: $a_{4}=(-1)^{4}\\cdot(4-5)=-1<0$, więc nie wszystkie wyrazy są dodatnie - FAŁSZ.\n\n**Odpowiedź:** 1) P, 2) F.",
   },
   {
     numer: 16,
@@ -218,7 +218,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     tresc:
       "Graniastosłup prawidłowego sześciokąta: wysokość 6, pole podstawy 15√3. Zadania 25.1 i 25.2 (rysunki kąta nachylenia).",
     rozwiazanie:
-      "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
+      "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej - wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
   },
   {
     numer: 26,
@@ -232,7 +232,7 @@ export const CKE_MATURA_2024_MAJ_ZADANIA: CkeMaturaTask[] = [
     numer: 27,
     dzial: "Kombinatoryka",
     tresc:
-      "Kody czterocyfrowe z cyfr 1, 3, 6, 8 — każda cyfra dokładnie raz. Liczba kodów:",
+      "Kody czterocyfrowe z cyfr 1, 3, 6, 8 - każda cyfra dokładnie raz. Liczba kodów:",
     rozwiazanie:
       "**Krok 1.** Każda cyfra ma wystąpić dokładnie raz, więc liczymy permutacje 4 różnych cyfr.\n\n**Krok 2.** Liczba permutacji: $4!=4\\cdot 3\\cdot 2\\cdot 1=24$.\n\n**Odpowiedź:** C, czyli $24$.",
   },

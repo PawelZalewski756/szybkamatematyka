@@ -1,7 +1,7 @@
 import type { PostgrestError } from "@supabase/supabase-js";
 
 /**
- * PostgreSQL 42703 lub PostgREST PGRST204 — brakująca kolumna (nie ogólne „column” w treści).
+ * PostgreSQL 42703 lub PostgREST PGRST204 - brakująca kolumna (nie ogólne „column” w treści).
  * Gdy podasz `column`, dopasowanie jest węższe (np. tylko avatar_url).
  */
 export function isPostgrestUndefinedColumnError(
@@ -38,7 +38,7 @@ export function isSchemaMissingError(message: string | null | undefined): boolea
   );
 }
 
-/** PostgreSQL 42703 / PostgREST — brakująca kolumna w treści błędu. */
+/** PostgreSQL 42703 / PostgREST - brakująca kolumna w treści błędu. */
 export function isPostgrestColumnMissingMessage(
   message: string | null | undefined,
 ): boolean {
@@ -46,14 +46,14 @@ export function isPostgrestColumnMissingMessage(
   return /column\s+[\w.]+\s+does not exist|PGRST204/i.test(message);
 }
 
-/** PostgREST PGRST116 — .single()/.maybeSingle() bez wiersza (np. UPDATE 0 rows). */
+/** PostgREST PGRST116 - .single()/.maybeSingle() bez wiersza (np. UPDATE 0 rows). */
 export function isPostgrestNoRowsError(
   error: PostgrestError | null | undefined,
 ): boolean {
   return error?.code === "PGRST116";
 }
 
-/** PostgreSQL 42501 — brak GRANT na kolumnę/tabelę. */
+/** PostgreSQL 42501 - brak GRANT na kolumnę/tabelę. */
 export function isPostgrestPermissionError(
   error: PostgrestError | null | undefined,
 ): boolean {
@@ -85,7 +85,7 @@ export function formatSupabaseErrorForUser(message: string): string {
     return "Tabele arkusze i zadania nie istnieją w Supabase. Uruchom migrację SQL (instrukcja poniżej).";
   }
   if (isPostgrestColumnMissingMessage(message)) {
-    return "Baza profilu wymaga aktualizacji — uruchom migrację SQL w Supabase (supabase/migrations/add_profile_streak_columns.sql).";
+    return "Baza profilu wymaga aktualizacji - uruchom migrację SQL w Supabase (supabase/migrations/add_profile_streak_columns.sql).";
   }
   if (/permission denied|42501|uprawnie.*profilu|repair_profile_write_grants/i.test(message)) {
     return "Brak uprawnień do zapisu profilu. W Supabase uruchom migrację 20261027140000_repair_profile_write_grants.sql.";

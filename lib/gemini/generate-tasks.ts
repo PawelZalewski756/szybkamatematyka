@@ -115,7 +115,7 @@ export async function generateTasksBatchWithRetry(
       if (validationRetry) {
         validationAttempts += 1;
         console.warn(
-          `  ⏳ Walidacja partii — ponawiam (${validationAttempts}/${maxValidationAttempts})…`,
+          `  ⏳ Walidacja partii - ponawiam (${validationAttempts}/${maxValidationAttempts})…`,
         );
         await sleep(1500);
         continue;
@@ -130,7 +130,7 @@ export async function generateTasksBatchWithRetry(
         if (nextIndex >= 0) {
           modelIndex = nextIndex;
           apiAttempts = 0;
-          console.warn(`  ↪ Limit dzienny ${quotaModel} — model ${modelChain[nextIndex]}`);
+          console.warn(`  ↪ Limit dzienny ${quotaModel} - model ${modelChain[nextIndex]}`);
           continue;
         }
       }

@@ -98,7 +98,7 @@ export function useAchievements(): UseAchievementsResult {
     setStats(nextStats);
 
     // Gdy zalogowany i Supabase dostępne, wstrzymaj confetti do czasu scalenia
-    // stanu „widziane" z chmurą — inaczej świętowalibyśmy odznaki widziane już
+    // stanu „widziane" z chmurą - inaczej świętowalibyśmy odznaki widziane już
     // na innym urządzeniu. Brak Supabase / gość → liczymy od razu z localStorage.
     const supabase = getSupabaseOrNull();
     if (supabase && uid && remoteSyncedForRef.current !== uid) {
@@ -138,7 +138,7 @@ export function useAchievements(): UseAchievementsResult {
             const prof = await ensureUserProfile(session.user);
             if (!cancelled) setProfile(prof);
           } catch {
-            /* brak profilu — liczymy z samego localStorage */
+            /* brak profilu - liczymy z samego localStorage */
           }
         }
       } finally {
@@ -215,7 +215,7 @@ export function useAchievements(): UseAchievementsResult {
       );
       const remoteAll = new Set(remote.map((r) => r.id));
 
-      // Chmura jest źródłem prawdy między urządzeniami — scal jej „widziane"
+      // Chmura jest źródłem prawdy między urządzeniami - scal jej „widziane"
       // z lokalnymi (unia), by nie świętować ponownie odznak z innego urządzenia.
       seenRef.current = mergeSeenIds(seenRef.current, remoteSeen);
       saveSeenAchievementIds(uid, seenRef.current);

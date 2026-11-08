@@ -55,7 +55,7 @@ uruchomienia w SQL Editorze. Na świeżym projekcie wykonaj:
 9. **Ostatni krok:** `migrations/20260906220000_production_hardening.sql`.
 
 Ostatnia migracja jest celowo restrykcyjna: przerwie działanie z komunikatem,
-jeśli nie istnieją wymagane tabele. Można uruchomić ją ponownie — naprawia
+jeśli nie istnieją wymagane tabele. Można uruchomić ją ponownie - naprawia
 przypadek, w którym wcześniejsze pliki hardeningu zostały uruchomione przed
 utworzeniem tabel.
 
@@ -136,11 +136,11 @@ order by relname;
 
 ## Najczęstsze błędy
 
-- `Could not find the table public.zadania` — uruchom
+- `Could not find the table public.zadania` - uruchom
   `migrations/init_baza_zadan.sql`.
-- `column source_id does not exist` — uruchom cały
+- `column source_id does not exist` - uruchom cały
   `migrations/add_zadania_source_id.sql`.
-- Brak aktualizacji subskrypcji — sprawdź `SUPABASE_SERVICE_ROLE_KEY`,
+- Brak aktualizacji subskrypcji - sprawdź `SUPABASE_SERVICE_ROLE_KEY`,
   `STRIPE_WEBHOOK_SECRET` i końcową migrację hardeningu.
-- Brak dostępu do panelu `/admin` — ustaw obie zmienne adminów oraz dodaj
+- Brak dostępu do panelu `/admin` - ustaw obie zmienne adminów oraz dodaj
   adres w `public.admin_emails`.

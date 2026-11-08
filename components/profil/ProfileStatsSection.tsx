@@ -75,7 +75,7 @@ function ActivityBarChart({ points }: { points: ActivityPoint[] }) {
           <div
             key={point.date}
             className="flex min-w-0 flex-1 flex-col items-center gap-1.5"
-            title={`${point.label}${point.active ? " — aktywny" : " — brak aktywności"}`}
+            title={`${point.label}${point.active ? " - aktywny" : " - brak aktywności"}`}
           >
             <div className="flex h-20 w-full items-end justify-center">
               {point.active ? (
@@ -104,7 +104,7 @@ export type ProfileStatsSectionProps = {
 };
 
 /**
- * Sekcja „Twój postęp" — KPI + wykres aktywności. Additywna, nie dotyka planu
+ * Sekcja „Twój postęp" - KPI + wykres aktywności. Additywna, nie dotyka planu
  * ani osiągnięć.
  */
 export function ProfileStatsSection({

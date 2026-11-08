@@ -2,7 +2,7 @@ import { parseTheorySections } from "@/lib/trening/theory-sections";
 
 const RENAME: Record<string, string> = {
   "Najważniejsze": "Definicje i wzory",
-  "Przykład krok po kroku": "Przykład 1 — podstawowy",
+  "Przykład krok po kroku": "Przykład 1 - podstawowy",
 };
 
 function renameTitle(title: string): string {
@@ -20,7 +20,7 @@ W tej lekcji przejdziesz przez:
 
 ${items.join("\n")}
 
-Po lekturze przejdź do **zadań w arenie** — tam utrwalisz materiał na przykładach maturalnych.`;
+Po lekturze przejdź do **zadań w arenie** - tam utrwalisz materiał na przykładach maturalnych.`;
 }
 
 function buildCwiczenia(reviewBody: string | null): string {
@@ -42,7 +42,7 @@ function buildCwiczenia(reviewBody: string | null): string {
 
   return `## Ćwiczenia do samodzielnego rozwiązania
 
-1. Rozwiąż zadanie analogiczne do **Przykładu 1** — zmień liczby, zachowaj strukturę.
+1. Rozwiąż zadanie analogiczne do **Przykładu 1** - zmień liczby, zachowaj strukturę.
 2. Wyjaśnij własnymi słowami główną definicję z sekcji **Definicje i wzory**.
 3. Wypisz 3 typowe błędy, o których mowa w **Pułapkach**, i jak ich unikać.
 ${fromReview.join("\n")}`;
@@ -53,7 +53,7 @@ function buildOdpowiedzi(reviewBody: string | null): string {
     return `## Odpowiedzi
 
 1–3. Porównaj z **Definicjami i wzorami** oraz **Przykładem 1** powyżej.
-4–5. Rozwiązania zależą od wariantu — sprawdź w **arenie zadań** lub zapytaj w komentarzu do lekcji.`;
+4–5. Rozwiązania zależą od wariantu - sprawdź w **arenie zadań** lub zapytaj w komentarzu do lekcji.`;
   }
 
   const lines = reviewBody
@@ -63,7 +63,7 @@ function buildOdpowiedzi(reviewBody: string | null): string {
 
   const answers = lines.map((q, i) => {
     const text = q.replace(/^\d+\.\s*/, "");
-    return `${i + 1}. ${text} — patrz sekcja **Definicje i wzory** i **Przykład 1**.`;
+    return `${i + 1}. ${text} - patrz sekcja **Definicje i wzory** i **Przykład 1**.`;
   });
 
   return `## Odpowiedzi

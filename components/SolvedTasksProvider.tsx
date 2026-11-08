@@ -25,8 +25,8 @@ type SolvedTasksContextValue = {
   markSolved: (taskId: string) => void;
   /**
    * Zapisuje wynik podejścia do zadania. Błędna odpowiedź oznacza zadanie
-   * „do powtórki" (poprawna jest no-op — patrz `recordTaskResult`). Działa
-   * spójnie dla gościa i zalogowanego — używa aktualnego `userId` providera.
+   * „do powtórki" (poprawna jest no-op - patrz `recordTaskResult`). Działa
+   * spójnie dla gościa i zalogowanego - używa aktualnego `userId` providera.
    */
   recordResult: (taskId: string, isCorrect: boolean) => void;
   solvedCount: number;
@@ -48,7 +48,7 @@ export function SolvedTasksProvider({ children }: { children: ReactNode }) {
     try {
       supabase = getSupabase();
     } catch {
-      // No Supabase configured — fall back to local solved ids.
+      // No Supabase configured - fall back to local solved ids.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       reload(null);
       setReady(true);

@@ -340,7 +340,7 @@ export function ArkuszeCkeCatalog({
             <GraduationCap className="h-5 w-5 text-accent" aria-hidden />
             <div>
               <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
-                Matura CKE — oficjalne sesje
+                Matura CKE - oficjalne sesje
               </h2>
               <p className="mt-1 text-sm text-muted">
                 Poziom podstawowy, od najnowszych sesji.

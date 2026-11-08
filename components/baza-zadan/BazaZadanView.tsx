@@ -157,7 +157,7 @@ export function BazaZadanView({
   const countValues: Record<BazaTab, string> = {
     zadania: String(taskCount),
     arkusze:
-      cmsLoading ? "…" : cmsLoadState === "idle" ? "—" : String(cmsArkuszCount),
+      cmsLoading ? "…" : cmsLoadState === "idle" ? "-" : String(cmsArkuszCount),
     trening: String(sheetCount),
   };
 

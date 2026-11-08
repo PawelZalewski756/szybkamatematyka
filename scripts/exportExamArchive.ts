@@ -86,7 +86,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
 
   return {
     id,
-    title: `${sheet.nazwa} — zad. ${task.numer}`,
+    title: `${sheet.nazwa} - zad. ${task.numer}`,
     category,
     difficulty: inferDifficulty(task.numer, !isOpen),
     forPaths: ["liceum", "technikum", "zawodowa"],
@@ -94,7 +94,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
       ? `${formattedPrompt}\n\nRozwiąż zadanie.`
       : formattedPrompt,
     choices: isOpen
-      ? ["Zadanie otwarte — patrz rozwiązanie"]
+      ? ["Zadanie otwarte - patrz rozwiązanie"]
       : formattedChoices,
     correctIndex: isOpen ? 0 : correctIndex,
     explanation,
@@ -161,7 +161,7 @@ function main(): void {
     }
   }
 
-  const header = `/** AUTO-GENERATED — npm run seed:exam-archive. Nie edytuj ręcznie. */\nimport type { Task } from "@/lib/baza-zadan/types";\nimport type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";\n\n`;
+  const header = `/** AUTO-GENERATED - npm run seed:exam-archive. Nie edytuj ręcznie. */\nimport type { Task } from "@/lib/baza-zadan/types";\nimport type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";\n\n`;
 
   const body = `${header}export const EXAM_ARCHIVE_TASKS: Task[] = ${serializeTasks(tasks)} as Task[];\n\nexport const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = ${serializeSheets(sheetMeta)} as ExamArchiveSheetMeta[];\n`;
 

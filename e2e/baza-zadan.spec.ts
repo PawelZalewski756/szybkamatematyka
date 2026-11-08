@@ -100,7 +100,7 @@ test.describe("Baza zadań", () => {
             created_at: "2025-06-01T00:00:00.000Z",
             arkusz: {
               id: "cke-sheet-1",
-              nazwa: "Matura — maj 2025",
+              nazwa: "Matura - maj 2025",
               typ: "matura",
               rok: 2025,
               miesiac: 5,
@@ -112,7 +112,7 @@ test.describe("Baza zadań", () => {
 
     await page.goto("/baza-zadan?tab=arkusze");
     await expect(
-      page.getByRole("link", { name: /Arkusz — maj 2025/ }),
+      page.getByRole("link", { name: /Arkusz - maj 2025/ }),
     ).toBeVisible();
     await expect(page.getByText("Wyświetlono", { exact: false })).toBeVisible();
   });

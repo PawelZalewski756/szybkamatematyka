@@ -1,6 +1,6 @@
 -- Osiągnięcia gracza: persystencja odblokowanych odznak + stan „widziane" (sync między urządzeniami).
 -- Odznaki są WYLICZANE z PlayerStats; tutaj trzymamy tylko fakt odblokowania i flagę „seen".
--- achievement_id to stabilny tekstowy klucz z katalogu (np. „solved-50") — BEZ klucza obcego.
+-- achievement_id to stabilny tekstowy klucz z katalogu (np. „solved-50") - BEZ klucza obcego.
 -- Uruchom w Supabase → SQL Editor (po init_profiles_avatars.sql). Idempotentne.
 
 create table if not exists public.user_achievements (

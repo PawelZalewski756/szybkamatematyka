@@ -29,7 +29,7 @@ function warnTableMissingOnce(): void {
     }
   }
   console.warn(
-    "[szybka-matma] Tabela user_achievements niedostępna — osiągnięcia zapisywane tylko lokalnie. " +
+    "[szybka-matma] Tabela user_achievements niedostępna - osiągnięcia zapisywane tylko lokalnie. " +
       "Uruchom w Supabase SQL Editor: supabase/migrations/20260529161000_add_achievements.sql",
   );
 }
@@ -51,7 +51,7 @@ function mapRow(row: UserAchievementRow): UnlockedAchievementRecord {
 
 /**
  * Pobiera odblokowane osiągnięcia gracza z Supabase (wraz z flagą „widziane").
- * Pusta lista przy braku Supabase / braku tabeli / błędzie — cichy fallback.
+ * Pusta lista przy braku Supabase / braku tabeli / błędzie - cichy fallback.
  */
 export async function fetchUnlockedAchievements(
   userId: string,
@@ -78,7 +78,7 @@ export async function fetchUnlockedAchievements(
 
 /**
  * Zapisuje (insert) nowo odblokowane osiągnięcia. Istniejące wiersze są pomijane
- * (ignoreDuplicates) — dzięki temu NIE nadpisujemy flagi „seen" ani `unlocked_at`.
+ * (ignoreDuplicates) - dzięki temu NIE nadpisujemy flagi „seen" ani `unlocked_at`.
  * Best-effort: błędy nie blokują UI.
  */
 export async function recordUnlockedAchievements(
@@ -103,7 +103,7 @@ export async function recordUnlockedAchievements(
 }
 
 /**
- * Oznacza wskazane osiągnięcia jako „widziane" (seen = true). Best-effort —
+ * Oznacza wskazane osiągnięcia jako „widziane" (seen = true). Best-effort -
  * aktualizuje tylko istniejące wiersze; brak wiersza/tabeli jest cicho ignorowany.
  */
 export async function markAchievementsSeen(

@@ -1,6 +1,6 @@
 -- Gracze muszą móc zapisywać nick, XP, klasę i streak. Po przejściu na
 -- granty kolumnowe (SELECT tylko na publicznych polach) brakowało UPDATE/INSERT
--- na polach gracza — zapisy nicku i XP kończyły się permission denied, a
+-- na polach gracza - zapisy nicku i XP kończyły się permission denied, a
 -- onboarding wracał w nieskończoność.
 
 do $$
@@ -46,7 +46,7 @@ declare
   ];
 begin
   if to_regclass('public.profiles') is null then
-    raise notice 'pomijam granty zapisu profiles — tabela nie istnieje';
+    raise notice 'pomijam granty zapisu profiles - tabela nie istnieje';
     return;
   end if;
 

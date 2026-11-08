@@ -450,9 +450,9 @@ function TrainingOverview({
   const progress = Math.max(0, Math.min(100, overallProgress));
   const progressMessage =
     overallProgress === 0
-      ? "Zacznij od jednego tematu — reszta ścieżki poczeka."
+      ? "Zacznij od jednego tematu - reszta ścieżki poczeka."
       : overallProgress === 100
-        ? "Ścieżka ukończona — możesz wrócić do wybranych tematów."
+        ? "Ścieżka ukończona - możesz wrócić do wybranych tematów."
         : "Każdy rozwiązany temat przybliża Cię do celu.";
 
   return (
@@ -976,8 +976,8 @@ export default function TreningPage() {
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa — działy i tematy dopasowane do bazy zadań."
-      : "Egzamin ósmoklasisty — działy i tematy dopasowane do bazy zadań.";
+      ? "Matura podstawowa - działy i tematy dopasowane do bazy zadań."
+      : "Egzamin ósmoklasisty - działy i tematy dopasowane do bazy zadań.";
 
   const overallProgress = useMemo(() => {
     const cats = exam.categories;
@@ -1191,7 +1191,7 @@ export default function TreningPage() {
                   : topicFilter === "completed"
                     ? "Rozwiąż zadania w arenie, aby ukończyć pierwsze tematy."
                     : topicFilter === "incomplete"
-                      ? "Wszystkie aktywne tematy są ukończone — możesz przejść do powtórek."
+                      ? "Wszystkie aktywne tematy są ukończone - możesz przejść do powtórek."
                       : "Zmień filtr lub wyszukiwanie, aby zobaczyć tematy."
               }
             />

@@ -112,7 +112,7 @@ function explain(
       const [, a, b] = intervals[0]!;
       const [, c, d] = intervals[1]!;
       return {
-        method: "Część wspólna to liczby należące do obu przedziałów. Jej lewy koniec to większy z lewych końców, a prawy — mniejszy z prawych.",
+        method: "Część wspólna to liczby należące do obu przedziałów. Jej lewy koniec to większy z lewych końców, a prawy - mniejszy z prawych.",
         calculation: `$[${a},${b}]\\cap[${c},${d}]=[\\max(${a},${c}),\\min(${b},${d})]=${answer}$.`,
       };
     }
@@ -179,9 +179,9 @@ function explain(
         pierwiastki: "Pierwiastek kwadratowy z liczby to nieujemna liczba, której kwadrat daje tę liczbę.",
         liczby_calkowite: "Dodawanie liczb całkowitych wykonaj z uwzględnieniem ich znaków.",
         podzielnosc: "Sprawdź podzielność lub wyznacz największy wspólny dzielnik wskazanych liczb.",
-        symetrie: "W symetrii względem osi OY zmienia się znak x, a względem osi OX — znak y.",
-        bryly: "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu — sześcian długości krawędzi.",
-        objetosc_i_pole: "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu — sześcian długości krawędzi.",
+        symetrie: "W symetrii względem osi OY zmienia się znak x, a względem osi OX - znak y.",
+        bryly: "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu - sześcian długości krawędzi.",
+        objetosc_i_pole: "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu - sześcian długości krawędzi.",
         punkty_na_plaszczyznie: "Znaki współrzędnych wyznaczają ćwiartkę: (+,+) I, (−,+) II, (−,−) III, (+,−) IV.",
         dlugosc_odcinka: "Użyj wzoru na odległość punktów: $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$.",
         proporcjonalnosc: "Wprost proporcjonalność ma postać $y=kx$. Najpierw odczytaj k, a potem pomnóż je przez x.",

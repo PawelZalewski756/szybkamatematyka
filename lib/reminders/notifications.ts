@@ -15,7 +15,7 @@ export function canUseBrowserNotifications(): boolean {
   return getNotificationPermission() !== "unsupported";
 }
 
-/** Prośba o zgodę — wywoływać tylko w reakcji na gest użytkownika. */
+/** Prośba o zgodę - wywoływać tylko w reakcji na gest użytkownika. */
 export async function requestNotificationPermission(): Promise<NotificationPermissionState> {
   if (!canUseBrowserNotifications()) return "unsupported";
   try {
@@ -26,7 +26,7 @@ export async function requestNotificationPermission(): Promise<NotificationPermi
   }
 }
 
-/** Jednorazowe powiadomienie systemowe — tylko gdy permission === granted. */
+/** Jednorazowe powiadomienie systemowe - tylko gdy permission === granted. */
 export function showStreakBrowserNotification(streak: number): boolean {
   if (getNotificationPermission() !== "granted") return false;
 

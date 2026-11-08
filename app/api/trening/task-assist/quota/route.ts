@@ -4,7 +4,7 @@ import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-/** GET /api/trening/task-assist/quota — pozostałe zapytania w bieżącym miesiącu. */
+/** GET /api/trening/task-assist/quota - pozostałe zapytania w bieżącym miesiącu. */
 export async function GET(request: Request) {
   const auth = await verifyTaskAssistRequest(request);
   if (!auth.ok) {

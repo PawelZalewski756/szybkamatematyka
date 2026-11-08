@@ -1,7 +1,7 @@
 import type { TaskCategory } from "@/lib/baza-zadan/types";
 import type { ExamSheetKind } from "@/lib/baza-zadan/types";
 
-/** Grupy działów na liście zadań — logiczna segregacja. */
+/** Grupy działów na liście zadań - logiczna segregacja. */
 export type TaskCategoryGroupId =
   | "podstawy"
   | "algebra-rownania"
@@ -22,7 +22,7 @@ export const TASK_CATEGORY_GROUPS: readonly TaskCategoryGroup[] = [
   {
     id: "podstawy",
     label: "Podstawy szkolne",
-    description: "Arytmetyka, ułamki i geometria — fundament pod egzamin.",
+    description: "Arytmetyka, ułamki i geometria - fundament pod egzamin.",
     emoji: "📐",
     categories: ["arytmetyka", "ulamki", "geometria"],
   },
@@ -50,14 +50,14 @@ export const TASK_CATEGORY_GROUPS: readonly TaskCategoryGroup[] = [
   {
     id: "egzamin-8",
     label: "Egzamin 8-klasisty",
-    description: "Zadania w stylu egzaminu — mieszane działy.",
+    description: "Zadania w stylu egzaminu - mieszane działy.",
     emoji: "📝",
     categories: ["egzamin-8"],
   },
   {
     id: "matura",
     label: "Matura",
-    description: "Przygotowanie do matury podstawowej — tu dodamy arkusze CKE.",
+    description: "Przygotowanie do matury podstawowej - tu dodamy arkusze CKE.",
     emoji: "🎓",
     categories: ["matura"],
   },

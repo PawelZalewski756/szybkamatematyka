@@ -204,7 +204,7 @@ export function PojedynkiHome() {
             description={
               supabaseOn
                 ? "Pokój z kodem, podgląd rywala w czasie rzeczywistym."
-                : "Wymaga Supabase — u Ciebie obecnie niedostępne."
+                : "Wymaga Supabase - u Ciebie obecnie niedostępne."
             }
             onClick={() => setDelivery("online")}
             badge={supabaseOn ? "Realtime" : "Offline"}
@@ -213,7 +213,7 @@ export function PojedynkiHome() {
           <ModeCard
             icon={<Share2 className="h-6 w-6" />}
             title="Na kod"
-            description="Zagraj i wyślij kod. Async/ghost — działa też offline."
+            description="Zagraj i wyślij kod. Async/ghost - działa też offline."
             onClick={() => setDelivery("challenge")}
             badge="Async"
           />

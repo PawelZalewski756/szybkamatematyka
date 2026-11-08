@@ -16,7 +16,7 @@ function lcm(a: number, b: number): number {
   return Math.abs((a * b) / gcd(a, b));
 }
 
-/** Dodatkowe generatory proceduralne — rozbudowa bazy. */
+/** Dodatkowe generatory proceduralne - rozbudowa bazy. */
 export function generateExtraProceduralTasks(): Task[] {
   const tasks: Task[] = [];
 
@@ -91,7 +91,7 @@ export function generateExtraProceduralTasks(): Task[] {
     ]);
     tasks.push(
       t(`proc-frac-add-${i}`, {
-        title: `Ułamki — suma #${i}`,
+        title: `Ułamki - suma #${i}`,
         category: "ulamki",
         difficulty: "latwy",
         forPaths: ["klasa-5", "klasa-6", "klasa-7", "klasa-8"],
@@ -201,7 +201,7 @@ export function generateExtraProceduralTasks(): Task[] {
     const { choices, correctIndex } = integerChoices(newPrice);
     tasks.push(
       t(`proc-e8-pct-${i}`, {
-        title: `E8 — procent #${i}`,
+        title: `E8 - procent #${i}`,
         category: "egzamin-8",
         difficulty: i % 3 === 0 ? "trudny" : "sredni",
         forPaths: ["klasa-7", "klasa-8", "egzamin-8"],
@@ -222,7 +222,7 @@ export function generateExtraProceduralTasks(): Task[] {
     const opts = [`x = ${x - 1}`, `x = ${x}`, `x = ${x + 1}`, `x = ${x + 2}`];
     tasks.push(
       t(`proc-e8-eq-${i}`, {
-        title: `E8 — równanie #${i}`,
+        title: `E8 - równanie #${i}`,
         category: "egzamin-8",
         difficulty: "sredni",
         forPaths: ["klasa-8", "egzamin-8"],
@@ -246,7 +246,7 @@ export function generateExtraProceduralTasks(): Task[] {
     ]);
     tasks.push(
       t(`proc-mat-pow-${i}`, {
-        title: `Matura — potęga #${i}`,
+        title: `Matura - potęga #${i}`,
         category: "matura",
         difficulty: "sredni",
         forPaths: ["matura"],
@@ -266,7 +266,7 @@ export function generateExtraProceduralTasks(): Task[] {
     const { choices, correctIndex } = integerChoices(correct);
     tasks.push(
       t(`proc-mat-fx-${i}`, {
-        title: `Matura — funkcja #${i}`,
+        title: `Matura - funkcja #${i}`,
         category: "matura",
         difficulty: "sredni",
         forPaths: ["matura"],
@@ -286,7 +286,7 @@ export function generateExtraProceduralTasks(): Task[] {
     const opts = ["0", "1/2", "√2/2", "1"];
     tasks.push(
       t(`proc-mat-trig-${i}`, {
-        title: `Matura — trygonometria #${i}`,
+        title: `Matura - trygonometria #${i}`,
         category: "matura",
         difficulty: "latwy",
         forPaths: ["matura"],

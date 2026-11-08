@@ -1,6 +1,6 @@
 /**
  * Typy systemu osiągnięć / odznak. Osiągnięcia są WYLICZANE z istniejących
- * statystyk gracza (PlayerStats) — bez nowej tabeli Supabase i bez migracji.
+ * statystyk gracza (PlayerStats) - bez nowej tabeli Supabase i bez migracji.
  * Stan „świeżo odblokowane / zobaczone" trzymany jest wyłącznie w localStorage.
  */
 
@@ -84,7 +84,7 @@ export type AchievementProgress = {
   target: number;
 };
 
-/** Definicja pojedynczej odznaki (czysta — bez zależności runtime od React). */
+/** Definicja pojedynczej odznaki (czysta - bez zależności runtime od React). */
 export type Achievement = {
   id: string;
   title: string;
@@ -95,7 +95,7 @@ export type Achievement = {
   icon: AchievementIcon;
   category: AchievementCategory;
   tier: AchievementTier;
-  /** Czysta funkcja postępu — wyliczana z PlayerStats. */
+  /** Czysta funkcja postępu - wyliczana z PlayerStats. */
   measure: (stats: PlayerStats) => AchievementProgress;
 };
 

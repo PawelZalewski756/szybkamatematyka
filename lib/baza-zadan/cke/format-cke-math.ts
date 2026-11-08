@@ -69,7 +69,7 @@ function normalizeUnicodeMath(text: string): string {
     .normalize("NFKC")
     .replace(/ƒ/g, "f")
     .replace(/⁄/g, "/")
-    .replace(/[−–—]/g, "-")
+    .replace(/[−–-]/g, "-")
     .replace(/[∡∠]/g, "\\angle ")
     .replace(/×/g, "\\times")
     .replace(/·/g, "\\cdot")
@@ -112,7 +112,7 @@ function compactSpacedMath(text: string): string {
       `${coeff}${base}^{${exp}}`,
   );
 
-  // Potęgi / indeksy: x 2, a 4 (tylko samotna litera — nie środek polskiego słowa)
+  // Potęgi / indeksy: x 2, a 4 (tylko samotna litera - nie środek polskiego słowa)
   out = out.replace(
     /(?<![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])([a-zA-Z])\s+(\d+)(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])/g,
     (full, base: string, exp: string, offset: number, whole: string) => {
@@ -133,7 +133,7 @@ function compactSpacedMath(text: string): string {
     },
   );
 
-  // a n / a k — bez litery „i” (polskie „a i b” = „a oraz b”)
+  // a n / a k - bez litery „i” (polskie „a i b” = „a oraz b”)
   out = out.replace(
     /\b([abcpqsS])\s+([nkm])\b/g,
     (_m, base: string, idx: string) => `${base}_{${idx}}`,
@@ -283,7 +283,7 @@ function wrapAnglesAndDegrees(text: string): string {
     },
   );
 
-  // α = 180° - 2β (bez \b — greka nie jest „word char” bez flagi u)
+  // α = 180° - 2β (bez \b - greka nie jest „word char” bez flagi u)
   out = out.replace(
     /(?<!\$)([α-ω])\s*=\s*(\d+)\s*(?:\^\{\\circ\}|°)\s*-\s*(\d+)\s*([α-ω])(?!\$)/g,
     (_m, a: string, deg: string, coef: string, b: string) =>
@@ -358,7 +358,7 @@ export function formatCkeMathText(input: string): string {
 
   out = normalizeUnicodeMath(out);
   out = compactSpacedMath(out);
-  // Kąty / trig+° / nawiasy przed wyspami — inaczej `$m = sin$` odrywa stopnie.
+  // Kąty / trig+° / nawiasy przed wyspami - inaczej `$m = sin$` odrywa stopnie.
   out = wrapAnglesAndDegrees(out);
   out = wrapParenMath(out);
   out = wrapMathIslands(out);

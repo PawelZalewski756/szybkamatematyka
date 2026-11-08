@@ -12,7 +12,7 @@ function t(id: string, data: Omit<Task, "id">): Task {
   return { id, ...data };
 }
 
-/** Generuje setki wariantów z szablonów — rozszerza bazę dynamicznie. */
+/** Generuje setki wariantów z szablonów - rozszerza bazę dynamicznie. */
 export function generateProceduralTasks(): Task[] {
   const tasks: Task[] = [];
 
@@ -221,7 +221,7 @@ export function generateProceduralTasks(): Task[] {
     ]);
     tasks.push(
       t(`proc-frac-sub-${i}`, {
-        title: `Ułamki — odejmowanie #${i}`,
+        title: `Ułamki - odejmowanie #${i}`,
         category: "ulamki",
         difficulty: "latwy",
         forPaths: ["klasa-5", "klasa-6", "klasa-7", "klasa-8"],

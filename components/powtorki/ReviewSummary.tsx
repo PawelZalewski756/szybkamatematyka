@@ -65,7 +65,7 @@ export function ReviewSummary({
       </h2>
       <p className="mt-3 max-w-md text-sm font-semibold text-foreground sm:text-base">
         {perfect
-          ? "Wszystkie zadania za pierwszym razem — świetna robota."
+          ? "Wszystkie zadania za pierwszym razem - świetna robota."
           : "Materiał utrwalony. Trudniejsze zadania wrócą szybciej."}
       </p>
 
@@ -102,7 +102,7 @@ export function ReviewSummary({
       ) : (
         <p className="mt-8 inline-flex items-center gap-2 rounded-2xl border border-success/30 bg-success/10 px-5 py-3 text-sm font-bold text-success">
           <Trophy className="h-4 w-4" />
-          Na dziś nic więcej do powtórki — wróć jutro!
+          Na dziś nic więcej do powtórki - wróć jutro!
         </p>
       )}
 

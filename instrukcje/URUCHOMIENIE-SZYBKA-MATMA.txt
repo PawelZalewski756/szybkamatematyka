@@ -1,5 +1,5 @@
 ================================================================================
-  SZYBKA MATEMATYKA — instrukcja uruchomienia (Windows)
+  SZYBKA MATEMATYKA - instrukcja uruchomienia (Windows)
   Projekt: Next.js 16 + Supabase + Gemini (opcjonalnie)
 ================================================================================
 
@@ -8,7 +8,7 @@
   - Node.js 20.9 lub nowszy  →  https://nodejs.org/
   - npm (instaluje się z Node)
   - Konto Supabase (darmowe)  →  https://supabase.com/dashboard
-  - Opcjonalnie: klucz Gemini API (Google AI Studio) — tylko admin / import CKE
+  - Opcjonalnie: klucz Gemini API (Google AI Studio) - tylko admin / import CKE
 
   Sprawdzenie wersji (cmd lub PowerShell):
 
@@ -54,7 +54,7 @@
     - Minimum na start: supabase/migrations/init_baza_zadan.sql
     - Szczegóły: supabase/README.md
 
-  e) Jeśli projekt Supabase był „Paused” — w dashboardzie kliknij Resume Project,
+  e) Jeśli projekt Supabase był „Paused” - w dashboardzie kliknij Resume Project,
      poczekaj ~2 minuty, potem dopiero uruchamiaj aplikację.
 
 
@@ -121,7 +121,7 @@
   Uzupełnianie rozwiązań CKE (Gemini → cache + Supabase):
     npm run seed:cke-solutions
 
-    (Wznawia od miejsca przerwania; na free tier Gemini ~20 żądań/dzień —
+    (Wznawia od miejsca przerwania; na free tier Gemini ~20 żądań/dzień -
      resztę dokończ kolejnego dnia tą samą komendą.)
 
   Import wszystkich arkuszy CKE:
@@ -138,7 +138,7 @@
     → Uruchom migracje SQL w Supabase (supabase/README.md).
 
   Błędy logowania / ENOTFOUND / sieć
-    → Supabase projekt może być wstrzymany — Resume w dashboardzie.
+    → Supabase projekt może być wstrzymany - Resume w dashboardzie.
 
   „Zaloguj się” mimo że jesteś zalogowany
     → Odśwież stronę (Ctrl+Shift+R) lub wyloguj i zaloguj ponownie.
@@ -158,13 +158,13 @@
 8. STRUKTURA PLIKÓW (skrót)
 --------------------------------------------------------------------------------
 
-  .env.local          — klucze API (NIE commituj do git)
-  app/                — strony Next.js
-  components/         — komponenty React
-  lib/                — logika (Supabase, Gemini, zadania)
-  data/cke-matura-cache/ — cache arkuszy CKE (import Gemini)
-  supabase/migrations/ — SQL do bazy
-  instrukcje/         — ten folder z dokumentacją
+  .env.local          - klucze API (NIE commituj do git)
+  app/                - strony Next.js
+  components/         - komponenty React
+  lib/                - logika (Supabase, Gemini, zadania)
+  data/cke-matura-cache/ - cache arkuszy CKE (import Gemini)
+  supabase/migrations/ - SQL do bazy
+  instrukcje/         - ten folder z dokumentacją
 
 
 9. WDROŻENIE NA PRODUKCJĘ
@@ -178,9 +178,9 @@
 10. KONTAKT / NOTATKI
 --------------------------------------------------------------------------------
 
-  Stripe (płatności) — na końcu; bez STRIPE_* aplikacja działa normalnie.
+  Stripe (płatności) - na końcu; bez STRIPE_* aplikacja działa normalnie.
 
-  Generowanie AI dla uczniów — wyłączone; tylko admin + skrypty seed.
+  Generowanie AI dla uczniów - wyłączone; tylko admin + skrypty seed.
 
 ================================================================================
   Ostatnia aktualizacja: czerwiec 2026

@@ -3,7 +3,7 @@ import { getRuntimeSiteUrl } from "@/lib/supabase/config";
 
 const RESET_PATH = "/login/nowe-haslo";
 
-/** Strona sukcesu rejestracji — stały URL do pomiaru konwersji (Google Ads). */
+/** Strona sukcesu rejestracji - stały URL do pomiaru konwersji (Google Ads). */
 export const SIGNUP_SUCCESS_PATH = "/login/sukces";
 
 function isLocalDevHost(hostname: string): boolean {
@@ -25,7 +25,7 @@ export function passwordResetRedirectUrl(): string {
 
 /**
  * Ścieżka po udanej rejestracji.
- * `needsEmailConfirm` — konto utworzone, ale użytkownik musi potwierdzić e-mail.
+ * `needsEmailConfirm` - konto utworzone, ale użytkownik musi potwierdzić e-mail.
  */
 export function signupSuccessPath(needsEmailConfirm = false): string {
   return needsEmailConfirm

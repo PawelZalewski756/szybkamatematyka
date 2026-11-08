@@ -16,7 +16,7 @@ export function needsStreakReminder(
   return profile.streak >= 1 && profile.lastPlayedDate !== today;
 }
 
-/** Jednorazowe przypomnienie dziennie — nie powtarzaj tego samego dnia. */
+/** Jednorazowe przypomnienie dziennie - nie powtarzaj tego samego dnia. */
 export function canShowDailyReminder(
   lastReminderDate: string | null,
   today: string = todayDateString(),
@@ -34,7 +34,7 @@ export function isEveningReminderWindow(
 
 /**
  * Czy wyświetlić przypomnienie teraz.
- * - `onPageVisit`: przy wejściu / nawigacji — zawsze (jeśli spełnione warunki profilu).
+ * - `onPageVisit`: przy wejściu / nawigacji - zawsze (jeśli spełnione warunki profilu).
  * - bez nawigacji: tylko po godzinie wieczornej (timer w otwartej karcie).
  */
 export function shouldTriggerStreakReminder(

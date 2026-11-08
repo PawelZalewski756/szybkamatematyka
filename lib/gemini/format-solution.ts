@@ -10,7 +10,7 @@
  *   - rozjechać etykiety kroków i linię odpowiedzi.
  *
  * Poniższe funkcje są defensywne: naprawiają najczęstsze artefakty, a gdy
- * czegoś nie da się bezpiecznie naprawić — zostawiają tekst bez zmian, zamiast
+ * czegoś nie da się bezpiecznie naprawić - zostawiają tekst bez zmian, zamiast
  * go psuć.
  */
 
@@ -38,7 +38,7 @@ function fixMathArtifacts(text: string): string {
   // Potrójne (lub więcej) dolary → blokowy `$$`.
   out = out.replace(/\${3,}/g, () => "$$");
   // Gwiazdka jako mnożenie między liczbami/zmiennymi w trybie matematycznym
-  // bywa renderowana jako pogrubienie — zamień na `\cdot`.
+  // bywa renderowana jako pogrubienie - zamień na `\cdot`.
   out = out.replace(/(\$[^$]*?)\b(\d|[a-zA-Z)])\s*\*\s*(\d|[a-zA-Z(\\])/g, (m) =>
     m.replace(/\s*\*\s*/g, " \\cdot "),
   );
@@ -111,7 +111,7 @@ export function normalizeSolution(text: string): string {
   return out;
 }
 
-/** Zgodne z `scripts/seedCkeMaturaAll.ts` — placeholder bez Gemini. */
+/** Zgodne z `scripts/seedCkeMaturaAll.ts` - placeholder bez Gemini. */
 export const SOLUTION_PLACEHOLDER_MARK = "Rozwiązanie zostanie uzupełnione";
 
 export function isSolutionPlaceholder(text: string): boolean {

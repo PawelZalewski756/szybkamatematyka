@@ -3,7 +3,7 @@ const STORAGE_KEY = "sm_streak_reminder_prefs";
 export type StreakReminderPrefs = {
   /** Użytkownik włączył powiadomienia przeglądarki (opt-in). */
   notificationsEnabled: boolean;
-  /** Baner prośby o zgodę został zamknięty — nie pokazuj ponownie. */
+  /** Baner prośby o zgodę został zamknięty - nie pokazuj ponownie. */
   promptDismissed: boolean;
   /** Ostatnia data (YYYY-MM-DD), w której wysłano / pokazano przypomnienie dzienne. */
   lastReminderDate: string | null;

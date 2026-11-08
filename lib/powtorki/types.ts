@@ -2,7 +2,7 @@ export type ReviewResult = "correct" | "wrong";
 
 /**
  * Stan harmonogramu pojedynczego zadania w systemie powtórek (SM-2 lite).
- * Czas trzymany jako epoch ms — łatwy do serializacji w localStorage.
+ * Czas trzymany jako epoch ms - łatwy do serializacji w localStorage.
  */
 export type ReviewItem = {
   taskId: string;

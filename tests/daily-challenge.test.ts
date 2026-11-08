@@ -8,7 +8,7 @@ import {
 
 const TRACKS: QuestionTrack[] = ["podstawowa", "egzamin-8-klasisty", "matura"];
 
-describe("generateDailyChallenge — determinizm", () => {
+describe("generateDailyChallenge - determinizm", () => {
   it("ten sam dzień + tor → identyczny zestaw pytań", () => {
     for (const track of TRACKS) {
       const a = generateDailyChallenge(track, "2026-05-29");
@@ -25,7 +25,7 @@ describe("generateDailyChallenge — determinizm", () => {
   });
 });
 
-describe("generateDailyChallenge — kształt zestawu", () => {
+describe("generateDailyChallenge - kształt zestawu", () => {
   it("zwraca dokładnie DAILY_CHALLENGE_QUESTION_COUNT pytań", () => {
     for (const track of TRACKS) {
       const challenge = generateDailyChallenge(track, "2026-05-29");

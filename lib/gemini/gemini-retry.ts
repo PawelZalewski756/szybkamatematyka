@@ -22,7 +22,7 @@ const RETRY_HOURS_PATTERNS = [
 /** Bufor po czasie podanym przez API (ms). */
 export const GEMINI_RETRY_BUFFER_MS = 2500;
 
-/** Limit dzienny free tier — API i tak podaje krótki „retry in Xs”, ale to nie pomoże. */
+/** Limit dzienny free tier - API i tak podaje krótki „retry in Xs”, ale to nie pomoże. */
 export function isDailyQuotaExhausted(message: string): boolean {
   return (
     /GenerateRequestsPerDay|PerDayPerProject|PerDayPerModel|PerDay/i.test(
@@ -157,13 +157,13 @@ export async function waitForGeminiRetry(
   const daily = isDailyQuotaExhausted(message);
   const parsed = daily ? null : parseGeminiRetryDelayMs(message);
   const detail = daily
-    ? "(limit dzienny free tier — reset ok. północ PT)"
+    ? "(limit dzienny free tier - reset ok. północ PT)"
     : parsed !== null
       ? `(API: czekaj ${label})`
       : `(fallback: ${label})`;
   const line = daily
-    ? `  ⏳ Limit dzienny Gemini — czekam ${label} ${detail}…`
-    : `  ⏳ Limit Gemini — czekam ${label} ${detail}…`;
+    ? `  ⏳ Limit dzienny Gemini - czekam ${label} ${detail}…`
+    : `  ⏳ Limit Gemini - czekam ${label} ${detail}…`;
   if (log) log(line);
   else console.warn(line);
   await sleep(waitMs);

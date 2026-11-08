@@ -4,7 +4,7 @@ function t(id: string, data: Omit<Task, "id">): Task {
   return { id, ...data };
 }
 
-/** Dodatkowe zadania statyczne — rozszerzenie rdzenia bazy. */
+/** Dodatkowe zadania statyczne - rozszerzenie rdzenia bazy. */
 export const STATIC_TASKS_EXTRA: Task[] = [
   t("st-046", {
     title: "Dodawanie ułamków",
@@ -77,7 +77,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "x = 4×3 = 12.",
   }),
   t("st-053", {
-    title: "Procent — ile zostało",
+    title: "Procent - ile zostało",
     category: "procenty",
     difficulty: "sredni",
     forPaths: ["klasa-7", "klasa-8", "egzamin-8"],
@@ -87,7 +87,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "200 × 0,65 = 130 zł.",
   }),
   t("st-054", {
-    title: "Egzamin — prędkość",
+    title: "Egzamin - prędkość",
     category: "egzamin-8",
     difficulty: "sredni",
     forPaths: ["klasa-8", "egzamin-8"],
@@ -98,7 +98,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["egzamin-8-klasisty"],
   }),
   t("st-055", {
-    title: "Egzamin — pole trapezu",
+    title: "Egzamin - pole trapezu",
     category: "egzamin-8",
     difficulty: "trudny",
     forPaths: ["klasa-8", "egzamin-8"],
@@ -109,7 +109,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["egzamin-8-klasisty"],
   }),
   t("st-056", {
-    title: "Ciąg arytmetyczny — a₁",
+    title: "Ciąg arytmetyczny - a₁",
     category: "ciagi",
     difficulty: "sredni",
     forPaths: ["liceum", "technikum", "zawodowa"],
@@ -119,7 +119,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "Dla n=1: 2·1+1 = 3.",
   }),
   t("st-057", {
-    title: "Logarytm — zmiana podstawy",
+    title: "Logarytm - zmiana podstawy",
     category: "logarytmy",
     difficulty: "trudny",
     forPaths: ["liceum-3", "liceum-4", "matura"],
@@ -130,7 +130,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["matura-podstawowa"],
   }),
   t("st-058", {
-    title: "Matura — nierówność",
+    title: "Matura - nierówność",
     category: "matura",
     difficulty: "sredni",
     forPaths: ["matura"],
@@ -141,7 +141,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["matura-podstawowa"],
   }),
   t("st-059", {
-    title: "Matura — wyróżnik",
+    title: "Matura - wyróżnik",
     category: "matura",
     difficulty: "trudny",
     forPaths: ["matura"],
@@ -192,7 +192,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "3/4 = 0,75 = 75%.",
   }),
   t("st-064", {
-    title: "NWD — zadanie tekstowe",
+    title: "NWD - zadanie tekstowe",
     category: "algebra",
     difficulty: "sredni",
     forPaths: ["klasa-7", "klasa-8", "egzamin-8"],
@@ -202,7 +202,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "NWD(18,24) = 6.",
   }),
   t("st-065", {
-    title: "Równanie — x po obu stronach",
+    title: "Równanie - x po obu stronach",
     category: "rownania",
     difficulty: "trudny",
     forPaths: ["klasa-8", "liceum", "matura"],
@@ -212,7 +212,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "3x = 12 → x = 4.",
   }),
   t("st-066", {
-    title: "Funkcja kwadratowa — wierzchołek",
+    title: "Funkcja kwadratowa - wierzchołek",
     category: "funkcje",
     difficulty: "trudny",
     forPaths: ["matura"],
@@ -223,7 +223,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["matura-podstawowa"],
   }),
   t("st-067", {
-    title: "Matura — logarytm równania",
+    title: "Matura - logarytm równania",
     category: "matura",
     difficulty: "trudny",
     forPaths: ["matura"],
@@ -234,7 +234,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["matura-podstawowa"],
   }),
   t("st-068", {
-    title: "Egzamin — ułamek z liczby",
+    title: "Egzamin - ułamek z liczby",
     category: "egzamin-8",
     difficulty: "latwy",
     forPaths: ["klasa-7", "klasa-8", "egzamin-8"],
@@ -255,7 +255,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "10⁴ = 10 000.",
   }),
   t("st-070", {
-    title: "Pierwiastek niewymierny — oszacowanie",
+    title: "Pierwiastek niewymierny - oszacowanie",
     category: "pierwiastki",
     difficulty: "sredni",
     forPaths: ["klasa-8", "egzamin-8", "matura"],
@@ -265,7 +265,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "7²=49, 8²=64, więc √50 ≈ 7,07.",
   }),
   t("st-071", {
-    title: "Ciąg — suma wyrazów",
+    title: "Ciąg - suma wyrazów",
     category: "ciagi",
     difficulty: "trudny",
     forPaths: ["matura"],
@@ -286,7 +286,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "cos(0°) = 1.",
   }),
   t("st-073", {
-    title: "Arytmetyka — łączność",
+    title: "Arytmetyka - łączność",
     category: "arytmetyka",
     difficulty: "latwy",
     forPaths: ["sp"],
@@ -296,7 +296,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "25×4=100, 100×5=500.",
   }),
   t("st-074", {
-    title: "Geometria — kąty naprzemianległe",
+    title: "Geometria - kąty naprzemianległe",
     category: "geometria",
     difficulty: "sredni",
     forPaths: ["klasa-7", "klasa-8"],
@@ -306,7 +306,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "Przy równoległych prostych kąty naprzemianległe są równe.",
   }),
   t("st-075", {
-    title: "Matura — prawdopodobieństwo",
+    title: "Matura - prawdopodobieństwo",
     category: "matura",
     difficulty: "sredni",
     forPaths: ["matura"],
@@ -317,7 +317,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     examTags: ["matura-podstawowa"],
   }),
   t("st-076", {
-    title: "Egzamin — pole równoległoboku",
+    title: "Egzamin - pole równoległoboku",
     category: "egzamin-8",
     difficulty: "sredni",
     forPaths: ["klasa-8", "egzamin-8"],
@@ -338,7 +338,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "10³ = 1000.",
   }),
   t("st-078", {
-    title: "Funkcja — dziedzina",
+    title: "Funkcja - dziedzina",
     category: "funkcje",
     difficulty: "sredni",
     forPaths: ["liceum", "matura"],
@@ -358,7 +358,7 @@ export const STATIC_TASKS_EXTRA: Task[] = [
     explanation: "7÷3 = 2 reszta 1 → 2⅓.",
   }),
   t("st-080", {
-    title: "Matura — układ współrzędnych",
+    title: "Matura - układ współrzędnych",
     category: "matura",
     difficulty: "latwy",
     forPaths: ["matura"],

@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Polityka prywatności",
-  description: `Polityka prywatności ${BRAND_NAME} — jakie dane zbieramy, w jakim celu i jakie masz prawa (RODO).`,
+  description: `Polityka prywatności ${BRAND_NAME} - jakie dane zbieramy, w jakim celu i jakie masz prawa (RODO).`,
   alternates: { canonical: "/polityka-prywatnosci" },
 };
 
@@ -49,7 +49,7 @@ export default function PolitykaPrywatnosciPage() {
           </li>
           <li>
             Dane techniczne: logi, typ urządzenia/przeglądarki, przybliżona
-            lokalizacja na podstawie IP — w zakresie potrzebnym do działania i
+            lokalizacja na podstawie IP - w zakresie potrzebnym do działania i
             bezpieczeństwa Serwisu.
           </li>
           <li>
@@ -62,26 +62,26 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="3. Cele i podstawy">
         <ul className="list-disc space-y-1 pl-5">
           <li>
-            Świadczenie usługi (umowa / żądanie usługi) — konto, trening,
+            Świadczenie usługi (umowa / żądanie usługi) - konto, trening,
             subskrypcja.
           </li>
           <li>
-            Obsługa nowych kont — administrator otrzymuje przez prywatnego bota
+            Obsługa nowych kont - administrator otrzymuje przez prywatnego bota
             Telegram powiadomienie zawierające nick, adres e-mail, wybrany
             poziom nauki i status potwierdzenia adresu.
           </li>
           <li>
-            Uzasadniony interes — bezpieczeństwo i przeciwdziałanie nadużyciom.
+            Uzasadniony interes - bezpieczeństwo i przeciwdziałanie nadużyciom.
           </li>
           <li>
-            Pomiar użycia Szybkiej próby — zliczanie anonimowych sesji oraz
+            Pomiar użycia Szybkiej próby - zliczanie anonimowych sesji oraz
             poprawnych i błędnych odpowiedzi po ich wybraniu.
           </li>
           <li>
-            Obowiązki prawne — rozliczenia i wymagania księgowe związane z
+            Obowiązki prawne - rozliczenia i wymagania księgowe związane z
             płatnościami.
           </li>
-          <li>Zgoda — gdy wyraźnie o nią prosimy (np. marketing, jeśli kiedyś
+          <li>Zgoda - gdy wyraźnie o nią prosimy (np. marketing, jeśli kiedyś
             zostanie wprowadzony).</li>
         </ul>
       </InfoSection>
@@ -117,7 +117,7 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="6. Twoje prawa">
         <p>
           Masz prawo dostępu do danych, ich sprostowania, usunięcia,
-          ograniczenia przetwarzania, przenoszenia oraz sprzeciwu — w zakresie
+          ograniczenia przetwarzania, przenoszenia oraz sprzeciwu - w zakresie
           wynikającym z RODO. Możesz też złożyć skargę do Prezesa UODO.
         </p>
         <p>
@@ -148,7 +148,7 @@ export default function PolitykaPrywatnosciPage() {
         <p>
           Stosujemy środki techniczne i organizacyjne odpowiednie do ryzyka
           (m.in. szyfrowanie połączeń HTTPS, polityki dostępu w bazie). Żaden
-          system nie jest w 100% odporny — w razie incydentu podejmiemy
+          system nie jest w 100% odporny - w razie incydentu podejmiemy
           wymagane prawem działania.
         </p>
       </InfoSection>

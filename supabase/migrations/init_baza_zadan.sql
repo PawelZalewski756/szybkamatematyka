@@ -61,7 +61,7 @@ create policy "zadania_select_all"
   to anon, authenticated
   using (true);
 
--- Zapis dla wszystkich (panel admin — zaostrzymy później)
+-- Zapis dla wszystkich (panel admin - zaostrzymy później)
 create policy "arkusze_insert_all"
   on public.arkusze for insert
   to anon, authenticated

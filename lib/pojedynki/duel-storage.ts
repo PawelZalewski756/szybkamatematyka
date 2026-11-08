@@ -8,7 +8,7 @@ import { mulberry32 } from "@/lib/pojedynki/duel-rng";
 import { pointsForCombo } from "@/lib/pojedynki/duel-engine";
 
 /**
- * Przenośny „wyzwanie-kod" pojedynku async/ghost — w pełni offline. Zawiera
+ * Przenośny „wyzwanie-kod" pojedynku async/ghost - w pełni offline. Zawiera
  * konfigurację (seed/slug/path/liczbę pytań) ORAZ wynik autora, więc rywal
  * może zagrać ten sam zestaw i porównać się bez żadnego backendu.
  */
@@ -113,7 +113,7 @@ export const BOT_PRESETS: Record<
 };
 
 /**
- * Symuluje wynik bota dla danej konfiguracji — deterministycznie z seeda
+ * Symuluje wynik bota dla danej konfiguracji - deterministycznie z seeda
  * (ten sam pojedynek → ten sam bot). Bot „rozwiązuje" te same pytania z danym
  * prawdopodobieństwem trafienia, a punkty liczone są tą samą formułą combo.
  */
@@ -132,7 +132,7 @@ export function simulateBotResult(
 
   for (let i = 0; i < questions.length; i += 1) {
     const hit = rng() < preset.accuracy;
-    // Czas reakcji bota — wokół presetu, z deterministycznym rozrzutem.
+    // Czas reakcji bota - wokół presetu, z deterministycznym rozrzutem.
     durationMs += preset.perQuestionMs * (0.7 + rng() * 0.6);
     if (hit) {
       combo += 1;

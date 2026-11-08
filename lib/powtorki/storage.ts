@@ -57,7 +57,7 @@ export function saveSchedule(
       JSON.stringify(Object.values(schedule)),
     );
   } catch {
-    /* localStorage pełny/niedostępny — ignorujemy, stan w pamięci pozostaje */
+    /* localStorage pełny/niedostępny - ignorujemy, stan w pamięci pozostaje */
   }
 }
 

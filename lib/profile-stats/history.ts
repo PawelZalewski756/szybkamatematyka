@@ -1,5 +1,5 @@
 /**
- * Lekki tracker dziennej aktywności w localStorage — additywny, bez Supabase.
+ * Lekki tracker dziennej aktywności w localStorage - additywny, bez Supabase.
  * Zapisuje migawkę przy wizycie profilu / aktywności; wykres korzysta też z
  * profiles.last_played_date jako dodatkowego sygnału.
  */

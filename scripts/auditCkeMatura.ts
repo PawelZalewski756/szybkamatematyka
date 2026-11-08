@@ -44,7 +44,7 @@ async function main() {
     const found = maturaArkusze.find((a) => a.nazwa === s.nazwa);
     if (!found) {
       missing.push(s.id);
-      console.log(`  BRAK arkusza: ${s.id} — ${s.nazwa}`);
+      console.log(`  BRAK arkusza: ${s.id} - ${s.nazwa}`);
       continue;
     }
     const n = byArkusz.get(found.id) ?? 0;

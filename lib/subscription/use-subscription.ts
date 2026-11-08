@@ -30,7 +30,7 @@ export type SubscriptionState = {
  * Źródłem prawdy jest kolumna `profiles.subscription_status` (zapisywana przez
  * webhook Stripe i odczytywana przez bezpieczne RPC właściciela). Hook słucha
  * też zmian sesji Supabase, więc UI odświeża się po (od)zalogowaniu. Działa
- * bezpiecznie bez konfiguracji Supabase — wtedy zwraca stan „niezalogowany / free".
+ * bezpiecznie bez konfiguracji Supabase - wtedy zwraca stan „niezalogowany / free".
  */
 export function useSubscription(): SubscriptionState {
   const [loading, setLoading] = useState(true);

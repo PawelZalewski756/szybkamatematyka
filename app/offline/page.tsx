@@ -20,7 +20,7 @@ export default function OfflinePage() {
         </h1>
         <p className="mx-auto mt-4 max-w-md text-base text-muted">
           Nie możemy teraz załadować tej strony. Sprawdź internet i spróbuj
-          ponownie — zapisana powłoka aplikacji i strona główna mogą być
+          ponownie - zapisana powłoka aplikacji i strona główna mogą być
           dostępne bez sieci.
         </p>
 

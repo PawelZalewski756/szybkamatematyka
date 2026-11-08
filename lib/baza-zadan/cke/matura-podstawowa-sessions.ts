@@ -1,13 +1,13 @@
 /**
- * Oficjalne arkusze maturalne — matematyka, poziom podstawowy.
+ * Oficjalne arkusze maturalne - matematyka, poziom podstawowy.
  * Źródło treści przy imporcie: publiczne zestawienia zadań (sesje CKE).
- * Uczniowie widzą tylko treść w Supabase — bez linków zewnętrznych.
+ * Uczniowie widzą tylko treść w Supabase - bez linków zewnętrznych.
  */
 
 export type CkeMaturaSession = {
   /** Unikalny slug do source_id, np. m23-maj */
   id: string;
-  /** Nazwa arkusza w bazie, np. „Matura — maj 2023 — poziom podstawowy” */
+  /** Nazwa arkusza w bazie, np. „Matura - maj 2023 - poziom podstawowy” */
   nazwa: string;
   rok: number;
   miesiac: number;
@@ -33,7 +33,7 @@ function u(path: string): string {
 export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   {
     id: "m26-probna",
-    nazwa: "Matura — próbna 2026 — poziom podstawowy",
+    nazwa: "Matura - próbna 2026 - poziom podstawowy",
     rok: 2026,
     miesiac: 3,
     importUrl: u(
@@ -43,7 +43,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m25-maj",
-    nazwa: "Matura — maj 2025 — poziom podstawowy",
+    nazwa: "Matura - maj 2025 - poziom podstawowy",
     rok: 2025,
     miesiac: 5,
     importUrl: u(
@@ -52,7 +52,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m25-probna",
-    nazwa: "Matura — próbna 2025 — poziom podstawowy",
+    nazwa: "Matura - próbna 2025 - poziom podstawowy",
     rok: 2025,
     miesiac: 12,
     importUrl: u(
@@ -62,7 +62,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m24-maj",
-    nazwa: "Matura — maj 2024 — poziom podstawowy",
+    nazwa: "Matura - maj 2024 - poziom podstawowy",
     rok: 2024,
     miesiac: 5,
     importUrl: u(
@@ -72,7 +72,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m23-maj",
-    nazwa: "Matura — maj 2023 — poziom podstawowy",
+    nazwa: "Matura - maj 2023 - poziom podstawowy",
     rok: 2023,
     miesiac: 5,
     importUrl: u(
@@ -81,7 +81,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m23-probna-xii",
-    nazwa: "Matura — próbna grudzień 2023 — poziom podstawowy",
+    nazwa: "Matura - próbna grudzień 2023 - poziom podstawowy",
     rok: 2023,
     miesiac: 12,
     importUrl: u(
@@ -90,7 +90,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m23-probna-ix",
-    nazwa: "Matura — próbna wrzesień 2023 — poziom podstawowy",
+    nazwa: "Matura - próbna wrzesień 2023 - poziom podstawowy",
     rok: 2023,
     miesiac: 9,
     importUrl: u(
@@ -99,7 +99,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m23-przykladowa",
-    nazwa: "Matura — przykładowa 2023 — poziom podstawowy",
+    nazwa: "Matura - przykładowa 2023 - poziom podstawowy",
     rok: 2023,
     miesiac: 3,
     importUrl: u(
@@ -108,7 +108,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m22-maj",
-    nazwa: "Matura — maj 2022 — poziom podstawowy",
+    nazwa: "Matura - maj 2022 - poziom podstawowy",
     rok: 2022,
     miesiac: 5,
     importUrl: u(
@@ -117,7 +117,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m21-maj",
-    nazwa: "Matura — maj 2021 — poziom podstawowy",
+    nazwa: "Matura - maj 2021 - poziom podstawowy",
     rok: 2021,
     miesiac: 5,
     importUrl: u(
@@ -126,7 +126,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m21-probna",
-    nazwa: "Matura — próbna 2021 — poziom podstawowy",
+    nazwa: "Matura - próbna 2021 - poziom podstawowy",
     rok: 2021,
     miesiac: 3,
     importUrl: u(
@@ -135,7 +135,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m20-czerwiec",
-    nazwa: "Matura — czerwiec 2020 — poziom podstawowy",
+    nazwa: "Matura - czerwiec 2020 - poziom podstawowy",
     rok: 2020,
     miesiac: 6,
     importUrl: u(
@@ -144,7 +144,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m20-probna",
-    nazwa: "Matura — próbna 2020 — poziom podstawowy",
+    nazwa: "Matura - próbna 2020 - poziom podstawowy",
     rok: 2020,
     miesiac: 4,
     importUrl: u(
@@ -153,7 +153,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m19-maj",
-    nazwa: "Matura — maj 2019 — poziom podstawowy",
+    nazwa: "Matura - maj 2019 - poziom podstawowy",
     rok: 2019,
     miesiac: 5,
     importUrl: u(
@@ -162,7 +162,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m18-maj",
-    nazwa: "Matura — maj 2018 — poziom podstawowy",
+    nazwa: "Matura - maj 2018 - poziom podstawowy",
     rok: 2018,
     miesiac: 5,
     importUrl: u(
@@ -171,7 +171,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m17-maj",
-    nazwa: "Matura — maj 2017 — poziom podstawowy",
+    nazwa: "Matura - maj 2017 - poziom podstawowy",
     rok: 2017,
     miesiac: 5,
     importUrl: u(
@@ -180,7 +180,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m16-maj",
-    nazwa: "Matura — maj 2016 — poziom podstawowy",
+    nazwa: "Matura - maj 2016 - poziom podstawowy",
     rok: 2016,
     miesiac: 5,
     importUrl: u(
@@ -189,7 +189,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m15-maj",
-    nazwa: "Matura — maj 2015 — poziom podstawowy",
+    nazwa: "Matura - maj 2015 - poziom podstawowy",
     rok: 2015,
     miesiac: 5,
     importUrl: u(
@@ -198,7 +198,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m15-probna",
-    nazwa: "Matura — próbna 2015 — poziom podstawowy",
+    nazwa: "Matura - próbna 2015 - poziom podstawowy",
     rok: 2015,
     miesiac: 12,
     importUrl: u(
@@ -207,7 +207,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m15-przykladowa",
-    nazwa: "Matura — przykładowa 2015 — poziom podstawowy",
+    nazwa: "Matura - przykładowa 2015 - poziom podstawowy",
     rok: 2015,
     miesiac: 12,
     importUrl: u(
@@ -216,7 +216,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m14-maj",
-    nazwa: "Matura — maj 2014 — poziom podstawowy",
+    nazwa: "Matura - maj 2014 - poziom podstawowy",
     rok: 2014,
     miesiac: 5,
     importUrl: u(
@@ -226,7 +226,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m13-maj",
-    nazwa: "Matura — maj 2013 — poziom podstawowy",
+    nazwa: "Matura - maj 2013 - poziom podstawowy",
     rok: 2013,
     miesiac: 5,
     importUrl: u("132892-Matematyka-matura-2013-poziom-podstawowy.htm"),
@@ -234,7 +234,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m12-maj",
-    nazwa: "Matura — maj 2012 — poziom podstawowy",
+    nazwa: "Matura - maj 2012 - poziom podstawowy",
     rok: 2012,
     miesiac: 5,
     importUrl: u("132695-Matematyka-matura-2012-poziom-podstawowy.htm"),
@@ -242,7 +242,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m11-maj",
-    nazwa: "Matura — maj 2011 — poziom podstawowy",
+    nazwa: "Matura - maj 2011 - poziom podstawowy",
     rok: 2011,
     miesiac: 5,
     importUrl: u("132523-Matematyka-matura-2011-poziom-podstawowy.htm"),
@@ -250,7 +250,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m10-maj",
-    nazwa: "Matura — maj 2010 — poziom podstawowy",
+    nazwa: "Matura - maj 2010 - poziom podstawowy",
     rok: 2010,
     miesiac: 5,
     importUrl: u("132330-Matematyka-matura-2010-poziom-podstawowy.htm"),
@@ -258,7 +258,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m09-maj",
-    nazwa: "Matura — maj 2009 — poziom podstawowy",
+    nazwa: "Matura - maj 2009 - poziom podstawowy",
     rok: 2009,
     miesiac: 5,
     importUrl: u(
@@ -268,7 +268,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m08-maj",
-    nazwa: "Matura — maj 2008 — poziom podstawowy",
+    nazwa: "Matura - maj 2008 - poziom podstawowy",
     rok: 2008,
     miesiac: 5,
     importUrl: u(
@@ -278,7 +278,7 @@ export const CKE_MATURA_PODSTAWOWA_SESSIONS: CkeMaturaSession[] = [
   },
   {
     id: "m07-maj",
-    nazwa: "Matura — maj 2007 — poziom podstawowy",
+    nazwa: "Matura - maj 2007 - poziom podstawowy",
     rok: 2007,
     miesiac: 5,
     importUrl: u("131759-Matematyka-matura-2007-arkusz-poziom-podstawowy.htm"),

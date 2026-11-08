@@ -1,4 +1,4 @@
-# Szybka Matematyka — [szybkamatematyka.pl](https://szybkamatematyka.pl)
+# Szybka Matematyka - [szybkamatematyka.pl](https://szybkamatematyka.pl)
 
 **Pełna aplikacja webowa do nauki matematyki przed maturą i egzaminem
 ósmoklasisty.** Łączy teorię, zadania, arkusze CKE i krótkie gry w jednym
@@ -66,7 +66,7 @@ npm run dev
 Po uzupełnieniu danych Supabase w `.env.local` otwórz
 [http://localhost:3000](http://localhost:3000).
 
-Gemini i Stripe są opcjonalne — bez ich kluczy można uruchomić podstawową część
+Gemini i Stripe są opcjonalne - bez ich kluczy można uruchomić podstawową część
 aplikacji. Przykładowe zmienne znajdują się w [`.env.example`](.env.example).
 
 ## Jakość kodu
@@ -83,13 +83,13 @@ subskrypcji, integracji z Supabase i formatowania treści matematycznych.
 
 ## Struktura projektu
 
-- `app/` — widoki i endpointy API,
-- `components/` — komponenty interfejsu,
-- `lib/` — logika biznesowa i integracje,
-- `data/` — zadania, teoria i dane arkuszy,
-- `supabase/` — schemat bazy, migracje i polityki bezpieczeństwa,
-- `tests/` — testy automatyczne,
-- `scripts/` — import, generowanie i kontrola jakości treści.
+- `app/` - widoki i endpointy API,
+- `components/` - komponenty interfejsu,
+- `lib/` - logika biznesowa i integracje,
+- `data/` - zadania, teoria i dane arkuszy,
+- `supabase/` - schemat bazy, migracje i polityki bezpieczeństwa,
+- `tests/` - testy automatyczne,
+- `scripts/` - import, generowanie i kontrola jakości treści.
 
 Szczegóły konfiguracji produkcyjnej znajdują się w
 [`docs/DEPLOY.md`](docs/DEPLOY.md).

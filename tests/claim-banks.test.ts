@@ -6,7 +6,7 @@ import {
 } from "@/lib/content/claim-banks";
 import { isNumericClaimTrue } from "@/lib/math/answer-equiv";
 
-describe("banki twierdzeń — poprawne muszą być prawdą (numeryczne)", () => {
+describe("banki twierdzeń - poprawne muszą być prawdą (numeryczne)", () => {
   for (const bank of ALL_NUMERIC_CLAIM_BANKS) {
     for (const { correct } of bank.claims) {
       it(`${bank.name}: „${correct}"`, () => {
@@ -17,7 +17,7 @@ describe("banki twierdzeń — poprawne muszą być prawdą (numeryczne)", () =>
   }
 });
 
-describe("banki twierdzeń — pułapki muszą być fałszem (numeryczne)", () => {
+describe("banki twierdzeń - pułapki muszą być fałszem (numeryczne)", () => {
   for (const bank of ALL_NUMERIC_CLAIM_BANKS) {
     for (const { wrong } of bank.claims) {
       it(`${bank.name}: „${wrong}"`, () => {
@@ -28,7 +28,7 @@ describe("banki twierdzeń — pułapki muszą być fałszem (numeryczne)", () =
   }
 });
 
-describe("banki symboliczne — rejestr ręczny", () => {
+describe("banki symboliczne - rejestr ręczny", () => {
   it("poprawne i błędne wzory się nie pokrywają", () => {
     expect(SYMBOLIC_CORRECT_CLAIMS.length).toBeGreaterThan(0);
     expect(SYMBOLIC_WRONG_CLAIMS.length).toBeGreaterThan(0);

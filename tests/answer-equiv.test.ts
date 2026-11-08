@@ -46,7 +46,7 @@ describe("isNumericClaimTrue", () => {
     expect(isNumericClaimTrue("½ + ½ = 2/4")).toBe(false);
   });
 
-  it("wykrywa pułapkę równoważną — ¼+¼=2/4 jest PRAWDĄ", () => {
+  it("wykrywa pułapkę równoważną - ¼+¼=2/4 jest PRAWDĄ", () => {
     expect(isNumericClaimTrue("¼ + ¼ = 2/4")).toBe(true);
   });
 

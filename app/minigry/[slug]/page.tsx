@@ -29,7 +29,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${game.title} — minigra matematyczna`,
+    title: `${game.title} - minigra matematyczna`,
     description: `${game.description} Graj online, zdobywaj EXP i trenuj matematykę w tempie gry.`,
     alternates: { canonical: `/minigry/${game.slug}` },
   };

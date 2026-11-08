@@ -1,5 +1,5 @@
 /**
- * Nocny generator teorii — Gemini w pętli aż 100% tematów CKE.
+ * Nocny generator teorii - Gemini w pętli aż 100% tematów CKE.
  * Przy limicie API czeka responsywnie (czas z komunikatu Gemini) i wznawia.
  *
  * Log: data/theory-cache/overnight.log
@@ -72,14 +72,14 @@ function logExamPhase(): void {
   if (!isExamTheoryComplete("matura_podstawowa")) {
     const missing = listIncompleteTheorySlotsForExam("matura_podstawowa");
     log(
-      `  → faza matura — brakuje ${missing.length}: ${missing
+      `  → faza matura - brakuje ${missing.length}: ${missing
         .map((s) => `${s.category}:${s.topic}`)
         .join(", ")}`,
     );
     return;
   }
 
-  log("  ✅ Matura kompletna (28/28) — lecę z egzaminem 8-klasisty");
+  log("  ✅ Matura kompletna (28/28) - lecę z egzaminem 8-klasisty");
   const missingEight = listIncompleteTheorySlotsForExam("8_klasa");
   if (missingEight.length > 0) {
     log(
@@ -95,7 +95,7 @@ async function main() {
 
   const ensureCode = await runNpm("seed:theory-ensure-materials");
   if (ensureCode !== 0) {
-    log(`⚠ ensure-materials kod ${ensureCode} — kontynuuję`);
+    log(`⚠ ensure-materials kod ${ensureCode} - kontynuuję`);
   }
 
   let round = 0;
@@ -139,7 +139,7 @@ async function main() {
 
     if (after.complete === before.complete) {
       log(
-        `⏸ Brak postępu w rundzie (kod ${geminiCode}) — ponawiam za ${STALL_WAIT_MS / 1000} s…`,
+        `⏸ Brak postępu w rundzie (kod ${geminiCode}) - ponawiam za ${STALL_WAIT_MS / 1000} s…`,
       );
       await sleep(STALL_WAIT_MS);
       continue;
@@ -161,7 +161,7 @@ async function main() {
 
   const final = countTheoryCacheProgress();
   log(
-    `=== Koniec — ${final.complete}/${final.total} tematów, plik: supabase/theory-lessons-update.sql ===`,
+    `=== Koniec - ${final.complete}/${final.total} tematów, plik: supabase/theory-lessons-update.sql ===`,
   );
 }
 

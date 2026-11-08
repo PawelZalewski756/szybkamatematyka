@@ -47,7 +47,7 @@ describe("isPro", () => {
   });
 });
 
-describe("normalizeSubscriptionStatus — mapowanie statusów Stripe", () => {
+describe("normalizeSubscriptionStatus - mapowanie statusów Stripe", () => {
   it("mapuje statusy 1:1", () => {
     expect(normalizeSubscriptionStatus("active")).toBe("active");
     expect(normalizeSubscriptionStatus("trialing")).toBe("trialing");

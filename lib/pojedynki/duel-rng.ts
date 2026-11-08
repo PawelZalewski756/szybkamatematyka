@@ -3,12 +3,12 @@
  * `withSeededRandom`, który tymczasowo podmienia globalny `Math.random`.
  *
  * Dzięki temu reużywamy WSZYSTKIE istniejące generatory pytań minigier
- * (lib/minigry/questions/generators.ts) BEZ ich modyfikacji — generatory
+ * (lib/minigry/questions/generators.ts) BEZ ich modyfikacji - generatory
  * wewnętrznie korzystają z `Math.random`, więc po podmianie na ziarnowany
  * PRNG ten sam seed daje identyczny ciąg pytań u obu graczy.
  */
 
-/** Klasyczny mulberry32 — szybki, deterministyczny PRNG zwracający [0, 1). */
+/** Klasyczny mulberry32 - szybki, deterministyczny PRNG zwracający [0, 1). */
 export function mulberry32(seed: number): () => number {
   let a = seed >>> 0;
   return function next() {
@@ -22,7 +22,7 @@ export function mulberry32(seed: number): () => number {
 
 /**
  * Wykonuje `fn` z `Math.random` podmienionym na ziarnowany PRNG, a następnie
- * przywraca oryginał. Synchroniczne — bezpieczne w środowisku jednowątkowym
+ * przywraca oryginał. Synchroniczne - bezpieczne w środowisku jednowątkowym
  * przeglądarki. NIE używać wokół kodu asynchronicznego.
  */
 export function withSeededRandom<T>(seed: number, fn: () => T): T {
@@ -46,7 +46,7 @@ const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
 /**
  * Krótki, czytelny kod pokoju (bez mylących znaków 0/O/1/I) wyprowadzony
- * deterministycznie z seeda — ten sam seed → ten sam kod.
+ * deterministycznie z seeda - ten sam seed → ten sam kod.
  */
 export function roomCodeFromSeed(seed: number, length = 5): string {
   const rng = mulberry32(seed ^ 0x9e3779b9);

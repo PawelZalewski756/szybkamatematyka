@@ -89,7 +89,7 @@ export function AdminPageClient() {
       const accessToken = session?.access_token;
 
       if (!accessToken) {
-        throw new Error("Sesja wygasła — zaloguj się ponownie.");
+        throw new Error("Sesja wygasła - zaloguj się ponownie.");
       }
 
       const res = await fetch("/api/generate-solution", {
@@ -115,7 +115,7 @@ export function AdminPageClient() {
       }
 
       setRozwiazanie(data.solution);
-      setToast("Rozwiązanie AI wklejone — sprawdź i popraw przed zapisem.");
+      setToast("Rozwiązanie AI wklejone - sprawdź i popraw przed zapisem.");
     } catch (err) {
       setError(
         err instanceof Error
@@ -160,7 +160,7 @@ export function AdminPageClient() {
       setRozwiazanie("");
     } catch (err) {
       const msg =
-        err instanceof Error ? err.message : "Błąd zapisu — sprawdź Supabase.";
+        err instanceof Error ? err.message : "Błąd zapisu - sprawdź Supabase.";
       if (msg.includes("duplicate") || msg.includes("unique")) {
         setError("To zadanie o tym numerze już istnieje w arkuszu.");
       } else {
@@ -187,7 +187,7 @@ export function AdminPageClient() {
       </h1>
       <p className="mt-2 text-muted">
         Dodawaj arkusze maturalne i zadania z rozwiązaniem krok po kroku. Treść
-        trafia wyłącznie do naszej bazy — uczniowie nie są przekierowywani na
+        trafia wyłącznie do naszej bazy - uczniowie nie są przekierowywani na
         zewnętrzne strony.
       </p>
       <p className="mt-2 text-sm text-muted">

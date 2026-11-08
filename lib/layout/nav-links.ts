@@ -16,7 +16,7 @@ export const NAV_PRIMARY_LINKS: readonly NavLink[] = [
   { href: "/minigry", label: "Minigry" },
 ] as const;
 
-/** Linki w rozwijanym menu — pogrupowane dla czytelności. */
+/** Linki w rozwijanym menu - pogrupowane dla czytelności. */
 export const NAV_MORE_GROUPS: readonly NavGroup[] = [
   {
     label: "Graj",

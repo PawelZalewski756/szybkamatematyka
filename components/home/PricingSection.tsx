@@ -173,7 +173,7 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
       )}
 
       <p className="mt-4 text-xs leading-relaxed text-muted">
-        Płatności przez Stripe — możesz anulować w dowolnym momencie.
+        Płatności przez Stripe - możesz anulować w dowolnym momencie.
       </p>
     </div>
   );

@@ -138,7 +138,7 @@ function createSupabase(): SupabaseClient {
   }
   if (pushDbNeedsWarning(serviceKey)) {
     console.warn(
-      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY — zapis do DB może być zablokowany przez RLS.",
+      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY - zapis do DB może być zablokowany przez RLS.",
     );
   }
   return createClient(url, key);
@@ -335,7 +335,7 @@ async function main() {
           console.log("    ✓ zapisano w Supabase");
         } else {
           console.warn(
-            "    ⚠ cache OK, DB pominięty (RLS — dodaj SUPABASE_SERVICE_ROLE_KEY)",
+            "    ⚠ cache OK, DB pominięty (RLS - dodaj SUPABASE_SERVICE_ROLE_KEY)",
           );
         }
       }

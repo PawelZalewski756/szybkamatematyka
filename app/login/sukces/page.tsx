@@ -39,7 +39,7 @@ export default async function SignupSuccessPage({
         <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
           {needsEmailConfirm
             ? "Sprawdź skrzynkę e-mail, kliknij link potwierdzający, a potem się zaloguj."
-            : `Witaj w ${BRAND_NAME}. Możesz od razu zacząć naukę — postęp zapisze się na Twoim koncie.`}
+            : `Witaj w ${BRAND_NAME}. Możesz od razu zacząć naukę - postęp zapisze się na Twoim koncie.`}
         </p>
 
         <div className="mt-8 flex flex-col gap-3">

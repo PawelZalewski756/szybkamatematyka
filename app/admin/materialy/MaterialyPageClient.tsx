@@ -194,7 +194,7 @@ function MaterialyAdminContent() {
       setError(
         err instanceof Error
           ? err.message
-          : "Błąd zapisu — uruchom add_tasks_materials_insert.sql w Supabase.",
+          : "Błąd zapisu - uruchom add_tasks_materials_insert.sql w Supabase.",
       );
     } finally {
       setSaving(false);
@@ -275,7 +275,7 @@ function MaterialyAdminContent() {
             <p className="text-sm text-muted">Ładowanie…</p>
           ) : rows.length === 0 ? (
             <p className="text-sm text-muted">
-              Brak materiałów — dodaj pierwszy formularzem po prawej lub uruchom{" "}
+              Brak materiałów - dodaj pierwszy formularzem po prawej lub uruchom{" "}
               <code className="text-muted">npm run seed:trening-tasks</code>.
             </p>
           ) : (
@@ -472,7 +472,7 @@ function MaterialyAdminContent() {
                   <TheoryMarkdown content={previewContent} />
                 ) : (
                   <p className="text-sm text-muted">
-                    Wpisz treść w zakładce Edycja — podgląd odświeża się po 300 ms.
+                    Wpisz treść w zakładce Edycja - podgląd odświeża się po 300 ms.
                   </p>
                 )}
               </div>

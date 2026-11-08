@@ -31,7 +31,7 @@ async function main() {
   for (const f of fs.readdirSync(CACHE_DIR)) {
     if (!f.endsWith(".json")) continue;
     if (f.includes("review") || f.includes("manifest")) continue;
-    // zostaw stary plik sprzed sesji figure (bez SVG) — ciag_arytmetyczny
+    // zostaw stary plik sprzed sesji figure (bez SVG) - ciag_arytmetyczny
     const full = path.join(CACHE_DIR, f);
     const j = JSON.parse(fs.readFileSync(full, "utf8"));
     for (const t of j.tasks || []) {
@@ -44,7 +44,7 @@ async function main() {
 
   console.log(`Cache SVG do usunięcia: ${meta.length} (unikalne fp: ${fingerprints.size})`);
 
-  // Pobierz wszystkie tasks z SVG (inline) — bezpieczniej kasować po fingerprint
+  // Pobierz wszystkie tasks z SVG (inline) - bezpieczniej kasować po fingerprint
   const { data, error } = await supabase
     .from("tasks")
     .select("id,content,category,topic")
@@ -56,7 +56,7 @@ async function main() {
     fingerprints.has(contentFingerprint(row.content)),
   );
 
-  // Dodatkowo: wszystko z cache topics z dzisiejszej sesji, nawet bez match —
+  // Dodatkowo: wszystko z cache topics z dzisiejszej sesji, nawet bez match -
   // jeśli content fingerprint nie złapie przez drobne różnice, kasuj po topic+svg
   // ale NIE kasuj starych SVG spoza naszej sesji (procenty itd.)
   console.log(`Dopasowane w DB po fingerprint: ${toDelete.length} / SVG w DB: ${(data || []).length}`);

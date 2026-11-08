@@ -206,9 +206,9 @@ async function importTask(
       if (exists) {
         if (opts.replace) {
           await deleteImportedBySourceId(supabase, sourceId);
-          console.log(`  ↻ ${sourceId} — podmieniam`);
+          console.log(`  ↻ ${sourceId} - podmieniam`);
         } else {
-          console.log(`  ⊘ ${sourceId} — już w bazie (użyj --replace)`);
+          console.log(`  ⊘ ${sourceId} - już w bazie (użyj --replace)`);
           stats.skip += 1;
           return;
         }
@@ -225,10 +225,10 @@ async function importTask(
     if (opts.dryRun) {
       rozwiazanie = "[dry-run]";
     } else if (fromCatalog) {
-      console.log(`  📘 ${sourceId} — rozwiązanie z katalogu`);
+      console.log(`  📘 ${sourceId} - rozwiązanie z katalogu`);
       rozwiazanie = fromCatalog;
     } else {
-      console.log(`  🧠 ${sourceId} — generuję rozwiązanie (Gemini)…`);
+      console.log(`  🧠 ${sourceId} - generuję rozwiązanie (Gemini)…`);
       rozwiazanie = await generateMathSolutionWithRetry({
         trescZadania: trescDb,
         kontekstEgzaminu: kontekst,
@@ -345,7 +345,7 @@ async function importCatalogByCategory(
       ? "egzamin-8"
       : "matura";
     const dzial = CATEGORY_LABELS[category as keyof typeof CATEGORY_LABELS] ?? category;
-    const nazwa = `Auto — ${dzial}`;
+    const nazwa = `Auto - ${dzial}`;
     const cacheKey = `cat:${category}`;
     const arkuszId = await getOrCreateArkusz(
       supabase,
@@ -385,7 +385,7 @@ async function main() {
   console.log("🚀 Auto-import: katalog treningowy → Supabase");
   console.log(`   Zadań w katalogu: ${totalTasks}`);
   console.log(
-    "   UWAGA: To NIE są skany oryginalnych arkuszy CKE — zadania treningowe z aplikacji.",
+    "   UWAGA: To NIE są skany oryginalnych arkuszy CKE - zadania treningowe z aplikacji.",
   );
   console.log(
     `   Tryb: ${opts.mode} | limit: ${Number.isFinite(opts.limit) ? opts.limit : "∞"} | opóźnienie: ${opts.delayMs}ms`,
@@ -393,7 +393,7 @@ async function main() {
   if (!opts.forceGemini) {
     console.log("   Rozwiązania: najpierw z katalogu, Gemini tylko gdy brak.");
   }
-  if (opts.dryRun) console.log("   (dry-run — bez zapisu)");
+  if (opts.dryRun) console.log("   (dry-run - bez zapisu)");
 
   const sheetTaskIds = new Set<string>();
   if (opts.mode === "sheets" || opts.mode === "all") {

@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `Skontaktuj się z zespołem ${BRAND_NAME} — pytania o konto, subskrypcję i treści.`,
+  description: `Skontaktuj się z zespołem ${BRAND_NAME} - pytania o konto, subskrypcję i treści.`,
   alternates: { canonical: "/kontakt" },
 };
 
@@ -72,7 +72,7 @@ export default function KontaktPage() {
       <InfoSection title="O serwisie">
         <p>
           {BRAND_NAME} to platforma do nauki matematyki pod maturę i egzamin
-          ósmoklasisty — trening, baza zadań, arkusze CKE i minigry.
+          ósmoklasisty - trening, baza zadań, arkusze CKE i minigry.
         </p>
       </InfoSection>
     </InfoPageShell>

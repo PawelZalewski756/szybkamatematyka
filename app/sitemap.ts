@@ -11,8 +11,8 @@ import { SITE_URL } from "@/lib/seo/site";
  *
  * Zakres (świadomy wybór): główne trasy publiczne + statycznie prerenderowane
  * zadania (`st-*`, dodatkowe oraz archiwum egzaminacyjne) i finalne arkusze.
- * Pomijamy zadania PROCEDURALNE (`proc-*`, generowane on-demand) — byłoby to
- * 1000+ URL-i o niskiej wartości SEO — oraz trasy prywatne/uwierzytelniania
+ * Pomijamy zadania PROCEDURALNE (`proc-*`, generowane on-demand) - byłoby to
+ * 1000+ URL-i o niskiej wartości SEO - oraz trasy prywatne/uwierzytelniania
  * (`/admin`, `/login`, `/profil`), które i tak są zablokowane w `robots.ts`.
  */
 const PUBLIC_ROUTES: Array<{

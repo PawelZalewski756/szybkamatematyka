@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Materiały teoretyczne",
-  // Panel wewnętrzny — nigdy nie indeksujemy.
+  // Panel wewnętrzny - nigdy nie indeksujemy.
   robots: { index: false, follow: false },
 };
 

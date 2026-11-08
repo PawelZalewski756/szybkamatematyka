@@ -70,7 +70,7 @@ export function isCompletedToday(progress: ChallengeProgress): boolean {
 }
 
 /**
- * Seria „na żywo”: jeśli ostatnie ukończenie było dziś lub wczoraj — seria
+ * Seria „na żywo”: jeśli ostatnie ukończenie było dziś lub wczoraj - seria
  * jest aktywna; w innym wypadku została przerwana (efektywnie 0).
  */
 export function effectiveStreak(
@@ -91,7 +91,7 @@ export function effectiveStreak(
 
 /**
  * Zapisuje ukończenie dzisiejszego wyzwania lokalnie (fallback / gość).
- * Idempotentne w obrębie dnia — drugie wywołanie nie podbija serii ani XP.
+ * Idempotentne w obrębie dnia - drugie wywołanie nie podbija serii ani XP.
  */
 export function applyLocalCompletion(
   userId: string | null,
@@ -120,7 +120,7 @@ export function applyLocalCompletion(
 
 /**
  * Zapisuje lokalne odbicie ukończenia dla zalogowanego gracza (gdy źródłem
- * prawdy jest Supabase) — by po reloadzie offline dało się pokazać nagrodę.
+ * prawdy jest Supabase) - by po reloadzie offline dało się pokazać nagrodę.
  */
 export function mirrorCloudCompletion(
   userId: string,

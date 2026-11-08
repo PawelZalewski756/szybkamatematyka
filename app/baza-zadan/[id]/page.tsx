@@ -38,7 +38,7 @@ export async function generateMetadata({
   const poziom = DIFFICULTY_LABELS[task.difficulty];
 
   return {
-    title: `${task.title} — ${dzial}`,
+    title: `${task.title} - ${dzial}`,
     description: clampText(
       `${dzial} (poziom: ${poziom}). ${task.prompt} Rozwiąż zadanie i sprawdź odpowiedź z wyjaśnieniem.`,
     ),

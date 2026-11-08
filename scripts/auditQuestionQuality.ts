@@ -1,5 +1,5 @@
 /**
- * Audyt jakości pytań — uruchom: npx tsx scripts/auditQuestionQuality.ts
+ * Audyt jakości pytań - uruchom: npx tsx scripts/auditQuestionQuality.ts
  */
 import { getAllTasks } from "../lib/baza-zadan/catalog";
 import { ALL_NUMERIC_CLAIM_BANKS } from "../lib/content/claim-banks";

@@ -13,7 +13,7 @@ type DuelQuestionCardProps = {
 };
 
 /**
- * Prezentacja pojedynczego pytania pojedynku — obsługuje 3 tryby pytań
+ * Prezentacja pojedynczego pytania pojedynku - obsługuje 3 tryby pytań
  * (choice / true-false / compare) tak samo jak minigry, ale woła `onAnswer`.
  */
 export function DuelQuestionCard({
