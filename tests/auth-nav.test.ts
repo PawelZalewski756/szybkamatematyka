@@ -1,11 +1,8 @@
 import { describe, expect, it } from "vitest";
-import {
-  isNavLinkVisible,
-  NAV_MORE_GROUPS,
-} from "@/lib/layout/nav-links";
+import { isNavLinkVisible, NAV_PRIMARY_LINKS } from "@/lib/layout/nav-links";
 
 describe("authenticated navigation links", () => {
-  const reviewLink = NAV_MORE_GROUPS.flatMap((group) => group.links).find(
+  const reviewLink = NAV_PRIMARY_LINKS.find(
     (link) => link.href === "/powtorki",
   );
 

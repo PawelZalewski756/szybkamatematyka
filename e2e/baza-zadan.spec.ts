@@ -10,7 +10,7 @@ test.describe("Baza zadań", () => {
     await expect(
       page
         .getByRole("tablist", { name: "Sposób pracy w bazie zadań" })
-        .getByRole("tab", { name: /Ćwicz zadania/ }),
+        .getByRole("tab", { name: /^Zadania/ }),
     ).toHaveAttribute("aria-selected", "true");
     await expect(
       page.getByLabel("Szukaj po tytule lub treści"),
@@ -60,10 +60,10 @@ test.describe("Baza zadań", () => {
       }),
     ).toBeVisible();
 
-    await tablist.getByRole("tab", { name: /Ćwicz zadania/ }).click();
+    await tablist.getByRole("tab", { name: /^Zadania/ }).click();
     await expect(page).toHaveURL(/\/baza-zadan$/);
     await expect(
-      tablist.getByRole("tab", { name: /Ćwicz zadania/ }),
+      tablist.getByRole("tab", { name: /^Zadania/ }),
     ).toHaveAttribute("aria-selected", "true");
   });
 

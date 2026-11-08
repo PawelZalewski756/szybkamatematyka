@@ -75,13 +75,13 @@ test.describe("Smoke", () => {
     await expect(page).toHaveURL(/\/trening$/);
   });
 
-  test("nie zbiera własnych statystyk i usuwa dawny identyfikator", async ({
+  test("liczy tylko anonimowe odsłony i usuwa dawny identyfikator", async ({
     page,
   }) => {
-    let analyticsRequests = 0;
+    const visitBodies: string[] = [];
     page.on("request", (request) => {
-      if (new URL(request.url()).pathname.startsWith("/api/analytics/")) {
-        analyticsRequests += 1;
+      if (new URL(request.url()).pathname === "/api/analytics/visit") {
+        visitBodies.push(request.postData() ?? "");
       }
     });
     await page.addInitScript(() => {
@@ -101,7 +101,8 @@ test.describe("Smoke", () => {
         page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
       )
       .toBeNull();
-    expect(analyticsRequests).toBe(0);
+    await expect.poll(() => visitBodies.length).toBeGreaterThan(0);
+    expect(visitBodies.every((b) => b === JSON.stringify({ path: "/" }))).toBe(true);
   });
 
   test("/login ma formularz logowania", async ({ page }) => {

@@ -165,7 +165,7 @@ export function NavbarSheet({
               <nav className="flex-1 overflow-y-auto overscroll-contain px-2 py-3">
                 {showPrimaryLinks && (
                   <div className="mb-3 space-y-0.5">
-                    {NAV_PRIMARY_LINKS.map((link) => (
+                    {NAV_PRIMARY_LINKS.filter((l) => isNavLinkVisible(l, isLoggedIn)).map((link) => (
                       <SheetLink
                         key={link.href}
                         {...link}

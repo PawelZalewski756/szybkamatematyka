@@ -39,6 +39,9 @@ export type PlayerStats = {
   active30d: number;
   new7d: number;
   new30d: number;
+  /** Konto starsze niż 7 dni, a aktywne w ostatnich 7 dniach. */
+  returning7d: number;
+  returning30d: number;
   totalXp: number;
   avgXp: number;
   maxXp: number;
@@ -122,6 +125,8 @@ export function computePlayerStats(
   let active30d = 0;
   let new7d = 0;
   let new30d = 0;
+  let returning7d = 0;
+  let returning30d = 0;
   let totalXp = 0;
   let maxXp = 0;
   let totalMinigryXp = 0;
@@ -134,6 +139,20 @@ export function computePlayerStats(
     if (isWithinDays(row.lastPlayedDate, now, 30)) active30d += 1;
     if (isWithinDays(row.createdAt, now, 7)) new7d += 1;
     if (isWithinDays(row.createdAt, now, 30)) new30d += 1;
+    if (row.createdAt) {
+      if (
+        isWithinDays(row.lastPlayedDate, now, 7) &&
+        !isWithinDays(row.createdAt, now, 7)
+      ) {
+        returning7d += 1;
+      }
+      if (
+        isWithinDays(row.lastPlayedDate, now, 30) &&
+        !isWithinDays(row.createdAt, now, 30)
+      ) {
+        returning30d += 1;
+      }
+    }
 
     totalXp += row.xp;
     if (row.xp > maxXp) maxXp = row.xp;
@@ -150,6 +169,8 @@ export function computePlayerStats(
     active30d,
     new7d,
     new30d,
+    returning7d,
+    returning30d,
     totalXp,
     avgXp: totalPlayers > 0 ? Math.round(totalXp / totalPlayers) : 0,
     maxXp,
