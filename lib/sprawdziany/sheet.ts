@@ -4,6 +4,14 @@ import {
   POTEGI_CHAPTER,
 } from "@/lib/sprawdziany/chapters-8";
 import {
+  CIAGI_CHAPTER,
+  FUNKCJA_KWADRATOWA_CHAPTER,
+  FUNKCJA_LINIOWA_CHAPTER,
+  GEOMETRIA_ANALITYCZNA_CHAPTER,
+  KOMBINATORYKA_CHAPTER,
+  TRYGONOMETRIA_CHAPTER,
+} from "@/lib/sprawdziany/chapters-liceum";
+import {
   KATY_CHAPTER,
   POLA_6_CHAPTER,
   PROCENTY_CHAPTER,
@@ -24,7 +32,18 @@ export const SHEET_CHAPTERS: readonly SheetChapter[] = [
   PITAGORAS_CHAPTER,
   BRYLY_CHAPTER,
   POTEGI_CHAPTER,
+  FUNKCJA_LINIOWA_CHAPTER,
+  FUNKCJA_KWADRATOWA_CHAPTER,
+  CIAGI_CHAPTER,
+  TRYGONOMETRIA_CHAPTER,
+  KOMBINATORYKA_CHAPTER,
+  GEOMETRIA_ANALITYCZNA_CHAPTER,
 ];
+
+/** Klasy 9-11 w arkuszach oznaczają liceum/technikum klasy 1-3. */
+export function classLabel(schoolClass: number): string {
+  return schoolClass >= 9 ? `Liceum ${schoolClass - 8}` : `Klasa ${schoolClass}`;
+}
 
 export function getAvailableClasses(): number[] {
   return [...new Set(SHEET_CHAPTERS.map((c) => c.schoolClass))].sort(
