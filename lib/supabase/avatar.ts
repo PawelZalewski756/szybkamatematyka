@@ -6,7 +6,7 @@ import { updateProfileAvatarUrl } from "@/lib/supabase/profiles";
 export const AVATAR_BUCKET = "avatary";
 
 export const AVATAR_BUCKET_NOT_FOUND_MESSAGE =
-  "Bucket „avatary” nie istnieje — uruchom init_profiles_avatars.sql w Supabase Dashboard → SQL Editor.";
+  "Bucket „avatary” nie istnieje - uruchom init_profiles_avatars.sql w Supabase Dashboard → SQL Editor.";
 
 export function getAvatarStoragePublicUrl(userId: string): string {
   const supabase = getSupabase();

@@ -38,7 +38,7 @@ describe("calculateLevel", () => {
     expect(calculateLevel(320)).toBe(3);
   });
 
-  it("8400 XP ≈ poziom 12 (realny gracz camel — nie 17 ze starej krzywej)", () => {
+  it("8400 XP ≈ poziom 12 (realny gracz camel - nie 17 ze starej krzywej)", () => {
     expect(calculateLevel(8400)).toBe(12);
   });
 

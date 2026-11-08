@@ -1,6 +1,6 @@
 import type { MinigameTheme } from "@/components/minigry/MinigameShell";
 
-/** Jednolity motyw minigier — bursztyn z design systemu. */
+/** Jednolity motyw minigier - bursztyn z design systemu. */
 export const DEFAULT_MINIGAME_THEME: MinigameTheme = {
   label: "text-accent",
   badge: "border-accent/40 bg-accent/10 text-accent",

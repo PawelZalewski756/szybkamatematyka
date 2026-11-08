@@ -20,13 +20,13 @@ jobs:
     name: Lint, typecheck & build
     runs-on: ubuntu-latest
 
-    # ENV W CI — świadomie BEZ sekretów.
+    # ENV W CI - świadomie BEZ sekretów.
     # Aplikacja czyta zmienne (Supabase/Stripe/Gemini) wyłącznie leniwie, wewnątrz
     # funkcji, z bezpiecznymi strażnikami (np. isSupabaseConfigured / isStripeConfigured),
     # więc żaden moduł nie rzuca wyjątku na etapie importu/buildu. Sprawdzono empirycznie:
     # `next build` przechodzi czysto przy KOMPLETNYM braku zmiennych (brak .env*), a strony
     # SSG (generateStaticParams) korzystają z lokalnych danych, nie z Supabase.
-    # Dlatego NIE ustawiamy tutaj żadnych zaślepek env — build jest deterministyczny bez nich.
+    # Dlatego NIE ustawiamy tutaj żadnych zaślepek env - build jest deterministyczny bez nich.
 
     steps:
       - name: Checkout

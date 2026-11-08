@@ -5,7 +5,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
   {
     id: "arkusz-e8-1",
     title: "Arkusz treningowy E8 #1",
-    description: "20 zadań z różnych działów — poziom egzaminu 8-klasisty.",
+    description: "20 zadań z różnych działów - poziom egzaminu 8-klasisty.",
     emoji: "📝",
     kind: "egzamin-8",
     forPaths: ["klasa-7", "klasa-8"],
@@ -37,7 +37,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
   {
     id: "arkusz-e8-2",
     title: "Arkusz treningowy E8 #2",
-    description: "Kolejna porcja — ułamki, procenty, geometria.",
+    description: "Kolejna porcja - ułamki, procenty, geometria.",
     emoji: "📋",
     kind: "egzamin-8",
     forPaths: ["klasa-8"],
@@ -69,7 +69,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
   {
     id: "arkusz-matura-1",
     title: "Arkusz maturalny MIX #1",
-    description: "Zadania z matury podstawowej — funkcje, logarytmy, ciągi.",
+    description: "Zadania z matury podstawowej - funkcje, logarytmy, ciągi.",
     emoji: "🎓",
     kind: "matura",
     forPaths: ["liceum-3", "liceum-4", "technikum", "zawodowa"],
@@ -101,7 +101,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
   {
     id: "arkusz-e8-3",
     title: "Arkusz treningowy E8 #3",
-    description: "Mix trudniejszy — algebra, geometria, procenty.",
+    description: "Mix trudniejszy - algebra, geometria, procenty.",
     emoji: "🎯",
     kind: "egzamin-8",
     forPaths: ["klasa-8", "egzamin-8"],
@@ -165,7 +165,7 @@ export const EXAM_SHEETS: ExamSheet[] = [
   {
     id: "arkusz-sp-sprint",
     title: "Sprint podstawówki",
-    description: "Szybki arkusz — arytmetyka i geometria dla klas 4–6.",
+    description: "Szybki arkusz - arytmetyka i geometria dla klas 4–6.",
     emoji: "🏃",
     kind: "trening",
     forPaths: ["klasa-4", "klasa-5", "klasa-6"],

@@ -85,7 +85,7 @@ function createSupabase(): SupabaseClient {
 
   if (!serviceKey) {
     console.warn(
-      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY — używam anon. Uruchom migrację add_tasks_materials_insert.sql lub dodaj service role.",
+      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY - używam anon. Uruchom migrację add_tasks_materials_insert.sql lub dodaj service role.",
     );
   }
 
@@ -343,7 +343,7 @@ async function tryGeminiEnrich(): Promise<void> {
   const key = process.env.GEMINI_API_KEY?.trim();
   if (!key) return;
   console.log(
-    "ℹ GEMINI_API_KEY ustawiony — pomijam generowanie AI (szablony wystarczą; użyj seed:auto dla CKE).",
+    "ℹ GEMINI_API_KEY ustawiony - pomijam generowanie AI (szablony wystarczą; użyj seed:auto dla CKE).",
   );
 }
 
@@ -381,7 +381,7 @@ async function main(): Promise<void> {
       const k = slotKey(d);
       byTopic.set(k, (byTopic.get(k) ?? 0) + 1);
     }
-    console.log("Rozkład (próbka — top 8 tematów):");
+    console.log("Rozkład (próbka - top 8 tematów):");
     [...byTopic.entries()]
       .sort((a, b) => b[1] - a[1])
       .slice(0, 8)
@@ -423,7 +423,7 @@ async function main(): Promise<void> {
   console.log(`Czas: ${elapsed}s`);
   console.log("\nPonowne uruchomienie: npm run seed:trening-tasks");
   console.log(
-    "Jeśli INSERT się nie powiedzie — uruchom add_tasks_materials_insert.sql w Supabase.",
+    "Jeśli INSERT się nie powiedzie - uruchom add_tasks_materials_insert.sql w Supabase.",
   );
 }
 

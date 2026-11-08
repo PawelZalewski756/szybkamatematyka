@@ -46,7 +46,7 @@ async function main() {
 
   const syncCode = await runNpm(["--no-gemini"]);
   if (syncCode !== 0) {
-    log(`⚠ Sync treści zakończył się kodem ${syncCode} — kontynuuję Gemini`);
+    log(`⚠ Sync treści zakończył się kodem ${syncCode} - kontynuuję Gemini`);
   } else {
     log("✓ Sync treści OK");
   }
@@ -56,7 +56,7 @@ async function main() {
     log("✅ Wszystkie rozwiązania uzupełnione");
   } else {
     log(
-      `⚠ Gemini zakończone kodem ${geminiCode} — uruchom ponownie: npm run seed:cke-matura -- --fill-solutions`,
+      `⚠ Gemini zakończone kodem ${geminiCode} - uruchom ponownie: npm run seed:cke-matura -- --fill-solutions`,
     );
   }
 

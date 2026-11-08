@@ -1,4 +1,4 @@
-/** Działy matematyki — używane w panelu admin i filtrach. */
+/** Działy matematyki - używane w panelu admin i filtrach. */
 export const DZIALY_MATEMATYKI = [
   "Arytmetyka",
   "Ułamki",

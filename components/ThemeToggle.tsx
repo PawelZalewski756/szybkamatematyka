@@ -7,7 +7,7 @@ export const THEME_STORAGE_KEY = "sm-theme";
 
 type Theme = "light" | "dark";
 
-/** Wykonywany inline w <head>, zanim React się zhydratuje — bez migania motywu. */
+/** Wykonywany inline w <head>, zanim React się zhydratuje - bez migania motywu. */
 export const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="light"?"#faf7f0":"#0f0e0b")}catch(e){}`;
 
 function subscribe(callback: () => void) {
@@ -35,7 +35,7 @@ function applyTheme(theme: Theme) {
   try {
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
   } catch {
-    // Brak dostępu do localStorage — motyw działa do końca sesji.
+    // Brak dostępu do localStorage - motyw działa do końca sesji.
   }
 }
 

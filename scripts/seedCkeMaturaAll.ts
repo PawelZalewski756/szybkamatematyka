@@ -57,7 +57,7 @@ type CachedSheet = {
 
 const PLACEHOLDER_MARK = "Rozwiązanie zostanie uzupełnione";
 
-/** Kończy import bez exit 1 — wyczerpany dzienny limit free tier. */
+/** Kończy import bez exit 1 - wyczerpany dzienny limit free tier. */
 class DailyQuotaReached extends Error {
   constructor() {
     super("daily_quota");
@@ -73,7 +73,7 @@ type CliOptions = {
   /** Odśwież treść + rysunki w cache (bez Gemini, jeśli nie podano inaczej). */
   fixImages: boolean;
   refreshCache: boolean;
-  /** Tylko cache lokalny — bez zapisu do Supabase (gdy DB niedostępna). */
+  /** Tylko cache lokalny - bez zapisu do Supabase (gdy DB niedostępna). */
   cacheOnly: boolean;
   /** Nadpisz istniejące rozwiązania (np. nowy, zwięzły prompt). */
   regenerateSolutions: boolean;
@@ -127,7 +127,7 @@ function parseArgs(): CliOptions {
 
   if (fixImages) {
     refreshCache = true;
-    // Nie nadpisuj rozwiązań placeholderami — tylko treść/rysunki.
+    // Nie nadpisuj rozwiązań placeholderami - tylko treść/rysunki.
     // noGemini zostaje false, żeby buildSheetCache nie wstawiał PLACEHOLDER.
     replace = true;
   }
@@ -272,7 +272,7 @@ async function buildSheetCache(
     const parsed = parseMaturaTasksFromHtml(html);
     if (parsed.length < 5) {
       throw new Error(
-        `Za mało zadań (${parsed.length}) — zmieniony format strony lub błąd parsowania.`,
+        `Za mało zadań (${parsed.length}) - zmieniony format strony lub błąd parsowania.`,
       );
     }
     const byNumer = new Map(existing.tasks.map((t) => [t.numer, t]));
@@ -320,7 +320,7 @@ async function buildSheetCache(
 
   if (parsed.length < 5) {
     throw new Error(
-      `Za mało zadań (${parsed.length}) — zmieniony format strony lub błąd parsowania.`,
+      `Za mało zadań (${parsed.length}) - zmieniony format strony lub błąd parsowania.`,
     );
   }
 
@@ -336,12 +336,12 @@ async function buildSheetCache(
       rozwiazanie = `${PLACEHOLDER_MARK} wkrótce. Tymczasowo rozwiąż zadanie samodzielnie według treści z arkusza CKE.`;
     } else {
       if (!process.env.GEMINI_API_KEY?.trim()) {
-        throw new Error("Brakuje GEMINI_API_KEY — użyj --no-gemini lub uzupełnij .env.local");
+        throw new Error("Brakuje GEMINI_API_KEY - użyj --no-gemini lub uzupełnij .env.local");
       }
       process.stdout.write(`    Gemini zad. ${p.numer}… `);
       rozwiazanie = await generateMathSolutionWithRetry({
         trescZadania: p.tresc,
-        kontekstEgzaminu: "Matura — poziom podstawowy (CKE)",
+        kontekstEgzaminu: "Matura - poziom podstawowy (CKE)",
         tytul: `${session.nazwa}, zadanie ${p.numer}`,
       });
       console.log("ok");
@@ -404,7 +404,7 @@ async function fillGeminiSolutions(
     try {
       z.rozwiazanie = await generateMathSolutionWithRetry({
         trescZadania: z.tresc,
-        kontekstEgzaminu: "Matura — poziom podstawowy (CKE)",
+        kontekstEgzaminu: "Matura - poziom podstawowy (CKE)",
         tytul: `${session.nazwa}, zadanie ${z.numer}`,
       });
     } catch (err) {
@@ -471,7 +471,7 @@ async function getOrCreateArkusz(
   if (error) throw new Error(error.message);
   if (byName?.id) return byName.id;
 
-  // 2) Ten sam rok+miesiąc+typ — unikaj drugiego arkusza przy innej nazwie
+  // 2) Ten sam rok+miesiąc+typ - unikaj drugiego arkusza przy innej nazwie
   const { data: bySession, error: err2 } = await supabase
     .from("arkusze")
     .select("id,nazwa")
@@ -605,7 +605,7 @@ async function main() {
         : "pełny import + Gemini";
 
   console.log(
-    `Import CKE — poziom podstawowy: ${sessions.length} arkuszy\n` +
+    `Import CKE - poziom podstawowy: ${sessions.length} arkuszy\n` +
       `  Tryb: ${mode} | cache: ${CACHE_DIR}\n`,
   );
 
@@ -615,7 +615,7 @@ async function main() {
 
   for (const session of sessions) {
     if (opts.fillSolutions && !opts.regenerateSolutions && session.bundled) {
-      console.log(`\n▶ ${session.nazwa} [${session.id}] — pomijam (gotowe rozwiązania)`);
+      console.log(`\n▶ ${session.nazwa} [${session.id}] - pomijam (gotowe rozwiązania)`);
       continue;
     }
 

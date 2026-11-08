@@ -36,7 +36,7 @@ export async function generateMetadata({
   }
   return {
     title: sheet.title,
-    description: `${sheet.title} — ${sheet.taskIds.length} zadań z rozwiązaniami.`,
+    description: `${sheet.title} - ${sheet.taskIds.length} zadań z rozwiązaniami.`,
     alternates: { canonical: officialCkeSheetHref(sheet.id) },
   };
 }

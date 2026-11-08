@@ -31,7 +31,7 @@ export function HomeGamingFooter() {
         </div>
 
         <div className="grid grid-cols-2 gap-x-10 gap-y-8 text-sm sm:text-right">
-          <nav aria-label="Stopka — serwis" className="flex flex-col gap-2">
+          <nav aria-label="Stopka - serwis" className="flex flex-col gap-2">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-foreground/70 sm:text-right">
               Serwis
             </p>
@@ -45,7 +45,7 @@ export function HomeGamingFooter() {
               </Link>
             ))}
           </nav>
-          <nav aria-label="Stopka — informacje" className="flex flex-col gap-2">
+          <nav aria-label="Stopka - informacje" className="flex flex-col gap-2">
             <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-foreground/70 sm:text-right">
               Informacje
             </p>

@@ -4,7 +4,7 @@
   className?: string;
 };
 
-/** Ilustracja z arkusza CKE — bez rozciągania małych rysunków na pełną szerokość. */
+/** Ilustracja z arkusza CKE - bez rozciągania małych rysunków na pełną szerokość. */
 export function ContentImage({ src, alt = "", className = "" }: ContentImageProps) {
   const caption = alt.trim();
 

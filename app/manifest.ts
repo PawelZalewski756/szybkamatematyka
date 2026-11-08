@@ -4,7 +4,7 @@ import { SITE_NAME } from "@/lib/seo/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE_NAME} — matura i egzamin ósmoklasisty`,
+    name: `${SITE_NAME} - matura i egzamin ósmoklasisty`,
     short_name: BRAND_NAME_SHORT,
     description:
       "Platforma do nauki matematyki: arkusze CKE, baza zadań, trening i minigry.",

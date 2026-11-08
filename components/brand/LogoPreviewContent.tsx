@@ -91,7 +91,7 @@ export function LogoPreviewContent() {
       </div>
 
       <p className="mt-10 text-center text-sm text-slate-600">
-        Daj znać: np. „weź C” albo „monogram + inny wordmark” — dopasujemy favicon
+        Daj znać: np. „weź C” albo „monogram + inny wordmark” - dopasujemy favicon
         i resztę.
       </p>
     </>
@@ -115,7 +115,7 @@ export function LogoPreviewHeader() {
         <p className="mt-3 text-sm leading-relaxed text-slate-500">
           Pięć wariantów znaku przy obecnym słowie{" "}
           <span className="text-slate-400">szybka·matematyka</span>. Wybierz
-          literę lub nazwę — wdrożymy go w navbarze, faviconie i PWA.
+          literę lub nazwę - wdrożymy go w navbarze, faviconie i PWA.
         </p>
       </header>
     </>

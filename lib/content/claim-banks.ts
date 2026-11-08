@@ -1,5 +1,5 @@
 /**
- * Banki twierdzeń prawda/fałsz — wspólne źródło dla minigier, wyzwań i testów jakości.
+ * Banki twierdzeń prawda/fałsz - wspólne źródło dla minigier, wyzwań i testów jakości.
  * Wszystkie równania w LaTeXu (KaTeX): inline `$...$`.
  */
 
@@ -91,7 +91,7 @@ export const MATURA_CLAIMS: readonly ClaimTemplate[] = [
   },
 ];
 
-/** Twierdzenia symboliczne — weryfikacja ręczna (nie parsujemy CAS). */
+/** Twierdzenia symboliczne - weryfikacja ręczna (nie parsujemy CAS). */
 export const SYMBOLIC_CORRECT_CLAIMS: readonly string[] = [
   "$(a + b)^{2} = a^{2} + 2ab + b^{2}$",
   "$a^{2} - b^{2} = (a - b)(a + b)$",

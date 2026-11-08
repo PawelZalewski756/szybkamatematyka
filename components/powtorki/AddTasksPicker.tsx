@@ -37,7 +37,7 @@ export function AddTasksPicker() {
         {search.trim()
           ? "Wyniki wyszukiwania w bazie zadań."
           : solvedIds.size > 0
-            ? "Zadania, które już rozwiązywałeś — dodaj te, które chcesz utrwalić."
+            ? "Zadania, które już rozwiązywałeś - dodaj te, które chcesz utrwalić."
             : "Wyszukaj zadania, które chcesz powtarzać."}
       </p>
 

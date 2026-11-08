@@ -2,7 +2,7 @@ type GamingBackgroundProps = {
   variant?: "default" | "hero";
 };
 
-/** Subtelne plamy bursztynu — dekoracja, nie konkuruje z treścią. */
+/** Subtelne plamy bursztynu - dekoracja, nie konkuruje z treścią. */
 export function GamingBackground({ variant = "default" }: GamingBackgroundProps) {
   const hero = variant === "hero";
 

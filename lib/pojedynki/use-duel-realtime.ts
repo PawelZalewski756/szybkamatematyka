@@ -34,7 +34,7 @@ function randomClientId(): string {
  * rozsyła konfigurację (ten sam seed → identyczne pytania). Postęp i wynik
  * przesyłane są broadcastem.
  *
- * Gdy Supabase nie jest skonfigurowany lub flaga wyłączona — `available`
+ * Gdy Supabase nie jest skonfigurowany lub flaga wyłączona - `available`
  * jest false, a UI proponuje tryby offline (kod/lokalny/bot).
  */
 export function useDuelRealtime(myName: string) {

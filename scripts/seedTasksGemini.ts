@@ -160,7 +160,7 @@ async function generateForSlot(
 
     const unique = dedupeTasks(tasks, fingerprints);
     if (unique.length === 0) {
-      console.warn(`  ⚠ Partia bez nowych unikalnych — ponawiam…`);
+      console.warn(`  ⚠ Partia bez nowych unikalnych - ponawiam…`);
       batchIndex += 1;
       await sleep(opts.delayMs);
       continue;
@@ -224,7 +224,7 @@ async function main() {
   for (let i = 0; i < slots.length; i++) {
     const slot = slots[i]!;
     console.log(
-      `[${i + 1}/${slots.length}] ${EXAM_LABEL[slot.exam_type]} — ${slot.topicName}`,
+      `[${i + 1}/${slots.length}] ${EXAM_LABEL[slot.exam_type]} - ${slot.topicName}`,
     );
     totalAdded += await generateForSlot(slot, opts);
   }

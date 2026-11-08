@@ -11,7 +11,7 @@ import {
  * Analogicznie do `verifyAdminRequest` (lib/supabase/admin.ts) sesja Supabase żyje
  * tylko po stronie klienta (localStorage), więc token musi przyjść w nagłówku
  * Authorization: Bearer <access_token>. Różnica: tutaj wystarczy DOWOLNY zalogowany
- * użytkownik — checkout nie jest operacją administracyjną.
+ * użytkownik - checkout nie jest operacją administracyjną.
  */
 
 export type UserAuthResult =
@@ -73,7 +73,7 @@ export type TaskAssistAuthResult =
   | { ok: true; user: User; isPro: boolean }
   | { ok: false; status: 401 | 403; error: string };
 
-/** Zalogowany użytkownik — Pro lub free (z limitem miesięcznym po stronie route). */
+/** Zalogowany użytkownik - Pro lub free (z limitem miesięcznym po stronie route). */
 export async function verifyTaskAssistRequest(
   request: Request,
 ): Promise<TaskAssistAuthResult> {

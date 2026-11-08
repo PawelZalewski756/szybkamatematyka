@@ -76,7 +76,7 @@ export function TaskSectionBlock({
           </div>
           {rest > 0 && (
             <p className="mt-4 text-center text-sm text-muted">
-              + {rest} więcej w tym dziale — użyj filtra działu lub wyszukiwarki
+              + {rest} więcej w tym dziale - użyj filtra działu lub wyszukiwarki
             </p>
           )}
         </div>

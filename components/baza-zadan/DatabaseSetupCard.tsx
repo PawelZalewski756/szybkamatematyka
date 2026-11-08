@@ -9,7 +9,7 @@ export function DatabaseSetupCard() {
       <p className="mt-2 text-sm leading-relaxed text-muted">
         Tabele <code className="text-accent">arkusze</code> i{" "}
         <code className="text-accent">zadania</code> nie istnieją w Twoim
-        projekcie. To nie błąd strony — migracja SQL nie została jeszcze
+        projekcie. To nie błąd strony - migracja SQL nie została jeszcze
         uruchomiona.
       </p>
       <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-muted">
@@ -33,7 +33,7 @@ export function DatabaseSetupCard() {
           Wklej do edytora i kliknij <strong>Run</strong>.
         </li>
         <li>
-          Odśwież tę stronę — zadania możesz dodać skryptem{" "}
+          Odśwież tę stronę - zadania możesz dodać skryptem{" "}
           <code className="text-accent">npm run seed:trening-tasks</code> lub
           bezpośrednio w Supabase.
         </li>

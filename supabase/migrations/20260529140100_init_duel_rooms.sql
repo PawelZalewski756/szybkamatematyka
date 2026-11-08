@@ -22,7 +22,7 @@ create index if not exists duel_rooms_created_at_idx
 
 alter table public.duel_rooms enable row level security;
 
--- Pokoje są dostępne po losowym kodzie (casual feature) — odczyt dla wszystkich,
+-- Pokoje są dostępne po losowym kodzie (casual feature) - odczyt dla wszystkich,
 -- którzy znają kod. Zapis/aktualizacja również otwarte, bo gracze grają również
 -- jako goście anonimowi. Kody są losowe i krótkotrwałe.
 drop policy if exists "duel_rooms_select_all" on public.duel_rooms;
@@ -44,4 +44,4 @@ create policy "duel_rooms_update_all"
   using (true)
   with check (true);
 
-comment on table public.duel_rooms is 'Pokoje pojedynków 1v1 (async po kodzie). Opcjonalne — feature ma fallback offline.';
+comment on table public.duel_rooms is 'Pokoje pojedynków 1v1 (async po kodzie). Opcjonalne - feature ma fallback offline.';

@@ -54,7 +54,7 @@ function itemRecency(item: ReviewItem): number {
   return Math.max(item.lastReviewedAt ?? 0, item.addedAt);
 }
 
-/** Łączy harmonogram lokalny i zdalny — wygrywa nowszy wpis (po dacie). */
+/** Łączy harmonogram lokalny i zdalny - wygrywa nowszy wpis (po dacie). */
 function mergeSchedules(
   local: ReviewSchedule,
   remote: ReviewItem[],
@@ -72,7 +72,7 @@ function mergeSchedules(
 export function ReviewProvider({ children }: { children: ReactNode }) {
   const [schedule, setSchedule] = useState<ReviewSchedule>({});
   const [ready, setReady] = useState(false);
-  // „Teraz” trzymane w stanie (nie Date.now() w renderze) — odświeżane co minutę,
+  // „Teraz” trzymane w stanie (nie Date.now() w renderze) - odświeżane co minutę,
   // by zaległe powtórki pojawiały się w kolejce bez przeładowania strony.
   const [now, setNow] = useState(0);
   const userIdRef = useRef<string | null>(null);

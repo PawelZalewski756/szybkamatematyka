@@ -59,8 +59,8 @@ export function isTaskSolved(
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Powtórki (spaced repetition) — additywna „skrzynka” zadań do powtórki.    */
-/*  Niezależne od API rozwiązanych zadań powyżej — nic nie nadpisuje.         */
+/*  Powtórki (spaced repetition) - additywna „skrzynka” zadań do powtórki.    */
+/*  Niezależne od API rozwiązanych zadań powyżej - nic nie nadpisuje.         */
 /*  Tu trafiają zadania oznaczone jako błędne / do powtórki (np. z solvera).  */
 /*  Provider powtórek (components/powtorki) zaciąga te ID do harmonogramu.    */
 /* -------------------------------------------------------------------------- */

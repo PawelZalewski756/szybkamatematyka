@@ -30,7 +30,7 @@ function warnTableMissingOnce(): void {
     }
   }
   console.warn(
-    "[szybka-matma] Tabela daily_challenges niedostępna — dzienne wyzwanie zapisywane tylko lokalnie. " +
+    "[szybka-matma] Tabela daily_challenges niedostępna - dzienne wyzwanie zapisywane tylko lokalnie. " +
       "Uruchom w Supabase SQL Editor: supabase/migrations/20260529135000_add_daily_challenges.sql",
   );
 }

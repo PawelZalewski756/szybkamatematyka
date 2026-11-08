@@ -1,5 +1,5 @@
 -- Powtórki (spaced repetition): harmonogram powtórek zadań per użytkownik.
--- Algorytm SM-2 lite — stan trzymany po stronie aplikacji, tu tylko persystencja.
+-- Algorytm SM-2 lite - stan trzymany po stronie aplikacji, tu tylko persystencja.
 -- task_id jest tekstem (ID zadań z wbudowanego katalogu, np. „st-001”), więc BEZ
 -- klucza obcego do public.tasks (te ID są typu uuid).
 -- Uruchom w Supabase → SQL Editor (po init_profiles_avatars.sql).
@@ -47,4 +47,4 @@ create policy "review_schedule_delete_own"
   to authenticated
   using (auth.uid() = user_id);
 
-comment on table public.review_schedule is 'Harmonogram powtórek (spaced repetition, SM-2 lite) — jeden wiersz na gracza i zadanie.';
+comment on table public.review_schedule is 'Harmonogram powtórek (spaced repetition, SM-2 lite) - jeden wiersz na gracza i zadanie.';

@@ -1,5 +1,5 @@
 /**
- * KATALOG osiągnięć — czyste predykaty wyliczane z PlayerStats.
+ * KATALOG osiągnięć - czyste predykaty wyliczane z PlayerStats.
  *
  * Ten moduł jest w pełni czysty (bez importów React/lucide ani localStorage),
  * dzięki czemu da się go w całości pokryć testami jednostkowymi
@@ -17,7 +17,7 @@ import type {
   PlayerStats,
 } from "@/lib/achievements/types";
 
-/** Czytelne etykiety kategorii (PL) — używane do filtrów w UI. */
+/** Czytelne etykiety kategorii (PL) - używane do filtrów w UI. */
 export const CATEGORY_LABELS: Record<AchievementCategory, string> = {
   zadania: "Zadania",
   poziom: "Poziom",
@@ -63,7 +63,7 @@ function flag(
 }
 
 /**
- * Pełny katalog odznak. Kolejność w obrębie kategorii — od najłatwiejszej do
+ * Pełny katalog odznak. Kolejność w obrębie kategorii - od najłatwiejszej do
  * najtrudniejszej. ID są stabilne (używane jako klucz w localStorage „seen").
  */
 export const ACHIEVEMENTS: readonly Achievement[] = [

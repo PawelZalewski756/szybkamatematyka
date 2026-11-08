@@ -25,7 +25,7 @@ export const DIFFICULTY_LABELS: Record<TaskDifficulty, string> = {
 
 export const ALL_CATEGORIES = Object.keys(CATEGORY_LABELS) as TaskCategory[];
 
-/** Kategorie w jednej grupie (bez egzamin/matura) — do szybkich filtrów. */
+/** Kategorie w jednej grupie (bez egzamin/matura) - do szybkich filtrów. */
 export const CORE_CATEGORIES = ALL_CATEGORIES.filter(
   (c) => c !== "egzamin-8" && c !== "matura",
 ) as TaskCategory[];

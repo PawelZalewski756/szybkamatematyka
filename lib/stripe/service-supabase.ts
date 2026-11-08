@@ -1,7 +1,7 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 /**
- * Klient Supabase z kluczem SERVICE ROLE — używany WYŁĄCZNIE w webhooku Stripe
+ * Klient Supabase z kluczem SERVICE ROLE - używany WYŁĄCZNIE w webhooku Stripe
  * po stronie serwera. Service role omija RLS, więc tego klienta NIGDY nie wolno
  * tworzyć w kodzie wykonywanym w przeglądarce.
  *

@@ -84,7 +84,7 @@ grant select (
   hearts
 ) on table public.profiles to anon, authenticated;
 
--- Zapis własnego profilu (nick, XP, streak…) — bez tego onboarding i XP
+-- Zapis własnego profilu (nick, XP, streak…) - bez tego onboarding i XP
 -- kończą się permission denied przy kolumnowych grantach SELECT.
 grant insert (
   id,

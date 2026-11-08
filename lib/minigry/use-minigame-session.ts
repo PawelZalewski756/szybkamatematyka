@@ -78,13 +78,13 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
         const saved = await saveProfileAfterGame(profile, score);
         setCloudProfile(saved);
         if (saved.persisted) {
-          // Zapis w chmurze potwierdzony — pokazujemy zdobyte XP i level-up.
+          // Zapis w chmurze potwierdzony - pokazujemy zdobyte XP i level-up.
           setXpEarned(saved.xpEarned);
           if (saved.leveledUp) setShowLevelUpOverlay(true);
           setSavedToCloud(true);
           setSaveError(null);
         } else {
-          // Zapis do DB się nie powiódł (funkcja nie rzuca wyjątku) — nie udajemy,
+          // Zapis do DB się nie powiódł (funkcja nie rzuca wyjątku) - nie udajemy,
           // że XP trafiło do chmury.
           setSaveError("Nie udało się zapisać XP w chmurze. Spróbuj ponownie.");
           setSavedToCloud(false);

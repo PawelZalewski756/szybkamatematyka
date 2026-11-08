@@ -5,7 +5,7 @@
 --  * Uruchom w Supabase SQL Editor PO migracjach init_* (potrzebne istniejące tabele).
 --    Plik jest idempotentny i bezpieczny przy ponownym uruchomieniu, a brak danej
 --    tabeli jest pomijany (to_regclass), więc kolejność nie wywoła błędu.
---  * NIE modyfikuje istniejących plików migracji — zastępuje tylko polityki zapisu.
+--  * NIE modyfikuje istniejących plików migracji - zastępuje tylko polityki zapisu.
 --
 -- Po uruchomieniu dodaj swoje konto do whitelisty:
 --   insert into public.admin_emails (email) values ('twoj.admin@example.com')
@@ -83,4 +83,4 @@ begin
   end loop;
 end $$;
 
--- Odczyt pozostaje publiczny — polityki *_select_all z migracji init_* nie są ruszane.
+-- Odczyt pozostaje publiczny - polityki *_select_all z migracji init_* nie są ruszane.

@@ -4,7 +4,7 @@ const e2ePort = Number(process.env.E2E_PORT ?? 3000);
 const e2eBaseUrl = `http://localhost:${e2ePort}`;
 
 /**
- * E2E smoke tests — uruchamiane lokalnie: `npm run test:e2e`.
+ * E2E smoke tests - uruchamiane lokalnie: `npm run test:e2e`.
  *
  * Świadomie NIE dodajemy tego kroku do `.github/workflows/ci.yml` na razie
  * (wolne uruchomienie build+start, potencjalna flakiness przy dev-serverze).
@@ -35,7 +35,7 @@ export default defineConfig({
     timeout: 180_000,
     env: {
       ...process.env,
-      // Smoke działa bez prawdziwego Supabase — wystarczy, że klient się tworzy.
+      // Smoke działa bez prawdziwego Supabase - wystarczy, że klient się tworzy.
       NEXT_PUBLIC_SUPABASE_URL:
         process.env.NEXT_PUBLIC_SUPABASE_URL ||
         "https://example.supabase.co",

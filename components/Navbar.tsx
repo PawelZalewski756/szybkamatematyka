@@ -159,7 +159,7 @@ export function Navbar() {
 
     let cancelled = false;
 
-    // Nie blokuj UI na getSession / profil — Zaloguj jest widoczny od razu.
+    // Nie blokuj UI na getSession / profil - Zaloguj jest widoczny od razu.
     // Jeśli sesja wisi, po krótkim limicie uznajemy gościa.
     const readyTimeout = window.setTimeout(() => {
       if (!cancelled) setAuthReady(true);

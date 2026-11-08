@@ -5,7 +5,7 @@ export const COMPREHENSIVE_THEORY_MIN_LENGTH = 2500;
 
 export type TheoryTier = "none" | "basic" | "full" | "comprehensive";
 
-/** Pełna lekcja wg szablonu — ok. 500+ znaków lub sekcja „Na egzaminie”. */
+/** Pełna lekcja wg szablonu - ok. 500+ znaków lub sekcja „Na egzaminie”. */
 export const RICH_THEORY_MIN_LENGTH = 500;
 
 const FULL_SECTION_MARKERS = ["## Na egzaminie", "## na egzaminie"];
@@ -14,7 +14,7 @@ export type MarkdownHeading = {
   level: 2 | 3;
   text: string;
   id: string;
-  /** Typ sekcji (moduł lekcji) — ustawiany przez parseTheorySections. */
+  /** Typ sekcji (moduł lekcji) - ustawiany przez parseTheorySections. */
   kind?: TheorySectionKind;
 };
 

@@ -103,7 +103,7 @@ export default function ZapomnianeHasloPage() {
           Zapomniałeś hasła?
         </h1>
         <p className="mt-3 text-center text-sm text-muted">
-          Podaj e-mail konta — wyślemy link do ustawienia nowego hasła.
+          Podaj e-mail konta - wyślemy link do ustawienia nowego hasła.
         </p>
 
         <form

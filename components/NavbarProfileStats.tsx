@@ -7,7 +7,7 @@ import type { Profile } from "@/lib/supabase/profiles";
 
 type NavbarProfileStatsProps = {
   profile: Profile;
-  /** Zwarty układ na telefon — nick, lvl i pasek XP w jednym rzędzie navbara. */
+  /** Zwarty układ na telefon - nick, lvl i pasek XP w jednym rzędzie navbara. */
   compact?: boolean;
   /** Zwarty blok w prawej kolumnie navbara (desktop), bez rozpychania linków. */
   dense?: boolean;

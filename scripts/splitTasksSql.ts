@@ -45,7 +45,7 @@ function main() {
 
   console.log(`\n✓ Podzielono ${blocks.length} INSERTów → ${fileIndex} plików`);
   console.log(`  Katalog: ${OUT_DIR}`);
-  console.log(`  Po ${CHUNK_SIZE} zadań na plik — uruchamiaj 001.sql, 002.sql, … po kolei.\n`);
+  console.log(`  Po ${CHUNK_SIZE} zadań na plik - uruchamiaj 001.sql, 002.sql, … po kolei.\n`);
 }
 
 main();

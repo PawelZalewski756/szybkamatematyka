@@ -9,7 +9,7 @@ export function isCkeMaturaArkusz(z: ZadanieWithArkusz): boolean {
   const { typ, nazwa } = z.arkusz;
   if (typ !== "matura") return false;
   return (
-    nazwa.startsWith("Matura —") ||
+    nazwa.startsWith("Matura -") ||
     nazwa.includes("poziom podstawowy") ||
     nazwa.includes("CKE")
   );
@@ -82,7 +82,7 @@ export type CmsYearGroup = {
   groups: CmsArkuszGroup[];
 };
 
-/** Grupuje arkusze CMS po roku (malejąco) — czytelniejszy katalog bazy. */
+/** Grupuje arkusze CMS po roku (malejąco) - czytelniejszy katalog bazy. */
 export function groupCmsTasksByYear(
   groups: CmsArkuszGroup[],
 ): CmsYearGroup[] {

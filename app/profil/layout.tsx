@@ -5,8 +5,8 @@ import { BRAND_NAME_LOCATIVE } from "@/lib/brand/constants";
 export const metadata: Metadata = {
   title: "Twój profil",
   description:
-    `Twój profil w ${BRAND_NAME_LOCATIVE} — poziom, XP, statystyki nauki i ustawienia konta.`,
-  // Strona prywatna (dane konta) — nie indeksujemy.
+    `Twój profil w ${BRAND_NAME_LOCATIVE} - poziom, XP, statystyki nauki i ustawienia konta.`,
+  // Strona prywatna (dane konta) - nie indeksujemy.
   robots: { index: false, follow: false },
 };
 

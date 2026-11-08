@@ -10,7 +10,7 @@ type PageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Arkusz CKE — Szybka Matematyka",
+  title: "Arkusz CKE - Szybka Matematyka",
   description: "Zadania i rozwiązania arkusza CKE krok po kroku.",
 };
 

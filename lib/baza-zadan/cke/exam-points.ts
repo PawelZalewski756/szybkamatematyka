@@ -2,7 +2,7 @@ import { OPEN_TASK_PLACEHOLDER } from "@/lib/baza-zadan/cke/parse-abcd";
 import type { Task } from "@/lib/baza-zadan/types";
 
 const FULL_CREDIT_RE =
-  /(\d+)\s*pkt\s*[–—-]\s*(odpowiedź poprawna|rozwiązanie poprawne|obie odpowiedzi|wybranie dwóch)/i;
+  /(\d+)\s*pkt\s*[–-]\s*(odpowiedź poprawna|rozwiązanie poprawne|obie odpowiedzi|wybranie dwóch)/i;
 const ANY_PKT_RE = /(\d+)\s*pkt\b/gi;
 
 export function isOpenExamTask(task: Pick<Task, "choices">): boolean {

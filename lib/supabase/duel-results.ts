@@ -39,12 +39,12 @@ export type DuelStats = {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  Część czysta — bez I/O (testowalna, reużywalna przez osiągnięcia).        */
+/*  Część czysta - bez I/O (testowalna, reużywalna przez osiągnięcia).        */
 /* -------------------------------------------------------------------------- */
 
 /**
  * Przyrost ratingu za rezultat. Rating jest monotoniczny (każda rozgrywka
- * dokłada punkty), więc działa jak „ważone wygrane" — proste i czytelne, bez
+ * dokłada punkty), więc działa jak „ważone wygrane" - proste i czytelne, bez
  * mechaniki ELO. Wygrana waży najwięcej, porażka daje drobny punkt za udział.
  */
 export const DUEL_RATING_DELTA: Record<DuelOutcome, number> = {
@@ -150,7 +150,7 @@ function warnMissingOnce(detail: string): void {
     }
   }
   console.warn(
-    `[szybka-matma] ${detail} — wyniki pojedynków zapisywane tylko lokalnie. ` +
+    `[szybka-matma] ${detail} - wyniki pojedynków zapisywane tylko lokalnie. ` +
       "Uruchom w Supabase SQL Editor: supabase/migrations/20260529160000_add_duel_results.sql",
   );
 }
@@ -159,7 +159,7 @@ const DUEL_PROFILE_COLUMNS =
   "duel_played, duel_wins, duel_losses, duel_draws, duel_rating";
 
 export type DuelOutcomeInput = {
-  /** Id zalogowanego gracza lub null (gość — tylko zapis lokalny). */
+  /** Id zalogowanego gracza lub null (gość - tylko zapis lokalny). */
   userId: string | null;
   outcome: DuelOutcome;
   myResult: DuelResult;
@@ -186,7 +186,7 @@ export async function recordDuelOutcome(
 ): Promise<RecordDuelResult> {
   const { userId, outcome, myResult, opponentResult, mode, slug } = input;
 
-  // 1) Lokalny fallback — zawsze (gość, offline, brak kolumn).
+  // 1) Lokalny fallback - zawsze (gość, offline, brak kolumn).
   const localNext = applyOutcomeToStats(loadDuelStats(userId), outcome);
   saveDuelStatsLocal(userId, localNext);
 
@@ -283,7 +283,7 @@ export async function recordDuelOutcome(
 
 /**
  * Odczyt zagregowanych statystyk pojedynków zalogowanego gracza z `profiles`.
- * Zwraca null, gdy Supabase niedostępne, brak kolumn lub brak profilu — wówczas
+ * Zwraca null, gdy Supabase niedostępne, brak kolumn lub brak profilu - wówczas
  * wołający może użyć lokalnego `loadDuelStats`. Czysty punkt odczytu m.in. dla
  * osiągnięć (poza lib/achievements/**).
  */

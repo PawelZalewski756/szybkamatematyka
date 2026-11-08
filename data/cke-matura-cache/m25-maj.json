@@ -1,6 +1,6 @@
 {
   "sessionId": "m25-maj",
-  "nazwa": "Matura — maj 2025 — poziom podstawowy",
+  "nazwa": "Matura - maj 2025 - poziom podstawowy",
   "rok": 2025,
   "miesiac": 5,
   "tasks": [
@@ -68,7 +68,7 @@
       "numer": 11,
       "dzial": "Funkcje",
       "tresc": "Funkcja 𝑓 jest określona następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z11-1.jpg) Wykres funkcji 𝑦=𝑓(𝑥) przedstawiono w kartezjańskim układzie współrzędnych (𝑥,𝑦) na rysunku poniżej. ![Rysunek do zadania](/cke-matura/m25-maj/z11-2.jpg) 1. Dziedziną funkcji 𝑓 jest przedział ......................... 2. Zbiorem wartości funkcji 𝑓 jest przedział ......................... 3. Zbiorem wszystkich argumentów, dla których funkcja 𝑓 przyjmuje wartości dodatnie, jest przedział ......................... 4. Zbiorem wszystkich rozwiązań równania 𝑓(𝑥) = 3 jest przedział .........................",
-      "rozwiazanie": "**Krok 1.** Odczytaj dziedzinę z osi X — to wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi Y — to wszystkie możliwe wartości funkcji $f(x)$.\n**Krok 2.** Znajdź argumenty $x$, dla których $f(x) > 0$. Na wykresie to fragmenty, gdzie funkcja jest nad osią X.\n**Krok 3.** Znajdź argumenty $x$, dla których $f(x) = 3$. Na wykresie znajdź punkty, gdzie wykres przecina się z prostą $y=3$.\n\n**Odpowiedź:** 1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$"
+      "rozwiazanie": "**Krok 1.** Odczytaj dziedzinę z osi X - to wszystkie możliwe wartości argumentu $x$. Zbiór wartości odczytaj z osi Y - to wszystkie możliwe wartości funkcji $f(x)$.\n**Krok 2.** Znajdź argumenty $x$, dla których $f(x) > 0$. Na wykresie to fragmenty, gdzie funkcja jest nad osią X.\n**Krok 3.** Znajdź argumenty $x$, dla których $f(x) = 3$. Na wykresie znajdź punkty, gdzie wykres przecina się z prostą $y=3$.\n\n**Odpowiedź:** 1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$"
     },
     {
       "numer": 12,

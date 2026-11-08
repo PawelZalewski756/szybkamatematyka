@@ -5,32 +5,32 @@
 -- exists / drop policy if exists + create policy), bezpieczna przy ponownym Run.
 --
 -- Uruchom w Supabase → SQL Editor PO init_profiles_avatars.sql.
--- (Kolejność względem add_subscription_columns / audit_harden jest dowolna —
+-- (Kolejność względem add_subscription_columns / audit_harden jest dowolna -
 --  trigger ochrony kolumn subskrypcji NIE dotyka kolumn duel_*.)
 --
 -- DWA elementy persystencji (świadoma decyzja):
---   1) public.duel_results — PRYWATNA historia pojedynków zalogowanego gracza
+--   1) public.duel_results - PRYWATNA historia pojedynków zalogowanego gracza
 --      (jeden wiersz na zakończony pojedynek). RLS own-row: gracz widzi/zapisuje
---      tylko swoje wiersze. Append-only (brak UPDATE/DELETE) — historia jest
+--      tylko swoje wiersze. Append-only (brak UPDATE/DELETE) - historia jest
 --      niezmienna.
---   2) profiles.duel_* — ZAGREGOWANE liczniki (rozegrane/wygrane/przegrane/remisy
+--   2) profiles.duel_* - ZAGREGOWANE liczniki (rozegrane/wygrane/przegrane/remisy
 --      + duel_rating). Trzymane w profiles, bo tabela ta ma już PUBLICZNY odczyt
 --      (polityka profiles_select_*), więc ranking pojedynków reużywa istniejący
 --      tor leaderboardu (sortowanie po kolumnie) bez nowej tabeli publicznej ani
 --      widoku. Zapis tych kolumn robi sam gracz (profiles_update_own,
---      auth.uid() = id) — to INNE kolumny niż subscription_*, więc trigger
+--      auth.uid() = id) - to INNE kolumny niż subscription_*, więc trigger
 --      protect_subscription_columns ich nie blokuje.
 -- =============================================================================
 
 
 -- ---------------------------------------------------------------------------
--- 1) profiles — zagregowane liczniki pojedynków (zasilają ranking „Pojedynki").
+-- 1) profiles - zagregowane liczniki pojedynków (zasilają ranking „Pojedynki").
 --    Idempotentnie, kolumna po kolumnie. Brak tabeli profiles = pomijamy.
 -- ---------------------------------------------------------------------------
 do $$
 begin
   if to_regclass('public.profiles') is null then
-    raise notice 'pomijam profiles — tabela nie istnieje';
+    raise notice 'pomijam profiles - tabela nie istnieje';
   else
     alter table public.profiles
       add column if not exists duel_played  integer not null default 0,
@@ -50,7 +50,7 @@ create index if not exists profiles_duel_rating_idx
 
 
 -- ---------------------------------------------------------------------------
--- 2) duel_results — prywatna historia zakończonych pojedynków gracza.
+-- 2) duel_results - prywatna historia zakończonych pojedynków gracza.
 -- ---------------------------------------------------------------------------
 create table if not exists public.duel_results (
   id             uuid primary key default gen_random_uuid(),

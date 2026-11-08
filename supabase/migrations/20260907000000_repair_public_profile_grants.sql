@@ -28,7 +28,7 @@ declare
   ];
 begin
   if to_regclass('public.profiles') is null then
-    raise notice 'pomijam granty profiles — tabela nie istnieje';
+    raise notice 'pomijam granty profiles - tabela nie istnieje';
   else
     foreach profile_column in array public_profile_columns
     loop

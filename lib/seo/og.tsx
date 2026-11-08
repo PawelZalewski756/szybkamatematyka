@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { SITE_NAME } from "@/lib/seo/site";
 
 export const OG_SIZE = { width: 1200, height: 630 } as const;
-export const OG_ALT = `${SITE_NAME} — matura i egzamin ósmoklasisty online`;
+export const OG_ALT = `${SITE_NAME} - matura i egzamin ósmoklasisty online`;
 export const OG_CONTENT_TYPE = "image/png";
 
 export function renderOgImage() {
@@ -57,7 +57,7 @@ export function renderOgImage() {
             lineHeight: 1.35,
           }}
         >
-          Arkusze CKE, baza zadań z rozwiązaniami i trening tematyczny — w jednej
+          Arkusze CKE, baza zadań z rozwiązaniami i trening tematyczny - w jednej
           aplikacji.
         </div>
         <div

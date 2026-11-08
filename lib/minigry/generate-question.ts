@@ -28,7 +28,7 @@ function fromTemplate(
   };
 }
 
-/** Szkoła podstawowa — klasy 1–5, prostsze pytania */
+/** Szkoła podstawowa - klasy 1–5, prostsze pytania */
 const PODSTAWOWA_BANK = {
   dodawanie: [
     { true: "$3 + 4 = 7$", false: "$3 + 4 = 8$" },
@@ -62,7 +62,7 @@ const PODSTAWOWA_BANK = {
   ],
 } as const;
 
-/** Egzamin 8-klasisty — prostsze zagadnienia */
+/** Egzamin 8-klasisty - prostsze zagadnienia */
 const EGZAMIN_8_BANK = {
   ulamki: [
     {
@@ -122,7 +122,7 @@ const EGZAMIN_8_BANK = {
   ],
 } as const;
 
-/** Matura — trudniejsze zagadnienia */
+/** Matura - trudniejsze zagadnienia */
 const MATURA_BANK = {
   logarytmy: [
     { true: "$\\log_{2}(8) = 3$", false: "$\\log_{2}(8) = 2$" },

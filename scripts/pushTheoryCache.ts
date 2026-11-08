@@ -36,11 +36,11 @@ async function main() {
     throw new Error("Brak Supabase URL / klucza w .env.local");
   }
   if (!process.env.SUPABASE_SERVICE_ROLE_KEY?.trim()) {
-    console.warn("⚠ Brak SUPABASE_SERVICE_ROLE_KEY — zapis może się nie udać.");
+    console.warn("⚠ Brak SUPABASE_SERVICE_ROLE_KEY - zapis może się nie udać.");
   }
 
   if (!fs.existsSync(CACHE_DIR)) {
-    throw new Error(`Brak katalogu ${CACHE_DIR} — najpierw npm run seed:theory-gemini`);
+    throw new Error(`Brak katalogu ${CACHE_DIR} - najpierw npm run seed:theory-gemini`);
   }
 
   const files = fs.readdirSync(CACHE_DIR).filter((f) => f.endsWith(".json"));
@@ -57,7 +57,7 @@ async function main() {
     const keyStr = `${entry.exam_type}:${entry.category}:${entry.topic}`;
 
     if (dryRun) {
-      console.log(`  [dry-run] ${keyStr} — ${entry.title}`);
+      console.log(`  [dry-run] ${keyStr} - ${entry.title}`);
       updated += 1;
       continue;
     }

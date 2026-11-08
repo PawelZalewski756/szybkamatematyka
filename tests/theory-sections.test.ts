@@ -10,7 +10,7 @@ describe("classifySectionKind", () => {
   it("maps polish section titles to kinds", () => {
     expect(classifySectionKind("Na egzaminie")).toBe("exam");
     expect(classifySectionKind("Definicje i wzory")).toBe("core");
-    expect(classifySectionKind("Przykład 1 — podstawowy")).toBe("example");
+    expect(classifySectionKind("Przykład 1 - podstawowy")).toBe("example");
     expect(classifySectionKind("Ćwiczenia do samodzielnego rozwiązania")).toBe(
       "practice",
     );

@@ -10,7 +10,7 @@ export type CheckoutResult =
  * Rozpoczyna płatność: pobiera access token z sesji Supabase, woła
  * POST /api/checkout i przekierowuje na zwrócony `session.url` Stripe.
  *
- * Zwraca błąd zamiast rzucać — komponenty mogą pokazać komunikat. W przypadku
+ * Zwraca błąd zamiast rzucać - komponenty mogą pokazać komunikat. W przypadku
  * sukcesu funkcja przekierowuje przeglądarkę (i nie wraca z `ok: true` przed
  * nawigacją w typowym przypadku).
  */
@@ -47,7 +47,7 @@ export async function startCheckout(planId: string): Promise<CheckoutResult> {
       body: JSON.stringify({ planId }),
     });
   } catch {
-    return { ok: false, error: "Błąd sieci — spróbuj ponownie." };
+    return { ok: false, error: "Błąd sieci - spróbuj ponownie." };
   }
 
   const data: { url?: string; error?: string; code?: string } | null =

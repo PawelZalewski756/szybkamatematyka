@@ -204,20 +204,20 @@ export function AnalitykaPageClient() {
           <MetricCard
             icon={FileStack}
             label="Arkusze"
-            value={content.arkusze != null ? PL_NUMBER.format(content.arkusze) : "—"}
+            value={content.arkusze != null ? PL_NUMBER.format(content.arkusze) : "-"}
             sub="arkuszy egzaminacyjnych"
             accent="text-accent"           />
           <MetricCard
             icon={Layers}
             label="Zadania (arkusze)"
-            value={content.zadania != null ? PL_NUMBER.format(content.zadania) : "—"}
+            value={content.zadania != null ? PL_NUMBER.format(content.zadania) : "-"}
             sub="zadań z rozwiązaniami"
             accent="text-accent"
           />
           <MetricCard
             icon={Gamepad2}
             label="Zadania treningowe"
-            value={content.tasks != null ? PL_NUMBER.format(content.tasks) : "—"}
+            value={content.tasks != null ? PL_NUMBER.format(content.tasks) : "-"}
             sub="w arenie treningowej"
             accent="text-accent"
           />
@@ -227,7 +227,7 @@ export function AnalitykaPageClient() {
             value={
               content.materials != null
                 ? PL_NUMBER.format(content.materials)
-                : "—"
+                : "-"
             }
             sub="materiałów teoretycznych"
             accent="text-success"

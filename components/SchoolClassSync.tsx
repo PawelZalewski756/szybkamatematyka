@@ -62,7 +62,7 @@ export function SchoolClassSync() {
           );
         }
       } catch {
-        /* ignore — kolumna school_class może nie istnieć jeszcze w DB */
+        /* ignore - kolumna school_class może nie istnieć jeszcze w DB */
       } finally {
         syncingRef.current = false;
       }

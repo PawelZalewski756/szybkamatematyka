@@ -110,7 +110,7 @@ async function main() {
     if (replace) {
       await deleteBySourceId(supabase, sid);
     } else if (await existsBySourceId(supabase, sid)) {
-      console.log(`  ⊘ Zadanie ${z.numer} — już w bazie (${sid})`);
+      console.log(`  ⊘ Zadanie ${z.numer} - już w bazie (${sid})`);
       skipped += 1;
       continue;
     }
@@ -146,7 +146,7 @@ async function main() {
   }
 
   console.log(
-    `\nGotowe — ${CKE_MATURA_2024_MAJ_META.nazwa}\n` +
+    `\nGotowe - ${CKE_MATURA_2024_MAJ_META.nazwa}\n` +
       `  dodano: ${inserted} | pominięto: ${skipped} | po --replace: ${updated}\n` +
       `  Źródło: ${CKE_MATURA_2024_MAJ_META.ckeUrl}`,
   );

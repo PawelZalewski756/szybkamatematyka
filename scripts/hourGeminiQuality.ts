@@ -1,5 +1,5 @@
 /**
- * Godzinna sesja Gemini — jakość rozwiązań CKE (krótkie / broken) + push teorii.
+ * Godzinna sesja Gemini - jakość rozwiązań CKE (krótkie / broken) + push teorii.
  *
  *   npx tsx scripts/hourGeminiQuality.ts
  *   npx tsx scripts/hourGeminiQuality.ts --minutes=60
@@ -104,7 +104,7 @@ async function improveCkeSolutions(
     process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
   if (!url || !key) {
-    log("⚠ Brak Supabase — tylko cache");
+    log("⚠ Brak Supabase - tylko cache");
   }
   const supabase =
     url && key
@@ -129,16 +129,16 @@ async function improveCkeSolutions(
       if (!reason) continue;
 
       log(
-        `  ↻ ${sheet.sessionId} zad.${task.numer} (${reason}) — Gemini…`,
+        `  ↻ ${sheet.sessionId} zad.${task.numer} (${reason}) - Gemini…`,
       );
       try {
         const next = await generateMathSolutionWithRetry({
           trescZadania: task.tresc,
-          kontekstEgzaminu: "Matura — poziom podstawowy (CKE)",
+          kontekstEgzaminu: "Matura - poziom podstawowy (CKE)",
           tytul: `${sheet.nazwa}, zadanie ${task.numer}`,
         });
         if (!next.trim() || isSolutionPlaceholder(next)) {
-          log("    ⚠ puste — pomijam");
+          log("    ⚠ puste - pomijam");
           continue;
         }
         // W trybie polish nie degraduj już dobrego tekstu
@@ -146,7 +146,7 @@ async function improveCkeSolutions(
           mode === "polish" &&
           next.trim().length < task.rozwiazanie.trim().length * 0.85
         ) {
-          log("    ⚠ krótsze niż poprzednie — pomijam");
+          log("    ⚠ krótsze niż poprzednie - pomijam");
           continue;
         }
         task.rozwiazanie = next.trim();
@@ -172,7 +172,7 @@ async function improveCkeSolutions(
         const msg = err instanceof Error ? err.message : String(err);
         log(`    ✗ ${msg.slice(0, 200)}`);
         if (/429|quota|rate/i.test(msg)) {
-          log("    ⏳ limit API — czekam 90s");
+          log("    ⏳ limit API - czekam 90s");
           await sleep(90_000);
         }
       }
@@ -209,7 +209,7 @@ async function main() {
   const improvedStrict = await improveCkeSolutions(deadline, "strict");
   log(`Poprawiono (strict): ${improvedStrict}`);
 
-  // 3) Dopracuj średnie rozwiązania — pełne wykorzystanie godziny
+  // 3) Dopracuj średnie rozwiązania - pełne wykorzystanie godziny
   if (Date.now() < deadline) {
     log("\n═══ Dopracowanie rozwiązań CKE (polish) ═══");
     const improvedPolish = await improveCkeSolutions(deadline, "polish");

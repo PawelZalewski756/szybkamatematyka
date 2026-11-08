@@ -13,9 +13,9 @@ import type { PostgrestError } from "@supabase/supabase-js";
 
 /**
  * Synchronizacja stanu subskrypcji ze Stripe do tabeli `profiles` (service role).
- * Wywoływana z webhooka — nie ma tu sesji użytkownika, więc używamy klucza
+ * Wywoływana z webhooka - nie ma tu sesji użytkownika, więc używamy klucza
  * serwisowego (omija RLS). Brak konfiguracji albo błąd zapisu jest błędem
- * przetwarzania webhooka — wywołujący musi dostać 5xx, aby Stripe ponowił
+ * przetwarzania webhooka - wywołujący musi dostać 5xx, aby Stripe ponowił
  * dostarczenie zamiast trwale zgubić zmianę subskrypcji.
  */
 
@@ -33,7 +33,7 @@ function unixToIso(seconds: number | null | undefined): string | null {
   return new Date(seconds * 1000).toISOString();
 }
 
-/** Koniec bieżącego okresu — w nowszych API jest na pozycji subskrypcji. */
+/** Koniec bieżącego okresu - w nowszych API jest na pozycji subskrypcji. */
 function readCurrentPeriodEnd(
   subscription: Stripe.Subscription,
 ): string | null {
@@ -76,7 +76,7 @@ async function applyPatch(
     throw new Error(
       isServiceRoleConfigured()
         ? "Nie udało się utworzyć klienta Supabase service role."
-        : "Brak SUPABASE_SERVICE_ROLE_KEY — nie można zapisać subskrypcji.",
+        : "Brak SUPABASE_SERVICE_ROLE_KEY - nie można zapisać subskrypcji.",
     );
   }
 
@@ -86,7 +86,7 @@ async function applyPatch(
     .eq("id", userId);
 
   // Gdy kolumny stripe_* jeszcze nie istnieją (migracja nieuruchomiona),
-  // próbujemy zapisać wąski podzbiór statusu — żeby flaga Pro mimo wszystko działała.
+  // próbujemy zapisać wąski podzbiór statusu - żeby flaga Pro mimo wszystko działała.
   if (error && isPostgrestUndefinedColumnError(error as PostgrestError)) {
     ({ error } = await supabase
       .from("profiles")
@@ -111,7 +111,7 @@ export async function syncSubscriptionToProfile(
   const userId = options?.forceUserId ?? userIdFromSubscription(subscription);
   if (!userId) {
     console.warn(
-      "[stripe-webhook] Brak supabase_user_id w subskrypcji — nie wiem, czyj profil zaktualizować.",
+      "[stripe-webhook] Brak supabase_user_id w subskrypcji - nie wiem, czyj profil zaktualizować.",
     );
     return;
   }
@@ -140,7 +140,7 @@ export async function markSubscriptionCanceled(
   const userId = userIdFromSubscription(subscription);
   if (!userId) {
     console.warn(
-      "[stripe-webhook] subscription.deleted bez supabase_user_id — pomijam.",
+      "[stripe-webhook] subscription.deleted bez supabase_user_id - pomijam.",
     );
     return;
   }

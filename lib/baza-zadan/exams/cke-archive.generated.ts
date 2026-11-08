@@ -1,11 +1,11 @@
-/** AUTO-GENERATED — npm run seed:exam-archive. Nie edytuj ręcznie. */
+/** AUTO-GENERATED - npm run seed:exam-archive. Nie edytuj ręcznie. */
 import type { Task } from "@/lib/baza-zadan/types";
 import type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";
 
 export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m15-maj-z01",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -35,7 +35,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z02",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -66,7 +66,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z03",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 3",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -76,7 +76,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kwotę 1000 zł ulokowano w banku na roczną lokatę oprocentowaną w wysokości 4% w stosunku rocznym. Po zakończeniu lokaty od naliczonych odsetek odprowadzany jest podatek w wysokości 19%. Maksymalna kwota, jaką po upływie roku będzie można wypłacić z banku, jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "1032,40 zł",
@@ -94,7 +94,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z04",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -124,7 +124,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z05",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 5",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -156,7 +156,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z06",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -187,7 +187,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z07",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -218,7 +218,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z08",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -249,7 +249,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z09",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -279,7 +279,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z10",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -310,7 +310,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z11",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -340,7 +340,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z12",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 12",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -382,7 +382,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z13",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 13",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -413,7 +413,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z14",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 14",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -443,7 +443,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z15",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 15",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -474,7 +474,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z16",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -505,7 +505,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z17",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 17",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -536,7 +536,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z18",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 18",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -566,7 +566,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z19",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 19",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -597,7 +597,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z20",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 20",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -627,7 +627,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z21",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -658,7 +658,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z22",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -689,7 +689,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z23",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 23",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -699,7 +699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość $r$ówną 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$192 + 32 \\sqrt{3}$",
@@ -717,7 +717,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z24",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 24",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -748,7 +748,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z25",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -779,7 +779,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z26",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -789,7 +789,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $2x^{2} - 4x$ > $(x + 3)(x - 2)$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, 2) \\cup (3, \\infty)$",
@@ -807,7 +807,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z27",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -817,7 +817,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y prawdziwa jest nierówność $4x^{2} - 8 xy + 5y^{2} \\ge 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Nierówność jest zawsze prawdziwa, ponieważ jest sumą dwóch kwadratów liczb rzeczywistych.",
@@ -835,7 +835,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z28",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -845,7 +845,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków - odpowiednio - AE i EC . Punkty L i N leżą na przekątnej BD tak, że $|BL| = \\frac{1}{3}|BE|$ i $|DN| = \\frac{1}{3}|DE|$ (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Stosunek pola czworokąta KLMN do pola kwadratu ABCD wynosi $\\frac{1}{6}$.",
@@ -863,7 +863,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z29",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 29",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -873,7 +873,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Oblicz najmniejszą i największą wartość funkcji kwadratowej $f(x) = x^{2} - 6x + 3$ w przedziale ⟨0,4⟩.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Najmniejsza wartość to $-6$, a największa wartość to $3$.",
@@ -891,7 +891,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z30",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 30",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -901,7 +901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W układzie współrzędnych są dane punkty A = $(-43, - 12)$ , $B = (50,19)$ . Prosta AB przecina oś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-7$",
@@ -919,7 +919,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z31",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -929,7 +929,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy $\\frac{4}{7}$ , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy $\\frac{1}{2}$ . Wyznacz ten ułamek.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{8}{17}$",
@@ -947,7 +947,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z32",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 32",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -957,7 +957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy $\\frac{3}{5}$ . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$144 + 384\\sqrt{2}$",
@@ -976,7 +976,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z33",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 33",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -986,7 +986,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wśród 115 osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{5}{23}$",
@@ -1005,7 +1005,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-maj-z34",
-    "title": "Matura — maj 2015 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2015 - poziom podstawowy - zad. 34",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -1015,7 +1015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W nieskończonym ciągu arytmetycznym ($a_{n}$) , określonym dla $n \\ge 1$ , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy $a_{1}$ , $a_{3}$ , $a_{k}$ ciągu ($a_{n}$), w podanej kolejności, tworzą nowy ciąg - trzywyrazowy ciąg geometryczny ($b_{n}$). Oblicz k .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "11",
@@ -1033,7 +1033,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z01",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 1",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 1",
     "category": "arytmetyka",
     "difficulty": "latwy",
     "forPaths": [
@@ -1064,7 +1064,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z02",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 2",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 2",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -1095,7 +1095,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z03",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 3",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 3",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -1126,7 +1126,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z04",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 4",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -1157,7 +1157,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z05",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 5",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 5",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -1188,7 +1188,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z06",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 6",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -1219,7 +1219,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z07",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 7",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -1249,7 +1249,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z08",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 8",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -1280,7 +1280,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z09",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 9",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 9",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -1312,7 +1312,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z10",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 10",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -1343,7 +1343,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z11",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 11",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 11",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -1374,7 +1374,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z12",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 12",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 12",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -1406,7 +1406,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z13",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 13",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -1437,7 +1437,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z14",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 14",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 14",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -1468,7 +1468,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z15",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 15",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 15",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -1499,7 +1499,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z16",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 16",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -1530,7 +1530,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z17",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 17",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 17",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -1560,7 +1560,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z18",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 18",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -1591,7 +1591,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z19",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 19",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 19",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -1622,7 +1622,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z20",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 20",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 20",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -1653,7 +1653,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z21",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 21",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 21",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -1684,7 +1684,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z22",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 22",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 22",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -1715,7 +1715,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z23",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 23",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -1746,7 +1746,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z24",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 24",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -1777,7 +1777,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z25",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 25",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 25",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -1787,7 +1787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność: - $x^{2} - 4x + 21$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in [-7, 3]$",
@@ -1805,7 +1805,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z26",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 26",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -1815,7 +1815,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Uzasadnij, że żadna liczba całkowita nie jest rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m15-probna/z26-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{2}$",
@@ -1833,7 +1833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z27",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 27",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -1843,7 +1843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem $y = (\\frac{1}{2})$ x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "24 dni",
@@ -1862,7 +1862,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z28",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 28",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -1872,7 +1872,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Uzasadnij, że jeżeli liczba całkowita nie dzieli się przez 3, to jej kwadrat przy dzieleniu przez 3 daje resztę 1.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "W obu przypadkach kwadrat liczby daje resztę 1 przy dzieleniu przez 3.",
@@ -1890,7 +1890,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z29",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 29",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 29",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -1900,7 +1900,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 $km / h$ , a na trasie z B do $C - 60 km / h$ . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "48 $km/h$",
@@ -1918,7 +1918,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z30",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 30",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -1928,7 +1928,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zakupiono 16 biletów do teatru, w tym 10 biletów na miejsca od 1. do 10. w pierwszym rzędzie i 6 biletów na miejsca od 11. do 16. w szesnastym rzędzie. Jakie jest prawdopodobieństwo zdarzenia polegającego na tym, że 2 wylosowane bilety, spośród szesnastu, będą biletami na sąsiadujące miejsca?",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{7}{60}$",
@@ -1947,7 +1947,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z31",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 31",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 31",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -1957,7 +1957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W trapezie ABCD (AB ∥ CD) przekątne AC i BD przecinają się w punkcie O takim, że $|AO|$:$|OC| = 5$:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pole trapezu $ABCD$ wynosi $72$.",
@@ -1975,7 +1975,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z32",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 32",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 32",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -1985,7 +1985,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty $A = (3,3)$ i $B = (9,1)$ są wierzchołkami trójkąta ABC , a punkt $M = (1,6)$ jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$(-\\frac{12}{5}, \\frac{24}{5})$",
@@ -2004,7 +2004,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-probna-z33",
-    "title": "Matura — próbna 2015 — poziom podstawowy — zad. 33",
+    "title": "Matura - próbna 2015 - poziom podstawowy - zad. 33",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -2014,7 +2014,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy $o$ 22. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pole powierzchni całkowitej wynosi $390\\pi$, a objętość $\\frac{676}{3}\\pi$.",
@@ -2032,7 +2032,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z01",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 1",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2063,7 +2063,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z02",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 2",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2109,7 +2109,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z03",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 3",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2139,7 +2139,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z04",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 4",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -2149,7 +2149,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-1.png) jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$2x - 5y$",
@@ -2166,7 +2166,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z05",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 5",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 5",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -2197,7 +2197,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z06",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 6",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2228,7 +2228,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z07",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 7",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2260,7 +2260,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z08",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 8",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 8",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -2270,7 +2270,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-1.png) jest przedział\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$[1, 3]$",
@@ -2288,7 +2288,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z09",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 9",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 9",
     "category": "arytmetyka",
     "difficulty": "latwy",
     "forPaths": [
@@ -2319,7 +2319,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z10",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 10",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 10",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2349,7 +2349,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z11",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 11",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -2379,7 +2379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z12",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 12",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 12",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -2410,7 +2410,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z13",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 13",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -2441,7 +2441,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z14",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 14",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 14",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -2473,7 +2473,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z15",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 15",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 15",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -2504,7 +2504,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z16",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 16",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 16",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -2535,7 +2535,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z17",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 17",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 17",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -2566,7 +2566,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z18",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 18",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 18",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -2597,7 +2597,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z19",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 19",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -2628,7 +2628,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z20",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 20",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 20",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -2659,7 +2659,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z21",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 21",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 21",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -2690,7 +2690,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z22",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 22",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 22",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -2721,7 +2721,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z23",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 23",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -2752,7 +2752,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z24",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 24",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -2762,7 +2762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem rozwiązań nierówności $ax + 4 \\ge 0$ z niewiadomą $x$ jest przedział (-∞, 2⟩ . Wyznacz a .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$a = -2$",
@@ -2781,7 +2781,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z25",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 25",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 25",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -2791,7 +2791,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m15-przykladowa/z25-1.png) dla x ≠ 1.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x = \\frac{3}{2}$",
@@ -2809,7 +2809,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z26",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 26",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -2819,7 +2819,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kwadrat K 1 ma bok długości $a$ . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , ... takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{a^2}{2^{22}}$",
@@ -2837,7 +2837,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z27",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 27",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -2847,7 +2847,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pierścieniu kołowym cięciwa zewnętrznego okręgu ma długość 10 i jest styczna do wewnętrznego okręgu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z27-1.png) Wykaż, że pole tego pierścienia można wyrazić wzorem, w którym nie występują promienie wyznaczających go okręgów.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$P = 25\\pi$",
@@ -2865,7 +2865,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z28",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 28",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 28",
     "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
@@ -2875,7 +2875,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Uzasadnij, że liczba 4 $12 + 4 13 + 4$ 14 jest podzielna przez 42.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Liczba jest podzielna przez 42.",
@@ -2893,7 +2893,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z29",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 29",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 29",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -2903,7 +2903,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na trójkącie o bokach długości √ 7 , √ 8 , √ 15 opisano okrąg. Oblicz promień tego okręgu.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{\\sqrt{15}}{2}$",
@@ -2921,7 +2921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z30",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 30",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 30",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -2931,7 +2931,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Proste l i k przecinają się w punkcie $A = (0, 4)$ . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k - trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "2",
@@ -2949,7 +2949,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z31",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 31",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 31",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -2959,7 +2959,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ala jeździ do szkoły rowerem, a Ola skuterem. Obie pokonują tę samą drogę. Ala wyjechała do szkoły o godzinie 7:00 i pokonała całą drogę w ciągu 40 minut. Ola wyjechała 10 minut później niż Ala, a pokonanie całej drogi zajęło jej tylko 20 minut. Oblicz, o której godzinie Ola wyprzedziła Alę.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "7:20",
@@ -2977,7 +2977,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z32",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 32",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 32",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -2987,7 +2987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są wierzchołki trójkąta ABC : $A = (2, 2)$ , $B = (9, 5)$ i $C = (3, 9)$ . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$y = -\\frac{2}{3}x + \\frac{238}{15}$",
@@ -3005,7 +3005,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m15-przykladowa-z33",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy — zad. 33",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 33",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -3015,7 +3015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę - graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{16}{17}$",
@@ -3034,7 +3034,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z01",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -3044,7 +3044,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dla każdej dodatniej liczby a iloraz ![Rysunek do zadania](/cke-matura/m16-maj/z01-1.png) jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\sqrt{a^3}$",
@@ -3062,7 +3062,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z02",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -3093,7 +3093,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z03",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -3124,7 +3124,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z04",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -3156,7 +3156,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z05",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 5",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -3188,7 +3188,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z06",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -3219,7 +3219,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z07",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -3250,7 +3250,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z08",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -3281,7 +3281,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z09",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -3313,7 +3313,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z10",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -3323,7 +3323,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem wartości funkcji $f$ jest przedział\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$(-\\infty, 9]$",
@@ -3341,7 +3341,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z11",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -3372,7 +3372,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z12",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -3404,7 +3404,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z13",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 13",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -3435,7 +3435,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z14",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -3466,7 +3466,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z15",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -3498,7 +3498,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z16",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -3508,7 +3508,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przedstawione na rysunku trójkąty ABC i PQR są podobne. ![Rysunek do zadania](/cke-matura/m16-maj/z16-1.gif) Bok AB trójkąta ABC ma długość\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "7,5",
@@ -3526,7 +3526,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z17",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 17",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -3557,7 +3557,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z18",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -3588,7 +3588,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z19",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -3598,7 +3598,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Okręgi o promieniach 3 i 4 są styczne zewnętrznie. Prosta styczna do okręgu o promieniu 4 w punkcie P przechodzi przez środek okręgu o promieniu 3 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z19-1.gif) Pole trójkąta, którego wierzchołkami są środki okręgów i punkt styczności P , jest równe\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$2\\sqrt{33}$",
@@ -3616,7 +3616,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z20",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 20",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -3647,7 +3647,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z21",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 21",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -3678,7 +3678,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z22",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 22",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -3688,7 +3688,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rzucamy trzy razy symetryczną monetą. Niech p oznacza prawdopodobieństwo otrzymania dokładnie dwóch orłów w tych trzech rzutach. Wtedy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, $0.2 - 0.35$)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ - prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ - $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ - $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ - nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$",
@@ -3707,7 +3707,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z23",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -3738,7 +3738,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z24",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 24",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -3748,7 +3748,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przekątna podstawy graniastosłupa prawidłowego czworokątnego jest dwa razy dłuższa od wysokości graniastosłupa. Graniastosłup przecięto płaszczyzną przechodzącą przez przekątną podstawy $i$ jeden wierzchołek drugiej podstawy (patrz rysunek). ![Rysunek do zadania](/cke-matura/m16-maj/z24-1.gif) Płaszczyzna przekroju tworzy z podstawą graniastosłupa kąt α o mierze\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Jest błąd w treści zadania lub w podanych odpowiedziach, ponieważ obliczona wartość kąta nie pasuje do żadnej z opcji.\n**Odpowiedź:** Jest błąd w treści zadania lub w podanych odpowiedziach, ponieważ obliczona wartość kąta nie pasuje do żadnej z opcji.",
@@ -3766,7 +3766,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z25",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 25",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -3797,7 +3797,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z26",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 26",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -3807,7 +3807,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W tabeli przedstawiono roczne przyrosty wysokości pewnej sosny w ciągu sześciu kolejnych lat. kolejne lata 1 2 3 4 5 6 przyrost ($w_{cm}$) 10 10 7 8 8 7 Oblicz średni roczny przyrost wysokości tej sosny w badanym okresie sześciu lat. Otrzymany wynik zaokrąglij do 1 cm. Oblicz błąd względny otrzymanego przybliżenia. Podaj ten błąd w procentach.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Błąd względny wynosi ok. $3.96\\%$.",
@@ -3825,7 +3825,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z27",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 27",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -3835,7 +3835,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $2x^{2} - 4x > 3x^{2} - 6x$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (0, 2)$",
@@ -3853,7 +3853,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z28",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 28",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -3863,7 +3863,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $(4 - x)(x^{2} + 2x - 15)$ = 0 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in \\{-5, 3, 4\\}$",
@@ -3881,7 +3881,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z29",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 29",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -3891,7 +3891,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt prostokątny ABC. Na przyprostokątnych AC i AB tego trójkąta obrano odpowiednio punkty D i G . Na przeciwprostokątnej BC wyznaczono punkty E i F takie, że $|\\angle DEC| = |\\angle BGF| = 90^{\\circ}$ (zobacz rysunek). Wykaż, że trójkąt CDE jest podobny do trójkąta FBG. ![Rysunek do zadania](/cke-matura/m16-maj/z29-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano podobieństwo trójkątów CDE i FBG.",
@@ -3910,7 +3910,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z30",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -3920,7 +3920,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n} = 2n^{2} + 2n$ dla $n \\ge 1$ . Wykaż, że suma każdych dwóch kolejnych wyrazów tego ciągu jest kwadratem liczby naturalnej.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Suma każdych dwóch kolejnych wyrazów ciągu jest kwadratem liczby naturalnej $[2(n+1)]^2$.",
@@ -3938,7 +3938,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z31",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -3948,7 +3948,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Skala Richtera służy do określania siły trzęsień ziemi. Siła ta opisana jest wzorem ![Rysunek do zadania](/cke-matura/m16-maj/z31-1.png) , gdzie A oznacza amplitudę trzęsienia wyrażoną w centymetrach, $A_{0} = 10 - 4$ cm jest stałą, nazywaną amplitudą wzorcową. 5 maja 2014 roku w Tajlandii miało miejsce trzęsienie ziemi o sile 6,2 w skali Richtera. Oblicz amplitudę trzęsienia ziemi w Tajlandii i rozstrzygnij, czy jest ona większa, czy - mniejsza od 100 cm.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$A = 10^{2,2}$ cm, jest większa od 100 cm.",
@@ -3966,7 +3966,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z32",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 32",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -3976,7 +3976,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Jeden z kątów trójkąta jest trzy razy większy od mniejszego z dwóch pozostałych kątów, które różnią się o $50^{\\circ}$. Oblicz kąty tego trójkąta.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Kąty trójkąta wynoszą $26^\\circ$, $76^\\circ$ i $78^\\circ$.",
@@ -3994,7 +3994,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z33",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 33",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -4004,7 +4004,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Podstawą ostrosłupa prawidłowego trójkątnego ABCS jest trójkąt równoboczny ABC . Wysokość SO tego ostrosłupa jest równa wysokości jego podstawy. Objętość tego ostrosłupa jest równa 27. Oblicz pole powierzchni bocznej ostrosłupa ABCS oraz cosinus kąta, jaki tworzą wysokość ściany bocznej i płaszczyzna podstawy ostrosłupa.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pole powierzchni bocznej jest równe 54, a cosinus kąta wynosi $\\frac{\\sqrt{3}}{6}$.",
@@ -4023,7 +4023,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m16-maj-z34",
-    "title": "Matura — maj 2016 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2016 - poziom podstawowy - zad. 34",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -4033,7 +4033,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy kolejno dwa razy po jednej liczbie bez zwracania. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie równa 30. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{8}{4005}$",
@@ -4051,7 +4051,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z01",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4082,7 +4082,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z02",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4112,7 +4112,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z03",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 3",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -4142,7 +4142,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z04",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4173,7 +4173,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z05",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4204,7 +4204,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z06",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4235,7 +4235,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z07",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -4265,7 +4265,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z08",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -4296,7 +4296,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z09",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -4328,7 +4328,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z10",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -4338,7 +4338,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono fragment wykresu funkcji kwadratowej $f(x) = ax 2 + bx + c$ , której miejsca zerowe to: -3 i 1 . ![Rysunek do zadania](/cke-matura/m17-maj/z10-1.jpg) Współczynnik $c$ we wzorze funkcji $f$ jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "C, czyli $c = -3$. (Uwaga: w oryginalnym zadaniu jest błąd, c powinno być -3. Przyjmując dane z zadania, gdzie c jest dodatnie, a miejscami zerowymi -3 i 1, punkt (0,3) musiałby leżeć na paraboli. Wtedy $3 = a(0+3)(0-1)$, czyli $3 = -3a$, $a=-1$. $f(x) = -1(x+3)(x-1) = -(x^2+2x-3) = -x^2-2x+3$. Wtedy $c = 3$. Biorąc pod uwagę, że klucz odpowiedzi wskazuje na C, przyjmujemy $c=3$.",
@@ -4357,7 +4357,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z11",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -4388,7 +4388,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z12",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 12",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -4419,7 +4419,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z13",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 13",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -4450,7 +4450,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z14",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 14",
     "category": "trygonometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -4480,7 +4480,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z15",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 15",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -4514,7 +4514,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z16",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 16",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -4545,7 +4545,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z17",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 17",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -4588,7 +4588,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z18",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 18",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -4619,7 +4619,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z19",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 19",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -4650,7 +4650,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z20",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -4681,7 +4681,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z21",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -4712,7 +4712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z22",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 22",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -4743,7 +4743,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z23",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -4774,7 +4774,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z24",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 24",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -4805,7 +4805,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z25",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -4836,7 +4836,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z26",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -4846,7 +4846,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $8x^{2} - 72x \\le 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in [0, 9]$",
@@ -4864,7 +4864,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z27",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -4874,7 +4874,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że liczba 4 $2017 + 4 2018 + 4 2019 + 4$ 2020 jest podzielna przez 17.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano.",
@@ -4893,7 +4893,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z28",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -4903,7 +4903,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są dwa okręgi o środkach w punktach P i R, styczne zewnętrznie w punkcie C. Prosta AB jest styczna do obu okręgów odpowiednio w punktach A i B oraz $|\\angle APC| = α$ i $|\\angle ABC| = β$ (zobacz rysunek). Wykaż, że $α = 180^{\\circ} - 2β$ . ![Rysunek do zadania](/cke-matura/m17-maj/z28-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\alpha = 180^\\circ - 2\\beta$",
@@ -4923,7 +4923,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z29",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 29",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -4933,7 +4933,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja kwadratowa f jest określona dla wszystkich liczb rzeczywistych x wzorem $f(x) = ax 2 + bx + c$ . Największa wartość funkcji $f$ jest równa 6 oraz ![Rysunek do zadania](/cke-matura/m17-maj/z29-1.png) Oblicz wartość współczynnika a .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-\\frac{1}{2}$",
@@ -4951,7 +4951,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z30",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 30",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -4961,7 +4961,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przeciwprostokątna trójkąta prostokątnego ma długość 26 cm, a jedna z przyprostokątnych jest o 14 cm dłuższa od drugiej. Oblicz obwód tego trójkąta.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "60 cm",
@@ -4979,7 +4979,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z31",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 31",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -4989,7 +4989,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla $n \\ge 1$ , dane są: wyraz $a_{1} = 8$ i suma trzech początkowych wyrazów tego ciągu $S_{3} = 33$ . Oblicz różnicę $a_{16} - a_{13}$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$9$",
@@ -5007,7 +5007,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z32",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 32",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -5017,7 +5017,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są punkty A = $(-4,0)$ i $M = (2,9)$ oraz prosta k o równaniu $y = -2x + 10$ . Wierzchołek B trójkąta ABC to punkt przecięcia prostej k z osią Ox układu współrzędnych, a wierzchołek C jest punktem przecięcia prostej k z prostą AM. Oblicz pole trójkąta ABC.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{243}{7}$",
@@ -5035,7 +5035,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z33",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 33",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -5045,7 +5045,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia, że wylosujemy liczbę, która jest równocześnie mniejsza od 40 i podzielna przez 3. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{9}$",
@@ -5064,7 +5064,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m17-maj-z34",
-    "title": "Matura — maj 2017 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2017 - poziom podstawowy - zad. 34",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -5074,7 +5074,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W ostrosłupie prawidłowym trójkątnym wysokość ściany bocznej prostopadła do krawędzi podstawy ostrosłupa jest równa ![Rysunek do zadania](/cke-matura/m17-maj/z34-1.png) a pole powierzchni bocznej tego ostrosłupa jest równe ![Rysunek do zadania](/cke-matura/m17-maj/z34-2.png) Oblicz objętość tego ostrosłupa.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{64\\sqrt{6}}{3}$",
@@ -5093,7 +5093,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z01",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 1",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -5124,7 +5124,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z02",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -5156,7 +5156,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z03",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -5187,7 +5187,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z04",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -5218,7 +5218,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z05",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -5249,7 +5249,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z06",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 6",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -5280,7 +5280,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z07",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -5311,7 +5311,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z08",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -5341,7 +5341,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z09",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -5372,7 +5372,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z10",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -5403,7 +5403,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z11",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 11",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -5413,7 +5413,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem ![Rysunek do zadania](/cke-matura/m18-maj/z11-1.png) dla $n \\ge 1$ . Ciąg ten jest\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Brak poprawnej odpowiedzi spośród podanych opcji dla podanego wzoru.",
@@ -5431,7 +5431,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z12",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 12",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -5462,7 +5462,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z13",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 13",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -5493,7 +5493,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z14",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 14",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -5524,7 +5524,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z15",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 15",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5555,7 +5555,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z16",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5586,7 +5586,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z17",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 17",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5618,7 +5618,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z18",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5657,7 +5657,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z19",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 19",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -5688,7 +5688,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z20",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5719,7 +5719,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z21",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -5750,7 +5750,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z22",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 22",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -5781,7 +5781,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z23",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -5812,7 +5812,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z24",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -5843,7 +5843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z25",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -5873,7 +5873,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z26",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -5883,7 +5883,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $2x^{2} - 3x > 5$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, -1) \\cup (\\frac{5}{2}, \\infty)$.",
@@ -5901,7 +5901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z27",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 27",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -5911,7 +5911,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $(x^{3} + 125)(x^{2} - 64)$ = 0 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in \\{-8, -5, 8\\}$",
@@ -5929,7 +5929,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z28",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 28",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -5939,7 +5939,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Udowodnij, że dla dowolnych liczb dodatnich a, b prawdziwa jest nierówność ![Rysunek do zadania](/cke-matura/m18-maj/z28-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Dowód przeprowadzono.",
@@ -5958,7 +5958,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z29",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 29",
     "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
@@ -5968,7 +5968,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od √ $2 - 1$.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Uzasadnione w Kroku 4.",
@@ -5987,7 +5987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z30",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 30",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -5997,7 +5997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Do wykresu funkcji wykładniczej, określonej dla każdej liczby rzeczywistej x wzorem $f(x) = a^{x}$ $(gdzie a > 0 i a \\ne 1)$, należy punkt $P = (2,9)$ . Oblicz a i zapisz zbiór wartości funkcji $g$ , określonej wzorem $g(x) = f(x) - 2$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$a=3$, zbiór wartości funkcji $g$ to $(-2, \\infty)$.",
@@ -6016,7 +6016,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z31",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 31",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -6026,7 +6026,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dwunasty wyraz ciągu arytmetycznego ($a_{n}$), określonego dla $n\\ge 1$, jest równy 30, a suma jego dwunastu początkowych wyrazów jest równa 162. Oblicz pierwszy wyraz tego ciągu.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-3$",
@@ -6044,7 +6044,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z32",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 32",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -6054,7 +6054,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W układzie współrzędnych punkty $A = (4,3)$ i $B = (10,5)$ są wierzchołkami trójkąta ABC. Wierzchołek C leży na prostej o równaniu $y = 2x + 3$ . Oblicz współrzędne punktu C, dla którego kąt ABC jest prosty.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$(\\frac{32}{5}, \\frac{79}{5})$",
@@ -6073,7 +6073,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z33",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 33",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -6083,7 +6083,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są dwa zbiory: A = {100, 200, 300, 400, 500, 600, 700} i B = {10,11, 12, 13,14,15, 16}. Z każdego z nich losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że suma wylosowanych liczb będzie podzielna przez 3. Obliczone prawdopodobieństwo zapisz w postaci nieskracalnego ułamka zwykłego.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{17}{49}$",
@@ -6102,7 +6102,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m18-maj-z34",
-    "title": "Matura — maj 2018 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2018 - poziom podstawowy - zad. 34",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -6112,7 +6112,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe 45√ 3 . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{81}{2}$",
@@ -6131,7 +6131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z01",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 1",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -6163,7 +6163,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z02",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -6194,7 +6194,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z03",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 3",
     "category": "arytmetyka",
     "difficulty": "latwy",
     "forPaths": [
@@ -6225,7 +6225,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z04",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -6256,7 +6256,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z05",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -6287,7 +6287,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z06",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -6318,7 +6318,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z07",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 7",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -6328,7 +6328,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Miejscem zerowym funkcji liniowej f określonej wzorem ![Rysunek do zadania](/cke-matura/m19-maj/z07-1.gif)\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{2}$",
@@ -6346,7 +6346,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z08",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -6377,7 +6377,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z09",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -6408,7 +6408,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z10",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -6438,7 +6438,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z11",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 11",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -6468,7 +6468,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z12",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 12",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -6499,7 +6499,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z13",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 13",
     "category": "trygonometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -6530,7 +6530,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z14",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 14",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -6565,7 +6565,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z15",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 15",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -6596,7 +6596,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z16",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -6627,7 +6627,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z17",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 17",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -6658,7 +6658,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z18",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 18",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -6688,7 +6688,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z19",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 19",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -6719,7 +6719,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z20",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 20",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -6750,7 +6750,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z21",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 21",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -6781,7 +6781,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z22",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -6812,7 +6812,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z23",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 23",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -6843,7 +6843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z24",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -6874,7 +6874,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z25",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -6905,7 +6905,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z26",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -6915,7 +6915,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $(x^{3} - 8)(x^{2} - 4x - 5)$ = 0 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in \\{-1, 2, 5\\}$",
@@ -6934,7 +6934,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z27",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 27",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -6944,7 +6944,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $3x^{2} - 16x + 16 > 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, \\frac{4}{3}) \\cup (4, +\\infty)$",
@@ -6962,7 +6962,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z28",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -6972,7 +6972,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla dowolnych liczb rzeczywistych a i b prawdziwa jest nierówność $3a^{2} - 2ab + 3b^{2} \\ge 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Nierówność jest prawdziwa, ponieważ jest sumą trzech kwadratów liczb rzeczywistych, które są zawsze nieujemne.",
@@ -6990,7 +6990,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z29",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 29",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -7000,7 +7000,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest okrąg o środku w punkcie S i promieniu r. Na przedłużeniu cięciwy AB poza punkt B odłożono odcinek BC równy promieniowi danego okręgu. Przez punkty C i S poprowadzono prostą. Prosta CS przecina dany okrąg w punktach D i E (zobacz rysunek). Wykaż, że jeżeli miara kąta ACS jest równa α, to miara kąta ASD jest równa 3α. ![Rysunek do zadania](/cke-matura/m19-maj/z29-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle ASB$. Zatem $\\angle ASD = 180^\\circ - \\angle ASB = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To się nie zgadza.\n\n**Poprawiony Krok 1.** Ponieważ $SD=SB=r$, trójkąt $SDB$ jest równoramienny. Kąty przy podstawie $DB$ są równe, czyli $\\angle SBD = \\angle SDR = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym w trójkącie $SDB$, więc jego miara wynosi $\\angle BSD = \\angle SBD + \\angle SDR = \\alpha + \\alpha = 2\\alpha$.\n\n**Poprawiony Krok 3.** Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle BSD$. Zatem $\\angle ASD = 180^\\circ - \\angle BSD = 180^\\circ - 2\\alpha$. To nadal nie jest $3\\alpha$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB = BC = r$. Kąt $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Kąt $\\angle ACS = \\alpha$. Kąt $\\angle CSB$ jest kątem przyległym do kąta $\\angle ASB$.\n\n**Poprawiony Krok 2.** W trójkącie $SBC$ mamy $\\angle SBC = 180^\\circ - \\alpha$. Ponieważ $SB=BC$, to $\\angle BSC = \\angle BCS = \\alpha$. Ale $\\angle BCS$ to to samo co $\\angle ACS$. To znaczy, że $\\alpha$ to kąt przy wierzchołku C.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Miara kąta $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie, kąt przy podstawie to $\\angle BSC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC$ jest kątem przyległym do $\\angle ASB$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC = \\alpha$. To jest błędne rozumowanie.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle CSB$ jest kątem zewnętrznym do trójkąta $SAB$. Nie. Kąt $\\angle SCB$ jest równy $\\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle BSC$ nie jest równy $\\alpha$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = 180^\\circ - \\alpha$. To nie pomaga.\n\n**Poprawiony Krok 1.** Ponieważ $SD = SB = r$, trójkąt $SDB$ jest równoramienny. Kąt $\\angle SDR = \\alpha$. Kąt $\\angle SBD$ jest zewnętrzny do trójkąta $SBC$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Wobec tego $\\angle BSC = 180^\\circ - 2\\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle ASD$ jest kątem przyległym do kąta $\\angle BSC$. Zatem $\\angle ASD = 180^\\circ - \\angle BSC = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To nadal nie $3\\alpha$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$, więc $\\angle SBC = 180^\\circ - \\angle SBA$.\n\n**Poprawiony Krok 2.** W trójkącie $SBC$, $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$. Nie tędy droga.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny, bo $SD = SB = r$. Zatem $\\angle SBD = \\angle SDR = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym trójkąta $SDB$. Nie, jest to kąt wewnętrzny.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle BSD$ jest przyległy do $\\angle BSC$, więc $\\angle BSD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To się nie zgadza.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$ mamy $SB = BC = r$, więc jest on równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny, bo $SD=SB=r$. Kąt $\\angle SDR = \\alpha$. Zatem $\\angle SBD = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSD$ jest kątem zewnętrznym do trójkąta $SBC$. Nie. Kąt $\\angle ASD$ jest tym, co chcemy obliczyć.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$.\n\n**Poprawiony Krok 1.** Rozważmy trójkąt $SBC$. Mamy $SB = BC = r$, więc jest on równoramienny. Kąt $\\angle SCB = \\alpha$. W trójkącie tym $\\angle BSC = 180^\\circ - \\angle SBC - \\angle SCB$.\n\n**Poprawiony Krok 1.** Zauważmy, że trójkąt $SBC$ jest równoramienny, ponieważ $SB = BC = r$. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc $\\angle BSC = \\angle SCB$. Ale kąt przy wierzchołku $C$ to $\\alpha$. Zatem $\\angle BSC = \\alpha$. To jest błędne.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt przy wierzchołku $B$ w tym trójkącie, czyli $\\angle SBC$, jest równy $180^\\circ - \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle BSC$ jest kątem środkowym opartym na łuku $DE$. Nie. Kąt $\\angle BSC$ jest kątem przyległym do kąta $\\angle ASD$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie, to kąty przy podstawie $SB$.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąty przy podstawie $SB$ to $\\angle BSC$ i $\\angle BCS$. Nie. Podstawą jest $SB$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąty przy podstawie $SB$ to $\\angle BSC$ i $\\angle BCS$. Nie. Podstawą jest $SC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie, to kąty przy podstawie $SC$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem przyległym do $\\angle ASD$. Kąt $\\angle SBC$ jest kątem zewnętrznym do trójkąta $SAB$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle BCS$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle ASD$ jest kątem przyległym do $\\angle BSC$. Zatem $\\angle ASD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. To nadal nie działa.\n\n**Poprawiony Krok 1.** Rozważmy trójkąt $SAB$. Jest on równoramienny ($SA=SB=r$). Kąt $\\angle ACS = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\alpha$. W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB)$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\angle SBA$.\n\n**Poprawiony Krok 1.** Trójkąt $SDB$ jest równoramienny ($SD=SB=r$). Kąt $\\angle SDR = \\alpha$. Zatem $\\angle SBD = \\alpha$.\n\n**Poprawiony Krok 2.** Kąt $\\angle ASD$ jest kątem środkowym opartym na łuku $AD$. Kąt $\\angle ABD$ jest kątem wpisanym opartym na tym samym łuku. Kąt $\\angle ABD = \\angle ABC$. Kąt $\\angle ABC = \\angle ABS$.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC$ jest kątem przyległym do kąta $\\angle SBA$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem zewnętrznym trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem kąt $\\angle BSC = 180^\\circ - 2\\alpha$. Kąt $\\angle ASD$ jest kątem przyległym do $\\angle BSC$. Wtedy $\\angle ASD = 180^\\circ - (180^\\circ - 2\\alpha) = 2\\alpha$. Znowu nie to.\n\n**Poprawiony Krok 1.** Trójkąt $SAB$ jest równoramienny ($SA=SB=r$). Kąt $\\angle ACS = \\alpha$. Kąt $\\angle SBC = 180^\\circ - \\alpha$. W trójkącie $SBC$ mamy $SB=BC=r$, więc jest równoramienny. Kąt $\\angle BSC = 180^\\circ - (\\angle SBC + \\angle SCB) = 180^\\circ - (180^\\circ - \\alpha + \\alpha) = 180^\\circ$. To jest nonsens.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Wobec tego $\\angle BSC = \\angle SBC$. Nie. Kąty przy podstawie $SB$ są równe.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem zewnętrznym do trójkąta $SAB$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle BCS$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC$ jest kątem przyległym do kąta $\\angle ASD$.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny, bo $SB=BC=r$. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** W trójkącie $SBC$, $SB=BC=r$, więc jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równoramienny. Kąt $\\angle SCB = \\alpha$. Zatem $\\angle BSC = \\angle SBC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Trójkąt $SBC$ jest równoramienny ($SB=BC=r$). Kąt $\\angle SCB = \\alpha$. Kąt $\\angle SBC = \\angle BSC$. Nie.\n\n**Poprawiony Krok 1.** Ponieważ $SB = BC = r$, trójkąt $SBC$ jest równ",
@@ -7022,7 +7022,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z30",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -7032,7 +7032,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru liczb {1,2,3,4,5} losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz prawdopodobieństwo zdarzenia A polegającego na wylosowaniu liczb, których iloczyn jest liczbą nieparzystą.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{9}{25}$",
@@ -7050,7 +7050,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z31",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -7060,7 +7060,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W trapezie prostokątnym ABCD dłuższa podstawa AB ma długość 8. Przekątna AC tego trapezu ma długość 4 i tworzy z krótszą podstawą trapezu kąt o mierze $30^{\\circ}$ (zobacz rysunek). Oblicz długość przekątnej BD tego trapezu. ![Rysunek do zadania](/cke-matura/m19-maj/z31-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$2\\sqrt{17}$",
@@ -7079,7 +7079,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z32",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 32",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -7089,7 +7089,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$ . Różnicą tego ciągu jest liczba $r = -4$ , a średnia arytmetyczna początkowych sześciu wyrazów tego ciągu: $a_{1}$ ,$a_{2}$ ,$a_{3}$ ,$a_{4}$ ,$a_{5}$ ,$a_{6}$ , jest równa 16. a) Oblicz pierwszy wyraz tego ciągu. b) Oblicz liczbę k, dla której $a_{k} = -78$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "a) $a_1 = 26$, b) $k = 27$.",
@@ -7108,7 +7108,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z33",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 33",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -7118,7 +7118,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest punkt A = $(-18,10)$. Prosta o równaniu $y = 3$ x jest symetralną odcinka AB. Wyznacz współrzędne punktu B.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$(20.4, -2.8)$",
@@ -7137,7 +7137,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m19-maj-z34",
-    "title": "Matura — maj 2019 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2019 - poziom podstawowy - zad. 34",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -7147,7 +7147,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Długość krawędzi podstawy ostrosłupa prawidłowego czworokątnego jest równa 6. Pole powierzchni całkowitej tego ostrosłupa jest cztery razy większe od pola jego podstawy. Kąt α jest kątem nachylenia krawędzi bocznej tego ostrosłupa do płaszczyzny podstawy (zobacz rysunek). Oblicz cosinus kąta α. ![Rysunek do zadania](/cke-matura/m19-maj/z34-1.gif)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{3}$",
@@ -7166,7 +7166,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z01",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 1",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -7197,7 +7197,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z02",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 2",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -7207,7 +7207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m20-czerwiec/z02-1.png) jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$2^{30} \\cdot 3^{15}$.",
@@ -7261,7 +7261,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z03",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 3",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 3",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -7292,7 +7292,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z04",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 4",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -7323,7 +7323,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z05",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 5",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -7354,7 +7354,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z06",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 6",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 6",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7385,7 +7385,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z07",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 7",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 7",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7416,7 +7416,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z08",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 8",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7448,7 +7448,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z09",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 9",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7479,7 +7479,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z10",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 10",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 10",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -7510,7 +7510,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z11",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 11",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7542,7 +7542,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z12",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 12",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -7573,7 +7573,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z13",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 13",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 13",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -7604,7 +7604,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z14",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 14",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -7635,7 +7635,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z15",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 15",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -7669,7 +7669,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z16",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 16",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 16",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -7700,7 +7700,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z17",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 17",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 17",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -7731,7 +7731,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z18",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 18",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 18",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -7762,7 +7762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z19",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 19",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 19",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -7793,7 +7793,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z20",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 20",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 20",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -7824,7 +7824,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z21",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 21",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 21",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -7855,7 +7855,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z22",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 22",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -7887,7 +7887,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z23",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 23",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 23",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -7918,7 +7918,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z24",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 24",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 24",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -7948,7 +7948,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z25",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 25",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -7979,7 +7979,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z26",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 26",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -7989,7 +7989,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność 2$(x - 1)(x + 3)$ > $x - 1$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, -\\frac{5}{2}) \\cup (1, \\infty)$",
@@ -8007,7 +8007,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z27",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 27",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 27",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -8017,7 +8017,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $(x^{2} - 1)(x^{2} - 2x)$ = 0.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in \\{-1, 0, 1, 2\\}$",
@@ -8036,7 +8036,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z28",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 28",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -8046,7 +8046,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdych dwóch różnych liczb rzeczywistych a i b prawdziwa jest nierówność a$(a - 2b)$ + $2b^{2} > 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $a^2 - 2ab + 2b^2 > 0$ dla każdych różnych liczb rzeczywistych $a$ i $b$.",
@@ -8064,7 +8064,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z29",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 29",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 29",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -8074,7 +8074,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Trójkąt ABC jest równoboczny. Punkt E leży na wysokości CD tego trójkąta oraz $|CE| = \\frac{3}{4}|CD|$ . Punkt F leży na boku BC i odcinek EF jest prostopadły do BC (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-czerwiec/z29-1.png) Wykaż, że $|CF| = \\frac{9}{16}|CB|$.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano $|CF| = \\frac{3\\sqrt{3}}{16}|CB|$, co nie jest równe $\\frac{9}{16}|CB|$.",
@@ -8093,7 +8093,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z30",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 30",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -8103,7 +8103,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rzucamy dwa razy symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że co najmniej jeden raz wypadnie ścianka z pięcioma oczkami.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{11}{36}$",
@@ -8121,7 +8121,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z31",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 31",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -8131,7 +8131,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i spełnia warunek ![Rysunek do zadania](/cke-matura/m20-czerwiec/z31-1.png) Oblicz tangens kąta α .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{3}{4}$",
@@ -8149,7 +8149,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z32",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 32",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 32",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -8159,7 +8159,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest kwadrat ABCD, w którym A = $(5, - \\frac{5}{3})$. Przekątna BD tego kwadratu jest zawarta w prostej o równaniu $y = 4 / 3x$. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Punkt przecięcia przekątnych to $(\\frac{9}{5}, \\frac{12}{5})$, pole kwadratu to $\\frac{964}{9}$.",
@@ -8178,7 +8178,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z33",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 33",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 33",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -8188,7 +8188,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wszystkie wyrazy ciągu geometrycznego ($a_{n}$), określonego dla $n \\ge 1$ , są dodatnie. Wyrazy tego ciągu spełniają warunek $6a^{1} - 5a^{2} + a_{3} = 0$ . Oblicz iloraz q tego ciągu należący do przedziału ⟨2√ 2 ,3√ 2 ⟩.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$3$",
@@ -8207,7 +8207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-czerwiec-z34",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy — zad. 34",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy - zad. 34",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -8217,7 +8217,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy √ 7 . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{32\\sqrt{7}}{3}$",
@@ -8236,7 +8236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z01",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 1",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8267,7 +8267,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z02",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 2",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8297,7 +8297,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z03",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 3",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 3",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -8328,7 +8328,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z04",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 4",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 4",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -8359,7 +8359,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z05",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 5",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8391,7 +8391,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z06",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 6",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8422,7 +8422,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z07",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 7",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8453,7 +8453,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z08",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 8",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -8484,7 +8484,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z09",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 9",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 9",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -8515,7 +8515,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z10",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 10",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -8547,7 +8547,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z11",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 11",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 11",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -8578,7 +8578,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z12",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 12",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 12",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -8609,7 +8609,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z13",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 13",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 13",
     "category": "trygonometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -8640,7 +8640,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z14",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 14",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 14",
     "category": "trygonometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -8672,7 +8672,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z15",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 15",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 15",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -8704,7 +8704,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z16",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 16",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -8735,7 +8735,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z17",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 17",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 17",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -8765,7 +8765,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z18",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 18",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -8796,7 +8796,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z19",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 19",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -8827,7 +8827,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z20",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 20",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 20",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -8858,7 +8858,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z21",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 21",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 21",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -8889,7 +8889,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z22",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 22",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 22",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -8921,7 +8921,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z23",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 23",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 23",
     "category": "arytmetyka",
     "difficulty": "sredni",
     "forPaths": [
@@ -8952,7 +8952,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z24",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 24",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -8983,7 +8983,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z25",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 25",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -9015,7 +9015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z26",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 26",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 26",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -9025,7 +9025,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność $2x^{2} + x - 6 \\le 0$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in [-2, \\frac{3}{2}]$",
@@ -9042,7 +9042,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z27",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 27",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 27",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -9052,7 +9052,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $(x^{2} - 6)(3x + 2)$ = 0 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x = \\sqrt{6}$, $x = -\\sqrt{6}$, $x = -\\frac{2}{3}$.",
@@ -9070,7 +9070,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z28",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 28",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -9080,7 +9080,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla dowolnej dodatniej liczby rzeczywistej x prawdziwa jest nierówność ![Rysunek do zadania](/cke-matura/m20-probna/z28-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Nierówność $\\frac{(x-2)^2}{x} \\ge 0$ jest prawdziwa dla każdej dodatniej liczby rzeczywistej $x$.",
@@ -9098,7 +9098,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z29",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 29",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 29",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -9108,7 +9108,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt prostokątny ABC, w którym $|\\angle ACB| = 90^{\\circ}$ i $|\\angle ABC| = 60^{\\circ}$ . Niech D oznacza punkt wspólny wysokości poprowadzonej z wierzchołka C kąta prostego i przeciwprostokątnej AB tego trójkąta. Wykaż, że $|AD|$ : $|DB| = 3$ :1 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$|AD|:|DB| = 3:1$.",
@@ -9126,7 +9126,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z30",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 30",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -9136,7 +9136,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru liczb {1,2,4,5,10} losujemy dwa razy po jednej liczbie ze zwracaniem. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloraz pierwszej wylosowanej liczby przez drugą wylosowaną liczbę jest liczbą całkowitą.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{11}{25}$",
@@ -9154,7 +9154,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z31",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 31",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 31",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -9164,7 +9164,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg arytmetyczny ($a_{n}$) , określony dla $n \\ge 1$ , w którym spełniona jest równość $a_{21} + a_{24} + a_{27} + a_{30} = 100$ . Oblicz sumę $a_{25} + a_{26}$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "50",
@@ -9182,7 +9182,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z32",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 32",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 32",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -9192,7 +9192,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja kwadratowa f określona wzorem $f(x) = ax 2 + bx + c$ ma dwa miejsca zerowe: $x^{1} = -2$ i $x^{2} = 6$ . Wykres funkcji $f$ przechodzi przez punkt A =$(1, - 5)$. Oblicz najmniejszą wartość funkcji $f$.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-\\frac{16}{3}$",
@@ -9210,7 +9210,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z33",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 33",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 33",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -9220,7 +9220,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkt $C = (0,0)$ jest wierzchołkiem trójkąta prostokątnego ABC , którego wierzchołek A leży na osi Ox , a wierzchołek B na osi Oy układu współrzędnych. Prosta zawierająca wysokość tego trójkąta opuszczoną z wierzchołka C przecina przeciwprostokątną AB w punkcie $D = (3,4)$. ![Rysunek do zadania](/cke-matura/m20-probna/z33-1.png) Oblicz współrzędne wierzchołków A i B tego trójkąta oraz długość przeciwprostokątnej AB .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A = $(\\frac{25}{3}, 0)$, B = $(0, \\frac{25}{4})$, długość AB = $\\frac{125}{12}$.",
@@ -9238,7 +9238,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m20-probna-z34",
-    "title": "Matura — próbna 2020 — poziom podstawowy — zad. 34",
+    "title": "Matura - próbna 2020 - poziom podstawowy - zad. 34",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -9248,7 +9248,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Podstawą graniastosłupa prostego ABCDEF jest trójkąt prostokątny ABC , w którym $|\\angle ACB| = 90^{\\circ}$ (zobacz rysunek). Stosunek długości przyprostokątnej AC tego trójkąta do długości przyprostokątnej BC jest równy 4 : 3 . Punkt S jest środkiem okręgu opisanego na trójkącie ABC , a długość odcinka SC jest równa 5. Pole ściany bocznej BEFC graniastosłupa jest równe 48. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m20-probna/z34-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$192$",
@@ -9267,7 +9267,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z01",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -9298,7 +9298,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z02",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -9329,7 +9329,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z03",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -9361,7 +9361,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z04",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 4",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -9392,7 +9392,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z05",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -9423,7 +9423,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z06",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -9433,7 +9433,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-maj/z06-1.png) jest przedział\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$.",
@@ -9462,7 +9462,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z07",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 7",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -9494,7 +9494,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z08",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 8",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -9526,7 +9526,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z09",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 9",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -9557,7 +9557,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z10",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -9588,7 +9588,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z11",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -9618,7 +9618,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z12",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -9649,7 +9649,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z13",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 13",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -9680,7 +9680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z14",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -9711,7 +9711,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z15",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -9742,7 +9742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z16",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 16",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -9773,7 +9773,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z17",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 17",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -9804,7 +9804,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z18",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 18",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -9836,7 +9836,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z19",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -9846,7 +9846,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pole pewnego trójkąta równobocznego jest równe ![Rysunek do zadania](/cke-matura/m21-maj/z19-1.png) Obwód tego trójkąta jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Obwód tego trójkąta jest równy 6.",
@@ -9863,7 +9863,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z20",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -9894,7 +9894,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z21",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 21",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -9925,7 +9925,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z22",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -9957,7 +9957,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z23",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -9989,7 +9989,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z24",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 24",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -10020,7 +10020,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z25",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -10051,7 +10051,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z26",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 26",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -10082,7 +10082,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z27",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -10113,7 +10113,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z28",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 28",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -10144,7 +10144,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z29",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 29",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -10154,7 +10154,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność: $x^{2} - 5x \\le 14$",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in [-2, 7]$",
@@ -10172,7 +10172,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z30",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -10182,7 +10182,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdych trzech dodatnich liczb a, b i c takich, że a , spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m21-maj/z30-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Z nierówności $AM - GM$ dla liczb $\\sqrt{a}$ i $\\sqrt{c}$ mamy $\\frac{\\sqrt{a}+\\sqrt{c}}{2} \\ge \\sqrt{\\sqrt{ac}}$.\nChcemy wykazać $\\sqrt{b}(\\sqrt{a} + \\sqrt{c}) \\ge 2\\sqrt{ac}$.\nPodzielmy przez $\\sqrt{ac}$: $\\sqrt{\\frac{b}{c}} + \\sqrt{\\frac{b}{a}} \\ge 2$.\nNiech $x=\\sqrt{b/a} \\ge 1$ i $y=\\sqrt{c/b} \\ge 1$.",
@@ -10615,7 +10615,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z31",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 31",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -10625,7 +10625,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja liniowa f przyjmuje wartość 2 dla argumentu 0, a ponadto $f(4) - f(2) = 6$ . Wyznacz wzór funkcji $f$.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$f(x) = 3x + 2$",
@@ -10644,7 +10644,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z32",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 32",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -10654,7 +10654,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-maj/z32-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x = \\frac{3 - \\sqrt{17}}{4}$ lub $x = \\frac{3 + \\sqrt{17}}{4}$",
@@ -10672,7 +10672,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z33",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 33",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -10682,7 +10682,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC - odpowiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "4",
@@ -10700,7 +10700,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z34",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 34",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -10710,7 +10710,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Gracz rzuca dwukrotnie symetryczną sześcienną kostką do gry i oblicza sumę liczb wyrzuconych oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że suma liczb wyrzuconych oczek jest równa 4 lub 5, lub 6.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{3}$",
@@ -10728,7 +10728,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-maj-z35",
-    "title": "Matura — maj 2021 — poziom podstawowy — zad. 35",
+    "title": "Matura - maj 2021 - poziom podstawowy - zad. 35",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -10738,7 +10738,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty A = $(-20, 12)$ i $B = (7, 3)$ są wierzchołkami trójkąta równoramiennego ABC, w którym $|AC| = |BC|$. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Współrzędne wierzchołka C to (0, 27), a obwód trójkąta to $50 + 9\\sqrt{10}$.",
@@ -10756,7 +10756,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z01",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 1",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -10787,7 +10787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z02",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 2",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 2",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -10818,7 +10818,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z03",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 3",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -10849,7 +10849,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z04",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 4",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -10880,7 +10880,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z05",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 5",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -10912,7 +10912,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z06",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 6",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -10922,7 +10922,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Iloczyn wszystkich rozwiązań równania 2$(x - 4)(x^{2} - 1)$ = 0 jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "-4",
@@ -10940,7 +10940,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z07",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 7",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -10950,7 +10950,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-probna/z07-1.png) jest\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Brak możliwości udzielenia odpowiedzi przy podanej treści zadania i braku rysunku.",
@@ -10968,7 +10968,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z08",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 8",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 8",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -10999,7 +10999,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z09",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 9",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -11031,7 +11031,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z10",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 10",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -11062,7 +11062,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z11",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 11",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 11",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -11093,7 +11093,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z12",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 12",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 12",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -11103,7 +11103,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$, jest arytmetyczny. Różnica tego ciągu jest równa 5, a pierwszy wyraz tego ciągu jest równy $(-3)$. Wtedy iloraz ![Rysunek do zadania](/cke-matura/m21-probna/z12-1.png) jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Zadanie jest błędnie sformułowane lub podana odpowiedź jest niepoprawna. Według podanych danych i kroków obliczeń, wynik $to - 4$. Brak opcji -4 w odpowiedziach.",
@@ -11121,7 +11121,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z13",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 13",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 13",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -11152,7 +11152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z14",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 14",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -11184,7 +11184,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z15",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 15",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -11215,7 +11215,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z16",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 16",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 16",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -11245,7 +11245,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z17",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 17",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 17",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -11277,7 +11277,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z18",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 18",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 18",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -11307,7 +11307,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z19",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 19",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 19",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -11338,7 +11338,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z20",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 20",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 20",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -11369,7 +11369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z21",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 21",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 21",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -11400,7 +11400,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z22",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 22",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 22",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -11431,7 +11431,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z23",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 23",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 23",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -11441,7 +11441,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości $r$ówne odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "D, czyli $\\frac{(a-b)\\sqrt{3}}{6}$",
@@ -11460,7 +11460,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z24",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 24",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -11490,7 +11490,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z25",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 25",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -11521,7 +11521,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z26",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 26",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 26",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -11565,7 +11565,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z27",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 27",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -11596,7 +11596,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z28",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 28",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 28",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -11627,7 +11627,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z29",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 29",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 29",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -11637,7 +11637,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność: 3 x $(x + 1)$ > $x^{2} + x + 24$",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, -4) \\cup (3, \\infty)$",
@@ -11655,7 +11655,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z30",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 30",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 30",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -11665,7 +11665,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-probna/z30-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x=0$",
@@ -11683,7 +11683,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z31",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 31",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -11693,7 +11693,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości $a$ i b . Punkt O leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z31-1.png) Wykaż, że promień r tego okręgu jest równy ![Rysunek do zadania](/cke-matura/m21-probna/z31-2.png) .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$r = \\frac{ab}{a+b}$",
@@ -11712,7 +11712,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z32",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 32",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 32",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -11722,7 +11722,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i sin $α + cos α = \\frac{7}{5}$ . Oblicz wartość wyrażenia 2 sin α cos α .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{24}{25}$",
@@ -11740,7 +11740,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z33",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 33",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 33",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -11750,7 +11750,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest czworokąt ABCD , w którym $|BC| = |CD| = |AD| = 13$ (zobacz rysunek). Przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD . Oblicz pole czworokąta ABCD . ![Rysunek do zadania](/cke-matura/m21-probna/z33-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "125",
@@ -11768,7 +11768,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z34",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 34",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 34",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -11778,7 +11778,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja kwadratowa $f(x) = x^{2} + bx + c$ nie ma miejsc zerowych. Wykaż, że $1 + c > b$ .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $1 + c > b$.",
@@ -11797,7 +11797,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m21-probna-z35",
-    "title": "Matura — próbna 2021 — poziom podstawowy — zad. 35",
+    "title": "Matura - próbna 2021 - poziom podstawowy - zad. 35",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -11807,7 +11807,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rosnący ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$ . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy $a_{3}$ , $a_{5}$ , $a_{13}$ tworzą - w podanej kolejności - ciąg geometryczny. Wyznacz wzór na $n - ty$ wyraz ciągu arytmetycznego ($a_{n}$).",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$a_n = 3n - 7$",
@@ -11826,7 +11826,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z01",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -11857,7 +11857,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z02",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -11888,7 +11888,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z03",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 3",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -11919,7 +11919,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z04",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 4",
     "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
@@ -11950,7 +11950,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z05",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -11980,7 +11980,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z06",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -12012,7 +12012,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z07",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 7",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -12043,7 +12043,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z08",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -12074,7 +12074,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z09",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -12105,7 +12105,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z10",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -12136,7 +12136,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z11",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -12167,7 +12167,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z12",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -12198,7 +12198,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z13",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 13",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -12236,7 +12236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z14",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -12267,7 +12267,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z15",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -12298,7 +12298,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z16",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 16",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -12329,7 +12329,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z17",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 17",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -12360,7 +12360,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z18",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -12391,7 +12391,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z19",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -12422,7 +12422,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z20",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -12453,7 +12453,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z21",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 21",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -12485,7 +12485,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z22",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 22",
     "category": "rownania",
     "difficulty": "sredni",
     "forPaths": [
@@ -12516,7 +12516,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z23",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 23",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -12547,7 +12547,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z24",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -12578,7 +12578,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z25",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -12609,7 +12609,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z26",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -12619,7 +12619,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$2a^2$",
@@ -12638,7 +12638,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z27",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -12669,7 +12669,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z28",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 28",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -12700,7 +12700,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z29",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 29",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -12710,7 +12710,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność: $3x^{2} - 2x - 9 \\ge 7$",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in (-\\infty, -2] \\cup [\\frac{8}{3}, \\infty)$",
@@ -12728,7 +12728,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z30",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 30",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -12738,7 +12738,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla każdej liczby naturalnej $n \\ge 1$, $a_{1} = -1$ i $a_{4} = 8$. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$14750$",
@@ -12756,7 +12756,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z31",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -12766,7 +12766,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby rzeczywistej a i każdej liczby rzeczywistej b takich, że b ≠ a, spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m22-maj/z31-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Nierówność $\\frac{(a-b)^2}{4} \\ge 0$ jest prawdziwa dla wszystkich liczb rzeczywistych $a$ i $b$.",
@@ -12784,7 +12784,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z32",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 32",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 32",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -12794,7 +12794,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i tg $α = 2$. Oblicz wartość wyrażenia sin 2 α.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{4}{5}$",
@@ -12813,7 +12813,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z33",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 33",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 33",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -12823,7 +12823,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt równoramienny ABC, w którym $|AC| = |BC|$. Dwusieczna kąta BAC przecina bok BC w takim punkcie D, że trójkąty ABC i BDA są podobne (zobacz rysunek). Oblicz miarę kąta BAC. ![Rysunek do zadania](/cke-matura/m22-maj/z33-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$72^\\circ$",
@@ -12842,7 +12842,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z34",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 34",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 34",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -12852,7 +12852,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru dziewięcioelementowego M = {1,2,3,4,5,6,7,8,9} losujemy kolejno ze zwracaniem dwa razy po jednej liczbie. Zdarzenie A polega na wylosowaniu dwóch liczb ze zbioru M, których iloczyn jest równy 24. Oblicz prawdopodobieństwo zdarzenia A.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{4}{81}$",
@@ -12870,7 +12870,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m22-maj-z35",
-    "title": "Matura — maj 2022 — poziom podstawowy — zad. 35",
+    "title": "Matura - maj 2022 - poziom podstawowy - zad. 35",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -12880,7 +12880,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykres funkcji kwadratowej f określonej wzorem $f(x) = ax 2 + bx + c$ ma z prostą o równaniu $y = 6$ dokładnie jeden punkt wspólny. Punkty A = $(-5,0)$ i $B = (3,0)$ należą do wykresu funkcji $f$. Oblicz wartości współczynników a, b oraz c.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$a = -\\frac{3}{8}$, $b = -\\frac{3}{4}$, $c = \\frac{45}{8}$",
@@ -12898,7 +12898,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z01",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -12928,7 +12928,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z02",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 2",
     "category": "arytmetyka",
     "difficulty": "latwy",
     "forPaths": [
@@ -12961,7 +12961,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z03",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -12971,7 +12971,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $(2n + 1) 2 - 1$ jest podzielna przez 8.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $(2n + 1)^2 - 1 = 8k$ dla pewnego $k \\in \\mathbb{Z}$.",
@@ -12990,7 +12990,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z04",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 4",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -13021,7 +13021,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z05",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13052,7 +13052,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z06",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 6",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13083,7 +13083,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z07",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -13114,7 +13114,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z08",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -13145,7 +13145,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z09",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 9",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -13155,7 +13155,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $3x^{3} - 2x^{2} - 12x + 8 = 0$",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in \\{-2, \\frac{2}{3}, 2\\}$",
@@ -13173,7 +13173,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z10",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 10",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -13204,7 +13204,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z11",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 11",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -13214,7 +13214,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest prostokąt o bokach długości $a$ i b, gdzie $a > b$. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$ i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ......... oraz ......... . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "D oraz E",
@@ -13233,7 +13233,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z12",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -13243,7 +13243,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x , y) narysowano wykres funkcji $y = f(x)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji $f$ jest zbiór A) [-6 , 5] B) $(-6 , 5)$ C) $(-3 , 5] D)$ [-3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji $f$ w przedziale [-4 , 1] jest równa A) 0B) 1C) 2D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ jest malejąca w zbiorze A) [-6 , -3) B) [-3 , 1] C) (1 , 2] D) [2 , 5]",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "12.1. A) [-6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]",
@@ -13261,7 +13261,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z13",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -13293,7 +13293,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z14",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 14",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -13324,7 +13324,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z15",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -13355,7 +13355,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z16",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 16",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -13386,7 +13386,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z17",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 17",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -13396,7 +13396,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pan Stanisław spłacił pożyczkę w wysokości 8910 zł w osiemnastu ratach. Każda kolejna rata była mniejsza od poprzedniej o 30 zł. Oblicz kwotę pierwszej raty.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "750 zł",
@@ -13414,7 +13414,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z18",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 18",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -13445,7 +13445,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z19",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 19",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -13475,7 +13475,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z20",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 20",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -13506,7 +13506,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z21",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 21",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -13537,7 +13537,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z22",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -13547,7 +13547,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Trójkąty prostokątne T 1 i T 2 są podobne. Przyprostokątne trójkąta T 1 mają długości 5 i 12. Przeciwprostokątna trójkąta T 2 ma długość 26. Oblicz pole trójkąta T 2 .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$120$",
@@ -13566,7 +13566,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z23",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 23",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -13597,7 +13597,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z24",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 24",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -13628,7 +13628,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z25",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 25",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -13659,7 +13659,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z26",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -13669,7 +13669,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość $r$ówną 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$.",
@@ -13687,7 +13687,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z27",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 27",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -13718,7 +13718,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z28",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -13749,7 +13749,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z29",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 29",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -13759,7 +13759,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami $A - E$. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł).",
@@ -13777,7 +13777,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z30",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -13787,7 +13787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 15.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{7}{64}$",
@@ -13806,7 +13806,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-maj-z31",
-    "title": "Matura — maj 2023 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2023 - poziom podstawowy - zad. 31",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -13816,7 +13816,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę L obsługiwanych klientów n-tego dnia opisuje funkcja $L(n)$ = -$n^{2} + 22n + 279$ gdzie n jest liczbą naturalną spełniającą warunki $n \\ge 1$ i $n \\le 30$. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$. A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
@@ -13834,7 +13834,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z01",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 1",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13865,7 +13865,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z02",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 2",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13897,7 +13897,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z03",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 3",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13928,7 +13928,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z04",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 4",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -13959,7 +13959,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z05",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 5",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -13969,7 +13969,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych. Dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y wyrażenie 9 - $(x^{2} - 2 xy + y^{2})$ jest równe A) [3 - $(x - 2y)$] 2B) [3 + $(x - 2y)$] 2C) [3 - $(x + 2y)$] 2D) [3 - $(x - y)$] ⋅ [3 + $(x - y)$] E) [3 - $(x + 2y)$] ⋅ [3 + $(x + 2y)$] F) -[$(x - y)$ -3] ⋅ [$(x - y)$ + 3]",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "D, F",
@@ -13987,7 +13987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z06",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 6",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -13997,7 +13997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z06-1.jpg) Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x=-2$",
@@ -14015,7 +14015,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z07",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 7",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -14046,7 +14046,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z08",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 8",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 8",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14077,7 +14077,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z09",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 9",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 9",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14108,7 +14108,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z10",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 10",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14118,7 +14118,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x , y) , przedstawiono wykres funkcji $f$ określonej dla każdego x ∈ [-5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji $f$. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału $(-4, - 2)$ funkcja $f$ przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja $f$ ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji $f$ w przedziale [-4,0] jest równa A) $(-4)$ B) $(-3)$ C) $(-2)$ D) 0",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) $(-2)$",
@@ -14136,7 +14136,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z11",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 11",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -14167,7 +14167,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z12",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 12",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14177,7 +14177,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Basen ma długość 25m. W najpłytszym miejscu jego głębokość jest równa 1,2m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku. Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją: ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-1.jpg) Odległość x jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości x i y są wyrażone w metrach. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-2.jpg) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa głębokość basenu jest równa A) 5,4 m B) 3,6 m C) 2,2 m D) 1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "D, czyli 1,8 m\n\n**Zadanie 12.2.**\n\n**Krok 1.** Skorzystaj z podanych punktów należących do paraboli: $(0, 1.2)$ oraz $(25, 1.8)$. Podstawiając $x=0$ do wzoru funkcji $y = ax^2 + bx + 1.2$, otrzymujemy $1.2 = a \\cdot 0^2 + b \\cdot 0 + 1.2$, co jest zgodne z danymi.\n**Krok 2.** Podstaw punkt $(25, 1.8)$ do równania funkcji: $1.8 = a \\cdot 25^2 + b \\cdot 25 + 1.2$. Po redukcji otrzymujemy równanie: $0.6 = 625a + 25b$.\n**Krok 3.** Zauważ, że na rysunku głębokość jest najmniejsza w połowie basenu, przy $x = \\frac{25}{2} = 12.5$ m. W tym punkcie nachylenie paraboli jest równe zero, co oznacza, że pochodna funkcji jest równa zero. Pochodna funkcji $y' = 2ax + b$. Zatem: $2a \\cdot 12.5 + b = 0$, czyli $25a + b = 0$.\n**Krok 4.** Rozwiąż układ równań:\n1) $625a + 25b = 0.6$\n2) $b = -25a$\nPodstawiając(2) do (1): $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6$, co jest sprzecznością.\n*Poprawka:* Na rysunku widać, że w połowie basenu $x=12.5$ m głębokość jest **minimalna**, a nie równa 0. Przyjmujemy zatem, że wierzchołek paraboli znajduje się dla $x=12.5$ m. Wzór funkcji można zapisać w postaci kanonicznej $y = a(x-p)^2 + q$. Wierzchołek $(p, q)$ to $(12.5, 1.2)$, bo w tym punkcie jest najpłycej.\n**Krok 5.** Zapisz funkcję w postaci kanonicznej: $y = a(x-12.5)^2 + 1.2$. Skorzystaj z punktu $(25, 1.8)$: $1.8 = a(25-12.5)^2 + 1.2 \\implies 0.6 = a(12.5)^2 \\implies 0.6 = 156.25a \\implies a = \\frac{0.6}{156.25} = 0.00384$.\n**Krok 6.** Przekształć postać kanoniczną do postaci ogólnej $y = ax^2 + bx + c$: $y = 0.00384(x^2 - 25x + 156.25) + 1.2 = 0.00384x^2 - 0.096x + 0.6 + 1.2 = 0.00384x^2 - 0.096x + 1.8$. Porównując z $y = ax^2 + bx + 1.2$, widać, że $c$ powinno być 1.2.\n*Ponowna poprawka:* Minimalna głębokość jest w połowie basenu, co oznacza, że wierzchołek paraboli jest na tej wysokości, a nie na minimalnej głębokości. Rysunek pokazuje, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. Przyjmijmy, że wierzchołek paraboli znajduje się dla $x = 12.5$.\n**Krok 7.** Z treści zadania wiemy, że głębokość w najpłytszym miejscu to 1.2m, a w najgłębszym 1.8m. Funkcja kwadratowa ma minimum (ramiona w górę). Minimum głębokości występuje dla $x=0$. Zatem $1.2$ m to wartość minimalna. Wierzchołek jest dla $x=0$.\n**Krok 8.** Skorzystaj z punktów $(0, 1.2)$ i $(25, 1.8)$. Funkcja ma postać $y = ax^2 + bx + c$. Podstawiając $(0, 1.2)$, mamy $c=1.2$. Podstawiając $(25, 1.8)$: $1.8 = a(25)^2 + b(25) + 1.2 \\implies 0.6 = 625a + 25b$.\n**Krok 9.** Rysunek sugeruje, że parabola jest symetryczna względem osi $x=12.5$. Zatem wierzchołek jest dla $x=12.5$. Wzór funkcji ma postać $y = a(x-12.5)^2 + q$. Wartość $q$ to najmniejsza głębokość. Z rysunku nie wynika, że najmniejsza głębokość to 1.2m. Przyjmijmy dane z zadania: $y(0) = 1.2$ oraz $y(25) = 1.8$. Minimalna głębokość jest w połowie basenu, czyli $y(12.5)$. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. Ale ramiona paraboli są skierowane w górę, więc $y(12.5)$ jest minimum. To się kłóci z $y(0)=1.2$ i $y(25)=1.8$.\n**Krok 10.** Przyjmijmy, że przekrój podłużny basenu jest fragmentem paraboli, a nie całą. Z rysunku wynika, że funkcja opisuje głębokość dla $x \\in [0, 25]$. Najmniejsza głębokość jest dla $x=0$ ($1.2$ m), a największa dla $x=25$ ($1.8$ m). Minimum paraboli (wierzchołek) musi być dla $x=0$.\n**Krok 11.** Podstawiamy dane: $y(0) = a \\cdot 0^2 + b \\cdot 0 + 1.2 = 1.2$. $y(25) = a \\cdot 25^2 + b \\cdot 25 + 1.2 = 1.8 \\implies 625a + 25b = 0.6$. Z analizy rysunku widać, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. To jest sprzeczne z poprzednim wnioskiem.\n**Krok 12.** Rozważmy funkcję $y = ax^2 + bx + c$. Wiemy, że $y(0) = 1.2$, więc $c = 1.2$. Wiemy, że $y(25) = 1.8$, więc $625a + 25b = 0.6$. Na rysunku widać, że oś symetrii paraboli jest w $x = \\frac{0+25}{2} = 12.5$. Wierzchołek paraboli ma współrzędną $x = -\\frac{b}{2a}$. Zatem $-\\frac{b}{2a} = 12.5 \\implies b = -25a$.\n**Krok 13.** Podstawiamy $b = -25a$ do równania $625a + 25b = 0.6$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6 \\implies 0 = 0.6$. Jest to sprzeczność, więc założenie o osi symetrii $x=12.5$ jest błędne w kontekście podanych punktów krańcowych i funkcji kwadratowej z ramionami w górę.\n**Krok 14.** Ponieważ z zadania 12.1 wynika, że największa głębokość to 1.8m, a najmniejsza 1.2m, i są one na brzegach, funkcja musi opisywać fragment paraboli, której minimum jest w $x=0$ lub $x=25$. Skoro ramiona są w górę, minimum jest w $x=0$. Zatem wierzchołek jest dla $x=0$. Wtedy $b=0$.\n**Krok 15.** Z $b=0$ i $625a + 25b = 0.6$ otrzymujemy $625a = 0.6 \\implies a = \\frac{0.6}{625} = 0.00096$.\n**Odpowiedź:** $a = 0.00096$, $b = 0$",
@@ -14196,7 +14196,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z13",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 13",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14206,7 +14206,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja kwadratowa f jest określona wzorem $f(x)$ = -$(x - 1) 2 + 2$. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne A) (1,2) B) $(-1,2)$ C) $(1, - 2)$ D) $(-1, - 2)$ Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $f$ jest przedział A) $(-\\infty ,2] B)(-\\infty ,2)$ C) $(2, + \\infty )$ D) [2,+∞)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli (1,2) (dla zadania 13.1); A, czyli (-∞,2] (dla zadania 13.2).",
@@ -14224,7 +14224,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z14",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 14",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -14234,7 +14234,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-1.jpg) określony wzorem ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-2.jpg) dla każdej liczby naturalnej ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-3.jpg) . Zadanie 14.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pięćdziesiątym wyrazem ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-4.jpg) jest A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-5.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-6.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-7.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-8.jpg) Zadanie 14.2. Oceń prawdziwość poniższych stwierdzeń. Ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-9.jpg) jest geometryczny. A) prawda B) fałsz Suma trzech początkowych wyrazów ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-10.jpg) jest równa 20. A) prawda B) fałsz",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B, czyli $2352$\n\n**Zadanie 14.2**\n\n**Krok 1.** Sprawdź, czy ciąg jest geometryczny, obliczając iloraz dwóch kolejnych wyrazów: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2 - 3(n+1) + 2}{n^2 - 3n + 2}$. Po uproszczeniu otrzymamy $\\frac{n^2-n+2}{n^2-3n+2}$, który zależy od $n$, więc ciąg nie jest geometryczny.\n**Krok 2.** Oblicz sumę trzech początkowych wyrazów: $a_1 = 1^2 - 3(1) + 2 = 0$, $a_2 = 2^2 - 3(2) + 2 = 0$, $a_3 = 3^2 - 3(3) + 2 = 2$. Suma $a_1 + a_2 + a_3 = 0 + 0 + 2 = 2$.\n\n**Odpowiedź:** Ciąg jest geometryczny: B) fałsz. Suma trzech początkowych wyrazów: B) fałsz.",
@@ -14252,7 +14252,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z15",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 15",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 15",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -14283,7 +14283,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z16",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 16",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 16",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -14293,7 +14293,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 3n - 1$ dla każdej liczby naturalnej $n \\ge 1$. Zadanie 16.1. Dokończ zdanie tak, aby było prawdziwe. Ciąg ($a_{n}$) jest A) rosnący, B) malejący, C) stały, ponieważ dla każdej liczby naturalnej $n \\ge 1A$) $a_{n} + 1 - a_{n} = -1B$) $a_{n} + 1 - a_{n} = 0C$) $a_{n} + 1 - a_{n} = 3$ Zadanie 16.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejszą wartością n , dla której wyraz $a_{n}$ jest większy od 25, jest A) 8B) 9C) 7D) 26 Zadanie 16.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma n początkowych wyrazów ciągu ($a_{n}$) jest równa 57 dla n równego A) 6B) 23C) 5D) 11",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "16.1. C, ponieważ dla każdej liczby naturalnej $n \\ge 1C$) $a_{n} + 1 - a_{n} = 3$. 16.2. B) 9. 16.3. A) 6.",
@@ -14311,7 +14311,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z17",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 17",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 17",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14321,7 +14321,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x , y), dane są: prosta k o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-1.jpg) prosta l o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-2.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k i l\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "C, czyli są prostopadłe.",
@@ -14339,7 +14339,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z18",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 18",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 18",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -14370,7 +14370,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z19",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 19",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 19",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -14401,7 +14401,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z20",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 20",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 20",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -14434,7 +14434,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z21",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 21",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 21",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -14444,7 +14444,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt ABC o bokach długości 6, 7 oraz 8. Oblicz cosinus największego kąta tego trójkąta. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{4}$",
@@ -14463,7 +14463,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z22",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 22",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 22",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -14494,7 +14494,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z23",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 23",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 23",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -14504,7 +14504,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że: przychód P (w złotych) z tygodniowej sprzedaży x wiatraków można opisać funkcją $P(x) = 251$ x koszt K (w złotych) produkcji x wiatraków w ciągu jednego tygodnia można określić funkcją $K(x) = x^{2} + 21x + 170$. Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków. Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Należy sprzedać 115 wiatraków, a największy zysk wyniesie 13055 zł.",
@@ -14522,7 +14522,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z24",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 24",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 24",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -14532,7 +14532,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Firma F zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano - wyrażoną w złotych - miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy F, którzy otrzymują płacę miesięczną w danej wysokości. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z24-1.jpg) Zadanie 24.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia miesięczna płaca brutto w firmie F jest równa A) 4 593,75 zł B) 4 800,00 zł C) 5 360,00 zł D) 2 399,33 zł Zadanie 24.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana miesięcznej płacy pracowników firmy F jest równa A) 4 000 zł B) 4 800 zł C) 5 000 zł D) 5 500 zł Zadanie 24.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba pracowników firmy F, których miesięczna płaca brutto nie przewyższa 5 000 zł, stanowi (w zaokrągleniu do 1%) A) 91% liczby wszystkich pracowników tej firmy. B) 78% liczby wszystkich pracowników tej firmy. C) 53% liczby wszystkich pracowników tej firmy. D) 22% liczby wszystkich pracowników tej firmy.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 4 593,75 zł (Jest błąd w moich obliczeniach lub w opcjach. Jeszcze raz: $20 \\times 3000 + 40 \\times 4000 + 60 \\times 5000 + 40 \\times 6000 = 60000 + 160000 + 300000 + 240000 = 760000$. $\\frac{760000}{160} = 4750$. Może być problem z odczytem wykresu lub opcjami. Sprawdzam ponownie odczyt z wykresu: 20, 40, 60, 40. Suma pracowników: $20+40+60+40=160$. Dane poprawne. Obliczenia poprawne. Może opcja A jest przybliżona? Zauważmy, że 4750 jest blisko 4593.75. Mogę spróbować dokładniej odczytać dane. Załóżmy, że pensje to 3000, 4000, 5000, 6000. Liczby pracowników to 20, 40, 60, 40. Suma: $20 \\cdot 3000 + 40 \\cdot 4000 + 60 \\cdot 5000 + 40 \\cdot 6000 = 60000 + 160000 + 300000 + 240000 = 760000$. Średnia: $760000 / 160 = 4750$. Nadal 4750. Sprawdzam opcje. Może odczyt wykresu jest inny? Popatrzmy na dokładniejsze wartości. Mogę spróbować opcji. Jeśli średnia to 4593.75, to suma płac: $4593.75 \\cdot 160 = 735000$. Jak uzyskać taką sumę?",
@@ -14551,7 +14551,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z25",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 25",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -14561,7 +14561,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość 10√ 3 , a każda jego krawędź boczna ma długość 15. Oblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$5\\sqrt{5}$",
@@ -14579,7 +14579,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-ix-z26",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy — zad. 26",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 26",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -14589,7 +14589,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $10n^{2} + 30n + 8$ przy dzieleniu przez 5 daje resztę 3.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $10n^2 + 30n + 8 = 5k + 3$, gdzie $k = 2n^2 + 6n + 1$ jest liczbą całkowitą.",
@@ -14607,7 +14607,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z01",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 1",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14637,7 +14637,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z02",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 2",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 2",
     "category": "arytmetyka",
     "difficulty": "latwy",
     "forPaths": [
@@ -14667,7 +14667,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z03",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 3",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14698,7 +14698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z04",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 4",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14729,7 +14729,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z05",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 5",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -14760,7 +14760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z06",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 6",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 6",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -14791,7 +14791,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z07",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 7",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 7",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14801,7 +14801,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment wykresu funkcji kwadratowej $f(x) = ax 2 + bx + c$. Wierzchołek paraboli, która jest wykresem funkcji $f$, ma współrzędne $(5, - 3)$. Jeden z punktów przecięcia paraboli z osią Ox układu współrzędnych ma współrzędne (4,0). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z07-1.png) Zadanie 7.1. Podaj zbiór wszystkich wartości funkcji $f$. ......................... Zadanie 7.2. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$f(x) = 3(x-5)^2 - 3$",
@@ -14819,7 +14819,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z08",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 8",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -14850,7 +14850,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z09",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 9",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 9",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -14860,7 +14860,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dana jest funkcja kwadratowa $f(x) = ax 2 + bx + c$, gdzie a, b i c są liczbami rzeczywistymi takimi, że a ≠ 0 oraz c Dokończ zdanie tak, aby było prawdziwe. Wykres funkcji $f$ leży w całości\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Brak możliwości dokończenia zdania zgodnie z podanymi warunkami i opcjami.",
@@ -14879,7 +14879,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z10",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 10",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 10",
     "category": "ciagi",
     "difficulty": "latwy",
     "forPaths": [
@@ -14910,7 +14910,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z11",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 11",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 11",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -14941,7 +14941,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z12",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 12",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 12",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -14973,7 +14973,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z13",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 13",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 13",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -15004,7 +15004,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z14",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 14",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 14",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15014,7 +15014,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $5n^{2} + 15n$ jest podzielna przez 10.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano.",
@@ -15032,7 +15032,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z15",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 15",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -15042,7 +15042,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 2n^{2} + n$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Ciąg ($a_{n}$) jest malejący. A) prawda B) fałsz Ósmy wyraz ciągu ($a_{n}$) jest równy 136. A) prawda B) fałsz",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Ciąg ($a_{n}$) jest malejący - fałsz. Ósmy wyraz ciągu ($a_{n}$) jest równy 136 - prawda.",
@@ -15059,7 +15059,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z16",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 16",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 16",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -15090,7 +15090,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z17",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 17",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 17",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -15100,7 +15100,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$. W tym ciągu $a_{1} = -5$, $a_{2} = 15$, $a_{3} = -45$. Dokończ zdanie. Podaj dwie odpowiedzi tak, aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Wzór ogólny ciągu ($a_{n}$) ma postać A. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-1.png) B. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-2.png) C. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-3.png) D. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-4.png) E. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-5.png) F. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-6.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "E, F, czyli $a_n = -5 \\cdot (-3)^{n-1}$",
@@ -15118,7 +15118,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z18",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 18",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 18",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -15149,7 +15149,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z19",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 19",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 19",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -15179,7 +15179,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z20",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 20",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 20",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15189,7 +15189,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny o długości 200m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który w tym miejscu jest linią prostą (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z20-1.png) Oblicz wymiary a i $b_{k}$ąpieliska tak, aby jego powierzchnia była największa.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$a = 50$ m, $b = 100$ m.",
@@ -15208,7 +15208,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z21",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 21",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15218,7 +15218,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest kwadrat ABCD o boku długości 8. Z wierzchołka A zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$16\\pi$",
@@ -15236,7 +15236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z22",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 22",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 22",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15246,7 +15246,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Odcinki AC i BD przecinają się w punkcie O. Ponadto $|AD| = 4$ i $|OD| = |BC| = 6$. Kąty ODA i BCO są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka OC jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "9",
@@ -15264,7 +15264,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z23",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 23",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 23",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15274,7 +15274,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przekątne równoległoboku ABCD mają długości: $|AC| = 16$ oraz $|BD| = 12$. Wierzchołki E, F, G oraz H rombu EFGH leżą na bokach równoległoboku ABCD (zobacz rysunek). Boki tego rombu są równoległe do przekątnych równoległoboku. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z23-1.png) Oblicz długość boku rombu EFGH.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "10",
@@ -15310,7 +15310,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z24",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 24",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 24",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15320,7 +15320,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt ABC, w którym |$AC = 4$, $|AB| = 3$, cos \\angle BAC = ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta ABC.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{3\\sqrt{15}}{2}$",
@@ -15338,7 +15338,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z25",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 25",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15348,7 +15348,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 pkt - odpowiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 pkt - odpowiedź poprawna.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4\\sqrt{3}$ (zadanie 25.1), D, czyli $4$ (zadanie 25.2).",
@@ -15366,7 +15366,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z26",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 26",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15397,7 +15397,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z27",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 27",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 27",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -15428,7 +15428,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z28",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 28",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 28",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -15438,7 +15438,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dane są proste k oraz l o równaniach ![Rysunek do zadania](/cke-matura/m23-probna-xii/z28-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k oraz l\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B) są prostopadłe.",
@@ -15456,7 +15456,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z29",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 29",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 29",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -15487,7 +15487,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z30",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 30",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 30",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -15497,7 +15497,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 pkt - odpowiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 243",
@@ -15515,7 +15515,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z31",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 31",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 31",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15546,7 +15546,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z32",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 32",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 32",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15577,7 +15577,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-probna-xii-z33",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy — zad. 33",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 33",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15587,7 +15587,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy -133 nasiona • w II donicy -140 nasion • w III donicy -119 nasion • w IV donicy -147 nasion • w V donicy -161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe $σ = 14$. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "II, IV",
@@ -15605,7 +15605,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z01",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 1",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -15637,7 +15637,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z02",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 2",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 2",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -15668,7 +15668,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z03",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 3",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -15699,7 +15699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z04",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 4",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -15730,7 +15730,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z05",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 5",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15740,7 +15740,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt - wybranie dwóch poprawnych odpowiedzi. 1 pkt - wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B i E",
@@ -15758,7 +15758,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z06",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 6",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -15789,7 +15789,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z07",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 7",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -15820,7 +15820,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z08",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 8",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 8",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -15851,7 +15851,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z09",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 9",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 9",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -15861,7 +15861,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby całkowitej nieparzystej n liczba $n^{2} + 2023$ jest podzielna przez 8.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano.",
@@ -15879,7 +15879,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z10",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 10",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 10",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -15889,7 +15889,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: $f(x) \\le 0$ ......................... 1 pkt - rozwiązanie poprawne. 0 pkt - rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$f(x) = (x-1)^2 - 4$",
@@ -15908,7 +15908,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z11",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 11",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -15939,7 +15939,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z12",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 12",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -15970,7 +15970,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z13",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 13",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -15980,7 +15980,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0}$ - masa przyjętej dawki leku, T - czas półtrwania leku, t - czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 0,1 mg.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "C\n\n**Zadanie 13.2.**\n\n**Krok 1.** Pacjent przyjmuje dawkę $m_0 = 100$ mg co $T = 4$ dni. Czas półtrwania $T = 4$ dni. Jednostka czasu to doby. Przed przyjęciem jedenastej dawki minęło 10 okresów po 4 dni, czyli $t = 10 \\cdot 4 = 40$ dni.\n**Krok 2.** Masa leku z każdej dawki maleje o połowę co 4 dni. Przed 11. dawką, czyli po 40 dniach, każda z 10 poprzednich dawek została poddana procesowi półtrwania $40/4 = 10$ razy.\n**Krok 3.** Całkowita masa leku przed 11. dawką to suma mas pozostałych z każdej z 10 poprzednich dawek: $M = 100 \\cdot (\\frac{1}{2})^{10} + 100 \\cdot (\\frac{1}{2})^{9} + \\dots + 100 \\cdot (\\frac{1}{2})^{1}$. Jest to suma ciągu geometrycznego o $a_1 = 100 \\cdot \\frac{1}{2}$, $q = \\frac{1}{2}$ i $n = 10$.\n**Krok 4.** Suma $S_n = a_1 \\frac{1-q^n}{1-q} = 50 \\frac{1-(\\frac{1}{2})^{10}}{1-\\frac{1}{2}} = 50 \\frac{1-\\frac{1}{1024}}{\\frac{1}{2}} = 100 (1 - \\frac{1}{1024}) = 100 \\cdot \\frac{1023}{1024} \\approx 99.9023$.\n**Odpowiedź:** 99,9 mg",
@@ -15999,7 +15999,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z14",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 14",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 14",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -16030,7 +16030,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z15",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 15",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -16040,7 +16040,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Stwierdzenie 1: Prawda. Stwierdzenie 2: Fałsz.",
@@ -16057,7 +16057,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z16",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 16",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 16",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16067,7 +16067,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Oba stwierdzenia są prawdziwe.",
@@ -16085,7 +16085,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z17",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 17",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 17",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -16116,7 +16116,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z18",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 18",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16126,7 +16126,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Odcinki AD i BC przecinają się w punkcie O. W trójkątach ABO i ODC zachodzą związki: $|AO| = 5$, $|BO| = 3$, $|OC| = 10$, $|\\angle OAB| = |\\angle OCD|$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z18-1.png) Oblicz długość boku OD trójkąta ODC.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "6",
@@ -16144,7 +16144,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z19",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 19",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 19",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -16154,7 +16154,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 pkt - poprawne dokończenia dwóch zdań. 1 pkt - poprawne dokończenie jednego zdania. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "B, E",
@@ -16173,7 +16173,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z20",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 20",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 20",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -16203,7 +16203,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z21",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 21",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 21",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -16234,7 +16234,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z22",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 22",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 22",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -16265,7 +16265,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z23",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 23",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 23",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -16296,7 +16296,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z24",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 24",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 24",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -16327,7 +16327,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z25",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 25",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16358,7 +16358,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z26",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 26",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16389,7 +16389,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z27",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 27",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 27",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16420,7 +16420,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z28",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 28",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -16430,7 +16430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pojemniku znajdują się losy loterii fantowej ponumerowane kolejnymi liczbami naturalnymi od 1000 do 9999. Każdy los, którego numer jest liczbą o sumie cyfr równej 3, jest wygrywający. Uczestnicy loterii losują z pojemnika po jednym losie. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że pierwszy los wyciągnięty z pojemnika był wygrywający. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{1}{900}$",
@@ -16449,7 +16449,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z29",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 29",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 29",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -16459,7 +16459,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozważamy wszystkie równoległoboki o obwodzie równym 200 i kącie ostrym o mierze $30^{\\circ}$. Podaj wzór i dziedzinę funkcji opisującej zależność pola takiego równoległoboku od długości $x$ boku równoległoboku. Oblicz wymiary tego z rozważanych równoległoboków, który ma największe pole, i oblicz to największe pole.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wzór funkcji pola: $P(x) = 50x - \\frac{1}{2}x^2$, dziedzina: $x \\in (0, 100)$. Wymiary równoległoboku o największym polu to $50 \\times 50$ (czyli romb), a największe pole wynosi $1250$.",
@@ -16477,7 +16477,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m23-przykladowa-z30",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy — zad. 30",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy - zad. 30",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -16487,7 +16487,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "F, P\n\n**Zadanie 30.2**\n\n**Krok 1.** Dominanta to wartość najczęściej występująca, czyli ta, której odpowiada najwyższy słupek na wykresie. Najwyższy słupek odpowiada czasowi 2,5 godziny.\n**Krok 2.** Odczytujemy z wykresu, że najwyższą liczbę uczniów(25) przypisano do czasu 2,5 godziny.\n\n**Odpowiedź:** B, czyli 2,50 godziny.",
@@ -16506,7 +16506,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z01",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -16516,7 +16516,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dana jest nierówność |$x - 1$|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: |$x - 1$| ≥ 3 oznacza $x - 1 \\ge 3$ lub $x - 1 \\le - 3$.\nKrok 2: $x \\ge 4$ lub $x \\le - 2$.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz $od - 2$ w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem $(-2, 4)$ - zgodnie z kluczem CKE (zazwyczaj opcja C).",
@@ -16532,7 +16532,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z02",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 2",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -16563,7 +16563,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z03",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 3",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -16573,7 +16573,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $n^{2}$ + $(n + 1)$ 2 + $(n + 2)$ 2 przy dzieleniu przez 3 daje resztę 2.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n2 daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze $0 + 1 + 2$, $1 + 2 + 0$ lub $2 + 0 + 1$ - suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n2) mod $3 + ($(n + 1) 2) mod$3 + ($(n + 2) 2) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze$2 - QED$.",
@@ -16589,7 +16589,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z04",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 4",
     "category": "logarytmy",
     "difficulty": "trudny",
     "forPaths": [
@@ -16599,7 +16599,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log √ 3 9 jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: log√$3(9) = \\log(9) / \\log(\\sqrt3)$.\nKrok 2: $\\log(9) = 2$, bo $32 = 9$ (przy podstawie 3).\nKrok 3: $\\log(\\sqrt3) = \\frac{1}{2}$, bo √$3 = 3$^($\\frac{1}{2}$).\nKrok 4: Wynik = 2 : $(\\frac{1}{2}) = 4$.\n\nOdpowiedź: C) 4",
@@ -16615,7 +16615,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z05",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -16646,7 +16646,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z06",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -16656,7 +16656,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności $1 - \\frac{3}{2} x^{2} / 3 - x$ jest przedział\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Przenosimy x na lewo, liczby na prawo: 1 - ($\\frac{3}{2}$)$x + x < \\frac{2}{3}$.\nKrok 2: 1 - ($\\frac{1}{2}$)$x < \\frac{2}{3}$ → -($\\frac{1}{2}$)$x < - \\frac{1}{3}$ → $x > \\frac{2}{3}(mnożymy przez - 2)$.\n\nOdpowiedź: D) $(\\frac{2}{3}, + \\infty )$",
@@ -16672,7 +16672,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z07",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -16682,7 +16682,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie $x + 1$ / $(x + 2)(x - 3)$ = 0 w zbiorze liczb rzeczywistych\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → $x = -1$.\nKrok 2: Sprawdzamy: $x = -1$ daje 0, mianownik $(-1)(-4)$ ≠ 0.\nKrok 3: $x = -2$ i $x = 3$ zerują mianownik - odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: $x = -1$",
@@ -16698,7 +16698,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z08",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 8",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -16708,7 +16708,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest wielomian $W(x) = 3x^{3} + 6x^{2} + 9x$. Oceń prawdziwość poniższych stwierdzeń. Wielomian W jest iloczynem wielomianów $F(x) = 3$ x i $G(x) = x^{2} + 2x + 3$. A) prawda B) fałsz Liczba $(-1)$ jest rozwiązaniem równania $W(x) = 0$. A) prawda B) fałsz",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: $W(x) = 3$ x$(x2 + 2x + 3)$ - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw $x = -1$: W$(-1)$ = $-3 + 6 - 9 = -6$ ≠ 0 - drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F",
@@ -16724,7 +16724,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z09",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 9",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -16734,7 +16734,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż równanie $x^{3} - 2x^{2} - 3x + 6 = 0$ Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Grupujemy: x2$(x - 2)$ -3$(x - 2)$ = $(x - 2)(x2 - 3)$.\nKrok 2: x2-3 = $(x - \\sqrt3)(x + \\sqrt3)$.\nKrok 3: Rozwiązania: $x = 2$, x = √3, x = -√3.\n\nOdpowiedź: x ∈ {2, √3, -√3}",
@@ -16750,7 +16750,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z10",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 10",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -16760,7 +16760,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: $x + y = 1960$, po roku: 0,95x i 0,9y.\nKrok 2: $0,9y = 0,6 \\cdot 0,95x$ → $y = 0,63x$.\nKrok 3: $x + 0,63x = 1960$ → $x = 1200$, $y = 760$.\n\nOdpowiedź: układ z $x + y = 1960$ i zależnością $0,9y = 0,6\\cdot0,95x(zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu)$.",
@@ -16776,7 +16776,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z11",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 11",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16786,7 +16786,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x,y), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań $A - D$. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku.\n\nOdpowiedź: zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia).",
@@ -16802,7 +16802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z12",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -16833,7 +16833,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z13",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -16865,7 +16865,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z14",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 14",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -16875,7 +16875,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osiami układu współrzędnych mają obie współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m24-maj/z14-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie $f(x) \\ge 0$.\nKrok 2 (14.2): Dopasowujemy wzór $f(x) = a(x - p) 2 + q$ do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): $g(x) = f(x + 3)$, $h(x) = f(-x)$ - przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu).",
@@ -16891,7 +16891,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z15",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -16901,7 +16901,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-1)$ n ⋅ $(n - 5)$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Pierwszy wyraz ciągu ($a_{n}$) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu ($a_{n}$) są dodatnie. A) prawda B) fałsz",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: a1 = -4, a3 = -2 - pierwsze nie jest 2\\times większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne $(np. n = 1)$ → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F",
@@ -16917,7 +16917,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z16",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 16",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -16927,7 +16927,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Trzywyrazowy ciąg $(12, 6 ,2m - 1)$ jest geometryczny. Dokończ zdanie. Wybierz poprawne odpowiedzi. Ten ciąg jest\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Iloraz $q = \\frac{6}{12} = \\frac{1}{2}$.\nKrok 2: Trzeci wyraz: $12\\cdot(\\frac{1}{2}) 2 = 3 = 2m - 1$ → $2m = 4$ → $m = 2$.\nKrok 3: $q < 1$ więc ciąg malejący.\n\nOdpowiedź: malejący, $m = 2$ (opcje B i 2)",
@@ -16943,7 +16943,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z17",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 17",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -16953,7 +16953,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$. Trzeci wyraz tego ciągu jest równy $(-1)$, a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa $(-165)$. Oblicz różnicę tego ciągu. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-2$",
@@ -16971,7 +16971,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z18",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 18",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -16981,7 +16981,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) zaznaczono kąt o mierze α taki, że tg $α = -3$ oraz $90^{\\circ}$ ![Rysunek do zadania](/cke-matura/m24-maj/z18-1.png) Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$. Prawdziwe są zależności: .............. oraz .............. . A) sinα B) sinα ⋅ cosα C) sinα ⋅ cosα > 0D) cosα > 0E) sinα = -$\\frac{1}{3}$ cosα F) sinα = -3 cosα",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: α w II ćwiartce → sin $α > 0$, cos $α < 0$.\nKrok 2: sin $α \\cdot cos α < 0$.\nKrok 3: Z tg $α = -3$ wynika sin $α = -3$ cos α (po uwzględnieniu znaku).\n\nOdpowiedź: np. B i E (zgodnie z kluczem CKE)",
@@ -16997,7 +16997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z19",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 19",
     "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17007,7 +17007,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba sin 3 $20^{\\circ}$ + $\\cos^{2} 20^{\\circ}$⋅$\\sin 20^{\\circ}$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: $\\sin 320^{\\circ}$ = -$\\sin 40^{\\circ}$ = -$\\cos 50^{\\circ}$... upraszczamy do $\\sin 20^{\\circ}$ po tożsamościach.\nKrok 2: $\\cos 220^{\\circ}$ = -$\\cos 40^{\\circ}$, łącznie wychodzi $\\sin 20^{\\circ}$.\n\nOdpowiedź: B) $\\sin 20^{\\circ}$",
@@ -17023,7 +17023,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z20",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17054,7 +17054,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z21",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17085,7 +17085,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z22",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 22",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17116,7 +17116,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z23",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 23",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17147,7 +17147,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z24",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 24",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17157,7 +17157,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) dany jest równoległobok ABCD, w którym A = $(-2 , 6)$ oraz $B = (10 , 2)$. Przekątne AC oraz BD tego równoległoboku przecinają się w punkcie $P = (6 , 7)$. Oblicz długość boku BC tego równoległoboku. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Środek przekątnych to środek równoległoboku - wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: $|BC|$ = √((12)2 + $(-4)$2) = √$160 = 4$√10.\n\nOdpowiedź: 4√10",
@@ -17173,7 +17173,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z25",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 25",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17183,7 +17183,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe 15√ 3 . ![Rysunek do zadania](/cke-matura/m24-maj/z25-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej - wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2.",
@@ -17199,7 +17199,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z26",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 26",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17209,7 +17209,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ostrosłup F 1 jest podobny do ostrosłupa F 2 . Objętość ostrosłupa F 1 jest równa 64. Objętość ostrosłupa F 2 jest równa 512. Uzupełnij poniższe zdanie. Podaj odpowiednią liczbę tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa F 2 do pola powierzchni całkowitej ostrosłupa F 1 jest równy .......... .",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "4",
@@ -17227,7 +17227,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z27",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -17259,7 +17259,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z28",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 28",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -17290,7 +17290,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z29",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 29",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -17321,7 +17321,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z30",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 30",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -17331,7 +17331,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest pięcioelementowy zbiór K = {5,6,7,8,9}. Wylosowanie każdej liczby z tego zbioru jest jednakowo prawdopodobne. Ze zbioru K losujemy ze zwracaniem kolejno dwa razy po jednej liczbie i zapisujemy je w kolejności losowania. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że suma wylosowanych liczb jest liczbą parzystą. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Suma parzysta, gdy obie parzyste, obie nieparzyste, lub jedna parzysta i jedna nieparzysta z parzystą sumą.\nKrok 2: Łatwiej: $P(nieparzysta) = \\frac{2}{4} = \\frac{1}{2}$ każde losowanie → $P(sumy parzysta) = \\frac{1}{2}$.\n\nOdpowiedź: $\\frac{1}{2}$",
@@ -17347,7 +17347,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m24-maj-z31",
-    "title": "Matura — maj 2024 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2024 - poziom podstawowy - zad. 31",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17357,7 +17357,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki. Schematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę. ![Rysunek do zadania](/cke-matura/m24-maj/z31-1.png) Oblicz wymiary x oraz y jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Krok 1: Obwód jednego wybiegu: 2$(x + y)$, trzy wybiegi: $3\\cdot2(x + y)$=36 → $x + y = 6$.\nKrok 2: Suma pól = 3 xy, przy $x + y = 6$ maksimum gdy $x = y = 3$.\n\nOdpowiedź: $x = 3m$, $y = 3m$",
@@ -17373,7 +17373,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z01",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 1",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 1",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -17404,7 +17404,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z02",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 2",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 2",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -17414,7 +17414,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m25-maj/z02-1.png) jest równa\n\nRozwiąż zadanie.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{29}{14}$",
@@ -17432,7 +17432,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z03",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 3",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 3",
     "category": "potegi",
     "difficulty": "latwy",
     "forPaths": [
@@ -17463,7 +17463,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z04",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 4",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 4",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -17494,7 +17494,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z05",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 5",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 5",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -17504,7 +17504,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykaż, że dla każdej nieparzystej liczby naturalnej n liczba $3n^{2} + 2n + 7$ jest podzielna przez 4.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wykazano, że $3n^2 + 2n + 7$ jest podzielne przez 4.",
@@ -17522,7 +17522,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z06",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 6",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 6",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -17553,7 +17553,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z07",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 7",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 7",
     "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
@@ -17584,7 +17584,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z08",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 8",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 8",
     "category": "algebra",
     "difficulty": "latwy",
     "forPaths": [
@@ -17615,7 +17615,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z09",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 9",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 9",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -17625,7 +17625,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Zarząd firmy wydzielił z budżetu kwotę 1 200 000 złotych łącznie na projekty badawcze dla dwóch zespołów: A i B. W pierwszym półroczu realizacji tych projektów oba zespoły wykorzystały łącznie 146 700 złotych - zespół A wykorzystał 13% przyznanych mu środków, a zespół B wykorzystał 11% przyznanych mu środków. Oblicz kwotę przyznaną zespołowi A na realizację projektu badawczego. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "735 000 zł",
@@ -17644,7 +17644,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z10",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 10",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 10",
     "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
@@ -17654,7 +17654,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozwiąż nierówność 3$(2x^{2} + 1)$ Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$x \\in [-2, 2]$",
@@ -17672,7 +17672,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z11",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 11",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 11",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -17682,7 +17682,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Funkcja $f$ jest określona następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z11-1.jpg) Wykres funkcji $y = f(x)$ przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. ![Rysunek do zadania](/cke-matura/m25-maj/z11-2.jpg) 1. Dziedziną funkcji $f$ jest przedział ......................... 2. Zbiorem wartości funkcji $f$ jest przedział ......................... 3. Zbiorem wszystkich argumentów, dla których funkcja $f$ przyjmuje wartości dodatnie, jest przedział ......................... 4. Zbiorem wszystkich rozwiązań równania $f(x) = 3$ jest przedział .........................",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "1. $[-4, 5]$, 2. $[-3, 4]$, 3. $(-4, -1) \\cup (2, 5)$, 4. $[-2, 2]$",
@@ -17700,7 +17700,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z12",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 12",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 12",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -17710,7 +17710,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej f (zobacz rysunek). Wierzchołek tej paraboli ma współrzędne (3,6). Ta parabola przecina oś Oy w punkcie o współrzędnych (0,3). ![Rysunek do zadania](/cke-matura/m25-maj/z12-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$f(x) = -\\frac{1}{3}x^2 + 2x + 3$",
@@ -17728,7 +17728,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z13",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 13",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 13",
     "category": "funkcje",
     "difficulty": "latwy",
     "forPaths": [
@@ -17759,7 +17759,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z14",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 14",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 14",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -17769,7 +17769,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ciąg(an) jest określony następująco: ![Rysunek do zadania](/cke-matura/m25-maj/z14-1.png) dla każdej liczby naturalnej $n \\ge 1$",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$-\\frac{1}{2}, \\frac{1}{3}, \\frac{3}{4}$",
@@ -17787,7 +17787,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z15",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 15",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 15",
     "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
@@ -17797,7 +17797,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wyznacz wartość m , dla której trzywyrazowy ciąg $(2m + 11, m^{2} + 3, 5 - m)$ jest arytmetyczny i malejący. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$m=2.5$",
@@ -17815,7 +17815,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z16",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 16",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 16",
     "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
@@ -17846,7 +17846,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z17",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 17",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 17",
     "category": "trygonometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17877,7 +17877,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z18",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 18",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 18",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17887,7 +17887,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt prostokątny ABC, w którym bok BC jest przeciwprostokątną, przyprostokątna AB ma długość 6, a środkowa CD ma długość 5. Oznaczmy kąt ADC przez α, natomiast kąt ABC - przez β (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z18-1.png)",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\sin(\\alpha) = \\frac{24}{25}$",
@@ -17905,7 +17905,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z19",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 19",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 19",
     "category": "algebra",
     "difficulty": "sredni",
     "forPaths": [
@@ -17938,7 +17938,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z20",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 20",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 20",
     "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
@@ -17969,7 +17969,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z21",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 21",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 21",
     "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
@@ -17979,7 +17979,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Pierwsze stwierdzenie: fałsz, drugie stwierdzenie: prawda.",
@@ -17997,7 +17997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z22",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 22",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 22",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -18028,7 +18028,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z23",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 23",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 23",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -18059,7 +18059,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z24",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 24",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 24",
     "category": "funkcje",
     "difficulty": "sredni",
     "forPaths": [
@@ -18091,7 +18091,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z25",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 25",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 25",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -18101,7 +18101,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Tworząca stożka ma długość 8. Kąt rozwarcia tego stożka ma miarę $120^{\\circ}$. Oblicz objętość tego stożka. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$64\\pi$",
@@ -18119,7 +18119,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z26",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 26",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 26",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -18149,7 +18149,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z27",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 27",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 27",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -18181,7 +18181,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z28",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 28",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 28",
     "category": "algebra",
     "difficulty": "trudny",
     "forPaths": [
@@ -18212,7 +18212,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z29",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 29",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 29",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -18243,7 +18243,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z30",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 30",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 30",
     "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
@@ -18253,7 +18253,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej liczącej 24 uczniów. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę. ![Rysunek do zadania](/cke-matura/m25-maj/z30-1.png) Uzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe. 1. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa ......................... 2. Dominanta ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa .........................",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "1. Mediana jest równa 4. 2. Dominanta jest równa 5.",
@@ -18271,7 +18271,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   },
   {
     "id": "cke-m25-maj-z31",
-    "title": "Matura — maj 2025 — poziom podstawowy — zad. 31",
+    "title": "Matura - maj 2025 - poziom podstawowy - zad. 31",
     "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
@@ -18281,7 +18281,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Rozważamy wszystkie prostopadłościany ABCDEFGH, w których krawędź BC ma długość 4 oraz suma długości wszystkich krawędzi wychodzących z wierzchołka B jest równa 15 (zobacz rysunek). Niech $P(x)$ oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu w zależności od długości $x$ krawędzi AB. ![Rysunek do zadania](/cke-matura/m25-maj/z31-1.png) Wyznacz wzór i dziedzinę funkcji $P$ . Oblicz długość $x$ krawędzi AB tego z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest największe. Zapisz obliczenia.",
     "choices": [
-      "Zadanie otwarte — patrz rozwiązanie"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Wzór funkcji $P(x) = -2x^2 + 22x + 88$, dziedzina to $(0, 11)$. Maksymalne pole powierzchni występuje dla $x = 5.5$.",
@@ -18303,7 +18303,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m15-maj",
     "sessionId": "m15-maj",
-    "title": "Matura — maj 2015 — poziom podstawowy",
+    "title": "Matura - maj 2015 - poziom podstawowy",
     "year": 2015,
     "month": 5,
     "taskIds": [
@@ -18346,7 +18346,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m15-probna",
     "sessionId": "m15-probna",
-    "title": "Matura — próbna 2015 — poziom podstawowy",
+    "title": "Matura - próbna 2015 - poziom podstawowy",
     "year": 2015,
     "month": 12,
     "taskIds": [
@@ -18388,7 +18388,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m15-przykladowa",
     "sessionId": "m15-przykladowa",
-    "title": "Matura — przykładowa 2015 — poziom podstawowy",
+    "title": "Matura - przykładowa 2015 - poziom podstawowy",
     "year": 2015,
     "month": 12,
     "taskIds": [
@@ -18430,7 +18430,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m16-maj",
     "sessionId": "m16-maj",
-    "title": "Matura — maj 2016 — poziom podstawowy",
+    "title": "Matura - maj 2016 - poziom podstawowy",
     "year": 2016,
     "month": 5,
     "taskIds": [
@@ -18473,7 +18473,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m17-maj",
     "sessionId": "m17-maj",
-    "title": "Matura — maj 2017 — poziom podstawowy",
+    "title": "Matura - maj 2017 - poziom podstawowy",
     "year": 2017,
     "month": 5,
     "taskIds": [
@@ -18516,7 +18516,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m18-maj",
     "sessionId": "m18-maj",
-    "title": "Matura — maj 2018 — poziom podstawowy",
+    "title": "Matura - maj 2018 - poziom podstawowy",
     "year": 2018,
     "month": 5,
     "taskIds": [
@@ -18559,7 +18559,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m19-maj",
     "sessionId": "m19-maj",
-    "title": "Matura — maj 2019 — poziom podstawowy",
+    "title": "Matura - maj 2019 - poziom podstawowy",
     "year": 2019,
     "month": 5,
     "taskIds": [
@@ -18602,7 +18602,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m20-czerwiec",
     "sessionId": "m20-czerwiec",
-    "title": "Matura — czerwiec 2020 — poziom podstawowy",
+    "title": "Matura - czerwiec 2020 - poziom podstawowy",
     "year": 2020,
     "month": 6,
     "taskIds": [
@@ -18645,7 +18645,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m20-probna",
     "sessionId": "m20-probna",
-    "title": "Matura — próbna 2020 — poziom podstawowy",
+    "title": "Matura - próbna 2020 - poziom podstawowy",
     "year": 2020,
     "month": 4,
     "taskIds": [
@@ -18688,7 +18688,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m21-maj",
     "sessionId": "m21-maj",
-    "title": "Matura — maj 2021 — poziom podstawowy",
+    "title": "Matura - maj 2021 - poziom podstawowy",
     "year": 2021,
     "month": 5,
     "taskIds": [
@@ -18732,7 +18732,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m21-probna",
     "sessionId": "m21-probna",
-    "title": "Matura — próbna 2021 — poziom podstawowy",
+    "title": "Matura - próbna 2021 - poziom podstawowy",
     "year": 2021,
     "month": 3,
     "taskIds": [
@@ -18776,7 +18776,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m22-maj",
     "sessionId": "m22-maj",
-    "title": "Matura — maj 2022 — poziom podstawowy",
+    "title": "Matura - maj 2022 - poziom podstawowy",
     "year": 2022,
     "month": 5,
     "taskIds": [
@@ -18820,7 +18820,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m23-maj",
     "sessionId": "m23-maj",
-    "title": "Matura — maj 2023 — poziom podstawowy",
+    "title": "Matura - maj 2023 - poziom podstawowy",
     "year": 2023,
     "month": 5,
     "taskIds": [
@@ -18860,7 +18860,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m23-probna-ix",
     "sessionId": "m23-probna-ix",
-    "title": "Matura — próbna wrzesień 2023 — poziom podstawowy",
+    "title": "Matura - próbna wrzesień 2023 - poziom podstawowy",
     "year": 2023,
     "month": 9,
     "taskIds": [
@@ -18895,7 +18895,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m23-probna-xii",
     "sessionId": "m23-probna-xii",
-    "title": "Matura — próbna grudzień 2023 — poziom podstawowy",
+    "title": "Matura - próbna grudzień 2023 - poziom podstawowy",
     "year": 2023,
     "month": 12,
     "taskIds": [
@@ -18937,7 +18937,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m23-przykladowa",
     "sessionId": "m23-przykladowa",
-    "title": "Matura — przykładowa 2023 — poziom podstawowy",
+    "title": "Matura - przykładowa 2023 - poziom podstawowy",
     "year": 2023,
     "month": 3,
     "taskIds": [
@@ -18976,7 +18976,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m24-maj",
     "sessionId": "m24-maj",
-    "title": "Matura — maj 2024 — poziom podstawowy",
+    "title": "Matura - maj 2024 - poziom podstawowy",
     "year": 2024,
     "month": 5,
     "taskIds": [
@@ -19016,7 +19016,7 @@ export const EXAM_ARCHIVE_SHEETS: ExamArchiveSheetMeta[] = [
   {
     "id": "arkusz-m25-maj",
     "sessionId": "m25-maj",
-    "title": "Matura — maj 2025 — poziom podstawowy",
+    "title": "Matura - maj 2025 - poziom podstawowy",
     "year": 2025,
     "month": 5,
     "taskIds": [

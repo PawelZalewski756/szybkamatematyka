@@ -17,12 +17,12 @@ export type ProfileStatsSources = {
   challengesCompleted: number;
   duelStats: DuelStats;
   activityDays: Record<string, StoredActivityDay>;
-  /** Pełne statystyki gracza (do odznak) — z gatherClientStats. */
+  /** Pełne statystyki gracza (do odznak) - z gatherClientStats. */
   playerStats: PlayerStats;
 };
 
 /**
- * Czysta funkcja budująca migawkę statystyk profilu — testowalna bez I/O.
+ * Czysta funkcja budująca migawkę statystyk profilu - testowalna bez I/O.
  */
 export function buildProfileStatsSnapshot(
   sources: ProfileStatsSources,

@@ -40,7 +40,7 @@ Tekst.
 ## Definicje i wzory
 - wzór
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 **Krok 1.** Liczymy.
 
 ## Pułapki

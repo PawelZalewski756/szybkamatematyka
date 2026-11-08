@@ -1,6 +1,6 @@
 {
   "sessionId": "m16-maj",
-  "nazwa": "Matura — maj 2016 — poziom podstawowy",
+  "nazwa": "Matura - maj 2016 - poziom podstawowy",
   "rok": 2016,
   "miesiac": 5,
   "tasks": [
@@ -104,7 +104,7 @@
       "numer": 17,
       "dzial": "Algebra",
       "tresc": "Kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m16-maj/z17-1.png) Wtedy A) ![Rysunek do zadania](/cke-matura/m16-maj/z17-2.png) B) ![Rysunek do zadania](/cke-matura/m16-maj/z17-3.png) C) ![Rysunek do zadania](/cke-matura/m16-maj/z17-4.png) D) ![Rysunek do zadania](/cke-matura/m16-maj/z17-5.png)",
-      "rozwiazanie": "**Krok 1.** Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna — 5.\n**Krok 2.** Skorzystaj z definicji funkcji trygonometrycznych w trójkącie prostokątnym: $\\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{4}{5}$.\n**Krok 3.** Sprawdź podane warianty odpowiedzi. Wariant B jest zgodny z obliczonym cosinusem: $\\cos \\alpha = \\frac{4}{5}$.\n\n**Odpowiedź:** B, czyli $\\cos \\alpha = \\frac{4}{5}$"
+      "rozwiazanie": "**Krok 1.** Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna - 5.\n**Krok 2.** Skorzystaj z definicji funkcji trygonometrycznych w trójkącie prostokątnym: $\\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{4}{5}$.\n**Krok 3.** Sprawdź podane warianty odpowiedzi. Wariant B jest zgodny z obliczonym cosinusem: $\\cos \\alpha = \\frac{4}{5}$.\n\n**Odpowiedź:** B, czyli $\\cos \\alpha = \\frac{4}{5}$"
     },
     {
       "numer": 18,
@@ -134,7 +134,7 @@
       "numer": 22,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Rzucamy trzy razy symetryczną monetą. Niech p oznacza prawdopodobieństwo otrzymania dokładnie dwóch orłów w tych trzech rzutach. Wtedy A) 0 ≤ p B) 0,2 ≤ p ≤ 0,35 C) 0,35 D) 0,5",
-      "rozwiazanie": "**Krok 1.** Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami — jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.\n**Krok 2.** Identyfikujemy zdarzenia sprzyjające, czyli te z dokładnie dwoma orłami (OO). Są to: ROO, ORO, OOR. Jest ich 3.\n**Krok 3.** Obliczamy prawdopodobieństwo $p$ jako stosunek liczby zdarzeń sprzyjających do liczby wszystkich możliwych zdarzeń: $p = \\frac{3}{8}$.\n**Krok 4.** Zamieniamy ułamek $\\frac{3}{8}$ na liczbę dziesiętną: $p = 0,375$. Analizujemy podane przedziały i wybieramy ten, który zawiera 0,375.\n\n**Odpowiedź:** D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, 0.2-0.35)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ — prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ — $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ — $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ — nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$"
+      "rozwiazanie": "**Krok 1.** Zapisujemy wszystkie możliwe wyniki rzutów trzema monetami - jest ich $2^3 = 8$. Orzeł (O) i reszka (R). Wyniki: RRR, RR0, ROR, ORR, ROO, ORO, OOR, OOO.\n**Krok 2.** Identyfikujemy zdarzenia sprzyjające, czyli te z dokładnie dwoma orłami (OO). Są to: ROO, ORO, OOR. Jest ich 3.\n**Krok 3.** Obliczamy prawdopodobieństwo $p$ jako stosunek liczby zdarzeń sprzyjających do liczby wszystkich możliwych zdarzeń: $p = \\frac{3}{8}$.\n**Krok 4.** Zamieniamy ułamek $\\frac{3}{8}$ na liczbę dziesiętną: $p = 0,375$. Analizujemy podane przedziały i wybieramy ten, który zawiera 0,375.\n\n**Odpowiedź:** D, czyli $p \\approx 0,375$ (najbliżej 0,5, ale formalnie jest to najbardziej oddalony wynik od podanej A,B,C, ale jeśli mamy wybrać najbliższy wynik z opcji, to 0.5 jest bliżej 0.375 niż 0.35, 0.2-0.35)\nJeśli chodzi o dokładne dopasowanie, to żadna z opcji nie jest idealna. Jednakże, jeśli mamy wybrać jedną z podanych odpowiedzi, a często w zadaniach maturalnych chodzi o przybliżenie lub zakres:\nA) $0 \\le p$ - prawda, ale bardzo ogólne.\nB) $0,2 \\le p \\le 0,35$ - $0,375$ nie mieści się w tym przedziale.\nC) $p \\ge 0,35$ - $0,375 \\ge 0,35$, więc to jest prawdziwe stwierdzenie.\nD) $p = 0,5$ - nieprawda.\n\nNajlepszą opcją spośród podanych, która poprawnie opisuje obliczone $p=0,375$, jest **C** ponieważ $0,375$ jest większe niż $0,35$.\n\n**Odpowiedź:** C, czyli $p \\ge 0,35$"
     },
     {
       "numer": 23,

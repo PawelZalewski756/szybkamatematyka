@@ -18,7 +18,7 @@ export const LOGO_PROPOSALS: readonly LogoProposal[] = [
     name: "Pasek",
     tagline: "Minimalistyczny pionowy akcent przy słowie.",
     pros: [
-      "Najlżejszy wizualnie — nie konkuruje z treścią",
+      "Najlżejszy wizualnie - nie konkuruje z treścią",
       "Działa w wąskim navbarze i na mobile",
       "Spójny z obecnym faviconem (pasek + sm)",
     ],
@@ -39,7 +39,7 @@ export const LOGO_PROPOSALS: readonly LogoProposal[] = [
     tagline: "Znak = z wydłużonym środkiem w teal.",
     pros: [
       "Od razu kojarzy się z matematyką",
-      "„Szybkość” wydłużoną kreską — subtelna metafora",
+      "„Szybkość” wydłużoną kreską - subtelna metafora",
       "Prosty, czytelny w małym rozmiarze",
     ],
   },
@@ -56,7 +56,7 @@ export const LOGO_PROPOSALS: readonly LogoProposal[] = [
   {
     id: "delta",
     name: "Delta Δ",
-    tagline: "Geometryczny trójkąt — zmiana i różnica.",
+    tagline: "Geometryczny trójkąt - zmiana i różnica.",
     pros: [
       "Mocny, akademicki ton bez kalkulatorowego kliszu",
       "Dobrze wygląda solo (avatar, social)",

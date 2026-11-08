@@ -84,7 +84,7 @@ function TaskAiPanelInner({
       const next = await fetchTaskAssistQuota();
       setQuota(next);
     } catch {
-      /* ignore — panel nadal działa dla Pro */
+      /* ignore - panel nadal działa dla Pro */
     } finally {
       setQuotaLoading(false);
     }
@@ -266,7 +266,7 @@ function TaskAiPanelInner({
           href="/cennik"
           className="inline-flex text-xs font-bold text-brand transition hover:underline"
         >
-          Przejdź na Pro — nielimitowane podpowiedzi
+          Przejdź na Pro - nielimitowane podpowiedzi
         </Link>
       </div>
     );

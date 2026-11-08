@@ -1,5 +1,5 @@
 /**
- * Nocna sesja Gemini — teoria, walidacja, rozwiązania CKE, audyty.
+ * Nocna sesja Gemini - teoria, walidacja, rozwiązania CKE, audyty.
  *
  *   npm run seed:overnight-all
  *
@@ -92,9 +92,9 @@ async function runPhase(name: string, fn: () => Promise<number>): Promise<void> 
   log(`\n═══ ${name} ═══`);
   const code = await fn();
   if (code !== 0) {
-    log(`⚠ ${name} — kod wyjścia ${code} (kontynuuję)`);
+    log(`⚠ ${name} - kod wyjścia ${code} (kontynuuję)`);
   } else {
-    log(`✓ ${name} — OK`);
+    log(`✓ ${name} - OK`);
   }
 }
 
@@ -168,7 +168,7 @@ async function main() {
 
   logTheorySnapshot("Stan końcowy");
   await gitCheckpoint("Nocna sesja Gemini: podsumowanie audytów.", log);
-  log("✅ Nocna sesja zakończona — szczegóły w data/overnight-gemini.log");
+  log("✅ Nocna sesja zakończona - szczegóły w data/overnight-gemini.log");
   log("   Teoria SQL: supabase/theory-lessons-update.sql");
   log("   Teoria log: data/theory-cache/overnight.log");
   log("   CKE log:    data/cke-matura-cache/overnight.log");

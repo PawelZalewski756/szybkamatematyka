@@ -161,7 +161,7 @@ function TheoryTab({
           Teoria w przygotowaniu
         </p>
         <p className="mt-2 text-sm text-muted">
-          Możesz już ćwiczyć zadania — lekcja pojawi się wkrótce.
+          Możesz już ćwiczyć zadania - lekcja pojawi się wkrótce.
         </p>
         <button type="button" onClick={onGoToArena} className="btn-primary mt-6 px-5 py-2.5 text-sm">
           Przejdź do zadań

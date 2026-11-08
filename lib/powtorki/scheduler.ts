@@ -8,7 +8,7 @@ import type { ReviewItem } from "@/lib/powtorki/types";
  *   - błędna    → q = 2  (poniżej progu 3 = reset powtórek)
  *
  * Po poprawnej odpowiedzi interwał rośnie: 1 dzień → 3 dni → interwał × EF.
- * Po błędnej — reset: zadanie wraca do kolejki po krótkim czasie (tego samego
+ * Po błędnej - reset: zadanie wraca do kolejki po krótkim czasie (tego samego
  * dnia / w następnej sesji), a EF lekko maleje.
  */
 
@@ -16,7 +16,7 @@ export const MIN_EASINESS = 1.3;
 export const DEFAULT_EASINESS = 2.5;
 export const FIRST_INTERVAL_DAYS = 1;
 export const SECOND_INTERVAL_DAYS = 3;
-/** Po błędzie zadanie wraca po tym czasie (krótki interwał — ta sama sesja/dzień). */
+/** Po błędzie zadanie wraca po tym czasie (krótki interwał - ta sama sesja/dzień). */
 export const WRONG_RETRY_MINUTES = 10;
 
 const DAY_MS = 24 * 60 * 60 * 1000;

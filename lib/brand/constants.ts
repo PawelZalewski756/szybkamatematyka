@@ -4,10 +4,10 @@ export const BRAND_NAME = "Szybka Matematyka";
 /** Krótki wariant na mobile / PWA. */
 export const BRAND_NAME_SHORT = "Szybka Matematyka";
 
-/** Dopełniacz — np. „do Szybkiej Matematyki”. */
+/** Dopełniacz - np. „do Szybkiej Matematyki”. */
 export const BRAND_NAME_GENITIVE = "Szybkiej Matematyki";
 
-/** Miejscownik — np. „w Szybkiej Matematyce”. */
+/** Miejscownik - np. „w Szybkiej Matematyce”. */
 export const BRAND_NAME_LOCATIVE = "Szybkiej Matematyce";
 
 /** Domyślna domena produkcyjna. */

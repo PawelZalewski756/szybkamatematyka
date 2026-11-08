@@ -75,7 +75,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "mnozenie",
     title: "Mnożenie",
-    description: "Tabliczka mnożenia — liczby do 12 × 12.",
+    description: "Tabliczka mnożenia - liczby do 12 × 12.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["sp"],
@@ -87,7 +87,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "dodawanie",
     title: "Dodawanie",
-    description: "Suma liczb naturalnych — liczby do 100.",
+    description: "Suma liczb naturalnych - liczby do 100.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["sp"],
@@ -99,7 +99,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "odejmowanie",
     title: "Odejmowanie",
-    description: "Różnica liczb naturalnych — liczby do 100.",
+    description: "Różnica liczb naturalnych - liczby do 100.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["sp"],
@@ -111,7 +111,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "dzielenie",
     title: "Dzielenie",
-    description: "Dzielenie liczb naturalnych — bez reszty.",
+    description: "Dzielenie liczb naturalnych - bez reszty.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-4", "klasa-5", "klasa-6", "klasa-7", "klasa-8"],
@@ -123,7 +123,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "porownaj",
     title: "Porównanie Liczb",
-    description: "Która liczba jest większa — wybierz stronę.",
+    description: "Która liczba jest większa - wybierz stronę.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["sp"],
@@ -135,7 +135,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "ulamki",
     title: "Porównanie Ułamków",
-    description: "Która część jest większa — ułamki zwykłe.",
+    description: "Która część jest większa - ułamki zwykłe.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8"],
@@ -147,7 +147,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "procenty",
     title: "Procenty",
-    description: "Oblicz procent z liczby — liczby 100 do 1000.",
+    description: "Oblicz procent z liczby - liczby 100 do 1000.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -159,7 +159,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "potegi",
     title: "Potęgi",
-    description: "Właściwości potęg — sprawdzaj obliczenia.",
+    description: "Właściwości potęg - sprawdzaj obliczenia.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -171,7 +171,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "pierwiastki",
     title: "Pierwiastki Kwadratowe",
-    description: "Oblicz pierwiastek — liczby do 400.",
+    description: "Oblicz pierwiastek - liczby do 400.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -183,7 +183,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "rownania",
     title: "Równania Liniowe",
-    description: "Rozwiąż równanie ax + b = c — znajdź x.",
+    description: "Rozwiąż równanie ax + b = c - znajdź x.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -195,7 +195,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "ciag",
     title: "Ciągi Liczbowe",
-    description: "Rozpoznaj wzór — arytmetyczną lub geometryczną.",
+    description: "Rozpoznaj wzór - arytmetyczną lub geometryczną.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-4", "klasa-5", "klasa-6", "klasa-7", "klasa-8", "liceum"],
@@ -207,7 +207,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "nawiasy",
     title: "Kolejność Działań",
-    description: "Mnożenie i dzielenie przed dodawaniem — bez błędów.",
+    description: "Mnożenie i dzielenie przed dodawaniem - bez błędów.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-5", "klasa-6", "klasa-7", "klasa-8"],
@@ -219,7 +219,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "funkcje",
     title: "Funkcje Liniowe",
-    description: "Oblicz wartość f(x) dla x — funkcja y = ax + b.",
+    description: "Oblicz wartość f(x) dla x - funkcja y = ax + b.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["liceum", "technikum", "zawodowa"],
@@ -231,7 +231,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "wzory",
     title: "Wzory Skróconego Mnożenia",
-    description: "Rozpoznaj wzór — (a+b)², (a−b)² i inne.",
+    description: "Rozpoznaj wzór - (a+b)², (a−b)² i inne.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["liceum-2", "liceum-3", "liceum-4", "technikum", "zawodowa"],
@@ -243,7 +243,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "logarytmy",
     title: "Logarytmy",
-    description: "Właściwości logarytmów — sprawdzaj obliczenia.",
+    description: "Właściwości logarytmów - sprawdzaj obliczenia.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: [
@@ -263,7 +263,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "pole",
     title: "Pole Figur",
-    description: "Oblicz pole prostokąta i innych figur — wzór a × b.",
+    description: "Oblicz pole prostokąta i innych figur - wzór a × b.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-5", "klasa-6", "klasa-7", "klasa-8"],
@@ -275,7 +275,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "obwod",
     title: "Obwód",
-    description: "Oblicz obwód figury — suma długości boków.",
+    description: "Oblicz obwód figury - suma długości boków.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-4", "klasa-5", "klasa-6", "klasa-7"],
@@ -287,7 +287,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "nwd",
     title: "Największy Wspólny Dzielnik",
-    description: "Znajdź NWD — do skracania ułamków.",
+    description: "Znajdź NWD - do skracania ułamków.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum"],
@@ -311,7 +311,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "przeciwna",
     title: "Liczba Przeciwna",
-    description: "Znajdź przeciwną liczbę — zmień znak.",
+    description: "Znajdź przeciwną liczbę - zmień znak.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8"],
@@ -323,7 +323,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "potegi-10",
     title: "Potęgi Liczby 10",
-    description: "Oblicz 10², 10³ — pracuj bez kalkulatora.",
+    description: "Oblicz 10², 10³ - pracuj bez kalkulatora.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum"],
@@ -335,7 +335,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "trojkat",
     title: "Trójkąty",
-    description: "Właściwości trójkątów — suma kątów 180°.",
+    description: "Właściwości trójkątów - suma kątów 180°.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8"],
@@ -359,7 +359,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "sinusy",
     title: "Sinus",
-    description: "Wartości sinusa dla kątów — 0°, 30°, 45°, 60°, 90°.",
+    description: "Wartości sinusa dla kątów - 0°, 30°, 45°, 60°, 90°.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["liceum-2", "liceum-3", "liceum-4", "technikum", "zawodowa"],
@@ -371,7 +371,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "kosinusy",
     title: "Cosinus",
-    description: "Wartości cosinusa dla kątów — 0°, 30°, 45°, 60°, 90°.",
+    description: "Wartości cosinusa dla kątów - 0°, 30°, 45°, 60°, 90°.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["liceum-2", "liceum-3", "liceum-4", "technikum", "zawodowa"],
@@ -383,7 +383,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "nww",
     title: "Najmniejsza Wspólna Wielokrotność",
-    description: "Znajdź NWW — do wspólnych mianowników.",
+    description: "Znajdź NWW - do wspólnych mianowników.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum"],
@@ -395,7 +395,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "kwadrat",
     title: "Kwadrat Liczby",
-    description: "Podnies liczbę do kwadratu — liczby do 31.",
+    description: "Podnies liczbę do kwadratu - liczby do 31.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum"],
@@ -407,7 +407,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "modulo",
     title: "Modulo",
-    description: "Znajdź resztę z dzielenia — liczby do 100.",
+    description: "Znajdź resztę z dzielenia - liczby do 100.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-5", "klasa-6", "klasa-7", "klasa-8"],
@@ -419,7 +419,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "wartosc-bezwzgledna",
     title: "Wartość Bezwzględna",
-    description: "Oblicz |x| — zawsze dodatnia wartość liczby.",
+    description: "Oblicz |x| - zawsze dodatnia wartość liczby.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -443,7 +443,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "pole-kola",
     title: "Pole Koła",
-    description: "Oblicz pole koła — wzór πr².",
+    description: "Oblicz pole koła - wzór πr².",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-8", "liceum", "technikum", "zawodowa"],
@@ -455,7 +455,7 @@ export const MINIGAME_REGISTRY: MinigameRegistryEntry[] = [
   {
     slug: "srednia",
     title: "Średnia Arytmetyczna",
-    description: "Oblicz średnią z liczb — suma podzielona przez ilość.",
+    description: "Oblicz średnią z liczb - suma podzielona przez ilość.",
     gradient: MINIGAME_CARD_CLASS,
     glow: MINIGAME_CARD_GLOW,
     forPaths: ["klasa-6", "klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],

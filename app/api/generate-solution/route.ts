@@ -40,7 +40,7 @@ function checkRateLimit(key: string): {
 
 export async function POST(request: Request) {
   try {
-    // 1) Autoryzacja: endpoint pali quota Gemini — tylko admin (panel / seed).
+    // 1) Autoryzacja: endpoint pali quota Gemini - tylko admin (panel / seed).
     const auth = await verifyAdminRequest(request);
     if (!auth.ok) {
       return Response.json({ error: auth.error }, { status: auth.status });

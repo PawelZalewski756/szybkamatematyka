@@ -113,7 +113,7 @@ async function fetchLeaderboardRows(
   let error = full.error as PostgrestError | null;
 
   // Zakładka „Pojedynki": gdy migracja duel jeszcze nie uruchomiona (brak kolumn
-  // duel_*), ranking jest po prostu pusty — NIE wpadamy w fallback do xp, by nie
+  // duel_*), ranking jest po prostu pusty - NIE wpadamy w fallback do xp, by nie
   // pokazać błędnie posortowanej listy.
   if (tab === "pojedynki") {
     if (error) {

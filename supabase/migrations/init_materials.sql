@@ -16,8 +16,8 @@
 -- x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 -- $$
 --
--- - Dla $\Delta > 0$ — dwa pierwiastki rzeczywiste
--- - Dla $\Delta = 0$ — jeden pierwiastek podwójny
+-- - Dla $\Delta > 0$ - dwa pierwiastki rzeczywiste
+-- - Dla $\Delta = 0$ - jeden pierwiastek podwójny
 -- $md$
 -- );
 

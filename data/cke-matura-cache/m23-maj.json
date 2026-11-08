@@ -1,6 +1,6 @@
 {
   "sessionId": "m23-maj",
-  "nazwa": "Matura — maj 2023 — poziom podstawowy",
+  "nazwa": "Matura - maj 2023 - poziom podstawowy",
   "rok": 2023,
   "miesiac": 5,
   "tasks": [
@@ -62,7 +62,7 @@
       "numer": 10,
       "dzial": "Ciągi",
       "tresc": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (𝑥 , 𝑦) jednego z niżej zapisanych układów równań A – D. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest A) ![Rysunek do zadania](/cke-matura/m23-maj/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)",
-      "rozwiazanie": "**Krok 1.** Zauważ, że na rysunku znajdują się dwie proste — pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.\n**Krok 2.** Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.\n**Krok 3.** Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$).\n**Odpowiedź:** B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$"
+      "rozwiazanie": "**Krok 1.** Zauważ, że na rysunku znajdują się dwie proste - pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.\n**Krok 2.** Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.\n**Krok 3.** Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$).\n**Odpowiedź:** B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$"
     },
     {
       "numer": 11,

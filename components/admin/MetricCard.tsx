@@ -10,7 +10,7 @@ type MetricCardProps = {
 };
 
 /**
- * Pojedyncza karta metryki — spójna ze stylem `PlatformStatus`
+ * Pojedyncza karta metryki - spójna ze stylem `PlatformStatus`
  * (półprzezroczyste tło, ramka, ikona + etykieta + duża wartość).
  */
 export function MetricCard({

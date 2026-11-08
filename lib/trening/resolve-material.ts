@@ -11,7 +11,7 @@ function seedMaterialKey(examType: ExamType, category: string, topic: string) {
   return `${SEED_ID_PREFIX}${examType}:${category}:${topic}`;
 }
 
-/** Materiał z lokalnego seeda (Phase 3a) — fallback gdy Supabase nie ma wiersza. */
+/** Materiał z lokalnego seeda (Phase 3a) - fallback gdy Supabase nie ma wiersza. */
 export function resolveSeedMaterial(
   examType: ExamType,
   category: string,

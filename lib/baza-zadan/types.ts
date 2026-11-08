@@ -18,10 +18,10 @@ export type TaskCategory =
 
 export type TaskDifficulty = "latwy" | "sredni" | "trudny";
 
-/** Typ arkusza — segregacja w UI (matura = miejsce na przyszłe arkusze CKE). */
+/** Typ arkusza - segregacja w UI (matura = miejsce na przyszłe arkusze CKE). */
 export type ExamSheetKind = "trening" | "egzamin-8" | "matura";
 
-/** Źródło zadania egzaminacyjnego — do filtrowania i etykiet w UI. */
+/** Źródło zadania egzaminacyjnego - do filtrowania i etykiet w UI. */
 export type ExamSource = {
   kind: "egzamin-8" | "matura";
   /** Rok arkusza (np. 2024). */
@@ -43,7 +43,7 @@ export type Task = {
   correctIndex: number;
   /** Krótkie podsumowanie po odpowiedzi. */
   explanation: string;
-  /** Rozwiązanie krok po kroku — dla arkuszy E8 / matury. */
+  /** Rozwiązanie krok po kroku - dla arkuszy E8 / matury. */
   solutionSteps?: readonly string[];
   hint?: string;
   examTags?: readonly string[];

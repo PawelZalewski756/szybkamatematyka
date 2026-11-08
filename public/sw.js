@@ -1,8 +1,8 @@
 /**
- * Lekki service worker — tylko powłoka aplikacji (/, /offline).
+ * Lekki service worker - tylko powłoka aplikacji (/, /offline).
  * Nie cache’uje bazy zadań, API ani tras dynamicznych.
  *
- * Push notifications (Web Push + VAPID) — odłożone: wymaga kluczy serwera
+ * Push notifications (Web Push + VAPID) - odłożone: wymaga kluczy serwera
  * i handlera push w SW. Przypomnienia o serii działają przez Notification API
  * w otwartej karcie (lib/reminders/*); bez VAPID nie rejestrujemy push.
  */

@@ -44,13 +44,13 @@ export function OnlineDuel({
   const title = duelMinigameTitle(slug);
 
   // Przejście do areny po starcie zsynchronizowanym przez hosta (sygnał z
-  // zewnętrznego systemu — Realtime broadcast).
+  // zewnętrznego systemu - Realtime broadcast).
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (rt.status === "started" && rt.startAt) setView("arena");
   }, [rt.status, rt.startAt]);
 
-  // Po zebraniu obu wyników — ekran rozstrzygnięcia (wynik rywala przychodzi
+  // Po zebraniu obu wyników - ekran rozstrzygnięcia (wynik rywala przychodzi
   // broadcastem).
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect

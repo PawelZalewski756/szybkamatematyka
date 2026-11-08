@@ -25,7 +25,7 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 | `STRIPE_PRICE_ROCZNY` | płatności | Price ID planu rocznego |
 
 `ADMIN_EMAILS` jest źródłem prawdy po stronie serwera. `NEXT_PUBLIC_ADMIN_EMAILS`
-służy tylko do ukrycia/pokazania panelu w przeglądarce — obie wartości muszą być
+służy tylko do ukrycia/pokazania panelu w przeglądarce - obie wartości muszą być
 identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
 Bot Telegrama przyjmuje wyłącznie prywatne wiadomości od ID z `TELEGRAM_ADMIN_IDS`.
@@ -78,7 +78,7 @@ Workflow deployuje tylko push na `master`, po udanym CI/E2E i migracjach.
 tych samych komend co CI. Historia migracji i ostatni commit obsłużony przez
 workflow są zapisywane w prywatnych tabelach Supabase; nie kasuj ich ręcznie.
 
-## 2. Supabase — kolejność SQL
+## 2. Supabase - kolejność SQL
 
 Repozytorium zawiera starsze pliki SQL przeznaczone do uruchamiania w SQL
 Editorze. Nie uruchamiaj ich w przypadkowej kolejności. Na świeżym projekcie
@@ -145,7 +145,7 @@ listę, m.in. o `cwel` wraz z odmianami, `debil`, `kretyn` i `dumbass`.
 Migracja `20260907000000` naprawia granty odczytu dla opcjonalnych kolumn
 profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
 `20261027140000` dodaje brakujące granty **zapisu** (`UPDATE`/`INSERT` na nick,
-XP, klasę, streak itd.) — bez niej onboarding nicku i zapis EXP kończą się
+XP, klasę, streak itd.) - bez niej onboarding nicku i zapis EXP kończą się
 `permission denied`. Obie są ważne przy aktualizacji istniejącego projektu.
 
 Własne anonimowe statystyki odsłon i zdarzeń oraz komendy `/visits` i `/funnel`
@@ -163,7 +163,7 @@ Pomiar konwersji Google Ads jest odrębnym mechanizmem i pozostaje aktywny.
 
 `20260529120000_harden_rls_admin_writes.sql` i
 `20260529150000_audit_harden_new_tables_rls.sql` są starszymi, częściowymi
-plikami hardeningu. Nie są wymagane w nowej instalacji — końcowa migracja
+plikami hardeningu. Nie są wymagane w nowej instalacji - końcowa migracja
 odtwarza ich potrzebne elementy po utworzeniu tabel.
 
 Migracja hardeningu sprawdza istnienie tabel bazowych i końcowo ustawia RLS. Zamyka

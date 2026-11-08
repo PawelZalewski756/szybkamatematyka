@@ -7,7 +7,7 @@ function t(
   return { id, ...data };
 }
 
-/** Starannie dobrane zadania — rdzeń bazy. */
+/** Starannie dobrane zadania - rdzeń bazy. */
 export const STATIC_TASKS: Task[] = [
   t("st-001", {
     title: "Mnożenie dwucyfrowe",
@@ -51,7 +51,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "0,2 × 150 = 30.",
   }),
   t("st-005", {
-    title: "Procent — podwyżka",
+    title: "Procent - podwyżka",
     category: "procenty",
     difficulty: "sredni",
     forPaths: ["klasa-7", "klasa-8", "liceum", "technikum", "zawodowa"],
@@ -161,7 +161,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "sin(30°) = 1/2.",
   }),
   t("st-016", {
-    title: "Egzamin — potęga ujemna",
+    title: "Egzamin - potęga ujemna",
     category: "egzamin-8",
     difficulty: "trudny",
     forPaths: ["klasa-8"],
@@ -172,7 +172,7 @@ export const STATIC_TASKS: Task[] = [
     examTags: ["egzamin-8-klasisty"],
   }),
   t("st-017", {
-    title: "Matura — wzór skrócony",
+    title: "Matura - wzór skrócony",
     category: "matura",
     difficulty: "sredni",
     forPaths: ["liceum-4", "technikum", "zawodowa"],
@@ -253,7 +253,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "2³⁺⁴ = 2⁷.",
   }),
   t("st-025", {
-    title: "Pierwiastek z sumy — pułapka",
+    title: "Pierwiastek z sumy - pułapka",
     category: "pierwiastki",
     difficulty: "trudny",
     forPaths: ["klasa-8", "technikum", "zawodowa"],
@@ -303,7 +303,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "cos(60°) = 1/2.",
   }),
   t("st-030", {
-    title: "Egzamin — procent w zadaniu",
+    title: "Egzamin - procent w zadaniu",
     category: "egzamin-8",
     difficulty: "sredni",
     forPaths: ["klasa-8"],
@@ -354,7 +354,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "P = πr² ≈ 3,14 × 9 = 28,26 cm².",
   }),
   t("st-035", {
-    title: "Ułamki — odejmowanie",
+    title: "Ułamki - odejmowanie",
     category: "ulamki",
     difficulty: "latwy",
     forPaths: ["klasa-5", "klasa-6", "klasa-7"],
@@ -374,7 +374,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "5⁻² = 1/5² = 1/25.",
   }),
   t("st-037", {
-    title: "Równanie kwadratowe — proste",
+    title: "Równanie kwadratowe - proste",
     category: "rownania",
     difficulty: "trudny",
     forPaths: ["liceum-2", "liceum-3", "liceum-4", "technikum", "zawodowa"],
@@ -394,7 +394,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "tg(45°) = 1.",
   }),
   t("st-039", {
-    title: "Egzamin — skala mapy",
+    title: "Egzamin - skala mapy",
     category: "egzamin-8",
     difficulty: "sredni",
     forPaths: ["klasa-8", "egzamin-8"],
@@ -405,7 +405,7 @@ export const STATIC_TASKS: Task[] = [
     examTags: ["egzamin-8-klasisty"],
   }),
   t("st-040", {
-    title: "Matura — pochodna intuicyjnie",
+    title: "Matura - pochodna intuicyjnie",
     category: "matura",
     difficulty: "trudny",
     forPaths: ["matura"],
@@ -426,7 +426,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "29 = 4×7 + 1.",
   }),
   t("st-042", {
-    title: "Procent — obniżka",
+    title: "Procent - obniżka",
     category: "procenty",
     difficulty: "sredni",
     forPaths: ["klasa-7", "klasa-8", "egzamin-8"],
@@ -436,7 +436,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "120 × 0,75 = 90 zł.",
   }),
   t("st-043", {
-    title: "Ciąg geometryczny — iloraz",
+    title: "Ciąg geometryczny - iloraz",
     category: "ciagi",
     difficulty: "sredni",
     forPaths: ["liceum", "technikum", "zawodowa"],
@@ -456,7 +456,7 @@ export const STATIC_TASKS: Task[] = [
     explanation: "√36 = 6.",
   }),
   t("st-045", {
-    title: "Funkcja — miejsce zerowe",
+    title: "Funkcja - miejsce zerowe",
     category: "funkcje",
     difficulty: "sredni",
     forPaths: ["liceum-2", "liceum-3", "liceum-4", "technikum", "zawodowa"],

@@ -1,4 +1,4 @@
-﻿/** Re-eksport — jeden pipeline normalizacji rozwiązań (UI + seed). */
+﻿/** Re-eksport - jeden pipeline normalizacji rozwiązań (UI + seed). */
 export {
   SOLUTION_PLACEHOLDER_MARK,
   formatSolutionForDisplay,

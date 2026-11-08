@@ -21,7 +21,7 @@ function main() {
   }));
 
   const lines = [
-    "/** AUTO-GENERATED — npm run seed:theory-index. Nie edytuj ręcznie. */",
+    "/** AUTO-GENERATED - npm run seed:theory-index. Nie edytuj ręcznie. */",
     'import type { ExamType } from "@/types/database";',
     'import type { TheoryTier } from "@/lib/trening/theory-content";',
     "",

@@ -9,7 +9,7 @@ export type ParsedAbcd = {
   hasChoices: boolean;
 };
 
-export const OPEN_TASK_PLACEHOLDER = "Zadanie otwarte — patrz rozwiązanie";
+export const OPEN_TASK_PLACEHOLDER = "Zadanie otwarte - patrz rozwiązanie";
 
 const HTML_ENTITIES: Record<string, string> = {
   "&nbsp;": " ",
@@ -69,7 +69,7 @@ export function cleanCkeTaskMarkup(tresc: string): string {
 
 /**
  * Zadania „Oceń prawdziwość” mają wiele par A) prawda / B) fałsz.
- * Nie mieszczą się w jednym MC z `correctIndex` — traktujemy jako otwarte
+ * Nie mieszczą się w jednym MC z `correctIndex` - traktujemy jako otwarte
  * (pełna treść + rozwiązanie krok po kroku).
  */
 export function isMultiClaimTrueFalse(tresc: string): boolean {
@@ -124,7 +124,7 @@ export function parseAbcd(tresc: string): ParsedAbcd {
     };
   }
 
-  // Jeśli parser i tak wyciął zduplikowane same etykiety P/F — otwarte.
+  // Jeśli parser i tak wyciął zduplikowane same etykiety P/F - otwarte.
   const normalized = choices.map((c) => c.trim().toLowerCase());
   const onlyPfLabels = normalized.every(
     (c) => c === "prawda" || c === "fałsz" || c.startsWith("prawda ") || c.startsWith("fałsz "),

@@ -100,13 +100,13 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   if (command === "help") {
     return [
       "Komendy administratora:",
-      "/stats — użytkownicy, nowe konta i zadania",
-      "/new — ostatnie rejestracje",
-      "/users [strona] — lista wszystkich użytkowników",
-      "/top — ranking XP",
+      "/stats - użytkownicy, nowe konta i zadania",
+      "/new - ostatnie rejestracje",
+      "/users [strona] - lista wszystkich użytkowników",
+      "/top - ranking XP",
       "/szybkaproba - statystyki szybkiej próby",
-      "/health — sprawdzenie połączenia",
-      "/pomoc — pokaż tę listę",
+      "/health - sprawdzenie połączenia",
+      "/pomoc - pokaż tę listę",
     ].join("\n");
   }
 
@@ -167,7 +167,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
           .replace(/[\r\n]/g, " ")
           .slice(0, 80);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
-        return `• ${name} — ${date}`;
+        return `• ${name} - ${date}`;
       }),
     ].join("\n");
   }
@@ -206,7 +206,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
     return [
-      `Wszyscy użytkownicy — strona ${requestedPage}/${totalPages}`,
+      `Wszyscy użytkownicy - strona ${requestedPage}/${totalPages}`,
       `Wyświetlam ${firstUserNumber}–${firstUserNumber + data.users.length - 1} z ${totalUsers}:`,
       ...data.users.map((user, index) => {
         const name = getAuthUserName(user, profileNames);
@@ -240,7 +240,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
         const name = (user.nick || user.nickname || "bez nicku")
           .replace(/[\r\n]/g, " ")
           .slice(0, 80);
-        return `${index + 1}. ${name} — ${user.xp ?? 0} XP`;
+        return `${index + 1}. ${name} - ${user.xp ?? 0} XP`;
       }),
     ].join("\n");
   }
@@ -253,13 +253,13 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
   return [
     "Komendy administratora:",
-    "/stats — użytkownicy, nowe konta i zadania",
-    "/new — ostatnie rejestracje",
-    "/users [strona] — lista wszystkich użytkowników",
-    "/top — ranking XP",
+    "/stats - użytkownicy, nowe konta i zadania",
+    "/new - ostatnie rejestracje",
+    "/users [strona] - lista wszystkich użytkowników",
+    "/top - ranking XP",
     "/szybkaproba - statystyki szybkiej próby",
-    "/health — sprawdzenie połączenia",
-    "/pomoc — pokaż tę listę",
+    "/health - sprawdzenie połączenia",
+    "/pomoc - pokaż tę listę",
   ].join("\n");
 }
 

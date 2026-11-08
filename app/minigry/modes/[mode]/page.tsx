@@ -34,7 +34,7 @@ export async function generateMetadata({
   const config = getModeConfig(mode);
 
   return {
-    title: `Minigry — tryb ${config.title}`,
+    title: `Minigry - tryb ${config.title}`,
     description: `${config.description} Wybierz minigrę matematyczną i graj w trybie ${config.title}.`,
     alternates: { canonical: `/minigry/modes/${config.slug}` },
   };

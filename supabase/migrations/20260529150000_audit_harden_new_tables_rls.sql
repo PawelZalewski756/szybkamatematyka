@@ -12,16 +12,16 @@
 -- (daily_challenges, review_schedule, duel_rooms) oraz po add_subscription_columns.
 --
 -- Zakres:
---   1) daily_challenges  — domknięcie polityk (brakowało UPDATE/DELETE własnych wierszy).
---   2) review_schedule   — weryfikacja (komplet polityk już poprawny — tylko re-assert RLS).
---   3) duel_rooms        — casual feature: świadomie otwarte, + trigger immutability
+--   1) daily_challenges  - domknięcie polityk (brakowało UPDATE/DELETE własnych wierszy).
+--   2) review_schedule   - weryfikacja (komplet polityk już poprawny - tylko re-assert RLS).
+--   3) duel_rooms        - casual feature: świadomie otwarte, + trigger immutability
 --                          na kolumny strukturalne (anty-hijack pokoju).
---   4) profiles          — ZAMKNIĘCIE luki self-upgrade subskrypcji (trigger).
+--   4) profiles          - ZAMKNIĘCIE luki self-upgrade subskrypcji (trigger).
 -- =============================================================================
 
 
 -- ---------------------------------------------------------------------------
--- 1) daily_challenges — dane prywatne gracza: pełny zestaw polityk own-row.
+-- 1) daily_challenges - dane prywatne gracza: pełny zestaw polityk own-row.
 --    Pierwotna migracja miała tylko SELECT + INSERT. Brak UPDATE/DELETE przy
 --    włączonym RLS = te operacje były domyślnie zabronione. To blokuje m.in.
 --    `insert ... on conflict do update` (upsert anti-double-XP wymaga UPDATE).
@@ -30,11 +30,11 @@
 do $$
 begin
   if to_regclass('public.daily_challenges') is null then
-    raise notice 'pomijam daily_challenges — tabela nie istnieje';
+    raise notice 'pomijam daily_challenges - tabela nie istnieje';
   else
     execute 'alter table public.daily_challenges enable row level security';
 
-    -- (SELECT/INSERT own-row są już poprawne w migracji init — nie ruszamy.)
+    -- (SELECT/INSERT own-row są już poprawne w migracji init - nie ruszamy.)
 
     execute 'drop policy if exists "daily_challenges_update_own" on public.daily_challenges';
     execute $pol$
@@ -57,15 +57,15 @@ end $$;
 
 
 -- ---------------------------------------------------------------------------
--- 2) review_schedule — weryfikacja audytowa.
+-- 2) review_schedule - weryfikacja audytowa.
 --    Komplet polityk own-row (SELECT/INSERT/UPDATE/DELETE, auth.uid() = user_id)
 --    jest już poprawny w migracji 20260529140000_add_review_schedule.sql.
---    Nie duplikujemy poprawnych polityk — jedynie idempotentnie potwierdzamy RLS.
+--    Nie duplikujemy poprawnych polityk - jedynie idempotentnie potwierdzamy RLS.
 -- ---------------------------------------------------------------------------
 do $$
 begin
   if to_regclass('public.review_schedule') is null then
-    raise notice 'pomijam review_schedule — tabela nie istnieje';
+    raise notice 'pomijam review_schedule - tabela nie istnieje';
   else
     execute 'alter table public.review_schedule enable row level security';
   end if;
@@ -73,22 +73,22 @@ end $$;
 
 
 -- ---------------------------------------------------------------------------
--- 3) duel_rooms — casual feature (kody pokojów), goście grają ANONIMOWO.
+-- 3) duel_rooms - casual feature (kody pokojów), goście grają ANONIMOWO.
 --
 --    DECYZJA: zostawiamy SELECT/INSERT/UPDATE otwarte dla anon+authenticated.
 --    Uzasadnienie: pokój jest udostępniany przez losowy, krótkotrwały kod, a
---    gość dołącza bez logowania — wymuszenie `authenticated` lub własności
+--    gość dołącza bez logowania - wymuszenie `authenticated` lub własności
 --    wiersza ZŁAMAŁOBY feature (brak tożsamości po stronie gościa).
 --
 --    RYZYKO (świadomie akceptowane, brak danych wrażliwych/PII):
 --      * SELECT using(true) pozwala teoretycznie wylistować wszystkie pokoje
 --        (RLS nie potrafi wymusić filtra `where code = ...`, klient może go pominąć).
 --      * INSERT/UPDATE open pozwala dowolnemu klientowi nadpisać wynik/status pokoju.
---    Pokoje są efemeryczne i nie zawierają danych osobowych — ryzyko niskie.
+--    Pokoje są efemeryczne i nie zawierają danych osobowych - ryzyko niskie.
 --
 --    UTWARDZENIE, które NIE psuje anonimowej gry: trigger BEFORE UPDATE czyni
 --    kolumny strukturalne NIEZMIENNYMI (anty-hijack: nie da się podmienić celu
---    pokoju — slug/path/seed itd.). Zmieniać można tylko stan rozgrywki
+--    pokoju - slug/path/seed itd.). Zmieniać można tylko stan rozgrywki
 --    (guest_name, host_result, guest_result, status). Brak polityki DELETE =
 --    usuwanie zabronione dla wszystkich (pozostawiamy świadomie).
 -- ---------------------------------------------------------------------------
@@ -113,7 +113,7 @@ $$;
 do $$
 begin
   if to_regclass('public.duel_rooms') is null then
-    raise notice 'pomijam duel_rooms — tabela nie istnieje';
+    raise notice 'pomijam duel_rooms - tabela nie istnieje';
   else
     execute 'alter table public.duel_rooms enable row level security';
 
@@ -128,10 +128,10 @@ end $$;
 
 
 -- ---------------------------------------------------------------------------
--- 4) profiles — ZAMKNIĘCIE luki SELF-UPGRADE subskrypcji.
+-- 4) profiles - ZAMKNIĘCIE luki SELF-UPGRADE subskrypcji.
 --
 --    PROBLEM: polityka `profiles_update_own` (using/with check auth.uid() = id)
---    działa NA POZIOMIE WIERSZA — nie ogranicza, KTÓRE kolumny user może zmienić.
+--    działa NA POZIOMIE WIERSZA - nie ogranicza, KTÓRE kolumny user może zmienić.
 --    Zalogowany user mógłby więc wykonać:
 --        update public.profiles
 --           set subscription_status = 'active', subscription_plan = 'pro'
@@ -184,16 +184,16 @@ do $$
 begin
   -- Trigger tworzymy tylko, gdy istnieje tabela profiles ORAZ kolumny subskrypcji
   -- (dodawane przez 20260529130000_add_subscription_columns.sql). Bez kolumn
-  -- trigger zgłaszałby błąd w runtime — dlatego twardo to sprawdzamy.
+  -- trigger zgłaszałby błąd w runtime - dlatego twardo to sprawdzamy.
   if to_regclass('public.profiles') is null then
-    raise notice 'pomijam profiles — tabela nie istnieje';
+    raise notice 'pomijam profiles - tabela nie istnieje';
   elsif not exists (
     select 1 from information_schema.columns
     where table_schema = 'public'
       and table_name = 'profiles'
       and column_name = 'subscription_status'
   ) then
-    raise notice 'pomijam profiles — brak kolumn subskrypcji (uruchom najpierw add_subscription_columns)';
+    raise notice 'pomijam profiles - brak kolumn subskrypcji (uruchom najpierw add_subscription_columns)';
   else
     execute 'drop trigger if exists protect_subscription_columns_trg on public.profiles';
     execute $trg$

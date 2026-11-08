@@ -2,7 +2,7 @@ import { ReviewAccessGate } from "@/components/powtorki/ReviewAccessGate";
 import { PowtorkiView } from "@/components/powtorki/PowtorkiView";
 
 export const metadata = {
-  title: "Powtórki — Szybka Matematyka",
+  title: "Powtórki - Szybka Matematyka",
   description:
     "Inteligentne powtórki w systemie spaced repetition. Utrwalaj zadania, z którymi miałeś problem, w optymalnych odstępach czasu.",
 };

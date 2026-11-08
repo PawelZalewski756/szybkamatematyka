@@ -43,7 +43,7 @@ const MAXED: PlayerStats = {
   weekendWarrior: true,
 };
 
-describe("katalog osiągnięć — integralność", () => {
+describe("katalog osiągnięć - integralność", () => {
   it("zawiera 15–30 odznak", () => {
     expect(ACHIEVEMENTS_TOTAL).toBe(ACHIEVEMENTS.length);
     expect(ACHIEVEMENTS_TOTAL).toBeGreaterThanOrEqual(15);
@@ -177,7 +177,7 @@ describe("buildPlayerStats", () => {
       duelChallengesCreated: 1,
       behavior: emptyBehavior,
     });
-    // Krzywa BASE*1.32^(n-1) — poziom z XP, nie z pola profile.level
+    // Krzywa BASE*1.32^(n-1) - poziom z XP, nie z pola profile.level
     expect(stats.level).toBe(calculateLevel(1200));
     expect(stats.minigryLevel).toBe(calculateLevel(600));
     expect(stats.solvedCount).toBe(12);
@@ -271,7 +271,7 @@ describe("mergeSeenIds", () => {
   });
 
   it("zachowuje widziane z dowolnego urządzenia (sticky)", () => {
-    // Odznaka widziana tylko lokalnie i tylko w chmurze — obie pozostają.
+    // Odznaka widziana tylko lokalnie i tylko w chmurze - obie pozostają.
     const local = new Set(["night-owl"]);
     const remote = new Set(["early-bird"]);
     const merged = mergeSeenIds(local, remote);

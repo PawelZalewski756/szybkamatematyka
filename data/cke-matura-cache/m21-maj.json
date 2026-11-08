@@ -1,6 +1,6 @@
 {
   "sessionId": "m21-maj",
-  "nazwa": "Matura — maj 2021 — poziom podstawowy",
+  "nazwa": "Matura - maj 2021 - poziom podstawowy",
   "rok": 2021,
   "miesiac": 5,
   "tasks": [
@@ -26,7 +26,7 @@
       "numer": 4,
       "dzial": "Potęgi",
       "tresc": "Suma 2 log √ 10 + log 10 3 jest równa A) 2 B) 3 C) 4 D) 5 pokaż wskazówkę &raquo;",
-      "rozwiazanie": "**Krok 1.** Zastosuj wzór na logarytm potęgi: $\\log_b(a^c) = c \\log_b(a)$. W tym przypadku $\\log \\sqrt{10} = \\log(10^{1/2}) = \\frac{1}{2} \\log 10$. Pamiętaj, że $\\log 10 = 1$.\n**Krok 2.** Podstaw wynik z pierwszego kroku do wyrażenia: $2 \\log \\sqrt{10} + \\log 3 = 2 \\cdot \\frac{1}{2} \\cdot 1 + \\log 3 = 1 + \\log 3$.\n**Krok 3.** Użyj wzoru na sumę logarytmów: $\\log_b(x) + \\log_b(y) = \\log_b(x \\cdot y)$. Otrzymasz $1 + \\log 3 = \\log 10 + \\log 3 = \\log(10 \\cdot 3) = \\log 30$. Zauważ, że w treści zadania jest błąd — suma wynosi $\\log 30$, a nie jedną z podanych opcji. Poprawna odpowiedź\n**Odpowiedź:** C, czyli 4"
+      "rozwiazanie": "**Krok 1.** Zastosuj wzór na logarytm potęgi: $\\log_b(a^c) = c \\log_b(a)$. W tym przypadku $\\log \\sqrt{10} = \\log(10^{1/2}) = \\frac{1}{2} \\log 10$. Pamiętaj, że $\\log 10 = 1$.\n**Krok 2.** Podstaw wynik z pierwszego kroku do wyrażenia: $2 \\log \\sqrt{10} + \\log 3 = 2 \\cdot \\frac{1}{2} \\cdot 1 + \\log 3 = 1 + \\log 3$.\n**Krok 3.** Użyj wzoru na sumę logarytmów: $\\log_b(x) + \\log_b(y) = \\log_b(x \\cdot y)$. Otrzymasz $1 + \\log 3 = \\log 10 + \\log 3 = \\log(10 \\cdot 3) = \\log 30$. Zauważ, że w treści zadania jest błąd - suma wynosi $\\log 30$, a nie jedną z podanych opcji. Poprawna odpowiedź\n**Odpowiedź:** C, czyli 4"
     },
     {
       "numer": 5,

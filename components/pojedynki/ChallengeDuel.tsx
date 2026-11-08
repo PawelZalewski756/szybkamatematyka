@@ -173,7 +173,7 @@ export function ChallengeDuel({
         </h1>
         <p className="mt-3 max-w-md text-muted">
           Zagraj i wyślij znajomemu kod, albo wklej kod, który dostałeś. Ten sam
-          zestaw pytań, porównanie wyników — działa nawet offline.
+          zestaw pytań, porównanie wyników - działa nawet offline.
         </p>
         <div className="mt-8 grid w-full grid-cols-1 gap-3 sm:grid-cols-2">
           <button

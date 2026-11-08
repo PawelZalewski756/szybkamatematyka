@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useCallback, useState } from "react";
 
 type StreakReminderPromptProps = {
-  /** W profilu — pełna karta zamiast pływającego banera. */
+  /** W profilu - pełna karta zamiast pływającego banera. */
   variant?: "banner" | "card";
   className?: string;
 };
@@ -93,11 +93,11 @@ export function StreakReminderPrompt({
             <h2 className="text-overline text-accent">Przypomnienia o serii</h2>
             <p className="mt-1 text-sm text-foreground">
               {permission === "unsupported"
-                ? "Twoja przeglądarka nie obsługuje powiadomień — przypomnimy Ci w aplikacji."
+                ? "Twoja przeglądarka nie obsługuje powiadomień - przypomnimy Ci w aplikacji."
                 : enabled
                   ? "Powiadomienia włączone. Wieczorem przypomnimy, jeśli nie zagrasz dziś."
                   : permission === "denied"
-                    ? "Powiadomienia zablokowane w przeglądarce — nadal zobaczysz baner w aplikacji."
+                    ? "Powiadomienia zablokowane w przeglądarce - nadal zobaczysz baner w aplikacji."
                     : "Włącz przypomnienia, żeby nie stracić serii dni z grą."}
             </p>
             <div className="mt-4 flex flex-wrap gap-2">

@@ -5,7 +5,7 @@ export type MathTextPart =
 
 /**
  * Dzieli tekst na fragmenty zwykłe i LaTeX ($...$, $$...$$).
- * Używane w opcjach ABCD i krótkich etykietach — bez pełnego markdown.
+ * Używane w opcjach ABCD i krótkich etykietach - bez pełnego markdown.
  */
 export function splitMathText(input: string): MathTextPart[] {
   const parts: MathTextPart[] = [];
@@ -44,7 +44,7 @@ export function containsMathDelimiters(text: string): boolean {
   return /\$(?!\$)/.test(text) || /\$\$/.test(text);
 }
 
-/** Usuwa „A. ” z początku opcji — UI i tak pokazuje literę w badge. */
+/** Usuwa „A. ” z początku opcji - UI i tak pokazuje literę w badge. */
 export function stripChoiceLabelPrefix(option: string): string {
   return option.replace(/^[A-Da-d]\.\s*/, "");
 }

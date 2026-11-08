@@ -9,7 +9,7 @@ import { useAchievements } from "@/lib/achievements/use-achievements";
 const MAX_PREVIEW = 8;
 
 /**
- * Zwięzła sekcja „Osiągnięcia" do dashboardu profilu. Additywna — korzysta z
+ * Zwięzła sekcja „Osiągnięcia" do dashboardu profilu. Additywna - korzysta z
  * własnego hooka (te same źródła co strona /osiagniecia), nie dotyka istniejących
  * danych profilu.
  */
@@ -69,7 +69,7 @@ export function ProfileAchievements() {
             return (
               <div
                 key={a.id}
-                title={`${a.title} — ${unlocked ? "zdobyte" : a.description}`}
+                title={`${a.title} - ${unlocked ? "zdobyte" : a.description}`}
                 className={`flex h-10 w-10 items-center justify-center rounded-xl ${
                   unlocked
                     ? "bg-accent text-on-accent shadow-md"

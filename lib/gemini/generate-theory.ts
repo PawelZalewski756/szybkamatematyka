@@ -110,7 +110,7 @@ export async function generateTheoryLessonWithRetry(
       if (validationRetry) {
         validationAttempts += 1;
         console.warn(
-          `  ⏳ Walidacja lekcji — ponawiam (${validationAttempts}/${maxValidationAttempts})…`,
+          `  ⏳ Walidacja lekcji - ponawiam (${validationAttempts}/${maxValidationAttempts})…`,
         );
         await sleep(2000);
         continue;
@@ -125,7 +125,7 @@ export async function generateTheoryLessonWithRetry(
         );
         if (nextIndex !== -1) {
           console.warn(
-            `  ↪ Limit dzienny ${quotaModel} — przełączam na ${modelChain[nextIndex]} (osobny limit RPD)`,
+            `  ↪ Limit dzienny ${quotaModel} - przełączam na ${modelChain[nextIndex]} (osobny limit RPD)`,
           );
           modelIndex = nextIndex;
           apiAttempts = 0;

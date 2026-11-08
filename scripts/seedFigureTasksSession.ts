@@ -142,7 +142,7 @@ function countFiguresInSlot(slot: TaskSlot): number {
   return (readTaskCache(slot)?.tasks ?? []).filter((t) => t.figure_svg).length;
 }
 
-/** Odrzuć ozdobne SVG — rysunek musi być potrzebny do rozwiązania. */
+/** Odrzuć ozdobne SVG - rysunek musi być potrzebny do rozwiązania. */
 function decorativeFigureReason(task: ParsedGeminiTask): string | null {
   const svg = task.figure_svg ?? "";
   if (svg.length < 180 || !svg.includes("</svg>")) {
@@ -169,7 +169,7 @@ function decorativeFigureReason(task: ParsedGeminiTask): string | null {
     );
 
   if (hasExplicitGeom && asksCompute && !needsRead) {
-    return "dane kompletne w tekście — rysunek zbędny";
+    return "dane kompletne w tekście - rysunek zbędny";
   }
   return null;
 }
@@ -255,7 +255,7 @@ async function pushNewTasksToDb(sinceIds: Set<string>): Promise<number> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
   if (!url || !serviceKey) {
-    log("⚠ Brak Supabase — pomijam push do DB");
+    log("⚠ Brak Supabase - pomijam push do DB");
     return 0;
   }
 
@@ -402,14 +402,14 @@ async function main() {
       if (thisBatch <= 0) continue;
 
       log(
-        `[r${round}] ${slot.exam_type}/${slot.category}/${slot.topic} — generuję ${thisBatch} z SVG (już ${have}/${opts.perTopic})`,
+        `[r${round}] ${slot.exam_type}/${slot.category}/${slot.topic} - generuję ${thisBatch} z SVG (już ${have}/${opts.perTopic})`,
       );
 
       try {
         const fingerprints = slotFingerprints(slot);
         const accepted = await generateBatch(slot, thisBatch, round, fingerprints);
         if (accepted.length === 0) {
-          log("  ⚠ partia pusta po filtrach — delay i dalej");
+          log("  ⚠ partia pusta po filtrach - delay i dalej");
           await sleep(opts.delayMs);
           continue;
         }
@@ -426,7 +426,7 @@ async function main() {
           roundAdded += 1;
           sinceLastPush += 1;
           log(
-            `  ✓ +1 SVG [${a.task.id.slice(0, 8)}] ${a.repaired ? "(naprawione)" : "ok"} — ${slot.topicName}`,
+            `  ✓ +1 SVG [${a.task.id.slice(0, 8)}] ${a.repaired ? "(naprawione)" : "ok"} - ${slot.topicName}`,
           );
           if (opts.limit !== null && added >= opts.limit) break;
         }
@@ -439,7 +439,7 @@ async function main() {
         const msg = err instanceof Error ? err.message : String(err);
         log(`  ✗ błąd: ${msg.slice(0, 240)}`);
         if (/quota|429|exhausted|rate/i.test(msg)) {
-          log("  ⏳ Limit API — czekam 90s…");
+          log("  ⏳ Limit API - czekam 90s…");
           await sleep(90_000);
         } else {
           await sleep(opts.delayMs);
@@ -455,7 +455,7 @@ async function main() {
         log("✓ Wszystkie tematy figure osiągnęły cel per-topic.");
         break;
       }
-      log("Runda bez postępu — czekam 45s…");
+      log("Runda bez postępu - czekam 45s…");
       await sleep(45_000);
     }
   }

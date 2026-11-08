@@ -8,7 +8,7 @@ export type CkeEgzamin8Tree = {
   categories: CkeCategoryDef[];
 };
 
-/** Drzewo CKE — egzamin ósmoklasisty (wymagania + typowe zadania arkuszy). */
+/** Drzewo CKE - egzamin ósmoklasisty (wymagania + typowe zadania arkuszy). */
 export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
   examType: "8_klasa",
   label: "Egzamin 8-klasisty",
@@ -54,7 +54,7 @@ export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
       slug: "geometria_przestrzenna",
       name: "Geometria przestrzenna",
       topics: [
-        { slug: "bryly", name: "Bryły — rozpoznawanie" },
+        { slug: "bryly", name: "Bryły - rozpoznawanie" },
         { slug: "objetosc_i_pole", name: "Objętość i pole powierzchni" },
       ],
     },

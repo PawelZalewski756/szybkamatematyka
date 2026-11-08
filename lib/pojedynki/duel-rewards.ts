@@ -4,7 +4,7 @@ import type { DuelOutcome, DuelResult } from "@/lib/pojedynki/duel-types";
 
 /**
  * Premia do wyniku za rezultat pojedynku (przeliczana następnie na XP istniejącą
- * funkcją). Zwycięstwo daje bonus, remis mniejszy — wszystko addytywnie, bez
+ * funkcją). Zwycięstwo daje bonus, remis mniejszy - wszystko addytywnie, bez
  * modyfikacji silnika profili.
  */
 const OUTCOME_BONUS: Record<DuelOutcome, number> = {
@@ -18,7 +18,7 @@ export function duelRoundScore(result: DuelResult, outcome: DuelOutcome): number
   return Math.max(0, result.score + OUTCOME_BONUS[outcome]);
 }
 
-/** Podgląd XP do zdobycia (bez zapisu) — używane w UI wyniku. */
+/** Podgląd XP do zdobycia (bez zapisu) - używane w UI wyniku. */
 export function previewDuelXp(result: DuelResult, outcome: DuelOutcome): number {
   return gameScoreToXp(duelRoundScore(result, outcome));
 }

@@ -1,4 +1,4 @@
--- Bucket Storage „avatary” (idempotentny) — uruchom w Supabase → SQL Editor
+-- Bucket Storage „avatary” (idempotentny) - uruchom w Supabase → SQL Editor
 -- Jeśli potrzebujesz też kolumny avatar_url, użyj migrations/init_profiles_avatars.sql
 
 insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)

@@ -48,7 +48,7 @@ export function validatePasswordResetInput(
   }
 
   if (password !== passwordConfirm) {
-    return "Hasła nie są takie same — wpisz je ponownie.";
+    return "Hasła nie są takie same - wpisz je ponownie.";
   }
 
   return null;
@@ -97,7 +97,7 @@ export function validateSignupInput(
   }
 
   if (password !== passwordConfirm) {
-    return "Hasła nie są takie same — wpisz je ponownie.";
+    return "Hasła nie są takie same - wpisz je ponownie.";
   }
 
   return null;
@@ -107,7 +107,7 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
   const message = error.message;
 
   if (message.includes("Anonymous sign-ins are disabled")) {
-    return "Brakuje e-maila lub hasła — uzupełnij oba pola (nie zostawiaj pustych).";
+    return "Brakuje e-maila lub hasła - uzupełnij oba pola (nie zostawiaj pustych).";
   }
 
   if (message.includes("Invalid login credentials")) {
@@ -140,7 +140,7 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
   }
 
   if (message.includes("Database error saving new user")) {
-    return "Błąd bazy przy rejestracji — w Supabase uruchom plik supabase/profiles.sql (SQL Editor), potem spróbuj ponownie.";
+    return "Błąd bazy przy rejestracji - w Supabase uruchom plik supabase/profiles.sql (SQL Editor), potem spróbuj ponownie.";
   }
 
   if (message.includes("Email not confirmed")) {
@@ -173,7 +173,7 @@ export function getAuthErrorMessage(error: AuthError | Error): string {
     message.includes('null value in column "nickname"') ||
     message.includes('null value in column "nick"')
   ) {
-    return "Błąd profilu — uruchom profiles.sql w Supabase, potem wyloguj się i zaloguj ponownie.";
+    return "Błąd profilu - uruchom profiles.sql w Supabase, potem wyloguj się i zaloguj ponownie.";
   }
 
   if (message.includes("row-level security")) {

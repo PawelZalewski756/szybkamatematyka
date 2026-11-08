@@ -13,7 +13,7 @@ import { isServiceRoleConfigured } from "@/lib/stripe/service-supabase";
 
 // Weryfikacja podpisu Stripe wymaga Node crypto → runtime Node (nie Edge).
 export const runtime = "nodejs";
-// Webhook musi widzieć każde żądanie — wyłączamy jakiekolwiek cache'owanie.
+// Webhook musi widzieć każde żądanie - wyłączamy jakiekolwiek cache'owanie.
 export const dynamic = "force-dynamic";
 
 /**
@@ -23,7 +23,7 @@ export const dynamic = "force-dynamic";
  *
  * RAW BODY w Next.js 16: czytamy surowe body przez `await request.text()`
  * (Web Request API). W route handlerach App Routera NIE ma `bodyParser` ani
- * potrzeby `export const config` — surowe body jest dostępne wprost, w
+ * potrzeby `export const config` - surowe body jest dostępne wprost, w
  * przeciwieństwie do dawnych API Routes w Pages Routerze. Surowy string jest
  * niezbędny, bo Stripe weryfikuje podpis na bajtach payloadu (JSON.parse +
  * ponowna serializacja zmieniłyby je i podpis by się nie zgadzał).
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     );
   }
 
-  // RAW BODY — patrz docstring powyżej.
+  // RAW BODY - patrz docstring powyżej.
   const rawBody = await request.text();
 
   let event: Stripe.Event;

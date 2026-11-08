@@ -4,7 +4,7 @@ import { listOfficialCkeSheets } from "@/lib/baza-zadan/exams/archive-catalog";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Arkusze CKE — matura i egzamin ósmoklasisty",
+  title: "Arkusze CKE - matura i egzamin ósmoklasisty",
   description:
     "Arkusze CKE z matematyki: matura podstawowa i rozszerzona oraz egzamin ósmoklasisty. Pełne archiwum PDF i wybrane rozwiązania krok po kroku.",
   alternates: { canonical: "/trening/arkusze" },

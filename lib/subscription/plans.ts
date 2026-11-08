@@ -15,7 +15,7 @@ export type SubscriptionPlan = {
   priceEnvVar?: string;
 };
 
-/** Cennik — dane prezentacyjne + powiązanie planów płatnych z Price ID Stripe. */
+/** Cennik - dane prezentacyjne + powiązanie planów płatnych z Price ID Stripe. */
 export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
   {
     id: "start",
@@ -26,7 +26,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     features: [
       "Wybrane minigry bez limitu czasu",
       "Podgląd bazy zadań (ograniczony)",
-      "Bez karty — rejestracja opcjonalna",
+      "Bez karty - rejestracja opcjonalna",
     ],
   },
   {
@@ -75,7 +75,7 @@ export function isPaidPlanId(planId: string): planId is SubscriptionPlanId {
   return Boolean(plan?.paid);
 }
 
-/** Lista płatnych planów (Pro, Roczny) — przydatne w UI i webhooku. */
+/** Lista płatnych planów (Pro, Roczny) - przydatne w UI i webhooku. */
 export const PAID_PLANS = SUBSCRIPTION_PLANS.filter((plan) => plan.paid);
 
 /**

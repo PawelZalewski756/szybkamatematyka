@@ -78,7 +78,7 @@ function compareLabels(a: string, b: string): number {
 
 /**
  * Drzewo treningu wyłącznie z wierszy Supabase (category / topic z bazy).
- * Linki używają surowych id (category, topic); nazwy — po formatTreningLabel.
+ * Linki używają surowych id (category, topic); nazwy - po formatTreningLabel.
  */
 export function buildTreningTreeFromTasks(
   tasks: TaskTreeRow[],

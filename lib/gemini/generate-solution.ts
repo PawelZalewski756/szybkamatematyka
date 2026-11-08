@@ -26,7 +26,7 @@ export type GenerateSolutionInput = {
 
 function getModelId(): string {
   // gemini-flash-latest → najnowszy Flash (np. 3.5) z niskim limitem free tier (~20 RPD).
-  // Do generowania rozwiązań używamy Flash-Lite — wyższy limit zapytań na darmowym planie.
+  // Do generowania rozwiązań używamy Flash-Lite - wyższy limit zapytań na darmowym planie.
   return process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash-lite";
 }
 

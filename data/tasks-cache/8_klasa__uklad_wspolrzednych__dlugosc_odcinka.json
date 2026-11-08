@@ -6,7 +6,7 @@
   "topicName": "Długość odcinka",
   "tasks": [
     {
-      "content": "Długość odcinka $(-5,-5)$—$(-2,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-5,-5)$-$(-2,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "3",
@@ -25,7 +25,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-4,-5)$—$(-1,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-4,-5)$-$(-1,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -44,7 +44,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-3,-5)$—$(0,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-3,-5)$-$(0,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -63,7 +63,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-2,-5)$—$(1,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-2,-5)$-$(1,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -82,7 +82,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-1,-5)$—$(2,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-1,-5)$-$(2,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -101,7 +101,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(0,-5)$—$(3,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(0,-5)$-$(3,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "5",
@@ -120,7 +120,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(1,-5)$—$(4,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(1,-5)$-$(4,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -139,7 +139,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(2,-5)$—$(5,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(2,-5)$-$(5,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "3",
@@ -158,7 +158,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(3,-5)$—$(6,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(3,-5)$-$(6,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "5",
@@ -177,7 +177,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(4,-5)$—$(7,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(4,-5)$-$(7,-1)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -196,7 +196,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-5,-4)$—$(-2,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-5,-4)$-$(-2,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -215,7 +215,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-4,-4)$—$(-1,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-4,-4)$-$(-1,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -234,7 +234,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-3,-4)$—$(0,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-3,-4)$-$(0,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -253,7 +253,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-2,-4)$—$(1,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-2,-4)$-$(1,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -272,7 +272,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(-1,-4)$—$(2,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(-1,-4)$-$(2,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "3",
@@ -291,7 +291,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(0,-4)$—$(3,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(0,-4)$-$(3,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -310,7 +310,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(1,-4)$—$(4,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(1,-4)$-$(4,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "4",
@@ -329,7 +329,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(2,-4)$—$(5,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(2,-4)$-$(5,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "5",
@@ -348,7 +348,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(3,-4)$—$(6,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(3,-4)$-$(6,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",
@@ -367,7 +367,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Długość odcinka $(4,-4)$—$(7,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
+      "content": "Długość odcinka $(4,-4)$-$(7,0)$ (w przybliżeniu do 1 miejsca po przecinku):",
       "correct_answer": "5",
       "options": [
         "2",

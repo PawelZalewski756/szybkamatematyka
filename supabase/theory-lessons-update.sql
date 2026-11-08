@@ -83,7 +83,7 @@ Potęgi i pierwiastki pojawiają się na maturze podstawowej dość często, zaz
     *   Wprowadzanie czynnika pod pierwiastek: $k \sqrt[n]{l} = \sqrt[n]{k^n \cdot l}$ (przy założeniu $k \ge 0$ gdy $n$ jest parzyste).
         Przykład: $2\sqrt{3} = \sqrt{2^2 \cdot 3} = \sqrt{4 \cdot 3} = \sqrt{12}$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Uprość wyrażenie: $3^5 \cdot 3^{-2} \cdot (3^4)^0$.
 
 **Krok 1.** Zastosuj wzór na mnożenie potęg o tych samych podstawach: $a^m \cdot a^n = a^{m+n}$.
@@ -101,7 +101,7 @@ $3^3 \cdot 1 = 27 \cdot 1 = 27$.
 **Sprawdzenie:**
 $3^5 \cdot 3^{-2} \cdot (3^4)^0 = 243 \cdot \frac{1}{9} \cdot 1 = \frac{243}{9} = 27$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia: $\frac{\sqrt{72} - \sqrt{50}}{\sqrt{2}}$.
 
 **Krok 1.** Uprość licznik, wyłączając czynniki spod pierwiastków.
@@ -125,7 +125,7 @@ $\frac{\sqrt{2}}{\sqrt{2}} = 1$.
 Alternatywnie, możemy podzielić każdy wyraz licznika przez mianownik:
 $\frac{\sqrt{72} - \sqrt{50}}{\sqrt{2}} = \frac{\sqrt{72}}{\sqrt{2}} - \frac{\sqrt{50}}{\sqrt{2}} = \sqrt{\frac{72}{2}} - \sqrt{\frac{50}{2}} = \sqrt{36} - \sqrt{25} = 6 - 5 = 1$. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Wyrażenie $2 \cdot (\sqrt{3})^{-2} + 4 \cdot 3^{-1}$ jest równe:
 A. $2$
 B. $2\frac{1}{3}$
@@ -255,7 +255,7 @@ W tej lekcji opanujesz:
 
 *   **Uwaga:** Logarytmy dziesiętne (o podstawie 10) często zapisujemy jako $\log x$ (bez podstawy). Logarytmy naturalne (o podstawie $e$, gdzie $e \approx 2.718$) zapisujemy jako $\ln x$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz wartość wyrażenia $\log_2 16$.
 
 **Krok 1.** Zapisujemy wyrażenie: $\log_2 16$.
@@ -266,7 +266,7 @@ Oblicz wartość wyrażenia $\log_2 16$.
 
 **Sprawdzenie:** Czy $2^4 = 16$? Tak, $2 \cdot 2 \cdot 2 \cdot 2 = 16$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia $\log_3 54 - \log_3 2$.
 
 **Krok 1.** Analizujemy wyrażenie. Widzimy logarytmy o tej samej podstawie (3) i znak odejmowania. Przypominamy sobie twierdzenie o logarytmie ilorazu: $\log_a x - \log_a y = \log_a \frac{x}{y}$.
@@ -283,7 +283,7 @@ Ostateczna wartość wyrażenia to 3.
 Możemy też sprawdzić, czy $\log_3 54 = \log_3 (27 \cdot 2) = \log_3 27 + \log_3 2 = 3 + \log_3 2$.
 Wtedy $\log_3 54 - \log_3 2 = (3 + \log_3 2) - \log_3 2 = 3$. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Oblicz wartość wyrażenia: $\frac{\log_5 125}{\log_5 5}$
 
 **Krok 1.** Rozpoznajemy zadanie jako wymagające obliczenia wartości logarytmów lub zastosowania twierdzenia o zamianie podstawy.
@@ -395,7 +395,7 @@ Zadania z procentów i proporcji pojawiają się na maturze podstawowej praktycz
     lub inaczej:
     $$ \frac{a}{b} = \frac{d}{c} $$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz $15\%$ liczby $240$.
 
 **Krok 1.** Zapisujemy procent w postaci ułamka dziesiętnego lub zwykłego.
@@ -414,7 +414,7 @@ $10\%$ z $240$ to $24$.
 $5\%$ z $240$ to połowa z $10\%$, czyli $12$.
 $15\% = 10\% + 5\%$, więc $24 + 12 = 36$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Cena roweru wynosiła $1200$ zł. Najpierw cenę tę podwyższono o $10\%$, a następnie nową cenę obniżono o $20\%$. Jaka jest ostateczna cena roweru?
 
 **Krok 1.** Obliczamy cenę po pierwszej podwyżce o $10\%$.
@@ -435,7 +435,7 @@ $C_2 = 1320 \cdot 0.80 = 132 \cdot 8 = 1056$ zł.
 Podwyżka o $10\%$: $1200 + 0.10 \cdot 1200 = 1200 + 120 = 1320$.
 Obniżka o $20\%$ od $1320$: $1320 - 0.20 \cdot 1320 = 1320 - 264 = 1056$. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 W klasie liczącej $25$ uczniów, $40\%$ to dziewczęta. Ilu chłopców jest w tej klasie?
 
@@ -581,7 +581,7 @@ W działaniach na notacji wykładniczej wykorzystujemy podstawowe prawa działa�
     Zatem: $40 \cdot 10^4 + 2 \cdot 10^4 = (40 + 2) \cdot 10^4 = 42 \cdot 10^4 = 4,2 \cdot 10^1 \cdot 10^4 = 4,2 \cdot 10^5$.
     Obie metody dają ten sam poprawny wynik.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Zapisz liczbę $0,000\,000\,057$ w notacji wykładniczej.
 
 **Krok 1.** Określenie mantysy.**
@@ -607,7 +607,7 @@ $5,7 \cdot 10^{-8}$.
 **Sprawdzenie:**
 $5,7 \cdot 10^{-8} = 5,7 \cdot 0,000\,000\,01 = 0,000\,000\,057$. Wynik jest zgodny z liczbą początkową.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia $\frac{(1,2 \cdot 10^6) \cdot (5 \cdot 10^{-3})}{3 \cdot 10^2}$ i przedstaw wynik w notacji wykładniczej.
 
 **Krok 1.** Obliczenie iloczynu w liczniku.**
@@ -634,7 +634,7 @@ Wynik jest już w notacji wykładniczej.
 
 Ostateczny wynik: $2 \cdot 10^1$. (Można też zapisać jako 20, ale zadanie wymaga notacji wykładniczej).
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Jedna cząsteczka wody waży około $3 \cdot 10^{-23}$ grama. Ile waży $2 \cdot 10^{24}$ cząsteczek wody? Wynik podaj w notacji wykładniczej.
 
 **Krok 1.** Zapisanie danych i celu.**
@@ -794,7 +794,7 @@ W tej lekcji dowiesz się:
     *   Nierówność typu $|x-k| < c$, gdzie $c > 0$: oznacza, że odległość $x$ od $k$ jest mniejsza niż $c$. Rozwiązaniem jest $-c < x-k < c$, czyli $k-c < x < k+c$.
     *   Nierówność typu $|x-k| > c$, gdzie $c > 0$: oznacza, że odległość $x$ od $k$ jest większa niż $c$. Rozwiązaniem jest $x-k > c$ lub $x-k < -c$, czyli $x > k+c$ lub $x < k-c$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 **Oblicz wartość wyrażenia: $|5 - 8| + |-3| - |10|$.**
 
 *   **Krok 1.** Obliczamy wartość bezwzględną z pierwszej liczby: $5 - 8 = -3$. Zatem $|5 - 8| = |-3|$.
@@ -806,7 +806,7 @@ W tej lekcji dowiesz się:
 **Sprawdzenie:**
 $|5-8| + |-3| - |10| = |-3| + 3 - 10 = 3 + 3 - 10 = 6 - 10 = -4$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 **Rozwiąż równanie: $|2x - 1| = 5$.**
 
 To równanie oznacza, że odległość wyrażenia $2x - 1$ od zera jest równa 5. Zgodnie z definicją wartości bezwzględnej, liczby, których wartość bezwzględna wynosi 5, to 5 i -5. Zatem mamy dwie możliwości:
@@ -831,7 +831,7 @@ Dla $x = -2$: $|2 \cdot (-2) - 1| = |-4 - 1| = |-5| = 5$. Równanie jest spełni
 
 Rozwiązaniami równania są $x = 3$ oraz $x = -2$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 **Rozwiąż nierówność: $|x+1| < 3$.**
 
@@ -937,7 +937,7 @@ Kolejność wykonywania działań arytmetycznych jest ściśle określona i pozw
 **Zasady kolejności wykonywania działań (od najwyższego do najniższego priorytetu):**
 
 1.  **Nawiasy:** Działania w nawiasach wykonujemy jako pierwsze. Jeśli mamy nawiasy zagnieżdżone, zaczynamy od najbardziej wewnętrznych.
-    *   Przykład: $ (2 + (3 \cdot 4) ) $ — najpierw mnożenie $3 \cdot 4$, potem dodawanie $2 + 12$.
+    *   Przykład: $ (2 + (3 \cdot 4) ) $ - najpierw mnożenie $3 \cdot 4$, potem dodawanie $2 + 12$.
 2.  **Potęgowanie i pierwiastkowanie:** Potęgi i pierwiastki mają ten sam priorytet. Wykonujemy je w kolejności ich występowania od lewej do prawej strony wyrażenia.
     *   Potęga: $a^n = a \cdot a \cdot \ldots \cdot a$ ($n$ razy)
     *   Pierwiastek kwadratowy: $\sqrt{a}$ jest to liczba nieujemna $x$, taka że $x^2 = a$.
@@ -974,7 +974,7 @@ Wyrażenie: $ 5 + 3 \cdot 2^3 - \sqrt{9} \div 1 $
 
 Wynik końcowy: $26$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz wartość wyrażenia: $ 10 - 2 \cdot (5 + 1)^2 : 4 $
 
 **Krok 1.** Rozpoczynamy od działań w nawiasie.
@@ -1005,7 +1005,7 @@ $ 10 - 18 $
 $ -8 $
 Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia: $ \frac{2}{3} \cdot \left( \frac{1}{2} + \frac{1}{4} \right)^2 - \frac{1}{6} $
 
 **Krok 1.** Wykonujemy działania w nawiasie. Musimy dodać dwa ułamki. Znajdujemy wspólny mianownik dla 2 i 4, którym jest 4.
@@ -1030,7 +1030,7 @@ Różnica: $ \frac{9}{24} - \frac{4}{24} = \frac{5}{24} $
 
 Wynik końcowy: $ \frac{5}{24} $.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Oblicz: $ 5 \frac{1}{2} - 2 \frac{1}{3} : 1 \frac{1}{6} $
 
@@ -1160,7 +1160,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     *   **Kwadrat różnicy**: $(a-b)^2 = a^2 - 2ab + b^2$
     *   **Różnica kwadratów**: $a^2 - b^2 = (a-b)(a+b)$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Uprość wyrażenie algebraiczne: $5(x - 2y) - 3(2x + y) + 4y$.
 
 **Krok 1.** Opuszczamy pierwsze nawiasy, mnożąc $5$ przez każdy składnik w nawiasie:
@@ -1184,7 +1184,7 @@ Oryginalne wyrażenie: $5(1 - 2 \cdot 2) - 3(2 \cdot 1 + 2) + 4 \cdot 2 = 5(1 - 
 Uproszczone wyrażenie: $-x - 9y = -1 - 9 \cdot 2 = -1 - 18 = -19$.
 Wyniki są zgodne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Uprość wyrażenie: $(\frac{1}{2}a - 3b)^2 - (\frac{1}{2}a + 3b)(\frac{1}{2}a - 3b)$.
 
 **Krok 1.** Rozpoznajemy wzory skróconego mnożenia. Pierwszy człon to kwadrat różnicy $(a-b)^2$, gdzie $a = \frac{1}{2}a$ i $b = 3b$. Drugi człon to różnica kwadratów $a^2 - b^2$, gdzie $a = \frac{1}{2}a$ i $b = 3b$.
@@ -1210,7 +1210,7 @@ Oryginalne wyrażenie: $(\frac{1}{2}\cdot 2 - 3\cdot 1)^2 - (\frac{1}{2}\cdot 2 
 Uproszczone wyrażenie: $-3ab + 18b^2 = -3\cdot 2\cdot 1 + 18\cdot 1^2 = -6 + 18 = 12$.
 Wyniki są zgodne.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Pole prostokąta wynosi $P = 6x^2 + 7x - 3$. Jednym z boków tego prostokąta jest dwumian $2x+3$. Wyznacz długość drugiego boku.
 
@@ -1352,7 +1352,7 @@ Wzory skróconego mnożenia pojawiają się na maturze podstawowej bardzo częst
     *   $(3x-2y)(3x+2y) = (3x)^2 - (2y)^2 = 9x^2 - 4y^2$.
     *   $(7a+1)(7a-1) = (7a)^2 - 1^2 = 49a^2 - 1$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Uprość wyrażenie $(3x+2)^2 - (x-1)(x+1)$.
 
 **Krok 1.** Rozwiń pierwszy człon $(3x+2)^2$ korzystając ze wzoru na kwadrat sumy $(a+b)^2 = a^2 + 2ab + b^2$.
@@ -1377,7 +1377,7 @@ Oryginalne wyrażenie: $(3 \cdot 2 + 2)^2 - (2-1)(2+1) = (6+2)^2 - (1)(3) = 8^2 
 Uproszczone wyrażenie: $8 \cdot 2^2 + 12 \cdot 2 + 5 = 8 \cdot 4 + 24 + 5 = 32 + 24 + 5 = 61$.
 Wyniki są takie same, więc uproszczenie jest poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozwiąż równanie $4x^2 - 9 = (2x-3)(x+1)$.
 
 **Krok 1.** Zauważ, że lewa strona równania ($4x^2 - 9$) jest różnicą kwadratów. Zapisz ją w postaci iloczynu.
@@ -1406,7 +1406,7 @@ Z $x+2 = 0$ otrzymujemy $x = -2$.
 
 **Rozwiązania równania to $x = \frac{3}{2}$ oraz $x = -2$.**
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Uprość wyrażenie $(a+2b)^2 - (a-2b)^2$.
 
 **Krok 1.** Zastosuj wzór na kwadrat sumy do pierwszego nawiasu: $(a+2b)^2$.
@@ -1496,10 +1496,10 @@ VALUES (
   'matura_podstawowa',
   'algebra',
   'rownania_liniowe',
-  'Równania liniowe — pełny kurs',
+  'Równania liniowe - pełny kurs',
   '## Na egzaminie
 
-Równania liniowe to **fundament matury podstawowej** — pojawiają się w prawie każdym arkuszu: jako samodzielne zadanie otwarte (2–3 pkt), element układu równań albo krok w zadaniu tekstowym. CKE sprawdza: przekształcanie, ułamki, nawiasy, interpretację wyniku (brak / jeden / nieskończenie wiele rozwiązań).
+Równania liniowe to **fundament matury podstawowej** - pojawiają się w prawie każdym arkuszu: jako samodzielne zadanie otwarte (2–3 pkt), element układu równań albo krok w zadaniu tekstowym. CKE sprawdza: przekształcanie, ułamki, nawiasy, interpretację wyniku (brak / jeden / nieskończenie wiele rozwiązań).
 
 ## Mapa tematu
 
@@ -1540,7 +1540,7 @@ $$
 | $0 = 0$ | nieskończenie wiele |
 | $0 = 5$ | brak |
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 
 Rozwiąż: $5x - 3 = 2x + 9$
 
@@ -1552,7 +1552,7 @@ Rozwiąż: $5x - 3 = 2x + 9$
 
 **Sprawdzenie:** L: $5 \cdot 4 - 3 = 17$, P: $2 \cdot 4 + 9 = 17$ ✓
 
-## Przykład 2 — ułamki
+## Przykład 2 - ułamki
 
 Rozwiąż: $\dfrac{2x - 1}{3} = \dfrac{x + 4}{2}$
 
@@ -1566,7 +1566,7 @@ $$2(2x - 1) = 3(x + 4)$$
 
 **Sprawdzenie:** $\dfrac{27}{3} = 9$, $\dfrac{18}{2} = 9$ ✓
 
-## Przykład 3 — nawiasy
+## Przykład 3 - nawiasy
 
 Rozwiąż: $3(x - 2) + 5 = 2(x + 1) - 1$
 
@@ -1576,11 +1576,11 @@ Rozwiąż: $3(x - 2) + 5 = 2(x + 1) - 1$
 
 **Krok 3.** $x = 2$
 
-## Przykład 4 — zadanie maturalne (tekst)
+## Przykład 4 - zadanie maturalne (tekst)
 
 Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie liczby.
 
-**Krok 1.** Niech $x$ — mniejsza liczba. Większa: $x + 12$.
+**Krok 1.** Niech $x$ - mniejsza liczba. Większa: $x + 12$.
 
 **Krok 2.** Równanie: $x + (x + 12) = 48$
 
@@ -1590,11 +1590,11 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 
 ## Pułapki
 
-- **Znak przy przenoszeniu** — $-3x$ na drugą stronę daje $+3x$, nie $-3x$
-- **Dzielenie przez wyrażenie z $x$** — możesz stracić rozwiązanie; bezpieczniej przekształcaj algebraicznie
-- **Ułamki** — mnoż przez NWW **całego** równania, nie pojedynczych wyrazów
-- **$0 = 0$** — to nie „$x = 0$”, tylko nieskończenie wiele rozwiązań
-- **Sprawdzenie** — 10 sekund i unikasz utraty punktów za literówkę
+- **Znak przy przenoszeniu** - $-3x$ na drugą stronę daje $+3x$, nie $-3x$
+- **Dzielenie przez wyrażenie z $x$** - możesz stracić rozwiązanie; bezpieczniej przekształcaj algebraicznie
+- **Ułamki** - mnoż przez NWW **całego** równania, nie pojedynczych wyrazów
+- **$0 = 0$** - to nie „$x = 0$”, tylko nieskończenie wiele rozwiązań
+- **Sprawdzenie** - 10 sekund i unikasz utraty punktów za literówkę
 
 ## Ćwiczenia do samodzielnego rozwiązania
 
@@ -1613,7 +1613,7 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 3. Pomnóż przez 6: $3x + 18 = 2x + 30 \Rightarrow x = 12$
 4. $2x + 8 = 3x - 3 \Rightarrow x = 11$
 5. $1{,}15x = 230 \Rightarrow x = 200$ zł
-6. **Nie** — po podstawieniu L = 4, P = 5
+6. **Nie** - po podstawieniu L = 4, P = 5
 7. Nieskończenie wiele ($0 = 0$ po uproszczeniu)
 
 ## Szybka powtórka
@@ -1681,7 +1681,7 @@ Równania kwadratowe to jeden z fundamentalnych działów algebry, który regula
     *   Suma pierwiastków: $x_1 + x_2 = -\frac{b}{a}$
     *   Iloczyn pierwiastków: $x_1 \cdot x_2 = \frac{c}{a}$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rozwiąż równanie kwadratowe: $2x^2 - 5x + 3 = 0$.
 
 **Krok 1.** Zidentyfikuj współczynniki $a, b, c$.
@@ -1705,7 +1705,7 @@ Rozwiązaniami równania są $x=1$ oraz $x=\frac{3}{2}$.
 Dla $x=1$: $2(1)^2 - 5(1) + 3 = 2 - 5 + 3 = 0$. Zgadza się.
 Dla $x=\frac{3}{2}$: $2(\frac{3}{2})^2 - 5(\frac{3}{2}) + 3 = 2 \cdot \frac{9}{4} - \frac{15}{2} + 3 = \frac{9}{2} - \frac{15}{2} + \frac{6}{2} = \frac{9-15+6}{2} = \frac{0}{2} = 0$. Zgadza się.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozwiąż równanie: $(x-2)(x+1) = 3x - 6$.
 
 **Krok 1.** Doprowadź równanie do postaci ogólnej $ax^2 + bx + c = 0$.
@@ -1735,7 +1735,7 @@ Lewa strona: $(2-2)(2+1) = 0 \cdot 3 = 0$.
 Prawa strona: $3(2) - 6 = 6 - 6 = 0$.
 Lewa strona równa się prawej stronie, więc rozwiązanie jest poprawne.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Dla jakiej wartości parametru $m$ równanie $x^2 - (m+1)x + m = 0$ ma dokładnie jedno rozwiązanie?
 
 **Krok 1.** Zidentyfikuj współczynniki $a, b, c$ w zależności od parametru $m$.
@@ -1892,7 +1892,7 @@ Rozwiązaniem nierówności jest zbiór wszystkich liczb, dla których nierówno
 
 Na osi liczbowej kółko niezamalowane oznacza, że dana liczba nie należy do rozwiązania, a kółko zamalowane oznacza, że należy.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rozwiąż nierówność: $2x - 5 \leq x + 3$.
 
 **Krok 1.** Przenieś wszystkie wyrazy z niewiadomą $x$ na jedną stronę nierówności, a liczby na drugą. Pamiętaj o zmianie znaku przy przenoszeniu.
@@ -1916,7 +1916,7 @@ Wybierzmy liczbę mniejszą lub równą 8, np. $x=0$: $2(0) - 5 \leq 0 + 3 \impl
 Wybierzmy liczbę równą 8, np. $x=8$: $2(8) - 5 \leq 8 + 3 \implies 16 - 5 \leq 11 \implies 11 \leq 11$ (prawda).
 Wybierzmy liczbę większą od 8, np. $x=10$: $2(10) - 5 \leq 10 + 3 \implies 20 - 5 \leq 13 \implies 15 \leq 13$ (fałsz).
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozwiąż nierówność: $3(x - 2) - 5(x + 1) > 2(x - 7) + 1$.
 
 **Krok 1.** Pozbądź się nawiasów, mnożąc każdy wyraz w nawiasie przez liczbę stojącą przed nim.
@@ -1947,7 +1947,7 @@ Na osi liczbowej: kółko niezamalowane nad $\frac{1}{2}$, strzałka w lewo.
      1/2
 ```
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Dane są nierówności: $5x - 1 \leq 2x + 5$ oraz $3x + 4 > x - 2$.
 Która z poniższych liczb jest rozwiązaniem obu nierówności?
 A. -1
@@ -2096,7 +2096,7 @@ Układy równań liniowych pojawiają się na maturze na poziomie podstawowym re
     3.  Rozwiązujemy powstałe równanie z jedną niewiadomą.
     4.  Wyznaczoną wartość podstawia się do wyrażenia na pierwszą zmienną lub do jednego z pierwotnych równań i oblicza drugą niewiadomą.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rozwiąż układ równań metodą przeciwnych współczynników:
 $$
 \begin{cases}
@@ -2133,7 +2133,7 @@ Drugie równanie: $3(1) - 3 = 3 - 3 = 0$. Zgadza się.
 
 Rozwiązanie jest poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozwiąż układ równań metodą podstawiania:
 $$
 \begin{cases}
@@ -2186,7 +2186,7 @@ $\frac{15}{2} + 2\left(-\frac{25}{4}\right) = \frac{15}{2} - \frac{50}{4} = \fra
 
 Rozwiązanie jest poprawne.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 W pewnej szkole jest 500 uczniów. Liczba dziewcząt stanowi 60% liczby wszystkich uczniów. Ile dziewcząt i ilu chłopców jest w tej szkole?
 
@@ -2401,7 +2401,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     $$a_1 \cdot a_2 = -1$$
     (zakładamy, że żadna z prostych nie jest pionowa, co w przypadku funkcji liniowej zawsze ma miejsce, gdyż $a$ jest liczbą rzeczywistą).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Dana jest funkcja liniowa $f(x) = 2x - 4$.
 a) Określ monotoniczność tej funkcji.
 b) Podaj współrzędne punktu przecięcia wykresu funkcji z osią $OY$.
@@ -2440,7 +2440,7 @@ $f(0) = 2 \cdot 0 - 4 = -4$ (zgadza się z punktem $(0, -4)$)
 $f(2) = 2 \cdot 2 - 4 = 4 - 4 = 0$ (zgadza się z miejscem zerowym $x=2$)
 Współczynnik $a=2$ jest dodatni, więc funkcja jest rosnąca. Wszystko się zgadza.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Wyznacz równanie prostej, która przechodzi przez punkty $A = (-1, 5)$ i $B = (3, -7)$. Czy ta prosta jest prostopadła do prostej o równaniu $y = \frac{1}{2}x + 1$?
 
 **Rozwiązanie:**
@@ -2475,7 +2475,7 @@ Dla punktu $A=(-1, 5)$: $5 = -3(-1) + 2 = 3 + 2 = 5$. Zgadza się.
 Dla punktu $B=(3, -7)$: $-7 = -3(3) + 2 = -9 + 2 = -7$. Zgadza się.
 Warunek prostopadłości $a_1 \cdot a_2 = -1$ jest niespełniony, bo $-\frac{3}{2} \neq -1$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Funkcja liniowa $f(x) = (m-1)x + 5$ jest malejąca. Wyznacz wszystkie możliwe wartości parametru $m$.
 
@@ -2636,7 +2636,7 @@ W tej lekcji opanujesz:
 *   **Postać iloczynowa (jeśli istnieją miejsca zerowe $x_1, x_2$):**
     $$f(x) = a(x-x_1)(x-x_2)$$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Dana jest funkcja kwadratowa $f(x) = x^2 - 4x + 3$.
 a) Określ współczynniki $a, b, c$.
 b) Ustal, w którą stronę skierowane są ramiona paraboli.
@@ -2693,7 +2693,7 @@ Zbiór wartości: $[-1, +\infty)$.
 Monotoniczność: malejąca $(-\infty, 2]$, rosnąca $[2, +\infty)$.
 Wszystko się zgadza.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Dana jest funkcja $f(x) = -2x^2 + 8x - 6$.
 a) Oblicz miejsca zerowe funkcji i zapisz jej postać iloczynową.
 b) Oblicz współrzędne wierzchołka i zapisz postać kanoniczną funkcji.
@@ -2740,7 +2740,7 @@ Miejsca zerowe $1, 3$: $f(1) = -2(1)^2 + 8(1) - 6 = -2+8-6=0$. $f(3) = -2(3)^2 +
 Zbiór wartości $(-\infty, 2]$. Potwierdzone przez wierzchołek.
 Dla $x \in (1, 3)$, np. $x=2$, $f(2)=2>0$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Trójkąt prostokątny ma przyprostokątne o długościach $x$ cm i $(10-x)$ cm. Oblicz pole tego trójkąta jako funkcję zmiennej $x$ i określ dziedzinę tej funkcji. Dla jakiej długości boku $x$ pole tego trójkąta jest największe?
 
 **Rozwiązanie:**
@@ -2898,7 +2898,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
 *   **Funkcja parzysta:** Funkcja, której wykres jest symetryczny względem osi $Y$. Formalnie: $f(-x) = f(x)$ dla każdego $x$ z dziedziny.
 *   **Funkcja nieparzysta:** Funkcja, której wykres jest symetryczny względem początku układu współrzędnych. Formalnie: $f(-x) = -f(x)$ dla każdego $x$ z dziedziny.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Dana jest funkcja $f(x)$ o wykresie przedstawionym poniżej.
 ```text
       ^ y
@@ -2951,7 +2951,7 @@ Dla $x = 2$: punkt $(2, 0)$, więc $f(2) = 0$.
 
 **Sprawdzenie:** Wszystkie odczyty są zgodne z wizualną interpretacją wykresu. Zbiór wartości i dziedzina obejmują wszystkie "widoczne" części osi. Punkty przecięcia z osiami zostały zidentyfikowane. Kierunek wykresu odpowiada definicjom monotoniczności. Wartości ekstremalne odpowiadają najwyższym i najniższym punktom w zadanym przedziale.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozważ funkcję $f(x) = -2x^2 + 4x + 6$. Narysuj jej wykres i odczytaj z niego:
 a) Wierzchołek paraboli.
 b) Miejsca zerowe.
@@ -3028,7 +3028,7 @@ d) Przedziały monotoniczności:
 
 **Sprawdzenie:** Wierzchołek jest najwyższym punktem. Miejsca zerowe są punktami przecięcia z osią X. Zbiór wartości zawiera najwyższą wartość. Przedziały monotoniczności są zgodne z kierunkiem ramion paraboli.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Na rysunku przedstawiono fragment wykresu pewnej funkcji $f$.
 
@@ -3259,7 +3259,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
 *   **Funkcja stała:** Funkcja, która dla wszystkich argumentów przyjmuje tę samą wartość, $f(x) = c$. Na wykresie funkcja jest linią poziomą.
 *   **Wartość maksymalna/minimalna:** Największa/najmniejsza wartość, jaką funkcja przyjmuje na danym przedziale. Na wykresie odpowiada najwyższemu/najniższemu punktowi wykresu na tym przedziale.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Na rysunku przedstawiono wykres funkcji $y = f(x)$. Odczytaj:
 a) Wartość funkcji dla $x = -3$.
 b) Wartość funkcji dla $x = 1$.
@@ -3302,7 +3302,7 @@ d) Miejsce zerowe $x = -4$. Na wykresie punkt $(-4, 0)$ jest.
 e) Dziedzina $\langle -4, 2 \rangle$. Wykres rozciąga się od $x = -4$ do $x = 2$.
 f) Zbiór wartości $\langle -1, 3 \rangle$. Najniższy punkt ma $y = -1$, najwyższy $y = 3$.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Na rysunku przedstawiono wykres funkcji $y = f(x)$. Odczytaj z wykresu:
 a) Dziedzinę funkcji.
 b) Zbiór wartości funkcji.
@@ -3343,7 +3343,7 @@ b) Zbiór wartości $\langle -2, 4 \rangle$. Najniższa $y$ to $-2$, najwyższa 
 c) Funkcja jest malejąca na całym przedziale $\langle -4, 2 \rangle$. Wykres systematycznie opada.
 d) Na przedziale $\langle -2, 1 \rangle$, najwyższy punkt to $(-2, 2)$, najniższy to $(1, -1)$. Wartość największa to $2$, najmniejsza to $-1$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Na rysunku poniżej znajduje się fragment wykresu pewnej funkcji $f$. Które z poniższych zdań jest prawdziwe?
 I. Funkcja $f$ jest malejąca w przedziale $\langle -3, 0 \rangle$.
 II. $f(1) = -2$.
@@ -3621,7 +3621,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     *   Jeśli $r < 0$, ciąg jest **malejący**.
     *   Jeśli $r = 0$, ciąg jest **stały** (wszystkie wyrazy są równe $a_1$).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Dany jest ciąg arytmetyczny o pierwszym wyrazie $a_1 = 5$ i różnicy $r = 3$. Oblicz piąty wyraz tego ciągu ($a_5$) oraz sumę pierwszych pięciu wyrazów ($S_5$).
 
 **Krok 1.** Zidentyfikuj dane.**
@@ -3655,7 +3655,7 @@ $S_5 = 5 + 8 + 11 + 14 + 17 = 55$ (zgadza się z obliczoną $S_5$)
 
 **Odpowiedź:** Piąty wyraz ciągu wynosi 17, a suma pierwszych pięciu wyrazów wynosi 55.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W ciągu arytmetycznym dane są wyrazy $a_3 = 7$ i $a_7 = 19$. Oblicz pierwszy wyraz ($a_1$) tego ciągu oraz jego różnicę ($r$). Następnie oblicz sumę pierwszych dziesięciu wyrazów ($S_{10}$).
 
 **Krok 1.** Zapisz dane i wzory.**
@@ -3716,7 +3716,7 @@ Suma $S_{10} = 1+4+7+10+13+16+19+22+25+28 = 145$. Obliczenia są poprawne.
 
 **Odpowiedź:** Pierwszy wyraz ciągu wynosi 1, różnica wynosi 3, a suma pierwszych dziesięciu wyrazów wynosi 145.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Suma pierwszych dwudziestu wyrazów pewnego ciągu arytmetycznego wynosi 480. Znając pierwszy wyraz $a_1 = 3$, oblicz różnicę tego ciągu.
 
 **Krok 1.** Zidentyfikuj dane i wzór.**
@@ -3926,7 +3926,7 @@ Ciąg geometryczny pojawia się na maturze z matematyki na poziomie podstawowym 
 
 *   **Średnia geometryczna**: Dla trzech kolejnych wyrazów ciągu geometrycznego ($a_{n-1}, a_n, a_{n+1}$) zachodzi związek: $a_n^2 = a_{n-1} \cdot a_{n+1}$. Jest to równoważne z warunkiem, że $\sqrt{a_{n-1} \cdot a_{n+1}} = |a_n|$. Jeśli wszystkie wyrazy są dodatnie, $a_n$ jest średnią geometryczną wyrazów je otaczających.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz piąty wyraz ciągu geometrycznego, jeśli pierwszy wyraz $a_1 = 3$, a iloraz $q = 2$.
 
 **Krok 1.** Zapisz dane z zadania.
@@ -3956,7 +3956,7 @@ $a_4 = 12 \cdot 2 = 24$
 $a_5 = 24 \cdot 2 = 48$
 Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz sumę pierwszych czterech wyrazów ciągu geometrycznego, w którym $a_1 = -2$ i $q = 3$.
 
 **Krok 1.** Zapisz dane z zadania.
@@ -3991,7 +3991,7 @@ $a_4 = -18 \cdot 3 = -54$
 Suma: $S_4 = -2 + (-6) + (-18) + (-54) = -8 - 18 - 54 = -26 - 54 = -80$.
 Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Trzy liczby: $x-1, x+2, x+8$ tworzą w tej kolejności ciąg geometryczny. Wyznacz wartość $x$.
 
 **Krok 1.** Zidentyfikuj warunek dla ciągu geometrycznego.
@@ -4152,7 +4152,7 @@ Rozważmy trójkąt prostokątny o przyprostokątnych $a$ i $b$ oraz przeciwpros
 *   Funkcja cosinus jest malejąca w przedziale $[0^\circ, 90^\circ]$.
 *   Funkcja tangens jest rosnąca w przedziale $[0^\circ, 90^\circ)$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 W trójkącie prostokątnym przyprostokątne mają długości 3 cm i 4 cm. Oblicz sinus, cosinus i tangens kąta $\alpha$ leżącego naprzeciwko krótszej przyprostokątnej.
 
 **Krok 1.** Narysuj trójkąt prostokątny i oznacz jego boki. Krótsza przyprostokątna ma długość 3, dłuższa 4. Kąt $\alpha$ leży naprzeciwko boku o długości 3.
@@ -4179,7 +4179,7 @@ $\sin^2 \alpha + \cos^2 \alpha = (\frac{3}{5})^2 + (\frac{4}{5})^2 = \frac{9}{25
 Możemy też sprawdzić zależność tangensa:
 $\frac{\sin \alpha}{\cos \alpha} = \frac{3/5}{4/5} = \frac{3}{5} \cdot \frac{5}{4} = \frac{3}{4} = \tan \alpha$. Zgadza się.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W trójkącie prostokątnym ABC, kąt przy wierzchołku C jest kątem prostym. Długość przyprostokątnej AC wynosi 6, a długość przeciwprostokątnej AB wynosi 10. Oblicz $\sin(\angle ABC)$.
 
 **Krok 1.** Narysuj trójkąt prostokątny ABC. Oznacz kąt prosty przy C. Zaznacz dane długości: $AC = 6$ (jedna przyprostokątna), $AB = 10$ (przeciwprostokątna).
@@ -4211,7 +4211,7 @@ $\cos(\angle ABC) = \cos \beta = \frac{\text{przyprostokątna przyległa}}{\text
 Możemy też obliczyć tangens $\angle ABC$:
 $\tan(\angle ABC) = \tan \beta = \frac{AC}{BC} = \frac{6}{8} = \frac{3}{4}$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Dany jest trójkąt prostokątny, w którym jeden z kątów ostrych wynosi $30^\circ$. Krótsza przyprostokątna ma długość 5. Oblicz długość przeciwprostokątnej.
 
 **Krok 1.** Zidentyfikuj dane: kąt ostry $\alpha = 30^\circ$, krótsza przyprostokątna $a = 5$. Ponieważ $\alpha = 30^\circ$, to przyprostokątna leżąca naprzeciwko tego kąta jest krótsza (w porównaniu do przyprostokątnej leżącej naprzeciwko kąta $60^\circ$). Zatem $a=5$ to przyprostokątna naprzeciwległa do kąta $30^\circ$.
@@ -4340,7 +4340,7 @@ Trygonometria zajmuje się związkami między kątami a bokami trójkąta. Na po
     *   Gdy znamy dwie przyprostokątne, możemy obliczyć przeciwprostokątną (twierdzenie Pitagorasa) i kąty (funkcje trygonometryczne).
     *   Gdy znamy przyprostokątną i przeciwprostokątną, możemy obliczyć drugą przyprostokątną (twierdzenie Pitagorasa) i kąty.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 W trójkącie prostokątnym jeden z kątów ostrych ma miarę $30^\circ$, a przyprostokątna leżąca naprzeciwko tego kąta ma długość 5 cm. Oblicz długość drugiej przyprostokątnej i przeciwprostokątnej.
 
 **Krok 1.** Narysuj trójkąt prostokątny i oznacz jego boki oraz kąty. Oznaczmy kąt ostry jako $\alpha = 30^\circ$. Przyprostokątna naprzeciwko tego kąta ma długość $a = 5$ cm. Drugą przyprostokątną oznaczmy jako $b$, a przeciwprostokątną jako $c$.
@@ -4373,7 +4373,7 @@ Twierdzenie Pitagorasa jest spełnione.
 
 Odpowiedź: Długość drugiej przyprostokątnej wynosi $5\sqrt{3}$ cm, a przeciwprostokątnej 10 cm.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Drabina o długości 4 metrów jest oparta o pionową ścianę. Kąt między drabiną a podłożem wynosi $60^\circ$. Oblicz, na jaką wysokość sięga drabina i jak daleko od ściany znajduje się jej dolny koniec. Wynik podaj z dokładnością do 0.1 metra.
 
 **Krok 1.** Zinterpretuj zadanie i narysuj schemat. Drabina, ściana i podłoże tworzą trójkąt prostokątny. Drabina jest przeciwprostokątną ($c = 4$ m). Wysokość, na jaką sięga drabina, to przyprostokątna pionowa ($h$). Odległość dolnego końca drabiny od ściany to przyprostokątna pozioma ($d$). Kąt między drabiną a podłożem to $\alpha = 60^\circ$.
@@ -4422,7 +4422,7 @@ Zgadza się.
 
 Odpowiedź: Drabina sięga na wysokość około 3.5 metra, a jej dolny koniec znajduje się 2 metry od ściany.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Równoległobok ma boki o długości 6 cm i 8 cm. Jeden z kątów tego równoległoboku ma miarę $150^\circ$. Oblicz pole tego równoległoboku.
 
 **Krok 1.** Przypomnij wzór na pole równoległoboku. Pole równoległoboku o bokach $a$, $b$ i kącie $\alpha$ między nimi wynosi $P = a \cdot b \cdot \sin \alpha$.
@@ -4563,7 +4563,7 @@ Zadania z planimetrii pojawiają się regularnie na maturze z matematyki na pozi
     *   **Bok-kąt-bok (BKB):** Dwa trójkąty są podobne, jeśli stosunek długości dwóch par odpowiadających sobie boków jest taki sam i kąt zawarty między tymi bokami jest równy.
     *   **Kąt-kąt (KK):** Dwa trójkąty są podobne, jeśli dwa kąty jednego trójkąta są odpowiednio równe dwóm kątom drugiego trójkąta.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz pole i obwód prostokąta, którego jeden bok ma długość 5 cm, a przekątna ma długość 13 cm.
 
 **Krok 1.** Narysuj prostokąt i zaznacz dane. Oznacz boki jako $a$ i $b$, a przekątną jako $d$. Mamy $a = 5$ cm, $d = 13$ cm.
@@ -4586,7 +4586,7 @@ Pole: $P = a \cdot b = 5 \cdot 12 = 60$ cm$^2$.
 **Sprawdzenie:**
 Boki prostokąta to 5 cm i 12 cm. Przekątna ma 13 cm. Sprawdźmy twierdzenie Pitagorasa: $5^2 + 12^2 = 25 + 144 = 169$. $13^2 = 169$. Zgadza się. Obliczenia obwodu i pola są poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W trapezie równoramiennym podstawy mają długości 10 cm i 4 cm, a ramiona mają długość 5 cm. Oblicz pole tego trapezu.
 
 **Krok 1.** Narysuj trapez równoramienny. Oznacz dłużą podstawę jako $a=10$ cm, krótszą podstawę jako $b=4$ cm, a ramiona jako $c=5$ cm.
@@ -4611,7 +4611,7 @@ $P = \frac{a+b}{2} \cdot h = \frac{10+4}{2} \cdot 4 = \frac{14}{2} \cdot 4 = 7 \
 **Sprawdzenie:**
 Długości podstaw 10 cm i 4 cm, ramiona 5 cm. Wysokość 4 cm. Sprawdźmy Pitagorasem: wysokość $4^2=16$, odcinek podstawy $3^2=9$, suma $16+9=25$. Ramię $5^2=25$. Zgadza się. Pole obliczone poprawnie.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Trójkąt ABC jest podobny do trójkąta DEF. Długości boków trójkąta ABC wynoszą odpowiednio 3 cm, 4 cm i 5 cm. Obwód trójkąta DEF wynosi 24 cm. Oblicz długości boków trójkąta DEF.
 
@@ -4748,7 +4748,7 @@ Po przerobieniu tej lekcji będziesz potrafił/a:
     *   Stosunek ich pól wynosi $k^2$:
         $$\frac{Pole(F'')}{Pole(F)} = k^2$$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz brakującą przyprostokątną w trójkącie prostokątnym, jeśli jedna przyprostokątna ma długość 6 cm, a przeciwprostokątna 10 cm.
 
 **Krok 1.** Zidentyfikuj dane i szukaną.
@@ -4776,7 +4776,7 @@ Równość jest spełniona.
 
 Odpowiedź: Brakująca przyprostokątna ma długość 8 cm.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Dwa trójkąty są podobne. Pierwszy trójkąt ma boki o długościach 5 cm, 12 cm i 13 cm. Drugi trójkąt ma najkrótszy bok o długości 15 cm. Oblicz obwód drugiego trójkąta.
 
 **Krok 1.** Zidentyfikuj dane i szukaną.
@@ -4812,7 +4812,7 @@ Sprawdzenie: Oba sposoby dają ten sam wynik.
 
 Odpowiedź: Obwód drugiego trójkąta wynosi 90 cm.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 W trójkącie prostokątnym jedna przyprostokątna ma długość 8, a przeciwprostokątna ma długość 10. Jaka jest długość drugiej przyprostokątnej?
 A) 2
 B) 6
@@ -4942,7 +4942,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     *   Jeśli odległość $OP > r$, punkt leży **na zewnątrz** okręgu.
     Odległość $OP$ obliczamy z twierdzenia Pitagorasa lub wzoru na odległość dwóch punktów: $OP = \sqrt{(x-x_0)^2 + (y-y_0)^2}$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz obwód i pole koła o promieniu $r = 5 \text{ cm}$.
 
 **Krok 1.** Zidentyfikuj dane.
@@ -4964,7 +4964,7 @@ Obwód koła wynosi $10\pi \text{ cm}$, a jego pole wynosi $25\pi \text{ cm}^2$.
 
 **Sprawdzenie:** Wzory zastosowane poprawnie, obliczenia proste, wyniki są w jednostkach pola i obwodu.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Dany jest okrąg o środku w punkcie $O(1, 2)$ i promieniu $r=3$. Punkt $A$ ma współrzędne $(4, 2)$. Sprawdź, czy punkt $A$ leży na tym okręgu, wewnątrz niego czy na zewnątrz.
 
 **Krok 1.** Zidentyfikuj dane.
@@ -4996,7 +4996,7 @@ Podstawiamy współrzędne punktu $A(4, 2)$ do lewej strony równania:
 $(4-1)^2 + (2-2)^2 = 3^2 + 0^2 = 9 + 0 = 9$.
 Lewa strona równania jest równa prawej stronie ($9=9$), co oznacza, że punkt $A$ leży na okręgu.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 W pewnym parku zaprojektowano okrągłą fontannę o średnicy 10 metrów. Chcemy wyłożyć jej obrzeże ozdobnymi kamieniami. Ile metrów bieżących kamieni potrzebujemy, aby okrążyć fontannę? Przyjmij $\pi \approx 3.14$.
 
@@ -5118,7 +5118,7 @@ Zadania ze stereometrii pojawiają się na maturze podstawowej dość regularnie
 *   Wzór na objętość kuli: $$V = \frac{4}{3} \pi r^3$$ gdzie $r$ to promień kuli.
 *   Wzór na pole powierzchni kuli: $$P = 4 \pi r^2$$ gdzie $r$ to promień kuli.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz objętość graniastosłupa prawidłowego czworokątnego, którego krawędź podstawy ma długość 5 cm, a wysokość graniastosłupa wynosi 10 cm.
 
 **Krok 1.** Zidentyfikuj bryłę. Jest to graniastosłup prawidłowy czworokątny. Podstawa jest kwadratem.
@@ -5132,7 +5132,7 @@ $$V = 25 \, \text{cm}^2 \cdot 10 \, \text{cm} = 250 \, \text{cm}^3$$
 
 **Sprawdzenie:** Wszystkie dane zostały wykorzystane. Wzór jest poprawny. Obliczenia są proste i wydają się poprawne. Jednostki są zgodne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz pole powierzchni całkowitej stożka, którego promień podstawy wynosi 6 cm, a wysokość 8 cm.
 
 **Krok 1.** Zidentyfikuj bryłę. Jest to stożek. Potrzebujemy pola podstawy i pola powierzchni bocznej.
@@ -5149,7 +5149,7 @@ $$P_c = P_p + P_b = 36\pi + 60\pi = 96\pi \, \text{cm}^2$$
 
 **Sprawdzenie:** Obliczono pole podstawy, tworzącą i pole boczne. Wszystkie obliczenia są poprawne. Wynik końcowy jest sumą dwóch pól.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Pudełko w kształcie prostopadłościanu ma wymiary 10 cm x 20 cm x 30 cm. Ile opakowań soku w kształcie walca o promieniu podstawy 3 cm i wysokości 15 cm zmieści się w tym pudełku, zakładając idealne ułożenie? (Przyjmij $\pi \approx 3$)
 
@@ -5237,7 +5237,7 @@ Geometria analityczna pojawia się na maturze podstawowej regularnie, zazwyczaj 
 1.  Współrzędne punktów na płaszczyźnie kartezjańskiej.
 2.  Obliczanie odległości między dwoma punktami.
 3.  Obliczanie współrzędnych środka odcinka.
-4.  Równanie prostej — różne postacie.
+4.  Równanie prostej - różne postacie.
 5.  Warunki równoległości i prostopadłości prostych.
 6.  Wyznaczanie punktów wspólnych prostych (układy równań).
 7.  Obliczanie pola trójkąta o danych wierzchołkach.
@@ -5271,7 +5271,7 @@ Geometria analityczna pojawia się na maturze podstawowej regularnie, zazwyczaj 
     $$P = \frac{1}{2} |x_A(y_B - y_C) + x_B(y_C - y_A) + x_C(y_A - y_B)|$$
     (Wartość bezwzględna zapewnia, że pole jest dodatnie).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz odległość między punktami $A=(-2, 3)$ i $B=(4, -5)$.
 
 **Krok 1.** Zapisujemy współrzędne punktów: $x_A = -2$, $y_A = 3$, $x_B = 4$, $y_B = -5$.
@@ -5283,7 +5283,7 @@ Oblicz odległość między punktami $A=(-2, 3)$ i $B=(4, -5)$.
 **Sprawdzenie:**
 Obliczenia są poprawne. Różnica współrzędnych x to $4 - (-2) = 6$. Różnica współrzędnych y to $-5 - 3 = -8$. Suma kwadratów to $6^2 + (-8)^2 = 36 + 64 = 100$. Pierwiastek z 100 to 10.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Wyznacz równanie prostej, która przechodzi przez punkt $P=(1, -2)$ i jest prostopadła do prostej $k: y = -\frac{1}{3}x + 4$.
 
 **Krok 1.** Analizujemy daną prostą $k$. Jest ona w postaci kierunkowej $y = a_k x + b_k$. Odczytujemy współczynnik kierunkowy $a_k = -\frac{1}{3}$.
@@ -5297,7 +5297,7 @@ Wyznacz równanie prostej, która przechodzi przez punkt $P=(1, -2)$ i jest pros
 **Sprawdzenie:**
 Współczynnik kierunkowy naszej prostej to $a_m = 3$. Współczynnik kierunkowy prostej $k$ to $a_k = -\frac{1}{3}$. Ich iloczyn $3 \cdot (-\frac{1}{3}) = -1$, więc proste są prostopadłe. Nasza prosta ma równanie $y = 3x - 5$. Sprawdzamy, czy punkt $P=(1, -2)$ należy do tej prostej: $-2 = 3 \cdot 1 - 5 \implies -2 = 3 - 5 \implies -2 = -2$. Warunek jest spełniony.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Oblicz pole trójkąta o wierzchołkach $A=(1, 1)$, $B=(4, 2)$ i $C=(2, 5)$.
 
 **Krok 1.** Zapisujemy współrzędne wierzchołków: $x_A=1, y_A=1$, $x_B=4, y_B=2$, $x_C=2, y_C=5$.
@@ -5446,7 +5446,7 @@ Możliwe pary: {A,B}, {A,C}, {A,D}, {A,E}, {B,C}, {B,D}, {B,E}, {C,D}, {C,E}, {D
 3.  **Kolejność ma znaczenie, wybieramy wszystkie elementy:** Permutacje ($n!$).
 4.  **Kolejność nie ma znaczenia, elementy nie mogą się powtarzać:** Kombinacje ($\frac{n!}{k!(n-k)!}$).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Ile jest liczb trzycyfrowych, w których cyfra setek jest nieparzysta, a cyfra dziesiątek parzysta? Cyfry mogą się powtarzać.
 
 **Krok 1.** Zidentyfikuj warunki zadania. Szukamy liczb trzycyfrowych $abc$.
@@ -5480,7 +5480,7 @@ Wszystkich kombinacji par (a,b) jest $5 \cdot 5 = 25$.
 Dla każdej takiej pary mamy 10 możliwości dla c.
 $25 \cdot 10 = 250$. Wynik poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Z klasy liczącej 15 dziewcząt i 10 chłopców należy wybrać 4-osobową delegację. Na ile sposobów można to zrobić, jeśli w delegacji mają być co najmniej 3 dziewczęta?
 
 **Krok 1.** Zidentyfikuj typ zadania. Wybieramy grupę osób, kolejność nie ma znaczenia. Jest to zadanie na kombinacje. Mamy warunek "co najmniej 3 dziewczęta".
@@ -5516,7 +5516,7 @@ $C_{10}{^0} = 1$. OK.
 Zastosowanie zasady mnożenia w ramach przypadków i dodawania między przypadkami jest poprawne.
 Wynik $5915$ wydaje się być poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Na ile sposobów można ustawić w szeregu trzy książki o matematyce, dwie o fizyce i jedną o chemii, tak aby książki tego samego przedmiotu stały obok siebie?
 
 **Krok 1.** Zidentyfikuj typ zadania. Ustawiamy elementy w szeregu, kolejność jest ważna. Ale mamy grupę elementów (książek tego samego przedmiotu), które mają stać razem.
@@ -5671,7 +5671,7 @@ gdzie $P(A \cap B)$ to prawdopodobieństwo zajścia obu zdarzeń $A$ i $B$ jedno
 $$ P_n(k) = \binom{n}{k} p^k q^{n-k} $$
 gdzie $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ to symbol Newtona (liczba kombinacji $k$ elementów z $n$).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rzucamy dwukrotnie symetryczną kostką sześcienną. Jakie jest prawdopodobieństwo, że suma wyrzuconych oczek będzie wynosić 8?
 
 **Krok 1.** Określamy przestrzeń zdarzeń elementarnych $\Omega$.
@@ -5701,7 +5701,7 @@ Wynik $\frac{5}{36}$ jest liczbą z przedziału $[0, 1]$, co jest zgodne z defin
 
 Odpowiedź: Prawdopodobieństwo, że suma wyrzuconych oczek będzie wynosić 8, wynosi $\frac{5}{36}$.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W urnie znajduje się 7 kul białych i 5 kul czarnych. Losujemy kolejno bez zwracania 3 kule. Jakie jest prawdopodobieństwo, że wśród wylosowanych kul będą dokładnie dwie kule białe?
 
 **Krok 1.** Określamy przestrzeń zdarzeń elementarnych $|\Omega|$.
@@ -5730,7 +5730,7 @@ $$ P(A) = \frac{21}{44} $$
 
 Odpowiedź: Prawdopodobieństwo, że wśród wylosowanych kul będą dokładnie dwie kule białe, wynosi $\frac{21}{44}$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 W pudełku są liczby od 1 do 10. Losujemy jedną liczbę. Jakie jest prawdopodobieństwo, że będzie to liczba pierwsza lub podzielna przez 3?
 
 **Krok 1.** Określamy przestrzeń zdarzeń elementarnych $|\Omega|$.
@@ -5894,7 +5894,7 @@ Statystyka to dziedzina matematyki zajmująca się gromadzeniem, analizą, inter
 *   **Odchylenie standardowe ($\sigma$):** Pierwiastek kwadratowy z wariancji. Jest to miara, która ma te same jednostki co dane.
     $$ \sigma = \sqrt{D^2} $$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz średnią arytmetyczną, medianę, dominantę i rozstęp dla następującego zbioru danych: 5, 2, 8, 5, 3, 9, 5.
 
 **Krok 1.** Uporządkowanie danych**
@@ -5923,7 +5923,7 @@ Mediana: 4. pozycja w 7 elementach - poprawnie.
 Moda: 5 występuje najczęściej - poprawnie.
 Rozstęp: $9-2=7$ - poprawnie.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Zebrano dane dotyczące wieku 10 osób: 22, 25, 23, 25, 28, 25, 30, 24, 25, 23 lata. Oblicz odchylenie standardowe dla tych danych.
 
 **Krok 1.** Uporządkowanie danych i obliczenie średniej arytmetycznej**
@@ -5975,7 +5975,7 @@ Suma kwadratów: $9+4+4+1+9+25 = 52$ - poprawnie.
 Wariancja: $\frac{52}{10} = 5.2$ - poprawnie.
 Odchylenie standardowe: $\sqrt{5.2}$ - poprawnie.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 W pewnej klasie przeprowadzono sprawdzian z matematyki. Wyniki (liczba punktów) przedstawiono w tabeli:
 
 | Liczba punktów | Liczba uczniów |
@@ -6165,7 +6165,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
         *   $1,2 : 0,4 = 12 : 4 = 3$.
         *   $0,6 : 0,03 = 60 : 3 = 20$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 **Zadanie:** Oblicz: $\frac{2}{5} + \frac{1}{3}$
 
 **Krok 1.** Zauważamy, że mianowniki są różne (5 i 3). Musimy je sprowadzić do wspólnego mianownika.
@@ -6179,7 +6179,7 @@ $\frac{6}{15} + \frac{5}{15} = \frac{6+5}{15} = \frac{11}{15}$.
 
 **Sprawdzenie:** Wynik $\frac{11}{15}$ jest ułamkiem nieskracalnym, ponieważ 11 jest liczbą pierwszą, a 15 nie jest jej wielokrotnością. Obliczenia wydają się poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 **Zadanie:** Oblicz: $2\frac{1}{4} - 0,75 + \frac{3}{5} \cdot (1\frac{1}{2})$
 
 **Krok 1.** Zamieniamy wszystkie liczby na jeden rodzaj – najwygodniej będzie na ułamki zwykłe nieskracalne.
@@ -6214,7 +6214,7 @@ Możemy też zapisać go jako liczbę mieszaną: $\frac{12}{5} = 2\frac{2}{5}$. 
 
 **Odpowiedź:** Wynik to $\frac{12}{5}$ (lub $2\frac{2}{5}$, lub $2,4$).
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 **Zadanie:** W pewnej klasie $\frac{2}{5}$ uczniów uczy się gry na pianinie, a $\frac{1}{4}$ uczniów gra na gitarze. Pozostali uczniowie nie grają na żadnym z tych instrumentów. Jaki ułamek uczniów tej klasy nie gra na pianinie ani na gitarze?
 
@@ -6347,7 +6347,7 @@ Potęgi pojawiają się na egzaminie ósmoklasisty regularnie, zazwyczaj w zadan
         *   Np.: $10^4 : 2^4 = (\frac{10}{2})^4 = 5^4$
         *   $\frac{6^3}{3^3} = (\frac{6}{3})^3 = 2^3$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz wartość wyrażenia: $3^4 - 5^2 + 2^3$
 
 **Krok 1.** Oblicz potęgę $3^4$.
@@ -6368,7 +6368,7 @@ $56 + 8 = 64$
 
 **Sprawdzenie:** Obliczyliśmy każdą potęgę poprawnie, a następnie wykonaliśmy działania zgodnie z kolejnością. Wynik $64$ jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Uprość wyrażenie: $(\frac{2x^3}{3y^2})^2 \cdot (\frac{3y}{x^2})^3$, gdzie $x \neq 0$ i $y \neq 0$.
 
 **Krok 1.** Zastosuj potęgowanie ilorazu i iloczynu w pierwszym nawiasie.
@@ -6391,7 +6391,7 @@ $\frac{4 \cancel{x^6}}{9\cancel{y^4}_1} \cdot \frac{27^3 \cancel{y^3}}{\cancel{x
 
 **Sprawdzenie:** Zastosowaliśmy kolejno potęgowanie ilorazu, potęgowanie iloczynu i potęgowanie potęgi. Następnie wykonaliśmy mnożenie i skrócenie. Wynik $\frac{12}{y}$ jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Oblicz wartość wyrażenia: $(5^{-2} \cdot 5^4) : 5^{-1}$
 
@@ -6540,7 +6540,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
         $$ \sqrt{a^2} = |a| \quad \text{dla dowolnej liczby } a $$
         Na egzaminie ósmoklasisty zazwyczaj mamy do czynienia z liczbami nieujemnymi, więc $\sqrt{a^2} = a$ dla $a \geq 0$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz wartość wyrażenia $\sqrt{144} + \sqrt{49} - \sqrt{81}$.
 
 **Krok 1.** Obliczamy pierwiastek z pierwszej liczby: $\sqrt{144}$. Wiemy, że $12^2 = 144$, więc $\sqrt{144} = 12$.
@@ -6557,7 +6557,7 @@ $\sqrt{49} = 7$ (bo $7^2=49$)
 $\sqrt{81} = 9$ (bo $9^2=81$)
 $12 + 7 - 9 = 19 - 9 = 10$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Uprość wyrażenie $\sqrt{72} + \sqrt{18} - \sqrt{50}$.
 
 **Krok 1.** Analizujemy każdą liczbę pod pierwiastkiem i szukamy największego kwadratu liczby całkowitej będącego jej dzielnikiem.
@@ -6587,7 +6587,7 @@ $\sqrt{18} = \sqrt{9 \times 2} = 3\sqrt{2}$
 $\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}$
 $6\sqrt{2} + 3\sqrt{2} - 5\sqrt{2} = (6+3-5)\sqrt{2} = 4\sqrt{2}$. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Porównaj liczby $\sqrt{10}$ i $3$.
 
@@ -6665,7 +6665,7 @@ VALUES (
   '8_klasa',
   'liczby',
   'procenty',
-  'Procenty — klucz do zrozumienia danych',
+  'Procenty - klucz do zrozumienia danych',
   '## Na egzaminie
 Procenty to wszechobecny temat na egzaminie ósmoklasisty, pojawiający się w zadaniach otwartych i zamkniętych. Można spodziewać się 2-3 zadań, których łączna punktacja wynosi zazwyczaj 4-6 punktów. CKE często sprawdza umiejętność obliczania procentu danej liczby, procentu z procentu, podwyżek i obniżek cen, a także odczytywania danych z tabel i wykresów przedstawionych za pomocą procentów.
 
@@ -6680,7 +6680,7 @@ Procenty to wszechobecny temat na egzaminie ósmoklasisty, pojawiający się w z
 8.  Zastosowanie procentów w zadaniach tekstowych.
 
 ## Definicje i wzory
-*   **Procent** — jedna setna (1/100) pewnej wielkości. Symbol procentu to %.
+*   **Procent** - jedna setna (1/100) pewnej wielkości. Symbol procentu to %.
     *   $1\% = \frac{1}{100} = 0.01$
 *   **Zamiana procentów na ułamki i liczby dziesiętne:**
     *   Aby zamienić procent na ułamek, dzielimy liczbę procentów przez 100.
@@ -6721,7 +6721,7 @@ Procenty to wszechobecny temat na egzaminie ósmoklasisty, pojawiający się w z
     *   $50\%$ z 20 to $20 \cdot 0.50 = 10$.
     *   Krócej: $100 \cdot (\frac{20}{100}) \cdot (\frac{50}{100}) = 100 \cdot 0.2 \cdot 0.5 = 10$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz $15\%$ liczby 200.
 
 **Krok 1.** Zamiana procentu na liczbę dziesiętną lub ułamek.
@@ -6738,7 +6738,7 @@ $10\%$ ze 200 to 20.
 $5\%$ ze 200 to połowa z 20, czyli 10.
 $15\%$ ze 200 to $10\% + 5\%$, czyli $20 + 10 = 30$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Cena komputera wynosiła 3000 zł. Cenę tę najpierw obniżono o 10%, a następnie nową cenę podwyższono o 20%. Czy końcowa cena jest wyższa czy niższa od początkowej i o ile złotych?
 
 **Krok 1.** Obliczenie ceny po pierwszej obniżce.
@@ -6765,7 +6765,7 @@ Różnica $= 3240 - 3000 = 240$ zł.
 
 **Odpowiedź:** Końcowa cena jest wyższa od początkowej o 240 zł.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 W klasie liczącej 30 uczniów, 60% to dziewczęta. Ilu chłopców jest w tej klasie?
 
 **Krok 1.** Obliczenie liczby dziewcząt.
@@ -6916,7 +6916,7 @@ Liczby całkowite pojawiają się na egzaminie ósmoklasisty w zadaniach otwarty
     3.  Mnożenie i dzielenie (od lewej do prawej).
     4.  Dodawanie i odejmowanie (od lewej do prawej).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz: $-5 + (3 - 8) - (-2)$
 
 **Krok 1.** Wykonaj działanie w nawiasie: $3 - 8$.
@@ -6944,7 +6944,7 @@ $= -10 + 2$
 $= -8$
 Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Temperaturę w Zakopanem o godzinie 6 rano wynosiła $-3^\circ\text{C}$. Do godziny 12 temperatura wzrosła o $8^\circ\text{C}$, a do godziny 18 spadła o $5^\circ\text{C}$. Jaka była temperatura w Zakopanem o godzinie 18?
 
 **Krok 1.** Określ temperaturę po wzroście.
@@ -6965,7 +6965,7 @@ Temperatura o 18: $0^\circ\text{C}$.
 
 **Odpowiedź:** Temperatura w Zakopanem o godzinie 18 wynosiła $0^\circ\text{C}$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 W tabeli poniżej przedstawiono wyniki finansowe pewnej firmy przez cztery kolejne kwartały:
 
 | Kwartał | Wynik finansowy (w tys. zł) |
@@ -7073,7 +7073,7 @@ Przy obliczeniach z ułamkami należy pamiętać o zasadach:
 *   Mnożenie: $\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$
 *   Dzielenie: $\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}$ (zawsze odwracamy drugi ułamek i zamieniamy dzielenie na mnożenie).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz wartość wyrażenia: $10 + 2 \cdot (6 - 3^2)$
 
 **Krok 1.** Rozpoczynamy od działań w nawiasie. W nawiasie mamy odejmowanie i potęgowanie. Potęgowanie ma wyższy priorytet. Obliczamy $3^2$.
@@ -7099,7 +7099,7 @@ Wykonaliśmy działania zgodnie z kolejnością:
 4. Dodawanie: $10 + (-6) = 4$.
 Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia: $3 \frac{1}{2} - (\frac{3}{4} \cdot 1,2 : 0,5 + 2,5)$
 
 **Krok 1.** Zamieniamy liczby mieszane i dziesiętne na ułamki zwykłe, aby ułatwić obliczenia.
@@ -7136,7 +7136,7 @@ $\frac{-8}{10} = -\frac{4}{5}$
 6. Uproszczenie: $-\frac{4}{5}$. OK.
 Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Które z poniższych wyrażeń ma wartość największą?
 A) $5 + 3 \cdot 2$
 B) $(5 + 3) \cdot 2$
@@ -7274,7 +7274,7 @@ Wyrażenia algebraiczne pojawiają się na egzaminie ósmoklasisty regularnie, z
     *   $(a-b)^2 = a^2 - 2ab + b^2$
     *   $(a+b)(a-b) = a^2 - b^2$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Uprość wyrażenie algebraiczne: $5x - 3y + 2x + 7y - 10$.
 
 **Krok 1.** Zidentyfikuj wyrazy podobne. Wyrazy zawierające $x$ to $5x$ i $2x$. Wyrazy zawierające $y$ to $-3y$ i $7y$. Wyraz wolny to $-10$.
@@ -7291,7 +7291,7 @@ Otrzymujemy: $7x + 4y - 10$.
 **Sprawdzenie:**
 Nie ma wyrazów podobnych, więc wyrażenie jest uproszczone. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz wartość wyrażenia $3(a-2b) - (5a+b)$ dla $a=2$ i $b=-1$.
 
 **Krok 1.** Najpierw uprośćmy dane wyrażenie algebraiczne. Usuwamy nawiasy.
@@ -7322,7 +7322,7 @@ $= 12 - 9$
 $= 3$.
 Wynik jest ten sam, co potwierdza poprawność obliczeń.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Suma dwóch liczb wynosi $15$. Jedna z tych liczb jest o $3$ większa od drugiej. Zapisz wyrażenie algebraiczne opisujące tę sytuację, a następnie znajdź te liczby.
 
 **Krok 1.** Zdefiniuj zmienne. Niech mniejsza liczba będzie oznaczona jako $x$. Wtedy druga liczba, która jest o $3$ większa, wynosi $x+3$.
@@ -7447,7 +7447,7 @@ Wzory skróconego mnożenia to gotowe schematy, które pozwalają na szybkie prz
 *   Kluczowe jest prawidłowe rozpoznanie, które wyrażenie pełni rolę $a$, a które rolę $b$.
 *   Wzory można stosować w obie strony: do zamiany iloczynu na sumę (rozwinięcie) lub sumy/różnicy na iloczyn (faktoryzacja). Na egzaminie częściej spotykamy się z rozwinięciem.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 **Zadanie:** Rozwiń wyrażenie $(2x+3)^2$.
 
 **Rozwiązanie:**
@@ -7465,7 +7465,7 @@ Wzory skróconego mnożenia to gotowe schematy, które pozwalają na szybkie prz
 **Sprawdzenie:** Możemy sprawdzić, mnożąc $(2x+3)(2x+3)$ tradycyjnie:
 $(2x+3)(2x+3) = 2x \cdot (2x+3) + 3 \cdot (2x+3) = (4x^2 + 6x) + (6x + 9) = 4x^2 + 6x + 6x + 9 = 4x^2 + 12x + 9$. Wynik się zgadza.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 **Zadanie:** Uprość wyrażenie $(x-5)^2 - (x+2)(x-2)$.
 
 **Rozwiązanie:**
@@ -7496,7 +7496,7 @@ $(2x+3)(2x+3) = 2x \cdot (2x+3) + 3 \cdot (2x+3) = (4x^2 + 6x) + (6x + 9) = 4x^2
 
 **Ostateczny wynik:** Uproszczone wyrażenie to $-10x + 29$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 **Zadanie:** Oblicz wartość wyrażenia $101^2 - 99^2$.
 
@@ -7594,7 +7594,7 @@ Podstawowe przekształcenia równań, które prowadzą do równań równoważnyc
 4.  Podziel obie strony przez współczynnik stojący przy niewiadomej, aby otrzymać postać $x = \text{liczba}$.
 5.  Sprawdź rozwiązanie, podstawiając otrzymaną wartość niewiadomej do pierwotnego równania.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rozwiąż równanie: $3x - 5 = 7$.
 
 **Krok 1.** Uporządkuj równanie. Strony są już w miarę proste, nie ma nawiasów.
@@ -7613,7 +7613,7 @@ Lewa strona: $3 \cdot 4 - 5 = 12 - 5 = 7$
 Prawa strona: $7$
 Lewa strona jest równa prawej, więc rozwiązanie jest poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Rozwiąż równanie: $5(x-2) + 3 = 2(3x+1) - 4$.
 
 **Krok 1.** Opróżnij nawiasy po obu stronach równania, mnożąc przez liczbę stojącą przed nawiasem.
@@ -7641,7 +7641,7 @@ Lewa strona: $5((-5)-2) + 3 = 5(-7) + 3 = -35 + 3 = -32$
 Prawa strona: $2(3(-5)+1) - 4 = 2(-15+1) - 4 = 2(-14) - 4 = -28 - 4 = -32$
 Lewa strona jest równa prawej, rozwiązanie jest poprawne.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Rozwiąż równanie: $\frac{x}{2} + 1 = \frac{x}{3} - \frac{1}{6}$.
 
 **Krok 1.** Pozbądź się ułamków, mnożąc obie strony równania przez najmniejszą wspólną wielokrotność mianowników. Mianowniki to 2, 3, 6. Najmniejsza wspólna wielokrotność (NWW) to 6.
@@ -7747,7 +7747,7 @@ Zadania dotyczące proporcji i skali pojawiają się na egzaminie ósmoklasisty 
     1 m = 100 cm
     1 km = 100 000 cm
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rozwiąż proporcję: $\frac{3}{5} = \frac{x}{10}$
 
 **Krok 1.** Zidentyfikuj wyrazy skrajne i średnie. Wyrazy skrajne to 3 i 10. Wyrazy średnie to 5 i $x$.
@@ -7768,7 +7768,7 @@ $$ x = 6 $$
 $$ \frac{3}{5} = \frac{6}{10} $$
 Ułamek $\frac{6}{10}$ po skróceniu przez 2 daje $\frac{3}{5}$, więc równość jest prawdziwa. Rozwiązanie jest poprawne.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Na planie miasta wykonanym w skali $1:5000$ odległość między dwoma parkami wynosi 12 cm. Jaka jest rzeczywista odległość między tymi parkami w kilometrach?
 
 **Krok 1.** Zapisz dane i zrozum problem.
@@ -7791,7 +7791,7 @@ $$ \frac{60000}{100000} = \frac{6}{10} = 0.6 \text{ km} $$
 
 **Odpowiedź:** Rzeczywista odległość między parkami wynosi 0.6 km.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Trzech robotników wykonało pewną pracę w ciągu 12 dni. Ilu robotników potrzeba, aby wykonać tę samą pracę w ciągu 9 dni, zakładając, że wszyscy pracują w tym samym tempie?
 
@@ -7908,7 +7908,7 @@ Zadania dotyczące kątów i prostych pojawiają się na egzaminie ósmoklasisty
 *   **Suma kątów w trójkącie:** Suma miar kątów wewnętrznych każdego trójkąta wynosi $180^\circ$. Jeśli kąty trójkąta to $\alpha, \beta, \gamma$, to $\alpha + \beta + \gamma = 180^\circ$.
 *   **Suma kątów w czworokącie:** Suma miar kątów wewnętrznych każdego wypukłego czworokąta wynosi $360^\circ$. Jeśli kąty czworokąta to $\alpha, \beta, \gamma, \delta$, to $\alpha + \beta + \gamma + \delta = 360^\circ$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Dany jest rysunek przedstawiający dwie przecinające się proste. Kąt $\alpha$ ma miarę $35^\circ$. Oblicz miary pozostałych kątów.
 
 ```
@@ -7950,7 +7950,7 @@ $\delta + \alpha = 145^\circ + 35^\circ = 180^\circ$
 Wyniki są poprawne.
 Kąty: $\alpha = 35^\circ$, $\beta = 145^\circ$, $\gamma = 35^\circ$, $\delta = 145^\circ$.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Dany jest trójkąt ABC. Kąt przy wierzchołku A ma miarę $50^\circ$, a kąt przy wierzchołku B ma miarę $70^\circ$. Oblicz miarę kąta przy wierzchołku C. Następnie poprowadź prostą przechodzącą przez wierzchołek A, która jest prostopadła do boku BC. Nazwij punkt przecięcia tej prostej z prostą BC literą D. Oblicz miarę kąta CAD.
 
 **Krok 1.** Oblicz miarę kąta przy wierzchołku C. Suma kątów w trójkącie wynosi $180^\circ$.
@@ -7997,7 +7997,7 @@ To rozwiązanie jest spójne i daje pozytywny wynik.
 
 Miara kąta przy wierzchołku C wynosi $60^\circ$. Miara kąta CAD wynosi $30^\circ$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Dany jest czworokąt ABCD. Kąty przy wierzchołkach A i B wynoszą odpowiednio $110^\circ$ i $80^\circ$. Kąt przy wierzchołku C jest dwa razy większy od kąta przy wierzchołku D. Oblicz miary kątów C i D.
 
@@ -8139,7 +8139,7 @@ Zadania dotyczące obwodów figur pojawiają się regularnie na egzaminie ósmok
         $$Ob = 2 \pi r$$ lub $$Ob = \pi d$$
         gdzie $\pi$ (pi) to stała matematyczna, w przybliżeniu 3.14. Na egzaminie często używa się przybliżenia $\pi \approx 3.14$ lub $\pi \approx \frac{22}{7}$, chyba że polecenie stanowi inaczej lub wymaga odpowiedzi z $\pi$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz obwód prostokąta, którego jeden bok ma długość 8 cm, a drugi jest o 3 cm dłuższy.
 
 **Krok 1.** Zrozumienie danych: Mamy prostokąt. Jeden bok ($a$) ma 8 cm. Drugi bok ($b$) jest o 3 cm dłuższy od pierwszego.
@@ -8150,7 +8150,7 @@ Oblicz obwód prostokąta, którego jeden bok ma długość 8 cm, a drugi jest o
 
 Sprawdzenie: Boki prostokąta to 8 cm i 11 cm. Suma wszystkich boków: $8 + 11 + 8 + 11 = 38$ cm. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Działka w kształcie trapezu równoramiennego ma podstawy długości 20 metrów i 30 metrów. Dłuższa podstawa jest o 5 metrów dłuższa od każdego z ramion. Oblicz obwód tej działki.
 
 **Krok 1.** Identyfikacja figury i danych: Mamy trapez równoramienny. Oznaczmy podstawy jako $a$ i $c$, a ramiona jako $b$ i $d$. W trapezach równoramiennych $b = d$.
@@ -8161,7 +8161,7 @@ Działka w kształcie trapezu równoramiennego ma podstawy długości 20 metrów
 
 Sprawdzenie: Podstawy to 30 m i 20 m. Ramiona to po 25 m. Suma boków: $30 + 25 + 20 + 25 = 100$ m. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Ogrodnik chce ogrodzić prostokątną rabatę kwiatową o wymiarach 4 metry na 6 metrów. Jakiej długości siatki potrzebuje, jeśli siatka sprzedawana jest w rolkach po 10 metrów? Ile rolek siatki musi kupić?
 
@@ -8274,7 +8274,7 @@ Po przerobieniu tej lekcji będziesz potrafił:
     *   $1 \text{ ar (a)} = 100 \text{ m}^2$
     *   $1 \text{ hektar (ha)} = 100 \text{ arów} = 10000 \text{ m}^2 = 1 \text{ km}^2$ (niepoprawnie, 1 ha = 10000 m^2, czyli 1 ha = 1 km^2 jest błędne, poprawka: $1 \text{ ha} = 10000 \text{ m}^2$).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz pole prostokąta o bokach długości 5 cm i 8 cm.
 **Krok 1.** Zidentyfikuj figurę i dane.
 Figurą jest prostokąt. Długości boków wynoszą $a = 5$ cm i $b = 8$ cm.
@@ -8289,7 +8289,7 @@ Pole prostokąta wynosi 40 cm$^2$.
 
 **Sprawdzenie:** Wzór zastosowany poprawnie, obliczenia wykonane zgodnie ze wzorem. Jednostka pola jest poprawna.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Działka w kształcie trapezu równoramiennego ma podstawy o długościach 12 m i 20 m. Wysokość działki wynosi 8 m. Oblicz pole tej działki.
 **Krok 1.** Zidentyfikuj figurę i dane.
 Figurą jest trapez. Długości podstaw to $a = 12$ m, $b = 20$ m. Wysokość to $h = 8$ m.
@@ -8306,7 +8306,7 @@ Pole działki wynosi 128 m$^2$.
 
 **Sprawdzenie:** Wzór zastosowany poprawnie, wszystkie dane podstawione. Obliczenia wykonane poprawnie. Jednostka pola jest odpowiednia dla danych wejściowych.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Oblicz pole rombu, którego przekątne mają długości 10 cm i 6 cm.
 **Krok 1.** Zidentyfikuj figurę i dane.
@@ -8481,7 +8481,7 @@ $$a^2 + b^2 = c^2$$
 **Trójki pitagorejskie:**
 Są to zestawy trzech liczb naturalnych, które spełniają twierdzenie Pitagorasa. Najbardziej znana to (3, 4, 5), ponieważ $3^2 + 4^2 = 9 + 16 = 25$, a $5^2 = 25$. Inne przykłady to (5, 12, 13), (8, 15, 17), (7, 24, 25). Znajomość tych trójek może przyspieszyć rozwiązywanie niektórych zadań.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 W trójkącie prostokątnym jedna przyprostokątna ma długość 6 cm, a druga 8 cm. Oblicz długość przeciwprostokątnej.
 
 **Krok 1.** Zidentyfikuj dane.
@@ -8508,7 +8508,7 @@ $36 + 64 = 100$
 $100 = 100$. Zgadza się. Odpowiedź jest poprawna.
 Odpowiedź: Długość przeciwprostokątnej wynosi 10 cm.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz długość krótszej przyprostokątnej w trójkącie prostokątnym, jeśli przeciwprostokątna ma długość 13 cm, a dłuższa przyprostokątna ma długość 12 cm.
 
 **Krok 1.** Zidentyfikuj dane.
@@ -8535,7 +8535,7 @@ $25 + 144 = 169$
 $169 = 169$. Zgadza się.
 Odpowiedź: Krótsza przyprostokątna ma długość 5 cm. (Zauważ, że (5, 12, 13) to kolejna trójka pitagorejska).
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Taras w kształcie prostokąta ma wymiary 3 metry na 4 metry. Jaka jest długość barierki potrzebnej do ogrodzenia tarasu po przekątnej?
 
 **Krok 1.** Rozpoznanie sytuacji geometrycznej.
@@ -8647,7 +8647,7 @@ Po przerobieniu tej lekcji będziesz potrafił/a:
     *   **Obwód:** Jeśli $Ob$ i $Ob''$ są obwodami figur $A$ i $A''$ podobnych w skali $k$, to $\frac{Ob''}{Ob} = k$, czyli $Ob'' = k \cdot Ob$. Obwody figur podobnych są proporcjonalne do skali podobieństwa.
     *   **Pole:** Jeśli $P$ i $P''$ są polami figur $A$ i $A''$ podobnych w skali $k$, to $\frac{P''}{P} = k^2$, czyli $P'' = k^2 \cdot P$. Pola figur podobnych są proporcjonalne do kwadratu skali podobieństwa.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Prostokąt $ABCD$ ma boki długości $|AB| = 8$ cm i $|BC| = 4$ cm. Prostokąt $A''B''C''D''$ jest podobny do $ABCD$ w skali $k = \frac{3}{2}$. Oblicz długości boków prostokąta $A''B''C''D''$.
 
 *   **Krok 1.** Zidentyfikuj dane. Mamy prostokąt $ABCD$ o bokach $a = 8$ cm i $b = 4$ cm. Prostokąt $A''B''C''D''$ jest podobny do $ABCD$ w skali $k = \frac{3}{2}$.
@@ -8665,7 +8665,7 @@ Kształty są takie same.
 Skala podobieństwa: $\frac{|A''B''|}{|AB|} = \frac{12}{8} = \frac{3}{2}$. $\frac{|B''C''|}{|BC|} = \frac{6}{4} = \frac{3}{2}$.
 Skala się zgadza. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Dwa trójkąty, $ABC$ i $A''B''C''$, są podobne. Długości boków trójkąta $ABC$ wynoszą $a=6$ cm, $b=8$ cm, $c=10$ cm. Najkrótszy bok trójkąta $A''B''C''$ ma długość $a''=9$ cm. Oblicz obwód i pole trójkąta $A''B''C''$.
 
 *   **Krok 1.** Określ dane i cel. Mamy trójkąt $ABC$ z bokami $a=6$, $b=8$, $c=10$. Trójkąt $A''B''C''$ jest podobny do $ABC$. Najkrótszy bok $a''$ w trójkącie $A''B''C''$ ma długość $9$ cm. Należy obliczyć obwód i pole trójkąta $A''B''C''$.
@@ -8688,7 +8688,7 @@ Obwód $Ob'' = 9 + 12 + 15 = 36$ cm. Zgadza się z obliczonym.
 Pole $P'' = \frac{1}{2} \cdot 9 \cdot 12 = \frac{1}{2} \cdot 108 = 54$ cm$^2$. Zgadza się z obliczonym.
 Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 W pewnej mapie w skali 1:50000 odcinek drogi ma długość 5 cm. Jaka jest rzeczywista długość tej drogi w kilometrach? Jeśli na tej samej mapie obrazem działki jest prostokąt o polu 20 cm$^2$, jakie jest pole tej działki w metrach kwadratowych?
 
@@ -8809,7 +8809,7 @@ Zadania dotyczące symetrii pojawiają się na egzaminie ósmoklasisty regularni
     *   **Konstrukcja obrazu odcinka:** Aby narysować obraz odcinka $AB$ w symetrii środkowej względem punktu $S$, należy narysować obrazy jego końców punktów $A''$ i $B''$. Obrazem odcinka $AB$ będzie odcinek $A''B''$. Punkt $S$ musi leżeć na odcinku $AA''$ i $BB''$ (lub być ich końcem), przy czym $|AS| = |A''S|$ i $|BS| = |B''S|$.
     *   **Środek symetrii figury:** Jest to punkt, względem którego figura jest swoim własnym obrazem. Figury posiadające środek symetrii są również nazywane **figurami środkowosymetrycznymi**.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Narysuj obraz trójkąta $ABC$ o wierzchołkach $A = (1, 2)$, $B = (3, 1)$, $C = (2, 4)$ w symetrii osiowej względem osi $Ox$ (osi współrzędnych $y=0$).
 
 **Krok 1.** Zrozumienie przekształcenia: Symetria osiowa względem osi $Ox$ oznacza, że prosta $Ox$ jest osią symetrii. Dla punktu $(x, y)$, jego obrazem w symetrii względem osi $Ox$ jest punkt $(x, -y)$. Zmienia się tylko znak współrzędnej $y$.
@@ -8828,7 +8828,7 @@ $B=(3, 1)$, odległość = 1. $B''=(3, -1)$, odległość = $|-1|=1$.
 $C=(2, 4)$, odległość = 4. $C''=(2, -4)$, odległość = $|-4|=4$.
 Dla każdego punktu, odcinek łączący go z obrazem jest prostopadły do osi $Ox$ (oba punkty mają tę samą współrzędną $x$), a środek odcinka leży na osi $Ox$ (np. dla $AA''$, środek to $(\frac{1+1}{2}, \frac{2+(-2)}{2}) = (1, 0)$, który leży na osi $Ox$).
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Prostokąt $ABCD$ o wierzchołkach $A=(-2, 3)$, $B=(4, 3)$, $C=(4, -1)$, $D=(-2, -1)$ przekształcono w symetrii środkowej względem punktu $S=(1, 1)$. Podaj współrzędne wierzchołków $A''$, $B''$, $C''$, $D''$ obrazu prostokąta $ABCD$.
 
 **Krok 1.** Zrozumienie przekształcenia: Symetria środkowa względem punktu $S=(x_S, y_S)$ przekształca punkt $A=(x_A, y_A)$ na punkt $A''=(x_{A''}, y_{A''})$ taki, że $S$ jest środkiem odcinka $AA''$. Wzory na współrzędne środka odcinka to:
@@ -8867,7 +8867,7 @@ Sprawdźmy środek odcinka $AA''$: Środek odcinka między $A=(-2, 3)$ a $A''=(4
 Sprawdźmy środek odcinka $BB''$: Środek odcinka między $B=(4, 3)$ a $B''=(-2, -1)$ to $(\frac{4+(-2)}{2}, \frac{3+(-1)}{2}) = (\frac{2}{2}, \frac{2}{2}) = (1, 1)$, co jest punktem $S$.
 Pozostałe punkty można sprawdzić analogicznie. Prostokąt posiada środek symetrii, który jest punktem przecięcia jego przekątnych. Środek przekątnej $AC$ to $(\frac{-2+4}{2}, \frac{3+(-1)}{2}) = (1, 1)$. Środek przekątnej $BD$ to $(\frac{4+(-2)}{2}, \frac{3+(-1)}{2}) = (1, 1)$. Punkt $S=(1,1)$ jest środkiem symetrii tego prostokąta.
 
-## Przykład 3 — egzaminacyjny (opcjonalnie, gdy temat na to pozwala)
+## Przykład 3 - egzaminacyjny (opcjonalnie, gdy temat na to pozwala)
 Na rysunku przedstawiono sześciokąt foremny $ABCDEF$ i punkt $S$. Czy punkt $S$ jest środkiem symetrii tego sześciokąta? Jeśli tak, to jakie są współrzędne wierzchołka $A$, jeśli $B=(6,0)$, $C=(3, 3\sqrt{3})$, $D=(-3, 3\sqrt{3})$, $E=(-6,0)$, $F=(-3, -3\sqrt{3})$ i $S=(0,0)$?
 
 **Krok 1.** Określenie środka symetrii: Figura posiada środek symetrii wtedy, gdy dla każdego punktu $P$ należącego do figury, punkt $P''$ będący jego obrazem w symetrii środkowej względem punktu $S$ również należy do figury. Dla wielokątów foremnych, środkiem symetrii jest zazwyczaj punkt przecięcia przekątnych. W przypadku sześciokąta foremnego $ABCDEF$ o podanych współrzędnych wierzchołków, widać, że punkty te są rozmieszczone symetrycznie względem początku układu współrzędnych (np. $A$ i $D$, $B$ i $E$, $C$ i $F$). Początek układu współrzędnych $S=(0,0)$ jest środkiem symetrii tego sześciokąta.
@@ -8949,7 +8949,7 @@ VALUES (
   '8_klasa',
   'geometria_przestrzenna',
   'bryly',
-  'Bryły — rozpoznawanie ich własności i zastosowań',
+  'Bryły - rozpoznawanie ich własności i zastosowań',
   '## Na egzaminie
 Zadania dotyczące rozpoznawania brył, ich własności (ściany, krawędzie, wierzchołki) oraz obliczania ich pól i objętości pojawiają się na egzaminie ósmoklasisty regularnie. Często są to zadania otwarte, wymagające obliczeń, ale również zamknięte, sprawdzające znajomość definicji i wzorów. Uczeń może zdobyć od 2 do nawet 4 punktów za zadania związane z tym tematem. CKE lubi sprawdzać umiejętność zastosowania poznanych wzorów w zadaniach tekstowych oraz umiejętność wizualizacji brył przestrzennych.
 
@@ -9027,7 +9027,7 @@ W tej lekcji opanujesz:
         *   Pole powierzchni kuli ($P$): $P = 4 \pi R^2$.
         *   Objętość kuli ($V$): $V = \frac{4}{3} \pi R^3$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Która z poniższych brył ma 12 krawędzi i 8 wierzchołków?
 
 A. Ostrosłup trójkątny
@@ -9073,7 +9073,7 @@ Opcja D spełnia oba warunki: 12 krawędzi i 8 wierzchołków.
 
 **Odpowiedź:** D
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz pole powierzchni całkowitej i objętość walca, którego promień podstawy wynosi 5 cm, a wysokość 10 cm. Wynik podaj z dokładnością do dwóch miejsc po przecinku, przyjmując $\pi \approx 3.14$.
 
 **Rozwiązanie:**
@@ -9104,7 +9104,7 @@ Oblicz pole powierzchni całkowitej i objętość walca, którego promień podst
 
 **Odpowiedź:** Pole powierzchni całkowitej walca wynosi $471.00 \text{ cm}^2$, a objętość wynosi $785.00 \text{ cm}^3$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Oblicz objętość stożka, którego promień podstawy ma długość 6 cm, a tworząca ma długość 10 cm.
 
@@ -9261,7 +9261,7 @@ Bryły geometryczne to trójwymiarowe figury ograniczone powierzchniami. Do pods
 
 **Uwaga:** Na egzaminie zazwyczaj podawane są wzory na pole podstawy i pole powierzchni bocznej dla figur płaskich potrzebnych do obliczeń (np. pole trójkąta, pole trapezu, pole koła). Wzory na objętości i pola powierzchni brył CKE zazwyczaj udostępnia na karcie wzorów.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz objętość i pole powierzchni całkowitej sześcianu, którego krawędź ma długość 5 cm.
 
 **Krok 1.** Zidentyfikuj dane: Długość krawędzi sześcianu $a = 5$ cm.
@@ -9272,7 +9272,7 @@ Oblicz objętość i pole powierzchni całkowitej sześcianu, którego krawędź
 
 **Odpowiedź:** Objętość sześcianu wynosi $125 \text{ cm}^3$, a pole jego powierzchni całkowitej wynosi $150 \text{ cm}^2$.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Działka w kształcie prostokąta ma wymiary 20 m na 30 m. Na działce tej ma stanąć budynek w kształcie prostopadłościanu o wymiarach podstawy 10 m na 15 m i wysokości 8 m. Oblicz, jaką powierzchnię działki zajmuje budynek, a jaką powierzchnię stanowi teren zielony wokół budynku. Oblicz również objętość budynku.
 
 **Krok 1.** Oblicz pole powierzchni całej działki.
@@ -9293,7 +9293,7 @@ Objętość budynku $V_{budynku} = 10 \text{ m} \cdot 15 \text{ m} \cdot 8 \text
 
 **Odpowiedź:** Budynek zajmuje $150 \text{ m}^2$ działki. Teren zielony stanowi $450 \text{ m}^2$. Objętość budynku wynosi $1200 \text{ m}^3$.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Do akwarium w kształcie prostopadłościanu o wymiarach podstawy 60 cm x 30 cm nalano wody do wysokości 40 cm. Oblicz objętość tej wody. Ile litrów wody znajduje się w akwarium? (1 litr = 1000 cm$^3$)
 
 **Krok 1.** Zidentyfikuj wymiary, które definiują objętość wody.
@@ -9402,7 +9402,7 @@ Zadania dotyczące układu współrzędnych pojawiają się na egzaminie ósmokl
     $$y_S = \frac{y_A + y_B}{2}$$
     Zatem $S = \left(\frac{x_A + x_B}{2}, \frac{y_A + y_B}{2}\right)$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Zaznacz na płaszczyźnie kartezjańskiej punkty $A = (3, 2)$, $B = (-4, 1)$, $C = (-2, -3)$ i $D = (5, -2)$. Odczytaj współrzędne punktu $P$ zaznaczonego na rysunku.
 
 ```text
@@ -9455,7 +9455,7 @@ Zaznacz na płaszczyźnie kartezjańskiej punkty $A = (3, 2)$, $B = (-4, 1)$, $C
 
 **Sprawdzenie:** Punkty zostały zaznaczone zgodnie z definicją współrzędnych. Punkt $A=(3,2)$ ma $x=3$ (na prawo od osi y) i $y=2$ (nad osią x). Punkt $B=(-4,1)$ ma $x=-4$ (na lewo od osi y) i $y=1$ (nad osią x). Punkt $C=(-2,-3)$ ma $x=-2$ (na lewo od osi y) i $y=-3$ (pod osią x). Punkt $D=(5,-2)$ ma $x=5$ (na prawo od osi y) i $y=-2$ (pod osią x). Odczytane współrzędne punktu $P=(-3,0)$ są zgodne z jego położeniem na osi x.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz odległość między punktami $A = (-1, 3)$ i $B = (5, -5)$.
 
 **Krok 1.** Zidentyfikuj współrzędne punktów: $x_A = -1$, $y_A = 3$, $x_B = 5$, $y_B = -5$.
@@ -9477,7 +9477,7 @@ Możemy również obliczyć $(x_A - x_B)^2 + (y_A - y_B)^2$:
 $\sqrt{(-1 - 5)^2 + (3 - (-5))^2} = \sqrt{(-6)^2 + (3 + 5)^2} = \sqrt{36 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10$. Wynik jest taki sam.
 Odległość między punktami $A$ i $B$ wynosi 10.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Wyznacz współrzędne środka odcinka $MN$, gdzie $M = (-7, 4)$ i $N = (3, -2)$.
 
@@ -9595,7 +9595,7 @@ W tej lekcji opanujesz:
     $$(x_2 - x_1)^2 + (y_2 - y_1)^2 = |AB|^2$$
     Wyciągając pierwiastek kwadratowy z obu stron (pamiętając, że długość jest nieujemna), otrzymujemy wzór na długość odcinka.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz długość odcinka o końcach w punktach A = (2, 3) i B = (5, 7).
 
 **Krok 1.** Zidentyfikuj współrzędne punktów A i B.
@@ -9619,7 +9619,7 @@ $$|AB| = 5$$
 **Sprawdzenie:**
 Odcinek AB ma długość 5. Wyobrażając sobie punkty na siatce: od A do B przesuwamy się o 3 jednostki w prawo ($5-2=3$) i o 4 jednostki w górę ($7-3=4$). Tworzą one przyprostokątne trójkąta prostokątnego. $3^2 + 4^2 = 9 + 16 = 25$. $\sqrt{25} = 5$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Oblicz długość odcinka łączącego punkty P = (-1, 4) i Q = (3, -2).
 
 **Krok 1.** Zidentyfikuj współrzędne punktów P i Q.
@@ -9647,7 +9647,7 @@ $$|PQ| = 2\sqrt{13}$$
 **Sprawdzenie:**
 Różnica współrzędnych x: $3 - (-1) = 4$. Różnica współrzędnych y: $-2 - 4 = -6$. Kwadraty: $4^2 = 16$, $(-6)^2 = 36$. Suma kwadratów: $16 + 36 = 52$. $\sqrt{52} = 2\sqrt{13}$. Wynik jest poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Punkty A = (-5, -2) i B = (1, 6) są końcami odcinka. Oblicz długość tego odcinka.
 
 **Krok 1.** Zidentyfikuj współrzędne punktów A i B.
@@ -9758,7 +9758,7 @@ Zadania polegające na odczycie wartości funkcji z wykresu lub interpretacji ce
 *   **Funkcja stała:** Funkcja, która dla wszystkich argumentów przyjmuje tę samą wartość. Na wykresie – linia pozioma.
 *   **Wartość maksymalna/minimalna:** Największa/najmniejsza wartość funkcji w danym przedziale lub na całej dziedzinie.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Na rysunku przedstawiono wykres funkcji $f$.
 
 ```text
@@ -9810,7 +9810,7 @@ c) Wykres rozciąga się od $x=-2$ do $x=3$. Zgadza się.
 d) Najniższa wartość $y=0$, najwyższa $y=4$. Zgadza się.
 e) Wykres przecina oś OX dla $x=0$. Zgadza się.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Na poniższym rysunku przedstawiono wykres funkcji $g$.
 
 ```text
@@ -9873,7 +9873,7 @@ e) Funkcja rośnie od lewej do prawej na całym swoim zakresie. Wykres potwierdz
 f) Nie ma odcinków malejących. Wykres potwierdza.
 g) Najwyższy punkt to $y=4$. Wykres potwierdza.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Na rysunku przedstawiono fragment wykresu pewnej funkcji $h$ określonej dla $x \in \{-3, -2, -1, 0, 1, 2, 3\}$.
 
@@ -10142,7 +10142,7 @@ W tej lekcji poznasz:
     *   Dla $a < 0$ prosta jest malejąca (opada od lewej do prawej).
 *   **Charakterystyka tabeli:** W tabeli wielkości opisującej proporcjonalność prostą, stosunek odpowiednich wartości $y$ do $x$ jest stały. $\frac{y_1}{x_1} = \frac{y_2}{x_2} = \dots = a$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Cena 5 kg jabłek wynosi 15 zł. Ile będą kosztować 3 kg tych samych jabłek?
 
 **Krok 1.** Zidentyfikuj wielkości i zależność.
@@ -10170,7 +10170,7 @@ Cena 3 kg jabłek wynosi 9 zł.
 Cena za kg wynosi $15 \text{ zł} / 5 \text{ kg} = 3 \text{ zł/kg}$.
 Cena za 3 kg to $3 \text{ kg} \cdot 3 \text{ zł/kg} = 9 \text{ zł}$. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Tabela przedstawia zależność między liczbą godzin pracy a ilością wyprodukowanych detali. Sprawdź, czy zależność ta jest proporcjonalnością prostą. Jeśli tak, wyznacz wzór tej zależności i oblicz, ile detali zostanie wyprodukowanych w ciągu 8 godzin pracy.
 
 | Liczba godzin pracy ($x$) | Liczba wyprodukowanych detali ($y$) |
@@ -10201,7 +10201,7 @@ $y = 20 \cdot 8 = 160$
 
 **Odpowiedź:** Zależność jest proporcjonalnością prostą. Wzór to $y=20x$. W ciągu 8 godzin pracy zostanie wyprodukowanych 160 detali.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Na rysunku przedstawiono fragment wykresu zależności $y = ax$. Określ znak współczynnika $a$ oraz oblicz jego wartość.
 
 ```text
@@ -10359,7 +10359,7 @@ VALUES (
 *   **Dominanta (Moda)**
     Dominanta to wartość, która najczęściej występuje w zbiorze danych. Zbiór danych może mieć jedną dominantę (unimodalny), więcej niż jedną (multimodalny) lub nie mieć dominanty wcale (jeśli wszystkie wartości występują z taką samą częstotliwością).
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Oblicz średnią arytmetyczną liczb: 12, 15, 18, 21, 24.
 
 **Krok 1.** Zidentyfikuj liczby w zbiorze.
@@ -10385,7 +10385,7 @@ $\frac{90}{5} = 18$.
 
 **Sprawdzenie:** Liczby są w pewnym sensie symetryczne wokół 18. Różnice od 18 to: -6, -3, 0, 3, 6. Suma różnic to -6 - 3 + 0 + 3 + 6 = 0, co potwierdza poprawność obliczeń.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W klasie liczącej 25 uczniów przeprowadzono test z matematyki. Średnia arytmetyczna uzyskanych punktów wyniosła 75. Jeden z uczniów, Janek, otrzymał 90 punktów. Po tym, jak wychowawca sprawdził obecność, okazało się, że jeden uczeń był nieobecny i jego wynik nie został uwzględniony w początkowym obliczeniu średniej. Po dodaniu wyniku tego nieobecnego ucznia, który wynosił 60 punktów, obliczono nową średnią dla całej klasy. Oblicz nową średnią arytmetyczną punktów uzyskanych przez wszystkich uczniów (włączając nieobecnego).
 
 **Krok 1.** Oblicz sumę punktów wszystkich 25 uczniów, na podstawie początkowej średniej.
@@ -10420,7 +10420,7 @@ Nowa średnia arytmetyczna wynosi 74.4.
 
 **Sprawdzenie:** Dodanie wyniku niższego niż początkowa średnia (60 < 75) powinno spowodować obniżenie średniej, co się stało (74.4 < 75). Wynik Janka (90) był tylko informacją wprowadzającą, niepotrzebną do ostatecznego obliczenia.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Tabela przedstawia oceny z matematyki uzyskane przez uczniów klasy 8a z ostatniego sprawdzianu:
 
@@ -10547,7 +10547,7 @@ W trakcie tej lekcji opanujesz:
 
     W powyższej tabeli wartość 2 występuje 3 razy, wartość 5 - 1 raz, a wartość 8 - 4 razy.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 **Zadanie:** Oblicz medianę i dominantę dla następującego zbioru danych: 3, 7, 5, 3, 9, 5, 3, 1.
 
 **Rozwiązanie:**
@@ -10576,7 +10576,7 @@ Dane uporządkowane: 1, 3, 3, 3, 5, 5, 7, 9.
 Mediana: $n=8$. Środkowe elementy to 4. i 5. (3 i 5). $\frac{3+5}{2}=4$. Poprawnie.
 Dominanta: Liczba 3 występuje 3 razy, co jest największą częstością. Poprawnie.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 **Zadanie:** W klasie liczącej 25 uczniów przeprowadzono sprawdzian z matematyki. Uzyskano następujące wyniki (liczba punktów): 4, 3, 5, 4, 2, 4, 3, 1, 5, 4, 3, 4, 2, 3, 4, 5, 4, 3, 3, 4, 5, 4, 3, 4, 4. Oblicz medianę i dominantę uzyskanych wyników.
 
 **Rozwiązanie:**
@@ -10625,7 +10625,7 @@ Dominanta: Liczymy częstości. 4 występuje 12 razy, co jest największą częs
 
 W tym przypadku mediana i dominanta są takie same.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 **Zadanie:** W tabeli poniżej przedstawiono wiek grupy osób:
 
@@ -10740,7 +10740,7 @@ W tej lekcji nauczysz się:
 *   **Średnia arytmetyczna:** Suma wszystkich danych podzielona przez ich liczbę. W kontekście diagramów, suma wartości wszystkich kategorii podzielona przez liczbę kategorii.
     $$ \text{Średnia} = \frac{a_1 + a_2 + \dots + a_n}{n} $$
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Na poniższym diagramie słupkowym przedstawiono liczbę uczniów, którzy wybrali poszczególne języki obce jako drugi język.
 
 [Wyobraź sobie diagram słupkowy: Na osi poziomej nazwy języków (Angielski, Niemiecki, Francuski, Hiszpański). Na osi pionowej liczba uczniów (od 0 do 30 z podziałką co 5). Słupki sięgają kolejno: Angielski - 25, Niemiecki - 15, Francuski - 10, Hiszpański - 20.]
@@ -10770,7 +10770,7 @@ d) Jaki procent wszystkich badanych uczniów uczy się języka francuskiego?
 
 **Sprawdzenie:** Wszystkie obliczenia wydają się poprawne, dane zostały odczytane prawidłowo z diagramu.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Na poniższym diagramie kołowym przedstawiono wyniki ankiety dotyczącej ulubionych kolorów uczniów pewnej klasy.
 
 [Wyobraź sobie diagram kołowy: Koło podzielone na 4 wycinki. Jeden wycinek (Niebieski) zajmuje około połowy koła. Drugi (Zielony) zajmuje około 1/4 koła. Trzeci (Czerwony) zajmuje 1/8 koła. Czwarty (Żółty) zajmuje 1/8 koła. Są podane procenty: Niebieski - 50%, Zielony - 25%, Czerwony - 12.5%, Żółty - 12.5%. Suma procentów: $50\% + 25\% + 12.5\% + 12.5\% = 100\%$.]
@@ -10804,7 +10804,7 @@ c) Gdybyśmy chcieli przedstawić te dane na diagramie słupkowym, jaka byłaby 
 
 **Sprawdzenie:** Obliczenia procentowe i proporcje zostały wykonane poprawnie. Związek między liczbą uczniów a wielkością wycinka/słupka jest zachowany.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 
 Poniżej znajduje się fragment tabeli przedstawiającej dochody pewnej firmy w kolejnych kwartałach roku 2023.
 
@@ -10998,7 +10998,7 @@ W tej lekcji nauczysz się:
 *   Rzut monetą: $\Omega = \{O, R\}$ (Orzeł, Reszka), $|\Omega| = 2$.
 *   Rzut dwiema monetami: $\Omega = \{OO, OR, RO, RR\}$, $|\Omega| = 4$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Rzucamy raz symetryczną sześcienną kostką do gry. Jakie jest prawdopodobieństwo, że wypadnie liczba parzysta?
 
 **Krok 1.** Określenie przestrzeni zdarzeń elementarnych ($\Omega$)**
@@ -11022,7 +11022,7 @@ $P(A) = \frac{1}{2}$
 
 **Sprawdzenie:** Prawdopodobieństwo $\frac{1}{2}$ jest liczbą z przedziału $[0, 1]$. Wynik jest logiczny, ponieważ połowa liczb na kostce jest parzysta.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 W urnie znajdują się kule ponumerowane od 1 do 20. Losujemy jedną kulę. Jakie jest prawdopodobieństwo, że numer wylosowanej kuli jest podzielny przez 3 lub przez 5?
 
 **Krok 1.** Określenie przestrzeni zdarzeń elementarnych ($\Omega$)**
@@ -11061,7 +11061,7 @@ $P(A \cup B) = \frac{|A \cup B|}{|\Omega|} = \frac{9}{20}$.
 
 **Sprawdzenie:** Wynik $\frac{9}{20}$ jest liczbą z przedziału $[0, 1]$. Zbiór liczb sprzyjających (9) jest mniejszy niż suma $|A|+|B|=10$, co potwierdza prawidłowe uwzględnienie liczby 15.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Z urny zawierającej 5 kul białych i 7 kul czarnych losujemy jedną kulę. Jakie jest prawdopodobieństwo, że będzie to kula biała?
 
 **Krok 1.** Określenie liczby wszystkich kul**
@@ -11195,7 +11195,7 @@ Drugą czynnością jest wybór elementu ze zbioru B (można to zrobić na 4 spo
 Liczba wszystkich możliwych par $(a_i, b_j)$ wynosi: $3 \cdot 4 = 12$.
 Są to pary: $(a_1, b_1), (a_1, b_2), (a_1, b_3), (a_1, b_4), (a_2, b_1), \dots, (a_3, b_4)$.
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 Pewien sklep oferuje 3 rodzaje lodów waniliowych i 5 rodzajów polew do lodów. Na ile sposobów można wybrać jedną porcję lodów z jedną polewą?
 
 **Krok 1.** Zidentyfikuj czynności do wykonania.
@@ -11223,7 +11223,7 @@ Lody L2 można połączyć z polewami P1, P2, P3, P4, P5 (5 możliwości).
 Lody L3 można połączyć z polewami P1, P2, P3, P4, P5 (5 możliwości).
 Razem: $5 + 5 + 5 = 15$ możliwości. Wynik jest poprawny.
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 Chcemy utworzyć dwucyfrową liczbę parzystą, używając cyfr $\{1, 2, 3, 4, 5\}$, przy czym cyfry mogą się powtarzać. Ile jest takich liczb?
 
 **Krok 1.** Rozłóż problem na czynności i zidentyfikuj warunki.
@@ -11258,7 +11258,7 @@ Cyfra jedności to 2: 12, 22, 32, 42, 52 (5 liczb)
 Cyfra jedności to 4: 14, 24, 34, 44, 54 (5 liczb)
 Łącznie: $5 + 5 = 10$ liczb. Wynik poprawny.
 
-## Przykład 3 — egzaminacyjny
+## Przykład 3 - egzaminacyjny
 Na ile sposobów można utworzyć trzyliterowy kod, używając liter ze zbioru $\{A, B, C, D\}$, jeśli litery mogą się powtarzać?
 
 **Krok 1.** Zidentyfikuj czynności.

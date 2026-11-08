@@ -630,7 +630,7 @@ export default function MinigryPage() {
                   <Link href="/login" className="font-semibold text-accent">
                     Zaloguj się
                   </Link>{" "}
-                  — zapisuj XP w chmurze na każdym urządzeniu.
+                  - zapisuj XP w chmurze na każdym urządzeniu.
                 </p>
               )}
             </>
@@ -700,7 +700,7 @@ export default function MinigryPage() {
 
           {!recommendedStart ? (
             <p className="rounded-2xl border border-surface-border bg-surface p-4 text-sm text-muted">
-              Brak minigier — spróbuj zmienić ścieżkę w ustawieniach.
+              Brak minigier - spróbuj zmienić ścieżkę w ustawieniach.
             </p>
           ) : null}
         </div>

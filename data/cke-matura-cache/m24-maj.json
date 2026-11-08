@@ -1,6 +1,6 @@
 {
   "sessionId": "m24-maj",
-  "nazwa": "Matura — maj 2024 — poziom podstawowy",
+  "nazwa": "Matura - maj 2024 - poziom podstawowy",
   "rok": 2024,
   "miesiac": 5,
   "fetchedAt": "2026-07-17T21:39:54.763Z",
@@ -9,7 +9,7 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Dana jest nierówność |𝑥 − 1|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych. A) ![Rysunek do zadania](/cke-matura/m24-maj/z01-1.png) B) ![Rysunek do zadania](/cke-matura/m24-maj/z01-2.png) C) ![Rysunek do zadania](/cke-matura/m24-maj/z01-3.png) D) ![Rysunek do zadania](/cke-matura/m24-maj/z01-4.png)",
-      "rozwiazanie": "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) — zgodnie z kluczem CKE (zazwyczaj opcja C)."
+      "rozwiazanie": "Krok 1: |x − 1| ≥ 3 oznacza x − 1 ≥ 3 lub x − 1 ≤ −3.\nKrok 2: x ≥ 4 lub x ≤ −2.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz od −2 w lewo.\n\nOdpowiedź: wybierz rysunek z dwoma „ramionami” poza przedziałem (−2, 4) - zgodnie z kluczem CKE (zazwyczaj opcja C)."
     },
     {
       "numer": 2,
@@ -21,7 +21,7 @@
       "numer": 3,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba 𝒏 𝟐 + (𝒏 + 𝟏) 𝟐 + (𝒏 + 𝟐) 𝟐 przy dzieleniu przez 𝟑 daje resztę 𝟐.",
-      "rozwiazanie": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 — suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 — QED."
+      "rozwiazanie": "Krok 1: Sprawdzamy reszty kwadratów mod 3: n² daje resztę 0, 1 lub 2.\nKrok 2: Dla każdego n trójka kolejnych kwadratów to zawsze 0+1+2, 1+2+0 lub 2+0+1 - suma reszt = 3 ≡ 0 (mod 3), ale nie o to chodzi.\nKrok 3: Liczymy dokładnie: (n²) mod 3 + ((n+1)²) mod 3 + ((n+2)²) mod 3. Po podstawieniu trzech możliwości dla n mod 3 zawsze wychodzi suma ≡ 2 (mod 3).\n\nOdpowiedź: reszta z dzielenia przez 3 jest zawsze 2 - QED."
     },
     {
       "numer": 4,
@@ -45,13 +45,13 @@
       "numer": 7,
       "dzial": "Równania",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie 𝑥+1 &frasl; (𝑥+2)(𝑥−3) = 0 w zbiorze liczb rzeczywistych A) nie ma rozwiązania. B) ma dokładnie jedno rozwiązanie: (−1). C) ma dokładnie dwa rozwiązania: (−2) oraz 3. D) ma dokładnie trzy rozwiązania: (−1), (−2) oraz 3.",
-      "rozwiazanie": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik — odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1"
+      "rozwiazanie": "Krok 1: Licznik musi być 0, mianownik ≠ 0 → x = −1.\nKrok 2: Sprawdzamy: x = −1 daje 0, mianownik (−1)(−4) ≠ 0.\nKrok 3: x = −2 i x = 3 zerują mianownik - odpadają.\n\nOdpowiedź: B) jedno rozwiązanie: x = −1"
     },
     {
       "numer": 8,
       "dzial": "Algebra",
       "tresc": "Dany jest wielomian 𝑊(𝑥) = 3𝑥 3 + 6𝑥 2 + 9𝑥. Oceń prawdziwość poniższych stwierdzeń. Wielomian 𝑊 jest iloczynem wielomianów 𝐹(𝑥) = 3𝑥 i 𝐺(𝑥) = 𝑥 2 + 2𝑥 + 3. A) prawda B) fałsz Liczba (−1) jest rozwiązaniem równania 𝑊(𝑥) = 0. A) prawda B) fałsz",
-      "rozwiazanie": "Krok 1: W(x) = 3x(x² + 2x + 3) — pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 — drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
+      "rozwiazanie": "Krok 1: W(x) = 3x(x² + 2x + 3) - pierwsze stwierdzenie PRAWDA.\nKrok 2: Podstaw x = −1: W(−1) = −3 + 6 − 9 = −6 ≠ 0 - drugie FAŁSZ.\n\nOdpowiedź: 1) P, 2) F"
     },
     {
       "numer": 9,
@@ -63,7 +63,7 @@
       "numer": 10,
       "dzial": "Równania",
       "tresc": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech 𝑥 oraz 𝑦 oznaczają liczby drzew posadzonych – odpowiednio – w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby 𝑥 drzew posadzonych w pierwszym sadzie oraz liczby 𝑦 drzew posadzonych w drugim sadzie, jest A) ![Rysunek do zadania](/cke-matura/m24-maj/z10-1.png) B) ![Rysunek do zadania](/cke-matura/m24-maj/z10-2.png) C) ![Rysunek do zadania](/cke-matura/m24-maj/z10-3.png) D) ![Rysunek do zadania](/cke-matura/m24-maj/z10-4.png)",
-      "rozwiazanie": "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE — wybierz właściwą macierz na arkuszu)."
+      "rozwiazanie": "Krok 1: x + y = 1960, po roku: 0,95x i 0,9y.\nKrok 2: 0,9y = 0,6 · 0,95x → y = 0,63x.\nKrok 3: x + 0,63x = 1960 → x = 1200, y = 760.\n\nOdpowiedź: układ z x+y=1960 i zależnością 0,9y = 0,6·0,95x (zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu)."
     },
     {
       "numer": 11,
@@ -87,13 +87,13 @@
       "numer": 14,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej 𝑓 (zobacz rysunek). Wierzchołek tej paraboli oraz punkty przecięcia paraboli z osiami układu współrzędnych mają obie współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m24-maj/z14-1.png)",
-      "rozwiazanie": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) — przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
+      "rozwiazanie": "Krok 1 (14.1): Z wykresu odczytujemy przedział, gdzie f(x) ≥ 0.\nKrok 2 (14.2): Dopasowujemy wzór f(x) = a(x−p)²+q do wierzchołka z rysunku.\nKrok 3 (14.3): Porównujemy wartości f w punktach symetrycznych.\nKrok 4 (14.4): g(x)=f(x+3), h(x)=f(−x) - przesunięcia/odbicia wykresu.\n\nOdpowiedź: każde podzadanie wybierz według rysunku i klucza CKE (na arkuszu)."
     },
     {
       "numer": 15,
       "dzial": "Ciągi",
       "tresc": "Ciąg (𝑎 𝑛 ) jest określony wzorem 𝑎 𝑛 = (−1) 𝑛 ⋅ (𝑛 − 5) dla każdej liczby naturalnej 𝑛 ≥ 1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Pierwszy wyraz ciągu (𝑎 𝑛 ) jest dwa razy większy od trzeciego wyrazu tego ciągu. A) prawda B) fałsz Wszystkie wyrazy ciągu (𝑎 𝑛 ) są dodatnie. A) prawda B) fałsz",
-      "rozwiazanie": "Krok 1: a₁ = −4, a₃ = −2 — pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
+      "rozwiazanie": "Krok 1: a₁ = −4, a₃ = −2 - pierwsze nie jest 2× większe od trzeciego → FAŁSZ.\nKrok 2: Wyrazy mogą być ujemne (np. n=1) → FAŁSZ.\n\nOdpowiedź: 1) F, 2) F"
     },
     {
       "numer": 16,
@@ -147,13 +147,13 @@
       "numer": 24,
       "dzial": "Geometria",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥,𝑦) dany jest równoległobok 𝐴𝐵𝐶𝐷, w którym 𝐴 = (−2 , 6) oraz 𝐵 = (10 , 2). Przekątne 𝐴𝐶 oraz 𝐵𝐷 tego równoległoboku przecinają się w punkcie 𝑃 = (6 , 7). Oblicz długość boku 𝑩𝑪 tego równoległoboku. Zapisz obliczenia.",
-      "rozwiazanie": "Krok 1: Środek przekątnych to środek równoległoboku — wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10"
+      "rozwiazanie": "Krok 1: Środek przekątnych to środek równoległoboku - wyznaczamy C, D.\nKrok 2: Wektor BC liczymy z współrzędnych.\nKrok 3: |BC| = √((12)² + (−4)²) = √160 = 4√10.\n\nOdpowiedź: 4√10"
     },
     {
       "numer": 25,
       "dzial": "Geometria",
       "tresc": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe 15√ 3 . ![Rysunek do zadania](/cke-matura/m24-maj/z25-1.png)",
-      "rozwiazanie": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej — wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
+      "rozwiazanie": "Krok 1 (25.1): Pole ściany bocznej = pole podstawy = 15√3 → zwykle C) 6√10 po przeliczeniu krawędzi.\nKrok 2 (25.2): Kąt nachylenia przekątnej - wybór rysunku z arkusza.\n\nOdpowiedź: zgodnie z kluczem CKE dla 25.1 i 25.2."
     },
     {
       "numer": 26,

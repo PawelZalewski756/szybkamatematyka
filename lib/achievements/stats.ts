@@ -1,5 +1,5 @@
 /**
- * Zbieranie `PlayerStats` z już istniejących źródeł danych — bez nowej tabeli
+ * Zbieranie `PlayerStats` z już istniejących źródeł danych - bez nowej tabeli
  * Supabase i bez migracji. Część czysta (merge / budowanie statystyk) jest
  * testowalna, a część I/O czyta localStorage oraz rejestruje „flagi zachowań"
  * (nocny marek / ranny ptaszek / weekend) na podstawie czasu wizyty.
@@ -12,7 +12,7 @@ import { loadStoredChallenges } from "@/lib/pojedynki/duel-storage";
 import type { Profile } from "@/lib/supabase/profiles";
 import type { PlayerStats } from "@/lib/achievements/types";
 
-/** Flagi zachowań zależne od czasu — kumulowane (raz zdobyte zostają). */
+/** Flagi zachowań zależne od czasu - kumulowane (raz zdobyte zostają). */
 export type BehaviorFlags = {
   nightOwl: boolean;
   earlyBird: boolean;
@@ -25,7 +25,7 @@ const EMPTY_BEHAVIOR: BehaviorFlags = {
   weekendWarrior: false,
 };
 
-/** Pusta migawka — bezpieczny domyślny stan (SSR / brak danych). */
+/** Pusta migawka - bezpieczny domyślny stan (SSR / brak danych). */
 export function emptyPlayerStats(): PlayerStats {
   return {
     xp: 0,
@@ -80,7 +80,7 @@ export function buildPlayerStats(sources: PlayerStatsSources): PlayerStats {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Flagi zachowań (localStorage) — czas wizyty.                              */
+/*  Flagi zachowań (localStorage) - czas wizyty.                              */
 /* -------------------------------------------------------------------------- */
 
 const BEHAVIOR_PREFIX = "szybka-matma-achievements-behavior";
@@ -155,7 +155,7 @@ export function recordVisitBehavior(
  * Zbiera kompletne PlayerStats z dostępnych źródeł klienckich. Czyta liczniki
  * z localStorage (rozwiązane zadania, powtórki, wyzwania, pojedynki) oraz
  * doczytuje/rejestruje flagi czasowe. Profil (XP, streak, minigry) podajemy
- * z zewnątrz — pochodzi z istniejącego łańcucha autoryzacji.
+ * z zewnątrz - pochodzi z istniejącego łańcucha autoryzacji.
  */
 export function gatherClientStats(
   profile: Profile | null,
@@ -174,7 +174,7 @@ export function gatherClientStats(
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Zbiór „zobaczonych" odznak (localStorage) — do wykrywania świeżo odblok.  */
+/*  Zbiór „zobaczonych" odznak (localStorage) - do wykrywania świeżo odblok.  */
 /* -------------------------------------------------------------------------- */
 
 const SEEN_PREFIX = "szybka-matma-achievements-seen";
@@ -185,7 +185,7 @@ function seenKey(userId: string | null): string {
 
 /**
  * Czy w localStorage istnieje już zapis „widzianych" odznak. Pozwala odróżnić
- * pierwszą w życiu wizytę (brak zapisu) od stanu „widziałem, nic nowego" —
+ * pierwszą w życiu wizytę (brak zapisu) od stanu „widziałem, nic nowego" -
  * dzięki temu przy pierwszym otwarciu nie świętujemy wszystkich naraz.
  */
 export function hasSeenAchievementRecord(userId: string | null): boolean {
@@ -199,7 +199,7 @@ export function hasSeenAchievementRecord(userId: string | null): boolean {
 
 /**
  * Łączy dwa zbiory „widzianych" odznak (unia). Źródłem prawdy między urządzeniami
- * jest suma — odznaka widziana na DOWOLNYM urządzeniu pozostaje „widziana", dzięki
+ * jest suma - odznaka widziana na DOWOLNYM urządzeniu pozostaje „widziana", dzięki
  * czemu confetti nie pojawia się ponownie dla już zobaczonego osiągnięcia.
  */
 export function mergeSeenIds(

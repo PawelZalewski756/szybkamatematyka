@@ -10,7 +10,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Regulamin",
-  description: `Regulamin serwisu ${BRAND_NAME} — zasady korzystania z platformy, konta i subskrypcji.`,
+  description: `Regulamin serwisu ${BRAND_NAME} - zasady korzystania z platformy, konta i subskrypcji.`,
   alternates: { canonical: "/regulamin" },
 };
 
@@ -49,7 +49,7 @@ export default function RegulaminPage() {
           hasło. Jesteś odpowiedzialny za działania wykonane na Twoim koncie.
         </p>
         <p>
-          Możesz usunąć konto, kontaktując się z nami — szczegóły w{" "}
+          Możesz usunąć konto, kontaktując się z nami - szczegóły w{" "}
           <Link href="/polityka-prywatnosci" className="font-semibold text-accent hover:underline">
             polityce prywatności
           </Link>
@@ -67,7 +67,7 @@ export default function RegulaminPage() {
           . Płatności obsługuje zewnętrzny operator (Stripe).
         </p>
         <p>
-          Subskrypcję miesięczną możesz anulować w dowolnym momencie — dostęp
+          Subskrypcję miesięczną możesz anulować w dowolnym momencie - dostęp
           trwa do końca opłaconego okresu. Plan roczny obowiązuje przez
           wykupiony okres, o ile przepisy konsumenckie nie stanowią inaczej.
         </p>
@@ -95,7 +95,7 @@ export default function RegulaminPage() {
         <p>
           Materiały, układ, oprogramowanie i oznaczenia {BRAND_NAME} są
           chronione prawem. Arkusze i treści pochodzące od CKE lub innych
-          podmiotów mogą podlegać ich własnym zasadom wykorzystania — używamy
+          podmiotów mogą podlegać ich własnym zasadom wykorzystania - używamy
           ich w celach edukacyjnych w ramach Serwisu.
         </p>
       </InfoSection>

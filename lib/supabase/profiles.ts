@@ -289,7 +289,7 @@ export function warnAvatarColumnMissingOnce(): void {
     }
   }
   console.warn(
-    "[szybka-matma] Kolumna profiles.avatar_url niedostępna — awatar zapisany w user_metadata. " +
+    "[szybka-matma] Kolumna profiles.avatar_url niedostępna - awatar zapisany w user_metadata. " +
       "Aby trafił do rankingu, uruchom w Supabase SQL Editor: supabase/migrations/add_avatar_url_only.sql",
   );
 }
@@ -511,7 +511,7 @@ export async function createProfile(
     ({ row, error } = await insertAndSelectProfile(base));
   }
 
-  // Profil już istnieje (trigger auth) — dopisz nick zamiast udawać sukces lokalnie.
+  // Profil już istnieje (trigger auth) - dopisz nick zamiast udawać sukces lokalnie.
   if (error && isUniqueViolation(error)) {
     return updateProfileNick(userId, nick);
   }
@@ -544,7 +544,7 @@ export async function updateProfileNick(
   }
 
   // Normalizacja nicku odbywa się spójnie w profileWritePayload() (ten sam tor
-  // zapisu co createProfile), więc nie liczymy jej tu osobno — wcześniejsza
+  // zapisu co createProfile), więc nie liczymy jej tu osobno - wcześniejsza
   // lokalna zmienna `normalized` była martwa.
   const patch: Record<string, unknown> = {
     ...profileWritePayload(nick),
@@ -583,7 +583,7 @@ export async function updateProfileSchoolLevel(
 
   if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
     console.warn(
-      "[szybka-matma] Kolumna profiles.school_class niedostępna — uruchom aktualne migracje Supabase",
+      "[szybka-matma] Kolumna profiles.school_class niedostępna - uruchom aktualne migracje Supabase",
     );
     const { row: current } = await selectProfileWithFallback(userId);
     if (!current) throw new Error("updateProfileSchoolLevel: brak profilu");
@@ -719,7 +719,7 @@ export async function ensureUserProfile(user: User): Promise<Profile> {
     console.error("[szybka-matma] ensureUserProfile create failed:", err);
   }
 
-  // Ostatnia deska — lokalny szkielet tylko gdy baza nie przyjmuje INSERT.
+  // Ostatnia deska - lokalny szkielet tylko gdy baza nie przyjmuje INSERT.
   // Pusty nick wymusza onboarding; nie udajemy zapisanego profilu.
   return {
     id: user.id,
@@ -746,12 +746,12 @@ export async function awardArenaXp(
   });
 
   if (error) {
-    console.warn("[szybka-matma] awardArenaXp — zapis XP:", error);
+    console.warn("[szybka-matma] awardArenaXp - zapis XP:", error);
     if (isPostgrestPermissionError(error) || isPostgrestNoRowsError(error)) {
       throw error;
     }
     // Inne błędy (np. sieć): lokalny bump, ale UI treningu i tak pokazuje ostrzeżenie
-    // tylko gdy rzucimy — więc rzucamy zawsze, żeby nie udawać zapisu w chmurze.
+    // tylko gdy rzucimy - więc rzucamy zawsze, żeby nie udawać zapisu w chmurze.
     throw error;
   }
 
@@ -779,7 +779,7 @@ export async function saveProfileAfterGame(
     xpEarned: number;
     /**
      * Czy zmiany trafiły do bazy. `false` oznacza, że zwrócony profil jest tylko
-     * lokalnie zaktualizowany (zapis do DB się nie powiódł) — UI nie powinien
+     * lokalnie zaktualizowany (zapis do DB się nie powiódł) - UI nie powinien
      * sugerować, że XP zostało zachowane w chmurze. Pole dodane additywnie, więc
      * dotychczasowi wywołujący ignorujący je działają bez zmian.
      */
@@ -831,8 +831,8 @@ export async function saveProfileAfterGame(
   };
 
   if (error) {
-    console.warn("[szybka-matma] saveProfileAfterGame — zapis XP bez streak:", error);
-    // Nie powiadamiaj o „sukcesie” lokalnym — UI minigier polega na `persisted`.
+    console.warn("[szybka-matma] saveProfileAfterGame - zapis XP bez streak:", error);
+    // Nie powiadamiaj o „sukcesie” lokalnym - UI minigier polega na `persisted`.
     return { ...resultBase, persisted: false };
   }
 
@@ -894,7 +894,7 @@ export async function awardDailyChallenge(
   };
 
   if (error) {
-    console.warn("[szybka-matma] awardDailyChallenge — zapis bez streak:", error);
+    console.warn("[szybka-matma] awardDailyChallenge - zapis bez streak:", error);
     notifyProfileUpdated(resultBase);
     return resultBase;
   }
@@ -924,7 +924,7 @@ export function subscriptionSnapshotFromProfile(
 
 /**
  * Lekkie zapytanie o własną subskrypcję. Nie czyta prywatnych kolumn przez
- * PostgREST — migracja udostępnia wyłącznie funkcję RPC ograniczoną do auth.uid().
+ * PostgREST - migracja udostępnia wyłącznie funkcję RPC ograniczoną do auth.uid().
  */
 export async function fetchSubscriptionSnapshotForUser(
   userId: string,

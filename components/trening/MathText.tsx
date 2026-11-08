@@ -18,7 +18,7 @@ function renderLatex(latex: string, displayMode: boolean): string {
   });
 }
 
-/** Krótki tekst z LaTeX ($...$) — np. opcje ABCD. */
+/** Krótki tekst z LaTeX ($...$) - np. opcje ABCD. */
 export function MathText({ content, className, as: Tag = "span" }: MathTextProps) {
   const nodes = useMemo(
     () =>

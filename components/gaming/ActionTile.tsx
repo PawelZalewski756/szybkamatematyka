@@ -4,7 +4,7 @@ type ActionTileProps = {
   href: string;
   title: string;
   emoji: string;
-  /** `accent` — wyróżniona karta; `surface` — neutralna. */
+  /** `accent` - wyróżniona karta; `surface` - neutralna. */
   variant?: "accent" | "surface";
 };
 

@@ -18,7 +18,7 @@ const ARKUSZ_TYP = "matura";
 const ARKUSZ_ROK = 2024;
 const ARKUSZ_MIESIAC = 5;
 
-/** 3 przykładowe zadania — tylko numer, dział i treść polecenia. */
+/** 3 przykładowe zadania - tylko numer, dział i treść polecenia. */
 const PRZYKLADOWE_ZADANIA = [
   {
     numer_zadania: 1,
@@ -40,7 +40,7 @@ const PRZYKLADOWE_ZADANIA = [
   },
 ];
 
-/** Rozwiązania (kolumna wymagana w DB — uzupełniane przy seedzie). */
+/** Rozwiązania (kolumna wymagana w DB - uzupełniane przy seedzie). */
 const ROZWIAZANIA = {
   1: "Krok 1: Po obniżce zostaje 80% ceny początkowej.\nKrok 2: 0,8x = 240 → x = 300.\nOdpowiedź: 300 zł.",
   2: "Krok 1: Podstaw x = 5.\nKrok 2: f(5) = 2·5 − 3 = 10 − 3 = 7.\nOdpowiedź: 7.",
@@ -120,7 +120,7 @@ async function seedDatabase() {
     if (error) {
       if (error.code === "23505" || error.message.includes("duplicate")) {
         console.log(
-          `  ⊘ Zadanie ${zadanie.numer_zadania} — już istnieje, pomijam.`,
+          `  ⊘ Zadanie ${zadanie.numer_zadania} - już istnieje, pomijam.`,
         );
         skipped += 1;
         continue;

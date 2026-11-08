@@ -8,7 +8,7 @@ export type RequireProState = {
   isLoggedIn: boolean;
   /** Czy dostęp do treści Pro jest dozwolony. */
   allowed: boolean;
-  /** Powód braku dostępu — przydatny do dopasowania komunikatu/CTA. */
+  /** Powód braku dostępu - przydatny do dopasowania komunikatu/CTA. */
   reason: "ok" | "loading" | "not_logged_in" | "needs_pro";
   refresh: () => Promise<void>;
 };
@@ -20,7 +20,7 @@ export type RequireProState = {
  *   const { allowed, reason } = useRequirePro();
  *   if (!allowed) return <ProGate />;
  *
- * NIE bramkuje niczego sam — to czysta logika; renderowanie zostawiamy
+ * NIE bramkuje niczego sam - to czysta logika; renderowanie zostawiamy
  * komponentom (np. <ProGate>).
  */
 export function useRequirePro(): RequireProState {

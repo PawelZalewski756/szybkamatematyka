@@ -16,7 +16,7 @@ function warnTableMissingOnce(): void {
     }
   }
   console.warn(
-    "[szybka-matma] Tabela review_schedule niedostępna — powtórki zapisywane tylko lokalnie. " +
+    "[szybka-matma] Tabela review_schedule niedostępna - powtórki zapisywane tylko lokalnie. " +
       "Uruchom w Supabase SQL Editor: supabase/migrations/20260529140000_add_review_schedule.sql",
   );
 }
@@ -101,7 +101,7 @@ export async function fetchReviewSchedule(
   return (data ?? []).map((row) => rowToItem(row as ReviewRow));
 }
 
-/** Zapisuje (upsert) pojedynczy wpis. Best-effort — błędy nie blokują UI. */
+/** Zapisuje (upsert) pojedynczy wpis. Best-effort - błędy nie blokują UI. */
 export async function upsertReviewItem(
   userId: string,
   item: ReviewItem,

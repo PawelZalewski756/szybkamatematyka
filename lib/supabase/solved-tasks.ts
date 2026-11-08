@@ -18,7 +18,7 @@ function warnSolvedTasksTableMissingOnce(): void {
     }
   }
   console.warn(
-    "[szybka-matma] Tabela solved_tasks niedostępna — postęp areny nie jest zapisywany. " +
+    "[szybka-matma] Tabela solved_tasks niedostępna - postęp areny nie jest zapisywany. " +
       "Uruchom w Supabase SQL Editor: supabase/migrations/init_solved_tasks.sql",
   );
 }

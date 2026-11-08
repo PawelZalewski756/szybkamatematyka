@@ -18,7 +18,7 @@ export default function CennikPage() {
           Cennik
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-          Start jest darmowy i zostaje darmowy. Pro i Roczny to ta sama treść —
+          Start jest darmowy i zostaje darmowy. Pro i Roczny to ta sama treść -
           wybierasz, czy płacisz co miesiąc, czy z góry za rok.
         </p>
       </header>

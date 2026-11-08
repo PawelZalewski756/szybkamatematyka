@@ -42,10 +42,10 @@ ${spec.map}
 ## Definicje i wzory
 ${spec.definitions}
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 ${spec.example1}
 
-## Przykład 2 — maturalny
+## Przykład 2 - maturalny
 ${spec.example2}
 
 ## Pułapki
@@ -72,13 +72,13 @@ export const ADDITIONAL_SEED_MATERIALS: AdditionalMaterial[] = [
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",
     topic: "zbiory_i_przedzialy",
-    title: "Zbiory i przedziały — zapis oraz działania",
+    title: "Zbiory i przedziały - zapis oraz działania",
     examNote:
       "Zbiory i przedziały są używane w zadaniach CKE do zapisu rozwiązań nierówności, dziedziny i zbioru wartości funkcji. Trzeba rozpoznawać nawiasy otwarte i domknięte, zaznaczać przedziały na osi oraz obliczać sumę i część wspólną. Ten temat porządkuje zapis, który pojawia się także w zadaniach o funkcjach i wartości bezwzględnej.",
     map:
       "1. Rozróżnisz przedziały otwarte, domknięte i jednostronnie domknięte.\n2. Odczytasz przedział z osi liczbowej.\n3. Obliczysz sumę, część wspólną i różnicę przedziałów.\n4. Zapiszesz rozwiązanie nierówności w poprawnej notacji.\n5. Sprawdzisz, czy końce należą do zbioru.",
     definitions:
-      "**Przedział domknięty** $[a,b]$ zawiera oba końce: $a\\le x\\le b$. **Przedział otwarty** $(a,b)$ nie zawiera końców: $a<x<b$. W przedziałach mieszanych nawias okrągły oznacza wyłączenie końca, a kwadratowy — jego włączenie.\n\n**Suma zbiorów** $A\\cup B$ zawiera elementy należące do $A$ lub do $B$. **Część wspólna** $A\\cap B$ zawiera elementy należące jednocześnie do obu zbiorów. Przy zapisie nieskończoności zawsze używa się nawiasu okrągłego, np. $(-\\infty,4]$.\n\nNa osi liczbowej pełne kółko oznacza koniec należący do zbioru, a puste kółko — koniec wyłączony. Zanim wykonasz działanie, zaznacz oba przedziały na jednej osi.",
+      "**Przedział domknięty** $[a,b]$ zawiera oba końce: $a\\le x\\le b$. **Przedział otwarty** $(a,b)$ nie zawiera końców: $a<x<b$. W przedziałach mieszanych nawias okrągły oznacza wyłączenie końca, a kwadratowy - jego włączenie.\n\n**Suma zbiorów** $A\\cup B$ zawiera elementy należące do $A$ lub do $B$. **Część wspólna** $A\\cap B$ zawiera elementy należące jednocześnie do obu zbiorów. Przy zapisie nieskończoności zawsze używa się nawiasu okrągłego, np. $(-\\infty,4]$.\n\nNa osi liczbowej pełne kółko oznacza koniec należący do zbioru, a puste kółko - koniec wyłączony. Zanim wykonasz działanie, zaznacz oba przedziały na jednej osi.",
     example1:
       "Wyznacz $[-3,5]\\cap[1,8]$. Wspólny fragment zaczyna się w większym z lewych końców, czyli w $1$, i kończy w mniejszym z prawych końców, czyli w $5$. Oba końce są domknięte, więc wynik to $[1,5]$. Dla sumy tych przedziałów otrzymalibyśmy $[-3,8]$.",
     example2:
@@ -98,13 +98,13 @@ export const ADDITIONAL_SEED_MATERIALS: AdditionalMaterial[] = [
     exam_type: "matura_podstawowa",
     category: "funkcje",
     topic: "funkcja_wykladnicza",
-    title: "Funkcja wykładnicza — wzrost i spadek",
+    title: "Funkcja wykładnicza - wzrost i spadek",
     examNote:
       "Funkcja wykładnicza opisuje szybki wzrost lub spadek, dlatego CKE łączy ją z procentem składanym, skalą i zmianami w czasie. W zadaniach trzeba rozpoznać podstawę, obliczyć wartość funkcji, odczytać monotoniczność i rozwiązać proste równanie o tej samej podstawie.",
     map:
       "1. Rozpoznasz postać $f(x)=a^x$.\n2. Obliczysz wartości dla całkowitych argumentów.\n3. Określisz, czy funkcja rośnie, czy maleje.\n4. Rozwiążesz równanie przez porównanie wykładników.\n5. Zinterpretujesz wzrost i spadek w zadaniu praktycznym.",
     definitions:
-      "Funkcja wykładnicza ma postać $f(x)=a^x$, gdzie $a>0$ i $a\\ne1$. Dla $a>1$ jest rosnąca, a dla $0<a<1$ — malejąca. Zawsze przechodzi przez punkt $(0,1)$, bo $a^0=1$.\n\nPodstawowe prawa potęg: $a^u\\cdot a^v=a^{u+v}$, $\\frac{a^u}{a^v}=a^{u-v}$ oraz $(a^u)^v=a^{uv}$. Jeśli $a>0$, $a\\ne1$ i $a^u=a^v$, to $u=v$. W modelu wzrostu $P(t)=P_0\\cdot a^t$ podstawa większa od $1$ oznacza wzrost, a podstawa między $0$ i $1$ — spadek.",
+      "Funkcja wykładnicza ma postać $f(x)=a^x$, gdzie $a>0$ i $a\\ne1$. Dla $a>1$ jest rosnąca, a dla $0<a<1$ - malejąca. Zawsze przechodzi przez punkt $(0,1)$, bo $a^0=1$.\n\nPodstawowe prawa potęg: $a^u\\cdot a^v=a^{u+v}$, $\\frac{a^u}{a^v}=a^{u-v}$ oraz $(a^u)^v=a^{uv}$. Jeśli $a>0$, $a\\ne1$ i $a^u=a^v$, to $u=v$. W modelu wzrostu $P(t)=P_0\\cdot a^t$ podstawa większa od $1$ oznacza wzrost, a podstawa między $0$ i $1$ - spadek.",
     example1:
       "Dla $f(x)=2^x$ oblicz $f(4)$ oraz $f(-2)$. Mamy $f(4)=2^4=16$. Ponadto $f(-2)=2^{-2}=\\frac1{2^2}=\\frac14$. Funkcja rośnie, bo podstawa $2$ jest większa od $1$.",
     example2:
@@ -124,13 +124,13 @@ export const ADDITIONAL_SEED_MATERIALS: AdditionalMaterial[] = [
     exam_type: "8_klasa",
     category: "liczby",
     topic: "podzielnosc",
-    title: "Podzielność liczb — dzielniki, NWD i reszta",
+    title: "Podzielność liczb - dzielniki, NWD i reszta",
     examNote:
       "Podzielność pojawia się w zadaniach o dzielnikach, wielokrotnościach, rozkładzie liczb i reszcie z dzielenia. Na egzaminie ósmoklasisty ważne są cechy podzielności oraz sprawne używanie największego wspólnego dzielnika i najmniejszej wspólnej wielokrotności.",
     map:
       "1. Rozpoznasz dzielnik i wielokrotność.\n2. Zastosujesz cechy podzielności przez 2, 3, 5, 9 i 10.\n3. Obliczysz NWD i NWW.\n4. Odczytasz resztę z dzielenia.\n5. Rozłożysz liczbę na czynniki pierwsze.",
     definitions:
-      "Liczba $a$ dzieli liczbę $b$, gdy istnieje całkowite $k$ takie, że $b=a\\cdot k$. Zapisujemy wtedy $a\\mid b$. Dzielnik nie może być zerem. Wielokrotności liczby $a$ to liczby $a,2a,3a,\\ldots$.\n\nLiczba jest podzielna przez $2$, gdy jej ostatnia cyfra jest parzysta; przez $5$, gdy kończy się na $0$ lub $5$; przez $10$, gdy kończy się na $0$; przez $3$ i $9$, gdy odpowiednio suma jej cyfr jest podzielna przez $3$ lub $9$. NWD to największy wspólny dzielnik, a NWW — najmniejsza wspólna wielokrotność. W dzieleniu z resztą $b=a\\cdot q+r$, gdzie $0\\le r<a$.",
+      "Liczba $a$ dzieli liczbę $b$, gdy istnieje całkowite $k$ takie, że $b=a\\cdot k$. Zapisujemy wtedy $a\\mid b$. Dzielnik nie może być zerem. Wielokrotności liczby $a$ to liczby $a,2a,3a,\\ldots$.\n\nLiczba jest podzielna przez $2$, gdy jej ostatnia cyfra jest parzysta; przez $5$, gdy kończy się na $0$ lub $5$; przez $10$, gdy kończy się na $0$; przez $3$ i $9$, gdy odpowiednio suma jej cyfr jest podzielna przez $3$ lub $9$. NWD to największy wspólny dzielnik, a NWW - najmniejsza wspólna wielokrotność. W dzieleniu z resztą $b=a\\cdot q+r$, gdzie $0\\le r<a$.",
     example1:
       "Sprawdź, czy $738$ jest podzielne przez $3$ i $9$. Suma cyfr wynosi $7+3+8=18$. Ponieważ $18$ dzieli się przez $3$ i przez $9$, liczba $738$ jest podzielna przez obie te liczby.",
     example2:
@@ -150,15 +150,15 @@ export const ADDITIONAL_SEED_MATERIALS: AdditionalMaterial[] = [
     exam_type: "8_klasa",
     category: "geometria",
     topic: "okrag_i_kolo",
-    title: "Okrąg i koło — promień, obwód i pole",
+    title: "Okrąg i koło - promień, obwód i pole",
     examNote:
       "Zadania o okręgu i kole sprawdzają rozróżnienie między obwodem okręgu a polem koła, odczyt promienia lub średnicy oraz podstawienie do wzoru. Często dane są osadzone w sytuacji praktycznej: tarcza, pizza, koło roweru albo figura wpisana w kwadrat.",
     map:
       "1. Odróżnisz okrąg od koła.\n2. Odczytasz promień i średnicę.\n3. Obliczysz obwód okręgu i pole koła.\n4. Przekształcisz wzór, aby znaleźć promień.\n5. Zastosujesz przybliżenie $\\pi$ zgodnie z poleceniem.",
     definitions:
-      "Okrąg jest brzegiem koła, a koło obejmuje brzeg i jego wnętrze. Promień $r$ łączy środek z punktem okręgu, a średnica $d$ przechodzi przez środek i spełnia $d=2r$.\n\nDługość okręgu obliczamy ze wzoru $L=2\\pi r=\\pi d$. Pole koła wynosi $P=\\pi r^2$. Jeśli w zadaniu nie podano inaczej, wynik można zostawić z $\\pi$; gdy polecenie wymaga przybliżenia, użyj wskazanej wartości, np. $\\pi\\approx3{,}14$. Jednostki obwodu są liniowe, a pola — kwadratowe.",
+      "Okrąg jest brzegiem koła, a koło obejmuje brzeg i jego wnętrze. Promień $r$ łączy środek z punktem okręgu, a średnica $d$ przechodzi przez środek i spełnia $d=2r$.\n\nDługość okręgu obliczamy ze wzoru $L=2\\pi r=\\pi d$. Pole koła wynosi $P=\\pi r^2$. Jeśli w zadaniu nie podano inaczej, wynik można zostawić z $\\pi$; gdy polecenie wymaga przybliżenia, użyj wskazanej wartości, np. $\\pi\\approx3{,}14$. Jednostki obwodu są liniowe, a pola - kwadratowe.",
     example1:
-      "Koło ma promień $r=4$ cm. Jego obwód to $L=2\\pi\\cdot4=8\\pi$ cm, a pole to $P=\\pi\\cdot4^2=16\\pi$ cm$^2$. Nie wolno zamieniać wzorów: obwód zawiera promień w pierwszej potędze, a pole — w drugiej.",
+      "Koło ma promień $r=4$ cm. Jego obwód to $L=2\\pi\\cdot4=8\\pi$ cm, a pole to $P=\\pi\\cdot4^2=16\\pi$ cm$^2$. Nie wolno zamieniać wzorów: obwód zawiera promień w pierwszej potędze, a pole - w drugiej.",
     example2:
       "Okrąg ma średnicę $10$ cm. Najpierw obliczamy promień: $r=10:2=5$ cm. Pole koła wynosi $P=\\pi\\cdot5^2=25\\pi$ cm$^2$. Przy $\\pi\\approx3{,}14$ otrzymujemy $78{,}5$ cm$^2$.",
     pitfalls:

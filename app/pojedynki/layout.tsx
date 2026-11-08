@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "Pojedynki 1v1",
   description:
-    "Pojedynki matematyczne 1v1: ten sam zestaw pytań, gra na żywo — na kod ze znajomym lub z botem. Sprawdź, kto liczy szybciej.",
+    "Pojedynki matematyczne 1v1: ten sam zestaw pytań, gra na żywo - na kod ze znajomym lub z botem. Sprawdź, kto liczy szybciej.",
   alternates: { canonical: "/pojedynki" },
 };
 

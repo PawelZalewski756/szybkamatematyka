@@ -1,4 +1,4 @@
-/** Rozbudowane lekcje (pełny kurs) — nadpisują wpisy w SEED_MATERIALS. */
+/** Rozbudowane lekcje (pełny kurs) - nadpisują wpisy w SEED_MATERIALS. */
 export type ExpandedTheoryEntry = {
   title: string;
   content: string;
@@ -6,7 +6,7 @@ export type ExpandedTheoryEntry = {
 
 const ROWNANIA_LINIOWE_CONTENT = `## Na egzaminie
 
-Równania liniowe to **fundament matury podstawowej** — pojawiają się w prawie każdym arkuszu: jako samodzielne zadanie otwarte (2–3 pkt), element układu równań albo krok w zadaniu tekstowym. CKE sprawdza: przekształcanie, ułamki, nawiasy, interpretację wyniku (brak / jeden / nieskończenie wiele rozwiązań).
+Równania liniowe to **fundament matury podstawowej** - pojawiają się w prawie każdym arkuszu: jako samodzielne zadanie otwarte (2–3 pkt), element układu równań albo krok w zadaniu tekstowym. CKE sprawdza: przekształcanie, ułamki, nawiasy, interpretację wyniku (brak / jeden / nieskończenie wiele rozwiązań).
 
 ## Mapa tematu
 
@@ -47,7 +47,7 @@ $$
 | $0 = 0$ | nieskończenie wiele |
 | $0 = 5$ | brak |
 
-## Przykład 1 — podstawowy
+## Przykład 1 - podstawowy
 
 Rozwiąż: $5x - 3 = 2x + 9$
 
@@ -59,7 +59,7 @@ Rozwiąż: $5x - 3 = 2x + 9$
 
 **Sprawdzenie:** L: $5 \\cdot 4 - 3 = 17$, P: $2 \\cdot 4 + 9 = 17$ ✓
 
-## Przykład 2 — ułamki
+## Przykład 2 - ułamki
 
 Rozwiąż: $\\dfrac{2x - 1}{3} = \\dfrac{x + 4}{2}$
 
@@ -73,7 +73,7 @@ $$2(2x - 1) = 3(x + 4)$$
 
 **Sprawdzenie:** $\\dfrac{27}{3} = 9$, $\\dfrac{18}{2} = 9$ ✓
 
-## Przykład 3 — nawiasy
+## Przykład 3 - nawiasy
 
 Rozwiąż: $3(x - 2) + 5 = 2(x + 1) - 1$
 
@@ -83,11 +83,11 @@ Rozwiąż: $3(x - 2) + 5 = 2(x + 1) - 1$
 
 **Krok 3.** $x = 2$
 
-## Przykład 4 — zadanie maturalne (tekst)
+## Przykład 4 - zadanie maturalne (tekst)
 
 Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie liczby.
 
-**Krok 1.** Niech $x$ — mniejsza liczba. Większa: $x + 12$.
+**Krok 1.** Niech $x$ - mniejsza liczba. Większa: $x + 12$.
 
 **Krok 2.** Równanie: $x + (x + 12) = 48$
 
@@ -97,11 +97,11 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 
 ## Pułapki
 
-- **Znak przy przenoszeniu** — $-3x$ na drugą stronę daje $+3x$, nie $-3x$
-- **Dzielenie przez wyrażenie z $x$** — możesz stracić rozwiązanie; bezpieczniej przekształcaj algebraicznie
-- **Ułamki** — mnoż przez NWW **całego** równania, nie pojedynczych wyrazów
-- **$0 = 0$** — to nie „$x = 0$”, tylko nieskończenie wiele rozwiązań
-- **Sprawdzenie** — 10 sekund i unikasz utraty punktów za literówkę
+- **Znak przy przenoszeniu** - $-3x$ na drugą stronę daje $+3x$, nie $-3x$
+- **Dzielenie przez wyrażenie z $x$** - możesz stracić rozwiązanie; bezpieczniej przekształcaj algebraicznie
+- **Ułamki** - mnoż przez NWW **całego** równania, nie pojedynczych wyrazów
+- **$0 = 0$** - to nie „$x = 0$”, tylko nieskończenie wiele rozwiązań
+- **Sprawdzenie** - 10 sekund i unikasz utraty punktów za literówkę
 
 ## Ćwiczenia do samodzielnego rozwiązania
 
@@ -120,7 +120,7 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 3. Pomnóż przez 6: $3x + 18 = 2x + 30 \\Rightarrow x = 12$
 4. $2x + 8 = 3x - 3 \\Rightarrow x = 11$
 5. $1{,}15x = 230 \\Rightarrow x = 200$ zł
-6. **Nie** — po podstawieniu L = 4, P = 5
+6. **Nie** - po podstawieniu L = 4, P = 5
 7. Nieskończenie wiele ($0 = 0$ po uproszczeniu)
 
 ## Szybka powtórka
@@ -133,7 +133,7 @@ Pierwsza liczba jest o 12 większa od drugiej. Ich suma wynosi 48. Znajdź obie 
 
 export const EXPANDED_THEORY: Record<string, ExpandedTheoryEntry> = {
   "matura_podstawowa:algebra:rownania_liniowe": {
-    title: "Równania liniowe — pełny kurs",
+    title: "Równania liniowe - pełny kurs",
     content: ROWNANIA_LINIOWE_CONTENT,
   },
 };

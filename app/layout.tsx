@@ -18,9 +18,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 const DEFAULT_TITLE =
-  "Szybka Matematyka — matura i egzamin ósmoklasisty online";
+  "Szybka Matematyka - matura i egzamin ósmoklasisty online";
 const DEFAULT_DESCRIPTION =
-  "Platforma do nauki matematyki: arkusze CKE, baza zadań z rozwiązaniami, trening tematyczny, minigry i rankingi — matura i egzamin 8-klasisty.";
+  "Platforma do nauki matematyki: arkusze CKE, baza zadań z rozwiązaniami, trening tematyczny, minigry i rankingi - matura i egzamin 8-klasisty.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

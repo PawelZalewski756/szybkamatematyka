@@ -6,7 +6,7 @@ import type {
 } from "@/lib/pojedynki/duel-types";
 
 /**
- * Punkty za poprawną odpowiedź przy danym combo — identyczna formuła jak w
+ * Punkty za poprawną odpowiedź przy danym combo - identyczna formuła jak w
  * minigrach (BASE_POINTS * combo), więc wyniki pojedynku są spójne z resztą
  * aplikacji.
  */

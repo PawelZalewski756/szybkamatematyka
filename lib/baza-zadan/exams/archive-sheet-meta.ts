@@ -1,7 +1,7 @@
 import { compareArkuszSession } from "@/lib/baza-zadan/cke/sort-arkusze";
 import type { ExamArchiveSheetMeta } from "@/lib/baza-zadan/exams/archive-types";
 
-/** Ścieżka karty arkusza CKE — bez importu treści zadań. */
+/** Ścieżka karty arkusza CKE - bez importu treści zadań. */
 export function officialCkeSheetHref(sheetId: string): string {
   return `/trening/arkusze/${encodeURIComponent(sheetId)}`;
 }

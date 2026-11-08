@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Baza zadań — matura i egzamin ósmoklasisty",
+  title: "Baza zadań - matura i egzamin ósmoklasisty",
   description:
     "Zadania treningowe z wyjaśnieniami, arkusze CKE i arkusze egzaminacyjne w aplikacji.",
   alternates: { canonical: "/baza-zadan" },

@@ -67,7 +67,7 @@ async function main() {
 
       if (!row) {
         missing += 1;
-        console.log(`  ✗ ${topic.category}/${topic.topic} — brak materiału (${topic.topicName})`);
+        console.log(`  ✗ ${topic.category}/${topic.topic} - brak materiału (${topic.topicName})`);
         continue;
       }
 
@@ -75,10 +75,10 @@ async function main() {
         full += 1;
         const label =
           row.tier === "comprehensive" ? "pełna lekcja Phase 3a" : "pełna lekcja";
-        console.log(`  ✓ ${topic.category}/${topic.topic} — ${label} (${row.title})`);
+        console.log(`  ✓ ${topic.category}/${topic.topic} - ${label} (${row.title})`);
       } else {
         basic += 1;
-        console.log(`  ~ ${topic.category}/${topic.topic} — skrót (${row.title})`);
+        console.log(`  ~ ${topic.category}/${topic.topic} - skrót (${row.title})`);
       }
     }
 
@@ -97,7 +97,7 @@ async function main() {
     console.log("--- Osierocone wpisy (slug nie pasuje do CKE) ---");
     for (const row of orphanRows) {
       console.log(
-        `  ? ${row.exam_type}/${row.category}/${row.topic} — ${row.title}`,
+        `  ? ${row.exam_type}/${row.category}/${row.topic} - ${row.title}`,
       );
     }
     console.log("");

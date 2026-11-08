@@ -114,7 +114,7 @@ export function mergeExamProgress(
   };
 }
 
-/** Postęp egzaminu — drzewo wyłącznie z liczników Supabase (bez statycznego CKE). */
+/** Postęp egzaminu - drzewo wyłącznie z liczników Supabase (bez statycznego CKE). */
 export function mergeTrainingProgressForExam(
   examKey: TreningExamKey,
   taskCounts: Map<string, number>,
