@@ -1,7 +1,7 @@
 name: CI
 
-# Pipeline jakości: lint + typecheck + build.
-# Uruchamiany na push (dowolna gałąź) oraz dla pull requestów do main.
+# Pipeline jakości i produkcyjnego wdrożenia.
+# Na master: CI -> migracje Supabase -> wdrożenie Vercel.
 on:
   push:
   pull_request:
@@ -10,7 +10,7 @@ on:
 # Anuluj starsze przebiegi dla tej samej gałęzi/PR, aby nie marnować runnerów.
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
 
 permissions:
   contents: read
@@ -52,6 +52,15 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Audit question quality
+        run: npm run audit:questions
+
+      - name: Audit task cache
+        run: npm run audit:tasks-cache
+
+      - name: Audit CKE solutions
+        run: npm run audit:cke
+
       - name: Build
         run: npm run build
 
@@ -78,3 +87,74 @@ jobs:
 
       - name: Run E2E smoke tests
         run: npm run test:e2e
+
+  production-preflight:
+    name: Verify production deployment access
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: [quality, e2e]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Verify Vercel deployment secrets
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [[ -z "$VERCEL_TOKEN" || -z "$VERCEL_ORG_ID" || -z "$VERCEL_PROJECT_ID" ]]; then
+            echo "::error::Add VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID as GitHub Actions secrets."
+            exit 1
+          fi
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@65.12.1
+
+      - name: Verify Vercel project access
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+  production-migrations:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: [quality, e2e, production-preflight]
+    uses: ./.github/workflows/supabase-migrations.yml
+    secrets:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+
+  production-deploy:
+    name: Deploy production to Vercel
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: [quality, e2e, production-migrations]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@65.12.1
+
+      - name: Build and deploy production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"

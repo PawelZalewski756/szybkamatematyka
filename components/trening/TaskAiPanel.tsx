@@ -178,6 +178,7 @@ function TaskAiPanelInner({
     examLabel,
     onAiAccepted,
     studentAnswer,
+    taskId,
     taskContent,
     topicLabel,
   ]);

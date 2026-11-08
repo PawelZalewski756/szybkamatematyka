@@ -103,6 +103,7 @@ async function fetchLeaderboardRows(
   const full = await supabase
     .from("profiles")
     .select(selectForTab(tab))
+    .gt(column, 0)
     .order(column, { ascending: false })
     .limit(limit)
     .retry(false);
@@ -130,6 +131,7 @@ async function fetchLeaderboardRows(
     const fallback = await supabase
       .from("profiles")
       .select(LEADERBOARD_SELECT_FALLBACK)
+      .gt("xp", 0)
       .order("xp", { ascending: false })
       .limit(limit)
       .retry(false);
@@ -139,6 +141,7 @@ async function fetchLeaderboardRows(
     const fallback = await supabase
       .from("profiles")
       .select(LEADERBOARD_SELECT_FALLBACK)
+      .gt("xp", 0)
       .order("xp", { ascending: false })
       .limit(limit)
       .retry(false);
@@ -191,6 +194,7 @@ export async function fetchMyLeaderboardRank(
     if (!me) return null;
 
     const myScore = scoreForTab(me, tab);
+    if (myScore <= 0) return null;
     const { count, error: countError } = await supabase
       .from("profiles")
       .select("id", { count: "exact", head: true })
@@ -222,6 +226,7 @@ export async function fetchMyLeaderboardRank(
   if (!me) return null;
 
   const myScore = scoreForTab(me, tab);
+  if (myScore <= 0) return null;
   const column = orderColumn(tab);
 
   const { count, error: countError } = await supabase

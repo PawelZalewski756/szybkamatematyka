@@ -1,3 +1,5 @@
+import { createHmac } from "node:crypto";
+import { isIP } from "node:net";
 import { createClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
@@ -17,6 +19,16 @@ function isAttemptBody(
     "isCorrect" in value &&
     typeof value.isCorrect === "boolean"
   );
+}
+
+function getClientIp(request: Request): string | null {
+  const headerName =
+    process.env.VERCEL === "1"
+      ? "x-vercel-forwarded-for"
+      : "x-forwarded-for";
+  const rawIp = request.headers.get(headerName)?.split(",")[0]?.trim();
+  if (rawIp && isIP(rawIp)) return rawIp;
+  return process.env.NODE_ENV === "production" ? null : "127.0.0.1";
 }
 
 export async function POST(request: Request): Promise<Response> {
@@ -52,18 +64,35 @@ export async function POST(request: Request): Promise<Response> {
     );
   }
 
+  const clientIp = getClientIp(request);
+  if (!clientIp) {
+    return Response.json(
+      { error: "Request rate limiting is not configured." },
+      { status: 503 },
+    );
+  }
+  const ipHash = createHmac("sha256", serviceKey).update(clientIp).digest("hex");
+
   const supabase = createClient(url, serviceKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
-  const { error } = await supabase.rpc("record_quick_trial_attempt", {
+  const { data, error } = await supabase.rpc("record_quick_trial_attempt", {
     p_session_id: body.sessionId,
     p_is_correct: body.isCorrect,
+    p_ip_hash: ipHash,
   });
   if (error) {
     console.error("Could not record quick trial attempt:", error);
     return Response.json(
       { error: "Could not record quick trial attempt." },
       { status: 500 },
+    );
+  }
+
+  if (data !== true) {
+    return Response.json(
+      { error: "Too many quick trial attempts. Try again in a minute." },
+      { status: 429, headers: { "Retry-After": "60" } },
     );
   }
 

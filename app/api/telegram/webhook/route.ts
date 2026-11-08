@@ -18,7 +18,6 @@ type TelegramUpdate = {
 };
 
 const USERS_PER_PAGE = 20;
-const AUTH_USERS_PER_PAGE = 1000;
 
 function matchesSecret(actual: string | null, expected: string): boolean {
   if (!actual) return false;
@@ -61,19 +60,6 @@ function getSupabaseAdmin() {
   });
 }
 
-async function getAllAuthUsers(supabase: ReturnType<typeof getSupabaseAdmin>) {
-  const users = [];
-  for (let page = 1; ; page += 1) {
-    const { data, error } = await supabase.auth.admin.listUsers({
-      page,
-      perPage: AUTH_USERS_PER_PAGE,
-    });
-    if (error) throw new Error(`Could not load registered users: ${error.message}`);
-    users.push(...data.users);
-    if (data.users.length < AUTH_USERS_PER_PAGE) return users;
-  }
-}
-
 async function getProfileNames(
   supabase: ReturnType<typeof getSupabaseAdmin>,
   userIds: string[],
@@ -92,10 +78,10 @@ async function getProfileNames(
   );
 }
 
-function getAuthUserName(user: {
-  id: string;
-  user_metadata: Record<string, unknown>;
-}, profileNames: Map<string, string>): string {
+function getAuthUserName(
+  user: { id: string; user_metadata: Record<string, unknown> },
+  profileNames: Map<string, string>,
+): string {
   const metadataName =
     typeof user.user_metadata.nick === "string"
       ? user.user_metadata.nick
@@ -125,9 +111,12 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
   if (command === "stats") {
     const since = Date.now() - 7 * 24 * 60 * 60 * 1000;
-    const [users, authUsers, solved] = await Promise.all([
+    const [users, newUsers, solved] = await Promise.all([
       supabase.from("profiles").select("id", { count: "exact", head: true }),
-      getAllAuthUsers(supabase),
+      supabase
+        .from("profiles")
+        .select("id", { count: "exact", head: true })
+        .gte("created_at", new Date(since).toISOString()),
       supabase
         .from("solved_tasks")
         .select("task_id", { count: "exact", head: true })
@@ -138,7 +127,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     return [
       "Statystyki (ostatnie 7 dni)",
       `Użytkownicy łącznie: ${users.count ?? 0}`,
-      `Nowe konta: ${authUsers.filter((user) => Date.parse(user.created_at) >= since).length}`,
+      `Nowe konta: ${newUsers.count ?? 0}`,
       `Rozwiązane zadania: ${solved.count ?? 0}`,
     ].join("\n");
   }
@@ -161,18 +150,19 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   }
 
   if (command === "new") {
-    const users = (await getAllAuthUsers(supabase))
-      .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
-      .slice(0, 10);
-    if (!users.length) return "Brak zarejestrowanych użytkowników.";
-    const profileNames = await getProfileNames(
-      supabase,
-      users.map((user) => user.id),
-    );
+    const { data: users, error } = await supabase
+      .from("profiles")
+      .select("nick, nickname, created_at")
+      .order("created_at", { ascending: false })
+      .limit(10);
+    if (error) throw new Error(`Could not load recent users: ${error.message}`);
+    if (!users?.length) return "Brak zarejestrowanych użytkowników.";
     return [
       "Ostatnie rejestracje:",
       ...users.map((user) => {
-        const name = getAuthUserName(user, profileNames);
+        const name = (user.nick || user.nickname || "bez nicku")
+          .replace(/[\r\n]/g, " ")
+          .slice(0, 80);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `• ${name} — ${date}`;
       }),
