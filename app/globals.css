@@ -41,7 +41,7 @@ html[data-theme="light"] {
   --accent-strong: #b87607;
   --accent-press: #8f5a05;
   --accent-soft: #fdf0d3;
-  --on-accent: #ffffff;
+  --on-accent: #1a1200;
 }
 
 html[data-theme="dark"] {
@@ -49,6 +49,10 @@ html[data-theme="dark"] {
 }
 
 /* Kolory statusowe dobrane pod ciemne tło — w jasnym motywie przyciemniamy. */
+/* Akcent #d98e0b ma kontrast 2.7:1 jako tekst — w jasnym motywie ciemniejszy odcień tekstu. */
+html[data-theme="light"] :where(.text-accent, [class*="text-accent/"], .text-gradient-brand) {
+  color: #7f4f04;
+}
 html[data-theme="light"] :is(.text-red-300, .text-red-400, .text-red-200, .text-red-100) {
   color: #b91c1c;
 }
