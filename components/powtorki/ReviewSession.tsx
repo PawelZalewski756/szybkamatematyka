@@ -5,12 +5,17 @@ import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
 import {
-  CATEGORY_LABELS,
-  DIFFICULTY_LABELS,
-} from "@/lib/baza-zadan/labels";
-import { answersEquivalent } from "@/lib/math/answer-equiv";
+  examTaskPoints,
+  expectedOpenAnswer,
+  formatPkt,
+  isOpenExamTask,
+} from "@/lib/baza-zadan/cke/exam-points";
+import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
+import { fetchTaskGrade } from "@/lib/trening/task-assist-client";
+import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
+import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
@@ -38,10 +43,13 @@ export function ReviewSession({
   const [queue, setQueue] = useState<string[]>(() => [...initialQueue]);
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
-  const [firstResults, setFirstResults] = useState<Record<string, boolean>>(
-    {},
-  );
+  const [firstResults, setFirstResults] = useState<Record<string, boolean>>({});
   const [retried, setRetried] = useState<Set<string>>(new Set());
+  const [typedAnswer, setTypedAnswer] = useState("");
+  const [grading, setGrading] = useState(false);
+  const [gradeError, setGradeError] = useState<string | null>(null);
+  const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
+  const [openAwarded, setOpenAwarded] = useState<number | null>(null);
 
   const totalUnique = initialQueue.length;
   const answeredUnique = Object.keys(firstResults).length;
@@ -61,30 +69,92 @@ export function ReviewSession({
 
   const currentId = queue[index];
   const task = currentId ? getTaskById(currentId) : undefined;
-  const answered = picked !== null;
-  const isCorrect =
-    task && picked !== null
+  const open = task ? isOpenExamTask(task) : false;
+  const maxPoints = task ? examTaskPoints(task) : 1;
+  const answered = open ? openGrade !== null : picked !== null;
+  const isCorrect = open
+    ? openGrade?.acceptAsCorrect === true
+    : task && picked !== null
       ? answersEquivalent(task.choices[picked], task.choices[task.correctIndex])
       : false;
+
+  const registerResult = (taskId: string, correct: boolean) => {
+    grade(taskId, correct);
+
+    setFirstResults((prev) =>
+      taskId in prev ? prev : { ...prev, [taskId]: correct },
+    );
+
+    if (!correct && !retried.has(taskId)) {
+      setRetried((prev) => new Set(prev).add(taskId));
+      setQueue((prev) => [...prev, taskId]);
+    }
+  };
 
   const handlePick = (choiceIndex: number) => {
     if (!task || answered) return;
     setPicked(choiceIndex);
-    const correct =
-      picked !== null &&
+    registerResult(
+      task.id,
       answersEquivalent(
         task.choices[choiceIndex],
         task.choices[task.correctIndex],
-      );
-    grade(task.id, correct);
-
-    setFirstResults((prev) =>
-      task.id in prev ? prev : { ...prev, [task.id]: correct },
+      ),
     );
+  };
 
-    if (!correct && !retried.has(task.id)) {
-      setRetried((prev) => new Set(prev).add(task.id));
-      setQueue((prev) => [...prev, task.id]);
+  const handleOpenCheck = async () => {
+    if (!task) return;
+    const answer = typedAnswer.trim();
+    if (!answer || grading || openGrade) return;
+
+    setGrading(true);
+    setGradeError(null);
+    const expected = expectedOpenAnswer(task);
+
+    if (checkAnswerMatch(answer, expected)) {
+      setOpenGrade({
+        verdict: "correct",
+        feedback: "Odpowiedź zgadza się z kluczem.",
+        acceptAsCorrect: true,
+        awardedPoints: maxPoints,
+      });
+      setOpenAwarded(maxPoints);
+      registerResult(task.id, true);
+      setGrading(false);
+      return;
+    }
+
+    try {
+      const { grade: result } = await fetchTaskGrade({
+        taskId: task.id,
+        taskContent: formatCkeMathText(task.prompt),
+        correctAnswer: expected,
+        studentAnswer: answer,
+        examLabel: task.examSource?.sessionLabel,
+        topicLabel: CATEGORY_LABELS[task.category],
+        maxPoints,
+        markingNotes: task.solutionSteps
+          ?.map((step) => formatCkeMathText(step))
+          .join("\n"),
+      });
+      const awarded =
+        result.awardedPoints != null
+          ? Math.min(maxPoints, Math.max(0, result.awardedPoints))
+          : result.verdict === "correct"
+            ? maxPoints
+            : result.verdict === "partial"
+              ? Math.max(1, Math.floor(maxPoints / 2))
+              : 0;
+      setOpenGrade(result);
+      setOpenAwarded(awarded);
+      registerResult(task.id, result.acceptAsCorrect);
+    } catch (err) {
+      setGradeError(
+        err instanceof Error ? err.message : "Nie udało się ocenić odpowiedzi.",
+      );
+    } finally {
+      setGrading(false);
     }
   };
 
@@ -96,6 +166,10 @@ export function ReviewSession({
     }
     setIndex(nextIndex);
     setPicked(null);
+    setTypedAnswer("");
+    setOpenGrade(null);
+    setOpenAwarded(null);
+    setGradeError(null);
   };
 
   if (!task) {
@@ -172,43 +246,80 @@ export function ReviewSession({
               <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
             )}
 
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {task.choices.map((choice, choiceIndex) => {
-                let style =
-                  "border-surface-border bg-background hover:border-accent/40 hover:bg-accent/10";
-                if (answered) {
-                  if (choiceIndex === task.correctIndex) {
-                    style =
-                      "border-success/60 bg-success/20 text-success";
-                  } else if (choiceIndex === picked) {
-                    style = "border-red-500/60 bg-red-500/20 text-red-100";
-                  } else {
-                    style = "border-surface-border bg-surface/50 opacity-50";
-                  }
-                }
-
-                return (
-                  <motion.button
-                    key={choice}
+            {open ? (
+              <div className="mt-6 space-y-3">
+                <label
+                  htmlFor="review-open-answer"
+                  className="text-sm font-bold text-foreground"
+                >
+                  Twoja odpowiedź ({formatPkt(maxPoints)})
+                </label>
+                <textarea
+                  id="review-open-answer"
+                  value={typedAnswer}
+                  disabled={answered || grading}
+                  onChange={(event) => setTypedAnswer(event.target.value)}
+                  rows={4}
+                  placeholder="Wpisz wynik lub całe rozwiązanie…"
+                  className="w-full rounded-2xl border border-surface-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-accent/50"
+                />
+                {!answered && (
+                  <button
                     type="button"
-                    disabled={answered}
-                    onClick={() => handlePick(choiceIndex)}
-                    className={`relative rounded-2xl border px-4 py-4 text-left text-base font-bold text-foreground transition-colors ${style}`}
-                    whileTap={answered ? undefined : { scale: 0.98 }}
+                    disabled={!typedAnswer.trim() || grading}
+                    onClick={() => void handleOpenCheck()}
+                    className="rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent disabled:opacity-50"
                   >
-                    <MathText content={formatCkeMathText(choice)} />
-                    {answered && choiceIndex === task.correctIndex && (
-                      <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-success" />
-                    )}
-                    {answered &&
-                      choiceIndex === picked &&
-                      choiceIndex !== task.correctIndex && (
-                        <XCircle className="absolute right-3 top-3 h-5 w-5 text-red-400" />
+                    {grading ? "Oceniam…" : "Sprawdź odpowiedź"}
+                  </button>
+                )}
+                {gradeError && (
+                  <p
+                    role="alert"
+                    className="text-sm font-semibold text-amber-200"
+                  >
+                    {gradeError}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {task.choices.map((choice, choiceIndex) => {
+                  let style =
+                    "border-surface-border bg-background hover:border-accent/40 hover:bg-accent/10";
+                  if (answered) {
+                    if (choiceIndex === task.correctIndex) {
+                      style = "border-success/60 bg-success/20 text-success";
+                    } else if (choiceIndex === picked) {
+                      style = "border-red-500/60 bg-red-500/20 text-red-100";
+                    } else {
+                      style = "border-surface-border bg-surface/50 opacity-50";
+                    }
+                  }
+
+                  return (
+                    <motion.button
+                      key={choice}
+                      type="button"
+                      disabled={answered}
+                      onClick={() => handlePick(choiceIndex)}
+                      className={`relative rounded-2xl border px-4 py-4 text-left text-base font-bold text-foreground transition-colors ${style}`}
+                      whileTap={answered ? undefined : { scale: 0.98 }}
+                    >
+                      <MathText content={formatCkeMathText(choice)} />
+                      {answered && choiceIndex === task.correctIndex && (
+                        <CheckCircle2 className="absolute right-3 top-3 h-5 w-5 text-success" />
                       )}
-                  </motion.button>
-                );
-              })}
-            </div>
+                      {answered &&
+                        choiceIndex === picked &&
+                        choiceIndex !== task.correctIndex && (
+                          <XCircle className="absolute right-3 top-3 h-5 w-5 text-red-400" />
+                        )}
+                    </motion.button>
+                  );
+                })}
+              </div>
+            )}
 
             {answered && (
               <motion.div
@@ -217,13 +328,31 @@ export function ReviewSession({
                 className={`mt-6 rounded-2xl border p-4 ${
                   isCorrect
                     ? "border-success/40 bg-success/10"
-                    : "border-red-500/40 bg-red-500/10"
+                    : openGrade?.verdict === "partial"
+                      ? "border-amber-500/40 bg-amber-500/10"
+                      : "border-red-500/40 bg-red-500/10"
                 }`}
               >
                 <p className="font-black text-foreground">
-                  {isCorrect ? "Dobrze! 🎉" : "Wróci do powtórki wkrótce"}
+                  {isCorrect
+                    ? "Dobrze! 🎉"
+                    : openGrade?.verdict === "partial"
+                      ? "Częściowo - wróci do powtórki"
+                      : "Wróci do powtórki wkrótce"}
                 </p>
-                {task.explanation.trim() && (
+                {open && openAwarded != null && (
+                  <p className="mt-1 text-sm font-bold text-foreground">
+                    {formatPkt(openAwarded)} / {formatPkt(maxPoints)}
+                  </p>
+                )}
+                {open && openGrade && (
+                  <MathText
+                    content={openGrade.feedback}
+                    as="div"
+                    className="mt-2 text-sm text-muted"
+                  />
+                )}
+                {!open && task.explanation.trim() && (
                   <div className="mt-2 text-sm text-foreground">
                     <TheoryMarkdown
                       content={formatCkeMathText(task.explanation)}
