@@ -215,20 +215,53 @@ export function SheetView() {
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {chapters.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => start(c.id)}
-              className="rounded-2xl border border-surface-border bg-surface-card p-5 text-left transition hover:border-accent"
-            >
-              <p className="text-lg font-semibold text-foreground">{c.title}</p>
-              <p className="mt-1 text-sm text-muted">{c.description}</p>
-              <p className="mt-3 text-xs text-muted">
-                {c.slots.length} zadań · {c.durationMin} min
-              </p>
-            </button>
-          ))}
+          {chapters.map((c) => {
+            const printHref = (withKey: boolean) =>
+              `/sprawdziany/druk?dzial=${c.id}&grupa=${group}&seed=${seed}&klucz=${withKey ? 1 : 0}`;
+            return (
+              <div
+                key={c.id}
+                className="flex flex-col rounded-2xl border border-surface-border bg-surface-card p-5 transition hover:border-accent"
+              >
+                <button
+                  type="button"
+                  onClick={() => start(c.id)}
+                  className="text-left"
+                >
+                  <p className="text-lg font-semibold text-foreground">
+                    {c.title}
+                  </p>
+                  <p className="mt-1 text-sm text-muted">{c.description}</p>
+                  <p className="mt-3 text-xs text-muted">
+                    {c.slots.length} zadań · {c.durationMin} min
+                  </p>
+                </button>
+                <div className="mt-4 border-t border-surface-border pt-3">
+                  <p className="mb-2 text-xs font-medium text-muted">
+                    Pobierz PDF (grupa {group})
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href={printHref(false)}
+                      target="_blank"
+                      rel="noopener"
+                      className="rounded-md border border-surface-border px-3 py-1.5 text-xs font-medium text-foreground hover:border-accent"
+                    >
+                      Bez odpowiedzi
+                    </a>
+                    <a
+                      href={printHref(true)}
+                      target="_blank"
+                      rel="noopener"
+                      className="rounded-md border border-surface-border px-3 py-1.5 text-xs font-medium text-foreground hover:border-accent"
+                    >
+                      Z odpowiedziami na osobnej stronie
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {!pro.allowed && !pro.loading && (
