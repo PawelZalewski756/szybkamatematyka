@@ -190,6 +190,13 @@ export async function POST(request: Request) {
       canonicalTask?.options ??
       (catalogTask ? [...catalogTask.choices] : undefined);
 
+    if (mode === "grade" && !isPro && taskId?.startsWith("sprawdzian:")) {
+      return Response.json(
+        { error: "Ocena zadań otwartych przez AI jest dostępna w planie Pro." },
+        { status: 403 },
+      );
+    }
+
     if (
       mode === "grade" &&
       !isPro &&
