@@ -89,16 +89,36 @@ function Wrapper({
 type Of<K extends Figure["kind"]> = Extract<Figure, { kind: K }>;
 
 function RightTriangle({ f }: { f: Of<"right-triangle"> }) {
-  const A: Pt = [35, 140];
-  const B: Pt = [215, 140];
-  const C: Pt = [35, 30];
+  const num = (s: string) => {
+    const m = s.replace(",", ".").match(/^\s*(\d+(?:\.\d+)?)/);
+    return m ? Number(m[1]) : null;
+  };
+  let a = num(f.a);
+  let b = num(f.b);
+  const c = num(f.c);
+  if (a === null && b !== null && c !== null && c > b) a = Math.sqrt(c * c - b * b);
+  if (b === null && a !== null && c !== null && c > a) b = Math.sqrt(c * c - a * a);
+  if (a === null && b === null && c === null) {
+    a = 4;
+    b = 3;
+  }
+  if (a === null || b === null) {
+    a = a ?? 4;
+    b = b ?? 3;
+  }
+  const scale = Math.min(190 / a, 110 / b);
+  const w = a * scale;
+  const h = b * scale;
+  const A: Pt = [(260 - w) / 2 + 10, 145];
+  const B: Pt = [A[0] + w, 145];
+  const C: Pt = [A[0], 145 - h];
   return (
     <Wrapper label="Trójkąt prostokątny">
       <Poly pts={[A, B, C, A]} />
       <RightMark v={A} d1={[1, 0]} d2={[0, -1]} />
-      <Label x={125} y={160}>{f.a}</Label>
-      <Label x={28} y={90} anchor="end">{f.b}</Label>
-      <Label x={138} y={78} anchor="start">{f.c}</Label>
+      <Label x={(A[0] + B[0]) / 2} y={165}>{f.a}</Label>
+      <Label x={A[0] - 8} y={(A[1] + C[1]) / 2 + 4} anchor="end">{f.b}</Label>
+      <Label x={(B[0] + C[0]) / 2 + 8} y={(B[1] + C[1]) / 2 - 6} anchor="start">{f.c}</Label>
     </Wrapper>
   );
 }
