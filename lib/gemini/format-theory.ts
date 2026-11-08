@@ -69,11 +69,11 @@ function normalizeSectionHeadings(text: string): string {
     ],
     [/^##\s*najwa[żz]niejsze\s*$/gim, "## Najważniejsze"],
     [
-      /^##\s*przyk[łl]ad\s*1(\s*[--]\s*.+)?\s*$/gim,
+      /^##\s*przyk[łl]ad\s*1(\s*[-]\s*.+)?\s*$/gim,
       "## Przykład 1 - podstawowy",
     ],
     [
-      /^##\s*przyk[łl]ad\s*2(\s*[--]\s*.+)?\s*$/gim,
+      /^##\s*przyk[łl]ad\s*2(\s*[-]\s*.+)?\s*$/gim,
       "## Przykład 2 - maturalny",
     ],
     [
