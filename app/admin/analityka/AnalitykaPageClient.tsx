@@ -142,6 +142,13 @@ export function AnalitykaPageClient() {
               accent="text-accent"
             />
             <MetricCard
+              icon={Activity}
+              label="Powracający 7 dni"
+              value={PL_NUMBER.format(players.returning7d)}
+              sub={`${PL_NUMBER.format(players.returning30d)} w 30 dni (konta starsze niż okno)`}
+              accent="text-success"
+            />
+            <MetricCard
               icon={TrendingUp}
               label="Suma XP"
               value={formatCompactXp(players.totalXp)}
