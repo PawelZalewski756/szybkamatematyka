@@ -7,6 +7,7 @@ import {
   EMPTY_ANSWERS,
   autoPoints,
   buildSheet,
+  classLabel,
   getAvailableClasses,
   getChaptersForClass,
   gradeForPoints,
@@ -178,7 +179,7 @@ export function SheetView() {
                       : "border-surface-border bg-surface-card text-foreground"
                   }`}
                 >
-                  Klasa {c}
+                  {classLabel(c)}
                 </button>
               ))}
             </div>
@@ -254,7 +255,7 @@ export function SheetView() {
           {sheet.title} — wyniki
         </h1>
         <p className="mt-1 text-sm text-muted">
-          Klasa {sheet.schoolClass}, grupa {sheet.group}
+          {classLabel(sheet.schoolClass)}, grupa {sheet.group}
         </p>
 
         <div className="mt-6 rounded-2xl border border-surface-border bg-surface-card p-6">
@@ -334,7 +335,7 @@ export function SheetView() {
         <div>
           <p className="font-semibold text-foreground">{sheet.title}</p>
           <p className="text-xs text-muted">
-            Klasa {sheet.schoolClass} · grupa {sheet.group} · maks.{" "}
+            {classLabel(sheet.schoolClass)} · grupa {sheet.group} · maks.{" "}
             {sheet.maxPoints} pkt
           </p>
         </div>
