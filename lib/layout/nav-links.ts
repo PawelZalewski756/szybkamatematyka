@@ -27,7 +27,10 @@ export const NAV_MORE_GROUPS: readonly NavGroup[] = [
   },
   {
     label: "Nauka",
-    links: [{ href: "/powtorki", label: "Powtórki", requiresAuth: true }],
+    links: [
+      { href: "/sprawdziany", label: "Sprawdziany" },
+      { href: "/powtorki", label: "Powtórki", requiresAuth: true },
+    ],
   },
   {
     label: "Społeczność",
