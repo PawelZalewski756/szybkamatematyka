@@ -175,10 +175,22 @@
   Skrót: Vercel + te same zmienne co w .env.local + migracje Supabase.
 
 
-10. KONTAKT / NOTATKI
+10. STRIPE (płatności Pro / Roczny)
 --------------------------------------------------------------------------------
 
-  Stripe (płatności) — na końcu; bez STRIPE_* aplikacja działa normalnie.
+  Kod jest gotowy. Po założeniu konta Stripe przejdź przez:
+
+    instrukcje/STRIPE-KONFIGURACJA.txt
+
+  Skrót: produkty + Price ID → STRIPE_PRICE_PRO / STRIPE_PRICE_ROCZNY,
+  Secret key → STRIPE_SECRET_KEY, webhook → STRIPE_WEBHOOK_SECRET,
+  service role Supabase + NEXT_PUBLIC_SITE_URL, Redeploy na Vercel.
+
+  Bez STRIPE_* aplikacja działa normalnie (płatności wyłączone).
+
+
+11. KONTAKT / NOTATKI
+--------------------------------------------------------------------------------
 
   Generowanie AI dla uczniów — wyłączone; tylko admin + skrypty seed.
 

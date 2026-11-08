@@ -251,14 +251,19 @@ E2E lokalnie: `npm run test:e2e`.
 
 ## 5. Stripe w trybie testowym
 
-1. Utwórz produkty i ceny testowe, a następnie ustaw oba `STRIPE_PRICE_*`.
+Pełna checklista po polsku: [`instrukcje/STRIPE-KONFIGURACJA.txt`](../instrukcje/STRIPE-KONFIGURACJA.txt).
+
+1. Utwórz produkty i ceny testowe (Pro 29 PLN / mies., Roczny 249 PLN / rok),
+   a następnie ustaw oba `STRIPE_PRICE_*`.
 2. Wdróż aplikację z `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`,
    `SUPABASE_SERVICE_ROLE_KEY` i `NEXT_PUBLIC_SITE_URL`.
-3. Skonfiguruj endpoint `POST /api/stripe/webhook`.
-4. W Stripe CLI przekaż zdarzenia testowe do endpointu i sprawdź:
+3. Skonfiguruj endpoint `POST /api/stripe/webhook` ze zdarzeniami
    `checkout.session.completed`, `customer.subscription.updated` oraz
    `customer.subscription.deleted`.
-5. Potwierdź, że webhook aktualizuje tylko właściwy profil i że użytkownik
+4. Włącz Customer Portal w Stripe (karta, anulowanie) — używa go
+   `POST /api/billing-portal` z profilu użytkownika.
+5. W Stripe CLI przekaż zdarzenia testowe do endpointu i sprawdź dostarczenia.
+6. Potwierdź, że webhook aktualizuje tylko właściwy profil i że użytkownik
    nie może sam zmienić `subscription_*`, `stripe_*` ani `ai_assist_*`.
 
 Webhook zwraca `503`, gdy brakuje klucza service role, oraz `500` po błędzie

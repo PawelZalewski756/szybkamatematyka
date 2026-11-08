@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckoutCancelledBanner } from "@/components/cennik/CheckoutCancelledBanner";
 import { PricingSection } from "@/components/home/PricingSection";
 import Link from "next/link";
 
@@ -22,6 +23,8 @@ export default function CennikPage() {
           wybierasz, czy płacisz co miesiąc, czy z góry za rok.
         </p>
       </header>
+
+      <CheckoutCancelledBanner />
 
       <div className="mt-10">
         <PricingSection />

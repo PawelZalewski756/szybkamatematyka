@@ -3,6 +3,7 @@ import {
   isStripeConfigured,
   resolveSiteUrl,
 } from "@/lib/stripe/config";
+import { resolveStripeCustomer } from "@/lib/stripe/customer";
 import { getPlanById } from "@/lib/subscription/plans";
 import { verifyUserRequest } from "@/lib/subscription/server-auth";
 
@@ -80,6 +81,26 @@ export async function POST(request: Request) {
       );
     }
 
+    // Częsty błąd konfiguracji: w env wklejono Product ID (prod_…) zamiast Price ID (price_…).
+    if (priceId.startsWith("prod_")) {
+      return Response.json(
+        {
+          error: `W ${plan.priceEnvVar} jest Product ID (prod_…), a potrzebny jest Price ID (price_…). W Stripe: Product → Pricing → skopiuj Price ID, nie ID produktu.`,
+          code: "product_id_instead_of_price",
+        },
+        { status: 503 },
+      );
+    }
+    if (!priceId.startsWith("price_")) {
+      return Response.json(
+        {
+          error: `Nieprawidłowy ${plan.priceEnvVar}: oczekiwano Price ID zaczynającego się od „price_”.`,
+          code: "invalid_price_id",
+        },
+        { status: 503 },
+      );
+    }
+
     const stripe = getStripeOrNull();
     if (!stripe) {
       return Response.json(
@@ -92,13 +113,22 @@ export async function POST(request: Request) {
     const origin = request.headers.get("origin");
     const siteUrl = resolveSiteUrl(origin);
 
-    // 5) Tworzymy sesję Checkout. client_reference_id + metadata pozwalają
+    // 5) Preferujemy istniejącego klienta Stripe (unikamy duplikatów przy
+    //    kolejnych checkoutach). Bez service role zostaje customer_email.
+    const customerId = await resolveStripeCustomer({
+      userId: auth.user.id,
+      email: auth.user.email,
+    });
+
+    // 6) Tworzymy sesję Checkout. client_reference_id + metadata pozwalają
     //    webhookowi jednoznacznie powiązać płatność z użytkownikiem Supabase.
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
       client_reference_id: auth.user.id,
-      customer_email: auth.user.email ?? undefined,
+      ...(customerId
+        ? { customer: customerId }
+        : { customer_email: auth.user.email ?? undefined }),
       allow_promotion_codes: true,
       metadata: {
         supabase_user_id: auth.user.id,
