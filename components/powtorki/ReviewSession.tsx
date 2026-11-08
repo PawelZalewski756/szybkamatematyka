@@ -1,6 +1,7 @@
 "use client";
 
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
+import { ProGate } from "@/components/subscription/ProGate";
 import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
@@ -247,41 +248,43 @@ export function ReviewSession({
             )}
 
             {open ? (
-              <div className="mt-6 space-y-3">
-                <label
-                  htmlFor="review-open-answer"
-                  className="text-sm font-bold text-foreground"
-                >
-                  Twoja odpowiedź ({formatPkt(maxPoints)})
-                </label>
-                <textarea
-                  id="review-open-answer"
-                  value={typedAnswer}
-                  disabled={answered || grading}
-                  onChange={(event) => setTypedAnswer(event.target.value)}
-                  rows={4}
-                  placeholder="Wpisz wynik lub całe rozwiązanie…"
-                  className="w-full rounded-2xl border border-surface-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-accent/50"
-                />
-                {!answered && (
-                  <button
-                    type="button"
-                    disabled={!typedAnswer.trim() || grading}
-                    onClick={() => void handleOpenCheck()}
-                    className="rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent disabled:opacity-50"
+              <ProGate featureLabel="Ocena zadań otwartych przez AI">
+                <div className="mt-6 space-y-3">
+                  <label
+                    htmlFor="review-open-answer"
+                    className="text-sm font-bold text-foreground"
                   >
-                    {grading ? "Oceniam…" : "Sprawdź odpowiedź"}
-                  </button>
-                )}
-                {gradeError && (
-                  <p
-                    role="alert"
-                    className="text-sm font-semibold text-amber-200"
-                  >
-                    {gradeError}
-                  </p>
-                )}
-              </div>
+                    Twoja odpowiedź ({formatPkt(maxPoints)})
+                  </label>
+                  <textarea
+                    id="review-open-answer"
+                    value={typedAnswer}
+                    disabled={answered || grading}
+                    onChange={(event) => setTypedAnswer(event.target.value)}
+                    rows={4}
+                    placeholder="Wpisz wynik lub całe rozwiązanie…"
+                    className="w-full rounded-2xl border border-surface-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-accent/50"
+                  />
+                  {!answered && (
+                    <button
+                      type="button"
+                      disabled={!typedAnswer.trim() || grading}
+                      onClick={() => void handleOpenCheck()}
+                      className="rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent disabled:opacity-50"
+                    >
+                      {grading ? "Oceniam…" : "Sprawdź odpowiedź"}
+                    </button>
+                  )}
+                  {gradeError && (
+                    <p
+                      role="alert"
+                      className="text-sm font-semibold text-amber-200"
+                    >
+                      {gradeError}
+                    </p>
+                  )}
+                </div>
+              </ProGate>
             ) : (
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {task.choices.map((choice, choiceIndex) => {

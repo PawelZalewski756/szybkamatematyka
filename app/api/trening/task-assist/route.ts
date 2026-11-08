@@ -189,6 +189,18 @@ export async function POST(request: Request) {
     const canonicalOptions =
       canonicalTask?.options ??
       (catalogTask ? [...catalogTask.choices] : undefined);
+
+    if (
+      mode === "grade" &&
+      !isPro &&
+      catalogTask &&
+      isOpenExamTask(catalogTask)
+    ) {
+      return Response.json(
+        { error: "Ocena zadań otwartych przez AI jest dostępna w planie Pro." },
+        { status: 403 },
+      );
+    }
     const maxPoints = catalogTask
       ? examTaskPoints(catalogTask)
       : Math.max(

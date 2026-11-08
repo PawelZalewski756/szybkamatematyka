@@ -46,7 +46,7 @@ function resolveAwardedPoints(
 
 export function TaskSolverView({ id }: TaskSolverViewProps) {
   const { path } = useLearningPath();
-  const { isPro, isLoggedIn } = useSubscription();
+  const { isPro } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
   const task = getTaskById(id);
   const [picked, setPicked] = useState<number | null>(null);
@@ -211,6 +211,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         )}
 
         {open ? (
+          <ProGate featureLabel="Ocena zadań otwartych przez AI">
           <div className="mt-6 space-y-3">
             <label htmlFor="open-answer" className="text-sm font-bold text-foreground">
               Twoja odpowiedź
@@ -232,21 +233,13 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             >
               {grading ? "Sprawdzam…" : "Sprawdź odpowiedź"}
             </button>
-            {!isLoggedIn && (
-              <p className="text-xs text-muted">
-                Jeśli zapis różni się od klucza,{" "}
-                <Link href="/login" className="font-semibold text-accent hover:underline">
-                  zaloguj się
-                </Link>
-                , żeby otrzymać dodatkową ocenę odpowiedzi.
-              </p>
-            )}
             {gradeError && (
               <p role="alert" className="text-sm font-semibold text-amber-200">
                 {gradeError}
               </p>
             )}
           </div>
+          </ProGate>
         ) : (
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {task.choices.map((choice, index) => {
