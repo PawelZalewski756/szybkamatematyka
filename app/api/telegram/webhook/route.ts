@@ -64,23 +64,26 @@ async function getProfileNames(
   supabase: ReturnType<typeof getSupabaseAdmin>,
   userIds: string[],
 ) {
-  if (userIds.length === 0) return new Map<string, string>();
+  if (userIds.length === 0) return new Map<string, { name: string; xp: number }>();
   const { data, error } = await supabase
     .from("profiles")
-    .select("id, nick, nickname")
+    .select("id, nick, nickname, xp")
     .in("id", userIds);
   if (error) throw new Error(`Could not load user profiles: ${error.message}`);
   return new Map(
     (data ?? []).map((profile) => [
       profile.id,
-      profile.nick || profile.nickname || "",
+      {
+        name: profile.nick || profile.nickname || "",
+        xp: Number(profile.xp) || 0,
+      },
     ]),
   );
 }
 
 function getAuthUserName(
   user: { id: string; user_metadata: Record<string, unknown> },
-  profileNames: Map<string, string>,
+  profileNames: Map<string, { name: string; xp: number }>,
 ): string {
   const metadataName =
     typeof user.user_metadata.nick === "string"
@@ -88,7 +91,7 @@ function getAuthUserName(
       : typeof user.user_metadata.nickname === "string"
         ? user.user_metadata.nickname
         : "";
-  return (profileNames.get(user.id) || metadataName || "bez nicku")
+  return (profileNames.get(user.id)?.name || metadataName || "bez nicku")
     .replace(/[\r\n]/g, " ")
     .slice(0, 80);
 }
@@ -208,7 +211,14 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       ...data.users.map((user, index) => {
         const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
-        return `${firstUserNumber + index}. ${name} — ${date}`;
+        const email = (user.email || "brak e-maila")
+          .replace(/[\r\n]/g, " ")
+          .slice(0, 60);
+        const lastLogin = user.last_sign_in_at
+          ? new Date(user.last_sign_in_at).toLocaleDateString("pl-PL")
+          : "nigdy";
+        const xp = profileNames.get(user.id)?.xp ?? 0;
+        return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),
       data.nextPage !== null
         ? `Następna strona: /users ${requestedPage + 1}`
