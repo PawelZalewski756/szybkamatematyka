@@ -10,6 +10,8 @@ import {
   fetchAdminAnalytics,
   type AdminAnalytics,
 } from "@/lib/supabase/admin-analytics";
+import { sumViews, type DailyViews } from "@/lib/analytics/visit-counter";
+import { getSupabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -57,6 +59,30 @@ function Section({
 
 export function AnalitykaPageClient() {
   const [state, setState] = useState<LoadState>({ status: "loading" });
+  const [visits, setVisits] = useState<DailyViews[] | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      try {
+        const {
+          data: { session },
+        } = await getSupabase().auth.getSession();
+        if (!session?.access_token) return;
+        const res = await fetch("/api/admin/visits", {
+          headers: { Authorization: `Bearer ${session.access_token}` },
+        });
+        if (!res.ok) return;
+        const body = (await res.json()) as { rows?: DailyViews[] };
+        if (!cancelled) setVisits(body.rows ?? []);
+      } catch {
+        // karta wejść jest opcjonalna
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const load = useCallback(async () => {
     setState({ status: "loading" });
@@ -109,6 +135,39 @@ export function AnalitykaPageClient() {
         Zagregowane statystyki graczy i zawartości bazy. Dane liczone na żywo z
         Supabase w granicach uprawnień odczytu (RLS).
       </p>
+
+      <Section icon={Activity} title="Wejścia na stronę (anonimowo)">
+        {visits ? (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <MetricCard
+              icon={Activity}
+              label="Dziś"
+              value={PL_NUMBER.format(sumViews(visits, 1, new Date()))}
+              sub="odsłon stron"
+              accent="text-success"
+            />
+            <MetricCard
+              icon={Activity}
+              label="7 dni"
+              value={PL_NUMBER.format(sumViews(visits, 7, new Date()))}
+              sub="odsłon stron"
+              accent="text-success"
+            />
+            <MetricCard
+              icon={Activity}
+              label="30 dni"
+              value={PL_NUMBER.format(sumViews(visits, 30, new Date()))}
+              sub="odsłon stron"
+              accent="text-success"
+            />
+          </div>
+        ) : (
+          <p className="text-sm text-muted">
+            Brak danych o wejściach (uruchom migrację licznika lub sprawdź
+            konfigurację serwera). Liczymy odsłony bez rozróżniania gości.
+          </p>
+        )}
+      </Section>
 
       {/* Gracze */}
       <Section icon={Users} title="Gracze">

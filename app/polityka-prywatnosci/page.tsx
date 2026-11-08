@@ -134,8 +134,10 @@ export default function PolitykaPrywatnosciPage() {
 
       <InfoSection title="7. Pliki cookies">
         <p>
-          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Własne
-          statystyki odwiedzin i zdarzeń są wyłączone. Wyjątkiem jest Szybka
+          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Liczymy
+          wyłącznie zbiorcze odsłony stron (suma na dzień i adres podstrony) —
+          bez identyfikatora, adresu IP i bez zapisu czegokolwiek w Twojej
+          przeglądarce. Statystyk zdarzeń nie prowadzimy. Wyjątkiem jest Szybka
           próba: po wybraniu odpowiedzi zapisujemy losowy identyfikator sesji
           strony na 30 dni oraz zagregowane liczniki poprawnych i błędnych
           odpowiedzi. Identyfikator nie jest łączony z kontem; nie zapisujemy
