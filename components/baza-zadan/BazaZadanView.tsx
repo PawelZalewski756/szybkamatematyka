@@ -30,7 +30,7 @@ type BazaZadanViewProps = {
 const TABS: readonly { id: BazaTab; label: string; hint: string }[] = [
   {
     id: "zadania",
-    label: "Ćwicz zadania",
+    label: "Zadania",
     hint: "Spokojny katalog tematów, wyszukiwarka i zadania odkrywane po wyborze.",
   },
   {
@@ -194,7 +194,7 @@ export function BazaZadanView({
           Wybierz punkt startu
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-          Wybierz temat, wpisz własną frazę albo przejdź do arkuszy. Ścieżka:{" "}
+          Przeglądaj i szukaj zadań na własną rękę — temat, fraza lub arkusz. Uczysz się od zera? Zacznij od Treningu. Ścieżka:{" "}
           <span className="font-semibold text-accent">{pathLabel}</span>{" "}
           <span className="text-muted/75">·</span>{" "}
           <span className="font-semibold text-foreground">

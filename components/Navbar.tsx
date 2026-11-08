@@ -18,7 +18,7 @@ import {
   PROFILE_UPDATED_EVENT,
   type ProfileUpdatedDetail,
 } from "@/lib/profile-sync";
-import { NAV_PRIMARY_LINKS } from "@/lib/layout/nav-links";
+import { isNavLinkVisible, NAV_PRIMARY_LINKS } from "@/lib/layout/nav-links";
 import type { User } from "@supabase/supabase-js";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
@@ -30,29 +30,31 @@ function isNavActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function PrimaryNavLinks() {
+function PrimaryNavLinks({ isLoggedIn }: { isLoggedIn: boolean }) {
   const pathname = usePathname();
 
   return (
     <ul className="flex items-center gap-0.5">
-      {NAV_PRIMARY_LINKS.map(({ href, label }) => {
-        const active = isNavActive(pathname, href);
-        return (
-          <li key={href}>
-            <Link
-              href={href}
-              aria-current={active ? "page" : undefined}
-              className={`inline-flex items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
-                active
-                  ? "bg-foreground/[0.08] text-foreground"
-                  : "text-muted hover:bg-foreground/[0.04] hover:text-foreground"
-              }`}
-            >
-              {label}
-            </Link>
-          </li>
-        );
-      })}
+      {NAV_PRIMARY_LINKS.filter((l) => isNavLinkVisible(l, isLoggedIn)).map(
+        ({ href, label }) => {
+          const active = isNavActive(pathname, href);
+          return (
+            <li key={href}>
+              <Link
+                href={href}
+                aria-current={active ? "page" : undefined}
+                className={`inline-flex items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
+                  active
+                    ? "bg-foreground/[0.08] text-foreground"
+                    : "text-muted hover:bg-foreground/[0.04] hover:text-foreground"
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          );
+        },
+      )}
     </ul>
   );
 }
@@ -78,7 +80,7 @@ function NavbarActions({
       {!user ? (
         <Link
           href="/login"
-          className="btn-primary rounded-md px-4 py-2 text-xs sm:text-sm"
+          className="btn-primary inline-flex min-h-10 items-center rounded-md px-4 text-xs sm:text-sm"
         >
           Zaloguj
         </Link>
@@ -252,7 +254,7 @@ export function Navbar() {
         {isDesktopNav ? (
           <>
             <div className="flex min-w-0 flex-1 justify-center">
-              <PrimaryNavLinks />
+              <PrimaryNavLinks isLoggedIn={Boolean(user)} />
             </div>
 
             <NavbarActions
@@ -269,7 +271,7 @@ export function Navbar() {
             {!user ? (
               <Link
                 href="/login"
-                className="btn-primary shrink-0 rounded-md px-3 py-1.5 text-xs"
+                className="btn-primary inline-flex min-h-10 shrink-0 items-center rounded-md px-3 text-xs"
               >
                 Zaloguj
               </Link>

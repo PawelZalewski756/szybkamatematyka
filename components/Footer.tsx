@@ -21,20 +21,20 @@ export function Footer() {
           </p>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="transition-colors hover:text-foreground"
+            className="inline-flex min-h-8 items-center transition-colors hover:text-foreground"
           >
             {CONTACT_EMAIL}
           </a>
         </div>
         <nav
           aria-label="Stopka"
-          className="flex flex-wrap items-center gap-x-4 gap-y-2"
+          className="flex flex-wrap items-center gap-x-4 gap-y-0"
         >
           {FOOTER_INFO_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted transition-colors hover:text-foreground"
+              className="inline-flex min-h-8 items-center text-muted transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>

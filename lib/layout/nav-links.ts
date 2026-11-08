@@ -12,6 +12,7 @@ export type NavGroup = {
 /** Główne linki widoczne w pasku nawigacji (reszta w menu „Więcej”). */
 export const NAV_PRIMARY_LINKS: readonly NavLink[] = [
   { href: "/trening", label: "Trening" },
+  { href: "/powtorki", label: "Powtórki", requiresAuth: true },
   { href: "/baza-zadan", label: "Baza zadań" },
   { href: "/minigry", label: "Minigry" },
 ] as const;
@@ -24,10 +25,6 @@ export const NAV_MORE_GROUPS: readonly NavGroup[] = [
       { href: "/wyzwania", label: "Wyzwania" },
       { href: "/pojedynki", label: "Pojedynki" },
     ],
-  },
-  {
-    label: "Nauka",
-    links: [{ href: "/powtorki", label: "Powtórki", requiresAuth: true }],
   },
   {
     label: "Społeczność",

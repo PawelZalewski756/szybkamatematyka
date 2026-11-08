@@ -976,8 +976,8 @@ export default function TreningPage() {
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa — działy i tematy dopasowane do bazy zadań."
-      : "Egzamin ósmoklasisty — działy i tematy dopasowane do bazy zadań.";
+      ? "Matura podstawowa — ucz się po kolei: teoria, zadania, postęp. Szukasz konkretnego zadania? Zajrzyj do Bazy zadań."
+      : "Egzamin ósmoklasisty — ucz się po kolei: teoria, zadania, postęp. Szukasz konkretnego zadania? Zajrzyj do Bazy zadań.";
 
   const overallProgress = useMemo(() => {
     const cats = exam.categories;

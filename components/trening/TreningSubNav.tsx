@@ -47,7 +47,7 @@ export function TreningSubNav() {
               key={href}
               href={href}
               aria-current={active ? "page" : undefined}
-              className={`border-b-2 pb-2 transition ${
+              className={`inline-flex min-h-11 items-center border-b-2 transition ${
                 active
                   ? "border-foreground text-foreground"
                   : "border-transparent text-muted hover:text-foreground"
