@@ -48,7 +48,8 @@ Najważniejsze decyzje techniczne:
 - postęp może działać lokalnie, a po zalogowaniu synchronizuje się z chmurą,
 - treści matematyczne mają własne skrypty do generowania, importu i kontroli
   jakości,
-- CI automatycznie sprawdza lint, typy, testy i build aplikacji.
+- CI automatycznie sprawdza lint, typy, testy, jakość lokalnych treści i build
+  aplikacji.
 
 ## Uruchomienie lokalne
 

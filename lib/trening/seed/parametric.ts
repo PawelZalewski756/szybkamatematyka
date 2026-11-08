@@ -11,7 +11,6 @@ function buildMc(
   correct: string,
   wrongs: string[],
   difficulty: 1 | 2 | 3,
-  variantIndex: number,
 ): TaskDraft {
   const pool: string[] = [correct.trim()];
   for (const candidate of wrongs) {
@@ -111,7 +110,6 @@ export function generateParametricTask(
           exactPower(a, exponent),
           powerDistractors(a, exponent),
           hard ? 2 : 1,
-          v,
         );
       }
       return buildMc(
@@ -121,7 +119,6 @@ export function generateParametricTask(
         exactPower(a, exponent),
         powerDistractors(a, exponent),
         2,
-        v,
       );
     }
     case "logarytmy": {
@@ -129,74 +126,74 @@ export function generateParametricTask(
       const a = bases[pickV(v, 0, 4)]!;
       const exp = 2 + pickV(v, 1, 12);
       const x = Math.pow(a, exp);
-      return buildMc(rng, slot, `Oblicz $\\log_{${a}} ${x}$`, fmtNum(exp), wrongs(rng, exp, 2), 2, v);
+      return buildMc(rng, slot, `Oblicz $\\log_{${a}} ${x}$`, fmtNum(exp), wrongs(rng, exp, 2), 2);
     }
     case "procenty": {
       const p = 5 + pickV(v, 0, 46);
       const n = 40 + pickV(v, 1, 460);
       const c = (n * p) / 100;
-      return buildMc(rng, slot, `${p}% z liczby ${n} wynosi:`, fmtNum(c), wrongs(rng, c, Math.max(3, n * 0.08)), hard ? 3 : 2, v);
+      return buildMc(rng, slot, `${p}% z liczby ${n} wynosi:`, fmtNum(c), wrongs(rng, c, Math.max(3, n * 0.08)), hard ? 3 : 2);
     }
     case "wyrazenia_algebraiczne": {
       const x = 1 + pickV(v, 0, 90);
       if (pickV(v, 1, 2) === 0) {
         const c = x * x + 2 * x + 1;
-        return buildMc(rng, slot, `Oblicz $x^2+2x+1$ dla $x=${x}$`, fmtNum(c), wrongs(rng, c, 5), 2, v);
+        return buildMc(rng, slot, `Oblicz $x^2+2x+1$ dla $x=${x}$`, fmtNum(c), wrongs(rng, c, 5), 2);
       }
       const a = 1 + pickV(v, 2, 14);
       const b = 1 + pickV(v, 3, 14);
-      return buildMc(rng, slot, `Oblicz $${a}x+${b}$ dla $x=${x}$`, fmtNum(a * x + b), wrongs(rng, a * x + b, 4), 1, v);
+      return buildMc(rng, slot, `Oblicz $${a}x+${b}$ dla $x=${x}$`, fmtNum(a * x + b), wrongs(rng, a * x + b, 4), 1);
     }
     case "rownania_liniowe": {
       const x = -20 + pickV(v, 0, 40);
       const a = 2 + pickV(v, 1, 9);
       const b = 1 + pickV(v, 2, 30);
-      return buildMc(rng, slot, `Rozwiąż $${a}x+${b}=${a * x + b}$`, fmtNum(x), wrongs(rng, x, 3), 2, v);
+      return buildMc(rng, slot, `Rozwiąż $${a}x+${b}=${a * x + b}$`, fmtNum(x), wrongs(rng, x, 3), 2);
     }
     case "uklady_rownan": {
       const x = -12 + pickV(v, 0, 24);
       const y = -12 + pickV(v, 1, 24);
-      return buildMc(rng, slot, `Układ: $x+y=${x + y}$, $x-y=${x - y}$. Wartość $x$:`, fmtNum(x), wrongs(rng, x, 2), 3, v);
+      return buildMc(rng, slot, `Układ: $x+y=${x + y}$, $x-y=${x - y}$. Wartość $x$:`, fmtNum(x), wrongs(rng, x, 2), 3);
     }
     case "funkcja_liniowa": {
       const m = -8 + pickV(v, 0, 16);
       const b = -12 + pickV(v, 1, 24);
       const x = 1 + pickV(v, 2, 25);
-      return buildMc(rng, slot, `Dla $f(x)=${m}x+${b}$ oblicz $f(${x})$`, fmtNum(m * x + b), wrongs(rng, m * x + b, 5), 2, v);
+      return buildMc(rng, slot, `Dla $f(x)=${m}x+${b}$ oblicz $f(${x})$`, fmtNum(m * x + b), wrongs(rng, m * x + b, 5), 2);
     }
     case "funkcja_kwadratowa": {
       const x = -18 + pickV(v, 0, 36);
       const p = -5 + pickV(v, 1, 11);
       const q = -9 + pickV(v, 2, 18);
-      return buildMc(rng, slot, `Dla $f(x)=x^2+${p}x+${q}$ oblicz $f(${x})$`, fmtNum(x * x + p * x + q), wrongs(rng, x * x + p * x + q, 7), 2, v);
+      return buildMc(rng, slot, `Dla $f(x)=x^2+${p}x+${q}$ oblicz $f(${x})$`, fmtNum(x * x + p * x + q), wrongs(rng, x * x + p * x + q, 7), 2);
     }
     case "planimetria": {
       if (pickV(v, 0, 2) === 0) {
         const a = 3 + pickV(v, 1, 16);
         const b = 3 + pickV(v, 2, 16);
-        return buildMc(rng, slot, `Pole trójkąta: podstawa ${a}, wysokość ${b}`, fmtNum((a * b) / 2), wrongs(rng, (a * b) / 2, 5), 2, v);
+        return buildMc(rng, slot, `Pole trójkąta: podstawa ${a}, wysokość ${b}`, fmtNum((a * b) / 2), wrongs(rng, (a * b) / 2, 5), 2);
       }
       const a = 5 + pickV(v, 3, 14);
       const b = 5 + pickV(v, 4, 14);
       const c = Math.round(Math.sqrt(a * a + b * b) * 10) / 10;
-      return buildMc(rng, slot, `Przeciwprostokątna: przyprostokątne ${a} i ${b} (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(c), wrongs(rng, c, 3), 2, v);
+      return buildMc(rng, slot, `Przeciwprostokątna: przyprostokątne ${a} i ${b} (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(c), wrongs(rng, c, 3), 2);
     }
     case "stereometria": {
       const mode = v % 3;
       if (mode === 0) {
         const a = 2 + (Math.floor(v / 3) % 14);
-        return buildMc(rng, slot, `Pole powierzchni sześcianu o krawędzi ${a}`, fmtNum(6 * a * a), wrongs(rng, 6 * a * a, 10), 2, v);
+        return buildMc(rng, slot, `Pole powierzchni sześcianu o krawędzi ${a}`, fmtNum(6 * a * a), wrongs(rng, 6 * a * a, 10), 2);
       }
       if (mode === 1) {
         const r = 2 + (Math.floor(v / 3) % 10);
         const h = 3 + (Math.floor(v / 30) % 14);
         const vol = Math.round(3.14 * r * r * h);
-        return buildMc(rng, slot, `Objętość walca $r=${r}$, $h=${h}$, $\\pi\\approx 3{,}14$`, fmtNum(vol), wrongs(rng, vol, 20), 3, v);
+        return buildMc(rng, slot, `Objętość walca $r=${r}$, $h=${h}$, $\\pi\\approx 3{,}14$`, fmtNum(vol), wrongs(rng, vol, 20), 3);
       }
       const a = 2 + (Math.floor(v / 3) % 8);
       const b = 2 + (Math.floor(v / 24) % 8);
       const h = 3 + (Math.floor(v / 192) % 12);
-      return buildMc(rng, slot, `Objętość prostopadłościanu ${a}×${b}×${h}`, fmtNum(a * b * h), wrongs(rng, a * b * h, 12), 2, v);
+      return buildMc(rng, slot, `Objętość prostopadłościanu ${a}×${b}×${h}`, fmtNum(a * b * h), wrongs(rng, a * b * h, 12), 2);
     }
     case "geometria_analityczna": {
       const x1 = -8 + pickV(v, 0, 16);
@@ -204,26 +201,26 @@ export function generateParametricTask(
       const x2 = -8 + pickV(v, 2, 16);
       const y2 = -8 + pickV(v, 3, 16);
       const d = Math.round(Math.hypot(x2 - x1, y2 - y1) * 10) / 10;
-      return buildMc(rng, slot, `Odległość $(${x1},${y1})$ i $(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(d), wrongs(rng, d, 4), 3, v);
+      return buildMc(rng, slot, `Odległość $(${x1},${y1})$ i $(${x2},${y2})$ (w przybliżeniu do 1 miejsca po przecinku)`, fmtNum(d), wrongs(rng, d, 4), 3);
     }
     case "prawdopodobienstwo": {
       if (pickV(v, 0, 2) === 0) {
         const fav = 1 + pickV(v, 1, 10);
         const tot = fav + 2 + pickV(v, 2, 20);
         const g = gcd(fav, tot);
-        return buildMc(rng, slot, `P(czerwona) przy ${fav} z ${tot} kulach`, `${fav / g}/${tot / g}`, [`${fav}/${tot + 1}`, `${fav + 1}/${tot}`, `${tot - fav}/${tot}`], 2, v);
+        return buildMc(rng, slot, `P(czerwona) przy ${fav} z ${tot} kulach`, `${fav / g}/${tot / g}`, [`${fav}/${tot + 1}`, `${fav + 1}/${tot}`, `${tot - fav}/${tot}`], 2);
       }
       const sides = 6 + pickV(v, 3, 6);
       const favorable = 1 + pickV(v, 4, sides - 1);
       const g = gcd(favorable, sides);
-      return buildMc(rng, slot, `Kostka ${sides}-ścienna: P(wynik ≤ ${favorable})`, `${favorable / g}/${sides / g}`, [`${favorable}/${sides + 1}`, `1/${sides}`, `2/${sides}`], 2, v);
+      return buildMc(rng, slot, `Kostka ${sides}-ścienna: P(wynik ≤ ${favorable})`, `${favorable / g}/${sides / g}`, [`${favorable}/${sides + 1}`, `1/${sides}`, `2/${sides}`], 2);
     }
     case "statystyka": {
       const n = 4 + pickV(v, 0, 3);
       const nums = Array.from({ length: n }, (_, i) => 2 + pickV(v, i + 1, 20));
       const avg = nums.reduce((s, x) => s + x, 0) / n;
       const rounded = Math.round(avg * 100) / 100;
-      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 2, v);
+      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 2);
     }
     case "ulamki": {
       const n1 = 1 + pickV(v, 0, 9);
@@ -231,59 +228,59 @@ export function generateParametricTask(
       const n2 = 1 + pickV(v, 2, 8);
       const d2 = n2 + 1 + pickV(v, 3, 8);
       const c = Math.round((n1 / d1 + n2 / d2) * 100) / 100;
-      return buildMc(rng, slot, `$\\frac{${n1}}{${d1}}+\\frac{${n2}}{${d2}}$`, fmtNum(c), wrongs(rng, c, 0.3), 2, v);
+      return buildMc(rng, slot, `$\\frac{${n1}}{${d1}}+\\frac{${n2}}{${d2}}$`, fmtNum(c), wrongs(rng, c, 0.3), 2);
     }
     case "pola_figur": {
       if (pickV(v, 0, 2) === 0) {
         const a = 3 + pickV(v, 1, 16);
-        return buildMc(rng, slot, `Pole kwadratu o boku ${a}`, fmtNum(a * a), wrongs(rng, a * a, 6), 1, v);
+        return buildMc(rng, slot, `Pole kwadratu o boku ${a}`, fmtNum(a * a), wrongs(rng, a * a, 6), 1);
       }
       const a = 4 + pickV(v, 2, 12);
       const b = 3 + pickV(v, 3, 12);
-      return buildMc(rng, slot, `Pole prostokąta ${a}×${b}`, fmtNum(a * b), wrongs(rng, a * b, 5), 1, v);
+      return buildMc(rng, slot, `Pole prostokąta ${a}×${b}`, fmtNum(a * b), wrongs(rng, a * b, 5), 1);
     }
     case "obwody": {
       const mode = pickV(v, 0, 3);
       if (mode === 0) {
         const a = 3 + pickV(v, 1, 15);
-        return buildMc(rng, slot, `Obwód kwadratu o boku ${a}`, fmtNum(4 * a), wrongs(rng, 4 * a, 4), 1, v);
+        return buildMc(rng, slot, `Obwód kwadratu o boku ${a}`, fmtNum(4 * a), wrongs(rng, 4 * a, 4), 1);
       }
       if (mode === 1) {
         const a = 4 + pickV(v, 2, 12);
         const b = 3 + pickV(v, 3, 11);
-        return buildMc(rng, slot, `Obwód prostokąta ${a}×${b}`, fmtNum(2 * (a + b)), wrongs(rng, 2 * (a + b), 5), 1, v);
+        return buildMc(rng, slot, `Obwód prostokąta ${a}×${b}`, fmtNum(2 * (a + b)), wrongs(rng, 2 * (a + b), 5), 1);
       }
       const r = 3 + pickV(v, 4, 10);
       const circumference = Math.round(2 * 3.14 * r);
-      return buildMc(rng, slot, `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity)`, fmtNum(circumference), wrongs(rng, circumference, 4), 2, v);
+      return buildMc(rng, slot, `Obwód koła $r=${r}$, $\\pi\\approx 3{,}14$ (całkowity)`, fmtNum(circumference), wrongs(rng, circumference, 4), 2);
     }
     case "katy": {
       const alpha = 15 + pickV(v, 0, 60);
       const c = 180 - alpha - 90;
-      return buildMc(rng, slot, `Trójkąt prostokątny: ostry ${alpha}°. Drugi ostry:`, `${c}°`, [`${c + 7}°`, `${c - 7}°`, `90°`], 2, v);
+      return buildMc(rng, slot, `Trójkąt prostokątny: ostry ${alpha}°. Drugi ostry:`, `${c}°`, [`${c + 7}°`, `${c - 7}°`, `90°`], 2);
     }
     case "wykresy": {
       const m = 1 + pickV(v, 0, 40);
       const x = 1 + pickV(v, 1, 50);
       const b = pickV(v, 2, 20);
-      return buildMc(rng, slot, `Wykres $y=${m}x+${b}$: wartość dla $x=${x}$`, fmtNum(m * x + b), wrongs(rng, m * x + b, 5), 2, v);
+      return buildMc(rng, slot, `Wykres $y=${m}x+${b}$: wartość dla $x=${x}$`, fmtNum(m * x + b), wrongs(rng, m * x + b, 5), 2);
     }
     case "srednia": {
       const len = 3 + pickV(v, 0, 3);
       const nums = Array.from({ length: len }, (_, i) => 2 + pickV(v, i + 1, 18));
       const avg = nums.reduce((s, n) => s + n, 0) / len;
       const rounded = Math.round(avg * 100) / 100;
-      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 1, v);
+      return buildMc(rng, slot, `Średnia z ${nums.join(", ")} (w przybliżeniu do 2 miejsc po przecinku)`, fmtNum(rounded), wrongs(rng, rounded, 2), 1);
     }
     case "diagramy": {
       const total = 100 * (1 + pickV(v, 0, 5));
       const p = 5 + pickV(v, 1, 45);
-      return buildMc(rng, slot, `${p}% z ${total} uczniów`, fmtNum((total * p) / 100), wrongs(rng, (total * p) / 100, 10), 2, v);
+      return buildMc(rng, slot, `${p}% z ${total} uczniów`, fmtNum((total * p) / 100), wrongs(rng, (total * p) / 100, 10), 2);
     }
     case "rownania": {
       const x = 2 + pickV(v, 0, 30);
       const b = 1 + pickV(v, 1, 35);
-      return buildMc(rng, slot, `Rozwiąż $x+${b}=${x + b}$`, fmtNum(x), wrongs(rng, x, 3), 1, v);
+      return buildMc(rng, slot, `Rozwiąż $x+${b}=${x + b}$`, fmtNum(x), wrongs(rng, x, 3), 1);
     }
     case "notacja_wykladnicza": {
       const a = 1 + (v % 9);
@@ -296,7 +293,6 @@ export function generateParametricTask(
         fmtNum(c),
         wrongs(rng, c, Math.max(10, c * 0.1)),
         2,
-        v,
       );
     }
     case "zbiory_i_przedzialy": {
@@ -317,7 +313,6 @@ export function generateParametricTask(
           `[${left}, ${intersectionRight}]`,
         ],
         2,
-        v,
       );
     }
     case "funkcja_wykladnicza": {
@@ -333,7 +328,6 @@ export function generateParametricTask(
           fmtNum(value),
           wrongs(rng, value, Math.max(2, base)),
           2,
-          v,
         );
       }
       return buildMc(
@@ -343,13 +337,12 @@ export function generateParametricTask(
         fmtNum(exponent),
         wrongs(rng, exponent, 2),
         2,
-        v,
       );
     }
     case "wartosc_bezwzgledna": {
       const x = -20 + pickV(v, 0, 40);
       if (x === 0) {
-        return buildMc(rng, slot, `Oblicz $|0|$`, "0", ["1", "-1", "2"], 1, v);
+        return buildMc(rng, slot, `Oblicz $|0|$`, "0", ["1", "-1", "2"], 1);
       }
       return buildMc(
         rng,
@@ -358,7 +351,6 @@ export function generateParametricTask(
         fmtNum(Math.abs(x)),
         wrongs(rng, Math.abs(x), 3),
         1,
-        v,
       );
     }
     case "kolejnosc_dzialan": {
@@ -373,7 +365,6 @@ export function generateParametricTask(
         fmtNum(result),
         [fmtNum((a + b) * c), fmtNum(a * b + c), fmtNum(a * b * c)],
         1,
-        v,
       );
     }
     case "wzory_skroconego_mnozenia": {
@@ -387,7 +378,6 @@ export function generateParametricTask(
         fmtNum(c),
         wrongs(rng, c, 8),
         2,
-        v,
       );
     }
     case "rownania_kwadratowe": {
@@ -405,7 +395,6 @@ export function generateParametricTask(
         fmtNum(r1),
         wrongs(rng, r1, 3),
         3,
-        v,
       );
     }
     case "nierownosci": {
@@ -420,7 +409,6 @@ export function generateParametricTask(
         `x < ${fmtNum(x)}`,
         [`x > ${fmtNum(x)}`, `x ≤ ${fmtNum(x)}`, `x ≥ ${fmtNum(x)}`],
         2,
-        v,
       );
     }
     case "wlasnosci_funkcji": {
@@ -435,7 +423,6 @@ export function generateParametricTask(
         fmtNum(zero),
         wrongs(rng, zero, 2),
         2,
-        v,
       );
     }
     case "odczyt_wykresu": {
@@ -449,14 +436,13 @@ export function generateParametricTask(
         fmtNum(prod),
         wrongs(rng, prod, 4),
         2,
-        v,
       );
     }
     case "ciag_arytmetyczny": {
       const a1 = -10 + pickV(v, 0, 30);
       const r = -5 + pickV(v, 1, 12);
       if (r === 0) {
-        return buildMc(rng, slot, `Ciąg stały $a_n=${a1}$. Wtedy $a_5$:`, fmtNum(a1), wrongs(rng, a1, 2), 1, v);
+        return buildMc(rng, slot, `Ciąg stały $a_n=${a1}$. Wtedy $a_5$:`, fmtNum(a1), wrongs(rng, a1, 2), 1);
       }
       const n = 5 + pickV(v, 2, 6);
       const an = a1 + (n - 1) * r;
@@ -467,7 +453,6 @@ export function generateParametricTask(
         fmtNum(an),
         wrongs(rng, an, Math.abs(r) + 2),
         2,
-        v,
       );
     }
     case "ciag_geometryczny": {
@@ -482,7 +467,6 @@ export function generateParametricTask(
         fmtNum(an),
         wrongs(rng, an, an / 2 || 4),
         2,
-        v,
       );
     }
     case "sin_cos_tg": {
@@ -500,12 +484,12 @@ export function generateParametricTask(
       const ang = angles[Math.floor(v / 3) % angles.length]!;
       const mode = v % 3;
       if (mode === 0) {
-        return buildMc(rng, slot, `$\\sin ${ang.deg}^\\circ$ =`, ang.sin, [ang.cos, "1", "0"], 2, v);
+        return buildMc(rng, slot, `$\\sin ${ang.deg}^\\circ$ =`, ang.sin, [ang.cos, "1", "0"], 2);
       }
       if (mode === 1) {
-        return buildMc(rng, slot, `$\\cos ${ang.deg}^\\circ$ =`, ang.cos, [ang.sin, "1", "0"], 2, v);
+        return buildMc(rng, slot, `$\\cos ${ang.deg}^\\circ$ =`, ang.cos, [ang.sin, "1", "0"], 2);
       }
-      return buildMc(rng, slot, `$\\mathrm{tg}\\, ${ang.deg}^\\circ$ =`, ang.tg, ["0", "1/2", "2"], 2, v);
+      return buildMc(rng, slot, `$\\mathrm{tg}\\, ${ang.deg}^\\circ$ =`, ang.tg, ["0", "1/2", "2"], 2);
     }
     case "zastosowania_trygonometrii": {
       const a = 3 + (v % 8);
@@ -518,7 +502,6 @@ export function generateParametricTask(
         fmtNum(c),
         wrongs(rng, c, 2),
         2,
-        v,
       );
     }
     case "pitagoras_i_podobienstwo":
@@ -553,7 +536,6 @@ export function generateParametricTask(
         fmtNum(t[2]),
         wrongs(rng, t[2], 3),
         2,
-        v,
       );
     }
     case "podobienstwo": {
@@ -566,7 +548,6 @@ export function generateParametricTask(
         fmtNum(a * k),
         wrongs(rng, a * k, a),
         2,
-        v,
       );
     }
     case "okrag_i_kolo": {
@@ -579,7 +560,6 @@ export function generateParametricTask(
           fmtNum(Math.round(3.14 * r * r)),
           wrongs(rng, Math.round(3.14 * r * r), 10),
           2,
-          v,
         );
       }
       return buildMc(
@@ -589,7 +569,6 @@ export function generateParametricTask(
         fmtNum(Math.round(2 * 3.14 * r)),
         wrongs(rng, Math.round(2 * 3.14 * r), 5),
         2,
-        v,
       );
     }
     case "kombinatoryka":
@@ -604,7 +583,6 @@ export function generateParametricTask(
         fmtNum(a * b * c),
         wrongs(rng, a * b * c, 6),
         2,
-        v,
       );
     }
     case "pierwiastki": {
@@ -620,7 +598,6 @@ export function generateParametricTask(
         fmtNum(Math.sqrt(n)),
         wrongs(rng, Math.sqrt(n), 2),
         1,
-        v,
       );
     }
     case "liczby_calkowite": {
@@ -633,7 +610,6 @@ export function generateParametricTask(
         fmtNum(a + b),
         wrongs(rng, a + b, 4),
         1,
-        v,
       );
     }
     case "podzielnosc": {
@@ -649,7 +625,6 @@ export function generateParametricTask(
           fmtNum(answer),
           wrongs(rng, answer, 3),
           2,
-          v,
         );
       }
       const number = divisor * (4 + pickV(v, 3, 12)) + (v % divisor);
@@ -661,7 +636,6 @@ export function generateParametricTask(
         fmtNum(remainder),
         wrongs(rng, remainder, Math.max(2, divisor - 1)),
         1,
-        v,
       );
     }
     case "proporcje": {
@@ -677,7 +651,6 @@ export function generateParametricTask(
         fmtNum(x),
         wrongs(rng, x, Math.max(2, x / 4)),
         2,
-        v,
       );
     }
     case "symetrie": {
@@ -691,7 +664,6 @@ export function generateParametricTask(
           `(${-x},${y})`,
           [`(${x},${-y})`, `(${-x},${-y})`, `(${y},${x})`],
           2,
-          v,
         );
       }
       return buildMc(
@@ -701,7 +673,6 @@ export function generateParametricTask(
         `(${x},${-y})`,
         [`(${-x},${y})`, `(${-x},${-y})`, `(${y},${x})`],
         2,
-        v,
       );
     }
     case "bryly":
@@ -717,7 +688,6 @@ export function generateParametricTask(
           fmtNum(a * b * h),
           wrongs(rng, a * b * h, 8),
           2,
-          v,
         );
       }
       return buildMc(
@@ -727,7 +697,6 @@ export function generateParametricTask(
         fmtNum(a * a * a),
         wrongs(rng, a * a * a, 6),
         2,
-        v,
       );
     }
     case "punkty_na_plaszczyznie": {
@@ -761,7 +730,6 @@ export function generateParametricTask(
         q.ans,
         (["I", "II", "III", "IV"] as const).filter((x) => x !== q.ans),
         1,
-        v,
       );
     }
     case "dlugosc_odcinka": {
@@ -777,7 +745,6 @@ export function generateParametricTask(
         fmtNum(d),
         wrongs(rng, d, 3),
         2,
-        v,
       );
     }
     case "proporcjonalnosc": {
@@ -790,7 +757,6 @@ export function generateParametricTask(
         fmtNum(k * x),
         wrongs(rng, k * x, k),
         2,
-        v,
       );
     }
     case "mediana_i_dominanta": {
@@ -808,7 +774,6 @@ export function generateParametricTask(
         fmtNum(med),
         wrongs(rng, med, 2),
         2,
-        v,
       );
     }
     default: {
@@ -824,7 +789,6 @@ export function generateParametricTask(
         fmtNum(result),
         wrongs(rng, result, 4),
         1,
-        v,
       );
     }
   }

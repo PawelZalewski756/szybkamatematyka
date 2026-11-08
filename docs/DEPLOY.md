@@ -51,6 +51,33 @@ W Supabase dodaj do Authentication → URL Configuration:
   `${NEXT_PUBLIC_SITE_URL}/login/nowe-haslo` oraz lokalny
   `http://localhost:3000/**` do testów.
 
+## Kolejność wdrożenia produkcyjnego
+
+Wdrożenie na `master` obsługuje GitHub Actions w kolejności: lint, typy, testy,
+audyt treści, build i E2E; następnie migracje Supabase; na końcu produkcyjny
+build i deploy Vercel. Błąd na dowolnym etapie zatrzymuje kolejne kroki.
+Migracje muszą pozostać kompatybilne z aktualnie działającą wersją aplikacji,
+ponieważ są stosowane przed publikacją nowego kodu.
+
+Przed włączeniem tego procesu:
+
+1. Dodaj do GitHub Actions sekrety `SUPABASE_DB_URL`, `VERCEL_TOKEN`,
+   `VERCEL_ORG_ID` i `VERCEL_PROJECT_ID`. Sposób uzyskania połączenia bazy
+   opisuje [konfiguracja Supabase](../supabase/README.md).
+   `VERCEL_TOKEN` utwórz w ustawieniach konta Vercel; `VERCEL_ORG_ID` i
+   `VERCEL_PROJECT_ID` odczytaj z `.vercel/project.json` po lokalnym
+   `vercel link`. Nie commituj katalogu `.vercel`.
+2. W projekcie Vercel odłącz automatyczne wdrożenia z GitHub (**Project
+   Settings → Git → Disconnect**), aby nie ominąć migracji i nie publikować
+   dwukrotnie. Od tej pory produkcję publikuje wyłącznie GitHub Actions.
+3. Sprawdź, że zmienne środowiskowe produkcyjne są ustawione w projekcie Vercel;
+   workflow pobiera je podczas `vercel pull`.
+
+Workflow deployuje tylko push na `master`, po udanym CI/E2E i migracjach.
+`vercel.json` ustawia `npm ci` oraz `npm run build`, tak aby wdrożenie używało
+tych samych komend co CI. Historia migracji i ostatni commit obsłużony przez
+workflow są zapisywane w prywatnych tabelach Supabase; nie kasuj ich ręcznie.
+
 ## 2. Supabase — kolejność SQL
 
 Repozytorium zawiera starsze pliki SQL przeznaczone do uruchamiania w SQL
@@ -91,7 +118,8 @@ wykonaj poniższe kroki:
    `20261101200000_signup_telegram_notifications.sql`,
    `20261101210000_block_profanity_in_profile_names.sql`,
    `20261101220000_expand_profile_name_profanity_filter.sql`,
-   `20261104214800_quick_trial_analytics.sql`.
+   `20261104214800_quick_trial_analytics.sql`,
+   `20261108144500_rate_limit_quick_trial.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
@@ -125,7 +153,12 @@ pozostają wyłączone. Osobna migracja `20261104214800_quick_trial_analytics.sq
 uruchamia wyłącznie liczniki odpowiedzi Szybkiej próby, dostępne przez
 administratorską komendę Telegrama `/szybkaproba`. Zapisuje anonimowe sesje i
 poprawne/błędne odpowiedzi; identyfikatory sesji są czyszczone przy zapisie
-lub odczycie statystyk, gdy przekroczą 30 dni.
+lub odczycie statystyk, gdy przekroczą 30 dni. Migracja
+`20261108144500_rate_limit_quick_trial.sql` ogranicza zapis do 30 prób na minutę
+z jednego adresu IP. Aplikacja zapisuje wyłącznie HMAC adresu IP, a stare okna
+limitu usuwa przy kolejnych żądaniach. Vercel dostarcza adres przez
+`x-vercel-forwarded-for`; na innym hoście produkcyjnym skonfiguruj zaufany
+reverse proxy, który nadpisuje `x-forwarded-for`.
 Pomiar konwersji Google Ads jest odrębnym mechanizmem i pozostaje aktywny.
 
 `20260529120000_harden_rls_admin_writes.sql` i
@@ -206,6 +239,7 @@ Każda wymieniona tabela powinna mieć `relrowsecurity = true`.
 npm run audit:cke
 npm run audit:questions
 npm run audit:trening
+npm run audit:tasks-cache
 npm test
 npm run lint
 npx tsc --noEmit

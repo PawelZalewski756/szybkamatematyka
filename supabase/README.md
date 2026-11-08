@@ -2,11 +2,14 @@
 
 ## Automatyczne migracje produkcyjne
 
-Nowe migracje timestampowane (`YYYYMMDDHHMMSS_nazwa.sql`) dodane do
-`supabase/migrations/` i wysłane na `master` są wykonywane przez
-`.github/workflows/supabase-migrations.yml`. Workflow zapisuje checksum
-zastosowanej migracji, wykonuje SQL i wpis historii w jednej transakcji oraz
-odmawia ponownego zastosowania zmienionego pliku.
+Po udanym CI i testach E2E na `master` workflow
+`.github/workflows/ci.yml` uruchamia `.github/workflows/supabase-migrations.yml`,
+a dopiero po migracjach publikuje aplikację na Vercel. Migracje timestampowane
+(`YYYYMMDDHHMMSS_nazwa.sql`) zapisują checksum razem z SQL w jednej transakcji.
+Workflow sprawdza zmienione, usunięte i przemianowane pliki, odrzuca zmianę
+lub usunięcie zastosowanej migracji oraz przechowuje commit ostatniego
+udanego przebiegu migracji, by kolejne wdrożenie uwzględniło migracje
+z pominiętych commitów.
 
 Przed pierwszym uruchomieniem dodaj w GitHub:
 **Settings → Secrets and variables → Actions → New repository secret**:
@@ -16,9 +19,12 @@ Przed pierwszym uruchomieniem dodaj w GitHub:
   (nie klucz API, `service_role` ani connection string trybu Transaction pooler).
 
 Sekret jest używany wyłącznie przez GitHub Actions podczas migracji; nie dodawaj
-go do Vercel ani do kodu. Historyczne i nietimestampowane pliki SQL nie są
-automatycznie wykonywane. Workflow wykonuje wyłącznie nowe timestampowane
-migracje dodane na `master`. Poziom nauki zapisuje się jako „sp” lub „srednia”;
+go do Vercel ani do kodu. Dodaj też sekrety `VERCEL_TOKEN`, `VERCEL_ORG_ID`
+i `VERCEL_PROJECT_ID` wymagane do publikacji aplikacji. Odłącz automatyczne
+wdrożenia Vercel z GitHub zgodnie z checklistą w `docs/DEPLOY.md`.
+Historyczne i nietimestampowane pliki SQL nie są automatycznie wykonywane.
+Workflow stosuje tylko wersje nieobecne w historii bazy. Poziom nauki zapisuje
+się jako „sp” lub „srednia”;
 historyczne wartości konkretnych klas są sprowadzane do jednego z tych poziomów.
 Historyczne migracje anonimowych statystyk pozostają w repozytorium i mogą
 pozostać w istniejących bazach, ale ich ogólne zbieranie danych i komendy
@@ -26,7 +32,10 @@ raportujące pozostają wyłączone. Osobna migracja
 `20261104214800_quick_trial_analytics.sql` włącza wyłącznie liczniki Szybkiej
 próby: sesje bez konta oraz poprawne i błędne odpowiedzi. Identyfikatory sesji
 są czyszczone przy zapisie lub odczycie statystyk, gdy przekroczą 30 dni, a
-komenda administratora Telegrama to `/szybkaproba`.
+komenda administratora Telegrama to `/szybkaproba`. Migracja
+`20261108144500_rate_limit_quick_trial.sql` ogranicza zapis do 30 prób na minutę
+na adres IP. W bazie przechowywany jest wyłącznie HMAC adresu, a stare okna
+limitu są usuwane podczas kolejnych żądań.
 
 ## Kolejność wdrożenia
 
