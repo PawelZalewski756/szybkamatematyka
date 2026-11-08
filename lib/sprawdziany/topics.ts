@@ -67,7 +67,6 @@ function triple(rng: Rng) {
 const ulamki: SprawdzianTopic = {
   id: "ulamki",
   label: "Ułamki",
-  emoji: "🍕",
   description: "Dodawanie, mnożenie i dzielenie ułamków, zadania tekstowe.",
   classes: [7, 8],
   templates: [
@@ -141,7 +140,6 @@ const ulamki: SprawdzianTopic = {
 const procenty: SprawdzianTopic = {
   id: "procenty",
   label: "Procenty",
-  emoji: "💯",
   description: "Procent z liczby, obniżki, podwyżki, jaki to procent.",
   classes: [7, 8],
   templates: [
@@ -205,7 +203,6 @@ const procenty: SprawdzianTopic = {
 const rownania: SprawdzianTopic = {
   id: "rownania",
   label: "Równania",
-  emoji: "⚖️",
   description:
     "Równania liniowe, z nawiasami, układy równań, zadania tekstowe.",
   classes: [7, 8],
@@ -283,7 +280,6 @@ const rownania: SprawdzianTopic = {
 const potegi: SprawdzianTopic = {
   id: "potegi-pierwiastki",
   label: "Potęgi i pierwiastki",
-  emoji: "🔢",
   description: "Działania na potęgach, pierwiastki, notacja wykładnicza.",
   classes: [7, 8],
   templates: [
@@ -364,7 +360,6 @@ const potegi: SprawdzianTopic = {
 const poleObwod: SprawdzianTopic = {
   id: "pola-obwody",
   label: "Pola i obwody",
-  emoji: "📐",
   description: "Prostokąt, trójkąt, trapez, romb, koło.",
   classes: [7, 8],
   templates: [
@@ -437,7 +432,6 @@ const poleObwod: SprawdzianTopic = {
 const pitagoras: SprawdzianTopic = {
   id: "pitagoras",
   label: "Twierdzenie Pitagorasa",
-  emoji: "📏",
   description: "Przeciwprostokątna, przyprostokątna, przekątne.",
   classes: [8],
   templates: [
@@ -497,7 +491,6 @@ const pitagoras: SprawdzianTopic = {
 const bryly: SprawdzianTopic = {
   id: "bryly",
   label: "Bryły",
-  emoji: "🧊",
   description:
     "Objętość i pole powierzchni sześcianu, prostopadłościanu, ostrosłupa.",
   classes: [7, 8],
@@ -584,7 +577,6 @@ const bryly: SprawdzianTopic = {
 const statystyka: SprawdzianTopic = {
   id: "statystyka-prawdopodobienstwo",
   label: "Statystyka i prawdopodobieństwo",
-  emoji: "🎲",
   description: "Średnia, mediana, prawdopodobieństwo.",
   classes: [8],
   templates: [
@@ -680,7 +672,6 @@ const statystyka: SprawdzianTopic = {
 const tekstowe: SprawdzianTopic = {
   id: "zadania-tekstowe",
   label: "Zadania tekstowe i proporcje",
-  emoji: "📝",
   description: "Proporcjonalność, prędkość i droga, skala mapy, wiek.",
   classes: [7, 8],
   templates: [
@@ -751,7 +742,6 @@ const tekstowe: SprawdzianTopic = {
 const algebra: SprawdzianTopic = {
   id: "wyrazenia-algebraiczne",
   label: "Wyrażenia algebraiczne",
-  emoji: "🔤",
   description: "Upraszczanie, wartość wyrażenia, wzory skróconego mnożenia.",
   classes: [7, 8],
   templates: [
@@ -830,7 +820,6 @@ const algebra: SprawdzianTopic = {
 const liczbyWymierne: SprawdzianTopic = {
   id: "liczby-wymierne",
   label: "Liczby ujemne i działania",
-  emoji: "➖",
   description:
     "Liczby ujemne, wartość bezwzględna, ułamki dziesiętne, kolejność działań.",
   classes: [7],
@@ -897,7 +886,6 @@ const liczbyWymierne: SprawdzianTopic = {
 const katy: SprawdzianTopic = {
   id: "katy-trojkaty",
   label: "Kąty i trójkąty",
-  emoji: "📐",
   description:
     "Suma kątów w trójkącie i wielokącie, kąty przyległe, kąt zewnętrzny.",
   classes: [7],
@@ -966,7 +954,6 @@ const katy: SprawdzianTopic = {
 const wspolrzedne: SprawdzianTopic = {
   id: "uklad-wspolrzednych",
   label: "Układ współrzędnych",
-  emoji: "🧭",
   description:
     "Ćwiartki, symetria względem osi, odległości i pola figur w układzie.",
   classes: [7],
@@ -1030,7 +1017,6 @@ const wspolrzedne: SprawdzianTopic = {
 const dzialaniaPodstawowe: SprawdzianTopic = {
   id: "dzialania-podstawowe",
   label: "Działania na liczbach",
-  emoji: "🔢",
   description: "Kolejność działań, mnożenie, dzielenie z resztą, zaokrąglanie.",
   classes: [4, 5, 6],
   templates: [
@@ -1103,7 +1089,6 @@ const dzialaniaPodstawowe: SprawdzianTopic = {
 const ulamkiProste: SprawdzianTopic = {
   id: "ulamki-proste",
   label: "Ułamki zwykłe i dziesiętne",
-  emoji: "🍕",
   description: "Skracanie, dodawanie, ułamek z liczby, ułamki dziesiętne.",
   classes: [5, 6],
   templates: [
@@ -1175,7 +1160,6 @@ const ulamkiProste: SprawdzianTopic = {
 const geometriaPodstawy: SprawdzianTopic = {
   id: "geometria-podstawy",
   label: "Obwody i pola",
-  emoji: "📏",
   description: "Obwód i pole prostokąta, kwadratu i trójkąta.",
   classes: [4, 5, 6],
   templates: [
@@ -1244,7 +1228,6 @@ const geometriaPodstawy: SprawdzianTopic = {
 const miaryICzas: SprawdzianTopic = {
   id: "miary-i-czas",
   label: "Jednostki, czas i pieniądze",
-  emoji: "⏱️",
   description: "Zamiana jednostek, obliczenia na czasie i zadania z cenami.",
   classes: [4, 5, 6],
   templates: [
