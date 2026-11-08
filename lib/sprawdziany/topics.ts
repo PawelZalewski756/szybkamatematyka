@@ -189,7 +189,11 @@ const procenty: SprawdzianTopic = {
       return numericQuestion(rng, {
         prompt: `Po podwyżce o ${pct}% rower kosztuje ${now} zł. Ile kosztował przed podwyżką?`,
         correct: old,
-        wrongs: [Math.round((now * (100 - pct)) / 100), now - pct, (now * pct) / 100],
+        wrongs: [
+          Math.round((now * (100 - pct)) / 100),
+          now - pct,
+          (now * pct) / 100,
+        ],
         format: unit("zł"),
         deltas: [10, -10, 20, -20, 5],
         explanation: `${now} zł to ${100 + pct}% starej ceny, więc stara cena: ${now} : ${(100 + pct) / 100} = ${old} zł. Nie odejmujemy ${pct}% od nowej ceny.`,
@@ -202,7 +206,8 @@ const rownania: SprawdzianTopic = {
   id: "rownania",
   label: "Równania",
   emoji: "⚖️",
-  description: "Równania liniowe, z nawiasami, układy równań, zadania tekstowe.",
+  description:
+    "Równania liniowe, z nawiasami, układy równań, zadania tekstowe.",
   classes: [7, 8],
   templates: [
     tpl("rownania-proste", 1, (rng) => {
@@ -256,17 +261,22 @@ const rownania: SprawdzianTopic = {
         explanation: `Liczby: x, x+1, x+2. Równanie 3x + 3 = ${sum} daje x = ${n}.`,
       });
     }),
-    tpl("rownania-uklad", 3, (rng) => {
-      const y = int(rng, 1, 8);
-      const x = y + int(rng, 1, 8);
-      return numericQuestion(rng, {
-        prompt: `Rozwiąż układ równań: x + y = ${x + y} oraz x - y = ${x - y}. Ile wynosi x?`,
-        correct: x,
-        wrongs: [y, x + y, x - y],
-        format: xEq,
-        explanation: `Dodajemy równania stronami: 2x = ${2 * x}, więc x = ${x} (a y = ${y}).`,
-      });
-    }, [8]),
+    tpl(
+      "rownania-uklad",
+      3,
+      (rng) => {
+        const y = int(rng, 1, 8);
+        const x = y + int(rng, 1, 8);
+        return numericQuestion(rng, {
+          prompt: `Rozwiąż układ równań: x + y = ${x + y} oraz x - y = ${x - y}. Ile wynosi x?`,
+          correct: x,
+          wrongs: [y, x + y, x - y],
+          format: xEq,
+          explanation: `Dodajemy równania stronami: 2x = ${2 * x}, więc x = ${x} (a y = ${y}).`,
+        });
+      },
+      [8],
+    ),
   ],
 };
 
@@ -299,20 +309,29 @@ const potegi: SprawdzianTopic = {
         explanation: `Przy dzieleniu odejmujemy wykładniki: ${b}${sup(m - n)} = ${b ** (m - n)}.`,
       });
     }),
-    tpl("pierwiastki-suma", 1, (rng) => {
-      const squares = [4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144];
-      const A = pick(rng, squares);
-      const B = pick(rng, squares);
-      const a = Math.sqrt(A);
-      const b = Math.sqrt(B);
-      const plus = rng() < 0.5;
-      return numericQuestion(rng, {
-        prompt: `Oblicz: √${A} ${plus ? "+" : "-"} √${B}`,
-        correct: plus ? a + b : a - b,
-        wrongs: [a * b, plus ? a - b : a + b, Math.sqrt(Math.abs(plus ? A + B : A - B))],
-        explanation: `√${A} = ${a}, √${B} = ${b}, więc wynik to ${a} ${plus ? "+" : "-"} ${b} = ${plus ? a + b : a - b}.`,
-      });
-    }, [8]),
+    tpl(
+      "pierwiastki-suma",
+      1,
+      (rng) => {
+        const squares = [4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144];
+        const A = pick(rng, squares);
+        const B = pick(rng, squares);
+        const a = Math.sqrt(A);
+        const b = Math.sqrt(B);
+        const plus = rng() < 0.5;
+        return numericQuestion(rng, {
+          prompt: `Oblicz: √${A} ${plus ? "+" : "-"} √${B}`,
+          correct: plus ? a + b : a - b,
+          wrongs: [
+            a * b,
+            plus ? a - b : a + b,
+            Math.sqrt(Math.abs(plus ? A + B : A - B)),
+          ],
+          explanation: `√${A} = ${a}, √${B} = ${b}, więc wynik to ${a} ${plus ? "+" : "-"} ${b} = ${plus ? a + b : a - b}.`,
+        });
+      },
+      [8],
+    ),
     tpl("potegi-znaki", 2, (rng) => {
       const k = int(rng, 2, 5);
       return numericQuestion(rng, {
@@ -465,7 +484,8 @@ const pitagoras: SprawdzianTopic = {
       const { a, b, c } = triple(rng);
       const fmt = (x: number, y: number, z: number) => `${x}, ${y}, ${z}`;
       return textQuestion(rng, {
-        prompt: "Który z trójkątów o podanych długościach boków jest prostokątny?",
+        prompt:
+          "Który z trójkątów o podanych długościach boków jest prostokątny?",
         correct: fmt(a, b, c),
         wrongs: [fmt(a, b, c + 1), fmt(a, b + 1, c), fmt(a + 1, b, c)],
         explanation: `Sprawdzamy, czy ${a}² + ${b}² = ${c}²: ${a * a} + ${b * b} = ${c * c}. Dla pozostałych zestawów równość nie zachodzi.`,
@@ -478,7 +498,8 @@ const bryly: SprawdzianTopic = {
   id: "bryly",
   label: "Bryły",
   emoji: "🧊",
-  description: "Objętość i pole powierzchni sześcianu, prostopadłościanu, ostrosłupa.",
+  description:
+    "Objętość i pole powierzchni sześcianu, prostopadłościanu, ostrosłupa.",
   classes: [7, 8],
   templates: [
     tpl("bryly-szescian-v", 1, (rng) => {
@@ -526,18 +547,23 @@ const bryly: SprawdzianTopic = {
         explanation: `P = 2(ab + bc + ac) = 2(${a * b} + ${b * c} + ${a * c}) = ${pc} cm².`,
       });
     }),
-    tpl("bryly-ostroslup", 2, (rng) => {
-      const a = int(rng, 2, 9);
-      const k = int(rng, 1, 5);
-      const h = 3 * k;
-      return numericQuestion(rng, {
-        prompt: `Podstawą ostrosłupa jest kwadrat o boku ${a} cm, a wysokość ostrosłupa wynosi ${h} cm. Oblicz objętość.`,
-        correct: a * a * k,
-        wrongs: [a * a * h, (a * a * h) / 2, a * h],
-        format: unit("cm³"),
-        explanation: `V = ⅓ · Pp · H = ⅓ · ${a * a} · ${h} = ${a * a * k} cm³.`,
-      });
-    }, [8]),
+    tpl(
+      "bryly-ostroslup",
+      2,
+      (rng) => {
+        const a = int(rng, 2, 9);
+        const k = int(rng, 1, 5);
+        const h = 3 * k;
+        return numericQuestion(rng, {
+          prompt: `Podstawą ostrosłupa jest kwadrat o boku ${a} cm, a wysokość ostrosłupa wynosi ${h} cm. Oblicz objętość.`,
+          correct: a * a * k,
+          wrongs: [a * a * h, (a * a * h) / 2, a * h],
+          format: unit("cm³"),
+          explanation: `V = ⅓ · Pp · H = ⅓ · ${a * a} · ${h} = ${a * a * k} cm³.`,
+        });
+      },
+      [8],
+    ),
     tpl("bryly-litry", 3, (rng) => {
       const dims = [20, 30, 40, 50, 60];
       const a = pick(rng, dims);
@@ -564,9 +590,17 @@ const statystyka: SprawdzianTopic = {
   templates: [
     tpl("stat-srednia", 1, (rng) => {
       const avg = int(rng, 5, 20);
-      const devs = [int(rng, -4, 4), int(rng, -4, 4), int(rng, -4, 4), int(rng, -4, 4)];
+      const devs = [
+        int(rng, -4, 4),
+        int(rng, -4, 4),
+        int(rng, -4, 4),
+        int(rng, -4, 4),
+      ];
       devs.push(-devs.reduce((s, d) => s + d, 0));
-      const nums = shuffle(rng, devs.map((d) => avg + d));
+      const nums = shuffle(
+        rng,
+        devs.map((d) => avg + d),
+      );
       return numericQuestion(rng, {
         prompt: `Oblicz średnią arytmetyczną liczb: ${nums.join(", ")}.`,
         correct: avg,
@@ -593,12 +627,18 @@ const statystyka: SprawdzianTopic = {
       const data = shuffle(rng, [...set]);
       const sorted = [...data].sort((x, y) => x - y);
       const median =
-        count % 2 ? sorted[(count - 1) / 2] : (sorted[count / 2 - 1] + sorted[count / 2]) / 2;
+        count % 2
+          ? sorted[(count - 1) / 2]
+          : (sorted[count / 2 - 1] + sorted[count / 2]) / 2;
       const mean = data.reduce((s, n) => s + n, 0) / count;
       return numericQuestion(rng, {
         prompt: `Wyznacz medianę liczb: ${data.join(", ")}.`,
         correct: median,
-        wrongs: [data[Math.floor(count / 2)], Number(mean.toFixed(2)), sorted[count - 1]],
+        wrongs: [
+          data[Math.floor(count / 2)],
+          Number(mean.toFixed(2)),
+          sorted[count - 1],
+        ],
         deltas: [1, -1, 2, -2],
         explanation: `Po uporządkowaniu: ${sorted.join(", ")}. ${count % 2 ? "Mediana to środkowa liczba" : "Mediana to średnia dwóch środkowych liczb"}: ${num(median)}.`,
       });
@@ -791,7 +831,8 @@ const liczbyWymierne: SprawdzianTopic = {
   id: "liczby-wymierne",
   label: "Liczby ujemne i działania",
   emoji: "➖",
-  description: "Liczby ujemne, wartość bezwzględna, ułamki dziesiętne, kolejność działań.",
+  description:
+    "Liczby ujemne, wartość bezwzględna, ułamki dziesiętne, kolejność działań.",
   classes: [7],
   templates: [
     tpl("wymierne-kolejnosc", 1, (rng) => {
@@ -857,7 +898,8 @@ const katy: SprawdzianTopic = {
   id: "katy-trojkaty",
   label: "Kąty i trójkąty",
   emoji: "📐",
-  description: "Suma kątów w trójkącie i wielokącie, kąty przyległe, kąt zewnętrzny.",
+  description:
+    "Suma kątów w trójkącie i wielokącie, kąty przyległe, kąt zewnętrzny.",
   classes: [7],
   templates: [
     tpl("katy-trzeci", 1, (rng) => {
@@ -925,13 +967,19 @@ const wspolrzedne: SprawdzianTopic = {
   id: "uklad-wspolrzednych",
   label: "Układ współrzędnych",
   emoji: "🧭",
-  description: "Ćwiartki, symetria względem osi, odległości i pola figur w układzie.",
+  description:
+    "Ćwiartki, symetria względem osi, odległości i pola figur w układzie.",
   classes: [7],
   templates: [
     tpl("wspolrzedne-cwiartka", 1, (rng) => {
       const x = int(rng, 1, 8) * (rng() < 0.5 ? -1 : 1);
       const y = int(rng, 1, 8) * (rng() < 0.5 ? -1 : 1);
-      const names = ["I ćwiartka", "II ćwiartka", "III ćwiartka", "IV ćwiartka"];
+      const names = [
+        "I ćwiartka",
+        "II ćwiartka",
+        "III ćwiartka",
+        "IV ćwiartka",
+      ];
       const idx = x > 0 ? (y > 0 ? 0 : 3) : y > 0 ? 1 : 2;
       return textQuestion(rng, {
         prompt: `Punkt A = (${x}, ${y}) leży w:`,
@@ -979,7 +1027,286 @@ const wspolrzedne: SprawdzianTopic = {
   ],
 };
 
+const dzialaniaPodstawowe: SprawdzianTopic = {
+  id: "dzialania-podstawowe",
+  label: "Działania na liczbach",
+  emoji: "🔢",
+  description: "Kolejność działań, mnożenie, dzielenie z resztą, zaokrąglanie.",
+  classes: [4, 5, 6],
+  templates: [
+    tpl("dzialania-kolejnosc", 1, (rng) => {
+      const a = int(rng, 10, 60);
+      const b = int(rng, 2, 9);
+      const c = int(rng, 2, 9);
+      return numericQuestion(rng, {
+        prompt: `Oblicz: ${a} + ${b} · ${c}`,
+        correct: a + b * c,
+        wrongs: [(a + b) * c, a * b + c, a + b + c],
+        explanation: `Mnożenie wykonujemy przed dodawaniem: ${b} · ${c} = ${b * c}, potem ${a} + ${b * c} = ${a + b * c}.`,
+      });
+    }),
+    tpl("dzialania-nawiasy", 1, (rng) => {
+      const a = int(rng, 10, 40);
+      const b = int(rng, 2, 9);
+      const c = int(rng, 2, 9);
+      return numericQuestion(rng, {
+        prompt: `Oblicz: (${a} - ${b}) · ${c}`,
+        correct: (a - b) * c,
+        wrongs: [a - b * c, a * c - b, (a + b) * c],
+        explanation: `Najpierw nawias: ${a} - ${b} = ${a - b}, potem ${a - b} · ${c} = ${(a - b) * c}.`,
+      });
+    }),
+    tpl("dzialania-reszta", 2, (rng) => {
+      const d = int(rng, 3, 9);
+      const q = int(rng, 4, 15);
+      const r = int(rng, 1, d - 1);
+      const n = d * q + r;
+      return numericQuestion(rng, {
+        prompt: `Jaka jest reszta z dzielenia ${n} przez ${d}?`,
+        correct: r,
+        wrongs: [q, d - r, r + d],
+        deltas: [1, -1, 2, -2, 3],
+        explanation: `${n} = ${d} · ${q} + ${r}, więc reszta wynosi ${r}.`,
+      });
+    }),
+    tpl("dzialania-zaokraglanie", 2, (rng) => {
+      const n = int(rng, 1200, 9800) + int(rng, 1, 9);
+      const rounded = Math.round(n / 100) * 100;
+      return numericQuestion(rng, {
+        prompt: `Zaokrąglij liczbę ${spaced(n)} do setek.`,
+        correct: rounded,
+        wrongs: [
+          Math.floor(n / 100) * 100,
+          Math.round(n / 10) * 10,
+          Math.ceil(n / 1000) * 1000,
+        ],
+        format: spaced,
+        deltas: [100, -100, 200, -200, 1000],
+        explanation: `Patrzymy na cyfrę dziesiątek: ${n} zaokrąglone do setek to ${spaced(rounded)}.`,
+      });
+    }),
+    tpl("dzialania-pisemne", 3, (rng) => {
+      const a = int(rng, 120, 480);
+      const b = int(rng, 12, 48);
+      return numericQuestion(rng, {
+        prompt: `Oblicz: ${a} · ${b}`,
+        correct: a * b,
+        wrongs: [a * b + 100, a * b - 100, a * (b - 10)],
+        format: spaced,
+        deltas: [10, -10, 20, -20, 1000],
+        explanation: `${a} · ${b} = ${a} · ${b - (b % 10)} + ${a} · ${b % 10} = ${a * (b - (b % 10))} + ${a * (b % 10)} = ${a * b}.`,
+      });
+    }),
+  ],
+};
+
+const ulamkiProste: SprawdzianTopic = {
+  id: "ulamki-proste",
+  label: "Ułamki zwykłe i dziesiętne",
+  emoji: "🍕",
+  description: "Skracanie, dodawanie, ułamek z liczby, ułamki dziesiętne.",
+  classes: [5, 6],
+  templates: [
+    tpl("ulamki-proste-dodawanie", 1, (rng) => {
+      const d = int(rng, 5, 12);
+      const a = int(rng, 1, d - 2);
+      const b = int(rng, 1, d - 1 - a);
+      return textQuestion(rng, {
+        prompt: `Oblicz: ${a}/${d} + ${b}/${d}`,
+        correct: frac(a + b, d),
+        wrongs: [`${a + b}/${2 * d}`, frac(a * b, d), frac(a + b, d + d - 1)],
+        fillers: [frac(a + b + 1, d), frac(a + b + 2, d)],
+        explanation: `Mianowniki są takie same, więc dodajemy liczniki: (${a} + ${b})/${d} = ${a + b}/${d}${frac(a + b, d) !== `${a + b}/${d}` ? ` = ${frac(a + b, d)}` : ""}.`,
+      });
+    }),
+    tpl("ulamki-proste-z-liczby", 2, (rng) => {
+      const d = pick(rng, [3, 4, 5, 6, 8]);
+      const n = int(rng, 1, d - 1);
+      const k = int(rng, 2, 9);
+      const total = d * k;
+      return numericQuestion(rng, {
+        prompt: `Oblicz ${n}/${d} liczby ${total}.`,
+        correct: n * k,
+        wrongs: [k, total - n * k, n * total],
+        explanation: `Dzielimy ${total} przez ${d}: ${k}, a potem mnożymy przez ${n}: ${n * k}.`,
+      });
+    }),
+    tpl("ulamki-proste-mieszana", 2, (rng) => {
+      const d = int(rng, 3, 9);
+      const w = int(rng, 1, 5);
+      const n = int(rng, 1, d - 1);
+      const top = w * d + n;
+      return textQuestion(rng, {
+        prompt: `Zamień ułamek niewłaściwy ${top}/${d} na liczbę mieszaną.`,
+        correct: `${w} ${n}/${d}`,
+        wrongs: [`${w + 1} ${n}/${d}`, `${w} ${d}/${n}`, `${n} ${w}/${d}`],
+        fillers: [`${w - 1 || w + 2} ${n}/${d}`],
+        explanation: `${top} : ${d} = ${w} reszty ${n}, więc ${top}/${d} = ${w} ${n}/${d}.`,
+      });
+    }),
+    tpl("ulamki-proste-dziesietne", 2, (rng) => {
+      const a = int(rng, 11, 99) / 10;
+      const b = int(rng, 11, 99) / 10;
+      return numericQuestion(rng, {
+        prompt: `Oblicz: ${num(a)} + ${num(b)}`,
+        correct: Math.round((a + b) * 10) / 10,
+        wrongs: [
+          Math.round((a + b) * 10) / 100,
+          Math.round((a - b) * 10) / 10,
+          Math.round((a + b) * 100) / 10,
+        ],
+        deltas: [0.1, -0.1, 1, -1],
+        explanation: `Przecinek pod przecinkiem: ${num(a)} + ${num(b)} = ${num(Math.round((a + b) * 10) / 10)}.`,
+      });
+    }),
+    tpl("ulamki-proste-mnozenie10", 1, (rng) => {
+      const a = int(rng, 12, 99) / 10;
+      const p = pick(rng, [10, 100]);
+      return numericQuestion(rng, {
+        prompt: `Oblicz: ${num(a)} · ${p}`,
+        correct: a * p,
+        wrongs: [a / p, a * p * 10, a + p],
+        explanation: `Mnożenie przez ${p} przesuwa przecinek o ${p === 10 ? "jedno" : "dwa"} miejsce w prawo: ${num(a * p)}.`,
+      });
+    }),
+  ],
+};
+
+const geometriaPodstawy: SprawdzianTopic = {
+  id: "geometria-podstawy",
+  label: "Obwody i pola",
+  emoji: "📏",
+  description: "Obwód i pole prostokąta, kwadratu i trójkąta.",
+  classes: [4, 5, 6],
+  templates: [
+    tpl("geo-obwod-prostokata", 1, (rng) => {
+      const a = int(rng, 3, 15);
+      const b = a + int(rng, 1, 9);
+      return numericQuestion(rng, {
+        prompt: `Prostokąt ma boki ${a} cm i ${b} cm. Oblicz jego obwód.`,
+        correct: 2 * (a + b),
+        wrongs: [a * b, a + b, 2 * a * b],
+        format: unit("cm"),
+        explanation: `Obwód: 2 · (${a} + ${b}) = ${2 * (a + b)} cm.`,
+      });
+    }),
+    tpl("geo-pole-prostokata", 1, (rng) => {
+      const a = int(rng, 3, 15);
+      const b = a + int(rng, 1, 9);
+      return numericQuestion(rng, {
+        prompt: `Prostokąt ma boki ${a} cm i ${b} cm. Oblicz jego pole.`,
+        correct: a * b,
+        wrongs: [2 * (a + b), a + b, 2 * a * b],
+        format: unit("cm²"),
+        explanation: `Pole: ${a} · ${b} = ${a * b} cm².`,
+      });
+    }),
+    tpl("geo-kwadrat-z-obwodu", 2, (rng) => {
+      const a = int(rng, 3, 14);
+      return numericQuestion(rng, {
+        prompt: `Obwód kwadratu wynosi ${4 * a} cm. Oblicz jego pole.`,
+        correct: a * a,
+        wrongs: [4 * a, 2 * a, 4 * a * a],
+        format: unit("cm²"),
+        explanation: `Bok: ${4 * a} : 4 = ${a} cm. Pole: ${a} · ${a} = ${a * a} cm².`,
+      });
+    }),
+    tpl(
+      "geo-pole-trojkata",
+      2,
+      (rng) => {
+        const a = 2 * int(rng, 2, 10);
+        const h = int(rng, 3, 12);
+        return numericQuestion(rng, {
+          prompt: `Trójkąt ma podstawę ${a} cm i wysokość ${h} cm. Oblicz jego pole.`,
+          correct: (a * h) / 2,
+          wrongs: [a * h, a + h, (a + h) / 2],
+          format: unit("cm²"),
+          explanation: `Pole trójkąta: (${a} · ${h}) : 2 = ${(a * h) / 2} cm².`,
+        });
+      },
+      [5, 6],
+    ),
+    tpl("geo-brakujacy-bok", 3, (rng) => {
+      const a = int(rng, 3, 12);
+      const b = int(rng, 4, 15);
+      return numericQuestion(rng, {
+        prompt: `Pole prostokąta wynosi ${a * b} cm², a jeden bok ma ${a} cm. Ile wynosi obwód tego prostokąta?`,
+        correct: 2 * (a + b),
+        wrongs: [a * b, a + b, 2 * b],
+        format: unit("cm"),
+        explanation: `Drugi bok: ${a * b} : ${a} = ${b} cm. Obwód: 2 · (${a} + ${b}) = ${2 * (a + b)} cm.`,
+      });
+    }),
+  ],
+};
+
+const miaryICzas: SprawdzianTopic = {
+  id: "miary-i-czas",
+  label: "Jednostki, czas i pieniądze",
+  emoji: "⏱️",
+  description: "Zamiana jednostek, obliczenia na czasie i zadania z cenami.",
+  classes: [4, 5, 6],
+  templates: [
+    tpl("miary-km-m", 1, (rng) => {
+      const km = int(rng, 2, 9);
+      const m = int(rng, 1, 9) * 100;
+      return numericQuestion(rng, {
+        prompt: `Zamień ${km} km ${m} m na metry.`,
+        correct: km * 1000 + m,
+        wrongs: [km * 100 + m, km * 10000 + m, km + m],
+        format: unit("m"),
+        deltas: [100, -100, 1000, -1000],
+        explanation: `${km} km = ${km * 1000} m, więc razem ${km * 1000 + m} m.`,
+      });
+    }),
+    tpl("miary-czas", 2, (rng) => {
+      const h = int(rng, 1, 5);
+      const m = int(rng, 5, 55);
+      const add = int(rng, 20, 110);
+      const total = h * 60 + m + add;
+      const fmt = (t: number) =>
+        `${Math.floor(t / 60) % 24}:${String(t % 60).padStart(2, "0")}`;
+      return textQuestion(rng, {
+        prompt: `Film zaczął się o ${h}:${String(m).padStart(2, "0")} i trwał ${add} minut. O której się skończył?`,
+        correct: fmt(total),
+        wrongs: [fmt(total + 10), fmt(total - 10), fmt(h * 60 + m + add + 60)],
+        fillers: [fmt(total + 20), fmt(total - 20)],
+        explanation: `${h}:${String(m).padStart(2, "0")} + ${add} min = ${fmt(total)}.`,
+      });
+    }),
+    tpl("miary-kg-g", 2, (rng) => {
+      const kg = int(rng, 1, 9);
+      const g = int(rng, 1, 9) * 50;
+      return numericQuestion(rng, {
+        prompt: `Ile gramów to ${kg} kg ${g} g?`,
+        correct: kg * 1000 + g,
+        wrongs: [kg * 100 + g, kg * 10000 + g, kg + g],
+        format: unit("g"),
+        deltas: [50, -50, 1000, -1000],
+        explanation: `${kg} kg = ${kg * 1000} g, więc razem ${kg * 1000 + g} g.`,
+      });
+    }),
+    tpl("miary-zakupy", 3, (rng) => {
+      const price = int(rng, 3, 12);
+      const n = int(rng, 3, 8);
+      const pay = Math.ceil((price * n + 1) / 10) * 10;
+      return numericQuestion(rng, {
+        prompt: `Kupiono ${n} zeszytów po ${price} zł. Ile reszty otrzymasz, płacąc ${pay} zł?`,
+        correct: pay - price * n,
+        wrongs: [price * n, pay - price, pay + price * n],
+        format: unit("zł"),
+        explanation: `Koszt: ${n} · ${price} = ${price * n} zł. Reszta: ${pay} - ${price * n} = ${pay - price * n} zł.`,
+      });
+    }),
+  ],
+};
+
 export const SPRAWDZIAN_TOPICS: readonly SprawdzianTopic[] = [
+  dzialaniaPodstawowe,
+  ulamkiProste,
+  geometriaPodstawy,
+  miaryICzas,
   liczbyWymierne,
   ulamki,
   procenty,

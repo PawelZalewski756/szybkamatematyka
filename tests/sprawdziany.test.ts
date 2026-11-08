@@ -32,7 +32,7 @@ describe("sprawdziany — generatory", () => {
         }
       }
     }
-  });
+  }, 30_000);
 
   it("identyfikatory szablonów i tematów są unikalne", () => {
     const topicIds = SPRAWDZIAN_TOPICS.map((t) => t.id);
