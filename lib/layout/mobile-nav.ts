@@ -20,6 +20,7 @@ export const MOBILE_WIECEJ_PREFIXES = [
   "/profil",
   "/login",
   "/powtorki",
+  "/sprawdziany",
   "/rankingi",
   "/osiagniecia",
   "/cennik",
