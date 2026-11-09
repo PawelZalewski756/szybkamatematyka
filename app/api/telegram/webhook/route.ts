@@ -153,19 +153,23 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   }
 
   if (command === "new") {
-    const { data: users, error } = await supabase
-      .from("profiles")
-      .select("nick, nickname, created_at")
-      .order("created_at", { ascending: false })
-      .limit(10);
+    const { data, error } = await supabase.auth.admin.listUsers({
+      page: 1,
+      perPage: 1000,
+    });
     if (error) throw new Error(`Could not load recent users: ${error.message}`);
-    if (!users?.length) return "Brak zarejestrowanych użytkowników.";
+    const recent = [...data.users]
+      .sort((a, b) => b.created_at.localeCompare(a.created_at))
+      .slice(0, 10);
+    if (!recent.length) return "Brak zarejestrowanych użytkowników.";
+    const profileNames = await getProfileNames(
+      supabase,
+      recent.map((user) => user.id),
+    );
     return [
       "Ostatnie rejestracje:",
-      ...users.map((user) => {
-        const name = (user.nick || user.nickname || "bez nicku")
-          .replace(/[\r\n]/g, " ")
-          .slice(0, 80);
+      ...recent.map((user) => {
+        const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `• ${name} - ${date}`;
       }),
