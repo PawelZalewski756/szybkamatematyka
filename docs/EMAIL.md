@@ -40,3 +40,14 @@ mailera Supabase nie obowiązuje.
 `POST /api/signup` wywołuje `auth.signUp`, Supabase wysyła link, a logowanie
 przed kliknięciem zwraca "Email not confirmed" (strona logowania oferuje
 ponowne wysłanie linku).
+
+## Polskie szablony maili
+
+Supabase Dashboard > Authentication > Email Templates. Wklej zawartosc plikow z docs/email-templates/:
+
+- Confirm signup: confirmation.html, temat: Potwierdz swoj adres e-mail - Szybka Matematyka
+- Reset Password: recovery.html, temat: Reset hasla - Szybka Matematyka
+
+## Powiadomienia Telegram
+
+Nowe konto i nowy zakup wysylaja wiadomosc na Telegram do adminow. Wymagane zmienne na Vercelu: TELEGRAM_BOT_TOKEN i TELEGRAM_ADMIN_IDS (lub ADMIN_TELEGRAM_ID). Zakup: webhook Stripe musi dzialac.
