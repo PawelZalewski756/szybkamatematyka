@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { MobileTabBar } from "@/components/mobile/MobileTabBar";
 import { THEME_INIT_SCRIPT } from "@/components/ThemeToggle";
 import { Providers } from "@/components/Providers";
+import { RecoveryRedirect } from "@/components/RecoveryRedirect";
 import { Navbar } from "@/components/Navbar";
 import { BRAND_NAME } from "@/lib/brand/constants";
 import { SITE_NAME, SITE_URL } from "@/lib/seo/site";
@@ -116,6 +117,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
         <GoogleAdsTag />
+        <RecoveryRedirect />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
