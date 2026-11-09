@@ -48,6 +48,7 @@
     "seed:tasks-sql": "tsx scripts/exportTasksSql.ts",
     "seed:tasks-sql-split": "tsx scripts/splitTasksSql.ts",
     "seed:tasks-cache": "tsx scripts/pushTasksCache.ts",
+    "seed:cke-e8": "tsx scripts/importCkeE8.ts",
     "seed:exam-archive": "tsx scripts/exportExamArchive.ts",
     "seed:all": "tsx scripts/seedAll.ts",
     "seed:delete-figure-session": "tsx scripts/deleteFigureSessionTasks.ts"
@@ -70,6 +71,7 @@
     "stripe": "^22.2.0"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "^1.1.0",
     "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
@@ -78,6 +80,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
+    "pdfjs-dist": "^6.5.438",
     "tailwindcss": "^4",
     "tsx": "^4.22.3",
     "typescript": "^5",
