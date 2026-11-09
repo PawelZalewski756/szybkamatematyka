@@ -212,30 +212,36 @@ export default function LoginPage() {
         );
       }
 
-      const { data, error } = await supabase.auth.signUp({
-        email: trimmedEmail,
-        password,
-        options: {
-          emailRedirectTo: authRedirectUrl("/login"),
-          data: {
-            nick: normalizedNick,
-            nickname: normalizedNick,
-            school_level: schoolLevel || null,
-          },
-        },
+      const signupResponse = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          email: trimmedEmail,
+          password,
+          nick: normalizedNick,
+          schoolLevel: schoolLevel || null,
+        }),
       });
+      const signupResult = (await signupResponse.json().catch(() => ({}))) as {
+        ok?: boolean;
+        userId?: string;
+        error?: string;
+        code?: string;
+      };
 
-      if (error) throw error;
-
-      // Supabase często zwraca user: null bez błędu, gdy e-mail jest już w bazie
-      if (!data.user || data.user.identities?.length === 0) {
+      if (!signupResponse.ok || !signupResult.userId) {
         setIsError(true);
-        setNeedsConfirm(true);
         setMessage(
-          "Ten e-mail jest już zarejestrowany. Jeśli nie potwierdzono go linkiem z wiadomości, wyślij link ponownie - albo zaloguj się lub zresetuj hasło.",
+          signupResult.error ?? "Nie udało się utworzyć konta. Spróbuj ponownie.",
         );
         return;
       }
+
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: trimmedEmail,
+        password,
+      });
+      if (error) throw error;
 
       void fetch("/api/telegram/signup-notification", {
         method: "POST",
