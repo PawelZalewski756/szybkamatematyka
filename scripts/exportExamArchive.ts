@@ -15,7 +15,10 @@ import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 import { bazaCategoryForCmsDzial } from "../lib/trening/taxonomy-bridge";
 import type { Task, TaskDifficulty } from "../lib/baza-zadan/types";
 
-const CACHE_DIR = path.resolve(process.cwd(), "data/cke-matura-cache");
+const CACHE_DIRS = [
+  path.resolve(process.cwd(), "data/cke-matura-cache"),
+  path.resolve(process.cwd(), "data/cke-e8-cache"),
+];
 const OUT_FILE = path.resolve(
   process.cwd(),
   "lib/baza-zadan/exams/cke-archive.generated.ts",
@@ -33,6 +36,7 @@ type CachedSheet = {
   nazwa: string;
   rok: number;
   miesiac: number;
+  typ?: "matura" | "egzamin-8";
   tasks: CachedTask[];
 };
 
@@ -100,34 +104,30 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     explanation,
     solutionSteps,
     examSource: {
-      kind: "matura",
+      kind: sheet.typ ?? "matura",
       year: sheet.rok,
       taskNumber: String(task.numer),
-      sessionLabel: `matura ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
+      sessionLabel: `${sheet.typ === "egzamin-8" ? "egzamin ósmoklasisty" : "matura"} ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
     },
   };
 }
 
 function loadSheets(): CachedSheet[] {
-  if (!fs.existsSync(CACHE_DIR)) {
-    console.warn(`Brak katalogu ${CACHE_DIR}`);
-    return [];
-  }
-
-  const files = fs
-    .readdirSync(CACHE_DIR)
-    .filter((f) => f.endsWith(".json"))
-    .sort();
-
   const sheets: CachedSheet[] = [];
-  for (const file of files) {
-    const raw = fs.readFileSync(path.join(CACHE_DIR, file), "utf8");
-    const data = JSON.parse(raw) as CachedSheet;
-    if (data.tasks?.length > 0) sheets.push(data);
+  for (const dir of CACHE_DIRS) {
+    if (!fs.existsSync(dir)) continue;
+    const files = fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith(".json"))
+      .sort();
+    for (const file of files) {
+      const raw = fs.readFileSync(path.join(dir, file), "utf8");
+      const data = JSON.parse(raw) as CachedSheet;
+      if (data.tasks?.length > 0) sheets.push(data);
+    }
   }
   return sheets;
 }
-
 function serializeTasks(tasks: Task[]): string {
   return JSON.stringify(tasks, null, 2);
 }
