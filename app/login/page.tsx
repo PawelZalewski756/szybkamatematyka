@@ -266,20 +266,21 @@ export default function LoginPage() {
         });
 
       if (data.session) {
-        const existing = await fetchProfile(data.user.id);
-        if (!existing) {
-          try {
+        try {
+          const existing = await fetchProfile(data.user.id);
+          if (!existing) {
             await createProfile(data.user.id, normalizedNick);
-          } catch (profileError) {
-            const msg =
-              profileError instanceof Error ? profileError.message : "";
-            if (msg.includes("unique") || msg.includes("duplicate")) {
-              setIsError(true);
-              setMessage("Ten nick jest już zajęty!");
-              return;
-            }
-            throw profileError;
           }
+        } catch (profileError) {
+          const msg =
+            profileError instanceof Error ? profileError.message : "";
+          if (msg.includes("unique") || msg.includes("duplicate")) {
+            setIsError(true);
+            setMessage("Ten nick jest już zajęty!");
+            return;
+          }
+          // Konto istnieje, a profil utworzy trigger w bazie lub navbar.
+          console.warn("[szybka-matma] profil po rejestracji:", profileError);
         }
 
         // Stały URL sukcesu - do pomiaru konwersji (Google Ads).
