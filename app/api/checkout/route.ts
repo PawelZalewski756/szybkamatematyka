@@ -80,6 +80,19 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!priceId.startsWith("price_")) {
+      console.error(
+        `[checkout] ${plan.priceEnvVar} ma nieprawidłową wartość - oczekiwano Price ID w formacie price_...`,
+      );
+      return Response.json(
+        {
+          error: `Zmienna ${plan.priceEnvVar} musi zawierać Price ID ze Stripe (price_...).`,
+          code: "price_not_configured",
+        },
+        { status: 503 },
+      );
+    }
+
     const stripe = getStripeOrNull();
     if (!stripe) {
       return Response.json(
@@ -110,7 +123,7 @@ export async function POST(request: Request) {
           plan_id: plan.id,
         },
       },
-      success_url: `${siteUrl}/profil?checkout=success`,
+      success_url: `${siteUrl}/profil?checkout=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/cennik?checkout=cancelled`,
     });
 

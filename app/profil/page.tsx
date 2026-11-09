@@ -30,6 +30,7 @@ import {
   type Profile,
 } from "@/lib/supabase/profiles";
 import { useSubscription } from "@/lib/subscription/use-subscription";
+import { confirmCheckout } from "@/lib/subscription/checkout-client";
 import {
   isPro as snapshotIsPro,
   subscriptionStatusLabel,
@@ -181,7 +182,8 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
 export default function ProfilPage() {
   const router = useRouter();
   const { setPath: setLocalPath } = useLearningPath();
-  const { snapshot: subscriptionSnapshot } = useSubscription();
+  const { snapshot: subscriptionSnapshot, refresh: refreshSubscription } =
+    useSubscription();
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -304,6 +306,15 @@ export default function ProfilPage() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadPlayerData();
   }, [loadPlayerData]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get("session_id");
+    if (params.get("checkout") !== "success" || !sessionId) return;
+    void confirmCheckout(sessionId).then((confirmed) => {
+      if (confirmed) void refreshSubscription();
+    });
+  }, [refreshSubscription]);
 
   useEffect(() => {
     const onProfileUpdated = (event: Event) => {
