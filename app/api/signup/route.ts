@@ -6,22 +6,29 @@ export const dynamic = "force-dynamic";
 
 const HEADERS = { "Cache-Control": "no-store" };
 
-function getAdminSupabase() {
+function getAnonSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
-  if (!url || !serviceKey) return null;
-  return createClient(url, serviceKey, {
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
+  if (!url || !anonKey) return null;
+  return createClient(url, anonKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }
 
+function siteUrl(request: Request): string {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return explicit.replace(/\/$/, "");
+  return new URL(request.url).origin;
+}
+
 /**
- * Rejestracja bez wysyłki maila potwierdzającego.
- * Wbudowany mailer Supabase ma bardzo niski limit wiadomości na godzinę,
- * przez co użytkownicy nie dostawali linków i zakładali kolejne konta.
+ * Rejestracja z potwierdzeniem e-mail. Supabase wysyła link przez własny SMTP
+ * (kontakt@szybkamatematyka.pl, patrz docs/EMAIL.md). Konto bez potwierdzenia
+ * nie może się zalogować. Gdy potwierdzanie jest wyłączone w Supabase,
+ * zwracamy `needsConfirmation: false` i klient loguje od razu.
  */
 export async function POST(request: Request): Promise<Response> {
-  const supabase = getAdminSupabase();
+  const supabase = getAnonSupabase();
   if (!supabase) {
     return Response.json(
       { error: "Rejestracja jest obecnie niedostępna." },
@@ -47,50 +54,46 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: validationError }, { status: 400, headers: HEADERS });
   }
 
-  const metadata = { nick, nickname: nick, school_level: schoolLevel || null };
-
-  const { data, error } = await supabase.auth.admin.createUser({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    email_confirm: true,
-    user_metadata: metadata,
+    options: {
+      emailRedirectTo: `${siteUrl(request)}/login`,
+      data: { nick, nickname: nick, school_level: schoolLevel || null },
+    },
   });
-  if (!error && data.user) {
-    return Response.json({ ok: true, userId: data.user.id }, { headers: HEADERS });
-  }
 
-  const message = error?.message ?? "";
-  if (!/already|registered|exists/i.test(message)) {
-    console.error("[szybka-matma] signup createUser failed:", message);
+  if (error) {
+    if (error.status === 429 || /rate limit/i.test(error.message)) {
+      return Response.json(
+        { error: "Zbyt wiele prób. Spróbuj ponownie za kilka minut.", code: "rate_limited" },
+        { status: 429, headers: HEADERS },
+      );
+    }
+    if (/already|registered|exists/i.test(error.message)) {
+      return Response.json(
+        { error: "Ten e-mail jest już zarejestrowany. Zaloguj się lub zresetuj hasło.", code: "exists" },
+        { status: 409, headers: HEADERS },
+      );
+    }
+    console.error("[szybka-matma] signup failed:", error.message);
     return Response.json(
       { error: "Nie udało się utworzyć konta. Spróbuj ponownie." },
       { status: 500, headers: HEADERS },
     );
   }
 
-  // Konto z wcześniejszej próby, którego nikt nie potwierdził - odblokowujemy je.
-  const target = email.toLowerCase();
-  for (let page = 1; page <= 20; page += 1) {
-    const { data: list, error: listError } = await supabase.auth.admin.listUsers({
-      page,
-      perPage: 1000,
-    });
-    if (listError || !list) break;
-    const existing = list.users.find((u) => u.email?.toLowerCase() === target);
-    if (existing) {
-      if (existing.email_confirmed_at) break;
-      const { error: updateError } = await supabase.auth.admin.updateUserById(
-        existing.id,
-        { password, email_confirm: true, user_metadata: metadata },
-      );
-      if (updateError) break;
-      return Response.json({ ok: true, userId: existing.id }, { headers: HEADERS });
-    }
-    if (list.users.length < 1000) break;
+  // Przy włączonym potwierdzaniu Supabase dla istniejącego, potwierdzonego
+  // adresu zwraca użytkownika bez tożsamości (ochrona przed enumeracją).
+  if (!data.user || data.user.identities?.length === 0) {
+    return Response.json(
+      { error: "Ten e-mail jest już zarejestrowany. Zaloguj się lub zresetuj hasło.", code: "exists" },
+      { status: 409, headers: HEADERS },
+    );
   }
 
   return Response.json(
-    { error: "Ten e-mail jest już zarejestrowany. Zaloguj się lub zresetuj hasło.", code: "exists" },
-    { status: 409, headers: HEADERS },
+    { ok: true, userId: data.user.id, needsConfirmation: !data.session },
+    { headers: HEADERS },
   );
 }

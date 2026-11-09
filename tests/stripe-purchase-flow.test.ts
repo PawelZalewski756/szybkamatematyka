@@ -71,7 +71,7 @@ describe("symulacja zakupu Pro", () => {
     const { POST } = await import("@/app/api/checkout/route");
     const res = await POST(req("http://x/api/checkout", { planId: "pro" }, { authorization: "Bearer ok" }));
     expect(res.status).toBe(200);
-    const args = stripeMock.checkout.sessions.create.mock.calls[0][0] as { success_url: string };
+    const args = (stripeMock.checkout.sessions.create.mock.calls as unknown as [{ success_url: string }][])[0][0];
     expect(args.success_url).toContain("session_id={CHECKOUT_SESSION_ID}");
   });
 
