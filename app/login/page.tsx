@@ -230,8 +230,9 @@ export default function LoginPage() {
       // Supabase często zwraca user: null bez błędu, gdy e-mail jest już w bazie
       if (!data.user || data.user.identities?.length === 0) {
         setIsError(true);
+        setNeedsConfirm(true);
         setMessage(
-          "Ten e-mail jest już zarejestrowany - użyj „Zaloguj się” albo innego adresu.",
+          "Ten e-mail jest już zarejestrowany. Jeśli nie potwierdzono go linkiem z wiadomości, wyślij link ponownie - albo zaloguj się lub zresetuj hasło.",
         );
         return;
       }
@@ -518,6 +519,24 @@ export default function LoginPage() {
 
               {message && (
                 <Alert message={message} isError={isError} />
+              )}
+              {needsConfirm && (
+                <div className="flex flex-col gap-2">
+                  <button
+                    type="button"
+                    disabled={loading}
+                    onClick={() => void handleResendConfirmation()}
+                    className="rounded-2xl border border-accent/40 px-4 py-3 text-sm font-bold text-accent transition hover:bg-accent/10 disabled:opacity-50"
+                  >
+                    Wyślij link potwierdzający ponownie
+                  </button>
+                  <Link
+                    href="/login/zapomniane-haslo"
+                    className="text-center text-sm font-semibold text-accent hover:underline"
+                  >
+                    Zapomniałem hasła
+                  </Link>
+                </div>
               )}
 
               <motion.button
