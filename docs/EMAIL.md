@@ -1,15 +1,18 @@
-# Potwierdzanie e-mail i wysyłka z kontakt@szybkamatematyka.pl
+# Potwierdzanie e-mail i wysyłka z kontakt@szybkamatematyka.pl (Zoho Mail)
 
 Aplikacja wymaga potwierdzenia adresu e-mail. Maile wysyła Supabase Auth przez
-własny SMTP, więc nadawcą jest kontakt@szybkamatematyka.pl, a limit wbudowanego
-mailera (kilka maili na godzinę) nie obowiązuje.
+SMTP Zoho, więc nadawcą jest kontakt@szybkamatematyka.pl, a limit wbudowanego
+mailera Supabase nie obowiązuje.
 
-## 1. Dostawca SMTP (np. Resend)
+## 1. Zoho Mail
 
-1. Załóż konto na resend.com i dodaj domenę `szybkamatematyka.pl`.
-2. W DNS domeny dodaj rekordy SPF, DKIM (i opcjonalnie DMARC) podane przez Resend,
-   poczekaj na status "Verified". Bez tego maile trafią do spamu.
-3. Utwórz klucz API (to hasło SMTP).
+1. Skrzynka `kontakt@szybkamatematyka.pl` musi istnieć w Zoho, a domena mieć
+   zweryfikowane rekordy MX, SPF i DKIM (Zoho Mail Admin Console -> Domains ->
+   Email Configuration). Bez SPF/DKIM maile trafią do spamu.
+2. Włącz dostęp SMTP: Settings -> Mail Accounts -> SMTP (zwykle włączony).
+3. Jeśli konto ma 2FA, utwórz **hasło aplikacji**: accounts.zoho.eu (lub .com)
+   -> Security -> App Passwords. Użyj go jako hasła SMTP.
+4. Host zależy od regionu konta: `smtp.zoho.eu` (Europa) lub `smtp.zoho.com`.
 
 ## 2. Supabase -> Authentication
 
@@ -17,12 +20,15 @@ mailera (kilka maili na godzinę) nie obowiązuje.
 - **Emails -> SMTP Settings -> Enable Custom SMTP:**
   - Sender email: `kontakt@szybkamatematyka.pl`
   - Sender name: `Szybka Matematyka`
-  - Host: `smtp.resend.com`, Port: `465`
-  - Username: `resend`, Password: klucz API
+  - Host: `smtp.zoho.eu`, Port: `465`
+  - Username: `kontakt@szybkamatematyka.pl`
+  - Password: hasło aplikacji (lub hasło skrzynki)
 - **URL Configuration:** Site URL = `https://szybkamatematyka.pl`; w Redirect URLs
   dodaj `https://szybkamatematyka.pl/**`.
 - **Emails -> Templates:** przetłumacz szablony (Confirm signup, Reset password).
-- **Rate Limits:** po włączeniu własnego SMTP podnieś limit maili na godzinę.
+- **Rate Limits:** podnieś limit maili na godzinę. Zoho ma własne limity
+  dzienne (ok. 500 wiadomości), więc przy większym ruchu rozważ dostawcę
+  transakcyjnego (Resend, Brevo).
 
 ## 3. Zmienne środowiskowe (Vercel)
 
