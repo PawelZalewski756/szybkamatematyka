@@ -47,6 +47,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
+  const [needsConfirm, setNeedsConfirm] = useState(false);
   const [supabaseReady, setSupabaseReady] = useState(() =>
     isSupabaseConfigured(),
   );
@@ -77,6 +78,31 @@ export default function LoginPage() {
   const clearMessage = () => {
     setMessage(null);
     setIsError(false);
+    setNeedsConfirm(false);
+  };
+
+  const handleResendConfirmation = async () => {
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail || !supabaseReady) return;
+    setLoading(true);
+    try {
+      const { error } = await getSupabase().auth.resend({
+        type: "signup",
+        email: trimmedEmail,
+        options: { emailRedirectTo: authRedirectUrl("/login") },
+      });
+      if (error) throw error;
+      setIsError(false);
+      setNeedsConfirm(false);
+      setMessage(
+        "Wysłaliśmy link ponownie. Sprawdź skrzynkę, także SPAM i oferty.",
+      );
+    } catch (err) {
+      setIsError(true);
+      setMessage(getAuthErrorMessage(err as Error));
+    } finally {
+      setLoading(false);
+    }
   };
 
   const switchToSignup = () => {
@@ -131,6 +157,9 @@ export default function LoginPage() {
       router.replace("/");
     } catch (err) {
       setIsError(true);
+      setNeedsConfirm(
+        (err as Error)?.message?.includes("Email not confirmed") ?? false,
+      );
       setMessage(getAuthErrorMessage(err as Error));
     } finally {
       setLoading(false);
@@ -336,6 +365,16 @@ export default function LoginPage() {
 
               {message && (
                 <Alert message={message} isError={isError} />
+              )}
+              {needsConfirm && (
+                <button
+                  type="button"
+                  disabled={loading}
+                  onClick={() => void handleResendConfirmation()}
+                  className="rounded-2xl border border-accent/40 px-4 py-3 text-sm font-bold text-accent transition hover:bg-accent/10 disabled:opacity-50"
+                >
+                  Wyślij link potwierdzający ponownie
+                </button>
               )}
 
               <motion.button

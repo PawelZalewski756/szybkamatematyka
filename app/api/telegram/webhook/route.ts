@@ -226,7 +226,9 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
           .sort((a, b) => b.getTime() - a.getTime())[0];
         const lastLogin = lastActive
           ? lastActive.toLocaleDateString("pl-PL")
-          : "nigdy";
+          : user.email_confirmed_at
+            ? "nigdy"
+            : "nigdy (e-mail niepotwierdzony)";
         const xp = profileNames.get(user.id)?.xp ?? 0;
         return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),
