@@ -14,6 +14,34 @@ export type CheckoutResult =
  * sukcesu funkcja przekierowuje przeglądarkę (i nie wraca z `ok: true` przed
  * nawigacją w typowym przypadku).
  */
+/** Potwierdza opłaconą sesję Checkout po powrocie ze Stripe. Zwraca true, gdy Pro zapisano. */
+export async function confirmCheckout(sessionId: string): Promise<boolean> {
+  const supabase = getSupabaseOrNull();
+  if (!supabase) return false;
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  const token = session?.access_token;
+  if (!token) return false;
+
+  try {
+    const res = await fetch("/api/checkout/confirm", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ sessionId }),
+    });
+    const data: { confirmed?: boolean } | null = await res
+      .json()
+      .catch(() => null);
+    return Boolean(res.ok && data?.confirmed);
+  } catch {
+    return false;
+  }
+}
+
 export async function startCheckout(planId: string): Promise<CheckoutResult> {
   const supabase = getSupabaseOrNull();
   if (!supabase) {
