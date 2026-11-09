@@ -225,6 +225,7 @@ export default function LoginPage() {
       const signupResult = (await signupResponse.json().catch(() => ({}))) as {
         ok?: boolean;
         userId?: string;
+        needsConfirmation?: boolean;
         error?: string;
         code?: string;
       };
@@ -237,16 +238,10 @@ export default function LoginPage() {
         return;
       }
 
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: trimmedEmail,
-        password,
-      });
-      if (error) throw error;
-
       void fetch("/api/telegram/signup-notification", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ userId: data.user.id }),
+        body: JSON.stringify({ userId: signupResult.userId }),
         keepalive: true,
         signal: AbortSignal.timeout(8_000),
       })
@@ -265,7 +260,12 @@ export default function LoginPage() {
           );
         });
 
-      if (data.session) {
+      if (!signupResult.needsConfirmation) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: trimmedEmail,
+          password,
+        });
+        if (error) throw error;
         try {
           const existing = await fetchProfile(data.user.id);
           if (!existing) {
