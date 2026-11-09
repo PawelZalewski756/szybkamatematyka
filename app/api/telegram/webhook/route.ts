@@ -64,10 +64,10 @@ async function getProfileNames(
   supabase: ReturnType<typeof getSupabaseAdmin>,
   userIds: string[],
 ) {
-  if (userIds.length === 0) return new Map<string, { name: string; xp: number }>();
+  if (userIds.length === 0) return new Map<string, { name: string; xp: number; lastPlayed: string }>();
   const { data, error } = await supabase
     .from("profiles")
-    .select("id, nick, nickname, xp")
+    .select("id, nick, nickname, xp, last_played_date")
     .in("id", userIds);
   if (error) throw new Error(`Could not load user profiles: ${error.message}`);
   return new Map(
@@ -76,6 +76,7 @@ async function getProfileNames(
       {
         name: profile.nick || profile.nickname || "",
         xp: Number(profile.xp) || 0,
+        lastPlayed: profile.last_played_date ? String(profile.last_played_date) : '',
       },
     ]),
   );
@@ -83,7 +84,7 @@ async function getProfileNames(
 
 function getAuthUserName(
   user: { id: string; user_metadata: Record<string, unknown> },
-  profileNames: Map<string, { name: string; xp: number }>,
+  profileNames: Map<string, { name: string; xp: number; lastPlayed: string }>,
 ): string {
   const metadataName =
     typeof user.user_metadata.nick === "string"
@@ -218,8 +219,13 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
         const email = (user.email || "brak e-maila")
           .replace(/[\r\n]/g, " ")
           .slice(0, 60);
-        const lastLogin = user.last_sign_in_at
-          ? new Date(user.last_sign_in_at).toLocaleDateString("pl-PL")
+        const lastActive = [user.last_sign_in_at, profileNames.get(user.id)?.lastPlayed]
+          .filter((v): v is string => Boolean(v))
+          .map((v) => new Date(v))
+          .filter((d) => !Number.isNaN(d.getTime()))
+          .sort((a, b) => b.getTime() - a.getTime())[0];
+        const lastLogin = lastActive
+          ? lastActive.toLocaleDateString("pl-PL")
           : "nigdy";
         const xp = profileNames.get(user.id)?.xp ?? 0;
         return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
