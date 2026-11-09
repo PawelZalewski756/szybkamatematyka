@@ -20,6 +20,7 @@ import {
   type CkeE8Session,
 } from "../lib/baza-zadan/cke/e8-sessions";
 import { CKE_MATURA_R_SESSIONS } from "../lib/baza-zadan/cke/matura-rozszerzona-sessions";
+import { CKE_MATURA_P_SESSIONS } from "../lib/baza-zadan/cke/matura-podstawowa-cke-sessions";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
@@ -109,13 +110,13 @@ function findMarkers(pages: PageData[]): { markers: Marker[]; stops: Stop[] } {
   pages.forEach((pd, pi) => {
     for (const l of pd.lines) {
       const t = l.text.trim();
-      const m = /^Zadanie\s+(\d+)\.?\s*(?:\((\d+)\s*[–-]\s*(\d+)\))?/.exec(t);
+      const m = /^Zadanie\s+(\d+)\.?\s*(?:\((?:(\d+)\s*[–-]\s*(\d+)|(\d+)\s*pkt)\))?/.exec(t);
       if (m) {
         markers.push({
           numer: Number(m[1]),
           page: pi,
           y: l.yTop - 4 * SCALE,
-          points: m[3] ? Number(m[3]) : 1,
+          points: m[3] ? Number(m[3]) : m[4] ? Number(m[4]) : 1,
         });
       } else if (
         /^Brudnopis/i.test(t) ||
@@ -489,7 +490,7 @@ async function main(): Promise<void> {
     return fillSolutions(d ? Number(d.split("=")[1]) : 2500);
   }
   const only = args.find((a) => a.startsWith("--only="))?.split("=")[1];
-  for (const s of [...CKE_E8_SESSIONS, ...CKE_MATURA_R_SESSIONS]) {
+  for (const s of [...CKE_E8_SESSIONS, ...CKE_MATURA_R_SESSIONS, ...CKE_MATURA_P_SESSIONS]) {
     if (only && !s.id.includes(only)) continue;
     try {
       await importSession(s);
