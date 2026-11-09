@@ -1067,3 +1067,18 @@ export async function updateProfileProgress(
   if (error) throw error;
   return mapRow(data as ProfileRow);
 }
+
+const LAST_SEEN_KEY = "sm-last-seen-ping";
+const LAST_SEEN_INTERVAL_MS = 30 * 60 * 1000;
+
+/** Zapisuje ostatnią aktywność (także przy zapamiętanej sesji); błędy są ignorowane. */
+export async function touchLastSeen(): Promise<void> {
+  try {
+    const last = Number(window.sessionStorage.getItem(LAST_SEEN_KEY) ?? 0);
+    if (Date.now() - last < LAST_SEEN_INTERVAL_MS) return;
+    window.sessionStorage.setItem(LAST_SEEN_KEY, String(Date.now()));
+    await getSupabase().rpc("touch_last_seen");
+  } catch {
+    /* kolumna/funkcja może jeszcze nie istnieć - nie blokujemy UI */
+  }
+}
