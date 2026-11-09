@@ -230,11 +230,16 @@ export default function LoginPage() {
         code?: string;
       };
 
-      if (!signupResponse.ok || !signupResult.userId) {
+      if (!signupResponse.ok || !signupResult.ok) {
         setIsError(true);
         setMessage(
           signupResult.error ?? "Nie udało się utworzyć konta. Spróbuj ponownie.",
         );
+        return;
+      }
+
+      if (signupResult.needsConfirmation && !signupResult.userId) {
+        router.push(signupSuccessPath(true));
         return;
       }
 
