@@ -72,8 +72,8 @@ export async function POST(request: Request): Promise<Response> {
     }
     if (/already|registered|exists/i.test(error.message)) {
       return Response.json(
-        { error: "Ten e-mail jest już zarejestrowany. Zaloguj się lub zresetuj hasło.", code: "exists" },
-        { status: 409, headers: HEADERS },
+        { ok: true, needsConfirmation: true },
+        { headers: HEADERS },
       );
     }
     console.error("[szybka-matma] signup failed:", error.message);
@@ -83,12 +83,12 @@ export async function POST(request: Request): Promise<Response> {
     );
   }
 
-  // Przy włączonym potwierdzaniu Supabase dla istniejącego, potwierdzonego
-  // adresu zwraca użytkownika bez tożsamości (ochrona przed enumeracją).
+  // Dla istniejącego adresu Supabase zwraca użytkownika bez tożsamości.
+  // Odpowiadamy tak samo jak przy nowym koncie (bez ujawniania, że konto istnieje).
   if (!data.user || data.user.identities?.length === 0) {
     return Response.json(
-      { error: "Ten e-mail jest już zarejestrowany. Zaloguj się lub zresetuj hasło.", code: "exists" },
-      { status: 409, headers: HEADERS },
+      { ok: true, needsConfirmation: true },
+      { headers: HEADERS },
     );
   }
 
