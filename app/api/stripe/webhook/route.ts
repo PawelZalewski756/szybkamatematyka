@@ -9,6 +9,11 @@ import {
   markSubscriptionCanceled,
   syncSubscriptionToProfile,
 } from "@/lib/stripe/subscription-sync";
+import {
+  formatPurchaseNotification,
+  notifyAdminsTelegram,
+} from "@/lib/telegram/notify";
+import { getPlanById } from "@/lib/subscription/plans";
 import { isServiceRoleConfigured } from "@/lib/stripe/service-supabase";
 
 // Weryfikacja podpisu Stripe wymaga Node crypto → runtime Node (nie Edge).
@@ -102,6 +107,22 @@ export async function POST(request: Request) {
           await syncSubscriptionToProfile(subscription, {
             forceUserId: userId ?? undefined,
           });
+        }
+
+        if (session.payment_status === "paid") {
+          const planId = session.metadata?.plan_id ?? "";
+          await notifyAdminsTelegram(
+            formatPurchaseNotification({
+              email:
+                session.customer_details?.email ??
+                session.customer_email ??
+                "",
+              planLabel: getPlanById(planId)?.name ?? planId,
+              amountTotal: session.amount_total,
+              currency: session.currency,
+              createdAt: new Date(session.created * 1000),
+            }),
+          );
         }
         break;
       }
