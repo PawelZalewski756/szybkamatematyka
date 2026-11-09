@@ -65,18 +65,29 @@ async function getProfileNames(
   userIds: string[],
 ) {
   if (userIds.length === 0) return new Map<string, { name: string; xp: number; lastPlayed: string }>();
-  const { data, error } = await supabase
+  let { data, error } = (await supabase
     .from("profiles")
-    .select("id, nick, nickname, xp, last_played_date")
-    .in("id", userIds);
+    .select("id, nick, nickname, xp, last_played_date, last_seen_at")
+    .in("id", userIds)) as { data: Record<string, unknown>[] | null; error: { message: string } | null };
+  if (error) {
+    // migracja last_seen_at może nie być jeszcze uruchomiona
+    ({ data, error } = (await supabase
+      .from("profiles")
+      .select("id, nick, nickname, xp, last_played_date")
+      .in("id", userIds)) as { data: Record<string, unknown>[] | null; error: { message: string } | null });
+  }
   if (error) throw new Error(`Could not load user profiles: ${error.message}`);
   return new Map(
     (data ?? []).map((profile) => [
-      profile.id,
+      String(profile.id),
       {
-        name: profile.nick || profile.nickname || "",
+        name: String(profile.nick || profile.nickname || ""),
         xp: Number(profile.xp) || 0,
-        lastPlayed: profile.last_played_date ? String(profile.last_played_date) : '',
+        lastPlayed: [profile.last_seen_at, profile.last_played_date]
+          .filter(Boolean)
+          .map(String)
+          .sort()
+          .pop() ?? '',
       },
     ]),
   );
@@ -226,7 +237,9 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
           .sort((a, b) => b.getTime() - a.getTime())[0];
         const lastLogin = lastActive
           ? lastActive.toLocaleDateString("pl-PL")
-          : "nigdy";
+          : user.email_confirmed_at
+            ? "nigdy"
+            : "nigdy (e-mail niepotwierdzony)";
         const xp = profileNames.get(user.id)?.xp ?? 0;
         return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),

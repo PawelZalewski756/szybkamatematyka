@@ -10,6 +10,7 @@ import { useSubscription } from "@/lib/subscription/use-subscription";
 import { getSupabase } from "@/lib/supabase";
 import {
   ensureUserProfile,
+  touchLastSeen,
   fetchProfile,
   profileFromUserFallback,
   type Profile,
@@ -130,6 +131,7 @@ export function Navbar() {
     }
 
     setProfileLoading(true);
+    void touchLastSeen();
 
     try {
       const data = await ensureUserProfile(sessionUser);

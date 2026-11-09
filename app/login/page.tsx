@@ -47,6 +47,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
+  const [needsConfirm, setNeedsConfirm] = useState(false);
   const [supabaseReady, setSupabaseReady] = useState(() =>
     isSupabaseConfigured(),
   );
@@ -77,6 +78,31 @@ export default function LoginPage() {
   const clearMessage = () => {
     setMessage(null);
     setIsError(false);
+    setNeedsConfirm(false);
+  };
+
+  const handleResendConfirmation = async () => {
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail || !supabaseReady) return;
+    setLoading(true);
+    try {
+      const { error } = await getSupabase().auth.resend({
+        type: "signup",
+        email: trimmedEmail,
+        options: { emailRedirectTo: authRedirectUrl("/login") },
+      });
+      if (error) throw error;
+      setIsError(false);
+      setNeedsConfirm(false);
+      setMessage(
+        "Wysłaliśmy link ponownie. Sprawdź skrzynkę, także SPAM i oferty.",
+      );
+    } catch (err) {
+      setIsError(true);
+      setMessage(getAuthErrorMessage(err as Error));
+    } finally {
+      setLoading(false);
+    }
   };
 
   const switchToSignup = () => {
@@ -131,6 +157,9 @@ export default function LoginPage() {
       router.replace("/");
     } catch (err) {
       setIsError(true);
+      setNeedsConfirm(
+        (err as Error)?.message?.includes("Email not confirmed") ?? false,
+      );
       setMessage(getAuthErrorMessage(err as Error));
     } finally {
       setLoading(false);
@@ -183,29 +212,36 @@ export default function LoginPage() {
         );
       }
 
-      const { data, error } = await supabase.auth.signUp({
-        email: trimmedEmail,
-        password,
-        options: {
-          emailRedirectTo: authRedirectUrl("/login"),
-          data: {
-            nick: normalizedNick,
-            nickname: normalizedNick,
-            school_level: schoolLevel || null,
-          },
-        },
+      const signupResponse = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          email: trimmedEmail,
+          password,
+          nick: normalizedNick,
+          schoolLevel: schoolLevel || null,
+        }),
       });
+      const signupResult = (await signupResponse.json().catch(() => ({}))) as {
+        ok?: boolean;
+        userId?: string;
+        error?: string;
+        code?: string;
+      };
 
-      if (error) throw error;
-
-      // Supabase często zwraca user: null bez błędu, gdy e-mail jest już w bazie
-      if (!data.user || data.user.identities?.length === 0) {
+      if (!signupResponse.ok || !signupResult.userId) {
         setIsError(true);
         setMessage(
-          "Ten e-mail jest już zarejestrowany - użyj „Zaloguj się” albo innego adresu.",
+          signupResult.error ?? "Nie udało się utworzyć konta. Spróbuj ponownie.",
         );
         return;
       }
+
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: trimmedEmail,
+        password,
+      });
+      if (error) throw error;
 
       void fetch("/api/telegram/signup-notification", {
         method: "POST",
@@ -230,20 +266,21 @@ export default function LoginPage() {
         });
 
       if (data.session) {
-        const existing = await fetchProfile(data.user.id);
-        if (!existing) {
-          try {
+        try {
+          const existing = await fetchProfile(data.user.id);
+          if (!existing) {
             await createProfile(data.user.id, normalizedNick);
-          } catch (profileError) {
-            const msg =
-              profileError instanceof Error ? profileError.message : "";
-            if (msg.includes("unique") || msg.includes("duplicate")) {
-              setIsError(true);
-              setMessage("Ten nick jest już zajęty!");
-              return;
-            }
-            throw profileError;
           }
+        } catch (profileError) {
+          const msg =
+            profileError instanceof Error ? profileError.message : "";
+          if (msg.includes("unique") || msg.includes("duplicate")) {
+            setIsError(true);
+            setMessage("Ten nick jest już zajęty!");
+            return;
+          }
+          // Konto istnieje, a profil utworzy trigger w bazie lub navbar.
+          console.warn("[szybka-matma] profil po rejestracji:", profileError);
         }
 
         // Stały URL sukcesu - do pomiaru konwersji (Google Ads).
@@ -336,6 +373,16 @@ export default function LoginPage() {
 
               {message && (
                 <Alert message={message} isError={isError} />
+              )}
+              {needsConfirm && (
+                <button
+                  type="button"
+                  disabled={loading}
+                  onClick={() => void handleResendConfirmation()}
+                  className="rounded-2xl border border-accent/40 px-4 py-3 text-sm font-bold text-accent transition hover:bg-accent/10 disabled:opacity-50"
+                >
+                  Wyślij link potwierdzający ponownie
+                </button>
               )}
 
               <motion.button
@@ -479,6 +526,24 @@ export default function LoginPage() {
 
               {message && (
                 <Alert message={message} isError={isError} />
+              )}
+              {needsConfirm && (
+                <div className="flex flex-col gap-2">
+                  <button
+                    type="button"
+                    disabled={loading}
+                    onClick={() => void handleResendConfirmation()}
+                    className="rounded-2xl border border-accent/40 px-4 py-3 text-sm font-bold text-accent transition hover:bg-accent/10 disabled:opacity-50"
+                  >
+                    Wyślij link potwierdzający ponownie
+                  </button>
+                  <Link
+                    href="/login/zapomniane-haslo"
+                    className="text-center text-sm font-semibold text-accent hover:underline"
+                  >
+                    Zapomniałem hasła
+                  </Link>
+                </div>
               )}
 
               <motion.button

@@ -188,20 +188,32 @@ test.describe("Smoke", () => {
     page,
   }) => {
     await page.route("**/rest/v1/profiles*", (route) => route.abort("failed"));
-    await page.route("**/auth/v1/signup*", async (route) => {
+    const user = {
+      id: "00000000-0000-4000-8000-000000000001",
+      aud: "authenticated",
+      role: "authenticated",
+      email: "nowy@example.com",
+      app_metadata: { provider: "email", providers: ["email"] },
+      user_metadata: { nick: "NowyUczen", nickname: "NowyUczen" },
+    };
+    await page.route("**/api/signup", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ ok: true, userId: user.id }),
+      });
+    });
+    await page.route("**/auth/v1/token*", async (route) => {
       await route.fulfill({
         status: 200,
         contentType: "application/json",
         body: JSON.stringify({
-          user: {
-            id: "00000000-0000-4000-8000-000000000001",
-            aud: "authenticated",
-            role: "authenticated",
-            email: "nowy@example.com",
-            app_metadata: { provider: "email", providers: ["email"] },
-            user_metadata: { nick: "NowyUczen", nickname: "NowyUczen" },
-          },
-          session: null,
+          access_token: "test-access-token",
+          token_type: "bearer",
+          expires_in: 3600,
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          refresh_token: "test-refresh-token",
+          user,
         }),
       });
     });
@@ -223,11 +235,10 @@ test.describe("Smoke", () => {
     await page.locator('input[name="passwordConfirm"]').fill("poprawnehaslo");
     await page.getByRole("button", { name: "Utwórz konto" }).click();
 
-    await expect(page).toHaveURL(/\/login\/sukces\?confirm=1/);
+    await expect(page).toHaveURL(/\/login\/sukces$/);
     await expect(
       page.getByRole("heading", { name: "Konto utworzone" }),
     ).toBeVisible();
-    await expect(page.getByText(/Sprawdź skrzynkę e-mail/i)).toBeVisible();
   });
 
   test("reset hasła mapuje błąd limitu Supabase", async ({ page }) => {
