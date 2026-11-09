@@ -455,7 +455,7 @@ async function sync(): Promise<void> {
         .from("arkusze")
         .insert({
           nazwa: sheet.nazwa,
-          typ: session.typ ?? "egzamin-8",
+          typ: sheet.typ ?? "egzamin-8",
           rok: sheet.rok,
           miesiac: sheet.miesiac,
         })
