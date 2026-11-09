@@ -19,6 +19,7 @@ import {
   CKE_E8_SESSIONS,
   type CkeE8Session,
 } from "../lib/baza-zadan/cke/e8-sessions";
+import { CKE_MATURA_R_SESSIONS } from "../lib/baza-zadan/cke/matura-rozszerzona-sessions";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
@@ -41,7 +42,7 @@ type CachedTask = {
 type CachedSheet = {
   sessionId: string;
   nazwa: string;
-  typ: "egzamin-8";
+  typ: "egzamin-8" | "matura";
   rok: number;
   miesiac: number;
   tasks: CachedTask[];
@@ -200,9 +201,22 @@ function cutAboveAnswerGrid(
       break;
     }
   }
-  if (frame < 0) return null;
-  for (let y = frame + 4; y < y1 - y0; y++) {
-    if (coverage(y, (r, g, b) => r > 200 && g < 170 && b < 170) > 0.55) {
+  if (frame >= 0) {
+    for (let y = frame + 4; y < y1 - y0; y++) {
+      if (coverage(y, (r, g, b) => r > 200 && g < 170 && b < 170) > 0.55) {
+        return y0 + y - 3;
+      }
+    }
+    return null;
+  }
+  // Siatka karty rozwiązań w arkuszach od 2023 jest szara.
+  for (let y = 0; y < y1 - y0; y++) {
+    if (
+      coverage(
+        y,
+        (r, g, b) => r > 150 && r < 225 && Math.abs(r - g) < 8 && Math.abs(r - b) < 8,
+      ) > 0.55
+    ) {
       return y0 + y - 3;
     }
   }
@@ -317,7 +331,7 @@ async function importSession(session: CkeE8Session): Promise<void> {
 
   const arkuszPages = await loadPages(arkuszPdf);
   const zasadyPages = await loadPages(zasadyPdf);
-  const images = await cropTasks(session, arkuszPages);
+  const images = await cropTasks(session, arkuszPages, undefined, session.typ === "matura" && session.rok >= 2023);
   if (session.kartaUrl) {
     const kartaPdf = path.join(PDF_DIR, `${session.id}-karta.pdf`);
     await download(session.kartaUrl, kartaPdf);
@@ -353,7 +367,7 @@ async function importSession(session: CkeE8Session): Promise<void> {
   const sheet: CachedSheet = {
     sessionId: session.id,
     nazwa: session.nazwa,
-    typ: "egzamin-8",
+    typ: session.typ ?? "egzamin-8",
     rok: session.rok,
     miesiac: session.miesiac,
     tasks,
@@ -441,7 +455,7 @@ async function sync(): Promise<void> {
         .from("arkusze")
         .insert({
           nazwa: sheet.nazwa,
-          typ: "egzamin-8",
+          typ: sheet.typ ?? "egzamin-8",
           rok: sheet.rok,
           miesiac: sheet.miesiac,
         })
@@ -475,7 +489,7 @@ async function main(): Promise<void> {
     return fillSolutions(d ? Number(d.split("=")[1]) : 2500);
   }
   const only = args.find((a) => a.startsWith("--only="))?.split("=")[1];
-  for (const s of CKE_E8_SESSIONS) {
+  for (const s of [...CKE_E8_SESSIONS, ...CKE_MATURA_R_SESSIONS]) {
     if (only && !s.id.includes(only)) continue;
     try {
       await importSession(s);

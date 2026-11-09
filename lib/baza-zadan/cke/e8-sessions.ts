@@ -13,6 +13,8 @@ export type CkeE8Session = {
   zasadyUrl: string;
   /** Karta rozwiązań zadań otwartych (od 2024 treść zadań otwartych jest tylko tam). */
   kartaUrl?: string;
+  /** Domyślnie egzamin-8. */
+  typ?: "egzamin-8" | "matura";
 };
 
 const BASE =

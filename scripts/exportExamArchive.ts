@@ -107,7 +107,7 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
       kind: sheet.typ ?? "matura",
       year: sheet.rok,
       taskNumber: String(task.numer),
-      sessionLabel: `${sheet.typ === "egzamin-8" ? "egzamin ósmoklasisty" : "matura"} ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
+      sessionLabel: `${sheet.typ === "egzamin-8" ? "egzamin ósmoklasisty" : /rozszerzon/i.test(sheet.nazwa) ? "matura rozszerzona" : "matura"} ${monthLabel(sheet.miesiac)} ${sheet.rok}`,
     },
   };
 }
