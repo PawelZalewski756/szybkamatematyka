@@ -504,18 +504,13 @@ async function fillTranscripts(delayMs: number, only?: string): Promise<void> {
     systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Odpowiedz w formacie zwyklego tekstu (NIE JSON, NIE blok kodu), dokladnie tak:
 ===TEKST===
 (tresc zadania)
-===RYSUNEK 1===
-(kod SVG pierwszego rysunku)
-===RYSUNEK 2===
-(kod SVG drugiego rysunku, itd.; sekcji RYSUNEK nie dawaj, jesli nie ma rysunkow)
 Zasady dla tresci:
 - Pomin naglowek "Zadanie N. (0-2)", ramke z numerem i punktami oraz kratki na odpowiedz.
 - Zwykly tekst po polsku, wzory w LaTeX: $...$ w linii, $$...$$ dla wzorow w osobnej linii. Nie uzywaj dlugich myslnikow, tylko "-".
 - Akapity oddziel pusta linia.
 - Zadanie zamkniete: po tresci pytania dopisz odpowiedzi w JEDNEJ linii w formacie: A) ... B) ... C) ... D) ... (kazda odpowiedz z wzorem w $...$).
 - Tabele zapisz jako tabele markdown.
-- Kazdy rysunek, wykres, figure lub uklad wspolrzednych zastap w tresci znacznikiem [[RYSUNEK 1]], [[RYSUNEK 2]] itd. w miejscu, gdzie sie znajduje.
-Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). Kazde SVG: <svg xmlns="http://www.w3.org/2000/svg" viewBox="..."> z bialym tlem (<rect width="100%" height="100%" rx="8" fill="#ffffff"/>), ciemne linie (#1f2937), czytelne etykiety (font-family sans-serif, font-size min 14). Bez zewnetrznych zasobow.`,
+- Kazdy rysunek, wykres, figure, siatke bryly lub uklad wspolrzednych zastap w tresci znacznikiem [[RYSUNEK 1]], [[RYSUNEK 2]] itd. w miejscu, gdzie sie znajduje. Rysunku NIE opisuj i NIE rysuj. Ramki z literami A, B, C, D oraz kratki na odpowiedz NIE sa rysunkami.`,
   });
 
   for (const sheet of loadSheets()) {
@@ -562,20 +557,20 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
         const num = String(t.numer).padStart(2, "0");
         const figDir = path.join(IMG_DIR, sid);
         fs.mkdirSync(figDir, { recursive: true });
-        figs.forEach((svg, i) => {
-          if (!/^\s*<svg[\s>]/i.test(svg)) return;
-          const name = `z${num}-fig${i + 1}.svg`;
-          fs.writeFileSync(path.join(figDir, name), svg.trim(), "utf8");
+        const markers = new Set(
+          [...tekst.matchAll(/\[\[RYSUNEK (\d+)\]\]/g)].map((m) => m[1]!),
+        );
+        for (const n of markers) {
           tekst = tekst.replace(
-            `[[RYSUNEK ${i + 1}]]`,
-            `\n\n![Rysunek ${i + 1}](/cke-matura/${sid}/${name})\n\n`,
+            `[[RYSUNEK ${n}]]`,
+            `\n\n![Rysunek ${n}](/cke-matura/${sid}/z${num}-fig${n}.png)\n\n`,
           );
-        });
+        }
         tekst = tekst.replace(/\[\[RYSUNEK \d+\]\]/g, "");
         t.tekst = tekst;
         t.tekstV = 2;
         changed = true;
-        console.log(`  ${sheet.sessionId} zad. ${t.numer} OK (rysunki: ${figs.length})`);
+        console.log(`  ${sheet.sessionId} zad. ${t.numer} OK (rysunki: ${markers.size})`);
       } catch (e) {
         console.warn(`  ${sheet.sessionId} zad. ${t.numer}: ${(e as Error).message}`);
       }
@@ -654,6 +649,128 @@ async function renderSvg(page: any, svg: string): Promise<Buffer> {
     `<body style="margin:0;background:#e5e7eb"><div id="w" style="display:inline-block;padding:8px">${svg}</div></body>`,
   );
   return (await page.locator("#w").screenshot()) as Buffer;
+}
+
+async function cropFigures(only?: string): Promise<void> {
+  const apiKey = process.env.GEMINI_API_KEY?.trim();
+  if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
+  const sharp = (await import("sharp")).default;
+  const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
+    model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
+    generationConfig: { responseMimeType: "application/json" },
+    systemInstruction: `Dostajesz obrazy jednego zadania z arkusza CKE (kolejno: obraz 1, obraz 2, ...) oraz liczbe N rysunkow. Rysunek to wykres, diagram, figura geometryczna, uklad wspolrzednych, siatka bryly lub fotografia. Tabele i zwykly tekst NIE sa rysunkami. Dla kazdego z N rysunkow (w kolejnosci wystepowania w zadaniu) podaj ramke obejmujaca caly rysunek razem z jego opisami, etykietami i legenda, ale bez tresci zadania i odpowiedzi A-D. Pola odpowiedzi (ramki z literami A, B, C, D) i kratki na odpowiedz nie sa rysunkami. Ramka ma obejmowac caly rysunek ze wszystkimi etykietami i osiami (nic nie ucinaj), ale nie ma obejmowac zadnych linii tekstu poza rysunkiem. Odpowiedz TYLKO JSON: {"figures":[{"image":1,"box_2d":[ymin,xmin,ymax,xmax]}]} gdzie wspolrzedne sa liczbami 0-1000 wzgledem danego obrazu.`,
+  });
+
+  let done = 0;
+  for (const sheet of loadSheets()) {
+    if (only && !sheet.sessionId.includes(only)) continue;
+    const sid = sheet.sessionId;
+    const dir = path.join(IMG_DIR, sid);
+    let changed = false;
+    for (const t of sheet.tasks) {
+      const tekst = t.tekst;
+      if (!tekst) continue;
+      const refs = [
+        ...tekst.matchAll(
+          /!\[Rysunek (\d+)\]\(\/cke-matura\/[^/]+\/(z\d+-fig\d+)\.(?:svg|png)\)/g,
+        ),
+      ];
+      if (refs.length === 0) continue;
+      const pngs: string[] = [];
+      const parts: any[] = [];
+      for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+        const abs = path.join(process.cwd(), "public", m[1]);
+        if (!/\.png$/i.test(abs) || !fs.existsSync(abs)) continue;
+        pngs.push(abs);
+        parts.push({
+          inlineData: {
+            mimeType: "image/png",
+            data: fs.readFileSync(abs).toString("base64"),
+          },
+        });
+      }
+      if (pngs.length === 0) continue;
+      parts.push({ text: `Liczba rysunkow N = ${refs.length}.` });
+      try {
+        const res = await model.generateContent(parts);
+        const data = JSON.parse(res.response.text()) as {
+          figures: { image: number; box_2d: number[] }[];
+        };
+        if (data.figures.length < refs.length) {
+          throw new Error(`znaleziono ${data.figures.length} z ${refs.length}`);
+        }
+        let next = tekst;
+        for (let i = 0; i < refs.length; i++) {
+          const f = data.figures[i]!;
+          const file = pngs[Math.max(0, Math.min(pngs.length - 1, f.image - 1))]!;
+          const meta = await sharp(file).metadata();
+          const W = meta.width ?? 0;
+          const H = meta.height ?? 0;
+          const [y0, x0, y1, x1] = f.box_2d.map((v) => Math.max(0, Math.min(1000, v)));
+          const padX = Math.round(W * 0.015) + 8;
+          const padY = Math.round(H * 0.015) + 8;
+          let left = Math.max(0, Math.round((x0! / 1000) * W) - padX);
+          let top = Math.max(0, Math.round((y0! / 1000) * H) - padY);
+          let right = Math.min(W, Math.round((x1! / 1000) * W) + padX);
+          let bottom = Math.min(H, Math.round((y1! / 1000) * H) + padY);
+          const { data: gray, info } = await sharp(file)
+            .flatten({ background: "#ffffff" })
+            .grayscale()
+            .raw()
+            .toBuffer({ resolveWithObject: true });
+          const ch = info.channels;
+          const dark = (x: number, y: number) => gray[(y * W + x) * ch]! < 170;
+          const rowDark = (y: number) => {
+            for (let x = left; x < right; x++) if (dark(x, y)) return true;
+            return false;
+          };
+          const colDark = (x: number) => {
+            for (let y = top; y < bottom; y++) if (dark(x, y)) return true;
+            return false;
+          };
+          const lim = { l: 40, t: 70, r: 40, b: 70 };
+          for (let n = 0; n < 40; n++) {
+            let moved = false;
+            if (bottom < H && lim.b > 0 && rowDark(bottom - 1)) { bottom++; lim.b--; moved = true; }
+            if (top > 0 && lim.t > 0 && rowDark(top)) { top--; lim.t--; moved = true; }
+            if (right < W && lim.r > 0 && colDark(right - 1)) { right++; lim.r--; moved = true; }
+            if (left > 0 && lim.l > 0 && colDark(left)) { left--; lim.l--; moved = true; }
+            if (!moved) break;
+          }
+          if (right - left < 40 || bottom - top < 40) {
+            throw new Error("zbyt mala ramka rysunku");
+          }
+          const name = `${refs[i]![2]}.png`;
+          await sharp(file)
+            .extract({ left, top, width: right - left, height: bottom - top })
+            .toFile(path.join(dir, name));
+          next = next.replace(
+            new RegExp(`/cke-matura/${sid}/${refs[i]![2]}\\.(?:svg|png)`),
+            `/cke-matura/${sid}/${name}`,
+          );
+        }
+        t.tekst = next;
+        delete t.figOk;
+        for (const r of refs) {
+          const svg = path.join(dir, `${r[2]}.svg`);
+          if (fs.existsSync(svg)) fs.unlinkSync(svg);
+        }
+        changed = true;
+        done += refs.length;
+        console.log(`  ${sid} zad. ${t.numer}: wycieto ${refs.length}`);
+      } catch (e) {
+        console.warn(`  ${sid} zad. ${t.numer}: ${(e as Error).message}`);
+      }
+    }
+    if (changed) {
+      fs.writeFileSync(
+        path.join(CACHE_DIR, `${sheet.sessionId}.json`),
+        JSON.stringify(sheet, null, 2),
+        "utf8",
+      );
+    }
+  }
+  console.log(`Gotowe. Wyciete rysunki: ${done}`);
 }
 
 async function verifyFigures(only?: string): Promise<void> {
@@ -808,6 +925,7 @@ async function sync(only?: string): Promise<void> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const onlyArg = args.find((a) => a.startsWith("--only="))?.split("=")[1];
+  if (args.includes("--wytnij")) return cropFigures(onlyArg);
   if (args.includes("--weryfikuj")) return verifyFigures(onlyArg);
   if (args.includes("--sync")) return sync(onlyArg);
   if (args.includes("--dzialy")) return fillDzialy(1500, onlyArg);

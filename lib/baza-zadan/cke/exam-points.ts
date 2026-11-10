@@ -67,6 +67,7 @@ function inferCkePoints(task: Task, open: boolean): number {
 /** Punktacja CKE: klucz z rozwiązania, inaczej typowa formula arkusza. */
 export function examTaskPoints(task: Task): number {
   const open = isOpenExamTask(task);
+  if (!open) return 1;
   const blob = [task.prompt, task.explanation, ...(task.solutionSteps ?? [])].join(
     "\n",
   );

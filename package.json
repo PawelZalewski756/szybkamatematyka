@@ -49,8 +49,8 @@
     "seed:tasks-sql-split": "tsx scripts/splitTasksSql.ts",
     "seed:tasks-cache": "tsx scripts/pushTasksCache.ts",
     "seed:cke-e8": "tsx scripts/importCkeE8.ts",
-    "seed:cke-sample": "tsx scripts/importCkeE8.ts --teksty --only=2026-maj && tsx scripts/exportExamArchive.ts",
-    "seed:cke-all": "tsx scripts/importCkeE8.ts --gemini && tsx scripts/importCkeE8.ts --dzialy && tsx scripts/importCkeE8.ts --teksty && tsx scripts/importCkeE8.ts --sync && tsx scripts/exportExamArchive.ts",
+    "seed:cke-sample": "tsx scripts/importCkeE8.ts --teksty --only=2026-maj && tsx scripts/importCkeE8.ts --wytnij --only=2026-maj && tsx scripts/exportExamArchive.ts",
+    "seed:cke-all": "tsx scripts/importCkeE8.ts --gemini && tsx scripts/importCkeE8.ts --dzialy && tsx scripts/importCkeE8.ts --teksty && tsx scripts/importCkeE8.ts --wytnij && tsx scripts/importCkeE8.ts --sync && tsx scripts/exportExamArchive.ts",
     "seed:exam-archive": "tsx scripts/exportExamArchive.ts",
     "seed:all": "tsx scripts/seedAll.ts",
     "seed:delete-figure-session": "tsx scripts/deleteFigureSessionTasks.ts"

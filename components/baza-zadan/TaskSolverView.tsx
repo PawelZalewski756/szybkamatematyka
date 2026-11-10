@@ -183,7 +183,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         </span>
         <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs font-bold text-orange-200">
           {formatPkt(maxPoints)}
-          {open ? " · otwarte" : ""}
+          {open ? " · otwarte" : " · zamknięte"}
         </span>
         {task.examSource && (
           <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">

@@ -3,7 +3,7 @@
   answer: string | null;
 };
 
-const ANSWER_LINE_RE = /\n\*\*Odpowiedź:\*\*\s*([\s\S]+)$/i;
+const ANSWER_LINE_RE = /\n(?:\*\*)?Odpowiedź:(?:\*\*)?\s*([\s\S]+)$/i;
 const STEP_SPLIT_RE = /\n(?=\*\*Krok\s+\d+\.\*\*)/i;
 const STEP_PREFIX_RE = /^\*\*Krok\s+\d+\.\*\*\s*/i;
 
