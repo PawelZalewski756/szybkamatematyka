@@ -7,6 +7,9 @@
 /** Ilustracja z arkusza CKE - bez rozciągania małych rysunków na pełną szerokość. */
 export function ContentImage({ src, alt = "", className = "" }: ContentImageProps) {
   const caption = alt.trim();
+  const isFigure = /-fig\d+\.png$/.test(src);
+  const imgClass =
+    "mx-auto max-h-[min(360px,55vh)] w-auto max-w-full object-contain";
 
   return (
     <figure
@@ -14,12 +17,22 @@ export function ContentImage({ src, alt = "", className = "" }: ContentImageProp
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={src}
+        src={isFigure ? src.replace(/\.png$/, "-dark.png") : src}
         alt={caption || "Ilustracja do zadania"}
         loading="lazy"
         decoding="async"
-        className="mx-auto max-h-[min(360px,55vh)] w-auto max-w-full object-contain"
+        className={isFigure ? `fig-dark ${imgClass}` : imgClass}
       />
+      {isFigure ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={src}
+          alt={caption || "Ilustracja do zadania"}
+          loading="lazy"
+          decoding="async"
+          className={`fig-light hidden ${imgClass}`}
+        />
+      ) : null}
       {caption ? (
         <figcaption className="mt-1.5 max-w-prose text-center text-xs text-muted">
           {caption}
