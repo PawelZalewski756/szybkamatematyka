@@ -30,7 +30,7 @@ export function splitMathText(input: string): MathTextPart[] {
       }
     }
 
-    const nextDollar = input.indexOf("$", i);
+    const nextDollar = input.indexOf("$", i + 1);
     const end = nextDollar === -1 ? input.length : nextDollar;
     const text = input.slice(i, end);
     if (text) parts.push({ kind: "text", text });

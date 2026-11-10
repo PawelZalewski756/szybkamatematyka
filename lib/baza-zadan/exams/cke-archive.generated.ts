@@ -21933,7 +21933,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Test z matematyki składa się z 40 zadań. Na diagramie przedstawiono procentowy podział liczby zadań w teście na zadania z pięciu działów: algebry, planimetrii, stereometrii, arytmetyki, statystyki.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z01-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba zadań z arytmetyki w tym teście jest równa",
+    "prompt": "Test z matematyki składa się z 40 zadań. Na diagramie przedstawiono procentowy podział liczby zadań w teście na zadania z pięciu działów: algebry, planimetrii, stereometrii, arytmetyki, statystyki.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z01-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba zadań z arytmetyki w tym teście jest równa",
     "choices": [
       "14",
       "18",
@@ -22133,7 +22133,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2}n(n+1)$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa \n\n![Rysunek 1](/cke-matura/e8-2026-maj/z08-fig1.svg)\n\n.\n\nRozwiąż zadanie.",
+    "prompt": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2}n(n+1)$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa ......\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22243,7 +22243,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z12-fig1.svg)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej. |  |  |\n| Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km. |  |  |",
+    "prompt": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z12-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej. |  |  |\n| Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22269,7 +22269,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątna $AD$ dzieli pięciokąt $ABCDE$ na trójkąt $ADE$ i na kwadrat $ABCD$ (zobacz rysunek). Pole trójkąta $ADE$ jest równe 28, a wysokość poprowadzona z wierzchołka $E$ na bok $AD$ jest równa 7.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z13-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole kwadratu $ABCD$ jest równe",
+    "prompt": "Przekątna $AD$ dzieli pięciokąt $ABCDE$ na trójkąt $ADE$ i na kwadrat $ABCD$ (zobacz rysunek). Pole trójkąta $ADE$ jest równe 28, a wysokość poprowadzona z wierzchołka $E$ na bok $AD$ jest równa 7.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole kwadratu $ABCD$ jest równe",
     "choices": [
       "$16$",
       "$32$",
@@ -22298,7 +22298,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzy jednakowe sześciany o krawędzi $d$ługości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z14-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
+    "prompt": "Trzy jednakowe sześciany o krawędzi $d$ługości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z14-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
     "choices": [
       "350",
       "375",
@@ -22405,7 +22405,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z18-fig1.svg)\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
+    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z18-fig1.png)\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22457,7 +22457,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z kartonu wycięto prostokąt $ABCD$ o wymiarach $3$ i $9$ (zobacz rysunek 1.). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok $KLMN$, który nie jest prostokątem (zobacz rysunek 2.).\n\nOblicz obwód równoległoboku $KLMN$. Zapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z20-fig1.svg)\n\n![Rysunek 2](/cke-matura/e8-2026-maj/z20-fig2.svg)",
+    "prompt": "Z kartonu wycięto prostokąt $ABCD$ o wymiarach $3$ i $9$ (zobacz rysunek 1.). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok $KLMN$, który nie jest prostokątem (zobacz rysunek 2.).\n\nOblicz obwód równoległoboku $KLMN$. Zapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z20-fig1.png)\n\n![Rysunek 2](/cke-matura/e8-2026-maj/z20-fig2.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23596,7 +23596,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona następująco:\n$$ f(x) = \\begin{cases} x+2 & \\text{dla } x \\in [-4,2] \\\\ -x+5 & \\text{dla } x \\in (2,5) \\end{cases} $$\n\nWykres funkcji $y = f(x)$ przedstawiono w kartezjańskim układzie współrzędnych $(x,y)$ na rysunku poniżej.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z12-fig1.svg)\n\nUzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe.\n\n1. Rozwiązaniem równania $f(x) = 3$ jest liczba ..........\n\n2. Największa wartość funkcji $f$ w przedziale $[2, 3]$ jest równa ..........",
+    "prompt": "Funkcja $f$ jest określona następująco:\n$$ f(x) = \\begin{cases} x+2 & \\text{dla } x \\in [-4,2] \\\\ -x+5 & \\text{dla } x \\in (2,5) \\end{cases} $$\n\nWykres funkcji $y = f(x)$ przedstawiono w kartezjańskim układzie współrzędnych $(x,y)$ na rysunku poniżej.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z12-fig1.png)\n\nUzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe.\n\n1. Rozwiązaniem równania $f(x) = 3$ jest liczba ..........\n\n2. Największa wartość funkcji $f$ w przedziale $[2, 3]$ jest równa ..........",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23622,7 +23622,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.png)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23755,7 +23755,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny $ABC$, w którym bok $AC$ jest przeciwprostokątną oraz $|BC|=2$ i $|AC|=2\\sqrt{10}$. Oznaczmy kąt $BCA$ przez $\\gamma$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z18-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSinus kąta $\\gamma$ jest równy",
+    "prompt": "Dany jest trójkąt prostokątny $ABC$, w którym bok $AC$ jest przeciwprostokątną oraz $|BC|=2$ i $|AC|=2\\sqrt{10}$. Oznaczmy kąt $BCA$ przez $\\gamma$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z18-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSinus kąta $\\gamma$ jest równy",
     "choices": [
       "$\\frac{1}{\\sqrt{10}}$",
       "$\\frac{1}{3}$",
@@ -23784,7 +23784,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie O.\nPunkt B leży na krótszym łuku AC.\nKąt $CDA$ ma miarę $50^\\circ$, $a_{k}$ąt $COB$ ma miarę $30^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z19-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta ostrego $BOA$ jest równa",
+    "prompt": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie O.\nPunkt B leży na krótszym łuku AC.\nKąt $CDA$ ma miarę $50^\\circ$, $a_{k}$ąt $COB$ ma miarę $30^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z19-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta ostrego $BOA$ jest równa",
     "choices": [
       "$50^\\circ$",
       "$60^\\circ$",
@@ -23813,7 +23813,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie dane są cztery proste: $k, l, m$ oraz $n$. Proste $k$ oraz $l$ są równoległe.\nProsta $m$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $A$ oraz $C$.\nProsta $n$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $D$ oraz $B$.\nOdcinki $AC$ i $BD$ przecinają się w punkcie $O$.\nPonadto $|OA|=12$, $|OB|=6$ oraz $|OC|=8$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z20-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOdcinek $OD$ ma długość",
+    "prompt": "Na płaszczyźnie dane są cztery proste: $k, l, m$ oraz $n$. Proste $k$ oraz $l$ są równoległe.\nProsta $m$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $A$ oraz $C$.\nProsta $n$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $D$ oraz $B$.\nOdcinki $AC$ i $BD$ przecinają się w punkcie $O$.\nPonadto $|OA|=12$, $|OB|=6$ oraz $|OC|=8$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z20-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOdcinek $OD$ ma długość",
     "choices": [
       "$4$",
       "$9$",
@@ -23842,7 +23842,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt $KLM$, w którym $|KM| = a$ oraz $|LM| = b$.\nDwusieczna kąta $LMK$ przecina bok $KL$ w punkcie $N$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z21-fig1.svg)\n\nWykaz, że stosunek pola trójkąta $KNM$ do pola trójkąta $NLM$ jest równy $\\frac{a}{b}$.",
+    "prompt": "Dany jest trójkąt $KLM$, w którym $|KM| = a$ oraz $|LM| = b$.\nDwusieczna kąta $LMK$ przecina bok $KL$ w punkcie $N$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z21-fig1.png)\n\nWykaz, że stosunek pola trójkąta $KNM$ do pola trójkąta $NLM$ jest równy $\\frac{a}{b}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24117,7 +24117,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Nauczyciel matematyki po każdym sprawdzianie porównuje wyniki uzyskane przez uczniów dwóch klas: klasy IV A oraz klasy IV B. Na dwóch poniższych diagramach przedstawiono wyniki sprawdzianu ze statystyki, jakie uzyskali uczniowie tych klas. Na osiach poziomych podano oceny, które uzyskali uczniowie tych klas, a na osiach pionowych podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z31-fig1.svg)\n\n![Rysunek 2](/cke-matura/mp-2026-maj/z31-fig2.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie | P | F |\n| :----------- | :-: | :-: |\n| Średnia arytmetyczna ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa średniej arytmetycznej ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |\n| Mediana ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa medianie ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |",
+    "prompt": "Nauczyciel matematyki po każdym sprawdzianie porównuje wyniki uzyskane przez uczniów dwóch klas: klasy IV A oraz klasy IV B. Na dwóch poniższych diagramach przedstawiono wyniki sprawdzianu ze statystyki, jakie uzyskali uczniowie tych klas. Na osiach poziomych podano oceny, które uzyskali uczniowie tych klas, a na osiach pionowych podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z31-fig1.png)\n\n![Rysunek 2](/cke-matura/mp-2026-maj/z31-fig2.png)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie | P | F |\n| :----------- | :-: | :-: |\n| Średnia arytmetyczna ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa średniej arytmetycznej ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |\n| Mediana ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa medianie ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28439,7 +28439,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty $K$ i $L$ są środkami - odpowiednio - boków $AB$ i $BC$ kwadratu $ABCD$ o boku długości $a$. Punkt $M$ jest takim punktem na boku $BC$, że odcinki $DK$ i $KM$ są prostopadłe. Odcinek $AL$ przecina odcinki $DK$ oraz $DM$ w punktach - odpowiednio - $P$ oraz $Q$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z04-fig1.svg)\n\nWykaż, że $|PQ| = \\frac{\\sqrt{5}}{5}a$.",
+    "prompt": "Punkty $K$ i $L$ są środkami - odpowiednio - boków $AB$ i $BC$ kwadratu $ABCD$ o boku długości $a$. Punkt $M$ jest takim punktem na boku $BC$, że odcinki $DK$ i $KM$ są prostopadłe. Odcinek $AL$ przecina odcinki $DK$ oraz $DM$ w punktach - odpowiednio - $P$ oraz $Q$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z04-fig1.png)\n\nWykaż, że $|PQ| = \\frac{\\sqrt{5}}{5}a$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28621,7 +28621,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W czworokącie $ABCD$ są dane: $|AB|=9$, $|AD|=10$ oraz $\\angle BAD = 60^\\circ$.\nW ten czworokąt wpisano okrąg oraz na tym czworokącie opisano okrąg (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z11-fig1.svg)\n\nOblicz długości boków $BC$ i $CD$ oraz pole czworokąta $ABCD$. Zapisz obliczenia.",
+    "prompt": "W czworokącie $ABCD$ są dane: $|AB|=9$, $|AD|=10$ oraz $\\angle BAD = 60^\\circ$.\nW ten czworokąt wpisano okrąg oraz na tym czworokącie opisano okrąg (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z11-fig1.png)\n\nOblicz długości boków $BC$ i $CD$ oraz pole czworokąta $ABCD$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28647,7 +28647,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W projekcie ogrodu zaplanowano kwietnik w kształcie trójkąta równoramiennego o podstawie długości $x$ metrów nieprzekraczającej 10 metrów. Na tym kwietniku ma znajdować się fontanna w kształcie koła o średnicy 4 metrów, które ma być styczne do każdego z boków trójkątnego kwietnika (zobacz rysunek). Projektantowi zależy, aby przy tak ustalonej wielkości fontanny pole tego kwietnika było najmniejsze.\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z12-fig1.svg)\n\nWykaż, że pole $P$ (wyrażone w metrach kwadratowych) trójkątnego kwietnika o podstawie długości $x$ metrów jest określone wzorem\n$P(x) = \\frac{2x^3}{x^2 - 16}$",
+    "prompt": "W projekcie ogrodu zaplanowano kwietnik w kształcie trójkąta równoramiennego o podstawie długości $x$ metrów nieprzekraczającej 10 metrów. Na tym kwietniku ma znajdować się fontanna w kształcie koła o średnicy 4 metrów, które ma być styczne do każdego z boków trójkątnego kwietnika (zobacz rysunek). Projektantowi zależy, aby przy tak ustalonej wielkości fontanny pole tego kwietnika było najmniejsze.\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z12-fig1.png)\n\nWykaż, że pole $P$ (wyrażone w metrach kwadratowych) trójkątnego kwietnika o podstawie długości $x$ metrów jest określone wzorem\n$P(x) = \\frac{2x^3}{x^2 - 16}$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
