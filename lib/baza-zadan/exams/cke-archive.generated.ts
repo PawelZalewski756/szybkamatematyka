@@ -21940,7 +21940,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 2",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -21966,7 +21966,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 3",
-    "category": "algebra",
+    "category": "pierwiastki",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22018,7 +22018,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 5",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22070,7 +22070,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z07",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 7",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22096,7 +22096,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 8",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22174,7 +22174,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 11",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22200,7 +22200,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 12",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22278,7 +22278,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 15",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22304,7 +22304,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 16",
-    "category": "procenty",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22330,7 +22330,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z17",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 17",
-    "category": "arytmetyka",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -22382,7 +22382,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23240,7 +23240,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z01",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 1",
-    "category": "potegi",
+    "category": "pierwiastki",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23266,7 +23266,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z02",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 2",
-    "category": "arytmetyka",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23292,7 +23292,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z03",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 3",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23318,7 +23318,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z04",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 4",
-    "category": "potegi",
+    "category": "logarytmy",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23344,7 +23344,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z05",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 5",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23474,7 +23474,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z10",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 10",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23500,7 +23500,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z11",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 11",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23708,7 +23708,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z19",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23734,7 +23734,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z20",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 20",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23838,7 +23838,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z24",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 24",
-    "category": "funkcje",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23864,7 +23864,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z25",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 25",
-    "category": "funkcje",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23890,7 +23890,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z26",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 26",
-    "category": "funkcje",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -23942,7 +23942,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z28",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 28",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -24072,7 +24072,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z33",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 33",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -28258,7 +28258,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z01",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 1",
-    "category": "potegi",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -28336,7 +28336,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z04",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -28440,7 +28440,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z08",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 8",
-    "category": "trygonometria",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -28466,7 +28466,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z09",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 9",
-    "category": "funkcje",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -28518,14 +28518,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z11",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2026-maj/z11-1.png)",
+    "prompt": "W czworokącie $ABCD$ są dane: $|AB|=9$, $|AD|=10$ oraz $\\angle BAD = 60^\\circ$.\nW ten czworokąt wpisano okrąg oraz na tym czworokącie opisano okrąg (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z11-fig1.svg)\n\nOblicz długości boków $BC$ i $CD$ oraz pole czworokąta $ABCD$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28544,7 +28544,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z12",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",

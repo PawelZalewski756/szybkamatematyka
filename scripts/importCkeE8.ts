@@ -440,7 +440,7 @@ async function fillSolutions(delayMs: number): Promise<void> {
   }
 }
 
-async function fillDzialy(delayMs: number): Promise<void> {
+async function fillDzialy(delayMs: number, only?: string): Promise<void> {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
   const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
@@ -449,13 +449,14 @@ async function fillDzialy(delayMs: number): Promise<void> {
   });
 
   for (const sheet of loadSheets()) {
+    if (only && !sheet.sessionId.includes(only)) continue;
     let changed = false;
     for (const t of sheet.tasks) {
       if (t.dzial && (DZIALY_MATEMATYKI as readonly string[]).includes(t.dzial)) {
         continue;
       }
       const parts: any[] = [];
-      for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+      for (const m of (t.tekst ? "" : t.tresc).matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
         const abs = path.join(process.cwd(), "public", m[1]);
         if (!fs.existsSync(abs)) continue;
         parts.push({
@@ -465,7 +466,7 @@ async function fillDzialy(delayMs: number): Promise<void> {
           },
         });
       }
-      parts.push({ text: `Tresc: ${t.tresc.replace(/!\[[^\]]*\]\([^)]+\)/g, "")}\nDzial?` });
+      parts.push({ text: `Tresc: ${(t.tekst ?? t.tresc).replace(/!\[[^\]]*\]\([^)]+\)/g, "")}\nDzial?` });
       try {
         const res = await model.generateContent(parts);
         const answer = res.response.text().trim().replace(/[.\s]+$/g, "");
@@ -536,7 +537,15 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
       parts.push({ text: "Przepisz to zadanie." });
       try {
         const res = await model.generateContent(parts);
-        const raw = res.response.text().replace(/```[a-z]*\n?/g, "");
+        let raw = res.response.text().replace(/```[a-z]*\n?/g, "");
+        if (raw.trimStart().startsWith("{")) {
+          try {
+            const wrapped = JSON.parse(raw) as { text?: string };
+            if (typeof wrapped.text === "string") raw = wrapped.text;
+          } catch {
+            // zostaw surowy tekst
+          }
+        }
         const sections = raw.split(/^===(TEKST|RYSUNEK \d+)===\s*$/m);
         let tekst = "";
         const figs: string[] = [];
@@ -545,7 +554,9 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
           if (sections[k] === "TEKST") tekst = body.replace(/\u2014/g, "-");
           else figs.push(body);
         }
-        if (tekst.length < 10) throw new Error("pusty tekst");
+        if (tekst.length < 10) {
+          throw new Error(`pusty tekst: ${JSON.stringify(raw.slice(0, 200))}`);
+        }
         const sid = `${sheet.sessionId}`;
         const num = String(t.numer).padStart(2, "0");
         const figDir = path.join(IMG_DIR, sid);
@@ -580,7 +591,7 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
   }
 }
 
-async function sync(): Promise<void> {
+async function sync(only?: string): Promise<void> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const key =
     process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
@@ -589,6 +600,7 @@ async function sync(): Promise<void> {
   const supabase = createClient(url, key);
 
   for (const sheet of loadSheets()) {
+    if (only && !sheet.sessionId.includes(only)) continue;
     const { data: found } = await supabase
       .from("arkusze")
       .select("id")
@@ -618,7 +630,7 @@ async function sync(): Promise<void> {
         dzial:
           t.dzial ??
           (sheet.typ === "matura"
-            ? inferDzialMatura(t.tresc, t.numer)
+            ? inferDzialMatura(t.tekst ?? t.tresc, t.numer)
             : "Egzamin ósmoklasisty"),
         tresc: t.tekst ?? t.tresc,
         rozwiazanie: t.rozwiazanie,
@@ -632,8 +644,9 @@ async function sync(): Promise<void> {
 
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
-  if (args.includes("--sync")) return sync();
-  if (args.includes("--dzialy")) return fillDzialy(1500);
+  const onlyArg = args.find((a) => a.startsWith("--only="))?.split("=")[1];
+  if (args.includes("--sync")) return sync(onlyArg);
+  if (args.includes("--dzialy")) return fillDzialy(1500, onlyArg);
   if (args.includes("--teksty")) {
     const o = args.find((a) => a.startsWith("--only="))?.split("=")[1];
     return fillTranscripts(1500, o);
