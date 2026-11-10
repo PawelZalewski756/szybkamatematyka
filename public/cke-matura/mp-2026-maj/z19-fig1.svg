@@ -1,36 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
-  <circle cx="200" cy="200" r="100" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24.0 -24.0 448.0 448.0" font-family="sans-serif" font-size="14" width="448" height="448"><rect x="-24.0" y="-24.0" width="448.0" height="448.0" rx="8" fill="#ffffff"></rect>
+  <rect x="-12.0" y="-12.0" width="424.0" height="424.0" rx="8" fill="#ffffff"></rect>
+  <rect x="0" y="0" width="400" height="400" fill="#ffffff"></rect>
+  
+  <!-- Circle -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#8b5cf6" stroke-width="2"></circle>
 
-  <circle cx="200" cy="200" r="2" fill="#1f2937"/>
-  <text x="205" y="195" font-family="sans-serif" font-size="14" fill="#1f2937">O</text>
+  <!-- Center O -->
+  <circle cx="200" cy="200" r="2" fill="#1f2937"></circle>
+  <text x="205" y="195" fill="#1f2937">O</text>
 
-  <g font-family="sans-serif" font-size="16" fill="#1f2937">
-    <circle cx="200" cy="100" r="2" fill="#1f2937"/>
-    <text x="200" y="80" text-anchor="middle">D</text>
+  <!-- Points and Labels -->
+  <g fill="#1f2937">
+    <!-- D (90 deg) -->
+    <circle cx="200" cy="50" r="2"></circle>
+    <text x="200" y="30" text-anchor="middle">D</text>
 
-    <circle cx="106.03" cy="234.20" r="2" fill="#1f2937"/>
-    <text x="86.03" y="234.20" text-anchor="end">A</text>
+    <!-- A (200 deg) -->
+    <circle cx="59.045" cy="251.3" r="2"></circle>
+    <text x="39.045" y="251.3" text-anchor="end">A</text>
 
-    <circle cx="200" cy="300" r="2" fill="#1f2937"/>
-    <text x="200" y="320" text-anchor="middle">B</text>
+    <!-- B (270 deg) -->
+    <circle cx="200" cy="350" r="2"></circle>
+    <text x="200" y="370" text-anchor="middle">B</text>
 
-    <circle cx="250" cy="286.60" r="2" fill="#1f2937"/>
-    <text x="270" y="286.60" text-anchor="start">C</text>
+    <!-- C (300 deg) -->
+    <circle cx="275" cy="329.9" r="2"></circle>
+    <text x="295" y="329.9" text-anchor="start">C</text>
   </g>
 
+  <!-- Lines -->
   <g stroke="#1f2937" stroke-width="1.5">
-    <line x1="200" y1="200" x2="106.03" y2="234.20"/>
-    <line x1="200" y1="200" x2="200" y2="300"/>
-    <line x1="200" y1="200" x2="250" y2="286.60"/>
-    <line x1="106.03" y1="234.20" x2="200" y2="100"/>
-    <line x1="250" y1="286.60" x2="200" y2="100"/>
+    <line x1="200" y1="200" x2="59.045" y2="251.3"></line> <!-- OA -->
+    <line x1="200" y1="200" x2="200" y2="350"></line> <!-- OB -->
+    <line x1="200" y1="200" x2="275" y2="329.9"></line> <!-- OC -->
+    <line x1="59.045" y1="251.3" x2="200" y2="50"></line> <!-- AD -->
+    <line x1="275" y1="329.9" x2="200" y2="50"></line> <!-- CD -->
   </g>
 
-  <path d="M 200 200 L 220 234.64 A 40 40 0 0 1 200 240 Z" fill="#e9d5ff"/>
-  <path d="M 220 234.64 A 40 40 0 0 1 200 240" fill="none" stroke="#1f2937" stroke-width="1.5"/>
-  <text x="208" y="229" font-family="sans-serif" font-size="14" fill="#1f2937">30°</text>
+  <!-- Shaded Angle BOA -->
+  <path d="M 200 200 L 200 350 A 150 150 0 0 0 59.045 251.3 Z" fill="#e9d5ff"></path>
 
-  <path d="M 210.34 138.64 A 40 40 0 0 1 177.04 132.75" fill="none" stroke="#1f2937" stroke-width="1.5"/>
-  <text x="165" y="120" font-family="sans-serif" font-size="14" fill="#1f2937">50°</text>
+  <!-- Angle CDA = 50° marking (double arc) -->
+  <path d="M 206.47 74.1475 A 25 25 0 0 1 185.66 70.48" fill="none" stroke="#1f2937" stroke-width="1.5"></path>
+  <path d="M 205.176 69.318 A 20 20 0 0 1 188.528 66.384" fill="none" stroke="#1f2937" stroke-width="1.5"></path>
+  <text x="195.14" y="77.57" fill="#1f2937" text-anchor="middle">50°</text>
+
+  <!-- Angle COB = 30° marking (single arc) -->
+  <path d="M 200 220 A 20 20 0 0 1 210 217.32" fill="none" stroke="#1f2937" stroke-width="1.5"></path>
+  <text x="207.76" y="228.977" fill="#1f2937" text-anchor="middle">30°</text>
+
 </svg>
