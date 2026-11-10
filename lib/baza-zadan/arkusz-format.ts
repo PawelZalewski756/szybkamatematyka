@@ -29,7 +29,13 @@ export function formatArkuszLabel(arkusz: ArkuszLabelSource): string {
     arkusz.miesiac >= 1 &&
     arkusz.miesiac <= 12
   ) {
-    return `Arkusz - ${MIESIACE_PL[arkusz.miesiac - 1]} ${arkusz.rok}`;
+    const level = /rozszerzon/i.test(arkusz.nazwa)
+      ? " - rozszerzona"
+      : /podstawow/i.test(arkusz.nazwa)
+        ? " - podstawowa"
+        : "";
+    const extra = /dodatkow/i.test(arkusz.nazwa) ? " (termin dodatkowy)" : "";
+    return `Arkusz - ${MIESIACE_PL[arkusz.miesiac - 1]} ${arkusz.rok}${extra}${level}`;
   }
   return arkusz.nazwa;
 }
