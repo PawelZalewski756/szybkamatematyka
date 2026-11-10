@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+  <style>
+    .label { font-family: sans-serif; font-size: 18px; fill: #1f2937; }
+    .line { stroke: #1f2937; stroke-width: 2; fill: none; }
+    .dashed { stroke-dasharray: 5 5; }
+  </style>
+
+  <!-- Square ABCD -->
+  <polyline class="line" points="100,150 100,250 200,250 200,150"/>
+  <!-- Triangle ADE (base AD is dashed, sides AE, DE are solid) -->
+  <line class="line dashed" x1="100" y1="150" x2="200" y2="150"/>
+  <line class="line" x1="100" y1="150" x2="150" y2="50"/>
+  <line class="line" x1="200" y1="150" x2="150" y2="50"/>
+
+  <!-- Labels -->
+  <text x="90" y="145" class="label">A</text>
+  <text x="210" y="145" class="label">D</text>
+  <text x="90" y="260" class="label">B</text>
+  <text x="210" y="260" class="label">C</text>
+  <text x="145" y="45" class="label">E</text>
+</svg>
