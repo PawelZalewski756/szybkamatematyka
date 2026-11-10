@@ -28,6 +28,7 @@ type CachedTask = {
   numer: number;
   dzial?: string;
   tresc: string;
+  tekst?: string;
   rozwiazanie: string;
 };
 
@@ -68,10 +69,11 @@ function monthLabel(month: number): string {
 function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   if (isSolutionPlaceholder(task.rozwiazanie)) return null;
 
-  const { prompt, choices, hasChoices } = parseAbcd(task.tresc);
+  const source = task.tekst ?? task.tresc;
+  const { prompt, choices, hasChoices } = parseAbcd(source);
   const formattedPrompt = formatCkeMathText(prompt);
   const formattedChoices = choices.map((c) => formatCkeMathText(c));
-  const dzial = task.dzial ?? inferDzialMatura(task.tresc, task.numer);
+  const dzial = task.dzial ?? inferDzialMatura(source, task.numer);
   const category = bazaCategoryForCmsDzial(dzial);
   const id = `cke-${sheet.sessionId}-z${String(task.numer).padStart(2, "0")}`;
   const parsed = parseSolutionSteps(task.rozwiazanie);
