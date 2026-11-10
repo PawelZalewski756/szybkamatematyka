@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20 140 140">
+    <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+    <!-- Coordinates for vertices (scaled by 10 for drawing): A(50,120), B(140,120), D(100,33.4), C(147.17,70.55) -->
+    <!-- Circumcircle: center_x=95, center_y=88.25, radius=55.075 -->
+    <circle cx="95" cy="88.25" r="55.075" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+
+    <!-- Incircle: center_x=98.58, center_y=95.275, radius=34.64 -->
+    <circle cx="98.58" cy="95.275" r="34.64" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+
+    <!-- Quadrilateral ABCD -->
+    <path d="M 50 120 L 140 120 L 147.17 70.55 L 100 33.4 L 50 120 Z" fill="none" stroke="#1f2937" stroke-width="2"/>
+
+    <!-- Angle BAD 60 degrees arc -->
+    <path d="M 70 120 A 20 20 0 0 0 60 102.68" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+
+    <!-- Labels -->
+    <text x="45" y="125" font-family="sans-serif" font-size="16" fill="#1f2937">A</text>
+    <text x="138" y="125" font-family="sans-serif" font-size="16" fill="#1f2937">B</text>
+    <text x="150" y="75" font-family="sans-serif" font-size="16" fill="#1f2937">C</text>
+    <text x="100" y="28" font-family="sans-serif" font-size="16" fill="#1f2937">D</text>
+
+    <!-- Side lengths -->
+    <text x="95" y="127" font-family="sans-serif" font-size="16" fill="#1f2937" text-anchor="middle">9</text>
+    <text x="75" y="70" font-family="sans-serif" font-size="16" fill="#1f2937" text-anchor="middle">10</text>
+    <text x="67" y="109" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="middle">60°</text>
+</svg>
