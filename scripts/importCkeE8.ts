@@ -37,6 +37,7 @@ type CachedTask = {
   numer: number;
   dzial?: string;
   tresc: string;
+  tekst?: string;
   rozwiazanie: string;
   punkty?: number;
   schemat?: string;
@@ -491,6 +492,82 @@ async function fillDzialy(delayMs: number): Promise<void> {
   }
 }
 
+async function fillTranscripts(delayMs: number): Promise<void> {
+  const apiKey = process.env.GEMINI_API_KEY?.trim();
+  if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
+  const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
+    model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
+    generationConfig: { responseMimeType: "application/json" },
+    systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Zwroc JSON: {"tekst": string, "rysunki": string[]}.
+Zasady dla "tekst":
+- Pomin naglowek "Zadanie N. (0-2)", ramke z numerem i punktami oraz kratki na odpowiedz.
+- Zwykly tekst po polsku, wzory w LaTeX: $...$ w linii, $$...$$ dla wzorow w osobnej linii. Nie uzywaj dlugich myslnikow, tylko "-".
+- Akapity oddziel pusta linia.
+- Zadanie zamkniete: po tresci pytania dopisz odpowiedzi w JEDNEJ linii w formacie: A) ... B) ... C) ... D) ... (kazda odpowiedz z wzorem w $...$).
+- Tabele zapisz jako tabele markdown.
+- Kazdy rysunek, wykres, figure lub uklad wspolrzednych zastap w tekscie znacznikiem [[RYSUNEK 1]], [[RYSUNEK 2]] itd. w miejscu, gdzie sie znajduje.
+Zasady dla "rysunki": tablica napisow SVG, po jednym na znacznik, wierna oryginalowi (te same punkty, opisy, oznaczenia, skala). Kazde SVG: <svg xmlns="http://www.w3.org/2000/svg" viewBox="..."> z bialym tlem (<rect width="100%" height="100%" rx="8" fill="#ffffff"/>), ciemne linie (#1f2937), czytelne etykiety (font-family sans-serif, font-size min 14). Bez zewnetrznych zasobow. Jesli brak rysunkow, zwroc [].`,
+  });
+
+  for (const sheet of loadSheets()) {
+    let changed = false;
+    for (const t of sheet.tasks) {
+      if (t.tekst || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
+      const parts: any[] = [];
+      for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+        const abs = path.join(process.cwd(), "public", m[1]);
+        if (!fs.existsSync(abs)) continue;
+        parts.push({
+          inlineData: {
+            mimeType: "image/png",
+            data: fs.readFileSync(abs).toString("base64"),
+          },
+        });
+      }
+      if (parts.length === 0) continue;
+      parts.push({ text: "Przepisz to zadanie." });
+      try {
+        const res = await model.generateContent(parts);
+        const data = JSON.parse(res.response.text()) as {
+          tekst?: string;
+          rysunki?: string[];
+        };
+        let tekst = (data.tekst ?? "").replace(/\u2014/g, "-").trim();
+        if (tekst.length < 10) throw new Error("pusty tekst");
+        const figs = data.rysunki ?? [];
+        const sid = `${sheet.sessionId}`;
+        const num = String(t.numer).padStart(2, "0");
+        const figDir = path.join(IMG_DIR, sid);
+        fs.mkdirSync(figDir, { recursive: true });
+        figs.forEach((svg, i) => {
+          if (!/^\s*<svg[\s>]/i.test(svg)) return;
+          const name = `z${num}-fig${i + 1}.svg`;
+          fs.writeFileSync(path.join(figDir, name), svg.trim(), "utf8");
+          tekst = tekst.replace(
+            `[[RYSUNEK ${i + 1}]]`,
+            `\n\n![Rysunek ${i + 1}](/cke-matura/${sid}/${name})\n\n`,
+          );
+        });
+        tekst = tekst.replace(/\[\[RYSUNEK \d+\]\]/g, "");
+        t.tekst = tekst;
+        changed = true;
+        console.log(`  ${sheet.sessionId} zad. ${t.numer} OK (rysunki: ${figs.length})`);
+      } catch (e) {
+        console.warn(`  ${sheet.sessionId} zad. ${t.numer}: ${(e as Error).message}`);
+      }
+      await new Promise((r) => setTimeout(r, delayMs));
+    }
+    if (changed) {
+      fs.writeFileSync(
+        path.join(CACHE_DIR, `${sheet.sessionId}.json`),
+        JSON.stringify(sheet, null, 2),
+        "utf8",
+      );
+      console.log(`✓ ${sheet.sessionId} teksty zapisane`);
+    }
+  }
+}
+
 async function sync(): Promise<void> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const key =
@@ -531,8 +608,7 @@ async function sync(): Promise<void> {
           (sheet.typ === "matura"
             ? inferDzialMatura(t.tresc, t.numer)
             : "Egzamin ósmoklasisty"),
-        tresc: t.tresc,
-        rozwiazanie: t.rozwiazanie,
+        tresc: t.tekst ?? t.tresc,
         source_id: sid,
       });
       if (error) console.warn(`  ${sid}: ${error.message}`);
@@ -545,6 +621,7 @@ async function main(): Promise<void> {
   const args = process.argv.slice(2);
   if (args.includes("--sync")) return sync();
   if (args.includes("--dzialy")) return fillDzialy(1500);
+  if (args.includes("--teksty")) return fillTranscripts(1500);
   if (args.includes("--gemini")) {
     const d = args.find((a) => a.startsWith("--delay="));
     return fillSolutions(d ? Number(d.split("=")[1]) : 2500);
