@@ -520,7 +520,7 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
     if (only && !sheet.sessionId.includes(only)) continue;
     let changed = false;
     for (const t of sheet.tasks) {
-      if (t.tekstV === 2 || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
+      if (t.tekst || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
       const parts: any[] = [];
       for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
         const abs = path.join(process.cwd(), "public", m[1]);
@@ -620,7 +620,7 @@ async function sync(): Promise<void> {
           (sheet.typ === "matura"
             ? inferDzialMatura(t.tresc, t.numer)
             : "Egzamin ósmoklasisty"),
-        tresc: t.tekstV === 2 && t.tekst ? t.tekst : t.tresc,
+        tresc: t.tekst ?? t.tresc,
         rozwiazanie: t.rozwiazanie,
         source_id: sid,
       });
