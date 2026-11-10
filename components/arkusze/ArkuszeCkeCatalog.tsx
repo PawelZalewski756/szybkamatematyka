@@ -40,7 +40,9 @@ function ArchiveSheetCard({ sheet }: { sheet: ExamArchiveSheetMeta }) {
   const kindLabel =
     officialCkeSheetKind(sheet) === "egzamin-8"
       ? "Egzamin 8-klasisty"
-      : "CKE · podstawowa";
+      : /rozszerzon/i.test(sheet.title)
+        ? "CKE · rozszerzona"
+        : "CKE · podstawowa";
 
   return (
     <Link
@@ -234,14 +236,24 @@ export function ArkuszeCkeCatalog({
   );
 
   const archiveByYear = groupOfficialCkeSheetsByYear(filteredArchive);
-  const archiveMatura = archiveByYear
-    .map((entry) => ({
-      ...entry,
-      sheets: entry.sheets.filter(
-        (sheet) => officialCkeSheetKind(sheet) === "matura",
-      ),
+  const maturaSections = [
+    { key: "p", label: "Matura podstawowa", rozszerzona: false },
+    { key: "r", label: "Matura rozszerzona", rozszerzona: true },
+  ]
+    .map((section) => ({
+      ...section,
+      years: archiveByYear
+        .map((entry) => ({
+          ...entry,
+          sheets: entry.sheets.filter(
+            (sheet) =>
+              officialCkeSheetKind(sheet) === "matura" &&
+              /rozszerzon/i.test(sheet.title) === section.rozszerzona,
+          ),
+        }))
+        .filter((entry) => entry.sheets.length > 0),
     }))
-    .filter((entry) => entry.sheets.length > 0);
+    .filter((section) => section.years.length > 0);
   const archiveE8 = archiveByYear
     .map((entry) => ({
       ...entry,
@@ -334,21 +346,21 @@ export function ArkuszeCkeCatalog({
         </div>
       )}
 
-      {archiveMatura.length > 0 && (
-        <section className="mt-8">
+      {maturaSections.map((section) => (
+        <section key={section.key} className="mt-8">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-5 w-5 text-accent" aria-hidden />
             <div>
               <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
-                Matura CKE - oficjalne sesje
+                {section.label} - oficjalne sesje CKE
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Poziom podstawowy, od najnowszych sesji.
+                Od najnowszych sesji.
               </p>
             </div>
           </div>
           <div className="mt-6 space-y-8">
-            {archiveMatura.map(({ year, sheets }) => (
+            {section.years.map(({ year, sheets }) => (
               <div key={year}>
                 <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
                   Rok {year}
@@ -362,7 +374,7 @@ export function ArkuszeCkeCatalog({
             ))}
           </div>
         </section>
-      )}
+      ))}
 
       {archiveE8.length > 0 && (
         <section className="mt-8">

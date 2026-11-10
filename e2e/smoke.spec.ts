@@ -560,19 +560,19 @@ test.describe("Smoke", () => {
     ).toHaveCount(0);
     await expect(page.locator('a[href*="egzaminy.gov.pl"]')).toHaveCount(0);
     await expect(
-      page.getByRole("heading", { name: /Matura CKE/ }),
+      page.getByRole("heading", { name: /Matura podstawowa/ }),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: /Matura - maj 2025/ }),
+      page.getByRole("link", { name: /Matura - maj 2025/ }).first(),
     ).toBeVisible();
     await expect(
-      page.getByRole("link", { name: /Matura - maj 2025/ }),
+      page.getByRole("link", { name: /Matura - maj 2025/ }).first(),
     ).toHaveAttribute("href", "/trening/arkusze/arkusz-m25-maj");
     await expect(page.getByText("Brak arkuszy")).toHaveCount(0);
     await expect(page.getByText("TypeError")).toHaveCount(0);
-    await page.getByRole("link", { name: /Matura - maj 2025/ }).click();
+    await page.getByRole("link", { name: /Matura - maj 2025/ }).first().click();
     await expect(
-      page.getByRole("heading", { name: /Matura - maj 2025/ }),
+      page.getByRole("heading", { name: /Matura - maj 2025/ }).first(),
     ).toBeVisible();
   });
 });
