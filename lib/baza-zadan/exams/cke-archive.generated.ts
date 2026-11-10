@@ -21914,14 +21914,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2026-maj/z01-1.png)",
+    "prompt": "Test z matematyki składa się z 40 zadań. Na diagramie przedstawiono procentowy podział liczby zadań w teście na zadania z pięciu działów: algebry, planimetrii, stereometrii, arytmetyki, statystyki.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z01-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba zadań z arytmetyki w tym teście jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21947,7 +21947,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2026-maj/z02-1.png)",
+    "prompt": "Ola otwiera swoją szafkę za pomocą czterocyfrowego kodu $YXXY$, gdzie $X$ jest największym wspólnym dzielnikiem liczb $18$ i $27$, a $Y$ jest najmniejszą wspólną wielokrotnością liczb $2$ i $4$.\n\nJaki jest kod do otwarcia szafki Oli? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21973,7 +21973,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2026-maj/z03-1.png)",
+    "prompt": "Dane są cztery liczby:\n\n$w = \\sqrt{100 - 64} - 2$\n$x = 12 - \\sqrt{64 + 36}$\n$y = \\sqrt{25 - 16} - 3$\n$z = 7 - \\sqrt{9 + 16}$\n\nKtóra z tych liczb jest równa 0? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21992,14 +21992,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 4",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2026-maj/z04-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $2^5 \\cdot 3 \\cdot 3^4 \\cdot 2^3$ jest równa wartości wyrażenia\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22025,7 +22025,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2026-maj/z05-1.png)",
+    "prompt": "W pewnej hodowli rasowy kocur kosztuje $x$ złotych, a rasowa kotka kosztuje $y$ złotych.\nJanek kupił z tej hodowli rasowego kocura ze zniżką 40% oraz rasową kotkę ze zniżką 20%.\n\nKtóre wyrażenie poprawnie opisuje, ile złotych zapłacił Janek za te koty?\nWybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22051,7 +22051,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2026-maj/z06-1.png)",
+    "prompt": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od 1 do 11. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nPo losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami:\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22077,7 +22077,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2026-maj/z07-1.png)",
+    "prompt": "Do 10 pustych koszy włożono jabłka i pomarańcze, łącznie 400 sztuk tych owoców. W każdym koszu łączna liczba owoców jest taka sama oraz w każdym koszu liczba jabłek jest o 6 większa od liczby pomarańczy.\n\nIle sztuk jabłek jest łącznie w tych 10 koszach? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22103,7 +22103,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2026-maj/z08-1.png)",
+    "prompt": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2}n(n+1)$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa \n\n![Rysunek 1](/cke-matura/e8-2026-maj/z08-fig1.svg)\n\n.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22122,14 +22122,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 9",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2026-maj/z09-1.png)",
+    "prompt": "Średnia arytmetyczna dwóch liczb $x$ i $y$ jest równa 4, a średnia arytmetyczna trzech liczb $x$, $y$, $z$ jest równa 5.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $z$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22148,14 +22148,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 10",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2026-maj/z10-1.png)",
+    "prompt": "Dany jest trójkąt równoboczny o boku długości 2 cm.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Wysokość tego trójkąta jest równa $\\sqrt{3}$ cm. $|P|$ F |\n| Pole tego trójkąta jest równe $\\sqrt{3}$ cm$^2$. $|P|$ F |\n\nPRZENIEŚ ROZWIĄZANIA ZADAŃ NA KARTĘ ODPOWIEDZI!!",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22181,7 +22181,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2026-maj/z11-1.png)",
+    "prompt": "Kąty wewnętrzne czworokąta oznaczono: $\\alpha, \\beta, \\gamma$ oraz $\\delta$. Miara kąta $\\beta$ jest o $70^\\circ$ większa od miary kąta $\\alpha$, miara kąta $\\gamma$ jest dwukrotnie większa od miary kąta $\\alpha$.\nKąt $\\delta$ jest kątem prostym.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta $\\beta$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22207,7 +22207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2026-maj/z12-1.png)",
+    "prompt": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z12-fig1.svg)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej. | | |\n| Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km. | | |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22226,14 +22226,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 13",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2026-maj/z13-1.png)",
+    "prompt": "Przekątna $AD$ dzieli pięciokąt $ABCDE$ na trójkąt $ADE$ i na kwadrat $ABCD$ (zobacz rysunek). Pole trójkąta $ADE$ jest równe 28, a wysokość poprowadzona z wierzchołka $E$ na bok $AD$ jest równa 7.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z13-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole kwadratu $ABCD$ jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22252,14 +22252,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 14",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2026-maj/z14-1.png)",
+    "prompt": "Trzy jednakowe sześciany o krawędzi $d$ługości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z14-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22285,7 +22285,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2026-maj/z15-1.png)",
+    "prompt": "Do wykonania origami Ela przygotowała łącznie 160 kartek. Każda z tych kartek była w jednym z czterech kolorów: białym, niebieskim, zielonym lub czerwonym. Kartek białych było 37. Kartek niebieskich było 1,5 raza więcej niż czerwonych, a kartek zielonych było o 10 mniej niż czerwonych.\n\nOblicz, ile kartek niebieskich przygotowała Ela. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22304,14 +22304,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 16",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2026-maj/z16-1.png)",
+    "prompt": "Z Polanki do Dębiny prowadzi jedna droga przez Jodłowo i ma długość 123 km.\nDroga z Polanki do Jodłowa ma długość 48 km i samochód przejechał ją w czasie 40 minut.\nDrogę z Jodłowa do Dębiny ten sam samochód pokonał z taką samą prędkością, jak drogę z Polanki do Jodłowa.\n\nUzasadnij, że przejazd tego samochodu z Jodłowa do Dębiny trwał dłużej niż godzinę.\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22330,14 +22330,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z17",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 17",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2026-maj/z17-1.png)",
+    "prompt": "Podczas Dnia Sportu w pewnej szkole rozegrano trzy turnieje sportowe. Każde dziecko, które było uczestnikiem tego Dnia Sportu, wzięło udział w dokładnie jednym turnieju sportowym. W tabeli podano informacje dotyczące liczby dzieci biorących udział w poszczególnych turniejach. Łączna liczba dziewcząt była o 8 większa od łącznej liczby chłopców uczestniczących w tym Dniu Sportu.\n\n| | Turniej piłki nożnej | Turniej tańca | Turniej tenisa stołowego |\n|---|---|---|---|\n| Liczba dziewcząt | 15 | 65 | ? |\n| Liczba chłopców | 46 | 16 | 34 |\n\nOblicz, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22356,14 +22356,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z18",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 18",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2026-maj/z18-1.png)",
+    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z18-fig1.svg)\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22389,7 +22389,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2026-maj/z19-1.png)",
+    "prompt": "Ogródek pani Anny ma kształt trapezu, którego podstawy mają długości 18 m i 12m, a wysokość jest równa 9m. Pani Anna chce zmienić swój ogródek w łąkę kwietną. Jedno opakowanie z nasionami wybrane przez panią Annę wystarcza na obsianie 25 $m^{2}$ powierzchni i kosztuje 23,80 zł.\n\nOblicz, ile złotych musi zapłacić pani Anna za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni tego ogródka. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22408,14 +22408,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2026-maj-z20",
     "title": "Egzamin ósmoklasisty - maj 2026 - zad. 20",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/e8-2026-maj/z20-1.png)",
+    "prompt": "Z kartonu wycięto prostokąt $ABCD$ o wymiarach $3$ i $9$ (zobacz rysunek 1.). Następnie ten prostokąt rozcięto na dwie figury: trapez prostokątny oraz trójkąt prostokątny równoramienny. Z tych figur złożono równoległobok $KLMN$, który nie jest prostokątem (zobacz rysunek 2.).\n\nOblicz obwód równoległoboku $KLMN$. Zapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z20-fig1.svg)\n\n![Rysunek 2](/cke-matura/e8-2026-maj/z20-fig2.svg)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23240,14 +23240,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z01",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 1",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mp-2026-maj/z01-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\sqrt{\\frac{25}{8}} \\cdot \\sqrt{2} + 2^{-1}$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23266,14 +23266,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z02",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 2",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mp-2026-maj/z02-1.png)",
+    "prompt": "Klient wpłacił do banku 10000 zł na lokatę dwuletnią. Po każdym rocznym okresie oszczędzania bank dolicza odsetki w wysokości 6% od kwoty bieżącego kapitału znajdującego się na lokacie - zgodnie z procentem składanym.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPo dwóch latach oszczędzania łączna wartość doliczonych odsetek na tej lokacie (bez uwzględniania podatków) jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23299,7 +23299,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mp-2026-maj/z03-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\sqrt{5\\sqrt{5}}$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23318,14 +23318,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z04",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 4",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mp-2026-maj/z04-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\log_8 4 - \\log_8 32$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23351,7 +23351,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mp-2026-maj/z05-1.png)",
+    "prompt": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest podzielna przez 20. | | |\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest w zapisie dziesiętnym liczbą 25-cyfrową. | | |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23377,7 +23377,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mp-2026-maj/z06-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $x^2 + 10x + 25$ dla $x = \\sqrt{2} - 5$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23403,7 +23403,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mp-2026-maj/z07-1.png)",
+    "prompt": "Wykaz, ze dla kazdej liczby calkowitej $n$ liczba $7n^2 + 21n$ jest podzielna przez 14.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23422,14 +23422,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z08",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 8",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mp-2026-maj/z08-1.png)",
+    "prompt": "Dane jest równanie\n\n$3(x+3)(x-m)(2x+4)=0$\n\ngdzie $x$ jest niewiadomą, natomiast $m$ jest pewną liczbą rzeczywistą.\n\nSuma wszystkich rozwiązań tego równania jest równa $0$.\n\n**Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.**\n\nLiczba $m$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23448,14 +23448,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z09",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 9",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mp-2026-maj/z09-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiązaniem równania\n$ \\frac{x+2}{3x-1} = \\frac{2}{5} $\njest liczba\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23481,7 +23481,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mp-2026-maj/z10-1.png)",
+    "prompt": "Rozwiąż nierówność\n$3x^2 + 4x \\ge 6x + 8$\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23507,7 +23507,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mp-2026-maj/z11-1.png)",
+    "prompt": "Na przedstawienie w pewnym teatrze sprzedawano bilety według poniższego cennika.\n\n| CENNIK BILETÓW |\n|---|---|\n| Rodzaj biletu | Cena w złotych |\n| Normalny | 35 |\n$|Ulgowy|$ 25 |\n\nNa to przedstawienie sprzedano łącznie 200 biletów.\n\nPo opłaceniu kosztów związanych z organizacją przedstawienia w wysokości 25% wpływów ze sprzedaży biletów organizatorom pozostało 4665 zł.\n\nOblicz liczbę biletów ulgowych sprzedanych na to przedstawienie. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23526,14 +23526,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z12",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 12",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mp-2026-maj/z12-1.png)",
+    "prompt": "Funkcja $f$ jest określona następująco:\n$$ f(x) = \\begin{cases} x+2 & \\text{dla } x \\in [-4,2] \\\\ -x+5 & \\text{dla } x \\in (2,5) \\end{cases} $$\n\nWykres funkcji $y = f(x)$ przedstawiono w kartezjańskim układzie współrzędnych $(x,y)$ na rysunku poniżej.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z12-fig1.svg)\n\nUzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania były prawdziwe.\n\n1. Rozwiązaniem równania $f(x) = 3$ jest liczba ..........\n\n2. Największa wartość funkcji $f$ w przedziale $[2, 3]$ jest równa ..........",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23552,14 +23552,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z13",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 13",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mp-2026-maj/z13-1.png)",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. $|P|$ F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. $|P|$ F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23578,14 +23578,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z14",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 14",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mp-2026-maj/z14-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x, y)$ wykresem funkcji kwadratowej $f$ jest parabola o wierzchołku w punkcie $W = (3, -2)$.\nFunkcja kwadratowa $g$ jest określona za pomocą funkcji $f$ wzorem $g(x) = f(x + 1)$.\nJednym z miejsc zerowych funkcji $g$ jest liczba $0$.\n\nWyznacz wzór funkcji $f$ w postaci ogólnej. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23604,14 +23604,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z15",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 15",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mp-2026-maj/z15-1.png)",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n = 3n + 5$ dla każdej liczby naturalnej $n \\geq 1$.\n\nTrzywyrazowy ciąg $(a_1, a_9, a_k)$ jest geometryczny.\n\nOblicz $k$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23630,14 +23630,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z16",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 16",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mp-2026-maj/z16-1.png)",
+    "prompt": "Ciąg arytmetyczny $(a_n)$ jest określony dla każdej liczby naturalnej $n \\ge 1$.\nW tym ciągu $a_1 = 1$ oraz $a_5 = 17$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDziewiąty wyraz ciągu $(a_n)$ jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23656,14 +23656,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z17",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 17",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/mp-2026-maj/z17-1.png)",
+    "prompt": "Ciąg geometryczny $(a_n)$ jest określony dla każdej liczby naturalnej $n \\geq 1$.\nWyrazy trzeci i szósty tego ciągu spełniają warunek $a_3 \\cdot a_6 = 18$.\n\nUzupełnij zdanie. Wpisz odpowiednią liczbę w wykropkowanym miejscu, aby zdanie było prawdziwe.\n\nIloczyn $a_2 \\cdot a_7$ jest równy .......... .",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23682,14 +23682,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z18",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 18",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/mp-2026-maj/z18-1.png)",
+    "prompt": "Dany jest trójkąt prostokątny $ABC$, w którym bok $AC$ jest przeciwprostokątną oraz $|BC|=2$ i $|AC|=2\\sqrt{10}$. Oznaczmy kąt $BCA$ przez $\\gamma$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z18-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSinus kąta $\\gamma$ jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23715,7 +23715,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/mp-2026-maj/z19-1.png)",
+    "prompt": "Punkty A, B, C oraz D leżą na okręgu o środku w punkcie O.\nPunkt B leży na krótszym łuku AC.\nKąt $CDA$ ma miarę $50^\\circ$, $a_{k}$ąt $COB$ ma miarę $30^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z19-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta ostrego $BOA$ jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23741,7 +23741,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/mp-2026-maj/z20-1.png)",
+    "prompt": "Na płaszczyźnie dane są cztery proste: $k, l, m$ oraz $n$. Proste $k$ oraz $l$ są równoległe.\nProsta $m$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $A$ oraz $C$.\nProsta $n$ przecina proste $k$ oraz $l$ w punktach - odpowiednio - $D$ oraz $B$.\nOdcinki $AC$ i $BD$ przecinają się w punkcie $O$.\nPonadto $|OA|=12$, $|OB|=6$ oraz $|OC|=8$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z20-fig1.svg)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOdcinek $OD$ ma długość\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23760,14 +23760,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z21",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 21",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/mp-2026-maj/z21-1.png)",
+    "prompt": "Dany jest trójkąt $KLM$, w którym $|KM| = a$ oraz $|LM| = b$.\nDwusieczna kąta $LMK$ przecina bok $KL$ w punkcie $N$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z21-fig1.svg)\n\nWykaz, że stosunek pola trójkąta $KNM$ do pola trójkąta $NLM$ jest równy $\\frac{a}{b}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23786,14 +23786,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z22",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 22",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 22](/cke-matura/mp-2026-maj/z22-1.png)",
+    "prompt": "W okrąg $O$ o promieniu $9\\sqrt{3}$ wpisano trójkąt równoboczny $T$.\n\nUzupełnij zdanie. Wpisz odpowiednią liczbę w wykropkowanym miejscu, aby zdanie było prawdziwe.\n\nBok trójkąta $T$ ma długość ..........",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23812,14 +23812,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z23",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 23",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 23](/cke-matura/mp-2026-maj/z23-1.png)",
+    "prompt": "Kąt $\\alpha$ jest ostry i spełnia warunek $\\frac{3 \\sin \\alpha + 4 \\cos \\alpha}{4 \\cos \\alpha} = 6$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nTangens kąta $\\alpha$ jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23838,14 +23838,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z24",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 24",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 24](/cke-matura/mp-2026-maj/z24-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ punkty $A = (0,-3)$, $B = (2,1)$ oraz $C = (0,2)$ są wierzchołkami trójkąta prostokątnego.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole trójkąta $ABC$ jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23864,14 +23864,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z25",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 25",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 25](/cke-matura/mp-2026-maj/z25-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x, y)$ dany jest okrąg $O$ o środku w punkcie $S=(1, -3)$ i o promieniu 5.\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|:----------------------------------------------------|:--|:--|\n| Punkt $A = (4, -7)$ leży na okręgu $O$. | | |\n| Okrąg $O$ jest określony równaniem $(x - 1)^2 + (y + 3)^2 = 5$. | | |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23890,14 +23890,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z26",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 26",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 26](/cke-matura/mp-2026-maj/z26-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ dana jest prosta $k$ o równaniu $y = -\\frac{1}{3}x + 2$. Prosta $l$ jest równoległa do prostej $k$ i przechodzi przez punkt $(2, -2)$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProsta $l$ przecina oś $Oy$ w punkcie\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23916,14 +23916,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z27",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 27",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 27](/cke-matura/mp-2026-maj/z27-1.png)",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny, w którym przekątna podstawy ma długość $8\\sqrt{3}$. Krawędź boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$.\n\nOblicz objętość tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23949,7 +23949,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 28](/cke-matura/mp-2026-maj/z28-1.png)",
+    "prompt": "Stożek i walec mają równe wysokości. Promień podstawy stożka jest dwa razy większy od promienia podstawy walca.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nStosunek objętości stożka do objętości walca jest równy\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23975,7 +23975,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 29](/cke-matura/mp-2026-maj/z29-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich liczb naturalnych trzycyfrowych nieparzystych, w których zapisie dziesiętnym występują tylko cyfry $0, 1, 2, 3, 4, 5, 6$ (np.: $321, 555$), jest\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24001,7 +24001,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 30](/cke-matura/mp-2026-maj/z30-1.png)",
+    "prompt": "Dane są dwa zbiory cyfr: $X = \\{1, 3, 5, 7, 9\\}$ oraz $Y = \\{0, 2, 4, 6, 8\\}$.\n\nLosujemy jedną cyfrę ze zbioru $X$, a następnie losujemy jedną cyfrę ze zbioru $Y$.\n\nNastępnie zapisujemy liczbę dwucyfrową w ten sposób, że cyfra wylosowana ze zbioru $X$ jest cyfrą dziesiątek, a cyfra wylosowana ze zbioru $Y$ jest cyfrą jedności tej liczby dwucyfrowej.\n\nOblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że otrzymana w ten sposób liczba dwucyfrowa będzie podzielna przez 6. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24020,14 +24020,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z31",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 31",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 31](/cke-matura/mp-2026-maj/z31-1.png)",
+    "prompt": "Nauczyciel matematyki po każdym sprawdzianie porównuje wyniki uzyskane przez uczniów dwóch klas: klasy IV A oraz klasy IV B. Na dwóch poniższych diagramach przedstawiono wyniki sprawdzianu ze statystyki, jakie uzyskali uczniowie tych klas. Na osiach poziomych podano oceny, które uzyskali uczniowie tych klas, a na osiach pionowych podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z31-fig1.svg)\n\n![Rysunek 2](/cke-matura/mp-2026-maj/z31-fig2.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie $|P|$ F |\n| :----------- | :-: | :-: |\n| Średnia arytmetyczna ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa średniej arytmetycznej ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. | | |\n| Mediana ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa medianie ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. | | |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24046,14 +24046,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2026-maj-z32",
     "title": "Matura - maj 2026 - poziom podstawowy - zad. 32",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 32](/cke-matura/mp-2026-maj/z32-1.png)",
+    "prompt": "Średnia arytmetyczna trzech liczb: $a$, $b$, $c$, jest równa 2.\n\nŚrednia arytmetyczna czterech liczb: $d$, $e$, $f$, $g$, jest równa 5,5.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nŚrednia arytmetyczna siedmiu liczb: $a$, $b$, $c$, $d$, $e$, $f$, $g$, jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24079,7 +24079,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 33](/cke-matura/mp-2026-maj/z33-1.png)",
+    "prompt": "W chwili $t = 0$ z poziomu ziemi wyrzucono piłeczkę pionowo do góry.\nPrzyjmijmy, że wysokość $h$, na której znajduje się piłeczka w danej chwili $t$, jest określona wzorem\n\n$h(t) = -4,9t^2 + 14,7t$\n\ngdzie:\n- czas $t$ jest wyrażony w sekundach (s) i zmienia się od $0$ do chwili pierwszego uderzenia piłeczki o ziemię\n- wysokość $h$ jest wyrażona w metrach i jest liczona względem poziomu ziemi.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nWyrzucona piłeczka po raz pierwszy uderzy w ziemię w chwili\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28258,14 +28258,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z01",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2026-maj/z01-1.png)",
+    "prompt": "Oblicz granicę\n\n$$ \\lim_{n \\to +\\infty} \\frac{\\binom{n+2}{n-1}}{\\frac{1}{2}n^3 - 4n + 7} $$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28291,7 +28291,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2026-maj/z02-1.png)",
+    "prompt": "Ze zbioru ośmiu liczb {1, 2, 3, 4, 5, 6, 7, 8} losujemy bez zwracania osiem razy po jednej liczbie. Wylosowane liczby ustawiamy w ciąg zgodnie z kolejnością losowania.\n\nOblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że wylosowane liczby utworzą ciąg, w którym iloczyn każdych trzech kolejnych wyrazów będzie liczbą podzielną przez 3. Wynik podaj w postaci nieskracalnego ułamka zwykłego. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28317,7 +28317,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2026-maj/z03-1.png)",
+    "prompt": "Wykaż, że dla każdej dodatniej liczby rzeczywistej $x$ i dla każdej dodatniej liczby rzeczywistej $y$ prawdziwa jest nierówność\n\n$$ \\frac{1}{x} + \\frac{1}{y} \\leq \\frac{x}{y^2} + \\frac{y}{x^2} $$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28343,7 +28343,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2026-maj/z04-1.png)",
+    "prompt": "Punkty $K$ i $L$ są środkami - odpowiednio - boków $AB$ i $BC$ kwadratu $ABCD$ o boku długości $a$. Punkt $M$ jest takim punktem na boku $BC$, że odcinki $DK$ i $KM$ są prostopadłe. Odcinek $AL$ przecina odcinki $DK$ oraz $DM$ w punktach - odpowiednio - $P$ oraz $Q$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z04-fig1.svg)\n\nWykaż, że $|PQ| = \\frac{\\sqrt{5}}{5}a$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28369,7 +28369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2026-maj/z05-1.png)",
+    "prompt": "Rozwiąż nierówność\n\n$|2x - 6| - |x^2 - 9| < 0$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28388,14 +28388,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z06",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 6",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2026-maj/z06-1.png)",
+    "prompt": "Dany jest ciąg arytmetyczny $(a_n)$ o skończonej liczbie wyrazów. Liczba wyrazów tego ciągu jest większa od 6. Pierwszy wyraz tego ciągu jest równy 1, a ostatni wyraz tego ciągu jest równy $(-2025)$. Drugi, trzeci i szósty wyraz tego ciągu tworzą - w podanej kolejności - ciąg geometryczny.\n\nOblicz sumę wszystkich wyrazów ciągu $(a_n)$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28414,14 +28414,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z07",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2026-maj/z07-1.png)",
+    "prompt": "Rozwiąż równanie\n\n$\\sin(6x) - 2 \\sin(2x) = 0$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28440,14 +28440,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z08",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 8",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2026-maj/z08-1.png)",
+    "prompt": "W ostroslupie prawidlowym trójkątnym $ABCS$ podstawa $ABC$ jest trójkątem równobocznym. Dlugosc okregu opisanego na podstawie $ABC$ jest równa $6\\sqrt{2}\\pi$, a cosinus kąta między krawędziami bocznymi $SB$ i $SC$ jest równy $\\frac{5}{9}$.\n\nOblicz dlugosc krawedzi podstawy $ABC$ oraz cosinus kąta między scianami bocznymi $SAC$ i $SBC$ tego ostroslupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28466,14 +28466,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z09",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2026-maj/z09-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ punkty $A = (1,-1)$ oraz $B = (4,0)$ są wierzchołkami trójkąta $ABC$, w którym $|CA| = |CB|$. Jedno z ramion trójkąta $ABC$ zawiera się w prostej o równaniu $x + 2y - 4 = 0$. Na boku $AC$ tego trójkąta obrano taki punkt $M$, że $|AM| : |MC| = 1 : 4$.\n\nWyznacz równanie okręgu, który ma środek w punkcie $M$ i przechodzi przez punkt $C$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28492,14 +28492,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2026-maj-z10",
     "title": "Matura - maj 2026 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2026-maj/z10-1.png)",
+    "prompt": "Wyznacz wszystkie rzeczywiste wartości parametru $m$, gdzie $m \\neq 0$, dla których funkcja kwadratowa $f$ określona wzorem\n\n$f(x) = m^2 \\cdot x^2 - 2mx - m + 1$\n\nma dwa różne miejsca zerowe $x_1$ oraz $x_2$ należące do przedziału $(-2, 2)$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28551,7 +28551,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2026-maj/z12-1.png)",
+    "prompt": "W projekcie ogrodu zaplanowano kwietnik w kształcie trójkąta równoramiennego o podstawie długości $x$ metrów nieprzekraczającej 10 metrów. Na tym kwietniku ma znajdować się fontanna w kształcie koła o średnicy 4 metrów, które ma być styczne do każdego z boków trójkątnego kwietnika (zobacz rysunek). Projektantowi zależy, aby przy tak ustalonej wielkości fontanny pole tego kwietnika było najmniejsze.\n\n![Rysunek 1](/cke-matura/mr-2026-maj/z12-fig1.svg)\n\nWykaż, że pole $P$ (wyrażone w metrach kwadratowych) trójkątnego kwietnika o podstawie długości $x$ metrów jest określone wzorem\n$P(x) = \\frac{2x^3}{x^2 - 16}$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
