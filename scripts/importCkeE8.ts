@@ -22,6 +22,8 @@ import {
 import { CKE_MATURA_R_SESSIONS } from "../lib/baza-zadan/cke/matura-rozszerzona-sessions";
 import { CKE_MATURA_P_SESSIONS } from "../lib/baza-zadan/cke/matura-podstawowa-cke-sessions";
 import { isSolutionPlaceholder } from "../lib/baza-zadan/solution-content";
+import { DZIALY_MATEMATYKI } from "../lib/baza-zadan/dzialy";
+import { inferDzialMatura } from "../lib/baza-zadan/cke/parse-matura-page";
 
 dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
 
@@ -436,6 +438,59 @@ async function fillSolutions(delayMs: number): Promise<void> {
   }
 }
 
+async function fillDzialy(delayMs: number): Promise<void> {
+  const apiKey = process.env.GEMINI_API_KEY?.trim();
+  if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
+  const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
+    model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
+    systemInstruction: `Klasyfikujesz zadania z egzaminow z matematyki. Na podstawie obrazu zadania wybierz JEDEN dzial z listy: ${DZIALY_MATEMATYKI.join(", ")}. Odpowiedz wylacznie nazwa dzialu z listy, dokladnie tak jak zapisano.`,
+  });
+
+  for (const sheet of loadSheets()) {
+    let changed = false;
+    for (const t of sheet.tasks) {
+      if (t.dzial && (DZIALY_MATEMATYKI as readonly string[]).includes(t.dzial)) {
+        continue;
+      }
+      const parts: any[] = [];
+      for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+        const abs = path.join(process.cwd(), "public", m[1]);
+        if (!fs.existsSync(abs)) continue;
+        parts.push({
+          inlineData: {
+            mimeType: "image/png",
+            data: fs.readFileSync(abs).toString("base64"),
+          },
+        });
+      }
+      parts.push({ text: `Tresc: ${t.tresc.replace(/!\[[^\]]*\]\([^)]+\)/g, "")}\nDzial?` });
+      try {
+        const res = await model.generateContent(parts);
+        const answer = res.response.text().trim().replace(/[.\s]+$/g, "");
+        const found = DZIALY_MATEMATYKI.find(
+          (d) => d.toLowerCase() === answer.toLowerCase(),
+        );
+        if (found) {
+          t.dzial = found;
+          changed = true;
+          console.log(`  ${sheet.sessionId} zad. ${t.numer}: ${found}`);
+        }
+      } catch (e) {
+        console.warn(`  ${sheet.sessionId} zad. ${t.numer}: ${(e as Error).message}`);
+      }
+      await new Promise((r) => setTimeout(r, delayMs));
+    }
+    if (changed) {
+      fs.writeFileSync(
+        path.join(CACHE_DIR, `${sheet.sessionId}.json`),
+        JSON.stringify(sheet, null, 2),
+        "utf8",
+      );
+      console.log(`✓ ${sheet.sessionId} dzialy zapisane`);
+    }
+  }
+}
+
 async function sync(): Promise<void> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const key =
@@ -471,7 +526,11 @@ async function sync(): Promise<void> {
       const { error } = await supabase.from("zadania").insert({
         arkusz_id: arkuszId,
         numer_zadania: t.numer,
-        dzial: t.dzial ?? "Egzamin ósmoklasisty",
+        dzial:
+          t.dzial ??
+          (sheet.typ === "matura"
+            ? inferDzialMatura(t.tresc, t.numer)
+            : "Egzamin ósmoklasisty"),
         tresc: t.tresc,
         rozwiazanie: t.rozwiazanie,
         source_id: sid,
@@ -485,6 +544,7 @@ async function sync(): Promise<void> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   if (args.includes("--sync")) return sync();
+  if (args.includes("--dzialy")) return fillDzialy(1500);
   if (args.includes("--gemini")) {
     const d = args.find((a) => a.startsWith("--delay="));
     return fillSolutions(d ? Number(d.split("=")[1]) : 2500);
