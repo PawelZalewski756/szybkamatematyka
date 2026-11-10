@@ -492,7 +492,7 @@ async function fillDzialy(delayMs: number): Promise<void> {
   }
 }
 
-async function fillTranscripts(delayMs: number): Promise<void> {
+async function fillTranscripts(delayMs: number, only?: string): Promise<void> {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
   const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
@@ -510,6 +510,7 @@ Zasady dla "rysunki": tablica napisow SVG, po jednym na znacznik, wierna orygina
   });
 
   for (const sheet of loadSheets()) {
+    if (only && !sheet.sessionId.includes(only)) continue;
     let changed = false;
     for (const t of sheet.tasks) {
       if (t.tekst || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
@@ -621,7 +622,10 @@ async function main(): Promise<void> {
   const args = process.argv.slice(2);
   if (args.includes("--sync")) return sync();
   if (args.includes("--dzialy")) return fillDzialy(1500);
-  if (args.includes("--teksty")) return fillTranscripts(1500);
+  if (args.includes("--teksty")) {
+    const o = args.find((a) => a.startsWith("--only="))?.split("=")[1];
+    return fillTranscripts(1500, o);
+  }
   if (args.includes("--gemini")) {
     const d = args.find((a) => a.startsWith("--delay="));
     return fillSolutions(d ? Number(d.split("=")[1]) : 2500);
