@@ -463,3 +463,7 @@ body {
     animation-iteration-count: infinite !important;
   }
 }
+
+/* Rysunki CKE: ciemny wariant domyslnie, oryginal w jasnym motywie. */
+html[data-theme="light"] .fig-dark { display: none; }
+html[data-theme="light"] .fig-light { display: block; }
