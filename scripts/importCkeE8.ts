@@ -500,7 +500,6 @@ async function fillTranscripts(delayMs: number, only?: string): Promise<void> {
   if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
   const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
     model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
-    generationConfig: { responseMimeType: "application/json" },
     systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Odpowiedz w formacie zwyklego tekstu (NIE JSON, NIE blok kodu), dokladnie tak:
 ===TEKST===
 (tresc zadania)
