@@ -51,7 +51,9 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
   const kindLabel =
     officialCkeSheetKind(sheet) === "egzamin-8"
       ? "Egzamin ósmoklasisty"
-      : "Matura podstawowa";
+      : /rozszerzon/i.test(sheet.title)
+        ? "Matura rozszerzona"
+        : "Matura podstawowa";
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col bg-background">
@@ -82,6 +84,20 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
               Rozpocznij arkusz
             </Link>
           ) : null}
+          <div className="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
+            <Link
+              href={`/trening/arkusze/${sheet.id}/druk`}
+              className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
+            >
+              PDF bez odpowiedzi
+            </Link>
+            <Link
+              href={`/trening/arkusze/${sheet.id}/druk?klucz=1`}
+              className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
+            >
+              PDF z rozwiązaniami na osobnych stronach
+            </Link>
+          </div>
         </header>
 
         <ol className="mt-8 space-y-2">
