@@ -22155,7 +22155,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoboczny o boku długości 2 cm.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Wysokość tego trójkąta jest równa $\\sqrt{3}$ cm. $|P|$ F |\n| Pole tego trójkąta jest równe $\\sqrt{3}$ cm$^2$. $|P|$ F |\n\nPRZENIEŚ ROZWIĄZANIA ZADAŃ NA KARTĘ ODPOWIEDZI!!",
+    "prompt": "Dany jest trójkąt równoboczny o boku długości 2 cm.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Wysokość tego trójkąta jest równa $\\sqrt{3}$ cm. | P | F |\n| Pole tego trójkąta jest równe $\\sqrt{3}$ cm$^2$. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22207,7 +22207,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z12-fig1.svg)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej. | | |\n| Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km. | | |",
+    "prompt": "Na kartce w kratkę Jurek wykonał rysunek. Na tym rysunku punkty $M, W, S$ oznaczają położenia odpowiednio: muzeum, wieży widokowej oraz schroniska. Wieża widokowa znajduje się 3 km na północ i 4 km na zachód od schroniska. Muzeum znajduje się 5 km na wschód od schroniska.\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z12-fig1.svg)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Odległość w linii prostej schroniska od muzeum jest równa odległości w linii prostej schroniska od wieży widokowej. |  |  |\n| Odległość w linii prostej muzeum od wieży widokowej jest mniejsza niż 10 km. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22337,7 +22337,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Podczas Dnia Sportu w pewnej szkole rozegrano trzy turnieje sportowe. Każde dziecko, które było uczestnikiem tego Dnia Sportu, wzięło udział w dokładnie jednym turnieju sportowym. W tabeli podano informacje dotyczące liczby dzieci biorących udział w poszczególnych turniejach. Łączna liczba dziewcząt była o 8 większa od łącznej liczby chłopców uczestniczących w tym Dniu Sportu.\n\n| | Turniej piłki nożnej | Turniej tańca | Turniej tenisa stołowego |\n|---|---|---|---|\n| Liczba dziewcząt | 15 | 65 | ? |\n| Liczba chłopców | 46 | 16 | 34 |\n\nOblicz, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego. Zapisz obliczenia.",
+    "prompt": "Podczas Dnia Sportu w pewnej szkole rozegrano trzy turnieje sportowe. Każde dziecko, które było uczestnikiem tego Dnia Sportu, wzięło udział w dokładnie jednym turnieju sportowym. W tabeli podano informacje dotyczące liczby dzieci biorących udział w poszczególnych turniejach. Łączna liczba dziewcząt była o 8 większa od łącznej liczby chłopców uczestniczących w tym Dniu Sportu.\n\n|  | Turniej piłki nożnej | Turniej tańca | Turniej tenisa stołowego |\n|---|---|---|---|\n| Liczba dziewcząt | 15 | 65 | ? |\n| Liczba chłopców | 46 | 16 | 34 |\n\nOblicz, ile procent liczby wszystkich uczestników Dnia Sportu stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23351,7 +23351,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|---|---|---|\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest podzielna przez 20. | | |\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest w zapisie dziesiętnym liczbą 25-cyfrową. | | |",
+    "prompt": "Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest podzielna przez 20. |  |  |\n| Liczba naturalna $4^{12} \\cdot 5^{24}$ jest w zapisie dziesiętnym liczbą 25-cyfrową. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23507,7 +23507,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na przedstawienie w pewnym teatrze sprzedawano bilety według poniższego cennika.\n\n| CENNIK BILETÓW |\n|---|---|\n| Rodzaj biletu | Cena w złotych |\n| Normalny | 35 |\n$|Ulgowy|$ 25 |\n\nNa to przedstawienie sprzedano łącznie 200 biletów.\n\nPo opłaceniu kosztów związanych z organizacją przedstawienia w wysokości 25% wpływów ze sprzedaży biletów organizatorom pozostało 4665 zł.\n\nOblicz liczbę biletów ulgowych sprzedanych na to przedstawienie. Zapisz obliczenia.",
+    "prompt": "Na przedstawienie w pewnym teatrze sprzedawano bilety według poniższego cennika.\n\n| CENNIK BILETÓW |\n|---|---|\n| Rodzaj biletu | Cena w złotych |\n| Normalny | 35 |\n| Ulgowy | 25 |\n\nNa to przedstawienie sprzedano łącznie 200 biletów.\n\nPo opłaceniu kosztów związanych z organizacją przedstawienia w wysokości 25% wpływów ze sprzedaży biletów organizatorom pozostało 4665 zł.\n\nOblicz liczbę biletów ulgowych sprzedanych na to przedstawienie. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23559,7 +23559,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. $|P|$ F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. $|P|$ F |",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23871,7 +23871,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych $(x, y)$ dany jest okrąg $O$ o środku w punkcie $S=(1, -3)$ i o promieniu 5.\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| $|P|$ F |\n|:----------------------------------------------------|:--|:--|\n| Punkt $A = (4, -7)$ leży na okręgu $O$. | | |\n| Okrąg $O$ jest określony równaniem $(x - 1)^2 + (y + 3)^2 = 5$. | | |",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x, y)$ dany jest okrąg $O$ o środku w punkcie $S=(1, -3)$ i o promieniu 5.\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|:----------------------------------------------------|:--|:--|\n| Punkt $A = (4, -7)$ leży na okręgu $O$. |  |  |\n| Okrąg $O$ jest określony równaniem $(x - 1)^2 + (y + 3)^2 = 5$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24027,7 +24027,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Nauczyciel matematyki po każdym sprawdzianie porównuje wyniki uzyskane przez uczniów dwóch klas: klasy IV A oraz klasy IV B. Na dwóch poniższych diagramach przedstawiono wyniki sprawdzianu ze statystyki, jakie uzyskali uczniowie tych klas. Na osiach poziomych podano oceny, które uzyskali uczniowie tych klas, a na osiach pionowych podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z31-fig1.svg)\n\n![Rysunek 2](/cke-matura/mp-2026-maj/z31-fig2.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie $|P|$ F |\n| :----------- | :-: | :-: |\n| Średnia arytmetyczna ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa średniej arytmetycznej ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. | | |\n| Mediana ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa medianie ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. | | |",
+    "prompt": "Nauczyciel matematyki po każdym sprawdzianie porównuje wyniki uzyskane przez uczniów dwóch klas: klasy IV A oraz klasy IV B. Na dwóch poniższych diagramach przedstawiono wyniki sprawdzianu ze statystyki, jakie uzyskali uczniowie tych klas. Na osiach poziomych podano oceny, które uzyskali uczniowie tych klas, a na osiach pionowych podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z31-fig1.svg)\n\n![Rysunek 2](/cke-matura/mp-2026-maj/z31-fig2.svg)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie | P | F |\n| :----------- | :-: | :-: |\n| Średnia arytmetyczna ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa średniej arytmetycznej ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |\n| Mediana ocen uzyskanych ze sprawdzianu ze statystyki przez uczniów klasy IV A jest równa medianie ocen uzyskanych z tego sprawdzianu przez uczniów klasy IV B. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],

@@ -1,35 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
-  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
-  <g transform="translate(0, 0)">
-    <!-- Pie chart slices - center (180, 200), radius 120 -->
-    <!-- statystyka (20%) - from 330 to 42 degrees -->
-    <path d="M 180 200 L 283.9230484541326 140 A 120 120 0 0 1 269.1729002271295 280.3134371981604 Z" fill="#805ad5" stroke="#1f2937" stroke-width="1"/>
-    <!-- algebra (25%) - from 42 to 132 degrees -->
-    <path d="M 180 200 L 269.1729002271295 280.3134371981604 A 120 120 0 0 1 99.6918882736152 289.1729002271295 Z" fill="#a7d99f" stroke="#1f2937" stroke-width="1"/>
-    <!-- planimetria (15%) - from 132 to 186 degrees -->
-    <path d="M 180 200 L 99.6918882736152 289.1729002271295 A 120 120 0 0 1 60.66012678129032 187.4373406450537 Z" fill="#808080" stroke="#1f2937" stroke-width="1"/>
-    <!-- stereometria (5%) - from 186 to 204 degrees -->
-    <path d="M 180 200 L 60.66012678129032 187.4373406450537 A 120 120 0 0 1 70.57469792015093 151.21886866160868 Z" fill="#facc15" stroke="#1f2937" stroke-width="1"/>
-    <!-- arytmetyka (35%) - from 204 to 330 degrees -->
-    <path d="M 180 200 L 70.57469792015093 151.21886866160868 A 120 120 0 0 1 283.9230484541326 140 Z" fill="#b3cde0" stroke="#1f2937" stroke-width="1"/>
-  </g>
-  <!-- Labels -->
-  <text x="380" y="50" font-family="sans-serif" font-size="16" fill="#1f2937">statystyka</text>
-  <text x="380" y="70" font-family="sans-serif" font-size="16" fill="#1f2937">20%</text>
-  <path d="M 370 70 L 320 100 L 299.3400593006001 212.5626593549463" fill="none" stroke="#1f2937" stroke-width="1"/>
-  
-  <text x="380" y="280" font-family="sans-serif" font-size="16" fill="#1f2937">algebra</text>
-  <text x="380" y="300" font-family="sans-serif" font-size="16" fill="#1f2937">25%</text>
-  <path d="M 370 290 L 300 250 L 186.2766355416345 319.8338902517036" fill="none" stroke="#1f2937" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-39.8 -12.0 454.0 374.0" font-size="14" width="454" height="374"><rect x="-39.8" y="-12.0" width="454.0" height="374.0" rx="8" fill="#ffffff"></rect>
+  <rect x="0" y="0" width="400" height="350" fill="#ffffff"></rect>
 
-  <text x="250" y="350" font-family="sans-serif" font-size="16" fill="#1f2937">planimetria</text>
-  <text x="250" y="370" font-family="sans-serif" font-size="16" fill="#1f2937">15%</text>
-  <path d="M 240 360 L 150 300 L 69.00418318621453 243.90159787140884" fill="none" stroke="#1f2937" stroke-width="1"/>
+  <!-- Pie chart slices - center (200, 170), radius 120 -->
+  <!-- Angles are clockwise from 3 o'clock -->
 
-  <text x="50" y="240" font-family="sans-serif" font-size="16" fill="#1f2937">stereometria</text>
-  <text x="50" y="260" font-family="sans-serif" font-size="16" fill="#1f2937">5%</text>
-  <path d="M 90 250 L 120 200 L 64.1030043812836 169.04368564032115" fill="none" stroke="#1f2937" stroke-width="1"/>
+  <!-- statystyka (20%) - from 330 to 42 degrees -->
+  <path d="M 200 170 L 303.9230484541326 110 A 120 120 0 0 1 289.1729002271295 250.3134371981604 Z" fill="#805ad5" stroke="#1f2937" stroke-width="1"></path>
+  <!-- algebra (25%) - from 42 to 132 degrees -->
+  <path d="M 200 170 L 289.1729002271295 250.3134371981604 A 120 120 0 0 1 110.8270997728705 250.3134371981604 Z" fill="#a7d99f" stroke="#1f2937" stroke-width="1"></path>
+  <!-- planimetria (15%) - from 132 to 186 degrees -->
+  <path d="M 200 170 L 110.8270997728705 250.3134371981604 A 120 120 0 0 1 96.07695154586733 89.6865628018396 Z" fill="#808080" stroke="#1f2937" stroke-width="1"></path>
+  <!-- stereometria (5%) - from 186 to 204 degrees -->
+  <path d="M 200 170 L 96.07695154586733 89.6865628018396 A 120 120 0 0 1 106.90696956795022 68.61868470500732 Z" fill="#facc15" stroke="#1f2937" stroke-width="1"></path>
+  <!-- arytmetyka (35%) - from 204 to 330 degrees -->
+  <path d="M 200 170 L 106.90696956795022 68.61868470500732 A 120 120 0 0 1 303.9230484541326 110 Z" fill="#b3cde0" stroke="#1f2937" stroke-width="1"></path>
 
-  <text x="50" y="100" font-family="sans-serif" font-size="16" fill="#1f2937">arytmetyka</text>
-  <path d="M 90 100 L 130 130 L 173.7233644583655 80.16610974829642" fill="none" stroke="#1f2937" stroke-width="1"/>
+  <!-- Labels and Leader Lines -->
+
+  <!-- Statystyka -->
+  <text x="340" y="70" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start">statystyka</text>
+  <text x="340" y="90" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start">20%</text>
+  <path d="M 319.34 182.54 L 330 100 L 340 63" fill="none" stroke="#1f2937" stroke-width="1"></path>
+
+  <!-- Algebra -->
+  <text x="330" y="280" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start">algebra</text>
+  <text x="330" y="300" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start">25%</text>
+  <path d="M 206.28 289.83 L 280 290 L 330 273" fill="none" stroke="#1f2937" stroke-width="1"></path>
+
+  <!-- Planimetria -->
+  <text x="70" y="300" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end">planimetria</text>
+  <text x="70" y="320" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end">15%</text>
+  <path d="M 87.97 213 L 120 280 L 70 293" fill="none" stroke="#1f2937" stroke-width="1"></path>
+
+  <!-- Stereometria -->
+  <text x="50" y="180" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end">stereometria</text>
+  <text x="50" y="200" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end">5%</text>
+  <path d="M 84.1 138.95 L 60 160 L 50 173" fill="none" stroke="#1f2937" stroke-width="1"></path>
+
+  <!-- Arytmetyka -->
+  <text x="50" y="80" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end">arytmetyka</text>
+  <path d="M 193.72 50.17 L 120 60 L 50 73" fill="none" stroke="#1f2937" stroke-width="1"></path>
 </svg>

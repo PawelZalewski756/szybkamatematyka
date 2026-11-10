@@ -5,6 +5,7 @@ import { slugifyHeading } from "@/lib/trening/theory-content";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
+import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { isValidElement, type ReactNode } from "react";
 
@@ -73,6 +74,21 @@ function markdownComponents(withAnchors: boolean): Components {
       if (!src || typeof src !== "string") return null;
       return <ContentImage src={src} alt={alt ?? ""} />;
     },
+    table: ({ children }) => (
+      <div className="my-3 overflow-x-auto">
+        <table className="w-full border-collapse text-left">{children}</table>
+      </div>
+    ),
+    th: ({ children }) => (
+      <th className="border border-surface-border bg-surface px-3 py-2 text-center font-bold">
+        {children}
+      </th>
+    ),
+    td: ({ children }) => (
+      <td className="border border-surface-border px-3 py-2 align-top">
+        {children}
+      </td>
+    ),
     ...(withAnchors
       ? {
           h2: heading("h2"),
@@ -91,7 +107,7 @@ export function TheoryMarkdown({
   return (
     <div className={VARIANT_CLASS[variant]}>
       <ReactMarkdown
-        remarkPlugins={[remarkMath]}
+        remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]}
         rehypePlugins={[rehypeKatex]}
         components={markdownComponents(withAnchors)}
       >

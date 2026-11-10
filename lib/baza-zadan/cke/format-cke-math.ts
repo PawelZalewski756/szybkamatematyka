@@ -336,7 +336,49 @@ function wrapParenMath(text: string): string {
 /**
  * Główny formatter: HTML junk → Unicode → kompakt OCR → `$...$`.
  */
-export function formatCkeMathText(input: string): string {
+export function formatCkeMathText(rawInput: string): string {
+  if (!rawInput) return "";
+  const input = rawInput
+    .replace(/PRZENIE[ŚS]\s+ROZWI[ĄA]ZANIA\s+ZADA[ŃN]\s+NA\s+KART[ĘE]\s+ODPOWIEDZI!*/gi, "")
+    .trimEnd();
+  if (!input) return "";
+  if (!/^\s*\|.*\|\s*$/m.test(input)) return formatCkeMathLines(input);
+
+  const segments: string[] = [];
+  let text: string[] = [];
+  let table: string[] = [];
+  const flushText = () => {
+    const joined = text.join("\n").trim();
+    if (joined) segments.push(formatCkeMathLines(joined));
+    text = [];
+  };
+  const flushTable = () => {
+    if (table.length > 0) segments.push(table.join("\n"));
+    table = [];
+  };
+  for (const line of input.split("\n")) {
+    if (!/^\s*\|.*\|\s*$/.test(line)) {
+      flushTable();
+      text.push(line);
+      continue;
+    }
+    flushText();
+    if (/^\s*\|[\s:|-]+\|\s*$/.test(line)) {
+      table.push(line.trim());
+      continue;
+    }
+    const cells = line
+      .trim()
+      .replace(/^\||\|$/g, "")
+      .split(/\|(?=(?:[^$]*\$[^$]*\$)*[^$]*$)/);
+    table.push(`| ${cells.map((c) => formatCkeMathLines(c.trim())).join(" | ")} |`);
+  }
+  flushText();
+  flushTable();
+  return segments.join("\n\n");
+}
+
+function formatCkeMathLines(input: string): string {
   if (!input) return "";
 
   let out = cleanCkeTaskMarkup(input);

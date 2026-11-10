@@ -1,69 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -5 13 10" width="400" height="300">
-      <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
-      <style>
-        .grid-line { stroke: #e0e0e0; stroke-width: 0.05; }
-        .main-line { stroke: #1f2937; stroke-width: 0.15; fill: none; }
-        .label { font-family: sans-serif; font-size: 0.8px; fill: #1f2937; text-anchor: middle; dominant-baseline: central; }
-        .point-label { font-family: sans-serif; font-size: 0.8px; fill: #1f2937; text-anchor: middle; dominant-baseline: hanging; }
-        .km-label { font-family: sans-serif; font-size: 0.7px; fill: #1f2937; text-anchor: middle; dominant-baseline: central; }
-      </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12.0 -12.0 424.0 324.0" font-size="14" width="424" height="324"><rect x="-12.0" y="-12.0" width="424.0" height="324.0" rx="8" fill="#ffffff"></rect>
+  <rect x="0" y="0" width="400" height="300" fill="#ffffff" rx="8"></rect>
+  
+  <style>
+    .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+    .main-line { stroke: #1f2937; stroke-width: 3; fill: none; }
+    .label { font-family: sans-serif; font-size: 14px; fill: #1f2937; text-anchor: middle; dominant-baseline: central; }
+    .point-label { font-family: sans-serif; font-size: 14px; fill: #1f2937; text-anchor: middle; dominant-baseline: hanging; }
+    .km-label { font-family: sans-serif; font-size: 14px; fill: #1f2937; }
+  </style>
 
-      <!-- Grid lines -->
-      <!-- Vertical -->
-      <g class="grid-line">
-        <line x1="-5" y1="-5" x2="-5" y2="4"/>
-        <line x1="-4" y1="-5" x2="-4" y2="4"/>
-        <line x1="-3" y1="-5" x2="-3" y2="4"/>
-        <line x1="-2" y1="-5" x2="-2" y2="4"/>
-        <line x1="-1" y1="-5" x2="-1" y2="4"/>
-        <line x1="1" y1="-5" x2="1" y2="4"/>
-        <line x1="2" y1="-5" x2="2" y2="4"/>
-        <line x1="3" y1="-5" x2="3" y2="4"/>
-        <line x1="4" y1="-5" x2="4" y2="4"/>
-        <line x1="5" y1="-5" x2="5" y2="4"/>
-      </g>
-      <!-- Horizontal -->
-      <g class="grid-line">
-        <line x1="-5" y1="-4" x2="6" y2="-4"/>
-        <line x1="-5" y1="-3" x2="6" y2="-3"/>
-        <line x1="-5" y1="-2" x2="6" y2="-2"/>
-        <line x1="-5" y1="-1" x2="6" y2="-1"/>
-        <line x1="-5" y1="1" x2="6" y2="1"/>
-        <line x1="-5" y1="2" x2="6" y2="2"/>
-        <line x1="-5" y1="3" x2="6" y2="3"/>
-      </g>
+  <!-- Grid lines -->
+  <g class="grid-line">
+    <!-- Vertical -->
+    <line x1="90" y1="60" x2="90" y2="240"></line>
+    <line x1="110" y1="60" x2="110" y2="240"></line>
+    <line x1="130" y1="60" x2="130" y2="240"></line>
+    <line x1="150" y1="60" x2="150" y2="240"></line>
+    <line x1="170" y1="60" x2="170" y2="240"></line>
+    <line x1="190" y1="60" x2="190" y2="240"></line>
+    <line x1="210" y1="60" x2="210" y2="240"></line>
+    <line x1="230" y1="60" x2="230" y2="240"></line>
+    <line x1="250" y1="60" x2="250" y2="240"></line>
+    <line x1="270" y1="60" x2="270" y2="240"></line>
+    <line x1="290" y1="60" x2="290" y2="240"></line>
+    <line x1="310" y1="60" x2="310" y2="240"></line>
+    <!-- Horizontal -->
+    <line x1="90" y1="60" x2="310" y2="60"></line>
+    <line x1="90" y1="80" x2="310" y2="80"></line>
+    <line x1="90" y1="100" x2="310" y2="100"></line>
+    <line x1="90" y1="120" x2="310" y2="120"></line>
+    <line x1="90" y1="140" x2="310" y2="140"></line>
+    <line x1="90" y1="160" x2="310" y2="160"></line>
+    <line x1="90" y1="180" x2="310" y2="180"></line>
+    <line x1="90" y1="200" x2="310" y2="200"></line>
+    <line x1="90" y1="220" x2="310" y2="220"></line>
+    <line x1="90" y1="240" x2="310" y2="240"></line>
+  </g>
 
-      <!-- Axes -->
-      <!-- X-axis -->
-      <line x1="-5" y1="0" x2="6" y2="0" stroke-width="0.1" stroke="#1f2937"/>
-      <path d="M5.7,0.25 L6,0 L5.7,-0.25 Z" fill="#1f2937"/> <!-- Arrow for wschód -->
-      <!-- Y-axis -->
-      <line x1="0" y1="-5" x2="0" y2="4" stroke-width="0.1" stroke="#1f2937"/>
-      <path d="M-0.25,3.7 L0,4 L0.25,3.7 Z" fill="#1f2937"/> <!-- Arrow for północ -->
+  <!-- Axes -->
+  <!-- X-axis -->
+  <line x1="90" y1="140" x2="310" y2="140" stroke-width="2" stroke="#1f2937"></line>
+  <path d="M304,145 L310,140 L304,135 Z" fill="#1f2937"></path> <!-- Arrow for wschód -->
+  <path d="M96,145 L90,140 L96,135 Z" fill="#1f2937"></path> <!-- Arrow for zachód -->
+  <!-- Y-axis -->
+  <line x1="190" y1="60" x2="190" y2="240" stroke-width="2" stroke="#1f2937"></line>
+  <path d="M185,66 L190,60 L195,66 Z" fill="#1f2937"></path> <!-- Arrow for północ -->
+  <path d="M185,234 L190,240 L195,234 Z" fill="#1f2937"></path> <!-- Arrow for południe -->
 
-      <!-- Axis labels -->
-      <text class="label" x="0" y="4.5">północ</text>
-      <text class="label" x="0" y="-5.5">południe</text>
-      <text class="label" x="-5.5" y="0">zachód</text>
-      <text class="label" x="6.5" y="0">wschód</text>
+  <!-- Axis labels -->
+  <text class="label" x="190" y="50">północ</text>
+  <text class="label" x="190" y="250">południe</text>
+  <text class="label" x="80" y="140">zachód</text>
+  <text class="label" x="320" y="140">wschód</text>
 
-      <!-- Points and labels -->
-      <circle cx="0" cy="0" r="0.15" fill="#1f2937"/>
-      <text class="point-label" x="0" y="0.2">S</text>
+  <!-- Points and labels -->
+  <circle cx="190" cy="140" r="3" fill="#1f2937"></circle>
+  <text class="point-label" x="190" y="148">S</text>
 
-      <circle cx="-4" cy="3" r="0.15" fill="#1f2937"/>
-      <text class="point-label" x="-4" y="3.2">W</text>
+  <circle cx="110" cy="80" r="3" fill="#1f2937"></circle>
+  <text class="point-label" x="110" y="88">W</text>
 
-      <circle cx="5" cy="0" r="0.15" fill="#1f2937"/>
-      <text class="point-label" x="5" y="0.2">M</text>
+  <circle cx="290" cy="140" r="3" fill="#1f2937"></circle>
+  <text class="point-label" x="290" y="148">M</text>
 
-      <!-- Lines connecting points -->
-      <line class="main-line" x1="0" y1="0" x2="-4" y2="3"/> <!-- SW -->
-      <line class="main-line" x1="-4" y1="3" x2="5" y2="0"/> <!-- WM -->
-      <line class="main-line" x1="0" y1="0" x2="5" y2="0"/> <!-- SM -->
+  <!-- Lines connecting points -->
+  <line class="main-line" x1="190" y1="140" x2="110" y2="80"></line> <!-- SW -->
+  <line class="main-line" x1="110" y1="80" x2="290" y2="140"></line> <!-- WM -->
 
-      <!-- Scale indicator -->
-      <rect x="4.5" y="3.5" width="1" height="1" stroke="#1f2937" stroke-width="0.1" fill="none"/>
-      <text class="km-label" x="5" y="3.3">1 km</text>
-      <text class="km-label" x="4.3" y="4">1 km</text>
-    </svg>
+  <!-- Scale indicator -->
+  <rect x="280" y="70" width="20" height="20" stroke="#1f2937" stroke-width="2" fill="none"></rect>
+  <text class="km-label" x="304" y="80" text-anchor="start" dominant-baseline="central">1 km</text>
+  <text class="km-label" x="290" y="94" text-anchor="middle" dominant-baseline="hanging">1 km</text>
+</svg>

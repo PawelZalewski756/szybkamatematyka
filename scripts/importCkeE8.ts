@@ -39,6 +39,7 @@ type CachedTask = {
   tresc: string;
   tekst?: string;
   tekstV?: number;
+  figOk?: boolean;
   rozwiazanie: string;
   punkty?: number;
   schemat?: string;
@@ -591,6 +592,168 @@ Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). K
   }
 }
 
+/** Dopasowuje ramke do tresci, ustala rozmiar wyswietlania i skaluje czcionki. */
+async function fitSvg(page: any, svg: string): Promise<string> {
+  return page.evaluate((src: string) => {
+    const host = document.createElement("div");
+    host.innerHTML = src;
+    const el = host.querySelector("svg") as SVGSVGElement | null;
+    if (!el) return src;
+    document.body.appendChild(host);
+    el.removeAttribute("width");
+    el.removeAttribute("height");
+    el.querySelector(':scope > rect[width="100%"]')?.remove();
+    if (!el.getAttribute("xmlns")) {
+      el.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    }
+    const first = el.getBBox();
+    const D = Math.min(560, Math.max(280, first.width));
+    const f = first.width / D;
+    const scalePx = (v: string) =>
+      v.replace(/(\d+(?:\.\d+)?)/g, (n) => String(+(parseFloat(n) * f).toFixed(2)));
+    el.querySelectorAll("[font-size]").forEach((n) => {
+      n.setAttribute("font-size", scalePx(n.getAttribute("font-size") ?? "14"));
+    });
+    el.querySelectorAll("[style]").forEach((n) => {
+      const st = n.getAttribute("style") ?? "";
+      if (/font-size/.test(st)) {
+        n.setAttribute(
+          "style",
+          st.replace(/font-size\s*:\s*[\d.]+/g, (m) => scalePx(m)),
+        );
+      }
+    });
+    if (!el.getAttribute("font-size")) {
+      el.setAttribute("font-size", String(+(14 * f).toFixed(2)));
+    }
+    const b = el.getBBox();
+    const pad = 12 * f;
+    const x = b.x - pad;
+    const y = b.y - pad;
+    const w = b.width + 2 * pad;
+    const h = b.height + 2 * pad;
+    el.setAttribute("viewBox", `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`);
+    el.setAttribute("width", String(Math.round(w / f)));
+    el.setAttribute("height", String(Math.round(h / f)));
+    const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    bg.setAttribute("x", x.toFixed(1));
+    bg.setAttribute("y", y.toFixed(1));
+    bg.setAttribute("width", w.toFixed(1));
+    bg.setAttribute("height", h.toFixed(1));
+    bg.setAttribute("rx", String(+(8 * f).toFixed(1)));
+    bg.setAttribute("fill", "#ffffff");
+    el.insertBefore(bg, el.firstChild);
+    const out = el.outerHTML;
+    host.remove();
+    return out;
+  }, svg);
+}
+
+async function renderSvg(page: any, svg: string): Promise<Buffer> {
+  await page.setContent(
+    `<body style="margin:0;background:#e5e7eb"><div id="w" style="display:inline-block;padding:8px">${svg}</div></body>`,
+  );
+  return (await page.locator("#w").screenshot()) as Buffer;
+}
+
+async function verifyFigures(only?: string): Promise<void> {
+  const apiKey = process.env.GEMINI_API_KEY?.trim();
+  if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
+  const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
+    model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
+    systemInstruction: `Weryfikujesz rysunek odtworzony jako SVG. Dostajesz: obraz oryginalnego zadania CKE, render SVG oraz kod SVG. Sprawdz: (1) czy geometria, punkty, oznaczenia, liczby, opisy osi i skala zgadzaja sie z oryginalem, (2) czy nic nie jest ucięte ani nie wystaje, (3) czy etykiety nie nakladaja sie na linie, punkty ani siebie nawzajem i sa umieszczone obok punktow, (4) czy wielkosc etykiet jest proporcjonalna do rysunku.
+Jesli rysunek jest dobry, odpowiedz dokladnie: OK
+Jesli nie, odpowiedz TYLKO poprawionym, pelnym kodem SVG (viewBox np. "0 0 400 300", tlo biale <rect>, linie #1f2937, czcionka sans-serif rozmiar 14, etykiety w niewielkiej odleglosci od punktow, bez nakladania). Bez komentarzy i bez bloku kodu.`,
+  });
+
+  const { chromium } = await import("@playwright/test");
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.addInitScript("window.__name = (f) => f;");
+  await page.goto("about:blank");
+  let fixedTotal = 0;
+  let okTotal = 0;
+  try {
+    for (const sheet of loadSheets()) {
+      if (only && !sheet.sessionId.includes(only)) continue;
+      const dir = path.join(IMG_DIR, sheet.sessionId);
+      let changed = false;
+      for (const t of sheet.tasks) {
+        if (t.figOk) continue;
+        const num = String(t.numer).padStart(2, "0");
+        const files = fs.existsSync(dir)
+          ? fs
+              .readdirSync(dir)
+              .filter((n) => new RegExp(`^z${num}-fig\\d+\\.svg$`).test(n))
+              .sort()
+          : [];
+        if (files.length === 0) continue;
+        const origParts: any[] = [];
+        for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+          const abs = path.join(process.cwd(), "public", m[1]);
+          if (!/\.png$/i.test(abs) || !fs.existsSync(abs)) continue;
+          origParts.push({
+            inlineData: {
+              mimeType: "image/png",
+              data: fs.readFileSync(abs).toString("base64"),
+            },
+          });
+        }
+        let allOk = true;
+        for (const [idx, name] of files.entries()) {
+          const file = path.join(dir, name);
+          let svg = await fitSvg(page, fs.readFileSync(file, "utf8"));
+          let ok = false;
+          for (let round = 0; round < 3 && !ok; round++) {
+            const png = await renderSvg(page, svg);
+            const parts = [
+              ...origParts,
+              { inlineData: { mimeType: "image/png", data: png.toString("base64") } },
+              {
+                text: `To jest rysunek ${idx + 1} z ${files.length} w zadaniu ${t.numer}. Kod SVG:\n${svg}`,
+              },
+            ];
+            try {
+              const res = await model.generateContent(parts);
+              const answer = res.response.text().trim();
+              if (/^OK\b/i.test(answer)) {
+                ok = true;
+              } else {
+                const m = answer.match(/<svg[\s\S]*<\/svg>/i);
+                if (!m) break;
+                svg = await fitSvg(page, m[0]);
+              }
+            } catch (e) {
+              console.warn(`  ${sheet.sessionId} zad. ${t.numer} ${name}: ${(e as Error).message}`);
+              break;
+            }
+            await new Promise((r) => setTimeout(r, 1500));
+          }
+          fs.writeFileSync(file, svg, "utf8");
+          if (ok) okTotal++;
+          else fixedTotal++;
+          allOk = allOk && ok;
+          console.log(`  ${sheet.sessionId} zad. ${t.numer} ${name}: ${ok ? "OK" : "poprawiony, do przejrzenia"}`);
+        }
+        if (allOk) {
+          t.figOk = true;
+          changed = true;
+        }
+      }
+      if (changed) {
+        fs.writeFileSync(
+          path.join(CACHE_DIR, `${sheet.sessionId}.json`),
+          JSON.stringify(sheet, null, 2),
+          "utf8",
+        );
+      }
+    }
+  } finally {
+    await browser.close();
+  }
+  console.log(`Gotowe. OK: ${okTotal}, do przejrzenia: ${fixedTotal}`);
+}
+
 async function sync(only?: string): Promise<void> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const key =
@@ -645,6 +808,7 @@ async function sync(only?: string): Promise<void> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const onlyArg = args.find((a) => a.startsWith("--only="))?.split("=")[1];
+  if (args.includes("--weryfikuj")) return verifyFigures(onlyArg);
   if (args.includes("--sync")) return sync(onlyArg);
   if (args.includes("--dzialy")) return fillDzialy(1500, onlyArg);
   if (args.includes("--teksty")) {
