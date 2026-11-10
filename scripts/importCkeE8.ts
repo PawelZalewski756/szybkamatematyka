@@ -650,6 +650,65 @@ async function renderSvg(page: any, svg: string): Promise<Buffer> {
   return (await page.locator("#w").screenshot()) as Buffer;
 }
 
+type Box = { left: number; top: number; right: number; bottom: number };
+
+/** Drugi przebieg: Gemini ocenia sam wycinek - rozszerza ucięte krawędzie i zawęża zbędny tekst/kratki. */
+async function refineBox(
+  sharp: any,
+  model: any,
+  file: string,
+  W: number,
+  H: number,
+  start: Box,
+): Promise<Box> {
+  let box = { ...start };
+  for (let round = 0; round < 3; round++) {
+    const w = box.right - box.left;
+    const h = box.bottom - box.top;
+    const buf = await sharp(file)
+      .extract({ left: box.left, top: box.top, width: w, height: h })
+      .png()
+      .toBuffer();
+    let res: { cut?: string[]; box_2d?: number[] };
+    try {
+      const r = await model.generateContent([
+        { inlineData: { mimeType: "image/png", data: buf.toString("base64") } },
+        { text: "Oceń ten wycinek." },
+      ]);
+      res = JSON.parse(r.response.text());
+    } catch {
+      return box;
+    }
+    const cut = res.cut ?? [];
+    if (cut.length > 0 && round < 2) {
+      const gx = Math.max(40, Math.round(w * 0.12));
+      const gy = Math.max(40, Math.round(h * 0.12));
+      if (cut.includes("left")) box.left = Math.max(0, box.left - gx);
+      if (cut.includes("right")) box.right = Math.min(W, box.right + gx);
+      if (cut.includes("top")) box.top = Math.max(0, box.top - gy);
+      if (cut.includes("bottom")) box.bottom = Math.min(H, box.bottom + gy);
+      continue;
+    }
+    const b = res.box_2d;
+    if (b && b.length === 4) {
+      const [y0, x0, y1, x1] = b.map((v) => Math.max(0, Math.min(1000, v)));
+      const pad = 8;
+      const next: Box = {
+        left: Math.max(0, box.left + Math.round((x0! / 1000) * w) - pad),
+        top: Math.max(0, box.top + Math.round((y0! / 1000) * h) - pad),
+        right: Math.min(W, box.left + Math.round((x1! / 1000) * w) + pad),
+        bottom: Math.min(H, box.top + Math.round((y1! / 1000) * h) + pad),
+      };
+      const area = (q: Box) => (q.right - q.left) * (q.bottom - q.top);
+      if (area(next) > 0.15 * area(box) && area(next) <= area(box) * 1.02) {
+        box = next;
+      }
+    }
+    break;
+  }
+  return box;
+}
+
 async function cropFigures(only?: string): Promise<void> {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
@@ -661,6 +720,13 @@ async function cropFigures(only?: string): Promise<void> {
   });
 
   let done = 0;
+  const refineModel = new GoogleGenerativeAI(apiKey).getGenerativeModel({
+    model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
+    generationConfig: { responseMimeType: "application/json" },
+    systemInstruction: `Dostajesz wycinek strony arkusza CKE, ktory ma zawierac dokladnie jeden rysunek (wykres, figure, uklad wspolrzednych, bryle, mape, fotografie) razem z jego etykietami, opisami i podpisem typu "Rysunek 1.". Odpowiedz TYLKO JSON: {"cut":[...],"box_2d":[ymin,xmin,ymax,xmax]}.
+"cut" - lista krawedzi ("top","bottom","left","right"), na ktorych sam rysunek lub jego etykieta/opis jest UCIETY (brakuje kawalka rysunku). Linia tresci zadania ucieta na brzegu NIE jest rysunkiem - nie licz jej. Jesli nic nie jest ucięte, daj [].
+"box_2d" - ciasna ramka (0-1000 wzgledem tego wycinka) obejmujaca TYLKO rysunek z etykietami i podpisem, bez linii tresci zadania, polecen, kratek na rozwiazanie, czerwonych napisow i ramek egzaminacyjnych oraz marginesow.`,
+  });
   for (const sheet of loadSheets()) {
     if (only && !sheet.sessionId.includes(only)) continue;
     const sid = sheet.sessionId;
@@ -739,6 +805,16 @@ async function cropFigures(only?: string): Promise<void> {
           if (right - left < 40 || bottom - top < 40) {
             throw new Error("zbyt mala ramka rysunku");
           }
+          const fin = await refineBox(sharp, refineModel, file, W, H, {
+            left,
+            top,
+            right,
+            bottom,
+          });
+          left = fin.left;
+          top = fin.top;
+          right = fin.right;
+          bottom = fin.bottom;
           const name = `${refs[i]![2]}.png`;
           await sharp(file)
             .extract({ left, top, width: right - left, height: bottom - top })
