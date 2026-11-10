@@ -13,6 +13,7 @@ import { notFound } from "next/navigation";
 
 type PageProps = {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ klucz?: string }>;
 };
 
 export const metadata: Metadata = {
@@ -22,8 +23,12 @@ export const metadata: Metadata = {
 
 const LETTERS = ["A", "B", "C", "D"];
 
-export default async function ArchivePrintPage({ params }: PageProps) {
+export default async function ArchivePrintPage({
+  params,
+  searchParams,
+}: PageProps) {
   const { id } = await params;
+  const { klucz } = await searchParams;
   const sheet = getOfficialCkeSheetById(id);
   if (!sheet) notFound();
 
@@ -45,6 +50,7 @@ export default async function ArchivePrintPage({ params }: PageProps) {
       title={sheet.title}
       totalPoints={examSheetPoints(tasks)}
       tasks={data}
+      initialKey={klucz === "1"}
     />
   );
 }

@@ -4,7 +4,7 @@ import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 export type PrintTaskData = {
   id: string;
@@ -22,6 +22,7 @@ type Props = {
   title: string;
   totalPoints: number;
   tasks: PrintTaskData[];
+  initialKey: boolean;
 };
 
 function pts(n: number): string {
@@ -58,14 +59,9 @@ export function PrintArchiveSheet({
   title,
   totalPoints,
   tasks,
+  initialKey,
 }: Props) {
-  const [withKey, setWithKey] = useState(false);
-
-  useEffect(() => {
-    setWithKey(
-      new URLSearchParams(window.location.search).get("klucz") === "1",
-    );
-  }, []);
+  const [withKey, setWithKey] = useState(initialKey);
 
   const hasKey = withKey;
 
