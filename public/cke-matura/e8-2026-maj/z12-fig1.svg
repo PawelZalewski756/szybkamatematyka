@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -5 13 10" width="400" height="300">
+      <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+      <style>
+        .grid-line { stroke: #e0e0e0; stroke-width: 0.05; }
+        .main-line { stroke: #1f2937; stroke-width: 0.15; fill: none; }
+        .label { font-family: sans-serif; font-size: 0.8px; fill: #1f2937; text-anchor: middle; dominant-baseline: central; }
+        .point-label { font-family: sans-serif; font-size: 0.8px; fill: #1f2937; text-anchor: middle; dominant-baseline: hanging; }
+        .km-label { font-family: sans-serif; font-size: 0.7px; fill: #1f2937; text-anchor: middle; dominant-baseline: central; }
+      </style>
+
+      <!-- Grid lines -->
+      <!-- Vertical -->
+      <g class="grid-line">
+        <line x1="-5" y1="-5" x2="-5" y2="4"/>
+        <line x1="-4" y1="-5" x2="-4" y2="4"/>
+        <line x1="-3" y1="-5" x2="-3" y2="4"/>
+        <line x1="-2" y1="-5" x2="-2" y2="4"/>
+        <line x1="-1" y1="-5" x2="-1" y2="4"/>
+        <line x1="1" y1="-5" x2="1" y2="4"/>
+        <line x1="2" y1="-5" x2="2" y2="4"/>
+        <line x1="3" y1="-5" x2="3" y2="4"/>
+        <line x1="4" y1="-5" x2="4" y2="4"/>
+        <line x1="5" y1="-5" x2="5" y2="4"/>
+      </g>
+      <!-- Horizontal -->
+      <g class="grid-line">
+        <line x1="-5" y1="-4" x2="6" y2="-4"/>
+        <line x1="-5" y1="-3" x2="6" y2="-3"/>
+        <line x1="-5" y1="-2" x2="6" y2="-2"/>
+        <line x1="-5" y1="-1" x2="6" y2="-1"/>
+        <line x1="-5" y1="1" x2="6" y2="1"/>
+        <line x1="-5" y1="2" x2="6" y2="2"/>
+        <line x1="-5" y1="3" x2="6" y2="3"/>
+      </g>
+
+      <!-- Axes -->
+      <!-- X-axis -->
+      <line x1="-5" y1="0" x2="6" y2="0" stroke-width="0.1" stroke="#1f2937"/>
+      <path d="M5.7,0.25 L6,0 L5.7,-0.25 Z" fill="#1f2937"/> <!-- Arrow for wschód -->
+      <!-- Y-axis -->
+      <line x1="0" y1="-5" x2="0" y2="4" stroke-width="0.1" stroke="#1f2937"/>
+      <path d="M-0.25,3.7 L0,4 L0.25,3.7 Z" fill="#1f2937"/> <!-- Arrow for północ -->
+
+      <!-- Axis labels -->
+      <text class="label" x="0" y="4.5">północ</text>
+      <text class="label" x="0" y="-5.5">południe</text>
+      <text class="label" x="-5.5" y="0">zachód</text>
+      <text class="label" x="6.5" y="0">wschód</text>
+
+      <!-- Points and labels -->
+      <circle cx="0" cy="0" r="0.15" fill="#1f2937"/>
+      <text class="point-label" x="0" y="0.2">S</text>
+
+      <circle cx="-4" cy="3" r="0.15" fill="#1f2937"/>
+      <text class="point-label" x="-4" y="3.2">W</text>
+
+      <circle cx="5" cy="0" r="0.15" fill="#1f2937"/>
+      <text class="point-label" x="5" y="0.2">M</text>
+
+      <!-- Lines connecting points -->
+      <line class="main-line" x1="0" y1="0" x2="-4" y2="3"/> <!-- SW -->
+      <line class="main-line" x1="-4" y1="3" x2="5" y2="0"/> <!-- WM -->
+      <line class="main-line" x1="0" y1="0" x2="5" y2="0"/> <!-- SM -->
+
+      <!-- Scale indicator -->
+      <rect x="4.5" y="3.5" width="1" height="1" stroke="#1f2937" stroke-width="0.1" fill="none"/>
+      <text class="km-label" x="5" y="3.3">1 km</text>
+      <text class="km-label" x="4.3" y="4">1 km</text>
+    </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 8 4">
+  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+  <g stroke="#1f2937" stroke-width="1" fill="none">
+    <line x1="0" y1="0" x2="6" y2="0"/>
+    <line x1="6" y1="0" x2="6" y2="2"/>
+    <line x1="0" y1="0" x2="6" y2="2"/>
+    <path d="M 5.7 0 A 0.3 0.3 0 0 0 6 0.3" fill="none" stroke="#1f2937" stroke-width="1"/>
+    <circle cx="5.85" cy="0.15" r="0.05" fill="#1f2937"/>
+    <path d="M 6 1.2 A 0.8 0.8 0 0 1 5.2411 1.7471" fill="#e0c7ff" stroke="#1f2937" stroke-width="1"/>
+  </g>
+  <text x="-0.5" y="0" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="end" dominant-baseline="middle">A</text>
+  <text x="6.5" y="0" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start" dominant-baseline="middle">B</text>
+  <text x="6.5" y="2" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start" dominant-baseline="middle">C</text>
+  <text x="6.5" y="1.2" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="start" dominant-baseline="middle">2</text>
+  <text x="3" y="1" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="middle" dominant-baseline="middle" transform="rotate(18.4349 3 1) translate(0, -5)">2√10</text>
+  <text x="5.7661" y="1.6755" font-family="sans-serif" font-size="14" fill="#1f2937" text-anchor="middle" dominant-baseline="middle">γ</text>
+</svg>

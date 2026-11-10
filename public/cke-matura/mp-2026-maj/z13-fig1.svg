@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
+  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+  <style>
+    .grid-line { stroke: #e0e0e0; stroke-width: 0.5; }
+    .axis-line { stroke: #1f2937; stroke-width: 1.5; }
+    .func-line { stroke: #8b5cf6; stroke-width: 2.5; }
+    .label { font-family: sans-serif; font-size: 14px; fill: #1f2937; }
+    .axis-label { font-family: sans-serif; font-size: 14px; fill: #1f2937; }
+    .func-text { font-family: sans-serif; font-size: 14px; fill: #8b5cf6; }
+    .arrowhead { fill: #1f2937; }
+    .angle-arc { stroke: #8b5cf6; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <!-- Grid Lines -->
+  <g class="grid-line">
+    <!-- Vertical lines -->
+    <line x1="30" y1="30" x2="30" y2="180"/>
+    <line x1="45" y1="30" x2="45" y2="180"/>
+    <line x1="60" y1="30" x2="60" y2="180"/>
+    <line x1="75" y1="30" x2="75" y2="180"/>
+    <line x1="90" y1="30" x2="90" y2="180"/>
+    <line x1="120" y1="30" x2="120" y2="180"/>
+    <line x1="135" y1="30" x2="135" y2="180"/>
+    <line x1="150" y1="30" x2="150" y2="180"/>
+    <line x1="165" y1="30" x2="165" y2="180"/>
+    <line x1="180" y1="30" x2="180" y2="180"/>
+    <!-- Horizontal lines -->
+    <line x1="30" y1="30" x2="180" y2="30"/>
+    <line x1="30" y1="45" x2="180" y2="45"/>
+    <line x1="30" y1="60" x2="180" y2="60"/>
+    <line x1="30" y1="75" x2="180" y2="75"/>
+    <line x1="30" y1="90" x2="180" y2="90"/>
+    <line x1="30" y1="120" x2="180" y2="120"/>
+    <line x1="30" y1="135" x2="180" y2="135"/>
+    <line x1="30" y1="150" x2="180" y2="150"/>
+    <line x1="30" y1="165" x2="180" y2="165"/>
+    <line x1="30" y1="180" x2="180" y2="180"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="15" y1="105" x2="195" y2="105" class="axis-line"/> <!-- x-axis -->
+  <line x1="105" y1="15" x2="105" y2="195" class="axis-line"/> <!-- y-axis -->
+
+  <!-- Arrowheads -->
+  <polyline points="192,102 195,105 192,108" class="arrowhead"/> <!-- x-axis arrow -->
+  <polyline points="102,18 105,15 108,18" class="arrowhead"/> <!-- y-axis arrow -->
+
+  <!-- Tick Marks and Labels -->
+  <g class="label">
+    <text x="100" y="117" text-anchor="middle">0</text>
+    <!-- x-axis labels -->
+    <text x="30" y="117" text-anchor="middle">-5</text>
+    <text x="45" y="117" text-anchor="middle">-4</text>
+    <text x="60" y="117" text-anchor="middle">-3</text>
+    <text x="75" y="117" text-anchor="middle">-2</text>
+    <text x="90" y="117" text-anchor="middle">-1</text>
+    <text x="120" y="117" text-anchor="middle">1</text>
+    <text x="135" y="117" text-anchor="middle">2</text>
+    <text x="150" y="117" text-anchor="middle">3</text>
+    <text x="165" y="117" text-anchor="middle">4</text>
+    <text x="180" y="117" text-anchor="middle">5</text>
+    <!-- y-axis labels -->
+    <text x="95" y="180" text-anchor="end" alignment-baseline="middle">-5</text>
+    <text x="95" y="165" text-anchor="end" alignment-baseline="middle">-4</text>
+    <text x="95" y="150" text-anchor="end" alignment-baseline="middle">-3</text>
+    <text x="95" y="135" text-anchor="end" alignment-baseline="middle">-2</text>
+    <text x="95" y="120" text-anchor="end" alignment-baseline="middle">-1</text>
+    <text x="95" y="90" text-anchor="end" alignment-baseline="middle">1</text>
+    <text x="95" y="75" text-anchor="end" alignment-baseline="middle">2</text>
+    <text x="95" y="60" text-anchor="end" alignment-baseline="middle">3</text>
+    <text x="95" y="45" text-anchor="end" alignment-baseline="middle">4</text>
+    <text x="95" y="30" text-anchor="end" alignment-baseline="middle">5</text>
+  </g>
+
+  <!-- Axis Labels -->
+  <text x="190" y="117" class="axis-label">x</text>
+  <text x="117" y="25" class="axis-label">y</text>
+
+  <!-- Function Line: y = -1.5x - 2 (approximately from the graph) -->
+  <!-- Points: (-5, 5.5) -> (3, -6.5) -->
+  <line x1="30" y1="22.5" x2="150" y2="202.5" class="func-line"/>
+
+  <!-- Function Label -->
+  <text x="40" y="40" class="func-text">y = f(x)</text>
+
+  <!-- Angle alpha -->
+  <!-- Center of arc at x-intercept: (-4/3, 0) -> (85, 105) SVG -->
+  <!-- Arc from negative x-axis (180 deg) to line (approx 236.31 deg CW in SVG from positive x-axis) -->
+  <!-- Start point (70, 105), End point (76.678, 92.5215) -->
+  <path d="M 70 105 A 15 15 0 0 1 76.678 92.5215" class="angle-arc"/>
+  <text x="80" y="97" class="func-text">&alpha;</text>
+</svg>

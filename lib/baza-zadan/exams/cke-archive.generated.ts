@@ -18300,7 +18300,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18326,7 +18326,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 2",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18352,7 +18352,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 3",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18378,7 +18378,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 4",
-    "category": "algebra",
+    "category": "pierwiastki",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18404,7 +18404,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 5",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18430,7 +18430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z06",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 6",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18456,7 +18456,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z07",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 7",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18508,7 +18508,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 9",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18534,7 +18534,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 10",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18560,7 +18560,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 11",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18586,7 +18586,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 12",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18612,7 +18612,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 13",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18638,7 +18638,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 14",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18664,7 +18664,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18690,7 +18690,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 16",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18716,7 +18716,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z17",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 17",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18742,7 +18742,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z18",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 18",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18768,7 +18768,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 19",
-    "category": "algebra",
+    "category": "ulamki",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18794,7 +18794,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z20",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 20",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
@@ -18820,7 +18820,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2019-maj-z21",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 21",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",

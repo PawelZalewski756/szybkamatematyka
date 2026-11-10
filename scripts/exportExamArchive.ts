@@ -29,6 +29,7 @@ type CachedTask = {
   dzial?: string;
   tresc: string;
   tekst?: string;
+  tekstV?: number;
   rozwiazanie: string;
 };
 
@@ -69,7 +70,7 @@ function monthLabel(month: number): string {
 function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
   if (isSolutionPlaceholder(task.rozwiazanie)) return null;
 
-  const source = task.tekst ?? task.tresc;
+  const source = task.tekstV === 2 && task.tekst ? task.tekst : task.tresc;
   const { prompt, choices, hasChoices } = parseAbcd(source);
   const formattedPrompt = formatCkeMathText(prompt);
   const formattedChoices = choices.map((c) => formatCkeMathText(c));

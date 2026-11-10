@@ -38,6 +38,7 @@ type CachedTask = {
   dzial?: string;
   tresc: string;
   tekst?: string;
+  tekstV?: number;
   rozwiazanie: string;
   punkty?: number;
   schemat?: string;
@@ -498,22 +499,28 @@ async function fillTranscripts(delayMs: number, only?: string): Promise<void> {
   const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
     model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
     generationConfig: { responseMimeType: "application/json" },
-    systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Zwroc JSON: {"tekst": string, "rysunki": string[]}.
-Zasady dla "tekst":
+    systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Odpowiedz w formacie zwyklego tekstu (NIE JSON, NIE blok kodu), dokladnie tak:
+===TEKST===
+(tresc zadania)
+===RYSUNEK 1===
+(kod SVG pierwszego rysunku)
+===RYSUNEK 2===
+(kod SVG drugiego rysunku, itd.; sekcji RYSUNEK nie dawaj, jesli nie ma rysunkow)
+Zasady dla tresci:
 - Pomin naglowek "Zadanie N. (0-2)", ramke z numerem i punktami oraz kratki na odpowiedz.
 - Zwykly tekst po polsku, wzory w LaTeX: $...$ w linii, $$...$$ dla wzorow w osobnej linii. Nie uzywaj dlugich myslnikow, tylko "-".
 - Akapity oddziel pusta linia.
 - Zadanie zamkniete: po tresci pytania dopisz odpowiedzi w JEDNEJ linii w formacie: A) ... B) ... C) ... D) ... (kazda odpowiedz z wzorem w $...$).
 - Tabele zapisz jako tabele markdown.
-- Kazdy rysunek, wykres, figure lub uklad wspolrzednych zastap w tekscie znacznikiem [[RYSUNEK 1]], [[RYSUNEK 2]] itd. w miejscu, gdzie sie znajduje.
-Zasady dla "rysunki": tablica napisow SVG, po jednym na znacznik, wierna oryginalowi (te same punkty, opisy, oznaczenia, skala). Kazde SVG: <svg xmlns="http://www.w3.org/2000/svg" viewBox="..."> z bialym tlem (<rect width="100%" height="100%" rx="8" fill="#ffffff"/>), ciemne linie (#1f2937), czytelne etykiety (font-family sans-serif, font-size min 14). Bez zewnetrznych zasobow. Jesli brak rysunkow, zwroc [].`,
+- Kazdy rysunek, wykres, figure lub uklad wspolrzednych zastap w tresci znacznikiem [[RYSUNEK 1]], [[RYSUNEK 2]] itd. w miejscu, gdzie sie znajduje.
+Zasady dla SVG: wierne oryginalowi (te same punkty, opisy, oznaczenia, skala). Kazde SVG: <svg xmlns="http://www.w3.org/2000/svg" viewBox="..."> z bialym tlem (<rect width="100%" height="100%" rx="8" fill="#ffffff"/>), ciemne linie (#1f2937), czytelne etykiety (font-family sans-serif, font-size min 14). Bez zewnetrznych zasobow.`,
   });
 
   for (const sheet of loadSheets()) {
     if (only && !sheet.sessionId.includes(only)) continue;
     let changed = false;
     for (const t of sheet.tasks) {
-      if (t.tekst || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
+      if (t.tekstV === 2 || !/!\[[^\]]*\]\(/.test(t.tresc)) continue;
       const parts: any[] = [];
       for (const m of t.tresc.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
         const abs = path.join(process.cwd(), "public", m[1]);
@@ -529,13 +536,16 @@ Zasady dla "rysunki": tablica napisow SVG, po jednym na znacznik, wierna orygina
       parts.push({ text: "Przepisz to zadanie." });
       try {
         const res = await model.generateContent(parts);
-        const data = JSON.parse(res.response.text()) as {
-          tekst?: string;
-          rysunki?: string[];
-        };
-        let tekst = (data.tekst ?? "").replace(/\u2014/g, "-").trim();
+        const raw = res.response.text().replace(/```[a-z]*\n?/g, "");
+        const sections = raw.split(/^===(TEKST|RYSUNEK \d+)===\s*$/m);
+        let tekst = "";
+        const figs: string[] = [];
+        for (let k = 1; k + 1 < sections.length; k += 2) {
+          const body = (sections[k + 1] ?? "").trim();
+          if (sections[k] === "TEKST") tekst = body.replace(/\u2014/g, "-");
+          else figs.push(body);
+        }
         if (tekst.length < 10) throw new Error("pusty tekst");
-        const figs = data.rysunki ?? [];
         const sid = `${sheet.sessionId}`;
         const num = String(t.numer).padStart(2, "0");
         const figDir = path.join(IMG_DIR, sid);
@@ -551,6 +561,7 @@ Zasady dla "rysunki": tablica napisow SVG, po jednym na znacznik, wierna orygina
         });
         tekst = tekst.replace(/\[\[RYSUNEK \d+\]\]/g, "");
         t.tekst = tekst;
+        t.tekstV = 2;
         changed = true;
         console.log(`  ${sheet.sessionId} zad. ${t.numer} OK (rysunki: ${figs.length})`);
       } catch (e) {
@@ -609,7 +620,8 @@ async function sync(): Promise<void> {
           (sheet.typ === "matura"
             ? inferDzialMatura(t.tresc, t.numer)
             : "Egzamin ósmoklasisty"),
-        tresc: t.tekst ?? t.tresc,
+        tresc: t.tekstV === 2 && t.tekst ? t.tekst : t.tresc,
+        rozwiazanie: t.rozwiazanie,
         source_id: sid,
       });
       if (error) console.warn(`  ${sid}: ${error.message}`);

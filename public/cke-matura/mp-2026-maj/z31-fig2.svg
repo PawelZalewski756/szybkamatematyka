@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" rx="8" fill="#ffffff"/>
+  <style>
+    .label { font-family: sans-serif; font-size: 14px; fill: #1f2937; }
+    .axis-label { font-family: sans-serif; font-size: 16px; fill: #1f2937; }
+    .title { font-family: sans-serif; font-size: 18px; font-weight: bold; fill: #1f2937; }
+    .grid { stroke: #cccccc; stroke-width: 0.5; }
+    .axis { stroke: #1f2937; stroke-width: 1; }
+    .bar { fill: #d4c8e7; stroke: #1f2937; stroke-width: 1; }
+  </style>
+
+  <text x="200" y="25" text-anchor="middle" class="title">klasa IV B</text>
+
+  <g transform="translate(60, 40)">
+    <text x="-35" y="105" transform="rotate(-90 -35 105)" text-anchor="middle" class="axis-label">liczba uczniów</text>
+
+    <text x="160" y="235" text-anchor="middle" class="axis-label">ocena</text>
+
+    <line x1="0" y1="0" x2="0" y2="210" class="axis"/>
+    <line x1="0" y1="210" x2="320" y2="210" class="axis"/>
+
+    <g class="label">
+      <text x="-5" y="210" text-anchor="end">0</text>
+      <line x1="-3" y1="210" x2="0" y2="210" class="axis"/>
+      <g>
+        <text x="-5" y="183" text-anchor="end">1</text>
+        <line x1="-3" y1="180" x2="0" y2="180" class="axis"/>
+        <line x1="0" y1="180" x2="320" y2="180" class="grid"/>
+
+        <text x="-5" y="153" text-anchor="end">2</text>
+        <line x1="-3" y1="150" x2="0" y2="150" class="axis"/>
+        <line x1="0" y1="150" x2="320" y2="150" class="grid"/>
+
+        <text x="-5" y="123" text-anchor="end">3</text>
+        <line x1="-3" y1="120" x2="0" y2="120" class="axis"/>
+        <line x1="0" y1="120" x2="320" y2="120" class="grid"/>
+
+        <text x="-5" y="93" text-anchor="end">4</text>
+        <line x1="-3" y1="90" x2="0" y2="90" class="axis"/>
+        <line x1="0" y1="90" x2="320" y2="90" class="grid"/>
+
+        <text x="-5" y="63" text-anchor="end">5</text>
+        <line x1="-3" y1="60" x2="0" y2="60" class="axis"/>
+        <line x1="0" y1="60" x2="320" y2="60" class="grid"/>
+
+        <text x="-5" y="33" text-anchor="end">6</text>
+        <line x1="-3" y1="30" x2="0" y2="30" class="axis"/>
+        <line x1="0" y1="30" x2="320" y2="30" class="grid"/>
+
+        <text x="-5" y="3" text-anchor="end">7</text>
+        <line x1="-3" y1="0" x2="0" y2="0" class="axis"/>
+      </g>
+    </g>
+
+    <g class="label">
+      <text x="35" y="225" text-anchor="middle">1</text>
+      <line x1="35" y1="210" x2="35" y2="213" class="axis"/>
+
+      <text x="85" y="225" text-anchor="middle">2</text>
+      <line x1="85" y1="210" x2="85" y2="213" class="axis"/>
+
+      <text x="135" y="225" text-anchor="middle">3</text>
+      <line x1="135" y1="210" x2="135" y2="213" class="axis"/>
+
+      <text x="185" y="225" text-anchor="middle">4</text>
+      <line x1="185" y1="210" x2="185" y2="213" class="axis"/>
+
+      <text x="235" y="225" text-anchor="middle">5</text>
+      <line x1="235" y1="210" x2="235" y2="213" class="axis"/>
+
+      <text x="285" y="225" text-anchor="middle">6</text>
+      <line x1="285" y1="210" x2="285" y2="213" class="axis"/>
+    </g>
+
+    <rect x="20" y="180" width="30" height="30" class="bar"/>
+    <rect x="70" y="120" width="30" height="90" class="bar"/>
+    <rect x="120" y="30" width="30" height="180" class="bar"/>
+    <rect x="170" y="30" width="30" height="180" class="bar"/>
+    <rect x="220" y="120" width="30" height="90" class="bar"/>
+    <rect x="270" y="180" width="30" height="30" class="bar"/>
+  </g>
+</svg>
