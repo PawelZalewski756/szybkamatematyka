@@ -62,7 +62,7 @@ export function describeTelegramCommandError(error: unknown): string {
       message.includes("schema cache") ||
       message.includes("Could not find the function"))
   ) {
-    return "Brakuje migracji szybkiej próby. Uruchom supabase/migrations/20261104214800_quick_trial_analytics.sql.";
+    return "Brakuje migracji szybkiej próby. Uruchom w Supabase SQL Editor kolejno: 20261104214800_quick_trial_analytics.sql oraz 20261108144500_rate_limit_quick_trial.sql (supabase/migrations).";
   }
 
   if (

@@ -1,4 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
+import { after } from "next/server";
+import { deliverSignupNotification } from "@/lib/telegram/signup-delivery";
 import { validateAuthInput, validateNick } from "@/lib/auth-errors";
 
 export const runtime = "nodejs";
@@ -91,6 +93,15 @@ export async function POST(request: Request): Promise<Response> {
       { headers: HEADERS },
     );
   }
+
+  const newUserId = data.user.id;
+  after(async () => {
+    try {
+      await deliverSignupNotification(newUserId);
+    } catch (notificationError) {
+      console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
+    }
+  });
 
   return Response.json(
     { ok: true, userId: data.user.id, needsConfirmation: !data.session },

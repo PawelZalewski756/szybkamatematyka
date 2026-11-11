@@ -76,11 +76,21 @@ export async function POST(request: Request): Promise<Response> {
   const supabase = createClient(url, serviceKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
-  const { data, error } = await supabase.rpc("record_quick_trial_attempt", {
+  let { data, error } = await supabase.rpc("record_quick_trial_attempt", {
     p_session_id: body.sessionId,
     p_is_correct: body.isCorrect,
     p_ip_hash: ipHash,
   });
+
+  // Baza bez migracji rate-limitu ma tylko starą wersję (2 argumenty).
+  if (error && (error.code === "PGRST202" || error.code === "42883")) {
+    const legacy = await supabase.rpc("record_quick_trial_attempt", {
+      p_session_id: body.sessionId,
+      p_is_correct: body.isCorrect,
+    });
+    error = legacy.error;
+    data = legacy.error ? null : true;
+  }
   if (error) {
     console.error("Could not record quick trial attempt:", error);
     return Response.json(
