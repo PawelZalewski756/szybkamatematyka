@@ -15216,9 +15216,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD o boku długości 8. Z wierzchołka A zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest kwadrat ABCD o boku długości 8. Z wierzchołka A zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$16\\pi$",
+      "$8\\pi$",
+      "$4\\sqrt{2}\\pi$",
+      "$16\\sqrt{2}\\pi$"
     ],
     "correctIndex": 0,
     "explanation": "$16\\pi$",
@@ -15244,9 +15247,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinki AC i BD przecinają się w punkcie O. Ponadto $|AD| = 4$ i $|OD| = |BC| = 6$. Kąty ODA i BCO są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka OC jest równa\n\nRozwiąż zadanie.",
+    "prompt": "Odcinki AC i BD przecinają się w punkcie O. Ponadto $|AD| = 4$ i $|OD| = |BC| = 6$. Kąty ODA i BCO są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka OC jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$9$",
+      "$8$",
+      "$2\\sqrt{13}$",
+      "$3\\sqrt{13}$"
     ],
     "correctIndex": 0,
     "explanation": "9",
@@ -16514,14 +16520,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność |$x - 1$|≥ 3 Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\nRozwiąż zadanie.",
+    "prompt": "Dana jest nierówność $|x - 1| \\ge 3$.\n\nNa którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.\n\nA)\n\n![Opcja A](/cke-matura/m24-maj/z01-1.png)\n\nB)\n\n![Opcja B](/cke-matura/m24-maj/z01-2.png)\n\nC)\n\n![Opcja C](/cke-matura/m24-maj/z01-3.png)\n\nD)\n\n![Opcja D](/cke-matura/m24-maj/z01-4.png)",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
-    "correctIndex": 0,
-    "explanation": "wybierz rysunek z dwoma „ramionami” poza przedziałem $(-2, 4)$ - zgodnie z kluczem CKE (zazwyczaj opcja C).",
+    "correctIndex": 1,
+    "explanation": "B. Nierówność $|x-1| \\ge 3$ oznacza $x \\le -2$ lub $x \\ge 4$.",
     "solutionSteps": [
-      "Krok 1: |$x - 1$| ≥ 3 oznacza $x - 1 \\ge 3$ lub $x - 1 \\le - 3$.\nKrok 2: $x \\ge 4$ lub $x \\le - 2$.\nKrok 3: Na osi liczbowej to dwa promienie: od 4 w prawo oraz $od - 2$ w lewo."
+      "Nierówność $|x - 1| \\ge 3$ jest równoważna alternatywie $x - 1 \\ge 3$ lub $x - 1 \\le -3$.",
+      "Stąd $x \\ge 4$ lub $x \\le -2$. Końce przedziałów należą do zbioru, więc zaznaczamy je pełnymi kropkami.",
+      "Na osi liczbowej to dwa promienie: od $4$ w prawo oraz od $-2$ w lewo. Jest to rysunek B."
     ],
     "examSource": {
       "kind": "matura",
@@ -16767,14 +16778,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nRozwiąż zadanie.",
+    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech x oraz y oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby x drzew posadzonych w pierwszym sadzie oraz liczby y drzew posadzonych w drugim sadzie, jest\n\nA)\n\n![Opcja A](/cke-matura/m24-maj/z10-1.png)\n\nB)\n\n![Opcja B](/cke-matura/m24-maj/z10-2.png)\n\nC)\n\n![Opcja C](/cke-matura/m24-maj/z10-3.png)\n\nD)\n\n![Opcja D](/cke-matura/m24-maj/z10-4.png)",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctIndex": 0,
-    "explanation": "układ z $x + y = 1960$ i zależnością $0,9y = 0,6\\cdot0,95x(zgodnie z kluczem CKE - wybierz właściwą macierz na arkuszu)$.",
+    "explanation": "A. Po roku w pierwszym sadzie zostało $0,95x$ drzew, a w drugim $0,9y$. Drugi sad stanowi 60% pierwszego, więc $0,6 \\cdot 0,95x = 0,9y$.",
     "solutionSteps": [
-      "Krok 1: $x + y = 1960$, po roku: 0,95x i 0,9y.\nKrok 2: $0,9y = 0,6 \\cdot 0,95x$ → $y = 0,63x$.\nKrok 3: $x + 0,63x = 1960$ → $x = 1200$, $y = 760$."
+      "W pierwszym sadzie po roku zostało $95\\%x = 0,95x$ drzew, a w drugim $90\\%y = 0,9y$ drzew.",
+      "Liczba drzew w drugim sadzie to 60% liczby drzew w pierwszym: $0,9y = 0,6 \\cdot 0,95x$.",
+      "Razem posadzono $x + y = 1960$ drzew. Poprawny układ jest w odpowiedzi A."
     ],
     "examSource": {
       "kind": "matura",
@@ -16793,14 +16809,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x,y), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań $A - D$. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nRozwiąż zadanie.",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x,y), przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań $A - D$. ![Rysunek do zadania](/cke-matura/m24-maj/z11-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nA)\n\n![Opcja A](/cke-matura/m24-maj/z11-2.png)\n\nB)\n\n![Opcja B](/cke-matura/m24-maj/z11-3.png)\n\nC)\n\n![Opcja C](/cke-matura/m24-maj/z11-4.png)\n\nD)\n\n![Opcja D](/cke-matura/m24-maj/z11-5.png)",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "A",
+      "B",
+      "C",
+      "D"
     ],
     "correctIndex": 0,
-    "explanation": "zgodnie z rysunkiem i kluczem CKE (zazwyczaj układ bez wspólnego punktu przecięcia).",
+    "explanation": "A. Proste są równoległe o współczynniku kierunkowym $-\\frac{3}{2}$ i przecinają oś $y$ w punktach $3$ i $-1$.",
     "solutionSteps": [
-      "Krok 1: Równoległe proste w układzie liniowym to ten sam kierunik, różne wyrazy wolne.\nKrok 2: Szukamy układu z równoległymi prostymi na rysunku."
+      "Z rysunku: obie proste mają ten sam ujemny współczynnik kierunkowy $-\\frac{3}{2}$, bo przy przesunięciu o 2 w prawo opadają o 3.",
+      "Górna prosta przecina oś $y$ w punkcie $3$, dolna w punkcie $-1$.",
+      "Zatem układ równań to $y = -\\frac{3}{2}x + 3$ oraz $y = -\\frac{3}{2}x - 1$. Jest to odpowiedź A."
     ],
     "examSource": {
       "kind": "matura",
