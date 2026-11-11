@@ -18,7 +18,11 @@ export function TaskTresc({
   variant = "task",
 }: TaskTrescProps) {
   const parts = useMemo(
-    () => splitTaskContent(formatCkeMathText(tresc)),
+    () =>
+      splitTaskContent(
+        // Opcje ABCD w osobnych liniach (markdown inaczej skleja je w jeden akapit).
+        formatCkeMathText(tresc).replace(/\n(?=[A-D]\.\s)/g, "  \n"),
+      ),
     [tresc],
   );
   const markdownVariant = variant === "solution" ? "solution" : "default";

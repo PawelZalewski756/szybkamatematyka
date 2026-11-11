@@ -25,6 +25,8 @@ export default function ExamSheetPage({ params }: PageProps) {
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
+  // Zadania rozwiązane dopiero w tej sesji - nie są "wcześniej rozwiązane".
+  const [solvedNow, setSolvedNow] = useState<ReadonlySet<string>>(new Set());
 
   if (!sheet) {
     return (
@@ -47,6 +49,9 @@ export default function ExamSheetPage({ params }: PageProps) {
     setPicked(index);
     if (index === task.correctIndex) {
       setScore((s) => s + 1);
+      if (!isSolved(task.id)) {
+        setSolvedNow((prev) => new Set(prev).add(task.id));
+      }
       markSolved(task.id);
     }
   };
@@ -133,7 +138,7 @@ export default function ExamSheetPage({ params }: PageProps) {
             tresc={task.prompt}
             className="text-lg font-semibold text-foreground"
           />
-          {isSolved(task.id) && (
+          {isSolved(task.id) && !solvedNow.has(task.id) && (
             <span className="rounded-full border border-success/40 bg-success/15 px-2 py-0.5 text-xs font-bold text-success">
               ✓ wcześniej rozwiązane
             </span>
