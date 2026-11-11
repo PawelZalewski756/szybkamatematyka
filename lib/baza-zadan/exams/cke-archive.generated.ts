@@ -686,7 +686,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość $r$ówną 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -868,7 +868,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "Najmniejsza wartość to $-6$, a największa wartość to $3$.",
     "solutionSteps": [
       "Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.",
-      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji $b$ędzie w tym punkcie. Oblicz wartość funkcji $w$ wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
+      "Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji będzie w tym punkcie. Oblicz wartość funkcji $w$ wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.",
       "Oblicz wartości funkcji na krańcach przedziału: $f(0) = 0^2 - 6 \\cdot 0 + 3 = 3$ oraz $f(4) = 4^2 - 6 \\cdot 4 + 3 = 16 - 24 + 3 = -5$. Największą wartością będzie największa z obliczonych wartości, czyli $f(0)=3$."
     ],
     "examSource": {
@@ -1371,7 +1371,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z sześcianu ABCDEFGH o krawędzi $d$ługości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
+    "prompt": "Z sześcianu ABCDEFGH o krawędzi długości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
     "choices": [
       "2 razy",
       "3 razy",
@@ -11365,7 +11365,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości $r$ówne odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
+    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości równe odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -12534,7 +12534,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -13583,7 +13583,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość $r$ówną 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość równą 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15404,7 +15404,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi długości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15432,7 +15432,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian F o krawędzi $d$ługości a i objętości V oraz sześcian G o krawędzi $d$ługości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
+    "prompt": "Dany jest sześcian F o krawędzi długości a i objętości V oraz sześcian G o krawędzi długości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
     "choices": [
       "3V",
       "9V",
@@ -18480,7 +18480,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "F P",
     "solutionSteps": [
-      "Rozwiązanie:\n\n1. Obliczamy obwód kwadratu o boku $a$. Obwód kwadratu wynosi $L_{kwadrat} = 4a$.\n\n2. Zgodnie z rysunkiem I, kwadrat o boku $a$ został rozcięty na dwa prostokąty. Na podstawie rysunków, zakładamy, że cięcie nastąpiło dokładnie w połowie wysokości, czyli $x = 0,5a$. Oznacza to, że kwadrat został rozcięty na dwa identyczne prostokąty o wymiarach $a \\times 0,5a$.\n\n3. Figurę II ułożono z tych dwóch prostokątów. Dolny prostokąt ma wymiary $a \\times 0,5a$. Górny prostokąt, o wymiarach $a \\times 0,5a$, został obrócony i położony na dolnym prostokącie tak, że jego szerokość wynosi $0,5a$, a wysokość $a$.\n\n4. Obliczamy obwód figury II.\n * Dolna krawędź: $a$\n * Lewa krawędź (sumaryczna): $0,5a$ (z dolnego prostokąta) $+ a$ (z górnego prostokąta) $= 1,5a$\n * Górna krawędź: $0,5a$\n * Prawa krawędź (sumaryczna): $0,5a$ (z dolnego prostokąta) $+ a$ (z górnego prostokąta) $= 1,5a$\n * Dwie poziome krawędzie wewnętrzne, które są odsłonięte na górnej powierzchni dolnego prostokąta. Całkowita długość $g$órnej krawędzi dolnego prostokąta to $a$. Górny prostokąt ma szerokość $0,5a$. Zatem odsłonięta długość to $a - 0,5a = 0,5a$. Te $0,5a$ to suma dwóch krótkich odcinków poziomych.\n * Obwód figury II: $P_{II} = a + 1,5a + 0,5a + 1,5a + 0,5a = 5a$.\n\n5. Oceniamy prawdziwość pierwszego zdania: \"Obwód ułożonej figury jest większy o $1,5a$ od obwodu kwadratu.\"\n * Różnica obwodów: $P_{II} - L_{kwadrat} = 5a - 4a = a$.\n * Ponieważ $a \\neq 1,5a$ (dla $a>0$), zdanie jest fałszywe.\n\n6. Oceniamy prawdziwość drugiego zdania: \"Obwód ułożonej figury jest równy $5a$.\"\n * Obliczony obwód figury II to $P_{II} = 5a$.\n * Zdanie jest prawdziwe."
+      "Rozwiązanie:\n\n1. Obliczamy obwód kwadratu o boku $a$. Obwód kwadratu wynosi $L_{kwadrat} = 4a$.\n\n2. Zgodnie z rysunkiem I, kwadrat o boku $a$ został rozcięty na dwa prostokąty. Na podstawie rysunków, zakładamy, że cięcie nastąpiło dokładnie w połowie wysokości, czyli $x = 0,5a$. Oznacza to, że kwadrat został rozcięty na dwa identyczne prostokąty o wymiarach $a \\times 0,5a$.\n\n3. Figurę II ułożono z tych dwóch prostokątów. Dolny prostokąt ma wymiary $a \\times 0,5a$. Górny prostokąt, o wymiarach $a \\times 0,5a$, został obrócony i położony na dolnym prostokącie tak, że jego szerokość wynosi $0,5a$, a wysokość $a$.\n\n4. Obliczamy obwód figury II.\n * Dolna krawędź: $a$\n * Lewa krawędź (sumaryczna): $0,5a$ (z dolnego prostokąta) $+ a$ (z górnego prostokąta) $= 1,5a$\n * Górna krawędź: $0,5a$\n * Prawa krawędź (sumaryczna): $0,5a$ (z dolnego prostokąta) $+ a$ (z górnego prostokąta) $= 1,5a$\n * Dwie poziome krawędzie wewnętrzne, które są odsłonięte na górnej powierzchni dolnego prostokąta. Całkowita długość górnej krawędzi dolnego prostokąta to $a$. Górny prostokąt ma szerokość $0,5a$. Zatem odsłonięta długość to $a - 0,5a = 0,5a$. Te $0,5a$ to suma dwóch krótkich odcinków poziomych.\n * Obwód figury II: $P_{II} = a + 1,5a + 0,5a + 1,5a + 0,5a = 5a$.\n\n5. Oceniamy prawdziwość pierwszego zdania: \"Obwód ułożonej figury jest większy o $1,5a$ od obwodu kwadratu.\"\n * Różnica obwodów: $P_{II} - L_{kwadrat} = 5a - 4a = a$.\n * Ponieważ $a \\neq 1,5a$ (dla $a>0$), zdanie jest fałszywe.\n\n6. Oceniamy prawdziwość drugiego zdania: \"Obwód ułożonej figury jest równy $5a$.\"\n * Obliczony obwód figury II to $P_{II} = 5a$.\n * Zdanie jest prawdziwe."
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -20201,7 +20201,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "P P",
     "solutionSteps": [
-      "1. **Obliczenie pola jednego trójkąta:**\n Trójkąty prostokątne mają przyprostokątne długości $3 \\text{ cm}$ i $4 \\text{ cm}$. Pole jednego takiego trójkąta wynosi:\n $P_T = \\frac{1}{2} \\cdot 3 \\text{ cm} \\cdot 4 \\text{ cm} = \\frac{1}{2} \\cdot 12 \\text{ cm}^2 = 6 \\text{ cm}^2$.\n\n2. **Ocena prawdziwości pierwszego zdania (Pole trapezu):**\n Trapez jest zbudowany z trzech jednakowych trójkątów prostokątnych. Zatem pole trapezu jest równe trzykrotności pola jednego trójkąta:\n $P_{KLMN} = 3 \\cdot P_T = 3 \\cdot 6 \\text{ cm}^2 = 18 \\text{ cm}^2$.\n Pierwsze zdanie \"Pole trapezu $KLMN$ jest równe $18 \\text{ cm}^2$\" jest **Prawdziwe (P)**.\n\n3. **Określenie długości boków trapezu:**\n Z rysunku i informacji o konstrukcji wynika, że trapez $KLMN$ jest trapezem prostokątnym o wysokości $KN = 4 \\text{ cm}$ (jedna z przyprostokątnych). Krótsza podstawa trapezu to $NM = 3 \\text{ cm}$ (druga przyprostokątna).\n Aby obliczyć obwód, musimy znaleźć długość $d$łuższej podstawy $KL$ i ramienia $LM$.\n Trapez $KLMN$ można rozłożyć na prostokąt i trójkąt prostokątny. Rysujemy wysokość z wierzchołka $M$ na podstawę $KL$. Oznaczmy spodek tej wysokości jako $M'$. Wtedy odcinek $MM'$ ma długość $r$ówną $KN$, czyli $MM' = 4 \\text{ cm}$. Odcinek $KM'$ ma długość $r$ówną $NM$, czyli $KM' = 3 \\text{ cm}$.\n Prostokąt $KNM'M$ składa się z dwóch identycznych trójkątów prostokątnych (np. po przecięciu przekątną $NM'$). Trzeci trójkąt prostokątny to $\\triangle MM'L$. Skoro jest to jeden z trzech jednakowych trójkątów, to jego przyprostokątne muszą mieć długości $3 \\text{ cm}$ i $4 \\text{ cm}$. Ponieważ $MM' = 4 \\text{ cm}$, to $M'L$ musi być drugą przyprostokątną, czyli $M'L = 3 \\text{ cm}$.\n Dłuższa podstawa $KL$ jest sumą odcinków $KM'$ i $M'L$:\n $KL = KM' + M'L = 3 \\text{ cm} + 3 \\text{ cm} = 6 \\text{ cm}$.\n Ramię $LM$ jest przeciwprostokątną trójkąta $\\triangle MM'L$. Obliczamy jego długość $z$ twierdzenia Pitagorasa:\n $LM^2 = MM'^2 + M'L^2 = 4^2 + 3^2 = 16 + 9 = 25$\n $LM = \\sqrt{25} = 5 \\text{ cm}$.\n\n4. **Ocena prawdziwości drugiego zdania (Obwód trapezu):**\n Obwód trapezu to suma długości jego boków:\n $O_{KLMN} = KN + NM + ML + KL = 4 \\text{ cm} + 3 \\text{ cm} + 5 \\text{ cm} + 6 \\text{ cm} = 18 \\text{ cm}$.\n Drugie zdanie \"Obwód trapezu $KLMN$ jest równy $18 \\text{ cm}$\" jest **Prawdziwe (P)**."
+      "1. **Obliczenie pola jednego trójkąta:**\n Trójkąty prostokątne mają przyprostokątne długości $3 \\text{ cm}$ i $4 \\text{ cm}$. Pole jednego takiego trójkąta wynosi:\n $P_T = \\frac{1}{2} \\cdot 3 \\text{ cm} \\cdot 4 \\text{ cm} = \\frac{1}{2} \\cdot 12 \\text{ cm}^2 = 6 \\text{ cm}^2$.\n\n2. **Ocena prawdziwości pierwszego zdania (Pole trapezu):**\n Trapez jest zbudowany z trzech jednakowych trójkątów prostokątnych. Zatem pole trapezu jest równe trzykrotności pola jednego trójkąta:\n $P_{KLMN} = 3 \\cdot P_T = 3 \\cdot 6 \\text{ cm}^2 = 18 \\text{ cm}^2$.\n Pierwsze zdanie \"Pole trapezu $KLMN$ jest równe $18 \\text{ cm}^2$\" jest **Prawdziwe (P)**.\n\n3. **Określenie długości boków trapezu:**\n Z rysunku i informacji o konstrukcji wynika, że trapez $KLMN$ jest trapezem prostokątnym o wysokości $KN = 4 \\text{ cm}$ (jedna z przyprostokątnych). Krótsza podstawa trapezu to $NM = 3 \\text{ cm}$ (druga przyprostokątna).\n Aby obliczyć obwód, musimy znaleźć długość dłuższej podstawy $KL$ i ramienia $LM$.\n Trapez $KLMN$ można rozłożyć na prostokąt i trójkąt prostokątny. Rysujemy wysokość z wierzchołka $M$ na podstawę $KL$. Oznaczmy spodek tej wysokości jako $M'$. Wtedy odcinek $MM'$ ma długość równą $KN$, czyli $MM' = 4 \\text{ cm}$. Odcinek $KM'$ ma długość równą $NM$, czyli $KM' = 3 \\text{ cm}$.\n Prostokąt $KNM'M$ składa się z dwóch identycznych trójkątów prostokątnych (np. po przecięciu przekątną $NM'$). Trzeci trójkąt prostokątny to $\\triangle MM'L$. Skoro jest to jeden z trzech jednakowych trójkątów, to jego przyprostokątne muszą mieć długości $3 \\text{ cm}$ i $4 \\text{ cm}$. Ponieważ $MM' = 4 \\text{ cm}$, to $M'L$ musi być drugą przyprostokątną, czyli $M'L = 3 \\text{ cm}$.\n Dłuższa podstawa $KL$ jest sumą odcinków $KM'$ i $M'L$:\n $KL = KM' + M'L = 3 \\text{ cm} + 3 \\text{ cm} = 6 \\text{ cm}$.\n Ramię $LM$ jest przeciwprostokątną trójkąta $\\triangle MM'L$. Obliczamy jego długość $z$ twierdzenia Pitagorasa:\n $LM^2 = MM'^2 + M'L^2 = 4^2 + 3^2 = 16 + 9 = 25$\n $LM = \\sqrt{25} = 5 \\text{ cm}$.\n\n4. **Ocena prawdziwości drugiego zdania (Obwód trapezu):**\n Obwód trapezu to suma długości jego boków:\n $O_{KLMN} = KN + NM + ML + KL = 4 \\text{ cm} + 3 \\text{ cm} + 5 \\text{ cm} + 6 \\text{ cm} = 18 \\text{ cm}$.\n Drugie zdanie \"Obwód trapezu $KLMN$ jest równy $18 \\text{ cm}$\" jest **Prawdziwe (P)**."
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -22223,7 +22223,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzy jednakowe sześciany o krawędzi $d$ługości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z14-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
+    "prompt": "Trzy jednakowe sześciany o krawędzi długości 5 ustawiono jeden na drugim i otrzymano prostopadłościan (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z14-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej otrzymanego prostopadłościanu jest równe",
     "choices": [
       "350",
       "375",
@@ -22233,7 +22233,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A. 350",
     "solutionSteps": [
-      "1. Obliczamy wymiary prostopadłościanu. Każdy sześcian ma krawędź $d$ługości $a = 5$. Ustawiono trzy takie sześciany jeden na drugim.\n * Długość prostopadłościanu $l = 5$.\n * Szerokość prostopadłościanu $w = 5$.\n * Wysokość prostopadłościanu $h = 3 \\times a = 3 \\times 5 = 15$.\n2. Obliczamy pole powierzchni całkowitej prostopadłościanu, korzystając ze wzoru $P_c = 2(lw + lh + wh)$.\n $P_c = 2 \\times (5 \\times 5 + 5 \\times 15 + 5 \\times 15)$\n $P_c = 2 \\times (25 + 75 + 75)$\n $P_c = 2 \\times (25 + 150)$\n $P_c = 2 \\times 175$\n $P_c = 350$"
+      "1. Obliczamy wymiary prostopadłościanu. Każdy sześcian ma krawędź długości $a = 5$. Ustawiono trzy takie sześciany jeden na drugim.\n * Długość prostopadłościanu $l = 5$.\n * Szerokość prostopadłościanu $w = 5$.\n * Wysokość prostopadłościanu $h = 3 \\times a = 3 \\times 5 = 15$.\n2. Obliczamy pole powierzchni całkowitej prostopadłościanu, korzystając ze wzoru $P_c = 2(lw + lh + wh)$.\n $P_c = 2 \\times (5 \\times 5 + 5 \\times 15 + 5 \\times 15)$\n $P_c = 2 \\times (25 + 75 + 75)$\n $P_c = 2 \\times (25 + 150)$\n $P_c = 2 \\times 175$\n $P_c = 350$"
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -22330,14 +22330,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z18-fig1.png)\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
+    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi długości $a$. Punkt $S$ jest środkiem krawędzi $DH$ tego sześcianu. Punkty $A, C, D, S$ są wierzchołkami ostrosłupa trójkątnego (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2026-maj/z18-fig1.png)\n\nOblicz, ile razy objętość ostrosłupa $ACDS$ jest mniejsza od objętości sześcianu $ABCDEFGH$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "Objętość ostrosłupa $ACDS$ jest 12 razy mniejsza od objętości sześcianu $ABCDEFGH$.",
     "solutionSteps": [
-      "1. Obliczamy objętość sześcianu $ABCDEFGH$ o krawędzi $d$ługości $a$.\n $V_{sześcianu} = a^3$\n\n2. Wyznaczamy pole podstawy ostrosłupa $ACDS$. Jako podstawę ostrosłupa przyjmujemy trójkąt $ACD$. Trójkąt $ACD$ jest prostokątny, a jego przyprostokątne to krawędzie sześcianu $AD = a$ i $CD = a$.\n $P_{ACD} = \\frac{1}{2} \\cdot AD \\cdot CD = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2} a^2$\n\n3. Wyznaczamy wysokość ostrosłupa $ACDS$. Wysokością ostrosłupa opuszczoną na podstawę $ACD$ jest odcinek $DS$. Punkt $S$ jest środkiem krawędzi $DH$, zatem długość odcinka $DS$ wynosi połowę długości krawędzi sześcianu.\n $H_{ostrosłupa} = DS = \\frac{1}{2} a$\n\n4. Obliczamy objętość ostrosłupa $ACDS$ korzystając ze wzoru na objętość ostrosłupa $V = \\frac{1}{3} \\cdot P_{podstawy} \\cdot H$.\n $V_{ACDS} = \\frac{1}{3} \\cdot P_{ACD} \\cdot DS = \\frac{1}{3} \\cdot (\\frac{1}{2} a^2) \\cdot (\\frac{1}{2} a) = \\frac{1}{3} \\cdot \\frac{1}{4} a^3 = \\frac{1}{12} a^3$\n\n5. Porównujemy objętość ostrosłupa z objętością sześcianu.\n $V_{ACDS} = \\frac{1}{12} a^3$ oraz $V_{sześcianu} = a^3$.\n Zatem $V_{ACDS} = \\frac{1}{12} V_{sześcianu}$."
+      "1. Obliczamy objętość sześcianu $ABCDEFGH$ o krawędzi długości $a$.\n $V_{sześcianu} = a^3$\n\n2. Wyznaczamy pole podstawy ostrosłupa $ACDS$. Jako podstawę ostrosłupa przyjmujemy trójkąt $ACD$. Trójkąt $ACD$ jest prostokątny, a jego przyprostokątne to krawędzie sześcianu $AD = a$ i $CD = a$.\n $P_{ACD} = \\frac{1}{2} \\cdot AD \\cdot CD = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2} a^2$\n\n3. Wyznaczamy wysokość ostrosłupa $ACDS$. Wysokością ostrosłupa opuszczoną na podstawę $ACD$ jest odcinek $DS$. Punkt $S$ jest środkiem krawędzi $DH$, zatem długość odcinka $DS$ wynosi połowę długości krawędzi sześcianu.\n $H_{ostrosłupa} = DS = \\frac{1}{2} a$\n\n4. Obliczamy objętość ostrosłupa $ACDS$ korzystając ze wzoru na objętość ostrosłupa $V = \\frac{1}{3} \\cdot P_{podstawy} \\cdot H$.\n $V_{ACDS} = \\frac{1}{3} \\cdot P_{ACD} \\cdot DS = \\frac{1}{3} \\cdot (\\frac{1}{2} a^2) \\cdot (\\frac{1}{2} a) = \\frac{1}{3} \\cdot \\frac{1}{4} a^3 = \\frac{1}{12} a^3$\n\n5. Porównujemy objętość ostrosłupa z objętością sześcianu.\n $V_{ACDS} = \\frac{1}{12} a^3$ oraz $V_{sześcianu} = a^3$.\n Zatem $V_{ACDS} = \\frac{1}{12} V_{sześcianu}$."
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -22389,7 +22389,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "Obwód równoległoboku $KLMN$ jest równy $18 + 6\\sqrt{2}$.",
     "solutionSteps": [
-      "1. Zgodnie z informacją w zadaniu, prostokąt $ABCD$ ma wymiary 3 i 9. Prostokąt ten rozcięto na trapez prostokątny oraz trójkąt prostokątny równoramienny. Aby z prostokąta o wymiarach 3 i 9 uzyskać trójkąt prostokątny równoramienny, jego przyprostokątne muszą mieć długość 3.\n2. Obliczamy długość przeciwprostokątnej tego trójkąta, która będzie jednym z boków równoległoboku $KLMN$. Niech długość ta wynosi $x$. Korzystamy z twierdzenia Pitagorasa:\n $x^2 = 3^2 + 3^2$\n $x^2 = 9 + 9$\n $x^2 = 18$\n $x = \\sqrt{18} = \\sqrt{9 \\cdot 2} = 3\\sqrt{2}$.\n3. Z rysunku 2. wynika, że dłuższy bok równoległoboku $KLMN$ ma taką samą długość jak dłuższy bok prostokąta $ABCD$, czyli 9. Krótszy bok równoległoboku to obliczona przeciwprostokątna trójkąta, czyli $3\\sqrt{2}$.\n4. Obliczamy obwód równoległoboku $KLMN$. Wzór na obwód równoległoboku to $O = 2 \\cdot (a + b)$, gdzie $a$ i $b$ to długości $s$ąsiednich boków.\n $O_{KLMN} = 2 \\cdot (9 + 3\\sqrt{2})$\n $O_{KLMN} = 18 + 6\\sqrt{2}$"
+      "1. Zgodnie z informacją w zadaniu, prostokąt $ABCD$ ma wymiary 3 i 9. Prostokąt ten rozcięto na trapez prostokątny oraz trójkąt prostokątny równoramienny. Aby z prostokąta o wymiarach 3 i 9 uzyskać trójkąt prostokątny równoramienny, jego przyprostokątne muszą mieć długość 3.\n2. Obliczamy długość przeciwprostokątnej tego trójkąta, która będzie jednym z boków równoległoboku $KLMN$. Niech długość ta wynosi $x$. Korzystamy z twierdzenia Pitagorasa:\n $x^2 = 3^2 + 3^2$\n $x^2 = 9 + 9$\n $x^2 = 18$\n $x = \\sqrt{18} = \\sqrt{9 \\cdot 2} = 3\\sqrt{2}$.\n3. Z rysunku 2. wynika, że dłuższy bok równoległoboku $KLMN$ ma taką samą długość jak dłuższy bok prostokąta $ABCD$, czyli 9. Krótszy bok równoległoboku to obliczona przeciwprostokątna trójkąta, czyli $3\\sqrt{2}$.\n4. Obliczamy obwód równoległoboku $KLMN$. Wzór na obwód równoległoboku to $O = 2 \\cdot (a + b)$, gdzie $a$ i $b$ to długości sąsiednich boków.\n $O_{KLMN} = 2 \\cdot (9 + 3\\sqrt{2})$\n $O_{KLMN} = 18 + 6\\sqrt{2}$"
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -25797,7 +25797,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "B. $f(x)=||x-1|-2|$",
     "solutionSteps": [
-      "1. Odczytujemy z wykresu oraz z treści zadania współrzędne charakterystycznych punktów: $A=(-1, 0)$, $B=(1, 2)$, $C=(3, 0)$, $D=(-4, 3)$, $E=(6, 3)$.\n\n2. Analizujemy kształt wykresu. Jest to funkcja $z$łożona z odcinków i półprostych, której minima lokalne (wartości zerowe) znajdują się w punktach $A$ i $C$, a maksimum lokalne w punkcie $B$. Taki kształt sugeruje funkcję zawierającą wartość bezwzględną.\n\n3. Testujemy podane opcje, podstawiając współrzędne punktów do wzorów funkcji.\n * **Opcja A:** $f(x)=|x+1|+|x-1|$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1+1|+|-1-1| = 0+|-2| = 2$. Nie zgadza się z $y=0$. Opcja A jest nieprawidłowa.\n * **Opcja D:** $f(x)=|x-1|+2$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1-1|+2 = |-2|+2 = 2+2=4$. Nie zgadza się z $y=0$. Opcja D jest nieprawidłowa.\n * **Opcja C:** $f(x)=||x-1|+2|$.\n Ponieważ $|x-1| \\ge 0$, to $|x-1|+2 \\ge 2$. Zatem $||x-1|+2| = |x-1|+2$. Jest to ten sam wzór co w opcji D, więc również jest nieprawidłowy, ponieważ nie spełnia warunku $f(-1)=0$.\n\n4. **Opcja B:** $f(x)=||x-1|-2|$.\n * Sprawdzamy punkt $A=(-1,0)$: $f(-1) = ||-1-1|-2| = ||-2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $B=(1,2)$: $f(1) = ||1-1|-2| = ||0|-2| = |-2| = 2$. Zgadza się.\n * Sprawdzamy punkt $C=(3,0)$: $f(3) = ||3-1|-2| = ||2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $D=(-4,3)$: $f(-4) = ||-4-1|-2| = ||-5|-2| = |5-2| = |3| = 3$. Zgadza się.\n * Sprawdzamy punkt $E=(6,3)$: $f(6) = ||6-1|-2| = ||5|-2| = |5-2| = |3| = 3$. Zgadza się.\n\n5. Wszystkie kluczowe punkty leżą na wykresie funkcji opisanej wzorem z opcji B."
+      "1. Odczytujemy z wykresu oraz z treści zadania współrzędne charakterystycznych punktów: $A=(-1, 0)$, $B=(1, 2)$, $C=(3, 0)$, $D=(-4, 3)$, $E=(6, 3)$.\n\n2. Analizujemy kształt wykresu. Jest to funkcja złożona z odcinków i półprostych, której minima lokalne (wartości zerowe) znajdują się w punktach $A$ i $C$, a maksimum lokalne w punkcie $B$. Taki kształt sugeruje funkcję zawierającą wartość bezwzględną.\n\n3. Testujemy podane opcje, podstawiając współrzędne punktów do wzorów funkcji.\n * **Opcja A:** $f(x)=|x+1|+|x-1|$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1+1|+|-1-1| = 0+|-2| = 2$. Nie zgadza się z $y=0$. Opcja A jest nieprawidłowa.\n * **Opcja D:** $f(x)=|x-1|+2$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1-1|+2 = |-2|+2 = 2+2=4$. Nie zgadza się z $y=0$. Opcja D jest nieprawidłowa.\n * **Opcja C:** $f(x)=||x-1|+2|$.\n Ponieważ $|x-1| \\ge 0$, to $|x-1|+2 \\ge 2$. Zatem $||x-1|+2| = |x-1|+2$. Jest to ten sam wzór co w opcji D, więc również jest nieprawidłowy, ponieważ nie spełnia warunku $f(-1)=0$.\n\n4. **Opcja B:** $f(x)=||x-1|-2|$.\n * Sprawdzamy punkt $A=(-1,0)$: $f(-1) = ||-1-1|-2| = ||-2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $B=(1,2)$: $f(1) = ||1-1|-2| = ||0|-2| = |-2| = 2$. Zgadza się.\n * Sprawdzamy punkt $C=(3,0)$: $f(3) = ||3-1|-2| = ||2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $D=(-4,3)$: $f(-4) = ||-4-1|-2| = ||-5|-2| = |5-2| = |3| = 3$. Zgadza się.\n * Sprawdzamy punkt $E=(6,3)$: $f(6) = ||6-1|-2| = ||5|-2| = |5-2| = |3| = 3$. Zgadza się.\n\n5. Wszystkie kluczowe punkty leżą na wykresie funkcji opisanej wzorem z opcji B."
     ],
     "examSource": {
       "kind": "matura",
