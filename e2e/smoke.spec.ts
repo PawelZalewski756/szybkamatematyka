@@ -48,21 +48,21 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
-  test("kroki nauki są zwarte na telefonie i zachowują układ na desktopie", async ({
+  test("sekcja działów jest zwarta na telefonie i zachowuje układ na desktopie", async ({
     page,
   }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
-    const steps = page
-      .locator("ol")
-      .filter({ hasText: "Wybierasz ścieżkę" });
-    const firstStep = steps.locator("li").first();
+    const sections = page
+      .locator("ul")
+      .filter({ hasText: "Tematy z teorią i zadaniami" });
+    const firstCard = sections.locator("li a").first();
 
-    await expect(steps.locator("li")).toHaveCount(3);
-    await expect(firstStep).toHaveCSS("flex-direction", "row");
+    await expect(sections.locator("li")).toHaveCount(5);
+    await expect(firstCard).toHaveCSS("flex-direction", "row");
 
     await page.setViewportSize({ width: 1280, height: 800 });
-    await expect(firstStep).toHaveCSS("flex-direction", "column");
+    await expect(firstCard).toHaveCSS("flex-direction", "column");
   });
 
   test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({
