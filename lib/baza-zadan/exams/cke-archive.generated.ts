@@ -537,8 +537,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "$m = 2$",
       "$m = -2$",
-      "$m = -2 - 2$√ 2",
-      "$m = 2 + 2$√ 2"
+      "$m = -2 - 2\\sqrt{2}$",
+      "$m = 2 + 2\\sqrt{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $m = 2$.",
@@ -657,8 +657,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Przekrojem osiowym stożka jest trójkąt równoboczny o boku długości 6. Objętość tego stożka jest równa",
     "choices": [
-      "27π√ 3",
-      "9π√ 3",
+      "27π$\\sqrt{3}$",
+      "9π$\\sqrt{3}$",
       "18π",
       "6π"
     ],
@@ -1185,7 +1185,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie $(3x + 1 + y)$ 2 jest równe",
+    "prompt": "Wyrażenie $(3x + 1 + y)^2$ jest równe",
     "choices": [
       "$3x^{2} + y^{2} + 1$",
       "$9x^{2} + 6x + y^{2} + 1$",
@@ -1405,10 +1405,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie $A = (2, 4)$, która jest wykresem funkcji kwadratowej f. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja $f$ może być opisana wzorem",
     "choices": [
-      "$f(x)$ = $(x - 2) 2 + 4$",
-      "$f(x)$ = $(x + 2) 2 + 4$",
-      "$f(x)$ = - $(x - 2) 2 + 4$",
-      "$f(x)$ = - $(x + 2) 2 + 4$"
+      "$f(x)$ = $(x - 2)^2 + 4$",
+      "$f(x)$ = $(x + 2)^2 + 4$",
+      "$f(x)$ = - $(x - 2)^2 + 4$",
+      "$f(x)$ = - $(x + 2)^2 + 4$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $f(x) = -(x-2)^2 + 4$.",
@@ -1529,10 +1529,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,$5^{\\circ}$. Pole tego trójkąta jest równe",
     "choices": [
-      "100 √ 3",
-      "100 √ 2",
-      "200 √ 3",
-      "200 √ 2"
+      "$100\\sqrt{3}$",
+      "$100\\sqrt{2}$",
+      "$200\\sqrt{3}$",
+      "$200\\sqrt{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $100 \\sqrt{2}$",
@@ -1559,9 +1559,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi $a$ jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi $b$ . Ile razy objętość ostrosłupa o krawędzi $a$ jest większa od objętości ostrosłupa o krawędzi $b$ ?",
     "choices": [
-      "√ 2",
+      "$\\sqrt{2}$",
       "2",
-      "2√ 2",
+      "$2\\sqrt{2}$",
       "4"
     ],
     "correctIndex": 2,
@@ -1650,19 +1650,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), w którym $a_{1}$ = - √ 2 , $a_{2} = 2$, $a_{3} = -2$√ 2 . Dziesiąty wyraz tego ciągu, czyli $a_{10}$ , jest równy",
+    "prompt": "Dany jest ciąg geometryczny $(a_n)$, w którym $a_1 = -\\sqrt{2}$, $a_2 = 2$, $a_3 = -2\\sqrt{2}$. Dziesiąty wyraz tego ciągu, czyli $a_{10}$, jest równy\n\nRozwiąż zadanie.",
     "choices": [
-      "32",
-      "-32",
-      "16√ 2",
-      "-16√ 2"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli -32",
+    "correctIndex": 0,
+    "explanation": "$32$",
     "solutionSteps": [
-      "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = \\frac{2 \\cdot \\sqrt{2}}{-\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{2\\sqrt{2}}{-2} = -\\sqrt{2}$.",
-      "Skorzystaj ze wzoru na $n$-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, aby obliczyć $a_{10}$. Podstaw dane: $a_{10} = a_1 \\cdot q^{10-1} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9$.",
-      "Oblicz $a_{10}$: $a_{10} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9 = -(\\sqrt{2})^{10} = -(2^{1/2})^{10} = -2^5 = -32$."
+      "Obliczamy iloraz ciągu: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = -\\sqrt{2}$.",
+      "Korzystamy ze wzoru $a_n = a_1 \\cdot q^{n-1}$: $a_{10} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9 = (-\\sqrt{2})^{10}$.",
+      "Potęga parzysta liczby ujemnej jest dodatnia: $(-\\sqrt{2})^{10} = (\\sqrt{2})^{10} = 2^5 = 32$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2062,9 +2059,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty $E = (7,1)$ i $F = (9,7)$ to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość",
     "choices": [
-      "4√ 5",
+      "$4\\sqrt{5}$",
       "10",
-      "4√ 10",
+      "$4\\sqrt{10}$",
       "20"
     ],
     "correctIndex": 2,
@@ -2194,10 +2191,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie 16 - $(3x + 1)$ 2 jest równe",
+    "prompt": "Wyrażenie 16 - $(3x + 1)^2$ jest równe",
     "choices": [
       "$(3 - 3x)$ ⋅ $(5 + 3x)$",
-      "$(15 - 3x)$ 2",
+      "$(15 - 3x)^2$",
       "$(5 - 3x)$ ⋅ $(5 + 3x)$",
       "$15 - 9x^{2}$"
     ],
@@ -2890,7 +2887,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na trójkącie o bokach długości √ 7 , √ 8 , √ 15 opisano okrąg. Oblicz promień tego okręgu.",
+    "prompt": "Na trójkącie o bokach długości$\\sqrt{7}$ ,$\\sqrt{8}$ ,$\\sqrt{15}$ opisano okrąg. Oblicz promień tego okręgu.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -4109,7 +4106,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2log 2 $3 - 2log$ 2 5 jest równa.",
+    "prompt": "Liczba $2\\log_2 3 - 2\\log_2 5$ jest równa.",
     "choices": [
       "log 2 $\\frac{9}{25}$",
       "log 2 $\\frac{3}{5}$",
@@ -4170,10 +4167,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równość $(x\\sqrt2 - 2)$ 2 = $(2 + \\sqrt2)$ 2 jest",
+    "prompt": "Równość $(x\\sqrt{2} - 2)^2 = (2 + \\sqrt{2})^2$ jest",
     "choices": [
-      "prawdziwa dla x = -√ 2",
-      "prawdziwa dla x = √ 2",
+      "prawdziwa dla x = -$\\sqrt{2}$",
+      "prawdziwa dla x =$\\sqrt{2}$",
       "prawdziwa dla $x = -1$",
       "fałszywa dla każdej liczby x"
     ],
@@ -4293,12 +4290,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej $f(x)$=√ 3 $(x + 1)$ -12 jest liczba",
+    "prompt": "Miejscem zerowym funkcji liniowej $f(x)$=$\\sqrt{3}$ $(x + 1)$ -12 jest liczba",
     "choices": [
-      "√ $3 - 4$",
-      "-2√ $3 + 1$",
-      "4√ $3 - 1$",
-      "-√ $3 + 12$"
+      "$\\sqrt{3} - 4$",
+      "$-2\\sqrt{3} + 1$",
+      "$4\\sqrt{3} - 1$",
+      "$-\\sqrt{3} + 12$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $4\\sqrt{3} - 1$.",
@@ -4680,10 +4677,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pole powierzchni całkowitej graniastosłupa prawidłowego czworokątnego, w którym wysokość jest 3 razy dłuższa od krawędzi podstawy, jest równe 140. Zatem krawędź podstawy tego graniastosłupa jest równa",
     "choices": [
-      "√ 10",
-      "3√ 10",
-      "√ 42",
-      "3√ 42"
+      "$\\sqrt{10}$",
+      "$3\\sqrt{10}$",
+      "$\\sqrt{42}$",
+      "$3\\sqrt{42}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{10}$",
@@ -4711,8 +4708,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Promień AS podstawy walca jest równy wysokości OS tego walca. Sinus kąta OAS (zobacz rysunek) jest równy ![Rysunek do zadania](/cke-matura/m17-maj/z22-1.jpg)",
     "choices": [
-      "√ $\\frac{3}{2}$",
-      "√ $\\frac{2}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$",
+      "$\\frac{\\sqrt{2}}{2}$",
       "$\\frac{1}{2}$",
       "1"
     ],
@@ -5459,19 +5456,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla $n \\ge 1$ , w którym $a_{1}$ = √ 2 , $a_{2} = 2$√ 2 , $a_{3} = 4$√ 2 . Wzór na $n - ty$ wyraz tego ciągu ma postać",
+    "prompt": "Dany jest ciąg geometryczny $(a_n)$, określony dla $n \\ge 1$, w którym $a_1 = \\sqrt{2}$, $a_2 = 2\\sqrt{2}$, $a_3 = 4\\sqrt{2}$. Wzór na $n$-ty wyraz tego ciągu ma postać",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-1.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-2.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-3.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z13-4.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $a_n = 2^{n - \\frac{1}{2}}$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $a_n = \\frac{2^n}{\\sqrt{2}}$",
     "solutionSteps": [
-      "Obliczamy iloraz ciągu geometrycznego $q$ ze wzoru $q = \\frac{a_{n+1}}{a_n}$. Korzystając z danych $a_2 = 2\\sqrt{2}$ i $a_1 = \\sqrt{2}$, mamy $q = \\frac{2\\sqrt{2}}{\\sqrt{2}} = 2$.",
-      "Korzystamy ze wzoru na $n$-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiamy $a_1 = \\sqrt{2}$ i $q = 2$, otrzymując $a_n = \\sqrt{2} \\cdot 2^{n-1}$.",
-      "Upraszczamy otrzymany wzór, zapisując $\\sqrt{2}$ jako $2^{\\frac{1}{2}}$. Wówczas $a_n = 2^{\\frac{1}{2}} \\cdot 2^{n-1} = 2^{\\frac{1}{2} + n - 1} = 2^{n - \\frac{1}{2}}$."
+      "Obliczamy iloraz ciągu: $q = \\frac{a_2}{a_1} = \\frac{2\\sqrt{2}}{\\sqrt{2}} = 2$.",
+      "Korzystamy ze wzoru $a_n = a_1 \\cdot q^{n-1}$: $a_n = \\sqrt{2} \\cdot 2^{n-1}$.",
+      "Przekształcamy: $\\sqrt{2} \\cdot 2^{n-1} = \\frac{\\sqrt{2}}{2} \\cdot 2^n = \\frac{1}{\\sqrt{2}} \\cdot 2^n = \\frac{2^n}{\\sqrt{2}}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5521,12 +5518,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt o bokach długości: 2√ 5 , 3√ 5 , 4√ 5 . Trójkątem podobnym do tego trójkąta jest trójkąt, którego boki mają długości",
+    "prompt": "Dany jest trójkąt o bokach długości: $2\\sqrt{5}$ , $3\\sqrt{5}$ , $4\\sqrt{5}$ . Trójkątem podobnym do tego trójkąta jest trójkąt, którego boki mają długości",
     "choices": [
       "10, 15, 20",
       "20, 45, 80",
-      "√ 2 , √ 3 , √ 4",
-      "√ 5 , 2√ 5 , 3√ 5"
+      "$\\sqrt{2}$ ,$\\sqrt{3}$ ,$\\sqrt{4}$",
+      "$\\sqrt{5}$ , $2\\sqrt{5}$ , $3\\sqrt{5}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 10, 15, 20",
@@ -5710,9 +5707,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Podstawą graniastosłupa prostego jest prostokąt o bokach długości 3 i 4. Kąt α , jaki przekątna tego graniastosłupa tworzy z jego podstawą, jest równy $45^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m18-maj/z21-1.gif) Wysokość graniastosłupa jest równa",
     "choices": [
       "5",
-      "3√ 2",
-      "5√ 2",
-      "5√ $\\frac{3}{3}$"
+      "$3\\sqrt{2}$",
+      "$5\\sqrt{2}$",
+      "$\\frac{5\\sqrt{3}}{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 5",
@@ -5773,8 +5770,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "2",
       "1",
-      "1 / √ 2",
-      "√ 2"
+      "1 /$\\sqrt{2}$",
+      "$\\sqrt{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 1",
@@ -5946,7 +5943,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od √ $2 - 1$.",
+    "prompt": "Okręgi o środkach odpowiednio A i B są styczne zewnętrznie i każdy z nich jest styczny do obu ramion danego kąta prostego (zobacz rysunek). Promień okręgu o środku A jest równy 2. ![Rysunek do zadania](/cke-matura/m18-maj/z29-1.gif) Uzasadnij, że promień okręgu o środku B jest mniejszy od $\\sqrt{2} - 1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -6090,7 +6087,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe 45√ 3 . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif)",
+    "prompt": "Dany jest graniastosłup prawidłowy trójkątny (zobacz rysunek). Pole powierzchni całkowitej tego graniastosłupa jest równe $45\\sqrt{3}$ . Pole podstawy graniastosłupa jest równe polu jednej ściany bocznej. Oblicz objętość tego graniastosłupa. ![Rysunek do zadania](/cke-matura/m18-maj/z34-1.gif)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -6119,11 +6116,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba log √ 2 2 jest równa",
+    "prompt": "Liczba $\\log_{\\sqrt{2}} 2$ jest równa",
     "choices": [
       "2",
       "4",
-      "√ 2",
+      "$\\sqrt{2}$",
       "$\\frac{1}{2}$"
     ],
     "correctIndex": 0,
@@ -6431,7 +6428,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "-168",
       "-189",
       "-21",
-      "-42 pokaż wskazówkę »"
+      "-42"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $-168$",
@@ -6459,9 +6456,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla $n \\ge 1$ . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy",
     "choices": [
       "$\\frac{1}{3}$",
-      "1 / √ 3",
+      "1 /$\\sqrt{3}$",
       "3",
-      "√ 3"
+      "$\\sqrt{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $3$.",
@@ -6588,7 +6585,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "8",
       "12",
-      "8√ 3",
+      "$8\\sqrt{3}$",
       "16"
     ],
     "correctIndex": 0,
@@ -6711,8 +6708,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "12",
       "6",
-      "6√ 2",
-      "2√ 6"
+      "$6\\sqrt{2}$",
+      "$2\\sqrt{6}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $6\\sqrt{2}$",
@@ -6805,7 +6802,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$a = 7$",
       "$a = 12$",
       "$a = 14$",
-      "$a = 20$ pokaż wskazówkę »"
+      "$a = 20$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $a=12$.",
@@ -7154,12 +7151,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość wyrażenia $x^{2} - 6x + 9$ dla x = √ $3 + 3$ jest równa",
+    "prompt": "Wartość wyrażenia $x^{2} - 6x + 9$ dla x = $\\sqrt{3} + 3$ jest równa",
     "choices": [
       "1",
       "3",
-      "$1 + 2$√ 3",
-      "$1 - 2$√ 3"
+      "$1 + 2\\sqrt{3}$",
+      "$1 - 2\\sqrt{3}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $3$.",
@@ -7249,7 +7246,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba log 5 √ 125 jest równa",
+    "prompt": "Liczba log $5\\sqrt{125}$ jest równa",
     "choices": [
       "$\\frac{2}{3}$",
       "2",
@@ -7467,7 +7464,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie x$(x - 2)$ = $(x - 2)$ 2 w zbiorze liczb rzeczywistych",
+    "prompt": "Równanie $x(x - 2) = (x - 2)^2$ w zbiorze liczb rzeczywistych",
     "choices": [
       "nie ma rozwiązań",
       "ma dokładnie jedno rozwiązanie: $x = 2$",
@@ -7783,9 +7780,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkt B jest obrazem punktu A = $(-3, 5)$ w symetrii względem początku układu współrzędnych. Długość odcinka AB jest równa",
     "choices": [
-      "2√ 34",
+      "$2\\sqrt{34}$",
       "8",
-      "√ 34",
+      "$\\sqrt{34}$",
       "12"
     ],
     "correctIndex": 0,
@@ -7906,12 +7903,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątna sześcianu ma długość 4√ 3 . Pole powierzchni tego sześcianu jest równe",
+    "prompt": "Przekątna sześcianu ma długość $4\\sqrt{3}$ . Pole powierzchni tego sześcianu jest równe",
     "choices": [
       "96",
-      "24√ 3",
+      "$24\\sqrt{3}$",
       "192",
-      "16√ 3"
+      "$16\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 96",
@@ -8166,7 +8163,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkie wyrazy ciągu geometrycznego ($a_{n}$), określonego dla $n \\ge 1$ , są dodatnie. Wyrazy tego ciągu spełniają warunek $6a^{1} - 5a^{2} + a_{3} = 0$ . Oblicz iloraz q tego ciągu należący do przedziału ⟨2√ 2 ,3√ 2 ⟩.",
+    "prompt": "Wszystkie wyrazy ciągu geometrycznego ($a_{n}$), określonego dla $n \\ge 1$ , są dodatnie. Wyrazy tego ciągu spełniają warunek $6a^{1} - 5a^{2} + a_{3} = 0$ . Oblicz iloraz q tego ciągu należący do przedziału ⟨$2\\sqrt{2}$ ,$3\\sqrt{2}$ ⟩.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -8195,7 +8192,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy √ 7 . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png)",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny ABCDS, którego krawędź boczna ma długość 6 (zobacz rysunek). Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem, którego tangens jest równy$\\sqrt{7}$ . Oblicz objętość tego ostrosłupa. ![Rysunek do zadania](/cke-matura/m20-czerwiec/z34-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -8285,7 +8282,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość wyrażenia log 4 $8 + 5log$ 4 2 jest równa",
+    "prompt": "Wartość wyrażenia $\\log_4 8 + 5\\log_4 2$ jest równa",
     "choices": [
       "2",
       "4",
@@ -8347,12 +8344,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba $(2\\sqrt7 - 5)$ 2 \\cdot $(2\\sqrt7 + 5)$ 2 jest równa",
+    "prompt": "Liczba $(2\\sqrt{7} - 5)^2 \\cdot (2\\sqrt{7} + 5)^2$ jest równa",
     "choices": [
       "9",
       "3",
       "2809",
-      "$28 - 20$√ 7"
+      "$28 - 20\\sqrt{7}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 9",
@@ -8602,7 +8599,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cosα = $\\frac{24}{49}$",
       "cosα = $\\frac{5}{7}$",
       "cosα = $\\frac{25}{49}$",
-      "cosα = 5√ $\\frac{6}{7}$"
+      "cosα = $\\frac{5\\sqrt{6}}{7}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{5}{13}$",
@@ -8692,12 +8689,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoboczny, którego pole powierzchni jest równe 6√ 3 . Bok tego trójkąta ma długość",
+    "prompt": "Dany jest trójkąt równoboczny, którego pole powierzchni jest równe $6\\sqrt{3}$ . Bok tego trójkąta ma długość",
     "choices": [
-      "3√ 2",
-      "2√ 3",
-      "2√ 6",
-      "6√ 2"
+      "$3\\sqrt{2}$",
+      "$2\\sqrt{3}$",
+      "$2\\sqrt{6}$",
+      "$6\\sqrt{2}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt{6}$",
@@ -8755,10 +8752,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiono ostrosłup prawidłowy czworokątny ABCDS o podstawie ABCD. ![Rysunek do zadania](/cke-matura/m20-probna/z18-1.png) Kąt nachylenia krawędzi bocznej SA ostrosłupa do płaszczyzny podstawy ABCD to",
     "choices": [
-      "\\angle SAO",
-      "\\angle SAB",
-      "\\angle SOA",
-      "\\angle ASB"
+      "$\\angle SAO$",
+      "$\\angle SAB$",
+      "$\\angle SOA$",
+      "$\\angle ASB$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\angle SOA$",
@@ -8848,10 +8845,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Prosta l jest nachylona do osi Ox pod kątem $30^{\\circ}$ i przecina oś Oy w punkcie $(0, - \\sqrt3)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m20-probna/z21-1.png) Prosta l ma równanie",
     "choices": [
-      "y = √ $3 / 3x$ - √ 3",
-      "y = √ $3 / 3x$ + √ 3",
-      "$y = 1 / 2x$ - √ 3",
-      "$y = 1 / 2x$ + √ 3"
+      "y = $\\sqrt{3} / 3x$ -$\\sqrt{3}$",
+      "y = $\\sqrt{3} / 3x$ +$\\sqrt{3}$",
+      "$y = 1 / 2x$ -$\\sqrt{3}$",
+      "$y = 1 / 2x$ +$\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$",
@@ -8877,7 +8874,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest stożek o wysokości 6 i tworzącej 3√ 5 . Objętość tego stożka jest równa",
+    "prompt": "Dany jest stożek o wysokości 6 i tworzącej $3\\sqrt{5}$ . Objętość tego stożka jest równa",
     "choices": [
       "36π",
       "18π",
@@ -9260,7 +9257,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "10 13",
       "10 16",
       "$10 - 1$",
-      "$10 - 30$ pokaż wskazówkę »"
+      "$10 - 30$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $10^{13}$",
@@ -9349,12 +9346,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma 2 log √ $10 + \\log 10$ 3 jest równa",
+    "prompt": "Suma $2\\log\\sqrt{10} + \\log 10^3$ jest równa",
     "choices": [
       "2",
       "3",
       "4",
-      "5 pokaż wskazówkę »"
+      "5"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 4",
@@ -9444,7 +9441,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Liczba $f(2) + g(2)$ jest równa $(-2)$ .",
       "Zbiory wartości funkcji $f$ i g są równe.",
       "Funkcje f i g mają te same miejsca zerowe.",
-      "Punkt P = $(0, - 2)$ należy do wykresów funkcji $f$ i g . pokaż wskazówkę »"
+      "Punkt P = $(0, - 2)$ należy do wykresów funkcji $f$ i g ."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $f(2) + g(2) = -2$ (przy założeniu $f(2)=0$ na podstawie potencjalnego błędu w treści zadania).",
@@ -9476,7 +9473,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-3.png)",
       "![Rysunek do zadania](/cke-matura/m21-maj/z08-4.png)",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png) pokaż wskazówkę »"
+      "![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -9508,7 +9505,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$m = 1$",
       "$m = 3$",
       "$m = 6$",
-      "$m = 9$ pokaż wskazówkę »"
+      "$m = 9$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $m = 9$.",
@@ -9534,7 +9531,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = √ $3 - 1$ wartość funkcji $f$ jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = $\\sqrt{3} - 1$ wartość funkcji $f$ jest równa",
     "choices": [
       "![Rysunek do zadania](/cke-matura/m21-maj/z10-2.png)",
       "-1",
@@ -9570,7 +9567,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-1, - 5)$",
       "$(0, - 2)$",
       "$(0, - 1)$",
-      "(2, 4) pokaż wskazówkę »"
+      "(2, 4)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(-1, -5)$",
@@ -9631,7 +9628,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$x = \\frac{3}{5}$",
       "$x = \\frac{4}{5}$",
       "$x = 1$",
-      "$x = \\frac{5}{3}$ pokaż wskazówkę »"
+      "$x = \\frac{5}{3}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = \\frac{5}{3}$",
@@ -9693,7 +9690,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "28",
       "29",
       "33",
-      "40 pokaż wskazówkę »"
+      "40"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 29",
@@ -9724,7 +9721,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "sin α",
       "tg α",
       "cos α",
-      "sin 2 α pokaż wskazówkę »"
+      "sin 2 α"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\cos \\alpha$",
@@ -9755,7 +9752,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$10^{\\circ}$",
       "$30^{\\circ}$",
       "$40^{\\circ}$",
-      "$50^{\\circ}$ pokaż wskazówkę »"
+      "$50^{\\circ}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $40^{\\circ}$",
@@ -9786,7 +9783,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "12",
       "$\\frac{37}{3}$",
       "$\\frac{62}{5}$",
-      "$\\frac{64}{5}$ pokaż wskazówkę »"
+      "$\\frac{64}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{64}{5}$.",
@@ -9842,10 +9839,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach $|AD| = 3$ i $|BD| = 12$ (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png)",
     "choices": [
-      "√ 34",
+      "$\\sqrt{34}$",
       "$\\frac{13}{4}$",
-      "2√ 14",
-      "3√ 45 pokaż wskazówkę »"
+      "$2\\sqrt{14}$",
+      "$3\\sqrt{45}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{34}$",
@@ -9968,10 +9965,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pole figury F 1 złożonej z dwóch stycznych zewnętrznie kół o promieniach 1 i 3 jest równe polu figury F 2 złożonej z dwóch stycznych zewnętrznie kół o promieniach długości $r$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z24-1.png) ![Rysunek do zadania](/cke-matura/m21-maj/z24-2.png) Długość $r$ promienia jest równa",
     "choices": [
-      "√ 3",
+      "$\\sqrt{3}$",
       "2",
-      "√ 5",
-      "3 pokaż wskazówkę »"
+      "$\\sqrt{5}$",
+      "3"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\sqrt{5}$",
@@ -10001,8 +9998,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "68",
       "136",
-      "2√ 34",
-      "8√ 34 pokaż wskazówkę »"
+      "$2\\sqrt{34}$",
+      "$8\\sqrt{34}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 136",
@@ -10033,7 +10030,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{1}{7}$",
       "$\\frac{4}{7}$",
       "$\\frac{1}{14}$",
-      "$\\frac{3}{7}$ pokaż wskazówkę »"
+      "$\\frac{3}{7}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{1}{7}$",
@@ -10095,7 +10092,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$x = 1$",
       "$x = \\frac{3}{2}$",
       "$x = 2$",
-      "$x = \\frac{8}{3}$ pokaż wskazówkę »"
+      "$x = \\frac{8}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $x=2$",
@@ -10649,7 +10646,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt równoboczny ABC ma pole równe 9√ 3 . Prosta równoległa do boku BC przecina boki AB i AC - odpowiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
+    "prompt": "Trójkąt równoboczny ABC ma pole równe $9\\sqrt{3}$ . Prosta równoległa do boku BC przecina boki AB i AC - odpowiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -10733,12 +10730,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba $(\\sqrt6 - \\sqrt2) 2 - 2$√ 3 jest równa",
+    "prompt": "Liczba $(\\sqrt{6} - \\sqrt{2})^2 - 2\\sqrt{3}$ jest równa",
     "choices": [
-      "$8 - 6$√ 3",
-      "$8 - 2$√ 3",
-      "$4 - 2$√ 3",
-      "$8 - 4$√ 3 pokaż wskazówkę »"
+      "$8 - 6\\sqrt{3}$",
+      "$8 - 2\\sqrt{3}$",
+      "$4 - 2\\sqrt{3}$",
+      "$8 - 4\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $8 - 6\\sqrt{3}$",
@@ -10769,7 +10766,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "-log 5 $\\frac{7}{2}$",
       "7 log 5 2",
       "-log 5 2",
-      "log 5 2 pokaż wskazówkę »"
+      "log 5 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4 \\log_5 2$.",
@@ -10831,7 +10828,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$b_{2}$",
       "$b_{0}$,25",
       "$b_{8} / 3$",
-      "$b_{4} / 3$ pokaż wskazówkę »"
+      "$b_{4} / 3$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $b^{\\frac{7}{6}}$",
@@ -10861,8 +10858,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "2",
       "-2",
-      "√ 2",
-      "-√ 2"
+      "$\\sqrt{2}$",
+      "-$\\sqrt{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $2$.",
@@ -11044,7 +11041,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 ⋅ 64",
       "$\\frac{64}{3}$",
       "4",
-      "3 pokaż wskazówkę »"
+      "3"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 4",
@@ -11103,7 +11100,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$20^{\\circ}$",
       "$25^{\\circ}$",
       "$30^{\\circ}$",
-      "$35^{\\circ}$ pokaż wskazówkę »"
+      "$35^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $20^\\circ$",
@@ -11192,12 +11189,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W romb o boku 2√ 3 i kącie $60^{\\circ}$ wpisano okrąg. Promień tego okręgu jest równy",
+    "prompt": "W romb o boku $2\\sqrt{3}$ i kącie $60^{\\circ}$ wpisano okrąg. Promień tego okręgu jest równy",
     "choices": [
       "3",
       "$\\frac{1}{2}$",
       "$\\frac{3}{4}$",
-      "$\\frac{3}{2}$ pokaż wskazówkę »"
+      "$\\frac{3}{2}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{2}$",
@@ -11227,7 +11224,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9 ∶ 4",
       "4 ∶ 1",
       "4 ∶ 9",
-      "3 ∶ 2 pokaż wskazówkę »"
+      "3 ∶ 2"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 9 ∶ 4",
@@ -11256,10 +11253,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Końcami odcinka PR są punkty $P = (4,7)$ i R = $(-2, - 3)$ . Odległość punktu T = $(3, - 1)$ od środka odcinka PR jest równa",
     "choices": [
-      "√ 3",
-      "√ 13",
-      "√ 17",
-      "6√ 2 pokaż wskazówkę »"
+      "$\\sqrt{3}$",
+      "$\\sqrt{13}$",
+      "$\\sqrt{17}$",
+      "$6\\sqrt{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\sqrt{13}$",
@@ -11289,7 +11286,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "cos $α = \\frac{1}{5}$",
       "cos $α = -\\frac{1}{5}$",
       "cos $α = -\\frac{3}{5}$",
-      "cos $α = \\frac{3}{5}$ pokaż wskazówkę »"
+      "cos $α = \\frac{3}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{3}{5}$",
@@ -11320,7 +11317,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{4}{3}$",
       "$\\frac{6}{10}$",
       "$\\frac{3}{4}$",
-      "$\\frac{8}{10}$ pokaż wskazówkę »"
+      "$\\frac{8}{10}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{4}{3}$",
@@ -11351,7 +11348,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{2}{3}$",
       "-$\\frac{1}{6}$",
       "$\\frac{3}{2}$",
-      "-5 pokaż wskazówkę »"
+      "-5"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $-\\frac{1}{6}$",
@@ -11382,7 +11379,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$y = 3x + 5$",
       "$y = -1 / 5x + 3$",
       "$y = 5x - 10$",
-      "$y = -1 / 5x + \\frac{28}{5}$ pokaż wskazówkę »"
+      "$y = -1 / 5x + \\frac{28}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
@@ -11437,12 +11434,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątna sześcianu ma długość 5√ 3 . Wtedy objętość tego sześcianu jest równa",
+    "prompt": "Przekątna sześcianu ma długość $5\\sqrt{3}$ . Wtedy objętość tego sześcianu jest równa",
     "choices": [
       "125",
       "75",
-      "375√ 3",
-      "125√ 3"
+      "$375\\sqrt{3}$",
+      "$125\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 125",
@@ -11472,7 +11469,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3 ∶ 1",
       "1 ∶ 3",
       "9 ∶ 1",
-      "1 ∶ 9 pokaż wskazówkę »"
+      "1 ∶ 9"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $9 \\colon 1$",
@@ -11578,7 +11575,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$x = 6$",
       "$x = 5,5$",
       "$x = 2,5$",
-      "$x = 1$ pokaż wskazówkę »"
+      "$x = 1$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $x=6$",
@@ -12146,10 +12143,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wykresem funkcji kwadratowej $f(x) = 3x^{2} + bx + c$ jest parabola o wierzchołku w punkcie W = $(-3, 2)$. Wzór tej funkcji $w$ postaci kanonicznej to",
     "choices": [
-      "$f(x) = 3(x - 3) 2 + 2$",
-      "$f(x) = 3(x + 3) 2 + 2$",
-      "$f(x)$ = $(x - 3) 2 + 2$",
-      "$f(x)$ = $(x + 3) 2 + 2$"
+      "$f(x) = 3(x - 3)^2 + 2$",
+      "$f(x) = 3(x + 3)^2 + 2$",
+      "$f(x)$ = $(x - 3)^2 + 2$",
+      "$f(x)$ = $(x + 3)^2 + 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $f(x) = 3(x + 3)^2 + 2$",
@@ -12270,8 +12267,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Liczba $\\cos 12^{\\circ}$ ⋅ $\\sin 78^{\\circ}$ + $\\sin 12^{\\circ}$ ⋅ $\\cos 78^{\\circ}$ jest równa",
     "choices": [
       "$\\frac{1}{2}$",
-      "√ $\\frac{2}{2}$",
-      "√ $\\frac{3}{2}$",
+      "$\\frac{\\sqrt{2}}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$",
       "1"
     ],
     "correctIndex": 3,
@@ -12360,12 +12357,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wysokość trójkąta równobocznego jest równa 6√ 3 . Pole tego trójkąta jest równe",
+    "prompt": "Wysokość trójkąta równobocznego jest równa $6\\sqrt{3}$ . Pole tego trójkąta jest równe",
     "choices": [
-      "3√ 3",
-      "4√ 3",
-      "27√ 3",
-      "36√ 3"
+      "$3\\sqrt{3}$",
+      "$4\\sqrt{3}$",
+      "$27\\sqrt{3}$",
+      "$36\\sqrt{3}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $36\\sqrt{3}$",
@@ -12393,9 +12390,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Boki równoległoboku mają długości 6 i 10, a kąt rozwarty między tymi bokami ma miarę $120^{\\circ}$. Pole tego równoległoboku jest równe",
     "choices": [
-      "30√ 3",
+      "$30\\sqrt{3}$",
       "30",
-      "60√ 3",
+      "$60\\sqrt{3}$",
       "60"
     ],
     "correctIndex": 0,
@@ -12518,10 +12515,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty A = $(-4,4)$ i $B = (4,0)$ są sąsiednimi wierzchołkami kwadratu ABCD. Przekątna tego kwadratu ma długość",
     "choices": [
-      "4√ 10",
-      "4√ 2",
-      "4√ 5",
-      "4√ 7"
+      "$4\\sqrt{10}$",
+      "$4\\sqrt{2}$",
+      "$4\\sqrt{5}$",
+      "$4\\sqrt{7}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4\\sqrt{10}$",
@@ -12902,7 +12899,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-\\frac{3}{2})$",
       "$\\frac{3}{2}$",
       "$\\frac{2}{3}$",
-      "$(-\\frac{2}{3})$ Zasady oceniania 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$(-\\frac{2}{3})$ Zasady oceniania"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $(-\\frac{2}{3})$.",
@@ -12930,7 +12927,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $(2n + 1) 2 - 1$ jest podzielna przez 8.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $(2n + 1)^2 - 1$ jest podzielna przez 8.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -12990,7 +12987,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wyrażenie $(2a - 3)$ 2 - $(2a + 3)$ 2 jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wyrażenie $(2a - 3)^2$ - $(2a + 3)^2$ jest równe",
     "choices": [
       "-24a",
       "0",
@@ -13052,12 +13049,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania √ 3 $(x^{2} - 2)(x + 3)$ = 0 jest liczba",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania$\\sqrt{3}$ $(x^{2} - 2)(x + 3)$ = 0 jest liczba",
     "choices": [
       "3",
       "2",
-      "√ 3",
-      "√ 2"
+      "$\\sqrt{3}$",
+      "$\\sqrt{2}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\sqrt{2}$",
@@ -13385,7 +13382,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x , y) zaznaczono kąt α o wierzchołku w punkcie $O = (0 , 0)$. Jedno z ramion tego kąta pokrywa się z dodatnią półosią Ox, a drugie przechodzi przez punkt P = $(-3 , 1)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
     "choices": [
-      "1 / √ 10",
+      "1 /$\\sqrt{10}$",
       "$(-3 / \\sqrt10)$",
       "$(-\\frac{3}{1})$",
       "$(-\\frac{1}{3})$"
@@ -13444,12 +13441,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W rombie o boku długości 6√ 2 kąt rozwarty ma miarę $150^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy",
+    "prompt": "W rombie o boku długości $6\\sqrt{2}$ kąt rozwarty ma miarę $150^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy",
     "choices": [
       "24",
       "72",
       "36",
-      "36√ 2"
+      "$36\\sqrt{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 72",
@@ -13597,11 +13594,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem α takim, że cosα = √ $\\frac{2}{3}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
+    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem α takim, że cosα = $\\frac{\\sqrt{2}}{3}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
     "choices": [
-      "15√ 2",
+      "$15\\sqrt{2}$",
       "45",
-      "5√ 2",
+      "$5\\sqrt{2}$",
       "10"
     ],
     "correctIndex": 1,
@@ -14105,12 +14102,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są: punkt $A = (8,11)$ oraz okrąg o równaniu $(x - 3)$ 2 + $(y + 1) 2 = 25$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są: punkt $A = (8,11)$ oraz okrąg o równaniu $(x - 3)^2$ + $(y + 1)^2 = 25$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa",
     "choices": [
       "25",
       "13",
-      "√ 125",
-      "√ 265"
+      "$\\sqrt{125}$",
+      "$\\sqrt{265}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 13",
@@ -14165,7 +14162,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f jest określona wzorem $f(x)$ = -$(x - 1) 2 + 2$. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne A) (1,2) B) $(-1,2)$ C) $(1, - 2)$ D) $(-1, - 2)$ Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $f$ jest przedział A) $(-\\infty ,2] B)(-\\infty ,2)$ C) $(2, + \\infty )$ D) [2,+∞)",
+    "prompt": "Funkcja kwadratowa f jest określona wzorem $f(x)$ = -$(x - 1)^2 + 2$. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne A) (1,2) B) $(-1,2)$ C) $(1, - 2)$ D) $(-1, - 2)$ Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $f$ jest przedział A) $(-\\infty ,2] B)(-\\infty ,2)$ C) $(2, + \\infty )$ D) [2,+∞)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -14519,7 +14516,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość 10√ 3 , a każda jego krawędź boczna ma długość 15. Oblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
+    "prompt": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość $10\\sqrt{3}$ , a każda jego krawędź boczna ma długość 15. Oblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -14580,7 +14577,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $4$.",
@@ -14610,7 +14607,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "40 000⋅(1,07) 2 zł",
       "40 000⋅(1,7) 2 zł",
       "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł 1 pkt - odpowiedź poprawna."
+      "40 000⋅1,49 zł"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
@@ -14640,7 +14637,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
@@ -14671,7 +14668,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
@@ -14702,7 +14699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9⋅8⋅7⋅6",
       "9⋅9⋅8⋅7",
       "10⋅9⋅8⋅7",
-      "9⋅10⋅10⋅10 1 pkt - odpowiedź poprawna."
+      "9⋅10⋅10⋅10"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
@@ -14733,7 +14730,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 1",
@@ -14792,7 +14789,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-2)$",
       "2",
       "$(-3)$",
-      "3 1 pkt - odpowiedź poprawna."
+      "3"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 3",
@@ -14852,7 +14849,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png)"
     ],
     "correctIndex": 0,
     "explanation": "A",
@@ -14883,7 +14880,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$W(x)$=$(x + 2)(x^{2} - 3)$",
       "$W(x)$=$(x - 2)(x^{2} - 3)$",
       "$W(x)$=$(x + 2)(x^{2} + 3)$",
-      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 pkt - odpowiedź poprawna."
+      "$W(x)$=$(x - 2)(x^{2} + 3)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
@@ -14914,7 +14911,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "jedno rozwiązanie.",
       "dwa rozwiązania.",
       "trzy rozwiązania.",
-      "cztery rozwiązania. 1 pkt - odpowiedź poprawna."
+      "cztery rozwiązania."
     ],
     "correctIndex": 2,
     "explanation": "C, czyli trzy rozwiązania.",
@@ -14946,7 +14943,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6",
       "5",
       "7",
-      "$(-6)$ 1 pkt - odpowiedź poprawna."
+      "$(-6)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 5",
@@ -15032,7 +15029,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png)"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $x = 15$ i $y = 5$.",
@@ -15091,7 +15088,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png)"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{12}{25}$",
@@ -15122,7 +15119,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$60^{\\circ}$",
       "$55^{\\circ}$",
       "$50^{\\circ}$",
-      "$65^{\\circ}$ 1 pkt - odpowiedź poprawna."
+      "$65^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $60^{\\circ}$",
@@ -15284,16 +15281,15 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym |$AC = 4$, $|AB| = 3$, cos \\angle BAC = ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta ABC.",
+    "prompt": "Dany jest trójkąt $ABC$, w którym $|AC| = 4$, $|AB| = 3$, $\\cos \\angle BAC =$ ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta $ABC$.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{3\\sqrt{15}}{2}$",
+    "explanation": "$\\frac{18}{5}$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na pole trójkąta, uwzględniając dane boki i cosinus kąta między nimi: $P = \\frac{1}{2}ab \\sin \\alpha$. Potrzebujemy $\\sin(\\angle BAC)$, a mamy $\\cos(\\angle BAC) = -\\frac{1}{4}$.",
-      "Użyj tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby obliczyć $\\sin(\\angle BAC)$. Ponieważ kąt w trójkącie jest zawsze mniejszy niż $180^\\circ$, sinus będzie dodatni: $\\sin(\\angle BAC) = \\sqrt{1 - \\cos^2(\\angle BAC)} = \\sqrt{1 - (-\\frac{1}{4})^2} = \\sqrt{1 - \\frac{1}{16}} = \\sqrt{\\frac{15}{16}} = \\frac{\\sqrt{15}}{4}$.",
-      "Podstaw obliczoną wartość sinusa do wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot |AC| \\cdot |AB| \\cdot \\sin(\\angle BAC) = \\frac{1}{2} \\cdot 4 \\cdot 3 \\cdot \\frac{\\sqrt{15}}{4} = 6 \\cdot \\frac{\\sqrt{15}}{4} = \\frac{3\\sqrt{15}}{2}$."
+      "Ze wzoru $\\sin^2\\alpha + \\cos^2\\alpha = 1$ dla $\\cos\\angle BAC = \\frac{4}{5}$: $\\sin\\angle BAC = \\sqrt{1 - \\frac{16}{25}} = \\frac{3}{5}$ (kąt trójkąta, więc sinus jest dodatni).",
+      "Pole trójkąta: $P = \\frac{1}{2} \\cdot |AC| \\cdot |AB| \\cdot \\sin\\angle BAC = \\frac{1}{2} \\cdot 4 \\cdot 3 \\cdot \\frac{3}{5} = \\frac{18}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -15312,7 +15308,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 pkt - odpowiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 pkt - odpowiedź poprawna.",
+    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15345,7 +15341,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3",
       "4",
       "9",
-      "6 1 pkt - odpowiedź poprawna."
+      "6"
     ],
     "correctIndex": 3,
     "explanation": "D) 9",
@@ -15371,12 +15367,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg O o równaniu $(x - 3)$ 2 + $(y - 3) 2 = 13$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O przecina oś Oy w punktach o współrzędnych",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg O o równaniu $(x - 3)^2$ + $(y - 3)^2 = 13$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O przecina oś Oy w punktach o współrzędnych",
     "choices": [
       "(0,1) i (0,5).",
       "(0,1) i $(0, - 5)$.",
       "(1,0) i (5,0).",
-      "$(0, - 1)$ i (0,5). 1 pkt - odpowiedź poprawna."
+      "$(0, - 1)$ i (0,5)."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli (0,1) i (0,5).",
@@ -15434,7 +15430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$m = -1$",
       "$m = 1$",
       "$m = \\frac{1}{2}$",
-      "$m = 2$ 1 pkt - odpowiedź poprawna."
+      "$m = 2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $m = 1$.",
@@ -15460,7 +15456,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 pkt - odpowiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
+    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15524,7 +15520,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{1}{9}$",
       "$\\frac{1}{2}$",
       "$\\frac{2}{9}$",
-      "$\\frac{2}{7}$ 1 pkt - odpowiedź poprawna."
+      "$\\frac{2}{7}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{2}{9}$",
@@ -15583,7 +15579,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "6 600",
       "6 101",
       "36 100",
-      "36 600 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "36 600"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $36 \\cdot 100$.",
@@ -15615,7 +15611,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "7",
       "2",
       "1",
-      "$(-1)$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$(-1)$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 2",
@@ -15646,7 +15642,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "900",
       "729",
       "648",
-      "512 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "512"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 648",
@@ -15672,12 +15668,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wartość wyrażenia $(3 + 4a)$ 2 - $(3 - 4a)$ 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wartość wyrażenia $(3 + 4a)^2$ - $(3 - 4a)^2$ jest równa",
     "choices": [
       "32a^{2}",
       "0",
       "48a",
-      "8a^{2} 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "8a^{2}"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $48a$.",
@@ -15703,7 +15699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt - wybranie dwóch poprawnych odpowiedzi. 1 pkt - wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt - wybranie dwóch poprawnych odpowiedzi. 1 pkt - wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15736,7 +15732,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "2",
       "4",
       "6",
-      "8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "8"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 4",
@@ -15767,7 +15763,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "dokładnie jedno rozwiązanie: $x = 2$.",
       "dokładnie dwa rozwiązania: $x = 1,5$, $x = 2$.",
       "dokładnie trzy rozwiązania: $x = -6$, $x = 0$, $x = 2$.",
-      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$. 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "dokładnie cztery rozwiązania: $x = -6$, $x = 0$, $x = 1,5$, $x = 2$."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $x = -6, 𝑥 = 0, 𝑥 = 1.5, 𝑥 = 2$.",
@@ -15798,7 +15794,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-1.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png)"
     ],
     "correctIndex": 1,
     "explanation": "B",
@@ -15852,7 +15848,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 10.2. Wyznacz i zapisz zbiór wszystkich rozwiązań nierówności: $f(x) \\le 0$ ......................... 1 pkt - rozwiązanie poprawne. 0 pkt - rozwiązanie niepoprawne lub niepełne albo brak rozwiązania. Zadanie 10.3. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej.",
+    "prompt": "Dana jest funkcja kwadratowa f, której fragment wykresu przedstawiono w kartezjańskim układzie współrzędnych (x,y) na rysunku poniżej. Wierzchołek paraboli, która jest wykresem funkcji $f$, oraz punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-1.png) Zadanie 10.1. Funkcja $g$ jest określona za pomocą funkcji $f$ następująco: $g(x) = f(x - 2)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres funkcji $g$ przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z10-5.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15886,7 +15882,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$a > 0$ i $b > 0$.",
       "$a > 0$ i b",
       "$a_{0}$.",
-      "$a_{1}$ pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$a_{1}$ pkt - odpowiedź poprawna."
     ],
     "correctIndex": 0,
     "explanation": "A) $a > 0$ i $b > 0$.",
@@ -15917,7 +15913,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$Q = -0,9P^{2} + 6,9$",
       "$Q = -3P + 27$",
       "$P = -0,9Q^{2} + 6,9$",
-      "$P = -3Q + 27$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$P = -3Q + 27$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $Q = -3P+27$",
@@ -15943,7 +15939,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0}$ - masa przyjętej dawki leku, T - czas półtrwania leku, t - czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi. Zadanie 13.2. Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej dawki tego leku. Wynik podaj w zaokrągleniu do 0,1 mg.",
+    "prompt": "Czas T półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się o połowę - po przyjęciu jednorazowej dawki. Przyjmij, że po przyjęciu jednej dawki masa m leku w organizmie zmienia się w czasie zgodnie z zależnością wykładniczą ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-1.png) gdzie: $m^{0}$ - masa przyjętej dawki leku, T - czas półtrwania leku, t - czas liczony od momentu przyjęcia dawki. W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację o całkowitej aktualnej masie leku w organizmie. Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę $m^{0} = 100$ mg leku L. Czas półtrwania tego leku w organizmie jest równy $T = 4$ doby. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykres zależności masy M leku L w organizmie tego pacjenta od czasu t, liczonego od momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z13-5.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15977,7 +15973,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "20 000∙(1,12) 2",
       "20 000∙2⋅1,03",
       "20 000∙1,06",
-      "20 000∙(1,03) 2 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "20 000∙(1,03) 2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
@@ -16003,7 +15999,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16030,7 +16026,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16060,10 +16056,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg o środku S = $(2, - 5)$ i promieniu $r = 3$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie tego okręgu ma postać",
     "choices": [
-      "$(x - 2)$ 2 + $(y + 5) 2 = 9$",
-      "$(x + 2)$ 2 + $(y - 5) 2 = 3$",
-      "$(x - 2)$ 2 + $(y + 5) 2 = 3$",
-      "$(x + 2)$ 2 + $(y - 3) 2 = 9$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi."
+      "$(x - 2)^2$ + $(y + 5)^2 = 9$",
+      "$(x + 2)^2$ + $(y - 5)^2 = 3$",
+      "$(x - 2)^2$ + $(y + 5)^2 = 3$",
+      "$(x + 2)^2$ + $(y - 3)^2 = 9$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(x-2)^2 + (y+5)^2 = 9$.",
@@ -16117,7 +16113,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 pkt - poprawne dokończenia dwóch zdań. 1 pkt - poprawne dokończenie jednego zdania. 0 pkt - odpowiedź całkowicie niepoprawna albo brak odpowiedzi.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 pkt - poprawne dokończenia dwóch zdań. 1 pkt - poprawne dokończenie jednego zdania.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16149,9 +16145,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) dany jest kwadrat ABCD. Wierzchołki A = $(-2,1)$ i $C = (4,5)$ są końcami przekątnej tego kwadratu. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej kwadratu ABCD jest równa",
     "choices": [
       "10",
-      "2√ 13",
-      "2√ 10",
-      "8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi"
+      "$2\\sqrt{13}$",
+      "$2\\sqrt{10}$",
+      "8"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $2\\sqrt{13}$",
@@ -16176,12 +16172,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinek AB jest średnicą okręgu o środku w punkcie O i promieniu $r = 8$ (zobacz rysunek). Cięciwa AC ma długość 8√ 3 . ![Rysunek do zadania](/cke-matura/m23-przykladowa/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta BAC jest równa",
+    "prompt": "Odcinek AB jest średnicą okręgu o środku w punkcie O i promieniu $r = 8$ (zobacz rysunek). Cięciwa AC ma długość $8\\sqrt{3}$ . ![Rysunek do zadania](/cke-matura/m23-przykladowa/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta BAC jest równa",
     "choices": [
       "$30^{\\circ}$",
       "$45^{\\circ}$",
       "$15^{\\circ}$",
-      "$60^{\\circ}$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi"
+      "$60^{\\circ}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $30^\\circ$.",
@@ -16207,12 +16203,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry oraz 4tgα = 3 sin 2 $α + 3cos$ 2 α. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
+    "prompt": "Kąt α jest ostry oraz $4\\operatorname{tg}\\alpha = 3\\sin^2\\alpha + 3\\cos^2\\alpha$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
     "choices": [
       "$\\frac{3}{4}$",
       "$\\frac{4}{3}$",
       "14",
-      "4 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "4"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\frac{3}{4}$",
@@ -16240,7 +16236,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dane są dwa trójkąty podobne ABC i KLM o polach równych - odpowiednio - P oraz 2P. Obwód trójkąta ABC jest równy x. Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3. Obwód trójkąta KLM jest równy:",
     "choices": [
-      "√ 2 ⋅ x",
+      "$\\sqrt{2}$ ⋅ x",
       "2x ponieważ stosunek obwodów trójkątów podobnych jest równy",
       "1. kwadratowi stosunku pól tych trójkątów.",
       "2. pierwiastkowi kwadratowemu ze stosunku pól tych trójkątów."
@@ -16274,7 +16270,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$52^{\\circ}$",
       "$26^{\\circ}$",
       "$14^{\\circ}$",
-      "$38^{\\circ}$ 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$38^{\\circ}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $38^{\\circ}$",
@@ -16303,9 +16299,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano w ten sposób prostokąt ABCD, w którym bok BC odpowiada krawędzi rozcięcia (wysokości graniastosłupa). Przekątna AC tego prostokąta ma długość 16 i tworzy z bokiem BC kąt o mierze $30^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z25-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość krawędzi podstawy tego graniastosłupa jest równa",
     "choices": [
       "8",
-      "8√ 3",
-      "2√ 3",
-      "2 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$8\\sqrt{3}$",
+      "$2\\sqrt{3}$",
+      "2"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 2",
@@ -16336,7 +16332,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3∶4",
       "1∶4",
       "1∶8",
-      "3∶8 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "3∶8"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1∶8$",
@@ -16367,7 +16363,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-2.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png) 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png)"
     ],
     "correctIndex": 2,
     "explanation": "C",
@@ -16450,7 +16446,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi Zadanie 30.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa A) 2,25 godziny. B) 2,50 godziny. C) 2,75 godziny. D) 1,50 godziny. 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16541,7 +16537,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $n^{2}$ + $(n + 1)$ 2 + $(n + 2)$ 2 przy dzieleniu przez 3 daje resztę 2.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $n^{2}$ + $(n + 1)^2$ + $(n + 2)^2$ przy dzieleniu przez 3 daje resztę 2.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16567,7 +16563,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log √ 3 9 jest równa",
+    "prompt": "Liczba $\\log_{\\sqrt{3}} 9$ jest równa",
     "choices": [
       "2",
       "3",
@@ -16596,7 +16592,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a i dla każdej liczby rzeczywistej b wartość wyrażenia $(2a + b)$ 2 - $(2a - b)$ 2 jest równa wartości wyrażenia",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a i dla każdej liczby rzeczywistej b wartość wyrażenia $(2a + b)^2$ - $(2a - b)^2$ jest równa wartości wyrażenia",
     "choices": [
       "8a^{2}",
       "8ab",
@@ -17057,9 +17053,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze $120^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe",
     "choices": [
       "12",
-      "12√ 3",
+      "$12\\sqrt{3}$",
       "6",
-      "6√ 3"
+      "$6\\sqrt{3}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $6\\sqrt{3}$",
@@ -17173,7 +17169,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe 15√ 3 . ![Rysunek do zadania](/cke-matura/m24-maj/z25-1.png)",
+    "prompt": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa 6 (zobacz rysunek). Pole podstawy tego graniastosłupa jest równe $15\\sqrt{3}$ . ![Rysunek do zadania](/cke-matura/m24-maj/z25-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -17373,7 +17369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $(\\sqrt32 - \\sqrt2)$ 2 jest równa",
+    "prompt": "Liczba $(\\sqrt{32} - \\sqrt{2})^2$ jest równa",
     "choices": [
       "16",
       "18",
@@ -17431,7 +17427,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 3 $108 - 2log$ 3 2 jest równa",
+    "prompt": "Liczba $\\log_3 108 - 2\\log_3 2$ jest równa",
     "choices": [
       "3",
       "9",
@@ -17462,7 +17458,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x wartość wyrażenia $(3x + 2)$ 2 - $(2x - 3)$ 2 jest równa wartości wyrażenia",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x wartość wyrażenia $(3x + 2)^2$ - $(2x - 3)^2$ jest równa wartości wyrażenia",
     "choices": [
       "$5x^{2} - 5$",
       "$5x^{2} + 13$",
@@ -17845,12 +17841,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry i spełnia warunek √ 3 tgα = 2 sinα. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cosinus kąta α jest równy",
+    "prompt": "Kąt α jest ostry i spełnia warunek$\\sqrt{3}$ tgα = 2 sinα. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cosinus kąta α jest równy",
     "choices": [
       "$\\frac{1}{2}$",
-      "√ $\\frac{2}{2}$",
-      "√ $\\frac{3}{2}$",
-      "√ $\\frac{3}{3}$"
+      "$\\frac{\\sqrt{2}}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$",
+      "$\\frac{\\sqrt{3}}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\frac{\\sqrt{3}}{2}$",
@@ -17968,7 +17964,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe 33√ 3 . A) prawda B) fałsz SCHEMAT PUNKTACJI 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 11$, $|BC| = 12$ oraz $|\\angle ABC| = 60^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m25-maj/z21-1.png) Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Trójkąt ABC jest równoramienny. A) prawda B) fałsz Pole trójkąta ABC jest równe $33\\sqrt{3}$ . A) prawda B) fałsz SCHEMAT PUNKTACJI",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18060,10 +18056,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x,y) punkt $P = (0,0)$ leży na okręgu O o środku w punkcie $S = (2,4)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O jest określony równaniem",
     "choices": [
-      "A. $(x - 2)$ 2 + $(y - 4) 2 = 2$√ 5",
-      "B. $(x - 2)$ 2 + $(y - 4) 2 = 20$",
-      "C. $(x + 2)$ 2 + $(y + 4) 2 = 2$√ 5",
-      "D. $(x + 2)$ 2 + $(y + 4) 2 = 20$"
+      "A. $(x - 2)^2$ + $(y - 4)^2 = 2\\sqrt{5}$",
+      "B. $(x - 2)^2$ + $(y - 4)^2 = 20$",
+      "C. $(x + 2)^2$ + $(y + 4)^2 = 2\\sqrt{5}$",
+      "D. $(x + 2)^2$ + $(y + 4)^2 = 20$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $(x − 2)^2 + (y − 4)^2 = 20$",
@@ -18120,10 +18116,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Objętość sześcianu jest równa 729. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego sześcianu jest równa",
     "choices": [
-      "9√ 3",
-      "9√ 2",
-      "3√ 3",
-      "3√ 2"
+      "$9\\sqrt{3}$",
+      "$9\\sqrt{2}$",
+      "$3\\sqrt{3}$",
+      "$3\\sqrt{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A) $9\\sqrt{3}$",
