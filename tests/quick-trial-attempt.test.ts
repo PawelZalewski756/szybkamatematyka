@@ -54,6 +54,25 @@ describe("POST /api/quick-trial/attempt", () => {
     expect(JSON.stringify(rpc.mock.calls)).not.toContain(CLIENT_IP);
   });
 
+  it("falls back to the legacy RPC when the rate-limited function is missing", async () => {
+    vi.stubEnv("VERCEL", "1");
+    vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://example.supabase.co");
+    vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", SERVICE_KEY);
+    const rpc = vi
+      .fn()
+      .mockResolvedValueOnce({ data: null, error: { code: "PGRST202", message: "missing" } })
+      .mockResolvedValueOnce({ data: null, error: null });
+    createClientMock.mockReturnValue({ rpc });
+
+    const response = await POST(request());
+
+    expect(response.status).toBe(200);
+    expect(rpc).toHaveBeenLastCalledWith("record_quick_trial_attempt", {
+      p_session_id: SESSION_ID,
+      p_is_correct: false,
+    });
+  });
+
   it("returns 429 when the database rate limiter rejects an attempt", async () => {
     vi.stubEnv("VERCEL", "1");
     vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://example.supabase.co");

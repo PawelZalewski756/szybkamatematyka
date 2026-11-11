@@ -22,6 +22,18 @@ type PageProps = {
 
 export const dynamicParams = true;
 
+function promptSnippet(prompt: string | undefined): string | null {
+  const text = (prompt ?? "")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\$+/g, "")
+    .replace(/\\[a-zA-Z]+/g, "")
+    .replace(/[{}*_#>]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (text.length < 8) return null;
+  return text.length > 90 ? `${text.slice(0, 90).trimEnd()}...` : text;
+}
+
 export function generateStaticParams() {
   return listOfficialCkeSheets().map((sheet) => ({ id: sheet.id }));
 }
@@ -117,7 +129,7 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
                     {isOpenExamTask(task) ? " · otwarte" : ""}
                   </span>
                   <span className="mt-1 block truncate text-sm font-semibold text-foreground">
-                    {task.title}
+                    {promptSnippet(task.prompt) ?? `Zadanie ${task.examSource?.taskNumber ?? index + 1}`}
                   </span>
                 </span>
                 <span className="shrink-0 text-sm font-bold text-accent">

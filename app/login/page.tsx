@@ -243,27 +243,7 @@ export default function LoginPage() {
         return;
       }
 
-      void fetch("/api/telegram/signup-notification", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ userId: signupResult.userId }),
-        keepalive: true,
-        signal: AbortSignal.timeout(8_000),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            console.error(
-              "[szybka-matma] Nie udało się powiadomić administratorów o rejestracji:",
-              response.status,
-            );
-          }
-        })
-        .catch((notificationError: unknown) => {
-          console.error(
-            "[szybka-matma] Nie udało się wysłać powiadomienia o rejestracji.",
-            notificationError,
-          );
-        });
+      // Powiadomienie administratorów wysyła serwer w /api/signup.
 
       if (!signupResult.needsConfirmation) {
         const { data, error } = await supabase.auth.signInWithPassword({

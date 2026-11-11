@@ -18,13 +18,40 @@ function renderLatex(latex: string, displayMode: boolean): string {
   });
 }
 
+const IMAGE_MD = /!\[([^\]]*)\]\(([^)\s]+)\)/g;
+
+/** Tekst z obrazkami markdown (opcje typu ![...](...)) - renderuje <img> zamiast surowego zapisu. */
+function renderTextWithImages(text: string, keyBase: number) {
+  const out: React.ReactNode[] = [];
+  let last = 0;
+  let k = 0;
+  for (const m of text.matchAll(IMAGE_MD)) {
+    const idx = m.index ?? 0;
+    if (idx > last) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last, idx)}</Fragment>);
+    out.push(
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        key={`${keyBase}-i${k++}`}
+        src={m[2]}
+        alt={m[1] && m[1] !== "Rysunek do zadania" ? m[1] : "Opcja odpowiedzi"}
+        loading="lazy"
+        className="mx-auto inline-block max-h-28 max-w-full rounded bg-white object-contain p-1 align-middle"
+      />,
+    );
+    last = idx + m[0].length;
+  }
+  if (last === 0) return text;
+  if (last < text.length) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last)}</Fragment>);
+  return out;
+}
+
 /** Krótki tekst z LaTeX ($...$) - np. opcje ABCD. */
 export function MathText({ content, className, as: Tag = "span" }: MathTextProps) {
   const nodes = useMemo(
     () =>
       splitMathText(content).map((part, index) => {
         if (part.kind === "text") {
-          return <Fragment key={index}>{part.text}</Fragment>;
+          return <Fragment key={index}>{renderTextWithImages(part.text, index)}</Fragment>;
         }
 
         const html = renderLatex(part.latex, part.kind === "display");

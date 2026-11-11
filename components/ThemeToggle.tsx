@@ -8,7 +8,7 @@ export const THEME_STORAGE_KEY = "sm-theme";
 type Theme = "light" | "dark";
 
 /** Wykonywany inline w <head>, zanim React się zhydratuje - bez migania motywu. */
-export const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="light"?"#faf7f0":"#0f0e0b")}catch(e){}`;
+export const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");if(t!=="light"&&t!=="dark"){t="light"}document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="light"?"#faf7f0":"#0f0e0b")}catch(e){}`;
 
 function subscribe(callback: () => void) {
   const observer = new MutationObserver(callback);
@@ -20,11 +20,11 @@ function subscribe(callback: () => void) {
 }
 
 function getSnapshot(): Theme {
-  return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
 function getServerSnapshot(): Theme {
-  return "dark";
+  return "light";
 }
 
 function applyTheme(theme: Theme) {
