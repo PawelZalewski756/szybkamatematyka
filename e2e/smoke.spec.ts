@@ -82,33 +82,48 @@ test.describe("Smoke", () => {
     await expect(page).toHaveURL(/\/trening$/);
   });
 
-  test("nie zbiera własnych statystyk i usuwa dawny identyfikator", async ({
+  test("licznik wejść pyta o zgodę raz i liczy tylko po akceptacji", async ({
     page,
   }) => {
-    let analyticsRequests = 0;
-    page.on("request", (request) => {
-      if (new URL(request.url()).pathname.startsWith("/api/analytics/")) {
-        analyticsRequests += 1;
-      }
-    });
-    await page.addInitScript(() => {
-      localStorage.setItem("sm-analytics-consent", "accepted");
-      localStorage.setItem(
-        "sm-analytics-visitor-id",
-        "123e4567-e89b-42d3-a456-426614174000",
-      );
+    const bodies: string[] = [];
+    await page.route("**/api/analytics/pageview", async (route) => {
+      bodies.push(route.request().postData() ?? "");
+      await route.fulfill({ json: { ok: true } });
     });
     await page.goto("/");
 
-    await expect(
-      page.locator('[aria-label="Zgoda na anonimową analitykę"]'),
-    ).toHaveCount(0);
-    await expect
-      .poll(() =>
-        page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
-      )
-      .toBeNull();
-    expect(analyticsRequests).toBe(0);
+    const prompt = page.locator('[aria-label="Zgoda na anonimowy licznik wejść"]');
+    await expect(prompt).toBeVisible();
+    expect(bodies).toHaveLength(0);
+
+    await prompt.getByRole("button", { name: "Tak" }).click();
+    await expect(prompt).toHaveCount(0);
+    await expect.poll(() => bodies.length).toBe(1);
+    expect(bodies[0]).toContain('"path":"/"');
+
+    await page.reload();
+    await expect(prompt).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Prywatność" })).toBeVisible();
+  });
+
+  test("odrzucenie zgody nie wysyła nic i nie zapisuje identyfikatora", async ({
+    page,
+  }) => {
+    let requests = 0;
+    await page.route("**/api/analytics/pageview", async (route) => {
+      requests += 1;
+      await route.fulfill({ json: { ok: true } });
+    });
+    await page.goto("/");
+    await page
+      .locator('[aria-label="Zgoda na anonimowy licznik wejść"]')
+      .getByRole("button", { name: "Nie" })
+      .click();
+    await page.reload();
+    expect(requests).toBe(0);
+    expect(
+      await page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
+    ).toBeNull();
   });
 
   test("/login ma formularz logowania", async ({ page }) => {

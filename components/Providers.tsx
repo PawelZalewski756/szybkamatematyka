@@ -7,6 +7,7 @@ import { StreakReminderHost } from "@/components/reminders/StreakReminderHost";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { SolvedTasksProvider } from "@/components/SolvedTasksProvider";
 import { setRuntimePublicConfig, isSupabaseConfigured } from "@/lib/supabase/config";
+import { VisitCounter } from "@/components/analytics/VisitCounter";
 import { MotionConfig } from "framer-motion";
 import { useEffect } from "react";
 import type { ReactNode } from "react";
@@ -55,48 +56,13 @@ function RuntimePublicConfig() {
 }
 
 export function Providers({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    try {
-      for (
-        let index = window.localStorage.length - 1;
-        index >= 0;
-        index -= 1
-      ) {
-        const key = window.localStorage.key(index);
-        if (
-          key &&
-          (key === "sm-analytics-consent" ||
-            key === "sm-analytics-visitor-id" ||
-            key.startsWith("sm-analytics-event-"))
-        ) {
-          window.localStorage.removeItem(key);
-        }
-      }
-
-      for (
-        let index = window.sessionStorage.length - 1;
-        index >= 0;
-        index -= 1
-      ) {
-        const key = window.sessionStorage.key(index);
-        if (key && key.startsWith("sm-analytics-session-event-")) {
-          window.sessionStorage.removeItem(key);
-        }
-      }
-    } catch (error) {
-      console.warn(
-        "[szybka-matma] Could not clear legacy analytics storage:",
-        error,
-      );
-    }
-  }, []);
-
   return (
     // `reducedMotion="user"` sprawia, że wszystkie animacje framer-motion
     // automatycznie respektują systemowe ustawienie „prefers-reduced-motion”.
     <MotionConfig reducedMotion="user">
       <RuntimePublicConfig />
       <ServiceWorkerRegister />
+      <VisitCounter />
       <LearningPathProvider>
         <SchoolClassSync />
         <SolvedTasksProvider>

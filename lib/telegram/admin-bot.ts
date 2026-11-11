@@ -74,5 +74,9 @@ export function describeTelegramCommandError(error: unknown): string {
     return "Brakuje tabeli solved_tasks. Uruchom supabase/migrations/init_solved_tasks.sql w Supabase → SQL Editor.";
   }
 
+  if (message.includes("page_views") || message.includes("get_page_view_stats")) {
+    return "Brakuje migracji licznika wejść. Uruchom supabase/migrations/20261011100000_add_anonymous_page_analytics.sql w Supabase → SQL Editor.";
+  }
+
   return `Błąd pobierania danych: ${message.slice(0, 300)}`;
 }
