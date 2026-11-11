@@ -4,6 +4,7 @@ import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
 import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { AccountGate } from "@/components/subscription/AccountGate";
 import { ProGate } from "@/components/subscription/ProGate";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import {
@@ -23,7 +24,7 @@ import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import { canViewFullSolutions } from "@/lib/subscription/content-limits";
 import { useSubscription } from "@/lib/subscription/use-subscription";
-import { fetchTaskGrade } from "@/lib/trening/task-assist-client";
+import { fetchTaskGrade, type AssistQuotaSnapshot } from "@/lib/trening/task-assist-client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -56,6 +57,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   const [gradeError, setGradeError] = useState<string | null>(null);
   const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
   const [openAwarded, setOpenAwarded] = useState<number | null>(null);
+  const [quota, setQuota] = useState<AssistQuotaSnapshot | null>(null);
 
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
@@ -136,7 +138,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
     }
 
     try {
-      const { grade } = await fetchTaskGrade({
+      const { grade, quota: nextQuota } = await fetchTaskGrade({
         taskId: task.id,
         taskContent: formatCkeMathText(task.prompt),
         correctAnswer: expected,
@@ -149,6 +151,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
           .join("\n"),
       });
       const awarded = resolveAwardedPoints(grade, maxPoints);
+      if (nextQuota) setQuota(nextQuota);
       setOpenGrade(grade);
       setOpenAwarded(awarded);
       setShowExplanation(true);
@@ -157,6 +160,8 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         markSolved(task.id);
       }
     } catch (err) {
+      const withQuota = err as Error & { quota?: AssistQuotaSnapshot };
+      if (withQuota.quota) setQuota(withQuota.quota);
       const message =
         err instanceof Error ? err.message : "Nie udało się ocenić odpowiedzi.";
       setGradeError(message);
@@ -211,7 +216,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         )}
 
         {open ? (
-          <ProGate featureLabel="Ocena zadań otwartych przez AI">
+          <AccountGate featureLabel="Ocena zadań otwartych przez AI">
           <div className="mt-6 space-y-3">
             <label htmlFor="open-answer" className="text-sm font-bold text-foreground">
               Twoja odpowiedź
@@ -233,13 +238,18 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
             >
               {grading ? "Sprawdzam…" : "Sprawdź odpowiedź"}
             </button>
+            {quota && quota.remaining != null && (
+              <p className="text-xs text-muted">
+                Darmowe sprawdzenia AI w tym miesiącu: pozostało {quota.remaining} z {quota.limit}.
+              </p>
+            )}
             {gradeError && (
               <p role="alert" className="text-sm font-semibold text-amber-200">
                 {gradeError}
               </p>
             )}
           </div>
-          </ProGate>
+          </AccountGate>
         ) : (
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {task.choices.map((choice, index) => {
