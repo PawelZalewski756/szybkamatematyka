@@ -4480,15 +4480,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$112^{\\circ}$",
       "$110^{\\circ}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $116^\\circ$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $112^{\\circ}$",
     "solutionSteps": [
-      "Kąt ACB jest kątem wpisanym opartym na średnicy AB, więc jest kątem prostym, $\\angle ACB = 90^\\circ$. Suma kątów w trójkącie ABC wynosi $180^\\circ$.",
-      "Kąt $\\angle CAB$ jest kątem wpisanym opartym na tym samym łuku co kąt $\\angle COB$ (kąt środkowy), stąd $\\angle COB = 2 \\cdot \\angle CAB$. W trójkącie COB kąty przy podstawie OC i OB są równe, $\\angle OCB = \\angle OAC = \\angle CAB$.",
-      "Kąt środkowy $\\alpha$ jest kątem przyległym do kąta $\\angle COB$, więc $\\alpha + \\angle COB = 180^\\circ$. Wiemy, że $\\angle ACB = 90^\\circ$, a $\\angle ACB = \\angle ACO + \\angle OCB$. Skoro $\\triangle ACO$ jest równoramienny ($OA=OC$), to $\\angle ACO = \\angle OAC$. W trójkącie $\\triangle ABC$, $\\angle CAB + \\angle CBA + \\angle ACB = 180^\\circ$, czyli $\\angle CAB + \\angle CBA + 90^\\circ = 180^\\circ$, co daje $\\angle CAB + \\angle CBA = 90^\\circ$.",
-      "Z rysunku widzimy, że $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem przyległym do kąta $\\angle COB$, więc $\\alpha = 180^\\circ - 116^\\circ = 64^\\circ$. Sprawdzając ponownie rysunek, kąt środkowy $\\alpha$ nie jest kątem przyległym do $\\angle COB$. Kąt $\\angle AOC$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\angle AOC = 2 \\cdot \\angle ABC$. Ponieważ $\\triangle ABC$ jest trójkątem prostokątnym, a $OA=OC=OB$ (promienie), to $\\triangle AOC$ i $\\triangle BOC$ są trójkątami równoramiennymi. Kąt $\\angle COB = 116^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku BC. Kąt $\\angle BAC$ jest kątem wpisanym opartym na łuku BC. Zatem $\\alpha = 2 \\cdot \\angle BAC$. W trójkącie prostokątnym $\\triangle ABC$, $\\angle ACB = 90^\\circ$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $\\triangle BOC$, który jest równoramienny, kąty przy podstawie wynoszą $\\frac{180^\\circ - 116^\\circ}{2} = \\frac{64^\\circ}{2} = 32^\\circ$. Zatem $\\angle OBC = \\angle OCB = 32^\\circ$. Ponieważ $\\angle ACB = 90^\\circ$, to $\\angle ACO = \\angle ACB - \\angle OCB = 90^\\circ - 32^\\circ = 58^\\circ$. W trójkącie $\\triangle AOC$, który jest równoramienny, $\\angle OAC = \\angle OCA = 58^\\circ$. Suma kątów w $\\triangle AOC$ wynosi $180^\\circ$, więc $\\angle AOC = 180^\\circ - (58^\\circ + 58^\\circ) = 180^\\circ - 116^\\circ = 64^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Zatem $\\alpha = \\angle AOC = 64^\\circ$. Na rysunku jest błąd w oznaczeniach lub merytoryce zadania, ponieważ podane odpowiedzi są większe niż 90 stopni, a kąt $\\alpha$ na rysunku wydaje się być ostry. Przyjmując dane z rysunku, że kąt $\\angle COB = 116^\\circ$, a kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC, więc $\\angle AOC = 2 \\angle ABC$. Kąt $\\angle COB = 116^\\circ$. W trójkącie $BOC$, $OB=OC$, więc jest równoramienny. $\\angle OBC = \\angle OCB = (180^\\circ - 116^\\circ)/2 = 32^\\circ$. Kąt $\\angle ACB = 90^\\circ$. W trójkącie $ABC$: $\\angle BAC + \\angle ABC + 90^\\circ = 180^\\circ$. $\\angle ABC = 180^\\circ - 90^\\circ - \\angle BAC = 90^\\circ - \\angle BAC$. Ponieważ $\\angle OBC = 32^\\circ$, to $\\angle ABC = 32^\\circ$. Wtedy $\\angle BAC = 90^\\circ - 32^\\circ = 58^\\circ$. Kąt $\\alpha$ jest kątem środkowym opartym na łuku AC. Kąt $\\angle ABC$ jest kątem wpisanym opartym na łuku AC. Zatem $\\alpha = 2 \\angle ABC = 2 \\cdot 32^\\circ = 64^\\circ$.\nPonieważ jedna z odpowiedzi jest poprawna, a moje obliczenia nie pasują, zakładam, że na rysunku $\\alpha$ jest zaznaczone jako kąt $\\angle BOC$. Wtedy $116^\\circ$ jest prawidłową odpowiedzią. Jednak zadanie mówi \"Zaznaczony na rysunku kąt środkowy α ma miarę\". Na rysunku zaznaczono kąt $\\angle BOC$ jako $\\alpha$.",
-      "Z rysunku odczytujemy, że kąt środkowy $\\alpha$ jest równy kątowi $\\angle BOC$.",
-      "Kąt $\\angle BOC$ jest dany na rysunku i ma miarę $116^\\circ$."
+      "Z rysunku: $\\angle ACO = 56^{\\circ}$. Trójkąt $AOC$ jest równoramienny ($|OA| = |OC|$ jako promienie), więc $\\angle CAO = \\angle ACO = 56^{\\circ}$.",
+      "Kąt $\\alpha = \\angle COB$ jest kątem zewnętrznym trójkąta $AOC$, więc jest równy sumie kątów wewnętrznych nieprzyległych: $\\alpha = 56^{\\circ} + 56^{\\circ} = 112^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -4548,21 +4544,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C, czyli $(3 + \\sqrt{3}) a$",
     "solutionSteps": [
-      "Oblicz długość boku $AC$, korzystając z twierdzenia Pitagorasa w trójkącie prostokątnym $ADC$, gdzie $AD = \\frac{a}{2}$ i $CD = \\frac{\\sqrt{3}}{2}a$. Mamy $AC^2 = AD^2 + CD^2 = \\left(\\frac{a}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Stąd $AC = a$.",
-      "Oblicz długość boku $BC$. Trójkąt $BDC$ jest prostokątny, a $BD = \\frac{\\sqrt{3}}{2}a$ i $CD = \\frac{\\sqrt{3}}{2}a$. Jest to trójkąt równoramienny i prostokątny, więc $BC^2 = BD^2 + CD^2 = \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = \\frac{3a^2}{4} + \\frac{3a^2}{4} = \\frac{6a^2}{4} = \\frac{3a^2}{2}$. Stąd $BC = \\sqrt{\\frac{3}{2}}a = \\frac{\\sqrt{6}}{2}a$.",
-      "Oblicz obwód trójkąta $ABC$: $AB + AC + BC$. Długość boku $AB$ jest równa $a$. Zatem obwód wynosi $a + a + \\frac{\\sqrt{6}}{2}a = \\left(2 + \\frac{\\sqrt{6}}{2}\\right)a$. Ponieważ żadna z odpowiedzi nie pasuje, sprawdzam ponownie obliczenia.",
-      "(ponownie).** Oblicz długość boku $AC$. Trójkąt $ADC$ jest prostokątny. $AD = \\frac{a}{2}$. Długość wysokości $CD$ w trójkącie równobocznym o boku $a$ wynosi $\\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa: $AC^2 = AD^2 + CD^2 = (\\frac{a}{2})^2 + (\\frac{\\sqrt{3}}{2}a)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $AC=a$.",
-      "(ponownie).** Oblicz długość boku $BC$. Trójkąt $BDC$ jest prostokątny. $BD = \\frac{a}{2}$, $CD = \\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa: $BC^2 = BD^2 + CD^2 = (\\frac{a}{2})^2 + (\\frac{\\sqrt{3}}{2}a)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $BC=a$.",
-      "(ponownie).** Oblicz obwód trójkąta $ABC$. Długości boków to $AB = a$, $AC = a$, $BC = a$. Obwód wynosi $a + a + a = 3a$. Analiza rysunku wskazuje, że boki $AC$ i $BC$ są równe, ale niekoniecznie $a$. Punkt $D$ jest środkiem boku $AB$. Trójkąt $ADC$ i $BDC$ są prostokątne.",
-      "(ponownie).** Oblicz długość boku $AC$. Trójkąt $ADC$ jest prostokątny. $AD = \\frac{a}{2}$. Wysokość $CD$ to wysokość trójkąta równobocznego o boku $a$, czyli $CD = \\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa: $AC^2 = AD^2 + CD^2 = \\left(\\frac{a}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $AC=a$.",
-      "(ponownie).** Oblicz długość boku $BC$. Trójkąt $BDC$ jest prostokątny. $BD = \\frac{a}{2}$. Wysokość $CD = \\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa: $BC^2 = BD^2 + CD^2 = \\left(\\frac{a}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}a\\right)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $BC=a$.",
-      "(ponownie).** Oblicz obwód trójkąta $ABC$: $AB + AC + BC$. Długości boków to $a + a + a = 3a$. Z rysunku wynika, że kąt przy wierzchołku $C$ jest prosty. Wysokość $CD$ dzieli bok $AB$ na połowy.",
-      "(ponownie).** Oblicz długość boku $AC$. W trójkącie prostokątnym $ADC$ mamy $AD = \\frac{a}{2}$ i $CD = \\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa, $AC^2 = (\\frac{a}{2})^2 + (\\frac{\\sqrt{3}}{2}a)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $AC = a$.",
-      "(ponownie).** Oblicz długość boku $BC$. W trójkącie prostokątnym $BDC$ mamy $BD = \\frac{a}{2}$ i $CD = \\frac{\\sqrt{3}}{2}a$. Z twierdzenia Pitagorasa, $BC^2 = (\\frac{a}{2})^2 + (\\frac{\\sqrt{3}}{2}a)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$. Zatem $BC = a$.",
-      "(ponownie).** Oblicz obwód trójkąta $ABC$. Długości boków to $AB = a$, $AC = a$, $BC = a$. Obwód wynosi $a + a + a = 3a$.",
-      "Długość boku $AB$ jest równa $a$. Punkt $D$ jest środkiem boku $AB$, więc $AD = BD = \\frac{a}{2}$.",
-      "Oblicz długość boków $AC$ i $BC$ z twierdzenia Pitagorasa w trójkątach $ADC$ i $BDC$. Wysokość $CD$ wynosi $\\frac{\\sqrt{3}}{2}a$. Zatem $AC^2 = AD^2 + CD^2 = (\\frac{a}{2})^2 + (\\frac{\\sqrt{3}}{2}a)^2 = \\frac{a^2}{4} + \\frac{3a^2}{4} = a^2$, czyli $AC = a$. Podobnie $BC = a$.",
-      "Oblicz obwód trójkąta $ABC$: $AB + AC + BC = a + a + a = 3a$."
+      "Trójkąt $ABC$ jest prostokątny z kątem prostym przy $B$, kątem $30^{\\circ}$ przy $A$ i przyprostokątną $|BC| = a$ leżącą naprzeciw kąta $30^{\\circ}$.",
+      "Przeciwprostokątna: $|AC| = 2|BC| = 2a$. Druga przyprostokątna: $|AB| = |BC|\\sqrt{3} = a\\sqrt{3}$.",
+      "Obwód: $a + a\\sqrt{3} + 2a = (3 + \\sqrt{3})a$."
     ],
     "examSource": {
       "kind": "matura",
@@ -6516,21 +6500,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty D i E leżą na okręgu opisanym na trójkącie równobocznym ABC (zobacz rysunek). Odcinek CD jest średnicą tego okręgu. Kąt wpisany DEB ma miarę α . ![Rysunek do zadania](/cke-matura/m19-maj/z14-1.gif) Zatem",
     "choices": [
-      "α = $30^{\\circ}$",
-      "α",
-      "α > $45^{\\circ}$",
-      "α = $45^{\\circ}$"
+      "$\\alpha = 30^{\\circ}$",
+      "$\\alpha < 30^{\\circ}$",
+      "$\\alpha > 45^{\\circ}$",
+      "$\\alpha = 45^{\\circ}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $\\alpha > 45^\\circ$",
+    "correctIndex": 0,
+    "explanation": "A, czyli $\\alpha = 30^{\\circ}$",
     "solutionSteps": [
-      "Ponieważ trójkąt ABC jest równoboczny, jego kąty wewnętrzne wynoszą po $60^\\circ$. Kąt wpisany $\\angle ACB$ opiera się na tym samym łuku co kąt środkowy $\\angle AOB$, ale to nam nie pomoże. Kąt $\\angle ADB$ jest kątem wpisanym opartym na średnicy CD, więc jest kątem prostym, $\\angle ADB = 90^\\circ$.",
-      "Kąt $\\angle CDB$ jest kątem wpisanym opartym na łuku CB. Kąt środkowy $\\angle COB$ (gdzie O to środek okręgu) jest równy $120^\\circ$ (ponieważ trójkąt ABC jest równoboczny). Zatem kąt wpisany $\\angle CDB = \\frac{1}{2} \\angle COB = \\frac{1}{2} \\cdot 120^\\circ = 60^\\circ$. Alternatywnie, kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB co $\\angle CDB$.",
-      "Kąt $\\angle ADE$ jest częścią kąta prostego $\\angle ADB$. Kąt $\\angle CDB = 60^\\circ$. Kąt $\\angle ADB = 90^\\circ$. Trójkąt $\\triangle BCD$ ma kąty $90^\\circ$ i $60^\\circ$, więc $\\angle DBC = 180^\\circ - 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\angle DEB = \\alpha$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Kąt $\\angle DCB$ jest częścią kąta $\\angle ACB = 60^\\circ$. Ponieważ CD jest średnicą, trójkąt $\\triangle CBD$ jest prostokątny i $\\angle CBD = 90^\\circ$. Trójkąt równoboczny ABC ma wszystkie kąty $60^\\circ$. Kąt $\\angle DCB$ jest równy $\\angle ACB = 60^\\circ$. Kąt wpisany $\\alpha = \\angle DEB$ opiera się na tym samym łuku DB co kąt wpisany $\\angle DCB$. Zatem $\\alpha = \\angle DCB$. Skoro $\\triangle ABC$ jest równoboczny, $\\angle ACB = 60^\\circ$. Kąt $\\angle DCB$ jest równy $60^\\circ$.",
-      "Skoro $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB, ich miary są równe. Kąt $\\angle ACB$ ma miarę $60^\\circ$. Ponieważ CD jest średnicą, kąt $\\angle CBD = 90^\\circ$. W trójkącie $\\triangle BCD$, kąty wynoszą $90^\\circ$, $60^\\circ$ (kąt przy C) i $30^\\circ$. Zatem $\\angle DCB = 60^\\circ$. Stąd $\\alpha = 60^\\circ$. Jest to sytuacja szczególna. Sprawdźmy inny kąt. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, a kąt $\\angle CAB$ na tym samym łuku. $\\angle CAB = 60^\\circ$. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Z rysunku widać, że $\\angle ADC = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Zatem $\\angle ADB = 90^\\circ$. Kąt $\\angle DEB$ i kąt $\\angle DCB$ opierają się na tym samym łuku DB. Kąt $\\angle ACB = 60^\\circ$. Ponieważ CD jest średnicą, trójkąt $\\triangle CBD$ jest prostokątny, $\\angle CBD = 90^\\circ$. Trójkąt równoboczny ABC ma kąty $60^\\circ$. Kąt $\\angle DCB = \\angle ACB = 60^\\circ$. Kąt $\\angle DEB = \\alpha$. Kąty $\\angle DEB$ i $\\angle DCB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DCB = 60^\\circ$. Poprawka: $\\angle ADB$ jest kątem opartym na średnicy, więc $\\angle ADB = 90^\\circ$. $\\angle CDB$ jest kątem opartym na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB, zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = \\angle ADB - \\angle CDB = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Jeszcze raz. Kąt $\\angle ADB = 90^\\circ$ (oparty na średnicy). Kąt $\\angle CDB$ opiera się na łuku CB. Kąt $\\angle CAB = 60^\\circ$ opiera się na tym samym łuku CB. Zatem $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DAB = \\angle CAB = 60^\\circ$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Zatem $\\alpha = \\angle DAB = 60^\\circ$. Jednak w zadaniu jest podany inny rysunek, gdzie E jest po drugiej stronie. Przyjmując rysunek i opis, kąt $\\angle ADB=90^\\circ$. Kąt $\\angle CDB$ opiera się na łuku CB, tak jak $\\angle CAB=60^\\circ$. Zatem $\\angle CDB=60^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąt $\\angle DCB$ jest częścią kąta $\\angle ACB = 60^\\circ$. Kąt $\\angle ADB = 90^\\circ$. Kąt $\\angle CDB = 60^\\circ$. Kąt $\\angle ADE = 90^\\circ - 60^\\circ = 30^\\circ$. Kąt $\\alpha = \\angle DEB$. Kąty $\\angle DEB$ i $\\angle DAB$ opierają się na tym samym łuku DB. Kąt $\\angle DAB = 60^\\circ$. Zatem $\\alpha = 60^\\circ$. Zatem odpowiedź B jest poprawna, bo $\\alpha=60^\\circ > 45^\\circ$.",
-      "Kąt $\\angle ADB$ jest kątem wpisanym opartym na średnicy CD, więc jest kątem prostym: $\\angle ADB = 90^\\circ$.",
-      "Kąt $\\angle CDB$ opiera się na łuku CB. Kąt $\\angle CAB$ również opiera się na łuku CB i ma miarę $60^\\circ$ (bo $\\triangle ABC$ jest równoboczny), zatem $\\angle CDB = 60^\\circ$.",
-      "Kąt $\\alpha = \\angle DEB$. Kąty wpisane opierające się na tym samym łuku są równe. Kąt $\\alpha$ opiera się na łuku DB, tak samo jak kąt $\\angle DAB$. Kąt $\\angle DAB$ jest równy kątowi $\\angle CAB$, który wynosi $60^\\circ$. Zatem $\\alpha = 60^\\circ$."
+      "Trójkąt $ABC$ jest równoboczny, więc łuk $BC$ (nie zawierający $A$) ma miarę $120^{\\circ}$. $CD$ jest średnicą, więc łuk $CD$ ma miarę $180^{\\circ}$.",
+      "Łuk $BD$ ma miarę $180^{\\circ} - 120^{\\circ} = 60^{\\circ}$.",
+      "Kąt wpisany $DEB$ jest oparty na łuku $BD$, więc $\\alpha = \\frac{1}{2} \\cdot 60^{\\circ} = 30^{\\circ}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7846,12 +7826,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "60"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 54.",
+    "explanation": "C, czyli $54$",
     "solutionSteps": [
-      "Oznaczmy boki prostokąta jako $|AB| = x$ oraz $|BC| = y$. Z treści zadania wiemy, że pole prostokąta $ABCD$ wynosi $90$, czyli $x \\cdot y = 90$.",
-      "Z rysunku odczytujemy, że punkt $P$ leży na boku $AB$ tak, że $|AP| = \\frac{1}{3}|AB| = \\frac{1}{3}x$, a punkt $R$ leży na boku $CD$ tak, że $|CR| = \\frac{1}{3}|CD| = \\frac{1}{3}x$.",
-      "Czworokąt $APCR$ składa się z dwóch trójkątów: $APR$ i $PCR$. Ponieważ $|AP| = |CR| = \\frac{1}{3}x$ i są to boki leżące naprzeciw siebie w prostokącie, to czworokąt $APCR$ jest równoległobokiem. Pole równoległoboku można obliczyć jako iloczyn długości podstawy $i$ wysokości. Przyjmując podstawę $AP$, wysokość jest równa $AD$, czyli $y$. Pole $APCR = |AP| \\cdot |AD| = \\frac{1}{3}x \\cdot y = \\frac{1}{3}(xy)$.",
-      "Podstawiamy pole prostokąta $xy=90$ do wzoru na pole czworokąta $APCR$: Pole $APCR = \\frac{1}{3} \\cdot 90 = 30$. **Uwaga:** Sprawdzając opcje, widzę, że mój wynik nie pokrywa się z żadną z nich. Przeanalizowałem ponownie zadanie i rysunek. Czworokąt $APCR$ nie jest równoległobokiem. Jest to trapez, ponieważ boki $AP$ i $CR$ są równoległe. Niestety, długości przekątnych nie można jednoznacznie wyznaczyć z danych.\n\n**Korekta kroku 3:** Pole czworokąta $APCR$ można obliczyć odejmując pola dwóch trójkątów prostokątnych od pola prostokąta $ABCD$. Są to trójkąty $PBC$ i $RDA$. $|PB| = |AB| - |AP| = x - \\frac{1}{3}x = \\frac{2}{3}x$. $|DR| = |CD| - |CR| = x - \\frac{1}{3}x = \\frac{2}{3}x$.\n\n**Korekta kroku 4:** Pole trójkąta $PBC = \\frac{1}{2} |PB| \\cdot |BC| = \\frac{1}{2} \\cdot \\frac{2}{3}x \\cdot y = \\frac{1}{3}xy$. Pole trójkąta $RDA = \\frac{1}{2} |DR| \\cdot |AD| = \\frac{1}{2} \\cdot \\frac{2}{3}x \\cdot y = \\frac{1}{3}xy$.\n\n**Korekta kroku 5:** Pole czworokąta $APCR = \\text{Pole } ABCD - (\\text{Pole } PBC + \\text{Pole } RDA) = 90 - (\\frac{1}{3}xy + \\frac{1}{3}xy) = 90 - \\frac{2}{3}xy = 90 - \\frac{2}{3}(90) = 90 - 60 = 30$.\n\n**Ponowna analiza:** Okazuje się, że błąd tkwił w założeniu, że pole czworokąta $APCR$ można obliczyć przez odjęcie dwóch trójkątów. Poprawna interpretacja rysunku pokazuje, że czworokąt ten składa się z trójkąta $APR$ i trójkąta $PCR$. Z warunków zadania: $|AP| = \\frac{1}{3}x$, $|CR| = \\frac{1}{3}x$. W prostokącie mamy $|AD| = |BC| = y$.\n\n**Poprawny krok 3:** Pole trójkąta $APR = \\frac{1}{2} |AP| \\cdot |AD| = \\frac{1}{2} \\cdot \\frac{1}{3}x \\cdot y = \\frac{1}{6}xy$. Pole trójkąta $PCR = \\frac{1}{2} |CR| \\cdot |BC| = \\frac{1}{2} \\cdot \\frac{1}{3}x \\cdot y = \\frac{1}{6}xy$.\n\n**Poprawny krok 4:** Pole czworokąta $APCR = \\text{Pole trójkąta } APR + \\text{Pole trójkąta } PCR = \\frac{1}{6}xy + \\frac{1}{6}xy = \\frac{2}{6}xy = \\frac{1}{3}xy$.\n\n**Poprawny krok 5:** Podstawiamy $xy=90$: Pole $APCR = \\frac{1}{3} \\cdot 90 = 30$.\n\n**Ostateczna weryfikacja z odpowiedziami:** Nadal nie zgadza się z podanymi odpowiedziami. Błąd musi tkwić w interpretacji podziału boków lub w treści zadania. Załóżmy, że $|AP| = \\frac{1}{3}|AB|$ i $|CR| = \\frac{1}{3}|CD|$. Wtedy $AP = \\frac{1}{3}x$ i $CR = \\frac{1}{3}x$. Czworokąt $APCR$ ma równoległe boki $AP$ i $CR$ (leżą na prostych $AB$ i $CD$ które są równoległe), oraz równe długości. Jest to więc równoległobok. Wysokość równoległoboku jest równa odległości między prostymi $AB$ i $CD$, czyli $|AD| = y$. Pole równoległoboku $APCR = \\text{podstawa} \\times \\text{wysokość} = |AP| \\times |AD| = \\frac{1}{3}x \\times y = \\frac{1}{3}(xy)$.\n\n**Ponowna analiza rysunku:** Na rysunku widać, że $P$ leży na $AB$, a $R$ na $CD$. Długość $AP$ jest $\\frac{1}{3}$ długości $AB$. Długość $CR$ jest $\\frac{1}{3}$ długości $CD$."
+      "Oznacz $|AB| = x$ i $|BC| = y$, wtedy $xy = 90$. Z proporcji $\\frac{|AP|}{|PB|} = \\frac{3}{2}$ wynika $|AP| = \\frac{3}{5}x$, a z $\\frac{|CR|}{|RD|} = \\frac{3}{2}$ wynika $|CR| = \\frac{3}{5}x$.",
+      "Odcinki $AP$ i $CR$ są równoległe i równej długości, więc czworokąt $APCR$ jest równoległobokiem o podstawie $|AP|$ i wysokości $y$.",
+      "Pole: $\\frac{3}{5}x \\cdot y = \\frac{3}{5} \\cdot 90 = 54$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10858,13 +10837,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\sqrt{2}$",
       "-$\\sqrt{2}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $2$.",
+    "correctIndex": 1,
+    "explanation": "B, czyli $-2$",
     "solutionSteps": [
-      "Podstaw dane pary liczb $x=1$ i $y=-3$ do pierwszego równania układu, aby wyznaczyć niewiadomą $a$. Otrzymamy $-3 = \\frac{1}{2} \\cdot 1 + a$.",
-      "Rozwiąż otrzymane równanie liniowe względem $a$: $a = -3 - \\frac{1}{2} = -\\frac{6}{2} - \\frac{1}{2} = -\\frac{7}{2}$.",
-      "Podstaw wyznaczoną wartość $a = -\\frac{7}{2}$ oraz dane $x=1, y=-3$ do drugiego równania, aby sprawdzić, czy jest ono spełnione. Otrzymamy $-3 = -\\frac{7}{2} \\cdot 1 - \\frac{1}{2} = -\\frac{8}{2} = -4$.",
-      "Ponieważ drugie równanie $-3 = -4$ nie jest spełnione, oznacza to błąd w treści zadania lub braku możliwości wyznaczenia $a$ z jednego równania i podstawienia do drugiego. Należy przeanalizować treść i obrazek ponownie. Na obrazku w pierwszym równaniu znajduje się $a$, a w drugim jest $b$. Należy wyznaczyć $a$ z pierwszego równania, a $b$ z drugiego."
+      "Układ równań: $x - y = a^2$ oraz $(1 + a)x - 3y = -4a$. Podstaw $x = 1$, $y = -3$.",
+      "Z pierwszego równania: $1 + 3 = a^2$, więc $a^2 = 4$ i $a = 2$ lub $a = -2$.",
+      "Z drugiego równania: $(1 + a) + 9 = -4a$, czyli $10 + a = -4a$, więc $a = -2$. Spełnia to oba równania."
     ],
     "examSource": {
       "kind": "matura",
@@ -15339,8 +15317,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "9",
       "6"
     ],
-    "correctIndex": 3,
-    "explanation": "D) 9",
+    "correctIndex": 2,
+    "explanation": "C, czyli $9$",
     "solutionSteps": [
       "Trójkąty $ABO$ i $CDO$ są podobne na mocy cechy podobieństwa kąt-kąt-kąt (kąty naprzemianległe są równe, kąty wierzchołkowe są równe). Niech skala podobieństwa z trójkąta $CDO$ do $ABO$ wynosi $k$. Wtedy stosunek obwodów jest równy skali podobieństwa: $k = \\frac{39}{13} = 3$.",
       "Stosunek wysokości opuszczonych z punktu $O$ w trójkątach $ABO$ i $CDO$ jest również równy $k$. Niech $h_1$ to wysokość trójkąta $ABO$, a $h_2$ to wysokość trójkąta $CDO$. Mamy $\\frac{h_1}{h_2} = k = 3$. Wiemy, że suma tych wysokości jest równa wysokości trapezu, czyli $h_1 + h_2 = 12$.",
