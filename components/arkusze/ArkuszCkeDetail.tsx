@@ -54,6 +54,21 @@ export function ArkuszCkeDetail({ tasks }: ArkuszCkeDetailProps) {
         </p>
       </motion.header>
 
+      <div className="mt-4 flex flex-wrap gap-2 text-sm font-semibold">
+        <Link
+          href={`/arkusze/${sample.arkusz_id}/druk`}
+          className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
+        >
+          PDF bez odpowiedzi
+        </Link>
+        <Link
+          href={`/arkusze/${sample.arkusz_id}/druk?klucz=1`}
+          className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
+        >
+          PDF z odpowiedziami
+        </Link>
+      </div>
+
       <div className="mt-8 space-y-5">
         {tasks.map((zadanie, index) => (
           <motion.div

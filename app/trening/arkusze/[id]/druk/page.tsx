@@ -38,6 +38,7 @@ export default async function ArchivePrintPage({
     number: task.examSource?.taskNumber ?? String(index + 1),
     points: examTaskPoints(task),
     prompt: task.prompt,
+    choices: [...task.choices],
     open: isOpenExamTask(task),
     correctLetter: LETTERS[task.correctIndex] ?? null,
     explanation: task.explanation,

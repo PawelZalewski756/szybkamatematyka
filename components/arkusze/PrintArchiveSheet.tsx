@@ -11,6 +11,7 @@ export type PrintTaskData = {
   number: string;
   points: number;
   prompt: string;
+  choices: string[];
   open: boolean;
   correctLetter: string | null;
   explanation: string;
@@ -23,10 +24,11 @@ type Props = {
   totalPoints: number;
   tasks: PrintTaskData[];
   initialKey: boolean;
+  backHref?: string;
 };
 
 function pts(n: number): string {
-  return `${n} pkt`;
+  return n > 0 ? `${n} pkt` : "";
 }
 
 function Content({ text }: { text: string }) {
@@ -60,6 +62,7 @@ export function PrintArchiveSheet({
   totalPoints,
   tasks,
   initialKey,
+  backHref,
 }: Props) {
   const [withKey, setWithKey] = useState(initialKey);
 
@@ -70,7 +73,7 @@ export function PrintArchiveSheet({
       <style>{`@media print { header, footer, nav { display: none !important; } @page { margin: 12mm; } }`}</style>
       <div className="mx-auto mb-4 flex max-w-3xl flex-wrap items-center justify-between gap-3 px-4 print:hidden">
         <Link
-          href={`/trening/arkusze/${sheetId}`}
+          href={backHref ?? `/trening/arkusze/${sheetId}`}
           className="text-sm text-neutral-800 underline"
         >
           Wróć do arkusza
@@ -82,7 +85,7 @@ export function PrintArchiveSheet({
               checked={hasKey}
               onChange={(e) => setWithKey(e.target.checked)}
             />
-            Rozwiązania na osobnych stronach
+            Z odpowiedziami (na osobnych stronach)
           </label>
           <button
             type="button"
@@ -98,7 +101,7 @@ export function PrintArchiveSheet({
         <header className="border-b-2 border-black pb-3">
           <h1 className="text-xl font-bold">{title}</h1>
           <p className="text-sm">
-            {tasks.length} zadań · maks. {pts(totalPoints)}
+            {tasks.length} zadań{totalPoints > 0 ? ` · maks. ${pts(totalPoints)}` : ""}
           </p>
           <div className="mt-3 flex gap-8 text-sm">
             <span className="flex-1 border-b border-black">Imię i nazwisko:</span>
@@ -114,6 +117,16 @@ export function PrintArchiveSheet({
               <span>{pts(task.points)}</span>
             </div>
             <Content text={task.prompt} />
+            {!task.open && task.choices.length > 0 ? (
+              <ul className="mt-1 space-y-1">
+                {task.choices.map((choice, i) => (
+                  <li key={i} className="flex items-baseline gap-2">
+                    <span className="font-semibold">{"ABCDEF"[i] ?? i + 1})</span>
+                    <Content text={choice} />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </section>
         ))}
       </article>
@@ -122,12 +135,15 @@ export function PrintArchiveSheet({
         <article className="mx-auto mt-6 max-w-3xl space-y-4 break-before-page bg-white p-8 text-black print:mt-0 print:max-w-none print:p-0">
           <header className="border-b-2 border-black pb-3">
             <h1 className="text-xl font-bold">Rozwiązania: {title}</h1>
-            <p className="text-sm">maks. {pts(totalPoints)}</p>
+            {totalPoints > 0 ? (
+              <p className="text-sm">maks. {pts(totalPoints)}</p>
+            ) : null}
           </header>
           {tasks.map((task) => (
             <section key={task.id} className="break-inside-avoid text-sm">
               <h3 className="font-bold">
-                Zadanie {task.number} ({pts(task.points)})
+                Zadanie {task.number}
+                {task.points > 0 ? ` (${pts(task.points)})` : ""}
               </h3>
               {task.correctLetter && !task.open && (
                 <p>Odpowiedź: {task.correctLetter}</p>
