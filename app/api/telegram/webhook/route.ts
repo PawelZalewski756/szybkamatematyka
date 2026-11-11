@@ -117,6 +117,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       "/users [strona] - lista wszystkich użytkowników",
       "/top - ranking XP",
       "/szybkaproba - statystyki szybkiej próby",
+      "/visits [dni] - wejścia i unikalni odwiedzający",
       "/health - sprawdzenie połączenia",
       "/pomoc - pokaż tę listę",
     ].join("\n");
@@ -268,6 +269,31 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     ].join("\n");
   }
 
+  if (command === "visits") {
+    const days = args[0] ? Number(args[0]) : 7;
+    if (!Number.isSafeInteger(days) || days < 1 || days > 3650) {
+      return "Podaj okres od 1 do 3650 dni, np. /visits 30.";
+    }
+    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+    const [allTime, period] = await Promise.all([
+      supabase.rpc("get_page_view_stats", { p_since: null }),
+      supabase.rpc("get_page_view_stats", { p_since: since }),
+    ]);
+    if (allTime.error) throw new Error(`Could not load visit stats: ${allTime.error.message}`);
+    if (period.error) throw new Error(`Could not load visit stats: ${period.error.message}`);
+    const total = allTime.data?.[0];
+    const recent = period.data?.[0];
+    return [
+      `Wejścia (ostatnie ${days} dni)`,
+      `Unikalni odwiedzający: ${recent?.unique_visitors ?? 0}`,
+      `Wejścia: ${recent?.total_views ?? 0}`,
+      "Łącznie:",
+      `Unikalni odwiedzający: ${total?.unique_visitors ?? 0}`,
+      `Wejścia: ${total?.total_views ?? 0}`,
+      "Liczone anonimowo, tylko za zgodą odwiedzającego.",
+    ].join("\n");
+  }
+
   if (command === "health") {
     const { error } = await supabase.from("profiles").select("id").limit(1);
     if (error) throw new Error(`Supabase health check failed: ${error.message}`);
@@ -281,6 +307,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     "/users [strona] - lista wszystkich użytkowników",
     "/top - ranking XP",
     "/szybkaproba - statystyki szybkiej próby",
+    "/visits [dni] - wejścia i unikalni odwiedzający",
     "/health - sprawdzenie połączenia",
     "/pomoc - pokaż tę listę",
   ].join("\n");
