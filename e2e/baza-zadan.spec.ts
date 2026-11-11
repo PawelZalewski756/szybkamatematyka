@@ -112,9 +112,8 @@ test.describe("Baza zadań", () => {
 
     await page.goto("/baza-zadan?tab=arkusze");
     await expect(
-      page.getByRole("link", { name: /Arkusz - maj 2025/ }),
-    ).toBeVisible();
-    await expect(page.getByText("Wyświetlono", { exact: false })).toBeVisible();
+      page.getByRole("link", { name: /Otwórz katalog arkuszy CKE/ }),
+    ).toHaveAttribute("href", "/trening/arkusze");
   });
 
   test("na telefonie wyszukiwanie pozostaje dostępne przed filtrami", async ({
