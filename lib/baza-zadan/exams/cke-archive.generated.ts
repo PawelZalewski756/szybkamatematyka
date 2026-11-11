@@ -1744,8 +1744,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "$\\log 9 - \\log 4$",
       "$\\frac{\\log 2}{\\log 3}$",
-      "2log 9 2",
-      "2log 4 3"
+      "$2\\log_9 2$",
+      "$2\\log_4 3$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $2\\log_4 3$",
@@ -3064,11 +3064,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "3"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 1.",
+    "explanation": "D, czyli $3$",
     "solutionSteps": [
-      "Uprość wyrażenie w liczniku, wykonując dodawanie ułamków o wspólnych mianownikach.\n$$ \\frac{1}{3} + \\frac{2}{3} = \\frac{1+2}{3} = \\frac{3}{3} = 1 $$",
-      "Uprość wyrażenie w mianowniku, wykonując odejmowanie ułamków o wspólnych mianownikach.\n$$ \\frac{3}{2} - \\frac{1}{2} = \\frac{3-1}{2} = \\frac{2}{2} = 1 $$",
-      "Podziel uproszczony licznik przez uproszczony mianownik.\n$ \\frac{1}{1} = 1 $"
+      "Zapisz liczbę pod logarytmem jako potęgę podstawy: $2\\sqrt{2} = 2^{1} \\cdot 2^{\\frac{1}{2}} = 2^{\\frac{3}{2}} = (\\sqrt{2})^{3}$.",
+      "Skorzystaj z własności $\\log_a a^k = k$: $\\log_{\\sqrt{2}} (\\sqrt{2})^{3} = 3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3437,11 +3436,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$\\frac{5}{2}$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{51}{2}$.",
+    "explanation": "A, czyli $\\frac{37}{2}$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego $a_n = a_1 + (n-1)r$. Wiemy, że $a_{14} = 8$ i $r = -\\frac{5}{2}$, więc $8 = a_1 + (14-1)(-\\frac{5}{2})$.",
-      "Oblicz $a_1$. Z równania $8 = a_1 + 13(-\\frac{5}{2})$ otrzymujemy $8 = a_1 - \\frac{65}{2}$, co daje $a_1 = 8 + \\frac{65}{2} = \\frac{16+65}{2} = \\frac{81}{2}$.",
-      "Oblicz siódmy wyraz ciągu ($a_7$) używając wzoru $a_7 = a_1 + (7-1)r$. Podstawiamy obliczone $a_1 = \\frac{81}{2}$ i dane $r = -\\frac{5}{2}$: $a_7 = \\frac{81}{2} + 6(-\\frac{5}{2}) = \\frac{81}{2} - \\frac{30}{2} = \\frac{51}{2}$."
+      "Z obrazka: różnica ciągu to $r = -\\frac{3}{2}$. Dany jest wyraz $a_{14} = 8$.",
+      "Siódmy wyraz to $a_7 = a_{14} - 7r = 8 - 7 \\cdot \\left(-\\frac{3}{2}\\right) = 8 + \\frac{21}{2}$.",
+      "Zatem $a_7 = \\frac{16}{2} + \\frac{21}{2} = \\frac{37}{2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -4045,12 +4044,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 5 $8 \\cdot 16 - 2$ jest równa.",
+    "prompt": "Liczba $5^{8} \\cdot 16^{-2}$ jest równa.",
     "choices": [
-      "($\\frac{5}{2}$) 8",
+      "$\\left(\\frac{5}{2}\\right)^{8}$",
       "$\\frac{5}{2}$",
-      "10 8",
-      "10"
+      "$10^{8}$",
+      "$10$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $(\\frac{5}{2})^8$.",
@@ -4076,12 +4075,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ∛ 54 - ∛ 2 jest równa",
+    "prompt": "Liczba $\\sqrt[3]{54} - \\sqrt[3]{2}$ jest równa",
     "choices": [
-      "∛ 52",
-      "3",
-      "2∛ 2",
-      "2"
+      "$\\sqrt[3]{52}$",
+      "$3$",
+      "$2\\sqrt[3]{2}$",
+      "$2$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt[3]{2}$",
@@ -4108,10 +4107,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba $2\\log_2 3 - 2\\log_2 5$ jest równa.",
     "choices": [
-      "log 2 $\\frac{9}{25}$",
-      "log 2 $\\frac{3}{5}$",
-      "log 2 $\\frac{9}{5}$",
-      "log 2 $\\frac{6}{25}$"
+      "$\\log_2 \\frac{9}{25}$",
+      "$\\log_2 \\frac{3}{5}$",
+      "$\\log_2 \\frac{9}{5}$",
+      "$\\log_2 \\frac{6}{25}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\log_2 \\frac{9}{25}$",
@@ -4175,11 +4174,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "fałszywa dla każdej liczby x"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $6 + 4\\sqrt{2}$",
+    "explanation": "C, czyli prawdziwa dla $x = -1$",
     "solutionSteps": [
-      "Rozwiń lewą stronę równania, używając wzoru $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = x\\sqrt{2}$ i $b = 2$. Otrzymamy: $(x\\sqrt{2})^2 - 2(x\\sqrt{2})(2) + 2^2 = 2x^2 - 4x\\sqrt{2} + 4$.",
-      "Rozwiń prawą stronę równania, używając wzoru $(a+b)^2 = a^2 + 2ab + b^2$, gdzie $a = 2$ i $b = \\sqrt{2}$. Otrzymamy: $2^2 + 2(2)(\\sqrt{2}) + (\\sqrt{2})^2 = 4 + 4\\sqrt{2} + 2 = 6 + 4\\sqrt{2}$.",
-      "Porównaj obie strony po przekształceniach: $2x^2 - 4x\\sqrt{2} + 4 = 6 + 4\\sqrt{2}$. Przenieś wszystkie wyrazy na jedną stronę: $2x^2 - 4x\\sqrt{2} - 2 - 4\\sqrt{2} = 0$. Sprawdź opcję A: dla $x = -\\sqrt{2}$, lewa strona to $2(-\\sqrt{2})^2 - 4(-\\sqrt{2})\\sqrt{2} + 4 = 2(2) + 4(2) + 4 = 4 + 8 + 4 = 16$, a prawa strona to $6 + 4\\sqrt{2}$. Równość nie jest spełniona. Sprawdź opcję B: dla $x = \\sqrt{2}$, lewa strona to $2(\\sqrt{2})^2 - 4(\\sqrt{2})\\sqrt{2} + 4 = 2(2) - 4(2) + 4 = 4 - 8 + 4 = 0$. Prawa strona to $6 + 4\\sqrt{2}$. Równość nie jest spełniona. Sprawdź opcję C: dla $x = -1$, lewa strona to $2(-1)^2 - 4(-1)\\sqrt{2} + 4 = 2 + 4\\sqrt{2} + 4 = 6 + 4\\sqrt{2}$. Ta wartość jest równa prawej stronie równania."
+      "Obie strony są kwadratami, więc $x\\sqrt{2} - 2 = 2 + \\sqrt{2}$ lub $x\\sqrt{2} - 2 = -(2 + \\sqrt{2})$.",
+      "Z pierwszego równania $x\\sqrt{2} = 4 + \\sqrt{2}$, czyli $x = 2\\sqrt{2} + 1$. Z drugiego $x\\sqrt{2} = -\\sqrt{2}$, czyli $x = -1$.",
+      "Równość jest więc prawdziwa dla $x = -1$ (oraz dla $x = 2\\sqrt{2} + 1$), a dla $x = \\pm\\sqrt{2}$ nie jest spełniona."
     ],
     "examSource": {
       "kind": "matura",
@@ -4584,10 +4583,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Na rysunku przedstawiona jest prosta k, przechodząca przez punkt A = $(2, - 3)$ i przez początek układu współrzędnych, oraz zaznaczony jest kąt α nachylenia tej prostej do osi Ox. ![Rysunek do zadania](/cke-matura/m17-maj/z18-1.jpg) Zatem",
     "choices": [
-      "tgα = -$\\frac{2}{3}$",
-      "tgα = -$\\frac{3}{2}$",
-      "tgα = $\\frac{2}{3}$",
-      "tgα = $\\frac{3}{2}$"
+      "$\\operatorname{tg}\\alpha = -\\frac{2}{3}$",
+      "$\\operatorname{tg}\\alpha = -\\frac{3}{2}$",
+      "$\\operatorname{tg}\\alpha = \\frac{2}{3}$",
+      "$\\operatorname{tg}\\alpha = \\frac{3}{2}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $\\operatorname{tg}\\alpha = -\\frac{3}{2}$",
@@ -5087,12 +5086,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2log 3 $6 - \\log 3$ 4 jest równa",
+    "prompt": "Liczba $2\\log_3 6 - \\log_3 4$ jest równa",
     "choices": [
-      "4",
-      "2",
-      "2log 3 2",
-      "log 3 8"
+      "$4$",
+      "$2$",
+      "$2\\log_3 2$",
+      "$\\log_3 8$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 2",
@@ -6486,10 +6485,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Sinus kąta ostrego α jest równy $\\frac{4}{5}$ . Wtedy",
     "choices": [
-      "cos $α = \\frac{4}{5}$",
-      "cos $α = \\frac{1}{5}$",
-      "cos $α = \\frac{9}{25}$",
-      "cos $α = \\frac{3}{5}$"
+      "$\\cos \\alpha = \\frac{4}{5}$",
+      "$\\cos \\alpha = \\frac{1}{5}$",
+      "$\\cos \\alpha = \\frac{9}{25}$",
+      "$\\cos \\alpha = \\frac{3}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $\\cos \\alpha = \\frac{3}{5}$",
@@ -6835,12 +6834,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "162",
       "243"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $2 \\cdot 3^4 = 2 \\cdot 81 = 162$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $162$",
     "solutionSteps": [
-      "Zauważ, że pierwsza cyfra nie może być zerem. Mamy więc 2 możliwości wyboru pierwszej cyfry (2 lub 5).",
-      "Na pozostałych czterech pozycjach możemy umieścić dowolną z trzech cyfr (0, 2, 5).",
-      "Oblicz liczbę wszystkich takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $2 \\cdot 3 \\cdot 3 \\cdot 3 \\cdot 3 = 2 \\cdot 3^4$."
+      "Pierwsza cyfra nie może być zerem, więc mamy 2 możliwości (2 lub 5).",
+      "Na każdej z pozostałych czterech pozycji może stać dowolna z cyfr 0, 2, 5, czyli 3 możliwości.",
+      "Liczba takich liczb to $2 \\cdot 3^4 = 2 \\cdot 81 = 162$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7527,7 +7526,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = 4 - x + 1$ dla każdej liczby rzeczywistej x. Liczba $f(\\frac{1}{2})$ jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = 4x^2 - x + 1$ dla każdej liczby rzeczywistej x. Liczba $f\\left(\\frac{1}{2}\\right)$ jest równa",
     "choices": [
       "$\\frac{1}{2}$",
       "$\\frac{3}{2}$",
@@ -7535,11 +7534,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "17"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $\\frac{9}{2}$",
+    "explanation": "B, czyli $\\frac{3}{2}$",
     "solutionSteps": [
-      "Podstaw podaną wartość $x = \\frac{1}{2}$ do wzoru funkcji $f(x) = 4 - x + 1$. Otrzymasz $f\\left(\\frac{1}{2}\\right) = 4 - \\frac{1}{2} + 1$.",
-      "Wykonaj działania arytmetyczne: dodaj liczby całkowite $4 + 1 = 5$, a następnie odejmij ułamek $\\frac{1}{2}$. Otrzymasz $5 - \\frac{1}{2}$.",
-      "Sprowadź do wspólnego mianownika i odejmij: $5 = \\frac{10}{2}$, więc $\\frac{10}{2} - \\frac{1}{2} = \\frac{9}{2}$."
+      "Podstaw $x = \\frac{1}{2}$ do wzoru: $f\\left(\\frac{1}{2}\\right) = 4 \\cdot \\left(\\frac{1}{2}\\right)^2 - \\frac{1}{2} + 1$.",
+      "Oblicz: $4 \\cdot \\frac{1}{4} - \\frac{1}{2} + 1 = 1 - \\frac{1}{2} + 1 = \\frac{3}{2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7933,12 +7931,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dwa stożki o takich samych podstawach połączono podstawami w taki sposób jak na rysunku. Stosunek wysokości tych stożków jest równy 3:2. Objętość stożka o krótszej wysokości jest równa 12 cm 3 . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z25-1.png) Objętość bryły utworzonej z połączonych stożków jest równa",
+    "prompt": "Dwa stożki o takich samych podstawach połączono podstawami w taki sposób jak na rysunku. Stosunek wysokości tych stożków jest równy 3:2. Objętość stożka o krótszej wysokości jest równa 12 cm$^3$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z25-1.png) Objętość bryły utworzonej z połączonych stożków jest równa",
     "choices": [
-      "20 cm 3",
-      "30 cm 3",
-      "39 cm 3",
-      "52,5 cm 3"
+      "20 cm$^3$",
+      "30 cm$^3$",
+      "39 cm$^3$",
+      "52,5 cm$^3$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 30 cm$^3$.",
@@ -8596,17 +8594,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Kąt α jest ostry i spełniona jest równość ![Rysunek do zadania](/cke-matura/m20-probna/z13-1.png) . Stąd wynika, że",
     "choices": [
-      "cosα = $\\frac{24}{49}$",
-      "cosα = $\\frac{5}{7}$",
-      "cosα = $\\frac{25}{49}$",
-      "cosα = $\\frac{5\\sqrt{6}}{7}$"
+      "$\\cos \\alpha = \\frac{24}{49}$",
+      "$\\cos \\alpha = \\frac{5}{7}$",
+      "$\\cos \\alpha = \\frac{25}{49}$",
+      "$\\cos \\alpha = \\frac{5\\sqrt{6}}{7}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $\\frac{5}{13}$",
+    "explanation": "B, czyli $\\cos\\alpha = \\frac{5}{7}$",
     "solutionSteps": [
-      "Z twierdzenia Pitagorasa dla trójkąta prostokątnego z rysunku oblicz długość przeciwprostokątnej. Mamy $a^2 + b^2 = c^2$, gdzie $a=5$, $b=12$, więc $5^2 + 12^2 = c^2 \\implies 25 + 144 = c^2 \\implies c^2 = 169 \\implies c = 13$.",
-      "Z definicji cosinusa w trójkącie prostokątnym ($\\cos \\alpha = \\frac{\\text{przyprostokątna przy kącie}}{\\text{przeciwprostokątna}}$) oblicz $\\cos \\alpha$. Przyprostokątna przy kącie $\\alpha$ ma długość 5, a przeciwprostokątna 13. Zatem $\\cos \\alpha = \\frac{5}{13}$.",
-      "Przeczytaj uważnie treść zadania. Kąt $\\alpha$ jest ostry i spełniona jest równość $\\sin \\alpha = \\frac{12}{13}$ (na rysunku jest $|\\sin \\alpha| = \\frac{12}{13}$). Korzystając z tożsamości $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, oblicz $\\cos \\alpha$. Mamy $(\\frac{12}{13})^2 + \\cos^2 \\alpha = 1 \\implies \\frac{144}{169} + \\cos^2 \\alpha = 1 \\implies \\cos^2 \\alpha = 1 - \\frac{144}{169} = \\frac{25}{169}$. Ponieważ $\\alpha$ jest kątem ostrym, $\\cos \\alpha > 0$, więc $\\cos \\alpha = \\sqrt{\\frac{25}{169}} = \\frac{5}{13}$."
+      "Z obrazka: $\\sin\\alpha = \\frac{2\\sqrt{6}}{7}$. Skorzystaj z jedynki trygonometrycznej $\\sin^2\\alpha + \\cos^2\\alpha = 1$.",
+      "$\\cos^2\\alpha = 1 - \\left(\\frac{2\\sqrt{6}}{7}\\right)^2 = 1 - \\frac{24}{49} = \\frac{25}{49}$.",
+      "Kąt jest ostry, więc $\\cos\\alpha > 0$ i $\\cos\\alpha = \\frac{5}{7}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8727,8 +8725,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "58",
       "74"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $58$.",
+    "correctIndex": 2,
+    "explanation": "C, czyli $58$",
     "solutionSteps": [
       "Oblicz kwadrat odległości między punktami B i C, który jest równy kwadratowi długości boku kwadratu. Użyj wzoru na kwadrat odległości: $d^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2$.\n$d^2 = (5 - (-2))^2 + (1 - 4)^2 = (5+2)^2 + (-3)^2 = 7^2 + 9 = 49 + 9 = 58$.",
       "Ponieważ pole kwadratu jest równe kwadratowi długości jego boku, obliczona wartość $d^2$ jest szukanym polem.\nPole kwadratu wynosi $58$."
@@ -9444,12 +9442,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Punkt P = $(0, - 2)$ należy do wykresów funkcji $f$ i g ."
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $f(2) + g(2) = -2$ (przy założeniu $f(2)=0$ na podstawie potencjalnego błędu w treści zadania).",
+    "explanation": "A, czyli $-2$",
     "solutionSteps": [
-      "Analizujemy wykres funkcji $f(x)$. Odczytujemy wartości kluczowych punktów: $f(0) = 0$, $f(2) = 2$, $f(5) = -2$. Zbiorem wartości funkcji $f$ jest $\\langle -2, 2 \\rangle$.",
-      "Analizujemy wzór funkcji $g(x) = f(x) - 2$. Oznacza to, że wykres funkcji $g$ otrzymujemy przez przesunięcie wykresu funkcji $f$ o 2 jednostki w dół.",
-      "Sprawdzamy poszczególne odpowiedzi.\nA) $f(2) + g(2) = f(2) + (f(2) - 2) = 2 + (2 - 2) = 2$. Zdanie fałszywe.\nB) Zbiór wartości funkcji $g$ to $\\langle -2-2, 2-2 \\rangle = \\langle -4, 0 \\rangle$. Zbiory wartości funkcji $f$ i $g$ nie są równe. Zdanie fałszywe.\nC) Miejsca zerowe funkcji $f$ to $x = 0$. Miejsca zerowe funkcji $g$ to $x$ takie, że $f(x) - 2 = 0$, czyli $f(x) = 2$. Z wykresu wynika, że $f(2)=2$, zatem $x=2$ jest jedynym miejscem zerowym funkcji $g$. Miejsca zerowe nie są te same. Zdanie fałszywe.\nD) Sprawdzamy, czy punkt $P=(0, -2)$ należy do wykresów funkcji $f$ i $g$. Dla funkcji $f$: $f(0)=0$, więc punkt $(0,0)$ należy do wykresu $f$. Dla funkcji $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Zatem punkt $(0, -2)$ należy do wykresu funkcji $g$. Zdanie fałszywe.",
-      "Ponownie analizujemy wykres i opisy. Wartość $f(2)$ wynosi 2, a nie $-2$. Zatem $f(2) + g(2) = 2 + (f(2) - 2) = 2 + (2 - 2) = 2$. Zatem opcja A jest niepoprawnie zinterpretowana przez mnie w kroku 3. Ponowna analiza opcji A: $f(2) = 2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2) + g(2) = 2 + 0 = 2$. Zdanie A jest fałszywe.\nPrzyjrzyjmy się ponownie opcji D. Punkt $P=(0, -2)$. Dla $f$: $f(0)=0$. Punkt $(0,0)$ jest na wykresie $f$. Dla $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Punkt $(0, -2)$ jest na wykresie $g$. Zatem punkt P=$(0, - 2)$ należy do wykresu funkcji $g$. Ale nie do f. Czyli D jest fałszywe.\nWrócmy do opcji A. Może źle odczytałem wartości. Wykres przechodzi przez $(2,2)$. Zatem $f(2)=2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2)+g(2) = 2+0=2$. A jest fałszywe.\nMożliwe, że ja źle interpretuje zapis $(-2)$ jako $-2$.\nA) Liczba $f(2) + g(2)$ jest równa $-2$. Obliczyliśmy, że $f(2)+g(2) = 2$. A jest fałszywe.\nB) Zbiory wartości $f$: $\\langle -2, 2 \\rangle$. Zbiór wartości $g$: $\\langle -4, 0 \\rangle$. B jest fałszywe.\nC) Miejsca zerowe $f$: $x=0$. Miejsca zerowe $g$: $f(x)=2$, $x=2$. C jest fałszywe.\nD) Punkt $P = (0, -2)$. $f(0)=0$. Punkt $(0,0)$ na $f$. $g(0) = f(0)-2 = 0-2 = -2$. Punkt $(0, -2)$ na $g$. D jest fałszywe.\n\nChyba mam problem z odczytem wykresu lub treści."
+      "Z wykresu: $f(2) = 0$. Wykres $g(x) = f(x) - 2$ powstaje przez przesunięcie wykresu $f$ o 2 jednostki w dół, więc $g(2) = 0 - 2 = -2$.",
+      "Zatem $f(2) + g(2) = 0 + (-2) = -2$, czyli zdanie A jest prawdziwe.",
+      "B jest fałszywe: zbiór wartości $f$ to $\\{3\\} \\cup \\langle -2, 1 \\rangle$, a $g$ ma wartości przesunięte o 2 w dół. C jest fałszywe: $f$ ma miejsca zerowe $-2$ i $2$, a $g$ nie ma żadnego (brak $x$, dla którego $f(x) = 2$). D jest fałszywe: $f(0) = -2$, ale $g(0) = -4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10761,19 +10758,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2 log 5 $4 - 3$ log 5 $\\frac{1}{2}$ jest równa",
+    "prompt": "Liczba $2\\log_5 4 - 3\\log_5 \\frac{1}{2}$ jest równa",
     "choices": [
-      "-log 5 $\\frac{7}{2}$",
-      "7 log 5 2",
-      "-log 5 2",
-      "log 5 2"
+      "$-\\log_5 \\frac{7}{2}$",
+      "$7\\log_5 2$",
+      "$-\\log_5 2$",
+      "$\\log_5 2$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $4 \\log_5 2$.",
+    "correctIndex": 1,
+    "explanation": "B, czyli $7\\log_5 2$",
     "solutionSteps": [
-      "Skorzystaj z własności logarytmów: $a \\log_c b = \\log_c b^a$ oraz $\\log_c 1 = 0$. Zastosuj je do obu wyrazów w wyrażeniu: $2 \\log_5 4 = \\log_5 4^2 = \\log_5 16$ oraz $3 \\log_5 1 = \\log_5 1^3 = \\log_5 1 = 0$.",
-      "Odejmowanie logarytmów o tej samej podstawie sprowadza się do dzielenia argumentów: $\\log_c a - \\log_c b = \\log_c \\frac{a}{b}$. Podstawiając otrzymane wyniki z Kroku 1: $\\log_5 16 - 0 = \\log_5 16$.",
-      "Zapisz liczbę 16 jako potęgę liczby 2, czyli $16 = 2^4$. Użyj własności potęgi w argumencie logarytmu: $\\log_c a^k = k \\log_c a$. Otrzymujemy: $\\log_5 16 = \\log_5 2^4 = 4 \\log_5 2$."
+      "Zapisz liczby pod logarytmami jako potęgi dwójki: $4 = 2^2$ oraz $\\frac{1}{2} = 2^{-1}$.",
+      "$2\\log_5 4 = 2 \\cdot 2\\log_5 2 = 4\\log_5 2$ oraz $3\\log_5 \\frac{1}{2} = -3\\log_5 2$.",
+      "Zatem $4\\log_5 2 - (-3\\log_5 2) = 7\\log_5 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10825,17 +10822,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Dla każdej dodatniej liczby b wyrażenie ![Rysunek do zadania](/cke-matura/m21-probna/z04-1.png) jest równe",
     "choices": [
-      "$b_{2}$",
-      "$b_{0}$,25",
-      "$b_{8} / 3$",
-      "$b_{4} / 3$"
+      "$b^{2}$",
+      "$b^{0{,}25}$",
+      "$b^{\\frac{8}{3}}$",
+      "$b^{\\frac{4}{3}}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $b^{\\frac{7}{6}}$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $b^{0{,}25}$",
     "solutionSteps": [
-      "Przepisujemy wyrażenie, korzystając z własności potęg $(a^m)^n = a^{m \\cdot n}$ i $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$. Otrzymujemy $b^{\\frac{1}{2}} \\cdot b^{\\frac{2}{3}}$.",
-      "Korzystamy z własności potęg $a^m \\cdot a^n = a^{m+n}$, aby dodać wykładniki: $\\frac{1}{2} + \\frac{2}{3}$. Wspólny mianownik to 6, więc $\\frac{3}{6} + \\frac{4}{6} = \\frac{7}{6}$.",
-      "Wyrażenie przyjmuje postać $b^{\\frac{7}{6}}$."
+      "Zapisz pierwiastki jako potęgi: $\\sqrt{b} = b^{\\frac{1}{2}}$ oraz $\\sqrt[4]{b} = b^{\\frac{1}{4}}$.",
+      "Pomnóż potęgi o tej samej podstawie: $b^{\\frac{1}{2}} \\cdot b^{\\frac{1}{4}} = b^{\\frac{3}{4}}$.",
+      "Podnieś do potęgi $\\frac{1}{3}$: $\\left(b^{\\frac{3}{4}}\\right)^{\\frac{1}{3}} = b^{\\frac{1}{4}} = b^{0{,}25}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11012,12 +11009,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "2"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $0$.",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\frac{1}{3}$",
     "solutionSteps": [
-      "Aby obliczyć wartość funkcji $f$ dla argumentu 1, podstawiamy $x=1$ do podanego wzoru funkcji: $f(1) = \\frac{1^3 - 2 \\cdot 1^2 + 1}{1^2 - 1} = \\frac{1 - 2 + 1}{1 - 1} = \\frac{0}{0}$. Otrzymaliśmy symbol nieoznaczony, co oznacza, że musimy uprościć wzór funkcji.",
-      "Rozkładamy licznik i mianownik na czynniki. Licznik: $x^3 - 2x^2 + x = x(x^2 - 2x + 1) = x(x-1)^2$. Mianownik: $x^2 - 1 = (x-1)(x+1)$. Wzór funkcji można zapisać jako $f(x) = \\frac{x(x-1)^2}{(x-1)(x+1)}$, co po skróceniu $(x-1)$ dla $x \\neq 1$ daje $f(x) = \\frac{x(x-1)}{x+1}$.",
-      "Obliczamy wartość funkcji dla $x=1$, korzystając z uproszczonego wzoru: $f(1) = \\frac{1(1-1)}{1+1} = \\frac{1 \\cdot 0}{2} = \\frac{0}{2} = 0$."
+      "Wzór funkcji: $f(x) = \\frac{8x - 7}{2x^2 + 1}$. Podstaw $x = 1$.",
+      "$f(1) = \\frac{8 \\cdot 1 - 7}{2 \\cdot 1^2 + 1} = \\frac{1}{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11807,12 +11803,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "26",
       "14"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli 15.",
+    "correctIndex": 0,
+    "explanation": "A, czyli $2$",
     "solutionSteps": [
-      "Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.",
-      "Oblicz wartość pierwiastka sześciennego z 8, czyli $\\sqrt[3]{8} = 2$.",
-      "Dodaj uzyskane wyniki: $13 + 2 = 15$."
+      "Uprość pierwiastek: $2\\sqrt{8} = 2 \\cdot 2\\sqrt{2} = 4\\sqrt{2}$.",
+      "$4\\sqrt{2} - 3\\sqrt{2} = \\sqrt{2}$.",
+      "$(\\sqrt{2})^2 = 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11862,12 +11858,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 4 log 4 $2 + 2$ log 4 8 jest równa",
+    "prompt": "Liczba $4\\log_4 2 + 2\\log_4 8$ jest równa",
     "choices": [
-      "6 log 4 10",
-      "16",
-      "5",
-      "6 log 4 16"
+      "$6\\log_4 10$",
+      "$16$",
+      "$5$",
+      "$6\\log_4 16$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli 5",
@@ -12117,12 +12113,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "5",
       "12"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli 6",
+    "correctIndex": 3,
+    "explanation": "D, czyli $12$",
     "solutionSteps": [
-      "Aby znaleźć miejsce zerowe funkcji liniowej, przyrównujemy jej wzór do zera. Zatem szukamy $x$ takiego, że $f(x) = 0$.",
-      "Rozwiązujemy równanie $-\\frac{1}{2}x + 3 = 0$. Dodajemy $\\frac{1}{2}x$ do obu stron, otrzymując $3 = \\frac{1}{2}x$.",
-      "Mnożymy obie strony przez 2, aby wyznaczyć $x$. $3 \\cdot 2 = (\\frac{1}{2}x) \\cdot 2$, co daje $6 = x$."
+      "Wzór funkcji: $f(x) = -\\frac{1}{3}(x + 3) + 5$. Przyrównaj do zera.",
+      "$-\\frac{1}{3}(x + 3) + 5 = 0$, więc $\\frac{1}{3}(x + 3) = 5$, czyli $x + 3 = 15$.",
+      "Stąd $x = 12$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12297,10 +12293,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Punkty A, B, C leżą na okręgu o środku S. Punkt D jest punktem przecięcia cięciwy AC i średnicy okręgu poprowadzonej z punktu B. Miara kąta BSC jest równa α, a miara kąta ADB jest równa γ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z17-1.png) Wtedy kąt ABD ma miarę",
     "choices": [
-      "$α / 2 + γ$ -$180^{\\circ}$",
-      "$180^{\\circ}$ - $α / 2 - γ$",
-      "$180^{\\circ}$ - $α - γ$",
-      "$α + γ$ -$180^{\\circ}$"
+      "$\\frac{\\alpha}{2} + \\gamma - 180^{\\circ}$",
+      "$180^{\\circ} - \\frac{\\alpha}{2} - \\gamma$",
+      "$180^{\\circ} - \\alpha - \\gamma$",
+      "$\\alpha + \\gamma - 180^{\\circ}$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $180^\\circ - \\frac{\\alpha}{2} - \\gamma$",
@@ -12546,10 +12542,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Podstawą graniastosłupa prostego jest romb o przekątnych długości 7 cm i 10 cm. Wysokość tego graniastosłupa jest krótsza od dłuższej przekątnej rombu o 2 cm. Wtedy objętość graniastosłupa jest równa",
     "choices": [
-      "560 cm 3",
-      "280 cm 3",
-      "$\\frac{280}{3}$ cm 3",
-      "$\\frac{560}{3}$ cm 3"
+      "560 cm$^3$",
+      "280 cm$^3$",
+      "$\\frac{280}{3}$ cm$^3$",
+      "$\\frac{560}{3}$ cm$^3$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 280 cm$^3$",
@@ -13411,12 +13407,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego α wyrażenie sin 4 $α + \\sin 2$ α ⋅cos 2 α jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego $\\alpha$ wyrażenie $\\sin^4 \\alpha + \\sin^2 \\alpha \\cdot \\cos^2 \\alpha$ jest równe",
     "choices": [
-      "sin 2 α",
-      "sin 6 α ⋅ cos 2 α",
-      "sin 4 $α + 1$",
-      "sin 2 α ⋅ $(\\sinα + \\cosα)$ ⋅ $(\\sinα - \\cosα)$"
+      "$\\sin^2 \\alpha$",
+      "$\\sin^6 \\alpha \\cdot \\cos^2 \\alpha$",
+      "$\\sin^4 \\alpha + 1$",
+      "$\\sin^2 \\alpha \\cdot (\\sin \\alpha + \\cos \\alpha) \\cdot (\\sin \\alpha - \\cos \\alpha)$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $\\sin^2 \\alpha$",
@@ -14604,10 +14600,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Pan Nowak kupił obligacje Skarbu Państwa za 40 000 zł oprocentowane 7% w skali roku. Odsetki są naliczane i kapitalizowane co rok. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość obligacji kupionych przez pana Nowaka będzie po dwóch latach równa",
     "choices": [
-      "40 000⋅(1,07) 2 zł",
-      "40 000⋅(1,7) 2 zł",
-      "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł"
+      "$40\\,000 \\cdot (1{,}07)^2$ zł",
+      "$40\\,000 \\cdot (1{,}7)^2$ zł",
+      "$40\\,000 \\cdot 1{,}14$ zł",
+      "$40\\,000 \\cdot 1{,}49$ zł"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
@@ -15970,10 +15966,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Klient wpłacił do banku 20 000 zł na lokatę dwuletnią. Po każdym rocznym okresie oszczędzania bank dolicza odsetki w wysokości 3% od kwoty bieżącego kapitału znajdującego się na lokacie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Po 2 latach oszczędzania w tym banku kwota na lokacie (bez uwzględniania podatków) jest równa",
     "choices": [
-      "20 000∙(1,12) 2",
-      "20 000∙2⋅1,03",
-      "20 000∙1,06",
-      "20 000∙(1,03) 2"
+      "$20\\,000 \\cdot (1{,}12)^2$",
+      "$20\\,000 \\cdot 2 \\cdot 1{,}03$",
+      "$20\\,000 \\cdot 1{,}06$",
+      "$20\\,000 \\cdot (1{,}03)^2$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $20\\,000 \\cdot (1,03)^2$",
@@ -17429,10 +17425,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Liczba $\\log_3 108 - 2\\log_3 2$ jest równa",
     "choices": [
-      "3",
-      "9",
-      "log 3 104",
-      "2log 3 54"
+      "$3$",
+      "$9$",
+      "$\\log_3 104$",
+      "$2\\log_3 54$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 3",
@@ -18151,13 +18147,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "54",
       "81"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli 45",
+    "correctIndex": 0,
+    "explanation": "A, czyli $45$",
     "solutionSteps": [
-      "Rozważ trzy przypadki ze względu na pozycję cyfry 0. Liczby trzycyfrowe mają postać $abc$, gdzie $a \\in \\{1, ..., 9\\}$ i $b, c \\in \\{0, ..., 9\\}$. Liczba musi być nieparzysta, czyli $c \\in \\{1, 3, 5, 7, 9\\}$.",
-      "Przypadek 1: $a=0$ (niemożliwe, bo liczba musi być trzycyfrowa). Przypadek 2: $b=0$. Wtedy $a \\in \\{1, ..., 9\\}$ (9 możliwości) i $c \\in \\{1, 3, 5, 7, 9\\}$ (5 możliwości). Mamy $9 \\cdot 1 \\cdot 5 = 45$ takich liczb.",
-      "Przypadek 3: $c=0$ (niemożliwe, bo liczba musi być nieparzysta). Przypadek 4: $a \\ne 0$, $b \\ne 0$, $c \\ne 0$ i tylko jedna z cyfr $a$ lub $b$ jest 0. Ale już wykluczyliśmy $c=0$. Więc przypadek 3: $a \\ne 0$, $b=0$, $c \\ne 0$ (rozpatrzono w kroku 2). Został przypadek 5: $a=0$ (niemożliwe) lub $b=0$ (rozpatrzono) lub $c=0$ (niemożliwe). **Poprawka:** Rozważmy pozycję zera.\n - Zera na pozycji setek: niemożliwe.\n - Zera na pozycji dziesiątek: $a \\in \\{1..9\\}$ (9 możliwości), $b=0$ (1 możliwość), $c \\in \\{1,3,5,7,9\\}$ (5 możliwości). $9 \\cdot 1 \\cdot 5 = 45$ liczb.\n - Zera na pozycji jedności: niemożliwe, bo liczba ma być nieparzysta.",
-      "Zwróć uwagę, że występuje \"dokładnie jeden raz cyfra 0\". W kroku 3 rozpatrzyliśmy sytuację, gdy $b=0$. Cyfra $a$ nie może być 0 (bo to liczba trzycyfrowa). Cyfra $c$ nie może być 0 (bo liczba ma być nieparzysta). Zatem jedynym miejscem, gdzie może być 0, jest pozycja dziesiątek. Mamy więc 9 możliwości wyboru cyfry setek ($1-9$) i 5 możliwości wyboru cyfry jedności ($1,3,5,7,9$)."
+      "Cyfra setek nie może być zerem (liczba trzycyfrowa), cyfra jedności nie może być zerem (liczba nieparzysta). Zero może więc stać tylko na miejscu dziesiątek.",
+      "Cyfra setek: 9 możliwości (1-9). Cyfra jedności: 5 możliwości (1, 3, 5, 7, 9).",
+      "Liczba takich liczb to $9 \\cdot 1 \\cdot 5 = 45$."
     ],
     "examSource": {
       "kind": "matura",
