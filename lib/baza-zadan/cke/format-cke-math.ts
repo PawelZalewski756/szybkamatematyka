@@ -147,9 +147,9 @@ function compactSpacedMath(text: string): string {
     },
   );
 
-  // a n / a k - bez litery „i” (polskie „a i b” = „a oraz b”)
+  // a n / a k - bez litery „i” (polskie „a i b” = „a oraz b”; „a kąt” nie jest indeksem)
   out = out.replace(
-    /\b([abcpqsS])\s+([nkm])\b/g,
+    /(?<![\p{L}\d])([abcpqsS])\s+([nkm])(?![\p{L}\d])/gu,
     (_m, base: string, idx: string) => `${base}_{${idx}}`,
   );
 

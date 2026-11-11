@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { slugifyHeading } from "@/lib/trening/theory-content";
@@ -17,7 +17,7 @@ type TheoryMarkdownProps = {
 const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string> =
   {
     default:
-      "prose prose-invert max-w-none break-words text-base sm:text-lg " +
+      "prose max-w-none break-words text-base sm:text-lg " +
       "prose-headings:font-semibold prose-headings:text-foreground " +
       "prose-headings:scroll-mt-24 prose-p:leading-relaxed prose-p:text-foreground/95 " +
       "prose-strong:text-foreground prose-a:text-foreground prose-a:underline hover:prose-a:text-brand-light " +
@@ -27,12 +27,12 @@ const VARIANT_CLASS: Record<NonNullable<TheoryMarkdownProps["variant"]>, string>
       "[&_.katex-display]:my-4 [&_.katex-display]:overflow-x-auto [&_.katex]:text-foreground " +
       "[&_.katex-display>.katex]:inline-block [&_.katex-display>.katex]:max-w-none",
     compact:
-      "prose prose-sm prose-invert max-w-none break-words " +
+      "prose prose-sm max-w-none break-words " +
       "prose-p:leading-relaxed prose-p:text-foreground/90 prose-strong:text-foreground " +
       "[&_.katex-display]:my-2 [&_.katex-display]:overflow-x-auto [&_.katex]:text-foreground " +
       "[&_.katex-display>.katex]:inline-block [&_.katex-display>.katex]:max-w-none",
     solution:
-      "prose prose-sm prose-invert max-w-none break-words " +
+      "prose prose-sm max-w-none break-words " +
       "prose-p:my-1.5 prose-p:leading-relaxed prose-p:text-foreground/90 " +
       "prose-strong:text-success prose-li:text-foreground/90 " +
       "prose-headings:text-foreground prose-headings:font-bold prose-headings:text-sm " +

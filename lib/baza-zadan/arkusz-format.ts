@@ -29,13 +29,15 @@ export function formatArkuszLabel(arkusz: ArkuszLabelSource): string {
     arkusz.miesiac >= 1 &&
     arkusz.miesiac <= 12
   ) {
+    const isE8 = arkusz.typ === "egzamin-8" || /ósmoklasist|osmoklasist/i.test(arkusz.nazwa);
     const level = /rozszerzon/i.test(arkusz.nazwa)
       ? " - rozszerzona"
       : /podstawow/i.test(arkusz.nazwa)
         ? " - podstawowa"
         : "";
     const extra = /dodatkow/i.test(arkusz.nazwa) ? " (termin dodatkowy)" : "";
-    return `Arkusz - ${MIESIACE_PL[arkusz.miesiac - 1]} ${arkusz.rok}${extra}${level}`;
+    const prefix = isE8 ? "Egzamin ósmoklasisty" : arkusz.typ === "matura" || /matur/i.test(arkusz.nazwa) ? "Matura" : "Arkusz";
+    return `${prefix} - ${MIESIACE_PL[arkusz.miesiac - 1]} ${arkusz.rok}${extra}${isE8 ? "" : level}`;
   }
   return arkusz.nazwa;
 }
