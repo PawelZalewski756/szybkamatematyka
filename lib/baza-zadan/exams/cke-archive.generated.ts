@@ -20,11 +20,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-3.jpg)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z01-4.jpg)"
     ],
-    "correctIndex": 1,
-    "explanation": "B)",
+    "correctIndex": 2,
+    "explanation": "C, czyli przedział domknięty $\\langle -3, 5 \\rangle$",
     "solutionSteps": [
-      "Rozwiąż nierówność $-4 \\le x - 1 \\le 4$, dodając 1 do każdej jej części: $-4 + 1 \\le x \\le 4 + 1$, co daje $-3 \\le x \\le 5$.",
-      "Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby $od - 3$ do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach -3 i 5 oraz odcinkiem między nimi."
+      "Dodaj 1 do każdej części nierówności: $-3 \\le x \\le 5$.",
+      "Nierówność jest nieostra, więc końce przedziału są zamalowane: $\\langle -3, 5 \\rangle$. Pasuje rysunek C."
     ],
     "examSource": {
       "kind": "matura",
@@ -417,11 +417,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z14-4.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z14-5.gif)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{3}{4}$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $-\\frac{5}{4}$",
     "solutionSteps": [
-      "Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej naprzeciw kąta do długości przyprostokątnej przyległej do tego kąta. Z rysunku odczytujemy długości przyprostokątnych: 3 (naprzeciwko kąta $\\alpha$) i 4 (przyległa do kąta $\\alpha$).",
-      "Obliczamy tangens kąta $\\alpha$, dzieląc długość przyprostokątnej naprzeciw kąta przez długość przyprostokątnej przyległej: $\\tan(\\alpha) = \\frac{3}{4}$."
+      "Punkt $P = (-4, 5)$ leży na ramieniu kąta $\\alpha$ wychodzącym z początku układu.",
+      "$\\operatorname{tg}\\alpha = \\frac{y}{x} = \\frac{5}{-4} = -\\frac{5}{4}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -601,11 +601,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-maj/z20-3.gif)",
       "![Rysunek do zadania](/cke-matura/m15-maj/z20-4.gif)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $(\\frac{3}{2}, -2)$.",
+    "correctIndex": 3,
+    "explanation": "D, czyli $K' = \\left(\\frac{3}{2}, -2\\right)$",
     "solutionSteps": [
-      "Obliczamy współrzędne punktu K, który jest środkiem odcinka MN, korzystając ze wzoru na środek odcinka: $K = (\\frac{x_M + x_N}{2}, \\frac{y_M + y_N}{2})$. Podstawiamy dane: $K = (\\frac{-2 + (-1)}{2}, \\frac{1 + 3}{2}) = (\\frac{-3}{2}, \\frac{4}{2}) = (-\\frac{3}{2}, 2)$.",
-      "Znajdujemy obraz punktu K w symetrii względem początku układu współrzędnych. Symetria względem początku $(0,0)$ zamienia punkt $(x,y)$ na punkt $(-x,-y)$. Zatem dla punktu $K = (-\\frac{3}{2}, 2)$, obrazem jest punkt $A = (-(-\\frac{3}{2}), -2) = (\\frac{3}{2}, -2)$."
+      "Środek odcinka $MN$: $K = \\left(\\frac{-2 + (-1)}{2}, \\frac{1 + 3}{2}\\right) = \\left(-\\frac{3}{2}, 2\\right)$.",
+      "Symetria względem początku układu zmienia znaki obu współrzędnych: $K' = \\left(\\frac{3}{2}, -2\\right)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2110,11 +2110,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $1$.",
+    "correctIndex": 3,
+    "explanation": "D, czyli $4 + 2\\sqrt{3}$",
     "solutionSteps": [
-      "Rozpisz pierwiastki, zamieniając liczby mieszane na ułamki niewłaściwe i grupując czynniki: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$ oraz $\\sqrt{1\\frac{1}{3}} = \\sqrt{\\frac{4}{3}} = \\frac{\\sqrt{4}}{\\sqrt{3}} = \\frac{2}{\\sqrt{3}}$.",
-      "Wykonaj mnożenie i pozbądź się niewymierności z mianownika: $\\frac{\\sqrt{3}}{2} \\cdot \\frac{2}{\\sqrt{3}} = \\frac{\\sqrt{3} \\cdot 2}{2 \\cdot \\sqrt{3}} = 1$."
+      "$\\frac{3 + \\sqrt{3}}{\\sqrt{3}} = \\frac{3}{\\sqrt{3}} + 1 = \\sqrt{3} + 1$.",
+      "$(\\sqrt{3} + 1)^2 = 3 + 2\\sqrt{3} + 1 = 4 + 2\\sqrt{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2229,13 +2229,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-3.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-4.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $x^2 - 2x - 3 = 0$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\sqrt[3]{-256} = -\\sqrt[3]{256}$",
     "solutionSteps": [
-      "Rozpoznajemy, że na rysunkach znajdują się wykresy funkcji kwadratowych. Wartość $x$ najmniejszego argumentu dla którego funkcja przyjmuje wartość 0 (pierwiastek) to $x_1$. Wartość $x$ największego argumentu dla którego funkcja przyjmuje wartość 0 to $x_2$. Z wykresu odczytujemy pierwiastki funkcji.",
-      "Sprawdzamy równania z podpunktów A, B, C, D. Szukamy równania, którego pierwiastki odpowiadają pierwiastkom odczytanym z wykresu.",
-      "Dla wykresu z podpunktu A, pierwiastki to $x_1 = -3$ i $x_2 = 1$. Równanie to $(x+3)(x-1) = 0$, co po wymnożeniu daje $x^2 + 2x - 3 = 0$.",
-      "Sprawdzamy pozostałe podpunkty. Dla podpunktu B pierwiastki to $x_1=-1$ i $x_2=3$, równanie to $x^2 - 2x - 3 = 0$. Dla podpunktu C pierwiastki to $x_1=-3$ i $x_2=-1$, równanie to $x^2 + 4x + 3 = 0$. Dla podpunktu D pierwiastki to $x_1=1$ i $x_2=3$, równanie to $x^2 - 4x + 3 = 0$."
+      "A: $-256^2 < 0$, a $(-256)^2 > 0$ - fałsz. B: $256^3 > 0$, a $(-256)^3 < 0$ - fałsz.",
+      "C: $\\sqrt{(-256)^2} = 256$, nie $-256$ - fałsz.",
+      "D: pierwiastek trzeciego stopnia z liczby ujemnej jest ujemny, więc $\\sqrt[3]{-256} = -\\sqrt[3]{256}$ - prawda."
     ],
     "examSource": {
       "kind": "matura",
@@ -2536,12 +2535,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-5.png)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{3}{5}$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\frac{2\\sqrt{6}}{5}$",
     "solutionSteps": [
-      "Przypomnij definicję sinusa w trójkącie prostokątnym: sinus kąta ostrego to stosunek długości przyprostokątnej przeciwległej temu kątowi do długości przeciwprostokątnej.",
-      "Zidentyfikuj przyprostokątną przeciwległą kątowi $\\alpha$ (ma długość 3) oraz przeciwprostokątną (ma długość 5).",
-      "Oblicz sinus kąta $\\alpha$, dzieląc długość przyprostokątnej przeciwległej przez długość przeciwprostokątnej: $\\sin \\alpha = \\frac{3}{5}$."
+      "Przyprostokątna przyległa do $\\alpha$ ma długość 1, a przeciwprostokątna 5.",
+      "Przyprostokątna naprzeciw $\\alpha$: $\\sqrt{5^2 - 1^2} = \\sqrt{24} = 2\\sqrt{6}$.",
+      "$\\sin\\alpha = \\frac{2\\sqrt{6}}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2567,12 +2566,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-4.png)",
       "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $l=2r$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $r = \\frac{1}{2}l$",
     "solutionSteps": [
-      "Zapisz wzory na pole powierzchni bocznej stożka ($P_b = \\pi r l$) i pole jego podstawy ($P_p = \\pi r^2$). Z treści zadania wiemy, że $P_b = 2 P_p$.",
-      "Podstaw wzory do równania z treści zadania: $\\pi r l = 2 \\cdot \\pi r^2$. Skróć obie strony przez $\\pi r$ (zakładając, że $r>0$, co jest prawdą dla promienia podstawy stożka).",
-      "Po skróceniu otrzymujemy zależność $l = 2r$. Odpowiedź szukamy wśród podanych opcji, gdzie relacja między $l$ a $r$ jest przedstawiona w różny sposób. Opcja B) przedstawia tę zależność w postaci $l=2r$."
+      "Pole powierzchni bocznej stożka: $\\pi r l$, pole podstawy: $\\pi r^2$.",
+      "$\\pi r l = 2\\pi r^2$, więc $l = 2r$, czyli $r = \\frac{1}{2}l$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3279,15 +3277,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "nie ma rozwiązań rzeczywistych.",
       "ma dokładnie jedno rozwiązanie rzeczywiste.",
       "ma dokładnie dwa rozwiązania rzeczywiste.",
-      "ma dokładnie trzy rozwiązania rzeczywiste. Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt $W = (1,9)$ . Liczby -2 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)"
+      "ma dokładnie trzy rozwiązania rzeczywiste."
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli ma dokładnie dwa rozwiązania rzeczywiste.",
+    "correctIndex": 0,
+    "explanation": "A, czyli nie ma rozwiązań rzeczywistych.",
     "solutionSteps": [
-      "Przekształć równanie, mnożąc obie strony przez mianownik $x+5$, pamiętając o założeniu $x \\neq -5$. Otrzymujemy $2(x+5) = x^2+5$.",
-      "Zredukuj wyrazy podobne i przenieś wszystko na jedną stronę, aby otrzymać równanie kwadratowe w postaci standardowej $ax^2+bx+c=0$. Mamy $2x + 10 = x^2 + 5$, co daje $x^2 - 2x - 5 = 0$.",
-      "Oblicz wyróżnik $\\Delta = b^2 - 4ac$ dla otrzymanego równania kwadratowego, aby określić liczbę rozwiązań rzeczywistych. W tym przypadku $a=1, b=-2, c=-5$, więc $\\Delta = (-2)^2 - 4(1)(-5) = 4 + 20 = 24$.",
-      "Ponieważ $\\Delta > 0$, równanie kwadratowe ma dwa różne rozwiązania rzeczywiste. Sprawdź, czy któreś z nich jest równe $-5$. Rozwiązania to $x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} = \\frac{2 \\pm \\sqrt{24}}{2} = 1 \\pm \\sqrt{6}$. Żadne z nich nie jest równe $-5$."
+      "Dla $x \\ne -5$ pomnóż obie strony równania $\\frac{3x - 1}{x + 5} = 3$ przez $x + 5$: $3x - 1 = 3x + 15$.",
+      "Stąd $-1 = 15$ - sprzeczność, więc równanie nie ma rozwiązań rzeczywistych."
     ],
     "examSource": {
       "kind": "matura",
@@ -3306,7 +3302,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wartości funkcji $f$ jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt $W = (1,9)$ . Liczby -2 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)\n\nZbiorem wartości funkcji $f$ jest przedział\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -3334,19 +3330,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Najmniejsza wartość funkcji $f$ w przedziale ⟨-1, 2⟩ jest równa",
+    "prompt": "Informacja do zadań 10. i 11. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt $W = (1,9)$ . Liczby -2 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m16-maj/z09-2.png)\n\nNajmniejsza wartość funkcji $f$ w przedziale ⟨-1, 2⟩ jest równa",
     "choices": [
       "2",
       "5",
       "8",
       "9"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli 2",
+    "correctIndex": 1,
+    "explanation": "B, czyli $5$",
     "solutionSteps": [
-      "Oblicz pochodną funkcji $f(x) = x^2 - 4x + 7$ i przyrównaj ją do zera, aby znaleźć punkty stacjonarne: $f'(x) = 2x - 4$, $2x - 4 = 0 \\implies x = 2$.",
-      "Sprawdź wartości funkcji na krańcach przedziału oraz w znalezionym punkcie stacjonarnym (jeśli należy do przedziału): $f(-1) = (-1)^2 - 4(-1) + 7 = 1 + 4 + 7 = 12$, $f(2) = 2^2 - 4(2) + 7 = 4 - 8 + 7 = 3$. Punkt $x=2$ należy do przedziału $\\langle-1, 2\\rangle$.",
-      "Porównaj otrzymane wartości: $f(-1)=12$ i $f(2)=3$. Najmniejsza wartość to $3$."
+      "Z miejsc zerowych $-2$ i $4$ oraz wierzchołka $(1, 9)$ wynika $f(x) = -(x + 2)(x - 4)$.",
+      "Ramiona są skierowane w dół, więc najmniejsza wartość w przedziale jest na jednym z końców: $f(-1) = 5$, $f(2) = 8$.",
+      "Najmniejsza wartość to $5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3372,13 +3368,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z12-5.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z12-6.png)"
     ],
-    "correctIndex": 0,
-    "explanation": "A",
+    "correctIndex": 1,
+    "explanation": "B, czyli $-\\frac{3}{5}$",
     "solutionSteps": [
-      "Zapisz funkcję $f(x)$ w prostszej postaci, korzystając ze wzoru na różnicę kwadratów: $(a-b)(a+b) = a^2 - b^2$. Otrzymujemy $f(x) = \\frac{(x-3)(x+3)}{x-3} = x+3$ dla $x \\neq 3$.",
-      "Oblicz wartość $f(10)$ podstawiając $x=10$ do uproszczonego wzoru funkcji: $f(10) = 10+3 = 13$.",
-      "Oblicz wartość $f(-3)$ podstawiając $x=-3$ do uproszczonego wzoru funkcji: $f(-3) = -3+3 = 0$.",
-      "Oblicz różnicę $f(10) - f(-3)$: $13 - 0 = 13$."
+      "Dla $x = -\\sqrt[3]{3}$ mamy $x^3 = -3$ oraz $x^6 = 9$.",
+      "$f\\left(-\\sqrt[3]{3}\\right) = \\frac{2 \\cdot (-3)}{9 + 1} = -\\frac{6}{10} = -\\frac{3}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3404,12 +3398,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-4.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z13-5.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $(8, 10)$.",
+    "correctIndex": 0,
+    "explanation": "A, czyli $\\left\\langle\\frac{9}{2}, \\frac{11}{2}\\right\\rangle$",
     "solutionSteps": [
-      "Narysuj promień prostopadły do cięciwy AB, który przetnie ją w punkcie C. Trójkąt ASC jest prostokątny, a odległość punktu S od cięciwy AB to długość odcinka SC. Z rysunku wynika, że odcinek SC jest przyprostokątną w trójkącie prostokątnym ASC.",
-      "W trójkącie prostokątnym ASC, promień AS ma długość 10 (przeciwprostokątna), a kąt $\\angle SAC = 31^\\circ$. Użyj funkcji cosinus do obliczenia długości odcinka SC: $\\cos(\\angle SAC) = \\frac{SC}{AS}$.",
-      "Oblicz $SC = AS \\cdot \\cos(31^\\circ) = 10 \\cdot \\cos(31^\\circ)$. Wartość $\\cos(31^\\circ)$ jest liczbą z przedziału $(0.8, 1)$, więc $SC$ będzie z przedziału $(8, 10)$."
+      "Odległość $|SK|$ środka od cięciwy to wysokość trójkąta prostokątnego $AKS$: $|SK| = 10 \\sin 31^{\\circ}$.",
+      "$\\sin 31^{\\circ} \\approx 0{,}515$, więc $|SK| \\approx 5{,}15$, czyli liczba należy do przedziału $\\left\\langle 4{,}5;\\ 5{,}5 \\right\\rangle$."
     ],
     "examSource": {
       "kind": "matura",
@@ -3526,12 +3519,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m16-maj/z17-4.png)",
       "![Rysunek do zadania](/cke-matura/m16-maj/z17-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $\\cos \\alpha = \\frac{4}{5}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\sin\\alpha = \\frac{2\\sqrt{13}}{13}$",
     "solutionSteps": [
-      "Zauważ na rysunku trójkąt prostokątny, gdzie kąt α jest jednym z kątów ostrych. Przyprostokątne mają długości 3 i 4, a przeciwprostokątna -5.",
-      "Skorzystaj z definicji funkcji trygonometrycznych w trójkącie prostokątnym: $\\sin \\alpha = \\frac{\\text{przyprostokątna naprzeciwko } \\alpha}{\\text{przeciwprostokątna}} = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{\\text{przyprostokątna przy } \\alpha}{\\text{przeciwprostokątna}} = \\frac{4}{5}$.",
-      "Sprawdź podane warianty odpowiedzi. Wariant B jest zgodny z obliczonym cosinusem: $\\cos \\alpha = \\frac{4}{5}$."
+      "Dla $\\operatorname{tg}\\alpha = \\frac{2}{3}$ weź trójkąt prostokątny z przyprostokątnymi 2 i 3. Przeciwprostokątna: $\\sqrt{4 + 9} = \\sqrt{13}$.",
+      "$\\sin\\alpha = \\frac{2}{\\sqrt{13}} = \\frac{2\\sqrt{13}}{13}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5108,13 +5100,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m18-maj/z02-4.gif)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z02-5.gif)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $25\\sqrt{5}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\frac{3}{2}$",
     "solutionSteps": [
-      "Zapisz wyrażenie z pierwiastkami jako potęgi: $\\sqrt[3]{5} = 5^{\\frac{1}{3}}$ oraz $\\sqrt{5} = 5^{\\frac{1}{2}}$.",
-      "Zastosuj wzór na potęgowanie potęgi $(a^m)^n = a^{m \\cdot n}$ i wzór na mnożenie potęg o tej samej podstawie $a^m \\cdot a^n = a^{m+n}$.",
-      "Oblicz: $(5^{\\frac{1}{3}})^6 \\cdot 5^{\\frac{1}{2}} = 5^{\\frac{1}{3} \\cdot 6} \\cdot 5^{\\frac{1}{2}} = 5^2 \\cdot 5^{\\frac{1}{2}} = 5^{2 + \\frac{1}{2}} = 5^{\\frac{4}{2} + \\frac{1}{2}} = 5^{\\frac{5}{2}}$.",
-      "Zapisz wynik $5^{\\frac{5}{2}}$ w postaci pierwiastka: $5^{\\frac{5}{2}} = \\sqrt{5^5} = \\sqrt{5^4 \\cdot 5} = \\sqrt{(5^2)^2 \\cdot 5} = 5^2 \\sqrt{5} = 25\\sqrt{5}$."
+      "$\\sqrt[3]{\\frac{7}{3}} \\cdot \\sqrt[3]{\\frac{81}{56}} = \\sqrt[3]{\\frac{7 \\cdot 81}{3 \\cdot 56}} = \\sqrt[3]{\\frac{27}{8}}$.",
+      "$\\sqrt[3]{\\frac{27}{8}} = \\frac{3}{2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5202,12 +5192,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m18-maj/z05-4.png)",
       "![Rysunek do zadania](/cke-matura/m18-maj/z05-5.png)"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $[1, 3]$",
+    "correctIndex": 0,
+    "explanation": "A, czyli $\\left(-\\infty, \\frac{1}{6}\\right)$",
     "solutionSteps": [
-      "Przekształć nierówność, aby po jednej stronie uzyskać zero: $x^2 - 4x + 3 \\le 0$.",
-      "Znajdź pierwiastki równania kwadratowego $x^2 - 4x + 3 = 0$ za pomocą wyróżnika $\\Delta = b^2 - 4ac$ lub wzorów skróconego mnożenia. Pierwiastki to $x_1 = 1$ i $x_2 = 3$.",
-      "Narysuj parabolę skierowaną ramionami do góry (bo $a=1 > 0$) i zaznacz na osi $OX$ miejsca zerowe $x=1$ oraz $x=3$. Nierówność $\\le 0$ oznacza wartości ujemne lub równe zero, więc wybieramy fragment paraboli leżący pod osią $OX$ lub na niej."
+      "Pomnóż nierówność $\\frac{1 - 2x}{2} > \\frac{1}{3}$ przez 6: $3(1 - 2x) > 2$, czyli $3 - 6x > 2$.",
+      "Stąd $-6x > -1$, więc $x < \\frac{1}{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -6314,12 +6303,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wartości funkcji $f$ jest przedział",
+    "prompt": "Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)\n\nZbiorem wartości funkcji $f$ jest przedział",
     "choices": [
       "(- ∞,0⟩",
       "⟨0, 4⟩",
       "⟨- 4, + ∞)",
-      "⟨4, + ∞) Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z08-1.gif)"
+      "⟨4, + ∞)"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $\\langle -4, + \\infty )$",
@@ -6345,12 +6334,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
+    "prompt": "Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)\n\nNajwiększa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
     "choices": [
       "-3",
       "-4",
       "4",
-      "0 Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)"
+      "0"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 0",
@@ -6376,7 +6365,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii wykresu funkcji $f$ jest prosta o równaniu",
+    "prompt": "Tekst do zadań 8.-10. Na rysunku przedstawiony jest fragment paraboli będącej wykresem funkcji kwadratowej f. Wierzchołkiem tej paraboli jest punkt W = $(2, - 4)$. Liczby 0 i 4 to miejsca zerowe funkcji $f$. ![Rysunek do zadania](/cke-matura/m19-maj/z09-1.gif)\n\nOsią symetrii wykresu funkcji $f$ jest prosta o równaniu",
     "choices": [
       "$y = -4$",
       "$x = -4$",
@@ -7323,7 +7312,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "0",
       "1",
       "2",
-      "3 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)"
+      "3"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $1$",
@@ -7349,12 +7338,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Współczynnik $a$ we wzorze funkcji $f$ jest równy",
+    "prompt": "Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)\n\nWspółczynnik $a$ we wzorze funkcji $f$ jest równy",
     "choices": [
       "1",
       "2",
       "-2",
-      "-1 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)"
+      "-1"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $-1$",
@@ -7380,12 +7369,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
+    "prompt": "Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)\n\nNajwiększa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
     "choices": [
       "-3",
       "0",
       "1",
-      "2 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)"
+      "2"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $1$",
@@ -7412,7 +7401,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu",
+    "prompt": "Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)\n\nOsią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu",
     "choices": [
       "$x = 1$",
       "$x = 2$",
@@ -7422,9 +7411,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $x = 2$",
     "solutionSteps": [
-      "Funkcja kwadratowa w postaci kanonicznej to $f(x) = a(x-p)^2 + q$. Oś symetrii paraboli to prosta pionowa $x=p$.",
-      "Z postaci kanonicznej $f(x) = 2(x-2)^2+3$ odczytujemy, że $p=2$, a $q=3$.",
-      "Oś symetrii ma równanie $x=p$, zatem $x=2$."
+      "Parabola ma wierzchołek $W = (2, 1)$ (miejsca zerowe 1 i 3 leżą symetrycznie względem prostej $x = 2$).",
+      "Oś symetrii paraboli przechodzi przez wierzchołek i jest pionowa: $x = 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8360,12 +8348,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-3.png)",
       "![Rysunek do zadania](/cke-matura/m20-probna/z06-4.png)"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli przedział $[9, 11]$",
+    "correctIndex": 3,
+    "explanation": "D, czyli przedział $\\langle 9, 11 \\rangle$",
     "solutionSteps": [
-      "Rozwiąż nierówność z wartością bezwzględną, przekształcając ją w podwójną nierówność. Dodaj 7 do każdej strony nierówności: $11+7 \\leq 2x \\leq 15+7$, co daje $18 \\leq 2x \\leq 22$.",
-      "Podziel wszystkie części nierówności przez 2, aby wyznaczyć $x$: $\\frac{18}{2} \\leq x \\leq \\frac{22}{2}$, co daje $9 \\leq x \\leq 11$.",
-      "Zaznacz na osi liczbowej przedział domknięty od 9 do 11 (włącznie z końcami), ponieważ nierówność jest ostra ($\\leq$)."
+      "Dodaj 7 do każdej części nierówności $11 \\le 2x - 7 \\le 15$: $18 \\le 2x \\le 22$.",
+      "Podziel przez 2: $9 \\le x \\le 11$. Nierówność jest nieostra, więc końce są zamalowane - rysunek D."
     ],
     "examSource": {
       "kind": "matura",
@@ -9514,12 +9501,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "1",
       "![Rysunek do zadania](/cke-matura/m21-maj/z10-3.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $\\sqrt{3}$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $-1$",
     "solutionSteps": [
-      "Przekształć wzór funkcji $f(x)$, aby wyznaczyć prostszą postać wyrażenia. Wykorzystaj wzór skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$.\n$$ f(x) = \\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x+1 $$",
-      "Podstaw podaną wartość $x = \\sqrt{3} - 1$ do uproszczonego wzoru funkcji $f(x)$.\n$ f(\\sqrt{3}-1) = (\\sqrt{3}-1) + 1 $",
-      "Oblicz końcową wartość funkcji.\n$ f(\\sqrt{3}-1) = \\sqrt{3} $"
+      "Dla $x = \\sqrt{3} - 1$: $x^2 = 4 - 2\\sqrt{3}$ oraz $2x - 2 = 2\\sqrt{3} - 4$.",
+      "$f(x) = \\frac{4 - 2\\sqrt{3}}{2\\sqrt{3} - 4} = -1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11905,11 +11891,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m22-maj/z05-4.png)",
       "![Rysunek do zadania](/cke-matura/m22-maj/z05-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $\\frac{\\sqrt{3}}{2}$",
+    "correctIndex": 0,
+    "explanation": "A, czyli $3^2 \\cdot \\sqrt[4]{3}$",
     "solutionSteps": [
-      "Rozpisujemy pierwiastek z ułamka jako różnicę pierwiastków: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}}$.",
-      "Obliczamy pierwiastek z licznika i mianownika: $\\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$."
+      "$3^{2 + \\frac{1}{4}} = 3^2 \\cdot 3^{\\frac{1}{4}} = 3^2 \\cdot \\sqrt[4]{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13120,12 +13105,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\begin{cases} y = -x + 2 \\\\ y = 2x - 1 \\end{cases}$",
     "solutionSteps": [
-      "Zauważ, że na rysunku znajdują się dwie proste - pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.",
-      "Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.",
-      "Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$)."
+      "Prosta malejąca przechodzi przez $(0, 2)$ i $(2, 0)$: $y = -x + 2$.",
+      "Prosta rosnąca przechodzi przez $(0, -1)$ i $(1, 1)$: $y = 2x - 1$. Obie przecinają się w $(1, 1)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13875,12 +13859,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-4.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-5.jpg)"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $x+1$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\frac{-5x + 7}{x - 1}$",
     "solutionSteps": [
-      "Przekształć licznik ułamka, stosując wzór skróconego mnożenia na różnicę kwadratów: $a^2 - b^2 = (a-b)(a+b)$. Mamy $x^2 - 1 = (x-1)(x+1)$.",
-      "Uprość wyrażenie, skracając wspólny czynnik $(x-1)$ w liczniku i mianowniku. Otrzymujemy $\\frac{(x-1)(x+1)}{x-1} = x+1$.",
-      "Wybierz odpowiedź, która odpowiada uproszczonemu wyrażeniu $x+1$."
+      "$\\frac{2}{x - 1} - 5 = \\frac{2 - 5(x - 1)}{x - 1} = \\frac{2 - 5x + 5}{x - 1} = \\frac{-5x + 7}{x - 1}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14024,12 +14006,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-3.jpg)",
       "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-4.jpg)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $50x + 100(2x) + 20(x-2) = 1040$",
+    "correctIndex": 0,
+    "explanation": "A, czyli $\\begin{cases} 20y + 50x + 100 \\cdot 2x = 1040 \\\\ y = x - 2 \\end{cases}$",
     "solutionSteps": [
-      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ (liczba banknotów 50 zł). Liczba banknotów 50 zł: $x$. Liczba banknotów 100 zł: $2x$. Liczba banknotów 20 zł: $x-2$.",
-      "Układamy równanie, sumując wartość wszystkich banknotów, która musi być równa 1040 zł: $50x + 100(2x) + 20(x-2) = 1040$.",
-      "Przekształcamy równanie do postaci wymaganej w odpowiedziach: $50x + 200x + 20x - 40 = 1040$, co daje $270x - 40 = 1040$."
+      "Banknotów 100 zł jest $2x$, więc ich wartość to $100 \\cdot 2x$. Całość: $20y + 50x + 100 \\cdot 2x = 1040$.",
+      "Banknotów 20 zł jest o 2 mniej niż 50 zł, czyli $y = x - 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14553,11 +14534,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $4$.",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\sqrt{5}$",
     "solutionSteps": [
-      "Zapisujemy wyrażenie pod pierwiastkiem jako potęgę. Zauważ, że $16 = 2^4$. Zatem $\\sqrt{16} = \\sqrt{2^4} = 2^{4/2} = 2^2$.",
-      "Obliczamy wartość wyrażenia. $2^2 = 4$."
+      "$5 \\cdot 5^{\\frac{1}{2}} = 5^{\\frac{3}{2}}$.",
+      "$\\left(5^{\\frac{3}{2}}\\right)^{\\frac{1}{3}} = 5^{\\frac{1}{2}} = \\sqrt{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14613,12 +14594,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1{,}5x = 1{,}2y \\end{cases}$",
     "solutionSteps": [
-      "Zapisz równanie opisujące łączny koszt zakupów w hurtowni: $50x + 40y = 8000$.",
-      "Zapisz ceny detaliczne spodni i marynarek po doliczeniu marży, a następnie ich równość: $x \\cdot 1.5 = y \\cdot 1.2$.",
-      "Uporządkuj drugie równanie, aby uzyskać postać $1.5x - 1.2y = 0$ lub $5x - 4y = 0$ po pomnożeniu przez $\\frac{10}{3}$."
+      "Koszt zakupów: $50x + 40y = 8000$.",
+      "Cena detaliczna spodni: $1{,}5x$, marynarki: $1{,}2y$. Są równe: $1{,}5x = 1{,}2y$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14644,12 +14624,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png)"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\frac{2x}{x^2 - y^2}$",
     "solutionSteps": [
-      "Zauważ, że licznik $\\sqrt{x^3} - \\sqrt{y^3}$ można zapisać jako różnicę sześcianów, a mianownik $\\sqrt{x} - \\sqrt{y}$ jako różnicę liczb, co po zastosowaniu wzorów skróconego mnożenia da $\\sqrt{x^3} - \\sqrt{y^3} = (\\sqrt{x}-\\sqrt{y})(x+\\sqrt{xy}+y)$ oraz $\\sqrt{x} - \\sqrt{y}$.",
-      "Skracamy wyrażenie, dzieląc licznik przez mianownik, co daje nam $x+\\sqrt{xy}+y$.",
-      "Ponieważ $\\sqrt{x^2} = x$ i $\\sqrt{y^2} = y$ dla dodatnich $x, y$, możemy zapisać $x+\\sqrt{xy}+y$ jako $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$."
+      "$\\frac{1}{x - y} + \\frac{1}{x + y} = \\frac{(x + y) + (x - y)}{(x - y)(x + y)} = \\frac{2x}{x^2 - y^2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -14706,12 +14684,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli 1",
+    "correctIndex": 1,
+    "explanation": "B, czyli $-\\frac{1}{2}$",
     "solutionSteps": [
-      "Zapisz wzór funkcji $f(x)$ oraz podaną wartość argumentu. Wartość argumentu odczytana z rysunku to $x = \\frac{1}{10}$. Wzór funkcji to $f(x) = -\\log x$.",
-      "Podstaw wartość argumentu do wzoru funkcji $i$ wykonaj obliczenia. $f(\\frac{1}{10}) = -\\log(\\frac{1}{10})$. Ponieważ $\\log(\\frac{1}{10}) = \\log(10^{-1}) = -1$, otrzymujemy $f(\\frac{1}{10}) = -(-1)$.",
-      "Oblicz ostateczną wartość funkcji. $f(\\frac{1}{10}) = 1$."
+      "$f(\\sqrt{10}) = -\\log \\sqrt{10} = -\\log 10^{\\frac{1}{2}} = -\\frac{1}{2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -15005,12 +14981,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $x = 15$ i $y = 5$.",
+    "correctIndex": 0,
+    "explanation": "A, czyli $x = 4$ oraz $y = \\frac{15}{2}$.",
     "solutionSteps": [
-      "W ciągu arytmetycznym różnica między kolejnymi wyrazami jest stała; zapisujemy to jako równania: $10 - x = y - 10$ oraz $y - 10 = 2y - (y+5)$.",
-      "Z drugiego równania wyznaczamy $y$: $y - 10 = 2y - y - 5$, co daje $y - 10 = y - 5$, czyli $y = 5$.",
-      "Podstawiamy $y = 5$ do pierwszego równania i wyznaczamy $x$: $10 - x = 5 - 10$, co daje $10 - x = -5$, czyli $x = 15$."
+      "Różnica ciągu: $r = \\frac{1}{2} - (-3) = \\frac{7}{2}$.",
+      "$x = \\frac{1}{2} + \\frac{7}{2} = 4$, $y = 4 + \\frac{7}{2} = \\frac{15}{2}$. Kontrola: $\\frac{15}{2} + \\frac{7}{2} = 11$."
     ],
     "examSource": {
       "kind": "matura",
@@ -15064,12 +15039,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{12}{25}$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\frac{3}{4}$",
     "solutionSteps": [
-      "Z rysunku odczytujemy wartości $\\sin \\alpha = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{4}{5}$.",
-      "Obliczamy wartość wyrażenia $\\sin \\alpha \\cdot \\cos \\alpha$, podstawiając odczytane wartości. Otrzymujemy $\\frac{3}{5} \\cdot \\frac{4}{5}$.",
-      "Mnożymy licznik przez licznik i mianownik przez mianownik: $\\frac{3 \\cdot 4}{5 \\cdot 5} = \\frac{12}{25}$."
+      "$\\frac{1}{\\sin^2\\alpha} + \\frac{1}{\\cos^2\\alpha} = \\frac{\\cos^2\\alpha + \\sin^2\\alpha}{\\sin^2\\alpha \\cos^2\\alpha} = \\frac{1}{\\sin^2\\alpha \\cos^2\\alpha}$.",
+      "Z $\\frac{1}{\\sin^2\\alpha \\cos^2\\alpha} = \\frac{16}{9}$ wynika $\\sin^2\\alpha \\cos^2\\alpha = \\frac{9}{16}$, a dla kąta ostrego $\\sin\\alpha \\cos\\alpha = \\frac{3}{4}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -15770,12 +15744,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-3.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z08-4.png)"
     ],
-    "correctIndex": 1,
-    "explanation": "B",
+    "correctIndex": 0,
+    "explanation": "A, czyli przedział $\\langle -3, 1 \\rangle$",
     "solutionSteps": [
-      "Rozwiąż nierówność z wartością bezwzględną: $|x+1| \\leq 2$ jest równoważne $-2 \\leq x+1 \\leq 2$.",
-      "Przekształć nierówność, odejmując 1 od wszystkich jej stron: $-2-1 \\leq x \\leq 2-1$, co daje $-3 \\leq x \\leq 1$.",
-      "Zaznacz otrzymany przedział na osi liczbowej, pamiętając, że ostre nierówności $(\\le , \\ge )$ oznaczają domknięte kółka na krańcach przedziału."
+      "$|x + 1| \\le 2$ jest równoważne $-2 \\le x + 1 \\le 2$, czyli $-3 \\le x \\le 1$.",
+      "Nierówność jest nieostra, więc końce przedziału są zamalowane. Pasuje rysunek A."
     ],
     "examSource": {
       "kind": "matura",
@@ -16339,12 +16312,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-4.png)",
       "![Rysunek do zadania](/cke-matura/m23-przykladowa/z27-5.png)"
     ],
-    "correctIndex": 2,
-    "explanation": "C",
+    "correctIndex": 0,
+    "explanation": "A, czyli $\\alpha = \\angle EAG$",
     "solutionSteps": [
-      "Zdefiniuj, czym jest kąt między ścianą boczną a przekątną ściany bocznej. Jest to kąt między płaszczyzną ściany bocznej a prostą (przekątną), który jest mierzony w płaszczyźnie prostopadłej do ich wspólnej krawędzi (o ile taka istnieje i jest ona prostopadła do obu). W tym przypadku rozpatrujemy kąt między ścianą $ACFD$ a przekątną $AE$ ściany $ABED$.",
-      "Zidentyfikuj wspólny punkt ściany i przekątnej, który posłuży jako wierzchołek kąta $\\alpha$. Wspólnym punktem ściany $ACFD$ i przekątnej $AE$ jest wierzchołek $A$. Przekątna $AE$ leży w ścianie $ABED$.",
-      "Określ, jak wygląda kąt $\\alpha$. Kąt $\\alpha$ pomiędzy ścianą $ACFD$ a przekątną $AE$ będzie miał wierzchołek w punkcie $A$. Jedno ramię kąta to przekątna $AE$. Drugie ramię kąta musi leżeć w płaszczyźnie ściany $ACFD$. Na rysunku prawidłowo przedstawiono kąt $\\alpha$ jako kąt między odcinkiem $AE$ a odcinkiem $AD$ (który leży na ścianie $ACFD$)."
+      "Kąt między prostą a płaszczyzną to kąt między tą prostą a jej rzutem prostokątnym na płaszczyznę.",
+      "Rzutem punktu $E$ na płaszczyznę ściany $ACFD$ jest środek $G$ krawędzi $DF$ (wysokość trójkąta równobocznego $DEF$). Rzutem prostej $AE$ jest więc prosta $AG$.",
+      "Szukany kąt to $\\angle EAG$ - rysunek A."
     ],
     "examSource": {
       "kind": "matura",
@@ -17560,12 +17533,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-4.png)",
       "![Rysunek do zadania](/cke-matura/m25-maj/z08-5.png)"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{x}{x+2}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\frac{x + 1}{x + 2}$",
     "solutionSteps": [
-      "Uprość licznik wyrażenia, stosując wzór skróconego mnożenia na różnicę kwadratów: $x^2 - 4 = (x-2)(x+2)$.",
-      "Skróć wspólny czynnik $(x+2)$ w liczniku i mianowniku, pamiętając o założeniach $x \\ne -2$ i $x \\ne 0$: $\\frac{(x-2)(x+2)}{x(x+2)} = \\frac{x-2}{x}$.",
-      "Dzielenie przez ułamek zastąp mnożeniem przez jego odwrotność i uprość wyrażenie: $\\frac{x-2}{x} : \\frac{x^2-4}{x^2} = \\frac{x-2}{x} \\cdot \\frac{x^2}{x^2-4} = \\frac{x-2}{x} \\cdot \\frac{x^2}{(x-2)(x+2)} = \\frac{x}{x+2}$."
+      "$\\frac{x^2 + x}{x^2 + 4x + 4} = \\frac{x(x + 1)}{(x + 2)^2}$.",
+      "$\\frac{x(x + 1)}{(x + 2)^2} \\cdot \\frac{x + 2}{x} = \\frac{x + 1}{x + 2}$."
     ],
     "examSource": {
       "kind": "matura",
