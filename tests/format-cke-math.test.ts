@@ -6,6 +6,15 @@ import {
 import { EXAM_ARCHIVE_TASKS } from "@/lib/baza-zadan/exams";
 
 describe("formatCkeMathText", () => {
+  it("nie psuje zadań katalogowych z Unicode (cm², ·, √, cos(60°))", () => {
+    expect(formatCkeMathText("P = a·h/2 = 60/2 = 30 cm².")).toBe(
+      "$P = a\\cdot h/2 = \\frac{60}{2} = 30$ cm².",
+    );
+    expect(formatCkeMathText("30 cm²")).toBe("30 cm²");
+    expect(formatCkeMathText("cos(60°) = ?")).toBe("$\\cos(60^{\\circ})$ = ?");
+    expect(formatCkeMathText("√3/2")).toBe("$\\frac{\\sqrt{3}}{2}$");
+  });
+
   it("usuwa urwany <ul class=\"", () => {
     const out = formatCkeMathText('Zapisz obliczenia. <ul class="');
     expect(out).toBe("Zapisz obliczenia.");

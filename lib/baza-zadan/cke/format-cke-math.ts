@@ -15,6 +15,24 @@ import { cleanCkeTaskMarkup } from "@/lib/baza-zadan/cke/parse-abcd";
 
 const IMG_PLACEHOLDER = "\uE000CKEIMG";
 const MATH_PLACEHOLDER = "\uE000CKEMATH";
+const SQRT_PLACEHOLDER = "\uE000CKESQRT";
+
+const MATH_SPLIT = /(\$\$[\s\S]+?\$\$|\$[^$\n]+\$)/;
+
+/** Stosuje transformację tylko do tekstu poza `$...$` / `$$...$$`. */
+function mapOutsideMath(text: string, fn: (plain: string) => string): string {
+  return text
+    .split(MATH_SPLIT)
+    .map((part, i) => (i % 2 === 1 ? part : fn(part)))
+    .join("");
+}
+
+/** Normalizacja NFKC bez spłaszczania indeksów górnych (cm², m³ zostają). */
+function normalizeKeepSuperscripts(text: string): string {
+  return Array.from(text)
+    .map((ch) => (/[²³¹⁰⁴-⁹]/.test(ch) ? ch : ch.normalize("NFKC")))
+    .join("");
+}
 
 /** Litery, dla których `x 2` traktujemy jako potęgę. */
 const POWER_BASES = new Set(["x", "y", "z", "m", "n", "t", "r", "k"]);
@@ -65,15 +83,11 @@ function oddDollarBefore(whole: string, offset: number): boolean {
 }
 
 function normalizeUnicodeMath(text: string): string {
-  return text
-    .normalize("NFKC")
+  return normalizeKeepSuperscripts(text)
     .replace(/ƒ/g, "f")
     .replace(/⁄/g, "/")
     .replace(/[−–-]/g, "-")
     .replace(/[∡∠]/g, "\\angle ")
-    .replace(/×/g, "\\times")
-    .replace(/·/g, "\\cdot")
-    .replace(/÷/g, "\\div")
     // Stopnie przed owijaniem, żeby weszły do wyspy matematycznej.
     .replace(/(\d)\s*°/g, "$1^{\\circ}")
     // Sklejony OCR: "≥ 0z niewiadomą" → "≥ 0 z niewiadomą"
@@ -121,8 +135,8 @@ function compactSpacedMath(text: string): string {
         const before = whole.slice(0, offset);
         const after = whole.slice(offset + full.length);
         const hasMathContext =
-          /[A-Za-z0-9)]\s*[=+\-*/<>≤≥]\s*$/.test(before) ||
-          /^\s*(?:[=<>≤≥]|[+*/-]\s*(?:\\(?:frac|sqrt|times|cdot)|\d|[A-Za-z](?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])|\())/.test(after);
+          /[A-Za-z0-9)]\s*[=+\-*/×·÷<>≤≥]\s*$/.test(before) ||
+          /^\s*(?:[=<>≤≥]|[+*/×·÷-]\s*(?:\\(?:frac|sqrt|times|cdot)|\d|[A-Za-z](?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])|\())/.test(after);
         if (!hasMathContext) return full;
       }
       if (POWER_BASES.has(base)) return `${base}^{${exp}}`;
@@ -162,7 +176,7 @@ function compactSpacedMath(text: string): string {
 
   // 4 / 7 → \frac{4}{7} (tylko czyste ułamki liczbowe)
   out = out.replace(
-    /(?<!\$)\b(\d+)\s*\/\s*(\d+)\b(?!\$)/g,
+    /(?<![$√])(?<![·×]\s?)\b(\d+)\s*\/\s*(\d+)\b(?!\$)/g,
     (_m, a: string, b: string) => `\\frac{${a}}{${b}}`,
   );
 
@@ -195,6 +209,9 @@ function latexifySymbols(expr: string): string {
     .replace(/≤/g, "\\le ")
     .replace(/≥/g, "\\ge ")
     .replace(/≠/g, "\\ne ")
+    .replace(/×/g, "\\times ")
+    .replace(/·/g, "\\cdot ")
+    .replace(/÷/g, "\\div ")
     .replace(/±/g, "\\pm ")
     .replace(/∞/g, "\\infty ")
     .replace(/√\s*/g, "\\sqrt")
@@ -221,7 +238,7 @@ function wrapMathIslands(text: string): string {
   // Atom: ułamek, |AB|, f(x), ax, -3x, sin 50^{\circ}, 90^{\circ}, (…), α.
   const atom =
     String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z]+(?:_\{[^}]+\}|\^\{[^}]+\})?|(?:sin|cos|tg|ctg|log|ln)(?:\^\{[^}]+\})?\s+\d+(?:\^\{\\circ\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,80}\)|\-?\d+(?:[.,]\d+)?(?:\^\{\\circ\})?|[α-ω])`;
-  const op = String.raw`(?:[=<>≤≥+\-*/]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
+  const op = String.raw`(?:[=<>≤≥+\-*/×·÷]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
   // Operator albo juxtapozycja nawiasów: (x+3)(x-2)
   const island = new RegExp(
     `(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])${atom}(?:\\s*${op}\\s*${atom}|(?=\\()${atom})+(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])`,
@@ -272,7 +289,14 @@ function wrapContextualVariables(text: string): string {
 
 /** Kąty i stopnie: |∠ACB| = |∠BGF| = 90° oraz samotne 90°. */
 function wrapAnglesAndDegrees(text: string): string {
+  // cos(60°), sin(30°) jako jedna wyspa
   let out = text.replace(
+    /(?<![A-Za-z$\\])(sin|cos|tg|ctg)\s*\(\s*(\d+)\s*(?:\^\{\\circ\}|°)\s*\)(?!\$)/gi,
+    (_m, fn: string, deg: string) =>
+      `$${latexifySymbols(`${fn.toLowerCase()}(${deg}^{\\circ})`)}$`,
+  );
+
+  out = out.replace(
     /(?<!\$)((?:\|\\angle\s*[A-Za-z]{1,6}\|\s*=\s*)+)(\d+)\s*(?:\^\{\\circ\}|°)?(?!\$)/g,
     (_m, chain: string, deg: string) => {
       const left = chain
@@ -323,7 +347,7 @@ function wrapParenMath(text: string): string {
   return text.replace(/\(([^$\n()]{1,80})\)/g, (full, inner: string, offset: number, whole: string) => {
     if (oddDollarBefore(whole, offset)) return full;
     if (
-      !/[+\-=<>≤≥*/]|\\times|\\cdot|\\le|\\ge|\bsin\b|\bcos\b|\btg\b|\bctg\b|\d\^\{\\circ\}/.test(
+      !/[+\-=<>≤≥*/×·÷]|\\times|\\cdot|\\le|\\ge|\bsin\b|\bcos\b|\btg\b|\bctg\b|\d\^\{\\circ\}/.test(
         inner,
       )
     ) {
@@ -378,6 +402,35 @@ export function formatCkeMathText(rawInput: string): string {
   return segments.join("\n\n");
 }
 
+function wrapUnicodeRoots(text: string): string {
+  return text
+    .replace(
+      /(\d+)\s*√\s*(\d+|[a-zA-Z])/g,
+      (_m, k: string, r: string) => `$${k}\\sqrt{${r}}$`,
+    )
+    .replace(
+      /√\s*(\d+|[a-zA-Z])\s*\/\s*(\d+)/g,
+      (_m, r: string, d: string) => `$\\frac{\\sqrt{${r}}}{${d}}$`,
+    )
+    .replace(
+      /√\s*\(([^()$]{1,40})\)/g,
+      (_m, r: string) => `$\\sqrt{${r.trim()}}$`,
+    )
+    .replace(/√\s*(\d+|[a-zA-Z])/g, (_m, r: string) => `$\\sqrt{${r}}$`);
+}
+
+/** Zabezpieczenie: surowy LaTeX, który nie trafił do wyspy, wraca do Unicode. */
+function restoreStrayLatex(plain: string): string {
+  return plain
+    .replace(/\^\{\\circ\}/g, "°")
+    .replace(/\\cdot\s?/g, "·")
+    .replace(/\\times\s?/g, "×")
+    .replace(/\\div\s?/g, "÷")
+    .replace(/\\le(?![a-z])\s?/g, "≤")
+    .replace(/\\ge(?![a-z])\s?/g, "≥")
+    .replace(/\\ne(?![a-z])\s?/g, "≠");
+}
+
 function formatCkeMathLines(input: string): string {
   if (!input) return "";
 
@@ -398,6 +451,14 @@ function formatCkeMathLines(input: string): string {
   );
   out = existingMath.text;
 
+  // Pierwiastki zapisane Unicode: √3/2, 2√5, √(x+1) → osobne wyspy KaTeX.
+  const sqrtMath = protectSegments(
+    wrapUnicodeRoots(out),
+    /\$[^$\n]+\$/g,
+    SQRT_PLACEHOLDER,
+  );
+  out = sqrtMath.text;
+
   out = normalizeUnicodeMath(out);
   out = compactSpacedMath(out);
   // Kąty / trig+° / nawiasy przed wyspami - inaczej `$m = sin$` odrywa stopnie.
@@ -409,8 +470,10 @@ function formatCkeMathLines(input: string): string {
   out = wrapContextualVariables(out);
   out = mergeAdjacentMath(out);
 
+  out = restoreSegments(out, sqrtMath.parts, SQRT_PLACEHOLDER);
   out = restoreSegments(out, existingMath.parts, MATH_PLACEHOLDER);
   out = restoreSegments(out, images.parts, IMG_PLACEHOLDER);
+  out = mapOutsideMath(out, restoreStrayLatex);
 
   // OCR wykładnicze: $f(x) = a$ x → $f(x) = a^{x}$
   out = out.replace(
