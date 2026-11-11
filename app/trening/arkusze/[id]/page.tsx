@@ -1,3 +1,4 @@
+import { ArchiveSheetTasks } from "@/components/arkusze/ArchiveSheetTasks";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import {
@@ -21,18 +22,6 @@ type PageProps = {
 };
 
 export const dynamicParams = true;
-
-function promptSnippet(prompt: string | undefined): string | null {
-  const text = (prompt ?? "")
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-    .replace(/\$+/g, "")
-    .replace(/\\[a-zA-Z]+/g, "")
-    .replace(/[{}*_#>]/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-  if (text.length < 8) return null;
-  return text.length > 90 ? `${text.slice(0, 90).trimEnd()}...` : text;
-}
 
 export function generateStaticParams() {
   return listOfficialCkeSheets().map((sheet) => ({ id: sheet.id }));
@@ -85,18 +74,9 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
             {sheet.title}
           </h1>
           <p className="mt-2 text-sm text-muted">
-            {tasks.length} zadań · {formatPkt(totalPoints)}. Otwórz wybrane
-            albo zacznij od pierwszego.
+            {tasks.length} zadań · {formatPkt(totalPoints)}
           </p>
-          {tasks[0] ? (
-            <Link
-              href={`/baza-zadan/${tasks[0].id}`}
-              className="mt-4 inline-flex rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent"
-            >
-              Rozpocznij arkusz
-            </Link>
-          ) : null}
-          <div className="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
+          <div className="mt-4 flex flex-wrap gap-2 text-sm font-semibold">
             <Link
               href={`/trening/arkusze/${sheet.id}/druk`}
               className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
@@ -107,38 +87,26 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
               href={`/trening/arkusze/${sheet.id}/druk?klucz=1`}
               className="rounded-xl border border-surface-border px-3 py-2 text-foreground hover:border-accent/40"
             >
-              PDF z rozwiązaniami na osobnych stronach
+              PDF z odpowiedziami
             </Link>
           </div>
         </header>
 
-        <ol className="mt-8 space-y-2">
-          {tasks.map((task, index) => (
-            <li key={task.id}>
-              <Link
-                href={`/baza-zadan/${task.id}`}
-                className="flex items-start justify-between gap-3 rounded-2xl border border-surface-border bg-surface px-4 py-3 transition hover:border-accent/40"
-              >
-                <span className="min-w-0">
-                  <span className="text-xs font-bold uppercase tracking-wide text-muted">
-                    Zad. {task.examSource?.taskNumber ?? index + 1}
-                    {" · "}
-                    {CATEGORY_LABELS[task.category]}
-                    {" · "}
-                    {formatPkt(examTaskPoints(task))}
-                    {isOpenExamTask(task) ? " · otwarte" : ""}
-                  </span>
-                  <span className="mt-1 block truncate text-sm font-semibold text-foreground">
-                    {promptSnippet(task.prompt) ?? `Zadanie ${task.examSource?.taskNumber ?? index + 1}`}
-                  </span>
-                </span>
-                <span className="shrink-0 text-sm font-bold text-accent">
-                  Otwórz
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ol>
+        <ArchiveSheetTasks
+          tasks={tasks.map((task, index) => ({
+            id: task.id,
+            number: task.examSource?.taskNumber ?? String(index + 1),
+            category: CATEGORY_LABELS[task.category],
+            points: examTaskPoints(task),
+            open: isOpenExamTask(task),
+            prompt: task.prompt,
+            choices: [...task.choices],
+            explanation: task.explanation,
+            steps: [...(task.solutionSteps ?? [])],
+            examLabel: task.examSource?.sessionLabel,
+          }))}
+        />
+
       </article>
     </div>
   );
