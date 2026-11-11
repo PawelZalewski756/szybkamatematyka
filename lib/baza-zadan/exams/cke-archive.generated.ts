@@ -24370,7 +24370,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2015-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2015-maj/z08-2.png)",
+    "prompt": "![Zadanie 8](/cke-matura/mr-2015-maj/z08-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24396,7 +24396,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2015-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2015-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/mr-2015-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24500,7 +24500,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2015-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2015-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2015-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24578,7 +24578,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mr-2015-maj/z16-1.png)\n\n![Zadanie 16](/cke-matura/mr-2015-maj/z16-2.png)",
+    "prompt": "![Zadanie 16](/cke-matura/mr-2015-maj/z16-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24786,7 +24786,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2016-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2016-maj/z08-2.png)",
+    "prompt": "![Zadanie 8](/cke-matura/mr-2016-maj/z08-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24812,7 +24812,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2016-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2016-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/mr-2016-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24890,7 +24890,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2016-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2016-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2016-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24916,7 +24916,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2016-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2016-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2016-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24968,7 +24968,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2016-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2016-maj/z15-2.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2016-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24994,7 +24994,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mr-2016-maj/z16-1.png)\n\n![Zadanie 16](/cke-matura/mr-2016-maj/z16-2.png)",
+    "prompt": "![Zadanie 16](/cke-matura/mr-2016-maj/z16-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25306,7 +25306,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2017-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2017-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2017-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25332,7 +25332,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2017-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2017-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2017-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25358,7 +25358,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2017-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2017-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2017-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25384,7 +25384,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2017-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2017-maj/z15-2.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2017-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25696,7 +25696,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2018-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2018-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2018-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25722,7 +25722,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2018-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2018-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2018-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25748,7 +25748,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2018-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2018-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2018-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25774,7 +25774,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2018-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2018-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2018-maj/z15-3.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2018-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2018-maj/z15-3.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26008,7 +26008,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2019-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2019-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/mr-2019-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26034,7 +26034,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2019-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2019-maj/z10-2.png)",
+    "prompt": "![Zadanie 10](/cke-matura/mr-2019-maj/z10-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26060,7 +26060,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2019-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2019-maj/z11-2.png)",
+    "prompt": "![Zadanie 11](/cke-matura/mr-2019-maj/z11-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26086,7 +26086,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2019-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2019-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2019-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26112,7 +26112,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2019-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2019-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2019-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26138,7 +26138,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2019-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2019-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2019-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26164,7 +26164,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2019-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2019-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2019-maj/z15-3.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2019-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2019-maj/z15-3.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26346,7 +26346,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2020-cze/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2020-cze/z07-2.png)",
+    "prompt": "![Zadanie 7](/cke-matura/mr-2020-cze/z07-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26450,7 +26450,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2020-cze/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2020-cze/z11-2.png)",
+    "prompt": "![Zadanie 11](/cke-matura/mr-2020-cze/z11-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26476,7 +26476,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2020-cze/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2020-cze/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2020-cze/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26528,7 +26528,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2020-cze/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2020-cze/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2020-cze/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26554,7 +26554,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2020-cze/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2020-cze/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2020-cze/z15-3.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2020-cze/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2020-cze/z15-3.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
