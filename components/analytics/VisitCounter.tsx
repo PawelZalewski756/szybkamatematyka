@@ -100,8 +100,8 @@ export function VisitCounter() {
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3 lg:right-3 lg:left-auto lg:mx-0"
     >
       <p className="text-xs leading-relaxed text-foreground">
-        Czy możemy anonimowo policzyć Twoje wejście? Zapisujemy tylko losowy
-        identyfikator przeglądarki, bez IP i danych konta.
+        Chcemy sprawdzić, ilu osobom podoba się ta strona. Możemy policzyć, że
+        tu byłeś? Nie zbieramy imienia ani żadnych danych o Tobie.
       </p>
       <div className="mt-2 flex justify-end gap-2">
         <button
