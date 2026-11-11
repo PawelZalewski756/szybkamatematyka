@@ -22078,7 +22078,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od 1 do 11. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nPo losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami:\n\nRozwiąż zadanie.",
+    "prompt": "W pudełku było jedenaście kul ponumerowanych kolejnymi liczbami naturalnymi od 1 do 11. Z tego pudełka wylosowano pięć kul. Suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nPo losowaniu w pudełku zostały wyłącznie kule ponumerowane liczbami:\n\nA) nieparzystymi\nB) parzystymi\n\nSuma liczb na pięciu wylosowanych kulach jest równa ......\n\nC) 30\nD) 36\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22133,7 +22133,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2}n(n+1)$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa ......\n\nRozwiąż zadanie.",
+    "prompt": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$S = \\frac{1}{2}n(n+1)$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\n    Suma stu kolejnych liczb naturalnych od 1 do 100 jest równa ......\n\nA) 5001\nB) 5050\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać ......\n\nC) $S = \\frac{1}{2}n^2 + 1$\nD) $S = \\frac{1}{2}n^2 + \\frac{1}{2}n$\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
