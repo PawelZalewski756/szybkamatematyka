@@ -69,8 +69,22 @@ export function PrintArchiveSheet({
   const hasKey = withKey;
 
   return (
-    <div className="min-h-screen bg-neutral-200 py-6 print:bg-white print:py-0">
-      <style>{`@media print { header, footer, nav { display: none !important; } @page { margin: 12mm; } }`}</style>
+    <div className="print-sheet min-h-screen bg-neutral-200 py-6 print:bg-white print:py-0">
+      <style>{`
+        @media print { header, footer, nav { display: none !important; } @page { margin: 12mm; } }
+        .print-sheet, .print-sheet * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        .print-sheet .katex, .print-sheet .katex * { color: #000 !important; border-color: #000 !important; }
+        .print-sheet .katex svg { fill: #000 !important; stroke: #000; }
+        .print-sheet .katex svg path { fill: #000 !important; }
+        .print-sheet .katex .frac-line, .print-sheet .katex .overline-line, .print-sheet .katex .underline-line, .print-sheet .katex .hline { border-bottom-style: solid !important; border-color: #000 !important; }
+        .print-sheet .overflow-x-auto { overflow: visible !important; }
+        .print-sheet table { width: 100% !important; table-layout: auto; border-collapse: collapse; }
+        .print-sheet th, .print-sheet td { border: 1px solid #000 !important; background: #fff !important; color: #000 !important; padding: 4px 8px; overflow-wrap: anywhere; }
+        .print-sheet tr, .print-sheet img { break-inside: avoid; }
+        .print-sheet img { max-width: 100%; height: auto; }
+        .print-sheet .prose { color: #000; max-width: none; }
+        .print-sheet .prose :where(p, li, strong, td, th) { color: #000 !important; }
+      `}</style>
       <div className="mx-auto mb-4 flex max-w-3xl flex-wrap items-center justify-between gap-3 px-4 print:hidden">
         <Link
           href={backHref ?? `/trening/arkusze/${sheetId}`}
@@ -158,7 +172,11 @@ export function PrintArchiveSheet({
                 <ol className="mt-1 list-decimal space-y-1 pl-5">
                   {task.steps.map((step, i) => (
                     <li key={i}>
-                      <TheoryMarkdown content={formatCkeMathText(step)} />
+                      <TheoryMarkdown
+                        content={formatCkeMathText(
+                          step.replace(/^\s*\d+[.)]\s+/, ""),
+                        )}
+                      />
                     </li>
                   ))}
                 </ol>
