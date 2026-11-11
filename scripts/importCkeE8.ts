@@ -500,7 +500,6 @@ async function fillTranscripts(delayMs: number, only?: string): Promise<void> {
   if (!apiKey) throw new Error("Brak GEMINI_API_KEY w .env.local");
   const model = new GoogleGenerativeAI(apiKey).getGenerativeModel({
     model: process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash",
-    generationConfig: { responseMimeType: "application/json" },
     systemInstruction: `Przepisujesz zadanie z arkusza egzaminacyjnego CKE ze zdjecia na tekst. Odpowiedz w formacie zwyklego tekstu (NIE JSON, NIE blok kodu), dokladnie tak:
 ===TEKST===
 (tresc zadania)
@@ -534,10 +533,17 @@ Zasady dla tresci:
       try {
         const res = await model.generateContent(parts);
         let raw = res.response.text().replace(/```[a-z]*\n?/g, "");
-        if (raw.trimStart().startsWith("{")) {
+        const trimmed = raw.trim();
+        if (trimmed.startsWith("{") || trimmed.startsWith('"')) {
           try {
-            const wrapped = JSON.parse(raw) as { text?: string };
-            if (typeof wrapped.text === "string") raw = wrapped.text;
+            const wrapped = JSON.parse(trimmed) as unknown;
+            if (typeof wrapped === "string") raw = wrapped;
+            else if (wrapped && typeof wrapped === "object") {
+              const str = Object.values(wrapped as Record<string, unknown>).find(
+                (v): v is string => typeof v === "string",
+              );
+              if (str) raw = str;
+            }
           } catch {
             // zostaw surowy tekst
           }
