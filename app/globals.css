@@ -5,7 +5,7 @@
 :root {
   --background: #0f0e0b;
   --foreground: #f6f1e7;
-  --muted: #a79d8a;
+  --muted: #c4baa6;
   --brand: #f6f1e7;
   --brand-light: #ffffff;
   --brand-dark: #ffffff;
@@ -28,7 +28,7 @@ html[data-theme="light"] {
   color-scheme: light;
   --background: #faf7f0;
   --foreground: #1c1812;
-  --muted: #6b6354;
+  --muted: #5a5245;
   --brand: #1c1812;
   --brand-light: #000000;
   --brand-dark: #000000;
@@ -103,10 +103,21 @@ html[data-theme="light"] :is(.text-cyan-200, .text-cyan-300) {
   --color-accent-soft: var(--accent-soft);
   --color-on-accent: var(--on-accent);
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  /* Wieksza skala tekstu - male napisy byly za drobne dla mlodszych uczniow. */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.55;
 }
 
 html {
   scrollbar-gutter: stable;
+  font-size: 106.25%;
+}
+
+/* Wersaliki z szerokim rozstrzeleniem liter czyta sie wolno - zmniejszamy rozstaw. */
+.uppercase {
+  letter-spacing: 0.03em;
 }
 
 body {

@@ -20,17 +20,24 @@ test.describe("Smoke", () => {
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
     ).toHaveCount(0);
     const quickTask = page.getByRole("group", {
-      name: "Odpowiedzi do szybkiego zadania",
+      name: "Odpowiedzi do zadania",
     });
     await expect(quickTask).toBeVisible();
     await quickTask.getByRole("button", { name: "Odpowiedź 3" }).click();
     await expect(
-      page.getByText("To nie ta odpowiedź - wybierz inną."),
+      page.getByText("To nie ta odpowiedź - spróbuj jeszcze raz."),
     ).toBeVisible();
     await quickTask.getByRole("button", { name: "Odpowiedź 4" }).click();
-    await expect(page.getByText("Dobrze - 3 · 4 + 2 = 14.")).toBeVisible();
-    await expect.poll(() => attempts.length).toBe(2);
-    expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([false, true]);
+    await expect(page.getByText("Dobrze! 3 · 4 + 2 = 14.")).toBeVisible();
+    await page.getByRole("button", { name: "Następne zadanie" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź 20" }).click();
+    await expect(page.getByText("Gotowe! Błędnych odpowiedzi: 1.")).toBeVisible();
+    await expect.poll(() => attempts.length).toBe(3);
+    expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([
+      false,
+      true,
+      true,
+    ]);
     expect(attempts[0]?.sessionId).toMatch(
       /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i,
     );
@@ -406,20 +413,11 @@ test.describe("Smoke", () => {
     expect(widths.document).toBeLessThanOrEqual(widths.viewport);
   });
 
-  test("panel następnego tematu prowadzi do treningu", async ({ page }) => {
+  test("matura w szybkiej próbie ma własne zadania", async ({ page }) => {
     await page.goto("/");
-    const topicLink = page.getByRole("link", {
-      name: "Otwórz temat Równania",
-    });
+    await page.getByRole("button", { name: "Matura", exact: true }).click();
 
-    await expect(topicLink).toHaveAttribute(
-      "href",
-      "/trening/egzamin-osmoklasisty/algebra/rownania",
-    );
-    await topicLink.click();
-    await expect(page).toHaveURL(
-      /\/trening\/egzamin-osmoklasisty\/algebra\/rownania$/,
-    );
+    await expect(page.getByText("Ile wynosi log₂ 8?")).toBeVisible();
   });
 
   test("gość nie widzi ostatniego tematu zapisanego lokalnie", async ({
@@ -439,10 +437,8 @@ test.describe("Smoke", () => {
     await page.goto("/");
 
     await expect(page.getByText("OSTATNI TEMAT")).toHaveCount(0);
-    await expect(
-      page.getByRole("link", { name: "Otwórz temat Równania" }),
-    ).toHaveAttribute("href", "/trening/egzamin-osmoklasisty/algebra/rownania");
-    await expect(page.getByText("Przykładowa sesja")).toBeVisible();
+    await expect(page.getByText("Przykładowa sesja")).toHaveCount(0);
+    await expect(page.getByText("SZYBKA PRÓBA")).toBeVisible();
   });
 
   test("nawigacja ma link Trening", async ({ page }) => {
