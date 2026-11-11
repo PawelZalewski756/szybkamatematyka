@@ -4,7 +4,7 @@ import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { normalizeAbcdLayout } from "@/lib/baza-zadan/cke/format-abcd-layout";
-import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
+import { splitTaskContent, stripExaminerTable } from "@/lib/baza-zadan/cke/matura-task-content";
 import { useMemo } from "react";
 
 type TaskTrescProps = {
@@ -22,7 +22,7 @@ export function TaskTresc({
     () =>
       splitTaskContent(
         // Opcje ABCD w osobnych liniach (markdown inaczej skleja je w jeden akapit).
-        normalizeAbcdLayout(formatCkeMathText(tresc)),
+        normalizeAbcdLayout(formatCkeMathText(stripExaminerTable(tresc))),
       ),
     [tresc],
   );

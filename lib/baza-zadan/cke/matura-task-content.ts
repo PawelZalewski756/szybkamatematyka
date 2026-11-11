@@ -4,6 +4,31 @@ export type TaskContentPart =
 
 const IMAGE_MARKDOWN_RE = /!\[([^\]]*)\]\(([^)]+)\)/g;
 
+/** Usuwa z treści tabelę punktacji "Wypełnia egzaminator" przeniesioną z arkusza PDF. */
+export function stripExaminerTable(tresc: string): string {
+  if (!/Wypełnia\s+egzaminator/i.test(tresc)) return tresc;
+  const lines = tresc.split("\n");
+  const out: string[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    let j = i;
+    while (j < lines.length && /^\s*\|/.test(lines[j]!)) j++;
+    if (j > i) {
+      const block = lines.slice(i, j).join("\n");
+      if (!/Wypełnia\s+egzaminator/i.test(block)) out.push(block);
+      i = j;
+      continue;
+    }
+    out.push(lines[i]!);
+    i++;
+  }
+  return out
+    .join("\n")
+    .replace(/Wypełnia\s+egzaminator[\s\S]*?Uzyskana\s+liczba\s+pkt[^\n]*/i, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 /** Dzieli treść zadania na bloki tekstu i obrazków (markdown). */
 export function splitTaskContent(tresc: string): TaskContentPart[] {
   const parts: TaskContentPart[] = [];
