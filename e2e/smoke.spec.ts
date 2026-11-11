@@ -20,17 +20,24 @@ test.describe("Smoke", () => {
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
     ).toHaveCount(0);
     const quickTask = page.getByRole("group", {
-      name: "Odpowiedzi do szybkiego zadania",
+      name: "Odpowiedzi do zadania",
     });
     await expect(quickTask).toBeVisible();
     await quickTask.getByRole("button", { name: "Odpowiedź 3" }).click();
     await expect(
-      page.getByText("To nie ta odpowiedź - wybierz inną."),
+      page.getByText("To nie ta odpowiedź - spróbuj jeszcze raz."),
     ).toBeVisible();
     await quickTask.getByRole("button", { name: "Odpowiedź 4" }).click();
-    await expect(page.getByText("Dobrze - 3 · 4 + 2 = 14.")).toBeVisible();
-    await expect.poll(() => attempts.length).toBe(2);
-    expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([false, true]);
+    await expect(page.getByText("Dobrze! 3 · 4 + 2 = 14.")).toBeVisible();
+    await page.getByRole("button", { name: "Następne zadanie" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź 20" }).click();
+    await expect(page.getByText("Gotowe! Błędnych odpowiedzi: 1.")).toBeVisible();
+    await expect.poll(() => attempts.length).toBe(3);
+    expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([
+      false,
+      true,
+      true,
+    ]);
     expect(attempts[0]?.sessionId).toMatch(
       /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i,
     );
