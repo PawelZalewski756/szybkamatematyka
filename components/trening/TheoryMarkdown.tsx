@@ -80,12 +80,12 @@ function markdownComponents(withAnchors: boolean): Components {
       </div>
     ),
     th: ({ children }) => (
-      <th className="border border-surface-border bg-surface px-3 py-2 text-center font-bold">
+      <th className="border border-surface-border bg-surface px-3 py-2 text-center font-bold text-foreground">
         {children}
       </th>
     ),
     td: ({ children }) => (
-      <td className="border border-surface-border px-3 py-2 align-top">
+      <td className="border border-surface-border px-3 py-2 align-top text-foreground/95">
         {children}
       </td>
     ),
