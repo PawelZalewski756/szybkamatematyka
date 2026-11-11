@@ -19,11 +19,11 @@ export function AccountLevelBar({ level, xp, subtitle }: AccountLevelBarProps) {
     <div className="game-surface p-4">
       <div className="flex items-center justify-between gap-3">
         <div className="flex min-w-0 items-center gap-2">
-          <span className="shrink-0 rounded-lg bg-accent px-2.5 py-1 text-sm font-bold text-on-accent">
+          <span className="shrink-0 self-start rounded-lg bg-accent px-2.5 py-1 text-sm font-bold text-on-accent">
             Poz. {level}
           </span>
           {subtitle ? (
-            <span className="truncate text-sm text-muted">{subtitle}</span>
+            <span className="min-w-0 break-words text-sm leading-tight text-muted">{subtitle}</span>
           ) : null}
         </div>
         <span className="shrink-0 text-sm tabular-nums text-muted">
