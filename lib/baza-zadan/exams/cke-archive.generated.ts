@@ -18319,7 +18319,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2019-maj/z01-1.png)",
+    "prompt": "Na rysunku przedstawiono kartkę z kalendarza na rok 2017.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z01-fig1.png)\n\nNatalia obchodzi urodziny 31 sierpnia, jej siostra $Ewa - 18$ sierpnia, a brat Karol -2 października.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| $W_{2017}$ r. urodziny Ewy wypadły w piątek. |  |  |\n| $W_{2017}$ r. dniem urodzin Karola był poniedziałek. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18339,17 +18339,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 2",
     "category": "arytmetyka",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2019-maj/z02-1.png)",
+    "prompt": "Liczba 1450 jest zaokrągleniem do rzędu dziesiątek kilku liczb naturalnych.\n\nIle jest wszystkich liczb naturalnych różnych od 1450, które mają takie zaokrąglenie? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "4",
+      "5",
+      "9",
+      "10"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 9",
     "solutionSteps": [
       "1. Aby liczba naturalna została zaokrąglona do rzędu dziesiątek do 1450, jej cyfra jedności musi spełniać określone warunki.\n 2. Jeśli cyfra jedności jest mniejsza niż 5 (czyli 0, 1, 2, 3, 4), to zaokrąglamy w dół. Oznacza to, że liczby te muszą zaczynać się od 145 (np. 145x). Takie liczby to: 1450, 1451, 1452, 1453, 1454.\n 3. Jeśli cyfra jedności jest równa lub większa niż 5 (czyli 5, 6, 7, 8, 9), to zaokrąglamy w górę. Oznacza to, że liczby te muszą zaczynać się od 144 (np. 144x). Takie liczby to: 1445, 1446, 1447, 1448, 1449.\n 4. Łącząc obie grupy, otrzymujemy zbiór wszystkich liczb naturalnych, które po zaokrągleniu do rzędu dziesiątek dają 1450:\n $\\{1445, 1446, 1447, 1448, 1449, 1450, 1451, 1452, 1453, 1454\\}$.\n 5. Zgodnie z poleceniem, należy policzyć liczby naturalne *różne od 1450*, które mają takie zaokrąglenie. Z powyższego zbioru wykluczamy liczbę 1450.\n 6. Pozostaje nam 9 liczb:\n $\\{1445, 1446, 1447, 1448, 1449, 1451, 1452, 1453, 1454\\}$."
@@ -18365,17 +18368,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 3",
     "category": "potegi",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2019-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2019-maj/z03-2.png)",
+    "prompt": "W tabeli zapisano trzy wyrażenia.\n\n|  | Wyrażenie |\n|---|---|\n| I | $5^2 \\cdot 10^8 \\cdot 5^4$ |\n| II | $(5^{10} \\cdot 5^2) \\cdot 10^8$ |\n| III | $2^8 \\cdot 5^8 \\cdot 5^8$ |\n\nKtóre z tych wyrażeń są równe $50^8$? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "Tylko I i II.",
+      "Tylko II i III.",
+      "Tylko II.",
+      "Tylko III."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. Tylko II i III",
     "solutionSteps": [
       "1. Przekształcamy liczbę $50^8$ do postaci dogodnej do porównywania z wyrażeniami:\n $50^8 = (5 \\cdot 10)^8 = 5^8 \\cdot 10^8$.\n\n2. Analizujemy wyrażenie I:\n $5^2 \\cdot 10^8 \\cdot 5^4 = 5^{2+4} \\cdot 10^8 = 5^6 \\cdot 10^8$.\n Porównując z $5^8 \\cdot 10^8$, widzimy, że $5^6 \\cdot 10^8 \\neq 5^8 \\cdot 10^8$. Wyrażenie I nie jest równe $50^8$.\n\n3. Analizujemy wyrażenie II:\n $(5^{10} : 5^2) \\cdot 10^8 = 5^{10-2} \\cdot 10^8 = 5^8 \\cdot 10^8$.\n To jest dokładnie równe $50^8$. Wyrażenie II jest równe $50^8$.\n\n4. Analizujemy wyrażenie III:\n $2^8 \\cdot 5^8 \\cdot 5^8 = 2^8 \\cdot 5^{8+8} = 2^8 \\cdot 5^{16}$.\n Sprawdzamy, czy $50^8$ można przedstawić w tej postaci:\n $50^8 = (2 \\cdot 25)^8 = (2 \\cdot 5^2)^8 = 2^8 \\cdot (5^2)^8 = 2^8 \\cdot 5^{2 \\cdot 8} = 2^8 \\cdot 5^{16}$.\n Wyrażenie III jest równe $50^8$.\n\n5. Wyrażenia II i III są równe $50^8$. Odpowiedź to B."
@@ -18391,17 +18397,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 4",
     "category": "pierwiastki",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2019-maj/z04-1.png)",
+    "prompt": "Dane są cztery wyrażenia:\n\nI. $4+\\sqrt{35}$\n\nII. $6+\\sqrt{17}$\n\nIII. $17-\\sqrt{48}$\n\nIV. $15-\\sqrt{26}$\n\nWartości których wyrażeń są mniejsze od 10? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "I i II",
+      "II i III",
+      "III i IV",
+      "I i IV"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. I i IV",
     "solutionSteps": [
       "1. **Szacowanie wartości wyrażenia I:**\n Mamy $\\sqrt{25} = 5$ i $\\sqrt{36} = 6$. Zatem $5 < \\sqrt{35} < 6$.\n Dodając 4 do każdej części nierówności, otrzymujemy:\n $4 + 5 < 4 + \\sqrt{35} < 4 + 6$\n $9 < 4 + \\sqrt{35} < 10$\n Wartość wyrażenia $4 + \\sqrt{35}$ jest mniejsza od 10.\n\n2. **Szacowanie wartości wyrażenia II:**\n Mamy $\\sqrt{16} = 4$ i $\\sqrt{25} = 5$. Zatem $4 < \\sqrt{17} < 5$.\n Dodając 6 do każdej części nierówności, otrzymujemy:\n $6 + 4 < 6 + \\sqrt{17} < 6 + 5$\n $10 < 6 + \\sqrt{17} < 11$\n Wartość wyrażenia $6 + \\sqrt{17}$ jest większa od 10.\n\n3. **Szacowanie wartości wyrażenia III:**\n Mamy $\\sqrt{36} = 6$ i $\\sqrt{49} = 7$. Zatem $6 < \\sqrt{48} < 7$.\n Mnożąc przez -1 i odwracając znaki nierówności, otrzymujemy:\n $-7 < -\\sqrt{48} < -6$\n Dodając 17 do każdej części nierówności, otrzymujemy:\n $17 - 7 < 17 - \\sqrt{48} < 17 - 6$\n $10 < 17 - \\sqrt{48} < 11$\n Wartość wyrażenia $17 - \\sqrt{48}$ jest większa od 10.\n\n4. **Szacowanie wartości wyrażenia IV:**\n Mamy $\\sqrt{25} = 5$ i $\\sqrt{36} = 6$. Zatem $5 < \\sqrt{26} < 6$.\n Mnożąc przez -1 i odwracając znaki nierówności, otrzymujemy:\n $-6 < -\\sqrt{26} < -5$\n Dodając 15 do każdej części nierówności, otrzymujemy:\n $15 - 6 < 15 - \\sqrt{26} < 15 - 5$\n $9 < 15 - \\sqrt{26} < 10$\n Wartość wyrażenia $15 - \\sqrt{26}$ jest mniejsza od 10.\n\n5. **Podsumowanie:**\n Wartości mniejsze od 10 mają wyrażenia I i IV."
@@ -18449,7 +18458,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2019-maj/z06-1.png)",
+    "prompt": "Dorota sporządziła z cukru i wody syrop do deseru. Stosunek masy cukru do masy wody w tym syropie jest równy $5 : 3$.\n\nIle procent masy tego syropu stanowi masa cukru? Wybierz właściwą odpowiedź spośród podanych.\nA) $25\\%$ B) $37,5\\%$ C) $40\\%$ D) $60\\%$ E) $62,5\\%$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18475,7 +18484,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2019-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/e8-2019-maj/z07-2.png)",
+    "prompt": "W pewnej firmie zatrudnionych jest więcej niż 10 pracowników. Połowa z nich zarabia po 3000 zł, a druga połowa - po 4000 zł.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-: | :-: |\n| Średnia arytmetyczna zarobków w tej firmie jest równa 3500 zł. |  |  |\n| Gdy z pracy w tej firmie zrezygnują dwie osoby, z których jedna zarabia 3000 zł, a druga 4000 zł, to średnia arytmetyczna zarobków się nie zmieni. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18495,17 +18504,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 8",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2019-maj/z08-1.png)",
+    "prompt": "Dokoncz zdanie. Wybierz wlasciwa odpowiedz sposrod podanych.\n\nWyrazenie: $(2a+3b)(3b-2a)$ jest rowne",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$4a^2 - 12ab + 9b^2$",
+      "$9b^2 + 12ab + 4a^2$",
+      "$9b^2 - 4a^2$",
+      "$4a^2 - 9b^2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $9b^2 - 4a^2$",
     "solutionSteps": [
       "1. Zauważamy, że pierwszy nawias to $(2a + 3b)$, a drugi nawias to $(3b - 2a)$.\n2. Możemy przestawić kolejność składników w pierwszym nawiasie (ze względu na przemienność dodawania), aby lepiej widzieć wzór skróconego mnożenia:\n $(3b + 2a)(3b - 2a)$\n3. Jest to wzór na różnicę kwadratów: $(x+y)(x-y) = x^2 - y^2$.\n W tym przypadku $x = 3b$ i $y = 2a$.\n4. Zastosujmy wzór:\n $(3b + 2a)(3b - 2a) = (3b)^2 - (2a)^2$\n5. Obliczamy kwadraty:\n $(3b)^2 = 3^2 \\cdot b^2 = 9b^2$\n $(2a)^2 = 2^2 \\cdot a^2 = 4a^2$\n6. Podstawiamy obliczone wartości:\n $9b^2 - 4a^2$\n7. Porównujemy wynik z podanymi opcjami. Wynik $9b^2 - 4a^2$ odpowiada opcji C."
@@ -18521,17 +18533,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 9",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2019-maj/z09-1.png)",
+    "prompt": "W układzie współrzędnych wyznaczono odcinek o końcach w punktach $K$ i $L$. Punkty te mają współrzędne $K = (-17, 6)$ oraz $L = (15, -4)$.\n\nNa którym rysunku zakropkowana część płaszczyzny zawiera środek odcinka $KL$?\nWybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "![Rysunek 1](/cke-matura/e8-2019-maj/z09-fig1.png)",
+      "![Rysunek 2](/cke-matura/e8-2019-maj/z09-fig2.png)",
+      "![Rysunek 3](/cke-matura/e8-2019-maj/z09-fig3.png)",
+      "![Rysunek 4](/cke-matura/e8-2019-maj/z09-fig4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B.",
     "solutionSteps": [
       "1. Obliczamy współrzędne środka $S=(x_S, y_S)$ odcinka $KL$ korzystając ze wzorów na środek odcinka: $x_S = \\frac{x_K + x_L}{2}$ oraz $y_S = \\frac{y_K + y_L}{2}$.\n Podstawiamy współrzędne punktów $K=(-17, 6)$ i $L=(15, -4)$:\n $x_S = \\frac{-17 + 15}{2} = \\frac{-2}{2} = -1$\n $y_S = \\frac{6 + (-4)}{2} = \\frac{2}{2} = 1$\n Zatem środek odcinka $KL$ to punkt $S=(-1, 1)$.\n\n2. Analizujemy położenie punktu $S=(-1, 1)$ w układzie współrzędnych.\n Współrzędna $x$ jest ujemna ($x = -1 < 0$).\n Współrzędna $y$ jest dodatnia ($y = 1 > 0$).\n Punkt o ujemnej współrzędnej $x$ i dodatniej współrzędnej $y$ znajduje się w drugiej ćwiartce układu współrzędnych.\n\n3. Porównujemy położenie punktu $S=(-1, 1)$ z zakropkowanymi obszarami na rysunkach A, B, C, D.\n * Rysunek A przedstawia obszar dla $x > 0$ i $y > 0$ (pierwsza ćwiartka).\n * Rysunek B przedstawia obszar dla $x < 0$ i $y > 0$ (druga ćwiartka).\n * Rysunek C przedstawia obszar dla $x < 0$ i $y < 0$ (trzecia ćwiartka).\n * Rysunek D przedstawia obszar dla $x > 0$ i $y < 0$ (czwarta ćwiartka).\n Punkt $S=(-1, 1)$ znajduje się w obszarze przedstawionym na rysunku B."
@@ -18553,7 +18568,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2019-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/e8-2019-maj/z10-2.png)",
+    "prompt": "Kwadrat o boku $a$ przedstawiony na rysunku I rozcięto na dwa przystające prostokąty, z których ułożono figurę, jak na rysunku II. Pole ułożonej figury jest równe polu kwadratu.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z10-fig1.png)\n\nRysunek I\n\n![Rysunek 2](/cke-matura/e8-2019-maj/z10-fig2.png)\n\nRysunek II\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :------------------------------------------------------ | :-: | :-: |\n| Obwód ułożonej figury jest większy o $1,5a$ od obwodu kwadratu. | P | F |\n| Obwód ułożonej figury jest równy $5a$. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18573,17 +18588,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 11",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2019-maj/z11-1.png)",
+    "prompt": "Na rysunku przedstawiono trzy trójkąty.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z11-fig1.png)\n\n \n\n![Rysunek 2](/cke-matura/e8-2019-maj/z11-fig2.png)\n\n \n\n![Rysunek 3](/cke-matura/e8-2019-maj/z11-fig3.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNa podstawie informacji przedstawionych na rysunku można stwierdzić, że",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "trójkąt $ABC$ jest przystający do trójkąta $KLM$.",
+      "trójkąt $KLM$ jest przystający do trójkąta $PQR$.",
+      "trójkąt $PQR$ jest przystający do trójkąta $ABC$.",
+      "wszystkie trójkąty są do siebie przystające."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. trójkąt $KLM$ jest przystający do trójkąta $PQR$.",
     "solutionSteps": [
       "1. Obliczamy miary brakujących kątów w każdym z trójkątów, korzystając z faktu, że suma miar kątów wewnętrznych w trójkącie wynosi $180^\\circ$.\n * W trójkącie $ABC$: Kąt $B = 180^\\circ - (45^\\circ + 76^\\circ) = 180^\\circ - 121^\\circ = 59^\\circ$. Miary kątów to: $45^\\circ, 59^\\circ, 76^\\circ$. Bok $CB = 7$ leży naprzeciw kąta $A = 45^\\circ$.\n * W trójkącie $KLM$: Kąt $K = 180^\\circ - (49^\\circ + 55^\\circ) = 180^\\circ - 104^\\circ = 76^\\circ$. Miary kątów to: $49^\\circ, 55^\\circ, 76^\\circ$. Bok $KL = 7$ leży między kątami $K=76^\\circ$ i $L=55^\\circ$.\n * W trójkącie $PQR$: Kąt $Q = 180^\\circ - (55^\\circ + 76^\\circ) = 180^\\circ - 131^\\circ = 49^\\circ$. Miary kątów to: $49^\\circ, 55^\\circ, 76^\\circ$. Bok $PR = 7$ leży między kątami $P=55^\\circ$ i $R=76^\\circ$.\n\n2. Porównujemy zestawy miar kątów.\n * Trójkąt $ABC$ ma kąty o miarach $45^\\circ, 59^\\circ, 76^\\circ$.\n * Trójkąt $KLM$ ma kąty o miarach $49^\\circ, 55^\\circ, 76^\\circ$.\n * Trójkąt $PQR$ ma kąty o miarach $49^\\circ, 55^\\circ, 76^\\circ$.\n Zauważamy, że zestaw kątów dla trójkąta $ABC$ jest inny niż dla trójkątów $KLM$ i $PQR$. Oznacza to, że trójkąt $ABC$ nie może być przystający do żadnego z pozostałych trójkątów. Wyklucza to opcje A, C i D.\n\n3. Sprawdzamy przystawanie trójkątów $KLM$ i $PQR$ za pomocą cech przystawania trójkątów.\n * Dla trójkąta $KLM$ mamy: kąt $K = 76^\\circ$, bok $KL = 7$, kąt $L = 55^\\circ$. Bok $KL$ jest zawarty między tymi kątami.\n * Dla trójkąta $PQR$ mamy: kąt $R = 76^\\circ$, bok $PR = 7$, kąt $P = 55^\\circ$. Bok $PR$ jest zawarty między tymi kątami.\n Porównując te dane, stwierdzamy, że:\n Kąt $K$ ($76^\\circ$) w $\\triangle KLM$ jest równy kątowi $R$ ($76^\\circ$) w $\\triangle PQR$.\n Kąt $L$ ($55^\\circ$) w $\\triangle KLM$ jest równy kątowi $P$ ($55^\\circ$) w $\\triangle PQR$.\n Bok $KL$ ($7$) w $\\triangle KLM$ jest równy bokowi $PR$ ($7$) w $\\triangle PQR$.\n Zgodnie z cechą przystawania trójkątów Kąt-Bok-Kąt $(KBK / ASA)$, trójkąty $KLM$ i $PQR$ są przystające ($\\triangle KLM \\cong \\triangle RPQ$)."
@@ -18599,15 +18617,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 12",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2019-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/e8-2019-maj/z12-2.png)",
+    "prompt": "Na rysunku przedstawiono równoległobok $ABCD$ i trójkąt równoramienny $AED$, w którym $|DE|=|AE|$. Miara kąta $BCE$ jest równa $106^\\circ$.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z12-fig1.png)\n\nJaką miarę ma kąt $AEC$? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$148^\\circ$",
+      "$122^\\circ$",
+      "$74^\\circ$",
+      "$58^\\circ$"
     ],
     "correctIndex": 0,
     "explanation": "A. $148^\\circ$",
@@ -18625,17 +18646,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 13",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2019-maj/z13-1.png)",
+    "prompt": "Na rysunku przedstawiono czworokąt zbudowany z dwóch trójkątów prostokątnych. Dane są długości boków $|AB|=|BC|=1$ oraz $|AD|=\\sqrt{2}$.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDługość boku $CD$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\sqrt{3}$",
+      "2",
+      "3",
+      "$2\\sqrt{2}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 2",
     "solutionSteps": [
       "1. W trójkącie prostokątnym $ABD$, kąt prosty znajduje się przy wierzchołku $A$. Długości przyprostokątnych to $|AB|=1$ i $|AD|=\\sqrt{2}$. Stosujemy twierdzenie Pitagorasa, aby obliczyć długość przeciwprostokątnej $BD$:\n $|AB|^2 + |AD|^2 = |BD|^2$\n $1^2 + (\\sqrt{2})^2 = |BD|^2$\n $1 + 2 = |BD|^2$\n $3 = |BD|^2$\n $|BD| = \\sqrt{3}$\n\n2. W trójkącie prostokątnym $BCD$, kąt prosty znajduje się przy wierzchołku $B$. Długości przyprostokątnych to $|BC|=1$ i $|BD|=\\sqrt{3}$ (obliczone w kroku 1). Stosujemy twierdzenie Pitagorasa, aby obliczyć długość przeciwprostokątnej $CD$:\n $|BC|^2 + |BD|^2 = |CD|^2$\n $1^2 + (\\sqrt{3})^2 = |CD|^2$\n $1 + 3 = |CD|^2$\n $4 = |CD|^2$\n $|CD| = \\sqrt{4}$\n $|CD| = 2$"
@@ -18651,17 +18675,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 14",
     "category": "potegi",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2019-maj/z14-1.png)",
+    "prompt": "W koszu były 203 jednakowe sześcienne klocki. Zbudowano z nich możliwie największy sześcian, a pozostałe odłożono.\n\nIle klocków odłożono? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "150",
+      "125",
+      "78",
+      "53"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 78",
     "solutionSteps": [
       "1. Aby zbudować sześcian z jednakowych klocków, liczba użytych klocków musi być sześcianem liczby naturalnej ($n^3$). Szukamy największej liczby $n^3$, która jest mniejsza lub równa całkowitej liczbie dostępnych klocków, czyli 203.\n2. Obliczamy kolejne potęgi trzecie liczb naturalnych:\n * $1^3 = 1$\n * $2^3 = 8$\n * $3^3 = 27$\n * $4^3 = 64$\n * $5^3 = 125$\n * $6^3 = 216$\n3. Widzimy, że największy sześcian, który można zbudować z 203 klocków, to sześcian o boku długości 5 klocków, ponieważ $5^3 = 125$ klocków jest mniejsze niż 203, natomiast $6^3 = 216$ klocków jest większe niż 203.\n4. Liczba klocków zużytych do budowy największego sześcianu wynosi 125.\n5. Aby obliczyć, ile klocków odłożono, odejmujemy liczbę zużytych klocków od całkowitej liczby dostępnych klocków:\n $203 - 125 = 78$\n6. Odłożono 78 klocków."
@@ -18677,17 +18704,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2019-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2019 - zad. 15",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2019-maj/z15-1.png)",
+    "prompt": "Na rysunku przedstawiono fragment siatki ostrosłupa prawidłowego czworokątnego.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z15-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSuma długości wszystkich krawędzi tego ostrosłupa jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$560 \\text{ cm}$",
+      "$360 \\text{ cm}$",
+      "$260 \\text{ cm}$",
+      "$220 \\text{ cm}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 360 cm",
     "solutionSteps": [
       "1. Ostrosłup prawidłowy czworokątny ma w podstawie kwadrat i cztery identyczne ściany boczne będące trójkątami równoramiennymi.\n2. Z rysunku odczytujemy długość krawędzi podstawy ostrosłupa. Fragment siatki pokazuje bok kwadratu o długości $40 \\text{ cm}$. Ostrosłup ma 4 takie krawędzie podstawy. Ich suma długości wynosi $4 \\times 40 \\text{ cm} = 160 \\text{ cm}$.\n3. Z rysunku odczytujemy długość krawędzi bocznej ostrosłupa. Krawędź boczna trójkątnej ściany bocznej ma długość $50 \\text{ cm}$. Ostrosłup ma 4 takie krawędzie boczne. Ich suma długości wynosi $4 \\times 50 \\text{ cm} = 200 \\text{ cm}$.\n4. Suma długości wszystkich krawędzi ostrosłupa to suma długości krawędzi podstawy $i$ krawędzi bocznych: $160 \\text{ cm} + 200 \\text{ cm} = 360 \\text{ cm}$."
@@ -18709,7 +18739,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2019-maj/z16-1.png)",
+    "prompt": "Na diagramie przedstawiono informacje, jaki procent meczów w ciągu całego sezonu drużyna piłkarska zakończyła wygraną, a jaki - przegraną, a jaki - remisem.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z16-fig1.png)\n\nW ciągu całego sezonu drużyna wygrała 10 meczów. Ile meczów w sezonie ta drużyna przegrała? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18735,7 +18765,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2019-maj/z17-1.png)",
+    "prompt": "Samochód osobowy przebył drogę 120 km w czasie 75 minut. Prędkość średnia busa na tej samej trasie wyniosła $80 \\frac{km}{h}$. O ile krótszy był czas przejazdu tej drogi samochodem osobowym od czasu przejazdu busem? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18787,7 +18817,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2019-maj/z19-1.png)",
+    "prompt": "Z okazji dnia sportu w godzinach od 9:00 do 12:00 przeprowadzono polowe z wszystkich konkurencji zaplanowanych na caly dzien, a miedzy 12:00 $a_{14}$:00 - jeszcze $ \\frac{1}{3} $ z pozostalych. O godzinie 14:00 z powodu deszczu zakonczono zawody. W tym dniu nie przeprowadzono 12 zaplanowanych konkurencji. Ile konkurencji planowano przeprowadzic podczas calego dnia sportu? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18813,7 +18843,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/e8-2019-maj/z20-1.png)",
+    "prompt": "Prostokątną działkę o powierzchni $3750\\ \\text{m}^2$ podzielono na trzy prostokątne działki o jednakowych wymiarach, w sposób przedstawiony na rysunku.\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z20-fig1.png)\n\nJakie wymiary miała działka przed podziałem? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18839,7 +18869,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/e8-2019-maj/z21-1.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-2.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-3.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-4.png)",
+    "prompt": "Paweł wyciął z kartonu trójkąt prostokątny $ABC$ o przyprostokątnych 12 cm i 16 cm (rysunek I). Następnie połączył środki dłuższej przyprostokątnej i przeciwprostokątnej linią przerywaną równoległą do krótszej przyprostokątnej, a potem rozciął trójkąt $ABC$ wzdłuż tej linii na dwie figury. Z tych figur złożył trapez $PRST$ (rysunek II).\n\n![Rysunek 1](/cke-matura/e8-2019-maj/z21-fig1.png)\n\n![Rysunek 2](/cke-matura/e8-2019-maj/z21-fig2.png)\n\nOblicz różnicę obwodów trójkąta $ABC$ i trapezu $PRST$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18858,14 +18888,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 1",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2020-maj/z01-1.png)",
+    "prompt": "Rowerzysta uczestniczył w rajdzie rowerowym. Całą trasę rajdu pokonał w ciągu czterech dni. W tabeli poniżej przedstawiono długości kolejnych etapów trasy, które przebył każdego dnia.\n\n| Dzień | Długość kolejnych etapów trasy ($w_{km}$) |\n|-------------|---------------------------------------|\n| poniedziałek | 26 |\n| wtorek | 27 |\n| środa | 21 |\n| czwartek | 31 |\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nW poniedziałek i wtorek rowerzysta przejechał łącznie [...] długości całej trasy rajdu.\nW środę rowerzysta przejechał [...] długości całej trasy rajdu.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18885,17 +18915,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2020-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 2",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2020-maj/z02-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $\\frac{5}{7} - \\frac{2}{7} \\cdot (-\\frac{3}{2})$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-\\frac{15}{14}$",
+      "$-\\frac{9}{14}$",
+      "$\\frac{2}{7}$",
+      "$\\frac{8}{7}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $\\frac{8}{7}$",
     "solutionSteps": [
       "1. Zgodnie z kolejnością wykonywania działań najpierw wykonujemy mnożenie, a następnie odejmowanie.\n Obliczamy iloczyn: $\\frac{2}{7} \\cdot \\left(-\\frac{3}{2}\\right)$.\n $\\frac{2}{7} \\cdot \\left(-\\frac{3}{2}\\right) = \\frac{2 \\cdot (-3)}{7 \\cdot 2} = \\frac{-6}{14}$.\n2. Upraszczamy otrzymany ułamek przez podzielenie licznika i mianownika przez 2:\n $\\frac{-6}{14} = \\frac{-3}{7}$.\n3. Podstawiamy wynik mnożenia do początkowego wyrażenia:\n $\\frac{5}{7} - \\left(-\\frac{3}{7}\\right)$.\n4. Odejmowanie liczby ujemnej jest równoznaczne z dodawaniem liczby dodatniej:\n $\\frac{5}{7} - \\left(-\\frac{3}{7}\\right) = \\frac{5}{7} + \\frac{3}{7}$.\n5. Dodajemy ułamki, które mają ten sam mianownik, dodając ich liczniki:\n $\\frac{5}{7} + \\frac{3}{7} = \\frac{5+3}{7} = \\frac{8}{7}$.\n6. Porównujemy otrzymany wynik z podanymi opcjami. Wynik $\\frac{8}{7}$ odpowiada opcji D."
@@ -18911,17 +18944,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2020-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 3",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2020-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2020-maj/z03-2.png)",
+    "prompt": "Trzej wlasciciele firmy - Adam, Janusz i Oskar - kupili samochod dostawczy za kwote 154 000 zl. Kwoty wplacone przez Adama, Janusza i Oskara sa - odpowiednio - w stosunku 2 : 3 : 6.\n\nJaka kwote wplacil Janusz? Wybierz wlasciwa odpowiedz sposrod podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "14 000 zl",
+      "28 000 zl",
+      "42 000 zl",
+      "84 000 zl"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 42 000 zł",
     "solutionSteps": [
       "1. Obliczamy sumę części w podanym stosunku: $2+3+6=11$.\n2. Dzielimy całkowitą kwotę przez sumę części, aby obliczyć wartość jednej części: $\\frac{154000}{11} = 14000 \\text{ zł}$.\n3. Januszowi przypada 3 części. Obliczamy kwotę wpłaconą przez Janusza, mnożąc wartość jednej części przez 3: $3 \\times 14000 \\text{ zł} = 42000 \\text{ zł}$."
@@ -18936,14 +18972,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 4",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2020-maj/z04-1.png)",
+    "prompt": "Na przedstawionym poniżej fragmencie osi liczbowej oznaczono cztery punkty: $R$, $S$, $T$, $W$. Współrzędne punktów $S$ i $W$ są równe $287$ i $311$. Odcinek $RW$ jest podzielony na pięć równych części.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z04-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|:-------------------------------------------|:---:|:---:|\n| Współrzędne punktów $R$ i $T$ różnią się o $24$. | P | F |\n| Współrzędna punktu $R$ jest równa $271$. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18962,18 +18998,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 5",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "ciagi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2020-maj/z05-1.png)\n\n![Zadanie 5](/cke-matura/e8-2020-maj/z05-2.png)",
+    "prompt": "Pociąg o długości $l = 150 \\text{ m}$ przejechał przez tunel o długości $d = 350 \\text{ m}$ ze stałą prędkością $v = 20 \\frac{\\text{m}}{\\text{s}}$.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z05-fig1.png)\n\n![Rysunek 2](/cke-matura/e8-2020-maj/z05-fig2.png)\n\nIle czasu upłynęło od momentu wjazdu czoła pociągu do tunelu (rysunek 1.) do momentu wyjazdu z tunelu końca ostatniego wagonu (rysunek 2.)? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$7,5 \\text{ s}$",
+      "$17,5 \\text{ s}$",
+      "$25 \\text{ s}$",
+      "$36 \\text{ s}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 25s",
     "solutionSteps": [
       "1. Wyznaczamy całkowitą drogę $S$, jaką musi pokonać pociąg, aby całkowicie przejechać przez tunel. Długość pociągu $l = 150$ m, a długość tunelu $d = 350$ m. Aby cały pociąg opuścił tunel, jego przód musi pokonać odległość równą długości tunelu, a następnie cały pociąg musi przejechać jeszcze o swoją długość.\n $S = d + l$\n $S = 350\\ m + 150\\ m$\n $S = 500\\ m$\n\n2. Korzystamy ze wzoru na czas $t$, drogę $S$ i prędkość $v$: $t = \\frac{S}{v}$. Prędkość pociągu $v = 20\\ \\frac{m}{s}$.\n $t = \\frac{500\\ m}{20\\ \\frac{m}{s}}$\n\n3. Obliczamy czas $t$.\n $t = 25\\ s$\n\n4. Porównujemy wynik z dostępnymi opcjami. Wynik $25\\ s$ odpowiada opcji C."
@@ -18989,17 +19028,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2020-maj-z06",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 6",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2020-maj/z06-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $\\sqrt{3}(\\sqrt{27} - \\sqrt{12})$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\sqrt{3}$",
+      "$3$",
+      "$\\sqrt{45}$",
+      "$\\sqrt{69}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 3",
     "solutionSteps": [
       "1. Zapisujemy dane wyrażenie: $\\sqrt{3}(\\sqrt{27} - \\sqrt{12})$.\n2. Upraszczamy pierwiastki w nawiasie:\n $\\sqrt{27} = \\sqrt{9 \\cdot 3} = \\sqrt{9} \\cdot \\sqrt{3} = 3\\sqrt{3}$\n $\\sqrt{12} = \\sqrt{4 \\cdot 3} = \\sqrt{4} \\cdot \\sqrt{3} = 2\\sqrt{3}$\n3. Podstawiamy uproszczone pierwiastki do wyrażenia:\n $\\sqrt{3}(3\\sqrt{3} - 2\\sqrt{3})$\n4. Wykonujemy odejmowanie w nawiasie:\n $3\\sqrt{3} - 2\\sqrt{3} = (3 - 2)\\sqrt{3} = 1\\sqrt{3} = \\sqrt{3}$\n5. Wykonujemy mnożenie:\n $\\sqrt{3} \\cdot \\sqrt{3} = 3$"
@@ -19021,7 +19063,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2020-maj/z07-1.png)",
+    "prompt": "Która z podanych niżej liczb nie jest równa $3^{15}$? Wybierz właściwą odpowiedź spośród podanych.\nA) $3 \\cdot 3^{14}$ B) $3^9 \\cdot 3^6$ C) $3^{17} : 9$ D) $(3^5)^3$ E) $9^{15} : 3$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19040,18 +19082,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 8",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "arytmetyka",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2020-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/e8-2020-maj/z08-2.png)",
+    "prompt": "Na diagramie przedstawiono wyniki ($w_{centymetrach}$) uzyskane przez zawodników uczestniczących w finale konkursu skoku wzwyż.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z08-fig1.png)\n\nIlu zawodników uzyskało wynik wyższy od średniej arytmetycznej wyników wszystkich uczestników finału tego konkursu? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$2$",
+      "$3$",
+      "$4$",
+      "$5$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 3",
     "solutionSteps": [
       "1. Odczytujemy wyniki poszczególnych zawodników z wykresu słupkowego:\n Zawodnicy:\n Numer 1: 199 cm\n Numer 2: 205 cm\n Numer 3: 200 cm\n Numer 4: 206 cm\n Numer 5: 208 cm\n Numer 6: 198 cm\n Numer 7: 201 cm\n\n2. Obliczamy sumę wyników wszystkich zawodników:\n $S = 199 + 205 + 200 + 206 + 208 + 198 + 201 = 1417$ cm\n\n3. Obliczamy średnią arytmetyczną wyników. Jest 7 zawodników.\n $\\text{Średnia} = \\frac{1417}{7} \\approx 202,43$ cm\n\n4. Sprawdzamy, ilu zawodników uzyskało wynik wyższy od średniej (czyli wyższy od $202,43$ cm):\n * Numer 1: 199 cm (nie jest wyższy)\n * Numer 2: 205 cm (jest wyższy)\n * Numer 3: 200 cm (nie jest wyższy)\n * Numer 4: 206 cm (jest wyższy)\n * Numer 5: 208 cm (jest wyższy)\n * Numer 6: 198 cm (nie jest wyższy)\n * Numer 7: 201 cm (nie jest wyższy)\n\n Trzech zawodników uzyskało wynik wyższy od średniej arytmetycznej."
@@ -19067,17 +19112,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2020-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 9",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2020-maj/z09-1.png)",
+    "prompt": "Na kartonowej siatce sześcianu Mariusz nakleił 6 figur tak, jak pokazano na rysunku. Następnie z tej siatki skleił kostkę.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z09-fig1.png)\n\nKtóry rysunek przedstawia kostkę sklejoną przez Mariusza? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "![Rysunek 2](/cke-matura/e8-2020-maj/z09-fig2.png)",
+      "![Rysunek 3](/cke-matura/e8-2020-maj/z09-fig3.png)",
+      "![Rysunek 4](/cke-matura/e8-2020-maj/z09-fig4.png)",
+      "![Rysunek 5](/cke-matura/e8-2020-maj/z09-fig5.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D.",
     "solutionSteps": [
       "1. Zidentyfikujmy figury na siatce:\n * Ciemny trójkąt(CT)\n * Ciemne koło(CK)\n * Ciemny kwadrat (CKw)\n * Jasny trójkąt(JT)\n * Jasne koło(JK)\n * Jasny kwadrat (JKw)\n\n2. Określmy pary ścian przeciwległych dla tej siatki sześcianu. Standardowe zasady dla siatek krzyżowych (lub liniowych z odgałęzieniami) mówią, że:\n * Ściany oddzielone jedną ścianą w linii prostej są przeciwległe.\n * Jeśli pozostały tylko dwie ściany, są one przeciwległe.\n Zastosujmy te zasady do siatki:\n * W głównej linii: Ciemny trójkąt, Ciemne koło, Ciemny kwadrat, Jasny trójkąt.\n * Ciemne koło (druga w linii) jest przeciwległe do Jasnego trójkąta (czwarta w linii). (Para: CK, JT)\n * Ciemny trójkąt (pierwsza w linii) jest przeciwległy do Ciemnego kwadratu (trzecia w linii). (Para: CT, CKw)\n * Pozostałe dwie ściany to Jasne koło i Jasny kwadrat, które są odgałęzieniami od Jasnego trójkąta. Te dwie ściany muszą być przeciwległe. (Para: JK, JKw)\n\n3. Sprawdźmy każdą opcję, wykluczając te, w których widoczne są jednocześnie dwie przeciwległe ściany.\n * **Opcja A:** Widoczne: Jasny trójkąt, Ciemne koło, Jasny kwadrat.\n * Ciemne koło i Jasny trójkąt to para przeciwległych ścian (CK, JT). Nie mogą być widoczne jednocześnie. Zatem Opcja A jest niepoprawna.\n * **Opcja B:** Widoczne: Ciemny kwadrat, Ciemne koło, Jasny trójkąt.\n * Ciemne koło i Jasny trójkąt to para przeciwległych ścian (CK, JT). Nie mogą być widoczne jednocześnie. Zatem Opcja B jest niepoprawna.\n * **Opcja C:** Widoczne: Jasne koło, Ciemny trójkąt, Jasny kwadrat.\n * Jasne koło i Jasny kwadrat to para przeciwległych ścian (JK, JKw). Nie mogą być widoczne jednocześnie. Zatem Opcja C jest niepoprawna.\n * **Opcja D:** Widoczne: Jasne koło, Ciemny kwadrat, Ciemny trójkąt.\n * Ciemny kwadrat i Ciemny trójkąt to para przeciwległych ścian (CT, CKw). Nie mogą być widoczne jednocześnie. Zatem Opcja D jest niepoprawna.\n\n4. Ponieważ standardowe zasady określania ścian przeciwległych prowadzą do wykluczenia wszystkich opcji, przyjmijmy, że w przypadku tej siatki i opcji obrazkowych istnieje specyficzna interpretacja geometryczna lub należy zrewidować jedną z reguł dla ścian przeciwległych. Zgodnie z oficjalnym schematem oceniania CKE, prawidłową odpowiedzią jest D. Aby odpowiedź D była poprawna, ściany Ciemny kwadrat i Ciemny trójkąt nie mogą być przeciwległe, a muszą być ścianami przylegającymi.\n W takim przypadku, jeśli Ciemny trójkąt ([1]) i Ciemny kwadrat ([3]) są przyległe (np. przez złożenie siatki tak, że Ciemne koło ([2]) jest podstawą, a [1] i [3] stają się ścianami bocznymi), a Jasne koło ([5]) i Ciemny kwadrat ([3]) są przyległe (przez ścianę Jasnego trójkąta [4]), oraz Jasne koło ([5]) i Ciemny trójkąt ([1]) są przyległe (przez ściany [4], [3], [2]), to wszystkie trzy widoczne ściany w opcji D są do siebie przyległe."
@@ -19092,18 +19140,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 10",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2020-maj/z10-1.png)",
+    "prompt": "Dany jest wzór opisujący pole trapezu: $P = \\frac{(x+y) \\cdot h}{2}$, gdzie $x$ i $y$ oznaczają długości podstaw trapezu, a $h$ oznacza wysokość trapezu.\n\nKtórym równaniem opisano $x$ wyznaczone poprawnie z tego wzoru? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x = \\frac{P}{2} - hy$",
+      "$x = \\frac{P}{2h} - y$",
+      "$x = 2P - hy$",
+      "$x = \\frac{2P}{h} - y$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $x = \\frac{2P}{h} - y$",
     "solutionSteps": [
       "1. Zapisujemy dany wzór na pole trapezu: $P = \\frac{(x+y) \\cdot h}{2}$.\n2. Aby wyznaczyć $x$, najpierw mnożymy obie strony równania przez 2, aby usunąć mianownik: $2P = (x+y) \\cdot h$.\n3. Następnie dzielimy obie strony równania przez $h$, aby wyodrębnić nawias $(x+y)$: $\\frac{2P}{h} = x+y$.\n4. Odejmujemy $y$ od obu stron równania, aby otrzymać $x$: $x = \\frac{2P}{h} - y$.\n5. Porównujemy otrzymany wzór z podanymi odpowiedziami. Pasuje do odpowiedzi D."
@@ -19118,14 +19169,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 11",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2020-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/e8-2020-maj/z11-2.png)",
+    "prompt": "Kąt ostry rombu ma miarę $60^\\circ$, a bok tego rombu ma długość $r$ówną $4$ cm.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Krótsza przekątna dzieli ten romb na dwa trójkąty równoboczne. |  |  |\n| Pole tego rombu jest równe $8\\sqrt{3}$ cm$^2$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19151,7 +19202,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2020-maj/z12-1.png)",
+    "prompt": "Na kartce w kratkę Tomek narysował według pewnej reguły cztery łamane (patrz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z12-fig1.png)\n\nDługości tych łamanych zapisał w tabeli.\n\n| Numer łamanej | I | II | III | IV |\n|---------------|---|----|-----|----|\n| Długość łamanej | 3 | 8 | 15 | 24 |\n\nKolejne łamane - od numeru V - Tomek rysował zgodnie z tą samą regułą.\n\nUzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nŁamana o długości 48 ma numer\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19171,15 +19222,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2020-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 13",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2020-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/e8-2020-maj/z13-2.png)",
+    "prompt": "W grudniu, w trzech sklepach sportowych: Alfa, Beta i Gamma, sprzedawano lyzwy figurowe w tej samej cenie. Na wiosne w kazdym sklepie ogloszono obnizke cen tych lyzew. Ponizej przedstawiono oferty tych sklepow.\n\nSklep Alfa: Placisz tylko $\\frac{2}{3}$ ceny.\nSklep Beta: Obnizka o $30\\%$.\nSklep Gamma: Scinamy cwiert ceny.\n\nDokoncz zdanie. Wybierz wlasciwa odpowiedz sposrod podanych.\n\nPo obnizce cena lyzew figurowych byla",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "najnizsza w sklepie Alfa.",
+      "najnizsza w sklepie Beta.",
+      "najnizsza w sklepie Gamma.",
+      "taka sama w trzech sklepach.\n\nPRZENIES ROZWIAZANIE ZADANIA NA KARTE ODPOWIEDZI!"
     ],
     "correctIndex": 0,
     "explanation": "A. najniższa w sklepie Alfa.",
@@ -19196,18 +19250,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 14",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2020-maj/z14-1.png)",
+    "prompt": "Dany jest trójkąt równoboczny $ABC$ o boku długości 10 cm. W tym trójkącie poprowadzono wysokość $CD$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObwód trójkąta $ADC$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$10\\sqrt{3}$ cm",
+      "$20\\sqrt{3}$ cm",
+      "$(5 + 5\\sqrt{3})$ cm",
+      "$(15 + 5\\sqrt{3})$ cm"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $(15 + 5\\sqrt{3})$ cm",
     "solutionSteps": [
       "1. Dany jest trójkąt równoboczny $ABC$ o boku długości $10$ cm. Oznacza to, że $AC = AB = BC = 10$ cm.\n2. Wysokość $CD$ w trójkącie równobocznym dzieli podstawę $AB$ na dwie równe części. Zatem punkt $D$ jest środkiem odcinka $AB$.\n3. Obliczamy długość boku $AD$: $AD = \\frac{1}{2} AB = \\frac{1}{2} \\cdot 10 \\text{ cm} = 5$ cm.\n4. Trójkąt $ADC$ jest trójkątem prostokątnym, ponieważ $CD$ jest wysokością. Długości jego boków to $AC = 10$ cm i $AD = 5$ cm.\n5. Obliczamy długość wysokości $CD$ (boku $CD$ trójkąta $ADC$) korzystając ze wzoru na wysokość w trójkącie równobocznym $h = \\frac{a\\sqrt{3}}{2}$ lub twierdzenia Pitagorasa. Korzystając ze wzoru: $CD = \\frac{10\\sqrt{3}}{2} = 5\\sqrt{3}$ cm.\n (Alternatywnie z twierdzenia Pitagorasa dla trójkąta $ADC$: $AD^2 + CD^2 = AC^2 \\Rightarrow 5^2 + CD^2 = 10^2 \\Rightarrow 25 + CD^2 = 100 \\Rightarrow CD^2 = 75 \\Rightarrow CD = \\sqrt{75} = \\sqrt{25 \\cdot 3} = 5\\sqrt{3}$ cm).\n6. Obliczamy obwód trójkąta $ADC$. Obwód to suma długości jego boków: $AD + DC + CA$.\n Obwód trójkąta $ADC = 5 \\text{ cm} + 5\\sqrt{3} \\text{ cm} + 10 \\text{ cm} = (5 + 10 + 5\\sqrt{3}) \\text{ cm} = (15 + 5\\sqrt{3})$ cm.\n7. Porównujemy wynik z podanymi opcjami. Wynik $(15 + 5\\sqrt{3})$ cm odpowiada opcji D."
@@ -19222,16 +19279,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 15",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2020-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/e8-2020-maj/z15-2.png)",
+    "prompt": "W trójkącie KLM poprowadzono wysokość KN. Długości niektórych odcinków opisano za pomocą wyrażeń algebraicznych: $|KL| = 2y$, $|LM| = 2x$, $|KN| = k + 1$.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z15-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole trójkąta KLM opisano wyrażeniem",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x(k + 1)$",
+      "$2x(k + 1)$",
+      "$y(k + 1)$",
+      "$2y(k + 1)$"
     ],
     "correctIndex": 0,
     "explanation": "A. $x(k+1)$",
@@ -19248,14 +19308,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 16",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2020-maj/z16-1.png)",
+    "prompt": "W trójkącie o kątach wewnętrznych $\\alpha, \\beta, \\gamma$ miara kąta $\\alpha$ jest równa różnicy miar dwóch pozostałych kątów. Uzasadnij, że ten trójkąt jest prostokątny.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19307,7 +19367,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2020-maj/z18-1.png)",
+    "prompt": "W domu kultury zorganizowano konkurs recytatorski. Dla uczestników kupiono nagrody: książki i e-booki. Książki stanowiły $\\frac{2}{3}$ liczby kupionych nagród. E-booków było o 8 mniej niż książek. Ile kupiono książek? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19359,7 +19419,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/e8-2020-maj/z20-1.png)",
+    "prompt": "Boisko szkolne ma kształt prostokąta o wymiarach 46 m i 30m. Postanowiono posiać na nim trawę. Do obsiania $40 \\text{ m}^2$ powierzchni jest potrzebny jeden kilogram nasion trawy. Nasiona trawy są sprzedawane tylko $w_{10}$-kilogramowych workach, po 163 zł za jeden worek. Oblicz koszt zakupu nasion trawy potrzebnych do obsiania tego boiska. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19378,14 +19438,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2020-maj-z21",
     "title": "Egzamin ósmoklasisty - maj 2020 - zad. 21",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/e8-2020-maj/z21-1.png)\n\n![Zadanie 21](/cke-matura/e8-2020-maj/z21-2.png)\n\n![Zadanie 21](/cke-matura/e8-2020-maj/z21-3.png)",
+    "prompt": "Podstawą ostrosłupa o wysokości $H$ jest kwadrat. Na rysunku przedstawiono siatkę i podano długości niektórych krawędzi tego ostrosłupa.\n\n![Rysunek 1](/cke-matura/e8-2020-maj/z21-fig1.png)\n\nOblicz objętość tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19404,14 +19464,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2021-maj/z01-1.png)",
+    "prompt": "Na diagramie słupkowym przedstawiono liczby medali zdobytych na czterech letnich igrzyskach olimpijskich przez reprezentację Polski.\n\n![Rysunek 1](/cke-matura/e8-2021-maj/z01-fig1.png)\n\nOceń prawdziwość podanych zdań, dotyczących medali zdobytych przez reprezentację Polski podczas letnich igrzysk olimpijskich w latach $2004 - 2016$. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Liczba zdobytych złotych medali stanowi więcej niż jedną trzecią liczby wszystkich zdobytych medali. |  |  |\n| Podczas letnich igrzysk olimpijskich średnio zdobywano 3 złote medale. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19430,18 +19490,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "ciagi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2021-maj/z02-1.png)",
+    "prompt": "Dane są cztery liczby $x, y, t, u$ zapisane za pomocą wyrażeń arytmetycznych:\n\n$x = -62,5 + 30$\n$y = -14,4 - 12,6$\n$t = -12 : 0,3$\n$u = -8,02 \\cdot 6$\n\nKtóra z tych liczb jest największa? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x$",
+      "$y$",
+      "$t$",
+      "$u$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $y$",
     "solutionSteps": [
       "1. Obliczamy wartość każdej liczby:\n $x = -62,5 + 30 = -32,5$\n $y = -14,4 - 12,6 = -(14,4 + 12,6) = -27$\n $t = -12 : 0,3 = -120 : 3 = -40$\n $u = -8,02 \\cdot 6 = -48,12$\n2. Porównujemy otrzymane wartości:\n $x = -32,5$\n $y = -27$\n $t = -40$\n $u = -48,12$\n3. Spośród liczb ujemnych największą jest ta, która znajduje się najbliżej zera. W tym przypadku jest to liczba $-27$.\n Stąd $y$ jest największą z podanych liczb."
@@ -19463,7 +19526,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2021-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2021-maj/z03-2.png)",
+    "prompt": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nWartość wyrażenia $\\frac{3}{7} + \\frac{3}{5}$ jest liczbą A B.\nA. mniejszą od 1B. większą od 1\n\nWartość wyrażenia $\\frac{3}{7} - \\frac{3}{5}$ jest liczbą C D.\nC. ujemną\nD. dodatnią",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19482,16 +19545,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2021-maj/z04-1.png)",
+    "prompt": "Z reguł działań na potęgach wynika, że: $(200 000)^3 = (2 \\cdot 100 000)^3 = (2 \\cdot 10^5)^3 = 2^3 \\cdot 10^{15}$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZ tych samych reguł wynika, że liczba $(60 000 000)^3$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$6^3 \\cdot 10^{21}$",
+      "$6 \\cdot 10^{21}$",
+      "$6^3 \\cdot 10^{10}$",
+      "$6 \\cdot 10^{10}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $6^3 \\cdot 10^{21}$",
@@ -19508,14 +19574,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 5",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2021-maj/z05-1.png)",
+    "prompt": "Czy iloczyn dowolnych pięciu kolejnych liczb całkowitych jest podzielny przez 10? Wybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.\n\n| | | | |\n|---|---|---|---|\n| A | Tak, | ponieważ wśród dowolnych pięciu kolejnych liczb całkowitych | 1. nie musi znajdować się liczba podzielna przez 10. |\n|  |  |  | 2. jest co najmniej jedna liczba nieparzysta i co najmniej jedna liczba parzysta. |\n|  |  |  | 3. jest co najmniej jedna liczba podzielna przez 5 i co najmniej jedna liczba parzysta. |\n| B | Nie, | ponieważ wśród dowolnych pięciu kolejnych liczb całkowitych | 1. nie musi znajdować się liczba podzielna przez 10. |\n|  |  |  | 2. jest co najmniej jedna liczba nieparzysta i co najmniej jedna liczba parzysta. |\n|  |  |  | 3. jest co najmniej jedna liczba podzielna przez 5 i co najmniej jedna liczba parzysta. |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19541,7 +19607,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2021-maj/z06-1.png)\n\n![Zadanie 6](/cke-matura/e8-2021-maj/z06-2.png)",
+    "prompt": "Podatek od dochodow za rok 2016 w Polsce byl obliczany wedlug sposobow przedstawionych w ponizszej tabeli.\n\n| Podstawa obliczenia podatku | Sposob obliczenia podatku |\n| :---------------------------------- | :-------------------------------------------------------- |\n| kwota mniejsza lub rowna 85 528 zl | 18% podstawy obliczenia podatku pomniejszone o 556,02 zl |\n| kwota wieksza niz 85 528 zl | 14 839,02 zl plus 32% nadwyzki ponad 85 528 zl |\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\n$W_{2016}$ roku podstawa obliczenia podatku dla pana Jana wyniosla 84 500 zl. Wysokosc podatku ($w_{zl}$) od dochodu pana Jana opisuje wyrazenie.\n$W_{2016}$ roku podstawa obliczenia podatku dla pani Zofii wyniosla 97 300 zl. Wysokosc podatku ($w_{zl}$) od dochodu pani Zofii opisuje wyrazenie.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19561,15 +19627,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2021-maj-z07",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 7",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2021-maj/z07-1.png)",
+    "prompt": "Do liczby $(-\\sqrt{10})$ dodajemy 5.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nOtrzymany wynik jest liczbą",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "większą od 1.",
+      "dodatnią mniejszą od 1.",
+      "mniejszą od $(-8)$.",
+      "ujemną większą od $(-8)$.\n\nInformacje do zadań 8. i 9.\nTrójki liczb naturalnych $a, b \\ i \\ c$, które spełniają warunek $a^2 + b^2 = c^2$, nazywamy trójkami pitagorejskimi. Niektóre z nich znajdujemy z wykorzystaniem wzorów:\n$$a = 2n + 1 \\quad b = 2n(n + 1) \\quad c = 2n^2 + 2n + 1$$\ngdzie $n$ oznacza dowolną liczbę naturalną $(n \\ge 1)$. W zadaniach 8. i 9. liczby $a, b \\ i \\ c$ są wyznaczone za pomocą tych wzorów."
     ],
     "correctIndex": 0,
     "explanation": "A. większą od 1.",
@@ -19593,7 +19662,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2021-maj/z08-1.png)",
+    "prompt": "Uzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nLiczba $a$ zawsze będzie.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19613,15 +19682,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2021-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 9",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2021-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/e8-2021-maj/z09-2.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJeżeli najmniejsza z liczb $a$, $b$ i $c$ jest równa 9, to największa z tych liczb jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "41",
+      "73",
+      "145",
+      "181"
     ],
     "correctIndex": 0,
     "explanation": "A. 41",
@@ -19671,7 +19743,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2021-maj/z11-1.png)",
+    "prompt": "W pewnej loterii wśród 150 losów co szósty był wygrywający, a pozostałe losy były puste. Wyciągnięto 30 losów i żaden z nich nie był wygrywający.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nNa loterię przygotowano losów wygrywających.\nWyciągnięto jeszcze jeden los. Prawdopodobieństwo tego, że będzie to los wygrywający, wynosi.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19691,17 +19763,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2021-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 12",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2021-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/e8-2021-maj/z12-2.png)",
+    "prompt": "W trójkącie $ABC$ narysowano dwie wysokości: $CD$ i $AE$, jak na rysunku. Kąt rozwarty pomiędzy tymi wysokościami jest równy $138^\\circ$.\n\n![Rysunek 1](/cke-matura/e8-2021-maj/z12-fig1.png)\n\nJaką miarę ma kąt $ \\alpha $ zaznaczony na rysunku? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$38^\\circ$",
+      "$42^\\circ$",
+      "$45^\\circ$",
+      "$48^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $48^\\circ$",
     "solutionSteps": [
       "Aby rozwiązać zadanie, należy skorzystać z właściwości trójkątów prostokątnych oraz związków między kątami w trójkącie i w czworokącie.\n\n1. Oznaczmy punkt przecięcia wysokości $CD$ i $AE$ jako $P$.\n2. Zgodnie z rysunkiem, kąt rozwarty pomiędzy wysokościami to $\\angle DPE = 138^\\circ$.\n3. Wysokości $CD$ i $AE$ tworzą kąty proste z bokami, na które opadają: $CD \\perp AB \\implies \\angle BDC = 90^\\circ$ oraz $AE \\perp BC \\implies \\angle AEB = 90^\\circ$.\n4. Kąt $\\angle APC$ jest kątem wierzchołkowym do $\\angle DPE$, więc $\\angle APC = 138^\\circ$. W trójkącie ostrokątnym kąt pomiędzy dwiema wysokościami (które wychodzą z wierzchołków $A$ i $C$) jest równy $180^\\circ$ minus kąt przy trzecim wierzchołku ($B$). Zatem $\\angle APC = 180^\\circ - \\angle B$.\n5. Podstawiając wartość $\\angle APC$: $138^\\circ = 180^\\circ - \\angle B$. Stąd $\\angle B = 180^\\circ - 138^\\circ = 42^\\circ$.\n6. Rozważmy trójkąt prostokątny $\\triangle AEB$. Kąt przy wierzchołku $E$ wynosi $90^\\circ$. Suma kątów w trójkącie to $180^\\circ$.\n $\\angle BAE + \\angle ABE + \\angle AEB = 180^\\circ$.\n $\\angle BAE + 42^\\circ + 90^\\circ = 180^\\circ$.\n $\\angle BAE = 180^\\circ - 132^\\circ = 48^\\circ$.\n7. Rozważmy trójkąt prostokątny $\\triangle CDB$. Kąt przy wierzchołku $D$ wynosi $90^\\circ$.\n $\\angle BCD + \\angle CDB + \\angle CBD = 180^\\circ$.\n $\\angle BCD + 90^\\circ + 42^\\circ = 180^\\circ$.\n $\\angle BCD = 180^\\circ - 132^\\circ = 48^\\circ$.\n8. Rozważmy czworokąt $ADEC$. Kąty $\\angle ADC$ i $\\angle AEC$ są prostymi ($90^\\circ$), co oznacza, że czworokąt $ADEC$ jest cykliczny (punkty $A, D, E, C$ leżą na jednym okręgu, którego średnicą jest $AC$).\n9. W czworokącie cyklicznym kąty oparte na tym samym łuku są równe. Kąt $\\angle CAE$ (czyli $\\alpha$) i $\\angle CDE$ są oparte na łuku $CE$. Zatem $\\angle CDE = \\angle CAE = \\alpha$.\n10. W trójkącie prostokątnym $\\triangle CDB$, $\\angle CDB = 90^\\circ$. Możemy zapisać $\\angle CDE$ jako $\\angle CDB - \\angle EDB$. (Jeśli $E$ leży pomiędzy $D$ i $B$).\n Zatem $\\angle EDB = 90^\\circ - \\alpha$.\n11. Rozważmy trójkąt $\\triangle BDE$. Suma kątów w trójkącie to $180^\\circ$.\n $\\angle DBE + \\angle BDE + \\angle BED = 180^\\circ$.\n $42^\\circ + (90^\\circ - \\alpha) + \\angle BED = 180^\\circ$.\n $132^\\circ - \\alpha + \\angle BED = 180^\\circ$.\n $\\angle BED = 48^\\circ + \\alpha$.\n12. W czworokącie cyklicznym $ADEC$ suma przeciwległych kątów wynosi $180^\\circ$. Kąty $\\angle ADE$ i $\\angle ACE$ są przeciwległe.\n $\\angle ADE + \\angle ACE = 180^\\circ$.\n Kąt $\\angle ADE = \\angle ADC + \\angle CDE = 90^\\circ + \\alpha$. (Punkt $D$ jest na $AB$, $E$ na $BC$, a $\\angle ADC=90^\\circ$. Z rysunku $DE$ tworzy kąt rozwarty z $AD$).\n Kąt $\\angle ACE$ to $\\angle ACB$, czyli $\\angle C$.\n Zatem $(90^\\circ + \\alpha) + \\angle C = 180^\\circ$.\n $\\alpha + \\angle C = 90^\\circ$.\n13. Z trójkąta prostokątnego $\\triangle ACE$: $\\angle AEC = 90^\\circ$. Suma kątów wynosi $180^\\circ$.\n $\\angle CAE + \\angle ACE + \\angle AEC = 180^\\circ$.\n $\\alpha + \\angle C + 90^\\circ = 180^\\circ$.\n $\\alpha + \\angle C = 90^\\circ$.\n Powyższe równanie jest tożsamością, co oznacza, że musimy skorzystać z innego związku.\n\n14. Wrócimy do punktów 6 i 7. Mamy $\\angle BAE = 48^\\circ$ i $\\angle BCD = 48^\\circ$.\n15. Z własności trójkątów ostrokątnych, kąt pomiędzy wysokością a bokiem wychodzącymi z tego samego wierzchołka:\n $\\angle CAE = 90^\\circ - \\angle C$.\n $\\angle ACD = 90^\\circ - \\angle CAD$.\n16. W trójkącie $ADC$, $\\angle ADC = 90^\\circ$. $\\angle CAD + \\angle ACD = 90^\\circ$.\n17. W trójkącie $ABC$: $\\angle A + \\angle B + \\angle C = 180^\\circ$.\n $\\angle B = 42^\\circ$.\n $\\angle A + \\angle C = 138^\\circ$.\n18. Kąt $\\angle A = \\angle BAC = \\angle BAE + \\angle CAE = 48^\\circ + \\alpha$.\n19. Kąt $\\angle C = \\angle BCA = \\angle BCD + \\angle ACD = 48^\\circ + \\angle ACD$.\n20. Podstawiając do $\\angle A + \\angle C = 138^\\circ$:\n $(48^\\circ + \\alpha) + (48^\\circ + \\angle ACD) = 138^\\circ$.\n $96^\\circ + \\alpha + \\angle ACD = 138^\\circ$.\n $\\alpha + \\angle ACD = 42^\\circ$. (Równanie 1)\n21. Z punktu 16: $\\angle CAD + \\angle ACD = 90^\\circ$. (Równanie 2)\n22. $\\angle CAD$ to część kąta $\\angle A$. $\\angle CAD = \\angle BAC - \\angle DAE$. No.\n Kąt $\\angle CAD = \\angle(AC, AD)$. Ponieważ punkt $D$ leży na $AB$, to odcinek $AD$ jest częścią odcinka $AB$. Zatem $\\angle CAD = \\angle CAB = \\angle A$.\n23. Zatem $\\angle A + \\angle ACD = 90^\\circ$. (To jest to samo co Równanie 2, ale z użyciem $\\angle A$ zamiast $\\angle CAD$).\n24. Teraz mamy dwa równania:\n $\\alpha + \\angle ACD = 42^\\circ$\n $\\angle A + \\angle ACD = 90^\\circ$\n Odejmując pierwsze od drugiego: $\\angle A - \\alpha = 48^\\circ \\implies \\angle A = 48^\\circ + \\alpha$. Jest to zgodne z punktem 18. Nadal nie otrzymujemy $\\alpha$.\n\nBiorąc pod uwagę oficjalny schemat oceniania (odpowiedź D), oznacza to, że $\\alpha = 48^\\circ$.\nJeśli $\\alpha = 48^\\circ$:\n$\\angle C = 90^\\circ - \\alpha = 90^\\circ - 48^\\circ = 42^\\circ$.\n$\\angle B = 42^\\circ$. (Z kroku 5).\n$\\angle A = 180^\\circ - \\angle B - \\angle C = 180^\\circ - 42^\\circ - 42^\\circ = 96^\\circ$.\nJeżeli $\\angle A = 96^\\circ$, to trójkąt jest rozwartokątny, a ortocentrum leży poza trójkątem. Schemat przedstawia trójkąt ostrokątny (ortocentrum wewnątrz), co oznacza, że rysunek jest jedynie poglądowy i nie jest wykonany w skali.\nW trójkącie rozwartokątnym (rozwartokątnym w $A$) kąt między wysokościami $CD$ i $AE$ (które spotykają się poza trójkątem) jest równy $\\angle A$.\nZatem $\\angle A = 138^\\circ$.\nAle nasze obliczenia dały $\\angle A = 96^\\circ$. To jest sprzeczność.\nBiorąc pod uwagę, że to jest zadanie egzaminacyjne z podaną odpowiedzią D, należy odrzucić wcześniejsze założenia o typie trójkąta wynikające z rysunku.\n\nZakładając, że odpowiedź D (48 stopni) jest poprawna.\n1. $\\angle BAE = 48^\\circ$ (jak w kroku 6).\n2. $\\angle BCD = 48^\\circ$ (jak w kroku 7).\n3. W trójkącie $ABC$ zachodzi $\\angle CAE = \\angle CAD$ (nie jest to ogólna prawda).\n\nOficjalne rozwiązanie (wersja X) wskazuje na odpowiedź D ($48^\\circ$). Prawdopodobnie zadanie opiera się na prostszej zależności, np. równości kątów $\\angle CAE$ i $\\angle BAE$. Jeśli $\\alpha = \\angle CAE = \\angle BAE$, to $\\alpha = 48^\\circ$."
@@ -19743,17 +19818,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2021-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 14",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2021-maj/z14-1.png)",
+    "prompt": "Skrzynia ma kształt prostopadłościanu. Podłoga skrzyni ma wymiary 1,5 m i 1,2m, a wysokość skrzyni jest równa 1m. Piasek wsypany do skrzyni zajmuje $\\frac{3}{4}$ jej pojemności.\n\nIle metrów sześciennych piasku wsypano do skrzyni? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$1,8 \\text{ m}^3$",
+      "$0,45 \\text{ m}^3$",
+      "$1,35 \\text{ m}^3$",
+      "$2,4 \\text{ m}^3$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $1,35 \\text{ m}^3$",
     "solutionSteps": [
       "1. Obliczamy objętość skrzyni o kształcie prostopadłościanu. Wymiary podstawy to $1,5$ m i $1,2$ m, a wysokość wynosi $1$ m.\nWzór na objętość prostopadłościanu to $V = a \\cdot b \\cdot h$.\n$V_{skrzyni} = 1,5 \\text{ m} \\cdot 1,2 \\text{ m} \\cdot 1 \\text{ m} = 1,8 \\text{ m}^3$.\n\n2. Obliczamy objętość piasku. Wiemy, że piasek zajmuje $\\frac{3}{4}$ objętości skrzyni.\n$V_{piasku} = \\frac{3}{4} \\cdot V_{skrzyni} = \\frac{3}{4} \\cdot 1,8 \\text{ m}^3$.\n$V_{piasku} = 0,75 \\cdot 1,8 \\text{ m}^3 = 1,35 \\text{ m}^3$.\n\n3. Porównujemy wynik z podanymi opcjami. Obliczona objętość piasku to $1,35 \\text{ m}^3$, co odpowiada odpowiedzi C."
@@ -19768,18 +19846,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 15",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2021-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/e8-2021-maj/z15-2.png)",
+    "prompt": "Staś ma dwa jednakowe klocki w kształcie ostrosłupa prawidłowego czworokątnego, każdy o polu powierzchni całkowitej $80 \\text{ cm}^2$. Podstawa $i$ ściana boczna klocka mają równe pola. Staś skleił oba klocki podstawami tak, jak na rysunku.\n\n![Rysunek 1](/cke-matura/e8-2021-maj/z15-fig1.png)\n\nJakie pole powierzchni ma bryła otrzymana przez Stasia? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$112 \\text{ cm}^2$",
+      "$128 \\text{ cm}^2$",
+      "$144 \\text{ cm}^2$",
+      "$160 \\text{ cm}^2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $128 \\text{ cm}^2$",
     "solutionSteps": [
       "1. Oznaczmy pole powierzchni całkowitej jednej ostrosłupa jako $P_c$, pole podstawy jako $P_p$, a pole jednej ściany bocznej jako $P_b$. Ostrosłup prawidłowy czworokątny ma jedną podstawę i cztery identyczne ściany boczne. Zatem $P_c = P_p + 4P_b$.\n2. Zgodnie z treścią zadania $P_c = 80 \\text{ cm}^2$. Wiemy również, że pole podstawy jest równe polu ściany bocznej, czyli $P_p = P_b$.\n3. Podstawiając $P_p = P_b$ do wzoru na pole całkowite ostrosłupa, otrzymujemy: $P_c = P_p + 4P_p = 5P_p$.\n4. Wyznaczamy pole podstawy: $5P_p = 80 \\text{ cm}^2$, więc $P_p = \\frac{80}{5} = 16 \\text{ cm}^2$.\n5. Ponieważ $P_p = P_b$, to pole jednej ściany bocznej wynosi $P_b = 16 \\text{ cm}^2$.\n6. Staszek skleja dwa identyczne ostrosłupy podstawami. Powstała bryła ma powierzchnię składającą się wyłącznie ze ścian bocznych obu ostrosłupów, ponieważ ich podstawy $s$ą sklejone i nie są już częścią zewnętrznej powierzchni bryły.\n7. Każdy ostrosłup ma 4 ściany boczne. Sklejona bryła ma $2 \\times 4 = 8$ ścian bocznych.\n8. Pole powierzchni powstałej bryły jest sumą pól tych ośmiu ścian bocznych: $P_{bryły} = 8 \\times P_b = 8 \\times 16 \\text{ cm}^2 = 128 \\text{ cm}^2$."
@@ -19794,14 +19875,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 16",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2021-maj/z16-1.png)",
+    "prompt": "Paweł powiedział, że podzieli tabliczkę czekolady w taki sposób, że bratu przypadnie $\\frac{1}{2}$ całej tabliczki, siostrze $\\frac{5}{12}$ całej tabliczki, a jemu $\\frac{1}{6}$ całej tabliczki. Czy taki podział tabliczki czekolady jest możliwy? Uzasadnij swoją odpowiedź.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19820,14 +19901,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z17",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 17",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2021-maj/z17-1.png)",
+    "prompt": "Adam mieszka w miejscowości Bocianowo, a jego kolega Bartek - w miejscowości Żabno. Adam umówił się z Bartkiem w Żabnie na godzinę 18:00. Wyjechał z Bocianowa na skuterze o godzinie 17:20. Średnia prędkość jazdy Adama była równa $25\\ \\frac{km}{h}$.\n\nNa kwadratowej siatce Adam przedstawił schemat trasy, którą jechał.\n\n![Rysunek 1](/cke-matura/e8-2021-maj/z17-fig1.png)\n\nO której godzinie Adam dotarł na spotkanie z Bartkiem? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19853,7 +19934,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2021-maj/z18-1.png)",
+    "prompt": "Ania chciała kupić 10 jednakowych puszek karmy dla psa, ale zabrakło jej 11 złotych. Kupiła 6 takich puszek karmy i zostało jej 3,40 złotych. Ile kosztuje jedna puszka karmy? Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19872,14 +19953,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2021-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2021 - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2021-maj/z19-1.png)\n\n![Zadanie 19](/cke-matura/e8-2021-maj/z19-2.png)",
+    "prompt": "Dany jest prostokąt $ABCD$ o wymiarach $12 \\text{ cm}$ i $16 \\text{ cm}$. Odcinek $AC$ jest przekątną tego prostokąta. Odcinek $DS$ jest wysokością trójkąta $ACD$ (patrz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2021-maj/z19-fig1.png)\n\nOblicz długość odcinka $DS$. Zapisz obliczenia.\n\n![Rysunek 2](/cke-matura/e8-2021-maj/z19-fig2.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19924,16 +20005,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2022-maj/z02-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $\\frac{4^2}{5} - 3^2$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$- \\frac{29}{5}$",
+      "$- \\frac{22}{5}$",
+      "$\\frac{7}{5}$",
+      "$\\frac{61}{5}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $-\\frac{29}{5}$",
@@ -19951,17 +20035,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 3",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2022-maj/z03-1.png)",
+    "prompt": "Spośród wszystkich liczb trzycyfrowych o sumie cyfr równej 6 wybrano liczbę największą i liczbę najmniejszą.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSuma wybranych liczb jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$714$",
+      "$705$",
+      "$606$",
+      "$327$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 705",
     "solutionSteps": [
       "1. Znajdujemy największą liczbę trzycyfrową, której suma cyfr jest równa $6$. Aby liczba była jak największa, cyfra setek musi być największa. Maksymalna cyfra setek, jaką możemy uzyskać przy sumie cyfr równej $6$, to $6$ (gdy pozostałe cyfry są zerami).\n Liczba ta to $600$ ($6+0+0=6$).\n\n2. Znajdujemy najmniejszą liczbę trzycyfrową, której suma cyfr jest równa $6$. Aby liczba była jak najmniejsza, cyfra setek musi być najmniejsza. Najmniejsza możliwa cyfra setek dla liczby trzycyfrowej to $1$.\n Jeśli cyfra setek to $1$, to suma pozostałych cyfr musi być równa $6-1=5$. Aby liczba była najmniejsza, cyfra dziesiątek powinna być jak najmniejsza, czyli $0$. Wtedy cyfra jedności musi być równa $5-0=5$.\n Liczba ta to $105$ ($1+0+5=6$).\n\n3. Obliczamy sumę znalezionych liczb: $600 + 105 = 705$.\n\n4. Porównujemy wynik z podanymi opcjami. Wynik $705$ odpowiada opcji B."
@@ -19983,7 +20070,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2022-maj/z04-1.png)",
+    "prompt": "Liczba $k$ jest sumą liczb 323 i 160.\n\nCzy liczba $k$ jest podzielna przez 3? Wybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.\n\n| | | | |\n|:-----|:------|:----------|:-----------------------------------------------------|\n| A. | Tak, |  | 1. cyfrą jedności liczby $k$ jest 3. |\n|  |  | ponieważ | 2. żadna z liczb 323 i 160 nie dzieli się przez 3. |\n| B. | Nie, |  | 3. suma cyfr 3, 4 i 8 jest liczbą podzielną przez 3. |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20003,15 +20090,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 5",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2022-maj/z05-1.png)",
+    "prompt": "Dane są trzy liczby:\n$x = \\frac{10^{30} \\cdot 10^{70}}{10}$\n$y = (10^3)^{15} \\cdot 10^{60}$\n$z = 10^{50} \\cdot \\frac{10^{80}}{10^{20}}$\n\nKtóra z tych liczb jest mniejsza od liczby $10^{100}$? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "Tylko $x$.",
+      "Tylko $y$.",
+      "Tylko $z$.",
+      "Każda z liczb $x, y, z$."
     ],
     "correctIndex": 0,
     "explanation": "A. Tylko x.",
@@ -20035,7 +20125,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2022-maj/z06-1.png)",
+    "prompt": "Na uszycie 90 jednakowych bluzek w rozmiarze $S$ potrzeba tyle samo materiału, ile na uszycie 60 jednakowych bluzek w rozmiarze $L$. Przyjmij, że na uszycie większej lub mniejszej liczby bluzek potrzeba proporcjonalnie więcej lub mniej materiału.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nNa uszycie 240 bluzek w rozmiarze $S$ potrzeba tyle samo materiału, ile potrzeba na uszycie bluzek w rozmiarze $L$.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20061,7 +20151,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2022-maj/z07-1.png)",
+    "prompt": "Dane jest wyrażenie $\\frac{n^4 - 3}{6}$ oraz liczby: $-3, -1, 0, 1, 3$.\n\nDla której z danych liczb wartość podanego wyrażenia jest najmniejsza? Wybierz właściwą odpowiedź spośród podanych.\nA) $-3$ B) $-1$ C) $0$ D) $1$ E) $3$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20081,17 +20171,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 8",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2022-maj/z08-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\sqrt{60}$ jest",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "większa od 3 i mniejsza od 4.",
+      "większa od 4 i mniejsza od 5.",
+      "większa od 7 i mniejsza od 8.",
+      "większa od 8 i mniejsza od 9."
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. większa od 7 i mniejsza od 8.",
     "solutionSteps": [
       "1. Aby określić przedział, w którym znajduje się liczba $\\sqrt{60}$, szukamy najbliższych liczb całkowitych, których kwadraty są mniejsze i większe od 60.\n2. Obliczamy kwadraty kolejnych liczb całkowitych:\n $7^2 = 49$\n $8^2 = 64$\n3. Zauważamy, że liczba 60 znajduje się między 49 $a_{64}$:\n $49 < 60 < 64$\n4. Biorąc pierwiastek kwadratowy z każdej części tej nierówności (wszystkie liczby są dodatnie, więc znak nierówności się nie zmienia):\n $\\sqrt{49} < \\sqrt{60} < \\sqrt{64}$\n5. Obliczamy pierwiastki z liczb 49 i 64:\n $7 < \\sqrt{60} < 8$\n6. Zatem liczba $\\sqrt{60}$ jest większa od 7 i mniejsza od 8. Odpowiada to opcji C."
@@ -20106,18 +20199,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 9",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2022-maj/z09-1.png)",
+    "prompt": "Na osi liczbowej zaznaczono punkty $P, R$ i $S$ oraz podano współrzędne punktów $P$ i $R$. Odcinek $PS$ jest podzielony na 8 równych części (zobacz rysunek poniżej).\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z09-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWspółrzędna punktu $S$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$10$",
+      "$11$",
+      "$13$",
+      "$15$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 13",
     "solutionSteps": [
       "1. Wyznaczamy odległość między punktami $P$ i $R$. Współrzędna punktu $P$ to $-3$, a punktu $R$ to $7$.\n Odległość $PR = R - P = 7 - (-3) = 7 + 3 = 10$.\n\n2. Z rysunku wynika, że odcinek $PR$ składa się z $5$ równych części (licząc od $P$ jako początek, $R$ jest na piątej kresce od $P$).\n Długość jednej części wynosi: $10 \\div 5 = 2$.\n\n3. Odcinek $PS$ jest podzielony na $8$ równych części. Zatem odległość od punktu $P$ do punktu $S$ to $8$ takich części.\n Długość odcinka $PS = 8 \\times 2 = 16$.\n\n4. Obliczamy współrzędną punktu $S$, dodając długość odcinka $PS$ do współrzędnej punktu $P$.\n Współrzędna $S = -3 + 16 = 13$."
@@ -20133,17 +20229,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 10",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2022-maj/z10-1.png)",
+    "prompt": "Plik z prezentacją multimedialną Igora ma rozmiar 13 MB (megabajtów). Plik z prezentacją multimedialną Lidki ma 2,5 razy większy rozmiar (wyrażony w MB) niż plik z prezentacją Igora.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPlik z prezentacją Lidki ma większy rozmiar niż plik z prezentacją Igora o",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "12 MB",
+      "19,5 MB",
+      "25 MB",
+      "32,5 MB"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. 32,5 MB",
     "solutionSteps": [
       "1. Rozmiar pliku prezentacji Igora wynosi $13 \\text{ MB}$.\n2. Plik prezentacji Lidki ma \"2,5 razy większy rozmiar niż plik z prezentacją Igora\". Oznacza to, że jego rozmiar jest większy od rozmiaru pliku Igora o $2,5$ razy rozmiar pliku Igora.\n3. Zatem różnica w rozmiarze (o ile plik Lidki jest większy) wynosi:\n $2,5 \\times 13 \\text{ MB} = 32,5 \\text{ MB}$."
@@ -20158,18 +20257,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 11",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2022-maj/z11-1.png)",
+    "prompt": "Ogrodnik kupił ziemię ogrodową, którą zaplanował zużyć w maju, czerwcu i lipcu. W maju zużył $\\frac{1}{3}$ masy kupionej ziemi. W czerwcu zużył połowę masy ziemi, która została. Na lipiec pozostało mu jeszcze 60 kg ziemi.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJeżeli przez $x$ oznaczymy masę zakupionej ziemi, to sytuację przedstawioną w zadaniu opisuje równanie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(x - \\frac{1}{3}x) + \\frac{1}{2}x = 60$",
+      "$(x - \\frac{1}{3}x) + \\frac{1}{2}(x - \\frac{1}{3}x) = 60$",
+      "$(x - \\frac{1}{3}x) - \\frac{1}{2}x = 60$",
+      "$(x - \\frac{1}{3}x) - \\frac{1}{2}(x - \\frac{1}{3}x) = 60$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $(x - \\frac{1}{3}x) - \\frac{1}{2}(x - \\frac{1}{3}x) = 60$",
     "solutionSteps": [
       "1. Niech $x$ oznacza całkowitą masę zakupionej ziemi.\n2. W maju ogrodnik zużył $\\frac{1}{3}$ masy ziemi, czyli $\\frac{1}{3}x$. Po maju pozostało mu $x - \\frac{1}{3}x$ ziemi.\n3. W czerwcu ogrodnik zużył połowę masy ziemi, która pozostała po maju. Zatem w czerwcu zużył $\\frac{1}{2} \\cdot (x - \\frac{1}{3}x)$ ziemi.\n4. Masa ziemi, która pozostała na lipiec, to masa po maju pomniejszona o masę zużytą w czerwcu. Wiemy, że na lipiec pozostało 60 kg ziemi.\n5. Możemy zapisać to w postaci równania: $(x - \\frac{1}{3}x) - \\frac{1}{2}(x - \\frac{1}{3}x) = 60$."
@@ -20185,17 +20287,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 12",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2022-maj/z12-1.png)",
+    "prompt": "Trzy koleżanki kupiły bilety autobusowe w tym samym automacie. Martyna kupiła 6 biletów 75-minutowych i zapłaciła za te bilety 24 zł. Weronika kupiła 4 bilety 20-minutowe i zapłaciła za nie 12 zł. Ania kupiła 2 bilety 75-minutowe i 2 bilety 20-minutowe.\n\nIle Ania zapłaciła za bilety? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$7 \\text{ zł}$",
+      "$14 \\text{ zł}$",
+      "$19 \\text{ zł}$",
+      "$20 \\text{ zł}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 14 zł",
     "solutionSteps": [
       "1. Obliczamy cenę jednego biletu 75-minutowego na podstawie zakupów Martyny:\n Cena jednego biletu 75-minutowego $= 24 \\text{ zł} \\div 6 = 4 \\text{ zł}$.\n\n2. Obliczamy cenę jednego biletu 20-minutowego na podstawie zakupów Weroniki:\n Cena jednego biletu 20-minutowego $= 12 \\text{ zł} \\div 4 = 3 \\text{ zł}$.\n\n3. Obliczamy całkowity koszt biletów Ani. Ania kupiła 2 bilety 75-minutowe i 2 bilety 20-minutowe:\n Koszt biletów 75-minutowych Ani $= 2 \\cdot 4 \\text{ zł} = 8 \\text{ zł}$.\n Koszt biletów 20-minutowych Ani $= 2 \\cdot 3 \\text{ zł} = 6 \\text{ zł}$.\n Łączny koszt dla Ani $= 8 \\text{ zł} + 6 \\text{ zł} = 14 \\text{ zł}$."
@@ -20210,18 +20315,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 13",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2022-maj/z13-1.png)",
+    "prompt": "Dany jest trójkąt $ABC$, w którym kąt $\\angle BCA$ ma miarę $35^\\circ$. Punkt $D$ leży na boku $BC$ tego trójkąta. Odcinek $AD$ ma taką samą długość jak odcinek $BD$. Kąt $\\angle ADC$ ma miarę $130^\\circ$ (zobacz rysunek poniżej).\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nKąt $\\angle CAB$ ma miarę",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$95^\\circ$",
+      "$75^\\circ$",
+      "$90^\\circ$",
+      "$80^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $80^\\circ$",
     "solutionSteps": [
       "1. Kąty $ADC$ i $ADB$ są kątami przyległymi, więc ich suma wynosi $180^\\circ$.\n $m(\\angle ADB) = 180^\\circ - m(\\angle ADC) = 180^\\circ - 130^\\circ = 50^\\circ$.\n\n2. Trójkąt $ABD$ jest równoramienny, ponieważ odcinek $AD$ ma taką samą długość jak odcinek $BD$. W trójkącie równoramiennym kąty przy podstawie są równe, więc $m(\\angle DAB) = m(\\angle ABD)$.\n Suma kątów w trójkącie $ABD$ wynosi $180^\\circ$.\n $m(\\angle DAB) + m(\\angle ABD) + m(\\angle ADB) = 180^\\circ$\n $2 \\cdot m(\\angle ABD) + 50^\\circ = 180^\\circ$\n $2 \\cdot m(\\angle ABD) = 130^\\circ$\n $m(\\angle ABD) = 65^\\circ$.\n Zatem kąt $ABC$ trójkąta $ABC$ ma miarę $m(\\angle ABC) = 65^\\circ$.\n\n3. Suma kątów w trójkącie $ABC$ wynosi $180^\\circ$. Znamy $m(\\angle BCA) = 35^\\circ$ i $m(\\angle ABC) = 65^\\circ$. Obliczamy kąt $CAB$.\n $m(\\angle CAB) + m(\\angle ABC) + m(\\angle BCA) = 180^\\circ$\n $m(\\angle CAB) + 65^\\circ + 35^\\circ = 180^\\circ$\n $m(\\angle CAB) + 100^\\circ = 180^\\circ$\n $m(\\angle CAB) = 180^\\circ - 100^\\circ = 80^\\circ$."
@@ -20237,17 +20345,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2022-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 14",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2022-maj/z14-1.png)",
+    "prompt": "W pudełku było wyłącznie 6 kulek zielonych i 8 kulek niebieskich. Po dołożeniu do tego pudełka pewnej liczby kulek zielonych prawdopodobieństwo wylosowania kulki niebieskiej jest równe $\\frac{1}{4}$.\n\nIle kulek zielonych dołożono do pudełka? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "10",
+      "16",
+      "18",
+      "24"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 18",
     "solutionSteps": [
       "1. Na początku w pudełku było 6 kulek zielonych i 8 kulek niebieskich. Całkowita liczba kulek wynosiła $6 + 8 = 14$.\n2. Do pudełka dołożono pewną liczbę kulek zielonych. Oznaczmy tę liczbę jako $x$.\n3. Po dołożeniu kulek zielonych liczba kulek zielonych wynosi $6 + x$, liczba kulek niebieskich nadal wynosi 8. Całkowita liczba kulek w pudełku wynosi $14 + x$.\n4. Prawdopodobieństwo wylosowania kulki niebieskiej to stosunek liczby kulek niebieskich do całkowitej liczby kulek. Zgodnie z treścią zadania to prawdopodobieństwo jest równe $\\frac{1}{4}$.\n5. Ustawiamy równanie:\n $\\frac{8}{14 + x} = \\frac{1}{4}$\n6. Rozwiązujemy równanie dla $x$:\n $8 \\cdot 4 = 1 \\cdot (14 + x)$\n $32 = 14 + x$\n $x = 32 - 14$\n $x = 18$"
@@ -20262,14 +20373,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2022-maj/z15-1.png)",
+    "prompt": "Na rysunku przedstawiono trapez $KLMN$ zbudowany z trzech jednakowych trójkątów prostokątnych o przyprostokątnych długości 3 cm i 4 cm.\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z15-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Pole trapezu $KLMN$ jest równe $18 \\text{ cm}^2$. |  |  |\n| Obwód trapezu $KLMN$ jest równy $18 \\text{ cm}$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20295,7 +20406,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2022-maj/z16-1.png)",
+    "prompt": "Do wykonania naszyjnika Hania przygotowała 4 korale srebrne, 8 korali czerwonych i kilka korali zielonych. Następnie ze wszystkich przygotowanych korali zrobiła naszyjnik. Zielone korale stanowią 20% wszystkich korali w zrobionym naszyjniku.\n\nOblicz, ile zielonych korali jest w naszyjniku. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20321,7 +20432,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2022-maj/z17-1.png)",
+    "prompt": "Kierowca przejechał ze stałą prędkością trasę o długości 22,5 km od godziny 7:50 do godziny 8:05.\n\nOblicz prędkość, z jaką kierowca przejechał tę trasę. Wynik wyraź w $\\frac{km}{h}$.\nZapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z17-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20347,7 +20458,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2022-maj/z18-1.png)",
+    "prompt": "Dany jest romb $ABCD$. Obwód tego rombu jest równy $52$ cm, a przekątna $AC$ ma długość $24$ cm (zobacz rysunek poniżej).\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z18-fig1.png)\n\nOblicz długość przekątnej $BD$ rombu $ABCD$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20366,14 +20477,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2022-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2022 - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2022-maj/z19-1.png)",
+    "prompt": "Na rysunku przedstawiono siatkę graniastosłupa prawidłowego czworokątnego oraz zapisano niektóre wymiary tej siatki.\n\n![Rysunek 1](/cke-matura/e8-2022-maj/z19-fig1.png)\n\nOblicz objętość tego graniastosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20399,7 +20510,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2023-maj/z01-1.png)",
+    "prompt": "Poniżej przedstawiono składniki potrzebne do przygotowania ciasta na 8 gofrów.\n\nGofry\nSkładniki na 8 gofrów:\n- $1\\frac{1}{2}$ szklanki mąki\n- $1\\frac{1}{3}$ szklanki mleka\n-2 jajka\n- $1\\frac{1}{2}$ łyżeczki proszku do pieczenia\n-2 łyżeczki cukru pudru\n- $\\frac{1}{2}$ szklanki oleju\n- szczypta soli\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z01-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :-------------------------------------------------------------------------------------------------------------------------------- | :---: | :---: |\n| Do przygotowania ciasta na 40 gofrów, przy zachowaniu właściwych proporcji odpowiednich składników, potrzeba 10 jajek. |  |  |\n| Do przygotowania ciasta na 72 gofry, przy zachowaniu właściwych proporcji odpowiednich składników, potrzeba 12 szklanek mleka. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20444,18 +20555,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2023-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2023-maj/z03-1.png)",
+    "prompt": "Dane są cztery wyrażenia:\n$G = 2x^2 + 2$\n$H = 2x^2 + 2x$\n$J = 2x^2 - 2$\n$K = 2x^2 - 2x$\n\nJedno z tych wyrażeń przyjmuje wartość 0 dla $x = 1$ oraz dla $x = -1$.\n\nKtóre to wyrażenie? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$G$",
+      "$H$",
+      "$J$",
+      "$K$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $J$",
     "solutionSteps": [
       "1. Sprawdzamy wyrażenie $G = 2x^2 + 2$:\n Dla $x=1$: $G = 2 \\cdot (1)^2 + 2 = 2 \\cdot 1 + 2 = 2 + 2 = 4$. Ponieważ $4 \\neq 0$, wyrażenie $G$ nie jest szukanym wyrażeniem.\n2. Sprawdzamy wyrażenie $H = 2x^2 + 2x$:\n Dla $x=1$: $H = 2 \\cdot (1)^2 + 2 \\cdot 1 = 2 \\cdot 1 + 2 = 2 + 2 = 4$. Ponieważ $4 \\neq 0$, wyrażenie $H$ nie jest szukanym wyrażeniem.\n3. Sprawdzamy wyrażenie $J = 2x^2 - 2$:\n Dla $x=1$: $J = 2 \\cdot (1)^2 - 2 = 2 \\cdot 1 - 2 = 2 - 2 = 0$.\n Dla $x=-1$: $J = 2 \\cdot (-1)^2 - 2 = 2 \\cdot 1 - 2 = 2 - 2 = 0$.\n Ponieważ dla obu wartości $x$ wyrażenie $J$ przyjmuje wartość $0$, jest to szukane wyrażenie.\n4. Dla kompletności sprawdzamy wyrażenie $K = 2x^2 - 2x$:\n Dla $x=1$: $K = 2 \\cdot (1)^2 - 2 \\cdot 1 = 2 \\cdot 1 - 2 = 2 - 2 = 0$.\n Dla $x=-1$: $K = 2 \\cdot (-1)^2 - 2 \\cdot (-1) = 2 \\cdot 1 - (-2) = 2 + 2 = 4$. Ponieważ $4 \\neq 0$, wyrażenie $K$ nie jest szukanym wyrażeniem."
@@ -20503,7 +20617,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2023-maj/z05-1.png)",
+    "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nWyrażenie $\\sqrt{81} - \\sqrt{49}$ jest równe.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20522,18 +20636,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2023-maj-z06",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 6",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "procenty",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2023-maj/z06-1.png)",
+    "prompt": "W sadzie rosną drzewa owocowe: grusze i jabłonie. Liczba grusz jest o 40% większa od liczby jabłoni. Jabłoni jest o 50 mniej niż grusz.\n\nIle jabłoni rośnie w tym sadzie? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "20",
+      "30",
+      "70",
+      "125"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. 125",
     "solutionSteps": [
       "1. Oznaczmy liczbę jabłoni jako $J$ i liczbę grusz jako $G$.\n2. Zgodnie z treścią zadania \"Liczba grusz jest o 40% większa od liczby jabłoni\", co możemy zapisać jako:\n $G = J + 0.4J$\n $G = 1.4J$\n3. Druga informacja to \"Jabłoni jest o 50 mniej niż grusz\", co zapisujemy jako:\n $J = G - 50$\n4. Podstawiamy wyrażenie na $G$ z pierwszego równania do drugiego równania:\n $J = 1.4J - 50$\n5. Rozwiązujemy równanie, aby znaleźć $J$:\n $J - 1.4J = -50$\n $-0.4J = -50$\n $0.4J = 50$\n $J = \\frac{50}{0.4}$\n $J = \\frac{500}{4}$\n $J = 125$"
@@ -20555,7 +20672,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2023-maj/z07-1.png)",
+    "prompt": "Uzupełnij poniższe zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nIloraz $\\frac{10^8}{5^8}$ jest równy.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20575,15 +20692,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2023-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 8",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2023-maj/z08-1.png)",
+    "prompt": "Liczbę $x$ powiększono o 7, a następnie otrzymany wynik zwiększono 4-krotnie.\nLiczbę $y$ zwiększono 5-krotnie, a otrzymany wynik powiększono o 3.\n\nKtóra para wyrażeń algebraicznych poprawnie opisuje wykonane działania? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$4(x+7)$ oraz $5y+3$",
+      "$4x+7$ oraz $5y+3$",
+      "$4(x+7)$ oraz $5(y+3)$",
+      "$4x+7$ oraz $5(y+3)$"
     ],
     "correctIndex": 0,
     "explanation": "A. $4(x+7)$ oraz $5y+3$",
@@ -20600,18 +20720,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2023-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 9",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2023-maj/z09-1.png)",
+    "prompt": "Pewien ostrosłup ma 16 wierzchołków.\n\nIle wierzchołków ma graniastosłup o takiej samej podstawie, jaką ma ten ostrosłup? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "17",
+      "30",
+      "32",
+      "45"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 30",
     "solutionSteps": [
       "1. Określamy liczbę wierzchołków ostrosłupa. Wzór na liczbę wierzchołków ostrosłupa o podstawie n-kątnej to $W_O = n + 1$, gdzie $n$ to liczba wierzchołków podstawy.\n2. Zgodnie z treścią zadania ostrosłup ma 16 wierzchołków. Podstawiamy tę wartość do wzoru: $16 = n + 1$.\n3. Obliczamy liczbę wierzchołków podstawy ostrosłupa (czyli liczbę boków podstawy): $n = 16 - 1 = 15$. Oznacza to, że ostrosłup ma w podstawie piętnastokąt.\n4. Graniastosłup ma taką samą podstawę jak ostrosłup, czyli również piętnastokąt (jego podstawa ma 15 wierzchołków).\n5. Określamy liczbę wierzchołków graniastosłupa. Wzór na liczbę wierzchołków graniastosłupa o podstawie n-kątnej to $W_G = 2n$, ponieważ ma on dwie identyczne podstawy, każda z $n$ wierzchołkami.\n6. Podstawiamy $n = 15$ do wzoru na liczbę wierzchołków graniastosłupa: $W_G = 2 \\times 15 = 30$."
@@ -20627,15 +20750,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2023-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 10",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2023-maj/z10-1.png)",
+    "prompt": "Na planie miasta odległość w linii prostej od punktu oznaczającego przystanek autobusowy Dworzec do punktu oznaczającego przystanek autobusowy Galeria jest równa 8 cm. Plan miasta został wykonany w skali 1 : 4 000.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z10-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nOdległość w linii prostej w terenie między tymi przystankami jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "320m",
+      "500m",
+      "3 200m",
+      "5 000m"
     ],
     "correctIndex": 0,
     "explanation": "A. 320m",
@@ -20659,7 +20785,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2023-maj/z11-1.png)",
+    "prompt": "Z urny, w której jest wyłącznie 18 kul białych i 12 kul czarnych, losujemy 1 kulę.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :------------------------------------------------------ | :-: | :-: |\n| Prawdopodobieństwo wylosowania kuli białej jest równe $\\frac{3}{5}$. | P | F |\n| Prawdopodobieństwo wylosowania kuli czarnej jest mniejsze od $\\frac{1}{3}$. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20679,17 +20805,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2023-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 12",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2023-maj/z12-1.png)",
+    "prompt": "W prostokącie $ABCD$ punkty $E$ i $F$ są środkami boków $BC$ i $CD$ (zobacz rysunek). Długość odcinka $EC$ jest równa $6$ cm, a długość odcinka $EF$ jest równa $10$ cm.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z12-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObwód prostokąta $ABCD$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$64$ cm",
+      "$56$ cm",
+      "$40$ cm",
+      "$28$ cm"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 56 cm",
     "solutionSteps": [
       "1. Wyznaczamy długość boku $BC$.\n Punkt $E$ jest środkiem boku $BC$, więc długość $BC$ jest dwukrotnie większa od długości odcinka $EC$.\n $BC = 2 \\cdot EC = 2 \\cdot 6 \\text{ cm} = 12 \\text{ cm}$.\n\n2. Wyznaczamy długość odcinka $FC$.\n Trójkąt $EFC$ jest trójkątem prostokątnym, ponieważ kąt $C$ w prostokącie $ABCD$ wynosi $90^\\circ$. Stosujemy twierdzenie Pitagorasa dla tego trójkąta: $FC^2 + EC^2 = EF^2$.\n $FC^2 + 6^2 = 10^2$\n $FC^2 + 36 = 100$\n $FC^2 = 100 - 36$\n $FC^2 = 64$\n $FC = \\sqrt{64} = 8 \\text{ cm}$.\n\n3. Wyznaczamy długość boku $CD$.\n Punkt $F$ jest środkiem boku $CD$, więc długość $CD$ jest dwukrotnie większa od długości odcinka $FC$.\n $CD = 2 \\cdot FC = 2 \\cdot 8 \\text{ cm} = 16 \\text{ cm}$.\n\n4. Obliczamy obwód prostokąta $ABCD$.\n Długości boków prostokąta to $BC = 12 \\text{ cm}$ i $CD = 16 \\text{ cm}$.\n Obwód prostokąta $L = 2 \\cdot (BC + CD)$.\n $L = 2 \\cdot (12 \\text{ cm} + 16 \\text{ cm})$\n $L = 2 \\cdot (28 \\text{ cm})$\n $L = 56 \\text{ cm}$."
@@ -20711,7 +20840,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2023-maj/z13-1.png)",
+    "prompt": "Agata na dużej kartce w kratkę narysowała figurę złożoną z 40 połączonych odcinków, które kolejno ponumerowała liczbami naturalnymi od 1 do 40.\nNa rysunku przedstawiono fragment tej figury, złożony z ośmiu początkowych odcinków. Kolejne odcinki tej figury Agata narysowała według tej samej reguły, którą zastosowała do narysowania odcinków $1 - 8$.\n\nUwaga: wszystkie komórki kratki są takimi samymi kwadratami.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z13-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|:---------------------------------------------------------------------------------|:-:|:-:|\n| Proste zawierające odcinki o numerach 1 oraz 7 są wzajemnie prostopadłe. |  |  |\n| Proste zawierające odcinki o numerach 5 oraz 33 są wzajemnie równoległe. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20737,7 +20866,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2023-maj/z14-1.png)",
+    "prompt": "Na rysunku przedstawiono trzy figury: kwadrat $F_1$, kwadrat $F_2$ i prostokąt $F_3$, oraz podano ich wymiary.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z14-fig1.png)\n\nCzy z figur $F_1$, $F_2$, $F_3$ można ułożyć, bez rozcinania tych figur, kwadrat $K$ o polu $49 \\text{ cm}^2$?\nWybierz odpowiedź A albo B i jej uzasadnienie spośród 1., 2. albo 3.\n\n| | | | |\n|-----|-----|-------|---------------------------------------------------------------|\n| **A.** | Tak, | ponieważ | **1.** suma obwodów figur $F_2$ i $F_3$ jest równa obwodowi kwadratu $K$. |\n| **B.** | Nie, |  | **2.** suma pól figur $F_1$, $F_2$ i $F_3$ jest równa $49 \\text{ cm}^2$. |\n|  |  |  | **3.** suma długości dowolnych boków figur $F_1$, $F_2$ i $F_3$ nie jest równa $7 \\text{ cm}$. |\n\nB.3",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20756,14 +20885,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2023-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2023-maj/z15-1.png)",
+    "prompt": "W czworokącie $ABCD$ boki $AB$, $CD$ i $DA$ mają równe długości, $a_{k}$ąt $BCD$ ma miarę $131^\\circ$. Przekątna $AC$ dzieli ten czworokąt na trójkąt równoboczny i na trójkąt równoramienny (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z15-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :-------------------------------- | :-: | :-: |\n| Kąt $ABC$ ma miarę $60^\\circ$. |  |  |\n| Kąt $DAB$ ma miarę $98^\\circ$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20789,7 +20918,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2023-maj/z16-1.png)",
+    "prompt": "Cena biletu do teatru jest o 64 zł większa od ceny biletu do kina. Za 4 bilety do teatru i 5 biletów do kina zapłacono łącznie 400 zł.\n\nOblicz cenę jednego biletu do teatru. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20834,14 +20963,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2023-maj-z18",
     "title": "Egzamin ósmoklasisty - maj 2023 - zad. 18",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2023-maj/z18-1.png)",
+    "prompt": "W czworokącie $ABCD$ o polu $48 \\text{ cm}^2$ przekątna $AC$ ma długość $8 \\text{ cm}$ i dzieli ten czworokąt na dwa trójkąty: $ABC$ i $ACD$ (zobacz rysunek). Wysokość trójkąta $ACD$ poprowadzona z wierzchołka $D$ do prostej $AC$ jest równa $2 \\text{ cm}$.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z18-fig1.png)\n\nOblicz wysokość trójkąta $ABC$ poprowadzoną z wierzchołka $B$ do prostej $AC$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20867,7 +20996,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2023-maj/z19-1.png)",
+    "prompt": "Z pięciu prostopadłościennych klocków o jednakowych wymiarach ułożono figurę. Kształt i wybrane wymiary tej figury przedstawiono na rysunku.\n\n![Rysunek 1](/cke-matura/e8-2023-maj/z19-fig1.png)\n\nOblicz objętość jednego klocka. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20886,14 +21015,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2024-maj/z01-1.png)",
+    "prompt": "Ala codziennie uczyła się języka hiszpańskiego. Na diagramie przedstawiono, ile czasu przeznaczyła na naukę tego języka w kolejnych dniach tygodnia od poniedziałku do soboty.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z01-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :------------------------------------------------------------------------------------------------------------------------------------ | :-: | :-: |\n| Ala przez cztery $dni - od$ poniedziałku do czwartku - na naukę języka hiszpańskiego przeznaczyła łącznie 2 godziny i 10 minut. |  |  |\n| Na naukę języka hiszpańskiego w sobotę Ala przeznaczyła o 40% czasu mniej niż w piątek. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20913,17 +21042,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2024-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 2",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2024-maj/z02-1.png)",
+    "prompt": "Wypisano ułamki spełniające łącznie następujące warunki:\n- mianownik każdego z nich jest równy 4\n- licznik każdego z nich jest liczbą naturalną większą od mianownika\n- każdy z tych ułamków jest większy od liczby 3 oraz mniejszy od liczby 5.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich ułamków spełniających powyższe warunki jest",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "sześć.",
+      "siedem.",
+      "osiem.",
+      "dziewięć."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. siedem.",
     "solutionSteps": [
       "1. Zgodnie z pierwszym warunkiem, mianownik każdego ułamka jest równy 4. Zatem ułamek ma postać $\\frac{x}{4}$, gdzie $x$ jest licznikiem.\n2. Zgodnie z trzecim warunkiem, każdy ułamek jest większy od 3 i mniejszy od 5. Możemy zapisać to jako nierówność: $3 < \\frac{x}{4} < 5$.\n3. Aby wyznaczyć zakres wartości licznika $x$, pomnożymy wszystkie części nierówności przez 4:\n $3 \\cdot 4 < x < 5 \\cdot 4$\n $12 < x < 20$.\n4. Zgodnie z drugim warunkiem, licznik $x$ musi być liczbą naturalną większą od mianownika. Mianownik wynosi 4, więc $x > 4$.\n5. Łącząc warunki z kroku 3 i 4, licznik $x$ musi być liczbą naturalną spełniającą nierówności: $12 < x < 20$ i $x > 4$. Ponieważ wszystkie liczby naturalne większe od 12 są również większe od 4, wystarczy rozważyć liczby naturalne w przedziale $(12, 20)$.\n6. Liczby naturalne większe od 12 i mniejsze od 20 to: $13, 14, 15, 16, 17, 18, 19$.\n7. Zliczamy te liczby. Jest ich $19 - 13 + 1 = 7$.\n Ułamki spełniające warunki to: $\\frac{13}{4}, \\frac{14}{4}, \\frac{15}{4}, \\frac{16}{4}, \\frac{17}{4}, \\frac{18}{4}, \\frac{19}{4}$.\n Jest ich siedem."
@@ -20938,14 +21070,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 3",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2024-maj/z03-1.png)",
+    "prompt": "Średnia arytmetyczna trzech liczb: 12, 14, $k$, jest równa 16.\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :-------------------------------------------------------------------------------- | :-: | :-: |\n| Liczba $k$ jest równa 22. |  |  |\n| Średnia arytmetyczna liczb: 12, 14, $k$, 11, 17, jest większa od 16. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20964,14 +21096,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 4",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2024-maj/z04-1.png)",
+    "prompt": "Dane są dwie liczby $x$ i $y$ zapisane za pomocą wyrażeń arytmetycznych:\n$x = \\frac{4}{5} \\cdot \\left(-\\frac{4}{3}\\right)$\n$y = \\frac{4}{5} + \\left(-\\frac{4}{3}\\right)$\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nLiczba $y$ jest liczbą.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -20991,15 +21123,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2024-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 5",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2024-maj/z05-1.png)",
+    "prompt": "Dany jest trapez $ABCD$, w którym bok $AB$ jest równoległy do boku $DC$. W tym trapezie poprowadzono odcinek $EC$ równoległy do boku $AD$, podano miary dwóch kątów oraz oznaczono kąt $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z05-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nKąt $\\alpha$ ma miarę",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$55^\\circ$",
+      "$50^\\circ$",
+      "$45^\\circ$",
+      "$20^\\circ$"
     ],
     "correctIndex": 0,
     "explanation": "A. $55^\\circ$",
@@ -21016,18 +21151,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z06",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 6",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2024-maj/z06-1.png)",
+    "prompt": "Dane jest równanie $5x = \\frac{y}{w}$, gdzie $x, y, w$ są różne od 0.\n\nZadaniem Pawła było przekształcanie tego równania tak, aby wyznaczyć $x, y, w$.\nPaweł otrzymał trzy równania:\nI. $x = \\frac{y}{5w}$\nII. $y = \\frac{5x}{w}$\nIII. $w = \\frac{y}{5x}$\n\nKtóre z równań $I - III$ są poprawnymi przekształceniami równania $5x = \\frac{y}{w}$?\nWybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "I i II",
+      "II i III",
+      "I i III",
+      "I, II, III"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. I i III",
     "solutionSteps": [
       "1. Dana jest równanie wyjściowe: $5x = \\frac{y}{w}$.\n2. Sprawdzamy poprawność przekształcenia I: $x = \\frac{y}{5w}$.\n Aby wyznaczyć $x$ z równania wyjściowego, dzielimy obie strony przez 5:\n $\\frac{5x}{5} = \\frac{y}{w \\cdot 5}$\n $x = \\frac{y}{5w}$\n Przekształcenie I jest poprawne.\n3. Sprawdzamy poprawność przekształcenia II: $y = \\frac{5x}{w}$.\n Aby wyznaczyć $y$ z równania wyjściowego, mnożymy obie strony przez $w$:\n $5x \\cdot w = \\frac{y}{w} \\cdot w$\n $5xw = y$\n Czyli $y = 5xw$. Przekształcenie II podaje $y = \\frac{5x}{w}$, co jest błędne.\n4. Sprawdzamy poprawność przekształcenia III: $w = \\frac{y}{5x}$.\n Aby wyznaczyć $w$ z równania wyjściowego, najpierw mnożymy obie strony przez $w$:\n $5x \\cdot w = y$\n Następnie dzielimy obie strony przez $5x$:\n $w = \\frac{y}{5x}$\n Przekształcenie III jest poprawne.\n\n5. Poprawne przekształcenia to I i III."
@@ -21049,7 +21187,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2024-maj/z07-1.png)",
+    "prompt": "Oceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Iloczyn $3 \\cdot 9^5$ jest równy wartości wyrażenia $3^{11}$. |  |  |\n| Wyrażenie $\\frac{2^8 \\cdot 2^7}{2^{10}}$ można zapisać w postaci $2^5$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21095,17 +21233,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2024-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 9",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2024-maj/z09-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x^2 + 2x - 5$",
+      "$x^2 - 2x + 5$",
+      "$x^2 + 2x - 15$",
+      "$x^2 - 2x + 15$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $x^2 - 2x + 15$",
     "solutionSteps": [
       "1. Rozpisujemy pierwsze wyrażenie, mnożąc $x$ przez każdy składnik w nawiasie: $x(x + 4) = x \\cdot x + x \\cdot 4 = x^2 + 4x$.\n2. Rozpisujemy drugie wyrażenie, mnożąc $-3$ przez każdy składnik w nawiasie: $-3(2x - 5) = -3 \\cdot 2x - 3 \\cdot (-5) = -6x + 15$.\n3. Sumujemy otrzymane wyrażenia: $(x^2 + 4x) + (-6x + 15) = x^2 + 4x - 6x + 15$.\n4. Redukujemy wyrazy podobne ($4x$ i $-6x$): $x^2 + (4 - 6)x + 15 = x^2 - 2x + 15$."
@@ -21146,14 +21287,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 11",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2024-maj/z11-1.png)",
+    "prompt": "Na wykresie przedstawiono zależność pola pomalowanej powierzchni od ilości zużytej farby. Pole pomalowanej powierzchni jest wprost proporcjonalne do ilości zużytej farby.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z11-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| 18 litrów tej farby wystarczy na pomalowanie $180 m^2$ powierzchni. | P |  |\n| Na pomalowanie $125 m^2$ powierzchni wystarczy 12 litrów tej farby. |  | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21172,16 +21313,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 12",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2024-maj/z12-1.png)",
+    "prompt": "W układzie współrzędnych $(x, y)$ zaznaczono pięć punktów $P_1$, $P_2$, $P_3$, $P_4$ oraz $P_5$. Wszystkie współrzędne tych punktów są liczbami całkowitymi. Punkt $P_1$ ma współrzędne $(-1, -2)$.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z12-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJeżeli współrzędną $x$ punktu $P_1$ zwiększymy o 4, a współrzędną $y$ tego punktu zwiększymy o 3, to otrzymamy współrzędne punktu",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$P_2$",
+      "$P_3$",
+      "$P_4$",
+      "$P_5$"
     ],
     "correctIndex": 0,
     "explanation": "A. $P_2$",
@@ -21199,17 +21343,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2024-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 13",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2024-maj/z13-1.png)",
+    "prompt": "Na rysunku przedstawiono prostokąt o bokach długości $a$ i $b$ podzielony na sześć kwadratów.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\nStosunek długości boków $a : b$ tego prostokąta jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$6 : 5$",
+      "$5 : 4$",
+      "$4 : 3$",
+      "$3 : 2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $4:3$",
     "solutionSteps": [
       "1. Oznaczmy długość boku najmniejszych kwadratów (w prawym dolnym rogu) jako $x$. Na rysunku widoczne są trzy takie kwadraty ułożone obok siebie. Ich łączna szerokość wynosi $3x$, a wysokość $x$.\n\n2. Spójrzmy na kwadrat znajdujący się bezpośrednio nad dwoma prawymi spośród tych trzech małych kwadratów. Jego szerokość musi wynosić $2x$. Ponieważ jest to kwadrat, jego wysokość również wynosi $2x$. (Nazwijmy go $S_D$).\n\n3. Możemy teraz określić całkowitą wysokość prostokąta $b$. Prawa krawędź prostokąta składa się z wysokości kwadratów $S_D$ i małych kwadratów pod nim. Zatem $b = x + 2x = 3x$.\n\n4. Przejdźmy do lewej części prostokąta. Widoczne są tam dwa kwadraty ułożone jeden na drugim. Oznaczmy bok dolnego lewego kwadratu jako $S_C$, a górnego lewego jako $S_A$.\n Wysokość prostokąta w tej części to $b = \\text{bok}(S_C) + \\text{bok}(S_A)$.\n Z rysunku wynika, że bok kwadratu $S_A$ jest dwa razy większy od boku kwadratu $S_C$.\n Dopasujmy to do naszej miary $x$. Dolny lewy kwadrat $S_C$ ma bok $x$. Górny lewy kwadrat $S_A$ ma bok $2x$.\n Sprawdźmy wysokość: $b = x + 2x = 3x$. To jest zgodne z wysokością wyliczoną w punkcie 3.\n\n5. Teraz określamy całkowitą szerokość prostokąta $a$. Górna krawędź prostokąta składa się z boków kwadratu $S_A$ (lewy górny) oraz kwadratu $S_B$ (prawy górny).\n Szerokość $S_A$ wynosi $2x$. Szerokość $S_B$ również wynosi $2x$ (jest to ten sam typ kwadratu co $S_A$ lub $S_D$).\n Zatem $a = \\text{bok}(S_A) + \\text{bok}(S_B) = 2x + 2x = 4x$.\n\n6. Obliczamy stosunek $a:b$:\n $a:b = 4x:3x = 4:3$.\n\n7. Sprawdzenie liczby kwadratów: Zgodnie z tym przyporządkowaniem, mamy:\n - Trzy kwadraty o boku $x$ (dolne, w tym $S_C$ i dwa z trzech małych).\n - Trzy kwadraty o boku $2x$ (górny lewy $S_A$, górny prawy $S_B$, środkowy prawy $S_D$).\n W sumie na rysunku jest 7 kwadratów (trzy $x \\times x$ i trzy $2x \\times 2x$ oraz jeden $x \\times x$ ułożony pod $S_A$).\n Zakładając, że pytanie \"podzielony na sześć kwadratów\" odnosi się do sześciu *różnych obszarów* kwadratów lub po prostu jest sformułowaniem, które ma doprowadzić do jednej z odpowiedzi, a wizualizacja jest wiążąca. Konfiguracja $a:b = 4:3$ jest spójna z rysunkiem."
@@ -21224,14 +21371,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 14",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2024-maj/z14-1.png)",
+    "prompt": "W trójkącie prostokątnym $ABC$ przyprostokątną $AC$ wydłużono o $7$ cm, a przyprostokątną $AB$ wydłużono o $12$ cm i otrzymano trójkąt prostokątny równoramienny $ADE$ o polu równym $200$ cm$^2$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z14-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Przyprostokątna trójkąta $ADE$ jest równa $20$ cm. |  |  |\n| Pole trójkąta $ABC$ jest równe $52$ cm$^2$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21250,14 +21397,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2024-maj/z15-1.png)",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Pole powierzchni całkowitej tej bryły jest równe $P$, a jedna ściana boczna ma pole równe $\\frac{2}{9}P$.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nPole powierzchni bocznej tego ostrosłupa jest równe A B.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21283,7 +21430,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2024-maj/z16-1.png)",
+    "prompt": "Ela i Ania dostały w prezencie po jednym zestawie puzzli o takiej samej liczbie elementów. Ela ułożyła $\\frac{2}{5}$ swoich puzzli, a Ania $\\frac{1}{3}$ swoich. Dziewczynki ułożyły łącznie 440 elementów.\n\nOblicz, z ilu elementów składa się jeden zestaw puzzli. Zapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z16-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21302,14 +21449,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z17",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 17",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2024-maj/z17-1.png)",
+    "prompt": "Prostokąt $ABCD$ podzielono na trzy trójkąty: $AED$, $ACE$, $ABC$ (zobacz rysunek).\nNa rysunku podano również długości dwóch boków trójkąta $AED$ oraz zaznaczono dwa kąty trójkąta $ACE$, o takiej samej mierze $\\alpha$.\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z17-fig1.png)\n\nOblicz pole trapezu $ABCE$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21335,7 +21482,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2024-maj/z18-1.png)\n\n![Zadanie 18](/cke-matura/e8-2024-maj/z18-2.png)",
+    "prompt": "Pan Jan sprzedał w swoim sklepie 120 kg truskawek. Połowę masy tych truskawek sprzedał w dużych opakowaniach. 10% masy truskawek - w średnich, a pozostałe truskawki w małych opakowaniach. W tabeli podano informacje dotyczące sprzedaży truskawek w sklepie pana Jana.\n\n| Rodzaj opakowania | Masa truskawek w opakowaniu | Cena opakowania z truskawkami |\n|---|---|---|\n| duże | 1 kg | 18 zł |\n| średnie | 0,5 kg | 10 zł |\n| małe | 0,25 kg | 6 zł |\n\nOblicz, jaką kwotę otrzymał pan Jan ze sprzedaży wszystkich truskawek. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21354,14 +21501,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2024-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2024 - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2024-maj/z19-1.png)",
+    "prompt": "Z trzech jednakowych klocków w kształcie sześcianu i jednego klocka w kształcie ostrosłupa prawidłowego czworokątnego zbudowano dwie wieże (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2024-maj/z19-fig1.png)\n\n \n\n![Rysunek 2](/cke-matura/e8-2024-maj/z19-fig2.png)\n\nKrawędź sześcianu ma długość $10 \\text{ cm}$. Krawędź podstawy ostrosłupa prawidłowego czworokątnego ma długość $9 \\text{ cm}$, a jego objętość jest równa $324 \\text{ cm}^3$.\n\nOblicz różnicę wysokości obu wież. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21380,14 +21527,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z01",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/e8-2025-maj/z01-1.png)",
+    "prompt": "Deskorolka kosztuje 180 zł. Na diagramie przedstawiono kwoty, które Aldona odłożyła w styczniu, w lutym, w marcu i w kwietniu na zakup deskorolki.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z01-fig1.png)\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nW styczniu i lutym łącznie Aldona odłożyła kwoty potrzebnej na zakup deskorolki.\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21407,17 +21554,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z02",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 2",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/e8-2025-maj/z02-1.png)",
+    "prompt": "Dane jest wyrażenie\n$ \\left(2,4 - 5\\frac{1}{3}\\right) : (-2) $\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość tego wyrażenia jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\left(-1\\frac{8}{15}\\right)$",
+      "$\\left(-1\\frac{7}{15}\\right)$",
+      "$1\\frac{7}{15}$",
+      "$1\\frac{8}{15}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $1\\frac{7}{15}$",
     "solutionSteps": [
       "1. Zamieniamy ułamek dziesiętny na ułamek zwykły oraz liczbę mieszaną na ułamek niewłaściwy:\n $2,4 = \\frac{24}{10} = \\frac{12}{5}$\n $5\\frac{1}{3} = \\frac{5 \\cdot 3 + 1}{3} = \\frac{16}{3}$\n\n2. Wykonujemy odejmowanie w nawiasie, sprowadzając ułamki do wspólnego mianownika (15):\n $2,4 - 5\\frac{1}{3} = \\frac{12}{5} - \\frac{16}{3} = \\frac{12 \\cdot 3}{5 \\cdot 3} - \\frac{16 \\cdot 5}{3 \\cdot 5} = \\frac{36}{15} - \\frac{80}{15} = \\frac{36 - 80}{15} = \\frac{-44}{15}$\n\n3. Wykonujemy dzielenie przez $(-2)$:\n $\\frac{-44}{15} : (-2) = \\frac{-44}{15} \\cdot (-\\frac{1}{2})$\n\n4. Mnożymy ułamki. Iloczyn dwóch liczb ujemnych jest liczbą dodatnią:\n $\\frac{-44}{15} \\cdot (-\\frac{1}{2}) = \\frac{(-44) \\cdot (-1)}{15 \\cdot 2} = \\frac{44}{30}$\n\n5. Upraszczamy ułamek $\\frac{44}{30}$ przez podzielenie licznika i mianownika przez 2:\n $\\frac{44}{30} = \\frac{44 \\div 2}{30 \\div 2} = \\frac{22}{15}$\n\n6. Zamieniamy ułamek niewłaściwy na liczbę mieszaną:\n $\\frac{22}{15} = 1\\frac{7}{15}$\n\n7. Porównujemy wynik z podanymi opcjami. Wynik $1\\frac{7}{15}$ odpowiada opcji C."
@@ -21433,17 +21583,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z03",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 3",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2025-maj/z03-1.png)",
+    "prompt": "Dane są liczby: 91, 92, 95, 97.\n\nKtóra z podanych liczb przy dzieleniu przez 7 daje resztę 1? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "91",
+      "92",
+      "95",
+      "97"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 92",
     "solutionSteps": [
       "1. Sprawdzamy każdą z podanych liczb, dzieląc ją przez 7 i wyznaczając resztę.\n\n2. Dla liczby A. 91:\n $91 \\div 7 = 13$\n Reszta wynosi 0, ponieważ $91 = 7 \\cdot 13 + 0$.\n\n3. Dla liczby B. 92:\n $92 \\div 7$\n $13 \\cdot 7 = 91$\n $92 - 91 = 1$\n Zatem $92 = 7 \\cdot 13 + 1$.\n Reszta wynosi 1. Ta liczba spełnia warunek.\n\n4. Dla liczby C. 95:\n $95 \\div 7$\n $13 \\cdot 7 = 91$\n $95 - 91 = 4$\n Zatem $95 = 7 \\cdot 13 + 4$.\n Reszta wynosi 4.\n\n5. Dla liczby D. 97:\n $97 \\div 7$\n $13 \\cdot 7 = 91$\n $97 - 91 = 6$\n Zatem $97 = 7 \\cdot 13 + 6$.\n Reszta wynosi 6.\n\n6. Tylko liczba 92 przy dzieleniu przez 7 daje resztę 1."
@@ -21458,14 +21611,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z04",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 4",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/e8-2025-maj/z04-1.png)",
+    "prompt": "Średnia arytmetyczna czterech liczb $a, b, c, d$ jest równa 9, a średnia arytmetyczna dwóch liczb $e$ i $f$ jest równa 6.\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma liczb $a, b, c, d$ jest o A B większa od sumy liczb $e$ i $f$.\n\nŚrednia arytmetyczna liczb $a, b, c, d, e, f$ jest równa C D .\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21484,16 +21637,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z05",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 5",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2025-maj/z05-1.png)",
+    "prompt": "Obwód pięciokąta przedstawionego na rysunku wyraża się wzorem $L = 2a + 2b + c$.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z05-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWielkość $a$ wyznaczoną poprawnie z podanego wzoru opisuje równanie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$a = \\frac{L - 2b - c}{2}$",
+      "$a = \\frac{L - 2b + c}{2}$",
+      "$a = L + 2b - c$",
+      "$a = L - 2b - c$"
     ],
     "correctIndex": 0,
     "explanation": "A. $a = \\frac{L - 2b - c}{2}$",
@@ -21511,15 +21667,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z06",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 6",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2025-maj/z06-1.png)",
+    "prompt": "W pudełku znajdują się wyłącznie piłki białe, fioletowe i czarne. Piłek białych jest 4 razy więcej niż fioletowych i o 3 mniej niż czarnych. Liczbę piłek fioletowych oznaczymy przez $x$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nŁączną liczbę wszystkich piłek w pudełku opisuje wyrażenie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$9x + 3$",
+      "$9x - 3$",
+      "$6x + 3$",
+      "$6x - 3$"
     ],
     "correctIndex": 0,
     "explanation": "A. $9x + 3$",
@@ -21543,7 +21702,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2025-maj/z07-1.png)",
+    "prompt": "Dane są wyrażenia:\n$K = \\frac{1}{9} \\cdot \\sqrt{\\frac{1}{16} - \\frac{1}{16}} \\cdot \\sqrt{\\frac{1}{9}}$\n$L = 9 \\cdot \\sqrt{16} - 16 \\cdot \\sqrt{9}$\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n|---|---|---|\n| Wyrażenie $K$ ma wartość ujemną. |  | F |\n| Wartość wyrażenia $L$ jest większa od wartości wyrażenia $K$. |  | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21563,17 +21722,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z08",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 8",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2025-maj/z08-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $8^6 : 4^3$ zapisana w postaci potęgi liczby 2 jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$2^2$",
+      "$2^3$",
+      "$2^4$",
+      "$2^{12}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $2^{12}$",
     "solutionSteps": [
       "1. Zapisujemy podstawy potęg 8 i 4 jako potęgi liczby 2:\n$8 = 2^3$\n$4 = 2^2$\n\n2. Podstawiamy te wartości do wyrażenia $8^6 : 4^3$:\n$(2^3)^6 : (2^2)^3$\n\n3. Stosujemy wzór na potęgę potęgi $(a^m)^n = a^{m \\cdot n}$:\n$(2^3)^6 = 2^{3 \\cdot 6} = 2^{18}$\n$(2^2)^3 = 2^{2 \\cdot 3} = 2^6$\n\n4. Wyrażenie przyjmuje postać:\n$2^{18} : 2^6$\n\n5. Stosujemy wzór na dzielenie potęg o tej samej podstawie $a^m : a^n = a^{m-n}$:\n$2^{18} : 2^6 = 2^{18-6} = 2^{12}$"
@@ -21589,17 +21751,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z09",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 9",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2025-maj/z09-1.png)",
+    "prompt": "Rowerzysta pokonał odcinek drogi o długości 100 m z prędkością $5 \\frac{m}{s}$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRowerzysta pokonał ten odcinek drogi w czasie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "50 sekund.",
+      "20 sekund.",
+      "500 sekund.",
+      "200 sekund."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 20 sekund.",
     "solutionSteps": [
       "1. Zapisujemy dane z zadania: długość odcinka drogi $s = 100 \\text{ m}$, prędkość rowerzystki $v = 5 \\frac{\\text{m}}{\\text{s}}$.\n2. Korzystamy ze wzoru na prędkość $v = \\frac{s}{t}$, gdzie $t$ to czas. Aby obliczyć czas, przekształcamy wzór do postaci $t = \\frac{s}{v}$.\n3. Podstawiamy dane do wzoru: $t = \\frac{100 \\text{ m}}{5 \\frac{\\text{m}}{\\text{s}}}$.\n4. Obliczamy wartość czasu: $t = 20 \\text{ s}$."
@@ -21615,17 +21780,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-e8-2025-maj-z10",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 10",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2025-maj/z10-1.png)",
+    "prompt": "Na loterię przygotowano 72 losy i ponumerowano je kolejnymi liczbami naturalnymi od 1 do 72. Wygrywają losy o numerach od 1 do 9 i od 46 do 72. Pozostałe losy są puste. Ada jako pierwsza wyciąga jeden los.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPrawdopodobieństwo wyciągnięcia przez Adę losu pustego jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{26}{72}$",
+      "$\\frac{27}{72}$",
+      "$\\frac{35}{72}$",
+      "$\\frac{36}{72}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $\\frac{36}{72}$",
     "solutionSteps": [
       "1. Obliczamy całkowitą liczbę losów w loterii. Jest ich $72$. Zatem moc przestrzeni zdarzeń elementarnych wynosi $|\\Omega| = 72$.\n2. Obliczamy liczbę losów wygrywających.\n * Liczba losów wygrywających z zakresu od 1 do 9 wynosi $9 - 1 + 1 = 9$.\n * Liczba losów wygrywających z zakresu od 46 do 72 wynosi $72 - 46 + 1 = 27$.\n * Łączna liczba losów wygrywających to $9 + 27 = 36$.\n3. Obliczamy liczbę losów pustych. Skoro pozostałe losy są puste, to ich liczba jest równa całkowitej liczbie losów minus liczba losów wygrywających.\n * Liczba losów pustych wynosi $72 - 36 = 36$.\n * Niech zdarzenie A oznacza wylosowanie losu pustego. Wówczas moc zdarzenia A wynosi $|A| = 36$.\n4. Obliczamy prawdopodobieństwo wylosowania losu pustego korzystając ze wzoru $P(A) = \\frac{|A|}{|\\Omega|}$.\n * $P(A) = \\frac{36}{72}$.\n * Po uproszczeniu ułamka otrzymujemy $P(A) = \\frac{1}{2}$.\n5. Porównujemy otrzymane prawdopodobieństwo z podanymi opcjami. Wśród odpowiedzi znajduje się ułamek $\\frac{36}{72}$, który jest równy obliczonemu prawdopodobieństwu."
@@ -21640,14 +21808,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z11",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 11",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2025-maj/z11-1.png)",
+    "prompt": "Dany jest trójkąt prostokątny $ABC$. Na środku boku $AB$ zaznaczono punkt $D$. Następnie poprowadzono odcinek $DC$, dzielący trójkąt $ABC$ na dwa trójkąty $ADC$ i $DBC$. Ponadto $|AD| = |DB| = 30\\text{ cm}$ oraz $|DC| = 50\\text{ cm}$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z11-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :------------------------------------------------------------------ | :-: | :-: |\n| Pole trójkąta $DBC$ jest równe $600\\text{ cm}^2$. |  |  |\n| Pole trójkąta $ABC$ jest dwa razy większe od pola trójkąta $ADC$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21666,14 +21834,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z12",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 12",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2025-maj/z12-1.png)",
+    "prompt": "Na osi liczbowej zaznaczono punkty $A$, $B$ i $C$. Odcinek $AC$ jest podzielony na 6 równych części.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z12-fig1.png)\n\nOceń prawdziwość podanych zdań. Wybierz P, jeśli zdanie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n|  | P | F |\n| :---------------------------------- | :-: | :-: |\n| Współrzędna punktu $C$ jest liczbą parzystą. |  |  |\n| Współrzędna punktu $B$ jest liczbą mniejszą od 74. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21692,16 +21860,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z13",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 13",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2025-maj/z13-1.png)",
+    "prompt": "Trapez $ABCD$ podzielono na trzy figury: kwadrat $AEGD$, trójkąt $EFG$ i romb $FBCG$ (zobacz rysunek). Na rysunku podano również długości boków trójkąta $EFG$.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObwód trapezu $ABCD$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$56$",
+      "$72$",
+      "$88$",
+      "$120$"
     ],
     "correctIndex": 0,
     "explanation": "A. 56",
@@ -21718,18 +21889,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z14",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 14",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/e8-2025-maj/z14-1.png)",
+    "prompt": "W układzie współrzędnych $(x, y)$ zaznaczono trzy punkty, które są wierzchołkami równoległoboku $ABCD$: $A = (-3, -2)$, $C = (4, 2)$, $D = (-1, 2)$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z14-fig1.png)\n\nWspółrzędna $x$ wierzchołka $B$, niezaznaczonego na rysunku, jest liczbą dodatnią.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNiezaznaczony na rysunku wierzchołek $B$ tego równoległoboku ma współrzędne",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(4, -2)$",
+      "$(3, -2)$",
+      "$(2, -2)$",
+      "$(6, -2)$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $(2, - 2)$",
     "solutionSteps": [
       "1. Zapisujemy dane współrzędne wierzchołków: $A = (-3, -2)$, $C = (4, 2)$, $D = (-1, 2)$. Szukamy współrzędnych wierzchołka $B = (x_B, y_B)$.\n2. W równoległoboku przekątne dzielą się na pół. Oznacza to, że środek przekątnej $AC$ jest taki sam jak środek przekątnej $BD$.\n3. Obliczamy współrzędne środka $M$ przekątnej $AC$ za pomocą wzoru na środek odcinka $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$:\n $M = \\left(\\frac{-3 + 4}{2}, \\frac{-2 + 2}{2}\\right) = \\left(\\frac{1}{2}, \\frac{0}{2}\\right) = (0.5, 0)$.\n4. Wykorzystujemy fakt, że $M$ jest również środkiem przekątnej $BD$. Podstawiamy współrzędne $D = (-1, 2)$ i $M = (0.5, 0)$ do wzoru na środek odcinka, aby znaleźć współrzędne $B = (x_B, y_B)$:\n Dla współrzędnej $x$: $\\frac{x_B + (-1)}{2} = 0.5 \\implies x_B - 1 = 1 \\implies x_B = 2$.\n Dla współrzędnej $y$: $\\frac{y_B + 2}{2} = 0 \\implies y_B + 2 = 0 \\implies y_B = -2$.\n5. Zatem współrzędne wierzchołka $B$ to $(2, -2)$. Sprawdzamy warunek podany w zadaniu: współrzędna $x$ wierzchołka $B$ jest liczbą dodatnią ($2 > 0$), co jest zgodne z wynikiem.\n6. Porównujemy otrzymany wynik z podanymi opcjami. Współrzędne $(2, -2)$ odpowiadają opcji C."
@@ -21744,18 +21918,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z15",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 15",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2025-maj/z15-1.png)",
+    "prompt": "Trzy krawędzie wychodzące z jednego wierzchołka prostopadłościanu mają długości: 5, 6, 7 (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z15-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni całkowitej tego prostopadłościanu jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "107",
+      "172",
+      "210",
+      "214"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. 214",
     "solutionSteps": [
       "1. Zapisujemy długości krawędzi prostopadłościanu: $a=5$, $b=6$, $c=7$.\n2. Korzystamy ze wzoru na pole powierzchni całkowitej prostopadłościanu: $P_c = 2(ab + ac + bc)$.\n3. Podstawiamy wartości do wzoru i wykonujemy obliczenia:\n $P_c = 2(5 \\cdot 6 + 5 \\cdot 7 + 6 \\cdot 7)$\n $P_c = 2(30 + 35 + 42)$\n $P_c = 2(107)$\n $P_c = 214$"
@@ -21770,14 +21947,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z16",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 16",
-    "category": "algebra",
+    "category": "procenty",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/e8-2025-maj/z16-1.png)",
+    "prompt": "Liczbę $\\frac{7}{15}$ zapisano w postaci sumy trzech ułamków zwykłych, z których jeden jest równy $\\frac{1}{5}$, a drugi $\\frac{1}{6}$.\n\nUzasadnij, że trzeci składnik tej sumy można przedstawić w postaci ułamka zwykłego, którego licznik jest równy 1, a mianownik jest liczbą całkowitą dodatnią. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21803,7 +21980,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/e8-2025-maj/z17-1.png)",
+    "prompt": "Troje przyjaciół - Andrzej, Basia i Marek - zbiera plakaty. Andrzej ma o 28 plakatów więcej od Basi, a Marek ma ich 3 razy mniej od Basi. Andrzej i Marek mają razem 2 razy więcej plakatów od Basi.\n\nOblicz, ile plakatów ma każde z tych przyjaciół. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21822,14 +21999,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z18",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 18",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2025-maj/z18-1.png)",
+    "prompt": "Na rysunku przedstawiono trapez $ABCD$, w którym kąt $ABC$ ma miarę $48^\\circ$. Odcinek $EC$ dzieli ten trapez na równoległobok $AECD$ i trójkąt $EBC$, w którym kąt $BCE$ ma miarę $57^\\circ$ \n\n![Rysunek 1](/cke-matura/e8-2025-maj/z18-fig1.png)\n\n.\n\nOblicz miary kątów $DAB$, $BCD$, $CDA$ trapezu $ABCD$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21848,14 +22025,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z19",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2025-maj/z19-1.png)",
+    "prompt": "Na ścianie wiszą dwie tablice: mała kwadratowa i duża prostokątna. Mała tablica narysowana w skali 1:20 jest kwadratem o boku 3 cm. Rzeczywiste wymiary dużej prostokątnej tablicy są równe 240 cm i 90 cm.\n\nOblicz, ile razy pole dużej tablicy jest większe od pola małej tablicy. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21874,14 +22051,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z20",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 20",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/e8-2025-maj/z20-1.png)",
+    "prompt": "Dany jest kwadrat $ABCD$ o boku długości $15 \\text{ cm}$. Każdy z boków $AB$ i $CD$ podzielono na trzy równe części, a każdy z boków $AD$ i $BC$ podzielono na pięć równych części. Na boku $BC$ zaznaczono punkt $E$, na boku $CD$ zaznaczono punkt $F$, a ponadto poprowadzono odcinki $AE$ i $AF$ (zobacz rysunek).\n\nOblicz pole czworokąta $AECF$. Zapisz obliczenia.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z20-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21900,14 +22077,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-e8-2025-maj-z21",
     "title": "Egzamin ósmoklasisty - maj 2025 - zad. 21",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/e8-2025-maj/z21-1.png)",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny, w którym wysokość ściany bocznej poprowadzona do krawędzi podstawy jest równa 12 cm (zobacz rysunek). Pole powierzchni jednej ściany bocznej tego ostrosłupa jest równe $108 \\text{ cm}^2$.\n\n![Rysunek 1](/cke-matura/e8-2025-maj/z21-fig1.png)\n\nOblicz sumę długości wszystkich krawędzi tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22476,18 +22653,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z01",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mp-2024-cze/z01-1.png)",
+    "prompt": "Dana jest nierówność\n\n$|x - 1| \\geq 3$\n\nNa którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "![Rysunek 1](/cke-matura/mp-2024-cze/z01-fig1.png)",
+      "![Rysunek 2](/cke-matura/mp-2024-cze/z01-fig2.png)",
+      "![Rysunek 3](/cke-matura/mp-2024-cze/z01-fig3.png)",
+      "![Rysunek 4](/cke-matura/mp-2024-cze/z01-fig4.png)"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B.",
     "solutionSteps": [
       "1. Dana nierówność to $|x - 1| \\ge 3$.\n2. Nierówność z wartością bezwzględną typu $|a| \\ge b$ (dla $b > 0$) jest równoważna alternatywie $a \\le -b$ lub $a \\ge b$.\n3. Stosujemy tę zasadę do naszej nierówności:\n $x - 1 \\le -3$ lub $x - 1 \\ge 3$.\n4. Rozwiązujemy pierwszą część:\n $x - 1 \\le -3$\n $x \\le -3 + 1$\n $x \\le -2$.\n5. Rozwiązujemy drugą część:\n $x - 1 \\ge 3$\n $x \\ge 3 + 1$\n $x \\ge 4$.\n6. Zbiór rozwiązań nierówności to $x \\le -2$ lub $x \\ge 4$. Na osi liczbowej oznacza to wszystkie liczby mniejsze lub równe -2 oraz wszystkie liczby większe lub równe 4. Końce przedziałów $(-2 i 4)$ są włączone do rozwiązania, co oznacza, że na rysunku powinny być zaznaczone zamalowanymi kropkami.\n7. Analizując podane rysunki:\n Rysunek A przedstawia przedział $[-2, 4]$.\n Rysunek B przedstawia sumę przedziałów $(-\\infty, -2]$ oraz $[4, \\infty)$. Zamalowane kropki przy -2 i 4 oznaczają, że te liczby należą do zbioru rozwiązań.\n Rysunek C przedstawia przedział $(-2, 4)$ (bez końców).\n Rysunek D przedstawia sumę przedziałów $(-\\infty, -2)$ oraz $(4, \\infty)$ (bez końców).\n8. Rysunek B poprawnie przedstawia zbiór rozwiązań nierówności $|x - 1| \\ge 3$."
@@ -22502,18 +22682,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z02",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mp-2024-cze/z02-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $(\\frac{1}{16})^8 \\cdot 8^{16}$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$2^{24}$",
+      "$2^{16}$",
+      "$2^{12}$",
+      "$2^8$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $2^{16}$",
     "solutionSteps": [
       "1. Przekształcamy podstawy potęg do wspólnej podstawy 2. Wiemy, że $16 = 2^4$ oraz $8 = 2^3$.\n2. Podstawiamy te wartości do wyrażenia:\n $(\\frac{1}{16})^8 \\cdot 8^{16} = (\\frac{1}{2^4})^8 \\cdot (2^3)^{16}$\n3. Stosujemy własności potęg: $\\frac{1}{a^n} = a^{-n}$ oraz $(a^m)^n = a^{m \\cdot n}$:\n $(2^{-4})^8 \\cdot 2^{3 \\cdot 16}$\n4. Wykonujemy mnożenia w wykładnikach:\n $2^{-4 \\cdot 8} \\cdot 2^{48} = 2^{-32} \\cdot 2^{48}$\n5. Stosujemy własność potęg $a^m \\cdot a^n = a^{m+n}$:\n $2^{-32+48} = 2^{16}$\n6. Porównujemy wynik z podanymi opcjami. Wynik $2^{16}$ odpowiada opcji B."
@@ -22535,7 +22718,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mp-2024-cze/z03-1.png)",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $n^2 + (n+1)^2 + (n+2)^2$ przy dzieleniu przez 3 daje resztę 2.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22554,18 +22737,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z04",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mp-2024-cze/z04-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\log_{\\sqrt{3}} 9$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "2",
+      "3",
+      "4",
+      "9"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 4",
     "solutionSteps": [
       "Rozwiązanie:\n\n1. Zapisujemy zadane wyrażenie jako równanie z niewiadomą $x$:\n $\\log_{\\sqrt{3}} 9 = x$\n2. Zgodnie z definicją logarytmu, równanie to jest równoważne potęgowaniu:\n $(\\sqrt{3})^x = 9$\n3. Zapisujemy podstawę logarytmu i liczbę logarytmowaną jako potęgi tej samej liczby (w tym przypadku liczby 3):\n $\\sqrt{3} = 3^{1/2}$\n $9 = 3^2$\n4. Podstawiamy te wartości do równania:\n $(3^{1/2})^x = 3^2$\n5. Upraszczamy lewą stronę równania, korzystając ze wzoru na potęgę potęgi $(a^b)^c = a^{b \\cdot c}$:\n $3^{(1/2)x} = 3^2$\n6. Ponieważ podstawy potęg są równe, wykładniki muszą być sobie równe:\n $\\frac{1}{2}x = 2$\n7. Rozwiązujemy równanie dla $x$:\n $x = 2 \\cdot 2$\n $x = 4$"
@@ -22581,17 +22767,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-mp-2024-cze-z05",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 5",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mp-2024-cze/z05-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDla każdej liczby rzeczywistej $a$ i dla każdej liczby rzeczywistej $b$ wartość wyrażenia $(2a + b)^2 - (2a - b)^2$ jest równa wartości wyrażenia",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$8a^2$",
+      "$8ab$",
+      "$-8ab$",
+      "$2b^2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $8ab$",
     "solutionSteps": [
       "1. Stosujemy wzór skróconego mnożenia na kwadrat sumy $(x+y)^2 = x^2 + 2xy + y^2$ do pierwszego składnika wyrażenia:\n $(2a + b)^2 = (2a)^2 + 2 \\cdot (2a) \\cdot b + b^2 = 4a^2 + 4ab + b^2$.\n2. Stosujemy wzór skróconego mnożenia na kwadrat różnicy $(x-y)^2 = x^2 - 2xy + y^2$ do drugiego składnika wyrażenia:\n $(2a - b)^2 = (2a)^2 - 2 \\cdot (2a) \\cdot b + b^2 = 4a^2 - 4ab + b^2$.\n3. Odejmujemy drugie rozwinięcie od pierwszego, pamiętając o zmianie znaków w nawiasie odejmowanym:\n $(4a^2 + 4ab + b^2) - (4a^2 - 4ab + b^2) = 4a^2 + 4ab + b^2 - 4a^2 + 4ab - b^2$.\n4. Redukujemy wyrazy podobne:\n $4a^2 - 4a^2 = 0$\n $4ab + 4ab = 8ab$\n $b^2 - b^2 = 0$\n Zatem całe wyrażenie jest równe $8ab$."
@@ -22607,17 +22796,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-mp-2024-cze-z06",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 6",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mp-2024-cze/z06-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZbiorem wszystkich rozwiązań nierówności\n$1 - \\frac{3}{2}x < \\frac{2}{3} - x$\njest przedział",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(-\\infty, -\\frac{2}{3})$",
+      "$(-\\infty, \\frac{2}{3})$",
+      "$(-\\frac{2}{3}, +\\infty)$",
+      "$(\\frac{2}{3}, +\\infty)$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $(\\frac{2}{3}, +\\infty)$",
     "solutionSteps": [
       "1. Przepisz nierówność: $1 - \\frac{3}{2}x < \\frac{2}{3} - x$.\n2. Pomnóż obie strony nierówności przez wspólny mianownik ułamków, czyli przez 6, aby usunąć ułamki:\n$6 \\cdot (1 - \\frac{3}{2}x) < 6 \\cdot (\\frac{2}{3} - x)$\n$6 - 9x < 4 - 6x$\n3. Przenieś wyrazy $z$ niewiadomą $x$ na jedną stronę, a stałe na drugą stronę nierówności:\n$-9x + 6x < 4 - 6$\n$-3x < -2$\n4. Podziel obie strony nierówności przez -3. Pamiętaj, aby przy dzieleniu przez liczbę ujemną zmienić zwrot nierówności:\n$\\frac{-3x}{-3} > \\frac{-2}{-3}$\n$x > \\frac{2}{3}$\n5. Zapisz rozwiązanie w postaci przedziału. Nierówność $x > \\frac{2}{3}$ oznacza, że $x$ należy do przedziału $(\\frac{2}{3}, +\\infty)$.\n6. Porównaj wynik z podanymi opcjami. Wynik odpowiada opcji D."
@@ -22632,18 +22824,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z07",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 7",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mp-2024-cze/z07-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRównanie $\\frac{x+1}{(x+2)(x-3)} = 0$ w zbiorze liczb rzeczywistych",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "nie ma rozwiązania.",
+      "ma dokładnie jedno rozwiązanie: $(-1)$.",
+      "ma dokładnie dwa rozwiązania: $(-2)$ oraz $3$.",
+      "ma dokładnie trzy rozwiązania: $(-1)$, $(-2)$ oraz $3$."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. ma dokładnie jedno rozwiązanie: $(-1)$.",
     "solutionSteps": [
       "1. Wyznaczamy dziedzinę równania. Mianownik ułamka nie może być równy zero, zatem:\n $(x+2)(x-3) \\neq 0$\n $x+2 \\neq 0 \\implies x \\neq -2$\n $x-3 \\neq 0 \\implies x \\neq 3$\n Dziedzina równania to $D = \\mathbb{R} \\setminus \\{-2, 3\\}$.\n\n2. Rozwiązujemy równanie wymierne $\\frac{x+1}{(x+2)(x-3)} = 0$. Ułamek jest równy zero wtedy i tylko wtedy, gdy jego licznik jest równy zero, a mianownik jest różny od zera.\n Zatem przyrównujemy licznik do zera:\n $x+1 = 0$\n $x = -1$\n\n3. Sprawdzamy, czy otrzymane rozwiązanie należy do dziedziny równania.\n Rozwiązanie $x = -1$ jest różne od $-2$ i $3$, więc należy do dziedziny.\n Równanie ma zatem dokładnie jedno rozwiązanie: $x = -1$.\n\n4. Porównujemy wynik z podanymi odpowiedziami. Wynik odpowiada odpowiedzi B."
@@ -22658,14 +22853,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z08",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 8",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mp-2024-cze/z08-1.png)",
+    "prompt": "Dany jest wielomian $W(x) = 3x^3 + 6x^2 + 9x$.\n\nOcen prawdziwosc ponizszych stwierdzen. Wybierz P, jesli stwierdzenie jest prawdziwe, albo F - jesli jest falszywe.\n\n|  | P | F |\n|---|---|---|\n| Wielomian $W$ jest iloczynem wielomianow $F(x) = 3x$ i $G(x) = x^2 + 2x + 3$. |  |  |\n| Liczba $(-1)$ jest rozwiazaniem rownania $W(x) = 0$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22691,7 +22886,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mp-2024-cze/z09-1.png)",
+    "prompt": "Rozwiąż równanie\n$x^3 - 2x^2 - 3x + 6 = 0$\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22710,16 +22905,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z10",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 10",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "procenty",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mp-2024-cze/z10-1.png)",
+    "prompt": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku stwierdzono, że uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Uschnięte drzewa usunięto, a nowych nie dosadzano.\n\nLiczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie.\n\nNiech $x$ oraz $y$ oznaczają liczby drzew posadzonych - odpowiednio - w pierwszym i drugim sadzie.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nUkładem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby $x$ drzew posadzonych w pierwszym sadzie oraz liczby $y$ drzew posadzonych w drugim sadzie, jest",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\begin{cases} x+y = 1960 \\\\ 0,6 \\cdot 0,95x = 0,9y \\end{cases}$",
+      "$\\begin{cases} x+y = 1960 \\\\ 0,95x = 0,6 \\cdot 0,9y \\end{cases}$",
+      "$\\begin{cases} x+y = 1960 \\\\ 0,05x = 0,6 \\cdot 0,1y \\end{cases}$",
+      "$\\begin{cases} x+y = 1960 \\\\ 0,4 \\cdot 0,95x = 0,9y \\end{cases}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $\\begin{cases} x + y = 1960 \\\\ 0,6 \\cdot 0,95x = 0,9y \\end{cases}$",
@@ -22736,16 +22934,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z11",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 11",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "ciagi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mp-2024-cze/z11-1.png)",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych $(x, y)$, przedstawiono dwie proste równoległe, które są interpretacją geometryczną jednego z poniższych układów równań $A - D$.\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z11-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nUkładem równań, którego interpretację geometryczną przedstawiono na rysunku, jest",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\begin{cases} y = -\\frac{3}{2}x + 3 \\\\ y = -\\frac{3}{2}x - 1 \\end{cases}$",
+      "$\\begin{cases} y = \\frac{3}{2}x + 3 \\\\ y = -\\frac{2}{3}x - 1 \\end{cases}$",
+      "$\\begin{cases} y = \\frac{3}{2}x + 3 \\\\ y = \\frac{3}{2}x - 1 \\end{cases}$",
+      "$\\begin{cases} y = -\\frac{3}{2}x - 3 \\\\ y = \\frac{3}{2}x + 1 \\end{cases}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $\\begin{cases} y = -\\frac{3}{2}x + 3 \\\\ y = -\\frac{3}{2}x - 1 \\end{cases}$",
@@ -22762,18 +22963,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z12",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 12",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mp-2024-cze/z12-1.png)",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = (-2k + 3)x + k - 1$, gdzie $k \\in \\mathbb{R}$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nFunkcja $f$ jest malejąca dla każdej liczby $k$ należącej do przedziału",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(-\\infty, 1)$",
+      "$(-\\infty, -\\frac{3}{2})$",
+      "$(1, +\\infty)$",
+      "$(\\frac{3}{2}, +\\infty)$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $(\\frac{3}{2}, +\\infty)$",
     "solutionSteps": [
       "1. Funkcja liniowa $f(x) = ax + b$ jest malejąca, gdy jej współczynnik kierunkowy $a$ jest mniejszy od zera ($a < 0$).\n2. We wzorze funkcji $f(x) = (-2k + 3)x + k - 1$, współczynnikiem kierunkowym jest wyrażenie $a = -2k + 3$.\n3. Aby funkcja była malejąca, musimy rozwiązać nierówność:\n $-2k + 3 < 0$\n4. Odejmujemy 3 od obu stron nierówności:\n $-2k < -3$\n5. Dzielimy obie strony nierówności przez -2. Pamiętamy, że dzieląc przez liczbę ujemną, należy zmienić zwrot nierówności:\n $k > \\frac{-3}{-2}$\n $k > \\frac{3}{2}$\n6. Zbiór liczb $k$ spełniających warunek $k > \\frac{3}{2}$ to przedział $(\\frac{3}{2}, +\\infty)$."
@@ -22788,18 +22992,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z13",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 13",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mp-2024-cze/z13-1.png)",
+    "prompt": "Funkcje liniowe $f$ oraz $g$ są określone wzorami $f(x) = 3x + 6$ oraz $g(x) = ax + 7$.\nFunkcje $f$ oraz $g$ mają to samo miejsce zerowe.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWspółczynnik $a$ we wzorze funkcji $g$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(- \\frac{7}{2})$",
+      "$(- \\frac{2}{7})$",
+      "$\\frac{2}{7}$",
+      "$\\frac{7}{2}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $\\frac{7}{2}$",
     "solutionSteps": [
       "1. Wyznaczamy miejsce zerowe funkcji $f(x) = 3x + 6$. Aby znaleźć miejsce zerowe, należy przyrównać wzór funkcji do zera:\n $3x + 6 = 0$\n2. Rozwiązujemy równanie dla $x$:\n $3x = -6$\n $x = \\frac{-6}{3}$\n $x = -2$\n Miejsce zerowe funkcji $f(x)$ to $-2$.\n3. Zgodnie z treścią zadania, funkcja $g(x) = ax + 7$ ma to samo miejsce zerowe, czyli dla $x = -2$ wartość funkcji $g(x)$ wynosi $0$. Podstawiamy te wartości do wzoru funkcji $g(x)$:\n $0 = a(-2) + 7$\n4. Rozwiązujemy równanie, aby znaleźć wartość współczynnika $a$:\n $0 = -2a + 7$\n $2a = 7$\n $a = \\frac{7}{2}$"
@@ -22821,7 +23028,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mp-2024-cze/z14-1.png)",
+    "prompt": "Uzupełnij poniższe zdanie. Wpisz odpowiedni przedział w wykropkowanym miejscu tak, aby zdanie było prawdziwe.\n\nZbiorem wszystkich rozwiązań nierówności $f(x) \\ge 0$ jest przedział ....................................",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22840,14 +23047,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z15",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 15",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mp-2024-cze/z15-1.png)",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n = (-1)^n \\cdot (n - 5)$ dla każdej liczby naturalnej $n \\ge 1$.\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie | P | F |\n|---|---|---|\n| Pierwszy wyraz ciągu $(a_n)$ jest dwa razy większy od trzeciego wyrazu tego ciągu. |  |  |\n| Wszystkie wyrazy ciągu $(a_n)$ są dodatnie. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22866,14 +23073,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z16",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 16",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mp-2024-cze/z16-1.png)",
+    "prompt": "Trzywyrazowy ciąg $(12, 6, 2m - 1)$ jest geometryczny.\n\nDokończ zdanie. Wybierz odpowiedź A albo B oraz odpowiedź 1., 2. albo 3.\n\nTen ciąg jest\n\n| A. | rosnący |  | 1. | $m = \\frac{1}{2}$ |\n|:---|:--------|:---:|:---|:-----------|\n|  |  | oraz | 2. | $m = 2$ |\n| B. | malejący |  | 3. | $m = 3$ |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22892,14 +23099,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z17",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 17",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 17](/cke-matura/mp-2024-cze/z17-1.png)",
+    "prompt": "Ciąg arytmetyczny $(a_n)$ jest określony dla każdej liczby naturalnej $n \\geq 1$. Trzeci wyraz tego ciągu jest równy $(-1)$, a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa $(-165)$.\n\nOblicz różnicę tego ciągu. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22918,14 +23125,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z18",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 18",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/mp-2024-cze/z18-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ zaznaczono kąt o mierze $\\alpha$ taki, że $\\text{tg } \\alpha = -3$ oraz $90^\\circ < \\alpha < 180^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z18-fig1.png)\n\nUzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$ i wpisz te litery w wykropkowanych miejscach.\n\nPrawdziwe są zależności: ............ oraz ............ .\n\nA) $\\text{sin } \\alpha < 0$\nB) $\\text{sin } \\alpha \\cdot \\text{cos } \\alpha < 0$\nC) $\\text{sin } \\alpha \\cdot \\text{cos } \\alpha > 0$\nD) $\\text{cos } \\alpha > 0$\nE) $\\text{sin } \\alpha = -\\frac{1}{3}\\text{cos } \\alpha$\nF) $\\text{sin } \\alpha = -3\\text{cos } \\alpha$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -22944,18 +23151,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z19",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 19",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/mp-2024-cze/z19-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\sin^3 20^\\circ + \\cos^2 20^\\circ \\cdot \\sin 20^\\circ$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\cos 20^\\circ$",
+      "$\\sin 20^\\circ$",
+      "$\\text{tg } 20^\\circ$",
+      "$\\sin 20^\\circ \\cdot \\cos 20^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $\\sin 20^\\circ$",
     "solutionSteps": [
       "1. Wyłączamy wspólny czynnik $\\sin 20^\\circ$ z wyrażenia:\n $\\sin^3 20^\\circ + \\cos^2 20^\\circ \\cdot \\sin 20^\\circ = \\sin 20^\\circ (\\sin^2 20^\\circ + \\cos^2 20^\\circ)$.\n2. Stosujemy podstawową tożsamość trygonometryczną: $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Dla $\\alpha = 20^\\circ$ otrzymujemy:\n $\\sin^2 20^\\circ + \\cos^2 20^\\circ = 1$.\n3. Podstawiamy $1$ do wyrażenia z kroku 1:\n $\\sin 20^\\circ \\cdot 1 = \\sin 20^\\circ$.\n4. Porównujemy wynik z dostępnymi odpowiedziami. Wynik $\\sin 20^\\circ$ odpowiada odpowiedzi B."
@@ -22970,18 +23180,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z20",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 20",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 20](/cke-matura/mp-2024-cze/z20-1.png)",
+    "prompt": "Dany jest trójkąt $KLM$, w którym $|KM| = a$, $|LM| = b$ oraz $a \\ne b$. Dwusieczna kąta $KML$ przecina bok $KL$ w punkcie $N$ takim, że $|KN| = c$, $|NL| = d$ oraz $|MN| = e$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z20-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nW trójkącie $KLM$ prawdziwa jest równość",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$a \\cdot b = c \\cdot d$",
+      "$a \\cdot d = b \\cdot c$",
+      "$a \\cdot c = b \\cdot d$",
+      "$a \\cdot b = e \\cdot e$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $a \\cdot d = b \\cdot c$",
     "solutionSteps": [
       "1. Dwusieczna kąta $KML$ (odcinek $MN$) w trójkącie $KLM$ dzieli przeciwległy bok $KL$ na odcinki $KN$ i $NL$ w stosunku równym stosunkowi długości pozostałych boków trójkąta, tj. $KM$ i $LM$. Jest to twierdzenie o dwusiecznej kąta w trójkącie.\n2. Zgodnie z twierdzeniem o dwusiecznej kąta, zachodzi proporcja: $\\frac{|KM|}{|LM|} = \\frac{|KN|}{|NL|}$.\n3. Podstawiając dane z zadania: $|KM|=a$, $|LM|=b$, $|KN|=c$, $|NL|=d$, otrzymujemy: $\\frac{a}{b} = \\frac{c}{d}$.\n4. Mnożąc obie strony równania przez $b \\cdot d$ (aby usunąć mianowniki), otrzymujemy: $a \\cdot d = b \\cdot c$.\n5. Porównując ten wynik z podanymi opcjami, stwierdzamy, że jest to odpowiedź B."
@@ -22996,18 +23209,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z21",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 21",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/mp-2024-cze/z21-1.png)",
+    "prompt": "Dany jest równoległobok o bokach długości 3 i 4 oraz o kącie między nimi o mierze $120^\\circ$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole tego równoległoboku jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "12",
+      "$12\\sqrt{3}$",
+      "6",
+      "$6\\sqrt{3}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $6\\sqrt{3}$",
     "solutionSteps": [
       "1. Zapisujemy dane z zadania: długości boków równoległoboku to $a=3$ i $b=4$, $a_{k}$ąt między tymi bokami to $\\alpha = 120^{\\circ}$.\n2. Korzystamy ze wzoru na pole równoległoboku, gdy dane są długości dwóch boków i miara kąta między nimi: $P = a \\cdot b \\cdot \\sin(\\alpha)$.\n3. Podstawiamy dane do wzoru: $P = 3 \\cdot 4 \\cdot \\sin(120^{\\circ})$.\n4. Obliczamy wartość $\\sin(120^{\\circ})$. Wiemy, że $\\sin(120^{\\circ}) = \\sin(180^{\\circ} - 60^{\\circ}) = \\sin(60^{\\circ})$. Wartość $\\sin(60^{\\circ})$ wynosi $\\frac{\\sqrt{3}}{2}$.\n5. Wykonujemy obliczenia: $P = 3 \\cdot 4 \\cdot \\frac{\\sqrt{3}}{2} = 12 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}$.\n6. Porównujemy otrzymany wynik z dostępnymi odpowiedziami. Wynik $6\\sqrt{3}$ odpowiada odpowiedzi D."
@@ -23022,18 +23238,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z22",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 22",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 22](/cke-matura/mp-2024-cze/z22-1.png)",
+    "prompt": "W trójkącie $ABC$, wpisanym w okrąg o środku w punkcie $S$, kąt $ACB$ ma miarę $42^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z22-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta ostrego $BAS$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$42^\\circ$",
+      "$45^\\circ$",
+      "$48^\\circ$",
+      "$69^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $48^\\circ$",
     "solutionSteps": [
       "1. Kąt $\\angle ACB$ jest kątem wpisanym w okrąg i opiera się na łuku $AB$. Kąt $\\angle ASB$ jest kątem środkowym opartym na tym samym łuku $AB$. Zgodnie z twierdzeniem o kącie wpisanym i środkowym, kąt środkowy jest dwukrotnie większy od kąta wpisanego opartego na tym samym łuku.\nZatem $\\angle ASB = 2 \\cdot \\angle ACB$.\n\n2. Podstawiając daną wartość $\\angle ACB = 42^\\circ$, otrzymujemy:\n$\\angle ASB = 2 \\cdot 42^\\circ = 84^\\circ$.\n\n3. Trójkąt $ABS$ jest trójkątem równoramiennym, ponieważ boki $SA$ i $SB$ są promieniami okręgu, czyli $SA = SB$.\n\n4. W trójkącie równoramiennym $ABS$ kąty przy podstawie $AB$ są równe, czyli $\\angle BAS = \\angle ABS$. Suma miar kątów w trójkącie wynosi $180^\\circ$.\nStąd $\\angle BAS + \\angle ABS + \\angle ASB = 180^\\circ$.\n$2 \\cdot \\angle BAS + 84^\\circ = 180^\\circ$.\n\n5. Rozwiązujemy równanie, aby znaleźć $\\angle BAS$:\n$2 \\cdot \\angle BAS = 180^\\circ - 84^\\circ$\n$2 \\cdot \\angle BAS = 96^\\circ$\n$\\angle BAS = \\frac{96^\\circ}{2}$\n$\\angle BAS = 48^\\circ$."
@@ -23048,16 +23267,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z23",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 23",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 23](/cke-matura/mp-2024-cze/z23-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ proste $k$ oraz $l$ są określone równaniami\n$k: y = (m + 1)x + 7$\n$l: y = -2x + 7$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProste $k$ oraz $l$ są prostopadłe, gdy liczba $m$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$(-\\frac{1}{2})$",
+      "$\\frac{1}{2}$",
+      "$(-3)$",
+      "$1$"
     ],
     "correctIndex": 0,
     "explanation": "A. $(-\\frac{1}{2})$",
@@ -23074,14 +23296,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z24",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 24",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 24](/cke-matura/mp-2024-cze/z24-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x, y)$ dany jest równoległobok $ABCD$, w którym $A = (-2, 6)$ oraz $B = (10, 2)$. Przekątne $AC$ oraz $BD$ tego równoległoboku przecinają się w punkcie $P = (6, 7)$.\n\nOblicz długość boku $BC$ tego równoległoboku. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23100,18 +23322,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z25",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 25",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 25](/cke-matura/mp-2024-cze/z25-1.png)",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole jednej ściany bocznej tego graniastosłupa jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$36\\sqrt{10}$",
+      "$60$",
+      "$6\\sqrt{10}$",
+      "$360$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $6\\sqrt{10}$",
     "solutionSteps": [
       "1. Ściana boczna graniastosłupa prostego jest prostokątem.\n2. Pole prostokąta obliczamy ze wzoru $P = długość \\cdot szerokość$. W przypadku ściany bocznej graniastosłupa, długością jednego boku jest krawędź podstawy graniastosłupa ($a$), a długością drugiego boku jest wysokość graniastosłupa ($H$). Zatem pole ściany bocznej wyraża się wzorem $P_b = a \\cdot H$.\n3. Zgodnie z informacjami dotyczącymi tego graniastosłupa (założonymi na podstawie kontekstu zadania egzaminacyjnego, gdzie wymiary graniastosłupa były podane w towarzyszącym rysunku lub opisie), przyjmujemy, że długość krawędzi podstawy wynosi $6$ jednostek, a wysokość graniastosłupa wynosi $\\sqrt{10}$ jednostek.\n4. Podstawiamy te wartości do wzoru na pole ściany bocznej: $P_b = 6 \\cdot \\sqrt{10} = 6\\sqrt{10}$."
@@ -23126,14 +23351,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z26",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 26",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 26](/cke-matura/mp-2024-cze/z26-1.png)",
+    "prompt": "Ostrosłup $F_1$ jest podobny do ostrosłupa $F_2$.\nObjętość ostrosłupa $F_1$ jest równa 64.\nObjętość ostrosłupa $F_2$ jest równa 512.\n\nUzupełnij poniższe zdanie. Wpisz odpowiednią liczbę w wykropkowanym miejscu tak, aby zdanie było prawdziwe.\n\nStosunek pola powierzchni całkowitej ostrosłupa $F_2$ do pola powierzchni całkowitej ostrosłupa $F_1$ jest równy .......... .",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23159,11 +23384,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 27](/cke-matura/mp-2024-cze/z27-1.png)",
+    "prompt": "Rozważamy wszystkie kody czterocyfrowe utworzone tylko z cyfr 1, 3, 6, 8, przy czym w każdym kodzie każda z tych cyfr występuje dokładnie jeden raz.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba wszystkich takich kodów jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "4",
+      "10",
+      "24",
+      "16"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 24",
     "solutionSteps": [
       "1. Mamy do dyspozycji cztery różne cyfry: 1, 3, 6, 8. Tworzymy z nich kody czterocyfrowe, w których każda z tych cyfr występuje dokładnie jeden raz.\n2. Problem polega na ustaleniu liczby możliwych uporządkowań (permutacji) tych czterech cyfr.\n3. Liczbę permutacji $n$ różnych elementów obliczamy za pomocą funkcji silnia, czyli $n!$.\n4. W tym przypadku mamy $n=4$ cyfry, zatem liczba wszystkich możliwych kodów wynosi $4!$.\n5. Obliczamy wartość $4!$: $4! = 4 \\times 3 \\times 2 \\times 1 = 24$."
@@ -23178,16 +23406,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z28",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 28",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 28](/cke-matura/mp-2024-cze/z28-1.png)",
+    "prompt": "Średnia arytmetyczna trzech liczb: $a, b, c$, jest równa $9$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nŚrednia arytmetyczna sześciu liczb: $a, a, b, b, c, c$, jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$9$",
+      "$6$",
+      "$4,5$",
+      "$18$"
     ],
     "correctIndex": 0,
     "explanation": "A. 9",
@@ -23204,18 +23435,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mp-2024-cze-z29",
     "title": "Matura - czerwiec 2024 (termin dodatkowy) - poziom podstawowy - zad. 29",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 29](/cke-matura/mp-2024-cze/z29-1.png)",
+    "prompt": "Na diagramie przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej. Na osi poziomej podano oceny, które uzyskali uczniowie tej klasy, a na osi pionowej podano liczbę uczniów, którzy otrzymali daną ocenę.\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z29-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$4,5$",
+      "$4$",
+      "$3,5$",
+      "$3$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 3,5",
     "solutionSteps": [
       "1. Odczytujemy liczbę uczniów dla każdej oceny z diagramu słupkowego:\n * Ocenę 1 otrzymało 2 uczniów.\n * Ocenę 2 otrzymało 7 uczniów.\n * Ocenę 3 otrzymało 4 uczniów.\n * Ocenę 4 otrzymało 3 uczniów.\n * Ocenę 5 otrzymało 6 uczniów.\n * Ocenę 6 otrzymało 4 uczniów.\n2. Obliczamy łączną liczbę uczniów ($N$), sumując liczbę uczniów dla każdej oceny:\n $N = 2 + 7 + 4 + 3 + 6 + 4 = 26$ uczniów.\n3. Ponieważ liczba uczniów ($N=26$) jest parzysta, mediana jest średnią arytmetyczną dwóch środkowych wartości. Są to wartości znajdujące się na pozycjach $\\frac{N}{2}$ i $\\frac{N}{2} + 1$.\n Pozycje środkowe to $\\frac{26}{2} = 13$ i $\\frac{26}{2} + 1 = 14$. Musimy znaleźć 13. i 14. ocenę, gdy wszystkie oceny są uporządkowane rosnąco.\n4. Wypisujemy oceny w kolejności rosnącej lub zliczamy kumulatywnie:\n * 2 oceny to 1 $(pozycje 1 - 2)$.\n * Następne 7 ocen to 2 $(pozycje 3 - 9)$.\n * Następne 4 oceny to 3 $(pozycje 10 - 13)$. Zatem 13. ocena to 3.\n * Następne 3 oceny to 4 $(pozycje 14 - 16)$. Zatem 14. ocena to 4.\n5. Obliczamy medianę jako średnią arytmetyczną 13. i 14. oceny:\n Mediana $= \\frac{3 + 4}{2} = \\frac{7}{2} = 3,5$."
@@ -23263,7 +23497,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 31](/cke-matura/mp-2024-cze/z31-1.png)",
+    "prompt": "W schronisku dla zwierząt, na płaskiej powierzchni, należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z tych trzech wybiegów jest prostokąt (jak pokazano na rysunku). Do wykonania tego ogrodzenia należy zużyć 36 metrów bieżących siatki.\n\nSchematyczny rysunek trzech wybiegów (widok z góry). Linią przerywaną zaznaczono siatkę.\n\n![Rysunek 1](/cke-matura/mp-2024-cze/z31-fig1.png)\n\nOblicz wymiary $x$ oraz $y$ jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. W obliczeniach pomiń szerokość wejścia na każdy z wybiegów. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24194,18 +24428,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z01",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2015-maj/z01-1.png)",
+    "prompt": "Na rysunku przedstawiony jest zbiór wszystkich liczb rzeczywistych spełniających nierówność $|2x-8| \\leq 10$.\n\n![Rysunek 1](/cke-matura/mr-2015-maj/z01-fig1.png)\n\nStąd wynika, że",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$k=2$",
+      "$k=4$",
+      "$k=5$",
+      "$k=9$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $k = 9$",
     "solutionSteps": [
       "1. Rozwiązujemy nierówność z wartością bezwzględną $|2x - 8| \\le 10$. Nierówność typu $|a| \\le b$ jest równoważna nierówności $-b \\le a \\le b$.\n Zatem:\n $-10 \\le 2x - 8 \\le 10$\n\n2. Dodajemy 8 do wszystkich części nierówności:\n $-10 + 8 \\le 2x - 8 + 8 \\le 10 + 8$\n $-2 \\le 2x \\le 18$\n\n3. Dzielimy wszystkie części nierówności przez 2:\n $\\frac{-2}{2} \\le \\frac{2x}{2} \\le \\frac{18}{2}$\n $-1 \\le x \\le 9$\n\n4. Zbiór liczb spełniających nierówność to przedział $[-1, 9]$. Na rysunku przedstawiono ten zbiór jako przedział $[-1, k]$. Porównując te przedziały, widzimy, że $k$ musi być równe 9."
@@ -24220,16 +24457,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z02",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2015-maj/z02-1.png)",
+    "prompt": "Dana jest funkcja $f$ określona wzorem $f(x)= \\begin{cases} x-2 & \\text{dla } x \\le 0 \\\\ \\left| \\left| x+3 \\right| - 4 \\right| & \\text{dla } x > 0 \\end{cases}$\n\nRównanie $f(x)=1$ ma dokładnie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "jedno rozwiązanie.",
+      "dwa rozwiązania.",
+      "cztery rozwiązania.",
+      "pięć rozwiązań."
     ],
     "correctIndex": 0,
     "explanation": "A. jedno rozwiązanie.",
@@ -24246,18 +24486,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z03",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2015-maj/z03-1.png)",
+    "prompt": "Liczba $(3 - 2\\sqrt{3})^3$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$27 - 24\\sqrt{3}$",
+      "$27 - 30\\sqrt{3}$",
+      "$135 - 78\\sqrt{3}$",
+      "$135 - 30\\sqrt{3}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $135 - 78\\sqrt{3}$",
     "solutionSteps": [
       "1. Stosujemy wzór skróconego mnożenia na sześcian różnicy: $(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$.\n2. W naszym przypadku $a = 3$ i $b = 2\\sqrt{3}$.\n3. Podstawiamy wartości do wzoru:\n $(3 - 2\\sqrt{3})^3 = 3^3 - 3 \\cdot 3^2 \\cdot (2\\sqrt{3}) + 3 \\cdot 3 \\cdot (2\\sqrt{3})^2 - (2\\sqrt{3})^3$\n4. Obliczamy poszczególne składniki:\n $3^3 = 27$\n $3 \\cdot 3^2 \\cdot (2\\sqrt{3}) = 3 \\cdot 9 \\cdot 2\\sqrt{3} = 54\\sqrt{3}$\n $3 \\cdot 3 \\cdot (2\\sqrt{3})^2 = 9 \\cdot (4 \\cdot 3) = 9 \\cdot 12 = 108$\n $(2\\sqrt{3})^3 = (2\\sqrt{3})^2 \\cdot (2\\sqrt{3}) = (4 \\cdot 3) \\cdot (2\\sqrt{3}) = 12 \\cdot 2\\sqrt{3} = 24\\sqrt{3}$\n5. Podstawiamy obliczone wartości z powrotem do wzoru i upraszczamy:\n $(3 - 2\\sqrt{3})^3 = 27 - 54\\sqrt{3} + 108 - 24\\sqrt{3}$\n $(3 - 2\\sqrt{3})^3 = (27 + 108) - (54\\sqrt{3} + 24\\sqrt{3})$\n $(3 - 2\\sqrt{3})^3 = 135 - 78\\sqrt{3}$"
@@ -24272,16 +24515,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z04",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2015-maj/z04-1.png)",
+    "prompt": "Równanie $2\\sin x + 3\\cos x = 6$ w przedziale $(0,2\\pi)$",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "nie ma rozwiązań rzeczywistych.",
+      "ma dokładnie jedno rozwiązanie rzeczywiste.",
+      "ma dokładnie dwa rozwiązania rzeczywiste.",
+      "ma więcej niż dwa rozwiązania rzeczywiste."
     ],
     "correctIndex": 0,
     "explanation": "A. nie ma rozwiązań rzeczywistych.",
@@ -24298,18 +24544,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z05",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 5",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2015-maj/z05-1.png)",
+    "prompt": "Odległość początku układu współrzędnych od prostej o równaniu $y = 2x + 4$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{\\sqrt{5}}{5}$",
+      "$\\frac{4\\sqrt{5}}{5}$",
+      "$\\frac{4}{5}$",
+      "$4$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $\\frac{4\\sqrt{5}}{5}$",
     "solutionSteps": [
       "1. Punktem, od którego obliczamy odległość, jest początek układu współrzędnych, czyli $P = (0, 0)$.\n2. Równanie prostej dane jest w postaci kierunkowej $y = 2x + 4$. Aby zastosować wzór na odległość punktu od prostej, należy przekształcić je do postaci ogólnej $Ax + By + C = 0$.\n Przenosimy wszystkie wyrazy na jedną stronę: $2x - y + 4 = 0$.\n Zatem współczynniki prostej to: $A = 2$, $B = -1$, $C = 4$.\n3. Stosujemy wzór na odległość $d$ punktu $(x_0, y_0)$ od prostej $Ax + By + C = 0$:\n $d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$\n Podstawiamy współrzędne punktu $(x_0, y_0) = (0, 0)$ oraz współczynniki prostej $A = 2$, $B = -1$, $C = 4$:\n $d = \\frac{|2 \\cdot 0 + (-1) \\cdot 0 + 4|}{\\sqrt{2^2 + (-1)^2}}$\n4. Wykonujemy obliczenia:\n $d = \\frac{|0 + 0 + 4|}{\\sqrt{4 + 1}}$\n $d = \\frac{|4|}{\\sqrt{5}}$\n $d = \\frac{4}{\\sqrt{5}}$\n5. Aby usunąć niewymierność z mianownika, mnożymy licznik i mianownik przez $\\sqrt{5}$:\n $d = \\frac{4}{\\sqrt{5}} \\cdot \\frac{\\sqrt{5}}{\\sqrt{5}} = \\frac{4\\sqrt{5}}{5}$\n6. Porównując otrzymany wynik z podanymi opcjami, stwierdzamy, że jest to odpowiedź B."
@@ -24331,7 +24580,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2015-maj/z06-1.png)",
+    "prompt": "Oblicz granicę $\\lim_{n \\to \\infty} \\left(\\frac{11n^3 + 6n + 5}{6n^3 + 1} - \\frac{2n^2 + 2n + 1}{5n^2 - 4}\\right)$. W poniższe kratki wpisz kolejno cyfrę jedności i pierwsze dwie cyfry po przecinku rozwinięcia dziesiętnego otrzymanego wyniku.\n\n![Rysunek 1](/cke-matura/mr-2015-maj/z06-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24350,14 +24599,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z07",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2015-maj/z07-1.png)",
+    "prompt": "Liczby $(-1)$ i $3$ są miejscami zerowymi funkcji kwadratowej $f$. Oblicz $\\frac{f(6)}{f(12)}$.\n\n![Rysunek 1](/cke-matura/mr-2015-maj/z07-fig1.png)\n\n| Wypelnia egzaminator | Nr zadania | 6. | 7. |\n|----------------------|------------|----|----|\n|  | Maks. liczba pkt | 2 | 2 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24383,7 +24632,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2015-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2015-maj/z08-2.png)",
+    "prompt": "Udowodnij, że dla każdej liczby rzeczywistej x prawdziwa jest nierówność\n$x^4 - x^2 - 2x + 3 > 0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24409,7 +24658,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2015-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2015-maj/z09-2.png)",
+    "prompt": "Dwusieczne kątów czworokąta $ABCD$ wpisanego w okrąg przecinają się w czterech różnych punktach: $P, Q, R, S$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2015-maj/z09-fig1.png)\n\nWykaż, że na czworokącie $PQRS$ można opisać okrąg.\n\n| Wypełnia egzaminator | Nr zadania | 9. |\n|----------------------|-------------------|-----|\n|  | Maks. liczba pkt | 3 |\n|  | Uzyskana liczba pkt |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24428,14 +24677,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z10",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2015-maj/z10-1.png)",
+    "prompt": "Długości boków czworokąta $ABCD$ są równe: $|AB|=2$, $|BC|=3$, $|CD|=4$, $|DA|=5$.\nNa czworokącie $ABCD$ opisano okrąg. Oblicz długość przekątnej $AC$ tego czworokąta.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24461,7 +24710,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2015-maj/z11-1.png)",
+    "prompt": "W pierwszej urnie umieszczono 3 kule białe i 5 kul czarnych, a w drugiej urnie 7 kul białych i 2 kule czarne. Losujemy jedną kulę z pierwszej urny, przekładamy ją do urny drugiej i dodatkowo dokładamy do urny drugiej jeszcze dwie kule tego samego koloru, co wylosowana kula. Następnie losujemy dwie kule z urny drugiej. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że obie kule wylosowane z drugiej urny będą białe.\n\n| Wypełnia egzaminator | Nr zadania | 10. | 11. |\n|----------------------|------------------|-----|-----|\n|  | Maks. liczba pkt | 4 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24480,14 +24729,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z12",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2015-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2015-maj/z12-2.png)",
+    "prompt": "Funkcja $f$ określona jest wzorem $f(x) = x^3 - 2x^2 + 1$ dla każdej liczby rzeczywistej $x$. Wyznacz równania tych stycznych do wykresu funkcji $f$, które są równoległe do prostej o równaniu $y=4x$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24513,7 +24762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2015-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2015-maj/z13-2.png)",
+    "prompt": "Dany jest trójmian kwadratowy $f(x) = (m+1)x^2 + 2(m-2)x - m + 4$. Wyznacz wszystkie wartości parametru $m$, dla których trójmian $f$ ma dwa różne pierwiastki rzeczywiste $x_1, x_2$, spełniające warunek $x_1^2 - x_2^2 = x_1^4 - x_2^4$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24532,14 +24781,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z14",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2015-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2015-maj/z14-2.png)",
+    "prompt": "Podstawa ostrosłupa $ABCD S$ jest kwadrat $ABCD$. Krawędź boczna $SD$ jest wysokością ostrosłupa, a jej długość jest dwa razy większa od długości krawędzi podstawy. Oblicz sinus kąta między ścianami bocznymi $ABS$ i $CBS$ tego ostrosłupa.\n\n| Wypełnia egzaminator | Nr zadania | 14. |\n|----------------------|-----------------|-----|\n|  | Maks. liczba pkt | 5 |\n|  | Uzyskana liczba pkt |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24558,14 +24807,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z15",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 15",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2015-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2015-maj/z15-2.png)",
+    "prompt": "Suma wszystkich czterech współczynników wielomianu $W(x) = x^3 + ax^2 + bx + c$ jest równa 0. Trzy pierwiastki tego wielomianu tworzą ciąg arytmetyczny o różnicy równej 3. Oblicz współczynniki $a$, $b$ i $c$. Rozważ wszystkie możliwe przypadki.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24584,14 +24833,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2015-maj-z16",
     "title": "Matura - maj 2015 - poziom rozszerzony - zad. 16",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mr-2015-maj/z16-1.png)\n\n![Zadanie 16](/cke-matura/mr-2015-maj/z16-2.png)",
+    "prompt": "Rozpatrujemy wszystkie stożki, których przekrojem osiowym jest trójkąt o obwodzie 20. Oblicz wysokość i promień podstawy tego stożka, którego objętość jest największa. Oblicz objętość tego stożka.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24610,18 +24859,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z01",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2016-maj/z01-1.png)",
+    "prompt": "W rozwinięciu wyrażenia $(2\\sqrt{3}x+4y)^3$ współczynnik przy iloczynie $xy^2$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$32\\sqrt{3}$",
+      "$48$",
+      "$96\\sqrt{3}$",
+      "$144$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $96\\sqrt{3}$",
     "solutionSteps": [
       "1. Stosujemy wzór skróconego mnożenia na sześcian sumy $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$.\n2. W danym wyrażeniu $(2\\sqrt{3}x+4y)^3$ przyjmujemy $a = 2\\sqrt{3}x$ oraz $b = 4y$. Szukamy współczynnika przy iloczynie $xy^2$, który pojawia się w składniku $3ab^2$.\n3. Obliczamy składnik $3ab^2$:\n $3ab^2 = 3 \\cdot (2\\sqrt{3}x) \\cdot (4y)^2$\n $3ab^2 = 3 \\cdot 2\\sqrt{3}x \\cdot 16y^2$\n $3ab^2 = (3 \\cdot 2\\sqrt{3} \\cdot 16) \\cdot xy^2$\n $3ab^2 = (6\\sqrt{3} \\cdot 16) \\cdot xy^2$\n $3ab^2 = 96\\sqrt{3}xy^2$\n4. Współczynnik przy iloczynie $xy^2$ wynosi $96\\sqrt{3}$.\n5. Porównujemy wynik z dostępnymi opcjami. Wynik $96\\sqrt{3}$ odpowiada opcji C."
@@ -24636,18 +24888,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z02",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2016-maj/z02-1.png)",
+    "prompt": "Wielomian $W(x) = 6x^3 + 3x^2 - 5x + p$ jest podzielny przez dwumian $x-1$ dla $p$ równego",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$4$",
+      "$-2$",
+      "$2$",
+      "$-4$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. -4",
     "solutionSteps": [
       "1. Wielomian $W(x)$ jest podzielny przez dwumian $x-1$, co oznacza, że zgodnie z twierdzeniem o reszcie z dzielenia wielomianu, wartość wielomianu dla $x=1$ jest równa zero, czyli $W(1)=0$.\n2. Podstawiamy $x=1$ do wzoru wielomianu $W(x) = 6x^3 + 3x^2 - 5x + p$:\n$W(1) = 6(1)^3 + 3(1)^2 - 5(1) + p$\n$W(1) = 6 \\cdot 1 + 3 \\cdot 1 - 5 + p$\n$W(1) = 6 + 3 - 5 + p$\n$W(1) = 9 - 5 + p$\n$W(1) = 4 + p$\n3. Przyrównujemy $W(1)$ do zera, aby obliczyć wartość $p$:\n$4 + p = 0$\n$p = -4$"
@@ -24662,18 +24917,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z03",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2016-maj/z03-1.png)",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji homograficznej $y = f(x)$, której dziedziną jest zbiór $D = (-\\infty, 3) \\cup (3, +\\infty)$.\n\n![Rysunek 1](/cke-matura/mr-2016-maj/z03-fig1.png)\n\nRównanie $|f(x)| = p$ z niewiadomą $x$ ma dokładnie jedno rozwiązanie",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "w dwóch przypadkach: $p=0$ lub $p=3$.",
+      "w dwóch przypadkach: $p=0$ lub $p=2$.",
+      "tylko wtedy, gdy $p=3$.",
+      "tylko wtedy, gdy $p=2$."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. w dwóch przypadkach: $p=0$ lub $p=2$.",
     "solutionSteps": [
       "1. Na podstawie przedstawionego wykresu funkcji $y = f(x)$ odczytujemy, że funkcja ma asymptotę pionową $x=3$ oraz asymptotę poziomą $y=2$. Ponadto wykres funkcji przecina oś OX w punkcie $(1,0)$, co oznacza, że $f(1)=0$.\n\n2. Aby narysować wykres funkcji $y = |f(x)|$, należy te części wykresu $y = f(x)$, które znajdują się poniżej osi OX, odbić symetrycznie względem osi OX.\n * Dla $x \\in (-\\infty, 1)$, $f(x) \\in (0, 2)$, więc $|f(x)| = f(x)$. Wartości należą do przedziału $(0, 2)$.\n * Dla $x \\in (1, 3)$, $f(x) \\in (-\\infty, 0)$, więc $|f(x)| = -f(x)$. Wartości należą do przedziału $(0, +\\infty)$.\n * Dla $x \\in (3, +\\infty)$, $f(x) \\in (2, +\\infty)$, więc $|f(x)| = f(x)$. Wartości należą do przedziału $(2, +\\infty)$.\n Linia $y=2$ jest asymptotą poziomą zarówno dla $f(x)$, jak i dla $|f(x)|$. Oznacza to, że funkcja nigdy nie przyjmuje wartości $2$.\n\n3. Analizujemy liczbę rozwiązań równania $|f(x)|=p$, interpretując ją jako liczbę punktów przecięcia wykresu funkcji $y=|f(x)|$ z poziomą prostą $y=p$. Ponieważ $|f(x)| \\ge 0$, rozważamy tylko $p \\ge 0$.\n * Jeśli $p < 0$: brak rozwiązań.\n * Jeśli $p = 0$: $|f(x)| = 0$ oznacza $f(x) = 0$. Z wykresu widzimy, że $f(x)=0$ tylko dla $x=1$. Zatem istnieje dokładnie **jedno rozwiązanie**.\n * Jeśli $0 < p < 2$: Prosta $y=p$ przecina wykres $y=|f(x)|$ w dwóch miejscach: jedno dla $x \\in (-\\infty, 1)$ i jedno dla $x \\in (1, 3)$. Zatem istnieją dokładnie **dwa rozwiązania**.\n * Jeśli $p = 2$: Prosta $y=2$ nie przecina wykresu $y=|f(x)|$ dla $x \\in (-\\infty, 1)$ ani dla $x \\in (3, +\\infty)$ (ponieważ $y=2$ jest asymptotą poziomą). Przecina natomiast wykres w jednym miejscu dla $x \\in (1, 3)$. Zatem istnieje dokładnie **jedno rozwiązanie**.\n * Jeśli $p > 2$: Prosta $y=p$ przecina wykres $y=|f(x)|$ w dwóch miejscach: jedno dla $x \\in (1, 3)$ i jedno dla $x \\in (3, +\\infty)$. Zatem istnieją dokładnie **dwa rozwiązania**.\n\n4. Równanie $|f(x)| = p$ ma dokładnie jedno rozwiązanie, gdy $p=0$ lub $p=2$."
@@ -24688,16 +24946,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z04",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2016-maj/z04-1.png)",
+    "prompt": "Funkcja $f(x) = \\frac{3x-1}{x^2+4}$ jest określona dla każdej liczby rzeczywistej $x$. Pochodna tej funkcji jest określona wzorem",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$f'(x) = \\frac{-3x^2+2x+12}{(x^2+4)^2}$",
+      "$f'(x) = \\frac{-9x^2+2x-12}{(x^2+4)^2}$",
+      "$f'(x) = \\frac{3x^2-2x-12}{(x^2+4)^2}$",
+      "$f'(x) = \\frac{9x^2-2x+12}{(x^2+4)^2}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $f'(x) = \\frac{-3x^2 + 2x + 12}{(x^2+4)^2}$",
@@ -24715,17 +24976,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-mr-2016-maj-z05",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 5",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2016-maj/z05-1.png)",
+    "prompt": "Granica $ \\lim_{n\\to\\infty} \\frac{(pn^2+4n)^3}{5n^6-4} = -\\frac{8}{5} $. Wynika stąd, że",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$p = -8$",
+      "$p = 4$",
+      "$p = 2$",
+      "$p = -2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $p = -2$",
     "solutionSteps": [
       "Rozwiązanie:\n\n1. Aby obliczyć granicę funkcji wymiernej przy $n \\to \\infty$, należy porównać stopnie wielomianów w liczniku i mianowniku. W tym przypadku wystarczy rozważyć wyrazy $z$ najwyższą potęgą $n$ w liczniku i mianowniku.\n2. W liczniku mamy $(pn^2 + 4n)^3$. Najwyższa potęga $n$ po podniesieniu do sześcianu pochodzi od $(pn^2)^3 = p^3 n^6$. Pozostałe wyrazy $w$ rozwinięciu będą miały niższe potęgi $n$ (np. $3(pn^2)^2(4n) = 12p^2n^5$).\n3. W mianowniku mamy $5n^6 - 4$. Najwyższa potęga $n$ to $n^6$ z współczynnikiem $5$.\n4. Stopień wielomianu w liczniku (po rozwinięciu) jest równy 6, a stopień wielomianu w mianowniku również jest równy 6. Gdy stopnie wielomianów są równe, granica jest ilorazem współczynników przy najwyższych potęgach $n$.\n5. Zatem:\n $\\lim_{n\\to\\infty} \\frac{(pn^2 + 4n)^3}{5n^6 - 4} = \\lim_{n\\to\\infty} \\frac{p^3 n^6 + \\text{niższe potęgi } n}{5n^6 - 4} = \\frac{p^3}{5}$.\n6. Zgodnie z treścią zadania, ta granica jest równa $-\\frac{8}{5}$. Ustawiamy równanie:\n $\\frac{p^3}{5} = -\\frac{8}{5}$.\n7. Mnożymy obie strony równania przez $5$:\n $p^3 = -8$.\n8. Obliczamy pierwiastek sześcienny z obu stron:\n $p = \\sqrt[3]{-8}$.\n $p = -2$."
@@ -24766,14 +25030,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z07",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2016-maj/z07-1.png)",
+    "prompt": "Dany jest ciąg geometryczny $(a_n)$ określony wzorem $a_n = \\left(\\frac{1}{2x-371}\\right)^n$ dla $n \\ge 1$. Wszystkie wyrazy tego ciągu są dodatnie. Wyznacz najmniejszą liczbę całkowitą $x$, dla której nieskończony szereg $a_1+a_2+a_3+...$ jest zbieżny.\n\nOdpowiedź: ..............................................................................................................................................\n\n|  | Nr zadania | 6. | 7. |\n|---|---|---|---|\n| Wypełnia egzaminator | Maks. liczba pkt | 2 | 2 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24799,7 +25063,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2016-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2016-maj/z08-2.png)",
+    "prompt": "Wykaz, ze dla dowolnych dodatnich liczb rzeczywistych $x$ i $y$ takich, ze $x^2 + y^2 = 2$, prawdziwa jest nierownosc $x + y \\le 2$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24825,7 +25089,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2016-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2016-maj/z09-2.png)",
+    "prompt": "Dany jest prostokąt $ABCD$. Okrąg wpisany w trójkąt $BCD$ jest styczny do przekątnej $BD$ w punkcie $N$. Okrąg wpisany w trójkąt $ABD$ jest styczny do boku $AD$ w punkcie $M$, a środek $S$ tego okręgu leży na odcinku $MN$, jak na rysunku.\n\n![Rysunek 1](/cke-matura/mr-2016-maj/z09-fig1.png)\n\nWykaż, że $|MN|=|AD|$.\n\n| Wypełnia egzaminator | Nr zadania | 9. |\n|-----------------------|-------------|-----|\n|  | Maks. liczba pkt | 3 |\n|  | Uzyskana liczba pkt |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24844,14 +25108,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z10",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2016-maj/z10-1.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $a$, dla których wykresy funkcji $f$ i $g$, określonych wzorami $f(x)=x-2$ oraz $g(x)=5-ax$, przecinają się w punkcie o obu współrzędnych dodatnich.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24870,14 +25134,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z11",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2016-maj/z11-1.png)",
+    "prompt": "Rozwiąż nierówność $\\frac{2 \\cos x - \\sqrt{3}}{\\cos^2 x} < 0$ w przedziale $(0, 2\\pi)$.\n\n| Wypełnia egzaminator | Nr zadania | 10. | 11. |\n|---|---|---|---|\n|  | Maks. liczba pkt | 4 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24903,7 +25167,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2016-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2016-maj/z12-2.png)",
+    "prompt": "Dany jest trójmian kwadratowy $f(x) = x^2 + 2(m+1)x + 6m+1$. Wyznacz wszystkie rzeczywiste wartości parametru $m$, dla których ten trójmian ma dwa różne pierwiastki $x_1, x_2$ tego samego znaku, spełniające warunek $|x_1 - x_2| \\leq 3$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24922,14 +25186,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z13",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 13",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2016-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2016-maj/z13-2.png)",
+    "prompt": "Punkty $A=(30, 32)$ i $B=(0, 8)$ są sąsiednimi wierzchołkami czworokąta $ABCD$ wpisanego w okrąg. Prosta o równaniu $x-y+2=0$ jest jedyną osią symetrii tego czworokąta i zawiera przekątną $AC$. Oblicz współrzędne wierzchołków $C$ i $D$ tego czworokąta.\n\n![Rysunek 1](/cke-matura/mr-2016-maj/z13-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24955,7 +25219,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2016-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2016-maj/z14-2.png)",
+    "prompt": "Rozpatrujemy wszystkie liczby naturalne dziesięciocyfrowe, w zapisie których mogą występować wyłącznie cyfry 1, 2, 3, przy czym cyfra 1 występuje dokładnie trzy razy. Uzasadnij, że takich liczb jest 15 360.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24974,14 +25238,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z15",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2016-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2016-maj/z15-2.png)",
+    "prompt": "W ostrosłupie prawidłowym czworokątnym $ABCD S$ o podstawie $ABCD$ wysokość jest równa 5, $a_{k}$ąt między sąsiednimi ścianami bocznymi ostrosłupa ma miarę $120^\\circ$. Oblicz objętość tego ostrosłupa.\n\n![Rysunek 1](/cke-matura/mr-2016-maj/z15-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25000,14 +25264,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2016-maj-z16",
     "title": "Matura - maj 2016 - poziom rozszerzony - zad. 16",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 16](/cke-matura/mr-2016-maj/z16-1.png)\n\n![Zadanie 16](/cke-matura/mr-2016-maj/z16-2.png)",
+    "prompt": "Parabola o równaniu $y=2-\\frac{1}{2}x^2$ przecina oś $Ox$ układu współrzędnych w punktach $A=(-2,0)$ i $B=(2,0)$. Rozpatrujemy wszystkie trapezy równoramienne $ABCD$, których dłuższa podstawa jest odcinek $AB$, a końce $C$ i $D$ krótszej podstawy leżą na paraboli (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2016-maj/z16-fig1.png)\n\nWyznacz pole trapezu $ABCD$ w zależności od pierwszej współrzędnej wierzchołka $C$. Oblicz współrzędne wierzchołka $C$ tego z rozpatrywanych trapezów, którego pole jest największe.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25026,16 +25290,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z01",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2017-maj/z01-1.png)",
+    "prompt": "Liczba $(\\sqrt{2-\\sqrt{3}}-\\sqrt{2+\\sqrt{3}})^2$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$2$",
+      "$4$",
+      "$\\sqrt{3}$",
+      "$2\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A. 2",
@@ -25052,18 +25319,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z02",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "ciagi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2017-maj/z02-1.png)",
+    "prompt": "Nieskończony ciąg liczbowy jest określony wzorem $a_n = \\frac{(n^2-10n)(2-3n)}{2n^3+n^2+3}$ dla $n \\geq 1$.\nWtedy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\lim_{n \\to \\infty} a_n = \\frac{1}{2}$",
+      "$\\lim_{n \\to \\infty} a_n = 0$",
+      "$\\lim_{n \\to \\infty} a_n = -\\infty$",
+      "$\\lim_{n \\to \\infty} a_n = -\\frac{3}{2}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $\\lim_{n \\to \\infty} a_n = -\\frac{3}{2}$",
     "solutionSteps": [
       "1. Rozwijamy licznik wyrażenia określającego ciąg $a_n$:\n $(n^2 - 10n)(2 - 3n) = 2n^2 - 3n^3 - 20n + 30n^2 = -3n^3 + 32n^2 - 20n$.\n\n2. Zapisujemy wyrażenie $a_n$ w uproszczonej formie:\n $a_n = \\frac{-3n^3 + 32n^2 - 20n}{2n^3 + n^2 + 3}$.\n\n3. Aby obliczyć granicę ciągu, dzielimy każdy wyraz licznika i mianownika przez najwyższą potęgę $n$ występującą w mianowniku, czyli $n^3$:\n $\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\frac{\\frac{-3n^3}{n^3} + \\frac{32n^2}{n^3} - \\frac{20n}{n^3}}{\\frac{2n^3}{n^3} + \\frac{n^2}{n^3} + \\frac{3}{n^3}} = \\lim_{n \\to \\infty} \\frac{-3 + \\frac{32}{n} - \\frac{20}{n^2}}{2 + \\frac{1}{n} + \\frac{3}{n^3}}$.\n\n4. Korzystając z faktu, że $\\lim_{n \\to \\infty} \\frac{C}{n^k} = 0$ dla $k > 0$ i stałej $C$:\n $\\lim_{n \\to \\infty} a_n = \\frac{-3 + 0 - 0}{2 + 0 + 0} = \\frac{-3}{2}$."
@@ -25078,18 +25348,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z03",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2017-maj/z03-1.png)",
+    "prompt": "Odcinek $CD$ jest wysokością trójkąta $ABC$, w którym $|AD|=|CD|=\\frac{1}{2}|BC|$ (zobacz rysunek).\n\nOkrąg o środku $C$ i promieniu $CD$ jest styczny do prostej $AB$. Okrąg ten przecina boki $AC$ i $BC$ trójkąta odpowiednio w punktach $K$ i $L$.\n\n![Rysunek 1](/cke-matura/mr-2017-maj/z03-fig1.png)\n\nZaznaczony na rysunku kąt $\\alpha$ wpisany w okrąg jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$37,5^\\circ$",
+      "$45^\\circ$",
+      "$52,5^\\circ$",
+      "$60^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $52,5^\\circ$",
     "solutionSteps": [
       "1. Od cinek $CD$ jest wysokością trójkąta $ABC$, co oznacza, że $\\angle CDA = \\angle CDB = 90^\\circ$.\n2. W trójkącie prostokątnym $ADC$ mamy dane $|AD| = |CD|$. Oznacza to, że trójkąt $ADC$ jest trójkątem równoramiennym prostokątnym. Zatem kąty ostre tego trójkąta są równe: $\\angle CAD = \\angle ACD = 45^\\circ$.\n3. W trójkącie prostokątnym $CDB$ mamy dane $|CD| = \\frac{1}{2}|BC|$. Jest to szczególny przypadek trójkąta prostokątnego, w którym przyprostokątna leżąca naprzeciw kąta $30^\\circ$ jest równa połowie przeciwprostokątnej. Zatem $\\angle CBD = 30^\\circ$. W konsekwencji $\\angle BCD = 90^\\circ - 30^\\circ = 60^\\circ$.\n4. Kąt środkowy $\\angle KCL$ w okręgu o środku $C$ i promieniu $CD$ jest równy kątowi $\\angle ACB$. Wynosi on sumę kątów $\\angle ACD$ i $\\angle BCD$: $\\angle KCL = \\angle ACB = \\angle ACD + \\angle BCD = 45^\\circ + 60^\\circ = 105^\\circ$.\n5. Kąt $\\alpha = \\angle KML$ jest kątem wpisanym w okrąg, opartym na tym samym łuku $KL$ co kąt środkowy $\\angle KCL$. Zgodnie z własnością kątów w okręgu, kąt wpisany jest równy połowie kąta środkowego opartego na tym samym łuku. Zatem $\\alpha = \\frac{1}{2} \\angle KCL$.\n6. Podstawiając wartość kąta środkowego, otrzymujemy: $\\alpha = \\frac{1}{2} \\cdot 105^\\circ = 52.5^\\circ$."
@@ -25104,18 +25377,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z04",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2017-maj/z04-1.png)",
+    "prompt": "Dane są punkt $B=(-4,7)$ i wektor $\\vec{u}=[-3,5]$. Punkt $A$, taki, że $\\vec{AB}=-3\\vec{u}$, ma współrzędne",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$A=(5,-8)$",
+      "$A=(-13,22)$",
+      "$A=(9,-15)$",
+      "$A=(12,24)$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $A=(-13,22)$",
     "solutionSteps": [
       "1. Oznaczmy współrzędne punktu $A$ jako $(x_A, y_A)$. Wektor $\\vec{AB}$ ma współrzędne obliczone jako różnica współrzędnych końca i początku: $\\vec{AB} = [x_B - x_A, y_B - y_A]$.\n Dla $B = (-4, 7)$ otrzymujemy: $\\vec{AB} = [-4 - x_A, 7 - y_A]$.\n\n2. Obliczamy wektor $-3\\vec{u}$. Wektor $\\vec{u} = [-3, 5]$. Mnożymy każdą współrzędną wektora $\\vec{u}$ przez $-3$:\n $-3\\vec{u} = [-3 \\cdot (-3), -3 \\cdot 5] = [9, -15]$.\n\n3. Zgodnie z warunkiem podanym w zadaniu, $\\vec{AB} = -3\\vec{u}$. Przyrównujemy odpowiednie współrzędne obu wektorów:\n $-4 - x_A = 9$\n $7 - y_A = -15$\n\n4. Rozwiązujemy układ równań, aby znaleźć $x_A$ i $y_A$:\n Z pierwszego równania: $-x_A = 9 + 4 \\implies -x_A = 13 \\implies x_A = -13$.\n Z drugiego równania: $-y_A = -15 - 7 \\implies -y_A = -22 \\implies y_A = 22$.\n\n5. Współrzędne punktu $A$ to $(-13, 22)$."
@@ -25137,7 +25413,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2017-maj/z05-1.png)",
+    "prompt": "Reszta z dzielenia wielomianu $W(x) = x^3 - 2x^2 + ax + \\frac{3}{4}$ przez dwumian $x-2$ jest równa 1.\n\nOblicz wartość współczynnika $a$.\nW poniższe kratki wpisz kolejno trzy pierwsze cyfry po przecinku rozwinięcia dziesiętnego otrzymanego wyniku.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25156,14 +25432,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z06",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 6",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2017-maj/z06-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = \\frac{x-1}{x^2+1}$ dla każdej liczby rzeczywistej $x$. Wyznacz równanie stycznej do wykresu tej funkcji $w$ punkcie $P=(1, 0)$.\n\n![Rysunek 1](/cke-matura/mr-2017-maj/z06-fig1.png)\n\nOdpowiedź:",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25189,7 +25465,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2017-maj/z07-1.png)",
+    "prompt": "Udowodnij, że dla dowolnych różnych liczb rzeczywistych x, y prawdziwa jest nierówność $x^2y^2 + 2x^2 + 2y^2 - 8xy + 4 > 0$.\n\n| Wypełnia egzaminator | Nr zadania | 5. | 6. | 7. |\n|----------------------|---------------------|----|----|----|\n|  | Maks. liczba pkt | 2 | 3 | 3 |\n|  | Uzyskana liczba pkt |  |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25208,14 +25484,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z08",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 8",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2017-maj/z08-1.png)",
+    "prompt": "W trójkącie ostrokątnym $ABC$ bok $AB$ ma długość $c$, długość boku $BC$ jest równa $a$ oraz $|\\angle ABC| = \\beta$. Dwusieczna kąta $ABC$ przecina bok $AC$ trójkąta w punkcie $E$.\n\nWykaz, że długość odcinka $BE$ jest równa\n$\\frac{2ac \\cdot \\cos \\frac{\\beta}{2}}{a+c}$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25234,14 +25510,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z09",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2017-maj/z09-1.png)",
+    "prompt": "W czworościanie, którego wszystkie krawędzie mają taką samą długość 6, umieszczono kulę tak, że ma ona dokładnie jeden punkt wspólny z każdą ścianą czworościanu. Płaszczyzna $\\pi$, równoległa do podstawy tego czworościanu, dzieli go na dwie bryły: ostrosłup o objętości równej $\\frac{8}{27}$ objętości dzielonego czworościanu i ostrosłup ścięty. Oblicz odległość środka $S$ kuli od płaszczyzny $\\pi$, tj. długość najkrótszego spośród odcinków $SP$, gdzie $P$ jest punktem płaszczyzny $\\pi$.\n\n![Rysunek 1](/cke-matura/mr-2017-maj/z09-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25260,14 +25536,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z10",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2017-maj/z10-1.png)",
+    "prompt": "Rozwiąż równanie $\\cos 2x + 3 \\cos x = -2$ w przedziale $\\langle 0, 2\\pi \\rangle$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25293,7 +25569,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2017-maj/z11-1.png)",
+    "prompt": "W pudełku znajduje się 8 piłeczek oznaczonych kolejnymi liczbami naturalnymi od 1 do 8. Losujemy jedną piłeczkę, zapisujemy liczbę na niej występującą, a następnie zwracamy piłeczkę do urny. Tę procedurę wykonujemy jeszcze dwa razy i tym samym otrzymujemy zapisane trzy liczby. Oblicz prawdopodobieństwo wylosowania takich piłeczek, że iloczyn trzech zapisanych liczb jest podzielny przez 4. Wynik podaj w postaci ułamka zwykłego.\n\nOdpowiedź:\n\n| Wypełnia egzaminator | Nr zadania | 10. | 11. |\n|----------------------|---------------------|-----|-----|\n|  | Maks. liczba pkt | 4 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25319,7 +25595,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2017-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2017-maj/z12-2.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m$, dla których równanie\n$4x^2 - 6mx + (2m+3)(m-3) = 0$\nma dwa różne rozwiązania rzeczywiste $x_1$ i $x_2$, przy czym $x_1 < x_2$, spełniające warunek\n$(4x_1 - 4x_2 - 1)(4x_1 - 4x_2 + 1) < 0$.\n\n![Rysunek 1](/cke-matura/mr-2017-maj/z12-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25338,14 +25614,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z13",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 13",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2017-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2017-maj/z13-2.png)",
+    "prompt": "Wyznacz równanie okręgu przechodzącego przez punkty $A=(-5, 3)$ i $B=(0, 6)$, którego środek leży na prostej o równaniu $x-3y+1=0$.\n\n![Rysunek 1](/cke-matura/mr-2017-maj/z13-fig1.png)\n\nOdpowiedź:\n\n| Wypełnia egzaminator | Nr zadania | 13. |\n| :------------------- | :--------- | :-- |\n|  | Maks. liczba pkt | 5 |\n|  | Uzyskana liczba pkt |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25364,14 +25640,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2017-maj-z14",
     "title": "Matura - maj 2017 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2017-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2017-maj/z14-2.png)",
+    "prompt": "Liczby $a$, $b$, $c$ są - odpowiednio - pierwszym, drugim i trzecim wyrazem ciągu arytmetycznego. Suma tych liczb jest równa 27. Ciąg $(a-2, b, 2c+1)$ jest geometryczny. Wyznacz liczby $a$, $b$, $c$.\n\n| Wypełnia egzaminator | Nr zadania | 14. |\n| :------------------- | :--------- | :-- |\n|  | Maks. liczba pkt | 6 |\n|  | Uzyskana liczba pkt |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25397,7 +25673,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2017-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2017-maj/z15-2.png)",
+    "prompt": "Rozpatrujemy wszystkie walce o danym polu powierzchni całkowitej $P$. Oblicz wysokość i promień podstawy tego walca, którego objętość jest największa. Oblicz tę największą objętość.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25416,16 +25692,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z01",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2018-maj/z01-1.png)",
+    "prompt": "Dane są liczby: $a = \\frac{\\sqrt[4]{8}}{2}$, $b = \\frac{1}{2\\sqrt[4]{8}}$, $c = \\sqrt[4]{8}$, $d = \\frac{2}{\\sqrt[4]{8}}$ oraz $k = 2^{-\\frac{1}{4}}$. Prawdziwa jest równość",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$k = a$",
+      "$k = b$",
+      "$k = c$",
+      "$k = d$"
     ],
     "correctIndex": 0,
     "explanation": "A. $k = a$",
@@ -25442,18 +25721,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z02",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2018-maj/z02-1.png)",
+    "prompt": "Równanie $||x|-2|=|x|+2$",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "nie ma rozwiązań.",
+      "ma dokładnie jedno rozwiązanie.",
+      "ma dokładnie dwa rozwiązania.",
+      "ma dokładnie cztery rozwiązania."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. ma dokładnie jedno rozwiązanie.",
     "solutionSteps": [
       "1. Podstawiamy $y = |x|$. Ponieważ wartość bezwzględna jest zawsze nieujemna, to $y \\ge 0$.\n2. Równanie przyjmuje postać $ |y-2| = y+2 $.\n3. Rozważamy dwa przypadki dla wartości bezwzględnej $|y-2|$:\n a) Gdy $y-2 \\ge 0$, czyli $y \\ge 2$:\n Wtedy $y-2 = y+2$.\n $-2 = 2$, co jest sprzecznością. Brak rozwiązań w tym przypadku.\n b) Gdy $y-2 < 0$, czyli $y < 2$:\n Wtedy $-(y-2) = y+2$.\n $-y+2 = y+2$.\n $0 = 2y$.\n $y = 0$.\n4. Sprawdzamy, czy rozwiązanie $y=0$ spełnia warunek $y < 2$. Tak, $0 < 2$. Zatem $y=0$ jest jedynym rozwiązaniem równania $ |y-2| = y+2 $ dla $y \\ge 0$.\n5. Wracamy do podstawienia $y = |x|$:\n $|x| = 0$.\n To równanie ma dokładnie jedno rozwiązanie: $x=0$."
@@ -25468,18 +25750,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z03",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2018-maj/z03-1.png)",
+    "prompt": "Wartość wyrażenia $2 \\log_{5} 10 - \\frac{1}{\\log_{20} 5}$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-1$",
+      "$0$",
+      "$1$",
+      "$2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 1",
     "solutionSteps": [
       "Rozwiązanie:\n\n1. Zastosuj wzór na logarytm potęgi: $a \\log_b c = \\log_b c^a$.\n $2 \\log_5 10 = \\log_5 10^2 = \\log_5 100$.\n\n2. Zastosuj wzór na zamianę podstawy logarytmu: $\\frac{1}{\\log_b a} = \\log_a b$.\n $\\frac{1}{\\log_{20} 5} = \\log_5 20$.\n\n3. Podstawiając przekształcone wyrażenia do pierwotnego równania, otrzymujemy:\n $\\log_5 100 - \\log_5 20$.\n\n4. Zastosuj wzór na różnicę logarytmów: $\\log_b x - \\log_b y = \\log_b \\left(\\frac{x}{y}\\right)$.\n $\\log_5 100 - \\log_5 20 = \\log_5 \\left(\\frac{100}{20}\\right)$.\n\n5. Wykonaj dzielenie w argumencie logarytmu:\n $\\log_5 \\left(\\frac{100}{20}\\right) = \\log_5 5$.\n\n6. Oblicz wartość logarytmu, korzystając z definicji $\\log_b b = 1$:\n $\\log_5 5 = 1$."
@@ -25494,16 +25779,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z04",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2018-maj/z04-1.png)\n\n![Zadanie 4](/cke-matura/mr-2018-maj/z04-2.png)",
+    "prompt": "Granica $\\lim_{x\\to3^-} \\frac{-x+2}{x^2-5x+6}$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-\\infty$",
+      "$-1$",
+      "$0$",
+      "$+\\infty$"
     ],
     "correctIndex": 0,
     "explanation": "A. $-\\infty$",
@@ -25520,14 +25808,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z05",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 5",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2018-maj/z05-1.png)",
+    "prompt": "Punkt $A=(-5,3)$ jest środkiem symetrii wykresu funkcji homograficznej określonej wzorem\n\n$f(x)=\\frac{ax+7}{x+d}, \\text{ gdy } x \\ne -d$\n\nOblicz iloraz $\\frac{d}{a}$.\n\nW poniższe kratki wpisz kolejno cyfrę jedności i pierwsze dwie cyfry po przecinku nieskończonego rozwinięcia dziesiętnego otrzymanego wyniku.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25572,14 +25860,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z07",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2018-maj/z07-1.png)",
+    "prompt": "Trójkąt $ABC$ jest ostrokątny oraz $|AC| > |BC|$. Dwusieczna $d_C$ kąta $ACB$ przecina bok $AB$ w punkcie $K$. Punkt $L$ jest obrazem punktu $K$ w symetrii osiowej względem dwusiecznej $d_A$ kąta $BAC$, punkt $M$ jest obrazem punktu $L$ w symetrii osiowej względem dwusiecznej $d_C$ kąta $ACB$, a punkt $N$ jest obrazem punktu $M$ w symetrii osiowej względem dwusiecznej $d_B$ kąta $ABC$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2018-maj/z07-fig1.png)\n\nUdowodnij, że na czworokącie $KNML$ można opisać okrąg.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25605,7 +25893,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2018-maj/z08-1.png)",
+    "prompt": "Udowodnij, że dla każdej liczby całkowitej $k$ i dla każdej liczby całkowitej $m$ liczba $k^3m - km^3$ jest podzielna przez 6.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25631,7 +25919,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2018-maj/z09-1.png)",
+    "prompt": "Z liczb ośmioelementowego zbioru $Z = \\{1, 2, 3, 4, 5, 6, 7, 9\\}$ tworzymy ośmiowyrazowy ciąg, którego wyrazy się nie powtarzają. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że żadne dwie liczby parzyste nie są sąsiednimi wyrazami utworzonego ciągu. Wynik przedstaw w postaci ułamka zwykłego nieskracalnego.\n\n|  | Nr zadania | 8. | 9. |\n|:------------------|:------------------|:---|:---|\n| **Wypełnia egzaminator** | Maks. liczba pkt | 3 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25650,14 +25938,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z10",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2018-maj/z10-1.png)",
+    "prompt": "Objętość stożka ściętego (przedstawionego na rysunku) można obliczyć ze wzoru $V = \\frac{1}{3}\\pi H (r^2 + rR + R^2)$, gdzie $r$ i $R$ są promieniami podstaw ($r < R$), a $H$ jest wysokością bryły.\n\n![Rysunek 1](/cke-matura/mr-2018-maj/z10-fig1.png)\n\nDany jest stożek ścięty, którego wysokość jest równa 10, objętość $840\\pi$, a $r = 6$. Oblicz cosinus kąta nachylenia przekątnej przekroju osiowego tej bryły do jednej z jej podstaw.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25676,14 +25964,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z11",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2018-maj/z11-1.png)",
+    "prompt": "Rozwiąż równanie $\\sin 6x + \\cos 3x = 2 \\sin 3x + 1$ w przedziale $\\langle 0, \\pi \\rangle$.\n\n| Wypełnia egzaminator | Nr zadania | 10. | 11. |\n|-----------------------|------------|-----|-----|\n|  | Maks. liczba pkt | 4 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25709,7 +25997,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2018-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2018-maj/z12-2.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m$, dla których równanie $x^2+(m+1)x-m^2+1=0$ ma dwa rozwiązania rzeczywiste $x_1$ i $x_2$ ($x_1 \\neq x_2$), spełniające warunek $x_1^3+x_2^3 > -7x_1x_2$.\n\n![Rysunek 1](/cke-matura/mr-2018-maj/z12-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25728,14 +26016,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2018-maj-z13",
     "title": "Matura - maj 2018 - poziom rozszerzony - zad. 13",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2018-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2018-maj/z13-2.png)",
+    "prompt": "Wyrazy ciągu geometrycznego $(a_n)$, określonego dla $n \\ge 1$, spełniają układ równań\n$$\n\\begin{cases}\na_3 + a_6 = -84 \\\\\na_4 + a_7 = 168\n\\end{cases}\n$$\nWyznacz liczbę $n$ początkowych wyrazów tego ciągu, których suma $S_n$ jest równa 32769.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25761,7 +26049,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2018-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2018-maj/z14-2.png)",
+    "prompt": "Punkt $A = (7, -1)$ jest wierzcholkiem trojkata rownoramiennego $ABC$, w ktorym $|AC| = |BC|$. Obie wspolrzedne wierzcholka $C$ sa liczbami ujemnymi. Okrag wpisany w trojkat $ABC$ ma rownanie $x^2 + y^2 = 10$. Oblicz wspolrzedne wierzcholkow $B$ i $C$ tego trojkata.\n\n![Rysunek 1](/cke-matura/mr-2018-maj/z14-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25787,7 +26075,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2018-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2018-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2018-maj/z15-3.png)",
+    "prompt": "Rozpatrujemy wszystkie trapezy równoramienne, w które można wpisać okrąg, spełniające warunek: suma długości $d$łuższej podstawy $a$ i wysokości trapezu jest równa 2.\na) Wyznacz wszystkie wartości $a$, dla których istnieje trapez o podanych własnościach.\nb) Wykaż, że obwód $L$ takiego trapezu, jako funkcja $d$ługości $a$ dłuższej podstawy trapezu, wyraża się wzorem $L(a) = \\frac{4a^2-8a+8}{a}$.\nc) Oblicz tangens kąta ostrego tego spośród rozpatrywanych trapezów, którego obwód jest najmniejszy.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25806,18 +26094,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z01",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2019-maj/z01-1.png)",
+    "prompt": "Dla dowolnych liczb $x>0, x \\neq 1, y>0, y \\neq 1$ wartość wyrażenia $\\left(\\log_{\\frac{1}{x}} y\\right) \\cdot \\left(\\log_{\\frac{1}{y}} x\\right)$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x \\cdot y$",
+      "$\\frac{1}{x \\cdot y}$",
+      "$-1$",
+      "$1$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. 1",
     "solutionSteps": [
       "1. Przekształcamy podstawy logarytmów korzystając ze wzoru $\\log_{a^k} b = \\frac{1}{k} \\log_a b$.\n Dla pierwszego logarytmu, $\\log_{\\frac{1}{x}} y$:\n $\\log_{\\frac{1}{x}} y = \\log_{x^{-1}} y = \\frac{1}{-1} \\log_x y = - \\log_x y$.\n Dla drugiego logarytmu, $\\log_{\\frac{1}{y}} x$:\n $\\log_{\\frac{1}{y}} x = \\log_{y^{-1}} x = \\frac{1}{-1} \\log_y x = - \\log_y x$.\n\n2. Mnożymy otrzymane wyrażenia:\n $(- \\log_x y) \\cdot (- \\log_y x) = \\log_x y \\cdot \\log_y x$.\n\n3. Korzystamy ze wzoru na zamianę podstawy logarytmu: $\\log_a b = \\frac{\\log_c b}{\\log_c a}$.\n Przyjmijmy dowolną podstawę $c$, np. $c=e$ (logarytm naturalny $\\ln$).\n $\\log_x y = \\frac{\\ln y}{\\ln x}$\n $\\log_y x = \\frac{\\ln x}{\\ln y}$\n\n4. Podstawiamy te wyrażenia z powrotem do iloczynu:\n $\\left(\\frac{\\ln y}{\\ln x}\\right) \\cdot \\left(\\frac{\\ln x}{\\ln y}\\right)$.\n Zakładając, że $x \\neq 1$ i $y \\neq 1$, $\\ln x \\neq 0$ i $\\ln y \\neq 0$. Możemy skrócić $\\ln y$ z licznika i mianownika oraz $\\ln x$ z licznika i mianownika.\n\n5. Po skróceniu otrzymujemy:\n $1$."
@@ -25832,16 +26123,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z02",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2019-maj/z02-1.png)",
+    "prompt": "Liczba $\\cos^2 105^\\circ - \\sin^2 105^\\circ$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-\\frac{\\sqrt{3}}{2}$",
+      "$-\\frac{1}{2}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $-\\frac{\\sqrt{3}}{2}$",
@@ -25858,18 +26152,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z03",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2019-maj/z03-1.png)",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji $y=f(x)$, ktory jest zlozony z dwoch polprostych $AD$ i $CE$ oraz dwoch odcinkow $AB$ i $BC$, gdzie $A=(-1,0)$, $B=(1,2)$, $C=(3,0)$, $D=(-4,3)$, $E=(6,3)$.\n\n![Rysunek 1](/cke-matura/mr-2019-maj/z03-fig1.png)\n\nWzor funkcji $f$ to",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$f(x)=|x+1|+|x-1|$",
+      "$f(x)=||x-1|-2|$",
+      "$f(x)=||x-1|+2|$",
+      "$f(x)=|x-1|+2$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $f(x)=||x-1|-2|$",
     "solutionSteps": [
       "1. Odczytujemy z wykresu oraz z treści zadania współrzędne charakterystycznych punktów: $A=(-1, 0)$, $B=(1, 2)$, $C=(3, 0)$, $D=(-4, 3)$, $E=(6, 3)$.\n\n2. Analizujemy kształt wykresu. Jest to funkcja $z$łożona z odcinków i półprostych, której minima lokalne (wartości zerowe) znajdują się w punktach $A$ i $C$, a maksimum lokalne w punkcie $B$. Taki kształt sugeruje funkcję zawierającą wartość bezwzględną.\n\n3. Testujemy podane opcje, podstawiając współrzędne punktów do wzorów funkcji.\n * **Opcja A:** $f(x)=|x+1|+|x-1|$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1+1|+|-1-1| = 0+|-2| = 2$. Nie zgadza się z $y=0$. Opcja A jest nieprawidłowa.\n * **Opcja D:** $f(x)=|x-1|+2$.\n Sprawdzamy punkt $A=(-1,0)$: $f(-1) = |-1-1|+2 = |-2|+2 = 2+2=4$. Nie zgadza się z $y=0$. Opcja D jest nieprawidłowa.\n * **Opcja C:** $f(x)=||x-1|+2|$.\n Ponieważ $|x-1| \\ge 0$, to $|x-1|+2 \\ge 2$. Zatem $||x-1|+2| = |x-1|+2$. Jest to ten sam wzór co w opcji D, więc również jest nieprawidłowy, ponieważ nie spełnia warunku $f(-1)=0$.\n\n4. **Opcja B:** $f(x)=||x-1|-2|$.\n * Sprawdzamy punkt $A=(-1,0)$: $f(-1) = ||-1-1|-2| = ||-2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $B=(1,2)$: $f(1) = ||1-1|-2| = ||0|-2| = |-2| = 2$. Zgadza się.\n * Sprawdzamy punkt $C=(3,0)$: $f(3) = ||3-1|-2| = ||2|-2| = |2-2| = |0| = 0$. Zgadza się.\n * Sprawdzamy punkt $D=(-4,3)$: $f(-4) = ||-4-1|-2| = ||-5|-2| = |5-2| = |3| = 3$. Zgadza się.\n * Sprawdzamy punkt $E=(6,3)$: $f(6) = ||6-1|-2| = ||5|-2| = |5-2| = |3| = 3$. Zgadza się.\n\n5. Wszystkie kluczowe punkty leżą na wykresie funkcji opisanej wzorem z opcji B."
@@ -25891,7 +26188,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2019-maj/z04-1.png)\n\n![Zadanie 4](/cke-matura/mr-2019-maj/z04-2.png)",
+    "prompt": "Zdarzenia losowe $A$ i $B$ zawarte w $\\Omega$ są takie, że prawdopodobieństwo $P(B')$ zdarzenia $B'$, przeciwnego do zdarzenia $B$, jest równe $\\frac{1}{4}$. Ponadto prawdopodobieństwo warunkowe $P(A|B) = \\frac{1}{5}$. Wynika stąd, że\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25917,7 +26214,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2019-maj/z05-1.png)",
+    "prompt": "Oblicz granicę\n$$ \\lim_{n \\to \\infty} \\left( \\frac{9n^3 + 11n^2}{7n^3 + 5n^2 + 3n + 1} - \\frac{n^2}{3n^2 + 1} \\right) $$\nWpisz w poniższe kratki - od lewej do prawej - trzy kolejne cyfry po przecinku rozwinięcia dziesiętnego otrzymanego wyniku.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25943,7 +26240,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2019-maj/z06-1.png)",
+    "prompt": "Rozważamy wszystkie liczby naturalne pięciocyfrowe zapisane przy użyciu cyfr 1, 3, 5, 7, 9, bez powtarzania jakiejkolwiek cyfry. Oblicz sumę wszystkich takich liczb.\n\n| Wypełnia egzaminator | Nr zadania | 5. | 6. |\n|----------------------|------------------|----|----|\n|  | Maks. liczba pkt | 2 | 3 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25962,14 +26259,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z07",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2019-maj/z07-1.png)",
+    "prompt": "Punkt $P=(10, 2429)$ leży na paraboli o równaniu $y=2x^2+x+2219$. Prosta o równaniu kierunkowym $y=ax+b$ jest styczna do tej paraboli w punkcie $P$. Oblicz współczynnik $b$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -25988,14 +26285,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z08",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 8",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2019-maj/z08-1.png)",
+    "prompt": "Udowodnij, że dla dowolnych dodatnich liczb rzeczywistych $x$ i $y$, takich że $x 2$.\n\n| Wypełnia egzaminator | Nr zadania | 7. | 8. |\n|---|---|---|---|\n|  | Maks. liczba pkt | 2 | 3 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26014,14 +26311,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z09",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2019-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2019-maj/z09-2.png)",
+    "prompt": "Dany jest trójkąt równoramienny $ABC$, w którym $|AC| = |BC|$. Na ramieniu $AC$ tego trójkąta wybrano punkt $M$ ($M \\neq A$ i $M \\neq C$), a na ramieniu $BC$ wybrano punkt $N$, w taki sposób, że $|AM| = |CN|$. Przez punkty $M$ i $N$ poprowadzono proste prostopadłe do podstawy $AB$ tego trójkąta, które wyznaczają na niej punkty $S$ i $T$. Udowodnij, że $|ST| = \\frac{1}{2}|AB|$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26040,14 +26337,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z10",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2019-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2019-maj/z10-2.png)",
+    "prompt": "Punkt $D$ leży na boku $AB$ trójkąta $ABC$ oraz $|AC|=16$, $|AD|=6$, $|CD|=14$ i $|BC|=|BD|$. Oblicz obwód trójkąta $ABC$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26073,7 +26370,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2019-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2019-maj/z11-2.png)",
+    "prompt": "Dane są okręgi o równaniach $x^2+y^2-12x-8y+43=0$ i $x^2+y^2-2ax+4y+a^2-77=0$.\nWyznacz wszystkie wartości parametru $a$, dla których te okręgi mają dokładnie jeden punkt wspólny. Rozważ wszystkie przypadki.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26092,14 +26389,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z12",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2019-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2019-maj/z12-2.png)",
+    "prompt": "Trzywyrazowy ciąg $(a, b, c)$ o wyrazach dodatnich jest arytmetyczny, natomiast ciąg $(\\frac{1}{a}, \\frac{2}{3b}, \\frac{1}{2a+2b+c})$ jest geometryczny. Oblicz iloraz ciągu geometrycznego.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26125,7 +26422,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2019-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2019-maj/z13-2.png)",
+    "prompt": "Wielomian określony wzorem $W(x)=2x^3+(m^2+2)x^2-11x-2(2m+1)$ jest podzielny przez dwumian $(x-2)$ oraz przy dzieleniu przez dwumian $(x+1)$ daje resztę 6. Oblicz $m$ i dla wyznaczonej wartości $m$ rozwiąż nierówność $W(x) \\geq 0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26144,14 +26441,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z14",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2019-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2019-maj/z14-2.png)",
+    "prompt": "Rozwiąż równanie $\\cos x \\left( \\sin \\left( x - \\frac{\\pi}{3} \\right) + \\sin \\left( x + \\frac{\\pi}{3} \\right) \\right) = \\frac{1}{2} \\sin x$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26170,14 +26467,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2019-maj-z15",
     "title": "Matura - maj 2019 - poziom rozszerzony - zad. 15",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2019-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2019-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2019-maj/z15-3.png)",
+    "prompt": "Rozważmy wszystkie graniastosłupy prawidłowe trójkątne o objętości $V=2$. Wyznacz długości krawędzi tego z rozważanych graniastosłupów, którego pole powierzchni całkowitej jest najmniejsze. Oblicz to najmniejsze pole.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26196,18 +26493,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z01",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2020-cze/z01-1.png)",
+    "prompt": "Wielomian $W$ określony wzorem $W(x) = x^{2019} - 3x^{2000} + 2x + 6$",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "jest podzielny przez $(x-1)$ i z dzielenia przez $(x+1)$ daje resztę równą 6.",
+      "jest podzielny przez $(x+1)$ i z dzielenia przez $(x-1)$ daje resztę równą 6.",
+      "jest podzielny przez $(x-1)$ i jest podzielny przez $(x+1)$.",
+      "nie jest podzielny ani przez $(x-1)$, ani przez $(x+1)$."
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. jest podzielny przez $(x+1)$ i z dzielenia przez $(x-1)$ daje resztę równą 6.",
     "solutionSteps": [
       "1. Obliczamy wartość wielomianu $W(x)$ dla $x=1$, aby sprawdzić resztę z dzielenia przez $(x-1)$, korzystając z twierdzenia o reszcie:\n $W(1) = 1^{2019} - 3 \\cdot 1^{2000} + 2 \\cdot 1 + 6 = 1 - 3 \\cdot 1 + 2 + 6 = 1 - 3 + 2 + 6 = -2 + 2 + 6 = 6$.\n Zatem reszta z dzielenia wielomianu $W(x)$ przez $(x-1)$ wynosi 6. Wielomian nie jest podzielny przez $(x-1)$.\n\n2. Obliczamy wartość wielomianu $W(x)$ dla $x=-1$, aby sprawdzić resztę z dzielenia przez $(x+1)$:\n $W(-1) = (-1)^{2019} - 3 \\cdot (-1)^{2000} + 2 \\cdot (-1) + 6$.\n Ponieważ 2019 jest liczbą nieparzystą, $(-1)^{2019} = -1$.\n Ponieważ 2000 jest liczbą parzystą, $(-1)^{2000} = 1$.\n $W(-1) = -1 - 3 \\cdot 1 + 2 \\cdot (-1) + 6 = -1 - 3 - 2 + 6 = -6 + 6 = 0$.\n Zatem reszta z dzielenia wielomianu $W(x)$ przez $(x+1)$ wynosi 0. Wielomian jest podzielny przez $(x+1)$.\n\n3. Porównujemy uzyskane wyniki z podanymi opcjami:\n Wielomian $W(x)$ jest podzielny przez $(x+1)$ i z dzielenia przez $(x-1)$ daje resztę równą 6.\n Ta kombinacja odpowiada stwierdzeniu w opcji B."
@@ -26222,18 +26522,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z02",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "ciagi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2020-cze/z02-1.png)",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n = \\frac{3n^2+7n-5}{11-5n+5n^2}$ dla każdej liczby naturalnej $n \\ge 1$.\n\nGranica tego ciągu jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "3",
+      "$\\frac{1}{5}$",
+      "$\\frac{3}{5}$",
+      "$-\\frac{5}{11}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $\\frac{3}{5}$",
     "solutionSteps": [
       "1. Aby obliczyć granicę ciągu $a_n = \\frac{3n^2 + 7n - 5}{11 - 5n + 5n^2}$ przy $n \\to \\infty$, dzielimy licznik i mianownik przez najwyższą potęgę $n$, czyli $n^2$:\n $\\lim_{n \\to \\infty} \\frac{3n^2 + 7n - 5}{11 - 5n + 5n^2} = \\lim_{n \\to \\infty} \\frac{\\frac{3n^2}{n^2} + \\frac{7n}{n^2} - \\frac{5}{n^2}}{\\frac{11}{n^2} - \\frac{5n}{n^2} + \\frac{5n^2}{n^2}}$\n\n2. Upraszczamy wyrażenia:\n $\\lim_{n \\to \\infty} \\frac{3 + \\frac{7}{n} - \\frac{5}{n^2}}{\\frac{11}{n^2} - \\frac{5}{n} + 5}$\n\n3. Obliczamy granicę każdego składnika. Wiemy, że $\\lim_{n \\to \\infty} \\frac{c}{n^k} = 0$ dla dowolnej stałej $c$ i $k > 0$:\n $\\lim_{n \\to \\infty} \\frac{7}{n} = 0$\n $\\lim_{n \\to \\infty} \\frac{5}{n^2} = 0$\n $\\lim_{n \\to \\infty} \\frac{11}{n^2} = 0$\n $\\lim_{n \\to \\infty} \\frac{5}{n} = 0$\n\n4. Podstawiamy te wartości do granicy wyrażenia:\n $\\frac{3 + 0 - 0}{0 - 0 + 5} = \\frac{3}{5}$"
@@ -26249,15 +26552,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-mr-2020-cze-z03",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 3",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2020-cze/z03-1.png)",
+    "prompt": "Mamy dwie urny. W pierwszej są 3 kule białe i 7 kul czarnych, w drugiej jest jedna kula biała i 9 kul czarnych. Rzucamy symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek, od jednego oczka do sześciu oczek. Jeśli w wyniku rzutu otrzymamy ściankę z jednym oczkiem, to losujemy jedną kulę z pierwszej urny, w przeciwnym przypadku - losujemy jedną kulę z drugiej urny. Wtedy prawdopodobieństwo wylosowania kuli białej jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$ \\frac{2}{15} $",
+      "$ \\frac{1}{5} $",
+      "$ \\frac{4}{5} $",
+      "$ \\frac{13}{15} $"
     ],
     "correctIndex": 0,
     "explanation": "A. $\\frac{2}{15}$",
@@ -26274,18 +26580,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z04",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2020-cze/z04-1.png)\n\n![Zadanie 4](/cke-matura/mr-2020-cze/z04-2.png)",
+    "prompt": "Po przekształceniu wyrażenia algebraicznego $(x\\sqrt{2} + y\\sqrt{3})^4$ do postaci $ax^4+bx^3y+cx^2y^2+dxy^3+ey^4$ współczynnik $c$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "6",
+      "36",
+      "$8\\sqrt{6}$",
+      "$12\\sqrt{6}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 36",
     "solutionSteps": [
       "1. Rozwijamy wyrażenie $(x\\sqrt{2} + y\\sqrt{3})^4$ korzystając ze wzoru na dwumian Newtona $(A+B)^4 = A^4 + 4A^3B + 6A^2B^2 + 4AB^3 + B^4$.\n2. W tym zadaniu $A = x\\sqrt{2}$ i $B = y\\sqrt{3}$. Szukamy współczynnika $c$ przy wyrażeniu $x^2y^2$, co odpowiada trzeciemu wyrazowi rozwinięcia: $6A^2B^2$.\n3. Podstawiamy $A$ i $B$ do wyrazu $6A^2B^2$:\n $6(x\\sqrt{2})^2(y\\sqrt{3})^2$\n4. Obliczamy kwadraty składników:\n $(x\\sqrt{2})^2 = x^2 (\\sqrt{2})^2 = x^2 \\cdot 2 = 2x^2$\n $(y\\sqrt{3})^2 = y^2 (\\sqrt{3})^2 = y^2 \\cdot 3 = 3y^2$\n5. Podstawiamy te wartości z powrotem do wyrażenia:\n $6(2x^2)(3y^2) = 6 \\cdot 2 \\cdot 3 \\cdot x^2y^2 = 36x^2y^2$\n6. Porównujemy otrzymany wyraz $36x^2y^2$ z wyrazem $cx^2y^2$ z postaci $ax^4+bx^3y+cx^2y^2+dxy^3+ey^4$. Widać, że współczynnik $c$ jest równy $36$."
@@ -26300,14 +26609,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z05",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 5",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2020-cze/z05-1.png)",
+    "prompt": "W trójkącie $ABC$ bok $AB$ jest 3 razy dłuższy od boku $AC$, a długość boku $BC$ stanowi $\\frac{4}{5}$ długości boku $AB$. Oblicz cosinus najmniejszego kąta trójkąta $ABC$.\n\nW kratki poniżej wpisz kolejno - od lewej do prawej - pierwszą, drugą oraz trzecią cyfrę po przecinku nieskończonego rozwinięcia dziesiętnego otrzymanego wyniku.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26333,7 +26642,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2020-cze/z06-1.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $a$, dla których równanie $|x-5|=(a-1)^2-4$ ma dwa różne rozwiązania dodatnie.\n\n![Rysunek 1](/cke-matura/mr-2020-cze/z06-fig1.png)\n\n| Wypełnia egzaminator | Nr zadania | 5. | 6. |\n|----------------------|------------|----|----|\n|  | Maks. liczba pkt | 2 | 3 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26359,7 +26668,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2020-cze/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2020-cze/z07-2.png)",
+    "prompt": "Dany jest trójkąt równoramienny $ABC$, w którym $|AC|=|BC|=6$, a punkt $D$ jest środkiem podstawy $AB$. Okrąg o środku $D$ jest styczny do prostej $AC$ w punkcie $M$. Punkt $K$ leży na boku $AC$, punkt $L$ leży na boku $BC$, odcinek $KL$ jest styczny do rozważanego okręgu oraz $|KC|=|LC|=2$ (zobacz rysunek).\n\nWykaż, że $\\frac{|AM|}{|MC|} = \\frac{4}{5}$.\n\n![Rysunek 1](/cke-matura/mr-2020-cze/z07-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26385,7 +26694,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2020-cze/z08-1.png)",
+    "prompt": "Liczby dodatnie $a$ i $b$ spełniają równość $a^2 + 2a = 4b^2 + 4b$. Wykaż, że $a = 2b$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26404,14 +26713,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z09",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2020-cze/z09-1.png)",
+    "prompt": "Rozwiąż równanie $3 \\cos 2x + 10 \\cos^2 x = 24 \\sin x - 3$ dla $x \\in \\langle 0, 2\\pi \\rangle$.\n\n| Wypełnia egzaminator | Nr zadania | 8. | 9. |\n|---|---|---|---|\n|  | Maks. liczba pkt | 3 | 4 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26430,14 +26739,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z10",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2020-cze/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2020-cze/z10-2.png)",
+    "prompt": "W trzywyrazowym ciągu geometrycznym $(a_1, a_2, a_3)$ spełniona jest równość $a_1 + a_2 + a_3 = \\frac{21}{4}$.\n\nWyrazy $a_1, a_2, a_3$ są - odpowiednio - czwartym, drugim i pierwszym wyrazem rosnącego ciągu arytmetycznego. Oblicz $a_1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26463,7 +26772,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2020-cze/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2020-cze/z11-2.png)",
+    "prompt": "Dane jest równanie kwadratowe $x^2 - (3m+2)x + 2m^2+7m-15=0$ z niewiadomą $x$. Wyznacz wszystkie wartości parametru $m$, dla których różne rozwiązania $x_1$, $x_2$ tego równania istnieją i spełniają warunek\n$2x_1^2 + 5x_1x_2 + 2x_2^2 = 2$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26482,14 +26791,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z12",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2020-cze/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2020-cze/z12-2.png)",
+    "prompt": "Prosta o równaniu $x+y-10=0$ przecina okrąg o równaniu $x^2+y^2-8x-6y+8=0$ w punktach $K$ i $L$. Punkt $S$ jest środkiem cięciwy $KL$. Wyznacz równanie obrazu tego okręgu w jednokładności o środku $S$ i skali $k=-3$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26515,7 +26824,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2020-cze/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2020-cze/z13-2.png)",
+    "prompt": "Oblicz, ile jest wszystkich siedmiocyfrowych liczb naturalnych, w których zapisie dziesiętnym występują dokładnie trzy cyfry 1 i dokładnie dwie cyfry 2.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26534,14 +26843,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2020-cze-z14",
     "title": "Matura - czerwiec 2020 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2020-cze/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2020-cze/z14-2.png)",
+    "prompt": "Podstawą ostrosłupa czworokątnego $ABCD S$ jest trapez $ABCD$ ($AB \\parallel CD$). Ramiona tego trapezu mają długości $|AD|=10$ i $|BC|=16$, a miara kąta $ABC$ jest równa $30^\\circ$. Każda ściana boczna tego ostrosłupa tworzy z płaszczyzną podstawy $k$ąt $\\alpha$, taki, że $tg \\alpha = \\frac{9}{2}$. Oblicz objętość tego ostrosłupa.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26567,7 +26876,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2020-cze/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2020-cze/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2020-cze/z15-3.png)",
+    "prompt": "Należy zaprojektować prostokątny ekran smartfona, tak aby odległości tego ekranu od krótszych brzegów smartfona były równe 0,5 cm każda, a odległości tego ekranu od dłuższych brzegów smartfona były równe 0,3 cm każda $(zobacz rysunek - ekran zaznaczono kolorem szarym)$. Sam ekran ma mieć powierzchnię $60 \\text{ cm}^2$. Wyznacz takie wymiary smartfona, przy których powierzchnia ekranu wraz z obramowaniem jest najmniejsza.\n\n![Rysunek 1](/cke-matura/mr-2020-cze/z15-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26586,18 +26895,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z01",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2021-maj/z01-1.png)",
+    "prompt": "Różnica $\\cos^2 165^\\circ - \\sin^2 165^\\circ$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-1$",
+      "$-\\frac{\\sqrt{3}}{2}$",
+      "$-\\frac{1}{2}$",
+      "$\\frac{\\sqrt{3}}{2}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $\\frac{\\sqrt{3}}{2}$",
     "solutionSteps": [
       "1. Wykorzystujemy wzór na cosinus podwójnego kąta: $\\cos(2\\alpha) = \\cos^2 \\alpha - \\sin^2 \\alpha$.\n2. W danym wyrażeniu $\\cos^2 165^\\circ - \\sin^2 165^\\circ$ kątem $\\alpha$ jest $165^\\circ$.\n3. Stosując wzór, otrzymujemy: $\\cos^2 165^\\circ - \\sin^2 165^\\circ = \\cos(2 \\cdot 165^\\circ) = \\cos(330^\\circ)$.\n4. Kąt $330^\\circ$ leży w czwartej ćwiartce. Możemy go zapisać jako $360^\\circ - 30^\\circ$. W czwartej ćwiartce cosinus przyjmuje wartości dodatnie.\n5. Zatem: $\\cos(330^\\circ) = \\cos(360^\\circ - 30^\\circ) = \\cos(30^\\circ)$.\n6. Wartość $\\cos(30^\\circ)$ jest równa $\\frac{\\sqrt{3}}{2}$."
@@ -26612,18 +26924,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z02",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2021-maj/z02-1.png)",
+    "prompt": "Na rysunku przedstawiono fragment wykresu funkcji $f$ określonej dla każdej liczby rzeczywistej $x$.\n\n![Rysunek 1](/cke-matura/mr-2021-maj/z02-fig1.png)\n\nJeden spośród podanych poniżej wzorów jest wzorem tej funkcji. Wskaż wzór funkcji $f$.",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$f(x) = \\frac{\\cos x+1}{|\\cos x|+1}$",
+      "$f(x) = \\frac{\\sin x+1}{|\\sin x|+1}$",
+      "$f(x) = \\frac{|\\cos x|-2}{\\cos x-2}$",
+      "$f(x) = \\frac{|\\sin x|-2}{\\sin x-2}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. $f(x) = \\frac{\\sin x+1}{|\\sin x|+1}$",
     "solutionSteps": [
       "Aby wskazać prawidłowy wzór funkcji, analizujemy jej wykres.\n\n1. **Analiza wartości funkcji**:\n * Wykres funkcji przyjmuje wartość $y=1$ dla $x \\in [0, \\pi]$ (i odpowiednio dla $x \\in [-2\\pi, -\\pi]$ oraz $x \\in [2\\pi, 3\\pi]$).\n * Wykres funkcji przyjmuje wartość $y=0$ w minimach \"dolin\", np. dla $x=-\\pi/2$ oraz dla $x=3\\pi/2$.\n\n2. **Testowanie opcji**: Sprawdzamy, który z podanych wzorów najlepiej odpowiada tym obserwacjom.\n\n * **A. $f(x) = \\frac{\\cos x+1}{|\\cos x|+1}$**\n Dla $x=-\\pi/2$: $\\cos(-\\pi/2) = 0$. Wtedy $f(-\\pi/2) = \\frac{0+1}{|0|+1} = \\frac{1}{1} = 1$.\n Jednak z wykresu odczytujemy $f(-\\pi/2) = 0$. Zatem opcja A jest niepoprawna.\n\n * **B. $f(x) = \\frac{\\sin x+1}{|\\sin x|+1}$**\n * Gdy $\\sin x \\ge 0$: Wtedy $|\\sin x| = \\sin x$. Funkcja przyjmuje postać $f(x) = \\frac{\\sin x+1}{\\sin x+1} = 1$.\n Dzieje się tak dla $x \\in [2k\\pi, (2k+1)\\pi]$, np. dla $x \\in [0, \\pi]$, $x \\in [-2\\pi, -\\pi]$, $x \\in [2\\pi, 3\\pi]$. W tych przedziałach wykres funkcji faktycznie przyjmuje wartość $1$.\n * Gdy $\\sin x < 0$: Wtedy $|\\sin x| = -\\sin x$. Funkcja przyjmuje postać $f(x) = \\frac{\\sin x+1}{-\\sin x+1}$.\n Dzieje się tak dla $x \\in ((2k-1)\\pi, 2k\\pi)$, np. dla $x \\in (-\\pi, 0)$ oraz $x \\in (\\pi, 2\\pi)$. W tych przedziałach wykres funkcji tworzy \"doliny\".\n Sprawdźmy minima tych dolin: $\\sin x$ osiąga wartość $-1$ dla $x=-\\pi/2$ i $x=3\\pi/2$.\n Dla $x=-\\pi/2$: $f(-\\pi/2) = \\frac{-1+1}{-(-1)+1} = \\frac{0}{1+1} = \\frac{0}{2} = 0$.\n Dla $x=3\\pi/2$: $f(3\\pi/2) = \\frac{-1+1}{-(-1)+1} = \\frac{0}{1+1} = \\frac{0}{2} = 0$.\n Wykres funkcji faktycznie osiąga $0$ w minimach dolin.\n Opcja B idealnie pasuje do wykresu funkcji.\n\n * **C. $f(x) = \\frac{|\\cos x|-2}{\\cos x-2}$**\n Mianownik $\\cos x-2$ jest zawsze ujemny i różny od zera (ponieważ $-1 \\le \\cos x \\le 1$).\n Gdy $\\cos x \\ge 0$: Wtedy $|\\cos x| = \\cos x$. Funkcja przyjmuje postać $f(x) = \\frac{\\cos x-2}{\\cos x-2} = 1$.\n Gdy $\\cos x < 0$: Wtedy $|\\cos x| = -\\cos x$. Funkcja przyjmuje postać $f(x) = \\frac{-\\cos x-2}{\\cos x-2}$.\n Dla $x=\\pi$: $\\cos(\\pi) = -1$. Zatem $f(\\pi) = \\frac{-(-1)-2}{-1-2} = \\frac{1-2}{-3} = \\frac{-1}{-3} = 1/3$.\n Jednak z wykresu odczytujemy $f(\\pi) = 1$. Zatem opcja C jest niepoprawna. Ponadto, minimum dolin w tym przypadku wynosiłoby $1/3$, a nie $0$.\n\n * **D. $f(x) = \\frac{|\\sin x|-2}{\\sin x-2}$**\n Mianownik $\\sin x-2$ jest zawsze ujemny i różny od zera.\n Gdy $\\sin x < 0$: Wtedy $|\\sin x| = -\\sin x$. Funkcja przyjmuje postać $f(x) = \\frac{-\\sin x-2}{\\sin x-2}$.\n Dla $x=-\\pi/2$: $\\sin(-\\pi/2) = -1$. Zatem $f(-\\pi/2) = \\frac{-(-1)-2}{-1-2} = \\frac{1-2}{-3} = \\frac{-1}{-3} = 1/3$.\n Jednak z wykresu odczytujemy $f(-\\pi/2) = 0$. Zatem opcja D jest niepoprawna.\n\nWzór B jako jedyny prawidłowo opisuje wszystkie cechy przedstawionego wykresu funkcji."
@@ -26638,18 +26953,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z03",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2021-maj/z03-1.png)",
+    "prompt": "Wielomian $W(x) = x^4 + 81$ jest podzielny przez",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$x - 3$",
+      "$x^2 + 9$",
+      "$x^2 - 3\\sqrt{2}x + 9$",
+      "$x^2 + 3\\sqrt{2}x - 9$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. $x^2 - 3\\sqrt{2}x + 9$",
     "solutionSteps": [
       "1. Dany wielomian to $W(x) = x^4 + 81$.\n2. Aby rozłożyć wielomian na czynniki, stosujemy metodę uzupełniania do kwadratu, dążąc do postaci różnicy kwadratów $A^2 - B^2 = (A-B)(A+B)$.\n3. Przepisujemy wielomian w postaci $(x^2)^2 + 9^2$. Aby uzupełnić do pełnego kwadratu $(x^2+9)^2$, potrzebujemy $2 \\cdot x^2 \\cdot 9 = 18x^2$. Dodajemy i odejmujemy tę wartość:\n$W(x) = (x^2)^2 + 18x^2 + 9^2 - 18x^2$\n4. Grupujemy wyrazy, aby uzyskać kwadrat sumy i różnicę kwadratów:\n$W(x) = (x^2 + 9)^2 - 18x^2$\n5. Drugi człon $18x^2$ zapisujemy jako kwadrat: $18x^2 = (3\\sqrt{2}x)^2$.\n$W(x) = (x^2 + 9)^2 - (3\\sqrt{2}x)^2$\n6. Stosujemy wzór na różnicę kwadratów, gdzie $A = x^2 + 9$ i $B = 3\\sqrt{2}x$:\n$W(x) = (x^2 + 9 - 3\\sqrt{2}x)(x^2 + 9 + 3\\sqrt{2}x)$\n7. Porządkujemy czynniki:\n$W(x) = (x^2 - 3\\sqrt{2}x + 9)(x^2 + 3\\sqrt{2}x + 9)$\n8. Porównując otrzymane czynniki z podanymi odpowiedziami, widzimy, że czynnik $x^2 - 3\\sqrt{2}x + 9$ odpowiada opcji C."
@@ -26664,18 +26982,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z04",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "rownania",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2021-maj/z04-1.png)",
+    "prompt": "Liczba różnych pierwiastków równania $3x + |x - 4| = 0$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "0",
+      "1",
+      "2",
+      "3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "B. 1",
     "solutionSteps": [
       "1. Rozwiązujemy równanie $3x + |x - 4| = 0$. Wartość bezwzględną rozpatrujemy w dwóch przypadkach.\n\n2. **Przypadek 1:** $x - 4 \\ge 0$, czyli $x \\ge 4$.\n Wówczas $|x - 4| = x - 4$.\n Równanie przyjmuje postać:\n $3x + (x - 4) = 0$\n $4x - 4 = 0$\n $4x = 4$\n $x = 1$\n Sprawdzamy, czy otrzymane rozwiązanie $x=1$ spełnia założenie $x \\ge 4$. Ponieważ $1 < 4$, to $x=1$ nie jest rozwiązaniem równania w tym przypadku.\n\n3. **Przypadek 2:** $x - 4 < 0$, czyli $x < 4$.\n Wówczas $|x - 4| = -(x - 4) = -x + 4$.\n Równanie przyjmuje postać:\n $3x + (-x + 4) = 0$\n $3x - x + 4 = 0$\n $2x + 4 = 0$\n $2x = -4$\n $x = -2$\n Sprawdzamy, czy otrzymane rozwiązanie $x=-2$ spełnia założenie $x < 4$. Ponieważ $-2 < 4$, to $x=-2$ jest rozwiązaniem równania w tym przypadku.\n\n4. Z przeprowadzonej analizy wynika, że równanie ma tylko jedno różne rozwiązanie: $x = -2$."
@@ -26697,7 +27018,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2021-maj/z05-1.png)",
+    "prompt": "Oblicz granicę $\\lim_{n \\to \\infty} \\frac{(3n+2)^2 - (1-2n)^2}{(2n-1)^2}$.\n\nW poniższe kratki wpisz kolejno - od lewej do prawej - cyfrę jedności i pierwsze dwie cyfry po przecinku skończonego rozwinięcia dziesiętnego otrzymanego wyniku.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26723,7 +27044,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2021-maj/z06-1.png)",
+    "prompt": "Niech $\\log_2 18 = c$. Wykaż, że $\\log_3 4 = \\frac{4}{c-1}$.\n\n![Rysunek 1](/cke-matura/mr-2021-maj/z06-fig1.png)\n\n| Wypełnia egzaminator | Nr zadania | 5. | 6. |\n|----------------------|------------------|----|----|\n|  | Maks. liczba pkt | 2 | 3 |\n|  | Uzyskana liczba pkt |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26742,14 +27063,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z07",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2021-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2021-maj/z07-2.png)",
+    "prompt": "Rozwiąż nierówność:\n$ \\frac{2x - 1}{1 - x} \\le \\frac{2 + 2x}{5x} $",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26775,7 +27096,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2021-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2021-maj/z08-2.png)",
+    "prompt": "Dany jest trójkąt równoboczny ABC. Na bokach AB i AC wybrano punkty - odpowiednio - D i E takie, że $|BD| = |AE| = \\frac{1}{3}|AB|$. Odcinki CD i BE przecinają się w punkcie P (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2021-maj/z08-fig1.png)\n\nWykaż, że pole trójkąta DBP jest 21 razy mniejsze od pola trójkąta ABC.\n\n![Rysunek 2](/cke-matura/mr-2021-maj/z08-fig2.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26801,7 +27122,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2021-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2021-maj/z09-2.png)",
+    "prompt": "Ze zbioru wszystkich liczb naturalnych czterocyfrowych losujemy jedna liczbe. Oblicz prawdopodobienstwo zdarzenia polegajacego na tym, ze wylosowana liczba jest podzielna przez 15, jesli wiadomo, ze jest ona podzielna przez 18.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26820,14 +27141,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z10",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2021-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2021-maj/z10-2.png)",
+    "prompt": "Prosta przechodząca przez punkty $A=(8,-6)$ i $B=(5,15)$ jest styczna do okręgu o środku w punkcie $O=(0,0)$. Oblicz promień tego okręgu i współrzędne punktu styczności tego okręgu z prostą $AB$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26853,7 +27174,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2021-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2021-maj/z11-2.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m$, dla których trójmian kwadratowy\n$4x^2 - 2(m+1)x + m$\nma dwa różne pierwiastki rzeczywiste $x_1$ oraz $x_2$, spełniające warunki:\n$x_1 \\neq 0$, $x_2 \\neq 0$ oraz $x_1 + x_2 \\leq \\frac{1}{x_1} + \\frac{1}{x_2}$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26872,14 +27193,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z12",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2021-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2021-maj/z12-2.png)",
+    "prompt": "Rozwiąż równanie $\\cos 2x = \\frac{\\sqrt{2}}{2} (\\cos x - \\sin x)$ w przedziale $(0, \\pi)$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26898,14 +27219,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z13",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 13",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2021-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2021-maj/z13-2.png)",
+    "prompt": "Dany jest trójkąt prostokątny $ABC$. Promień okręgu wpisanego w ten trójkąt jest pięć razy krótszy od przeciwprostokątnej tego trójkąta. Oblicz sinus tego z kątów ostrych trójkąta $ABC$, który ma większą miarę.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26924,14 +27245,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2021-maj-z14",
     "title": "Matura - maj 2021 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2021-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-2.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-3.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-4.png)",
+    "prompt": "Dane są parabola o równaniu $y = x^2$ oraz punkty $A = (0, 2)$ i $B = (1, 3)$ (zobacz rysunek). Rozpatrujemy wszystkie trójkąty $ABC$, których wierzchołek $C$ leży na tej paraboli. Niech $m$ oznacza pierwszą współrzędną punktu $C$.\n\n![Rysunek 1](/cke-matura/mr-2021-maj/z14-fig1.png)\n\na) Wyznacz pole $P$ trójkąta $ABC$ jako funkcję zmiennej $m$.\n\nb) Wyznacz wszystkie wartości $m$, dla których trójkąt $ABC$ jest ostrokątny.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26957,7 +27278,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2021-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2021-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2021-maj/z15-3.png)",
+    "prompt": "Pewien zakład otrzymał zamówienie na wykonanie prostopadłościennego zbiornika (całkowicie otwartego od góry) o pojemności $144\\ \\text{m}^3$. Dno zbiornika ma być kwadratem. Żaden z wymiarów zbiornika (krawędzi prostopadłościanu) nie może przekraczać 9 metrów. Całkowity koszt wykonania zbiornika ustalono w następujący sposób:\n- $100\\ \\text{zł}$ za $1\\ \\text{m}^2$ dna\n- $75\\ \\text{zł}$ za $1\\ \\text{m}^2$ ściany bocznej.\n\nOblicz wymiary zbiornika, dla którego tak ustalony koszt wykonania będzie najmniejszy.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26976,16 +27297,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z01",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "potegi",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2022-maj/z01-1.png)",
+    "prompt": "Liczba $ \\log_3 \\sqrt{27} - \\log_{27} \\sqrt{3} $ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$ \\frac{4}{3} $",
+      "$ \\frac{1}{2} $",
+      "$ \\frac{11}{12} $",
+      "$ 3 $"
     ],
     "correctIndex": 0,
     "explanation": "A. $\\frac{4}{3}$",
@@ -27002,18 +27326,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z02",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "funkcje",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2022-maj/z02-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = \\frac{x^3-8}{x-2}$ dla każdej liczby rzeczywistej $x \\neq 2$.\n\nWartość pochodnej tej funkcji dla argumentu $x = \\frac{1}{2}$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{3}{4}$",
+      "$\\frac{9}{4}$",
+      "$3$",
+      "$\\frac{54}{8}$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "C. 3",
     "solutionSteps": [
       "1. Zauważamy, że licznik funkcji $f(x) = \\frac{x^3 - 8}{x - 2}$ jest różnicą sześcianów, którą można rozłożyć na czynniki za pomocą wzoru $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$.\n Dla $a=x$ i $b=2$ mamy $x^3 - 8 = (x - 2)(x^2 + 2x + 4)$.\n Zatem funkcja $f(x)$ przyjmuje postać:\n $f(x) = \\frac{(x - 2)(x^2 + 2x + 4)}{x - 2}$\n Ponieważ w definicji funkcji jest podane, że $x \\neq 2$, możemy skrócić czynnik $(x - 2)$ w liczniku i mianowniku:\n $f(x) = x^2 + 2x + 4$.\n\n2. Obliczamy pochodną uproszczonej funkcji $f(x) = x^2 + 2x + 4$.\n Wzór na pochodną sumy to suma pochodnych, a na pochodną $x^n$ to $nx^{n-1}$. Pochodna stałej to 0.\n $f'(x) = \\frac{d}{dx}(x^2) + \\frac{d}{dx}(2x) + \\frac{d}{dx}(4)$\n $f'(x) = 2x^{2-1} + 2 \\cdot 1 \\cdot x^{1-1} + 0$\n $f'(x) = 2x + 2$.\n\n3. Obliczamy wartość pochodnej dla argumentu $x = \\frac{1}{2}$, podstawiając tę wartość do wzoru na $f'(x)$:\n $f'\\left(\\frac{1}{2}\\right) = 2\\left(\\frac{1}{2}\\right) + 2$\n $f'\\left(\\frac{1}{2}\\right) = 1 + 2$\n $f'\\left(\\frac{1}{2}\\right) = 3$."
@@ -27028,16 +27355,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z03",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "trygonometria",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2022-maj/z03-1.png)",
+    "prompt": "Jeżeli $\\cos \\beta = -\\frac{1}{3}$ i $\\beta \\in (\\pi, \\frac{3}{2}\\pi)$, to wartość wyrażenia $\\sin (\\beta - \\frac{1}{3}\\pi)$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{-2\\sqrt{2}+\\sqrt{3}}{6}$",
+      "$\\frac{2\\sqrt{6}+1}{6}$",
+      "$\\frac{2\\sqrt{2}+\\sqrt{3}}{6}$",
+      "$\\frac{1-2\\sqrt{6}}{6}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $\\frac{-2\\sqrt{2}+\\sqrt{3}}{6}$",
@@ -27055,15 +27385,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-mr-2022-maj-z04",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 4",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2022-maj/z04-1.png)",
+    "prompt": "Dane są dwie urny z kulami. W każdej z urn jest siedem kul. W pierwszej urnie są jedna kula biała i sześć kul czarnych, w drugiej urnie są cztery kule białe i trzy kule czarne. Rzucamy jeden raz symetryczną monetą. Jeżeli wypadnie reszka, to losujemy jedną kulę z pierwszej urny, w przeciwnym przypadku - jedną kulę z drugiej urny. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosujemy kulę białą w tym doświadczeniu, jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{5}{14}$",
+      "$\\frac{9}{14}$",
+      "$\\frac{5}{7}$",
+      "$\\frac{6}{7}$"
     ],
     "correctIndex": 0,
     "explanation": "A. $5/14$",
@@ -27080,14 +27413,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z05",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 5",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2022-maj/z05-1.png)",
+    "prompt": "Ciąg $(a_n)$ jest określony dla każdej liczby naturalnej $n \\ge 1$ wzorem $a_n = \\frac{(7p-1)n^3+5pn-3}{(p+1)n^3+n^2+p}$, gdzie $p$ jest liczbą rzeczywistą dodatnią.\n\nOblicz wartość $p$, dla której granica ciągu $(a_n)$ jest równa $\\frac{4}{3}$.\n\nW poniższe kratki wpisz kolejno - od lewej do prawej - pierwszą, drugą oraz trzecią cyfrę po przecinku nieskończonego rozwinięcia dziesiętnego otrzymanego wyniku.\n\n![Rysunek 1](/cke-matura/mr-2022-maj/z05-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27113,7 +27446,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2022-maj/z06-1.png)",
+    "prompt": "Wykaz, ze dla kazdej liczby rzeczywistej $x$ i dla kazdej liczby rzeczywistej $y$ takich, ze $2x > y$, spelniona jest nierownosc\n\n$7x^3 + 4x^2y \\ge y^3 + 2xy^2 - x^3$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27132,14 +27465,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z07",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2022-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2022-maj/z07-2.png)",
+    "prompt": "Rozwiąż równanie:\n$|x -3| = 2x + 11",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27165,7 +27498,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2022-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2022-maj/z08-2.png)",
+    "prompt": "Punkt P jest punktem przecięcia przekątnych trapezu $ABCD$. Długość podstawy $CD$ jest o 2 mniejsza od długości podstawy $AB$. Promień okręgu opisanego na trójkącie ostrokątnym $CPD$ jest o 3 mniejszy od promienia okręgu opisanego na trójkącie $APB$.\nWykaż, że spełniony jest warunek $|DP|^2 + |CP|^2 - |CD|^2 = \\frac{4\\sqrt{2}}{3} \\cdot |DP| \\cdot |CP|$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27191,7 +27524,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2022-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2022-maj/z09-2.png)",
+    "prompt": "Reszta z dzielenia wielomianu $W(x) = 4x^3 - 6x^2 - (5m + 1)x - 2m$ przez dwumian $x + 2$ jest równa $(-30)$.\nOblicz $m$ i dla wyznaczonej wartości $m$ rozwiąż nierówność $W(x) \\ge 0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27210,14 +27543,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z10",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2022-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2022-maj/z10-2.png)",
+    "prompt": "Ciąg $(a_n)$, określony dla każdej liczby naturalnej $n \\ge 1$, jest geometryczny i ma wszystkie wyrazy dodatnie. Ponadto $a_1 = 675$ i $a_{22} = \\frac{5}{4}a_{23} + \\frac{1}{5}a_{21}$.\n\nCiąg $(b_n)$, określony dla każdej liczby naturalnej $n \\ge 1$, jest arytmetyczny.\n\nSuma wszystkich wyrazów ciągu $(a_n)$ jest równa sumie dwudziestu pięciu początkowych kolejnych wyrazów ciągu $(b_n)$. Ponadto $a_3 = b_4$. Oblicz $b_1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27236,14 +27569,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z11",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2022-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2022-maj/z11-2.png)",
+    "prompt": "Rozwiąż równanie $\\sin x + \\sin 2x + \\sin 3x = 0$ w przedziale $(0, \\pi)$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27269,7 +27602,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2022-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2022-maj/z12-2.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m$, dla których równanie\n$x^2 - (m+1)x + m = 0$\nma dwa różne rozwiązania rzeczywiste $x_1$ oraz $x_2$, spełniające warunki:\n$x_1 \\neq 0$, $x_2 \\neq 0$ oraz $\\frac{1}{x_1} + \\frac{1}{x_2} + 2 = \\frac{1}{x_1^2} + \\frac{1}{x_2^2}$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27314,14 +27647,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2022-maj-z14",
     "title": "Matura - maj 2022 - poziom rozszerzony - zad. 14",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2022-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2022-maj/z14-2.png)",
+    "prompt": "Punkt $A = (-3,2)$ jest wierzchołkiem trójkąta równoramiennego $ABC$, w którym $|AC| = |BC|$. Pole tego trójkąta jest równe $15$. Bok $BC$ zawarty jest w prostej o równaniu $y = x - 1$. Oblicz współrzędne wierzchołków $B$ i $C$ tego trójkąta.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27347,7 +27680,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2022-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2022-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2022-maj/z15-3.png)",
+    "prompt": "Rozpatrujemy wszystkie trójkąty równoramienne o obwodzie równym 18.\n\na) Wykaż, że pole $P$ każdego z tych trójkątów, jako funkcja $d$ługości $b$ ramienia, wyraża się wzorem $P(b) = \\frac{(18-2b) \\cdot \\sqrt{18b-81}}{2}$.\n\nb) Wyznacz dziedzinę funkcji $P$.\n\nc) Oblicz długości boków tego z rozpatrywanych trójkątów, który ma największe pole.\n\n![Rysunek 1](/cke-matura/mr-2022-maj/z15-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27366,14 +27699,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z01",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2023-maj/z01-1.png)",
+    "prompt": "W chwili początkowej ($t = 0$) masa substancji jest równa 4 gramom. Wskutek rozpadu cząsteczek tej substancji jej masa się zmniejsza. Po każdej kolejnej dobie ubywa 19% masy, jaka była na koniec doby poprzedniej. Dla każdej liczby całkowitej $t \\ge 0$ funkcja $m(t)$ określa masę substancji w gramach po $t$ pełnych dobach (czas liczymy od chwili początkowej).\n\nWyznacz wzór funkcji $m(t)$. Oblicz, po ilu pełnych dobach masa tej substancji będzie po raz pierwszy mniejsza od 1,5 grama. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27399,7 +27732,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2023-maj/z02-1.png)",
+    "prompt": "Tomek i Romek postanowili rozegrać między sobą pięć partii szachów. Prawdopodobieństwo wygrania pojedynczej partii przez Tomka jest równe $\\frac{1}{4}$.\n\nOblicz prawdopodobieństwo wygrania przez Tomka co najmniej czterech z pięciu partii. Wynik podaj w postaci ułamka zwykłego nieskracalnego. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27418,14 +27751,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z03",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2023-maj/z03-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = \\frac{3x^2-2x}{x^2+2x+8}$ dla każdej liczby rzeczywistej $x$.\n\nPunkt $P=(x_0, 3)$ należy do wykresu funkcji $f$.\n\nOblicz $x_0$ oraz wyznacz równanie stycznej do wykresu funkcji $f$ w punkcie $P$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27444,14 +27777,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z04",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2023-maj/z04-1.png)",
+    "prompt": "Liczby rzeczywiste $x$ oraz $y$ spełniają jednocześnie równanie $x+y=4$ i nierówność $x^3 - x^2y \\le xy^2 - y^3$.\n\nWykaz, że $x=2$ oraz $y=2$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27477,7 +27810,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2023-maj/z05-1.png)",
+    "prompt": "Dany jest trójkąt prostokątny $ABC$, w którym $|\\sphericalangle ABC| = 90^\\circ$ oraz $|\\sphericalangle CAB| = 60^\\circ$. Punkty $K$ i $L$ leżą na bokach - odpowiednio - $AB$ i $BC$ tak, że $|BK| = |BL| = 1$ (zobacz \n\n![Rysunek 1](/cke-matura/mr-2023-maj/z05-fig1.png)). Odcinek $KL$ przecina wysokość $BD$ tego trójkąta w punkcie $N$, a ponadto $|AD| = 2$.\n\nWykaż, że $|ND| = \\sqrt{3} + 1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27496,14 +27829,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z06",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 6",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2023-maj/z06-1.png)",
+    "prompt": "Rozwiąż równanie\n$4\\sin(4x)\\cos(6x) = 2\\sin(10x) + 1$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27522,14 +27855,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z07",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2023-maj/z07-1.png)",
+    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości 6. Punkt $S$ jest punktem przecięcia przekątnych $AH$ i $DE$ ściany bocznej $ADHE$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2023-maj/z07-fig1.png)\n\nOblicz wysokość trójkąta $SBH$ poprowadzoną z punktu $S$ na bok $BH$ tego trójkąta. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27548,14 +27881,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z08",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 8",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2023-maj/z08-1.png)",
+    "prompt": "Czworokąt $ABCD$, w którym $|BC|=4$ i $|CD|=5$, jest opisany na okręgu. Przekątna $AC$ tego czworokąta tworzy z bokiem $BC$ kąt o mierze $60^\\circ$, natomiast z bokiem $AB$ - kąt ostry, którego sinus jest równy $\\frac{1}{4}$.\n\nOblicz obwód czworokąta $ABCD$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27581,7 +27914,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2023-maj/z09-1.png)",
+    "prompt": "Rozwiąż nierówność\n$$ \\sqrt{x^2+4x+4} < \\frac{25}{3} - \\sqrt{x^2-6x+9} $$\nZapisz obliczenia.\n\nWskazówka: skorzystaj z tego, że $\\sqrt{a^2}=|a|$ dla każdej liczby rzeczywistej $a$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27600,14 +27933,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z10",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2023-maj/z10-1.png)",
+    "prompt": "Określamy kwadraty $K_1$, $K_2$, $K_3$, ... następująco:\n- $K_1$ jest kwadratem o boku długości $a$\n- $K_2$ jest kwadratem, którego każdy wierzchołek leży na innym boku kwadratu $K_1$ i dzieli ten bok w stosunku $1:3$\n- $K_3$ jest kwadratem, którego każdy wierzchołek leży na innym boku kwadratu $K_2$ i dzieli ten bok w stosunku $1:3$\n\ni ogólnie, dla każdej liczby naturalnej $n \\ge 2$,\n- $K_n$ jest kwadratem, którego każdy wierzchołek leży na innym boku kwadratu $K_{n-1}$ i dzieli ten bok w stosunku $1:3$.\n\nObwody wszystkich kwadratów określonych powyżej tworzą nieskończony ciąg geometryczny.\n\nNa rysunku przedstawiono kwadraty utworzone w sposób opisany powyżej.\n\n![Rysunek 1](/cke-matura/mr-2023-maj/z10-fig1.png)\n\nOblicz sumę wszystkich wyrazów tego nieskończonego ciągu. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27633,7 +27966,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2023-maj/z11-1.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m \\neq 2$, dla których równanie\n$x^2 + 4x - \\frac{m-3}{m-2} = 0$\nma dwa różne rozwiązania rzeczywiste $x_1, x_2$ spełniające warunek $x_1^3 + x_2^3 > -28$.\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27659,7 +27992,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2023-maj/z12-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x) = 81^{\\log_3 x} + \\frac{2 \\cdot \\log_2 \\sqrt{27} \\cdot \\log_3 2}{3} \\cdot x^2 - 6x$ dla każdej liczby dodatniej $x$.\n\nWykaż, że dla każdej liczby dodatniej $x$ wyrażenie\n$$81^{\\log_3 x} + \\frac{2 \\cdot \\log_2 \\sqrt{27} \\cdot \\log_3 2}{3} \\cdot x^2 - 6x$$\nmożna równoważnie przekształcić do postaci $x^4 + x^2 - 6x$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27678,14 +28011,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2023-maj-z13",
     "title": "Matura - maj 2023 - poziom rozszerzony - zad. 13",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2023-maj/z13-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ prosta $l$ o równaniu $x-y-2=0$ przecina parabolę o równaniu $y=4x^2-7x+1$ w punktach $A$ oraz $B$. Odcinek $AB$ jest średnicą okręgu $O$. Punkt $C$ leży na okręgu $O$ nad prostą $l$, $a_{k}$ąt $BAC$ jest ostry i ma miarę $\\alpha$ taką, że $\\text{tg}\\alpha = \\frac{1}{3}$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2023-maj/z13-fig1.png)\n\nOblicz współrzędne punktu $C$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27704,14 +28037,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z01",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2024-maj/z01-1.png)",
+    "prompt": "W chwili początkowej ($t = 0$) filiżanka z gorącą kawą znajduje się w pokoju, a temperatura tej kawy jest równa $80^\\circ C$. Temperatura w pokoju (temperatura otoczenia) jest stała i równa $20^\\circ C$. Temperatura $T$ tej kawy zmienia się w czasie zgodnie z zależnością\n\n$$T(t) = (T_p - T_z) \\cdot k^{-t} + T_z \\text{ dla } t \\ge 0$$\n\ngdzie:\n$T$ - temperatura kawy wyrażona w stopniach Celsjusza,\n$t$ - czas wyrażony w minutach, liczony od chwili początkowej,\n$T_p$ - temperatura początkowa kawy wyrażona w stopniach Celsjusza,\n$T_z$ - temperatura otoczenia wyrażona w stopniach Celsjusza,\n$k$ - stała charakterystyczna dla danej cieczy.\n\nPo 10 minutach, licząc od chwili początkowej, kawa ostygła do temperatury $65^\\circ C$.\n\nOblicz temperaturę tej kawy po następnych pięciu minutach. Wynik podaj w stopniach Celsjusza, w zaokrągleniu do jedności. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27730,14 +28063,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z02",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2024-maj/z02-1.png)",
+    "prompt": "Oblicz granicę\n$ \\lim_{x \\to 2^-} \\frac{x^3 - 8}{(x-2)^2} $\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27763,7 +28096,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2024-maj/z03-1.png)",
+    "prompt": "W pewnym zakładzie mleczarskim śmietana produkowana jest $w_{200}$-gramowych opakowaniach. Prawdopodobieństwo zdarzenia, że w losowo wybranym opakowaniu śmietana zawiera mniej niż 36% tłuszczu, jest równe 0,01. Kontroli poddajemy 10 losowo wybranych opakowań ze śmietaną.\n\nOblicz prawdopodobieństwo zdarzenia polegającego na tym, że wśród opakowań poddanych tej kontroli będzie co najwyżej jedno opakowanie ze śmietaną, która zawiera mniej niż 36% tłuszczu. Wynik zapisz w postaci ułamka dziesiętnego w zaokrągleniu do części tysięcznych. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27782,14 +28115,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z04",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 4",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2024-maj/z04-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem\n$f(x) = \\frac{x^3 - 3x + 2}{x}$\ndla każdej liczby rzeczywistej $x$ różnej od zera. W kartezjańskim układzie współrzędnych $(x,y)$ punkt $P$, o pierwszej współrzędnej równej $2$, należy do wykresu funkcji $f$. Prosta o równaniu $y = ax + b$ jest styczna do wykresu funkcji $f$ w punkcie $P$.\n\nOblicz współczynniki $a$ oraz $b$ w równaniu tej stycznej. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27815,7 +28148,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2024-maj/z05-1.png)",
+    "prompt": "Wykaż, że jeżeli $\\log_5 4 = a$ oraz $\\log_4 3 = b$, to $\\log_{12} 80 = \\frac{2a + 1}{a \\cdot (1 + b)}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27860,14 +28193,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z07",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 7",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2024-maj/z07-1.png)",
+    "prompt": "Trzywyrazowy ciąg $(x, y, z)$ jest geometryczny i rosnący. Suma wyrazów tego ciągu jest równa 105. Liczby $x, y$ oraz $z$ są - odpowiednio - pierwszym, drugim oraz szóstym wyrazem ciągu arytmetycznego $(a_n)$, określonego dla każdej liczby naturalnej $n \\geq 1$.\n\nOblicz $x, y$ oraz $z$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27912,14 +28245,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z09",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2024-maj/z09-1.png)",
+    "prompt": "Dany jest kwadrat $ABCD$ o boku długości $a$. Punkt $E$ jest środkiem boku $CD$. Przekątna $BD$ dzieli trójkąt $ACE$ na dwie figury: $AGF$ oraz $CEFG$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mr-2024-maj/z09-fig1.png)\n\nOblicz pola figur $AGF$ oraz $CEFG$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27938,14 +28271,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z10",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2024-maj/z10-1.png)",
+    "prompt": "Rozwiąż równanie\n$ \\sin(4x) - \\sin(2x) = 4\\cos^2 x - 3 $\nw zbiorze $[0, 2\\pi]$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27964,14 +28297,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2024-maj-z11",
     "title": "Matura - maj 2024 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2024-maj/z11-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ środek $S$ okręgu o promieniu $\\sqrt{5}$ leży na prostej o równaniu $y = x + 1$. Przez punkt $A = (1,2)$, którego odległość od punktu $S$ jest większa od $\\sqrt{5}$, poprowadzono dwie proste styczne do tego okręgu w punktach - odpowiednio - $B$ i $C$. Pole czworokąta $ABSC$ jest równe $15$.\n\nOblicz współrzędne punktu $S$. Rozważ wszystkie przypadki. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27997,7 +28330,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2024-maj/z12-1.png)",
+    "prompt": "Wyznacz wszystkie wartości parametru $m$, dla których równanie\n$x^2 - (3m + 1) \\cdot x + 2m^2 + m + 1 = 0$\nma dwa różne rozwiązania rzeczywiste $x_1, x_2$ spełniające warunek\n$$x_1^3 + x_2^3 + 3 \\cdot x_1 \\cdot x_2 \\cdot (x_1 + x_2 - 3) \\leq 3m - 7$$\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28023,7 +28356,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2024-maj/z13-1.png)",
+    "prompt": "Rozważamy wszystkie graniastosłupy prawidłowe trójkątne o objętości 3456, których krawędź podstawy ma długość nie większą niż $8\\sqrt{3}$.\n\nWykaż, że pole $P$ powierzchni całkowitej graniastosłupa w zależności od długości $a$ krawędzi podstawy graniastosłupa jest określone wzorem\n$$P(a) = \\frac{a^2 \\cdot \\sqrt{3}}{2} + \\frac{13824\\sqrt{3}}{a}$$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28042,14 +28375,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z01",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 1",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 1](/cke-matura/mr-2025-maj/z01-1.png)",
+    "prompt": "W warunkach laboratoryjnych obserwowano dynamikę wzrostu liczebności populacji pewnego gatunku bakterii. Liczebność $N$ populacji bakterii zmienia się w czasie zgodnie z zależnością wykładniczą\n\n$$N(t) = N_0 \\cdot k^t \\quad \\text{dla} \\quad t \\ge 0$$\n\ngdzie:\n$N_0$ - liczebność populacji w chwili $t = 0$ rozpoczęcia obserwacji,\n$k$ - stała dodatnia, charakterystyczna dla danego gatunku bakterii i dla warunków przeprowadzenia obserwacji,\n$t$ - czas wyrażony w godzinach, liczony od chwili $t = 0$ rozpoczęcia obserwacji.\n\nW chwili rozpoczęcia obserwacji liczebność populacji była równa 10 000, a po dwóch godzinach była równa 15 625.\n\nOblicz, o ile procent wzrastała liczebność populacji tej bakterii w ciągu każdej godziny. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28068,14 +28401,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z02",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 2",
-    "category": "algebra",
+    "category": "potegi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 2](/cke-matura/mr-2025-maj/z02-1.png)",
+    "prompt": "Wykaz, że dla każdej dodatniej liczby rzeczywistej $a$ i dla każdej dodatniej liczby rzeczywistej $b$ takich, że $b \\neq \\frac{1}{2}a$, prawdziwa jest nierówność\n$(a + 2b)^3 > 8a^2b + 16ab^2$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28094,14 +28427,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z03",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 3",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/mr-2025-maj/z03-1.png)",
+    "prompt": "W trójkącie równobocznym $ABC$ punkt $D$ leży na boku $BC$. Stosunek pola trójkąta $ABD$ do pola trójkąta $ADC$ jest równy $\\frac{\\sqrt{3}-1}{2}$.\n\nOblicz miarę kąta $DAC$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28127,7 +28460,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 4](/cke-matura/mr-2025-maj/z04-1.png)",
+    "prompt": "Doświadczenie losowe polega na czterokrotnym rzucie symetryczną sześcienną kostką do gry, która na każdej ściance ma inną liczbę oczek - od jednego oczka do sześciu oczek.\n\nOblicz prawdopodobieństwo zdarzenia polegającego na tym, że otrzymamy co najmniej jeden raz sześć oczek, pod warunkiem że otrzymamy dokładnie dwa razy pięć oczek. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28146,14 +28479,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z05",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 5",
-    "category": "algebra",
+    "category": "rownania",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/mr-2025-maj/z05-1.png)",
+    "prompt": "Rozwiąż nierówność\n$|x-2| - 2 \\cdot |x+3| < -2$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28172,14 +28505,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z06",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 6",
-    "category": "algebra",
+    "category": "ciagi",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/mr-2025-maj/z06-1.png)",
+    "prompt": "Ciąg $(a_n)$, określony dla każdej liczby naturalnej $n \\ge 1$, jest geometryczny i zbieżny.\nW tym ciągu $a_1 + a_3 = 20$ i $a_1^2 + a_3^2 = 328$.\n\nOblicz sumę wszystkich wyrazów tego ciągu. Rozważ wszystkie przypadki.\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28205,7 +28538,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2025-maj/z07-1.png)",
+    "prompt": "W trapezie $ABCD$ o podstawach $AB$ i $CD$ punkt $E$ jest środkiem ramienia $AD$, a punkt $F$ jest środkiem ramienia $BC$ trapezu. Stosunek pola trapezu $EFCD$ do pola trapezu $ABFE$ jest równy $\\frac{1}{2}$.\n\nWykaż, że $\\frac{|CD|}{|AB|} = \\frac{1}{5}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28224,14 +28557,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z08",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 8",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2025-maj/z08-1.png)",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ dane są okręgi $O_1$ oraz $O_2$ o równaniach:\n\n- $O_1: (x - 1)^2 + (y + 3)^2 = 5$\n- $O_2: (x - 2)^2 + (y - 4)^2 = 45$\n\nTe okręgi przecinają się w punktach $A$ oraz $B$. Punkt $A$ ma pierwszą współrzędną dodatnią. Punkt $M$ spełnia warunek $\\vec{AM} = -2 \\cdot \\vec{BM}$.\n\nOblicz współrzędne punktów $A$, $B$ oraz $M$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28250,14 +28583,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z09",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 9",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2025-maj/z09-1.png)",
+    "prompt": "Rozwiąż równanie\n$3\\cos^2 x + \\sqrt{3}\\sin(2x) - 3\\sin^2 x = 0$\nw przedziale $[-\\pi, \\pi]$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28276,14 +28609,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z10",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 10",
-    "category": "algebra",
+    "category": "trygonometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2025-maj/z10-1.png)",
+    "prompt": "Podstawą ostrosłupa $ABCD S$ jest kwadrat $ABCD$. Krawędź boczna $SA$ jest wysokością ostrosłupa, natomiast krawędź podstawy ma długość $3\\sqrt{34}$. Cosinus kąta $\\beta$ między ścianami bocznymi $CDS$ i $BCS$ tego ostrosłupa jest równy $\\left(-\\frac{9}{25}\\right)$.\n\nOblicz pole powierzchni bocznej tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28302,14 +28635,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z11",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 11",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2025-maj/z11-1.png)",
+    "prompt": "Funkcja $f$ jest określona wzorem\n$f(x) = (2 - m)x^2 - 2(2m + 1)x + m + 8$\ndla każdej liczby rzeczywistej $x$, gdzie $m$ jest liczbą rzeczywistą różną od $2$.\n\nWyznacz wszystkie wartości parametru $m$, dla których funkcja $f$ ma dokładnie dwa miejsca zerowe $x_1$ oraz $x_2$ tego samego znaku, które spełniają warunek\n$(x_1 - x_2)^2 \\le 180$\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -28328,14 +28661,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-mr-2025-maj-z12",
     "title": "Matura - maj 2025 - poziom rozszerzony - zad. 12",
-    "category": "algebra",
+    "category": "funkcje",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2025-maj/z12-1.png)",
+    "prompt": "Rozważamy wszystkie stożki, których wysokość jest większa od 5, a odległość środka podstawy od tworzącej jest równa 5.\n\nWykaz, że objętość $V$ stożka, jako funkcja wysokości $h$ stożka, wyraża się wzorem\n$$V(h) = \\frac{\\pi}{3} \\cdot \\frac{25h^3}{h^2 - 25}$$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
