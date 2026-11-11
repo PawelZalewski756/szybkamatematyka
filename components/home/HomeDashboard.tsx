@@ -14,7 +14,6 @@ import {
   BookOpen,
   Check,
   FileText,
-  Flame,
   Gamepad2,
   Library,
   Trophy,
@@ -52,22 +51,43 @@ const ENTRY_PATHS = [
   },
 ] as const;
 
-const STEPS = [
+const INSIDE_SECTIONS = [
   {
-    n: "01",
-    title: "Wybierasz ścieżkę",
-    text: "Matura albo egzamin ósmoklasisty - widzisz materiały dopasowane do celu.",
+    href: "/trening",
+    title: "Trening",
+    text: "Tematy z teorią i zadaniami.",
+    icon: BookOpen,
   },
   {
-    n: "02",
-    title: "Robisz mały krok",
-    text: "Jeden temat, kilka zadań i jasne rozwiązanie, kiedy potrzebujesz podpowiedzi.",
+    href: "/baza-zadan",
+    title: "Baza zadań",
+    text: "Zadania z rozwiązaniami krok po kroku.",
+    icon: Library,
   },
   {
-    n: "03",
-    title: "Sprawdzasz wynik",
-    text: "Arkusz CKE pokazuje, czy wiedza działa także pod presją czasu.",
+    href: "/minigry",
+    title: "Minigry",
+    text: "Szybkie liczenie w formie gry.",
+    icon: Gamepad2,
   },
+  {
+    href: "/trening/arkusze",
+    title: "Arkusze CKE",
+    text: "Matura i egzamin ósmoklasisty.",
+    icon: FileText,
+  },
+  {
+    href: "/rankingi",
+    title: "Rankingi",
+    text: "Porównaj wynik z innymi.",
+    icon: Trophy,
+  },
+] as const;
+
+const WHY_IT_WORKS = [
+  "Zadania z rozwiązaniami krok po kroku",
+  "Trening pod presją czasu",
+  "Oficjalne arkusze CKE",
 ] as const;
 
 const fadeUp = {
@@ -394,72 +414,57 @@ export function HomeDashboard() {
         />
         <div className="page-container relative px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="max-w-2xl">
-            <p className="text-overline">PROSTY RYTM NAUKI</p>
+            <p className="text-overline">CO ZNAJDZIESZ W ŚRODKU</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Od pierwszego zadania do wyniku
+              Wszystko do nauki w jednym miejscu
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Nie chodzi o siedzenie nad matematyką przez cały dzień. Chodzi o
-              regularne, konkretne sesje.
+              Wybierz dział i zacznij od tego, czego potrzebujesz dzisiaj.
             </p>
           </div>
 
-          <ol className="mt-8 grid gap-3 lg:mt-10 lg:grid-cols-3 lg:gap-4">
-            {STEPS.map((step) => (
-              <li
-                key={step.n}
-                className="card-raised flex items-start gap-4 p-4 sm:gap-5 sm:p-5 lg:min-h-52 lg:flex-col lg:p-6"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-xs font-extrabold tracking-[0.12em] text-accent lg:h-auto lg:w-auto lg:justify-start lg:rounded-none lg:bg-transparent lg:text-sm">
-                  {step.n}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="text-lg font-extrabold tracking-tight text-foreground lg:mt-7 lg:text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted lg:mt-3">
-                    {step.text}
-                  </p>
-                </div>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-5 lg:gap-4">
+            {INSIDE_SECTIONS.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="card-raised group flex h-full items-start gap-4 p-4 sm:p-5 lg:flex-col lg:p-6"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
+                    <item.icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-extrabold tracking-tight text-foreground group-hover:text-accent">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      {item.text}
+                    </p>
+                  </div>
+                </Link>
               </li>
             ))}
-          </ol>
+          </ul>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.45fr)]">
-            <div className="card-raised flex flex-col justify-between gap-6 p-5 sm:flex-row sm:items-center sm:p-6">
+            <div className="card-raised flex flex-col justify-between gap-5 p-5 sm:p-6">
               <div>
-                <p className="text-overline">WIĘCEJ MOTYWACJI</p>
+                <p className="text-overline">DLACZEGO TO DZIAŁA</p>
                 <h3 className="mt-2 text-xl font-extrabold tracking-tight text-foreground">
                   Nauka, która nie kończy się na teorii
                 </h3>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
-                  Wskocz w krótką minigrę, zrób wyzwanie dnia albo porównaj
-                  wynik w rankingu.
-                </p>
               </div>
-              <div className="flex shrink-0 flex-wrap gap-2 text-xs font-bold text-muted">
-                <Link
-                  href="/minigry"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
-                >
-                  <Gamepad2 className="h-3.5 w-3.5" aria-hidden />
-                  Minigry
-                </Link>
-                <Link
-                  href="/wyzwania"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
-                >
-                  <Flame className="h-3.5 w-3.5" aria-hidden />
-                  Wyzwania
-                </Link>
-                <Link
-                  href="/rankingi"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent transition hover:bg-accent/20"
-                >
-                  <Trophy className="h-3.5 w-3.5" aria-hidden />
-                  Rankingi
-                </Link>
-              </div>
+              <ul className="flex flex-wrap gap-2 text-xs font-bold">
+                {WHY_IT_WORKS.map((item) => (
+                  <li
+                    key={item}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent"
+                  >
+                    <Check className="h-3.5 w-3.5" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <Link
