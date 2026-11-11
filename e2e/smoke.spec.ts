@@ -82,7 +82,7 @@ test.describe("Smoke", () => {
     await expect(page).toHaveURL(/\/trening$/);
   });
 
-  test("licznik wejść pyta o zgodę raz i liczy tylko po akceptacji", async ({
+  test("licznik wejść pokazuje komunikat raz i liczy dopiero po OK", async ({
     page,
   }) => {
     const bodies: string[] = [];
@@ -92,7 +92,7 @@ test.describe("Smoke", () => {
     });
     await page.goto("/");
 
-    const prompt = page.locator('[aria-label="Zgoda na anonimowy licznik wejść"]');
+    const prompt = page.locator('[aria-label="Informacja o liczniku wejść"]');
     await expect(prompt).toBeVisible();
     expect(bodies).toHaveLength(0);
 
@@ -103,31 +103,26 @@ test.describe("Smoke", () => {
 
     await page.reload();
     await expect(prompt).toHaveCount(0);
-    await expect(page.getByRole("button", { name: "Prywatność" })).toBeVisible();
   });
 
-  test("wyłączenie licznika przez Prywatność usuwa identyfikator", async ({
+  test("wracający odwiedzający nie widzi komunikatu, a wejście i tak się liczy", async ({
     page,
   }) => {
-    let requests = 0;
+    const bodies: string[] = [];
     await page.route("**/api/analytics/pageview", async (route) => {
-      requests += 1;
+      bodies.push(route.request().postData() ?? "");
       await route.fulfill({ json: { ok: true } });
     });
+    await page.addInitScript(() => {
+      localStorage.setItem("sm-analytics-consent", "accepted");
+    });
     await page.goto("/");
-    const prompt = page.locator('[aria-label="Zgoda na anonimowy licznik wejść"]');
-    await expect(prompt.getByRole("button", { name: "Wyłącz" })).toHaveCount(0);
-    await prompt.getByRole("button", { name: "OK", exact: true }).click();
-    await page.getByRole("button", { name: "Prywatność" }).click();
-    await prompt.getByRole("button", { name: "Wyłącz" }).click();
-    await page.reload();
-    expect(requests).toBeLessThanOrEqual(1);
-    const before = requests;
-    await page.reload();
-    expect(requests).toBe(before);
-    expect(
-      await page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
-    ).toBeNull();
+
+    await expect(
+      page.locator('[aria-label="Informacja o liczniku wejść"]'),
+    ).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Prywatność" })).toHaveCount(0);
+    await expect.poll(() => bodies.length).toBe(1);
   });
 
   test("/login ma formularz logowania", async ({ page }) => {
