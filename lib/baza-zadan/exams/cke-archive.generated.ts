@@ -14285,11 +14285,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "C, czyli są prostopadłe.",
+    "explanation": "Proste $k$ i $l$ są prostopadłe.",
     "solutionSteps": [
-      "Porównaj współczynniki kierunkowe obu prostych. Prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, więc jej współczynnik kierunkowy $a_k = -\\frac{1}{3}$. Prosta $l$ ma równanie $y = 3x - 1$, więc jej współczynnik kierunkowy $a_l = 3$.",
-      "Sprawdź warunek prostopadłości prostych. Dwie proste są prostopadłe, jeśli iloczyn ich współczynników kierunkowych wynosi $-1$, czyli $a_k \\cdot a_l = -1$. W tym przypadku $a_k \\cdot a_l = (-\\frac{1}{3}) \\cdot 3 = -1$.",
-      "Z wniosku z poprzedniego kroku wynika, że proste są prostopadłe."
+      "Prosta $k$: $y = \\frac{1}{2}x + 5$, więc jej współczynnik kierunkowy to $a_k = \\frac{1}{2}$. Prosta $l$: $y - 1 = -2x$, czyli $y = -2x + 1$, więc $a_l = -2$.",
+      "Iloczyn współczynników kierunkowych wynosi $a_k \\cdot a_l = \\frac{1}{2} \\cdot (-2) = -1$, więc proste są prostopadłe."
     ],
     "examSource": {
       "kind": "matura",
@@ -15408,11 +15407,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "B) są prostopadłe.",
+    "explanation": "Proste $k$ i $l$ są prostopadłe.",
     "solutionSteps": [
-      "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Dla prostej $k$: $2y = -x + 2 \\implies y = -\\frac{1}{2}x + 1$. Dla prostej $l$: $y = 2x - 1$.",
-      "Porównaj współczynniki kierunkowe prostych. Współczynnik kierunkowy prostej $k$ wynosi $a_k = -\\frac{1}{2}$, a prostej $l$ wynosi $a_l = 2$. Ponieważ $a_k \\cdot a_l = -\\frac{1}{2} \\cdot 2 = -1$, proste są prostopadłe.",
-      "Sprawdź punkt przecięcia, podstawiając $x=0$ do równań prostych. Dla $k$: $y = -\\frac{1}{2}(0) + 1 = 1$. Dla $l$: $y = 2(0) - 1 = -1$. Punkty przecięcia z osią $y$ są różne, więc nie przecinają się w punkcie $(0, -1)$."
+      "Prosta $k$: $y = \\frac{1}{3}x - 1$, więc jej współczynnik kierunkowy to $a_k = \\frac{1}{3}$. Prosta $l$: $y = -3x + 6$, więc $a_l = -3$.",
+      "Iloczyn współczynników kierunkowych wynosi $a_k \\cdot a_l = \\frac{1}{3} \\cdot (-3) = -1$, więc proste są prostopadłe."
     ],
     "examSource": {
       "kind": "matura",
@@ -17411,11 +17409,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{29}{14}$",
+    "explanation": "$31$",
     "solutionSteps": [
-      "Zamień liczby mieszane na ułamki niewłaściwe, pamiętając o kolejności działań: najpierw mnożenie, potem odejmowanie. Zapiszemy $5 \\frac{1}{6}$ jako $\\frac{5 \\cdot 6 + 1}{6} = \\frac{31}{6}$, a $2 \\frac{1}{3}$ jako $\\frac{2 \\cdot 3 + 1}{3} = \\frac{7}{3}$.",
-      "Wykonaj mnożenie ułamków: $\\frac{31}{6} \\cdot \\frac{3}{7} = \\frac{31 \\cdot 3}{6 \\cdot 7}$. Skróć 3 i 6, co da $\\frac{31 \\cdot 1}{2 \\cdot 7} = \\frac{31}{14}$.",
-      "Odejmij od wyniku mnożenia liczbę $\\frac{1}{7}$: $\\frac{31}{14} - \\frac{1}{7}$. Aby odjąć ułamki, sprowadź je do wspólnego mianownika, czyli 14. Zapiszemy $\\frac{1}{7}$ jako $\\frac{2}{14}$. Obliczenie to $\\frac{31}{14} - \\frac{2}{14} = \\frac{31-2}{14} = \\frac{29}{14}$."
+      "Wyłączamy $5^{12}$ przed nawias w liczniku: $5^{12} + 5^{13} + 5^{14} = 5^{12}(1 + 5 + 25)$.",
+      "Skracamy przez $5^{12}$: $\\frac{5^{12}(1 + 5 + 25)}{5^{12}} = 1 + 5 + 25 = 31$."
     ],
     "examSource": {
       "kind": "matura",
