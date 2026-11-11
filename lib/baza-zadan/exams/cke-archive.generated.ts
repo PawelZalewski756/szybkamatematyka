@@ -355,23 +355,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "16",
       "17"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli 16",
+    "correctIndex": 0,
+    "explanation": "A, czyli 14",
     "solutionSteps": [
-      "Rozwiązujemy nierówność kwadratową $\\frac{3}{4} \\le x^2$. Przenosimy wszystko na jedną stronę: $x^2 - \\frac{3}{4} \\ge 0$. Miejsca zerowe to $x = \\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{2}$ oraz $x = -\\sqrt{\\frac{3}{4}} = -\\frac{\\sqrt{3}}{2}$. Ponieważ parabola $y=x^2 - \\frac{3}{4}$ ma ramiona skierowane w górę, nierówność jest spełniona dla $x \\le -\\frac{\\sqrt{3}}{2}$ lub $x \\ge \\frac{\\sqrt{3}}{2}$.",
-      "Znajdujemy przybliżone wartości pierwiastków: $\\sqrt{3} \\approx 1.732$, więc $\\frac{\\sqrt{3}}{2} \\approx 0.866$. Nierówność spełniają liczby $x \\le -0.866$ lub $x \\ge 0.866$.",
-      "Szukamy liczb całkowitych w przedziałach $(- \\infty, -0.866]$ oraz $[0.866, \\infty)$ z zakresu podanego w treści zadania, czyli $od - 10$ do 10 włącznie. W pierwszym przedziale mamy liczby $od - 10 do - 1$ (10 liczb). W drugim przedziale mamy liczby od 1 do 10 (10 liczb). Łącznie jest 20 liczb.",
-      "Poprawiamy Krok 3. Nierówność jest spełniona dla liczb całkowitych $x \\in \\{-10, -9, \\dots, -1\\}$ oraz $x \\in \\{1, 2, \\dots, 10\\}$. Liczb całkowitych spełniających warunek $x \\le -0.866$ jest 10 $(od - 10 do - 1)$. Liczb całkowitych spełniających warunek $x \\ge 0.866$ jest 10 (od 1 do 10). Łączna liczba całkowitych rozwiązań wynosi $10+10 = 20$. Prawdopodobnie wkradł się błąd w rozumowaniu, albo treść zadania jest niepełna (np. brak rysunku, który mógł zawierać dodatkowe ograniczenia). Ponownie analizujemy sytuację.",
-      "Biorąc pod uwagę podane odpowiedzi, musi istnieć dodatkowe ograniczenie. Zakładając, że rysunek ograniczał zakres liczb całkowitych, a nie ich wartości bezwzględne, spróbujmy inne podejście. Nierówność pierwotna jest $x^2 \\ge \\frac{3}{4}$. Bezpośrednio szukamy liczb całkowitych $x$ takich, że $x \\le -\\frac{\\sqrt{3}}{2}$ lub $x \\ge \\frac{\\sqrt{3}}{2}$. Liczbami całkowitymi mniejszymi lub równymi $-\\frac{\\sqrt{3}}{2} \\approx -0.866$ są $\\{-1, -2, -3, \\ldots \\}$. Liczbami całkowitymi większymi lub równymi $\\frac{\\sqrt{3}}{2} \\approx 0.866$ są $\\{1, 2, 3, \\ldots \\}$. W zakresie od $-10$ do $10$, liczby całkowite spełniające nierówność to $\\{-10, -9, \\dots, -1\\}$ (10 liczb) oraz $\\{1, 2, \\dots, 10\\}$ (10 liczb). Łącznie 20. Ponieważ 20 nie ma na liście odpowiedzi, a najbliższa jest 17, prawdopodobnie rysunek zawierał dodatkowe ograniczenie typu $-10 \\le x \\le 10$. Przyjrzyjmy się dokładniej.",
-      "Rozwiązujemy nierówność $\\frac{3}{4} \\le x^2$. Po przekształceniu mamy $x^2 - \\frac{3}{4} \\ge 0$, co daje $(x - \\frac{\\sqrt{3}}{2})(x + \\frac{\\sqrt{3}}{2}) \\ge 0$. Rozwiązaniem jest $x \\in (-\\infty, -\\frac{\\sqrt{3}}{2}] \\cup [\\frac{\\sqrt{3}}{2}, \\infty)$.",
-      "Przybliżamy wartości krańcowe: $-\\frac{\\sqrt{3}}{2} \\approx -0.866$ i $\\frac{\\sqrt{3}}{2} \\approx 0.866$. Nierówność spełniają liczby $x \\le -0.866$ lub $x \\ge 0.866$.",
-      "Na podstawie domniemanych ograniczeń z rysunku (zakładamy, że było to $-10 \\le x \\le 10$ i $x$ jest liczbą całkowitą), szukamy liczb całkowitych w tych przedziałach. Liczby całkowite spełniające $x \\le -0.866$ w zakresie $od - 10$ do 10 to $x \\in \\{-10, -9, \\dots, -1\\}$. Jest ich 10.",
-      "Liczby całkowite spełniające $x \\ge 0.866$ w zakresie $od - 10$ do 10 to $x \\in \\{1, 2, \\dots, 10\\}$. Jest ich 10. Łącznie jest 20 liczb.",
-      "Analizujemy możliwość błędnego odczytania nierówności lub odpowiedzi. Wracamy do treści. Jeśli przyjąć, że nierówność była $x^2 \\le \\frac{3}{4}$, rozwiązaniem byłoby $x \\in [-\\frac{\\sqrt{3}}{2}, \\frac{\\sqrt{3}}{2}]$, czyli $x \\in [-0.866, 0.866]$. Jedyną liczbą całkowitą spełniającą to jest 0. To też nie pasuje.",
-      "Ponieważ jedna z odpowiedzi jest poprawna, a obliczenia pokazują 20, a nie jedną z opcji, przyjmujemy, że rysunek zawierał inny zakres lub symbol. Jeśli rysunek wskazywał przedział $[-10, 10]$, a nierówność jest poprawnie przepisana, możliwe jest, że liczby całkowite sprawdzamy tylko dla pewnych wartości.",
-      "Jeśli odczyt zadania jest poprawny, i odpowiedzi są poprawne, to gdzieś jest błąd. Skoro mamy opcje 14, 15, 16, 17, a nasze obliczenia dają 20, to znaczy, że albo zakres liczb całkowitych jest mniejszy, albo nierówność jest inna. Jeśli założymy, że zadanie jest poprawne, sprawdźmy, jaka liczba całkowitych w przedziale $[-N, N]$ spełnia nierówność. Liczb całkowitych w $[-N, N]$ jest $2N+1$. W naszym przypadku, dla $N=10$, mamy 21 liczb. Odpada 0. Zostaje 20.",
-      "Przyjmując, że jedna z odpowiedzi jest poprawna, a obliczenia są poprawne, to albo zakres liczb całkowitych jest mniejszy, albo rysunek zawierał inny przedział. Jeśli założymy, że zakres był np. $[-9, 9]$, to mamy $9+9=18$ liczb. Nadal nie pasuje. Jeśli zakres był $[-8, 8]$, to mamy $8+8=16$ liczb. TO PASUJE.",
-      "Rozwiązanie nierówności to $x \\in (-\\infty, -0.866] \\cup [0.866, \\infty)$. Liczby całkowite spełniające to są $\\mathbb{Z} \\setminus \\{0\\}$. Jeśli ograniczyć się do przedziału $[-8, 8]$, to wykluczamy z tego przedziału tylko 0. Całkowite liczby w $[-8, 8]$ to $\\{-8, -7, \\dots, 7, 8\\}$. Jest ich $8 - (-8) + 1 = 17$. Z tych 17 liczb, tylko 0 nie spełnia nierówności $x^2 \\ge \\frac{3}{4}$. Czyli $17-1 = 16$ liczb."
+      "Mnożymy wszystkie części nierówności $\\frac{2}{7} < \\frac{x}{14} < \\frac{4}{3}$ przez $14$ (liczba dodatnia, więc znaki nierówności się nie zmieniają): $\\frac{2}{7} \\cdot 14 < x < \\frac{4}{3} \\cdot 14$.",
+      "Obliczamy: $4 < x < \\frac{56}{3} = 18\\frac{2}{3}$.",
+      "Liczby całkowite spełniające nierówność to $5, 6, 7, \\ldots, 18$. Jest ich $18 - 5 + 1 = 14$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5636,17 +5625,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $L = (6,4)$",
     "solutionSteps": [
-      "Znajdź współrzędne wektora $\\vec{NK}$, który jest prostopadły do boku $LM$. Ponieważ $N$ jest środkiem podstawy $LM$ (trójkąt jest równoramienny, a $MN$ jest wysokością), wektor $\\vec{NL}$ będzie miał przeciwne współrzędne. Wektor $\\vec{NK} = K - N = (2-4, 2-3) = (-2, -1)$.",
-      "Oblicz współrzędne punktu $L$, wiedząc, że $N$ jest środkiem odcinka $LM$. $N = \\frac{L+M}{2}$. Jest błąd w treści zadania, ponieważ $N=(4,3)$ jest środkiem odcinka $LM$, a $K=(2,2)$ jest wierzchołkiem. Wynika z tego, że $MN$ jest wysokością, a nie $NK$. Zatem $NK \\perp LM$. Wektor $\\vec{NK} = K - N = (2-4, 2-3) = (-2,-1)$. Wektor $\\vec{NL}$ musi być prostopadły do $\\vec{NK}$. $\\vec{NL} = (x-4, y-3)$. $\\vec{NK} \\cdot \\vec{NL} = 0 \\implies -2(x-4) -1(y-3) = 0 \\implies -2x+8-y+3=0 \\implies -2x-y+11=0$.",
-      "Użyj informacji, że $|KM| = |LM|$. Niestety, nie możemy użyć tej informacji bez znajomości punktu M. Z treści zadania wiemy, że $N$ jest punktem na $LM$, a $MN$ jest wysokością. To oznacza, że $MN \\perp LM$. Ale $N$ jest na $LM$, więc albo $N=M$ (nie jest możliwe), albo $N$ jest środkiem $LM$. Skoro $|KM|=|LM|$, to trójkąt jest równoramienny i $MN$ jest wysokością opuszczoną na podstawę $LM$. To jest sprzeczność, bo $MN$ jest wysokością opuszczoną z wierzchołka M. Trójkąt jest KLM, $|KM|=|LM|$. Wtedy $MN$ jest wysokością opuszczoną z $M$ na $KL$. Nie, to też nie pasuje. Z treści zadania: $K=(2,2)$ jest wierzchołkiem, $|KM|=|LM|$, $MN$ jest wysokością, $N=(4,3)$. Ponieważ $|KM|=|LM|$, wierzchołkiem przy podstawie jest $M$. W takim razie $MN$ to wysokość z $M$ na podstawę $KL$. Wtedy $N$ leży na $KL$. Ale $N$ jest podany jako $(4,3)$, a $K$ jako $(2,2)$. Wektor $\\vec{KN} = N-K = (4-2, 3-2) = (2,1)$. Wysokość $MN$ jest prostopadła do $KL$. Czyli $\\vec{MN} \\perp \\vec{KN}$. $\\vec{MN} = N-M = (4-x_M, 3-y_M)$. $\\vec{KN} = (2,1)$. $\\vec{MN} \\cdot \\vec{KN} = 0 \\implies 2(4-x_M) + 1(3-y_M) = 0 \\implies 8-2x_M+3-y_M=0 \\implies -2x_M-y_M+11=0$.",
-      "Skoro $|KM|=|LM|$, to punkt $M$ leży na symetralnej odcinka $KL$. Znajdźmy równanie symetralnej $KL$. Środek $S$ odcinka $KL$ to $S = (\\frac{2+x_L}{2}, \\frac{2+y_L}{2})$. Ale my szukamy $L$. Zauważmy, że $N$ jest punktem na boku $KL$. Ponieważ $MN$ jest wysokością, to $MN \\perp KL$. Wektor $\\vec{KL} = L-K = (x_L-2, y_L-2)$. Wektor $\\vec{MN} = N-M = (4-x_M, 3-y_M)$. $\\vec{MN} \\cdot \\vec{KL} = 0$.\n\nRozważmy jeszcze raz: $K=(2,2)$, $|KM|=|LM|$, $MN$ jest wysokością, $N=(4,3)$. Ponieważ $|KM|=|LM|$, to $M$ jest wierzchołkiem przy podstawie $KL$. Wysokość z $M$ jest $MN$, więc $MN \\perp KL$. Wektor $\\vec{KL} = (x_L-2, y_L-2)$. Wektor $\\vec{MN} = (4-x_M, 3-y_M)$. $\\vec{MN} \\cdot \\vec{KL} = 0$. Ale $N$ jest na prostej $KL$. Czyli $K, N, L$ leżą na jednej prostej. $\\vec{KN} = (4-2, 3-2) = (2,1)$. Wektor $\\vec{KL}$ jest równoległy do $\\vec{KN}$. $\\vec{KL} = t \\cdot \\vec{KN} = (2t, t)$. Czyli $L-K = (2t, t) \\implies L = K+(2t,t) = (2+2t, 2+t)$.\nTeraz $|KM|^2 = |LM|^2$. $(x_M-2)^2 + (y_M-2)^2 = (x_M-x_L)^2 + (y_M-y_L)^2$.\n$\\vec{MN} \\perp \\vec{KL}$. Skoro $K, N, L$ są współliniowe, to $\\vec{MN} \\perp \\vec{KN}$. Wektor $\\vec{KN} = (2,1)$. Wektor $\\vec{MN} = (4-x_M, 3-y_M)$. $\\vec{MN} \\cdot \\vec{KN} = 2(4-x_M) + 1(3-y_M) = 0 \\implies 8-2x_M+3-y_M = 0 \\implies 11 = 2x_M+y_M$.\n$N$ leży na prostej $KL$. Prosta $KL$ przechodzi przez $K(2,2)$ i ma kierunek $\\vec{KN}=(2,1)$. Równanie prostej $KL$: $y-2 = \\frac{1}{2}(x-2) \\implies 2y-4 = x-2 \\implies x-2y+2=0$.\nPunkt $L$ leży na tej prostej.\nTeraz $|KM|=|LM|$. M jest na symetralnej $KL$. Ale MN jest wysokością z M, a N jest na KL. To znaczy, że M jest na prostej prostopadłej do KL przechodzącej przez N. Prosta prostopadła do $KL$ ma równanie $y-3 = -2(x-4) \\implies y-3 = -2x+8 \\implies 2x+y-11=0$. Czyli M leży na tej prostej. $y_M = 11-2x_M$.\nWracamy do $|KM|=|LM|$. $M$ jest na symetralnej $KL$. Ale $M$ jest również na prostej prostopadłej do $KL$ przechodzącej przez $N$. To oznacza, że $M$ jest punktem przecięcia prostej $KL$ i prostej prostopadłej do $KL$ przechodzącej przez $N$. Czyli $M=N$. Ale to nie jest możliwe.\n\nPoprawne rozumowanie: $K=(2,2)$, $|KM|=|LM|$. $MN$ jest wysokością, $N=(4,3)$. Ponieważ $|KM|=|LM|$, wierzchołkiem przy podstawie jest $M$. Wysokość $MN$ jest opuszczona z $M$ na podstawę $KL$. Zatem $N$ musi leżeć na prostej $KL$ i $MN \\perp KL$.\nSkoro $N$ leży na $KL$, a $K$ jest punktem na tej samej prostej, to wektor $\\vec{KN}$ jest równoległy do $\\vec{KL}$. Wektor $\\vec{KN} = N-K = (4-2, 3-2) = (2,1)$.\nSkoro $MN \\perp KL$, to $MN \\perp KN$. Wektor $\\vec{MN} = N-M = (4-x_M, 3-y_M)$.\n$\\vec{MN} \\cdot \\vec{KN} = 0 \\implies (4-x_M) \\cdot 2 + (3-y_M) \\cdot 1 = 0 \\implies 8-2x_M + 3-y_M = 0 \\implies 11 = 2x_M + y_M$.\nTeraz skorzystamy z $|KM|=|LM|$. Punkt $M$ leży na symetralnej odcinka $KL$. Ale to nie jest przydatne.\nZamiast tego: $N$ jest punktem na prostej $KL$. $|KM| = |LM|$. To znaczy, że $M$ jest na symetralnej odcinka $KL$. To nadal nie pomaga.",
-      "Znajdź wektor $\\vec{KN}$, gdzie $K=(2,2)$ i $N=(4,3)$. $\\vec{KN} = N-K = (4-2, 3-2) = (2,1)$.",
-      "Ponieważ $|KM|=|LM|$, punkt $M$ leży na symetralnej odcinka $KL$. Ponieważ $MN$ jest wysokością opuszczoną z $M$ na $KL$, to $N$ leży na $KL$ i $MN \\perp KL$. Wektor $\\vec{KN}$ jest równoległy do $\\vec{KL}$. Wektor $\\vec{MN}$ musi być prostopadły do $\\vec{KN}$. $\\vec{MN} = N-M = (4-x_M, 3-y_M)$. $\\vec{MN} \\cdot \\vec{KN} = 0 \\implies 2(4-x_M) + 1(3-y_M) = 0 \\implies 11 = 2x_M + y_M$.",
-      "Punkt $L$ leży na prostej przechodzącej przez $K$ i $N$. Prosta ta ma kierunek $\\vec{KN}=(2,1)$. Zatem $L = K + t \\cdot \\vec{KN} = (2,2) + t(2,1) = (2+2t, 2+t)$ dla pewnego $t$.",
-      "Ponieważ $|KM|=|LM|$, odległość $M$ od $K$ jest taka sama jak odległość $M$ od $L$. $(x_M-2)^2 + (y_M-2)^2 = (x_M-x_L)^2 + (y_M-y_L)^2$. Podstawiając $x_L=2+2t, y_L=2+t$: $(x_M-2)^2 + (y_M-2)^2 = (x_M-(2+2t))^2 + (y_M-(2+t))^2$.\nJednak prostsze podejście: jeśli $N$ jest punktem na $KL$, a $MN$ jest wysokością, to $M$ jest punktem przecięcia prostej prostopadłej do $KL$ przechodzącej przez $N$ i symetralnej $KL$. ALE! Z zadania wynika, że $K=(2,2)$ jest wierzchołkiem, $|KM|=|LM|$, a $MN$ jest wysokością, $N=(4,3)$. W tej sytuacji $M$ jest wierzchołkiem przy podstawie $KL$. To oznacza, że $N$ leży na prostej $KL$ i $MN \\perp KL$. Wektor $\\vec{KN}=(2,1)$. $L$ leży na prostej przechodzącej przez $K$ i $N$. Skoro $MN$ jest wysokością, to $M$ leży na prostej prostopadłej do $KL$ przechodzącej przez $N$. Równanie prostej $KL$ przez $K(2,2)$ z kierunkiem $(2,1)$: $y-2=\\frac{1}{2}(x-2) \\implies x-2y+2=0$. Prosta prostopadła do $KL$ przez $N(4,3)$: $y-3=-2(x-4) \\implies 2x+y-11=0$. Punkt $M$ leży na tej prostej. Punkt $L$ leży na prostej $KL$. $|KM|=|LM|$ oznacza, że $M$ jest na symetralnej $KL$. To nadal nie pomaga.\nZauważmy, że $N$ jest punktem na odcinku $KL$. $|KM|=|LM|$ oznacza, że $M$ leży na symetralnej odcinka $KL$. Wysokość $MN$ jest prostopadła do $KL$. Wektor $\\vec{KN} = (2,1)$. Wektor $\\vec{NL}$ musi być taki, że $N$ jest środkiem $KL$ dla $|KM|=|LM|$. ALE $N$ nie musi być środkiem.\nJeśli $N$ jest punktem na $KL$ i $MN$ jest wysokością, to $M$ musi leżeć na prostej prostopadłej do $KL$ przechodzącej przez $N$. Prosta prostopadła: $2x+y-11=0$. Czyli $y_M = 11-2x_M$.\nSkoro $|KM|=|LM|$, to $M$ leży na symetralnej $KL$.\nWeźmy proste rozwiązanie: $N$ jest punktem na $KL$. Wektor $\\vec{KN}=(2,1)$. Punkt $L$ leży na prostej $KL$. $L = K + t \\vec{KN} = (2,2) + t(2,1) = (2+2t, 2+t)$.\n$M$ jest punktem, dla którego $|KM|=|LM|$. Podstawmy punkty do odpowiedzi:\nA) $L=(5,3)$. $\\vec{KL} = (3,1)$. $\\vec{KN}=(2,1)$. Nie są równoległe.\nB) $L=(6,4)$. $\\vec{KL}=(4,2)$. To jest $2 \\cdot \\vec{KN}$. Czyli $L$ leży na prostej $KN$.\nJeśli $L=(6,4)$, to $N$ musi być na odcinku $KL$. $K=(2,2)$, $N=(4,3)$, $L=(6,4)$. Rzeczywiście $N$ jest środkiem $KL$.\nJeśli $N$ jest środkiem $KL$, to dla $|KM|=|LM|$, $MN$ jest wysokością i medianą.\nWtedy $M$ leży na prostej prostopadłej do $KL$ przechodzącej przez $N$. Wektor $\\vec{KL} = (4,2)$. Wektor prostopadły to $(-2, 4)$ lub $(2, -4)$. Kierunek prostopadły to $(-1, 2)$.\nProsta prostopadła do $KL$ przez $N(4,3)$ ma równanie $y-3 = \\frac{2}{-1}(x-4)$ - źle. Kierunek $\\vec{KL}$ to $(2,1)$. Kierunek prostopadły to $(-1, 2)$.\nProsta prostopadła do $KL$ przez $N(4,3)$ ma równanie $y-3 = -2(x-4) \\implies y-3 = -2x+8 \\implies 2x+y-11=0$.\n$M$ leży na tej prostej. Ale my szukamy $L$. Jeśli $L=(6,4)$, to $N$ jest środkiem $KL$. $|KM|=|LM|$. A $MN$ jest wysokością. Czyli $MN \\perp KL$. Wektor $\\vec{MN} = (4-x_M, 3-y_M)$. Wektor $\\vec{KL}=(4,2)$. $\\vec{MN} \\cdot \\vec{KL} = 4(4-x_M) + 2(3-y_M) = 0 \\implies 16-4x_M+6-2y_M=0 \\implies 22 = 4x_M+2y_M \\implies 11 = 2x_M+y_M$. To się zgadza z poprzednim krokiem.\nWięc $L=(6,4)$ jest poprawną odpowiedzią, bo $N$ jest środkiem $KL$, co jest zgodne z $|KM|=|LM|$ i $MN$ będącą wysokością.",
-      "Wektor $\\vec{KN} = N - K = (4-2, 3-2) = (2,1)$.",
-      "Punkt $L$ musi leżeć na prostej przechodzącej przez $K$ i $N$, ponieważ $N$ jest punktem na odcinku $KL$ (w wysokości $MN$). Sprawdźmy, który z punktów $L$ leży na tej prostej. Prosta $KN$ ma równanie $y-2 = \\frac{1}{2}(x-2)$.\nDla $L=(6,4)$: $4-2 = 2$. $\\frac{1}{2}(6-2) = \\frac{1}{2} \\cdot 4 = 2$. Punkt $L=(6,4)$ leży na prostej $KN$.",
-      "Skoro $|KM|=|LM|$ i $MN$ jest wysokością, to $N$ musi być środkiem odcinka $KL$. Sprawdźmy środek odcinka $KL$ dla $K=(2,2)$ i $L=(6,4)$: $S = (\\frac{2+6}{2}, \\frac{2+4}{2}) = (\\frac{8}{2}, \\frac{6}{2}) = (4,3)$, co jest punktem $N$."
+      "Skoro $|KM| = |LM|$, to trójkąt $KLM$ jest równoramienny, a $KL$ jest jego podstawą. Wysokość $MN$ poprowadzona do podstawy jest jednocześnie medianą, więc $N$ jest środkiem odcinka $KL$.",
+      "Z wzoru na środek odcinka: $N = \\frac{K + L}{2}$, więc $L = 2N - K = (2 \\cdot 4 - 2,\\ 2 \\cdot 3 - 2) = (6, 4)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9436,22 +9416,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$.",
+    "explanation": "$x \\le 0$, czyli $x \\in (-\\infty, 0\\rangle$",
     "solutionSteps": [
-      "Przekształć nierówność do postaci, gdzie jedna strona jest zerem, a następnie porównaj licznik z zerem, aby znaleźć miejsca zerowe funkcji $f(x) = \\frac{x-1}{x-5}$. Miejsca zerowe licznika to $x=1$, a mianownik jest różny od zera dla $x \\neq 5$.",
-      "Narysuj oś liczbową i zaznacz punkty $x=1$ (zamalowane, bo nierówność jest \"większe lub równe\") i $x=5$ (zamalowane, bo licznik może być równy zero, mianownik nie może być). Podziel oś na przedziały i sprawdź znak wyrażenia w każdym z nich, np. dla $x=0$, $\\frac{0-1}{0-5} = \\frac{-1}{-5} = \\frac{1}{5} \\ge 0$.",
-      "Wybierz przedziały, w których nierówność jest spełniona. W naszym przypadku funkcja jest dodatnia lub równa zero dla $x \\in \\langle 1, 5)$. Nierówność to $\\frac{x-1}{x-5} \\ge 0$. Wartość $x=5$ nie należy do dziedziny. Mamy $\\frac{x-1}{x-5} \\ge 0$ dla $x \\in \\langle 1, 5)$. Niestety, żadna z odpowiedzi nie pasuje. Sprawdzam ponownie rozwiązanie.",
-      "(poprawiony).** Rozwiązanie nierówności $\\frac{x-1}{x-5} \\ge 0$ jest zbiorem $x \\in (-\\infty, 1] \\cup (5, +\\infty)$. Z powodu błędu w przepisywaniu zadania lub w opcjach odpowiedzi, nie mogę wskazać poprawnej. Zakładając, że w zadaniu chodziło o $\\frac{x-1}{x-5} \\le 0$, rozwiązaniem jest przedział $\\langle 1, 5)$. Jeśli był błąd w rysunku, i zamiast pierwiastka był inny wzór, odpowiedź może być inna.\n\nNa podstawie dostępnych opcji odpowiedzi i rysunku, zakładam, że pierwiastek jest $\\sqrt{x-1}$ i nierówność to $\\sqrt{x-1} \\le 5-x$.",
-      "Określ dziedzinę nierówności: $x-1 \\ge 0$, czyli $x \\ge 1$.",
-      "Rozważ dwa przypadki.\nPrzypadek 1: $5-x < 0$, czyli $x > 5$. Wtedy nierówność nie ma rozwiązań, bo $\\sqrt{x-1} \\ge 0$.\nPrzypadek 2: $5-x \\ge 0$, czyli $x \\le 5$. Podnieś obie strony do kwadratu: $x-1 \\le (5-x)^2$, co daje $x-1 \\le 25 - 10x + x^2$. Przekształcając otrzymujemy $x^2 - 11x + 26 \\ge 0$.",
-      "Rozwiąż nierówność kwadratową $x^2 - 11x + 26 \\ge 0$. Miejsca zerowe to $\\frac{11 \\pm \\sqrt{121 - 4 \\cdot 26}}{2} = \\frac{11 \\pm \\sqrt{17}}{2}$. Nierówność jest spełniona dla $x \\in (-\\infty, \\frac{11 - \\sqrt{17}}{2}] \\cup [\\frac{11 + \\sqrt{17}}{2}, +\\infty)$.",
-      "Połącz warunki z dziedziny, przypadków i rozwiązania nierówności kwadratowej. $\\sqrt{17}$ jest między 4a_{5}.\n$\\frac{11 - \\sqrt{17}}{2} \\approx \\frac{11 - 4.12}{2} \\approx 3.44$.\n$\\frac{11 + \\sqrt{17}}{2} \\approx \\frac{11 + 4.12}{2} \\approx 7.56$.\nRozwiązanie z kroku 3 to $x \\in (-\\infty, 3.44] \\cup [7.56, \\infty)$.\nŁącząc z warunkiem $x \\ge 1$ (dziedzina) i $x \\le 5$ (przypadek 2), otrzymujemy przedział $\\langle 1, \\frac{11 - \\sqrt{17}}{2} \\rangle$. Nadal żadna z odpowiedzi nie pasuje.\n\nZakładam, że rysunek przedstawia nierówność $\\frac{x-1}{x-5} \\le 0$.",
-      "Znajdź miejsca zerowe licznika i mianownika: $x=1$ oraz $x=5$ (nie należy do dziedziny).",
-      "Narysuj oś liczbową i zaznacz punkty 1 (zamalowane) i 5 (kółko otwarte). Funkcja $\\frac{x-1}{x-5}$ jest ujemna lub równa zero między miejscem zerowym licznika a miejscem zerowym mianownika.",
-      "Rozwiązaniem nierówności jest przedział $\\langle 1, 5)$. Nadal nie ma takiej odpowiedzi.\n\nPrzeanalizowałem treść zadania z matury maj 2021 podstawowy zadanie 6. Nierówność jest $\\frac{x-1}{x-5} \\ge 0$.",
-      "Miejsca zerowe licznika to $x=1$, mianownik jest różny od zera dla $x \\neq 5$.",
-      "Analiza znaków:\n- Dla $x < 1$: licznik ujemny, mianownik ujemny, iloraz dodatni ($\\ge 0$).\n- Dla $1 \\le x < 5$: licznik dodatni lub zero, mianownik ujemny, iloraz ujemny ($\\le 0$).\n- Dla $x > 5$: licznik dodatni, mianownik dodatni, iloraz dodatni ($\\ge 0$).",
-      "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$."
+      "Mnożymy obie strony nierówności $\\frac{2-x}{2} - 2x \\ge 1$ przez $2$: $2 - x - 4x \\ge 2$.",
+      "Porządkujemy: $2 - 5x \\ge 2$, czyli $-5x \\ge 0$.",
+      "Dzielimy przez $-5$ (zmieniamy zwrot nierówności): $x \\le 0$. Zbiorem rozwiązań jest przedział $(-\\infty, 0\\rangle$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12213,19 +12182,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$(-26)$",
       "$(-16)$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $-26$.",
+    "correctIndex": 3,
+    "explanation": "D, czyli $-16$",
     "solutionSteps": [
-      "Wzór na $a_n$ to $a_n = n^2 - 5n - 14$. Aby obliczyć $a_7$, podstawiamy $n=7$ do wzoru.",
-      "Obliczamy $a_7$: $a_7 = 7^2 - 5 \\cdot 7 - 14 = 49 - 35 - 14$.",
-      "Upraszczamy wynik: $49 - 35 - 14 = 14 - 14 = 0$.\nOops! Zrobiłem błąd w obliczeniu, przepraszam!\nPoprawne obliczenie: $49 - 35 - 14 = 14 - 14 = 0$.\nJednakże, sprawdzając podane opcje, żadna z nich nie jest równa $0$.\nSprawdzam jeszcze raz obliczenia: $a_7 = 7^2 - 5 \\cdot 7 - 14 = 49 - 35 - 14$.\n$49 - 35 = 14$.\n$14 - 14 = 0$.\nWygląda na to, że popełniłem błąd lub w zadaniu jest błąd.\nPrzeanalizowałem dokładnie podany wzór i opcje odpowiedzi. Wygląda na to, że mam problem z rozpoznaniem liter w obrazku. Zakładając, że wzór jest poprawnie przepisany, moje obliczenia są prawidłowe.\n\nPonieważ muszę podać jedną z opcji, a moje obliczenia wskazują na 0, co nie jest dostępne, zakładam, że mogłem źle odczytać obrazek.\nJeśli jednak wzór jest $a_n = n^2 - 5n - 14$, to $a_7 = 0$.\nPrzejdźmy do ponownego przeanalizowania zadania, zakładając, że podałeś mi poprawny obrazek.\n\nW zadaniu jest obrazek z wzorem. Niestety, nie mogę go zobaczyć. Przyjmijmy, że wzór jest $a_n = n^2 - 5n - 14$.\nWtedy $a_7 = 7^2 - 5 \\cdot 7 - 14 = 49 - 35 - 14 = 14 - 14 = 0$.\n\nJeśli przyjąć inny możliwy wzór, który mógłby pasować do liter na obrazku, np. $a_n = n^2 - 5n - 26$\nWtedy $a_7 = 7^2 - 5 \\cdot 7 - 26 = 49 - 35 - 26 = 14 - 26 = -12$. To również nie pasuje.\n\nSpróbujmy $a_n = n^2 - 5n - 16$\n$a_7 = 7^2 - 5 \\cdot 7 - 16 = 49 - 35 - 16 = 14 - 16 = -2$. To też nie pasuje.\n\nPrzyjmijmy, że wzór zawiera literę, która może być mylona.\nJeśli wzór to $a_n = n^2 - 5n + 14$, to $a_7 = 49 - 35 + 14 = 14 + 14 = 28$.\nJeśli wzór to $a_n = n^2 + 5n - 14$, to $a_7 = 49 + 35 - 14 = 84 - 14 = 70$.",
-      "Przyjmujemy, że wzór na $a_n$ to $a_n = n^2 - 5n - 14$, zgodnie z obrazkiem, który nie jest widoczny.",
-      "Podstawiamy $n=7$ do wzoru: $a_7 = 7^2 - 5 \\cdot 7 - 14$.",
-      "Obliczamy wynik: $a_7 = 49 - 35 - 14 = 14 - 14 = 0$.\n\n**Ponieważ żadna z opcji nie jest poprawna dla obliczonego $a_7=0$, zakładam, że popełniłem błąd w odczycie wzoru z obrazka, który nie jest widoczny. Bez możliwości zobaczenia obrazka nie mogę podać poprawnej odpowiedzi z podanych opcji.**\n\n**Przepraszam, ale nie mogę dokończyć zadania bez widocznego obrazka ze wzorem.**\n\nJeśli jednak treść zadania jest poprawna, a ja mam podać odpowiedź z A, B, C, D, muszę zgadywać lub przyjąć, że wzór jest inny.\nPrzyjmuję, że ostatnia liczba we wzorze może być inną liczbą niż 14, aby dopasować się do opcji.\n\nJeśli $a_7 = -196$, to $49 - 35 - c = -196 \\implies 14 - c = -196 \\implies c = 14 + 196 = 210$. Wzór $n^2 - 5n - 210$.\nJeśli $a_7 = -32$, to $14 - c = -32 \\implies c = 14 + 32 = 46$. Wzór $n^2 - 5n - 46$.\nJeśli $a_7 = -26$, to $14 - c = -26 \\implies c = 14 + 26 = 40$. Wzór $n^2 - 5n - 40$.\nJeśli $a_7 = -16$, to $14 - c = -16 \\implies c = 14 + 16 = 30$. Wzór $n^2 - 5n - 30$.",
-      "Przyjmuję, że wzór na $a_n$ wygląda jak $a_n = n^2 - 5n - X$. Obliczamy $a_7 = 7^2 - 5 \\cdot 7 - X = 49 - 35 - X = 14 - X$.",
-      "Sprawdzamy dostępne odpowiedzi, aby znaleźć pasujące $X$.",
-      "Jeśli $a_7 = -26$, to $14 - X = -26 \\implies X = 14 + 26 = 40$. Wtedy wzór to $a_n = n^2 - 5n - 40$.",
-      "Jeśli wzór to $a_n = n^2 - 5n - 40$, to $a_7 = 7^2 - 5 \\cdot 7 - 40 = 49 - 35 - 40 = 14 - 40 = -26$."
+      "Upraszczamy wzór ciągu: $a_n = \\frac{2n^2 - 30n}{n} = \\frac{n(2n - 30)}{n} = 2n - 30$ (dla $n \\ge 1$).",
+      "Podstawiamy $n = 7$: $a_7 = 2 \\cdot 7 - 30 = 14 - 30 = -16$."
     ],
     "examSource": {
       "kind": "matura",
@@ -18392,7 +18353,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2019-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2019-maj/z03-2.png)",
+    "prompt": "![Zadanie 3](/cke-matura/e8-2019-maj/z03-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18496,7 +18457,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/e8-2019-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/e8-2019-maj/z07-2.png)",
+    "prompt": "![Zadanie 7](/cke-matura/e8-2019-maj/z07-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18574,7 +18535,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/e8-2019-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/e8-2019-maj/z10-2.png)",
+    "prompt": "![Zadanie 10](/cke-matura/e8-2019-maj/z10-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18626,7 +18587,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2019-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/e8-2019-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/e8-2019-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18860,7 +18821,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 21](/cke-matura/e8-2019-maj/z21-1.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-2.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-3.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-4.png)",
+    "prompt": "![Zadanie 21](/cke-matura/e8-2019-maj/z21-1.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-3.png)\n\n![Zadanie 21](/cke-matura/e8-2019-maj/z21-4.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18938,7 +18899,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2020-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2020-maj/z03-2.png)",
+    "prompt": "![Zadanie 3](/cke-matura/e8-2020-maj/z03-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -18990,7 +18951,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 5](/cke-matura/e8-2020-maj/z05-1.png)\n\n![Zadanie 5](/cke-matura/e8-2020-maj/z05-2.png)",
+    "prompt": "![Zadanie 5](/cke-matura/e8-2020-maj/z05-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19068,7 +19029,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/e8-2020-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/e8-2020-maj/z08-2.png)",
+    "prompt": "![Zadanie 8](/cke-matura/e8-2020-maj/z08-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19146,7 +19107,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/e8-2020-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/e8-2020-maj/z11-2.png)",
+    "prompt": "![Zadanie 11](/cke-matura/e8-2020-maj/z11-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19198,7 +19159,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/e8-2020-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/e8-2020-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/e8-2020-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19250,7 +19211,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2020-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/e8-2020-maj/z15-2.png)",
+    "prompt": "![Zadanie 15](/cke-matura/e8-2020-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19484,7 +19445,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 3](/cke-matura/e8-2021-maj/z03-1.png)\n\n![Zadanie 3](/cke-matura/e8-2021-maj/z03-2.png)",
+    "prompt": "![Zadanie 3](/cke-matura/e8-2021-maj/z03-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19562,7 +19523,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 6](/cke-matura/e8-2021-maj/z06-1.png)\n\n![Zadanie 6](/cke-matura/e8-2021-maj/z06-2.png)",
+    "prompt": "![Zadanie 6](/cke-matura/e8-2021-maj/z06-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19640,7 +19601,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/e8-2021-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/e8-2021-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/e8-2021-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19718,14 +19679,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/e8-2021-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/e8-2021-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/e8-2021-maj/z12-1.png)",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$38^\\circ$",
+      "$42^\\circ$",
+      "$45^\\circ$",
+      "$48^\\circ$"
     ],
-    "correctIndex": 0,
+    "correctIndex": 3,
     "explanation": "D. $48^\\circ$",
     "solutionSteps": [
-      "Aby rozwiązać zadanie, należy skorzystać z właściwości trójkątów prostokątnych oraz związków między kątami w trójkącie i w czworokącie.\n\n1. Oznaczmy punkt przecięcia wysokości $CD$ i $AE$ jako $P$.\n2. Zgodnie z rysunkiem, kąt rozwarty pomiędzy wysokościami to $\\angle DPE = 138^\\circ$.\n3. Wysokości $CD$ i $AE$ tworzą kąty proste z bokami, na które opadają: $CD \\perp AB \\implies \\angle BDC = 90^\\circ$ oraz $AE \\perp BC \\implies \\angle AEB = 90^\\circ$.\n4. Kąt $\\angle APC$ jest kątem wierzchołkowym do $\\angle DPE$, więc $\\angle APC = 138^\\circ$. W trójkącie ostrokątnym kąt pomiędzy dwiema wysokościami (które wychodzą z wierzchołków $A$ i $C$) jest równy $180^\\circ$ minus kąt przy trzecim wierzchołku ($B$). Zatem $\\angle APC = 180^\\circ - \\angle B$.\n5. Podstawiając wartość $\\angle APC$: $138^\\circ = 180^\\circ - \\angle B$. Stąd $\\angle B = 180^\\circ - 138^\\circ = 42^\\circ$.\n6. Rozważmy trójkąt prostokątny $\\triangle AEB$. Kąt przy wierzchołku $E$ wynosi $90^\\circ$. Suma kątów w trójkącie to $180^\\circ$.\n $\\angle BAE + \\angle ABE + \\angle AEB = 180^\\circ$.\n $\\angle BAE + 42^\\circ + 90^\\circ = 180^\\circ$.\n $\\angle BAE = 180^\\circ - 132^\\circ = 48^\\circ$.\n7. Rozważmy trójkąt prostokątny $\\triangle CDB$. Kąt przy wierzchołku $D$ wynosi $90^\\circ$.\n $\\angle BCD + \\angle CDB + \\angle CBD = 180^\\circ$.\n $\\angle BCD + 90^\\circ + 42^\\circ = 180^\\circ$.\n $\\angle BCD = 180^\\circ - 132^\\circ = 48^\\circ$.\n8. Rozważmy czworokąt $ADEC$. Kąty $\\angle ADC$ i $\\angle AEC$ są prostymi ($90^\\circ$), co oznacza, że czworokąt $ADEC$ jest cykliczny (punkty $A, D, E, C$ leżą na jednym okręgu, którego średnicą jest $AC$).\n9. W czworokącie cyklicznym kąty oparte na tym samym łuku są równe. Kąt $\\angle CAE$ (czyli $\\alpha$) i $\\angle CDE$ są oparte na łuku $CE$. Zatem $\\angle CDE = \\angle CAE = \\alpha$.\n10. W trójkącie prostokątnym $\\triangle CDB$, $\\angle CDB = 90^\\circ$. Możemy zapisać $\\angle CDE$ jako $\\angle CDB - \\angle EDB$. (Jeśli $E$ leży pomiędzy $D$ i $B$).\n Zatem $\\angle EDB = 90^\\circ - \\alpha$.\n11. Rozważmy trójkąt $\\triangle BDE$. Suma kątów w trójkącie to $180^\\circ$.\n $\\angle DBE + \\angle BDE + \\angle BED = 180^\\circ$.\n $42^\\circ + (90^\\circ - \\alpha) + \\angle BED = 180^\\circ$.\n $132^\\circ - \\alpha + \\angle BED = 180^\\circ$.\n $\\angle BED = 48^\\circ + \\alpha$.\n12. W czworokącie cyklicznym $ADEC$ suma przeciwległych kątów wynosi $180^\\circ$. Kąty $\\angle ADE$ i $\\angle ACE$ są przeciwległe.\n $\\angle ADE + \\angle ACE = 180^\\circ$.\n Kąt $\\angle ADE = \\angle ADC + \\angle CDE = 90^\\circ + \\alpha$. (Punkt $D$ jest na $AB$, $E$ na $BC$, a $\\angle ADC=90^\\circ$. Z rysunku $DE$ tworzy kąt rozwarty z $AD$).\n Kąt $\\angle ACE$ to $\\angle ACB$, czyli $\\angle C$.\n Zatem $(90^\\circ + \\alpha) + \\angle C = 180^\\circ$.\n $\\alpha + \\angle C = 90^\\circ$.\n13. Z trójkąta prostokątnego $\\triangle ACE$: $\\angle AEC = 90^\\circ$. Suma kątów wynosi $180^\\circ$.\n $\\angle CAE + \\angle ACE + \\angle AEC = 180^\\circ$.\n $\\alpha + \\angle C + 90^\\circ = 180^\\circ$.\n $\\alpha + \\angle C = 90^\\circ$.\n Powyższe równanie jest tożsamością, co oznacza, że musimy skorzystać z innego związku.\n\n14. Wrócimy do punktów 6 i 7. Mamy $\\angle BAE = 48^\\circ$ i $\\angle BCD = 48^\\circ$.\n15. Z własności trójkątów ostrokątnych, kąt pomiędzy wysokością a bokiem wychodzącymi z tego samego wierzchołka:\n $\\angle CAE = 90^\\circ - \\angle C$.\n $\\angle ACD = 90^\\circ - \\angle CAD$.\n16. W trójkącie $ADC$, $\\angle ADC = 90^\\circ$. $\\angle CAD + \\angle ACD = 90^\\circ$.\n17. W trójkącie $ABC$: $\\angle A + \\angle B + \\angle C = 180^\\circ$.\n $\\angle B = 42^\\circ$.\n $\\angle A + \\angle C = 138^\\circ$.\n18. Kąt $\\angle A = \\angle BAC = \\angle BAE + \\angle CAE = 48^\\circ + \\alpha$.\n19. Kąt $\\angle C = \\angle BCA = \\angle BCD + \\angle ACD = 48^\\circ + \\angle ACD$.\n20. Podstawiając do $\\angle A + \\angle C = 138^\\circ$:\n $(48^\\circ + \\alpha) + (48^\\circ + \\angle ACD) = 138^\\circ$.\n $96^\\circ + \\alpha + \\angle ACD = 138^\\circ$.\n $\\alpha + \\angle ACD = 42^\\circ$. (Równanie 1)\n21. Z punktu 16: $\\angle CAD + \\angle ACD = 90^\\circ$. (Równanie 2)\n22. $\\angle CAD$ to część kąta $\\angle A$. $\\angle CAD = \\angle BAC - \\angle DAE$. No.\n Kąt $\\angle CAD = \\angle(AC, AD)$. Ponieważ punkt $D$ leży na $AB$, to odcinek $AD$ jest częścią odcinka $AB$. Zatem $\\angle CAD = \\angle CAB = \\angle A$.\n23. Zatem $\\angle A + \\angle ACD = 90^\\circ$. (To jest to samo co Równanie 2, ale z użyciem $\\angle A$ zamiast $\\angle CAD$).\n24. Teraz mamy dwa równania:\n $\\alpha + \\angle ACD = 42^\\circ$\n $\\angle A + \\angle ACD = 90^\\circ$\n Odejmując pierwsze od drugiego: $\\angle A - \\alpha = 48^\\circ \\implies \\angle A = 48^\\circ + \\alpha$. Jest to zgodne z punktem 18. Nadal nie otrzymujemy $\\alpha$.\n\nBiorąc pod uwagę oficjalny schemat oceniania (odpowiedź D), oznacza to, że $\\alpha = 48^\\circ$.\nJeśli $\\alpha = 48^\\circ$:\n$\\angle C = 90^\\circ - \\alpha = 90^\\circ - 48^\\circ = 42^\\circ$.\n$\\angle B = 42^\\circ$. (Z kroku 5).\n$\\angle A = 180^\\circ - \\angle B - \\angle C = 180^\\circ - 42^\\circ - 42^\\circ = 96^\\circ$.\nJeżeli $\\angle A = 96^\\circ$, to trójkąt jest rozwartokątny, a ortocentrum leży poza trójkątem. Schemat przedstawia trójkąt ostrokątny (ortocentrum wewnątrz), co oznacza, że rysunek jest jedynie poglądowy i nie jest wykonany w skali.\nW trójkącie rozwartokątnym (rozwartokątnym w $A$) kąt między wysokościami $CD$ i $AE$ (które spotykają się poza trójkątem) jest równy $\\angle A$.\nZatem $\\angle A = 138^\\circ$.\nAle nasze obliczenia dały $\\angle A = 96^\\circ$. To jest sprzeczność.\nBiorąc pod uwagę, że to jest zadanie egzaminacyjne z podaną odpowiedzią D, należy odrzucić wcześniejsze założenia o typie trójkąta wynikające z rysunku.\n\nZakładając, że odpowiedź D (48 stopni) jest poprawna.\n1. $\\angle BAE = 48^\\circ$ (jak w kroku 6).\n2. $\\angle BCD = 48^\\circ$ (jak w kroku 7).\n3. W trójkącie $ABC$ zachodzi $\\angle CAE = \\angle CAD$ (nie jest to ogólna prawda).\n\nOficjalne rozwiązanie (wersja X) wskazuje na odpowiedź D ($48^\\circ$). Prawdopodobnie zadanie opiera się na prostszej zależności, np. równości kątów $\\angle CAE$ i $\\angle BAE$. Jeśli $\\alpha = \\angle CAE = \\angle BAE$, to $\\alpha = 48^\\circ$."
+      "Wysokości $CD$ i $AE$ przecinają się w punkcie $P$. Czworokąt $DBEP$ ma kąty proste przy wierzchołkach $D$ i $E$ oraz kąt $\\angle DPE = 138^\\circ$.",
+      "Suma kątów czworokąta wynosi $360^\\circ$, więc $\\angle B = 360^\\circ - 90^\\circ - 90^\\circ - 138^\\circ = 42^\\circ$.",
+      "W trójkącie prostokątnym $ABE$ mamy $\\alpha = \\angle BAE = 90^\\circ - 42^\\circ = 48^\\circ$."
     ],
     "examSource": {
       "kind": "egzamin-8",
@@ -19796,7 +19762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/e8-2021-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/e8-2021-maj/z15-2.png)",
+    "prompt": "![Zadanie 15](/cke-matura/e8-2021-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -19900,7 +19866,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 19](/cke-matura/e8-2021-maj/z19-1.png)\n\n![Zadanie 19](/cke-matura/e8-2021-maj/z19-2.png)",
+    "prompt": "![Zadanie 19](/cke-matura/e8-2021-maj/z19-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -21356,7 +21322,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 18](/cke-matura/e8-2024-maj/z18-1.png)\n\n![Zadanie 18](/cke-matura/e8-2024-maj/z18-2.png)",
+    "prompt": "![Zadanie 18](/cke-matura/e8-2024-maj/z18-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24508,7 +24474,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2015-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2015-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2015-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24560,7 +24526,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2015-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2015-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2015-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24586,7 +24552,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2015-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2015-maj/z15-2.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2015-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -24976,7 +24942,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2016-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2016-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2016-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26458,7 +26424,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2020-cze/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2020-cze/z10-2.png)",
+    "prompt": "![Zadanie 10](/cke-matura/mr-2020-cze/z10-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26536,7 +26502,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2020-cze/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2020-cze/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2020-cze/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26770,7 +26736,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2021-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2021-maj/z07-2.png)",
+    "prompt": "![Zadanie 7](/cke-matura/mr-2021-maj/z07-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26796,7 +26762,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2021-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2021-maj/z08-2.png)",
+    "prompt": "![Zadanie 8](/cke-matura/mr-2021-maj/z08-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26822,7 +26788,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2021-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2021-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/mr-2021-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26848,7 +26814,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2021-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2021-maj/z10-2.png)",
+    "prompt": "![Zadanie 10](/cke-matura/mr-2021-maj/z10-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26874,7 +26840,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2021-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2021-maj/z11-2.png)",
+    "prompt": "![Zadanie 11](/cke-matura/mr-2021-maj/z11-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26900,7 +26866,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2021-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2021-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2021-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26926,7 +26892,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2021-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2021-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2021-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26952,7 +26918,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2021-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-2.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-3.png)\n\n![Zadanie 14](/cke-matura/mr-2021-maj/z14-4.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2021-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -26978,7 +26944,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2021-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2021-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2021-maj/z15-3.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2021-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27160,7 +27126,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 7](/cke-matura/mr-2022-maj/z07-1.png)\n\n![Zadanie 7](/cke-matura/mr-2022-maj/z07-2.png)",
+    "prompt": "![Zadanie 7](/cke-matura/mr-2022-maj/z07-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27186,7 +27152,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 8](/cke-matura/mr-2022-maj/z08-1.png)\n\n![Zadanie 8](/cke-matura/mr-2022-maj/z08-2.png)",
+    "prompt": "![Zadanie 8](/cke-matura/mr-2022-maj/z08-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27212,7 +27178,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 9](/cke-matura/mr-2022-maj/z09-1.png)\n\n![Zadanie 9](/cke-matura/mr-2022-maj/z09-2.png)",
+    "prompt": "![Zadanie 9](/cke-matura/mr-2022-maj/z09-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27238,7 +27204,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 10](/cke-matura/mr-2022-maj/z10-1.png)\n\n![Zadanie 10](/cke-matura/mr-2022-maj/z10-2.png)",
+    "prompt": "![Zadanie 10](/cke-matura/mr-2022-maj/z10-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27264,7 +27230,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 11](/cke-matura/mr-2022-maj/z11-1.png)\n\n![Zadanie 11](/cke-matura/mr-2022-maj/z11-2.png)",
+    "prompt": "![Zadanie 11](/cke-matura/mr-2022-maj/z11-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27290,7 +27256,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 12](/cke-matura/mr-2022-maj/z12-1.png)\n\n![Zadanie 12](/cke-matura/mr-2022-maj/z12-2.png)",
+    "prompt": "![Zadanie 12](/cke-matura/mr-2022-maj/z12-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27316,7 +27282,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 13](/cke-matura/mr-2022-maj/z13-1.png)\n\n![Zadanie 13](/cke-matura/mr-2022-maj/z13-2.png)",
+    "prompt": "![Zadanie 13](/cke-matura/mr-2022-maj/z13-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27342,7 +27308,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 14](/cke-matura/mr-2022-maj/z14-1.png)\n\n![Zadanie 14](/cke-matura/mr-2022-maj/z14-2.png)",
+    "prompt": "![Zadanie 14](/cke-matura/mr-2022-maj/z14-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -27368,7 +27334,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "![Zadanie 15](/cke-matura/mr-2022-maj/z15-1.png)\n\n![Zadanie 15](/cke-matura/mr-2022-maj/z15-2.png)\n\n![Zadanie 15](/cke-matura/mr-2022-maj/z15-3.png)",
+    "prompt": "![Zadanie 15](/cke-matura/mr-2022-maj/z15-1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
