@@ -196,18 +196,6 @@ export async function POST(request: Request) {
         { status: 403 },
       );
     }
-
-    if (
-      mode === "grade" &&
-      !isPro &&
-      catalogTask &&
-      isOpenExamTask(catalogTask)
-    ) {
-      return Response.json(
-        { error: "Ocena zadań otwartych przez AI jest dostępna w planie Pro." },
-        { status: 403 },
-      );
-    }
     const maxPoints = catalogTask
       ? examTaskPoints(catalogTask)
       : Math.max(

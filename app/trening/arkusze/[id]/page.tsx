@@ -4,6 +4,7 @@ import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import {
   examSheetPoints,
   examTaskPoints,
+  expectedOpenAnswer,
   formatPkt,
   isOpenExamTask,
 } from "@/lib/baza-zadan/cke/exam-points";
@@ -101,6 +102,8 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
             open: isOpenExamTask(task),
             prompt: task.prompt,
             choices: [...task.choices],
+            correctIndex: task.correctIndex,
+            expected: isOpenExamTask(task) ? expectedOpenAnswer(task) : "",
             explanation: task.explanation,
             steps: [...(task.solutionSteps ?? [])],
             examLabel: task.examSource?.sessionLabel,
