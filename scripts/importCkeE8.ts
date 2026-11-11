@@ -12,7 +12,7 @@
 import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
-import { createCanvas, type Canvas } from "@napi-rs/canvas";
+import { createCanvas, loadImage, type Canvas } from "@napi-rs/canvas";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { createClient } from "@supabase/supabase-js";
 import {
@@ -59,6 +59,8 @@ type Line = { text: string; yTop: number; yBottom: number };
 
 type PageData = {
   page: any;
+  mu: any;
+  index: number;
   viewport: any;
   height: number;
   lines: Line[];
@@ -76,6 +78,8 @@ async function loadPages(file: string): Promise<PageData[]> {
   const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
   const data = new Uint8Array(fs.readFileSync(file));
   const doc = await getDocument({ data, useSystemFonts: true }).promise;
+  const mupdf = await import("mupdf");
+  const mu = mupdf.Document.openDocument(fs.readFileSync(file), "application/pdf");
   const pages: PageData[] = [];
   for (let p = 1; p <= doc.numPages; p++) {
     const page = await doc.getPage(p);
@@ -101,7 +105,7 @@ async function loadPages(file: string): Promise<PageData[]> {
       lastY = vy;
     }
     if (cur) lines.push(cur);
-    pages.push({ page, viewport, height: viewport.height, lines });
+    pages.push({ page, mu, index: p - 1, viewport, height: viewport.height, lines });
   }
   return pages;
 }
@@ -135,16 +139,22 @@ function findMarkers(pages: PageData[]): { markers: Marker[]; stops: Stop[] } {
   return { markers, stops };
 }
 
+// pdfjs na node-canvas psuje maski przezroczystosci (biale prostokaty na rysunkach),
+// dlatego strony renderuje mupdf.
 async function renderPage(pd: PageData): Promise<Canvas> {
-  const canvas = createCanvas(
-    Math.ceil(pd.viewport.width),
-    Math.ceil(pd.viewport.height),
+  const mupdf = await import("mupdf");
+  const pix = pd.mu.loadPage(pd.index).toPixmap(
+    mupdf.Matrix.scale(SCALE, SCALE),
+    mupdf.ColorSpace.DeviceRGB,
+    false,
+    true,
   );
+  const img = await loadImage(Buffer.from(pix.asPNG()));
+  const canvas = createCanvas(img.width, img.height);
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  await pd.page.render({ canvasContext: ctx as any, viewport: pd.viewport })
-    .promise;
+  ctx.drawImage(img, 0, 0);
   return canvas;
 }
 
@@ -382,6 +392,23 @@ async function importSession(session: CkeE8Session): Promise<void> {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
   fs.writeFileSync(file, JSON.stringify(sheet, null, 2), "utf8");
   console.log(`   zadań: ${tasks.length}, schematów: ${schemes.size}`);
+}
+
+// Tylko ponowny render skanow zadan (bez ruszania cache: tekst, rozwiazania)
+async function rerenderScans(session: CkeE8Session): Promise<void> {
+  console.log(`\n== ${session.nazwa}`);
+  const arkuszPdf = path.join(PDF_DIR, `${session.id}-arkusz.pdf`);
+  await download(session.arkuszUrl, arkuszPdf);
+  const images = await cropTasks(session, await loadPages(arkuszPdf), undefined, session.typ === "matura" && session.rok >= 2023);
+  if (session.kartaUrl) {
+    const kartaPdf = path.join(PDF_DIR, `${session.id}-karta.pdf`);
+    await download(session.kartaUrl, kartaPdf);
+    const stubs = new Set(
+      [...images.entries()].filter(([, files]) => isStub(files)).map(([n]) => n),
+    );
+    await cropTasks(session, await loadPages(kartaPdf), (n) => stubs.has(n), true);
+  }
+  console.log(`   skanow zadan: ${images.size}`);
 }
 
 function loadSheets(): CachedSheet[] {
@@ -734,14 +761,45 @@ async function cropFigures(only?: string): Promise<void> {
             for (let y = top; y < bottom; y++) if (dark(x, y)) return true;
             return false;
           };
-          const lim = { l: 40, t: 70, r: 40, b: 70 };
-          for (let n = 0; n < 40; n++) {
+          const lim = { l: 400, t: 400, r: 400, b: 400 };
+          for (let n = 0; n < 400; n++) {
             let moved = false;
             if (bottom < H && lim.b > 0 && rowDark(bottom - 1)) { bottom++; lim.b--; moved = true; }
             if (top > 0 && lim.t > 0 && rowDark(top)) { top--; lim.t--; moved = true; }
             if (right < W && lim.r > 0 && colDark(right - 1)) { right++; lim.r--; moved = true; }
             if (left > 0 && lim.l > 0 && colDark(left)) { left--; lim.l--; moved = true; }
             if (!moved) break;
+          }
+          // odcina linie tekstu zadania oddzielone przerwa od rysunku
+          const GAP = 14;
+          const bandSpan = (y0: number, y1: number) => {
+            let a = right, b = left;
+            for (let y = y0; y < y1; y++)
+              for (let x = left; x < right; x++)
+                if (dark(x, y)) { if (x < a) a = x; if (x > b) b = x; }
+            return b - a;
+          };
+          for (let pass = 0; pass < 3; pass++) {
+            let y = top;
+            while (y < bottom && !rowDark(y)) y++;
+            let e = y;
+            while (e < bottom && rowDark(e)) e++;
+            let nx = e;
+            while (nx < bottom && !rowDark(nx)) nx++;
+            if (nx < bottom && nx - e >= GAP && e - y <= 44 && bandSpan(y, e) >= 0.35 * (right - left)) {
+              top = nx - 4;
+            } else break;
+          }
+          for (let pass = 0; pass < 3; pass++) {
+            let y = bottom - 1;
+            while (y > top && !rowDark(y)) y--;
+            let s = y;
+            while (s > top && rowDark(s)) s--;
+            let pv = s;
+            while (pv > top && !rowDark(pv)) pv--;
+            if (pv > top && s - pv >= GAP && y - s <= 44 && bandSpan(s, y + 1) >= 0.35 * (right - left)) {
+              bottom = pv + 5;
+            } else break;
           }
           if (right - left < 40 || bottom - top < 40) {
             throw new Error("zbyt mala ramka rysunku");
@@ -931,6 +989,13 @@ async function sync(only?: string): Promise<void> {
 async function main(): Promise<void> {
   const args = process.argv.slice(2);
   const onlyArg = args.find((a) => a.startsWith("--only="))?.split("=")[1];
+  if (args.includes("--przerysuj")) {
+    for (const s of [...CKE_E8_SESSIONS, ...CKE_MATURA_R_SESSIONS, ...CKE_MATURA_P_SESSIONS]) {
+      if (onlyArg && !s.id.includes(onlyArg)) continue;
+      await rerenderScans(s);
+    }
+    return;
+  }
   if (args.includes("--wytnij")) return cropFigures(onlyArg);
   if (args.includes("--weryfikuj")) return verifyFigures(onlyArg);
   if (args.includes("--sync")) return sync(onlyArg);
