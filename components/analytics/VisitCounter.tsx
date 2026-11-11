@@ -100,8 +100,8 @@ export function VisitCounter() {
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3 lg:right-3 lg:left-auto lg:mx-0"
     >
       <p className="text-xs leading-relaxed text-foreground">
-        Chcemy sprawdzić, ilu osobom podoba się ta strona. Możemy policzyć, że
-        tu byłeś? Nie zbieramy imienia ani żadnych danych o Tobie.
+        Liczymy, ile osób tu wpada, żeby wiedzieć, czy robimy fajną rzecz.
+        Bez imion i bez śledzenia. Może być?
       </p>
       <div className="mt-2 flex justify-end gap-2">
         <button
@@ -109,14 +109,14 @@ export function VisitCounter() {
           onClick={() => choose("rejected")}
           className="rounded-lg border border-surface-border px-3 py-1.5 text-xs font-semibold text-muted hover:text-foreground"
         >
-          Nie
+          Wolę nie
         </button>
         <button
           type="button"
           onClick={() => choose("accepted")}
           className="rounded-lg bg-accent px-3 py-1.5 text-xs font-bold text-background"
         >
-          Tak
+          Może być
         </button>
       </div>
     </aside>

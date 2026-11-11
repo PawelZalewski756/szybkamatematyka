@@ -96,7 +96,7 @@ test.describe("Smoke", () => {
     await expect(prompt).toBeVisible();
     expect(bodies).toHaveLength(0);
 
-    await prompt.getByRole("button", { name: "Tak" }).click();
+    await prompt.getByRole("button", { name: "Może być" }).click();
     await expect(prompt).toHaveCount(0);
     await expect.poll(() => bodies.length).toBe(1);
     expect(bodies[0]).toContain('"path":"/"');
@@ -117,7 +117,7 @@ test.describe("Smoke", () => {
     await page.goto("/");
     await page
       .locator('[aria-label="Zgoda na anonimowy licznik wejść"]')
-      .getByRole("button", { name: "Nie" })
+      .getByRole("button", { name: "Wolę nie" })
       .click();
     await page.reload();
     expect(requests).toBe(0);
