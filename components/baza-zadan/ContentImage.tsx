@@ -6,7 +6,8 @@
 
 /** Ilustracja z arkusza CKE - bez rozciągania małych rysunków na pełną szerokość. */
 export function ContentImage({ src, alt = "", className = "" }: ContentImageProps) {
-  const caption = alt.trim();
+  const rawAlt = alt.trim();
+  const caption = /^(Rysunek do zadania|Zadanie \d+)$/i.test(rawAlt) ? "" : rawAlt;
   const isFigure = /-fig\d+\.png$/.test(src);
   const imgClass =
     "mx-auto max-h-[min(360px,55vh)] w-auto max-w-full object-contain";
