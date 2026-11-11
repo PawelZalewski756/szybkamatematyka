@@ -37,9 +37,9 @@ html[data-theme="light"] {
   --surface-border: #e2dac9;
   --success: #2f8f5b;
   --danger: #c2410c;
-  --accent: #d98e0b;
-  --accent-strong: #b87607;
-  --accent-press: #8f5a05;
+  --accent: #a15d00;
+  --accent-strong: #874d00;
+  --accent-press: #5e3500;
   --accent-soft: #fdf0d3;
   --on-accent: #ffffff;
 }
