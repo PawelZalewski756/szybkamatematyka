@@ -96,7 +96,7 @@ test.describe("Smoke", () => {
     await expect(prompt).toBeVisible();
     expect(bodies).toHaveLength(0);
 
-    await prompt.getByRole("button", { name: "Może być" }).click();
+    await prompt.getByRole("button", { name: "OK", exact: true }).click();
     await expect(prompt).toHaveCount(0);
     await expect.poll(() => bodies.length).toBe(1);
     expect(bodies[0]).toContain('"path":"/"');
@@ -106,7 +106,7 @@ test.describe("Smoke", () => {
     await expect(page.getByRole("button", { name: "Prywatność" })).toBeVisible();
   });
 
-  test("odrzucenie zgody nie wysyła nic i nie zapisuje identyfikatora", async ({
+  test("wyłączenie licznika przez Prywatność usuwa identyfikator", async ({
     page,
   }) => {
     let requests = 0;
@@ -115,12 +115,16 @@ test.describe("Smoke", () => {
       await route.fulfill({ json: { ok: true } });
     });
     await page.goto("/");
-    await page
-      .locator('[aria-label="Zgoda na anonimowy licznik wejść"]')
-      .getByRole("button", { name: "Wolę nie" })
-      .click();
+    const prompt = page.locator('[aria-label="Zgoda na anonimowy licznik wejść"]');
+    await expect(prompt.getByRole("button", { name: "Wyłącz" })).toHaveCount(0);
+    await prompt.getByRole("button", { name: "OK", exact: true }).click();
+    await page.getByRole("button", { name: "Prywatność" }).click();
+    await prompt.getByRole("button", { name: "Wyłącz" }).click();
     await page.reload();
-    expect(requests).toBe(0);
+    expect(requests).toBeLessThanOrEqual(1);
+    const before = requests;
+    await page.reload();
+    expect(requests).toBe(before);
     expect(
       await page.evaluate(() => localStorage.getItem("sm-analytics-visitor-id")),
     ).toBeNull();

@@ -100,23 +100,24 @@ export function VisitCounter() {
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3 lg:right-3 lg:left-auto lg:mx-0"
     >
       <p className="text-xs leading-relaxed text-foreground">
-        Liczymy, ile osób tu wpada, żeby wiedzieć, czy robimy fajną rzecz.
-        Bez imion i bez śledzenia. Może być?
+        Liczymy anonimowe wejścia na stronę. Nie zbieramy danych osobowych.
       </p>
       <div className="mt-2 flex justify-end gap-2">
-        <button
-          type="button"
-          onClick={() => choose("rejected")}
-          className="rounded-lg border border-surface-border px-3 py-1.5 text-xs font-semibold text-muted hover:text-foreground"
-        >
-          Wolę nie
-        </button>
+        {consent !== "unknown" && (
+          <button
+            type="button"
+            onClick={() => choose("rejected")}
+            className="rounded-lg border border-surface-border px-3 py-1.5 text-xs font-semibold text-muted hover:text-foreground"
+          >
+            Wyłącz
+          </button>
+        )}
         <button
           type="button"
           onClick={() => choose("accepted")}
           className="rounded-lg bg-accent px-3 py-1.5 text-xs font-bold text-background"
         >
-          Może być
+          OK
         </button>
       </div>
     </aside>
