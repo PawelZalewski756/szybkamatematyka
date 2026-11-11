@@ -1246,7 +1246,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równania $y = -3 / 4x + \\frac{5}{4}$ oraz $y = -\\frac{4}{3}$ opisują dwie proste",
+    "prompt": "Równania $y = -\\frac{3}{4}x + \\frac{5}{4}$ oraz $y = -\\frac{4}{3}$ opisują dwie proste",
     "choices": [
       "przecinające się pod kątem o mierze $90^{\\circ}$.",
       "pokrywające się.",
@@ -1743,7 +1743,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Wskaż liczbę, która spełnia równanie $4x = 9$ .",
     "choices": [
       "$\\log 9 - \\log 4$",
-      "$\\log 2 / \\log 3$",
+      "$\\frac{\\log 2}{\\log 3}$",
       "2log 9 2",
       "2log 4 3"
     ],
@@ -3244,7 +3244,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja liniowa $f(x) = 3 / 4x + 6$ . Miejscem zerowym tej funkcji jest liczba",
+    "prompt": "Dana jest funkcja liniowa $f(x) =\\frac{3}{4}x + 6$ . Miejscem zerowym tej funkcji jest liczba",
     "choices": [
       "8",
       "6",
@@ -4613,10 +4613,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = $(-2,4)$ . Prosta k jest określona równaniem $y = -1 / 4x + \\frac{7}{2}$ . Zatem prostą l opisuje równanie",
+    "prompt": "Na płaszczyźnie z układem współrzędnych proste k i l przecinają się pod kątem prostym w punkcie A = $(-2,4)$ . Prosta k jest określona równaniem $y = -\\frac{1}{4}x + \\frac{7}{2}$ . Zatem prostą l opisuje równanie",
     "choices": [
-      "$y = 1 / 4x + \\frac{7}{2}$",
-      "$y = -1 / 4x - \\frac{7}{2}$",
+      "$y =\\frac{1}{4}x + \\frac{7}{2}$",
+      "$y = -\\frac{1}{4}x - \\frac{7}{2}$",
       "$y = 4x - 12$",
       "$y = 4x + 12$"
     ],
@@ -5584,7 +5584,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "$a - b$",
       "2$(a - b)$",
-      "$a + 1 / 2b$",
+      "$a +\\frac{1}{2}b$",
       "$a + b / 2$"
     ],
     "correctIndex": 1,
@@ -5770,7 +5770,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "2",
       "1",
-      "1 /$\\sqrt{2}$",
+      "$\\frac{1}{\\sqrt{2}}$",
       "$\\sqrt{2}$"
     ],
     "correctIndex": 1,
@@ -6456,7 +6456,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla $n \\ge 1$ . Wszystkie wyrazy tego ciągu są dodatnie i spełniony jest warunek ![Rysunek do zadania](/cke-matura/m19-maj/z12-1.gif) Iloraz tego ciągu jest równy",
     "choices": [
       "$\\frac{1}{3}$",
-      "1 /$\\sqrt{3}$",
+      "$\\frac{1}{\\sqrt{3}}$",
       "3",
       "$\\sqrt{3}$"
     ],
@@ -7558,7 +7558,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = $(m - 2)$x oraz $y = 3 / 4x + 7$ są równoległe. Wtedy",
+    "prompt": "Proste o równaniach y = $(m - 2)$x oraz $y =\\frac{3}{4}x + 7$ są równoległe. Wtedy",
     "choices": [
       "$m = -\\frac{5}{4}$",
       "$m = \\frac{2}{3}$",
@@ -8134,7 +8134,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD, w którym A = $(5, - \\frac{5}{3})$. Przekątna BD tego kwadratu jest zawarta w prostej o równaniu $y = 4 / 3x$. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
+    "prompt": "Dany jest kwadrat ABCD, w którym A = $(5, - \\frac{5}{3})$. Przekątna BD tego kwadratu jest zawarta w prostej o równaniu $y =\\frac{4}{3}x$. Oblicz współrzędne punktu przecięcia przekątnych AC i BD oraz pole kwadratu ABCD.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -8847,8 +8847,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "choices": [
       "y = $\\sqrt{3} / 3x$ -$\\sqrt{3}$",
       "y = $\\sqrt{3} / 3x$ +$\\sqrt{3}$",
-      "$y = 1 / 2x$ -$\\sqrt{3}$",
-      "$y = 1 / 2x$ +$\\sqrt{3}$"
+      "$y =\\frac{1}{2}x$ -$\\sqrt{3}$",
+      "$y =\\frac{1}{2}x$ +$\\sqrt{3}$"
     ],
     "correctIndex": 0,
     "explanation": "A, czyli $y = \\frac{\\sqrt{3}}{3}x - \\sqrt{3}$",
@@ -11377,9 +11377,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "prompt": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz $C = (3,5)$ . Wierzchołki A i B tego trapezu leżą na prostej o równaniu $y = 5x + 3$ . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu",
     "choices": [
       "$y = 3x + 5$",
-      "$y = -1 / 5x + 3$",
+      "$y = -\\frac{1}{5}x + 3$",
       "$y = 5x - 10$",
-      "$y = -1 / 5x + \\frac{28}{5}$"
+      "$y = -\\frac{1}{5}x + \\frac{28}{5}$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
@@ -12451,7 +12451,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = -$x + 1$ l : $y = 2 / 3x + 1$ m : $y = -3 / 2x + 4$ n : $y = -2 / 3x - 1$ Wśród tych prostych prostopadłe są",
+    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = -$x + 1$ l : $y =\\frac{2}{3}x + 1$ m : $y = -\\frac{3}{2}x + 4$ n : $y = -\\frac{2}{3}x - 1$ Wśród tych prostych prostopadłe są",
     "choices": [
       "proste k oraz l.",
       "proste k oraz n.",
@@ -13382,8 +13382,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W kartezjańskim układzie współrzędnych (x , y) zaznaczono kąt α o wierzchołku w punkcie $O = (0 , 0)$. Jedno z ramion tego kąta pokrywa się z dodatnią półosią Ox, a drugie przechodzi przez punkt P = $(-3 , 1)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
     "choices": [
-      "1 /$\\sqrt{10}$",
-      "$(-3 / \\sqrt10)$",
+      "$\\frac{1}{\\sqrt{10}}$",
+      "$-\\frac{3}{\\sqrt{10}}$",
       "$(-\\frac{3}{1})$",
       "$(-\\frac{1}{3})$"
     ],
@@ -13532,7 +13532,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są proste k oraz l o równaniach k: $y = \\frac{2}{3}$ x l: $y = -3 / 2x + 13$ Dokończ zdanie tak aby było prawdziwe. Proste k oraz l",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są proste k oraz l o równaniach k: $y = \\frac{2}{3}$ x l: $y = -\\frac{3}{2}x + 13$ Dokończ zdanie tak aby było prawdziwe. Proste k oraz l",
     "choices": [
       "są prostopadłe",
       "nie są prostopadłe i przecinają się w punkcie P o współrzędnych",
@@ -13543,8 +13543,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "explanation": "A, czyli są prostopadłe",
     "solutionSteps": [
       "Sprawdź warunek prostopadłości prostych. Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. W tym przypadku $2/3 \\cdot (-3/2) = -1$, więc proste są prostopadłe.",
-      "Znajdź punkt przecięcia prostych, przyrównując ich równania. Ponieważ proste są prostopadłe, to wystarczy podstawić tę informację, aby zawęzić odpowiedź. Jednak dla pewności możemy policzyć punkt przecięcia: $2/3 x = -3/2 x + 13$.",
-      "Rozwiąż równanie z Kroku 2. $2/3 x + 3/2 x = 13 \\Rightarrow (4/6 + 9/6)x = 13 \\Rightarrow 13/6 x = 13 \\Rightarrow x = 6$. Następnie oblicz $y$: $y = 2/3 \\cdot 6 = 4$. Punkt przecięcia to $(6, 4)$."
+      "Znajdź punkt przecięcia prostych, przyrównując ich równania. Ponieważ proste są prostopadłe, to wystarczy podstawić tę informację, aby zawęzić odpowiedź. Jednak dla pewności możemy policzyć punkt przecięcia: $\\frac{2}{3}x = -\\frac{3}{2}x + 13$.",
+      "Rozwiąż równanie z Kroku 2. $\\frac{2}{3}x +\\frac{3}{2}x = 13 \\Rightarrow (4/6 + 9/6)x = 13 \\Rightarrow\\frac{13}{6}x = 13 \\Rightarrow x = 6$. Następnie oblicz $y$: $y = 2/3 \\cdot 6 = 4$. Punkt przecięcia to $(6, 4)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -13563,7 +13563,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dana jest prosta k o równaniu $y = -1 / 3x + 2$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu $y = ax + b$ jest równoległa do prostej k i przechodzi przez punkt $P = (3 , 5)$, gdy",
+    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dana jest prosta k o równaniu $y = -\\frac{1}{3}x + 2$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu $y = ax + b$ jest równoległa do prostej k i przechodzi przez punkt $P = (3 , 5)$, gdy",
     "choices": [
       "$a = 3$ i $b = 4$.",
       "$a = -\\frac{1}{3}$ i $b = 4$.",
@@ -15699,7 +15699,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png) 2 pkt - wybranie dwóch poprawnych odpowiedzi. 1 pkt - wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E.",
+    "prompt": "Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za pomocą wyrażeń algebraicznych (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-1.png) Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Układem równań, w którym zapisano prawidłowe zależności między miarami kątów utworzonych przez te proste, jest układ A) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-5.png) E) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-6.png) F) ![Rysunek do zadania](/cke-matura/m23-przykladowa/z05-7.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -15999,7 +15999,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
+    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = -3n + 5$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Liczby 2, $(-1)$, $(-4)$ są trzema kolejnymi początkowymi wyrazami ciągu ($a_{n}$). A) prawda B) fałsz ($a_{n}$) jest ciągiem arytmetycznym o różnicy równej 5. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16026,7 +16026,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
+    "prompt": "Dany jest trójkąt ABC, w którym $|AB| = 6$, $|BC| = 5$, $|AC| = 10$. Oceń prawdziwość poniższych stwierdzeń. Cosinus kąta ABC jest równy $(-0,65)$. A) prawda B) fałsz Trójkąt ABC jest rozwartokątny. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16113,7 +16113,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y = 1 / 3x + 1D$) $y = -1 / 3x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y = 1 / 3x + 2B$) $y = -1 / 3x + 2C$) $y = 3x + 1D$) $y = -3x + 1$ 2 pkt - poprawne dokończenia dwóch zdań. 1 pkt - poprawne dokończenie jednego zdania.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dana jest prosta k o równaniu $y = -3x + 1$. Dokończ zdania. Wybierz odpowiedź spośród $A - D$ oraz odpowiedź spośród $E - H$. Zadanie 19.1. Jedną z prostych równoległych do prostej k jest prosta o równaniu A) $y = 3x + 2B$) $y = -3x + 2C$) $y =\\frac{1}{3}x + 1D$) $y = -\\frac{1}{3}x + 1$ Zadanie 19.2. Jedną z prostych prostopadłych do prostej k jest prosta o równaniu A) $y =\\frac{1}{3}x + 2B$) $y = -\\frac{1}{3}x + 2C$) $y = 3x + 1D$) $y = -3x + 1$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -16446,7 +16446,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz 1 pkt - obie odpowiedzi poprawne.",
+    "prompt": "W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej podano - wyrażony w godzinach - dzienny czas korzystania przez ucznia z komputera. Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez określony czas. ![Rysunek do zadania](/cke-matura/m23-przykladowa/z30-1.png) Zadanie 30.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Mediana dziennego czasu korzystania przez ucznia z komputera jest równa 2,25 godziny. A) prawda B) fałsz Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż 2,5 godziny. A) prawda B) fałsz",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
