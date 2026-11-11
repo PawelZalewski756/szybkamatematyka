@@ -1,14 +1,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 
 const CONSENT_KEY = "sm-analytics-consent";
 const VISITOR_ID_KEY = "sm-analytics-visitor-id";
 const SESSION_SENT_KEY = "sm-analytics-session-sent";
 const CONSENT_EVENT = "sm-analytics-consent-changed";
 
-type Consent = "unknown" | "accepted" | "rejected";
+type Consent = "unknown" | "accepted";
 
 function subscribe(onChange: () => void) {
   window.addEventListener(CONSENT_EVENT, onChange);
@@ -18,15 +18,14 @@ function subscribe(onChange: () => void) {
 function getConsent(): Consent {
   try {
     const value = window.localStorage.getItem(CONSENT_KEY);
-    return value === "accepted" || value === "rejected" ? value : "unknown";
+    return value === "accepted" ? value : "unknown";
   } catch {
-    return "rejected";
+    return "accepted";
   }
 }
 
 function getServerConsent(): Consent {
-  // Nie pokazuj niczego podczas SSR, dopoki nie znamy wyboru.
-  return "rejected";
+  return "accepted";
 }
 
 function getVisitorId(): string | null {
@@ -44,11 +43,12 @@ function getVisitorId(): string | null {
 export function VisitCounter() {
   const pathname = usePathname();
   const consent = useSyncExternalStore(subscribe, getConsent, getServerConsent);
-  const [changing, setChanging] = useState(false);
+
 
   useEffect(() => {
     if (consent !== "accepted" || !pathname) return;
     try {
+      if (window.localStorage.getItem(CONSENT_KEY) !== "accepted") return;
       if (window.sessionStorage.getItem(SESSION_SENT_KEY)) return;
       const visitorId = getVisitorId();
       if (!visitorId) return;
@@ -66,57 +66,32 @@ export function VisitCounter() {
     }
   }, [consent, pathname]);
 
-  function choose(choice: "accepted" | "rejected") {
+  function accept() {
     try {
-      window.localStorage.setItem(CONSENT_KEY, choice);
-      if (choice === "rejected") {
-        window.localStorage.removeItem(VISITOR_ID_KEY);
-        window.sessionStorage.removeItem(SESSION_SENT_KEY);
-      }
+      window.localStorage.setItem(CONSENT_KEY, "accepted");
     } catch {
-      // Ignoruj - wybor obowiazuje tylko do zamkniecia strony.
+      // Bez dostepu do pamieci przegladarki nie liczymy odwiedzin.
     }
-    setChanging(false);
     window.dispatchEvent(new Event(CONSENT_EVENT));
   }
 
-  const showPrompt = consent === "unknown" || changing;
-
-  if (!showPrompt) {
-    return (
-      <button
-        type="button"
-        onClick={() => setChanging(true)}
-        className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] right-3 z-[90] rounded-full border border-surface-border bg-surface px-3 py-1.5 text-[11px] font-semibold text-muted opacity-70 hover:opacity-100 lg:bottom-3"
-      >
-        Prywatność
-      </button>
-    );
-  }
+  if (consent !== "unknown") return null;
 
   return (
     <aside
-      aria-label="Zgoda na anonimowy licznik wejść"
+      aria-label="Informacja o liczniku wejść"
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3 lg:right-3 lg:left-auto lg:mx-0"
     >
       <p className="text-xs leading-relaxed text-foreground">
-        Czy możemy anonimowo policzyć Twoje wejście? Zapisujemy tylko losowy
-        identyfikator przeglądarki, bez IP i danych konta.
+        Liczymy anonimowe wejścia na stronę. Nie zbieramy danych osobowych.
       </p>
-      <div className="mt-2 flex justify-end gap-2">
+      <div className="mt-2 flex justify-end">
         <button
           type="button"
-          onClick={() => choose("rejected")}
-          className="rounded-lg border border-surface-border px-3 py-1.5 text-xs font-semibold text-muted hover:text-foreground"
-        >
-          Nie
-        </button>
-        <button
-          type="button"
-          onClick={() => choose("accepted")}
+          onClick={accept}
           className="rounded-lg bg-accent px-3 py-1.5 text-xs font-bold text-background"
         >
-          Tak
+          OK
         </button>
       </div>
     </aside>

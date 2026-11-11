@@ -134,11 +134,11 @@ export default function PolitykaPrywatnosciPage() {
 
       <InfoSection title="7. Pliki cookies">
         <p>
-          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Za
-          Twoją zgodą (pytamy raz, zmiana w przycisku „Prywatność”) liczymy
-          anonimowe wejścia: zapisujemy w przeglądarce losowy identyfikator, a
-          na serwerze tylko jego skrót i ścieżkę strony, bez adresu IP i danych
-          konta. Odmowa lub jej cofnięcie usuwa identyfikator. Wyjątkiem jest Szybka
+          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Po potwierdzeniu komunikatu (pytamy raz) liczymy anonimowe wejścia:
+          zapisujemy w przeglądarce losowy identyfikator, a na serwerze tylko
+          jego skrót i ścieżkę strony, bez adresu IP i danych konta. Aby
+          przestać być liczonym, wyczyść dane strony w przeglądarce lub napisz
+          do nas. Wyjątkiem jest Szybka
           próba: po wybraniu odpowiedzi zapisujemy losowy identyfikator sesji
           strony na 30 dni oraz zagregowane liczniki poprawnych i błędnych
           odpowiedzi. Identyfikator nie jest łączony z kontem; nie zapisujemy
