@@ -135,7 +135,7 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="7. Pliki cookies">
         <p>
           Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Za
-          Twoją zgodą (pytamy raz, zmiana w przycisku "Prywatność") liczymy
+          Twoją zgodą (pytamy raz, zmiana w przycisku „Prywatność”) liczymy
           anonimowe wejścia: zapisujemy w przeglądarce losowy identyfikator, a
           na serwerze tylko jego skrót i ścieżkę strony, bez adresu IP i danych
           konta. Odmowa lub jej cofnięcie usuwa identyfikator. Wyjątkiem jest Szybka
