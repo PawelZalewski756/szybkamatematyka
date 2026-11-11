@@ -2,7 +2,7 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
-import { useLearningPath } from "@/components/LearningPathProvider";
+import { QuickTrial } from "@/components/home/QuickTrial";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
 import type { RecentTrainingTopic } from "@/lib/trening/recent-topic";
@@ -13,7 +13,6 @@ import {
   ArrowRight,
   BookOpen,
   Check,
-  Clock3,
   FileText,
   Flame,
   Gamepad2,
@@ -21,7 +20,7 @@ import {
   Trophy,
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const ENTRY_PATHS = [
   {
@@ -71,130 +70,12 @@ const STEPS = [
   },
 ] as const;
 
-const PREVIEW_ANSWERS = ["3", "4", "5", "6"] as const;
-
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
 };
 
-function QuickTrial() {
-  const [previewAnswer, setPreviewAnswer] = useState<string | null>(null);
-  const previewSessionId = useRef<string | null>(null);
-  const choosePreviewAnswer = (answer: string) => {
-    setPreviewAnswer(answer);
-
-    const sessionId = previewSessionId.current ?? crypto.randomUUID();
-    previewSessionId.current = sessionId;
-
-    void fetch("/api/quick-trial/attempt", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ sessionId, isCorrect: answer === "4" }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `Quick trial tracking failed with status ${response.status}.`,
-          );
-        }
-      })
-      .catch((error: unknown) => {
-        console.error("[szybka-matma] quick trial tracking:", error);
-      });
-  };
-
-  return (
-    <div className="mt-4 rounded-2xl border border-surface-border bg-surface/70 p-4 sm:p-5">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-overline">SZYBKA PRÓBA</p>
-        <span className="rounded-full bg-background px-2.5 py-1 text-xs font-semibold text-muted">
-          1 zadanie
-        </span>
-      </div>
-      <p className="mt-3 text-sm font-bold leading-relaxed text-foreground sm:text-base">
-        Rozwiąż: 3x + 2 = 14. Ile wynosi x?
-      </p>
-      <div
-        className="mt-3 grid grid-cols-2 gap-2"
-        role="group"
-        aria-label="Odpowiedzi do szybkiego zadania"
-      >
-        {PREVIEW_ANSWERS.map((answer, index) => {
-          const selected = previewAnswer === answer;
-          const isCorrect = answer === "4";
-          let answerStyle =
-            "border-surface-border bg-background text-foreground hover:border-accent/50 hover:bg-surface-hover";
-          if (selected && isCorrect) {
-            answerStyle =
-              "border-emerald-500/50 bg-emerald-500/10 text-emerald-300";
-          } else if (selected) {
-            answerStyle = "border-red-500/50 bg-red-500/10 text-red-300";
-          }
-
-          return (
-            <button
-              key={answer}
-              type="button"
-              aria-label={`Odpowiedź ${answer}`}
-              aria-pressed={selected}
-              disabled={previewAnswer === "4"}
-              onClick={() => choosePreviewAnswer(answer)}
-              className={`flex min-h-12 items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm font-semibold transition-colors disabled:cursor-default ${answerStyle}`}
-            >
-              <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface text-xs font-bold text-muted">
-                {String.fromCharCode(65 + index)}
-              </span>
-              {answer}
-            </button>
-          );
-        })}
-      </div>
-      <div className="mt-3 flex min-h-6 items-center justify-between gap-3">
-        <p className="text-xs font-semibold text-muted" aria-live="polite">
-          {previewAnswer === "4" ? (
-            <span className="inline-flex items-center gap-1.5 text-emerald-400">
-              <Check className="h-4 w-4" aria-hidden />
-              Dobrze - 3 · 4 + 2 = 14.
-            </span>
-          ) : previewAnswer ? (
-            <span className="text-red-400">
-              To nie ta odpowiedź - wybierz inną.
-            </span>
-          ) : (
-            "Wybierz odpowiedź, aby sprawdzić."
-          )}
-        </p>
-        {previewAnswer === "4" && (
-          <button
-            type="button"
-            onClick={() => setPreviewAnswer(null)}
-            className="shrink-0 text-xs font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
-          >
-            Jeszcze raz
-          </button>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function ProductPreview({ path }: { path: "sp" | "srednia" }) {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
-  const sampleTopic =
-    path === "sp"
-      ? {
-          examKey: "8_klasa" as const,
-          topic: "rownania",
-          topicLabel: "Równania",
-          levelLabel: "egzamin ósmoklasisty",
-        }
-      : {
-          examKey: "matura_podstawowa" as const,
-          topic: "rownania_liniowe",
-          topicLabel: "Równania liniowe",
-          levelLabel: "poziom podstawowy",
-        };
+function ProductPreview() {
   const [recentTopic, setRecentTopic] =
     useState<RecentTrainingTopic | null>(null);
 
@@ -230,12 +111,10 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
 
       if (cancelled || revision !== authRevision) return;
       if (!userId || !supabase) {
-        setIsAuthenticated(false);
         setRecentTopic(null);
         return;
       }
 
-      setIsAuthenticated(true);
       const latestSolved = await fetchLatestSolvedTopic(userId);
       if (cancelled || revision !== authRevision) return;
 
@@ -259,7 +138,6 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
 
       authRevision += 1;
       const userId = session?.user?.id ?? null;
-      setIsAuthenticated(userId !== null);
       if (!userId) {
         setRecentTopic(null);
         return;
@@ -278,28 +156,21 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
     };
   }, []);
 
-  const hasRecentTopic = recentTopic !== null;
-  const activeTopic = recentTopic ?? {
-    examKey: sampleTopic.examKey,
-    category: "algebra",
-    topic: sampleTopic.topic,
-  };
-  const activeTopicLabel = recentTopic
-    ? topicDisplayName(
-        recentTopic.examKey,
-        recentTopic.category,
-        recentTopic.topic,
-      )
-    : sampleTopic.topicLabel;
-  const activeLevelLabel = recentTopic
-    ? recentTopic.examKey === "8_klasa"
+  if (!recentTopic) return <QuickTrial />;
+
+  const topicLabel = topicDisplayName(
+    recentTopic.examKey,
+    recentTopic.category,
+    recentTopic.topic,
+  );
+  const levelLabel =
+    recentTopic.examKey === "8_klasa"
       ? "egzamin ósmoklasisty"
-      : "poziom podstawowy"
-    : sampleTopic.levelLabel;
+      : "poziom podstawowy";
   const topicHref = buildTopicHref(
-    activeTopic.examKey,
-    activeTopic.category,
-    activeTopic.topic,
+    recentTopic.examKey,
+    recentTopic.category,
+    recentTopic.topic,
   );
 
   return (
@@ -308,7 +179,7 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.55, delay: 0.15 }}
       className="card-raised relative overflow-hidden p-4 sm:p-6"
-      aria-label="Podgląd sesji nauki"
+      aria-label="Ostatni temat"
     >
       <div
         className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl"
@@ -317,11 +188,7 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
 
       <div className="relative">
         <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-overline">
-              {hasRecentTopic ? "Ostatni temat" : "Przykładowa sesja"}
-            </p>
-          </div>
+          <p className="text-overline">Ostatni temat</p>
           <span className="icon-chip h-11 w-11 shrink-0">
             <BookOpen className="h-5 w-5" aria-hidden />
           </span>
@@ -330,56 +197,26 @@ function ProductPreview({ path }: { path: "sp" | "srednia" }) {
         <Link
           href={topicHref}
           className="group mt-6 block rounded-2xl border border-surface-border bg-background/70 p-4 transition-colors hover:border-accent/60 hover:bg-background sm:p-5"
-          aria-label={`${hasRecentTopic ? "Wróć do tematu" : "Otwórz temat"} ${activeTopicLabel}`}
+          aria-label={`Wróć do tematu ${topicLabel}`}
         >
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-overline">
-              {hasRecentTopic ? "KONTYNUUJ NAUKĘ" : "NASTĘPNY TEMAT"}
-            </p>
-            {!hasRecentTopic && (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-bold text-accent">
-                <Clock3 className="h-3.5 w-3.5" aria-hidden />
-                12 min
-              </span>
-            )}
-          </div>
+          <p className="text-overline">KONTYNUUJ NAUKĘ</p>
           <h2 className="mt-3 text-xl font-extrabold tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
-            {activeTopicLabel}
+            {topicLabel}
           </h2>
           <p className="mt-1 text-sm text-muted">
-            {hasRecentTopic
-              ? `Wróć do ostatnio otwartego tematu · ${activeLevelLabel}`
-              : `Przykładowy temat · ${activeLevelLabel}`}
+            Wróć do ostatnio otwartego tematu · {levelLabel}
           </p>
-
-          {hasRecentTopic ? (
-            <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
-              Otwórz temat i kontynuuj od miejsca, w którym skończyłeś.
-            </p>
-          ) : (
-            <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
-              Zobacz, jak wygląda lekcja - bez zakładania konta.
-            </p>
-          )}
+          <p className="mt-5 rounded-xl bg-accent-soft/60 px-3 py-2.5 text-sm font-semibold text-accent">
+            Otwórz temat i kontynuuj od miejsca, w którym skończyłeś.
+          </p>
           <div className="mt-4 flex items-center justify-between text-sm font-bold text-accent">
-            <span>{hasRecentTopic ? "Wróć do tematu" : "Otwórz temat"}</span>
+            <span>Wróć do tematu</span>
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden
             />
           </div>
         </Link>
-
-        {isAuthenticated === false && <QuickTrial />}
-
-        <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-muted">
-          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent text-on-accent">
-            <Check className="h-3.5 w-3.5" aria-hidden />
-          </span>
-          {hasRecentTopic
-            ? "Ostatnio otwarty temat czeka na Ciebie."
-            : "Każdy temat kończy się zadaniem do sprawdzenia"}
-        </div>
       </div>
     </motion.div>
   );
@@ -425,8 +262,6 @@ function EntryPathCard({
 }
 
 export function HomeDashboard() {
-  const { path } = useLearningPath();
-
   return (
     <div className="flex flex-1 flex-col">
       <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
@@ -499,7 +334,7 @@ export function HomeDashboard() {
               </motion.div>
             </div>
 
-            <ProductPreview path={path} />
+            <ProductPreview />
           </div>
 
           <div className="border-t border-surface-border px-4 py-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
