@@ -172,7 +172,13 @@ function compactSpacedMath(text: string): string {
   );
 
   // Znak przy liczbie: "- 1" → "-1" (tylko unarny minus przed cyfrą)
-  out = out.replace(/(^|[=<>+\-(\s])-\s+(\d)/g, "$1-$2");
+  // Nie dotyka punktorow listy markdown ("- 2 jajka" na poczatku linii).
+  out = out.replace(/(^|[=<>+\-(\s])-\s+(\d)/g, (m, pre: string, d: string, off: number, s: string) => {
+    const start = off + pre.length;
+    const lineStart = s.lastIndexOf("\n", start - 1) + 1;
+    if (/^[ \t]*$/.test(s.slice(lineStart, start))) return m;
+    return `${pre}-${d}`;
+  });
 
   // 4 / 7 → \frac{4}{7} (tylko czyste ułamki liczbowe)
   out = out.replace(
