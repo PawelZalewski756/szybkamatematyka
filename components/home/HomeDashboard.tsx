@@ -14,12 +14,10 @@ import {
   BookOpen,
   Check,
   FileText,
-  Gamepad2,
   Library,
-  Trophy,
 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 
 const ENTRY_PATHS = [
   {
@@ -51,44 +49,322 @@ const ENTRY_PATHS = [
   },
 ] as const;
 
-const INSIDE_SECTIONS = [
+function Frac({ n, d }: { n: ReactNode; d: ReactNode }) {
+  return (
+    <span className="mx-1 inline-flex flex-col items-center align-middle text-[0.85em] leading-tight">
+      <span className="border-b-2 border-current px-1">{n}</span>
+      <span className="px-1">{d}</span>
+    </span>
+  );
+}
+
+type Formula = { name: string; formula: ReactNode; example: string };
+
+const FORMULAS: Record<"osmoklasista" | "matura", readonly Formula[]> = {
+  osmoklasista: [
+    {
+      name: "POLE TRÓJKĄTA",
+      formula: (
+        <>
+          P = <Frac n="a · h" d="2" />
+        </>
+      ),
+      example: "a = 6, h = 4: P = 12",
+    },
+    {
+      name: "POLE KOŁA",
+      formula: <>P = π · r²</>,
+      example: "r = 3: P = 9π",
+    },
+    {
+      name: "TWIERDZENIE PITAGORASA",
+      formula: <>a² + b² = c²</>,
+      example: "3² + 4² = 5²",
+    },
+    {
+      name: "PROCENT Z LICZBY",
+      formula: (
+        <>
+          x · <Frac n="p" d="100" />
+        </>
+      ),
+      example: "25% z 80 = 80 · 25/100 = 20",
+    },
+    {
+      name: "PRĘDKOŚĆ",
+      formula: (
+        <>
+          v = <Frac n="s" d="t" />
+        </>
+      ),
+      example: "120 km w 2 h: v = 60 km/h",
+    },
+    {
+      name: "ŚREDNIA ARYTMETYCZNA",
+      formula: (
+        <>
+          <Frac n="suma liczb" d="ile ich jest" />
+        </>
+      ),
+      example: "(2 + 4 + 9) : 3 = 5",
+    },
+  ],
+  matura: [
+    {
+      name: "KWADRAT SUMY",
+      formula: <>(a + b)² = a² + 2ab + b²</>,
+      example: "(x + 3)² = x² + 6x + 9",
+    },
+    {
+      name: "RÓŻNICA KWADRATÓW",
+      formula: <>a² - b² = (a - b)(a + b)</>,
+      example: "x² - 16 = (x - 4)(x + 4)",
+    },
+    {
+      name: "DELTA",
+      formula: <>Δ = b² - 4ac</>,
+      example: "x² - 5x + 6: Δ = 1",
+    },
+    {
+      name: "MIEJSCA ZEROWE",
+      formula: (
+        <>
+          x = <Frac n="-b ± √Δ" d="2a" />
+        </>
+      ),
+      example: "x² - 5x + 6: x = 2 lub x = 3",
+    },
+    {
+      name: "CIĄG ARYTMETYCZNY",
+      formula: (
+        <>
+          a<sub>n</sub> = a<sub>1</sub> + (n - 1) · r
+        </>
+      ),
+      example: "a1 = 2, r = 3: a10 = 29",
+    },
+    {
+      name: "PRAWDOPODOBIEŃSTWO",
+      formula: (
+        <>
+          P(A) = <Frac n="|A|" d="|Ω|" />
+        </>
+      ),
+      example: "parzysta na kostce: 3/6 = 1/2",
+    },
+  ],
+};
+
+function FormulaSheet() {
+  const [track, setTrack] = useState<"osmoklasista" | "matura">(
+    "osmoklasista",
+  );
+
+  return (
+    <>
+      <div
+        role="tablist"
+        aria-label="Poziom"
+        className="mt-6 inline-flex gap-1 rounded-full bg-surface p-1 text-sm font-bold"
+      >
+        {(
+          [
+            ["osmoklasista", "Ósmoklasista"],
+            ["matura", "Matura"],
+          ] as const
+        ).map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            role="tab"
+            aria-selected={track === key}
+            onClick={() => setTrack(key)}
+            className={`rounded-full px-4 py-2 transition ${
+              track === key
+                ? "bg-accent text-white"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+        {FORMULAS[track].map((item) => (
+          <li key={item.name} className="card-raised p-4 sm:p-5">
+            <p className="text-overline">{item.name}</p>
+            <p className="mt-3 min-h-10 text-xl font-extrabold tracking-tight text-foreground">
+              {item.formula}
+            </p>
+            <p className="mt-2 text-sm text-muted">{item.example}</p>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+const PUZZLES = [
   {
-    href: "/trening",
-    title: "Trening",
-    text: "Tematy z teorią i zadaniami.",
-    icon: BookOpen,
+    q: "Długopis i zeszyt kosztują razem 11 zł. Zeszyt jest o 10 zł droższy od długopisu. Ile kosztuje długopis?",
+    a: "50 groszy. Długopis x, zeszyt x + 10, razem 2x + 10 = 11, więc x = 0,5.",
   },
   {
-    href: "/baza-zadan",
-    title: "Baza zadań",
-    text: "Zadania z rozwiązaniami krok po kroku.",
-    icon: Library,
+    q: "Ile to jest 1 + 2 + 3 + ... + 100?",
+    a: "5050. Parujesz 1 z 100, 2 z 99 itd. Wychodzi 50 par po 101.",
   },
   {
-    href: "/minigry",
-    title: "Minigry",
-    text: "Szybkie liczenie w formie gry.",
-    icon: Gamepad2,
+    q: "Cena spadła o 20%, potem wzrosła o 20%. Czy wróciła do początkowej?",
+    a: "Nie. 0,8 · 1,2 = 0,96, więc jest o 4% niższa niż na początku.",
   },
   {
-    href: "/trening/arkusze",
-    title: "Arkusze CKE",
-    text: "Matura i egzamin ósmoklasisty.",
-    icon: FileText,
+    q: "Jaka jest ostatnia cyfra liczby 7 do potęgi 2025?",
+    a: "7. Ostatnie cyfry potęg siódemki powtarzają się co 4: 7, 9, 3, 1. Reszta z 2025 : 4 to 1.",
   },
   {
-    href: "/rankingi",
-    title: "Rankingi",
-    text: "Porównaj wynik z innymi.",
-    icon: Trophy,
+    q: "W klasie jest 30 osób. Ile uścisków dłoni, jeśli każdy wita się z każdym raz?",
+    a: "435. To 30 · 29 : 2.",
+  },
+  {
+    q: "Ile procent liczby 50 to liczba 8?",
+    a: "16%. 8 : 50 = 0,16.",
+  },
+  {
+    q: "Prostokąt ma obwód 20 cm. Jakie pole może mieć co najwyżej?",
+    a: "25 cm². Największe pole ma kwadrat 5 cm na 5 cm.",
+  },
+  {
+    q: "Ile to jest 15% z 200?",
+    a: "30. 10% to 20, a 5% to 10, razem 30.",
+  },
+  {
+    q: "Kąty trójkąta mają się do siebie jak 2 : 3 : 4. Ile stopni ma największy?",
+    a: "80°. Suma to 180°, a 2 + 3 + 4 = 9 części, więc jedna część to 20°, a 4 · 20° = 80°.",
+  },
+  {
+    q: "Pomyśl liczbę, pomnóż ją przez 3, dodaj 6, podziel przez 3 i odejmij pomyślaną liczbę. Co wyszło?",
+    a: "2. (3x + 6) : 3 = x + 2, a po odjęciu x zostaje 2, niezależnie od liczby.",
+  },
+  {
+    q: "Na ile zer kończy się liczba 100! (iloczyn od 1 do 100)?",
+    a: "24. Każde zero daje para 2 i 5, a piątek jest mniej niż dwójek: 100 : 5 = 20 oraz 100 : 25 = 4, razem 24.",
+  },
+  {
+    q: "Pociąg jedzie ze stałą prędkością 60 km/h. Ile kilometrów przejedzie w 90 minut?",
+    a: "90 km. 90 minut to 1,5 godziny, a 60 · 1,5 = 90.",
+  },
+  {
+    q: "Średnia trzech liczb to 10. Dwie z nich to 8 i 12. Jaka jest trzecia?",
+    a: "10. Suma wszystkich to 30, a 30 - 8 - 12 = 10.",
+  },
+  {
+    q: "Ile przekątnych ma sześciokąt wypukły?",
+    a: "9. Wzór n(n - 3) : 2 daje 6 · 3 : 2 = 9.",
+  },
+  {
+    q: "Ile wynosi suma wszystkich liczb nieparzystych od 1 do 19?",
+    a: "100. Suma pierwszych n liczb nieparzystych to n², a tu jest ich 10.",
+  },
+  {
+    q: "Kolarz przejechał 2/5 trasy i zostało mu 18 km. Jak długa jest cała trasa?",
+    a: "30 km. Zostało 3/5 trasy, czyli 18 km, więc 1/5 to 6 km, a cała trasa to 30 km.",
+  },
+  {
+    q: "Ile jest liczb dwucyfrowych podzielnych przez 7?",
+    a: "13. Są to wielokrotności 7 od 7 · 2 = 14 do 7 · 14 = 98, czyli 13 liczb.",
+  },
+  {
+    q: "Suma trzech kolejnych liczb całkowitych to 72. Jaka jest najmniejsza z nich?",
+    a: "23. Środkowa to 72 : 3 = 24, więc liczby to 23, 24 i 25.",
+  },
+  {
+    q: "Wiadomo, że x + 1/x = 3. Ile wynosi x² + 1/x²?",
+    a: "7. Podnieś równanie do kwadratu: x² + 2 + 1/x² = 9, więc x² + 1/x² = 7.",
+  },
+  {
+    q: "Długość prostokąta jest dwa razy większa od szerokości, a obwód to 36 cm. Ile wynosi pole?",
+    a: "72 cm². Szerokość b, długość 2b, obwód 6b = 36, więc b = 6, a pole to 6 · 12 = 72.",
+  },
+  {
+    q: "Ile jest różnych liczb trzycyfrowych z cyfr 1, 2, 3, jeśli cyfry się nie powtarzają?",
+    a: "6. Jest 3 · 2 · 1 = 6 ustawień: 123, 132, 213, 231, 312, 321.",
+  },
+  {
+    q: "Po obniżce o 25% kurtka kosztuje 60 zł. Ile kosztowała przed obniżką?",
+    a: "80 zł. 60 zł to 75% ceny, więc cena to 60 : 0,75 = 80.",
+  },
+  {
+    q: "Rzucasz dwiema kostkami. Jakie jest prawdopodobieństwo, że suma oczek to 7?",
+    a: "1/6. Sprzyja 6 par (1+6, 2+5, 3+4 i odwrotnie) z 36 możliwych.",
+  },
+  {
+    q: "Ile to jest 2 do potęgi 10?",
+    a: "1024. 2⁵ = 32, a 32 · 32 = 1024.",
+  },
+  {
+    q: "Jaki kąt tworzą wskazówki zegara o godzinie 4:00?",
+    a: "120°. Każda godzina na tarczy to 30°, a 4 · 30° = 120°.",
+  },
+  {
+    q: "Czy liczba 123456 dzieli się przez 9?",
+    a: "Nie. Suma cyfr to 21, co dzieli się przez 3, ale nie przez 9, więc liczba dzieli się przez 3, ale nie przez 9.",
+  },
+  {
+    q: "Rozwiąż równanie |x - 3| = 5.",
+    a: "x = 8 lub x = -2. Odległość x od 3 ma wynosić 5, więc 3 + 5 albo 3 - 5.",
+  },
+  {
+    q: "Bok kwadratu powiększono o 3 i pole wzrosło o 39. Jaki był bok początkowy?",
+    a: "5. (a + 3)² - a² = 6a + 9 = 39, więc a = 5.",
+  },
+  {
+    q: "Oblicz w pamięci 99 · 101.",
+    a: "9999. To (100 - 1)(100 + 1) = 100² - 1.",
+  },
+  {
+    q: "Rozwiąż równanie x² - 9x + 20 = 0.",
+    a: "x = 4 lub x = 5. Szukasz dwóch liczb o sumie 9 i iloczynie 20, albo Δ = 1.",
   },
 ] as const;
 
-const WHY_IT_WORKS = [
-  "Zadania z rozwiązaniami krok po kroku",
-  "Trening pod presją czasu",
-  "Oficjalne arkusze CKE",
-] as const;
+const subscribeNoop = () => () => {};
+const getDayIndex = () => {
+  const now = new Date();
+  const localDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.floor(localDay / 86_400_000) % PUZZLES.length;
+};
+
+function DailyPuzzle() {
+  const index = useSyncExternalStore(subscribeNoop, getDayIndex, () => 0);
+  const [revealed, setRevealed] = useState(false);
+
+  const puzzle = PUZZLES[index];
+
+  return (
+    <div className="card-raised flex flex-col justify-between gap-5 p-5 sm:p-6">
+      <div>
+        <p className="text-overline">ZAGADKA DNIA</p>
+        <h3 className="mt-2 text-xl font-extrabold tracking-tight text-foreground">
+          {puzzle.q}
+        </h3>
+      </div>
+      {revealed ? (
+        <p className="rounded-xl bg-accent-soft px-4 py-3 text-sm font-semibold leading-relaxed text-accent">
+          {puzzle.a}
+        </p>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setRevealed(true)}
+          className="self-start rounded-full bg-accent-soft px-4 py-2 text-sm font-bold text-accent transition hover:bg-accent/20"
+        >
+          Pokaż rozwiązanie
+        </button>
+      )}
+    </div>
+  );
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 16 },
@@ -414,58 +690,19 @@ export function HomeDashboard() {
         />
         <div className="page-container relative px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="max-w-2xl">
-            <p className="text-overline">CO ZNAJDZIESZ W ŚRODKU</p>
+            <p className="text-overline">ŚCIĄGA</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Wszystko do nauki w jednym miejscu
+              Wzory, które warto znać na pamięć
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Wybierz dział i zacznij od tego, czego potrzebujesz dzisiaj.
+              Sześć najważniejszych dla Twojego poziomu, z krótkim przykładem.
             </p>
           </div>
 
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:mt-10 lg:grid-cols-5 lg:gap-4">
-            {INSIDE_SECTIONS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="card-raised group flex h-full items-start gap-4 p-4 sm:p-5 lg:flex-col lg:p-6"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
-                    <item.icon className="h-5 w-5" aria-hidden />
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-extrabold tracking-tight text-foreground group-hover:text-accent">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
-                      {item.text}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <FormulaSheet />
 
           <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.45fr)]">
-            <div className="card-raised flex flex-col justify-between gap-5 p-5 sm:p-6">
-              <div>
-                <p className="text-overline">DLACZEGO TO DZIAŁA</p>
-                <h3 className="mt-2 text-xl font-extrabold tracking-tight text-foreground">
-                  Nauka, która nie kończy się na teorii
-                </h3>
-              </div>
-              <ul className="flex flex-wrap gap-2 text-xs font-bold">
-                {WHY_IT_WORKS.map((item) => (
-                  <li
-                    key={item}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-2 text-accent"
-                  >
-                    <Check className="h-3.5 w-3.5" aria-hidden />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <DailyPuzzle />
 
             <Link
               href="/trening"
