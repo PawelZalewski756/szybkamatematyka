@@ -78,5 +78,16 @@ export function describeTelegramCommandError(error: unknown): string {
     return "Brakuje migracji licznika wejść. Uruchom supabase/migrations/20261011100000_add_anonymous_page_analytics.sql w Supabase → SQL Editor.";
   }
 
+  if (
+    message.includes("Could not load users") ||
+    /invalid api key|invalid jwt|jwt expired/i.test(message)
+  ) {
+    return "Nie udało się pobrać kont z Supabase Auth. Sprawdź SUPABASE_SERVICE_ROLE_KEY (musi to być klucz service_role, nie anon) i czy projekt Supabase jest aktywny.";
+  }
+
+  if (message.includes("Could not load user profiles")) {
+    return "Nie udało się pobrać profili. Sprawdź tabelę profiles i polityki RLS; bot używa service_role, więc błąd oznacza najczęściej brak migracji profiles.sql.";
+  }
+
   return `Błąd pobierania danych: ${message.slice(0, 300)}`;
 }

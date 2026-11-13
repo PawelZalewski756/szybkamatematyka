@@ -39,9 +39,16 @@ async function sendTelegramMessage(
       signal: AbortSignal.timeout(8_000),
     },
   );
-  const result = (await response.json().catch(() => ({}))) as { ok?: boolean };
+  const result = (await response.json().catch(() => ({}))) as {
+    ok?: boolean;
+    description?: string;
+  };
   if (!response.ok || result.ok !== true) {
-    throw new Error(`Telegram sendMessage failed with status ${response.status}.`);
+    throw new Error(
+      `Telegram sendMessage failed with status ${response.status}${
+        result.description ? `: ${result.description}` : ""
+      }.`,
+    );
   }
 }
 
@@ -60,12 +67,26 @@ export async function deliverSignupNotification(
   const supabase = getAdminSupabase();
 
   if (!botToken || adminIds.size === 0 || !supabase) {
+    const missing: string[] = [];
+    if (!botToken) missing.push("TELEGRAM_BOT_TOKEN");
+    if (adminIds.size === 0) {
+      missing.push("TELEGRAM_ADMIN_IDS lub ADMIN_TELEGRAM_ID");
+    }
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() && !process.env.SUPABASE_URL?.trim()) {
+      missing.push("NEXT_PUBLIC_SUPABASE_URL");
+    }
+    if (!process.env.SUPABASE_SERVICE_ROLE_KEY?.trim()) {
+      missing.push("SUPABASE_SERVICE_ROLE_KEY");
+    }
     console.error(
-      "[telegram-signup] Brak konfiguracji (TELEGRAM_BOT_TOKEN, TELEGRAM_ADMIN_IDS, SUPABASE_SERVICE_ROLE_KEY).",
+      `[telegram-signup] Brak konfiguracji: ${missing.join(", ")}.`,
     );
     return {
       status: 503,
-      body: { error: "Signup notifications are not configured." },
+      body: {
+        error: "Signup notifications are not configured.",
+        missing,
+      },
     };
   }
 

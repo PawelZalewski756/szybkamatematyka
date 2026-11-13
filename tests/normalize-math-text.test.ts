@@ -4,6 +4,7 @@ import {
   findMathTextIssues,
   latexToPlainText,
   normalizeMathText,
+  repairDamagedMathCommands,
   repairLatexControlChars,
   scanMathSegments,
 } from "@/lib/math/normalize-math-text";
@@ -90,6 +91,25 @@ describe("scanMathSegments", () => {
   });
 });
 
+describe("repairDamagedMathCommands", () => {
+  it("odtwarza \\begin zjedzone przez \\b", () => {
+    expect(
+      repairDamagedMathCommands(" egin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}"),
+    ).toBe(" \\begin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}");
+  });
+
+  it("odtwarza \\right zjedzone przez \\r", () => {
+    expect(repairDamagedMathCommands("\\left( 3^{-1} + 2^{-1} ight)^{-1}")).toBe(
+      "\\left( 3^{-1} + 2^{-1} \\right)^{-1}",
+    );
+  });
+
+  it("nie rusza poprawnych formuł", () => {
+    const latex = "\\begin{cases} x = 1 \\end{cases}";
+    expect(repairDamagedMathCommands(latex)).toBe(latex);
+  });
+});
+
 describe("normalizeMathText", () => {
   it("naprawia zadanie z nadmiarowym $ (zrzut ekranu 1)", () => {
     expect(
@@ -141,6 +161,25 @@ describe("normalizeMathText", () => {
       const once = normalizeMathText(sample);
       expect(normalizeMathText(once)).toBe(once);
     }
+  });
+
+  it("usuwa niewidoczne znaki (ZWSP/ZWNJ/BOM)", () => {
+    expect(normalizeMathText("Oblicz $2^{2}$\u200B\u200C\u200D")).toBe(
+      "Oblicz $2^{2}$",
+    );
+  });
+
+  it("naprawia resztki komend w formule, gdy znak sterujący zamienił się w spację", () => {
+    expect(
+      normalizeMathText(
+        "Rozwiąż $$ egin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}$$",
+      ),
+    ).toBe("Rozwiąż $$ \\begin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}$$");
+  });
+
+  it("nie traktuje dosłownego \\n w prozie jako komendy LaTeX", () => {
+    const prose = "### Temat:\\n\\nMnożenie tych samych podstaw:\\n$$a^m \\cdot a^n$$";
+    expect(normalizeMathText(prose)).toBe(prose);
   });
 });
 

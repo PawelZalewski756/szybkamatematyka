@@ -47,4 +47,13 @@ describe("MathText", () => {
     expect(html).not.toContain("**");
     expect(html).toContain("Odpowiedź:");
   });
+
+  it("renderuje układ równań z uszkodzonym \\begin", () => {
+    const html = render(
+      "Rozwiąż $$ egin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}$$",
+    );
+    expect(html).not.toContain("katex-error");
+    expect(html).not.toContain(" egin{");
+    expect(html).toContain("mtable");
+  });
 });

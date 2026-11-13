@@ -74,11 +74,25 @@ describe("splitMathText", () => {
     ]);
   });
 
-  it("renderuje poprawną treść bez zmian", () => {
+  it("renderuje poprawne zadanie bez zmian", () => {
+    const parts = assertRenderable("Oblicz $2 + 2 \\cdot 2$.");
+    expect(parts).toHaveLength(3);
+  });
+
+  it("renderuje poprawną treść z wieloma formułami", () => {
     const parts = assertRenderable(
       "Kąt $\\alpha$ ma miarę $30^{\\circ}$, a $\\frac{1}{2}$ to połowa.",
     );
     expect(parts).toHaveLength(7);
+  });
+
+  it("porządkuje potrójne $ w realnym zadaniu z bazy", () => {
+    const parts = assertRenderable(
+      "Oblicz wartość wyrażenia $ $ $ 50 - (24 \\div 6 + 2 \\times 5) $ $",
+    );
+    const math = parts.filter((part) => part.kind === "inline");
+    expect(math.some((part) => part.latex.includes("24 \\div 6"))).toBe(true);
+    expect(parts.filter((part) => part.kind === "text").every((part) => !part.text.includes("$"))).toBe(true);
   });
 });
 

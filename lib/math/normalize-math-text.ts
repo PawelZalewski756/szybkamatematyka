@@ -84,7 +84,18 @@ const ESCAPE_LETTERS: Record<string, string> = {
 /** Znaki sterujące, które nigdy nie występują naturalnie w treści. */
 const NEVER_NATURAL = new Set(["\u0008", "\u000B", "\u000C", "\u000D"]);
 
-const LATEX_COMMAND_RE = /\\[a-zA-Z]{2,}/;
+/**
+ * Czy tekst zawiera znaną komendę LaTeX? Samo `\n` w tekście (dosłowne
+ * „backslash n” z podwójnie zakodowanego JSON-a) nie jest komendą i nie może
+ * zamieniać prozy typu `...\nMnożenie` w matematykę.
+ */
+export function containsLatexCommand(text: string): boolean {
+  if (!text.includes("\\")) return false;
+  for (const match of text.matchAll(/\\([a-zA-Z]+)/g)) {
+    if (LATEX_COMMANDS.has(match[1]!)) return true;
+  }
+  return false;
+}
 const FENCED_CODE_RE = /(^```[\s\S]*?^```[ \t]*$)/gm;
 
 function isEscaped(text: string, index: number): boolean {
@@ -332,7 +343,7 @@ const MATH_WORD_RE =
   /^(?:sin|cos|tg|ctg|tan|cot|sec|csc|arcsin|arccos|arctg|log|ln|lg|lim|sqrt|pi|infty|alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|lambda|mu|nu|xi|rho|sigma|tau|phi|chi|psi|omega|Omega|Delta|Sigma|Pi|Phi|Psi|Lambda|Theta|Gamma|Xi)$/;
 
 function isMathToken(token: string): boolean {
-  if (LATEX_COMMAND_RE.test(token)) return true;
+  if (containsLatexCommand(token)) return true;
   if (MATH_CHUNK_RE.test(token) && /[0-9=+\-*/^_<>()[\]]/.test(token)) return true;
   return (
     SINGLE_LETTER_RE.test(token) ||
@@ -347,7 +358,7 @@ function isMathToken(token: string): boolean {
  * `50 - (24 \div 6 + 2 \times 5)` renderuje się jak matematyka, a nie jak tekst.
  */
 export function wrapStrayLatex(text: string): string {
-  if (!LATEX_COMMAND_RE.test(text)) return text;
+  if (!containsLatexCommand(text)) return text;
 
   const words = [...text.matchAll(/\S+/g)].map((match) => ({
     value: match[0],
@@ -360,7 +371,7 @@ export function wrapStrayLatex(text: string): string {
 
   while (i < words.length) {
     const word = words[i]!;
-    if (!LATEX_COMMAND_RE.test(word.value)) {
+    if (!containsLatexCommand(word.value)) {
       i += 1;
       continue;
     }
@@ -381,7 +392,7 @@ export function wrapStrayLatex(text: string): string {
     const latex = text.slice(from, to).trim();
     // Owijamy tylko wtedy, gdy fragment naprawdę wygląda na działanie - samo
     // `\ne` albo `\alpha` w środku zdania zostaje jako tekst (z symbolem).
-    if (!latex || !LATEX_COMMAND_RE.test(latex) || !/\d|[=+\-*/<>^_]/.test(latex)) {
+    if (!latex || !containsLatexCommand(latex) || !/\d|[=+\-*/<>^_]/.test(latex)) {
       out += text.slice(cursor, words[i]!.index + words[i]!.value.length);
       cursor = words[i]!.index + words[i]!.value.length;
       i += 1;
@@ -401,7 +412,7 @@ export function wrapStrayLatex(text: string): string {
   const segments = scanMathSegments(out);
   if (
     !segments.some(
-      (segment) => segment.kind === "text" && LATEX_COMMAND_RE.test(segment.text),
+      (segment) => segment.kind === "text" && containsLatexCommand(segment.text),
     )
   ) {
     return out;
@@ -520,6 +531,38 @@ function mapOutsideCodeFences(text: string, fn: (plain: string) => string): stri
     .join("");
 }
 
+const ZERO_WIDTH_RE = /[\u200B-\u200D]/g;
+
+const BROKEN_ENVIRONMENTS =
+  "cases|aligned|align|alignat|array|pmatrix|bmatrix|vmatrix|Vmatrix|matrix|split|gathered|eqnarray";
+
+/**
+ * Naprawia resztki komend uszkodzonych przez parser JSON, gdy znak sterujący
+ * został później zamieniony na spację (np. przez sanitizer albo kopiowanie):
+ *   `$$ egin{cases} ...` → `$$\begin{cases} ...`
+ *   `\left( ... ight)`   → `\left( ... \right)`
+ *
+ * Działamy tylko wewnątrz formuł i tylko na jednoznacznych wzorcach, żeby nie
+ * ruszać zwykłego tekstu.
+ */
+export function repairDamagedMathCommands(latex: string): string {
+  if (!latex) return latex;
+  let out = latex;
+
+  out = out.replace(
+    new RegExp(`(^|\\s)egin\\{(${BROKEN_ENVIRONMENTS})\\}`, "g"),
+    (_match, prefix: string, environment: string) =>
+      `${prefix}\\begin{${environment}}`,
+  );
+
+  if (out.includes("\\left")) {
+    out = out.replace(/(\s)ight(?=[\s)\]|.,;:\\])/g, "$1\\right");
+    out = out.replace(/(\s)ight$/g, "$1\\right");
+  }
+
+  return out;
+}
+
 /**
  * Główna naprawa treści matematycznej. Idempotentna - można ją bezpiecznie
  * wołać wielokrotnie (render, import, naprawa bazy).
@@ -528,7 +571,7 @@ export function normalizeMathText(input: string): string {
   if (!input) return input;
 
   return mapOutsideCodeFences(input, (plain) => {
-    let text = plain.replace(/\uFEFF/g, "");
+    let text = plain.replace(ZERO_WIDTH_RE, "").replace(/\uFEFF/g, "");
     text = repairLatexControlChars(text);
     text = convertLatexDelimiters(text);
     text = balanceMathDelimiters(text);
@@ -537,8 +580,9 @@ export function normalizeMathText(input: string): string {
     const rebuilt = segments
       .map((segment) => {
         if (segment.kind === "text") return wrapStrayLatex(segment.text);
-        if (segment.kind === "display") return `$$${segment.latex}$$`;
-        return `$${segment.latex}$`;
+        const latex = repairDamagedMathCommands(segment.latex);
+        if (segment.kind === "display") return `$$${latex}$$`;
+        return `$${latex}$`;
       })
       .join("");
 
@@ -570,12 +614,22 @@ export function findMathTextIssues(input: string): string[] {
     .split(FENCED_CODE_RE)
     .filter((_part, index) => index % 2 === 0)
     .join("");
+  const segments = scanMathSegments(outsideFences);
   if (
-    scanMathSegments(outsideFences).some(
-      (segment) => segment.kind === "text" && LATEX_COMMAND_RE.test(segment.text),
+    segments.some(
+      (segment) => segment.kind === "text" && containsLatexCommand(segment.text),
     )
   ) {
     issues.push("surowy LaTeX poza $...$");
+  }
+  if (
+    segments.some(
+      (segment) =>
+        segment.kind !== "text" &&
+        repairDamagedMathCommands(segment.latex) !== segment.latex,
+    )
+  ) {
+    issues.push("uszkodzona komenda LaTeX w formule (np. `egin{cases}`)");
   }
 
   if (/[\u200B-\u200D\uFEFF]/.test(input)) {
