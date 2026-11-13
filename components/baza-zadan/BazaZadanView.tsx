@@ -190,7 +190,6 @@ export function BazaZadanView({
 
   return (
     <div className="page-container w-full py-8 sm:py-10">
-      <div className="mx-auto w-full max-w-7xl">
       <header className="max-w-3xl">
         <p className="text-overline">Baza zadań</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -315,7 +314,6 @@ export function BazaZadanView({
           )
         )}
         {tab === "trening" && <BazaZadanTreningPanel />}
-      </div>
       </div>
     </div>
   );
