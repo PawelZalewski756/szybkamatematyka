@@ -770,20 +770,20 @@ function logarithmTasks(): Task[] {
           table(
             ["Potęga", "Wartość"],
             [1, 2, 3, 4].map((power) => [
-              `${base}^${power}`,
+              `$${base}^{${power}}$`,
               base ** power,
             ]),
           ),
           "",
-          `Ile wynosi log_${base}(${value})?`,
+          `Ile wynosi $\\log_{${base}}(${value})$?`,
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `${base} podniesione do potęgi ${exponent} daje ${value}, więc log_${base}(${value}) = ${exponent}.`,
+        explanation: `${base} podniesione do potęgi ${exponent} daje ${value}, więc $\\log_{${base}}(${value}) = ${exponent}$.`,
         solutionSteps: [
-          `Szukamy wykładnika x, dla którego ${base}^x = ${value}.`,
-          `Z tabeli odczytujemy, że ${base}^${exponent} = ${value}.`,
-          `Zatem log_${base}(${value}) = ${exponent}.`,
+          `Szukamy wykładnika $x$, dla którego $${base}^x = ${value}$.`,
+          `Z tabeli odczytujemy, że $${base}^{${exponent}} = ${value}$.`,
+          `Zatem $\\log_{${base}}(${value}) = ${exponent}$.`,
         ],
       }),
     );

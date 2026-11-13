@@ -61,6 +61,14 @@ describe("generateTableTasks", () => {
     }
   });
 
+  it("formatuje potęgi i logarytmy jako LaTeX", () => {
+    const task = tasks.find((item) => item.id === "gen-logarithm-1");
+    expect(task).toBeTruthy();
+    expect(task?.prompt).toContain("$2^{1}$");
+    expect(task?.prompt).toContain("$\\log_{2}(4)$");
+    expect(task?.explanation).toContain("$\\log_{2}(4) = 2$");
+  });
+
   it("nie zawiera artefaktów typu NaN lub undefined", () => {
     for (const task of tasks) {
       for (const value of [...task.choices, task.prompt, task.explanation]) {
