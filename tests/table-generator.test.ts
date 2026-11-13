@@ -9,8 +9,8 @@ function tableLines(prompt: string): string[] {
 }
 
 describe("generateTableTasks", () => {
-  it("generuje 60 zadań w sześciu rodzinach", () => {
-    expect(tasks).toHaveLength(60);
+  it("generuje 80 zadań w ośmiu rodzinach", () => {
+    expect(tasks).toHaveLength(80);
     for (const prefix of [
       "gen-offer-",
       "gen-budget-",
@@ -18,6 +18,8 @@ describe("generateTableTasks", () => {
       "gen-average-",
       "gen-recipe-",
       "gen-tickets-",
+      "gen-probability-",
+      "gen-speed-",
     ]) {
       expect(tasks.filter((task) => task.id.startsWith(prefix))).toHaveLength(
         10,

@@ -1,4 +1,4 @@
-import { uniqueChoices } from "@/lib/baza-zadan/task-generators";
+import { gcd, uniqueChoices } from "@/lib/baza-zadan/task-generators";
 import type { Task } from "@/lib/baza-zadan/types";
 
 const FOR_BOTH = ["sp", "srednia"] as const;
@@ -441,7 +441,125 @@ function ticketSales(): Task[] {
   return tasks;
 }
 
-/** 60 unikalnych wariantów z tabelami, po 10 na rodzinę. */
+function probabilityTasks(): Task[] {
+  const tasks: Task[] = [];
+
+  for (let i = 0; i < 10; i++) {
+    const total = 50;
+    const counts = [
+      10 + (i % 4),
+      12 + (i % 3),
+      10 + ((i * 3) % 5),
+    ];
+    const last = total - counts[0]! - counts[1]! - counts[2]!;
+    const values = [...counts, last];
+    const even = values[1]! + values[3]!;
+    const divisor = gcd(even, total);
+    const correct = `${even / divisor}/${total / divisor}`;
+    const other = total - even;
+    const otherDivisor = gcd(other, total);
+    const wrongs = [
+      `${other / otherDivisor}/${total / otherDivisor}`,
+      `${values[1]}/${total}`,
+      `${values[3]}/${total}`,
+      `${even / divisor + 1}/${total / divisor}`,
+    ];
+    const { choices, correctIndex } = uniqueChoices(correct, wrongs);
+
+    tasks.push(
+      t(`gen-probability-${i + 1}`, {
+        title: `Prawdopodobieństwo z tabeli #${i + 1}`,
+        category: "egzamin-8",
+        difficulty: "sredni",
+        forPaths: FOR_BOTH,
+        prompt: [
+          "W tabeli zapisano wyniki 50 rzutów kostką czworościenną.",
+          "",
+          table(
+            ["Wynik", "1", "2", "3", "4"],
+            [["Liczba rzutów", values[0]!, values[1]!, values[2]!, values[3]!]],
+          ),
+          "",
+          "Jakie jest prawdopodobieństwo, że w kolejnym rzucie wypadnie liczba parzysta, jeśli oszacujemy je na podstawie tabeli?",
+        ].join("\n"),
+        choices,
+        correctIndex,
+        explanation: `Liczby parzyste to 2 i 4, czyli ${values[1]} + ${values[3]} = ${even} rzutów. Wszystkich rzutów było 50, więc prawdopodobieństwo to ${even}/50 = ${correct}.`,
+        solutionSteps: [
+          `Dodaj rzuty z parzystymi wynikami: ${values[1]} + ${values[3]} = ${even}.`,
+          `Zapisz ułamek: ${even}/50.`,
+          `Skróć ułamek przez ${divisor}: ${correct}.`,
+        ],
+        hint: "Najpierw policz sumę rzutów dla wyników parzystych.",
+      }),
+    );
+  }
+
+  return tasks;
+}
+
+function speedTasks(): Task[] {
+  const tasks: Task[] = [];
+
+  for (let i = 0; i < 10; i++) {
+    const distances = [
+      60 + (i % 3) * 20,
+      90 + (i % 4) * 10,
+      120 + (i % 2) * 20,
+    ];
+    const times = [1, 1 + (i % 2), 2];
+    const totalDistance = distances.reduce((sum, value) => sum + value, 0);
+    const totalTime = times.reduce((sum, value) => sum + value, 0);
+    const average = totalDistance / totalTime;
+    const format = (value: number) =>
+      Number.isInteger(value)
+        ? `${value} km/h`
+        : `${value.toFixed(1).replace(".", ",")} km/h`;
+    const correct = format(average);
+    const { choices, correctIndex } = uniqueChoices(correct, [
+      format(average + 5),
+      format(average - 5),
+      format(distances[0]! / times[0]!),
+      format(totalDistance / 2),
+    ]);
+
+    tasks.push(
+      t(`gen-speed-${i + 1}`, {
+        title: `Średnia prędkość #${i + 1}`,
+        category: "funkcje",
+        difficulty: "trudny",
+        forPaths: ["srednia"],
+        prompt: [
+          "Autokar pokonał trzy odcinki trasy. W tabeli podano drogę i czas każdego odcinka.",
+          "",
+          table(
+            ["Odcinek", "Droga", "Czas"],
+            [
+              ["A-B", `${distances[0]} km`, `${times[0]} h`],
+              ["B-C", `${distances[1]} km`, `${times[1]} h`],
+              ["C-D", `${distances[2]} km`, `${times[2]} h`],
+            ],
+          ),
+          "",
+          "Jaka była średnia prędkość autokaru na całej trasie?",
+        ].join("\n"),
+        choices,
+        correctIndex,
+        explanation: `Cała droga to ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km. Cały czas to ${times[0]} + ${times[1]} + ${times[2]} = ${totalTime} h. Średnia prędkość to ${totalDistance} : ${totalTime} = ${format(average)}.`,
+        solutionSteps: [
+          `Dodaj drogę: ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km.`,
+          `Dodaj czas: ${times[0]} + ${times[1]} + ${times[2]} = ${totalTime} h.`,
+          `Podziel drogę przez czas: ${totalDistance} : ${totalTime} = ${format(average)}.`,
+        ],
+        hint: "Średnia prędkość to cała droga podzielona przez cały czas, nie średnia prędkości z odcinków.",
+      }),
+    );
+  }
+
+  return tasks;
+}
+
+/** 80 unikalnych wariantów z tabelami, po 10 na rodzinę. */
 export function generateTableTasks(): Task[] {
   return [
     ...offers(),
@@ -450,5 +568,7 @@ export function generateTableTasks(): Task[] {
     ...averages(),
     ...recipes(),
     ...ticketSales(),
+    ...probabilityTasks(),
+    ...speedTasks(),
   ];
 }
