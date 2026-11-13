@@ -113,6 +113,7 @@ export function BazaZadanTasksPanel({
   const [selectedGroup, setSelectedGroup] =
     useState<TaskCategoryGroupId | null>(null);
   const [topic, setTopic] = useState("all");
+  const [showAllGroupTasks, setShowAllGroupTasks] = useState(false);
   const [page, setPage] = useState(1);
   const [sort, setSort] = useState<SortMode>("default");
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -232,6 +233,12 @@ export function BazaZadanTasksPanel({
     topic !== "all" ||
     difficulty !== "all" ||
     search.trim().length > 0;
+  const showTopicDirectory =
+    Boolean(selectedGroupDefinition) &&
+    topic === "all" &&
+    difficulty === "all" &&
+    !search.trim() &&
+    !showAllGroupTasks;
   const resultTitle =
     topic !== "all"
       ? topic
@@ -262,7 +269,7 @@ export function BazaZadanTasksPanel({
     setTopic("all");
     setDifficulty("all");
     setSelectedGroup(null);
-    
+    setShowAllGroupTasks(false);
     resetPagination();
   };
 
@@ -272,7 +279,7 @@ export function BazaZadanTasksPanel({
     setTopic("all");
     setDifficulty("all");
     setSelectedGroup(groupId);
-    
+    setShowAllGroupTasks(false);
     resetPagination();
   };
 
@@ -313,7 +320,7 @@ export function BazaZadanTasksPanel({
             setSearch(e.target.value);
             setTopic("all");
             setSelectedGroup(null);
-            
+            setShowAllGroupTasks(false);
             resetPagination();
           }}
           placeholder="Np. równania, procenty, trójkąt…"
@@ -362,7 +369,7 @@ export function BazaZadanTasksPanel({
                 setCategory(e.target.value as TaskCategory | "all");
                 setTopic("all");
                 setSelectedGroup(null);
-                
+                setShowAllGroupTasks(false);
                 resetPagination();
               }}
               className="input-field mt-1.5 w-full px-3 py-2.5 text-sm"
@@ -481,13 +488,15 @@ export function BazaZadanTasksPanel({
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-                        <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+          {!showTopicDirectory ? (
+            <>
+              <label className="flex items-center gap-2 text-xs font-semibold text-muted">
                 Temat
                 <select
                   value={topic}
                   onChange={(event) => {
                     setTopic(event.target.value);
-                    
+                    setShowAllGroupTasks(false);
                     resetPagination();
                   }}
                   className="input-field max-w-[18rem] py-1.5 text-xs"
@@ -518,6 +527,8 @@ export function BazaZadanTasksPanel({
                   <option value="az">Alfabetycznie</option>
                 </select>
               </label>
+            </>
+          ) : null}
           <button
             type="button"
             onClick={clearSelection}
@@ -538,7 +549,7 @@ export function BazaZadanTasksPanel({
             onClick={() => {
               setCategory("all");
               setTopic("all");
-              
+              setShowAllGroupTasks(false);
               resetPagination();
             }}
           >
@@ -552,7 +563,7 @@ export function BazaZadanTasksPanel({
               onClick={() => {
                 setCategory(groupCategory);
                 setTopic("all");
-                
+                setShowAllGroupTasks(false);
                 resetPagination();
               }}
             >
@@ -565,6 +576,70 @@ export function BazaZadanTasksPanel({
         </div>
       ) : null}
 
+      {showTopicDirectory ? (
+        <div className="mt-5">
+          <div className="flex flex-wrap items-end justify-between gap-3 border-t border-surface-border pt-4">
+            <div>
+              <p className="text-overline">Tematy</p>
+              <h3 className="mt-1 text-lg font-bold text-foreground">
+                Wybierz temat
+              </h3>
+            </div>
+            <p className="text-sm text-muted">
+              {topicOptions.length} tematów
+            </p>
+          </div>
+
+          {topicOptions.length === 0 ? (
+            <div className="mt-5">
+              <EmptyState
+                icon={SearchX}
+                title="Brak tematów"
+                description="Zmień dział albo wyczyść filtr i spróbuj ponownie."
+              />
+            </div>
+          ) : (
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {topicOptions.map(([name, count]) => (
+                <li key={name}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setTopic(name);
+                      setShowAllGroupTasks(false);
+                      resetPagination();
+                    }}
+                    className="flex w-full items-center justify-between gap-3 rounded-xl border border-surface-border bg-surface px-4 py-3 text-left transition hover:border-accent/35 hover:bg-surface-hover"
+                  >
+                    <span className="min-w-0 text-sm font-semibold text-foreground">
+                      {name}
+                    </span>
+                    <span className="shrink-0 rounded-md bg-surface-hover px-2 py-0.5 text-xs font-semibold tabular-nums text-muted">
+                      {count}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {baseTasks.length > 0 ? (
+            <div className="mt-5 flex justify-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setShowAllGroupTasks(true);
+                  resetPagination();
+                }}
+                className="btn-ghost px-5 py-2.5 text-sm font-semibold"
+              >
+                Pokaż wszystkie {baseTasks.length} zadań
+              </button>
+            </div>
+          ) : null}
+        </div>
+      ) : (
+        <>
           <div className="mt-3 flex flex-wrap items-center gap-1.5">
         <span className="mr-1 text-xs font-semibold text-muted">Poziom:</span>
         <FilterChip
@@ -678,6 +753,8 @@ export function BazaZadanTasksPanel({
               </div>
             </nav>
           ) : null}
+        </>
+      )}
         </>
       )}
     </section>
