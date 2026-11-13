@@ -6,7 +6,7 @@ import { BazaZadanTreningPanel } from "@/components/baza-zadan/BazaZadanTreningP
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { getTaskStats, getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
 import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
-import { learningPathLabel } from "@/lib/learning-path";
+import { learningPathLabel, type LearningPath } from "@/lib/learning-path";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import {
   fetchZadaniaCatalogSafe,
@@ -77,6 +77,8 @@ export function BazaZadanView({
   cmsNote: initialCmsNote = null,
 }: BazaZadanViewProps) {
   const { path } = useLearningPath();
+  const [levelOverride, setLevelOverride] = useState<LearningPath | null>(null);
+  const level = levelOverride ?? path;
   const searchParams = useSearchParams();
   const tab = parseTab(searchParams.get("tab"));
   const [cmsTasks, setCmsTasks] = useState(initialCmsTasks);
@@ -146,9 +148,9 @@ export function BazaZadanView({
     tab === "arkusze" &&
     cmsLoadState === "idle" &&
     isSupabaseConfigured();
-  const pathLabel = learningPathLabel(path);
-  const taskCount = getTaskStats(path).totalTasks;
-  const sheetCount = getExamSheetsForPath(path).length;
+  const pathLabel = learningPathLabel(level);
+  const taskCount = getTaskStats(level).totalTasks;
+  const sheetCount = getExamSheetsForPath(level).length;
   const cmsArkuszCount = useMemo(
     () => groupCmsTasksByArkusz(cmsTasks).length,
     [cmsTasks],
@@ -201,6 +203,32 @@ export function BazaZadanView({
             {polishCount(taskCount, "zadanie", "zadania", "zadań")}
           </span>
         </p>
+
+        <div
+          className="mt-4 inline-flex rounded-lg border border-surface-border bg-surface p-1"
+          role="tablist"
+          aria-label="Poziom szkoły"
+        >
+          {(["sp", "srednia"] as const).map((schoolLevel) => {
+            const active = level === schoolLevel;
+            return (
+              <button
+                key={schoolLevel}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => setLevelOverride(schoolLevel)}
+                className={`rounded-md px-3 py-1.5 text-sm font-semibold transition ${
+                  active
+                    ? "bg-accent text-on-accent"
+                    : "text-muted hover:text-foreground"
+                }`}
+              >
+                {learningPathLabel(schoolLevel)}
+              </button>
+            );
+          })}
+        </div>
       </header>
 
       <section
@@ -269,7 +297,9 @@ export function BazaZadanView({
         role="tabpanel"
         aria-labelledby={`baza-tab-${tab}`}
       >
-        {tab === "zadania" && <BazaZadanTasksPanel />}
+        {tab === "zadania" && (
+          <BazaZadanTasksPanel key={level} level={level} />
+        )}
         {tab === "arkusze" && (
           cmsLoading ? (
             <p className="rounded-xl border border-surface-border bg-surface px-4 py-3 text-sm text-muted">

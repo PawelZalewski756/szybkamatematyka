@@ -5,6 +5,7 @@ import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import { getTasksForPath } from "@/lib/baza-zadan/catalog";
+import type { LearningPath } from "@/lib/learning-path";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -99,8 +100,13 @@ function FilterChip({
   );
 }
 
-export function BazaZadanTasksPanel() {
+export function BazaZadanTasksPanel({
+  level,
+}: {
+  level?: LearningPath;
+}) {
   const { path } = useLearningPath();
+  const activePath = level ?? path;
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
@@ -115,7 +121,7 @@ export function BazaZadanTasksPanel() {
   const { solvedIds } = useSolvedTasks();
 
   const deferredSearch = useDeferredValue(search);
-  const allTasks = useMemo(() => getTasksForPath(path), [path]);
+  const allTasks = useMemo(() => getTasksForPath(activePath), [activePath]);
   const catalogGroups = useMemo(
     () =>
       TASK_CATEGORY_GROUPS.map((group) => ({
@@ -133,14 +139,14 @@ export function BazaZadanTasksPanel() {
   const groupCategories = selectedGroupDefinition?.categories;
 
   const baseTasks = useMemo(() => {
-    return getTasksForPath(path, { search: deferredSearch }).filter((task) => {
+    return getTasksForPath(activePath, { search: deferredSearch }).filter((task) => {
       if (category !== "all" && task.category !== category) return false;
       if (groupCategories && !groupCategories.includes(task.category)) {
         return false;
       }
       return true;
     });
-  }, [category, deferredSearch, groupCategories, path]);
+  }, [activePath, category, deferredSearch, groupCategories]);
 
   const topicTasks = useMemo(() => {
     if (topic === "all") return baseTasks;
