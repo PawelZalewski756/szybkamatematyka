@@ -1,6 +1,7 @@
 "use client";
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
+import { fixMarkdownTables } from "@/lib/format/markdown-tables";
 import { normalizeMathText } from "@/lib/math/normalize-math-text";
 import { slugifyHeading } from "@/lib/trening/theory-content";
 import type { Components } from "react-markdown";
@@ -105,8 +106,12 @@ export function TheoryMarkdown({
 }: TheoryMarkdownProps) {
   const withAnchors = variant === "default";
   // Teoria i rozwiązania też przychodzą z Gemini - naprawiamy zjedzone komendy
-  // LaTeX i niedomknięte `$` zanim trafią do remark-math.
-  const markdown = useMemo(() => normalizeMathText(content), [content]);
+  // LaTeX i niedomknięte `$` zanim trafią do remark-math. Tabele CKE bywają
+  // bez nagłówka, więc dopełniamy komórki, żeby remark-gfm je rozpoznał.
+  const markdown = useMemo(
+    () => fixMarkdownTables(normalizeMathText(content)),
+    [content],
+  );
 
   return (
     <div className={VARIANT_CLASS[variant]}>
