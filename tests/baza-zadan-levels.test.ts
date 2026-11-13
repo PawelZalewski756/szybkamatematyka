@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { getTasksForPath } from "@/lib/baza-zadan/catalog";
 import { EXAM_ARCHIVE_TASKS } from "@/lib/baza-zadan/exams";
 import { matchesLearningPath } from "@/lib/learning-path";
 
@@ -24,5 +25,14 @@ describe("ścieżki zadań egzaminacyjnych", () => {
       expect(matchesLearningPath("srednia", task.forPaths)).toBe(true);
       expect(matchesLearningPath("sp", task.forPaths)).toBe(false);
     }
+  });
+
+  it("katalog szkoły średniej nie zawiera żadnego zadania E8", () => {
+    const leaked = getTasksForPath("srednia").filter(
+      (task) =>
+        task.examSource?.kind === "egzamin-8" ||
+        /^egzamin\s+ósmoklasisty\b/i.test(task.title),
+    );
+    expect(leaked).toHaveLength(0);
   });
 });

@@ -65,6 +65,15 @@ export function getTasksForPath(
 
   return getAllTasks().filter((task) => {
     if (!matchesLearningPath(path, task.forPaths)) return false;
+    // Twarda blokada: E8 nie może wyciec do szkoły średniej, nawet jeśli
+    // pojedynczy rekord ma błędne forPaths albo nie ma examSource.
+    if (
+      path === "srednia" &&
+      (task.examSource?.kind === "egzamin-8" ||
+        /^egzamin\s+ósmoklasisty\b/i.test(task.title))
+    ) {
+      return false;
+    }
     if (category !== "all" && task.category !== category) return false;
     if (difficulty !== "all" && task.difficulty !== difficulty) return false;
     if (!q) return true;

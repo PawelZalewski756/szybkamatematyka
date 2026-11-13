@@ -111,7 +111,9 @@ export function BazaZadanTasksPanel({
   const [category, setCategory] = useState<TaskCategory | "all">("all");
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
   const [selectedGroup, setSelectedGroup] =
-    useState<TaskCategoryGroupId | null>(null);
+    useState<TaskCategoryGroupId | null>(() =>
+      activePath === "srednia" ? "liceum" : "podstawy",
+    );
   const [topic, setTopic] = useState("all");
   const [showAllGroupTasks, setShowAllGroupTasks] = useState(false);
   const [page, setPage] = useState(1);
