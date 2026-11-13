@@ -7,6 +7,7 @@ import {
 } from "@/lib/baza-zadan/sections";
 import { STATIC_TASKS } from "@/lib/baza-zadan/static-tasks";
 import { STATIC_TASKS_EXTRA } from "@/lib/baza-zadan/static-tasks-extra";
+import { TABLE_TASKS } from "@/lib/baza-zadan/table-tasks";
 import type {
   ExamSheet,
   ExamSheetKind,
@@ -26,6 +27,7 @@ export function getAllTasks(): Task[] {
     cachedAllTasks = [
       ...STATIC_TASKS,
       ...STATIC_TASKS_EXTRA,
+      ...TABLE_TASKS,
       ...EXAM_ARCHIVE_TASKS,
       ...generateProceduralTasks(),
     ];
@@ -47,6 +49,7 @@ export function getPrerenderTaskIds(): string[] {
   return [
     ...STATIC_TASKS,
     ...STATIC_TASKS_EXTRA,
+    ...TABLE_TASKS,
     ...EXAM_ARCHIVE_TASKS,
   ].map((task) => task.id);
 }
