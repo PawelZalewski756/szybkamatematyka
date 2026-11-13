@@ -1,0 +1,261 @@
+diff --git a/app/admin/materialy/MaterialyPageClient.tsx b/app/admin/materialy/MaterialyPageClient.tsx
+index 784c6f5..a060d1f 100644
+--- a/app/admin/materialy/MaterialyPageClient.tsx
++++ b/app/admin/materialy/MaterialyPageClient.tsx
+@@ -194,7 +194,7 @@ function MaterialyAdminContent() {
+       setError(
+         err instanceof Error
+           ? err.message
+-          : "Błąd zapisu - uruchom add_tasks_materials_insert.sql w Supabase.",
++          : "Błąd zapisu - sprawdź, czy Twój e-mail jest w tabeli admin_emails w Supabase.",
+       );
+     } finally {
+       setSaving(false);
+@@ -516,8 +516,9 @@ function MaterialyAdminContent() {
+       </div>
+ 
+       <p className="mt-6 text-center text-xs text-muted">
+-        RLS:{" "}
+-        <code className="text-muted">add_tasks_materials_insert.sql</code>
++        Zapis:{" "}
++        <code className="text-muted">public.is_admin()</code> (tabela{" "}
++        <code className="text-muted">admin_emails</code>)
+       </p>
+     </div>
+   );
+diff --git a/docs/DEPLOY.md b/docs/DEPLOY.md
+index de385d3..e3de800 100644
+--- a/docs/DEPLOY.md
++++ b/docs/DEPLOY.md
+@@ -182,11 +182,14 @@ on conflict do nothing;
+ 
+ ### Seed danych
+ 
+-`add_tasks_materials_insert.sql` otwiera zapis dla anon i authenticated. To
+-plik wyłącznie do jednorazowego, lokalnego/stagingowego seedu i nie wolno go
+-uruchamiać na produkcji. Na produkcji używaj `SUPABASE_SERVICE_ROLE_KEY` w
+-skryptach seedujących, a po każdym seedzie uruchom ponownie
+-`20260906220000_production_hardening.sql`.
++`add_tasks_materials_insert.sql` jest **wyłączony** (no-op). Kiedyś otwierał
++zapis dla `anon` i `authenticated`, co przy publicznym kluczu z bundle'a
++pozwalało każdemu modyfikować bazę zadań. Aktualny stan wymusza
++`20260906220000_production_hardening.sql`: odczyt publiczny, zapis tylko dla
++zalogowanego administratora (`public.is_admin()` + `admin_emails`).
++
++Na produkcji i lokalnie skrypty seedujące używają `SUPABASE_SERVICE_ROLE_KEY`.
++Po edycji polityk RLS uruchom ponownie `20260906220000_production_hardening.sql`.
+ 
+ ```bash
+ npm run seed:trening-tasks -- --dry-run
+diff --git a/lib/supabase/materials.ts b/lib/supabase/materials.ts
+index 97db8aa..4cf9efd 100644
+--- a/lib/supabase/materials.ts
++++ b/lib/supabase/materials.ts
+@@ -177,6 +177,11 @@ export type MaterialUpsertInput = {
+   video_url: string | null;
+ };
+ 
++/**
++ * Zapis materiałów: polityki RLS dopuszczają INSERT/UPDATE/DELETE tylko dla
++ * zalogowanego administratora (`public.is_admin()`), więc klient używa sesji
++ * użytkownika z panelu /admin.
++ */
+ export async function upsertMaterial(
+   input: MaterialUpsertInput,
+ ): Promise<Material> {
+diff --git a/scripts/README.md b/scripts/README.md
+index 11d1b81..29ca7a3 100644
+--- a/scripts/README.md
++++ b/scripts/README.md
+@@ -80,7 +80,7 @@ npm run seed:trening-tasks -- --dry-run
+ npm run seed:trening-tasks -- --materials-only
+ ```
+ 
+-**Wymagania:** `.env.local` z Supabase; w SQL Editor uruchom też `migrations/init_tasks.sql`, `init_materials.sql` i `add_tasks_materials_insert.sql` (polityki INSERT).
++**Wymagania:** `.env.local` z `NEXT_PUBLIC_SUPABASE_URL` i `SUPABASE_SERVICE_ROLE_KEY`. Zapis do `tasks`/`materials` jest zablokowany dla `anon`/`authenticated` (RLS z `production_hardening`), więc seed musi iść kluczem service role.
+ 
+ Ponowne uruchomienie **pomija duplikaty** (hash treści). Pełny import ~1–3 min.
+ 
+diff --git a/scripts/seedTreningTasksBulk.ts b/scripts/seedTreningTasksBulk.ts
+index 8ddab3f..8309bcd 100644
+--- a/scripts/seedTreningTasksBulk.ts
++++ b/scripts/seedTreningTasksBulk.ts
+@@ -7,9 +7,9 @@
+  *   npm run seed:trening-tasks -- --materials-only
+  *   npm run seed:trening-tasks -- --materials-only --refresh-materials
+  *
+- * Wymaga: .env.local (Supabase URL + klucz). Zalecane: migracja
+- *   supabase/migrations/add_tasks_materials_insert.sql (INSERT przez anon).
+- * Opcjonalnie: SUPABASE_SERVICE_ROLE_KEY (omija RLS).
++ * Wymaga: .env.local z NEXT_PUBLIC_SUPABASE_URL i SUPABASE_SERVICE_ROLE_KEY.
++ *   Zapis do tasks/materials jest zablokowany dla anon/authenticated politykami
++ *   RLS (production_hardening), więc seed musi iść service_role.
+  */
+ 
+ import { createHash } from "crypto";
+@@ -74,22 +74,15 @@ function parseArgs(): CliOptions {
+ function createSupabase(): SupabaseClient {
+   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
+   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
+-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
+-  const key = serviceKey || anonKey;
+ 
+-  if (!url || !key) {
++  if (!url || !serviceKey) {
+     throw new Error(
+-      "Brakuje NEXT_PUBLIC_SUPABASE_URL lub klucza Supabase w .env.local",
++      "Zapis do bazy wymaga NEXT_PUBLIC_SUPABASE_URL i SUPABASE_SERVICE_ROLE_KEY w .env.local " +
++        "(polityki RLS blokują zapis kluczem anon/authenticated).",
+     );
+   }
+ 
+-  if (!serviceKey) {
+-    console.warn(
+-      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY - używam anon. Uruchom migrację add_tasks_materials_insert.sql lub dodaj service role.",
+-    );
+-  }
+-
+-  return createClient(url, key);
++  return createClient(url, serviceKey);
+ }
+ 
+ function contentHash(
+@@ -224,7 +217,7 @@ async function insertTaskBatches(
+     if (error) {
+       if (/row-level security/i.test(error.message)) {
+         throw new Error(
+-          `${error.message}\n→ Uruchom w Supabase SQL: migrations/add_tasks_materials_insert.sql\n→ Lub ustaw SUPABASE_SERVICE_ROLE_KEY w .env.local`,
++          `${error.message}\n→ Zapis wymaga SUPABASE_SERVICE_ROLE_KEY w .env.local (klucz anon nie ma już prawa zapisu).`,
+         );
+       }
+       throw new Error(
+@@ -423,7 +416,7 @@ async function main(): Promise<void> {
+   console.log(`Czas: ${elapsed}s`);
+   console.log("\nPonowne uruchomienie: npm run seed:trening-tasks");
+   console.log(
+-    "Jeśli INSERT się nie powiedzie - uruchom add_tasks_materials_insert.sql w Supabase.",
++    "Jeśli INSERT się nie powiedzie - sprawdź SUPABASE_SERVICE_ROLE_KEY i polityki RLS.",
+   );
+ }
+ 
+diff --git a/supabase/README.md b/supabase/README.md
+index a2647b3..167b5da 100644
+--- a/supabase/README.md
++++ b/supabase/README.md
+@@ -90,11 +90,14 @@ zmienna jest wyłącznie wskazówką dla gate'u UI.
+ 
+ ## Seed danych
+ 
+-Nie uruchamiaj `add_tasks_materials_insert.sql` na produkcji. Ten plik otwiera
+-zapis dla anon/authenticated i służy tylko do lokalnego lub stagingowego
+-seedu. Na produkcji skrypty seedujące powinny używać
+-`SUPABASE_SERVICE_ROLE_KEY`, a po ich wykonaniu należy ponownie uruchomić
+-`20260906220000_production_hardening.sql`.
++`add_tasks_materials_insert.sql` jest **wyłączony** (no-op). Historycznie
++otwierał zapis dla anon/authenticated i przy publicznym kluczu z bundle'a
++pozwalał każdemu modyfikować bazę zadań. Aktualny stan wymusza
++`20260906220000_production_hardening.sql`: odczyt publiczny, zapis tylko dla
++zalogowanego administratora (`public.is_admin()` + tabela `admin_emails`).
++
++Skrypty seedujące używają `SUPABASE_SERVICE_ROLE_KEY`, a po ręcznych zmianach
++polityk RLS uruchom ponownie `20260906220000_production_hardening.sql`.
+ 
+ ```bash
+ npm run seed:trening-tasks -- --dry-run
+diff --git a/supabase/migrations/add_tasks_materials_insert.sql b/supabase/migrations/add_tasks_materials_insert.sql
+index ccd7e24..464f951 100644
+--- a/supabase/migrations/add_tasks_materials_insert.sql
++++ b/supabase/migrations/add_tasks_materials_insert.sql
+@@ -1,41 +1,17 @@
+--- Zapis zadań areny treningowej i materiałów teoretycznych (seed / admin)
+--- Uruchom w Supabase SQL Editor po init_tasks.sql i init_materials.sql
++-- PLIK WYŁĄCZONY - nie otwiera już zapisu do tabel.
++--
++-- Historycznie ta migracja nadawała rolom `anon` i `authenticated` pełne
++-- INSERT/UPDATE/DELETE na public.tasks i public.materials. Ponieważ klucz
++-- publiczny Supabase jest w bundle'u aplikacji, każdy mógł wtedy usunąć lub
++-- podmienić całą bazę zadań. Dlatego plik jest celowo pusty (no-op).
++--
++-- Docelowy stan opisuje migracja 20260906220000_production_hardening.sql:
++--   * SELECT dla anon/authenticated,
++--   * INSERT/UPDATE/DELETE tylko dla zalogowanego administratora
++--     (public.is_admin() + tabela public.admin_emails),
++--   * skrypty seedujące i naprawcze używają SUPABASE_SERVICE_ROLE_KEY.
++--
++-- Lokalnie: użyj service_role albo dodaj swój e-mail do public.admin_emails
++-- i zaloguj się w aplikacji.
+ 
+-drop policy if exists "tasks_insert_all" on public.tasks;
+-drop policy if exists "tasks_update_all" on public.tasks;
+-drop policy if exists "tasks_delete_all" on public.tasks;
+-drop policy if exists "materials_insert_all" on public.materials;
+-drop policy if exists "materials_update_all" on public.materials;
+-drop policy if exists "materials_delete_all" on public.materials;
+-
+-create policy "tasks_insert_all"
+-  on public.tasks for insert
+-  to anon, authenticated
+-  with check (true);
+-
+-create policy "tasks_update_all"
+-  on public.tasks for update
+-  to anon, authenticated
+-  using (true)
+-  with check (true);
+-
+-create policy "tasks_delete_all"
+-  on public.tasks for delete
+-  to anon, authenticated
+-  using (true);
+-
+-create policy "materials_insert_all"
+-  on public.materials for insert
+-  to anon, authenticated
+-  with check (true);
+-
+-create policy "materials_update_all"
+-  on public.materials for update
+-  to anon, authenticated
+-  using (true)
+-  with check (true);
+-
+-create policy "materials_delete_all"
+-  on public.materials for delete
+-  to anon, authenticated
+-  using (true);
++select 1;
+diff --git a/tests/supabase-policies.test.ts b/tests/supabase-policies.test.ts
+new file mode 100644
+index 0000000..c3002b6
+--- /dev/null
++++ b/tests/supabase-policies.test.ts
+@@ -0,0 +1,29 @@
++import fs from "node:fs";
++import path from "node:path";
++import { describe, expect, it } from "vitest";
++
++const MIGRATIONS_DIR = path.resolve(process.cwd(), "supabase/migrations");
++
++function readMigration(name: string): string {
++  return fs.readFileSync(path.join(MIGRATIONS_DIR, name), "utf8");
++}
++
++/**
++ * Regresja bezpieczeństwa: publiczny klucz Supabase trafia do bundle'a, więc
++ * żadna migracja nie może otwierać zapisu do treści dla anon/authenticated
++ * bez sprawdzenia administratora.
++ */
++describe("polityki RLS dla treści", () => {
++  it("plik seedowy nie otwiera zapisu dla anon/authenticated", () => {
++    const sql = readMigration("add_tasks_materials_insert.sql").toLowerCase();
++    expect(sql).not.toContain("create policy");
++    expect(sql).not.toContain("with check (true)");
++  });
++
++  it("production_hardening ogranicza zapis treści do is_admin()", () => {
++    const sql = readMigration("20260906220000_production_hardening.sql");
++    expect(sql).toContain("public.is_admin()");
++    expect(sql).toContain("for select to anon, authenticated");
++    expect(sql).toContain("for insert to authenticated with check (public.is_admin())");
++  });
++});

@@ -97,7 +97,13 @@ export async function POST(request: Request): Promise<Response> {
   const newUserId = data.user.id;
   after(async () => {
     try {
-      await deliverSignupNotification(newUserId);
+      const result = await deliverSignupNotification(newUserId);
+      if (result.status >= 400) {
+        console.error(
+          "[telegram-signup] Powiadomienie nie zostało wysłane:",
+          result.body,
+        );
+      }
     } catch (notificationError) {
       console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
     }

@@ -272,8 +272,9 @@ export function ArkuszeCkeCatalog({
           Arkusze{" "}
           <span className="text-accent">CKE</span>
         </h1>
-        <p className="mt-2 text-sm text-muted">
-          Interaktywne arkusze z rozwiązaniami krok po kroku.{" "}
+        <p className="mt-2 max-w-2xl text-sm text-muted">
+          Oficjalne sesje CKE i arkusze z bazy serwisu, posegregowane po latach.
+          Rozwiązania krok po kroku.{" "}
           <Link
             href="/baza-zadan"
             className="font-semibold text-accent hover:text-foreground"
@@ -340,41 +341,41 @@ export function ArkuszeCkeCatalog({
         <div className="mt-10 rounded-2xl border border-surface-border bg-surface p-8 text-center">
           <p className="text-lg font-extrabold text-foreground">Brak arkuszy</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-muted">
-            Oficjalne sesje CKE powinny być w archiwum aplikacji. Sprawdź
-            wdrożenie albo wróć do treningu tematycznego.
+            Nie znaleziono arkuszy w archiwum. Wróć do treningu tematycznego
+            albo spróbuj ponownie później.
           </p>
+          <Link
+            href="/trening"
+            className="btn-chunky-soft mt-5 px-4 py-2 text-sm"
+          >
+            Wróć do treningu
+          </Link>
         </div>
       )}
 
-      {maturaSections.map((section) => (
-        <section key={section.key} className="mt-8">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-accent" aria-hidden />
-            <div>
-              <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
-                {section.label} - oficjalne sesje CKE
-              </h2>
-              <p className="mt-1 text-sm text-muted">
-                Od najnowszych sesji.
-              </p>
-            </div>
-          </div>
-          <div className="mt-6 space-y-8">
-            {section.years.map(({ year, sheets }) => (
-              <div key={year}>
-                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
-                  Rok {year}
-                </h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {sheets.map((sheet) => (
-                    <ArchiveSheetCard key={sheet.id} sheet={sheet} />
-                  ))}
-                </div>
+      {maturaSections.map((section) => {
+        const sheets = section.years.flatMap((entry) => entry.sheets);
+        return (
+          <section key={section.key} className="mt-8">
+            <div className="flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-accent" aria-hidden />
+              <div>
+                <h2 className="text-lg font-extrabold text-foreground sm:text-xl">
+                  {section.label} - oficjalne sesje CKE
+                </h2>
+                <p className="mt-1 text-sm text-muted">
+                  Od najnowszych sesji.
+                </p>
               </div>
-            ))}
-          </div>
-        </section>
-      ))}
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {sheets.map((sheet) => (
+                <ArchiveSheetCard key={sheet.id} sheet={sheet} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
 
       {archiveE8.length > 0 && (
         <section className="mt-8">
@@ -389,19 +390,12 @@ export function ArkuszeCkeCatalog({
               </p>
             </div>
           </div>
-          <div className="mt-6 space-y-8">
-            {archiveE8.map(({ year, sheets }) => (
-              <div key={year}>
-                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-muted">
-                  Rok {year}
-                </h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {sheets.map((sheet) => (
-                    <ArchiveSheetCard key={sheet.id} sheet={sheet} />
-                  ))}
-                </div>
-              </div>
-            ))}
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {archiveE8
+              .flatMap((entry) => entry.sheets)
+              .map((sheet) => (
+                <ArchiveSheetCard key={sheet.id} sheet={sheet} />
+              ))}
           </div>
         </section>
       )}
@@ -414,8 +408,8 @@ export function ArkuszeCkeCatalog({
       )}
 
       <CmsYearSection
-        title="Egzamin ósmoklasisty"
-        subtitle="Arkusze z bazy serwisu"
+        title="Arkusze ósmoklasisty z bazy serwisu"
+        subtitle="Materiały spoza oficjalnego archiwum CKE"
         groups={e8Groups}
         icon={School}
         yearFilter="all"
