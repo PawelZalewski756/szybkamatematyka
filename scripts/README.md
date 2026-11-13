@@ -80,7 +80,7 @@ npm run seed:trening-tasks -- --dry-run
 npm run seed:trening-tasks -- --materials-only
 ```
 
-**Wymagania:** `.env.local` z Supabase; w SQL Editor uruchom też `migrations/init_tasks.sql`, `init_materials.sql` i `add_tasks_materials_insert.sql` (polityki INSERT).
+**Wymagania:** `.env.local` z `NEXT_PUBLIC_SUPABASE_URL` i `SUPABASE_SERVICE_ROLE_KEY`. Zapis do `tasks`/`materials` jest zablokowany dla `anon`/`authenticated` (RLS z `production_hardening`), więc seed musi iść kluczem service role.
 
 Ponowne uruchomienie **pomija duplikaty** (hash treści). Pełny import ~1–3 min.
 

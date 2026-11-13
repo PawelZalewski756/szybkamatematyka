@@ -194,7 +194,7 @@ function MaterialyAdminContent() {
       setError(
         err instanceof Error
           ? err.message
-          : "Błąd zapisu - uruchom add_tasks_materials_insert.sql w Supabase.",
+          : "Błąd zapisu - sprawdź, czy Twój e-mail jest w tabeli admin_emails w Supabase.",
       );
     } finally {
       setSaving(false);
@@ -516,8 +516,9 @@ function MaterialyAdminContent() {
       </div>
 
       <p className="mt-6 text-center text-xs text-muted">
-        RLS:{" "}
-        <code className="text-muted">add_tasks_materials_insert.sql</code>
+        Zapis:{" "}
+        <code className="text-muted">public.is_admin()</code> (tabela{" "}
+        <code className="text-muted">admin_emails</code>)
       </p>
     </div>
   );

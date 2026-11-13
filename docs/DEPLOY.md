@@ -182,11 +182,14 @@ on conflict do nothing;
 
 ### Seed danych
 
-`add_tasks_materials_insert.sql` otwiera zapis dla anon i authenticated. To
-plik wyłącznie do jednorazowego, lokalnego/stagingowego seedu i nie wolno go
-uruchamiać na produkcji. Na produkcji używaj `SUPABASE_SERVICE_ROLE_KEY` w
-skryptach seedujących, a po każdym seedzie uruchom ponownie
-`20260906220000_production_hardening.sql`.
+`add_tasks_materials_insert.sql` jest **wyłączony** (no-op). Kiedyś otwierał
+zapis dla `anon` i `authenticated`, co przy publicznym kluczu z bundle'a
+pozwalało każdemu modyfikować bazę zadań. Aktualny stan wymusza
+`20260906220000_production_hardening.sql`: odczyt publiczny, zapis tylko dla
+zalogowanego administratora (`public.is_admin()` + `admin_emails`).
+
+Na produkcji i lokalnie skrypty seedujące używają `SUPABASE_SERVICE_ROLE_KEY`.
+Po edycji polityk RLS uruchom ponownie `20260906220000_production_hardening.sql`.
 
 ```bash
 npm run seed:trening-tasks -- --dry-run
