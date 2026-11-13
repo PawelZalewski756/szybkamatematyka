@@ -65,6 +65,7 @@ describe("generateTableTasks", () => {
     for (const task of tasks) {
       for (const value of [...task.choices, task.prompt, task.explanation]) {
         expect(value).not.toMatch(/\b(?:NaN|undefined|null|Infinity)\b/);
+        expect(value).not.toMatch(/[ĹÄĂÂ]|â€/);
       }
     }
   });

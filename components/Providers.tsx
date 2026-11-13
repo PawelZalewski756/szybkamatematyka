@@ -6,6 +6,7 @@ import { SchoolClassSync } from "@/components/SchoolClassSync";
 import { StreakReminderHost } from "@/components/reminders/StreakReminderHost";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { SolvedTasksProvider } from "@/components/SolvedTasksProvider";
+import { ConfirmedAccountNotifier } from "@/components/telegram/ConfirmedAccountNotifier";
 import { setRuntimePublicConfig, isSupabaseConfigured } from "@/lib/supabase/config";
 import { VisitCounter } from "@/components/analytics/VisitCounter";
 import { MotionConfig } from "framer-motion";
@@ -65,6 +66,7 @@ export function Providers({ children }: { children: ReactNode }) {
       <VisitCounter />
       <LearningPathProvider>
         <SchoolClassSync />
+        <ConfirmedAccountNotifier />
         <SolvedTasksProvider>
           <OnboardingGate>
             <StreakReminderHost />

@@ -1,4 +1,4 @@
-﻿import { gcd, uniqueChoices } from "@/lib/baza-zadan/task-generators";
+import { gcd, uniqueChoices } from "@/lib/baza-zadan/task-generators";
 import type { Task } from "@/lib/baza-zadan/types";
 
 const FOR_BOTH = ["sp", "srednia"] as const;
@@ -20,18 +20,18 @@ function table(
 }
 
 function money(value: number): string {
-  return `${value} zĹ‚`;
+  return `${value} zł`;
 }
 
 function offers(): Task[] {
   const providers = [
     "NetLink",
-    "ĹšwiatĹ‚owĂłd+",
+    "Światłowód+",
     "FiberGo",
     "DomNet",
     "SzybkiNet",
     "Orbita",
-    "TeleStrumieĹ„",
+    "TeleStrumień",
     "Megaline",
     "Wavenet",
     "PixelNet",
@@ -68,10 +68,10 @@ function offers(): Task[] {
         difficulty: i % 3 === 0 ? "trudny" : "sredni",
         forPaths: FOR_BOTH,
         prompt: [
-          `PorĂłwnaj oferty internetu na 12 miesiÄ™cy.`,
+          `Porównaj oferty internetu na 12 miesięcy.`,
           "",
           table(
-            ["Dostawca", "MiesiÄ…c", "Aktywacja", "Router"],
+            ["Dostawca", "Miesiąc", "Aktywacja", "Router"],
             [
               [providers[i]!, money(prices[0]!), money(activation), money(routers)],
               [providers[(i + 1) % providers.length]!, money(prices[1]!), money(oneTime[1]!), money(0)],
@@ -79,18 +79,18 @@ function offers(): Task[] {
             ],
           ),
           "",
-          "Ile wynosi najniĹĽszy koszt caĹ‚kowity po 12 miesiÄ…cach?",
+          "Ile wynosi najniższy koszt całkowity po 12 miesiącach?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Koszt pierwszej oferty to 12 Â· ${prices[0]} + ${oneTime[0]} = ${totals[0]} zĹ‚, drugiej ${totals[1]} zĹ‚, trzeciej ${totals[2]} zĹ‚. Najtaniej wychodzi ${cheapest} zĹ‚.`,
+        explanation: `Koszt pierwszej oferty to 12 · ${prices[0]} + ${oneTime[0]} = ${totals[0]} zł, drugiej ${totals[1]} zł, trzeciej ${totals[2]} zł. Najtaniej wychodzi ${cheapest} zł.`,
         solutionSteps: [
-          `Policz 12 miesiÄ™cy dla pierwszej oferty: 12 Â· ${prices[0]} zĹ‚ = ${prices[0]! * 12} zĹ‚, dodaj ${oneTime[0]} zĹ‚, razem ${totals[0]} zĹ‚.`,
-          `Dla drugiej oferty: 12 Â· ${prices[1]} zĹ‚ + ${oneTime[1]} zĹ‚ = ${totals[1]} zĹ‚.`,
-          `Dla trzeciej oferty: 12 Â· ${prices[2]} zĹ‚ + ${oneTime[2]} zĹ‚ = ${totals[2]} zĹ‚.`,
-          `NajniĹĽsza suma to ${cheapest} zĹ‚.`,
+          `Policz 12 miesięcy dla pierwszej oferty: 12 · ${prices[0]} zł = ${prices[0]! * 12} zł, dodaj ${oneTime[0]} zł, razem ${totals[0]} zł.`,
+          `Dla drugiej oferty: 12 · ${prices[1]} zł + ${oneTime[1]} zł = ${totals[1]} zł.`,
+          `Dla trzeciej oferty: 12 · ${prices[2]} zł + ${oneTime[2]} zł = ${totals[2]} zł.`,
+          `Najniższa suma to ${cheapest} zł.`,
         ],
-        hint: "Do opĹ‚aty miesiÄ™cznej dodaj wszystkie jednorazowe koszty.",
+        hint: "Do opłaty miesięcznej dodaj wszystkie jednorazowe koszty.",
       }),
     );
   }
@@ -100,15 +100,15 @@ function offers(): Task[] {
 
 function budgets(): Task[] {
   const trips = [
-    "KrakĂłw",
-    "GdaĹ„sk",
-    "WrocĹ‚aw",
-    "PoznaĹ„",
+    "Kraków",
+    "Gdańsk",
+    "Wrocław",
+    "Poznań",
     "Zakopane",
-    "ToruĹ„",
+    "Toruń",
     "Lublin",
     "Szczecin",
-    "BiaĹ‚ystok",
+    "Białystok",
     "Kielce",
   ];
   const tasks: Task[] = [];
@@ -130,33 +130,33 @@ function budgets(): Task[] {
 
     tasks.push(
       t(`gen-budget-${i + 1}`, {
-        title: `BudĹĽet wycieczki #${i + 1}`,
+        title: `Budżet wycieczki #${i + 1}`,
         category: "arytmetyka",
         difficulty: i % 4 === 0 ? "sredni" : "latwy",
         forPaths: FOR_BOTH,
         prompt: [
-          `Wycieczka do ${trips[i]} ma budĹĽet ${money(budget)}. W tabeli zapisano planowane wydatki.`,
+          `Wycieczka do ${trips[i]} ma budżet ${money(budget)}. W tabeli zapisano planowane wydatki.`,
           "",
           table(
             ["Wydatek", "Kwota"],
             [
               ["Transport", money(transport)],
               ["Nocleg", money(hotel)],
-              ["WyĹĽywienie", money(food)],
+              ["Wyżywienie", money(food)],
               ["Bilety", money(tickets)],
             ],
           ),
           "",
-          "Ile pieniÄ™dzy zostanie z budĹĽetu?",
+          "Ile pieniędzy zostanie z budżetu?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Suma wydatkĂłw to ${transport} + ${hotel} + ${food} + ${tickets} = ${total} zĹ‚. Z budĹĽetu ${budget} zĹ‚ zostaje ${left} zĹ‚.`,
+        explanation: `Suma wydatków to ${transport} + ${hotel} + ${food} + ${tickets} = ${total} zł. Z budżetu ${budget} zł zostaje ${left} zł.`,
         solutionSteps: [
-          `Dodaj wydatki: ${transport} + ${hotel} + ${food} + ${tickets} = ${total} zĹ‚.`,
-          `Odejmij sumÄ™ od budĹĽetu: ${budget} - ${total} = ${left} zĹ‚.`,
+          `Dodaj wydatki: ${transport} + ${hotel} + ${food} + ${tickets} = ${total} zł.`,
+          `Odejmij sumę od budżetu: ${budget} - ${total} = ${left} zł.`,
         ],
-        hint: "Najpierw zsumuj wszystkie wydatki, potem odejmij je od budĹĽetu.",
+        hint: "Najpierw zsumuj wszystkie wydatki, potem odejmij je od budżetu.",
       }),
     );
   }
@@ -173,7 +173,7 @@ function discounts(): Task[] {
     ],
     [
       ["Namiot", 360],
-      ["ĹšpiwĂłr", 240],
+      ["Śpiwór", 240],
       ["Latarka", 80],
     ],
     [
@@ -184,7 +184,7 @@ function discounts(): Task[] {
     [
       ["Telefon", 1200],
       ["Etui", 120],
-      ["Ĺadowarka", 80],
+      ["Ładowarka", 80],
     ],
     [
       ["Fotel", 600],
@@ -222,7 +222,7 @@ function discounts(): Task[] {
         difficulty: i % 3 === 0 ? "trudny" : "sredni",
         forPaths: FOR_BOTH,
         prompt: [
-          "W tabeli podano ceny produktĂłw i rabat na kaĹĽdy z nich.",
+          "W tabeli podano ceny produktów i rabat na każdy z nich.",
           "",
           table(
             ["Produkt", "Cena", "Rabat"],
@@ -233,22 +233,22 @@ function discounts(): Task[] {
             ]),
           ),
           "",
-          "Ile zapĹ‚acisz Ĺ‚Ä…cznie po rabatach?",
+          "Ile zapłacisz łącznie po rabatach?",
         ].join("\n"),
         choices,
         correctIndex,
         explanation: values
           .map(
             (item) =>
-              `${item.name}: ${item.price} - ${item.percent}% = ${item.final} zĹ‚`,
+              `${item.name}: ${item.price} - ${item.percent}% = ${item.final} zł`,
           )
-          .concat(`Razem: ${total} zĹ‚.`)
+          .concat(`Razem: ${total} zł.`)
           .join(" "),
         solutionSteps: values.map(
           (item) =>
-            `Policz rabat dla produktu ${item.name}: ${item.percent}% z ${item.price} zĹ‚ to ${item.price - item.final} zĹ‚, wiÄ™c zostaje ${item.final} zĹ‚.`,
+            `Policz rabat dla produktu ${item.name}: ${item.percent}% z ${item.price} zł to ${item.price - item.final} zł, więc zostaje ${item.final} zł.`,
         ),
-        hint: "Rabat licz od ceny kaĹĽdego produktu osobno.",
+        hint: "Rabat licz od ceny każdego produktu osobno.",
       }),
     );
   }
@@ -286,26 +286,26 @@ function averages(): Task[] {
 
     tasks.push(
       t(`gen-average-${i + 1}`, {
-        title: `Ĺšrednia ocen #${i + 1}`,
+        title: `Średnia ocen #${i + 1}`,
         category: "arytmetyka",
         difficulty: "latwy",
         forPaths: FOR_BOTH,
         prompt: [
-          "W tabeli podano oceny z piÄ™ciu przedmiotĂłw.",
+          "W tabeli podano oceny z pięciu przedmiotów.",
           "",
           table(
             ["Przedmiot", "Ocena"],
             subjects.map((subject, index) => [subject, values[index]!]),
           ),
           "",
-          "Jaka jest Ĺ›rednia ocen z tych przedmiotĂłw?",
+          "Jaka jest średnia ocen z tych przedmiotów?",
         ].join("\n"),
         choices,
         correctIndex,
         explanation: `Suma ocen to ${values.join(" + ")} = ${sum}. Dzielimy przez 5: ${sum} : 5 = ${average}.`,
         solutionSteps: [
           `Dodaj oceny: ${values.join(" + ")} = ${sum}.`,
-          `Podziel sumÄ™ przez liczbÄ™ przedmiotĂłw: ${sum} : 5 = ${average}.`,
+          `Podziel sumę przez liczbę przedmiotów: ${sum} : 5 = ${average}.`,
         ],
       }),
     );
@@ -316,11 +316,11 @@ function averages(): Task[] {
 
 function recipes(): Task[] {
   const dishes = [
-    ["NaleĹ›niki", [["MÄ…ka", 200, "g"], ["Mleko", 300, "ml"], ["Jajka", 2, "szt."]]],
-    ["Koktajl", [["Banan", 2, "szt."], ["Mleko", 400, "ml"], ["MiĂłd", 100, "g"]]],
+    ["Naleśniki", [["Mąka", 200, "g"], ["Mleko", 300, "ml"], ["Jajka", 2, "szt."]]],
+    ["Koktajl", [["Banan", 2, "szt."], ["Mleko", 400, "ml"], ["Miód", 100, "g"]]],
     ["Zupa", [["Ziemniaki", 600, "g"], ["Marchew", 200, "g"], ["Bulion", 800, "ml"]]],
-    ["Ciasto", [["MÄ…ka", 400, "g"], ["Cukier", 200, "g"], ["MasĹ‚o", 200, "g"]]],
-    ["SaĹ‚atka", [["Pomidory", 400, "g"], ["OgĂłrek", 200, "g"], ["Feta", 200, "g"]]],
+    ["Ciasto", [["Mąka", 400, "g"], ["Cukier", 200, "g"], ["Masło", 200, "g"]]],
+    ["Sałatka", [["Pomidory", 400, "g"], ["Ogórek", 200, "g"], ["Feta", 200, "g"]]],
   ] as const;
   const tasks: Task[] = [];
 
@@ -344,10 +344,10 @@ function recipes(): Task[] {
         difficulty: "sredni",
         forPaths: FOR_BOTH,
         prompt: [
-          `Przepis na ${dish} podaje iloĹ›ci na 4 porcje. Chcesz przygotowaÄ‡ 10 porcji.`,
+          `Przepis na ${dish} podaje ilości na 4 porcje. Chcesz przygotować 10 porcji.`,
           "",
           table(
-            ["SkĹ‚adnik", "Na 4 porcje"],
+            ["Składnik", "Na 4 porcje"],
             ingredients.map(([ingredientName, ingredientAmount, ingredientUnit]) => [
               ingredientName,
               `${ingredientAmount} ${ingredientUnit}`,
@@ -358,12 +358,12 @@ function recipes(): Task[] {
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `10 porcji to 2,5 razy wiÄ™cej niĹĽ 4 porcje. ${amount} ${unit} Â· 2,5 = ${needed} ${unit}.`,
+        explanation: `10 porcji to 2,5 razy więcej niż 4 porcje. ${amount} ${unit} · 2,5 = ${needed} ${unit}.`,
         solutionSteps: [
           "Oblicz stosunek porcji: 10 : 4 = 2,5.",
-          `PomnĂłĹĽ iloĹ›Ä‡: ${amount} ${unit} Â· 2,5 = ${needed} ${unit}.`,
+          `Pomnóż ilość: ${amount} ${unit} · 2,5 = ${needed} ${unit}.`,
         ],
-        hint: "Ile razy wiÄ™cej porcji przygotowujesz?",
+        hint: "Ile razy więcej porcji przygotowujesz?",
       }),
     );
   }
@@ -387,7 +387,7 @@ function ticketSales(): Task[] {
   const tasks: Task[] = [];
 
   for (let i = 0; i < 10; i++) {
-    const days = ["piÄ…tek", "sobota", "niedziela"];
+    const days = ["piątek", "sobota", "niedziela"];
     const counts = [30 + (i % 4) * 10, 50 + (i % 5) * 10, 40 + (i % 3) * 10];
     const prices = [20 + (i % 3) * 5, 20 + (i % 3) * 5, 25 + (i % 4) * 5];
     const revenues = counts.map((count, index) => count * prices[index]!);
@@ -401,15 +401,15 @@ function ticketSales(): Task[] {
 
     tasks.push(
       t(`gen-tickets-${i + 1}`, {
-        title: `SprzedaĹĽ biletĂłw #${i + 1}`,
+        title: `Sprzedaż biletów #${i + 1}`,
         category: "arytmetyka",
         difficulty: "sredni",
         forPaths: FOR_BOTH,
         prompt: [
-          `W tabeli podano sprzedaĹĽ biletĂłw na ${events[i]!.toLowerCase()} w kolejne dni.`,
+          `W tabeli podano sprzedaż biletów na ${events[i]!.toLowerCase()} w kolejne dni.`,
           "",
           table(
-            ["DzieĹ„", "Liczba biletĂłw", "Cena biletu"],
+            ["Dzień", "Liczba biletów", "Cena biletu"],
             days.map((day, index) => [
               day,
               counts[index]!,
@@ -417,22 +417,22 @@ function ticketSales(): Task[] {
             ]),
           ),
           "",
-          "Jaki byĹ‚ Ĺ‚Ä…czny przychĂłd ze sprzedaĹĽy biletĂłw?",
+          "Jaki był łączny przychód ze sprzedaży biletów?",
         ].join("\n"),
         choices,
         correctIndex,
         explanation: days
           .map(
             (day, index) =>
-              `${day}: ${counts[index]} Â· ${prices[index]} = ${revenues[index]} zĹ‚`,
+              `${day}: ${counts[index]} · ${prices[index]} = ${revenues[index]} zł`,
           )
-          .concat(`Razem: ${total} zĹ‚.`)
+          .concat(`Razem: ${total} zł.`)
           .join(" "),
         solutionSteps: [
-          `Policz przychĂłd w piÄ…tek: ${counts[0]} Â· ${prices[0]} = ${revenues[0]} zĹ‚.`,
-          `Policz sobotÄ™: ${counts[1]} Â· ${prices[1]} = ${revenues[1]} zĹ‚.`,
-          `Policz niedzielÄ™: ${counts[2]} Â· ${prices[2]} = ${revenues[2]} zĹ‚.`,
-          `Dodaj: ${revenues[0]} + ${revenues[1]} + ${revenues[2]} = ${total} zĹ‚.`,
+          `Policz przychód w piątek: ${counts[0]} · ${prices[0]} = ${revenues[0]} zł.`,
+          `Policz sobotę: ${counts[1]} · ${prices[1]} = ${revenues[1]} zł.`,
+          `Policz niedzielę: ${counts[2]} · ${prices[2]} = ${revenues[2]} zł.`,
+          `Dodaj: ${revenues[0]} + ${revenues[1]} + ${revenues[2]} = ${total} zł.`,
         ],
       }),
     );
@@ -468,29 +468,29 @@ function probabilityTasks(): Task[] {
 
     tasks.push(
       t(`gen-probability-${i + 1}`, {
-        title: `PrawdopodobieĹ„stwo z tabeli #${i + 1}`,
+        title: `Prawdopodobieństwo z tabeli #${i + 1}`,
         category: "egzamin-8",
         difficulty: "sredni",
         forPaths: FOR_BOTH,
         prompt: [
-          "W tabeli zapisano wyniki 50 rzutĂłw kostkÄ… czworoĹ›ciennÄ….",
+          "W tabeli zapisano wyniki 50 rzutów kostką czworościenną.",
           "",
           table(
             ["Wynik", "1", "2", "3", "4"],
-            [["Liczba rzutĂłw", values[0]!, values[1]!, values[2]!, values[3]!]],
+            [["Liczba rzutów", values[0]!, values[1]!, values[2]!, values[3]!]],
           ),
           "",
-          "Jakie jest prawdopodobieĹ„stwo, ĹĽe w kolejnym rzucie wypadnie liczba parzysta, jeĹ›li oszacujemy je na podstawie tabeli?",
+          "Jakie jest prawdopodobieństwo, że w kolejnym rzucie wypadnie liczba parzysta, jeśli oszacujemy je na podstawie tabeli?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Liczby parzyste to 2 i 4, czyli ${values[1]} + ${values[3]} = ${even} rzutĂłw. Wszystkich rzutĂłw byĹ‚o 50, wiÄ™c prawdopodobieĹ„stwo to ${even}/50 = ${correct}.`,
+        explanation: `Liczby parzyste to 2 i 4, czyli ${values[1]} + ${values[3]} = ${even} rzutów. Wszystkich rzutów było 50, więc prawdopodobieństwo to ${even}/50 = ${correct}.`,
         solutionSteps: [
           `Dodaj rzuty z parzystymi wynikami: ${values[1]} + ${values[3]} = ${even}.`,
-          `Zapisz uĹ‚amek: ${even}/50.`,
-          `SkrĂłÄ‡ uĹ‚amek przez ${divisor}: ${correct}.`,
+          `Zapisz ułamek: ${even}/50.`,
+          `Skróć ułamek przez ${divisor}: ${correct}.`,
         ],
-        hint: "Najpierw policz sumÄ™ rzutĂłw dla wynikĂłw parzystych.",
+        hint: "Najpierw policz sumę rzutów dla wyników parzystych.",
       }),
     );
   }
@@ -525,12 +525,12 @@ function speedTasks(): Task[] {
 
     tasks.push(
       t(`gen-speed-${i + 1}`, {
-        title: `Ĺšrednia prÄ™dkoĹ›Ä‡ #${i + 1}`,
+        title: `Średnia prędkość #${i + 1}`,
         category: "funkcje",
         difficulty: "trudny",
         forPaths: ["srednia"],
         prompt: [
-          "Autokar pokonaĹ‚ trzy odcinki trasy. W tabeli podano drogÄ™ i czas kaĹĽdego odcinka.",
+          "Autokar pokonał trzy odcinki trasy. W tabeli podano drogę i czas każdego odcinka.",
           "",
           table(
             ["Odcinek", "Droga", "Czas"],
@@ -541,17 +541,17 @@ function speedTasks(): Task[] {
             ],
           ),
           "",
-          "Jaka byĹ‚a Ĺ›rednia prÄ™dkoĹ›Ä‡ autokaru na caĹ‚ej trasie?",
+          "Jaka była średnia prędkość autokaru na całej trasie?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `CaĹ‚a droga to ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km. CaĹ‚y czas to ${times[0]} + ${times[1]} + ${times[2]} = ${totalTime} h. Ĺšrednia prÄ™dkoĹ›Ä‡ to ${totalDistance} : ${totalTime} = ${format(average)}.`,
+        explanation: `Cała droga to ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km. Cały czas to ${times[0]} + ${times[1]} + ${times[2]} = ${totalTime} h. Średnia prędkość to ${totalDistance} : ${totalTime} = ${format(average)}.`,
         solutionSteps: [
-          `Dodaj drogÄ™: ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km.`,
+          `Dodaj drogę: ${distances[0]} + ${distances[1]} + ${distances[2]} = ${totalDistance} km.`,
           `Dodaj czas: ${times[0]} + ${times[1]} + ${times[2]} = ${totalTime} h.`,
-          `Podziel drogÄ™ przez czas: ${totalDistance} : ${totalTime} = ${format(average)}.`,
+          `Podziel drogę przez czas: ${totalDistance} : ${totalTime} = ${format(average)}.`,
         ],
-        hint: "Ĺšrednia prÄ™dkoĹ›Ä‡ to caĹ‚a droga podzielona przez caĹ‚y czas, nie Ĺ›rednia prÄ™dkoĹ›ci z odcinkĂłw.",
+        hint: "Średnia prędkość to cała droga podzielona przez cały czas, nie średnia prędkości z odcinków.",
       }),
     );
   }
@@ -582,19 +582,19 @@ function linearTasks(): Task[] {
         difficulty: "sredni",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano kilka wartoĹ›ci funkcji liniowej f.",
+          "W tabeli podano kilka wartości funkcji liniowej f.",
           "",
           table(["x", "f(x)"], xs.map((x, index) => [x, values[index]!])),
           "",
-          "Jaka jest wartoĹ›Ä‡ f(5)?",
+          "Jaka jest wartość f(5)?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Z tabeli widaÄ‡, ĹĽe kaĹĽde zwiÄ™kszenie x o 1 zwiÄ™ksza f(x) o ${a}. WzĂłr to f(x) = ${a}x + ${b}, wiÄ™c f(5) = ${a} Â· 5 + ${b} = ${correct}.`,
+        explanation: `Z tabeli widać, że każde zwiększenie x o 1 zwiększa f(x) o ${a}. Wzór to f(x) = ${a}x + ${b}, więc f(5) = ${a} · 5 + ${b} = ${correct}.`,
         solutionSteps: [
-          `Odczytaj rĂłĹĽnicÄ™: f(0) = ${b}, f(1) = ${a + b}, wiÄ™c wspĂłĹ‚czynnik kierunkowy to ${a}.`,
-          `Zapisz wzĂłr: f(x) = ${a}x + ${b}.`,
-          `Policz f(5): ${a} Â· 5 + ${b} = ${correct}.`,
+          `Odczytaj różnicę: f(0) = ${b}, f(1) = ${a + b}, więc współczynnik kierunkowy to ${a}.`,
+          `Zapisz wzór: f(x) = ${a}x + ${b}.`,
+          `Policz f(5): ${a} · 5 + ${b} = ${correct}.`,
         ],
       }),
     );
@@ -626,17 +626,17 @@ function quadraticTasks(): Task[] {
         difficulty: "trudny",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano kilka wartoĹ›ci funkcji kwadratowej f.",
+          "W tabeli podano kilka wartości funkcji kwadratowej f.",
           "",
           table(["x", "f(x)"], xs.map((x, index) => [x, values[index]!])),
           "",
-          "Jaka jest wartoĹ›Ä‡ f(3)?",
+          "Jaka jest wartość f(3)?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Z tabeli moĹĽna odtworzyÄ‡ wzĂłr f(x) = xÂ˛ ${p < 0 ? "-" : "+"} ${Math.abs(p)}x + ${q}. Dla x = 3: 9 ${p < 0 ? "-" : "+"} ${Math.abs(3 * p)} + ${q} = ${correct}.`,
+        explanation: `Z tabeli można odtworzyć wzór f(x) = x² ${p < 0 ? "-" : "+"} ${Math.abs(p)}x + ${q}. Dla x = 3: 9 ${p < 0 ? "-" : "+"} ${Math.abs(3 * p)} + ${q} = ${correct}.`,
         solutionSteps: [
-          `Zapisz wzĂłr funkcji: f(x) = xÂ˛ ${p < 0 ? "-" : "+"} ${Math.abs(p)}x + ${q}.`,
+          `Zapisz wzór funkcji: f(x) = x² ${p < 0 ? "-" : "+"} ${Math.abs(p)}x + ${q}.`,
           `Podstaw x = 3: 9 ${p < 0 ? "-" : "+"} ${Math.abs(3 * p)} + ${q}.`,
           `Policz wynik: ${correct}.`,
         ],
@@ -666,27 +666,27 @@ function arithmeticTasks(): Task[] {
 
     tasks.push(
       t(`gen-arithmetic-${i + 1}`, {
-        title: `CiÄ…g arytmetyczny #${i + 1}`,
+        title: `Ciąg arytmetyczny #${i + 1}`,
         category: "ciagi",
         difficulty: "sredni",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano pierwsze wyrazy ciÄ…gu arytmetycznego.",
+          "W tabeli podano pierwsze wyrazy ciągu arytmetycznego.",
           "",
           table(
-            ["n", "aâ‚™"],
+            ["n", "aₙ"],
             values.map((value, index) => [index + 1, value]),
           ),
           "",
-          "Ile wynosi dziesiÄ…ty wyraz tego ciÄ…gu?",
+          "Ile wynosi dziesiąty wyraz tego ciągu?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Pierwszy wyraz to ${first}, a rĂłĹĽnica to ${difference}. WzĂłr: aâ‚™ = ${first} + (n - 1) Â· ${difference}. Dla n = 10: ${first} + 9 Â· ${difference} = ${correct}.`,
+        explanation: `Pierwszy wyraz to ${first}, a różnica to ${difference}. Wzór: aₙ = ${first} + (n - 1) · ${difference}. Dla n = 10: ${first} + 9 · ${difference} = ${correct}.`,
         solutionSteps: [
-          `Odczytaj pierwszy wyraz: aâ‚ = ${first}.`,
-          `Oblicz rĂłĹĽnicÄ™: aâ‚‚ - aâ‚ = ${values[1]} - ${first} = ${difference}.`,
-          `Podstaw do wzoru: aâ‚â‚€ = ${first} + 9 Â· ${difference} = ${correct}.`,
+          `Odczytaj pierwszy wyraz: a₁ = ${first}.`,
+          `Oblicz różnicę: a₂ - a₁ = ${values[1]} - ${first} = ${difference}.`,
+          `Podstaw do wzoru: a₁₀ = ${first} + 9 · ${difference} = ${correct}.`,
         ],
       }),
     );
@@ -714,27 +714,27 @@ function geometricTasks(): Task[] {
 
     tasks.push(
       t(`gen-geometric-${i + 1}`, {
-        title: `CiÄ…g geometryczny #${i + 1}`,
+        title: `Ciąg geometryczny #${i + 1}`,
         category: "ciagi",
         difficulty: "sredni",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano pierwsze wyrazy ciÄ…gu geometrycznego.",
+          "W tabeli podano pierwsze wyrazy ciągu geometrycznego.",
           "",
           table(
-            ["n", "aâ‚™"],
+            ["n", "aₙ"],
             values.map((value, index) => [index + 1, value]),
           ),
           "",
-          "Ile wynosi szĂłsty wyraz tego ciÄ…gu?",
+          "Ile wynosi szósty wyraz tego ciągu?",
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `Pierwszy wyraz to ${first}, a iloraz to ${ratio}. WzĂłr: aâ‚™ = ${first} Â· ${ratio}âżâ»Âą. Dla n = 6: ${first} Â· ${ratio}âµ = ${correct}.`,
+        explanation: `Pierwszy wyraz to ${first}, a iloraz to ${ratio}. Wzór: aₙ = ${first} · ${ratio}ⁿ⁻¹. Dla n = 6: ${first} · ${ratio}⁵ = ${correct}.`,
         solutionSteps: [
-          `Odczytaj pierwszy wyraz: aâ‚ = ${first}.`,
-          `Oblicz iloraz: aâ‚‚ : aâ‚ = ${values[1]} : ${first} = ${ratio}.`,
-          `Podstaw do wzoru: aâ‚† = ${first} Â· ${ratio}âµ = ${correct}.`,
+          `Odczytaj pierwszy wyraz: a₁ = ${first}.`,
+          `Oblicz iloraz: a₂ : a₁ = ${values[1]} : ${first} = ${ratio}.`,
+          `Podstaw do wzoru: a₆ = ${first} · ${ratio}⁵ = ${correct}.`,
         ],
       }),
     );
@@ -765,10 +765,10 @@ function logarithmTasks(): Task[] {
         difficulty: "sredni",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano kolejne potÄ™gi pewnej liczby.",
+          "W tabeli podano kolejne potęgi pewnej liczby.",
           "",
           table(
-            ["PotÄ™ga", "WartoĹ›Ä‡"],
+            ["Potęga", "Wartość"],
             [1, 2, 3, 4].map((power) => [
               `${base}^${power}`,
               base ** power,
@@ -779,10 +779,10 @@ function logarithmTasks(): Task[] {
         ].join("\n"),
         choices,
         correctIndex,
-        explanation: `${base} podniesione do potÄ™gi ${exponent} daje ${value}, wiÄ™c log_${base}(${value}) = ${exponent}.`,
+        explanation: `${base} podniesione do potęgi ${exponent} daje ${value}, więc log_${base}(${value}) = ${exponent}.`,
         solutionSteps: [
-          `Szukamy wykĹ‚adnika x, dla ktĂłrego ${base}^x = ${value}.`,
-          `Z tabeli odczytujemy, ĹĽe ${base}^${exponent} = ${value}.`,
+          `Szukamy wykładnika x, dla którego ${base}^x = ${value}.`,
+          `Z tabeli odczytujemy, że ${base}^${exponent} = ${value}.`,
           `Zatem log_${base}(${value}) = ${exponent}.`,
         ],
       }),
@@ -795,64 +795,64 @@ function logarithmTasks(): Task[] {
 function trigonometryTasks(): Task[] {
   const questions = [
     {
-      text: "Ile wynosi sin 30Â° + cos 60Â°?",
+      text: "Ile wynosi sin 30° + cos 60°?",
       correct: "1",
       wrongs: ["1/2", "0", "2"],
-      explanation: "sin 30Â° = 1/2 i cos 60Â° = 1/2, wiÄ™c suma wynosi 1.",
+      explanation: "sin 30° = 1/2 i cos 60° = 1/2, więc suma wynosi 1.",
     },
     {
-      text: "Ile wynosi sin 45Â° Â· cos 45Â°?",
+      text: "Ile wynosi sin 45° · cos 45°?",
       correct: "1/2",
-      wrongs: ["1", "1/4", "âš2/2"],
-      explanation: "sin 45Â° = âš2/2 i cos 45Â° = âš2/2, wiÄ™c iloczyn to 2/4 = 1/2.",
+      wrongs: ["1", "1/4", "√2/2"],
+      explanation: "sin 45° = √2/2 i cos 45° = √2/2, więc iloczyn to 2/4 = 1/2.",
     },
     {
-      text: "Ile wynosi sin 60Â° : cos 30Â°?",
+      text: "Ile wynosi sin 60° : cos 30°?",
       correct: "1",
-      wrongs: ["âš3", "1/2", "2"],
-      explanation: "sin 60Â° = âš3/2 i cos 30Â° = âš3/2, wiÄ™c iloraz wynosi 1.",
+      wrongs: ["√3", "1/2", "2"],
+      explanation: "sin 60° = √3/2 i cos 30° = √3/2, więc iloraz wynosi 1.",
     },
     {
-      text: "Ile wynosi cos 60Â° + sin 30Â°?",
+      text: "Ile wynosi cos 60° + sin 30°?",
       correct: "1",
-      wrongs: ["1/2", "âš3/2", "0"],
-      explanation: "cos 60Â° = 1/2 i sin 30Â° = 1/2, wiÄ™c suma wynosi 1.",
+      wrongs: ["1/2", "√3/2", "0"],
+      explanation: "cos 60° = 1/2 i sin 30° = 1/2, więc suma wynosi 1.",
     },
     {
-      text: "Ile wynosi sin 30Â° Â· cos 60Â°?",
+      text: "Ile wynosi sin 30° · cos 60°?",
       correct: "1/4",
       wrongs: ["1/2", "1", "0"],
-      explanation: "sin 30Â° = 1/2 i cos 60Â° = 1/2, wiÄ™c iloczyn to 1/4.",
+      explanation: "sin 30° = 1/2 i cos 60° = 1/2, więc iloczyn to 1/4.",
     },
     {
-      text: "Ile wynosi cos 30Â° Â· cos 60Â°?",
-      correct: "âš3/4",
-      wrongs: ["âš3/2", "1/2", "3/4"],
-      explanation: "cos 30Â° = âš3/2 i cos 60Â° = 1/2, wiÄ™c iloczyn to âš3/4.",
+      text: "Ile wynosi cos 30° · cos 60°?",
+      correct: "√3/4",
+      wrongs: ["√3/2", "1/2", "3/4"],
+      explanation: "cos 30° = √3/2 i cos 60° = 1/2, więc iloczyn to √3/4.",
     },
     {
-      text: "Ile wynosi sin 90Â° - cos 0Â°?",
+      text: "Ile wynosi sin 90° - cos 0°?",
       correct: "0",
       wrongs: ["1", "2", "-1"],
-      explanation: "sin 90Â° = 1 i cos 0Â° = 1, wiÄ™c rĂłĹĽnica wynosi 0.",
+      explanation: "sin 90° = 1 i cos 0° = 1, więc różnica wynosi 0.",
     },
     {
-      text: "Ile wynosi sin 45Â° + cos 45Â°?",
-      correct: "âš2",
-      wrongs: ["1", "âš2/2", "2"],
-      explanation: "sin 45Â° = âš2/2 i cos 45Â° = âš2/2, wiÄ™c suma to âš2.",
+      text: "Ile wynosi sin 45° + cos 45°?",
+      correct: "√2",
+      wrongs: ["1", "√2/2", "2"],
+      explanation: "sin 45° = √2/2 i cos 45° = √2/2, więc suma to √2.",
     },
     {
-      text: "Ile wynosi cos 30Â° : sin 60Â°?",
+      text: "Ile wynosi cos 30° : sin 60°?",
       correct: "1",
-      wrongs: ["âš3", "1/2", "2"],
-      explanation: "cos 30Â° = âš3/2 i sin 60Â° = âš3/2, wiÄ™c iloraz wynosi 1.",
+      wrongs: ["√3", "1/2", "2"],
+      explanation: "cos 30° = √3/2 i sin 60° = √3/2, więc iloraz wynosi 1.",
     },
     {
-      text: "Ile wynosi sin 60Â° Â· cos 30Â°?",
+      text: "Ile wynosi sin 60° · cos 30°?",
       correct: "3/4",
-      wrongs: ["1/2", "âš3/4", "1"],
-      explanation: "sin 60Â° = âš3/2 i cos 30Â° = âš3/2, wiÄ™c iloczyn to 3/4.",
+      wrongs: ["1/2", "√3/4", "1"],
+      explanation: "sin 60° = √3/2 i cos 30° = √3/2, więc iloczyn to 3/4.",
     },
   ];
   const tasks: Task[] = [];
@@ -871,16 +871,16 @@ function trigonometryTasks(): Task[] {
         difficulty: "sredni",
         forPaths: ["srednia"],
         prompt: [
-          "W tabeli podano wartoĹ›ci funkcji trygonometrycznych dla wybranych kÄ…tĂłw.",
+          "W tabeli podano wartości funkcji trygonometrycznych dla wybranych kątów.",
           "",
           table(
-            ["KÄ…t", "sin", "cos"],
+            ["Kąt", "sin", "cos"],
             [
-              ["0Â°", "0", "1"],
-              ["30Â°", "1/2", "âš3/2"],
-              ["45Â°", "âš2/2", "âš2/2"],
-              ["60Â°", "âš3/2", "1/2"],
-              ["90Â°", "1", "0"],
+              ["0°", "0", "1"],
+              ["30°", "1/2", "√3/2"],
+              ["45°", "√2/2", "√2/2"],
+              ["60°", "√3/2", "1/2"],
+              ["90°", "1", "0"],
             ],
           ),
           "",
@@ -896,7 +896,7 @@ function trigonometryTasks(): Task[] {
   return tasks;
 }
 
-/** 140 unikalnych wariantĂłw z tabelami, po 10 na rodzinÄ™. */
+/** 140 unikalnych wariantów z tabelami, po 10 na rodzinę. */
 export function generateTableTasks(): Task[] {
   return [
     ...offers(),
