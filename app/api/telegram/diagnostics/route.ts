@@ -67,6 +67,18 @@ export async function GET(request: Request): Promise<Response> {
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "");
+  const supabaseUrl =
+    process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ||
+    process.env.SUPABASE_URL?.trim() ||
+    "";
+  let supabaseHost: string | null = null;
+  if (supabaseUrl) {
+    try {
+      supabaseHost = new URL(supabaseUrl).host;
+    } catch {
+      supabaseHost = "invalid-url";
+    }
+  }
 
   const [bot, webhook] = token
     ? await Promise.all([
@@ -95,6 +107,7 @@ export async function GET(request: Request): Promise<Response> {
         serviceRole: Boolean(
           process.env.SUPABASE_SERVICE_ROLE_KEY?.trim(),
         ),
+        supabaseHost,
         siteUrl: siteUrl || null,
       },
       bot: bot.result ?? null,

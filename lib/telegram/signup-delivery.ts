@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { parseTelegramAdminIds } from "@/lib/telegram/admin-bot";
+import { listAllAuthUsers } from "@/lib/telegram/admin-users";
 import {
   formatSignupNotification,
   isRecentSignup,
@@ -59,6 +60,7 @@ async function sendTelegramMessage(
  */
 export async function deliverSignupNotification(
   userId: string,
+  options: { force?: boolean } = {},
 ): Promise<SignupDeliveryResult> {
   const botToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
   const adminIds = parseTelegramAdminIds(
@@ -96,12 +98,18 @@ export async function deliverSignupNotification(
   } = await supabase.auth.admin.getUserById(userId);
   if (userError) {
     console.error("[telegram-signup] Could not verify new account:", userError);
-    return { status: 502, body: { error: "Could not verify the new account." } };
+    return {
+      status: 502,
+      body: {
+        error: "Could not verify the new account.",
+        detail: userError.message,
+      },
+    };
   }
   if (!user) {
     return { status: 404, body: { error: "Account not found." } };
   }
-  if (!isRecentSignup(user.created_at, Date.now(), MAX_SIGNUP_AGE_MS)) {
+  if (!options.force && !isRecentSignup(user.created_at, Date.now(), MAX_SIGNUP_AGE_MS)) {
     return { status: 202, body: { delivered: false, reason: "account is not recent" } };
   }
 
@@ -165,4 +173,59 @@ export async function deliverSignupNotification(
     };
   }
   return { status: 200, body: { delivered: true } };
+}
+
+export type SignupReconcileResult = {
+  scanned: number;
+  delivered: number;
+  skipped: number;
+  failed: number;
+  errors: string[];
+};
+
+/**
+ * Ręczne odratowanie powiadomień, gdy `after()` na Vercelu nie zdążył ich
+ * wysłać albo konfiguracja została poprawiona po rejestracji. Idempotencja
+ * nadal opiera się na tabeli signup_notification_deliveries.
+ */
+export async function reconcileSignupNotifications(
+  hours = 24,
+): Promise<SignupReconcileResult> {
+  const supabase = getAdminSupabase();
+  if (!supabase) {
+    throw new Error("Missing Supabase server configuration for signup reconcile.");
+  }
+
+  const authUsers = await listAllAuthUsers(supabase);
+  const since = Date.now() - hours * 60 * 60 * 1000;
+  const recent = authUsers.users.filter((user) => {
+    const createdAt = Date.parse(user.created_at);
+    return Number.isFinite(createdAt) && createdAt >= since;
+  });
+
+  const result: SignupReconcileResult = {
+    scanned: recent.length,
+    delivered: 0,
+    skipped: 0,
+    failed: 0,
+    errors: [],
+  };
+
+  for (const user of recent) {
+    const delivery = await deliverSignupNotification(user.id, { force: true });
+    if (delivery.status === 200) {
+      result.delivered += 1;
+    } else if (delivery.status === 202) {
+      result.skipped += 1;
+    } else {
+      result.failed += 1;
+      const detail =
+        typeof delivery.body.error === "string"
+          ? delivery.body.error
+          : `status ${delivery.status}`;
+      result.errors.push(`${user.id}: ${detail}`);
+    }
+  }
+
+  return result;
 }

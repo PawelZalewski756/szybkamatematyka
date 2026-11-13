@@ -12,6 +12,7 @@ import {
   parseTelegramAdminIds,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
+import { reconcileSignupNotifications } from "@/lib/telegram/signup-delivery";
 
 export const runtime = "nodejs";
 
@@ -153,7 +154,8 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Konta (Auth): ${authUsers.total}`,
       `Profile w bazie: ${profiles.count ?? 0}`,
       `Nowe konta: ${newUsers}`,
-      `Rozwiązane zadania: ${solved.count ?? 0}`,
+      `Rozwiązane zadania (trening): ${solved.count ?? 0}`,
+      "Baza zadań: postęp jest zapisany lokalnie w przeglądarce, poza Supabase.",
       ...(authUsers.truncated
         ? ["Uwaga: lista kont jest obcięta do 20 000 użytkowników."]
         : []),
@@ -174,6 +176,18 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Wszystkie próby: ${stats.total_attempts}`,
       `Poprawne odpowiedzi: ${stats.correct_attempts}`,
       `Błędne odpowiedzi: ${stats.incorrect_attempts}`,
+    ].join("\n");
+  }
+
+  if (command === "reconcile") {
+    const result = await reconcileSignupNotifications(24);
+    return [
+      "Odratnianie powiadomień (24 h)",
+      `Sprawdzone konta: ${result.scanned}`,
+      `Wysłane: ${result.delivered}`,
+      `Pominięte: ${result.skipped}`,
+      `Błędy: ${result.failed}`,
+      ...result.errors.slice(0, 3),
     ].join("\n");
   }
 
@@ -309,8 +323,27 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     const adminIds = parseTelegramAdminIds(
       process.env.TELEGRAM_ADMIN_IDS || process.env.ADMIN_TELEGRAM_ID,
     );
+    const supabaseUrl =
+      process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ||
+      process.env.SUPABASE_URL?.trim() ||
+      "";
+    let supabaseHost = "brak";
+    try {
+      supabaseHost = supabaseUrl ? new URL(supabaseUrl).host : "brak";
+    } catch {
+      supabaseHost = "nieprawidłowy URL";
+    }
+    const profiles = await supabase
+      .from("profiles")
+      .select("id", { count: "exact", head: true });
+    const auth = await supabase.auth.admin.listUsers({ page: 1, perPage: 1 });
     const lines = [
       "✅ Bot odpowiada, Supabase działa.",
+      `Supabase: ${supabaseHost}`,
+      `Konta Auth: ${
+        auth.error ? `błąd (${auth.error.message})` : auth.data.total
+      }`,
+      `Profile w bazie: ${profiles.count ?? 0}`,
       `Administratorzy: ${adminIds.size}${
         adminIds.size > 0 ? ` (${[...adminIds].join(", ")})` : ""
       }`,
@@ -360,6 +393,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     "Komendy administratora:",
     "/stats - użytkownicy, nowe konta i zadania",
     "/new - ostatnie rejestracje",
+    "/reconcile - wyślij brakujące powiadomienia o rejestracjach",
     "/users [strona] - lista wszystkich użytkowników",
     "/top - ranking XP",
     "/szybkaproba - statystyki szybkiej próby",

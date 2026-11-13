@@ -58,6 +58,7 @@ export async function POST(request: Request): Promise<Response> {
   const commands = [
     { command: "stats", description: "Konta, profile i rozwiązane zadania" },
     { command: "new", description: "Ostatnie rejestracje" },
+    { command: "reconcile", description: "Wyślij brakujące powiadomienia o rejestracjach" },
     { command: "users", description: "Lista użytkowników" },
     { command: "top", description: "Ranking XP" },
     { command: "szybkaproba", description: "Statystyki szybkiej próby" },
