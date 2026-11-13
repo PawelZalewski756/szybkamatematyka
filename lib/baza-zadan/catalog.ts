@@ -7,6 +7,8 @@ import {
 } from "@/lib/baza-zadan/sections";
 import { STATIC_TASKS } from "@/lib/baza-zadan/static-tasks";
 import { STATIC_TASKS_EXTRA } from "@/lib/baza-zadan/static-tasks-extra";
+import { TABLE_TASKS } from "@/lib/baza-zadan/table-tasks";
+import { generateTableTasks } from "@/lib/baza-zadan/table-generator";
 import type {
   ExamSheet,
   ExamSheetKind,
@@ -26,6 +28,8 @@ export function getAllTasks(): Task[] {
     cachedAllTasks = [
       ...STATIC_TASKS,
       ...STATIC_TASKS_EXTRA,
+      ...TABLE_TASKS,
+      ...generateTableTasks(),
       ...EXAM_ARCHIVE_TASKS,
       ...generateProceduralTasks(),
     ];
@@ -47,6 +51,7 @@ export function getPrerenderTaskIds(): string[] {
   return [
     ...STATIC_TASKS,
     ...STATIC_TASKS_EXTRA,
+    ...TABLE_TASKS,
     ...EXAM_ARCHIVE_TASKS,
   ].map((task) => task.id);
 }
@@ -60,6 +65,15 @@ export function getTasksForPath(
 
   return getAllTasks().filter((task) => {
     if (!matchesLearningPath(path, task.forPaths)) return false;
+    // Twarda blokada: E8 nie może wyciec do szkoły średniej, nawet jeśli
+    // pojedynczy rekord ma błędne forPaths albo nie ma examSource.
+    if (
+      path === "srednia" &&
+      (task.examSource?.kind === "egzamin-8" ||
+        /^egzamin\s+ósmoklasisty\b/i.test(task.title))
+    ) {
+      return false;
+    }
     if (category !== "all" && task.category !== category) return false;
     if (difficulty !== "all" && task.difficulty !== difficulty) return false;
     if (!q) return true;

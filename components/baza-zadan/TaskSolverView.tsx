@@ -26,6 +26,7 @@ import { canViewFullSolutions } from "@/lib/subscription/content-limits";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { fetchTaskGrade, type AssistQuotaSnapshot } from "@/lib/trening/task-assist-client";
 import { motion } from "framer-motion";
+import { Lightbulb } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -58,6 +59,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
   const [openAwarded, setOpenAwarded] = useState<number | null>(null);
   const [quota, setQuota] = useState<AssistQuotaSnapshot | null>(null);
+  const [hintForTask, setHintForTask] = useState<string | null>(null);
 
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
@@ -101,6 +103,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
     );
   }
 
+  const hintOpen = hintForTask === task.id;
   const related = getRelatedTasks(task, path);
   const nextTask = related.find((r) => !isSolved(r.id)) ?? related[0] ?? null;
   const answeredClosed = picked !== null;
@@ -211,9 +214,29 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
 
       <div className="mt-8 rounded-3xl border border-surface-border bg-surface p-6 sm:p-8">
         <TaskTresc tresc={task.prompt} className="text-lg font-semibold text-foreground" />
-        {task.hint && !showResult && (
-          <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
-        )}
+        {task.hint && !showResult && isPro ? (
+          <div className="mt-3">
+            <button
+              type="button"
+              aria-expanded={hintOpen}
+              aria-controls="baza-task-hint"
+              onClick={() => setHintForTask(hintOpen ? null : task.id)}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition hover:text-accent-strong"
+            >
+              <Lightbulb className="h-4 w-4" aria-hidden="true" />
+              {hintOpen ? "Ukryj podpowiedź" : "Pokaż podpowiedź"}
+            </button>
+            {hintOpen ? (
+              <p
+                id="baza-task-hint"
+                role="note"
+                className="mt-2 rounded-xl border border-accent/20 bg-accent/5 px-3 py-2 text-sm text-muted"
+              >
+                {task.hint}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
 
         {open ? (
           <AccountGate featureLabel="Ocena zadań otwartych przez AI">

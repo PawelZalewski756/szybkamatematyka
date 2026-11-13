@@ -436,54 +436,35 @@ function categoryStatus(metrics: CategoryMetrics): string {
   return "Do zrobienia";
 }
 
-function TrainingOverview({
-  exam,
+function PathProgress({
+  examLabel,
   overallProgress,
   topicCount,
-  topicsWithTasks,
 }: {
-  exam: ExamWithProgress;
+  examLabel: string;
   overallProgress: number;
   topicCount: number;
-  topicsWithTasks: number;
 }) {
   const progress = Math.max(0, Math.min(100, overallProgress));
-  const progressMessage =
-    overallProgress === 0
-      ? "Zacznij od jednego tematu - reszta ścieżki poczeka."
-      : overallProgress === 100
-        ? "Ścieżka ukończona - możesz wrócić do wybranych tematów."
-        : "Każdy rozwiązany temat przybliża Cię do celu.";
 
   return (
     <section
-      className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 border-y border-surface-border py-3"
+      className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-surface-border py-3 text-xs"
       aria-label="Podsumowanie postępu"
     >
-      <div className="min-w-52 flex-1">
-        <div className="flex items-center justify-between gap-3 text-xs">
-          <span className="font-semibold text-foreground">{exam.label}</span>
-          <span className="font-bold tabular-nums text-accent">{progress}%</span>
-        </div>
-        <div
-          className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-hover"
-          role="progressbar"
-          aria-label={`Ogólny postęp treningu: ${progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-        >
-          <div className="progress-accent" style={{ width: `${progress}%` }} />
-        </div>
-        <p className="mt-1.5 text-xs text-muted">{progressMessage}</p>
+      <span className="font-semibold text-foreground">{examLabel}</span>
+      <div
+        className="h-1.5 min-w-32 flex-1 overflow-hidden rounded-full bg-surface-hover"
+        role="progressbar"
+        aria-label={`Ogólny postęp treningu: ${progress}%`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+      >
+        <div className="progress-accent" style={{ width: `${progress}%` }} />
       </div>
-      <div className="text-xs text-muted">
-        <span className="font-bold text-foreground">{topicCount}</span> tematów
-      </div>
-      <div className="text-xs text-muted">
-        <span className="font-bold text-foreground">{topicsWithTasks}</span>{" "}
-        aktywnych
-      </div>
+      <span className="font-bold tabular-nums text-accent">{progress}%</span>
+      <span className="text-muted">{topicCount} tematów</span>
     </section>
   );
 }
@@ -559,205 +540,87 @@ function NextStepCard({
   );
 }
 
-function DepartmentNavigation({
-  categories,
-  activeCategoryId,
-  onSelect,
-}: {
-  categories: CategoryWithProgress[];
-  activeCategoryId: string | null;
-  onSelect: (categoryId: string) => void;
-}) {
-  return (
-    <nav
-      data-testid="training-department-navigation"
-      aria-label="Działy treningu"
-      className="border-y border-surface-border py-3 lg:sticky lg:top-5"
-    >
-      <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
-        <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
-        <p className="text-xs text-muted">Wybierz obszar</p>
-      </div>
-      <div className="space-y-1">
-        {categories.map((category, index) => {
-          const metrics = getCategoryMetrics(category);
-          const active = category.id === activeCategoryId;
-          return (
-            <button
-              key={category.id}
-              type="button"
-              data-testid={`training-department-${category.id}`}
-              aria-pressed={active}
-              aria-label={`${category.name}, ${categoryStatus(metrics)}, ${metrics.progress}% postępu`}
-              onClick={() => onSelect(category.id)}
-              className={`w-full border-l-2 px-3 py-3 text-left transition ${
-                active
-                  ? "border-accent bg-accent-soft/55 text-foreground"
-                  : "border-transparent text-muted hover:bg-surface-hover hover:text-foreground"
-              }`}
-            >
-              <div className="flex items-start gap-3">
-                <span
-                  aria-hidden="true"
-                  className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-                    active
-                      ? "bg-accent text-on-accent"
-                      : "bg-surface-hover text-muted"
-                  }`}
-                >
-                  {index + 1}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="flex items-start justify-between gap-2">
-                    <span className="truncate text-sm font-bold">{category.name}</span>
-                    <span className="shrink-0 text-xs tabular-nums text-accent">
-                      {metrics.progress}%
-                    </span>
-                  </span>
-                  <span className="mt-1 block text-xs">
-                    {polishCount(
-                      metrics.playableTopics,
-                      "temat",
-                      "tematy",
-                      "tematów",
-                    )}{" "}
-                    · {categoryStatus(metrics)}
-                  </span>
-                  <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
-                    <span
-                      className="block h-full rounded-full bg-accent transition-[width]"
-                      style={{ width: `${metrics.progress}%` }}
-                    />
-                  </span>
-                </span>
-                <ChevronRight
-                  className={`mt-1 h-4 w-4 shrink-0 ${
-                    active ? "text-accent" : "text-muted"
-                  }`}
-                  aria-hidden
-                />
-              </div>
-            </button>
-          );
-        })}
-      </div>
-    </nav>
-  );
-}
-
-function DepartmentPanel({
+function DepartmentAccordion({
+  index,
   examKey,
   category,
   theoryByTopic,
-  topicsVisible,
-  onToggleTopics,
+  expanded,
+  onToggle,
 }: {
+  index: number;
   examKey: SelectedExam;
   category: CategoryWithProgress;
   theoryByTopic: Map<string, TheoryTier>;
-  topicsVisible: boolean;
-  onToggleTopics: () => void;
+  expanded: boolean;
+  onToggle: () => void;
 }) {
   const metrics = getCategoryMetrics(category);
   const topicsId = `training-topics-${category.id}`;
 
   return (
-    <section
-      data-testid="training-department-panel"
-      aria-labelledby={`training-department-heading-${category.id}`}
-      className="overflow-hidden border-y border-surface-border"
-    >
-      <div className="py-4 sm:py-5">
-        <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
-            <p className="text-overline">Wybrany dział</p>
-            <h2
-              id={`training-department-heading-${category.id}`}
-              className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl"
-            >
+    <section data-testid={`training-department-${category.id}`}>
+      <div data-testid={index === 0 ? "training-department-panel" : undefined}>
+      <button
+        type="button"
+        aria-expanded={expanded}
+        aria-controls={topicsId}
+        onClick={onToggle}
+        className="flex w-full items-start gap-4 px-4 py-4 text-left transition hover:bg-surface-hover/40"
+      >
+        <span
+          aria-hidden="true"
+          className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-hover text-xs font-extrabold text-muted"
+        >
+          {index + 1}
+        </span>
+
+        <span className="min-w-0 flex-1">
+          <span className="flex items-baseline justify-between gap-3">
+            <span className="break-words text-base font-bold leading-snug text-foreground">
               {category.name}
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              {polishCount(
-                category.topics.length,
-                "temat",
-                "tematy",
-                "tematów",
-              )}{" "}
-              w dziale · {metrics.totalTasks} zadań do rozwiązania
-            </p>
-          </div>
-          <span
-            className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-extrabold ${
-              metrics.progress === 100
-                ? "bg-success/15 text-success"
-                : "bg-accent-soft text-accent"
-            }`}
-          >
-            {metrics.progress}%
-          </span>
-        </div>
-
-        <div
-          className="mt-5 h-2 overflow-hidden rounded-full bg-surface-hover"
-          role="progressbar"
-          aria-label={`Postęp działu ${category.name}: ${metrics.progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={metrics.progress}
-        >
-          <div
-            className="progress-accent"
-            style={{ width: `${metrics.progress}%` }}
-          />
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
-          <span>
-            <strong className="text-foreground">{metrics.playableTopics}</strong>{" "}
-            z zadaniami
-          </span>
-          <span>
-            <strong className="text-foreground">{metrics.completedTopics}</strong>{" "}
-            ukończonych
-          </span>
-          {metrics.inProgressTopics > 0 && (
-            <span>
-              <strong className="text-foreground">{metrics.inProgressTopics}</strong>{" "}
-              w toku
             </span>
-          )}
-        </div>
+            <span className="shrink-0 text-xs font-bold tabular-nums text-accent">
+              {metrics.progress}%
+            </span>
+          </span>
 
-        <button
-          type="button"
-          aria-expanded={topicsVisible}
-          aria-controls={topicsId}
-          onClick={onToggleTopics}
-          className="btn-ghost mt-5 px-3 py-2 text-sm font-bold"
-        >
-          {topicsVisible ? "Ukryj tematy" : `Pokaż tematy (${category.topics.length})`}
-          <ChevronDown
-            className={`h-4 w-4 transition-transform ${
-              topicsVisible ? "rotate-180" : ""
-            }`}
-            aria-hidden
-          />
-        </button>
-      </div>
+          <span className="mt-2 block h-1.5 overflow-hidden rounded-full bg-surface-hover">
+            <span
+              className="block h-full rounded-full bg-accent"
+              style={{ width: `${metrics.progress}%` }}
+            />
+          </span>
 
-      {topicsVisible && (
+          <span className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted">
+            <span>
+              {polishCount(metrics.playableTopics, "temat", "tematy", "tematów")}
+            </span>
+            <span>{categoryStatus(metrics)}</span>
+            <span className="tabular-nums">
+              {metrics.solvedTasks}/{metrics.totalTasks} zadań
+            </span>
+          </span>
+
+          <span className="sr-only">
+            {expanded ? "Ukryj tematy" : "Pokaż tematy"}
+          </span>
+        </span>
+
+        <ChevronDown
+          className={`mt-1 h-4 w-4 shrink-0 text-muted transition-transform ${
+            expanded ? "rotate-180" : ""
+          }`}
+          aria-hidden
+        />
+      </button>
+
+      {expanded ? (
         <div
           id={topicsId}
           data-testid="training-topic-list"
           className="border-t border-surface-border"
         >
-          <div className="flex items-center justify-between gap-3 bg-surface-hover/30 px-3 py-3 text-xs text-muted sm:px-4">
-            <span>Tematy i ich stan</span>
-            <span className="tabular-nums">
-              {metrics.solvedTasks}/{metrics.totalTasks} rozwiązanych
-            </span>
-          </div>
           <div className="divide-y divide-surface-border">
             {category.topics.map((topic) => (
               <TopicRow
@@ -772,30 +635,21 @@ function DepartmentPanel({
             ))}
           </div>
         </div>
-      )}
+      ) : null}
+      </div>
     </section>
   );
 }
 
 function TrainingListSkeleton() {
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
-      <div className="h-80 animate-pulse border-y border-surface-border py-5">
-        <div className="h-5 w-24 rounded bg-surface-hover" />
-        <div className="mt-3 h-3 w-44 rounded bg-surface-hover" />
-        <div className="mt-7 space-y-3">
-          {[0, 1, 2, 3, 4].map((item) => (
-            <div key={item} className="h-14 rounded-xl bg-surface-hover" />
-          ))}
-        </div>
-      </div>
-      <div className="h-80 animate-pulse border-y border-surface-border py-5 sm:py-7">
-        <div className="h-3 w-28 rounded bg-surface-hover" />
-        <div className="mt-3 h-7 w-2/3 rounded bg-surface-hover" />
-        <div className="mt-4 h-3 w-1/2 rounded bg-surface-hover" />
-        <div className="mt-8 h-2 rounded-full bg-surface-hover" />
-        <div className="mt-7 h-12 w-40 rounded-xl bg-surface-hover" />
-      </div>
+    <div className="space-y-3 border-y border-surface-border py-5">
+      {[0, 1, 2, 3, 4].map((item) => (
+        <div
+          key={item}
+          className="h-16 animate-pulse rounded-xl bg-surface-hover"
+        />
+      ))}
     </div>
   );
 }
@@ -816,9 +670,6 @@ export default function TreningPage() {
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
   const [topicSort, setTopicSort] = useState<TopicSort>("az");
-  const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
-    null,
-  );
   const [expandedCategoryId, setExpandedCategoryId] = useState<string | null>(
     null,
   );
@@ -926,7 +777,6 @@ export default function TreningPage() {
     setDebouncedQuery("");
     setTopicFilter("all");
     setTopicSort("az");
-    setSelectedCategoryId(null);
     setExpandedCategoryId(null);
   };
 
@@ -951,33 +801,19 @@ export default function TreningPage() {
     topicFilter !== "all" ||
     topicSort !== "az";
 
-  const activeCategory = useMemo(
-    () =>
-      filteredExam.categories.find(
-        (category) => category.id === selectedCategoryId,
-      ) ??
-      filteredExam.categories.find(
-        (category) => category.id === nextTopic?.categoryId,
-      ) ??
-      filteredExam.categories[0] ??
-      null,
-    [filteredExam.categories, nextTopic, selectedCategoryId],
-  );
-
-  const topicsVisible = Boolean(
-    activeCategory &&
-      (expandedCategoryId === activeCategory.id || hasFilterIntent),
-  );
-
-  const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategoryId(categoryId);
-    setExpandedCategoryId(null);
-  };
+  useEffect(() => {
+    if (!hasFilterIntent) return;
+    const firstCategory = filteredExam.categories[0]?.id;
+    if (firstCategory) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setExpandedCategoryId(firstCategory);
+    }
+  }, [hasFilterIntent, filteredExam.categories]);
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa - działy i tematy dopasowane do bazy zadań."
-      : "Egzamin ósmoklasisty - działy i tematy dopasowane do bazy zadań.";
+      ? "Działy i tematy pod maturę podstawową."
+      : "Działy i tematy pod egzamin ósmoklasisty.";
 
   const overallProgress = useMemo(() => {
     const cats = exam.categories;
@@ -995,15 +831,6 @@ export default function TreningPage() {
   }, [exam.categories]);
 
   const topicCount = useMemo(() => countTopics(exam), [exam]);
-
-  const topicsWithTasks = useMemo(
-    () =>
-      exam.categories.reduce(
-        (n, c) => n + c.topics.filter((t) => t.total > 0).length,
-        0,
-      ),
-    [exam.categories],
-  );
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
@@ -1030,11 +857,10 @@ export default function TreningPage() {
           />
         )}
 
-        <TrainingOverview
-          exam={exam}
+        <PathProgress
+          examLabel={exam.label}
           overallProgress={overallProgress}
           topicCount={topicCount}
-          topicsWithTasks={topicsWithTasks}
         />
 
         <section
@@ -1042,123 +868,93 @@ export default function TreningPage() {
           aria-label="Przeglądanie tematów"
           data-testid="training-browse"
         >
-          <div className="border-y border-surface-border py-4">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <p className="text-overline">Tematy</p>
-                <h2 className="mt-1 text-lg font-extrabold text-foreground">
-                  Wybierz dział
-                </h2>
-              </div>
-              <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-bold text-muted">
-                {matchedTopicCount} tematów
-              </span>
+          <div className="flex flex-col gap-3 border-y border-surface-border py-3 lg:flex-row lg:items-center">
+            <div className="relative min-w-0 flex-1">
+              <label className="sr-only" htmlFor="trening-search">
+                Szukaj tematu
+              </label>
+              <Search
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                aria-hidden
+              />
+              <input
+                id="trening-search"
+                type="search"
+                value={searchInput}
+                onChange={(event) => setSearchInput(event.target.value)}
+                placeholder="Szukaj działu lub tematu…"
+                className="input-field w-full py-2.5 pl-10 pr-10 text-sm"
+              />
+              {searchInput ? (
+                <button
+                  type="button"
+                  aria-label="Wyczyść wyszukiwanie"
+                  onClick={() => {
+                    setSearchInput("");
+                    setDebouncedQuery("");
+                  }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-muted transition hover:bg-surface-hover hover:text-foreground"
+                >
+                  <X className="h-4 w-4" aria-hidden />
+                </button>
+              ) : null}
             </div>
 
-            <details className="group mt-3">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-surface-border pt-3 text-sm font-semibold text-muted transition hover:text-foreground marker:content-none">
-                <span className="inline-flex items-center gap-2">
-                  <Search className="h-4 w-4" aria-hidden />
-                  Znajdź temat lub filtruj
-                </span>
-                <ChevronDown
-                  className="h-4 w-4 transition-transform group-open:rotate-180"
-                  aria-hidden
-                />
-              </summary>
-              <div className="mt-3 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
-                <div className="min-w-0">
-                <label className="sr-only" htmlFor="trening-search">
-                  Szukaj tematu
-                </label>
-                <div className="relative mt-4">
-                  <Search
-                    className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-                    aria-hidden
-                  />
-                  <input
-                    id="trening-search"
-                    type="search"
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                    placeholder="Szukaj działu lub tematu…"
-                    className="input-field w-full py-2.5 pl-10 pr-10 text-sm"
-                  />
-                  {searchInput && (
-                    <button
-                      type="button"
-                      aria-label="Wyczyść wyszukiwanie"
-                      onClick={() => {
-                        setSearchInput("");
-                        setDebouncedQuery("");
-                      }}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-muted transition hover:bg-surface-hover hover:text-foreground"
-                    >
-                      <X className="h-4 w-4" aria-hidden />
-                    </button>
-                  )}
-                </div>
-                <p className="mt-2 text-xs text-muted" aria-live="polite">
-                  {loading
-                    ? "Ładowanie tematów…"
-                    : debouncedQuery.trim()
-                      ? `Znaleziono ${polishCount(
-                          matchedTopicCount,
-                          "temat",
-                          "tematy",
-                          "tematów",
-                        )}`
-                      : `${matchedTopicCount} tematów`}
-                </p>
-                </div>
-
-                <div className="flex flex-col gap-3 lg:min-w-[22rem]">
-                <div
-                  role="group"
-                  aria-label="Filtr tematów"
-                  className="flex flex-wrap items-center gap-2"
+            <div
+              role="group"
+              aria-label="Filtr tematów"
+              className="flex flex-wrap items-center gap-2"
+            >
+              <span className="text-caption">Pokaż</span>
+              {(
+                [
+                  { id: "all" as const, label: "Wszystkie" },
+                  { id: "incomplete" as const, label: "Nieukończone" },
+                  { id: "completed" as const, label: "Ukończone" },
+                ] as const
+              ).map((option) => (
+                <button
+                  key={option.id}
+                  type="button"
+                  onClick={() => setTopicFilter(option.id)}
+                  className={`filter-chip ${
+                    topicFilter === option.id ? "filter-chip-active" : ""
+                  }`}
                 >
-                  <span className="text-caption mr-1">Pokaż</span>
-                  {(
-                    [
-                      { id: "all" as const, label: "Wszystkie" },
-                      { id: "incomplete" as const, label: "Nieukończone" },
-                      { id: "completed" as const, label: "Ukończone" },
-                    ] as const
-                  ).map((opt) => {
-                    const active = topicFilter === opt.id;
-                    return (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => setTopicFilter(opt.id)}
-                        className={`filter-chip ${
-                          active ? "filter-chip-active" : ""
-                        }`}
-                      >
-                        {opt.label}
-                      </button>
-                    );
-                  })}
-                </div>
+                  {option.label}
+                </button>
+              ))}
+            </div>
 
-                <label className="flex items-center gap-2 lg:self-end">
-                  <span className="text-caption">Sortuj</span>
-                  <select
-                    id="topic-sort"
-                    aria-label="Sortowanie tematów"
-                    value={topicSort}
-                    onChange={(e) => setTopicSort(e.target.value as TopicSort)}
-                    className="input-field min-w-32 py-2.5 text-sm"
-                  >
-                    <option value="az">A–Z</option>
-                    <option value="progress">Postęp</option>
-                  </select>
-                </label>
-                </div>
-              </div>
-            </details>
+            <label className="flex items-center gap-2">
+              <span className="text-caption">Sortuj</span>
+              <select
+                id="topic-sort"
+                aria-label="Sortowanie tematów"
+                value={topicSort}
+                onChange={(event) =>
+                  setTopicSort(event.target.value as TopicSort)
+                }
+                className="input-field min-w-32 py-2.5 text-sm"
+              >
+                <option value="az">A-Z</option>
+                <option value="progress">Postęp</option>
+              </select>
+            </label>
           </div>
+
+          <p className="mt-2 text-xs text-muted" aria-live="polite">
+            {loading
+              ? "Ładowanie tematów…"
+              : debouncedQuery.trim()
+                ? `Znaleziono ${polishCount(
+                    matchedTopicCount,
+                    "temat",
+                    "tematy",
+                    "tematów",
+                  )}`
+                : polishCount(matchedTopicCount, "temat", "tematy", "tematów")}
+          </p>
         </section>
 
         <div className="mt-6" data-testid="training-results">
@@ -1196,25 +992,27 @@ export default function TreningPage() {
               }
             />
           ) : (
-            <div className="grid items-start gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
-              <DepartmentNavigation
-                categories={filteredExam.categories}
-                activeCategoryId={activeCategory?.id ?? null}
-                onSelect={handleCategorySelect}
-              />
-              {activeCategory && (
-                <DepartmentPanel
-                  examKey={selectedExam}
-                  category={activeCategory}
-                  theoryByTopic={theoryByTopic}
-                  topicsVisible={topicsVisible}
-                  onToggleTopics={() =>
-                    setExpandedCategoryId((current) =>
-                      current === activeCategory.id ? null : activeCategory.id,
-                    )
-                  }
-                />
-              )}
+            <div
+              className="border-y border-surface-border"
+              data-testid="training-department-navigation"
+            >
+              <div className="divide-y divide-surface-border">
+                {filteredExam.categories.map((category, index) => (
+                  <DepartmentAccordion
+                    key={category.id}
+                    index={index}
+                    examKey={selectedExam}
+                    category={category}
+                    theoryByTopic={theoryByTopic}
+                    expanded={expandedCategoryId === category.id}
+                    onToggle={() =>
+                      setExpandedCategoryId((current) =>
+                        current === category.id ? null : category.id,
+                      )
+                    }
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>

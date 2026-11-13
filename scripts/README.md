@@ -80,6 +80,45 @@ npm run seed:trening-tasks -- --dry-run
 npm run seed:trening-tasks -- --materials-only
 ```
 
-**Wymagania:** `.env.local` z Supabase; w SQL Editor uruchom też `migrations/init_tasks.sql`, `init_materials.sql` i `add_tasks_materials_insert.sql` (polityki INSERT).
+**Wymagania:** `.env.local` z `NEXT_PUBLIC_SUPABASE_URL` i `SUPABASE_SERVICE_ROLE_KEY`. Zapis do `tasks`/`materials` jest zablokowany dla `anon`/`authenticated` (RLS z `production_hardening`), więc seed musi iść kluczem service role.
 
 Ponowne uruchomienie **pomija duplikaty** (hash treści). Pełny import ~1–3 min.
+
+## `npm run repair:formatting` - naprawa formatowania LaTeX
+
+Wykrywa i naprawia typowe uszkodzenia treści matematycznych: `\times` / `\frac` /
+`\theta` zamienione na znaki sterujące przez parser JSON (efekt: `5imes3`),
+nadmiarowe lub brakujące `$` oraz surowy LaTeX poza `$...$`.
+
+```bash
+# Podgląd zmian (cache + baza, jeśli jest .env.local) - nic nie zapisuje
+npm run repair:formatting
+
+# Tylko pliki cache
+npm run repair:formatting -- --cache-only
+
+# Zapis poprawek do cache i Supabase (tasks + materials)
+npm run repair:formatting -- --apply
+```
+
+Renderowanie (`components/trening/MathText.tsx`, `TheoryMarkdown`) i tak naprawia
+te artefakty w locie przez `lib/math/normalize-math-text.ts`, więc skrypt służy
+do porządkowania danych w bazie i cache.
+
+## `npm run repair:content` - jakość treści zadań
+
+Audyt i naprawa: dokładne duplikaty zadań, opcje-artefakty (`NaN`, `undefined`), niewidoczne znaki (ZWSP/ZWNJ/BOM) oraz encje HTML w arkuszach CKE.
+
+```bash
+# Podgląd zmian - nic nie zapisuje
+npm run repair:content
+
+# Zapis (wymaga SUPABASE_SERVICE_ROLE_KEY)
+npm run repair:content -- --apply
+
+# Tylko wybrane obszary
+npm run repair:content -- --only=duplicates
+npm run repair:content -- --only=options,invisible,entities
+```
+
+Skrypt zostawia jeden rekord z każdej grupy duplikatów (najmniej niewidocznych znaków), dopełnia opcje dystraktorami, gdy trafi na `NaN`, i dekoduje encje typu `&frasl;` / `&fnof;`.

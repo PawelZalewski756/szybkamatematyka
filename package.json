@@ -20,6 +20,8 @@
     "repair:production-tasks": "tsx scripts/repairProductionTasks.ts",
     "audit:tasks-cache": "tsx scripts/auditTasksCache.ts",
     "repair:tasks-cache": "tsx scripts/repairTasksCache.ts",
+    "repair:formatting": "tsx scripts/repairFormatting.ts",
+    "repair:content": "tsx scripts/repairContentQuality.ts",
     "sync:tasks-answers": "tsx scripts/syncTaskAnswers.ts",
     "audit:theory": "tsx scripts/auditTheoryCoverage.ts",
     "seed:cke": "node scripts/seedCKE.js",

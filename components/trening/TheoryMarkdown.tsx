@@ -1,13 +1,15 @@
 "use client";
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
+import { fixMarkdownTables } from "@/lib/format/markdown-tables";
+import { normalizeMathText } from "@/lib/math/normalize-math-text";
 import { slugifyHeading } from "@/lib/trening/theory-content";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import { isValidElement, type ReactNode } from "react";
+import { isValidElement, useMemo, type ReactNode } from "react";
 
 type TheoryMarkdownProps = {
   content: string;
@@ -103,6 +105,13 @@ export function TheoryMarkdown({
   variant = "default",
 }: TheoryMarkdownProps) {
   const withAnchors = variant === "default";
+  // Teoria i rozwiązania też przychodzą z Gemini - naprawiamy zjedzone komendy
+  // LaTeX i niedomknięte `$` zanim trafią do remark-math. Tabele CKE bywają
+  // bez nagłówka, więc dopełniamy komórki, żeby remark-gfm je rozpoznał.
+  const markdown = useMemo(
+    () => fixMarkdownTables(normalizeMathText(content)),
+    [content],
+  );
 
   return (
     <div className={VARIANT_CLASS[variant]}>
@@ -111,7 +120,7 @@ export function TheoryMarkdown({
         rehypePlugins={[rehypeKatex]}
         components={markdownComponents(withAnchors)}
       >
-        {content}
+        {markdown}
       </ReactMarkdown>
     </div>
   );

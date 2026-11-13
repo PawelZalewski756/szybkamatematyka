@@ -47,6 +47,7 @@ export async function POST(request: Request): Promise<Response> {
       allowed_updates: ["message"],
     }),
     cache: "no-store",
+    signal: AbortSignal.timeout(8_000),
   });
   const result = (await response.json()) as { ok?: boolean; description?: string };
   if (!response.ok || !result.ok) {
@@ -54,5 +55,53 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: "Telegram rejected webhook setup." }, { status: 502 });
   }
 
-  return Response.json({ ok: true, message: "Telegram webhook is configured." });
+  const commands = [
+    { command: "stats", description: "Konta, profile i rozwiązane zadania" },
+    { command: "new", description: "Ostatnie rejestracje" },
+    { command: "reconcile", description: "Wyślij brakujące powiadomienia o rejestracjach" },
+    { command: "users", description: "Lista użytkowników" },
+    { command: "top", description: "Ranking XP" },
+    { command: "szybkaproba", description: "Statystyki szybkiej próby" },
+    { command: "visits", description: "Wejścia na stronę" },
+    { command: "health", description: "Diagnostyka bota i webhooka" },
+    { command: "pomoc", description: "Lista komend" },
+  ];
+  const commandsResponse = await fetch(
+    `https://api.telegram.org/bot${botToken}/setMyCommands`,
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ commands }),
+      cache: "no-store",
+      signal: AbortSignal.timeout(8_000),
+    },
+  );
+  const commandsResult = (await commandsResponse.json().catch(() => ({}))) as {
+    ok?: boolean;
+    description?: string;
+  };
+  const warnings: string[] = [];
+  if (!commandsResponse.ok || !commandsResult.ok) {
+    warnings.push(
+      `Nie udało się ustawić menu komend: ${
+        commandsResult.description ?? commandsResponse.status
+      }`,
+    );
+  }
+
+  const infoResponse = await fetch(
+    `https://api.telegram.org/bot${botToken}/getWebhookInfo`,
+    { cache: "no-store", signal: AbortSignal.timeout(8_000) },
+  );
+  const info = (await infoResponse.json().catch(() => ({}))) as {
+    ok?: boolean;
+    result?: Record<string, unknown>;
+  };
+
+  return Response.json({
+    ok: true,
+    message: "Telegram webhook i menu komend są skonfigurowane.",
+    webhook: info.result ?? null,
+    warnings,
+  });
 }

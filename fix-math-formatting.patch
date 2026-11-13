@@ -1,0 +1,1722 @@
+diff --git a/components/trening/MathText.tsx b/components/trening/MathText.tsx
+index 9e3b16e..932b2b2 100644
+--- a/components/trening/MathText.tsx
++++ b/components/trening/MathText.tsx
+@@ -1,5 +1,6 @@
+ "use client";
+ 
++import { latexToPlainText } from "@/lib/math/normalize-math-text";
+ import { splitMathText } from "@/lib/math/render-math-text";
+ import katex from "katex";
+ import { Fragment, useMemo } from "react";
+@@ -10,28 +11,42 @@ type MathTextProps = {
+   as?: "span" | "div";
+ };
+ 
+-function renderLatex(latex: string, displayMode: boolean): string {
+-  return katex.renderToString(latex, {
+-    displayMode,
+-    throwOnError: false,
+-    strict: "ignore",
+-  });
++/**
++ * Renderuje formułę albo zwraca `null`, gdy KaTeX jej nie rozumie.
++ * Wtedy pokazujemy czytelny tekst (`5 × 3`) zamiast czerwonego błędu
++ * z surowym LaTeX-em, który wygląda jak zepsute zadanie.
++ */
++function renderLatex(latex: string, displayMode: boolean): string | null {
++  try {
++    return katex.renderToString(latex, {
++      displayMode,
++      throwOnError: true,
++      strict: "ignore",
++    });
++  } catch {
++    return null;
++  }
+ }
+ 
+ const IMAGE_MD = /!\[([^\]]*)\]\(([^)\s]+)\)/g;
++const BOLD_MD = /\*\*([^*\n]+)\*\*/g;
+ 
+ /** Tekst z obrazkami markdown (opcje typu ![...](...)) - renderuje <img> zamiast surowego zapisu. */
+-function renderTextWithImages(text: string, keyBase: number) {
++function renderTextWithImages(text: string, keyPrefix: string): React.ReactNode {
+   const out: React.ReactNode[] = [];
+   let last = 0;
+   let k = 0;
+   for (const m of text.matchAll(IMAGE_MD)) {
+     const idx = m.index ?? 0;
+-    if (idx > last) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last, idx)}</Fragment>);
++    if (idx > last) {
++      out.push(
++        <Fragment key={`${keyPrefix}-t${k++}`}>{text.slice(last, idx)}</Fragment>,
++      );
++    }
+     out.push(
+       // eslint-disable-next-line @next/next/no-img-element
+       <img
+-        key={`${keyBase}-i${k++}`}
++        key={`${keyPrefix}-i${k++}`}
+         src={m[2]}
+         alt={m[1] && m[1] !== "Rysunek do zadania" ? m[1] : "Opcja odpowiedzi"}
+         loading="lazy"
+@@ -41,7 +56,45 @@ function renderTextWithImages(text: string, keyBase: number) {
+     last = idx + m[0].length;
+   }
+   if (last === 0) return text;
+-  if (last < text.length) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last)}</Fragment>);
++  if (last < text.length) {
++    out.push(<Fragment key={`${keyPrefix}-t${k++}`}>{text.slice(last)}</Fragment>);
++  }
++  return out;
++}
++
++/**
++ * Tekst z lekkim markdownem (`**pogrubienie**`), bez pełnego parsera.
++ * Wyjaśnienia zadań i odpowiedzi AI używają `**Odpowiedź:**`, co wcześniej
++ * renderowało się z widocznymi gwiazdkami.
++ */
++function renderRichText(text: string, keyPrefix: string): React.ReactNode {
++  const out: React.ReactNode[] = [];
++  let last = 0;
++  let k = 0;
++  for (const match of text.matchAll(BOLD_MD)) {
++    const start = match.index ?? 0;
++    if (start > last) {
++      out.push(
++        <Fragment key={`${keyPrefix}-t${k++}`}>
++          {renderTextWithImages(text.slice(last, start), `${keyPrefix}-t${k}`)}
++        </Fragment>,
++      );
++    }
++    out.push(
++      <strong key={`${keyPrefix}-b${k++}`} className="font-bold">
++        {renderTextWithImages(match[1], `${keyPrefix}-b${k}`)}
++      </strong>,
++    );
++    last = start + match[0].length;
++  }
++  if (last === 0) return renderTextWithImages(text, keyPrefix);
++  if (last < text.length) {
++    out.push(
++      <Fragment key={`${keyPrefix}-t${k++}`}>
++        {renderTextWithImages(text.slice(last), `${keyPrefix}-t${k}`)}
++      </Fragment>,
++    );
++  }
+   return out;
+ }
+ 
+@@ -51,10 +104,19 @@ export function MathText({ content, className, as: Tag = "span" }: MathTextProps
+     () =>
+       splitMathText(content).map((part, index) => {
+         if (part.kind === "text") {
+-          return <Fragment key={index}>{renderTextWithImages(part.text, index)}</Fragment>;
++          return (
++            <Fragment key={index}>
++              {renderRichText(part.text, `p${index}`)}
++            </Fragment>
++          );
+         }
+ 
+         const html = renderLatex(part.latex, part.kind === "display");
++        if (html === null) {
++          return (
++            <Fragment key={index}>{latexToPlainText(part.latex)}</Fragment>
++          );
++        }
+         return (
+           <span
+             key={index}
+diff --git a/components/trening/TheoryMarkdown.tsx b/components/trening/TheoryMarkdown.tsx
+index c0cddbe..5ef4877 100644
+--- a/components/trening/TheoryMarkdown.tsx
++++ b/components/trening/TheoryMarkdown.tsx
+@@ -1,13 +1,14 @@
+ "use client";
+ 
+ import { ContentImage } from "@/components/baza-zadan/ContentImage";
++import { normalizeMathText } from "@/lib/math/normalize-math-text";
+ import { slugifyHeading } from "@/lib/trening/theory-content";
+ import type { Components } from "react-markdown";
+ import ReactMarkdown from "react-markdown";
+ import rehypeKatex from "rehype-katex";
+ import remarkGfm from "remark-gfm";
+ import remarkMath from "remark-math";
+-import { isValidElement, type ReactNode } from "react";
++import { isValidElement, useMemo, type ReactNode } from "react";
+ 
+ type TheoryMarkdownProps = {
+   content: string;
+@@ -103,6 +104,9 @@ export function TheoryMarkdown({
+   variant = "default",
+ }: TheoryMarkdownProps) {
+   const withAnchors = variant === "default";
++  // Teoria i rozwiązania też przychodzą z Gemini - naprawiamy zjedzone komendy
++  // LaTeX i niedomknięte `$` zanim trafią do remark-math.
++  const markdown = useMemo(() => normalizeMathText(content), [content]);
+ 
+   return (
+     <div className={VARIANT_CLASS[variant]}>
+@@ -111,7 +115,7 @@ export function TheoryMarkdown({
+         rehypePlugins={[rehypeKatex]}
+         components={markdownComponents(withAnchors)}
+       >
+-        {content}
++        {markdown}
+       </ReactMarkdown>
+     </div>
+   );
+diff --git a/data/cke-e8-cache/e8-2024-maj.json b/data/cke-e8-cache/e8-2024-maj.json
+index f16f7b5..97d7c12 100644
+--- a/data/cke-e8-cache/e8-2024-maj.json
++++ b/data/cke-e8-cache/e8-2024-maj.json
+@@ -81,7 +81,7 @@
+       "tresc": "![Zadanie 9](/cke-matura/e8-2024-maj/z09-1.png)",
+       "schemat": "Wymagania egzaminacyjne 2024\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i tworzenie informacji.\n3. Używanie języka matematycznego do\nopisu rozumowania i uzyskanych\nwyników.\nX. Przekształcanie wyrażeń algebraicznych.\nSumy algebraiczne i działania na nich.\nUczeń:\n3) mnoży sumy algebraiczne przez jednomian\ni dodaje wyrażenia powstałe\nz mnożenia sum algebraicznych przez\njednomiany.\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A",
+       "rozwiazanie": "1. Rozpisujemy pierwsze wyrażenie, mnożąc $x$ przez każdy składnik w nawiasie: $x(x + 4) = x \\cdot x + x \\cdot 4 = x^2 + 4x$.\n2. Rozpisujemy drugie wyrażenie, mnożąc $-3$ przez każdy składnik w nawiasie: $-3(2x - 5) = -3 \\cdot 2x - 3 \\cdot (-5) = -6x + 15$.\n3. Sumujemy otrzymane wyrażenia: $(x^2 + 4x) + (-6x + 15) = x^2 + 4x - 6x + 15$.\n4. Redukujemy wyrazy podobne ($4x$ i $-6x$): $x^2 + (4 - 6)x + 15 = x^2 - 2x + 15$.\n\nOdpowiedź: D. $x^2 - 2x + 15$",
+-      "tekst": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci\nA) $x^2 + 2x - 5$ B) $x^2 - 2x + 5$ C) $x^2 + 2x - 15$ D) $x^2 - 2x + 15",
++      "tekst": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci\nA) $x^2 + 2x - 5$ B) $x^2 - 2x + 5$ C) $x^2 + 2x - 15$ D) $x^2 - 2x + 15$",
+       "tekstV": 2
+     },
+     {
+diff --git a/data/cke-e8-cache/e8-2026-maj.json b/data/cke-e8-cache/e8-2026-maj.json
+index ea79548..2dccd0c 100644
+--- a/data/cke-e8-cache/e8-2026-maj.json
++++ b/data/cke-e8-cache/e8-2026-maj.json
+@@ -74,7 +74,7 @@
+       "tresc": "![Zadanie 8](/cke-matura/e8-2026-maj/z08-1.png)",
+       "schemat": "Wymaganie ogólne Wymagania szczegółowe\nIII. Wykorzystanie i interpretowanie\nreprezentacji.\n1. Używanie prostych, dobrze znanych\nobiektów matematycznych,\ninterpretowanie pojęć matematycznych\ni operowanie obiektami matematycznymi.\nKLASY VII i VIII\nIII. Tworzenie wyrażeń algebraicznych z jedną\ni wieloma zmiennymi. Uczeń:\n2) oblicza wartości liczbowe wyrażeń\nalgebraicznych.\nIV. Przekształcanie wyrażeń algebraicznych.\nSumy algebraiczne i działania na nich. Uczeń:\n3) mnoży sumy algebraiczne przez jednomian\ni dodaje wyrażenia powstałe z mnożenia sum\nalgebraicznych przez jednomiany.\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna lub niepełna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nBD BC\nEgzamin ósmoklasisty z matematyki – termin główny 2026 r.",
+       "rozwiazanie": "Poniżej przedstawiono rozwiązanie zadania.\n\n1.  W pierwszej części zadania należy obliczyć sumę stu kolejnych liczb naturalnych od 1 do 100, korzystając z podanego wzoru $S = \\frac{1}{2}n(n+1)$. W tym przypadku $n = 100$.\n    Podstawiamy $n=100$ do wzoru:\n    $S = \\frac{1}{2} \\cdot 100 \\cdot (100 + 1)$\n    $S = 50 \\cdot 101$\n    $S = 5050$\n    Jest to odpowiedź B.\n\n2.  W drugiej części zadania należy przekształcić wzór $S = \\frac{1}{2}n(n+1)$, wykonując mnożenie.\n    Mnożymy $\\frac{1}{2}n$ przez każdy składnik w nawiasie $(n+1)$:\n    $S = \\frac{1}{2}n \\cdot n + \\frac{1}{2}n \\cdot 1$\n    $S = \\frac{1}{2}n^2 + \\frac{1}{2}n$\n    Jest to odpowiedź D.\n\nOdpowiedź: Suma stu kolejnych liczb naturalnych od 1 do 100 jest równa B. 5050. Wzór na sumę $S$ po poprawnym przekształceniu ma postać D. $S = \\frac{1}{2}n^2 + \\frac{1}{2}n$.",
+-      "tekst": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$$S = \\frac{1}{2}n(n+1)$$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa ......\nA) 5001 B) 5050\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać ......\nC) $S = \\frac{1}{2}n^2 + 1$ D) $S = \\frac{1}{2}n^2 + \\frac{1}{2}n",
++      "tekst": "Sumę $S = 1 + 2 + 3 + ... + n$ kolejnych liczb naturalnych od 1 do $n$ można obliczyć ze wzoru\n\n$$S = \\frac{1}{2}n(n+1)$$\n\nUzupełnij zdania. Wybierz odpowiedź spośród oznaczonych literami A i B oraz odpowiedź spośród oznaczonych literami C i D.\n\nSuma stu kolejnych liczb naturalnych od 1 do 100 jest równa ......\nA) 5001 B) 5050\n\nWzór na sumę $S$ po poprawnym przekształceniu ma postać ......\nC) $S = \\frac{1}{2}n^2 + 1$ D) $S = \\frac{1}{2}n^2 + \\frac{1}{2}n$",
+       "dzial": "Ciągi"
+     },
+     {
+diff --git a/lib/gemini/format-solution.ts b/lib/gemini/format-solution.ts
+index b3ea30b..4950de7 100644
+--- a/lib/gemini/format-solution.ts
++++ b/lib/gemini/format-solution.ts
+@@ -14,6 +14,8 @@
+  * go psuć.
+  */
+ 
++import { normalizeMathText } from "@/lib/math/normalize-math-text";
++
+ const GREETING_RE =
+   /^\s*(siema(nko)?|siemka|hej(ka)?|cze(ść|sc)|witaj(cie)?|jasne|oczywi(ś|s)cie|spoko|no\s+dobra|dobra)[\s!,.…-]+/i;
+ 
+@@ -106,6 +108,9 @@ export function normalizeSolution(text: string): string {
+   out = normalizeStepHeadings(out);
+   out = normalizeFinalAnswer(out);
+   out = fixMathArtifacts(out);
++  // Rozwiązania mają ten sam problem co zadania: `\times`, `\frac` i `\theta`
++  // potrafią wrócić z modelu jako znaki sterujące.
++  out = normalizeMathText(out);
+   out = tidyWhitespace(out);
+ 
+   return out;
+diff --git a/lib/gemini/format-task-assist.ts b/lib/gemini/format-task-assist.ts
+index 6e0b851..b47de48 100644
+--- a/lib/gemini/format-task-assist.ts
++++ b/lib/gemini/format-task-assist.ts
+@@ -1,3 +1,5 @@
++import { normalizeMathText } from "@/lib/math/normalize-math-text";
++
+ export type TaskGradeVerdict = "correct" | "partial" | "wrong";
+ 
+ export type TaskGradeResult = {
+@@ -39,7 +41,7 @@ export function parseTaskGradeResponse(
+       ) {
+         continue;
+       }
+-      const feedback = String(row.feedback ?? "").trim();
++      const feedback = normalizeMathText(String(row.feedback ?? "").trim());
+       if (!feedback || feedback.length > 1_200) continue;
+       const acceptAsCorrect =
+         verdict === "correct" && row.acceptAsCorrect !== false;
+@@ -65,5 +67,5 @@ export function parseTaskGradeResponse(
+ }
+ 
+ export function normalizeHintText(raw: string): string {
+-  return raw.trim().replace(/\r\n/g, "\n");
++  return normalizeMathText(raw.trim().replace(/\r\n/g, "\n"));
+ }
+diff --git a/lib/gemini/format-tasks.ts b/lib/gemini/format-tasks.ts
+index d6dd7bd..9cd7e28 100644
+--- a/lib/gemini/format-tasks.ts
++++ b/lib/gemini/format-tasks.ts
+@@ -2,6 +2,10 @@ import {
+   checkAnswerMatch,
+   findEquivalentChoiceGroups,
+ } from "@/lib/math/answer-equiv";
++import {
++  isKnownLatexCommand,
++  normalizeMathText,
++} from "@/lib/math/normalize-math-text";
+ import { reconcileTaskAnswer } from "@/lib/gemini/task-quality";
+ 
+ export type TaskAnswerType = "choice" | "open";
+@@ -57,6 +61,15 @@ function normalizeSvg(raw: unknown): string | null {
+   return svg;
+ }
+ 
++/**
++ * Naprawia ukośniki w JSON-ie od modelu (Gemini).
++ *
++ * Problem: model pisze LaTeX z jednym ukośnikiem (`"\times"`, `"\frac"`).
++ * Dla parsera JSON to poprawne sekwencje sterujące (`\t`, `\f`), więc zamiast
++ * błędu dostajemy TAB + `imes` i w zadaniu pojawia się `5imes3`.
++ * Tutaj zamieniamy takie sekwencje na `\\times`, `\\frac` itd., zanim JSON
++ * zostanie sparsowany. Prawdziwe `\n` (nowa linia) zostaje bez zmian.
++ */
+ function repairJsonBackslashes(json: string): string {
+   let out = "";
+   let inString = false;
+@@ -82,12 +95,39 @@ function repairJsonBackslashes(json: string): string {
+ 
+     if (c === "\\") {
+       const next = json[i + 1];
+-      if (next && '"\\/bfnrtu'.includes(next)) {
++      if (!next) {
++        out += "\\\\";
++        continue;
++      }
++
++      if ('"\\/'.includes(next)) {
+         out += c;
+         escaped = true;
+-      } else {
+-        out += "\\\\";
++        continue;
++      }
++
++      if ("bfnrtu".includes(next)) {
++        if (next === "u") {
++          const hex = json.slice(i + 2, i + 6);
++          if (!/^[0-9a-fA-F]{4}$/.test(hex)) {
++            // `\underline`, `\uparrow`... - komenda LaTeX, nie escape Unicode.
++            out += "\\\\";
++            continue;
++          }
++        } else {
++          const rest = /^[a-z]+/.exec(json.slice(i + 2))?.[0] ?? "";
++          // `\times` → `t` + `imes`, `\frac` → `f` + `rac`, `\theta` → `t` + `heta`.
++          if (rest && isKnownLatexCommand(next + rest)) {
++            out += "\\\\";
++            continue;
++          }
++        }
++        out += c;
++        escaped = true;
++        continue;
+       }
++
++      out += "\\\\";
+       continue;
+     }
+ 
+@@ -112,7 +152,9 @@ function extractJsonArrayText(raw: string): string {
+ 
+ export function parseGeminiTasksJson(raw: string): unknown[] {
+   const arrayText = extractJsonArrayText(raw);
+-  const attempts = [arrayText, repairJsonBackslashes(arrayText)];
++  // Najpierw wersja z naprawionymi ukośnikami - inaczej `JSON.parse` „zje”
++  // `\times` jako tabulator, zanim zdążymy cokolwiek poprawić.
++  const attempts = [repairJsonBackslashes(arrayText), arrayText];
+ 
+   let lastError: Error | null = null;
+   for (const candidate of attempts) {
+@@ -201,6 +243,15 @@ function normalizeOpenTask(row: Record<string, unknown>): ParsedGeminiTask | nul
+   };
+ }
+ 
++function normalizeTaskMath(task: ParsedGeminiTask): ParsedGeminiTask {
++  return {
++    ...task,
++    content: normalizeMathText(task.content),
++    explanation: normalizeMathText(task.explanation),
++    options: task.options.map((option) => normalizeMathText(option)),
++  };
++}
++
+ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
+   if (!raw || typeof raw !== "object") return null;
+   const row = raw as Record<string, unknown>;
+@@ -214,7 +265,7 @@ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
+ 
+   if (!base) return null;
+ 
+-  const reconciled = reconcileTaskAnswer(base);
++  const reconciled = reconcileTaskAnswer(normalizeTaskMath(base));
+   if (reconciled.shouldRemove) return null;
+ 
+   return reconciled;
+@@ -236,13 +287,14 @@ export function validateGeminiTask(task: ParsedGeminiTask): string[] {
+ 
+ /** Łączy SVG z treścią zadania (format pod markdown w bazie). */
+ export function taskContentForDb(task: Pick<ParsedGeminiTask, "content" | "figure_svg" | "figure_caption">): string {
+-  if (!task.figure_svg) return task.content.trim();
++  const content = normalizeMathText(task.content.trim());
++  if (!task.figure_svg) return content;
+ 
+   const caption = task.figure_caption ?? "Ilustracja do zadania";
+   const encoded = encodeURIComponent(task.figure_svg)
+     .replace(/'/g, "%27")
+     .replace(/"/g, "%22");
+-  return `![${caption}](data:image/svg+xml,${encoded})\n\n${task.content.trim()}`;
++  return `![${caption}](data:image/svg+xml,${encoded})\n\n${content}`;
+ }
+ 
+ export function contentFingerprint(content: string): string {
+diff --git a/lib/gemini/format-theory.ts b/lib/gemini/format-theory.ts
+index f924469..ece387c 100644
+--- a/lib/gemini/format-theory.ts
++++ b/lib/gemini/format-theory.ts
+@@ -1,3 +1,5 @@
++import { normalizeMathText } from "@/lib/math/normalize-math-text";
++
+ /**
+  * Normalizacja lekcji teoretycznych z Gemini (Markdown + KaTeX).
+  */
+@@ -158,6 +160,8 @@ export function normalizeTheoryContent(text: string): string {
+   out = normalizeSectionHeadings(out);
+   out = normalizeStepHeadings(out);
+   out = fixMathArtifacts(out);
++  // Ten sam problem co w zadaniach: `\times` zjedzone przez parser JSON.
++  out = normalizeMathText(out);
+   out = tidyWhitespace(out);
+   return out;
+ }
+diff --git a/lib/math/normalize-math-text.ts b/lib/math/normalize-math-text.ts
+new file mode 100644
+index 0000000..05a07ea
+--- /dev/null
++++ b/lib/math/normalize-math-text.ts
+@@ -0,0 +1,586 @@
++/**
++ * Naprawa uszkodzonego tekstu matematycznego ($...$ / $$...$$).
++ *
++ * Treści zadań i lekcji pochodzą z kilku źródeł (Gemini, cache, OCR arkuszy CKE)
++ * i regularnie trafiają do bazy z dwoma klasami błędów:
++ *
++ *  1. „Zjedzone” komendy LaTeX. Model oddaje JSON z pojedynczym ukośnikiem
++ *     (`"\times"`, `"\frac"`, `"\theta"`), a parser JSON widzi poprawne sekwencje
++ *     `\t`, `\f`, `\b`, `\r`, `\n` i zamienia je na znaki sterujące. Wtedy
++ *     `5\times3` staje się `5<TAB>imes3` i użytkownik widzi `5imes3`.
++ *
++ *  2. Niedomknięte lub nadmiarowe `$`. Pojedynczy `$` na końcu albo `$$` po
++ *     zamykającym `$` powoduje, że KaTeX dostaje `$` w środku formuły (czerwony
++ *     błąd) albo cała formuła przestaje być matematyką i renderuje się jako surowy
++ *     LaTeX (`\div`, `\times`).
++ *
++ * Moduł jest defensywny i idempotentny: poprawne treści przechodzą bez zmian,
++ * a naprawiamy tylko to, co da się naprawić bez zgadywania sensu zadania.
++ */
++
++export type MathSegment =
++  | { kind: "text"; text: string }
++  | { kind: "inline"; latex: string }
++  | { kind: "display"; latex: string };
++
++/**
++ * Komendy LaTeX, które mogą zostać uszkodzone przez interpretację `\t`, `\f`,
++ * `\b`, `\r`, `\n`, `\v` jako sekwencji ucieczki. Zbiór zawiera też nazwy
++ * używane w treściach zadań (CKE, Gemini, teoria), żeby rozpoznawać je w całości.
++ */
++export const LATEX_COMMANDS: ReadonlySet<string> = new Set([
++  // symbole i operatory
++  "times", "div", "cdot", "pm", "mp", "ast", "star", "circ", "bullet", "oplus",
++  "otimes", "odot", "le", "leq", "leqslant", "ge", "geq", "geqslant", "ne",
++  "neq", "approx", "equiv", "sim", "simeq", "cong", "propto", "infty", "partial",
++  "nabla", "forall", "exists", "nexists", "emptyset", "varnothing", "in",
++  "notin", "ni", "subset", "subseteq", "supset", "supseteq", "cup", "cap",
++  "setminus", "complement", "land", "lor", "neg", "lnot", "to", "rightarrow",
++  "leftarrow", "Rightarrow", "Leftarrow", "leftrightarrow", "Leftrightarrow",
++  "longleftarrow", "longrightarrow", "mapsto", "implies", "iff", "therefore",
++  "because", "angle", "measuredangle", "triangle", "square", "perp", "parallel",
++  "langle", "rangle", "lceil", "rceil", "lfloor", "rfloor", "ldots", "cdots",
++  "vdots", "ddots", "dots", "dotsb", "dotsc", "dotsi", "dotsm", "dotso", "quad",
++  "qquad", "enspace", "thinspace", "negthinspace", "left", "right", "big", "Big",
++  "bigg", "Bigg", "bigl", "bigr", "Bigl", "Bigr", "displaystyle", "textstyle",
++  "limits", "nolimits", "nleq", "ngeq", "nsim", "ncong", "nsubset", "nsubseteq",
++  "nsupset", "nsupseteq", "nmid", "nparallel", "nrightarrow", "nleftarrow",
++  "nRightarrow", "nLeftarrow", "nleftrightarrow", "nvdash", "nvDash", "nVdash",
++  "not", "textstyle", "hline", "hbar", "newline", "cr", "noindent", "tag",
++  "nonumber", "notag", "varnothing", "vDash", "vdash", "upharpoonright",
++  "uparrow", "updownarrow", "Uparrow", "uplus", "unrhd", "underrightarrow",
++  "frown", "flat", "between", "bowtie", "barwedge", "backslash",
++  // funkcje i struktury
++  "sin", "cos", "tan", "cot", "tg", "ctg", "sec", "csc", "arcsin", "arccos",
++  "arctan", "arctg", "sinh", "cosh", "tanh", "coth", "log", "ln", "lg", "lim",
++  "sup", "inf", "det", "gcd", "max", "min", "exp", "deg", "arg", "mod", "bmod",
++  "pmod", "operatorname", "text", "textbf", "textit", "textrm", "textsf",
++  "texttt", "textnormal", "textup", "textmd", "textcolor", "color", "underline",
++  "overline", "overbrace", "underbrace", "hat", "widehat", "tilde",
++  "widetilde", "bar", "vec", "dot", "ddot", "frac", "dfrac", "tfrac", "binom",
++  "dbinom", "tbinom", "sqrt", "root", "sum", "prod", "int", "oint", "iint",
++  "iiint", "mathbb", "mathcal", "mathrm", "mathbf", "mathit", "mathsf",
++  "mathtt", "mathfrak", "boxed", "fbox", "cancel", "bcancel", "xcancel",
++  "stackrel", "overset", "underset", "brace", "brack", "choose", "over",
++  "atop", "coloneqq", "eqqcolon", "textsuperscript", "textsubscript",
++  // greckie litery
++  "alpha", "beta", "gamma", "delta", "epsilon", "varepsilon", "zeta", "eta",
++  "theta", "vartheta", "iota", "kappa", "varkappa", "lambda", "mu", "nu", "xi",
++  "omicron", "pi", "varpi", "rho", "varrho", "sigma", "varsigma", "tau",
++  "upsilon", "phi", "varphi", "chi", "psi", "omega", "Gamma", "Delta", "Theta",
++  "Lambda", "Xi", "Pi", "Sigma", "Upsilon", "Phi", "Psi", "Omega",
++]);
++
++/** Znak sterujący → litera, którą „zjadła” interpretacja sekwencji ucieczki. */
++const ESCAPE_LETTERS: Record<string, string> = {
++  "\u0008": "b",
++  "\u0009": "t",
++  "\u000A": "n",
++  "\u000B": "v",
++  "\u000C": "f",
++  "\u000D": "r",
++};
++
++/** Znaki sterujące, które nigdy nie występują naturalnie w treści. */
++const NEVER_NATURAL = new Set(["\u0008", "\u000B", "\u000C", "\u000D"]);
++
++const LATEX_COMMAND_RE = /\\[a-zA-Z]{2,}/;
++const FENCED_CODE_RE = /(^```[\s\S]*?^```[ \t]*$)/gm;
++
++function isEscaped(text: string, index: number): boolean {
++  let backslashes = 0;
++  for (let i = index - 1; i >= 0 && text[i] === "\\"; i -= 1) {
++    backslashes += 1;
++  }
++  return backslashes % 2 === 1;
++}
++
++export function isKnownLatexCommand(name: string): boolean {
++  return LATEX_COMMANDS.has(name);
++}
++
++/** Znaki, po których komenda LaTeX na pewno jest matematyką. */
++const MATH_FOLLOWER_RE = /^[ \t\n$\\{}\[\d^_=<>+\-*/|!~]$/;
++
++/**
++ * Odtwarza ukośnik przed komendami LaTeX, które parser JSON zamienił na znaki
++ * sterujące (`\times` → TAB + `imes`, `\frac` → FF + `rac`, ...).
++ *
++ * Naprawiamy tylko wtedy, gdy po znaku sterującym powstaje pełna, znana nazwa
++ * komendy. Nowa linia (`\n`) jest znakiem naturalnym, więc dodatkowo wymagamy
++ * matematycznego kontekstu - inaczej listy `\ne)` / `\nd)` zamieniłyby się
++ * w `\ne` / `\nd`.
++ */
++export function repairLatexControlChars(text: string): string {
++  if (
++    !/[\u0008\u0009\u000B\u000C\u000D]/.test(text) &&
++    !/\n[a-z]/.test(text)
++  ) {
++    return text;
++  }
++
++  let out = "";
++  for (let i = 0; i < text.length; i += 1) {
++    const char = text.charAt(i);
++    const letter = ESCAPE_LETTERS[char];
++    if (!letter) {
++      out += char;
++      continue;
++    }
++
++    const rest = /^[a-z]+/.exec(text.slice(i + 1))?.[0] ?? "";
++    if (rest && LATEX_COMMANDS.has(letter + rest)) {
++      const following = text.charAt(i + 1 + rest.length);
++      const mathFollower = following === "" || MATH_FOLLOWER_RE.test(following);
++      // Tabulator i nowa linia są naturalne w tekście („...\ni tworzenie”,
++      // „...\ne) ...”): uznajemy je za komendę tylko przy jednoznacznym
++      // kontekście matematycznym i nazwie dłuższej niż 2 znaki.
++      const natural = char === "\t" || char === "\n";
++      const allowed = natural ? rest.length >= 2 && mathFollower : true;
++      if (allowed) {
++        out += `\\${letter}${rest}`;
++        i += rest.length;
++        continue;
++      }
++    }
++
++    if (NEVER_NATURAL.has(char)) {
++      out += " ";
++      continue;
++    }
++
++    out += char;
++  }
++
++  return out;
++}
++
++/**
++ * Usuwa niedomknięte i nadmiarowe `$`.
++ *
++ * Reguły:
++ *  - `$formuła$$` → `$formuła$` (nadmiarowy `$` po zamknięciu),
++ *  - `$$formuła$$$` → `$$formuła$$`,
++ *  - `$formuła` bez zamknięcia → domykamy na końcu linii (`$formuła$`),
++ *  - pojedynczy `$` w zwykłym tekście (np. waluta) zostaje bez zmian.
++ */
++export function balanceMathDelimiters(text: string): string {
++  if (!text.includes("$")) return text;
++
++  const dollars: number[] = [];
++  for (let i = 0; i < text.length; i += 1) {
++    if (text[i] === "$" && !isEscaped(text, i)) dollars.push(i);
++  }
++  if (dollars.length === 0) return text;
++
++  // Pojedynczy `$` bywa znakiem waluty - nie domykamy go, gdy wygląda na cenę.
++  if (dollars.length === 1) {
++    const position = dollars[0]!;
++    const before = text.slice(0, position);
++    const after = text.slice(position + 1);
++    const priceAfter = /^\s*\d+(?:[.,]\d+)?\s*(?:zł|pln|eur|€)?\s*[.!?]?\s*$/iu.test(after);
++    const priceBefore = /\d\s*$/u.test(before);
++    if (priceAfter || priceBefore) return text;
++  }
++
++  const drop = new Set<number>();
++  const insertAfter = new Map<number, string>();
++  let open: { kind: "inline" | "display"; start: number } | null = null;
++
++  let i = 0;
++  while (i < text.length) {
++    if (text[i] !== "$" || isEscaped(text, i)) {
++      i += 1;
++      continue;
++    }
++
++    const isDouble = text[i + 1] === "$";
++    const kind = isDouble ? "display" : "inline";
++
++    if (!open) {
++      open = { kind, start: i };
++      i += isDouble ? 2 : 1;
++      continue;
++    }
++
++    if (open.kind === kind) {
++      open = null;
++      i += isDouble ? 2 : 1;
++      continue;
++    }
++
++    if (open.kind === "inline" && isDouble) {
++      // Pierwszy `$` zamyka formułę, drugi zostaje i za chwilę zostanie odrzucony.
++      open = null;
++      i += 1;
++      continue;
++    }
++
++    // Otwarte `$$` i samotny `$` - traktujemy samotny znak jako śmieć.
++    drop.add(i);
++    i += 1;
++  }
++
++  if (open) {
++    const closer = open.kind === "display" ? "$$" : "$";
++    const lineEnd = text.indexOf("\n", open.start);
++    const stop = lineEnd === -1 ? text.length : lineEnd;
++    const isEmpty = text.slice(open.start + closer.length, stop).trim() === "";
++    const gluedToPrevious = text.charAt(open.start - 1) === "$";
++
++    if (isEmpty || gluedToPrevious) {
++      // Np. `$...$$` albo samotny `$` na końcu - to nadmiarowy znak.
++      for (let k = 0; k < closer.length; k += 1) drop.add(open.start + k);
++    } else {
++      // Niedomknięta formuła: domykamy ją na końcu tej samej linii.
++      insertAfter.set(stop - 1, closer);
++    }
++  }
++
++  if (drop.size === 0 && insertAfter.size === 0) return text;
++
++  let out = "";
++  for (let index = 0; index < text.length; index += 1) {
++    if (!drop.has(index)) out += text[index];
++    const insertion = insertAfter.get(index);
++    if (insertion) out += insertion;
++  }
++  return out;
++}
++
++/** `\(...\)` → `$...$` oraz `\[...\]` → `$$...$$`. */
++export function convertLatexDelimiters(text: string): string {
++  if (!text.includes("\\(") && !text.includes("\\[") && !text.includes("\\)") && !text.includes("\\]")) {
++    return text;
++  }
++  return text
++    .replace(/\\\[/g, "$$$$")
++    .replace(/\\\]/g, "$$$$")
++    .replace(/\\\(/g, "$$")
++    .replace(/\\\)/g, "$$");
++}
++
++/**
++ * Dzieli tekst na segmenty tekstowe i matematyczne. Pary `$...$` /
++ * `$$...$$` muszą być już zbalansowane (robi to `balanceMathDelimiters`).
++ */
++export function scanMathSegments(input: string): MathSegment[] {
++  const segments: MathSegment[] = [];
++  let text = "";
++  const flush = () => {
++    if (text) {
++      segments.push({ kind: "text", text });
++      text = "";
++    }
++  };
++
++  let i = 0;
++  while (i < input.length) {
++    const char = input.charAt(i);
++
++    if (char === "\\" && input[i + 1] === "$") {
++      text += "$";
++      i += 2;
++      continue;
++    }
++
++    if (char !== "$") {
++      text += char;
++      i += 1;
++      continue;
++    }
++
++    if (input[i + 1] === "$") {
++      let end = i + 2;
++      while (end < input.length && (input[end] !== "$" || isEscaped(input, end))) {
++        end += 1;
++      }
++      if (end + 1 < input.length && input[end + 1] === "$") {
++        flush();
++        segments.push({ kind: "display", latex: input.slice(i + 2, end) });
++        i = end + 2;
++        continue;
++      }
++      text += "$$";
++      i += 2;
++      continue;
++    }
++
++    let end = i + 1;
++    while (end < input.length && (input[end] !== "$" || isEscaped(input, end))) {
++      end += 1;
++    }
++    if (end < input.length && end > i + 1) {
++      flush();
++      segments.push({ kind: "inline", latex: input.slice(i + 1, end) });
++      i = end + 1;
++      continue;
++    }
++
++    text += "$";
++    i += 1;
++  }
++
++  flush();
++  return segments;
++}
++
++const MATH_CHUNK_RE = /^[0-9+\-*/^_=<>()[\]{}|.,;:%\\]+$/;
++const SINGLE_LETTER_RE = /^[a-zA-Z]$/;
++const SUBSCRIPTED_RE = /^[a-zA-Z](?:[\^_](?:\{[^{}]*\}|[0-9a-zA-Z]))+$/;
++const MATH_WORD_RE =
++  /^(?:sin|cos|tg|ctg|tan|cot|sec|csc|arcsin|arccos|arctg|log|ln|lg|lim|sqrt|pi|infty|alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|lambda|mu|nu|xi|rho|sigma|tau|phi|chi|psi|omega|Omega|Delta|Sigma|Pi|Phi|Psi|Lambda|Theta|Gamma|Xi)$/;
++
++function isMathToken(token: string): boolean {
++  if (LATEX_COMMAND_RE.test(token)) return true;
++  if (MATH_CHUNK_RE.test(token) && /[0-9=+\-*/^_<>()[\]]/.test(token)) return true;
++  return (
++    SINGLE_LETTER_RE.test(token) ||
++    SUBSCRIPTED_RE.test(token) ||
++    MATH_WORD_RE.test(token)
++  );
++}
++
++/**
++ * Owicka w `$...$` fragmenty, które zawierają komendy LaTeX, ale znalazły się
++ * poza formułą (np. po odrzuceniu niedomkniętego `$`). Dzięki temu wyrażenie
++ * `50 - (24 \div 6 + 2 \times 5)` renderuje się jak matematyka, a nie jak tekst.
++ */
++export function wrapStrayLatex(text: string): string {
++  if (!LATEX_COMMAND_RE.test(text)) return text;
++
++  const words = [...text.matchAll(/\S+/g)].map((match) => ({
++    value: match[0],
++    index: match.index ?? 0,
++  }));
++
++  let out = "";
++  let cursor = 0;
++  let i = 0;
++
++  while (i < words.length) {
++    const word = words[i]!;
++    if (!LATEX_COMMAND_RE.test(word.value)) {
++      i += 1;
++      continue;
++    }
++
++    let start = i;
++    while (start > 0 && isMathToken(words[start - 1]!.value)) start -= 1;
++
++    let end = i;
++    while (end + 1 < words.length && isMathToken(words[end + 1]!.value)) end += 1;
++
++    const from = words[start]!.index;
++    let to = words[end]!.index + words[end]!.value.length;
++
++    // Kropka/przecinek na końcu zdania nie powinny wchodzić do formuły.
++    const trailing = /[.,;:]+$/.exec(text.slice(from, to))?.[0] ?? "";
++    if (trailing) to -= trailing.length;
++
++    const latex = text.slice(from, to).trim();
++    // Owijamy tylko wtedy, gdy fragment naprawdę wygląda na działanie - samo
++    // `\ne` albo `\alpha` w środku zdania zostaje jako tekst (z symbolem).
++    if (!latex || !LATEX_COMMAND_RE.test(latex) || !/\d|[=+\-*/<>^_]/.test(latex)) {
++      out += text.slice(cursor, words[i]!.index + words[i]!.value.length);
++      cursor = words[i]!.index + words[i]!.value.length;
++      i += 1;
++      continue;
++    }
++
++    out += text.slice(cursor, from);
++    out += `$${latex}$`;
++    cursor = to;
++    i = end + 1;
++  }
++
++  out += text.slice(cursor);
++
++  // To, czego nie udało się owinąć (np. komenda przyklejona do polskiego słowa),
++  // zamieniamy na czytelne znaki - w tekście nie może zostać surowy LaTeX.
++  const segments = scanMathSegments(out);
++  if (
++    !segments.some(
++      (segment) => segment.kind === "text" && LATEX_COMMAND_RE.test(segment.text),
++    )
++  ) {
++    return out;
++  }
++
++  return segments
++    .map((segment) => {
++      if (segment.kind === "text") return latexToPlainText(segment.text);
++      if (segment.kind === "display") return `$$${segment.latex}$$`;
++      return `$${segment.latex}$`;
++    })
++    .join("");
++}
++
++const SYMBOLS: Record<string, string> = {
++  alpha: "α", beta: "β", gamma: "γ", delta: "δ", epsilon: "ε", varepsilon: "ε",
++  zeta: "ζ", eta: "η", theta: "θ", vartheta: "ϑ", iota: "ι", kappa: "κ",
++  varkappa: "ϰ", lambda: "λ", mu: "μ", nu: "ν", xi: "ξ", omicron: "ο",
++  pi: "π", varpi: "ϖ", rho: "ρ", varrho: "ϱ", sigma: "σ", varsigma: "ς",
++  tau: "τ", upsilon: "υ", phi: "φ", varphi: "ϕ", chi: "χ", psi: "ψ",
++  omega: "ω", Gamma: "Γ", Delta: "Δ", Theta: "Θ", Lambda: "Λ", Xi: "Ξ",
++  Pi: "Π", Sigma: "Σ", Upsilon: "Υ", Phi: "Φ", Psi: "Ψ", Omega: "Ω",
++  times: "×", div: "÷", cdot: "·", pm: "±", mp: "∓", ast: "∗", star: "⋆",
++  le: "≤", leq: "≤", leqslant: "≤", ge: "≥", geq: "≥", geqslant: "≥",
++  ne: "≠", neq: "≠", approx: "≈", equiv: "≡", sim: "∼", simeq: "≃",
++  cong: "≅", propto: "∝", infty: "∞", partial: "∂", nabla: "∇",
++  in: "∈", notin: "∉", ni: "∋", subset: "⊂", subseteq: "⊆", supset: "⊃",
++  supseteq: "⊇", cup: "∪", cap: "∩", setminus: "∖", emptyset: "∅",
++  varnothing: "∅", forall: "∀", exists: "∃", nexists: "∄", neg: "¬",
++  land: "∧", lor: "∨", to: "→", rightarrow: "→", leftarrow: "←",
++  Rightarrow: "⇒", Leftarrow: "⇐", leftrightarrow: "↔", Leftrightarrow: "⇔",
++  mapsto: "↦", implies: "⇒", iff: "⇔", angle: "∠",
++  measuredangle: "∡", triangle: "△", square: "□", perp: "⊥", parallel: "∥",
++  langle: "⟨", rangle: "⟩", lceil: "⌈", rceil: "⌉", lfloor: "⌊",
++  rfloor: "⌋", ldots: "…", cdots: "⋯", vdots: "⋮", ddots: "⋱", dots: "…",
++  circ: "°", degree: "°", "%": "%", dollar: "$", "{": "{", "}": "}",
++  "_": "_", "&": "&", "#": "#", sin: "sin", cos: "cos", tan: "tan",
++  cot: "cot", tg: "tg", ctg: "ctg", arcsin: "arcsin", arccos: "arccos",
++  arctg: "arctg", log: "log", ln: "ln", lg: "lg", lim: "lim", sum: "∑",
++  prod: "∏", int: "∫", oint: "∮",
++};
++
++const SUPERSCRIPTS: Record<string, string> = {
++  "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶",
++  "7": "⁷", "8": "⁸", "9": "⁹", "+": "⁺", "-": "⁻", "=": "⁼", "(": "⁽",
++  ")": "⁾", n: "ⁿ", i: "ⁱ",
++};
++
++function toSuperscript(value: string): string | null {
++  if (!/^[0-9+\-=()ni]+$/.test(value)) return null;
++  return [...value].map((char) => SUPERSCRIPTS[char] ?? char).join("");
++}
++
++/**
++ * Awaryjna zamiana LaTeX-a na czytelny tekst. Używana, gdy KaTeX nie potrafi
++ * sparsować formuły - lepiej pokazać `5 × 3` niż czerwony błąd z `\times`.
++ */
++export function latexToPlainText(latex: string): string {
++  if (!latex) return "";
++  let out = latex;
++
++  out = out
++    .replace(/\\(?:left|right|bigl|bigr|Bigl|Bigr|bigg|Bigg|big|Big)\b/g, "")
++    .replace(/\\(?:displaystyle|textstyle|limits|nolimits)\b/g, "")
++    .replace(/\\(?:quad|qquad|enspace|thinspace|negthinspace)\b/g, " ")
++    .replace(/\\[!,;:]/g, "")
++    .replace(/\\ /g, " ");
++
++  const collapseSqrt = (value: string) =>
++    value
++      .replace(/\\sqrt\{([^{}]*)\}/g, "√($1)")
++      .replace(/\\sqrt\s*([0-9a-zA-Z])/g, "√$1");
++
++  // Pierwiastki najpierw, żeby `\frac{\sqrt{2}}{2}` rozłożyło się poprawnie.
++  out = collapseSqrt(out);
++
++  // Ułamki (także zagnieżdżone) - kilka przebiegów od najbardziej wewnętrznych.
++  for (let pass = 0; pass < 6; pass += 1) {
++    const next = out.replace(
++      /\\(?:d|t)?frac\{([^{}]*)\}\{([^{}]*)\}/g,
++      (_match, numerator: string, denominator: string) => {
++        const top = /[+\-\s/]/.test(numerator.trim()) ? `(${numerator})` : numerator;
++        const bottom = /[+\-\s/]/.test(denominator.trim()) ? `(${denominator})` : denominator;
++        return `${top}/${bottom}`;
++      },
++    );
++    if (next === out) break;
++    out = next;
++  }
++
++  out = collapseSqrt(out);
++  out = out
++    .replace(/\\(?:text|textrm|textsf|texttt|textnormal|textup|textmd|mathrm|mathbf|mathit|mathsf|mathtt|mathfrak|mathcal|mathbb|operatorname|textbf|textit)\{([^{}]*)\}/g, "$1")
++    .replace(/\\textcolor\{[^{}]*\}\{([^{}]*)\}/g, "$1")
++    .replace(/\\color\{[^{}]*\}/g, "");
++
++  out = out.replace(/\^\{([^{}]*)\}/g, (match, inner: string) => {
++    const superscript = toSuperscript(inner.trim());
++    return superscript ?? (inner.length > 1 ? `^(${inner})` : `^${inner}`);
++  });
++  out = out.replace(/_\{([^{}]*)\}/g, (_match, inner: string) => `_(${inner})`);
++  out = out.replace(/\^([0-9+\-=ni])/g, (_match, inner: string) => toSuperscript(inner) ?? inner);
++  out = out.replace(/_([0-9a-zA-Z])/g, "_$1");
++
++  out = out.replace(/\\([a-zA-Z]+)/g, (match, name: string) => SYMBOLS[name] ?? name);
++  out = out.replace(/\\/g, "");
++  out = out.replace(/[{}]/g, "");
++  return out.replace(/\s{2,}/g, " ").trim();
++}
++
++function mapOutsideCodeFences(text: string, fn: (plain: string) => string): string {
++  if (!text.includes("```")) return fn(text);
++  return text
++    .split(FENCED_CODE_RE)
++    .map((part, index) => (index % 2 === 1 ? part : fn(part)))
++    .join("");
++}
++
++/**
++ * Główna naprawa treści matematycznej. Idempotentna - można ją bezpiecznie
++ * wołać wielokrotnie (render, import, naprawa bazy).
++ */
++export function normalizeMathText(input: string): string {
++  if (!input) return input;
++
++  return mapOutsideCodeFences(input, (plain) => {
++    let text = plain.replace(/\uFEFF/g, "");
++    text = repairLatexControlChars(text);
++    text = convertLatexDelimiters(text);
++    text = balanceMathDelimiters(text);
++
++    const segments = scanMathSegments(text);
++    const rebuilt = segments
++      .map((segment) => {
++        if (segment.kind === "text") return wrapStrayLatex(segment.text);
++        if (segment.kind === "display") return `$$${segment.latex}$$`;
++        return `$${segment.latex}$`;
++      })
++      .join("");
++
++    return rebuilt;
++  });
++}
++
++/** Lista wykrytych problemów formatowania (do audytu treści). */
++export function findMathTextIssues(input: string): string[] {
++  if (!input) return [];
++  const issues: string[] = [];
++
++  const repaired = repairLatexControlChars(input);
++  if (repaired !== input) {
++    issues.push("uszkodzona sekwencja LaTeX (znak sterujący zamiast ukośnika)");
++  }
++
++  const withDelimiters = convertLatexDelimiters(repaired);
++  if (withDelimiters !== repaired) {
++    issues.push("delimitery \\( \\) lub \\[ \\] zamiast $");
++  }
++
++  const balanced = balanceMathDelimiters(withDelimiters);
++  if (balanced !== withDelimiters) {
++    issues.push("niedomknięte lub nadmiarowe $");
++  }
++
++  const outsideFences = balanced
++    .split(FENCED_CODE_RE)
++    .filter((_part, index) => index % 2 === 0)
++    .join("");
++  if (
++    scanMathSegments(outsideFences).some(
++      (segment) => segment.kind === "text" && LATEX_COMMAND_RE.test(segment.text),
++    )
++  ) {
++    issues.push("surowy LaTeX poza $...$");
++  }
++
++  if (/[\u200B-\u200D\uFEFF]/.test(input)) {
++    issues.push("niewidoczne znaki Unicode (ZWSP/ZWNJ/BOM)");
++  }
++
++  return issues;
++}
+diff --git a/lib/math/render-math-text.ts b/lib/math/render-math-text.ts
+index 39b9030..f156b68 100644
+--- a/lib/math/render-math-text.ts
++++ b/lib/math/render-math-text.ts
+@@ -1,43 +1,21 @@
+-export type MathTextPart =
+-  | { kind: "text"; text: string }
+-  | { kind: "inline"; latex: string }
+-  | { kind: "display"; latex: string };
++import {
++  normalizeMathText,
++  scanMathSegments,
++  type MathSegment,
++} from "@/lib/math/normalize-math-text";
++
++export type MathTextPart = MathSegment;
+ 
+ /**
+  * Dzieli tekst na fragmenty zwykłe i LaTeX ($...$, $$...$$).
+  * Używane w opcjach ABCD i krótkich etykietach - bez pełnego markdown.
++ *
++ * Przed podziałem treść przechodzi przez `normalizeMathText`, więc uszkodzone
++ * dane (zjedzone `\times`, niedomknięte `$`) renderują się poprawnie także
++ * wtedy, gdy w bazie leży już zepsuty wiersz.
+  */
+ export function splitMathText(input: string): MathTextPart[] {
+-  const parts: MathTextPart[] = [];
+-  let i = 0;
+-
+-  while (i < input.length) {
+-    if (input.startsWith("$$", i)) {
+-      const end = input.indexOf("$$", i + 2);
+-      if (end !== -1) {
+-        parts.push({ kind: "display", latex: input.slice(i + 2, end).trim() });
+-        i = end + 2;
+-        continue;
+-      }
+-    }
+-
+-    if (input[i] === "$" && input[i + 1] !== "$") {
+-      const end = input.indexOf("$", i + 1);
+-      if (end !== -1) {
+-        parts.push({ kind: "inline", latex: input.slice(i + 1, end).trim() });
+-        i = end + 1;
+-        continue;
+-      }
+-    }
+-
+-    const nextDollar = input.indexOf("$", i + 1);
+-    const end = nextDollar === -1 ? input.length : nextDollar;
+-    const text = input.slice(i, end);
+-    if (text) parts.push({ kind: "text", text });
+-    i = end;
+-  }
+-
+-  return parts;
++  return scanMathSegments(normalizeMathText(input));
+ }
+ 
+ export function containsMathDelimiters(text: string): boolean {
+diff --git a/package.json b/package.json
+index 54ab08f..e73bf88 100644
+--- a/package.json
++++ b/package.json
+@@ -20,6 +20,7 @@
+     "repair:production-tasks": "tsx scripts/repairProductionTasks.ts",
+     "audit:tasks-cache": "tsx scripts/auditTasksCache.ts",
+     "repair:tasks-cache": "tsx scripts/repairTasksCache.ts",
++    "repair:formatting": "tsx scripts/repairFormatting.ts",
+     "sync:tasks-answers": "tsx scripts/syncTaskAnswers.ts",
+     "audit:theory": "tsx scripts/auditTheoryCoverage.ts",
+     "seed:cke": "node scripts/seedCKE.js",
+diff --git a/scripts/README.md b/scripts/README.md
+index d15c578..11d1b81 100644
+--- a/scripts/README.md
++++ b/scripts/README.md
+@@ -83,3 +83,25 @@ npm run seed:trening-tasks -- --materials-only
+ **Wymagania:** `.env.local` z Supabase; w SQL Editor uruchom też `migrations/init_tasks.sql`, `init_materials.sql` i `add_tasks_materials_insert.sql` (polityki INSERT).
+ 
+ Ponowne uruchomienie **pomija duplikaty** (hash treści). Pełny import ~1–3 min.
++
++## `npm run repair:formatting` - naprawa formatowania LaTeX
++
++Wykrywa i naprawia typowe uszkodzenia treści matematycznych: `\times` / `\frac` /
++`\theta` zamienione na znaki sterujące przez parser JSON (efekt: `5imes3`),
++nadmiarowe lub brakujące `$` oraz surowy LaTeX poza `$...$`.
++
++```bash
++# Podgląd zmian (cache + baza, jeśli jest .env.local) - nic nie zapisuje
++npm run repair:formatting
++
++# Tylko pliki cache
++npm run repair:formatting -- --cache-only
++
++# Zapis poprawek do cache i Supabase (tasks + materials)
++npm run repair:formatting -- --apply
++```
++
++Renderowanie (`components/trening/MathText.tsx`, `TheoryMarkdown`) i tak naprawia
++te artefakty w locie przez `lib/math/normalize-math-text.ts`, więc skrypt służy
++do porządkowania danych w bazie i cache.
++
+diff --git a/scripts/repairFormatting.ts b/scripts/repairFormatting.ts
+new file mode 100644
+index 0000000..3ed2964
+--- /dev/null
++++ b/scripts/repairFormatting.ts
+@@ -0,0 +1,275 @@
++/**
++ * Naprawa formatowania treści matematycznych (LaTeX) w zadaniach i materiałach.
++ *
++ * Domyślnie tryb „dry run”: pokazuje, co zostałoby poprawione, ale nic nie zapisuje.
++ *
++ *   npx tsx scripts/repairFormatting.ts                 # cache + baza (jeśli jest .env.local)
++ *   npx tsx scripts/repairFormatting.ts --cache-only    # tylko data/tasks-cache i data/theory-cache
++ *   npx tsx scripts/repairFormatting.ts --db-only       # tylko Supabase
++ *   npx tsx scripts/repairFormatting.ts --apply         # zapisuje poprawki
++ *
++ * Naprawia dokładnie te same artefakty, które renderowanie poprawia w locie
++ * (`normalizeMathText`): zjedzone `\times` / `\frac` / `\theta`, nadmiarowe
++ * lub brakujące `$`, surowy LaTeX poza formułą.
++ */
++import fs from "fs";
++import path from "path";
++import dotenv from "dotenv";
++import { createClient } from "@supabase/supabase-js";
++import {
++  findMathTextIssues,
++  normalizeMathText,
++} from "../lib/math/normalize-math-text";
++import {
++  listAllTaskSlots,
++  readTaskCache,
++  writeTaskCache,
++} from "../lib/trening/seed/tasks-cache-utils";
++import type { CachedGeminiTask } from "../lib/trening/seed/tasks-cache-utils";
++import {
++  listAllTheorySlots,
++  theoryCachePath,
++} from "../lib/trening/seed/theory-cache-utils";
++import type { CachedTheoryFile } from "../lib/trening/seed/theory-cache-utils";
++
++dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
++
++const args = new Set(process.argv.slice(2));
++const apply = args.has("--apply");
++const cacheOnly = args.has("--cache-only");
++const dbOnly = args.has("--db-only");
++
++type Change = {
++  where: string;
++  field: string;
++  before: string;
++  after: string;
++  issues: string[];
++};
++
++const changes: Change[] = [];
++let scanned = 0;
++
++function normalizeField(where: string, field: string, value: string): string {
++  scanned += 1;
++  const normalized = normalizeMathText(value);
++  if (normalized !== value) {
++    changes.push({
++      where,
++      field,
++      before: value,
++      after: normalized,
++      issues: findMathTextIssues(value),
++    });
++  }
++  return normalized;
++}
++
++function preview(value: string): string {
++  return JSON.stringify(value.length > 120 ? `${value.slice(0, 117)}...` : value);
++}
++
++function repairCachedTasks(): void {
++  for (const slot of listAllTaskSlots()) {
++    const bundle = readTaskCache(slot);
++    if (!bundle?.tasks.length) continue;
++    const where = `tasks-cache/${slot.exam_type}__${slot.category}__${slot.topic}`;
++    let changed = false;
++
++    const tasks: CachedGeminiTask[] = bundle.tasks.map((task) => {
++      const content = normalizeField(where, "content", task.content);
++      const explanation = normalizeField(where, "explanation", task.explanation);
++      const options = task.options.map((option, index) =>
++        normalizeField(where, `options[${index}]`, option),
++      );
++      const next = { ...task, content, explanation, options };
++      if (
++        next.content !== task.content ||
++        next.explanation !== task.explanation ||
++        next.options.some((option, index) => option !== task.options[index])
++      ) {
++        changed = true;
++      }
++      return next;
++    });
++
++    if (changed && apply) writeTaskCache({ ...bundle, tasks });
++  }
++}
++
++function repairCachedTheory(): void {
++  for (const slot of listAllTheorySlots()) {
++    const file = theoryCachePath(slot);
++    if (!fs.existsSync(file)) continue;
++    let entry: CachedTheoryFile;
++    try {
++      entry = JSON.parse(fs.readFileSync(file, "utf8")) as CachedTheoryFile;
++    } catch {
++      continue;
++    }
++    if (!entry?.content) continue;
++
++    const where = `theory-cache/${path.basename(file)}`;
++    const content = normalizeField(where, "content", entry.content);
++    if (content !== entry.content && apply) {
++      fs.writeFileSync(file, JSON.stringify({ ...entry, content }, null, 2), "utf8");
++    }
++  }
++}
++
++function parseOptionsValue(raw: unknown): string[] | null {
++  if (Array.isArray(raw)) {
++    return raw.map(String);
++  }
++  if (typeof raw === "string") {
++    try {
++      const parsed = JSON.parse(raw) as unknown;
++      if (Array.isArray(parsed)) return parsed.map(String);
++    } catch {
++      return null;
++    }
++  }
++  return null;
++}
++
++async function repairDatabase(): Promise<void> {
++  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
++  const key = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
++  if (!url || !key) {
++    console.log("Pominięto bazę: brak NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY.\n");
++    return;
++  }
++
++  const supabase = createClient(url, key);
++  const pageSize = 1000;
++
++  for (let from = 0; ; from += pageSize) {
++    const { data, error } = await supabase
++      .from("tasks")
++      .select("id, exam_type, category, topic, content, explanation, options")
++      .range(from, from + pageSize - 1);
++    if (error) throw error;
++
++    const rows = (data ?? []) as Array<{
++      id: string;
++      exam_type: string;
++      category: string;
++      topic: string;
++      content: string;
++      explanation: string | null;
++      options: unknown;
++    }>;
++
++    for (const row of rows) {
++      const where = `tasks/${row.exam_type}/${row.category}/${row.topic}/${row.id}`;
++      const content = normalizeField(where, "content", row.content);
++      const explanation = row.explanation
++        ? normalizeField(where, "explanation", row.explanation)
++        : null;
++
++      const options = parseOptionsValue(row.options);
++      let nextOptions: unknown = row.options;
++      if (options) {
++        const normalized = options.map((option, index) =>
++          normalizeField(where, `options[${index}]`, option),
++        );
++        if (normalized.some((option, index) => option !== options[index])) {
++          nextOptions =
++            Array.isArray(row.options) ? normalized : JSON.stringify(normalized);
++        }
++      }
++
++      if (!apply) continue;
++      if (
++        content !== row.content ||
++        explanation !== row.explanation ||
++        nextOptions !== row.options
++      ) {
++        const { error: updateError } = await supabase
++          .from("tasks")
++          .update({ content, explanation, options: nextOptions })
++          .eq("id", row.id);
++        if (updateError) {
++          throw new Error(`Update ${row.id}: ${updateError.message}`);
++        }
++      }
++    }
++
++    if (!data || data.length < pageSize) break;
++  }
++
++  for (let from = 0; ; from += pageSize) {
++    const { data, error } = await supabase
++      .from("materials")
++      .select("id, exam_type, category, topic, content")
++      .range(from, from + pageSize - 1);
++    if (error) throw error;
++
++    const rows = (data ?? []) as Array<{
++      id: string;
++      exam_type: string;
++      category: string;
++      topic: string;
++      content: string | null;
++    }>;
++
++    for (const row of rows) {
++      if (!row.content) continue;
++      const where = `materials/${row.exam_type}/${row.category}/${row.topic}/${row.id}`;
++      const content = normalizeField(where, "content", row.content);
++      if (apply && content !== row.content) {
++        const { error: updateError } = await supabase
++          .from("materials")
++          .update({ content })
++          .eq("id", row.id);
++        if (updateError) {
++          throw new Error(`Update material ${row.id}: ${updateError.message}`);
++        }
++      }
++    }
++
++    if (!data || data.length < pageSize) break;
++  }
++}
++
++async function main() {
++  console.log("\n=== Naprawa formatowania treści matematycznych ===\n");
++
++  if (!dbOnly) {
++    repairCachedTasks();
++    repairCachedTheory();
++  }
++  if (!cacheOnly) {
++    await repairDatabase();
++  }
++
++  console.log(`Sprawdzone pola: ${scanned}`);
++  console.log(`Do poprawy: ${changes.length}\n`);
++
++  for (const change of changes.slice(0, 25)) {
++    console.log(`[${change.where}] ${change.field}`);
++    console.log(`  problem: ${change.issues.join("; ") || "formatowanie"}`);
++    console.log(`  przed  : ${preview(change.before)}`);
++    console.log(`  po     : ${preview(change.after)}`);
++  }
++  if (changes.length > 25) {
++    console.log(`… i ${changes.length - 25} więcej`);
++  }
++
++  if (changes.length === 0) {
++    console.log("\n✓ Brak problemów z formatowaniem.\n");
++    return;
++  }
++
++  if (!apply) {
++    console.log("\n[DRY RUN] Nic nie zapisano. Użyj --apply, aby wykonać naprawę.\n");
++    process.exit(1);
++  }
++
++  console.log("\n✓ Poprawki zapisane.\n");
++}
++
++main().catch((error) => {
++  console.error(error);
++  process.exit(1);
++});
+diff --git a/tests/format-tasks.test.ts b/tests/format-tasks.test.ts
+index 58b9aa0..492fc44 100644
+--- a/tests/format-tasks.test.ts
++++ b/tests/format-tasks.test.ts
+@@ -10,6 +10,22 @@ describe("parseGeminiTasksJson", () => {
+     const raw = '```json\n[{"content":"x","options":["1","2","3","4"],"correct_answer":"1","difficulty":1,"xp_reward":10,"explanation":"ok","figure_svg":null,"figure_caption":null}]\n```';
+     expect(parseGeminiTasksJson(raw)).toHaveLength(1);
+   });
++
++  it("nie zamienia \\times (pojedynczy ukośnik od modelu) na tabulator", () => {
++    // Model oddaje LaTeX z jednym ukośnikiem: dla JSON-a to poprawny escape `\t`.
++    const raw =
++      '[{"content":"Oblicz $15 + (5\\times3)^2 - 10$.","options":["35","40","25","45"],"correct_answer":"35","difficulty":2,"xp_reward":16,"explanation":"$15 + 25 - 10 = 30$","figure_svg":null,"figure_caption":null}]';
++    const parsed = parseGeminiTasksJson(raw) as Array<{ content: string }>;
++    expect(parsed[0]!.content).toBe("Oblicz $15 + (5\\times3)^2 - 10$.");
++    expect(parsed[0]!.content).not.toContain("\t");
++  });
++
++  it("zostawia prawdziwe nowe linie w explanation", () => {
++    const raw =
++      '[{"content":"Oblicz $2+2$.","options":["3","4","5","6"],"correct_answer":"4","difficulty":1,"xp_reward":10,"explanation":"Krok 1.\\nDodaj liczby.","figure_svg":null,"figure_caption":null}]';
++    const parsed = parseGeminiTasksJson(raw) as Array<{ explanation: string }>;
++    expect(parsed[0]!.explanation).toBe("Krok 1.\nDodaj liczby.");
++  });
+ });
+ 
+ describe("normalizeGeminiTask", () => {
+@@ -57,6 +73,20 @@ describe("normalizeGeminiTask", () => {
+     });
+     expect(task).toBeNull();
+   });
++
++  it("naprawia treść uszkodzoną przez parser JSON", () => {
++    const task = normalizeGeminiTask({
++      content: "Oblicz $15 + (5\u0009imes3)^2 - 10$.",
++      options: ["35", "40", "25", "45"],
++      correct_answer: "35",
++      difficulty: 2,
++      xp_reward: 16,
++      explanation: "Policz najpierw nawias.",
++      figure_svg: null,
++      figure_caption: null,
++    });
++    expect(task?.content).toBe("Oblicz $15 + (5\\times3)^2 - 10$.");
++  });
+ });
+ 
+ describe("taskContentForDb", () => {
+diff --git a/tests/math-text-render.test.ts b/tests/math-text-render.test.ts
+new file mode 100644
+index 0000000..5b82cea
+--- /dev/null
++++ b/tests/math-text-render.test.ts
+@@ -0,0 +1,50 @@
++import { createElement } from "react";
++import { renderToStaticMarkup } from "react-dom/server";
++import { describe, expect, it } from "vitest";
++import { MathText } from "@/components/trening/MathText";
++
++function render(content: string): string {
++  return renderToStaticMarkup(createElement(MathText, { content }));
++}
++
++describe("MathText", () => {
++  it("nie pokazuje nadmiarowego $ ani surowego LaTeX-a (zrzut ekranu 1)", () => {
++    const html = render(
++      "Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$$",
++    );
++    expect(html).not.toContain("$");
++    expect(html).not.toContain("katex-error");
++    expect(html).toContain("<mo>÷</mo>");
++    expect(html).toContain("<mo>×</mo>");
++    expect(html).toContain("Oblicz wartość wyrażenia");
++  });
++
++  it("renderuje \\times zamiast zjedzonego `imes` (zrzut ekranu 2)", () => {
++    const html = render(
++      "Oblicz wartość wyrażenia $15 + (5\u0009imes3)^2 - 10$.",
++    );
++    expect(html).not.toContain("\u0009");
++    expect(html).not.toContain("katex-error");
++    expect(html).toContain("<mo>×</mo>");
++    expect(html).toContain("\\times");
++  });
++
++  it("nie zostawia czerwonego błędu KaTeX dla niezrozumiałej formuły", () => {
++    const html = render("Wartość $\\frac{1}{2$ wynosi 0,5");
++    expect(html).not.toContain("katex-error");
++    expect(html).not.toContain("\\frac");
++  });
++
++  it("renderuje poprawne zadanie bez zmian", () => {
++    const html = render("Oblicz $2 + 2 \\cdot 2$.");
++    expect(html).toContain("katex");
++    expect(html).toContain("Oblicz");
++  });
++
++  it("renderuje **pogrubienie** z wyjaśnienia zamiast gwiazdek", () => {
++    const html = render("Wynik to 6.\n**Odpowiedź:** $6$");
++    expect(html).toContain("<strong");
++    expect(html).not.toContain("**");
++    expect(html).toContain("Odpowiedź:");
++  });
++});
+diff --git a/tests/normalize-math-text.test.ts b/tests/normalize-math-text.test.ts
+new file mode 100644
+index 0000000..47de376
+--- /dev/null
++++ b/tests/normalize-math-text.test.ts
+@@ -0,0 +1,170 @@
++import { describe, expect, it } from "vitest";
++import {
++  balanceMathDelimiters,
++  findMathTextIssues,
++  latexToPlainText,
++  normalizeMathText,
++  repairLatexControlChars,
++  scanMathSegments,
++} from "@/lib/math/normalize-math-text";
++
++describe("repairLatexControlChars", () => {
++  it("odtwarza \\times zjedzone przez sekwencję \\t", () => {
++    // Dokładnie to, co widzi użytkownik: `5imes3` w treści zadania.
++    expect(repairLatexControlChars("$15 + (5\u0009imes3)^2 - 10$")).toBe(
++      "$15 + (5\\times3)^2 - 10$",
++    );
++  });
++
++  it("odtwarza inne komendy uszkodzone przez \\t, \\f, \\b, \\r", () => {
++    expect(repairLatexControlChars("$\\frac{1}{2}$".replace("\\f", "\u000C"))).toBe(
++      "$\\frac{1}{2}$",
++    );
++    expect(repairLatexControlChars("\u000Crac{1}{2}")).toBe("\\frac{1}{2}");
++    expect(repairLatexControlChars("\u0008eta")).toBe("\\beta");
++    expect(repairLatexControlChars("\u000Dightarrow")).toBe("\\rightarrow");
++    expect(repairLatexControlChars("\u0009heta")).toBe("\\theta");
++  });
++
++  it("nie rusza prawdziwych nowych linii i tabulatorów", () => {
++    const text =
++      "Krok 1.\nElement pierwszy\nnie wiem\nnotatka\ni tworzenie informacji\n\ne) punkt\n\td) punkt";
++    expect(repairLatexControlChars(text)).toBe(text);
++  });
++
++  it("nie zamienia polskiego \\ni w symbol ∋", () => {
++    expect(repairLatexControlChars("Wykorzystanie\ni tworzenie")).toBe(
++      "Wykorzystanie\ni tworzenie",
++    );
++  });
++
++  it("naprawia \\neq zapisane w JSON jako \\n", () => {
++    expect(repairLatexControlChars("gdzie $b \u000Aeq 0$")).toBe(
++      "gdzie $b \\neq 0$",
++    );
++  });
++});
++
++describe("balanceMathDelimiters", () => {
++  it("usuwa nadmiarowy $ po zamknięciu formuły", () => {
++    expect(balanceMathDelimiters("$50 - (24 \\div 6)$$")).toBe(
++      "$50 - (24 \\div 6)$",
++    );
++  });
++
++  it("usuwa nadmiarowy $ po zamknięciu $$", () => {
++    expect(balanceMathDelimiters("$$\\frac{1}{2}$$$")).toBe("$$\\frac{1}{2}$$");
++  });
++
++  it("domyka niedomknięty $ na końcu linii", () => {
++    expect(balanceMathDelimiters("D) $x^2 - 2x + 15")).toBe("D) $x^2 - 2x + 15$");
++    expect(balanceMathDelimiters("linia\n$S = n^2\nnastępna")).toBe(
++      "linia\n$S = n^2$\nnastępna",
++    );
++    expect(balanceMathDelimiters("a$b")).toBe("a$b$");
++  });
++
++  it("domyka niedomknięty $$", () => {
++    expect(balanceMathDelimiters("$$S = n^2")).toBe("$$S = n^2$$");
++  });
++
++  it("zostawia pojedynczy $ w cenie bez zmian", () => {
++    expect(balanceMathDelimiters("Koszt to $5")).toBe("Koszt to $5");
++    expect(balanceMathDelimiters("Cena 5$")).toBe("Cena 5$");
++  });
++});
++
++describe("scanMathSegments", () => {
++  it("dzieli poprawną treść", () => {
++    expect(scanMathSegments("Wykres $y = -x + 3$ przecina oś OY")).toEqual([
++      { kind: "text", text: "Wykres " },
++      { kind: "inline", latex: "y = -x + 3" },
++      { kind: "text", text: " przecina oś OY" },
++    ]);
++  });
++
++  it("zachowuje spacje wewnątrz $$...$$", () => {
++    expect(scanMathSegments("$$ \\frac{a}{b} $$")).toEqual([
++      { kind: "display", latex: " \\frac{a}{b} " },
++    ]);
++  });
++});
++
++describe("normalizeMathText", () => {
++  it("naprawia zadanie z nadmiarowym $ (zrzut ekranu 1)", () => {
++    expect(
++      normalizeMathText(
++        "Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$$",
++      ),
++    ).toBe("Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$");
++  });
++
++  it("naprawia zadanie z \\times zamienionym na tabulator (zrzut ekranu 2)", () => {
++    const broken = "Oblicz wartość wyrażenia $15 + (5\u0009imes3)^2 - 10$.";
++    expect(normalizeMathText(broken)).toBe(
++      "Oblicz wartość wyrażenia $15 + (5\\times3)^2 - 10$.",
++    );
++  });
++
++  it("owija surowy LaTeX, gdy brakuje obu $", () => {
++    expect(
++      normalizeMathText("Oblicz wartość wyrażenia 50 - (24 \\div 6 + 2 \\times 5)"),
++    ).toBe("Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$");
++  });
++
++  it("zamienia delimitery \\( \\) i \\[ \\] na $", () => {
++    expect(normalizeMathText("\\(x\\) oraz \\[y\\]")).toBe("$x$ oraz $$y$$");
++  });
++
++  it("nie zmienia poprawnych treści", () => {
++    const samples = [
++      "$(0, 3)$",
++      "Wykres $y = -x + 3$ przecina oś OY",
++      "Oblicz $$\\frac{1}{2}$$",
++      "Zadanie $\\frac{1}{2}$ i $x$",
++      "$$ \\frac{a}{b} = \\frac{c}{d} $$",
++      "Koszt to $5",
++    ];
++    for (const sample of samples) {
++      expect(normalizeMathText(sample)).toBe(sample);
++    }
++  });
++
++  it("jest idempotentny", () => {
++    const samples = [
++      "Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$$",
++      "Oblicz wartość wyrażenia $15 + (5\u0009imes3)^2 - 10$.",
++      "linia\n$S = n^2\nnastępna",
++      "A) $x$ B) $y$",
++    ];
++    for (const sample of samples) {
++      const once = normalizeMathText(sample);
++      expect(normalizeMathText(once)).toBe(once);
++    }
++  });
++});
++
++describe("findMathTextIssues", () => {
++  it("wykrywa oba typy błędów", () => {
++    expect(
++      findMathTextIssues("$50 - (24 \\div 6 + 2 \\times 5)$$"),
++    ).toContain("niedomknięte lub nadmiarowe $");
++    expect(findMathTextIssues("$15 + (5\u0009imes3)^2$")).toContain(
++      "uszkodzona sekwencja LaTeX (znak sterujący zamiast ukośnika)",
++    );
++  });
++
++  it("nie zgłasza problemów dla poprawnych treści", () => {
++    expect(findMathTextIssues("Wykres $y = -x + 3$ przecina oś OY")).toEqual([]);
++  });
++});
++
++describe("latexToPlainText", () => {
++  it("daje czytelny tekst zamiast surowego LaTeX-a", () => {
++    expect(latexToPlainText("50 - (24 \\div 6 + 2 \\times 5)")).toBe(
++      "50 - (24 ÷ 6 + 2 × 5)",
++    );
++    expect(latexToPlainText("\\frac{\\sqrt{2}}{2}")).toBe("√(2)/2");
++    expect(latexToPlainText("\\alpha^2")).toBe("α²");
++  });
++});
+diff --git a/tests/render-math-text.test.ts b/tests/render-math-text.test.ts
+index bb1fa3c..8598a59 100644
+--- a/tests/render-math-text.test.ts
++++ b/tests/render-math-text.test.ts
+@@ -1,5 +1,28 @@
++import katex from "katex";
+ import { describe, expect, it } from "vitest";
+-import { containsMathDelimiters, splitMathText } from "@/lib/math/render-math-text";
++import {
++  containsMathDelimiters,
++  splitMathText,
++} from "@/lib/math/render-math-text";
++
++/** Każdy fragment matematyczny musi dać się wyrenderować (bez katex-error). */
++function assertRenderable(content: string) {
++  const parts = splitMathText(content);
++  for (const part of parts) {
++    if (part.kind === "text") {
++      expect(part.text).not.toContain("$");
++      expect(part.text).not.toMatch(/\\[a-zA-Z]{2,}/);
++      continue;
++    }
++    const html = katex.renderToString(part.latex, {
++      displayMode: part.kind === "display",
++      throwOnError: true,
++      strict: "ignore",
++    });
++    expect(html).not.toContain("katex-error");
++  }
++  return parts;
++}
+ 
+ describe("splitMathText", () => {
+   it("parses inline math", () => {
+@@ -22,6 +45,41 @@ describe("splitMathText", () => {
+       { kind: "display", latex: "\\frac{1}{2}" },
+     ]);
+   });
++
++  it("naprawia nadmiarowy $ zamiast pokazywać go w tekście", () => {
++    const parts = assertRenderable(
++      "Oblicz wartość wyrażenia $50 - (24 \\div 6 + 2 \\times 5)$$",
++    );
++    expect(parts).toEqual([
++      { kind: "text", text: "Oblicz wartość wyrażenia " },
++      { kind: "inline", latex: "50 - (24 \\div 6 + 2 \\times 5)" },
++    ]);
++  });
++
++  it("naprawia \\times zamienione na tabulator zanim trafi do KaTeX", () => {
++    const parts = assertRenderable(
++      "Oblicz wartość wyrażenia $15 + (5\u0009imes3)^2 - 10$.",
++    );
++    expect(parts[1]).toEqual({
++      kind: "inline",
++      latex: "15 + (5\\times3)^2 - 10",
++    });
++  });
++
++  it("domyka brakujący $ w opcji odpowiedzi", () => {
++    const parts = assertRenderable("D) $x^2 - 2x + 15");
++    expect(parts).toEqual([
++      { kind: "text", text: "D) " },
++      { kind: "inline", latex: "x^2 - 2x + 15" },
++    ]);
++  });
++
++  it("renderuje poprawną treść bez zmian", () => {
++    const parts = assertRenderable(
++      "Kąt $\\alpha$ ma miarę $30^{\\circ}$, a $\\frac{1}{2}$ to połowa.",
++    );
++    expect(parts).toHaveLength(7);
++  });
+ });
+ 
+ describe("containsMathDelimiters", () => {

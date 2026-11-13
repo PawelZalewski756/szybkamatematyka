@@ -90,11 +90,14 @@ zmienna jest wyłącznie wskazówką dla gate'u UI.
 
 ## Seed danych
 
-Nie uruchamiaj `add_tasks_materials_insert.sql` na produkcji. Ten plik otwiera
-zapis dla anon/authenticated i służy tylko do lokalnego lub stagingowego
-seedu. Na produkcji skrypty seedujące powinny używać
-`SUPABASE_SERVICE_ROLE_KEY`, a po ich wykonaniu należy ponownie uruchomić
-`20260906220000_production_hardening.sql`.
+`add_tasks_materials_insert.sql` jest **wyłączony** (no-op). Historycznie
+otwierał zapis dla anon/authenticated i przy publicznym kluczu z bundle'a
+pozwalał każdemu modyfikować bazę zadań. Aktualny stan wymusza
+`20260906220000_production_hardening.sql`: odczyt publiczny, zapis tylko dla
+zalogowanego administratora (`public.is_admin()` + tabela `admin_emails`).
+
+Skrypty seedujące używają `SUPABASE_SERVICE_ROLE_KEY`, a po ręcznych zmianach
+polityk RLS uruchom ponownie `20260906220000_production_hardening.sql`.
 
 ```bash
 npm run seed:trening-tasks -- --dry-run

@@ -14,6 +14,8 @@
  * go psuć.
  */
 
+import { normalizeMathText } from "@/lib/math/normalize-math-text";
+
 const GREETING_RE =
   /^\s*(siema(nko)?|siemka|hej(ka)?|cze(ść|sc)|witaj(cie)?|jasne|oczywi(ś|s)cie|spoko|no\s+dobra|dobra)[\s!,.…-]+/i;
 
@@ -106,6 +108,9 @@ export function normalizeSolution(text: string): string {
   out = normalizeStepHeadings(out);
   out = normalizeFinalAnswer(out);
   out = fixMathArtifacts(out);
+  // Rozwiązania mają ten sam problem co zadania: `\times`, `\frac` i `\theta`
+  // potrafią wrócić z modelu jako znaki sterujące.
+  out = normalizeMathText(out);
   out = tidyWhitespace(out);
 
   return out;

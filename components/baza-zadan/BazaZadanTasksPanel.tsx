@@ -3,7 +3,9 @@
 import { TaskCard } from "@/components/baza-zadan/TaskCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
+import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import { getTasksForPath } from "@/lib/baza-zadan/catalog";
+import type { LearningPath } from "@/lib/learning-path";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -21,9 +23,44 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import type { ReactNode } from "react";
-import { useDeferredValue, useMemo, useState } from "react";
+import {
+  useDeferredValue,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
+
+type SortMode = "default" | "easy" | "hard" | "az";
+
+const DIFFICULTY_ORDER: Record<TaskDifficulty, number> = {
+  latwy: 0,
+  sredni: 1,
+  trudny: 2,
+};
+
+function pageNumbers(
+  current: number,
+  total: number,
+): Array<number | "ellipsis"> {
+  if (total <= 7) {
+    return Array.from({ length: total }, (_, index) => index + 1);
+  }
+
+  const visible = new Set([1, total, current - 1, current, current + 1]);
+  const pages = [...visible]
+    .filter((page) => page >= 1 && page <= total)
+    .sort((a, b) => a - b);
+  const out: Array<number | "ellipsis"> = [];
+
+  pages.forEach((page, index) => {
+    if (index > 0 && page - pages[index - 1]! > 1) out.push("ellipsis");
+    out.push(page);
+  });
+
+  return out;
+}
 
 function polishCount(count: number): string {
   const absolute = Math.abs(count);
@@ -62,18 +99,29 @@ function FilterChip({
   );
 }
 
-export function BazaZadanTasksPanel() {
+export function BazaZadanTasksPanel({
+  level,
+}: {
+  level?: LearningPath;
+}) {
   const { path } = useLearningPath();
+  const activePath = level ?? path;
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
   const [selectedGroup, setSelectedGroup] =
-    useState<TaskCategoryGroupId | null>(null);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+    useState<TaskCategoryGroupId | null>(() =>
+      activePath === "srednia" ? "liceum" : "podstawy",
+    );
+  const [showAllGroupTasks, setShowAllGroupTasks] = useState(false);
+  const [page, setPage] = useState(1);
+  const [sort, setSort] = useState<SortMode>("default");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const resultsRef = useRef<HTMLElement | null>(null);
+  const { solvedIds } = useSolvedTasks();
 
   const deferredSearch = useDeferredValue(search);
-  const allTasks = useMemo(() => getTasksForPath(path), [path]);
+  const allTasks = useMemo(() => getTasksForPath(activePath), [activePath]);
   const catalogGroups = useMemo(
     () =>
       TASK_CATEGORY_GROUPS.map((group) => ({
@@ -88,49 +136,119 @@ export function BazaZadanTasksPanel() {
     ? TASK_CATEGORY_GROUPS.find((group) => group.id === selectedGroup)
     : undefined;
 
-  const tasks = useMemo(() => {
-    const groupCategories = selectedGroupDefinition?.categories;
+  const groupCategories = selectedGroupDefinition?.categories;
 
-    return getTasksForPath(path, {
-      difficulty,
-      search: deferredSearch,
-    }).filter((task) => {
+  const baseTasks = useMemo(() => {
+    return getTasksForPath(activePath, { search: deferredSearch }).filter((task) => {
       if (category !== "all" && task.category !== category) return false;
       if (groupCategories && !groupCategories.includes(task.category)) {
         return false;
       }
       return true;
     });
-  }, [
-    category,
-    deferredSearch,
-    difficulty,
-    path,
-    selectedGroupDefinition,
-  ]);
+  }, [activePath, category, deferredSearch, groupCategories]);
+
+  const tasks = useMemo(() => {
+    if (difficulty === "all") return baseTasks;
+    return baseTasks.filter((task) => task.difficulty === difficulty);
+  }, [baseTasks, difficulty]);
+
+  const sortedTasks = useMemo(() => {
+    const copy = [...tasks];
+    if (sort === "easy") {
+      copy.sort(
+        (a, b) => DIFFICULTY_ORDER[a.difficulty] - DIFFICULTY_ORDER[b.difficulty],
+      );
+    } else if (sort === "hard") {
+      copy.sort(
+        (a, b) => DIFFICULTY_ORDER[b.difficulty] - DIFFICULTY_ORDER[a.difficulty],
+      );
+    } else if (sort === "az") {
+      copy.sort((a, b) => a.title.localeCompare(b.title, "pl"));
+    }
+    return copy;
+  }, [sort, tasks]);
+
+  const difficultyCounts = useMemo(() => {
+    const counts: Record<TaskDifficulty, number> = {
+      latwy: 0,
+      sredni: 0,
+      trudny: 0,
+    };
+    for (const task of baseTasks) counts[task.difficulty] += 1;
+    return counts;
+  }, [baseTasks]);
+
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<TaskCategory, number>();
+    if (!selectedGroupDefinition) return counts;
+    for (const task of allTasks) {
+      if (!selectedGroupDefinition.categories.includes(task.category)) continue;
+      counts.set(task.category, (counts.get(task.category) ?? 0) + 1);
+    }
+    return counts;
+  }, [allTasks, selectedGroupDefinition]);
+
+  const groupTaskCount = selectedGroupDefinition
+    ? [...categoryCounts.values()].reduce((sum, count) => sum + count, 0)
+    : allTasks.length;
+
+  const totalPages = Math.max(1, Math.ceil(sortedTasks.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const pageList = pageNumbers(currentPage, totalPages);
+  const pageStart = (currentPage - 1) * PAGE_SIZE;
+  const pageTasks = sortedTasks.slice(pageStart, pageStart + PAGE_SIZE);
+  const firstNumber = sortedTasks.length === 0 ? 0 : pageStart + 1;
+  const lastNumber = Math.min(pageStart + PAGE_SIZE, sortedTasks.length);
+  const solvedInResults = sortedTasks.filter((task) =>
+    solvedIds.has(task.id),
+  ).length;
+  const progressPercent =
+    sortedTasks.length === 0
+      ? 0
+      : Math.round((solvedInResults / sortedTasks.length) * 100);
 
   const hasIntent =
     selectedGroup !== null ||
     category !== "all" ||
     difficulty !== "all" ||
     search.trim().length > 0;
-  const visible = tasks.slice(0, visibleCount);
-  const hasMore = visibleCount < tasks.length;
-  const resultTitle = selectedGroupDefinition
-    ? `Zadania: ${selectedGroupDefinition.label}`
-    : search.trim()
-      ? "Wyniki wyszukiwania"
-      : category !== "all"
-        ? CATEGORY_LABELS[category]
-        : "Wybrane zadania";
 
-  const resetPagination = () => setVisibleCount(PAGE_SIZE);
+  const showSectionDirectory =
+    Boolean(selectedGroupDefinition) &&
+    category === "all" &&
+    difficulty === "all" &&
+    !search.trim() &&
+    !showAllGroupTasks;
+
+  const resultTitle =
+    category !== "all"
+      ? CATEGORY_LABELS[category]
+      : selectedGroupDefinition
+        ? `Zadania: ${selectedGroupDefinition.label}`
+        : search.trim()
+          ? "Wyniki wyszukiwania"
+          : "Wybrane zadania";
+
+  const resetPagination = () => setPage(1);
+
+  const goToPage = (next: number) => {
+    const target = Math.min(Math.max(1, next), totalPages);
+    setPage(target);
+    window.requestAnimationFrame(() => {
+      resultsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
 
   const clearSelection = () => {
     setSearch("");
     setCategory("all");
     setDifficulty("all");
     setSelectedGroup(null);
+    setShowAllGroupTasks(false);
     resetPagination();
   };
 
@@ -139,6 +257,7 @@ export function BazaZadanTasksPanel() {
     setCategory("all");
     setDifficulty("all");
     setSelectedGroup(groupId);
+    setShowAllGroupTasks(false);
     resetPagination();
   };
 
@@ -156,7 +275,7 @@ export function BazaZadanTasksPanel() {
           Wybierz dział lub wyszukaj zadanie
         </h2>
         <p className="mt-2 text-sm text-muted">
-          Zacznij od tematu albo wpisz szukaną frazę.
+          Zacznij od działu albo wpisz szukaną frazę.
         </p>
       </div>
 
@@ -178,6 +297,7 @@ export function BazaZadanTasksPanel() {
           onChange={(e) => {
             setSearch(e.target.value);
             setSelectedGroup(null);
+            setShowAllGroupTasks(false);
             resetPagination();
           }}
           placeholder="Np. równania, procenty, trójkąt…"
@@ -210,37 +330,9 @@ export function BazaZadanTasksPanel() {
       {filtersOpen ? (
         <div
           id="baza-zadan-detailed-filters"
-          className="mt-5 grid gap-5 border-t border-surface-border pt-5 sm:grid-cols-2"
+          className="mt-5 border-t border-surface-border pt-5"
         >
-          <div>
-            <p className="mb-2 text-xs font-semibold text-muted">Trudność</p>
-            <div className="flex flex-wrap gap-1.5">
-              <FilterChip
-                active={difficulty === "all"}
-                onClick={() => {
-                  setDifficulty("all");
-                  resetPagination();
-                }}
-              >
-                Wszystkie
-              </FilterChip>
-              {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
-                <FilterChip
-                  key={d}
-                  active={difficulty === d}
-                  onClick={() => {
-                    setDifficulty(d);
-                    setSelectedGroup(null);
-                    resetPagination();
-                  }}
-                >
-                  {DIFFICULTY_LABELS[d]}
-                </FilterChip>
-              ))}
-            </div>
-          </div>
-
-          <div>
+          <div className="max-w-sm">
             <label
               htmlFor="baza-dzial"
               className="text-xs font-semibold text-muted"
@@ -253,6 +345,7 @@ export function BazaZadanTasksPanel() {
               onChange={(e) => {
                 setCategory(e.target.value as TaskCategory | "all");
                 setSelectedGroup(null);
+                setShowAllGroupTasks(false);
                 resetPagination();
               }}
               className="input-field mt-1.5 w-full px-3 py-2.5 text-sm"
@@ -277,7 +370,7 @@ export function BazaZadanTasksPanel() {
     >
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div>
-          <p className="text-overline">Katalog tematów</p>
+          <p className="text-overline">Katalog działów</p>
           <h2
             id="baza-zadan-catalog-heading"
             className="mt-1 text-lg font-bold text-foreground"
@@ -333,9 +426,9 @@ export function BazaZadanTasksPanel() {
   );
 
   const results = (
-    <section aria-labelledby="baza-zadan-results-heading">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
+    <section ref={resultsRef} aria-labelledby="baza-zadan-results-heading">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div className="min-w-0">
           <p className="text-overline">Wyniki</p>
           <h2
             id="baza-zadan-results-heading"
@@ -343,55 +436,278 @@ export function BazaZadanTasksPanel() {
           >
             {resultTitle}
           </h2>
+          {selectedGroupDefinition ? (
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+              {selectedGroupDefinition.description}
+            </p>
+          ) : null}
           <p className="mt-1 text-sm text-muted" role="status" aria-live="polite">
             Znaleziono{" "}
             <span className="font-semibold text-foreground">
-              {polishCount(tasks.length)}
+              {polishCount(sortedTasks.length)}
             </span>
           </p>
+          <div className="mt-3 max-w-sm">
+            <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-wide text-muted">
+              <span>Postęp</span>
+              <span className="tabular-nums">
+                {solvedInResults}/{sortedTasks.length}
+              </span>
+            </div>
+            <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-surface-border">
+              <div
+                className="h-full rounded-full bg-success transition-[width] duration-300"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={clearSelection}
-          className="inline-flex items-center gap-2 self-start text-sm font-semibold text-accent hover:text-accent-strong sm:self-auto"
-        >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          Wróć do katalogu
-        </button>
+
+        <div className="flex flex-wrap items-center gap-2">
+          {!showSectionDirectory ? (
+            <label className="flex items-center gap-2 text-xs font-semibold text-muted">
+              Sortuj
+              <select
+                value={sort}
+                onChange={(event) => {
+                  setSort(event.target.value as SortMode);
+                  resetPagination();
+                }}
+                className="input-field py-1.5 text-xs"
+              >
+                <option value="default">Polecane</option>
+                <option value="easy">Najłatwiejsze</option>
+                <option value="hard">Najtrudniejsze</option>
+                <option value="az">Alfabetycznie</option>
+              </select>
+            </label>
+          ) : null}
+          <button
+            type="button"
+            onClick={clearSelection}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-strong"
+          >
+            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+            Wróć do katalogu
+          </button>
+        </div>
       </div>
 
-      {tasks.length === 0 ? (
+      {showSectionDirectory ? (
         <div className="mt-5">
-          <EmptyState
-            icon={SearchX}
-            title="Brak zadań"
-            description="Zmień frazę albo wybierz inny dział i spróbuj ponownie."
-          />
-        </div>
-      ) : (
-        <>
-          <ul
-            className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
-            aria-label="Wyniki zadań"
-          >
-            {visible.map((task) => (
-              <li key={task.id}>
-                <TaskCard task={task} />
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-wrap items-end justify-between gap-3 border-t border-surface-border pt-4">
+            <div>
+              <p className="text-overline">Działy</p>
+              <h3 className="mt-1 text-lg font-bold text-foreground">
+                Wybierz dział
+              </h3>
+            </div>
+            <p className="text-sm text-muted">
+              {groupCategories?.length ?? 0} działów
+            </p>
+          </div>
 
-          {hasMore ? (
-            <div className="mt-6 flex justify-center">
+          {!groupCategories || groupCategories.length === 0 ? (
+            <div className="mt-5">
+              <EmptyState
+                icon={SearchX}
+                title="Brak działów"
+                description="Zmień poziom albo wróć do katalogu działów."
+              />
+            </div>
+          ) : (
+            <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {groupCategories.map((groupCategory) => (
+                <li key={groupCategory}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCategory(groupCategory);
+                      setShowAllGroupTasks(false);
+                      resetPagination();
+                    }}
+                    className="flex w-full items-center justify-between gap-3 rounded-xl border border-surface-border bg-surface px-4 py-3 text-left transition hover:border-accent/35 hover:bg-surface-hover"
+                  >
+                    <span className="min-w-0 text-sm font-semibold text-foreground">
+                      {CATEGORY_LABELS[groupCategory]}
+                    </span>
+                    <span className="shrink-0 rounded-md bg-surface-hover px-2 py-0.5 text-xs font-semibold tabular-nums text-muted">
+                      {categoryCounts.get(groupCategory) ?? 0}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {baseTasks.length > 0 ? (
+            <div className="mt-5 flex justify-center">
               <button
                 type="button"
-                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-                className="btn-ghost px-6 py-2.5 text-sm font-semibold"
+                onClick={() => {
+                  setShowAllGroupTasks(true);
+                  resetPagination();
+                }}
+                className="btn-ghost px-5 py-2.5 text-sm font-semibold"
               >
-                Pokaż więcej ({tasks.length - visibleCount} pozostało)
+                Przeglądaj wszystkie {baseTasks.length} zadań
               </button>
             </div>
           ) : null}
+        </div>
+      ) : (
+        <>
+          {selectedGroupDefinition &&
+          selectedGroupDefinition.categories.length > 1 ? (
+            <div className="mt-3 flex flex-wrap items-center gap-1.5 border-t border-surface-border pt-4">
+              <span className="mr-1 text-xs font-semibold text-muted">Dział:</span>
+              <FilterChip
+                active={category === "all"}
+                onClick={() => {
+                  setCategory("all");
+                  setShowAllGroupTasks(false);
+                  resetPagination();
+                }}
+              >
+                Wszystkie
+                <span className="ml-1 tabular-nums opacity-70">
+                  {groupTaskCount}
+                </span>
+              </FilterChip>
+              {selectedGroupDefinition.categories.map((groupCategory) => (
+                <FilterChip
+                  key={groupCategory}
+                  active={category === groupCategory}
+                  onClick={() => {
+                    setCategory(groupCategory);
+                    setShowAllGroupTasks(false);
+                    resetPagination();
+                  }}
+                >
+                  {CATEGORY_LABELS[groupCategory]}
+                  <span className="ml-1 tabular-nums opacity-70">
+                    {categoryCounts.get(groupCategory) ?? 0}
+                  </span>
+                </FilterChip>
+              ))}
+            </div>
+          ) : null}
+
+          <div className="mt-3 flex flex-wrap items-center gap-1.5">
+            <span className="mr-1 text-xs font-semibold text-muted">Poziom:</span>
+            <FilterChip
+              active={difficulty === "all"}
+              onClick={() => {
+                setDifficulty("all");
+                resetPagination();
+              }}
+            >
+              Wszystkie
+              <span className="ml-1 tabular-nums opacity-70">
+                {baseTasks.length}
+              </span>
+            </FilterChip>
+            {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((level) => (
+              <FilterChip
+                key={level}
+                active={difficulty === level}
+                onClick={() => {
+                  setDifficulty(level);
+                  resetPagination();
+                }}
+              >
+                {DIFFICULTY_LABELS[level]}
+                <span className="ml-1 tabular-nums opacity-70">
+                  {difficultyCounts[level]}
+                </span>
+              </FilterChip>
+            ))}
+          </div>
+
+          {sortedTasks.length === 0 ? (
+            <div className="mt-5">
+              <EmptyState
+                icon={SearchX}
+                title="Brak zadań"
+                description="Zmień frazę albo wybierz inny dział i spróbuj ponownie."
+              />
+            </div>
+          ) : (
+            <>
+              <ul
+                className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
+                aria-label="Wyniki zadań"
+              >
+                {pageTasks.map((task) => (
+                  <li key={task.id}>
+                    <TaskCard task={task} />
+                  </li>
+                ))}
+              </ul>
+
+              {totalPages > 1 ? (
+                <nav
+                  aria-label="Paginacja zadań"
+                  className="mt-6 flex flex-col gap-3 border-t border-surface-border pt-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <p className="text-xs text-muted">
+                    Strona{" "}
+                    <span className="font-semibold text-foreground">
+                      {currentPage}
+                    </span>{" "}
+                    z {totalPages} · zadania {firstNumber}-{lastNumber} z{" "}
+                    {sortedTasks.length}
+                  </p>
+                  <div className="flex flex-wrap items-center gap-1">
+                    <button
+                      type="button"
+                      aria-label="Poprzednia strona"
+                      disabled={currentPage === 1}
+                      onClick={() => goToPage(currentPage - 1)}
+                      className="flex h-8 min-w-8 items-center justify-center rounded-md border border-surface-border px-2 text-sm font-semibold text-muted transition hover:border-accent/40 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      ‹
+                    </button>
+                    {pageList.map((item, index) =>
+                      item === "ellipsis" ? (
+                        <span
+                          key={`ellipsis-${index}`}
+                          className="px-1 text-xs text-muted"
+                          aria-hidden="true"
+                        >
+                          …
+                        </span>
+                      ) : (
+                        <button
+                          key={item}
+                          type="button"
+                          aria-current={item === currentPage ? "page" : undefined}
+                          aria-label={`Strona ${item}`}
+                          onClick={() => goToPage(item)}
+                          className={`flex h-8 min-w-8 items-center justify-center rounded-md border px-2 text-xs font-semibold tabular-nums transition ${
+                            item === currentPage
+                              ? "border-accent bg-accent text-on-accent"
+                              : "border-surface-border text-muted hover:border-accent/40 hover:text-foreground"
+                          }`}
+                        >
+                          {item}
+                        </button>
+                      ),
+                    )}
+                    <button
+                      type="button"
+                      aria-label="Następna strona"
+                      disabled={currentPage === totalPages}
+                      onClick={() => goToPage(currentPage + 1)}
+                      className="flex h-8 min-w-8 items-center justify-center rounded-md border border-surface-border px-2 text-sm font-semibold text-muted transition hover:border-accent/40 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      ›
+                    </button>
+                  </div>
+                </nav>
+              ) : null}
+            </>
+          )}
         </>
       )}
     </section>

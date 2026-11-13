@@ -30,9 +30,26 @@ identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
 Bot Telegrama przyjmuje wyłącznie prywatne wiadomości od ID z `TELEGRAM_ADMIN_IDS`.
 Aby podłączyć go po wdrożeniu, wykonaj jednorazowe żądanie:
-`POST /api/telegram/setup` z nagłówkiem `Authorization: <TELEGRAM_SETUP_SECRET>`.
+`POST /api/telegram/setup` z nagłówkiem `Authorization: Bearer <TELEGRAM_SETUP_SECRET>`.
+Setup ustawia webhook i menu komend (`/stats`, `/new`, `/users`, `/top`,
+`/szybkaproba`, `/visits`, `/health`, `/pomoc`).
+
+Diagnostyka bez webhooka:
+
+```bash
+curl -H "Authorization: Bearer $TELEGRAM_SETUP_SECRET" \
+  https://szybkamatematyka.pl/api/telegram/diagnostics
+```
+
+Odpowiedź pokazuje, czy są ustawione token, sekrety, numeryczne ID adminów i
+`SUPABASE_SERVICE_ROLE_KEY`, oraz jaki webhook i jaki `last_error_message`
+widzi Telegram. Komenda `/health` pokazuje to samo z poziomu czatu.
+
 Każdy administrator musi wcześniej rozpocząć prywatną rozmowę z botem komendą
 `/start`, aby Telegram pozwolił mu odbierać powiadomienia o nowych kontach.
+Powiadomienie o rejestracji wymaga `SUPABASE_SERVICE_ROLE_KEY`, bo czyta konto
+przez Admin API. `/stats` pokazuje osobno konta Auth i profile w bazie, więc
+od razu widać, czy trigger `handle_new_user` działa.
 Token bota i klucz `SUPABASE_SERVICE_ROLE_KEY` nigdy nie mogą mieć prefiksu
 `NEXT_PUBLIC_`.
 
@@ -182,11 +199,14 @@ on conflict do nothing;
 
 ### Seed danych
 
-`add_tasks_materials_insert.sql` otwiera zapis dla anon i authenticated. To
-plik wyłącznie do jednorazowego, lokalnego/stagingowego seedu i nie wolno go
-uruchamiać na produkcji. Na produkcji używaj `SUPABASE_SERVICE_ROLE_KEY` w
-skryptach seedujących, a po każdym seedzie uruchom ponownie
-`20260906220000_production_hardening.sql`.
+`add_tasks_materials_insert.sql` jest **wyłączony** (no-op). Kiedyś otwierał
+zapis dla `anon` i `authenticated`, co przy publicznym kluczu z bundle'a
+pozwalało każdemu modyfikować bazę zadań. Aktualny stan wymusza
+`20260906220000_production_hardening.sql`: odczyt publiczny, zapis tylko dla
+zalogowanego administratora (`public.is_admin()` + `admin_emails`).
+
+Na produkcji i lokalnie skrypty seedujące używają `SUPABASE_SERVICE_ROLE_KEY`.
+Po edycji polityk RLS uruchom ponownie `20260906220000_production_hardening.sql`.
 
 ```bash
 npm run seed:trening-tasks -- --dry-run

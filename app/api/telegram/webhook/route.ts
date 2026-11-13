@@ -1,10 +1,18 @@
 import { createClient } from "@supabase/supabase-js";
 import { timingSafeEqual } from "node:crypto";
 import {
+  countUsersCreatedSince,
+  listAllAuthUsers,
+  paginateUsers,
+  sortUsersByCreatedAtDesc,
+} from "@/lib/telegram/admin-users";
+import {
   describeTelegramCommandError,
   isTelegramAdmin,
+  parseTelegramAdminIds,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
+import { reconcileSignupNotifications } from "@/lib/telegram/signup-delivery";
 
 export const runtime = "nodejs";
 
@@ -39,6 +47,7 @@ async function sendTelegramMessage(
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ chat_id: chatId, text }),
     cache: "no-store",
+    signal: AbortSignal.timeout(8_000),
   });
   if (!response.ok) {
     throw new Error(`Telegram sendMessage failed with status ${response.status}.`);
@@ -127,24 +136,29 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
   if (command === "stats") {
     const since = Date.now() - 7 * 24 * 60 * 60 * 1000;
-    const [users, newUsers, solved] = await Promise.all([
+    const authUsers = await listAllAuthUsers(supabase);
+    const newUsers = countUsersCreatedSince(authUsers.users, since);
+    const [profiles, solved] = await Promise.all([
       supabase.from("profiles").select("id", { count: "exact", head: true }),
-      supabase
-        .from("profiles")
-        .select("id", { count: "exact", head: true })
-        .gte("created_at", new Date(since).toISOString()),
       supabase
         .from("solved_tasks")
         .select("task_id", { count: "exact", head: true })
         .gte("solved_at", new Date(since).toISOString()),
     ]);
-    if (users.error) throw new Error(`Could not count profiles: ${users.error.message}`);
+    if (profiles.error) {
+      throw new Error(`Could not count profiles: ${profiles.error.message}`);
+    }
     if (solved.error) throw new Error(`Could not count solved tasks: ${solved.error.message}`);
     return [
       "Statystyki (ostatnie 7 dni)",
-      `Użytkownicy łącznie: ${users.count ?? 0}`,
-      `Nowe konta: ${newUsers.count ?? 0}`,
-      `Rozwiązane zadania: ${solved.count ?? 0}`,
+      `Konta (Auth): ${authUsers.total}`,
+      `Profile w bazie: ${profiles.count ?? 0}`,
+      `Nowe konta: ${newUsers}`,
+      `Rozwiązane zadania (trening): ${solved.count ?? 0}`,
+      "Baza zadań: postęp jest zapisany lokalnie w przeglądarce, poza Supabase.",
+      ...(authUsers.truncated
+        ? ["Uwaga: lista kont jest obcięta do 20 000 użytkowników."]
+        : []),
     ].join("\n");
   }
 
@@ -165,15 +179,21 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     ].join("\n");
   }
 
+  if (command === "reconcile") {
+    const result = await reconcileSignupNotifications(24);
+    return [
+      "Odratnianie powiadomień (24 h)",
+      `Sprawdzone konta: ${result.scanned}`,
+      `Wysłane: ${result.delivered}`,
+      `Pominięte: ${result.skipped}`,
+      `Błędy: ${result.failed}`,
+      ...result.errors.slice(0, 3),
+    ].join("\n");
+  }
+
   if (command === "new") {
-    const { data, error } = await supabase.auth.admin.listUsers({
-      page: 1,
-      perPage: 1000,
-    });
-    if (error) throw new Error(`Could not load recent users: ${error.message}`);
-    const recent = [...data.users]
-      .sort((a, b) => b.created_at.localeCompare(a.created_at))
-      .slice(0, 10);
+    const authUsers = await listAllAuthUsers(supabase);
+    const recent = sortUsersByCreatedAtDesc(authUsers.users).slice(0, 10);
     if (!recent.length) return "Brak zarejestrowanych użytkowników.";
     const profileNames = await getProfileNames(
       supabase,
@@ -186,6 +206,9 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         return `• ${name} - ${date}`;
       }),
+      ...(authUsers.truncated
+        ? ["Uwaga: lista kont jest obcięta do 20 000 użytkowników."]
+        : []),
     ].join("\n");
   }
 
@@ -199,33 +222,28 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       return "Podaj numer strony, np. /users 2.";
     }
 
-    const { data, error } = await supabase.auth.admin.listUsers({
-      page: requestedPage,
-      perPage: USERS_PER_PAGE,
-    });
-    if (error) throw new Error(`Could not load users: ${error.message}`);
-    if (!data.users.length) {
-      return requestedPage === 1
-        ? "Brak zarejestrowanych użytkowników."
-        : "Nie ma takiej strony.";
+    const authUsers = await listAllAuthUsers(supabase);
+    const pageData = paginateUsers(
+      sortUsersByCreatedAtDesc(authUsers.users),
+      requestedPage,
+      USERS_PER_PAGE,
+    );
+    if (requestedPage > pageData.totalPages) {
+      return `Nie ma takiej strony. Ostatnia strona: ${pageData.totalPages}.`;
+    }
+    if (!pageData.users.length) {
+      return "Brak zarejestrowanych użytkowników.";
     }
 
     const profileNames = await getProfileNames(
       supabase,
-      data.users.map((user) => user.id),
+      pageData.users.map((user) => user.id),
     );
-    const { count, error: countError } = await supabase
-      .from("profiles")
-      .select("id", { count: "exact", head: true });
-    if (countError) throw new Error(`Could not count profiles: ${countError.message}`);
-    const totalUsers = data.total || count || data.users.length;
-    const totalPages = Math.max(1, Math.ceil(totalUsers / USERS_PER_PAGE));
-
-    const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
+    const firstUserNumber = (pageData.page - 1) * USERS_PER_PAGE + 1;
     return [
-      `Wszyscy użytkownicy - strona ${requestedPage}/${totalPages}`,
-      `Wyświetlam ${firstUserNumber}–${firstUserNumber + data.users.length - 1} z ${totalUsers}:`,
-      ...data.users.map((user, index) => {
+      `Wszyscy użytkownicy - strona ${pageData.page}/${pageData.totalPages}`,
+      `Wyświetlam ${firstUserNumber}–${firstUserNumber + pageData.users.length - 1} z ${pageData.total}:`,
+      ...pageData.users.map((user, index) => {
         const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
         const email = (user.email || "brak e-maila")
@@ -244,9 +262,12 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
         const xp = profileNames.get(user.id)?.xp ?? 0;
         return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),
-      data.nextPage !== null
-        ? `Następna strona: /users ${requestedPage + 1}`
+      pageData.page < pageData.totalPages
+        ? `Następna strona: /users ${pageData.page + 1}`
         : "To ostatnia strona.",
+      ...(authUsers.truncated
+        ? ["Uwaga: lista kont jest obcięta do 20 000 użytkowników."]
+        : []),
     ].join("\n");
   }
 
@@ -297,13 +318,82 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   if (command === "health") {
     const { error } = await supabase.from("profiles").select("id").limit(1);
     if (error) throw new Error(`Supabase health check failed: ${error.message}`);
-    return "✅ Bot działa, połączenie z Supabase jest poprawne.";
+
+    const token = process.env.TELEGRAM_BOT_TOKEN?.trim();
+    const adminIds = parseTelegramAdminIds(
+      process.env.TELEGRAM_ADMIN_IDS || process.env.ADMIN_TELEGRAM_ID,
+    );
+    const supabaseUrl =
+      process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ||
+      process.env.SUPABASE_URL?.trim() ||
+      "";
+    let supabaseHost = "brak";
+    try {
+      supabaseHost = supabaseUrl ? new URL(supabaseUrl).host : "brak";
+    } catch {
+      supabaseHost = "nieprawidłowy URL";
+    }
+    const profiles = await supabase
+      .from("profiles")
+      .select("id", { count: "exact", head: true });
+    const auth = await supabase.auth.admin.listUsers({ page: 1, perPage: 1 });
+    const lines = [
+      "✅ Bot odpowiada, Supabase działa.",
+      `Supabase: ${supabaseHost}`,
+      `Konta Auth: ${
+        auth.error ? `błąd (${auth.error.message})` : auth.data.total
+      }`,
+      `Profile w bazie: ${profiles.count ?? 0}`,
+      `Administratorzy: ${adminIds.size}${
+        adminIds.size > 0 ? ` (${[...adminIds].join(", ")})` : ""
+      }`,
+      `TELEGRAM_BOT_TOKEN: ${token ? "jest" : "brak"}`,
+      `SUPABASE_SERVICE_ROLE_KEY: ${
+        process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ? "jest" : "brak"
+      }`,
+    ];
+
+    if (token) {
+      const response = await fetch(
+        `https://api.telegram.org/bot${token}/getWebhookInfo`,
+        { cache: "no-store", signal: AbortSignal.timeout(8_000) },
+      );
+      const payload = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        result?: {
+          url?: string;
+          pending_update_count?: number;
+          last_error_message?: string;
+        };
+      };
+      if (payload.ok && payload.result) {
+        lines.push(`Webhook: ${payload.result.url || "brak"}`);
+        lines.push(
+          `Oczekujące aktualizacje: ${payload.result.pending_update_count ?? 0}`,
+        );
+        if (payload.result.last_error_message) {
+          lines.push(
+            `Ostatni błąd webhooka: ${payload.result.last_error_message.slice(0, 200)}`,
+          );
+        }
+        if (!payload.result.url) {
+          lines.push(
+            "Webhook nie jest ustawiony. Uruchom POST /api/telegram/setup.",
+          );
+        }
+      } else {
+        lines.push("Nie udało się pobrać getWebhookInfo.");
+      }
+    }
+
+    return lines.join("\n");
   }
 
   return [
     "Komendy administratora:",
     "/stats - użytkownicy, nowe konta i zadania",
     "/new - ostatnie rejestracje",
+    "/reconcile - wyślij brakujące powiadomienia o rejestracjach",
     "/users [strona] - lista wszystkich użytkowników",
     "/top - ranking XP",
     "/szybkaproba - statystyki szybkiej próby",

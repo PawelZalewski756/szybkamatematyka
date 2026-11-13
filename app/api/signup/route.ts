@@ -95,13 +95,26 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   const newUserId = data.user.id;
-  after(async () => {
-    try {
-      await deliverSignupNotification(newUserId);
-    } catch (notificationError) {
-      console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
-    }
-  });
+
+  // Gdy wymagane jest potwierdzenie e-maila, powiadomienie wysyłamy dopiero
+  // po potwierdzeniu (endpoint /api/telegram/account-confirmed). Dzięki temu
+  // administrator nie dostaje wpisu "oczekuje na potwierdzenie", tylko
+  // faktyczną informację o zweryfikowanym koncie.
+  if (data.session) {
+    after(async () => {
+      try {
+        const result = await deliverSignupNotification(newUserId);
+        if (result.status >= 400) {
+          console.error(
+            "[telegram-signup] Powiadomienie nie zostało wysłane:",
+            result.body,
+          );
+        }
+      } catch (notificationError) {
+        console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
+      }
+    });
+  }
 
   return Response.json(
     { ok: true, userId: data.user.id, needsConfirmation: !data.session },

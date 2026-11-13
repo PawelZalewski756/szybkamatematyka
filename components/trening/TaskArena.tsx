@@ -435,31 +435,67 @@ export function TaskArena({
       <div
         className={`relative z-10 flex flex-1 flex-col ${compactChrome ? "" : "py-6 sm:py-10"}`}
       >
-        {compactChrome ? (
-          <div className="mb-4 flex justify-end">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          {compactChrome ? (
             <span className="text-xs font-bold uppercase tracking-wider text-muted">
               {progressLabel}
             </span>
-          </div>
-        ) : (
-          <>
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <Link
-                href={backHref}
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-brand transition hover:underline"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Trening
-              </Link>
+          ) : (
+            <Link
+              href={backHref}
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-brand transition hover:underline"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Trening
+            </Link>
+          )}
+
+          <div className="flex flex-wrap items-center gap-2">
+            {!compactChrome && (
               <span className="text-xs font-bold uppercase tracking-wider text-muted">
                 {progressLabel}
               </span>
-            </div>
+            )}
 
-            <p className="mb-4 text-center text-sm font-semibold text-brand">
-              {topicLabel}
-            </p>
-          </>
+            <label className="flex items-center gap-1.5">
+              <span className="sr-only">Trudność</span>
+              <select
+                value={String(difficultyFilter)}
+                onChange={(event) => {
+                  const value = event.target.value;
+                  setDifficultyFilter(
+                    value === "all" ? "all" : (Number(value) as 1 | 2 | 3),
+                  );
+                }}
+                className="input-field py-1.5 text-xs"
+              >
+                <option value="all">Wszystkie</option>
+                <option value="1">Łatwe</option>
+                <option value="2">Średnie</option>
+                <option value="3">Trudne</option>
+              </select>
+            </label>
+
+            <button
+              type="button"
+              aria-pressed={shuffleOrder}
+              onClick={() => setShuffleOrder((value) => !value)}
+              className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-semibold transition ${
+                shuffleOrder
+                  ? "border-brand/30 bg-brand/10 text-brand"
+                  : "border-surface-border bg-surface text-muted hover:text-foreground"
+              }`}
+            >
+              <Shuffle className="h-3.5 w-3.5" aria-hidden />
+              Losuj
+            </button>
+          </div>
+        </div>
+
+        {!compactChrome && (
+          <p className="mb-4 text-center text-sm font-semibold text-brand">
+            {topicLabel}
+          </p>
         )}
 
         {actionError && (
@@ -486,49 +522,6 @@ export function TaskArena({
             Zaloguj się, aby zapisać postęp i zdobywać XP.
           </p>
         )}
-
-        <div className="mb-4 flex flex-col gap-3">
-          <div
-            role="group"
-            aria-label="Filtr trudności"
-            className="flex flex-wrap justify-center gap-2"
-          >
-            {(
-              [
-                { id: "all" as const, label: "Wszystkie" },
-                { id: 1 as const, label: "Łatwe (1)" },
-                { id: 2 as const, label: "Średnie (2)" },
-                { id: 3 as const, label: "Trudne (3)" },
-              ] as const
-            ).map((opt) => {
-              const active = difficultyFilter === opt.id;
-              return (
-                <button
-                  key={String(opt.id)}
-                  type="button"
-                  onClick={() => setDifficultyFilter(opt.id)}
-                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
-                    active
-                      ? "border-brand/30 bg-brand/10 text-brand"
-                      : "border-surface-border bg-surface text-muted hover:text-foreground"
-                  }`}
-                >
-                  {opt.label}
-                </button>
-              );
-            })}
-          </div>
-          <label className="mx-auto flex cursor-pointer items-center gap-2 text-xs font-semibold text-muted">
-            <input
-              type="checkbox"
-              checked={shuffleOrder}
-              onChange={(e) => setShuffleOrder(e.target.checked)}
-              className="h-4 w-4 rounded border-foreground/20 bg-surface text-accent focus:ring-accent/40"
-            />
-            <Shuffle className="h-3.5 w-3.5" aria-hidden />
-            Losuj kolejność
-          </label>
-        </div>
 
         <AnimatePresence mode="wait">
           <motion.div

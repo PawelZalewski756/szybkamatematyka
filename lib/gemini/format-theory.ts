@@ -1,3 +1,5 @@
+import { normalizeMathText } from "@/lib/math/normalize-math-text";
+
 /**
  * Normalizacja lekcji teoretycznych z Gemini (Markdown + KaTeX).
  */
@@ -158,6 +160,8 @@ export function normalizeTheoryContent(text: string): string {
   out = normalizeSectionHeadings(out);
   out = normalizeStepHeadings(out);
   out = fixMathArtifacts(out);
+  // Ten sam problem co w zadaniach: `\times` zjedzone przez parser JSON.
+  out = normalizeMathText(out);
   out = tidyWhitespace(out);
   return out;
 }

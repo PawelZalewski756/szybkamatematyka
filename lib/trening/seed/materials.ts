@@ -1068,19 +1068,19 @@ Wynik końcowy: $ \\frac{7}{2} $ lub $ 3 \\frac{1}{2} $.
 ## Diagram
 \`\`\`text
 +------------------------------------------+
-|       Kolejność Wykonywania Działań      |
+|      Kolejność wykonywania działań       |
 +------------------------------------------+
 | 1. Nawiasy (od najbardziej wewnętrznych) |
 |    ( ) [ ] { }                           |
 +------------------------------------------+
-| 2. Potęgowanie i Pierwiastkowanie         |
-|    $x^n$, $\\sqrt{x}$ (od lewej do prawej) |
+| 2. Potęgowanie i pierwiastkowanie        |
+|    x^n, √x (od lewej do prawej)          |
 +------------------------------------------+
-| 3. Mnożenie i Dzielenie                  |
-|    $ \\cdot $, $ : $ (od lewej do prawej)  |
+| 3. Mnożenie i dzielenie                  |
+|    ·, : (od lewej do prawej)             |
 +------------------------------------------+
-| 4. Dodawanie i Odejmowanie               |
-|    $ + $, $ - $ (od lewej do prawej)     |
+| 4. Dodawanie i odejmowanie               |
+|    + i - (od lewej do prawej)            |
 +------------------------------------------+
 \`\`\``,
     video_url: null,

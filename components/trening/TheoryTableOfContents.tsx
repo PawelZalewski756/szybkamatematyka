@@ -4,10 +4,33 @@ import type { MarkdownHeading } from "@/lib/trening/theory-content";
 
 type TheoryTableOfContentsProps = {
   headings: MarkdownHeading[];
+  variant?: "card" | "inline";
 };
 
-export function TheoryTableOfContents({ headings }: TheoryTableOfContentsProps) {
+export function TheoryTableOfContents({
+  headings,
+  variant = "card",
+}: TheoryTableOfContentsProps) {
   if (headings.length < 2) return null;
+
+  if (variant === "inline") {
+    return (
+      <nav aria-label="Spis treści lekcji">
+        <ol className="grid gap-1 sm:grid-cols-2">
+          {headings.map((heading) => (
+            <li key={heading.id}>
+              <a
+                href={`#${heading.id}`}
+                className="block rounded-md px-2 py-1 text-sm text-muted transition hover:bg-surface-hover hover:text-foreground"
+              >
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    );
+  }
 
   return (
     <nav

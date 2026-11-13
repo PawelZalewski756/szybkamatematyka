@@ -7,9 +7,9 @@
  *   npm run seed:trening-tasks -- --materials-only
  *   npm run seed:trening-tasks -- --materials-only --refresh-materials
  *
- * Wymaga: .env.local (Supabase URL + klucz). Zalecane: migracja
- *   supabase/migrations/add_tasks_materials_insert.sql (INSERT przez anon).
- * Opcjonalnie: SUPABASE_SERVICE_ROLE_KEY (omija RLS).
+ * Wymaga: .env.local z NEXT_PUBLIC_SUPABASE_URL i SUPABASE_SERVICE_ROLE_KEY.
+ *   Zapis do tasks/materials jest zablokowany dla anon/authenticated politykami
+ *   RLS (production_hardening), więc seed musi iść service_role.
  */
 
 import { createHash } from "crypto";
@@ -74,22 +74,15 @@ function parseArgs(): CliOptions {
 function createSupabase(): SupabaseClient {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
-  const key = serviceKey || anonKey;
 
-  if (!url || !key) {
+  if (!url || !serviceKey) {
     throw new Error(
-      "Brakuje NEXT_PUBLIC_SUPABASE_URL lub klucza Supabase w .env.local",
+      "Zapis do bazy wymaga NEXT_PUBLIC_SUPABASE_URL i SUPABASE_SERVICE_ROLE_KEY w .env.local " +
+        "(polityki RLS blokują zapis kluczem anon/authenticated).",
     );
   }
 
-  if (!serviceKey) {
-    console.warn(
-      "⚠ Brak SUPABASE_SERVICE_ROLE_KEY - używam anon. Uruchom migrację add_tasks_materials_insert.sql lub dodaj service role.",
-    );
-  }
-
-  return createClient(url, key);
+  return createClient(url, serviceKey);
 }
 
 function contentHash(
@@ -224,7 +217,7 @@ async function insertTaskBatches(
     if (error) {
       if (/row-level security/i.test(error.message)) {
         throw new Error(
-          `${error.message}\n→ Uruchom w Supabase SQL: migrations/add_tasks_materials_insert.sql\n→ Lub ustaw SUPABASE_SERVICE_ROLE_KEY w .env.local`,
+          `${error.message}\n→ Zapis wymaga SUPABASE_SERVICE_ROLE_KEY w .env.local (klucz anon nie ma już prawa zapisu).`,
         );
       }
       throw new Error(
@@ -423,7 +416,7 @@ async function main(): Promise<void> {
   console.log(`Czas: ${elapsed}s`);
   console.log("\nPonowne uruchomienie: npm run seed:trening-tasks");
   console.log(
-    "Jeśli INSERT się nie powiedzie - uruchom add_tasks_materials_insert.sql w Supabase.",
+    "Jeśli INSERT się nie powiedzie - sprawdź SUPABASE_SERVICE_ROLE_KEY i polityki RLS.",
   );
 }
 

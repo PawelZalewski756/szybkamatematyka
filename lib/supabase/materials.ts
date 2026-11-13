@@ -177,6 +177,11 @@ export type MaterialUpsertInput = {
   video_url: string | null;
 };
 
+/**
+ * Zapis materiałów: polityki RLS dopuszczają INSERT/UPDATE/DELETE tylko dla
+ * zalogowanego administratora (`public.is_admin()`), więc klient używa sesji
+ * użytkownika z panelu /admin.
+ */
 export async function upsertMaterial(
   input: MaterialUpsertInput,
 ): Promise<Material> {
