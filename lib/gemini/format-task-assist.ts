@@ -1,3 +1,5 @@
+import { normalizeMathText } from "@/lib/math/normalize-math-text";
+
 export type TaskGradeVerdict = "correct" | "partial" | "wrong";
 
 export type TaskGradeResult = {
@@ -39,7 +41,7 @@ export function parseTaskGradeResponse(
       ) {
         continue;
       }
-      const feedback = String(row.feedback ?? "").trim();
+      const feedback = normalizeMathText(String(row.feedback ?? "").trim());
       if (!feedback || feedback.length > 1_200) continue;
       const acceptAsCorrect =
         verdict === "correct" && row.acceptAsCorrect !== false;
@@ -65,5 +67,5 @@ export function parseTaskGradeResponse(
 }
 
 export function normalizeHintText(raw: string): string {
-  return raw.trim().replace(/\r\n/g, "\n");
+  return normalizeMathText(raw.trim().replace(/\r\n/g, "\n"));
 }

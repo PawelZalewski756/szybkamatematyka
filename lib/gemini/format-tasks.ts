@@ -2,6 +2,10 @@ import {
   checkAnswerMatch,
   findEquivalentChoiceGroups,
 } from "@/lib/math/answer-equiv";
+import {
+  isKnownLatexCommand,
+  normalizeMathText,
+} from "@/lib/math/normalize-math-text";
 import { reconcileTaskAnswer } from "@/lib/gemini/task-quality";
 
 export type TaskAnswerType = "choice" | "open";
@@ -57,6 +61,15 @@ function normalizeSvg(raw: unknown): string | null {
   return svg;
 }
 
+/**
+ * Naprawia ukośniki w JSON-ie od modelu (Gemini).
+ *
+ * Problem: model pisze LaTeX z jednym ukośnikiem (`"\times"`, `"\frac"`).
+ * Dla parsera JSON to poprawne sekwencje sterujące (`\t`, `\f`), więc zamiast
+ * błędu dostajemy TAB + `imes` i w zadaniu pojawia się `5imes3`.
+ * Tutaj zamieniamy takie sekwencje na `\\times`, `\\frac` itd., zanim JSON
+ * zostanie sparsowany. Prawdziwe `\n` (nowa linia) zostaje bez zmian.
+ */
 function repairJsonBackslashes(json: string): string {
   let out = "";
   let inString = false;
@@ -82,12 +95,39 @@ function repairJsonBackslashes(json: string): string {
 
     if (c === "\\") {
       const next = json[i + 1];
-      if (next && '"\\/bfnrtu'.includes(next)) {
+      if (!next) {
+        out += "\\\\";
+        continue;
+      }
+
+      if ('"\\/'.includes(next)) {
         out += c;
         escaped = true;
-      } else {
-        out += "\\\\";
+        continue;
       }
+
+      if ("bfnrtu".includes(next)) {
+        if (next === "u") {
+          const hex = json.slice(i + 2, i + 6);
+          if (!/^[0-9a-fA-F]{4}$/.test(hex)) {
+            // `\underline`, `\uparrow`... - komenda LaTeX, nie escape Unicode.
+            out += "\\\\";
+            continue;
+          }
+        } else {
+          const rest = /^[a-z]+/.exec(json.slice(i + 2))?.[0] ?? "";
+          // `\times` → `t` + `imes`, `\frac` → `f` + `rac`, `\theta` → `t` + `heta`.
+          if (rest && isKnownLatexCommand(next + rest)) {
+            out += "\\\\";
+            continue;
+          }
+        }
+        out += c;
+        escaped = true;
+        continue;
+      }
+
+      out += "\\\\";
       continue;
     }
 
@@ -112,7 +152,9 @@ function extractJsonArrayText(raw: string): string {
 
 export function parseGeminiTasksJson(raw: string): unknown[] {
   const arrayText = extractJsonArrayText(raw);
-  const attempts = [arrayText, repairJsonBackslashes(arrayText)];
+  // Najpierw wersja z naprawionymi ukośnikami - inaczej `JSON.parse` „zje”
+  // `\times` jako tabulator, zanim zdążymy cokolwiek poprawić.
+  const attempts = [repairJsonBackslashes(arrayText), arrayText];
 
   let lastError: Error | null = null;
   for (const candidate of attempts) {
@@ -201,6 +243,15 @@ function normalizeOpenTask(row: Record<string, unknown>): ParsedGeminiTask | nul
   };
 }
 
+function normalizeTaskMath(task: ParsedGeminiTask): ParsedGeminiTask {
+  return {
+    ...task,
+    content: normalizeMathText(task.content),
+    explanation: normalizeMathText(task.explanation),
+    options: task.options.map((option) => normalizeMathText(option)),
+  };
+}
+
 export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
   if (!raw || typeof raw !== "object") return null;
   const row = raw as Record<string, unknown>;
@@ -214,7 +265,7 @@ export function normalizeGeminiTask(raw: unknown): ParsedGeminiTask | null {
 
   if (!base) return null;
 
-  const reconciled = reconcileTaskAnswer(base);
+  const reconciled = reconcileTaskAnswer(normalizeTaskMath(base));
   if (reconciled.shouldRemove) return null;
 
   return reconciled;
@@ -236,13 +287,14 @@ export function validateGeminiTask(task: ParsedGeminiTask): string[] {
 
 /** Łączy SVG z treścią zadania (format pod markdown w bazie). */
 export function taskContentForDb(task: Pick<ParsedGeminiTask, "content" | "figure_svg" | "figure_caption">): string {
-  if (!task.figure_svg) return task.content.trim();
+  const content = normalizeMathText(task.content.trim());
+  if (!task.figure_svg) return content;
 
   const caption = task.figure_caption ?? "Ilustracja do zadania";
   const encoded = encodeURIComponent(task.figure_svg)
     .replace(/'/g, "%27")
     .replace(/"/g, "%22");
-  return `![${caption}](data:image/svg+xml,${encoded})\n\n${task.content.trim()}`;
+  return `![${caption}](data:image/svg+xml,${encoded})\n\n${content}`;
 }
 
 export function contentFingerprint(content: string): string {

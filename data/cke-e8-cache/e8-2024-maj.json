@@ -81,7 +81,7 @@
       "tresc": "![Zadanie 9](/cke-matura/e8-2024-maj/z09-1.png)",
       "schemat": "Wymagania egzaminacyjne 2024\nWymaganie ogólne Wymaganie szczegółowe\nII. Wykorzystanie i tworzenie informacji.\n3. Używanie języka matematycznego do\nopisu rozumowania i uzyskanych\nwyników.\nX. Przekształcanie wyrażeń algebraicznych.\nSumy algebraiczne i działania na nich.\nUczeń:\n3) mnoży sumy algebraiczne przez jednomian\ni dodaje wyrażenia powstałe\nz mnożenia sum algebraicznych przez\njednomiany.\nZasady oceniania\n1 pkt – odpowiedź poprawna.\n0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.\nRozwiązanie – wersja X Rozwiązanie – wersja Y\nD A",
       "rozwiazanie": "1. Rozpisujemy pierwsze wyrażenie, mnożąc $x$ przez każdy składnik w nawiasie: $x(x + 4) = x \\cdot x + x \\cdot 4 = x^2 + 4x$.\n2. Rozpisujemy drugie wyrażenie, mnożąc $-3$ przez każdy składnik w nawiasie: $-3(2x - 5) = -3 \\cdot 2x - 3 \\cdot (-5) = -6x + 15$.\n3. Sumujemy otrzymane wyrażenia: $(x^2 + 4x) + (-6x + 15) = x^2 + 4x - 6x + 15$.\n4. Redukujemy wyrazy podobne ($4x$ i $-6x$): $x^2 + (4 - 6)x + 15 = x^2 - 2x + 15$.\n\nOdpowiedź: D. $x^2 - 2x + 15$",
-      "tekst": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci\nA) $x^2 + 2x - 5$ B) $x^2 - 2x + 5$ C) $x^2 + 2x - 15$ D) $x^2 - 2x + 15",
+      "tekst": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $x(x + 4) - 3(2x - 5)$ można przekształcić równoważnie do postaci\nA) $x^2 + 2x - 5$ B) $x^2 - 2x + 5$ C) $x^2 + 2x - 15$ D) $x^2 - 2x + 15$",
       "tekstV": 2
     },
     {

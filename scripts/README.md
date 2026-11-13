@@ -83,3 +83,25 @@ npm run seed:trening-tasks -- --materials-only
 **Wymagania:** `.env.local` z Supabase; w SQL Editor uruchom też `migrations/init_tasks.sql`, `init_materials.sql` i `add_tasks_materials_insert.sql` (polityki INSERT).
 
 Ponowne uruchomienie **pomija duplikaty** (hash treści). Pełny import ~1–3 min.
+
+## `npm run repair:formatting` - naprawa formatowania LaTeX
+
+Wykrywa i naprawia typowe uszkodzenia treści matematycznych: `\times` / `\frac` /
+`\theta` zamienione na znaki sterujące przez parser JSON (efekt: `5imes3`),
+nadmiarowe lub brakujące `$` oraz surowy LaTeX poza `$...$`.
+
+```bash
+# Podgląd zmian (cache + baza, jeśli jest .env.local) - nic nie zapisuje
+npm run repair:formatting
+
+# Tylko pliki cache
+npm run repair:formatting -- --cache-only
+
+# Zapis poprawek do cache i Supabase (tasks + materials)
+npm run repair:formatting -- --apply
+```
+
+Renderowanie (`components/trening/MathText.tsx`, `TheoryMarkdown`) i tak naprawia
+te artefakty w locie przez `lib/math/normalize-math-text.ts`, więc skrypt służy
+do porządkowania danych w bazie i cache.
+
