@@ -8,6 +8,7 @@ import {
 import { STATIC_TASKS } from "@/lib/baza-zadan/static-tasks";
 import { STATIC_TASKS_EXTRA } from "@/lib/baza-zadan/static-tasks-extra";
 import { TABLE_TASKS } from "@/lib/baza-zadan/table-tasks";
+import { generateTableTasks } from "@/lib/baza-zadan/table-generator";
 import type {
   ExamSheet,
   ExamSheetKind,
@@ -28,6 +29,7 @@ export function getAllTasks(): Task[] {
       ...STATIC_TASKS,
       ...STATIC_TASKS_EXTRA,
       ...TABLE_TASKS,
+      ...generateTableTasks(),
       ...EXAM_ARCHIVE_TASKS,
       ...generateProceduralTasks(),
     ];

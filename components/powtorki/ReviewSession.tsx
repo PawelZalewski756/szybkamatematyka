@@ -18,8 +18,15 @@ import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { getTaskById } from "@/lib/baza-zadan/catalog";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  Lightbulb,
+  XCircle,
+} from "lucide-react";
 import { useCallback, useMemo, useState } from "react";
 
 type ReviewSessionProps = {
@@ -34,6 +41,7 @@ export function ReviewSession({
   onExit,
 }: ReviewSessionProps) {
   const { grade } = useReview();
+  const { isPro } = useSubscription();
 
   // Kolejka sesji: pomijamy ID, których nie ma już w katalogu.
   const initialQueue = useMemo(
@@ -51,6 +59,7 @@ export function ReviewSession({
   const [gradeError, setGradeError] = useState<string | null>(null);
   const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
   const [openAwarded, setOpenAwarded] = useState<number | null>(null);
+  const [hintForTask, setHintForTask] = useState<string | null>(null);
 
   const totalUnique = initialQueue.length;
   const answeredUnique = Object.keys(firstResults).length;
@@ -70,6 +79,7 @@ export function ReviewSession({
 
   const currentId = queue[index];
   const task = currentId ? getTaskById(currentId) : undefined;
+  const hintOpen = task ? hintForTask === task.id : false;
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
   const answered = open ? openGrade !== null : picked !== null;
@@ -243,9 +253,29 @@ export function ReviewSession({
             <div className="mt-3">
               <TheoryMarkdown content={formatCkeMathText(task.prompt)} />
             </div>
-            {task.hint && !answered && (
-              <p className="mt-3 text-sm text-muted">💡 {task.hint}</p>
-            )}
+            {task.hint && !answered && isPro ? (
+              <div className="mt-3">
+                <button
+                  type="button"
+                  aria-expanded={hintOpen}
+                  aria-controls="review-task-hint"
+                  onClick={() => setHintForTask(hintOpen ? null : task.id)}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition hover:text-accent-strong"
+                >
+                  <Lightbulb className="h-4 w-4" aria-hidden="true" />
+                  {hintOpen ? "Ukryj podpowiedź" : "Pokaż podpowiedź"}
+                </button>
+                {hintOpen ? (
+                  <p
+                    id="review-task-hint"
+                    role="note"
+                    className="mt-2 rounded-xl border border-accent/20 bg-accent/5 px-3 py-2 text-sm text-muted"
+                  >
+                    {task.hint}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
 
             {open ? (
               <ProGate featureLabel="Ocena zadań otwartych przez AI">
