@@ -190,6 +190,7 @@ export function BazaZadanView({
 
   return (
     <div className="page-container w-full py-8 sm:py-10">
+      <div className="mx-auto w-full max-w-7xl">
       <header className="max-w-3xl">
         <p className="text-overline">Baza zadań</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -232,7 +233,7 @@ export function BazaZadanView({
       </header>
 
       <section
-        className="mt-7 max-w-6xl border-y border-surface-border py-3"
+        className="mt-7 border-y border-surface-border py-3"
         aria-labelledby="baza-zadan-goal-heading"
       >
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -314,6 +315,7 @@ export function BazaZadanView({
           )
         )}
         {tab === "trening" && <BazaZadanTreningPanel />}
+      </div>
       </div>
     </div>
   );
