@@ -1,5 +1,7 @@
 import { getSupabaseOrNull } from "@/lib/supabase";
 import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
+import { stripInvisibleChars } from "@/lib/content/quality";
+import { explainParametricTask } from "@/lib/trening/seed/parametric-explanations";
 import {
   legacyDbSlugsForCkeTopic,
   legacyExamTypesFor,
@@ -41,7 +43,15 @@ export function parseTaskOptions(raw: unknown): string[] {
     .filter(Boolean);
 }
 
-function mapTask(row: TaskRow): Task & { options: string[] } {
+export function mapTask(row: TaskRow): Task & { options: string[] } {
+  const content = stripInvisibleChars(row.content);
+  // W tabeli `tasks` nie ma kolumny `explanation`, więc dla zadań
+  // parametrycznych budujemy wyjaśnienie z treści i odpowiedzi.
+  const explanation =
+    row.explanation?.trim() ||
+    explainParametricTask(row.topic, content, row.correct_answer) ||
+    undefined;
+
   return {
     id: row.id,
     exam_type: row.exam_type,
@@ -50,11 +60,11 @@ function mapTask(row: TaskRow): Task & { options: string[] } {
     difficulty: (row.difficulty === 2 || row.difficulty === 3
       ? row.difficulty
       : 1) as Task["difficulty"],
-    content: row.content,
+    content,
     correct_answer: row.correct_answer,
     xp_reward: Number(row.xp_reward) || 0,
     options: parseTaskOptions(row.options),
-    explanation: row.explanation,
+    explanation,
   };
 }
 

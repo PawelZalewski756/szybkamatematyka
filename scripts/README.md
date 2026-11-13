@@ -105,3 +105,20 @@ Renderowanie (`components/trening/MathText.tsx`, `TheoryMarkdown`) i tak naprawi
 te artefakty w locie przez `lib/math/normalize-math-text.ts`, więc skrypt służy
 do porządkowania danych w bazie i cache.
 
+## `npm run repair:content` - jakość treści zadań
+
+Audyt i naprawa: dokładne duplikaty zadań, opcje-artefakty (`NaN`, `undefined`), niewidoczne znaki (ZWSP/ZWNJ/BOM) oraz encje HTML w arkuszach CKE.
+
+```bash
+# Podgląd zmian - nic nie zapisuje
+npm run repair:content
+
+# Zapis (wymaga SUPABASE_SERVICE_ROLE_KEY)
+npm run repair:content -- --apply
+
+# Tylko wybrane obszary
+npm run repair:content -- --only=duplicates
+npm run repair:content -- --only=options,invisible,entities
+```
+
+Skrypt zostawia jeden rekord z każdej grupy duplikatów (najmniej niewidocznych znaków), dopełnia opcje dystraktorami, gdy trafi na `NaN`, i dekoduje encje typu `&frasl;` / `&fnof;`.
