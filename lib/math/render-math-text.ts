@@ -182,7 +182,8 @@ function fixBrokenCommands(text: string): string {
   // W cases "\\" (łamanie wiersza) zapisało się jako "\ " - przywracamy.
   out = out.replace(
     /(\\begin\{cases\}[\s\S]*?\\end\{cases\})/g,
-    (block) => block.replace(/\\[ \t]+/g, "\\\\ "),
+    (block) =>
+      block.replace(/(^|[^\\])\\[ \t]+/g, (_match, prefix: string) => `${prefix}\\\\ `),
   );
   return out;
 }
