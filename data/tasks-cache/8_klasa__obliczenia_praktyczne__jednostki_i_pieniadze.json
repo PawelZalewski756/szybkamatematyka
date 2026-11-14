@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "obliczenia_praktyczne",
+  "topic": "jednostki_i_pieniadze",
+  "categoryName": "Obliczenia praktyczne",
+  "topicName": "Jednostki, czas i pieniądze",
+  "tasks": [
+    {
+      "content": "Zamień $7,5$ kg na gramy.",
+      "correct_answer": "7500 g",
+      "options": [
+        "7500 g",
+        "7,5 g",
+        "75000 g",
+        "750 g"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ kg $=1000$ g, więc $7,5$ kg $=7500$ g.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4aeca97-1dae-5593-a4e8-f265ad326bf6",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $4$ m $80$ cm na centymetry.",
+      "correct_answer": "480 cm",
+      "options": [
+        "4080 cm",
+        "120 cm",
+        "84 cm",
+        "480 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ m $=100$ cm, więc $4$ m $80$ cm $=480$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "601e6211-05e5-5cdf-a628-c62a4d5ad99d",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile minut ma $1$ h $20$ min?",
+      "correct_answer": "80 min",
+      "options": [
+        "21 min",
+        "80 min",
+        "120 min",
+        "60 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ h $=60$ min, razem $80$ min.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1a4ad5b8-4f62-53b1-a00a-213ac344de12",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kupiono $3$ zeszytów po $7$ zł. Ile zapłacono?",
+      "correct_answer": "21 zł",
+      "options": [
+        "7 zł",
+        "21 zł",
+        "31 zł",
+        "10 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Koszt to $3\\cdot7=21$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8a8f29db-7293-52fc-adc6-03bf78959793",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zakupy kosztowały $46$ zł. Zapłacono $60$ zł. Ile wynosi reszta?",
+      "correct_answer": "14 zł",
+      "options": [
+        "106 zł",
+        "46 zł",
+        "19 zł",
+        "14 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Reszta to $60-46=14$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1f9568a4-856a-58a1-a374-7b04fdb92951",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "$3,5$ kg jabłek kosztuje $17,5$ zł. Jaka jest cena za kilogram?",
+      "correct_answer": "5 zł",
+      "options": [
+        "17,5 zł",
+        "18,5 zł",
+        "5 zł",
+        "2,5 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cena za kilogram to $17,5:3,5=5$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a256ca49-5aae-57f3-a311-3e7b9dff93b4",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $5,5$ kg na gramy.",
+      "correct_answer": "5500 g",
+      "options": [
+        "550 g",
+        "5500 g",
+        "5,5 g",
+        "55000 g"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ kg $=1000$ g, więc $5,5$ kg $=5500$ g.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d737c3b2-2702-52c9-ad70-db608e53ecb5",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $2$ m $40$ cm na centymetry.",
+      "correct_answer": "240 cm",
+      "options": [
+        "42 cm",
+        "60 cm",
+        "240 cm",
+        "2040 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1$ m $=100$ cm, więc $2$ m $40$ cm $=240$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5c6dbf84-21ce-5159-a99e-4c47d5a74352",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile minut ma $2$ h $50$ min?",
+      "correct_answer": "170 min",
+      "options": [
+        "170 min",
+        "120 min",
+        "250 min",
+        "52 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$2$ h $=120$ min, razem $170$ min.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7ba2a937-890c-5134-ae05-9fa7fe784c2b",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kupiono $8$ zeszytów po $7$ zł. Ile zapłacono?",
+      "correct_answer": "56 zł",
+      "options": [
+        "66 zł",
+        "56 zł",
+        "15 zł",
+        "7 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Koszt to $8\\cdot7=56$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7071aa0-4867-5c41-a638-5d96853d20b0",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zakupy kosztowały $75$ zł. Zapłacono $80$ zł. Ile wynosi reszta?",
+      "correct_answer": "5 zł",
+      "options": [
+        "155 zł",
+        "5 zł",
+        "75 zł",
+        "10 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Reszta to $80-75=5$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "93faa02a-478d-575c-ab3f-e0582d671e04",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "$4,5$ kg jabłek kosztuje $22,5$ zł. Jaka jest cena za kilogram?",
+      "correct_answer": "5 zł",
+      "options": [
+        "22,5 zł",
+        "23,5 zł",
+        "2,5 zł",
+        "5 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cena za kilogram to $22,5:4,5=5$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f857fa9-6123-5a27-af27-4545ec873f6c",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $5,2$ kg na gramy.",
+      "correct_answer": "5200 g",
+      "options": [
+        "5,2 g",
+        "5200 g",
+        "520 g",
+        "52000 g"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1$ kg $=1000$ g, więc $5,2$ kg $=5200$ g.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f9ff2037-b2eb-5852-afaa-24da958e9bce",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $3$ m $70$ cm na centymetry.",
+      "correct_answer": "370 cm",
+      "options": [
+        "3070 cm",
+        "370 cm",
+        "73 cm",
+        "100 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1$ m $=100$ cm, więc $3$ m $70$ cm $=370$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e16e23e-0834-5fab-ac5b-c48d75ec37d9",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile minut ma $1$ h $10$ min?",
+      "correct_answer": "70 min",
+      "options": [
+        "11 min",
+        "110 min",
+        "70 min",
+        "60 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1$ h $=60$ min, razem $70$ min.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2494d21a-e954-5ca6-ad68-e8db8c166c48",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kupiono $3$ zeszytów po $7$ zł. Ile zapłacono?",
+      "correct_answer": "21 zł",
+      "options": [
+        "7 zł",
+        "21 zł",
+        "31 zł",
+        "10 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Koszt to $3\\cdot7=21$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9089bbca-0fe9-5dfc-a090-03c72d84df59",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zakupy kosztowały $23$ zł. Zapłacono $30$ zł. Ile wynosi reszta?",
+      "correct_answer": "7 zł",
+      "options": [
+        "53 zł",
+        "12 zł",
+        "7 zł",
+        "23 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Reszta to $30-23=7$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96125a7c-9f39-593c-a909-6103350b0969",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "$2,5$ kg jabłek kosztuje $15$ zł. Jaka jest cena za kilogram?",
+      "correct_answer": "6 zł",
+      "options": [
+        "3 zł",
+        "16 zł",
+        "6 zł",
+        "15 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cena za kilogram to $15:2,5=6$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ac08276-3e36-5050-a8cf-d058c134a9cc",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $2,25$ kg na gramy.",
+      "correct_answer": "2250 g",
+      "options": [
+        "2250 g",
+        "225 g",
+        "22500 g",
+        "2,25 g"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1$ kg $=1000$ g, więc $2,25$ kg $=2250$ g.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04609809-7733-5b8f-ac01-c72e3c32d55c",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $2$ m $80$ cm na centymetry.",
+      "correct_answer": "280 cm",
+      "options": [
+        "2080 cm",
+        "82 cm",
+        "280 cm",
+        "100 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1$ m $=100$ cm, więc $2$ m $80$ cm $=280$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "203ad4a1-988f-53d1-a67d-463e92625b44",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.578Z"
+}

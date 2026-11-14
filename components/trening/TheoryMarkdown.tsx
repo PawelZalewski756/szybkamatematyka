@@ -2,12 +2,13 @@
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { slugifyHeading } from "@/lib/trening/theory-content";
+import { repairEscapedLatex, unwrapPlainNumberMath } from "@/lib/math/render-math-text";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import { isValidElement, type ReactNode } from "react";
+import { isValidElement, useMemo, type ReactNode } from "react";
 
 type TheoryMarkdownProps = {
   content: string;
@@ -103,6 +104,10 @@ export function TheoryMarkdown({
   variant = "default",
 }: TheoryMarkdownProps) {
   const withAnchors = variant === "default";
+  const prepared = useMemo(
+    () => unwrapPlainNumberMath(repairEscapedLatex(content)),
+    [content],
+  );
 
   return (
     <div className={VARIANT_CLASS[variant]}>
@@ -111,7 +116,7 @@ export function TheoryMarkdown({
         rehypePlugins={[rehypeKatex]}
         components={markdownComponents(withAnchors)}
       >
-        {content}
+        {prepared}
       </ReactMarkdown>
     </div>
   );

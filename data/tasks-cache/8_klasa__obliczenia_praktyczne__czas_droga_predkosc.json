@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "obliczenia_praktyczne",
+  "topic": "czas_droga_predkosc",
+  "categoryName": "Obliczenia praktyczne",
+  "topicName": "Czas, droga i prędkość",
+  "tasks": [
+    {
+      "content": "Samochód jedzie $100$ km/h przez $1$ h. Jaką drogę pokona?",
+      "correct_answer": "100 km",
+      "options": [
+        "200 km",
+        "101 km",
+        "100 km",
+        "110 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$s=v\\cdot t=100\\cdot1=100$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9938bce8-575f-5eeb-a132-525ae326916d",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $240$ km w $4$ h. Jaka była jego prędkość?",
+      "correct_answer": "60 km/h",
+      "options": [
+        "960 km/h",
+        "60 km/h",
+        "244 km/h",
+        "70 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$v=\\frac{s}{t}=\\frac{240}{4}=60$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "27a33651-f8bd-503a-a212-df6cd0d2c7f4",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile czasu potrzeba na przejechanie $320$ km z prędkością $80$ km/h?",
+      "correct_answer": "4 h",
+      "options": [
+        "25600 h",
+        "5 h",
+        "0,25 h",
+        "4 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$t=\\frac{s}{v}=\\frac{320}{80}=4$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "42247ff6-9ec5-501b-a09d-941319454c5b",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $36$ km/h na m/s.",
+      "correct_answer": "10 m/s",
+      "options": [
+        "11 m/s",
+        "129,6 m/s",
+        "36 m/s",
+        "10 m/s"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy przez $3{,}6$: $36:3{,}6=10$ m/s.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "27dd1115-e8c3-56b1-a08f-d69dbca5a9eb",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile to $30$ minut w godzinach?",
+      "correct_answer": "0,5 h",
+      "options": [
+        "0,5 h",
+        "1 h",
+        "30 h",
+        "1800 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$30$ min $=\\frac{30}{60}=0,5$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b4f04b49-794e-5a63-a554-fe9714f8c5c6",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rowerzysta jedzie $24$ km/h przez $30$ minut. Jaką drogę pokona?",
+      "correct_answer": "12 km",
+      "options": [
+        "0,4 km",
+        "13 km",
+        "720 km",
+        "12 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$30$ min $=0,5$ h, więc $s=24\\cdot0,5=12$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1b24cca8-0fbc-52ad-ad56-c6a1fbb76612",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód jedzie $110$ km/h przez $5$ h. Jaką drogę pokona?",
+      "correct_answer": "550 km",
+      "options": [
+        "115 km",
+        "220 km",
+        "560 km",
+        "550 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$s=v\\cdot t=110\\cdot5=550$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "df23553e-33cc-5586-ad2f-611c605b7f14",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $480$ km w $4$ h. Jaka była jego prędkość?",
+      "correct_answer": "120 km/h",
+      "options": [
+        "120 km/h",
+        "484 km/h",
+        "1920 km/h",
+        "130 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$v=\\frac{s}{t}=\\frac{480}{4}=120$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6839d0c8-5a55-5838-abd2-f08ff6d3ba69",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile czasu potrzeba na przejechanie $180$ km z prędkością $60$ km/h?",
+      "correct_answer": "3 h",
+      "options": [
+        "4 h",
+        "10800 h",
+        "3 h",
+        "0,3333333333333333 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$t=\\frac{s}{v}=\\frac{180}{60}=3$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7f45f97-22e6-5908-a801-3185d4cade7e",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $36$ km/h na m/s.",
+      "correct_answer": "10 m/s",
+      "options": [
+        "129,6 m/s",
+        "11 m/s",
+        "10 m/s",
+        "36 m/s"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy przez $3{,}6$: $36:3{,}6=10$ m/s.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f0b0be2-3695-5456-a6fb-ec3b33c48351",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile to $75$ minut w godzinach?",
+      "correct_answer": "1,25 h",
+      "options": [
+        "75 h",
+        "1,25 h",
+        "2,5 h",
+        "4500 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$75$ min $=\\frac{75}{60}=1,25$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61130005-6da5-5bf1-ac39-752063d09ded",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rowerzysta jedzie $36$ km/h przez $45$ minut. Jaką drogę pokona?",
+      "correct_answer": "27 km",
+      "options": [
+        "1620 km",
+        "28 km",
+        "0,6 km",
+        "27 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$45$ min $=0,75$ h, więc $s=36\\cdot0,75=27$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c8cd76a3-58b7-580f-ac65-d37cf79fe5f8",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód jedzie $110$ km/h przez $5$ h. Jaką drogę pokona?",
+      "correct_answer": "550 km",
+      "options": [
+        "560 km",
+        "220 km",
+        "115 km",
+        "550 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$s=v\\cdot t=110\\cdot5=550$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "936947f6-65c8-5de6-a96a-272a44c28531",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $250$ km w $5$ h. Jaka była jego prędkość?",
+      "correct_answer": "50 km/h",
+      "options": [
+        "255 km/h",
+        "50 km/h",
+        "1250 km/h",
+        "60 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$v=\\frac{s}{t}=\\frac{250}{5}=50$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1b57edc6-f915-50c7-a905-54a85598e040",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile czasu potrzeba na przejechanie $240$ km z prędkością $40$ km/h?",
+      "correct_answer": "6 h",
+      "options": [
+        "7 h",
+        "0,16666666666666666 h",
+        "6 h",
+        "9600 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$t=\\frac{s}{v}=\\frac{240}{40}=6$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9fda7ea0-d18a-5e6d-ad12-74432925d1e3",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $72$ km/h na m/s.",
+      "correct_answer": "20 m/s",
+      "options": [
+        "20 m/s",
+        "72 m/s",
+        "259,2 m/s",
+        "21 m/s"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy przez $3{,}6$: $72:3{,}6=20$ m/s.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6a6acc56-9c85-52dc-a27e-aef105c13e1b",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile to $60$ minut w godzinach?",
+      "correct_answer": "1 h",
+      "options": [
+        "2 h",
+        "3600 h",
+        "60 h",
+        "1 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$60$ min $=\\frac{60}{60}=1$ h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2fd96c00-ef62-5191-a3bc-004a651e4d1a",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rowerzysta jedzie $48$ km/h przez $45$ minut. Jaką drogę pokona?",
+      "correct_answer": "36 km",
+      "options": [
+        "36 km",
+        "2160 km",
+        "0,8 km",
+        "37 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$45$ min $=0,75$ h, więc $s=48\\cdot0,75=36$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0904db0b-e9d6-514c-aace-b75799684f3b",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód jedzie $40$ km/h przez $3$ h. Jaką drogę pokona?",
+      "correct_answer": "120 km",
+      "options": [
+        "43 km",
+        "120 km",
+        "80 km",
+        "130 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$s=v\\cdot t=40\\cdot3=120$ km.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d8cd597-27fb-546c-af1e-e9c1898ce360",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $210$ km w $3$ h. Jaka była jego prędkość?",
+      "correct_answer": "70 km/h",
+      "options": [
+        "213 km/h",
+        "70 km/h",
+        "630 km/h",
+        "80 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$v=\\frac{s}{t}=\\frac{210}{3}=70$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c1fb3b19-3e29-5f60-ad64-46479bbc60b2",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.577Z"
+}

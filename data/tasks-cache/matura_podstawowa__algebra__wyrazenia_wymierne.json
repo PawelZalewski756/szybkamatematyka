@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "wyrazenia_wymierne",
+  "categoryName": "Algebra i równania",
+  "topicName": "Wyrażenia i równania wymierne",
+  "tasks": [
+    {
+      "content": "Uprość $\\frac{x^2-49}{x-7}$ dla $x\\ne7$.",
+      "correct_answer": "x+7",
+      "options": [
+        "x^2+7",
+        "x+7",
+        "x-7",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik to $(x-7)(x+7)$, więc po skróceniu zostaje $x+7$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4dc011e0-8015-53d9-a743-292241adf4be",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{1}{x-2}$.",
+      "correct_answer": "x ≠ 2",
+      "options": [
+        "x ≠ 2",
+        "x > 2",
+        "x ≥ 2",
+        "x ≠ -2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mianownik nie może być zerem, więc $x-2\\ne0$, czyli $x\\ne2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d572119b-d4af-5c79-ada2-3d8793c42b3d",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{x-6}{x+2}=0$.",
+      "correct_answer": "x=6",
+      "options": [
+        "x=-2",
+        "x=2",
+        "x=6",
+        "x=-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik musi być zerem: $x-6=0$, więc $x=6$. Mianownik jest wtedy różny od zera.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c5bfec0-c172-5376-a83d-5033e7e390aa",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-16}{x+4}$ dla $x\\ne-4$.",
+      "correct_answer": "x-4",
+      "options": [
+        "x-4",
+        "x+4",
+        "4",
+        "x^2-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik to $(x-4)(x+4)$, więc po skróceniu zostaje $x-4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ba80ab35-b216-5bfc-ad13-46c4357ce2da",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{2x-6}{x+1}=0$.",
+      "correct_answer": "x=3",
+      "options": [
+        "x=1",
+        "x=6",
+        "x=3",
+        "x=-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik musi być zerem: $2x-6=0$, więc $x=3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "840d4949-38d4-5ce4-a476-390faa7b1452",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{x}{x^2-16}$.",
+      "correct_answer": "x ≠ -4 i x ≠ 4",
+      "options": [
+        "x ≠ 16",
+        "x ≠ 4",
+        "x ≠ -4",
+        "x ≠ -4 i x ≠ 4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mianownik to $(x-4)(x+4)$, więc $x\\ne-4$ i $x\\ne4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "67baa0f6-5de6-5421-a63f-26412dc03611",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-4}{x-2}$ dla $x\\ne2$.",
+      "correct_answer": "x+2",
+      "options": [
+        "x-2",
+        "x^2+2",
+        "2",
+        "x+2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik to $(x-2)(x+2)$, więc po skróceniu zostaje $x+2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69873147-d795-5924-ae02-c30d20dde375",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{1}{x-8}$.",
+      "correct_answer": "x ≠ 8",
+      "options": [
+        "x ≥ 8",
+        "x > 8",
+        "x ≠ 8",
+        "x ≠ -8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik nie może być zerem, więc $x-8\\ne0$, czyli $x\\ne8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e7543db7-d0e4-5e09-a233-62c1a2345559",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{x-4}{x+1}=0$.",
+      "correct_answer": "x=4",
+      "options": [
+        "x=-1",
+        "x=1",
+        "x=4",
+        "x=-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik musi być zerem: $x-4=0$, więc $x=4$. Mianownik jest wtedy różny od zera.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8d089c5-ba30-575d-ad89-ef8c38ff97b7",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-36}{x+6}$ dla $x\\ne-6$.",
+      "correct_answer": "x-6",
+      "options": [
+        "x^2-6",
+        "6",
+        "x+6",
+        "x-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik to $(x-6)(x+6)$, więc po skróceniu zostaje $x-6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "27a935cb-b7b3-54aa-a45d-3dc759901316",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{2x-8}{x+4}=0$.",
+      "correct_answer": "x=4",
+      "options": [
+        "x=4",
+        "x=4 + 1",
+        "x=-4",
+        "x=8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik musi być zerem: $2x-8=0$, więc $x=4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "514f0bbc-2699-56f2-acff-92f53f3bf60d",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{x}{x^2-16}$.",
+      "correct_answer": "x ≠ -4 i x ≠ 4",
+      "options": [
+        "x ≠ 16",
+        "x ≠ -4",
+        "x ≠ -4 i x ≠ 4",
+        "x ≠ 4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik to $(x-4)(x+4)$, więc $x\\ne-4$ i $x\\ne4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dde6125c-6ce4-5e86-af05-98c7f2d1baf4",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-4}{x-2}$ dla $x\\ne2$.",
+      "correct_answer": "x+2",
+      "options": [
+        "2",
+        "x^2+2",
+        "x-2",
+        "x+2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik to $(x-2)(x+2)$, więc po skróceniu zostaje $x+2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "100069d3-0a2f-5963-a506-05df54f6bbaa",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{1}{x-5}$.",
+      "correct_answer": "x ≠ 5",
+      "options": [
+        "x ≠ 5",
+        "x ≥ 5",
+        "x ≠ -5",
+        "x > 5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik nie może być zerem, więc $x-5\\ne0$, czyli $x\\ne5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f86c2829-42aa-58bf-af08-8fced85f67c0",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{x-3}{x+3}=0$.",
+      "correct_answer": "x=3",
+      "options": [
+        "x=3 + 2",
+        "x=3 + 1",
+        "x=-3",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik musi być zerem: $x-3=0$, więc $x=3$. Mianownik jest wtedy różny od zera.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "91064edc-deff-5386-a990-525b6c659370",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-25}{x+5}$ dla $x\\ne-5$.",
+      "correct_answer": "x-5",
+      "options": [
+        "x-5",
+        "5",
+        "x+5",
+        "x^2-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik to $(x-5)(x+5)$, więc po skróceniu zostaje $x-5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "62ae1432-2cc6-58ec-a4be-037d68892f9d",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Rozwiąż $\\frac{2x-10}{x+3}=0$.",
+      "correct_answer": "x=5",
+      "options": [
+        "x=-5",
+        "x=3",
+        "x=5",
+        "x=10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik musi być zerem: $2x-10=0$, więc $x=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c50181cb-14a2-5576-a6f2-33c29b9595d2",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{x}{x^2-36}$.",
+      "correct_answer": "x ≠ -6 i x ≠ 6",
+      "options": [
+        "x ≠ -6",
+        "x ≠ -6 i x ≠ 6",
+        "x ≠ 36",
+        "x ≠ 6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mianownik to $(x-6)(x+6)$, więc $x\\ne-6$ i $x\\ne6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da4cf923-49d2-5517-a51a-7895499686e1",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Uprość $\\frac{x^2-25}{x-5}$ dla $x\\ne5$.",
+      "correct_answer": "x+5",
+      "options": [
+        "x+5",
+        "x^2+5",
+        "5",
+        "x-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik to $(x-5)(x+5)$, więc po skróceniu zostaje $x+5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c6412739-73b4-5e1c-a02a-0d07d0e13341",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę wyrażenia $\\frac{1}{x-7}$.",
+      "correct_answer": "x ≠ 7",
+      "options": [
+        "x ≠ 7",
+        "x ≠ -7",
+        "x ≥ 7",
+        "x > 7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mianownik nie może być zerem, więc $x-7\\ne0$, czyli $x\\ne7$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b78b9fb2-2325-50fc-a6dd-a1e8aec55c92",
+      "generatedAt": "2026-11-14T11:41:48.572Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.572Z"
+}

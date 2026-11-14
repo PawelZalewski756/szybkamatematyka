@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "zadania_tekstowe",
+  "topic": "zadania_tekstowe",
+  "categoryName": "Zadania tekstowe",
+  "topicName": "Zadania tekstowe z treścią",
+  "tasks": [
+    {
+      "content": "Ania ma $169$ zł. Kupiła $3$ bilety po $11$ zł. Ile jej zostało?",
+      "correct_answer": "136 zł",
+      "options": [
+        "202 zł",
+        "33 zł",
+        "136 zł",
+        "158 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Koszt biletów to $3\\cdot11=33$ zł, reszta $169-33=136$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "56dfa7d9-8caa-5763-a73d-b950627b0678",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $5$ cm i $6$ cm. Oblicz jego obwód.",
+      "correct_answer": "22 cm",
+      "options": [
+        "30 cm",
+        "22 cm",
+        "16 cm",
+        "11 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód to $2(5+6)=22$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a06e66a5-ad90-588f-a6b7-53c289d50db5",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W klasie jest $32$ uczniów, z czego $25\\%$ to chłopcy. Ilu chłopców jest w klasie?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "24",
+        "32",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$25\\%$ z $32$ to $8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f404adbb-5b32-522f-a234-c2e938a2d588",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $240$ km w $4$ h. Jaka była jego prędkość?",
+      "correct_answer": "60 km/h",
+      "options": [
+        "60 km/h",
+        "960 km/h",
+        "244 km/h",
+        "70 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$v=240:4=60$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f1e44790-2128-5dd4-aa72-6c9f39f16a24",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród ma $12$ m na $10$ m. Ile metrów siatki potrzeba na ogrodzenie?",
+      "correct_answer": "44 m",
+      "options": [
+        "120 m",
+        "22 m",
+        "34 m",
+        "44 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód to $2(12+10)=44$ m.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f221f586-5432-5fa8-aa4e-9f5e398f4b00",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Książka kosztowała $80$ zł. Po obniżce o $10\\%$ jej cena wynosi:",
+      "correct_answer": "72 zł",
+      "options": [
+        "88 zł",
+        "10 zł",
+        "72 zł",
+        "80 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obniżka to $8$ zł, więc nowa cena to $72$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b9dc23ce-93e3-53e0-acc3-08b858aabd54",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ania ma $106$ zł. Kupiła $4$ bilety po $12$ zł. Ile jej zostało?",
+      "correct_answer": "58 zł",
+      "options": [
+        "154 zł",
+        "94 zł",
+        "48 zł",
+        "58 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Koszt biletów to $4\\cdot12=48$ zł, reszta $106-48=58$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c64c0e5d-71ad-598e-a506-a4ed0b6f2c0d",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $7$ cm i $11$ cm. Oblicz jego obwód.",
+      "correct_answer": "36 cm",
+      "options": [
+        "36 cm",
+        "77 cm",
+        "25 cm",
+        "18 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to $2(7+11)=36$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d5608db3-0ccf-5ee8-acc0-42281cbc3d04",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W klasie jest $40$ uczniów, z czego $25\\%$ to chłopcy. Ilu chłopców jest w klasie?",
+      "correct_answer": "10",
+      "options": [
+        "30",
+        "25",
+        "40",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$25\\%$ z $40$ to $10$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61c874a6-b22c-5a8c-a92e-8673384018b3",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $240$ km w $4$ h. Jaka była jego prędkość?",
+      "correct_answer": "60 km/h",
+      "options": [
+        "70 km/h",
+        "960 km/h",
+        "244 km/h",
+        "60 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$v=240:4=60$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5bfac706-1e01-52ff-a883-83f526873fe3",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród ma $5$ m na $9$ m. Ile metrów siatki potrzeba na ogrodzenie?",
+      "correct_answer": "28 m",
+      "options": [
+        "45 m",
+        "14 m",
+        "19 m",
+        "28 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to $2(5+9)=28$ m.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "efdc26fe-d8d7-5578-a6eb-1ce285a82966",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Książka kosztowała $80$ zł. Po obniżce o $25\\%$ jej cena wynosi:",
+      "correct_answer": "60 zł",
+      "options": [
+        "100 zł",
+        "80 zł",
+        "25 zł",
+        "60 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obniżka to $20$ zł, więc nowa cena to $60$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "39649407-dd68-5450-aad7-7ef9c7f44eda",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ania ma $144$ zł. Kupiła $4$ bilety po $21$ zł. Ile jej zostało?",
+      "correct_answer": "60 zł",
+      "options": [
+        "60 zł",
+        "84 zł",
+        "123 zł",
+        "228 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Koszt biletów to $4\\cdot21=84$ zł, reszta $144-84=60$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e64a2d43-6275-5316-a562-4fc63cc52073",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $10$ cm i $7$ cm. Oblicz jego obwód.",
+      "correct_answer": "34 cm",
+      "options": [
+        "34 cm",
+        "27 cm",
+        "17 cm",
+        "70 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to $2(10+7)=34$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0b6fa4dc-046b-532d-a8e6-67c484c82572",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W klasie jest $40$ uczniów, z czego $25\\%$ to chłopcy. Ilu chłopców jest w klasie?",
+      "correct_answer": "10",
+      "options": [
+        "40",
+        "10",
+        "30",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$25\\%$ z $40$ to $10$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "00c3208c-2aed-5675-a8c6-e4b92f9a6b5c",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Samochód przejechał $200$ km w $3$ h. Jaka była jego prędkość?",
+      "correct_answer": "66.66666666666667 km/h",
+      "options": [
+        "203 km/h",
+        "76.66666666666667 km/h",
+        "600 km/h",
+        "66.66666666666667 km/h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$v=200:3=66.66666666666667$ km/h.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1e2bae8b-ac9e-581e-a09b-c07a5d05990e",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród ma $8$ m na $14$ m. Ile metrów siatki potrzeba na ogrodzenie?",
+      "correct_answer": "44 m",
+      "options": [
+        "30 m",
+        "44 m",
+        "112 m",
+        "22 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód to $2(8+14)=44$ m.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f03b779b-577d-5001-a466-9f749fcaa5c4",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Książka kosztowała $40$ zł. Po obniżce o $50\\%$ jej cena wynosi:",
+      "correct_answer": "20 zł",
+      "options": [
+        "50 zł",
+        "60 zł",
+        "40 zł",
+        "20 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obniżka to $20$ zł, więc nowa cena to $20$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0a6c6764-d5fb-55ee-ac9f-6cf4df3e2a6a",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ania ma $140$ zł. Kupiła $5$ biletów po $22$ zł. Ile jej zostało?",
+      "correct_answer": "30 zł",
+      "options": [
+        "110 zł",
+        "30 zł",
+        "250 zł",
+        "118 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Koszt biletów to $5\\cdot22=110$ zł, reszta $140-110=30$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e9e0c4e-18d1-5749-ac63-cd24297bec01",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $7$ cm i $12$ cm. Oblicz jego obwód.",
+      "correct_answer": "38 cm",
+      "options": [
+        "38 cm",
+        "26 cm",
+        "19 cm",
+        "84 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód to $2(7+12)=38$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "153eb1ac-4c45-5ebe-ac92-2b4479de6f49",
+      "generatedAt": "2026-11-14T11:41:48.578Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.578Z"
+}

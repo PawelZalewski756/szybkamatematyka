@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "notacja_wykladnicza",
+  "categoryName": "Liczby i działania",
+  "topicName": "Notacja wykładnicza",
+  "tasks": [
+    {
+      "content": "Zapisz liczbę $9000$ w notacji wykładniczej.",
+      "correct_answer": "$9\\cdot10^3$",
+      "options": [
+        "$9\\cdot10^4$",
+        "$9\\cdot10^2$",
+        "$9\\cdot10^3$",
+        "$10\\cdot10^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przesuwamy przecinek, aż współczynnik będzie od 1 do 10: $9000=9\\cdot10^3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73e9562c-6596-5bf4-ac3c-5014e7682bf5",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $0,05$ w notacji wykładniczej.",
+      "correct_answer": "$5\\cdot10^{-2}$",
+      "options": [
+        "$5\\cdot10^{-2}$",
+        "$6\\cdot10^{-2}$",
+        "$5\\cdot10^{-3}$",
+        "$5\\cdot10^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przesuwamy przecinek w prawo o 2 miejsc: $0,05=5\\cdot10^{-2}$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1b2ef588-3f9e-55aa-af59-c3a8e1ff6be0",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $2\\cdot10^3$ na zwykły zapis.",
+      "correct_answer": "2000",
+      "options": [
+        "200",
+        "2000",
+        "1002",
+        "20000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$2\\cdot10^3=2000$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e565593-10ff-563c-a9c9-ada70b359b37",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $(2\\cdot10^3)\\cdot(4\\cdot10^4)$.",
+      "correct_answer": "$8\\cdot10^7$",
+      "options": [
+        "$8\\cdot10^12$",
+        "$8\\cdot10^7$",
+        "$8\\cdot10^8$",
+        "$6\\cdot10^7$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy współczynniki i dodajemy wykładniki: $8\\cdot10^7$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff6d97f5-f406-52eb-a19c-04a27f9e36dc",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $\\frac{6\\cdot10^3}{3\\cdot10^1}$.",
+      "correct_answer": "$2\\cdot10^2$",
+      "options": [
+        "$2\\cdot10^4$",
+        "$3\\cdot10^2$",
+        "$2\\cdot10^3$",
+        "$2\\cdot10^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy współczynniki i odejmujemy wykładniki: $2\\cdot10^2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d93af49d-59bc-5cc6-a953-a00f8c4d3c04",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $1\\cdot10^2$ czy $2\\cdot10^2$?",
+      "correct_answer": "$2\\cdot10^2$",
+      "options": [
+        "$1\\cdot10^2$",
+        "$2\\cdot10^2$",
+        "$1\\cdot10^3$",
+        "$3\\cdot10^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy tej samej potędze dziesiątki większy jest większy współczynnik: $2\\cdot10^2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "37c78845-27da-581c-a2a8-894a68a6fe43",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $800000$ w notacji wykładniczej.",
+      "correct_answer": "$8\\cdot10^5$",
+      "options": [
+        "$9\\cdot10^5$",
+        "$8\\cdot10^5$",
+        "$8\\cdot10^6$",
+        "$8\\cdot10^4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przesuwamy przecinek, aż współczynnik będzie od 1 do 10: $800000=8\\cdot10^5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9944f687-aeaa-59e3-abf7-6efa35292cc5",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $0,0009$ w notacji wykładniczej.",
+      "correct_answer": "$9\\cdot10^{-4}$",
+      "options": [
+        "$9\\cdot10^4$",
+        "$9\\cdot10^{-4}$",
+        "$9\\cdot10^{-5}$",
+        "$10\\cdot10^{-4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przesuwamy przecinek w prawo o 4 miejsc: $0,0009=9\\cdot10^{-4}$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5475faea-039e-5569-a1c5-5857f6bbb4ea",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $8\\cdot10^2$ na zwykły zapis.",
+      "correct_answer": "800",
+      "options": [
+        "80",
+        "108",
+        "800",
+        "8000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$8\\cdot10^2=800$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8042a748-a4a9-5950-a49a-d3493c67b8a4",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $(5\\cdot10^2)\\cdot(4\\cdot10^4)$.",
+      "correct_answer": "$20\\cdot10^6$",
+      "options": [
+        "$20\\cdot10^6$",
+        "$20\\cdot10^8$",
+        "$20\\cdot10^7$",
+        "$9\\cdot10^6$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożymy współczynniki i dodajemy wykładniki: $20\\cdot10^6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8c338d7-ee8f-5481-a8ec-e9eae99a9c43",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $\\frac{8\\cdot10^6}{2\\cdot10^2}$.",
+      "correct_answer": "$4\\cdot10^4$",
+      "options": [
+        "$4\\cdot10^4$",
+        "$4\\cdot10^8$",
+        "$6\\cdot10^4$",
+        "$4\\cdot10^5$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy współczynniki i odejmujemy wykładniki: $4\\cdot10^4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c8764077-734b-5ce1-a120-2f42c05899bd",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $2\\cdot10^4$ czy $3\\cdot10^4$?",
+      "correct_answer": "$3\\cdot10^4$",
+      "options": [
+        "$3\\cdot10^4$",
+        "$5\\cdot10^4$",
+        "$2\\cdot10^5$",
+        "$2\\cdot10^4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przy tej samej potędze dziesiątki większy jest większy współczynnik: $3\\cdot10^4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd4cdea2-c2c9-517e-a5f5-c78a16188335",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $200$ w notacji wykładniczej.",
+      "correct_answer": "$2\\cdot10^2$",
+      "options": [
+        "$2\\cdot10^2$",
+        "$2\\cdot10^1$",
+        "$2\\cdot10^3$",
+        "$3\\cdot10^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przesuwamy przecinek, aż współczynnik będzie od 1 do 10: $200=2\\cdot10^2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6353b388-5b65-59a8-ab71-5bbd71ae7d72",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $0,05$ w notacji wykładniczej.",
+      "correct_answer": "$5\\cdot10^{-2}$",
+      "options": [
+        "$5\\cdot10^2$",
+        "$5\\cdot10^{-3}$",
+        "$6\\cdot10^{-2}$",
+        "$5\\cdot10^{-2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przesuwamy przecinek w prawo o 2 miejsc: $0,05=5\\cdot10^{-2}$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f188d66b-7658-5593-a68f-4428c5f18627",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zamień $5\\cdot10^2$ na zwykły zapis.",
+      "correct_answer": "500",
+      "options": [
+        "105",
+        "500",
+        "50",
+        "5000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$5\\cdot10^2=500$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c31b847a-4aad-51b3-a508-f7ec563053c2",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $(3\\cdot10^2)\\cdot(5\\cdot10^2)$.",
+      "correct_answer": "$15\\cdot10^4$",
+      "options": [
+        "$15\\cdot10^5$",
+        "$15\\cdot10^4$ + 1",
+        "$8\\cdot10^4$",
+        "$15\\cdot10^4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy współczynniki i dodajemy wykładniki: $15\\cdot10^4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0422cda-15db-5052-aa2b-35e7128b8703",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz $\\frac{6\\cdot10^4}{2\\cdot10^1}$.",
+      "correct_answer": "$3\\cdot10^3$",
+      "options": [
+        "$3\\cdot10^3$",
+        "$4\\cdot10^3$",
+        "$3\\cdot10^4$",
+        "$3\\cdot10^5$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy współczynniki i odejmujemy wykładniki: $3\\cdot10^3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "66ff3ad9-d5d8-5a15-ad5c-b7a2ea1abe5d",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $1\\cdot10^4$ czy $4\\cdot10^4$?",
+      "correct_answer": "$4\\cdot10^4$",
+      "options": [
+        "$1\\cdot10^5$",
+        "$5\\cdot10^4$",
+        "$4\\cdot10^4$",
+        "$1\\cdot10^4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy tej samej potędze dziesiątki większy jest większy współczynnik: $4\\cdot10^4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2916fa9f-b85d-5604-a25d-cd4134efc752",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $70000$ w notacji wykładniczej.",
+      "correct_answer": "$7\\cdot10^4$",
+      "options": [
+        "$7\\cdot10^5$",
+        "$7\\cdot10^3$",
+        "$8\\cdot10^4$",
+        "$7\\cdot10^4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przesuwamy przecinek, aż współczynnik będzie od 1 do 10: $70000=7\\cdot10^4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92625bd8-13f3-5ec1-a4a7-73d546c5e839",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $0,09$ w notacji wykładniczej.",
+      "correct_answer": "$9\\cdot10^{-2}$",
+      "options": [
+        "$9\\cdot10^{-2}$",
+        "$9\\cdot10^{-3}$",
+        "$9\\cdot10^2$",
+        "$10\\cdot10^{-2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przesuwamy przecinek w prawo o 2 miejsc: $0,09=9\\cdot10^{-2}$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e332b8c-ac16-5084-a405-81a62c5babe8",
+      "generatedAt": "2026-11-14T11:41:48.577Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.577Z"
+}

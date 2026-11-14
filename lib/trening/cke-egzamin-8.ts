@@ -20,11 +20,21 @@ export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
       topics: [
         { slug: "ulamki", name: "Ułamki zwykłe i dziesiętne" },
         { slug: "potegi", name: "Potęgi" },
+        { slug: "notacja_wykladnicza", name: "Notacja wykładnicza" },
         { slug: "pierwiastki", name: "Pierwiastki" },
         { slug: "procenty", name: "Procenty" },
         { slug: "liczby_calkowite", name: "Liczby całkowite" },
+        { slug: "system_rzymski", name: "System rzymski" },
         { slug: "podzielnosc", name: "Podzielność liczb" },
         { slug: "kolejnosc_dzialan", name: "Kolejność wykonywania działań" },
+      ],
+    },
+    {
+      slug: "obliczenia_praktyczne",
+      name: "Obliczenia praktyczne",
+      topics: [
+        { slug: "czas_droga_predkosc", name: "Czas, droga i prędkość" },
+        { slug: "jednostki_i_pieniadze", name: "Jednostki, czas i pieniądze" },
       ],
     },
     {
@@ -42,6 +52,9 @@ export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
       name: "Geometria płaska",
       topics: [
         { slug: "katy", name: "Kąty i proste" },
+        { slug: "proste_i_odcinki", name: "Proste, półproste i odcinki" },
+        { slug: "symetralna_i_dwusieczna", name: "Symetralna i dwusieczna" },
+        { slug: "wielokaty", name: "Wielokąty i wielokąty foremne" },
         { slug: "obwody", name: "Obwody figur" },
         { slug: "pola_figur", name: "Pola figur" },
         { slug: "pitagoras", name: "Twierdzenie Pitagorasa" },
@@ -62,6 +75,7 @@ export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
       slug: "uklad_wspolrzednych",
       name: "Układ współrzędnych",
       topics: [
+        { slug: "os_liczbowa", name: "Oś liczbowa" },
         { slug: "punkty_na_plaszczyznie", name: "Punkty na płaszczyźnie" },
         { slug: "dlugosc_odcinka", name: "Długość odcinka" },
       ],
@@ -89,6 +103,13 @@ export const CKE_EGZAMIN_8: CkeEgzamin8Tree = {
       topics: [
         { slug: "prawdopodobienstwo", name: "Prawdopodobieństwo" },
         { slug: "regula_mnozenia", name: "Reguła mnożenia" },
+      ],
+    },
+    {
+      slug: "zadania_tekstowe",
+      name: "Zadania tekstowe",
+      topics: [
+        { slug: "zadania_tekstowe", name: "Zadania tekstowe z treścią" },
       ],
     },
   ],

@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "uklad_wspolrzednych",
+  "topic": "os_liczbowa",
+  "categoryName": "Układ współrzędnych",
+  "topicName": "Oś liczbowa",
+  "tasks": [
+    {
+      "content": "Oblicz odległość między liczbami $-4$ i $7$ na osi liczbowej.",
+      "correct_answer": "11",
+      "options": [
+        "13",
+        "3",
+        "12",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość to $|7-(-4)|=11$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5d918889-d7d9-557b-a500-aa1e3af0415d",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj współrzędną środka odcinka o końcach $-8$ i $4$.",
+      "correct_answer": "-2",
+      "options": [
+        "-2",
+        "-1",
+        "-4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek to $\\frac{-8+4}{2}=-2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "63572c41-3355-512c-a21d-b1ca5ecb07c7",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj liczbę przeciwną do $2$.",
+      "correct_answer": "-2",
+      "options": [
+        "2",
+        "-3",
+        "-2",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba przeciwna do $2$ to $-2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dd05c45-eafd-58c7-aa35-cc938bab35f0",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $-6$ czy $-6$?",
+      "correct_answer": "-6",
+      "options": [
+        "-12",
+        "-5",
+        "0",
+        "-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Na osi większa liczba leży bardziej po prawej stronie.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "17403900-4413-532f-ab84-228717b51b1f",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy liczba $6$ należy do przedziału $[1,6)$?",
+      "correct_answer": "nie",
+      "options": [
+        "nie można ustalić",
+        "tylko dla dodatnich",
+        "tak",
+        "nie"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przedział $[1,6)$ nie zawiera prawego końca $6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be46f153-e199-5e91-a490-75095b4495cf",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość liczby $-3$ od zera na osi liczbowej.",
+      "correct_answer": "3",
+      "options": [
+        "0",
+        "3",
+        "4",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość od zera to $|-3|=3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9c06f1ed-66ee-5306-a971-a8fbc192ea50",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość między liczbami $-2$ i $3$ na osi liczbowej.",
+      "correct_answer": "5",
+      "options": [
+        "7",
+        "5",
+        "1",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość to $|3-(-2)|=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f62c1fb-8208-5c80-a9eb-948e185a4bd7",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj współrzędną środka odcinka o końcach $-8$ i $2$.",
+      "correct_answer": "-3",
+      "options": [
+        "-3",
+        "10",
+        "-2",
+        "-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek to $\\frac{-8+2}{2}=-3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "425bba18-9efb-5ccf-aa3c-2dd8d248a8cb",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj liczbę przeciwną do $6$.",
+      "correct_answer": "-6",
+      "options": [
+        "-6",
+        "-5",
+        "-7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba przeciwna do $6$ to $-6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57743ca6-927a-5574-aa82-73d1ab4502b0",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $-8$ czy $-5$?",
+      "correct_answer": "-5",
+      "options": [
+        "-8",
+        "0",
+        "-5",
+        "-13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Na osi większa liczba leży bardziej po prawej stronie.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "12916d3e-83e7-51cb-a761-f70482e8d95c",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy liczba $4$ należy do przedziału $[2,4)$?",
+      "correct_answer": "nie",
+      "options": [
+        "nie",
+        "tylko dla dodatnich",
+        "tak",
+        "nie można ustalić"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przedział $[2,4)$ nie zawiera prawego końca $4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dbea17d4-5fb1-53e3-a353-6b2d2a94d4ad",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość liczby $-5$ od zera na osi liczbowej.",
+      "correct_answer": "5",
+      "options": [
+        "-5",
+        "6",
+        "5",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość od zera to $|-5|=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "676536f2-9cfe-5f0d-ac23-1097a005483e",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość między liczbami $-3$ i $2$ na osi liczbowej.",
+      "correct_answer": "5",
+      "options": [
+        "7",
+        "-1",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość to $|2-(-3)|=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d3e753fc-b4a8-5cc6-a169-b80468ea29dd",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj współrzędną środka odcinka o końcach $-7$ i $2$.",
+      "correct_answer": "-2,5",
+      "options": [
+        "9",
+        "-1,5",
+        "-2,5",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek to $\\frac{-7+2}{2}=-2,5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8323656-322b-5d10-aba4-82c1e22b6b64",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj liczbę przeciwną do $4$.",
+      "correct_answer": "-4",
+      "options": [
+        "-4",
+        "-3",
+        "4",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba przeciwna do $4$ to $-4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74b99a59-f5f1-50e9-a6de-7560ac51bfbd",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $-6$ czy $-6$?",
+      "correct_answer": "-6",
+      "options": [
+        "-6",
+        "0",
+        "-12",
+        "-5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Na osi większa liczba leży bardziej po prawej stronie.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a18c4d53-f5c5-597a-a481-e90821bf2430",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy liczba $9$ należy do przedziału $[5,9)$?",
+      "correct_answer": "nie",
+      "options": [
+        "tylko dla dodatnich",
+        "nie można ustalić",
+        "nie",
+        "tak"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przedział $[5,9)$ nie zawiera prawego końca $9$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73dc6149-7f53-5644-a675-8f0eca232bb3",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość liczby $-2$ od zera na osi liczbowej.",
+      "correct_answer": "2",
+      "options": [
+        "-2",
+        "3",
+        "2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość od zera to $|-2|=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6059167-a807-55ac-ab26-1ae523803f76",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odległość między liczbami $-3$ i $7$ na osi liczbowej.",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "12",
+        "11",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość to $|7-(-3)|=10$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "665f77bd-c48d-51e1-a37a-f46ebe2b7d29",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj współrzędną środka odcinka o końcach $-7$ i $6$.",
+      "correct_answer": "-0,5",
+      "options": [
+        "-0,5",
+        "13",
+        "-1",
+        "0,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek to $\\frac{-7+6}{2}=-0,5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fb598ba2-259c-563a-a735-63e54ea95add",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.581Z"
+}

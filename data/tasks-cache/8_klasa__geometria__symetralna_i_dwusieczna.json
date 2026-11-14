@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "symetralna_i_dwusieczna",
+  "categoryName": "Geometria płaska",
+  "topicName": "Symetralna i dwusieczna",
+  "tasks": [
+    {
+      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
+      "correct_answer": "6 cm",
+      "options": [
+        "6 cm",
+        "12 cm",
+        "3 cm",
+        "24 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aac6450c-ae64-57b9-a1ab-31374603634f",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=12$ cm. Ile wynosi $|PB|$?",
+      "correct_answer": "12 cm",
+      "options": [
+        "12 cm",
+        "6 cm",
+        "24 cm",
+        "13 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Punkty symetralnej są jednakowo odległe od końców, więc $|PB|=12$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2c95d2d-6051-5cd2-a7a5-5fabed7cb182",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt $106^\\circ$ dzieli dwusieczna. Jaką miarę ma każdy z mniejszych kątów?",
+      "correct_answer": "53°",
+      "options": [
+        "53°",
+        "212°",
+        "26.5°",
+        "106°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dwusieczna dzieli kąt na połowy, więc każdy ma $53^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec4521e1-51d5-5326-a17a-98a17a043504",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=10$, $|AC|=6$, $|BC|=32$. Dwusieczna z $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "20",
+      "options": [
+        "10",
+        "12",
+        "6",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\frac{|BD|}{|DC|}=\\frac{10}{6}$, więc $|BD|=20$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b4317115-1ba5-53c3-ae69-ff2c914e932c",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu wpisanego w trójkąt?",
+      "correct_answer": "w przecięciu dwusiecznych kątów",
+      "options": [
+        "w przecięciu dwusiecznych kątów",
+        "w przecięciu środkowych",
+        "w przecięciu wysokości",
+        "w przecięciu symetralnych boków"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek okręgu wpisanego to przecięcie dwusiecznych kątów.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74e2b0a0-0d76-5e02-a898-7ce8a548a613",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu opisanego na trójkącie?",
+      "correct_answer": "w przecięciu symetralnych boków",
+      "options": [
+        "w przecięciu symetralnych boków",
+        "w przecięciu wysokości",
+        "w przecięciu środkowych",
+        "w przecięciu dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek okręgu opisanego to przecięcie symetralnych boków.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83952f71-4d28-50ee-a18a-25fff4247fab",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
+      "correct_answer": "6 cm",
+      "options": [
+        "12 cm",
+        "6 cm",
+        "3 cm",
+        "24 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f31244c-ed6e-5d70-afdf-ef692bdca8f7",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=8$ cm. Ile wynosi $|PB|$?",
+      "correct_answer": "8 cm",
+      "options": [
+        "16 cm",
+        "9 cm",
+        "4 cm",
+        "8 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Punkty symetralnej są jednakowo odległe od końców, więc $|PB|=8$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2653f2bd-6d30-5896-acf9-5e0477a4dcc8",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt $72^\\circ$ dzieli dwusieczna. Jaką miarę ma każdy z mniejszych kątów?",
+      "correct_answer": "36°",
+      "options": [
+        "18°",
+        "72°",
+        "36°",
+        "144°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dwusieczna dzieli kąt na połowy, więc każdy ma $36^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a7804423-7bb7-5f00-a4ef-beb1d2bd5a62",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=10$, $|AC|=9$, $|BC|=38$. Dwusieczna z $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "20",
+      "options": [
+        "10",
+        "18",
+        "9",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\frac{|BD|}{|DC|}=\\frac{10}{9}$, więc $|BD|=20$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "58c59d1a-214c-5863-a477-bf0b25a083ad",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu wpisanego w trójkąt?",
+      "correct_answer": "w przecięciu dwusiecznych kątów",
+      "options": [
+        "w przecięciu symetralnych boków",
+        "w przecięciu środkowych",
+        "w przecięciu wysokości",
+        "w przecięciu dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek okręgu wpisanego to przecięcie dwusiecznych kątów.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "02991803-5166-5f65-a16d-2e8db2d827a0",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu opisanego na trójkącie?",
+      "correct_answer": "w przecięciu symetralnych boków",
+      "options": [
+        "w przecięciu wysokości",
+        "w przecięciu symetralnych boków",
+        "w przecięciu środkowych",
+        "w przecięciu dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek okręgu opisanego to przecięcie symetralnych boków.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "475aa5c7-0189-5123-a331-bf0210a890c4",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
+      "correct_answer": "6 cm",
+      "options": [
+        "6 cm",
+        "3 cm",
+        "12 cm",
+        "24 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc90cf0a-901e-5775-abe8-60360eece84b",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=10$ cm. Ile wynosi $|PB|$?",
+      "correct_answer": "10 cm",
+      "options": [
+        "11 cm",
+        "5 cm",
+        "10 cm",
+        "20 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Punkty symetralnej są jednakowo odległe od końców, więc $|PB|=10$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "86976792-0a75-5ba3-a04e-9ad084eacd10",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt $142^\\circ$ dzieli dwusieczna. Jaką miarę ma każdy z mniejszych kątów?",
+      "correct_answer": "71°",
+      "options": [
+        "284°",
+        "35.5°",
+        "142°",
+        "71°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dwusieczna dzieli kąt na połowy, więc każdy ma $71^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b50a8d34-6587-5c7a-afe0-24f734d96c34",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=6$, $|AC|=9$, $|BC|=30$. Dwusieczna z $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "12",
+      "options": [
+        "6",
+        "18",
+        "12",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\frac{|BD|}{|DC|}=\\frac{6}{9}$, więc $|BD|=12$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0e7cc19-7cc4-5782-a2f6-a6285b64d961",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu wpisanego w trójkąt?",
+      "correct_answer": "w przecięciu dwusiecznych kątów",
+      "options": [
+        "w przecięciu wysokości",
+        "w przecięciu dwusiecznych kątów",
+        "w przecięciu symetralnych boków",
+        "w przecięciu środkowych"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek okręgu wpisanego to przecięcie dwusiecznych kątów.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4b32b5ff-1814-5d89-aa8b-d1edb30dc03f",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Gdzie leży środek okręgu opisanego na trójkącie?",
+      "correct_answer": "w przecięciu symetralnych boków",
+      "options": [
+        "w przecięciu środkowych",
+        "w przecięciu wysokości",
+        "w przecięciu symetralnych boków",
+        "w przecięciu dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek okręgu opisanego to przecięcie symetralnych boków.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "03d8f784-9783-5b32-ab31-e08b828bdc59",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
+      "correct_answer": "6 cm",
+      "options": [
+        "24 cm",
+        "3 cm",
+        "6 cm",
+        "12 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ecd8c6dd-1354-5828-aed3-fe6a7a5137a7",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=3$ cm. Ile wynosi $|PB|$?",
+      "correct_answer": "3 cm",
+      "options": [
+        "1.5 cm",
+        "4 cm",
+        "3 cm",
+        "6 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Punkty symetralnej są jednakowo odległe od końców, więc $|PB|=3$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "486a7a4e-1779-589a-af0a-89c0cdd319e6",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.579Z"
+}

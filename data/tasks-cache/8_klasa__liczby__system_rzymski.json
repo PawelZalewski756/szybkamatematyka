@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "system_rzymski",
+  "categoryName": "Liczby i działania",
+  "topicName": "System rzymski",
+  "tasks": [
+    {
+      "content": "Odczytaj liczbę zapisaną cyframi rzymskimi: $LVIII$.",
+      "correct_answer": "58",
+      "options": [
+        "59",
+        "57",
+        "68",
+        "58"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$LVIII=58$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0909a514-881f-5b8f-adb0-15a279614b2c",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $400$ cyframi rzymskimi.",
+      "correct_answer": "CD",
+      "options": [
+        "CDI",
+        "CD",
+        "CCD",
+        "ICD"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$400=CD$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a17c4465-dbc2-5a0b-af12-13af1596aac9",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jaką wartość ma symbol rzymski $D$?",
+      "correct_answer": "500",
+      "options": [
+        "500",
+        "501",
+        "100",
+        "1000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$D=500$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d703f82c-5693-5d0c-ab36-e0acf30a7364",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $CD$ czy $DC$?",
+      "correct_answer": "DC",
+      "options": [
+        "nie można porównać",
+        "DC",
+        "CD",
+        "oba są równe"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$CD=400$, a $DC=600$, więc większa jest $DC$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8646549-e4a8-5703-a9cc-0b58a2a68ba9",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Który zapis jest poprawny dla liczby $90$?",
+      "correct_answer": "XC",
+      "options": [
+        "IXC",
+        "XCI",
+        "XC",
+        "VIIIIC"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczbę $90$ zapisujemy jako $XC$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "29b5ade8-efb2-57fc-a2c4-1c68b1867a16",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile wynosi $XC+X$?",
+      "correct_answer": "100",
+      "options": [
+        "900",
+        "110",
+        "100",
+        "80"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$XC=90$ i $X=10$, więc suma to $100$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0cc220c4-ce86-58c9-af6b-72999834c68f",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odczytaj liczbę zapisaną cyframi rzymskimi: $MCM$.",
+      "correct_answer": "1900",
+      "options": [
+        "1910",
+        "1901",
+        "1899",
+        "1900"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$MCM=1900$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3c8e2c9c-e2d9-5dc7-a6ec-7fb257519e99",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $9$ cyframi rzymskimi.",
+      "correct_answer": "IX",
+      "options": [
+        "IIX",
+        "IX",
+        "IXI",
+        "IX + 1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$9=IX$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b727358-ab13-5399-ae09-6353420f5066",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jaką wartość ma symbol rzymski $X$?",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "11",
+        "20",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$X=10$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3be90862-5c85-5112-a7ad-3d395cc92b0b",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $XC$ czy $CX$?",
+      "correct_answer": "CX",
+      "options": [
+        "XC",
+        "oba są równe",
+        "CX",
+        "nie można porównać"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$XC=90$, a $CX=110$, więc większa jest $CX$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "548c78e5-de42-5551-adde-3f952af4bd6c",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Który zapis jest poprawny dla liczby $9$?",
+      "correct_answer": "IX",
+      "options": [
+        "IIX",
+        "IVIIII",
+        "IXI",
+        "IX"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczbę $9$ zapisujemy jako $IX$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "659ce352-0851-5575-ab7b-bfa292f308a9",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile wynosi $CM+C$?",
+      "correct_answer": "1000",
+      "options": [
+        "1000",
+        "1010",
+        "90000",
+        "800"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$CM=900$ i $C=100$, więc suma to $1000$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4ff6e3c8-ba66-5e7f-acde-f1a19f11a4c4",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odczytaj liczbę zapisaną cyframi rzymskimi: $DCCC$.",
+      "correct_answer": "800",
+      "options": [
+        "799",
+        "801",
+        "800",
+        "810"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$DCCC=800$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b9d3c40c-f41d-5929-a474-36fb5412ddfd",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $1984$ cyframi rzymskimi.",
+      "correct_answer": "MCMLXXXIV",
+      "options": [
+        "MCMLXXXIV",
+        "MCMLXXXIVI",
+        "IMCMLXXXIV",
+        "MMCMLXXXIV"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1984=MCMLXXXIV$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5feb0615-6065-5ba4-a5e3-4fda6053c4bc",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jaką wartość ma symbol rzymski $I$?",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "0.2",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$I=1$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3c7ea48e-c33a-50ae-afbf-2b64c122f75b",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Która liczba jest większa: $IX$ czy $XI$?",
+      "correct_answer": "XI",
+      "options": [
+        "oba są równe",
+        "nie można porównać",
+        "IX",
+        "XI"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$IX=9$, a $XI=11$, więc większa jest $XI$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bdc572c5-58e2-5bc1-a587-cb1d815c5860",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Który zapis jest poprawny dla liczby $4$?",
+      "correct_answer": "IV",
+      "options": [
+        "IVI",
+        "IV",
+        "IIIII",
+        "IIV"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczbę $4$ zapisujemy jako $IV$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef9584be-998c-518a-a12d-46eefe2aaf27",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile wynosi $CM+C$?",
+      "correct_answer": "1000",
+      "options": [
+        "1000",
+        "800",
+        "90000",
+        "1010"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$CM=900$ i $C=100$, więc suma to $1000$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d923ade-ccd9-5d9d-aa96-cc985d180e50",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odczytaj liczbę zapisaną cyframi rzymskimi: $XIV$.",
+      "correct_answer": "14",
+      "options": [
+        "14",
+        "24",
+        "15",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$XIV=14$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9341c0d0-54c8-5e65-ad50-d45f380dff87",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Zapisz liczbę $40$ cyframi rzymskimi.",
+      "correct_answer": "XL",
+      "options": [
+        "IXL",
+        "XL",
+        "XXL",
+        "XLI"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$40=XL$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a484fc15-082f-51e1-a735-e022af7bfcb2",
+      "generatedAt": "2026-11-14T11:41:48.581Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.581Z"
+}
