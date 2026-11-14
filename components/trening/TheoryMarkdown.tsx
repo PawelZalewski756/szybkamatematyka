@@ -4,6 +4,7 @@ import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { slugifyHeading } from "@/lib/trening/theory-content";
 import {
   ensureMathDelimiters,
+  fixMarkdownTables,
   normalizeMathText,
   unwrapPlainNumberMath,
 } from "@/lib/math/render-math-text";
@@ -109,7 +110,10 @@ export function TheoryMarkdown({
 }: TheoryMarkdownProps) {
   const withAnchors = variant === "default";
   const prepared = useMemo(
-    () => unwrapPlainNumberMath(ensureMathDelimiters(normalizeMathText(content))),
+    () =>
+      unwrapPlainNumberMath(
+        ensureMathDelimiters(fixMarkdownTables(normalizeMathText(content))),
+      ),
     [content],
   );
 

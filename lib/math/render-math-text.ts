@@ -45,7 +45,6 @@ export function containsMathDelimiters(text: string): boolean {
 }
 
 const PLAIN_NUMBER_MATH = /(^|[^$])\$(\d+(?:[.,\u00A0 ]\d+)*)\$(?!\$)/g;
-
 /**
  * Zamienia $169$ na 169. Sama liczba nie potrzebuje KaTeX-a, a w nim wychodzi
  * większa (1.21em) i w kroju szeryfowym, więc odstaje od zdania.
@@ -266,4 +265,48 @@ export function ensureMathDelimiters(text: string): string {
     })
     .join("");
   return changed ? out : text;
+}
+
+const TABLE_DELIMITER = /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/;
+
+function tableCellCount(line: string): number {
+  return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").length;
+}
+
+/**
+ * GFM nie parsuje tabeli, gdy wiersz nagłówka ma inną liczbę komórek niż
+ * separator (np. `| |` nad `|:---|:---:|:---:|`). Wtedy cała tabela pokazuje
+ * się jako surowy tekst. Uzupełniamy brakujące komórki nagłówka.
+ */
+export function fixMarkdownTables(text: string): string {
+  if (!text.includes("|")) return text;
+  const lines = text.split("\n");
+  let changed = false;
+
+  for (let i = 1; i < lines.length; i++) {
+    if (!TABLE_DELIMITER.test(lines[i])) continue;
+    const header = lines[i - 1];
+    if (!header.includes("|")) continue;
+
+    const expected = tableCellCount(lines[i]);
+    const actual = tableCellCount(header);
+    if (expected === actual) continue;
+
+    const next = lines[i + 1] ?? "";
+    if (expected === 3 && /\|\s*P\s*\|\s*F\s*\|?\s*$/.test(next)) {
+      lines[i - 1] = "| | P | F |";
+    } else {
+      const cells = header
+        .trim()
+        .replace(/^\|/, "")
+        .replace(/\|$/, "")
+        .split("|")
+        .map((cell) => cell.trim());
+      while (cells.length < expected) cells.push("");
+      lines[i - 1] = `| ${cells.join(" | ").trimEnd()} |`;
+    }
+    changed = true;
+  }
+
+  return changed ? lines.join("\n") : text;
 }

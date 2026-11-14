@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   containsMathDelimiters,
   ensureMathDelimiters,
+  fixMarkdownTables,
   normalizeMathText,
   repairEscapedLatex,
   splitMathText,
@@ -124,6 +125,25 @@ describe("ensureMathDelimiters", () => {
     expect(ensureMathDelimiters(String.raw`96\sqrt{3} + 240 cm`)).toBe(
       String.raw`$96\sqrt{3} + 240$ cm`,
     );
+  });
+});
+
+describe("fixMarkdownTables", () => {
+  it("uzupełnia nagłówek tabeli P/F", () => {
+    expect(
+      fixMarkdownTables("| |\n|:---|:---:|:---:|\n| a | P | F |"),
+    ).toBe("| | P | F |\n|:---|:---:|:---:|\n| a | P | F |");
+  });
+
+  it("uzupełnia nagłówek tabeli z jedną komórką", () => {
+    expect(fixMarkdownTables("| CENNIK |\n|---|---|\n| A | B |")).toBe(
+      "| CENNIK | |\n|---|---|\n| A | B |",
+    );
+  });
+
+  it("nie rusza poprawnych tabel", () => {
+    const input = "| | P | F |\n|---|---|---|\n| a | | |";
+    expect(fixMarkdownTables(input)).toBe(input);
   });
 });
 
