@@ -86,7 +86,16 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
+        run: |
+          for attempt in 1 2 3; do
+            if npx playwright install --with-deps chromium; then
+              exit 0
+            fi
+            echo "Playwright install failed (attempt $attempt), retrying..."
+            sleep 15
+          done
+          # Ostatnia szansa bez apt: na ubuntu-latest biblioteki zwykle są już zainstalowane.
+          npx playwright install chromium
 
       - name: Run E2E smoke tests
         run: npm run test:e2e
