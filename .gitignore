@@ -58,3 +58,5 @@ next-env.d.ts
 data/tasks-cache/*.log
 
 .tmp-cke-e8/
+
+/.npm-cache
