@@ -253,25 +253,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Rozłóż na czynniki $x^3-16x$.",
-      "correct_answer": "x(x-4)(x+4)",
-      "options": [
-        "x(x-4)(x+4)",
-        "x^2(x-4)",
-        "x(x-4)^2",
-        "x(x+4)^2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Najpierw wyłączamy $x$, potem różnicę kwadratów: $x(x^2-16)=x(x-4)(x+4)$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a754462e-01e5-5901-a2c9-bd0f434bacbe",
-      "generatedAt": "2026-11-14T11:41:48.571Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Jaka jest reszta z dzielenia $W(x)=x^2-3x+4$ przez $x-1$?",
       "correct_answer": "2",
       "options": [
@@ -325,25 +306,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "a59bab38-51ee-51ea-af07-a34b7c5748a2",
-      "generatedAt": "2026-11-14T11:41:48.571Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Rozłóż na czynniki $x^2-9$.",
-      "correct_answer": "(x-3)(x+3)",
-      "options": [
-        "(x-3)(x+3)",
-        "(x-9)(x+1)",
-        "(x-3)^2",
-        "(x+3)^2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Różnica kwadratów: $x^2-9=(x-3)(x+3)$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ec46cdab-b7b5-5524-a39d-192f5181cf40",
       "generatedAt": "2026-11-14T11:41:48.571Z",
       "model": "coverage-v1"
     },

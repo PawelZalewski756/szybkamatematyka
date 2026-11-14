@@ -291,25 +291,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Która liczba jest większa: $-6$ czy $-6$?",
-      "correct_answer": "-6",
-      "options": [
-        "-6",
-        "0",
-        "-12",
-        "-5"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Na osi większa liczba leży bardziej po prawej stronie.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a18c4d53-f5c5-597a-a481-e90821bf2430",
-      "generatedAt": "2026-11-14T11:41:48.581Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Czy liczba $9$ należy do przedziału $[5,9)$?",
       "correct_answer": "nie",
       "options": [

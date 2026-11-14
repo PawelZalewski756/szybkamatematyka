@@ -291,25 +291,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Kupiono $3$ zeszytów po $7$ zł. Ile zapłacono?",
-      "correct_answer": "21 zł",
-      "options": [
-        "7 zł",
-        "21 zł",
-        "31 zł",
-        "10 zł"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Koszt to $3\\cdot7=21$ zł.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "9089bbca-0fe9-5dfc-a090-03c72d84df59",
-      "generatedAt": "2026-11-14T11:41:48.578Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Zakupy kosztowały $23$ zł. Zapłacono $30$ zł. Ile wynosi reszta?",
       "correct_answer": "7 zł",
       "options": [

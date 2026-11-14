@@ -139,25 +139,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Oblicz wariancję danych $2,4,6$.",
-      "correct_answer": "2,67",
-      "options": [
-        "3,67",
-        "5,33",
-        "2,67",
-        "4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Średnia to $4$, a wariancja $2,67$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7214180a-37a2-5414-a369-9b0d60c80b52",
-      "generatedAt": "2026-11-14T11:41:48.575Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Oblicz odchylenie standardowe danych $3,4,5,6$.",
       "correct_answer": "1,12",
       "options": [
@@ -363,25 +344,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "83ec59ad-c463-5866-a691-d96204fa97bf",
-      "generatedAt": "2026-11-14T11:41:48.575Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Oblicz wariancję danych $2,4,6$.",
-      "correct_answer": "2,67",
-      "options": [
-        "5,33",
-        "4",
-        "3,67",
-        "2,67"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Średnia to $4$, a wariancja $2,67$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "36d7aca9-4434-57de-abf5-ac08482f8622",
       "generatedAt": "2026-11-14T11:41:48.575Z",
       "model": "coverage-v1"
     }

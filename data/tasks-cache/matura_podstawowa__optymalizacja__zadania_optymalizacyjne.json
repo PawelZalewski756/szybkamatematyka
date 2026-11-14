@@ -196,25 +196,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Ogród przylega do ściany. Na trzy boki mamy $36$ m siatki. Jaki jest największy możliwy bok prostopadły do ściany?",
-      "correct_answer": "9",
-      "options": [
-        "4,5",
-        "18",
-        "12",
-        "9"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Bok prostopadły to $x$, bok równoległy $36-2x$. Pole $-2x^2+36x$ ma maksimum dla $x=\\frac{36}{4}=9$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "b3d75e78-cc47-5de3-a112-02cf8bb68407",
-      "generatedAt": "2026-11-14T11:41:48.569Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Przychód opisuje $R(x)=x(12-x)$. Dla jakiego $x$ przychód jest największy?",
       "correct_answer": "6",
       "options": [
@@ -249,25 +230,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "f3805298-ce63-5a94-abf8-c791998acadd",
-      "generatedAt": "2026-11-14T11:41:48.569Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Suma dwóch liczb wynosi $24$. Jaki jest największy możliwy iloczyn tych liczb?",
-      "correct_answer": "144",
-      "options": [
-        "120",
-        "146",
-        "24",
-        "144"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{24}{2}\\right)^2=144$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ae4e24fa-a1de-55c0-a957-2dae2ccd6b88",
       "generatedAt": "2026-11-14T11:41:48.569Z",
       "model": "coverage-v1"
     },
@@ -363,25 +325,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "90ff8f81-5397-5180-a1c9-8f59c24d7c17",
-      "generatedAt": "2026-11-14T11:41:48.569Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Suma dwóch liczb wynosi $18$. Jaki jest największy możliwy iloczyn tych liczb?",
-      "correct_answer": "81",
-      "options": [
-        "83",
-        "63",
-        "18",
-        "81"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{18}{2}\\right)^2=81$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d355cdb6-3ffb-522b-a2f8-0ff5c85e78c8",
       "generatedAt": "2026-11-14T11:41:48.569Z",
       "model": "coverage-v1"
     }

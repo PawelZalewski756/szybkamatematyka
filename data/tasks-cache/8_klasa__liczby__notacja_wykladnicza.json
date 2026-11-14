@@ -253,25 +253,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Zapisz liczbę $0,05$ w notacji wykładniczej.",
-      "correct_answer": "$5\\cdot10^{-2}$",
-      "options": [
-        "$5\\cdot10^2$",
-        "$5\\cdot10^{-3}$",
-        "$6\\cdot10^{-2}$",
-        "$5\\cdot10^{-2}$"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Przesuwamy przecinek w prawo o 2 miejsc: $0,05=5\\cdot10^{-2}$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f188d66b-7658-5593-a68f-4428c5f18627",
-      "generatedAt": "2026-11-14T11:41:48.577Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Zamień $5\\cdot10^2$ na zwykły zapis.",
       "correct_answer": "500",
       "options": [

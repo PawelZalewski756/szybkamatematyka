@@ -139,25 +139,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "W trójkącie $|AB|=4$, $|AC|=6$, $|BC|=20$. Dwusieczna z wierzchołka $A$ dzieli $BC$. Oblicz $|BD|$.",
-      "correct_answer": "8",
-      "options": [
-        "6",
-        "4",
-        "8",
-        "12"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Z twierdzenia o dwusiecznej $\\frac{|BD|}{|DC|}=\\frac{4}{6}$. Stąd $|BD|=8$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d0b84f44-70e6-59bb-a27e-cdca33bfdc1c",
-      "generatedAt": "2026-11-14T11:41:48.574Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Kąt środkowy ma $62^\\circ$. Oblicz kąt wpisany oparty na tym samym łuku.",
       "correct_answer": "31",
       "options": [
@@ -192,25 +173,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "cc49c866-b54c-5bf9-af92-1805d8b082b9",
-      "generatedAt": "2026-11-14T11:41:48.574Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $4$ bokach.",
-      "correct_answer": "90",
-      "options": [
-        "180",
-        "72",
-        "90",
-        "91"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Kąt foremny to $\\frac{(4-2)\\cdot180^\\circ}{4}=90^\\circ$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "bd7da62c-bd78-574e-a47a-cd609e212c53",
       "generatedAt": "2026-11-14T11:41:48.574Z",
       "model": "coverage-v1"
     },

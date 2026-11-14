@@ -234,25 +234,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Oblicz $\\log_{4} 256$.",
-      "correct_answer": "4",
-      "options": [
-        "4",
-        "5",
-        "3",
-        "256"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Ponieważ $4^{4}=256$, więc $\\log_{4} 256=4$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "17c823d6-47b8-52f6-ae7d-56715d607809",
-      "generatedAt": "2026-11-14T11:41:48.573Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Oblicz $\\log_{3} \\frac{1}{9}$.",
       "correct_answer": "-2",
       "options": [
@@ -306,25 +287,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "a8fa5afb-aa82-5115-aad2-96fe588cbd28",
-      "generatedAt": "2026-11-14T11:41:48.573Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Oblicz $\\log_{3} 1+\\log_{3} 3$.",
-      "correct_answer": "1",
-      "options": [
-        "1",
-        "0",
-        "2",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "$\\log_{3}1=0$ oraz $\\log_{3}3=1$, więc suma wynosi $1$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "99598ca2-eb29-5e04-a96d-5518613ee9ff",
       "generatedAt": "2026-11-14T11:41:48.573Z",
       "model": "coverage-v1"
     },

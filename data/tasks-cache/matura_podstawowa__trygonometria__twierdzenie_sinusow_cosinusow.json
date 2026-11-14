@@ -139,25 +139,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "W trójkącie $a=3$, $\\alpha=30^\\circ$, $\\beta=90^\\circ$. Oblicz $b$.",
-      "correct_answer": "6",
-      "options": [
-        "6",
-        "1.5",
-        "9",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Z twierdzenia sinusów $\\frac{a}{\\sin30^\\circ}=\\frac{b}{\\sin90^\\circ}$, więc $b=2a=6$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "df8db366-5111-5520-a77c-48823170c119",
-      "generatedAt": "2026-11-14T11:41:48.573Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "W trójkącie prostokątnym przyprostokątne mają $5$ i $5$. Oblicz kwadrat przeciwprostokątnej.",
       "correct_answer": "50",
       "options": [
@@ -325,25 +306,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "56fa8977-cb7b-5a7c-a40c-f56ab93f68d6",
-      "generatedAt": "2026-11-14T11:41:48.573Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "W trójkącie $a=6$, $\\alpha=30^\\circ$, $\\beta=90^\\circ$. Oblicz $b$.",
-      "correct_answer": "12",
-      "options": [
-        "36",
-        "6",
-        "12",
-        "3"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Z twierdzenia sinusów $\\frac{a}{\\sin30^\\circ}=\\frac{b}{\\sin90^\\circ}$, więc $b=2a=12$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "155cd687-49e0-5f7e-ad2b-48fd63cd8043",
       "generatedAt": "2026-11-14T11:41:48.573Z",
       "model": "coverage-v1"
     },

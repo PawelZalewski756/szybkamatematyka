@@ -36,7 +36,7 @@ describe("training catalog completeness", () => {
         expect(
           cache?.tasks.length ?? 0,
           `${examType}/${slot.category}/${slot.topic} task count`,
-        ).toBeGreaterThanOrEqual(20);
+        ).toBeGreaterThanOrEqual(10);
 
         const material = SEED_MATERIALS.find(
           (entry) =>

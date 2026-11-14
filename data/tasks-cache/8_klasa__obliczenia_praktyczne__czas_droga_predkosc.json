@@ -177,25 +177,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Zamień $36$ km/h na m/s.",
-      "correct_answer": "10 m/s",
-      "options": [
-        "129,6 m/s",
-        "11 m/s",
-        "10 m/s",
-        "36 m/s"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Dzielimy przez $3{,}6$: $36:3{,}6=10$ m/s.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f0b0be2-3695-5456-a6fb-ec3b33c48351",
-      "generatedAt": "2026-11-14T11:41:48.577Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Ile to $75$ minut w godzinach?",
       "correct_answer": "1,25 h",
       "options": [
@@ -230,25 +211,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "c8cd76a3-58b7-580f-ac65-d37cf79fe5f8",
-      "generatedAt": "2026-11-14T11:41:48.577Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Samochód jedzie $110$ km/h przez $5$ h. Jaką drogę pokona?",
-      "correct_answer": "550 km",
-      "options": [
-        "560 km",
-        "220 km",
-        "115 km",
-        "550 km"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "$s=v\\cdot t=110\\cdot5=550$ km.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "936947f6-65c8-5de6-a96a-272a44c28531",
       "generatedAt": "2026-11-14T11:41:48.577Z",
       "model": "coverage-v1"
     },

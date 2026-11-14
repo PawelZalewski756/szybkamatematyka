@@ -329,25 +329,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Ile wynosi $CM+C$?",
-      "correct_answer": "1000",
-      "options": [
-        "1000",
-        "800",
-        "90000",
-        "1010"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "$CM=900$ i $C=100$, więc suma to $1000$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "7d923ade-ccd9-5d9d-aa96-cc985d180e50",
-      "generatedAt": "2026-11-14T11:41:48.581Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Odczytaj liczbę zapisaną cyframi rzymskimi: $XIV$.",
       "correct_answer": "14",
       "options": [

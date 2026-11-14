@@ -120,25 +120,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
-      "correct_answer": "6 cm",
-      "options": [
-        "12 cm",
-        "6 cm",
-        "3 cm",
-        "24 cm"
-      ],
-      "answer_type": "choice",
-      "difficulty": 1,
-      "xp_reward": 14,
-      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5f31244c-ed6e-5d70-afdf-ef692bdca8f7",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=8$ cm. Ile wynosi $|PB|$?",
       "correct_answer": "8 cm",
       "options": [
@@ -196,63 +177,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Gdzie leży środek okręgu wpisanego w trójkąt?",
-      "correct_answer": "w przecięciu dwusiecznych kątów",
-      "options": [
-        "w przecięciu symetralnych boków",
-        "w przecięciu środkowych",
-        "w przecięciu wysokości",
-        "w przecięciu dwusiecznych kątów"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Środek okręgu wpisanego to przecięcie dwusiecznych kątów.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "02991803-5166-5f65-a16d-2e8db2d827a0",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Gdzie leży środek okręgu opisanego na trójkącie?",
-      "correct_answer": "w przecięciu symetralnych boków",
-      "options": [
-        "w przecięciu wysokości",
-        "w przecięciu symetralnych boków",
-        "w przecięciu środkowych",
-        "w przecięciu dwusiecznych kątów"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Środek okręgu opisanego to przecięcie symetralnych boków.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "475aa5c7-0189-5123-a331-bf0210a890c4",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
-      "correct_answer": "6 cm",
-      "options": [
-        "6 cm",
-        "3 cm",
-        "12 cm",
-        "24 cm"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "fc90cf0a-901e-5775-abe8-60360eece84b",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Punkt $P$ leży na symetralnej odcinka $AB$ i $|PA|=10$ cm. Ile wynosi $|PB|$?",
       "correct_answer": "10 cm",
       "options": [
@@ -306,63 +230,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "c0e7cc19-7cc4-5782-a2f6-a6285b64d961",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Gdzie leży środek okręgu wpisanego w trójkąt?",
-      "correct_answer": "w przecięciu dwusiecznych kątów",
-      "options": [
-        "w przecięciu wysokości",
-        "w przecięciu dwusiecznych kątów",
-        "w przecięciu symetralnych boków",
-        "w przecięciu środkowych"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Środek okręgu wpisanego to przecięcie dwusiecznych kątów.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "4b32b5ff-1814-5d89-aa8b-d1edb30dc03f",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Gdzie leży środek okręgu opisanego na trójkącie?",
-      "correct_answer": "w przecięciu symetralnych boków",
-      "options": [
-        "w przecięciu środkowych",
-        "w przecięciu wysokości",
-        "w przecięciu symetralnych boków",
-        "w przecięciu dwusiecznych kątów"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Środek okręgu opisanego to przecięcie symetralnych boków.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "03d8f784-9783-5b32-ab31-e08b828bdc59",
-      "generatedAt": "2026-11-14T11:41:48.579Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Odcinek $AB$ ma $12$ cm. Symetralna dzieli go na połowy. Jaką długość ma każda połowa?",
-      "correct_answer": "6 cm",
-      "options": [
-        "24 cm",
-        "3 cm",
-        "6 cm",
-        "12 cm"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Symetralna przechodzi przez środek, więc każda połowa ma $6$ cm.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "ecd8c6dd-1354-5828-aed3-fe6a7a5137a7",
       "generatedAt": "2026-11-14T11:41:48.579Z",
       "model": "coverage-v1"
     },

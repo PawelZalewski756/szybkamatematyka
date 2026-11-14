@@ -177,25 +177,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Samochód przejechał $240$ km w $4$ h. Jaka była jego prędkość?",
-      "correct_answer": "60 km/h",
-      "options": [
-        "70 km/h",
-        "960 km/h",
-        "244 km/h",
-        "60 km/h"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "$v=240:4=60$ km/h.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "5bfac706-1e01-52ff-a883-83f526873fe3",
-      "generatedAt": "2026-11-14T11:41:48.578Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Ogród ma $5$ m na $9$ m. Ile metrów siatki potrzeba na ogrodzenie?",
       "correct_answer": "28 m",
       "options": [
@@ -268,25 +249,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "0b6fa4dc-046b-532d-a8e6-67c484c82572",
-      "generatedAt": "2026-11-14T11:41:48.578Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "W klasie jest $40$ uczniów, z czego $25\\%$ to chłopcy. Ilu chłopców jest w klasie?",
-      "correct_answer": "10",
-      "options": [
-        "40",
-        "10",
-        "30",
-        "25"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "$25\\%$ z $40$ to $10$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "00c3208c-2aed-5675-a8c6-e4b92f9a6b5c",
       "generatedAt": "2026-11-14T11:41:48.578Z",
       "model": "coverage-v1"
     },

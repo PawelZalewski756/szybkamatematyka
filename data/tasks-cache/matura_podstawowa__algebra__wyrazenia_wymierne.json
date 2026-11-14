@@ -215,44 +215,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Podaj dziedzinę wyrażenia $\\frac{x}{x^2-16}$.",
-      "correct_answer": "x ≠ -4 i x ≠ 4",
-      "options": [
-        "x ≠ 16",
-        "x ≠ -4",
-        "x ≠ -4 i x ≠ 4",
-        "x ≠ 4"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Mianownik to $(x-4)(x+4)$, więc $x\\ne-4$ i $x\\ne4$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "dde6125c-6ce4-5e86-af05-98c7f2d1baf4",
-      "generatedAt": "2026-11-14T11:41:48.572Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Uprość $\\frac{x^2-4}{x-2}$ dla $x\\ne2$.",
-      "correct_answer": "x+2",
-      "options": [
-        "2",
-        "x^2+2",
-        "x-2",
-        "x+2"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Licznik to $(x-2)(x+2)$, więc po skróceniu zostaje $x+2$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "100069d3-0a2f-5963-a506-05df54f6bbaa",
-      "generatedAt": "2026-11-14T11:41:48.572Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Podaj dziedzinę wyrażenia $\\frac{1}{x-5}$.",
       "correct_answer": "x ≠ 5",
       "options": [

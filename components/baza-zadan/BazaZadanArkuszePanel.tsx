@@ -231,6 +231,7 @@ export function BazaZadanArkuszePanel({
 
           <Link
             href="/trening/arkusze"
+            aria-label="Otwórz katalog arkuszy CKE"
             className="text-sm font-semibold text-accent hover:text-accent-strong"
           >
             Pełny katalog →

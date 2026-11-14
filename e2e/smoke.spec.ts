@@ -499,7 +499,7 @@ test.describe("Smoke", () => {
       "/trening/egzamin-osmoklasisty/liczby/kolejnosc_dzialan",
     );
     await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-    await expect(page.getByText("7 tematów").first()).toBeVisible();
+    await expect(page.getByText("9 tematów").first()).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Pokaż tematy/ }).first(),
     ).toBeVisible();
@@ -527,7 +527,7 @@ test.describe("Smoke", () => {
     await expandButton.click();
 
     await expect(page.getByTestId("training-topic-list")).toBeVisible();
-    await expect(topicLinks).toHaveCount(7);
+    await expect(topicLinks).toHaveCount(9);
   });
 
   test("trening zachowuje hierarchię i szerokość na telefonie", async ({

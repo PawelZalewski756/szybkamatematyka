@@ -196,44 +196,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Podaj dziedzinę funkcji $f(x)=\\frac{7}{x}$.",
-      "correct_answer": "x ≠ 0",
-      "options": [
-        "x ≠ 7",
-        "x > 0",
-        "x ≠ 0",
-        "x ≥ 0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Mianownik nie może być zerem, więc $x\\ne0$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d2eb2255-e587-5e1c-acd9-6616528734ad",
-      "generatedAt": "2026-11-14T11:41:48.576Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Jak nazywa się wykres funkcji $f(x)=\\frac{a}{x}$ dla $a\\ne0$?",
-      "correct_answer": "hiperbola",
-      "options": [
-        "parabola",
-        "okrąg",
-        "prosta",
-        "hiperbola"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Wykresem funkcji $f(x)=a/x$ jest hiperbola.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2afcc308-b67c-56bc-ae37-6caf87c06499",
-      "generatedAt": "2026-11-14T11:41:48.576Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{6}{x}$. Oblicz $y$ dla $x=3$.",
       "correct_answer": "2",
       "options": [
@@ -310,44 +272,6 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Podaj dziedzinę funkcji $f(x)=\\frac{7}{x}$.",
-      "correct_answer": "x ≠ 0",
-      "options": [
-        "x > 0",
-        "x ≠ 0",
-        "x ≠ 7",
-        "x ≥ 0"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Mianownik nie może być zerem, więc $x\\ne0$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d60e73ea-399f-53be-a7ba-a71594310c24",
-      "generatedAt": "2026-11-14T11:41:48.576Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Jak nazywa się wykres funkcji $f(x)=\\frac{a}{x}$ dla $a\\ne0$?",
-      "correct_answer": "hiperbola",
-      "options": [
-        "parabola",
-        "hiperbola",
-        "prosta",
-        "okrąg"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "Wykresem funkcji $f(x)=a/x$ jest hiperbola.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "159b2dcb-26ea-5225-ad44-b6e11701b70d",
-      "generatedAt": "2026-11-14T11:41:48.576Z",
-      "model": "coverage-v1"
-    },
-    {
       "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{18}{x}$. Oblicz $y$ dla $x=6$.",
       "correct_answer": "3",
       "options": [
@@ -363,25 +287,6 @@
       "figure_svg": null,
       "figure_caption": null,
       "id": "7a9ab63e-df63-5a06-a3d2-4e1895f548a1",
-      "generatedAt": "2026-11-14T11:41:48.576Z",
-      "model": "coverage-v1"
-    },
-    {
-      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{18}{x}$. Oblicz $x$ dla $y=3$.",
-      "correct_answer": "6",
-      "options": [
-        "21",
-        "15",
-        "6",
-        "7"
-      ],
-      "answer_type": "choice",
-      "difficulty": 3,
-      "xp_reward": 22,
-      "explanation": "$x=\\frac{18}{3}=6$.",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "a0cfee26-1828-5f47-a230-a611d6ac3476",
       "generatedAt": "2026-11-14T11:41:48.576Z",
       "model": "coverage-v1"
     }
