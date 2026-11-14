@@ -2,6 +2,9 @@ import { defineConfig, devices } from "@playwright/test";
 
 const e2ePort = Number(process.env.E2E_PORT ?? 3000);
 const e2eBaseUrl = `http://localhost:${e2ePort}`;
+/** W CI korzystamy z Chrome zainstalowanego na runnerze, bez pobierania przeglądarki. */
+const browserChannel =
+  process.env.PW_CHANNEL ?? (process.env.CI ? "chrome" : "");
 
 /**
  * E2E smoke tests - uruchamiane lokalnie: `npm run test:e2e`.
@@ -23,7 +26,10 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        ...(browserChannel ? { channel: browserChannel as "chrome" } : {}),
+      },
     },
   ],
   webServer: {
