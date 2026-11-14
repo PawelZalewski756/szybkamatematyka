@@ -6,7 +6,7 @@
   "topicName": "Zadania tekstowe z treścią",
   "tasks": [
     {
-      "content": "Ania ma $169$ zł. Kupiła $3$ biletów po $11$ zł. Ile jej zostało?",
+      "content": "Ania ma $169$ zł. Kupiła $3$ bilety po $11$ zł. Ile jej zostało?",
       "correct_answer": "136 zł",
       "options": [
         "202 zł",
@@ -120,7 +120,7 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Ania ma $106$ zł. Kupiła $4$ biletów po $12$ zł. Ile jej zostało?",
+      "content": "Ania ma $106$ zł. Kupiła $4$ bilety po $12$ zł. Ile jej zostało?",
       "correct_answer": "58 zł",
       "options": [
         "154 zł",
@@ -234,7 +234,7 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Ania ma $144$ zł. Kupiła $4$ biletów po $21$ zł. Ile jej zostało?",
+      "content": "Ania ma $144$ zł. Kupiła $4$ bilety po $21$ zł. Ile jej zostało?",
       "correct_answer": "60 zł",
       "options": [
         "60 zł",

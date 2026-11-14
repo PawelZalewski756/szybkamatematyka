@@ -44,6 +44,16 @@ export function containsMathDelimiters(text: string): boolean {
   return /\$(?!\$)/.test(text) || /\$\$/.test(text);
 }
 
+const PLAIN_NUMBER_MATH = /(^|[^$])\$(\d+(?:[.,\u00A0 ]\d+)*)\$(?!\$)/g;
+
+/**
+ * Zamienia $169$ na 169. Sama liczba nie potrzebuje KaTeX-a, a w nim wychodzi
+ * większa (1.21em) i w kroju szeryfowym, więc odstaje od zdania.
+ */
+export function unwrapPlainNumberMath(text: string): string {
+  return text.replace(PLAIN_NUMBER_MATH, "$1$2");
+}
+
 /** Usuwa „A. ” z początku opcji - UI i tak pokazuje literę w badge. */
 export function stripChoiceLabelPrefix(option: string): string {
   return option.replace(/^[A-Da-d]\.\s*/, "");
