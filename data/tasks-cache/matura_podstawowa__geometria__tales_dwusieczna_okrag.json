@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "tales_dwusieczna_okrag",
+  "categoryName": "Geometria",
+  "topicName": "Twierdzenie Talesa, dwusieczna i okrąg wpisany",
+  "tasks": [
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na jednym ramieniu odcinki mają $2$ i $4$, a na drugim pierwszy odcinek ma $2$. Oblicz drugi odcinek $x$.",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa $\\frac{2}{4}=\\frac{2}{x}$, więc $x=4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0200b71c-1d80-542d-af84-84e9688f5167",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=4$, $|AC|=6$, $|BC|=20$. Dwusieczna z wierzchołka $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "6",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia o dwusiecznej $\\frac{|BD|}{|DC|}=\\frac{4}{6}$. Stąd $|BD|=8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c4cb6159-c162-509c-acb4-a5e315716d1e",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt środkowy ma $102^\\circ$. Oblicz kąt wpisany oparty na tym samym łuku.",
+      "correct_answer": "51",
+      "options": [
+        "51",
+        "102",
+        "204",
+        "25.5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt wpisany jest dwa razy mniejszy od środkowego, więc ma $51^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e430b24a-9249-5f04-a693-263346a3e259",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt wpisany ma $56^\\circ$. Oblicz kąt środkowy oparty na tym samym łuku.",
+      "correct_answer": "112",
+      "options": [
+        "56",
+        "112",
+        "224",
+        "66"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt środkowy jest dwa razy większy, więc ma $112^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da5e5d31-a13b-5dac-aa6b-e6436a4fac90",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $4$ bokach.",
+      "correct_answer": "90",
+      "options": [
+        "91",
+        "90",
+        "72",
+        "180"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt foremny to $\\frac{(4-2)\\cdot180^\\circ}{4}=90^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4060f665-544d-53e0-a94a-8e1c0ab4a6b5",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $7$-kąt?",
+      "correct_answer": "14",
+      "options": [
+        "7",
+        "21",
+        "28",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba przekątnych to $\\frac{7(7-3)}{2}=14$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "974715d1-b6df-59f1-a747-257661285841",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na jednym ramieniu odcinki mają $4$ i $8$, a na drugim pierwszy odcinek ma $2$. Oblicz drugi odcinek $x$.",
+      "correct_answer": "4",
+      "options": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa $\\frac{4}{8}=\\frac{2}{x}$, więc $x=4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac55b092-1921-5529-aea9-ff84438d810b",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=4$, $|AC|=6$, $|BC|=20$. Dwusieczna z wierzchołka $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "8",
+      "options": [
+        "6",
+        "4",
+        "8",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia o dwusiecznej $\\frac{|BD|}{|DC|}=\\frac{4}{6}$. Stąd $|BD|=8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0b84f44-70e6-59bb-a27e-cdca33bfdc1c",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt środkowy ma $62^\\circ$. Oblicz kąt wpisany oparty na tym samym łuku.",
+      "correct_answer": "31",
+      "options": [
+        "15.5",
+        "124",
+        "31",
+        "62"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt wpisany jest dwa razy mniejszy od środkowego, więc ma $31^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f43877f1-4d79-5388-a6e4-b5851eabe739",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt wpisany ma $22^\\circ$. Oblicz kąt środkowy oparty na tym samym łuku.",
+      "correct_answer": "44",
+      "options": [
+        "22",
+        "88",
+        "32",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt środkowy jest dwa razy większy, więc ma $44^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cc49c866-b54c-5bf9-af92-1805d8b082b9",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $4$ bokach.",
+      "correct_answer": "90",
+      "options": [
+        "180",
+        "72",
+        "90",
+        "91"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt foremny to $\\frac{(4-2)\\cdot180^\\circ}{4}=90^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd7da62c-bd78-574e-a47a-cd609e212c53",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $10$-kąt?",
+      "correct_answer": "35",
+      "options": [
+        "45",
+        "35",
+        "10",
+        "70"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba przekątnych to $\\frac{10(10-3)}{2}=35$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "85a21a65-3778-5113-a276-df3684838b26",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na jednym ramieniu odcinki mają $5$ i $10$, a na drugim pierwszy odcinek ma $3$. Oblicz drugi odcinek $x$.",
+      "correct_answer": "6",
+      "options": [
+        "8",
+        "6",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia Talesa $\\frac{5}{10}=\\frac{3}{x}$, więc $x=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0a2d5a3d-d128-5d0e-a021-b70523041ca5",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=6$, $|AC|=15$, $|BC|=42$. Dwusieczna z wierzchołka $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "12",
+      "options": [
+        "30",
+        "15",
+        "12",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia o dwusiecznej $\\frac{|BD|}{|DC|}=\\frac{6}{15}$. Stąd $|BD|=12$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "17ee3db9-fca6-5d1e-afd0-344631907b54",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt środkowy ma $154^\\circ$. Oblicz kąt wpisany oparty na tym samym łuku.",
+      "correct_answer": "77",
+      "options": [
+        "77",
+        "308",
+        "38.5",
+        "154"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt wpisany jest dwa razy mniejszy od środkowego, więc ma $77^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99f356bb-12b7-578f-a6af-a38d56eac79d",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Kąt wpisany ma $33^\\circ$. Oblicz kąt środkowy oparty na tym samym łuku.",
+      "correct_answer": "66",
+      "options": [
+        "132",
+        "43",
+        "66",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt środkowy jest dwa razy większy, więc ma $66^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a824d10-0ff4-528e-a25b-6cac8065c188",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $6$ bokach.",
+      "correct_answer": "120",
+      "options": [
+        "180",
+        "120",
+        "121",
+        "102.85714285714286"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt foremny to $\\frac{(6-2)\\cdot180^\\circ}{6}=120^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "67c8673f-d49d-5c20-a772-27e2c68b0ef8",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $6$-kąt?",
+      "correct_answer": "9",
+      "options": [
+        "6",
+        "9",
+        "15",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba przekątnych to $\\frac{6(6-3)}{2}=9$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a233d232-3bca-5f6b-a927-f5f36c254d0a",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na jednym ramieniu odcinki mają $4$ i $16$, a na drugim pierwszy odcinek ma $2$. Oblicz drugi odcinek $x$.",
+      "correct_answer": "8",
+      "options": [
+        "14",
+        "8",
+        "6",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia Talesa $\\frac{4}{16}=\\frac{2}{x}$, więc $x=8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "33f1db3b-15a2-5b42-a6df-d0c4ecad6c8a",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W trójkącie $|AB|=10$, $|AC|=9$, $|BC|=38$. Dwusieczna z wierzchołka $A$ dzieli $BC$. Oblicz $|BD|$.",
+      "correct_answer": "20",
+      "options": [
+        "10",
+        "9",
+        "20",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia o dwusiecznej $\\frac{|BD|}{|DC|}=\\frac{10}{9}$. Stąd $|BD|=20$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "40e5c194-c9ec-5842-aae8-97d88a1f48f6",
+      "generatedAt": "2026-11-14T11:41:48.574Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.574Z"
+}

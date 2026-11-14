@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "optymalizacja",
+  "topic": "zadania_optymalizacyjne",
+  "categoryName": "Optymalizacja",
+  "topicName": "Zadania optymalizacyjne",
+  "tasks": [
+    {
+      "content": "Prostokąt ma obwód $20$. Jaki jest bok kwadratu o największym polu przy tym obwodzie?",
+      "correct_answer": "5",
+      "options": [
+        "2,5",
+        "5",
+        "10",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy stałym obwodzie największe pole ma kwadrat. Bok to $\\frac{20}{4}=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8b3cd3f6-4989-5d46-ae28-0fd1c7d3ef6d",
+      "generatedAt": "2026-11-14T11:41:48.567Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $18$. Jaki jest największy możliwy iloczyn tych liczb?",
+      "correct_answer": "81",
+      "options": [
+        "81",
+        "18",
+        "63",
+        "83"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{18}{2}\\right)^2=81$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9cda142-3c7f-5198-ab1c-b9602afa6bbf",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $P(x)=-x^2+12x$ opisuje pole pewnej figury. Dla jakiego $x$ pole jest największe?",
+      "correct_answer": "6",
+      "options": [
+        "12",
+        "-6",
+        "3",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wierzchołek paraboli ma $x=\\frac{-b}{2a}=\\frac{-12}{-2}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7771e21-02c1-5734-af50-8e8681ab6f6c",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=-(x-2)^2+20$ ma największą wartość równą:",
+      "correct_answer": "20",
+      "options": [
+        "22",
+        "2",
+        "20",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wyrażenie $-(x-2)^2$ jest najwyżej równe $0$, więc największa wartość to $20$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5a2de2c6-e6da-5f6d-a0b3-bf6b81a4a39b",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród przylega do ściany. Na trzy boki mamy $36$ m siatki. Jaki jest największy możliwy bok prostopadły do ściany?",
+      "correct_answer": "9",
+      "options": [
+        "12",
+        "18",
+        "9",
+        "4,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Bok prostopadły to $x$, bok równoległy $36-2x$. Pole $-2x^2+36x$ ma maksimum dla $x=\\frac{36}{4}=9$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aa80cfd9-05e3-52e0-a6d0-269c88f63558",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Przychód opisuje $R(x)=x(38-x)$. Dla jakiego $x$ przychód jest największy?",
+      "correct_answer": "19",
+      "options": [
+        "37",
+        "19",
+        "9,5",
+        "38"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wierzchołek paraboli $R(x)=-x^2+38x$ ma $x=\\frac{38}{2}=19$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "331af489-644e-517e-a4c7-1e5ddcdf2132",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $24$. Jaki jest bok kwadratu o największym polu przy tym obwodzie?",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "12",
+        "7",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy stałym obwodzie największe pole ma kwadrat. Bok to $\\frac{24}{4}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "000b6283-7d2e-5d54-a2a5-95d69728ee56",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $24$. Jaki jest największy możliwy iloczyn tych liczb?",
+      "correct_answer": "144",
+      "options": [
+        "146",
+        "120",
+        "144",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{24}{2}\\right)^2=144$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f3c8d655-b9dd-5793-a7a7-3fa0d4cf11a5",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $P(x)=-x^2+20x$ opisuje pole pewnej figury. Dla jakiego $x$ pole jest największe?",
+      "correct_answer": "10",
+      "options": [
+        "-10",
+        "10",
+        "5",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wierzchołek paraboli ma $x=\\frac{-b}{2a}=\\frac{-20}{-2}=10$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a4fb96ec-8ceb-5f29-a816-c0a9d9f8ecb9",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=-(x-4)^2+14$ ma największą wartość równą:",
+      "correct_answer": "14",
+      "options": [
+        "18",
+        "14",
+        "4",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wyrażenie $-(x-4)^2$ jest najwyżej równe $0$, więc największa wartość to $14$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b28edfc-b6a4-50f4-a763-f729869f6965",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród przylega do ściany. Na trzy boki mamy $36$ m siatki. Jaki jest największy możliwy bok prostopadły do ściany?",
+      "correct_answer": "9",
+      "options": [
+        "4,5",
+        "18",
+        "12",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Bok prostopadły to $x$, bok równoległy $36-2x$. Pole $-2x^2+36x$ ma maksimum dla $x=\\frac{36}{4}=9$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b3d75e78-cc47-5de3-a112-02cf8bb68407",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Przychód opisuje $R(x)=x(12-x)$. Dla jakiego $x$ przychód jest największy?",
+      "correct_answer": "6",
+      "options": [
+        "11",
+        "3",
+        "12",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wierzchołek paraboli $R(x)=-x^2+12x$ ma $x=\\frac{12}{2}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1278e168-793a-5f61-a72d-9ead43670b8d",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $12$. Jaki jest bok kwadratu o największym polu przy tym obwodzie?",
+      "correct_answer": "3",
+      "options": [
+        "1,5",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przy stałym obwodzie największe pole ma kwadrat. Bok to $\\frac{12}{4}=3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f3805298-ce63-5a94-abf8-c791998acadd",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $24$. Jaki jest największy możliwy iloczyn tych liczb?",
+      "correct_answer": "144",
+      "options": [
+        "120",
+        "146",
+        "24",
+        "144"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{24}{2}\\right)^2=144$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae4e24fa-a1de-55c0-a957-2dae2ccd6b88",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $P(x)=-x^2+22x$ opisuje pole pewnej figury. Dla jakiego $x$ pole jest największe?",
+      "correct_answer": "11",
+      "options": [
+        "11",
+        "22",
+        "-11",
+        "5,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wierzchołek paraboli ma $x=\\frac{-b}{2a}=\\frac{-22}{-2}=11$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "794fd22f-f44b-5e25-aa48-2ac778fd82d3",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=-(x-9)^2+29$ ma największą wartość równą:",
+      "correct_answer": "29",
+      "options": [
+        "28",
+        "9",
+        "38",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wyrażenie $-(x-9)^2$ jest najwyżej równe $0$, więc największa wartość to $29$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9d5b6179-f260-546a-a7c9-37a7a572c51e",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ogród przylega do ściany. Na trzy boki mamy $24$ m siatki. Jaki jest największy możliwy bok prostopadły do ściany?",
+      "correct_answer": "6",
+      "options": [
+        "12",
+        "8",
+        "3",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Bok prostopadły to $x$, bok równoległy $24-2x$. Pole $-2x^2+24x$ ma maksimum dla $x=\\frac{24}{4}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "29038a28-c064-54a1-a29c-ee0cbe4d3dff",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Przychód opisuje $R(x)=x(16-x)$. Dla jakiego $x$ przychód jest największy?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "15",
+        "4",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wierzchołek paraboli $R(x)=-x^2+16x$ ma $x=\\frac{16}{2}=8$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5baedb18-c31b-5da9-a139-e6e0ea498744",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $16$. Jaki jest bok kwadratu o największym polu przy tym obwodzie?",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "5",
+        "8",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy stałym obwodzie największe pole ma kwadrat. Bok to $\\frac{16}{4}=4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "90ff8f81-5397-5180-a1c9-8f59c24d7c17",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $18$. Jaki jest największy możliwy iloczyn tych liczb?",
+      "correct_answer": "81",
+      "options": [
+        "83",
+        "63",
+        "18",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Iloczyn jest największy, gdy liczby są równe. Wynosi $\\left(\\frac{18}{2}\\right)^2=81$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d355cdb6-3ffb-522b-a2f8-0ff5c85e78c8",
+      "generatedAt": "2026-11-14T11:41:48.569Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.569Z"
+}

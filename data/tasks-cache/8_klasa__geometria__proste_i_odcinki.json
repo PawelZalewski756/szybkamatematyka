@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "proste_i_odcinki",
+  "categoryName": "Geometria płaska",
+  "topicName": "Proste, półproste i odcinki",
+  "tasks": [
+    {
+      "content": "Ile końców ma półprosta?",
+      "correct_answer": "jeden",
+      "options": [
+        "trzy",
+        "zero",
+        "jeden",
+        "dwa"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Półprosta ma początek, ale nie ma końca.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "15c71782-cec1-52c4-a26a-429c3c43fc57",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma odcinek?",
+      "correct_answer": "dwa",
+      "options": [
+        "jeden",
+        "zero",
+        "dwa",
+        "trzy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odcinek ma dwa końce.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "140781bf-a963-5c73-ac98-8ee64d3a6501",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek ma $16$ cm. Jego środek dzieli go na dwie równe części. Jaką długość ma każda część?",
+      "correct_answer": "8 cm",
+      "options": [
+        "16 cm",
+        "8 cm",
+        "4 cm",
+        "32 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek dzieli odcinek na połowy, więc każda ma $8$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7efbbdda-8d3e-5bfd-a484-ce9e575449be",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Pod jakim kątem przecinają się proste prostopadłe?",
+      "correct_answer": "90°",
+      "options": [
+        "90°",
+        "180°",
+        "60°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Proste prostopadłe przecinają się pod kątem 90°.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "afe897d4-440f-5a47-ae2e-964b1fb86520",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy proste równoległe mają punkt wspólny?",
+      "correct_answer": "nie",
+      "options": [
+        "tak, nieskończenie wiele",
+        "tak, dwa",
+        "nie",
+        "tak, jeden"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Proste równoległe nie przecinają się.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7f2982fc-c69c-5c95-a14b-acd6ed5f14ea",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt jest oddalony od prostej o $8$ cm. Jaką długość ma najkrótszy odcinek łączący ten punkt z prostą?",
+      "correct_answer": "8 cm",
+      "options": [
+        "9 cm",
+        "8 cm",
+        "16 cm",
+        "4 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Najkrótszy odcinek to odcinek prostopadły, więc ma długość równą odległości.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7546f5b1-d139-51a4-a3ca-2db54c270545",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma półprosta?",
+      "correct_answer": "jeden",
+      "options": [
+        "jeden",
+        "dwa",
+        "trzy",
+        "zero"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Półprosta ma początek, ale nie ma końca.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "01651e9c-dd21-5f48-a6ea-2a5912e10850",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma odcinek?",
+      "correct_answer": "dwa",
+      "options": [
+        "trzy",
+        "zero",
+        "jeden",
+        "dwa"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odcinek ma dwa końce.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ea2e7b4c-e2c2-51c0-ae82-c172c5c4331c",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek ma $20$ cm. Jego środek dzieli go na dwie równe części. Jaką długość ma każda część?",
+      "correct_answer": "10 cm",
+      "options": [
+        "10 cm",
+        "40 cm",
+        "5 cm",
+        "20 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek dzieli odcinek na połowy, więc każda ma $10$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f7e6558-a214-53cb-aa25-a562ce6b9095",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Pod jakim kątem przecinają się proste prostopadłe?",
+      "correct_answer": "90°",
+      "options": [
+        "45°",
+        "90°",
+        "60°",
+        "180°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Proste prostopadłe przecinają się pod kątem 90°.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f6cfc11-de9a-56e7-a3f5-f0a6e6749494",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy proste równoległe mają punkt wspólny?",
+      "correct_answer": "nie",
+      "options": [
+        "tak, dwa",
+        "tak, nieskończenie wiele",
+        "tak, jeden",
+        "nie"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Proste równoległe nie przecinają się.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99f53b46-f03b-55b0-a334-401cfbf4f677",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt jest oddalony od prostej o $9$ cm. Jaką długość ma najkrótszy odcinek łączący ten punkt z prostą?",
+      "correct_answer": "9 cm",
+      "options": [
+        "18 cm",
+        "10 cm",
+        "9 cm",
+        "4.5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Najkrótszy odcinek to odcinek prostopadły, więc ma długość równą odległości.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74a52dc1-b099-50d9-a208-faf5ca7d4c24",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma półprosta?",
+      "correct_answer": "jeden",
+      "options": [
+        "dwa",
+        "zero",
+        "jeden",
+        "trzy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Półprosta ma początek, ale nie ma końca.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7a2f22e-64bb-5b1f-afce-17b23f95b2c8",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma odcinek?",
+      "correct_answer": "dwa",
+      "options": [
+        "dwa",
+        "zero",
+        "jeden",
+        "trzy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odcinek ma dwa końce.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae11423f-c1f3-57dc-af64-2f352e24332b",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Odcinek ma $18$ cm. Jego środek dzieli go na dwie równe części. Jaką długość ma każda część?",
+      "correct_answer": "9 cm",
+      "options": [
+        "36 cm",
+        "9 cm",
+        "4.5 cm",
+        "18 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek dzieli odcinek na połowy, więc każda ma $9$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "37006a12-a447-5043-a371-69e56c8295e5",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Pod jakim kątem przecinają się proste prostopadłe?",
+      "correct_answer": "90°",
+      "options": [
+        "90°",
+        "45°",
+        "60°",
+        "180°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Proste prostopadłe przecinają się pod kątem 90°.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7cfb844b-9c7b-5638-a232-b7fc4d182fc6",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Czy proste równoległe mają punkt wspólny?",
+      "correct_answer": "nie",
+      "options": [
+        "tak, jeden",
+        "nie",
+        "tak, dwa",
+        "tak, nieskończenie wiele"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Proste równoległe nie przecinają się.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "46ec862f-c933-529c-a0ef-072bcc9f4ca6",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Punkt jest oddalony od prostej o $3$ cm. Jaką długość ma najkrótszy odcinek łączący ten punkt z prostą?",
+      "correct_answer": "3 cm",
+      "options": [
+        "4 cm",
+        "3 cm",
+        "6 cm",
+        "1.5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Najkrótszy odcinek to odcinek prostopadły, więc ma długość równą odległości.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7da073f6-8758-5a95-ad30-b8635c5824d5",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma półprosta?",
+      "correct_answer": "jeden",
+      "options": [
+        "dwa",
+        "trzy",
+        "jeden",
+        "zero"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Półprosta ma początek, ale nie ma końca.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f30fd42-f939-5d31-a4c7-0adc3a5c6b41",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile końców ma odcinek?",
+      "correct_answer": "dwa",
+      "options": [
+        "dwa",
+        "zero",
+        "trzy",
+        "jeden"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odcinek ma dwa końce.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c2a9f14-7e85-538f-a2dd-6f8f09c4cb0d",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.580Z"
+}

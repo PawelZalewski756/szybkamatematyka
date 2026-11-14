@@ -237,7 +237,7 @@ function ExamSwitcher({
 }) {
   return (
     <div>
-      <p className="mb-2 text-caption">Wybierz ścieżkę</p>
+      <p className="mb-2 text-caption">Wybierz egzamin</p>
       <div
         role="tablist"
         aria-label="Wybór egzaminu"
@@ -976,8 +976,8 @@ export default function TreningPage() {
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa - działy i tematy dopasowane do bazy zadań."
-      : "Egzamin ósmoklasisty - działy i tematy dopasowane do bazy zadań.";
+      ? "Matura podstawowa - działy i tematy zgodne z wymaganiami CKE."
+      : "Egzamin ósmoklasisty - działy i tematy zgodne z pełną podstawą programową.";
 
   const overallProgress = useMemo(() => {
     const cats = exam.categories;
@@ -1022,6 +1022,24 @@ export default function TreningPage() {
             onChange={handleExamChange}
           />
         </header>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted">
+          <span>
+            Plan obejmuje cały zakres CKE, także tematy z klas wcześniejszych.
+          </span>
+          <Link
+            href="/sprawdziany"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Sprawdziany klasowe
+          </Link>
+          <Link
+            href="/trening/arkusze"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Arkusze CKE, także rozszerzone
+          </Link>
+        </div>
 
         {!loading && nextTopic && (
           <NextStepCard

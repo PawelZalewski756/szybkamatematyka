@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "statystyka_zaawansowana",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Statystyka opisowa: średnia ważona i odchylenie",
+  "tasks": [
+    {
+      "content": "Oblicz średnią ważoną: $3$ (waga $2$), $3$ (waga $1$), $4$ (waga $3$).",
+      "correct_answer": "3,5",
+      "options": [
+        "3,5",
+        "4,5",
+        "3,33",
+        "2,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia ważona to $\\frac{3\\cdot2+3\\cdot1+4\\cdot3}{6}=3,5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cf99365d-6f3e-5b6d-a767-dad1b1c98f23",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2,4,6$.",
+      "correct_answer": "2,67",
+      "options": [
+        "4",
+        "2,67",
+        "3,67",
+        "5,33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $4$, a wariancja $2,67$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9b35f9b-3bbd-53ff-a94a-ac4a1d209552",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $1,2,3,4$.",
+      "correct_answer": "1,12",
+      "options": [
+        "1,12",
+        "1,25",
+        "0,12",
+        "2,12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wariancja wynosi $1,25$, więc odchylenie to $1,12$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1789e6fa-a4ff-5734-a31b-dc7157f7f08d",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W grze wygrywasz $6$ zł z prawdopodobieństwem $0,2$ i $0$ zł w pozostałych przypadkach. Oblicz wartość oczekiwaną.",
+      "correct_answer": "1,2000000000000002",
+      "options": [
+        "2,2",
+        "6",
+        "3",
+        "1,2000000000000002"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$E(X)=6\\cdot0,2+0=1,2000000000000002$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "325c9a1b-e8cb-5fe9-a09a-527808367820",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz medianę danych $6,2,5,5,3$.",
+      "correct_answer": "5",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po uporządkowaniu środek to $5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8d43598b-6331-53e7-ae9d-bc7bf0d8cd41",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wynik ucznia znajduje się na $94$. centylu. Co to oznacza?",
+      "correct_answer": "około 94% wyników jest niższych lub równych",
+      "options": [
+        "uczeń ma 94% poprawnych odpowiedzi",
+        "uczeń jest w top 94%",
+        "wynik jest 94 razy lepszy od średniej",
+        "około 94% wyników jest niższych lub równych"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Centyl opisuje położenie wyniku względem pozostałych, a nie procent poprawnych odpowiedzi.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21562474-3da3-5746-ad66-89490cac5f76",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną: $2$ (waga $3$), $2$ (waga $3$), $4$ (waga $3$).",
+      "correct_answer": "2,67",
+      "options": [
+        "3,67",
+        "1,6666666666666665",
+        "2,67",
+        "3,6666666666666665"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia ważona to $\\frac{2\\cdot3+2\\cdot3+4\\cdot3}{9}=2,67$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "88ba2ce5-835f-5591-a780-b2e5465f838a",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2,4,6$.",
+      "correct_answer": "2,67",
+      "options": [
+        "3,67",
+        "5,33",
+        "2,67",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $4$, a wariancja $2,67$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7214180a-37a2-5414-a369-9b0d60c80b52",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $3,4,5,6$.",
+      "correct_answer": "1,12",
+      "options": [
+        "1,12",
+        "1,25",
+        "2,12",
+        "0,12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wariancja wynosi $1,25$, więc odchylenie to $1,12$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e24283b3-85c2-5dda-aedb-431121a136da",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W grze wygrywasz $11$ zł z prawdopodobieństwem $0,25$ i $0$ zł w pozostałych przypadkach. Oblicz wartość oczekiwaną.",
+      "correct_answer": "2,75",
+      "options": [
+        "5,5",
+        "11",
+        "3,75",
+        "2,75"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$E(X)=11\\cdot0,25+0=2,75$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b4ed76b-7719-5c6d-a969-b569931e06bc",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz medianę danych $5,1,4,4,2$.",
+      "correct_answer": "4",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po uporządkowaniu środek to $4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3a04ce08-f20d-5453-a859-a3215e8c124b",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wynik ucznia znajduje się na $64$. centylu. Co to oznacza?",
+      "correct_answer": "około 64% wyników jest niższych lub równych",
+      "options": [
+        "uczeń jest w top 64%",
+        "wynik jest 64 razy lepszy od średniej",
+        "uczeń ma 64% poprawnych odpowiedzi",
+        "około 64% wyników jest niższych lub równych"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Centyl opisuje położenie wyniku względem pozostałych, a nie procent poprawnych odpowiedzi.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a5da355b-dffd-5b7d-a672-caa4fac5d0eb",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną: $2$ (waga $3$), $2$ (waga $2$), $2$ (waga $2$).",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia ważona to $\\frac{2\\cdot3+2\\cdot2+2\\cdot2}{7}=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2aafb77c-c597-5cff-a555-ef4b53d84111",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $1,3,5$.",
+      "correct_answer": "2,67",
+      "options": [
+        "5,33",
+        "2,67",
+        "3",
+        "3,67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $3$, a wariancja $2,67$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c6a9ff0f-4649-5cae-a5d4-c9de017d607b",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $2,3,4,5$.",
+      "correct_answer": "1,12",
+      "options": [
+        "0,12",
+        "2,12",
+        "1,12",
+        "1,25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wariancja wynosi $1,25$, więc odchylenie to $1,12$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "abafd467-f137-521d-a939-b3477a096664",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "W grze wygrywasz $16$ zł z prawdopodobieństwem $0,5$ i $0$ zł w pozostałych przypadkach. Oblicz wartość oczekiwaną.",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$E(X)=16\\cdot0,5+0=8$ zł.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4be3207f-18f1-5e3d-a3a1-46ff1a932338",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz medianę danych $7,1,4,4,2$.",
+      "correct_answer": "4",
+      "options": [
+        "2",
+        "7",
+        "1",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po uporządkowaniu środek to $4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73187be9-8716-5aba-a848-982eabcf24ff",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wynik ucznia znajduje się na $84$. centylu. Co to oznacza?",
+      "correct_answer": "około 84% wyników jest niższych lub równych",
+      "options": [
+        "uczeń jest w top 84%",
+        "wynik jest 84 razy lepszy od średniej",
+        "około 84% wyników jest niższych lub równych",
+        "uczeń ma 84% poprawnych odpowiedzi"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Centyl opisuje położenie wyniku względem pozostałych, a nie procent poprawnych odpowiedzi.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "765bba5b-ff21-50ed-a548-8975273319c2",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną: $4$ (waga $2$), $5$ (waga $1$), $2$ (waga $2$).",
+      "correct_answer": "3,4",
+      "options": [
+        "3,4",
+        "2,4",
+        "4,4",
+        "3,67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia ważona to $\\frac{4\\cdot2+5\\cdot1+2\\cdot2}{5}=3,4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83ec59ad-c463-5866-a691-d96204fa97bf",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2,4,6$.",
+      "correct_answer": "2,67",
+      "options": [
+        "5,33",
+        "4",
+        "3,67",
+        "2,67"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $4$, a wariancja $2,67$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "36d7aca9-4434-57de-abf5-ac08482f8622",
+      "generatedAt": "2026-11-14T11:41:48.575Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.575Z"
+}

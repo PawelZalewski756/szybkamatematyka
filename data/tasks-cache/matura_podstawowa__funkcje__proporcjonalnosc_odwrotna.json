@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "funkcje",
+  "topic": "proporcjonalnosc_odwrotna",
+  "categoryName": "Funkcje",
+  "topicName": "Proporcjonalność odwrotna i funkcja f(x)=a/x",
+  "tasks": [
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{30}{x}$. Oblicz $y$ dla $x=5$.",
+      "correct_answer": "6",
+      "options": [
+        "25",
+        "6",
+        "7",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$y=\\frac{30}{5}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe11231e-2eab-50d0-a24a-9c72d0d082ed",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{32}{x}$. Oblicz $x$ dla $y=8$.",
+      "correct_answer": "4",
+      "options": [
+        "40",
+        "5",
+        "4",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x=\\frac{32}{8}=4$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d8ce4b44-f168-5385-a227-59776cd0b708",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne. Dla $x=2$ mamy $y=5$. Oblicz $y$ dla $x=5$.",
+      "correct_answer": "2",
+      "options": [
+        "10",
+        "3",
+        "50",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Stała $a=2\\cdot5=10$, więc $y=\\frac{10}{5}=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b40cb204-746d-50d3-ac4d-30bb36236efc",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "5 pracowników wykona pracę w 6 dni. W ilu dniach wykona ją 6 pracowników, jeśli tempo pracy jest takie samo?",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "180",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Iloczyn jest stały: $5\\cdot6=30$, więc czas to $\\frac{30}{6}=5$ dni.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4011b435-e6aa-552e-af52-bc8cfb46345f",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę funkcji $f(x)=\\frac{7}{x}$.",
+      "correct_answer": "x ≠ 0",
+      "options": [
+        "x ≥ 0",
+        "x ≠ 0",
+        "x > 0",
+        "x ≠ 7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mianownik nie może być zerem, więc $x\\ne0$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1bea8a8d-1481-5e0f-a611-68e0b7abc876",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jak nazywa się wykres funkcji $f(x)=\\frac{a}{x}$ dla $a\\ne0$?",
+      "correct_answer": "hiperbola",
+      "options": [
+        "prosta",
+        "okrąg",
+        "hiperbola",
+        "parabola"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wykresem funkcji $f(x)=a/x$ jest hiperbola.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4a7762c2-c383-5800-a936-b09a5adf8225",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{12}{x}$. Oblicz $y$ dla $x=6$.",
+      "correct_answer": "2",
+      "options": [
+        "6",
+        "3",
+        "2",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$y=\\frac{12}{6}=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dbe5262-5dea-5463-ab0b-cd947b3bed81",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{9}{x}$. Oblicz $x$ dla $y=3$.",
+      "correct_answer": "3",
+      "options": [
+        "4",
+        "12",
+        "3",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x=\\frac{9}{3}=3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "06c8db67-de05-5ece-a68a-9e544dcd9d4f",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne. Dla $x=5$ mamy $y=5$. Oblicz $y$ dla $x=2$.",
+      "correct_answer": "12,5",
+      "options": [
+        "12,5",
+        "50",
+        "13,5",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Stała $a=5\\cdot5=25$, więc $y=\\frac{25}{2}=12,5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eb507961-f92e-5685-ad5e-3ca2b9e4a8dc",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "4 pracowników wykona pracę w 5 dni. W ilu dniach wykona ją 2 pracowników, jeśli tempo pracy jest takie samo?",
+      "correct_answer": "10",
+      "options": [
+        "40",
+        "10",
+        "5",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Iloczyn jest stały: $4\\cdot5=20$, więc czas to $\\frac{20}{2}=10$ dni.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9d3ffde2-ca70-58ea-ae0b-5b01b339584d",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę funkcji $f(x)=\\frac{7}{x}$.",
+      "correct_answer": "x ≠ 0",
+      "options": [
+        "x ≠ 7",
+        "x > 0",
+        "x ≠ 0",
+        "x ≥ 0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik nie może być zerem, więc $x\\ne0$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2eb2255-e587-5e1c-acd9-6616528734ad",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jak nazywa się wykres funkcji $f(x)=\\frac{a}{x}$ dla $a\\ne0$?",
+      "correct_answer": "hiperbola",
+      "options": [
+        "parabola",
+        "okrąg",
+        "prosta",
+        "hiperbola"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wykresem funkcji $f(x)=a/x$ jest hiperbola.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2afcc308-b67c-56bc-ae37-6caf87c06499",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{6}{x}$. Oblicz $y$ dla $x=3$.",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "9",
+        "4",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$y=\\frac{6}{3}=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "beec447a-4f39-568a-af80-37e5d630dc79",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{18}{x}$. Oblicz $x$ dla $y=3$.",
+      "correct_answer": "6",
+      "options": [
+        "15",
+        "7",
+        "6",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x=\\frac{18}{3}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be283796-1729-5613-a760-c08245eabec2",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne. Dla $x=5$ mamy $y=2$. Oblicz $y$ dla $x=2$.",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "20",
+        "4",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Stała $a=5\\cdot2=10$, więc $y=\\frac{10}{2}=5$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "999eeed9-11af-5a34-ad51-2f1cf0697772",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "6 pracowników wykona pracę w 3 dni. W ilu dniach wykona ją 2 pracowników, jeśli tempo pracy jest takie samo?",
+      "correct_answer": "9",
+      "options": [
+        "3",
+        "36",
+        "10",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Iloczyn jest stały: $6\\cdot3=18$, więc czas to $\\frac{18}{2}=9$ dni.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "50d43c6b-fc30-5c6b-a0e0-686a5517cd08",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Podaj dziedzinę funkcji $f(x)=\\frac{7}{x}$.",
+      "correct_answer": "x ≠ 0",
+      "options": [
+        "x > 0",
+        "x ≠ 0",
+        "x ≠ 7",
+        "x ≥ 0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mianownik nie może być zerem, więc $x\\ne0$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d60e73ea-399f-53be-a7ba-a71594310c24",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Jak nazywa się wykres funkcji $f(x)=\\frac{a}{x}$ dla $a\\ne0$?",
+      "correct_answer": "hiperbola",
+      "options": [
+        "parabola",
+        "hiperbola",
+        "prosta",
+        "okrąg"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wykresem funkcji $f(x)=a/x$ jest hiperbola.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "159b2dcb-26ea-5225-ad44-b6e11701b70d",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{18}{x}$. Oblicz $y$ dla $x=6$.",
+      "correct_answer": "3",
+      "options": [
+        "24",
+        "3",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$y=\\frac{18}{6}=3$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a9ab63e-df63-5a06-a3d2-4e1895f548a1",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Wielkości są odwrotnie proporcjonalne i $y=\\frac{18}{x}$. Oblicz $x$ dla $y=3$.",
+      "correct_answer": "6",
+      "options": [
+        "21",
+        "15",
+        "6",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x=\\frac{18}{3}=6$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a0cfee26-1828-5f47-a230-a611d6ac3476",
+      "generatedAt": "2026-11-14T11:41:48.576Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.576Z"
+}

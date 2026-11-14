@@ -36,6 +36,108 @@ export const THEORY_INDEX: TheoryIndexEntry[] = [
   },
   {
     "exam_type": "matura_podstawowa",
+    "category": "optymalizacja",
+    "topic": "zadania_optymalizacyjne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "wielomiany",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "wyrazenia_wymierne",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "funkcje",
+    "topic": "funkcja_logarytmiczna",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "trygonometria",
+    "topic": "twierdzenie_sinusow_cosinusow",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "tales_dwusieczna_okrag",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "statystyka_zaawansowana",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "funkcje",
+    "topic": "proporcjonalnosc_odwrotna",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "notacja_wykladnicza",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "obliczenia_praktyczne",
+    "topic": "czas_droga_predkosc",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "obliczenia_praktyczne",
+    "topic": "jednostki_i_pieniadze",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "zadania_tekstowe",
+    "topic": "zadania_tekstowe",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "symetralna_i_dwusieczna",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "wielokaty",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "proste_i_odcinki",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "uklad_wspolrzednych",
+    "topic": "os_liczbowa",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "system_rzymski",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
     "category": "liczby_rzeczywiste",
     "topic": "potegi",
     "tier": "comprehensive"

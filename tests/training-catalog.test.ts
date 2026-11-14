@@ -14,8 +14,8 @@ const EXAMS = ["matura_podstawowa", "8_klasa"] as const;
 
 describe("training catalog completeness", () => {
   it("keeps the expanded catalog counts and unique canonical keys", () => {
-    expect(listCkeTopicsForExam("matura_podstawowa")).toHaveLength(30);
-    expect(listCkeTopicsForExam("8_klasa")).toHaveLength(29);
+    expect(listCkeTopicsForExam("matura_podstawowa")).toHaveLength(38);
+    expect(listCkeTopicsForExam("8_klasa")).toHaveLength(38);
 
     const keys = EXAMS.flatMap((examType) =>
       listCkeTopicsForExam(examType).map(
