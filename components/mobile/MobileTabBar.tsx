@@ -26,12 +26,14 @@ type TabLinkProps = {
   label: string;
   icon: typeof Home;
   active: boolean;
+  prefetch?: boolean;
 };
 
-function TabLink({ href, label, icon: Icon, active }: TabLinkProps) {
+function TabLink({ href, label, icon: Icon, active, prefetch }: TabLinkProps) {
   return (
     <Link
       href={href}
+      prefetch={prefetch}
       aria-current={active ? "page" : undefined}
       className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
         active ? "text-foreground" : "text-muted active:text-foreground"
@@ -180,6 +182,7 @@ export function MobileTabBar() {
             label="Zadania"
             icon={Library}
             active={activeTab === "zadania"}
+            prefetch={false}
           />
           <TabButton
             label="Graj"

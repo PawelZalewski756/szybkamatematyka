@@ -2,7 +2,6 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
 import { getNextTopic } from "@/lib/trening/next-topic";
 import { TopicVictoryScreen } from "@/components/trening/TopicVictoryScreen";
 import {
@@ -47,6 +46,14 @@ function shuffleTasks<T>(items: T[]): T[] {
 const OPTION_LABELS = ["A", "B", "C", "D"] as const;
 const CORRECT_DELAY_MS = 1500;
 const WRONG_UNLOCK_MS = 700;
+
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/** Zadania z bazy mają UUID; identyfikatory katalogu CKE mają prefiksy typu cke-. */
+function isUuid(value: string): boolean {
+  return UUID_RE.test(value);
+}
 
 const EXAM_LABEL: Record<ExamType, string> = {
   matura_podstawowa: "Matura podstawowa",
@@ -240,10 +247,6 @@ export function TaskArena({
       setFeedback("correct");
       setLocalCheckWrong(false);
 
-      if (getTaskById(current.id)) {
-        recordResult(current.id, true);
-      }
-
       const taskAttempts = (attempts[current.id] ?? 0) + 1;
       setAttempts((prev) => ({ ...prev, [current.id]: taskAttempts }));
 
@@ -289,7 +292,6 @@ export function TaskArena({
       attempts,
       current,
       profile,
-      recordResult,
       userId,
     ],
   );
@@ -305,8 +307,14 @@ export function TaskArena({
     setSelected(option);
     setFeedback(isCorrect ? "correct" : "wrong");
 
-    if (getTaskById(current.id)) {
-      recordResult(current.id, isCorrect);
+    if (!isUuid(current.id)) {
+      // Zadania z katalogu CKE (np. cke-...) mogą trafić do powtórek. Nie importujemy
+      // całego archiwum na wejściu - ładujemy je dopiero, gdy to naprawdę katalog.
+      void import("@/lib/baza-zadan/catalog").then(({ getTaskById }) => {
+        if (getTaskById(current.id)) {
+          recordResult(current.id, isCorrect);
+        }
+      });
     }
 
     if (!isCorrect) {

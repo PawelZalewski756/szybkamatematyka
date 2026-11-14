@@ -42,6 +42,7 @@ function PrimaryNavLinks() {
           <li key={href}>
             <Link
               href={href}
+              prefetch={href === "/baza-zadan" ? false : undefined}
               aria-current={active ? "page" : undefined}
               className={`inline-flex items-center rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
                 active

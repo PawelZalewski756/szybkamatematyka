@@ -823,6 +823,7 @@ export default function TreningPage() {
     emptyExamFor("matura_podstawowa"),
   );
   const [loading, setLoading] = useState(true);
+  const [pathInitialized, setPathInitialized] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
@@ -906,9 +907,10 @@ export default function TreningPage() {
   }, []);
 
   useEffect(() => {
+    if (!pathInitialized) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadProgress(selectedExam);
-  }, [selectedExam, loadProgress]);
+  }, [pathInitialized, selectedExam, loadProgress]);
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(searchInput), 200);
@@ -917,14 +919,14 @@ export default function TreningPage() {
 
   const pathSyncedRef = useRef(false);
   useEffect(() => {
-    if (pathSyncedRef.current || !learningPath) return;
+    if (pathSyncedRef.current) return;
     pathSyncedRef.current = true;
     const key = examKeyForLearningPath(learningPath);
-    if (key !== "matura_podstawowa") {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setSelectedExam(key);
-      setExam(emptyExamFor(key));
-    }
+    // Ustawiamy ścieżkę przed pierwszym pobraniem, żeby nie ściągać drzewa
+    // najpierw dla matury, a potem dla 8-klasisty.
+    setSelectedExam(key);
+    setExam(emptyExamFor(key));
+    setPathInitialized(true);
   }, [learningPath]);
 
   const handleExamChange = (key: SelectedExam) => {
