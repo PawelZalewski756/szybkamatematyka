@@ -159,3 +159,110 @@ export function repairEscapedLatex(text: string): string {
 
   return out;
 }
+
+/** \(...\) i \[...\] na $...$ - spotykane w części treści z bazy. */
+function normalizeDelimiters(text: string): string {
+  if (!text.includes("\\(") && !text.includes("\\)") && !text.includes("\\[") && !text.includes("\\]")) {
+    return text;
+  }
+  return text
+    .replace(/\\\[/g, () => "$$")
+    .replace(/\\\]/g, () => "$$")
+    .replace(/\\\(/g, "$")
+    .replace(/\\\)/g, "$");
+}
+
+/** Naprawia "egin{cases}" (urwane \begin) i "ight)" (urwane \right). */
+function fixBrokenCommands(text: string): string {
+  let out = text
+    .replace(/(^|[^\\A-Za-z])[ \t]*egin\{/g, "$1\\begin{")
+    .replace(/(^|[^\\A-Za-z])[ \t]*rac\{/g, "$1\\frac{")
+    .replace(/(^|[^\\A-Za-z])[ \t]*ight(?=[)\]])/g, "$1 \\right");
+
+  // W cases "\\" (łamanie wiersza) zapisało się jako "\ " - przywracamy.
+  out = out.replace(
+    /(\\begin\{cases\}[\s\S]*?\\end\{cases\})/g,
+    (block) => block.replace(/\\[ \t]+/g, "\\\\ "),
+  );
+  return out;
+}
+
+/** Dokłada brakujący $, gdy delimiter został urwany. */
+function fixDollarParity(text: string): string {
+  const dollars = (text.match(/\$/g) ?? []).length;
+  if (dollars % 2 === 0) return text;
+  if (text.startsWith("$$") && !text.endsWith("$$")) {
+    return `$${text.slice(2)}`;
+  }
+  return `${text}$`;
+}
+
+/**
+ * Normalizuje treść zadania przed renderowaniem: delimitery, sklejone komendy,
+ * brakujące dolary. Idempotentna, nie zmienia tekstu bez potrzeby.
+ */
+export function normalizeMathText(text: string): string {
+  if (typeof text !== "string" || !text) return text;
+  let out = normalizeDelimiters(text);
+  out = repairEscapedLatex(out);
+  out = fixBrokenCommands(out);
+  out = fixSplitDisplayDollars(out);
+  out = out.replace(/\\textbf\{([^{}]*)\}/g, "$1");
+  return fixDollarParity(out);
+}
+
+const UNIT_WORDS =
+  /^(cm|mm|dm|km|m|kg|g|mg|l|ml|s|min|h|godz|zł|metr|metra|metry|metrów|centymetr|centymetra|centymetrów|decymetr|decymetra|kilometr|kilometra|stopień|stopnia|stopni|stopnie|cal|cala|cali)$/i;
+
+const UNIT_SEARCH =
+  /(?:^|\s)(?:cm|mm|dm|km|m|kg|g|mg|l|ml|s|min|h|godz|zł|metr|metra|metry|metrów|centymetr|centymetra|centymetrów|decymetr|decymetra|kilometr|kilometra|stopień|stopnia|stopni|stopnie|cal|cala|cali)\b/i;
+
+/** Sklejone $ $ (z $$) wracają do $$, gdy stoją na granicy białych znaków. */
+function fixSplitDisplayDollars(text: string): string {
+  if (!/\$\s+\$/.test(text)) return text;
+  let out = text.replace(/\$\s+\$\s+\$(?=\s)/g, () => "$$");
+  out = out.replace(/\$\s+\$(?=\s)/g, () => "$$");
+  out = out.replace(/\s\$\s+\$$/, () => " $$");
+  return out;
+}
+
+/**
+ * Opcje i odpowiedzi w bazie często są zapisane bez $, np. "x \\in \\langle 2, 3 \\rangle".
+ * Jeśli segment jest wzorem, opakowujemy go w $...$. Gdy do wzoru doklejona jest
+ * jednostka ("15\\sqrt{2} metrów"), w $...$ idzie sam wzór, a jednostka zostaje tekstem.
+ */
+function wrapFormulaSegment(text: string): string {
+  const trimmed = text.trim();
+  if (!trimmed || !/\\[A-Za-z]+/.test(trimmed)) return text;
+  if (trimmed.includes("\\text{")) return text;
+
+  const words =
+    trimmed.replace(/\\[A-Za-z]+/g, " ").match(/[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]{2,}/g) ?? [];
+
+  if (words.length === 0) return `$${trimmed}$`;
+  if (!words.every((word) => UNIT_WORDS.test(word))) return text;
+
+  const unitIndex = trimmed.search(UNIT_SEARCH);
+  if (unitIndex > 0) {
+    const formula = trimmed.slice(0, unitIndex).trimEnd();
+    const rest = trimmed.slice(formula.length);
+    if (/\\[A-Za-z]+/.test(formula)) return `$${formula}$${rest}`;
+  }
+  return text;
+}
+
+export function ensureMathDelimiters(text: string): string {
+  const parts = splitMathText(text);
+  let changed = false;
+  const out = parts
+    .map((part) => {
+      if (part.kind === "text") {
+        const wrapped = wrapFormulaSegment(part.text);
+        if (wrapped !== part.text) changed = true;
+        return wrapped;
+      }
+      return part.kind === "display" ? `$$${part.latex}$$` : `$${part.latex}$`;
+    })
+    .join("");
+  return changed ? out : text;
+}

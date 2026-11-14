@@ -2,7 +2,11 @@
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { slugifyHeading } from "@/lib/trening/theory-content";
-import { repairEscapedLatex, unwrapPlainNumberMath } from "@/lib/math/render-math-text";
+import {
+  ensureMathDelimiters,
+  normalizeMathText,
+  unwrapPlainNumberMath,
+} from "@/lib/math/render-math-text";
 import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
@@ -105,7 +109,7 @@ export function TheoryMarkdown({
 }: TheoryMarkdownProps) {
   const withAnchors = variant === "default";
   const prepared = useMemo(
-    () => unwrapPlainNumberMath(repairEscapedLatex(content)),
+    () => unwrapPlainNumberMath(ensureMathDelimiters(normalizeMathText(content))),
     [content],
   );
 
