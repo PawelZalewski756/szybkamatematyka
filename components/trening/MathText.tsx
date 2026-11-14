@@ -1,6 +1,6 @@
 "use client";
 
-import { splitMathText } from "@/lib/math/render-math-text";
+import { repairEscapedLatex, splitMathText } from "@/lib/math/render-math-text";
 import katex from "katex";
 import { Fragment, useMemo } from "react";
 
@@ -57,7 +57,7 @@ function renderTextWithImages(text: string, keyBase: number) {
 export function MathText({ content, className, as: Tag = "span" }: MathTextProps) {
   const nodes = useMemo(
     () =>
-      splitMathText(content).map((part, index) => {
+      splitMathText(repairEscapedLatex(content)).map((part, index) => {
         if (part.kind === "text") {
           return <Fragment key={index}>{renderTextWithImages(part.text, index)}</Fragment>;
         }
