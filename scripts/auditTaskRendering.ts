@@ -124,9 +124,80 @@ function fetchCke(): Rec[] {
   return out;
 }
 
+const REST = `${SUPABASE_URL.replace(/\/+$/, "")}/rest/v1`;
+const REST_HEADERS = { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` };
+
+async function fetchDbTable(
+  table: string,
+  select: string,
+): Promise<Array<Record<string, unknown>>> {
+  const out: Array<Record<string, unknown>> = [];
+  for (let from = 0; ; from += 1000) {
+    const res = await fetch(`${REST}/${table}?select=${select}&limit=1000&offset=${from}`, {
+      headers: REST_HEADERS,
+    });
+    if (!res.ok) throw new Error(`${table} ${res.status} ${await res.text()}`);
+    const batch = (await res.json()) as Array<Record<string, unknown>>;
+    out.push(...batch);
+    if (batch.length < 1000) break;
+  }
+  return out;
+}
+
+async function fetchDbZadania(): Promise<Rec[]> {
+  const rows = await fetchDbTable("zadania", "id,dzial,tresc,rozwiazanie");
+  return rows.map((row) => ({
+    source: "cke-db",
+    id: String(row.id),
+    exam: "cke",
+    category: String(row.dzial ?? ""),
+    topic: "",
+    content: String(row.tresc ?? ""),
+    options: [],
+    answer: "",
+    explanation: row.rozwiazanie ? String(row.rozwiazanie) : undefined,
+  }));
+}
+
+async function fetchDbMaterials(): Promise<Rec[]> {
+  const rows = await fetchDbTable("materials", "id,exam_type,category,topic,content");
+  return rows.map((row) => ({
+    source: "materials-db",
+    id: String(row.id),
+    exam: String(row.exam_type ?? ""),
+    category: String(row.category ?? ""),
+    topic: String(row.topic ?? ""),
+    content: String(row.content ?? ""),
+    options: [],
+    answer: "",
+  }));
+}
+
 function looksLikeLeakedCommand(text: string): string | null {
   const match = text.match(/\\[A-Za-z]{2,}/);
   return match ? match[0] : null;
+}
+
+const TABLE_DELIMITER = /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/;
+
+function tableCellCount(line: string): number {
+  return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").length;
+}
+
+function tableIssues(text: string): string[] {
+  const problems: string[] = [];
+  const lines = text.split("\n");
+  for (let i = 1; i < lines.length; i++) {
+    if (!TABLE_DELIMITER.test(lines[i])) continue;
+    const header = lines[i - 1];
+    if (!header.includes("|")) continue;
+    const expected = tableCellCount(lines[i]);
+    const actual = tableCellCount(header);
+    if (expected !== actual) {
+      problems.push(`header ${actual} vs delimiter ${expected}`);
+    }
+  }
+  return problems;
 }
 
 function auditRecord(rec: Rec, issues: Issue[]) {
@@ -171,6 +242,9 @@ function auditRecord(rec: Rec, issues: Issue[]) {
         add(field, "katex-error", error instanceof Error ? error.message : String(error), latex);
       }
     }
+    for (const detail of tableIssues(value)) {
+      add(field, "table", detail, value);
+    }
   };
 
   if (!rec.content.trim()) add("content", "empty", "", "");
@@ -191,7 +265,13 @@ function auditRecord(rec: Rec, issues: Issue[]) {
 }
 
 async function main() {
-  const records = [...(await fetchDb()), ...fetchCache(), ...fetchCke()];
+  const records = [
+    ...(await fetchDb()),
+    ...fetchCache(),
+    ...fetchCke(),
+    ...(await fetchDbZadania()),
+    ...(await fetchDbMaterials()),
+  ];
   const issues: Issue[] = [];
   for (const rec of records) auditRecord(rec, issues);
 
