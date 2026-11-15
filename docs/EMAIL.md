@@ -51,3 +51,12 @@ Supabase Dashboard > Authentication > Email Templates. Wklej zawartosc plikow z 
 ## Powiadomienia Telegram
 
 Nowe konto i nowy zakup wysylaja wiadomosc na Telegram do adminow. Wymagane zmienne na Vercelu: TELEGRAM_BOT_TOKEN i TELEGRAM_ADMIN_IDS (lub ADMIN_TELEGRAM_ID). Zakup: webhook Stripe musi dzialac.
+
+## Zgłoszenia błędów (Resend)
+
+Formularz „Zgłoś błąd” w stopce wysyła zgłoszenie przez Resend na adres
+`BUG_REPORT_TO` (domyślnie kontakt@szybkamatematyka.pl). Wymagane zmienne:
+`RESEND_API_KEY`, `BUG_REPORT_TO` i `BUG_REPORT_FROM`. Dopóki domena nie jest
+zweryfikowana w Resend, odbiorcą musi być adres właściciela konta, a nadawcą
+`Szybka Matematyka <onboarding@resend.dev>`. Po dodaniu rekordów SPF i DKIM
+można użyć dowolnego adresu w domenie. Szczegóły w `docs/DEPLOY.md`.

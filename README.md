@@ -22,6 +22,7 @@ Uczeń wybiera swój egzamin i temat, a następnie:
 - konta użytkowników, profile, osiągnięcia, rankingi i serie nauki,
 - minigry matematyczne, codzienne wyzwania i pojedynki,
 - system inteligentnych powtórek,
+- formularz zgłaszania błędów z opcjonalnym zrzutem ekranu (bez logowania),
 - asysta AI oparta na Gemini,
 - płatności i plan PRO obsługiwane przez Stripe,
 - responsywny interfejs działający na komputerze i telefonie,
