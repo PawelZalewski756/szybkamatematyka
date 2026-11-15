@@ -35,6 +35,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/regulamin", changeFrequency: "yearly", priority: 0.3 },
   { path: "/polityka-prywatnosci", changeFrequency: "yearly", priority: 0.3 },
   { path: "/kontakt", changeFrequency: "yearly", priority: 0.4 },
+  { path: "/zglos-blad", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
