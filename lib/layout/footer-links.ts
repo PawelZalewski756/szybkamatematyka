@@ -15,4 +15,5 @@ export const FOOTER_INFO_LINKS: readonly NavLink[] = [
   { href: "/regulamin", label: "Regulamin" },
   { href: "/polityka-prywatnosci", label: "Polityka prywatności" },
   { href: "/kontakt", label: "Kontakt" },
+  { href: "/zglos-blad", label: "Zgłoś błąd" },
 ] as const;

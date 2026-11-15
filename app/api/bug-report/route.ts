@@ -143,6 +143,9 @@ export async function POST(request: Request): Promise<Response> {
   const to = process.env.BUG_REPORT_TO?.trim() || CONTACT_EMAIL;
   const from = process.env.BUG_REPORT_FROM?.trim() || DEFAULT_FROM;
   if (!apiKey || !to.includes("@")) {
+    console.error(
+      "[bug-report] Brak konfiguracji: ustaw RESEND_API_KEY i BUG_REPORT_TO (poprawny adres).",
+    );
     return json(
       {
         error:

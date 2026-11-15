@@ -1,5 +1,4 @@
 import { BrandLogo } from "@/components/BrandLogo";
-import { BugReportSection } from "@/components/feedback/BugReportSection";
 import Link from "next/link";
 
 import { CONTACT_EMAIL } from "@/lib/brand/constants";
@@ -61,10 +60,6 @@ export function HomeGamingFooter() {
             ))}
           </nav>
         </div>
-      </div>
-
-      <div className="mt-8 border-t border-surface-border pt-6">
-        <BugReportSection />
       </div>
     </footer>
   );
