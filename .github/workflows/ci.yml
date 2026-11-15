@@ -4,6 +4,7 @@ name: CI
 # Na master: CI -> migracje Supabase -> wdrożenie Vercel.
 on:
   push:
+    branches: [master]
   pull_request:
     branches: [master]
 
@@ -67,7 +68,9 @@ jobs:
   e2e:
     name: Playwright smoke
     needs: quality
-    runs-on: ubuntu-latest
+    # Playwright 1.60 nie wspiera jeszcze Ubuntu 26.04 (nowy domyślny
+    # ubuntu-latest), więc przypinamy 24.04 dla powtarzalnej instalacji.
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
