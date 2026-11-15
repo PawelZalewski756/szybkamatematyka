@@ -112,7 +112,10 @@ test.describe("Baza zadań", () => {
 
     await page.goto("/baza-zadan?tab=arkusze");
     await expect(
-      page.getByRole("link", { name: /Otwórz katalog arkuszy CKE/ }),
+      page.getByRole("heading", { name: "Matura - maj 2025" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Otwórz katalog arkuszy CKE" }),
     ).toHaveAttribute("href", "/trening/arkusze");
   });
 
