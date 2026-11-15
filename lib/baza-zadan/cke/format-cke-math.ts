@@ -19,6 +19,10 @@ const SQRT_PLACEHOLDER = "\uE000CKESQRT";
 
 const MATH_SPLIT = /(\$\$[\s\S]+?\$\$|\$[^$\n]+\$)/;
 
+/** \frac{a}{b} z jednym poziomem zagnieżdżenia, np. \frac{1}{2^{3}}. */
+const FRAC_PATTERN =
+  String.raw`\\frac\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}`;
+
 /** Stosuje transformację tylko do tekstu poza `$...$` / `$$...$$`. */
 function mapOutsideMath(text: string, fn: (plain: string) => string): string {
   return text
@@ -32,6 +36,80 @@ function normalizeKeepSuperscripts(text: string): string {
   return Array.from(text)
     .map((ch) => (/[²³¹⁰⁴-⁹]/.test(ch) ? ch : ch.normalize("NFKC")))
     .join("");
+}
+
+const SUPERSCRIPT_DIGITS: Record<string, string> = {
+  "⁰": "0",
+  "¹": "1",
+  "²": "2",
+  "³": "3",
+  "⁴": "4",
+  "⁵": "5",
+  "⁶": "6",
+  "⁷": "7",
+  "⁸": "8",
+  "⁹": "9",
+  "⁻": "-",
+  "⁺": "+",
+};
+
+const SUBSCRIPT_DIGITS: Record<string, string> = {
+  "₀": "0",
+  "₁": "1",
+  "₂": "2",
+  "₃": "3",
+  "₄": "4",
+  "₅": "5",
+  "₆": "6",
+  "₇": "7",
+  "₈": "8",
+  "₉": "9",
+  "₋": "-",
+  "₊": "+",
+};
+
+function scriptToLatex(
+  chars: string,
+  map: Record<string, string>,
+): string {
+  return Array.from(chars)
+    .map((ch) => map[ch] ?? ch)
+    .join("");
+}
+
+/**
+ * Potęgi i indeksy Unicode (x², 2⁻³, a₁) zamieniamy na LaTeX jeszcze przed
+ * normalizacją NFKC, bo ona rozkłada superscript minus. Jednostki (cm², m³)
+ * zostają bez zmian, żeby nie zamieniać ich w osobne wyspy KaTeX.
+ */
+function latexifyUnicodeScripts(text: string): string {
+  if (!/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺₀₁₂₃₄₅₆₇₈₉₋₊]/.test(text)) return text;
+
+  const letters = String.raw`A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż`;
+
+  return text
+    .replace(/(\d)([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)/g, (_m, base: string, script: string) =>
+      `${base}^{${scriptToLatex(script, SUPERSCRIPT_DIGITS)}}`,
+    )
+    .replace(/\)([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)/g, (_m, script: string) =>
+      `)^{${scriptToLatex(script, SUPERSCRIPT_DIGITS)}}`,
+    )
+    .replace(
+      new RegExp(
+        `(?<![${letters}])([${letters}])([⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+)`,
+        "g",
+      ),
+      (_m, base: string, script: string) =>
+        `${base}^{${scriptToLatex(script, SUPERSCRIPT_DIGITS)}}`,
+    )
+    .replace(
+      new RegExp(
+        `(?<![${letters}])([${letters}])([₀₁₂₃₄₅₆₇₈₉₋₊]+)`,
+        "g",
+      ),
+      (_m, base: string, script: string) =>
+        `${base}_{${scriptToLatex(script, SUBSCRIPT_DIGITS)}}`,
+    );
 }
 
 /** Litery, dla których `x 2` traktujemy jako potęgę. */
@@ -83,8 +161,7 @@ function oddDollarBefore(whole: string, offset: number): boolean {
 }
 
 function normalizeUnicodeMath(text: string): string {
-  return normalizeKeepSuperscripts(text)
-    .replace(/ƒ/g, "f")
+  return normalizeKeepSuperscripts(text)    .replace(/ƒ/g, "f")
     .replace(/⁄/g, "/")
     .replace(/[−–-]/g, "-")
     .replace(/[∡∠]/g, "\\angle ")
@@ -98,9 +175,9 @@ function normalizeUnicodeMath(text: string): string {
 function compactSpacedMath(text: string): string {
   let out = text;
 
-  // ( a n ) → (a_n)
+  // ( a n ) → (a_n), ale tylko krótkie indeksy - nie ruszamy "(z definicji)".
   out = out.replace(
-    /\(\s*([a-zA-Z])\s+([a-zA-Z0-9]+)\s*\)/g,
+    /\(\s*([a-zA-Z])\s+([a-zA-Z0-9]{1,2})\s*\)/g,
     (_m, base: string, idx: string) => `(${base}_{${idx}})`,
   );
 
@@ -141,6 +218,12 @@ function compactSpacedMath(text: string): string {
       }
       if (POWER_BASES.has(base)) return `${base}^{${exp}}`;
       if (SUB_BASES.has(base) || SUB_BASES.has(base.toLowerCase())) {
+        const before = whole.slice(0, offset);
+        const after = whole.slice(offset + full.length);
+        const hasMathContext =
+          /[=+\-*/×·÷<>(]\s*$/.test(before) ||
+          /^\s*[=+\-*/×·÷<>),.;:\]]/.test(after);
+        if (!hasMathContext) return full;
         return `${base}_{${exp}}`;
       }
       return full;
@@ -180,10 +263,11 @@ function compactSpacedMath(text: string): string {
     return `${pre}-${d}`;
   });
 
-  // 4 / 7 → \frac{4}{7} (tylko czyste ułamki liczbowe)
+  // 4 / 7 → \frac{4}{7} (tylko czyste ułamki liczbowe, także z potęgą mianownika)
   out = out.replace(
-    /(?<![$√])(?<![·×]\s?)\b(\d+)\s*\/\s*(\d+)\b(?!\$)/g,
-    (_m, a: string, b: string) => `\\frac{${a}}{${b}}`,
+    /(?<![$√])(?<![·×]\s?)\b(\d+)\s*\/\s*(\d+)(\^\{[^}]+\})?(?!\d)(?!\$)/g,
+    (_m, a: string, b: string, exp: string | undefined) =>
+      `\\frac{${a}}{${b}${exp ?? ""}}`,
   );
 
   return out;
@@ -211,10 +295,22 @@ function mergeAdjacentMath(text: string): string {
 }
 
 function latexifySymbols(expr: string): string {
-  return expr
+  // Potęgi i indeksy chronimy przed regulami spacji, inaczej "-3" w x^{-3}
+  // zmienia się w "x^{ - 3}".
+  const scripts: string[] = [];
+  const protectedExpr = expr.replace(
+    /([\^_])\{([^{}]*)\}/g,
+    (_m, operator: string, body: string) => {
+      scripts.push(`${operator}{${body}}`);
+      return `\uE010${scripts.length - 1}\uE011`;
+    },
+  );
+
+  const out = protectedExpr
     .replace(/≤/g, "\\le ")
     .replace(/≥/g, "\\ge ")
     .replace(/≠/g, "\\ne ")
+    .replace(/≈/g, "\\approx ")
     .replace(/×/g, "\\times ")
     .replace(/·/g, "\\cdot ")
     .replace(/÷/g, "\\div ")
@@ -234,6 +330,11 @@ function latexifySymbols(expr: string): string {
     .replace(/([^\s=+\-(])\s*-\s*(?=\S)/g, "$1 - ")
     .replace(/\s{2,}/g, " ")
     .trim();
+
+  return out.replace(
+    /\uE010(\d+)\uE011/g,
+    (_m, index: string) => scripts[Number(index)] ?? "",
+  );
 }
 
 /**
@@ -243,8 +344,8 @@ function latexifySymbols(expr: string): string {
 function wrapMathIslands(text: string): string {
   // Atom: ułamek, |AB|, f(x), ax, -3x, sin 50^{\circ}, 90^{\circ}, (…), α.
   const atom =
-    String.raw`(?:-?\\frac\{[^}]+\}\{[^}]+\}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z]+(?:_\{[^}]+\}|\^\{[^}]+\})?|(?:sin|cos|tg|ctg|log|ln)(?:\^\{[^}]+\})?\s+\d+(?:\^\{\\circ\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)]{1,80}\)|\-?\d+(?:[.,]\d+)?(?:\^\{\\circ\})?|[α-ω])`;
-  const op = String.raw`(?:[=<>≤≥+\-*/×·÷]|\\le|\\ge|\\ne|\\times|\\cdot|\\pm)`;
+    String.raw`(?:-?${FRAC_PATTERN}|\\angle\s*[A-Za-z]{1,6}|\|[A-Za-z\\angle\s]{1,12}\||-?\d+(?:[.,]\d+)?[a-zA-Z]+(?:_\{[^}]+\}|\^\{[^}]+\})?|(?:sin|cos|tg|ctg|log|ln)(?:\^\{[^}]+\})?\s+\d+(?:\^\{\\circ\})?|[a-zA-Z]{1,3}(?:_\{[^}]+\}|\^\{[^}]+\})?(?:\([^)]*\))?|\([^)\uE000]{0,79}[0-9+\-*/×·÷=<>^≈≤≥≠][^)\uE000]{0,79}\)(?:\^\{[^}]+\})?|\-?\d+(?:[.,]\d+)?(?:\^\{[^}]+\})?|[α-ω][a-zA-Z]?(?:\^\{[^}]+\})?)`;
+  const op = String.raw`(?:[=<>≤≥≈+\-*/×·÷]|\\le|\\ge|\\ne|\\approx|\\times|\\cdot|\\pm)`;
   // Operator albo juxtapozycja nawiasów: (x+3)(x-2)
   const island = new RegExp(
     `(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż])${atom}(?:\\s*${op}\\s*${atom}|(?=\\()${atom})+(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])`,
@@ -259,10 +360,12 @@ function wrapMathIslands(text: string): string {
   });
 }
 
-/** Samotne tokeny: f(x), a_{n}, x^{2}, |AB|, \frac{a}{b}. */
+/** Samotne tokeny: f(x), a_{n}, x^{2}, 2^{-3}, |AB|, \frac{a}{b}. */
 function wrapLoneTokens(text: string): string {
-  const token =
-    /(?<!\$)(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż\\])(?:\\frac\{[^}]+\}\{[^}]+\}|[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})+(?:\([^)]*\))?|[a-zA-Z]\([^)]*\)|\|[A-Za-z]{1,6}\|)(?!\$)/g;
+  const token = new RegExp(
+    String.raw`(?<!\$)(?<![A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż\\])(?:${FRAC_PATTERN}|[a-zA-Z](?:_\{[^}]+\}|\^\{[^}]+\})+(?:\([^)]*\))?|[a-zA-Z]\([^)]*\)|[α-ω][a-zA-Z](?:\^\{[^}]+\})?|\([^)\uE000]{0,79}[0-9+\-*/×·÷=<>^≈≤≥≠][^)\uE000]{0,79}\)(?:\^\{[^}]+\})?|\|[A-Za-z]{1,6}\||-?\d+(?:[.,]\d+)?\^\{[^}]+\})(?!\$)`,
+    "g",
+  );
 
   return text.replace(token, (match, offset: number, whole: string) => {
     if (oddDollarBefore(whole, offset)) return match;
@@ -350,17 +453,27 @@ function wrapAnglesAndDegrees(text: string): string {
 
 /** Nawiasy z matematyką: (1 - cos 20°) zanim wyspa oderwie wnętrze. */
 function wrapParenMath(text: string): string {
-  return text.replace(/\(([^$\n()]{1,80})\)/g, (full, inner: string, offset: number, whole: string) => {
-    if (oddDollarBefore(whole, offset)) return full;
-    if (
-      !/[+\-=<>≤≥*/×·÷]|\\times|\\cdot|\\le|\\ge|\bsin\b|\bcos\b|\btg\b|\bctg\b|\d\^\{\\circ\}/.test(
-        inner,
-      )
-    ) {
-      return full;
-    }
-    return `$${latexifySymbols(`(${inner.trim()})`)}$`;
-  });
+  return text.replace(
+    /\(([^$\n()]{1,80})\)(\^\{[^}]+\})?/g,
+    (
+      full,
+      inner: string,
+      exponent: string | undefined,
+      offset: number,
+      whole: string,
+    ) => {
+      if (oddDollarBefore(whole, offset)) return full;
+      if (
+        !exponent &&
+        !/[+\-=<>≤≥≈*/×·÷]|\\times|\\cdot|\\le|\\ge|\\approx|\bsin\b|\bcos\b|\btg\b|\bctg\b|\d\^\{\\circ\}/.test(
+          inner,
+        )
+      ) {
+        return full;
+      }
+      return `$${latexifySymbols(`(${inner.trim()})${exponent ?? ""}`)}$`;
+    },
+  );
 }
 
 /**
@@ -465,6 +578,7 @@ function formatCkeMathLines(input: string): string {
   );
   out = sqrtMath.text;
 
+  out = latexifyUnicodeScripts(out);
   out = normalizeUnicodeMath(out);
   out = compactSpacedMath(out);
   // Kąty / trig+° / nawiasy przed wyspami - inaczej `$m = sin$` odrywa stopnie.

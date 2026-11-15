@@ -186,3 +186,64 @@ describe("regresja archiwum CKE", () => {
     expect(out).toContain("![Rysunek do zadania]");
   });
 });
+
+describe("potęgi i indeksy Unicode", () => {
+  it("zamienia potęgę przy zmiennej na jedną wyspę KaTeX", () => {
+    expect(formatCkeMathText("x² + 4")).toBe("$x^{2} + 4$");
+    expect(formatCkeMathText("x² + 2x + 4")).toBe("$x^{2} + 2x + 4$");
+  });
+
+  it("zamienia superscript minus i plus", () => {
+    expect(formatCkeMathText("2⁻³")).toBe("$2^{-3}$");
+    expect(formatCkeMathText("10⁻² m")).toBe("$10^{-2}$ m");
+  });
+
+  it("zamienia indeks dolny przy zmiennej", () => {
+    expect(formatCkeMathText("a₁ + a₂ = 5")).toBe("$a_{1} + a_{2} = 5$");
+  });
+
+  it("nie zamienia jednostek (cm², m³) w KaTeX", () => {
+    expect(formatCkeMathText("30 cm²")).toBe("30 cm²");
+  });
+
+  it("nie robi indeksu z polskiego nawiasu", () => {
+    expect(formatCkeMathText("x = 3 (z definicji)")).toBe(
+      "$x = 3$ (z definicji)",
+    );
+  });
+
+  it("potęga mianownika zostaje w ułamku", () => {
+    expect(formatCkeMathText("1/2³")).toBe("$\\frac{1}{2^{3}}$");
+  });
+
+  it("zadanie z potęgą ma spójne opcje", () => {
+    const choices = ["x² + 4", "x² + 2x + 4", "x² + 4x + 4", "x² + 4x + 2"];
+    for (const choice of choices) {
+      const out = formatCkeMathText(choice);
+      expect(out.startsWith("$")).toBe(true);
+      expect(out.endsWith("$")).toBe(true);
+      expect(out).not.toMatch(/[²³⁻⁺]/);
+    }
+  });
+});
+
+describe("nawiasy i potęgi", () => {
+  it("potęga po nawiasie wchodzi do tej samej wyspy", () => {
+    expect(formatCkeMathText("Rozwiń: (x + 2)²")).toBe(
+      "Rozwiń: $(x + 2)^{2}$",
+    );
+    expect(formatCkeMathText("(a + b)² = a² + 2ab + b²")).toBe(
+      "$(a + b)^{2}$ = $a^{2} + 2ab + b^{2}$",
+    );
+  });
+
+  it("nie dubluje $ wokół nawiasu z istniejącą matematyką", () => {
+    expect(formatCkeMathText("ciąg ($a_{n}$)")).toBe("ciąg ($a_{n}$)");
+  });
+
+  it("iloczyn greckiej litery z potęgą jest jedną wyspą", () => {
+    expect(formatCkeMathText("Pole koła: πr².")).toBe(
+      "Pole koła: $πr^{2}$.",
+    );
+  });
+});
