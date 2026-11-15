@@ -69,7 +69,7 @@ export async function POST(request: Request) {
     );
   }
 
-  // RAW BODY - patrz docstring powyżej.
+  // Surowa treść żądania - szczegóły w opisie powyżej.
   const rawBody = await request.text();
 
   let event: Stripe.Event;

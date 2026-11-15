@@ -54,7 +54,7 @@ function extractFirstSteps(text: string, max: number): string[] {
   const blocks = text.split(/\n(?=\*\*Krok|\*\*Zadanie)/).map((s) => s.trim()).filter(Boolean);
   const steps = blocks.filter((b) => /^\*\*(Krok|Zadanie)/i.test(b)).slice(0, max);
   if (steps.length > 0) return steps;
-  // fallback: pierwsze akapity
+  // Zapasowo: pierwsze akapity.
   return text
     .split(/\n\n+/)
     .map((s) => s.trim())

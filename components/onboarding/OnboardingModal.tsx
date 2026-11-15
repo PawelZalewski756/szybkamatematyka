@@ -59,13 +59,13 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
         saved = await completeProfileOnboarding(user.id, next, schoolLevel);
       } catch (primaryErr) {
         if (primaryErr instanceof NickTakenError) throw primaryErr;
-        // Fallback: save the required nick even if optional level sync is unavailable.
+        // Fallback: zapisujemy wymagany nick, nawet gdy opcjonalna synchronizacja poziomu jest niedostępna.
         saved = await createProfile(user.id, next);
         if (schoolLevel) {
           try {
             saved = await updateProfileSchoolLevel(user.id, schoolLevel);
           } catch {
-            // The profile can still be completed without an optional level.
+            // Profil można dokończyć bez wybierania poziomu.
           }
         }
       }

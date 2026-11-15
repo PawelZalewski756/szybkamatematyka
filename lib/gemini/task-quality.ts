@@ -33,7 +33,7 @@ function cleanInferredAnswer(raw: string): string {
 function isPlausibleAnswer(ans: string): boolean {
   const a = ans.trim();
   if (!a || a.length > 80) return false;
-  // odrzuć zdania-prozę zamiast odpowiedzi
+  // Odrzucamy zdania-prośby, które nie są konkretną odpowiedzią.
   if (a.length > 28 && /\s+(przez|powinna|uczeń|formie|np\.|czyli)\s/i.test(a)) {
     return false;
   }

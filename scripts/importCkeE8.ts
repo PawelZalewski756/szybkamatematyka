@@ -139,7 +139,7 @@ function findMarkers(pages: PageData[]): { markers: Marker[]; stops: Stop[] } {
   return { markers, stops };
 }
 
-// pdfjs na node-canvas psuje maski przezroczystosci (biale prostokaty na rysunkach),
+// pdfjs na node-canvas psuje maski przezroczystości (białe prostokąty na rysunkach),
 // dlatego strony renderuje mupdf.
 async function renderPage(pd: PageData): Promise<Canvas> {
   const mupdf = await import("mupdf");
@@ -394,7 +394,7 @@ async function importSession(session: CkeE8Session): Promise<void> {
   console.log(`   zadań: ${tasks.length}, schematów: ${schemes.size}`);
 }
 
-// Tylko ponowny render skanow zadan (bez ruszania cache: tekst, rozwiazania)
+// Tylko ponowny render skanów zadań (bez ruszania cache: tekst, rozwiązania)
 async function rerenderScans(session: CkeE8Session): Promise<void> {
   console.log(`\n== ${session.nazwa}`);
   const arkuszPdf = path.join(PDF_DIR, `${session.id}-arkusz.pdf`);

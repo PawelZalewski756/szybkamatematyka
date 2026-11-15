@@ -58,7 +58,7 @@ export function parseTaskGradeResponse(
         awardedPoints,
       };
     } catch {
-      // Try the next candidate when the model wrapped JSON in commentary.
+      // Próbujemy kolejnego kandydata, gdy model owinął JSON komentarzem.
     }
   }
   return null;

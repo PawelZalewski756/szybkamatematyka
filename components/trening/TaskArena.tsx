@@ -188,7 +188,7 @@ export function TaskArena({
   }, [taskPool, difficultyFilter, shuffleOrder]);
 
   useEffect(() => {
-    // Reset the run when filters change (intentional state reset).
+    // Zmiana filtrów zaczyna nowy przebieg (celowy reset stanu).
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setIndex(0);
     setFinished(false);

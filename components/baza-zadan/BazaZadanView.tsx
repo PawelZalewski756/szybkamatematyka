@@ -4,9 +4,9 @@ import { BazaZadanArkuszePanel } from "@/components/baza-zadan/BazaZadanArkuszeP
 import { BazaZadanTasksPanel } from "@/components/baza-zadan/BazaZadanTasksPanel";
 import { BazaZadanTreningPanel } from "@/components/baza-zadan/BazaZadanTreningPanel";
 import { useLearningPath } from "@/components/LearningPathProvider";
+import { SchoolLevelToggle } from "@/components/SchoolLevelToggle";
 import { getTaskStats, getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
 import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
-import { learningPathLabel } from "@/lib/learning-path";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import {
   fetchZadaniaCatalogSafe,
@@ -146,7 +146,6 @@ export function BazaZadanView({
     tab === "arkusze" &&
     cmsLoadState === "idle" &&
     isSupabaseConfigured();
-  const pathLabel = learningPathLabel(path);
   const taskCount = getTaskStats(path).totalTasks;
   const sheetCount = getExamSheetsForPath(path).length;
   const cmsArkuszCount = useMemo(
@@ -194,13 +193,25 @@ export function BazaZadanView({
           Wybierz punkt startu
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-          Wybierz temat, wpisz własną frazę albo przejdź do arkuszy. Ścieżka:{" "}
-          <span className="font-semibold text-accent">{pathLabel}</span>{" "}
-          <span className="text-muted/75">·</span>{" "}
-          <span className="font-semibold text-foreground">
-            {polishCount(taskCount, "zadanie", "zadania", "zadań")}
-          </span>
+          Wybierz temat, wpisz własną frazę albo przejdź do arkuszy. Poziom
+          nauki możesz zmienić w każdej chwili, także bez zakładania konta.
         </p>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-surface-border bg-surface px-3 py-2.5">
+          <span
+            id="baza-poziom-label"
+            className="text-xs font-bold uppercase tracking-wide text-muted"
+          >
+            Poziom nauki
+          </span>
+          <SchoolLevelToggle labelledBy="baza-poziom-label" />
+          <span className="text-xs text-muted">
+            <span className="font-semibold text-foreground">
+              {polishCount(taskCount, "zadanie", "zadania", "zadań")}
+            </span>{" "}
+            w tej ścieżce
+          </span>
+        </div>
       </header>
 
       <section

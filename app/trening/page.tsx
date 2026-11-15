@@ -862,7 +862,7 @@ export default function TreningPage() {
           setTheoryByTopic(theoryMap);
         })
         .catch(() => {
-          // Seed theory remains available when the optional CMS request fails.
+          // Teoria z seeda zostaje dostępna, gdy opcjonalne zapytanie do CMS zawiedzie.
         });
 
       void (async () => {

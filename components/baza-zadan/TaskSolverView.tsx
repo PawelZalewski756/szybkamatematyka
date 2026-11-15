@@ -65,7 +65,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   useEffect(() => {
     if (!task || !ready) return;
     if (isSolved(task.id)) {
-      // Restore solved state when the task or solved set changes.
+      // Odtwórz stan rozwiązania po zmianie zadania lub listy rozwiązań.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowExplanation(true);
       if (isOpenExamTask(task)) {

@@ -36,6 +36,10 @@ yarn-error.log*
 .env*
 !.env.example
 
+# lokalne pliki robocze (nie trafiają do repozytorium)
+/AGENTS.md
+/.npm-cache
+
 # tmp / scratch artifacts
 tmp-*
 tmp-*.html

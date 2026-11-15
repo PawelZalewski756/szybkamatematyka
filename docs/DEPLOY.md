@@ -19,6 +19,9 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 | `TELEGRAM_WEBHOOK_SECRET` | Telegram admin bot | Losowy sekret używany do weryfikacji webhooka Telegrama |
 | `TELEGRAM_SETUP_SECRET` | Telegram admin bot | Sekret Bearer do jednorazowego skonfigurowania webhooka |
 | `GEMINI_API_KEY` | opcjonalnie | Generowanie rozwiązań i asysta |
+| `RESEND_API_KEY` | zgłoszenia błędów | Klucz API Resend; bez niego formularz odpowiada 503 |
+| `BUG_REPORT_TO` | zgłoszenia błędów | Odbiorca zgłoszeń, domyślnie `kontakt@szybkamatematyka.pl` |
+| `BUG_REPORT_FROM` | zgłoszenia błędów | Nadawca; bez zweryfikowanej domeny użyj `onboarding@resend.dev` |
 | `STRIPE_SECRET_KEY` | płatności | Sekret Stripe test/live |
 | `STRIPE_WEBHOOK_SECRET` | płatności | Sekret endpointu webhooka |
 | `STRIPE_PRICE_PRO` | płatności | Price ID planu miesięcznego |
@@ -35,6 +38,13 @@ Każdy administrator musi wcześniej rozpocząć prywatną rozmowę z botem kome
 `/start`, aby Telegram pozwolił mu odbierać powiadomienia o nowych kontach.
 Token bota i klucz `SUPABASE_SERVICE_ROLE_KEY` nigdy nie mogą mieć prefiksu
 `NEXT_PUBLIC_`.
+
+Formularz „Zgłoś błąd” wysyła zgłoszenia przez Resend. Dopóki domena nie jest
+zweryfikowana w Resend, `BUG_REPORT_TO` musi wskazywać adres właściciela konta
+Resend, a `BUG_REPORT_FROM` musi mieć postać
+`Szybka Matematyka <onboarding@resend.dev>`. Po dodaniu domeny (rekordy SPF i
+DKIM) można ustawić dowolnego nadawcę i odbiorcę. Bez `RESEND_API_KEY`
+formularz jest widoczny, ale odpowiada komunikatem o braku konfiguracji.
 
 `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` i
 `NEXT_PUBLIC_SITE_URL` ustaw przed `next build`, ponieważ Next.js wbudowuje

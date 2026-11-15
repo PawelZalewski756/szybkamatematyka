@@ -290,7 +290,7 @@ export function TopicPageClient({
         }
       });
     } catch {
-      // Runtime config may still be loading; the guest snapshot is enough.
+      // Konfiguracja runtime może się jeszcze wczytywać - wystarczy stan gościa.
     }
 
     return () => {

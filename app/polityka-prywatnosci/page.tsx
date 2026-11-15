@@ -19,7 +19,7 @@ export default function PolitykaPrywatnosciPage() {
     <InfoPageShell
       title="Polityka prywatności"
       description={`Informacje o przetwarzaniu danych osobowych w serwisie ${BRAND_NAME}.`}
-      updatedAt="4 listopada 2026"
+      updatedAt="15 listopada 2026"
     >
       <InfoSection title="1. Administrator">
         <p>
@@ -56,6 +56,11 @@ export default function PolitykaPrywatnosciPage() {
             Dane płatności: transakcje subskrypcji są obsługiwane przez Stripe;
             nie przechowujemy pełnych numerów kart w Serwisie.
           </li>
+          <li>
+            Dane ze zgłoszenia błędu: adres e-mail, tytuł i opis zgłoszenia oraz
+            opcjonalny zrzut ekranu - przekazywane przez formularz dostępny bez
+            logowania.
+          </li>
         </ul>
       </InfoSection>
 
@@ -81,6 +86,10 @@ export default function PolitykaPrywatnosciPage() {
             Obowiązki prawne - rozliczenia i wymagania księgowe związane z
             płatnościami.
           </li>
+          <li>
+            Obsługa zgłoszeń błędów - odpowiedź na podany adres e-mail i
+            naprawa problemu (uzasadniony interes).
+          </li>
           <li>Zgoda - gdy wyraźnie o nią prosimy (np. marketing, jeśli kiedyś
             zostanie wprowadzony).</li>
         </ul>
@@ -89,13 +98,15 @@ export default function PolitykaPrywatnosciPage() {
       <InfoSection title="4. Odbiorcy danych">
         <p>
           Korzystamy z dostawców infrastruktury (hosting, baza danych,
-          uwierzytelnianie, płatności Stripe) oraz Telegrama do prywatnych
-          powiadomień administracyjnych o nowych kontach. W takim powiadomieniu
-          administrator otrzymuje nick, adres e-mail, poziom nauki i status
-          potwierdzenia adresu; wiadomość jest przetwarzana przez Telegram
-          zgodnie z jego zasadami prywatności. Jeśli tag Google Ads jest
-          skonfigurowany, Google otrzymuje dane z jego działania w celu pomiaru
-          reklam. Dane nie są sprzedawane.
+          uwierzytelnianie, płatności Stripe), z Resend do wysyłki zgłoszeń
+          błędów oraz z Telegrama do prywatnych powiadomień administracyjnych o
+          nowych kontach. W powiadomieniu o nowym koncie administrator otrzymuje
+          nick, adres e-mail, poziom nauki i status potwierdzenia adresu;
+          wiadomość jest przetwarzana przez Telegram zgodnie z jego zasadami
+          prywatności. Treść zgłoszenia błędu wraz z załącznikiem przechodzi
+          przez Resend wyłącznie w celu doręczenia go administratorowi. Jeśli
+          tag Google Ads jest skonfigurowany, Google otrzymuje dane z jego
+          działania w celu pomiaru reklam. Dane nie są sprzedawane.
         </p>
       </InfoSection>
 
@@ -111,6 +122,10 @@ export default function PolitykaPrywatnosciPage() {
           identyfikatory sesji starsze niż 30 dni. Zagregowane liczniki
           odpowiedzi nie zawierają identyfikatorów i są przechowywane
           bezterminowo.
+        </p>
+        <p>
+          Zgłoszenia błędów przechowujemy do czasu wyjaśnienia sprawy, nie dłużej
+          niż 12 miesięcy od zamknięcia zgłoszenia.
         </p>
       </InfoSection>
 

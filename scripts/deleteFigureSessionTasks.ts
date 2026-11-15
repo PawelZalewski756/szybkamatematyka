@@ -56,7 +56,7 @@ async function main() {
     fingerprints.has(contentFingerprint(row.content)),
   );
 
-  // Dodatkowo: wszystko z cache topics z dzisiejszej sesji, nawet bez match -
+  // Dodatkowo: wszystko z cache topics z dzisiejszej sesji, nawet bez dopasowania -
   // jeśli content fingerprint nie złapie przez drobne różnice, kasuj po topic+svg
   // ale NIE kasuj starych SVG spoza naszej sesji (procenty itd.)
   console.log(`Dopasowane w DB po fingerprint: ${toDelete.length} / SVG w DB: ${(data || []).length}`);
