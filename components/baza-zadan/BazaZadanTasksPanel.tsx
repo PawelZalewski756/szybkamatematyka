@@ -12,6 +12,7 @@ import {
   TASK_CATEGORY_GROUPS,
   type TaskCategoryGroupId,
 } from "@/lib/baza-zadan/sections";
+import { sortTasksForDisplay } from "@/lib/baza-zadan/task-order";
 import type { TaskCategory, TaskDifficulty } from "@/lib/baza-zadan/types";
 import {
   ArrowLeft,
@@ -91,7 +92,7 @@ export function BazaZadanTasksPanel() {
   const tasks = useMemo(() => {
     const groupCategories = selectedGroupDefinition?.categories;
 
-    return getTasksForPath(path, {
+    const filtered = getTasksForPath(path, {
       difficulty,
       search: deferredSearch,
     }).filter((task) => {
@@ -101,6 +102,8 @@ export function BazaZadanTasksPanel() {
       }
       return true;
     });
+
+    return sortTasksForDisplay(filtered);
   }, [
     category,
     deferredSearch,
