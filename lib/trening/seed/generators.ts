@@ -93,7 +93,7 @@ function fallbackAnswer(correct: string, offset: number): string {
     try {
       return `${BigInt(fraction[1]) + BigInt(offset)}/${fraction[2]}`;
     } catch {
-      // Fall through to the numeric representation below.
+      // Przechodzimy do reprezentacji liczbowej poniżej.
     }
   }
 
@@ -101,7 +101,7 @@ function fallbackAnswer(correct: string, offset: number): string {
     try {
       return (BigInt(correct.trim()) + BigInt(offset)).toString();
     } catch {
-      // Fall through to the numeric representation below.
+      // Przechodzimy do reprezentacji liczbowej poniżej.
     }
   }
 

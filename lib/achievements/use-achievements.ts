@@ -230,7 +230,7 @@ export function useAchievements(): UseAchievementsResult {
       for (const id of unlocked) recordedRef.current.add(id);
 
       // Pogódź flagę „seen": lokalnie widziane odblokowane odznaki, które w
-      // chmurze są jeszcze nieoznaczone, oznacz jako widziane (cross-device).
+      // chmurze są jeszcze nieoznaczone, oznacz jako widziane (między urządzeniami).
       const toMarkSeen = unlocked.filter(
         (id) => seenRef.current.has(id) && !remoteSeen.has(id),
       );

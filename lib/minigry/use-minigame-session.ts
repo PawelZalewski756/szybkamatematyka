@@ -57,7 +57,7 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     : { level: 1, xp: 0 };
 
   useEffect(() => {
-    // Sync cached cloud profile when the account profile changes.
+    // Odśwież zapisany profil w chmurze po zmianie profilu konta.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (account?.profile) setCloudProfile(account.profile);
   }, [account?.profile]);

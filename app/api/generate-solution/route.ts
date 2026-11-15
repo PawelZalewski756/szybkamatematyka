@@ -4,7 +4,7 @@ import {
 } from "@/lib/gemini/generate-solution";
 import { verifyAdminRequest } from "@/lib/supabase/admin";
 
-// --- Rate limit (in-memory, fixed window) -----------------------------------
+// --- Limit żądań (pamięć procesu, stałe okno czasowe) -----------------------
 // UWAGA: stan trzymany jest w pamięci procesu, więc działa PER INSTANCJA.
 // W środowisku serverless (wiele instancji / cold starty) limit nie jest
 // globalny. Docelowo przenieść do współdzielonego store'u (Redis / Upstash),

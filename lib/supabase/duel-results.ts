@@ -197,7 +197,7 @@ export async function recordDuelOutcome(
   const supabase = getSupabaseOrNull();
   if (!supabase) return { stats: localNext, persisted: false };
 
-  // 2) Best-effort: prywatna historia pojedynku.
+  // 2) Prywatna historia pojedynku - zapis jest dodatkiem, nie blokuje wyniku.
   try {
     const { error: insertError } = await supabase.from("duel_results").insert({
       user_id: userId,

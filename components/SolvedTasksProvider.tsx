@@ -48,7 +48,7 @@ export function SolvedTasksProvider({ children }: { children: ReactNode }) {
     try {
       supabase = getSupabase();
     } catch {
-      // No Supabase configured - fall back to local solved ids.
+      // Brak skonfigurowanego Supabase - korzystamy z lokalnej listy rozwiązań.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       reload(null);
       setReady(true);

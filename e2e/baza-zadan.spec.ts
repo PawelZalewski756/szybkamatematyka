@@ -116,6 +116,29 @@ test.describe("Baza zadań", () => {
     ).toHaveAttribute("href", "/trening/arkusze");
   });
 
+  test("gość przełącza poziom nauki bez logowania", async ({ page }) => {
+    await page.goto("/baza-zadan");
+
+    const toggle = page.getByRole("group", { name: "Poziom nauki" });
+    const podstawowa = toggle.getByRole("button", {
+      name: "Szkoła podstawowa",
+    });
+    const srednia = toggle.getByRole("button", { name: "Szkoła średnia" });
+
+    await expect(podstawowa).toHaveAttribute("aria-pressed", "true");
+
+    await srednia.click();
+    await expect(srednia).toHaveAttribute("aria-pressed", "true");
+    await expect(podstawowa).toHaveAttribute("aria-pressed", "false");
+
+    await page.reload();
+    await expect(
+      page
+        .getByRole("group", { name: "Poziom nauki" })
+        .getByRole("button", { name: "Szkoła średnia" }),
+    ).toHaveAttribute("aria-pressed", "true");
+  });
+
   test("na telefonie wyszukiwanie pozostaje dostępne przed filtrami", async ({
     page,
   }) => {

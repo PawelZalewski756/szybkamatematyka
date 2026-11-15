@@ -62,7 +62,7 @@ export function VisitCounter() {
         window.sessionStorage.removeItem(SESSION_SENT_KEY);
       });
     } catch {
-      // Brak dostepu do pamieci przegladarki: nie liczymy odwiedzin.
+      // Brak dostępu do pamięci przeglądarki: nie liczymy odwiedzin.
     }
   }, [consent, pathname]);
 
@@ -70,7 +70,7 @@ export function VisitCounter() {
     try {
       window.localStorage.setItem(CONSENT_KEY, "accepted");
     } catch {
-      // Bez dostepu do pamieci przegladarki nie liczymy odwiedzin.
+      // Bez dostępu do pamięci przeglądarki nie liczymy odwiedzin.
     }
     window.dispatchEvent(new Event(CONSENT_EVENT));
   }

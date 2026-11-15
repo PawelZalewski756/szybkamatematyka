@@ -131,7 +131,7 @@ function compactSpacedMath(text: string): string {
     /(?<![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])([a-zA-Z])\s+(\d+)(?![A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż])/g,
     (full, base: string, exp: string, offset: number, whole: string) => {
       if (base === "z") {
-        // „z 150” can be ordinary Polish text, so require a nearby math operator.
+        // „z 150” bywa zwykłym polskim tekstem - wymagamy operatora matematycznego w pobliżu.
         const before = whole.slice(0, offset);
         const after = whole.slice(offset + full.length);
         const hasMathContext =
@@ -172,7 +172,7 @@ function compactSpacedMath(text: string): string {
   );
 
   // Znak przy liczbie: "- 1" → "-1" (tylko unarny minus przed cyfrą)
-  // Nie dotyka punktorow listy markdown ("- 2 jajka" na poczatku linii).
+  // Nie dotyka punktorów listy markdown ("- 2 jajka" na początku linii).
   out = out.replace(/(^|[=<>+\-(\s])-\s+(\d)/g, (m, pre: string, d: string, off: number, s: string) => {
     const start = off + pre.length;
     const lineStart = s.lastIndexOf("\n", start - 1) + 1;
@@ -313,7 +313,7 @@ function wrapAnglesAndDegrees(text: string): string {
     },
   );
 
-  // α = 180° - 2β (bez \b - greka nie jest „word char” bez flagi u)
+  // α = 180° - 2β (bez \b - greka nie jest znakiem słowa bez flagi u)
   out = out.replace(
     /(?<!\$)([α-ω])\s*=\s*(\d+)\s*(?:\^\{\\circ\}|°)\s*-\s*(\d+)\s*([α-ω])(?!\$)/g,
     (_m, a: string, deg: string, coef: string, b: string) =>

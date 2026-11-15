@@ -61,7 +61,7 @@ export function ChallengeDuel({
   const [shortCode, setShortCode] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
-  // Accept flow
+  // Przyjmowanie wyzwania kodem od znajomego
   const [inputCode, setInputCode] = useState("");
   const [accepted, setAccepted] = useState<DuelChallengePayload | null>(null);
   const [acceptedRoomCode, setAcceptedRoomCode] = useState<string | null>(null);
@@ -85,7 +85,7 @@ export function ChallengeDuel({
       setPortableCode(code);
       rememberChallenge(payload);
 
-      // Best-effort: zapis krótkiego kodu w Supabase (cross-device).
+      // Zapis krótkiego kodu w Supabase jest dodatkiem (współdzielony między urządzeniami).
       const room = await createDuelRoom(createConfig, playerName, result);
       setShortCode(room ?? null);
       setStage("createShare");
@@ -160,7 +160,7 @@ export function ChallengeDuel({
     setStage("createPlay");
   }, []);
 
-  // ----- RENDER -----
+  // ----- Widok -----
 
   if (stage === "menu") {
     return (

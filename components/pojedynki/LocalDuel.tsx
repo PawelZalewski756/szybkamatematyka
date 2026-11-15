@@ -197,7 +197,6 @@ export function LocalDuel({
     );
   }
 
-  // stage === "result"
   if (variant === "bot") {
     if (!result1 || !botResult) return null;
     return (

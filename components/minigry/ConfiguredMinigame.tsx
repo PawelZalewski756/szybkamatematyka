@@ -56,7 +56,7 @@ export function ConfiguredMinigame({
 
   useEffect(() => {
     if (phase === "start") {
-      // Generate a fresh question whenever the game returns to the start phase.
+      // Nowe pytanie przy każdym powrocie do ekranu startu.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setQuestion(createQuestion(slug, path));
     }

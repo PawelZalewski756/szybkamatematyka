@@ -70,6 +70,6 @@ export function saveRecentTrainingTopic(
       JSON.stringify({ ...topic, visitedAt: Date.now() }),
     );
   } catch {
-    // Local progress is an enhancement; a blocked storage must not break a lesson.
+    // Postęp lokalny jest dodatkiem - zablokowany storage nie może przerwać lekcji.
   }
 }
