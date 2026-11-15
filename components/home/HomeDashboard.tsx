@@ -530,6 +530,7 @@ function EntryPathCard({
   return (
     <Link
       href={href}
+      prefetch={href === "/baza-zadan" ? false : undefined}
       className={`group card-raised flex min-h-64 flex-col p-5 sm:p-6 ${
         featured
           ? "border-accent/45 bg-accent-soft/35 hover:border-accent/70"
@@ -557,7 +558,7 @@ function EntryPathCard({
   );
 }
 
-export function HomeDashboard() {
+export function HomeDashboard({ taskCount }: { taskCount: number }) {
   return (
     <div className="flex flex-1 flex-col">
       <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
@@ -638,7 +639,7 @@ export function HomeDashboard() {
               <p className="text-sm font-semibold text-muted">
                 Wszystko, czego potrzebujesz do regularnej nauki
               </p>
-              <PlatformStatus variant="inline" />
+              <PlatformStatus variant="inline" taskCount={taskCount} />
             </div>
           </div>
         </div>
@@ -678,7 +679,7 @@ export function HomeDashboard() {
                 Wchodzisz, wybierasz cel i robisz następny krok.
               </p>
             </div>
-            <PlatformStatus variant="cards" />
+            <PlatformStatus variant="cards" taskCount={taskCount} />
           </div>
         </div>
       </section>

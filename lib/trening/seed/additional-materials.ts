@@ -1,6 +1,6 @@
 import type { ExamType } from "@/types/database";
 
-type AdditionalMaterial = {
+export type AdditionalMaterial = {
   exam_type: ExamType;
   category: string;
   topic: string;
@@ -9,7 +9,7 @@ type AdditionalMaterial = {
   video_url: string | null;
 };
 
-type LessonSpec = {
+export type LessonSpec = {
   exam_type: ExamType;
   category: string;
   topic: string;
@@ -26,7 +26,7 @@ type LessonSpec = {
   diagram: string;
 };
 
-function buildLesson(spec: LessonSpec): AdditionalMaterial {
+export function buildLesson(spec: LessonSpec): AdditionalMaterial {
   return {
     exam_type: spec.exam_type,
     category: spec.category,
@@ -45,7 +45,7 @@ ${spec.definitions}
 ## Przykład 1 - podstawowy
 ${spec.example1}
 
-## Przykład 2 - maturalny
+## Przykład 2 - ${spec.exam_type === "8_klasa" ? "egzaminacyjny" : "maturalny"}
 ${spec.example2}
 
 ## Pułapki

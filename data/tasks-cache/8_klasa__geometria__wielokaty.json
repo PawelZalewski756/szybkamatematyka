@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "wielokaty",
+  "categoryName": "Geometria płaska",
+  "topicName": "Wielokąty i wielokąty foremne",
+  "tasks": [
+    {
+      "content": "Oblicz sumę kątów wewnętrznych $3$-kąta.",
+      "correct_answer": "180°",
+      "options": [
+        "540°",
+        "180°",
+        "360°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma wynosi $(3-2)\\cdot180^\\circ=180^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "212219ae-2059-5f74-a937-38cbf68960c2",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $10$ bokach.",
+      "correct_answer": "144°",
+      "options": [
+        "144°",
+        "134°",
+        "180°",
+        "154°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt to $\\frac{(10-2)\\cdot180^\\circ}{10}=144^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4d6c845-d2bf-5e9e-a8c9-56f32f9d9e4e",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $7$-kąt?",
+      "correct_answer": "14",
+      "options": [
+        "7",
+        "28",
+        "14",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba przekątnych to $\\frac{7(7-3)}{2}=14$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a97c8e3e-b196-5af2-a7bd-ba9b4bf707dc",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $3$ cm i $7$ cm oraz wysokość $2$ cm. Oblicz pole.",
+      "correct_answer": "10 cm²",
+      "options": [
+        "10 cm²",
+        "20 cm²",
+        "12 cm²",
+        "21 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole to $\\frac12(3+7)\\cdot2=10$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e5f15b1f-9573-554c-a2bd-51720e5217a1",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Romb ma przekątne $10$ cm i $6$ cm. Oblicz pole.",
+      "correct_answer": "30 cm²",
+      "options": [
+        "32 cm²",
+        "16 cm²",
+        "60 cm²",
+        "30 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole rombu to $\\frac12\\cdot10\\cdot6=30$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e3f1b47-78b1-564a-a3f6-098acb927046",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz obwód trójkąta o bokach $7$ cm, $7$ cm i $11$ cm.",
+      "correct_answer": "25 cm",
+      "options": [
+        "27 cm",
+        "25 cm",
+        "14 cm",
+        "539 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód to suma boków: $7+7+11=25$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5ca16e68-dfbe-5fa7-ae87-fad5a58b4fe1",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz sumę kątów wewnętrznych $8$-kąta.",
+      "correct_answer": "1080°",
+      "options": [
+        "1260°",
+        "1440°",
+        "1080°",
+        "540°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma wynosi $(8-2)\\cdot180^\\circ=1080^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b713526-29e1-57fc-a870-d6f81701dc49",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $5$ bokach.",
+      "correct_answer": "108°",
+      "options": [
+        "180°",
+        "118°",
+        "108°",
+        "98°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt to $\\frac{(5-2)\\cdot180^\\circ}{5}=108^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0e4cdc9-61bd-508f-acf5-e9c9e4f8eec6",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $4$-kąt?",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba przekątnych to $\\frac{4(4-3)}{2}=2$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e51e456-d51a-53b1-a41a-6c336e0cc18d",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $3$ cm i $11$ cm oraz wysokość $3$ cm. Oblicz pole.",
+      "correct_answer": "21 cm²",
+      "options": [
+        "42 cm²",
+        "21 cm²",
+        "33 cm²",
+        "23 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole to $\\frac12(3+11)\\cdot3=21$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bc71ce22-c03a-568c-a899-0c086bc36f9a",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Romb ma przekątne $8$ cm i $4$ cm. Oblicz pole.",
+      "correct_answer": "16 cm²",
+      "options": [
+        "18 cm²",
+        "16 cm²",
+        "32 cm²",
+        "12 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole rombu to $\\frac12\\cdot8\\cdot4=16$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff42f68c-9437-5c55-ac58-064d4feeca2f",
+      "generatedAt": "2026-11-14T11:41:48.579Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz obwód trójkąta o bokach $9$ cm, $10$ cm i $11$ cm.",
+      "correct_answer": "30 cm",
+      "options": [
+        "990 cm",
+        "30 cm",
+        "32 cm",
+        "19 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to suma boków: $9+10+11=30$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dd2a3e7-f51b-5ce0-a93e-8bc89f17c38a",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz sumę kątów wewnętrznych $7$-kąta.",
+      "correct_answer": "900°",
+      "options": [
+        "900°",
+        "1260°",
+        "450°",
+        "1080°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma wynosi $(7-2)\\cdot180^\\circ=900^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "821fac29-e226-547e-a232-bcd9efa54f55",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $4$ bokach.",
+      "correct_answer": "90°",
+      "options": [
+        "90°",
+        "80°",
+        "180°",
+        "100°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt to $\\frac{(4-2)\\cdot180^\\circ}{4}=90^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0fb8ad98-3b56-5b3b-ab62-246f7856eb5d",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $9$-kąt?",
+      "correct_answer": "27",
+      "options": [
+        "9",
+        "36",
+        "54",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba przekątnych to $\\frac{9(9-3)}{2}=27$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "03414a96-6253-58f8-a706-d393f5b97f2f",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $2$ cm i $10$ cm oraz wysokość $3$ cm. Oblicz pole.",
+      "correct_answer": "18 cm²",
+      "options": [
+        "36 cm²",
+        "18 cm²",
+        "20 cm²",
+        "18 cm² + 1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole to $\\frac12(2+10)\\cdot3=18$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "90aa8587-277f-5e3c-a9d3-483ba79c6abc",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Romb ma przekątne $10$ cm i $4$ cm. Oblicz pole.",
+      "correct_answer": "20 cm²",
+      "options": [
+        "14 cm²",
+        "20 cm²",
+        "22 cm²",
+        "40 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole rombu to $\\frac12\\cdot10\\cdot4=20$ cm².",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "256502af-d9ca-59bf-ac63-3a2d96b6e570",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz obwód trójkąta o bokach $6$ cm, $7$ cm i $11$ cm.",
+      "correct_answer": "24 cm",
+      "options": [
+        "13 cm",
+        "26 cm",
+        "24 cm",
+        "462 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód to suma boków: $6+7+11=24$ cm.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "53625493-17f3-51ea-abca-79a2d0d4c621",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz sumę kątów wewnętrznych $4$-kąta.",
+      "correct_answer": "360°",
+      "options": [
+        "720°",
+        "180°",
+        "540°",
+        "360°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma wynosi $(4-2)\\cdot180^\\circ=360^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "571cbdbd-887a-5ebd-ad21-c25ba9788ad5",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    },
+    {
+      "content": "Oblicz miarę kąta wewnętrznego wielokąta foremnego o $8$ bokach.",
+      "correct_answer": "135°",
+      "options": [
+        "180°",
+        "125°",
+        "135°",
+        "145°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt to $\\frac{(8-2)\\cdot180^\\circ}{8}=135^\\circ$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e227152-4f29-584a-a71c-0ecd7388f552",
+      "generatedAt": "2026-11-14T11:41:48.580Z",
+      "model": "coverage-v1"
+    }
+  ],
+  "updatedAt": "2026-11-14T11:41:48.580Z"
+}

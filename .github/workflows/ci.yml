@@ -62,6 +62,9 @@ jobs:
       - name: Audit CKE solutions
         run: npm run audit:cke
 
+      - name: Audit rendering (DB + cache + CKE)
+        run: npm run audit:render
+
       - name: Build
         run: npm run build
 
@@ -85,8 +88,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
+      - name: Verify Chrome
+        run: google-chrome --version
 
       - name: Run E2E smoke tests
         run: npm run test:e2e

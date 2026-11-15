@@ -2,14 +2,12 @@
 
 import { TaskArena } from "@/components/trening/TaskArena";
 import { TheorySectionView } from "@/components/trening/TheorySectionView";
-import { TheoryTableOfContents } from "@/components/trening/TheoryTableOfContents";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchMaterialByTopic } from "@/lib/supabase/materials";
+import { findCkeCategoryLabel } from "@/lib/trening/cke-curriculum";
+import { formatTreningLabel } from "@/lib/trening/dynamic-tree";
+import { getTopicSummary, type TopicSummary } from "@/lib/trening/summaries";
 import { saveRecentTrainingTopic } from "@/lib/trening/recent-topic";
-import {
-  parseTheorySections,
-  sectionsToHeadings,
-} from "@/lib/trening/theory-sections";
 import {
   parseYouTubeVideoId,
   youTubeEmbedUrl,
@@ -20,6 +18,12 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 type TabId = "teoria" | "arena";
+
+const EXAM_LABELS: Record<ExamType, string> = {
+  matura_podstawowa: "Matura podstawowa",
+  matura_rozszerzona: "Matura rozszerzona",
+  "8_klasa": "Egzamin ósmoklasisty",
+};
 
 type TopicPageClientProps = {
   examType: ExamType;
@@ -46,7 +50,7 @@ function TabSwitcher({
     <div
       role="tablist"
       aria-label="Sekcje tematu"
-      className="flex gap-6 border-b border-surface-border text-sm"
+      className="inline-flex rounded-lg border border-surface-border bg-surface p-1"
     >
       {(
         [
@@ -62,10 +66,10 @@ function TabSwitcher({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
-            className={`border-b-2 pb-2 transition ${
+            className={`rounded-md px-4 py-2 text-sm font-bold transition ${
               isActive
-                ? "border-foreground text-foreground"
-                : "border-transparent text-muted hover:text-foreground"
+                ? "bg-accent text-on-accent shadow-sm"
+                : "text-muted hover:bg-surface-hover hover:text-foreground"
             }`}
           >
             {tab.label}
@@ -113,21 +117,17 @@ function TheoryTab({
   material,
   loading,
   loadError,
+  summary,
   onRetry,
   onGoToArena,
 }: {
   material: Material | null;
   loading: boolean;
   loadError: string | null;
+  summary: TopicSummary | null;
   onRetry: () => void;
   onGoToArena: () => void;
 }) {
-  const sections = useMemo(
-    () => (material ? parseTheorySections(material.content) : []),
-    [material],
-  );
-  const headings = useMemo(() => sectionsToHeadings(sections), [sections]);
-
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
@@ -172,29 +172,20 @@ function TheoryTab({
 
   return (
     <div className="space-y-6">
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_12rem] xl:grid-cols-[minmax(0,1fr)_14rem] lg:items-start lg:gap-8 xl:gap-10">
-        <article className="min-w-0 surface-card p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-foreground">{material.title}</h2>
-          {headings.length >= 2 && (
-            <div className="mt-6 lg:hidden">
-              <TheoryTableOfContents headings={headings} />
-            </div>
-          )}
-          <div className="mt-6">
-            <TheorySectionView content={material.content} />
-          </div>
-          {material.video_url && (
-            <LessonVideoSection videoUrl={material.video_url} />
-          )}
-        </article>
-        {headings.length >= 2 && (
-          <div className="hidden lg:block">
-            <TheoryTableOfContents headings={headings} />
-          </div>
+      <article className="min-w-0 surface-card p-6 sm:p-8">
+        <TheorySectionView content={material.content} summary={summary} />
+
+        {material.video_url && (
+          <LessonVideoSection videoUrl={material.video_url} />
         )}
-      </div>
+      </article>
+
       <div>
-        <button type="button" onClick={onGoToArena} className="btn-primary px-6 py-3 text-sm">
+        <button
+          type="button"
+          onClick={onGoToArena}
+          className="btn-chunky px-5 py-2.5 text-sm"
+        >
           Przejdź do zadań
         </button>
       </div>
@@ -222,6 +213,13 @@ export function TopicPageClient({
   const [materialError, setMaterialError] = useState<string | null>(
     initialMaterialError ?? null,
   );
+  const summary = useMemo(
+    () => getTopicSummary(examType, category, topic),
+    [examType, category, topic],
+  );
+  const categoryLabel =
+    findCkeCategoryLabel(examType, category) ?? formatTreningLabel(category);
+  const examLabel = EXAM_LABELS[examType];
 
   const loadMaterial = useCallback(
     async ({ background = false }: LoadMaterialOptions = {}) => {
@@ -312,42 +310,62 @@ export function TopicPageClient({
 
   return (
     <div className="page-container flex min-h-0 flex-1 flex-col py-6 sm:py-10">
-      <Link
-        href={backHref}
-        className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Trening
-      </Link>
+      <div className="mx-auto w-full max-w-3xl">
+        <header className="mb-6">
+          <nav
+            aria-label="Ścieżka nawigacji"
+            className="flex flex-wrap items-center gap-2 text-xs text-muted"
+          >
+            <Link
+              href={backHref}
+              className="inline-flex items-center gap-1.5 transition hover:text-foreground"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              Trening
+            </Link>
+            <span aria-hidden className="text-surface-border">
+              /
+            </span>
+            <span className="font-semibold text-foreground/80">
+              {categoryLabel}
+            </span>
+          </nav>
 
-      <h1 className="mb-4 text-xl font-semibold text-foreground">{topicLabel}</h1>
+          <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
+            <div className="min-w-0">
+              <p className="text-overline text-accent">{examLabel}</p>
+              <h1 className="mt-1 text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
+                {topicLabel}
+              </h1>
+            </div>
+            <TabSwitcher activeTab={activeTab} onChange={setActiveTab} />
+          </div>
+        </header>
 
-      <div className="mb-6">
-        <TabSwitcher activeTab={activeTab} onChange={setActiveTab} />
+        {activeTab === "teoria" ? (
+          <div role="tabpanel" className="w-full flex-1">
+            <TheoryTab
+              material={material}
+              loading={materialLoading}
+              loadError={materialError}
+              summary={summary}
+              onRetry={() => void loadMaterial()}
+              onGoToArena={() => setActiveTab("arena")}
+            />
+          </div>
+        ) : (
+          <div role="tabpanel" className="flex min-h-0 flex-1 flex-col">
+            <TaskArena
+              examType={examType}
+              category={category}
+              topic={topic}
+              topicLabel={topicLabel}
+              backHref={backHref}
+              compactChrome
+            />
+          </div>
+        )}
       </div>
-
-      {activeTab === "teoria" ? (
-        <div role="tabpanel" className="w-full flex-1">
-          <TheoryTab
-            material={material}
-            loading={materialLoading}
-            loadError={materialError}
-            onRetry={() => void loadMaterial()}
-            onGoToArena={() => setActiveTab("arena")}
-          />
-        </div>
-      ) : (
-        <div role="tabpanel" className="flex min-h-0 flex-1 flex-col">
-          <TaskArena
-            examType={examType}
-            category={category}
-            topic={topic}
-            topicLabel={topicLabel}
-            backHref={backHref}
-            compactChrome
-          />
-        </div>
-      )}
     </div>
   );
 }

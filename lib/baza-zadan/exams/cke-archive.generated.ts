@@ -23495,7 +23495,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na przedstawienie w pewnym teatrze sprzedawano bilety według poniższego cennika.\n\n| CENNIK BILETÓW |\n|---|---|\n| Rodzaj biletu | Cena w złotych |\n| Normalny | 35 |\n| Ulgowy | 25 |\n\nNa to przedstawienie sprzedano łącznie 200 biletów.\n\nPo opłaceniu kosztów związanych z organizacją przedstawienia w wysokości 25% wpływów ze sprzedaży biletów organizatorom pozostało 4665 zł.\n\nOblicz liczbę biletów ulgowych sprzedanych na to przedstawienie. Zapisz obliczenia.",
+    "prompt": "Na przedstawienie w pewnym teatrze sprzedawano bilety według poniższego cennika.\n\n| CENNIK BILETÓW | |\n|---|---|\n| Rodzaj biletu | Cena w złotych |\n| Normalny | 35 |\n| Ulgowy | 25 |\n\nNa to przedstawienie sprzedano łącznie 200 biletów.\n\nPo opłaceniu kosztów związanych z organizacją przedstawienia w wysokości 25% wpływów ze sprzedaży biletów organizatorom pozostało 4665 zł.\n\nOblicz liczbę biletów ulgowych sprzedanych na to przedstawienie. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
@@ -23547,7 +23547,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.png)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x) = ax + b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji $f$. Każdy z punktów przecięcia wykresu funkcji $f$ z osiami układu współrzędnych ma obie współrzędne całkowite. Wykres funkcji $f$ jest nachylony do osi $Ox$ układu współrzędnych pod kątem o mierze $\\alpha$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/mp-2026-maj/z13-fig1.png)\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| | P | F |\n|:---|:---:|:---:|\n| Współczynnik $a$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |\n| Współczynnik $b$ we wzorze funkcji $f$ jest liczbą dodatnią. | P | F |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],

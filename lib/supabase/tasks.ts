@@ -103,8 +103,11 @@ async function fetchCachedTasks<T>(
   if (topic) params.set("topic", topic);
   if (summary) params.set("summary", "1");
 
+  // Bez "force-cache": po wdrożeniu nowych tematów stara odpowiedź API
+  // (max-age liczone w godzinach) potrafiła trzymać listę zadań bez nowych
+  // pozycji, przez co działy i tematy wyglądały na puste ("Wkrótce").
   const response = await fetch(`/api/trening/tasks?${params.toString()}`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
   if (!response.ok) {
     throw new Error(`Cached training tasks request failed (${response.status}).`);
@@ -260,11 +263,13 @@ export async function fetchTasksForTree(
     return fetchCachedTasks(examType, true, isTaskTreeRow);
   }
 
-  const cachedRows = await fetchCachedTasks(
-    examType,
-    true,
-    isTaskTreeRow,
-  );
+  let cachedRows: TaskTreeRow[] = [];
+  try {
+    cachedRows = await fetchCachedTasks(examType, true, isTaskTreeRow);
+  } catch (cachedError) {
+    // Brak cache nie może wywalać całego drzewa: zostają zadania z bazy.
+    console.warn("[trening] cached task tree unavailable:", cachedError);
+  }
   return mergeCachedTaskTreeRows(examType, rows, cachedRows);
 }
 

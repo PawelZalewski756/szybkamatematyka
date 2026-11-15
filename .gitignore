@@ -62,3 +62,5 @@ next-env.d.ts
 data/tasks-cache/*.log
 
 .tmp-cke-e8/
+
+task-audit-report.json

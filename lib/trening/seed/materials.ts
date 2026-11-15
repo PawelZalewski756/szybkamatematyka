@@ -2,6 +2,7 @@ import type { ExamType } from "@/types/database";
 import { enrichTheoryLesson } from "@/lib/trening/seed/enrich-theory";
 import { EXPANDED_THEORY } from "@/lib/trening/seed/theory-expanded";
 import { ADDITIONAL_SEED_MATERIALS } from "@/lib/trening/seed/additional-materials";
+import { COVERAGE_SEED_MATERIALS } from "@/lib/trening/seed/materials-coverage";
 
 export type MaterialDraft = {
   exam_type: ExamType;
@@ -14,6 +15,7 @@ export type MaterialDraft = {
 
 export const BASE_SEED_MATERIALS: MaterialDraft[] = [
   ...ADDITIONAL_SEED_MATERIALS,
+  ...COVERAGE_SEED_MATERIALS,
   {
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",

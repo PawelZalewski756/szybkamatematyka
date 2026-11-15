@@ -45,6 +45,8 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       topics: [
         { slug: "wyrazenia_algebraiczne", name: "Wyrażenia algebraiczne" },
         { slug: "wzory_skroconego_mnozenia", name: "Wzory skróconego mnożenia" },
+        { slug: "wielomiany", name: "Wielomiany i rozkład na czynniki" },
+        { slug: "wyrazenia_wymierne", name: "Wyrażenia i równania wymierne" },
         { slug: "rownania_liniowe", name: "Równania liniowe" },
         { slug: "rownania_kwadratowe", name: "Równania kwadratowe" },
         { slug: "nierownosci", name: "Nierówności" },
@@ -58,6 +60,11 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
         { slug: "funkcja_liniowa", name: "Funkcja liniowa" },
         { slug: "funkcja_kwadratowa", name: "Funkcja kwadratowa" },
         { slug: "funkcja_wykladnicza", name: "Funkcja wykładnicza" },
+        { slug: "funkcja_logarytmiczna", name: "Funkcja logarytmiczna" },
+        {
+          slug: "proporcjonalnosc_odwrotna",
+          name: "Proporcjonalność odwrotna i funkcja f(x)=a/x",
+        },
         { slug: "wlasnosci_funkcji", name: "Własności funkcji i wykres" },
         { slug: "odczyt_wykresu", name: "Odczyt wykresu funkcji" },
       ],
@@ -76,6 +83,10 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       topics: [
         { slug: "sin_cos_tg", name: "Sinus, cosinus, tangens" },
         {
+          slug: "twierdzenie_sinusow_cosinusow",
+          name: "Twierdzenie sinusów i cosinusów",
+        },
+        {
           slug: "zastosowania_trygonometrii",
           name: "Zastosowania trygonometrii",
         },
@@ -86,6 +97,10 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
       name: "Geometria",
       topics: [
         { slug: "planimetria", name: "Planimetria" },
+        {
+          slug: "tales_dwusieczna_okrag",
+          name: "Twierdzenie Talesa, dwusieczna i okrąg wpisany",
+        },
         { slug: "pitagoras_i_podobienstwo", name: "Tw. Pitagorasa i podobieństwo" },
         { slug: "okrag_i_kolo", name: "Okrąg i koło" },
         { slug: "stereometria", name: "Stereometria" },
@@ -99,6 +114,20 @@ export const CKE_MATURA_PODSTAWOWA: CkeMaturaPodstawowaTree = {
         { slug: "kombinatoryka", name: "Kombinatoryka" },
         { slug: "prawdopodobienstwo", name: "Prawdopodobieństwo" },
         { slug: "statystyka", name: "Statystyka" },
+        {
+          slug: "statystyka_zaawansowana",
+          name: "Statystyka opisowa: średnia ważona i odchylenie",
+        },
+      ],
+    },
+    {
+      slug: "optymalizacja",
+      name: "Optymalizacja",
+      topics: [
+        {
+          slug: "zadania_optymalizacyjne",
+          name: "Zadania optymalizacyjne",
+        },
       ],
     },
   ],

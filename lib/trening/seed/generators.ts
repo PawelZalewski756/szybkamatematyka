@@ -11,6 +11,7 @@ import {
   type Rng,
 } from "@/lib/trening/seed/rng";
 import type { SeedTopicSlot } from "@/lib/trening/seed/topics";
+import { readTaskCache } from "@/lib/trening/seed/tasks-cache-utils";
 
 export type TaskDraft = {
   exam_type: ExamType;
@@ -689,10 +690,53 @@ export const FALLBACK: GenFn[] = [
   },
 ];
 
+
+const coverageDraftCache = new Map<string, TaskDraft[] | null>();
+
+function coverageTaskDrafts(
+  slot: Pick<SeedTopicSlot, "exam_type" | "category" | "topic">,
+): TaskDraft[] {
+  const key = `${slot.exam_type}:${slot.category}:${slot.topic}`;
+  const existing = coverageDraftCache.get(key);
+  if (existing !== undefined) return existing ?? [];
+
+  const cache = readTaskCache({
+    exam_type: slot.exam_type,
+    category: slot.category,
+    topic: slot.topic,
+  });
+  const bundled = (cache?.tasks ?? []).filter(
+    (task) => task.model === "coverage-v1",
+  );
+  if (bundled.length === 0) {
+    coverageDraftCache.set(key, null);
+    return [];
+  }
+
+  const drafts: TaskDraft[] = bundled.map((task) => ({
+    exam_type: slot.exam_type,
+    category: slot.category,
+    topic: slot.topic,
+    content: task.content,
+    correct_answer: task.correct_answer,
+    options: task.options,
+    difficulty: task.difficulty,
+    xp_reward: task.xp_reward,
+    explanation: task.explanation,
+  }));
+  coverageDraftCache.set(key, drafts);
+  return drafts;
+}
+
 export function generateTaskDraft(
   slot: SeedTopicSlot,
   variantIndex: number,
 ): TaskDraft {
+  const bundled = coverageTaskDrafts(slot);
+  if (bundled.length > 0) {
+    return bundled[variantIndex % bundled.length]!;
+  }
+
   const list = GENERATORS[slot.topic];
   if (list && list.length > 0) {
     let h = 0;

@@ -1,6 +1,5 @@
 "use client";
 
-import { getAllTasks } from "@/lib/baza-zadan/catalog";
 import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
 import { MINIGAME_REGISTRY } from "@/lib/minigry/minigame-registry";
 import { isSupabaseConfigured } from "@/lib/supabase";
@@ -20,12 +19,14 @@ type StatusState = {
 type PlatformStatusProps = {
   /** Kompaktowy pasek pod hero zamiast trzech kart. */
   variant?: "cards" | "inline";
+  /** Liczba zadań z katalogu - liczona na serwerze, żeby nie wysyłać archiwum CKE do klienta. */
+  taskCount: number;
 };
 
-export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
+export function PlatformStatus({ variant = "cards", taskCount }: PlatformStatusProps) {
   const [status, setStatus] = useState<StatusState>({
     minigry: MINIGAME_REGISTRY.length,
-    zadania: getAllTasks().length,
+    zadania: taskCount,
     arkusze: EXAM_SHEETS.length,
     cmsExtra: null,
     loading: true,
@@ -37,7 +38,7 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
     async function load() {
       const base = {
         minigry: MINIGAME_REGISTRY.length,
-        zadania: getAllTasks().length,
+        zadania: taskCount,
         arkusze: EXAM_SHEETS.length,
         cmsExtra: null as number | null,
         loading: false,
@@ -61,7 +62,7 @@ export function PlatformStatus({ variant = "cards" }: PlatformStatusProps) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [taskCount]);
 
   const zadaniaLabel = status.loading
     ? "…"

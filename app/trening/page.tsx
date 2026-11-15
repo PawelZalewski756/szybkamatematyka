@@ -237,7 +237,7 @@ function ExamSwitcher({
 }) {
   return (
     <div>
-      <p className="mb-2 text-caption">Wybierz ścieżkę</p>
+      <p className="mb-2 text-caption">Wybierz egzamin</p>
       <div
         role="tablist"
         aria-label="Wybór egzaminu"
@@ -427,8 +427,11 @@ function getCategoryMetrics(category: CategoryWithProgress): CategoryMetrics {
   };
 }
 
-function categoryStatus(metrics: CategoryMetrics): string {
-  if (metrics.playableTopics === 0) return "Wkrótce";
+function categoryStatus(metrics: CategoryMetrics, hasTheory: boolean): string {
+  if (metrics.playableTopics === 0) {
+    // Dział bez zadań nie jest "wkrótce", jeśli są w nim lekcje do przerobienia.
+    return hasTheory ? "Teoria dostępna" : "Wkrótce";
+  }
   if (metrics.progress === 100) return "Ukończony";
   if (metrics.inProgressTopics > 0 || metrics.completedTopics > 0) {
     return "W toku";
@@ -562,10 +565,12 @@ function NextStepCard({
 function DepartmentNavigation({
   categories,
   activeCategoryId,
+  theoryByTopic,
   onSelect,
 }: {
   categories: CategoryWithProgress[];
   activeCategoryId: string | null;
+  theoryByTopic: Map<string, TheoryTier>;
   onSelect: (categoryId: string) => void;
 }) {
   return (
@@ -581,6 +586,12 @@ function DepartmentNavigation({
       <div className="space-y-1">
         {categories.map((category, index) => {
           const metrics = getCategoryMetrics(category);
+          const categoryHasTheory = category.topics.some(
+            (topic) =>
+              (theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none") !==
+              "none",
+          );
+          const status = categoryStatus(metrics, categoryHasTheory);
           const active = category.id === activeCategoryId;
           return (
             <button
@@ -588,7 +599,7 @@ function DepartmentNavigation({
               type="button"
               data-testid={`training-department-${category.id}`}
               aria-pressed={active}
-              aria-label={`${category.name}, ${categoryStatus(metrics)}, ${metrics.progress}% postępu`}
+              aria-label={`${category.name}, ${status}, ${metrics.progress}% postępu`}
               onClick={() => onSelect(category.id)}
               className={`w-full border-l-2 px-3 py-3 text-left transition ${
                 active
@@ -621,7 +632,7 @@ function DepartmentNavigation({
                       "tematy",
                       "tematów",
                     )}{" "}
-                    · {categoryStatus(metrics)}
+                    · {status}
                   </span>
                   <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
                     <span
@@ -812,6 +823,7 @@ export default function TreningPage() {
     emptyExamFor("matura_podstawowa"),
   );
   const [loading, setLoading] = useState(true);
+  const [pathInitialized, setPathInitialized] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
@@ -895,9 +907,10 @@ export default function TreningPage() {
   }, []);
 
   useEffect(() => {
+    if (!pathInitialized) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadProgress(selectedExam);
-  }, [selectedExam, loadProgress]);
+  }, [pathInitialized, selectedExam, loadProgress]);
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(searchInput), 200);
@@ -906,14 +919,14 @@ export default function TreningPage() {
 
   const pathSyncedRef = useRef(false);
   useEffect(() => {
-    if (pathSyncedRef.current || !learningPath) return;
+    if (pathSyncedRef.current) return;
     pathSyncedRef.current = true;
     const key = examKeyForLearningPath(learningPath);
-    if (key !== "matura_podstawowa") {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setSelectedExam(key);
-      setExam(emptyExamFor(key));
-    }
+    // Ustawiamy ścieżkę przed pierwszym pobraniem, żeby nie ściągać drzewa
+    // najpierw dla matury, a potem dla 8-klasisty.
+    setSelectedExam(key);
+    setExam(emptyExamFor(key));
+    setPathInitialized(true);
   }, [learningPath]);
 
   const handleExamChange = (key: SelectedExam) => {
@@ -922,6 +935,9 @@ export default function TreningPage() {
     setSelectedExam(key);
     setExam(emptyExamFor(key));
     setTheoryByTopic(new Map());
+    // Bez tego między zmianą egzaminu a pobraniem liczników drzewo renderuje
+    // się z zerami i wszystkie działy dostają etykietę "Wkrótce".
+    setLoading(true);
     setSearchInput("");
     setDebouncedQuery("");
     setTopicFilter("all");
@@ -976,8 +992,8 @@ export default function TreningPage() {
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa - działy i tematy dopasowane do bazy zadań."
-      : "Egzamin ósmoklasisty - działy i tematy dopasowane do bazy zadań.";
+      ? "Matura podstawowa - działy i tematy zgodne z wymaganiami CKE."
+      : "Egzamin ósmoklasisty - działy i tematy zgodne z pełną podstawą programową.";
 
   const overallProgress = useMemo(() => {
     const cats = exam.categories;
@@ -1022,6 +1038,24 @@ export default function TreningPage() {
             onChange={handleExamChange}
           />
         </header>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted">
+          <span>
+            Plan obejmuje cały zakres CKE, także tematy z klas wcześniejszych.
+          </span>
+          <Link
+            href="/sprawdziany"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Sprawdziany klasowe
+          </Link>
+          <Link
+            href="/trening/arkusze"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Arkusze CKE, także rozszerzone
+          </Link>
+        </div>
 
         {!loading && nextTopic && (
           <NextStepCard
@@ -1200,6 +1234,7 @@ export default function TreningPage() {
               <DepartmentNavigation
                 categories={filteredExam.categories}
                 activeCategoryId={activeCategory?.id ?? null}
+                theoryByTopic={theoryByTopic}
                 onSelect={handleCategorySelect}
               />
               {activeCategory && (
