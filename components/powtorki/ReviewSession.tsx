@@ -16,6 +16,7 @@ import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
 import { fetchTaskGrade } from "@/lib/trening/task-assist-client";
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { getTaskById } from "@/lib/baza-zadan/catalog";
+import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
 import { AnimatePresence, motion } from "framer-motion";
@@ -69,7 +70,10 @@ export function ReviewSession({
   );
 
   const currentId = queue[index];
-  const task = currentId ? getTaskById(currentId) : undefined;
+  const task = useMemo(() => {
+    const found = currentId ? getTaskById(currentId) : undefined;
+    return found ? orderTaskChoices(found) : undefined;
+  }, [currentId]);
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
   const answered = open ? openGrade !== null : picked !== null;

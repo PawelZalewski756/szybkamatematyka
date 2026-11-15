@@ -18,6 +18,7 @@ import {
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
 import { getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
+import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { useLearningPath } from "@/components/LearningPathProvider";
@@ -27,7 +28,7 @@ import { useSubscription } from "@/lib/subscription/use-subscription";
 import { fetchTaskGrade, type AssistQuotaSnapshot } from "@/lib/trening/task-assist-client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type TaskSolverViewProps = {
   id: string;
@@ -49,7 +50,10 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   const { path } = useLearningPath();
   const { isPro } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
-  const task = getTaskById(id);
+  const task = useMemo(() => {
+    const found = getTaskById(id);
+    return found ? orderTaskChoices(found) : undefined;
+  }, [id]);
   const [picked, setPicked] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [typedAnswer, setTypedAnswer] = useState("");
