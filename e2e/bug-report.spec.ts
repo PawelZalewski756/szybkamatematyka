@@ -7,9 +7,20 @@ async function acceptVisitorNotice(page: Page) {
 }
 
 test.describe("Zgłaszanie błędu", () => {
-  test("gość otwiera formularz i wysyła zgłoszenie bez logowania", async ({
-    page,
-  }) => {
+  test("stopka prowadzi do strony zgłoszenia", async ({ page }) => {
+    await page.goto("/baza-zadan");
+    await acceptVisitorNotice(page);
+
+    await page.getByRole("link", { name: "Zgłoś błąd" }).click();
+
+    await expect(page).toHaveURL(/\/zglos-blad$/);
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Zgłoś błąd" }),
+    ).toBeVisible();
+    await expect(page.getByLabel("Twój e-mail")).toBeVisible();
+  });
+
+  test("gość wysyła zgłoszenie bez logowania", async ({ page }) => {
     await page.route("**/api/bug-report", async (route) => {
       await route.fulfill({
         status: 200,
@@ -18,38 +29,27 @@ test.describe("Zgłaszanie błędu", () => {
       });
     });
 
-    await page.goto("/baza-zadan");
+    await page.goto("/zglos-blad");
     await acceptVisitorNotice(page);
-    await page.getByRole("button", { name: "Zgłoś błąd" }).click();
 
-    const form = page.locator("#zglos-blad form");
-    await expect(form).toBeVisible();
-
-    await form.getByLabel("Twój e-mail").fill("ala@example.com");
-    await form.getByLabel("Tytuł").fill("Błąd w zadaniu 12");
-    await form
+    await page.getByLabel("Twój e-mail").fill("ala@example.com");
+    await page.getByLabel("Tytuł").fill("Błąd w zadaniu 12");
+    await page
       .getByLabel("Opis")
       .fill("Po wybraniu odpowiedzi B aplikacja pokazuje błąd zamiast wyniku.");
 
-    await form.getByRole("button", { name: "Wyślij zgłoszenie" }).click();
+    await page.getByRole("button", { name: "Wyślij zgłoszenie" }).click();
 
     await expect(
-      page.getByText("Dziękujemy! Zgłoszenie zostało wysłane", {
-        exact: false,
-      }),
+      page.getByRole("heading", { name: "Dziękujemy za zgłoszenie" }),
     ).toBeVisible();
-    await expect(form.getByLabel("Twój e-mail")).toHaveValue("");
   });
 
   test("pusty formularz pokazuje błąd walidacji", async ({ page }) => {
-    await page.goto("/baza-zadan");
+    await page.goto("/zglos-blad");
     await acceptVisitorNotice(page);
-    await page.getByRole("button", { name: "Zgłoś błąd" }).click();
 
-    await page
-      .locator("#zglos-blad form")
-      .getByRole("button", { name: "Wyślij zgłoszenie" })
-      .click();
+    await page.getByRole("button", { name: "Wyślij zgłoszenie" }).click();
 
     await expect(page.getByText("Podaj poprawny adres e-mail.")).toBeVisible();
   });
