@@ -24,7 +24,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     period: "na zawsze",
     description: "Darmowy dostęp do wszystkich minigier i podstawowej bazy zadań.",
     features: [
-      "Wszystkie 34 minigry bez limitu",
+      "Wszystkie minigry bez limitu",
       "Podgląd bazy zadań i 3 arkuszy CKE",
       "Codzienne wyzwanie i powtórki",
       "Bez karty - rejestracja opcjonalna",

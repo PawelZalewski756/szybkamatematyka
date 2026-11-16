@@ -737,7 +737,21 @@ export default function ProfilPage() {
             </div>
             </div>
           </motion.div>
-        ) : null}
+        ) : (
+          <div className="flex flex-1 flex-col items-center justify-center gap-3 py-16 text-center">
+            <h1 className="text-2xl font-black text-foreground">Profil</h1>
+            <p className="max-w-sm text-sm text-muted">
+              Za chwilę przeniesiemy Cię do logowania. Profil i postępy są
+              dostępne po zalogowaniu.
+            </p>
+            <Link
+              href="/login"
+              className="btn-chunky px-5 py-2.5 text-sm"
+            >
+              Przejdź do logowania
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

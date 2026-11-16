@@ -409,8 +409,8 @@ export function SheetView() {
 
 function PdfLinks({ sheet }: { sheet: Sheet }) {
   const [copied, setCopied] = useState(false);
-  const href = (withKey: boolean) =>
-    `/sprawdziany/druk?dzial=${sheet.chapterId}&grupa=${sheet.group}&seed=${sheet.seed}&klucz=${withKey ? 1 : 0}`;
+  const href = (withKey: boolean, group: "A" | "B" | "AB" = sheet.group) =>
+    `/sprawdziany/druk?dzial=${sheet.chapterId}&grupa=${group}&seed=${sheet.seed}&klucz=${withKey ? 1 : 0}`;
   const cls =
     "rounded-md border border-surface-border px-3 py-1.5 text-xs font-medium text-foreground hover:border-accent";
   return (
@@ -421,6 +421,9 @@ function PdfLinks({ sheet }: { sheet: Sheet }) {
       </a>
       <a href={href(true)} target="_blank" rel="noopener" className={cls}>
         Z odpowiedziami na osobnej stronie
+      </a>
+      <a href={href(true, "AB")} target="_blank" rel="noopener" className={cls}>
+        Obie grupy + klucz
       </a>
       <button
         type="button"

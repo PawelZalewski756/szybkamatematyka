@@ -43,7 +43,8 @@ export function DeleteAccountCard() {
       document.body.appendChild(link);
       link.click();
       link.remove();
-      URL.revokeObjectURL(url);
+      // Safari potrafi przerwać pobieranie przy natychmiastowym revoke.
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch {
       setExportError("Nie udało się pobrać danych. Spróbuj ponownie.");
     } finally {

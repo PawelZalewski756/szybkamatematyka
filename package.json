@@ -99,5 +99,9 @@
       "minimatch": "^11.0.1"
     },
     "katex": "$katex"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "unrs-resolver": true
   }
 }

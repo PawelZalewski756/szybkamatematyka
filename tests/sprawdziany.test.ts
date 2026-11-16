@@ -69,6 +69,21 @@ describe("sprawdziany – arkusze", () => {
     });
   }
 
+  it("podpunkty nie powtarzają liter a)/b)", () => {
+    for (const chapter of SHEET_CHAPTERS) {
+      for (let seed = 1; seed <= 40; seed++) {
+        const sheet = buildSheet({ chapterId: chapter.id, seed });
+        expect(sheet).not.toBeNull();
+        for (const task of sheet!.tasks) {
+          if (task.kind !== "open") continue;
+          for (const part of task.parts ?? []) {
+            expect(part, `${chapter.id} seed ${seed}`).not.toMatch(/^[a-z]\)/i);
+          }
+        }
+      }
+    }
+  });
+
   it("grupy A i B mają różne liczby", () => {
     const a = buildSheet({ chapterId: SHEET_CHAPTERS[0].id, group: "A", seed: 7 })!;
     const b = buildSheet({ chapterId: SHEET_CHAPTERS[0].id, group: "B", seed: 7 })!;
