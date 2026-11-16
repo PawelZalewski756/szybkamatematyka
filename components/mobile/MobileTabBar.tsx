@@ -162,6 +162,7 @@ export function MobileTabBar() {
       <nav
         className="fixed inset-x-0 bottom-0 z-[90] border-t border-surface-border bg-surface pb-[max(env(safe-area-inset-bottom,0px),0px)] lg:hidden"
         aria-label="Nawigacja mobilna"
+        data-print-hide
       >
         <div className="mx-auto flex h-16 max-w-lg items-center px-1">
           <TabLink

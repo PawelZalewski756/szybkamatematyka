@@ -533,6 +533,7 @@ export default function LoginPage() {
                 <label className="flex items-start gap-2 text-xs leading-relaxed text-muted">
                   <input
                     type="checkbox"
+                    name="termsAccepted"
                     checked={termsAccepted}
                     onChange={(event) => setTermsAccepted(event.target.checked)}
                     className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
@@ -555,6 +556,7 @@ export default function LoginPage() {
                 <label className="flex items-start gap-2 text-xs leading-relaxed text-muted">
                   <input
                     type="checkbox"
+                    name="ageConfirmed"
                     checked={ageConfirmed}
                     onChange={(event) => setAgeConfirmed(event.target.checked)}
                     className="mt-0.5 h-4 w-4 shrink-0 accent-accent"

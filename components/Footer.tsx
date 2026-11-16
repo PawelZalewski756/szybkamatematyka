@@ -14,7 +14,10 @@ export function Footer() {
   if (pathname === "/" || pathname.startsWith("/minigry")) return null;
 
   return (
-    <footer className="mt-auto w-full border-t border-surface-border pb-[calc(4rem+env(safe-area-inset-bottom,0px))] pt-6 lg:pb-6">
+    <footer
+      className="mt-auto w-full border-t border-surface-border pb-[calc(4rem+env(safe-area-inset-bottom,0px))] pt-6 lg:pb-6"
+      data-print-hide
+    >
       <div className="mx-auto flex w-full max-w-[1920px] flex-col gap-4 px-4 text-xs text-muted md:px-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="space-y-1">
           <p>

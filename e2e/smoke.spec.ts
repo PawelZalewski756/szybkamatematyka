@@ -288,6 +288,8 @@ test.describe("Smoke", () => {
     await page.locator('input[name="email"]').fill("nowy@example.com");
     await page.locator('input[name="password"]').fill("poprawnehaslo");
     await page.locator('input[name="passwordConfirm"]').fill("poprawnehaslo");
+    await page.locator('input[name="termsAccepted"]').check();
+    await page.locator('input[name="ageConfirmed"]').check();
     await page.getByRole("button", { name: "Utwórz konto" }).click();
 
     await expect(page).toHaveURL(/\/login\/sukces$/);

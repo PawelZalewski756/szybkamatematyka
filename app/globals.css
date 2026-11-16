@@ -505,9 +505,6 @@ html[data-theme="light"] .fig-dark { display: none; }
 html[data-theme="light"] .fig-light { display: block; }
 
 @media print {
-  header,
-  footer,
-  nav,
   [data-print-hide] {
     display: none !important;
   }
