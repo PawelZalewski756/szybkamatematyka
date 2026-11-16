@@ -1,5 +1,8 @@
+"use client";
+
 import Script from "next/script";
 
+import { useConsent } from "@/components/analytics/use-consent";
 import {
   GOOGLE_ADS_ID,
   isGoogleAdsConfigured,
@@ -10,7 +13,10 @@ import {
  * Wymagany do pomiaru konwersji (rejestracja, zakup).
  */
 export function GoogleAdsTag() {
-  if (!isGoogleAdsConfigured()) return null;
+  const consent = useConsent();
+
+  // Tag reklamowy ładujemy wyłącznie po zgodzie na marketing - nie tylko go ukrywamy.
+  if (!isGoogleAdsConfigured() || !consent.marketing) return null;
 
   return (
     <>
@@ -22,6 +28,12 @@ export function GoogleAdsTag() {
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: '${consent.analytics ? "granted" : "denied"}'
+          });
           gtag('js', new Date());
           gtag('config', '${GOOGLE_ADS_ID}');
         `}

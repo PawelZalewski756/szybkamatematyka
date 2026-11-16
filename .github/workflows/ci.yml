@@ -99,6 +99,8 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: [quality, e2e]
     runs-on: ubuntu-latest
+    outputs:
+      vercel_configured: ${{ steps.vercel_secrets.outputs.configured }}
 
     steps:
       - name: Checkout
@@ -110,20 +112,25 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Verify Vercel deployment secrets
+        id: vercel_secrets
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
           if [[ -z "$VERCEL_TOKEN" || -z "$VERCEL_ORG_ID" || -z "$VERCEL_PROJECT_ID" ]]; then
-            echo "::error::Add VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID as GitHub Actions secrets."
-            exit 1
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Brak sekretów Vercel - deploy wykona integracja Git w Vercel. Migracje nadal działają."
+            exit 0
           fi
+          echo "configured=true" >> "$GITHUB_OUTPUT"
 
       - name: Install Vercel CLI
+        if: steps.vercel_secrets.outputs.configured == 'true'
         run: npm install --global vercel@65.12.1
 
       - name: Verify Vercel project access
+        if: steps.vercel_secrets.outputs.configured == 'true'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -139,8 +146,8 @@ jobs:
 
   production-deploy:
     name: Deploy production to Vercel
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    needs: [quality, e2e, production-migrations]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && needs.production-preflight.outputs.vercel_configured == 'true'
+    needs: [quality, e2e, production-migrations, production-preflight]
     runs-on: ubuntu-latest
 
     steps:

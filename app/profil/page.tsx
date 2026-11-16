@@ -4,6 +4,7 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { ProfileAchievements } from "@/components/achievements/ProfileAchievements";
 import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPrompt";
+import { DeleteAccountCard } from "@/components/profil/DeleteAccountCard";
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
 import { containsProfanity } from "@/lib/profanity";
@@ -54,6 +55,7 @@ import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
 import {
+  CreditCard,
   Crown,
   Flame,
   Loader2,
@@ -119,6 +121,8 @@ function StatCard({
 }
 
 function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
+  const [portalPending, setPortalPending] = useState(false);
+  const [portalError, setPortalError] = useState<string | null>(null);
   const pro = snapshotIsPro(snapshot);
   const plan = snapshot.planId ? getPlanById(snapshot.planId) : null;
   const periodEnd = snapshot.currentPeriodEnd
@@ -128,6 +132,36 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
         year: "numeric",
       })
     : null;
+
+  const openBillingPortal = async () => {
+    setPortalError(null);
+    setPortalPending(true);
+    try {
+      const supabase = getSupabase();
+      const { data } = await supabase.auth.getSession();
+      const token = data.session?.access_token;
+      if (!token) {
+        setPortalError("Sesja wygasła. Zaloguj się ponownie.");
+        return;
+      }
+      const response = await fetch("/api/stripe/portal", {
+        method: "POST",
+        headers: { authorization: `Bearer ${token}` },
+      });
+      const payload = (await response.json().catch(() => null)) as
+        | { url?: string; error?: string }
+        | null;
+      if (!response.ok || !payload?.url) {
+        setPortalError(payload?.error ?? "Nie udało się otworzyć panelu płatności.");
+        return;
+      }
+      window.location.href = payload.url;
+    } catch {
+      setPortalError("Nie udało się połączyć z serwerem. Spróbuj ponownie.");
+    } finally {
+      setPortalPending(false);
+    }
+  };
 
   return (
     <section id="plan" className="mt-8">
@@ -160,6 +194,22 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
                   : `Odnowienie: ${periodEnd}`}
               </p>
             )}
+            {snapshot.status !== "free" ? (
+              <button
+                type="button"
+                onClick={() => void openBillingPortal()}
+                disabled={portalPending}
+                className="mt-3 inline-flex items-center gap-2 rounded-lg border border-surface-border px-3 py-2 text-xs font-bold text-foreground transition hover:border-accent/50 hover:text-accent disabled:opacity-50"
+              >
+                <CreditCard className="h-3.5 w-3.5" aria-hidden />
+                {portalPending ? "Otwieram…" : "Zarządzaj subskrypcją"}
+              </button>
+            ) : null}
+            {portalError ? (
+              <p className="mt-2 max-w-md text-xs font-semibold text-danger" role="alert">
+                {portalError}
+              </p>
+            ) : null}
           </div>
           {pro ? (
             <span className="shrink-0 rounded-full bg-accent px-3 py-1 text-xs font-black text-on-accent">
@@ -640,6 +690,8 @@ export default function ProfilPage() {
             </section>
 
             <PlanSection snapshot={subscriptionSnapshot} />
+
+            <DeleteAccountCard />
 
             <StreakReminderPrompt variant="card" className="mt-8" />
 

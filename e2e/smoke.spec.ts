@@ -74,7 +74,7 @@ test.describe("Smoke", () => {
     await expect(page).toHaveURL(/\/trening$/);
   });
 
-  test("licznik wejść pokazuje komunikat raz i liczy dopiero po OK", async ({
+  test("licznik wejść pyta o zgodę i liczy dopiero po akceptacji", async ({
     page,
   }) => {
     const bodies: string[] = [];
@@ -84,17 +84,59 @@ test.describe("Smoke", () => {
     });
     await page.goto("/");
 
-    const prompt = page.locator('[aria-label="Informacja o liczniku wejść"]');
+    const prompt = page.locator('[aria-label="Zgoda na pliki cookies"]');
     await expect(prompt).toBeVisible();
     expect(bodies).toHaveLength(0);
 
-    await prompt.getByRole("button", { name: "OK", exact: true }).click();
+    await prompt
+      .getByRole("button", { name: "Akceptuję wszystkie", exact: true })
+      .click();
     await expect(prompt).toHaveCount(0);
     await expect.poll(() => bodies.length).toBe(1);
     expect(bodies[0]).toContain('"path":"/"');
 
     await page.reload();
     await expect(prompt).toHaveCount(0);
+  });
+
+  test("tag Google Ads ładuje się dopiero po zgodzie na reklamy", async ({
+    page,
+  }) => {
+    const requests: string[] = [];
+    await page.route("https://www.googletagmanager.com/**", async (route) => {
+      requests.push(route.request().url());
+      await route.fulfill({
+        status: 200,
+        contentType: "application/javascript",
+        body: "",
+      });
+    });
+
+    await page.goto("/");
+    await page.waitForTimeout(600);
+    expect(requests).toHaveLength(0);
+
+    await page
+      .locator('[aria-label="Zgoda na pliki cookies"]')
+      .getByRole("button", { name: "Akceptuję wszystkie" })
+      .click();
+
+    await expect.poll(() => requests.length, { timeout: 5_000 }).toBeGreaterThan(0);
+  });
+
+  test("same niezbędne cookies nie wysyłają pageview", async ({ page }) => {
+    const bodies: string[] = [];
+    await page.route("**/api/analytics/pageview", async (route) => {
+      bodies.push(route.request().postData() ?? "");
+      await route.fulfill({ json: { ok: true } });
+    });
+    await page.goto("/");
+
+    const prompt = page.locator('[aria-label="Zgoda na pliki cookies"]');
+    await prompt.getByRole("button", { name: "Tylko niezbędne" }).click();
+    await expect(prompt).toHaveCount(0);
+    await page.waitForTimeout(400);
+    expect(bodies).toHaveLength(0);
   });
 
   test("wracający odwiedzający nie widzi komunikatu, a wejście i tak się liczy", async ({
@@ -111,7 +153,7 @@ test.describe("Smoke", () => {
     await page.goto("/");
 
     await expect(
-      page.locator('[aria-label="Informacja o liczniku wejść"]'),
+      page.locator('[aria-label="Zgoda na pliki cookies"]'),
     ).toHaveCount(0);
     await expect(page.getByRole("button", { name: "Prywatność" })).toHaveCount(0);
     await expect.poll(() => bodies.length).toBe(1);

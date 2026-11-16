@@ -1,9 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
 
-/** Zamyka dolny pasek zgody na licznik wejść, który zasłania stopkę. */
+/** Zamyka dolny baner cookies, który potrafi zasłonić przycisk formularza. */
 async function acceptVisitorNotice(page: Page) {
-  const ok = page.getByRole("button", { name: "OK", exact: true });
-  await ok.click({ timeout: 3_000 }).catch(() => {});
+  const reject = page.getByRole("button", {
+    name: "Tylko niezbędne",
+    exact: true,
+  });
+  await reject.click({ timeout: 3_000 }).catch(() => {});
 }
 
 test.describe("Zgłaszanie błędu", () => {

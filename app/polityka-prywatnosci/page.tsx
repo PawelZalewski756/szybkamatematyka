@@ -1,3 +1,4 @@
+import { CookieSettingsButton } from "@/components/analytics/CookieSettingsButton";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -90,8 +91,10 @@ export default function PolitykaPrywatnosciPage() {
             Obsługa zgłoszeń błędów - odpowiedź na podany adres e-mail i
             naprawa problemu (uzasadniony interes).
           </li>
-          <li>Zgoda - gdy wyraźnie o nią prosimy (np. marketing, jeśli kiedyś
-            zostanie wprowadzony).</li>
+          <li>
+            Zgoda - na analitykę i reklamy Google. Pytamy o nią w banerze
+            cookies, a zgodę możesz w każdej chwili wycofać.
+          </li>
         </ul>
       </InfoSection>
 
@@ -104,9 +107,10 @@ export default function PolitykaPrywatnosciPage() {
           nick, adres e-mail, poziom nauki i status potwierdzenia adresu;
           wiadomość jest przetwarzana przez Telegram zgodnie z jego zasadami
           prywatności. Treść zgłoszenia błędu wraz z załącznikiem przechodzi
-          przez Resend wyłącznie w celu doręczenia go administratorowi. Jeśli
-          tag Google Ads jest skonfigurowany, Google otrzymuje dane z jego
-          działania w celu pomiaru reklam. Dane nie są sprzedawane.
+          przez Resend wyłącznie w celu doręczenia go administratorowi.
+          Skonfigurowany tag Google Ads ładuje się dopiero po zgodzie na
+          reklamy; dopiero wtedy Google otrzymuje dane z jego działania w celu
+          pomiaru reklam. Dane nie są sprzedawane.
         </p>
       </InfoSection>
 
@@ -136,7 +140,11 @@ export default function PolitykaPrywatnosciPage() {
           wynikającym z RODO. Możesz też złożyć skargę do Prezesa UODO.
         </p>
         <p>
-          Aby skorzystać z praw, napisz na{" "}
+          Konto możesz usunąć samodzielnie w zakładce{" "}
+          <Link href="/profil" className="font-semibold text-accent hover:underline">
+            Profil
+          </Link>
+          . W sprawie eksportu lub innych praw napisz na{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="font-semibold text-accent hover:underline"
@@ -149,17 +157,20 @@ export default function PolitykaPrywatnosciPage() {
 
       <InfoSection title="7. Pliki cookies">
         <p>
-          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. Po potwierdzeniu komunikatu (pytamy raz) liczymy anonimowe wejścia:
-          zapisujemy w przeglądarce losowy identyfikator, a na serwerze tylko
-          jego skrót i ścieżkę strony, bez adresu IP i danych konta. Aby
-          przestać być liczonym, wyczyść dane strony w przeglądarce lub napisz
-          do nas. Wyjątkiem jest Szybka
-          próba: po wybraniu odpowiedzi zapisujemy losowy identyfikator sesji
-          strony na 30 dni oraz zagregowane liczniki poprawnych i błędnych
-          odpowiedzi. Identyfikator nie jest łączony z kontem; nie zapisujemy
-          przy nim adresu IP. Skonfigurowany tag Google Ads działa odrębnie i
-          może korzystać z własnych technologii pomiarowych Google.
+          Serwis używa niezbędnych mechanizmów sesji i uwierzytelniania. W
+          banerze cookies wybierasz osobno analitykę i reklamy Google. Po
+          zgodzie na analitykę zapisujemy w przeglądarce losowy identyfikator,
+          a na serwerze tylko jego skrót i ścieżkę strony, bez adresu IP i
+          danych konta. Tag Google Ads ładuje się wyłącznie po zgodzie na
+          reklamy. Zgodę możesz wycofać w każdej chwili przyciskiem poniżej.
         </p>
+        <p>
+          Wyjątkiem jest Szybka próba: po wybraniu odpowiedzi zapisujemy losowy
+          identyfikator sesji strony na 30 dni oraz zagregowane liczniki
+          poprawnych i błędnych odpowiedzi. Identyfikator nie jest łączony z
+          kontem; nie zapisujemy przy nim adresu IP.
+        </p>
+        <CookieSettingsButton />
       </InfoSection>
 
       <InfoSection title="8. Bezpieczeństwo">
