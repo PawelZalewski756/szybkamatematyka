@@ -621,6 +621,34 @@ test.describe("Smoke", () => {
   });
 });
 
+test.describe("Mobile", () => {
+  test("trening nie wystaje poza ekran, a etykiety tabbara się mieszczą", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 320, height: 844 });
+    await page.goto("/trening");
+    await page
+      .getByRole("button", { name: "Tylko niezbędne" })
+      .click({ timeout: 1_000 })
+      .catch(() => {});
+    await page.waitForTimeout(300);
+
+    const state = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      viewport: window.innerWidth,
+      labels: [...document.querySelectorAll('nav[aria-label="Nawigacja mobilna"] span')].map(
+        (span) => ({
+          text: span.textContent,
+          clipped: span.scrollWidth > span.clientWidth + 1,
+        }),
+      ),
+    }));
+
+    expect(state.scrollWidth).toBeLessThanOrEqual(state.viewport);
+    expect(state.labels.filter((label) => label.clipped)).toEqual([]);
+  });
+});
+
 test.describe("Sprawdziany do druku", () => {
   test("jedna strona druku zawiera obie grupy i klucz", async ({ page }) => {
     await page.goto(

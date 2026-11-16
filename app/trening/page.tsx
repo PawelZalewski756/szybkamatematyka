@@ -577,7 +577,7 @@ function DepartmentNavigation({
     <nav
       data-testid="training-department-navigation"
       aria-label="Działy treningu"
-      className="border-y border-surface-border py-3 lg:sticky lg:top-5"
+      className="min-w-0 border-y border-surface-border py-3 lg:sticky lg:top-5"
     >
       <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
         <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
@@ -676,7 +676,7 @@ function DepartmentPanel({
     <section
       data-testid="training-department-panel"
       aria-labelledby={`training-department-heading-${category.id}`}
-      className="overflow-hidden border-y border-surface-border"
+      className="min-w-0 overflow-hidden border-y border-surface-border"
     >
       <div className="py-4 sm:py-5">
         <div className="flex items-start justify-between gap-4">

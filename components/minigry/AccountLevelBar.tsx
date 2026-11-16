@@ -23,7 +23,7 @@ export function AccountLevelBar({ level, xp, subtitle }: AccountLevelBarProps) {
             Poz. {level}
           </span>
           {subtitle ? (
-            <span className="min-w-0 break-words text-sm leading-tight text-muted">{subtitle}</span>
+            <span className="min-w-0 truncate text-sm leading-tight text-muted" title={subtitle}>{subtitle}</span>
           ) : null}
         </div>
         <span className="shrink-0 text-sm tabular-nums text-muted">

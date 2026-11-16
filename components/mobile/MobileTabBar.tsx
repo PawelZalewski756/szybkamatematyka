@@ -35,12 +35,12 @@ function TabLink({ href, label, icon: Icon, active, prefetch }: TabLinkProps) {
       href={href}
       prefetch={prefetch}
       aria-current={active ? "page" : undefined}
-      className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 py-1 transition-colors ${
+      className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-0.5 py-1 transition-colors ${
         active ? "text-foreground" : "text-muted active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-xs font-medium leading-tight">
+      <span className="max-w-full truncate text-[11px] font-medium leading-tight sm:text-xs">
         {label}
       </span>
     </Link>
@@ -70,14 +70,14 @@ function TabButton({
       onClick={onClick}
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
-      className={`mx-0.5 flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent ${
+      className={`mx-0.5 flex min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-0.5 py-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent ${
         active
           ? "bg-accent/10 text-accent"
           : "text-muted hover:bg-surface-hover active:text-foreground"
       }`}
     >
       <Icon className="h-5 w-5 shrink-0" strokeWidth={active ? 2.25 : 1.75} aria-hidden />
-      <span className="max-w-full truncate text-xs font-medium leading-tight">
+      <span className="max-w-full truncate text-[11px] font-medium leading-tight sm:text-xs">
         {label}
       </span>
     </button>

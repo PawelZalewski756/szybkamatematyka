@@ -43,7 +43,7 @@ function formatElapsed(seconds: number): string {
 function CountdownOverlay({ value }: { value: number }) {
   return (
     <div
-      className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-background/90 backdrop-blur-sm"
+      className="fixed inset-0 z-[120] flex flex-col items-center justify-center bg-background/90 backdrop-blur-sm"
       aria-live="assertive"
       aria-label={`Start za ${value}`}
     >
@@ -172,9 +172,7 @@ export function MinigameShell({
             <AccountLevelBar
               level={displayProgress.level}
               xp={displayProgress.xp}
-              subtitle={
-                account.profile?.nick ?? "Zaloguj się, by zapisywać postęp"
-              }
+              subtitle={account.profile?.nick ?? "Gość"}
             />
             <p className="mt-3 text-sm text-muted">
               Ścieżka:{" "}
@@ -270,7 +268,7 @@ export function MinigameShell({
           <AccountLevelBar
             level={cloudProfile?.level ?? displayProgress.level}
             xp={cloudProfile?.xp ?? displayProgress.xp}
-            subtitle={cloudProfile?.nick ?? "Niezalogowany"}
+            subtitle={cloudProfile?.nick ?? "Gość"}
           />
         </div>
 
