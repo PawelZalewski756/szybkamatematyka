@@ -37,9 +37,10 @@ function warnTableMissingOnce(): void {
 
 function isTableUnavailable(error: PostgrestError | null): boolean {
   if (!error) return false;
-  if (isSchemaMissingError(error.message)) return true;
-  if (error.code === "42P01") return true;
-  return /daily_challenges/i.test(error.message ?? "");
+  // Tylko brak tabeli; błąd RLS (42501) nie jest brakiem migracji.
+  if (error.code === "42P01" || error.code === "PGRST205") return true;
+  if (error.code === "42501") return false;
+  return isSchemaMissingError(error.message);
 }
 
 function mapRow(row: DailyChallengeRow): DailyChallengeCompletion {
@@ -79,13 +80,22 @@ export async function fetchChallengeCompletion(
 }
 
 /**
- * Zapisuje ukończenie wyzwania. Zwraca true, gdy zapis się powiódł
- * (lub był już zapisany). Toleruje brak tabeli oraz duplikat (23505).
+ * Wynik próby zapisania ukończenia:
+ * - `inserted` - to wywołanie zapisało dzisiejsze ukończenie (można nadać XP),
+ * - `existing` - wpis już był (druga karta / powtórka) - nie nadawaj XP ponownie,
+ * - `failed` - brak tabeli / błąd zapisu - nie udawaj ukończenia.
+ */
+export type ChallengeCompletionClaim = "inserted" | "existing" | "failed";
+
+/**
+ * Zapisuje ukończenie wyzwania jako „claim”. Unikalny klucz
+ * (user_id, challenge_date) gwarantuje, że tylko jedno wywołanie dostanie
+ * `inserted`, więc XP nie da się naliczyć dwa razy.
  */
 export async function recordChallengeCompletion(
   userId: string,
   completion: DailyChallengeCompletion,
-): Promise<boolean> {
+): Promise<ChallengeCompletionClaim> {
   const supabase = getSupabase();
 
   const { error } = await supabase.from("daily_challenges").insert({
@@ -99,14 +109,14 @@ export async function recordChallengeCompletion(
 
   if (error) {
     const pgError = error as PostgrestError;
-    if (pgError.code === "23505") return true;
+    if (pgError.code === "23505") return "existing";
     if (isTableUnavailable(pgError)) {
       warnTableMissingOnce();
-      return false;
+      return "failed";
     }
     console.warn("[szybka-matma] recordChallengeCompletion:", error);
-    return false;
+    return "failed";
   }
 
-  return true;
+  return "inserted";
 }

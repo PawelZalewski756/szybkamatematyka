@@ -54,6 +54,12 @@ uruchomienia w SQL Editorze. Na świeżym projekcie wykonaj:
 8. Timestampowane migracje funkcjonalne w kolejności dat.
 9. **Ostatni krok:** `migrations/20260906220000_production_hardening.sql`.
 
+Jeżeli projekt działa już na produkcji, uruchom dodatkowo
+`migrations/20261116120000_solved_tasks_allow_cached_tasks.sql`. Usuwa on
+klucz obcy `solved_tasks.task_id → tasks.id`, który blokował zapis postępu dla
+zadań serwowanych z cache (błąd `23503`) - bez niego liczniki rozwiązanych
+zadań w profilu, panelu admina i bocie Telegrama pokazują zera.
+
 Ostatnia migracja jest celowo restrykcyjna: przerwie działanie z komunikatem,
 jeśli nie istnieją wymagane tabele. Można uruchomić ją ponownie - naprawia
 przypadek, w którym wcześniejsze pliki hardeningu zostały uruchomione przed

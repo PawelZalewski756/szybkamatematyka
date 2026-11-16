@@ -118,7 +118,7 @@ export function TaskArena({
     null,
   );
   const [topicHasTasks, setTopicHasTasks] = useState(false);
-  const { recordResult } = useSolvedTasks();
+  const { markSolved, recordResult } = useSolvedTasks();
 
   const loadTasks = useCallback(async () => {
     setLoading(true);
@@ -256,6 +256,9 @@ export function TaskArena({
         setAwarding(true);
         try {
           const firstSolve = await markTaskSolved(userId, current.id);
+          // Ten sam licznik zasila odznaki i lokalny postęp w Bazie zadań -
+          // bez tego rozwiązania z areny nie pojawiały się w statystykach.
+          markSolved(current.id);
           if (firstSolve && profile?.nick) {
             const halfXp = taskAttempts > 1;
             const xpGain = halfXp
@@ -291,6 +294,7 @@ export function TaskArena({
       advanceOrFinish,
       attempts,
       current,
+      markSolved,
       profile,
       userId,
     ],
@@ -318,6 +322,12 @@ export function TaskArena({
     }
 
     if (!isCorrect) {
+      // Zła odpowiedź liczy się jako podejście - po niej poprawna odpowiedź
+      // daje połowę XP (wcześniej licznik rósł tylko przy trafieniu).
+      setAttempts((prev) => ({
+        ...prev,
+        [current.id]: (prev[current.id] ?? 0) + 1,
+      }));
       setShakeKey((k) => k + 1);
       const isOpen = current.options.length === 0;
       if (isOpen) {
@@ -376,6 +386,10 @@ export function TaskArena({
     );
   }
 
+  // Czy ukończono cały temat, czy tylko wybrany filtr trudności.
+  const completedWholeTopic =
+    taskPool.length === 0 || tasks.length === taskPool.length;
+
   if (!finished && tasks.length === 0) {
     if (topicHasTasks && taskPool.length > 0) {
       return (
@@ -387,6 +401,13 @@ export function TaskArena({
           <p className="relative z-10 mt-2 max-w-sm text-sm text-muted">
             Wybierz inną trudność lub „Wszystkie”, aby kontynuować sesję.
           </p>
+          <button
+            type="button"
+            onClick={() => setDifficultyFilter("all")}
+            className="relative z-10 mt-5 rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-on-accent transition hover:brightness-110"
+          >
+            Pokaż wszystkie zadania
+          </button>
         </div>
       );
     }
@@ -415,14 +436,16 @@ export function TaskArena({
       backHref={backHref}
       nextTopic={getNextTopic(examType, category, topic)}
       isGuest={!userId}
+      completedTopic={completedWholeTopic}
     />;
   }
 
   if (finished) {
     return <TopicVictoryScreen
       backHref={backHref}
-      nextTopic={getNextTopic(examType, category, topic)}
+      nextTopic={completedWholeTopic ? getNextTopic(examType, category, topic) : null}
       isGuest={!userId}
+      completedTopic={completedWholeTopic}
     />;
   }
 

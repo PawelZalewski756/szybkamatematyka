@@ -23,9 +23,10 @@ function warnTableMissingOnce(): void {
 
 function isTableUnavailable(error: PostgrestError | null): boolean {
   if (!error) return false;
-  if (isSchemaMissingError(error.message)) return true;
-  if (error.code === "42P01") return true;
-  return new RegExp(TABLE, "i").test(error.message ?? "");
+  // Sam brak tabeli - błędy RLS/uprawnień nie mogą udawać brakującej migracji.
+  if (error.code === "42P01" || error.code === "PGRST205") return true;
+  if (error.code === "42501") return false;
+  return isSchemaMissingError(error.message);
 }
 
 type ReviewRow = {

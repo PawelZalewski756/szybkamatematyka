@@ -6,21 +6,28 @@ import { EmptyState } from "@/components/feedback/EmptyState";
 import { ErrorView } from "@/components/feedback/ErrorView";
 import { PageLoader } from "@/components/feedback/PageLoader";
 import { formatCompactXp } from "@/lib/format/compact-number";
+import { shortDayLabel } from "@/lib/profile-stats/history";
 import {
   fetchAdminAnalytics,
   type AdminAnalytics,
 } from "@/lib/supabase/admin-analytics";
+import {
+  fetchPlatformSolvedStats,
+  type PlatformSolvedStatsResult,
+} from "@/lib/supabase/solved-stats-client";
 import { motion } from "framer-motion";
 import {
   Activity,
   BarChart3,
   BookOpen,
+  CheckCircle2,
   Database,
   FileStack,
   Flame,
   Gamepad2,
   Info,
   Layers,
+  ListChecks,
   TrendingUp,
   UserPlus,
   Users,
@@ -33,7 +40,11 @@ const PL_NUMBER = new Intl.NumberFormat("pl-PL");
 type LoadState =
   | { status: "loading" }
   | { status: "error" }
-  | { status: "ready"; data: AdminAnalytics };
+  | {
+      status: "ready";
+      data: AdminAnalytics;
+      solved: PlatformSolvedStatsResult;
+    };
 
 function Section({
   icon: Icon,
@@ -61,8 +72,21 @@ export function AnalitykaPageClient() {
   const load = useCallback(async () => {
     setState({ status: "loading" });
     try {
-      const data = await fetchAdminAnalytics();
-      setState({ status: "ready", data });
+      const [data, solved] = await Promise.all([
+        fetchAdminAnalytics(),
+        fetchPlatformSolvedStats().catch(
+          (error: unknown): PlatformSolvedStatsResult => ({
+            ok: false,
+            available: false,
+            code: "request_failed",
+            error:
+              error instanceof Error
+                ? error.message
+                : "Nie udało się pobrać statystyk zadań.",
+          }),
+        ),
+      ]);
+      setState({ status: "ready", data, solved });
     } catch (e) {
       console.error("[szybka-matma] fetchAdminAnalytics:", e);
       setState({ status: "error" });
@@ -89,6 +113,7 @@ export function AnalitykaPageClient() {
   }
 
   const { players, content, notes, generatedAt } = state.data;
+  const solved = state.solved;
   const hasPlayers = players.totalPlayers > 0;
 
   return (
@@ -176,6 +201,107 @@ export function AnalitykaPageClient() {
             title="Brak graczy do analizy"
             description="Gdy pojawią się pierwsze profile, zobaczysz tu statystyki aktywności i XP."
           />
+        )}
+      </Section>
+
+      {/* Zadania uczniów */}
+      <Section icon={ListChecks} title="Zadania uczniów">
+        {solved.available ? (
+          <>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              <MetricCard
+                icon={CheckCircle2}
+                label="Zadania łącznie"
+                value={PL_NUMBER.format(solved.totals.allTime)}
+                sub="rozwiązania uczniów"
+                accent="text-success"
+              />
+              <MetricCard
+                icon={Activity}
+                label="Ostatnie 7 dni"
+                value={PL_NUMBER.format(solved.totals.last7)}
+                sub="rozwiązań"
+                accent="text-success"
+              />
+              <MetricCard
+                icon={Activity}
+                label="Ostatnie 30 dni"
+                value={PL_NUMBER.format(solved.totals.last30)}
+                sub="rozwiązań"
+                accent="text-success"
+              />
+              <MetricCard
+                icon={Users}
+                label="Uczniowie z zadaniami"
+                value={PL_NUMBER.format(solved.students)}
+                sub="co najmniej 1 zadanie"
+                accent="text-accent"
+              />
+              <MetricCard
+                icon={TrendingUp}
+                label="Średnio na ucznia"
+                value={PL_NUMBER.format(solved.averagePerStudent)}
+                sub="rozwiązanych zadań"
+                accent="text-accent"
+              />
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wide text-muted">
+                  Najaktywniejsi uczniowie
+                </h3>
+                <div className="mt-3">
+                  <BarList
+                    items={solved.topStudents.map((student) => ({
+                      label: student.name,
+                      count: student.solved,
+                    }))}
+                    gradient="from-success to-accent"
+                    emptyLabel="Nikt jeszcze nie rozwiązał zadania"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-bold uppercase tracking-wide text-muted">
+                  Rozwiązania w ostatnich 14 dniach
+                </h3>
+                <div className="mt-3">
+                  <BarList
+                    items={solved.daily.slice(-14).map((day) => ({
+                      label: shortDayLabel(day.date),
+                      count: day.count,
+                    }))}
+                    gradient="from-accent to-accent-strong"
+                    emptyLabel="Brak rozwiązań w tym okresie"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {solved.truncated && (
+              <p className="mt-3 text-xs text-accent">
+                Dane zostały ucięte do 200 000 najnowszych rozwiązań - liczby
+                mogą być zaniżone.
+              </p>
+            )}
+          </>
+        ) : (
+          <div className="rounded-2xl border border-accent/30 bg-accent/5 p-4">
+            <p className="text-sm font-bold text-foreground">
+              Nie można policzyć zadań wszystkich uczniów
+            </p>
+            <p className="mt-1 text-sm text-muted">{solved.error}</p>
+            <p className="mt-2 text-xs text-muted">
+              Tabela solved_tasks ma politykę RLS „tylko własne wiersze”, więc
+              liczby platformy wymagają klucza service_role. Dodaj{" "}
+              <code className="rounded bg-foreground/10 px-1">
+                SUPABASE_SERVICE_ROLE_KEY
+              </code>{" "}
+              w Vercel → Settings → Environment Variables (Production) i zrób
+              Redeploy.
+            </p>
+          </div>
         )}
       </Section>
 

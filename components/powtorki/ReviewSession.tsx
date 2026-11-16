@@ -52,6 +52,7 @@ export function ReviewSession({
   const [gradeError, setGradeError] = useState<string | null>(null);
   const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
   const [openAwarded, setOpenAwarded] = useState<number | null>(null);
+  const [skipped, setSkipped] = useState(false);
 
   const totalUnique = initialQueue.length;
   const answeredUnique = Object.keys(firstResults).length;
@@ -76,24 +77,38 @@ export function ReviewSession({
   }, [currentId]);
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
-  const answered = open ? openGrade !== null : picked !== null;
+  const answered = open ? openGrade !== null || skipped : picked !== null;
   const isCorrect = open
     ? openGrade?.acceptAsCorrect === true
     : task && picked !== null
       ? answersEquivalent(task.choices[picked], task.choices[task.correctIndex])
       : false;
 
-  const registerResult = (taskId: string, correct: boolean) => {
+  const registerResult = (
+    taskId: string,
+    correct: boolean,
+    options?: { requeue?: boolean },
+  ) => {
     grade(taskId, correct);
 
     setFirstResults((prev) =>
       taskId in prev ? prev : { ...prev, [taskId]: correct },
     );
 
-    if (!correct && !retried.has(taskId)) {
+    if (!correct && options?.requeue !== false && !retried.has(taskId)) {
       setRetried((prev) => new Set(prev).add(taskId));
       setQueue((prev) => [...prev, taskId]);
     }
+  };
+
+  /**
+   * Plan darmowy nie ma oceny zadań otwartych przez AI - bez tej ścieżki
+   * użytkownik utykał na paywallu bez przycisku „Następne”.
+   */
+  const handleSkipOpen = () => {
+    if (!task || answered) return;
+    setSkipped(true);
+    registerResult(task.id, false, { requeue: false });
   };
 
   const handlePick = (choiceIndex: number) => {
@@ -175,6 +190,7 @@ export function ReviewSession({
     setOpenGrade(null);
     setOpenAwarded(null);
     setGradeError(null);
+    setSkipped(false);
   };
 
   if (!task) {
@@ -252,7 +268,8 @@ export function ReviewSession({
             )}
 
             {open ? (
-              <ProGate featureLabel="Ocena zadań otwartych przez AI">
+              <>
+                <ProGate featureLabel="Ocena zadań otwartych przez AI">
                 <div className="mt-6 space-y-3">
                   <label
                     htmlFor="review-open-answer"
@@ -289,6 +306,16 @@ export function ReviewSession({
                   )}
                 </div>
               </ProGate>
+                {!answered && (
+                  <button
+                    type="button"
+                    onClick={handleSkipOpen}
+                    className="mt-3 w-full rounded-xl border border-surface-border px-4 py-2.5 text-sm font-bold text-muted transition hover:border-accent/40 hover:text-accent"
+                  >
+                    Nie umiem - pokaż rozwiązanie i przejdź dalej
+                  </button>
+                )}
+              </>
             ) : (
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {task.choices.map((choice, choiceIndex) => {

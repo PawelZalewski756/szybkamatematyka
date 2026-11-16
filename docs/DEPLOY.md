@@ -33,11 +33,21 @@ identyczne. Brak whitelisty blokuje panel administratora (fail closed).
 
 Bot Telegrama przyjmuje wyłącznie prywatne wiadomości od ID z `TELEGRAM_ADMIN_IDS`.
 Aby podłączyć go po wdrożeniu, wykonaj jednorazowe żądanie:
-`POST /api/telegram/setup` z nagłówkiem `Authorization: <TELEGRAM_SETUP_SECRET>`.
+`POST /api/telegram/setup` z nagłówkiem `Authorization: Bearer <TELEGRAM_SETUP_SECRET>`.
+To samo żądanie metodą `GET` zwraca diagnostykę z Telegrama: aktualny adres
+webhooka, liczbę oczekujących aktualizacji, listę `allowed_updates` i ostatni
+błąd dostarczenia - najszybszy sposób, żeby sprawdzić, czemu bot nie odpowiada.
 Każdy administrator musi wcześniej rozpocząć prywatną rozmowę z botem komendą
 `/start`, aby Telegram pozwolił mu odbierać powiadomienia o nowych kontach.
 Token bota i klucz `SUPABASE_SERVICE_ROLE_KEY` nigdy nie mogą mieć prefiksu
 `NEXT_PUBLIC_`.
+
+Komendy `/stats` i `/users` pokazują liczbę rozwiązanych zadań (łącznie i w
+ostatnich 7 dniach) oraz liczbę zadań każdego ucznia. Tabela `solved_tasks` ma
+RLS „tylko własne wiersze”, więc te liczby wymagają `SUPABASE_SERVICE_ROLE_KEY`
+w środowisku produkcji. Bez klucza bot nadal odpowiada, ale w miejscu liczb
+zadań pokaże `brak tabeli solved_tasks` / `zadania: ?`. Ta sama zasada dotyczy
+sekcji „Zadania uczniów” w `/admin/analityka`.
 
 Formularz „Zgłoś błąd” wysyła zgłoszenia przez Resend. Dopóki domena nie jest
 zweryfikowana w Resend, `BUG_REPORT_TO` musi wskazywać adres właściciela konta
@@ -129,7 +139,8 @@ wykonaj poniższe kroki:
    `20261101210000_block_profanity_in_profile_names.sql`,
    `20261101220000_expand_profile_name_profanity_filter.sql`,
    `20261104214800_quick_trial_analytics.sql`,
-   `20261108144500_rate_limit_quick_trial.sql`.
+   `20261108144500_rate_limit_quick_trial.sql`,
+   `20261116120000_solved_tasks_allow_cached_tasks.sql`.
 
 Ostatnie migracje zapisują opcjonalny poziom nauki wybrany podczas rejestracji
 (szkoła podstawowa albo średnia). Dotychczas zapisane konkretne klasy są
@@ -157,6 +168,13 @@ profilu (w tym `avatar_url`, XP z minigier i danych pojedynków).
 `20261027140000` dodaje brakujące granty **zapisu** (`UPDATE`/`INSERT` na nick,
 XP, klasę, streak itd.) - bez niej onboarding nicku i zapis EXP kończą się
 `permission denied`. Obie są ważne przy aktualizacji istniejącego projektu.
+
+Migracja `20261116120000_solved_tasks_allow_cached_tasks.sql` usuwa klucz obcy
+`solved_tasks.task_id → tasks.id`. Część zadań treningowych jest serwowana z
+cache (`data/tasks-cache`) i nie istnieje w tabeli `tasks`; przy starym kluczu
+zapis postępu kończył się błędem `23503`, więc uczeń widział 0 rozwiązanych
+zadań, nie dostawał XP, a `/stats` i `/users` w bocie pokazywały zera. Po tej
+migracji liczniki działają także dla zadań z cache.
 
 Własne anonimowe statystyki odsłon i zdarzeń oraz komendy `/visits` i `/funnel`
 pozostają wyłączone. Osobna migracja `20261104214800_quick_trial_analytics.sql`

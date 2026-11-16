@@ -159,8 +159,73 @@ export function useDailyChallenge() {
 
       // Tryb chmurowy: zalogowany gracz + dostępny profil.
       if (profile && userId) {
+        // Ponowne ukończenie (druga karta, odświeżenie w trakcie) nie może
+        // drugi raz dodać XP - wracamy z zapisanym wcześniej wynikiem.
+        const existing = await fetchChallengeCompletion(userId, today).catch(
+          () => null,
+        );
+        if (existing) {
+          const already: ChallengeReward = {
+            xp: existing.xpAwarded,
+            correct: existing.correctCount,
+            total: existing.totalCount,
+            streak: existing.streakAfter,
+            leveledUp: false,
+          };
+          profileRef.current = {
+            ...profile,
+            xp: profile.xp + existing.xpAwarded,
+            streak: existing.streakAfter,
+            lastPlayedDate: today,
+          };
+          setState((prev) => ({
+            ...prev,
+            completed: true,
+            reward: already,
+          }));
+          return already;
+        }
+
         const preview = calculateStreak(profile.lastPlayedDate, profile.streak);
         const xp = challengeXpReward(correct, preview.streak);
+
+        // Najpierw claim w bazie: unikalny klucz (user_id, data) rozstrzyga,
+        // czy XP w ogóle wolno przyznać. Dzięki temu dwie karty nie naliczą
+        // nagrody dwa razy.
+        const claim = await recordChallengeCompletion(userId, {
+          date: today,
+          correctCount: correct,
+          totalCount: total,
+          xpAwarded: xp,
+          streakAfter: preview.streak,
+        });
+
+        if (claim === "failed") {
+          throw new Error(
+            "Nie udało się zapisać ukończenia wyzwania. Spróbuj ponownie.",
+          );
+        }
+
+        if (claim === "existing") {
+          const stored = await fetchChallengeCompletion(userId, today).catch(
+            () => null,
+          );
+          const alreadyDone: ChallengeReward = {
+            xp: stored?.xpAwarded ?? 0,
+            correct: stored?.correctCount ?? correct,
+            total: stored?.totalCount ?? total,
+            streak: stored?.streakAfter ?? preview.streak,
+            leveledUp: false,
+          };
+          mirrorCloudCompletion(userId, alreadyDone);
+          setState((prev) => ({
+            ...prev,
+            completed: true,
+            reward: alreadyDone,
+          }));
+          return alreadyDone;
+        }
+
         const saved = await awardDailyChallenge(profile, xp);
         profileRef.current = saved;
 
@@ -172,13 +237,6 @@ export function useDailyChallenge() {
           leveledUp: saved.leveledUp,
         };
 
-        await recordChallengeCompletion(userId, {
-          date: today,
-          correctCount: correct,
-          totalCount: total,
-          xpAwarded: saved.xpEarned,
-          streakAfter: saved.streak,
-        });
         mirrorCloudCompletion(userId, reward);
 
         setState((prev) => ({

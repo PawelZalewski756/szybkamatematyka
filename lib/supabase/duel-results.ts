@@ -252,7 +252,7 @@ export async function recordDuelOutcome(
     });
     const dbNext = applyOutcomeToStats(dbStats, outcome);
 
-    const { error: updateError } = await supabase
+    const { data: updatedRow, error: updateError } = await supabase
       .from("profiles")
       .update({
         duel_played: dbNext.played,
@@ -261,7 +261,9 @@ export async function recordDuelOutcome(
         duel_draws: dbNext.draws,
         duel_rating: dbNext.rating,
       })
-      .eq("id", userId);
+      .eq("id", userId)
+      .select("duel_played")
+      .maybeSingle();
 
     if (updateError) {
       if (isPostgrestUndefinedColumnError(updateError as PostgrestError)) {
@@ -269,6 +271,16 @@ export async function recordDuelOutcome(
         return { stats: localNext, persisted: false };
       }
       console.warn("[szybka-matma] profiles duel update:", updateError);
+      return { stats: localNext, persisted: false };
+    }
+
+    // PostgREST nie zgłasza błędu, gdy UPDATE trafi 0 wierszy (brak profilu) -
+    // bez tego sprawdzenia UI meldowało „zapisane”, a ranking się nie zmieniał.
+    if (!updatedRow) {
+      console.warn(
+        "[szybka-matma] profiles duel update: brak wiersza profilu dla",
+        userId,
+      );
       return { stats: localNext, persisted: false };
     }
 

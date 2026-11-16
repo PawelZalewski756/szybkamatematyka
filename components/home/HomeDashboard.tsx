@@ -7,6 +7,7 @@ import { QuickTrial } from "@/components/home/QuickTrial";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
 import type { RecentTrainingTopic } from "@/lib/trening/recent-topic";
+import { loadRecentTrainingTopic } from "@/lib/trening/recent-topic";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { topicDisplayName } from "@/lib/trening/slugs";
 import { motion } from "framer-motion";
@@ -409,6 +410,8 @@ function ProductPreview() {
 
       if (cancelled || revision !== authRevision) return;
       if (!userId || !supabase) {
+        // Gość celowo widzi szybką próbę - lokalny „ostatni temat” jest tylko
+        // dla zalogowanych (patrz e2e: „gość nie widzi ostatniego tematu”).
         setRecentTopic(null);
         return;
       }
@@ -427,7 +430,10 @@ function ProductPreview() {
           visitedAt: Date.parse(latestSolved.solvedAt) || Date.now(),
         });
       } else {
-        setRecentTopic(null);
+        // Zadania z cache nie mają wiersza w public.tasks, więc zapytanie o
+        // ostatni rozwiązany temat nic nie zwraca. Lokalny zapis ostatnio
+        // odwiedzonego tematu jest wtedy jedynym sensownym fallbackiem.
+        setRecentTopic(loadRecentTrainingTopic(userId));
       }
     };
 

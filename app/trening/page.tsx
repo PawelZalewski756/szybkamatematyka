@@ -41,7 +41,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const taskTreeCache = new Map<ExamType, Promise<TaskTreeRow[]>>();
 const materialSummaryCache = new Map<ExamType, Promise<MaterialTopicSummary[]>>();
-const solvedTaskCache = new Map<string, Promise<Set<string>>>();
 
 function cachedTaskTree(examType: ExamType): Promise<TaskTreeRow[]> {
   const existing = taskTreeCache.get(examType);
@@ -69,19 +68,6 @@ function cachedMaterialSummaries(
       materialSummaryCache.delete(examType);
     }
     console.warn("[szybka-matma] fetchMaterialSummariesForExam:", error);
-  });
-  return request;
-}
-
-function cachedSolvedTaskIds(userId: string): Promise<Set<string>> {
-  const existing = solvedTaskCache.get(userId);
-  if (existing) return existing;
-
-  const request = fetchSolvedTaskIds(userId);
-  solvedTaskCache.set(userId, request);
-  request.catch((error) => {
-    if (solvedTaskCache.get(userId) === request) solvedTaskCache.delete(userId);
-    console.warn("[szybka-matma] fetchSolvedTaskIds:", error);
   });
   return request;
 }
@@ -885,7 +871,9 @@ export default function TreningPage() {
           } = await getSupabase().auth.getSession();
           if (!session?.user) return;
 
-          const solvedIds = await cachedSolvedTaskIds(session.user.id);
+          // Bez cache na poziomie modułu: po powrocie z areny lista musi być
+          // świeża, inaczej tematy zostają na 0/5 do przeładowania strony.
+          const solvedIds = await fetchSolvedTaskIds(session.user.id);
           if (requestId !== loadRequestRef.current) return;
 
           setExam(
