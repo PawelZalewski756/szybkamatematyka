@@ -318,6 +318,47 @@ function generateMaturaProcedural(showCorrect: boolean): Question {
   };
 }
 
+function generatePodstawowaProcedural(showCorrect: boolean): Question {
+  const kind = randomInt(0, 2);
+
+  if (kind === 0) {
+    const a = randomInt(1, 20);
+    const b = randomInt(1, 20);
+    const value = a + b;
+    const trap = value + randomInt(1, 3);
+    return {
+      equation: showCorrect
+        ? `$${a} + ${b} = ${value}$`
+        : `$${a} + ${b} = ${trap}$`,
+      isCorrect: showCorrect,
+    };
+  }
+
+  if (kind === 1) {
+    const a = randomInt(3, 20);
+    const b = randomInt(1, a - 1);
+    const value = a - b;
+    const trap = Math.max(0, value - randomInt(1, 3));
+    return {
+      equation: showCorrect
+        ? `$${a} - ${b} = ${value}$`
+        : `$${a} - ${b} = ${trap}$`,
+      isCorrect: showCorrect,
+    };
+  }
+
+  const a = randomInt(2, 10);
+  const b = randomInt(2, 10);
+  const value = a * b;
+  const trap = value + randomInt(1, 4);
+  return {
+    equation: showCorrect
+      ? `$${a} \\times ${b} = ${value}$`
+      : `$${a} \\times ${b} = ${trap}$`,
+    isCorrect: showCorrect,
+  };
+}
+
 function pickFromBank(
   bank: Record<string, readonly QuestionTemplate[]>,
   showCorrect: boolean,
@@ -331,7 +372,9 @@ export function generateQuestion(track: QuestionTrack): Question {
   const showCorrect = Math.random() < 0.5;
 
   if (track === "podstawowa") {
-    return pickFromBank(PODSTAWOWA_BANK, showCorrect);
+    return Math.random() < 0.45
+      ? generatePodstawowaProcedural(showCorrect)
+      : pickFromBank(PODSTAWOWA_BANK, showCorrect);
   }
 
   if (track === "egzamin-8-klasisty") {

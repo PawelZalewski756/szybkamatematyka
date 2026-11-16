@@ -24,15 +24,6 @@ const LOG_BANK: readonly QuestionTemplate[] = [
   { true: "$\\log_{3}(9) = 2$", false: "$\\log_{3}(9) = 3$" },
 ];
 
-const LOG_PAIRS = [
-  { base: 2, arg: 8, result: 3 },
-  { base: 2, arg: 16, result: 4 },
-  { base: 3, arg: 27, result: 3 },
-  { base: 5, arg: 25, result: 2 },
-  { base: 2, arg: 32, result: 5 },
-  { base: 4, arg: 16, result: 2 },
-] as const;
-
 function fromTemplate(
   template: QuestionTemplate,
   showCorrect: boolean,
@@ -43,19 +34,25 @@ function fromTemplate(
   };
 }
 
-function generateProcedural(showCorrect: boolean): Question {
-  const { base, arg, result } = pickRandom(LOG_PAIRS);
-  const correct = `$\\log_{${base}}(${arg}) = ${result}$`;
-  const trap = `$\\log_{${base}}(${arg}) = ${result + randomInt(1, 3)}$`;
-  return {
-    equation: showCorrect ? correct : trap,
-    isCorrect: showCorrect,
-  };
-}
-
 export function generateLogarytmyQuestion(): Question {
   const showCorrect = Math.random() < 0.5;
-  return Math.random() < 0.4
-    ? generateProcedural(showCorrect)
-    : fromTemplate(pickRandom(LOG_BANK), showCorrect);
+
+  // Większość pytań losujemy parametrycznie (baza × wykładnik), a bank
+  // zostawiamy jako uzupełnienie dla typowych przypadków.
+  if (Math.random() < 0.75) {
+    const base = randomInt(2, 5);
+    const exp = randomInt(1, 5);
+    const arg = base ** exp;
+    let trapValue = exp + randomInt(1, 2) * (Math.random() < 0.5 ? -1 : 1);
+    if (trapValue === exp || trapValue < 0) trapValue = exp + randomInt(1, 3);
+
+    return {
+      equation: showCorrect
+        ? `$\\log_{${base}}(${arg}) = ${exp}$`
+        : `$\\log_{${base}}(${arg}) = ${trapValue}$`,
+      isCorrect: showCorrect,
+    };
+  }
+
+  return fromTemplate(pickRandom(LOG_BANK), showCorrect);
 }

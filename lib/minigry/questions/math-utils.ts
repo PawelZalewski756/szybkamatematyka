@@ -38,8 +38,13 @@ export function buildNumericOptions(
   spread = 12,
 ): number[] {
   const options = new Set<number>([correct]);
+  // Przy wyniku ujemnym (np. liczba przeciwna) odrzucanie liczb < 0 potrafiło
+  // zapętlić generator na zawsze, bo żaden kandydat nie przechodził filtra.
+  const allowNegative = correct < 0;
+  const acceptable = (value: number) =>
+    value !== correct && (allowNegative || value >= 0);
 
-  const traps: number[] = [
+  const traps = [
     correct + 1,
     correct - 1,
     correct + 2,
@@ -48,18 +53,29 @@ export function buildNumericOptions(
     correct - 10,
     Math.round(correct * 1.1),
     Math.round(correct * 0.9),
-  ].filter((v) => v >= 0 && v !== correct);
+  ].filter(acceptable);
 
   for (const trap of traps) {
     if (options.size >= count) break;
     options.add(trap);
   }
 
-  while (options.size < count) {
+  let guard = 0;
+  while (options.size < count && guard < 200) {
+    guard += 1;
     const delta = randomInt(1, spread) * (Math.random() < 0.5 ? -1 : 1);
     const candidate = correct + delta;
-    if (candidate >= 0 && candidate !== correct) options.add(candidate);
+    if (acceptable(candidate)) options.add(candidate);
   }
+
+  // Ostateczna siatka wokół wyniku - gwarantuje wyjście z pętli.
+  for (let offset = 1; options.size < count && offset <= count + spread; offset += 1) {
+    for (const candidate of [correct + offset, correct - offset]) {
+      if (options.size >= count) break;
+      if (acceptable(candidate)) options.add(candidate);
+    }
+  }
+
   return shuffle([...options]);
 }
 

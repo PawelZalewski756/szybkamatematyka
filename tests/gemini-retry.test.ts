@@ -1,4 +1,8 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
+
+afterEach(() => {
+  vi.useRealTimers();
+});
 import {
   formatGeminiWaitLabel,
   getGeminiRetryWaitMs,
@@ -36,6 +40,9 @@ describe("getGeminiRetryWaitMs", () => {
   });
 
   it("ignores short retry hint when daily quota is exhausted", () => {
+    // Stała godzina, bo wynik zależy od czasu do północy czasu pacyficznego.
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-11-15T12:00:00.000Z"));
     const msg =
       '429 Quota exceeded GenerateRequestsPerDayPerProjectPerModel-FreeTier Please retry in 33s';
     expect(getGeminiRetryWaitMs(msg, 1)).toBeGreaterThan(30 * 60_000);

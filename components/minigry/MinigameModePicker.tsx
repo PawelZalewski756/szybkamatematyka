@@ -4,6 +4,11 @@ import { useLearningPath } from "@/components/LearningPathProvider";
 import { groupMinigames } from "@/components/minigry/minigame-groups";
 import { MINIGAME_GROUP_ICONS } from "@/components/minigry/minigame-group-icons";
 import {
+  MinigameGlyph,
+  getGameVisual,
+  type GameVisual,
+} from "@/components/minigry/minigame-visuals";
+import {
   getMinigamesForPath,
   type MinigameEntry,
 } from "@/lib/minigry/minigames-catalog";
@@ -12,33 +17,44 @@ import {
   modeDescription,
   type MinigamePlayMode,
 } from "@/lib/minigry/game-modes";
-import { Calculator, type LucideIcon } from "lucide-react";
 import { MINIGAME_MODE_HEADER_CLASS } from "@/lib/minigry/minigame-themes";
 import { learningPathLabel } from "@/lib/learning-path";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 function GamePickCard({
   game,
   mode,
-  Icon,
+  visual,
 }: {
   game: MinigameEntry;
   mode: MinigamePlayMode;
-  Icon: LucideIcon;
+  visual: GameVisual;
 }) {
   return (
     <Link
       href={`/minigry/${game.id}?mode=${mode}`}
-      className="card-raised group flex min-h-[160px] flex-col justify-between p-5 sm:min-h-[180px]"
+      className="card-raised group flex min-h-[170px] flex-col justify-between gap-4 p-5 transition-[border-color,transform] hover:-translate-y-0.5 hover:border-accent/45"
     >
-      <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/20 bg-accent/5 text-accent">
-        <Icon className="h-5 w-5" strokeWidth={1.8} aria-hidden />
+      <span className="flex items-start justify-between gap-3">
+        <MinigameGlyph visual={visual} size="card" />
+        <ArrowRight
+          className="mt-1 h-4 w-4 text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent"
+          aria-hidden
+        />
       </span>
-      <motion.div>
-        <h3 className="text-base font-bold text-foreground">{game.title}</h3>
-        <p className="mt-1 line-clamp-2 text-sm text-muted">{game.description}</p>
-      </motion.div>
+      <span>
+        <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-accent">
+          {visual.label}
+        </span>
+        <span className="mt-1 block text-base font-bold text-foreground">
+          {game.title}
+        </span>
+        <span className="mt-1 block line-clamp-2 text-sm leading-relaxed text-muted">
+          {game.description}
+        </span>
+      </span>
     </Link>
   );
 }
@@ -48,12 +64,8 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
   const config = getModeConfig(mode);
   const { recommended, other } = getMinigamesForPath(path);
   const pathLabel = learningPathLabel(path);
-  const games = [...recommended, ...other];
-  const iconByGameId = new Map<string, LucideIcon>();
-  for (const group of groupMinigames(games)) {
-    const Icon = MINIGAME_GROUP_ICONS[group.visual.icon];
-    for (const game of group.games) iconByGameId.set(game.id, Icon);
-  }
+  const recommendedGroups = groupMinigames(recommended);
+  const otherGroups = groupMinigames(other);
 
   return (
     <motion.div
@@ -91,31 +103,82 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
 
       <section className="mt-10">
         <h2 className="text-base font-semibold text-foreground">
-          Gry dla ścieżki{" "}
-          <span className="text-accent">{pathLabel}</span>
+          Gry dla ścieżki <span className="text-accent">{pathLabel}</span>
         </h2>
-        {games.length > 0 ? (
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {games.map((game, index) => (
-              <motion.div
-                key={game.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.03 * index }}
-              >
-                <GamePickCard
-                  game={game}
-                  mode={mode}
-                  Icon={iconByGameId.get(game.id) ?? Calculator}
-                />
-              </motion.div>
-            ))}
+
+        {recommendedGroups.length > 0 ? (
+          <div className="mt-5 space-y-8">
+            {recommendedGroups.map((group) => {
+              const GroupIcon = MINIGAME_GROUP_ICONS[group.visual.icon];
+              return (
+                <section key={group.id}>
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-accent/25 bg-accent/10 text-accent">
+                      <GroupIcon className="h-4 w-4" aria-hidden />
+                    </span>
+                    <h3 className="text-sm font-bold text-foreground">
+                      {group.title}
+                    </h3>
+                    <span className="text-xs text-muted">
+                      {group.games.length}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted">{group.description}</p>
+                  <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    {group.games.map((game, index) => (
+                      <motion.div
+                        key={game.id}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.02 * index }}
+                      >
+                        <GamePickCard
+                          game={game}
+                          mode={mode}
+                          visual={getGameVisual(game)}
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
           </div>
         ) : (
           <p className="mt-4 text-muted">
             Brak minigier - zmień ścieżkę w pasku u góry.
           </p>
         )}
+
+        {otherGroups.length > 0 ? (
+          <details className="mt-8 border-y border-surface-border bg-surface">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 marker:content-none">
+              <span className="text-sm font-semibold text-foreground">
+                Gry dla innych ścieżek
+              </span>
+              <span className="text-xs text-muted">{other.length} gier</span>
+            </summary>
+            <div className="space-y-6 border-t border-surface-border p-4">
+              {otherGroups.map((group) => (
+                <section key={group.id}>
+                  <h3 className="text-sm font-bold text-foreground">
+                    {group.title}
+                  </h3>
+                  <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {group.games.map((game) => (
+                      <GamePickCard
+                        key={game.id}
+                        game={game}
+                        mode={mode}
+                        visual={getGameVisual(game)}
+                      />
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          </details>
+        ) : null}
       </section>
     </motion.div>
   );

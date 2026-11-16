@@ -31,6 +31,8 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
   const pathLabel = learningPathLabel(path);
 
   const [phase, setPhase] = useState<MinigamePhase>("start");
+  const [countdown, setCountdown] = useState(0);
+  const [timerPaused, setTimerPaused] = useState(false);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(TIME_ATTACK_SECONDS);
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -113,7 +115,22 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
   }, [flash]);
 
   useEffect(() => {
-    if (!isPlaying) return;
+    if (countdown <= 0) return;
+
+    const timer = window.setTimeout(() => {
+      if (countdown === 1) {
+        setCountdown(0);
+        setPhase("playing");
+      } else {
+        setCountdown(countdown - 1);
+      }
+    }, 700);
+
+    return () => window.clearTimeout(timer);
+  }, [countdown]);
+
+  useEffect(() => {
+    if (!isPlaying || timerPaused) return;
 
     if (mode === "time_attack") {
       const timer = window.setInterval(() => {
@@ -136,7 +153,7 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     }
 
     return undefined;
-  }, [isPlaying, mode]);
+  }, [isPlaying, mode, timerPaused]);
 
   // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const startGame = useCallback(() => {
@@ -149,7 +166,8 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     setTimeLeft(TIME_ATTACK_SECONDS);
     setElapsedTime(0);
     setQuestionsAnswered(0);
-    setPhase("playing");
+    setTimerPaused(false);
+    setCountdown(3);
     setFlash("none");
     setScoreAnimating(false);
     setShake(false);
@@ -157,7 +175,10 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     setXpEarned(0);
   }, []);
 
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const returnToStart = useCallback(() => {
+    setCountdown(0);
+    setTimerPaused(false);
     setPhase("start");
   }, []);
 
@@ -238,6 +259,9 @@ export function useMinigameSession(mode: MinigamePlayMode = "time_attack") {
     questionTrack,
     questionTrackLabel: questionTrackLabel(questionTrack),
     phase,
+    countdown,
+    timerPaused,
+    setTimerPaused,
     score,
     timeLeft,
     elapsedTime,

@@ -12,6 +12,12 @@ import {
   type MinigameEntry,
 } from "@/lib/minigry/minigames-catalog";
 import {
+  MinigameGlyph,
+  VISUAL_TONES,
+  getGameVisual,
+  type VisualTone,
+} from "@/components/minigry/minigame-visuals";
+import {
   MINIGAME_MODES,
   type MinigamePlayMode,
 } from "@/lib/minigry/game-modes";
@@ -21,27 +27,14 @@ import {
   ArrowRight,
   Calculator,
   ChevronDown,
-  Circle,
-  Divide,
-  Equal,
-  Grid2X2,
   Layers,
   LineChart,
-  Minus,
-  MoveHorizontal,
-  Percent,
-  Plus,
   Radical,
-  Ruler,
-  Scale,
   ShieldCheck,
   Sigma,
-  Square,
-  Target,
   Timer,
   Triangle,
   Trophy,
-  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -53,218 +46,6 @@ function gameCountLabel(count: number): string {
   return `${count} gier`;
 }
 
-const SHARED_VISUAL_TONE = {
-  panel: "border-accent/25 bg-accent/10",
-  text: "text-accent",
-  strong: "bg-accent",
-} as const;
-
-const VISUAL_TONES = {
-  amber: SHARED_VISUAL_TONE,
-  sky: SHARED_VISUAL_TONE,
-  violet: SHARED_VISUAL_TONE,
-  rose: SHARED_VISUAL_TONE,
-  emerald: SHARED_VISUAL_TONE,
-  cyan: SHARED_VISUAL_TONE,
-  orange: SHARED_VISUAL_TONE,
-  indigo: SHARED_VISUAL_TONE,
-  fuchsia: SHARED_VISUAL_TONE,
-  lime: SHARED_VISUAL_TONE,
-  teal: SHARED_VISUAL_TONE,
-  slate: SHARED_VISUAL_TONE,
-} as const;
-
-type VisualTone = keyof typeof VISUAL_TONES;
-
-type GameVisual = {
-  icon: LucideIcon;
-  label: string;
-  tone: VisualTone;
-};
-
-const GAME_VISUALS: Record<string, GameVisual> = {
-  "prawda-falsz": {
-    icon: Scale,
-    label: "Prawda/fałsz",
-    tone: "violet",
-  },
-  mnozenie: {
-    icon: Calculator,
-    label: "Tabliczka",
-    tone: "amber",
-  },
-  dodawanie: {
-    icon: Plus,
-    label: "Sumowanie",
-    tone: "orange",
-  },
-  odejmowanie: {
-    icon: Minus,
-    label: "Różnica",
-    tone: "rose",
-  },
-  dzielenie: {
-    icon: Divide,
-    label: "Iloraz",
-    tone: "sky",
-  },
-  porownaj: {
-    icon: Scale,
-    label: "Relacje",
-    tone: "indigo",
-  },
-  ulamki: {
-    icon: Grid2X2,
-    label: "Ułamki",
-    tone: "cyan",
-  },
-  procenty: {
-    icon: Percent,
-    label: "Procenty",
-    tone: "lime",
-  },
-  potegi: {
-    icon: Zap,
-    label: "Potęgi",
-    tone: "violet",
-  },
-  pierwiastki: {
-    icon: Radical,
-    label: "Pierwiastki",
-    tone: "teal",
-  },
-  rownania: {
-    icon: Equal,
-    label: "Równania",
-    tone: "fuchsia",
-  },
-  ciag: {
-    icon: MoveHorizontal,
-    label: "Ciągi",
-    tone: "emerald",
-  },
-  nawiasy: {
-    icon: Calculator,
-    label: "Kolejność",
-    tone: "orange",
-  },
-  funkcje: {
-    icon: LineChart,
-    label: "Funkcje",
-    tone: "emerald",
-  },
-  wzory: {
-    icon: Equal,
-    label: "Wzory",
-    tone: "fuchsia",
-  },
-  logarytmy: {
-    icon: Target,
-    label: "Logarytmy",
-    tone: "indigo",
-  },
-  pole: {
-    icon: Square,
-    label: "Pola",
-    tone: "rose",
-  },
-  obwod: {
-    icon: Ruler,
-    label: "Obwody",
-    tone: "sky",
-  },
-  nwd: {
-    icon: Grid2X2,
-    label: "Dzielniki",
-    tone: "amber",
-  },
-  zaokraglenie: {
-    icon: Circle,
-    label: "Przybliżenia",
-    tone: "teal",
-  },
-  przeciwna: {
-    icon: MoveHorizontal,
-    label: "Oś liczbowa",
-    tone: "indigo",
-  },
-  "potegi-10": {
-    icon: Zap,
-    label: "Dziesiątki",
-    tone: "amber",
-  },
-  trojkat: {
-    icon: Triangle,
-    label: "Kąty",
-    tone: "rose",
-  },
-  "ulamki-plus": {
-    icon: Plus,
-    label: "Ułamki",
-    tone: "cyan",
-  },
-  sinusy: {
-    icon: LineChart,
-    label: "Sinus",
-    tone: "sky",
-  },
-  kosinusy: {
-    icon: LineChart,
-    label: "Kosinus",
-    tone: "violet",
-  },
-  nww: {
-    icon: Grid2X2,
-    label: "Wielokrotności",
-    tone: "lime",
-  },
-  kwadrat: {
-    icon: Square,
-    label: "Kwadraty",
-    tone: "orange",
-  },
-  modulo: {
-    icon: Divide,
-    label: "Reszta",
-    tone: "fuchsia",
-  },
-  "wartosc-bezwzgledna": {
-    icon: MoveHorizontal,
-    label: "Odległość",
-    tone: "teal",
-  },
-  "ulamki-minus": {
-    icon: Minus,
-    label: "Ułamki",
-    tone: "orange",
-  },
-  "pole-kola": {
-    icon: Circle,
-    label: "Koło",
-    tone: "rose",
-  },
-  srednia: {
-    icon: Sigma,
-    label: "Statystyka",
-    tone: "emerald",
-  },
-  "procent-odwrotny": {
-    icon: Percent,
-    label: "Proporcje",
-    tone: "lime",
-  },
-};
-
-const DEFAULT_GAME_VISUAL: GameVisual = {
-  icon: Calculator,
-  label: "Minigra",
-  tone: "slate",
-};
-
-function getGameVisual(game: MinigameEntry): GameVisual {
-  return GAME_VISUALS[game.id] ?? DEFAULT_GAME_VISUAL;
-}
-
 const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
   calculator: Calculator,
   sigma: Sigma,
@@ -273,34 +54,6 @@ const GROUP_ICONS: Record<MinigameGroupVisual["icon"], LucideIcon> = {
   "line-chart": LineChart,
   layers: Layers,
 };
-
-const GAME_VISUAL_SIZES = {
-  card: "h-12 w-12 rounded-xl",
-  hero: "h-14 w-14 rounded-xl",
-} as const;
-
-function GameVisual({
-  visual,
-  size,
-}: {
-  visual: GameVisual;
-  size: keyof typeof GAME_VISUAL_SIZES;
-}) {
-  const Icon = visual.icon;
-  const tone = VISUAL_TONES[visual.tone];
-
-  return (
-    <span
-      className={`relative isolate flex shrink-0 items-center justify-center overflow-hidden border ${tone.panel} ${GAME_VISUAL_SIZES[size]}`}
-      aria-hidden
-    >
-      <Icon
-        className={`${size === "hero" ? "h-6 w-6" : "h-5 w-5"} ${tone.text}`}
-        strokeWidth={1.8}
-      />
-    </span>
-  );
-}
 
 const MODE_VISUALS: Record<
   MinigamePlayMode,
@@ -399,7 +152,7 @@ function RecommendedStart({
     >
       <span className="relative flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center">
         <span className="flex shrink-0 items-center gap-3">
-          <GameVisual visual={visual} size="hero" />
+          <MinigameGlyph visual={visual} size="hero" />
           <span className={`hidden text-xs font-bold uppercase tracking-[0.16em] sm:block lg:hidden ${tone.text}`}>
             {visual.label}
           </span>
@@ -442,7 +195,7 @@ function MinigameCard({ game }: { game: MinigameEntry }) {
       data-testid="minigame-game-card"
       className="group flex min-h-[144px] overflow-hidden rounded-2xl border border-surface-border bg-surface transition-[border-color,background-color,transform] hover:-translate-y-0.5 hover:border-accent/45 hover:bg-surface-hover"
     >
-      <GameVisual visual={visual} size="card" />
+      <MinigameGlyph visual={visual} size="card" />
       <span className="flex min-w-0 flex-1 flex-col justify-between gap-3 p-4">
         <span className="min-w-0">
           <span className="flex items-start justify-between gap-2">

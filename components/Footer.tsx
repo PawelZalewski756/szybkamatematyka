@@ -10,7 +10,8 @@ import { SITE_NAME } from "@/lib/seo/site";
 export function Footer() {
   const pathname = usePathname();
 
-  if (pathname === "/") return null;
+  // Minigry to pełnoekranowa rozgrywka - stopka z linkami tylko przeszkadza.
+  if (pathname === "/" || pathname.startsWith("/minigry")) return null;
 
   return (
     <footer className="mt-auto w-full border-t border-surface-border pb-[calc(4rem+env(safe-area-inset-bottom,0px))] pt-6 lg:pb-6">
