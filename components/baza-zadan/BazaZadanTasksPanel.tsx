@@ -3,7 +3,6 @@
 import { TaskCard } from "@/components/baza-zadan/TaskCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { getTasksForPath } from "@/lib/baza-zadan/catalog";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -13,7 +12,12 @@ import {
   type TaskCategoryGroupId,
 } from "@/lib/baza-zadan/sections";
 import { sortTasksForDisplay } from "@/lib/baza-zadan/task-order";
-import type { TaskCategory, TaskDifficulty } from "@/lib/baza-zadan/types";
+import type {
+  TaskCategory,
+  TaskDifficulty,
+  TaskForClient,
+} from "@/lib/baza-zadan/types";
+import { matchesLearningPath } from "@/lib/learning-path";
 import {
   ArrowLeft,
   ChevronRight,
@@ -63,7 +67,7 @@ function FilterChip({
   );
 }
 
-export function BazaZadanTasksPanel() {
+export function BazaZadanTasksPanel({ tasks: catalogTasks }: { tasks: TaskForClient[] }) {
   const { path } = useLearningPath();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
@@ -74,7 +78,10 @@ export function BazaZadanTasksPanel() {
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const deferredSearch = useDeferredValue(search);
-  const allTasks = useMemo(() => getTasksForPath(path), [path]);
+  const allTasks = useMemo(
+    () => catalogTasks.filter((task) => matchesLearningPath(path, task.forPaths)),
+    [catalogTasks, path],
+  );
   const catalogGroups = useMemo(
     () =>
       TASK_CATEGORY_GROUPS.map((group) => ({
@@ -91,24 +98,26 @@ export function BazaZadanTasksPanel() {
 
   const tasks = useMemo(() => {
     const groupCategories = selectedGroupDefinition?.categories;
+    const query = deferredSearch.trim().toLowerCase();
 
-    const filtered = getTasksForPath(path, {
-      difficulty,
-      search: deferredSearch,
-    }).filter((task) => {
+    const filtered = allTasks.filter((task) => {
+      if (difficulty !== "all" && task.difficulty !== difficulty) return false;
       if (category !== "all" && task.category !== category) return false;
       if (groupCategories && !groupCategories.includes(task.category)) {
         return false;
       }
-      return true;
+      if (!query) return true;
+      return `${task.title} ${task.prompt} ${task.category}`
+        .toLowerCase()
+        .includes(query);
     });
 
     return sortTasksForDisplay(filtered);
   }, [
+    allTasks,
     category,
     deferredSearch,
     difficulty,
-    path,
     selectedGroupDefinition,
   ]);
 

@@ -371,7 +371,9 @@ export function TaskSolverView({
               !isPro ? (
                 <ProGate featureLabel="Rozwiązania krok po kroku">{null}</ProGate>
               ) : solutionLoading ? (
-                <p className="mt-2 text-sm text-muted">Ładowanie rozwiązania…</p>
+                <p className="mt-2 text-sm text-muted" role="status">
+                  Ładowanie rozwiązania…
+                </p>
               ) : solutionError ? (
                 <p className="mt-2 text-sm text-danger">
                   {solutionError}{" "}

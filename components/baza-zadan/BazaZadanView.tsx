@@ -5,7 +5,6 @@ import { BazaZadanTasksPanel } from "@/components/baza-zadan/BazaZadanTasksPanel
 import { BazaZadanTreningPanel } from "@/components/baza-zadan/BazaZadanTreningPanel";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { SchoolLevelToggle } from "@/components/SchoolLevelToggle";
-import { getTaskStats, getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
 import { groupCmsTasksByArkusz } from "@/lib/baza-zadan/cke/group-cms-tasks";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import {
@@ -16,12 +15,22 @@ import {
   formatSupabaseErrorForUser,
   isSchemaMissingError,
 } from "@/lib/supabase/errors";
+import type { TaskForClient, ExamSheet } from "@/lib/baza-zadan/types";
+import type { LearningPath } from "@/lib/learning-path";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export type BazaTab = "zadania" | "arkusze" | "trening";
 
+type BazaZadanStats = {
+  tasks: number;
+  sheets: number;
+};
+
 type BazaZadanViewProps = {
+  tasks: TaskForClient[];
+  stats: Record<LearningPath, BazaZadanStats>;
+  sheetsByPath: Record<LearningPath, ExamSheet[]>;
   cmsTasks?: ZadanieWithArkusz[];
   schemaMissing?: boolean;
   cmsNote?: string | null;
@@ -72,6 +81,9 @@ function polishCount(
 }
 
 export function BazaZadanView({
+  tasks,
+  stats,
+  sheetsByPath,
   cmsTasks: initialCmsTasks = [],
   schemaMissing = false,
   cmsNote: initialCmsNote = null,
@@ -146,8 +158,8 @@ export function BazaZadanView({
     tab === "arkusze" &&
     cmsLoadState === "idle" &&
     isSupabaseConfigured();
-  const taskCount = getTaskStats(path).totalTasks;
-  const sheetCount = getExamSheetsForPath(path).length;
+  const taskCount = stats[path].tasks;
+  const sheetCount = stats[path].sheets;
   const cmsArkuszCount = useMemo(
     () => groupCmsTasksByArkusz(cmsTasks).length,
     [cmsTasks],
@@ -280,7 +292,7 @@ export function BazaZadanView({
         role="tabpanel"
         aria-labelledby={`baza-tab-${tab}`}
       >
-        {tab === "zadania" && <BazaZadanTasksPanel />}
+        {tab === "zadania" && <BazaZadanTasksPanel tasks={tasks} />}
         {tab === "arkusze" && (
           cmsLoading ? (
             <p className="rounded-xl border border-surface-border bg-surface px-4 py-3 text-sm text-muted">
@@ -294,7 +306,9 @@ export function BazaZadanView({
             />
           )
         )}
-        {tab === "trening" && <BazaZadanTreningPanel />}
+        {tab === "trening" && (
+          <BazaZadanTreningPanel sheets={sheetsByPath[path]} />
+        )}
       </div>
     </div>
   );

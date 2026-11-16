@@ -237,7 +237,10 @@ export function Navbar() {
     authReady && !subscriptionLoading && Boolean(user && subscriptionIsPro);
 
   return (
-    <header className="sticky top-0 z-[100] w-full border-b border-surface-border/80 bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md">
+    <header
+      className="sticky top-0 z-[100] w-full border-b border-surface-border/80 bg-surface/95 pt-[max(env(safe-area-inset-top,0px),0px)] backdrop-blur-md"
+      data-print-hide
+    >
       <nav
         className="mx-auto flex h-14 w-full max-w-[1920px] items-center gap-2 overflow-hidden px-3 sm:gap-3 sm:px-4 lg:h-[3.75rem] lg:gap-5 lg:px-10 xl:px-12 2xl:px-16"
         aria-label="Główna nawigacja"

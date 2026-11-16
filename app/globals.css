@@ -503,3 +503,29 @@ body {
 /* Rysunki CKE: ciemny wariant domyslnie, oryginal w jasnym motywie. */
 html[data-theme="light"] .fig-dark { display: none; }
 html[data-theme="light"] .fig-light { display: block; }
+
+@media print {
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  main,
+  .page-container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  [class*="backdrop-blur"] {
+    background: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .text-muted {
+    color: #333 !important;
+  }
+}

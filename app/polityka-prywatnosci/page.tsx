@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { InfoPageShell, InfoSection } from "@/components/info/InfoPageShell";
+import { OperatorDetails } from "@/components/info/OperatorDetails";
 import {
   BRAND_DOMAIN,
   BRAND_NAME,
@@ -36,6 +37,8 @@ export default function PolitykaPrywatnosciPage() {
           .
         </p>
       </InfoSection>
+
+      <OperatorDetails />
 
       <InfoSection title="2. Jakie dane zbieramy">
         <ul className="list-disc space-y-1 pl-5">
@@ -96,6 +99,16 @@ export default function PolitykaPrywatnosciPage() {
             cookies, a zgodę możesz w każdej chwili wycofać.
           </li>
         </ul>
+      </InfoSection>
+
+      <InfoSection title="3a. Osoby niepełnoletnie">
+        <p>
+          Serwis jest przeznaczony także dla uczniów poniżej 16 lat. W takim
+          przypadku korzystanie z płatnych funkcji wymaga zgody opiekuna
+          prawnego. Przy rejestracji potwierdzasz wiek lub zgodę opiekuna, a
+          opiekun może skontaktować się z nami pod adresem {CONTACT_EMAIL} w
+          sprawie dostępu, poprawienia lub usunięcia danych.
+        </p>
       </InfoSection>
 
       <InfoSection title="4. Odbiorcy danych">

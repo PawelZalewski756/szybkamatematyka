@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { after } from "next/server";
 import { deliverSignupNotification } from "@/lib/telegram/signup-delivery";
+import { sendWelcomeEmail } from "@/lib/email/welcome";
 import { validateAuthInput, validateNick } from "@/lib/auth-errors";
 
 export const runtime = "nodejs";
@@ -50,10 +51,21 @@ export async function POST(request: Request): Promise<Response> {
   const nick = typeof body.nick === "string" ? body.nick : "";
   const schoolLevel =
     typeof body.schoolLevel === "string" ? body.schoolLevel.slice(0, 40) : null;
+  const termsAccepted = body.termsAccepted === true;
+  const ageConfirmed = body.ageConfirmed === true;
 
   const validationError = validateNick(nick) ?? validateAuthInput(email, password);
   if (validationError) {
     return Response.json({ error: validationError }, { status: 400, headers: HEADERS });
+  }
+  if (!termsAccepted || !ageConfirmed) {
+    return Response.json(
+      {
+        error:
+          "Aby założyć konto, zaakceptuj regulamin i politykę prywatności oraz potwierdź wiek lub zgodę opiekuna.",
+      },
+      { status: 400, headers: HEADERS },
+    );
   }
 
   const { data, error } = await supabase.auth.signUp({
@@ -61,7 +73,13 @@ export async function POST(request: Request): Promise<Response> {
     password,
     options: {
       emailRedirectTo: `${siteUrl(request)}/login`,
-      data: { nick, nickname: nick, school_level: schoolLevel || null },
+      data: {
+        nick,
+        nickname: nick,
+        school_level: schoolLevel || null,
+        terms_accepted_at: new Date().toISOString(),
+        age_confirmed: true,
+      },
     },
   });
 
@@ -103,18 +121,41 @@ export async function POST(request: Request): Promise<Response> {
     user_metadata: data.user.user_metadata ?? null,
   };
   after(async () => {
-    try {
-      const result = await deliverSignupNotification(newUserId, {
-        user: newUser,
-      });
-      if (result.status >= 400) {
-        console.error(
-          "[telegram-signup] Powiadomienie nie zostało wysłane:",
-          result.body,
-        );
-      }
-    } catch (notificationError) {
-      console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
+    const metadata = newUser.user_metadata ?? {};
+    const nick =
+      typeof metadata.nick === "string"
+        ? metadata.nick
+        : typeof metadata.nickname === "string"
+          ? metadata.nickname
+          : "";
+
+    const [notification, welcome] = await Promise.all([
+      deliverSignupNotification(newUserId, { user: newUser }).catch(
+        (notificationError) => {
+          console.error(
+            "[telegram-signup] Powiadomienie nie zostało wysłane:",
+            notificationError,
+          );
+          return null;
+        },
+      ),
+      newUser.email
+        ? sendWelcomeEmail({
+            to: newUser.email,
+            nick,
+            siteUrl: siteUrl(request),
+          })
+        : Promise.resolve({ ok: false as const, error: "missing recipient" }),
+    ]);
+
+    if (notification && notification.status >= 400) {
+      console.error(
+        "[telegram-signup] Powiadomienie nie zostało wysłane:",
+        notification.body,
+      );
+    }
+    if (!welcome.ok && welcome.error !== "not configured") {
+      console.error("[welcome-email] Wysyłka nie udała się:", welcome.error);
     }
   });
 

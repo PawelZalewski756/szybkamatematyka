@@ -123,8 +123,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Providers>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[300] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-on-accent"
+          >
+            Przejdź do treści
+          </a>
           <Navbar />
-          <main className="mx-auto flex w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16">
+          <main
+            id="main-content"
+            tabIndex={-1}
+            className="mx-auto flex w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16"
+          >
             {children}
           </main>
           <Footer />

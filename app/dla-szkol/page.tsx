@@ -84,6 +84,12 @@ export default function DlaSzkolPage() {
             Wypróbuj generator
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
+          <Link
+            href="/dla-szkol/panel"
+            className="rounded-full border border-surface-border bg-surface px-5 py-3 text-sm font-bold text-foreground transition hover:border-accent/50 hover:text-accent"
+          >
+            Panel nauczyciela
+          </Link>
           <a
             href={mailto}
             className="rounded-full border border-accent/35 bg-accent/10 px-5 py-3 text-sm font-bold text-accent transition hover:border-accent/60"

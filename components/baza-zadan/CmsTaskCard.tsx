@@ -6,10 +6,11 @@ import { ProGate } from "@/components/subscription/ProGate";
 import { formatArkuszLabel } from "@/lib/baza-zadan/arkusz-format";
 import { TYP_EGZAMINU_LABELS } from "@/lib/baza-zadan/dzialy";
 import { isSolutionPlaceholder } from "@/lib/baza-zadan/solution-content";
-import { canViewFullSolutions } from "@/lib/subscription/content-limits";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import type { ZadanieWithArkusz } from "@/lib/supabase/baza-zadan";
+import { fetchCmsSolution } from "@/lib/trening/task-assist-client";
 import { AnimatePresence, motion } from "framer-motion";
+import { Loader2 } from "lucide-react";
 import { useState } from "react";
 
 type CmsTaskCardProps = {
@@ -28,9 +29,11 @@ function SolutionPendingNotice() {
 
 export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) {
   const [showSolution, setShowSolution] = useState(false);
+  const [solution, setSolution] = useState<string | null>(null);
+  const [solutionLoading, setSolutionLoading] = useState(false);
+  const [solutionError, setSolutionError] = useState<string | null>(null);
   const { isPro } = useSubscription();
   const arkusz = zadanie.arkusz;
-  const solutionPending = isSolutionPlaceholder(zadanie.rozwiazanie);
   const isArkuszView = context === "arkusz";
 
   if (!arkusz?.typ) {
@@ -42,6 +45,27 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
     arkusz.typ === "matura"
       ? "border-accent/40 bg-accent/15 text-accent"
       : "border-surface-border bg-surface-hover text-muted";
+
+  async function loadSolution() {
+    if (!isPro || solution !== null || solutionLoading) return;
+    setSolutionLoading(true);
+    setSolutionError(null);
+    try {
+      setSolution(await fetchCmsSolution(zadanie.id));
+    } catch (error) {
+      setSolutionError(
+        error instanceof Error ? error.message : "Nie udało się pobrać rozwiązania.",
+      );
+    } finally {
+      setSolutionLoading(false);
+    }
+  }
+
+  function toggleSolution() {
+    const next = !showSolution;
+    setShowSolution(next);
+    if (next && isPro) void loadSolution();
+  }
 
   return (
     <motion.article
@@ -74,7 +98,7 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
 
         <button
           type="button"
-          onClick={() => setShowSolution((v) => !v)}
+          onClick={toggleSolution}
           className={`mt-5 rounded-xl px-4 py-2.5 text-sm font-bold transition-all active:scale-[0.98] ${
             showSolution
               ? "border border-surface-border bg-surface-hover text-muted"
@@ -95,19 +119,41 @@ export function CmsTaskCard({ zadanie, context = "catalog" }: CmsTaskCardProps) 
               className="overflow-hidden"
             >
               <div className="mt-4 border-l-2 border-success/40 pl-4">
-                {solutionPending ? (
+                {!isPro ? (
+                  <ProGate featureLabel="Pełne rozwiązania arkuszy CKE">
+                    {null}
+                  </ProGate>
+                ) : solutionLoading ? (
+                  <p className="flex items-center gap-2 text-sm text-muted" role="status">
+                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                    Ładowanie rozwiązania…
+                  </p>
+                ) : solutionError ? (
+                  <p className="text-sm text-danger">
+                    {solutionError}{" "}
+                    <button
+                      type="button"
+                      onClick={() => void loadSolution()}
+                      className="font-bold underline"
+                    >
+                      Spróbuj ponownie
+                    </button>
+                  </p>
+                ) : solution === null ? (
+                  <button
+                    type="button"
+                    onClick={() => void loadSolution()}
+                    className="rounded-xl border border-accent/40 bg-accent/10 px-3 py-2 text-sm font-bold text-accent transition hover:bg-accent/15"
+                  >
+                    Pobierz rozwiązanie
+                  </button>
+                ) : isSolutionPlaceholder(solution) ? (
                   <>
-                    <p className="text-overline text-accent">
-                      Wkrótce
-                    </p>
+                    <p className="text-overline text-accent">Wkrótce</p>
                     <SolutionPendingNotice />
                   </>
-                ) : canViewFullSolutions(isPro) ? (
-                  <SolutionDisplay raw={zadanie.rozwiazanie} />
                 ) : (
-                  <ProGate featureLabel="Pełne rozwiązania arkuszy CKE">
-                    <SolutionDisplay raw={zadanie.rozwiazanie} />
-                  </ProGate>
+                  <SolutionDisplay raw={solution} />
                 )}
               </div>
             </motion.div>

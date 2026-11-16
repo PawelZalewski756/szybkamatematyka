@@ -1,6 +1,5 @@
 import { PrintArchiveSheet } from "@/components/arkusze/PrintArchiveSheet";
 import { formatArkuszLabel } from "@/lib/baza-zadan/arkusz-format";
-import { formatSolutionForDisplay } from "@/lib/gemini/format-solution";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchZadaniaSafe } from "@/lib/supabase/baza-zadan";
 import type { Metadata } from "next";
@@ -45,7 +44,7 @@ export default async function ArkuszCkePrintPage({
         choices: [],
         open: true,
         correctLetter: null,
-        explanation: formatSolutionForDisplay(task.rozwiazanie),
+        explanation: "",
         steps: [],
       }))}
       initialKey={klucz === "1"}
