@@ -7,7 +7,7 @@ import {
   classLabel,
   gradeTable,
 } from "@/lib/sprawdziany/sheet";
-import type { SheetTask } from "@/lib/sprawdziany/types";
+import type { Sheet, SheetTask } from "@/lib/sprawdziany/types";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo } from "react";
@@ -135,25 +135,109 @@ function KeyTask({ task }: { task: SheetTask }) {
   );
 }
 
+function SheetArticle({
+  sheet,
+  breakBefore,
+}: {
+  sheet: Sheet;
+  breakBefore: boolean;
+}) {
+  return (
+    <article
+      className={`mx-auto max-w-3xl space-y-6 bg-white p-8 text-black print:max-w-none print:p-0 ${
+        breakBefore ? "break-before-page print:mt-0" : ""
+      }`}
+    >
+      <header className="border-b-2 border-black pb-3">
+        <h1 className="text-xl font-bold">Sprawdzian: {sheet.title}</h1>
+        <p className="text-sm">
+          {classLabel(sheet.schoolClass)} · grupa {sheet.group} · czas{" "}
+          {sheet.durationMin} min · maks. {sheet.maxPoints} pkt
+        </p>
+        <div className="mt-3 flex gap-8 text-sm">
+          <span className="flex-1 border-b border-black">Imię i nazwisko:</span>
+          <span className="w-40 border-b border-black">Data:</span>
+          <span className="w-32 border-b border-black">Ocena:</span>
+        </div>
+      </header>
+
+      {sheet.tasks.map((t) => (
+        <PrintTask key={t.id} task={t} />
+      ))}
+    </article>
+  );
+}
+
+function KeyArticle({ sheet }: { sheet: Sheet }) {
+  return (
+    <article className="mx-auto mt-6 max-w-3xl space-y-4 break-before-page bg-white p-8 text-black print:mt-0 print:max-w-none print:p-0">
+      <header className="border-b-2 border-black pb-3">
+        <h1 className="text-xl font-bold">
+          Klucz odpowiedzi: {sheet.title}
+        </h1>
+        <p className="text-sm">
+          {classLabel(sheet.schoolClass)} · grupa {sheet.group} · maks.{" "}
+          {sheet.maxPoints} pkt
+        </p>
+      </header>
+      <table className="w-full border-collapse text-sm">
+        <thead>
+          <tr>
+            <th className="border border-neutral-500 p-1 text-left">Ocena</th>
+            {gradeTable(sheet.maxPoints).map((g) => (
+              <th key={g.value} className="border border-neutral-500 p-1">
+                {g.value}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-neutral-500 p-1">Od (pkt)</td>
+            {gradeTable(sheet.maxPoints).map((g) => (
+              <td
+                key={g.value}
+                className="border border-neutral-500 p-1 text-center"
+              >
+                {g.minPoints}
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+      {sheet.tasks.map((t) => (
+        <KeyTask key={t.id} task={t} />
+      ))}
+    </article>
+  );
+}
+
 export function PrintSheet() {
   const params = useSearchParams();
   const chapterId = params.get("dzial") ?? "";
-  const group = params.get("grupa") === "B" ? "B" : "A";
+  const requestedGroup = params.get("grupa");
+  const groups: Array<"A" | "B"> =
+    requestedGroup === "AB" ? ["A", "B"] : requestedGroup === "B" ? ["B"] : ["A"];
   const seed = Number(params.get("seed")) || 1;
   const withKey = params.get("klucz") === "1";
 
-  const sheet = useMemo(
-    () => buildSheet({ chapterId, group, seed }),
-    [chapterId, group, seed],
+  const sheets = useMemo(
+    () =>
+      groups
+        .map((group) => buildSheet({ chapterId, group, seed }))
+        .filter((sheet): sheet is Sheet => Boolean(sheet)),
+    // `groups` jest odtwarzane przy każdym renderze - zależymy od wartości z URL.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [chapterId, requestedGroup, seed],
   );
 
   useEffect(() => {
-    if (!sheet) return;
+    if (sheets.length === 0) return;
     const id = window.setTimeout(() => window.print(), 600);
     return () => window.clearTimeout(id);
-  }, [sheet]);
+  }, [sheets.length]);
 
-  if (!sheet) {
+  if (sheets.length === 0) {
     return (
       <div className="page-container py-10">
         <p className="text-foreground">Nie znaleziono sprawdzianu.</p>
@@ -166,7 +250,7 @@ export function PrintSheet() {
 
   return (
     <div className="min-h-screen bg-neutral-200 py-6 print:bg-white print:py-0">
-      <style>{`@media print { header, footer, nav { display: none !important; } @page { margin: 15mm; } }`}</style>
+      <style>{`@media print { header.sticky, footer.mt-auto, nav.fixed { display: none !important; } @page { margin: 15mm; } }`}</style>
       <div className="mx-auto mb-4 flex max-w-3xl items-center justify-between gap-3 px-4 print:hidden">
         <Link href="/sprawdziany" className="text-sm text-neutral-800 underline">
           Wróć do sprawdzianów
@@ -180,68 +264,12 @@ export function PrintSheet() {
         </button>
       </div>
 
-      <article className="mx-auto max-w-3xl space-y-6 bg-white p-8 text-black print:max-w-none print:p-0">
-        <header className="border-b-2 border-black pb-3">
-          <h1 className="text-xl font-bold">
-            Sprawdzian: {sheet.title}
-          </h1>
-          <p className="text-sm">
-            {classLabel(sheet.schoolClass)} · grupa {sheet.group} · czas{" "}
-            {sheet.durationMin} min · maks. {sheet.maxPoints} pkt
-          </p>
-          <div className="mt-3 flex gap-8 text-sm">
-            <span className="flex-1 border-b border-black">Imię i nazwisko:</span>
-            <span className="w-40 border-b border-black">Data:</span>
-            <span className="w-32 border-b border-black">Ocena:</span>
-          </div>
-        </header>
-
-        {sheet.tasks.map((t) => (
-          <PrintTask key={t.id} task={t} />
-        ))}
-      </article>
-
-      {withKey && (
-        <article className="mx-auto mt-6 max-w-3xl space-y-4 break-before-page bg-white p-8 text-black print:mt-0 print:max-w-none print:p-0">
-          <header className="border-b-2 border-black pb-3">
-            <h1 className="text-xl font-bold">
-              Klucz odpowiedzi: {sheet.title}
-            </h1>
-            <p className="text-sm">
-              {classLabel(sheet.schoolClass)} · grupa {sheet.group} · maks.{" "}
-              {sheet.maxPoints} pkt
-            </p>
-          </header>
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr>
-                <th className="border border-neutral-500 p-1 text-left">Ocena</th>
-                {gradeTable(sheet.maxPoints).map((g) => (
-                  <th key={g.value} className="border border-neutral-500 p-1">
-                    {g.value}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-neutral-500 p-1">Od (pkt)</td>
-                {gradeTable(sheet.maxPoints).map((g) => (
-                  <td
-                    key={g.value}
-                    className="border border-neutral-500 p-1 text-center"
-                  >
-                    {g.minPoints}
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
-          {sheet.tasks.map((t) => (
-            <KeyTask key={t.id} task={t} />
-          ))}
-        </article>
-      )}
+      {sheets.map((sheet, index) => (
+        <div key={sheet.group}>
+          <SheetArticle sheet={sheet} breakBefore={index > 0} />
+          {withKey ? <KeyArticle sheet={sheet} /> : null}
+        </div>
+      ))}
     </div>
   );
 }

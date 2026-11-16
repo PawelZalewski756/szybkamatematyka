@@ -621,6 +621,27 @@ test.describe("Smoke", () => {
   });
 });
 
+test.describe("Sprawdziany do druku", () => {
+  test("jedna strona druku zawiera obie grupy i klucz", async ({ page }) => {
+    await page.goto(
+      "/sprawdziany/druk?dzial=potegi-i-pierwiastki&grupa=AB&seed=1&klucz=1",
+    );
+
+    await expect(page.getByText(/grupa A/).first()).toBeVisible();
+    await expect(page.getByText(/grupa B/).first()).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /Klucz odpowiedzi/ }).first(),
+    ).toBeVisible();
+
+    await page.emulateMedia({ media: "print" });
+    await expect(page.getByText(/Sprawdzian:/).first()).toBeVisible();
+    await expect(page.locator("header.sticky")).toBeHidden();
+    await expect(
+      page.locator('[aria-label="Zgoda na pliki cookies"]'),
+    ).toBeHidden();
+  });
+});
+
 test.describe("Stopka", () => {
   test("nie nachodzi na treść na telefonie", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });

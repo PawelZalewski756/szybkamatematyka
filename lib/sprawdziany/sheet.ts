@@ -80,14 +80,22 @@ export function buildSheet(options: {
   if (!chapter) return null;
   const group = options.group ?? "A";
   const rng = mulberry32(options.seed + (group === "B" ? 104_729 : 0));
-  const tasks = chapter.slots.map(
-    (slot, index) =>
-      ({
-        ...slot(rng),
-        id: `z${index + 1}`,
-        number: index + 1,
-      }) as SheetTask,
-  );
+  const tasks = chapter.slots.map((slot, index) => {
+    const task = {
+      ...slot(rng),
+      id: `z${index + 1}`,
+      number: index + 1,
+    } as SheetTask;
+
+    // Część danych ma już litery podpunktów ("a) ..."); widok dokłada je sam.
+    if (task.kind === "open" && task.parts) {
+      task.parts = task.parts.map((part) =>
+        part.replace(/^\s*[a-z]\)\s*/i, "").trim(),
+      );
+    }
+
+    return task;
+  });
   return {
     chapterId: chapter.id,
     schoolClass: chapter.schoolClass,

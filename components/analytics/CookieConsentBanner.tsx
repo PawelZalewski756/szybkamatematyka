@@ -22,7 +22,7 @@ export function CookieConsentBanner() {
   return (
     <aside
       aria-label="Zgoda na pliki cookies"
-      className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[110] mx-auto max-w-md rounded-2xl border border-surface-border bg-surface/95 p-4 shadow-xl backdrop-blur lg:bottom-4 lg:right-4 lg:left-auto lg:mx-0"
+      className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[110] mx-auto max-w-md rounded-2xl border border-surface-border bg-surface/95 p-4 shadow-xl backdrop-blur print:hidden lg:bottom-4 lg:right-4 lg:left-auto lg:mx-0"
     >
       <p className="text-sm font-bold text-foreground">Cookies i reklamy</p>
       <p className="mt-1 text-xs leading-relaxed text-muted">
