@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import {
   dateKeyInTimeZone,
   shiftDateKey,
@@ -6,6 +7,7 @@ import {
 } from "@/lib/format/date";
 import {
   emptySolvedStats,
+  fetchSolvedStats,
   solvedCountFor,
   summarizeSolvedTasks,
 } from "@/lib/supabase/solved-stats";
@@ -90,5 +92,69 @@ describe("summarizeSolvedTasks", () => {
       NOW,
     );
     expect(stats.daily.reduce((sum, day) => sum + day.count, 0)).toBe(2);
+  });
+});
+
+/** Minimalny stub klienta Supabase - zwraca podane wiersze dla każdej strony. */
+function makeClient(
+  rows: { user_id: string; solved_at?: string }[],
+  options: { failWhenSelectingTimestamp?: boolean } = {},
+): SupabaseClient {
+  const builder = {
+    order: () => builder,
+    range: () => builder,
+    in: () => builder,
+    then: (
+      resolve: (value: unknown) => unknown,
+      reject?: (reason: unknown) => unknown,
+    ) => {
+      const wantsTimestamp = builder.__columns.includes("solved_at");
+      const error =
+        options.failWhenSelectingTimestamp && wantsTimestamp
+          ? {
+              code: "42703",
+              message: 'column "solved_at" does not exist',
+            }
+          : null;
+      return Promise.resolve({
+        data: error ? null : rows,
+        error,
+      }).then(resolve, reject);
+    },
+    __columns: "",
+  };
+
+  return {
+    from: () => ({
+      select: (columns: string) => {
+        builder.__columns = columns;
+        return builder;
+      },
+    }),
+  } as unknown as SupabaseClient;
+}
+
+describe("fetchSolvedStats", () => {
+  it("pokazuje jawne 0 dla uczniów bez rozwiązań (bez „?”)", async () => {
+    const client = makeClient([{ user_id: "a", solved_at: isoDaysAgo(1) }]);
+    const stats = await fetchSolvedStats(client, {
+      userIds: ["a", "b"],
+      now: NOW,
+    });
+    expect(stats.total).toBe(1);
+    expect(stats.perUser.get("a")).toBe(1);
+    expect(stats.perUser.get("b")).toBe(0);
+  });
+
+  it("działa, gdy w bazie brakuje kolumny solved_at", async () => {
+    const client = makeClient(
+      [{ user_id: "a" }, { user_id: "a" }, { user_id: "b" }],
+      { failWhenSelectingTimestamp: true },
+    );
+    const stats = await fetchSolvedStats(client, { now: NOW });
+    expect(stats.total).toBe(3);
+    expect(stats.students).toBe(2);
+    // Bez daty nie da się policzyć okien czasowych.
+    expect(stats.last7).toBe(0);
   });
 });

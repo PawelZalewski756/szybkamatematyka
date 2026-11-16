@@ -118,25 +118,57 @@ export async function fetchSolvedTaskRows(
     return { rows: [], truncated: false, error: null };
   }
 
-  const { rows, error } = await fetchAllPages<SolvedTaskRow>((from, to) => {
-    let query = supabase
-      .from("solved_tasks")
-      .select("user_id, solved_at")
-      // Stabilna kolejność jest konieczna przy równoległym stronicowaniu.
-      .order("solved_at", { ascending: false })
-      .order("user_id", { ascending: true })
-      .order("task_id", { ascending: true })
-      .range(from, to);
+  const loadWithTimestamp = () =>
+    fetchAllPages<{ user_id: string; solved_at: string | null }>((from, to) => {
+      let query = supabase
+        .from("solved_tasks")
+        .select("user_id, solved_at")
+        // Stabilna kolejność jest konieczna przy równoległym stronicowaniu.
+        .order("solved_at", { ascending: false })
+        .order("user_id", { ascending: true })
+        .range(from, to);
 
-    if (options.userIds?.length) {
-      query = query.in("user_id", [...options.userIds]);
+      if (options.userIds?.length) {
+        query = query.in("user_id", [...options.userIds]);
+      }
+
+      return query;
+    });
+
+  const loadIdsOnly = () =>
+    fetchAllPages<{ user_id: string }>((from, to) => {
+      let query = supabase
+        .from("solved_tasks")
+        .select("user_id")
+        .order("user_id", { ascending: true })
+        .range(from, to);
+
+      if (options.userIds?.length) {
+        query = query.in("user_id", [...options.userIds]);
+      }
+
+      return query;
+    });
+
+  const result = await loadWithTimestamp();
+  let rows: SolvedTaskRow[] = (result.rows ?? []).map((row) => ({
+    user_id: String(row.user_id ?? ""),
+    solved_at: row.solved_at ?? "",
+  }));
+
+  if (result.error && /solved_at/i.test(result.error.message)) {
+    // Starsza instalacja bez kolumny solved_at - liczymy przynajmniej sumy
+    // i uczniów, zamiast wywalać całą komendę.
+    const fallback = await loadIdsOnly();
+    if (fallback.error) {
+      return { rows: [], truncated: false, error: fallback.error.message };
     }
-
-    return query;
-  });
-
-  if (error) {
-    return { rows: [], truncated: false, error: error.message };
+    rows = (fallback.rows ?? []).map((row) => ({
+      user_id: String(row.user_id ?? ""),
+      solved_at: "",
+    }));
+  } else if (result.error) {
+    return { rows: [], truncated: false, error: result.error.message };
   }
 
   const truncated = rows.length > maxRows;
@@ -159,6 +191,14 @@ export async function fetchSolvedStats(
   if (error) throw new Error(`Nie udało się odczytać solved_tasks: ${error}`);
 
   const stats = summarizeSolvedTasks(rows, options.now ?? new Date());
+
+  // Uczniowie bez rozwiązań też muszą mieć jawne 0 - inaczej UI pokazuje „?”.
+  if (options.userIds?.length) {
+    for (const id of options.userIds) {
+      if (!stats.perUser.has(id)) stats.perUser.set(id, 0);
+    }
+  }
+
   return { ...stats, truncated };
 }
 
