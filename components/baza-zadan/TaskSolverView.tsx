@@ -17,21 +17,27 @@ import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
-import { getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
-import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
+import type { TaskForClient } from "@/lib/baza-zadan/types";
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
+import type { LearningPath } from "@/lib/learning-path";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { canViewFullSolutions } from "@/lib/subscription/content-limits";
 import { useSubscription } from "@/lib/subscription/use-subscription";
-import { fetchTaskGrade, type AssistQuotaSnapshot } from "@/lib/trening/task-assist-client";
+import {
+  fetchTaskGrade,
+  fetchTaskSolution,
+  type AssistQuotaSnapshot,
+  type TaskSolution,
+} from "@/lib/trening/task-assist-client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 type TaskSolverViewProps = {
-  id: string;
+  task: TaskForClient;
+  related: Record<LearningPath, TaskForClient[]>;
+  hasSolution: boolean;
 };
 
 function resolveAwardedPoints(
@@ -46,14 +52,14 @@ function resolveAwardedPoints(
   return 0;
 }
 
-export function TaskSolverView({ id }: TaskSolverViewProps) {
+export function TaskSolverView({
+  task,
+  related: relatedByPath,
+  hasSolution,
+}: TaskSolverViewProps) {
   const { path } = useLearningPath();
   const { isPro } = useSubscription();
   const { isSolved, markSolved, recordResult, ready } = useSolvedTasks();
-  const task = useMemo(() => {
-    const found = getTaskById(id);
-    return found ? orderTaskChoices(found) : undefined;
-  }, [id]);
   const [picked, setPicked] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [typedAnswer, setTypedAnswer] = useState("");
@@ -62,12 +68,30 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
   const [openGrade, setOpenGrade] = useState<TaskGradeResult | null>(null);
   const [openAwarded, setOpenAwarded] = useState<number | null>(null);
   const [quota, setQuota] = useState<AssistQuotaSnapshot | null>(null);
+  const [solution, setSolution] = useState<TaskSolution | null>(null);
+  const [solutionLoading, setSolutionLoading] = useState(false);
+  const [solutionError, setSolutionError] = useState<string | null>(null);
 
-  const open = task ? isOpenExamTask(task) : false;
-  const maxPoints = task ? examTaskPoints(task) : 1;
+  const open = isOpenExamTask(task);
+  const maxPoints = examTaskPoints(task);
+
+  async function loadSolution() {
+    if (!isPro || solution || solutionLoading || !hasSolution) return;
+    setSolutionLoading(true);
+    setSolutionError(null);
+    try {
+      setSolution(await fetchTaskSolution(task.id));
+    } catch (error) {
+      setSolutionError(
+        error instanceof Error ? error.message : "Nie udało się pobrać rozwiązania.",
+      );
+    } finally {
+      setSolutionLoading(false);
+    }
+  }
 
   useEffect(() => {
-    if (!task || !ready) return;
+    if (!ready) return;
     if (isSolved(task.id)) {
       // Odtwórz stan rozwiązania po zmianie zadania lub listy rozwiązań.
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -91,21 +115,12 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
       setOpenGrade(null);
       setOpenAwarded(null);
       setGradeError(null);
+      setSolution(null);
+      setSolutionError(null);
     }
-  }, [task, ready, isSolved, id]);
+  }, [task, ready, isSolved]);
 
-  if (!task) {
-    return (
-      <div className="mx-auto max-w-lg flex-1 px-4 py-20 text-center">
-        <p className="text-xl font-black text-foreground">Nie znaleziono zadania</p>
-        <Link href="/baza-zadan" className="mt-4 inline-block text-accent">
-          ← Baza zadań
-        </Link>
-      </div>
-    );
-  }
-
-  const related = getRelatedTasks(task, path);
+  const related = relatedByPath[path] ?? relatedByPath.sp;
   const nextTask = related.find((r) => !isSolved(r.id)) ?? related[0] ?? null;
   const answeredClosed = picked !== null;
   const isCorrectClosed =
@@ -138,6 +153,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
       recordResult(task.id, true);
       markSolved(task.id);
       setGrading(false);
+      void loadSolution();
       return;
     }
 
@@ -150,9 +166,9 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
         examLabel: task.examSource?.sessionLabel,
         topicLabel: CATEGORY_LABELS[task.category],
         maxPoints,
-        markingNotes: task.solutionSteps
-          ?.map((step) => formatCkeMathText(step))
-          .join("\n"),
+        markingNotes: solution?.steps.length
+          ? solution.steps.map((step) => formatCkeMathText(step)).join("\n")
+          : undefined,
       });
       const awarded = resolveAwardedPoints(grade, maxPoints);
       if (nextQuota) setQuota(nextQuota);
@@ -163,6 +179,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
       if (grade.acceptAsCorrect) {
         markSolved(task.id);
       }
+      void loadSolution();
     } catch (err) {
       const withQuota = err as Error & { quota?: AssistQuotaSnapshot };
       if (withQuota.quota) setQuota(withQuota.quota);
@@ -282,6 +299,7 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                     if (correct) {
                       markSolved(task.id);
                     }
+                    void loadSolution();
                   }}
                   className={`rounded-2xl border px-4 py-4 text-left text-base font-bold text-foreground transition-colors ${style}`}
                   whileTap={answeredClosed ? undefined : { scale: 0.98 }}
@@ -349,21 +367,41 @@ export function TaskSolverView({ id }: TaskSolverViewProps) {
                 />
               </div>
             )}
-            {task.solutionSteps && task.solutionSteps.length > 0 && (
-              canViewFullSolutions(isPro) ? (
+            {hasSolution ? (
+              !isPro ? (
+                <ProGate featureLabel="Rozwiązania krok po kroku">{null}</ProGate>
+              ) : solutionLoading ? (
+                <p className="mt-2 text-sm text-muted">Ładowanie rozwiązania…</p>
+              ) : solutionError ? (
+                <p className="mt-2 text-sm text-danger">
+                  {solutionError}{" "}
+                  <button
+                    type="button"
+                    onClick={() => void loadSolution()}
+                    className="font-bold underline"
+                  >
+                    Spróbuj ponownie
+                  </button>
+                </p>
+              ) : solution && solution.steps.length > 0 ? (
                 <SolutionSteps
-                  steps={task.solutionSteps}
+                  steps={solution.steps}
                   examLabel={task.examSource?.sessionLabel}
                 />
+              ) : solution ? (
+                <p className="mt-2 text-sm text-muted">
+                  Brak pełnego rozwiązania dla tego zadania.
+                </p>
               ) : (
-                <ProGate featureLabel="Rozwiązania krok po kroku">
-                  <SolutionSteps
-                    steps={task.solutionSteps}
-                    examLabel={task.examSource?.sessionLabel}
-                  />
-                </ProGate>
+                <button
+                  type="button"
+                  onClick={() => void loadSolution()}
+                  className="mt-2 rounded-xl border border-accent/40 bg-accent/10 px-3 py-2 text-sm font-bold text-accent transition hover:bg-accent/15"
+                >
+                  Pokaż rozwiązanie krok po kroku
+                </button>
               )
-            )}
+            ) : null}
           </motion.div>
         )}
       </div>

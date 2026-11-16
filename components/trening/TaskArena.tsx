@@ -575,6 +575,14 @@ export function TaskArena({
                 <DifficultyBadge difficulty={current.difficulty} />
               </div>
               <TaskContent content={current.content} />
+              <div className="mt-3 flex justify-end">
+                <Link
+                  href={`/zglos-blad?zadanie=${encodeURIComponent(current.id)}&temat=${encodeURIComponent(topicLabel)}`}
+                  className="text-xs font-semibold text-muted underline decoration-surface-border underline-offset-4 transition hover:text-accent hover:decoration-accent"
+                >
+                  Zgłoś błąd w zadaniu
+                </Link>
+              </div>
               <TaskAiPanel
                 taskId={current.id}
                 taskContent={current.content}

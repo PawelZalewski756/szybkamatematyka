@@ -10,7 +10,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "/zglos-blad" },
 };
 
-export default function ZglosBladPage() {
+export default async function ZglosBladPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ zadanie?: string; temat?: string }>;
+}) {
+  const params = await searchParams;
+  const taskId =
+    typeof params.zadanie === "string" ? params.zadanie.slice(0, 160) : "";
+  const topic =
+    typeof params.temat === "string" ? params.temat.slice(0, 160) : "";
+  const initialTitle = taskId ? `Błąd w zadaniu ${taskId}` : "";
+  const initialDescription = taskId
+    ? [
+        `Zadanie: ${taskId}`,
+        topic ? `Temat: ${topic}` : "",
+        "Co jest nie tak: ",
+      ]
+        .filter(Boolean)
+        .join("\n")
+    : "";
+
   return (
     <div className="page-container w-full py-10 sm:py-14">
       <Link
@@ -64,7 +84,10 @@ export default function ZglosBladPage() {
         </div>
 
         <div>
-          <BugReportForm />
+          <BugReportForm
+            initialTitle={initialTitle}
+            initialDescription={initialDescription}
+          />
         </div>
       </div>
     </div>

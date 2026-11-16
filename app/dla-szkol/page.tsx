@@ -34,7 +34,7 @@ const FEATURES = [
   {
     icon: School,
     title: "Zadania i arkusze CKE",
-    text: "Ponad 2200 zadań i 40 arkuszy egzaminacyjnych - od kartkówek po powtórki przed egzaminem.",
+    text: "Tysiące zadań i 46 arkuszy egzaminacyjnych - od kartkówek po powtórki przed egzaminem.",
   },
 ];
 

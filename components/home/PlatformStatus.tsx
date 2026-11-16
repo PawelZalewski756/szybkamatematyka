@@ -1,6 +1,5 @@
 "use client";
 
-import { EXAM_SHEETS } from "@/lib/baza-zadan/exam-sheets";
 import { MINIGAME_REGISTRY } from "@/lib/minigry/minigame-registry";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchZadaniaCatalogSafe } from "@/lib/supabase/baza-zadan";
@@ -21,13 +20,19 @@ type PlatformStatusProps = {
   variant?: "cards" | "inline";
   /** Liczba zadań z katalogu - liczona na serwerze, żeby nie wysyłać archiwum CKE do klienta. */
   taskCount: number;
+  /** Wszystkie arkusze CKE (archiwum + katalog treningowy), liczone na serwerze. */
+  sheetCount: number;
 };
 
-export function PlatformStatus({ variant = "cards", taskCount }: PlatformStatusProps) {
+export function PlatformStatus({
+  variant = "cards",
+  taskCount,
+  sheetCount,
+}: PlatformStatusProps) {
   const [status, setStatus] = useState<StatusState>({
     minigry: MINIGAME_REGISTRY.length,
     zadania: taskCount,
-    arkusze: EXAM_SHEETS.length,
+    arkusze: sheetCount,
     cmsExtra: null,
     loading: true,
   });
@@ -39,7 +44,7 @@ export function PlatformStatus({ variant = "cards", taskCount }: PlatformStatusP
       const base = {
         minigry: MINIGAME_REGISTRY.length,
         zadania: taskCount,
-        arkusze: EXAM_SHEETS.length,
+        arkusze: sheetCount,
         cmsExtra: null as number | null,
         loading: false,
       };
@@ -62,7 +67,7 @@ export function PlatformStatus({ variant = "cards", taskCount }: PlatformStatusP
     return () => {
       cancelled = true;
     };
-  }, [taskCount]);
+  }, [taskCount, sheetCount]);
 
   const zadaniaLabel = status.loading
     ? "…"

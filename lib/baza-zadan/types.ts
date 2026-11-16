@@ -50,6 +50,9 @@ export type Task = {
   examSource?: ExamSource;
 };
 
+/** Zadanie bezpieczne do wysłania do klienta - bez pełnego rozwiązania. */
+export type TaskForClient = Omit<Task, "solutionSteps">;
+
 export type ExamSheet = {
   id: string;
   title: string;

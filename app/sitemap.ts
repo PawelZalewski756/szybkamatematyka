@@ -23,6 +23,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/minigry", changeFrequency: "weekly", priority: 0.9 },
   { path: "/trening", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/diagnostyka", changeFrequency: "monthly", priority: 0.8 },
   { path: "/baza-zadan", changeFrequency: "weekly", priority: 0.9 },
   { path: "/trening/arkusze", changeFrequency: "weekly", priority: 0.85 },
   { path: "/wyzwania", changeFrequency: "daily", priority: 0.8 },

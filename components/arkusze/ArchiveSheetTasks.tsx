@@ -11,9 +11,11 @@ import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import {
   fetchTaskGrade,
+  fetchTaskSolution,
   type AssistQuotaSnapshot,
+  type TaskSolution,
 } from "@/lib/trening/task-assist-client";
-import { Lock } from "lucide-react";
+import { Loader2, Lock } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -27,8 +29,7 @@ export type ArchiveSheetTaskData = {
   choices: string[];
   correctIndex: number;
   expected: string;
-  explanation: string;
-  steps: string[];
+  hasSolution: boolean;
   examLabel?: string;
 };
 
@@ -65,9 +66,33 @@ function ArchiveTaskCard({
   const [gradeError, setGradeError] = useState<string | null>(null);
   const [grade, setGrade] = useState<TaskGradeResult | null>(null);
   const [awarded, setAwarded] = useState<number | null>(null);
+  const [solution, setSolution] = useState<TaskSolution | null>(null);
+  const [solutionLoading, setSolutionLoading] = useState(false);
+  const [solutionError, setSolutionError] = useState<string | null>(null);
 
   const answered = task.open ? grade != null : picked !== null;
   const correctChoice = task.choices[task.correctIndex];
+
+  async function loadSolution() {
+    if (!isPro || solution || solutionLoading || !task.hasSolution) return;
+    setSolutionLoading(true);
+    setSolutionError(null);
+    try {
+      setSolution(await fetchTaskSolution(task.id));
+    } catch (error) {
+      setSolutionError(
+        error instanceof Error ? error.message : "Nie udało się pobrać rozwiązania.",
+      );
+    } finally {
+      setSolutionLoading(false);
+    }
+  }
+
+  function toggleSolution() {
+    const next = !showSolution;
+    setShowSolution(next);
+    if (next) void loadSolution();
+  }
 
   function isChoiceCorrect(index: number) {
     return (
@@ -114,7 +139,10 @@ function ArchiveTaskCard({
         examLabel: task.examLabel,
         topicLabel: task.category,
         maxPoints: task.points,
-        markingNotes: task.steps.map((s) => formatCkeMathText(s)).join("\n"),
+        markingNotes:
+          solution?.steps.length
+            ? solution.steps.map((s) => formatCkeMathText(s)).join("\n")
+            : undefined,
       });
       if (nextQuota) onQuota(nextQuota);
       setGrade(result);
@@ -131,19 +159,6 @@ function ArchiveTaskCard({
       setGrading(false);
     }
   }
-
-  const explanationBody = task.explanation.trim() ? (
-    <div className="text-sm text-muted">
-      <TheoryMarkdown
-        content={formatCkeMathText(task.explanation)}
-        variant="solution"
-      />
-    </div>
-  ) : null;
-  const stepsBody =
-    task.steps.length > 0 ? (
-      <SolutionSteps steps={task.steps} examLabel={task.examLabel} />
-    ) : null;
 
   const accepted = task.open
     ? grade?.acceptAsCorrect === true
@@ -167,6 +182,14 @@ function ArchiveTaskCard({
 
       <div className="px-4 py-4 sm:px-5">
         <TaskTresc tresc={task.prompt} />
+        <div className="mt-2 flex justify-end">
+          <Link
+            href={`/zglos-blad?zadanie=${encodeURIComponent(task.id)}`}
+            className="text-xs font-semibold text-muted underline decoration-surface-border underline-offset-4 transition hover:text-accent hover:decoration-accent"
+          >
+            Zgłoś błąd w zadaniu
+          </Link>
+        </div>
 
         {!task.open && task.choices.length > 0 ? (
           <ul className="mt-3 space-y-2">
@@ -271,24 +294,60 @@ function ArchiveTaskCard({
           </div>
         ) : null}
 
-        <button
-          type="button"
-          onClick={() => setShowSolution((v) => !v)}
-          className={`mt-5 rounded-xl px-4 py-2.5 text-sm font-bold transition-all active:scale-[0.98] ${
-            showSolution
-              ? "border border-surface-border bg-surface-hover text-muted"
-              : "border border-success/30 bg-success/10 text-success hover:bg-success/15"
-          }`}
-        >
-          {showSolution ? "Ukryj rozwiązanie" : "Pokaż rozwiązanie"}
-        </button>
+        {task.hasSolution ? (
+          <button
+            type="button"
+            onClick={toggleSolution}
+            className={`mt-5 rounded-xl px-4 py-2.5 text-sm font-bold transition-all active:scale-[0.98] ${
+              showSolution
+                ? "border border-surface-border bg-surface-hover text-muted"
+                : "border border-success/30 bg-success/10 text-success hover:bg-success/15"
+            }`}
+          >
+            {showSolution ? "Ukryj rozwiązanie" : "Pokaż rozwiązanie"}
+          </button>
+        ) : null}
 
         {showSolution ? (
           <div className="mt-4 border-l-2 border-success/40 pl-4">
-            <ProGate featureLabel="Rozwiązania arkuszy CKE">
-              {explanationBody}
-              {stepsBody}
-            </ProGate>
+            {!isPro ? (
+              <ProGate featureLabel="Rozwiązania arkuszy CKE">{null}</ProGate>
+            ) : solutionLoading ? (
+              <p className="flex items-center gap-2 text-sm text-muted">
+                <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                Ładowanie rozwiązania…
+              </p>
+            ) : solutionError ? (
+              <div className="text-sm text-danger">
+                {solutionError}{" "}
+                <button
+                  type="button"
+                  onClick={() => void loadSolution()}
+                  className="font-bold underline"
+                >
+                  Spróbuj ponownie
+                </button>
+              </div>
+            ) : solution ? (
+              <>
+                {solution.explanation.trim() ? (
+                  <div className="text-sm text-muted">
+                    <TheoryMarkdown
+                      content={formatCkeMathText(solution.explanation)}
+                      variant="solution"
+                    />
+                  </div>
+                ) : null}
+                {solution.steps.length > 0 ? (
+                  <SolutionSteps steps={solution.steps} examLabel={task.examLabel} />
+                ) : null}
+                {!solution.explanation.trim() && solution.steps.length === 0 ? (
+                  <p className="text-sm text-muted">
+                    Brak rozwiązania dla tego zadania.
+                  </p>
+                ) : null}
+              </>
+            ) : null}
           </div>
         ) : null}
       </div>

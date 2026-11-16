@@ -104,8 +104,9 @@ export default async function OfficialCkeSheetPage({ params }: PageProps) {
             choices: [...task.choices],
             correctIndex: task.correctIndex,
             expected: isOpenExamTask(task) ? expectedOpenAnswer(task) : "",
-            explanation: task.explanation,
-            steps: [...(task.solutionSteps ?? [])],
+            hasSolution: Boolean(
+              task.explanation?.trim() || (task.solutionSteps?.length ?? 0) > 0,
+            ),
             examLabel: task.examSource?.sessionLabel,
           }))}
         />
