@@ -43,6 +43,9 @@ function getVisitorId(): string | null {
 export function VisitCounter() {
   const pathname = usePathname();
   const consent = useSyncExternalStore(subscribe, getConsent, getServerConsent);
+  // W trakcie gry pasek zgody zasłaniałby odpowiedzi - pytamy tylko poza rozgrywką.
+  const isGameplay =
+    pathname.startsWith("/minigry/") && pathname !== "/minigry";
 
 
   useEffect(() => {
@@ -75,7 +78,7 @@ export function VisitCounter() {
     window.dispatchEvent(new Event(CONSENT_EVENT));
   }
 
-  if (consent !== "unknown") return null;
+  if (consent !== "unknown" || isGameplay) return null;
 
   return (
     <aside

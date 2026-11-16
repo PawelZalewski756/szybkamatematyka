@@ -111,11 +111,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className={jakarta.variable} suppressHydrationWarning>
+    <html lang="pl" className={`${jakarta.variable} h-full`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
-      <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
+      <body className="flex h-full min-h-full flex-col bg-background font-sans text-foreground antialiased">
         <GoogleAdsTag />
         <RecoveryRedirect />
         <script
