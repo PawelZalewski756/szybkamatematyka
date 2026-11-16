@@ -13,6 +13,7 @@ import {
 } from "@/lib/trening/progress";
 import { buildTopicHref } from "@/lib/trening/slugs";
 import { EmptyState } from "@/components/feedback/EmptyState";
+import { ExamCountdown } from "@/components/trening/ExamCountdown";
 import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
 import {
   fetchTasksForTree,
@@ -1032,6 +1033,12 @@ export default function TreningPage() {
             Plan obejmuje cały zakres CKE, także tematy z klas wcześniejszych.
           </span>
           <Link
+            href="/diagnostyka"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Diagnoza startowa
+          </Link>
+          <Link
             href="/sprawdziany"
             className="font-semibold text-accent transition hover:underline"
           >
@@ -1051,6 +1058,8 @@ export default function TreningPage() {
             overallProgress={overallProgress}
           />
         )}
+
+        <ExamCountdown />
 
         <TrainingOverview
           exam={exam}

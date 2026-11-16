@@ -23,11 +23,19 @@ const LABEL_CLASS =
   "text-xs font-semibold uppercase tracking-wide text-muted";
 const FIELD_CLASS = "input-field mt-1.5 w-full px-3.5 py-3 text-sm";
 
-export function BugReportForm() {
+type BugReportFormProps = {
+  initialTitle?: string;
+  initialDescription?: string;
+};
+
+export function BugReportForm({
+  initialTitle = "",
+  initialDescription = "",
+}: BugReportFormProps = {}) {
   const baseId = useId();
   const [email, setEmail] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState(initialTitle);
+  const [description, setDescription] = useState(initialDescription);
   const [attachment, setAttachment] = useState<File | null>(null);
   const [status, setStatus] = useState<BugReportStatus>("idle");
   const [message, setMessage] = useState("");

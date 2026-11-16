@@ -566,7 +566,13 @@ function EntryPathCard({
   );
 }
 
-export function HomeDashboard({ taskCount }: { taskCount: number }) {
+export function HomeDashboard({
+  taskCount,
+  sheetCount,
+}: {
+  taskCount: number;
+  sheetCount: number;
+}) {
   return (
     <div className="flex flex-1 flex-col">
       <section className="relative isolate -mx-4 overflow-hidden border-b border-surface-border sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12 2xl:-mx-16">
@@ -654,7 +660,11 @@ export function HomeDashboard({ taskCount }: { taskCount: number }) {
               <p className="text-sm font-semibold text-muted">
                 Wszystko, czego potrzebujesz do regularnej nauki
               </p>
-              <PlatformStatus variant="inline" taskCount={taskCount} />
+              <PlatformStatus
+                variant="inline"
+                taskCount={taskCount}
+                sheetCount={sheetCount}
+              />
             </div>
           </div>
         </div>
@@ -696,7 +706,11 @@ export function HomeDashboard({ taskCount }: { taskCount: number }) {
                 Wchodzisz, wybierasz cel i robisz następny krok.
               </p>
             </div>
-            <PlatformStatus variant="cards" taskCount={taskCount} />
+            <PlatformStatus
+              variant="cards"
+              taskCount={taskCount}
+              sheetCount={sheetCount}
+            />
           </div>
         </div>
       </section>

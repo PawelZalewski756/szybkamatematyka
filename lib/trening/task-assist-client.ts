@@ -112,4 +112,46 @@ export async function fetchTaskAsk(
   return postTaskAssist({ mode: "ask", ...body });
 }
 
+export type TaskSolution = {
+  explanation: string;
+  steps: string[];
+};
+
+/**
+ * Pobiera rozwiązanie zadania (archiwum CKE lub baza zadań). Endpoint sprawdza
+ * plan Pro po stronie serwera, więc treść nie jest wysyłana w HTML/RSC.
+ */
+export async function fetchTaskSolution(taskId: string): Promise<TaskSolution> {
+  const token = await getSupabaseAccessToken();
+  if (!token) {
+    throw new Error("Zaloguj się i aktywuj plan Pro, aby zobaczyć rozwiązanie.");
+  }
+
+  const res = await fetch("/api/trening/task-solution", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ taskId }),
+  });
+
+  const data = (await res.json().catch(() => ({}))) as {
+    explanation?: unknown;
+    steps?: unknown;
+    error?: string;
+  };
+
+  if (!res.ok) {
+    throw new Error(data.error ?? "Nie udało się pobrać rozwiązania.");
+  }
+
+  return {
+    explanation: typeof data.explanation === "string" ? data.explanation : "",
+    steps: Array.isArray(data.steps)
+      ? data.steps.filter((step): step is string => typeof step === "string")
+      : [],
+  };
+}
+
 export type { AssistQuotaSnapshot };
