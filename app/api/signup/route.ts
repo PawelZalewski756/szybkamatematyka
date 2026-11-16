@@ -95,9 +95,24 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   const newUserId = data.user.id;
+  const newUser = {
+    id: data.user.id,
+    email: data.user.email ?? null,
+    created_at: data.user.created_at,
+    email_confirmed_at: data.user.email_confirmed_at ?? null,
+    user_metadata: data.user.user_metadata ?? null,
+  };
   after(async () => {
     try {
-      await deliverSignupNotification(newUserId);
+      const result = await deliverSignupNotification(newUserId, {
+        user: newUser,
+      });
+      if (result.status >= 400) {
+        console.error(
+          "[telegram-signup] Powiadomienie nie zostało wysłane:",
+          result.body,
+        );
+      }
     } catch (notificationError) {
       console.error("[telegram-signup] Powiadomienie nie zostało wysłane:", notificationError);
     }

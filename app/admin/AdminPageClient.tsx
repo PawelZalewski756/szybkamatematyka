@@ -208,6 +208,12 @@ export function AdminPageClient() {
         >
           Analityka platformy →
         </Link>
+        <Link
+          href="/admin/telegram"
+          className="inline-flex rounded-2xl border border-accent/35 bg-accent/10 px-5 py-2.5 text-sm font-bold text-accent transition hover:bg-accent/20"
+        >
+          Diagnostyka Telegrama →
+        </Link>
       </div>
 
       <AnimatePresence>

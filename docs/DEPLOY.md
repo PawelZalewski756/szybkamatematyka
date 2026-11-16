@@ -13,7 +13,7 @@ Skopiuj `.env.example` i uzupełnij zmienne w Vercel oraz lokalnie:
 | `NEXT_PUBLIC_SITE_URL` | produkcja | Pełny adres aplikacji, np. `https://szybkamatematyka.pl` |
 | `ADMIN_EMAILS` | tak | Serwerowa lista e-maili adminów, po przecinku |
 | `NEXT_PUBLIC_ADMIN_EMAILS` | tak | Ta sama lista dla gate'u UI `/admin` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Stripe / quota | Nigdy nie wystawiaj jej w przeglądarce |
+| `SUPABASE_SERVICE_ROLE_KEY` | Stripe / quota / idempotencja | Nigdy nie wystawiaj jej w przeglądarce. Sama wysyłka powiadomień o kontach działa też bez niej (idempotencja wtedy nie działa). |
 | `TELEGRAM_BOT_TOKEN` | Telegram admin bot | Token z BotFather; wyłącznie jako sekret serwerowy |
 | `TELEGRAM_ADMIN_IDS` | Telegram admin bot | Numeryczne ID administratorów Telegrama, rozdzielone przecinkami |
 | `TELEGRAM_WEBHOOK_SECRET` | Telegram admin bot | Losowy sekret używany do weryfikacji webhooka Telegrama |
@@ -151,9 +151,11 @@ Migracja `20261101200000_signup_telegram_notifications.sql` tworzy prywatną
 tabelę potwierdzeń wysyłki, aby ponowione żądanie nie wysyłało administratorowi
 duplikatu powiadomienia. Przy nowych rejestracjach bot wysyła administratorom
 nick, e-mail, wybrany poziom nauki oraz status potwierdzenia adresu. Wymaga to
-ustawionych `TELEGRAM_BOT_TOKEN`, `TELEGRAM_ADMIN_IDS` i
-`SUPABASE_SERVICE_ROLE_KEY`; każdy odbiorca musi wcześniej rozpocząć prywatną
-rozmowę z botem Telegrama komendą `/start`.
+ustawionych `TELEGRAM_BOT_TOKEN` i `TELEGRAM_ADMIN_IDS`; każdy odbiorca musi
+wcześniej rozpocząć prywatną rozmowę z botem Telegrama komendą `/start`.
+`SUPABASE_SERVICE_ROLE_KEY` jest opcjonalny dla samej wysyłki (dane użytkownika
+są przekazywane z `/api/signup`), ale potrzebny do idempotencji i backfillu.
+Diagnostyka: `/admin/telegram`. Szczegóły: [TELEGRAM.md](./TELEGRAM.md).
 
 Migracja `20261101210000_block_profanity_in_profile_names.sql` blokuje wybrane
 wulgaryzmy po polsku i angielsku zarówno przy rejestracji, jak i zmianie nicku.

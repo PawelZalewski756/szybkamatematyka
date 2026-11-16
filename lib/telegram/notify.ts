@@ -1,4 +1,9 @@
 import { parseTelegramAdminIds } from "@/lib/telegram/admin-bot";
+import {
+  describeTelegramFailure,
+  normalizeTelegramBotToken,
+  sendTelegramMessage,
+} from "@/lib/telegram/send";
 
 function line(value: string, maxLength: number): string {
   return value.replace(/[\r\n\t]+/g, " ").replace(/\s+/g, " ").trim().slice(0, maxLength);
@@ -39,7 +44,7 @@ export function formatPurchaseNotification(
 
 /** Wysyła wiadomość do wszystkich adminów. Nigdy nie rzuca błędu. */
 export async function notifyAdminsTelegram(text: string): Promise<void> {
-  const token = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const token = normalizeTelegramBotToken(process.env.TELEGRAM_BOT_TOKEN);
   const adminIds = parseTelegramAdminIds(
     process.env.TELEGRAM_ADMIN_IDS || process.env.ADMIN_TELEGRAM_ID,
   );
@@ -47,22 +52,12 @@ export async function notifyAdminsTelegram(text: string): Promise<void> {
 
   await Promise.all(
     [...adminIds].map(async (chatId) => {
-      try {
-        const response = await fetch(
-          `https://api.telegram.org/bot${token}/sendMessage`,
-          {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({ chat_id: chatId, text }),
-            cache: "no-store",
-            signal: AbortSignal.timeout(8_000),
-          },
+      const result = await sendTelegramMessage(token, chatId, text);
+      if (!result.ok) {
+        console.error(
+          "[telegram-notify] sendMessage:",
+          describeTelegramFailure(result.status, result.description),
         );
-        if (!response.ok) {
-          console.error("[telegram-notify] sendMessage status", response.status);
-        }
-      } catch (error) {
-        console.error("[telegram-notify] sendMessage failed:", error);
       }
     }),
   );
