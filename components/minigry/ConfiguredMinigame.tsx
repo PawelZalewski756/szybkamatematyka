@@ -4,6 +4,7 @@ import { MinigameShell } from "@/components/minigry/MinigameShell";
 import { MathText } from "@/components/trening/MathText";
 import { formatNumericAnswer } from "@/lib/minigry/format-answer";
 import { getMinigameBySlug } from "@/lib/minigry/minigame-registry";
+import { getGameVisual } from "@/components/minigry/minigame-visuals";
 import { pickUnseenQuestion } from "@/lib/minigry/question-picker";
 import { type MinigamePlayMode } from "@/lib/minigry/game-modes";
 import type {
@@ -48,6 +49,27 @@ function createQuestion(
 }
 
 type PlayerQuestion = NonNullable<ReturnType<typeof createQuestion>>;
+
+/** Dzieli długie równanie na dwie linie po znaku "=". */
+function splitEquation(equation: string): [string, string] | null {
+  const match = equation.match(/^\$([\s\S]+)\$$/);
+  if (!match) return null;
+  const body = match[1];
+  const index = body.indexOf("=");
+  if (index <= 0 || index >= body.length - 1) return null;
+  return [
+    `$${body.slice(0, index).trim()}$`,
+    `$= ${body.slice(index + 1).trim()}$`,
+  ];
+}
+
+/** Wzory skalują się razem z szerokością ekranu, żeby nie ucinały się na telefonie. */
+function mathSizeClass(text: string): string {
+  if (text.length > 60) return "text-[clamp(0.85rem,3.6vw,1.4rem)]";
+  if (text.length > 46) return "text-[clamp(0.9rem,3.9vw,1.55rem)]";
+  if (text.length > 34) return "text-[clamp(0.95rem,4.3vw,1.7rem)]";
+  return "text-[clamp(1.1rem,5vw,1.9rem)]";
+}
 
 export function ConfiguredMinigame({
   slug,
@@ -203,7 +225,9 @@ export function ConfiguredMinigame({
       <MathText
         content={q.headline}
         as="div"
-        className="mt-4 break-words text-3xl font-bold leading-tight text-foreground sm:text-4xl [&_.katex]:text-[1em]"
+        className={`mt-4 max-w-full break-words font-bold leading-tight text-foreground [&_.katex]:text-[1em] ${mathSizeClass(
+          q.headline,
+        )}`}
       />
     );
     answers = (
@@ -238,11 +262,25 @@ export function ConfiguredMinigame({
     const q = question.q;
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
-    questionContent = (
+    const equationParts =
+      q.equation.length >= 30 ? splitEquation(q.equation) : null;
+
+    questionContent = equationParts ? (
+      <div className="mt-4 max-w-full font-bold leading-tight text-foreground [&_.katex]:text-[1em] text-[clamp(1rem,4.6vw,1.75rem)]">
+        <span className="block">
+          <MathText content={equationParts[0]} />
+        </span>
+        <span className="mt-1 block">
+          <MathText content={equationParts[1]} />
+        </span>
+      </div>
+    ) : (
       <MathText
         content={q.equation}
         as="div"
-        className="mt-4 break-words text-2xl font-bold leading-tight text-foreground sm:text-3xl [&_.katex]:text-[1em]"
+        className={`mt-4 max-w-full break-words font-bold leading-tight text-foreground [&_.katex]:text-[1em] ${mathSizeClass(
+          q.equation,
+        )}`}
       />
     );
     answers = (
@@ -350,6 +388,7 @@ export function ConfiguredMinigame({
   return (
     <MinigameShell
       title={def.title}
+      hudTitle={getGameVisual({ id: def.slug }).label}
       description={def.description}
       theme={def.theme}
       session={session}

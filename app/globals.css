@@ -462,6 +462,11 @@ body {
   }
 }
 
+/* Wzory KaTeX nie mogą się łamać w środku na wąskich ekranach. */
+.katex {
+  white-space: nowrap;
+}
+
 @layer base {
   a:not([class]) {
     color: var(--foreground);

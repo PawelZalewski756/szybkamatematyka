@@ -1,6 +1,17 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Minigry", () => {
+  test("strona główna promuje minigrę dnia", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.getByText("Minigra dnia")).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Zagraj teraz/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Zobacz wszystkie gry/ }),
+    ).toBeVisible();
+  });
   test("startuje po odliczaniu i pokazuje wynik odpowiedzi", async ({
     page,
   }) => {

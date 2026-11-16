@@ -224,7 +224,7 @@ export const GAME_VISUALS: Record<string, GameVisual> = {
   },
   srednia: {
     icon: Sigma,
-    label: "Statystyka",
+    label: "Średnia",
     tone: "emerald",
   },
   "procent-odwrotny": {
