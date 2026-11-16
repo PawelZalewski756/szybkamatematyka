@@ -2,6 +2,7 @@
 
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { PlatformStatus } from "@/components/home/PlatformStatus";
+import { MinigamePromo } from "@/components/home/MinigamePromo";
 import { QuickTrial } from "@/components/home/QuickTrial";
 import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { fetchLatestSolvedTopic } from "@/lib/supabase/solved-tasks";
@@ -14,6 +15,7 @@ import {
   BookOpen,
   Check,
   FileText,
+  Gamepad2,
   Library,
 } from "lucide-react";
 import Link from "next/link";
@@ -610,6 +612,13 @@ export function HomeDashboard({ taskCount }: { taskCount: number }) {
                 >
                   Zobacz arkusze CKE
                 </Link>
+                <Link
+                  href="/minigry"
+                  className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-bold text-accent transition hover:border-accent/60 hover:bg-accent/15"
+                >
+                  <Gamepad2 className="h-4 w-4" aria-hidden />
+                  Minigra na 60 s
+                </Link>
               </motion.div>
 
               <motion.div
@@ -665,6 +674,8 @@ export function HomeDashboard({ taskCount }: { taskCount: number }) {
           </div>
         </div>
       </section>
+
+      <MinigamePromo />
 
       <section className="border-b border-surface-border bg-surface/35 py-14 sm:py-20">
         <div className="page-container px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">

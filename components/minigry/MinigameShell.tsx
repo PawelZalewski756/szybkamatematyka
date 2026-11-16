@@ -8,7 +8,8 @@ import {
 import type { useMinigameSession } from "@/lib/minigry/use-minigame-session";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Share2 } from "lucide-react";
+import { useState, type ReactNode } from "react";
 
 export type MinigameTheme = {
   label: string;
@@ -19,6 +20,7 @@ export type MinigameTheme = {
 
 type MinigameShellProps = {
   title: string;
+  hudTitle?: string;
   description: string;
   theme: MinigameTheme;
   session: ReturnType<typeof useMinigameSession>;
@@ -63,6 +65,7 @@ function CountdownOverlay({ value }: { value: number }) {
 
 export function MinigameShell({
   title,
+  hudTitle,
   description,
   theme,
   session,
@@ -107,6 +110,7 @@ export function MinigameShell({
   } = session;
 
   const modeConfig = getModeConfig(mode);
+  const [shared, setShared] = useState(false);
 
   if (accountLoading || !account) {
     return (
@@ -115,6 +119,30 @@ export function MinigameShell({
       </div>
     );
   }
+
+  const shareResult = async () => {
+    const text = `${title}: ${score} pkt w minigrze na Szybkiej Matematyce`;
+    const url =
+      typeof window !== "undefined"
+        ? `${window.location.origin}/minigry`
+        : "/minigry";
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.share) {
+        await navigator.share({
+          title: "Szybka Matematyka - minigry",
+          text,
+          url,
+        });
+        return;
+      }
+      await navigator.clipboard.writeText(`${text} ${url}`);
+      setShared(true);
+      window.setTimeout(() => setShared(false), 2000);
+    } catch {
+      // Użytkownik anulował udostępnianie - nic nie robimy.
+    }
+  };
 
   if (phase === "start") {
     return (
@@ -246,6 +274,15 @@ export function MinigameShell({
           />
         </div>
 
+        <button
+          type="button"
+          onClick={() => void shareResult()}
+          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-strong"
+        >
+          <Share2 className="h-4 w-4" aria-hidden />
+          {shared ? "Skopiowano link do schowka" : "Udostępnij wynik"}
+        </button>
+
         <div className="mt-10 flex w-full flex-col gap-3 sm:flex-row">
           <button
             type="button"
@@ -316,18 +353,19 @@ export function MinigameShell({
         <div className="mt-3 flex items-center justify-between gap-3 game-hud px-3 py-3 sm:px-4">
           <div className="min-w-0 flex-1">
             {mode === "time_attack" && (
-              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
-                {title}
+              <p className="truncate text-[10px] font-semibold uppercase tracking-wide text-muted sm:text-xs">
+                {hudTitle ?? title}
               </p>
             )}
             {mode === "survival" && (
-              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
-                {title} · {questionsAnswered} ok
+              <p className="truncate text-[10px] font-semibold uppercase tracking-wide text-muted sm:text-xs">
+                {hudTitle ?? title} · {questionsAnswered} ok
               </p>
             )}
             {mode === "marathon" && (
-              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
-                {title} · {Math.min(questionsAnswered + 1, marathonTotal)}/
+              <p className="truncate text-[10px] font-semibold uppercase tracking-wide text-muted sm:text-xs">
+                {hudTitle ?? title} ·{" "}
+                {Math.min(questionsAnswered + 1, marathonTotal)}/
                 {marathonTotal}
               </p>
             )}

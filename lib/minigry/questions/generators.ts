@@ -317,7 +317,7 @@ export function generateFunkcje(): ChoiceQuestion {
   return {
     id: `fx-${a}x+${b}@${x}`,
     prompt: "Oblicz f(x)",
-    headline: `$f(x) = ${a}x ${bPart},\\ x = ${x}$`,
+    headline: `$f(x) = ${a}x ${bPart}$, $x = ${x}$`,
     correct,
     options: buildNumericOptions(correct, 4, 12),
   };
@@ -379,7 +379,7 @@ export function generatePole(): ChoiceQuestion {
   return {
     id: `area-${w}x${h}`,
     prompt: "Oblicz pole prostokąta",
-    headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
+    headline: `$a = ${w}\\,\\mathrm{cm}$, $b = ${h}\\,\\mathrm{cm}$`,
     correct: `${correct} cm²`,
     options: values.map((value) => `${value} cm²`),
   };
@@ -394,7 +394,7 @@ export function generateObwod(): ChoiceQuestion {
   return {
     id: `perim-${w}x${h}`,
     prompt: "Oblicz obwód prostokąta",
-    headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
+    headline: `$a = ${w}\\,\\mathrm{cm}$, $b = ${h}\\,\\mathrm{cm}$`,
     correct: `${correct} cm`,
     options: values.map((value) => `${value} cm`),
   };
@@ -618,7 +618,7 @@ export function generateSrednia(): ChoiceQuestion {
   return {
     id: `avg-${nums.join("-")}`,
     prompt: "Średnia arytmetyczna",
-    headline: `$\\dfrac{${nums.join(" + ")}}{${nums.length}}$`,
+    headline: `$\\frac{${nums.join(" + ")}}{${nums.length}}$`,
     correct,
     options: buildNumericOptions(correct, 4, 8),
   };
