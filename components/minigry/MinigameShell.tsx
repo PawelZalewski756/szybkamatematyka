@@ -28,12 +28,37 @@ type MinigameShellProps = {
   questionPrompt: string;
   questionContent: ReactNode;
   answers: ReactNode;
+  feedback?: ReactNode;
+  answersDisabled?: boolean;
 };
 
 function formatElapsed(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
   return `${m}:${s.toString().padStart(2, "0")}`;
+}
+
+function CountdownOverlay({ value }: { value: number }) {
+  return (
+    <div
+      className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-background/90 backdrop-blur-sm"
+      aria-live="assertive"
+      aria-label={`Start za ${value}`}
+    >
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted">
+        Przygotuj się
+      </p>
+      <motion.p
+        key={value}
+        initial={{ scale: 0.6, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 1.2, opacity: 0 }}
+        className="mt-4 text-8xl font-black tabular-nums text-accent"
+      >
+        {value}
+      </motion.p>
+    </div>
+  );
 }
 
 export function MinigameShell({
@@ -47,6 +72,8 @@ export function MinigameShell({
   questionPrompt,
   questionContent,
   answers,
+  feedback,
+  answersDisabled = false,
 }: MinigameShellProps) {
   const {
     mode,
@@ -54,6 +81,7 @@ export function MinigameShell({
     accountLoading,
     pathLabel,
     phase,
+    countdown,
     score,
     timeLeft,
     elapsedTime,
@@ -90,6 +118,8 @@ export function MinigameShell({
 
   if (phase === "start") {
     return (
+      <>
+        {countdown > 0 ? <CountdownOverlay value={countdown} /> : null}
       <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-12">
         <Link
           href={`/minigry/modes/${modeConfig.slug}`}
@@ -126,11 +156,12 @@ export function MinigameShell({
 
           <motion.button
             type="button"
+            disabled={countdown > 0}
             onClick={() => {
               startGame();
               onStart();
             }}
-            className="btn-chunky mt-10 w-full max-w-md py-4 text-lg"
+            className="btn-chunky mt-10 w-full max-w-md py-4 text-lg disabled:opacity-60"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -139,6 +170,7 @@ export function MinigameShell({
           </motion.button>
         </div>
       </div>
+      </>
     );
   }
 
@@ -370,7 +402,18 @@ export function MinigameShell({
           </AnimatePresence>
         </div>
 
-        <div className="mt-6 pb-6">{answers}</div>
+        {feedback ? (
+          <div className="mt-4" aria-live="polite">
+            {feedback}
+          </div>
+        ) : null}
+
+        <div
+          className={`mt-6 pb-6 ${answersDisabled ? "pointer-events-none opacity-50" : ""}`}
+          aria-disabled={answersDisabled || undefined}
+        >
+          {answers}
+        </div>
       </motion.div>
     </>
   );

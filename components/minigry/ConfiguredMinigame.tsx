@@ -17,7 +17,13 @@ import { loadLearningPath, type LearningPath } from "@/lib/learning-path";
 import { useMinigameSession } from "@/lib/minigry/use-minigame-session";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 
 type ConfiguredMinigameProps = {
   slug: string;
@@ -49,7 +55,7 @@ export function ConfiguredMinigame({
 }: ConfiguredMinigameProps) {
   const def = getMinigameBySlug(slug);
   const session = useMinigameSession(mode);
-  const { path, registerCorrect, registerWrong, phase } = session;
+  const { path, registerCorrect, registerWrong, phase, setTimerPaused } = session;
 
   const seenRef = useRef<Set<string>>(new Set());
 
@@ -74,21 +80,55 @@ export function ConfiguredMinigame({
     if (question) seenRef.current.add(question.q.id);
   }, [question]);
 
+  const [feedback, setFeedback] = useState<{
+    correct: boolean;
+    answer: ReactNode;
+  } | null>(null);
+  const [picked, setPicked] = useState<string | number | boolean | null>(null);
+  const answerLocked = feedback !== null;
+
+  const answerStateClass = (isCorrect: boolean, isPicked: boolean): string => {
+    if (!feedback) return "";
+    if (isCorrect) return "!border-success !bg-success/15";
+    if (isPicked) return "!border-danger !bg-danger/15";
+    return "opacity-60";
+  };
+
   const nextQuestion = useCallback(() => {
+    setPicked(null);
     setQuestion(makeQuestion());
   }, [makeQuestion]);
 
   const restartQuestions = useCallback(() => {
+    setPicked(null);
     setQuestion(makeQuestion(true));
   }, [makeQuestion]);
+
+  const revealAndAdvance = useCallback(
+    (correct: boolean, answer: ReactNode) => {
+      setFeedback({ correct, answer });
+      setTimerPaused(true);
+      window.setTimeout(
+        () => {
+          setFeedback(null);
+          setTimerPaused(false);
+          nextQuestion();
+        },
+        correct ? 700 : 1500,
+      );
+    },
+    [nextQuestion, setTimerPaused],
+  );
 
   useEffect(() => {
     if (phase === "start") {
       // Nowe pytanie i czysta pamięć powtórek przy powrocie do ekranu startu.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setQuestion(makeQuestion(true));
+      setFeedback(null);
+      setTimerPaused(false);
     }
-  }, [makeQuestion, phase]);
+  }, [makeQuestion, phase, setTimerPaused]);
 
   if (!def) {
     return (
@@ -111,22 +151,43 @@ export function ConfiguredMinigame({
 
   const answerBtn = `min-h-[64px] rounded-xl border bg-surface text-lg font-semibold text-foreground transition-colors hover:bg-surface-hover sm:min-h-[72px] sm:text-xl ${def.answerClass}`;
 
+  const answerLabel = (value: ChoiceValue): ReactNode =>
+    typeof value === "number" ? (
+      formatNumericAnswer(value)
+    ) : (
+      <MathText content={value} className="[&_.katex]:text-[1em]" />
+    );
+
+  const submitAnswer = (correct: boolean, answer: ReactNode) => {
+    if (answerLocked) return;
+    if (correct) registerCorrect(() => revealAndAdvance(true, answer));
+    else registerWrong(() => revealAndAdvance(false, answer));
+  };
+
   const handleChoice = (value: ChoiceValue) => {
     if (question.mode !== "choice") return;
-    if (value === question.q.correct) registerCorrect(nextQuestion);
-    else registerWrong(nextQuestion);
+    setPicked(value);
+    submitAnswer(value === question.q.correct, answerLabel(question.q.correct));
   };
 
   const handleTf = (playerSaysTrue: boolean) => {
     if (question.mode !== "true-false") return;
-    if (playerSaysTrue === question.q.isCorrect) registerCorrect(nextQuestion);
-    else registerWrong(nextQuestion);
+    setPicked(playerSaysTrue);
+    submitAnswer(
+      playerSaysTrue === question.q.isCorrect,
+      question.q.isCorrect ? "Prawda" : "Fałsz",
+    );
   };
 
   const handleCompare = (side: CompareSide) => {
     if (question.mode !== "compare") return;
-    if (side === question.q.correct) registerCorrect(nextQuestion);
-    else registerWrong(nextQuestion);
+    setPicked(side);
+    const labels: Record<CompareSide, string> = {
+      left: "Lewa większa",
+      right: "Prawa większa",
+      equal: "Równe",
+    };
+    submitAnswer(side === question.q.correct, labels[question.q.correct]);
   };
 
   let questionPrompt = "";
@@ -152,7 +213,10 @@ export function ConfiguredMinigame({
             key={`${q.id}-${opt}`}
             type="button"
             onClick={() => handleChoice(opt)}
-            className={`${answerBtn} tabular-nums`}
+            className={`${answerBtn} tabular-nums ${answerStateClass(
+              opt === q.correct,
+              picked === opt,
+            )}`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -186,7 +250,10 @@ export function ConfiguredMinigame({
         <motion.button
           type="button"
           onClick={() => handleTf(false)}
-          className="flex min-h-[64px] items-center justify-center rounded-xl bg-danger text-base font-semibold text-foreground sm:min-h-[72px] sm:text-lg"
+          className={`flex min-h-[64px] items-center justify-center rounded-xl bg-danger text-base font-semibold text-foreground sm:min-h-[72px] sm:text-lg ${answerStateClass(
+            q.isCorrect === false,
+            picked === false,
+          )}`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -195,7 +262,10 @@ export function ConfiguredMinigame({
         <motion.button
           type="button"
           onClick={() => handleTf(true)}
-          className="flex min-h-[64px] items-center justify-center rounded-xl bg-success text-base font-semibold text-background sm:min-h-[72px] sm:text-lg"
+          className={`flex min-h-[64px] items-center justify-center rounded-xl bg-success text-base font-semibold text-background sm:min-h-[72px] sm:text-lg ${answerStateClass(
+            q.isCorrect === true,
+            picked === true,
+          )}`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -235,7 +305,10 @@ export function ConfiguredMinigame({
             key={id}
             type="button"
             onClick={() => handleCompare(id)}
-            className={`${answerBtn} px-4`}
+            className={`${answerBtn} px-4 ${answerStateClass(
+              id === q.correct,
+              picked === id,
+            )}`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -246,6 +319,33 @@ export function ConfiguredMinigame({
     );
   }
 
+
+  const feedbackNode = feedback ? (
+    <div
+      className={`flex items-start gap-3 rounded-xl border px-4 py-3 ${
+        feedback.correct
+          ? "border-success/40 bg-success/10"
+          : "border-accent/40 bg-accent-soft"
+      }`}
+    >
+      <span
+        className={`mt-0.5 text-lg leading-none ${
+          feedback.correct ? "text-success" : "text-accent"
+        }`}
+        aria-hidden
+      >
+        {feedback.correct ? "✓" : "!"}
+      </span>
+      <div className="min-w-0">
+        <p className="text-sm font-bold text-foreground">
+          {feedback.correct ? "Dobrze!" : "Poprawna odpowiedź"}
+        </p>
+        {!feedback.correct ? (
+          <p className="mt-0.5 text-sm text-foreground">{feedback.answer}</p>
+        ) : null}
+      </div>
+    </div>
+  ) : null;
 
   return (
     <MinigameShell
@@ -259,6 +359,8 @@ export function ConfiguredMinigame({
       questionPrompt={questionPrompt}
       questionContent={questionContent}
       answers={answers}
+      feedback={feedbackNode}
+      answersDisabled={answerLocked}
     />
   );
 }
