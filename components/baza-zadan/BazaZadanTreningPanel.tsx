@@ -3,18 +3,16 @@
 import { ExamSheetCard } from "@/components/baza-zadan/ExamSheetCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
-import { getExamSheetsForPath } from "@/lib/baza-zadan/catalog";
 import { EXAM_SHEET_KIND_LABELS } from "@/lib/baza-zadan/sections";
-import type { ExamSheetKind } from "@/lib/baza-zadan/types";
+import type { ExamSheet, ExamSheetKind } from "@/lib/baza-zadan/types";
 import { learningPathLabel } from "@/lib/learning-path";
 import { ClipboardList } from "lucide-react";
 import { useMemo } from "react";
 
 const KIND_ORDER: ExamSheetKind[] = ["trening", "egzamin-8", "matura"];
 
-export function BazaZadanTreningPanel() {
+export function BazaZadanTreningPanel({ sheets }: { sheets: ExamSheet[] }) {
   const { path } = useLearningPath();
-  const sheets = useMemo(() => getExamSheetsForPath(path), [path]);
   const pathLabel = learningPathLabel(path);
 
   const grouped = useMemo(() => {

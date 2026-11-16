@@ -2,6 +2,10 @@
 
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
+  getDiagnosticSnapshot,
+  subscribeDiagnostic,
+} from "@/lib/diagnostyka";
+import {
   daysUntilExam,
   examDateLabel,
   isValidExamDate,
@@ -10,6 +14,7 @@ import {
   subscribeExamDate,
 } from "@/lib/exam-date";
 import { CalendarDays } from "lucide-react";
+import Link from "next/link";
 import { useSyncExternalStore, useState, type FormEvent } from "react";
 
 function daysLabel(days: number): string {
@@ -29,6 +34,11 @@ export function ExamCountdown() {
     loadExamDate,
     getServerDate,
   );
+  const diagnostic = useSyncExternalStore(
+    subscribeDiagnostic,
+    getDiagnosticSnapshot,
+    getServerDate,
+  );
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -36,6 +46,11 @@ export function ExamCountdown() {
   const examLabel = path === "sp" ? "egzamin ósmoklasisty" : "matura";
   const inputValue = draft ?? storedDate ?? "";
   const days = storedDate ? daysUntilExam(storedDate) : null;
+  const weakest = diagnostic
+    ? [...diagnostic.categories].sort(
+        (a, b) => a.correct / a.total - b.correct / b.total,
+      )[0]
+    : null;
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -61,6 +76,19 @@ export function ExamCountdown() {
         <div>
           <p className="text-overline">Twój egzamin</p>
           <p className="text-sm font-bold text-foreground">{examLabel}</p>
+          {diagnostic ? (
+            <p className="mt-0.5 text-[11px] text-muted">
+              Diagnoza: {diagnostic.correct}/{diagnostic.total}
+              {weakest ? ` · najsłabszy: ${weakest.label}` : ""}
+            </p>
+          ) : (
+            <Link
+              href="/diagnostyka"
+              className="mt-0.5 inline-block text-[11px] font-semibold text-accent hover:underline"
+            >
+              Zrób diagnozę startową
+            </Link>
+          )}
         </div>
       </div>
 

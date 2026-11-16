@@ -29,6 +29,21 @@ import type { ExamType } from "@/types/database";
 import Link from "next/link";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { examKeyForLearningPath } from "@/lib/trening/next-topic";
+import { getClassPlan } from "@/lib/trening/class-plan";
+import {
+  loadSchoolClass,
+  subscribeLearningPath,
+  type SchoolClassPath,
+} from "@/lib/learning-path";
+import {
+  getDiagnosticSnapshot,
+  subscribeDiagnostic,
+} from "@/lib/diagnostyka";
+import {
+  daysUntilExam,
+  loadExamDate,
+  subscribeExamDate,
+} from "@/lib/exam-date";
 import {
   ArrowRight,
   BookOpen,
@@ -38,7 +53,7 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
 const taskTreeCache = new Map<ExamType, Promise<TaskTreeRow[]>>();
 const materialSummaryCache = new Map<ExamType, Promise<MaterialTopicSummary[]>>();
@@ -485,6 +500,23 @@ function NextStepCard({
   nextTopic: NextTrainingTopic;
   overallProgress: number;
 }) {
+  const examDate = useSyncExternalStore(
+    subscribeExamDate,
+    loadExamDate,
+    () => null,
+  );
+  const diagnostic = useSyncExternalStore(
+    subscribeDiagnostic,
+    getDiagnosticSnapshot,
+    () => null,
+  );
+  const days = examDate ? daysUntilExam(examDate) : null;
+  const weakest = diagnostic
+    ? [...diagnostic.categories].sort(
+        (a, b) => a.correct / a.total - b.correct / b.total,
+      )[0]
+    : null;
+
   const hasStarted = overallProgress > 0 || nextTopic.topic.solved > 0;
   const progress = Math.max(
     0,
@@ -493,9 +525,11 @@ function NextStepCard({
   const focusLabel =
     overallProgress === 100
       ? "Powtórka"
-      : hasStarted
-        ? "Następny krok"
-        : "Zacznij tutaj";
+      : days != null
+        ? "Plan na dziś"
+        : hasStarted
+          ? "Następny krok"
+          : "Zacznij tutaj";
   const focusAction = overallProgress === 100 ? "Powtórz temat" : "Otwórz temat";
 
   return (
@@ -517,6 +551,15 @@ function NextStepCard({
                 ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
                 : ""}
             </p>
+            {(days != null || weakest) && (
+              <p className="mt-1 text-xs text-muted">
+                {days != null
+                  ? `Do egzaminu: ${days >= 0 ? `${days} dni` : "termin minął"}`
+                  : ""}
+                {days != null && weakest ? " · " : ""}
+                {weakest ? `najsłabszy dział: ${weakest.label}` : ""}
+              </p>
+            )}
           </div>
         </div>
         <span className="btn-chunky shrink-0 px-4 py-2.5 text-sm sm:px-5">
@@ -804,6 +847,12 @@ function emptyExamFor(key: SelectedExam): ExamWithProgress {
 
 export default function TreningPage() {
   const { path: learningPath, setPath: setLearningPath } = useLearningPath();
+  const schoolClass = useSyncExternalStore(
+    subscribeLearningPath,
+    loadSchoolClass,
+    () => "klasa-8" as SchoolClassPath,
+  );
+  const classPlan = useMemo(() => getClassPlan(schoolClass), [schoolClass]);
   const [selectedExam, setSelectedExam] =
     useState<SelectedExam>("matura_podstawowa");
   const [exam, setExam] = useState<ExamWithProgress>(() =>
@@ -935,11 +984,35 @@ export default function TreningPage() {
     setExpandedCategoryId(null);
   };
 
+  const classTopicIds = useMemo(
+    () =>
+      new Set(
+        classPlan.categories.flatMap((category) =>
+          category.topics.map((topic) => topic.id),
+        ),
+      ),
+    [classPlan],
+  );
+
+  const visibleExam = useMemo(() => {
+    if (classPlan.examKey !== selectedExam) return exam;
+    if (classPlan.topicCount === 0) return { ...exam, categories: [] };
+
+    const categories = exam.categories
+      .map((category) => ({
+        ...category,
+        topics: category.topics.filter((topic) => classTopicIds.has(topic.id)),
+      }))
+      .filter((category) => category.topics.length > 0);
+
+    return { ...exam, categories };
+  }, [classPlan, classTopicIds, exam, selectedExam]);
+
   const filteredExam = useMemo(() => {
-    const searched = filterExamByQuery(exam, debouncedQuery);
+    const searched = filterExamByQuery(visibleExam, debouncedQuery);
     const statusFiltered = filterTopicsByStatus(searched, topicFilter);
     return sortTopicsInExam(statusFiltered, topicSort);
-  }, [exam, debouncedQuery, topicFilter, topicSort]);
+  }, [visibleExam, debouncedQuery, topicFilter, topicSort]);
 
   const matchedTopicCount = useMemo(
     () => countTopics(filteredExam),
@@ -947,8 +1020,8 @@ export default function TreningPage() {
   );
 
   const nextTopic = useMemo(
-    () => findNextTrainingTopic(sortTopicsInExam(exam, "az"), selectedExam),
-    [exam, selectedExam],
+    () => findNextTrainingTopic(sortTopicsInExam(visibleExam, "az"), selectedExam),
+    [visibleExam, selectedExam],
   );
 
   const hasFilterIntent =
@@ -985,7 +1058,7 @@ export default function TreningPage() {
       : "Egzamin ósmoklasisty - działy i tematy zgodne z pełną podstawą programową.";
 
   const overallProgress = useMemo(() => {
-    const cats = exam.categories;
+    const cats = visibleExam.categories;
     if (cats.length === 0) return 0;
     const totalTasks = cats.reduce(
       (sum, c) => sum + c.topics.reduce((s, t) => s + t.total, 0),
@@ -997,17 +1070,17 @@ export default function TreningPage() {
     );
     if (totalTasks === 0) return 0;
     return Math.round((solvedTasks / totalTasks) * 100);
-  }, [exam.categories]);
+  }, [visibleExam.categories]);
 
-  const topicCount = useMemo(() => countTopics(exam), [exam]);
+  const topicCount = useMemo(() => countTopics(visibleExam), [visibleExam]);
 
   const topicsWithTasks = useMemo(
     () =>
-      exam.categories.reduce(
+      visibleExam.categories.reduce(
         (n, c) => n + c.topics.filter((t) => t.total > 0).length,
         0,
       ),
-    [exam.categories],
+    [visibleExam.categories],
   );
 
   return (
@@ -1033,6 +1106,12 @@ export default function TreningPage() {
             Plan obejmuje cały zakres CKE, także tematy z klas wcześniejszych.
           </span>
           <Link
+            href="/plan-klasy"
+            className="font-semibold text-accent transition hover:underline"
+          >
+            Plan dla klasy
+          </Link>
+          <Link
             href="/diagnostyka"
             className="font-semibold text-accent transition hover:underline"
           >
@@ -1052,6 +1131,23 @@ export default function TreningPage() {
           </Link>
         </div>
 
+        {classPlan.examKey === selectedExam && (
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-accent/25 bg-accent-soft/30 px-4 py-3 text-sm">
+            <p className="text-foreground">
+              <span className="font-bold">Plan dla: {classPlan.label}</span>
+              {classPlan.topicCount > 0
+                ? ` · ${classPlan.topicCount} tematów w tym roku`
+                : " · brak planu tematycznego dla klas 1–3"}
+            </p>
+            <Link
+              href="/plan-klasy"
+              className="font-bold text-accent hover:underline"
+            >
+              Zmień klasę →
+            </Link>
+          </div>
+        )}
+
         {!loading && nextTopic && (
           <NextStepCard
             nextTopic={nextTopic}
@@ -1062,7 +1158,7 @@ export default function TreningPage() {
         <ExamCountdown />
 
         <TrainingOverview
-          exam={exam}
+          exam={visibleExam}
           overallProgress={overallProgress}
           topicCount={topicCount}
           topicsWithTasks={topicsWithTasks}

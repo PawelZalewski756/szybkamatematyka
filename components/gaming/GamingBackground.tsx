@@ -9,6 +9,7 @@ export function GamingBackground({ variant = "default" }: GamingBackgroundProps)
   return (
     <div
       className="pointer-events-none absolute inset-0 overflow-hidden"
+      data-print-hide
       aria-hidden
     >
       <div

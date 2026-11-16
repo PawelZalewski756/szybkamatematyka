@@ -9,6 +9,7 @@ import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
 import { containsProfanity } from "@/lib/profanity";
 import { PlayerAvatarUpload } from "@/components/profil/PlayerAvatarUpload";
+import { PrintProfileButton } from "@/components/profil/PrintProfileButton";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import {
@@ -702,6 +703,10 @@ export default function ProfilPage() {
               userId={user.id}
               solvedCount={arenaSolvedCount}
             />
+
+            <div className="mt-4 flex justify-end print:hidden">
+              <PrintProfileButton />
+            </div>
 
             <div className="mt-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-center">
               <Link

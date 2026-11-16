@@ -154,4 +154,68 @@ export async function fetchTaskSolution(taskId: string): Promise<TaskSolution> {
   };
 }
 
+/** Pobiera rozwiązanie zadania z CMS (Supabase `zadania`). Tylko Pro. */
+export async function fetchCmsSolution(zadanieId: string): Promise<string> {
+  const token = await getSupabaseAccessToken();
+  if (!token) {
+    throw new Error("Zaloguj się i aktywuj plan Pro, aby zobaczyć rozwiązanie.");
+  }
+
+  const res = await fetch("/api/trening/cms-solution", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ zadanieId }),
+  });
+
+  const data = (await res.json().catch(() => ({}))) as {
+    solution?: unknown;
+    error?: string;
+  };
+
+  if (!res.ok) {
+    throw new Error(data.error ?? "Nie udało się pobrać rozwiązania.");
+  }
+
+  return typeof data.solution === "string" ? data.solution : "";
+}
+
+/** Pobiera klucz całego arkusza CKE. Tylko Pro. */
+export async function fetchArkuszSolutions(
+  arkuszId: string,
+): Promise<Record<string, string>> {
+  const token = await getSupabaseAccessToken();
+  if (!token) {
+    throw new Error("Zaloguj się i aktywuj plan Pro, aby zobaczyć klucz.");
+  }
+
+  const res = await fetch("/api/trening/arkusz-solutions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ arkuszId }),
+  });
+
+  const data = (await res.json().catch(() => ({}))) as {
+    solutions?: unknown;
+    error?: string;
+  };
+
+  if (!res.ok) {
+    throw new Error(data.error ?? "Nie udało się pobrać klucza.");
+  }
+
+  return data.solutions && typeof data.solutions === "object"
+    ? Object.fromEntries(
+        Object.entries(data.solutions as Record<string, unknown>).filter(
+          (entry): entry is [string, string] => typeof entry[1] === "string",
+        ),
+      )
+    : {};
+}
+
 export type { AssistQuotaSnapshot };

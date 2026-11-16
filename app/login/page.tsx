@@ -44,6 +44,8 @@ export default function LoginPage() {
   );
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [ageConfirmed, setAgeConfirmed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
@@ -109,6 +111,8 @@ export default function LoginPage() {
     clearMessage();
     setPasswordConfirm("");
     setNick("");
+    setTermsAccepted(false);
+    setAgeConfirmed(false);
     setSchoolLevel(hasStoredLearningPath() ? loadLearningPath() : "");
     setView("signup");
   };
@@ -181,6 +185,20 @@ export default function LoginPage() {
       return;
     }
 
+    if (!termsAccepted) {
+      setIsError(true);
+      setMessage("Zaakceptuj regulamin i politykę prywatności, aby założyć konto.");
+      return;
+    }
+
+    if (!ageConfirmed) {
+      setIsError(true);
+      setMessage(
+        "Potwierdź, że masz ukończone 16 lat lub zgodę opiekuna prawnego.",
+      );
+      return;
+    }
+
     if (!supabaseReady) {
       setIsError(true);
       setMessage("Rejestracja jest obecnie niedostępna. Spróbuj ponownie później.");
@@ -220,6 +238,8 @@ export default function LoginPage() {
           password,
           nick: normalizedNick,
           schoolLevel: schoolLevel || null,
+          termsAccepted,
+          ageConfirmed,
         }),
       });
       const signupResult = (await signupResponse.json().catch(() => ({}))) as {
@@ -508,6 +528,43 @@ export default function LoginPage() {
                   className={`${inputClassName} focus:border-accent/50 focus:ring-amber-500/20`}
                 />
               </label>
+
+              <div className="mt-4 space-y-2 rounded-2xl border border-surface-border bg-background/60 p-3">
+                <label className="flex items-start gap-2 text-xs leading-relaxed text-muted">
+                  <input
+                    type="checkbox"
+                    checked={termsAccepted}
+                    onChange={(event) => setTermsAccepted(event.target.checked)}
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
+                  />
+                  <span>
+                    Akceptuję{" "}
+                    <Link href="/regulamin" className="font-semibold text-accent hover:underline">
+                      regulamin
+                    </Link>{" "}
+                    i{" "}
+                    <Link
+                      href="/polityka-prywatnosci"
+                      className="font-semibold text-accent hover:underline"
+                    >
+                      politykę prywatności
+                    </Link>
+                    .
+                  </span>
+                </label>
+                <label className="flex items-start gap-2 text-xs leading-relaxed text-muted">
+                  <input
+                    type="checkbox"
+                    checked={ageConfirmed}
+                    onChange={(event) => setAgeConfirmed(event.target.checked)}
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
+                  />
+                  <span>
+                    Mam ukończone 16 lat lub zgodę opiekuna prawnego na
+                    korzystanie z serwisu.
+                  </span>
+                </label>
+              </div>
 
               {message && (
                 <Alert message={message} isError={isError} />

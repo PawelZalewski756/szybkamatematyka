@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { InfoPageShell, InfoSection } from "@/components/info/InfoPageShell";
+import { OperatorDetails } from "@/components/info/OperatorDetails";
 import {
   BRAND_DOMAIN,
   BRAND_NAME,
@@ -32,6 +33,8 @@ export default function RegulaminPage() {
         </p>
       </InfoSection>
 
+      <OperatorDetails />
+
       <InfoSection title="2. Charakter usługi">
         <p>
           {BRAND_NAME} to narzędzie do nauki matematyki (m.in. matura i egzamin
@@ -57,6 +60,15 @@ export default function RegulaminPage() {
         </p>
       </InfoSection>
 
+      <InfoSection title="3a. Użytkownicy niepełnoletni">
+        <p>
+          Jeżeli nie masz ukończonych 16 lat, do korzystania z płatnych funkcji
+          Serwisu potrzebujesz zgody opiekuna prawnego. Przy rejestracji
+          potwierdzasz wiek lub zgodę opiekuna; w razie wątpliwości skontaktuj
+          się z nami pod adresem {CONTACT_EMAIL}.
+        </p>
+      </InfoSection>
+
       <InfoSection title="4. Plany i płatności">
         <p>
           Serwis oferuje plan darmowy oraz płatne plany (np. Pro, Roczny).
@@ -70,6 +82,20 @@ export default function RegulaminPage() {
           Subskrypcję miesięczną możesz anulować w dowolnym momencie - dostęp
           trwa do końca opłaconego okresu. Plan roczny obowiązuje przez
           wykupiony okres, o ile przepisy konsumenckie nie stanowią inaczej.
+        </p>
+      </InfoSection>
+
+      <InfoSection title="4a. Prawo odstąpienia od umowy">
+        <p>
+          Konsument może odstąpić od umowy zawartej na odległość w terminie 14
+          dni od jej zawarcia, bez podania przyczyny. Oświadczenie wystarczy
+          wysłać na adres {CONTACT_EMAIL}.
+        </p>
+        <p>
+          Jeżeli za wyraźną zgodą konsumenta rozpoczęto świadczenie treści
+          cyfrowych przed upływem 14 dni, prawo odstąpienia może wygasnąć w
+          zakresie dopuszczonym przez przepisy. Nie dotyczy to uprawnień
+          obowiązkowych.
         </p>
       </InfoSection>
 

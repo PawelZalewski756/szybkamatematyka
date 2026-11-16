@@ -1,10 +1,13 @@
 "use client";
 
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
+import { ProGate } from "@/components/subscription/ProGate";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
+import { useSubscription } from "@/lib/subscription/use-subscription";
+import { fetchArkuszSolutions } from "@/lib/trening/task-assist-client";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export type PrintTaskData = {
   id: string;
@@ -65,6 +68,33 @@ export function PrintArchiveSheet({
   backHref,
 }: Props) {
   const [withKey, setWithKey] = useState(initialKey);
+  const [solutions, setSolutions] = useState<Record<string, string> | null>(null);
+  const [solutionsLoading, setSolutionsLoading] = useState(false);
+  const [solutionsError, setSolutionsError] = useState<string | null>(null);
+  const { isPro } = useSubscription();
+
+  async function loadSolutions() {
+    if (!isPro || solutions !== null || solutionsLoading) return;
+    setSolutionsLoading(true);
+    setSolutionsError(null);
+    try {
+      setSolutions(await fetchArkuszSolutions(sheetId));
+    } catch (error) {
+      setSolutionsError(
+        error instanceof Error ? error.message : "Nie udało się pobrać klucza.",
+      );
+    } finally {
+      setSolutionsLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    if (withKey && isPro) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      void loadSolutions();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [withKey, isPro]);
 
   const hasKey = withKey;
 
@@ -97,7 +127,11 @@ export function PrintArchiveSheet({
             <input
               type="checkbox"
               checked={hasKey}
-              onChange={(e) => setWithKey(e.target.checked)}
+              onChange={(e) => {
+                const next = e.target.checked;
+                setWithKey(next);
+                if (next && isPro) void loadSolutions();
+              }}
             />
             Z odpowiedziami (na osobnych stronach)
           </label>
@@ -147,42 +181,72 @@ export function PrintArchiveSheet({
 
       {hasKey && (
         <article className="mx-auto mt-6 max-w-3xl space-y-4 break-before-page bg-white p-8 text-black print:mt-0 print:max-w-none print:p-0">
-          <header className="border-b-2 border-black pb-3">
-            <h1 className="text-xl font-bold">Rozwiązania: {title}</h1>
-            {totalPoints > 0 ? (
-              <p className="text-sm">maks. {pts(totalPoints)}</p>
-            ) : null}
-          </header>
-          {tasks.map((task) => (
-            <section key={task.id} className="break-inside-avoid text-sm">
-              <h3 className="font-bold">
-                Zadanie {task.number}
-                {task.points > 0 ? ` (${pts(task.points)})` : ""}
-              </h3>
-              {task.correctLetter && !task.open && (
-                <p>Odpowiedź: {task.correctLetter}</p>
-              )}
-              {task.explanation.trim() && (
-                <TheoryMarkdown
-                  content={formatCkeMathText(task.explanation)}
-                  variant="solution"
-                />
-              )}
-              {task.steps.length > 0 && (
-                <ol className="mt-1 list-decimal space-y-1 pl-5">
-                  {task.steps.map((step, i) => (
-                    <li key={i}>
+          {!isPro ? (
+            <ProGate featureLabel="Klucz odpowiedzi">
+              {null}
+            </ProGate>
+          ) : solutionsLoading ? (
+            <p className="text-sm" role="status">
+              Ładowanie klucza…
+            </p>
+          ) : solutionsError ? (
+            <p className="text-sm">
+              {solutionsError}{" "}
+              <button
+                type="button"
+                onClick={() => void loadSolutions()}
+                className="font-bold underline"
+              >
+                Spróbuj ponownie
+              </button>
+            </p>
+          ) : (
+            <>
+              <header className="border-b-2 border-black pb-3">
+                <h1 className="text-xl font-bold">Rozwiązania: {title}</h1>
+                {totalPoints > 0 ? (
+                  <p className="text-sm">maks. {pts(totalPoints)}</p>
+                ) : null}
+              </header>
+              {tasks.map((task) => {
+                const solution = solutions?.[task.id] ?? "";
+                return (
+                  <section key={task.id} className="break-inside-avoid text-sm">
+                    <h3 className="font-bold">
+                      Zadanie {task.number}
+                      {task.points > 0 ? ` (${pts(task.points)})` : ""}
+                    </h3>
+                    {task.correctLetter && !task.open && (
+                      <p>Odpowiedź: {task.correctLetter}</p>
+                    )}
+                    {solution.trim() ? (
                       <TheoryMarkdown
-                        content={formatCkeMathText(
-                          step.replace(/^\s*\d+[.)]\s+/, ""),
-                        )}
+                        content={formatCkeMathText(solution)}
+                        variant="solution"
                       />
-                    </li>
-                  ))}
-                </ol>
-              )}
-            </section>
-          ))}
+                    ) : (
+                      <p className="text-neutral-600">
+                        Brak rozwiązania dla tego zadania.
+                      </p>
+                    )}
+                    {task.steps.length > 0 && (
+                      <ol className="mt-1 list-decimal space-y-1 pl-5">
+                        {task.steps.map((step, i) => (
+                          <li key={i}>
+                            <TheoryMarkdown
+                              content={formatCkeMathText(
+                                step.replace(/^\s*\d+[.)]\s+/, ""),
+                              )}
+                            />
+                          </li>
+                        ))}
+                      </ol>
+                    )}
+                  </section>
+                );
+              })}
+            </>
+          )}
         </article>
       )}
     </div>

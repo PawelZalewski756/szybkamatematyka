@@ -28,6 +28,10 @@ export type DiagnosticResult = {
 };
 
 export const DIAGNOSTIC_STORAGE_KEY = "szybka-matma-diagnostic-result";
+export const DIAGNOSTIC_EVENT = "szybka-matma-diagnostic-change";
+
+let cachedRaw: string | null | undefined;
+let cachedResult: DiagnosticResult | null = null;
 
 const CATEGORY_ORDER: TaskCategory[] = [
   "arytmetyka",
@@ -142,17 +146,19 @@ export function buildDiagnosticResult(
 export function saveDiagnosticResult(result: DiagnosticResult): void {
   if (typeof window === "undefined") return;
   try {
-    window.localStorage.setItem(DIAGNOSTIC_STORAGE_KEY, JSON.stringify(result));
+    const raw = JSON.stringify(result);
+    window.localStorage.setItem(DIAGNOSTIC_STORAGE_KEY, raw);
+    cachedRaw = raw;
+    cachedResult = result;
+    window.dispatchEvent(new Event(DIAGNOSTIC_EVENT));
   } catch {
     /* ignore */
   }
 }
 
-export function loadDiagnosticResult(): DiagnosticResult | null {
-  if (typeof window === "undefined") return null;
+function parseDiagnosticResult(raw: string | null): DiagnosticResult | null {
+  if (!raw) return null;
   try {
-    const raw = window.localStorage.getItem(DIAGNOSTIC_STORAGE_KEY);
-    if (!raw) return null;
     const parsed = JSON.parse(raw) as DiagnosticResult;
     if (
       typeof parsed?.total !== "number" ||
@@ -166,3 +172,32 @@ export function loadDiagnosticResult(): DiagnosticResult | null {
     return null;
   }
 }
+
+/** Snapshot dla `useSyncExternalStore` - stabilny, dopóki localStorage się nie zmieni. */
+export function getDiagnosticSnapshot(): DiagnosticResult | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(DIAGNOSTIC_STORAGE_KEY);
+    if (raw === cachedRaw) return cachedResult;
+    cachedRaw = raw;
+    cachedResult = parseDiagnosticResult(raw);
+    return cachedResult;
+  } catch {
+    return null;
+  }
+}
+
+export function subscribeDiagnostic(onChange: () => void): () => void {
+  if (typeof window === "undefined") return () => {};
+  window.addEventListener(DIAGNOSTIC_EVENT, onChange);
+  window.addEventListener("storage", onChange);
+  return () => {
+    window.removeEventListener(DIAGNOSTIC_EVENT, onChange);
+    window.removeEventListener("storage", onChange);
+  };
+}
+
+export function loadDiagnosticResult(): DiagnosticResult | null {
+  return getDiagnosticSnapshot();
+}
+

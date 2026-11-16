@@ -254,7 +254,10 @@ export function DiagnosticQuiz({ tasksByPath }: DiagnosticQuizProps) {
         </div>
 
         {answered ? (
-          <p className="mt-4 inline-flex items-center gap-2 text-sm font-bold">
+          <p
+            className="mt-4 inline-flex items-center gap-2 text-sm font-bold"
+            aria-live="polite"
+          >
             {chosenCorrect ? (
               <>
                 <CheckCircle2 className="h-4 w-4 text-success" aria-hidden />

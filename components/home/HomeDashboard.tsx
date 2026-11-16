@@ -18,6 +18,7 @@ import {
   FileText,
   Gamepad2,
   Library,
+  Target,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
@@ -630,6 +631,13 @@ export function HomeDashboard({
                 >
                   <Gamepad2 className="h-4 w-4" aria-hidden />
                   Minigra na 60 s
+                </Link>
+                <Link
+                  href="/diagnostyka"
+                  className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-2 text-sm font-bold text-foreground transition hover:border-accent/50 hover:text-accent"
+                >
+                  <Target className="h-4 w-4" aria-hidden />
+                  Diagnoza startowa
                 </Link>
               </motion.div>
 

@@ -1,12 +1,8 @@
 import { TaskSolverView } from "@/components/baza-zadan/TaskSolverView";
-import {
-  getPrerenderTaskIds,
-  getRelatedTasks,
-  getTaskById,
-} from "@/lib/baza-zadan/catalog";
+import { getPrerenderTaskIds, getRelatedTasks, getTaskById } from "@/lib/baza-zadan/catalog";
+import { toClientTask } from "@/lib/baza-zadan/client-task";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
 import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
-import type { Task, TaskForClient } from "@/lib/baza-zadan/types";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -32,23 +28,6 @@ function clampText(text: string, max = 155): string {
  * Cały katalog zostaje na serwerze - wcześniej `TaskSolverView` importował go
  * do bundla klienta i wysyłał rozwiązania razem z HTML-em.
  */
-function toClientTask(task: Task): TaskForClient {
-  return {
-    id: task.id,
-    title: task.title,
-    category: task.category,
-    difficulty: task.difficulty,
-    forPaths: task.forPaths,
-    prompt: task.prompt,
-    choices: task.choices,
-    correctIndex: task.correctIndex,
-    explanation: task.explanation,
-    hint: task.hint,
-    examTags: task.examTags,
-    examSource: task.examSource,
-  };
-}
-
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {

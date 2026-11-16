@@ -313,7 +313,7 @@ function ArchiveTaskCard({
             {!isPro ? (
               <ProGate featureLabel="Rozwiązania arkuszy CKE">{null}</ProGate>
             ) : solutionLoading ? (
-              <p className="flex items-center gap-2 text-sm text-muted">
+              <p className="flex items-center gap-2 text-sm text-muted" role="status">
                 <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
                 Ładowanie rozwiązania…
               </p>

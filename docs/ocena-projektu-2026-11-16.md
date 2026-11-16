@@ -301,10 +301,23 @@ Pierwsza partia z priorytetów 0–30 dni:
 - [x] Diagnoza startowa `/diagnostyka`: 8 pytań, wynik ogólny i per dział, zapis lokalny.
 - [x] Data egzaminu i licznik dni w treningu (`localStorage`, bez konta).
 - [x] Cookie banner skrócony na mobile.
-- [ ] Listing `/baza-zadan` nadal importuje katalog do klienta (`BazaZadanTasksPanel`, `BazaZadanTreningPanel`) — trzeba wydzielić API wyszukiwania albo sanitizowane dane z serwera.
-- [ ] Paywall dla rozwiązań z CMS (`CmsTaskCard`) — tam treść nadal przychodzi z Supabase do klienta.
-- [ ] „Plan na dziś” łączący diagnozę, datę egzaminu i postęp.
-- [ ] Dane operatora, odstąpienie, zgoda na regulamin i wiek/rodzica.
-- [ ] Welcome email i przypomnienia.
-- [ ] Dalsze a11y quick wins.
+- [x] „Plan na dziś”: karta następnego kroku pokazuje dni do egzaminu, najsłabszy dział z diagnozy i postęp tematu.
+- [x] Listing `/baza-zadan` nie importuje już katalogu do klienta: zadania (bez `solutionSteps`) i arkusze przychodzą z serwera, a filtrowanie odbywa się na sanitizowanych danych.
+- [x] Paywall dla rozwiązań z CMS: `CmsTaskCard` pobiera `rozwiazanie` z `/api/trening/cms-solution` tylko dla Pro; zwykłe zapytania `zadania` nie selekcjonują już tej kolumny.
+- [x] Wydruk „PDF z kluczem” (`/arkusze/[id]/druk?klucz=1`) nie serwuje już rozwiązań w HTML; Pro pobiera klucz przez `/api/trening/arkusz-solutions`. Data egzaminu jest też w onboardingu.
+- [x] Zgoda na regulamin i politykę prywatności, potwierdzenie wieku/zgody opiekuna, informacja o 14-dniowym odstąpieniu oraz sekcja dla niepełnoletnich.
+- [x] Plan dla klasy `/plan-klasy`: orientacyjny plan tematów dla klas 4–8, liceum, technikum i branżowej; klasy 1–3 mają jasny komunikat o braku planu.
+- [x] Pełne filtrowanie treningu po klasie: drzewo `/trening` zawęża się do tematów z planu wybranej klasy, z banerem „Plan dla…” i linkiem do zmiany klasy.
+- [x] Sekcja „Dane operatora” w regulaminie i polityce jest konfigurowana przez `NEXT_PUBLIC_OPERATOR_*`; renderuje się tylko, gdy dane są ustawione.
+- [ ] Wpisać prawdziwe dane operatora (nazwa, adres, NIP) w zmiennych środowiskowych.
+- [x] Welcome email przez Resend (`lib/email/welcome.ts`) wysyłany po rejestracji, jeśli `RESEND_API_KEY` jest ustawiony.
+- [ ] Zweryfikować domenę w Resend i ustawić `WELCOME_EMAIL_FROM`, żeby mail dochodził do uczniów.
+- [x] `/matura-rozszerzona`: strona z zakresem materiału i 12 oficjalnymi arkuszami rozszerzonymi.
+- [ ] Pełny plan tematyczny i baza zadań rozszerzonych — nadal brak treści.
+- [x] Startowy panel nauczyciela `/dla-szkol/panel`: generator, baza zadań, arkusze, rozszerzona i plan klasy w jednym miejscu.
+- [x] Formularz zapytania o pakiet szkolny (`/api/school-inquiry`): walidacja, honeypot, wysyłka przez Resend.
+- [ ] Pełny panel B2B (klasy, uczniowie, wyniki, faktury) — wymaga kont szkolnych i osobnego wdrożenia.
+- [x] A11y quick wins: skip link, `aria-live` w diagnozie, `role="status"` przy ładowaniu.
+- [x] Raport postępów do druku z profilu (`Drukuj raport` + `@media print`).
+- [ ] Pełny audyt a11y (kontrast, fokus w modalach, nawigacja klawiaturą).
 

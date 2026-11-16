@@ -18,6 +18,11 @@ import {
   saveLearningPath,
   type LearningPath,
 } from "@/lib/learning-path";
+import {
+  isValidExamDate,
+  loadExamDate,
+  saveExamDate,
+} from "@/lib/exam-date";
 import type { User } from "@supabase/supabase-js";
 import { motion } from "framer-motion";
 import { Gamepad2, Loader2 } from "lucide-react";
@@ -33,6 +38,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
   const [schoolLevel, setSchoolLevel] = useState<LearningPath | "">(() =>
     hasStoredLearningPath() ? loadLearningPath() : "",
   );
+  const [examDate, setExamDate] = useState(() => loadExamDate() ?? "");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -41,6 +47,10 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
     const next = normalizeNick(nick);
     if (next.length < 2) {
       setError("Nick musi mieć co najmniej 2 znaki.");
+      return;
+    }
+    if (examDate && !isValidExamDate(examDate)) {
+      setError("Wybierz poprawną datę egzaminu albo zostaw pole puste.");
       return;
     }
 
@@ -76,6 +86,7 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
       }
 
       if (schoolLevel) saveLearningPath(schoolLevel);
+      saveExamDate(examDate || null);
       notifyProfileUpdated(saved);
       onComplete(saved);
     } catch (err) {
@@ -146,6 +157,20 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
             className="mt-2"
             optional
           />
+
+          <label htmlFor="onboarding-exam-date" className="text-overline mt-4 block">
+            Data egzaminu (opcjonalnie)
+          </label>
+          <input
+            id="onboarding-exam-date"
+            type="date"
+            value={examDate}
+            onChange={(event) => setExamDate(event.target.value)}
+            className={`${AUTH_INPUT_CLASS} mt-2 w-full`}
+          />
+          <p className="mt-1 text-xs text-muted">
+            Dzięki niej pokażemy, ile dni zostało do egzaminu.
+          </p>
 
           {error && (
             <p className="mt-2 text-sm font-semibold text-danger">{error}</p>
