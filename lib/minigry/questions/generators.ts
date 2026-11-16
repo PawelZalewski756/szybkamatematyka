@@ -88,8 +88,9 @@ export function generateDzielenie(path: LearningPath) {
 export function generatePorownaj(path: LearningPath): CompareQuestion {
   const { min, max } = spDifficulty(path);
   const left = randomInt(min, max);
-  let right = randomInt(min, max);
-  while (right === left) right = randomInt(min, max);
+  const allowEqual = Math.random() < 0.15;
+  let right = allowEqual ? left : randomInt(min, max);
+  while (!allowEqual && right === left) right = randomInt(min, max);
 
   const correct =
     left === right ? "equal" : left > right ? "left" : "right";

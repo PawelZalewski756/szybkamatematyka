@@ -4,7 +4,6 @@ import { AccountLevelBar } from "@/components/minigry/AccountLevelBar";
 import {
   getModeConfig,
   modeDescription,
-  modeHudLabel,
 } from "@/lib/minigry/game-modes";
 import type { useMinigameSession } from "@/lib/minigry/use-minigame-session";
 import { AnimatePresence, motion } from "framer-motion";
@@ -285,18 +284,18 @@ export function MinigameShell({
         <div className="mt-3 flex items-center justify-between gap-3 game-hud px-3 py-3 sm:px-4">
           <div className="min-w-0 flex-1">
             {mode === "time_attack" && (
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                {modeHudLabel(mode)}
+              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
+                {title}
               </p>
             )}
             {mode === "survival" && (
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                {modeHudLabel(mode)} · {questionsAnswered} ok
+              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
+                {title} · {questionsAnswered} ok
               </p>
             )}
             {mode === "marathon" && (
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                Pytanie {Math.min(questionsAnswered + 1, marathonTotal)}/
+              <p className="truncate text-xs font-semibold uppercase tracking-wider text-muted">
+                {title} · {Math.min(questionsAnswered + 1, marathonTotal)}/
                 {marathonTotal}
               </p>
             )}

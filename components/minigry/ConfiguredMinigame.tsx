@@ -2,6 +2,7 @@
 
 import { MinigameShell } from "@/components/minigry/MinigameShell";
 import { MathText } from "@/components/trening/MathText";
+import { formatNumericAnswer } from "@/lib/minigry/format-answer";
 import { getMinigameBySlug } from "@/lib/minigry/minigame-registry";
 import { type MinigamePlayMode } from "@/lib/minigry/game-modes";
 import type {
@@ -128,7 +129,7 @@ export function ConfiguredMinigame({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            {opt}
+            {formatNumericAnswer(opt)}
           </motion.button>
         ))}
       </div>
