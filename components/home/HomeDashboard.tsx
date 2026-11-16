@@ -410,7 +410,9 @@ function ProductPreview() {
 
       if (cancelled || revision !== authRevision) return;
       if (!userId || !supabase) {
-        setRecentTopic(loadRecentTrainingTopic(null));
+        // Gość celowo widzi szybką próbę - lokalny „ostatni temat” jest tylko
+        // dla zalogowanych (patrz e2e: „gość nie widzi ostatniego tematu”).
+        setRecentTopic(null);
         return;
       }
 

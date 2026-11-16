@@ -523,7 +523,12 @@ test.describe("Smoke", () => {
     const answerButtons = page.getByTestId("training-answer-option");
     await expect(answerButtons).toHaveCount(firstTask.options.length);
     await answerButtons.nth(wrongIndex).click();
-    await expect(page.getByText("Spróbuj jeszcze raz!")).toBeVisible();
+    // Po błędzie arena pokazuje podpowiedź o połowie XP za ponowne podejście.
+    await expect(
+      page.getByText(
+        "Spróbuj jeszcze raz - po poprawnej odpowiedzi dostaniesz połowę XP.",
+      ),
+    ).toBeVisible();
     await answerButtons.nth(correctIndex).click();
     await expect(page.getByText("Dobra odpowiedź!")).toBeVisible();
   });
