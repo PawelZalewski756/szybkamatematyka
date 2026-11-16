@@ -620,3 +620,44 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 });
+
+test.describe("Stopka", () => {
+  test("nie nachodzi na treść na telefonie", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+
+    for (const route of ["/trening", "/baza-zadan"]) {
+      await page.goto(route);
+      await page.waitForTimeout(500);
+
+      const footerAfterContent = await page.evaluate(() => {
+        const main = document.querySelector("main");
+        const footer = document.querySelector("footer");
+        if (!main || !footer) return true;
+        const mainBottom = main.getBoundingClientRect().bottom + window.scrollY;
+        const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+        return footerTop >= mainBottom - 1;
+      });
+
+      expect(footerAfterContent).toBe(true);
+    }
+  });
+});
+
+test.describe("Dla szkół", () => {
+  test("strona dla nauczycieli prowadzi do generatora", async ({ page }) => {
+    await page.goto("/dla-szkol");
+
+    await expect(
+      page.getByRole("heading", {
+        level: 1,
+        name: /Sprawdziany, które robią się w minutę/,
+      }),
+    ).toBeVisible();
+
+    await page.getByRole("link", { name: "Wypróbuj generator" }).click();
+    await expect(page).toHaveURL(/\/sprawdziany$/);
+    await expect(
+      page.getByRole("heading", { level: 1, name: "Sprawdziany" }),
+    ).toBeVisible();
+  });
+});
