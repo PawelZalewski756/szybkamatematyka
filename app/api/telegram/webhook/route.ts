@@ -5,6 +5,7 @@ import {
   isTelegramAdmin,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
+import { normalizeTelegramBotToken } from "@/lib/telegram/send";
 
 export const runtime = "nodejs";
 
@@ -419,7 +420,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
 export async function POST(request: Request): Promise<Response> {
   const webhookSecret = process.env.TELEGRAM_WEBHOOK_SECRET?.trim();
-  const botToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const botToken = normalizeTelegramBotToken(process.env.TELEGRAM_BOT_TOKEN);
   if (!webhookSecret || !botToken) {
     return Response.json({ error: "Telegram bot is not configured." }, { status: 503 });
   }

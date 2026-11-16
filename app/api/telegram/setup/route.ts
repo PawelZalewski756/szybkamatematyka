@@ -1,4 +1,5 @@
 import { timingSafeEqual } from "node:crypto";
+import { normalizeTelegramBotToken } from "@/lib/telegram/send";
 
 export const runtime = "nodejs";
 
@@ -14,7 +15,7 @@ function matchesSecret(actual: string | null, expected: string): boolean {
 
 export async function POST(request: Request): Promise<Response> {
   const setupSecret = process.env.TELEGRAM_SETUP_SECRET?.trim();
-  const botToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const botToken = normalizeTelegramBotToken(process.env.TELEGRAM_BOT_TOKEN);
   const webhookSecret = process.env.TELEGRAM_WEBHOOK_SECRET?.trim();
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
