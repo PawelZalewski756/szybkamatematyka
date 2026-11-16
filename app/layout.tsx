@@ -124,7 +124,7 @@ export default function RootLayout({
         />
         <Providers>
           <Navbar />
-          <main className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16">
+          <main className="mx-auto flex w-full max-w-[1920px] flex-1 flex-col px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] sm:px-6 md:px-8 lg:px-10 lg:pb-0 xl:px-12 2xl:px-16">
             {children}
           </main>
           <Footer />

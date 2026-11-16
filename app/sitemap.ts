@@ -29,6 +29,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/pojedynki", changeFrequency: "weekly", priority: 0.7 },
   { path: "/powtorki", changeFrequency: "weekly", priority: 0.7 },
   { path: "/sprawdziany", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/dla-szkol", changeFrequency: "monthly", priority: 0.8 },
   { path: "/rankingi", changeFrequency: "daily", priority: 0.6 },
   { path: "/osiagniecia", changeFrequency: "monthly", priority: 0.5 },
   { path: "/cennik", changeFrequency: "monthly", priority: 0.6 },

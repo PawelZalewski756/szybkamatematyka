@@ -3,7 +3,7 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { isSupabaseConfigured } from "@/lib/supabase";
 import { fetchZadaniaSafe } from "@/lib/supabase/baza-zadan";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 
 type PageProps = {
   params: Promise<{ id: string }>;
@@ -18,18 +18,18 @@ export default async function ArkuszCkePage({ params }: PageProps) {
   const { id } = await params;
 
   if (!isSupabaseConfigured()) {
-    notFound();
+    redirect("/trening/arkusze");
   }
 
   const { data, error } = await fetchZadaniaSafe({ arkuszId: id });
   if (error) {
-    notFound();
+    redirect("/trening/arkusze");
   }
 
   const tasks = data.sort((a, b) => a.numer_zadania - b.numer_zadania);
 
   if (tasks.length === 0) {
-    notFound();
+    redirect("/trening/arkusze");
   }
 
   return (

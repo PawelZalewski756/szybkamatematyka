@@ -8,12 +8,14 @@ export const FOOTER_PRODUCT_LINKS: readonly NavLink[] = [
   { href: "/minigry", label: "Minigry" },
   { href: "/wyzwania", label: "Wyzwania" },
   { href: "/cennik", label: "Cennik" },
+  { href: "/dla-szkol", label: "Dla szkół" },
 ] as const;
 
 /** Zakładki informacyjne i prawne w stopce. */
 export const FOOTER_INFO_LINKS: readonly NavLink[] = [
   { href: "/regulamin", label: "Regulamin" },
   { href: "/polityka-prywatnosci", label: "Polityka prywatności" },
+  { href: "/dla-szkol", label: "Dla szkół" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/zglos-blad", label: "Zgłoś błąd" },
 ] as const;

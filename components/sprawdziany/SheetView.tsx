@@ -157,12 +157,22 @@ export function SheetView() {
   if (phase === "setup" || !sheet) {
     return (
       <div className="page-container py-10">
-        <h1 className="text-3xl font-bold text-foreground">Sprawdziany</h1>
-        <p className="mt-2 max-w-2xl text-muted">
-          Arkusze zbudowane jak klasówki szkolne: jeden dział, numerowane
-          zadania z punktacją, czas 45 minut i grupy A oraz B. Zadania otwarte
-          oceniane są według schematu punktowania.
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="text-3xl font-bold text-foreground">Sprawdziany</h1>
+            <p className="mt-2 max-w-2xl text-muted">
+              Arkusze zbudowane jak klasówki szkolne: jeden dział, numerowane
+              zadania z punktacją, czas 45 minut i grupy A oraz B. Zadania
+              otwarte oceniane są według schematu punktowania.
+            </p>
+          </div>
+          <Link
+            href="/dla-szkol"
+            className="shrink-0 rounded-full border border-accent/35 bg-accent/10 px-4 py-2 text-xs font-bold text-accent transition hover:border-accent/60"
+          >
+            Dla nauczycieli →
+          </Link>
+        </div>
 
         <div className="mt-8 flex flex-wrap items-center gap-6">
           <div>
@@ -398,6 +408,7 @@ export function SheetView() {
 }
 
 function PdfLinks({ sheet }: { sheet: Sheet }) {
+  const [copied, setCopied] = useState(false);
   const href = (withKey: boolean) =>
     `/sprawdziany/druk?dzial=${sheet.chapterId}&grupa=${sheet.group}&seed=${sheet.seed}&klucz=${withKey ? 1 : 0}`;
   const cls =
@@ -411,6 +422,23 @@ function PdfLinks({ sheet }: { sheet: Sheet }) {
       <a href={href(true)} target="_blank" rel="noopener" className={cls}>
         Z odpowiedziami na osobnej stronie
       </a>
+      <button
+        type="button"
+        onClick={async () => {
+          try {
+            await navigator.clipboard.writeText(
+              `${window.location.origin}${href(true)}`,
+            );
+            setCopied(true);
+            window.setTimeout(() => setCopied(false), 2000);
+          } catch {
+            // Brak schowka - linki PDF i tak są widoczne obok.
+          }
+        }}
+        className={cls}
+      >
+        {copied ? "Skopiowano link" : "Kopiuj link do PDF"}
+      </button>
     </div>
   );
 }

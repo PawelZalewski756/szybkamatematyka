@@ -26,6 +26,21 @@ export default function CennikPage() {
       <div className="mt-10">
         <PricingSection />
       </div>
+
+      <div className="mt-8 rounded-2xl border border-surface-border bg-surface p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+        <div>
+          <p className="text-sm font-bold text-foreground">Prowadzisz szkołę?</p>
+          <p className="mt-1 text-sm text-muted">
+            Sprawdziany z grupami A/B, kluczem i PDF oraz warunki dla placówki.
+          </p>
+        </div>
+        <Link
+          href="/dla-szkol"
+          className="mt-3 inline-flex shrink-0 items-center gap-2 text-sm font-bold text-accent hover:underline sm:mt-0"
+        >
+          Pakiet szkolny →
+        </Link>
+      </div>
     </div>
   );
 }

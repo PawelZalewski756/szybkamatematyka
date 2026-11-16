@@ -1,32 +1,11 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useSyncExternalStore } from "react";
+import { useEffect } from "react";
+import { useConsent } from "@/components/analytics/use-consent";
 
-const CONSENT_KEY = "sm-analytics-consent";
 const VISITOR_ID_KEY = "sm-analytics-visitor-id";
 const SESSION_SENT_KEY = "sm-analytics-session-sent";
-const CONSENT_EVENT = "sm-analytics-consent-changed";
-
-type Consent = "unknown" | "accepted";
-
-function subscribe(onChange: () => void) {
-  window.addEventListener(CONSENT_EVENT, onChange);
-  return () => window.removeEventListener(CONSENT_EVENT, onChange);
-}
-
-function getConsent(): Consent {
-  try {
-    const value = window.localStorage.getItem(CONSENT_KEY);
-    return value === "accepted" ? value : "unknown";
-  } catch {
-    return "accepted";
-  }
-}
-
-function getServerConsent(): Consent {
-  return "accepted";
-}
 
 function getVisitorId(): string | null {
   try {
@@ -42,16 +21,11 @@ function getVisitorId(): string | null {
 
 export function VisitCounter() {
   const pathname = usePathname();
-  const consent = useSyncExternalStore(subscribe, getConsent, getServerConsent);
-  // W trakcie gry pasek zgody zasłaniałby odpowiedzi - pytamy tylko poza rozgrywką.
-  const isGameplay =
-    pathname.startsWith("/minigry/") && pathname !== "/minigry";
-
+  const consent = useConsent();
 
   useEffect(() => {
-    if (consent !== "accepted" || !pathname) return;
+    if (!consent.analytics || !pathname) return;
     try {
-      if (window.localStorage.getItem(CONSENT_KEY) !== "accepted") return;
       if (window.sessionStorage.getItem(SESSION_SENT_KEY)) return;
       const visitorId = getVisitorId();
       if (!visitorId) return;
@@ -67,36 +41,7 @@ export function VisitCounter() {
     } catch {
       // Brak dostępu do pamięci przeglądarki: nie liczymy odwiedzin.
     }
-  }, [consent, pathname]);
+  }, [consent.analytics, pathname]);
 
-  function accept() {
-    try {
-      window.localStorage.setItem(CONSENT_KEY, "accepted");
-    } catch {
-      // Bez dostępu do pamięci przeglądarki nie liczymy odwiedzin.
-    }
-    window.dispatchEvent(new Event(CONSENT_EVENT));
-  }
-
-  if (consent !== "unknown" || isGameplay) return null;
-
-  return (
-    <aside
-      aria-label="Informacja o liczniku wejść"
-      className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[100] mx-auto max-w-sm rounded-xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur lg:bottom-3 lg:right-3 lg:left-auto lg:mx-0"
-    >
-      <p className="text-xs leading-relaxed text-foreground">
-        Liczymy anonimowe wejścia na stronę. Nie zbieramy danych osobowych.
-      </p>
-      <div className="mt-2 flex justify-end">
-        <button
-          type="button"
-          onClick={accept}
-          className="rounded-lg bg-accent px-3 py-1.5 text-xs font-bold text-background"
-        >
-          OK
-        </button>
-      </div>
-    </aside>
-  );
+  return null;
 }
