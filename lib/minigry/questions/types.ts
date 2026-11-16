@@ -1,9 +1,11 @@
+export type ChoiceValue = number | string;
+
 export type ChoiceQuestion = {
   id: string;
   prompt: string;
   headline: string;
-  options: number[];
-  correct: number;
+  options: ChoiceValue[];
+  correct: ChoiceValue;
 };
 
 export type TrueFalseQuestion = {

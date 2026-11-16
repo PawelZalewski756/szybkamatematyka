@@ -4,9 +4,11 @@ import { MinigameShell } from "@/components/minigry/MinigameShell";
 import { MathText } from "@/components/trening/MathText";
 import { formatNumericAnswer } from "@/lib/minigry/format-answer";
 import { getMinigameBySlug } from "@/lib/minigry/minigame-registry";
+import { pickUnseenQuestion } from "@/lib/minigry/question-picker";
 import { type MinigamePlayMode } from "@/lib/minigry/game-modes";
 import type {
   ChoiceQuestion,
+  ChoiceValue,
   CompareQuestion,
   CompareSide,
   TrueFalseQuestion,
@@ -15,7 +17,7 @@ import { loadLearningPath, type LearningPath } from "@/lib/learning-path";
 import { useMinigameSession } from "@/lib/minigry/use-minigame-session";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type ConfiguredMinigameProps = {
   slug: string;
@@ -39,6 +41,8 @@ function createQuestion(
   return { mode: "compare", q: raw as CompareQuestion };
 }
 
+type PlayerQuestion = NonNullable<ReturnType<typeof createQuestion>>;
+
 export function ConfiguredMinigame({
   slug,
   mode = "time_attack",
@@ -47,21 +51,44 @@ export function ConfiguredMinigame({
   const session = useMinigameSession(mode);
   const { path, registerCorrect, registerWrong, phase } = session;
 
-  const [question, setQuestion] = useState(() =>
+  const seenRef = useRef<Set<string>>(new Set());
+
+  const makeQuestion = useCallback(
+    (fresh = false): PlayerQuestion | null => {
+      if (fresh) seenRef.current = new Set();
+      if (!createQuestion(slug, path)) return null;
+      return pickUnseenQuestion(() => {
+        const next = createQuestion(slug, path);
+        if (!next) throw new Error("Minigra nie istnieje.");
+        return { id: next.q.id, value: next };
+      }, seenRef.current).value;
+    },
+    [slug, path],
+  );
+
+  const [question, setQuestion] = useState<PlayerQuestion | null>(() =>
     createQuestion(slug, loadLearningPath()),
   );
 
+  useEffect(() => {
+    if (question) seenRef.current.add(question.q.id);
+  }, [question]);
+
   const nextQuestion = useCallback(() => {
-    setQuestion(createQuestion(slug, path));
-  }, [slug, path]);
+    setQuestion(makeQuestion());
+  }, [makeQuestion]);
+
+  const restartQuestions = useCallback(() => {
+    setQuestion(makeQuestion(true));
+  }, [makeQuestion]);
 
   useEffect(() => {
     if (phase === "start") {
-      // Nowe pytanie przy każdym powrocie do ekranu startu.
+      // Nowe pytanie i czysta pamięć powtórek przy powrocie do ekranu startu.
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setQuestion(createQuestion(slug, path));
+      setQuestion(makeQuestion(true));
     }
-  }, [slug, path, phase]);
+  }, [makeQuestion, phase]);
 
   if (!def) {
     return (
@@ -84,7 +111,7 @@ export function ConfiguredMinigame({
 
   const answerBtn = `min-h-[64px] rounded-xl border bg-surface text-lg font-semibold text-foreground transition-colors hover:bg-surface-hover sm:min-h-[72px] sm:text-xl ${def.answerClass}`;
 
-  const handleChoice = (value: number) => {
+  const handleChoice = (value: ChoiceValue) => {
     if (question.mode !== "choice") return;
     if (value === question.q.correct) registerCorrect(nextQuestion);
     else registerWrong(nextQuestion);
@@ -129,7 +156,14 @@ export function ConfiguredMinigame({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            {formatNumericAnswer(opt)}
+            {typeof opt === "number" ? (
+              formatNumericAnswer(opt)
+            ) : (
+              <MathText
+                content={opt}
+                className="[&_.katex]:text-[1em]"
+              />
+            )}
           </motion.button>
         ))}
       </div>
@@ -219,8 +253,8 @@ export function ConfiguredMinigame({
       description={def.description}
       theme={def.theme}
       session={session}
-      onStart={nextQuestion}
-      onPlayAgain={nextQuestion}
+      onStart={restartQuestions}
+      onPlayAgain={restartQuestions}
       questionKey={questionKey}
       questionPrompt={questionPrompt}
       questionContent={questionContent}

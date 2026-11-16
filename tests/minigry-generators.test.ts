@@ -1,7 +1,13 @@
 import { buildNumericOptions } from "@/lib/minigry/questions/math-utils";
 import {
+  generateCos,
   generateLiczbaPrzeciwna,
+  generateLogarytmy,
+  generatePoleKola,
   generatePorownaj,
+  generateSinCos,
+  generateUlamkiDodaj,
+  generateUlamkiOdejmij,
 } from "@/lib/minigry/questions/generators";
 import { describe, expect, it } from "vitest";
 
@@ -37,5 +43,48 @@ describe("generatory minigier", () => {
       if (generatePorownaj("sp").correct === "equal") equalSeen = true;
     }
     expect(equalSeen).toBe(true);
+  });
+});
+
+
+describe("formatowanie odpowiedzi minigier", () => {
+  it("sinus i cosinus mają cztery unikalne odpowiedzi z poprawną", () => {
+    for (const generator of [generateSinCos, generateCos]) {
+      for (let index = 0; index < 100; index += 1) {
+        const question = generator();
+        expect(question.options).toHaveLength(4);
+        expect(new Set(question.options).size).toBe(4);
+        expect(question.options).toContain(question.correct);
+        expect(question.correct).toMatch(/^\$/);
+      }
+    }
+  });
+
+  it("pole koła pokazuje jednostkę cm² w każdej odpowiedzi", () => {
+    for (let index = 0; index < 100; index += 1) {
+      const question = generatePoleKola();
+      expect(question.options).toHaveLength(4);
+      for (const option of question.options) {
+        expect(option).toMatch(/cm²$/);
+      }
+      expect(question.options).toContain(question.correct);
+    }
+  });
+
+  it("dodawanie i odejmowanie ułamków dają cztery odpowiedzi z poprawną", () => {
+    for (const generator of [generateUlamkiDodaj, generateUlamkiOdejmij]) {
+      for (let index = 0; index < 100; index += 1) {
+        const question = generator();
+        expect(question.options).toHaveLength(4);
+        expect(new Set(question.options).size).toBe(4);
+        expect(question.options).toContain(question.correct);
+      }
+    }
+  });
+
+  it("logarytmy nadal korzystają z zapisu LaTeX", () => {
+    for (let index = 0; index < 100; index += 1) {
+      expect(generateLogarytmy().equation).toContain("\\log");
+    }
   });
 });

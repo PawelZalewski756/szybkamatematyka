@@ -29,14 +29,33 @@ function factorRange(path: LearningPath): { min: number; max: number } {
   return { min: 2, max: 12 };
 }
 
-function buildOptions(correct: number): number[] {
-  const options = new Set<number>([correct]);
-  while (options.size < 4) {
-    const delta = randomInt(-9, 9);
-    const candidate = Math.max(0, correct + (delta === 0 ? randomInt(1, 4) : delta));
-    if (candidate !== correct) options.add(candidate);
+function buildOptions(a: number, b: number, correct: number): number[] {
+  const candidates = [
+    correct + a,
+    correct - a,
+    correct + b,
+    correct - b,
+    a + b,
+    correct + 1,
+    correct - 1,
+    correct + 10,
+    correct - 10,
+  ].filter((value) => value >= 0 && value !== correct);
+
+  const options = [correct];
+  for (const value of shuffle([...new Set(candidates)])) {
+    if (options.length >= 4) break;
+    if (!options.includes(value)) options.push(value);
   }
-  return shuffle([...options]);
+
+  let offset = 2;
+  while (options.length < 4) {
+    const value = correct + offset;
+    offset += 1;
+    if (!options.includes(value)) options.push(value);
+  }
+
+  return shuffle(options);
 }
 
 export function generateMnozenieQuestion(path: LearningPath): MnozenieQuestion {
@@ -49,6 +68,6 @@ export function generateMnozenieQuestion(path: LearningPath): MnozenieQuestion {
     id: `${a}x${b}`,
     prompt: `$${a} \\times ${b}$`,
     correct,
-    options: buildOptions(correct),
+    options: buildOptions(a, b, correct),
   };
 }

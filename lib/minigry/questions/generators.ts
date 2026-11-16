@@ -7,6 +7,7 @@ import { generateLogarytmyQuestion } from "@/lib/minigry/generate-logarytmy";
 import { generateQuestion } from "@/lib/minigry/generate-question";
 import { generateMnozenieQuestion } from "@/lib/minigry/generate-mnozenie";
 import { generateUlamkiQuestion } from "@/lib/minigry/generate-ulamki";
+import { formatNumericAnswer } from "@/lib/minigry/format-answer";
 import {
   buildNumericOptions,
   gcd,
@@ -27,6 +28,87 @@ function latexOp(op: "+" | "−" | "×" | "÷"): string {
   if (op === "×") return "\\times";
   if (op === "÷") return "\\div";
   return "+";
+}
+
+function fractionLatex(numerator: number, denominator: number): string {
+  const divisor = gcd(numerator, denominator);
+  const n = numerator / divisor;
+  const d = denominator / divisor;
+  if (d === 1) return `$${n}$`;
+  return `$\\frac{${n}}{${d}}$`;
+}
+
+function pickDistinctOptions(
+  correct: string,
+  candidates: readonly string[],
+  count = 4,
+): string[] {
+  const unique = [...new Set([correct, ...candidates])];
+  const others = shuffle(unique.filter((value) => value !== correct)).slice(
+    0,
+    count - 1,
+  );
+  return shuffle([correct, ...others]);
+}
+
+const TRIG_OPTIONS = [
+  "$0$",
+  "$\\frac{1}{2}$",
+  "$\\frac{\\sqrt{2}}{2}$",
+  "$\\frac{\\sqrt{3}}{2}$",
+  "$1$",
+  "$-\\frac{1}{2}$",
+  "$-\\frac{\\sqrt{2}}{2}$",
+  "$-\\frac{\\sqrt{3}}{2}$",
+  "$-1$",
+] as const;
+
+const SIN_CASES = [
+  { deg: 0, value: "$0$" },
+  { deg: 30, value: "$\\frac{1}{2}$" },
+  { deg: 45, value: "$\\frac{\\sqrt{2}}{2}$" },
+  { deg: 60, value: "$\\frac{\\sqrt{3}}{2}$" },
+  { deg: 90, value: "$1$" },
+  { deg: 120, value: "$\\frac{\\sqrt{3}}{2}$" },
+  { deg: 135, value: "$\\frac{\\sqrt{2}}{2}$" },
+  { deg: 150, value: "$\\frac{1}{2}$" },
+  { deg: 180, value: "$0$" },
+  { deg: 210, value: "$-\\frac{1}{2}$" },
+  { deg: 225, value: "$-\\frac{\\sqrt{2}}{2}$" },
+  { deg: 240, value: "$-\\frac{\\sqrt{3}}{2}$" },
+  { deg: 270, value: "$-1$" },
+  { deg: 300, value: "$-\\frac{\\sqrt{3}}{2}$" },
+  { deg: 315, value: "$-\\frac{\\sqrt{2}}{2}$" },
+  { deg: 330, value: "$-\\frac{1}{2}$" },
+  { deg: 360, value: "$0$" },
+] as const;
+
+const COS_CASES = [
+  { deg: 0, value: "$1$" },
+  { deg: 30, value: "$\\frac{\\sqrt{3}}{2}$" },
+  { deg: 45, value: "$\\frac{\\sqrt{2}}{2}$" },
+  { deg: 60, value: "$\\frac{1}{2}$" },
+  { deg: 90, value: "$0$" },
+  { deg: 120, value: "$-\\frac{1}{2}$" },
+  { deg: 135, value: "$-\\frac{\\sqrt{2}}{2}$" },
+  { deg: 150, value: "$-\\frac{\\sqrt{3}}{2}$" },
+  { deg: 180, value: "$-1$" },
+  { deg: 210, value: "$-\\frac{\\sqrt{3}}{2}$" },
+  { deg: 225, value: "$-\\frac{\\sqrt{2}}{2}$" },
+  { deg: 240, value: "$-\\frac{1}{2}$" },
+  { deg: 270, value: "$0$" },
+  { deg: 300, value: "$\\frac{1}{2}$" },
+  { deg: 315, value: "$\\frac{\\sqrt{2}}{2}$" },
+  { deg: 330, value: "$\\frac{\\sqrt{3}}{2}$" },
+  { deg: 360, value: "$1$" },
+] as const;
+
+function trigOptions(correct: string): string[] {
+  const others = shuffle(TRIG_OPTIONS.filter((value) => value !== correct)).slice(
+    0,
+    3,
+  );
+  return shuffle([correct, ...others]);
 }
 
 function arithmetic(
@@ -119,14 +201,14 @@ export function generateProcenty(path: LearningPath): ChoiceQuestion {
 }
 
 export function generatePotegi(): TrueFalseQuestion {
-  const base = randomInt(2, 9);
-  const exp = randomInt(2, 5);
+  const base = randomInt(2, 12);
+  const exp = randomInt(2, 6);
   const val = base ** exp;
   const showCorrect = Math.random() < 0.5;
   const trap = val + randomInt(1, 6);
 
   return {
-    id: `pow-${base}-${exp}`,
+    id: `pow-${base}-${exp}-${showCorrect ? "t" : "f"}`,
     equation: showCorrect
       ? `$${base}^{${exp}} = ${val}$`
       : `$${base}^{${exp}} = ${trap}$`,
@@ -136,7 +218,7 @@ export function generatePotegi(): TrueFalseQuestion {
 
 export function generatePierwiastki(path: LearningPath): ChoiceQuestion {
   const level = spClassLevel(path) ?? 8;
-  const maxRoot = level <= 5 ? 10 : level <= 7 ? 15 : 20;
+  const maxRoot = level <= 5 ? 16 : level <= 7 ? 28 : 40;
   const root = randomInt(2, maxRoot);
   const correct = root;
   const squared = root * root;
@@ -146,7 +228,7 @@ export function generatePierwiastki(path: LearningPath): ChoiceQuestion {
     prompt: "Ile wynosi pierwiastek?",
     headline: `$\\sqrt{${squared}}$`,
     correct,
-    options: buildNumericOptions(correct, 4, 8),
+    options: buildNumericOptions(correct, 4, 10),
   };
 }
 
@@ -243,28 +325,26 @@ export function generateFunkcje(): ChoiceQuestion {
 
 export function generateWzory(): TrueFalseQuestion {
   const bank = [
-    {
-      true: "$(a + b)^{2} = a^{2} + 2ab + b^{2}$",
-      false: "$(a + b)^{2} = a^{2} + b^{2}$",
-    },
-    {
-      true: "$(a - b)^{2} = a^{2} - 2ab + b^{2}$",
-      false: "$(a - b)^{2} = a^{2} - b^{2}$",
-    },
-    {
-      true: "$a^{2} - b^{2} = (a - b)(a + b)$",
-      false: "$a^{2} - b^{2} = (a - b)^{2}$",
-    },
+    { true: "$(a + b)^{2} = a^{2} + 2ab + b^{2}$", false: "$(a + b)^{2} = a^{2} + b^{2}$" },
+    { true: "$(a - b)^{2} = a^{2} - 2ab + b^{2}$", false: "$(a - b)^{2} = a^{2} - b^{2}$" },
+    { true: "$a^{2} - b^{2} = (a - b)(a + b)$", false: "$a^{2} - b^{2} = (a - b)^{2}$" },
     { true: "$(2x)^{2} = 4x^{2}$", false: "$(2x)^{2} = 2x^{2}$" },
-    {
-      true: "$x^{2} \\cdot x^{3} = x^{5}$",
-      false: "$x^{2} \\cdot x^{3} = x^{6}$",
-    },
+    { true: "$x^{2} \\cdot x^{3} = x^{5}$", false: "$x^{2} \\cdot x^{3} = x^{6}$" },
+    { true: "$(x + 3)(x - 3) = x^{2} - 9$", false: "$(x + 3)(x - 3) = x^{2} + 9$" },
+    { true: "$a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$", false: "$a^{3} - b^{3} = (a - b)^{3}$" },
+    { true: "$(a + b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}$", false: "$(a + b)^{3} = a^{3} + b^{3}$" },
+    { true: "$x^{0} = 1$ dla $x \\ne 0$", false: "$x^{0} = 0$ dla $x \\ne 0$" },
+    { true: "$a^{m} \\cdot a^{n} = a^{m+n}$", false: "$a^{m} \\cdot a^{n} = a^{m \\cdot n}$" },
+    { true: "$\\frac{a^{m}}{a^{n}} = a^{m-n}$", false: "$\\frac{a^{m}}{a^{n}} = a^{m+n}$" },
+    { true: "$\\sqrt{a^{2}} = |a|$", false: "$\\sqrt{a^{2}} = a$ dla każdego $a$" },
+    { true: "$\\log_{a}(xy) = \\log_{a}x + \\log_{a}y$", false: "$\\log_{a}(xy) = \\log_{a}x \\cdot \\log_{a}y$" },
+    { true: "$\\log_{a}(x^{k}) = k\\log_{a}x$", false: "$\\log_{a}(x^{k}) = \\log_{a}(kx)$" },
+    { true: "$\\sin^{2}x + \\cos^{2}x = 1$", false: "$\\sin^{2}x + \\cos^{2}x = 0$" },
   ] as const;
   const t = pickRandom(bank);
   const showCorrect = Math.random() < 0.5;
   return {
-    id: t.true,
+    id: `${t.true}-${showCorrect ? "t" : "f"}`,
     equation: showCorrect ? t.true : t.false,
     isCorrect: showCorrect,
   };
@@ -291,28 +371,32 @@ export function generateLogarytmy(): TrueFalseQuestion {
 }
 
 export function generatePole(): ChoiceQuestion {
-  const w = randomInt(3, 15);
-  const h = randomInt(3, 12);
+  const w = randomInt(3, 18);
+  const h = randomInt(3, 14);
   const correct = w * h;
+  const values = buildNumericOptions(correct, 4, 25);
+
   return {
     id: `area-${w}x${h}`,
     prompt: "Oblicz pole prostokąta",
     headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
-    correct,
-    options: buildNumericOptions(correct, 4, 25),
+    correct: `${correct} cm²`,
+    options: values.map((value) => `${value} cm²`),
   };
 }
 
 export function generateObwod(): ChoiceQuestion {
-  const w = randomInt(4, 18);
+  const w = randomInt(3, 18);
   const h = randomInt(3, 14);
   const correct = 2 * (w + h);
+  const values = buildNumericOptions(correct, 4, 25);
+
   return {
     id: `perim-${w}x${h}`,
     prompt: "Oblicz obwód prostokąta",
     headline: `$a = ${w}\\,\\mathrm{cm},\\ b = ${h}\\,\\mathrm{cm}$`,
-    correct,
-    options: buildNumericOptions(correct, 4, 20),
+    correct: `${correct} cm`,
+    options: values.map((value) => `${value} cm`),
   };
 }
 
@@ -343,24 +427,26 @@ export function generateZaokraglenie(): ChoiceQuestion {
 }
 
 export function generateLiczbaPrzeciwna(): ChoiceQuestion {
-  const n = randomInt(-20, 20) || 7;
+  const n = randomInt(-50, 50) || 7;
   const correct = -n;
+
   return {
     id: `opp-${n}`,
     prompt: "Jaka jest liczba przeciwna?",
     headline: `$${n}$`,
     correct,
-    options: buildNumericOptions(correct, 4, 10),
+    options: buildNumericOptions(correct, 4, 12),
   };
 }
 
 export function generatePotegaDziesiatki(): TrueFalseQuestion {
-  const exp = randomInt(2, 5);
+  const exp = randomInt(1, 12);
   const correct = 10 ** exp;
   const showCorrect = Math.random() < 0.5;
   const trap = correct * 10;
+
   return {
-    id: `10^${exp}`,
+    id: `10^${exp}-${showCorrect ? "t" : "f"}`,
     equation: showCorrect
       ? `$10^{${exp}} = ${correct}$`
       : `$10^{${exp}} = ${trap}$`,
@@ -374,8 +460,9 @@ export function generateTrojkat(): TrueFalseQuestion {
   const sum = a + b;
   const showCorrect = Math.random() < 0.5;
   const trap = sum > 170 ? sum - 20 : sum + 20;
+
   return {
-    id: `tri-${a}-${b}`,
+    id: `tri-${a}-${b}-${showCorrect ? "t" : "f"}`,
     equation: showCorrect
       ? `$${a}^{\\circ} + ${b}^{\\circ} + \\text{trzeci kąt} = 180^{\\circ}$`
       : `$${a}^{\\circ} + ${b}^{\\circ} + \\text{trzeci kąt} = ${trap}^{\\circ}$`,
@@ -384,56 +471,52 @@ export function generateTrojkat(): TrueFalseQuestion {
 }
 
 export function generateUlamkiDodaj(): ChoiceQuestion {
-  const d = pickRandom([2, 3, 4, 5, 6] as const);
+  const d = pickRandom([2, 3, 4, 5, 6, 8] as const);
   const n1 = randomInt(1, d - 1);
   const n2 = randomInt(1, d - 1);
   const sum = n1 + n2;
-  const promptCorrect = sum;
+  const correct = fractionLatex(sum, d);
+
+  const candidates = [
+    fractionLatex(sum, d * 2),
+    fractionLatex(n1 * n2, d),
+    `$${sum}$`,
+    fractionLatex(sum + 1, d),
+    fractionLatex(Math.max(1, sum - 1), d),
+  ];
+
   return {
     id: `frac+${n1}-${n2}-${d}`,
-    prompt: "Ile wynosi suma liczników (ten sam mianownik)?",
+    prompt: "Ile wynosi suma ułamków?",
     headline: `$\\frac{${n1}}{${d}} + \\frac{${n2}}{${d}}$`,
-    correct: promptCorrect,
-    options: buildNumericOptions(promptCorrect, 4, 6),
+    correct,
+    options: pickDistinctOptions(correct, candidates),
   };
 }
 
 export function generateSinCos(): ChoiceQuestion {
-  const angles = [
-    { deg: 0, sin: 0 },
-    { deg: 30, sin: 0.5 },
-    { deg: 90, sin: 1 },
-  ] as const;
-  const { deg, sin } = pickRandom(angles);
-  const correct = sin;
-  const opts = shuffle(
-    [0, 0.5, 1, -0.5].map((v) => Math.round(v * 100) / 100),
-  );
-  if (!opts.includes(correct)) opts[0] = correct;
+  const { deg, value } = pickRandom(SIN_CASES);
+  const correct = value;
+
   return {
     id: `sin-${deg}`,
     prompt: `Oblicz sin(${deg}°)`,
     headline: `$\\sin(${deg}^{\\circ}) = ?$`,
     correct,
-    options: shuffle([...new Set(opts)]).slice(0, 4),
+    options: trigOptions(correct),
   };
 }
 
 export function generateCos(): ChoiceQuestion {
-  const angles = [
-    { deg: 0, cos: 1 },
-    { deg: 60, cos: 0.5 },
-    { deg: 90, cos: 0 },
-  ] as const;
-  const { deg, cos } = pickRandom(angles);
-  const opts = shuffle([0, 0.5, 1, -0.5].map((v) => Math.round(v * 100) / 100));
-  if (!opts.includes(cos)) opts[0] = cos;
+  const { deg, value } = pickRandom(COS_CASES);
+  const correct = value;
+
   return {
     id: `cos-${deg}`,
     prompt: `Oblicz cos(${deg}°)`,
     headline: `$\\cos(${deg}^{\\circ}) = ?$`,
-    correct: cos,
-    options: shuffle([...new Set(opts)]).slice(0, 4),
+    correct,
+    options: trigOptions(correct),
   };
 }
 
@@ -451,14 +534,15 @@ export function generateNww(): ChoiceQuestion {
 }
 
 export function generateKwadrat(): ChoiceQuestion {
-  const n = randomInt(3, 15);
+  const n = randomInt(2, 30);
   const correct = n * n;
+
   return {
     id: `sq-${n}`,
     prompt: "Podnieś do kwadratu",
     headline: `$${n}^{2} = ?$`,
     correct,
-    options: buildNumericOptions(correct, 4, 20),
+    options: buildNumericOptions(correct, 4, 25),
   };
 }
 
@@ -490,28 +574,40 @@ export function generateWartoscBezwzgledna(): ChoiceQuestion {
 }
 
 export function generateUlamkiOdejmij(): ChoiceQuestion {
-  const d = pickRandom([2, 3, 4, 5, 6, 8, 10, 12]);
-  const n1 = randomInt(2, d * 3);
+  const d = pickRandom([2, 3, 4, 5, 6, 8, 10, 12] as const);
+  const n1 = randomInt(2, d * 2);
   const n2 = randomInt(1, n1 - 1);
-  const correct = n1 - n2;
+  const diff = n1 - n2;
+  const correct = fractionLatex(diff, d);
+
+  const candidates = [
+    fractionLatex(diff, d * 2),
+    fractionLatex(n1 + n2, d),
+    `$${diff}$`,
+    fractionLatex(diff + 1, d),
+    fractionLatex(Math.max(1, diff - 1), d),
+  ];
+
   return {
     id: `frac-sub-${n1}-${n2}-${d}`,
-    prompt: "Odejmij ułamki (ten sam mianownik)",
+    prompt: "Ile wynosi różnica ułamków?",
     headline: `$\\frac{${n1}}{${d}} - \\frac{${n2}}{${d}}$`,
     correct,
-    options: buildNumericOptions(correct, 4, 6),
+    options: pickDistinctOptions(correct, candidates),
   };
 }
 
 export function generatePoleKola(): ChoiceQuestion {
-  const r = randomInt(2, 10);
+  const r = randomInt(1, 20);
   const correct = Math.round(3.14 * r * r * 10) / 10;
+  const values = buildNumericOptions(correct, 4, 25);
+
   return {
     id: `circle-${r}`,
-    prompt: "Pole koła w cm² (π ≈ 3,14)",
+    prompt: "Pole koła (π ≈ 3,14)",
     headline: `$r = ${r}\\,\\mathrm{cm}$`,
-    correct,
-    options: buildNumericOptions(correct, 4, 25),
+    correct: `${formatNumericAnswer(correct)} cm²`,
+    options: values.map((value) => `${formatNumericAnswer(value)} cm²`),
   };
 }
 
