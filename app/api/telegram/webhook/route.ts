@@ -5,6 +5,7 @@ import {
   isTelegramAdmin,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
+import { fetchSolvedStats } from "@/lib/supabase/solved-stats";
 
 export const runtime = "nodejs";
 
@@ -18,6 +19,7 @@ type TelegramUpdate = {
 };
 
 const USERS_PER_PAGE = 20;
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 function matchesSecret(actual: string | null, expected: string): boolean {
   if (!actual) return false;
@@ -108,44 +110,104 @@ function getAuthUserName(
     .slice(0, 80);
 }
 
+const plNumber = new Intl.NumberFormat("pl-PL");
+
+type SafeCount = { value: number | null; error: string | null };
+
+/** Liczy wiersze tak, żeby jeden brakujący obiekt nie wywalał całej komendy. */
+async function safeCount(
+  query: PromiseLike<{
+    count: number | null;
+    error: { message: string } | null;
+  }>,
+): Promise<SafeCount> {
+  try {
+    const { count, error } = await query;
+    if (error) return { value: null, error: error.message };
+    return { value: count ?? 0, error: null };
+  } catch (error) {
+    return {
+      value: null,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+function formatCount(result: SafeCount, emptyLabel = "brak danych"): string {
+  if (result.error || result.value === null) return emptyLabel;
+  return plNumber.format(result.value);
+}
+
+const HELP_TEXT = [
+  "Komendy administratora:",
+  "/stats - użytkownicy, nowe konta i rozwiązane zadania",
+  "/new - ostatnie rejestracje",
+  "/users [strona] - użytkownicy z liczbą rozwiązanych zadań",
+  "/top - ranking XP",
+  "/szybkaproba - statystyki szybkiej próby",
+  "/visits [dni] - wejścia i unikalni odwiedzający",
+  "/health - sprawdzenie połączenia",
+  "/pomoc - pokaż tę listę",
+].join("\n");
+
 async function buildCommandReply(command: string, args: string[]): Promise<string> {
   if (command === "help") {
-    return [
-      "Komendy administratora:",
-      "/stats - użytkownicy, nowe konta i zadania",
-      "/new - ostatnie rejestracje",
-      "/users [strona] - lista wszystkich użytkowników",
-      "/top - ranking XP",
-      "/szybkaproba - statystyki szybkiej próby",
-      "/visits [dni] - wejścia i unikalni odwiedzający",
-      "/health - sprawdzenie połączenia",
-      "/pomoc - pokaż tę listę",
-    ].join("\n");
+    return HELP_TEXT;
   }
 
   const supabase = getSupabaseAdmin();
 
   if (command === "stats") {
-    const since = Date.now() - 7 * 24 * 60 * 60 * 1000;
-    const [users, newUsers, solved] = await Promise.all([
-      supabase.from("profiles").select("id", { count: "exact", head: true }),
-      supabase
-        .from("profiles")
-        .select("id", { count: "exact", head: true })
-        .gte("created_at", new Date(since).toISOString()),
-      supabase
-        .from("solved_tasks")
-        .select("task_id", { count: "exact", head: true })
-        .gte("solved_at", new Date(since).toISOString()),
+    const since7 = new Date(Date.now() - 7 * DAY_MS).toISOString();
+    const [users, newUsers, solvedTotal, solved7] = await Promise.all([
+      safeCount(
+        supabase.from("profiles").select("id", { count: "exact", head: true }),
+      ),
+      safeCount(
+        supabase
+          .from("profiles")
+          .select("id", { count: "exact", head: true })
+          .gte("created_at", since7),
+      ),
+      safeCount(
+        supabase
+          .from("solved_tasks")
+          .select("user_id", { count: "exact", head: true }),
+      ),
+      safeCount(
+        supabase
+          .from("solved_tasks")
+          .select("user_id", { count: "exact", head: true })
+          .gte("solved_at", since7),
+      ),
     ]);
-    if (users.error) throw new Error(`Could not count profiles: ${users.error.message}`);
-    if (solved.error) throw new Error(`Could not count solved tasks: ${solved.error.message}`);
-    return [
-      "Statystyki (ostatnie 7 dni)",
-      `Użytkownicy łącznie: ${users.count ?? 0}`,
-      `Nowe konta: ${newUsers.count ?? 0}`,
-      `Rozwiązane zadania: ${solved.count ?? 0}`,
-    ].join("\n");
+
+    if (users.error) {
+      throw new Error(`Could not count profiles: ${users.error}`);
+    }
+
+    const lines = [
+      "Statystyki platformy",
+      `Użytkownicy łącznie: ${formatCount(users)}`,
+      `Nowe konta: ${formatCount(newUsers)}`,
+      `Rozwiązane zadania łącznie: ${formatCount(
+        solvedTotal,
+        "brak tabeli solved_tasks",
+      )}`,
+      `Rozwiązane zadania w 7 dni: ${formatCount(solved7)}`,
+    ];
+
+    const failedSolved = solvedTotal.error ?? solved7.error;
+    if (failedSolved) {
+      lines.push(
+        "",
+        describeTelegramCommandError(
+          new Error(`solved_tasks: ${failedSolved}`),
+        ),
+      );
+    }
+
+    return lines.join("\n");
   }
 
   if (command === "szybkaproba") {
@@ -221,10 +283,31 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     const totalUsers = data.total || count || data.users.length;
     const totalPages = Math.max(1, Math.ceil(totalUsers / USERS_PER_PAGE));
 
+    // Liczba rozwiązanych zadań per uczeń - wcześniej /users pokazywało tylko XP,
+    // więc nie było widać, ile zadań faktycznie zrobili uczniowie.
+    let solvedByUser: Map<string, number> | null = null;
+    try {
+      const stats = await fetchSolvedStats(supabase, {
+        userIds: data.users.map((user) => user.id),
+      });
+      solvedByUser = stats.perUser;
+    } catch (error) {
+      console.error("[telegram] solved stats for /users failed:", error);
+    }
+    const solvedTotal = await safeCount(
+      supabase
+        .from("solved_tasks")
+        .select("user_id", { count: "exact", head: true }),
+    );
+
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
     return [
       `Wszyscy użytkownicy - strona ${requestedPage}/${totalPages}`,
       `Wyświetlam ${firstUserNumber}–${firstUserNumber + data.users.length - 1} z ${totalUsers}:`,
+      `Rozwiązane zadania łącznie: ${formatCount(
+        solvedTotal,
+        "brak tabeli solved_tasks",
+      )}`,
       ...data.users.map((user, index) => {
         const name = getAuthUserName(user, profileNames);
         const date = new Date(user.created_at).toLocaleDateString("pl-PL");
@@ -242,7 +325,10 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
             ? "nigdy"
             : "nigdy (e-mail niepotwierdzony)";
         const xp = profileNames.get(user.id)?.xp ?? 0;
-        return `${firstUserNumber + index}. ${name} · ${email} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
+        const solved = solvedByUser?.get(user.id);
+        const solvedLabel =
+          solved === undefined ? "zadania: ?" : `zadania: ${plNumber.format(solved)}`;
+        return `${firstUserNumber + index}. ${name} · ${email} · ${solvedLabel} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),
       data.nextPage !== null
         ? `Następna strona: /users ${requestedPage + 1}`
@@ -300,17 +386,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     return "✅ Bot działa, połączenie z Supabase jest poprawne.";
   }
 
-  return [
-    "Komendy administratora:",
-    "/stats - użytkownicy, nowe konta i zadania",
-    "/new - ostatnie rejestracje",
-    "/users [strona] - lista wszystkich użytkowników",
-    "/top - ranking XP",
-    "/szybkaproba - statystyki szybkiej próby",
-    "/visits [dni] - wejścia i unikalni odwiedzający",
-    "/health - sprawdzenie połączenia",
-    "/pomoc - pokaż tę listę",
-  ].join("\n");
+  return HELP_TEXT;
 }
 
 export async function POST(request: Request): Promise<Response> {

@@ -80,27 +80,78 @@ async function applyPatch(
     );
   }
 
-  let { error } = await supabase
+  // `.select()` jest konieczne: PostgREST zwraca 204 bez błędu także wtedy,
+  // gdy UPDATE trafił 0 wierszy (np. brak profilu). Wcześniej webhook
+  // odpowiadał 200, Stripe nie ponawiał, a użytkownik zostawał na free.
+  let { data, error } = await supabase
     .from("profiles")
     .update(patch)
-    .eq("id", userId);
+    .eq("id", userId)
+    .select("id")
+    .maybeSingle();
 
   // Gdy kolumny stripe_* jeszcze nie istnieją (migracja nieuruchomiona),
   // próbujemy zapisać wąski podzbiór statusu - żeby flaga Pro mimo wszystko działała.
   if (error && isPostgrestUndefinedColumnError(error as PostgrestError)) {
-    ({ error } = await supabase
+    ({ data, error } = await supabase
       .from("profiles")
       .update({
         subscription_status: patch.subscription_status,
         subscription_plan: patch.subscription_plan,
       })
-      .eq("id", userId));
+      .eq("id", userId)
+      .select("id")
+      .maybeSingle());
   }
 
   if (error) {
     console.error("[stripe-webhook] Zapis subskrypcji nieudany:", error);
     throw new Error("Zapis subskrypcji w profilu nieudany.");
   }
+
+  if (!data) {
+    console.error(
+      "[stripe-webhook] Profil nie istnieje - nie zapisano subskrypcji:",
+      userId,
+    );
+    throw new Error("Profil użytkownika nie istnieje - nie zapisano subskrypcji.");
+  }
+}
+
+/**
+ * Szuka użytkownika po powiązaniu ze Stripe, gdy brak `metadata.supabase_user_id`
+ * (starsze subskrypcje, ręczne zmiany w dashboardzie).
+ */
+async function lookupUserIdByStripe(
+  subscription: Stripe.Subscription,
+): Promise<string | null> {
+  const supabase = getServiceSupabaseOrNull();
+  if (!supabase) return null;
+
+  if (subscription.id) {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("stripe_subscription_id", subscription.id)
+      .maybeSingle();
+    if (!error && data?.id) return String(data.id);
+  }
+
+  const customerId =
+    typeof subscription.customer === "string"
+      ? subscription.customer
+      : (subscription.customer?.id ?? null);
+
+  if (customerId) {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("stripe_customer_id", customerId)
+      .maybeSingle();
+    if (!error && data?.id) return String(data.id);
+  }
+
+  return null;
 }
 
 /** Zapisuje stan subskrypcji w profilu na podstawie obiektu Stripe.Subscription. */
@@ -108,12 +159,20 @@ export async function syncSubscriptionToProfile(
   subscription: Stripe.Subscription,
   options?: { forceUserId?: string },
 ): Promise<void> {
-  const userId = options?.forceUserId ?? userIdFromSubscription(subscription);
+  const userId =
+    options?.forceUserId ??
+    userIdFromSubscription(subscription) ??
+    (await lookupUserIdByStripe(subscription));
+
   if (!userId) {
-    console.warn(
-      "[stripe-webhook] Brak supabase_user_id w subskrypcji - nie wiem, czyj profil zaktualizować.",
+    // Rzucamy, żeby webhook zwrócił 500 i Stripe ponowił dostarczenie.
+    console.error(
+      "[stripe-webhook] Brak powiązania subskrypcji z profilem:",
+      subscription.id,
     );
-    return;
+    throw new Error(
+      "Brak supabase_user_id w subskrypcji - nie wiadomo, czyj profil zaktualizować.",
+    );
   }
 
   const customerId =
@@ -137,10 +196,14 @@ export async function syncSubscriptionToProfile(
 export async function markSubscriptionCanceled(
   subscription: Stripe.Subscription,
 ): Promise<void> {
-  const userId = userIdFromSubscription(subscription);
+  const userId =
+    userIdFromSubscription(subscription) ??
+    (await lookupUserIdByStripe(subscription));
   if (!userId) {
-    console.warn(
-      "[stripe-webhook] subscription.deleted bez supabase_user_id - pomijam.",
+    // Anulowania nie da się przypisać do konta - nie ma czego aktualizować.
+    console.error(
+      "[stripe-webhook] subscription.deleted bez powiązania z profilem:",
+      subscription.id,
     );
     return;
   }

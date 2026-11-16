@@ -38,4 +38,17 @@ describe("calculateStreak", () => {
     expect(result.streak).toBe(1);
     expect(result.lastPlayedDate).toBe(todayDateString());
   });
+
+  it("data z przyszłości (zmiana czasu/strefy) nie zeruje serii", () => {
+    const tomorrow = localDateString(1);
+    const result = calculateStreak(tomorrow, 6);
+    expect(result.streak).toBe(6);
+    expect(result.lastPlayedDate).toBe(todayDateString());
+  });
+
+  it("nieczytelna data nie wywala obliczeń", () => {
+    const result = calculateStreak("nie-data", 2);
+    expect(result.streak).toBe(1);
+    expect(result.lastPlayedDate).toBe(todayDateString());
+  });
 });

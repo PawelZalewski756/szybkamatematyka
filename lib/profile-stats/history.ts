@@ -4,7 +4,7 @@
  * profiles.last_played_date jako dodatkowego sygnału.
  */
 
-import { todayDateString } from "@/lib/supabase/profiles";
+import { shiftDateKey, todayDateKey } from "@/lib/format/date";
 
 const STORAGE_PREFIX = "szybka-matma-profile-activity";
 const MAX_STORED_DAYS = 60;
@@ -52,11 +52,9 @@ function saveStore(userId: string | null, store: ActivityStore): void {
 /** Usuwa wpisy starsze niż MAX_STORED_DAYS względem dziś. */
 export function trimOldDays(
   days: Record<string, StoredActivityDay>,
-  today: string = todayDateString(),
+  today: string = todayDateKey(),
 ): Record<string, StoredActivityDay> {
-  const cutoff = new Date(`${today}T12:00:00`);
-  cutoff.setDate(cutoff.getDate() - MAX_STORED_DAYS);
-  const cutoffStr = cutoff.toISOString().slice(0, 10);
+  const cutoffStr = shiftDateKey(today, -MAX_STORED_DAYS);
 
   const next: Record<string, StoredActivityDay> = {};
   for (const [date, entry] of Object.entries(days)) {
@@ -68,16 +66,11 @@ export function trimOldDays(
 /** Zwraca daty YYYY-MM-DD dla ostatnich `count` dni (włącznie z dziś). */
 export function dateStringsForLastDays(
   count: number,
-  today: string = todayDateString(),
+  today: string = todayDateKey(),
 ): string[] {
-  const result: string[] = [];
-  const end = new Date(`${today}T12:00:00`);
-  for (let i = count - 1; i >= 0; i -= 1) {
-    const d = new Date(end);
-    d.setDate(d.getDate() - i);
-    result.push(d.toISOString().slice(0, 10));
-  }
-  return result;
+  return Array.from({ length: count }, (_, index) =>
+    shiftDateKey(today, -(count - 1 - index)),
+  );
 }
 
 const DAY_LABELS = ["nd.", "pn.", "wt.", "śr.", "cz.", "pt.", "sb."];
@@ -105,7 +98,7 @@ export function buildActivitySeries(
   storedDays: Record<string, StoredActivityDay>,
   lastPlayedDate: string | null,
   dayCount: number,
-  today: string = todayDateString(),
+  today: string = todayDateKey(),
 ): ActivityPointInput[] {
   const dates = dateStringsForLastDays(dayCount, today);
   return dates.map((date) => {
@@ -120,7 +113,7 @@ export function hasAnyActivityData(
   storedDays: Record<string, StoredActivityDay>,
   lastPlayedDate: string | null,
   dayCount: number,
-  today: string = todayDateString(),
+  today: string = todayDateKey(),
 ): boolean {
   if (lastPlayedDate) return true;
   const dates = dateStringsForLastDays(dayCount, today);
@@ -138,7 +131,7 @@ export function recordDailySnapshot(
     xp: number;
     lastPlayedDate?: string | null;
   },
-  today: string = todayDateString(),
+  today: string = todayDateKey(),
 ): Record<string, StoredActivityDay> {
   if (typeof window === "undefined") return {};
 

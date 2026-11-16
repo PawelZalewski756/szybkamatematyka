@@ -9,10 +9,24 @@ vi.mock("@/lib/stripe/service-supabase", () => ({
   getServiceSupabaseOrNull: () => ({
     from: () => ({
       update: (patch: Record<string, unknown>) => ({
-        eq: async (_col: string, id: string) => {
-          profiles[id] = { ...profiles[id], ...patch };
-          return { error: null };
-        },
+        eq: (_col: string, id: string) => ({
+          select: () => ({
+            maybeSingle: async () => {
+              // PostgREST nie tworzy profilu - symulujemy brak wiersza dla
+              // nieznanych użytkowników, żeby webhook mógł zwrócić 500.
+              if (!profiles[id] && !patch.subscription_status) {
+                return { data: null, error: null };
+              }
+              profiles[id] = { ...profiles[id], ...patch };
+              return { data: { id }, error: null };
+            },
+          }),
+        }),
+      }),
+      select: () => ({
+        eq: () => ({
+          maybeSingle: async () => ({ data: null, error: null }),
+        }),
       }),
     }),
   }),

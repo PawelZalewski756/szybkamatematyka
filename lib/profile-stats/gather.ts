@@ -1,5 +1,6 @@
 import { ACHIEVEMENTS_TOTAL, evaluateAll } from "@/lib/achievements/catalog";
 import type { PlayerStats } from "@/lib/achievements/types";
+import { todayDateKey } from "@/lib/format/date";
 import { calculateLevel, calculateXpProgress } from "@/lib/levelSystem";
 import {
   buildActivitySeries,
@@ -26,7 +27,7 @@ export type ProfileStatsSources = {
  */
 export function buildProfileStatsSnapshot(
   sources: ProfileStatsSources,
-  today: string = new Date().toISOString().slice(0, 10),
+  today: string = todayDateKey(),
 ): ProfileStatsSnapshot {
   const xp = Math.max(0, sources.profile.xp);
   const level = calculateLevel(xp);

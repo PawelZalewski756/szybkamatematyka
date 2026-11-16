@@ -56,3 +56,81 @@ export async function POST(request: Request): Promise<Response> {
 
   return Response.json({ ok: true, message: "Telegram webhook is configured." });
 }
+
+type TelegramWebhookInfo = {
+  ok?: boolean;
+  description?: string;
+  result?: {
+    url?: string;
+    has_custom_certificate?: boolean;
+    pending_update_count?: number;
+    last_error_date?: number;
+    last_error_message?: string;
+    max_connections?: number;
+    allowed_updates?: string[];
+  };
+};
+
+/**
+ * GET /api/telegram/setup
+ *
+ * Diagnostyka: co Telegram naprawdę wie o webhooku (adres, liczba oczekujących
+ * aktualizacji, ostatni błąd dostarczenia). Wymaga tego samego sekretu co POST,
+ * więc nie da się jej wywołać publicznie.
+ */
+export async function GET(request: Request): Promise<Response> {
+  const setupSecret = process.env.TELEGRAM_SETUP_SECRET?.trim();
+  const botToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
+
+  if (!setupSecret || !botToken) {
+    return Response.json({ error: "Telegram setup is not configured." }, { status: 503 });
+  }
+
+  if (
+    !matchesSecret(
+      request.headers.get("authorization")?.replace(/^Bearer\s+/i, "") ?? null,
+      setupSecret,
+    )
+  ) {
+    return Response.json({ error: "Unauthorized." }, { status: 401 });
+  }
+
+  const response = await fetch(
+    `https://api.telegram.org/bot${botToken}/getWebhookInfo`,
+    { cache: "no-store" },
+  );
+  const payload = (await response.json()) as TelegramWebhookInfo;
+
+  if (!response.ok || !payload.ok) {
+    return Response.json(
+      { error: payload.description ?? "Telegram getWebhookInfo failed." },
+      { status: 502 },
+    );
+  }
+
+  const info = payload.result ?? {};
+  const adminIds = (process.env.TELEGRAM_ADMIN_IDS ?? process.env.ADMIN_TELEGRAM_ID ?? "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter((id) => /^\d+$/.test(id));
+
+  return Response.json({
+    ok: true,
+    webhookUrl: info.url || null,
+    webhookConfigured: Boolean(info.url),
+    pendingUpdates: info.pending_update_count ?? 0,
+    allowedUpdates: info.allowed_updates ?? [],
+    lastError: info.last_error_message ?? null,
+    lastErrorAt: info.last_error_date
+      ? new Date(info.last_error_date * 1000).toISOString()
+      : null,
+    // Diagnostyka konfiguracji - bez ujawniania sekretów.
+    adminIdsConfigured: adminIds.length,
+    webhookSecretConfigured: Boolean(
+      process.env.TELEGRAM_WEBHOOK_SECRET?.trim(),
+    ),
+    serviceRoleConfigured: Boolean(
+      process.env.SUPABASE_SERVICE_ROLE_KEY?.trim(),
+    ),
+  });
+}

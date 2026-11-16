@@ -31,7 +31,12 @@ export function DeleteAccountCard() {
         headers: { authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
-        setExportError("Nie udało się pobrać danych. Spróbuj ponownie.");
+        const payload = (await response.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+        setExportError(
+          payload?.error ?? "Nie udało się pobrać danych. Spróbuj ponownie.",
+        );
         return;
       }
 

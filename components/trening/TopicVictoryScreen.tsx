@@ -9,6 +9,8 @@ type TopicVictoryScreenProps = {
   backLabel?: string;
   nextTopic?: NextTopic | null;
   isGuest?: boolean;
+  /** false, gdy ukończono tylko wybrany filtr trudności, a nie cały temat. */
+  completedTopic?: boolean;
 };
 
 export function TopicVictoryScreen({
@@ -16,15 +18,18 @@ export function TopicVictoryScreen({
   backLabel = "Wróć do listy tematów",
   nextTopic = null,
   isGuest = false,
+  completedTopic = true,
 }: TopicVictoryScreenProps) {
   return (
     <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-4 py-12 text-center">
       <CheckCircle2 className="h-16 w-16 text-success" aria-hidden />
       <h2 className="mt-6 text-2xl font-black text-foreground sm:text-3xl">
-        Temat ukończony
+        {completedTopic ? "Temat ukończony" : "Sesja ukończona"}
       </h2>
       <p className="mt-2 max-w-md text-sm text-muted sm:text-base">
-        Wszystkie zadania z tego tematu są rozwiązane.
+        {completedTopic
+          ? "Wszystkie zadania z tego tematu są rozwiązane."
+          : "Ukończyłeś wybrane zadania. Zmień filtr trudności, aby rozwiązać pozostałe."}
       </p>
 
       <div className="mt-8 flex w-full max-w-sm flex-col items-stretch gap-3">

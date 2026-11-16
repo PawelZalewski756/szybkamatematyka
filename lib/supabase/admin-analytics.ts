@@ -313,12 +313,9 @@ async function fetchContentStats(notes: string[]): Promise<ContentStats> {
  * sekcji treści degradują łagodnie (null + wpis w `notes`).
  */
 export async function fetchAdminAnalytics(): Promise<AdminAnalytics> {
-  const notes: string[] = [
-    "Liczba rozwiązanych zadań w skali platformy nie jest liczona - tabele " +
-      "solved_tasks / daily_challenges / review_schedule mają RLS „tylko własne " +
-      "wiersze”, więc klient sesji nie widzi danych innych graczy (wymagałoby to " +
-      "service_role po stronie serwera).",
-  ];
+  // Liczba rozwiązanych zadań w skali platformy jest liczona osobnym endpointem
+  // /api/admin/solved-stats (service_role), bo solved_tasks ma RLS „tylko własne”.
+  const notes: string[] = [];
 
   const profileRows = await fetchProfileRows();
   const players = computePlayerStats(profileRows);

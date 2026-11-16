@@ -36,9 +36,12 @@ function warnTableMissingOnce(): void {
 
 function isTableUnavailable(error: PostgrestError | null): boolean {
   if (!error) return false;
-  if (isSchemaMissingError(error.message)) return true;
-  if (error.code === "42P01") return true;
-  return new RegExp(TABLE, "i").test(error.message ?? "");
+  // Tylko realny brak tabeli. Dopasowanie samej nazwy tabeli łapało też
+  // „row-level security policy for table user_achievements” i ukrywało
+  // prawdziwy błąd uprawnień jako brak migracji.
+  if (error.code === "42P01" || error.code === "PGRST205") return true;
+  if (error.code === "42501") return false;
+  return isSchemaMissingError(error.message);
 }
 
 function mapRow(row: UserAchievementRow): UnlockedAchievementRecord {

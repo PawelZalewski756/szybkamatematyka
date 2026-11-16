@@ -6,6 +6,12 @@ import {
   isPostgrestUndefinedColumnError,
 } from "@/lib/supabase/errors";
 import { calculateLevel } from "@/lib/levelSystem";
+import {
+  APP_TIME_ZONE,
+  dateKeyInTimeZone,
+  shiftDateKey,
+  todayDateKey,
+} from "@/lib/format/date";
 import { gameScoreToXp } from "@/lib/minigry/account-progress";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import {
@@ -167,31 +173,44 @@ function polishUnit(
   return many;
 }
 
+function lastNickUpdateMs(lastNickUpdate: string | null): number | null {
+  if (!lastNickUpdate) return null;
+  const parsed = new Date(lastNickUpdate).getTime();
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 export function canChangeNick(lastNickUpdate: string | null): boolean {
-  if (!lastNickUpdate) return true;
-  const elapsed = Date.now() - new Date(lastNickUpdate).getTime();
-  return elapsed >= NICK_CHANGE_COOLDOWN_MS;
+  const lastMs = lastNickUpdateMs(lastNickUpdate);
+  // Nieczytelna data nie może blokować zmiany nicku w nieskończoność.
+  if (lastMs === null) return true;
+  return Date.now() - lastMs >= NICK_CHANGE_COOLDOWN_MS;
 }
 
 export function nickChangeCooldownMessage(
   lastNickUpdate: string | null,
 ): string | null {
-  if (!lastNickUpdate || canChangeNick(lastNickUpdate)) return null;
+  const lastMs = lastNickUpdateMs(lastNickUpdate);
+  if (lastMs === null) return null;
 
-  const unlockAt =
-    new Date(lastNickUpdate).getTime() + NICK_CHANGE_COOLDOWN_MS;
-  const remainingMs = Math.max(0, unlockAt - Date.now());
+  const unlockAt = lastMs + NICK_CHANGE_COOLDOWN_MS;
+  const remainingMs = unlockAt - Date.now();
+  if (remainingMs <= 0) return null;
+
   const totalHours = Math.ceil(remainingMs / (1000 * 60 * 60));
+  const unlockLabel = new Intl.DateTimeFormat("pl-PL", {
+    dateStyle: "long",
+    timeZone: APP_TIME_ZONE,
+  }).format(new Date(unlockAt));
 
   if (totalHours >= 24) {
     const days = Math.ceil(totalHours / 24);
     const unit = polishUnit(days, "dzień", "dni", "dni");
-    return `Nick możesz zmienić dopiero za ${days} ${unit}`;
+    return `Nick możesz zmienić dopiero za ${days} ${unit} (${unlockLabel}).`;
   }
 
   const hours = Math.max(1, totalHours);
   const unit = polishUnit(hours, "godzinę", "godziny", "godzin");
-  return `Nick możesz zmienić dopiero za ${hours} ${unit}`;
+  return `Nick możesz zmienić dopiero za ${hours} ${unit} (${unlockLabel}).`;
 }
 
 export function avatarUrlFromUserMetadata(user: User): string | null {
@@ -334,30 +353,38 @@ export function nickFromUserMetadata(user: User): string | null {
 }
 
 export function todayDateString(): string {
-  return new Date().toISOString().slice(0, 10);
+  // Polska strefa, nie UTC: po północy UTC jest jeszcze wczoraj i seria nie rosła.
+  return todayDateKey();
 }
 
 export function calculateStreak(
   lastPlayedDate: string | null,
   currentStreak: number,
 ): { streak: number; lastPlayedDate: string } {
-  const today = todayDateString();
+  const today = dateKeyInTimeZone();
 
   if (!lastPlayedDate) {
     return { streak: 1, lastPlayedDate: today };
   }
 
-  if (lastPlayedDate === today) {
+  const lastKey = lastPlayedDate.slice(0, 10);
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(lastKey)) {
+    return { streak: 1, lastPlayedDate: today };
+  }
+
+  if (lastKey === today) {
     return { streak: Math.max(1, currentStreak), lastPlayedDate: today };
   }
 
-  const last = new Date(`${lastPlayedDate}T12:00:00`);
-  const now = new Date(`${today}T12:00:00`);
-  const diffDays = Math.round(
-    (now.getTime() - last.getTime()) / (1000 * 60 * 60 * 24),
-  );
+  // Data z przyszłości (zmiana strefy/czasu) nie może zerować serii.
+  if (lastKey > today) {
+    return { streak: Math.max(1, currentStreak), lastPlayedDate: today };
+  }
 
-  if (diffDays === 1) {
+  const yesterday = shiftDateKey(today, -1);
+
+  if (lastKey === yesterday) {
     return { streak: Math.max(1, currentStreak) + 1, lastPlayedDate: today };
   }
 
@@ -472,6 +499,10 @@ export async function fetchProfile(
   return enrichProfileAvatar(profile, userId, user);
 }
 
+function escapeLikePattern(value: string): string {
+  return value.replace(/[\\%_]/g, (match) => `\\${match}`);
+}
+
 export async function isNickTaken(
   nick: string,
   exceptUserId?: string,
@@ -482,7 +513,9 @@ export async function isNickTaken(
   const { data, error } = await supabase
     .from("profiles")
     .select("id")
-    .ilike("nick", normalized)
+    // `_` i `%` są w ILIKE znakami wieloznacznymi, a walidacja nicku pozwala
+    // na podkreślnik - bez escapowania „jan_kowalski” kolidował z „janXkowalski”.
+    .ilike("nick", escapeLikePattern(normalized))
     .retry(false);
 
   if (error) throw error;
@@ -538,16 +571,27 @@ export async function updateProfileNick(
   nick: string,
   options?: { lastNickUpdate?: string | null },
 ): Promise<Profile> {
-  if (options?.lastNickUpdate !== undefined) {
-    const cooldownMsg = nickChangeCooldownMessage(options.lastNickUpdate);
-    if (cooldownMsg) throw new NickCooldownError(cooldownMsg);
+  const nextNick = normalizeNick(nick);
+
+  // Stan z bazy jest źródłem prawdy dla cooldownu - przekazany z klienta
+  // `lastNickUpdate` bywa nieaktualny po odświeżeniu strony.
+  const current = await selectProfileWithFallback(userId);
+  const currentRow = current.row;
+
+  // Zapis tego samego nicku nie może zaczynać kolejnych 7 dni karencji.
+  if (currentRow && readNick(currentRow) === nextNick) {
+    return mapRow(currentRow);
   }
 
-  // Normalizacja nicku odbywa się spójnie w profileWritePayload() (ten sam tor
-  // zapisu co createProfile), więc nie liczymy jej tu osobno - wcześniejsza
-  // lokalna zmienna `normalized` była martwa.
+  const cooldownBase =
+    currentRow?.last_nick_update !== undefined
+      ? currentRow.last_nick_update ?? null
+      : options?.lastNickUpdate ?? null;
+  const cooldownMsg = nickChangeCooldownMessage(cooldownBase);
+  if (cooldownMsg) throw new NickCooldownError(cooldownMsg);
+
   const patch: Record<string, unknown> = {
-    ...profileWritePayload(nick),
+    ...profileWritePayload(nextNick),
     last_nick_update: new Date().toISOString(),
   };
 
@@ -556,7 +600,7 @@ export async function updateProfileNick(
   if (error && isPostgrestUndefinedColumnError(error, "last_nick_update")) {
     ({ row, error } = await updateAndSelectProfile(
       userId,
-      profileWritePayload(nick),
+      profileWritePayload(nextNick),
     ));
   }
 
@@ -608,16 +652,29 @@ export async function completeProfileOnboarding(
   schoolLevel?: LearningPath | "",
   options?: { lastNickUpdate?: string | null },
 ): Promise<Profile> {
-  if (options?.lastNickUpdate !== undefined) {
-    const cooldownMsg = nickChangeCooldownMessage(options.lastNickUpdate);
+  const nextNick = normalizeNick(nick);
+  const existing = await selectProfileWithFallback(userId);
+  const existingRow = existing.row;
+  const nickChanged = !existingRow || readNick(existingRow) !== nextNick;
+
+  // Onboarding nie może odnawiać karencji, gdy nick się nie zmienia - inaczej
+  // „zmienisz nick za 7 dni” wraca przy każdym wejściu na stronę.
+  let nickTimestamp: string | null = null;
+  if (nickChanged) {
+    const cooldownBase =
+      existingRow?.last_nick_update !== undefined
+        ? existingRow.last_nick_update ?? null
+        : options?.lastNickUpdate ?? null;
+    const cooldownMsg = nickChangeCooldownMessage(cooldownBase);
     if (cooldownMsg) throw new NickCooldownError(cooldownMsg);
+    nickTimestamp = new Date().toISOString();
   }
 
-  const nickPayload = profileWritePayload(nick);
+  const nickPayload = profileWritePayload(nextNick);
   const patch: Record<string, unknown> = {
     ...nickPayload,
     ...(schoolLevel ? { school_class: schoolLevel } : {}),
-    last_nick_update: new Date().toISOString(),
+    ...(nickTimestamp ? { last_nick_update: nickTimestamp } : {}),
   };
 
   let { row, error } = await updateAndSelectProfile(userId, patch);
@@ -625,7 +682,7 @@ export async function completeProfileOnboarding(
   if (error && isPostgrestUndefinedColumnError(error, "school_class")) {
     ({ row, error } = await updateAndSelectProfile(userId, {
       ...nickPayload,
-      last_nick_update: new Date().toISOString(),
+      ...(nickTimestamp ? { last_nick_update: nickTimestamp } : {}),
     }));
   }
 
@@ -739,11 +796,26 @@ export async function awardArenaXp(
   xpAmount: number,
 ): Promise<Profile & { leveledUp: boolean; previousLevel: number; xpEarned: number }> {
   const withXp = applyXpGain(profile, xpAmount);
+  // Trening jest grą tak samo jak minigry - musi podtrzymywać serię dni.
+  const { streak, lastPlayedDate } = calculateStreak(
+    profile.lastPlayedDate,
+    profile.streak,
+  );
 
-  const { row, error } = await updateAndSelectProfile(profile.id, {
+  let { row, error } = await updateAndSelectProfile(profile.id, {
     xp: withXp.xp,
     level: withXp.level,
+    streak,
+    last_played_date: lastPlayedDate,
   });
+
+  if (error && isPostgrestUndefinedColumnError(error)) {
+    // Starsza baza bez kolumn serii - zapisujemy przynajmniej XP.
+    ({ row, error } = await updateAndSelectProfile(profile.id, {
+      xp: withXp.xp,
+      level: withXp.level,
+    }));
+  }
 
   if (error) {
     console.warn("[szybka-matma] awardArenaXp - zapis XP:", error);
@@ -812,7 +884,9 @@ export async function saveProfileAfterGame(
       streak,
       last_played_date: lastPlayedDate,
     }));
-    if (error && isPostgrestUndefinedColumnError(error, "minigry_xp")) {
+    // Drugi fallback musi sprawdzać kolumny, które faktycznie zostały w payloadzie
+    // (wcześniej sprawdzał minigry_xp, którego już tam nie ma, więc XP przepadało).
+    if (error && isPostgrestUndefinedColumnError(error)) {
       ({ row, error } = await updateAndSelectProfile(profile.id, {
         xp: withXp.xp,
         level: withXp.level,
@@ -987,11 +1061,13 @@ export async function updateProfileAvatarUrl(
 ): Promise<UpdateProfileAvatarResult> {
   const supabase = getSupabase();
 
-  const { error: updateError } = await supabase
+  const { data: updated, error: updateError } = await supabase
     .from("profiles")
     .update({ avatar_url: avatarUrl })
     .eq("id", userId)
-    .retry(false);
+    .retry(false)
+    .select("avatar_url")
+    .maybeSingle();
 
   if (
     updateError &&
@@ -1024,6 +1100,26 @@ export async function updateProfileAvatarUrl(
   if (updateError) {
     console.error("[szybka-matma] updateProfileAvatarUrl failed:", updateError);
     throw updateError;
+  }
+
+  // PostgREST nie zgłasza błędu dla UPDATE, który trafił 0 wierszy (np. brak
+  // profilu przy niespójnym triggerze). Wtedy ratujemy się user_metadata.
+  if (!updated) {
+    const profile: Profile = {
+      id: userId,
+      nick: "",
+      xp: 0,
+      minigryXp: 0,
+      level: 1,
+      streak: 0,
+      lastPlayedDate: null,
+      avatarUrl,
+      lastNickUpdate: null,
+    };
+    const metaOk = await persistAvatarUrlToUserMetadata(avatarUrl);
+    if (metaOk) warnAvatarColumnMissingOnce();
+    notifyProfileUpdated(profile);
+    return { profile, persisted: metaOk };
   }
 
   const { row, error: selectError } = await selectProfileWithFallback(userId);

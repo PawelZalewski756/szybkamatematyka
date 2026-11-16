@@ -267,7 +267,9 @@ export function DailyChallengeView() {
     setPhase("playing");
   };
 
-  const progressPercent = total > 0 ? (index / total) * 100 : 0;
+  // Pasek ma dojść do 100% po odpowiedzi na ostatnie pytanie, a nie na starcie.
+  const progressPercent =
+    total > 0 ? (Math.min(total, index + (locked ? 1 : 0)) / total) * 100 : 0;
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">

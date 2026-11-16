@@ -1,3 +1,4 @@
+import { fetchAllPages } from "@/lib/supabase/fetch-all-pages";
 import { getSupabase } from "@/lib/supabase";
 import {
   isPostgrestUndefinedColumnError,
@@ -7,6 +8,12 @@ import type { ExamType } from "@/types/database";
 import type { PostgrestError } from "@supabase/supabase-js";
 
 const MISSING_TABLE_WARN_KEY = "sm_solved_tasks_table_warned";
+
+/**
+ * Ile identyfikatorów wysyłamy w jednym `.in()`. PostgREST buduje z tego URL,
+ * więc zbyt długa lista kończy się błędem 414 przy uczniach z tysiącami zadań.
+ */
+const TASK_ID_CHUNK = 200;
 
 function warnSolvedTasksTableMissingOnce(): void {
   if (typeof sessionStorage !== "undefined") {
@@ -23,11 +30,18 @@ function warnSolvedTasksTableMissingOnce(): void {
   );
 }
 
+/**
+ * Tylko realny brak tabeli. Wcześniej wystarczyło słowo „solved_tasks” w
+ * komunikacie, więc błąd RLS/uprawnień był raportowany jako brak migracji
+ * i funkcja po cichu przechodziła w tryb lokalny.
+ */
 function isSolvedTasksUnavailable(error: PostgrestError | null): boolean {
   if (!error) return false;
-  if (isSchemaMissingError(error.message)) return true;
-  if (error.code === "42P01") return true;
-  return /solved_tasks/i.test(error.message ?? "");
+  if (error.code === "42P01" || error.code === "PGRST205") return true;
+  if (error.code === "42501") return false;
+  const message = error.message ?? "";
+  if (/permission denied/i.test(message)) return false;
+  return isSchemaMissingError(message);
 }
 
 function isExamType(value: unknown): value is ExamType {
@@ -46,17 +60,26 @@ export function topicProgressKey(
   return `${examType}:${category}:${topic}`;
 }
 
+/**
+ * Wszystkie rozwiązane zadania użytkownika. Stronicowanie jest konieczne:
+ * PostgREST domyślnie zwraca maksymalnie 1000 wierszy, więc po przekroczeniu
+ * tego progu licznik i postęp tematów przestawały rosnąć.
+ */
 export async function fetchSolvedTaskIds(userId: string): Promise<Set<string>> {
   const supabase = getSupabase();
 
-  const { data, error } = await supabase
-    .from("solved_tasks")
-    .select("task_id")
-    .eq("user_id", userId)
-    .retry(false);
+  const { rows, error } = await fetchAllPages<{ task_id: string }>((from, to) =>
+    supabase
+      .from("solved_tasks")
+      .select("task_id")
+      .eq("user_id", userId)
+      // Stabilna kolejność = brak duplikatów pomiędzy równoległymi stronami.
+      .order("task_id", { ascending: true })
+      .range(from, to),
+  );
 
   if (error) {
-    if (isSolvedTasksUnavailable(error as PostgrestError)) {
+    if (isSolvedTasksUnavailable(error)) {
       warnSolvedTasksTableMissingOnce();
       return new Set();
     }
@@ -65,9 +88,7 @@ export async function fetchSolvedTaskIds(userId: string): Promise<Set<string>> {
   }
 
   return new Set(
-    (data ?? [])
-      .map((row) => row.task_id as string)
-      .filter(Boolean),
+    rows.map((row) => row.task_id).filter((id): id is string => Boolean(id)),
   );
 }
 
@@ -78,19 +99,25 @@ export type RecentSolvedTopic = {
   solvedAt: string;
 };
 
-/** Ostatni temat, w którym zalogowany użytkownik rozwiązał zadanie. */
+/**
+ * Ostatni temat, w którym zalogowany użytkownik rozwiązał zadanie.
+ *
+ * Dwa zapytania zamiast `tasks!inner`: po migracji
+ * 20261116120000_solved_tasks_allow_cached_tasks.sql nie ma już klucza obcego
+ * solved_tasks → tasks, więc osadzanie `tasks!inner` przestałoby działać.
+ */
 export async function fetchLatestSolvedTopic(
   userId: string,
 ): Promise<RecentSolvedTopic | null> {
   const supabase = getSupabase();
+
   const { data, error } = await supabase
     .from("solved_tasks")
-    .select("solved_at, tasks!inner(exam_type, category, topic)")
+    .select("task_id, solved_at")
     .eq("user_id", userId)
     .order("solved_at", { ascending: false })
     .limit(1)
-    .maybeSingle()
-    .retry(false);
+    .maybeSingle();
 
   if (error) {
     if (!isSolvedTasksUnavailable(error as PostgrestError)) {
@@ -98,16 +125,20 @@ export async function fetchLatestSolvedTopic(
     }
     return null;
   }
+  if (!data?.task_id) return null;
 
-  const rawTask = data?.tasks as unknown;
-  const task = (Array.isArray(rawTask) ? rawTask[0] : rawTask) as {
-    exam_type?: unknown;
-    category?: unknown;
-    topic?: unknown;
-  } | null;
+  const { data: task, error: taskError } = await supabase
+    .from("tasks")
+    .select("exam_type, category, topic")
+    .eq("id", data.task_id)
+    .maybeSingle();
+
+  if (taskError || !task) {
+    // Zadanie istnieje tylko w cache treningu - brak metadanych tematu.
+    return null;
+  }
 
   if (
-    !task ||
     !isExamType(task.exam_type) ||
     typeof task.category !== "string" ||
     typeof task.topic !== "string"
@@ -120,7 +151,9 @@ export async function fetchLatestSolvedTopic(
     category: task.category,
     topic: task.topic,
     solvedAt:
-      typeof data?.solved_at === "string" ? data.solved_at : new Date().toISOString(),
+      typeof data.solved_at === "string"
+        ? data.solved_at
+        : new Date().toISOString(),
   };
 }
 
@@ -141,6 +174,15 @@ export async function markTaskSolved(
   if (error) {
     const pgError = error as PostgrestError;
     if (pgError.code === "23505") return false;
+    if (pgError.code === "23503") {
+      // Klucz obcy do public.tasks - zadanie istnieje tylko w cache zadań.
+      const taskMissingError = new Error(
+        "Zadanie nie jest zapisane w tabeli tasks, więc jego postęp nie może trafić do solved_tasks. " +
+          "Uruchom w Supabase SQL Editor: supabase/migrations/20261116120000_solved_tasks_allow_cached_tasks.sql",
+      );
+      console.warn("[szybka-matma] markTaskSolved:", taskMissingError.message);
+      throw taskMissingError;
+    }
     if (isSolvedTasksUnavailable(pgError)) {
       warnSolvedTasksTableMissingOnce();
       return false;
@@ -159,84 +201,63 @@ export type SolvedTopicCount = {
   solved: number;
 };
 
+/** Liczba rozwiązanych zadań per temat (bez osadzania FK). */
 export async function fetchSolvedCountsByTopic(
   userId: string,
   examType?: ExamType,
 ): Promise<Map<string, number>> {
   const supabase = getSupabase();
 
-  let query = supabase
-    .from("solved_tasks")
-    .select("task_id, tasks!inner(exam_type, category, topic)")
-    .eq("user_id", userId)
-    .retry(false);
-
-  if (examType) {
-    query = query.eq("tasks.exam_type", examType);
-  }
-
-  const { data, error } = await query;
+  const { rows: solvedRows, error } = await fetchAllPages<{ task_id: string }>(
+    (from, to) =>
+      supabase
+        .from("solved_tasks")
+        .select("task_id")
+        .eq("user_id", userId)
+        .order("task_id", { ascending: true })
+        .range(from, to),
+  );
 
   if (error) {
-    if (isSolvedTasksUnavailable(error as PostgrestError)) {
+    if (isSolvedTasksUnavailable(error)) {
       warnSolvedTasksTableMissingOnce();
       return new Map();
     }
-    if (isPostgrestUndefinedColumnError(error as PostgrestError)) {
-      return fetchSolvedCountsByTopicFallback(userId, examType);
+    if (isPostgrestUndefinedColumnError(error)) {
+      return new Map();
     }
     console.warn("[szybka-matma] fetchSolvedCountsByTopic:", error);
     return new Map();
   }
 
-  const counts = new Map<string, number>();
-  for (const row of data ?? []) {
-    const raw = row.tasks as unknown;
-    const task = (Array.isArray(raw) ? raw[0] : raw) as {
-      exam_type: ExamType;
-      category: string;
-      topic: string;
-    } | null;
-    if (!task?.exam_type) continue;
-    const key = topicProgressKey(task.exam_type, task.category, task.topic);
-    counts.set(key, (counts.get(key) ?? 0) + 1);
-  }
-  return counts;
-}
-
-async function fetchSolvedCountsByTopicFallback(
-  userId: string,
-  examType?: ExamType,
-): Promise<Map<string, number>> {
-  const solvedIds = await fetchSolvedTaskIds(userId);
-  if (solvedIds.size === 0) return new Map();
-
-  const supabase = getSupabase();
-  let query = supabase
-    .from("tasks")
-    .select("id, exam_type, category, topic")
-    .in("id", [...solvedIds])
-    .retry(false);
-
-  if (examType) {
-    query = query.eq("exam_type", examType);
-  }
-
-  const { data, error } = await query;
-
-  if (error) {
-    console.warn("[szybka-matma] fetchSolvedCountsByTopicFallback:", error);
-    return new Map();
-  }
+  const ids = solvedRows
+    .map((row) => row.task_id)
+    .filter((id): id is string => Boolean(id));
 
   const counts = new Map<string, number>();
-  for (const row of data ?? []) {
-    const key = topicProgressKey(
-      row.exam_type as ExamType,
-      row.category,
-      row.topic,
-    );
-    counts.set(key, (counts.get(key) ?? 0) + 1);
+  for (let index = 0; index < ids.length; index += TASK_ID_CHUNK) {
+    const chunk = ids.slice(index, index + TASK_ID_CHUNK);
+    let query = supabase
+      .from("tasks")
+      .select("id, exam_type, category, topic")
+      .in("id", chunk);
+
+    if (examType) {
+      query = query.eq("exam_type", examType);
+    }
+
+    const { data, error: tasksError } = await query;
+    if (tasksError) {
+      console.warn("[szybka-matma] fetchSolvedCountsByTopic tasks:", tasksError);
+      continue;
+    }
+
+    for (const row of data ?? []) {
+      if (!isExamType(row.exam_type)) continue;
+      const key = topicProgressKey(row.exam_type, row.category, row.topic);
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
   }
+
   return counts;
 }
