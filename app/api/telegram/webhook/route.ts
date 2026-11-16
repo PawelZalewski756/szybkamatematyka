@@ -5,7 +5,6 @@ import {
   isTelegramAdmin,
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
-import { fetchSolvedStats } from "@/lib/supabase/solved-stats";
 
 export const runtime = "nodejs";
 
@@ -285,15 +284,33 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
     // Liczba rozwiązanych zadań per uczeń - wcześniej /users pokazywało tylko XP,
     // więc nie było widać, ile zadań faktycznie zrobili uczniowie.
-    let solvedByUser: Map<string, number> | null = null;
-    try {
-      const stats = await fetchSolvedStats(supabase, {
-        userIds: data.users.map((user) => user.id),
-      });
-      solvedByUser = stats.perUser;
-    } catch (error) {
-      console.error("[telegram] solved stats for /users failed:", error);
+    //
+    // Liczymy osobnym zapytaniem `count` na ucznia (bez pobierania wierszy):
+    // jest to odporne na limit 1000 wierszy PostgREST i nie zależy od kolumny
+    // solved_at, której brak w starszych instalacjach psuł całą listę.
+    const requestedIds = data.users.map((user) => user.id);
+    const solvedCounts = new Map<string, number>();
+    let solvedCountError: string | null = null;
+
+    const countResults = await Promise.all(
+      requestedIds.map(async (id) => ({
+        id,
+        result: await safeCount(
+          supabase
+            .from("solved_tasks")
+            .select("user_id", { count: "exact", head: true })
+            .eq("user_id", id),
+        ),
+      })),
+    );
+    for (const { id, result } of countResults) {
+      if (result.error) {
+        solvedCountError ??= result.error;
+        continue;
+      }
+      solvedCounts.set(id, result.value ?? 0);
     }
+
     const solvedTotal = await safeCount(
       supabase
         .from("solved_tasks")
@@ -301,7 +318,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     );
 
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
-    return [
+    const lines = [
       `Wszyscy użytkownicy - strona ${requestedPage}/${totalPages}`,
       `Wyświetlam ${firstUserNumber}–${firstUserNumber + data.users.length - 1} z ${totalUsers}:`,
       `Rozwiązane zadania łącznie: ${formatCount(
@@ -325,15 +342,26 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
             ? "nigdy"
             : "nigdy (e-mail niepotwierdzony)";
         const xp = profileNames.get(user.id)?.xp ?? 0;
-        const solved = solvedByUser?.get(user.id);
+        const solved = solvedCounts.get(user.id);
         const solvedLabel =
-          solved === undefined ? "zadania: ?" : `zadania: ${plNumber.format(solved)}`;
+          solved === undefined
+            ? "zadania: ?"
+            : `zadania: ${plNumber.format(solved)}`;
         return `${firstUserNumber + index}. ${name} · ${email} · ${solvedLabel} · ${xp} XP · rej. ${date} · log. ${lastLogin}`;
       }),
       data.nextPage !== null
         ? `Następna strona: /users ${requestedPage + 1}`
         : "To ostatnia strona.",
-    ].join("\n");
+    ];
+
+    if (solvedCountError) {
+      lines.push(
+        "",
+        describeTelegramCommandError(new Error(`solved_tasks: ${solvedCountError}`)),
+      );
+    }
+
+    return lines.join("\n");
   }
 
   if (command === "top") {
