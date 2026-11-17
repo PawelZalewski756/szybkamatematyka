@@ -1,18 +1,15 @@
-import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import {
-  examTaskPoints,
-  formatPkt,
-} from "@/lib/baza-zadan/cke/exam-points";
+import type { CatalogTask } from "@/lib/baza-zadan/catalog-task";
+import { formatPkt } from "@/lib/baza-zadan/cke/exam-points";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
-import type { Task } from "@/lib/baza-zadan/types";
+import { useSolvedTasks } from "@/components/SolvedTasksProvider";
 import { Check } from "lucide-react";
 import Link from "next/link";
 
 type TaskCardProps = {
-  task: Task;
+  task: CatalogTask;
 };
 
 const DIFFICULTY_STYLES = {
@@ -53,10 +50,10 @@ export function TaskCard({ task }: TaskCardProps) {
         <span className={DIFFICULTY_STYLES[task.difficulty]}>
           {DIFFICULTY_LABELS[task.difficulty]}
         </span>
-        {task.examSource ? (
+        {task.isExam ? (
           <>
             <span className="mx-1.5 text-surface-border">·</span>
-            <span>{formatPkt(examTaskPoints(task))}</span>
+            <span>{formatPkt(task.points)}</span>
           </>
         ) : null}
       </p>

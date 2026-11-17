@@ -218,4 +218,67 @@ export async function fetchArkuszSolutions(
     : {};
 }
 
+export type ArchiveSolutions = {
+  answers: Record<string, string>;
+  solutions: Record<string, string>;
+  steps: Record<string, string[]>;
+};
+
+function stringMap(value: unknown): Record<string, string> {
+  if (!value || typeof value !== "object") return {};
+  return Object.fromEntries(
+    Object.entries(value as Record<string, unknown>).filter(
+      (entry): entry is [string, string] => typeof entry[1] === "string",
+    ),
+  );
+}
+
+function stepsMap(value: unknown): Record<string, string[]> {
+  if (!value || typeof value !== "object") return {};
+  return Object.fromEntries(
+    Object.entries(value as Record<string, unknown>).map(([key, steps]) => [
+      key,
+      Array.isArray(steps)
+        ? steps.filter((step): step is string => typeof step === "string")
+        : [],
+    ]),
+  );
+}
+
+/** Pobiera klucz arkusza z archiwum CKE (dane statyczne). Tylko Pro. */
+export async function fetchArchiveSolutions(
+  sheetId: string,
+): Promise<ArchiveSolutions> {
+  const token = await getSupabaseAccessToken();
+  if (!token) {
+    throw new Error("Zaloguj się i aktywuj plan Pro, aby zobaczyć klucz.");
+  }
+
+  const res = await fetch("/api/trening/archive-solutions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ sheetId }),
+  });
+
+  const data = (await res.json().catch(() => ({}))) as {
+    answers?: unknown;
+    solutions?: unknown;
+    steps?: unknown;
+    error?: string;
+  };
+
+  if (!res.ok) {
+    throw new Error(data.error ?? "Nie udało się pobrać klucza.");
+  }
+
+  return {
+    answers: stringMap(data.answers),
+    solutions: stringMap(data.solutions),
+    steps: stepsMap(data.steps),
+  };
+}
+
 export type { AssistQuotaSnapshot };

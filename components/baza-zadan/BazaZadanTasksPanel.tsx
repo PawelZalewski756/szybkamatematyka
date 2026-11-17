@@ -3,6 +3,7 @@
 import { TaskCard } from "@/components/baza-zadan/TaskCard";
 import { EmptyState } from "@/components/feedback/EmptyState";
 import { useLearningPath } from "@/components/LearningPathProvider";
+import type { CatalogTask } from "@/lib/baza-zadan/catalog-task";
 import {
   CATEGORY_LABELS,
   DIFFICULTY_LABELS,
@@ -15,7 +16,6 @@ import { sortTasksForDisplay } from "@/lib/baza-zadan/task-order";
 import type {
   TaskCategory,
   TaskDifficulty,
-  TaskForClient,
 } from "@/lib/baza-zadan/types";
 import { matchesLearningPath } from "@/lib/learning-path";
 import {
@@ -67,7 +67,11 @@ function FilterChip({
   );
 }
 
-export function BazaZadanTasksPanel({ tasks: catalogTasks }: { tasks: TaskForClient[] }) {
+export function BazaZadanTasksPanel({
+  tasks: catalogTasks,
+}: {
+  tasks: CatalogTask[];
+}) {
   const { path } = useLearningPath();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<TaskCategory | "all">("all");
@@ -79,7 +83,7 @@ export function BazaZadanTasksPanel({ tasks: catalogTasks }: { tasks: TaskForCli
 
   const deferredSearch = useDeferredValue(search);
   const allTasks = useMemo(
-    () => catalogTasks.filter((task) => matchesLearningPath(path, task.forPaths)),
+    () => catalogTasks.filter((task) => matchesLearningPath(path, task.paths)),
     [catalogTasks, path],
   );
   const catalogGroups = useMemo(

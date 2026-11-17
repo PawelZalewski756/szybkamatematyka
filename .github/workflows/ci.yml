@@ -53,6 +53,9 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Status docs up to date
+        run: npm run status:check
+
       - name: Audit question quality
         run: npm run audit:questions
 
