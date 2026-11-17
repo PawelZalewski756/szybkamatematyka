@@ -163,3 +163,45 @@ describe("unwrapPlainNumberMath", () => {
     expect(unwrapPlainNumberMath("$1{,}5$")).toBe("$1{,}5$");
   });
 });
+
+describe("normalizeMathText — symbole Unicode w matematyce", () => {
+  it("zamienia półpauzę i znak minus na zwykły minus", () => {
+    expect(normalizeMathText("$x – 4 = 0$")).toBe("$x - 4 = 0$");
+    expect(normalizeMathText("$x − 1$")).toBe("$x - 1$");
+    expect(normalizeMathText("$$S = (–6, –8)$$")).toBe("$$S = (-6, -8)$$");
+  });
+
+  it("zamienia znak proporcji na dwukropek", () => {
+    expect(normalizeMathText("$1∶8$")).toBe("$1:8$");
+  });
+
+  it("escapuje procent tylko wewnątrz matematyki", () => {
+    expect(normalizeMathText("60% uczniów, $25%$")).toBe("60% uczniów, $25\\%$");
+    expect(normalizeMathText("$25\\%$")).toBe("$25\\%$");
+  });
+
+  it("nie rusza tekstu poza matematyką", () => {
+    expect(normalizeMathText("lata 2019–2026 i $x – 1$")).toBe(
+      "lata 2019–2026 i $x - 1$",
+    );
+  });
+
+  it("owija polskie słowa w tryb tekstowy", () => {
+    expect(normalizeMathText("$P(orzeł)$")).toBe("$P(\\text{orzeł})$");
+    expect(normalizeMathText("$(w zaokrągleniu do 1%)$")).toBe(
+      "$(w \\text{zaokrągleniu} do 1\\%)$",
+    );
+  });
+
+  it("owija polskie indeksy w tryb tekstowy", () => {
+    expect(normalizeMathText("$V_{ostrosłupa} = a^3$")).toBe(
+      "$V_{\\text{ostrosłupa}} = a^3$",
+    );
+    expect(normalizeMathText("$V_{półkuli}$")).toBe(
+      "$V_{\\text{półkuli}}$",
+    );
+    expect(normalizeMathText("$V_{\\text{półkuli}}$")).toBe(
+      "$V_{\\text{półkuli}}$",
+    );
+  });
+});

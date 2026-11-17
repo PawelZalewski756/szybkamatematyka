@@ -127,6 +127,60 @@ function findMathRanges(text: string): Array<[number, number]> {
   return ranges;
 }
 
+/**
+ * Zamienia symbole Unicode, których KaTeX nie zna w trybie matematycznym:
+ * półpauzę/myślnik na minus, znak proporcji ∶ na dwukropek, a nieescapowany
+ * procent na `\%`. Bez tego KaTeX ostrzega, a `%` ucina resztę wzoru jako
+ * komentarz. Działa wyłącznie wewnątrz `$...$` / `$$...$$`.
+ */
+const POLISH_LETTERS = "ąćęłńóśźżĄĆĘŁŃÓŚŹŻ";
+const POLISH_WORD = new RegExp(
+  `[A-Za-z${POLISH_LETTERS}]*[${POLISH_LETTERS}][A-Za-z${POLISH_LETTERS}]*`,
+  "g",
+);
+const TEXT_MODE_BLOCK = /(\\text\{[^{}]*\})/;
+
+/** Owija polskie słowa w tryb tekstowy, pomijając to, co już jest w \text{}. */
+function wrapPolishWords(latex: string): string {
+  return latex
+    .split(TEXT_MODE_BLOCK)
+    .map((part, index) =>
+      index % 2 === 1
+        ? part
+        : part.replace(POLISH_WORD, (word) => `\\text{${word}}`),
+    )
+    .join("");
+}
+
+export function normalizeLatexSymbols(latex: string): string {
+  const normalized = latex
+    .replace(/[\u2013\u2014\u2212]/g, "-")
+    .replace(/\u2236/g, ":")
+    .replace(/(?<!\\)%/g, "\\%")
+    // Polskie litery w indeksach (np. V_{ostrosłupa}) KaTeX traktuje jako
+    // tekst matematyczny i ostrzega. Tryb \text{...} renderuje je poprawnie.
+    .replace(
+      /([_^])\{([^{}]*[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ][^{}]*)\}/g,
+      (match, operator: string, body: string) =>
+        body.includes("\\text{") ? match : `${operator}{\\text{${body}}}`,
+    );
+
+  return wrapPolishWords(normalized);
+}
+
+function normalizeMathSymbols(text: string): string {
+  const ranges = findMathRanges(text);
+  if (ranges.length === 0) return text;
+
+  let out = "";
+  let last = 0;
+  for (const [start, end] of ranges) {
+    out += text.slice(last, start) + normalizeLatexSymbols(text.slice(start, end));
+    last = end;
+  }
+  return out + text.slice(last);
+}
+
 export function repairEscapedLatex(text: string): string {
   if (!/[\u0008-\u000d]/.test(text)) return text;
 
@@ -208,7 +262,8 @@ export function normalizeMathText(text: string): string {
   out = fixBrokenCommands(out);
   out = fixSplitDisplayDollars(out);
   out = out.replace(/\\textbf\{([^{}]*)\}/g, "$1");
-  return fixDollarParity(out);
+  out = fixDollarParity(out);
+  return normalizeMathSymbols(out);
 }
 
 const UNIT_WORDS =

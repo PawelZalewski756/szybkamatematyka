@@ -112,7 +112,11 @@ export function TheoryMarkdown({
   const prepared = useMemo(
     () =>
       unwrapPlainNumberMath(
-        ensureMathDelimiters(fixMarkdownTables(normalizeMathText(content))),
+        // Druga normalizacja: `ensureMathDelimiters` dopiero teraz opakowuje
+        // wzory bez $, więc symbole i polskie indeksy w nich trzeba poprawić.
+        normalizeMathText(
+          ensureMathDelimiters(fixMarkdownTables(normalizeMathText(content))),
+        ),
       ),
     [content],
   );
@@ -121,7 +125,7 @@ export function TheoryMarkdown({
     <div className={VARIANT_CLASS[variant]}>
       <ReactMarkdown
         remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]}
-        rehypePlugins={[rehypeKatex]}
+rehypePlugins={[rehypeKatex]}
         components={markdownComponents(withAnchors)}
       >
         {prepared}
