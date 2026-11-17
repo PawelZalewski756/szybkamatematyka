@@ -240,8 +240,9 @@ export function AdminPageClient() {
         className="mt-8 space-y-6 rounded-3xl border border-surface-border bg-surface/80 p-6 sm:p-8"
       >
         <div>
-          <label className="text-sm font-bold text-foreground">Arkusz</label>
+          <label htmlFor="admin-arkusz" className="text-sm font-bold text-foreground">Arkusz</label>
           <select
+            id="admin-arkusz"
             value={arkuszMode}
             onChange={(e) => setArkuszMode(e.target.value)}
             disabled={loadingArkusze}
@@ -291,8 +292,9 @@ export function AdminPageClient() {
         >
           {arkuszMode === NEW_ARKUSZ && (
             <div>
-              <label className="text-sm font-bold text-foreground">Miesiąc</label>
+              <label htmlFor="admin-miesiac" className="text-sm font-bold text-foreground">Miesiąc</label>
               <select
+                id="admin-miesiac"
                 value={miesiac}
                 onChange={(e) => setMiesiac(Number(e.target.value))}
                 className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
@@ -306,8 +308,9 @@ export function AdminPageClient() {
             </div>
           )}
           <div>
-            <label className="text-sm font-bold text-foreground">Rok</label>
+            <label htmlFor="admin-rok" className="text-sm font-bold text-foreground">Rok</label>
             <input
+              id="admin-rok"
               type="number"
               min={2000}
               max={2100}
@@ -318,8 +321,9 @@ export function AdminPageClient() {
             />
           </div>
           <div>
-            <label className="text-sm font-bold text-foreground">Numer zadania</label>
+            <label htmlFor="admin-numer-zadania" className="text-sm font-bold text-foreground">Numer zadania</label>
             <input
+              id="admin-numer-zadania"
               type="number"
               min={1}
               value={numerZadania}
@@ -330,8 +334,9 @@ export function AdminPageClient() {
         </div>
 
         <div>
-          <label className="text-sm font-bold text-foreground">Dział</label>
+          <label htmlFor="admin-dzial" className="text-sm font-bold text-foreground">Dział</label>
           <select
+            id="admin-dzial"
             value={dzial}
             onChange={(e) => setDzial(e.target.value)}
             className="mt-2 w-full rounded-xl border border-surface-border bg-background px-4 py-3 text-foreground outline-none focus:border-accent/50"
@@ -345,8 +350,9 @@ export function AdminPageClient() {
         </div>
 
         <div>
-          <label className="text-sm font-bold text-foreground">Treść zadania</label>
+          <label htmlFor="admin-tresc" className="text-sm font-bold text-foreground">Treść zadania</label>
           <textarea
+            id="admin-tresc"
             value={tresc}
             onChange={(e) => setTresc(e.target.value)}
             required
@@ -357,7 +363,7 @@ export function AdminPageClient() {
         </div>
 
         <div>
-          <label className="text-sm font-bold text-foreground">
+          <label htmlFor="admin-rozwiazanie" className="text-sm font-bold text-foreground">
             Rozwiązanie krok po kroku
           </label>
           <motion.button
@@ -373,6 +379,7 @@ export function AdminPageClient() {
               : "Generuj rozwiązanie (Gemini Flash)"}
           </motion.button>
           <textarea
+            id="admin-rozwiazanie"
             value={rozwiazanie}
             onChange={(e) => setRozwiazanie(e.target.value)}
             required

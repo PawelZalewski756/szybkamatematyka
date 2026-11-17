@@ -334,8 +334,9 @@ function MaterialyAdminContent() {
           </h2>
 
           <div>
-            <label className="text-sm font-bold text-foreground">Egzamin</label>
+            <label htmlFor="material-exam" className="text-sm font-bold text-foreground">Egzamin</label>
             <select
+              id="material-exam"
               value={form.exam_type}
               onChange={(e) =>
                 handleExamTypeChange(e.target.value as ExamType)
@@ -351,9 +352,10 @@ function MaterialyAdminContent() {
           </div>
 
           <div>
-            <label className="text-sm font-bold text-foreground">Dział</label>
+            <label htmlFor="material-category" className="text-sm font-bold text-foreground">Dział</label>
             {ckeCategories ? (
               <select
+                id="material-category"
                 value={form.category}
                 onChange={(e) => handleCategoryChange(e.target.value)}
                 required
@@ -368,6 +370,7 @@ function MaterialyAdminContent() {
               </select>
             ) : (
               <input
+                id="material-category"
                 value={form.category}
                 onChange={(e) =>
                   setForm((f) => ({ ...f, category: e.target.value }))
@@ -380,9 +383,10 @@ function MaterialyAdminContent() {
           </div>
 
           <div>
-            <label className="text-sm font-bold text-foreground">Temat</label>
+            <label htmlFor="material-topic" className="text-sm font-bold text-foreground">Temat</label>
             {selectedCategory ? (
               <select
+                id="material-topic"
                 value={form.topic}
                 onChange={(e) => handleTopicChange(e.target.value)}
                 required
@@ -397,6 +401,7 @@ function MaterialyAdminContent() {
               </select>
             ) : (
               <input
+                id="material-topic"
                 value={form.topic}
                 onChange={(e) =>
                   setForm((f) => ({ ...f, topic: e.target.value }))
@@ -409,8 +414,9 @@ function MaterialyAdminContent() {
           </div>
 
           <div>
-            <label className="text-sm font-bold text-foreground">Tytuł</label>
+            <label htmlFor="material-title" className="text-sm font-bold text-foreground">Tytuł</label>
             <input
+              id="material-title"
               value={form.title}
               onChange={(e) =>
                 setForm((f) => ({ ...f, title: e.target.value }))
@@ -422,7 +428,7 @@ function MaterialyAdminContent() {
 
           <div>
             <div className="flex items-center justify-between gap-3">
-              <label className="text-sm font-bold text-foreground">
+              <label htmlFor="material-content" className="text-sm font-bold text-foreground">
                 Treść (Markdown)
               </label>
               <div
@@ -454,6 +460,7 @@ function MaterialyAdminContent() {
             </div>
             {editorTab === "edit" ? (
               <textarea
+                id="material-content"
                 value={form.content}
                 onChange={(e) =>
                   setForm((f) => ({ ...f, content: e.target.value }))
@@ -480,10 +487,11 @@ function MaterialyAdminContent() {
           </div>
 
           <div>
-            <label className="text-sm font-bold text-foreground">
+            <label htmlFor="material-video" className="text-sm font-bold text-foreground">
               URL wideo (opcjonalnie)
             </label>
             <input
+              id="material-video"
               type="url"
               value={form.video_url}
               onChange={(e) =>

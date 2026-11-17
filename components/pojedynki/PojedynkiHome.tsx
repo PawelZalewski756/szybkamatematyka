@@ -231,7 +231,7 @@ export function PojedynkiHome() {
             onClick={() => setDelivery("bot")}
             badge="Trening"
           >
-            <div className="mt-3 flex gap-2" onClick={(e) => e.stopPropagation()}>
+            <div className="mt-3 flex gap-2">
               {BOT_LEVELS.map((lvl) => (
                 <button
                   key={lvl}
