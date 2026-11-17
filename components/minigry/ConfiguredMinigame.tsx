@@ -50,19 +50,6 @@ function createQuestion(
 
 type PlayerQuestion = NonNullable<ReturnType<typeof createQuestion>>;
 
-/** Dzieli długie równanie na dwie linie po znaku "=". */
-function splitEquation(equation: string): [string, string] | null {
-  const match = equation.match(/^\$([\s\S]+)\$$/);
-  if (!match) return null;
-  const body = match[1];
-  const index = body.indexOf("=");
-  if (index <= 0 || index >= body.length - 1) return null;
-  return [
-    `$${body.slice(0, index).trim()}$`,
-    `$= ${body.slice(index + 1).trim()}$`,
-  ];
-}
-
 /** Wzory skalują się razem z szerokością ekranu, żeby nie ucinały się na telefonie. */
 function mathSizeClass(text: string): string {
   if (text.length > 60) return "text-[clamp(0.85rem,3.6vw,1.4rem)]";
@@ -262,26 +249,20 @@ export function ConfiguredMinigame({
     const q = question.q;
     questionKey = q.id;
     questionPrompt = "Czy to prawda?";
-    const equationParts =
-      q.equation.length >= 30 ? splitEquation(q.equation) : null;
-
-    questionContent = equationParts ? (
-      <div className="mt-4 max-w-full font-bold leading-tight text-foreground [&_.katex]:text-[1em] text-[clamp(1rem,4.6vw,1.75rem)]">
-        <span className="block">
-          <MathText content={equationParts[0]} />
-        </span>
-        <span className="mt-1 block">
-          <MathText content={equationParts[1]} />
-        </span>
+    // Wcześniej każde równanie dłuższe niż 30 znaków było łamane na dwie
+    // osobno wyśrodkowane linie („a^m · a^n” i „= a^{m·n}”), co wyglądało
+    // jak dwa różne działania. Teraz równanie jest w jednej linii, a przy
+    // wąskim ekranie przewija się w poziomie wewnątrz karty.
+    questionContent = (
+      <div className="mt-4 max-w-full overflow-x-auto">
+        <MathText
+          content={q.equation}
+          as="div"
+          className={`font-bold leading-tight text-foreground [&_.katex]:text-[1em] ${mathSizeClass(
+            q.equation,
+          )}`}
+        />
       </div>
-    ) : (
-      <MathText
-        content={q.equation}
-        as="div"
-        className={`mt-4 max-w-full break-words font-bold leading-tight text-foreground [&_.katex]:text-[1em] ${mathSizeClass(
-          q.equation,
-        )}`}
-      />
     );
     answers = (
       <div className="grid grid-cols-2 gap-3 sm:gap-4">

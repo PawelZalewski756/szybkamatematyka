@@ -26,9 +26,68 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import type { ReactNode } from "react";
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 
 const PAGE_SIZE = 9;
+
+/**
+ * Filtry katalogu przeżywają wejście w zadanie i powrót. Wcześniej komponent
+ * montował się od zera, więc „wstecz” z zadania pokazywało start katalogu -
+ * uczeń tracił dział, frazę i poziom, który właśnie ustawił.
+ */
+const FILTERS_STORAGE_KEY = "baza-zadan:filters:v1";
+const SCROLL_STORAGE_KEY = "baza-zadan:scroll:v1";
+
+type StoredFilters = {
+  search: string;
+  category: TaskCategory | "all";
+  difficulty: TaskDifficulty | "all";
+  group: TaskCategoryGroupId | null;
+};
+
+function readStoredFilters(): StoredFilters | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.sessionStorage.getItem(FILTERS_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as Partial<StoredFilters>;
+    const category =
+      typeof parsed.category === "string" && parsed.category in CATEGORY_LABELS
+        ? (parsed.category as TaskCategory)
+        : "all";
+    const difficulty =
+      typeof parsed.difficulty === "string" &&
+      parsed.difficulty in DIFFICULTY_LABELS
+        ? (parsed.difficulty as TaskDifficulty)
+        : "all";
+    const group =
+      typeof parsed.group === "string" &&
+      TASK_CATEGORY_GROUPS.some((entry) => entry.id === parsed.group)
+        ? (parsed.group as TaskCategoryGroupId)
+        : null;
+
+    return {
+      search: typeof parsed.search === "string" ? parsed.search.slice(0, 200) : "",
+      category,
+      difficulty,
+      group,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function storeFilters(filters: StoredFilters): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.setItem(
+      FILTERS_STORAGE_KEY,
+      JSON.stringify(filters),
+    );
+  } catch {
+    // Brak sessionStorage (tryb prywatny) - filtry zostają tylko w pamięci.
+  }
+}
 
 function polishCount(count: number): string {
   const absolute = Math.abs(count);
@@ -80,6 +139,65 @@ export function BazaZadanTasksPanel({
     useState<TaskCategoryGroupId | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [restored, setRestored] = useState(false);
+
+  // Odtworzenie filtrów po powrocie z zadania (po hydratacji, bez różnic SSR).
+  useEffect(() => {
+    const stored = readStoredFilters();
+    if (stored) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSearch(stored.search);
+      setCategory(stored.category);
+      setDifficulty(stored.difficulty);
+      setSelectedGroup(stored.group);
+    }
+    setRestored(true);
+  }, []);
+
+  useEffect(() => {
+    if (!restored) return;
+    storeFilters({
+      search,
+      category,
+      difficulty,
+      group: selectedGroup,
+    });
+  }, [restored, search, category, difficulty, selectedGroup]);
+
+  // Po powrocie z zadania przywracamy też pozycję listy - inaczej uczeń ląduje
+  // na górze katalogu i myśli, że to inna strona.
+  useEffect(() => {
+    const saveScroll = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target?.closest?.('a[href^="/baza-zadan/"]')) return;
+      try {
+        window.sessionStorage.setItem(
+          SCROLL_STORAGE_KEY,
+          String(Math.round(window.scrollY)),
+        );
+      } catch {
+        // brak sessionStorage - trudno, wracamy na górę
+      }
+    };
+    document.addEventListener("click", saveScroll, true);
+    return () => document.removeEventListener("click", saveScroll, true);
+  }, []);
+
+  useEffect(() => {
+    if (!restored) return;
+    let stored: string | null = null;
+    try {
+      stored = window.sessionStorage.getItem(SCROLL_STORAGE_KEY);
+      window.sessionStorage.removeItem(SCROLL_STORAGE_KEY);
+    } catch {
+      stored = null;
+    }
+    const offset = Number(stored);
+    if (!Number.isFinite(offset) || offset <= 0) return;
+
+    const id = window.setTimeout(() => window.scrollTo(0, offset), 60);
+    return () => window.clearTimeout(id);
+  }, [restored]);
 
   const deferredSearch = useDeferredValue(search);
   const allTasks = useMemo(

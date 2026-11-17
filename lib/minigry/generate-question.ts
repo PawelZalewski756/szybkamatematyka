@@ -18,6 +18,16 @@ function pickRandom<T>(items: readonly T[]): T {
   return items[randomInt(0, items.length - 1)];
 }
 
+/**
+ * Liczba w LaTeX-u: maks. 2 miejsca po przecinku i polski przecinek.
+ * Wcześniej wstawialiśmy surowy wynik JS, więc na ekranie potrafiło pojawić
+ * się „10% z 33 = 3.3000000000000003” albo kropka zamiast przecinka.
+ */
+function mathNumber(value: number): string {
+  const rounded = Math.round(value * 100) / 100;
+  return String(rounded).replace(".", "{,}");
+}
+
 function fromTemplate(
   template: QuestionTemplate,
   showCorrect: boolean,
@@ -257,8 +267,8 @@ function generateEgzamin8Procedural(showCorrect: boolean): Question {
     const base = randomInt(10, 40);
     const pct = pickRandom([10, 20, 25, 50] as const);
     const result = (base * pct) / 100;
-    const correct = `$${pct}\\%$ z $${base} = ${result}$`;
-    const trap = `$${pct}\\%$ z $${base} = ${result + randomInt(2, 8)}$`;
+    const correct = `$${pct}\\%$ z $${base} = ${mathNumber(result)}$`;
+    const trap = `$${pct}\\%$ z $${base} = ${mathNumber(result + randomInt(2, 8))}$`;
     return {
       equation: showCorrect ? correct : trap,
       isCorrect: showCorrect,

@@ -113,7 +113,7 @@ export function AchievementCard({
       </p>
 
       {unlocked ? (
-        <span className="mt-auto inline-flex w-fit items-center gap-1 rounded-full bg-success/15 px-2.5 py-1 text-xs font-bold text-success">
+        <span className="mt-auto inline-flex w-fit items-center gap-1 rounded-full bg-success/15 px-2.5 py-1 text-xs font-bold text-success-strong">
           Zdobyte
         </span>
       ) : (

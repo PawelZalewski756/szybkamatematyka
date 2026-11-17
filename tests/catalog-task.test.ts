@@ -23,6 +23,7 @@ describe("toCatalogTask", () => {
     expect(Object.keys(item).sort()).toEqual([
       "category",
       "difficulty",
+      "examLabel",
       "hasSolution",
       "id",
       "isExam",
@@ -46,6 +47,7 @@ describe("toCatalogTask", () => {
     expect(item.paths).toEqual(["liceum"]);
     expect(item.points).toBe(1);
     expect(item.isExam).toBe(true);
+    expect(item.examLabel).toBe("2015 · zad. 1");
     expect(item.hasSolution).toBe(true);
   });
 
@@ -59,5 +61,6 @@ describe("toCatalogTask", () => {
 
     expect(item.hasSolution).toBe(false);
     expect(item.isExam).toBe(false);
+    expect(item.examLabel).toBeNull();
   });
 });

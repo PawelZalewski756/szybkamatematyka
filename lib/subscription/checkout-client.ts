@@ -42,7 +42,15 @@ export async function confirmCheckout(sessionId: string): Promise<boolean> {
   }
 }
 
-export async function startCheckout(planId: string): Promise<CheckoutResult> {
+export type CheckoutOptions = {
+  /** Wymagane przez API: akceptacja regulaminu i zgoda na natychmiastowe świadczenie. */
+  acceptTerms?: boolean;
+};
+
+export async function startCheckout(
+  planId: string,
+  options: CheckoutOptions = {},
+): Promise<CheckoutResult> {
   const supabase = getSupabaseOrNull();
   if (!supabase) {
     return {
@@ -72,7 +80,10 @@ export async function startCheckout(planId: string): Promise<CheckoutResult> {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ planId }),
+      body: JSON.stringify({
+        planId,
+        acceptTerms: options.acceptTerms === true,
+      }),
     });
   } catch {
     return { ok: false, error: "Błąd sieci - spróbuj ponownie." };

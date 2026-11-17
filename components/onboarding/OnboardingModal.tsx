@@ -31,9 +31,15 @@ import { useState } from "react";
 type OnboardingModalProps = {
   user: User;
   onComplete: (profile: Profile) => void;
+  /** Pozwala wejść do aplikacji, gdy zapis profilu zawiedzie. */
+  onSkip?: () => void;
 };
 
-export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
+export function OnboardingModal({
+  user,
+  onComplete,
+  onSkip,
+}: OnboardingModalProps) {
   const [nick, setNick] = useState("");
   const [schoolLevel, setSchoolLevel] = useState<LearningPath | "">(() =>
     hasStoredLearningPath() ? loadLearningPath() : "",
@@ -190,6 +196,17 @@ export function OnboardingModal({ user, onComplete }: OnboardingModalProps) {
               "Dołącz do rankingu"
             )}
           </button>
+
+          {onSkip ? (
+            <button
+              type="button"
+              onClick={onSkip}
+              disabled={saving}
+              className="mt-3 w-full text-sm font-semibold text-muted underline-offset-2 hover:text-foreground hover:underline disabled:opacity-60"
+            >
+              Pomiń na razie — chcę zacząć zadania
+            </button>
+          ) : null}
         </form>
       </motion.div>
     </div>

@@ -28,6 +28,7 @@ import type { TheoryTier } from "@/lib/trening/theory-content";
 import type { ExamType } from "@/types/database";
 import Link from "next/link";
 import { useLearningPath } from "@/components/LearningPathProvider";
+import { firstTaskHref } from "@/lib/trening/first-task";
 import { examKeyForLearningPath } from "@/lib/trening/next-topic";
 import { getClassPlan } from "@/lib/trening/class-plan";
 import {
@@ -1152,6 +1153,19 @@ export default function TreningPage() {
             nextTopic={nextTopic}
             overallProgress={overallProgress}
           />
+        )}
+
+        {!loading && nextTopic && overallProgress === 0 && (
+          <p className="mt-3 text-sm text-muted">
+            Wolisz od razu spróbować?{" "}
+            <Link
+              href={firstTaskHref(learningPath)}
+              data-testid="first-task-cta"
+              className="font-bold text-accent hover:underline"
+            >
+              Rozwiąż jedno zadanie (2 min) →
+            </Link>
+          </p>
         )}
 
         <ExamCountdown />

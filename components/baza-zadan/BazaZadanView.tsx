@@ -18,7 +18,7 @@ import {
 import type { CatalogTask } from "@/lib/baza-zadan/catalog-task";
 import type { ExamSheet } from "@/lib/baza-zadan/types";
 import type { LearningPath } from "@/lib/learning-path";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 export type BazaTab = "zadania" | "arkusze" | "trening";
@@ -89,6 +89,7 @@ export function BazaZadanView({
   schemaMissing = false,
   cmsNote: initialCmsNote = null,
 }: BazaZadanViewProps) {
+  const router = useRouter();
   const { path } = useLearningPath();
   const searchParams = useSearchParams();
   const tab = parseTab(searchParams.get("tab"));
@@ -180,11 +181,10 @@ export function BazaZadanView({
     if (next === "zadania") params.delete("tab");
     else params.set("tab", next);
     const q = params.toString();
-    window.history.replaceState(
-      null,
-      "",
-      q ? `/baza-zadan?${q}` : "/baza-zadan",
-    );
+    // `push`, nie `replaceState`: przełączenie zakładki ma być osobnym krokiem
+    // w historii, żeby „wstecz” wracało do poprzedniej zakładki, a nie opuszczało
+    // bazę zadań.
+    router.push(q ? `/baza-zadan?${q}` : "/baza-zadan", { scroll: false });
   };
 
   return (
@@ -236,7 +236,7 @@ export function BazaZadanView({
         </div>
 
         <div
-          className="mt-3 flex gap-1 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-3 flex flex-wrap gap-1"
           role="tablist"
           aria-label="Sposób pracy w bazie zadań"
         >
@@ -251,7 +251,7 @@ export function BazaZadanView({
                 aria-selected={active}
                 aria-controls="baza-zadan-panel"
                 onClick={() => setTab(id)}
-                className={`flex min-w-36 shrink-0 items-center gap-2 rounded-lg border px-3 py-2 text-left text-sm font-semibold transition sm:min-w-0 ${
+                className={`flex min-w-0 shrink-0 items-center gap-2 rounded-lg border px-3 py-2 text-left text-sm font-semibold transition ${
                   active
                     ? "border-accent bg-accent text-on-accent"
                     : "border-transparent text-muted hover:border-surface-border hover:bg-surface-hover hover:text-foreground"
@@ -272,6 +272,9 @@ export function BazaZadanView({
             );
           })}
         </div>
+        <p className="mt-2 text-xs leading-relaxed text-muted">
+          {activeTab.hint}
+        </p>
 
       </section>
 

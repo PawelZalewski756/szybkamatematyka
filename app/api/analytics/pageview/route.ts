@@ -4,6 +4,11 @@ import {
   isValidPagePath,
   isValidVisitorId,
 } from "@/lib/analytics/page-view";
+import {
+  checkRateLimit,
+  clientIp,
+  rateLimitResponse,
+} from "@/lib/security/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -13,6 +18,16 @@ type PageViewRequest = {
 };
 
 export async function POST(request: Request): Promise<Response> {
+  // Publiczny endpoint zapisujący do bazy service_rolem - bez limitu rósłby
+  // w nieskończoność i fałszował statystyki.
+  const limit = checkRateLimit(`pageview:${clientIp(request)}`, {
+    limit: 120,
+    windowMs: 60_000,
+  });
+  if (!limit.allowed) {
+    return rateLimitResponse(limit.retryAfterSeconds);
+  }
+
   let payload: PageViewRequest;
   try {
     payload = (await request.json()) as PageViewRequest;

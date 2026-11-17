@@ -3,6 +3,7 @@ import {
   isStripeConfigured,
   resolveSiteUrl,
 } from "@/lib/stripe/config";
+import { reportServerError } from "@/lib/observability/report";
 import { getPlanById } from "@/lib/subscription/plans";
 import { verifyUserRequest } from "@/lib/subscription/server-auth";
 
@@ -14,7 +15,7 @@ export const dynamic = "force-dynamic";
 /**
  * POST /api/checkout
  *
- * Body: { planId: "pro" | "roczny" }
+ * Body: { planId: "pro" | "roczny", acceptTerms: true }
  * Tworzy Stripe Checkout Session w trybie `subscription` dla wybranego planu i
  * zwraca `{ url }` do przekierowania (frontend robi window.location = url).
  *
@@ -69,6 +70,25 @@ export async function POST(request: Request) {
       );
     }
 
+    // Treść cyfrowa: bez wyraźnej zgody na natychmiastowe świadczenie
+    // konsument zachowuje 14 dni na odstąpienie, a my nie mamy dowodu
+    // akceptacji regulaminu. Wymagamy jej przed utworzeniem sesji Stripe.
+    const acceptTerms =
+      typeof body === "object" &&
+      body !== null &&
+      (body as { acceptTerms?: unknown }).acceptTerms === true;
+
+    if (!acceptTerms) {
+      return Response.json(
+        {
+          error:
+            "Zaakceptuj regulamin, politykę prywatności i zgodę na natychmiastowe rozpoczęcie usługi.",
+          code: "terms_not_accepted",
+        },
+        { status: 400 },
+      );
+    }
+
     const priceId = process.env[plan.priceEnvVar]?.trim();
     if (!priceId) {
       return Response.json(
@@ -116,6 +136,7 @@ export async function POST(request: Request) {
       metadata: {
         supabase_user_id: auth.user.id,
         plan_id: plan.id,
+        terms_accepted_at: new Date().toISOString(),
       },
       subscription_data: {
         metadata: {
@@ -136,7 +157,7 @@ export async function POST(request: Request) {
 
     return Response.json({ url: session.url });
   } catch (err) {
-    console.error("[checkout]", err);
+    await reportServerError("api/checkout", err);
     const message =
       err instanceof Error ? err.message : "Nieznany błąd płatności.";
     return Response.json({ error: message }, { status: 500 });

@@ -67,3 +67,8 @@ task-audit-report.json
 
 # logi lokalne
 *.log
+
+# artefakty lokalnych przebiegow
+/e2e-*.txt
+/build-*.txt
+/server-*.log

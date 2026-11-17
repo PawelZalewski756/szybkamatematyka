@@ -26,9 +26,20 @@ export type CatalogTask = {
   points: number;
   hasSolution: boolean;
   isExam: boolean;
+  /** Np. „matura maj 2016 · zad. 22” - żeby uczeń wiedział, skąd zadanie. */
+  examLabel: string | null;
 };
 
 export function toCatalogTask(task: Task): CatalogTask {
+  const examLabel = task.examSource
+    ? [
+        task.examSource.sessionLabel ?? String(task.examSource.year),
+        task.examSource.taskNumber ? `zad. ${task.examSource.taskNumber}` : null,
+      ]
+        .filter(Boolean)
+        .join(" · ")
+    : null;
+
   return {
     id: task.id,
     title: task.title,
@@ -41,5 +52,6 @@ export function toCatalogTask(task: Task): CatalogTask {
       task.explanation.trim().length > 0 ||
       (task.solutionSteps?.length ?? 0) > 0,
     isExam: Boolean(task.examSource),
+    examLabel,
   };
 }

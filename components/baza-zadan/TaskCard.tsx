@@ -56,7 +56,18 @@ export function TaskCard({ task }: TaskCardProps) {
             <span>{formatPkt(task.points)}</span>
           </>
         ) : null}
+        {task.hasSolution ? (
+          <>
+            <span className="mx-1.5 text-surface-border">·</span>
+            <span>krok po kroku</span>
+          </>
+        ) : null}
       </p>
+      {task.examLabel ? (
+        <p className="mt-1 text-[11px] leading-snug text-muted/80">
+          {task.examLabel}
+        </p>
+      ) : null}
     </Link>
   );
 }
