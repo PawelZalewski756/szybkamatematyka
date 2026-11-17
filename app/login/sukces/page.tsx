@@ -52,7 +52,7 @@ export default async function SignupSuccessPage({
             </Link>
           ) : (
             <Link
-              href="/"
+              href="/trening"
               className="inline-flex items-center justify-center rounded-2xl bg-accent px-4 py-3.5 text-sm font-bold text-on-accent transition hover:opacity-90"
             >
               Zacznij naukę

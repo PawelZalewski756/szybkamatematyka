@@ -24,11 +24,36 @@ type OnboardingGateProps = {
   children: ReactNode;
 };
 
+const ONBOARDING_SKIP_KEY = "onboarding-skipped";
+
 export function OnboardingGate({ children }: OnboardingGateProps) {
   const pathname = usePathname();
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [ready, setReady] = useState(false);
+  const [skipped, setSkipped] = useState(false);
+
+  // „Pomiń na razie” działa do końca sesji przeglądarki. Modal nie może
+  // blokować całej aplikacji, gdy zapis profilu zawiedzie (RLS, sieć).
+  useEffect(() => {
+    try {
+      if (window.sessionStorage.getItem(ONBOARDING_SKIP_KEY) === "1") {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setSkipped(true);
+      }
+    } catch {
+      // brak sessionStorage - pominięcie działa tylko w pamięci
+    }
+  }, []);
+
+  const skipOnboarding = useCallback(() => {
+    setSkipped(true);
+    try {
+      window.sessionStorage.setItem(ONBOARDING_SKIP_KEY, "1");
+    } catch {
+      // ignorujemy
+    }
+  }, []);
 
   const load = useCallback(async (sessionUser: User | null) => {
     setUser(sessionUser);
@@ -107,7 +132,8 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
     shouldPromptOnboarding &&
     ready &&
     user !== null &&
-    profileNeedsOnboarding(profile);
+    profileNeedsOnboarding(profile) &&
+    !skipped;
 
   return (
     <>
@@ -119,7 +145,11 @@ export function OnboardingGate({ children }: OnboardingGateProps) {
         {children}
       </div>
       {userBlocked && user && (
-        <OnboardingModal user={user} onComplete={(p) => setProfile(p)} />
+        <OnboardingModal
+          user={user}
+          onComplete={(p) => setProfile(p)}
+          onSkip={skipOnboarding}
+        />
       )}
     </>
   );
