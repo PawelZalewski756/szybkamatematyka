@@ -2,32 +2,29 @@
 
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { ProGate } from "@/components/subscription/ProGate";
+import type { PrintTask } from "@/lib/baza-zadan/print-task";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import { splitTaskContent } from "@/lib/baza-zadan/cke/matura-task-content";
 import { useSubscription } from "@/lib/subscription/use-subscription";
-import { fetchArkuszSolutions } from "@/lib/trening/task-assist-client";
+import {
+  fetchArchiveSolutions,
+  fetchArkuszSolutions,
+} from "@/lib/trening/task-assist-client";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-
-export type PrintTaskData = {
-  id: string;
-  number: string;
-  points: number;
-  prompt: string;
-  choices: string[];
-  open: boolean;
-  correctLetter: string | null;
-  explanation: string;
-  steps: string[];
-};
 
 type Props = {
   sheetId: string;
   title: string;
   totalPoints: number;
-  tasks: PrintTaskData[];
+  /**
+   * Zadania bez rozwiązań. Klucz jest pobierany z API po sprawdzeniu Pro:
+   * `archive` dla danych statycznych CKE, `cms` dla arkuszy z Supabase.
+   */
+  tasks: PrintTask[];
   initialKey: boolean;
   backHref?: string;
+  solutionsSource?: "cms" | "archive";
 };
 
 function pts(n: number): string {
@@ -66,9 +63,12 @@ export function PrintArchiveSheet({
   tasks,
   initialKey,
   backHref,
+  solutionsSource = "cms",
 }: Props) {
   const [withKey, setWithKey] = useState(initialKey);
   const [solutions, setSolutions] = useState<Record<string, string> | null>(null);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [stepsByTask, setStepsByTask] = useState<Record<string, string[]>>({});
   const [solutionsLoading, setSolutionsLoading] = useState(false);
   const [solutionsError, setSolutionsError] = useState<string | null>(null);
   const { isPro } = useSubscription();
@@ -78,7 +78,14 @@ export function PrintArchiveSheet({
     setSolutionsLoading(true);
     setSolutionsError(null);
     try {
-      setSolutions(await fetchArkuszSolutions(sheetId));
+      if (solutionsSource === "archive") {
+        const data = await fetchArchiveSolutions(sheetId);
+        setSolutions(data.solutions);
+        setAnswers(data.answers);
+        setStepsByTask(data.steps);
+      } else {
+        setSolutions(await fetchArkuszSolutions(sheetId));
+      }
     } catch (error) {
       setSolutionsError(
         error instanceof Error ? error.message : "Nie udało się pobrać klucza.",
@@ -210,15 +217,15 @@ export function PrintArchiveSheet({
               </header>
               {tasks.map((task) => {
                 const solution = solutions?.[task.id] ?? "";
+                const letter = answers[task.id] ?? null;
+                const steps = stepsByTask[task.id] ?? [];
                 return (
                   <section key={task.id} className="break-inside-avoid text-sm">
                     <h3 className="font-bold">
                       Zadanie {task.number}
                       {task.points > 0 ? ` (${pts(task.points)})` : ""}
                     </h3>
-                    {task.correctLetter && !task.open && (
-                      <p>Odpowiedź: {task.correctLetter}</p>
-                    )}
+                    {letter && !task.open && <p>Odpowiedź: {letter}</p>}
                     {solution.trim() ? (
                       <TheoryMarkdown
                         content={formatCkeMathText(solution)}
@@ -229,9 +236,9 @@ export function PrintArchiveSheet({
                         Brak rozwiązania dla tego zadania.
                       </p>
                     )}
-                    {task.steps.length > 0 && (
+                    {steps.length > 0 && (
                       <ol className="mt-1 list-decimal space-y-1 pl-5">
-                        {task.steps.map((step, i) => (
+                        {steps.map((step, i) => (
                           <li key={i}>
                             <TheoryMarkdown
                               content={formatCkeMathText(

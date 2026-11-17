@@ -1,13 +1,10 @@
 import { PrintArchiveSheet } from "@/components/arkusze/PrintArchiveSheet";
-import {
-  examSheetPoints,
-  examTaskPoints,
-  isOpenExamTask,
-} from "@/lib/baza-zadan/cke/exam-points";
+import { examSheetPoints } from "@/lib/baza-zadan/cke/exam-points";
 import {
   getOfficialCkeSheetById,
   getOfficialCkeSheetTasks,
 } from "@/lib/baza-zadan/exams/archive-catalog";
+import { toPrintTask } from "@/lib/baza-zadan/print-task";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -21,8 +18,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const LETTERS = ["A", "B", "C", "D"];
-
 export default async function ArchivePrintPage({
   params,
   searchParams,
@@ -33,17 +28,10 @@ export default async function ArchivePrintPage({
   if (!sheet) notFound();
 
   const tasks = getOfficialCkeSheetTasks(sheet.id);
-  const data = tasks.map((task, index) => ({
-    id: task.id,
-    number: task.examSource?.taskNumber ?? String(index + 1),
-    points: examTaskPoints(task),
-    prompt: task.prompt,
-    choices: [...task.choices],
-    open: isOpenExamTask(task),
-    correctLetter: LETTERS[task.correctIndex] ?? null,
-    explanation: task.explanation,
-    steps: [...(task.solutionSteps ?? [])],
-  }));
+  // Do klienta trafiają wyłącznie treści zadań - bez odpowiedzi i rozwiązań.
+  // Klucz pobiera `PrintArchiveSheet` z `/api/trening/archive-solutions`
+  // dopiero po potwierdzeniu planu Pro.
+  const data = tasks.map(toPrintTask);
 
   return (
     <PrintArchiveSheet
@@ -52,6 +40,7 @@ export default async function ArchivePrintPage({
       totalPoints={examSheetPoints(tasks)}
       tasks={data}
       initialKey={klucz === "1"}
+      solutionsSource="archive"
     />
   );
 }
