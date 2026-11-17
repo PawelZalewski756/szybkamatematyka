@@ -2,6 +2,7 @@
 
 import { ContentImage } from "@/components/baza-zadan/ContentImage";
 import { slugifyHeading } from "@/lib/trening/theory-content";
+import { KATEX_MACROS } from "@/lib/math/katex-macros";
 import {
   ensureMathDelimiters,
   fixMarkdownTables,
@@ -125,7 +126,9 @@ export function TheoryMarkdown({
     <div className={VARIANT_CLASS[variant]}>
       <ReactMarkdown
         remarkPlugins={[remarkMath, [remarkGfm, { singleTilde: false }]]}
-rehypePlugins={[rehypeKatex]}
+        rehypePlugins={[
+          [rehypeKatex, { macros: KATEX_MACROS, throwOnError: false, strict: "ignore" }],
+        ]}
         components={markdownComponents(withAnchors)}
       >
         {prepared}

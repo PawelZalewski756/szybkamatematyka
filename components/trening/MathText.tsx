@@ -5,6 +5,7 @@ import {
   normalizeMathText,
   splitMathText,
 } from "@/lib/math/render-math-text";
+import { KATEX_OPTIONS } from "@/lib/math/katex-macros";
 import katex from "katex";
 import { Fragment, useMemo } from "react";
 
@@ -17,8 +18,7 @@ type MathTextProps = {
 function renderLatex(latex: string, displayMode: boolean): string {
   return katex.renderToString(latex, {
     displayMode,
-    throwOnError: false,
-    strict: "ignore",
+    ...KATEX_OPTIONS,
   });
 }
 

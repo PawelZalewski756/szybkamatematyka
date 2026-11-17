@@ -9,7 +9,7 @@
  * Data, branch i commit są w nagłówku, poza blokiem.
  */
 import { execSync } from "node:child_process";
-import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { getAllTasks, getPrerenderTaskIds } from "../lib/baza-zadan/catalog";
