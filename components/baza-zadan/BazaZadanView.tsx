@@ -15,7 +15,8 @@ import {
   formatSupabaseErrorForUser,
   isSchemaMissingError,
 } from "@/lib/supabase/errors";
-import type { TaskForClient, ExamSheet } from "@/lib/baza-zadan/types";
+import type { CatalogTask } from "@/lib/baza-zadan/catalog-task";
+import type { ExamSheet } from "@/lib/baza-zadan/types";
 import type { LearningPath } from "@/lib/learning-path";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -28,7 +29,7 @@ type BazaZadanStats = {
 };
 
 type BazaZadanViewProps = {
-  tasks: TaskForClient[];
+  tasks: CatalogTask[];
   stats: Record<LearningPath, BazaZadanStats>;
   sheetsByPath: Record<LearningPath, ExamSheet[]>;
   cmsTasks?: ZadanieWithArkusz[];

@@ -4,7 +4,7 @@ import {
   getExamSheetsForPath,
   getTaskStats,
 } from "@/lib/baza-zadan/catalog";
-import { toClientTask } from "@/lib/baza-zadan/client-task";
+import { toCatalogTask } from "@/lib/baza-zadan/catalog-task";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
@@ -28,7 +28,7 @@ export default function BazaZadanPage() {
       }
     >
       <BazaZadanView
-        tasks={getAllTasks().map(toClientTask)}
+        tasks={getAllTasks().map(toCatalogTask)}
         stats={{
           sp: { tasks: spStats.totalTasks, sheets: spStats.totalSheets },
           srednia: {
