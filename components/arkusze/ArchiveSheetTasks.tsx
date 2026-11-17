@@ -209,18 +209,24 @@ function ArchiveTaskCard({
               }
               return (
                 <li key={index}>
-                  <button
-                    type="button"
+                  <label
                     data-testid="sheet-task-choice"
-                    disabled={!isLoggedIn || picked !== null}
-                    onClick={() => pick(index)}
-                    className={`flex w-full items-baseline gap-2 rounded-xl border px-3 py-2 text-left transition-colors ${style}`}
+                    className={`flex w-full cursor-pointer items-baseline gap-2 rounded-xl border px-3 py-2 text-left transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent ${style}`}
                   >
+                    <input
+                      type="radio"
+                      name={`sheet-task-${task.id}`}
+                      value={index}
+                      checked={picked === index}
+                      disabled={!isLoggedIn || picked !== null}
+                      onChange={() => pick(index)}
+                      className="sr-only"
+                    />
                     <span className="font-semibold text-foreground">
                       {LETTERS[index] ?? index + 1})
                     </span>
                     <TaskTresc tresc={choice} />
-                  </button>
+                  </label>
                 </li>
               );
             })}
@@ -302,7 +308,7 @@ function ArchiveTaskCard({
             className={`mt-5 rounded-xl px-4 py-2.5 text-sm font-bold transition-all active:scale-[0.98] ${
               showSolution
                 ? "border border-surface-border bg-surface-hover text-muted"
-                : "border border-success/30 bg-success/10 text-success hover:bg-success/15"
+                : "border border-success/30 bg-success/10 text-success-strong hover:bg-success/15"
             }`}
           >
             {showSolution ? "Ukryj rozwiązanie" : "Pokaż rozwiązanie"}

@@ -91,9 +91,9 @@ function PrintTask({ task }: { task: SheetTask }) {
 function KeyTask({ task }: { task: SheetTask }) {
   return (
     <section className="break-inside-avoid text-sm">
-      <h3 className="font-bold">
+      <h2 className="font-bold">
         Zadanie {task.number}. ({pts(task.points)})
-      </h3>
+      </h2>
       {task.kind === "closed" && (
         <p>
           Odpowiedź: {LETTERS[task.correctIndex]}.{" "}

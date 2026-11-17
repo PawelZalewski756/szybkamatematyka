@@ -172,7 +172,7 @@ export default function RankingiPage() {
             <p className="text-lg font-bold text-foreground">
               Brak połączenia z Supabase
             </p>
-            <Link href="/" className="text-sm font-semibold text-accent">
+            <Link href="/" className="text-sm font-semibold text-accent-strong">
               ← Strona główna
             </Link>
           </div>

@@ -159,7 +159,7 @@ function RewardScreen({
 
       {!isLoggedIn && (
         <p className="mt-5 text-xs font-semibold text-muted">
-          <Link href="/login" className="font-bold text-accent">
+          <Link href="/login" className="font-bold text-accent-strong">
             Zaloguj się
           </Link>{" "}
           - by zapisać XP na koncie i synchronizować serię między urządzeniami.
@@ -280,7 +280,7 @@ export function DailyChallengeView() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent/90">
+          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-strong">
             <Flame className="h-3.5 w-3.5" aria-hidden />
             Dzienne wyzwanie
           </div>
@@ -317,7 +317,7 @@ export function DailyChallengeView() {
                   exit={{ opacity: 0, y: -12 }}
                   className="rounded-3xl border border-foreground/15 bg-foreground/[0.06] p-6 backdrop-blur-xl sm:p-8"
                 >
-                  <div className="flex items-center gap-2 text-accent">
+                  <div className="flex items-center gap-2 text-accent-strong">
                     <Swords className="h-5 w-5" aria-hidden />
                     <span className="text-sm font-bold uppercase tracking-wide">
                       Oceń: prawda czy fałsz?
@@ -339,7 +339,7 @@ export function DailyChallengeView() {
                   {!isLoggedIn && (
                     <p className="mt-3 text-center text-xs font-semibold text-muted">
                       Grasz jako gość - seria zapisze się lokalnie.{" "}
-                      <Link href="/login" className="text-accent">
+                      <Link href="/login" className="text-accent-strong">
                         Zaloguj się
                       </Link>{" "}
                       po XP na koncie.

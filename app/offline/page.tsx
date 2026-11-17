@@ -14,7 +14,7 @@ export default function OfflinePage() {
           <WifiOff className="h-8 w-8" aria-hidden />
         </span>
 
-        <p className="text-overline text-accent/90">Tryb offline</p>
+        <p className="text-overline text-accent-strong">Tryb offline</p>
         <h1 className="mt-3 text-4xl font-black tracking-tight text-foreground sm:text-5xl">
           Brak połączenia z siecią
         </h1>

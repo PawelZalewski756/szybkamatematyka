@@ -201,7 +201,7 @@ export function TaskSolverView({
       </Link>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+        <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent-strong">
           {CATEGORY_LABELS[task.category]}
         </span>
         <span className="rounded-md border border-surface-border bg-surface-hover px-2 py-1 text-xs font-bold text-muted">
@@ -212,7 +212,7 @@ export function TaskSolverView({
           {open ? " · otwarte" : " · zamknięte"}
         </span>
         {task.examSource && (
-          <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+          <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent-strong">
             {task.examSource.sessionLabel ?? task.examSource.year}
             {task.examSource.taskNumber
               ? ` · zad. ${task.examSource.taskNumber}`

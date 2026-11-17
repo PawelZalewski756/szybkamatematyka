@@ -276,7 +276,7 @@ export function ArkuszeCkeCatalog({
           Interaktywne arkusze z rozwiązaniami krok po kroku.{" "}
           <Link
             href="/baza-zadan"
-            className="font-semibold text-accent hover:text-foreground"
+            className="font-semibold text-accent-strong hover:text-foreground"
           >
             Pełny katalog →
           </Link>

@@ -573,7 +573,7 @@ export default function ProfilPage() {
                 </button>
               </div>
               {nickCooldownText && (
-                <p className="mt-2 text-xs font-semibold text-accent/90">
+                <p className="mt-2 text-xs font-semibold text-accent-strong">
                   {nickCooldownText}
                 </p>
               )}

@@ -96,7 +96,7 @@ export default function ZapomnianeHasloPage() {
         animate={{ opacity: 1, y: 0 }}
         className="rounded-3xl border border-surface-border bg-surface/95 p-6 shadow-2xl backdrop-blur-sm sm:p-8"
       >
-        <p className="text-center text-sm font-bold uppercase tracking-widest text-accent/90">
+        <p className="text-center text-sm font-bold uppercase tracking-widest text-accent-strong">
           Odzyskiwanie hasła
         </p>
         <h1 className="mt-2 text-center text-2xl font-black text-foreground sm:text-3xl">

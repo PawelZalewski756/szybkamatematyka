@@ -13,6 +13,7 @@
   --surface-hover: #241f18;
   --surface-border: #342e24;
   --success: #7dcea0;
+  --success-strong: #7dcea0;
   --danger: #e88a7d;
 
   /* Akcent - ciepły bursztyn (jak lampka na biurku), nie teal/neon. */
@@ -36,6 +37,7 @@ html[data-theme="light"] {
   --surface-hover: #f2ede2;
   --surface-border: #e2dac9;
   --success: #2f8f5b;
+  --success-strong: #1f6b45;
   --danger: #c2410c;
   --accent: #a15d00;
   --accent-strong: #874d00;
@@ -57,7 +59,7 @@ html[data-theme="light"] :is(.text-emerald-300, .text-emerald-400) {
 }
 html[data-theme="light"]
   :is(.text-amber-200, .text-amber-300, .text-amber-400, .text-orange-200, .text-orange-300, .text-orange-400, .text-yellow-400) {
-  color: #a16207;
+  color: #854d0e;
 }
 html[data-theme="light"] :is(.text-violet-200, .text-violet-300, .text-pink-400) {
   color: #6d28d9;
@@ -97,6 +99,7 @@ html[data-theme="light"] :is(.text-cyan-200, .text-cyan-300) {
   --color-surface-hover: var(--surface-hover);
   --color-surface-border: var(--surface-border);
   --color-success: var(--success);
+  --color-success-strong: var(--success-strong);
   --color-danger: var(--danger);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
