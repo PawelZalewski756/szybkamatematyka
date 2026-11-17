@@ -14,6 +14,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "status": "tsx scripts/status.ts",
+    "status:check": "tsx scripts/status.ts --check",
     "audit:questions": "tsx scripts/auditQuestionQuality.ts",
     "audit:cke": "tsx scripts/auditCkeSolutions.ts",
     "audit:render": "tsx scripts/auditTaskRendering.ts",
