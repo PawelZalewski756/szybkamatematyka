@@ -23,14 +23,14 @@ test.describe("Smoke", () => {
       name: "Odpowiedzi do zadania",
     });
     await expect(quickTask).toBeVisible();
-    await quickTask.getByRole("button", { name: "Odpowiedź 3" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź A 3" }).click();
     await expect(
       page.getByText("To nie ta odpowiedź - spróbuj jeszcze raz."),
     ).toBeVisible();
-    await quickTask.getByRole("button", { name: "Odpowiedź 4" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź B 4" }).click();
     await expect(page.getByText("Dobrze! 3 · 4 + 2 = 14.")).toBeVisible();
     await page.getByRole("button", { name: "Następne zadanie" }).click();
-    await quickTask.getByRole("button", { name: "Odpowiedź 20" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź B 20" }).click();
     await expect(page.getByText("Gotowe! Błędnych odpowiedzi: 1.")).toBeVisible();
     await expect.poll(() => attempts.length).toBe(3);
     expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([
@@ -239,6 +239,28 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("diagnoza: feedback i następne pytanie nie nachodzą na siebie", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 710, height: 855 });
+    await page.goto("/diagnostyka");
+    await page.getByRole("button", { name: "Rozpocznij diagnozę" }).click();
+    await page.getByTestId("diagnostic-choice").first().click();
+
+    const feedback = page.getByTestId("diagnostic-feedback");
+    const next = page.getByTestId("diagnostic-next");
+    await expect(feedback).toBeVisible();
+    await expect(next).toBeVisible();
+
+    const feedbackBox = await feedback.boundingBox();
+    const nextBox = await next.boundingBox();
+    expect(feedbackBox).not.toBeNull();
+    expect(nextBox).not.toBeNull();
+    expect(nextBox!.y).toBeGreaterThanOrEqual(
+      feedbackBox!.y + feedbackBox!.height - 1,
+    );
+  });
+
   test("rejestracja nie blokuje się po chwilowej awarii sprawdzania nicku", async ({
     page,
   }) => {
@@ -373,6 +395,36 @@ test.describe("Smoke", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       "Przygotuj się do",
     );
+  });
+
+  test("/powtorki pokazuje bramkę logowania dla gościa", async ({ page }) => {
+    await page.goto("/powtorki");
+    await expect(
+      page.getByRole("heading", {
+        name: "Powtórki są dostępne po zalogowaniu",
+      }),
+    ).toBeVisible();
+  });
+
+  test("/api/powtorki/tasks nie wysyła rozwiązań krok po kroku", async ({
+    request,
+  }) => {
+    const response = await request.post("/api/powtorki/tasks", {
+      data: { ids: ["st-001", "cke-m15-maj-z01"] },
+    });
+    expect(response.ok()).toBeTruthy();
+    const body = (await response.json()) as {
+      tasks: Array<{ id: string; hasSolution: boolean; solutionSteps?: unknown }>;
+    };
+    expect(body.tasks.map((task) => task.id)).toEqual([
+      "st-001",
+      "cke-m15-maj-z01",
+    ]);
+    expect(body.tasks[0]?.hasSolution).toBe(false);
+    expect(body.tasks[1]?.hasSolution).toBe(true);
+    for (const task of body.tasks) {
+      expect("solutionSteps" in task).toBe(false);
+    }
   });
 
   test("/minigry pokazuje jeden polecany start i krótki wybór trybu", async ({

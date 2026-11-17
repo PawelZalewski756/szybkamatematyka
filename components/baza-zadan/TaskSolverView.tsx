@@ -201,7 +201,7 @@ export function TaskSolverView({
       </Link>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+        <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent-strong">
           {CATEGORY_LABELS[task.category]}
         </span>
         <span className="rounded-md border border-surface-border bg-surface-hover px-2 py-1 text-xs font-bold text-muted">
@@ -212,7 +212,7 @@ export function TaskSolverView({
           {open ? " · otwarte" : " · zamknięte"}
         </span>
         {task.examSource && (
-          <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent">
+          <span className="rounded-md border border-accent/30 bg-accent/10 px-2 py-1 text-xs font-bold text-accent-strong">
             {task.examSource.sessionLabel ?? task.examSource.year}
             {task.examSource.taskNumber
               ? ` · zad. ${task.examSource.taskNumber}`
@@ -290,6 +290,7 @@ export function TaskSolverView({
                 <motion.button
                   key={`${choice}-${index}`}
                   type="button"
+                  data-testid="solver-choice"
                   disabled={answeredClosed}
                   onClick={() => {
                     setPicked(index);
@@ -318,6 +319,7 @@ export function TaskSolverView({
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
+            data-testid="solver-result"
             className={`mt-6 rounded-2xl border p-4 ${
               (open ? openAccepted : isCorrectClosed)
                 ? "border-success/40 bg-success/10"

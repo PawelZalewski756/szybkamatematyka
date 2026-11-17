@@ -185,7 +185,7 @@ function FormulaSheet() {
             onClick={() => setTrack(key)}
             className={`rounded-full px-4 py-2 transition ${
               track === key
-                ? "bg-accent text-white"
+                ? "bg-accent text-on-accent"
                 : "text-muted hover:text-foreground"
             }`}
           >

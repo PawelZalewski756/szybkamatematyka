@@ -5,6 +5,11 @@
  * duplikaty opcji i spójność correct_answer.
  *
  *   npm run audit:render
+ *
+ * Źródła Supabase są opcjonalne: audyt domyślnie sprawdza lokalny cache
+ * treningu i archiwum CKE, a produkcyjną bazę dołącza tylko wtedy, gdy
+ * ustawiono NEXT_PUBLIC_SUPABASE_URL i NEXT_PUBLIC_SUPABASE_ANON_KEY.
+ * Dzięki temu CI nie uderza do produkcyjnej bazy bez sekretów.
  */
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -15,11 +20,11 @@ import {
   splitMathText,
 } from "../lib/math/render-math-text";
 
-const SUPABASE_URL =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://neyclickzyibfmimnacc.supabase.co";
-const SUPABASE_KEY =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-  "sb_publishable_F-uW4jE6pAjXLsRKzpLMJQ_6k9XJMC4";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim() ?? "";
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim() ?? "";
+const HAS_SUPABASE = Boolean(
+  SUPABASE_URL && SUPABASE_KEY && /^https?:\/\//.test(SUPABASE_URL),
+);
 
 type Rec = {
   source: string;
@@ -265,13 +270,18 @@ function auditRecord(rec: Rec, issues: Issue[]) {
 }
 
 async function main() {
-  const records = [
-    ...(await fetchDb()),
-    ...fetchCache(),
-    ...fetchCke(),
-    ...(await fetchDbZadania()),
-    ...(await fetchDbMaterials()),
-  ];
+  const records = [...fetchCache(), ...fetchCke()];
+  if (HAS_SUPABASE) {
+    records.push(
+      ...(await fetchDb()),
+      ...(await fetchDbZadania()),
+      ...(await fetchDbMaterials()),
+    );
+  } else {
+    console.log(
+      "Pominięto źródła Supabase (brak NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY). Audyt obejmuje tylko lokalny cache i archiwum CKE.",
+    );
+  }
   const issues: Issue[] = [];
   for (const rec of records) auditRecord(rec, issues);
 

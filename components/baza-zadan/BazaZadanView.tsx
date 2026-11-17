@@ -172,17 +172,6 @@ export function BazaZadanView({
     trening: String(sheetCount),
   };
 
-  const countLabels: Record<BazaTab, string> = {
-    zadania: polishCount(taskCount, "zadanie", "zadania", "zadań"),
-    arkusze:
-      cmsLoading
-        ? "Ładowanie liczby arkuszy"
-        : cmsLoadState === "idle"
-        ? "Otwórz, aby sprawdzić liczbę arkuszy"
-        : polishCount(cmsArkuszCount, "arkusz", "arkusze", "arkuszy"),
-    trening: polishCount(sheetCount, "arkusz", "arkusze", "arkuszy"),
-  };
-
   const activeTab = TABS.find((t) => t.id === tab) ?? TABS[0]!;
 
   const setTab = (next: BazaTab) => {
@@ -260,7 +249,6 @@ export function BazaZadanView({
                 role="tab"
                 aria-selected={active}
                 aria-controls="baza-zadan-panel"
-                aria-label={`${label}, ${countLabels[id]}`}
                 onClick={() => setTab(id)}
                 className={`flex min-w-36 shrink-0 items-center gap-2 rounded-lg border px-3 py-2 text-left text-sm font-semibold transition sm:min-w-0 ${
                   active
@@ -273,7 +261,7 @@ export function BazaZadanView({
                   aria-hidden="true"
                   className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-xs tabular-nums ${
                     active
-                      ? "bg-on-accent/15 text-on-accent"
+                      ? "bg-black/20 text-on-accent"
                       : "bg-surface-hover text-muted"
                   }`}
                 >

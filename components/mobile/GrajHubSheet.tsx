@@ -1,5 +1,6 @@
 "use client";
 
+import { useFocusTrap } from "@/lib/a11y/use-focus-trap";
 import { isNavActive } from "@/lib/layout/mobile-nav";
 import { Gamepad2, Swords, Trophy, X } from "lucide-react";
 import Link from "next/link";
@@ -34,6 +35,7 @@ type GrajHubSheetProps = {
 
 export function GrajHubSheet({ open, onClose, pathname }: GrajHubSheetProps) {
   const sheetId = useId();
+  const dialogRef = useFocusTrap<HTMLDivElement>(open);
 
   useEffect(() => {
     if (!open) return;
@@ -64,7 +66,9 @@ export function GrajHubSheet({ open, onClose, pathname }: GrajHubSheetProps) {
       />
 
       <div
+        ref={dialogRef}
         id={sheetId}
+        tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-label="Graj"

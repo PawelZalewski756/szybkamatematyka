@@ -42,7 +42,7 @@ export type GameVisual = {
 
 const SHARED_VISUAL_TONE = {
   panel: "border-accent/25 bg-accent/10",
-  text: "text-accent",
+  text: "text-accent-strong",
   strong: "bg-accent",
 } as const;
 

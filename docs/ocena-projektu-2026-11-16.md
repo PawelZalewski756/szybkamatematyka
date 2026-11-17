@@ -319,5 +319,10 @@ Pierwsza partia z priorytetów 0–30 dni:
 - [ ] Pełny panel B2B (klasy, uczniowie, wyniki, faktury) — wymaga kont szkolnych i osobnego wdrożenia.
 - [x] A11y quick wins: skip link, `aria-live` w diagnozie, `role="status"` przy ładowaniu.
 - [x] Raport postępów do druku z profilu (`Drukuj raport` + `@media print`).
-- [ ] Pełny audyt a11y (kontrast, fokus w modalach, nawigacja klawiaturą).
+- [x] Macierz layoutu zadań 390/710/1280: trening, baza zadań, arkusz CKE i diagnoza (`e2e/layout-matrix.spec.ts`).
+- [x] Regresja layoutu diagnozy: feedback i przycisk „Następne pytanie” nie nachodzą na siebie.
+- [x] Bramka a11y w lincie: wybrane reguły `jsx-a11y`, powiązane etykiety formularzy admina.
+- [x] Pułapka fokusu w dialogach mobilnych (Więcej, Graj, menu nawigacji) + powrót fokusu.
+- [x] Automatyczny audyt axe-core 29 tras w jasnym/ciemnym motywie i na 390/1280 px; 0 naruszeń.
+- [ ] Pełny audyt a11y z kontem użytkownika i panelem admina (wymaga danych logowania).
 

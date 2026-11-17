@@ -629,7 +629,6 @@ function DepartmentNavigation({
               type="button"
               data-testid={`training-department-${category.id}`}
               aria-pressed={active}
-              aria-label={`${category.name}, ${status}, ${metrics.progress}% postępu`}
               onClick={() => onSelect(category.id)}
               className={`w-full border-l-2 px-3 py-3 text-left transition ${
                 active

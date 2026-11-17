@@ -86,7 +86,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
           animate={{ opacity: 1, y: 0 }}
           className={`relative ${MINIGAME_MODE_HEADER_CLASS}`}
         >
-          <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent">
+          <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-strong">
             {config.badge}
           </span>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -113,7 +113,7 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
               return (
                 <section key={group.id}>
                   <div className="flex items-center gap-2.5">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-accent/25 bg-accent/10 text-accent">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-accent/25 bg-accent/10 text-accent-strong">
                       <GroupIcon className="h-4 w-4" aria-hidden />
                     </span>
                     <h3 className="text-sm font-bold text-foreground">

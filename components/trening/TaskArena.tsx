@@ -564,9 +564,9 @@ export function TaskArena({
         <AnimatePresence mode="wait">
           <motion.div
             key={current.id}
-            initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -24 }}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
             className="mx-auto flex w-full max-w-2xl flex-1 flex-col lg:max-w-3xl xl:max-w-4xl"
           >

@@ -168,7 +168,7 @@ export function SheetView() {
           </div>
           <Link
             href="/dla-szkol"
-            className="shrink-0 rounded-full border border-accent/35 bg-accent/10 px-4 py-2 text-xs font-bold text-accent transition hover:border-accent/60"
+            className="shrink-0 rounded-full border border-accent/35 bg-accent/10 px-4 py-2 text-xs font-bold text-accent-strong transition hover:border-accent/60"
           >
             Dla nauczycieli →
           </Link>

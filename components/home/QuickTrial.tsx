@@ -154,12 +154,12 @@ export function QuickTrial() {
             <button
               key={value}
               type="button"
-              aria-label={`Odpowiedź ${value}`}
               aria-pressed={selected}
               disabled={solved}
               onClick={() => choose(value)}
               className={`flex min-h-14 items-center gap-3 rounded-xl border px-3 py-2 text-left text-base font-semibold transition-colors disabled:cursor-default ${style}`}
             >
+              <span className="sr-only">Odpowiedź </span>
               <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-surface text-xs font-bold text-muted">
                 {String.fromCharCode(65 + index)}
               </span>

@@ -232,7 +232,7 @@ export function BazaZadanArkuszePanel({
           <Link
             href="/trening/arkusze"
             aria-label="Otwórz katalog arkuszy CKE"
-            className="text-sm font-semibold text-accent hover:text-accent-strong"
+            className="text-sm font-semibold text-accent-strong hover:text-accent"
           >
             Pełny katalog →
           </Link>

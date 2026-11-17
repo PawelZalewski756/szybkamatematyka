@@ -3,32 +3,63 @@
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useReview } from "@/components/powtorki/ReviewProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
-import { getTaskById, getTasksForPath } from "@/lib/baza-zadan/catalog";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
-import type { Task } from "@/lib/baza-zadan/types";
-import { Check, Plus, Search } from "lucide-react";
-import { useMemo, useState } from "react";
-
-const MAX_RESULTS = 40;
+import {
+  fetchReviewCatalog,
+  type ReviewTask,
+} from "@/lib/powtorki/tasks-client";
+import { Check, Loader2, Plus, Search } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
 export function AddTasksPicker() {
   const { path } = useLearningPath();
   const { solvedIds } = useSolvedTasks();
   const { isInReview, addToReview, removeFromReview } = useReview();
   const [search, setSearch] = useState("");
+  const [results, setResults] = useState<ReviewTask[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const results = useMemo<Task[]>(() => {
+  // Set rozwiązanych zadań zmienia tożsamość przy każdym zapisie - do efektu
+  // przekazujemy stabilny klucz, a nie sam Set.
+  const solvedKey = useMemo(
+    () => [...solvedIds].slice(0, 100).join(","),
+    [solvedIds],
+  );
+
+  useEffect(() => {
+    const controller = new AbortController();
     const query = search.trim();
-    if (query) {
-      return getTasksForPath(path, { search: query }).slice(0, MAX_RESULTS);
-    }
-    // Bez wyszukiwania proponujemy zadania, które user już rozwiązywał.
-    const suggested = [...solvedIds]
-      .map((id) => getTaskById(id))
-      .filter((t): t is Task => Boolean(t));
-    if (suggested.length > 0) return suggested.slice(0, MAX_RESULTS);
-    return getTasksForPath(path).slice(0, MAX_RESULTS);
-  }, [search, path, solvedIds]);
+    const timer = setTimeout(
+      () => {
+        setLoading(true);
+        fetchReviewCatalog(path, {
+          search: query,
+          solvedIds: solvedKey ? solvedKey.split(",") : [],
+          signal: controller.signal,
+        })
+          .then((tasks) => {
+            if (!controller.signal.aborted) setResults(tasks);
+          })
+          .catch((error: unknown) => {
+            if (
+              !controller.signal.aborted &&
+              !(error instanceof DOMException && error.name === "AbortError")
+            ) {
+              setResults([]);
+            }
+          })
+          .finally(() => {
+            if (!controller.signal.aborted) setLoading(false);
+          });
+      },
+      query ? 250 : 0,
+    );
+
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [path, search, solvedKey]);
 
   return (
     <div className="rounded-3xl border border-surface-border bg-surface/60 p-5 sm:p-6">
@@ -50,10 +81,13 @@ export function AddTasksPicker() {
           placeholder="Szukaj po treści, tytule lub dziale…"
           className="w-full bg-transparent text-sm font-semibold text-foreground placeholder:text-muted focus:outline-none"
         />
+        {loading && (
+          <Loader2 className="h-4 w-4 shrink-0 animate-spin text-muted" aria-hidden />
+        )}
       </div>
 
       <ul className="mt-4 max-h-80 space-y-2 overflow-y-auto pr-1">
-        {results.length === 0 && (
+        {!loading && results.length === 0 && (
           <li className="rounded-xl border border-surface-border bg-surface/50 px-4 py-3 text-sm text-muted">
             Brak zadań do wyświetlenia.
           </li>

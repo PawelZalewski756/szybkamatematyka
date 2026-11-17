@@ -5,6 +5,7 @@ import { ProGate } from "@/components/subscription/ProGate";
 import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { useReview } from "@/components/powtorki/ReviewProvider";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
 import {
   examTaskPoints,
@@ -13,15 +14,28 @@ import {
   isOpenExamTask,
 } from "@/lib/baza-zadan/cke/exam-points";
 import type { TaskGradeResult } from "@/lib/gemini/format-task-assist";
-import { fetchTaskGrade } from "@/lib/trening/task-assist-client";
+import {
+  fetchTaskGrade,
+  fetchTaskSolution,
+  type TaskSolution,
+} from "@/lib/trening/task-assist-client";
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
 import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
+import {
+  fetchReviewTasksByIds,
+  type ReviewTask,
+} from "@/lib/powtorki/tasks-client";
 import type { ReviewSessionSummary } from "@/lib/powtorki/types";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
-import { useCallback, useMemo, useState } from "react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  Loader2,
+  XCircle,
+} from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 type ReviewSessionProps = {
   taskIds: readonly string[];
@@ -29,17 +43,100 @@ type ReviewSessionProps = {
   onExit: () => void;
 };
 
+type ReviewSessionInnerProps = ReviewSessionProps & {
+  tasksById: Record<string, ReviewTask>;
+};
+
+/**
+ * Sesja powtórek: najpierw pobiera zadania z API (bez rozwiązań Pro),
+ * a dopiero potem montuje kolejkę. Dzięki temu katalog z rozwiązaniami nie
+ * trafia do bundla klienta.
+ */
 export function ReviewSession({
   taskIds,
   onComplete,
   onExit,
 }: ReviewSessionProps) {
-  const { grade } = useReview();
+  const [tasksById, setTasksById] = useState<Record<string, ReviewTask> | null>(
+    null,
+  );
+  const [loadError, setLoadError] = useState<string | null>(null);
 
-  // Kolejka sesji: pomijamy ID, których nie ma już w katalogu.
+  const taskIdsKey = useMemo(() => taskIds.join(","), [taskIds]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetchReviewTasksByIds(
+      taskIdsKey ? taskIdsKey.split(",") : [],
+      controller.signal,
+    )
+      .then((tasks) => {
+        if (controller.signal.aborted) return;
+        setTasksById(Object.fromEntries(tasks.map((task) => [task.id, task])));
+      })
+      .catch((error: unknown) => {
+        if (controller.signal.aborted) return;
+        setLoadError(
+          error instanceof Error
+            ? error.message
+            : "Nie udało się pobrać zadań do powtórki.",
+        );
+      });
+    return () => controller.abort();
+  }, [taskIdsKey]);
+
+  if (loadError) {
+    return (
+      <div className="mx-auto max-w-lg py-16 text-center">
+        <p className="font-bold text-foreground" role="alert">
+          {loadError}
+        </p>
+        <button
+          type="button"
+          onClick={onExit}
+          className="btn-chunky mt-5 px-5 py-3 text-sm"
+        >
+          Wróć do powtórek
+        </button>
+      </div>
+    );
+  }
+
+  if (!tasksById) {
+    return (
+      <div className="flex flex-1 items-center justify-center py-24" role="status">
+        <Loader2 className="h-8 w-8 animate-spin text-accent" />
+        <span className="ml-3 text-sm text-muted">Ładowanie zadań…</span>
+      </div>
+    );
+  }
+
+  return (
+    <ReviewSessionInner
+      taskIds={taskIds}
+      onComplete={onComplete}
+      onExit={onExit}
+      tasksById={tasksById}
+    />
+  );
+}
+
+function ReviewSessionInner({
+  taskIds,
+  onComplete,
+  onExit,
+  tasksById,
+}: ReviewSessionInnerProps) {
+  const { grade } = useReview();
+  const { isPro } = useSubscription();
+  const [solutions, setSolutions] = useState<Record<string, TaskSolution>>({});
+  const [solutionLoading, setSolutionLoading] = useState(false);
+  const [solutionError, setSolutionError] = useState<string | null>(null);
+
+  // Kolejka sesji: pomijamy ID, których nie ma już w najnowszym katalogu.
   const initialQueue = useMemo(
-    () => taskIds.filter((id) => getTaskById(id)),
-    [taskIds],
+    () => taskIds.filter((id) => tasksById[id]),
+    [taskIds, tasksById],
   );
 
   const [queue, setQueue] = useState<string[]>(() => [...initialQueue]);
@@ -72,9 +169,33 @@ export function ReviewSession({
 
   const currentId = queue[index];
   const task = useMemo(() => {
-    const found = currentId ? getTaskById(currentId) : undefined;
-    return found ? orderTaskChoices(found) : undefined;
-  }, [currentId]);
+    const found = currentId ? tasksById[currentId] : undefined;
+    if (!found) return undefined;
+    return {
+      ...orderTaskChoices(found),
+      hasSolution: found.hasSolution,
+    };
+  }, [currentId, tasksById]);
+
+  const loadSolution = useCallback(async () => {
+    if (!task || !task.hasSolution || solutions[task.id] || solutionLoading) {
+      return;
+    }
+    setSolutionLoading(true);
+    setSolutionError(null);
+    try {
+      const solution = await fetchTaskSolution(task.id);
+      setSolutions((prev) => ({ ...prev, [task.id]: solution }));
+    } catch (error) {
+      setSolutionError(
+        error instanceof Error
+          ? error.message
+          : "Nie udało się pobrać rozwiązania.",
+      );
+    } finally {
+      setSolutionLoading(false);
+    }
+  }, [task, solutions, solutionLoading]);
   const open = task ? isOpenExamTask(task) : false;
   const maxPoints = task ? examTaskPoints(task) : 1;
   const answered = open ? openGrade !== null || skipped : picked !== null;
@@ -394,11 +515,34 @@ export function ReviewSession({
                     />
                   </div>
                 )}
-                {task.solutionSteps && task.solutionSteps.length > 0 && (
-                  <SolutionSteps
-                    steps={task.solutionSteps}
-                    examLabel={task.examSource?.sessionLabel}
-                  />
+                {task.hasSolution &&
+                  (isPro ? (
+                    solutions[task.id] ? (
+                      <SolutionSteps
+                        steps={solutions[task.id]!.steps}
+                        examLabel={task.examSource?.sessionLabel}
+                      />
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => void loadSolution()}
+                        disabled={solutionLoading}
+                        className="mt-3 rounded-xl border border-accent/40 bg-accent/10 px-3 py-2 text-sm font-bold text-accent-strong transition hover:bg-accent/15 disabled:opacity-60"
+                      >
+                        {solutionLoading
+                          ? "Ładowanie rozwiązania…"
+                          : "Pokaż rozwiązanie krok po kroku"}
+                      </button>
+                    )
+                  ) : (
+                    <ProGate featureLabel="Rozwiązania krok po kroku">
+                      {null}
+                    </ProGate>
+                  ))}
+                {solutionError && (
+                  <p role="alert" className="mt-2 text-sm text-danger">
+                    {solutionError}
+                  </p>
                 )}
               </motion.div>
             )}

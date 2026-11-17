@@ -231,18 +231,18 @@ export function PojedynkiHome() {
             onClick={() => setDelivery("bot")}
             badge="Trening"
           >
-            <div className="mt-3 flex gap-2" onClick={(e) => e.stopPropagation()}>
+            <div className="mt-3 flex gap-2">
               {BOT_LEVELS.map((lvl) => (
                 <button
                   key={lvl}
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
+                  onClick={() => {
                     setBotLevel(lvl);
+                    setDelivery("bot");
                   }}
                   className={`flex-1 rounded-lg border px-2 py-1 text-xs font-bold transition ${
                     botLevel === lvl
-                      ? "border-accent/50 bg-accent/15 text-accent"
+                      ? "border-accent/50 bg-accent/15 text-accent-strong"
                       : "border-surface-border bg-surface text-muted"
                   }`}
                 >
@@ -276,17 +276,8 @@ function ModeCard({
 }) {
   return (
     <div
-      role="button"
-      tabIndex={0}
-      onClick={onClick}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onClick();
-        }
-      }}
-      className={`card-raised group relative flex cursor-pointer flex-col p-6 text-left transition hover:scale-[1.01] active:scale-[0.99] ${
-        dim ? "opacity-70" : ""
+      className={`card-raised group relative flex flex-col p-6 text-left transition hover:scale-[1.01] active:scale-[0.99] ${
+        dim ? "border-dashed" : ""
       }`}
     >
       {badge && (
@@ -294,9 +285,15 @@ function ModeCard({
           {badge}
         </span>
       )}
-      <span className="icon-chip h-11 w-11 rounded-2xl">{icon}</span>
-      <span className="mt-4 text-xl font-black text-foreground">{title}</span>
-      <span className="mt-1 text-sm font-medium text-muted">{description}</span>
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex w-full flex-col items-start text-left"
+      >
+        <span className="icon-chip h-11 w-11 rounded-2xl">{icon}</span>
+        <span className="mt-4 text-xl font-black text-foreground">{title}</span>
+        <span className="mt-1 text-sm font-medium text-muted">{description}</span>
+      </button>
       {children}
     </div>
   );

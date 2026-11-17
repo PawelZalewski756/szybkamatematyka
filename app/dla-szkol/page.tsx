@@ -92,7 +92,7 @@ export default function DlaSzkolPage() {
           </Link>
           <a
             href={mailto}
-            className="rounded-full border border-accent/35 bg-accent/10 px-5 py-3 text-sm font-bold text-accent transition hover:border-accent/60"
+            className="rounded-full border border-accent/35 bg-accent/10 px-5 py-3 text-sm font-bold text-accent-strong transition hover:border-accent/60"
           >
             Napisz w sprawie pakietu szkolnego
           </a>
@@ -108,7 +108,7 @@ export default function DlaSzkolPage() {
             key={feature.title}
             className="card-raised flex flex-col gap-3 p-5"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/25 bg-accent/10 text-accent">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/25 bg-accent/10 text-accent-strong">
               <feature.icon className="h-5 w-5" aria-hidden />
             </span>
             <h2 className="text-base font-bold text-foreground">

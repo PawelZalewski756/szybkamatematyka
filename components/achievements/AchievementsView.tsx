@@ -72,7 +72,7 @@ export function AchievementsView() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] flex-1 px-4 py-8 sm:py-12">
         <header className="flex flex-col items-center text-center">
-          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent/90">
+          <div className="mb-1 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-strong">
             <Trophy className="h-3.5 w-3.5" aria-hidden />
             Osiągnięcia
           </div>
@@ -86,7 +86,7 @@ export function AchievementsView() {
           <div className="mt-5 w-full max-w-md rounded-2xl border border-surface-border bg-foreground/5 p-4 backdrop-blur-md">
             <div className="flex items-center justify-between text-sm font-bold">
               <span className="text-foreground">Zdobyte odznaki</span>
-              <span className="tabular-nums text-accent">
+              <span className="tabular-nums text-accent-strong">
                 {unlockedCount} / {total}
               </span>
             </div>

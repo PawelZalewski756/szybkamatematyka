@@ -66,7 +66,7 @@ export function AdminGate({ children }: { children: ReactNode }) {
       <div className="relative flex min-h-0 flex-1 flex-col bg-background">
         <GamingBackground />
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-20 text-center sm:py-28">
-          <p className="text-overline text-accent/90">Błąd 404</p>
+          <p className="text-overline text-accent-strong">Błąd 404</p>
           <h1 className="mt-3 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
             Tej strony nie ma na mapie
           </h1>

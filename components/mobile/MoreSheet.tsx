@@ -4,6 +4,7 @@ import { NavbarClassBadge } from "@/components/NavbarClassBadge";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
+import { useFocusTrap } from "@/lib/a11y/use-focus-trap";
 import { isNavActive } from "@/lib/layout/mobile-nav";
 import {
   isNavLinkVisible,
@@ -117,6 +118,7 @@ export function MoreSheet({
   loggingOut = false,
 }: MoreSheetProps) {
   const { path, setPath, clearPath, hasPathSelection } = useLearningPath();
+  const dialogRef = useFocusTrap<HTMLElement>(open);
   const visibleGroups = MOBILE_MORE_GROUPS.map((group) => ({
     ...group,
     links: group.links.filter((link) => isNavLinkVisible(link, isLoggedIn)),
@@ -151,7 +153,9 @@ export function MoreSheet({
       />
 
       <aside
+        ref={dialogRef}
         id={sheetId}
+        tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-label="Więcej"
