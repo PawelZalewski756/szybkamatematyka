@@ -2,12 +2,16 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useConsent } from "@/components/analytics/use-consent";
 
 /**
  * Baner zgód. Pokazujemy go tylko poza aktywną rozgrywką, żeby nie zasłaniał
  * odpowiedzi w minigrach.
+ *
+ * Baner jest `fixed`, więc rezerwujemy mu miejsce w `main` przez zmienną
+ * `--consent-banner-space` - wcześniej zasłaniał dół strony (przyciski planu,
+ * opcje zadania) i wyglądało to jak zepsuta nawigacja.
  */
 export function CookieConsentBanner() {
   const consent = useConsent();
@@ -15,12 +19,39 @@ export function CookieConsentBanner() {
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const ref = useRef<HTMLElement | null>(null);
 
-  if (consent.decided) return null;
-  if (pathname.startsWith("/minigry/") && pathname !== "/minigry") return null;
+  const hidden =
+    consent.decided ||
+    (pathname.startsWith("/minigry/") && pathname !== "/minigry");
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (hidden) {
+      root.style.setProperty("--consent-banner-space", "0px");
+      return;
+    }
+
+    const update = () => {
+      const height = ref.current?.offsetHeight ?? 0;
+      root.style.setProperty("--consent-banner-space", `${height + 12}px`);
+    };
+
+    update();
+    const observer = new ResizeObserver(update);
+    if (ref.current) observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+      root.style.setProperty("--consent-banner-space", "0px");
+    };
+  }, [hidden, expanded]);
+
+  if (hidden) return null;
 
   return (
     <aside
+      ref={ref}
       aria-label="Zgoda na pliki cookies"
       className="fixed inset-x-3 bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] z-[110] mx-auto max-w-md rounded-2xl border border-surface-border bg-surface/95 p-3 shadow-xl backdrop-blur print:hidden lg:bottom-4 lg:right-4 lg:left-auto lg:mx-0"
     >

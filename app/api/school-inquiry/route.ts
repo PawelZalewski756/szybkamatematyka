@@ -1,4 +1,9 @@
 import { CONTACT_EMAIL } from "@/lib/brand/constants";
+import {
+  checkRateLimit,
+  clientIp,
+  rateLimitResponse,
+} from "@/lib/security/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -27,6 +32,16 @@ export async function POST(request: Request): Promise<Response> {
   // Honeypot: boty wypełniają ukryte pole.
   if (clean(body.website, 100)) {
     return Response.json({ ok: true });
+  }
+
+  // Publiczna skrzynka mailowa - bez limitu dawała się zalać spamem
+  // i wyczerpać kwotę Resend.
+  const limit = checkRateLimit(`school-inquiry:${clientIp(request)}`, {
+    limit: 8,
+    windowMs: 10 * 60_000,
+  });
+  if (!limit.allowed) {
+    return rateLimitResponse(limit.retryAfterSeconds);
   }
 
   const school = clean(body.school, 160);

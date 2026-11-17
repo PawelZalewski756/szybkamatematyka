@@ -51,6 +51,48 @@ function pickDistinctOptions(
   return shuffle([correct, ...others]);
 }
 
+/** Zaokrąglenie do groszy/2 miejsc - tyle pokazuje formatNumericAnswer. */
+function round2(value: number): number {
+  return Math.round(value * 100) / 100;
+}
+
+/**
+ * Opcje dla wyników, które nie muszą być całkowite (procenty, średnia, pole
+ * koła). `buildNumericOptions` dokładała pułapki całkowite i gubiła część
+ * dziesiętną, przez co uczeń widział np. „5% z 31 = 2” zamiast 1,55.
+ */
+function distinctNumericOptions(
+  correct: number,
+  candidates: readonly number[],
+  count = 4,
+): number[] {
+  const target = round2(correct);
+  const allowNegative = target < 0;
+  const options: number[] = [target];
+  const same = (a: number, b: number) => Math.abs(a - b) < 1e-9;
+
+  for (const raw of candidates) {
+    if (options.length >= count) break;
+    const value = round2(raw);
+    if (!Number.isFinite(value)) continue;
+    if (!allowNegative && value < 0) continue;
+    if (options.some((existing) => same(existing, value))) continue;
+    options.push(value);
+  }
+
+  for (let offset = 0.5; options.length < count && offset <= count + 20; offset += 0.5) {
+    for (const value of [target + offset, target - offset]) {
+      if (options.length >= count) break;
+      const rounded = round2(value);
+      if (!allowNegative && rounded < 0) continue;
+      if (options.some((existing) => same(existing, rounded))) continue;
+      options.push(rounded);
+    }
+  }
+
+  return shuffle(options);
+}
+
 const TRIG_OPTIONS = [
   "$0$",
   "$\\frac{1}{2}$",
@@ -189,14 +231,22 @@ export function generateProcenty(path: LearningPath): ChoiceQuestion {
   const { min, max } = spDifficulty(path);
   const base = randomInt(Math.max(10, min * 2), Math.max(20, max * 2));
   const pct = pickRandom([5, 10, 15, 20, 25, 50] as const);
-  const correct = Math.round((base * pct) / 100);
+  // Dokładny wynik, nie zaokrąglony: 10% z 42 to 4,2, a nie 4.
+  const correct = round2((base * pct) / 100);
 
   return {
     id: `pct-${pct}-${base}`,
     prompt: "Oblicz procent",
     headline: `$${pct}\\%$ z $${base}$`,
     correct,
-    options: buildNumericOptions(correct, 4, 20),
+    options: distinctNumericOptions(correct, [
+      correct * 10,
+      correct / 10,
+      correct + 1,
+      correct - 1,
+      correct + 0.5,
+      correct - 0.5,
+    ]),
   };
 }
 
@@ -293,17 +343,20 @@ export function generateNawiasy(path: LearningPath): ChoiceQuestion {
   const correct = a + b * c;
   const trapAddFirst = (a + b) * c;
 
-  const options = buildNumericOptions(correct, 4, 15);
-  if (!options.includes(trapAddFirst) && trapAddFirst >= 0) {
-    options[0] = trapAddFirst;
-  }
-
+  // Wcześniej `options[0] = trapAddFirst` nadpisywało poprawną odpowiedź, gdy
+  // trafiła na indeks 0 - wtedy nie było jej wcale wśród opcji.
   return {
     id: `ops-${a}+${b}*${c}`,
     prompt: "Oblicz zgodnie z kolejnością działań",
     headline: `$${a} + ${b} \\times ${c}$`,
     correct,
-    options: shuffle(options),
+    options: distinctNumericOptions(correct, [
+      trapAddFirst,
+      a * b + c,
+      a + b + c,
+      correct + 1,
+      correct - 1,
+    ]),
   };
 }
 
@@ -457,9 +510,11 @@ export function generatePotegaDziesiatki(): TrueFalseQuestion {
 export function generateTrojkat(): TrueFalseQuestion {
   const a = randomInt(30, 80);
   const b = randomInt(30, 80);
-  const sum = a + b;
   const showCorrect = Math.random() < 0.5;
-  const trap = sum > 170 ? sum - 20 : sum + 20;
+  // Fałszywa wersja musi naprawdę być fałszywa: wcześniej trap = suma + 20
+  // mógł wynieść 180°, czyli zdanie „a + b + trzeci = trap” stawało się prawdziwe.
+  let trap = 180 + (Math.random() < 0.5 ? -1 : 1) * randomInt(10, 30);
+  if (trap === 180) trap += 1;
 
   return {
     id: `tri-${a}-${b}-${showCorrect ? "t" : "f"}`,
@@ -599,8 +654,16 @@ export function generateUlamkiOdejmij(): ChoiceQuestion {
 
 export function generatePoleKola(): ChoiceQuestion {
   const r = randomInt(1, 20);
-  const correct = Math.round(3.14 * r * r * 10) / 10;
-  const values = buildNumericOptions(correct, 4, 25);
+  // π ≈ 3,14 jest podane w treści, więc wynik ma być dokładny do 2 miejsc,
+  // a nie zaokrąglony do dziesiątych (12,56 ≠ 12,6).
+  const correct = round2(3.14 * r * r);
+  const values = distinctNumericOptions(correct, [
+    correct * 10,
+    correct / 10,
+    2 * 3.14 * r,
+    correct + 1,
+    correct - 1,
+  ]);
 
   return {
     id: `circle-${r}`,
@@ -613,21 +676,34 @@ export function generatePoleKola(): ChoiceQuestion {
 
 export function generateSrednia(): ChoiceQuestion {
   const nums = Array.from({ length: 4 }, () => randomInt(2, 20));
-  const correct =
-    Math.round((nums.reduce((a, b) => a + b, 0) / nums.length) * 10) / 10;
+  const sum = nums.reduce((a, b) => a + b, 0);
+  // Suma czterech liczb daje ćwiartki (np. 5,75). Wcześniejsze zaokrąglenie do
+  // jednego miejsca po przecinku pokazywało 5,8 jako poprawną odpowiedź.
+  const correct = round2(sum / 4);
   return {
     id: `avg-${nums.join("-")}`,
     prompt: "Średnia arytmetyczna",
     headline: `$\\frac{${nums.join(" + ")}}{${nums.length}}$`,
     correct,
-    options: buildNumericOptions(correct, 4, 8),
+    options: distinctNumericOptions(correct, [
+      correct + 0.5,
+      correct - 0.5,
+      correct + 1,
+      correct - 1,
+      round2(sum / 3),
+      round2(sum / 5),
+    ]),
   };
 }
 
 export function generateProcentOdwrotny(): ChoiceQuestion {
-  const total = randomInt(40, 200);
-  const part = randomInt(5, total - 5);
-  const correct = Math.round((part / total) * 100);
+  // Całość i procent dobrane tak, żeby część była liczbą całkowitą, a wynik
+  // dokładny - wcześniej 62 z 104 dawało 59,6%, a opcje mówiły 60%.
+  const total = randomInt(2, 10) * 20;
+  const pct = pickRandom([5, 10, 15, 20, 25, 50, 75] as const);
+  const part = (total * pct) / 100;
+  const correct = pct;
+
   return {
     id: `pct-rev-${part}-${total}`,
     prompt: "Jaki to procent?",

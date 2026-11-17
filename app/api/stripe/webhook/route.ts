@@ -1,4 +1,5 @@
 import type Stripe from "stripe";
+import { reportServerError } from "@/lib/observability/report";
 import {
   getStripeOrNull,
   getStripeWebhookSecret,
@@ -144,7 +145,7 @@ export async function POST(request: Request) {
         break;
     }
   } catch (err) {
-    console.error(`[stripe-webhook] Błąd obsługi ${event.type}:`, err);
+    await reportServerError("api/stripe/webhook", err);
     // 500 → Stripe ponowi dostarczenie webhooka.
     return Response.json(
       { error: "Błąd przetwarzania zdarzenia." },

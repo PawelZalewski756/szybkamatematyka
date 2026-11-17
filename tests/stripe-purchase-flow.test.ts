@@ -83,16 +83,23 @@ beforeEach(() => {
 describe("symulacja zakupu Pro", () => {
   it("checkout: poprawny Price ID tworzy sesje z session_id w success_url", async () => {
     const { POST } = await import("@/app/api/checkout/route");
-    const res = await POST(req("http://x/api/checkout", { planId: "pro" }, { authorization: "Bearer ok" }));
+    const res = await POST(req("http://x/api/checkout", { planId: "pro", acceptTerms: true }, { authorization: "Bearer ok" }));
     expect(res.status).toBe(200);
     const args = (stripeMock.checkout.sessions.create.mock.calls as unknown as [{ success_url: string }][])[0][0];
     expect(args.success_url).toContain("session_id={CHECKOUT_SESSION_ID}");
   });
 
+  it("checkout: bez zgody na regulamin nie tworzy sesji", async () => {
+    const { POST } = await import("@/app/api/checkout/route");
+    const res = await POST(req("http://x/api/checkout", { planId: "pro" }, { authorization: "Bearer ok" }));
+    expect(res.status).toBe(400);
+    expect((await res.json()).code).toBe("terms_not_accepted");
+  });
+
   it("checkout: nazwa zmiennej zamiast Price ID daje czytelny blad", async () => {
     process.env.STRIPE_PRICE_PRO = "STRIPE_PRICE_PRO";
     const { POST } = await import("@/app/api/checkout/route");
-    const res = await POST(req("http://x/api/checkout", { planId: "pro" }, { authorization: "Bearer ok" }));
+    const res = await POST(req("http://x/api/checkout", { planId: "pro", acceptTerms: true }, { authorization: "Bearer ok" }));
     expect(res.status).toBe(503);
   });
 

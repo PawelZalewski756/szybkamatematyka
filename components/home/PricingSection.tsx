@@ -79,11 +79,18 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
   const { isLoggedIn, isPro, loading } = useSubscription();
   const [pendingPlan, setPendingPlan] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [acceptTerms, setAcceptTerms] = useState(false);
 
   const handleBuy = async (planId: string) => {
     setError(null);
+    if (!acceptTerms) {
+      setError(
+        "Zaznacz zgodę na regulamin i natychmiastowe rozpoczęcie usługi, aby przejść do płatności.",
+      );
+      return;
+    }
     setPendingPlan(planId);
-    const result = await startCheckout(planId);
+    const result = await startCheckout(planId, { acceptTerms: true });
     if (!result.ok) {
       setError(result.error);
       setPendingPlan(null);
@@ -172,8 +179,34 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
         <p className="mt-3 text-center text-xs text-danger">{error}</p>
       )}
 
+      <label className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-muted">
+        <input
+          type="checkbox"
+          checked={acceptTerms}
+          onChange={(e) => setAcceptTerms(e.currentTarget.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-accent)]"
+        />
+        <span>
+          Akceptuję{" "}
+          <Link href="/regulamin" className="font-semibold text-accent underline">
+            regulamin
+          </Link>{" "}
+          i{" "}
+          <Link
+            href="/polityka-prywatnosci"
+            className="font-semibold text-accent underline"
+          >
+            politykę prywatności
+          </Link>
+          . Wyrażam zgodę na natychmiastowe rozpoczęcie świadczenia usługi
+          cyfrowej i przyjmuję do wiadomości, że z tego powodu tracę prawo
+          odstąpienia od umowy w terminie 14 dni.
+        </span>
+      </label>
+
       <p className="mt-4 text-xs leading-relaxed text-muted">
-        Płatności przez Stripe - możesz anulować w dowolnym momencie.
+        Płatności przez Stripe - możesz anulować w dowolnym momencie. Cena
+        zawiera podatek VAT.
       </p>
     </div>
   );

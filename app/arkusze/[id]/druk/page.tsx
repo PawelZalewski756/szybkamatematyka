@@ -43,12 +43,10 @@ export default async function ArkuszCkePrintPage({
         prompt: task.tresc,
         choices: [],
         open: true,
-        correctLetter: null,
-        explanation: "",
-        steps: [],
       }))}
       initialKey={klucz === "1"}
       backHref={`/arkusze/${id}`}
+      solutionsSource="cms"
     />
   );
 }

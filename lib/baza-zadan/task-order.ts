@@ -11,7 +11,9 @@ const DIFFICULTY_RANK: Record<TaskDifficulty, number> = {
  * alfabetycznie. Bez tego lista szła w kolejności z pliku danych i wyglądała
  * losowo.
  */
-export function sortTasksForDisplay(tasks: readonly Task[]): Task[] {
+export function sortTasksForDisplay<
+  T extends Pick<Task, "difficulty" | "title">,
+>(tasks: readonly T[]): T[] {
   return [...tasks].sort(
     (a, b) =>
       DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty] ||

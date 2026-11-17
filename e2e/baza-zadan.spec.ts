@@ -155,4 +155,86 @@ test.describe("Baza zadań", () => {
       page.getByRole("button", { name: "Doprecyzuj filtry", exact: true }),
     ).toBeVisible();
   });
+
+  test("powrót z zadania zachowuje wybrany dział", async ({ page }) => {
+    await page.goto("/baza-zadan");
+
+    await page.getByRole("button", { name: /Algebra i równania/ }).click();
+    await expect(
+      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+    ).toBeVisible();
+
+    const firstTask = page
+      .getByRole("list", { name: "Wyniki zadań" })
+      .getByRole("link")
+      .first();
+    const href = await firstTask.getAttribute("href");
+    await firstTask.click();
+    // Najpierw czekamy na commit nawigacji, inaczej goBack() potrafi wykonać
+    // się przed dodaniem zadania do historii.
+    await expect(page).toHaveURL(
+      new RegExp(`${href!.replace(/[/.*+?^${}()|[\]\\]/g, "\\$&")}$`),
+    );
+
+    await page.goBack();
+
+    await expect(
+      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("list", { name: "Wyniki zadań" }),
+    ).toBeVisible();
+  });
+
+  test("wstecz wraca do poprzedniej zakładki, a nie poza bazę zadań", async ({
+    page,
+  }) => {
+    await page.goto("/baza-zadan");
+
+    await page.getByRole("tab", { name: /Arkusze CKE/ }).click();
+    await expect(page).toHaveURL(/tab=arkusze/);
+
+    await page.goBack();
+
+    await expect(page).toHaveURL(/\/baza-zadan$/);
+    await expect(
+      page.getByRole("tab", { name: /Ćwicz zadania/ }),
+    ).toHaveAttribute("aria-selected", "true");
+  });
+
+  test("zakładki mieszczą się w ekranie telefonu bez ukrywania", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/baza-zadan");
+
+    for (const name of [/Ćwicz zadania/, /Arkusze CKE/, /Symulacje/]) {
+      await expect(page.getByRole("tab", { name })).toBeVisible();
+    }
+  });
+
+  test("powrót z zadania zachowuje pozycję listy", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/baza-zadan");
+
+    await page.getByRole("button", { name: /Podstawy szkolne/ }).click();
+    const list = page.getByRole("list", { name: "Wyniki zadań" });
+    await expect(list).toBeVisible();
+
+    const target = list.getByRole("link").nth(6);
+    await target.scrollIntoViewIfNeeded();
+    const before = await page.evaluate(() => window.scrollY);
+    expect(before).toBeGreaterThan(100);
+
+    await target.click();
+    await page.waitForURL(/\/baza-zadan\//);
+    await page.goBack();
+
+    await expect(
+      page.getByRole("heading", { name: /Zadania: Podstawy szkolne/ }),
+    ).toBeVisible();
+    await expect
+      .poll(() => page.evaluate(() => window.scrollY))
+      .toBeGreaterThan(100);
+  });
 });
