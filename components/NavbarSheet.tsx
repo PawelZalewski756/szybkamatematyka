@@ -8,6 +8,7 @@ import {
 } from "@/lib/layout/nav-links";
 import { NavbarClassBadge } from "@/components/NavbarClassBadge";
 import { NavbarProBadge } from "@/components/NavbarProBadge";
+import { useFocusTrap } from "@/lib/a11y/use-focus-trap";
 import { SchoolClassPicker } from "@/components/SchoolClassPicker";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { Menu, X } from "lucide-react";
@@ -109,6 +110,7 @@ export function NavbarSheet({
   }, [open, setOpen]);
 
   const close = () => setOpen(false);
+  const dialogRef = useFocusTrap<HTMLElement>(open);
 
   const sheet =
     open && typeof document !== "undefined"
@@ -122,7 +124,9 @@ export function NavbarSheet({
             />
 
             <aside
+              ref={dialogRef}
               id={sheetId}
+              tabIndex={-1}
               role="dialog"
               aria-modal="true"
               aria-label="Menu nawigacji"
