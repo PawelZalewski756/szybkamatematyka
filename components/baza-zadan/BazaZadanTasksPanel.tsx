@@ -312,7 +312,6 @@ export function BazaZadanTasksPanel({ tasks: catalogTasks }: { tasks: TaskForCli
               type="button"
               onClick={() => chooseGroup(group.id)}
               className="group flex w-full items-center gap-3 px-1 py-3.5 text-left transition hover:bg-surface-hover/60 sm:px-2"
-              aria-label={`${group.label}, ${polishCount(group.taskCount)}`}
             >
               <span
                 className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-xs font-bold tabular-nums text-accent"

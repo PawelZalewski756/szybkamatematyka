@@ -111,13 +111,13 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
             ) : null}
 
             <div className="flex items-baseline justify-between gap-2">
-              <h3
+              <h2
                 className={`text-base font-bold ${
                   plan.highlighted ? "text-accent" : "text-foreground"
                 }`}
               >
                 {plan.name}
-              </h3>
+              </h2>
               {!plan.paid && (
                 <span className="text-overline">domyślny</span>
               )}

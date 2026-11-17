@@ -98,7 +98,7 @@ export default function TeacherPanelPage() {
         </p>
         <a
           href="mailto:kontakt@szybkamatematyka.pl?subject=Pakiet%20szkolny"
-          className="mt-4 inline-flex rounded-xl border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-bold text-accent transition hover:bg-accent/15"
+          className="mt-4 inline-flex rounded-xl border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-bold text-accent-strong transition hover:bg-accent/15"
         >
           Porozmawiaj o pakiecie szkolnym
         </a>

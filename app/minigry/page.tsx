@@ -300,7 +300,7 @@ function MinigameLibraryDisclosure({
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 marker:content-none sm:p-5">
         <span className="flex min-w-0 items-start gap-3">
-          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
+          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent-strong">
             <Layers className="h-4 w-4" aria-hidden />
           </span>
           <span className="min-w-0">
@@ -346,7 +346,7 @@ export default function MinigryPage() {
           <span className="min-w-0">
             <span className="flex flex-wrap items-center gap-2">
               <span className="text-overline">Krótkie rundy</span>
-              <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-xs font-bold uppercase tracking-[0.14em] text-accent">
+              <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-xs font-bold uppercase tracking-[0.14em] text-accent-strong">
                 3 tryby
               </span>
             </span>

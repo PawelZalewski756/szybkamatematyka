@@ -23,14 +23,14 @@ test.describe("Smoke", () => {
       name: "Odpowiedzi do zadania",
     });
     await expect(quickTask).toBeVisible();
-    await quickTask.getByRole("button", { name: "Odpowiedź 3" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź A 3" }).click();
     await expect(
       page.getByText("To nie ta odpowiedź - spróbuj jeszcze raz."),
     ).toBeVisible();
-    await quickTask.getByRole("button", { name: "Odpowiedź 4" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź B 4" }).click();
     await expect(page.getByText("Dobrze! 3 · 4 + 2 = 14.")).toBeVisible();
     await page.getByRole("button", { name: "Następne zadanie" }).click();
-    await quickTask.getByRole("button", { name: "Odpowiedź 20" }).click();
+    await quickTask.getByRole("button", { name: "Odpowiedź B 20" }).click();
     await expect(page.getByText("Gotowe! Błędnych odpowiedzi: 1.")).toBeVisible();
     await expect.poll(() => attempts.length).toBe(3);
     expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([
