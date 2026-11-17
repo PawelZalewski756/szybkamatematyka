@@ -2,8 +2,8 @@
 
 ## W 60 sekund
 
-- **Branch:** `chore/nocna-sesja-2026-11-17`, 10 commitów nad `master`.
-- **Wszystko zielone:** lint 0, `tsc` 0, unit **533/533**, Playwright **66/66**,
+- **Branch:** `chore/nocna-sesja-2026-11-17`, 13 commitów nad `master`.
+- **Wszystko zielone:** lint 0, `tsc` 0, unit **539/539**, Playwright **68/68**,
   build exit 0, **0 ostrzeżeń KaTeX**, wszystkie 4 audyty CI exit 0.
 - **Nic nie zostało zepsute.** Branch WIP nie był potrzebny, bo każdy krok
   kończył się zielonymi testami.
@@ -12,7 +12,7 @@
 
 ## Od czego zacząć przy kawie (10 minut)
 
-1. `git log --oneline master..HEAD` — zobacz 10 commitów.
+1. `git log --oneline master..HEAD` — zobacz 13 commitów.
 2. `git show --stat HEAD` — ostatnia zmiana (LaTeX), jeśli chcesz jedną.
 3. Push i PR:
 
@@ -39,6 +39,8 @@
 | `b4a85e1` | Audyt rozszerzony do 29 tras; opcje arkusza jako radio, karty pojedynków bez zagnieżdżonych przycisków, kontrast |
 | `e3c2649` | Checklist w `docs/ocena-projektu-2026-11-16.md` zaktualizowany |
 | `1011a17` | Normalizacja Unicode w LaTeX: półpauza/minus/procent, polskie słowa i indeksy w `\text{}`; build bez ostrzeżeń |
+| `3278a55` | API powtórek: zadania bez `solutionSteps`, katalog i wyszukiwanie po stronie serwera |
+| `2188266` | `/powtorki` bez 2 MB katalogu w bundlu; rozwiązania Pro pobierane na żądanie; testy API i bramki gościa |
 
 ## Co się zepsuło / na co uważać
 
@@ -61,10 +63,10 @@
 1. **P0:** dane operatora + Resend (Twoje konta).
 2. **P1:** matura rozszerzona — potrzebna treść (plan tematów i zadania),
    tego nie wymyślam.
-3. **P2:** refaktor `/powtorki` — strona ładuje ~2 MB chunk z całym katalogiem
-   zadań (`3773-*.js`). Wymaga API „zadania po ids” i przepisania 3 komponentów.
-   To dobry następny temat na spokojną sesję; nie zaczynałem, bo jest większy
-   i ryzykowny.
+3. **P2:** ten sam problem w `/baza-zadan/arkusz/[id]` i leniwy import
+   katalogu w `TaskArena` (odpowiedź na zadanie CKE dociąga ~1,9 MB chunk).
+   To kolejny kandydat na API „zadania po ids” — wzorzec jest już gotowy
+   w `lib/powtorki/tasks-client.ts`.
 
 ## Komendy przypominające
 

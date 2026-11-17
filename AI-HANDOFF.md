@@ -10,7 +10,7 @@
 > praca poszła na branchu `chore/nocna-sesja-2026-11-17` w workspace
 > `szybkamatematyka-master 3`. Workspace nie miał `.git`, więc dołączyłem
 > prawdziwą historię z GitHuba (bez nadpisywania plików).
-> 10 commitów, 533 testy jednostkowe, 66 E2E, build bez ostrzeżeń KaTeX,
+> 13 commitów, 539 testów jednostkowych, 68 E2E, build bez ostrzeżeń KaTeX,
 > wszystkie audyty CI zielone. **Sekcje 2–3 poniżej opisują stan sprzed
 > sesji.** Aktualny stan i poranny plan: `plan dzialania/RANO-2026-11-18.md`.
 
