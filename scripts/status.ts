@@ -35,20 +35,51 @@ const SKIP_DIRS = new Set([
   "coverage",
 ]);
 
+/** Pliki generowane lokalnie, których w świeżym checkoutcie CI nie ma. */
+const SKIP_FILES = new Set(["next-env.d.ts", "next-env.d.ts.bak"]);
+
 function walk(dir: string, out: string[] = []): string[] {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.isDirectory()) {
       if (!SKIP_DIRS.has(entry.name)) walk(join(dir, entry.name), out);
-    } else {
+    } else if (!SKIP_FILES.has(entry.name)) {
       out.push(join(dir, entry.name));
     }
   }
   return out;
 }
 
-function countFiles(dir: string, extension: string): number {
-  if (!existsSync(dir)) return 0;
-  return readdirSync(dir).filter((name) => name.endsWith(extension)).length;
+/**
+ * Lista plików do policzenia.
+ *
+ * Najpierw `git ls-files` - dzięki temu lokalny build i świeży checkout w CI
+ * liczą dokładnie to samo. Wcześniej liczyliśmy wszystko z dysku i lokalnie
+ * wchodził wygenerowany `next-env.d.ts`, przez co `status:check` w CI padał.
+ */
+function listFiles(): string[] {
+  try {
+    const output = execSync("git ls-files -z", {
+      cwd: ROOT,
+      encoding: "utf8",
+      maxBuffer: 64 * 1024 * 1024,
+    });
+    const files = output
+      .split("\0")
+      .filter(Boolean)
+      .map((relativePath) => join(ROOT, relativePath));
+    if (files.length > 0) return files;
+  } catch {
+    // Brak gita (np. tarball) - zostaje liczenie z dysku.
+  }
+  return walk(ROOT);
+}
+
+function countIn(files: string[], dirName: string, extension: string): number {
+  const prefix = `${ROOT.replace(/\\/g, "/")}/${dirName}/`;
+  return files.filter(
+    (file) =>
+      file.replace(/\\/g, "/").startsWith(prefix) && file.endsWith(extension),
+  ).length;
 }
 
 function git(command: string): string {
@@ -64,17 +95,10 @@ function escapeCell(value: string): string {
 }
 
 function buildBlock(): string {
-  const files = walk(ROOT);
+  const files = listFiles();
   const sourceFiles = files.filter(
     (file) => file.endsWith(".ts") || file.endsWith(".tsx"),
   );
-  const sourceLoc = sourceFiles.reduce((sum, file) => {
-    try {
-      return sum + readFileSync(file, "utf8").split("\n").length;
-    } catch {
-      return sum;
-    }
-  }, 0);
 
   const testFiles = files.filter(
     (file) => file.includes(`${join(ROOT, "tests")}`) && file.endsWith(".test.ts"),
@@ -108,13 +132,12 @@ function buildBlock(): string {
     ["Arkusze treningowe", String(EXAM_SHEETS.length), "`exam-sheets.ts`"],
     ["Tematy teorii", String(THEORY_INDEX.length), "`theory-index.ts`"],
     ["Lekcje teorii (seed)", String(SEED_MATERIALS.length), "`materials.ts`"],
-    ["Pliki cache zadań (JSON)", String(countFiles(join(ROOT, "data/tasks-cache"), ".json")), "`data/tasks-cache`"],
-    ["Pliki cache teorii (JSON)", String(countFiles(join(ROOT, "data/theory-cache"), ".json")), "`data/theory-cache`"],
-    ["Migracje Supabase", String(countFiles(join(ROOT, "supabase/migrations"), ".sql")), "`supabase/migrations`"],
+    ["Pliki cache zadań (JSON)", String(countIn(files, "data/tasks-cache", ".json")), "`data/tasks-cache`"],
+    ["Pliki cache teorii (JSON)", String(countIn(files, "data/theory-cache", ".json")), "`data/theory-cache`"],
+    ["Migracje Supabase", String(countIn(files, "supabase/migrations", ".sql")), "`supabase/migrations`"],
     ["Strony App Router", String(pages.length), "`app/**/page.tsx`"],
     ["Endpointy API", String(apiRoutes.length), "`app/**/route.ts`"],
     ["Pliki źródłowe TS/TSX", String(sourceFiles.length), "bez `node_modules`"],
-    ["Linie TS/TSX", String(sourceLoc), "bez `node_modules`"],
     ["Pliki testów jednostkowych", String(testFiles.length), "`tests/*.test.ts`"],
     ["Asercje `it`/`test` w testach", String(testAssertions), "statycznie"],
     ["Pliki E2E", String(e2eFiles.length), "`e2e/*.spec.ts`"],
@@ -167,7 +190,10 @@ function main(): void {
 
   if (check) {
     const existing = readExistingBlock();
-    if (existing !== block) {
+    // Windows/autocrlf potrafi zapisać plik z CRLF - porównujemy po normalizacji.
+    const normalize = (value: string | null) =>
+      (value ?? "").replace(/\r\n/g, "\n").trim();
+    if (normalize(existing) !== normalize(block)) {
       console.error(
         "docs/STATUS.md jest nieaktualny. Uruchom `npm run status` i zacommituj zmianę.",
       );
