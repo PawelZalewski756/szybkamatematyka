@@ -312,13 +312,13 @@ export function TaskArena({
     setFeedback(isCorrect ? "correct" : "wrong");
 
     if (!isUuid(current.id)) {
-      // Zadania z katalogu CKE (np. cke-...) mogą trafić do powtórek. Nie importujemy
-      // całego archiwum na wejściu - ładujemy je dopiero, gdy to naprawdę katalog.
-      void import("@/lib/baza-zadan/catalog").then(({ getTaskById }) => {
-        if (getTaskById(current.id)) {
-          recordResult(current.id, isCorrect);
-        }
-      });
+      // Zadania z katalogu CKE (np. cke-...) mogą trafić do powtórek.
+      // Wcześniej ładowaliśmy tutaj cały `@/lib/baza-zadan/catalog` tylko po to,
+      // żeby sprawdzić, czy zadanie istnieje - to dociągało ~2 MB chunka
+      // (razem z rozwiązaniami Pro) na każdą odpowiedź. `solved_tasks` nie ma
+      // już klucza obcego do `tasks`, a ID pochodzi z serwera, więc zapis jest
+      // bezpieczny bez tego sprawdzenia.
+      recordResult(current.id, isCorrect);
     }
 
     if (!isCorrect) {
