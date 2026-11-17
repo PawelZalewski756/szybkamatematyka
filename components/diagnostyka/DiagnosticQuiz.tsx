@@ -245,6 +245,7 @@ export function DiagnosticQuiz({ tasksByPath }: DiagnosticQuizProps) {
                 type="button"
                 disabled={answered}
                 onClick={() => choose(choiceIndex)}
+                data-testid="diagnostic-choice"
                 className={`rounded-xl border px-3 py-3 text-left text-sm font-semibold transition ${style}`}
               >
                 <MathText content={choice} />
@@ -255,8 +256,9 @@ export function DiagnosticQuiz({ tasksByPath }: DiagnosticQuizProps) {
 
         {answered ? (
           <p
-            className="mt-4 inline-flex items-center gap-2 text-sm font-bold"
+            className="mt-4 flex items-center gap-2 text-sm font-bold"
             aria-live="polite"
+            data-testid="diagnostic-feedback"
           >
             {chosenCorrect ? (
               <>
@@ -276,7 +278,8 @@ export function DiagnosticQuiz({ tasksByPath }: DiagnosticQuizProps) {
           type="button"
           onClick={next}
           disabled={!answered}
-          className="btn-chunky mt-5 inline-flex items-center gap-2 px-5 py-2.5 text-sm disabled:opacity-50"
+          data-testid="diagnostic-next"
+          className="btn-chunky mt-5 flex w-fit items-center gap-2 px-5 py-2.5 text-sm disabled:opacity-50"
         >
           {isLast ? "Pokaż wynik" : "Następne pytanie"}
           <ArrowRight className="h-4 w-4" aria-hidden />

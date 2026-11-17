@@ -239,6 +239,28 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("diagnoza: feedback i następne pytanie nie nachodzą na siebie", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 710, height: 855 });
+    await page.goto("/diagnostyka");
+    await page.getByRole("button", { name: "Rozpocznij diagnozę" }).click();
+    await page.getByTestId("diagnostic-choice").first().click();
+
+    const feedback = page.getByTestId("diagnostic-feedback");
+    const next = page.getByTestId("diagnostic-next");
+    await expect(feedback).toBeVisible();
+    await expect(next).toBeVisible();
+
+    const feedbackBox = await feedback.boundingBox();
+    const nextBox = await next.boundingBox();
+    expect(feedbackBox).not.toBeNull();
+    expect(nextBox).not.toBeNull();
+    expect(nextBox!.y).toBeGreaterThanOrEqual(
+      feedbackBox!.y + feedbackBox!.height - 1,
+    );
+  });
+
   test("rejestracja nie blokuje się po chwilowej awarii sprawdzania nicku", async ({
     page,
   }) => {
