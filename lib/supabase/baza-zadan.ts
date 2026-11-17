@@ -71,39 +71,6 @@ const ZADANIA_SELECT_LEGACY = `
   )
 `;
 
-const ZADANIA_SELECT_WITH_SOLUTIONS = `
-  id,
-  arkusz_id,
-  numer_zadania,
-  dzial,
-  tresc,
-  rozwiazanie,
-  created_at,
-  arkusz:arkusze!inner (
-    id,
-    nazwa,
-    typ,
-    rok,
-    miesiac
-  )
-`;
-
-const ZADANIA_SELECT_WITH_SOLUTIONS_LEGACY = `
-  id,
-  arkusz_id,
-  numer_zadania,
-  dzial,
-  tresc,
-  rozwiazanie,
-  created_at,
-  arkusz:arkusze!inner (
-    id,
-    nazwa,
-    typ,
-    rok
-  )
-`;
-
 const ZADANIA_SELECT_SUMMARY_WITH_MIESIAC = `
   id,
   arkusz_id,
@@ -133,7 +100,7 @@ const ZADANIA_SELECT_SUMMARY_LEGACY = `
   )
 `;
 
-function normalizeRow(raw: Record<string, unknown>): ZadanieWithArkusz | null {
+export function normalizeRow(raw: Record<string, unknown>): ZadanieWithArkusz | null {
   const arkuszRaw = raw.arkusz;
   const arkusz = Array.isArray(arkuszRaw)
     ? (arkuszRaw[0] as ArkuszEmbed | undefined)
@@ -162,7 +129,7 @@ function normalizeRow(raw: Record<string, unknown>): ZadanieWithArkusz | null {
   };
 }
 
-function sortZadania(rows: ZadanieWithArkusz[]): ZadanieWithArkusz[] {
+export function sortZadania(rows: ZadanieWithArkusz[]): ZadanieWithArkusz[] {
   return [...rows].sort((a, b) => {
     if (b.arkusz.rok !== a.arkusz.rok) return b.arkusz.rok - a.arkusz.rok;
     const ma = a.arkusz.miesiac ?? 0;
@@ -362,44 +329,6 @@ export async function fetchZadania(
   const { data, error } = await fetchZadaniaSafe(filters);
   if (error) throw new Error(error);
   return data;
-}
-
-/**
- * Pobiera zadania razem z `rozwiazanie`. Używane wyłącznie przez serwerowy
- * widok wydruku z kluczem - zwykłe listy i widok arkusza nie dostają rozwiązań.
- */
-export async function fetchZadaniaWithSolutions(
-  filters: ZadaniaFilters = {},
-): Promise<FetchZadaniaResult> {
-  const supabase = getSupabaseOrNull();
-  if (!supabase) {
-    return { data: [], error: "Brak konfiguracji Supabase." };
-  }
-
-  const run = async (select: string) => {
-    let query = supabase
-      .from("zadania")
-      .select(select)
-      .order("numer_zadania", { ascending: true });
-    if (filters.arkuszId) {
-      query = query.eq("arkusz_id", filters.arkuszId);
-    }
-    return query;
-  };
-
-  let { data, error } = await run(ZADANIA_SELECT_WITH_SOLUTIONS);
-  if (error && /miesiac/i.test(error.message)) {
-    ({ data, error } = await run(ZADANIA_SELECT_WITH_SOLUTIONS_LEGACY));
-  }
-  if (error) {
-    return { data: [], error: error.message };
-  }
-
-  const rows = (data ?? [])
-    .map((row) => normalizeRow(row as unknown as Record<string, unknown>))
-    .filter((row): row is ZadanieWithArkusz => row !== null);
-
-  return { data: sortZadania(rows), error: null };
 }
 
 export async function fetchDistinctLataSafe(): Promise<{

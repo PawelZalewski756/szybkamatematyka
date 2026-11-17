@@ -3,14 +3,14 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("@/lib/subscription/server-auth", () => ({
   verifyTaskAssistRequest: vi.fn(),
 }));
-vi.mock("@/lib/supabase/baza-zadan", () => ({
+vi.mock("@/lib/supabase/zadania-solutions-server", () => ({
   fetchZadaniaWithSolutions: vi.fn(),
 }));
 vi.mock("@/lib/gemini/format-solution", () => ({
   formatSolutionForDisplay: (value: string) => value,
 }));
 
-import { fetchZadaniaWithSolutions } from "@/lib/supabase/baza-zadan";
+import { fetchZadaniaWithSolutions } from "@/lib/supabase/zadania-solutions-server";
 import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 import { POST } from "@/app/api/trening/arkusz-solutions/route";
 

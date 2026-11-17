@@ -1,4 +1,4 @@
-import { getSupabaseOrNull } from "@/lib/supabase";
+import { getServiceSupabaseOrNull } from "@/lib/stripe/service-supabase";
 import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 
 export const runtime = "nodejs";
@@ -41,9 +41,15 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: "Invalid task ID." }, { status: 400 });
   }
 
-  const supabase = getSupabaseOrNull();
+  // `rozwiazanie` nie jest już czytelne kluczem anon (migracja
+  // 20261117190000_zadania_rozwiazanie_service_only.sql), dlatego czytamy
+  // kluczem service_role po sprawdzeniu planu Pro.
+  const supabase = getServiceSupabaseOrNull();
   if (!supabase) {
-    return Response.json({ error: "Baza jest chwilowo niedostępna." }, { status: 503 });
+    return Response.json(
+      { error: "Klucz odpowiedzi jest chwilowo niedostępny." },
+      { status: 503 },
+    );
   }
 
   const { data, error } = await supabase

@@ -8,9 +8,11 @@ const supabaseMock = vi.hoisted(() => {
   return { maybeSingle, eq, select, from };
 });
 
-vi.mock("@/lib/supabase", () => ({
-  getSupabaseOrNull: () => ({ from: supabaseMock.from }),
+const serviceMock = vi.hoisted(() => ({
+  getServiceSupabaseOrNull: vi.fn(),
 }));
+
+vi.mock("@/lib/stripe/service-supabase", () => serviceMock);
 vi.mock("@/lib/subscription/server-auth", () => ({
   verifyTaskAssistRequest: vi.fn(),
 }));
@@ -31,6 +33,10 @@ function request(body: unknown): Request {
 describe("POST /api/trening/cms-solution", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    mockAuth.mockResolvedValue({ ok: true, user: {} as never, isPro: true });
+    serviceMock.getServiceSupabaseOrNull.mockReturnValue({
+      from: supabaseMock.from,
+    });
   });
 
   it("odmawia dostępu bez Pro", async () => {
@@ -40,15 +46,28 @@ describe("POST /api/trening/cms-solution", () => {
     expect(supabaseMock.from).not.toHaveBeenCalled();
   });
 
+  it("zwraca 503, gdy brak klucza service_role", async () => {
+    serviceMock.getServiceSupabaseOrNull.mockReturnValue(null);
+    const response = await POST(request({ zadanieId: "z1" }));
+    expect(response.status).toBe(503);
+  });
+
+  it("czyta rozwiązanie kluczem service_role, nie anon", async () => {
+    supabaseMock.maybeSingle.mockResolvedValue({
+      data: { rozwiazanie: "Krok 1" },
+      error: null,
+    });
+    await POST(request({ zadanieId: "z1" }));
+    expect(serviceMock.getServiceSupabaseOrNull).toHaveBeenCalled();
+  });
+
   it("zwraca 404 dla nieznanego zadania", async () => {
-    mockAuth.mockResolvedValue({ ok: true, user: {} as never, isPro: true });
     supabaseMock.maybeSingle.mockResolvedValue({ data: null, error: null });
     const response = await POST(request({ zadanieId: "z1" }));
     expect(response.status).toBe(404);
   });
 
   it("zwraca rozwiązanie dla Pro", async () => {
-    mockAuth.mockResolvedValue({ ok: true, user: {} as never, isPro: true });
     supabaseMock.maybeSingle.mockResolvedValue({
       data: { rozwiazanie: "Krok 1" },
       error: null,

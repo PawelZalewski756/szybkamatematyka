@@ -1,5 +1,5 @@
 import { formatSolutionForDisplay } from "@/lib/gemini/format-solution";
-import { fetchZadaniaWithSolutions } from "@/lib/supabase/baza-zadan";
+import { fetchZadaniaWithSolutions } from "@/lib/supabase/zadania-solutions-server";
 import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 
 export const runtime = "nodejs";
