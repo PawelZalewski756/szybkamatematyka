@@ -211,6 +211,7 @@ function ArchiveTaskCard({
                 <li key={index}>
                   <button
                     type="button"
+                    data-testid="sheet-task-choice"
                     disabled={!isLoggedIn || picked !== null}
                     onClick={() => pick(index)}
                     className={`flex w-full items-baseline gap-2 rounded-xl border px-3 py-2 text-left transition-colors ${style}`}

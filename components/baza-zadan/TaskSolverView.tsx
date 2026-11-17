@@ -290,6 +290,7 @@ export function TaskSolverView({
                 <motion.button
                   key={`${choice}-${index}`}
                   type="button"
+                  data-testid="solver-choice"
                   disabled={answeredClosed}
                   onClick={() => {
                     setPicked(index);
@@ -318,6 +319,7 @@ export function TaskSolverView({
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
+            data-testid="solver-result"
             className={`mt-6 rounded-2xl border p-4 ${
               (open ? openAccepted : isCorrectClosed)
                 ? "border-success/40 bg-success/10"
