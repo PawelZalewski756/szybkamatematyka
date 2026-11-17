@@ -2,12 +2,15 @@
 
 import { AddTasksPicker } from "@/components/powtorki/AddTasksPicker";
 import { useReview } from "@/components/powtorki/ReviewProvider";
-import { getTaskById } from "@/lib/baza-zadan/catalog";
+import {
+  fetchReviewTasksByIds,
+  type ReviewTask,
+} from "@/lib/powtorki/tasks-client";
 import { CATEGORY_LABELS } from "@/lib/baza-zadan/labels";
 import { describeNextReview, isDue } from "@/lib/powtorki/scheduler";
 import { motion } from "framer-motion";
 import { Brain, CalendarClock, Loader2, Play, Trash2 } from "lucide-react";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type ReviewDashboardProps = {
   onStart: () => void;
@@ -15,10 +18,34 @@ type ReviewDashboardProps = {
 
 export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
   const { ready, items, dueCount, totalCount, removeFromReview } = useReview();
+  const [tasksById, setTasksById] = useState<Record<string, ReviewTask>>({});
 
   const sortedItems = useMemo(() => {
     return [...items].sort((a, b) => a.nextReviewAt - b.nextReviewAt);
   }, [items]);
+
+  // Tytuły i działy pobieramy z API: katalog z rozwiązaniami nie może
+  // trafić do bundla klienta (2 MB i treść Pro).
+  const taskIdsKey = useMemo(
+    () => items.map((item) => item.taskId).join(","),
+    [items],
+  );
+
+  useEffect(() => {
+    if (!taskIdsKey) return;
+    const controller = new AbortController();
+    fetchReviewTasksByIds(taskIdsKey.split(","), controller.signal)
+      .then((tasks) => {
+        if (controller.signal.aborted) return;
+        setTasksById(
+          Object.fromEntries(tasks.map((task) => [task.id, task])),
+        );
+      })
+      .catch(() => {
+        // Brak zadań nie blokuje harmonogramu - pokazujemy „niedostępne”.
+      });
+    return () => controller.abort();
+  }, [taskIdsKey]);
 
   const upcomingCount = totalCount - dueCount;
 
@@ -110,7 +137,7 @@ export function ReviewDashboard({ onStart }: ReviewDashboardProps) {
           ) : (
             <ul className="mt-3 space-y-2">
               {sortedItems.map((item) => {
-                const task = getTaskById(item.taskId);
+                const task = tasksById[item.taskId];
                 const due = isDue(item);
                 return (
                   <li key={item.taskId}>

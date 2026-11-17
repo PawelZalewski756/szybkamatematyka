@@ -397,6 +397,36 @@ test.describe("Smoke", () => {
     );
   });
 
+  test("/powtorki pokazuje bramkę logowania dla gościa", async ({ page }) => {
+    await page.goto("/powtorki");
+    await expect(
+      page.getByRole("heading", {
+        name: "Powtórki są dostępne po zalogowaniu",
+      }),
+    ).toBeVisible();
+  });
+
+  test("/api/powtorki/tasks nie wysyła rozwiązań krok po kroku", async ({
+    request,
+  }) => {
+    const response = await request.post("/api/powtorki/tasks", {
+      data: { ids: ["st-001", "cke-m15-maj-z01"] },
+    });
+    expect(response.ok()).toBeTruthy();
+    const body = (await response.json()) as {
+      tasks: Array<{ id: string; hasSolution: boolean; solutionSteps?: unknown }>;
+    };
+    expect(body.tasks.map((task) => task.id)).toEqual([
+      "st-001",
+      "cke-m15-maj-z01",
+    ]);
+    expect(body.tasks[0]?.hasSolution).toBe(false);
+    expect(body.tasks[1]?.hasSolution).toBe(true);
+    for (const task of body.tasks) {
+      expect("solutionSteps" in task).toBe(false);
+    }
+  });
+
   test("/minigry pokazuje jeden polecany start i krótki wybór trybu", async ({
     page,
   }) => {
