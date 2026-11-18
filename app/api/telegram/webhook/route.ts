@@ -6,6 +6,10 @@ import {
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
 import { normalizeTelegramBotToken } from "@/lib/telegram/send";
+import {
+  findUserIdByIdentifier,
+  grantProToUser,
+} from "@/lib/subscription/grant-pro";
 
 export const runtime = "nodejs";
 
@@ -144,6 +148,7 @@ const HELP_TEXT = [
   "/new - ostatnie rejestracje",
   "/users [strona] - użytkownicy z liczbą rozwiązanych zadań",
   "/top - ranking XP",
+  "/pro <nick|email> [dni] [powód] - przyznaj Pro ręcznie",
   "/szybkaproba - statystyki szybkiej próby",
   "/visits [dni] - wejścia i unikalni odwiedzający",
   "/health - sprawdzenie połączenia",
@@ -455,6 +460,67 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Wejścia: ${total?.total_views ?? 0}`,
       "Liczone anonimowo, tylko za zgodą odwiedzającego.",
     ].join("\n");
+  }
+
+  if (command === "pro") {
+    const rawIdentifier = args[0]?.trim() ?? "";
+    const identifier = rawIdentifier.replace(/^@/, "");
+    if (!identifier) {
+      return [
+        "Użycie: /pro <nick|email> [dni] [powód]",
+        "Przykład: /pro vlad 30 rekompensata za zgłoszenie błędu",
+        "Domyślnie: 30 dni, źródło gift, bez subskrypcji Stripe.",
+      ].join("\n");
+    }
+
+    const daysArg = args[1] && /^\d+$/.test(args[1]) ? Number(args[1]) : 30;
+    const days = Math.max(1, Math.min(365, daysArg));
+    const reason =
+      (args[1] && /^\d+$/.test(args[1]) ? args.slice(2) : args.slice(1))
+        .join(" ")
+        .trim() || "rekompensata przyznana przez administratora";
+
+    const found = await findUserIdByIdentifier(supabase, identifier);
+    if (!found) {
+      return `Nie znalazłem konta dla „${identifier}”. Podaj dokładny nick albo e-mail.`;
+    }
+
+    const grant = await grantProToUser(supabase, {
+      ...found,
+      days,
+      reason,
+    });
+
+    if (grant.status === "skipped_paid") {
+      return [
+        `ℹ️ ${grant.nick}${grant.email ? ` (${grant.email})` : ""} ma aktywne płatne Pro Stripe.`,
+        "Nie nadpisałem subskrypcji — gift nie jest potrzebny.",
+      ].join("\n");
+    }
+
+    if (grant.status === "failed") {
+      return `❌ Nie udało się przyznać Pro: ${grant.error}`;
+    }
+
+    if (grant.status === "not_found") {
+      return `Nie znalazłem konta dla „${identifier}”.`;
+    }
+
+    const end = new Intl.DateTimeFormat("pl-PL", {
+      dateStyle: "long",
+      timeZone: "Europe/Warsaw",
+    }).format(new Date(grant.periodEnd));
+
+    return [
+      "✅ Pro przyznane",
+      `Użytkownik: ${grant.nick}${grant.email ? ` (${grant.email})` : ""}`,
+      `Okres: ${grant.days} dni (do ${end})`,
+      `Źródło: gift (bez subskrypcji Stripe)`,
+      `Powód: ${reason}`,
+      grant.extended ? "Gift wydłużony od poprzedniej daty końca." : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
   }
 
   if (command === "health") {

@@ -52,8 +52,9 @@ odrzuca wiadomość.
 
 ## 5. Jak to działa w kodzie
 
-- `app/api/signup/route.ts` tworzy konto przez Supabase, a następnie w `after()`
-  woła `deliverSignupNotification` z danymi nowego użytkownika.
+- `app/api/signup/route.ts` tworzy konto przez Supabase i **przed odpowiedzią**
+  woła `deliverSignupNotification` z danymi nowego użytkownika. `after()` było
+  zbyt często przerywane przez Vercel, więc powiadomienia ginęły.
 - `lib/telegram/signup-delivery.ts` buduje treść, pilnuje idempotencji
   (`signup_notification_deliveries`) i wysyła wiadomość przez
   `lib/telegram/send.ts`.
@@ -64,11 +65,37 @@ odrzuca wiadomość.
 - `POST /api/telegram/diagnostics` (admin) sprawdza `getMe`, `getWebhookInfo`
   i opcjonalnie wysyła test.
 
-## 6. Uwaga o `after()`
+## 6. Backfill i cron
 
-Wysyłka dzieje się po odpowiedzi HTTP, w `after()`. Nie blokuje rejestracji.
-Jeśli funkcja Vercel zostanie przerwana przed zakończeniem `after()`, wpis w
-`signup_notification_deliveries` nie powstanie i można ponowić wysyłkę przez
-`/api/telegram/signup-notification` (backfill). Dzięki przekazaniu danych
-użytkownika z `/api/signup` wysyłka nie wykonuje już dodatkowego zapytania do
-Supabase Auth, więc jest szybsza i mniej podatna na timeout.
+Główne powiadomienie idzie od razu z `/api/signup`. Dodatkowo
+`GET /api/telegram/sync-signups` (Vercel Cron co 15 min) dosyła powiadomienia
+dla kont z ostatnich 7 dni. Idempotencja jest w
+`signup_notification_deliveries`, więc nie ma duplikatów. Cron wymaga
+`CRON_SECRET`.
+
+## 7. Komenda `/pro` — ręczne Pro
+
+Administrator może przyznać Pro z Telegrama:
+
+```text
+/pro <nick|email> [dni] [powód]
+```
+
+Przykłady:
+
+```text
+/pro vlad 30 rekompensata za zgłoszenie błędu
+/pro uczen@example.com 30 prezent od administracji
+/pro vlad
+```
+
+Zasady:
+
+- domyślnie **30 dni**,
+- `pro_source = 'gift'`, bez subskrypcji Stripe (nie da się jej anulować),
+- nie nadpisuje aktywnego płatnego Pro Stripe,
+- istniejący gift wydłuża od obecnej daty końca,
+- nick jest wyszukiwany bez rozróżniania wielkości liter,
+- e-mail jest wyszukiwany w `auth.users`.
+
+Komenda działa tylko dla adminów z `TELEGRAM_ADMIN_IDS` na prywatnym czacie.

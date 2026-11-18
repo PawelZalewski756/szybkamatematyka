@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-18 13:57 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `2791f2b`
+> Ostatnia aktualizacja: 2026-11-18 14:08 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `7821276`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
