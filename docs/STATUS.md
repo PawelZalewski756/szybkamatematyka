@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-18 14:18 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `5381fdd`
+> Ostatnia aktualizacja: 2026-11-18 14:47 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `a43800a`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -18,7 +18,7 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Lekcje teorii (seed) | 134 | `materials.ts` |
 | Pliki cache zadań (JSON) | 134 | `data/tasks-cache` |
 | Pliki cache teorii (JSON) | 134 | `data/theory-cache` |
-| Migracje Supabase | 49 | `supabase/migrations` |
+| Migracje Supabase | 50 | `supabase/migrations` |
 | Strony App Router | 43 | `app/**/page.tsx` |
 | Endpointy API | 31 | `app/**/route.ts` |
 | Pliki źródłowe TS/TSX | 623 | bez `node_modules` |

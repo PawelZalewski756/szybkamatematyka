@@ -10,10 +10,8 @@ import {
   type Profile,
 } from "@/lib/supabase/profiles";
 import { getSupabaseOrNull } from "@/lib/supabase";
-import {
-  fetchSolvedTaskIds,
-  markTaskSolved,
-} from "@/lib/supabase/solved-tasks";
+import { fetchSolvedTaskIds } from "@/lib/supabase/solved-tasks";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { checkAnswerMatch, fetchTasksByTopic } from "@/lib/supabase/tasks";
 import { stripChoiceLabelPrefix } from "@/lib/math/render-math-text";
 import type { ExamType, Task } from "@/types/database";
@@ -255,11 +253,21 @@ export function TaskArena({
       if (userId) {
         setAwarding(true);
         try {
-          const firstSolve = await markTaskSolved(userId, current.id);
+          // Wspólna księga wszystkich źródeł. XP naliczamy niżej ręcznie,
+          // więc przekazujemy xpReward: 0, żeby nie zdublować punktów.
+          const completion = await recordTaskCompletion({
+            taskId: current.id,
+            source: "trening",
+            isCorrect: true,
+            xpReward: 0,
+          });
+          if (completion.error) {
+            throw new Error(completion.error);
+          }
           // Ten sam licznik zasila odznaki i lokalny postęp w Bazie zadań -
           // bez tego rozwiązania z areny nie pojawiały się w statystykach.
           markSolved(current.id);
-          if (firstSolve && profile?.nick) {
+          if (completion.first && profile?.nick) {
             const halfXp = taskAttempts > 1;
             const xpGain = halfXp
               ? Math.max(1, Math.floor(current.xp_reward / 2))
