@@ -8,6 +8,7 @@ import {
   type SolvedTasksUpdatedDetail,
 } from "@/lib/baza-zadan/solved-tasks";
 import { getSupabase } from "@/lib/supabase";
+import { syncLocalSolvedTasks } from "@/lib/progress/task-completion";
 import {
   createContext,
   useCallback,
@@ -61,6 +62,30 @@ export function SolvedTasksProvider({ children }: { children: ReactNode }) {
       setUserId(uid);
       reload(uid);
       setReady(true);
+
+      // Jednorazowo dosyłamy rozwiązania zapisane lokalnie (gość / starsza
+      // wersja), żeby historia ucznia trafiła też do statystyk Telegrama.
+      if (uid) {
+        const flag = `sm_solved_sync_done:${uid}`;
+        try {
+          if (!sessionStorage.getItem(flag)) {
+            const localIds = new Set([
+              ...loadSolvedTaskIds(uid),
+              ...loadSolvedTaskIds(null),
+            ]);
+            if (localIds.size > 0) {
+              void syncLocalSolvedTasks(uid, [...localIds]).then(() => {
+                sessionStorage.setItem(flag, "1");
+                reload(uid);
+              });
+            } else {
+              sessionStorage.setItem(flag, "1");
+            }
+          }
+        } catch {
+          /* sessionStorage bywa zablokowany - nie blokujemy aplikacji */
+        }
+      }
     };
 
     void syncFromSession();

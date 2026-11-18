@@ -156,3 +156,8 @@ Nowy `lib/progress/task-completion.ts`:
 
 Minigry, wyzwania i pojedynki zapisują rozwiązanie z XP = 0, bo XP za grę
 przyznają ich własne mechanizmy (bez podwójnego naliczania).
+
+Dodatkowo `SolvedTasksProvider` przy pierwszym wejściu zalogowanego ucznia
+dosyła do bazy jego lokalną historię rozwiązań (gość / sprzed migracji), bez
+retroaktywnego XP. Dzięki temu zadania, które Vlad rozwiązał wcześniej w tej
+przeglądarce, też pojawią się w `solved_tasks` i w statystykach Telegrama.

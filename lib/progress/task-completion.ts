@@ -114,3 +114,39 @@ export async function recordTaskCompletion(
   inFlight.set(key, run);
   return run;
 }
+
+
+/**
+ * Dosyła lokalne (gość / sprzed migracji) identyfikatory rozwiązań do bazy.
+ * Nie nalicza XP — służy tylko do odzyskania historii, którą uczeń ma w
+ * przeglądarce, a której nie było jeszcze w solved_tasks.
+ */
+export async function syncLocalSolvedTasks(
+  userId: string,
+  taskIds: readonly string[],
+): Promise<number> {
+  const supabase = getSupabaseOrNull();
+  const unique = [...new Set(taskIds.filter(Boolean))];
+  if (!supabase || unique.length === 0) return 0;
+
+  let synced = 0;
+  for (let index = 0; index < unique.length; index += 100) {
+    const rows = unique.slice(index, index + 100).map((taskId) => ({
+      user_id: userId,
+      task_id: taskId,
+      source: "trening" as const,
+    }));
+    const { error } = await supabase
+      .from("solved_tasks")
+      .upsert(rows, {
+        onConflict: "user_id,task_id",
+        ignoreDuplicates: true,
+      });
+    if (error) {
+      console.warn("[szybka-matma] syncLocalSolvedTasks:", error);
+      break;
+    }
+    synced += rows.length;
+  }
+  return synced;
+}
