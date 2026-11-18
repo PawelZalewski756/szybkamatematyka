@@ -5,6 +5,11 @@ import {
   DIFFICULTY_LABELS,
 } from "@/lib/baza-zadan/labels";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { MathText } from "@/components/trening/MathText";
+import {
+  findMarkdownImages,
+  replaceMarkdownImages,
+} from "@/lib/math/markdown-images";
 import { Check } from "lucide-react";
 import Link from "next/link";
 
@@ -25,8 +30,24 @@ const DIFFICULTY_STYLES = {
 export function TaskCard({ task }: TaskCardProps) {
   const { isSolved } = useSolvedTasks();
   const solved = isSolved(task.id);
+  const titleImages = findMarkdownImages(task.displayTitle);
+  // Na karcie nie ma miejsca na pełny rysunek - pokazujemy sam tekst i
+  // znacznik, że zadanie ma grafikę (rysunek jest na stronie zadania).
+  const displayTitle = titleImages.length
+    ? replaceMarkdownImages(task.displayTitle, () => " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    : task.displayTitle;
+  const promptImages = findMarkdownImages(task.prompt);
+  const promptPreview = promptImages.length
+    ? replaceMarkdownImages(task.prompt, () => " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    : task.prompt;
   const hasSeparatePrompt =
-    task.prompt.trim().length > 0 && task.prompt.trim() !== task.title.trim();
+    promptPreview.trim().length > 0 &&
+    promptPreview.trim() !== displayTitle.trim();
+  const hasFigure = titleImages.length > 0 || promptImages.length > 0;
 
   return (
     <Link
@@ -55,13 +76,21 @@ export function TaskCard({ task }: TaskCardProps) {
         ) : null}
       </div>
 
-      <h3 className="mt-1.5 line-clamp-2 text-sm font-bold leading-snug text-foreground group-hover:text-accent">
-        {task.title}
+      <h3 className="mt-1.5 line-clamp-2 text-sm font-bold leading-snug text-foreground group-hover:text-accent [&_.katex]:text-[1em]">
+        <MathText content={displayTitle} />
       </h3>
 
       {hasSeparatePrompt ? (
-        <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted">
-          {task.prompt}
+        <MathText
+          as="div"
+          content={promptPreview}
+          className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted [&_.katex]:text-[1em]"
+        />
+      ) : null}
+
+      {hasFigure ? (
+        <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.12em] text-muted">
+          z rysunkiem
         </p>
       ) : null}
 

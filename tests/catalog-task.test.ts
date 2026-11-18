@@ -23,6 +23,7 @@ describe("toCatalogTask", () => {
     expect(Object.keys(item).sort()).toEqual([
       "category",
       "difficulty",
+      "displayTitle",
       "examLabel",
       "hasSolution",
       "id",
@@ -48,6 +49,7 @@ describe("toCatalogTask", () => {
     expect(item.points).toBe(1);
     expect(item.isExam).toBe(true);
     expect(item.examLabel).toBe("2015 · zad. 1");
+    expect(item.displayTitle).toBe("Oblicz 2+2.");
     expect(item.hasSolution).toBe(true);
   });
 
