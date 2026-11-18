@@ -34,6 +34,7 @@ import {
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { confirmCheckout } from "@/lib/subscription/checkout-client";
 import {
+  isGiftPro,
   isPro as snapshotIsPro,
   subscriptionStatusLabel,
   type SubscriptionSnapshot,
@@ -125,6 +126,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
   const [portalPending, setPortalPending] = useState(false);
   const [portalError, setPortalError] = useState<string | null>(null);
   const pro = snapshotIsPro(snapshot);
+  const gift = isGiftPro(snapshot);
   const plan = snapshot.planId ? getPlanById(snapshot.planId) : null;
   const periodEnd = snapshot.currentPeriodEnd
     ? new Date(snapshot.currentPeriodEnd).toLocaleDateString("pl-PL", {
@@ -190,12 +192,20 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             </p>
             {pro && periodEnd && (
               <p className="mt-0.5 text-xs font-semibold text-muted">
-                {snapshot.cancelAtPeriodEnd
-                  ? `Dostęp do ${periodEnd} (subskrypcja anulowana)`
-                  : `Odnowienie: ${periodEnd}`}
+                {gift
+                  ? `Pro przyznane do ${periodEnd}`
+                  : snapshot.cancelAtPeriodEnd
+                    ? `Dostęp do ${periodEnd} (subskrypcja anulowana)`
+                    : `Odnowienie: ${periodEnd}`}
               </p>
             )}
-            {snapshot.status !== "free" ? (
+            {gift && pro ? (
+              <p className="mt-2 max-w-md text-xs text-muted">
+                To Pro zostało przyznane ręcznie. Nie odnawia się automatycznie
+                i nie ma subskrypcji Stripe, więc nie można jej anulować.
+              </p>
+            ) : null}
+            {snapshot.status !== "free" && !gift ? (
               <button
                 type="button"
                 onClick={() => void openBillingPortal()}
@@ -214,7 +224,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
           </div>
           {pro ? (
             <span className="shrink-0 rounded-full bg-accent px-3 py-1 text-xs font-black text-on-accent">
-              PRO
+              {gift ? "PRO · GIFT" : "PRO"}
             </span>
           ) : (
             <Link

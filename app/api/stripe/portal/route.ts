@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 
     const { data: profile, error: profileError } = await supabase
       .from("profiles")
-      .select("stripe_customer_id")
+      .select("stripe_customer_id, pro_source")
       .eq("id", auth.user.id)
       .maybeSingle();
 
@@ -51,6 +51,18 @@ export async function POST(request: Request) {
       return Response.json(
         { error: "Nie udało się odczytać danych płatności." },
         { status: 500 },
+      );
+    }
+
+    const proSource = String(profile?.pro_source ?? "").trim();
+    if (proSource === "gift" || proSource === "manual") {
+      return Response.json(
+        {
+          error:
+            "To Pro zostało przyznane ręcznie (np. w ramach rekompensaty) i nie ma subskrypcji Stripe do anulowania. Dostęp wygaśnie automatycznie w podanym terminie.",
+          code: "gift_no_stripe_subscription",
+        },
+        { status: 409 },
       );
     }
 

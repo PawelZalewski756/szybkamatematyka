@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "liczby_rzeczywiste",
+  "topic": "dowody_podzielnosci",
+  "categoryName": "Liczby rzeczywiste",
+  "topicName": "Dowody podzielności",
+  "tasks": [
+    {
+      "content": "Liczba $8700$ przy dzieleniu przez $9$ daje resztę:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "7",
+        "0",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Reszta z dzielenia przez $9$ jest równa reszcie z dzielenia sumy cyfr. Suma cyfr to $8+7+0=15$, więc reszta wynosi $6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f573eb41-80c2-54b5-af2e-5c00313cc06d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Która z liczb jest podzielna przez $3$?",
+      "correct_answer": "27",
+      "options": [
+        "27",
+        "28",
+        "29",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma cyfr liczby $27$ jest podzielna przez $3$, dlatego $27$ dzieli się przez $3$. Pozostałe liczby dają resztę $1$ lub $2$.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ca48b553-b9b8-58b2-aef0-79060ac90e07",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $4^{3}-1$ przez $3$ wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "63",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ponieważ $4\\equiv1\\pmod 3$, to $4^{3}\\equiv1\\pmod 3$, więc $4^{3}-1$ dzieli się przez $3$ bez reszty.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0d24d2e-7772-5810-aa0f-fcfcafc8a23c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=9$ iloczyn $n(n+1)$ jest podzielny przez:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "5",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczby $n$ i $n+1$ są kolejne, więc jedna z nich jest parzysta. Iloczyn jest zawsze podzielny przez $2$ (dla $n=9$: $9\\cdot10=90$).\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de41c2ed-cae7-5943-afbd-8c2bd4bf24cf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Liczba $10^{3}-1$ składa się z samych cyfr $9$. Ile wynosi suma jej cyfr?",
+      "correct_answer": "27",
+      "options": [
+        "27",
+        "30",
+        "18",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba $10^{3}-1$ to $3$ dziewiątek, więc suma cyfr wynosi $9\\cdot3=27$.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e5ea5f5-ab1d-555a-ab24-d648d7b286b4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=8$ iloczyn $n(n+1)(n+2)$ jest zawsze podzielny przez:",
+      "correct_answer": "6",
+      "options": [
+        "4",
+        "12",
+        "6",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wśród trzech kolejnych liczb całkowitych jest liczba parzysta i liczba podzielna przez $3$, więc iloczyn dzieli się przez $2\\cdot3=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5aacfc8d-6bfd-5efb-a3fd-fdc7d03d5d54",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $10^{3}+1$ przez $3$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$10\\equiv1\\pmod3$, więc $10^{3}+1\\equiv1+1=2\\pmod3$. Reszta to $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "882d6798-c193-5e35-a3e7-897bf18771bf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Liczba $7327$ przy dzieleniu przez $9$ daje resztę:",
+      "correct_answer": "1",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Reszta z dzielenia przez $9$ jest równa reszcie z dzielenia sumy cyfr. Suma cyfr to $7+3+2+7=19$, więc reszta wynosi $1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd68a0ef-9f0c-587f-aba6-9960328da229",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=16$ iloczyn $n(n+1)$ jest podzielny przez:",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczby $n$ i $n+1$ są kolejne, więc jedna z nich jest parzysta. Iloczyn jest zawsze podzielny przez $2$ (dla $n=16$: $16\\cdot17=272$).\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4815383-e807-52ad-af58-4cfc6273ce13",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=6$ iloczyn $n(n+1)$ jest podzielny przez:",
+      "correct_answer": "2",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczby $n$ i $n+1$ są kolejne, więc jedna z nich jest parzysta. Iloczyn jest zawsze podzielny przez $2$ (dla $n=6$: $6\\cdot7=42$).\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bf8079e0-8ac6-5ea2-aee0-97f022e6ffe6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Liczba $10^{5}-1$ składa się z samych cyfr $9$. Ile wynosi suma jej cyfr?",
+      "correct_answer": "45",
+      "options": [
+        "9",
+        "50",
+        "45",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba $10^{5}-1$ to $5$ dziewiątek, więc suma cyfr wynosi $9\\cdot5=45$.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83f039d5-faac-584a-a4ab-8607084b80ae",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Liczba $10^{2}-1$ składa się z samych cyfr $9$. Ile wynosi suma jej cyfr?",
+      "correct_answer": "18",
+      "options": [
+        "19",
+        "9",
+        "18",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba $10^{2}-1$ to $2$ dziewiątek, więc suma cyfr wynosi $9\\cdot2=18$.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1637ebf7-a911-5dde-a5e7-416bf3c3bef1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=7$ iloczyn $n(n+1)(n+2)$ jest zawsze podzielny przez:",
+      "correct_answer": "6",
+      "options": [
+        "4",
+        "9",
+        "12",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wśród trzech kolejnych liczb całkowitych jest liczba parzysta i liczba podzielna przez $3$, więc iloczyn dzieli się przez $2\\cdot3=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3519fcc9-4231-571f-a32b-ec779d945997",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $10^{5}+1$ przez $3$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$10\\equiv1\\pmod3$, więc $10^{5}+1\\equiv1+1=2\\pmod3$. Reszta to $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "747388d5-ff55-5bad-ae4f-59c30ab7f9ba",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Liczba $3437$ przy dzieleniu przez $9$ daje resztę:",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Reszta z dzielenia przez $9$ jest równa reszcie z dzielenia sumy cyfr. Suma cyfr to $3+4+3+7=17$, więc reszta wynosi $8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bedce227-6383-5f2e-a3ad-c24334c7b745",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $4^{4}-1$ przez $3$ wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "255",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ponieważ $4\\equiv1\\pmod 3$, to $4^{4}\\equiv1\\pmod 3$, więc $4^{4}-1$ dzieli się przez $3$ bez reszty.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "726ecfd2-cf16-575b-a9d9-a8808117fb0e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=19$ iloczyn $n(n+1)$ jest podzielny przez:",
+      "correct_answer": "2",
+      "options": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczby $n$ i $n+1$ są kolejne, więc jedna z nich jest parzysta. Iloczyn jest zawsze podzielny przez $2$ (dla $n=19$: $19\\cdot20=380$).\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a52ab267-9c7a-5985-a5e2-181cf0929de5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $n=7$ iloczyn $n(n+1)$ jest podzielny przez:",
+      "correct_answer": "2",
+      "options": [
+        "5",
+        "3",
+        "2",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczby $n$ i $n+1$ są kolejne, więc jedna z nich jest parzysta. Iloczyn jest zawsze podzielny przez $2$ (dla $n=7$: $7\\cdot8=56$).\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "31ffc1b6-03ec-5702-ada9-46ba9fba99fb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $10^{4}+1$ przez $3$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$10\\equiv1\\pmod3$, więc $10^{4}+1\\equiv1+1=2\\pmod3$. Reszta to $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9bc8ecf3-0ee0-594b-a1ef-580774e1c8d0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia liczby $10^{2}+1$ przez $3$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$10\\equiv1\\pmod3$, więc $10^{2}+1\\equiv1+1=2\\pmod3$. Reszta to $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cde27bea-da36-5411-a211-b47df5331fe6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

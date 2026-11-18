@@ -1,4 +1,5 @@
 import type { ExamType } from "@/types/database";
+import { findCkeTopicLabel } from "@/lib/trening/cke-curriculum";
 
 /**
  * Podsumowanie tematu renderowane na końcu lekcji.
@@ -1760,10 +1761,62 @@ export function topicSummaryKey(
   return `${examType}:${category}:${topic}`;
 }
 
+function sectionBody(content: string, heading: string): string | null {
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = content.match(
+    new RegExp(`##\\s*${escaped}\\s*\\n([\\s\\S]*?)(?=\\n##\\s|$)`),
+  );
+  return match?.[1]?.trim() ?? null;
+}
+
+function stepsFromMap(content: string): string[] {
+  const map = sectionBody(content, "Mapa tematu");
+  if (!map) return [];
+  return map
+    .split("\n")
+    .map((line) => line.replace(/^\s*\d+[.)]\s*/, "").trim())
+    .filter((line) => line.length > 0)
+    .slice(0, 5);
+}
+
+/**
+ * Podsumowanie dla tematów, które nie mają ręcznie pisanego wpisu w
+ * TOPIC_SUMMARIES. Bierzemy je z sekcji „Mapa tematu” lekcji, więc nowy temat
+ * od razu dostaje sensowną kartę zamiast pustego miejsca.
+ */
+export function summaryFromMaterial(
+  content: string,
+  title: string,
+): TopicSummary | null {
+  const steps = stepsFromMap(content);
+  if (steps.length < 2) return null;
+
+  const definitions = sectionBody(content, "Definicje i wzory");
+  const formula = definitions?.match(/\$[^$]+\$/)?.[0];
+
+  return {
+    variant: "steps",
+    eyebrow: "Mapa tematu",
+    title,
+    intro: "Najważniejsze kroki i pojęcia tego tematu.",
+    items: steps.map((step) => ({ title: step })),
+    ...(formula ? { footer: `Kluczowy zapis: ${formula}` } : {}),
+  };
+}
+
 export function getTopicSummary(
   examType: ExamType,
   category: string,
   topic: string,
+  materialContent?: string | null,
 ): TopicSummary | null {
-  return TOPIC_SUMMARIES[topicSummaryKey(examType, category, topic)] ?? null;
+  const staticSummary =
+    TOPIC_SUMMARIES[topicSummaryKey(examType, category, topic)] ?? null;
+  if (staticSummary) return staticSummary;
+  if (!materialContent) return null;
+
+  const title =
+    findCkeTopicLabel(examType, category, topic) ??
+    topic.replace(/_/g, " ").replace(/^./, (char) => char.toUpperCase());
+  return summaryFromMaterial(materialContent, title);
 }

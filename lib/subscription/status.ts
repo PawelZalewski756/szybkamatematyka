@@ -20,6 +20,9 @@ const PRO_STATUSES: ReadonlySet<SubscriptionStatus> = new Set([
   "trialing",
 ]);
 
+/** Skąd pochodzi dostęp Pro. */
+export type ProSource = "none" | "stripe" | "gift" | "manual";
+
 /** Migawka subskrypcji używana przez UI / hooki. */
 export type SubscriptionSnapshot = {
   status: SubscriptionStatus;
@@ -28,6 +31,8 @@ export type SubscriptionSnapshot = {
   currentPeriodEnd: string | null;
   /** Czy subskrypcja zostanie anulowana z końcem okresu. */
   cancelAtPeriodEnd: boolean;
+  /** Czy Pro jest płatne w Stripe, czy przyznane ręcznie. */
+  source: ProSource;
 };
 
 export const FREE_SUBSCRIPTION: SubscriptionSnapshot = {
@@ -35,7 +40,35 @@ export const FREE_SUBSCRIPTION: SubscriptionSnapshot = {
   planId: null,
   currentPeriodEnd: null,
   cancelAtPeriodEnd: false,
+  source: "none",
 };
+
+/**
+ * Pro przyznane ręcznie (gift/manual) wygasa po `subscription_current_period_end`.
+ * Płatna subskrypcja Stripe ma własny cykl odnowień i nie wygasa lokalnie.
+ */
+export function effectiveSubscriptionStatus(
+  status: SubscriptionStatus | null | undefined,
+  source: ProSource | null | undefined,
+  currentPeriodEnd: string | null | undefined,
+): SubscriptionStatus {
+  const normalized = status ?? "free";
+  if (
+    (source === "gift" || source === "manual") &&
+    currentPeriodEnd &&
+    Number.isFinite(Date.parse(currentPeriodEnd)) &&
+    Date.parse(currentPeriodEnd) < Date.now()
+  ) {
+    return "free";
+  }
+  return normalized;
+}
+
+export function isGiftPro(
+  snapshot: SubscriptionSnapshot | null | undefined,
+): boolean {
+  return snapshot?.source === "gift" || snapshot?.source === "manual";
+}
 
 /** Czy podany status daje dostęp Pro. */
 export function isProStatus(

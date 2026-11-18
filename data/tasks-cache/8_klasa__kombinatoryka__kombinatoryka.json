@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "kombinatoryka",
+  "topic": "kombinatoryka",
+  "categoryName": "Kombinatoryka i prawdopodobieństwo",
+  "topicName": "Zliczanie obiektów",
+  "tasks": [
+    {
+      "content": "Marek ma $5$ koszulek i $6$ par spodni. Na ile sposobów może wybrać jeden zestaw: jedną koszulkę i jedne spodnie?",
+      "correct_answer": "30",
+      "options": [
+        "11",
+        "30",
+        "31",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Do każdej koszulki można dobrać jedne z $6$ spodni. Z reguły mnożenia: $5 \\cdot 6 = 30$.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "673ace52-d7f8-57a9-a82f-c886a031311e",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb dwucyfrowych można utworzyć z cyfr $1, 2, 3, 4$, jeśli cyfry nie mogą się powtarzać?",
+      "correct_answer": "12",
+      "options": [
+        "12",
+        "8",
+        "15",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfrę dziesiątek wybieramy na $4$ sposobów, a cyfrę jedności na $3$ sposobów: $4 \\cdot 3 = 12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8f2f55b4-f403-5ff6-afca-fb8d3a370e07",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile różnych trzyliterowych kodów można utworzyć z liter $D, E, A, B$, jeśli litery w kodzie nie mogą się powtarzać?",
+      "correct_answer": "24",
+      "options": [
+        "24",
+        "12",
+        "16",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwszą literę wybieramy na $4$ sposoby, drugą na $3$, trzecią na $2$: $4 \\cdot 3 \\cdot 2 = 24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe592a01-2fb0-52d2-a3c8-b2b506ba19fb",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na powitanie każda z $9$ osób uścisnęła dłoń każdej innej osobie dokładnie raz. Ile było uścisków dłoni?",
+      "correct_answer": "36",
+      "options": [
+        "45",
+        "36",
+        "72",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Każda osoba wita się z $8$ osobami, ale każdy uścisk liczymy podwójnie: $\\dfrac{9 \\cdot 8}{2} = 36$.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "416f6a9c-3945-500e-a09b-398a01647b4a",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Z $8$ różnych książek wybieramy dwie. Na ile sposobów można to zrobić?",
+      "correct_answer": "28",
+      "options": [
+        "64",
+        "56",
+        "28",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kolejność nie ma znaczenia, więc dzielimy przez $2$: $\\dfrac{8 \\cdot 7}{2} = 28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9b0ec2e7-599b-54b1-a763-793d39ed5b51",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Restauracja oferuje $3$ zupy, $2$ dania główne i $2$ desery. Na ile sposobów można wybrać zestaw złożony z zupy, dania głównego i deseru?",
+      "correct_answer": "12",
+      "options": [
+        "12",
+        "7",
+        "11",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Stosujemy regułę mnożenia: $3 \\cdot 2 \\cdot 2 = 12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d8771d4-714b-5dd3-a889-1d22b161abd5",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb dwucyfrowych można utworzyć z cyfr $1, 2, 3$, jeśli cyfry mogą się powtarzać?",
+      "correct_answer": "9",
+      "options": [
+        "6",
+        "12",
+        "9",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfrę dziesiątek i cyfrę jedności wybieramy niezależnie, każdą na $3$ sposobów: $3 \\cdot 3 = 9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aa8459b1-065f-537e-ab4a-fbfdb0c1f7a6",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Marek ma $6$ koszulek i $4$ pary spodni. Na ile sposobów może wybrać jeden zestaw: jedną koszulkę i jedne spodnie?",
+      "correct_answer": "24",
+      "options": [
+        "10",
+        "48",
+        "25",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Do każdej koszulki można dobrać jedne z $4$ spodni. Z reguły mnożenia: $6 \\cdot 4 = 24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "816eeb04-3eb1-5513-a5b8-efca888171fa",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb dwucyfrowych można utworzyć z cyfr $1, 2, 3, 4, 5$, jeśli cyfry nie mogą się powtarzać?",
+      "correct_answer": "20",
+      "options": [
+        "15",
+        "24",
+        "25",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfrę dziesiątek wybieramy na $5$ sposobów, a cyfrę jedności na $4$ sposobów: $5 \\cdot 4 = 20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "238bcaa0-91f9-58aa-a7bf-673332c202ee",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile różnych trzyliterowych kodów można utworzyć z liter $F, D, A, E$, jeśli litery w kodzie nie mogą się powtarzać?",
+      "correct_answer": "24",
+      "options": [
+        "24",
+        "16",
+        "12",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwszą literę wybieramy na $4$ sposoby, drugą na $3$, trzecią na $2$: $4 \\cdot 3 \\cdot 2 = 24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d22a66a6-9197-5fdf-a159-79168347625b",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na powitanie każda z $4$ osób uścisnęła dłoń każdej innej osobie dokładnie raz. Ile było uścisków dłoni?",
+      "correct_answer": "6",
+      "options": [
+        "16",
+        "6",
+        "12",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Każda osoba wita się z $3$ osobami, ale każdy uścisk liczymy podwójnie: $\\dfrac{4 \\cdot 3}{2} = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "81f53b8e-c829-5a96-a900-7315ce0e8c2b",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Z $4$ różnych książek wybieramy dwie. Na ile sposobów można to zrobić?",
+      "correct_answer": "6",
+      "options": [
+        "16",
+        "6",
+        "5",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kolejność nie ma znaczenia, więc dzielimy przez $2$: $\\dfrac{4 \\cdot 3}{2} = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da56a76c-fe98-5fda-a19a-f15a1feb46a3",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Restauracja oferuje $4$ zupy, $5$ dań głównych i $3$ desery. Na ile sposobów można wybrać zestaw złożony z zupy, dania głównego i deseru?",
+      "correct_answer": "60",
+      "options": [
+        "12",
+        "59",
+        "60",
+        "120"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Stosujemy regułę mnożenia: $4 \\cdot 5 \\cdot 3 = 60$.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "87810646-fb96-5f89-a956-be87fb6687ef",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb dwucyfrowych można utworzyć z cyfr $1, 2, 3, 4, 5, 6$, jeśli cyfry mogą się powtarzać?",
+      "correct_answer": "36",
+      "options": [
+        "30",
+        "12",
+        "42",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfrę dziesiątek i cyfrę jedności wybieramy niezależnie, każdą na $6$ sposobów: $6 \\cdot 6 = 36$.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "70bc86e4-032a-5146-a61d-742178f722b8",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Marek ma $3$ koszulki i $6$ par spodni. Na ile sposobów może wybrać jeden zestaw: jedną koszulkę i jedne spodnie?",
+      "correct_answer": "18",
+      "options": [
+        "9",
+        "36",
+        "18",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Do każdej koszulki można dobrać jedne z $6$ spodni. Z reguły mnożenia: $3 \\cdot 6 = 18$.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "254093de-438a-56a3-ad77-461f3c3a9d05",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb dwucyfrowych można utworzyć z cyfr $1, 2, 3$, jeśli cyfry nie mogą się powtarzać?",
+      "correct_answer": "6",
+      "options": [
+        "3",
+        "9",
+        "8",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfrę dziesiątek wybieramy na $3$ sposobów, a cyfrę jedności na $2$ sposobów: $3 \\cdot 2 = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "98b88b3c-30b6-536d-a708-d5d553b6dd37",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile różnych trzyliterowych kodów można utworzyć z liter $B, D, A, F$, jeśli litery w kodzie nie mogą się powtarzać?",
+      "correct_answer": "24",
+      "options": [
+        "12",
+        "24",
+        "16",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwszą literę wybieramy na $4$ sposoby, drugą na $3$, trzecią na $2$: $4 \\cdot 3 \\cdot 2 = 24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4fca82f2-62f7-543a-ad47-490317a9166e",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na powitanie każda z $10$ osób uścisnęła dłoń każdej innej osobie dokładnie raz. Ile było uścisków dłoni?",
+      "correct_answer": "45",
+      "options": [
+        "100",
+        "90",
+        "55",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Każda osoba wita się z $9$ osobami, ale każdy uścisk liczymy podwójnie: $\\dfrac{10 \\cdot 9}{2} = 45$.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8367fb97-ec50-5bc7-a86a-60aa0fe19563",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Z $7$ różnych książek wybieramy dwie. Na ile sposobów można to zrobić?",
+      "correct_answer": "21",
+      "options": [
+        "49",
+        "20",
+        "42",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kolejność nie ma znaczenia, więc dzielimy przez $2$: $\\dfrac{7 \\cdot 6}{2} = 21$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2669051d-92b6-5a2c-a310-fe3641900010",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Restauracja oferuje $4$ zupy, $4$ dania główne i $3$ desery. Na ile sposobów można wybrać zestaw złożony z zupy, dania głównego i deseru?",
+      "correct_answer": "48",
+      "options": [
+        "47",
+        "96",
+        "48",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Stosujemy regułę mnożenia: $4 \\cdot 4 \\cdot 3 = 48$.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d209344-f438-58e2-a9dc-a44f11116e12",
+      "generatedAt": "2026-11-18T12:23:59.857Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.857Z"
+}

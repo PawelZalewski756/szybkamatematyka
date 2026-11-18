@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "rownania_wielomianowe",
+  "categoryName": "Algebra i równania",
+  "topicName": "Równania wielomianowe",
+  "tasks": [
+    {
+      "content": "Rozwiąż równanie $x^3=8$.",
+      "correct_answer": "x=2",
+      "options": [
+        "x=2",
+        "x=4",
+        "x=-2",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obie strony są sześcianami: $x^3=2^3$, a funkcja $x^3$ jest różnowartościowa, więc $x=2$.\n**Odpowiedź:** x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e5c993b-58fd-5980-ad24-707bf0f23581",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Największy pierwiastek równania $x(x-6)(x+1)=0$ to:",
+      "correct_answer": "x=6",
+      "options": [
+        "x=6",
+        "x=0",
+        "x=-1",
+        "x=7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwiastki to $0$, $6$ oraz $-1$. Największy z nich to $6$.\n**Odpowiedź:** x=6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f5925b72-5ac4-530a-a1fa-f103f74f9444",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Najmniejszy pierwiastek równania $x^3-36x=0$ to:",
+      "correct_answer": "x=-6",
+      "options": [
+        "x=-36",
+        "x=-6",
+        "x=0",
+        "x=6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wyłączamy $x$: $x(x-6)(x+6)=0$. Pierwiastki to $-6$, $0$, $6$, więc najmniejszy to $-6$.\n**Odpowiedź:** x=-6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d56023de-40fb-520b-aaff-aa353e32afa8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych pierwiastków ma równanie $(x-3)^2(x+1)=0$?",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Czynnik $(x-3)^2$ daje pierwiastek $x=3$ (dwukrotny), a czynnik $x+1$ daje $x=-1$. Różnych pierwiastków jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b7448e86-483a-582b-a9fa-d66cc8b1071f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastek różny od zera równania $x^3+6x^2=0$ to:",
+      "correct_answer": "x=-6",
+      "options": [
+        "x=0",
+        "x=-6",
+        "x=36",
+        "x=6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2(x+6)=0$, więc $x=0$ lub $x=-6$. Pierwiastek różny od zera to $-6$.\n**Odpowiedź:** x=-6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1740c7ba-ee24-5038-a39d-bf4032502a48",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma pierwiastków równania $x(x-2)(x-3)=0$ wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "1",
+        "0",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwiastki to $0$, $2$ i $3$. Ich suma to $0+2+3=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "afce24ef-4a6a-523b-a4d9-feb1c49c513c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $x^3=125$.",
+      "correct_answer": "x=5",
+      "options": [
+        "x=25",
+        "x=5",
+        "x=-5",
+        "x=6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obie strony są sześcianami: $x^3=5^3$, a funkcja $x^3$ jest różnowartościowa, więc $x=5$.\n**Odpowiedź:** x=5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "66767283-604c-5b4f-acc9-59f78a6cdb1f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Największy pierwiastek równania $x(x-5)(x+5)=0$ to:",
+      "correct_answer": "x=5",
+      "options": [
+        "x=5",
+        "x=10",
+        "x=-5",
+        "x=0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwiastki to $0$, $5$ oraz $-5$. Największy z nich to $5$.\n**Odpowiedź:** x=5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "013ed40b-e869-56d3-a798-fee09e2b0342",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Najmniejszy pierwiastek równania $x^3-25x=0$ to:",
+      "correct_answer": "x=-5",
+      "options": [
+        "x=-5",
+        "x=-25",
+        "x=0",
+        "x=5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wyłączamy $x$: $x(x-5)(x+5)=0$. Pierwiastki to $-5$, $0$, $5$, więc najmniejszy to $-5$.\n**Odpowiedź:** x=-5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8eb0d9c-3171-5fb0-a361-f5db78568cd3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych pierwiastków ma równanie $(x-2)^2(x+3)=0$?",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Czynnik $(x-2)^2$ daje pierwiastek $x=2$ (dwukrotny), a czynnik $x+3$ daje $x=-3$. Różnych pierwiastków jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57b03407-f637-5979-a599-e3b3af8b90e5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastek różny od zera równania $x^3+2x^2=0$ to:",
+      "correct_answer": "x=-2",
+      "options": [
+        "x=-2",
+        "x=4",
+        "x=2",
+        "x=0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2(x+2)=0$, więc $x=0$ lub $x=-2$. Pierwiastek różny od zera to $-2$.\n**Odpowiedź:** x=-2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a1c13d79-597d-5285-af48-deb68d83c5d8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma pierwiastków równania $x(x-1)(x-6)=0$ wynosi:",
+      "correct_answer": "7",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwiastki to $0$, $1$ i $6$. Ich suma to $0+1+6=7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24c4a580-b12d-5895-a31e-1d71ca905e60",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $x^3=27$.",
+      "correct_answer": "x=3",
+      "options": [
+        "x=-3",
+        "x=4",
+        "x=9",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obie strony są sześcianami: $x^3=3^3$, a funkcja $x^3$ jest różnowartościowa, więc $x=3$.\n**Odpowiedź:** x=3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b12d9a1b-d616-58c1-af26-4dfef0c5c108",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Największy pierwiastek równania $x(x-4)(x+1)=0$ to:",
+      "correct_answer": "x=4",
+      "options": [
+        "x=0",
+        "x=4",
+        "x=5",
+        "x=-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwiastki to $0$, $4$ oraz $-1$. Największy z nich to $4$.\n**Odpowiedź:** x=4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dfae6335-b0db-562c-a8cf-322e15857fff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych pierwiastków ma równanie $(x-3)^2(x+5)=0$?",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Czynnik $(x-3)^2$ daje pierwiastek $x=3$ (dwukrotny), a czynnik $x+5$ daje $x=-5$. Różnych pierwiastków jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f5c642c0-85f3-5a7e-ac70-3c47f5a32c57",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych pierwiastków ma równanie $(x-4)^2(x+5)=0$?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Czynnik $(x-4)^2$ daje pierwiastek $x=4$ (dwukrotny), a czynnik $x+5$ daje $x=-5$. Różnych pierwiastków jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3c2bd4f7-8b5f-5459-ad84-eacb14490c6e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Największy pierwiastek równania $x(x-2)(x+4)=0$ to:",
+      "correct_answer": "x=2",
+      "options": [
+        "x=2",
+        "x=6",
+        "x=0",
+        "x=-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwiastki to $0$, $2$ oraz $-4$. Największy z nich to $2$.\n**Odpowiedź:** x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ef8da77c-3820-500f-a15e-5b4c1f6dfb76",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma pierwiastków równania $x(x-2)(x-5)=0$ wynosi:",
+      "correct_answer": "7",
+      "options": [
+        "3",
+        "10",
+        "7",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwiastki to $0$, $2$ i $5$. Ich suma to $0+2+5=7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f362496e-6c16-5d49-a9c8-d626581ef846",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $x^3=64$.",
+      "correct_answer": "x=4",
+      "options": [
+        "x=16",
+        "x=5",
+        "x=-4",
+        "x=4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obie strony są sześcianami: $x^3=4^3$, a funkcja $x^3$ jest różnowartościowa, więc $x=4$.\n**Odpowiedź:** x=4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9da758c8-a990-5557-a6c7-5eda345925d5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Największy pierwiastek równania $x(x-3)(x+2)=0$ to:",
+      "correct_answer": "x=3",
+      "options": [
+        "x=0",
+        "x=3",
+        "x=5",
+        "x=-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwiastki to $0$, $3$ oraz $-2$. Największy z nich to $3$.\n**Odpowiedź:** x=3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d31e626-f4dc-524b-a5b3-8e41ff2ef4e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

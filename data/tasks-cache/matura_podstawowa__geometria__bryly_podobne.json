@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "bryly_podobne",
+  "categoryName": "Geometria",
+  "topicName": "Bryły podobne",
+  "tasks": [
+    {
+      "content": "Dwie bryły są podobne w skali $2$. Ile razy objętość większej bryły jest większa od objętości mniejszej?",
+      "correct_answer": "8",
+      "options": [
+        "4",
+        "9",
+        "2",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W skali $k$ objętości zmieniają się jak $k^3$, więc wynik to $2^3=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e3e0d64-38de-5ee8-a34f-f18457c3ebae",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają skalę podobieństwa $4$. Ile razy pole powierzchni większej bryły jest większe?",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "64",
+        "17",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pola powierzchni zmieniają się jak kwadrat skali: $4^2=16$.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0f9682d-7ac9-5ba4-aef1-81cb91c94493",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Krawędź sześcianu o długości $6$ zwiększono $4$ razy. Objętość nowego sześcianu jest większa:",
+      "correct_answer": "64 razy",
+      "options": [
+        "4 razy",
+        "16 razy",
+        "63 razy",
+        "64 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Objętość sześcianu to $a^3$, więc po zwiększeniu krawędzi $4$ razy rośnie $4^3=64$ razy.\n**Odpowiedź:** 64 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "caf76fcf-0bcc-570a-a21b-eebc614db112",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Promień kuli o długości $2$ zwiększono $3$ razy. Objętość nowej kuli jest większa:",
+      "correct_answer": "27 razy",
+      "options": [
+        "27 razy",
+        "26 razy",
+        "9 razy",
+        "3 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Objętość kuli jest proporcjonalna do $r^3$, więc wzrost promienia $3$ razy daje wzrost objętości $27$ razy.\n**Odpowiedź:** 27 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "252e0183-2fd3-577a-a44c-8e891c509611",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stosunek objętości dwóch brył podobnych wynosi $64:1$. Stosunek ich odpowiadających sobie długości wynosi:",
+      "correct_answer": "4:1",
+      "options": [
+        "16:1",
+        "4:1",
+        "64:1",
+        "1:4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Objętości są w stosunku $k^3$, więc długości są w stosunku $k=4$.\n**Odpowiedź:** 4:1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d145df75-0003-59c1-ae2c-7308aaa8d5c3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stosunek pól powierzchni dwóch brył podobnych wynosi $9:1$. Stosunek ich objętości wynosi:",
+      "correct_answer": "27:1",
+      "options": [
+        "1:27",
+        "3:1",
+        "27:1",
+        "9:1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pola są w stosunku $k^2$, więc skala to $3$, a objętości są w stosunku $3^3=27$.\n**Odpowiedź:** 27:1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "065644a7-b1af-5002-a01c-c7a6abb806ce",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają objętości w stosunku $1:8$. Skala podobieństwa mniejszej bryły do większej wynosi:",
+      "correct_answer": "1:2",
+      "options": [
+        "1:8",
+        "1:2",
+        "1:4",
+        "2:1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$V_1:V_2=1:k^3$, więc skala długości to $1:k=1:2$.\n**Odpowiedź:** 1:2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74b5815e-31f9-5141-a7e7-a32c31471bdf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły są podobne w skali $4$. Ile razy objętość większej bryły jest większa od objętości mniejszej?",
+      "correct_answer": "64",
+      "options": [
+        "65",
+        "4",
+        "64",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W skali $k$ objętości zmieniają się jak $k^3$, więc wynik to $4^3=64$.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bffb5acb-4cd6-5ee6-a75d-6d8903e83705",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają skalę podobieństwa $2$. Ile razy pole powierzchni większej bryły jest większe?",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "8",
+        "5",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pola powierzchni zmieniają się jak kwadrat skali: $2^2=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2beeaacc-2383-515e-a86a-492ec52db731",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Krawędź sześcianu o długości $3$ zwiększono $3$ razy. Objętość nowego sześcianu jest większa:",
+      "correct_answer": "27 razy",
+      "options": [
+        "3 razy",
+        "9 razy",
+        "27 razy",
+        "26 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Objętość sześcianu to $a^3$, więc po zwiększeniu krawędzi $3$ razy rośnie $3^3=27$ razy.\n**Odpowiedź:** 27 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c7e642b5-51c1-5199-a376-8c52790e164b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Promień kuli o długości $3$ zwiększono $3$ razy. Objętość nowej kuli jest większa:",
+      "correct_answer": "27 razy",
+      "options": [
+        "9 razy",
+        "26 razy",
+        "3 razy",
+        "27 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Objętość kuli jest proporcjonalna do $r^3$, więc wzrost promienia $3$ razy daje wzrost objętości $27$ razy.\n**Odpowiedź:** 27 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e61e8a5-8f4d-5f01-ac11-46ab930a88d0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stosunek objętości dwóch brył podobnych wynosi $8:1$. Stosunek ich odpowiadających sobie długości wynosi:",
+      "correct_answer": "2:1",
+      "options": [
+        "2:1",
+        "1:2",
+        "4:1",
+        "8:1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Objętości są w stosunku $k^3$, więc długości są w stosunku $k=2$.\n**Odpowiedź:** 2:1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "80fc9669-21b5-5421-afae-bad79257f73c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają objętości w stosunku $1:27$. Skala podobieństwa mniejszej bryły do większej wynosi:",
+      "correct_answer": "1:3",
+      "options": [
+        "1:27",
+        "1:9",
+        "1:3",
+        "3:1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$V_1:V_2=1:k^3$, więc skala długości to $1:k=1:3$.\n**Odpowiedź:** 1:3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "51ae0da2-cffa-5d11-a908-c13f4fe3261a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają objętości w stosunku $1:64$. Skala podobieństwa mniejszej bryły do większej wynosi:",
+      "correct_answer": "1:4",
+      "options": [
+        "1:64",
+        "1:16",
+        "4:1",
+        "1:4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$V_1:V_2=1:k^3$, więc skala długości to $1:k=1:4$.\n**Odpowiedź:** 1:4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2234aeca-25eb-5a2d-a5ea-f0e7e124014f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Krawędź sześcianu o długości $2$ zwiększono $3$ razy. Objętość nowego sześcianu jest większa:",
+      "correct_answer": "27 razy",
+      "options": [
+        "27 razy",
+        "9 razy",
+        "3 razy",
+        "26 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Objętość sześcianu to $a^3$, więc po zwiększeniu krawędzi $3$ razy rośnie $3^3=27$ razy.\n**Odpowiedź:** 27 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ac20c25-b4b0-5491-a688-88b722c1eb8f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Krawędź sześcianu o długości $6$ zwiększono $2$ razy. Objętość nowego sześcianu jest większa:",
+      "correct_answer": "8 razy",
+      "options": [
+        "8 razy",
+        "7 razy",
+        "2 razy",
+        "4 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Objętość sześcianu to $a^3$, więc po zwiększeniu krawędzi $2$ razy rośnie $2^3=8$ razy.\n**Odpowiedź:** 8 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcd435b4-f5be-506f-a6f1-1b597719b99b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Promień kuli o długości $2$ zwiększono $2$ razy. Objętość nowej kuli jest większa:",
+      "correct_answer": "8 razy",
+      "options": [
+        "2 razy",
+        "8 razy",
+        "4 razy",
+        "7 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Objętość kuli jest proporcjonalna do $r^3$, więc wzrost promienia $2$ razy daje wzrost objętości $8$ razy.\n**Odpowiedź:** 8 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e7b8e35d-b4de-5896-a84a-b525725ab39f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Promień kuli o długości $5$ zwiększono $3$ razy. Objętość nowej kuli jest większa:",
+      "correct_answer": "27 razy",
+      "options": [
+        "26 razy",
+        "9 razy",
+        "27 razy",
+        "3 razy"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Objętość kuli jest proporcjonalna do $r^3$, więc wzrost promienia $3$ razy daje wzrost objętości $27$ razy.\n**Odpowiedź:** 27 razy",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04248d1a-0f3a-532e-a031-80acef786c22",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stosunek pól powierzchni dwóch brył podobnych wynosi $16:1$. Stosunek ich objętości wynosi:",
+      "correct_answer": "64:1",
+      "options": [
+        "1:64",
+        "4:1",
+        "64:1",
+        "16:1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pola są w stosunku $k^2$, więc skala to $4$, a objętości są w stosunku $4^3=64$.\n**Odpowiedź:** 64:1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1631c7aa-30bc-5da5-a6c8-08beced56748",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dwie bryły podobne mają skalę podobieństwa $5$. Ile razy pole powierzchni większej bryły jest większe?",
+      "correct_answer": "25",
+      "options": [
+        "5",
+        "125",
+        "25",
+        "26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pola powierzchni zmieniają się jak kwadrat skali: $5^2=25$.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e37e21f8-955e-5803-a9e5-4fae83eac4e7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

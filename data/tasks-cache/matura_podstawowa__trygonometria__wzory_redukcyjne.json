@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "trygonometria",
+  "topic": "wzory_redukcyjne",
+  "categoryName": "Trygonometria",
+  "topicName": "Wzory redukcyjne",
+  "tasks": [
+    {
+      "content": "Dla $\\alpha=25^\\circ$ wskaż wartość $\\sin(180^\\circ-\\alpha)$.",
+      "correct_answer": "$\\sin 25^\\circ$",
+      "options": [
+        "$-\\sin 25^\\circ$",
+        "$\\cos 25^\\circ$",
+        "$\\sin 25^\\circ$",
+        "$-\\cos 25^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin(180^\\circ-\\alpha)=\\sin\\alpha$, więc $\\sin(180^\\circ-25^\\circ)=\\sin25^\\circ$.\n**Odpowiedź:** $\\sin 25^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8fc46fac-020b-5e3d-a3fd-5b50c6057930",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=20^\\circ$ wskaż wartość $\\cos(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\cos 20^\\circ$",
+      "options": [
+        "$-\\sin 20^\\circ$",
+        "$\\cos 20^\\circ$",
+        "$\\sin 20^\\circ$",
+        "$-\\cos 20^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\cos(180^\\circ-\\alpha)=-\\cos\\alpha$, więc wynik to $-\\cos20^\\circ$.\n**Odpowiedź:** $-\\cos 20^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be6c4f75-6e3a-5002-ace7-53a0f09f633a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=67^\\circ$ wskaż wartość $\\sin(180^\\circ+\\alpha)$.",
+      "correct_answer": "$-\\sin 67^\\circ$",
+      "options": [
+        "$-\\sin 67^\\circ$",
+        "$\\sin 67^\\circ$",
+        "$\\cos 67^\\circ$",
+        "$-\\cos 67^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin(180^\\circ+\\alpha)=-\\sin\\alpha$, więc wynik to $-\\sin67^\\circ$.\n**Odpowiedź:** $-\\sin 67^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "46728e7e-577b-5d27-ade3-723ddac24836",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=40^\\circ$ wskaż wartość $\\cos(360^\\circ-\\alpha)$.",
+      "correct_answer": "$\\cos 40^\\circ$",
+      "options": [
+        "$\\cos 40^\\circ$",
+        "$\\sin 40^\\circ$",
+        "$-\\cos 40^\\circ$",
+        "$-\\sin 40^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\cos(360^\\circ-\\alpha)=\\cos\\alpha$, więc wynik to $\\cos40^\\circ$.\n**Odpowiedź:** $\\cos 40^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e00ed647-a9a1-5500-af17-c0bf5259f0e8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=47^\\circ$ wskaż wartość $\\operatorname{tg}(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\operatorname{tg} 47^\\circ$",
+      "options": [
+        "$-\\operatorname{tg} 47^\\circ$",
+        "$\\operatorname{tg} 47^\\circ$",
+        "$-\\sin 47^\\circ$",
+        "$\\cos 47^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\operatorname{tg}(180^\\circ-\\alpha)=-\\operatorname{tg}\\alpha$.\n**Odpowiedź:** $-\\operatorname{tg} 47^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "62930539-b2c9-541c-ae1a-e867723326ef",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\operatorname{sin} 300^\\circ$.",
+      "correct_answer": "$-\\frac{\\sqrt3}{2}$",
+      "options": [
+        "$-\\sqrt3$",
+        "$-\\frac{\\sqrt3}{2}$",
+        "$-1$",
+        "$\\frac12$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Korzystamy z wzorów redukcyjnych i tablic wartości: $\\operatorname{sin}300^\\circ=-\\frac{\\sqrt3}{2}$.\n**Odpowiedź:** $-\\frac{\\sqrt3}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "56f56762-a210-5bc9-a938-24eb9e34b5d4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=25^\\circ$ wskaż wartość $\\sin(90^\\circ+\\alpha)$.",
+      "correct_answer": "$\\cos 25^\\circ$",
+      "options": [
+        "$\\cos 25^\\circ$",
+        "$-\\sin 25^\\circ$",
+        "$\\sin 25^\\circ$",
+        "$-\\cos 25^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin(90^\\circ+\\alpha)=\\cos\\alpha$, więc wynik to $\\cos25^\\circ$.\n**Odpowiedź:** $\\cos 25^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c151d337-a2eb-50f0-a189-f8ac67abdc80",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=16^\\circ$ wskaż wartość $\\sin(180^\\circ-\\alpha)$.",
+      "correct_answer": "$\\sin 16^\\circ$",
+      "options": [
+        "$-\\cos 16^\\circ$",
+        "$-\\sin 16^\\circ$",
+        "$\\sin 16^\\circ$",
+        "$\\cos 16^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin(180^\\circ-\\alpha)=\\sin\\alpha$, więc $\\sin(180^\\circ-16^\\circ)=\\sin16^\\circ$.\n**Odpowiedź:** $\\sin 16^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "995d46eb-34af-5730-affe-1e03d053a55f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=68^\\circ$ wskaż wartość $\\cos(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\cos 68^\\circ$",
+      "options": [
+        "$\\cos 68^\\circ$",
+        "$-\\cos 68^\\circ$",
+        "$\\sin 68^\\circ$",
+        "$-\\sin 68^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\cos(180^\\circ-\\alpha)=-\\cos\\alpha$, więc wynik to $-\\cos68^\\circ$.\n**Odpowiedź:** $-\\cos 68^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2dcd178c-7225-55e1-a751-9ada38bca6ef",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=29^\\circ$ wskaż wartość $\\sin(180^\\circ+\\alpha)$.",
+      "correct_answer": "$-\\sin 29^\\circ$",
+      "options": [
+        "$-\\sin 29^\\circ$",
+        "$\\sin 29^\\circ$",
+        "$-\\cos 29^\\circ$",
+        "$\\cos 29^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin(180^\\circ+\\alpha)=-\\sin\\alpha$, więc wynik to $-\\sin29^\\circ$.\n**Odpowiedź:** $-\\sin 29^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4bef6a4f-4851-51a2-a889-5fde5d93d04b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=61^\\circ$ wskaż wartość $\\cos(360^\\circ-\\alpha)$.",
+      "correct_answer": "$\\cos 61^\\circ$",
+      "options": [
+        "$-\\sin 61^\\circ$",
+        "$-\\cos 61^\\circ$",
+        "$\\cos 61^\\circ$",
+        "$\\sin 61^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\cos(360^\\circ-\\alpha)=\\cos\\alpha$, więc wynik to $\\cos61^\\circ$.\n**Odpowiedź:** $\\cos 61^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c11a7b0e-8007-5382-aecf-528211f00326",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=63^\\circ$ wskaż wartość $\\operatorname{tg}(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\operatorname{tg} 63^\\circ$",
+      "options": [
+        "$\\cos 63^\\circ$",
+        "$\\operatorname{tg} 63^\\circ$",
+        "$-\\operatorname{tg} 63^\\circ$",
+        "$-\\sin 63^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\operatorname{tg}(180^\\circ-\\alpha)=-\\operatorname{tg}\\alpha$.\n**Odpowiedź:** $-\\operatorname{tg} 63^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "868bb92a-fcc9-50be-a70b-79186c2cb205",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\operatorname{sin} 240^\\circ$.",
+      "correct_answer": "$-\\frac{\\sqrt3}{2}$",
+      "options": [
+        "$\\frac{\\sqrt3}{2}$",
+        "$-\\frac{\\sqrt3}{2}$",
+        "$\\sqrt3$",
+        "$-\\sqrt3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Korzystamy z wzorów redukcyjnych i tablic wartości: $\\operatorname{sin}240^\\circ=-\\frac{\\sqrt3}{2}$.\n**Odpowiedź:** $-\\frac{\\sqrt3}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1825f9fc-42af-5f40-a2d3-133784db0fe4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=33^\\circ$ wskaż wartość $\\sin(90^\\circ+\\alpha)$.",
+      "correct_answer": "$\\cos 33^\\circ$",
+      "options": [
+        "$-\\sin 33^\\circ$",
+        "$\\cos 33^\\circ$",
+        "$\\sin 33^\\circ$",
+        "$-\\cos 33^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin(90^\\circ+\\alpha)=\\cos\\alpha$, więc wynik to $\\cos33^\\circ$.\n**Odpowiedź:** $\\cos 33^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b4597f2-5c5a-5c2b-ae2f-5452dee3c2d4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=30^\\circ$ wskaż wartość $\\sin(180^\\circ-\\alpha)$.",
+      "correct_answer": "$\\sin 30^\\circ$",
+      "options": [
+        "$-\\cos 30^\\circ$",
+        "$\\sin 30^\\circ$",
+        "$\\cos 30^\\circ$",
+        "$-\\sin 30^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\sin(180^\\circ-\\alpha)=\\sin\\alpha$, więc $\\sin(180^\\circ-30^\\circ)=\\sin30^\\circ$.\n**Odpowiedź:** $\\sin 30^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "200c8c5b-03c5-53a7-ad2b-b13fd9a1d976",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=30^\\circ$ wskaż wartość $\\cos(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\cos 30^\\circ$",
+      "options": [
+        "$-\\sin 30^\\circ$",
+        "$\\cos 30^\\circ$",
+        "$-\\cos 30^\\circ$",
+        "$\\sin 30^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\cos(180^\\circ-\\alpha)=-\\cos\\alpha$, więc wynik to $-\\cos30^\\circ$.\n**Odpowiedź:** $-\\cos 30^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "acedf09d-5c85-52a7-aa5d-840dfbeaac55",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=61^\\circ$ wskaż wartość $\\sin(180^\\circ+\\alpha)$.",
+      "correct_answer": "$-\\sin 61^\\circ$",
+      "options": [
+        "$\\sin 61^\\circ$",
+        "$-\\cos 61^\\circ$",
+        "$-\\sin 61^\\circ$",
+        "$\\cos 61^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\sin(180^\\circ+\\alpha)=-\\sin\\alpha$, więc wynik to $-\\sin61^\\circ$.\n**Odpowiedź:** $-\\sin 61^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65fe52c6-e1f3-55e0-ae11-6c9fdf23be66",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=35^\\circ$ wskaż wartość $\\cos(360^\\circ-\\alpha)$.",
+      "correct_answer": "$\\cos 35^\\circ$",
+      "options": [
+        "$-\\cos 35^\\circ$",
+        "$-\\sin 35^\\circ$",
+        "$\\sin 35^\\circ$",
+        "$\\cos 35^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\cos(360^\\circ-\\alpha)=\\cos\\alpha$, więc wynik to $\\cos35^\\circ$.\n**Odpowiedź:** $\\cos 35^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "795fab17-a940-5b0f-a5c4-3244218f2921",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla $\\alpha=18^\\circ$ wskaż wartość $\\operatorname{tg}(180^\\circ-\\alpha)$.",
+      "correct_answer": "$-\\operatorname{tg} 18^\\circ$",
+      "options": [
+        "$-\\sin 18^\\circ$",
+        "$\\cos 18^\\circ$",
+        "$-\\operatorname{tg} 18^\\circ$",
+        "$\\operatorname{tg} 18^\\circ$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\operatorname{tg}(180^\\circ-\\alpha)=-\\operatorname{tg}\\alpha$.\n**Odpowiedź:** $-\\operatorname{tg} 18^\\circ$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1a72ee25-31b1-5c95-a80c-37c31d9cfcf6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\operatorname{cos} 150^\\circ$.",
+      "correct_answer": "$-\\frac{\\sqrt3}{2}$",
+      "options": [
+        "$-\\sqrt3$",
+        "$-\\frac{\\sqrt3}{2}$",
+        "$\\frac{\\sqrt3}{2}$",
+        "$-\\frac12$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Korzystamy z wzorów redukcyjnych i tablic wartości: $\\operatorname{cos}150^\\circ=-\\frac{\\sqrt3}{2}$.\n**Odpowiedź:** $-\\frac{\\sqrt3}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bbcecc6e-05d6-500c-acc7-6d9f10d85784",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

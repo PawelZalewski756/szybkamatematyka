@@ -78,7 +78,13 @@ export function MathText({ content, className, as: Tag = "span" }: MathTextProps
             className={
               part.kind === "display"
                 ? "katex-display my-2 block max-w-full overflow-x-auto"
-                : "inline-block max-w-full overflow-x-auto align-baseline [&_.katex]:text-inherit"
+                : // Inline math musi zostać zwykłym elementem inline. Wcześniej
+                  // `inline-block` + `overflow-x-auto` tworzył scrollowaną ramkę:
+                  // przeglądarka brała jej dolną krawędź jako linię bazową, więc
+                  // wzór „unosił się” nad tekstem, a na ułamkach pojawiał się
+                  // poziomy suwak. Dla wzorów w linii nie ma scrolla - mają
+                  // wyglądać jak fragment zdania.
+                  "inline align-baseline [&_.katex]:text-[1em]"
             }
             dangerouslySetInnerHTML={{ __html: html }}
           />

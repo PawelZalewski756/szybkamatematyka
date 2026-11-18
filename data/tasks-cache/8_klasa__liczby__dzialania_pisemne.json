@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "dzialania_pisemne",
+  "categoryName": "Liczby i działania",
+  "topicName": "Działania pisemne",
+  "tasks": [
+    {
+      "content": "Oblicz: $756 + 665 =$",
+      "correct_answer": "1421",
+      "options": [
+        "1411",
+        "1431",
+        "1421",
+        "1321"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy pisemnie: jedności do jedności, dziesiątki do dziesiątek, setki do setek, pamiętając o przeniesieniu. $756 + 665 = 1421$.\n**Odpowiedź:** 1421",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "12bd5d87-5af4-5673-a38d-435d3c3ac04a",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $586 - 411 =$",
+      "correct_answer": "175",
+      "options": [
+        "275",
+        "185",
+        "175",
+        "165"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy pisemnie, pożyczając jedną dziesiątkę lub setkę, gdy trzeba. $586 - 411 = 175$.\n**Odpowiedź:** 175",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "553f4e18-31d8-5436-a8ea-8662c9c19b4a",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $44 \\cdot 7 =$",
+      "correct_answer": "308",
+      "options": [
+        "301",
+        "315",
+        "318",
+        "308"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy osobno dziesiątki i jedności: $44 \\cdot 7 = (4 \\cdot 10 + 4) \\cdot 7 = 308$.\n**Odpowiedź:** 308",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6bf6317b-a91c-50b9-a1a7-a85f37dbb018",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi reszta z dzielenia $350$ przez $9$?",
+      "correct_answer": "8",
+      "options": [
+        "1",
+        "8",
+        "9",
+        "38"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$350 = 9 \\cdot 38 + 8$, a reszta $8$ jest mniejsza od dzielnika $9$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "49313243-4242-5e02-ac02-0398d416da25",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi iloraz $240 : 6$?",
+      "correct_answer": "40",
+      "options": [
+        "39",
+        "50",
+        "40",
+        "41"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy pisemnie: $6$$ mieści się w $240$ dokładnie $40$ razy, bez reszty.\n**Odpowiedź:** 40",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92354fc5-a7d6-5ace-a4ec-1e2798c34918",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $41 \\cdot 24 =$",
+      "correct_answer": "984",
+      "options": [
+        "943",
+        "1025",
+        "994",
+        "984"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rozbijamy drugi czynnik: $41 \\cdot 24 = 41 \\cdot 20 + 41 \\cdot 4 = 984$.\n**Odpowiedź:** 984",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f283b009-a2b6-5110-aaf6-454eaf7dfcd7",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $365 + 768 =$",
+      "correct_answer": "1133",
+      "options": [
+        "1123",
+        "1133",
+        "1033",
+        "1143"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy pisemnie: jedności do jedności, dziesiątki do dziesiątek, setki do setek, pamiętając o przeniesieniu. $365 + 768 = 1133$.\n**Odpowiedź:** 1133",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e39664b-12f9-5e1e-a874-00bd128d33f0",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $855 - 485 =$",
+      "correct_answer": "370",
+      "options": [
+        "470",
+        "360",
+        "370",
+        "380"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy pisemnie, pożyczając jedną dziesiątkę lub setkę, gdy trzeba. $855 - 485 = 370$.\n**Odpowiedź:** 370",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fdc06d7b-7874-5236-a90e-fc1ea13703ae",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $66 \\cdot 9 =$",
+      "correct_answer": "594",
+      "options": [
+        "604",
+        "603",
+        "594",
+        "585"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożymy osobno dziesiątki i jedności: $66 \\cdot 9 = (6 \\cdot 10 + 6) \\cdot 9 = 594$.\n**Odpowiedź:** 594",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "36e08b93-3ff7-5f6b-adc3-eae4438e6cb7",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi reszta z dzielenia $147$ przez $11$?",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$147 = 11 \\cdot 13 + 4$, a reszta $4$ jest mniejsza od dzielnika $11$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f5c64e2d-b553-5d4c-af79-71607a469daf",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi iloraz $279 : 9$?",
+      "correct_answer": "31",
+      "options": [
+        "41",
+        "30",
+        "32",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy pisemnie: $9$$ mieści się w $279$ dokładnie $31$ razy, bez reszty.\n**Odpowiedź:** 31",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe437a3e-3015-5bb1-afad-e9f7ba6a4368",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $41 \\cdot 12 =$",
+      "correct_answer": "492",
+      "options": [
+        "533",
+        "502",
+        "451",
+        "492"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozbijamy drugi czynnik: $41 \\cdot 12 = 41 \\cdot 10 + 41 \\cdot 2 = 492$.\n**Odpowiedź:** 492",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21ec1435-09a2-5398-ac98-30a317f719e6",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $418 + 620 =$",
+      "correct_answer": "1038",
+      "options": [
+        "1048",
+        "1028",
+        "1038",
+        "938"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodajemy pisemnie: jedności do jedności, dziesiątki do dziesiątek, setki do setek, pamiętając o przeniesieniu. $418 + 620 = 1038$.\n**Odpowiedź:** 1038",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa866247-dfbe-521b-a758-75865354ae63",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $638 - 466 =$",
+      "correct_answer": "172",
+      "options": [
+        "172",
+        "272",
+        "162",
+        "182"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy pisemnie, pożyczając jedną dziesiątkę lub setkę, gdy trzeba. $638 - 466 = 172$.\n**Odpowiedź:** 172",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f19107e-5cde-5fec-a7ea-9c4003bb3a58",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $70 \\cdot 4 =$",
+      "correct_answer": "280",
+      "options": [
+        "276",
+        "290",
+        "284",
+        "280"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy osobno dziesiątki i jedności: $70 \\cdot 4 = (7 \\cdot 10 + 0) \\cdot 4 = 280$.\n**Odpowiedź:** 280",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "755a22b2-7653-5cb0-a150-edeb996dfa5e",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi reszta z dzielenia $244$ przez $9$?",
+      "correct_answer": "1",
+      "options": [
+        "27",
+        "2",
+        "8",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$244 = 9 \\cdot 27 + 1$, a reszta $1$ jest mniejsza od dzielnika $9$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0f0b13d-e31d-577a-a573-9c2ac12225db",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile wynosi iloraz $308 : 11$?",
+      "correct_answer": "28",
+      "options": [
+        "29",
+        "27",
+        "38",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy pisemnie: $11$$ mieści się w $308$ dokładnie $28$ razy, bez reszty.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff3e6451-9bc5-5528-a600-0ab7cda41bb1",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $20 \\cdot 24 =$",
+      "correct_answer": "480",
+      "options": [
+        "460",
+        "480",
+        "500",
+        "490"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rozbijamy drugi czynnik: $20 \\cdot 24 = 20 \\cdot 20 + 20 \\cdot 4 = 480$.\n**Odpowiedź:** 480",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3bc8ca80-9565-5176-a2b5-f2abfbb02e93",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $162 + 456 =$",
+      "correct_answer": "618",
+      "options": [
+        "518",
+        "628",
+        "608",
+        "618"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodajemy pisemnie: jedności do jedności, dziesiątki do dziesiątek, setki do setek, pamiętając o przeniesieniu. $162 + 456 = 618$.\n**Odpowiedź:** 618",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcfb17a6-55b1-528e-adad-6470555c194e",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $765 - 400 =$",
+      "correct_answer": "365",
+      "options": [
+        "365",
+        "355",
+        "375",
+        "465"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy pisemnie, pożyczając jedną dziesiątkę lub setkę, gdy trzeba. $765 - 400 = 365$.\n**Odpowiedź:** 365",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "158f5a7c-e572-5320-a098-2fd3439d0c48",
+      "generatedAt": "2026-11-18T12:23:59.816Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.816Z"
+}

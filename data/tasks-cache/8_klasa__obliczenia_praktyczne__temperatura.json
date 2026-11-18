@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "obliczenia_praktyczne",
+  "topic": "temperatura",
+  "categoryName": "Obliczenia praktyczne",
+  "topicName": "Temperatura",
+  "tasks": [
+    {
+      "content": "Temperatura wynosiła $-8°C$ i wzrosła o $14°C$. Jaka jest teraz?",
+      "correct_answer": "6°C",
+      "options": [
+        "20°C",
+        "-22°C",
+        "-8°C",
+        "6°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Do temperatury początkowej dodajemy wzrost: $-8 + 14 = 6$.\n**Odpowiedź:** 6°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "68bbfca4-5a16-5992-a30e-f60517f35d96",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O godzinie 6 temperatura wynosiła $-9°C$, a o godzinie 14 wzrosła do $10°C$. O ile stopni wzrosła temperatura?",
+      "correct_answer": "19°C",
+      "options": [
+        "17°C",
+        "1°C",
+        "21°C",
+        "19°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy temperaturę niższą od wyższej: $10 - (-9) = 10 + 9 = 19$.\n**Odpowiedź:** 19°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f76cbc03-9cfc-5017-a6a5-2aa48ec15167",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $8°C$ i spadła o $18°C$. Jaka jest teraz?",
+      "correct_answer": "-10°C",
+      "options": [
+        "-28°C",
+        "-10°C",
+        "26°C",
+        "8°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Spadek oznacza odejmowanie: $8 - 18 = -10$.\n**Odpowiedź:** -10°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b79d803-ae3c-5245-a076-e937752a77eb",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W czterech kolejnych dniach temperatura wynosiła: $0°C$, $6°C$, $2°C$, $4°C$. Jaka była średnia temperatura?",
+      "correct_answer": "3°C",
+      "options": [
+        "12°C",
+        "3°C",
+        "2°C",
+        "4°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma temperatur to $12$, a średnia $12 : 4 = 3$.\n**Odpowiedź:** 3°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8d140fbd-568c-518d-a852-aec77fc140d7",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która temperatura jest najniższa: $-6°C$, $-1°C$, $-12°C$, $0°C$?",
+      "correct_answer": "-12°C",
+      "options": [
+        "-12°C",
+        "-1°C",
+        "0°C",
+        "-6°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Na osi liczbowej najmniejsza liczba leży najbardziej z lewej strony. To $-12°C$.\n**Odpowiedź:** -12°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cc24405a-00d5-5cd0-ab30-756032608d75",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Po spadku temperatury o $5°C$ termometr wskazuje $-1°C$. Ile stopni było przed spadkiem?",
+      "correct_answer": "4°C",
+      "options": [
+        "1°C",
+        "4°C",
+        "-1°C",
+        "-6°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Do temperatury końcowej dodajemy spadek: $-1 + 5 = 4$.\n**Odpowiedź:** 4°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c22382c9-ee33-575e-a8dd-ad3e02ca966c",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $6°C$ i wzrosła o $15°C$. Jaka jest teraz?",
+      "correct_answer": "21°C",
+      "options": [
+        "36°C",
+        "6°C",
+        "-9°C",
+        "21°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Do temperatury początkowej dodajemy wzrost: $6 + 15 = 21$.\n**Odpowiedź:** 21°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96565402-3642-551a-aaa6-2052c9e2756d",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O godzinie 6 temperatura wynosiła $-14°C$, a o godzinie 14 wzrosła do $5°C$. O ile stopni wzrosła temperatura?",
+      "correct_answer": "19°C",
+      "options": [
+        "-9°C",
+        "21°C",
+        "17°C",
+        "19°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy temperaturę niższą od wyższej: $5 - (-14) = 5 + 14 = 19$.\n**Odpowiedź:** 19°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9ace06e3-4734-537d-abfe-f9c5fe6c1afd",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $8°C$ i spadła o $3°C$. Jaka jest teraz?",
+      "correct_answer": "5°C",
+      "options": [
+        "2°C",
+        "8°C",
+        "11°C",
+        "5°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Spadek oznacza odejmowanie: $8 - 3 = 5$.\n**Odpowiedź:** 5°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "003beca0-8141-5cd0-a358-d8fec04d107d",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W czterech kolejnych dniach temperatura wynosiła: $8°C$, $6°C$, $4°C$, $2°C$. Jaka była średnia temperatura?",
+      "correct_answer": "5°C",
+      "options": [
+        "20°C",
+        "4°C",
+        "5°C",
+        "6°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma temperatur to $20$, a średnia $20 : 4 = 5$.\n**Odpowiedź:** 5°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd15fa10-2adc-546f-a246-612efc2572dc",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która temperatura jest najniższa: $13°C$, $7°C$, $-6°C$, $-9°C$?",
+      "correct_answer": "-9°C",
+      "options": [
+        "-6°C",
+        "13°C",
+        "-9°C",
+        "7°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Na osi liczbowej najmniejsza liczba leży najbardziej z lewej strony. To $-9°C$.\n**Odpowiedź:** -9°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e10573a9-c26f-5dc1-a518-fd967d9dfc61",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Po spadku temperatury o $7°C$ termometr wskazuje $-2°C$. Ile stopni było przed spadkiem?",
+      "correct_answer": "5°C",
+      "options": [
+        "5°C",
+        "-9°C",
+        "-2°C",
+        "2°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Do temperatury końcowej dodajemy spadek: $-2 + 7 = 5$.\n**Odpowiedź:** 5°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "94cf2119-ae21-5306-a70a-fb6046621545",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $8°C$ i wzrosła o $10°C$. Jaka jest teraz?",
+      "correct_answer": "18°C",
+      "options": [
+        "-2°C",
+        "28°C",
+        "18°C",
+        "8°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Do temperatury początkowej dodajemy wzrost: $8 + 10 = 18$.\n**Odpowiedź:** 18°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "19351dae-5eb4-5c47-a9dc-7b3fd6efc7db",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O godzinie 6 temperatura wynosiła $-13°C$, a o godzinie 14 wzrosła do $8°C$. O ile stopni wzrosła temperatura?",
+      "correct_answer": "21°C",
+      "options": [
+        "-5°C",
+        "21°C",
+        "19°C",
+        "23°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy temperaturę niższą od wyższej: $8 - (-13) = 8 + 13 = 21$.\n**Odpowiedź:** 21°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dfa6af70-f47f-50ca-a210-90912fae9e08",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $8°C$ i spadła o $5°C$. Jaka jest teraz?",
+      "correct_answer": "3°C",
+      "options": [
+        "-2°C",
+        "13°C",
+        "8°C",
+        "3°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Spadek oznacza odejmowanie: $8 - 5 = 3$.\n**Odpowiedź:** 3°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e9964418-98b8-5aaf-ad44-edfc999f1ed9",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W czterech kolejnych dniach temperatura wynosiła: $2°C$, $-4°C$, $-2°C$, $0°C$. Jaka była średnia temperatura?",
+      "correct_answer": "-1°C",
+      "options": [
+        "-1°C",
+        "-2°C",
+        "0°C",
+        "-4°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma temperatur to $-4$, a średnia $-4 : 4 = -1$.\n**Odpowiedź:** -1°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "235e1980-190a-56c8-a6e1-527f10fb4cbc",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która temperatura jest najniższa: $-15°C$, $-1°C$, $7°C$, $0°C$?",
+      "correct_answer": "-15°C",
+      "options": [
+        "0°C",
+        "-15°C",
+        "7°C",
+        "-1°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Na osi liczbowej najmniejsza liczba leży najbardziej z lewej strony. To $-15°C$.\n**Odpowiedź:** -15°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8f8c8e2d-4800-5290-a5bf-cd3f66765350",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Po spadku temperatury o $12°C$ termometr wskazuje $-1°C$. Ile stopni było przed spadkiem?",
+      "correct_answer": "11°C",
+      "options": [
+        "-13°C",
+        "1°C",
+        "11°C",
+        "-1°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Do temperatury końcowej dodajemy spadek: $-1 + 12 = 11$.\n**Odpowiedź:** 11°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "efe387ad-8ffa-592f-aa7a-65144f4928ef",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Temperatura wynosiła $-10°C$ i wzrosła o $14°C$. Jaka jest teraz?",
+      "correct_answer": "4°C",
+      "options": [
+        "4°C",
+        "-24°C",
+        "-10°C",
+        "18°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Do temperatury początkowej dodajemy wzrost: $-10 + 14 = 4$.\n**Odpowiedź:** 4°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "20d65dda-c096-56cc-a654-e9df7f91e389",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O godzinie 6 temperatura wynosiła $-4°C$, a o godzinie 14 wzrosła do $4°C$. O ile stopni wzrosła temperatura?",
+      "correct_answer": "8°C",
+      "options": [
+        "10°C",
+        "6°C",
+        "0°C",
+        "8°C"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy temperaturę niższą od wyższej: $4 - (-4) = 4 + 4 = 8$.\n**Odpowiedź:** 8°C",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3cbdc16a-345d-55b7-ac86-7d319edb574e",
+      "generatedAt": "2026-11-18T12:23:59.841Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.841Z"
+}

@@ -16,8 +16,10 @@ import { gameScoreToXp } from "@/lib/minigry/account-progress";
 import { notifyProfileUpdated } from "@/lib/profile-sync";
 import {
   FREE_SUBSCRIPTION,
+  effectiveSubscriptionStatus,
   isProStatus,
   normalizeSubscriptionStatus,
+  type ProSource,
   type SubscriptionSnapshot,
   type SubscriptionStatus,
 } from "@/lib/subscription/status";
@@ -46,6 +48,9 @@ export type Profile = {
   subscriptionPlan?: SubscriptionPlanId | null;
   subscriptionCurrentPeriodEnd?: string | null;
   subscriptionCancelAtPeriodEnd?: boolean;
+  /** none | stripe | gift | manual — rozróżnia płatne Pro od przyznanego. */
+  proSource?: ProSource;
+  proGrantedReason?: string | null;
 };
 
 export class NickTakenError extends Error {
@@ -79,6 +84,8 @@ type ProfileRow = {
   subscription_plan?: string | null;
   subscription_current_period_end?: string | null;
   subscription_cancel_at_period_end?: boolean | null;
+  pro_source?: string | null;
+  pro_granted_reason?: string | null;
   school_class?: string | null;
 };
 
@@ -122,6 +129,19 @@ function readSubscriptionPlan(row: ProfileRow): SubscriptionPlanId | null {
   return plan ? plan.id : null;
 }
 
+function readProSource(row: ProfileRow): ProSource {
+  switch ((row.pro_source ?? "").trim().toLowerCase()) {
+    case "stripe":
+      return "stripe";
+    case "gift":
+      return "gift";
+    case "manual":
+      return "manual";
+    default:
+      return "none";
+  }
+}
+
 function readSchoolLevel(row: ProfileRow): LearningPath | null {
   const raw = row.school_class?.trim();
   if (!raw) return null;
@@ -154,6 +174,8 @@ function mapRow(row: ProfileRow): Profile {
           subscriptionCancelAtPeriodEnd: Boolean(
             row.subscription_cancel_at_period_end,
           ),
+          proSource: readProSource(row),
+          proGrantedReason: row.pro_granted_reason ?? null,
         }
       : {}),
   };
@@ -988,11 +1010,17 @@ export function subscriptionSnapshotFromProfile(
   profile: Profile | null | undefined,
 ): SubscriptionSnapshot {
   if (!profile) return FREE_SUBSCRIPTION;
+  const source = profile.proSource ?? "none";
   return {
-    status: profile.subscriptionStatus ?? "free",
+    status: effectiveSubscriptionStatus(
+      profile.subscriptionStatus,
+      source,
+      profile.subscriptionCurrentPeriodEnd,
+    ),
     planId: profile.subscriptionPlan ?? null,
     currentPeriodEnd: profile.subscriptionCurrentPeriodEnd ?? null,
     cancelAtPeriodEnd: profile.subscriptionCancelAtPeriodEnd ?? false,
+    source,
   };
 }
 
@@ -1019,17 +1047,23 @@ export async function fetchSubscriptionSnapshotForUser(
   ) as ProfileRow | null | undefined;
   if (!row) return FREE_SUBSCRIPTION;
 
+  const source = readProSource(row);
   return {
-    status: normalizeSubscriptionStatus(row.subscription_status),
+    status: effectiveSubscriptionStatus(
+      normalizeSubscriptionStatus(row.subscription_status),
+      source,
+      row.subscription_current_period_end,
+    ),
     planId: readSubscriptionPlan(row),
     currentPeriodEnd: row.subscription_current_period_end ?? null,
     cancelAtPeriodEnd: Boolean(row.subscription_cancel_at_period_end),
+    source,
   };
 }
 
 /** Czy użytkownik z danym profilem ma aktywny dostęp Pro. */
 export function profileIsPro(profile: Profile | null | undefined): boolean {
-  return isProStatus(profile?.subscriptionStatus);
+  return isProStatus(subscriptionSnapshotFromProfile(profile).status);
 }
 
 export function applyXpGain(

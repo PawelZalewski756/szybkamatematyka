@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "ciagi",
+  "topic": "wyrazy_ciagu",
+  "categoryName": "Ciągi",
+  "topicName": "Wyrazy i monotoniczność ciągu",
+  "tasks": [
+    {
+      "content": "Ciąg jest określony wzorem $a_n=2n-1$. Oblicz $a_{8}$.",
+      "correct_answer": "15",
+      "options": [
+        "9",
+        "13",
+        "17",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ciąg opisuje wzór $a_n=2n-1$. Podstawiamy $n=8$: $a_{8}=2(8)-1=15$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e590e699-7ee8-517d-a56b-ad28c09649da",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=n^2-2n$. Oblicz $a_{5}$.",
+      "correct_answer": "15",
+      "options": [
+        "35",
+        "20",
+        "15",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$a_{5}=5^2-2\\cdot5=25-10=15$.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6b41f4f0-4a29-52fe-abb4-b5b7cf79cd1a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=-2n-2$ jest:",
+      "correct_answer": "malejący",
+      "options": [
+        "naprzemienny",
+        "rosnący",
+        "malejący",
+        "stały"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Różnica $a_{n+1}-a_n=-2$ jest ujemna, więc ciąg jest malejący.\n**Odpowiedź:** malejący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7997b323-89a0-5610-ab0a-8ccb9ccbaa31",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=3n-3$ osiąga wartość $24$ dla $n$ równego:",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rozwiązujemy $3n-3=24$, czyli $3n=27$, więc $n=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a28738e8-f3d2-549a-a290-10f41e85f670",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg spełnia $a_1=3$ oraz $a_{n+1}=a_n+2$. Oblicz $a_6$.",
+      "correct_answer": "13",
+      "options": [
+        "6",
+        "13",
+        "15",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Od $a_1$ do $a_6$ wykonujemy $5$ kroków: $a_6=3+5\\cdot2=13$.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "29f5647f-bd85-5d66-ac77-649283f81573",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=(-1)^n\\cdot n$. Oblicz $a_{3}$.",
+      "correct_answer": "-3",
+      "options": [
+        "-2",
+        "9",
+        "3",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dla $n=3$ mamy $(-1)^{3}=-1$, więc $a_{3}=-3$.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4a5231de-8695-5684-a3d6-79a07f3fc439",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=\\frac{n+3}{n}$ dla $n\\ge1$ jest:",
+      "correct_answer": "malejący",
+      "options": [
+        "stały",
+        "rosnący",
+        "naprzemienny",
+        "malejący"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$a_n=1+\\frac{3}{n}$, a wraz ze wzrostem $n$ ułamek $\\frac{3}{n}$ maleje, więc ciąg jest malejący.\n**Odpowiedź:** malejący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ca2920d1-84c5-5e8c-a66a-4e54c2b3e411",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=4n+6$. Oblicz $a_{10}$.",
+      "correct_answer": "46",
+      "options": [
+        "50",
+        "20",
+        "42",
+        "46"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_{10}=4\\cdot10+6=46$.\n**Odpowiedź:** 46",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74acae48-f1c8-59b1-ab67-84a9815ad280",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=n^2-n$. Oblicz $a_{8}$.",
+      "correct_answer": "56",
+      "options": [
+        "72",
+        "55",
+        "56",
+        "64"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_{8}=8^2-1\\cdot8=64-8=56$.\n**Odpowiedź:** 56",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "661f2c73-88b8-5bc7-a277-6044ddc4e8ee",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=3n+2$ jest:",
+      "correct_answer": "rosnący",
+      "options": [
+        "stały",
+        "rosnący",
+        "naprzemienny",
+        "malejący"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Różnica $a_{n+1}-a_n=3$ jest dodatnia, więc ciąg jest rosnący.\n**Odpowiedź:** rosnący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5eeb36d3-c475-55d7-ac0f-915f998c6cff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=3n$ osiąga wartość $18$ dla $n$ równego:",
+      "correct_answer": "6",
+      "options": [
+        "7",
+        "6",
+        "18",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozwiązujemy $3n=18$, czyli $3n=18$, więc $n=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d035c437-e4fc-5bff-acbb-484872849cf9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg spełnia $a_1=1$ oraz $a_{n+1}=a_n+2$. Oblicz $a_6$.",
+      "correct_answer": "11",
+      "options": [
+        "9",
+        "2",
+        "13",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Od $a_1$ do $a_6$ wykonujemy $5$ kroków: $a_6=1+5\\cdot2=11$.\n**Odpowiedź:** 11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2a92687b-bf8c-5228-a77f-f5ab011fea2f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=(-1)^n\\cdot n$. Oblicz $a_{7}$.",
+      "correct_answer": "-7",
+      "options": [
+        "-6",
+        "49",
+        "-7",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dla $n=7$ mamy $(-1)^{7}=-1$, więc $a_{7}=-7$.\n**Odpowiedź:** -7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "39fc35db-37c3-5503-ae23-678e909e28f1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=\\frac{n+4}{n}$ dla $n\\ge1$ jest:",
+      "correct_answer": "malejący",
+      "options": [
+        "naprzemienny",
+        "rosnący",
+        "malejący",
+        "stały"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_n=1+\\frac{4}{n}$, a wraz ze wzrostem $n$ ułamek $\\frac{4}{n}$ maleje, więc ciąg jest malejący.\n**Odpowiedź:** malejący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "98452905-9807-5ec9-a813-55413d90e82d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=5n+1$. Oblicz $a_{6}$.",
+      "correct_answer": "31",
+      "options": [
+        "26",
+        "36",
+        "31",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ciąg opisuje wzór $a_n=5n+1$. Podstawiamy $n=6$: $a_{6}=5(6)+1=31$.",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "444b8851-72ba-5f82-adda-cbe3edbb0750",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg jest określony wzorem $a_n=n^2-3n$. Oblicz $a_{5}$.",
+      "correct_answer": "10",
+      "options": [
+        "7",
+        "15",
+        "10",
+        "40"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$a_{5}=5^2-3\\cdot5=25-15=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61630ac4-23fa-582d-a51f-510a2d06e3d6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=-n+5$ jest:",
+      "correct_answer": "malejący",
+      "options": [
+        "stały",
+        "naprzemienny",
+        "rosnący",
+        "malejący"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Różnica $a_{n+1}-a_n=-1$ jest ujemna, więc ciąg jest malejący.\n**Odpowiedź:** malejący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "949ec332-18ac-57a1-a650-e49f46b9b6e7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=3n+2$ osiąga wartość $26$ dla $n$ równego:",
+      "correct_answer": "8",
+      "options": [
+        "9",
+        "7",
+        "8",
+        "26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rozwiązujemy $3n+2=26$, czyli $3n=24$, więc $n=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "19fd8728-24bd-58fc-a864-6a4ce9405255",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg spełnia $a_1=1$ oraz $a_{n+1}=a_n+4$. Oblicz $a_6$.",
+      "correct_answer": "21",
+      "options": [
+        "17",
+        "25",
+        "4",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Od $a_1$ do $a_6$ wykonujemy $5$ kroków: $a_6=1+5\\cdot4=21$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e201a75-7538-5917-a403-7708e4dcf78d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ciąg $a_n=\\frac{n+2}{n}$ dla $n\\ge1$ jest:",
+      "correct_answer": "malejący",
+      "options": [
+        "malejący",
+        "naprzemienny",
+        "rosnący",
+        "stały"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$a_n=1+\\frac{2}{n}$, a wraz ze wzrostem $n$ ułamek $\\frac{2}{n}$ maleje, więc ciąg jest malejący.\n**Odpowiedź:** malejący",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae5b21f8-371f-513f-a964-78d6455a58c3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

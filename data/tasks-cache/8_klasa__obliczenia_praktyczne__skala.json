@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "obliczenia_praktyczne",
+  "topic": "skala",
+  "categoryName": "Obliczenia praktyczne",
+  "topicName": "Skala i plan",
+  "tasks": [
+    {
+      "content": "Na planie w skali $1:100$ odcinek ma $2$ cm. Ile metrów ma ten odcinek w rzeczywistości?",
+      "correct_answer": "2 m",
+      "options": [
+        "0,2 m",
+        "20 m",
+        "200 m",
+        "2 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$2$ cm $\\cdot 100 = 200$ cm $= 2$ m, bo $1$ m $= 100$ cm.\n**Odpowiedź:** 2 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6a55731d-ad72-5daa-a56f-b6a615419675",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek w terenie ma $200$ m. Jaką długość ma na planie w skali $1:5000$?",
+      "correct_answer": "4 cm",
+      "options": [
+        "200 cm",
+        "5 cm",
+        "6 cm",
+        "4 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$200$ m $= 20000$ cm, a $20000 : 5000 = 4$ cm.\n**Odpowiedź:** 4 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f69b314-d83a-54cc-a2db-f9a9be05e414",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek o długości $80$ m w terenie ma na planie $8$ cm. Jaka jest skala tego planu?",
+      "correct_answer": "1:1000",
+      "options": [
+        "1:1000",
+        "1:10000",
+        "1:500",
+        "1:8000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$80$ m $= 8000$ cm. Skala to $8000 : 8 = 1000$, czyli $1:1000$.\n**Odpowiedź:** 1:1000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cd371325-193b-5702-abbf-c0a455878d46",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt na planie w skali $1:1000$ ma boki $5$ cm i $4$ cm. Jakie jest jego pole w rzeczywistości (w m$^2$)?",
+      "correct_answer": "2000 m²",
+      "options": [
+        "200 m²",
+        "20000 m²",
+        "2000 m²",
+        "20 m²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ cm na planie to $10$ m w terenie. Boki mają $50$ m i $40$ m, więc pole $= 50 \\cdot 40 = 2000$ m$^2$.\n**Odpowiedź:** 2000 m²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "76134fc4-550a-5eee-aedb-4a52c17baf7d",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na mapie w skali $1:200000$ odległość między miastami wynosi $3$ cm. Ile to kilometrów?",
+      "correct_answer": "6 km",
+      "options": [
+        "0,6 km",
+        "60 km",
+        "600000 km",
+        "6 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1$ cm na mapie odpowiada $2$ km. Zatem $3 \\cdot 2 = 6$ km.\n**Odpowiedź:** 6 km",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28d55569-8232-527c-ad2d-b0c5954a5321",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile metrów w terenie odpowiada $1$ cm na planie w skali $1:200$?",
+      "correct_answer": "2 m",
+      "options": [
+        "200 m",
+        "2 m",
+        "20 m",
+        "0,2 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$200$ cm $= 2$ m, bo $100$ cm to $1$ m.\n**Odpowiedź:** 2 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "05eb332c-4769-5474-adbe-13ea784ce0cc",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na planie w skali $1:2000$ odcinek ma $6$ cm. Ile metrów ma ten odcinek w rzeczywistości?",
+      "correct_answer": "120 m",
+      "options": [
+        "12000 m",
+        "120 m",
+        "1200 m",
+        "12 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$6$ cm $\\cdot 2000 = 12000$ cm $= 120$ m, bo $1$ m $= 100$ cm.\n**Odpowiedź:** 120 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c52ce8bc-1071-533f-ae63-00960a6510fa",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek w terenie ma $30$ m. Jaką długość ma na planie w skali $1:500$?",
+      "correct_answer": "6 cm",
+      "options": [
+        "30 cm",
+        "8 cm",
+        "6 cm",
+        "7 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$30$ m $= 3000$ cm, a $3000 : 500 = 6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f45c6543-52f2-539d-ad74-a5aba5c7327d",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek o długości $40$ m w terenie ma na planie $4$ cm. Jaka jest skala tego planu?",
+      "correct_answer": "1:1000",
+      "options": [
+        "1:1000",
+        "1:500",
+        "1:10000",
+        "1:4000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$40$ m $= 4000$ cm. Skala to $4000 : 4 = 1000$, czyli $1:1000$.\n**Odpowiedź:** 1:1000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47ea4993-e3c3-5c09-af89-cd97b95a10de",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt na planie w skali $1:1000$ ma boki $8$ cm i $7$ cm. Jakie jest jego pole w rzeczywistości (w m$^2$)?",
+      "correct_answer": "5600 m²",
+      "options": [
+        "5600 m²",
+        "560 m²",
+        "56 m²",
+        "56000 m²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1$ cm na planie to $10$ m w terenie. Boki mają $80$ m i $70$ m, więc pole $= 80 \\cdot 70 = 5600$ m$^2$.\n**Odpowiedź:** 5600 m²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a9d174e-c4d5-5131-a41b-297f78706979",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na mapie w skali $1:1000000$ odległość między miastami wynosi $2$ cm. Ile to kilometrów?",
+      "correct_answer": "20 km",
+      "options": [
+        "2 km",
+        "2000000 km",
+        "20 km",
+        "200 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1$ cm na mapie odpowiada $10$ km. Zatem $2 \\cdot 10 = 20$ km.\n**Odpowiedź:** 20 km",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "643bca8e-6185-5444-ab1a-910a2afeeacf",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile metrów w terenie odpowiada $1$ cm na planie w skali $1:100$?",
+      "correct_answer": "1 m",
+      "options": [
+        "100 m",
+        "1 m",
+        "10 m",
+        "0,1 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$100$ cm $= 1$ m, bo $100$ cm to $1$ m.\n**Odpowiedź:** 1 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e800831f-14ed-5579-a745-cb0fb2d886e7",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na planie w skali $1:500$ odcinek ma $8$ cm. Ile metrów ma ten odcinek w rzeczywistości?",
+      "correct_answer": "40 m",
+      "options": [
+        "400 m",
+        "40 m",
+        "4 m",
+        "4000 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$8$ cm $\\cdot 500 = 4000$ cm $= 40$ m, bo $1$ m $= 100$ cm.\n**Odpowiedź:** 40 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "233b1935-b9ab-538c-afb6-bc4feb10d3ab",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek w terenie ma $20$ m. Jaką długość ma na planie w skali $1:500$?",
+      "correct_answer": "4 cm",
+      "options": [
+        "20 cm",
+        "6 cm",
+        "4 cm",
+        "5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$20$ m $= 2000$ cm, a $2000 : 500 = 4$ cm.\n**Odpowiedź:** 4 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e0db8562-306e-5a17-a143-26c9b40d9eee",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek o długości $14$ m w terenie ma na planie $7$ cm. Jaka jest skala tego planu?",
+      "correct_answer": "1:200",
+      "options": [
+        "1:100",
+        "1:2000",
+        "1:1400",
+        "1:200"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$14$ m $= 1400$ cm. Skala to $1400 : 7 = 200$, czyli $1:200$.\n**Odpowiedź:** 1:200",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8700cd6f-e816-5045-a269-e22b05ce0c77",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt na planie w skali $1:1000$ ma boki $3$ cm i $3$ cm. Jakie jest jego pole w rzeczywistości (w m$^2$)?",
+      "correct_answer": "900 m²",
+      "options": [
+        "9000 m²",
+        "9 m²",
+        "90 m²",
+        "900 m²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1$ cm na planie to $10$ m w terenie. Boki mają $30$ m i $30$ m, więc pole $= 30 \\cdot 30 = 900$ m$^2$.\n**Odpowiedź:** 900 m²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6a1e15c9-2e49-5602-a8f6-48cb30587b87",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na mapie w skali $1:500000$ odległość między miastami wynosi $6$ cm. Ile to kilometrów?",
+      "correct_answer": "30 km",
+      "options": [
+        "300 km",
+        "3 km",
+        "3000000 km",
+        "30 km"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1$ cm na mapie odpowiada $5$ km. Zatem $6 \\cdot 5 = 30$ km.\n**Odpowiedź:** 30 km",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "44afc0f0-a1e6-567d-ae4d-0f302314e33c",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile metrów w terenie odpowiada $1$ cm na planie w skali $1:500$?",
+      "correct_answer": "5 m",
+      "options": [
+        "0,5 m",
+        "5 m",
+        "50 m",
+        "500 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$500$ cm $= 5$ m, bo $100$ cm to $1$ m.\n**Odpowiedź:** 5 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "12e4c63e-0e57-5b13-a2d3-d1b00ab2ffbf",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Na planie w skali $1:5000$ odcinek ma $9$ cm. Ile metrów ma ten odcinek w rzeczywistości?",
+      "correct_answer": "450 m",
+      "options": [
+        "450 m",
+        "45 m",
+        "45000 m",
+        "4500 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$9$ cm $\\cdot 5000 = 45000$ cm $= 450$ m, bo $1$ m $= 100$ cm.\n**Odpowiedź:** 450 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ddcb5aee-0fe1-5f6b-a34c-ee60a5c02cf1",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek w terenie ma $100$ m. Jaką długość ma na planie w skali $1:2000$?",
+      "correct_answer": "5 cm",
+      "options": [
+        "6 cm",
+        "7 cm",
+        "5 cm",
+        "100 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$100$ m $= 10000$ cm, a $10000 : 2000 = 5$ cm.\n**Odpowiedź:** 5 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "490be82d-fbba-5af9-ab48-795ed3ee512d",
+      "generatedAt": "2026-11-18T12:23:59.836Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.836Z"
+}

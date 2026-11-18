@@ -6,7 +6,7 @@
   "topicName": "Funkcja liniowa",
   "tasks": [
     {
-      "content": "Dla $f(x)=-1x+-2$ oblicz $f(1)$.",
+      "content": "Dla $f(x)=-x-2$ oblicz $f(1)$.",
       "correct_answer": "-3",
       "options": [
         "-1",
@@ -17,7 +17,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -3",
+      "explanation": "Podstawiamy $x=1$ do wzoru $f(x)=-x-2$: $f(1)=-1-2=-3$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "428fa280-3c0b-4dac-97a5-d7e792c73cbc",
@@ -36,7 +36,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 5",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=5$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "fe348f76-1d94-4dfe-87ce-32e101df6b42",
@@ -44,7 +44,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=-2x+-4$ oblicz $f(4)$.",
+      "content": "Dla $f(x)=-2x-4$ oblicz $f(4)$.",
       "correct_answer": "-12",
       "options": [
         "-12",
@@ -55,7 +55,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -12",
+      "explanation": "Podstawiamy $x=4$ do wzoru $f(x)=-2x-4$: $f(4)=-2\\cdot4-4=-12$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "eb78eb1a-48c5-43eb-a8f2-e2bfbd814276",
@@ -63,7 +63,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż współczynnik kierunkowy prostej $y=-1x-8$.",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=-x-8$.",
       "correct_answer": "-1",
       "options": [
         "-3",
@@ -74,7 +74,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=-1$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2fbd9400-0c91-4a4a-8b66-04187d17da6d",
@@ -93,7 +93,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 16",
+      "explanation": "Podstawiamy $x=3$ do wzoru $f(x)=4x+4$: $f(3)=4\\cdot3+4=16$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3895f60c-7286-486c-9ef8-f5bb13111c45",
@@ -101,7 +101,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż współczynnik kierunkowy prostej $y=-1x+0$.",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=-x$.",
       "correct_answer": "-1",
       "options": [
         "2",
@@ -112,7 +112,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -1",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=-1$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "899fb01e-ef56-464f-a1d8-198267d0c72b",
@@ -120,7 +120,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=1x+6$ oblicz $f(2)$.",
+      "content": "Dla $f(x)=x+6$ oblicz $f(2)$.",
       "correct_answer": "8",
       "options": [
         "8",
@@ -131,7 +131,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 16,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "explanation": "Podstawiamy $x=2$ do wzoru $f(x)=x+6$: $f(2)=1\\cdot2+6=8$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2da4fb92-07ea-49fe-b3c2-df36bbff7751",
@@ -150,7 +150,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=2$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "06789124-97c5-4732-aaac-442eb47d4910",
@@ -169,7 +169,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 20,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -9",
+      "explanation": "Podstawiamy $x=4$ do wzoru $f(x)=-4x+7$: $f(4)=-4\\cdot4+7=-9$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "026ed1ee-1b93-46e2-89b4-5efc60c7ef10",
@@ -177,7 +177,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż współczynnik kierunkowy prostej $y=1x+5$.",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=x+5$.",
       "correct_answer": "1",
       "options": [
         "1",
@@ -188,7 +188,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 11,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=1$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "da0ead7e-86fc-4c5b-b6ee-bdf4a710e7a8",
@@ -207,7 +207,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 27",
+      "explanation": "Podstawiamy $x=6$ do wzoru $f(x)=4x+3$: $f(6)=4\\cdot6+3=27$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "1248bb0b-816e-44b1-8e50-3393a62f2558",
@@ -226,7 +226,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 13,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** -2",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=-2$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3e92dc0b-a75d-4db4-a8d1-1722360f2ac2",
@@ -234,7 +234,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Dla $f(x)=-1x+3$ oblicz $f(1)$.",
+      "content": "Dla $f(x)=-x+3$ oblicz $f(1)$.",
       "correct_answer": "2",
       "options": [
         "0",
@@ -245,7 +245,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 2",
+      "explanation": "Podstawiamy $x=1$ do wzoru $f(x)=-x+3$: $f(1)=-1+3=2$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "aa179e89-f265-4c15-ba70-11276b249162",
@@ -253,7 +253,7 @@
       "model": "parametric-v2"
     },
     {
-      "content": "Wskaż współczynnik kierunkowy prostej $y=1x-6$.",
+      "content": "Wskaż współczynnik kierunkowy prostej $y=x-6$.",
       "correct_answer": "1",
       "options": [
         "3",
@@ -264,7 +264,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 1",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=1$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4779deff-be4e-4d83-b212-f567cd750abc",
@@ -283,7 +283,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
+      "explanation": "Podstawiamy $x=3$ do wzoru $f(x)=4x+3$: $f(3)=4\\cdot3+3=15$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "94725dde-ae33-4983-b27a-6b0a7f28edcb",
@@ -302,7 +302,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 12,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=4$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "96ab1668-1b6c-4f03-a1c6-cce3d3d4074b",
@@ -321,7 +321,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
+      "explanation": "Podstawiamy $x=5$ do wzoru $f(x)=2x+5$: $f(5)=2\\cdot5+5=15$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e40a59b8-ea52-43d7-87e5-926ece3f8f80",
@@ -340,7 +340,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 4",
+      "explanation": "Prosta ma postać $y=ax+b$, a współczynnik kierunkowy to liczba przy $x$, czyli $a=4$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "50b63374-3445-4cad-9de2-be96e0349841",
@@ -359,7 +359,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 15",
+      "explanation": "Podstawiamy $x=6$ do wzoru $f(x)=2x+3$: $f(6)=2\\cdot6+3=15$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "c07388e4-30c2-47eb-98ef-a6ee10b787d4",
@@ -378,7 +378,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
+      "explanation": "Podstawiamy $x=3$ do wzoru $f(x)=2x+2$: $f(3)=2\\cdot3+2=8$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "8b9ace56-e33b-4206-8308-8daa9cb7e17e",

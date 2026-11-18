@@ -335,15 +335,48 @@ function notifyLearningPathChange(): void {
   window.dispatchEvent(new Event(PATH_CHANGE_EVENT));
 }
 
-export function saveSchoolClass(schoolClass: SchoolClassPath): void {
-  saveLearningPath(learningPathFromSchoolClass(schoolClass));
+function defaultSchoolClassForPath(path: LearningPath): SchoolClassPath {
+  return path === "sp" ? DEFAULT_SCHOOL_CLASS : "liceum-3";
 }
 
-/** @deprecated Zapisuj schoolClass - path jest pochodną. */
+/**
+ * Zapisuje konkretną klasę. Klucz `school-class` trzyma pełną wartość
+ * (np. `klasa-5`), a nie tylko poziom - wcześniej `saveSchoolClass` zapisywał
+ * `sp`/`srednia`, więc wybór klasy w `/plan-klasy` natychmiast wracał do
+ * domyślnej `klasa-8` i plan klasy był fikcją.
+ */
+export function saveSchoolClass(schoolClass: SchoolClassPath): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, schoolClass);
+  localStorage.setItem(
+    LEGACY_PATH_STORAGE_KEY,
+    learningPathFromSchoolClass(schoolClass),
+  );
+  notifyLearningPathChange();
+}
+
+/**
+ * Zapisuje poziom nauki. Jeśli wybrana klasa należy do drugiego poziomu,
+ * ustawiamy sensowną klasę domyślną dla tego poziomu; w przeciwnym razie
+ * zachowujemy konkretną klasę użytkownika.
+ *
+ * @deprecated Zapisuj schoolClass - path jest pochodną.
+ */
 export function saveLearningPath(path: LearningPath): void {
   if (typeof window === "undefined") return;
-  localStorage.setItem(SCHOOL_CLASS_STORAGE_KEY, path);
+  const currentClass = normalizeSchoolClass(
+    localStorage.getItem(SCHOOL_CLASS_STORAGE_KEY) ?? "",
+  );
   localStorage.setItem(LEGACY_PATH_STORAGE_KEY, path);
+  if (
+    !currentClass ||
+    learningPathFromSchoolClass(currentClass) !== path
+  ) {
+    localStorage.setItem(
+      SCHOOL_CLASS_STORAGE_KEY,
+      defaultSchoolClassForPath(path),
+    );
+  }
   notifyLearningPathChange();
 }
 

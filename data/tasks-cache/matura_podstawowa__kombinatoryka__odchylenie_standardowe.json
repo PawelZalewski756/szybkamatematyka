@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "odchylenie_standardowe",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Odchylenie standardowe",
+  "tasks": [
+    {
+      "content": "Oblicz odchylenie standardowe danych $3, 4, 5, 6$.",
+      "correct_answer": "1,12",
+      "options": [
+        "0,56",
+        "1,25",
+        "1,12",
+        "2,12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $4,5$, wariancja $1,25$, więc odchylenie standardowe $\\sigma=\\sqrt{1,25}\\approx1,12$.\n**Odpowiedź:** 1,12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec9d4a1d-07d3-57c6-aa18-d7956ab15e3e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $4, 10, 16$.",
+      "correct_answer": "24",
+      "options": [
+        "25",
+        "24",
+        "48",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $10$, a wariancja $\\frac{(4-10)^2+0^2+(16-10)^2}{3}=\\frac{72}{3}=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7169aead-8308-54e2-a651-9a0ad3a0fbb2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych: $2, 2, 2, 2, 2$.",
+      "correct_answer": "0",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wszystkie wartości są równe $2$, więc odchylenia od średniej są zerowe, a odchylenie standardowe wynosi $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7900a6d2-2323-5f45-ad31-11fe0e6e759e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2, 4, 6, 8$.",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "6",
+        "2,24",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $5$. Wariancja to $\\frac{(2-5)^2+(4-5)^2+(6-5)^2+(8-5)^2}{4}=\\frac{20}{4}=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8c127e89-788e-5727-af77-cbcdcef44633",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odchylenie standardowe pewnych danych wynosi $5$. Wariancja tych danych jest równa:",
+      "correct_answer": "25",
+      "options": [
+        "5",
+        "25",
+        "26",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wariancja to kwadrat odchylenia standardowego: $\\sigma^2=5^2=25$.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fdeaa7da-c951-5b28-aebb-006cba9d75a6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $7, 8, 9, 10, 11$.",
+      "correct_answer": "1,41",
+      "options": [
+        "1,41",
+        "2,41",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $9$, a wariancja $\\frac{4+1+0+1+4}{5}=2$. Odchylenie standardowe to $\\sqrt2\\approx1{,}41$.\n**Odpowiedź:** 1,41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "23dea7b0-95e5-5b43-a6fe-af8b95a0791b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $4, 5, 6, 7$.",
+      "correct_answer": "1,12",
+      "options": [
+        "2,12",
+        "0,56",
+        "1,25",
+        "1,12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia to $5,5$, wariancja $1,25$, więc odchylenie standardowe $\\sigma=\\sqrt{1,25}\\approx1,12$.\n**Odpowiedź:** 1,12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "223e7144-3e34-5414-a616-67ce4d2b633f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $1, 10, 19$.",
+      "correct_answer": "54",
+      "options": [
+        "108",
+        "55",
+        "54",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $10$, a wariancja $\\frac{(1-10)^2+0^2+(19-10)^2}{3}=\\frac{162}{3}=54$.\n**Odpowiedź:** 54",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3346b6ab-b73b-5149-a3d8-2d6242f41cfc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych: $7, 7, 7, 7, 7$.",
+      "correct_answer": "0",
+      "options": [
+        "3,5",
+        "7",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wszystkie wartości są równe $7$, więc odchylenia od średniej są zerowe, a odchylenie standardowe wynosi $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed55a002-10db-5a46-a19a-50a5ce4babc5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odchylenie standardowe pewnych danych wynosi $3$. Wariancja tych danych jest równa:",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "9",
+        "3",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wariancja to kwadrat odchylenia standardowego: $\\sigma^2=3^2=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9b47fd1-de90-51f8-a066-8c00dd9887e2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odchylenie standardowe pewnych danych wynosi $2$. Wariancja tych danych jest równa:",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "2",
+        "5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wariancja to kwadrat odchylenia standardowego: $\\sigma^2=2^2=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ef80a1c-682a-5999-a0ab-518dae9049ac",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $3, 4, 5, 6, 7$.",
+      "correct_answer": "1,41",
+      "options": [
+        "2,41",
+        "2",
+        "1,41",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $5$, a wariancja $\\frac{4+1+0+1+4}{5}=2$. Odchylenie standardowe to $\\sqrt2\\approx1{,}41$.\n**Odpowiedź:** 1,41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fec6640e-6800-5e1f-aab2-84e24a4f8b66",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $1, 3, 5, 7$.",
+      "correct_answer": "2,24",
+      "options": [
+        "5",
+        "3,24",
+        "1,12",
+        "2,24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $4$, wariancja $5$, więc odchylenie standardowe $\\sigma=\\sqrt{5}\\approx2,24$.\n**Odpowiedź:** 2,24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9329e8dc-dd96-5929-a8d7-c5051ac4def0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2, 11, 20$.",
+      "correct_answer": "54",
+      "options": [
+        "108",
+        "55",
+        "54",
+        "81"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia to $11$, a wariancja $\\frac{(2-11)^2+0^2+(20-11)^2}{3}=\\frac{162}{3}=54$.\n**Odpowiedź:** 54",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d83181e7-e92e-5063-a567-e625751c6873",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych: $3, 3, 3, 3, 3, 3$.",
+      "correct_answer": "0",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "1,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wszystkie wartości są równe $3$, więc odchylenia od średniej są zerowe, a odchylenie standardowe wynosi $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c208966-05da-5df2-ada8-5b83968bf8bc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $2, 8, 14$.",
+      "correct_answer": "24",
+      "options": [
+        "36",
+        "25",
+        "48",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $8$, a wariancja $\\frac{(2-8)^2+0^2+(14-8)^2}{3}=\\frac{72}{3}=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d808c2fb-b51a-5c86-a08e-1dd22c38e6ba",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $5, 6, 7, 8, 9$.",
+      "correct_answer": "1,41",
+      "options": [
+        "1",
+        "1,41",
+        "2",
+        "2,41"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $7$, a wariancja $\\frac{4+1+0+1+4}{5}=2$. Odchylenie standardowe to $\\sqrt2\\approx1{,}41$.\n**Odpowiedź:** 1,41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e33be73-fa10-5bf9-ada5-591554c14f92",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odchylenie standardowe danych $6, 7, 8, 9, 10$.",
+      "correct_answer": "1,41",
+      "options": [
+        "2",
+        "2,41",
+        "1,41",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $8$, a wariancja $\\frac{4+1+0+1+4}{5}=2$. Odchylenie standardowe to $\\sqrt2\\approx1{,}41$.\n**Odpowiedź:** 1,41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7256f34c-0909-5c1a-a4f0-8ee3b57368af",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $4, 13, 22$.",
+      "correct_answer": "54",
+      "options": [
+        "55",
+        "54",
+        "81",
+        "108"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $13$, a wariancja $\\frac{(4-13)^2+0^2+(22-13)^2}{3}=\\frac{162}{3}=54$.\n**Odpowiedź:** 54",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5d65995f-60db-55ad-a951-d6b64c9405f3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz wariancję danych $1, 7, 13$.",
+      "correct_answer": "24",
+      "options": [
+        "24",
+        "25",
+        "36",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia to $7$, a wariancja $\\frac{(1-7)^2+0^2+(13-7)^2}{3}=\\frac{72}{3}=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8858541f-14f6-5c61-ad8a-a88f1848b459",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "rownania_z_wartoscia_bezwzgledna",
+  "categoryName": "Algebra i równania",
+  "topicName": "Równania z wartością bezwzględną",
+  "tasks": [
+    {
+      "content": "Rozwiąż równanie $|x-4|=5$.",
+      "correct_answer": "x=-1 lub x=9",
+      "options": [
+        "x=--1 lub x=9",
+        "x=-1 lub x=9",
+        "x=-9 lub x=9",
+        "x=4 lub x=5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$|x-4|=5$ oznacza $x-4=5$ lub $x-4=-5$, więc $x=9$ lub $x=-1$.\n**Odpowiedź:** x=-1 lub x=9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e73bbc04-1c56-5718-ab35-4e38ae4f5e84",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x|=4$.",
+      "correct_answer": "x=-4 lub x=4",
+      "options": [
+        "x=4",
+        "x=-4",
+        "x=-4 lub x=4",
+        "x=16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość od zera wynosi $4$, więc $x=4$ lub $x=-4$.\n**Odpowiedź:** x=-4 lub x=4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "71b7abd7-e06e-50db-a790-a7fe821b8e61",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-3|<1$.",
+      "correct_answer": "$(2,4)$",
+      "options": [
+        "$(2,4)$",
+        "$(3,4)$",
+        "$[2,4]$",
+        "$(-\\infty,2)\\cup(4,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość $x$ od $3$ jest mniejsza od $1$, więc $x\\in(2,4)$.\n**Odpowiedź:** $(2,4)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "46f9e980-78d5-5da9-aafc-b4ad3f1c4fda",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-7|<2$.",
+      "correct_answer": "$(5,9)$",
+      "options": [
+        "$(5,9)$",
+        "$[5,9]$",
+        "$(-\\infty,5)\\cup(9,\\infty)$",
+        "$(7,9)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość $x$ od $7$ jest mniejsza od $2$, więc $x\\in(5,9)$.\n**Odpowiedź:** $(5,9)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7587c93e-895e-5d58-a2e3-132d35d4e777",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-4|>1$.",
+      "correct_answer": "$(-\\infty,3)\\cup(5,\\infty)$",
+      "options": [
+        "$(3,5)$",
+        "$(5,\\infty)$",
+        "$(-\\infty,3)\\cup(5,\\infty)$",
+        "$[3,5]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość $x$ od $4$ jest większa od $1$, więc $x<3$ lub $x>5$.\n**Odpowiedź:** $(-\\infty,3)\\cup(5,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8b4548e0-559a-5131-a1f6-55ebb94ac3e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza wartość wyrażenia $|x-3|+|x-8|$?",
+      "correct_answer": "5",
+      "options": [
+        "0",
+        "6",
+        "5",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma odległości od punktów $3$ i $8$ jest najmniejsza dla $x$ między nimi i wynosi $8-3=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1125f2bf-0cc2-5073-ad88-e104c351ee33",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x|=-6$.",
+      "correct_answer": "brak rozwiązań",
+      "options": [
+        "brak rozwiązań",
+        "x=0",
+        "x=6",
+        "x=-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wartość bezwzględna jest nieujemna, więc nigdy nie jest równa liczbie ujemnej. Równanie nie ma rozwiązań.\n**Odpowiedź:** brak rozwiązań",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6ab7ae23-b0ba-5bf0-a5ec-064e416dc614",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x-4|=6$.",
+      "correct_answer": "x=-2 lub x=10",
+      "options": [
+        "x=-10 lub x=10",
+        "x=4 lub x=6",
+        "x=--2 lub x=10",
+        "x=-2 lub x=10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$|x-4|=6$ oznacza $x-4=6$ lub $x-4=-6$, więc $x=10$ lub $x=-2$.\n**Odpowiedź:** x=-2 lub x=10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e298c71-2a28-53e7-abf9-7c88612b8e11",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x|=6$.",
+      "correct_answer": "x=-6 lub x=6",
+      "options": [
+        "x=-6 lub x=6",
+        "x=36",
+        "x=6",
+        "x=-6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość od zera wynosi $6$, więc $x=6$ lub $x=-6$.\n**Odpowiedź:** x=-6 lub x=6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2095c5a4-c839-54b5-a4ff-47689c4c85d4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-8|<3$.",
+      "correct_answer": "$(5,11)$",
+      "options": [
+        "$(5,11)$",
+        "$(8,11)$",
+        "$[5,11]$",
+        "$(-\\infty,5)\\cup(11,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość $x$ od $8$ jest mniejsza od $3$, więc $x\\in(5,11)$.\n**Odpowiedź:** $(5,11)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72121c8b-8db0-5af6-a23b-47d8ff04a26e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-5|<3$.",
+      "correct_answer": "$(2,8)$",
+      "options": [
+        "$(-\\infty,2)\\cup(8,\\infty)$",
+        "$(2,8)$",
+        "$[2,8]$",
+        "$(5,8)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość $x$ od $5$ jest mniejsza od $3$, więc $x\\in(2,8)$.\n**Odpowiedź:** $(2,8)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65573230-df7f-55a9-a7eb-9bcb437b9e56",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-6|>2$.",
+      "correct_answer": "$(-\\infty,4)\\cup(8,\\infty)$",
+      "options": [
+        "$(8,\\infty)$",
+        "$[4,8]$",
+        "$(-\\infty,4)\\cup(8,\\infty)$",
+        "$(4,8)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość $x$ od $6$ jest większa od $2$, więc $x<4$ lub $x>8$.\n**Odpowiedź:** $(-\\infty,4)\\cup(8,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f4b7afd-036a-5dd9-a0b4-40ec5860ef1c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza wartość wyrażenia $|x-1|+|x-3|$?",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma odległości od punktów $1$ i $3$ jest najmniejsza dla $x$ między nimi i wynosi $3-1=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "784e8861-82aa-595c-abbc-bfdb3886b712",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x|=-2$.",
+      "correct_answer": "brak rozwiązań",
+      "options": [
+        "x=-2",
+        "x=2",
+        "brak rozwiązań",
+        "x=0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wartość bezwzględna jest nieujemna, więc nigdy nie jest równa liczbie ujemnej. Równanie nie ma rozwiązań.\n**Odpowiedź:** brak rozwiązań",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e207b84-11ba-5186-abc9-e8551fc8023c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x-1|=1$.",
+      "correct_answer": "x=0 lub x=2",
+      "options": [
+        "x=-2 lub x=2",
+        "x=0 lub x=2",
+        "x=1 lub x=1",
+        "x=-0 lub x=2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$|x-1|=1$ oznacza $x-1=1$ lub $x-1=-1$, więc $x=2$ lub $x=0$.\n**Odpowiedź:** x=0 lub x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a4124884-d0bb-5ceb-a463-5d64d1d52633",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $|x|=3$.",
+      "correct_answer": "x=-3 lub x=3",
+      "options": [
+        "x=9",
+        "x=-3",
+        "x=3",
+        "x=-3 lub x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość od zera wynosi $3$, więc $x=3$ lub $x=-3$.\n**Odpowiedź:** x=-3 lub x=3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b45f580-5c8c-5340-a2a0-08631966368d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-5|<2$.",
+      "correct_answer": "$(3,7)$",
+      "options": [
+        "$(-\\infty,3)\\cup(7,\\infty)$",
+        "$[3,7]$",
+        "$(5,7)$",
+        "$(3,7)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość $x$ od $5$ jest mniejsza od $2$, więc $x\\in(3,7)$.\n**Odpowiedź:** $(3,7)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5d4304d0-2cab-5051-adb3-174809916b98",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-7|<1$.",
+      "correct_answer": "$(6,8)$",
+      "options": [
+        "$(6,8)$",
+        "$(-\\infty,6)\\cup(8,\\infty)$",
+        "$(7,8)$",
+        "$[6,8]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość $x$ od $7$ jest mniejsza od $1$, więc $x\\in(6,8)$.\n**Odpowiedź:** $(6,8)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a86986d6-e0fc-5535-a143-1792298a431f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $|x-3|>2$.",
+      "correct_answer": "$(-\\infty,1)\\cup(5,\\infty)$",
+      "options": [
+        "$[1,5]$",
+        "$(1,5)$",
+        "$(5,\\infty)$",
+        "$(-\\infty,1)\\cup(5,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość $x$ od $3$ jest większa od $2$, więc $x<1$ lub $x>5$.\n**Odpowiedź:** $(-\\infty,1)\\cup(5,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b31328e-0dfb-5cf3-a480-b849ec0ec055",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza wartość wyrażenia $|x-2|+|x-6|$?",
+      "correct_answer": "4",
+      "options": [
+        "0",
+        "4",
+        "8",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma odległości od punktów $2$ i $6$ jest najmniejsza dla $x$ między nimi i wynosi $6-2=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14016110-c124-5015-a40c-9915d878e24c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

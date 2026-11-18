@@ -3,6 +3,8 @@ import { enrichTheoryLesson } from "@/lib/trening/seed/enrich-theory";
 import { EXPANDED_THEORY } from "@/lib/trening/seed/theory-expanded";
 import { ADDITIONAL_SEED_MATERIALS } from "@/lib/trening/seed/additional-materials";
 import { COVERAGE_SEED_MATERIALS } from "@/lib/trening/seed/materials-coverage";
+import { COMPLETE_E8_MATERIALS } from "@/lib/trening/seed/materials-complete-e8";
+import { COMPLETE_MATURA_MATERIALS } from "@/lib/trening/seed/materials-complete-matura";
 
 export type MaterialDraft = {
   exam_type: ExamType;
@@ -16,6 +18,8 @@ export type MaterialDraft = {
 export const BASE_SEED_MATERIALS: MaterialDraft[] = [
   ...ADDITIONAL_SEED_MATERIALS,
   ...COVERAGE_SEED_MATERIALS,
+  ...COMPLETE_E8_MATERIALS,
+  ...COMPLETE_MATURA_MATERIALS,
   {
     exam_type: "matura_podstawowa",
     category: "liczby_rzeczywiste",

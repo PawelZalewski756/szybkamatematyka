@@ -55,7 +55,7 @@
       "answer_type": "choice",
       "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Różnica kwadratów: $x^2-25=(x-5)(x+5)$.",
+      "explanation": "To różnica kwadratów: $x^2-25=(x-5)(x+5)$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "3779b6a9-1ea7-53ab-aae6-47bd4cd420fd",
@@ -120,7 +120,7 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Oblicz $W(3)$ dla $W(x)=1x^3-1x+1$.",
+      "content": "Oblicz $W(3)$ dla $W(x)=x^3-x+1$.",
       "correct_answer": "25",
       "options": [
         "25",
@@ -150,7 +150,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Różnica kwadratów: $x^2-4=(x-2)(x+2)$.",
+      "explanation": "To różnica kwadratów: $x^2-4=(x-2)(x+2)$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "4c3d1ae1-043a-5513-a5b8-cb80163847af",
@@ -188,7 +188,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2+2\\cdot1+8=11$.",
+      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2+2+8=11$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "5af54616-239a-5b16-aa73-d8d4b908c3e4",
@@ -226,7 +226,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Podstawiamy $x=1$: $2\\cdot1^3-2\\cdot1+1=1$.",
+      "explanation": "Podstawiamy $x=1$ do wzoru wielomianu i wykonujemy działania: $W(1)=1$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "2cd9fc16-0ae2-57b3-a7be-de7aa4a3afc9",
@@ -245,7 +245,7 @@
       "answer_type": "choice",
       "difficulty": 2,
       "xp_reward": 18,
-      "explanation": "Różnica kwadratów: $x^2-9=(x-3)(x+3)$.",
+      "explanation": "To różnica kwadratów: $x^2-9=(x-3)(x+3)$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "e472dc02-0b25-589a-ab2b-66bf8cb8cf63",
@@ -264,7 +264,7 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2-3\\cdot1+4=2$.",
+      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2-3+4=2$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "caaa1e43-31d3-59b4-a042-01b3b047856b",
@@ -291,7 +291,7 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Oblicz $W(1)$ dla $W(x)=1x^3+3x+1$.",
+      "content": "Oblicz $W(1)$ dla $W(x)=x^3+3x+1$.",
       "correct_answer": "5",
       "options": [
         "6",
@@ -302,7 +302,7 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Podstawiamy $x=1$: $1\\cdot1^3+3\\cdot1+1=5$.",
+      "explanation": "Podstawiamy $x=1$ do wzoru wielomianu i wykonujemy działania: $W(1)=5$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "a59bab38-51ee-51ea-af07-a34b7c5748a2",
@@ -329,7 +329,7 @@
       "model": "coverage-v1"
     },
     {
-      "content": "Jaka jest reszta z dzielenia $W(x)=x^2+0x+9$ przez $x-1$?",
+      "content": "Jaka jest reszta z dzielenia $W(x)=x^2+9$ przez $x-1$?",
       "correct_answer": "10",
       "options": [
         "11",
@@ -340,7 +340,7 @@
       "answer_type": "choice",
       "difficulty": 3,
       "xp_reward": 22,
-      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2+0\\cdot1+9=10$.",
+      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=1^2+0+9=10$.",
       "figure_svg": null,
       "figure_caption": null,
       "id": "634386be-ad62-5bdb-ac9f-95b344b5fd4c",

@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria_przestrzenna",
+  "topic": "siatki_bryl",
+  "categoryName": "Geometria przestrzenna",
+  "topicName": "Siatki brył",
+  "tasks": [
+    {
+      "content": "Ile krawędzi ma graniastosłup trójkątny?",
+      "correct_answer": "9",
+      "options": [
+        "13",
+        "9",
+        "7",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Bryła \"graniastosłup trójkątny\" ma $9$ krawędzi. Liczymy je na modelu lub w siatce, pamiętając o krawędziach sklejanych.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dbf2a88c-199d-52e3-aa40-eba359647c85",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź długości $9$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "486 cm²",
+      "options": [
+        "729 cm²",
+        "54 cm²",
+        "324 cm²",
+        "486 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Sześcian ma $6$ jednakowych kwadratowych ścian: $P = 6 \\cdot 9^2 = 486$ cm$^2$.\n**Odpowiedź:** 486 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e783d85f-81ed-5267-a535-fe9d8ba3e50a",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma wymiary $3$ cm, $7$ cm i $8$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "202 cm²",
+      "options": [
+        "202 cm²",
+        "168 cm²",
+        "101 cm²",
+        "90 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole powierzchni to suma pól trzech par ścian: $2(3 \\cdot 7 + 3 \\cdot 8 + 7 \\cdot 8) = 202$ cm$^2$.\n**Odpowiedź:** 202 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a4775f94-c37c-514f-a9f7-39ce7be7e376",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oto kartonowa siatka. Składa się ona z czterech prostokątów i dwóch kwadratów. Jaka to bryła?",
+      "correct_answer": "prostopadłościan",
+      "options": [
+        "prostopadłościan",
+        "ostrosłup czworokątny",
+        "sześcian",
+        "graniastosłup trójkątny"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Siatka złożona z czterech prostokątów i dwóch kwadratów po złożeniu daje prostopadłościan.\n**Odpowiedź:** prostopadłościan",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "71e1a54d-145d-5a0f-a9fc-ac35714adf04",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Graniastosłup ma podstawę będącą $3$-kątem. Ile ścian ma ten graniastosłup?",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "5",
+        "3",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Graniastosłup ma $3$ ścian bocznych i $2$ podstawy, razem $3 + 2 = 5$ ścian.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c95af3ed-e3a0-5f69-aa51-57037c491c2f",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ostrosłup ma podstawę będącą $6$-kątem. Ile krawędzi ma ten ostrosłup?",
+      "correct_answer": "12",
+      "options": [
+        "18",
+        "12",
+        "14",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ostrosłup ma $6$ krawędzi podstawy i $6$ krawędzi bocznych, razem $12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ecf2a010-d152-5f4a-afef-8413f37e9fc8",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile krawędzi ma sześcian?",
+      "correct_answer": "12",
+      "options": [
+        "10",
+        "14",
+        "16",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Bryła \"sześcian\" ma $12$ krawędzi. Liczymy je na modelu lub w siatce, pamiętając o krawędziach sklejanych.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e202148d-72ec-56b1-a2c1-93cb75e2dd4e",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź długości $5$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "150 cm²",
+      "options": [
+        "125 cm²",
+        "150 cm²",
+        "100 cm²",
+        "30 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Sześcian ma $6$ jednakowych kwadratowych ścian: $P = 6 \\cdot 5^2 = 150$ cm$^2$.\n**Odpowiedź:** 150 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a5d5698-7ac1-5043-ac67-8ad8e8244644",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma wymiary $7$ cm, $8$ cm i $8$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "352 cm²",
+      "options": [
+        "224 cm²",
+        "352 cm²",
+        "176 cm²",
+        "448 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole powierzchni to suma pól trzech par ścian: $2(7 \\cdot 8 + 7 \\cdot 8 + 8 \\cdot 8) = 352$ cm$^2$.\n**Odpowiedź:** 352 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ebbea72f-6edc-5917-a5a8-cd1344f65401",
+      "generatedAt": "2026-11-18T12:23:59.851Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Model bryły wycięto z siatki. Składa się ona z czterech prostokątów i dwóch kwadratów. Jaka to bryła?",
+      "correct_answer": "prostopadłościan",
+      "options": [
+        "sześcian",
+        "graniastosłup trójkątny",
+        "ostrosłup czworokątny",
+        "prostopadłościan"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Siatka złożona z czterech prostokątów i dwóch kwadratów po złożeniu daje prostopadłościan.\n**Odpowiedź:** prostopadłościan",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ab0fc78e-5e41-5c65-a6d3-ab515c2d6e67",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Graniastosłup ma podstawę będącą $7$-kątem. Ile ścian ma ten graniastosłup?",
+      "correct_answer": "9",
+      "options": [
+        "7",
+        "9",
+        "14",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Graniastosłup ma $7$ ścian bocznych i $2$ podstawy, razem $7 + 2 = 9$ ścian.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6628e02b-6e8f-5508-a005-f7b4830fd6e4",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ostrosłup ma podstawę będącą $7$-kątem. Ile krawędzi ma ten ostrosłup?",
+      "correct_answer": "14",
+      "options": [
+        "8",
+        "14",
+        "16",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ostrosłup ma $7$ krawędzi podstawy i $7$ krawędzi bocznych, razem $14$.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6d701c41-f0dc-5dd0-a6da-5b4398f799b3",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile krawędzi ma prostopadłościan?",
+      "correct_answer": "12",
+      "options": [
+        "10",
+        "12",
+        "16",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Bryła \"prostopadłościan\" ma $12$ krawędzi. Liczymy je na modelu lub w siatce, pamiętając o krawędziach sklejanych.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd0a1b06-6f5d-5a3f-a369-d23dbdb34be3",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź długości $10$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "600 cm²",
+      "options": [
+        "400 cm²",
+        "60 cm²",
+        "1000 cm²",
+        "600 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Sześcian ma $6$ jednakowych kwadratowych ścian: $P = 6 \\cdot 10^2 = 600$ cm$^2$.\n**Odpowiedź:** 600 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa9bef74-ce34-5a3d-abbf-402b782cc7cd",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma wymiary $5$ cm, $2$ cm i $6$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "104 cm²",
+      "options": [
+        "104 cm²",
+        "80 cm²",
+        "52 cm²",
+        "60 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole powierzchni to suma pól trzech par ścian: $2(5 \\cdot 2 + 5 \\cdot 6 + 2 \\cdot 6) = 104$ cm$^2$.\n**Odpowiedź:** 104 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "45d9dfe5-2dbd-5903-a2dd-7529c10f4add",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oto kartonowa siatka. Składa się ona z sześciu jednakowych kwadratów. Jaka to bryła?",
+      "correct_answer": "sześcian",
+      "options": [
+        "graniastosłup trójkątny",
+        "ostrosłup czworokątny",
+        "sześcian",
+        "prostopadłościan"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Siatka złożona z sześciu jednakowych kwadratów po złożeniu daje sześcian.\n**Odpowiedź:** sześcian",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "388a4ccc-6433-5eb8-ada5-eaf230b1dd70",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Graniastosłup ma podstawę będącą $5$-kątem. Ile ścian ma ten graniastosłup?",
+      "correct_answer": "7",
+      "options": [
+        "10",
+        "5",
+        "7",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Graniastosłup ma $5$ ścian bocznych i $2$ podstawy, razem $5 + 2 = 7$ ścian.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c897648a-183e-5561-a5de-f8069211ff8f",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ostrosłup ma podstawę będącą $5$-kątem. Ile krawędzi ma ten ostrosłup?",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "6",
+        "12",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ostrosłup ma $5$ krawędzi podstawy i $5$ krawędzi bocznych, razem $10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "333c47b2-bc23-5334-a725-fe299ea14e6a",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile krawędzi ma ostrosłup czworokątny?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "6",
+        "12",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Bryła \"ostrosłup czworokątny\" ma $8$ krawędzi. Liczymy je na modelu lub w siatce, pamiętając o krawędziach sklejanych.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a919ba3e-85ef-5ebc-a469-d4bd18121536",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź długości $8$ cm. Jakie jest jego pole powierzchni?",
+      "correct_answer": "384 cm²",
+      "options": [
+        "512 cm²",
+        "48 cm²",
+        "256 cm²",
+        "384 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Sześcian ma $6$ jednakowych kwadratowych ścian: $P = 6 \\cdot 8^2 = 384$ cm$^2$.\n**Odpowiedź:** 384 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "904e4076-963f-5e48-a218-3ad8193443d8",
+      "generatedAt": "2026-11-18T12:23:59.852Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.852Z"
+}

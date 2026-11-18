@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "nwd_i_nww",
+  "categoryName": "Liczby i działania",
+  "topicName": "NWD i NWW",
+  "tasks": [
+    {
+      "content": "Oblicz największy wspólny dzielnik liczb $8$ i $10$.",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$8 = 2 \\cdot 4$ i $10 = 2 \\cdot 5$, a liczby $4$ i $5$ są względnie pierwsze. Wspólny czynnik to $2$, więc $\\operatorname{NWD}(8, 10) = 2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "416af8d0-62b1-5114-a595-f250e7fa24a0",
+      "generatedAt": "2026-11-18T12:23:59.819Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $12$ i $16$.",
+      "correct_answer": "48",
+      "options": [
+        "44",
+        "192",
+        "48",
+        "52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rozkładamy liczby na czynniki: $12 = 4 \\cdot 3$, $16 = 4 \\cdot 4$. NWW to iloczyn wszystkich czynników z największymi wykładnikami: $4 \\cdot 3 \\cdot 4 = 48$.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0b52aac-a8a7-5fb7-a5a5-e9c2c5568194",
+      "generatedAt": "2026-11-18T12:23:59.819Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Autobus jednej linii odjeżdża co $30$ minut, a drugi co $42$ minut. Oba odjechały jednocześnie o 8:00. Po ilu minutach znów odjadą jednocześnie?",
+      "correct_answer": "210",
+      "options": [
+        "210",
+        "204",
+        "216",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Czas do wspólnego odjazdu to NWW liczb $30$ i $42$. $30 = 6 \\cdot 5$, $42 = 6 \\cdot 7$, więc NWW $= 6 \\cdot 5 \\cdot 7 = 210$ minut.\n**Odpowiedź:** 210",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "12b8f79a-4df2-5443-a521-34bb7fbe834e",
+      "generatedAt": "2026-11-18T12:23:59.819Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwiaciarka ma $12$ róż i $18$ tulipanów. Chce przygotować jak najwięcej jednakowych bukietów i wykorzystać wszystkie kwiaty. Ile bukietów powstanie?",
+      "correct_answer": "6",
+      "options": [
+        "8",
+        "36",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba bukietów musi dzielić i $12$, i $18$, więc szukamy NWD. $\\operatorname{NWD}(12, 18) = 6$, czyli powstaną $6$$ bukiety.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c4bcdbb7-af87-5dcd-a9f8-eacfd873a055",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt o bokach $10$ cm i $25$ cm chcemy wyłożyć jednakowymi kwadratowymi płytkami o największym możliwym boku. Jaki jest bok płytki?",
+      "correct_answer": "5 cm",
+      "options": [
+        "10 cm",
+        "50 cm",
+        "6 cm",
+        "5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Bok płytki musi dzielić oba wymiary, więc szukamy NWD. $\\operatorname{NWD}(10, 25) = 5$, zatem bok płytki ma $5$ cm.\n**Odpowiedź:** 5 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "812efe7e-d676-5b39-acea-294351eb86ee",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $6$, $9$ i $15$.",
+      "correct_answer": "90",
+      "options": [
+        "87",
+        "810",
+        "93",
+        "90"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rozkłady to $6 = 3 \\cdot 2$, $9 = 3 \\cdot 3$, $15 = 3 \\cdot 5$. NWW $= 3 \\cdot 2 \\cdot 3 \\cdot 5 = 90$.\n**Odpowiedź:** 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7d52b6e1-7d0d-5957-a3ab-87b358acb6c7",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz największy wspólny dzielnik liczb $15$ i $18$.",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$15 = 3 \\cdot 5$ i $18 = 3 \\cdot 6$, a liczby $5$ i $6$ są względnie pierwsze. Wspólny czynnik to $3$, więc $\\operatorname{NWD}(15, 18) = 3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4ce2a150-02ce-583b-acd4-7f1734c219f2",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $15$ i $18$.",
+      "correct_answer": "90",
+      "options": [
+        "93",
+        "87",
+        "90",
+        "270"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozkładamy liczby na czynniki: $15 = 3 \\cdot 5$, $18 = 3 \\cdot 6$. NWW to iloczyn wszystkich czynników z największymi wykładnikami: $3 \\cdot 5 \\cdot 6 = 90$.\n**Odpowiedź:** 90",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "295cf742-a209-5f7a-a798-ea1c5dfc4f31",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Autobus jednej linii odjeżdża co $15$ minut, a drugi co $20$ minut. Oba odjechały jednocześnie o 8:00. Po ilu minutach znów odjadą jednocześnie?",
+      "correct_answer": "60",
+      "options": [
+        "35",
+        "55",
+        "65",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Czas do wspólnego odjazdu to NWW liczb $15$ i $20$. $15 = 5 \\cdot 3$, $20 = 5 \\cdot 4$, więc NWW $= 5 \\cdot 3 \\cdot 4 = 60$ minut.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f6dee67-353b-596a-af02-b47acad1dd27",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwiaciarka ma $12$ róż i $16$ tulipanów. Chce przygotować jak najwięcej jednakowych bukietów i wykorzystać wszystkie kwiaty. Ile bukietów powstanie?",
+      "correct_answer": "4",
+      "options": [
+        "12",
+        "5",
+        "4",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba bukietów musi dzielić i $12$, i $16$, więc szukamy NWD. $\\operatorname{NWD}(12, 16) = 4$, czyli powstaną $4$$ bukiety.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96e73f57-6c68-55d9-ab34-510cb257b30d",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt o bokach $10$ cm i $14$ cm chcemy wyłożyć jednakowymi kwadratowymi płytkami o największym możliwym boku. Jaki jest bok płytki?",
+      "correct_answer": "2 cm",
+      "options": [
+        "70 cm",
+        "35 cm",
+        "3 cm",
+        "2 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Bok płytki musi dzielić oba wymiary, więc szukamy NWD. $\\operatorname{NWD}(10, 14) = 2$, zatem bok płytki ma $2$ cm.\n**Odpowiedź:** 2 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8dae7458-40d4-5e05-aeb9-42844dc1bdec",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $9$, $12$ i $15$.",
+      "correct_answer": "180",
+      "options": [
+        "177",
+        "183",
+        "1620",
+        "180"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozkłady to $9 = 3 \\cdot 3$, $12 = 3 \\cdot 4$, $15 = 3 \\cdot 5$. NWW $= 3 \\cdot 3 \\cdot 4 \\cdot 5 = 180$.\n**Odpowiedź:** 180",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "233e9f1a-5cfe-50c2-abb0-ae4190aa0883",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz największy wspólny dzielnik liczb $12$ i $20$.",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$12 = 4 \\cdot 3$ i $20 = 4 \\cdot 5$, a liczby $3$ i $5$ są względnie pierwsze. Wspólny czynnik to $4$, więc $\\operatorname{NWD}(12, 20) = 4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4f545606-ffc0-50a7-a674-761d0688a4e7",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $25$ i $30$.",
+      "correct_answer": "150",
+      "options": [
+        "145",
+        "150",
+        "155",
+        "750"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozkładamy liczby na czynniki: $25 = 5 \\cdot 5$, $30 = 5 \\cdot 6$. NWW to iloczyn wszystkich czynników z największymi wykładnikami: $5 \\cdot 5 \\cdot 6 = 150$.\n**Odpowiedź:** 150",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "02564036-94cd-559a-acc0-b1b519f4328f",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Autobus jednej linii odjeżdża co $16$ minut, a drugi co $20$ minut. Oba odjechały jednocześnie o 8:00. Po ilu minutach znów odjadą jednocześnie?",
+      "correct_answer": "80",
+      "options": [
+        "36",
+        "80",
+        "84",
+        "76"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Czas do wspólnego odjazdu to NWW liczb $16$ i $20$. $16 = 4 \\cdot 4$, $20 = 4 \\cdot 5$, więc NWW $= 4 \\cdot 4 \\cdot 5 = 80$ minut.\n**Odpowiedź:** 80",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "120fce76-cfe3-5570-a8da-7cbcb7e9a60c",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwiaciarka ma $21$ róż i $28$ tulipanów. Chce przygotować jak najwięcej jednakowych bukietów i wykorzystać wszystkie kwiaty. Ile bukietów powstanie?",
+      "correct_answer": "7",
+      "options": [
+        "8",
+        "7",
+        "84",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba bukietów musi dzielić i $21$, i $28$, więc szukamy NWD. $\\operatorname{NWD}(21, 28) = 7$, czyli powstaną $7$$ bukiety.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "32684b9c-3d88-5714-a419-de376412e508",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt o bokach $30$ cm i $42$ cm chcemy wyłożyć jednakowymi kwadratowymi płytkami o największym możliwym boku. Jaki jest bok płytki?",
+      "correct_answer": "6 cm",
+      "options": [
+        "210 cm",
+        "35 cm",
+        "7 cm",
+        "6 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Bok płytki musi dzielić oba wymiary, więc szukamy NWD. $\\operatorname{NWD}(30, 42) = 6$, zatem bok płytki ma $6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bf40e9e2-c25d-5c97-aeb2-4baafa24efcf",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $6$, $15$ i $21$.",
+      "correct_answer": "210",
+      "options": [
+        "1890",
+        "213",
+        "210",
+        "207"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rozkłady to $6 = 3 \\cdot 2$, $15 = 3 \\cdot 5$, $21 = 3 \\cdot 7$. NWW $= 3 \\cdot 2 \\cdot 5 \\cdot 7 = 210$.\n**Odpowiedź:** 210",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "720ba3bd-26dd-586f-a298-199da04710d1",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz największy wspólny dzielnik liczb $12$ i $15$.",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$12 = 3 \\cdot 4$ i $15 = 3 \\cdot 5$, a liczby $4$ i $5$ są względnie pierwsze. Wspólny czynnik to $3$, więc $\\operatorname{NWD}(12, 15) = 3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6c7365c9-480e-584b-aa93-9e870eb84ecd",
+      "generatedAt": "2026-11-18T12:23:59.820Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz najmniejszą wspólną wielokrotność liczb $6$ i $10$.",
+      "correct_answer": "30",
+      "options": [
+        "60",
+        "32",
+        "30",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rozkładamy liczby na czynniki: $6 = 2 \\cdot 3$, $10 = 2 \\cdot 5$. NWW to iloczyn wszystkich czynników z największymi wykładnikami: $2 \\cdot 3 \\cdot 5 = 30$.\n**Odpowiedź:** 30",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "01c5f7c1-fac1-59d9-af9e-23b363290c71",
+      "generatedAt": "2026-11-18T12:23:59.821Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.821Z"
+}

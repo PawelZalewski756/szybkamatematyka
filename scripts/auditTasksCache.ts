@@ -8,9 +8,16 @@ import {
 } from "../lib/gemini/task-quality";
 import {
   answersEquivalent,
+  checkAnswerMatch,
   findEquivalentChoiceGroups,
+  normalizeAnswer,
 } from "../lib/math/answer-equiv";
 import { fmtNum } from "../lib/trening/seed/rng";
+import {
+  findBrokenSignSequences,
+  GENERIC_EXPLANATION_PREFIX,
+  MIN_EXPLANATION_LENGTH,
+} from "../lib/trening/seed/explain-task";
 import { listAllCachedTasks } from "../lib/trening/seed/tasks-cache-utils";
 
 async function main() {
@@ -28,6 +35,65 @@ async function main() {
     }
 
     const topic = `${task.exam_type}/${task.category}/${task.topic}`;
+
+    // explanation nie może być szablonowa ani zbyt krótka
+    const explanation = (task.explanation ?? "").trim();
+    if (explanation.startsWith(GENERIC_EXPLANATION_PREFIX)) {
+      issues.push({ id: task.id, topic, detail: "explanation: generic template" });
+    }
+    if (explanation.length < MIN_EXPLANATION_LENGTH) {
+      issues.push({
+        id: task.id,
+        topic,
+        detail: `explanation too short: ${explanation.length} chars`,
+      });
+    }
+
+    // sklejone znaki wewnątrz $...$ w content/options/explanation
+    const fields: Array<[string, string]> = [
+      ["content", task.content],
+      ...task.options.map(
+        (option, index) => [`options[${index}]`, option] as [string, string],
+      ),
+      ["explanation", explanation],
+    ];
+    for (const [field, value] of fields) {
+      const broken = findBrokenSignSequences(value);
+      if (broken.length > 0) {
+        issues.push({
+          id: task.id,
+          topic,
+          detail: `broken signs in ${field}: ${[...new Set(broken)].join(" ")}`,
+        });
+      }
+    }
+
+    // opcje zadań zamkniętych: dokładnie 4 unikalne odpowiedzi
+    if (task.answer_type === "choice") {
+      if (task.options.length !== 4) {
+        issues.push({
+          id: task.id,
+          topic,
+          detail: `mc: expected 4 options, got ${task.options.length}`,
+        });
+      }
+      const unique = new Set(task.options.map((option) => normalizeAnswer(option)));
+      if (unique.size !== task.options.length) {
+        issues.push({
+          id: task.id,
+          topic,
+          detail: `mc: duplicate options (${unique.size} unique of ${task.options.length})`,
+        });
+      }
+      if (!task.options.some((option) => checkAnswerMatch(option, task.correct_answer))) {
+        issues.push({
+          id: task.id,
+          topic,
+          detail: "mc: correct_answer missing from options",
+        });
+      }
+    }
+
     const fingerprint = task.content
       .replace(/[\u200B-\u200D\uFEFF]/g, "")
       .normalize("NFKC")
@@ -69,16 +135,29 @@ async function main() {
   console.log(`Problemów: ${issues.length}\n`);
 
   const mismatches = issues.filter((i) => i.detail.includes("mismatch"));
-  const broken = issues.filter((i) => i.detail.includes("broken"));
+  const broken = issues.filter((i) => i.detail.includes("broken explanation"));
   const mcBad = issues.filter((i) => i.detail.includes("not in options"));
   const duplicates = issues.filter((i) => i.detail.includes("duplicate content"));
   const equivalent = issues.filter((i) => i.detail.includes("equivalent options"));
+  const generic = issues.filter((i) => i.detail.includes("generic template"));
+  const tooShort = issues.filter((i) => i.detail.includes("explanation too short"));
+  const brokenSigns = issues.filter((i) => i.detail.includes("broken signs"));
+  const badOptions = issues.filter(
+    (i) =>
+      i.detail.includes("expected 4 options") ||
+      i.detail.includes("duplicate options") ||
+      i.detail.includes("correct_answer missing"),
+  );
 
   console.log(`  open mismatch (explanation ≠ correct_answer): ${mismatches.length}`);
   console.log(`  MC correct not in options: ${mcBad.length}`);
   console.log(`  broken explanation: ${broken.length}`);
   console.log(`  duplicate content: ${duplicates.length}`);
-  console.log(`  equivalent MC options: ${equivalent.length}\n`);
+  console.log(`  equivalent MC options: ${equivalent.length}`);
+  console.log(`  generic explanation template: ${generic.length}`);
+  console.log(`  explanation shorter than ${MIN_EXPLANATION_LENGTH} chars: ${tooShort.length}`);
+  console.log(`  broken sign sequences in $...$: ${brokenSigns.length}`);
+  console.log(`  MC options shape/correctness: ${badOptions.length}\n`);
 
   for (const issue of issues.slice(0, 25)) {
     console.log(`✗ [${issue.topic}] ${issue.detail}`);

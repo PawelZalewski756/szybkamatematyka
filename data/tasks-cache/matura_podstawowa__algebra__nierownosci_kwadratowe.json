@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "nierownosci_kwadratowe",
+  "categoryName": "Algebra i równania",
+  "topicName": "Nierówności kwadratowe",
+  "tasks": [
+    {
+      "content": "Rozwiąż nierówność $(x-1)(x-4)<0$.",
+      "correct_answer": "$(1,4)$",
+      "options": [
+        "$[1,4]$",
+        "$(-\\infty,1)\\cup(4,\\infty)$",
+        "$(4,2)$",
+        "$(1,4)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Parabola ma ramiona w górę, a miejsca zerowe $1$ i $4$. Wartości ujemne są między pierwiastkami: $x\\in(1,4)$.\n**Odpowiedź:** $(1,4)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "111fbd42-0702-51bd-afb9-19114133ea5f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-4)(x-8)\\le0$.",
+      "correct_answer": "$[4,8]$",
+      "options": [
+        "$(4,8)$",
+        "$[4,8]$",
+        "$[8,5]$",
+        "$(-\\infty,4]\\cup[8,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wartości niedodatnie leżą między pierwiastkami wraz z końcami: $x\\in[4,8]$.\n**Odpowiedź:** $[4,8]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e35a370-fbc7-5e1d-a491-1a87d4269fdd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2<9$.",
+      "correct_answer": "$(-3,3)$",
+      "options": [
+        "$(0,3)$",
+        "$[-3,3]$",
+        "$(-\\infty,-3)\\cup(3,\\infty)$",
+        "$(-3,3)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2-9<0$, czyli $(x-3)(x+3)<0$. Rozwiązanie to $x\\in(-3,3)$.\n**Odpowiedź:** $(-3,3)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fba7c620-ae31-537c-ae38-f1f1f6eff9d1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2\\ge9$.",
+      "correct_answer": "$(-\\infty,-3]\\cup[3,\\infty)$",
+      "options": [
+        "$(-3,3)$",
+        "$[-3,3]$",
+        "$(3,\\infty)$",
+        "$(-\\infty,-3]\\cup[3,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2-9\\ge0$, czyli $(x-3)(x+3)\\ge0$. Ramiona paraboli są w górę, więc $x\\in(-\\infty,-3]\\cup[3,\\infty)$.\n**Odpowiedź:** $(-\\infty,-3]\\cup[3,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2c09ed69-5646-5762-aa17-400352dc2393",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2-8x+12\\le0$.",
+      "correct_answer": "$[2,6]$",
+      "options": [
+        "$[-6,-2]$",
+        "$(-\\infty,2)\\cup(6,\\infty)$",
+        "$[2,6]$",
+        "$(2,6)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Lewa strona to $(x-2)(x-6)$, więc rozwiązaniem jest $[2,6]$.\n**Odpowiedź:** $[2,6]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f27a45e0-fd46-5e9a-a1aa-c9459ae6c102",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2+4>0$.",
+      "correct_answer": "zbiór liczb rzeczywistych",
+      "options": [
+        "zbiór liczb rzeczywistych",
+        "x>0",
+        "x>-4",
+        "zbiór pusty"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2\\ge0$, więc $x^2+4\\ge4>0$ dla każdej liczby rzeczywistej. Rozwiązaniem jest cały zbiór $\\mathbb{R}$.\n**Odpowiedź:** zbiór liczb rzeczywistych",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7be92c82-e9fb-58fe-a7a7-3aa3b2eee375",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-2)^2\\le0$.",
+      "correct_answer": "x=2",
+      "options": [
+        "zbiór liczb rzeczywistych",
+        "zbiór pusty",
+        "x=2",
+        "x\\le2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kwadrat jest nieujemny, więc $(x-2)^2\\le0$ tylko wtedy, gdy $(x-2)^2=0$, czyli $x=2$.\n**Odpowiedź:** x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69d8e37a-c351-561a-a7ed-80dc8b96bb11",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-1)(x-5)<0$.",
+      "correct_answer": "$(1,5)$",
+      "options": [
+        "$(1,5)$",
+        "$[1,5]$",
+        "$(5,2)$",
+        "$(-\\infty,1)\\cup(5,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Parabola ma ramiona w górę, a miejsca zerowe $1$ i $5$. Wartości ujemne są między pierwiastkami: $x\\in(1,5)$.\n**Odpowiedź:** $(1,5)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c1f4bf36-5996-5ee8-a8f3-53ac7eb38309",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2<64$.",
+      "correct_answer": "$(-8,8)$",
+      "options": [
+        "$(-8,8)$",
+        "$[-8,8]$",
+        "$(-\\infty,-8)\\cup(8,\\infty)$",
+        "$(0,8)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2-64<0$, czyli $(x-8)(x+8)<0$. Rozwiązanie to $x\\in(-8,8)$.\n**Odpowiedź:** $(-8,8)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9f3872f-e50c-572d-a942-317d0be131ce",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2<49$.",
+      "correct_answer": "$(-7,7)$",
+      "options": [
+        "$(0,7)$",
+        "$(-\\infty,-7)\\cup(7,\\infty)$",
+        "$(-7,7)$",
+        "$[-7,7]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2-49<0$, czyli $(x-7)(x+7)<0$. Rozwiązanie to $x\\in(-7,7)$.\n**Odpowiedź:** $(-7,7)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4eff974-be42-55da-a15c-de195520d2e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2\\ge16$.",
+      "correct_answer": "$(-\\infty,-4]\\cup[4,\\infty)$",
+      "options": [
+        "$[-4,4]$",
+        "$(4,\\infty)$",
+        "$(-\\infty,-4]\\cup[4,\\infty)$",
+        "$(-4,4)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2-16\\ge0$, czyli $(x-4)(x+4)\\ge0$. Ramiona paraboli są w górę, więc $x\\in(-\\infty,-4]\\cup[4,\\infty)$.\n**Odpowiedź:** $(-\\infty,-4]\\cup[4,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a51859e9-d103-5200-a5f7-807462b9ee6a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2-9x+18\\le0$.",
+      "correct_answer": "$[3,6]$",
+      "options": [
+        "$(3,6)$",
+        "$(-\\infty,3)\\cup(6,\\infty)$",
+        "$[-6,-3]$",
+        "$[3,6]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Lewa strona to $(x-3)(x-6)$, więc rozwiązaniem jest $[3,6]$.\n**Odpowiedź:** $[3,6]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a80799a-f6bd-518e-a4c0-7f3839d77d6b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2+6>0$.",
+      "correct_answer": "zbiór liczb rzeczywistych",
+      "options": [
+        "x>0",
+        "zbiór liczb rzeczywistych",
+        "x>-6",
+        "zbiór pusty"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2\\ge0$, więc $x^2+6\\ge6>0$ dla każdej liczby rzeczywistej. Rozwiązaniem jest cały zbiór $\\mathbb{R}$.\n**Odpowiedź:** zbiór liczb rzeczywistych",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99e8fda7-248e-531a-a25a-635078481e1d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-3)^2\\le0$.",
+      "correct_answer": "x=3",
+      "options": [
+        "zbiór pusty",
+        "x=3",
+        "x\\le3",
+        "zbiór liczb rzeczywistych"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kwadrat jest nieujemny, więc $(x-3)^2\\le0$ tylko wtedy, gdy $(x-3)^2=0$, czyli $x=3$.\n**Odpowiedź:** x=3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6b7b84e3-bfd6-59dd-a2ac-9ab17e4aa913",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-4)(x-8)<0$.",
+      "correct_answer": "$(4,8)$",
+      "options": [
+        "$(4,8)$",
+        "$[4,8]$",
+        "$(-\\infty,4)\\cup(8,\\infty)$",
+        "$(8,5)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Parabola ma ramiona w górę, a miejsca zerowe $4$ i $8$. Wartości ujemne są między pierwiastkami: $x\\in(4,8)$.\n**Odpowiedź:** $(4,8)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "174c2256-adf9-5866-a57d-74e17b05e029",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-3)(x-6)\\le0$.",
+      "correct_answer": "$[3,6]$",
+      "options": [
+        "$[3,6]$",
+        "$(-\\infty,3]\\cup[6,\\infty)$",
+        "$[6,4]$",
+        "$(3,6)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wartości niedodatnie leżą między pierwiastkami wraz z końcami: $x\\in[3,6]$.\n**Odpowiedź:** $[3,6]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bec0067f-22f6-5bf9-aa32-c2f715027dbf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2\\ge64$.",
+      "correct_answer": "$(-\\infty,-8]\\cup[8,\\infty)$",
+      "options": [
+        "$(-8,8)$",
+        "$[-8,8]$",
+        "$(8,\\infty)$",
+        "$(-\\infty,-8]\\cup[8,\\infty)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x^2-64\\ge0$, czyli $(x-8)(x+8)\\ge0$. Ramiona paraboli są w górę, więc $x\\in(-\\infty,-8]\\cup[8,\\infty)$.\n**Odpowiedź:** $(-\\infty,-8]\\cup[8,\\infty)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "082b31d0-a14c-5682-ac97-dfa8c85a8ff4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2-11x+28\\le0$.",
+      "correct_answer": "$[4,7]$",
+      "options": [
+        "$(4,7)$",
+        "$(-\\infty,4)\\cup(7,\\infty)$",
+        "$[4,7]$",
+        "$[-7,-4]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Lewa strona to $(x-4)(x-7)$, więc rozwiązaniem jest $[4,7]$.\n**Odpowiedź:** $[4,7]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aae0b2dc-2309-59ea-a12e-707a77476bc6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $x^2-10x+21\\le0$.",
+      "correct_answer": "$[3,7]$",
+      "options": [
+        "$(-\\infty,3)\\cup(7,\\infty)$",
+        "$(3,7)$",
+        "$[3,7]$",
+        "$[-7,-3]$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Lewa strona to $(x-3)(x-7)$, więc rozwiązaniem jest $[3,7]$.\n**Odpowiedź:** $[3,7]$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "79a33ee7-5cbd-5910-a6ad-5d0bb411f5b5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $(x-5)^2\\le0$.",
+      "correct_answer": "x=5",
+      "options": [
+        "zbiór liczb rzeczywistych",
+        "zbiór pusty",
+        "x\\le5",
+        "x=5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kwadrat jest nieujemny, więc $(x-5)^2\\le0$ tylko wtedy, gdy $(x-5)^2=0$, czyli $x=5$.\n**Odpowiedź:** x=5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c6b0e4f9-1c49-56b8-a0d7-5a3ae389489d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "optymalizacja",
+  "topic": "pochodna",
+  "categoryName": "Optymalizacja",
+  "topicName": "Pochodna funkcji",
+  "tasks": [
+    {
+      "content": "Funkcja $f(x)=x^3+3x+1$. Oblicz $f'(0)$.",
+      "correct_answer": "3",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=3x^2+3$, więc $f'(0)=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ddafc1de-cf4b-50f6-aa7c-90200786ac68",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=2x^2-4x+5$. Pochodna $f'(x)$ jest równa:",
+      "correct_answer": "$4x-4$",
+      "options": [
+        "$5x-4$",
+        "$2x-4$",
+        "$4x-4$",
+        "$4x-3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pochodna $2x^2$ to $4x$, pochodna $-4x$ to $-4$, a stała $5$ ma pochodną $0$. Zatem $f'(x)=4x-4$.\n**Odpowiedź:** $4x-4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8f09f8af-ba86-5657-affe-3b3661a62f70",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=\\frac1x$. Oblicz $f'(3)$.",
+      "correct_answer": "$-\\frac{1}{9}$",
+      "options": [
+        "$\\frac{1}{9}$",
+        "$-\\frac{1}{3}$",
+        "$-\\frac{1}{9}$",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=-\\frac{1}{x^2}$, więc $f'(3)=-\\frac{1}{9}$.\n**Odpowiedź:** $-\\frac{1}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a1823c7d-f92f-5a19-a78c-387adaee1f8d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=\\sqrt{x}$. Oblicz $f'(16)$.",
+      "correct_answer": "$\\frac{1}{8}$",
+      "options": [
+        "$\\frac{1}{32}$",
+        "8",
+        "$\\frac{1}{8}$",
+        "$\\frac{1}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=\\frac{1}{2\\sqrt{x}}$, więc $f'(16)=\\frac{1}{2\\cdot4}=\\frac{1}{8}$.\n**Odpowiedź:** $\\frac{1}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2bef156d-687d-5911-a2c2-63385b5f1d24",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaki jest współczynnik kierunkowy stycznej do wykresu $f(x)=x^2-4x$ w punkcie o odciętej $x=5$?",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=2x-4$, więc $f'(5)=6$. To właśnie współczynnik kierunkowy stycznej.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7619e0ed-2183-5dd4-a7da-8a613d54ce16",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla jakiego $x$ pochodna funkcji $f(x)=x^2-10x$ jest równa zero?",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "25",
+        "-5",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=2x-10$, więc $2x-10=0$ daje $x=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4f681cda-836a-5602-ae34-ac816e937475",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=x^4-2x^2$. Oblicz $f'(1)$.",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$f'(x)=4x^3-4x$, więc $f'(1)=4-4=0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b180e705-b1f3-5e2e-a147-3b0184cf435a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=x^3+2x^2+3x-5$. Oblicz $f'(-2)$.",
+      "correct_answer": "7",
+      "options": [
+        "6",
+        "11",
+        "7",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=3x^2+4x+3$, więc $f'(-2)=7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eeb24153-d065-52e9-a78f-6677177c874c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=2x^2+1$. Pochodna $f'(x)$ jest równa:",
+      "correct_answer": "$4x$",
+      "options": [
+        "$4x+1$",
+        "$2x$",
+        "$4x$",
+        "$5x$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pochodna $2x^2$ to $4x$, pochodna $$ to $0$, a stała $1$ ma pochodną $0$. Zatem $f'(x)=4x$.\n**Odpowiedź:** $4x$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b9006ec1-5361-5547-a2dd-3dcab2f3bf38",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=\\frac1x$. Oblicz $f'(4)$.",
+      "correct_answer": "$-\\frac{1}{16}$",
+      "options": [
+        "-4",
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{16}$",
+        "$\\frac{1}{16}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=-\\frac{1}{x^2}$, więc $f'(4)=-\\frac{1}{16}$.\n**Odpowiedź:** $-\\frac{1}{16}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae95e311-b080-5634-a3d9-83831d55be04",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaki jest współczynnik kierunkowy stycznej do wykresu $f(x)=x^2-2x$ w punkcie o odciętej $x=1$?",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "4",
+        "1",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=2x-2$, więc $f'(1)=0$. To właśnie współczynnik kierunkowy stycznej.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "16a95f4e-ae9e-5036-ae78-21fbfd98e7a4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaki jest współczynnik kierunkowy stycznej do wykresu $f(x)=x^2-4x$ w punkcie o odciętej $x=2$?",
+      "correct_answer": "0",
+      "options": [
+        "8",
+        "1",
+        "0",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=2x-4$, więc $f'(2)=0$. To właśnie współczynnik kierunkowy stycznej.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "65326813-424f-574e-a919-fd80d8810803",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla jakiego $x$ pochodna funkcji $f(x)=x^2-6x$ jest równa zero?",
+      "correct_answer": "3",
+      "options": [
+        "9",
+        "6",
+        "3",
+        "-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=2x-6$, więc $2x-6=0$ daje $x=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f9fb0df2-8170-5c63-aa6f-320931b20831",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=x^3-x^2-x-4$. Oblicz $f'(3)$.",
+      "correct_answer": "20",
+      "options": [
+        "21",
+        "19",
+        "23",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$f'(x)=3x^2-2x-1$, więc $f'(3)=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "509f861f-3373-5104-a76d-5729693a997e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=x^3-2x^2-x-2$. Oblicz $f'(3)$.",
+      "correct_answer": "14",
+      "options": [
+        "20",
+        "13",
+        "14",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$f'(x)=3x^2-4x-1$, więc $f'(3)=14$.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4af39303-48e1-5e22-a7df-544daa0f6c1d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=4x^2-2x+5$. Pochodna $f'(x)$ jest równa:",
+      "correct_answer": "$8x-2$",
+      "options": [
+        "$8x-2$",
+        "$4x-2$",
+        "$9x-2$",
+        "$8x-1$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pochodna $4x^2$ to $8x$, pochodna $-2x$ to $-2$, a stała $5$ ma pochodną $0$. Zatem $f'(x)=8x-2$.\n**Odpowiedź:** $8x-2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "886fced8-ca28-5d0a-aca9-268fbcf19d4f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=\\frac1x$. Oblicz $f'(2)$.",
+      "correct_answer": "$-\\frac{1}{4}$",
+      "options": [
+        "$-\\frac{1}{4}$",
+        "$-\\frac{1}{2}$",
+        "-2",
+        "$\\frac{1}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$f'(x)=-\\frac{1}{x^2}$, więc $f'(2)=-\\frac{1}{4}$.\n**Odpowiedź:** $-\\frac{1}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c32baf14-a391-522c-a5c3-252f67f8cc51",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Funkcja $f(x)=\\sqrt{x}$. Oblicz $f'(25)$.",
+      "correct_answer": "$\\frac{1}{10}$",
+      "options": [
+        "10",
+        "$\\frac{1}{10}$",
+        "$\\frac{1}{50}$",
+        "$\\frac{1}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$f'(x)=\\frac{1}{2\\sqrt{x}}$, więc $f'(25)=\\frac{1}{2\\cdot5}=\\frac{1}{10}$.\n**Odpowiedź:** $\\frac{1}{10}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9da6ed74-c63c-5ba1-a217-a4a2359909fb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaki jest współczynnik kierunkowy stycznej do wykresu $f(x)=x^2-3x$ w punkcie o odciętej $x=4$?",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "11",
+        "4",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$f'(x)=2x-3$, więc $f'(4)=5$. To właśnie współczynnik kierunkowy stycznej.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8c632a69-dc51-5ced-aec5-36e388eee926",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dla jakiego $x$ pochodna funkcji $f(x)=x^2-8x$ jest równa zero?",
+      "correct_answer": "4",
+      "options": [
+        "8",
+        "4",
+        "16",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$f'(x)=2x-8$, więc $2x-8=0$ daje $x=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b41c63c5-b468-50c8-a5af-fcd98a47ae47",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

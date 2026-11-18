@@ -60,3 +60,29 @@ Formularz „Zgłoś błąd” w stopce wysyła zgłoszenie przez Resend na adre
 zweryfikowana w Resend, odbiorcą musi być adres właściciela konta, a nadawcą
 `Szybka Matematyka <onboarding@resend.dev>`. Po dodaniu rekordów SPF i DKIM
 można użyć dowolnego adresu w domenie. Szczegóły w `docs/DEPLOY.md`.
+
+## Przeprosiny za zgłoszenie błędu (Resend)
+
+Po zgłoszeniu błędu użytkownik może dostać mail z przeprosinami i informacją
+o miesiącu Pro. Szablon:
+
+- [`docs/email-templates/przeprosiny-zgloszenie-bledu.md`](./email-templates/przeprosiny-zgloszenie-bledu.md)
+- [`docs/email-templates/przeprosiny-zgloszenie-bledu.html`](./email-templates/przeprosiny-zgloszenie-bledu.html)
+
+Wysyłka (wymaga `RESEND_API_KEY`; nadawca z `BUG_REPORT_FROM` lub
+`WELCOME_EMAIL_FROM`):
+
+```bash
+BUG_REPORTER_EMAILS="adres1@example.com,adres2@example.com" \
+  npx tsx scripts/sendBugReportApology.ts --send
+```
+
+Podgląd bez wysyłki:
+
+```bash
+npx tsx scripts/sendBugReportApology.ts --dry-run
+```
+
+Pro przyznane ręcznie ma `pro_source = 'gift'`; nie tworzy subskrypcji Stripe,
+więc użytkownik nie może jej anulować. Po 30 dniach dostęp wygasa
+automatycznie (RPC `get_my_subscription` zwraca wtedy `free`).

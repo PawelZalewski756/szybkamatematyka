@@ -1,15 +1,23 @@
 import { describe, expect, it } from "vitest";
 import { listCkeTopicsForExam } from "@/lib/trening/cke-curriculum";
 import { getTopicSummary, TOPIC_SUMMARIES } from "@/lib/trening/summaries";
+import { SEED_MATERIALS } from "@/lib/trening/seed/materials";
 
 describe("topic summaries", () => {
   it("covers every CKE topic for matura and 8 klasa", () => {
     for (const examType of ["matura_podstawowa", "8_klasa"] as const) {
       for (const topic of listCkeTopicsForExam(examType)) {
+        const material = SEED_MATERIALS.find(
+          (entry) =>
+            entry.exam_type === examType &&
+            entry.category === topic.category &&
+            entry.topic === topic.topic,
+        );
         const summary = getTopicSummary(
           examType,
           topic.category,
           topic.topic,
+          material?.content,
         );
         expect(
           summary,

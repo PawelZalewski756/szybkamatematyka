@@ -214,8 +214,8 @@ export function TopicPageClient({
     initialMaterialError ?? null,
   );
   const summary = useMemo(
-    () => getTopicSummary(examType, category, topic),
-    [examType, category, topic],
+    () => getTopicSummary(examType, category, topic, material?.content),
+    [examType, category, topic, material?.content],
   );
   const categoryLabel =
     findCkeCategoryLabel(examType, category) ?? formatTreningLabel(category);

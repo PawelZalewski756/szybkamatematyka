@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "wzory_viete",
+  "categoryName": "Algebra i równania",
+  "topicName": "Wzory Viète'a",
+  "tasks": [
+    {
+      "content": "Suma pierwiastków równania $x^2-6x+5=0$ wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ze wzorów Viète'a $x_1+x_2=-\\frac{b}{a}=6$. Pierwiastki to $1$ i $5$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5322f86b-ea24-5293-a7b3-64ad343c6067",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloczyn pierwiastków równania $x^2-3x+2=0$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "5",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ze wzorów Viète'a $x_1x_2=\\frac{c}{a}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f8c5f49-9dfd-55c4-ab51-a5db79fb5233",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-5x+6=0$ to $x_1$ i $x_2$. Oblicz $x_1^2+x_2^2$.",
+      "correct_answer": "13",
+      "options": [
+        "13",
+        "19",
+        "37",
+        "-13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=5^2-2\\cdot6=13$.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f0c8094-c387-5402-aad2-56a03b2dab58",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-6x+8=0$ to $x_1$ i $x_2$. Oblicz $\\frac{1}{x_1}+\\frac{1}{x_2}$.",
+      "correct_answer": "$\\frac{3}{4}$",
+      "options": [
+        "2",
+        "$\\frac{4}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\frac{1}{x_1}+\\frac{1}{x_2}=\\frac{x_1+x_2}{x_1x_2}=\\frac{6}{8}=\\frac{3}{4}$.\n**Odpowiedź:** $\\frac{3}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fbada010-92fc-5a18-a31e-966c43cb994f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Równanie kwadratowe, którego pierwiastkami są $2$ i $5$, ma postać:",
+      "correct_answer": "$x^2-7x+10$",
+      "options": [
+        "$x^2+7x-10$",
+        "$x^2-7x-10$",
+        "$x^2-7x+10$",
+        "$x^2+7x+10$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2-(x_1+x_2)x+x_1x_2=0$, czyli $x^2-7x+10=0$.\n**Odpowiedź:** $x^2-7x+10$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "035c73e0-d2da-5155-a45d-c52b17da65a2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-12x+32=0$ to $x_1$ i $x_2$. Oblicz $|x_1-x_2|$.",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "32",
+        "5",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$|x_1-x_2|=\\sqrt{(x_1+x_2)^2-4x_1x_2}$. Pierwiastki to $4$ i $8$, więc różnica wynosi $4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3310afbb-8f85-5391-ad9f-9d83913b9e93",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-6x+8=0$ to $x_1$ i $x_2$. Oblicz $x_1^3+x_2^3$.",
+      "correct_answer": "72",
+      "options": [
+        "216",
+        "360",
+        "168",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)=6^3-3\\cdot8\\cdot6=72$.\n**Odpowiedź:** 72",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6dc85a12-3485-5880-a26c-8057669f96b1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma pierwiastków równania $x^2-8x+12=0$ wynosi:",
+      "correct_answer": "8",
+      "options": [
+        "9",
+        "8",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ze wzorów Viète'a $x_1+x_2=-\\frac{b}{a}=8$. Pierwiastki to $2$ i $6$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f292bf9-d451-5e6b-aae2-0f79bda8a0d4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloczyn pierwiastków równania $x^2-12x+32=0$ wynosi:",
+      "correct_answer": "32",
+      "options": [
+        "32",
+        "12",
+        "31",
+        "44"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ze wzorów Viète'a $x_1x_2=\\frac{c}{a}=32$.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "491af982-274f-531d-ae0c-afe5324e76fa",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-10x+24=0$ to $x_1$ i $x_2$. Oblicz $x_1^2+x_2^2$.",
+      "correct_answer": "52",
+      "options": [
+        "76",
+        "-52",
+        "148",
+        "52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=10^2-2\\cdot24=52$.\n**Odpowiedź:** 52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "23eb9a16-5be9-5228-a619-d0d38445a300",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-10x+21=0$ to $x_1$ i $x_2$. Oblicz $\\frac{1}{x_1}+\\frac{1}{x_2}$.",
+      "correct_answer": "$\\frac{10}{21}$",
+      "options": [
+        "$\\frac{21}{10}$",
+        "$\\frac{5}{11}$",
+        "11",
+        "$\\frac{10}{21}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\frac{1}{x_1}+\\frac{1}{x_2}=\\frac{x_1+x_2}{x_1x_2}=\\frac{10}{21}=\\frac{10}{21}$.\n**Odpowiedź:** $\\frac{10}{21}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "45f3d49e-7d40-5e23-a84c-914c78ad091d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Równanie kwadratowe, którego pierwiastkami są $4$ i $5$, ma postać:",
+      "correct_answer": "$x^2-9x+20$",
+      "options": [
+        "$x^2-9x-20$",
+        "$x^2+9x-20$",
+        "$x^2-9x+20$",
+        "$x^2+9x+20$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2-(x_1+x_2)x+x_1x_2=0$, czyli $x^2-9x+20=0$.\n**Odpowiedź:** $x^2-9x+20$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9e3e7c9e-ebf6-5b2c-a0c4-4c68cabb85ec",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-13x+40=0$ to $x_1$ i $x_2$. Oblicz $|x_1-x_2|$.",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "4",
+        "40",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$|x_1-x_2|=\\sqrt{(x_1+x_2)^2-4x_1x_2}$. Pierwiastki to $5$ i $8$, więc różnica wynosi $3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac358941-95e9-5661-a8a7-7b1b22cbb975",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-8x+15=0$ to $x_1$ i $x_2$. Oblicz $x_1^3+x_2^3$.",
+      "correct_answer": "152",
+      "options": [
+        "152",
+        "872",
+        "512",
+        "392"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)=8^3-3\\cdot15\\cdot8=152$.\n**Odpowiedź:** 152",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "969b54e3-503d-5e24-a757-179f323910c3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma pierwiastków równania $x^2-4x+3=0$ wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ze wzorów Viète'a $x_1+x_2=-\\frac{b}{a}=4$. Pierwiastki to $1$ i $3$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "894dbb1c-1b0c-5478-a739-d8fa6a07c5e5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloczyn pierwiastków równania $x^2-9x+20=0$ wynosi:",
+      "correct_answer": "20",
+      "options": [
+        "9",
+        "20",
+        "19",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ze wzorów Viète'a $x_1x_2=\\frac{c}{a}=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a4897407-762d-5bc9-af9d-0e670dc5fca4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-3x+2=0$ to $x_1$ i $x_2$. Oblicz $x_1^2+x_2^2$.",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "7",
+        "-5",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2=3^2-2\\cdot2=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0ecd117d-fc70-57ca-ae20-454082856d70",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-9x+18=0$ to $x_1$ i $x_2$. Oblicz $\\frac{1}{x_1}+\\frac{1}{x_2}$.",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{9}{19}$",
+        "$2$",
+        "$\\frac{1}{2}$",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\frac{1}{x_1}+\\frac{1}{x_2}=\\frac{x_1+x_2}{x_1x_2}=\\frac{9}{18}=\\frac{1}{2}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8ec42b9a-9a0a-5426-a084-049d22659a71",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Równanie kwadratowe, którego pierwiastkami są $2$ i $4$, ma postać:",
+      "correct_answer": "$x^2-6x+8$",
+      "options": [
+        "$x^2-6x-8$",
+        "$x^2+6x+8$",
+        "$x^2-6x+8$",
+        "$x^2+6x-8$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x^2-(x_1+x_2)x+x_1x_2=0$, czyli $x^2-6x+8=0$.\n**Odpowiedź:** $x^2-6x+8$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "255e0bf7-c431-5f7f-ab91-1e684002c4cb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pierwiastki równania $x^2-6x+5=0$ to $x_1$ i $x_2$. Oblicz $|x_1-x_2|$.",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$|x_1-x_2|=\\sqrt{(x_1+x_2)^2-4x_1x_2}$. Pierwiastki to $1$ i $5$, więc różnica wynosi $4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04df9631-11ed-5e78-a3e4-8158cfa88f60",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

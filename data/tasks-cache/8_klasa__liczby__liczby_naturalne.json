@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "liczby_naturalne",
+  "categoryName": "Liczby i działania",
+  "topicName": "Liczby naturalne i zapis dziesiątkowy",
+  "tasks": [
+    {
+      "content": "W liczbie $5138$ cyfra w rzędzie setek to:",
+      "correct_answer": "1",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfrę setek odczytujemy jako trzecią cyfrę od prawej. W liczbie $5138$ jest nią $1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3977a7dd-82a9-5866-a1ec-02c2000cda8b",
+      "generatedAt": "2026-11-18T12:23:59.811Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $2546$ zapisana w postaci sumy składników to:",
+      "correct_answer": "2000 + 500 + 40 + 6",
+      "options": [
+        "2000 + 500 + 4 + 60",
+        "2000 + 500 + 40 + 6",
+        "2000 + 50 + 400 + 6",
+        "200 + 5000 + 40 + 6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfra tysięcy to $2$, setek - $5$, dziesiątek - $4$, jedności - $6$. Dlatego $2546 = 2000 + 500 + 40 + 6$.\n**Odpowiedź:** 2000 + 500 + 40 + 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7b499c6f-28a8-5d81-acd7-043272b495f8",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba czterocyfrowa, którą można zapisać za pomocą cyfr $3, 8, 7, 5$ (każdej dokładnie raz), to:",
+      "correct_answer": "8753",
+      "options": [
+        "8753",
+        "8573",
+        "3578",
+        "7853"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Aby liczba była największa, na początku stawiamy największą cyfrę, potem kolejne coraz mniejsze. Daje to $8753$.\n**Odpowiedź:** 8753",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da5b0cb4-cc0d-5c4a-a9de-c200c01e517f",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $7727$ do pełnych setek.",
+      "correct_answer": "7700",
+      "options": [
+        "7727",
+        "7800",
+        "7700",
+        "7600"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfra dziesiątek to $2$, więc zaokrąglamy w dół. Wynik to $7700$.\n**Odpowiedź:** 7700",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3dc3e6de-62d1-5c17-ad3d-b87fbcc045b1",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O ile większa jest liczba $5141$ od liczby $4657$?",
+      "correct_answer": "484",
+      "options": [
+        "474",
+        "494",
+        "484",
+        "584"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy mniejszą liczbę od większej: $5141 - 4657 = 484$.\n**Odpowiedź:** 484",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2108da94-bcf6-5cd6-aa5c-be9d70c31a6d",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Suma cyfr liczby $8526$ wynosi:",
+      "correct_answer": "21",
+      "options": [
+        "21",
+        "20",
+        "22",
+        "23"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy wszystkie cyfry liczby: $8 + 5 + 2 + 6 = 21$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "751798de-7b86-53cc-aae7-a5a2e33cbc31",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W liczbie $7396$ cyfra w rzędzie setek to:",
+      "correct_answer": "3",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfrę setek odczytujemy jako trzecią cyfrę od prawej. W liczbie $7396$ jest nią $3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f1829071-e1fd-54eb-a3b6-f6aa20243944",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $4134$ zapisana w postaci sumy składników to:",
+      "correct_answer": "4000 + 100 + 30 + 4",
+      "options": [
+        "4000 + 10 + 300 + 4",
+        "4000 + 100 + 30 + 4",
+        "4000 + 100 + 3 + 40",
+        "400 + 1000 + 30 + 4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfra tysięcy to $4$, setek - $1$, dziesiątek - $3$, jedności - $4$. Dlatego $4134 = 4000 + 100 + 30 + 4$.\n**Odpowiedź:** 4000 + 100 + 30 + 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a786cf4c-9d01-5211-ab00-8e4edc1061f7",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba czterocyfrowa, którą można zapisać za pomocą cyfr $2, 9, 4, 3$ (każdej dokładnie raz), to:",
+      "correct_answer": "9432",
+      "options": [
+        "9432",
+        "4932",
+        "9342",
+        "2349"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Aby liczba była największa, na początku stawiamy największą cyfrę, potem kolejne coraz mniejsze. Daje to $9432$.\n**Odpowiedź:** 9432",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c182f2ab-d7aa-5738-a96f-426dd811b93b",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $3745$ do pełnych setek.",
+      "correct_answer": "3700",
+      "options": [
+        "3800",
+        "3745",
+        "3700",
+        "3600"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfra dziesiątek to $4$, więc zaokrąglamy w dół. Wynik to $3700$.\n**Odpowiedź:** 3700",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8f82955-fff9-5b37-aa9e-06399f26a39e",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O ile większa jest liczba $5477$ od liczby $3108$?",
+      "correct_answer": "2369",
+      "options": [
+        "2379",
+        "2359",
+        "2469",
+        "2369"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy mniejszą liczbę od większej: $5477 - 3108 = 2369$.\n**Odpowiedź:** 2369",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96174536-8470-5455-a3c6-433bea633f33",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Suma cyfr liczby $7666$ wynosi:",
+      "correct_answer": "25",
+      "options": [
+        "26",
+        "25",
+        "27",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodajemy wszystkie cyfry liczby: $7 + 6 + 6 + 6 = 25$.\n**Odpowiedź:** 25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "87103080-b642-5630-a2a0-f71e1b8115f1",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W liczbie $7356$ cyfra w rzędzie setek to:",
+      "correct_answer": "3",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfrę setek odczytujemy jako trzecią cyfrę od prawej. W liczbie $7356$ jest nią $3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cafaec25-d56f-5cd9-aced-d6a94f09d9a6",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $9834$ zapisana w postaci sumy składników to:",
+      "correct_answer": "9000 + 800 + 30 + 4",
+      "options": [
+        "9000 + 800 + 3 + 40",
+        "9000 + 80 + 300 + 4",
+        "9000 + 800 + 30 + 4",
+        "900 + 8000 + 30 + 4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfra tysięcy to $9$, setek - $8$, dziesiątek - $3$, jedności - $4$. Dlatego $9834 = 9000 + 800 + 30 + 4$.\n**Odpowiedź:** 9000 + 800 + 30 + 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "15c7a3f2-0e1b-5beb-a56a-e58d1fcf2b5e",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba czterocyfrowa, którą można zapisać za pomocą cyfr $7, 3, 5, 1$ (każdej dokładnie raz), to:",
+      "correct_answer": "7531",
+      "options": [
+        "7531",
+        "1357",
+        "7351",
+        "5731"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Aby liczba była największa, na początku stawiamy największą cyfrę, potem kolejne coraz mniejsze. Daje to $7531$.\n**Odpowiedź:** 7531",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ecd7ede4-4dc6-5910-a339-de66d1ec75c9",
+      "generatedAt": "2026-11-18T12:23:59.814Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $7347$ do pełnych setek.",
+      "correct_answer": "7300",
+      "options": [
+        "7200",
+        "7347",
+        "7400",
+        "7300"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfra dziesiątek to $4$, więc zaokrąglamy w dół. Wynik to $7300$.\n**Odpowiedź:** 7300",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c060e29e-9214-5e05-aa56-f052d413274f",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "O ile większa jest liczba $5883$ od liczby $3819$?",
+      "correct_answer": "2064",
+      "options": [
+        "2064",
+        "2054",
+        "2074",
+        "2164"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy mniejszą liczbę od większej: $5883 - 3819 = 2064$.\n**Odpowiedź:** 2064",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1506e142-f8e4-5e1a-a25b-1d961e4ac7da",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Suma cyfr liczby $1219$ wynosi:",
+      "correct_answer": "13",
+      "options": [
+        "13",
+        "15",
+        "12",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodajemy wszystkie cyfry liczby: $1 + 2 + 1 + 9 = 13$.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ce4bcb36-d1db-5b93-ac5f-e96787a1be35",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W liczbie $6252$ cyfra w rzędzie setek to:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "5",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfrę setek odczytujemy jako trzecią cyfrę od prawej. W liczbie $6252$ jest nią $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "41ec5db8-e447-5225-ae9c-d24f6edde5a5",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $3862$ zapisana w postaci sumy składników to:",
+      "correct_answer": "3000 + 800 + 60 + 2",
+      "options": [
+        "3000 + 800 + 6 + 20",
+        "300 + 8000 + 60 + 2",
+        "3000 + 800 + 60 + 2",
+        "3000 + 80 + 600 + 2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfra tysięcy to $3$, setek - $8$, dziesiątek - $6$, jedności - $2$. Dlatego $3862 = 3000 + 800 + 60 + 2$.\n**Odpowiedź:** 3000 + 800 + 60 + 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5764c6ef-5701-5999-aee8-44663f6fd8cb",
+      "generatedAt": "2026-11-18T12:23:59.815Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.815Z"
+}

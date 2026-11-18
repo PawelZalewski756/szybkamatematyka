@@ -1,5 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
+  effectiveSubscriptionStatus,
+  isGiftPro,
   isPro,
   isProStatus,
   normalizeSubscriptionStatus,
@@ -33,6 +35,7 @@ describe("isPro", () => {
       planId: null,
       currentPeriodEnd: null,
       cancelAtPeriodEnd: false,
+      source: "stripe",
     };
     expect(isPro(snap)).toBe(true);
   });
@@ -76,5 +79,33 @@ describe("normalizeSubscriptionStatus - mapowanie statusów Stripe", () => {
   it("jest niewrażliwy na wielkość liter i białe znaki", () => {
     expect(normalizeSubscriptionStatus("  ACTIVE  ")).toBe("active");
     expect(normalizeSubscriptionStatus("Trialing")).toBe("trialing");
+  });
+});
+
+
+describe("Pro przyznane ręcznie", () => {
+  it("gift wygasa po subscription_current_period_end", () => {
+    const past = new Date(Date.now() - 60_000).toISOString();
+    const future = new Date(Date.now() + 60_000).toISOString();
+
+    expect(effectiveSubscriptionStatus("active", "gift", past)).toBe("free");
+    expect(effectiveSubscriptionStatus("active", "gift", future)).toBe("active");
+    expect(effectiveSubscriptionStatus("active", "manual", past)).toBe("free");
+  });
+
+  it("płatne Pro Stripe nie wygasa lokalnie", () => {
+    const past = new Date(Date.now() - 60_000).toISOString();
+    expect(effectiveSubscriptionStatus("active", "stripe", past)).toBe("active");
+  });
+
+  it("isGiftPro rozpoznaje gift i manual", () => {
+    const base: SubscriptionSnapshot = {
+      ...FREE_SUBSCRIPTION,
+      status: "active",
+      planId: "pro",
+    };
+    expect(isGiftPro({ ...base, source: "gift" })).toBe(true);
+    expect(isGiftPro({ ...base, source: "manual" })).toBe(true);
+    expect(isGiftPro({ ...base, source: "stripe" })).toBe(false);
   });
 });

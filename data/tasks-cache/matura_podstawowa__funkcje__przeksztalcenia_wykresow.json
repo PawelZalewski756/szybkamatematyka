@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "funkcje",
+  "topic": "przeksztalcenia_wykresow",
+  "categoryName": "Funkcje",
+  "topicName": "Przekształcenia wykresów",
+  "tasks": [
+    {
+      "content": "Wykres funkcji $g(x)=(x+2)^2+3$ powstaje z wykresu $f(x)=x^2$ przez przesunięcie. Wierzchołek paraboli $g$ to punkt:",
+      "correct_answer": "(-2,3)",
+      "options": [
+        "(-2,4)",
+        "(2,3)",
+        "(-1,3)",
+        "(-2,3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Postać kanoniczna $g(x)=(x+2)^2+3$ ma wierzchołek $(-2,3)$.\n**Odpowiedź:** (-2,3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fbb6198e-c9e6-53db-a1d7-a2708e04569e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=f(x)+3$ otrzymujemy z wykresu $f$ przez:",
+      "correct_answer": "przesunięcie o 3 jednostki w górę",
+      "options": [
+        "przesunięcie o 3 jednostki w górę",
+        "przesunięcie o 3 jednostki w dół",
+        "przesunięcie o 3 jednostki w prawo",
+        "przesunięcie o 3 jednostki w lewo"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodanie liczby do wartości funkcji podnosi każdy punkt wykresu o $3$ jednostek w górę.\n**Odpowiedź:** przesunięcie o 3 jednostki w górę",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "50880922-7673-59da-a2c3-4fe576fddffd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=-f(x)$ otrzymujemy z wykresu $f$ przez:",
+      "correct_answer": "symetrię względem osi OX",
+      "options": [
+        "symetrię względem osi OX",
+        "symetrię względem początku układu współrzędnych",
+        "symetrię względem prostej y=x",
+        "symetrię względem osi OY"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Zmiana znaku wartości funkcji odbija wykres względem osi $OX$.\n**Odpowiedź:** symetrię względem osi OX",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7194e192-04c6-53e4-ae2a-69a89d11050d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=f(-x)$ otrzymujemy z wykresu $f$ przez:",
+      "correct_answer": "symetrię względem osi OY",
+      "options": [
+        "symetrię względem początku układu współrzędnych",
+        "przesunięcie o jedną jednostkę w lewo",
+        "symetrię względem osi OX",
+        "symetrię względem osi OY"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Zamiana $x$ na $-x$ odbija wykres względem osi $OY$.\n**Odpowiedź:** symetrię względem osi OY",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d1b87eed-fb6d-59c4-a804-138bd1753c76",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=|f(x)|$ powstaje z wykresu $f$ przez:",
+      "correct_answer": "odbicie części leżącej pod osią OX nad tę oś",
+      "options": [
+        "symetrię względem osi OY",
+        "odbicie części leżącej pod osią OX nad tę oś",
+        "odbicie części leżącej nad osią OX pod tę oś",
+        "dwukrotne rozciągnięcie w kierunku osi OY"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wartość bezwzględna zamienia ujemne wartości na dodatnie, więc część wykresu pod osią $OX$ odbija się nad nią.\n**Odpowiedź:** odbicie części leżącej pod osią OX nad tę oś",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "610ddbfc-bc07-5828-ae6d-1e499c8f5e9e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=2f(x)$ powstaje z wykresu $f$ przez:",
+      "correct_answer": "rozciągnięcie dwukrotne w kierunku osi OY",
+      "options": [
+        "rozciągnięcie dwukrotne w kierunku osi OY",
+        "rozciągnięcie dwukrotne w kierunku osi OX",
+        "przesunięcie o 2 jednostki w górę",
+        "ściśnięcie dwukrotne w kierunku osi OY"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożenie wartości funkcji przez $2$ podwaja każdą rzędną, czyli rozciąga wykres dwukrotnie w kierunku osi $OY$.\n**Odpowiedź:** rozciągnięcie dwukrotne w kierunku osi OY",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "387a0e49-56c8-5fb2-a946-51eb123f3029",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-4)^2-1$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-4,-1)",
+      "options": [
+        "(-3,-1)",
+        "(-4,-1)",
+        "(-4,0)",
+        "(4,-1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Postać kanoniczna $g(x)=(x-4)^2-1$ ma wierzchołek $(-4,-1)$.\n**Odpowiedź:** (-4,-1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c714b8c5-8f66-52a3-a7bd-be0edf08ee64",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+3)^2+4$ powstaje z wykresu $f(x)=x^2$ przez przesunięcie. Wierzchołek paraboli $g$ to punkt:",
+      "correct_answer": "(-3,4)",
+      "options": [
+        "(3,4)",
+        "(-2,4)",
+        "(-3,4)",
+        "(-3,5)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x+3)^2+4$ ma wierzchołek $(-3,4)$.\n**Odpowiedź:** (-3,4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be0e6fbb-0680-50ef-afe8-f903c9bf9451",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=f(x)+1$ otrzymujemy z wykresu $f$ przez:",
+      "correct_answer": "przesunięcie o 1 jednostki w górę",
+      "options": [
+        "przesunięcie o 1 jednostki w prawo",
+        "przesunięcie o 1 jednostki w górę",
+        "przesunięcie o 1 jednostki w lewo",
+        "przesunięcie o 1 jednostki w dół"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodanie liczby do wartości funkcji podnosi każdy punkt wykresu o $1$ jednostek w górę.\n**Odpowiedź:** przesunięcie o 1 jednostki w górę",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72204733-f5ef-5563-a0cf-5ec7a9ca8586",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+4)^2-1$ powstaje z wykresu $f(x)=x^2$ przez przesunięcie. Wierzchołek paraboli $g$ to punkt:",
+      "correct_answer": "(-4,-1)",
+      "options": [
+        "(4,-1)",
+        "(-3,-1)",
+        "(-4,0)",
+        "(-4,-1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x+4)^2-1$ ma wierzchołek $(-4,-1)$.\n**Odpowiedź:** (-4,-1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9d0e62a2-9c18-52e2-a9fb-5f4fb96a49de",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+2)^2-3$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(2,-3)",
+      "options": [
+        "(3,-3)",
+        "(2,-3)",
+        "(-2,-3)",
+        "(2,-2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x+2)^2-3$ ma wierzchołek $(2,-3)$.\n**Odpowiedź:** (2,-3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "54922575-9167-5d34-ab0b-626ea38a29d2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-2)^2$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-2,0)",
+      "options": [
+        "(-1,0)",
+        "(-2,1)",
+        "(2,0)",
+        "(-2,0)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x-2)^2$ ma wierzchołek $(-2,0)$.\n**Odpowiedź:** (-2,0)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2eeb13a0-48f2-5d82-ac46-5e62d69d2217",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+3)^2+1$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(3,1)",
+      "options": [
+        "(-3,1)",
+        "(4,1)",
+        "(3,1)",
+        "(3,2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x+3)^2+1$ ma wierzchołek $(3,1)$.\n**Odpowiedź:** (3,1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "078a6726-38e9-5694-a7d9-784523c83e7a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+4)^2+1$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(4,1)",
+      "options": [
+        "(5,1)",
+        "(4,2)",
+        "(-4,1)",
+        "(4,1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Postać kanoniczna $g(x)=(x+4)^2+1$ ma wierzchołek $(4,1)$.\n**Odpowiedź:** (4,1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0ea90b83-54fc-514b-a356-7222dcec82cd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+3)^2-2$ powstaje z wykresu $f(x)=x^2$ przez przesunięcie. Wierzchołek paraboli $g$ to punkt:",
+      "correct_answer": "(-3,-2)",
+      "options": [
+        "(3,-2)",
+        "(-2,-2)",
+        "(-3,-1)",
+        "(-3,-2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x+3)^2-2$ ma wierzchołek $(-3,-2)$.\n**Odpowiedź:** (-3,-2)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "82bffa33-bc19-516d-a5b2-38e2e8d1bd09",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-2)^2+5$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-2,5)",
+      "options": [
+        "(-1,5)",
+        "(-2,6)",
+        "(2,5)",
+        "(-2,5)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x-2)^2+5$ ma wierzchołek $(-2,5)$.\n**Odpowiedź:** (-2,5)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73003559-2436-5d9d-a690-c5fbe9fbde2c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x+2)^2-4$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(2,-4)",
+      "options": [
+        "(3,-4)",
+        "(-2,-4)",
+        "(2,-4)",
+        "(2,-3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x+2)^2-4$ ma wierzchołek $(2,-4)$.\n**Odpowiedź:** (2,-4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30a428ab-c07d-5536-a90a-43468fdd5847",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-2)^2-4$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-2,-4)",
+      "options": [
+        "(2,-4)",
+        "(-1,-4)",
+        "(-2,-3)",
+        "(-2,-4)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x-2)^2-4$ ma wierzchołek $(-2,-4)$.\n**Odpowiedź:** (-2,-4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2c459039-3997-50de-a7e3-1200df3e27e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-4)^2+3$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-4,3)",
+      "options": [
+        "(-3,3)",
+        "(-4,4)",
+        "(4,3)",
+        "(-4,3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x-4)^2+3$ ma wierzchołek $(-4,3)$.\n**Odpowiedź:** (-4,3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "77d73b81-a029-5500-a644-e9447d16e9f2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wykres funkcji $g(x)=(x-5)^2+4$ powstaje z paraboli $y=x^2$. Wierzchołek $g$ to punkt:",
+      "correct_answer": "(-5,4)",
+      "options": [
+        "(-4,4)",
+        "(-5,5)",
+        "(5,4)",
+        "(-5,4)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Postać kanoniczna $g(x)=(x-5)^2+4$ ma wierzchołek $(-5,4)$.\n**Odpowiedź:** (-5,4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be55ea5b-9ea3-598f-a6d0-a3698ce4296c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

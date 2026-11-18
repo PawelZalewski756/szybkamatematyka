@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "algebra",
+  "topic": "wyznaczanie_wielkosci_ze_wzoru",
+  "categoryName": "Algebra",
+  "topicName": "Wyznaczanie wielkości ze wzoru",
+  "tasks": [
+    {
+      "content": "Korzystając ze wzoru $s = v \\cdot t$, oblicz czas $t$, gdy $s = 360$ km i $v = 90$ km/h.",
+      "correct_answer": "4 h",
+      "options": [
+        "4 h",
+        "5 h",
+        "270 h",
+        "90 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekształcamy wzór: $t = \\dfrac{s}{v} = \\dfrac{360}{90} = 4$ godziny.\n**Odpowiedź:** 4 h",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "217f2243-3f14-5b11-ac8f-76caa1b09d7b",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Pole trójkąta jest równe $60$ cm$^2$, a wysokość ma $12$ cm. Jaką długość ma podstawa?",
+      "correct_answer": "10 cm",
+      "options": [
+        "5 cm",
+        "48 cm",
+        "10 cm",
+        "20 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ze wzoru $P = \\dfrac{a \\cdot h}{2}$ mamy $a = \\dfrac{2P}{h} = \\dfrac{2 \\cdot 60}{12} = 10$ cm.\n**Odpowiedź:** 10 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c593753-2ed4-5078-af6c-e83e68cadc99",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma objętość $120$ cm$^3$ oraz krawędzie $4$ cm i $5$ cm. Jaką długość ma trzecia krawędź?",
+      "correct_answer": "6 cm",
+      "options": [
+        "8 cm",
+        "7 cm",
+        "6 cm",
+        "5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ze wzoru $V = a \\cdot b \\cdot c$ mamy $c = \\dfrac{V}{a \\cdot b} = \\dfrac{120}{4 \\cdot 5} = 6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f6cc9bb8-acbf-5c0f-a5dc-ba66e3cb5740",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Obwód prostokąta wynosi $32$ cm, a jeden z boków ma $3$ cm. Jaką długość ma drugi bok?",
+      "correct_answer": "13 cm",
+      "options": [
+        "13 cm",
+        "14 cm",
+        "26 cm",
+        "3 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ze wzoru $P = 2(a + b)$ mamy $a + b = 16$, więc $b = 16 - 3 = 13$ cm.\n**Odpowiedź:** 13 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee493559-1ea3-59af-afcb-1e1bc0e089a3",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ze wzoru $y = 8x + 9$ wyznacz $x$.",
+      "correct_answer": "$\\dfrac{y - 9}{8}$",
+      "options": [
+        "$y - 9$",
+        "$\\dfrac{y + 9}{8}$",
+        "$\\dfrac{8}{y - 9}$",
+        "$\\dfrac{y - 9}{8}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy $9$ od obu stron: $y - 9 = 8x$, a następnie dzielimy przez $8$: $x = \\dfrac{y - 9}{8}$.\n**Odpowiedź:** $\\dfrac{y - 9}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa96714e-e41a-55f5-a73b-a705e8abee76",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $E = P \\cdot t$, oblicz $t$, gdy $E = 420$ i $P = 60$.",
+      "correct_answer": "7",
+      "options": [
+        "8",
+        "360",
+        "7",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy obie strony przez $P$: $t = \\dfrac{E}{P} = \\dfrac{420}{60} = 7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "87f62b80-1ccb-55b4-a1b0-1555af3525be",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $F = m \\cdot a$, wyznacz $m$, gdy $F = 54$ i $a = 9$.",
+      "correct_answer": "6",
+      "options": [
+        "45",
+        "9",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy obie strony przez $a$: $m = \\dfrac{F}{a} = \\dfrac{54}{9} = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8c74f04c-50e0-53f3-a15c-efc5916e14bc",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $s = v \\cdot t$, oblicz czas $t$, gdy $s = 600$ km i $v = 120$ km/h.",
+      "correct_answer": "5 h",
+      "options": [
+        "120 h",
+        "480 h",
+        "6 h",
+        "5 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekształcamy wzór: $t = \\dfrac{s}{v} = \\dfrac{600}{120} = 5$ godziny.\n**Odpowiedź:** 5 h",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5455ea02-1ba0-5b7f-a9b2-43009f1c5997",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Pole trójkąta jest równe $20$ cm$^2$, a wysokość ma $10$ cm. Jaką długość ma podstawa?",
+      "correct_answer": "4 cm",
+      "options": [
+        "10 cm",
+        "2 cm",
+        "8 cm",
+        "4 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ze wzoru $P = \\dfrac{a \\cdot h}{2}$ mamy $a = \\dfrac{2P}{h} = \\dfrac{2 \\cdot 20}{10} = 4$ cm.\n**Odpowiedź:** 4 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aed5bf3a-a59c-5926-a452-8cc4aa1be2c8",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma objętość $162$ cm$^3$ oraz krawędzie $3$ cm i $6$ cm. Jaką długość ma trzecia krawędź?",
+      "correct_answer": "9 cm",
+      "options": [
+        "9 cm",
+        "10 cm",
+        "8 cm",
+        "11 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ze wzoru $V = a \\cdot b \\cdot c$ mamy $c = \\dfrac{V}{a \\cdot b} = \\dfrac{162}{3 \\cdot 6} = 9$ cm.\n**Odpowiedź:** 9 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bc09b686-3b29-5596-afaa-b6b890bbf7de",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Obwód prostokąta wynosi $28$ cm, a jeden z boków ma $7$ cm. Jaką długość ma drugi bok?",
+      "correct_answer": "7 cm",
+      "options": [
+        "14 cm",
+        "8 cm",
+        "9 cm",
+        "7 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ze wzoru $P = 2(a + b)$ mamy $a + b = 14$, więc $b = 14 - 7 = 7$ cm.\n**Odpowiedź:** 7 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "26752e23-f9ea-5eb0-ac1c-973d0c086c3f",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ze wzoru $y = 6x + 4$ wyznacz $x$.",
+      "correct_answer": "$\\dfrac{y - 4}{6}$",
+      "options": [
+        "$\\dfrac{y + 4}{6}$",
+        "$y - 4$",
+        "$\\dfrac{y - 4}{6}$",
+        "$\\dfrac{6}{y - 4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy $4$ od obu stron: $y - 4 = 6x$, a następnie dzielimy przez $6$: $x = \\dfrac{y - 4}{6}$.\n**Odpowiedź:** $\\dfrac{y - 4}{6}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4a52e69b-376c-5cbb-abc8-19aa8b84c668",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $E = P \\cdot t$, oblicz $t$, gdy $E = 2000$ i $P = 500$.",
+      "correct_answer": "4",
+      "options": [
+        "500",
+        "1500",
+        "4",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy obie strony przez $P$: $t = \\dfrac{E}{P} = \\dfrac{2000}{500} = 4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "045689c7-4e6e-50f1-a565-5e53bb09ae04",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $F = m \\cdot a$, wyznacz $m$, gdy $F = 84$ i $a = 6$.",
+      "correct_answer": "14",
+      "options": [
+        "14",
+        "15",
+        "78",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy obie strony przez $a$: $m = \\dfrac{F}{a} = \\dfrac{84}{6} = 14$.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "90f528e1-266c-51d2-afa0-7e823bd11c5d",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $s = v \\cdot t$, oblicz czas $t$, gdy $s = 240$ km i $v = 60$ km/h.",
+      "correct_answer": "4 h",
+      "options": [
+        "5 h",
+        "180 h",
+        "60 h",
+        "4 h"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekształcamy wzór: $t = \\dfrac{s}{v} = \\dfrac{240}{60} = 4$ godziny.\n**Odpowiedź:** 4 h",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "62d4a242-aff7-5139-aff5-fce36eac25b8",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Pole trójkąta jest równe $14$ cm$^2$, a wysokość ma $7$ cm. Jaką długość ma podstawa?",
+      "correct_answer": "4 cm",
+      "options": [
+        "2 cm",
+        "7 cm",
+        "4 cm",
+        "8 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ze wzoru $P = \\dfrac{a \\cdot h}{2}$ mamy $a = \\dfrac{2P}{h} = \\dfrac{2 \\cdot 14}{7} = 4$ cm.\n**Odpowiedź:** 4 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a6841404-79fb-5c05-ad8b-de0e27b5e4d4",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostopadłościan ma objętość $36$ cm$^3$ oraz krawędzie $4$ cm i $3$ cm. Jaką długość ma trzecia krawędź?",
+      "correct_answer": "3 cm",
+      "options": [
+        "2 cm",
+        "4 cm",
+        "3 cm",
+        "5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ze wzoru $V = a \\cdot b \\cdot c$ mamy $c = \\dfrac{V}{a \\cdot b} = \\dfrac{36}{4 \\cdot 3} = 3$ cm.\n**Odpowiedź:** 3 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21d412e8-1a30-5ba2-a6c0-fb4d4aeefa49",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Obwód prostokąta wynosi $26$ cm, a jeden z boków ma $7$ cm. Jaką długość ma drugi bok?",
+      "correct_answer": "6 cm",
+      "options": [
+        "12 cm",
+        "7 cm",
+        "6 cm",
+        "8 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ze wzoru $P = 2(a + b)$ mamy $a + b = 13$, więc $b = 13 - 7 = 6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e6667eac-a197-529a-a44f-9e3d433d9450",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ze wzoru $y = 8x + 4$ wyznacz $x$.",
+      "correct_answer": "$\\dfrac{y - 4}{8}$",
+      "options": [
+        "$\\dfrac{y + 4}{8}$",
+        "$\\dfrac{y - 4}{8}$",
+        "$y - 4$",
+        "$\\dfrac{8}{y - 4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy $4$ od obu stron: $y - 4 = 8x$, a następnie dzielimy przez $8$: $x = \\dfrac{y - 4}{8}$.\n**Odpowiedź:** $\\dfrac{y - 4}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d2000943-4552-595d-aa8d-6ab19a63473d",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Korzystając ze wzoru $E = P \\cdot t$, oblicz $t$, gdy $E = 400$ i $P = 100$.",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "100",
+        "300",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy obie strony przez $P$: $t = \\dfrac{E}{P} = \\dfrac{400}{100} = 4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c253929d-62b8-5382-afd0-555aabc89796",
+      "generatedAt": "2026-11-18T12:23:59.844Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.844Z"
+}

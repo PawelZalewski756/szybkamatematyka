@@ -6,385 +6,385 @@
   "topicName": "Bryły - rozpoznawanie",
   "tasks": [
     {
-      "content": "Objętość sześcianu o krawędzi 2:",
-      "correct_answer": "8",
+      "content": "Ile ścian ma sześcian?",
+      "correct_answer": "6",
       "options": [
-        "7",
         "6",
         "8",
-        "2"
+        "12",
+        "4"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 8",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "6fe1f2c3-e36e-4eda-8c85-ed5048afb468",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×9:",
-      "correct_answer": "486",
-      "options": [
-        "486",
-        "478",
-        "485",
-        "484"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 486",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "d55d9a50-7276-4ceb-b091-6d0d51a0e845",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość sześcianu o krawędzi 8:",
-      "correct_answer": "512",
-      "options": [
-        "506",
-        "512",
-        "510",
-        "511"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 512",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "89c6df2e-4110-4e57-8d76-c9b74952fb19",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×5:",
-      "correct_answer": "140",
-      "options": [
-        "140",
-        "138",
-        "132",
-        "139"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 140",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f62a82b0-1089-42ad-ab04-261a93aabbc9",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość sześcianu o krawędzi 6:",
-      "correct_answer": "216",
-      "options": [
-        "216",
-        "215",
-        "214",
-        "210"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 216",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "766dd64e-4faa-46b1-b1b7-99bc83df8874",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 5×2×11:",
-      "correct_answer": "110",
-      "options": [
-        "108",
-        "109",
-        "102",
-        "110"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
+      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 110",
+      "explanation": "Sześcian ma $6$ ścian, każda jest kwadratem.\n**Odpowiedź:** 6",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "8ba06e79-b4b1-4f32-be74-025c45a7b64b",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
+      "id": "677e011f-c9ed-5774-a21f-3617097b3910",
+      "generatedAt": "2026-11-18T12:30:42.092Z",
+      "model": "bryly-recognition-v1"
     },
     {
-      "content": "Objętość sześcianu o krawędzi 4:",
-      "correct_answer": "64",
+      "content": "Ile krawędzi ma sześcian?",
+      "correct_answer": "12",
       "options": [
-        "62",
-        "58",
-        "64",
-        "63"
+        "12",
+        "6",
+        "8",
+        "10"
       ],
       "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 64",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "33ecb35b-5cdd-4235-bd54-4f5219a35a94",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 3×8×7:",
-      "correct_answer": "168",
-      "options": [
-        "167",
-        "168",
-        "166",
-        "160"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 168",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "3ce09a20-bd33-4ca0-b8f1-217b648565f0",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×3:",
-      "correct_answer": "162",
-      "options": [
-        "161",
-        "154",
-        "160",
-        "162"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 162",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "798a8840-7113-47de-a251-19b206ae0fbd",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×9:",
-      "correct_answer": "252",
-      "options": [
-        "251",
-        "244",
-        "250",
-        "252"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 18,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 252",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "22159290-b39c-42f5-a4c2-c4be0f5bc7f9",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 5×2×5:",
-      "correct_answer": "50",
-      "options": [
-        "48",
-        "50",
-        "49",
-        "42"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 50",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f40db14-1ebd-42f1-802d-e2320f52023e",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 3×8×11:",
-      "correct_answer": "264",
-      "options": [
-        "256",
-        "262",
-        "263",
-        "264"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 264",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "0f1b4f5a-1e9d-4fc8-aaf8-b4f02faf8d8c",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×7:",
-      "correct_answer": "378",
-      "options": [
-        "377",
-        "378",
-        "376",
-        "370"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 378",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "f40caff2-5d16-4839-bfb4-85a0095a3cb0",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×3:",
-      "correct_answer": "84",
-      "options": [
-        "84",
-        "82",
-        "76",
-        "83"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 20,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 84",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "76f24e33-0d44-4f3e-8871-dddadbf24bbc",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 5×2×9:",
-      "correct_answer": "90",
-      "options": [
-        "89",
-        "82",
-        "90",
-        "88"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 90",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "2f698a93-690e-44d6-9e94-230dd04b6826",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 3×8×5:",
-      "correct_answer": "120",
-      "options": [
-        "118",
-        "120",
-        "119",
-        "112"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 17,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 120",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "302e8793-94f6-4866-9c6d-c65a3cdf5de2",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 9×6×11:",
-      "correct_answer": "594",
-      "options": [
-        "586",
-        "592",
-        "593",
-        "594"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 19,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 594",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "61024819-d4e7-482b-989d-3bd3cbe98349",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 7×4×7:",
-      "correct_answer": "196",
-      "options": [
-        "195",
-        "194",
-        "188",
-        "196"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
-      "xp_reward": 15,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 196",
-      "figure_svg": null,
-      "figure_caption": null,
-      "id": "79211bde-f522-423d-8045-ffe5746f04c1",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
-    },
-    {
-      "content": "Objętość prostopadłościanu 5×2×3:",
-      "correct_answer": "30",
-      "options": [
-        "29",
-        "22",
-        "30",
-        "28"
-      ],
-      "answer_type": "choice",
-      "difficulty": 2,
+      "difficulty": 1,
       "xp_reward": 14,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 30",
+      "explanation": "Sześcian ma $12$ krawędzi: $4$ dolne, $4$ górne i $4$ pionowe.\n**Odpowiedź:** 12",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "322691dc-e2af-4396-96f2-197da5b025e2",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
+      "id": "3c1db4be-8c7f-58f7-a30d-dc7cad8df780",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
     },
     {
-      "content": "Objętość prostopadłościanu 3×8×9:",
-      "correct_answer": "216",
+      "content": "Ile wierzchołków ma sześcian?",
+      "correct_answer": "8",
       "options": [
-        "214",
-        "208",
-        "216",
-        "215"
+        "8",
+        "6",
+        "12",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Sześcian ma $8$ wierzchołków: po $4$ w dolnej i górnej podstawie.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5e171092-14f4-56a2-a198-99ed80ec5393",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła ma $6$ jednakowych kwadratowych ścian?",
+      "correct_answer": "sześcian",
+      "options": [
+        "sześcian",
+        "prostopadłościan",
+        "ostrosłup czworokątny",
+        "graniastosłup trójkątny"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Sześcian to prostopadłościan, którego wszystkie $6$ ścian to przystające kwadraty.\n**Odpowiedź:** sześcian",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed3a5a62-e85b-56e2-a601-ffaa2379e009",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła ma jedną okrągłą podstawę i jeden wierzchołek?",
+      "correct_answer": "stożek",
+      "options": [
+        "stożek",
+        "walec",
+        "kula",
+        "graniastosłup"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Stożek ma okrągłą podstawę i wierzchołek, w którym schodzą się tworzące.\n**Odpowiedź:** stożek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4478b8df-7bdc-52f7-aa69-0a906394fa89",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła ma dwie równoległe okrągłe podstawy?",
+      "correct_answer": "walec",
+      "options": [
+        "walec",
+        "stożek",
+        "kula",
+        "ostrosłup"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Walec ma dwie przystające, równoległe podstawy w kształcie kół.\n**Odpowiedź:** walec",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "40e00d40-48d2-515e-a50e-9b72681c5710",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile ścian ma ostrosłup czworokątny?",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "8"
       ],
       "answer_type": "choice",
       "difficulty": 2,
-      "xp_reward": 16,
-      "explanation": "Podstaw dane z treści do właściwego wzoru i wykonaj obliczenia.\n**Odpowiedź:** 216",
+      "xp_reward": 18,
+      "explanation": "Ostrosłup czworokątny ma $1$ podstawę i $4$ ściany boczne, razem $5$ ścian.\n**Odpowiedź:** 5",
       "figure_svg": null,
       "figure_caption": null,
-      "id": "76a79851-3914-4d2e-9a7d-9a15ea30751b",
-      "generatedAt": "2026-09-06T19:54:36.664Z",
-      "model": "parametric-v2"
+      "id": "a5ef5a40-7b27-5b09-adcf-06da405449ed",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile krawędzi ma graniastosłup trójkątny?",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "6",
+        "12",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Graniastosłup trójkątny ma $3$ krawędzie w każdej podstawie i $3$ krawędzie boczne, razem $9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "387a1cb7-4bfc-5967-a112-4ca1b6126e2d",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile wierzchołków ma graniastosłup trójkątny?",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "5",
+        "8",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Graniastosłup trójkątny ma po $3$ wierzchołki w każdej podstawie, razem $6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69d2b1c4-c552-5201-a156-36492433537a",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła nie ma ani wierzchołka, ani krawędzi?",
+      "correct_answer": "kula",
+      "options": [
+        "kula",
+        "walec",
+        "stożek",
+        "sześcian"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kula ma tylko powierzchnię zakrzywioną — nie ma wierzchołków ani krawędzi.\n**Odpowiedź:** kula",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0625c9b5-374f-5d33-a09e-6c2785518560",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która siatka składa się z sześciu kwadratów?",
+      "correct_answer": "sześcian",
+      "options": [
+        "sześcian",
+        "prostopadłościan",
+        "ostrosłup",
+        "walec"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Siatka sześcianu to $6$ jednakowych kwadratów.\n**Odpowiedź:** sześcian",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1551c3c3-69a6-5fad-a02e-5d67b744351b",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile ścian ma graniastosłup trójkątny?",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Graniastosłup trójkątny ma $2$ podstawy i $3$ ściany boczne, razem $5$ ścian.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6030dbb9-ee88-58de-a660-f7225f935f8e",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile krawędzi ma ostrosłup czworokątny?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "5",
+        "6",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ostrosłup czworokątny ma $4$ krawędzie podstawy i $4$ krawędzie boczne, razem $8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "93f84aea-3f9c-5ef3-adbb-7b28fedf0894",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile wierzchołków ma ostrosłup trójkątny?",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ostrosłup trójkątny ma $3$ wierzchołki podstawy i $1$ wierzchołek główny, razem $4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9335f4c3-cf62-5090-aadc-45f905cf7839",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła ma wszystkie krawędzie równej długości?",
+      "correct_answer": "sześcian",
+      "options": [
+        "sześcian",
+        "prostopadłościan",
+        "walec",
+        "stożek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W sześcianie wszystkie $12$ krawędzi ma tę samą długość.\n**Odpowiedź:** sześcian",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "90b76693-676d-5613-aba0-80897eeca75a",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła powstaje przez obrót prostokąta wokół jednego boku?",
+      "correct_answer": "walec",
+      "options": [
+        "walec",
+        "stożek",
+        "kula",
+        "sześcian"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obrót prostokąta wokół boku zakreśla walec.\n**Odpowiedź:** walec",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b3b7be01-d1e4-5eac-a9b7-f96b18371059",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła powstaje przez obrót trójkąta prostokątnego wokół przyprostokątnej?",
+      "correct_answer": "stożek",
+      "options": [
+        "stożek",
+        "walec",
+        "kula",
+        "ostrosłup"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obrót trójkąta prostokątnego wokół przyprostokątnej daje stożek.\n**Odpowiedź:** stożek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "361229d4-e046-5d44-a788-3ca496f4736f",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile ścian bocznych ma ostrosłup sześciokątny?",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "5",
+        "8",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ostrosłup o podstawie $n$-kąta ma $n$ ścian bocznych, więc dla sześciokąta $6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fea1649f-9b82-5a24-aede-c6e0d39b5b55",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Ile wierzchołków ma prostopadłościan?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "6",
+        "12",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Prostopadłościan ma $8$ wierzchołków: po $4$ w dolnej i górnej podstawie.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "436d27de-6253-5f13-aedc-9a6df4b67127",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
+    },
+    {
+      "content": "Która bryła ma $4$ trójkątne ściany?",
+      "correct_answer": "ostrosłup trójkątny",
+      "options": [
+        "ostrosłup trójkątny",
+        "ostrosłup czworokątny",
+        "graniastosłup trójkątny",
+        "sześcian"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ostrosłup trójkątny (czworościan) ma $4$ ściany, każda jest trójkątem.\n**Odpowiedź:** ostrosłup trójkątny",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c0a1a54d-a8f6-5af0-a481-91a11be7da76",
+      "generatedAt": "2026-11-18T12:30:42.093Z",
+      "model": "bryly-recognition-v1"
     }
   ],
-  "updatedAt": "2026-09-06T19:54:36.664Z"
+  "updatedAt": "2026-11-18T12:30:42.093Z"
 }

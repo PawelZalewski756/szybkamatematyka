@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "odleglosc_punktu_od_prostej",
+  "categoryName": "Geometria",
+  "topicName": "Odległość punktu od prostej",
+  "tasks": [
+    {
+      "content": "Oblicz odległość punktu $P=(-1,2)$ od prostej $3x+4y+10=0$.",
+      "correct_answer": "3",
+      "options": [
+        "0,6",
+        "4",
+        "3",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$d=\\frac{|3\\cdot-1+4\\cdot2+10|}{\\sqrt{3^2+4^2}}=\\frac{15}{5}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2db85fc-fbb1-5d2b-a5e9-98c4a6020cff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość początku układu współrzędnych od prostej $3x+4y-25=0$ wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "5",
+        "1",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$d=\\frac{|C|}{\\sqrt{3^2+4^2}}=\\frac{25}{5}=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c7692144-a1a3-5005-a935-cf829fcd172e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość między prostymi równoległymi $3x+4y-3=0$ i $3x+4y+7=0$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "0,4",
+        "10",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dla prostych $Ax+By+C_1=0$ i $Ax+By+C_2=0$ odległość to $\\frac{|C_1-C_2|}{\\sqrt{A^2+B^2}}=\\frac{10}{5}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24c2c920-babc-54ba-a9b9-cc6ca3b62969",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(-4,1)$ od osi $OX$ wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "4,12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odległość od osi $OX$ to wartość bezwzględna współrzędnej $y$: $|1|=1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99470fc4-cf70-5ce9-ac16-c2df3b3c5572",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(0,-4)$ od prostej $y=1$ wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "10",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Prosta jest pozioma, więc odległość to $|-4-1|=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3299e688-e1b5-5dab-a794-f27a91f04a5a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(-2,-3)$ od prostej $5x+12y+72=0$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "0,15",
+        "2",
+        "26",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mianownik to $\\sqrt{5^2+12^2}=13$, a licznik jest równy $26$, więc $d=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "89b763da-b17b-5dbe-acce-8e232cc8030f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odległość punktu $P=(-1,-3)$ od prostej $3x+4y+40=0$.",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "25",
+        "1",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$d=\\frac{|3\\cdot-1+4\\cdot-3+40|}{\\sqrt{3^2+4^2}}=\\frac{25}{5}=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "56f39cf0-1a63-5733-a780-927e97584690",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość początku układu współrzędnych od prostej $3x+4y-30=0$ wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "1,2",
+        "7",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$d=\\frac{|C|}{\\sqrt{3^2+4^2}}=\\frac{30}{5}=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d8aba5c3-5387-52ca-a403-444428fe1c9b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość między prostymi równoległymi $3x+4y-3=0$ i $3x+4y+12=0$ wynosi:",
+      "correct_answer": "3",
+      "options": [
+        "15",
+        "0,6",
+        "3",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dla prostych $Ax+By+C_1=0$ i $Ax+By+C_2=0$ odległość to $\\frac{|C_1-C_2|}{\\sqrt{A^2+B^2}}=\\frac{15}{5}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21b05a66-f473-5860-a2db-7eb3d960b7bd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(4,-4)$ od osi $OX$ wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "6",
+        "5,66",
+        "5",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odległość od osi $OX$ to wartość bezwzględna współrzędnej $y$: $|-4|=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d0a813bb-116f-58bd-aaf0-d584ebf5ebde",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(0,1)$ od prostej $y=3$ wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Prosta jest pozioma, więc odległość to $|1-3|=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "106d59c6-11ba-5f2a-a223-ce3acb847645",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(1,0)$ od prostej $5x+12y+8=0$ wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "0,08",
+        "1",
+        "13",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik to $\\sqrt{5^2+12^2}=13$, a licznik jest równy $13$, więc $d=1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "565d8bb7-22c4-5fe7-a0d5-ee8bbc5e9528",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odległość punktu $P=(2,4)$ od prostej $3x+4y-7=0$.",
+      "correct_answer": "3",
+      "options": [
+        "15",
+        "4",
+        "0,6",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$d=\\frac{|3\\cdot2+4\\cdot4-7|}{\\sqrt{3^2+4^2}}=\\frac{15}{5}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff373847-bb2d-5e9a-aeca-ec98e7aea51f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość między prostymi równoległymi $3x+4y+1=0$ i $3x+4y+16=0$ wynosi:",
+      "correct_answer": "3",
+      "options": [
+        "4",
+        "15",
+        "0,6",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dla prostych $Ax+By+C_1=0$ i $Ax+By+C_2=0$ odległość to $\\frac{|C_1-C_2|}{\\sqrt{A^2+B^2}}=\\frac{15}{5}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d999f5fa-e2c6-52ee-ac3d-3a5a4a644e9a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość między prostymi równoległymi $3x+4y+6=0$ i $3x+4y+26=0$ wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "20",
+        "0,8",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dla prostych $Ax+By+C_1=0$ i $Ax+By+C_2=0$ odległość to $\\frac{|C_1-C_2|}{\\sqrt{A^2+B^2}}=\\frac{20}{5}=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "424516fd-efa3-5214-a92d-fdd29153690e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(-1,0)$ od osi $OX$ wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odległość od osi $OX$ to wartość bezwzględna współrzędnej $y$: $|0|=0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "870fd2f8-2466-5bde-a853-734b42f4dc82",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(0,-4)$ od prostej $y=0$ wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "4",
+        "8",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Prosta jest pozioma, więc odległość to $|-4-0|=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96d66957-07a6-5bd3-a253-34c88ff16633",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość punktu $P=(3,0)$ od prostej $5x+12y+37=0$ wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "0,31",
+        "6",
+        "52"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mianownik to $\\sqrt{5^2+12^2}=13$, a licznik jest równy $52$, więc $d=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3cc35485-4b51-5ed2-a033-434fb9bc99b4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz odległość punktu $P=(-2,-3)$ od prostej $3x+4y+33=0$.",
+      "correct_answer": "3",
+      "options": [
+        "15",
+        "4",
+        "3",
+        "0,6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$d=\\frac{|3\\cdot-2+4\\cdot-3+33|}{\\sqrt{3^2+4^2}}=\\frac{15}{5}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6eb6d188-6e3e-57d8-a9fa-74c12a0e1976",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Odległość początku układu współrzędnych od prostej $3x+4y-40=0$ wynosi:",
+      "correct_answer": "8",
+      "options": [
+        "40",
+        "9",
+        "8",
+        "1,6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$d=\\frac{|C|}{\\sqrt{3^2+4^2}}=\\frac{40}{5}=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d9d4e482-e722-506b-abc8-b5e2ce2318cd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

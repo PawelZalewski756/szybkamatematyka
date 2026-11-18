@@ -657,7 +657,7 @@ function DepartmentNavigation({
                   </span>
                   <span className="mt-1 block text-xs">
                     {polishCount(
-                      metrics.playableTopics,
+                      category.topics.length,
                       "temat",
                       "tematy",
                       "tematów",
@@ -955,13 +955,15 @@ export default function TreningPage() {
     return () => clearTimeout(timer);
   }, [searchInput]);
 
-  const pathSyncedRef = useRef(false);
+  const syncedPathRef = useRef<string | null>(null);
   useEffect(() => {
-    if (pathSyncedRef.current) return;
-    pathSyncedRef.current = true;
+    // Po hydratacji `useSyncExternalStore` może najpierw zwrócić snapshot
+    // serwerowy (`sp`), a dopiero potem wartość z localStorage (`srednia`).
+    // Wcześniejszy `boolean` blokował drugi przebieg, więc użytkownik ze
+    // szkołą średnią widział egzamin ósmoklasisty. Porównujemy samą ścieżkę.
+    if (syncedPathRef.current === learningPath) return;
+    syncedPathRef.current = learningPath;
     const key = examKeyForLearningPath(learningPath);
-    // Ustawiamy ścieżkę przed pierwszym pobraniem, żeby nie ściągać drzewa
-    // najpierw dla matury, a potem dla 8-klasisty.
     setSelectedExam(key);
     setExam(emptyExamFor(key));
     setPathInitialized(true);
@@ -984,29 +986,11 @@ export default function TreningPage() {
     setExpandedCategoryId(null);
   };
 
-  const classTopicIds = useMemo(
-    () =>
-      new Set(
-        classPlan.categories.flatMap((category) =>
-          category.topics.map((topic) => topic.id),
-        ),
-      ),
-    [classPlan],
-  );
-
-  const visibleExam = useMemo(() => {
-    if (classPlan.examKey !== selectedExam) return exam;
-    if (classPlan.topicCount === 0) return { ...exam, categories: [] };
-
-    const categories = exam.categories
-      .map((category) => ({
-        ...category,
-        topics: category.topics.filter((topic) => classTopicIds.has(topic.id)),
-      }))
-      .filter((category) => category.topics.length > 0);
-
-    return { ...exam, categories };
-  }, [classPlan, classTopicIds, exam, selectedExam]);
+  // Trening pokazuje zawsze cały zakres egzaminu (wszystkie działy i tematy
+  // z podstawy programowej). Plan klasy jest tylko podpowiedzią „co w tym
+  // roku”, a nie filtrem - wcześniej wybór klasy (np. Liceum 3) ukrywał
+  // funkcję kwadratową, wielomiany i kilkadziesiąt innych tematów.
+  const visibleExam = exam;
 
   const filteredExam = useMemo(() => {
     const searched = filterExamByQuery(visibleExam, debouncedQuery);
@@ -1136,7 +1120,7 @@ export default function TreningPage() {
             <p className="text-foreground">
               <span className="font-bold">Plan dla: {classPlan.label}</span>
               {classPlan.topicCount > 0
-                ? ` · ${classPlan.topicCount} tematów w tym roku`
+                ? ` · plan na ten rok: ${classPlan.topicCount} tematów. Trening poniżej pokazuje cały zakres CKE.`
                 : " · brak planu tematycznego dla klas 1–3"}
             </p>
             <Link

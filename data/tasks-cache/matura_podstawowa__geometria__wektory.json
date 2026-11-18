@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "wektory",
+  "categoryName": "Geometria",
+  "topicName": "Wektory",
+  "tasks": [
+    {
+      "content": "Dane są punkty $A=(2,3)$ i $B=(3,7)$. Współrzędne wektora $\\vec{AB}$ to:",
+      "correct_answer": "[1,4]",
+      "options": [
+        "[1,4]",
+        "[4,1]",
+        "[-1,-4]",
+        "[5,10]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\vec{AB}=[3,7]-[2,3]=[1,4]$.\n**Odpowiedź:** [1,4]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "919f5e9e-af1f-5144-a17a-3179c9c9c3d9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Długość wektora $[6,8]$ wynosi:",
+      "correct_answer": "10",
+      "options": [
+        "11",
+        "14",
+        "48",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$|\\vec{u}|=\\sqrt{6^2+8^2}=\\sqrt{100}=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bcdbda4f-e247-55ad-a93c-fa567a2c7160",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dane są wektory $\\vec{u}=[3,-4]$ i $\\vec{v}=[1,5]$. Współrzędne wektora $\\vec{u}+\\vec{v}$ to:",
+      "correct_answer": "[4,1]",
+      "options": [
+        "[4,1]",
+        "[2,-9]",
+        "[3,-20]",
+        "[5,1]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy odpowiednie współrzędne: $[3,-4]+[1,5]=[4,1]$.\n**Odpowiedź:** [4,1]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "966166dd-bd7b-5cf1-a40d-ff19f94c56b0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz iloczyn skalarny wektorów $\\vec{u}=[5,3]$ i $\\vec{v}=[0,4]$.",
+      "correct_answer": "12",
+      "options": [
+        "12",
+        "20",
+        "13",
+        "-12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\vec{u}\\circ\\vec{v}=(5)(0)+(3)(4)=12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "63179c48-0ac7-55e4-a2cc-db9707bdb821",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[4,3]$ i $\\vec{v}=[6,m]$ są prostopadłe. Współczynnik $m$ jest równy:",
+      "correct_answer": "-8",
+      "options": [
+        "8",
+        "18",
+        "24",
+        "-8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Iloczyn skalarny wektorów prostopadłych jest zerem: $4\\cdot6+3\\cdot m=0$, więc $m=-8$.\n**Odpowiedź:** -8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61ab633a-d72a-5fa6-a43c-45d09166fed4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[3,5]$ i $\\vec{v}=[6,m]$ są równoległe. Współczynnik $m$ jest równy:",
+      "correct_answer": "10",
+      "options": [
+        "7",
+        "6",
+        "11",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wektory równoległe mają proporcjonalne współrzędne: $\\frac{6}{3}=\\frac{m}{5}=2$, więc $m=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "787c8be2-b637-550a-a737-19a04fda713f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek odcinka o końcach $A=(-6,-4)$ i $B=(4,6)$ ma współrzędne:",
+      "correct_answer": "(-1,1)",
+      "options": [
+        "(-2,2)",
+        "(5,5)",
+        "(0,1)",
+        "(-1,1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek to średnia współrzędnych: $\\left(\\frac{-6+4}{2},\\frac{-4+6}{2}\\right)=(-1,1)$.\n**Odpowiedź:** (-1,1)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a1f7422e-19da-5072-a05f-bd2089ba5b19",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dane są punkty $A=(-3,-3)$ i $B=(-2,0)$. Współrzędne wektora $\\vec{AB}$ to:",
+      "correct_answer": "[1,3]",
+      "options": [
+        "[3,1]",
+        "[-1,-3]",
+        "[-5,-3]",
+        "[1,3]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\vec{AB}=[-2,0]-[-3,-3]=[1,3]$.\n**Odpowiedź:** [1,3]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b2d0a65a-73ac-5887-a00e-586372e75ccc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Długość wektora $[12,16]$ wynosi:",
+      "correct_answer": "20",
+      "options": [
+        "20",
+        "192",
+        "28",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$|\\vec{u}|=\\sqrt{12^2+16^2}=\\sqrt{400}=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "569f4654-3059-5482-a146-9ddeb44a803f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dane są wektory $\\vec{u}=[-1,-5]$ i $\\vec{v}=[2,-5]$. Współrzędne wektora $\\vec{u}+\\vec{v}$ to:",
+      "correct_answer": "[1,-10]",
+      "options": [
+        "[-3,0]",
+        "[-2,25]",
+        "[1,-10]",
+        "[2,-10]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodajemy odpowiednie współrzędne: $[-1,-5]+[2,-5]=[1,-10]$.\n**Odpowiedź:** [1,-10]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1533a684-0feb-567b-abd9-fe043fea1a70",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz iloczyn skalarny wektorów $\\vec{u}=[3,3]$ i $\\vec{v}=[1,4]$.",
+      "correct_answer": "15",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "-9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\vec{u}\\circ\\vec{v}=(3)(1)+(3)(4)=15$.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e7a675f7-6914-53d6-a42e-8e6dc4e3e18a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[2,5]$ i $\\vec{v}=[8,m]$ są równoległe. Współczynnik $m$ jest równy:",
+      "correct_answer": "20",
+      "options": [
+        "21",
+        "8",
+        "20",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wektory równoległe mają proporcjonalne współrzędne: $\\frac{8}{2}=\\frac{m}{5}=4$, więc $m=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "19c85ff3-df3b-5764-afe6-5af44a3eba63",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[4,4]$ i $\\vec{v}=[12,m]$ są równoległe. Współczynnik $m$ jest równy:",
+      "correct_answer": "12",
+      "options": [
+        "12",
+        "7",
+        "14",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wektory równoległe mają proporcjonalne współrzędne: $\\frac{12}{4}=\\frac{m}{4}=3$, więc $m=12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f3318d5d-7332-5ad0-afbc-67d86498323e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek odcinka o końcach $A=(-2,4)$ i $B=(6,0)$ ma współrzędne:",
+      "correct_answer": "(2,2)",
+      "options": [
+        "(3,2)",
+        "(4,4)",
+        "(2,2)",
+        "(4,-2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek to średnia współrzędnych: $\\left(\\frac{-2+6}{2},\\frac{4}{2}\\right)=(2,2)$.\n**Odpowiedź:** (2,2)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d804828c-3d0b-5e71-a537-e5044d514cf4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dane są punkty $A=(-2,-4)$ i $B=(-8,-2)$. Współrzędne wektora $\\vec{AB}$ to:",
+      "correct_answer": "[-6,2]",
+      "options": [
+        "[-10,-6]",
+        "[2,-6]",
+        "[-6,2]",
+        "[6,-2]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\vec{AB}=[-8,-2]-[-2,-4]=[-6,2]$.\n**Odpowiedź:** [-6,2]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "abfc35d0-c0c3-5fcf-a9b7-2913a9592abb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dane są wektory $\\vec{u}=[-1,-3]$ i $\\vec{v}=[4,-3]$. Współrzędne wektora $\\vec{u}+\\vec{v}$ to:",
+      "correct_answer": "[3,-6]",
+      "options": [
+        "[-5,0]",
+        "[-4,9]",
+        "[4,-6]",
+        "[3,-6]"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodajemy odpowiednie współrzędne: $[-1,-3]+[4,-3]=[3,-6]$.\n**Odpowiedź:** [3,-6]",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "30f465bf-410f-51d4-adf8-946c62764a3d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz iloczyn skalarny wektorów $\\vec{u}=[-2,-3]$ i $\\vec{v}=[5,1]$.",
+      "correct_answer": "-13",
+      "options": [
+        "-12",
+        "-13",
+        "-7",
+        "-17"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\vec{u}\\circ\\vec{v}=(-2)(5)+(-3)(1)=-13$.\n**Odpowiedź:** -13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f4c4e58f-5776-55f2-abeb-a63e6d6d090a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz iloczyn skalarny wektorów $\\vec{u}=[2,-5]$ i $\\vec{v}=[2,1]$.",
+      "correct_answer": "-1",
+      "options": [
+        "0",
+        "-1",
+        "-8",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\vec{u}\\circ\\vec{v}=(2)(2)+(-5)(1)=-1$.\n**Odpowiedź:** -1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed3af235-fc07-5892-aa2f-472fd88f8682",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[2,2]$ i $\\vec{v}=[4,m]$ są prostopadłe. Współczynnik $m$ jest równy:",
+      "correct_answer": "-4",
+      "options": [
+        "-3",
+        "8",
+        "4",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Iloczyn skalarny wektorów prostopadłych jest zerem: $2\\cdot4+2\\cdot m=0$, więc $m=-4$.\n**Odpowiedź:** -4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f267b92c-f5d1-5b6f-abd8-5375775b5d6a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wektory $\\vec{u}=[3,3]$ i $\\vec{v}=[9,m]$ są równoległe. Współczynnik $m$ jest równy:",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wektory równoległe mają proporcjonalne współrzędne: $\\frac{9}{3}=\\frac{m}{3}=3$, więc $m=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "55dda1a3-ea40-5827-a97a-9d9709f619fa",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

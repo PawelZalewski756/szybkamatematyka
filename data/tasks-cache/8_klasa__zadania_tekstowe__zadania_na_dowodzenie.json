@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "zadania_tekstowe",
+  "topic": "zadania_na_dowodzenie",
+  "categoryName": "Zadania tekstowe",
+  "topicName": "Zadania na dowodzenie",
+  "tasks": [
+    {
+      "content": "Trzy kolejne liczby całkowite to $n$, $n + 1$ i $n + 2$. Ich suma wynosi $3n + 3$. Dla $n = 14$ suma ta jest równa:",
+      "correct_answer": "45",
+      "options": [
+        "48",
+        "43",
+        "42",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstawiamy $n = 14$: $3 \\cdot 14 + 3 = 45$. Suma trzech kolejnych liczb jest zawsze podzielna przez $3$.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "baad9b69-94f0-5446-a20e-8fe3e3b3e4a9",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 13$ jest nieparzysta. Która z podanych liczb jest parzysta?",
+      "correct_answer": "14",
+      "options": [
+        "27",
+        "15",
+        "14",
+        "169"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodanie $1$ do liczby nieparzystej daje liczbę parzystą: $13 + 1 = 14$. Liczby $15$ i $27$ są nieparzyste, a $169$ też jest nieparzysta.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d987784a-82c5-5370-aec6-285e55023f39",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dla dwóch kolejnych liczb naturalnych $n$ i $n + 1$ różnica kwadratów wynosi $(n + 1)^2 - n^2 = 2n + 1$. Dla $n = 3$ różnica ta jest równa:",
+      "correct_answer": "7",
+      "options": [
+        "5",
+        "6",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$(n + 1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1$. Dla $n = 3$: $2 \\cdot 3 + 1 = 7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "edea13da-072e-5866-aa36-865572bd36ae",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 13$ jest nieparzysta. Jaką resztę daje $n^2$ przy dzieleniu przez $4$?",
+      "correct_answer": "1",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$13^2 = 169$, a $169 : 4 = 42$ reszty $1$. Każdy kwadrat liczby nieparzystej daje resztę $1$ z dzielenia przez $4$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8763ed76-d6c1-5bda-afaa-6e9b3dce95df",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $a = 10$ jest parzysta, a liczba $b = 5$ jest nieparzysta. Ich suma $a + b$ jest:",
+      "correct_answer": "nieparzysta",
+      "options": [
+        "równa 0",
+        "podzielna przez 4",
+        "nieparzysta",
+        "parzysta"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$10 + 5 = 15$. Suma liczby parzystej i nieparzystej jest zawsze nieparzysta.\n**Odpowiedź:** nieparzysta",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcf6215b-2fcd-551b-ae1b-2607c58ba654",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Iloczyn trzech kolejnych liczb naturalnych jest ZAWSZE podzielny przez:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "9",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wśród trzech kolejnych liczb jest co najmniej jedna parzysta i dokładnie jedna podzielna przez $3$, więc iloczyn dzieli się przez $2 \\cdot 3 = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4ad38961-5974-5fcb-a25e-be48a9f08ab1",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kolejne liczby całkowite to $n$, $n + 1$ i $n + 2$. Ich suma wynosi $3n + 3$. Dla $n = 15$ suma ta jest równa:",
+      "correct_answer": "48",
+      "options": [
+        "51",
+        "46",
+        "48",
+        "45"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstawiamy $n = 15$: $3 \\cdot 15 + 3 = 48$. Suma trzech kolejnych liczb jest zawsze podzielna przez $3$.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4305e6e7-6daa-552a-a52a-34e1e9cc5bce",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 9$ jest nieparzysta. Która z podanych liczb jest parzysta?",
+      "correct_answer": "10",
+      "options": [
+        "81",
+        "19",
+        "10",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodanie $1$ do liczby nieparzystej daje liczbę parzystą: $9 + 1 = 10$. Liczby $11$ i $19$ są nieparzyste, a $81$ też jest nieparzysta.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "603b978b-7f9c-5ea3-ac5a-a103c9a8fdc1",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dla dwóch kolejnych liczb naturalnych $n$ i $n + 1$ różnica kwadratów wynosi $(n + 1)^2 - n^2 = 2n + 1$. Dla $n = 4$ różnica ta jest równa:",
+      "correct_answer": "9",
+      "options": [
+        "11",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$(n + 1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1$. Dla $n = 4$: $2 \\cdot 4 + 1 = 9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "965515f9-7b18-53ff-a1fa-09fee5c11371",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 15$ jest nieparzysta. Jaką resztę daje $n^2$ przy dzieleniu przez $4$?",
+      "correct_answer": "1",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$15^2 = 225$, a $225 : 4 = 56$ reszty $1$. Każdy kwadrat liczby nieparzystej daje resztę $1$ z dzielenia przez $4$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f81e6dd1-84e2-5de9-a1ad-01d719ab21e6",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $a = 16$ jest parzysta, a liczba $b = 3$ jest nieparzysta. Ich suma $a + b$ jest:",
+      "correct_answer": "nieparzysta",
+      "options": [
+        "równa 0",
+        "parzysta",
+        "podzielna przez 4",
+        "nieparzysta"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$16 + 3 = 19$. Suma liczby parzystej i nieparzystej jest zawsze nieparzysta.\n**Odpowiedź:** nieparzysta",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "172aa9a6-58d1-58e7-aa78-b7c894a4633e",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Iloczyn $n(n+1)(n+2)$ dla dowolnej liczby naturalnej $n$ jest zawsze podzielny przez:",
+      "correct_answer": "6",
+      "options": [
+        "9",
+        "12",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wśród trzech kolejnych liczb jest co najmniej jedna parzysta i dokładnie jedna podzielna przez $3$, więc iloczyn dzieli się przez $2 \\cdot 3 = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "684677b8-7081-54ff-a171-93c81ee4e600",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kolejne liczby całkowite to $n$, $n + 1$ i $n + 2$. Ich suma wynosi $3n + 3$. Dla $n = 10$ suma ta jest równa:",
+      "correct_answer": "33",
+      "options": [
+        "36",
+        "30",
+        "31",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstawiamy $n = 10$: $3 \\cdot 10 + 3 = 33$. Suma trzech kolejnych liczb jest zawsze podzielna przez $3$.\n**Odpowiedź:** 33",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1202a033-2092-55fe-a644-da4b450a85c6",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 5$ jest nieparzysta. Która z podanych liczb jest parzysta?",
+      "correct_answer": "6",
+      "options": [
+        "11",
+        "6",
+        "7",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodanie $1$ do liczby nieparzystej daje liczbę parzystą: $5 + 1 = 6$. Liczby $7$ i $11$ są nieparzyste, a $25$ też jest nieparzysta.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8526e9c-897d-5077-a184-4fe39ae1cf71",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dla dwóch kolejnych liczb naturalnych $n$ i $n + 1$ różnica kwadratów wynosi $(n + 1)^2 - n^2 = 2n + 1$. Dla $n = 14$ różnica ta jest równa:",
+      "correct_answer": "29",
+      "options": [
+        "31",
+        "27",
+        "29",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$(n + 1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1$. Dla $n = 14$: $2 \\cdot 14 + 1 = 29$.\n**Odpowiedź:** 29",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7790eb4f-da02-5bba-a24d-972abf57e3d1",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 3$ jest nieparzysta. Jaką resztę daje $n^2$ przy dzieleniu przez $4$?",
+      "correct_answer": "1",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$3^2 = 9$, a $9 : 4 = 2$ reszty $1$. Każdy kwadrat liczby nieparzystej daje resztę $1$ z dzielenia przez $4$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57448841-6e91-595f-ad17-3fb077b8a9a1",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $a = 8$ jest parzysta, a liczba $b = 15$ jest nieparzysta. Ich suma $a + b$ jest:",
+      "correct_answer": "nieparzysta",
+      "options": [
+        "podzielna przez 4",
+        "równa 0",
+        "parzysta",
+        "nieparzysta"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$8 + 15 = 23$. Suma liczby parzystej i nieparzystej jest zawsze nieparzysta.\n**Odpowiedź:** nieparzysta",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f622f7b9-9d83-5d30-a349-bf0a174932ab",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kolejne liczby naturalne mnożymy przez siebie. Otrzymany iloczyn jest zawsze podzielny przez:",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "12",
+        "9",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wśród trzech kolejnych liczb jest co najmniej jedna parzysta i dokładnie jedna podzielna przez $3$, więc iloczyn dzieli się przez $2 \\cdot 3 = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7cd1b659-b602-57e4-a707-2e98175cea81",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kolejne liczby całkowite to $n$, $n + 1$ i $n + 2$. Ich suma wynosi $3n + 3$. Dla $n = 6$ suma ta jest równa:",
+      "correct_answer": "21",
+      "options": [
+        "24",
+        "21",
+        "18",
+        "19"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Podstawiamy $n = 6$: $3 \\cdot 6 + 3 = 21$. Suma trzech kolejnych liczb jest zawsze podzielna przez $3$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a1d969ec-9a2a-5e28-a53c-abb7987361d3",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Liczba $n = 15$ jest nieparzysta. Która z podanych liczb jest parzysta?",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "225",
+        "31",
+        "17"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodanie $1$ do liczby nieparzystej daje liczbę parzystą: $15 + 1 = 16$. Liczby $17$ i $31$ są nieparzyste, a $225$ też jest nieparzysta.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8668028b-49d7-596a-aeff-c082e230d737",
+      "generatedAt": "2026-11-18T12:23:59.859Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.859Z"
+}

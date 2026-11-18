@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "srednia_wazona",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Średnia ważona",
+  "tasks": [
+    {
+      "content": "Oblicz średnią ważoną wartości $6$, $5$ i $3$ z wagami odpowiednio $2$, $2$ i $2$.",
+      "correct_answer": "$\\frac{14}{3}$",
+      "options": [
+        "$\\frac{14}{3}$",
+        "$\\frac{9}{2}$",
+        "$\\frac{29}{6}$",
+        "$4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\bar{x}_w=\\frac{6\\cdot2+5\\cdot2+3\\cdot2}{6}=\\frac{14}{3}$.\n**Odpowiedź:** $\\frac{14}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "08ea9d27-ac21-5c6c-a560-518d82cb5bdd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oceny ucznia to $3$ (waga $2$), $5$ (waga $2$) i $3$ (waga $2$). Średnia ważona tych ocen wynosi:",
+      "correct_answer": "$\\frac{11}{3}$",
+      "options": [
+        "$\\frac{7}{2}$",
+        "$\\frac{11}{3}$",
+        "$\\frac{23}{6}$",
+        "$\\frac{22}{7}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\bar{x}_w=\\frac{3\\cdot2+5\\cdot2+3\\cdot2}{6}=\\frac{11}{3}$.\n**Odpowiedź:** $\\frac{11}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae79eee7-d07d-5dfb-a2ed-c5a65d25e62d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$60\\%$ uczniów pewnej grupy ma średnią ocen $4$, a pozostałe $40\\%$ - średnią $5$. Średnia ocen całej grupy wynosi:",
+      "correct_answer": "$\\frac{22}{5}$",
+      "options": [
+        "$\\frac{11}{5}$",
+        "$\\frac{22}{5}$",
+        "$\\frac{23}{5}$",
+        "$\\frac{9}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia ważona z wagami $0{,}6$ i $0{,}4$: $0{,}6\\cdot4+0{,}4\\cdot5=\\frac{22}{5}$.\n**Odpowiedź:** $\\frac{22}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "42f1ffbf-bd9b-5a8e-afab-10ac1eb9b320",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$60\\%$ uczniów pewnej grupy ma średnią ocen $4$, a pozostałe $40\\%$ - średnią $2$. Średnia ocen całej grupy wynosi:",
+      "correct_answer": "$\\frac{16}{5}$",
+      "options": [
+        "$\\frac{14}{5}$",
+        "$\\frac{16}{5}$",
+        "$\\frac{8}{5}$",
+        "$3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Średnia ważona z wagami $0{,}6$ i $0{,}4$: $0{,}6\\cdot4+0{,}4\\cdot2=\\frac{16}{5}$.\n**Odpowiedź:** $\\frac{16}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6110d91d-ed4e-581f-a682-8276268e0558",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W grupie $9$ osób średnia wieku wynosi $4$ lat, a w grupie $6$ osób - $4$ lata. Średnia wieku wszystkich $15$ osób wynosi:",
+      "correct_answer": "$4$",
+      "options": [
+        "$\\frac{15}{4}$",
+        "$\\frac{61}{15}$",
+        "$4$",
+        "$\\frac{59}{15}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\bar{x}=\\frac{9\\cdot4+6\\cdot4}{15}=4$.\n**Odpowiedź:** $4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ef08096-705b-5736-adc0-9a42fd2037f1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Grupa pierwsza liczy $7$ osób i ma średnią $5$. Grupa druga liczy $6$ osób i ma średnią $3$. W której grupie suma wszystkich wartości jest większa?",
+      "correct_answer": "grupa pierwsza",
+      "options": [
+        "nie można porównać",
+        "grupa druga",
+        "grupa pierwsza",
+        "sumy są równe"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma w pierwszej grupie to $7\\cdot5=35$, a w drugiej $6\\cdot3=18$. Większa jest w grupie: grupa pierwsza.\n**Odpowiedź:** grupa pierwsza",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f9a8971-c94c-5f35-a6c9-67c96243f7f9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną wartości $2$, $3$ i $6$ z wagami odpowiednio $2$, $2$ i $1$.",
+      "correct_answer": "$\\frac{16}{5}$",
+      "options": [
+        "$3$",
+        "$\\frac{8}{3}$",
+        "$\\frac{17}{5}$",
+        "$\\frac{16}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\bar{x}_w=\\frac{2\\cdot2+3\\cdot2+6}{5}=\\frac{16}{5}$.\n**Odpowiedź:** $\\frac{16}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "411f56b8-aed8-5f14-a2c3-f4aacf1b09b5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oceny ucznia to $2$ (waga $3$), $3$ (waga $2$) i $4$ (waga $1$). Średnia ważona tych ocen wynosi:",
+      "correct_answer": "$\\frac{8}{3}$",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{8}{3}$",
+        "$\\frac{16}{7}$",
+        "$\\frac{17}{6}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\bar{x}_w=\\frac{2\\cdot3+3\\cdot2+4}{6}=\\frac{8}{3}$.\n**Odpowiedź:** $\\frac{8}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8428b66-93f4-5e5c-a76a-221bc6a4fcd2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W grupie $9$ osób średnia wieku wynosi $2$ lat, a w grupie $8$ osób - $5$ lata. Średnia wieku wszystkich $17$ osób wynosi:",
+      "correct_answer": "$\\frac{58}{17}$",
+      "options": [
+        "$\\frac{57}{17}$",
+        "$\\frac{58}{17}$",
+        "$\\frac{59}{17}$",
+        "$\\frac{29}{9}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\bar{x}=\\frac{9\\cdot2+8\\cdot5}{17}=\\frac{58}{17}$.\n**Odpowiedź:** $\\frac{58}{17}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9f1256e6-ed07-5ecd-a4b0-7587779a999e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$60\\%$ uczniów pewnej grupy ma średnią ocen $2$, a pozostałe $40\\%$ - średnią $4$. Średnia ocen całej grupy wynosi:",
+      "correct_answer": "$\\frac{14}{5}$",
+      "options": [
+        "$3$",
+        "$\\frac{7}{5}$",
+        "$\\frac{16}{5}$",
+        "$\\frac{14}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Średnia ważona z wagami $0{,}6$ i $0{,}4$: $0{,}6\\cdot2+0{,}4\\cdot4=\\frac{14}{5}$.\n**Odpowiedź:** $\\frac{14}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a719d2c4-e578-5ac7-ac1d-6c8a83f81b35",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W grupie $4$ osób średnia wieku wynosi $5$ lat, a w grupie $7$ osób - $2$ lata. Średnia wieku wszystkich $11$ osób wynosi:",
+      "correct_answer": "$\\frac{34}{11}$",
+      "options": [
+        "$\\frac{35}{11}$",
+        "$\\frac{17}{6}$",
+        "$\\frac{34}{11}$",
+        "$3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\bar{x}=\\frac{4\\cdot5+7\\cdot2}{11}=\\frac{34}{11}$.\n**Odpowiedź:** $\\frac{34}{11}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99d39a93-0714-5e8c-a154-66101db0f754",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Grupa pierwsza liczy $8$ osób i ma średnią $2$. Grupa druga liczy $6$ osób i ma średnią $4$. W której grupie suma wszystkich wartości jest większa?",
+      "correct_answer": "grupa druga",
+      "options": [
+        "grupa pierwsza",
+        "grupa druga",
+        "nie można porównać",
+        "sumy są równe"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma w pierwszej grupie to $8\\cdot2=16$, a w drugiej $6\\cdot4=24$. Większa jest w grupie: grupa druga.\n**Odpowiedź:** grupa druga",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "543938e3-6969-548c-a05f-9d69b780031a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną wartości $6$, $5$ i $5$ z wagami odpowiednio $2$, $2$ i $2$.",
+      "correct_answer": "$\\frac{16}{3}$",
+      "options": [
+        "$\\frac{11}{2}$",
+        "$\\frac{16}{3}$",
+        "$\\frac{32}{7}$",
+        "$\\frac{31}{6}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\bar{x}_w=\\frac{6\\cdot2+5\\cdot2+5\\cdot2}{6}=\\frac{16}{3}$.\n**Odpowiedź:** $\\frac{16}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eedcf313-3e31-5a1a-a4d0-1c260cb4d258",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oceny ucznia to $2$ (waga $3$), $2$ (waga $3$) i $4$ (waga $1$). Średnia ważona tych ocen wynosi:",
+      "correct_answer": "$\\frac{16}{7}$",
+      "options": [
+        "$\\frac{17}{7}$",
+        "$\\frac{15}{7}$",
+        "$2$",
+        "$\\frac{16}{7}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\bar{x}_w=\\frac{2\\cdot3+2\\cdot3+4}{7}=\\frac{16}{7}$.\n**Odpowiedź:** $\\frac{16}{7}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "153225ea-18a1-5604-aefb-447076b222c2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Średnia ważona trzech wartości wynosi $3$. Dwie z nich to $2$ (waga $1$) i $4$ (waga $2$). Trzecia wartość ma wagę $1$. Ile wynosi trzecia wartość?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$(2+4\\cdot2+x)/4=3$, więc $x=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c6b261b2-2b88-5a75-a4cf-51001ec3fb51",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$60\\%$ uczniów pewnej grupy ma średnią ocen $3$, a pozostałe $40\\%$ - średnią $2$. Średnia ocen całej grupy wynosi:",
+      "correct_answer": "$\\frac{13}{5}$",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{12}{5}$",
+        "$\\frac{13}{10}$",
+        "$\\frac{13}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Średnia ważona z wagami $0{,}6$ i $0{,}4$: $0{,}6\\cdot3+0{,}4\\cdot2=\\frac{13}{5}$.\n**Odpowiedź:** $\\frac{13}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "905ebd29-c127-52db-a96d-7622f094fd8a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W grupie $5$ osób średnia wieku wynosi $2$ lat, a w grupie $4$ osób - $2$ lata. Średnia wieku wszystkich $9$ osób wynosi:",
+      "correct_answer": "$2$",
+      "options": [
+        "$\\frac{19}{9}$",
+        "$\\frac{9}{5}$",
+        "$2$",
+        "$\\frac{17}{9}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\bar{x}=\\frac{5\\cdot2+4\\cdot2}{9}=2$.\n**Odpowiedź:** $2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b0ff298-a538-5424-a3c8-d10420e7c09d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Grupa pierwsza liczy $10$ osób i ma średnią $2$. Grupa druga liczy $7$ osób i ma średnią $3$. W której grupie suma wszystkich wartości jest większa?",
+      "correct_answer": "grupa druga",
+      "options": [
+        "sumy są równe",
+        "nie można porównać",
+        "grupa pierwsza",
+        "grupa druga"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma w pierwszej grupie to $10\\cdot2=20$, a w drugiej $7\\cdot3=21$. Większa jest w grupie: grupa druga.\n**Odpowiedź:** grupa druga",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7f7f9d8b-4060-5751-a16e-74b0c66a3995",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz średnią ważoną wartości $5$, $3$ i $4$ z wagami odpowiednio $3$, $3$ i $2$.",
+      "correct_answer": "$4$",
+      "options": [
+        "$\\frac{31}{8}$",
+        "$\\frac{32}{9}$",
+        "$\\frac{33}{8}$",
+        "$4$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\bar{x}_w=\\frac{5\\cdot3+3\\cdot3+4\\cdot2}{8}=4$.\n**Odpowiedź:** $4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a16cd55-d5f6-5e76-a4d3-996290f504b9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oceny ucznia to $2$ (waga $3$), $2$ (waga $3$) i $3$ (waga $3$). Średnia ważona tych ocen wynosi:",
+      "correct_answer": "$\\frac{7}{3}$",
+      "options": [
+        "$\\frac{22}{9}$",
+        "$\\frac{20}{9}$",
+        "$\\frac{21}{10}$",
+        "$\\frac{7}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\bar{x}_w=\\frac{2\\cdot3+2\\cdot3+3\\cdot3}{9}=\\frac{7}{3}$.\n**Odpowiedź:** $\\frac{7}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "485af9ff-bcab-5378-ad54-13f4b84acaa3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

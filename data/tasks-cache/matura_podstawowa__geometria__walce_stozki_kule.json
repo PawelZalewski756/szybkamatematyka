@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "walce_stozki_kule",
+  "categoryName": "Geometria",
+  "topicName": "Walec, stożek i kula",
+  "tasks": [
+    {
+      "content": "Walec ma promień podstawy $2$ cm i wysokość $6$ cm. Jego objętość wynosi:",
+      "correct_answer": "$24\\pi\\ \\text{cm}^3$",
+      "options": [
+        "$26pi \text{cm}^3$",
+        "$24\\pi\\ \\text{cm}^3$",
+        "$25pi \text{cm}^3$",
+        "24 cm³"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$V=\\pi r^2h=\\pi\\cdot2^2\\cdot6=24\\pi$ cm$^3$.\n**Odpowiedź:** $24\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1f2d6a9c-cb97-5514-a8a4-4991b4ec63bb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $6$ cm i wysokość $3$ cm. Jego objętość wynosi:",
+      "correct_answer": "$36\\pi\\ \\text{cm}^3$",
+      "options": [
+        "36 cm³",
+        "$36\\pi\\ \\text{cm}^3$",
+        "$72\\pi\\ \\text{cm}^3$",
+        "$108\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$V=\\frac13\\pi r^2h=\\frac13\\pi\\cdot6^2\\cdot3=36\\pi$ cm$^3$.\n**Odpowiedź:** $36\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c91363da-ebd7-5fb9-a8fc-d19eaa3a2c7d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kula ma promień $3$ cm. Jej objętość wynosi:",
+      "correct_answer": "$36\\pi\\ \\text{cm}^3$",
+      "options": [
+        "$12\\pi\\ \\text{cm}^3$",
+        "$36\\pi\\ \\text{cm}^2$",
+        "$18\\pi\\ \\text{cm}^3$",
+        "$36\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$V=\\frac43\\pi r^3=\\frac43\\pi\\cdot3^3=36\\pi$ cm$^3$.\n**Odpowiedź:** $36\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "364d60ce-2e64-50b5-a699-847f57e680f6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kula ma promień $3$ cm. Jej pole powierzchni wynosi:",
+      "correct_answer": "$36\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$18\\pi\\ \\text{cm}^2$",
+        "$36\\pi\\ \\text{cm}^2$",
+        "$9\\pi\\ \\text{cm}^2$",
+        "$72\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P=4\\pi r^2=4\\pi\\cdot3^2=36\\pi$ cm$^2$.\n**Odpowiedź:** $36\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d377af3e-df16-5d18-af1f-3cc81f84f6e5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $2$ cm i wysokość $6$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$24\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$12\\pi\\ \\text{cm}^2$",
+        "24 cm²",
+        "$24\\pi\\ \\text{cm}^3$",
+        "$24\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P_b=2\\pi rh=2\\pi\\cdot2\\cdot6=24\\pi$ cm$^2$.\n**Odpowiedź:** $24\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "599f2e87-ecd8-527e-ab4b-f6c42a26d57b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $3$ cm i wysokość $4$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$15\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$30\\pi\\ \\text{cm}^2$",
+        "$12\\pi\\ \\text{cm}^2$",
+        "$15\\pi\\ \\text{cm}^2$",
+        "$25\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Tworząca to $l=\\sqrt{3^2+4^2}=5$ cm, więc $P_b=\\pi rl=\\pi\\cdot3\\cdot5=15\\pi$ cm$^2$.\n**Odpowiedź:** $15\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8fbd7555-0bdd-53c1-a292-578c0d04b358",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $3$ cm i wysokość $3$ cm. Pole powierzchni całkowitej wynosi:",
+      "correct_answer": "$36\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$36\\pi\\ \\text{cm}^3$",
+        "$18\\pi\\ \\text{cm}^2$",
+        "$36\\pi\\ \\text{cm}^2$",
+        "$19\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P_c=2\\pi r(r+h)=2\\pi\\cdot3\\cdot(3+3)=36\\pi$ cm$^2$.\n**Odpowiedź:** $36\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ebc91fb9-6f9c-5207-a8ab-dbf007ecc310",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $3$ cm i wysokość $7$ cm. Jego objętość wynosi:",
+      "correct_answer": "$63\\pi\\ \\text{cm}^3$",
+      "options": [
+        "63 cm³",
+        "$63\\pi\\ \\text{cm}^3$",
+        "$64pi \text{cm}^3$",
+        "$66pi \text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$V=\\pi r^2h=\\pi\\cdot3^2\\cdot7=63\\pi$ cm$^3$.\n**Odpowiedź:** $63\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "de7bdb53-9027-5b54-ae8b-eaf35f0a27c7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $3$ cm i wysokość $3$ cm. Jego objętość wynosi:",
+      "correct_answer": "$9\\pi\\ \\text{cm}^3$",
+      "options": [
+        "9 cm³",
+        "$9\\pi\\ \\text{cm}^3$",
+        "$27\\pi\\ \\text{cm}^3$",
+        "$18\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$V=\\frac13\\pi r^2h=\\frac13\\pi\\cdot3^2\\cdot3=9\\pi$ cm$^3$.\n**Odpowiedź:** $9\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9821ef41-e01d-5847-a7d7-47e6c9edcb92",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kula ma promień $4$ cm. Jej objętość wynosi:",
+      "correct_answer": "$\\frac{256}{3}\\pi\\ \\text{cm}^3$",
+      "options": [
+        "$\\frac{256}{3}\\pi\\ \\text{cm}^2$",
+        "$\\frac{256}{3}\\pi\\ \\text{cm}^3$",
+        "$\\frac{128}{3}\\pi\\ \\text{cm}^3$",
+        "$\\frac{64}{3}\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$V=\\frac43\\pi r^3=\\frac43\\pi\\cdot4^3=\\frac{256}{3}\\pi$ cm$^3$.\n**Odpowiedź:** $\\frac{256}{3}\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "787ca79b-6708-5ade-af2b-3d369ae30b59",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kula ma promień $8$ cm. Jej pole powierzchni wynosi:",
+      "correct_answer": "$256\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$256\\pi\\ \\text{cm}^2$",
+        "$512\\pi\\ \\text{cm}^2$",
+        "$64\\pi\\ \\text{cm}^2$",
+        "$128\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P=4\\pi r^2=4\\pi\\cdot8^2=256\\pi$ cm$^2$.\n**Odpowiedź:** $256\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "14f7abe8-e0c6-5e90-a61d-c72eab3210f8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $5$ cm i wysokość $6$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$60\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$60\\pi\\ \\text{cm}^3$",
+        "$60\\pi\\ \\text{cm}^2$",
+        "$30\\pi\\ \\text{cm}^2$",
+        "60 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P_b=2\\pi rh=2\\pi\\cdot5\\cdot6=60\\pi$ cm$^2$.\n**Odpowiedź:** $60\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a068a674-14e5-5e8f-a7b1-bb7932238e7a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $2$ cm i wysokość $8$ cm. Pole powierzchni całkowitej wynosi:",
+      "correct_answer": "$40\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$40\\pi\\ \\text{cm}^3$",
+        "$40\\pi\\ \\text{cm}^2$",
+        "$32\\pi\\ \\text{cm}^2$",
+        "$21\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P_c=2\\pi r(r+h)=2\\pi\\cdot2\\cdot(2+8)=40\\pi$ cm$^2$.\n**Odpowiedź:** $40\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9afe7086-0093-5e6a-a06c-b12410a21255",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $2$ cm i wysokość $6$ cm. Pole powierzchni całkowitej wynosi:",
+      "correct_answer": "$32\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$32\\pi\\ \\text{cm}^2$",
+        "$17\\pi\\ \\text{cm}^2$",
+        "$24\\pi\\ \\text{cm}^2$",
+        "$32\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P_c=2\\pi r(r+h)=2\\pi\\cdot2\\cdot(2+6)=32\\pi$ cm$^2$.\n**Odpowiedź:** $32\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5371442a-b183-5bc4-ac45-4ec3a32a59e5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $3$ cm i wysokość $4$ cm. Jego objętość wynosi:",
+      "correct_answer": "$36\\pi\\ \\text{cm}^3$",
+      "options": [
+        "36 cm³",
+        "$36\\pi\\ \\text{cm}^3$",
+        "$39pi \text{cm}^3$",
+        "$37pi \text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$V=\\pi r^2h=\\pi\\cdot3^2\\cdot4=36\\pi$ cm$^3$.\n**Odpowiedź:** $36\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1b86b5e5-9419-5e4f-a994-e487fa1ceaf1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $6$ cm i wysokość $5$ cm. Jego objętość wynosi:",
+      "correct_answer": "$60\\pi\\ \\text{cm}^3$",
+      "options": [
+        "$180\\pi\\ \\text{cm}^3$",
+        "$60\\pi\\ \\text{cm}^3$",
+        "$120\\pi\\ \\text{cm}^3$",
+        "60 cm³"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$V=\\frac13\\pi r^2h=\\frac13\\pi\\cdot6^2\\cdot5=60\\pi$ cm$^3$.\n**Odpowiedź:** $60\\pi\\ \\text{cm}^3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "048eb8b6-f1ef-5e66-a141-59e5f006bf30",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kula ma promień $6$ cm. Jej pole powierzchni wynosi:",
+      "correct_answer": "$144\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$144\\pi\\ \\text{cm}^2$",
+        "$72\\pi\\ \\text{cm}^2$",
+        "$288\\pi\\ \\text{cm}^2$",
+        "$36\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P=4\\pi r^2=4\\pi\\cdot6^2=144\\pi$ cm$^2$.\n**Odpowiedź:** $144\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "79030640-8bf6-5316-a401-2641a2f712d6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $3$ cm i wysokość $8$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$48\\pi\\ \\text{cm}^2$",
+      "options": [
+        "48 cm²",
+        "$48\\pi\\ \\text{cm}^2$",
+        "$24\\pi\\ \\text{cm}^2$",
+        "$48\\pi\\ \\text{cm}^3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P_b=2\\pi rh=2\\pi\\cdot3\\cdot8=48\\pi$ cm$^2$.\n**Odpowiedź:** $48\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "78d1a798-d176-5e01-a74e-5e0bbaeb9bc6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $4$ cm i wysokość $9$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$72\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$72\\pi\\ \\text{cm}^2$",
+        "$72\\pi\\ \\text{cm}^3$",
+        "72 cm²",
+        "$36\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P_b=2\\pi rh=2\\pi\\cdot4\\cdot9=72\\pi$ cm$^2$.\n**Odpowiedź:** $72\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2d61d82e-37c2-54c7-a5c1-82109fa07c72",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $6$ cm i wysokość $8$ cm. Pole powierzchni bocznej wynosi:",
+      "correct_answer": "$60\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$100\\pi\\ \\text{cm}^2$",
+        "$48\\pi\\ \\text{cm}^2$",
+        "$60\\pi\\ \\text{cm}^2$",
+        "$120\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Tworząca to $l=\\sqrt{6^2+8^2}=10$ cm, więc $P_b=\\pi rl=\\pi\\cdot6\\cdot10=60\\pi$ cm$^2$.\n**Odpowiedź:** $60\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fdd08119-360d-5462-afbd-a395eef11e81",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}
