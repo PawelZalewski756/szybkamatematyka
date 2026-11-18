@@ -116,7 +116,7 @@ export async function grantProToUser(
     input.reason || "rekompensata przyznana przez administratora",
   ).slice(0, 300);
 
-  let { data: profile, error } = await supabase
+  const { data: profileData, error } = await supabase
     .from("profiles")
     .select(
       "id, subscription_status, subscription_current_period_end, stripe_subscription_id, pro_source",
@@ -128,6 +128,7 @@ export async function grantProToUser(
     return { status: "failed", identifier: input.userId, error: error.message };
   }
 
+  let profile = profileData;
   if (!profile) {
     const fallbackNick = `gracz_${input.userId.replace(/-/g, "")}`;
     const { error: insertError } = await supabase.from("profiles").insert({
