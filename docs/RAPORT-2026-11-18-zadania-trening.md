@@ -114,3 +114,45 @@ Wysyłka wymaga `RESEND_API_KEY`; nadawca z `BUG_REPORT_FROM`.
 
 Branch: `fix/trening-zadania-pro-2026-11-18` (na bazie `origin/master`). Repozytorium ma prawdziwą historię GitHuba; można je otworzyć
 w GitHub Desktop i opublikować branch.
+
+## 8. Telegram, statystyki i XP wszędzie
+
+### Dlaczego nowe konta nie były w /stats
+`/users` czytał `auth.users`, a `/stats` liczył tylko `profiles`. Jeśli trigger
+`handle_new_user` nie utworzył wiersza profilu (albo konto powstało obok
+`/api/signup`), konto było w `/users`, ale nie w `/stats` i nie miało profilu.
+
+Naprawa:
+
+- migracja `20261118150000_platform_stats_and_profile_backfill.sql`:
+  - backfill brakujących profili z `auth.users`,
+  - odtworzenie triggera `handle_new_user`,
+  - RPC `get_platform_stats()` liczące konta z `auth.users` (total, 7 dni, 24 h),
+    profile, rozwiązania i aktywnych uczniów,
+- `/stats` używa RPC, a gdy go brak — awaryjnie liczy `auth.users` przez admin API,
+- `/api/signup` wysyła powiadomienie Telegram **przed** odpowiedzią (nie w `after()`),
+- nowy cron `/api/telegram/sync-signups` (`vercel.json`, co 15 min) dosyła
+  powiadomienia dla kont z ostatnich 7 dni; idempotencja przez
+  `signup_notification_deliveries`,
+- `CRON_SECRET` w `.env.example`.
+
+### XP i rozwiązania wszędzie
+`solved_tasks.task_id` było UUID z FK do `tasks`, więc zadania z cache, CKE,
+minigier i arkuszy nie mogły się zapisać. Migracja
+`20261118145000_solved_tasks_text_source.sql`:
+
+- `task_id` → `text` (bez FK),
+- `source` (`trening`, `baza-zadan`, `cke`, `diagnoza`, `powtorki`, `minigra`,
+  `wyzwanie`, `pojedynek`, `szybka-proba`).
+
+Nowy `lib/progress/task-completion.ts`:
+
+- zapisuje rozwiązanie w `solved_tasks` + lokalnym cache,
+- nalicza XP tylko za **pierwsze poprawne** rozwiązanie,
+- źródła: trening (już wcześniej), baza zadań, arkusze CKE, diagnoza, powtórki,
+  minigry, wyzwania, pojedynki, szybka próba,
+- błędna odpowiedź nie jest „rozwiązaniem” (trafia tylko do powtórek),
+- gość zapisuje lokalnie, bez XP.
+
+Minigry, wyzwania i pojedynki zapisują rozwiązanie z XP = 0, bo XP za grę
+przyznają ich własne mechanizmy (bez podwójnego naliczania).

@@ -15,6 +15,13 @@ const MISSING_TABLE_WARN_KEY = "sm_solved_tasks_table_warned";
  */
 const TASK_ID_CHUNK = 200;
 
+const UUID_PATTERN =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+function isUuid(value: string): boolean {
+  return UUID_PATTERN.test(value);
+}
+
 function warnSolvedTasksTableMissingOnce(): void {
   if (typeof sessionStorage !== "undefined") {
     if (sessionStorage.getItem(MISSING_TABLE_WARN_KEY)) return;
@@ -92,6 +99,17 @@ export async function fetchSolvedTaskIds(userId: string): Promise<Set<string>> {
   );
 }
 
+export type SolvedTaskSource =
+  | "trening"
+  | "baza-zadan"
+  | "cke"
+  | "diagnoza"
+  | "powtorki"
+  | "minigra"
+  | "wyzwanie"
+  | "pojedynek"
+  | "szybka-proba";
+
 export type RecentSolvedTopic = {
   examType: ExamType;
   category: string;
@@ -126,6 +144,8 @@ export async function fetchLatestSolvedTopic(
     return null;
   }
   if (!data?.task_id) return null;
+  // Minigry/arkusze mają identyfikatory tekstowe - nie ma ich w public.tasks.
+  if (!isUuid(data.task_id)) return null;
 
   const { data: task, error: taskError } = await supabase
     .from("tasks")
@@ -161,15 +181,26 @@ export async function fetchLatestSolvedTopic(
 export async function markTaskSolved(
   userId: string,
   taskId: string,
+  source: SolvedTaskSource = "trening",
 ): Promise<boolean> {
   const supabase = getSupabase();
 
-  const { data, error } = await supabase
+  let { data, error } = await supabase
     .from("solved_tasks")
-    .insert({ user_id: userId, task_id: taskId })
+    .insert({ user_id: userId, task_id: taskId, source })
     .select("task_id")
     .maybeSingle()
     .retry(false);
+
+  // Starsza baza bez kolumny source - zapisujemy przynajmniej rozwiązanie.
+  if (error && isPostgrestUndefinedColumnError(error as PostgrestError)) {
+    ({ data, error } = await supabase
+      .from("solved_tasks")
+      .insert({ user_id: userId, task_id: taskId })
+      .select("task_id")
+      .maybeSingle()
+      .retry(false));
+  }
 
   if (error) {
     const pgError = error as PostgrestError;
@@ -232,7 +263,10 @@ export async function fetchSolvedCountsByTopic(
 
   const ids = solvedRows
     .map((row) => row.task_id)
-    .filter((id): id is string => Boolean(id));
+    .filter((id): id is string => Boolean(id))
+    // Minigry/arkusze mogą mieć identyfikatory tekstowe; public.tasks.id jest
+    // UUID, więc do zapytania o metadane przepuszczamy tylko UUID.
+    .filter(isUuid);
 
   const counts = new Map<string, number>();
   for (let index = 0; index < ids.length; index += TASK_ID_CHUNK) {

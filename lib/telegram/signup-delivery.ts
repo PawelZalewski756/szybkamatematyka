@@ -36,6 +36,8 @@ export type DeliverSignupNotificationOptions = {
   user?: SignupNotificationUser;
   /** Pomiń tabelę idempotencji (np. brak service role). */
   skipIdempotency?: boolean;
+  /** Maksymalny wiek konta (domyślnie 10 min). Cron używa 7 dni. */
+  maxAgeMs?: number;
 };
 
 function getAdminSupabase() {
@@ -130,7 +132,13 @@ export async function deliverSignupNotification(
     user = toUserSnapshot(fetchedUser);
   }
 
-  if (!isRecentSignup(user.created_at, Date.now(), MAX_SIGNUP_AGE_MS)) {
+  if (
+    !isRecentSignup(
+      user.created_at,
+      Date.now(),
+      options.maxAgeMs ?? MAX_SIGNUP_AGE_MS,
+    )
+  ) {
     return {
       status: 202,
       body: { delivered: false, reason: "account is not recent" },

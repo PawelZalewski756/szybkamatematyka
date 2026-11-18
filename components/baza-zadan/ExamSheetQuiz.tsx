@@ -4,6 +4,7 @@ import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
 import { ProGate } from "@/components/subscription/ProGate";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { MathText } from "@/components/trening/MathText";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
@@ -74,6 +75,12 @@ export function ExamSheetQuiz({ sheetId, title, tasks }: Props) {
         setSolvedNow((prev) => new Set(prev).add(task.id));
       }
       markSolved(task.id);
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "baza-zadan",
+        isCorrect: true,
+        xpReward: 10,
+      });
     }
   }
 

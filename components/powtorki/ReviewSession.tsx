@@ -22,6 +22,7 @@ import {
 import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import {
   fetchReviewTasksByIds,
   type ReviewTask,
@@ -211,6 +212,14 @@ function ReviewSessionInner({
     options?: { requeue?: boolean },
   ) => {
     grade(taskId, correct);
+    if (correct) {
+      void recordTaskCompletion({
+        taskId,
+        source: "powtorki",
+        isCorrect: true,
+        xpReward: 10,
+      });
+    }
 
     setFirstResults((prev) =>
       taskId in prev ? prev : { ...prev, [taskId]: correct },
