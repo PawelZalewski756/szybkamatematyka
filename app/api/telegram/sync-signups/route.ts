@@ -32,7 +32,7 @@ function getAdminSupabase() {
  *
  * Backfill powiadomień o kontach, które powstały bez wysłanej wiadomości
  * (np. rejestracja przerwana, `after()` ucięty, konto z dashboardu Supabase).
- * Uruchamiane przez Vercel Cron raz dziennie (Hobby); idempotencja w
+ * Uruchamiane przez Vercel Cron co 15 minut (Vercel Pro); idempotencja w
  * signup_notification_deliveries zapobiega duplikatom.
  */
 export async function GET(request: Request): Promise<Response> {
@@ -65,7 +65,7 @@ export async function GET(request: Request): Promise<Response> {
   }
 
   // Bez tabeli idempotencji cron mógłby wysyłać to samo powiadomienie
-  // raz dziennie (Hobby). Lepiej zatrzymać się i poprosić o migrację.
+  // co 15 minut (Vercel Pro). Lepiej zatrzymać się i poprosić o migrację.
   const { error: idempotencyError } = await supabase
     .from("signup_notification_deliveries")
     .select("user_id")
