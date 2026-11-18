@@ -87,7 +87,10 @@ migracją:
 
 Migracja `20261118133000_fix_reported_tasks.sql` jest idempotentna, poprawia
 `correct_answer` i dopisuje odpowiedź do `options`, jeśli jej brakuje. Obejmuje
-też 40 innych poprawek z audytu arytmetyki. Weryfikacja po deployu:
+też 40 innych poprawek z audytu arytmetyki. Całość (migracje + grant Pro) jest
+też w jednym pliku do wklejenia w Supabase SQL Editor:
+`supabase/sql-editor/2026-11-18-all-fixes-and-grant-pro.sql`.
+Weryfikacja po deployu:
 
 ```bash
 npm run audit:reported-tasks

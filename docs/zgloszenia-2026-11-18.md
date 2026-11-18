@@ -15,6 +15,15 @@ Migracja jest idempotentna: poprawia `correct_answer`, a jeśli odpowiedź nie
 ma jej w `options`, dopisuje ją. Obejmuje też 40 innych poprawek z audytu
 arytmetyki (`docs/sql/fix-tasks-2026-11-18.sql`).
 
+## Jednorazowo w Supabase SQL Editor
+
+Pełny, idempotentny skrypt (wszystkie migracje + 30 dni Pro dla dwóch adresów):
+
+[`supabase/sql-editor/2026-11-18-all-fixes-and-grant-pro.sql`](../supabase/sql-editor/2026-11-18-all-fixes-and-grant-pro.sql)
+
+Wklej całość do Supabase → SQL Editor → Run. Na końcu są zapytania
+weryfikacyjne (Pro, 4 zadania, statystyki, typy kolumn).
+
 ## Weryfikacja po deployu
 
 ```bash
