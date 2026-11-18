@@ -7,6 +7,14 @@ update public.tasks
    set correct_answer = '5'
  where id = '17c88022-b528-42f1-bebf-ea65194697c9';
 
+-- Najpierw zobacz, jakie konta zawierają „maja” lub „dynda”.
+-- Jeśli e-mail w zgłoszeniu różni się od konta, skopiuj właściwy adres.
+select id, email
+  from auth.users
+ where lower(email) like '%maja%'
+    or lower(email) like '%dynda%'
+ order by created_at desc;
+
 do $$
 declare
   v_user_id uuid;
@@ -15,14 +23,25 @@ declare
   v_period_end timestamptz;
   v_end timestamptz;
   v_email constant text := 'maja.dynda1@gmail.com';
+  v_actual_email text;
 begin
-  select id into v_user_id
+  select id, email into v_user_id, v_actual_email
     from auth.users
-   where lower(email) = lower(v_email)
+   where lower(btrim(email)) = lower(btrim(v_email))
    limit 1;
 
+  -- Fallback: e-mail w zgłoszeniu bywa kontaktowy, nie kontowy.
   if v_user_id is null then
-    raise exception 'Nie znaleziono użytkownika % w auth.users', v_email;
+    select id, email into v_user_id, v_actual_email
+      from auth.users
+     where lower(email) like '%maja.dynda%'
+     order by created_at desc
+     limit 1;
+  end if;
+
+  if v_user_id is null then
+    raise notice 'Nie znaleziono konta dla %. Zobacz listę kont powyżej.', v_email;
+    return;
   end if;
 
   select subscription_status, pro_source, subscription_current_period_end
@@ -32,7 +51,7 @@ begin
 
   -- Nie nadpisujemy aktywnego płatnego Stripe.
   if v_source = 'stripe' and v_status in ('active', 'trialing') then
-    raise notice 'Pomijam % - aktywne płatne Pro Stripe', v_email;
+    raise notice 'Pomijam % - aktywne płatne Pro Stripe', v_actual_email;
   else
     -- 30 dni kalendarzowych w Europe/Warsaw; istniejący gift wydłużamy.
     v_end := (now() at time zone 'Europe/Warsaw') + interval '30 days';
@@ -50,7 +69,7 @@ begin
            pro_granted_reason = 'rekompensata za błędne zadanie logarytmy (17c88022-b528-42f1-bebf-ea65194697c9)'
      where id = v_user_id;
 
-    raise notice 'Przyznano Pro % do %', v_email, v_end;
+    raise notice 'Przyznano Pro % do %', v_actual_email, v_end;
   end if;
 end $$;
 
@@ -70,7 +89,8 @@ select
   p.pro_granted_reason as powod
 from auth.users u
 join public.profiles p on p.id = u.id
-where lower(u.email) = 'maja.dynda1@gmail.com';
+where lower(u.email) like '%maja%'
+   or lower(u.email) like '%dynda%';
 
 -- Licznik solved_tasks po naprawie (osobno uruchom repair, jeśli jeszcze nie)
 select count(*) as wszystkie, count(distinct user_id) as uczniowie
