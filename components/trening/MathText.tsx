@@ -7,6 +7,7 @@ import {
 } from "@/lib/math/render-math-text";
 import { KATEX_OPTIONS } from "@/lib/math/katex-macros";
 import katex from "katex";
+import { findMarkdownImages } from "@/lib/math/markdown-images";
 import { Fragment, useMemo } from "react";
 
 type MathTextProps = {
@@ -22,8 +23,6 @@ function renderLatex(latex: string, displayMode: boolean): string {
   });
 }
 
-const IMAGE_MD = /!\[([^\]]*)\]\(([^)\s]+)\)/g;
-
 /**
  * Liczby w tekstach zadań są często zapisane jako $169$.
  * KaTeX renderuje je wtedy w kroju szeryfowym i w rozmiarze 1.21em, przez co
@@ -34,26 +33,35 @@ const PLAIN_NUMBER = /^\d+(?:[.,\s]\d+)*$/;
 
 /** Tekst z obrazkami markdown (opcje typu ![...](...)) - renderuje <img> zamiast surowego zapisu. */
 function renderTextWithImages(text: string, keyBase: number) {
+  const matches = findMarkdownImages(text);
+  if (matches.length === 0) return text;
+
   const out: React.ReactNode[] = [];
   let last = 0;
   let k = 0;
-  for (const m of text.matchAll(IMAGE_MD)) {
-    const idx = m.index ?? 0;
-    if (idx > last) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last, idx)}</Fragment>);
+  for (const match of matches) {
+    if (match.index > last) {
+      out.push(
+        <Fragment key={`${keyBase}-t${k++}`}>
+          {text.slice(last, match.index)}
+        </Fragment>,
+      );
+    }
     out.push(
       // eslint-disable-next-line @next/next/no-img-element
       <img
         key={`${keyBase}-i${k++}`}
-        src={m[2]}
-        alt={m[1] && m[1] !== "Rysunek do zadania" ? m[1] : "Opcja odpowiedzi"}
+        src={match.src}
+        alt={match.alt && match.alt !== "Rysunek do zadania" ? match.alt : "Opcja odpowiedzi"}
         loading="lazy"
         className="mx-auto inline-block max-h-28 max-w-full rounded bg-white object-contain p-1 align-middle"
       />,
     );
-    last = idx + m[0].length;
+    last = match.index + match.length;
   }
-  if (last === 0) return text;
-  if (last < text.length) out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last)}</Fragment>);
+  if (last < text.length) {
+    out.push(<Fragment key={`${keyBase}-t${k++}`}>{text.slice(last)}</Fragment>);
+  }
   return out;
 }
 
