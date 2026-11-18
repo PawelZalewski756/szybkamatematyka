@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "dzielenie_wielomianow",
+  "categoryName": "Algebra i równania",
+  "topicName": "Dzielenie wielomianów",
+  "tasks": [
+    {
+      "content": "Iloraz wielomianu $x^2+3x-10$ przez $x-2$ wynosi:",
+      "correct_answer": "$x+5$",
+      "options": [
+        "$x+5$",
+        "$x-5$",
+        "$x+7$",
+        "$x+10$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielenie jest dokładne: $x^2+3x-10=(x-2)(x+5)$, więc iloraz to $x+5$.\n**Odpowiedź:** $x+5$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd12d7f4-9173-51c5-ab02-cf3ae012512b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2-2x-15$ przez $x+3$ wynosi:",
+      "correct_answer": "$x-5$",
+      "options": [
+        "$x+5$",
+        "$x+15$",
+        "$x-5$",
+        "$x-8$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2-2x-15=(x+3)(x-5)$, więc iloraz to $x-5$.\n**Odpowiedź:** $x-5$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae068710-8bae-5ca7-a1a5-458392f00426",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia $W(x)=x^3+3x^2+2x+4$ przez $x-1$ wynosi:",
+      "correct_answer": "10",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Bézouta reszta to $W(1)=10$, bo podstawiamy $x=1$ do wielomianu.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "22a15868-9809-5938-ab45-91479b448a69",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz $\\frac{x^3-64}{x-4}$ jest równy:",
+      "correct_answer": "$x^2+4x+16$",
+      "options": [
+        "$x^2-4x+16$",
+        "$x^2+4x+16$",
+        "$x^2+5x+16$",
+        "$x^2+4x-16$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Korzystamy ze wzoru $a^3-b^3=(a-b)(a^2+ab+b^2)$: $x^3-64=(x-4)(x^2+4x+16)$.\n**Odpowiedź:** $x^2+4x+16$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8325a5b0-c181-57e0-a5dd-b6175e0344ce",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian stopnia $5$ dzielimy przez wielomian stopnia $2$. Stopień ilorazu wynosi:",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy dzieleniu wielomianów stopnie odejmują się: $5-2=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72b5814e-6791-5e86-a5ee-13ff17cc158a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian $W(x)=x^2+kx-18$ jest podzielny przez $x-3$. Współczynnik $k$ jest równy:",
+      "correct_answer": "3",
+      "options": [
+        "6",
+        "3",
+        "-3",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Bézouta $W(3)=0$: $9+k\\cdot3-18=0$, więc $k=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "666dfbc5-b8c2-5106-a752-d82c7770591c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2+2x-8$ przez $x-2$ wynosi:",
+      "correct_answer": "$x+4$",
+      "options": [
+        "$x-4$",
+        "$x+8$",
+        "$x+4$",
+        "$x+6$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielenie jest dokładne: $x^2+2x-8=(x-2)(x+4)$, więc iloraz to $x+4$.\n**Odpowiedź:** $x+4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "19106f51-2e41-58de-a5ef-b6b0fce551e8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2-2x-8$ przez $x+2$ wynosi:",
+      "correct_answer": "$x-4$",
+      "options": [
+        "$x-4$",
+        "$x-6$",
+        "$x+4$",
+        "$x+8$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2-2x-8=(x+2)(x-4)$, więc iloraz to $x-4$.\n**Odpowiedź:** $x-4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5eaf2b27-cf4b-5622-a99d-1a2c14a1a23b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia $W(x)=x^3+3x^2+5$ przez $x-3$ wynosi:",
+      "correct_answer": "59",
+      "options": [
+        "59",
+        "58",
+        "5",
+        "60"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia Bézouta reszta to $W(3)=59$, bo podstawiamy $x=3$ do wielomianu.\n**Odpowiedź:** 59",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "068f41b3-69fc-5f65-a772-0ec3287752c9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz $\\frac{x^3-216}{x-6}$ jest równy:",
+      "correct_answer": "$x^2+6x+36$",
+      "options": [
+        "$x^2-6x+36$",
+        "$x^2+6x+36$",
+        "$x^2+7x+36$",
+        "$x^2+6x-36$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Korzystamy ze wzoru $a^3-b^3=(a-b)(a^2+ab+b^2)$: $x^3-216=(x-6)(x^2+6x+36)$.\n**Odpowiedź:** $x^2+6x+36$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e647fcd1-cd73-5eeb-a630-f892abc13856",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian stopnia $7$ dzielimy przez wielomian stopnia $2$. Stopień ilorazu wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przy dzieleniu wielomianów stopnie odejmują się: $7-2=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e997578c-3c9d-5bc2-a104-5a8d56446e69",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian $W(x)=x^2+kx-4$ jest podzielny przez $x-4$. Współczynnik $k$ jest równy:",
+      "correct_answer": "-3",
+      "options": [
+        "-3",
+        "5",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia Bézouta $W(4)=0$: $16+k\\cdot4-4=0$, więc $k=-3$.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "77fffa07-4d75-5247-a398-0b98b28db4af",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2-3x-4$ przez $x-4$ wynosi:",
+      "correct_answer": "$x+1$",
+      "options": [
+        "$x+5$",
+        "$x-1$",
+        "$x+4$",
+        "$x+1$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielenie jest dokładne: $x^2-3x-4=(x-4)(x+1)$, więc iloraz to $x+1$.\n**Odpowiedź:** $x+1$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "416e04ac-5402-5e9d-a983-469d72a19bc2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2+4x-5$ przez $x+5$ wynosi:",
+      "correct_answer": "$x-1$",
+      "options": [
+        "$x-6$",
+        "$x+5$",
+        "$x+1$",
+        "$x-1$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2+4x-5=(x+5)(x-1)$, więc iloraz to $x-1$.\n**Odpowiedź:** $x-1$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e32fce1d-aa3e-5aa7-ab22-952751a6d5d0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Reszta z dzielenia $W(x)=x^3+x^2-x-4$ przez $x-2$ wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "-4",
+        "7",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia Bézouta reszta to $W(2)=6$, bo podstawiamy $x=2$ do wielomianu.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f3a4a644-fb06-5179-a377-95ab2e09d8f4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian stopnia $7$ dzielimy przez wielomian stopnia $3$. Stopień ilorazu wynosi:",
+      "correct_answer": "4",
+      "options": [
+        "7",
+        "4",
+        "5",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy dzieleniu wielomianów stopnie odejmują się: $7-3=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b86051f2-40de-5ee2-aada-964d572d0168",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian stopnia $6$ dzielimy przez wielomian stopnia $3$. Stopień ilorazu wynosi:",
+      "correct_answer": "3",
+      "options": [
+        "6",
+        "9",
+        "4",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy dzieleniu wielomianów stopnie odejmują się: $6-3=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "15b3f209-dfce-52ce-a1e9-dbb6665e4b14",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielomian $W(x)=x^2+kx-30$ jest podzielny przez $x-5$. Współczynnik $k$ jest równy:",
+      "correct_answer": "1",
+      "options": [
+        "11",
+        "-1",
+        "6",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia Bézouta $W(5)=0$: $25+k\\cdot5-30=0$, więc $k=1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c7c11a16-5a7b-5573-af88-eba0a81cb08e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2-3x-10$ przez $x-5$ wynosi:",
+      "correct_answer": "$x+2$",
+      "options": [
+        "$x+7$",
+        "$x-2$",
+        "$x+10$",
+        "$x+2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielenie jest dokładne: $x^2-3x-10=(x-5)(x+2)$, więc iloraz to $x+2$.\n**Odpowiedź:** $x+2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3e7304dc-9f15-5123-a83b-5ebff629bdf0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Iloraz wielomianu $x^2-x-12$ przez $x+3$ wynosi:",
+      "correct_answer": "$x-4$",
+      "options": [
+        "$x-4$",
+        "$x+4$",
+        "$x-7$",
+        "$x+12$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x^2-x-12=(x+3)(x-4)$, więc iloraz to $x-4$.\n**Odpowiedź:** $x-4$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5c856f23-fa65-5aa9-a848-3a847cd8aabb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

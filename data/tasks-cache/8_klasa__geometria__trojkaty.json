@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "trojkaty",
+  "categoryName": "Geometria płaska",
+  "topicName": "Trójkąty",
+  "tasks": [
+    {
+      "content": "Dwa kąty trójkąta mają miary $20°$ i $30°$. Jaką miarę ma trzeci kąt?",
+      "correct_answer": "130°",
+      "options": [
+        "130°",
+        "120°",
+        "140°",
+        "310°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma kątów trójkąta wynosi $180°$: $180 - 20 - 30 = 130$.\n**Odpowiedź:** 130°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "463dbc9b-705f-57bb-a549-8b56f5a034b6",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąt między ramionami trójkąta równoramiennego ma $100°$. Jaką miarę ma kąt przy podstawie?",
+      "correct_answer": "40°",
+      "options": [
+        "40°",
+        "50°",
+        "80°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąty przy podstawie są równe. Razem dają $180 - 100 = 80$, więc każdy ma $40°$.\n**Odpowiedź:** 40°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dcc3a174-c24a-5d66-a2b0-6625f39421f7",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Które trzy odcinki mogą być bokami trójkąta?",
+      "correct_answer": "5, 11, 13",
+      "options": [
+        "1, 2, 5",
+        "5, 11, 16",
+        "5, 11, 13",
+        "5, 11, 18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Trójkąt powstaje, gdy suma dwóch krótszych boków jest większa od najdłuższego. Dla $5, 11, 13$: $5 + 11 > 13$, więc warunek jest spełniony.\n**Odpowiedź:** 5, 11, 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d8d305de-743c-5b2d-af3f-200fb2c27bab",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt ma podstawę $10$ cm i wysokość $11$ cm. Jakie jest jego pole?",
+      "correct_answer": "55 cm²",
+      "options": [
+        "45 cm²",
+        "55 cm²",
+        "110 cm²",
+        "65 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P = \\dfrac{1}{2} \\cdot 10 \\cdot 11 = 55$ cm$^2$.\n**Odpowiedź:** 55 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c7eb6d86-002b-5289-a840-d5e4e370f999",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąty trójkąta mają miary $60°$, $55°$ i $65°$. Jak nazywa się ten trójkąt?",
+      "correct_answer": "ostrokątny",
+      "options": [
+        "prostokątny",
+        "ostrokątny",
+        "rozwartokątny",
+        "równoboczny"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąty wskazują, że trójkąt jest ostrokątny: $60°, 55°, 65°$.\n**Odpowiedź:** ostrokątny",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee6f91c9-95ab-5007-a92a-0121ad5491ca",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt równoramienny ma ramię $8$ cm i podstawę $13$ cm. Jaki jest jego obwód?",
+      "correct_answer": "29 cm",
+      "options": [
+        "29 cm",
+        "27 cm",
+        "21 cm",
+        "31 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód to suma boków: $8 + 8 + 13 = 29$ cm.\n**Odpowiedź:** 29 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "67067bb3-bc9b-5ed3-a8d9-177ed8124abf",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąt wewnętrzny trójkąta przy pewnym wierzchołku ma $130°$. Jaką miarę ma kąt zewnętrzny przy tym wierzchołku?",
+      "correct_answer": "50°",
+      "options": [
+        "60°",
+        "50°",
+        "130°",
+        "230°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt zewnętrzny i wewnętrzny przy tym samym wierzchołku dopełniają się do $180°$: $180 - 130 = 50$.\n**Odpowiedź:** 50°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3a1b3ee0-a44c-5847-a109-b9e0bca22434",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dwa kąty trójkąta mają miary $60°$ i $50°$. Jaką miarę ma trzeci kąt?",
+      "correct_answer": "70°",
+      "options": [
+        "60°",
+        "70°",
+        "80°",
+        "250°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma kątów trójkąta wynosi $180°$: $180 - 60 - 50 = 70$.\n**Odpowiedź:** 70°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "66f30cc5-e14e-5f57-a02a-aac004e046ff",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąt między ramionami trójkąta równoramiennego ma $80°$. Jaką miarę ma kąt przy podstawie?",
+      "correct_answer": "50°",
+      "options": [
+        "40°",
+        "100°",
+        "60°",
+        "50°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąty przy podstawie są równe. Razem dają $180 - 80 = 100$, więc każdy ma $50°$.\n**Odpowiedź:** 50°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bce68102-cafc-5a09-ac04-8001978c1896",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dla której trójki długości powstanie trójkąt?",
+      "correct_answer": "5, 11, 12",
+      "options": [
+        "1, 2, 5",
+        "5, 11, 12",
+        "5, 11, 16",
+        "5, 11, 18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Trójkąt powstaje, gdy suma dwóch krótszych boków jest większa od najdłuższego. Dla $5, 11, 12$: $5 + 11 > 12$, więc warunek jest spełniony.\n**Odpowiedź:** 5, 11, 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07d76db7-cf0c-5c2c-a2de-33dd97108c9a",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt ma podstawę $10$ cm i wysokość $7$ cm. Jakie jest jego pole?",
+      "correct_answer": "35 cm²",
+      "options": [
+        "35 cm²",
+        "45 cm²",
+        "70 cm²",
+        "25 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P = \\dfrac{1}{2} \\cdot 10 \\cdot 7 = 35$ cm$^2$.\n**Odpowiedź:** 35 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6c9d4118-fc9e-5214-a323-3559527de557",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąty trójkąta mają miary $60°$, $90°$ i $30°$. Jak nazywa się ten trójkąt?",
+      "correct_answer": "prostokątny",
+      "options": [
+        "prostokątny",
+        "równoboczny",
+        "rozwartokątny",
+        "ostrokątny"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąty wskazują, że trójkąt jest prostokątny: $60°, 90°, 30°$.\n**Odpowiedź:** prostokątny",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cb0117c4-b95c-5b9f-ab62-c22d02d2ef3d",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt równoramienny ma ramię $12$ cm i podstawę $16$ cm. Jaki jest jego obwód?",
+      "correct_answer": "40 cm",
+      "options": [
+        "40 cm",
+        "42 cm",
+        "38 cm",
+        "28 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to suma boków: $12 + 12 + 16 = 40$ cm.\n**Odpowiedź:** 40 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "44478787-d2bd-57b0-af6b-d497258d72c2",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąt wewnętrzny trójkąta przy pewnym wierzchołku ma $50°$. Jaką miarę ma kąt zewnętrzny przy tym wierzchołku?",
+      "correct_answer": "130°",
+      "options": [
+        "130°",
+        "140°",
+        "310°",
+        "50°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt zewnętrzny i wewnętrzny przy tym samym wierzchołku dopełniają się do $180°$: $180 - 50 = 130$.\n**Odpowiedź:** 130°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3fe605bf-6a6c-5aec-ace8-15a690b7b6ad",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dwa kąty trójkąta mają miary $70°$ i $50°$. Jaką miarę ma trzeci kąt?",
+      "correct_answer": "60°",
+      "options": [
+        "50°",
+        "60°",
+        "70°",
+        "240°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma kątów trójkąta wynosi $180°$: $180 - 70 - 50 = 60$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2c0f60cb-3155-59bf-ab9d-1f671081a41a",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąt między ramionami trójkąta równoramiennego ma $40°$. Jaką miarę ma kąt przy podstawie?",
+      "correct_answer": "70°",
+      "options": [
+        "70°",
+        "60°",
+        "80°",
+        "140°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąty przy podstawie są równe. Razem dają $180 - 40 = 140$, więc każdy ma $70°$.\n**Odpowiedź:** 70°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5009f949-cec1-537d-a315-c088ea185733",
+      "generatedAt": "2026-11-18T12:23:59.845Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Z których odcinków można zbudować trójkąt?",
+      "correct_answer": "6, 6, 8",
+      "options": [
+        "6, 6, 14",
+        "6, 6, 12",
+        "6, 6, 8",
+        "1, 2, 6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Trójkąt powstaje, gdy suma dwóch krótszych boków jest większa od najdłuższego. Dla $6, 6, 8$: $6 + 6 > 8$, więc warunek jest spełniony.\n**Odpowiedź:** 6, 6, 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d9eb5262-af5b-5c93-aeaa-794b61a22a24",
+      "generatedAt": "2026-11-18T12:23:59.846Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt ma podstawę $10$ cm i wysokość $10$ cm. Jakie jest jego pole?",
+      "correct_answer": "50 cm²",
+      "options": [
+        "50 cm²",
+        "60 cm²",
+        "40 cm²",
+        "100 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P = \\dfrac{1}{2} \\cdot 10 \\cdot 10 = 50$ cm$^2$.\n**Odpowiedź:** 50 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2c3be431-c5ba-5735-a058-35acd20d6693",
+      "generatedAt": "2026-11-18T12:23:59.846Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kąty trójkąta mają miary $65°$, $75°$ i $40°$. Jak nazywa się ten trójkąt?",
+      "correct_answer": "ostrokątny",
+      "options": [
+        "ostrokątny",
+        "rozwartokątny",
+        "równoboczny",
+        "prostokątny"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąty wskazują, że trójkąt jest ostrokątny: $65°, 75°, 40°$.\n**Odpowiedź:** ostrokątny",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0717ff9-ab0f-5aa8-a894-1212148b678b",
+      "generatedAt": "2026-11-18T12:23:59.846Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trójkąt równoramienny ma ramię $15$ cm i podstawę $21$ cm. Jaki jest jego obwód?",
+      "correct_answer": "51 cm",
+      "options": [
+        "49 cm",
+        "53 cm",
+        "51 cm",
+        "36 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód to suma boków: $15 + 15 + 21 = 51$ cm.\n**Odpowiedź:** 51 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0f4d2e82-a1c1-5eb6-ae7e-31c133f03be7",
+      "generatedAt": "2026-11-18T12:23:59.846Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.846Z"
+}

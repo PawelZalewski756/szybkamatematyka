@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "ulamki_dziesietne",
+  "categoryName": "Liczby i działania",
+  "topicName": "Ułamki dziesiętne",
+  "tasks": [
+    {
+      "content": "Oblicz: $1,4 + 1,66$",
+      "correct_answer": "3,06",
+      "options": [
+        "2,96",
+        "4,06",
+        "3,06",
+        "3,16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dopisujemy zero, aby obie liczby miały tyle samo miejsc po przecinku: $1,4 + 1,66 = 3,06$.\n**Odpowiedź:** 3,06",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6311fe5c-cb2f-5835-a498-729e164cdf30",
+      "generatedAt": "2026-11-18T12:23:59.826Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $6,2 - 4,95$",
+      "correct_answer": "1,25",
+      "options": [
+        "1,15",
+        "2,25",
+        "1,25",
+        "1,35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ustawiamy przecinki w jednej kolumnie: $6,2 - 4,95 = 1,25$.\n**Odpowiedź:** 1,25",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d52416f1-d4fe-54ba-a9e8-8f358d0b7c73",
+      "generatedAt": "2026-11-18T12:23:59.826Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $2,6 \\cdot 1000$",
+      "correct_answer": "2600",
+      "options": [
+        "2,6",
+        "26000",
+        "260",
+        "2600"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożenie przez $1000$ przesuwa przecinek o $3$ miejsca w prawo. Wynik: $2600$.\n**Odpowiedź:** 2600",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47a24016-4089-5233-ab44-3c6882aa9fde",
+      "generatedAt": "2026-11-18T12:23:59.826Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $615 : 10$",
+      "correct_answer": "61,5",
+      "options": [
+        "61,5",
+        "6150",
+        "615",
+        "6,15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielenie przez $10$ przesuwa przecinek o $1$ miejsce w lewo. Wynik: $61,5$.\n**Odpowiedź:** 61,5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61002424-062b-5e97-a1ee-155a06752126",
+      "generatedAt": "2026-11-18T12:23:59.826Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $1,7 \\cdot 0,8$",
+      "correct_answer": "1,36",
+      "options": [
+        "0,136",
+        "13,6",
+        "1,36",
+        "136"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy jak liczby naturalne: $17 \\cdot 8 = 136$, a następnie wstawiamy przecinek dwa miejsca od prawej. Wynik: $1,36$.\n**Odpowiedź:** 1,36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "86026469-acc9-5921-a93c-24fce0e8d17a",
+      "generatedAt": "2026-11-18T12:23:59.826Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zapisz ułamek $\\dfrac{1}{20}$ w postaci dziesiętnej.",
+      "correct_answer": "0,05",
+      "options": [
+        "0,5",
+        "0,005",
+        "0,05",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rozszerzamy ułamek do mianownika $10$, $100$ lub $1000$: $\\dfrac{1}{20} = 0,05$.\n**Odpowiedź:** 0,05",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c55b3561-2044-5d87-ab4b-6a638cd28da3",
+      "generatedAt": "2026-11-18T12:23:59.827Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która z tych liczb jest największa: $0,799$, $0,709$, $0,7$, $0,719$?",
+      "correct_answer": "0,799",
+      "options": [
+        "0,7",
+        "0,799",
+        "0,709",
+        "0,719"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Porównujemy liczby, uzupełniając miejsca po przecinku zerami. Największa to $0,799$.\n**Odpowiedź:** 0,799",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a5de9fcd-fdf1-56eb-ae8f-51087b7049f8",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $3,4 + 1,13$",
+      "correct_answer": "4,53",
+      "options": [
+        "5,53",
+        "4,43",
+        "4,63",
+        "4,53"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dopisujemy zero, aby obie liczby miały tyle samo miejsc po przecinku: $3,4 + 1,13 = 4,53$.\n**Odpowiedź:** 4,53",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "11004c24-a9b1-5b58-a08f-b4da66776236",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $4,6 - 2,87$",
+      "correct_answer": "1,73",
+      "options": [
+        "1,73",
+        "2,73",
+        "1,83",
+        "1,63"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ustawiamy przecinki w jednej kolumnie: $4,6 - 2,87 = 1,73$.\n**Odpowiedź:** 1,73",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8dafff2-c1c7-57e7-a3ba-3047468e3596",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $7,1 \\cdot 100$",
+      "correct_answer": "710",
+      "options": [
+        "7100",
+        "71",
+        "710",
+        "7,1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożenie przez $100$ przesuwa przecinek o $2$ miejsca w prawo. Wynik: $710$.\n**Odpowiedź:** 710",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa03eabe-3d89-54b9-a14f-64e145a0725b",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $639 : 1000$",
+      "correct_answer": "0,639",
+      "options": [
+        "639000",
+        "0,0639",
+        "6,39",
+        "0,639"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielenie przez $1000$ przesuwa przecinek o $3$ miejsca w lewo. Wynik: $0,639$.\n**Odpowiedź:** 0,639",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7b731453-e8f8-54fc-a339-16b768721d76",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $2 \\cdot 0,4$",
+      "correct_answer": "0,8",
+      "options": [
+        "80",
+        "0,08",
+        "0,8",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożymy jak liczby naturalne: $20 \\cdot 4 = 80$, a następnie wstawiamy przecinek dwa miejsca od prawej. Wynik: $0,8$.\n**Odpowiedź:** 0,8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4e192e01-c75f-506c-a542-37610fcad3dc",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zapisz ułamek $\\dfrac{3}{5}$ w postaci dziesiętnej.",
+      "correct_answer": "0,6",
+      "options": [
+        "6",
+        "0,6",
+        "0,3",
+        "0,06"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rozszerzamy ułamek do mianownika $10$, $100$ lub $1000$: $\\dfrac{3}{5} = 0,6$.\n**Odpowiedź:** 0,6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "db62ab2a-7d14-5b29-a16b-1e86bca0d9d8",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która z tych liczb jest największa: $0,691$, $0,619$, $0,7$, $0,719$?",
+      "correct_answer": "0,719",
+      "options": [
+        "0,619",
+        "0,7",
+        "0,691",
+        "0,719"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Porównujemy liczby, uzupełniając miejsca po przecinku zerami. Największa to $0,719$.\n**Odpowiedź:** 0,719",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "86899b24-3234-5347-a8a6-26ed87cac6ed",
+      "generatedAt": "2026-11-18T12:23:59.834Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $7,5 + 4,69$",
+      "correct_answer": "12,19",
+      "options": [
+        "12,29",
+        "13,19",
+        "12,19",
+        "12,09"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dopisujemy zero, aby obie liczby miały tyle samo miejsc po przecinku: $7,5 + 4,69 = 12,19$.\n**Odpowiedź:** 12,19",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "94546b06-048a-58b4-a54e-39c1a9990f0a",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $6,9 - 2,77$",
+      "correct_answer": "4,13",
+      "options": [
+        "5,13",
+        "4,23",
+        "4,13",
+        "4,03"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ustawiamy przecinki w jednej kolumnie: $6,9 - 2,77 = 4,13$.\n**Odpowiedź:** 4,13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3696b544-384b-520f-aadb-6197cccfc7a4",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $6,1 \\cdot 1000$",
+      "correct_answer": "6100",
+      "options": [
+        "6100",
+        "610",
+        "61000",
+        "6,1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożenie przez $1000$ przesuwa przecinek o $3$ miejsca w prawo. Wynik: $6100$.\n**Odpowiedź:** 6100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "59a00276-7b50-5dad-a4cc-d1f8f0cd6efb",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $436 : 100$",
+      "correct_answer": "4,36",
+      "options": [
+        "43,6",
+        "4,36",
+        "43600",
+        "0,436"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielenie przez $100$ przesuwa przecinek o $2$ miejsca w lewo. Wynik: $4,36$.\n**Odpowiedź:** 4,36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "84282c90-2a7f-57ed-a6ca-32790403a07b",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oblicz: $2,5 \\cdot 0,4$",
+      "correct_answer": "1",
+      "options": [
+        "10",
+        "1",
+        "100",
+        "0,1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy jak liczby naturalne: $25 \\cdot 4 = 100$, a następnie wstawiamy przecinek dwa miejsca od prawej. Wynik: $1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c5bd144e-1c28-5a8a-aa08-a75964ca5a58",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zapisz ułamek $\\dfrac{9}{25}$ w postaci dziesiętnej.",
+      "correct_answer": "0,36",
+      "options": [
+        "3,6",
+        "0,9",
+        "0,63",
+        "0,36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rozszerzamy ułamek do mianownika $10$, $100$ lub $1000$: $\\dfrac{9}{25} = 0,36$.\n**Odpowiedź:** 0,36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7111d8b8-88d9-5bff-aca2-b78b74ff63ba",
+      "generatedAt": "2026-11-18T12:23:59.835Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.835Z"
+}

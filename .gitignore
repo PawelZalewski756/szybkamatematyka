@@ -72,3 +72,6 @@ task-audit-report.json
 /e2e-*.txt
 /build-*.txt
 /server-*.log
+
+# lokalne zrzuty ekranu z sesji AI
+/screenshots/

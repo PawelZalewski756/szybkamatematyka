@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "twierdzenie_talesa",
+  "categoryName": "Geometria płaska",
+  "topicName": "Twierdzenie Talesa",
+  "tasks": [
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na pierwszym ramieniu, licząc od wierzchołka, odcinki mają długości $5$ i $3$. Na drugim ramieniu pierwszy odcinek ma długość $15$. Jaką długość ma drugi odcinek?",
+      "correct_answer": "9",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{5}{3} = \\dfrac{15}{x}$, więc $x = \\dfrac{3 \\cdot 15}{5} = 9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c23f930c-9c73-5a91-a899-c89e2587a4cb",
+      "generatedAt": "2026-11-18T12:23:59.849Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kij o wysokości $1$ m rzuca cień o długości $2$ m. W tym samym czasie drzewo rzuca cień o długości $6$ m. Jaką wysokość ma drzewo?",
+      "correct_answer": "3 m",
+      "options": [
+        "30 m",
+        "6 m",
+        "3 m",
+        "5 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{1}{2} = \\dfrac{h}{6}$, więc $h = 1 \\cdot 3 = 3$ m.\n**Odpowiedź:** 3 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "079585a1-213c-5f75-ace8-98c16e85e9e5",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $15$ cm podzielono w stosunku $2 : 3$. Jaką długość ma dłuższa część?",
+      "correct_answer": "9 cm",
+      "options": [
+        "6 cm",
+        "12 cm",
+        "10 cm",
+        "9 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Całość to $5$ części, więc jedna część ma $15 : 5 = 3$ cm. Dłuższa część to $3 \\cdot 3 = 9$ cm.\n**Odpowiedź:** 9 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7038871e-7e0a-512d-a978-9ecb0fd65a0b",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $20$ cm podzielono w stosunku $2 : 3$. Jaką długość ma krótsza część?",
+      "correct_answer": "8 cm",
+      "options": [
+        "12 cm",
+        "9 cm",
+        "8 cm",
+        "4 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Jedna część to $20 : 5 = 4$ cm. Krótsza część to $2 \\cdot 4 = 8$ cm.\n**Odpowiedź:** 8 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ad8724ee-9071-517b-a957-e896e007dcd7",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinki odpowiadające sobie na ramionach kąta mają długości: $a = 4$, $b = 5$ na pierwszym ramieniu oraz $c = 16$, $x = 20$ na drugim. Która równość jest prawdziwa?",
+      "correct_answer": "4/5 = 16/20",
+      "options": [
+        "4/5 = 16/20",
+        "4/5 = 20/16",
+        "4/20 = 16/5",
+        "5/4 = 16/20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Sprawdzamy mnożeniem na krzyż: $4 \\cdot 20 = 80$ i $5 \\cdot 16 = 80$, więc prawdziwa jest równość $4/5 = 16/20$.\n**Odpowiedź:** 4/5 = 16/20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d9c3bf03-526e-5bc4-a0e5-4ca413b3a60a",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na pierwszym ramieniu, licząc od wierzchołka, odcinki mają długości $5$ i $7$. Na drugim ramieniu pierwszy odcinek ma długość $20$. Jaką długość ma drugi odcinek?",
+      "correct_answer": "28",
+      "options": [
+        "35",
+        "28",
+        "20",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{5}{7} = \\dfrac{20}{x}$, więc $x = \\dfrac{7 \\cdot 20}{5} = 28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ff1558c0-7d0e-5c2c-a6e2-9b760d2bb404",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kij o wysokości $2$ m rzuca cień o długości $4$ m. W tym samym czasie drzewo rzuca cień o długości $12$ m. Jaką wysokość ma drzewo?",
+      "correct_answer": "6 m",
+      "options": [
+        "60 m",
+        "12 m",
+        "6 m",
+        "10 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{2}{4} = \\dfrac{h}{12}$, więc $h = 2 \\cdot 3 = 6$ m.\n**Odpowiedź:** 6 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "998544bd-76e3-5b8a-a8a8-e9d6abf7ca7e",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $12$ cm podzielono w stosunku $1 : 3$. Jaką długość ma dłuższa część?",
+      "correct_answer": "9 cm",
+      "options": [
+        "3 cm",
+        "9 cm",
+        "12 cm",
+        "6 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Całość to $4$ części, więc jedna część ma $12 : 4 = 3$ cm. Dłuższa część to $3 \\cdot 3 = 9$ cm.\n**Odpowiedź:** 9 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a9b4f146-3984-57cf-a039-e316fde411aa",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $28$ cm podzielono w stosunku $3 : 4$. Jaką długość ma krótsza część?",
+      "correct_answer": "12 cm",
+      "options": [
+        "12 cm",
+        "13 cm",
+        "8 cm",
+        "16 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Jedna część to $28 : 7 = 4$ cm. Krótsza część to $3 \\cdot 4 = 12$ cm.\n**Odpowiedź:** 12 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f190121a-934c-5cc7-acad-bcd8a1c8cb08",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinki odpowiadające sobie na ramionach kąta mają długości: $a = 3$, $b = 4$ na pierwszym ramieniu oraz $c = 12$, $x = 16$ na drugim. Która równość jest prawdziwa?",
+      "correct_answer": "3/4 = 12/16",
+      "options": [
+        "4/3 = 12/16",
+        "3/16 = 12/4",
+        "3/4 = 12/16",
+        "3/4 = 16/12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Sprawdzamy mnożeniem na krzyż: $3 \\cdot 16 = 48$ i $4 \\cdot 12 = 48$, więc prawdziwa jest równość $3/4 = 12/16$.\n**Odpowiedź:** 3/4 = 12/16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8b6e288-6324-5ea9-a1f6-7b40d4cd8212",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na pierwszym ramieniu, licząc od wierzchołka, odcinki mają długości $4$ i $9$. Na drugim ramieniu pierwszy odcinek ma długość $8$. Jaką długość ma drugi odcinek?",
+      "correct_answer": "18",
+      "options": [
+        "18",
+        "8",
+        "27",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{4}{9} = \\dfrac{8}{x}$, więc $x = \\dfrac{9 \\cdot 8}{4} = 18$.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2a6b538a-5733-5a13-ad56-021dd856102d",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kij o wysokości $1$ m rzuca cień o długości $2$ m. W tym samym czasie drzewo rzuca cień o długości $8$ m. Jaką wysokość ma drzewo?",
+      "correct_answer": "4 m",
+      "options": [
+        "40 m",
+        "4 m",
+        "8 m",
+        "7 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{1}{2} = \\dfrac{h}{8}$, więc $h = 1 \\cdot 4 = 4$ m.\n**Odpowiedź:** 4 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "81966187-cda0-5a0d-ad0c-edd7bce1f29c",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $28$ cm podzielono w stosunku $3 : 4$. Jaką długość ma dłuższa część?",
+      "correct_answer": "16 cm",
+      "options": [
+        "12 cm",
+        "20 cm",
+        "17 cm",
+        "16 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Całość to $7$ części, więc jedna część ma $28 : 7 = 4$ cm. Dłuższa część to $4 \\cdot 4 = 16$ cm.\n**Odpowiedź:** 16 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5306d297-2e5a-54fe-a78d-92354d9a0c47",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $21$ cm podzielono w stosunku $2 : 5$. Jaką długość ma krótsza część?",
+      "correct_answer": "6 cm",
+      "options": [
+        "6 cm",
+        "15 cm",
+        "3 cm",
+        "9 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Jedna część to $21 : 7 = 3$ cm. Krótsza część to $2 \\cdot 3 = 6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd60d547-163b-5084-ae2c-c91b1fdf6343",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinki odpowiadające sobie na ramionach kąta mają długości: $a = 4$, $b = 5$ na pierwszym ramieniu oraz $c = 12$, $x = 15$ na drugim. Która równość jest prawdziwa?",
+      "correct_answer": "4/5 = 12/15",
+      "options": [
+        "4/5 = 15/12",
+        "4/15 = 12/5",
+        "4/5 = 12/15",
+        "5/4 = 12/15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Sprawdzamy mnożeniem na krzyż: $4 \\cdot 15 = 60$ i $5 \\cdot 12 = 60$, więc prawdziwa jest równość $4/5 = 12/15$.\n**Odpowiedź:** 4/5 = 12/15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd0b8f1d-226e-58a5-acf1-11a7d7321029",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Proste równoległe przecinają ramiona kąta. Na pierwszym ramieniu, licząc od wierzchołka, odcinki mają długości $4$ i $6$. Na drugim ramieniu pierwszy odcinek ma długość $12$. Jaką długość ma drugi odcinek?",
+      "correct_answer": "18",
+      "options": [
+        "24",
+        "19",
+        "18",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{4}{6} = \\dfrac{12}{x}$, więc $x = \\dfrac{6 \\cdot 12}{4} = 18$.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "214ad03d-25b3-56c5-a94d-bd49fde1d836",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kij o wysokości $2$ m rzuca cień o długości $4$ m. W tym samym czasie drzewo rzuca cień o długości $20$ m. Jaką wysokość ma drzewo?",
+      "correct_answer": "10 m",
+      "options": [
+        "18 m",
+        "100 m",
+        "10 m",
+        "20 m"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z twierdzenia Talesa: $\\dfrac{2}{4} = \\dfrac{h}{20}$, więc $h = 2 \\cdot 5 = 10$ m.\n**Odpowiedź:** 10 m",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b9cd3ac1-80d4-561c-aeb3-296074e7992f",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $24$ cm podzielono w stosunku $3 : 5$. Jaką długość ma dłuższa część?",
+      "correct_answer": "15 cm",
+      "options": [
+        "9 cm",
+        "15 cm",
+        "12 cm",
+        "18 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Całość to $8$ części, więc jedna część ma $24 : 8 = 3$ cm. Dłuższa część to $5 \\cdot 3 = 15$ cm.\n**Odpowiedź:** 15 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d53bb4ce-d0d4-5c6f-a499-424d537999d1",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinek długości $21$ cm podzielono w stosunku $3 : 4$. Jaką długość ma krótsza część?",
+      "correct_answer": "9 cm",
+      "options": [
+        "10 cm",
+        "6 cm",
+        "9 cm",
+        "12 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Jedna część to $21 : 7 = 3$ cm. Krótsza część to $3 \\cdot 3 = 9$ cm.\n**Odpowiedź:** 9 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "92b5978b-fbfb-5d28-a660-2617e8483d80",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Odcinki odpowiadające sobie na ramionach kąta mają długości: $a = 2$, $b = 3$ na pierwszym ramieniu oraz $c = 8$, $x = 12$ na drugim. Która równość jest prawdziwa?",
+      "correct_answer": "2/3 = 8/12",
+      "options": [
+        "2/3 = 12/8",
+        "2/3 = 8/12",
+        "3/2 = 8/12",
+        "2/12 = 8/3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Sprawdzamy mnożeniem na krzyż: $2 \\cdot 12 = 24$ i $3 \\cdot 8 = 24$, więc prawdziwa jest równość $2/3 = 8/12$.\n**Odpowiedź:** 2/3 = 8/12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b861407f-e5e2-5611-abee-7517395ff5c6",
+      "generatedAt": "2026-11-18T12:23:59.850Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.850Z"
+}

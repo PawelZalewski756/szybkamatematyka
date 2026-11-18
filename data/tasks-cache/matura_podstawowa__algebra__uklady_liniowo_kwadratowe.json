@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "uklady_liniowo_kwadratowe",
+  "categoryName": "Algebra i równania",
+  "topicName": "Układy liniowo-kwadratowe",
+  "tasks": [
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=16$?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "4",
+        "0",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$x^2=16$, więc $x=4$ lub $x=-4$. Układ ma dwa rozwiązania: $(4,16)$ i $(-4,16)$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b45f91ce-1087-539b-a862-b5ac13d5246a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=x-2$?",
+      "correct_answer": "0",
+      "options": [
+        "3",
+        "0",
+        "2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstawiamy $x^2=x-2$, czyli $x^2-x+2=0$. Wyróżnik wynosi $\\Delta=-7$, więc rozwiązań jest $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f119ce93-24c6-557b-a78a-3a078585298f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=x+2$ ma dwa rozwiązania. Suma ich współrzędnych $x$ wynosi:",
+      "correct_answer": "1",
+      "options": [
+        "1",
+        "2",
+        "-3",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po podstawieniu $x^2=x+2$ otrzymujemy $x^2-x-2=0$. Suma pierwiastków to $1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7b973657-32e9-5683-a9c5-b2d057cc4ef2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=-x+2$ ma dwa rozwiązania. Iloczyn ich współrzędnych $x$ wynosi:",
+      "correct_answer": "-2",
+      "options": [
+        "-2",
+        "-1",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Równanie $x^2+x-2=0$ ma iloczyn pierwiastków równy $-2$.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "04950ca6-3d94-5b62-a568-79a25f8c32b9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż układ $y=x^2$ i $y=7x-10$. Większa współrzędna $x$ rozwiązania wynosi:",
+      "correct_answer": "5",
+      "options": [
+        "2",
+        "5",
+        "-10",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwiastki równania $x^2-7x+10=0$ to $2$ i $5$, więc większa współrzędna $x$ to $5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2de69f14-3e6a-54cc-ae97-a794743bff10",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ $y=(x-5)^2$ i $y=0$?",
+      "correct_answer": "1",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$(x-5)^2=0$ tylko dla $x=5$, więc układ ma jedno rozwiązanie: $(5,0)$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9ac8cf74-51ad-5ca2-a766-1be4b925e18a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż układ $y=x^2$ i $y=2x$. Mniejsza współrzędna $x$ rozwiązania wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po podstawieniu $x^2-2x=0$ otrzymujemy pierwiastki $0$ i $2$, więc mniejsza współrzędna $x$ to $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bb852ece-7c55-5792-ab02-29b4c7e18ab0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=25$?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "4",
+        "0",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$x^2=25$, więc $x=5$ lub $x=-5$. Układ ma dwa rozwiązania: $(5,25)$ i $(-5,25)$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e805055f-81e1-5952-a990-7bda11b505ef",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=x$?",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "0",
+        "2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstawiamy $x^2=x$, czyli $x^2-x=0$. Wyróżnik wynosi $\\Delta=1$, więc rozwiązań jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "40464f68-208c-5179-aacd-a2339a1b63d3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=-3x$ ma dwa rozwiązania. Suma ich współrzędnych $x$ wynosi:",
+      "correct_answer": "-3",
+      "options": [
+        "0",
+        "-1",
+        "-3",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po podstawieniu $x^2=-3x$ otrzymujemy $x^2+3x=0$. Suma pierwiastków to $-3$.\n**Odpowiedź:** -3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "884abec3-aa77-539d-accb-54684db3d9d9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=x+2$ ma dwa rozwiązania. Iloczyn ich współrzędnych $x$ wynosi:",
+      "correct_answer": "-2",
+      "options": [
+        "-1",
+        "2",
+        "1",
+        "-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Równanie $x^2-x-2=0$ ma iloczyn pierwiastków równy $-2$.\n**Odpowiedź:** -2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0b568fa2-392e-5e02-a242-a48365f2817a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż układ $y=x^2$ i $y=-2x$. Większa współrzędna $x$ rozwiązania wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "0",
+        "-2",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwiastki równania $x^2+2x=0$ to $-2$ i $0$, więc większa współrzędna $x$ to $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ac021e31-7bb4-5bab-adba-f7714dfb0755",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ $y=(x-4)^2$ i $y=0$?",
+      "correct_answer": "1",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$(x-4)^2=0$ tylko dla $x=4$, więc układ ma jedno rozwiązanie: $(4,0)$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "89b0a7b9-d30a-5c6a-af8b-899ae81b9e8a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż układ $y=x^2$ i $y=3x$. Mniejsza współrzędna $x$ rozwiązania wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po podstawieniu $x^2-3x=0$ otrzymujemy pierwiastki $0$ i $3$, więc mniejsza współrzędna $x$ to $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "84bb0e4b-aeef-5ee0-a1a2-59875c5fdefe",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=36$?",
+      "correct_answer": "2",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$x^2=36$, więc $x=6$ lub $x=-6$. Układ ma dwa rozwiązania: $(6,36)$ i $(-6,36)$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eb92b3b0-bc80-50f3-a6b7-3c91c6bfd009",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ równań $y=x^2$ i $y=x+2$?",
+      "correct_answer": "2",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Podstawiamy $x^2=x+2$, czyli $x^2-x-2=0$. Wyróżnik wynosi $\\Delta=9$, więc rozwiązań jest $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f8d4f9c-7251-5358-ac56-bdbe76a54778",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=+1$ ma dwa rozwiązania. Suma ich współrzędnych $x$ wynosi:",
+      "correct_answer": "0",
+      "options": [
+        "1",
+        "-2",
+        "0",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po podstawieniu $x^2=+1$ otrzymujemy $x^2-1=0$. Suma pierwiastków to $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5135620f-51ce-50c8-aa5b-126031d702c3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Układ $y=x^2$ i $y=-5x-6$ ma dwa rozwiązania. Iloczyn ich współrzędnych $x$ wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "-4",
+        "5",
+        "-5",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Równanie $x^2+5x+6=0$ ma iloczyn pierwiastków równy $6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f7bdcfd5-726e-5265-a763-7badbe820bd6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż układ $y=x^2$ i $y=-4x-3$. Większa współrzędna $x$ rozwiązania wynosi:",
+      "correct_answer": "-1",
+      "options": [
+        "-3",
+        "0",
+        "-1",
+        "-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwiastki równania $x^2+4x+3=0$ to $-3$ i $-1$, więc większa współrzędna $x$ to $-1$.\n**Odpowiedź:** -1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4789168f-2a6a-5f5c-aefe-6ebd3d906b95",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile rozwiązań ma układ $y=(x-1)^2$ i $y=0$?",
+      "correct_answer": "1",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$(x-1)^2=0$ tylko dla $x=1$, więc układ ma jedno rozwiązanie: $(1,0)$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e92a7d4-506a-53a4-a886-76c502fd7710",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

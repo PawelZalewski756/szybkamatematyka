@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "kombinacje",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Kombinacje",
+  "tasks": [
+    {
+      "content": "Ile wynosi $\\binom{7}{2}$?",
+      "correct_answer": "21",
+      "options": [
+        "22",
+        "7",
+        "21",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\binom{7}{2}=\\frac{7!}{2!(5)!}=21$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da0bbc27-6fad-5452-aedf-934305982f3f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można wybrać $2$ osoby spośród $9$?",
+      "correct_answer": "36",
+      "options": [
+        "36",
+        "45",
+        "18",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kolejność nie ma znaczenia, więc $\\binom{9}{2}=\\frac{9\\cdot8}{2}=36$.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "93354e8e-b87f-5318-a3c7-05deaae51adf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można wybrać $3$ osoby spośród $6$ do komisji?",
+      "correct_answer": "20",
+      "options": [
+        "120",
+        "15",
+        "21",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\binom{6}{3}=\\frac{6\\cdot5\\cdot4}{6}=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3e0a67e-9487-528f-a1ce-86a349d0c6cf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na spotkaniu jest $8$ osób. Każde dwie osoby podają sobie rękę dokładnie raz. Ile uścisków dłoni będzie na spotkaniu?",
+      "correct_answer": "28",
+      "options": [
+        "8",
+        "56",
+        "28",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Każdy uścisk to wybór $2$ osób spośród $8$: $\\binom{8}{2}=28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "33a0e4f7-a5f4-59ac-a1b6-68554100943c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\binom{7}{6}$?",
+      "correct_answer": "7",
+      "options": [
+        "21",
+        "6",
+        "42",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\binom{7}{6}=\\binom{7}{1}=7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "098a476c-1c19-5198-a37f-dee1625ef39a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Mamy $8$ różnych kolorów farb. Na ile sposobów można wybrać $2$ kolory?",
+      "correct_answer": "28",
+      "options": [
+        "56",
+        "36",
+        "16",
+        "28"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kolejność kolorów nie ma znaczenia: $\\binom{8}{2}=28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47140224-4458-5ad9-ae09-4410262215f7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile podzbiorów $3$-elementowych ma zbiór $9$-elementowy?",
+      "correct_answer": "84",
+      "options": [
+        "93",
+        "729",
+        "84",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba podzbiorów to $\\binom{9}{3}=84$.\n**Odpowiedź:** 84",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ccd88b76-b22b-5ef6-a023-050ceb1cef0b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\binom{9}{4}$?",
+      "correct_answer": "126",
+      "options": [
+        "36",
+        "127",
+        "126",
+        "84"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\binom{9}{4}=\\frac{9!}{4!(5)!}=126$.\n**Odpowiedź:** 126",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ffa247f7-f7ca-5062-a17d-80608433fadc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można wybrać $2$ osoby spośród $6$?",
+      "correct_answer": "15",
+      "options": [
+        "21",
+        "30",
+        "12",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kolejność nie ma znaczenia, więc $\\binom{6}{2}=\\frac{6\\cdot5}{2}=15$.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3db91812-7ec4-50d9-a03f-ae034b34c87a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można wybrać $3$ osoby spośród $12$ do komisji?",
+      "correct_answer": "220",
+      "options": [
+        "220",
+        "221",
+        "66",
+        "1320"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\binom{12}{3}=\\frac{12\\cdot11\\cdot10}{6}=220$.\n**Odpowiedź:** 220",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5551c521-210c-51cd-a550-c3ce2a1b036b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na spotkaniu jest $5$ osób. Każde dwie osoby podają sobie rękę dokładnie raz. Ile uścisków dłoni będzie na spotkaniu?",
+      "correct_answer": "10",
+      "options": [
+        "15",
+        "20",
+        "10",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Każdy uścisk to wybór $2$ osób spośród $5$: $\\binom{5}{2}=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "73b99052-2c4d-52a2-a9aa-f01aeb1e11f0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\binom{5}{4}$?",
+      "correct_answer": "5",
+      "options": [
+        "5",
+        "20",
+        "10",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\binom{5}{4}=\\binom{5}{1}=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e24a1d7-3491-5434-ae78-1167b0ba42bf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Mamy $6$ różnych kolorów farb. Na ile sposobów można wybrać $2$ kolory?",
+      "correct_answer": "15",
+      "options": [
+        "21",
+        "15",
+        "30",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kolejność kolorów nie ma znaczenia: $\\binom{6}{2}=15$.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "50977340-2901-51ba-a94e-838e90b0e337",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile podzbiorów $3$-elementowych ma zbiór $6$-elementowy?",
+      "correct_answer": "20",
+      "options": [
+        "20",
+        "15",
+        "26",
+        "216"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba podzbiorów to $\\binom{6}{3}=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "05fe4dea-88ea-566f-a979-46f597aabe12",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\binom{5}{2}$?",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "12",
+        "5",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\binom{5}{2}=\\frac{5!}{2!(3)!}=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0dea6183-0294-5b03-aa3e-663900604890",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można wybrać $2$ osoby spośród $8$?",
+      "correct_answer": "28",
+      "options": [
+        "36",
+        "28",
+        "56",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kolejność nie ma znaczenia, więc $\\binom{8}{2}=\\frac{8\\cdot7}{2}=28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a26f4260-0d1b-556e-a0f5-013b17f4ff42",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na spotkaniu jest $6$ osób. Każde dwie osoby podają sobie rękę dokładnie raz. Ile uścisków dłoni będzie na spotkaniu?",
+      "correct_answer": "15",
+      "options": [
+        "6",
+        "15",
+        "30",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Każdy uścisk to wybór $2$ osób spośród $6$: $\\binom{6}{2}=15$.\n**Odpowiedź:** 15",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "26357299-1e2d-5f49-aacd-7b711d01da4a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na spotkaniu jest $10$ osób. Każde dwie osoby podają sobie rękę dokładnie raz. Ile uścisków dłoni będzie na spotkaniu?",
+      "correct_answer": "45",
+      "options": [
+        "55",
+        "10",
+        "45",
+        "90"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Każdy uścisk to wybór $2$ osób spośród $10$: $\\binom{10}{2}=45$.\n**Odpowiedź:** 45",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d6f898e3-03f5-505d-ac39-89d7b56afef3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Mamy $7$ różnych kolorów farb. Na ile sposobów można wybrać $2$ kolory?",
+      "correct_answer": "21",
+      "options": [
+        "28",
+        "42",
+        "14",
+        "21"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kolejność kolorów nie ma znaczenia: $\\binom{7}{2}=21$.\n**Odpowiedź:** 21",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "343925f9-7838-5346-ae2b-65ce45816f2f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Mamy $5$ różnych kolorów farb. Na ile sposobów można wybrać $2$ kolory?",
+      "correct_answer": "10",
+      "options": [
+        "20",
+        "15",
+        "11",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kolejność kolorów nie ma znaczenia: $\\binom{5}{2}=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3bc4129a-f9cb-5fb7-a3c7-7dedc3515b07",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

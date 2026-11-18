@@ -76,3 +76,38 @@ for (const width of WIDTHS) {
     }
   });
 }
+
+test.describe("minigry - ułamki bez suwaków", () => {
+  test.use({ viewport: { width: 390, height: 900 } });
+
+  test("wzór ułamka jest zwykłym inline, bez własnego scrolla", async ({
+    page,
+  }) => {
+    await page.goto("/minigry/ulamki");
+    await startGame(page);
+
+    const inlineMath = page.locator(".katex").first();
+    await expect(inlineMath).toBeVisible();
+
+    const wrapper = inlineMath.locator("xpath=..");
+    const style = await wrapper.evaluate((element) => {
+      const computed = getComputedStyle(element);
+      return {
+        display: computed.display,
+        overflowX: computed.overflowX,
+        overflowY: computed.overflowY,
+      };
+    });
+
+    // Regresja: `inline-block` + `overflow-x: auto` na wzorze w linii
+    // tworzyło poziomy suwak i rozjeżdżało linię bazową.
+    expect(style.display).toBe("inline");
+    expect(style.overflowX).toBe("visible");
+    expect(style.overflowY).toBe("visible");
+
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - window.innerWidth,
+    );
+    expect(overflow).toBeLessThanOrEqual(1);
+  });
+});

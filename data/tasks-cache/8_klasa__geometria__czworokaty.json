@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "geometria",
+  "topic": "czworokaty",
+  "categoryName": "Geometria płaska",
+  "topicName": "Czworokąty",
+  "tasks": [
+    {
+      "content": "Równoległobok ma bok $6$ cm i wysokość opuszczoną na ten bok równą $10$ cm. Jakie jest jego pole?",
+      "correct_answer": "60 cm²",
+      "options": [
+        "66 cm²",
+        "60 cm²",
+        "120 cm²",
+        "30 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole równoległoboku: $P = a \\cdot h = 6 \\cdot 10 = 60$ cm$^2$.\n**Odpowiedź:** 60 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3b4ca9ca-230b-5e32-a3ef-d28c9a13bc8b",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $6$ cm i $7$ cm oraz wysokość $8$ cm. Jakie jest jego pole?",
+      "correct_answer": "52 cm²",
+      "options": [
+        "62 cm²",
+        "42 cm²",
+        "52 cm²",
+        "104 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P = \\dfrac{(6 + 7) \\cdot 8}{2} = 52$ cm$^2$.\n**Odpowiedź:** 52 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d95f3da1-54f3-5177-ad8d-ec4ffec8868c",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jeden kąt równoległoboku ma $40°$. Jaką miarę ma kąt sąsiedni przy tym samym boku?",
+      "correct_answer": "140°",
+      "options": [
+        "150°",
+        "320°",
+        "140°",
+        "40°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąty przy jednym boku równoległoboku dopełniają się do $180°$: $180 - 40 = 140$.\n**Odpowiedź:** 140°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b1daa50c-625c-55c9-aaab-211833f03ff7",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kąty czworokąta mają miary $60°$, $80°$ i $60°$. Jaką miarę ma czwarty kąt?",
+      "correct_answer": "160°",
+      "options": [
+        "170°",
+        "160°",
+        "150°",
+        "200°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma kątów czworokąta wynosi $360°$: $360 - 60 - 80 - 60 = 160$.\n**Odpowiedź:** 160°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "059b3728-9778-52ef-a404-c1040baf26ac",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $6$ cm i $7$ cm. Jakie jest jego pole?",
+      "correct_answer": "42 cm²",
+      "options": [
+        "26 cm²",
+        "84 cm²",
+        "42 cm²",
+        "13 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole prostokąta: $P = a \\cdot b = 6 \\cdot 7 = 42$ cm$^2$.\n**Odpowiedź:** 42 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "64b014e6-e416-5a96-a066-0e6c78de4eb3",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwadrat ma obwód $36$ cm. Jakie jest jego pole?",
+      "correct_answer": "81 cm²",
+      "options": [
+        "162 cm²",
+        "36 cm²",
+        "81 cm²",
+        "9 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Bok kwadratu to $36 : 4 = 9$ cm, więc $P = 9^2 = 81$ cm$^2$.\n**Odpowiedź:** 81 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57cfba9a-1c08-571a-aa49-e06862f6400d",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Równoległobok ma bok $6$ cm i wysokość opuszczoną na ten bok równą $11$ cm. Jakie jest jego pole?",
+      "correct_answer": "66 cm²",
+      "options": [
+        "33 cm²",
+        "72 cm²",
+        "66 cm²",
+        "132 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole równoległoboku: $P = a \\cdot h = 6 \\cdot 11 = 66$ cm$^2$.\n**Odpowiedź:** 66 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f08a2e98-789d-56b9-ad4c-bcd5173fd8bc",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $10$ cm i $9$ cm oraz wysokość $4$ cm. Jakie jest jego pole?",
+      "correct_answer": "38 cm²",
+      "options": [
+        "38 cm²",
+        "48 cm²",
+        "28 cm²",
+        "76 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P = \\dfrac{(10 + 9) \\cdot 4}{2} = 38$ cm$^2$.\n**Odpowiedź:** 38 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a88dd02-37e1-57da-a3a2-ecf3f0077a81",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jeden kąt równoległoboku ma $130°$. Jaką miarę ma kąt sąsiedni przy tym samym boku?",
+      "correct_answer": "50°",
+      "options": [
+        "50°",
+        "130°",
+        "230°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąty przy jednym boku równoległoboku dopełniają się do $180°$: $180 - 130 = 50$.\n**Odpowiedź:** 50°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2441da1c-e1d2-5450-af91-aecffa034654",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kąty czworokąta mają miary $90°$, $70°$ i $60°$. Jaką miarę ma czwarty kąt?",
+      "correct_answer": "140°",
+      "options": [
+        "220°",
+        "140°",
+        "130°",
+        "150°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma kątów czworokąta wynosi $360°$: $360 - 90 - 70 - 60 = 140$.\n**Odpowiedź:** 140°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5f57411f-ea1b-5e74-a160-bee2533540a0",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $4$ cm i $14$ cm. Jakie jest jego pole?",
+      "correct_answer": "56 cm²",
+      "options": [
+        "18 cm²",
+        "112 cm²",
+        "56 cm²",
+        "36 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole prostokąta: $P = a \\cdot b = 4 \\cdot 14 = 56$ cm$^2$.\n**Odpowiedź:** 56 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3fc2a916-39dd-5945-acb2-3258c5fd3002",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwadrat ma obwód $28$ cm. Jakie jest jego pole?",
+      "correct_answer": "49 cm²",
+      "options": [
+        "98 cm²",
+        "7 cm²",
+        "49 cm²",
+        "28 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Bok kwadratu to $28 : 4 = 7$ cm, więc $P = 7^2 = 49$ cm$^2$.\n**Odpowiedź:** 49 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cffa32c9-0803-5512-aa50-c218a63c9a18",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Równoległobok ma bok $12$ cm i wysokość opuszczoną na ten bok równą $12$ cm. Jakie jest jego pole?",
+      "correct_answer": "144 cm²",
+      "options": [
+        "72 cm²",
+        "288 cm²",
+        "156 cm²",
+        "144 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole równoległoboku: $P = a \\cdot h = 12 \\cdot 12 = 144$ cm$^2$.\n**Odpowiedź:** 144 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "61a7d79f-75b2-5c87-af28-f4d0859bc0f6",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $5$ cm i $6$ cm oraz wysokość $6$ cm. Jakie jest jego pole?",
+      "correct_answer": "33 cm²",
+      "options": [
+        "43 cm²",
+        "23 cm²",
+        "33 cm²",
+        "66 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P = \\dfrac{(5 + 6) \\cdot 6}{2} = 33$ cm$^2$.\n**Odpowiedź:** 33 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8517f2f-03e1-5c83-a444-8a607266ad4b",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jeden kąt równoległoboku ma $140°$. Jaką miarę ma kąt sąsiedni przy tym samym boku?",
+      "correct_answer": "40°",
+      "options": [
+        "220°",
+        "140°",
+        "50°",
+        "40°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąty przy jednym boku równoległoboku dopełniają się do $180°$: $180 - 140 = 40$.\n**Odpowiedź:** 40°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3034036-e30c-5395-ab03-8d6f34f057ce",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trzy kąty czworokąta mają miary $70°$, $60°$ i $100°$. Jaką miarę ma czwarty kąt?",
+      "correct_answer": "130°",
+      "options": [
+        "230°",
+        "120°",
+        "130°",
+        "140°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma kątów czworokąta wynosi $360°$: $360 - 70 - 60 - 100 = 130$.\n**Odpowiedź:** 130°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "31c97135-251e-577f-a13a-0d6d08082a9f",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Prostokąt ma boki $7$ cm i $6$ cm. Jakie jest jego pole?",
+      "correct_answer": "42 cm²",
+      "options": [
+        "26 cm²",
+        "84 cm²",
+        "13 cm²",
+        "42 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole prostokąta: $P = a \\cdot b = 7 \\cdot 6 = 42$ cm$^2$.\n**Odpowiedź:** 42 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c56ee574-eaab-597b-a863-a68726cadbdb",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Kwadrat ma obwód $48$ cm. Jakie jest jego pole?",
+      "correct_answer": "144 cm²",
+      "options": [
+        "144 cm²",
+        "288 cm²",
+        "48 cm²",
+        "12 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Bok kwadratu to $48 : 4 = 12$ cm, więc $P = 12^2 = 144$ cm$^2$.\n**Odpowiedź:** 144 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcd56142-5859-5366-aac1-a4ef09f31adb",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Równoległobok ma bok $16$ cm i wysokość opuszczoną na ten bok równą $12$ cm. Jakie jest jego pole?",
+      "correct_answer": "192 cm²",
+      "options": [
+        "192 cm²",
+        "96 cm²",
+        "208 cm²",
+        "384 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole równoległoboku: $P = a \\cdot h = 16 \\cdot 12 = 192$ cm$^2$.\n**Odpowiedź:** 192 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28ad2cbd-adb9-52a5-a137-b9824499d522",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Trapez ma podstawy $9$ cm i $6$ cm oraz wysokość $8$ cm. Jakie jest jego pole?",
+      "correct_answer": "60 cm²",
+      "options": [
+        "120 cm²",
+        "50 cm²",
+        "60 cm²",
+        "70 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P = \\dfrac{(9 + 6) \\cdot 8}{2} = 60$ cm$^2$.\n**Odpowiedź:** 60 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aac8e44f-c6fb-504b-a4ef-6d9e82b1a2b8",
+      "generatedAt": "2026-11-18T12:23:59.847Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.847Z"
+}

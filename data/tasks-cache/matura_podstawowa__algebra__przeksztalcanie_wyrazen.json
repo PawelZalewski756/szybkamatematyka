@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "przeksztalcanie_wyrazen",
+  "categoryName": "Algebra i równania",
+  "topicName": "Przekształcanie wyrażeń",
+  "tasks": [
+    {
+      "content": "Rozwiń wyrażenie $(x-3)(x+5)$.",
+      "correct_answer": "$x^2+2x-15$",
+      "options": [
+        "$x^2+2x-14$",
+        "$x^2+3x-15$",
+        "$x^2+2x-15$",
+        "$x^2-15x+2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po redukcji wyrazów podobnych otrzymujemy $x^2+2x-15$.\n**Odpowiedź:** $x^2+2x-15$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae07948b-fa7a-52ba-a80f-4a18cbfe1669",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x-6)^2$.",
+      "correct_answer": "$x^2-12x+36$",
+      "options": [
+        "$x^2-12x-6$",
+        "$x^2-12x+36$",
+        "$x^2-12x+37$",
+        "$x^2-6x+36$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$ (x-6)^2=x^2-12x+36$.\n**Odpowiedź:** $x^2-12x+36$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cbf7d2cf-bc7a-5c58-a644-7dd6a47e18af",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x-4)(x+4)$.",
+      "correct_answer": "$x^2-16$",
+      "options": [
+        "$x^2+16$",
+        "$x^2-4$",
+        "$x^2-16$",
+        "$x^2-8x+16$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Różnica kwadratów: $(x-4)(x+4)=x^2-16$.\n**Odpowiedź:** $x^2-16$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1cc536c4-5ef3-543b-aef7-83321fda8dff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość wyrażenie $3(x-6)-2(x+2)$.",
+      "correct_answer": "$x-22$",
+      "options": [
+        "$5x-22$",
+        "$x-21$",
+        "$x-23$",
+        "$x-22$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$3x-18-2x-4=x-22$.\n**Odpowiedź:** $x-22$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c49673af-7dc9-5897-a674-b2c56321f1ca",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozłóż na czynniki wyrażenie $x^2+14x+49$.",
+      "correct_answer": "$(x+7)(x+7)$",
+      "options": [
+        "$(x-7)(x-7)$",
+        "$(x+7)(x+7)$",
+        "$(x+7)(x-7)$",
+        "$(x-7)(x+7)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Szukamy liczb o sumie $14$ i iloczynie $49$: są to $7$ i $7$, więc $x^2+14x+49=(x+7)(x+7)$.\n**Odpowiedź:** $(x+7)(x+7)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "181ea3ec-46d8-5e01-ad1b-f6bd56c28192",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość $(x^2+3x+7)-(5x^2+2x+2)$.",
+      "correct_answer": "$-4x^2+x+5$",
+      "options": [
+        "$-4x^2+x+6$",
+        "$-4x^2+x+5$",
+        "$6x^2+5x+9$",
+        "$-4x^2+5x+5$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy współczynniki: $(-4)x^2+(1)x+(5)=-4x^2+x+5$.\n**Odpowiedź:** $-4x^2+x+5$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c4a8904a-86fe-5cd8-a64a-894f8071fbe3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $3x(x-6)$.",
+      "correct_answer": "$3x-18$",
+      "options": [
+        "$3x-21$",
+        "$9x-18$",
+        "$3x-6$",
+        "$3x-18$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$3x\\cdot x-3x\\cdot6=3x^2-18x$.\n**Odpowiedź:** $3x-18$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa3c5cd4-7a04-5006-ac9c-ef34b5b3bdaf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x+4)^2$.",
+      "correct_answer": "$x^2+8x+16$",
+      "options": [
+        "$x^2+8x+4$",
+        "$x^2+8x+16$",
+        "$x^2+4x+16$",
+        "$x^2+8x+17$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$ (x+4)^2=x^2+8x+16$.\n**Odpowiedź:** $x^2+8x+16$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2b68d91c-b299-5898-a374-a587c0e577d7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x+5)^2$.",
+      "correct_answer": "$x^2+10x+25$",
+      "options": [
+        "$x^2+10x+5$",
+        "$x^2+5x+25$",
+        "$x^2+10x+25$",
+        "$x^2+10x+26$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$ (x+5)^2=x^2+10x+25$.\n**Odpowiedź:** $x^2+10x+25$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "07671c90-3e5a-520f-aaa3-264dd75e08a1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x-3)(x+3)$.",
+      "correct_answer": "$x^2-9$",
+      "options": [
+        "$x^2-3$",
+        "$x^2-6x+9$",
+        "$x^2-9$",
+        "$x^2+9$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Różnica kwadratów: $(x-3)(x+3)=x^2-9$.\n**Odpowiedź:** $x^2-9$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b90dd878-bd30-5aae-a414-4b9af667e17c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość wyrażenie $3(x-4)-2(x+6)$.",
+      "correct_answer": "$x-24$",
+      "options": [
+        "$x-24$",
+        "$x-23$",
+        "$5x-24$",
+        "$x-25$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$3x-12-2x-12=x-24$.\n**Odpowiedź:** $x-24$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "945cd02c-3032-5fbe-a0eb-48fa2c70278a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozłóż na czynniki wyrażenie $x^2+5x+6$.",
+      "correct_answer": "$(x+2)(x+3)$",
+      "options": [
+        "$(x-2)(x+3)$",
+        "$(x+2)(x+3)$",
+        "$(x-2)(x-3)$",
+        "$(x+2)(x-3)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Szukamy liczb o sumie $5$ i iloczynie $6$: są to $2$ i $3$, więc $x^2+5x+6=(x+2)(x+3)$.\n**Odpowiedź:** $(x+2)(x+3)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1d7d4452-1350-58ad-aff5-df42fa55c30a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość $(x^2+6x+7)-(4x^2+4x+6)$.",
+      "correct_answer": "$-3x^2+2x+1$",
+      "options": [
+        "$-3x^2+2x+1$",
+        "$-3x^2+2x+2$",
+        "$5x^2+10x+13$",
+        "$-3x^2+10x+1$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy współczynniki: $(-3)x^2+(2)x+(1)=-3x^2+2x+1$.\n**Odpowiedź:** $-3x^2+2x+1$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1f671b48-a803-573c-a665-e604ee0fd292",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $4x(x-6)$.",
+      "correct_answer": "$4x-24$",
+      "options": [
+        "$4x-28$",
+        "$4x-6$",
+        "$16x-24$",
+        "$4x-24$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$4x\\cdot x-4x\\cdot6=4x^2-24x$.\n**Odpowiedź:** $4x-24$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7bd2a21-dc3c-5971-af44-933e92134997",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x+3)(x-4)$.",
+      "correct_answer": "$x^2-x-12$",
+      "options": [
+        "$x^2-x-12$",
+        "$x^2-12x-1$",
+        "$x^2-12$",
+        "$x^2-x-11$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po redukcji wyrazów podobnych otrzymujemy $x^2-x-12$.\n**Odpowiedź:** $x^2-x-12$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e4d0bb4b-8c19-5cc5-a8cc-bc5f8f7f4707",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x+6)^2$.",
+      "correct_answer": "$x^2+12x+36$",
+      "options": [
+        "$x^2+12x+36$",
+        "$x^2+6x+36$",
+        "$x^2+12x+6$",
+        "$x^2+12x+37$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$ (x+6)^2=x^2+12x+36$.\n**Odpowiedź:** $x^2+12x+36$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b3226930-1e89-549e-a8b0-46348dc77676",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiń wyrażenie $(x-6)(x+6)$.",
+      "correct_answer": "$x^2-36$",
+      "options": [
+        "$x^2-36$",
+        "$x^2+36$",
+        "$x^2-12x+36$",
+        "$x^2-6$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Różnica kwadratów: $(x-6)(x+6)=x^2-36$.\n**Odpowiedź:** $x^2-36$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e900175e-3c57-5d66-abcb-1f6cc9c3d187",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość wyrażenie $3(x-5)-2(x+3)$.",
+      "correct_answer": "$x-21$",
+      "options": [
+        "$x-21$",
+        "$x-22$",
+        "$x-20$",
+        "$5x-21$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$3x-15-2x-6=x-21$.\n**Odpowiedź:** $x-21$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0398e41d-2b46-5bf7-a68e-d23c00ae2731",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozłóż na czynniki wyrażenie $x^2+13x+42$.",
+      "correct_answer": "$(x+7)(x+6)$",
+      "options": [
+        "$(x-7)(x+6)$",
+        "$(x+7)(x+6)$",
+        "$(x+7)(x-6)$",
+        "$(x-7)(x-6)$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Szukamy liczb o sumie $13$ i iloczynie $42$: są to $7$ i $6$, więc $x^2+13x+42=(x+7)(x+6)$.\n**Odpowiedź:** $(x+7)(x+6)$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "808e11b9-e14b-5fbc-a895-9918166ae9a6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Uprość $(x^2+2x+9)-(3x^2+4x+3)$.",
+      "correct_answer": "$-2x^2-2x+6$",
+      "options": [
+        "$-2x^2-2x+7$",
+        "$-2x^2-2x+6$",
+        "$-2x^2+6x+6$",
+        "$4x^2+6x+12$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy współczynniki: $(-2)x^2+(-2)x+(6)=-2x^2-2x+6$.\n**Odpowiedź:** $-2x^2-2x+6$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "da92896e-1d33-56dd-ac17-9ecf5d588ba0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

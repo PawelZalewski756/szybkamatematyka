@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "algebra",
+  "topic": "nierownosci",
+  "categoryName": "Algebra",
+  "topicName": "Nierówności",
+  "tasks": [
+    {
+      "content": "Rozwiąż nierówność $3x + 6 > 15$.",
+      "correct_answer": "$x > 3$",
+      "options": [
+        "$x > 4$",
+        "$x \\ge 3$",
+        "$x < 3$",
+        "$x > 3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy $6$: $3x > 9$, a następnie dzielimy przez $3$: $x > 3$.\n**Odpowiedź:** $x > 3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "42367123-bdcf-5423-aeb0-edf0feed49f4",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $-4x > 28$.",
+      "correct_answer": "$x < -7$",
+      "options": [
+        "$x > 7$",
+        "$x \\le -7$",
+        "$x > -7$",
+        "$x < -7$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy przez $-4$, więc zmieniamy zwrot nierówności: $x < -7$.\n**Odpowiedź:** $x < -7$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96f088e7-df97-59be-a6df-33163e2cad67",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $4x - 4 \\le 4$.",
+      "correct_answer": "$x \\le 2$",
+      "options": [
+        "$x \\le 2$",
+        "$x \\le 3$",
+        "$x < 2$",
+        "$x \\ge 2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy $4$: $4x \\le 8$, potem dzielimy przez $4$: $x \\le 2$.\n**Odpowiedź:** $x \\le 2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4071e5ac-86fc-5f78-a8cd-c169f5e6e37d",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza liczba całkowita spełniająca nierówność $x > 4{,}2$?",
+      "correct_answer": "5",
+      "options": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba $4{,}2$ leży między $4$ i $5$. Najmniejsza liczba całkowita większa od niej to $5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c3b2fcd-5fda-5e86-afdf-27124c00bcce",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb całkowitych dodatnich spełnia nierówność $x < 9$?",
+      "correct_answer": "8",
+      "options": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczby $1, 2, \\ldots, 8$ są dodatnie i mniejsze od $9$, jest ich $8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "960e73be-a296-51fe-a2af-dc5267d1e7ca",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba całkowita spełniająca nierówność $4x + 2 \\le 34$ to:",
+      "correct_answer": "8",
+      "options": [
+        "7",
+        "9",
+        "8",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po odjęciu $2$ i podzieleniu przez $4$ otrzymujemy $x \\le 8$, więc największa liczba całkowita to $8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "db3ed07b-4b7e-5dcf-a3ef-0c4a412311c9",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $3x + 9 > 30$.",
+      "correct_answer": "$x > 7$",
+      "options": [
+        "$x \\ge 7$",
+        "$x > 7$",
+        "$x > 8$",
+        "$x < 7$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy $9$: $3x > 21$, a następnie dzielimy przez $3$: $x > 7$.\n**Odpowiedź:** $x > 7$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f7b5e320-b5ce-5f45-a55c-519b6e152457",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $-5x > 30$.",
+      "correct_answer": "$x < -6$",
+      "options": [
+        "$x > -6$",
+        "$x \\le -6$",
+        "$x > 6$",
+        "$x < -6$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy przez $-5$, więc zmieniamy zwrot nierówności: $x < -6$.\n**Odpowiedź:** $x < -6$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e463007-f2d2-5fb5-ac90-28bac4397896",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $3x - 8 \\le 10$.",
+      "correct_answer": "$x \\le 6$",
+      "options": [
+        "$x \\ge 6$",
+        "$x \\le 7$",
+        "$x < 6$",
+        "$x \\le 6$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodajemy $8$: $3x \\le 18$, potem dzielimy przez $3$: $x \\le 6$.\n**Odpowiedź:** $x \\le 6$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "00898e25-2b82-5545-aa1d-07025046260c",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza liczba całkowita spełniająca nierówność $x > 8{,}6$?",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba $8{,}6$ leży między $8$ i $9$. Najmniejsza liczba całkowita większa od niej to $9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c8e4386-ba5f-5f81-ab96-da320a027bcd",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb całkowitych dodatnich spełnia nierówność $x < 10$?",
+      "correct_answer": "9",
+      "options": [
+        "11",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczby $1, 2, \\ldots, 9$ są dodatnie i mniejsze od $10$, jest ich $9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cd7cfd9b-676e-5f12-adcd-0adb7a4f2661",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba całkowita spełniająca nierówność $2x + 2 \\le 18$ to:",
+      "correct_answer": "8",
+      "options": [
+        "10",
+        "7",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po odjęciu $2$ i podzieleniu przez $2$ otrzymujemy $x \\le 8$, więc największa liczba całkowita to $8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f106eb96-6fc0-5d5b-a252-ee11b96994a2",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $2x + 9 > 19$.",
+      "correct_answer": "$x > 5$",
+      "options": [
+        "$x > 5$",
+        "$x > 6$",
+        "$x \\ge 5$",
+        "$x < 5$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy $9$: $2x > 10$, a następnie dzielimy przez $2$: $x > 5$.\n**Odpowiedź:** $x > 5$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c1eb792d-7025-5c7a-a2a9-59663576c478",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $-3x > 9$.",
+      "correct_answer": "$x < -3$",
+      "options": [
+        "$x > -3$",
+        "$x \\le -3$",
+        "$x > 3$",
+        "$x < -3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy przez $-3$, więc zmieniamy zwrot nierówności: $x < -3$.\n**Odpowiedź:** $x < -3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "293a7974-ea32-5354-a1fc-168caec773d3",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $3x - 3 \\le 18$.",
+      "correct_answer": "$x \\le 7$",
+      "options": [
+        "$x \\le 7$",
+        "$x < 7$",
+        "$x \\ge 7$",
+        "$x \\le 8$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodajemy $3$: $3x \\le 21$, potem dzielimy przez $3$: $x \\le 7$.\n**Odpowiedź:** $x \\le 7$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cb918e8a-cb7f-5a52-a5fd-5bb3203b4769",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaka jest najmniejsza liczba całkowita spełniająca nierówność $x > 1{,}6$?",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba $1{,}6$ leży między $1$ i $2$. Najmniejsza liczba całkowita większa od niej to $2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e14244ad-e87c-538e-ae74-974e660afdf7",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile liczb całkowitych dodatnich spełnia nierówność $x < 8$?",
+      "correct_answer": "7",
+      "options": [
+        "7",
+        "9",
+        "6",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczby $1, 2, \\ldots, 7$ są dodatnie i mniejsze od $8$, jest ich $7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2710477b-0098-5fae-add4-d96499296a59",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Największa liczba całkowita spełniająca nierówność $3x + 3 \\le 24$ to:",
+      "correct_answer": "7",
+      "options": [
+        "6",
+        "7",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po odjęciu $3$ i podzieleniu przez $3$ otrzymujemy $x \\le 7$, więc największa liczba całkowita to $7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae562f42-c138-5c1b-a235-50406aa0bee8",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $4x + 3 > 15$.",
+      "correct_answer": "$x > 3$",
+      "options": [
+        "$x < 3$",
+        "$x > 4$",
+        "$x > 3$",
+        "$x \\ge 3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy $3$: $4x > 12$, a następnie dzielimy przez $4$: $x > 3$.\n**Odpowiedź:** $x > 3$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e0a2958-36ef-5a84-a0c9-6503c94af7b1",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Rozwiąż nierówność $-3x > 6$.",
+      "correct_answer": "$x < -2$",
+      "options": [
+        "$x < -2$",
+        "$x > -2$",
+        "$x > 2$",
+        "$x \\le -2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy przez $-3$, więc zmieniamy zwrot nierówności: $x < -2$.\n**Odpowiedź:** $x < -2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74033f75-6e96-5380-ae97-93751e6a2c07",
+      "generatedAt": "2026-11-18T12:23:59.843Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.843Z"
+}

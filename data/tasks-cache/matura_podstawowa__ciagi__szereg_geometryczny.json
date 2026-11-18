@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "ciagi",
+  "topic": "szereg_geometryczny",
+  "categoryName": "Ciągi",
+  "topicName": "Szereg geometryczny",
+  "tasks": [
+    {
+      "content": "Oblicz sumę szeregu geometrycznego $4+2+1+\\ldots$",
+      "correct_answer": "8",
+      "options": [
+        "2",
+        "8",
+        "9",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$a_1=4$, $q=\\frac12$, więc $S=\\frac{4}{1-\\frac12}=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f364a01-34ef-5099-a79b-1670f91b0361",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu $\\sum_{n=1}^{\\infty}\\left(\\frac{1}{3}\\right)^n$.",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$",
+        "3",
+        "$\\frac{1}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$a_1=\\frac{1}{3}$, $q=\\frac{1}{3}$, więc $S=\\frac{\\frac{1}{3}}{1-\\frac{1}{3}}=\\frac{1}{2}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bc5344dc-6a3b-5f76-a806-4b70dba374a3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Szereg geometryczny o ilorazie $q$ jest zbieżny, gdy:",
+      "correct_answer": "|q|<1",
+      "options": [
+        "|q|<1",
+        "|q|>1",
+        "q>1",
+        "q<1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Szereg geometryczny zbieżny jest dokładnie wtedy, gdy $|q|<1$.\n**Odpowiedź:** |q|<1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e809e9e3-9be7-53e3-a886-3646539fa126",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,111\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{1}{9}$",
+      "options": [
+        "$\\frac{1}{99}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{1}{10}$",
+        "$\\frac{1}{9}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$0,11\\ldots=\\frac{1}{10}+\\frac{1}{100}+\\ldots=\\frac{\\frac{1}{10}}{1-\\frac{1}{10}}=\\frac{1}{9}$.\n**Odpowiedź:** $\\frac{1}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2b6a3b5-04d1-57ec-a5f5-3fb58a4c0d78",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,2626\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{26}{99}$",
+      "options": [
+        "$\\frac{2}{9}$",
+        "$\\frac{26}{999}$",
+        "$\\frac{13}{50}$",
+        "$\\frac{26}{99}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "To szereg z $a_1=\\frac{26}{100}$ i $q=\\frac{1}{100}$, więc suma wynosi $\\frac{26}{99}=\\frac{26}{99}$.\n**Odpowiedź:** $\\frac{26}{99}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b3647dea-29f8-5828-a38a-15e3732ca866",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma zbieżnego szeregu geometrycznego wynosi $4$, a jego pierwszy wyraz to $2$. Iloraz tego szeregu jest równy:",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "2",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$S=\\frac{a_1}{1-q}$, więc $1-q=\\frac{2}{4}=\\frac12$ i $q=\\frac12$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e3e7afb8-3053-5d8f-a682-dc2d71b1c7d4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu $6+2+\\frac{2}{3}+\\ldots$",
+      "correct_answer": "$9$",
+      "options": [
+        "$3$",
+        "12",
+        "$\\frac{9}{2}$",
+        "$9$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$a_1=6$, $q=\\frac13$, więc $S=\\frac{6}{1-\\frac13}=\\frac{18}{2}=9$.\n**Odpowiedź:** $9$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd976e51-9edb-5cac-a3ee-0b14035f605a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu geometrycznego $8+4+2+\\ldots$",
+      "correct_answer": "16",
+      "options": [
+        "16",
+        "17",
+        "4",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_1=8$, $q=\\frac12$, więc $S=\\frac{8}{1-\\frac12}=16$.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57b1b4e5-63ad-58b8-a763-d64345f02f3a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu $\\sum_{n=1}^{\\infty}\\left(\\frac{1}{4}\\right)^n$.",
+      "correct_answer": "$\\frac{1}{3}$",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{5}$",
+        "4",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_1=\\frac{1}{4}$, $q=\\frac{1}{4}$, więc $S=\\frac{\\frac{1}{4}}{1-\\frac{1}{4}}=\\frac{1}{3}$.\n**Odpowiedź:** $\\frac{1}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b7ad1722-0611-5f60-aefe-0df68f14f5cb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,888\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{8}{9}$",
+      "options": [
+        "$\\frac{4}{5}$",
+        "$\\frac{8}{9}$",
+        "$1$",
+        "$\\frac{8}{99}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$0,88\\ldots=\\frac{8}{10}+\\frac{8}{100}+\\ldots=\\frac{\\frac{8}{10}}{1-\\frac{1}{10}}=\\frac{8}{9}$.\n**Odpowiedź:** $\\frac{8}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "63d1d869-ed26-5be2-a508-1197af2ce470",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,4747\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{47}{99}$",
+      "options": [
+        "$\\frac{4}{9}$",
+        "$\\frac{47}{100}$",
+        "$\\frac{47}{999}$",
+        "$\\frac{47}{99}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "To szereg z $a_1=\\frac{47}{100}$ i $q=\\frac{1}{100}$, więc suma wynosi $\\frac{47}{99}=\\frac{47}{99}$.\n**Odpowiedź:** $\\frac{47}{99}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "404d9b5a-d427-50e3-a5e4-15092166b51a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,1414\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{14}{99}$",
+      "options": [
+        "$\\frac{14}{99}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{14}{999}$",
+        "$\\frac{7}{50}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "To szereg z $a_1=\\frac{14}{100}$ i $q=\\frac{1}{100}$, więc suma wynosi $\\frac{14}{99}=\\frac{14}{99}$.\n**Odpowiedź:** $\\frac{14}{99}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d405111-64b6-575f-ac15-ffc62a8f98a1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma zbieżnego szeregu geometrycznego wynosi $12$, a jego pierwszy wyraz to $6$. Iloraz tego szeregu jest równy:",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "2",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$S=\\frac{a_1}{1-q}$, więc $1-q=\\frac{6}{12}=\\frac12$ i $q=\\frac12$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bcc0780c-a04c-522d-a51e-90ba4d91e481",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu $12+4+\\frac{4}{3}+\\ldots$",
+      "correct_answer": "$18$",
+      "options": [
+        "$9$",
+        "24",
+        "$6$",
+        "$18$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$a_1=12$, $q=\\frac13$, więc $S=\\frac{12}{1-\\frac13}=\\frac{36}{2}=18$.\n**Odpowiedź:** $18$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cfec83ed-1233-548e-a348-8ff01a1b2b01",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu geometrycznego $2+1+0.5+\\ldots$",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$a_1=2$, $q=\\frac12$, więc $S=\\frac{2}{1-\\frac12}=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d7851269-6770-58ef-ab02-f77b7e52980c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,222\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{2}{9}$",
+      "options": [
+        "$\\frac{2}{99}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{1}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$0,22\\ldots=\\frac{2}{10}+\\frac{2}{100}+\\ldots=\\frac{\\frac{2}{10}}{1-\\frac{1}{10}}=\\frac{2}{9}$.\n**Odpowiedź:** $\\frac{2}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e0cdeec8-73b0-5ee9-a44f-809ade07496a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,6969\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{23}{33}$",
+      "options": [
+        "$\\frac{23}{333}$",
+        "$\\frac{69}{100}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{23}{33}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "To szereg z $a_1=\\frac{69}{100}$ i $q=\\frac{1}{100}$, więc suma wynosi $\\frac{69}{99}=\\frac{23}{33}$.\n**Odpowiedź:** $\\frac{23}{33}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2595d196-6a9f-57af-a41d-55d72c64dc02",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,555\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{5}{9}$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{5}{99}$",
+        "$\\frac{5}{9}$",
+        "$\\frac{2}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$0,55\\ldots=\\frac{5}{10}+\\frac{5}{100}+\\ldots=\\frac{\\frac{5}{10}}{1-\\frac{1}{10}}=\\frac{5}{9}$.\n**Odpowiedź:** $\\frac{5}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9c4e4438-3f50-59b1-a89d-a730133724f3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Zamień ułamek okresowy $0,3939\\ldots$ na ułamek zwykły.",
+      "correct_answer": "$\\frac{13}{33}$",
+      "options": [
+        "$\\frac{39}{100}$",
+        "$\\frac{13}{333}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{13}{33}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "To szereg z $a_1=\\frac{39}{100}$ i $q=\\frac{1}{100}$, więc suma wynosi $\\frac{39}{99}=\\frac{13}{33}$.\n**Odpowiedź:** $\\frac{13}{33}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed68cefe-b4ff-5dfd-a0db-98804e70627d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz sumę szeregu $\\sum_{n=1}^{\\infty}\\left(\\frac{1}{2}\\right)^n$.",
+      "correct_answer": "$1$",
+      "options": [
+        "2",
+        "$1$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$a_1=\\frac{1}{2}$, $q=\\frac{1}{2}$, więc $S=\\frac{\\frac{1}{2}}{1-\\frac{1}{2}}=\\frac{1}{1}$.\n**Odpowiedź:** $1$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9ce5d4d5-94bd-5264-a64a-c0d234b194f6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

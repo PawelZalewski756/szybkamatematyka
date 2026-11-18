@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "zadania_tekstowe_uklady",
+  "categoryName": "Algebra i równania",
+  "topicName": "Zadania tekstowe z układami",
+  "tasks": [
+    {
+      "content": "Suma dwóch liczb wynosi $23$, a ich różnica to $5$. Większa z tych liczb to:",
+      "correct_answer": "14",
+      "options": [
+        "23",
+        "5",
+        "14",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Oznaczmy liczby przez $x$ i $y$. Wtedy $x+y=23$ oraz $x-y=5$. Dodając równania, dostajemy $2x=28$, więc $x=14$.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0b34f649-eedc-5c51-ae5a-51830a7e0de2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jedna liczba jest $5$ razy większa od drugiej, a ich suma wynosi $30$. Mniejsza z tych liczb to:",
+      "correct_answer": "5",
+      "options": [
+        "6",
+        "30",
+        "25",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Niech mniejsza liczba będzie $x$. Wtedy $x+5x=30$, czyli $6x=30$, więc $x=5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "946fb1a3-e47b-55c7-a73d-61c54020337a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na wycieczkę pojechało $14$ osób. Bilet dla dorosłego kosztował $21$ zł, a dla dziecka $12$ zł. Razem zapłacono $258$ zł. Ile było osób dorosłych?",
+      "correct_answer": "10",
+      "options": [
+        "14",
+        "4",
+        "10",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Niech $x$ oznacza dorosłych, a $y$ dzieci. Wtedy $x+y=14$ oraz $21x+12y=258$. Po podstawieniu $y=14-x$ otrzymujemy $x=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "447acb44-0922-577f-abf6-8c057049cb3c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ojciec jest $3$ razy starszy od syna. Razem mają $36$ lat. Ile lat ma syn?",
+      "correct_answer": "9",
+      "options": [
+        "9",
+        "11",
+        "36",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Jeśli syn ma $x$ lat, to ojciec ma $3x$. Z równania $x+3x=36$ dostajemy $4x=36$, czyli $x=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a6eb96ef-1b49-5337-a836-4d8b97bc5eff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $54$ cm, a różnica długości jego boków wynosi $5$ cm. Dłuższy bok ma długość:",
+      "correct_answer": "16 cm",
+      "options": [
+        "27 cm",
+        "17 cm",
+        "11 cm",
+        "16 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Niech boki mają $a$ i $b$ cm. Wtedy $2(a+b)=54$ oraz $b-a=5$. Stąd $a+b=27$, więc $b=16$ cm.\n**Odpowiedź:** 16 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4442c5f4-cff3-5185-a204-022149b8e5db",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$2$ kg jabłek i $3$ kg gruszek kosztują $28$ zł, a $1$ kg jabłek i $1$ kg gruszek kosztuje $11$ zł. Ile kosztuje $1$ kg jabłek?",
+      "correct_answer": "5 zł",
+      "options": [
+        "5 zł",
+        "28 zł",
+        "6 zł",
+        "11 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z drugiego równania $g=11-j$. Po podstawieniu $2j+3(11-j)=28$ otrzymujemy $j=5$ zł.\n**Odpowiedź:** 5 zł",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "88832548-a9d1-513f-ad7f-22dead632329",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Różnica dwóch liczb wynosi $4$, a ich suma to $12$. Mniejsza z tych liczb to:",
+      "correct_answer": "4",
+      "options": [
+        "12",
+        "5",
+        "4",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodając i odejmując równania $x+y=12$ oraz $x-y=4$, otrzymujemy $2x=8$, czyli $x=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "80c59164-e385-52ef-a1c9-94be83838eae",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $34$, a ich różnica to $6$. Większa z tych liczb to:",
+      "correct_answer": "20",
+      "options": [
+        "20",
+        "34",
+        "14",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Oznaczmy liczby przez $x$ i $y$. Wtedy $x+y=34$ oraz $x-y=6$. Dodając równania, dostajemy $2x=40$, więc $x=20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "256c16fe-ac7d-5357-a985-c743630157af",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jedna liczba jest $3$ razy większa od drugiej, a ich suma wynosi $12$. Mniejsza z tych liczb to:",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "9",
+        "12",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Niech mniejsza liczba będzie $x$. Wtedy $x+3x=12$, czyli $4x=12$, więc $x=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0c497628-9f61-5478-add4-4686d479bf73",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na wycieczkę pojechało $18$ osób. Bilet dla dorosłego kosztował $17$ zł, a dla dziecka $8$ zł. Razem zapłacono $171$ zł. Ile było osób dorosłych?",
+      "correct_answer": "3",
+      "options": [
+        "4",
+        "18",
+        "15",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Niech $x$ oznacza dorosłych, a $y$ dzieci. Wtedy $x+y=18$ oraz $17x+8y=171$. Po podstawieniu $y=18-x$ otrzymujemy $x=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6a458ddf-9bde-5e86-a558-e4d8eda7d583",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ojciec jest $3$ razy starszy od syna. Razem mają $32$ lat. Ile lat ma syn?",
+      "correct_answer": "8",
+      "options": [
+        "10",
+        "24",
+        "8",
+        "32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Jeśli syn ma $x$ lat, to ojciec ma $3x$. Z równania $x+3x=32$ dostajemy $4x=32$, czyli $x=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc00b694-f8af-51c0-a4f1-d0186f05de75",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $52$ cm, a różnica długości jego boków wynosi $6$ cm. Dłuższy bok ma długość:",
+      "correct_answer": "16 cm",
+      "options": [
+        "16 cm",
+        "17 cm",
+        "10 cm",
+        "26 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Niech boki mają $a$ i $b$ cm. Wtedy $2(a+b)=52$ oraz $b-a=6$. Stąd $a+b=26$, więc $b=16$ cm.\n**Odpowiedź:** 16 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6ae0f84f-575f-5238-a2c1-5b7e2ffedaa4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$2$ kg jabłek i $3$ kg gruszek kosztują $26$ zł, a $1$ kg jabłek i $1$ kg gruszek kosztuje $11$ zł. Ile kosztuje $1$ kg jabłek?",
+      "correct_answer": "7 zł",
+      "options": [
+        "26 zł",
+        "11 zł",
+        "4 zł",
+        "7 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z drugiego równania $g=11-j$. Po podstawieniu $2j+3(11-j)=26$ otrzymujemy $j=7$ zł.\n**Odpowiedź:** 7 zł",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eb9cc2f9-c4a9-5e87-a930-652de647c289",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Różnica dwóch liczb wynosi $5$, a ich suma to $25$. Mniejsza z tych liczb to:",
+      "correct_answer": "10",
+      "options": [
+        "5",
+        "25",
+        "10",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodając i odejmując równania $x+y=25$ oraz $x-y=5$, otrzymujemy $2x=20$, czyli $x=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "10563598-a532-5423-aa27-2d883b73e714",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma dwóch liczb wynosi $30$, a ich różnica to $2$. Większa z tych liczb to:",
+      "correct_answer": "16",
+      "options": [
+        "2",
+        "30",
+        "16",
+        "14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Oznaczmy liczby przez $x$ i $y$. Wtedy $x+y=30$ oraz $x-y=2$. Dodając równania, dostajemy $2x=32$, więc $x=16$.\n**Odpowiedź:** 16",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bee9faab-e8f1-562d-af0a-f6c324d33863",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jedna liczba jest $4$ razy większa od drugiej, a ich suma wynosi $15$. Mniejsza z tych liczb to:",
+      "correct_answer": "3",
+      "options": [
+        "12",
+        "3",
+        "4",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Niech mniejsza liczba będzie $x$. Wtedy $x+4x=15$, czyli $5x=15$, więc $x=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3546c34a-fb12-5b69-a7de-5a17e90f783f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na wycieczkę pojechało $16$ osób. Bilet dla dorosłego kosztował $21$ zł, a dla dziecka $10$ zł. Razem zapłacono $248$ zł. Ile było osób dorosłych?",
+      "correct_answer": "8",
+      "options": [
+        "10",
+        "16",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Niech $x$ oznacza dorosłych, a $y$ dzieci. Wtedy $x+y=16$ oraz $21x+10y=248$. Po podstawieniu $y=16-x$ otrzymujemy $x=8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bf21d5ec-0d20-51d6-a493-bc5c444ce617",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ojciec jest $3$ razy starszy od syna. Razem mają $52$ lat. Ile lat ma syn?",
+      "correct_answer": "13",
+      "options": [
+        "52",
+        "39",
+        "15",
+        "13"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Jeśli syn ma $x$ lat, to ojciec ma $3x$. Z równania $x+3x=52$ dostajemy $4x=52$, czyli $x=13$.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4c39c995-2764-5cdb-a8d2-1d27d3e16bae",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Prostokąt ma obwód $28$ cm, a różnica długości jego boków wynosi $6$ cm. Dłuższy bok ma długość:",
+      "correct_answer": "10 cm",
+      "options": [
+        "11 cm",
+        "4 cm",
+        "14 cm",
+        "10 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Niech boki mają $a$ i $b$ cm. Wtedy $2(a+b)=28$ oraz $b-a=6$. Stąd $a+b=14$, więc $b=10$ cm.\n**Odpowiedź:** 10 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6b2bd28e-21e7-589b-a0c3-1e6b5d1bcf2d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "$2$ kg jabłek i $3$ kg gruszek kosztują $39$ zł, a $1$ kg jabłek i $1$ kg gruszek kosztuje $15$ zł. Ile kosztuje $1$ kg jabłek?",
+      "correct_answer": "6 zł",
+      "options": [
+        "39 zł",
+        "15 zł",
+        "6 zł",
+        "9 zł"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z drugiego równania $g=15-j$. Po podstawieniu $2j+3(15-j)=39$ otrzymujemy $j=6$ zł.\n**Odpowiedź:** 6 zł",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd035ae4-456e-505a-a2c9-d024eeb52132",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

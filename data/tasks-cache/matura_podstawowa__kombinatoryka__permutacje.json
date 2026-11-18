@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "permutacje",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Permutacje",
+  "tasks": [
+    {
+      "content": "Na ile sposobów można ustawić w rzędzie $5$ różnych osób?",
+      "correct_answer": "120",
+      "options": [
+        "25",
+        "120",
+        "144",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ustawiamy $5$ różnych elementów, więc liczba permutacji to $5!=120$.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "62adf088-9290-5e08-a3b8-50d97a88b47d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych permutacji liter można utworzyć z wyrazu KOTEK?",
+      "correct_answer": "60",
+      "options": [
+        "61",
+        "120",
+        "60",
+        "70"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W wyrazie KOTEK litery się powtarzają. Liczba różnych permutacji to $\\frac{5!}{2!}=60$.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c75d453c-4250-5788-aab8-c2571906c3e3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można posadzić $6$ osób przy okrągłym stole, jeśli liczą się tylko sąsiedztwa (obroty uznajemy za ten sam układ)?",
+      "correct_answer": "120",
+      "options": [
+        "720",
+        "121",
+        "120",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy okrągłym stole liczba permutacji cyklicznych to $(n-1)!$, czyli $5!=120$.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b350519b-af24-59ec-af71-3e38efabff17",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić w rzędzie $4$ osób, jeśli pewna dwójka ma stać obok siebie?",
+      "correct_answer": "12",
+      "options": [
+        "12",
+        "24",
+        "48",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Traktujemy parę jak jeden blok: $3$ obiektów można ustawić na $(4-1)!$ sposobów, a wewnątrz bloku para na $2$ sposoby. Razem $2\\cdot3!=12$.\n**Odpowiedź:** 12",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6378d969-7cae-5edb-adb5-4d2a00f07b7b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić $6$ osób w rzędzie, jeśli jedna ustalona osoba ma stać na pierwszym miejscu?",
+      "correct_answer": "120",
+      "options": [
+        "120",
+        "30",
+        "720",
+        "126"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwsze miejsce jest zajęte, więc pozostałe $5$ osób ustawiamy na $5!=120$ sposobów.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ce42e422-f48f-5fb1-ae69-2ac1e5bdf896",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\frac{7!}{(7-1)!}$?",
+      "correct_answer": "7",
+      "options": [
+        "42",
+        "7",
+        "6",
+        "5040"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\frac{7!}{(7-1)!}=7$, bo $7!=7\\cdot(7-1)!$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "244ca334-c5d8-59e9-ab83-f95201349950",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na półce stoi $6$ różnych książek. Na ile sposobów można je ustawić w kolejności?",
+      "correct_answer": "720",
+      "options": [
+        "721",
+        "30",
+        "720",
+        "120"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Każde ustawienie to permutacja $6$ książek: $6!=720$.\n**Odpowiedź:** 720",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a3ec59b5-0543-50d0-ad96-71c942449175",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych permutacji liter można utworzyć z wyrazu ANANAS?",
+      "correct_answer": "60",
+      "options": [
+        "70",
+        "60",
+        "120",
+        "720"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W wyrazie ANANAS litery się powtarzają. Liczba różnych permutacji to $\\frac{6!}{3!\\cdot2!}=60$.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5b213bed-d84e-5a91-a236-bf2e7cce7901",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile różnych permutacji liter można utworzyć z wyrazu BANANA?",
+      "correct_answer": "60",
+      "options": [
+        "70",
+        "720",
+        "60",
+        "120"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W wyrazie BANANA litery się powtarzają. Liczba różnych permutacji to $\\frac{6!}{3!\\cdot2!}=60$.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e5a97d4e-1773-54e1-a7db-389eae80fe5f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można posadzić $4$ osób przy okrągłym stole, jeśli liczą się tylko sąsiedztwa (obroty uznajemy za ten sam układ)?",
+      "correct_answer": "6",
+      "options": [
+        "6",
+        "7",
+        "12",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przy okrągłym stole liczba permutacji cyklicznych to $(n-1)!$, czyli $3!=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d5dc54b2-6e90-5aa7-abf7-57d7d0f342c9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\frac{8!}{(8-1)!}$?",
+      "correct_answer": "8",
+      "options": [
+        "40320",
+        "56",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\frac{8!}{(8-1)!}=8$, bo $8!=8\\cdot(8-1)!$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7de7c3e2-753c-5998-ad44-23be09d4590f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić $5$ osób w rzędzie, jeśli jedna ustalona osoba ma stać na pierwszym miejscu?",
+      "correct_answer": "24",
+      "options": [
+        "24",
+        "20",
+        "120",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwsze miejsce jest zajęte, więc pozostałe $4$ osób ustawiamy na $4!=24$ sposobów.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e432dbbe-6dde-5252-a7bf-d6db512d0840",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\frac{4!}{(4-1)!}$?",
+      "correct_answer": "4",
+      "options": [
+        "24",
+        "3",
+        "4",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\frac{4!}{(4-1)!}=4$, bo $4!=4\\cdot(4-1)!$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "69149f60-6a7b-5afa-a0fa-e0fdf2d66709",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na półce stoi $4$ różnych książek. Na ile sposobów można je ustawić w kolejności?",
+      "correct_answer": "24",
+      "options": [
+        "25",
+        "12",
+        "24",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Każde ustawienie to permutacja $4$ książek: $4!=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "91bd4681-3570-515c-a280-2fbda2940e42",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić w rzędzie $7$ różnych osób?",
+      "correct_answer": "5040",
+      "options": [
+        "5040",
+        "720",
+        "49",
+        "5760"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ustawiamy $7$ różnych elementów, więc liczba permutacji to $7!=5040$.\n**Odpowiedź:** 5040",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3256f585-f74e-575a-add1-f6e89e25fb82",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można posadzić $5$ osób przy okrągłym stole, jeśli liczą się tylko sąsiedztwa (obroty uznajemy za ten sam układ)?",
+      "correct_answer": "24",
+      "options": [
+        "20",
+        "120",
+        "24",
+        "25"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy okrągłym stole liczba permutacji cyklicznych to $(n-1)!$, czyli $4!=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ee8f141-98d9-5487-a132-6a726f6a9491",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można posadzić $7$ osób przy okrągłym stole, jeśli liczą się tylko sąsiedztwa (obroty uznajemy za ten sam układ)?",
+      "correct_answer": "720",
+      "options": [
+        "721",
+        "720",
+        "5040",
+        "42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy okrągłym stole liczba permutacji cyklicznych to $(n-1)!$, czyli $6!=720$.\n**Odpowiedź:** 720",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b82fa7bc-3555-5a01-aad4-3a84245ee1a7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić w rzędzie $5$ osób, jeśli pewna dwójka ma stać obok siebie?",
+      "correct_answer": "48",
+      "options": [
+        "24",
+        "240",
+        "120",
+        "48"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Traktujemy parę jak jeden blok: $4$ obiektów można ustawić na $(5-1)!$ sposobów, a wewnątrz bloku para na $2$ sposoby. Razem $2\\cdot4!=48$.\n**Odpowiedź:** 48",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "708ed227-c88d-56f1-a228-581ef4ff7ec6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile sposobów można ustawić $4$ osób w rzędzie, jeśli jedna ustalona osoba ma stać na pierwszym miejscu?",
+      "correct_answer": "6",
+      "options": [
+        "10",
+        "6",
+        "12",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pierwsze miejsce jest zajęte, więc pozostałe $3$ osób ustawiamy na $3!=6$ sposobów.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "81c7f641-52a6-5fb7-a116-8c4c3cbd3c17",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile wynosi $\\frac{9!}{(9-1)!}$?",
+      "correct_answer": "9",
+      "options": [
+        "8",
+        "9",
+        "72",
+        "362880"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\frac{9!}{(9-1)!}=9$, bo $9!=9\\cdot(9-1)!$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d679657e-e01c-5bdc-a9c9-20eea7eea59b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

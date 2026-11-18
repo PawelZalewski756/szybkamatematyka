@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "przekroje_bryl",
+  "categoryName": "Geometria",
+  "topicName": "Przekroje brył",
+  "tasks": [
+    {
+      "content": "Sześcian o krawędzi $5$ przecięto płaszczyzną równoległą do jednej ze ścian. Pole otrzymanego przekroju wynosi:",
+      "correct_answer": "$25\\ \\text{cm}^2$",
+      "options": [
+        "$25\\sqrt3\\ \\text{cm}^2$",
+        "$25\\sqrt2\\ \\text{cm}^2$",
+        "$25\\ \\text{cm}^2$",
+        "$50\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój jest kwadratem o boku $5$, więc jego pole to $5^2=25$ cm$^2$.\n**Odpowiedź:** $25\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "56b46dc6-270d-51f8-a5cc-345bac558d89",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $4$ przecięto płaszczyzną przechodzącą przez przekątną podstawy i krawędź boczną. Pole przekroju wynosi:",
+      "correct_answer": "$16\\sqrt2\\ \\text{cm}^2$",
+      "options": [
+        "$16\\ \\text{cm}^2$",
+        "$216\\ \\text{cm}^2$",
+        "$16\\sqrt2\\ \\text{cm}^2$",
+        "$16\\sqrt3\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój jest prostokątem o bokach $4$ i $4\\sqrt2$, więc $P=4\\cdot4\\sqrt2=16\\sqrt2$ cm$^2$.\n**Odpowiedź:** $16\\sqrt2\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0b626607-9f4c-5cea-abd5-21da9c99e5a5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $4$ i wysokość $4$. Pole przekroju osiowego wynosi:",
+      "correct_answer": "32 cm²",
+      "options": [
+        "32 cm²",
+        "64 cm²",
+        "16 cm²",
+        "17 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $8$ i $4$, więc $P=2\\cdot4\\cdot4=32$ cm$^2$.\n**Odpowiedź:** 32 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "64b9d958-627f-554f-aa94-b451b7c14a1a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $5$ i wysokość $8$. Pole przekroju przechodzącego przez wierzchołek i średnicę podstawy wynosi:",
+      "correct_answer": "40 cm²",
+      "options": [
+        "125.66370614359172 cm²",
+        "80 cm²",
+        "40 cm²",
+        "20 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój jest trójkątem o podstawie $10$ i wysokości $8$, więc $P=\\frac12\\cdot10\\cdot8=40$ cm$^2$.\n**Odpowiedź:** 40 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "353edee5-5dfd-5cc1-a6f5-c8dd0e5ce13f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kulę o promieniu $8$ przecięto płaszczyzną przechodzącą przez jej środek. Pole otrzymanego przekroju wynosi:",
+      "correct_answer": "$64\\pi\\ \\text{cm}^2$",
+      "options": [
+        "64 cm²",
+        "$64\\pi\\ \\text{cm}^2$",
+        "$8\\pi\\ \\text{cm}^2$",
+        "$128\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój to koło wielkie o promieniu $8$, więc $P=\\pi\\cdot8^2=64\\pi$ cm$^2$.\n**Odpowiedź:** $64\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c77b2ce3-3dd2-5831-a468-ef93157c764b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $6$ przecięto płaszczyzną przechodzącą przez trzy wierzchołki, z których żadne dwa nie leżą na wspólnej krawędzi. Pole przekroju wynosi:",
+      "correct_answer": "$18\\sqrt3\\ \\text{cm}^2$",
+      "options": [
+        "$18\\sqrt3\\ \\text{cm}^2$",
+        "$36\\ \\text{cm}^2$",
+        "$36\\sqrt3\\ \\text{cm}^2$",
+        "$18\\sqrt2\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój jest trójkątem równobocznym o boku $6\\sqrt2$, więc $P=\\frac{\\sqrt3}{4}\\cdot236=18\\sqrt3$ cm$^2$.\n**Odpowiedź:** $18\\sqrt3\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4568c164-9a1d-5eb8-adab-11155a9c9869",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $9$ przecięto płaszczyzną równoległą do jednej ze ścian. Pole otrzymanego przekroju wynosi:",
+      "correct_answer": "$81\\ \\text{cm}^2$",
+      "options": [
+        "$81\\sqrt3\\ \\text{cm}^2$",
+        "$162\\ \\text{cm}^2$",
+        "$81\\ \\text{cm}^2$",
+        "$81\\sqrt2\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój jest kwadratem o boku $9$, więc jego pole to $9^2=81$ cm$^2$.\n**Odpowiedź:** $81\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b0d8a13a-37bb-580c-afaf-a498419e1337",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $3$ przecięto płaszczyzną przechodzącą przez przekątną podstawy i krawędź boczną. Pole przekroju wynosi:",
+      "correct_answer": "$9\\sqrt2\\ \\text{cm}^2$",
+      "options": [
+        "$9\\ \\text{cm}^2$",
+        "$9\\sqrt2\\ \\text{cm}^2$",
+        "$9\\sqrt3\\ \\text{cm}^2$",
+        "$29\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój jest prostokątem o bokach $3$ i $3\\sqrt2$, więc $P=3\\cdot3\\sqrt2=9\\sqrt2$ cm$^2$.\n**Odpowiedź:** $9\\sqrt2\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "48caf927-9f2c-50e4-a467-6fd470a1652e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $4$ i wysokość $5$. Pole przekroju osiowego wynosi:",
+      "correct_answer": "40 cm²",
+      "options": [
+        "20 cm²",
+        "21 cm²",
+        "40 cm²",
+        "80 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $8$ i $5$, więc $P=2\\cdot4\\cdot5=40$ cm$^2$.\n**Odpowiedź:** 40 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24b8ad65-ed02-533e-a979-c1840fc12ffb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $6$ i wysokość $7$. Pole przekroju przechodzącego przez wierzchołek i średnicę podstawy wynosi:",
+      "correct_answer": "42 cm²",
+      "options": [
+        "131.94689145077132 cm²",
+        "42 cm²",
+        "84 cm²",
+        "21 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój jest trójkątem o podstawie $12$ i wysokości $7$, więc $P=\\frac12\\cdot12\\cdot7=42$ cm$^2$.\n**Odpowiedź:** 42 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b39782f4-53b3-57fa-a4bb-64856a3368a5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kulę o promieniu $4$ przecięto płaszczyzną przechodzącą przez jej środek. Pole otrzymanego przekroju wynosi:",
+      "correct_answer": "$16\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$16\\pi\\ \\text{cm}^2$",
+        "16 cm²",
+        "$32\\pi\\ \\text{cm}^2$",
+        "$4\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój to koło wielkie o promieniu $4$, więc $P=\\pi\\cdot4^2=16\\pi$ cm$^2$.\n**Odpowiedź:** $16\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "eff2cea4-a933-5e11-a03c-46242b6408b5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $5$ przecięto płaszczyzną przechodzącą przez trzy wierzchołki, z których żadne dwa nie leżą na wspólnej krawędzi. Pole przekroju wynosi:",
+      "correct_answer": "$\\frac{25}{2}\\sqrt3\\ \\text{cm}^2$",
+      "options": [
+        "$\\frac{25}{2}\\sqrt2\\ \\text{cm}^2$",
+        "$\\frac{25}{2}\\sqrt3\\ \\text{cm}^2$",
+        "$25\\ \\text{cm}^2$",
+        "$25\\sqrt3\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój jest trójkątem równobocznym o boku $5\\sqrt2$, więc $P=\\frac{\\sqrt3}{4}\\cdot225=\\frac{25}{2}\\sqrt3$ cm$^2$.\n**Odpowiedź:** $\\frac{25}{2}\\sqrt3\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "486fe25c-6e45-5bad-a043-8e649cff4d28",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $5$ przecięto płaszczyzną przechodzącą przez przekątną podstawy i krawędź boczną. Pole przekroju wynosi:",
+      "correct_answer": "$25\\sqrt2\\ \\text{cm}^2$",
+      "options": [
+        "$225\\ \\text{cm}^2$",
+        "$25\\sqrt2\\ \\text{cm}^2$",
+        "$25\\ \\text{cm}^2$",
+        "$25\\sqrt3\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój jest prostokątem o bokach $5$ i $5\\sqrt2$, więc $P=5\\cdot5\\sqrt2=25\\sqrt2$ cm$^2$.\n**Odpowiedź:** $25\\sqrt2\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0a03b4a6-d079-5da8-a820-7cafa424bedf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $2$ przecięto płaszczyzną przechodzącą przez przekątną podstawy i krawędź boczną. Pole przekroju wynosi:",
+      "correct_answer": "$4\\sqrt2\\ \\text{cm}^2$",
+      "options": [
+        "$4\\ \\text{cm}^2$",
+        "$4\\sqrt2\\ \\text{cm}^2$",
+        "$4\\sqrt3\\ \\text{cm}^2$",
+        "$24\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój jest prostokątem o bokach $2$ i $2\\sqrt2$, więc $P=2\\cdot2\\sqrt2=4\\sqrt2$ cm$^2$.\n**Odpowiedź:** $4\\sqrt2\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d14cbf95-f74b-50a0-a5f3-16003d3ed7de",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $3$ i wysokość $9$. Pole przekroju osiowego wynosi:",
+      "correct_answer": "54 cm²",
+      "options": [
+        "108 cm²",
+        "54 cm²",
+        "27 cm²",
+        "28 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $6$ i $9$, więc $P=2\\cdot3\\cdot9=54$ cm$^2$.\n**Odpowiedź:** 54 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a619c01a-b6f7-5370-ab84-eb9b42a14cde",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $2$ i wysokość $6$. Pole przekroju przechodzącego przez wierzchołek i średnicę podstawy wynosi:",
+      "correct_answer": "12 cm²",
+      "options": [
+        "6 cm²",
+        "24 cm²",
+        "12 cm²",
+        "37.69911184307752 cm²"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój jest trójkątem o podstawie $4$ i wysokości $6$, więc $P=\\frac12\\cdot4\\cdot6=12$ cm$^2$.\n**Odpowiedź:** 12 cm²",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f1701e1d-2337-5742-a30d-09b86988b2a9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $8$ przecięto płaszczyzną przechodzącą przez trzy wierzchołki, z których żadne dwa nie leżą na wspólnej krawędzi. Pole przekroju wynosi:",
+      "correct_answer": "$32\\sqrt3\\ \\text{cm}^2$",
+      "options": [
+        "$64\\ \\text{cm}^2$",
+        "$32\\sqrt2\\ \\text{cm}^2$",
+        "$32\\sqrt3\\ \\text{cm}^2$",
+        "$64\\sqrt3\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój jest trójkątem równobocznym o boku $8\\sqrt2$, więc $P=\\frac{\\sqrt3}{4}\\cdot264=32\\sqrt3$ cm$^2$.\n**Odpowiedź:** $32\\sqrt3\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d8589ed-d139-5f87-aa04-857d57dd03a6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $4$ przecięto płaszczyzną przechodzącą przez trzy wierzchołki, z których żadne dwa nie leżą na wspólnej krawędzi. Pole przekroju wynosi:",
+      "correct_answer": "$8\\sqrt3\\ \\text{cm}^2$",
+      "options": [
+        "$16\\sqrt3\\ \\text{cm}^2$",
+        "$8\\sqrt2\\ \\text{cm}^2$",
+        "$16\\ \\text{cm}^2$",
+        "$8\\sqrt3\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój jest trójkątem równobocznym o boku $4\\sqrt2$, więc $P=\\frac{\\sqrt3}{4}\\cdot216=8\\sqrt3$ cm$^2$.\n**Odpowiedź:** $8\\sqrt3\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7370625b-20fe-5ec4-a65e-2cb14d500301",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $4$ przecięto płaszczyzną równoległą do jednej ze ścian. Pole otrzymanego przekroju wynosi:",
+      "correct_answer": "$16\\ \\text{cm}^2$",
+      "options": [
+        "$32\\ \\text{cm}^2$",
+        "$16\\sqrt3\\ \\text{cm}^2$",
+        "$16\\ \\text{cm}^2$",
+        "$16\\sqrt2\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój jest kwadratem o boku $4$, więc jego pole to $4^2=16$ cm$^2$.\n**Odpowiedź:** $16\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d390a08b-abb3-5c4a-a4e4-36321015d01d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian o krawędzi $8$ przecięto płaszczyzną przechodzącą przez przekątną podstawy i krawędź boczną. Pole przekroju wynosi:",
+      "correct_answer": "$64\\sqrt2\\ \\text{cm}^2$",
+      "options": [
+        "$64\\ \\text{cm}^2$",
+        "$64\\sqrt3\\ \\text{cm}^2$",
+        "$264\\ \\text{cm}^2$",
+        "$64\\sqrt2\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój jest prostokątem o bokach $8$ i $8\\sqrt2$, więc $P=8\\cdot8\\sqrt2=64\\sqrt2$ cm$^2$.\n**Odpowiedź:** $64\\sqrt2\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "888e1786-53fb-5cf5-acf5-a5e9fb0c7427",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

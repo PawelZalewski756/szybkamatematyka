@@ -62,8 +62,11 @@ jobs:
       - name: Audit task cache
         run: npm run audit:tasks-cache
 
+      - name: Audit task placement
+        run: npm run audit:placement
+
       - name: Audit CKE solutions
-        run: npm run audit:cke
+        run: npm run audit:cke -- --strict
 
       - name: Audit rendering (DB + cache + CKE)
         run: npm run audit:render

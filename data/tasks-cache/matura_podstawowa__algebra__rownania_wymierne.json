@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "algebra",
+  "topic": "rownania_wymierne",
+  "categoryName": "Algebra i równania",
+  "topicName": "Równania wymierne",
+  "tasks": [
+    {
+      "content": "Rozwiąż równanie $\\frac{x-2}{x-2}=0$.",
+      "correct_answer": "x=2",
+      "options": [
+        "x=4",
+        "x=-2",
+        "x=2",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik musi być zerem: $x-2=0$, czyli $x=2$. Mianownik jest wtedy różny od zera.\n**Odpowiedź:** x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ba4139c3-0b46-5e0e-a293-12b85367583d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{1}{x-3}=\\frac{1}{3}$.",
+      "correct_answer": "x=6",
+      "options": [
+        "x=0",
+        "x=9",
+        "x=4",
+        "x=6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przy równych licznikach mianowniki są równe: $x-3=3$, więc $x=6$.\n**Odpowiedź:** x=6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "375bfc1b-5256-5fad-a7cc-d25b22f75aa0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x}{x-2}=2$.",
+      "correct_answer": "x=4",
+      "options": [
+        "x=1",
+        "x=4",
+        "x=2",
+        "x=-4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy przez mianownik: $x=2(x-2)$, czyli $x=2x-4$, więc $x=4$.\n**Odpowiedź:** x=4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4298dece-7b2c-5941-ae8b-6cb0d2f32c14",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x^2-9}{x-3}=0$.",
+      "correct_answer": "x=-3",
+      "options": [
+        "x=0",
+        "x=-3",
+        "x=9",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Licznik to $(x-3)(x+3)$, więc $x=3$ lub $x=-3$. Dla $x=3$ mianownik jest zerem, więc zostaje $x=-3$.\n**Odpowiedź:** x=-3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b74bb1a1-d611-5333-afe9-19683d85d702",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{(x-6)(x+3)}{x-6}=0$.",
+      "correct_answer": "x=-3",
+      "options": [
+        "x=6",
+        "x=-3",
+        "x=7",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Skracamy czynnik $x-6$ (dla $x\\ne6$): $x+3=0$, więc $x=-3$.\n**Odpowiedź:** x=-3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e26eaeb9-ddee-53be-a67a-7c957c569223",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{2}{x-5}=\\frac{1}{x-7}$.",
+      "correct_answer": "x=9",
+      "options": [
+        "x=5",
+        "x=9",
+        "x=7",
+        "x=14"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy na krzyż: $2(x-7)=x-5$, więc $2x-14=x-5$ i $x=9$.\n**Odpowiedź:** x=9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "57b716ee-8387-58e1-a4c6-22aecb14d75d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dziedziną równania $\\frac{x+1}{x^2-36}=0$ jest zbiór:",
+      "correct_answer": "x ≠ -6 i x ≠ 6",
+      "options": [
+        "x ≠ 36",
+        "wszystkie liczby rzeczywiste",
+        "x ≠ -6 i x ≠ 6",
+        "x ≠ 6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mianownik nie może być zerem: $x^2-36\\ne0$, czyli $x\\ne-6$ i $x\\ne6$.\n**Odpowiedź:** x ≠ -6 i x ≠ 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "995a8d60-5481-5987-a65b-322cc63a01ae",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x-3}{x-5}=0$.",
+      "correct_answer": "x=3",
+      "options": [
+        "x=3",
+        "x=-3",
+        "x=4",
+        "x=5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik musi być zerem: $x-3=0$, czyli $x=3$. Mianownik jest wtedy różny od zera.\n**Odpowiedź:** x=3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d70b07d-af5a-56f5-adcf-3cd4c1eefb62",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{1}{x-3}=\\frac{1}{2}$.",
+      "correct_answer": "x=5",
+      "options": [
+        "x=4",
+        "x=6",
+        "x=-1",
+        "x=5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przy równych licznikach mianowniki są równe: $x-3=2$, więc $x=5$.\n**Odpowiedź:** x=5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "df78ce4d-7e19-5493-a39e-f75bb967a1b4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x}{x-4}=2$.",
+      "correct_answer": "x=8",
+      "options": [
+        "x=-8",
+        "x=8",
+        "x=4",
+        "x=2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożymy przez mianownik: $x=2(x-4)$, czyli $x=2x-8$, więc $x=8$.\n**Odpowiedź:** x=8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3758053f-52c7-5e4f-ad25-d29d7712e766",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x^2-16}{x-4}=0$.",
+      "correct_answer": "x=-4",
+      "options": [
+        "x=4",
+        "x=0",
+        "x=-4",
+        "x=16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Licznik to $(x-4)(x+4)$, więc $x=4$ lub $x=-4$. Dla $x=4$ mianownik jest zerem, więc zostaje $x=-4$.\n**Odpowiedź:** x=-4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8efdcabe-e79f-5ce5-ad74-518b655b7732",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{(x-5)(x+5)}{x-5}=0$.",
+      "correct_answer": "x=-5",
+      "options": [
+        "x=-5",
+        "x=6",
+        "x=5",
+        "x=7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Skracamy czynnik $x-5$ (dla $x\\ne5$): $x+5=0$, więc $x=-5$.\n**Odpowiedź:** x=-5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "24d140d7-dfcc-5d1b-ab3d-3c5f58484d12",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dziedziną równania $\\frac{x+1}{x^2-25}=0$ jest zbiór:",
+      "correct_answer": "x ≠ -5 i x ≠ 5",
+      "options": [
+        "x ≠ 25",
+        "x ≠ -5 i x ≠ 5",
+        "wszystkie liczby rzeczywiste",
+        "x ≠ 5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik nie może być zerem: $x^2-25\\ne0$, czyli $x\\ne-5$ i $x\\ne5$.\n**Odpowiedź:** x ≠ -5 i x ≠ 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "edf683ff-1609-558a-af4f-37bd62020edb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Dziedziną równania $\\frac{x+1}{x^2-16}=0$ jest zbiór:",
+      "correct_answer": "x ≠ -4 i x ≠ 4",
+      "options": [
+        "wszystkie liczby rzeczywiste",
+        "x ≠ 4",
+        "x ≠ -4 i x ≠ 4",
+        "x ≠ 16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mianownik nie może być zerem: $x^2-16\\ne0$, czyli $x\\ne-4$ i $x\\ne4$.\n**Odpowiedź:** x ≠ -4 i x ≠ 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec5e9b4d-9d45-5ae6-a932-c2c87a06b9d5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x-2}{x-6}=0$.",
+      "correct_answer": "x=2",
+      "options": [
+        "x=6",
+        "x=3",
+        "x=2",
+        "x=-2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik musi być zerem: $x-2=0$, czyli $x=2$. Mianownik jest wtedy różny od zera.\n**Odpowiedź:** x=2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8fa153ad-3173-5c92-aa69-286598b6e558",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{1}{x-5}=\\frac{1}{2}$.",
+      "correct_answer": "x=7",
+      "options": [
+        "x=7",
+        "x=6",
+        "x=10",
+        "x=-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przy równych licznikach mianowniki są równe: $x-5=2$, więc $x=7$.\n**Odpowiedź:** x=7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a7aff1e1-adae-5d5a-ae64-8dd747922d12",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x}{x-3}=2$.",
+      "correct_answer": "x=6",
+      "options": [
+        "x=-6",
+        "x=6",
+        "x=1.5",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy przez mianownik: $x=2(x-3)$, czyli $x=2x-6$, więc $x=6$.\n**Odpowiedź:** x=6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e57ccf53-5c07-5ba7-a610-f0578dc8ad47",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{x^2-36}{x-6}=0$.",
+      "correct_answer": "x=-6",
+      "options": [
+        "x=0",
+        "x=-6",
+        "x=6",
+        "x=36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Licznik to $(x-6)(x+6)$, więc $x=6$ lub $x=-6$. Dla $x=6$ mianownik jest zerem, więc zostaje $x=-6$.\n**Odpowiedź:** x=-6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "34a6d571-a9d9-5e0b-af1a-0ab1d04b9f47",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{(x-5)(x+3)}{x-5}=0$.",
+      "correct_answer": "x=-3",
+      "options": [
+        "x=3",
+        "x=5",
+        "x=6",
+        "x=-3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Skracamy czynnik $x-5$ (dla $x\\ne5$): $x+3=0$, więc $x=-3$.\n**Odpowiedź:** x=-3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8c8b908-cfdf-54ef-a522-ddcc5c52a5d8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rozwiąż równanie $\\frac{2}{x-3}=\\frac{1}{x-7}$.",
+      "correct_answer": "x=11",
+      "options": [
+        "x=14",
+        "x=7",
+        "x=11",
+        "x=3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy na krzyż: $2(x-7)=x-3$, więc $2x-14=x-3$ i $x=11$.\n**Odpowiedź:** x=11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b2ee98e9-c477-5889-aba5-cfaeed70e28b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

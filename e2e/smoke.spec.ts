@@ -593,14 +593,12 @@ test.describe("Smoke", () => {
     await expect(
       page.getByTestId("training-department-navigation"),
     ).toBeVisible();
-    await expect(
-      page.getByTestId("training-next-step"),
-    ).toHaveAttribute(
+    await expect(page.getByTestId("training-next-step")).toHaveAttribute(
       "href",
-      "/trening/egzamin-osmoklasisty/liczby/kolejnosc_dzialan",
+      /^\/trening\/egzamin-osmoklasisty\/liczby\//,
     );
     await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-    await expect(page.getByText("9 tematów").first()).toBeVisible();
+    await expect(page.getByText("14 tematów").first()).toBeVisible();
     await expect(
       page.getByRole("button", { name: /Pokaż tematy/ }).first(),
     ).toBeVisible();
@@ -628,7 +626,7 @@ test.describe("Smoke", () => {
     await expandButton.click();
 
     await expect(page.getByTestId("training-topic-list")).toBeVisible();
-    await expect(topicLinks).toHaveCount(9);
+    await expect(topicLinks).toHaveCount(14);
   });
 
   test("trening zachowuje hierarchię i szerokość na telefonie", async ({

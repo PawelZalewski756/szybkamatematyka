@@ -125,6 +125,7 @@ export async function GET(request: Request) {
                 cancelAtPeriodEnd:
                   (row as Record<string, unknown>)
                     .subscription_cancel_at_period_end ?? null,
+                source: (row as Record<string, unknown>).pro_source ?? null,
               }
             : null;
       }

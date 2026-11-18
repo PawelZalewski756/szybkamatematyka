@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "regula_mnozenia",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Reguła mnożenia i dodawania",
+  "tasks": [
+    {
+      "content": "W stołówce są $6$ rodzaje zup i $6$ rodzaje drugich dań. Na ile sposobów można wybrać zestaw złożony z jednej zupy i jednego dania?",
+      "correct_answer": "36",
+      "options": [
+        "36",
+        "12",
+        "35",
+        "42"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wybieramy zupę ($6$ sposobów) i danie ($6$ sposobów), więc $6\\cdot6=36$.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5cb08c7b-3da0-5af6-a1b7-c2ab945ba6dc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Tworzymy liczby dwucyfrowe z cyfr $1,2,\\ldots,6$, przy czym cyfry mogą się powtarzać. Ile takich liczb można utworzyć?",
+      "correct_answer": "36",
+      "options": [
+        "12",
+        "30",
+        "42",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfrę dziesiątek wybieramy na $6$ sposobów, a cyfrę jedności także na $6$ sposobów: $6\\cdot6=36$.\n**Odpowiedź:** 36",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6c9ed80f-ffc7-5980-a9bc-22e642e3901d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kod składa się z trzech liter wybieranych ze zbioru $6$ liter, przy czym litery mogą się powtarzać. Ile jest takich kodów?",
+      "correct_answer": "216",
+      "options": [
+        "36",
+        "216",
+        "222",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Każdą z trzech pozycji wybieramy na $6$ sposobów: $6^3=216$.\n**Odpowiedź:** 216",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e5e9e14-719b-5716-a73a-9283f7757e6e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kod PIN składa się z $3$ cyfr (od $0$ do $9$). Ile jest różnych kodów?",
+      "correct_answer": "1000",
+      "options": [
+        "100",
+        "900",
+        "1000",
+        "999"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Każdą z $3$ pozycji wybieramy na $10$ sposobów: $10^{3}=1000$.\n**Odpowiedź:** 1000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3826bb16-d232-5390-ae6a-299b91210226",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Marcin ma $2$ koszule, $3$ pary spodni i $4$ pary butów. Na ile sposobów może się ubrać, wybierając po jednej rzeczy z każdego rodzaju?",
+      "correct_answer": "24",
+      "options": [
+        "6",
+        "9",
+        "25",
+        "24"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy liczby możliwości: $2\\cdot3\\cdot4=24$.\n**Odpowiedź:** 24",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1c29a1d2-f7a5-5ad5-a399-79756e145e7e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile można utworzyć trzyliterowych kodów z $5$ różnych liter, jeśli litery nie mogą się powtarzać?",
+      "correct_answer": "60",
+      "options": [
+        "60",
+        "20",
+        "65",
+        "125"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pierwszą literę wybieramy na $5$ sposobów, drugą na $4$, trzecią na $3$: $5\\cdot4\\cdot3=60$.\n**Odpowiedź:** 60",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1d3c5c8e-637c-50e8-ac47-0f9d38463f7c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Na ile najkrótszych dróg można przejść po kratce z punktu $A$ do punktu $B$, jeśli trzeba przesunąć się o $2$ odcinków w prawo i $3$ odcinków w górę?",
+      "correct_answer": "10",
+      "options": [
+        "11",
+        "6",
+        "5",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Wybieramy $2$ ruchów w prawo spośród $5$ ruchów: $\\binom{5}{2}=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "391ef15e-9ae7-53eb-aa7b-b9c88c61b43b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sklepie jest $6$ rodzajów herbaty i $4$ rodzaje kawy. Na ile sposobów można kupić jeden napój (herbatę albo kawę)?",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "24",
+        "2",
+        "11"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wybieramy jeden napój z rozłącznych grup, więc stosujemy regułę dodawania: $6+4=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b6ba6f15-c800-5933-a64d-d9cbcdec3467",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W stołówce są $7$ rodzaje zup i $4$ rodzaje drugich dań. Na ile sposobów można wybrać zestaw złożony z jednej zupy i jednego dania?",
+      "correct_answer": "28",
+      "options": [
+        "28",
+        "27",
+        "11",
+        "35"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Wybieramy zupę ($7$ sposobów) i danie ($4$ sposobów), więc $7\\cdot4=28$.\n**Odpowiedź:** 28",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cb3f839e-7de0-52e7-a541-fd0a26a371e5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Tworzymy liczby dwucyfrowe z cyfr $1,2,\\ldots,3$, przy czym cyfry mogą się powtarzać. Ile takich liczb można utworzyć?",
+      "correct_answer": "9",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfrę dziesiątek wybieramy na $3$ sposobów, a cyfrę jedności także na $3$ sposobów: $3\\cdot3=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5595b60f-ec84-592f-ac6b-b91e77de9962",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kod składa się z trzech liter wybieranych ze zbioru $3$ liter, przy czym litery mogą się powtarzać. Ile jest takich kodów?",
+      "correct_answer": "27",
+      "options": [
+        "30",
+        "28",
+        "27",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Każdą z trzech pozycji wybieramy na $3$ sposobów: $3^3=27$.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2998ed23-5dee-5b6d-a2d6-d6a90c37e0f6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kod PIN składa się z $4$ cyfr (od $0$ do $9$). Ile jest różnych kodów?",
+      "correct_answer": "10000",
+      "options": [
+        "9000",
+        "9999",
+        "10000",
+        "1000"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Każdą z $4$ pozycji wybieramy na $10$ sposobów: $10^{4}=10000$.\n**Odpowiedź:** 10000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1f17fdf8-9a1b-5ece-a1d0-292c86603dcc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Marcin ma $2$ koszule, $4$ pary spodni i $4$ pary butów. Na ile sposobów może się ubrać, wybierając po jednej rzeczy z każdego rodzaju?",
+      "correct_answer": "32",
+      "options": [
+        "8",
+        "32",
+        "10",
+        "33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Mnożymy liczby możliwości: $2\\cdot4\\cdot4=32$.\n**Odpowiedź:** 32",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "103f84d4-b195-56a5-a134-d41c92568125",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile można utworzyć trzyliterowych kodów z $6$ różnych liter, jeśli litery nie mogą się powtarzać?",
+      "correct_answer": "120",
+      "options": [
+        "216",
+        "120",
+        "126",
+        "30"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pierwszą literę wybieramy na $6$ sposobów, drugą na $5$, trzecią na $4$: $6\\cdot5\\cdot4=120$.\n**Odpowiedź:** 120",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b679dcbf-95e1-55a0-ab72-1f17e792312f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sklepie jest $5$ rodzajów herbaty i $5$ rodzaje kawy. Na ile sposobów można kupić jeden napój (herbatę albo kawę)?",
+      "correct_answer": "10",
+      "options": [
+        "11",
+        "10",
+        "25",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wybieramy jeden napój z rozłącznych grup, więc stosujemy regułę dodawania: $5+5=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c2d2ddea-4362-5293-a874-ce38efa6345f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sklepie jest $4$ rodzajów herbaty i $3$ rodzaje kawy. Na ile sposobów można kupić jeden napój (herbatę albo kawę)?",
+      "correct_answer": "7",
+      "options": [
+        "1",
+        "12",
+        "8",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wybieramy jeden napój z rozłącznych grup, więc stosujemy regułę dodawania: $4+3=7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f2fdb544-6af1-5890-a137-71bdd424597e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W stołówce są $6$ rodzaje zup i $3$ rodzaje drugich dań. Na ile sposobów można wybrać zestaw złożony z jednej zupy i jednego dania?",
+      "correct_answer": "18",
+      "options": [
+        "17",
+        "18",
+        "24",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Wybieramy zupę ($6$ sposobów) i danie ($3$ sposobów), więc $6\\cdot3=18$.\n**Odpowiedź:** 18",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5d03f229-e6ae-5d57-a17d-a161e3418482",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kod składa się z trzech liter wybieranych ze zbioru $4$ liter, przy czym litery mogą się powtarzać. Ile jest takich kodów?",
+      "correct_answer": "64",
+      "options": [
+        "64",
+        "16",
+        "68",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Każdą z trzech pozycji wybieramy na $4$ sposobów: $4^3=64$.\n**Odpowiedź:** 64",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "df1f0cb4-ae10-549d-a817-88d03665a568",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Marcin ma $3$ koszule, $3$ pary spodni i $3$ pary butów. Na ile sposobów może się ubrać, wybierając po jednej rzeczy z każdego rodzaju?",
+      "correct_answer": "27",
+      "options": [
+        "29",
+        "28",
+        "9",
+        "27"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy liczby możliwości: $3\\cdot3\\cdot3=27$.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7a6a3dcc-f643-5364-abd8-c71e6b8534e4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Marcin ma $5$ koszule, $5$ pary spodni i $4$ pary butów. Na ile sposobów może się ubrać, wybierając po jednej rzeczy z każdego rodzaju?",
+      "correct_answer": "100",
+      "options": [
+        "25",
+        "100",
+        "14",
+        "101"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy liczby możliwości: $5\\cdot5\\cdot4=100$.\n**Odpowiedź:** 100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4fa652bd-8cb7-5408-a50a-5eea46d8143f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

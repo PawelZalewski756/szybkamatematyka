@@ -26,6 +26,7 @@ type ProfileSubscriptionPatch = {
   subscription_cancel_at_period_end: boolean;
   stripe_customer_id: string | null;
   stripe_subscription_id: string | null;
+  pro_source: "stripe";
 };
 
 function unixToIso(seconds: number | null | undefined): string | null {
@@ -189,6 +190,7 @@ export async function syncSubscriptionToProfile(
     ),
     stripe_customer_id: customerId,
     stripe_subscription_id: subscription.id,
+    pro_source: "stripe",
   });
 }
 
@@ -220,5 +222,6 @@ export async function markSubscriptionCanceled(
     subscription_cancel_at_period_end: true,
     stripe_customer_id: customerId,
     stripe_subscription_id: subscription.id,
+    pro_source: "stripe",
   });
 }

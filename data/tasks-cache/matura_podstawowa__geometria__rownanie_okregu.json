@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "rownanie_okregu",
+  "categoryName": "Geometria",
+  "topicName": "Równanie okręgu",
+  "tasks": [
+    {
+      "content": "Środek okręgu o równaniu $(x-3)^2+(y+3)^2=36$ to punkt:",
+      "correct_answer": "(3,-3)",
+      "options": [
+        "(3,-3)",
+        "(3,-2)",
+        "(4,-3)",
+        "(-3,-3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W równaniu $(x-3)^2+(y+3)^2=36$ środek to $(3,-3)$, a promień wynosi $6$.\n**Odpowiedź:** (3,-3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3ccbdf95-3ed7-5311-a39a-7083acf74793",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma środek $(-1,2)$ i promień $5$. Jego równanie ma postać:",
+      "correct_answer": "$(x+1)^2+(y-2)^2=25$",
+      "options": [
+        "$x^2+(y-2)^2=25$",
+        "$(x+1)^2+(y-2)^2=25$",
+        "$(x+1)^2+(y-2)^2=625$",
+        "$(x-1)^2+(y+2)^2=25$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Równanie okręgu to $(x-a)^2+(y-b)^2=r^2$, czyli $(x+1)^2+(y-2)^2=25$.\n**Odpowiedź:** $(x+1)^2+(y-2)^2=25$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7174777c-0625-580f-a8e7-0c331885a473",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek okręgu o równaniu $x^2+y^2+4x-4y-1=0$ to punkt:",
+      "correct_answer": "(-2,2)",
+      "options": [
+        "(-2,-2)",
+        "(4,-4)",
+        "(2,2)",
+        "(-2,2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W równaniu $x^2+y^2+Dx+Ey+F=0$ środek ma współrzędne $(-\\frac{D}{2},-\\frac{E}{2})=(-2,2)$.\n**Odpowiedź:** (-2,2)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "501f4562-6200-5a0a-ab18-bedcafd56105",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Czy punkt $(9,0)$ należy do okręgu $(x-3)^2+y^2=36$?",
+      "correct_answer": "tak",
+      "options": [
+        "tylko dla dodatnich współrzędnych",
+        "tak",
+        "nie",
+        "nie można ustalić"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Punkt $(9,0)$ leży w odległości $6$ od środka $(3,0)$, więc należy do okręgu.\n**Odpowiedź:** tak",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e3bb3e16-61ed-51c1-a577-42dc4d42d731",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Średnicą okręgu jest odcinek o końcach $(-2,3)$ i $(10,3)$. Promień tego okręgu wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "12",
+        "36",
+        "6",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek to środek odcinka $(4,3)$, a promień to połowa długości średnicy: $\\frac{12}{2}=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "673e479f-5094-521b-a8d5-b28733160b4f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg o promieniu $2$ jest styczny do obu osi układu współrzędnych, a jego środek leży w pierwszej ćwiartce. Środek tego okręgu to:",
+      "correct_answer": "(2,2)",
+      "options": [
+        "(0,0)",
+        "(-2,2)",
+        "(2,-2)",
+        "(2,2)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Styczność do obu osi oznacza, że odległości środka od osi są równe promieniowi. W I ćwiartce środek to $(2,2)$.\n**Odpowiedź:** (2,2)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6af0b5e2-33c3-52e1-a202-bd19c1e59a35",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma równanie $x^2+y^2=36$. Jego promień wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "12",
+        "3",
+        "6",
+        "36"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Równanie $x^2+y^2=r^2$ opisuje okrąg o środku $(0,0)$ i promieniu $6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8f091745-6a38-5c64-aa12-a5619735609b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek okręgu o równaniu $(x+4)^2+y^2=4$ to punkt:",
+      "correct_answer": "(-4,0)",
+      "options": [
+        "(4,0)",
+        "(-3,0)",
+        "(-4,0)",
+        "(-4,1)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W równaniu $(x+4)^2+y^2=4$ środek to $(-4,0)$, a promień wynosi $2$.\n**Odpowiedź:** (-4,0)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5309ad0c-549b-50e5-a21d-eb4beae304eb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma środek $(-2,3)$ i promień $6$. Jego równanie ma postać:",
+      "correct_answer": "$(x+2)^2+(y-3)^2=36$",
+      "options": [
+        "$(x-2)^2+(y+3)^2=36$",
+        "$(x+1)^2+(y-3)^2=36$",
+        "$(x+2)^2+(y-3)^2=36$",
+        "$(x+2)^2+(y-3)^2=1296$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Równanie okręgu to $(x-a)^2+(y-b)^2=r^2$, czyli $(x+2)^2+(y-3)^2=36$.\n**Odpowiedź:** $(x+2)^2+(y-3)^2=36$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f4153a0-22e9-5cf2-acae-c3da1ee07bc1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek okręgu o równaniu $x^2+y^2-6x+6y+14=0$ to punkt:",
+      "correct_answer": "(3,-3)",
+      "options": [
+        "(-6,6)",
+        "(3,3)",
+        "(-3,-3)",
+        "(3,-3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W równaniu $x^2+y^2+Dx+Ey+F=0$ środek ma współrzędne $(-\\frac{D}{2},-\\frac{E}{2})=(3,-3)$.\n**Odpowiedź:** (3,-3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6ba0030c-61d0-5c27-a741-aa4e2ff5f78e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Czy punkt $(6,-3)$ należy do okręgu $(x-3)^2+(y+3)^2=9$?",
+      "correct_answer": "tak",
+      "options": [
+        "nie można ustalić",
+        "tylko dla dodatnich współrzędnych",
+        "nie",
+        "tak"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Punkt $(6,-3)$ leży w odległości $3$ od środka $(3,-3)$, więc należy do okręgu.\n**Odpowiedź:** tak",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4bbee218-63c6-5b83-ac14-602dcbad8e6d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Średnicą okręgu jest odcinek o końcach $(-3,3)$ i $(9,3)$. Promień tego okręgu wynosi:",
+      "correct_answer": "6",
+      "options": [
+        "9",
+        "36",
+        "6",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek to środek odcinka $(3,3)$, a promień to połowa długości średnicy: $\\frac{12}{2}=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ba197965-44f5-5bab-ad17-7882284e57e4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg o promieniu $6$ jest styczny do obu osi układu współrzędnych, a jego środek leży w pierwszej ćwiartce. Środek tego okręgu to:",
+      "correct_answer": "(6,6)",
+      "options": [
+        "(6,6)",
+        "(-6,6)",
+        "(0,0)",
+        "(6,-6)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Styczność do obu osi oznacza, że odległości środka od osi są równe promieniowi. W I ćwiartce środek to $(6,6)$.\n**Odpowiedź:** (6,6)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e21d915-a594-5fd2-a8bc-e5d7f8332d81",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma równanie $x^2+y^2=49$. Jego promień wynosi:",
+      "correct_answer": "7",
+      "options": [
+        "7",
+        "3,5",
+        "14",
+        "49"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Równanie $x^2+y^2=r^2$ opisuje okrąg o środku $(0,0)$ i promieniu $7$.\n**Odpowiedź:** 7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "292bab20-6002-57cd-a580-f98c9564aab8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek okręgu o równaniu $(x+1)^2+(y+4)^2=4$ to punkt:",
+      "correct_answer": "(-1,-4)",
+      "options": [
+        "(-1,-4)",
+        "(-1,-3)",
+        "(0,-4)",
+        "(1,-4)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "W równaniu $(x+1)^2+(y+4)^2=4$ środek to $(-1,-4)$, a promień wynosi $2$.\n**Odpowiedź:** (-1,-4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "87851023-48f8-5996-a228-63552353bf52",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma środek $(-3,2)$ i promień $5$. Jego równanie ma postać:",
+      "correct_answer": "$(x+3)^2+(y-2)^2=25$",
+      "options": [
+        "$(x+3)^2+(y-2)^2=625$",
+        "$(x+2)^2+(y-2)^2=25$",
+        "$(x+3)^2+(y-2)^2=25$",
+        "$(x-3)^2+(y+2)^2=25$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Równanie okręgu to $(x-a)^2+(y-b)^2=r^2$, czyli $(x+3)^2+(y-2)^2=25$.\n**Odpowiedź:** $(x+3)^2+(y-2)^2=25$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "766d9d3f-b342-58b4-a443-1890493faa60",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środek okręgu o równaniu $x^2+y^2+6x-8y+9=0$ to punkt:",
+      "correct_answer": "(-3,4)",
+      "options": [
+        "(-3,4)",
+        "(-3,-4)",
+        "(3,4)",
+        "(6,-8)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "W równaniu $x^2+y^2+Dx+Ey+F=0$ środek ma współrzędne $(-\\frac{D}{2},-\\frac{E}{2})=(-3,4)$.\n**Odpowiedź:** (-3,4)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd548648-a268-5b34-ace6-894fdf554e10",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Czy punkt $(2,-3)$ należy do okręgu $(x+3)^2+(y+3)^2=25$?",
+      "correct_answer": "tak",
+      "options": [
+        "nie",
+        "nie można ustalić",
+        "tylko dla dodatnich współrzędnych",
+        "tak"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Punkt $(2,-3)$ leży w odległości $5$ od środka $(-3,-3)$, więc należy do okręgu.\n**Odpowiedź:** tak",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6f6fb4b3-34ae-5903-a626-2b16f3eeb79c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Średnicą okręgu jest odcinek o końcach $(-6,1)$ i $(0,1)$. Promień tego okręgu wynosi:",
+      "correct_answer": "3",
+      "options": [
+        "0",
+        "6",
+        "9",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek to środek odcinka $(-3,1)$, a promień to połowa długości średnicy: $\\frac{6}{2}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1262f774-5a9b-581f-a2cc-c97df31cec7b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg o promieniu $3$ jest styczny do obu osi układu współrzędnych, a jego środek leży w pierwszej ćwiartce. Środek tego okręgu to:",
+      "correct_answer": "(3,3)",
+      "options": [
+        "(3,3)",
+        "(-3,3)",
+        "(0,0)",
+        "(3,-3)"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Styczność do obu osi oznacza, że odległości środka od osi są równe promieniowi. W I ćwiartce środek to $(3,3)$.\n**Odpowiedź:** (3,3)",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "01ae85d3-c0f2-5620-a418-5a818e0ccd21",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

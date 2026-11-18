@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "wycinek_i_luk",
+  "categoryName": "Geometria",
+  "topicName": "Wycinek koła i łuk okręgu",
+  "tasks": [
+    {
+      "content": "Okrąg ma promień $2$ cm. Długość łuku wyznaczonego przez kąt środkowy $180^\\circ$ wynosi:",
+      "correct_answer": "$2\\pi\\ \\text{cm}$",
+      "options": [
+        "$4\\pi\\ \\text{cm}$",
+        "2 cm",
+        "$2\\pi\\ \\text{cm}$",
+        "$2\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$l=\\frac{180}{360}\\cdot2\\pi\\cdot2=2\\pi$ cm.\n**Odpowiedź:** $2\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "be983764-f896-5020-a528-e64170db450e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pole wycinka koła o promieniu $9$ cm i kącie środkowym $120^\\circ$ wynosi:",
+      "correct_answer": "$27\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$27\\pi\\ \\text{cm}^2$",
+        "27 cm^2",
+        "$27\\pi\\ \\text{cm}$",
+        "$54\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P=\\frac{120}{360}\\cdot\\pi\\cdot9^2=27\\pi$ cm$^2$.\n**Odpowiedź:** $27\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1747b4a7-be3f-5199-a158-f9811c836a88",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wycinek koła ma promień $6$ cm i kąt środkowy $60^\\circ$. Obwód tego wycinka wynosi:",
+      "correct_answer": "$12+2\\pi\\ \\text{cm}$",
+      "options": [
+        "$12+4\\pi\\ \\text{cm}$",
+        "$2\\pi\\ \\text{cm}$",
+        "$12+2\\pi\\ \\text{cm}$",
+        "$6+2\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód wycinka to dwa promienie i łuk: $2\\cdot6+2\\pi=12+2\\pi$ cm.\n**Odpowiedź:** $12+2\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "28b53042-8a3e-5964-a73a-4b8e46818aac",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Łuk okręgu o promieniu $3$ cm ma długość $\\pi$ cm. Kąt środkowy tego łuku wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "60°",
+        "120°",
+        "90°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$l=\\frac{\\alpha}{360}\\cdot2\\pi r$, więc $\\frac{60}{360}\\cdot2\\pi\\cdot3=\\pi$, czyli $\\alpha=60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aa9faf70-9536-581a-a97d-a7ca4e63b6a4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaką część pola koła stanowi wycinek odpowiadający kątowi środkowemu $120^\\circ$?",
+      "correct_answer": "$\\frac{1}{3}$",
+      "options": [
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{5}{12}$",
+        "$3$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pole wycinka to $\\frac{120}{360}$ pola koła, czyli $\\frac{1}{3}$.\n**Odpowiedź:** $\\frac{1}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f08e78ee-b645-53fb-a26c-b69ce301a954",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Koło ma średnicę $8$ cm. Łuk odpowiadający kątowi środkowemu $90^\\circ$ ma długość:",
+      "correct_answer": "$2\\pi\\ \\text{cm}$",
+      "options": [
+        "2 cm",
+        "$4\\pi\\ \\text{cm}$",
+        "$2\\pi\\ \\text{cm}$",
+        "$1\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Promień to $4$ cm, więc $l=\\frac{90}{360}\\cdot2\\pi\\cdot4=2\\pi$ cm.\n**Odpowiedź:** $2\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "531e703a-c70d-5e9f-ac87-d19e6105c1c1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma promień $18$ cm. Długość łuku wyznaczonego przez kąt środkowy $30^\\circ$ wynosi:",
+      "correct_answer": "$3\\pi\\ \\text{cm}$",
+      "options": [
+        "$6\\pi\\ \\text{cm}$",
+        "$3\\pi\\ \\text{cm}$",
+        "$3\\pi\\ \\text{cm}^2$",
+        "3 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$l=\\frac{30}{360}\\cdot2\\pi\\cdot18=3\\pi$ cm.\n**Odpowiedź:** $3\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9ab9d6d2-bb31-5af5-aa4e-9ad04cfbfda2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pole wycinka koła o promieniu $6$ cm i kącie środkowym $90^\\circ$ wynosi:",
+      "correct_answer": "$9\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$9\\pi\\ \\text{cm}^2$",
+        "$9\\pi\\ \\text{cm}$",
+        "$18\\pi\\ \\text{cm}^2$",
+        "9 cm^2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$P=\\frac{90}{360}\\cdot\\pi\\cdot6^2=9\\pi$ cm$^2$.\n**Odpowiedź:** $9\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1958eb5b-7125-5814-adef-fd4b8c0d6b10",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Łuk okręgu o promieniu $2$ cm ma długość $\\pi$ cm. Kąt środkowy tego łuku wynosi:",
+      "correct_answer": "90°",
+      "options": [
+        "90°",
+        "120°",
+        "180°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$l=\\frac{\\alpha}{360}\\cdot2\\pi r$, więc $\\frac{90}{360}\\cdot2\\pi\\cdot2=\\pi$, czyli $\\alpha=90^\\circ$.\n**Odpowiedź:** 90°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e1c1920-2a9a-58e3-a28e-eb4a3727970a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Łuk okręgu o promieniu $9$ cm ma długość $6\\pi$ cm. Kąt środkowy tego łuku wynosi:",
+      "correct_answer": "120°",
+      "options": [
+        "240°",
+        "120°",
+        "150°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$l=\\frac{\\alpha}{360}\\cdot2\\pi r$, więc $\\frac{120}{360}\\cdot2\\pi\\cdot9=6\\pi$, czyli $\\alpha=120^\\circ$.\n**Odpowiedź:** 120°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7c400497-977a-5ea7-a810-417737fbf09e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaką część pola koła stanowi wycinek odpowiadający kątowi środkowemu $90^\\circ$?",
+      "correct_answer": "$\\frac{1}{4}$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$4$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pole wycinka to $\\frac{90}{360}$ pola koła, czyli $\\frac{1}{4}$.\n**Odpowiedź:** $\\frac{1}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f00d89f6-d02e-5c41-a5d1-d86fde1040ad",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Koło ma średnicę $4$ cm. Łuk odpowiadający kątowi środkowemu $90^\\circ$ ma długość:",
+      "correct_answer": "$\\pi\\ \\text{cm}$",
+      "options": [
+        "$0.5\\pi\\ \\text{cm}$",
+        "1 cm",
+        "$2\\pi\\ \\text{cm}$",
+        "$\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Promień to $2$ cm, więc $l=\\frac{90}{360}\\cdot2\\pi\\cdot2=\\pi$ cm.\n**Odpowiedź:** $\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "64c2c1e6-76ee-5dd7-a1bd-14717f518a59",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma promień $12$ cm. Długość łuku wyznaczonego przez kąt środkowy $30^\\circ$ wynosi:",
+      "correct_answer": "$2\\pi\\ \\text{cm}$",
+      "options": [
+        "$2\\pi\\ \\text{cm}^2$",
+        "2 cm",
+        "$2\\pi\\ \\text{cm}$",
+        "$4\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$l=\\frac{30}{360}\\cdot2\\pi\\cdot12=2\\pi$ cm.\n**Odpowiedź:** $2\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ec894daa-22b1-5064-a0b5-1337a0198704",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Łuk okręgu o promieniu $12$ cm ma długość $3\\pi$ cm. Kąt środkowy tego łuku wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "45°",
+        "90°",
+        "22.5°",
+        "75°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$l=\\frac{\\alpha}{360}\\cdot2\\pi r$, więc $\\frac{45}{360}\\cdot2\\pi\\cdot12=3\\pi$, czyli $\\alpha=45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2795c3f4-4005-5d92-a30a-4fc6b9620799",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wycinek koła ma promień $2$ cm i kąt środkowy $90^\\circ$. Obwód tego wycinka wynosi:",
+      "correct_answer": "$4+\\pi\\ \\text{cm}$",
+      "options": [
+        "$4+2\\pi\\ \\text{cm}$",
+        "$4+\\pi\\ \\text{cm}$",
+        "$\\pi\\ \\text{cm}$",
+        "$2+\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód wycinka to dwa promienie i łuk: $2\\cdot2+\\pi=4+\\pi$ cm.\n**Odpowiedź:** $4+\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2fffcabd-7bcd-5b04-a559-7c9632714f10",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Łuk okręgu o promieniu $6$ cm ma długość $2\\pi$ cm. Kąt środkowy tego łuku wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "60°",
+        "120°",
+        "90°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$l=\\frac{\\alpha}{360}\\cdot2\\pi r$, więc $\\frac{60}{360}\\cdot2\\pi\\cdot6=2\\pi$, czyli $\\alpha=60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9961b92a-b670-5f4f-a5de-d7cd6a253900",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Jaką część pola koła stanowi wycinek odpowiadający kątowi środkowemu $45^\\circ$?",
+      "correct_answer": "$\\frac{1}{8}$",
+      "options": [
+        "$8$",
+        "$\\frac{5}{24}$",
+        "$\\frac{1}{8}$",
+        "$\\frac{1}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pole wycinka to $\\frac{45}{360}$ pola koła, czyli $\\frac{1}{8}$.\n**Odpowiedź:** $\\frac{1}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0d752a0f-c06f-5841-a816-5aeef06e9e20",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma promień $8$ cm. Długość łuku wyznaczonego przez kąt środkowy $90^\\circ$ wynosi:",
+      "correct_answer": "$4\\pi\\ \\text{cm}$",
+      "options": [
+        "$8\\pi\\ \\text{cm}$",
+        "$4\\pi\\ \\text{cm}^2$",
+        "$4\\pi\\ \\text{cm}$",
+        "4 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$l=\\frac{90}{360}\\cdot2\\pi\\cdot8=4\\pi$ cm.\n**Odpowiedź:** $4\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "23c95be8-85b6-5db6-a26e-9fdc124d2729",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Okrąg ma promień $12$ cm. Długość łuku wyznaczonego przez kąt środkowy $45^\\circ$ wynosi:",
+      "correct_answer": "$3\\pi\\ \\text{cm}$",
+      "options": [
+        "3 cm",
+        "$3\\pi\\ \\text{cm}^2$",
+        "$3\\pi\\ \\text{cm}$",
+        "$6\\pi\\ \\text{cm}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$l=\\frac{45}{360}\\cdot2\\pi\\cdot12=3\\pi$ cm.\n**Odpowiedź:** $3\\pi\\ \\text{cm}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ae931046-538a-5ff1-afd9-560d5e6fb6a8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Pole wycinka koła o promieniu $12$ cm i kącie środkowym $60^\\circ$ wynosi:",
+      "correct_answer": "$24\\pi\\ \\text{cm}^2$",
+      "options": [
+        "$24\\pi\\ \\text{cm}$",
+        "$24\\pi\\ \\text{cm}^2$",
+        "24 cm^2",
+        "$48\\pi\\ \\text{cm}^2$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P=\\frac{60}{360}\\cdot\\pi\\cdot12^2=24\\pi$ cm$^2$.\n**Odpowiedź:** $24\\pi\\ \\text{cm}^2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bdd782f5-c631-523b-a805-6d969d109ea3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

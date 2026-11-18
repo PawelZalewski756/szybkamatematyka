@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "liczby",
+  "topic": "zaokraglanie_i_szacowanie",
+  "categoryName": "Liczby i działania",
+  "topicName": "Zaokrąglanie i szacowanie",
+  "tasks": [
+    {
+      "content": "Zaokrąglij liczbę $26,6$ do liczby całkowitej.",
+      "correct_answer": "27",
+      "options": [
+        "27",
+        "29",
+        "28",
+        "26"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfra po przecinku to $6$, więc zaokrąglamy w górę. Wynik: $27$.\n**Odpowiedź:** 27",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "22178a0d-ac67-5de5-a575-9f224a18604f",
+      "generatedAt": "2026-11-18T12:23:59.822Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $29,37$ do jednego miejsca po przecinku.",
+      "correct_answer": "29,4",
+      "options": [
+        "29,3",
+        "29,5",
+        "29,4",
+        "29"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Patrzymy na cyfrę setnych, czyli $7$. Stąd zaokrąglenie do dziesiątych to $29,4$.\n**Odpowiedź:** 29,4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b22b1f92-5974-54ad-adf5-285610435989",
+      "generatedAt": "2026-11-18T12:23:59.822Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $541$ do pełnych dziesiątek.",
+      "correct_answer": "540",
+      "options": [
+        "540",
+        "542",
+        "550",
+        "541"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfra jedności to $1$, więc zaokrąglamy w dół. Wynik to $540$.\n**Odpowiedź:** 540",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99206bf5-91b2-5283-af3f-35a7e46f38c9",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj sumę $498 + 803 + 297$, zaokrąglając każdy składnik do pełnych setek.",
+      "correct_answer": "1600",
+      "options": [
+        "1700",
+        "1600",
+        "1500",
+        "1598"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po zaokrągleniu mamy $500 + 800 + 300 = 1600$. Dokładna suma to $1598$, więc oszacowanie jest bliskie.\n**Odpowiedź:** 1600",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "edcfbfbd-a05a-5150-ab3e-94940176f6fa",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj iloczyn $49 \\cdot 61$, zaokrąglając oba czynniki do pełnych dziesiątek.",
+      "correct_answer": "3000",
+      "options": [
+        "3100",
+        "3000",
+        "2900",
+        "2989"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$49 \\approx 50$ i $61 \\approx 60$, więc $49 \\cdot 61 \\approx 50 \\cdot 60 = 3000$.\n**Odpowiedź:** 3000",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "745f7b9b-6921-5385-a669-d33bdbbc2558",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która z liczb po zaokrągleniu do pełnych dziesiątek daje $620$?",
+      "correct_answer": "623",
+      "options": [
+        "623",
+        "611",
+        "627",
+        "614"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Do $620$ zaokrąglają się liczby od $615$ do $624$. Tylko $623$ należy do tego przedziału.\n**Odpowiedź:** 623",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fcb43c5a-c4fc-5e56-a377-8cab94f09945",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $17,3$ do liczby całkowitej.",
+      "correct_answer": "17",
+      "options": [
+        "17",
+        "19",
+        "16",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Cyfra po przecinku to $3$, więc zaokrąglamy w dół. Wynik: $17$.\n**Odpowiedź:** 17",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "041f8556-36cf-5f1f-ad55-57ccfb2e11b3",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $12,51$ do jednego miejsca po przecinku.",
+      "correct_answer": "12,5",
+      "options": [
+        "13,5",
+        "12,6",
+        "12,5",
+        "12"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Patrzymy na cyfrę setnych, czyli $1$. Stąd zaokrąglenie do dziesiątych to $12,5$.\n**Odpowiedź:** 12,5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "59dfcc07-9718-5b55-a425-8c8378edab80",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $206$ do pełnych dziesiątek.",
+      "correct_answer": "210",
+      "options": [
+        "200",
+        "206",
+        "210",
+        "220"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfra jedności to $6$, więc zaokrąglamy w górę. Wynik to $210$.\n**Odpowiedź:** 210",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "87627d18-78a6-54de-adbe-8916ef2d3cc2",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj sumę $398 + 503 + 597$, zaokrąglając każdy składnik do pełnych setek.",
+      "correct_answer": "1500",
+      "options": [
+        "1500",
+        "1600",
+        "1498",
+        "1400"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po zaokrągleniu mamy $400 + 500 + 600 = 1500$. Dokładna suma to $1498$, więc oszacowanie jest bliskie.\n**Odpowiedź:** 1500",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5bd49396-5a3f-57cd-a34f-d13a908cb16b",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj iloczyn $79 \\cdot 81$, zaokrąglając oba czynniki do pełnych dziesiątek.",
+      "correct_answer": "6400",
+      "options": [
+        "6300",
+        "6500",
+        "6399",
+        "6400"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$79 \\approx 80$ i $81 \\approx 80$, więc $79 \\cdot 81 \\approx 80 \\cdot 80 = 6400$.\n**Odpowiedź:** 6400",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5c9aebbd-32ff-5799-a6c1-b533bfeab5a3",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która z liczb po zaokrągleniu do pełnych dziesiątek daje $200$?",
+      "correct_answer": "203",
+      "options": [
+        "207",
+        "194",
+        "191",
+        "203"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Do $200$ zaokrąglają się liczby od $195$ do $204$. Tylko $203$ należy do tego przedziału.\n**Odpowiedź:** 203",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "37b1a81c-f029-58ee-a0c3-c83786ee6233",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $5,2$ do liczby całkowitej.",
+      "correct_answer": "5",
+      "options": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Cyfra po przecinku to $2$, więc zaokrąglamy w dół. Wynik: $5$.\n**Odpowiedź:** 5",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b5bac9ba-f292-5b5b-a854-a5f571bc0ca8",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $34,11$ do jednego miejsca po przecinku.",
+      "correct_answer": "34,1",
+      "options": [
+        "34,1",
+        "34",
+        "35,1",
+        "34,2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Patrzymy na cyfrę setnych, czyli $1$. Stąd zaokrąglenie do dziesiątych to $34,1$.\n**Odpowiedź:** 34,1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "384da04a-7268-5940-a273-2a1e5c65f856",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $731$ do pełnych dziesiątek.",
+      "correct_answer": "730",
+      "options": [
+        "731",
+        "732",
+        "730",
+        "740"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfra jedności to $1$, więc zaokrąglamy w dół. Wynik to $730$.\n**Odpowiedź:** 730",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3356bc4c-404c-5924-ab31-eb2b94e8f727",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj sumę $798 + 603 + 397$, zaokrąglając każdy składnik do pełnych setek.",
+      "correct_answer": "1800",
+      "options": [
+        "1800",
+        "1900",
+        "1700",
+        "1798"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po zaokrągleniu mamy $800 + 600 + 400 = 1800$. Dokładna suma to $1798$, więc oszacowanie jest bliskie.\n**Odpowiedź:** 1800",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "40c4cf90-09fd-51e3-a704-8009165392f9",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Oszacuj iloczyn $29 \\cdot 71$, zaokrąglając oba czynniki do pełnych dziesiątek.",
+      "correct_answer": "2100",
+      "options": [
+        "2200",
+        "2000",
+        "2059",
+        "2100"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$29 \\approx 30$ i $71 \\approx 70$, więc $29 \\cdot 71 \\approx 30 \\cdot 70 = 2100$.\n**Odpowiedź:** 2100",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "084fdfa3-f0bb-5ffa-abf5-da9a2adafac8",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Która z liczb po zaokrągleniu do pełnych dziesiątek daje $460$?",
+      "correct_answer": "463",
+      "options": [
+        "467",
+        "451",
+        "454",
+        "463"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Do $460$ zaokrąglają się liczby od $455$ do $464$. Tylko $463$ należy do tego przedziału.\n**Odpowiedź:** 463",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "82f87c6c-a55b-5085-aecc-ad876fdb01be",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $34,8$ do liczby całkowitej.",
+      "correct_answer": "35",
+      "options": [
+        "35",
+        "34",
+        "36",
+        "37"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Cyfra po przecinku to $8$, więc zaokrąglamy w górę. Wynik: $35$.\n**Odpowiedź:** 35",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ca6adfee-b0f6-5aef-a61c-8215fd916b30",
+      "generatedAt": "2026-11-18T12:23:59.823Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zaokrąglij liczbę $31,69$ do jednego miejsca po przecinku.",
+      "correct_answer": "31,7",
+      "options": [
+        "31,8",
+        "31,7",
+        "31,6",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Patrzymy na cyfrę setnych, czyli $9$. Stąd zaokrąglenie do dziesiątych to $31,7$.\n**Odpowiedź:** 31,7",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a9e491e-31f7-5800-add0-6dd46f0bada4",
+      "generatedAt": "2026-11-18T12:23:59.824Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.824Z"
+}

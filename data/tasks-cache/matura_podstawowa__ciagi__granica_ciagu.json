@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "ciagi",
+  "topic": "granica_ciagu",
+  "categoryName": "Ciągi",
+  "topicName": "Granica ciągu",
+  "tasks": [
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{3n}{6n-3}$.",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "9",
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Stopnie licznika i mianownika są równe, więc granica to iloraz współczynników przy $n$: $\\frac{3}{6}=\\frac{1}{2}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cda19fe0-e709-50b1-a084-e917df1ae07a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{n^2-4n}{4n^2}$.",
+      "correct_answer": "$\\frac{1}{4}$",
+      "options": [
+        "0",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{4}$",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Najwyższa potęga $n$ to $n^2$. Iloraz współczynników wynosi $\\frac{1}{4}$, więc granica to $\\frac{1}{4}$.\n**Odpowiedź:** $\\frac{1}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8007192a-dbeb-5b49-a2bd-7a4090be9c3a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\left(\\sqrt{n^2+6n}-n\\right)$.",
+      "correct_answer": "3",
+      "options": [
+        "0",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Mnożymy przez sprzężenie: $\\frac{6n}{\\sqrt{n^2+6n}+n}\\to\\frac{6}{2}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e5814869-34a8-5c6c-aa19-c08ac437be72",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\left(\\frac{1}{2}\\right)^n$.",
+      "correct_answer": "0",
+      "options": [
+        "nieskończoność",
+        "0",
+        "nie istnieje",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Podstawa $\\frac{1}{2}$ należy do przedziału $(0,1)$, więc jej kolejne potęgi dążą do $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b63dcaf2-fa2c-51ee-a83c-57d8bd42d2e2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{2n-4}{n}$.",
+      "correct_answer": "2",
+      "options": [
+        "-4",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy licznik i mianownik przez $n$: $\\lim (2+\\frac{-4}{n})=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee2466cc-93c6-5a56-a232-fc1ef7f5b1c9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{2n^2-n}{n^2-2}$.",
+      "correct_answer": "2",
+      "options": [
+        "-1",
+        "0,5",
+        "2",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Iloraz współczynników przy $n^2$ to $\\frac{2}{1}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e783d147-0626-5abe-ad40-6f77c033e4e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{3^n}{4^n+1}$.",
+      "correct_answer": "0",
+      "options": [
+        "$\\frac{3}{4}$",
+        "1",
+        "nieskończoność",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy licznik i mianownik przez $4^n$: $\\left(\\frac{3}{4}\\right)^n\\to0$, a mianownik dąży do $1$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7013a62b-8c02-5a4a-a0a2-7c4cefea0edd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{2n+4}{5n-4}$.",
+      "correct_answer": "$\\frac{2}{5}$",
+      "options": [
+        "$\\frac{2}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{5}{2}$",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Stopnie licznika i mianownika są równe, więc granica to iloraz współczynników przy $n$: $\\frac{2}{5}=\\frac{2}{5}$.\n**Odpowiedź:** $\\frac{2}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8a8b5b80-fb0e-561a-a66d-760a227f3428",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{n^2-4n}{6n^2}$.",
+      "correct_answer": "$\\frac{1}{6}$",
+      "options": [
+        "$\\frac{1}{7}$",
+        "0",
+        "$\\frac{1}{6}$",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Najwyższa potęga $n$ to $n^2$. Iloraz współczynników wynosi $\\frac{1}{6}$, więc granica to $\\frac{1}{6}$.\n**Odpowiedź:** $\\frac{1}{6}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "808bc0ea-d380-5141-a573-62e8a2990b4d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\left(\\frac{3}{4}\\right)^n$.",
+      "correct_answer": "0",
+      "options": [
+        "nie istnieje",
+        "1",
+        "nieskończoność",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstawa $\\frac{3}{4}$ należy do przedziału $(0,1)$, więc jej kolejne potęgi dążą do $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d681d5b6-335a-5ba6-a424-5e8c6c07dc53",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\left(\\frac{2}{3}\\right)^n$.",
+      "correct_answer": "0",
+      "options": [
+        "1",
+        "0",
+        "nie istnieje",
+        "nieskończoność"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Podstawa $\\frac{2}{3}$ należy do przedziału $(0,1)$, więc jej kolejne potęgi dążą do $0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "750ba15a-f6d4-55a9-ae24-fe70c5a1a447",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{6n-2}{n}$.",
+      "correct_answer": "6",
+      "options": [
+        "7",
+        "6",
+        "-2",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy licznik i mianownik przez $n$: $\\lim (6+\\frac{-2}{n})=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2f632602-ceff-5236-a590-cde673cdf4de",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{4n^2-n}{n^2-4}$.",
+      "correct_answer": "4",
+      "options": [
+        "5",
+        "0,25",
+        "4",
+        "-1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Iloraz współczynników przy $n^2$ to $\\frac{4}{1}=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fd7c5a72-c091-5557-ac55-ba6f26c97aad",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{n+4}{3n-3}$.",
+      "correct_answer": "$\\frac{1}{3}$",
+      "options": [
+        "$3$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{3}$",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Stopnie licznika i mianownika są równe, więc granica to iloraz współczynników przy $n$: $\\frac{1}{3}=\\frac{1}{3}$.\n**Odpowiedź:** $\\frac{1}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc9aa985-c1fc-507e-a15d-5b54825f80ed",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{6n+3}{n}$.",
+      "correct_answer": "$6$",
+      "options": [
+        "$6$",
+        "$\\frac{1}{6}$",
+        "$7$",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Stopnie licznika i mianownika są równe, więc granica to iloraz współczynników przy $n$: $\\frac{6}{1}=6$.\n**Odpowiedź:** $6$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6ecac61e-9439-52b5-ad53-5313f3da8bff",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{n^2+3n}{6n^2-2}$.",
+      "correct_answer": "$\\frac{1}{6}$",
+      "options": [
+        "$\\frac{1}{7}$",
+        "6",
+        "$\\frac{1}{6}$",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Najwyższa potęga $n$ to $n^2$. Iloraz współczynników wynosi $\\frac{1}{6}$, więc granica to $\\frac{1}{6}$.\n**Odpowiedź:** $\\frac{1}{6}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c40d5791-9020-58a1-abe1-e4c8e59096f2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\left(\\sqrt{n^2+2n}-n\\right)$.",
+      "correct_answer": "1",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Mnożymy przez sprzężenie: $\\frac{2n}{\\sqrt{n^2+2n}+n}\\to\\frac{2}{2}=1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e290f758-1733-5d71-ae32-8c3ee6d8ca1c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{3n^2-3n}{n^2-3}$.",
+      "correct_answer": "3",
+      "options": [
+        "4",
+        "-3",
+        "0,33",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Iloraz współczynników przy $n^2$ to $\\frac{3}{1}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd9ff08b-5273-5caf-abdb-e6028b52d052",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{4n-1}{n}$.",
+      "correct_answer": "4",
+      "options": [
+        "4",
+        "-1",
+        "0",
+        "5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy licznik i mianownik przez $n$: $\\lim (4+\\frac{-1}{n})=4$.\n**Odpowiedź:** 4",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5bb3c58c-0e3f-5c4d-abda-cfe767cf53e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $\\lim_{n\\to\\infty}\\frac{3n^2-5n}{n^2+2}$.",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "4",
+        "-5",
+        "0,33"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Iloraz współczynników przy $n^2$ to $\\frac{3}{1}=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9410101e-8a18-542f-a5f8-015ffe9fb727",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

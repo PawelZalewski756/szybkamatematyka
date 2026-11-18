@@ -64,7 +64,9 @@ export async function POST(request: Request) {
 
     const { data: profile, error: profileError } = await supabase
       .from("profiles")
-      .select("subscription_status, stripe_subscription_id, subscription_cancel_at_period_end")
+      .select(
+        "subscription_status, stripe_subscription_id, subscription_cancel_at_period_end, pro_source",
+      )
       .eq("id", auth.user.id)
       .maybeSingle();
 
@@ -80,6 +82,7 @@ export async function POST(request: Request) {
     if (
       subscriptionStatus &&
       ACTIVE_SUBSCRIPTION_STATUSES.has(subscriptionStatus) &&
+      profile?.pro_source === "stripe" &&
       profile?.stripe_subscription_id &&
       !profile?.subscription_cancel_at_period_end
     ) {

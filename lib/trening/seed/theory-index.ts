@@ -137,6 +137,354 @@ export const THEORY_INDEX: TheoryIndexEntry[] = [
     "tier": "full"
   },
   {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "liczby_naturalne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "dzialania_pisemne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "nwd_i_nww",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "zaokraglanie_i_szacowanie",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "liczby",
+    "topic": "ulamki_dziesietne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "obliczenia_praktyczne",
+    "topic": "skala",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "obliczenia_praktyczne",
+    "topic": "zegar_i_kalendarz",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "obliczenia_praktyczne",
+    "topic": "temperatura",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "algebra",
+    "topic": "przeksztalcanie_wyrazen",
+    "tier": "full"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "algebra",
+    "topic": "nierownosci",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "algebra",
+    "topic": "wyznaczanie_wielkosci_ze_wzoru",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "trojkaty",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "czworokaty",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "wielokaty_foremne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria",
+    "topic": "twierdzenie_talesa",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "geometria_przestrzenna",
+    "topic": "siatki_bryl",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "uklad_wspolrzednych",
+    "topic": "srodek_odcinka",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "statystyka",
+    "topic": "tabele_i_wykresy",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "kombinatoryka",
+    "topic": "kombinatoryka",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "8_klasa",
+    "category": "zadania_tekstowe",
+    "topic": "zadania_na_dowodzenie",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "liczby_rzeczywiste",
+    "topic": "pierwiastki",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "liczby_rzeczywiste",
+    "topic": "dowody_podzielnosci",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "przeksztalcanie_wyrazen",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "dzielenie_wielomianow",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "rownania_wielomianowe",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "rownania_wymierne",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "nierownosci_kwadratowe",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "rownania_z_wartoscia_bezwzgledna",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "wzory_viete",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "uklady_liniowo_kwadratowe",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "algebra",
+    "topic": "zadania_tekstowe_uklady",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "funkcje",
+    "topic": "przeksztalcenia_wykresow",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "ciagi",
+    "topic": "wyrazy_ciagu",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "ciagi",
+    "topic": "granica_ciagu",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "ciagi",
+    "topic": "szereg_geometryczny",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "trygonometria",
+    "topic": "tozsamosci_trygonometryczne",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "trygonometria",
+    "topic": "miara_lukowa",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "trygonometria",
+    "topic": "wzory_redukcyjne",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "wielokaty_foremne",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "punkty_szczegolne_trojkata",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "wycinek_i_luk",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "katy_w_brylach",
+    "tier": "comprehensive"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "przekroje_bryl",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "bryly_podobne",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "walce_stozki_kule",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "rownanie_okregu",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "odleglosc_punktu_od_prostej",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "geometria",
+    "topic": "wektory",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "regula_mnozenia",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "permutacje",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "kombinacje",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "prawdopodobienstwo_warunkowe",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "schemat_bernoulliego",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "srednia_wazona",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "kombinatoryka",
+    "topic": "odchylenie_standardowe",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "optymalizacja",
+    "topic": "granice_funkcji",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "optymalizacja",
+    "topic": "pochodna",
+    "tier": "full"
+  },
+  {
+    "exam_type": "matura_podstawowa",
+    "category": "optymalizacja",
+    "topic": "monotonicznosc_i_ekstrema",
+    "tier": "full"
+  },
+  {
     "exam_type": "matura_podstawowa",
     "category": "liczby_rzeczywiste",
     "topic": "potegi",

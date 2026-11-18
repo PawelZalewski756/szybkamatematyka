@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "kombinatoryka",
+  "topic": "prawdopodobienstwo_warunkowe",
+  "categoryName": "Kombinatoryka i statystyka",
+  "topicName": "Prawdopodobieństwo warunkowe",
+  "tasks": [
+    {
+      "content": "Rzucamy kostką. Wiadomo, że wypadła liczba oczek co najmniej $3$. Prawdopodobieństwo, że wypadła liczba parzysta, wynosi:",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{2}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Warunek ogranicza przestrzeń do $4$ wyników: $3,4,\\ldots,6$. Wśród nich parzystych jest $2$, więc $P=\\frac{2}{4}=\\frac{1}{2}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "246b37e4-0c1f-5fa2-a427-20c4fc3ce730",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że wylosowana karta jest czerwona (kier lub karo). Prawdopodobieństwo, że jest to walet, wynosi:",
+      "correct_answer": "$\\frac{1}{13}$",
+      "options": [
+        "$\\frac{1}{26}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{52}$",
+        "$\\frac{1}{13}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Czerwonych kart jest $26$, a po jednej karcie każdej rangi w każdym z dwóch czerwonych kolorów. $P=\\frac{2}{26}=\\frac{1}{13}$.\n**Odpowiedź:** $\\frac{1}{13}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "417b4cf0-b19b-52ab-aca9-233133a699f3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W urnie jest $4$ kul białych i $5$ czarnych. Losujemy kolejno dwie kule bez zwracania. Wiadomo, że pierwsza była biała. Prawdopodobieństwo, że druga też jest biała, wynosi:",
+      "correct_answer": "$\\frac{3}{8}$",
+      "options": [
+        "$\\frac{3}{8}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{4}{9}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Po wyjęciu białej kuli zostaje $3$ białych i $8$ kul razem, więc $P=\\frac{3}{8}$.\n**Odpowiedź:** $\\frac{3}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "47ffb9a5-ce43-5418-aaa8-d787183128e3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W klasie jest $10$ dziewcząt i $8$ chłopców. Matematykę lubi $5$ dziewcząt i $6$ chłopców. Losujemy osobę, która lubi matematykę. Prawdopodobieństwo, że to dziewczyna, wynosi:",
+      "correct_answer": "$\\frac{5}{11}$",
+      "options": [
+        "$\\frac{6}{11}$",
+        "$\\frac{5}{9}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{5}{11}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Osób lubiących matematykę jest $5+6=11$, w tym $5$ dziewcząt. $P=\\frac{5}{11}=\\frac{5}{11}$.\n**Odpowiedź:** $\\frac{5}{11}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6e1464ff-0b91-5c24-a037-5e675d21f912",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $P(A\\cap B)=24\\%$ oraz $P(B)=60\\%$. Prawdopodobieństwo warunkowe $P(A|B)$ wynosi:",
+      "correct_answer": "$\\frac{2}{5}$",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{11}{25}$",
+        "$\\frac{9}{25}$",
+        "$\\frac{2}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$P(A|B)=\\frac{P(A\\cap B)}{P(B)}=\\frac{24\\%}{60\\%}=\\frac{2}{5}$.\n**Odpowiedź:** $\\frac{2}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "614a4ab9-3c36-553b-afae-002ca8181382",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy dwiema kostkami. Wiadomo, że suma oczek jest większa od $7$. Prawdopodobieństwo, że suma wynosi dokładnie $9$, jest równe:",
+      "correct_answer": "$\\frac{4}{15}$",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{4}{15}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Sum większych od $7$ jest $15$, a sumę $9$ otrzymujemy na $4$ sposoby. Szukane prawdopodobieństwo to $\\frac{4}{15}$.\n**Odpowiedź:** $\\frac{4}{15}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "482c84b2-12c4-579a-a68e-ab36088784aa",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy kostką. Wiadomo, że wypadła liczba oczek co najmniej $4$. Prawdopodobieństwo, że wypadła liczba parzysta, wynosi:",
+      "correct_answer": "$\\frac{2}{3}$",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$1$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Warunek ogranicza przestrzeń do $3$ wyników: $4,5,\\ldots,6$. Wśród nich parzystych jest $2$, więc $P=\\frac{2}{3}=\\frac{2}{3}$.\n**Odpowiedź:** $\\frac{2}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "935a8f28-f173-5be1-a856-15938883822d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że wylosowana karta jest czerwona (kier lub karo). Prawdopodobieństwo, że jest to dama, wynosi:",
+      "correct_answer": "$\\frac{1}{13}$",
+      "options": [
+        "$\\frac{1}{13}$",
+        "$\\frac{1}{26}$",
+        "$\\frac{1}{52}$",
+        "$\\frac{1}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Czerwonych kart jest $26$, a po jednej karcie każdej rangi w każdym z dwóch czerwonych kolorów. $P=\\frac{2}{26}=\\frac{1}{13}$.\n**Odpowiedź:** $\\frac{1}{13}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0e991556-a827-5b7a-af90-3a0dd8f18de2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W urnie jest $6$ kul białych i $4$ czarnych. Losujemy kolejno dwie kule bez zwracania. Wiadomo, że pierwsza była biała. Prawdopodobieństwo, że druga też jest biała, wynosi:",
+      "correct_answer": "$\\frac{5}{9}$",
+      "options": [
+        "$\\frac{4}{11}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{5}{9}$",
+        "$\\frac{3}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Po wyjęciu białej kuli zostaje $5$ białych i $9$ kul razem, więc $P=\\frac{5}{9}$.\n**Odpowiedź:** $\\frac{5}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "55d5f5a3-51e7-5238-a700-0b96d99b42d3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W klasie jest $12$ dziewcząt i $14$ chłopców. Matematykę lubi $3$ dziewcząt i $6$ chłopców. Losujemy osobę, która lubi matematykę. Prawdopodobieństwo, że to dziewczyna, wynosi:",
+      "correct_answer": "$\\frac{1}{3}$",
+      "options": [
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{10}$",
+        "$\\frac{6}{13}$",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Osób lubiących matematykę jest $3+6=9$, w tym $3$ dziewcząt. $P=\\frac{3}{9}=\\frac{1}{3}$.\n**Odpowiedź:** $\\frac{1}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fb2c8c46-740c-5080-a965-89736e48a3a7",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy dwiema kostkami. Wiadomo, że suma oczek jest większa od $9$. Prawdopodobieństwo, że suma wynosi dokładnie $10$, jest równe:",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{12}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Sum większych od $9$ jest $6$, a sumę $10$ otrzymujemy na $3$ sposoby. Szukane prawdopodobieństwo to $\\frac{3}{6}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "069a781c-0398-514f-a097-b42c0c9d6423",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy dwiema kostkami. Wiadomo, że suma oczek jest większa od $7$. Prawdopodobieństwo, że suma wynosi dokładnie $10$, jest równe:",
+      "correct_answer": "$\\frac{1}{5}$",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{12}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Sum większych od $7$ jest $15$, a sumę $10$ otrzymujemy na $3$ sposoby. Szukane prawdopodobieństwo to $\\frac{3}{15}$.\n**Odpowiedź:** $\\frac{1}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f49aaa62-7b42-5336-a3d2-0bd13bb14d19",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy kostką. Wiadomo, że wypadła liczba oczek co najmniej $2$. Prawdopodobieństwo, że wypadła liczba parzysta, wynosi:",
+      "correct_answer": "$\\frac{3}{5}$",
+      "options": [
+        "$\\frac{5}{6}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{2}{5}$",
+        "$\\frac{3}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Warunek ogranicza przestrzeń do $5$ wyników: $2,3,\\ldots,6$. Wśród nich parzystych jest $3$, więc $P=\\frac{3}{5}=\\frac{3}{5}$.\n**Odpowiedź:** $\\frac{3}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d139730f-c46b-5f50-a7dd-d9203f70cb09",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że wylosowana z talii $52$ kart karta jest w kolorze trefl. Prawdopodobieństwo, że jest to dziesiątka, wynosi:",
+      "correct_answer": "$\\frac{1}{13}$",
+      "options": [
+        "$\\frac{1}{52}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{13}$",
+        "$\\frac{1}{26}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W kolorze trefl jest $13$ kart, a tylko jedna z nich to dziesiątka. Dlatego $P=\\frac{1}{13}$.\n**Odpowiedź:** $\\frac{1}{13}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "68464259-c4df-5ce8-aa5e-21f114c764a6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W urnie jest $4$ kul białych i $3$ czarnych. Losujemy kolejno dwie kule bez zwracania. Wiadomo, że pierwsza była biała. Prawdopodobieństwo, że druga też jest biała, wynosi:",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "$\\frac{3}{7}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{4}{7}$",
+        "$\\frac{3}{8}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Po wyjęciu białej kuli zostaje $3$ białych i $6$ kul razem, więc $P=\\frac{3}{6}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "51cb071f-e88f-5c2f-aed1-87012fec1dab",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W klasie jest $14$ dziewcząt i $11$ chłopców. Matematykę lubi $7$ dziewcząt i $4$ chłopców. Losujemy osobę, która lubi matematykę. Prawdopodobieństwo, że to dziewczyna, wynosi:",
+      "correct_answer": "$\\frac{7}{11}$",
+      "options": [
+        "$\\frac{14}{25}$",
+        "$\\frac{7}{12}$",
+        "$\\frac{7}{11}$",
+        "$\\frac{4}{11}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Osób lubiących matematykę jest $7+4=11$, w tym $7$ dziewcząt. $P=\\frac{7}{11}=\\frac{7}{11}$.\n**Odpowiedź:** $\\frac{7}{11}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "002b3651-2272-57a5-a9e7-373fb721ff32",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $P(A\\cap B)=15\\%$ oraz $P(B)=60\\%$. Prawdopodobieństwo warunkowe $P(A|B)$ wynosi:",
+      "correct_answer": "$\\frac{1}{4}$",
+      "options": [
+        "$4$",
+        "$\\frac{7}{20}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{9}{20}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$P(A|B)=\\frac{P(A\\cap B)}{P(B)}=\\frac{15\\%}{60\\%}=\\frac{1}{4}$.\n**Odpowiedź:** $\\frac{1}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ee854442-72a9-5c95-a6c6-ba4b22687307",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Rzucamy dwiema kostkami. Wiadomo, że suma oczek jest większa od $9$. Prawdopodobieństwo, że suma wynosi dokładnie $11$, jest równe:",
+      "correct_answer": "$\\frac{1}{3}$",
+      "options": [
+        "$\\frac{1}{18}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{5}{18}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Sum większych od $9$ jest $6$, a sumę $11$ otrzymujemy na $2$ sposoby. Szukane prawdopodobieństwo to $\\frac{2}{6}$.\n**Odpowiedź:** $\\frac{1}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d38906d4-1602-5a6b-a575-6c79991471b0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że wylosowana karta jest figurą (walet, dama lub król). Prawdopodobieństwo, że jest to pik, wynosi:",
+      "correct_answer": "$\\frac{1}{4}$",
+      "options": [
+        "$\\frac{3}{13}$",
+        "$\\frac{1}{12}$",
+        "$\\frac{1}{13}$",
+        "$\\frac{1}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Figur jest $12$ (po $3$ w każdym kolorze), a w kolorze pik są $3$ figury. $P=\\frac{3}{12}=\\frac14$.\n**Odpowiedź:** $\\frac{1}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0aca7757-035f-595c-a519-3603f0253198",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że wylosowana z talii $52$ kart karta jest w kolorze kier. Prawdopodobieństwo, że jest to dama, wynosi:",
+      "correct_answer": "$\\frac{1}{13}$",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{52}$",
+        "$\\frac{1}{26}$",
+        "$\\frac{1}{13}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "W kolorze kier jest $13$ kart, a tylko jedna z nich to dama. Dlatego $P=\\frac{1}{13}$.\n**Odpowiedź:** $\\frac{1}{13}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a9d323bf-1a74-501d-acc2-69a5a9f50225",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

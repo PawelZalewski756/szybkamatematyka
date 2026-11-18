@@ -468,6 +468,19 @@ body {
 /* Wzory KaTeX nie mogą się łamać w środku na wąskich ekranach. */
 .katex {
   white-space: nowrap;
+  /* Domyślne 1.21em KaTeX-a jest wyraźnie większe od tekstu i przez to
+     wzory w linii wyglądają jak indeksy górne. 1.05em wyrównuje optycznie
+     tekst i matematykę; MathText dodatkowo ustawia inline na 1em. */
+  font-size: 1.05em;
+}
+
+/* Blok matematyki może się przewijać; wzór w linii - nie. */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.katex-display > .katex {
+  font-size: 1.1em;
 }
 
 @layer base {

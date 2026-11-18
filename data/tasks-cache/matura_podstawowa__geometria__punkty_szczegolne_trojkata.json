@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "punkty_szczegolne_trojkata",
+  "categoryName": "Geometria",
+  "topicName": "Punkty szczególne trójkąta",
+  "tasks": [
+    {
+      "content": "Środkowa trójkąta ma długość $12$ cm. Środek ciężkości dzieli ją w stosunku $2:1$. Odległość środka ciężkości od wierzchołka wynosi:",
+      "correct_answer": "8 cm",
+      "options": [
+        "4 cm",
+        "12 cm",
+        "6 cm",
+        "8 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek ciężkości leży bliżej boku, więc od wierzchołka jest oddalony o $\\frac23\\cdot12=8$ cm.\n**Odpowiedź:** 8 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "690883f1-70aa-5773-a30e-df258631eed9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środkowa trójkąta ma długość $15$ cm. Jaką odległość od boku ma środek ciężkości?",
+      "correct_answer": "5 cm",
+      "options": [
+        "5 cm",
+        "15 cm",
+        "7.5 cm",
+        "10 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek ciężkości dzieli środkową w stosunku $2:1$, więc od boku jest oddalony o $\\frac13\\cdot15=5$ cm.\n**Odpowiedź:** 5 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c43a4629-0382-5ea2-ae5b-45e709de03f6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie równobocznym o boku $6$ stosunek promienia okręgu opisanego do promienia okręgu wpisanego wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dla trójkąta równobocznego $R=\\frac{a\\sqrt3}{3}$ oraz $r=\\frac{a\\sqrt3}{6}$, więc $\\frac{R}{r}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd07387c-73de-51c2-aa74-b41de450bb85",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie równobocznym o boku $5$ stosunek promienia okręgu opisanego do promienia okręgu wpisanego wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dla trójkąta równobocznego $R=\\frac{a\\sqrt3}{3}$ oraz $r=\\frac{a\\sqrt3}{6}$, więc $\\frac{R}{r}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7e7e2c5b-0c34-5e98-a427-cd5c43364b4e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $67^\\circ$, $68^\\circ$ i $45^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "dwusiecznych kątów",
+        "środkowych",
+        "wysokości",
+        "symetralnych boków"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1d675d74-598f-538d-a5b8-eebb3ac42cd0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $63^\\circ$, $94^\\circ$ i $23^\\circ$ ortocentrum to punkt przecięcia:",
+      "correct_answer": "wysokości",
+      "options": [
+        "symetralnych boków",
+        "dwusiecznych kątów",
+        "środkowych",
+        "wysokości"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Ortocentrum to punkt przecięcia wysokości trójkąta.\n**Odpowiedź:** wysokości",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a1f5c087-f0e0-5f41-aa62-d0141b40105d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środkowa trójkąta ma długość $9$ cm. Środek ciężkości dzieli ją w stosunku $2:1$. Odległość środka ciężkości od wierzchołka wynosi:",
+      "correct_answer": "6 cm",
+      "options": [
+        "9 cm",
+        "6 cm",
+        "3 cm",
+        "4.5 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Środek ciężkości leży bliżej boku, więc od wierzchołka jest oddalony o $\\frac23\\cdot9=6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dc607a5c-5189-5df8-a6d2-1e041524d4e6",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środkowa trójkąta ma długość $18$ cm. Jaką odległość od boku ma środek ciężkości?",
+      "correct_answer": "6 cm",
+      "options": [
+        "18 cm",
+        "12 cm",
+        "9 cm",
+        "6 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek ciężkości dzieli środkową w stosunku $2:1$, więc od boku jest oddalony o $\\frac13\\cdot18=6$ cm.\n**Odpowiedź:** 6 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c94f5401-cb8a-55bd-a359-7bef296bc6fe",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie równobocznym o boku $9$ stosunek promienia okręgu opisanego do promienia okręgu wpisanego wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dla trójkąta równobocznego $R=\\frac{a\\sqrt3}{3}$ oraz $r=\\frac{a\\sqrt3}{6}$, więc $\\frac{R}{r}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bd867fa2-264f-5d9d-abea-da866e2f3dbf",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $45^\\circ$, $88^\\circ$ i $47^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "wysokości",
+        "środkowych",
+        "dwusiecznych kątów",
+        "symetralnych boków"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "55515b79-32ee-56eb-af4e-64b368c8e78e",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie równobocznym o boku $3$ stosunek promienia okręgu opisanego do promienia okręgu wpisanego wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dla trójkąta równobocznego $R=\\frac{a\\sqrt3}{3}$ oraz $r=\\frac{a\\sqrt3}{6}$, więc $\\frac{R}{r}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "babb8d35-c32a-5ec6-a522-051070a838b2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $58^\\circ$, $42^\\circ$ i $80^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "wysokości",
+        "symetralnych boków",
+        "dwusiecznych kątów",
+        "środkowych"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "008f5591-f6a3-5191-a720-dc4b2140de0d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $43^\\circ$, $60^\\circ$ i $77^\\circ$ ortocentrum to punkt przecięcia:",
+      "correct_answer": "wysokości",
+      "options": [
+        "wysokości",
+        "środkowych",
+        "symetralnych boków",
+        "dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Ortocentrum to punkt przecięcia wysokości trójkąta.\n**Odpowiedź:** wysokości",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d99938ce-7b71-5630-af64-b40e474c9b7b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środkowa trójkąta ma długość $18$ cm. Środek ciężkości dzieli ją w stosunku $2:1$. Odległość środka ciężkości od wierzchołka wynosi:",
+      "correct_answer": "12 cm",
+      "options": [
+        "12 cm",
+        "9 cm",
+        "18 cm",
+        "6 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Środek ciężkości leży bliżej boku, więc od wierzchołka jest oddalony o $\\frac23\\cdot18=12$ cm.\n**Odpowiedź:** 12 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3659f71e-d073-5de6-a505-8a024e0a7b50",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Środkowa trójkąta ma długość $9$ cm. Jaką odległość od boku ma środek ciężkości?",
+      "correct_answer": "3 cm",
+      "options": [
+        "4.5 cm",
+        "9 cm",
+        "6 cm",
+        "3 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek ciężkości dzieli środkową w stosunku $2:1$, więc od boku jest oddalony o $\\frac13\\cdot9=3$ cm.\n**Odpowiedź:** 3 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "7683fc65-b5b3-5e81-a475-2f156df2c9a5",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $62^\\circ$, $49^\\circ$ i $69^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "wysokości",
+        "symetralnych boków",
+        "środkowych",
+        "dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "99f20044-6014-56c6-a227-9429267fd585",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $66^\\circ$, $47^\\circ$ i $67^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "środkowych",
+        "wysokości",
+        "dwusiecznych kątów",
+        "symetralnych boków"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "deefba44-152a-52e8-aa82-32656e66b675",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie równobocznym o boku $10$ stosunek promienia okręgu opisanego do promienia okręgu wpisanego wynosi:",
+      "correct_answer": "2",
+      "options": [
+        "1",
+        "4",
+        "3",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dla trójkąta równobocznego $R=\\frac{a\\sqrt3}{3}$ oraz $r=\\frac{a\\sqrt3}{6}$, więc $\\frac{R}{r}=2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c555c0b9-557d-562b-ab75-166089dc6bb3",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $46^\\circ$, $85^\\circ$ i $49^\\circ$ środek okręgu wpisanego wyznacza przecięcie:",
+      "correct_answer": "dwusiecznych kątów",
+      "options": [
+        "symetralnych boków",
+        "dwusiecznych kątów",
+        "środkowych",
+        "wysokości"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Środek okręgu wpisanego to punkt przecięcia dwusiecznych kątów trójkąta.\n**Odpowiedź:** dwusiecznych kątów",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "74173b57-239b-5cfb-a08f-3c2c4e9de24f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W trójkącie o kątach $60^\\circ$, $74^\\circ$ i $46^\\circ$ ortocentrum to punkt przecięcia:",
+      "correct_answer": "wysokości",
+      "options": [
+        "symetralnych boków",
+        "wysokości",
+        "środkowych",
+        "dwusiecznych kątów"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Ortocentrum to punkt przecięcia wysokości trójkąta.\n**Odpowiedź:** wysokości",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b0fda578-94bf-5386-a903-d8c1fae3810a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

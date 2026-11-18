@@ -28,7 +28,10 @@ type CachedTaskResponse = {
 let cachedTasks: CachedTaskResponse[] | null = null;
 
 function loadCachedTasks(): CachedTaskResponse[] {
-  if (cachedTasks) return cachedTasks;
+  // W trybie dev nie trzymamy cache w module: po dodaniu plików do
+  // data/tasks-cache stara lista zostawała w pamięci i trening pokazywał
+  // tylko część tematów. W produkcji build i tak zamraża dane.
+  if (cachedTasks && process.env.NODE_ENV === "production") return cachedTasks;
 
   cachedTasks = listAllCachedTasks().map((task) => {
     const explanation = String(task.model || "").startsWith("parametric")

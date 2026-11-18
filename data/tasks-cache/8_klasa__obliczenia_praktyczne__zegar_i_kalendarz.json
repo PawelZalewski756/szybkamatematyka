@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "obliczenia_praktyczne",
+  "topic": "zegar_i_kalendarz",
+  "categoryName": "Obliczenia praktyczne",
+  "topicName": "Zegar i kalendarz",
+  "tasks": [
+    {
+      "content": "Ile czasu mija od godziny $06:25$ do godziny $08:37$?",
+      "correct_answer": "2 godz. 12 min",
+      "options": [
+        "3 godz. 12 min",
+        "2 godz. 22 min",
+        "2 godz. 2 min",
+        "2 godz. 12 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Zamieniamy godziny na minuty: od $06:25$ do $08:37$ to $132$ min, czyli $2$ godz. i 12 min.\n**Odpowiedź:** 2 godz. 12 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "48feead0-52ed-533a-a816-36d7cdae7d40",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile minut mija od godziny $10:05$ do godziny $12:02$?",
+      "correct_answer": "117",
+      "options": [
+        "117",
+        "157",
+        "127",
+        "107"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba minut to $12 \\cdot 60 + 2 - (10 \\cdot 60 + 5) = 117$.\n**Odpowiedź:** 117",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "ed76c62d-3eb9-5152-a393-c66a82e376fa",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaki kąt (mniejszy) tworzą wskazówki zegara o godzinie $3:00$?",
+      "correct_answer": "90°",
+      "options": [
+        "120°",
+        "90°",
+        "60°",
+        "270°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "W ciągu godziny wskazówka godzinowa obraca się o $30°$. O $3:00$ mniejszy kąt to $90°$.\n**Odpowiedź:** 90°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "68d725ae-5845-5c50-a298-2283a2ba91b9",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dziś jest poniedziałek. Jaki dzień tygodnia będzie za $12$ dni?",
+      "correct_answer": "sobota",
+      "options": [
+        "środa",
+        "sobota",
+        "poniedziałek",
+        "wtorek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dzielimy $12$ przez $7$: reszta 5 oznacza przesunięcie o 5 dni w tygodniu. Wynik: sobota.\n**Odpowiedź:** sobota",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a72c5fc5-622d-5c6b-a6d0-52cefd07a3df",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "$2$ godz. $15$ min to:",
+      "correct_answer": "135 min",
+      "options": [
+        "135 min",
+        "215 min",
+        "150 min",
+        "105 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$2$ godz. $= 120$ min, więc razem $120 + 15 = 135$ min.\n**Odpowiedź:** 135 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e2a274fe-440f-5abf-afd0-405210997c3f",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zegar wskazuje $09:05$. Którą godzinę wskaże po $42$ minutach?",
+      "correct_answer": "09:47",
+      "options": [
+        "09:37",
+        "10:47",
+        "09:47",
+        "09:57"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$09:05$ to $545$ minut od północy. Po dodaniu $42$ minut otrzymujemy $09:47$.\n**Odpowiedź:** 09:47",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "95e41a3c-0889-5ed2-a2c0-e2e711e876c1",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile czasu mija od godziny $11:40$ do godziny $15:07$?",
+      "correct_answer": "3 godz. 27 min",
+      "options": [
+        "3 godz. 37 min",
+        "4 godz. 27 min",
+        "3 godz. 27 min",
+        "3 godz. 17 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Zamieniamy godziny na minuty: od $11:40$ do $15:07$ to $207$ min, czyli $3$ godz. i 27 min.\n**Odpowiedź:** 3 godz. 27 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6aaa7b5c-f6e4-52e5-a0eb-e9a3f8c5346c",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile minut mija od godziny $13:30$ do godziny $14:36$?",
+      "correct_answer": "66",
+      "options": [
+        "56",
+        "106",
+        "76",
+        "66"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba minut to $14 \\cdot 60 + 36 - (13 \\cdot 60 + 30) = 66$.\n**Odpowiedź:** 66",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f99c906c-1de2-5c4d-aab5-d4b61f1cd6e8",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaki kąt (mniejszy) tworzą wskazówki zegara o godzinie $9:00$?",
+      "correct_answer": "90°",
+      "options": [
+        "90°",
+        "270°",
+        "120°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "W ciągu godziny wskazówka godzinowa obraca się o $30°$. O $9:00$ mniejszy kąt to $90°$.\n**Odpowiedź:** 90°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "11a686d1-9081-5c4f-a8bf-c893729b2f93",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dziś jest wtorek. Jaki dzień tygodnia będzie za $36$ dni?",
+      "correct_answer": "środa",
+      "options": [
+        "środa",
+        "poniedziałek",
+        "czwartek",
+        "wtorek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dzielimy $36$ przez $7$: reszta 1 oznacza przesunięcie o 1 dni w tygodniu. Wynik: środa.\n**Odpowiedź:** środa",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b5b2a7ff-9942-5a81-ad52-56776f9a540c",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "$6$ godz. $30$ min to:",
+      "correct_answer": "390 min",
+      "options": [
+        "330 min",
+        "405 min",
+        "390 min",
+        "630 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$6$ godz. $= 360$ min, więc razem $360 + 30 = 390$ min.\n**Odpowiedź:** 390 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b8908925-066b-5d39-aab8-483cd0c19f45",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zegar wskazuje $08:20$. Którą godzinę wskaże po $62$ minutach?",
+      "correct_answer": "09:22",
+      "options": [
+        "09:32",
+        "10:22",
+        "09:12",
+        "09:22"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$08:20$ to $500$ minut od północy. Po dodaniu $62$ minut otrzymujemy $09:22$.\n**Odpowiedź:** 09:22",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cd99cefb-6386-5170-a611-5077c891b1b1",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile czasu mija od godziny $11:25$ do godziny $16:17$?",
+      "correct_answer": "4 godz. 52 min",
+      "options": [
+        "5 godz. 2 min",
+        "5 godz. 52 min",
+        "4 godz. 52 min",
+        "4 godz. 42 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Zamieniamy godziny na minuty: od $11:25$ do $16:17$ to $292$ min, czyli $4$ godz. i 52 min.\n**Odpowiedź:** 4 godz. 52 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a5a4e77f-9204-56cf-a6bd-3474cf56f909",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile minut mija od godziny $15:45$ do godziny $17:06$?",
+      "correct_answer": "81",
+      "options": [
+        "121",
+        "81",
+        "91",
+        "71"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba minut to $17 \\cdot 60 + 6 - (15 \\cdot 60 + 45) = 81$.\n**Odpowiedź:** 81",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3bc6409a-fe5e-5da2-a463-2c48776179d1",
+      "generatedAt": "2026-11-18T12:23:59.839Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Jaki kąt (mniejszy) tworzą wskazówki zegara o godzinie $11:00$?",
+      "correct_answer": "30°",
+      "options": [
+        "330°",
+        "0°",
+        "30°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "W ciągu godziny wskazówka godzinowa obraca się o $30°$. O $11:00$ mniejszy kąt to $30°$.\n**Odpowiedź:** 30°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8e499c65-6c66-5beb-af2f-131dcc89840f",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Dziś jest sobota. Jaki dzień tygodnia będzie za $5$ dni?",
+      "correct_answer": "czwartek",
+      "options": [
+        "poniedziałek",
+        "wtorek",
+        "środa",
+        "czwartek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dzielimy $5$ przez $7$: reszta 5 oznacza przesunięcie o 5 dni w tygodniu. Wynik: czwartek.\n**Odpowiedź:** czwartek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6130a694-2d24-5e82-a4c7-31904ca0ba58",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "$6$ godz. $15$ min to:",
+      "correct_answer": "375 min",
+      "options": [
+        "615 min",
+        "390 min",
+        "345 min",
+        "375 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$6$ godz. $= 360$ min, więc razem $360 + 15 = 375$ min.\n**Odpowiedź:** 375 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f0a36912-ccef-58b4-ac33-be69f9d79d8c",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Zegar wskazuje $17:40$. Którą godzinę wskaże po $83$ minutach?",
+      "correct_answer": "19:03",
+      "options": [
+        "19:03",
+        "19:13",
+        "20:03",
+        "18:53"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$17:40$ to $1060$ minut od północy. Po dodaniu $83$ minut otrzymujemy $19:03$.\n**Odpowiedź:** 19:03",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "547499d0-fc32-5dc9-afe4-2fd1b917361c",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile czasu mija od godziny $10:50$ do godziny $13:33$?",
+      "correct_answer": "2 godz. 43 min",
+      "options": [
+        "2 godz. 33 min",
+        "2 godz. 43 min",
+        "3 godz. 43 min",
+        "2 godz. 53 min"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Zamieniamy godziny na minuty: od $10:50$ do $13:33$ to $163$ min, czyli $2$ godz. i 43 min.\n**Odpowiedź:** 2 godz. 43 min",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "515d2e1b-c6c3-5548-a819-8c357f7e740a",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "Ile minut mija od godziny $18:55$ do godziny $19:36$?",
+      "correct_answer": "41",
+      "options": [
+        "51",
+        "41",
+        "81",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Liczba minut to $19 \\cdot 60 + 36 - (18 \\cdot 60 + 55) = 41$.\n**Odpowiedź:** 41",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3d57437e-0b21-50b3-aa0a-def21643e8c0",
+      "generatedAt": "2026-11-18T12:23:59.840Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.840Z"
+}

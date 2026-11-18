@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "trygonometria",
+  "topic": "tozsamosci_trygonometryczne",
+  "categoryName": "Trygonometria",
+  "topicName": "Tożsamości trygonometryczne",
+  "tasks": [
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\sin\\alpha=\\frac{5}{13}$. Wartość $\\cos\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{12}{13}$",
+      "options": [
+        "$\\frac{13}{12}$",
+        "$\\frac{12}{5}$",
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{13}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z jedynki trygonometrycznej $\\cos^2\\alpha=1-\\left(\\frac{5}{13}\\right)^2=\\frac{144}{169}$. Ponieważ kąt jest ostry, $\\cos\\alpha=\\frac{12}{13}$.\n**Odpowiedź:** $\\frac{12}{13}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "72e5d9e1-6fe3-571c-a59b-943873ee15ea",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\cos\\alpha=\\frac{4}{5}$. Wartość $\\sin\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{3}{5}$",
+      "options": [
+        "$\\frac{5}{3}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{5}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin^2\\alpha=1-\\left(\\frac{4}{5}\\right)^2=\\frac{9}{25}$, a kąt jest ostry, więc $\\sin\\alpha=\\frac{3}{5}$.\n**Odpowiedź:** $\\frac{3}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d8488e9d-7511-50f7-a7bd-88cdeeaa0bfe",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry, $\\sin\\alpha=\\frac{8}{17}$ i $\\cos\\alpha=\\frac{15}{17}$. Wartość $\\operatorname{tg}\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{8}{15}$",
+      "options": [
+        "$\\frac{15}{8}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{15}$",
+        "$\\frac{8}{17}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{\\sin\\alpha}{\\cos\\alpha}=\\frac{8}{15}$.\n**Odpowiedź:** $\\frac{8}{15}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "8761d564-6f6f-51f9-abe3-80af7e374adc",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $2(\\sin^2\\alpha+\\cos^2\\alpha)-2$.",
+      "correct_answer": "0",
+      "options": [
+        "2",
+        "4",
+        "0",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc wyrażenie ma wartość $2-2=0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6e544de3-4b99-59a5-a56b-bfb88abfd005",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $\\sin\\alpha\\cos\\alpha=\\frac{1}{4}$. Oblicz $(\\sin\\alpha+\\cos\\alpha)^2$.",
+      "correct_answer": "$\\frac{3}{2}$",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "$\\frac{3}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$(\\sin\\alpha+\\cos\\alpha)^2=\\sin^2\\alpha+2\\sin\\alpha\\cos\\alpha+\\cos^2\\alpha=1+\\frac{2}{4}=\\frac{3}{2}$.\n**Odpowiedź:** $\\frac{3}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dfe5e914-8c54-574c-a8cc-75d7734e6a06",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\operatorname{tg}\\alpha=\\frac{5}{12}$. Oblicz $\\frac{1}{\\cos^2\\alpha}$.",
+      "correct_answer": "$\\frac{169}{144}$",
+      "options": [
+        "$\\frac{25}{144}$",
+        "$\\frac{13}{12}$",
+        "$\\frac{169}{144}$",
+        "$\\frac{169}{25}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$1+\\operatorname{tg}^2\\alpha=\\frac{1}{\\cos^2\\alpha}$, więc wynik to $1+\\frac{25}{144}=\\frac{169}{144}$.\n**Odpowiedź:** $\\frac{169}{144}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "341f354c-0c3a-5df9-a063-291c69e68324",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $\\sin\\alpha\\cos\\alpha=\\frac{1}{4}$. Oblicz $\\sin^4\\alpha+\\cos^4\\alpha$.",
+      "correct_answer": "$\\frac{7}{8}$",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "$\\frac{7}{8}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\sin^4\\alpha+\\cos^4\\alpha=(\\sin^2\\alpha+\\cos^2\\alpha)^2-2\\sin^2\\alpha\\cos^2\\alpha=1-2\\cdot\\frac{1}{16}=\\frac{7}{8}$.\n**Odpowiedź:** $\\frac{7}{8}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "96d2de9f-aa41-5cf1-a95e-b08e8f2fab56",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\sin\\alpha=\\frac{3}{5}$. Wartość $\\cos\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{4}{5}$",
+      "options": [
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z jedynki trygonometrycznej $\\cos^2\\alpha=1-\\left(\\frac{3}{5}\\right)^2=\\frac{16}{25}$. Ponieważ kąt jest ostry, $\\cos\\alpha=\\frac{4}{5}$.\n**Odpowiedź:** $\\frac{4}{5}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6d9e708a-d486-50ee-a9b9-844793c9a78d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\cos\\alpha=\\frac{24}{25}$. Wartość $\\sin\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{7}{25}$",
+      "options": [
+        "$\\frac{7}{24}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{24}{25}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin^2\\alpha=1-\\left(\\frac{24}{25}\\right)^2=\\frac{49}{625}$, a kąt jest ostry, więc $\\sin\\alpha=\\frac{7}{25}$.\n**Odpowiedź:** $\\frac{7}{25}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cba0f695-9e8a-594e-a5af-5520c20d4258",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $4(\\sin^2\\alpha+\\cos^2\\alpha)-4$.",
+      "correct_answer": "0",
+      "options": [
+        "4",
+        "16",
+        "8",
+        "0"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc wyrażenie ma wartość $4-4=0$.\n**Odpowiedź:** 0",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a34d4882-8497-5923-acfa-955599998ea8",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $3(\\sin^2\\alpha+\\cos^2\\alpha)-2$.",
+      "correct_answer": "1",
+      "options": [
+        "6",
+        "5",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc wyrażenie ma wartość $3-2=1$.\n**Odpowiedź:** 1",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "21733457-f368-5092-a098-7e9cf857647b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\operatorname{tg}\\alpha=\\frac{8}{15}$. Oblicz $\\frac{1}{\\cos^2\\alpha}$.",
+      "correct_answer": "$\\frac{289}{225}$",
+      "options": [
+        "$\\frac{289}{225}$",
+        "$\\frac{289}{64}$",
+        "$\\frac{64}{225}$",
+        "$\\frac{17}{15}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$1+\\operatorname{tg}^2\\alpha=\\frac{1}{\\cos^2\\alpha}$, więc wynik to $1+\\frac{64}{225}=\\frac{289}{225}$.\n**Odpowiedź:** $\\frac{289}{225}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f589723e-ae00-5e02-af91-e522bcd086f4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $\\sin\\alpha\\cos\\alpha=\\frac{1}{3}$. Oblicz $\\sin^4\\alpha+\\cos^4\\alpha$.",
+      "correct_answer": "$\\frac{7}{9}$",
+      "options": [
+        "1",
+        "0",
+        "$\\frac{7}{9}$",
+        "2"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin^4\\alpha+\\cos^4\\alpha=(\\sin^2\\alpha+\\cos^2\\alpha)^2-2\\sin^2\\alpha\\cos^2\\alpha=1-2\\cdot\\frac{1}{9}=\\frac{7}{9}$.\n**Odpowiedź:** $\\frac{7}{9}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d61f6149-b2c8-5370-ab05-0cbec1b5a109",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $\\sin\\alpha\\cos\\alpha=\\frac{1}{2}$. Oblicz $\\sin^4\\alpha+\\cos^4\\alpha$.",
+      "correct_answer": "$\\frac{1}{2}$",
+      "options": [
+        "0",
+        "2",
+        "$\\frac{1}{2}$",
+        "1"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\sin^4\\alpha+\\cos^4\\alpha=(\\sin^2\\alpha+\\cos^2\\alpha)^2-2\\sin^2\\alpha\\cos^2\\alpha=1-2\\cdot\\frac{1}{4}=\\frac{1}{2}$.\n**Odpowiedź:** $\\frac{1}{2}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c09634a5-fb73-5615-a31f-bcaef3e791e4",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\sin\\alpha=\\frac{8}{17}$. Wartość $\\cos\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{15}{17}$",
+      "options": [
+        "$\\frac{17}{15}$",
+        "$\\frac{8}{17}$",
+        "$\\frac{15}{17}$",
+        "$\\frac{15}{8}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Z jedynki trygonometrycznej $\\cos^2\\alpha=1-\\left(\\frac{8}{17}\\right)^2=\\frac{225}{289}$. Ponieważ kąt jest ostry, $\\cos\\alpha=\\frac{15}{17}$.\n**Odpowiedź:** $\\frac{15}{17}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4d3bbd74-54ad-52ce-acea-60e85d8d1c38",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry, $\\sin\\alpha=\\frac{3}{5}$ i $\\cos\\alpha=\\frac{4}{5}$. Wartość $\\operatorname{tg}\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{3}{4}$",
+      "options": [
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{\\sin\\alpha}{\\cos\\alpha}=\\frac{3}{4}$.\n**Odpowiedź:** $\\frac{3}{4}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "18836bc2-2d1e-540d-a960-8dd1eb7e54a1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry, $\\sin\\alpha=\\frac{5}{13}$ i $\\cos\\alpha=\\frac{12}{13}$. Wartość $\\operatorname{tg}\\alpha$ wynosi:",
+      "correct_answer": "$\\frac{5}{12}$",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{12}{5}$",
+        "$\\frac{13}{12}$",
+        "$\\frac{5}{13}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{\\sin\\alpha}{\\cos\\alpha}=\\frac{5}{12}$.\n**Odpowiedź:** $\\frac{5}{12}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ca46b08-8913-5815-a948-ac0b23be27c1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Oblicz $4(\\sin^2\\alpha+\\cos^2\\alpha)-1$.",
+      "correct_answer": "3",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc wyrażenie ma wartość $4-1=3$.\n**Odpowiedź:** 3",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b69ac417-5b9c-57c5-a06b-16045da33755",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wiadomo, że $\\sin\\alpha\\cos\\alpha=\\frac{1}{2}$. Oblicz $(\\sin\\alpha+\\cos\\alpha)^2$.",
+      "correct_answer": "$2$",
+      "options": [
+        "0",
+        "$2$",
+        "1",
+        "3"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$(\\sin\\alpha+\\cos\\alpha)^2=\\sin^2\\alpha+2\\sin\\alpha\\cos\\alpha+\\cos^2\\alpha=1+\\frac{2}{2}=\\frac{2}{1}$.\n**Odpowiedź:** $2$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1e3264ad-94c1-50bd-a372-bc66f3a9cacb",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt $\\alpha$ jest ostry i $\\operatorname{tg}\\alpha=\\frac{3}{4}$. Oblicz $\\frac{1}{\\cos^2\\alpha}$.",
+      "correct_answer": "$\\frac{25}{16}$",
+      "options": [
+        "$\\frac{9}{16}$",
+        "$\\frac{25}{16}$",
+        "$\\frac{5}{4}$",
+        "$\\frac{25}{9}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$1+\\operatorname{tg}^2\\alpha=\\frac{1}{\\cos^2\\alpha}$, więc wynik to $1+\\frac{9}{16}=\\frac{25}{16}$.\n**Odpowiedź:** $\\frac{25}{16}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a2120e4c-0634-59f2-a2ba-654ca9e3dd99",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "wielokaty_foremne",
+  "categoryName": "Geometria",
+  "topicName": "Wielokąty foremne",
+  "tasks": [
+    {
+      "content": "Miara kąta wewnętrznego wielokąta foremnego o $10$ bokach wynosi:",
+      "correct_answer": "144°",
+      "options": [
+        "144°",
+        "154°",
+        "36°",
+        "134°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt wewnętrzny $10$-kąta foremnego to $\\frac{(10-2)\\cdot180^\\circ}{10}=144^\\circ$.\n**Odpowiedź:** 144°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "25a78c1e-6a7b-5da4-a1eb-dd5361fda1be",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma miar kątów wewnętrznych $7$-kąta wynosi:",
+      "correct_answer": "900°",
+      "options": [
+        "720°",
+        "900°",
+        "1260°",
+        "1080°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma kątów $7$-kąta to $(7-2)\\cdot180^\\circ=900^\\circ$.\n**Odpowiedź:** 900°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "921101fe-7c97-5cfc-a854-bdf74451ef7a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $6$-kąt?",
+      "correct_answer": "9",
+      "options": [
+        "18",
+        "9",
+        "10",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Liczba przekątnych $6$-kąta to $\\frac{6(6-3)}{2}=9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5cca0aa1-38d0-5908-aa61-242d73e594fd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt środkowy wyznaczony przez dwa kolejne wierzchołki $10$-kąta foremnego wpisanego w okrąg wynosi:",
+      "correct_answer": "36°",
+      "options": [
+        "18°",
+        "36°",
+        "72°",
+        "144°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Pełny kąt $360^\\circ$ dzielimy na $10$ równych części: $\\frac{360^\\circ}{10}=36^\\circ$.\n**Odpowiedź:** 36°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "218a005b-41d1-5269-a121-6205e56cc023",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt zewnętrzny wielokąta foremnego o $10$ bokach wynosi:",
+      "correct_answer": "36°",
+      "options": [
+        "51°",
+        "36°",
+        "72°",
+        "18°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt zewnętrzny to $360^\\circ:10=36^\\circ$ (albo $180^\\circ$ minus kąt wewnętrzny).\n**Odpowiedź:** 36°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fe644192-3afb-54fe-af4d-a1a982606862",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielokąt foremny ma $4$ boków, każdy o długości $7$ cm. Jego obwód wynosi:",
+      "correct_answer": "28 cm",
+      "options": [
+        "11 cm",
+        "28 cm",
+        "7 cm",
+        "32 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Obwód to suma $4$ równych boków: $4\\cdot7=28$ cm.\n**Odpowiedź:** 28 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2ce69898-6610-58cc-a97e-940389e7039c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt wewnętrzny wielokąta foremnego ma $120^\\circ$. Ile boków ma ten wielokąt?",
+      "correct_answer": "6",
+      "options": [
+        "5",
+        "6",
+        "3",
+        "7"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Z równania $\\frac{(n-2)180^\\circ}{n}=120^\\circ$ otrzymujemy $n=6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cd385c4a-00a9-5865-ae57-97ab10afe908",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Miara kąta wewnętrznego wielokąta foremnego o $9$ bokach wynosi:",
+      "correct_answer": "140°",
+      "options": [
+        "150°",
+        "40°",
+        "140°",
+        "130°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt wewnętrzny $9$-kąta foremnego to $\\frac{(9-2)\\cdot180^\\circ}{9}=140^\\circ$.\n**Odpowiedź:** 140°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "83237d55-48f4-5835-abdf-4a7fd03510b0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma miar kątów wewnętrznych $6$-kąta wynosi:",
+      "correct_answer": "720°",
+      "options": [
+        "720°",
+        "1080°",
+        "540°",
+        "900°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma kątów $6$-kąta to $(6-2)\\cdot180^\\circ=720^\\circ$.\n**Odpowiedź:** 720°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3a0d2315-2675-5f2e-a543-8180524d5e1c",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ile przekątnych ma $7$-kąt?",
+      "correct_answer": "14",
+      "options": [
+        "28",
+        "14",
+        "21",
+        "15"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Liczba przekątnych $7$-kąta to $\\frac{7(7-3)}{2}=14$.\n**Odpowiedź:** 14",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a0abfeeb-e9ce-5913-a317-ff44456ca8da",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt środkowy wyznaczony przez dwa kolejne wierzchołki $12$-kąta foremnego wpisanego w okrąg wynosi:",
+      "correct_answer": "30°",
+      "options": [
+        "150°",
+        "60°",
+        "15°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Pełny kąt $360^\\circ$ dzielimy na $12$ równych części: $\\frac{360^\\circ}{12}=30^\\circ$.\n**Odpowiedź:** 30°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a846f978-7523-54ea-ae19-d2aa5e5ac879",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt zewnętrzny wielokąta foremnego o $6$ bokach wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "30°",
+        "60°",
+        "75°",
+        "120°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt zewnętrzny to $360^\\circ:6=60^\\circ$ (albo $180^\\circ$ minus kąt wewnętrzny).\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f8696b2b-a319-5a0e-ac4a-43f26710e087",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielokąt foremny ma $5$ boków, każdy o długości $7$ cm. Jego obwód wynosi:",
+      "correct_answer": "35 cm",
+      "options": [
+        "12 cm",
+        "35 cm",
+        "7 cm",
+        "40 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Obwód to suma $5$ równych boków: $5\\cdot7=35$ cm.\n**Odpowiedź:** 35 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "efa4a6bd-5c99-52f7-a5f3-ababd7f5a395",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt wewnętrzny wielokąta foremnego ma $144^\\circ$. Ile boków ma ten wielokąt?",
+      "correct_answer": "10",
+      "options": [
+        "10",
+        "11",
+        "9",
+        "2,5"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Z równania $\\frac{(n-2)180^\\circ}{n}=144^\\circ$ otrzymujemy $n=10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0222799a-397f-5707-a5e3-f5eaf72df350",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Miara kąta wewnętrznego wielokąta foremnego o $3$ bokach wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "50°",
+        "60°",
+        "120°",
+        "70°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt wewnętrzny $3$-kąta foremnego to $\\frac{(3-2)\\cdot180^\\circ}{3}=60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cb501995-5a93-5319-a1c4-a220d3cd17c0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Suma miar kątów wewnętrznych $10$-kąta wynosi:",
+      "correct_answer": "1440°",
+      "options": [
+        "1620°",
+        "1260°",
+        "1440°",
+        "1800°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma kątów $10$-kąta to $(10-2)\\cdot180^\\circ=1440^\\circ$.\n**Odpowiedź:** 1440°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2a125af1-b5d4-561c-a2b1-f9a6fe47732d",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt środkowy wyznaczony przez dwa kolejne wierzchołki $9$-kąta foremnego wpisanego w okrąg wynosi:",
+      "correct_answer": "40°",
+      "options": [
+        "40°",
+        "20°",
+        "80°",
+        "140°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pełny kąt $360^\\circ$ dzielimy na $9$ równych części: $\\frac{360^\\circ}{9}=40^\\circ$.\n**Odpowiedź:** 40°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cff46e47-43a2-5184-a48a-c757dfff89bd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt środkowy wyznaczony przez dwa kolejne wierzchołki $5$-kąta foremnego wpisanego w okrąg wynosi:",
+      "correct_answer": "72°",
+      "options": [
+        "36°",
+        "144°",
+        "108°",
+        "72°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Pełny kąt $360^\\circ$ dzielimy na $5$ równych części: $\\frac{360^\\circ}{5}=72^\\circ$.\n**Odpowiedź:** 72°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "143f9072-bbdf-5b65-a9a5-e16d7ee4f6f2",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Kąt zewnętrzny wielokąta foremnego o $9$ bokach wynosi:",
+      "correct_answer": "40°",
+      "options": [
+        "20°",
+        "40°",
+        "55°",
+        "80°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Kąt zewnętrzny to $360^\\circ:9=40^\\circ$ (albo $180^\\circ$ minus kąt wewnętrzny).\n**Odpowiedź:** 40°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a61bf9cf-88e2-5725-ac8d-4cbab7dbe2a1",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Wielokąt foremny ma $5$ boków, każdy o długości $10$ cm. Jego obwód wynosi:",
+      "correct_answer": "50 cm",
+      "options": [
+        "10 cm",
+        "15 cm",
+        "50 cm",
+        "55 cm"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Obwód to suma $5$ równych boków: $5\\cdot10=50$ cm.\n**Odpowiedź:** 50 cm",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "0017f322-8c1c-5909-a3c6-b1c3b8ba6285",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

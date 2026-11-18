@@ -1,0 +1,390 @@
+{
+  "exam_type": "matura_podstawowa",
+  "category": "geometria",
+  "topic": "katy_w_brylach",
+  "categoryName": "Geometria",
+  "topicName": "Kąty w bryłach",
+  "tasks": [
+    {
+      "content": "Sześcian ma krawędź $7$. Kąt między przekątną ściany a krawędzią tej ściany wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "60°",
+        "45°",
+        "90°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekątna ściany i krawędź tworzą w kwadracie kąt $45^\\circ$ (trójkąt prostokątny równoramienny).\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1d5bcf4f-bbfb-54b2-a316-d2ea10fe31ab",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sześcianie o krawędzi $4$ poprowadzono przekątne dwóch sąsiednich ścian z tego samego wierzchołka. Kąt między nimi wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "45°",
+        "30°",
+        "90°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Końce tych przekątnych tworzą trójkąt równoboczny o bokach $4\\sqrt2$, więc każdy kąt ma $60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "187e1bcc-dea6-5b48-ab92-5e3999eb2c96",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź $6$. Cosinus kąta między przekątną sześcianu a płaszczyzną podstawy wynosi:",
+      "correct_answer": "$\\frac{\\sqrt6}{3}$",
+      "options": [
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{\\sqrt6}{3}$",
+        "$\\frac{\\sqrt3}{2}$",
+        "$\\frac{1}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Rzut przekątnej na podstawę to przekątna podstawy $6\\sqrt2$, a przekątna sześcianu ma $6\\sqrt3$. Stąd $\\cos\\alpha=\\frac{6\\sqrt2}{6\\sqrt3}=\\frac{\\sqrt6}{3}$.\n**Odpowiedź:** $\\frac{\\sqrt6}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "e8fb2e9b-91d0-5c89-a694-aebf20dfd434",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ostrosłup prawidłowy czworokątny ma podstawę o boku $8$ i wysokość $\\frac{8\\sqrt2}{2}$. Kąt między krawędzią boczną a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "45°",
+        "60°",
+        "90°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Połowa przekątnej podstawy to $\\frac{8\\sqrt2}{2}$, czyli tyle samo co wysokość. Trójkąt prostokątny jest równoramienny, więc kąt ma $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "18b26f05-a008-556b-aaf5-5bcb4ee12407",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $6$ i wysokość $6$. Kąt między tworzącą a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "45°",
+        "90°",
+        "30°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{h}{r}=1$, więc $\\alpha=45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cfa07c2a-4490-59fc-a62b-be901558b8aa",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $6$ i wysokość $12$. Kąt między przekątną przekroju osiowego a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $12$ i $12$, więc jego przekątna tworzy z podstawą kąt $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1c89fc28-e493-509b-a481-d4622422922b",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sześcianie o krawędzi $6$ kąt między przekątną sześcianu a krawędzią wychodzącą z tego samego wierzchołka ma cosinus równy:",
+      "correct_answer": "$\\frac{\\sqrt3}{3}$",
+      "options": [
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{\\sqrt3}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Kąt tworzą wektory $(1,1,1)$ i $(1,0,0)$: $\\cos\\alpha=\\frac{1}{\\sqrt3}=\\frac{\\sqrt3}{3}$.\n**Odpowiedź:** $\\frac{\\sqrt3}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "33395c39-e21a-5286-ab8c-9f5437efb98f",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź $4$. Kąt między przekątną ściany a krawędzią tej ściany wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "45°",
+        "30°",
+        "90°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekątna ściany i krawędź tworzą w kwadracie kąt $45^\\circ$ (trójkąt prostokątny równoramienny).\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "046ebc1d-a9a0-5e43-ac4c-baff59df31d0",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sześcianie o krawędzi $9$ poprowadzono przekątne dwóch sąsiednich ścian z tego samego wierzchołka. Kąt między nimi wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "30°",
+        "60°",
+        "45°",
+        "90°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Końce tych przekątnych tworzą trójkąt równoboczny o bokach $9\\sqrt2$, więc każdy kąt ma $60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3c8ed4e0-90cd-5ed5-ac70-c0bbef27e968",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź $7$. Cosinus kąta między przekątną sześcianu a płaszczyzną podstawy wynosi:",
+      "correct_answer": "$\\frac{\\sqrt6}{3}$",
+      "options": [
+        "$\\frac{\\sqrt6}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{\\sqrt3}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Rzut przekątnej na podstawę to przekątna podstawy $7\\sqrt2$, a przekątna sześcianu ma $7\\sqrt3$. Stąd $\\cos\\alpha=\\frac{7\\sqrt2}{7\\sqrt3}=\\frac{\\sqrt6}{3}$.\n**Odpowiedź:** $\\frac{\\sqrt6}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9035272e-9d46-5c5f-adbb-5b7d4fd6154a",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ostrosłup prawidłowy czworokątny ma podstawę o boku $3$ i wysokość $\\frac{3\\sqrt2}{2}$. Kąt między krawędzią boczną a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "90°",
+        "45°",
+        "30°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Połowa przekątnej podstawy to $\\frac{3\\sqrt2}{2}$, czyli tyle samo co wysokość. Trójkąt prostokątny jest równoramienny, więc kąt ma $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4ac78c8e-6bb7-57ef-ab24-15a37ff90c06",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $7$ i wysokość $7$. Kąt między tworzącą a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "90°",
+        "60°",
+        "30°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{h}{r}=1$, więc $\\alpha=45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "c9a061d3-3d23-5d98-aead-66bec0ac55c9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $5$ i wysokość $10$. Kąt między przekątną przekroju osiowego a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "90°",
+        "45°",
+        "60°",
+        "30°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $10$ i $10$, więc jego przekątna tworzy z podstawą kąt $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1295a871-97ec-51a5-a9af-40c18320af57",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sześcianie o krawędzi $2$ kąt między przekątną sześcianu a krawędzią wychodzącą z tego samego wierzchołka ma cosinus równy:",
+      "correct_answer": "$\\frac{\\sqrt3}{3}$",
+      "options": [
+        "$\\frac{\\sqrt3}{3}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{1}{3}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Kąt tworzą wektory $(1,1,1)$ i $(1,0,0)$: $\\cos\\alpha=\\frac{1}{\\sqrt3}=\\frac{\\sqrt3}{3}$.\n**Odpowiedź:** $\\frac{\\sqrt3}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "965af202-e8f9-5ad4-a64d-ced5ab091d70",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź $6$. Kąt między przekątną ściany a krawędzią tej ściany wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "45°",
+        "90°",
+        "30°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekątna ściany i krawędź tworzą w kwadracie kąt $45^\\circ$ (trójkąt prostokątny równoramienny).\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "5afc4b9f-dfb3-532a-af06-aaacb0bbcb24",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "W sześcianie o krawędzi $3$ poprowadzono przekątne dwóch sąsiednich ścian z tego samego wierzchołka. Kąt między nimi wynosi:",
+      "correct_answer": "60°",
+      "options": [
+        "60°",
+        "30°",
+        "90°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Końce tych przekątnych tworzą trójkąt równoboczny o bokach $3\\sqrt2$, więc każdy kąt ma $60^\\circ$.\n**Odpowiedź:** 60°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4666e9cd-9d33-5723-ae62-a58e8089f0f9",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Sześcian ma krawędź $9$. Cosinus kąta między przekątną sześcianu a płaszczyzną podstawy wynosi:",
+      "correct_answer": "$\\frac{\\sqrt6}{3}$",
+      "options": [
+        "$\\frac{\\sqrt6}{3}$",
+        "$\\frac{\\sqrt2}{2}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{\\sqrt3}{2}$"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Rzut przekątnej na podstawę to przekątna podstawy $9\\sqrt2$, a przekątna sześcianu ma $9\\sqrt3$. Stąd $\\cos\\alpha=\\frac{9\\sqrt2}{9\\sqrt3}=\\frac{\\sqrt6}{3}$.\n**Odpowiedź:** $\\frac{\\sqrt6}{3}$",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "acd8b865-0065-5dfb-a69f-95cc4c15da95",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Ostrosłup prawidłowy czworokątny ma podstawę o boku $2$ i wysokość $\\frac{2\\sqrt2}{2}$. Kąt między krawędzią boczną a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "90°",
+        "45°",
+        "30°",
+        "60°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Połowa przekątnej podstawy to $\\frac{2\\sqrt2}{2}$, czyli tyle samo co wysokość. Trójkąt prostokątny jest równoramienny, więc kąt ma $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f350ca83-9af3-52ed-ad95-e8b6d44833dd",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Stożek ma promień podstawy $5$ i wysokość $5$. Kąt między tworzącą a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "30°",
+        "60°",
+        "90°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "$\\operatorname{tg}\\alpha=\\frac{h}{r}=1$, więc $\\alpha=45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "b37d648d-0bdd-53dc-a2c4-0f40e4731e23",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    },
+    {
+      "content": "Walec ma promień podstawy $2$ i wysokość $4$. Kąt między przekątną przekroju osiowego a płaszczyzną podstawy wynosi:",
+      "correct_answer": "45°",
+      "options": [
+        "60°",
+        "30°",
+        "90°",
+        "45°"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Przekrój osiowy to prostokąt o bokach $4$ i $4$, więc jego przekątna tworzy z podstawą kąt $45^\\circ$.\n**Odpowiedź:** 45°",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "614e1044-b79f-552e-a58b-3bf8991c3d33",
+      "generatedAt": "2026-11-18T12:32:33.020Z",
+      "model": "complete-matura-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:32:33.020Z"
+}

@@ -1,0 +1,390 @@
+{
+  "exam_type": "8_klasa",
+  "category": "statystyka",
+  "topic": "tabele_i_wykresy",
+  "categoryName": "Statystyka",
+  "topicName": "Tabele i wykresy",
+  "tasks": [
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 15, wtorek - 8, środa - 20, czwartek - 9. Ile biletów sprzedano łącznie w tych czterech dniach?",
+      "correct_answer": "52",
+      "options": [
+        "42",
+        "20",
+        "52",
+        "62"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy wszystkie wartości z tabeli: 15 + 8 + 20 + 9 = 52.\n**Odpowiedź:** 52",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "aefeb2f4-6963-54b2-a641-b5bb9e4e4fe7",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 15, wtorek - 9, środa - 16, czwartek - 8. Jaka jest różnica między największą i najmniejszą liczbą biletów?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "24",
+        "10",
+        "6"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Największa wartość to $16$, najmniejsza $8$. Różnica: $16 - 8 = 8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9a4ef26a-5b65-5db2-a7ad-cfe8f3ca2d97",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 21, wtorek - 19, środa - 17, czwartek - 23. Jaka była średnia liczba biletów sprzedanych w tych dniach?",
+      "correct_answer": "20",
+      "options": [
+        "19",
+        "21",
+        "80",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Suma wynosi $80$, więc średnia to $80 : 4 = 20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fdd7630d-d432-54b0-af41-cceb3e025b38",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 18, wtorek - 16, środa - 8, czwartek - 12. W który dzień sprzedano najwięcej biletów?",
+      "correct_answer": "poniedziałek",
+      "options": [
+        "czwartek",
+        "wtorek",
+        "środa",
+        "poniedziałek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Największa wartość w tabeli to $18$, a odpowiada jej poniedziałek.\n**Odpowiedź:** poniedziałek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "3a54f208-7d95-5a9e-a12c-578e02e80edd",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 12, wtorek - 20, środa - 14, czwartek - 16. O ile więcej biletów sprzedano we wtorek niż w poniedziałek?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "10",
+        "6",
+        "32"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Odejmujemy mniejszą wartość od większej: $20 - 12 = 8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "a5b14e59-e4fa-5ea1-a102-b1e30dfc1304",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 15, wtorek - 9, środa - 18, czwartek - 20. Ile biletów sprzedano łącznie w tych czterech dniach?",
+      "correct_answer": "62",
+      "options": [
+        "52",
+        "20",
+        "62",
+        "72"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Dodajemy wszystkie wartości z tabeli: 15 + 9 + 18 + 20 = 62.\n**Odpowiedź:** 62",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "6c9fc833-ce07-5d2e-ab5c-3ed53199edf9",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 9, wtorek - 20, środa - 18, czwartek - 15. Jaka jest różnica między największą i najmniejszą liczbą biletów?",
+      "correct_answer": "11",
+      "options": [
+        "11",
+        "13",
+        "29",
+        "9"
+      ],
+      "answer_type": "choice",
+      "difficulty": 1,
+      "xp_reward": 14,
+      "explanation": "Największa wartość to $20$, najmniejsza $9$. Różnica: $20 - 9 = 11$.\n**Odpowiedź:** 11",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "971b6872-3477-5b26-acf1-d3e0b62f6e21",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 16, wtorek - 18, środa - 20, czwartek - 14. Jaka była średnia liczba biletów sprzedanych w tych dniach?",
+      "correct_answer": "17",
+      "options": [
+        "17",
+        "68",
+        "16",
+        "18"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma wynosi $68$, więc średnia to $68 : 4 = 17$.\n**Odpowiedź:** 17",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "31f8b141-9ba8-5682-ac08-c7269ca24144",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 20, wtorek - 14, środa - 18, czwartek - 9. W który dzień sprzedano najwięcej biletów?",
+      "correct_answer": "poniedziałek",
+      "options": [
+        "czwartek",
+        "wtorek",
+        "poniedziałek",
+        "środa"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Największa wartość w tabeli to $20$, a odpowiada jej poniedziałek.\n**Odpowiedź:** poniedziałek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "116f5ab0-cb69-5e80-ade7-33d7abf5f801",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 16, wtorek - 18, środa - 8, czwartek - 14. O ile więcej biletów sprzedano we wtorek niż w środę?",
+      "correct_answer": "10",
+      "options": [
+        "26",
+        "12",
+        "8",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Odejmujemy mniejszą wartość od większej: $18 - 8 = 10$.\n**Odpowiedź:** 10",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "9363eef2-b465-51b4-ae1c-4649296850f5",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 9, wtorek - 14, środa - 15, czwartek - 16. Ile biletów sprzedano łącznie w tych czterech dniach?",
+      "correct_answer": "54",
+      "options": [
+        "44",
+        "54",
+        "64",
+        "16"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Dodajemy wszystkie wartości z tabeli: 9 + 14 + 15 + 16 = 54.\n**Odpowiedź:** 54",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "bbe44907-05fe-5ac2-a756-6ee1e8f7b246",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 9, wtorek - 12, środa - 22, czwartek - 16. Jaka jest różnica między największą i najmniejszą liczbą biletów?",
+      "correct_answer": "13",
+      "options": [
+        "15",
+        "13",
+        "11",
+        "31"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Największa wartość to $22$, najmniejsza $9$. Różnica: $22 - 9 = 13$.\n**Odpowiedź:** 13",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "1159ee6d-4187-5d39-a3c0-6853f18b6980",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 10, wtorek - 8, środa - 12, czwartek - 6. Jaka była średnia liczba biletów sprzedanych w tych dniach?",
+      "correct_answer": "9",
+      "options": [
+        "10",
+        "36",
+        "9",
+        "8"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Suma wynosi $36$, więc średnia to $36 : 4 = 9$.\n**Odpowiedź:** 9",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "cf731263-29ce-51d6-a6e2-557a30b84115",
+      "generatedAt": "2026-11-18T12:23:59.855Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 16, wtorek - 12, środa - 20, czwartek - 8. W który dzień sprzedano najwięcej biletów?",
+      "correct_answer": "środa",
+      "options": [
+        "środa",
+        "wtorek",
+        "poniedziałek",
+        "czwartek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 2,
+      "xp_reward": 18,
+      "explanation": "Największa wartość w tabeli to $20$, a odpowiada jej środa.\n**Odpowiedź:** środa",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fc6ce8bb-ea30-544e-adc4-b957aea4022f",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 14, wtorek - 15, środa - 18, czwartek - 20. O ile więcej biletów sprzedano w czwartek niż w środę?",
+      "correct_answer": "2",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "38"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy mniejszą wartość od większej: $20 - 18 = 2$.\n**Odpowiedź:** 2",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "f812500a-fabc-53b9-a02a-c88e6d958802",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 16, wtorek - 12, środa - 15, czwartek - 20. Ile biletów sprzedano łącznie w tych czterech dniach?",
+      "correct_answer": "63",
+      "options": [
+        "20",
+        "63",
+        "53",
+        "73"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Dodajemy wszystkie wartości z tabeli: 16 + 12 + 15 + 20 = 63.\n**Odpowiedź:** 63",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "fa1fcfc0-0bd0-5b37-a72b-3c7d0364ba29",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 22, wtorek - 14, środa - 20, czwartek - 15. Jaka jest różnica między największą i najmniejszą liczbą biletów?",
+      "correct_answer": "8",
+      "options": [
+        "8",
+        "6",
+        "36",
+        "10"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Największa wartość to $22$, najmniejsza $14$. Różnica: $22 - 14 = 8$.\n**Odpowiedź:** 8",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "d74d806d-ec83-5893-a7f1-8848a04f8065",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 17, wtorek - 23, środa - 19, czwartek - 21. Jaka była średnia liczba biletów sprzedanych w tych dniach?",
+      "correct_answer": "20",
+      "options": [
+        "80",
+        "19",
+        "21",
+        "20"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Suma wynosi $80$, więc średnia to $80 : 4 = 20$.\n**Odpowiedź:** 20",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "2e2464dc-582a-5991-af88-10c274c565a0",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 18, wtorek - 9, środa - 16, czwartek - 8. W który dzień sprzedano najwięcej biletów?",
+      "correct_answer": "poniedziałek",
+      "options": [
+        "środa",
+        "poniedziałek",
+        "czwartek",
+        "wtorek"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Największa wartość w tabeli to $18$, a odpowiada jej poniedziałek.\n**Odpowiedź:** poniedziałek",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "dd5d48b7-c787-523f-a318-cefa2ed44048",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    },
+    {
+      "content": "W tabeli zapisano liczbę biletów sprzedanych w kolejnych dniach: poniedziałek - 15, wtorek - 18, środa - 9, czwartek - 20. O ile więcej biletów sprzedano w poniedziałek niż w środę?",
+      "correct_answer": "6",
+      "options": [
+        "8",
+        "24",
+        "6",
+        "4"
+      ],
+      "answer_type": "choice",
+      "difficulty": 3,
+      "xp_reward": 22,
+      "explanation": "Odejmujemy mniejszą wartość od większej: $15 - 9 = 6$.\n**Odpowiedź:** 6",
+      "figure_svg": null,
+      "figure_caption": null,
+      "id": "4be6aaa4-c5a2-51d7-a585-e49bc7516f41",
+      "generatedAt": "2026-11-18T12:23:59.856Z",
+      "model": "complete-e8-v1"
+    }
+  ],
+  "updatedAt": "2026-11-18T12:23:59.856Z"
+}
