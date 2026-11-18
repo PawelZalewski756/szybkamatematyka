@@ -2,7 +2,7 @@ export type TaskContentPart =
   | { type: "text"; content: string }
   | { type: "image"; alt: string; src: string };
 
-const IMAGE_MARKDOWN_RE = /!\[([^\]]*)\]\(([^)]+)\)/g;
+import { findMarkdownImages } from "@/lib/math/markdown-images";
 
 /** Usuwa z treści tabelę punktacji "Wypełnia egzaminator" przeniesioną z arkusza PDF. */
 export function stripExaminerTable(tresc: string): string {
@@ -34,16 +34,13 @@ export function splitTaskContent(tresc: string): TaskContentPart[] {
   const parts: TaskContentPart[] = [];
   let lastIndex = 0;
 
-  for (const match of tresc.matchAll(IMAGE_MARKDOWN_RE)) {
-    const index = match.index ?? 0;
-    const before = tresc.slice(lastIndex, index).trim();
+  for (const match of findMarkdownImages(tresc)) {
+    const before = tresc.slice(lastIndex, match.index).trim();
     if (before) parts.push({ type: "text", content: before });
 
-    const alt = match[1] ?? "Rysunek";
-    const src = match[2] ?? "";
-    if (src) parts.push({ type: "image", alt, src });
+    if (match.src) parts.push({ type: "image", alt: match.alt || "Rysunek", src: match.src });
 
-    lastIndex = index + match[0].length;
+    lastIndex = match.index + match.length;
   }
 
   const tail = tresc.slice(lastIndex).trim();
@@ -57,5 +54,5 @@ export function splitTaskContent(tresc: string): TaskContentPart[] {
 }
 
 export function taskContentHasImages(tresc: string): boolean {
-  return IMAGE_MARKDOWN_RE.test(tresc);
+  return findMarkdownImages(tresc).length > 0;
 }
