@@ -112,7 +112,11 @@ export async function POST(request: Request) {
 
         if (session.payment_status === "paid") {
           const planId = session.metadata?.plan_id ?? "";
-          await notifyAdminsTelegram(
+          // Powiadomienie Telegram nie może blokować odpowiedzi do Stripe:
+          // przy wolnym Telegramie webhook przekraczał limit czasu i Stripe
+          // wyłączał endpoint po kilku takich próbach. Zapis subskrypcji jest
+          // już wykonany, więc wysyłkę robimy w tle.
+          void notifyAdminsTelegram(
             formatPurchaseNotification({
               email:
                 session.customer_details?.email ??
@@ -123,7 +127,12 @@ export async function POST(request: Request) {
               currency: session.currency,
               createdAt: new Date(session.created * 1000),
             }),
-          );
+          ).catch((notificationError) => {
+            console.error(
+              "[stripe-webhook] Powiadomienie o zakupie nie zostało wysłane:",
+              notificationError,
+            );
+          });
         }
         break;
       }

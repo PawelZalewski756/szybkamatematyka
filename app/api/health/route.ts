@@ -1,4 +1,7 @@
-import { isStripeConfigured } from "@/lib/stripe/config";
+import {
+  isStripeConfigured,
+  isStripeWebhookConfigured,
+} from "@/lib/stripe/config";
 import { isSupabaseConfigured } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -19,6 +22,10 @@ export function GET(): Response {
       integrations: {
         supabase: isSupabaseConfigured(),
         stripe: isStripeConfigured(),
+        stripeWebhook: isStripeWebhookConfigured(),
+        supabaseServiceRole: Boolean(
+          process.env.SUPABASE_SERVICE_ROLE_KEY?.trim(),
+        ),
         resend: Boolean(process.env.RESEND_API_KEY?.trim()),
         gemini: Boolean(process.env.GEMINI_API_KEY?.trim()),
         telegram: Boolean(
