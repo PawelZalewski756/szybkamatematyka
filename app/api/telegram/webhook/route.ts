@@ -10,6 +10,7 @@ import {
   findUserIdByIdentifier,
   grantProToUser,
 } from "@/lib/subscription/grant-pro";
+import { fetchSolvedStats } from "@/lib/supabase/solved-stats";
 
 export const runtime = "nodejs";
 
@@ -148,6 +149,7 @@ const HELP_TEXT = [
   "/new - ostatnie rejestracje",
   "/users [strona] - użytkownicy z liczbą rozwiązanych zadań",
   "/top - ranking XP",
+  "/solved - ile zadań zapisano w solved_tasks (diagnostyka)",
   "/pro <nick|email> [dni] [powód] - przyznaj Pro ręcznie",
   "/szybkaproba - statystyki szybkiej próby",
   "/visits [dni] - wejścia i unikalni odwiedzający",
@@ -304,6 +306,48 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     ].join("\n");
   }
 
+  if (command === "solved") {
+    const stats = await fetchSolvedStats(supabase);
+    if (stats.total === 0) {
+      return [
+        "Brak wierszy w solved_tasks.",
+        "Zapisywane są tylko rozwiązania zalogowanych użytkowników.",
+        "Gość zapisuje postęp lokalnie; po zalogowaniu historia jest dosyłana,",
+        "ale tylko z tej przeglądarki.",
+      ].join("\n");
+    }
+
+    const top = [...stats.perUser.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10);
+    const { data: profiles } = await supabase
+      .from("profiles")
+      .select("id, nick, nickname")
+      .in("id", top.map(([id]) => id));
+    const names = new Map(
+      (profiles ?? []).map((profile) => [
+        String(profile.id),
+        String(profile.nick || profile.nickname || "bez nicku"),
+      ]),
+    );
+
+    return [
+      "Rozwiązane zadania (solved_tasks):",
+      `Łącznie: ${plNumber.format(stats.total)}`,
+      `Ostatnie 7 dni: ${plNumber.format(stats.last7)}`,
+      `Uczniowie z rozwiązaniami: ${plNumber.format(stats.students)}`,
+      "",
+      "Top 10:",
+      ...top.map(
+        ([id, count], index) =>
+          `${index + 1}. ${names.get(id) ?? "bez nicku"} - ${plNumber.format(count)}`,
+      ),
+      stats.truncated ? "Uwaga: agregacja ucięta do 200 000 wierszy." : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+  }
+
   if (command === "users") {
     const requestedPage = args[0] ? Number(args[0]) : 1;
     if (
@@ -336,40 +380,29 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     const totalUsers = data.total || count || data.users.length;
     const totalPages = Math.max(1, Math.ceil(totalUsers / USERS_PER_PAGE));
 
-    // Liczba rozwiązanych zadań per uczeń - wcześniej /users pokazywało tylko XP,
-    // więc nie było widać, ile zadań faktycznie zrobili uczniowie.
-    //
-    // Liczymy osobnym zapytaniem `count` na ucznia (bez pobierania wierszy):
-    // jest to odporne na limit 1000 wierszy PostgREST i nie zależy od kolumny
-    // solved_at, której brak w starszych instalacjach psuł całą listę.
+    // Liczba rozwiązanych zadań per uczeń. Używamy tego samego agregatora co
+    // panel admina (`fetchSolvedStats`), a nie `count` per uczeń - dzięki temu
+    // /users i /admin/analityka pokazują dokładnie te same liczby.
     const requestedIds = data.users.map((user) => user.id);
     const solvedCounts = new Map<string, number>();
     let solvedCountError: string | null = null;
+    let solvedTotalValue = 0;
 
-    const countResults = await Promise.all(
-      requestedIds.map(async (id) => ({
-        id,
-        result: await safeCount(
-          supabase
-            .from("solved_tasks")
-            .select("user_id", { count: "exact", head: true })
-            .eq("user_id", id),
-        ),
-      })),
-    );
-    for (const { id, result } of countResults) {
-      if (result.error) {
-        solvedCountError ??= result.error;
-        continue;
+    try {
+      const stats = await fetchSolvedStats(supabase);
+      solvedTotalValue = stats.total;
+      for (const id of requestedIds) {
+        solvedCounts.set(id, stats.perUser.get(id) ?? 0);
       }
-      solvedCounts.set(id, result.value ?? 0);
+    } catch (error) {
+      solvedCountError =
+        error instanceof Error ? error.message : String(error);
     }
 
-    const solvedTotal = await safeCount(
-      supabase
-        .from("solved_tasks")
-        .select("user_id", { count: "exact", head: true }),
-    );
+    const solvedTotal = {
+      value: solvedCountError ? null : solvedTotalValue,
+      error: solvedCountError,
+    };
 
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
     const lines = [
