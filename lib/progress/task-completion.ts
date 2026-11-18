@@ -25,6 +25,8 @@ export type TaskCompletionResult = {
   first: boolean;
   xp: number;
   userId: string | null;
+  /** Błąd zapisu do DB; lokalny zapis mógł się udać. */
+  error?: string | null;
 };
 
 /**
@@ -88,7 +90,12 @@ export async function recordTaskCompletion(
       first = await markTaskSolvedDb(userId, input.taskId, input.source);
     } catch (error) {
       console.warn("[szybka-matma] recordTaskCompletion:", error);
-      return { first: false, xp: 0, userId };
+      return {
+        first: false,
+        xp: 0,
+        userId,
+        error: error instanceof Error ? error.message : String(error),
+      };
     }
 
     if (!first || !input.isCorrect) {
