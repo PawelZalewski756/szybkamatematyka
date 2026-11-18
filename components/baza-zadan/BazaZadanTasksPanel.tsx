@@ -280,9 +280,6 @@ export function BazaZadanTasksPanel({
               >
                 Wybierz temat
               </h2>
-              <p className="mt-0.5 text-sm text-muted">
-                Kliknij temat i od razu przechodzisz do jego zadań.
-              </p>
             </div>
             <p className="text-sm text-muted">
               <span className="font-semibold text-foreground">
@@ -309,9 +306,6 @@ export function BazaZadanTasksPanel({
                       <span className="block text-sm font-extrabold text-foreground group-hover:text-accent">
                         {group.label}
                       </span>
-                      <span className="mt-0.5 block text-xs leading-snug text-muted">
-                        {group.description}
-                      </span>
                     </span>
                     <span className="shrink-0 text-xs font-semibold tabular-nums text-muted">
                       {group.taskCount}
@@ -328,9 +322,6 @@ export function BazaZadanTasksPanel({
                         <h3 className="text-sm font-extrabold text-foreground">
                           {group.label}
                         </h3>
-                        <p className="mt-0.5 text-xs leading-snug text-muted">
-                          {group.description}
-                        </p>
                       </div>
                       <span className="shrink-0 text-xs font-semibold tabular-nums text-muted">
                         {group.taskCount}

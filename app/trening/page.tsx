@@ -842,8 +842,8 @@ export default function TreningPage() {
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa - cały zakres CKE, temat po temacie."
-      : "Egzamin ósmoklasisty - cała podstawa programowa, temat po temacie.";
+      ? "Cały zakres CKE, temat po temacie."
+      : "Cała podstawa programowa, temat po temacie.";
 
   const progressSummary = useMemo(() => {
     const categories = visibleExam.categories;

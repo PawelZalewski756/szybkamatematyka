@@ -154,7 +154,7 @@ function MinigameCard({ game }: { game: MinigameEntry }) {
     <Link
       href={`${game.href}?mode=time_attack`}
       data-testid="minigame-game-card"
-      className="group flex min-h-[112px] overflow-hidden rounded-xl border border-surface-border bg-surface transition-[border-color,background-color] hover:border-accent/45 hover:bg-surface-hover"
+      className="group flex min-h-[88px] overflow-hidden rounded-xl border border-surface-border bg-surface transition-[border-color,background-color] hover:border-accent/45 hover:bg-surface-hover"
     >
       <MinigameGlyph visual={visual} size="card" />
       <span className="flex min-w-0 flex-1 flex-col justify-center gap-1 p-3.5">
@@ -163,9 +163,6 @@ function MinigameCard({ game }: { game: MinigameEntry }) {
         </span>
         <span className="block line-clamp-1 text-sm font-bold text-foreground">
           {game.title}
-        </span>
-        <span className="block line-clamp-2 text-xs leading-snug text-muted">
-          {game.description}
         </span>
       </span>
     </Link>
@@ -193,9 +190,6 @@ function GroupAccordion({ group }: { group: MinigameGroup }) {
             <span className="text-xs text-muted">
               {gameCountLabel(group.games.length)}
             </span>
-          </span>
-          <span className="mt-0.5 block text-xs text-muted">
-            {group.description}
           </span>
         </span>
         <ChevronDown
@@ -239,7 +233,7 @@ export default function MinigryPage() {
           Minigry · <span className="text-gradient-brand">{pathLabel}</span>
         </h1>
         <p className="mt-2 max-w-2xl text-sm text-muted sm:text-base">
-          Jedna runda, kilka minut. Wybierz grę i tryb - resztę zrobi licznik.
+          Wybierz grę i tryb.
         </p>
       </motion.header>
 

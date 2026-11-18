@@ -140,9 +140,6 @@ export function MinigameModePicker({ mode }: { mode: MinigamePlayMode }) {
                       {gameCountLabel(group.games.length)}
                     </span>
                   </div>
-                  <p className="mt-1 text-xs text-muted">
-                    {group.description}
-                  </p>
                   <GameGrid games={group.games} mode={mode} />
                 </section>
               );

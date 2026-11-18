@@ -160,8 +160,7 @@ export function BazaZadanView({
             Baza zadań
           </h1>
           <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-            Zadania z rozwiązaniami, oficjalne arkusze CKE i symulacje egzaminu -
-            wszystko w jednym miejscu.
+            Zadania, arkusze CKE i symulacje egzaminu.
           </p>
         </div>
 
