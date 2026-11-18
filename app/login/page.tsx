@@ -142,16 +142,6 @@ export default function LoginPage() {
       setMessage("Podaj nick lub adres e-mail.");
       return;
     }
-    if (!password) {
-      setIsError(true);
-      setMessage("Podaj hasło.");
-      return;
-    }
-    if (password.length < 6) {
-      setIsError(true);
-      setMessage("Hasło musi mieć co najmniej 6 znaków.");
-      return;
-    }
     if (looksLikeEmail) {
       const validationError = validateAuthInput(identifier, password);
       if (validationError) {
@@ -159,10 +149,22 @@ export default function LoginPage() {
         setMessage(validationError);
         return;
       }
-    } else if (identifier.length > 64) {
-      setIsError(true);
-      setMessage("Nick może mieć maksymalnie 64 znaki.");
-      return;
+    } else {
+      if (!password) {
+        setIsError(true);
+        setMessage("Podaj hasło.");
+        return;
+      }
+      if (password.length < 6) {
+        setIsError(true);
+        setMessage("Hasło musi mieć co najmniej 6 znaków.");
+        return;
+      }
+      if (identifier.length > 64) {
+        setIsError(true);
+        setMessage("Nick może mieć maksymalnie 64 znaki.");
+        return;
+      }
     }
 
     if (!supabaseReady) {
