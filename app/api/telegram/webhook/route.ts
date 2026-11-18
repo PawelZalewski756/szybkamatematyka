@@ -446,6 +446,13 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
         "",
         describeTelegramCommandError(new Error(`solved_tasks: ${solvedCountError}`)),
       );
+    } else if (solvedTotalValue === 0) {
+      lines.push(
+        "",
+        "0 zadań = brak wierszy w solved_tasks.",
+        "Zapisywane są tylko rozwiązania zalogowanych użytkowników.",
+        "Gość ma postęp lokalnie; po zalogowaniu dosyła go z tej przeglądarki.",
+      );
     }
 
     return lines.join("\n");

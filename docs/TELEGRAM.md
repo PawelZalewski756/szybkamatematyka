@@ -73,7 +73,22 @@ dla kont z ostatnich 7 dni. Idempotencja jest w
 `signup_notification_deliveries`, więc nie ma duplikatów. Cron wymaga
 `CRON_SECRET`.
 
-## 7. Komenda `/pro` — ręczne Pro
+## 7. Diagnostyka `/solved`
+
+```text
+/solved
+```
+
+Pokazuje, ile wierszy jest w `solved_tasks`, ilu uczniów ma rozwiązania i top 10.
+Jeśli wynik to **0**:
+
+- użytkownicy nie są zalogowani (gość zapisuje tylko lokalnie),
+- albo inserty do `solved_tasks` są odrzucane (RLS / brak migracji).
+
+`/users` liczy teraz tym samym agregatorem co `/admin/analityka`
+(`fetchSolvedStats`), więc liczby powinny się zgadzać.
+
+## 8. Komenda `/pro` — ręczne Pro
 
 Administrator może przyznać Pro z Telegrama:
 
