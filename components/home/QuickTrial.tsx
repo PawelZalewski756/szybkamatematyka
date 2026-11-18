@@ -1,12 +1,14 @@
 "use client";
 
 import { ArrowRight, Check } from "lucide-react";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
 type TrackKey = "8_klasa" | "matura";
 
 type TrialTask = {
+  id: string;
   question: string;
   answers: readonly string[];
   correct: string;
@@ -22,12 +24,14 @@ const TRACKS: Record<
     href: "/trening",
     tasks: [
       {
+        id: "quick-8-rownanie",
         question: "Rozwiąż: 3x + 2 = 14. Ile wynosi x?",
         answers: ["3", "4", "5", "6"],
         correct: "4",
         explanation: "3 · 4 + 2 = 14.",
       },
       {
+        id: "quick-8-procent",
         question: "Ile to 25% z liczby 80?",
         answers: ["16", "20", "25", "40"],
         correct: "20",
@@ -40,12 +44,14 @@ const TRACKS: Record<
     href: "/trening",
     tasks: [
       {
+        id: "quick-matura-log",
         question: "Ile wynosi log₂ 8?",
         answers: ["2", "3", "4", "16"],
         correct: "3",
         explanation: "2³ = 8, więc log₂ 8 = 3.",
       },
       {
+        id: "quick-matura-funkcja",
         question: "Funkcja f(x) = x² - 4x + 1. Ile wynosi f(3)?",
         answers: ["-2", "2", "1", "-4"],
         correct: "-2",
@@ -78,6 +84,14 @@ export function QuickTrial() {
   const choose = (value: string) => {
     setAnswer(value);
     if (value !== task.correct) setMistakes((count) => count + 1);
+    if (value === task.correct) {
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "szybka-proba",
+        isCorrect: true,
+        xpReward: 5,
+      });
+    }
 
     const id = sessionId.current ?? crypto.randomUUID();
     sessionId.current = id;

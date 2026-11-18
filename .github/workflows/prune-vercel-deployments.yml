@@ -1,0 +1,30 @@
+name: Prune old Vercel deployments
+
+on:
+  schedule:
+    # Codziennie 03:00 UTC. Hobby i tak trzyma maks. 30 dni; my chcemy 7.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Usuń deploymenty starsze niż 7 dni
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          KEEP_DAYS: "7"
+        run: node scripts/pruneVercelDeployments.mjs --apply

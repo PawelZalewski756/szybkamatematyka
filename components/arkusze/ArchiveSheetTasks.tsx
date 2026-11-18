@@ -3,6 +3,7 @@
 import { SolutionSteps } from "@/components/baza-zadan/SolutionSteps";
 import { TaskTresc } from "@/components/baza-zadan/TaskTresc";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { ProGate } from "@/components/subscription/ProGate";
 import { TheoryMarkdown } from "@/components/trening/TheoryMarkdown";
 import { formatCkeMathText } from "@/lib/baza-zadan/cke/format-cke-math";
@@ -107,7 +108,15 @@ function ArchiveTaskCard({
     setPicked(index);
     const correct = isChoiceCorrect(index);
     recordResult(task.id, correct);
-    if (correct) markSolved(task.id);
+    if (correct) {
+      markSolved(task.id);
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "cke",
+        isCorrect: true,
+        xpReward: Math.max(10, task.points * 4),
+      });
+    }
   }
 
   async function checkOpen() {
@@ -126,6 +135,12 @@ function ArchiveTaskCard({
       setAwarded(task.points);
       recordResult(task.id, true);
       markSolved(task.id);
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "cke",
+        isCorrect: true,
+        xpReward: Math.max(10, task.points * 4),
+      });
       setGrading(false);
       return;
     }
@@ -148,7 +163,15 @@ function ArchiveTaskCard({
       setGrade(result);
       setAwarded(resolveAwarded(result, task.points));
       recordResult(task.id, result.acceptAsCorrect);
-      if (result.acceptAsCorrect) markSolved(task.id);
+      if (result.acceptAsCorrect) {
+        markSolved(task.id);
+        void recordTaskCompletion({
+          taskId: task.id,
+          source: "cke",
+          isCorrect: true,
+          xpReward: Math.max(10, task.points * 4),
+        });
+      }
     } catch (err) {
       const withQuota = err as Error & { quota?: AssistQuotaSnapshot };
       if (withQuota.quota) onQuota(withQuota.quota);

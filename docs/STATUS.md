@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-18 12:55 UTC · branch `brak` · commit `brak`
+> Ostatnia aktualizacja: 2026-11-18 13:33 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `1662f5c`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -18,12 +18,12 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Lekcje teorii (seed) | 134 | `materials.ts` |
 | Pliki cache zadań (JSON) | 134 | `data/tasks-cache` |
 | Pliki cache teorii (JSON) | 134 | `data/theory-cache` |
-| Migracje Supabase | 47 | `supabase/migrations` |
+| Migracje Supabase | 49 | `supabase/migrations` |
 | Strony App Router | 43 | `app/**/page.tsx` |
-| Endpointy API | 29 | `app/**/route.ts` |
-| Pliki źródłowe TS/TSX | 614 | bez `node_modules` |
-| Pliki testów jednostkowych | 84 | `tests/*.test.ts` |
-| Asercje `it`/`test` w testach | 502 | statycznie |
+| Endpointy API | 30 | `app/**/route.ts` |
+| Pliki źródłowe TS/TSX | 617 | bez `node_modules` |
+| Pliki testów jednostkowych | 85 | `tests/*.test.ts` |
+| Asercje `it`/`test` w testach | 504 | statycznie |
 | Pliki E2E | 11 | `e2e/*.spec.ts` |
 | Scenariusze E2E | 69 | statycznie |
 <!-- STATUS:END -->

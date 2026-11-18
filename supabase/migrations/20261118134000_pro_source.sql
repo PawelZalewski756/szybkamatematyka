@@ -42,6 +42,10 @@ comment on column public.profiles.pro_granted_reason is
   'Opcjonalny powód przyznania Pro (np. rekompensata za zgłoszenie błędu).';
 
 -- RPC dla właściciela konta: zwraca też pro_source i wygasza gift po terminie.
+-- PostgreSQL nie pozwala zmienić typu zwracanego przez CREATE OR REPLACE,
+-- dlatego najpierw usuwamy starą wersję funkcji (4 kolumny -> 5 kolumn).
+drop function if exists public.get_my_subscription();
+
 create or replace function public.get_my_subscription()
 returns table (
   subscription_status text,

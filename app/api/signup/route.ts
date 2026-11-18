@@ -1,5 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import { after } from "next/server";
 import { deliverSignupNotification } from "@/lib/telegram/signup-delivery";
 import { sendWelcomeEmail } from "@/lib/email/welcome";
 import { validateAuthInput, validateNick } from "@/lib/auth-errors";
@@ -120,44 +119,46 @@ export async function POST(request: Request): Promise<Response> {
     email_confirmed_at: data.user.email_confirmed_at ?? null,
     user_metadata: data.user.user_metadata ?? null,
   };
-  after(async () => {
-    const metadata = newUser.user_metadata ?? {};
-    const nick =
-      typeof metadata.nick === "string"
-        ? metadata.nick
-        : typeof metadata.nickname === "string"
-          ? metadata.nickname
-          : "";
+  // Wysyłamy powiadomienie przed odpowiedzią, a nie w `after()`. Wcześniej
+  // zdarzało się, że funkcja serverless kończyła się przed callbackiem i nowe
+  // konto nie pojawiało się na Telegramie. Idempotencja jest po stronie
+  // signup_notification_deliveries, więc ponowienie nie zdubluje wiadomości.
+  const metadata = newUser.user_metadata ?? {};
+  const welcomeNick =
+    typeof metadata.nick === "string"
+      ? metadata.nick
+      : typeof metadata.nickname === "string"
+        ? metadata.nickname
+        : "";
 
-    const [notification, welcome] = await Promise.all([
-      deliverSignupNotification(newUserId, { user: newUser }).catch(
-        (notificationError) => {
-          console.error(
-            "[telegram-signup] Powiadomienie nie zostało wysłane:",
-            notificationError,
-          );
-          return null;
-        },
-      ),
-      newUser.email
-        ? sendWelcomeEmail({
-            to: newUser.email,
-            nick,
-            siteUrl: siteUrl(request),
-          })
-        : Promise.resolve({ ok: false as const, error: "missing recipient" }),
-    ]);
+  const [notification, welcome] = await Promise.all([
+    deliverSignupNotification(newUserId, { user: newUser }).catch(
+      (notificationError) => {
+        console.error(
+          "[telegram-signup] Powiadomienie nie zostało wysłane:",
+          notificationError,
+        );
+        return null;
+      },
+    ),
+    newUser.email
+      ? sendWelcomeEmail({
+          to: newUser.email,
+          nick: welcomeNick,
+          siteUrl: siteUrl(request),
+        })
+      : Promise.resolve({ ok: false as const, error: "missing recipient" }),
+  ]);
 
-    if (notification && notification.status >= 400) {
-      console.error(
-        "[telegram-signup] Powiadomienie nie zostało wysłane:",
-        notification.body,
-      );
-    }
-    if (!welcome.ok && welcome.error !== "not configured") {
-      console.error("[welcome-email] Wysyłka nie udała się:", welcome.error);
-    }
-  });
+  if (notification && notification.status >= 400) {
+    console.error(
+      "[telegram-signup] Powiadomienie nie zostało wysłane:",
+      notification.body,
+    );
+  }
+  if (!welcome.ok && welcome.error !== "not configured") {
+    console.error("[welcome-email] Wysyłka nie udała się:", welcome.error);
+  }
 
   return Response.json(
     { ok: true, userId: data.user.id, needsConfirmation: !data.session },

@@ -9,6 +9,7 @@ import {
   type DiagnosticTask,
 } from "@/lib/diagnostyka";
 import { learningPathLabel, type LearningPath } from "@/lib/learning-path";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { ArrowRight, CheckCircle2, RotateCcw, XCircle } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -52,6 +53,14 @@ export function DiagnosticQuiz({ tasksByPath }: DiagnosticQuizProps) {
       ...current,
       [task.id]: choiceIndex === task.correctIndex,
     }));
+    if (choiceIndex === task.correctIndex) {
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "diagnoza",
+        isCorrect: true,
+        xpReward: 10,
+      });
+    }
   };
 
   const next = () => {

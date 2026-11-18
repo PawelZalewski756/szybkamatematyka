@@ -16,6 +16,7 @@ import type {
 } from "@/lib/minigry/questions/types";
 import { loadLearningPath, type LearningPath } from "@/lib/learning-path";
 import { useMinigameSession } from "@/lib/minigry/use-minigame-session";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -169,6 +170,14 @@ export function ConfiguredMinigame({
 
   const submitAnswer = (correct: boolean, answer: ReactNode) => {
     if (answerLocked) return;
+    if (correct) {
+      void recordTaskCompletion({
+        taskId: question?.q.id ?? "",
+        source: "minigra",
+        isCorrect: true,
+        xpReward: 0,
+      });
+    }
     if (correct) registerCorrect(() => revealAndAdvance(true, answer));
     else registerWrong(() => revealAndAdvance(false, answer));
   };

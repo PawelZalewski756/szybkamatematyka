@@ -3,7 +3,9 @@
 
 create table if not exists public.solved_tasks (
   user_id uuid not null references auth.users(id) on delete cascade,
-  task_id uuid not null references public.tasks(id) on delete cascade,
+  -- Tekstowy identyfikator: trening (UUID), arkusze CKE, minigry i inne.
+  task_id text not null,
+  source text not null default 'trening',
   solved_at timestamptz not null default now(),
   primary key (user_id, task_id)
 );

@@ -34,24 +34,32 @@ begin
     return;
   end if;
 
+  -- Zachowujemy oryginalne opcje (łącznie z dystraktorami), tylko je deduplikujemy.
   select coalesce(
-           jsonb_agg(
-             case
-               when e.value = p_old then to_jsonb(p_correct)
-               else to_jsonb(e.value)
-             end
-             order by e.ord
-           ),
+           jsonb_agg(value order by ord),
            '[]'::jsonb
          )
     into v_new
-    from jsonb_array_elements_text(v_options) with ordinality as e(value, ord);
+    from (
+      select distinct on (value) value, ord
+      from jsonb_array_elements_text(v_options) with ordinality as e(value, ord)
+      order by value, ord
+    ) as unique_options;
 
   if not exists (
     select 1 from jsonb_array_elements_text(v_new) as x(value)
     where x.value = p_correct
   ) then
     v_new := v_new || to_jsonb(p_correct);
+
+    -- Gdy stara odpowiedź była osobną opcją, usuwamy ją tylko wtedy, gdy
+    -- trzeba zrobić miejsce na nową (max 4 opcje).
+    if jsonb_array_length(v_new) > 4 and p_old is not null and p_old <> p_correct then
+      select coalesce(jsonb_agg(value order by ord), '[]'::jsonb)
+        into v_new
+        from jsonb_array_elements_text(v_new) with ordinality as e(value, ord)
+        where value <> p_old;
+    end if;
   end if;
 
   update public.tasks

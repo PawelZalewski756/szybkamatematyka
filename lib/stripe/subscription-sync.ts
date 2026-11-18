@@ -111,11 +111,62 @@ async function applyPatch(
   }
 
   if (!data) {
-    console.error(
-      "[stripe-webhook] Profil nie istnieje - nie zapisano subskrypcji:",
-      userId,
-    );
-    throw new Error("Profil użytkownika nie istnieje - nie zapisano subskrypcji.");
+    // Profil mógł nie powstać (trigger nie zadziałał / konto z importu).
+    // Nie rzucamy 500, bo Stripe po kilku takich błędach wyłącza webhook.
+    // Tworzymy minimalny profil i od razu zapisujemy subskrypcję.
+    const fallbackNick = `gracz_${userId.replace(/-/g, "")}`;
+    const insertPatch = {
+      id: userId,
+      nick: fallbackNick,
+      nickname: fallbackNick,
+      xp: 0,
+      level: 1,
+      ...patch,
+    };
+    let inserted = await supabase
+      .from("profiles")
+      .insert(insertPatch)
+      .select("id")
+      .maybeSingle();
+
+    if (
+      inserted.error &&
+      isPostgrestUndefinedColumnError(inserted.error as PostgrestError)
+    ) {
+      const { pro_source: _proSource, ...withoutSource } = insertPatch;
+      void _proSource;
+      inserted = await supabase
+        .from("profiles")
+        .insert(withoutSource)
+        .select("id")
+        .maybeSingle();
+    }
+
+    if (inserted.error) {
+      // 23503 = brak użytkownika w auth.users (konto usunięte). Nie ma czego
+      // aktualizować, więc kończymy bez 500 i bez blokowania kolejnych zdarzeń.
+      if (inserted.error.code === "23503") {
+        console.error(
+          "[stripe-webhook] Brak użytkownika auth dla subskrypcji:",
+          userId,
+        );
+        return;
+      }
+      if (inserted.error.code === "23505") {
+        const retry = await supabase
+          .from("profiles")
+          .update(patch)
+          .eq("id", userId)
+          .select("id")
+          .maybeSingle();
+        if (!retry.error && retry.data) return;
+      }
+      console.error(
+        "[stripe-webhook] Nie udało się utworzyć profilu dla subskrypcji:",
+        inserted.error,
+      );
+      throw new Error("Nie udało się utworzyć profilu dla subskrypcji.");
+    }
   }
 }
 

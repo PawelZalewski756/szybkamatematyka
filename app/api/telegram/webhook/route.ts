@@ -158,7 +158,55 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
   const supabase = getSupabaseAdmin();
 
   if (command === "stats") {
+    // Najpierw RPC liczące auth.users (nie tylko profiles). To naprawia
+    // przypadek, w którym nowe konto było w /users, ale /stats pokazywał 0.
+    const platform = await supabase.rpc("get_platform_stats");
+    const platformRow = (
+      Array.isArray(platform.data) ? platform.data[0] : platform.data
+    ) as
+      | {
+          users_total?: number | string;
+          users_new_7d?: number | string;
+          users_new_24h?: number | string;
+          profiles_total?: number | string;
+          solved_total?: number | string;
+          solved_7d?: number | string;
+          active_users_7d?: number | string;
+        }
+      | null
+      | undefined;
+
+    if (!platform.error && platformRow) {
+      return [
+        "Statystyki platformy",
+        `Użytkownicy łącznie: ${plNumber.format(Number(platformRow.users_total ?? 0))}`,
+        `Nowe konta (7 dni): ${plNumber.format(Number(platformRow.users_new_7d ?? 0))}`,
+        `Nowe konta (24 h): ${plNumber.format(Number(platformRow.users_new_24h ?? 0))}`,
+        `Profile: ${plNumber.format(Number(platformRow.profiles_total ?? 0))}`,
+        `Rozwiązane zadania łącznie: ${plNumber.format(Number(platformRow.solved_total ?? 0))}`,
+        `Rozwiązane zadania (7 dni): ${plNumber.format(Number(platformRow.solved_7d ?? 0))}`,
+        `Aktywni uczniowie (7 dni): ${plNumber.format(Number(platformRow.active_users_7d ?? 0))}`,
+      ].join("\n");
+    }
+
     const since7 = new Date(Date.now() - 7 * DAY_MS).toISOString();
+    const since7Ms = Date.parse(since7);
+    let authUsersTotal = 0;
+    let authUsersNew7 = 0;
+    for (let page = 1; page <= 20; page += 1) {
+      const { data: authPage, error: authError } =
+        await supabase.auth.admin.listUsers({ page, perPage: 1000 });
+      if (authError || !authPage) break;
+      authUsersTotal = authPage.total || authUsersTotal + authPage.users.length;
+      for (const user of authPage.users) {
+        const createdAt = Date.parse(user.created_at);
+        if (Number.isFinite(createdAt) && createdAt >= since7Ms) {
+          authUsersNew7 += 1;
+        }
+      }
+      if (authPage.users.length < 1000) break;
+    }
+
     const [users, newUsers, solvedTotal, solved7] = await Promise.all([
       safeCount(
         supabase.from("profiles").select("id", { count: "exact", head: true }),
@@ -188,8 +236,8 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
 
     const lines = [
       "Statystyki platformy",
-      `Użytkownicy łącznie: ${formatCount(users)}`,
-      `Nowe konta: ${formatCount(newUsers)}`,
+      `Użytkownicy łącznie: ${authUsersTotal || formatCount(users)}`,
+      `Nowe konta (7 dni): ${authUsersNew7 || formatCount(newUsers)}`,
       `Rozwiązane zadania łącznie: ${formatCount(
         solvedTotal,
         "brak tabeli solved_tasks",

@@ -3,6 +3,7 @@
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { MathText } from "@/components/trening/MathText";
 import { useDailyChallenge } from "@/lib/wyzwania/use-daily-challenge";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { DAILY_CHALLENGE_QUESTION_COUNT } from "@/lib/wyzwania/daily-challenge";
 import type { ChallengeReward } from "@/lib/wyzwania/types";
 import { AnimatePresence, motion } from "framer-motion";
@@ -245,7 +246,15 @@ export function DailyChallengeView() {
 
     setLocked(true);
     setFeedback(isRight ? "correct" : "wrong");
-    if (isRight) setCorrectCount(nextCorrect);
+    if (isRight) {
+      setCorrectCount(nextCorrect);
+      void recordTaskCompletion({
+        taskId: current.id,
+        source: "wyzwanie",
+        isCorrect: true,
+        xpReward: 0,
+      });
+    }
 
     window.setTimeout(() => {
       setFeedback(null);

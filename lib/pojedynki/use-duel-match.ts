@@ -9,6 +9,7 @@ import type {
 } from "@/lib/pojedynki/duel-types";
 import { generateDuelQuestions } from "@/lib/pojedynki/duel-questions";
 import { isAnswerCorrect, pointsForCombo } from "@/lib/pojedynki/duel-engine";
+import { recordTaskCompletion } from "@/lib/progress/task-completion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export type DuelMatchPhase = "idle" | "playing" | "finished";
@@ -76,6 +77,14 @@ export function useDuelMatch(
       if (!question) return;
 
       const hit = isAnswerCorrect(question, value);
+      if (hit) {
+        void recordTaskCompletion({
+          taskId: question.q.id,
+          source: "pojedynek",
+          isCorrect: true,
+          xpReward: 0,
+        });
+      }
       const nextCombo = hit ? combo + 1 : 0;
       const gained = hit ? pointsForCombo(nextCombo) : 0;
       const nextScore = score + gained;

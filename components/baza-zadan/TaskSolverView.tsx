@@ -23,6 +23,10 @@ import { answersEquivalent, checkAnswerMatch } from "@/lib/math/answer-equiv";
 import type { LearningPath } from "@/lib/learning-path";
 import { useLearningPath } from "@/components/LearningPathProvider";
 import { useSolvedTasks } from "@/components/SolvedTasksProvider";
+import {
+  defaultXpForDifficulty,
+  recordTaskCompletion,
+} from "@/lib/progress/task-completion";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import {
   fetchTaskGrade,
@@ -152,6 +156,12 @@ export function TaskSolverView({
       setShowExplanation(true);
       recordResult(task.id, true);
       markSolved(task.id);
+      void recordTaskCompletion({
+        taskId: task.id,
+        source: "baza-zadan",
+        isCorrect: true,
+        xpReward: defaultXpForDifficulty(task.difficulty),
+      });
       setGrading(false);
       void loadSolution();
       return;
@@ -178,6 +188,12 @@ export function TaskSolverView({
       recordResult(task.id, grade.acceptAsCorrect);
       if (grade.acceptAsCorrect) {
         markSolved(task.id);
+        void recordTaskCompletion({
+          taskId: task.id,
+          source: "baza-zadan",
+          isCorrect: true,
+          xpReward: defaultXpForDifficulty(task.difficulty),
+        });
       }
       void loadSolution();
     } catch (err) {
@@ -299,6 +315,12 @@ export function TaskSolverView({
                     recordResult(task.id, correct);
                     if (correct) {
                       markSolved(task.id);
+                      void recordTaskCompletion({
+                        taskId: task.id,
+                        source: "baza-zadan",
+                        isCorrect: true,
+                        xpReward: defaultXpForDifficulty(task.difficulty),
+                      });
                     }
                     void loadSolution();
                   }}
