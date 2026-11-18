@@ -134,7 +134,7 @@ Naprawa:
     profile, rozwiązania i aktywnych uczniów,
 - `/stats` używa RPC, a gdy go brak — awaryjnie liczy `auth.users` przez admin API,
 - `/api/signup` wysyła powiadomienie Telegram **przed** odpowiedzią (nie w `after()`),
-- nowy cron `/api/telegram/sync-signups` (`vercel.json`, co 15 min) dosyła
+- nowy cron `/api/telegram/sync-signups` (`vercel.json`, raz dziennie) dosyła
   powiadomienia dla kont z ostatnich 7 dni; idempotencja przez
   `signup_notification_deliveries`,
 - `CRON_SECRET` w `.env.example`.
