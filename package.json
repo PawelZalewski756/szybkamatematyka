@@ -16,6 +16,7 @@
     "test:e2e": "playwright test",
     "status": "tsx scripts/status.ts",
     "status:check": "tsx scripts/status.ts --check",
+    "audit:db-tasks": "node scripts/auditDbTasks.mjs",
     "audit:questions": "tsx scripts/auditQuestionQuality.ts",
     "audit:cke": "tsx scripts/auditCkeSolutions.ts",
     "audit:render": "tsx scripts/auditTaskRendering.ts",
