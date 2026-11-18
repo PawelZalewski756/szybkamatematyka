@@ -85,7 +85,14 @@ export default function LoginPage() {
 
   const handleResendConfirmation = async () => {
     const trimmedEmail = email.trim();
-    if (!trimmedEmail || !supabaseReady) return;
+    if (!trimmedEmail.includes("@")) {
+      setIsError(true);
+      setMessage(
+        "Aby ponowić potwierdzenie, wpisz w polu adres e-mail przypisany do konta.",
+      );
+      return;
+    }
+    if (!supabaseReady) return;
     setLoading(true);
     try {
       const { error } = await getSupabase().auth.resend({
@@ -111,6 +118,7 @@ export default function LoginPage() {
     clearMessage();
     setPasswordConfirm("");
     setNick("");
+    if (!email.includes("@")) setEmail("");
     setTermsAccepted(false);
     setAgeConfirmed(false);
     setSchoolLevel(hasStoredLearningPath() ? loadLearningPath() : "");
@@ -126,11 +134,37 @@ export default function LoginPage() {
   const handleLogin = async () => {
     clearMessage();
 
-    const validationError = validateAuthInput(email, password);
-    if (validationError) {
+    const identifier = email.trim();
+    const looksLikeEmail = identifier.includes("@");
+
+    if (!identifier) {
       setIsError(true);
-      setMessage(validationError);
+      setMessage("Podaj nick lub adres e-mail.");
       return;
+    }
+    if (looksLikeEmail) {
+      const validationError = validateAuthInput(identifier, password);
+      if (validationError) {
+        setIsError(true);
+        setMessage(validationError);
+        return;
+      }
+    } else {
+      if (!password) {
+        setIsError(true);
+        setMessage("Podaj hasło.");
+        return;
+      }
+      if (password.length < 6) {
+        setIsError(true);
+        setMessage("Hasło musi mieć co najmniej 6 znaków.");
+        return;
+      }
+      if (identifier.length > 64) {
+        setIsError(true);
+        setMessage("Nick może mieć maksymalnie 64 znaki.");
+        return;
+      }
     }
 
     if (!supabaseReady) {
@@ -143,28 +177,77 @@ export default function LoginPage() {
 
     try {
       const supabase = getSupabase();
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password,
-      });
 
-      if (error) throw error;
+      if (looksLikeEmail) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: identifier,
+          password,
+        });
 
-      if (data.user) {
+        if (error) throw error;
+
+        if (data.user) {
+          try {
+            await ensureUserProfile(data.user);
+          } catch {
+            /* sesja OK - profil naprawi navbar; i tak idziemy na stronę główną */
+          }
+        }
+      } else {
+        // Nick: serwer tłumaczy go na e-mail i loguje przez Supabase Auth.
+        const response = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ identifier, password }),
+        });
+        const payload = (await response.json().catch(() => null)) as
+          | {
+              access_token?: string;
+              refresh_token?: string;
+              error?: string;
+              code?: string;
+            }
+          | null;
+
+        if (!response.ok || !payload?.access_token || !payload.refresh_token) {
+          const serverError = new Error(
+            payload?.error ?? "Nie udało się zalogować.",
+          ) as Error & { code?: string };
+          serverError.code = payload?.code;
+          throw serverError;
+        }
+
+        const { error: sessionError } = await supabase.auth.setSession({
+          access_token: payload.access_token,
+          refresh_token: payload.refresh_token,
+        });
+        if (sessionError) throw sessionError;
+      }
+
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session?.user) {
         try {
-          await ensureUserProfile(data.user);
+          await ensureUserProfile(session.user);
         } catch {
-          /* sesja OK - profil naprawi navbar; i tak idziemy na stronę główną */
+          /* sesja OK - profil naprawi navbar */
         }
       }
 
       router.replace("/");
     } catch (err) {
+      const code = (err as Error & { code?: string })?.code;
       setIsError(true);
       setNeedsConfirm(
-        (err as Error)?.message?.includes("Email not confirmed") ?? false,
+        code === "email_not_confirmed" ||
+          ((err as Error)?.message?.includes("Email not confirmed") ?? false),
       );
-      setMessage(getAuthErrorMessage(err as Error));
+      setMessage(
+        code === "email_not_confirmed" && (err as Error).message
+          ? (err as Error).message
+          : getAuthErrorMessage(err as Error),
+      );
     } finally {
       setLoading(false);
     }
@@ -326,7 +409,7 @@ export default function LoginPage() {
               <span className="text-gradient-brand">Szybkiej Matematyki</span>
             </h1>
             <p className="mt-3 text-center text-sm text-muted">
-              Masz już konto? Wpisz e-mail i hasło.
+              Masz już konto? Wpisz nick lub e-mail i hasło.
             </p>
 
             <form
@@ -339,15 +422,15 @@ export default function LoginPage() {
             >
               <label className="flex flex-col gap-2">
                 <span className="text-xs font-bold uppercase tracking-wide text-muted">
-                  Email
+                  Nick lub e-mail
                 </span>
                 <input
-                  type="email"
+                  type="text"
                   name="email"
-                  autoComplete="email"
+                  autoComplete="username"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="twoj@email.pl"
+                  placeholder="nick lub twoj@email.pl"
                   className={`${inputClassName} focus:border-accent/50 focus:ring-accent/20`}
                 />
               </label>

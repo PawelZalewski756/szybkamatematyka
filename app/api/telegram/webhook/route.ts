@@ -6,6 +6,11 @@ import {
   parseTelegramCommand,
 } from "@/lib/telegram/admin-bot";
 import { normalizeTelegramBotToken } from "@/lib/telegram/send";
+import {
+  findUserIdByIdentifier,
+  grantProToUser,
+} from "@/lib/subscription/grant-pro";
+import { fetchSolvedStats } from "@/lib/supabase/solved-stats";
 
 export const runtime = "nodejs";
 
@@ -144,6 +149,8 @@ const HELP_TEXT = [
   "/new - ostatnie rejestracje",
   "/users [strona] - użytkownicy z liczbą rozwiązanych zadań",
   "/top - ranking XP",
+  "/solved - ile zadań zapisano w solved_tasks (diagnostyka)",
+  "/pro <nick|email> [dni] [powód] - przyznaj Pro ręcznie",
   "/szybkaproba - statystyki szybkiej próby",
   "/visits [dni] - wejścia i unikalni odwiedzający",
   "/health - sprawdzenie połączenia",
@@ -299,6 +306,48 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     ].join("\n");
   }
 
+  if (command === "solved") {
+    const stats = await fetchSolvedStats(supabase);
+    if (stats.total === 0) {
+      return [
+        "Brak wierszy w solved_tasks.",
+        "Zapisywane są tylko rozwiązania zalogowanych użytkowników.",
+        "Gość zapisuje postęp lokalnie; po zalogowaniu historia jest dosyłana,",
+        "ale tylko z tej przeglądarki.",
+      ].join("\n");
+    }
+
+    const top = [...stats.perUser.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10);
+    const { data: profiles } = await supabase
+      .from("profiles")
+      .select("id, nick, nickname")
+      .in("id", top.map(([id]) => id));
+    const names = new Map(
+      (profiles ?? []).map((profile) => [
+        String(profile.id),
+        String(profile.nick || profile.nickname || "bez nicku"),
+      ]),
+    );
+
+    return [
+      "Rozwiązane zadania (solved_tasks):",
+      `Łącznie: ${plNumber.format(stats.total)}`,
+      `Ostatnie 7 dni: ${plNumber.format(stats.last7)}`,
+      `Uczniowie z rozwiązaniami: ${plNumber.format(stats.students)}`,
+      "",
+      "Top 10:",
+      ...top.map(
+        ([id, count], index) =>
+          `${index + 1}. ${names.get(id) ?? "bez nicku"} - ${plNumber.format(count)}`,
+      ),
+      stats.truncated ? "Uwaga: agregacja ucięta do 200 000 wierszy." : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+  }
+
   if (command === "users") {
     const requestedPage = args[0] ? Number(args[0]) : 1;
     if (
@@ -331,40 +380,29 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     const totalUsers = data.total || count || data.users.length;
     const totalPages = Math.max(1, Math.ceil(totalUsers / USERS_PER_PAGE));
 
-    // Liczba rozwiązanych zadań per uczeń - wcześniej /users pokazywało tylko XP,
-    // więc nie było widać, ile zadań faktycznie zrobili uczniowie.
-    //
-    // Liczymy osobnym zapytaniem `count` na ucznia (bez pobierania wierszy):
-    // jest to odporne na limit 1000 wierszy PostgREST i nie zależy od kolumny
-    // solved_at, której brak w starszych instalacjach psuł całą listę.
+    // Liczba rozwiązanych zadań per uczeń. Używamy tego samego agregatora co
+    // panel admina (`fetchSolvedStats`), a nie `count` per uczeń - dzięki temu
+    // /users i /admin/analityka pokazują dokładnie te same liczby.
     const requestedIds = data.users.map((user) => user.id);
     const solvedCounts = new Map<string, number>();
     let solvedCountError: string | null = null;
+    let solvedTotalValue = 0;
 
-    const countResults = await Promise.all(
-      requestedIds.map(async (id) => ({
-        id,
-        result: await safeCount(
-          supabase
-            .from("solved_tasks")
-            .select("user_id", { count: "exact", head: true })
-            .eq("user_id", id),
-        ),
-      })),
-    );
-    for (const { id, result } of countResults) {
-      if (result.error) {
-        solvedCountError ??= result.error;
-        continue;
+    try {
+      const stats = await fetchSolvedStats(supabase);
+      solvedTotalValue = stats.total;
+      for (const id of requestedIds) {
+        solvedCounts.set(id, stats.perUser.get(id) ?? 0);
       }
-      solvedCounts.set(id, result.value ?? 0);
+    } catch (error) {
+      solvedCountError =
+        error instanceof Error ? error.message : String(error);
     }
 
-    const solvedTotal = await safeCount(
-      supabase
-        .from("solved_tasks")
-        .select("user_id", { count: "exact", head: true }),
-    );
+    const solvedTotal = {
+      value: solvedCountError ? null : solvedTotalValue,
+      error: solvedCountError,
+    };
 
     const firstUserNumber = (requestedPage - 1) * USERS_PER_PAGE + 1;
     const lines = [
@@ -407,6 +445,13 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       lines.push(
         "",
         describeTelegramCommandError(new Error(`solved_tasks: ${solvedCountError}`)),
+      );
+    } else if (solvedTotalValue === 0) {
+      lines.push(
+        "",
+        "0 zadań = brak wierszy w solved_tasks.",
+        "Zapisywane są tylko rozwiązania zalogowanych użytkowników.",
+        "Gość ma postęp lokalnie; po zalogowaniu dosyła go z tej przeglądarki.",
       );
     }
 
@@ -455,6 +500,67 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
       `Wejścia: ${total?.total_views ?? 0}`,
       "Liczone anonimowo, tylko za zgodą odwiedzającego.",
     ].join("\n");
+  }
+
+  if (command === "pro") {
+    const rawIdentifier = args[0]?.trim() ?? "";
+    const identifier = rawIdentifier.replace(/^@/, "");
+    if (!identifier) {
+      return [
+        "Użycie: /pro <nick|email> [dni] [powód]",
+        "Przykład: /pro vlad 30 rekompensata za zgłoszenie błędu",
+        "Domyślnie: 30 dni, źródło gift, bez subskrypcji Stripe.",
+      ].join("\n");
+    }
+
+    const daysArg = args[1] && /^\d+$/.test(args[1]) ? Number(args[1]) : 30;
+    const days = Math.max(1, Math.min(365, daysArg));
+    const reason =
+      (args[1] && /^\d+$/.test(args[1]) ? args.slice(2) : args.slice(1))
+        .join(" ")
+        .trim() || "rekompensata przyznana przez administratora";
+
+    const found = await findUserIdByIdentifier(supabase, identifier);
+    if (!found) {
+      return `Nie znalazłem konta dla „${identifier}”. Podaj dokładny nick albo e-mail.`;
+    }
+
+    const grant = await grantProToUser(supabase, {
+      ...found,
+      days,
+      reason,
+    });
+
+    if (grant.status === "skipped_paid") {
+      return [
+        `ℹ️ ${grant.nick}${grant.email ? ` (${grant.email})` : ""} ma aktywne płatne Pro Stripe.`,
+        "Nie nadpisałem subskrypcji — gift nie jest potrzebny.",
+      ].join("\n");
+    }
+
+    if (grant.status === "failed") {
+      return `❌ Nie udało się przyznać Pro: ${grant.error}`;
+    }
+
+    if (grant.status === "not_found") {
+      return `Nie znalazłem konta dla „${identifier}”.`;
+    }
+
+    const end = new Intl.DateTimeFormat("pl-PL", {
+      dateStyle: "long",
+      timeZone: "Europe/Warsaw",
+    }).format(new Date(grant.periodEnd));
+
+    return [
+      "✅ Pro przyznane",
+      `Użytkownik: ${grant.nick}${grant.email ? ` (${grant.email})` : ""}`,
+      `Okres: ${grant.days} dni (do ${end})`,
+      `Źródło: gift (bez subskrypcji Stripe)`,
+      `Powód: ${reason}`,
+      grant.extended ? "Gift wydłużony od poprzedniej daty końca." : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
   }
 
   if (command === "health") {

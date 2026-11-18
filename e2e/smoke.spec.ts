@@ -205,7 +205,7 @@ test.describe("Smoke", () => {
     page,
   }) => {
     await page.goto("/login");
-    await page.locator('input[name="email"]').fill("niepoprawny-adres");
+    await page.locator('input[name="email"]').fill("niepoprawny@adres");
     await page.locator('input[name="password"]').fill("123");
     await page.getByRole("button", { name: "Zaloguj się" }).click();
 
