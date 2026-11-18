@@ -37,48 +37,15 @@ type BazaZadanViewProps = {
   cmsNote?: string | null;
 };
 
-const TABS: readonly { id: BazaTab; label: string; hint: string }[] = [
-  {
-    id: "zadania",
-    label: "Ćwicz zadania",
-    hint: "Spokojny katalog tematów, wyszukiwarka i zadania odkrywane po wyborze.",
-  },
-  {
-    id: "arkusze",
-    label: "Arkusze CKE",
-    hint: "Oficjalne matury i egzaminy z rozwiązaniami krok po kroku.",
-  },
-  {
-    id: "trening",
-    label: "Symulacje",
-    hint: "Pełne arkusze treningowe w aplikacji (E8 / matura MIX).",
-  },
+const TABS: readonly { id: BazaTab; label: string }[] = [
+  { id: "zadania", label: "Ćwicz zadania" },
+  { id: "arkusze", label: "Arkusze CKE" },
+  { id: "trening", label: "Symulacje" },
 ];
 
 function parseTab(value: string | null): BazaTab {
   if (value === "arkusze" || value === "trening") return value;
   return "zadania";
-}
-
-function polishCount(
-  count: number,
-  one: string,
-  few: string,
-  many: string,
-): string {
-  const absolute = Math.abs(count);
-  const lastDigit = absolute % 10;
-  const lastTwoDigits = absolute % 100;
-  const form =
-    absolute === 1
-      ? one
-      : lastDigit >= 2 &&
-          lastDigit <= 4 &&
-          (lastTwoDigits < 10 || lastTwoDigits >= 20)
-        ? few
-        : many;
-
-  return `${count} ${form}`;
 }
 
 export function BazaZadanView({
@@ -170,11 +137,9 @@ export function BazaZadanView({
   const countValues: Record<BazaTab, string> = {
     zadania: String(taskCount),
     arkusze:
-      cmsLoading ? "…" : cmsLoadState === "idle" ? "-" : String(cmsArkuszCount),
+      cmsLoading ? "…" : cmsLoadState === "idle" ? "" : String(cmsArkuszCount),
     trening: String(sheetCount),
   };
-
-  const activeTab = TABS.find((t) => t.id === tab) ?? TABS[0]!;
 
   const setTab = (next: BazaTab) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -189,17 +154,18 @@ export function BazaZadanView({
 
   return (
     <div className="page-container w-full py-8 sm:py-10">
-      <header className="max-w-3xl">
-        <p className="text-overline">Baza zadań</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Wybierz punkt startu
-        </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-          Wybierz temat, wpisz własną frazę albo przejdź do arkuszy. Poziom
-          nauki możesz zmienić w każdej chwili, także bez zakładania konta.
-        </p>
+      <header className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div className="max-w-2xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+            Baza zadań
+          </h1>
+          <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+            Zadania z rozwiązaniami, oficjalne arkusze CKE i symulacje egzaminu -
+            wszystko w jednym miejscu.
+          </p>
+        </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-surface-border bg-surface px-3 py-2.5">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-surface-border bg-surface px-3 py-2.5">
           <span
             id="baza-poziom-label"
             className="text-xs font-bold uppercase tracking-wide text-muted"
@@ -207,38 +173,14 @@ export function BazaZadanView({
             Poziom nauki
           </span>
           <SchoolLevelToggle labelledBy="baza-poziom-label" />
-          <span className="text-xs text-muted">
-            <span className="font-semibold text-foreground">
-              {polishCount(taskCount, "zadanie", "zadania", "zadań")}
-            </span>{" "}
-            w tej ścieżce
-          </span>
         </div>
       </header>
 
-      <section
-        className="mt-7 max-w-6xl border-y border-surface-border py-3"
-        aria-labelledby="baza-zadan-goal-heading"
-      >
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <h2
-            id="baza-zadan-goal-heading"
-            className="text-sm font-bold text-foreground"
-          >
-            Sposób pracy
-          </h2>
-          <p className="text-xs text-muted">
-            Aktywne:{" "}
-            <span className="font-semibold text-foreground">
-              {activeTab.label}
-            </span>
-          </p>
-        </div>
-
+      <div className="mt-6 border-y border-surface-border py-3">
         <div
-          className="mt-3 flex flex-wrap gap-1"
+          className="flex flex-wrap gap-1"
           role="tablist"
-          aria-label="Sposób pracy w bazie zadań"
+          aria-label="Sekcje bazy zadań"
         >
           {TABS.map(({ id, label }) => {
             const active = tab === id;
@@ -258,29 +200,27 @@ export function BazaZadanView({
                 }`}
               >
                 <span>{label}</span>
-                <span
-                  aria-hidden="true"
-                  className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-xs tabular-nums ${
-                    active
-                      ? "bg-black/20 text-on-accent"
-                      : "bg-surface-hover text-muted"
-                  }`}
-                >
-                  {countValues[id]}
-                </span>
+                {countValues[id] ? (
+                  <span
+                    aria-hidden="true"
+                    className={`ml-auto min-w-6 rounded-md px-1.5 py-0.5 text-center text-xs tabular-nums ${
+                      active
+                        ? "bg-black/20 text-on-accent"
+                        : "bg-surface-hover text-muted"
+                    }`}
+                  >
+                    {countValues[id]}
+                  </span>
+                ) : null}
               </button>
             );
           })}
         </div>
-        <p className="mt-2 text-xs leading-relaxed text-muted">
-          {activeTab.hint}
-        </p>
-
-      </section>
+      </div>
 
       <div
         id="baza-zadan-panel"
-        className="mt-7"
+        className="mt-6"
         role="tabpanel"
         aria-labelledby={`baza-tab-${tab}`}
       >

@@ -14,14 +14,15 @@ test.describe("Trening - pełny zakres tematów", () => {
 
     // Plan klasy nie może filtrować treningu: funkcja kwadratowa jest w
     // programie liceum 2, a nie w planie liceum 3.
-    await page.getByText("Znajdź temat lub filtruj").click();
     await page.getByLabel("Szukaj tematu").fill("funkcja kwadratowa");
 
-    await expect(page.getByText("Funkcja kwadratowa", { exact: true })).toBeVisible();
+    await expect(
+      page.getByText("Funkcja kwadratowa", { exact: true }),
+    ).toBeVisible();
     await expect(page.getByText(/Znaleziono 1 temat/)).toBeVisible();
   });
 
-  test("przełącznik egzaminu nie gubi tematów po zmianie klasy", async ({
+  test("przełącznik egzaminu podmienia całą listę tematów", async ({
     page,
   }) => {
     await page.addInitScript(() => {
@@ -31,9 +32,24 @@ test.describe("Trening - pełny zakres tematów", () => {
     await page.goto("/trening");
     await page.getByRole("tab", { name: "Matura podstawowa" }).click();
 
-    const summary = page.getByLabel("Podsumowanie postępu");
-    await expect(summary).toContainText("tematów");
-    await expect(summary).not.toContainText("11 tematów");
+    const browse = page.getByTestId("training-browse");
+    await expect(browse).toContainText("76 tematów");
+    await expect(
+      page.getByTestId("training-department-navigation"),
+    ).toContainText("Liczby rzeczywiste");
+  });
+
+  test("wyszukiwarka pokazuje licznik i czyści się jednym kliknięciem", async ({
+    page,
+  }) => {
+    await page.goto("/trening");
+
+    const search = page.getByLabel("Szukaj tematu");
+    await search.fill("procenty");
+    await expect(page.getByText(/Znaleziono/)).toBeVisible();
+
+    await page.getByRole("button", { name: "Wyczyść wyszukiwanie" }).click();
+    await expect(search).toHaveValue("");
   });
 });
 
@@ -63,5 +79,12 @@ test.describe("Trening na telefonie", () => {
       // Panel ma być tuż pod przyciskiem, a nie po całej liście działów.
       expect(panelBox.y - (buttonBox.y + buttonBox.height)).toBeLessThan(120);
     }
+  });
+
+  test("na starcie nie rozwija wszystkich tematów", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/trening");
+
+    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
   });
 });
