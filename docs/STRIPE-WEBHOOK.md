@@ -15,13 +15,26 @@ W naszym kodzie były dwa źródła błędów:
 Endpoint nigdy nie powinien odpowiadać 5xx przy poprawnym podpisie i
 istniejącym użytkowniku.
 
+## Najważniejsze: adres z `www`
+
+Produkcja przekierowuje `https://szybkamatematyka.pl` → `https://www.szybkamatematyka.pl`
+(308). Stripe nie powinien dostawać przekierowania na webhooku. W Stripe ustaw
+adres **z `www`**:
+
+```
+https://www.szybkamatematyka.pl/api/stripe/webhook
+```
+
+To była przyczyna 100% błędów: endpoint na apexie dostawał 308, zamiast
+przyjąć podpisany POST.
+
 ## Co ustawić w Vercel
 
 W **Project → Settings → Environment Variables** (Production):
 
 - `STRIPE_SECRET_KEY` — klucz **live** `sk_live_...`,
 - `STRIPE_WEBHOOK_SECRET` — **live** signing secret endpointu
-  `https://szybkamatematyka.pl/api/stripe/webhook` (`whsec_...`),
+  `https://www.szybkamatematyka.pl/api/stripe/webhook` (`whsec_...`),
 - `SUPABASE_SERVICE_ROLE_KEY` — klucz `service_role`,
 - `NEXT_PUBLIC_SUPABASE_URL`,
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
@@ -32,7 +45,7 @@ zwraca 503 i Stripe znów go wyłączy.
 ## Co zrobić w Stripe
 
 1. Stripe Dashboard → **Developers → Webhooks**.
-2. Wybierz endpoint `https://szybkamatematyka.pl/api/stripe/webhook`.
+2. Wybierz endpoint `https://www.szybkamatematyka.pl/api/stripe/webhook`.
 3. Kliknij **Enable** (Stripe go wyłączył).
 4. Sprawdź zdarzenia:
    - `checkout.session.completed`
