@@ -64,6 +64,22 @@ export async function GET(request: Request): Promise<Response> {
     );
   }
 
+  // Bez tabeli idempotencji cron mógłby wysyłać to samo powiadomienie
+  // co 15 minut. Lepiej zatrzymać się i poprosić o migrację.
+  const { error: idempotencyError } = await supabase
+    .from("signup_notification_deliveries")
+    .select("user_id")
+    .limit(1);
+  if (idempotencyError) {
+    return Response.json(
+      {
+        error:
+          "Brak tabeli signup_notification_deliveries — uruchom migrację 20261101200000_signup_telegram_notifications.sql.",
+      },
+      { status: 503 },
+    );
+  }
+
   const cutoff = Date.now() - MAX_AGE_MS;
   const candidates: Array<{ id: string; email: string | null; created_at: string }> = [];
 
