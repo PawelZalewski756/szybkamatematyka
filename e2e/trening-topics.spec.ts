@@ -36,3 +36,32 @@ test.describe("Trening - pełny zakres tematów", () => {
     await expect(summary).not.toContainText("11 tematów");
   });
 });
+
+test.describe("Trening na telefonie", () => {
+  test("tematy otwierają się od razu pod klikniętym działem", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/trening");
+
+    const department = page.getByRole("button", {
+      name: /Liczby i działania/,
+    });
+    await expect(department).toBeVisible();
+    await department.click();
+
+    const panel = page.getByTestId("training-department-panel");
+    const topics = page.getByTestId("training-topic-list");
+    await expect(panel).toBeVisible();
+    await expect(topics).toBeVisible();
+
+    const buttonBox = await department.boundingBox();
+    const panelBox = await panel.boundingBox();
+    expect(buttonBox).not.toBeNull();
+    expect(panelBox).not.toBeNull();
+    if (buttonBox && panelBox) {
+      // Panel ma być tuż pod przyciskiem, a nie po całej liście działów.
+      expect(panelBox.y - (buttonBox.y + buttonBox.height)).toBeLessThan(120);
+    }
+  });
+});

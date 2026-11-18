@@ -231,6 +231,20 @@ const EXAM_OPTIONS: { key: SelectedExam; label: string }[] = [
   { key: "8_klasa", label: "Egzamin 8-klasisty" },
 ];
 
+function useIsMobile(): boolean {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 1023px)");
+    const update = () => setIsMobile(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  return isMobile;
+}
+
 function ExamSwitcher({
   selected,
   onChange,
@@ -593,6 +607,83 @@ function NextStepCard({
   );
 }
 
+function DepartmentButton({
+  category,
+  index,
+  active,
+  theoryByTopic,
+  onSelect,
+}: {
+  category: CategoryWithProgress;
+  index: number;
+  active: boolean;
+  theoryByTopic: Map<string, TheoryTier>;
+  onSelect: (categoryId: string) => void;
+}) {
+  const metrics = getCategoryMetrics(category);
+  const categoryHasTheory = category.topics.some(
+    (topic) =>
+      (theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none") !== "none",
+  );
+  const status = categoryStatus(metrics, categoryHasTheory);
+
+  return (
+    <button
+      type="button"
+      data-testid={`training-department-${category.id}`}
+      aria-pressed={active}
+      onClick={() => onSelect(category.id)}
+      className={`w-full border-l-2 px-3 py-3 text-left transition ${
+        active
+          ? "border-accent bg-accent-soft/55 text-foreground"
+          : "border-transparent text-muted hover:bg-surface-hover hover:text-foreground"
+      }`}
+    >
+      <div className="flex items-start gap-3">
+        <span
+          aria-hidden="true"
+          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
+            active
+              ? "bg-accent text-on-accent"
+              : "bg-surface-hover text-muted"
+          }`}
+        >
+          {index + 1}
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="flex items-start justify-between gap-2">
+            <span className="truncate text-sm font-bold">{category.name}</span>
+            <span className="shrink-0 text-xs tabular-nums text-accent">
+              {metrics.progress}%
+            </span>
+          </span>
+          <span className="mt-1 block text-xs">
+            {polishCount(
+              category.topics.length,
+              "temat",
+              "tematy",
+              "tematów",
+            )}{" "}
+            · {status}
+          </span>
+          <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
+            <span
+              className="block h-full rounded-full bg-accent transition-[width]"
+              style={{ width: `${metrics.progress}%` }}
+            />
+          </span>
+        </span>
+        <ChevronRight
+          className={`mt-1 h-4 w-4 shrink-0 ${
+            active ? "text-accent" : "text-muted"
+          }`}
+          aria-hidden
+        />
+      </div>
+    </button>
+  );
+}
+
 function DepartmentNavigation({
   categories,
   activeCategoryId,
@@ -615,72 +706,71 @@ function DepartmentNavigation({
         <p className="text-xs text-muted">Wybierz obszar</p>
       </div>
       <div className="space-y-1">
-        {categories.map((category, index) => {
-          const metrics = getCategoryMetrics(category);
-          const categoryHasTheory = category.topics.some(
-            (topic) =>
-              (theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none") !==
-              "none",
-          );
-          const status = categoryStatus(metrics, categoryHasTheory);
-          const active = category.id === activeCategoryId;
-          return (
-            <button
-              key={category.id}
-              type="button"
-              data-testid={`training-department-${category.id}`}
-              aria-pressed={active}
-              onClick={() => onSelect(category.id)}
-              className={`w-full border-l-2 px-3 py-3 text-left transition ${
-                active
-                  ? "border-accent bg-accent-soft/55 text-foreground"
-                  : "border-transparent text-muted hover:bg-surface-hover hover:text-foreground"
-              }`}
-            >
-              <div className="flex items-start gap-3">
-                <span
-                  aria-hidden="true"
-                  className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-                    active
-                      ? "bg-accent text-on-accent"
-                      : "bg-surface-hover text-muted"
-                  }`}
-                >
-                  {index + 1}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="flex items-start justify-between gap-2">
-                    <span className="truncate text-sm font-bold">{category.name}</span>
-                    <span className="shrink-0 text-xs tabular-nums text-accent">
-                      {metrics.progress}%
-                    </span>
-                  </span>
-                  <span className="mt-1 block text-xs">
-                    {polishCount(
-                      category.topics.length,
-                      "temat",
-                      "tematy",
-                      "tematów",
-                    )}{" "}
-                    · {status}
-                  </span>
-                  <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
-                    <span
-                      className="block h-full rounded-full bg-accent transition-[width]"
-                      style={{ width: `${metrics.progress}%` }}
-                    />
-                  </span>
-                </span>
-                <ChevronRight
-                  className={`mt-1 h-4 w-4 shrink-0 ${
-                    active ? "text-accent" : "text-muted"
-                  }`}
-                  aria-hidden
+        {categories.map((category, index) => (
+          <DepartmentButton
+            key={category.id}
+            category={category}
+            index={index}
+            active={category.id === activeCategoryId}
+            theoryByTopic={theoryByTopic}
+            onSelect={onSelect}
+          />
+        ))}
+      </div>
+    </nav>
+  );
+}
+
+function MobileDepartmentList({
+  examKey,
+  categories,
+  activeCategoryId,
+  theoryByTopic,
+  topicsVisible,
+  onSelect,
+  onToggleTopics,
+}: {
+  examKey: SelectedExam;
+  categories: CategoryWithProgress[];
+  activeCategoryId: string | null;
+  theoryByTopic: Map<string, TheoryTier>;
+  topicsVisible: boolean;
+  onSelect: (categoryId: string) => void;
+  onToggleTopics: () => void;
+}) {
+  return (
+    <nav
+      data-testid="training-department-navigation"
+      aria-label="Działy treningu"
+      className="min-w-0 border-y border-surface-border py-3"
+    >
+      <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
+        <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
+        <p className="text-xs text-muted">Wybierz obszar</p>
+      </div>
+      <div className="space-y-1">
+        {categories.map((category, index) => (
+          <div key={category.id}>
+            <DepartmentButton
+              category={category}
+              index={index}
+              active={category.id === activeCategoryId}
+              theoryByTopic={theoryByTopic}
+              onSelect={onSelect}
+            />
+            {category.id === activeCategoryId && (
+              <div className="mt-2">
+                <DepartmentPanel
+                  examKey={examKey}
+                  category={category}
+                  theoryByTopic={theoryByTopic}
+                  topicsVisible={topicsVisible}
+                  onToggleTopics={onToggleTopics}
                 />
               </div>
-            </button>
-          );
-        })}
+            )}
+          </div>
+        ))}
       </div>
     </nav>
   );
@@ -873,6 +963,7 @@ export default function TreningPage() {
   const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
     new Map(),
   );
+  const isMobile = useIsMobile();
   const loadRequestRef = useRef(0);
 
   const loadProgress = useCallback(async (examKey: SelectedExam) => {
@@ -1033,7 +1124,9 @@ export default function TreningPage() {
 
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategoryId(categoryId);
-    setExpandedCategoryId(null);
+    // Na telefonie tematy mają się otworzyć od razu pod klikniętym działem.
+    // Na desktopie panel jest obok, więc zostawiamy ręczne „Pokaż tematy”.
+    setExpandedCategoryId(isMobile ? categoryId : null);
   };
 
   const examSubtitle =
@@ -1320,27 +1413,43 @@ export default function TreningPage() {
               }
             />
           ) : (
-            <div className="grid items-start gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
-              <DepartmentNavigation
+            isMobile ? (
+              <MobileDepartmentList
+                examKey={selectedExam}
                 categories={filteredExam.categories}
                 activeCategoryId={activeCategory?.id ?? null}
                 theoryByTopic={theoryByTopic}
+                topicsVisible={topicsVisible}
                 onSelect={handleCategorySelect}
+                onToggleTopics={() =>
+                  setExpandedCategoryId((current) =>
+                    current === activeCategory?.id ? null : activeCategory?.id ?? null,
+                  )
+                }
               />
-              {activeCategory && (
-                <DepartmentPanel
-                  examKey={selectedExam}
-                  category={activeCategory}
+            ) : (
+              <div className="grid items-start gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
+                <DepartmentNavigation
+                  categories={filteredExam.categories}
+                  activeCategoryId={activeCategory?.id ?? null}
                   theoryByTopic={theoryByTopic}
-                  topicsVisible={topicsVisible}
-                  onToggleTopics={() =>
-                    setExpandedCategoryId((current) =>
-                      current === activeCategory.id ? null : activeCategory.id,
-                    )
-                  }
+                  onSelect={handleCategorySelect}
                 />
-              )}
-            </div>
+                {activeCategory && (
+                  <DepartmentPanel
+                    examKey={selectedExam}
+                    category={activeCategory}
+                    theoryByTopic={theoryByTopic}
+                    topicsVisible={topicsVisible}
+                    onToggleTopics={() =>
+                      setExpandedCategoryId((current) =>
+                        current === activeCategory.id ? null : activeCategory.id,
+                      )
+                    }
+                  />
+                )}
+              </div>
+            )
           )}
         </div>
       </div>

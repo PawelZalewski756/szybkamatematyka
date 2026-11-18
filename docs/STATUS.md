@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-18 14:47 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `a43800a`
+> Ostatnia aktualizacja: 2026-11-18 16:50 UTC · branch `fix/trening-zadania-pro-2026-11-18` · commit `7dcd22d`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -25,5 +25,5 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Pliki testów jednostkowych | 88 | `tests/*.test.ts` |
 | Asercje `it`/`test` w testach | 514 | statycznie |
 | Pliki E2E | 11 | `e2e/*.spec.ts` |
-| Scenariusze E2E | 69 | statycznie |
+| Scenariusze E2E | 70 | statycznie |
 <!-- STATUS:END -->
