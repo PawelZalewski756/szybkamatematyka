@@ -6,23 +6,30 @@ export type CheckoutResult =
   | { ok: true }
   | { ok: false; error: string; code?: string };
 
-/**
- * Rozpoczyna płatność: pobiera access token z sesji Supabase, woła
- * POST /api/checkout i przekierowuje na zwrócony `session.url` Stripe.
- *
- * Zwraca błąd zamiast rzucać - komponenty mogą pokazać komunikat. W przypadku
- * sukcesu funkcja przekierowuje przeglądarkę (i nie wraca z `ok: true` przed
- * nawigacją w typowym przypadku).
- */
-/** Potwierdza opłaconą sesję Checkout po powrocie ze Stripe. Zwraca true, gdy Pro zapisano. */
-export async function confirmCheckout(sessionId: string): Promise<boolean> {
+export type ConfirmedCheckout = {
+  /** true, gdy subskrypcja została zapisana w profilu. */
+  confirmed: boolean;
+  /** Dane opłaconej sesji - tylko gdy faktycznie pobrano pieniądze. */
+  purchase?: {
+    sessionId: string;
+    /** Kwota w groszach (Stripe `amount_total`). */
+    amountTotalMinorUnits: number | null;
+    currency: string | null;
+    planId: string | null;
+  };
+};
+
+/** Potwierdza opłaconą sesję Checkout po powrocie ze Stripe. */
+export async function confirmCheckout(
+  sessionId: string,
+): Promise<ConfirmedCheckout> {
   const supabase = getSupabaseOrNull();
-  if (!supabase) return false;
+  if (!supabase) return { confirmed: false };
   const {
     data: { session },
   } = await supabase.auth.getSession();
   const token = session?.access_token;
-  if (!token) return false;
+  if (!token) return { confirmed: false };
 
   try {
     const res = await fetch("/api/checkout/confirm", {
@@ -33,12 +40,35 @@ export async function confirmCheckout(sessionId: string): Promise<boolean> {
       },
       body: JSON.stringify({ sessionId }),
     });
-    const data: { confirmed?: boolean } | null = await res
-      .json()
-      .catch(() => null);
-    return Boolean(res.ok && data?.confirmed);
+    const data:
+      | {
+          confirmed?: boolean;
+          paid?: boolean;
+          amountTotal?: number | null;
+          currency?: string | null;
+          planId?: string | null;
+        }
+      | null = await res.json().catch(() => null);
+
+    if (!res.ok || !data?.confirmed) return { confirmed: false };
+
+    // Okres próbny (payment_status: "no_payment_required", amount_total: 0) to
+    // jeszcze nie zakup - nie chcemy zawyżać konwersji „Zakup PRO”.
+    const paid = data.paid === true || (data.amountTotal ?? 0) > 0;
+
+    return {
+      confirmed: true,
+      purchase: paid
+        ? {
+            sessionId,
+            amountTotalMinorUnits: data.amountTotal ?? null,
+            currency: data.currency ?? null,
+            planId: data.planId ?? null,
+          }
+        : undefined,
+    };
   } catch {
-    return false;
+    return { confirmed: false };
   }
 }
 
@@ -47,6 +77,14 @@ export type CheckoutOptions = {
   acceptTerms?: boolean;
 };
 
+/**
+ * Rozpoczyna płatność: pobiera access token z sesji Supabase, woła
+ * POST /api/checkout i przekierowuje na zwrócony `session.url` Stripe.
+ *
+ * Zwraca błąd zamiast rzucać - komponenty mogą pokazać komunikat. W przypadku
+ * sukcesu funkcja przekierowuje przeglądarkę (i nie wraca z `ok: true` przed
+ * nawigacją w typowym przypadku).
+ */
 export async function startCheckout(
   planId: string,
   options: CheckoutOptions = {},

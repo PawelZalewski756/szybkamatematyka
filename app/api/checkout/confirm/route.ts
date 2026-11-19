@@ -75,7 +75,16 @@ export async function POST(request: Request) {
       forceUserId: auth.user.id,
     });
 
-    return Response.json({ confirmed: true });
+    // Dane potrzebne do zmierzenia konwersji „Zakup PRO” w Google Ads.
+    // Kwota jest w groszach - front przelicza ją na złote, a `session.id`
+    // służy jako transaction_id (deduplikacja po stronie Google).
+    return Response.json({
+      confirmed: true,
+      paid: session.payment_status === "paid",
+      amountTotal: session.amount_total,
+      currency: session.currency,
+      planId: session.metadata?.plan_id ?? null,
+    });
   } catch (err) {
     console.error("[checkout-confirm]", err);
     return Response.json(
