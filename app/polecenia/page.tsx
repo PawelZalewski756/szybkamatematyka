@@ -95,7 +95,7 @@ export default function PoleceniaPage() {
           </li>
           <li className="flex gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
-            Znajomy rozwiązał co najmniej 3 zadania.
+            Znajomy rozwiązał co najmniej 3 różne zadania.
           </li>
           <li className="flex gap-2">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
@@ -133,6 +133,23 @@ export default function PoleceniaPage() {
           Nagroda jest przyznawana raz dziennie przez system, po spełnieniu
           warunków. Nie trzeba nic klikać.
         </p>
+      </section>
+
+      <section className="mt-6 max-w-3xl" aria-labelledby="dobrze-wiedziec">
+        <h2
+          id="dobrze-wiedziec"
+          className="text-sm font-extrabold text-foreground"
+        >
+          Dobre wiedzieć
+        </h2>
+        <ul className="mt-2 space-y-1 text-xs leading-relaxed text-muted">
+          <li>Jeden e-mail = jedno konto. Nie można zaprosić samego siebie.</li>
+          <li>
+            Jeśli zaproszony usunie konto przed kwalifikacją, polecenie
+            przepada.
+          </li>
+          <li>Nagroda jest raz na konto - kolejni znajomi nie wydłużają Pro.</li>
+        </ul>
       </section>
     </div>
   );
