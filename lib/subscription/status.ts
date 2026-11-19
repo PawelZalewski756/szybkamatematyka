@@ -21,7 +21,7 @@ const PRO_STATUSES: ReadonlySet<SubscriptionStatus> = new Set([
 ]);
 
 /** Skąd pochodzi dostęp Pro. */
-export type ProSource = "none" | "stripe" | "gift" | "manual";
+export type ProSource = "none" | "stripe" | "gift" | "manual" | "referral";
 
 /** Migawka subskrypcji używana przez UI / hooki. */
 export type SubscriptionSnapshot = {
@@ -54,7 +54,7 @@ export function effectiveSubscriptionStatus(
 ): SubscriptionStatus {
   const normalized = status ?? "free";
   if (
-    (source === "gift" || source === "manual") &&
+    (source === "gift" || source === "manual" || source === "referral") &&
     currentPeriodEnd &&
     Number.isFinite(Date.parse(currentPeriodEnd)) &&
     Date.parse(currentPeriodEnd) < Date.now()
@@ -64,10 +64,20 @@ export function effectiveSubscriptionStatus(
   return normalized;
 }
 
+export function isReferralPro(
+  snapshot: SubscriptionSnapshot | null | undefined,
+): boolean {
+  return snapshot?.source === "referral";
+}
+
 export function isGiftPro(
   snapshot: SubscriptionSnapshot | null | undefined,
 ): boolean {
-  return snapshot?.source === "gift" || snapshot?.source === "manual";
+  return (
+    snapshot?.source === "gift" ||
+    snapshot?.source === "manual" ||
+    snapshot?.source === "referral"
+  );
 }
 
 /** Czy podany status daje dostęp Pro. */

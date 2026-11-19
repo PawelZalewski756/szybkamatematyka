@@ -2,6 +2,13 @@ import { createClient } from "@supabase/supabase-js";
 import { deliverSignupNotification } from "@/lib/telegram/signup-delivery";
 import { sendWelcomeEmail } from "@/lib/email/welcome";
 import { validateAuthInput, validateNick } from "@/lib/auth-errors";
+import { isDisposableEmail } from "@/lib/auth/disposable-email-domains";
+import { normalizeReferralCode } from "@/lib/referral/codes";
+import {
+  checkRateLimit,
+  clientIp,
+  rateLimitResponse,
+} from "@/lib/security/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -45,6 +52,15 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ error: "Nieprawidłowe dane." }, { status: 400, headers: HEADERS });
   }
 
+  // Rejestracja jest najczęściej atakowanym endpointem (spam kont).
+  const rateLimit = checkRateLimit(`signup:${clientIp(request)}`, {
+    limit: 10,
+    windowMs: 60 * 60 * 1000,
+  });
+  if (!rateLimit.allowed) {
+    return rateLimitResponse(rateLimit.retryAfterSeconds);
+  }
+
   const email = typeof body.email === "string" ? body.email.trim() : "";
   const password = typeof body.password === "string" ? body.password : "";
   const nick = typeof body.nick === "string" ? body.nick : "";
@@ -52,10 +68,20 @@ export async function POST(request: Request): Promise<Response> {
     typeof body.schoolLevel === "string" ? body.schoolLevel.slice(0, 40) : null;
   const termsAccepted = body.termsAccepted === true;
   const ageConfirmed = body.ageConfirmed === true;
+  const referralCode = normalizeReferralCode(body.referralCode);
 
   const validationError = validateNick(nick) ?? validateAuthInput(email, password);
   if (validationError) {
     return Response.json({ error: validationError }, { status: 400, headers: HEADERS });
+  }
+  if (isDisposableEmail(email)) {
+    return Response.json(
+      {
+        error:
+          "Użyj stałego adresu e-mail - jednorazowe skrzynki nie są akceptowane.",
+      },
+      { status: 400, headers: HEADERS },
+    );
   }
   if (!termsAccepted || !ageConfirmed) {
     return Response.json(
@@ -78,6 +104,7 @@ export async function POST(request: Request): Promise<Response> {
         school_level: schoolLevel || null,
         terms_accepted_at: new Date().toISOString(),
         age_confirmed: true,
+        ...(referralCode ? { referral_code: referralCode } : {}),
       },
     },
   });

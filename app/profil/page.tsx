@@ -4,6 +4,7 @@ import { GamingBackground } from "@/components/gaming/GamingBackground";
 import { LevelBadge } from "@/components/gaming/LevelBadge";
 import { ProfileAchievements } from "@/components/achievements/ProfileAchievements";
 import { StreakReminderPrompt } from "@/components/reminders/StreakReminderPrompt";
+import { ReferralCard } from "@/components/profil/ReferralCard";
 import { DeleteAccountCard } from "@/components/profil/DeleteAccountCard";
 import { ProfileStatsSection } from "@/components/profil/ProfileStatsSection";
 import { calculateLevel } from "@/lib/levelSystem";
@@ -127,6 +128,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
   const [portalError, setPortalError] = useState<string | null>(null);
   const pro = snapshotIsPro(snapshot);
   const gift = isGiftPro(snapshot);
+  const referralReward = snapshot.source === "referral";
   const plan = snapshot.planId ? getPlanById(snapshot.planId) : null;
   const periodEnd = snapshot.currentPeriodEnd
     ? new Date(snapshot.currentPeriodEnd).toLocaleDateString("pl-PL", {
@@ -201,8 +203,9 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
             )}
             {gift && pro ? (
               <p className="mt-2 max-w-md text-xs text-muted">
-                To Pro zostało przyznane ręcznie. Nie odnawia się automatycznie
-                i nie ma subskrypcji Stripe, więc nie można jej anulować.
+                {referralReward
+                  ? "To Pro pochodzi z programu poleceń. Nie odnawia się automatycznie."
+                  : "To Pro zostało przyznane ręcznie. Nie odnawia się automatycznie i nie ma subskrypcji Stripe, więc nie można jej anulować."}
               </p>
             ) : null}
             {snapshot.status !== "free" && !gift ? (
@@ -224,7 +227,7 @@ function PlanSection({ snapshot }: { snapshot: SubscriptionSnapshot }) {
           </div>
           {pro ? (
             <span className="shrink-0 rounded-full bg-accent px-3 py-1 text-xs font-black text-on-accent">
-              {gift ? "PRO · GIFT" : "PRO"}
+              {referralReward ? "PRO · POLECENIA" : gift ? "PRO · GIFT" : "PRO"}
             </span>
           ) : (
             <Link
@@ -701,6 +704,8 @@ export default function ProfilPage() {
             </section>
 
             <PlanSection snapshot={subscriptionSnapshot} />
+
+            <ReferralCard />
 
             <DeleteAccountCard />
 

@@ -39,6 +39,7 @@ const EXTENDED_ROUTES = [
   "/trening/arkusze/arkusz-m25-maj",
   "/baza-zadan/st-001",
   "/baza-zadan/arkusz/arkusz-e8-1",
+  "/polecenia",
   "/minigry/prawda-falsz",
   "/minigry/modes/time-attack",
   "/pojedynki",

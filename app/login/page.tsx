@@ -24,10 +24,16 @@ import {
   authRedirectUrl,
   signupSuccessPath,
 } from "@/lib/auth-password-reset";
+import { referralFromSearch } from "@/lib/referral/codes";
+import {
+  clearReferralCode,
+  readReferralCode,
+  storeReferralCode,
+} from "@/lib/referral/storage";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type AuthView = "login" | "signup";
 
@@ -53,6 +59,25 @@ export default function LoginPage() {
   const [supabaseReady, setSupabaseReady] = useState(() =>
     isSupabaseConfigured(),
   );
+  const [referralCode, setReferralCode] = useState<string | null>(null);
+  const referralAppliedRef = useRef(false);
+
+  // Link z polecenia: `?ref=...` (albo zapisany wcześniej kod) od razu
+  // otwiera rejestrację. Nie nadpisujemy ręcznego powrotu do logowania.
+  useEffect(() => {
+    if (referralAppliedRef.current || typeof window === "undefined") return;
+    const fromUrl = referralFromSearch(window.location.search);
+    const stored = fromUrl ?? readReferralCode();
+    if (!stored) return;
+
+    referralAppliedRef.current = true;
+    if (fromUrl) storeReferralCode(fromUrl);
+    // Odczyt linku polecającego po hydratacji - nie da się tego zrobić
+    // w initial state bez różnicy SSR/klient.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setReferralCode(stored);
+    setView("signup");
+  }, []);
 
   useEffect(() => {
     const onConfigReady = () => setSupabaseReady(true);
@@ -323,6 +348,7 @@ export default function LoginPage() {
           schoolLevel: schoolLevel || null,
           termsAccepted,
           ageConfirmed,
+          referralCode: referralCode ?? undefined,
         }),
       });
       const signupResult = (await signupResponse.json().catch(() => ({}))) as {
@@ -342,6 +368,7 @@ export default function LoginPage() {
       }
 
       if (signupResult.needsConfirmation && !signupResult.userId) {
+        clearReferralCode();
         router.push(signupSuccessPath(true));
         return;
       }
@@ -372,6 +399,7 @@ export default function LoginPage() {
         }
 
         // Stały URL sukcesu - do pomiaru konwersji (Google Ads).
+        clearReferralCode();
         router.push(signupSuccessPath(false));
         router.refresh();
         return;
@@ -379,6 +407,7 @@ export default function LoginPage() {
 
       // Konto utworzone, czeka na potwierdzenie e-mail - profil utworzy trigger w bazie.
       // Osobny URL sukcesu (z ?confirm=1), żeby Ads mogło mierzyć rejestrację.
+      clearReferralCode();
       router.push(signupSuccessPath(true));
       return;
     } catch (err) {
@@ -525,6 +554,12 @@ export default function LoginPage() {
                 <span className="text-gradient-brand">Szybkiej Matematyki</span>
               </h1>
             </div>
+
+            {referralCode ? (
+              <p className="relative mt-5 rounded-xl border border-accent/30 bg-accent/10 px-4 py-3 text-xs leading-relaxed text-foreground">
+                Masz zaproszenie od znajomego. Załóż konto, aby dołączyć.
+              </p>
+            ) : null}
 
             <form
               className="relative mt-8 flex flex-col gap-4"

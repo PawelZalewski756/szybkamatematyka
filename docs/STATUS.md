@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-18 23:49 UTC · branch `ui/uproszczenie-trening-baza-minigry` · commit `09825dc`
+> Ostatnia aktualizacja: 2026-11-19 00:18 UTC · branch `feature/program-polecen` · commit `0108dc8`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -18,12 +18,12 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Lekcje teorii (seed) | 134 | `materials.ts` |
 | Pliki cache zadań (JSON) | 134 | `data/tasks-cache` |
 | Pliki cache teorii (JSON) | 134 | `data/theory-cache` |
-| Migracje Supabase | 50 | `supabase/migrations` |
-| Strony App Router | 43 | `app/**/page.tsx` |
-| Endpointy API | 31 | `app/**/route.ts` |
-| Pliki źródłowe TS/TSX | 624 | bez `node_modules` |
-| Pliki testów jednostkowych | 89 | `tests/*.test.ts` |
-| Asercje `it`/`test` w testach | 523 | statycznie |
-| Pliki E2E | 11 | `e2e/*.spec.ts` |
-| Scenariusze E2E | 73 | statycznie |
+| Migracje Supabase | 51 | `supabase/migrations` |
+| Strony App Router | 44 | `app/**/page.tsx` |
+| Endpointy API | 32 | `app/**/route.ts` |
+| Pliki źródłowe TS/TSX | 635 | bez `node_modules` |
+| Pliki testów jednostkowych | 90 | `tests/*.test.ts` |
+| Asercje `it`/`test` w testach | 534 | statycznie |
+| Pliki E2E | 12 | `e2e/*.spec.ts` |
+| Scenariusze E2E | 77 | statycznie |
 <!-- STATUS:END -->
